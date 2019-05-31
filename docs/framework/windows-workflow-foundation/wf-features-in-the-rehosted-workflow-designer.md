@@ -2,12 +2,12 @@
 title: Yeniden Barındırılan İş Akışı Tasarımcısında Yeni Workflow Foundation 4.5 Özellikleri Desteği
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 8459311239d46557405245c10b6fb5e887a4691c
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 70e4a8580a8b383bdd4e5e5299bcc5210f3210dc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380155"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423971"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Yeniden Barındırılan İş Akışı Tasarımcısında Yeni Workflow Foundation 4.5 Özellikleri Desteği
 .NET Framework 4.5 içinde Windows Workflow Foundation'a (WF) iş akışı Tasarımcısı deneyimine yönelik bazı geliştirmeler dahil olmak üzere birçok yeni özellik kullanıma sunuldu. Bu konuda ayrıntıları: hangi bu özellikleri yeniden barındırılan tasarımcıda desteklendiği ve hangilerinin şu anda desteklenmiyor.
@@ -106,7 +106,7 @@ ms.locfileid: "66380155"
 >  Derleme zamanı doğrulama yeniden barındırılan tasarımcıda desteklenmez.  
   
 ### <a name="design-time-background-validation"></a>Tasarım zamanı arka plan doğrulama  
- İçinde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], iş akışları kullanıcı Arabirimi karmaşık ya da zaman harcayan doğrulama işlemleri sırasında potansiyel olarak askıda kalabilir ön plan işlemi olarak doğrulandı. Böylece kullanıcı Arabirimi engellenmez artık iş akışı doğrulamasındaki bir arka plan iş parçacığı üzerinde gerçekleşir.  
+ İçinde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], iş akışları karmaşık ya da zaman harcayan doğrulama işlemi sırasında kullanıcı Arabirimi olası engelleyebilecek bir ön plan işlemi olarak doğrulandı. Böylece kullanıcı Arabirimi engellenmez artık iş akışı doğrulamasındaki bir arka plan iş parçacığı üzerinde gerçekleşir.  
   
  Tasarım zamanı arka plan doğrulama yeniden barındırılan tasarımcıda desteklenir.  
   

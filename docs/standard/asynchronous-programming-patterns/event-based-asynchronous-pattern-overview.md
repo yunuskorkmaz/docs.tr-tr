@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: f923ca42e67c76f8b4296089953fada65b645f4f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629004"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423858"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış
 Aynı anda birçok görevi gerçekleştiren henüz kullanıcı etkileşimine yanıt verebilir durumda kalması uygulamalar genellikle birden çok iş parçacığı kullanan bir tasarım gerektirir. <xref:System.Threading> Ad alanı, çok iş parçacıklı yüksek performanslı uygulamalar oluşturmak için gerekli olan tüm araçları sağlar, ancak etkili bir şekilde bu araçları kullanarak, birden çok iş parçacıklı yazılım Mühendisliği önemli deneyimiyle gerektirir. Görece basit birden çok iş parçacıklı uygulamalar için <xref:System.ComponentModel.BackgroundWorker> bileşeni, basit bir çözüm sağlar. Zaman uyumsuz daha gelişmiş uygulamalar için olay tabanlı zaman uyumsuz desene uyar bir class uygulamayı düşünün.  
@@ -32,13 +32,13 @@ Aynı anda birçok görevi gerçekleştiren henüz kullanıcı etkileşimine yan
   
 - Birden çok işlem her tamamlandığında bildirim alma eşzamanlı olarak yürütün.  
   
-- Kaynakları ("asılı") durdurmadan kullanılabilir olana kadar bekleyin, uygulamanızın.  
+- Kaynakları ("engelleme") durdurmadan kullanılabilir olana kadar bekleyin, uygulamanızın.  
   
 - Bilinen olayları ve temsilci modelini kullanarak zaman uyumsuz işlemleri iletişim. Olay işleyicileri ve temsilcileri kullanma ile ilgili daha fazla bilgi için bkz: [olayları](../../../docs/standard/events/index.md).  
   
  Olay tabanlı zaman uyumsuz deseni destekleyen bir sınıf adlı bir veya daha fazla yöntemi olacaktır _MethodName_**zaman uyumsuz**. Bu yöntemler, zaman uyumlu sürümler, geçerli iş parçacığında aynı işlemi yansıtma. Sınıfı ayrıca olabilir bir _MethodName_**tamamlandı** olay ve olabilir bir _MethodName_**AsyncCancel** (ya da yalnızca  **CancelAsync**) yöntemi.  
   
- <xref:System.Windows.Forms.PictureBox> Olay tabanlı zaman uyumsuz deseni destekleyen tipik bir bileşendir. Çağırarak, zaman uyumlu bir görüntü indirebilirsiniz, <xref:System.Windows.Forms.PictureBox.Load%2A> büyük görüntüdür veya ağ bağlantısı yavaşsa, yükleme işlemi tamamlanana kadar uygulamanız ("Kapat") durdurur ancak yöntemi ve çağrısı <xref:System.Windows.Forms.PictureBox.Load%2A> döndürür.  
+ <xref:System.Windows.Forms.PictureBox> Olay tabanlı zaman uyumsuz deseni destekleyen tipik bir bileşendir. Çağırarak, zaman uyumlu bir görüntü indirebilirsiniz, <xref:System.Windows.Forms.PictureBox.Load%2A> büyük görüntüdür veya ağ bağlantısı yavaşsa, uygulamanızı durdurur ancak yöntemi, yükleme işlemi tamamlanana kadar yanıt ve çağrısı <xref:System.Windows.Forms.PictureBox.Load%2A> döndürür.  
   
  Uygulamanızın istiyorsanız görüntünün sırasında çalışmaya devam etmesini yükleniyor, çağırabilirsiniz <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> yöntemi ve tutamacı <xref:System.Windows.Forms.PictureBox.LoadCompleted> olay gibi başka bir olay işleme. Çağırdığınızda <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> yöntemi, uygulamanızın ayrı bir iş parçacığında ("arka planda") indirme devam ederken çalışmaya devam edecek. Resim yükleme işlemi tamamlandıktan ve olayı işleyicinizi inceleyebilirsiniz, olay işleyicisi çağrılacak <xref:System.ComponentModel.AsyncCompletedEventArgs> indirme başarıyla tamamlandı, belirlemek için parametre.  
   

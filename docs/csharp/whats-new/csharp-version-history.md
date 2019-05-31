@@ -3,12 +3,12 @@ title: Geçmişini C# - C# Kılavuzu
 description: Bu yana nasıl geliştirildiğini ve önceki sürümlerde dil göz ne gibi?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706084"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423243"
 ---
 # <a name="the-history-of-c"></a>C geçmişi\#
 
@@ -45,7 +45,6 @@ C# 1.0 önemli özelliklere yer:
 - [İfadeler](../programming-guide/statements-expressions-operators/expressions.md)
 - [Deyimler](../programming-guide/statements-expressions-operators/statements.md)
 - [Öznitelikler](../programming-guide/concepts/attributes/index.md)
-- [Değişmez Değerler](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# sürüm 1.2
 
@@ -174,4 +173,4 @@ Tüm bu özellikler, geliştiricilerin ve hiç olmadığı kadar bile daha temiz
 
 Ancak, C# her zamankinden daha geniş kullanımına yerine koyulan. .NET core artık herhangi bir işletim sistemini hedefleyen ve taşınabilirlik ve bulut üzerinde kendi gözler sıkıca sahip.  Bu yeni özellikler, dil tasarımcıları düşüncelerinizi ve yeni özellikler yakında yanı sıra zaman kesinlikle kaplar.
 
-_Makale_ [ _NDepend blogda ilk yayımlandığı_](https://blog.ndepend.com/c-versions-look-language-history/)_, Erik Dietrich ve Patrick Smacchia'nın._
+_Makale_ [ _NDepend blogda ilk yayımlandığı_](https://blog.ndepend.com/c-versions-look-language-history/) _, Erik Dietrich ve Patrick Smacchia'nın._

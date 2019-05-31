@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: f938e49267faad8aebbf4c22fc921f305d160123
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: df921ecc670bf12411dc8b0d828d6c19bb0a1aec
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633431"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422751"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# Başvurusu)
 
@@ -71,6 +71,5 @@ Ad alanlarını kullanma hakkında daha fazla bilgi için aşağıdaki konulara 
 - [C# başvurusu](../../language-reference/index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [Ad Alanı Anahtar Sözcükleri](namespace-keywords.md)
 - [using](using-directive.md)
 - [' Using static](using-static.md)

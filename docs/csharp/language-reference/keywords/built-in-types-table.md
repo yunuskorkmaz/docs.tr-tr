@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: fae0cedfe8bf675dceb9cb9d5835d923cae8b4ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd8c52cd798496a4df3086411dfe3be6241fbff5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662029"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422337"
 ---
 # <a name="built-in-types-table-c-reference"></a>Yerleşik türler tablosu (C# Başvurusu)
 
@@ -66,7 +66,6 @@ Console.WriteLine(doubleType.FullName);
 - [C# başvurusu](../../../csharp/language-reference/index.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [Türler için başvuru tabloları](reference-tables-for-types.md)
 - [Değer türleri](value-types.md)
 - [Başvuru türleri](reference-types.md)
 - [Varsayılan değerler tablosu](default-values-table.md)

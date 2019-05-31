@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d5f24d7415ff7ecceba6b0a5fbd3098d70dcd0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9bbff8bb1f095502f27b649639434010453ffe1
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796028"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423855"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation Numaralandırması
 Bir ana bilgisayar ilkesi eylemleri uygulayabilirsiniz işlemleri açıklar.  
@@ -55,7 +55,7 @@ typedef enum {
 ## <a name="remarks"></a>Açıklamalar  
  Ortak dil çalışma zamanı (CLR) güvenilirlik altyapısı iptal eder ve kaynak arasında kritik bölge kodu ve kod kritik olmayan bölgelerde ortaya oluşan ayırma hatalarını ayırır. Bu ayrım, bir hata kodu nerede oluştuğunu bağlı olarak farklı ilkeleri ayarlamak konakları izin vermek için tasarlanmıştır.  
   
- A *kritik bölge kodu* herhangi alanı burada CLR garanti etmez, bir görevi iptal etme veya şu anki görevini kaynakları etkiler isteği tamamlayamıyor. Bir görev bir kilit ve bellek ayırma isteği yapan bağlı hata olduğunu gösteren bir HRESULT alır, örneğin, bu yalnızca kararlılığını emin olmak için bu görevi iptal etmek yetersizdir <xref:System.AppDomain>, çünkü <xref:System.AppDomain> diğer içerebilir aynı kilit için bekleyen görevler. Geçerli iptal etmek için görev bu yanıt vermeyi durdurur (veya askıda) diğer görevlerin neden olabilir süresiz olarak. Böyle bir durumda, konak tüm kaldırma yeteneği olması gerekir. <xref:System.AppDomain> risk olası kararsızlığı yerine.  
+ A *kritik bölge kodu* herhangi alanı burada CLR garanti etmez, bir görevi iptal etme veya şu anki görevini kaynakları etkiler isteği tamamlayamıyor. Bir görev bir kilit ve bellek ayırma isteği yapan bağlı hata olduğunu gösteren bir HRESULT alır, örneğin, bu yalnızca kararlılığını emin olmak için bu görevi iptal etmek yetersizdir <xref:System.AppDomain>, çünkü <xref:System.AppDomain> diğer içerebilir aynı kilit için bekleyen görevler. Görev geçerli iptal etmek için bu diğer görevlerin yanıt vermeyi durdurmasına neden olabilir. Böyle bir durumda, konak tüm kaldırma yeteneği olması gerekir. <xref:System.AppDomain> risk olası kararsızlığı yerine.  
   
  A *kritik olmayan bölge kodu*, diğer taraftan, CLR burada garanti yalnızca bağlı hata oluşursa görev bir iptal ya da başarısızlık etkiler bir bölgedir.  
   

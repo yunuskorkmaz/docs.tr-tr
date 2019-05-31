@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 390b2226cc2f345d2f42659bd092e36a4bd0c4fc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: af3eab1c2453f37aa5bd881dc9804d7504c89298
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632920"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422126"
 ---
 # <a name="value-types-c-reference"></a>Değer türleri (C# Başvurusu)
 
@@ -108,6 +108,5 @@ Sayısal türlerin çıktı biçimlendirme hakkında daha fazla bilgi için bkz:
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [Türler](types.md)
-- [Türler için başvuru tabloları](reference-tables-for-types.md)
 - [Başvuru Türleri](reference-types.md)
 - [Boş değer atanabilir türler](../../programming-guide/nullable-types/index.md)

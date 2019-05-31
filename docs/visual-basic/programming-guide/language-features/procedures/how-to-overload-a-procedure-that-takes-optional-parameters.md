@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 58c52a7d73efbd96d772dd85d6bf2c9084fb1241
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4374a229392d51b67c99210da91ae05dd3342e96
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863655"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424062"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Nasıl yapılır: (Visual Basic) isteğe bağlı parametreler isteyen bir yordamı aşırı yükleme
 Bir veya daha fazla yordam varsa, [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) parametreleri, herhangi bir örtük bunun aşırı yüklerinden eşleşen aşırı yüklenmiş bir sürümünü tanımlayamaz. "Daha fazla bilgi için örtük aşırı yüklemeleri için isteğe bağlı parametreleri" bölümüne bakın [aşırı yükleme yordamları Hususlarına](./considerations-in-overloading-procedures.md).  
@@ -51,7 +51,7 @@ Bir veya daha fazla yordam varsa, [isteğe bağlı](../../../../visual-basic/lan
   
 #### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>Birden fazla isteğe bağlı parametre isteyen bir yordamı aşırı yükleme için  
   
-1. Sağlanan isteğe bağlı bağımsız değişkenlere hangi birleşimleri yordamın mantığı için kabul edilebilir olduğunu belirleyin. İsteğe bağlı bir parametre başka bağlıysa kabul edilemez bir birleşimi ortaya çıkabilir. Örneğin, bir parametre bir eşin adını kabul eder ve başka bir eşin yaş kabul eder, yaş sağlama ancak ad atlama bağımsız değişkenlerin bir birleşimi kabul edilebilir değil.  
+1. Sağlanan isteğe bağlı bağımsız değişkenlere hangi birleşimleri yordamın mantığı için kabul edilebilir olduğunu belirleyin. İsteğe bağlı bir parametre başka bağlıysa kabul edilemez bir birleşimi ortaya çıkabilir. Örneğin, bir parametre kabul eden bir kişinin adını ve başka bir kişinin yaşı kabul eder, yaş sağlama ancak ad atlama bağımsız değişkenlerin bir birleşimi kabul edilebilir değil.  
   
 2. Sağlanan isteğe bağlı bağımsız değişkenler için her kabul edilebilir birleşim yazma bir `Sub` veya `Function` bildirim deyimindeki, karşılık gelen parametre listesi tanımlar. Kullanmayın `Optional` anahtar sözcüğü.  
   

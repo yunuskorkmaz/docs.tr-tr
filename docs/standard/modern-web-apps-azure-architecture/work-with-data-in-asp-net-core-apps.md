@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 23c0995c512a07c41b3e2dbe8bc7528723379efa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f765acce89bec1fd73e9c43a6e7d75d78be785d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628076"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423994"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamaları verilerle çalışma
 
@@ -330,7 +330,7 @@ EF Core, çoğu uygulama ve neredeyse tüm uygulamaların belirli kısımların�
 
 Geleneksel olarak, SQL Server gibi ilişkisel veritabanları kalıcı veri depolamayı Market direncin hakim olduğu, ancak bunlar yalnızca çözüm kullanılabilir değil. Gibi NoSQL veritabanları [MongoDB](https://www.mongodb.com/what-is-mongodb) nesneleri depolamak için farklı bir yaklaşım sunar. Tabloları ve satırları için nesne eşleme yerine başka bir tüm nesne grafiğinin seri hale getirmek ve sonucu depolamak için bir seçenektir. Bu yaklaşımın avantajları, Basitlik ve performans en azından başlangıçta markalarıdır. Nesne ilişkisi olan birçok tabloları içinde ayırmak daha bir anahtarla tek serileştirilmiş nesne depolamak kesinlikle basittir ve veritabanından güncelleştirme ve satırları, nesne, son başlatıldığından beri değişmiş olabilir. Benzer şekilde, yakalama ve anahtar tabanlı deposundan tek bir nesne seri durumdan çıkarılırken genellikle çok daha hızlı ve daha karmaşık birleştirmelerden veya birden çok veritabanı sorguları tam olarak aynı nesneden ilişkisel bir veritabanı oluşturmak için gereklidir. Kilitleri veya işlemler ya da sabit bir şema eksikliği NoSQL veritabanları da çok iletilmek için çok büyük veri kümeleri destekleyen birçok makineler arasında ölçeklendirme yapar.
 
-Öte yandan, (bunlar genellikle olarak adlandırılan) NoSQL veritabanları sakıncaları vardır. İlişkisel veritabanları normalleştirme tutarlılığın ve verilerin yinelenmesini önlemek için kullanın. Bu, toplam veritabanı boyutunu azaltır ve paylaşılan veri güncelleştirmeleri hemen veritabanı kullanılabilir olmasını sağlar. Bir ülkenin adı değiştirildiyse, adresi kayıtlarını Update'ten kendilerini gerek avantaj elde edecektir, ilişkisel bir veritabanında bir adres tablosu kimliği, bir ülke tablo başvurabilir. Ancak, bir NoSQL veritabanı adresi ve onun ilişkili ülke birçok depolanan nesne bir parçası olarak seri hale. Ülke adı için bir güncelleştirme gibi tüm nesnelerin yerine tek bir satır güncelleştirilmesi gerekir. İlişkisel veritabanları, yabancı anahtarlar gibi kuralları zorunlu tutarak ilişkisel bütünlüğü de sağlayabilirsiniz. NoSQL veritabanları, bu tür kısıtlamalar verilerini genellikle sunmaz.
+Öte yandan, (bunlar genellikle olarak adlandırılan) NoSQL veritabanları sakıncaları vardır. İlişkisel veritabanları normalleştirme tutarlılığın ve verilerin yinelenmesini önlemek için kullanın. Bu, toplam veritabanı boyutunu azaltır ve paylaşılan veri güncelleştirmeleri hemen veritabanı kullanılabilir olmasını sağlar. Bir ülke/bölge adı değiştirildiyse, adresi kayıtlarını Update'ten kendilerini gerek avantaj elde edecektir, ilişkisel bir veritabanında bir adres tablosu kimliği, bir ülke tablo başvurabilir. Ancak, bir NoSQL veritabanı adresi ve onun ilişkili ülke birçok depolanan nesne bir parçası olarak seri hale. Bir ülke/bölge adı için bir güncelleştirme gibi tüm nesnelerin yerine tek bir satır güncelleştirilmesi gerekir. İlişkisel veritabanları, yabancı anahtarlar gibi kuralları zorunlu tutarak ilişkisel bütünlüğü de sağlayabilirsiniz. NoSQL veritabanları, bu tür kısıtlamalar verilerini genellikle sunmaz.
 
 Başka bir karmaşıklık NoSQL veritabanları uğraşmanız gerekir, Sürüm ' dir. Bir nesnenin özelliklerini değiştirdiğinizde depolanırdı geçmiş sürümlerinden seri durumdan mümkün olmayabilir. Bu nedenle, bir nesne seri hale getirilmiş (önceki) sürümüne sahip tüm var olan nesneler, yeni şemaya uyacak şekilde güncelleştirilmesi gerekir. Kavramsal olarak ilişkisel bir veritabanındaki farklı değil, bazen şema değişiklikleri güncelleştirme betikleri gerektirir veya güncelleştirmeleri eşleme. Ancak değiştirilmelidir girdi sayısı genellikle büyük olup olmadığı için daha fazla çoğaltma verilerinin NoSQL yaklaşım daha.
 

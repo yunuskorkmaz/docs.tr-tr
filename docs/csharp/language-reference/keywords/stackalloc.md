@@ -7,12 +7,12 @@ f1_keywords:
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 654e225ef98b13aeb4f689e17b1ff378e6002d28
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: c72daa58d2fceb05d9cc9c388a9d2e5dbe062796
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063924"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422432"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (C# Başvurusu)
 
@@ -77,5 +77,4 @@ Kullanmanız gereken <xref:System.Span%601> veya <xref:System.ReadOnlySpan%601> 
 - [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [İşleç Anahtar Sözcükleri](operator-keywords.md)
 - [Güvenli Olmayan Kod ve İşaretçiler](../../programming-guide/unsafe-code-pointers/index.md)

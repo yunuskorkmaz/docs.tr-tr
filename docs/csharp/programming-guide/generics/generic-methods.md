@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 8d64f14f635a50afd8356dedfe16f8897fc77f98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 083fc6ff3dd15252fb6cf2beb27b5be0a6e489f5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61679758"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423448"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Genel Yöntemler (C# Programlama Kılavuzu)
 Genel bir yöntem tür parametreleri ile aşağıdaki gibi belirtilen bir yöntemdir:  
@@ -50,5 +50,5 @@ Genel bir yöntem tür parametreleri ile aşağıdaki gibi belirtilen bir yönte
 
 - <xref:System.Collections.Generic>
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/index.md)
 - [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)

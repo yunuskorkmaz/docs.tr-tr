@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: d6179624ffbdf423f8d9b895c65ff41ac9846f33
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 970c69b36eecd110dd81b6a3700fbb0a7eea2834
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647039"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424028"
 ---
 # <a name="date-data-type-visual-basic"></a>Date Veri Türü (Visual Basic)
 IEEE 64-bit (8 bayt) 12:00: 00'da (gece yarısı), 1 Ocak 0001-31 Aralık 9999 yılın yılın arasında değişen tarihleri ve saatleri temsil eden bir değer PM 11:59:59.9999999 tutar. Her artış, Gregoryen takvimindeki 1 yılının 1 Ocak başından beri geçen 100 nanosaniyelik geçen süreyi temsil eder. En yüksek değer 100 nanosaniyelik 10000 yılın 1 Ocak, başlamadan önce temsil eder.  
@@ -35,7 +35,7 @@ IEEE 64-bit (8 bayt) 12:00: 00'da (gece yarısı), 1 Ocak 0001-31 Aralık 9999 y
 ## <a name="format-requirements"></a>Biçim gereksinimlerini  
  İçine almalısınız bir `Date` sayı işaretleri içindeki sabit değeri (`# #`). Örneğin a/yyyy biçiminde tarih değeri belirtmelisiniz `#5/31/1993#`, ya da yyyy-aa-gg, örneğin `#1993-5-31#`. Yılın ilk belirtirken, eğik çizgi kullanabilirsiniz.  Bu gereksinim, bölgeniz ve bilgisayarınızın tarih ve saat biçimi ayarlarını bağımsızdır.  
   
- Bu kısıtlamanın nedeni anlamı kodunuzu, uygulamanızın çalıştığı yerel ayara bağlı olarak hiçbir zaman değiştirmelisiniz ' dir. Sabit kodlu varsayalım bir `Date` , değişmez değer `#3/4/1998#` ve ortalama 4 Mart 1998'de istediğiniz. İstediğiniz gibi aa/gg/yyyy kullanan bir yerel ayarda 3/4/1998'de derler. Ancak birçok ülkede uygulamanızı dağıtabilmeniz varsayalım. Gg/aa/yyyy kullanan bir yerel ayarında, sabit kodlanmış değişmez değeri 3 Nisan 1998 derlenir. Değişmez değer yyyy/aa/gg kullanan bir yerel ayarında geçersiz olur (Nisan 1998 ' 0003) ve bir derleyici hatasına neden olabilir.  
+ Bu kısıtlamanın nedeni anlamı kodunuzu, uygulamanızın çalıştığı yerel ayara bağlı olarak hiçbir zaman değiştirmelisiniz ' dir. Sabit kodlu varsayalım bir `Date` , değişmez değer `#3/4/1998#` ve ortalama 4 Mart 1998'de istediğiniz. İstediğiniz gibi aa/gg/yyyy kullanan bir yerel ayarda 3/4/1998'de derler. Ancak birçok ülkeler/bölgeler uygulamanızda dağıtma varsayalım. Gg/aa/yyyy kullanan bir yerel ayarında, sabit kodlanmış değişmez değeri 3 Nisan 1998 derlenir. Değişmez değer yyyy/aa/gg kullanan bir yerel ayarında geçersiz olur (Nisan 1998 ' 0003) ve bir derleyici hatasına neden olabilir.  
   
 ## <a name="workarounds"></a>Geçici Çözümler  
  Dönüştürülecek bir `Date` bölgeniz biçimi veya özel bir biçim için değişmez değerin değişmez değer sağlamanız <xref:Microsoft.VisualBasic.Strings.Format%2A> işlevi, bir ya da önceden tanımlı veya kullanıcı tanımlı tarih biçimini belirleme. Aşağıdaki örnekte bu gösterir.  

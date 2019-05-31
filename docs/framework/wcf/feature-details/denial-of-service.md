@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 426429eefd038008340a956ab3fa3cba21906c84
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627019"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423893"
 ---
 # <a name="denial-of-service"></a>Hizmet Reddi
 Hizmet reddi bir sistemde iletilerin işleneceğini veya oldukça yavaş işlenir şekilde doludur oluşur.  
@@ -46,8 +46,8 @@ Hizmet reddi bir sistemde iletilerin işleneceğini veya oldukça yavaş işleni
   
  Bunu azaltmak için ayarlanmış <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğini `true` ve Denetim davranışını denetlemek için Olay Görüntüleyicisi'ni özelliklerini kullanın. Olay günlükleri görüntüleme ve yönetme için Olay Görüntüleyicisi'ni kullanma hakkında daha fazla bilgi için bkz. [Olay Görüntüleyicisi'ni](https://go.microsoft.com/fwlink/?LinkId=186123). Daha fazla bilgi için [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
-## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Geçersiz uygulamaları IAuthorizationPolicy Can nedeni hizmet kilitleniyor  
- Çağırma <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> hatalı bir uygulaması metodunda <xref:System.IdentityModel.Policy.IAuthorizationPolicy> arabirimi hizmet kilitlenmesine neden olabilir.  
+## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Geçersiz IAuthorizationPolicy uygulamaları hizmet yanıt veremez duruma gelmesine neden olabilir  
+ Çağırma <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> hatalı bir uygulaması metodunda <xref:System.IdentityModel.Policy.IAuthorizationPolicy> arabirimi hizmet yanıt veremez duruma gelmesine neden olabilir.  
   
  Azaltma: Yalnızca güvenilen kod kullanın. Güvenilen bir sağlayıcısından gelen veya diğer bir deyişle, yazılan ve test edilen kodu kullanın. Güvenilmeyen uzantılar, izin verme <xref:System.IdentityModel.Policy.IAuthorizationPolicy> kodunuzla son olmadan takılı için göz önünde bulundurarak. Bu, bir hizmet uygulaması içinde kullanılan tüm uzantılar için geçerlidir. WCF genişletilebilirlik noktaları kullanarak uygulama kodu ve takılı olduğundan yabancı kodu arasında hiçbir ayrım yapmaz.  
   

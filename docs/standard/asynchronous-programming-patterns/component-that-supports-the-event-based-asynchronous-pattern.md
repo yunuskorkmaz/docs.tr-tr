@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: d6c35398d54b91c9aa595ffdcde56004e59b7693
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 85e7f10643c57837cf0b66613825241db94c0065
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882499"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423883"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama
 Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanız uygulayarak zaman uyumsuz işlevleri vererek göz önünde bulundurun [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -176,7 +176,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
  `CalculateWorker` Yöntemi bir Temsilcide paketlenir ve zaman uyumsuz olarak çağrısı ile çağrılan `BeginInvoke`.  
   
 > [!NOTE]
->  İlerleme durumunu bildirme içinde gerçekleştirilir `BuildPrimeNumberList` yöntemi. Hızlı bilgisayarlarda `ProgressChanged` olayları hızlı art arda gerçekleştirilen. İstemci iş parçacığı üzerinde bu olaylar oluşturulur, bu durum işleyebilir olması gerekir. Kullanıcı arabirimi kodu davranışı asılı elde edilen iletilerle yayılmamış ve, devam edilemiyor olabilir. Bu durum işleyen bir örnek kullanıcı arabirimi için bkz: [nasıl yapılır: Olay tabanlı zaman uyumsuz desenin istemcisini uygulama](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+>  İlerleme durumunu bildirme içinde gerçekleştirilir `BuildPrimeNumberList` yöntemi. Hızlı bilgisayarlarda `ProgressChanged` olayları hızlı art arda gerçekleştirilen. İstemci iş parçacığı üzerinde bu olaylar oluşturulur, bu durum işleyebilir olması gerekir. Kullanıcı arabirimi kodu iletilerle yayılmamış ve yanıt vermeyi durdurma sorununa bunun sonucunda, devam edilemiyor olabilir. Bu durum işleyen bir örnek kullanıcı arabirimi için bkz: [nasıl yapılır: Olay tabanlı zaman uyumsuz desenin istemcisini uygulama](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Asal numarası hesaplamayı zaman uyumsuz olarak çalıştırmak için:  
   

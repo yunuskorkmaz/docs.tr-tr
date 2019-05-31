@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 08863e677413c27461d621c7126c64f2b76c33a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44ab9766bead15c97a1397ef1f47de75f72643a3
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710647"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423544"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>(C# programlama Kılavuzu) tür parametrelerindeki kısıtlamalar
 
@@ -114,6 +114,6 @@ Bunu aşağıdaki örnekte gösterildiği gibi bir sabit listesi ve adları ve d
 
 - <xref:System.Collections.Generic>
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/index.md)
 - [Genel Sınıflar](../../../csharp/programming-guide/generics/generic-classes.md)
 - [new Kısıtlaması](../../../csharp/language-reference/keywords/new-constraint.md)

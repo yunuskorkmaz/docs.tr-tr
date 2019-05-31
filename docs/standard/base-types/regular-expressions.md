@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 201dbc759b619f65599e09c78c14b96d17395952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb70b0ef4c6e619418f8464b543795a59c2ddff5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620706"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423787"
 ---
 # <a name="net-regular-expressions"></a>.NET normal ifadeler
 Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem sunar. Normal ifadelerin kapsamlı desen eşleştirme gösterimi hızlı bir şekilde büyük miktarlarda metini belirli karakter desenlerini bulmak için ayrıştırılacak sağlar; önceden tanımlı bir desenle (örneğin bir e-posta adresi); eşleştiğinden emin olmak için metin doğrulamak için ayıklamak için Düzenle, Değiştir veya metin alt dizeleri silin; ve bir rapor oluşturmak için ayıklanan dizeleri bir koleksiyona eklemek için. Dizeler üzerinde çalışan veya büyük metin bloklarını ayrıştıran uygulamalar için normal ifadeler vazgeçilmez bir araçtır.  
@@ -97,7 +97,7 @@ Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem suna
   
 |||  
 |-|-|  
-|`\$`|Giriş dizesinde dolar simgesinin ($) tek bir oluşumunu arayın. Normal ifade deseni dizesi, dolar simgesinin bir normal ifade yer işareti yerine sabit değer olarak yorumlanmasını sağlamak için bir ters eğik çizgi içerir. (Tek başına $ simgesi, normal ifade alt yapısının eşleştirmeye bir dizenin sonunda başlamayı denemesi gerektiğini gösterir.) Geçerli kültürün para birimi simgesinin bir normal ifade simgesi olarak yanlış yorumlanmamasını sağlamak amacıyla örnek, karakteri kaçırmak için <xref:System.Text.RegularExpressions.Regex.Escape%2A> yöntemini kullanır.|  
+|`\$`|Dolar simgesinin tek bir oluşumunu arayın (`$`) giriş dizesinde. Normal ifade deseni dizesi, dolar simgesinin bir normal ifade yer işareti yerine sabit değer olarak yorumlanmasını sağlamak için bir ters eğik çizgi içerir. ( `$` Sembol tek başına belirtmek eşleştirmeye bir dizenin sonunda başlamak normal ifade altyapısı denemelisiniz.) Geçerli kültürün para birimi simgesinin bir normal ifade simgesi olarak yanlış yorumlanmamasını sağlamak amacıyla örnek, karakteri kaçırmak için <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> yöntemini kullanır.|  
 |`\s*`|Bir boşluk karakterin sıfır veya daha fazla oluşumunu arayın.|  
 |`[-+]?`|Bir artı işareti veya eksi işaretinin sıfır veya bir oluşumunu arayın.|  
 |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|Bu ifadenin dışındaki parantezler onu bir yakalama grubu veya alt ifade olarak tanımlar. Eğer bir eşleşme bulunursa eşleşen dizenin bu bölümüyle ilgili bilgi, <xref:System.Text.RegularExpressions.Group> özelliği tarafından döndürülen <xref:System.Text.RegularExpressions.GroupCollection> nesnesindeki ikinci <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> nesnesinden alınabilir. (Koleksiyondaki ilk öğe tüm eşleşmeyi temsil eder.)|  

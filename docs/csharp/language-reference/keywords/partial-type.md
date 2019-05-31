@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: 5dba3759d8d0046f2a491e1d3408acb54bd0343d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: db3fc477ddf857146072088e49e76855f5390701
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633367"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422709"
 ---
 # <a name="partial-type-c-reference"></a>Kısmi türü (C# Başvurusu)
 
@@ -40,4 +40,4 @@ Büyük projeler veya sağladığı gibi otomatik olarak oluşturulan kod ile ç
 - [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [Değiştiriciler](modifiers.md)
-- [Genel Türlere Giriş](../../programming-guide/generics/introduction-to-generics.md)
+- [Genel Türlere Giriş](../../programming-guide/generics/index.md)

@@ -2,12 +2,12 @@
 title: Değer nesneleri uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Ayrıntıları ve Entity Framework yenilikleri kullanarak değer nesneleri uygulama seçenekleri alın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 850d571ffb92f2d200e24430a9611fb13b64e635
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644310"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423731"
 ---
 # <a name="implement-value-objects"></a>Değer nesneleri uygulama
 
@@ -21,7 +21,7 @@ Bir değer nesnesi diğer varlıkların başvurabilirsiniz. Örneğin, bir nokta
 
 **Şekil 7-13**. İçindeki sırası toplam değer nesnesi adresi
 
-Şekil 7-13'te gösterildiği gibi bir varlık, genellikle birden çok özniteliklerini oluşur. Örneğin, `Order` varlığı kimliğe sahip bir varlık olarak modellenir ve dahili olarak OrderID, OrderDate, OrderItems vb. gibi öznitelikleri kümesi oluşur. Ancak yalnızca bir karmaşık değerli adresi, ülke, posta, şehir, vb. oluşur ve kimliksiz bu etki alanında var, gerekir modellenir ve bir değer nesnesi olarak kabul edilir.
+Şekil 7-13'te gösterildiği gibi bir varlık, genellikle birden çok özniteliklerini oluşur. Örneğin, `Order` varlığı kimliğe sahip bir varlık olarak modellenir ve dahili olarak OrderID, OrderDate, OrderItems vb. gibi öznitelikleri kümesi oluşur. Ancak yalnızca bir karmaşık değeridir adresi ülkesi/bölgesi, posta, şehir, vb. oluşur ve kimliksiz bu etki alanında var, gerekir modellenir ve bir değer nesnesi olarak kabul edilir.
 
 ## <a name="important-characteristics-of-value-objects"></a>Değer nesnelerin önemli özellikler
 

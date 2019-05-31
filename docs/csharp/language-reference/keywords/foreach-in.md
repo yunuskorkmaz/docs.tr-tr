@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 7a1508db23f60cac487e0171c3db7756bc228fd2
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3fbaacb96be2714aaff49679836e5d2d4a3783da
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880532"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422476"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, (C# Başvurusu)
 
@@ -54,6 +54,5 @@ Daha fazla bilgi için [foreach deyimi](~/_csharplang/spec/statements.md#the-for
 - [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [Yineleme Deyimleri](iteration-statements.md)
 - [Dizilerle foreach kullanma](../../programming-guide/arrays/using-foreach-with-arrays.md)
 - [For deyimi](for.md)

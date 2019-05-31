@@ -1,15 +1,15 @@
 ---
 title: Bir satış anomali algılama senaryosunda ML.NET kullanın
 description: ML.NET ürün satış anomali algılama senaryoda anomali ani verileri analiz etmek ve uygun eylemi gerçekleştirin noktalarını değiştirmek nasıl anlamak için nasıl kullanılacağını keşfedin.
-ms.date: 05/06/2019
+ms.date: 05/29/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 39e812facccfa75d1643704f8960a387a70c94bc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d31765aa4ff2a0be9c4f140f33de1f5678fc7612
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641142"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423904"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Öğretici: ML.NET ürün satış anomali algılama için kullanın. 
 
@@ -173,7 +173,7 @@ Kullanım [IidSpikeEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidSpikeEs
 
 [!code-csharp[AddSpikeTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddSpikeTrainer)]
 
-Modele uygun `productSales` veri ve sonraki kod satırı olarak aşağıdakileri ekleyerek eğitilen model dönüş `DetectSpike()` yöntemi:
+Modele uygun `productSales` sonraki kod satırı olarak aşağıdakileri ekleyerek veri `DetectSpike()` yöntemi:
 
 [!code-csharp[TrainModel1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel1)]
 
@@ -283,7 +283,7 @@ static void DetectChangepoint(MLContext mlContext, int docSize, IDataView produc
 
 [!code-csharp[AddChangepointTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddChangepointTrainer)]
 
-Daha önce yaptığınız gibi modele uygun `productSales` veri ve sonraki kod satırı olarak aşağıdakileri ekleyerek eğitilen model dönüş `DetectChangePoint()` yöntemi:
+Daha önce yaptığınız gibi modele uygun `productSales` sonraki kod satırı olarak aşağıdakileri ekleyerek veri `DetectChangePoint()` yöntemi:
 
 [!code-csharp[TrainModel2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel2)]
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: dc093def716a624162cb695d1151d8a722807094
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4a3a46ba98c0c621b747284ce39e03d68a5b62d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661379"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421737"
 ---
 # <a name="integral-types-table-c-reference"></a>Tam sayı türleri tablosu (C# Başvurusu)
 
@@ -43,7 +43,6 @@ Kullanım <xref:System.Numerics.BigInteger?displayProperty=nameWithType> yapıs�
 - [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [Türler için başvuru tabloları](reference-tables-for-types.md)
 - [Kayan nokta türleri tablosu](floating-point-types-table.md)
 - [Varsayılan değerler tablosu](default-values-table.md)
 - [Sayısal sonuçlar tablosunu biçimlendirme](formatting-numeric-results-table.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 23aae1a41a19689bd5ad4e29f19c8cff704e742c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c971a2d5d7caeb030cf504c44be8c8123decc3fc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61709695"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423410"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 
@@ -64,7 +64,7 @@ Daha fazla bilgi için [atama ve tür dönüşümleri](../../../csharp/programmi
 
 ## <a name="built-in-types"></a>Yerleşik türler
 
-C# Standart tamsayılar, kayan nokta değerleri, Boolean ifadeler, metin karakterleri, ondalık değerleri temsil etmek için yerleşik sayısal türler ve diğer veri türleri kümesi sağlar. Ayrıca vardır yerleşik `string` ve `object` türleri. Bunlar, bir C# programında kullanabilmeniz için kullanılabilir. Yerleşik türler hakkında daha fazla bilgi için bkz. [türler için başvuru tabloları](../../../csharp/language-reference/keywords/reference-tables-for-types.md).
+C# Standart tamsayılar, kayan nokta değerleri, Boolean ifadeler, metin karakterleri, ondalık değerleri temsil etmek için yerleşik sayısal türler ve diğer veri türleri kümesi sağlar. Ayrıca vardır yerleşik `string` ve `object` türleri. Bunlar, bir C# programında kullanabilmeniz için kullanılabilir. Yerleşik türler hakkında daha fazla bilgi için bkz. [yerleşik türler için başvuru tabloları](../../../csharp/language-reference/keywords/built-in-types-table.md).
 
 ## <a name="custom-types"></a>Özel türler
 
@@ -155,7 +155,7 @@ Değişmez değerler olduğu ve tüm türler nihai olarak türetmek için gelen 
 
 [!code-csharp[csProgGuideTypes#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#37)]
 
-## <a name="generic-types"></a>Genel türler
+## <a name="generic-types"></a>Genel Türler
 
 Bir türü bir veya daha fazla bildirilmiş *tür parametrelerindeki* gerçek tür için bir yer tutucu olarak hizmet veren ( *somut tür*) türün bir örneğini oluşturduğunda, istemci kodunun sağlayacağı. Bu türler olarak adlandırılır *genel türler*. Örneğin, .NET türü <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> gereği adı verilen bir tür parametresine sahip *T*. Bir türün örneğini oluşturduğunuzda dize listesi yer alacak nesnelerin türünü belirtin:
 

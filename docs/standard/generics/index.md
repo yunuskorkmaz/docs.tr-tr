@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8170dd2e2941be3a73f7a4fd8c37d4fb2ef96235
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4e13689e0c8324781b86ae7b9568cb441a31ec70
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592241"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423959"
 ---
 # <a name="generics-in-net"></a>.NET içindeki Genel Türler
 
@@ -148,7 +148,7 @@ ms.locfileid: "65592241"
   
  Yeni işlem kodları ve Microsoft Ara dilini (MSIL) dahil olmak üzere genel türleri desteklemek için alan ön eklerini ortak dil çalışma zamanı sağlar <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>, ve <xref:System.Reflection.Emit.OpCodes.Readonly>.  
   
- Visual C++, C# ve Visual Basic tüm tanımlama ve genel türler kullanmak için tam destek sağlar. Dil desteği hakkında daha fazla bilgi için bkz. [Visual Basic'de genel türler](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md), [genel türlere giriş](~/docs/csharp/programming-guide/generics/introduction-to-generics.md), ve [genel türlere genel bakış Visual C++'ta](/cpp/windows/overview-of-generics-in-visual-cpp).  
+ Visual C++, C# ve Visual Basic tüm tanımlama ve genel türler kullanmak için tam destek sağlar. Dil desteği hakkında daha fazla bilgi için bkz. [Visual Basic'de genel türler](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md), [genel türlere giriş](~/docs/csharp/programming-guide/generics/index.md), ve [genel türlere genel bakış Visual C++'ta](/cpp/windows/overview-of-generics-in-visual-cpp).  
   
  [Başa dön](#top)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "65592241"
 |[Genel Koleksiyonlar Ne Zaman Kullanılır?](../../../docs/standard/collections/when-to-use-generic-collections.md)|Genel koleksiyon türleri kullanma zamanı belirlemek için genel kurallar açıklanmaktadır.|  
 |[Nasıl yapılır: Yansıma ile genel tür tanımlama yayma](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Genel türler ve yöntemler içeren dinamik derlemeler oluşturma adımları açıklanmaktadır.|  
 |[Visual Basic'de genel türler](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Visual Basic kullanıcıları, genel türleri tanımlama ve kullanma için nasıl yapılır konuları da dahil olmak üzere genel türler özelliğini açıklar.|  
-|[Genel Türlere Giriş](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)|Tanımlama ve C# kullanıcılar için genel türleri kullanarak genel bir bakış sağlar.|  
+|[Genel Türlere Giriş](~/docs/csharp/programming-guide/generics/index.md)|Tanımlama ve C# kullanıcılar için genel türleri kullanarak genel bir bakış sağlar.|  
 |[Visual C++'de Genel Türlere Genel Bakış](/cpp/windows/overview-of-generics-in-visual-cpp)|C++ kullanıcı için genel türler ve şablonlar arasındaki farklar dahil olmak üzere genel türler özelliğini açıklar.|  
   
 <a name="reference"></a>   
