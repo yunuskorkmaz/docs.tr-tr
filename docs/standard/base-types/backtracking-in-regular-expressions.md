@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 88e8bfadf34aecb207b1d2858eacf40338363599
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634725"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378161"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Normal İfadelerde Geri Dönüş
 <a name="top"></a> Geri izlemenin normal ifade deseni isteğe bağlı içerdiğinde gerçekleşir [miktar belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) veya [değişim yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), normal ifade altyapısı devam etmek için önceki kaydedilen bir duruma döndürür, bir eşleşme arayın. Geri izleme, normal ifadelerin gücü bakımından çok önemlidir; ifadelerin güçlü ve esnek olmasına ve çok karmaşık desenlerle eşleşmelerine olanak sağlar. Aynı zamanda, bu güç bir maliyetle birlikte gelir. Geri izleme, genellikle normal ifade altyapısının performansını etkileyen tek önemli etmendir. Neyse ki, geliştirici, normal ifade motorunun davranışını ve geri izlemeyi nasıl kullandığını denetleyebilir. Bu konu, geri izlemenin nasıl çalıştığını ve nasıl kontrol edilebileceğini açıklar.  
@@ -130,7 +130,7 @@ ms.locfileid: "64634725"
   
 <a name="Timeout"></a>   
 ### <a name="defining-a-time-out-interval"></a>Bir Zaman Aşımı Aralığı Tanımlama  
- İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], normal ifade altyapısının, denemeden Vazgeçmeden ve önce tek bir eşleştirme için arama yapacağı en uzun aralığı gösteren bir zaman aşımı değeri ayarlayabilirsiniz bir <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> özel durum. Sağlayarak zaman aşımı aralığı belirttiğiniz bir <xref:System.TimeSpan> değerini <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> örnek normal ifadeler için oluşturucu. Ayrıca, her bir statik desen eşleştirme yönteminin bir aşırı yüklemesi vardır bir <xref:System.TimeSpan> parametresi bir zaman aşımı değeri belirtmenize olanak tanır. Varsayılan olarak, zaman aşımı aralığı ayarlamak <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> ve normal ifade altyapısı zaman aşımına uğramaz.  
+ .NET Framework 4.5 ile başlayarak, normal ifade altyapısının, denemeden Vazgeçmeden ve önce tek bir eşleştirme için arama yapacağı en uzun aralığı gösteren bir zaman aşımı değeri ayarlayabilirsiniz bir <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> özel durum. Sağlayarak zaman aşımı aralığı belirttiğiniz bir <xref:System.TimeSpan> değerini <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> örnek normal ifadeler için oluşturucu. Ayrıca, her bir statik desen eşleştirme yönteminin bir aşırı yüklemesi vardır bir <xref:System.TimeSpan> parametresi bir zaman aşımı değeri belirtmenize olanak tanır. Varsayılan olarak, zaman aşımı aralığı ayarlamak <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> ve normal ifade altyapısı zaman aşımına uğramaz.  
   
 > [!IMPORTANT]
 >  Normal ifadeniz geri izlemeye dayalıysa, her zaman bir zaman aşımı aralığı ayarlamanızı öneririz.  
