@@ -9,153 +9,153 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4ee973eb5a81a6428ee5a5fcfc00e28425ff2a44
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591198"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457519"
 ---
-# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a><span data-ttu-id="5dc0d-102">İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma</span><span class="sxs-lookup"><span data-stu-id="5dc0d-102">Walkthrough: Caching Application Data in a WPF Application</span></span>
-<span data-ttu-id="5dc0d-103">Önbelleğe alma, verileri hızlı erişim için bellekte depolamanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-103">Caching enables you to store data in memory for rapid access.</span></span> <span data-ttu-id="5dc0d-104">Verileri yeniden erişildiğinde uygulamaları özgün kaynaktan almak yerine önbellekten veri alabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-104">When the data is accessed again, applications can get the data from the cache instead of retrieving it from the original source.</span></span> <span data-ttu-id="5dc0d-105">Bu, performansı ve ölçeklenebilirliği artırabilir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-105">This can improve performance and scalability.</span></span> <span data-ttu-id="5dc0d-106">Ayrıca, önbelleğe alma, veri kaynağının geçici olarak devre dışı olduğunda yaptığı veri yok.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-106">In addition, caching makes data available when the data source is temporarily unavailable.</span></span>
+# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a><span data-ttu-id="964ac-102">İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma</span><span class="sxs-lookup"><span data-stu-id="964ac-102">Walkthrough: Caching Application Data in a WPF Application</span></span>
+<span data-ttu-id="964ac-103">Önbelleğe alma, verileri hızlı erişim için bellekte depolamanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="964ac-103">Caching enables you to store data in memory for rapid access.</span></span> <span data-ttu-id="964ac-104">Verileri yeniden erişildiğinde uygulamaları özgün kaynaktan almak yerine önbellekten veri alabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="964ac-104">When the data is accessed again, applications can get the data from the cache instead of retrieving it from the original source.</span></span> <span data-ttu-id="964ac-105">Bu, performansı ve ölçeklenebilirliği artırabilir.</span><span class="sxs-lookup"><span data-stu-id="964ac-105">This can improve performance and scalability.</span></span> <span data-ttu-id="964ac-106">Ayrıca, önbelleğe alma, veri kaynağının geçici olarak devre dışı olduğunda yaptığı veri yok.</span><span class="sxs-lookup"><span data-stu-id="964ac-106">In addition, caching makes data available when the data source is temporarily unavailable.</span></span>
 
- <span data-ttu-id="5dc0d-107">.NET Framework, .NET Framework uygulamalarında önbelleğe almayı kullanmak üzere olanak tanıyan sınıflar sağlar.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-107">The .NET Framework provides classes that enable you to use caching in .NET Framework applications.</span></span> <span data-ttu-id="5dc0d-108">Bu sınıfların bulunan <xref:System.Runtime.Caching> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-108">These classes are located in the <xref:System.Runtime.Caching> namespace.</span></span>
+ <span data-ttu-id="964ac-107">.NET Framework, .NET Framework uygulamalarında önbelleğe almayı kullanmak üzere olanak tanıyan sınıflar sağlar.</span><span class="sxs-lookup"><span data-stu-id="964ac-107">The .NET Framework provides classes that enable you to use caching in .NET Framework applications.</span></span> <span data-ttu-id="964ac-108">Bu sınıfların bulunan <xref:System.Runtime.Caching> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="964ac-108">These classes are located in the <xref:System.Runtime.Caching> namespace.</span></span>
 
 > [!NOTE]
->  <span data-ttu-id="5dc0d-109"><xref:System.Runtime.Caching> Ad alanı yeni [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5dc0d-109">The <xref:System.Runtime.Caching> namespace is new in the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span></span> <span data-ttu-id="5dc0d-110">Bu ad alanı yaptığı önbelleğe alma, tüm .NET Framework uygulamaları için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-110">This namespace makes caching is available to all .NET Framework applications.</span></span> <span data-ttu-id="5dc0d-111">Önceki .NET Framework sürümlerinde, önbelleğe yalnızca <xref:System.Web> ad alanı ve bu nedenle ASP.NET sınıfları bir bağımlılık gerekli.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-111">In previous versions of the .NET Framework, caching was available only in the <xref:System.Web> namespace and therefore required a dependency on ASP.NET classes.</span></span>
+>  <span data-ttu-id="964ac-109"><xref:System.Runtime.Caching> Ad alanı .NET Framework 4'te yenidir.</span><span class="sxs-lookup"><span data-stu-id="964ac-109">The <xref:System.Runtime.Caching> namespace is new in the .NET Framework 4.</span></span> <span data-ttu-id="964ac-110">Bu ad alanı yaptığı önbelleğe alma, tüm .NET Framework uygulamaları için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="964ac-110">This namespace makes caching is available to all .NET Framework applications.</span></span> <span data-ttu-id="964ac-111">Önceki .NET Framework sürümlerinde, önbelleğe yalnızca <xref:System.Web> ad alanı ve bu nedenle ASP.NET sınıfları bir bağımlılık gerekli.</span><span class="sxs-lookup"><span data-stu-id="964ac-111">In previous versions of the .NET Framework, caching was available only in the <xref:System.Web> namespace and therefore required a dependency on ASP.NET classes.</span></span>
 
- <span data-ttu-id="5dc0d-112">Bu izlenecek yol kapsamında .NET Framework içinde kullanılabilir olan önbelleğe alma işlevini nasıl kullanacağınızı gösterir bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-112">This walkthrough shows you how to use the caching functionality that is available in the .NET Framework as part of a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="5dc0d-113">Bu izlenecek yolda, bir metin dosyasının içeriğini önbelleğe alın.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-113">In the walkthrough, you cache the contents of a text file.</span></span>
+ <span data-ttu-id="964ac-112">Bu izlenecek yol kapsamında .NET Framework içinde kullanılabilir olan önbelleğe alma işlevini nasıl kullanacağınızı gösterir bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama.</span><span class="sxs-lookup"><span data-stu-id="964ac-112">This walkthrough shows you how to use the caching functionality that is available in the .NET Framework as part of a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="964ac-113">Bu izlenecek yolda, bir metin dosyasının içeriğini önbelleğe alın.</span><span class="sxs-lookup"><span data-stu-id="964ac-113">In the walkthrough, you cache the contents of a text file.</span></span>
 
- <span data-ttu-id="5dc0d-114">Bu kılavuzda gösterilen görevler aşağıdakileri içerir:</span><span class="sxs-lookup"><span data-stu-id="5dc0d-114">Tasks illustrated in this walkthrough include the following:</span></span>
+ <span data-ttu-id="964ac-114">Bu kılavuzda gösterilen görevler aşağıdakileri içerir:</span><span class="sxs-lookup"><span data-stu-id="964ac-114">Tasks illustrated in this walkthrough include the following:</span></span>
 
-- <span data-ttu-id="5dc0d-115">WPF uygulama projesi oluşturma.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-115">Creating a WPF application project.</span></span>
+- <span data-ttu-id="964ac-115">WPF uygulama projesi oluşturma.</span><span class="sxs-lookup"><span data-stu-id="964ac-115">Creating a WPF application project.</span></span>
 
-- <span data-ttu-id="5dc0d-116">Bir başvuru eklemeyi [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5dc0d-116">Adding a reference to the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span></span>
+- <span data-ttu-id="964ac-116">.NET Framework 4'e başvuru ekleniyor.</span><span class="sxs-lookup"><span data-stu-id="964ac-116">Adding a reference to the .NET Framework 4.</span></span>
 
-- <span data-ttu-id="5dc0d-117">Bir önbelleği başlatılıyor.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-117">Initializing a cache.</span></span>
+- <span data-ttu-id="964ac-117">Bir önbelleği başlatılıyor.</span><span class="sxs-lookup"><span data-stu-id="964ac-117">Initializing a cache.</span></span>
 
-- <span data-ttu-id="5dc0d-118">Bir metin dosyasının içeriğini içeren bir önbellek girişi ekleniyor.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-118">Adding a cache entry that contains the contents of a text file.</span></span>
+- <span data-ttu-id="964ac-118">Bir metin dosyasının içeriğini içeren bir önbellek girişi ekleniyor.</span><span class="sxs-lookup"><span data-stu-id="964ac-118">Adding a cache entry that contains the contents of a text file.</span></span>
 
-- <span data-ttu-id="5dc0d-119">Önbellek girişi için bir çıkarma İlkesi sağlama.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-119">Providing an eviction policy for the cache entry.</span></span>
+- <span data-ttu-id="964ac-119">Önbellek girişi için bir çıkarma İlkesi sağlama.</span><span class="sxs-lookup"><span data-stu-id="964ac-119">Providing an eviction policy for the cache entry.</span></span>
 
-- <span data-ttu-id="5dc0d-120">Önbelleğe alınan dosya yolunu izleme ve önbellek örneği hakkında bilgilendirmek için izlenen öğe değiştirir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-120">Monitoring the path of the cached file and notifying the cache instance about changes to the monitored item.</span></span>
+- <span data-ttu-id="964ac-120">Önbelleğe alınan dosya yolunu izleme ve önbellek örneği hakkında bilgilendirmek için izlenen öğe değiştirir.</span><span class="sxs-lookup"><span data-stu-id="964ac-120">Monitoring the path of the cached file and notifying the cache instance about changes to the monitored item.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="5dc0d-121">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="5dc0d-121">Prerequisites</span></span>
- <span data-ttu-id="5dc0d-122">Bu izlenecek yolu tamamlamak için şunlar gerekir:</span><span class="sxs-lookup"><span data-stu-id="5dc0d-122">In order to complete this walkthrough, you will need:</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="964ac-121">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="964ac-121">Prerequisites</span></span>
+ <span data-ttu-id="964ac-122">Bu izlenecek yolu tamamlamak için şunlar gerekir:</span><span class="sxs-lookup"><span data-stu-id="964ac-122">In order to complete this walkthrough, you will need:</span></span>
 
-- <span data-ttu-id="5dc0d-123">Microsoft Visual Studio 2010.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-123">Microsoft Visual Studio 2010.</span></span>
+- <span data-ttu-id="964ac-123">Microsoft Visual Studio 2010.</span><span class="sxs-lookup"><span data-stu-id="964ac-123">Microsoft Visual Studio 2010.</span></span>
 
-- <span data-ttu-id="5dc0d-124">Az miktarda metin içeren bir metin dosyası.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-124">A text file that contains a small amount of text.</span></span> <span data-ttu-id="5dc0d-125">(Metin dosyasının içeriğini bir ileti kutusunda görüntülenir.) Bu kılavuzda gösterilen kodu aşağıdaki dosyasıyla çalıştığınız varsayılır:</span><span class="sxs-lookup"><span data-stu-id="5dc0d-125">(You will display the contents of the text file in a message box.) The code illustrated in the walkthrough assumes that you are working with the following file:</span></span>
+- <span data-ttu-id="964ac-124">Az miktarda metin içeren bir metin dosyası.</span><span class="sxs-lookup"><span data-stu-id="964ac-124">A text file that contains a small amount of text.</span></span> <span data-ttu-id="964ac-125">(Metin dosyasının içeriğini bir ileti kutusunda görüntülenir.) Bu kılavuzda gösterilen kodu aşağıdaki dosyasıyla çalıştığınız varsayılır:</span><span class="sxs-lookup"><span data-stu-id="964ac-125">(You will display the contents of the text file in a message box.) The code illustrated in the walkthrough assumes that you are working with the following file:</span></span>
 
      `c:\cache\cacheText.txt`
 
-     <span data-ttu-id="5dc0d-126">Ancak, herhangi bir metin dosyası kullanın ve bu kılavuzda açıklanan kodu küçük değişiklik.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-126">However, you can use any text file and make small changes to the code in this walkthrough.</span></span>
+     <span data-ttu-id="964ac-126">Ancak, herhangi bir metin dosyası kullanın ve bu kılavuzda açıklanan kodu küçük değişiklik.</span><span class="sxs-lookup"><span data-stu-id="964ac-126">However, you can use any text file and make small changes to the code in this walkthrough.</span></span>
 
-## <a name="creating-a-wpf-application-project"></a><span data-ttu-id="5dc0d-127">WPF uygulama projesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="5dc0d-127">Creating a WPF Application Project</span></span>
- <span data-ttu-id="5dc0d-128">Bir WPF uygulaması projesi oluşturarak başlar.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-128">You will start by creating a WPF application project.</span></span>
+## <a name="creating-a-wpf-application-project"></a><span data-ttu-id="964ac-127">WPF uygulama projesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="964ac-127">Creating a WPF Application Project</span></span>
+ <span data-ttu-id="964ac-128">Bir WPF uygulaması projesi oluşturarak başlar.</span><span class="sxs-lookup"><span data-stu-id="964ac-128">You will start by creating a WPF application project.</span></span>
 
-#### <a name="to-create-a-wpf-application"></a><span data-ttu-id="5dc0d-129">Bir WPF uygulaması oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="5dc0d-129">To create a WPF application</span></span>
+#### <a name="to-create-a-wpf-application"></a><span data-ttu-id="964ac-129">Bir WPF uygulaması oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="964ac-129">To create a WPF application</span></span>
 
-1. <span data-ttu-id="5dc0d-130">Visual Studio’yu çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-130">Start Visual Studio.</span></span>
+1. <span data-ttu-id="964ac-130">Visual Studio’yu çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="964ac-130">Start Visual Studio.</span></span>
 
-2. <span data-ttu-id="5dc0d-131">İçinde **dosya** menüsünde tıklatın **yeni**ve ardından **yeni proje**.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-131">In the **File** menu, click **New**, and then click **New Project**.</span></span>
+2. <span data-ttu-id="964ac-131">İçinde **dosya** menüsünde tıklatın **yeni**ve ardından **yeni proje**.</span><span class="sxs-lookup"><span data-stu-id="964ac-131">In the **File** menu, click **New**, and then click **New Project**.</span></span>
 
-     <span data-ttu-id="5dc0d-132">**Yeni proje** iletişim kutusu görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-132">The **New Project** dialog box is displayed.</span></span>
+     <span data-ttu-id="964ac-132">**Yeni proje** iletişim kutusu görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="964ac-132">The **New Project** dialog box is displayed.</span></span>
 
-3. <span data-ttu-id="5dc0d-133">Altında **yüklü şablonlar**, kullanmak istediğiniz programlama dili seçin (**Visual Basic** veya **Visual C#**).</span><span class="sxs-lookup"><span data-stu-id="5dc0d-133">Under **Installed Templates**, select the programming language you want to use (**Visual Basic** or **Visual C#**).</span></span>
+3. <span data-ttu-id="964ac-133">Altında **yüklü şablonlar**, kullanmak istediğiniz programlama dili seçin (**Visual Basic** veya **Visual C#** ).</span><span class="sxs-lookup"><span data-stu-id="964ac-133">Under **Installed Templates**, select the programming language you want to use (**Visual Basic** or **Visual C#**).</span></span>
 
-4. <span data-ttu-id="5dc0d-134">İçinde **yeni proje** iletişim kutusunda **WPF uygulaması**.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-134">In the **New Project** dialog box, select **WPF Application**.</span></span>
+4. <span data-ttu-id="964ac-134">İçinde **yeni proje** iletişim kutusunda **WPF uygulaması**.</span><span class="sxs-lookup"><span data-stu-id="964ac-134">In the **New Project** dialog box, select **WPF Application**.</span></span>
 
     > [!NOTE]
-    >  <span data-ttu-id="5dc0d-135">Görmüyorsanız, **WPF uygulaması** şablonu, WPF destekleyen .NET Framework sürümü hedefleme emin olun.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-135">If you do not see the **WPF Application** template, make sure that you are targeting a version of the .NET Framework that supports WPF.</span></span> <span data-ttu-id="5dc0d-136">İçinde **yeni proje** iletişim kutusunda [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] listeden.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-136">In the **New Project** dialog box, select [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] from the list.</span></span>
+    >  <span data-ttu-id="964ac-135">Görmüyorsanız, **WPF uygulaması** şablonu, WPF destekleyen .NET Framework sürümü hedefleme emin olun.</span><span class="sxs-lookup"><span data-stu-id="964ac-135">If you do not see the **WPF Application** template, make sure that you are targeting a version of the .NET Framework that supports WPF.</span></span> <span data-ttu-id="964ac-136">İçinde **yeni proje** iletişim kutusunda, listeden seçim .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="964ac-136">In the **New Project** dialog box, select .NET Framework 4 from the list.</span></span>
 
-5. <span data-ttu-id="5dc0d-137">İçinde **adı** metin kutusunda, projeniz için bir ad girin.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-137">In the **Name** text box, enter a name for your project.</span></span> <span data-ttu-id="5dc0d-138">Örneğin, girdiğiniz **WPFCaching**.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-138">For example, you can enter **WPFCaching**.</span></span>
+5. <span data-ttu-id="964ac-137">İçinde **adı** metin kutusunda, projeniz için bir ad girin.</span><span class="sxs-lookup"><span data-stu-id="964ac-137">In the **Name** text box, enter a name for your project.</span></span> <span data-ttu-id="964ac-138">Örneğin, girdiğiniz **WPFCaching**.</span><span class="sxs-lookup"><span data-stu-id="964ac-138">For example, you can enter **WPFCaching**.</span></span>
 
-6. <span data-ttu-id="5dc0d-139">Seçin **çözüm için dizin oluştur** onay kutusu.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-139">Select the **Create directory for solution** check box.</span></span>
+6. <span data-ttu-id="964ac-139">Seçin **çözüm için dizin oluştur** onay kutusu.</span><span class="sxs-lookup"><span data-stu-id="964ac-139">Select the **Create directory for solution** check box.</span></span>
 
-7. <span data-ttu-id="5dc0d-140">**Tamam**'ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-140">Click **OK**.</span></span>
+7. <span data-ttu-id="964ac-140">**Tamam**'ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="964ac-140">Click **OK**.</span></span>
 
-     <span data-ttu-id="5dc0d-141">WPF Tasarımcısı açılır **tasarım** görüntüleyin ve MainWindow.xaml dosyayı görüntüler.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-141">The WPF Designer opens in **Design** view and displays the MainWindow.xaml file.</span></span> <span data-ttu-id="5dc0d-142">Visual Studio oluşturur **Projem** klasörünü, Application.xaml dosyasını ve MainWindow.xaml dosyasını.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-142">Visual Studio creates the **My Project** folder, the Application.xaml file, and the MainWindow.xaml file.</span></span>
+     <span data-ttu-id="964ac-141">WPF Tasarımcısı açılır **tasarım** görüntüleyin ve MainWindow.xaml dosyayı görüntüler.</span><span class="sxs-lookup"><span data-stu-id="964ac-141">The WPF Designer opens in **Design** view and displays the MainWindow.xaml file.</span></span> <span data-ttu-id="964ac-142">Visual Studio oluşturur **Projem** klasörünü, Application.xaml dosyasını ve MainWindow.xaml dosyasını.</span><span class="sxs-lookup"><span data-stu-id="964ac-142">Visual Studio creates the **My Project** folder, the Application.xaml file, and the MainWindow.xaml file.</span></span>
 
-## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a><span data-ttu-id="5dc0d-143">.NET Framework hedefleme ve önbelleğe alma derlemelere başvuru ekleme</span><span class="sxs-lookup"><span data-stu-id="5dc0d-143">Targeting the .NET Framework and Adding a Reference to the Caching Assemblies</span></span>
- <span data-ttu-id="5dc0d-144">Varsayılan olarak, WPF uygulamaları hedef [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5dc0d-144">By default, WPF applications target the [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].</span></span> <span data-ttu-id="5dc0d-145">Kullanılacak <xref:System.Runtime.Caching> gerekir ad alanı WPF uygulamasında uygulama hedef [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (değil [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) ve ad alanına bir başvuru içermelidir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-145">To use the <xref:System.Runtime.Caching> namespace in a WPF application, the application must target the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (not the [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) and must include a reference to the namespace.</span></span>
+## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a><span data-ttu-id="964ac-143">.NET Framework hedefleme ve önbelleğe alma derlemelere başvuru ekleme</span><span class="sxs-lookup"><span data-stu-id="964ac-143">Targeting the .NET Framework and Adding a Reference to the Caching Assemblies</span></span>
+ <span data-ttu-id="964ac-144">Varsayılan olarak, WPF uygulamaları hedef [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="964ac-144">By default, WPF applications target the [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].</span></span> <span data-ttu-id="964ac-145">Kullanılacak <xref:System.Runtime.Caching> bir WPF uygulamasında uygulama ad alanı .NET Framework 4 hedefleyen gerekir (değil [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) ve ad alanına bir başvuru içermelidir.</span><span class="sxs-lookup"><span data-stu-id="964ac-145">To use the <xref:System.Runtime.Caching> namespace in a WPF application, the application must target the .NET Framework 4 (not the [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) and must include a reference to the namespace.</span></span>
 
- <span data-ttu-id="5dc0d-146">Bu nedenle, .NET Framework hedefi ve bir başvuru eklemek için sonraki adım olan <xref:System.Runtime.Caching> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-146">Therefore, the next step is to change the .NET Framework target and add a reference to the <xref:System.Runtime.Caching> namespace.</span></span>
+ <span data-ttu-id="964ac-146">Bu nedenle, .NET Framework hedefi ve bir başvuru eklemek için sonraki adım olan <xref:System.Runtime.Caching> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="964ac-146">Therefore, the next step is to change the .NET Framework target and add a reference to the <xref:System.Runtime.Caching> namespace.</span></span>
 
 > [!NOTE]
->  <span data-ttu-id="5dc0d-147">.NET Framework hedef değiştirmek için bu yordamı, Visual Basic projesinde ve Visual C# projesinde farklıdır.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-147">The procedure for changing the .NET Framework target is different in a Visual Basic project and in a Visual C# project.</span></span>
+>  <span data-ttu-id="964ac-147">.NET Framework hedef değiştirmek için bu yordamı, Visual Basic projesinde ve Visual C# projesinde farklıdır.</span><span class="sxs-lookup"><span data-stu-id="964ac-147">The procedure for changing the .NET Framework target is different in a Visual Basic project and in a Visual C# project.</span></span>
 
-#### <a name="to-change-the-target-net-framework-in-visual-basic"></a><span data-ttu-id="5dc0d-148">Hedef .NET Framework'ü Visual Basic'te değiştirmek için</span><span class="sxs-lookup"><span data-stu-id="5dc0d-148">To change the target .NET Framework in Visual Basic</span></span>
+#### <a name="to-change-the-target-net-framework-in-visual-basic"></a><span data-ttu-id="964ac-148">Hedef .NET Framework'ü Visual Basic'te değiştirmek için</span><span class="sxs-lookup"><span data-stu-id="964ac-148">To change the target .NET Framework in Visual Basic</span></span>
 
-1. <span data-ttu-id="5dc0d-149">İçinde **Çözüm Gezgini**proje adına sağ tıklayın ve ardından **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-149">In **Solutions Explorer**, right-click the project name, and then click **Properties**.</span></span>
+1. <span data-ttu-id="964ac-149">İçinde **Çözüm Gezgini**proje adına sağ tıklayın ve ardından **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="964ac-149">In **Solutions Explorer**, right-click the project name, and then click **Properties**.</span></span>
 
-     <span data-ttu-id="5dc0d-150">Uygulama için Özellikler penceresi görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-150">The properties window for the application is displayed.</span></span>
+     <span data-ttu-id="964ac-150">Uygulama için Özellikler penceresi görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="964ac-150">The properties window for the application is displayed.</span></span>
 
-2. <span data-ttu-id="5dc0d-151">Tıklayın **derleme** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-151">Click the **Compile** tab.</span></span>
+2. <span data-ttu-id="964ac-151">Tıklayın **derleme** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="964ac-151">Click the **Compile** tab.</span></span>
 
-3. <span data-ttu-id="5dc0d-152">Pencerenin alt kısmında tıklayın **Gelişmiş derleme seçenekleri...** .</span><span class="sxs-lookup"><span data-stu-id="5dc0d-152">At the bottom of the window, click **Advanced Compile Options…**.</span></span>
+3. <span data-ttu-id="964ac-152">Pencerenin alt kısmında tıklayın **Gelişmiş derleme seçenekleri...** .</span><span class="sxs-lookup"><span data-stu-id="964ac-152">At the bottom of the window, click **Advanced Compile Options…**.</span></span>
 
-     <span data-ttu-id="5dc0d-153">**Gelişmiş derleyici ayarları** iletişim kutusu görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-153">The **Advanced Compiler Settings** dialog box is displayed.</span></span>
+     <span data-ttu-id="964ac-153">**Gelişmiş derleyici ayarları** iletişim kutusu görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="964ac-153">The **Advanced Compiler Settings** dialog box is displayed.</span></span>
 
-4. <span data-ttu-id="5dc0d-154">İçinde **hedef Framework'ü (tüm yapılandırmaları)** listesinden [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5dc0d-154">In the **Target framework (all configurations)** list, select [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span></span> <span data-ttu-id="5dc0d-155">(Seçmeyin [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)</span><span class="sxs-lookup"><span data-stu-id="5dc0d-155">(Do not select [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)</span></span>
+4. <span data-ttu-id="964ac-154">İçinde **hedef Framework'ü (tüm yapılandırmaları)** listesinde, .NET Framework 4'ı seçin.</span><span class="sxs-lookup"><span data-stu-id="964ac-154">In the **Target framework (all configurations)** list, select .NET Framework 4.</span></span> <span data-ttu-id="964ac-155">(Seçmeyin [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)</span><span class="sxs-lookup"><span data-stu-id="964ac-155">(Do not select [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)</span></span>
 
-5. <span data-ttu-id="5dc0d-156">**Tamam**'ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-156">Click **OK**.</span></span>
+5. <span data-ttu-id="964ac-156">**Tamam**'ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="964ac-156">Click **OK**.</span></span>
 
-     <span data-ttu-id="5dc0d-157">**Hedef Framework değişikliği** iletişim kutusu görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-157">The **Target Framework Change** dialog box is displayed.</span></span>
+     <span data-ttu-id="964ac-157">**Hedef Framework değişikliği** iletişim kutusu görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="964ac-157">The **Target Framework Change** dialog box is displayed.</span></span>
 
-6. <span data-ttu-id="5dc0d-158">İçinde **hedef Framework değişikliği** iletişim kutusu, tıklayın **Evet**.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-158">In the **Target Framework Change** dialog box, click **Yes**.</span></span>
+6. <span data-ttu-id="964ac-158">İçinde **hedef Framework değişikliği** iletişim kutusu, tıklayın **Evet**.</span><span class="sxs-lookup"><span data-stu-id="964ac-158">In the **Target Framework Change** dialog box, click **Yes**.</span></span>
 
-     <span data-ttu-id="5dc0d-159">Proje kapatıldı ve sonra yeniden açılmasını.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-159">The project is closed and is then reopened.</span></span>
+     <span data-ttu-id="964ac-159">Proje kapatıldı ve sonra yeniden açılmasını.</span><span class="sxs-lookup"><span data-stu-id="964ac-159">The project is closed and is then reopened.</span></span>
 
-7. <span data-ttu-id="5dc0d-160">Aşağıdaki adımları izleyerek önbelleğe alma derlemesine bir başvuru ekleyin:</span><span class="sxs-lookup"><span data-stu-id="5dc0d-160">Add a reference to the caching assembly by following these steps:</span></span>
+7. <span data-ttu-id="964ac-160">Aşağıdaki adımları izleyerek önbelleğe alma derlemesine bir başvuru ekleyin:</span><span class="sxs-lookup"><span data-stu-id="964ac-160">Add a reference to the caching assembly by following these steps:</span></span>
 
-    1. <span data-ttu-id="5dc0d-161">İçinde **Çözüm Gezgini**, proje adına sağ tıklayın ve ardından **Başvuru Ekle**.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-161">In **Solution Explorer**, right-click the name of the project and then click **Add Reference**.</span></span>
+    1. <span data-ttu-id="964ac-161">İçinde **Çözüm Gezgini**, proje adına sağ tıklayın ve ardından **Başvuru Ekle**.</span><span class="sxs-lookup"><span data-stu-id="964ac-161">In **Solution Explorer**, right-click the name of the project and then click **Add Reference**.</span></span>
 
-    2. <span data-ttu-id="5dc0d-162">Seçin **.NET** sekmesinde `System.Runtime.Caching`ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-162">Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.</span></span>
+    2. <span data-ttu-id="964ac-162">Seçin **.NET** sekmesinde `System.Runtime.Caching`ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="964ac-162">Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.</span></span>
 
-#### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a><span data-ttu-id="5dc0d-163">' % S'hedef .NET Framework'ü Visual C# projesinde değiştirmek için</span><span class="sxs-lookup"><span data-stu-id="5dc0d-163">To change the target .NET Framework in a Visual C# project</span></span>
+#### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a><span data-ttu-id="964ac-163">' % S'hedef .NET Framework'ü Visual C# projesinde değiştirmek için</span><span class="sxs-lookup"><span data-stu-id="964ac-163">To change the target .NET Framework in a Visual C# project</span></span>
 
-1. <span data-ttu-id="5dc0d-164">İçinde **Çözüm Gezgini**, proje adına sağ tıklayın ve ardından **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-164">In **Solution Explorer**, right-click the project name and then click **Properties**.</span></span>
+1. <span data-ttu-id="964ac-164">İçinde **Çözüm Gezgini**, proje adına sağ tıklayın ve ardından **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="964ac-164">In **Solution Explorer**, right-click the project name and then click **Properties**.</span></span>
 
-     <span data-ttu-id="5dc0d-165">Uygulama için Özellikler penceresi görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-165">The properties window for the application is displayed.</span></span>
+     <span data-ttu-id="964ac-165">Uygulama için Özellikler penceresi görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="964ac-165">The properties window for the application is displayed.</span></span>
 
-2. <span data-ttu-id="5dc0d-166">Tıklayın **uygulama** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-166">Click the **Application** tab.</span></span>
+2. <span data-ttu-id="964ac-166">Tıklayın **uygulama** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="964ac-166">Click the **Application** tab.</span></span>
 
-3. <span data-ttu-id="5dc0d-167">İçinde **hedef Framework'ü** listesinden [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5dc0d-167">In the **Target framework** list, select [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span></span> <span data-ttu-id="5dc0d-168">(Seçmeyin **.NET Framework 4 istemci profili**.)</span><span class="sxs-lookup"><span data-stu-id="5dc0d-168">(Do not select **.NET Framework 4 Client Profile**.)</span></span>
+3. <span data-ttu-id="964ac-167">İçinde **hedef Framework'ü** listesinde, .NET Framework 4'ı seçin.</span><span class="sxs-lookup"><span data-stu-id="964ac-167">In the **Target framework** list, select .NET Framework 4.</span></span> <span data-ttu-id="964ac-168">(Seçmeyin **.NET Framework 4 istemci profili**.)</span><span class="sxs-lookup"><span data-stu-id="964ac-168">(Do not select **.NET Framework 4 Client Profile**.)</span></span>
 
-4. <span data-ttu-id="5dc0d-169">Aşağıdaki adımları izleyerek önbelleğe alma derlemesine bir başvuru ekleyin:</span><span class="sxs-lookup"><span data-stu-id="5dc0d-169">Add a reference to the caching assembly by following these steps:</span></span>
+4. <span data-ttu-id="964ac-169">Aşağıdaki adımları izleyerek önbelleğe alma derlemesine bir başvuru ekleyin:</span><span class="sxs-lookup"><span data-stu-id="964ac-169">Add a reference to the caching assembly by following these steps:</span></span>
 
-    1. <span data-ttu-id="5dc0d-170">Sağ **başvuruları** klasörünü ve ardından **Başvuru Ekle**.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-170">Right-click the **References** folder and then click **Add Reference**.</span></span>
+    1. <span data-ttu-id="964ac-170">Sağ **başvuruları** klasörünü ve ardından **Başvuru Ekle**.</span><span class="sxs-lookup"><span data-stu-id="964ac-170">Right-click the **References** folder and then click **Add Reference**.</span></span>
 
-    2. <span data-ttu-id="5dc0d-171">Seçin **.NET** sekmesinde `System.Runtime.Caching`ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-171">Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.</span></span>
+    2. <span data-ttu-id="964ac-171">Seçin **.NET** sekmesinde `System.Runtime.Caching`ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="964ac-171">Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.</span></span>
 
-## <a name="adding-a-button-to-the-wpf-window"></a><span data-ttu-id="5dc0d-172">WPF penceresine bir düğme ekleme</span><span class="sxs-lookup"><span data-stu-id="5dc0d-172">Adding a Button to the WPF Window</span></span>
- <span data-ttu-id="5dc0d-173">Ardından bir düğme denetimi ekleyin ve düğmenin için bir olay işleyicisi oluşturun `Click` olay.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-173">Next, you will add a button control and create an event handler for the button's `Click` event.</span></span> <span data-ttu-id="5dc0d-174">Düğmeye tıkladığınızda, metin dosyasının içeriğini önbelleğe alınan görüntülenir ve bu nedenle, daha sonra kod ekleyeceksiniz.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-174">Later you will add code to so when you click the button, the contents of the text file are cached and displayed.</span></span>
+## <a name="adding-a-button-to-the-wpf-window"></a><span data-ttu-id="964ac-172">WPF penceresine bir düğme ekleme</span><span class="sxs-lookup"><span data-stu-id="964ac-172">Adding a Button to the WPF Window</span></span>
+ <span data-ttu-id="964ac-173">Ardından bir düğme denetimi ekleyin ve düğmenin için bir olay işleyicisi oluşturun `Click` olay.</span><span class="sxs-lookup"><span data-stu-id="964ac-173">Next, you will add a button control and create an event handler for the button's `Click` event.</span></span> <span data-ttu-id="964ac-174">Düğmeye tıkladığınızda, metin dosyasının içeriğini önbelleğe alınan görüntülenir ve bu nedenle, daha sonra kod ekleyeceksiniz.</span><span class="sxs-lookup"><span data-stu-id="964ac-174">Later you will add code to so when you click the button, the contents of the text file are cached and displayed.</span></span>
 
-#### <a name="to-add-a-button-control"></a><span data-ttu-id="5dc0d-175">Bir düğme denetimi eklemek için</span><span class="sxs-lookup"><span data-stu-id="5dc0d-175">To add a button control</span></span>
+#### <a name="to-add-a-button-control"></a><span data-ttu-id="964ac-175">Bir düğme denetimi eklemek için</span><span class="sxs-lookup"><span data-stu-id="964ac-175">To add a button control</span></span>
 
-1. <span data-ttu-id="5dc0d-176">İçinde **Çözüm Gezgini**, MainWindow.xaml dosyasını açmak için çift tıklatın.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-176">In **Solution Explorer**, double-click the MainWindow.xaml file to open it.</span></span>
+1. <span data-ttu-id="964ac-176">İçinde **Çözüm Gezgini**, MainWindow.xaml dosyasını açmak için çift tıklatın.</span><span class="sxs-lookup"><span data-stu-id="964ac-176">In **Solution Explorer**, double-click the MainWindow.xaml file to open it.</span></span>
 
-2. <span data-ttu-id="5dc0d-177">Gelen **araç kutusu**altında **ortak WPF denetimleri**, sürükleyin bir `Button` denetimini `MainWindow` penceresi.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-177">From the **Toolbox**, under **Common WPF Controls**, drag a `Button` control to the `MainWindow` window.</span></span>
+2. <span data-ttu-id="964ac-177">Gelen **araç kutusu**altında **ortak WPF denetimleri**, sürükleyin bir `Button` denetimini `MainWindow` penceresi.</span><span class="sxs-lookup"><span data-stu-id="964ac-177">From the **Toolbox**, under **Common WPF Controls**, drag a `Button` control to the `MainWindow` window.</span></span>
 
-3. <span data-ttu-id="5dc0d-178">İçinde **özellikleri** penceresinde `Content` özelliği `Button` denetimini **önbelleğe alma**.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-178">In the **Properties** window, set the `Content` property of the `Button` control to **Get Cache**.</span></span>
+3. <span data-ttu-id="964ac-178">İçinde **özellikleri** penceresinde `Content` özelliği `Button` denetimini **önbelleğe alma**.</span><span class="sxs-lookup"><span data-stu-id="964ac-178">In the **Properties** window, set the `Content` property of the `Button` control to **Get Cache**.</span></span>
 
-## <a name="initializing-the-cache-and-caching-an-entry"></a><span data-ttu-id="5dc0d-179">Önbellek başlatılıyor ve bir giriş önbelleğe alma</span><span class="sxs-lookup"><span data-stu-id="5dc0d-179">Initializing the Cache and Caching an Entry</span></span>
- <span data-ttu-id="5dc0d-180">Sonra aşağıdaki görevleri gerçekleştirmek için kod ekleyeceksiniz:</span><span class="sxs-lookup"><span data-stu-id="5dc0d-180">Next, you will add the code to perform the following tasks:</span></span>
+## <a name="initializing-the-cache-and-caching-an-entry"></a><span data-ttu-id="964ac-179">Önbellek başlatılıyor ve bir giriş önbelleğe alma</span><span class="sxs-lookup"><span data-stu-id="964ac-179">Initializing the Cache and Caching an Entry</span></span>
+ <span data-ttu-id="964ac-180">Sonra aşağıdaki görevleri gerçekleştirmek için kod ekleyeceksiniz:</span><span class="sxs-lookup"><span data-stu-id="964ac-180">Next, you will add the code to perform the following tasks:</span></span>
 
-- <span data-ttu-id="5dc0d-181">Önbellek sınıfının bir örneğini oluşturun — diğer bir deyişle, yeni bir örneğini <xref:System.Runtime.Caching.MemoryCache> nesne.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-181">Create an instance of the cache class—that is, you will instantiate a new <xref:System.Runtime.Caching.MemoryCache> object.</span></span>
+- <span data-ttu-id="964ac-181">Önbellek sınıfının bir örneğini oluşturun — diğer bir deyişle, yeni bir örneğini <xref:System.Runtime.Caching.MemoryCache> nesne.</span><span class="sxs-lookup"><span data-stu-id="964ac-181">Create an instance of the cache class—that is, you will instantiate a new <xref:System.Runtime.Caching.MemoryCache> object.</span></span>
 
-- <span data-ttu-id="5dc0d-182">Önbellek kullandığını belirtirseniz bir <xref:System.Runtime.Caching.HostFileChangeMonitor> metin dosyasındaki değişiklikleri izlemek için nesne.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-182">Specify that the cache uses a <xref:System.Runtime.Caching.HostFileChangeMonitor> object to monitor changes in the text file.</span></span>
+- <span data-ttu-id="964ac-182">Önbellek kullandığını belirtirseniz bir <xref:System.Runtime.Caching.HostFileChangeMonitor> metin dosyasındaki değişiklikleri izlemek için nesne.</span><span class="sxs-lookup"><span data-stu-id="964ac-182">Specify that the cache uses a <xref:System.Runtime.Caching.HostFileChangeMonitor> object to monitor changes in the text file.</span></span>
 
-- <span data-ttu-id="5dc0d-183">Metin dosyası okuma ve içeriğinin bir önbellek girdisi önbelleğe alır.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-183">Read the text file and cache its contents as a cache entry.</span></span>
+- <span data-ttu-id="964ac-183">Metin dosyası okuma ve içeriğinin bir önbellek girdisi önbelleğe alır.</span><span class="sxs-lookup"><span data-stu-id="964ac-183">Read the text file and cache its contents as a cache entry.</span></span>
 
-- <span data-ttu-id="5dc0d-184">Önbelleğe alınan metin dosyasının içeriğini görüntüler.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-184">Display the contents of the cached text file.</span></span>
+- <span data-ttu-id="964ac-184">Önbelleğe alınan metin dosyasının içeriğini görüntüler.</span><span class="sxs-lookup"><span data-stu-id="964ac-184">Display the contents of the cached text file.</span></span>
 
-#### <a name="to-create-the-cache-object"></a><span data-ttu-id="5dc0d-185">Önbellek nesnesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="5dc0d-185">To create the cache object</span></span>
+#### <a name="to-create-the-cache-object"></a><span data-ttu-id="964ac-185">Önbellek nesnesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="964ac-185">To create the cache object</span></span>
 
-1. <span data-ttu-id="5dc0d-186">MainWindow.xaml.cs veya MainWindow.Xaml.vb dosyasında bir olay işleyicisi oluşturmak için eklediğiniz düğmeyi çift tıklatın.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-186">Double-click the button you just added in order to create an event handler in the MainWindow.xaml.cs or MainWindow.Xaml.vb file.</span></span>
+1. <span data-ttu-id="964ac-186">MainWindow.xaml.cs veya MainWindow.Xaml.vb dosyasında bir olay işleyicisi oluşturmak için eklediğiniz düğmeyi çift tıklatın.</span><span class="sxs-lookup"><span data-stu-id="964ac-186">Double-click the button you just added in order to create an event handler in the MainWindow.xaml.cs or MainWindow.Xaml.vb file.</span></span>
 
-2. <span data-ttu-id="5dc0d-187">(Önce sınıf bildiriminin) dosyasının en üstüne aşağıdakileri ekleyin `Imports` (Visual Basic) veya `using` deyimleri (C#):</span><span class="sxs-lookup"><span data-stu-id="5dc0d-187">At the top of the file (before the class declaration), add the following `Imports` (Visual Basic) or `using` (C#) statements:</span></span>
+2. <span data-ttu-id="964ac-187">(Önce sınıf bildiriminin) dosyasının en üstüne aşağıdakileri ekleyin `Imports` (Visual Basic) veya `using` deyimleri (C#):</span><span class="sxs-lookup"><span data-stu-id="964ac-187">At the top of the file (before the class declaration), add the following `Imports` (Visual Basic) or `using` (C#) statements:</span></span>
 
     ```csharp
     using System.Runtime.Caching;
@@ -167,7 +167,7 @@ ms.locfileid: "65591198"
     Imports System.IO
     ```
 
-3. <span data-ttu-id="5dc0d-188">Olay işleyicisi, önbellek nesnesi oluşturmak için aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="5dc0d-188">In the event handler, add the following code to instantiate the cache object:</span></span>
+3. <span data-ttu-id="964ac-188">Olay işleyicisi, önbellek nesnesi oluşturmak için aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="964ac-188">In the event handler, add the following code to instantiate the cache object:</span></span>
 
     ```csharp
     ObjectCache cache = MemoryCache.Default;
@@ -177,9 +177,9 @@ ms.locfileid: "65591198"
     Dim cache As ObjectCache = MemoryCache.Default
     ```
 
-     <span data-ttu-id="5dc0d-189"><xref:System.Runtime.Caching.ObjectCache> Bir bellek içi nesne önbelleği sağlayan yerleşik bir sınıfı.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-189">The <xref:System.Runtime.Caching.ObjectCache> class is a built-in class that provides an in-memory object cache.</span></span>
+     <span data-ttu-id="964ac-189"><xref:System.Runtime.Caching.ObjectCache> Bir bellek içi nesne önbelleği sağlayan yerleşik bir sınıfı.</span><span class="sxs-lookup"><span data-stu-id="964ac-189">The <xref:System.Runtime.Caching.ObjectCache> class is a built-in class that provides an in-memory object cache.</span></span>
 
-4. <span data-ttu-id="5dc0d-190">Adlı bir önbellek girdisi içeriğini okumak için aşağıdaki kodu ekleyin `filecontents`:</span><span class="sxs-lookup"><span data-stu-id="5dc0d-190">Add the following code to read the contents of a cache entry named `filecontents`:</span></span>
+4. <span data-ttu-id="964ac-190">Adlı bir önbellek girdisi içeriğini okumak için aşağıdaki kodu ekleyin `filecontents`:</span><span class="sxs-lookup"><span data-stu-id="964ac-190">Add the following code to read the contents of a cache entry named `filecontents`:</span></span>
 
     ```vb
     Dim fileContents As String = TryCast(cache("filecontents"), String)
@@ -189,7 +189,7 @@ ms.locfileid: "65591198"
     string fileContents = cache["filecontents"] as string;
     ```
 
-5. <span data-ttu-id="5dc0d-191">Önbellek girdisi adlı olup olmadığını denetlemek için aşağıdaki kodu ekleyin `filecontents` bulunmaktadır:</span><span class="sxs-lookup"><span data-stu-id="5dc0d-191">Add the following code to check whether the cache entry named `filecontents` exists:</span></span>
+5. <span data-ttu-id="964ac-191">Önbellek girdisi adlı olup olmadığını denetlemek için aşağıdaki kodu ekleyin `filecontents` bulunmaktadır:</span><span class="sxs-lookup"><span data-stu-id="964ac-191">Add the following code to check whether the cache entry named `filecontents` exists:</span></span>
 
     ```vb
     If fileContents Is Nothing Then
@@ -204,9 +204,9 @@ ms.locfileid: "65591198"
     }
     ```
 
-     <span data-ttu-id="5dc0d-192">Belirtilen önbellek girdisi yok, metin dosyası okuma ve önbelleğe bir önbellek girdisi ekleyin.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-192">If the specified cache entry does not exist, you must read the text file and add it as a cache entry to the cache.</span></span>
+     <span data-ttu-id="964ac-192">Belirtilen önbellek girdisi yok, metin dosyası okuma ve önbelleğe bir önbellek girdisi ekleyin.</span><span class="sxs-lookup"><span data-stu-id="964ac-192">If the specified cache entry does not exist, you must read the text file and add it as a cache entry to the cache.</span></span>
 
-6. <span data-ttu-id="5dc0d-193">İçinde `if/then` engelleme, yeni bir oluşturmak için aşağıdaki kodu ekleyin <xref:System.Runtime.Caching.CacheItemPolicy> önbellek girdisi 10 saniye sonra süresi dolar belirten bir nesne.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-193">In the `if/then` block, add the following code to create a new <xref:System.Runtime.Caching.CacheItemPolicy> object that specifies that the cache entry expires after 10 seconds.</span></span>
+6. <span data-ttu-id="964ac-193">İçinde `if/then` engelleme, yeni bir oluşturmak için aşağıdaki kodu ekleyin <xref:System.Runtime.Caching.CacheItemPolicy> önbellek girdisi 10 saniye sonra süresi dolar belirten bir nesne.</span><span class="sxs-lookup"><span data-stu-id="964ac-193">In the `if/then` block, add the following code to create a new <xref:System.Runtime.Caching.CacheItemPolicy> object that specifies that the cache entry expires after 10 seconds.</span></span>
 
     ```vb
     Dim policy As New CacheItemPolicy()
@@ -218,9 +218,9 @@ ms.locfileid: "65591198"
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     <span data-ttu-id="5dc0d-194">Çıkarma veya sona erme bilgi sağlanmazsa, varsayılan değer <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, önbellek girişlerinin başka bir deyişle, süresi dolmayacak tabanlı yalnızca mutlak bir saat.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-194">If no eviction or expiration information is provided, the default is <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, which means the cache entries never expire based only on an absolute time.</span></span> <span data-ttu-id="5dc0d-195">Yalnızca bellek baskısı olduğunda, bunun yerine, önbellek girişlerinin süresinin.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-195">Instead, cache entries expire only when there is memory pressure.</span></span> <span data-ttu-id="5dc0d-196">En iyi uygulama, her zaman açık mutlak ya da bir olmaadığını sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-196">As a best practice, you should always explicitly provide either an absolute or a sliding expiration.</span></span>
+     <span data-ttu-id="964ac-194">Çıkarma veya sona erme bilgi sağlanmazsa, varsayılan değer <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, önbellek girişlerinin başka bir deyişle, süresi dolmayacak tabanlı yalnızca mutlak bir saat.</span><span class="sxs-lookup"><span data-stu-id="964ac-194">If no eviction or expiration information is provided, the default is <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, which means the cache entries never expire based only on an absolute time.</span></span> <span data-ttu-id="964ac-195">Yalnızca bellek baskısı olduğunda, bunun yerine, önbellek girişlerinin süresinin.</span><span class="sxs-lookup"><span data-stu-id="964ac-195">Instead, cache entries expire only when there is memory pressure.</span></span> <span data-ttu-id="964ac-196">En iyi uygulama, her zaman açık mutlak ya da bir olmaadığını sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="964ac-196">As a best practice, you should always explicitly provide either an absolute or a sliding expiration.</span></span>
 
-7. <span data-ttu-id="5dc0d-197">İçinde `if/then` engelleme ve önceki adımda eklediğiniz kodun, izlemek ve metin dosyasının yolu koleksiyona eklemek istediğiniz dosya yolları için bir koleksiyon oluşturmak için aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="5dc0d-197">Inside the `if/then` block and following the code you added in the previous step, add the following code to create a collection for the file paths that you want to monitor, and to add the path of the text file to the collection:</span></span>
+7. <span data-ttu-id="964ac-197">İçinde `if/then` engelleme ve önceki adımda eklediğiniz kodun, izlemek ve metin dosyasının yolu koleksiyona eklemek istediğiniz dosya yolları için bir koleksiyon oluşturmak için aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="964ac-197">Inside the `if/then` block and following the code you added in the previous step, add the following code to create a collection for the file paths that you want to monitor, and to add the path of the text file to the collection:</span></span>
 
     ```vb
     Dim filePaths As New List(Of String)()
@@ -233,9 +233,9 @@ ms.locfileid: "65591198"
     ```
 
     > [!NOTE]
-    >  <span data-ttu-id="5dc0d-198">Kullanmak istediğiniz metin dosyasını değilse `c:\cache\cacheText.txt`, metin dosyasının bulunduğu kullanmak istediğiniz yolu belirtin.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-198">If the text file you want to use is not `c:\cache\cacheText.txt`, specify the path where the text file is that you want to use.</span></span>
+    >  <span data-ttu-id="964ac-198">Kullanmak istediğiniz metin dosyasını değilse `c:\cache\cacheText.txt`, metin dosyasının bulunduğu kullanmak istediğiniz yolu belirtin.</span><span class="sxs-lookup"><span data-stu-id="964ac-198">If the text file you want to use is not `c:\cache\cacheText.txt`, specify the path where the text file is that you want to use.</span></span>
 
-8. <span data-ttu-id="5dc0d-199">Önceki adımda eklediğiniz koddan sonra yeni bir eklemek için aşağıdaki kodu ekleyin <xref:System.Runtime.Caching.HostFileChangeMonitor> değişiklik koleksiyonuna nesnesi için önbellek girdisi izler:</span><span class="sxs-lookup"><span data-stu-id="5dc0d-199">Following the code that you added in the previous step, add the following code to add a new <xref:System.Runtime.Caching.HostFileChangeMonitor> object to the collection of change monitors for the cache entry:</span></span>
+8. <span data-ttu-id="964ac-199">Önceki adımda eklediğiniz koddan sonra yeni bir eklemek için aşağıdaki kodu ekleyin <xref:System.Runtime.Caching.HostFileChangeMonitor> değişiklik koleksiyonuna nesnesi için önbellek girdisi izler:</span><span class="sxs-lookup"><span data-stu-id="964ac-199">Following the code that you added in the previous step, add the following code to add a new <xref:System.Runtime.Caching.HostFileChangeMonitor> object to the collection of change monitors for the cache entry:</span></span>
 
     ```vb
     policy.ChangeMonitors.Add(New HostFileChangeMonitor(filePaths))
@@ -245,9 +245,9 @@ ms.locfileid: "65591198"
     policy.ChangeMonitors.Add(new HostFileChangeMonitor(filePaths));
     ```
 
-     <span data-ttu-id="5dc0d-200"><xref:System.Runtime.Caching.HostFileChangeMonitor> Nesne metin dosyası yolu izler ve değişiklikleri meydana gelirse, önbellek bildirir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-200">The <xref:System.Runtime.Caching.HostFileChangeMonitor> object monitors the text file's path and notifies the cache if changes occur.</span></span> <span data-ttu-id="5dc0d-201">Dosyanın içeriği değişirse, bu örnekte, önbellek girişi sona erecek.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-201">In this example, the cache entry will expire if the content of the file changes.</span></span>
+     <span data-ttu-id="964ac-200"><xref:System.Runtime.Caching.HostFileChangeMonitor> Nesne metin dosyası yolu izler ve değişiklikleri meydana gelirse, önbellek bildirir.</span><span class="sxs-lookup"><span data-stu-id="964ac-200">The <xref:System.Runtime.Caching.HostFileChangeMonitor> object monitors the text file's path and notifies the cache if changes occur.</span></span> <span data-ttu-id="964ac-201">Dosyanın içeriği değişirse, bu örnekte, önbellek girişi sona erecek.</span><span class="sxs-lookup"><span data-stu-id="964ac-201">In this example, the cache entry will expire if the content of the file changes.</span></span>
 
-9. <span data-ttu-id="5dc0d-202">Önceki adımda eklediğiniz koddan metin dosyasının içeriğini okumak için aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="5dc0d-202">Following the code that you added in the previous step, add the following code to read the contents of the text file:</span></span>
+9. <span data-ttu-id="964ac-202">Önceki adımda eklediğiniz koddan metin dosyasının içeriğini okumak için aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="964ac-202">Following the code that you added in the previous step, add the following code to read the contents of the text file:</span></span>
 
     ```vb
     fileContents = File.ReadAllText("c:\cache\cacheText.txt") & vbCrLf & DateTime.Now.ToString()
@@ -257,9 +257,9 @@ ms.locfileid: "65591198"
     fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now;
     ```
 
-     <span data-ttu-id="5dc0d-203">Önbellek girişinin süresi dolduğunda görmeniz mümkün olmayacaktır, tarih ve saat damgası eklenir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-203">The date and time timestamp is added so that you will be able to see when the cache entry expires.</span></span>
+     <span data-ttu-id="964ac-203">Önbellek girişinin süresi dolduğunda görmeniz mümkün olmayacaktır, tarih ve saat damgası eklenir.</span><span class="sxs-lookup"><span data-stu-id="964ac-203">The date and time timestamp is added so that you will be able to see when the cache entry expires.</span></span>
 
-10. <span data-ttu-id="5dc0d-204">Önbellek nesnesi olarak dosyanın içeriği eklemek için aşağıdaki kodu ekleyin önceki adımda eklediğiniz koddan sonra bir <xref:System.Runtime.Caching.CacheItem> örneği:</span><span class="sxs-lookup"><span data-stu-id="5dc0d-204">Following the code that you added in the previous step, add the following code to insert the contents of the file into the cache object as a <xref:System.Runtime.Caching.CacheItem> instance:</span></span>
+10. <span data-ttu-id="964ac-204">Önbellek nesnesi olarak dosyanın içeriği eklemek için aşağıdaki kodu ekleyin önceki adımda eklediğiniz koddan sonra bir <xref:System.Runtime.Caching.CacheItem> örneği:</span><span class="sxs-lookup"><span data-stu-id="964ac-204">Following the code that you added in the previous step, add the following code to insert the contents of the file into the cache object as a <xref:System.Runtime.Caching.CacheItem> instance:</span></span>
 
     ```vb
     cache.Set("filecontents", fileContents, policy)
@@ -269,9 +269,9 @@ ms.locfileid: "65591198"
     cache.Set("filecontents", fileContents, policy);
     ```
 
-     <span data-ttu-id="5dc0d-205">Nasıl önbellek girişi geçirerek çıkarılmasına ilişkin bilgileri belirtin <xref:System.Runtime.Caching.CacheItemPolicy> , daha önce oluşturduğunuz bir parametre olarak nesne.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-205">You specify information about how the cache entry should be evicted by passing the <xref:System.Runtime.Caching.CacheItemPolicy> object that you created earlier as a parameter.</span></span>
+     <span data-ttu-id="964ac-205">Nasıl önbellek girişi geçirerek çıkarılmasına ilişkin bilgileri belirtin <xref:System.Runtime.Caching.CacheItemPolicy> , daha önce oluşturduğunuz bir parametre olarak nesne.</span><span class="sxs-lookup"><span data-stu-id="964ac-205">You specify information about how the cache entry should be evicted by passing the <xref:System.Runtime.Caching.CacheItemPolicy> object that you created earlier as a parameter.</span></span>
 
-11. <span data-ttu-id="5dc0d-206">Sonra `if/then` engelleme, önbelleğe alınan dosya içeriğini bir ileti kutusu içinde görüntülemek için aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="5dc0d-206">After the `if/then` block, add the following code to display the cached file content in a message box:</span></span>
+11. <span data-ttu-id="964ac-206">Sonra `if/then` engelleme, önbelleğe alınan dosya içeriğini bir ileti kutusu içinde görüntülemek için aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="964ac-206">After the `if/then` block, add the following code to display the cached file content in a message box:</span></span>
 
     ```vb
     MessageBox.Show(fileContents)
@@ -281,53 +281,53 @@ ms.locfileid: "65591198"
     MessageBox.Show(fileContents);
     ```
 
-12. <span data-ttu-id="5dc0d-207">İçinde **derleme** menüsünde tıklayın **derleme WPFCaching** projenizi yapılandırmak için.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-207">In the **Build** menu, click **Build WPFCaching** to build your project.</span></span>
+12. <span data-ttu-id="964ac-207">İçinde **derleme** menüsünde tıklayın **derleme WPFCaching** projenizi yapılandırmak için.</span><span class="sxs-lookup"><span data-stu-id="964ac-207">In the **Build** menu, click **Build WPFCaching** to build your project.</span></span>
 
-## <a name="testing-caching-in-the-wpf-application"></a><span data-ttu-id="5dc0d-208">WPF uygulamasında önbelleğe almayı test etme</span><span class="sxs-lookup"><span data-stu-id="5dc0d-208">Testing Caching in the WPF Application</span></span>
- <span data-ttu-id="5dc0d-209">Artık uygulamayı test edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-209">You can now test the application.</span></span>
+## <a name="testing-caching-in-the-wpf-application"></a><span data-ttu-id="964ac-208">WPF uygulamasında önbelleğe almayı test etme</span><span class="sxs-lookup"><span data-stu-id="964ac-208">Testing Caching in the WPF Application</span></span>
+ <span data-ttu-id="964ac-209">Artık uygulamayı test edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="964ac-209">You can now test the application.</span></span>
 
-#### <a name="to-test-caching-in-the-wpf-application"></a><span data-ttu-id="5dc0d-210">WPF uygulamasında önbelleğe almayı test etme için</span><span class="sxs-lookup"><span data-stu-id="5dc0d-210">To test caching in the WPF application</span></span>
+#### <a name="to-test-caching-in-the-wpf-application"></a><span data-ttu-id="964ac-210">WPF uygulamasında önbelleğe almayı test etme için</span><span class="sxs-lookup"><span data-stu-id="964ac-210">To test caching in the WPF application</span></span>
 
-1. <span data-ttu-id="5dc0d-211">Uygulamayı çalıştırmak için CTRL + F5 tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-211">Press CTRL+F5 to run the application.</span></span>
+1. <span data-ttu-id="964ac-211">Uygulamayı çalıştırmak için CTRL + F5 tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="964ac-211">Press CTRL+F5 to run the application.</span></span>
 
-     <span data-ttu-id="5dc0d-212">`MainWindow` Penceresi görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-212">The `MainWindow` window is displayed.</span></span>
+     <span data-ttu-id="964ac-212">`MainWindow` Penceresi görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="964ac-212">The `MainWindow` window is displayed.</span></span>
 
-2. <span data-ttu-id="5dc0d-213">Tıklayın **önbelleğe alma**.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-213">Click **Get Cache**.</span></span>
+2. <span data-ttu-id="964ac-213">Tıklayın **önbelleğe alma**.</span><span class="sxs-lookup"><span data-stu-id="964ac-213">Click **Get Cache**.</span></span>
 
-     <span data-ttu-id="5dc0d-214">Önbelleğe alınmış içeriği metin dosyasından bir ileti kutusunda görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-214">The cached content from the text file is displayed in a message box.</span></span> <span data-ttu-id="5dc0d-215">Zaman damgası dosya çubuğunda dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-215">Notice the timestamp on the file.</span></span>
+     <span data-ttu-id="964ac-214">Önbelleğe alınmış içeriği metin dosyasından bir ileti kutusunda görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="964ac-214">The cached content from the text file is displayed in a message box.</span></span> <span data-ttu-id="964ac-215">Zaman damgası dosya çubuğunda dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="964ac-215">Notice the timestamp on the file.</span></span>
 
-3. <span data-ttu-id="5dc0d-216">İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-216">Close the message box and then click **Get Cache** again.</span></span>
+3. <span data-ttu-id="964ac-216">İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden.</span><span class="sxs-lookup"><span data-stu-id="964ac-216">Close the message box and then click **Get Cache** again.</span></span>
 
-     <span data-ttu-id="5dc0d-217">Zaman damgası değiştirilmez.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-217">The timestamp is unchanged.</span></span> <span data-ttu-id="5dc0d-218">Bu, önbelleğe alınmış içeriği görüntülendiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-218">This indicates the cached content is displayed.</span></span>
+     <span data-ttu-id="964ac-217">Zaman damgası değiştirilmez.</span><span class="sxs-lookup"><span data-stu-id="964ac-217">The timestamp is unchanged.</span></span> <span data-ttu-id="964ac-218">Bu, önbelleğe alınmış içeriği görüntülendiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="964ac-218">This indicates the cached content is displayed.</span></span>
 
-4. <span data-ttu-id="5dc0d-219">10 saniye veya daha fazla bekleyin ve ardından **önbelleğe alma** yeniden.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-219">Wait 10 seconds or more and then click **Get Cache** again.</span></span>
+4. <span data-ttu-id="964ac-219">10 saniye veya daha fazla bekleyin ve ardından **önbelleğe alma** yeniden.</span><span class="sxs-lookup"><span data-stu-id="964ac-219">Wait 10 seconds or more and then click **Get Cache** again.</span></span>
 
-     <span data-ttu-id="5dc0d-220">Bu süre, yeni bir zaman damgası gösterilir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-220">This time a new timestamp is displayed.</span></span> <span data-ttu-id="5dc0d-221">Bu ilke sona önbellek girişi sağlar ve yeni önbelleğe alınmış içerikleri görüntülendiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-221">This indicates that the policy let the cache entry expire and that new cached content is displayed.</span></span>
+     <span data-ttu-id="964ac-220">Bu süre, yeni bir zaman damgası gösterilir.</span><span class="sxs-lookup"><span data-stu-id="964ac-220">This time a new timestamp is displayed.</span></span> <span data-ttu-id="964ac-221">Bu ilke sona önbellek girişi sağlar ve yeni önbelleğe alınmış içerikleri görüntülendiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="964ac-221">This indicates that the policy let the cache entry expire and that new cached content is displayed.</span></span>
 
-5. <span data-ttu-id="5dc0d-222">Oluşturduğunuz bir metin dosyasını bir metin düzenleyicisinde açın.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-222">In a text editor, open the text file that you created.</span></span> <span data-ttu-id="5dc0d-223">Henüz herhangi bir değişiklik yapmayın.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-223">Do not make any changes yet.</span></span>
+5. <span data-ttu-id="964ac-222">Oluşturduğunuz bir metin dosyasını bir metin düzenleyicisinde açın.</span><span class="sxs-lookup"><span data-stu-id="964ac-222">In a text editor, open the text file that you created.</span></span> <span data-ttu-id="964ac-223">Henüz herhangi bir değişiklik yapmayın.</span><span class="sxs-lookup"><span data-stu-id="964ac-223">Do not make any changes yet.</span></span>
 
-6. <span data-ttu-id="5dc0d-224">İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-224">Close the message box and then click **Get Cache** again.</span></span>
+6. <span data-ttu-id="964ac-224">İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden.</span><span class="sxs-lookup"><span data-stu-id="964ac-224">Close the message box and then click **Get Cache** again.</span></span>
 
-     <span data-ttu-id="5dc0d-225">Zaman damgası yeniden dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-225">Notice the timestamp again.</span></span>
+     <span data-ttu-id="964ac-225">Zaman damgası yeniden dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="964ac-225">Notice the timestamp again.</span></span>
 
-7. <span data-ttu-id="5dc0d-226">Metin dosyası için bir değişiklik yapın ve ardından dosyayı kaydedin.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-226">Make a change to the text file and then save the file.</span></span>
+7. <span data-ttu-id="964ac-226">Metin dosyası için bir değişiklik yapın ve ardından dosyayı kaydedin.</span><span class="sxs-lookup"><span data-stu-id="964ac-226">Make a change to the text file and then save the file.</span></span>
 
-8. <span data-ttu-id="5dc0d-227">İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-227">Close the message box and then click **Get Cache** again.</span></span>
+8. <span data-ttu-id="964ac-227">İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden.</span><span class="sxs-lookup"><span data-stu-id="964ac-227">Close the message box and then click **Get Cache** again.</span></span>
 
-     <span data-ttu-id="5dc0d-228">Bu ileti kutusu güncelleştirilmiş içerikleri metin dosyasını ve yeni bir zaman damgası içerir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-228">This message box contains the updated content from the text file and a new timestamp.</span></span> <span data-ttu-id="5dc0d-229">Bu dosya değiştirildiğinde mutlak zaman aşımı süresi dolmamış olsa da ana bilgisayar dosya değişikliği izleme önbellek girdisi çıkarılacak olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-229">This indicates that the host-file change monitor evicted the cache entry immediately when you changed the file, even though the absolute timeout period had not expired.</span></span>
+     <span data-ttu-id="964ac-228">Bu ileti kutusu güncelleştirilmiş içerikleri metin dosyasını ve yeni bir zaman damgası içerir.</span><span class="sxs-lookup"><span data-stu-id="964ac-228">This message box contains the updated content from the text file and a new timestamp.</span></span> <span data-ttu-id="964ac-229">Bu dosya değiştirildiğinde mutlak zaman aşımı süresi dolmamış olsa da ana bilgisayar dosya değişikliği izleme önbellek girdisi çıkarılacak olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="964ac-229">This indicates that the host-file change monitor evicted the cache entry immediately when you changed the file, even though the absolute timeout period had not expired.</span></span>
 
     > [!NOTE]
-    >  <span data-ttu-id="5dc0d-230">20 saniye veya daha fazla dosyada değişiklik yapmak daha fazla süre izin vermek için çıkarma süresini artırabilir.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-230">You can increase the eviction time to 20 seconds or more to allow more time for you to make a change in the file.</span></span>
+    >  <span data-ttu-id="964ac-230">20 saniye veya daha fazla dosyada değişiklik yapmak daha fazla süre izin vermek için çıkarma süresini artırabilir.</span><span class="sxs-lookup"><span data-stu-id="964ac-230">You can increase the eviction time to 20 seconds or more to allow more time for you to make a change in the file.</span></span>
 
-## <a name="code-example"></a><span data-ttu-id="5dc0d-231">Kod Örneği</span><span class="sxs-lookup"><span data-stu-id="5dc0d-231">Code Example</span></span>
- <span data-ttu-id="5dc0d-232">Oluşturduğunuz proje için kod, bu kılavuzu tamamladıktan sonra aşağıdaki örneğe benzer.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-232">After you have completed this walkthrough, the code for the project you created will resemble the following example.</span></span>
+## <a name="code-example"></a><span data-ttu-id="964ac-231">Kod Örneği</span><span class="sxs-lookup"><span data-stu-id="964ac-231">Code Example</span></span>
+ <span data-ttu-id="964ac-232">Oluşturduğunuz proje için kod, bu kılavuzu tamamladıktan sonra aşağıdaki örneğe benzer.</span><span class="sxs-lookup"><span data-stu-id="964ac-232">After you have completed this walkthrough, the code for the project you created will resemble the following example.</span></span>
 
  [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
-## <a name="see-also"></a><span data-ttu-id="5dc0d-233">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5dc0d-233">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="964ac-233">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="964ac-233">See also</span></span>
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching>
-- [<span data-ttu-id="5dc0d-234">.NET Framework Uygulamalarında Önbelleğe Alma</span><span class="sxs-lookup"><span data-stu-id="5dc0d-234">Caching in .NET Framework Applications</span></span>](../../performance/caching-in-net-framework-applications.md)
+- [<span data-ttu-id="964ac-234">.NET Framework Uygulamalarında Önbelleğe Alma</span><span class="sxs-lookup"><span data-stu-id="964ac-234">Caching in .NET Framework Applications</span></span>](../../performance/caching-in-net-framework-applications.md)
