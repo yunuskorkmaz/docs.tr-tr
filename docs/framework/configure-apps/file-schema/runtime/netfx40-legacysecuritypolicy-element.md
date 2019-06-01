@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20a0ca8560fcd5d7f9d171df3e3b4c3f42e78641
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 848c56773c0ff2986f0bec3e82a08a3d0dd35434
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674187"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456478"
 ---
 # <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > öğesi
 Çalışma zamanının eski kod erişimi güvenliği (CAS) ilkesi kullanıp kullanmayacağını belirtir.  
@@ -57,7 +57,7 @@ ms.locfileid: "61674187"
 ## <a name="remarks"></a>Açıklamalar  
  .NET Framework sürüm 3.5 ve önceki sürümlerinde, CAS ilkesini her zaman etkilidir. İçinde [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], CAS ilkesini etkinleştirilmelidir.  
   
- CAS ilkesini sürümüne özeldir. .NET Framework'ün önceki sürümlerinde bulunmayan özel CA ilkeleri respecified, içinde [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ CAS ilkesini sürümüne özeldir. .NET Framework 4'te .NET Framework'ün önceki sürümlerinde bulunmayan özel CA ilkeleri belirtilmesi gerekir.  
   
  Uygulama `<NetFx40_LegacySecurityPolicy>` öğesine bir [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] derleme etkilemez [güvenliği saydam kod](../../../../../docs/framework/misc/security-transparent-code.md); saydamlık kuralları hala geçerlidir.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "61674187"
 >  Uygulama `<NetFx40_LegacySecurityPolicy>` öğesi tarafından oluşturulan yerel görüntü derlemeleri için önemli performans yaptırımlarla sonuçlanabilir [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) yüklenmeyen içinde [Genel Derleme Önbelleği ](../../../../../docs/framework/app-domains/gac.md). Öznitelik uygulandığında yerel görüntü derlemeleri yüklemek için yükleyememesine çalışma zamanı tarafından performans düşüşüne neden olur, kendi olan kaynaklanan yüklenen olarak tam zamanında derlemeleri.  
   
 > [!NOTE]
->  Daha önceki hedef .NET Framework sürümü belirtirseniz [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] Visual Studio projeniz için proje ayarlarında CAS ilkesini, bu sürüm için belirttiğiniz tüm özel CA ilkeler de dahil olmak üzere etkinleştirilir. Ancak, yeni kullanmanız mümkün olmayacaktır [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] türler ve üyeler. .NET Framework'ün önceki bir sürümünü kullanarak da belirtebilirsiniz [ \<supportedRuntime > öğesi](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) başlangıç ayarlarını şemasında, [uygulama yapılandırma dosyası](../../../../../docs/framework/configure-apps/index.md).  
+>  Visual Studio projeniz için proje Ayarları'nda .NET Framework 4'ten önceki hedef .NET Framework sürümü belirtirseniz, bu sürüm için belirtilen tüm özel CA ilkeler de dahil olmak üzere CAS ilkesini etkinleştirilecektir. Ancak, yeni bir .NET Framework 4 türleri ve üyeleri kullanmanız mümkün olmayacaktır. .NET Framework'ün önceki bir sürümünü kullanarak da belirtebilirsiniz [ \<supportedRuntime > öğesi](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) başlangıç ayarlarını şemasında, [uygulama yapılandırma dosyası](../../../../../docs/framework/configure-apps/index.md).  
   
 > [!NOTE]
 >  Yapılandırma dosyası sözdizimi, büyük/küçük harf duyarlıdır. Söz dizimi ve örnek bölümlerinde sağlanan sözdizimini kullanmanız gerekir.  

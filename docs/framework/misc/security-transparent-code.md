@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cb528bbb4f85cd4502b4e2efabbcf592ac6bd0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868751"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456506"
 ---
 # <a name="security-transparent-code"></a>Güvenliği Saydam Kod
 
@@ -59,14 +59,14 @@ Derleme düzeyi <xref:System.Security.SecurityRulesAttribute> öznitelik açık�
 
 Düzeyler şunlardır:
 
-- 2. düzey (<xref:System.Security.SecurityRuleSet.Level2>) – [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] saydamlık kuralları.
+- 2. düzey (<xref:System.Security.SecurityRuleSet.Level2>) – .NET Framework 4 saydamlık kuralları.
 
 - Düzey 1 (<xref:System.Security.SecurityRuleSet.Level1>) – .NET Framework 2.0 saydamlık kuralları.
 
 İki saydamlık düzeyi arasındaki başlıca fark, düzey 1'ın derlemenin dışından çağrılar için saydamlık kuralları uygulamaması ve yalnızca uyumluluk için tasarlanmış olan.
 
 > [!IMPORTANT]
-> Yalnızca uyumluluk için düzey 1 saydamlığını belirtmelisiniz; diğer bir deyişle, kullandığı .NET Framework 3.5 veya daha önce geliştirilmiştir yalnızca kod için düzey 1 belirtin <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliği veya saydamlık modeli kullanmayan. Örneğin, kısmen güvenilmeyen çağrıcılara (APTCA) gelen çağrıları izin veren .NET Framework 2.0 derlemeleri için seviye 1 saydamlık kullanın. İçin geliştirilmiş kod için [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], her zaman Düzey 2 Asetatını kullanın.
+> Yalnızca uyumluluk için düzey 1 saydamlığını belirtmelisiniz; diğer bir deyişle, kullandığı .NET Framework 3.5 veya daha önce geliştirilmiştir yalnızca kod için düzey 1 belirtin <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliği veya saydamlık modeli kullanmayan. Örneğin, kısmen güvenilmeyen çağrıcılara (APTCA) gelen çağrıları izin veren .NET Framework 2.0 derlemeleri için seviye 1 saydamlık kullanın. .NET Framework 4 için geliştirilmiş kod için her zaman Düzey 2 Asetatını kullanın.
 
 ### <a name="level-2-transparency"></a>Düzey 2 saydamlık
 
@@ -114,7 +114,7 @@ Düzey 1 saydamlık modelinde aşağıdaki sınırlamalar bulunmaktadır:
 
 ## <a name="transparency-enforcement"></a>Saydamlığı Zorlama
 
-Saydamlık kuralları saydamlık hesaplanana kadar zorlanmaz. O zaman bir <xref:System.InvalidOperationException> saydamlık kuralı ihlal edilirse oluşturulur. Saydamlığın hesaplandığı zaman pek çok unsura bağlıdır ve tahmin edilemez. En geç hesaplanır. İçinde [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], montaj düzeyi saydamlık hesaplaması .NET Framework 2.0 sürümünde vermiyor daha çabuk ortaya çıkar. Tek garanti, saydamlık hesaplama gerekli olduğu zamana göre gerçekleşmesidir. Bu, nasıl just-ın-time (JIT) derleyici noktası bir yöntem derlendiğinde ve bu yöntemde herhangi bir hata algılandığında değiştirmesine benzer. Saydamlık hesaplama kodunuzu saydamlık hatası yoksa görünmez durumdadır.
+Saydamlık kuralları saydamlık hesaplanana kadar zorlanmaz. O zaman bir <xref:System.InvalidOperationException> saydamlık kuralı ihlal edilirse oluşturulur. Saydamlığın hesaplandığı zaman pek çok unsura bağlıdır ve tahmin edilemez. En geç hesaplanır. .NET Framework 4'te montaj düzeyi saydamlık hesaplaması .NET Framework 2.0 sürümünde vermiyor daha çabuk ortaya çıkar. Tek garanti, saydamlık hesaplama gerekli olduğu zamana göre gerçekleşmesidir. Bu, nasıl just-ın-time (JIT) derleyici noktası bir yöntem derlendiğinde ve bu yöntemde herhangi bir hata algılandığında değiştirmesine benzer. Saydamlık hesaplama kodunuzu saydamlık hatası yoksa görünmez durumdadır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

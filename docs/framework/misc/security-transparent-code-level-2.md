@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c3970823557d1d1b24405fd4b390b81006533a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868907"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456563"
 ---
 # <a name="security-transparent-code-level-2"></a>Güvenliği Saydam Kod, 2. Düzey
 
@@ -58,7 +58,7 @@ Bu konu aşağıdaki bölümleri içermektedir:
 
 ## <a name="usage-examples-and-behaviors"></a>Kullanım Örnekleri ve Davranışlar
 
-Belirtmek için [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (Düzey 2 saydamlık) kuralları, bir derleme için aşağıdaki ek açıklama kullanın:
+.NET Framework 4 kuralları (Düzey 2 saydamlık) belirtmek için aşağıdaki ek açıklama bir derleme için kullanın:
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -70,7 +70,7 @@ Belirtmek için [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-Bir derlemeyi not ekleyemezsiniz, [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] kuralları, varsayılan olarak kullanılır. Ancak, önerilen en iyi kullanmaktır <xref:System.Security.SecurityRulesAttribute> bağlı olarak varsayılan öznitelik yerine.
+Bir derlemeyi not ekleyemezsiniz, .NET Framework 4 kurallar varsayılan olarak kullanılır. Ancak, önerilen en iyi kullanmaktır <xref:System.Security.SecurityRulesAttribute> bağlı olarak varsayılan öznitelik yerine.
 
 ### <a name="assembly-wide-annotation"></a>Derleme genelinde ek açıklaması
 

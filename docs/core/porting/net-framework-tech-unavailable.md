@@ -3,13 +3,13 @@ title: .NET framework teknolojilerini .NET Core üzerinde kullanılamaz
 description: .NET Core üzerinde kullanılabilir olan .NET Framework teknolojileri hakkında bilgi edinin
 author: cartermp
 ms.author: mairaw
-ms.date: 12/07/2018
-ms.openlocfilehash: be55cd1d1c67b0542c8474d1b2e47f6752f658a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.date: 04/30/2019
+ms.openlocfilehash: 9485f331856fde3b6836709e8983c2babe094c5b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663147"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456092"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET framework teknolojilerini .NET Core üzerinde kullanılamaz
 
@@ -42,6 +42,10 @@ En düşük ayrıcalık kümesi ile çalışan işlemleri için sanallaştırma,
 Benzer şekilde CA'ları, güvenlik saydamlık korumalı kod güvenlik kritik kod, bildirim temelli bir biçimde ayırır ancak olan [artık bir güvenlik sınırı olarak desteklenen](~/docs/framework/misc/security-transparent-code.md). Bu özellik tarafından Silverlight yoğun olarak kullanılır. 
 
 En az çalışan işlemleri için sanallaştırma, kapsayıcıları veya kullanıcı hesapları gibi işletim sistemi tarafından sağlanan güvenlik sınırları kullanmanız ayrıcalık kümesi.
+
+## <a name="systementerpriseservices"></a>System.EnterpriseServices
+
+System.EnterpiseServices (COM +), .NET Core tarafından desteklenmiyor.
 
 >[!div class="step-by-step"]
 >[Next](third-party-deps.md)

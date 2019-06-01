@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 059fadc5607e76b871083682136fda542ae9bacf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d97960a43e1d7ce625d96755a7c597a0425d0911
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758203"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457466"
 ---
 # <a name="profiling-interfaces"></a>Profil Oluşturma Arabirimleri
 Bu bölümde, ortak dil çalışma zamanı tarafından (CLR) yürütülen bir programın profilini olanak tanıyan yönetilmeyen arabirimler açıklanmaktadır.  
@@ -65,7 +65,7 @@ Toplanan ve daha sonra kaldırıldığında çöp dinamik bir yöntem olan profi
  Genişletir `ICorProfilerInfo` arabirim yöntemleriyle .NET Framework 2.0 ve sonraki sürümlerinde desteklenir.  
   
  [ICorProfilerInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- Genişletir `ICorProfilerInfo2` desteklenen yöntemleriyle arabirimi [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] ve sonraki sürümler.  
+ Genişletir `ICorProfilerInfo2` arabirim yöntemleriyle .NET Framework 4 ve sonraki sürümlerinde desteklenir.  
   
  [ICorProfilerInfo4 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
  Olay İzleme denetlemek ve bilgi istemek için CLR ile iletişim kurmak için kod profil oluşturucuları kullanmak için yöntemler sağlar.  

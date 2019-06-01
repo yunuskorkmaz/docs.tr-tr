@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ddef35b1b707cc5c962402e880923dca7d4d9d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a28b9d6e41d0572d423576f5b4024a60a70216c
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789655"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456869"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM İşlevi
 Ortak dil çalışma zamanı (CLR) çalışma zamanı aranabilir sarmalayıcılarını (RCW) içinde tutan tüm arabirim işaretçilerini yayımlamayı zorlar. Bu, tüm RCW önbellekleri bırakılıyor etkisi vardır. Bu genel bir işlev içinde kullanım dışı [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Bunun yerine, belirli bir çalışma zamanı için giriş noktasını kullanın.  
@@ -42,7 +42,7 @@ void CoEEShutDownCOM ();
 > [!CAUTION]
 >  Bu işlev, işlem içine yüklenmiş tüm çalışma zamanları etkiler.  
   
- İle başlayarak [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], değiştirmek istediğiniz belirli çalışma zamanı üzerinde bu işlev için giriş noktası çağırın. Giriş noktası almak için arama [Iclrruntimeınfo::GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) yöntemi ve "CoEEShutDownCOM" belirtin.  
+ .NET Framework 4 ile başlayarak, giriş noktası için değiştirmek istediğiniz belirli çalışma zamanı üzerinde bu işlevi çağırın. Giriş noktası almak için arama [Iclrruntimeınfo::GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) yöntemi ve "CoEEShutDownCOM" belirtin.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

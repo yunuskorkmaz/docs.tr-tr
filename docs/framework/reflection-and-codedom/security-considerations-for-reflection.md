@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ef6b73d683d43b2a33628db13fa592c7f02199a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585996"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457299"
 ---
 # <a name="security-considerations-for-reflection"></a>Yansımayla İlgili Güvenlik Konuları
 Yansıma üyelerine erişmek ve bu türler ve üyeler hakkında bilgi alma özelliği sağlar (diğer bir deyişle, yöntemler ve almak ve özellik ayarlamak için oluşturucuları çağırmak için değerleri, ekleyin ve olay işleyicilerini kaldırmak ve benzeri). Türler ve üyeler hakkında bilgi edinmek için yansıma kullanmak sınırlı değildir. Tüm kod, yansıma aşağıdaki görevleri gerçekleştirmek için kullanabilirsiniz:  
@@ -58,10 +58,10 @@ Yansıma üyelerine erişmek ve bu türler ve üyeler hakkında bilgi alma özel
   
  Komut satırından çalışan uygulama kodu, tam güven ile çalışır. Saydam olarak işaretlenmemiş sürece, güvenlik açısından kritik üyelere erişim için yansıma kullanabilirsiniz. (Örneğin, bir koruma alanlı uygulama etki alanında) kısmi güven ile aynı kodu çalıştırdığınızda derlemenin güven düzeyine güvenlik açısından kritik kod erişip erişemeyeceğini belirler: Derleme tanımlayıcı bir ada sahip ve genel derleme önbelleğinde yüklü ise güvenilen bir derleme olduğundan ve güvenlik açısından kritik üyelerini çağırabilirsiniz. Güvenilir değilse, saydam olarak işaretlenmedi ve güvenlik açısından kritik üyeleri erişemiyor karşın saydam olur.  
   
- Güvenlik modeli hakkında daha fazla bilgi için [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], bkz: [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
+ .NET Framework 4 güvenlik modeli hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
   
 ## <a name="reflection-and-transparency"></a>Yansıma ve geçirgenlik  
- İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], ortak dil çalışma zamanı bir türün veya derlemenin güven düzeyine ve uygulama etki alanının güven düzeyi gibi çeşitli unsurlardan üyeden saydamlık düzeyini belirler. Yansıma sağlar <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Type.IsSecuritySafeCritical%2A>, ve <xref:System.Type.IsSecurityTransparent%2A> sağlamak saydamlık düzeyi bir tür bulmak özellikleri. Bu özelliklerin geçerli birleşimleri aşağıdaki tabloda gösterilmektedir.  
+ Ortak dil çalışma zamanı, .NET Framework 4 ile başlayarak, bir türün veya derlemenin güven düzeyine ve uygulama etki alanının güven düzeyi gibi çeşitli unsurlardan üyeden saydamlık düzeyini belirler. Yansıma sağlar <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Type.IsSecuritySafeCritical%2A>, ve <xref:System.Type.IsSecurityTransparent%2A> sağlamak saydamlık düzeyi bir tür bulmak özellikleri. Bu özelliklerin geçerli birleşimleri aşağıdaki tabloda gösterilmektedir.  
   
 |Güvenlik düzeyi|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
 |--------------------|------------------------|----------------------------|---------------------------|  

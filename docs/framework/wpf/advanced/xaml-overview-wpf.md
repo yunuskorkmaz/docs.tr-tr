@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 403bd881f6e6349a91fc952a80441b0cec0c08fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662242"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457547"
 ---
 # <a name="xaml-overview-wpf"></a>XAML genel bakış (WPF)
 Bu konu XAML dilinin özelliklerini açıklar ve yazmak için XAML nasıl kullanabileceğinizi gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu konu özel olarak uygulandığı şekilde XAML tanımlayan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML kendisini olan daha büyük bir dil kavramını [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -307,7 +307,7 @@ Bu konu XAML dilinin özelliklerini açıklar ve yazmak için XAML nasıl kullan
 ## <a name="xaml-security"></a>XAML güvenlik  
  XAML doğrudan nesne örneklemesini ve yürütme temsil eden bir biçimlendirme dilidir. Bu nedenle, XAML içinde oluşturulan öğeler aynı oluşturulan eşdeğer olarak ile sistem kaynakları (ağ erişimi, dosya sistemi g/ç örnek) etkileşim olanağı sahip kodu yapar.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] destekleyen [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] güvenlik çerçevesi [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]. Diğer bir deyişle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Internet bölgesinde çalışan içeriği yürütme izinleri azaltıldı. "Kaybetmiş XAML" (derlenmemiş XAML sayfaları yorumlanan yükleme zamanında bir XAML Görüntüleyicisi) ve [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] genellikle bu Internet bölgesinde çalıştırılan ve aynı izin kümesi kullanın.  Ancak, barındırma uygulaması gibi tam olarak güvenilen bir uygulama için yüklenmiş XAML sistem kaynaklarına aynı erişim vardır. Daha fazla bilgi için [WPF kısmi güven güvenliği](../wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] .NET Framework 4 güvenlik Çerçevesi'ni destekleyen [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]. Diğer bir deyişle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Internet bölgesinde çalışan içeriği yürütme izinleri azaltıldı. "Kaybetmiş XAML" (derlenmemiş XAML sayfaları yorumlanan yükleme zamanında bir XAML Görüntüleyicisi) ve [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] genellikle bu Internet bölgesinde çalıştırılan ve aynı izin kümesi kullanın.  Ancak, barındırma uygulaması gibi tam olarak güvenilen bir uygulama için yüklenmiş XAML sistem kaynaklarına aynı erişim vardır. Daha fazla bilgi için [WPF kısmi güven güvenliği](../wpf-partial-trust-security.md).  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>XAML kodunu yükleniyor  

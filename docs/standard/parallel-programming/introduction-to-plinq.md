@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 670ed89754aa9b4d2052bb1186e0139618190cd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d41a88b7a9197a19a131cbda078297a96acdabfb
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018911"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457495"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ'e Giriş
 
@@ -107,7 +107,7 @@ Arasındaki fark aşağıdaki çizimde `foreach` ve <xref:System.Linq.ParallelEn
 
 ## <a name="cancellation"></a>İptal Etme
 
-PLINQ deki iptal türleri ile tümleşiktir [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. (Daha fazla bilgi için [yönetilen iş parçacıklarında iptal](../../../docs/standard/threading/cancellation-in-managed-threads.md).) Bu nedenle, Plınq sorgularının sıralı LINQ, PLINQ sorguları iptal edilebilir. İptal edilebilir bir PLINQ sorgusu oluşturmak için kullanın <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> sorgu işlecini ve sağlayan bir <xref:System.Threading.CancellationToken> örneği bağımsız değişken olarak. Zaman <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> belirtecine özelliği, PLINQ true olarak ayarlandığında, dikkat, tüm iş parçacıklarında işlemi durdurur ve throw bir <xref:System.OperationCanceledException>.
+PLINQ, .NET Framework 4'deki iptal türleri ile tümleşiktir. (Daha fazla bilgi için [yönetilen iş parçacıklarında iptal](../../../docs/standard/threading/cancellation-in-managed-threads.md).) Bu nedenle, Plınq sorgularının sıralı LINQ, PLINQ sorguları iptal edilebilir. İptal edilebilir bir PLINQ sorgusu oluşturmak için kullanın <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> sorgu işlecini ve sağlayan bir <xref:System.Threading.CancellationToken> örneği bağımsız değişken olarak. Zaman <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> belirtecine özelliği, PLINQ true olarak ayarlandığında, dikkat, tüm iş parçacıklarında işlemi durdurur ve throw bir <xref:System.OperationCanceledException>.
 
 PLINQ sorgusunu iptal belirteci ayarladıktan sonra bazı öğeleri işlemeye devam etmesi mümkündür.
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 972efa150d560e74f0e7daadf18688ac12b9fbf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8f5c6f6aba9ec4ad627fcd4d3b3caaff810ee72
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583641"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456206"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Uygulamaları Yapılandırma
 .NET Framework, yapılandırma dosyaları geliştiricilerin ve yöneticilerin denetim verir ve esnekliğe göre uygulamaların çalıştırın. Yapılandırma dosyaları gerektikçe değiştirilebilen XML dosyalarıdır. Bir yönetici, bir uygulamanın hangi korunan kaynaklara erişebilir, bir uygulamanın derlemelerin hangi sürümlerini kullanır ve uzak uygulamaların ve nesnelerin bulunduğu yere kontrol edebilirsiniz. Geliştiriciler ayarları yapılandırma dosyalarına koyarak, bir ayar her değiştiğinde bir uygulamayı yeniden derleme gerekliliğini ortadan kaldırır. Bu bölümde nelerin yapılandırılabileceği ve neden bir uygulama yapılandırma yararlı olabileceği anlatılmaktadır.  
@@ -90,7 +90,7 @@ ms.locfileid: "64583641"
  Güvenlik yapılandırma dosyaları bir ilke düzeyiyle ilişkili kod grubu hiyerarşisi ve izin kümeleri hakkında bilgi içerir. Kullanmanızı öneririz [kod erişimi güvenlik ilkesi aracını (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) ilkeyi emin olmak için güvenlik ilkesini değiştirmek için değişiklikleri güvenlik yapılandırma dosyalarını bozmadığından.  
   
 > [!NOTE]
->  İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], güvenlik yapılandırma dosyaları yalnızca güvenlik ilkesi değiştirilmişse, yok.  
+>  .NET Framework 4 ile başlayarak, güvenlik yapılandırma dosyaları yalnızca güvenlik ilkesi değiştirilmişse, mevcut bulunur.  
   
  Güvenlik yapılandırma dosyaları aşağıdaki konumlarda bulunur:  
   

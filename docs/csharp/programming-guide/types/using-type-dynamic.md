@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 18afb2765db41abd305fb83907c08fad75a1d72b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 18e737ec1f6c6f76ff882d48ad311a45ba7b756b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635239"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456732"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Tür dinamiği (C# programlama Kılavuzu) kullanma
 
@@ -60,7 +60,7 @@ Aşırı yükleme çözünürlüğü oluşursa yerine derleme zamanında çalı�
 
 ## <a name="dynamic-language-runtime"></a>Dinamik dil çalışma zamanı
 
-Dinamik dil çalışma zamanı (DLR) yeni bir API'dir [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]. Destekleyen altyapı sağlar `dynamic` C# ve ayrıca dinamik programlama dillerinin IronPython ve Ironruby gibi uygulama türü. DLR hakkında daha fazla bilgi için bkz: [dinamik dil çalışma zamanına genel bakış](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).
+Dinamik dil çalışma zamanı (DLR), .NET Framework 4'te yeni bir API'dir. Destekleyen altyapı sağlar `dynamic` C# ve ayrıca dinamik programlama dillerinin IronPython ve Ironruby gibi uygulama türü. DLR hakkında daha fazla bilgi için bkz: [dinamik dil çalışma zamanına genel bakış](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).
 
 ## <a name="com-interop"></a>COM birlikte çalışma
 

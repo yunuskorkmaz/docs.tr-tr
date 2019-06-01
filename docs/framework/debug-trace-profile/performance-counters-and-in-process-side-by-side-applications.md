@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c50132be2755119b19e38d94919eb4b0ab28d994
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fc3f9c9c61afd4c231846adffc4b304a01d59281
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614314"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457262"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Performans Sayaçları ve Devam Eden Yan Yana Uygulamalar
 Performans İzleyicisi'ni (Perfmon.exe) kullanarak, çalışma zamanı başına temelinde performans sayaçları ayırmak mümkündür. Bu konu, bu özelliği etkinleştirmek için gerekli kayıt defteri değişikliği açıklar.  
@@ -29,7 +29,7 @@ Performans İzleyicisi'ni (Perfmon.exe) kullanarak, çalışma zamanı başına 
   
 - Ne zaman bir uygulama, ortak dil çalışma zamanının birden çok örneğini kullanır. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] Destekler işlem içi yan yana barındırma senaryolarını; diğer bir deyişle, tek bir işlem veya uygulama ortak dil çalışma zamanının birden çok örneğini yükleyebilirsiniz. Tek bir uygulama myapp.exe yükleri iki çalışma zamanı örneği, varsayılan olarak adlandırılan, bunlar içinde atanacak **örneği** sütun olarak **myapp** ve **myapp #1**. Bu durumda, NET değil olmadığını **myapp** ve **myapp #1** aynı ada sahip iki uygulama ya da iki çalışma zamanları ile aynı uygulama. Birden çok uygulama aynı ada sahip birden fazla çalışma zamanı yüklerseniz, belirsizliği daha büyüktür.  
   
- Bu belirsizliği ortadan kaldırmak için bir kayıt defteri anahtarını ayarlayabilirsiniz. Kullanılarak geliştirilen uygulamalar için [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], uygulama adı için bir çalışma zamanı örneği tanımlayıcısı tarafından izlenen işlem tanımlayıcısı bu kayıt defteri değişikliği ekler **örneği** sütun. Yerine *uygulama* veya *uygulama*#1, uygulama artık tanımlanmıştır *uygulama*_`p`*ProcessId* \_ `r` *runtimeID* içinde **örneği** sütun. Ortak dil çalışma zamanı'nın önceki bir sürümünü kullanarak bir uygulama geliştirildiği bilgisayardakinden, bu örneği olarak temsil edilen *uygulama\_*`p`*ProcessId* koşuluyla [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] yüklenir.  
+ Bu belirsizliği ortadan kaldırmak için bir kayıt defteri anahtarını ayarlayabilirsiniz. .NET Framework 4 kullanılarak geliştirilen uygulamalar için uygulama adı için bir çalışma zamanı örneği tanımlayıcısı tarafından izlenen işlem tanımlayıcısı bu kayıt defteri değişikliği ekler **örneği** sütun. Yerine *uygulama* veya *uygulama*#1, uygulama artık tanımlanmıştır *uygulama*_`p`*ProcessId* \_ `r` *runtimeID* içinde **örneği** sütun. Ortak dil çalışma zamanı'nın önceki bir sürümünü kullanarak bir uygulama geliştirildiği bilgisayardakinden, bu örneği olarak temsil edilen *uygulama\_* `p`*ProcessId* koşuluyla. NET Framework 4 yüklü.  
   
 ## <a name="performance-counters-for-in-process-side-by-side-applications"></a>İşlem içi yan yana uygulamalar için performans sayaçları  
  Tek bir uygulama içinde barındırılan birden çok ortak dil çalışma zamanı sürümleri için performans sayaçları işlemek için aşağıdaki tabloda gösterildiği gibi ayarlama, tek bir kayıt defteri anahtarını değiştirmeniz gerekir.  
@@ -50,11 +50,11 @@ Performans İzleyicisi'ni (Perfmon.exe) kullanarak, çalışma zamanı başına 
  [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)]
  [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
   
- Bu kayıt defteri değişikliğini yaptığınızda Perfmon.exe hedefleyen uygulamaların adları görüntüler [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] olarak *uygulama*_`p`*ProcessId* \_ `r` *runtimeID*burada *uygulama* uygulama adı *ProcessId* uygulamanın işlem tanımlayıcısı ve  *runtimeID* bir ortak dil çalışma zamanı tanımlayıcısı. Örneğin, bir uygulamanın iki ortak dil çalışma zamanı örneğini myapp.exe yükleri verdiyseniz Perfmon.exe myapp_p1416_r10 olarak bir örnek ve ikinci myapp_p3160_r10 olarak tanımlayabilir. Çalışma zamanı tanımlayıcısı yalnızca bir işlem içinde çalışma zamanları belirgin hale getirir; çalışma zamanı hakkında herhangi bir bilgi sağlamaz. (Örneğin, çalışma zamanı kimliği sürümü veya SKU çalışma zamanının ilgisi yoktur.)  
+ Bu kayıt defteri değişikliğini yaptığınızda Perfmon.exe olarak .NET Framework 4 hedefleyen uygulamalar adlarını görüntüler *uygulama*_`p`*ProcessId* \_ `r` *runtimeID*burada *uygulama* uygulama adı *ProcessId* uygulamanın işlem tanımlayıcısı ve  *runtimeID* bir ortak dil çalışma zamanı tanımlayıcısı. Örneğin, bir uygulamanın iki ortak dil çalışma zamanı örneğini myapp.exe yükleri verdiyseniz Perfmon.exe myapp_p1416_r10 olarak bir örnek ve ikinci myapp_p3160_r10 olarak tanımlayabilir. Çalışma zamanı tanımlayıcısı yalnızca bir işlem içinde çalışma zamanları belirgin hale getirir; çalışma zamanı hakkında herhangi bir bilgi sağlamaz. (Örneğin, çalışma zamanı kimliği sürümü veya SKU çalışma zamanının ilgisi yoktur.)  
   
- Varsa [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] olan yüklü, kayıt defteri değişikliği de .NET Framework'ün önceki sürümleri kullanılarak geliştirilen uygulamaları etkiler. Bunlar Perfmon.exe görünen *application_*`p`*ProcessId*burada *uygulama* uygulama adıdır ve *ProcessId* işlem tanımlayıcısı. İzlenen myapp.exe adlı iki uygulama performans sayaçları, örneğin, bir myapp_p23900 diğeri de myapp_p24908 olarak görünebilir.  
+ .NET Framework 4 yüklü değilse, kayıt defteri değişikliği de .NET Framework'ün önceki sürümleri kullanılarak geliştirilen uygulamaları etkiler. Bunlar Perfmon.exe görünen *application_* `p`*ProcessId*burada *uygulama* uygulama adıdır ve *ProcessId* işlem tanımlayıcısı. İzlenen myapp.exe adlı iki uygulama performans sayaçları, örneğin, bir myapp_p23900 diğeri de myapp_p24908 olarak görünebilir.  
   
 > [!NOTE]
 >  İşlem tanımlayıcısı çalışma zamanı'nın önceki sürümlerini kullanan iki uygulama aynı ada sahip çözümleme belirsizliği ortadan kaldırır. Ortak dil çalışma zamanı önceki sürümlerini yan yana senaryolarda desteklemediği bir çalışma zamanı tanımlayıcısı önceki sürümler için gerekli değil.  
   
- Varsa [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] mevcut değil ya da kaldırılmış, kayıt defteri anahtarı ayarı hiçbir etkisi olmaz. Aynı ada sahip iki uygulama Perfmon.exe görünmesini devam edecek yani *uygulama* ve *uygulama #1* (örneğin, **myapp** ve **myapp #1**).
+ .NET Framework 4 mevcut değil veya kaldırıldı, kayıt defteri anahtarı ayarı etkisizdir. Aynı ada sahip iki uygulama Perfmon.exe görünmesini devam edecek yani *uygulama* ve *uygulama #1* (örneğin, **myapp** ve **myapp #1**).

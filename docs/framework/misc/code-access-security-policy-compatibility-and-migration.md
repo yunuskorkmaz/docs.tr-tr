@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d9281e52de43391a92262f85084715ccabd5515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868920"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456645"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Kod Erişim Güvenlik İlkesi Uyumluluğu ve Geçiş
 
@@ -22,7 +22,7 @@ Kod erişimi güvenliği (CAS) ilkesi kısmı eski yapılmış [!INCLUDE[net_v40
 
 Ya da uyarıları ve hataları önleyebilirsiniz:
 
-- [Geçiş](#migration) için [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] eski çağrıları için değişiklik.
+- [Geçiş](#migration) eski çağrıları için .NET Framework 4 değiştirmeler için.
 
    \- veya -
 
@@ -114,7 +114,7 @@ Derleme zamanı uyarısı:
 
 ### <a name="determining-an-assemblys-trust-level"></a>Bir derlemenin güven düzeyine belirleme
 
-CAS ilkesini genellikle bir derlemenin belirlemek için kullanılan veya uygulama etki alanının izin kümesi vermek ya da güven düzeyi. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Güvenlik ilkesi çözmek zorunda değildir yararlı aşağıdaki özellikleri sunar:
+CAS ilkesini genellikle bir derlemenin belirlemek için kullanılan veya uygulama etki alanının izin kümesi vermek ya da güven düzeyi. .NET Framework 4 güvenlik ilkesi çözmek zorunda değildir aşağıdaki kullanışlı özellikler sunar:
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 
@@ -126,15 +126,15 @@ CAS ilkesini genellikle bir derlemenin belirlemek için kullanılan veya uygulam
 
 ### <a name="application-domain-sandboxing"></a>Uygulama etki alanı korumalı alana alma
 
-<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> Yöntemi, genellikle uygulama etki alanında derlemeleri korumalı alana alma için kullanılır. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Kullanmak zorunda değilsiniz üyeleri ortaya koyar <xref:System.Security.Policy.PolicyLevel> bu amaç için. Daha fazla bilgi için [nasıl yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> Yöntemi, genellikle uygulama etki alanında derlemeleri korumalı alana alma için kullanılır. .NET Framework 4 kullanmak için olmayan üyeleri ortaya koyar <xref:System.Security.Policy.PolicyLevel> bu amaç için. Daha fazla bilgi için [nasıl yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Kısmen güvenli ya da makul bir izin için kümesinin belirleme güvenilen kod
 
-Ana bilgisayar genellikle barındırılan bir korumalı alana alma kodu için uygun izinler belirlemeniz gerekir. Önce [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], CAS ilkesini sağlanan ile bunu yapmanın bir yolu <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> yöntemi. Bir değişiklik olarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] sağlar <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> yöntemi için sağlanan kanıt kümesi güvenli, standart bir izin verir.
+Ana bilgisayar genellikle barındırılan bir korumalı alana alma kodu için uygun izinler belirlemeniz gerekir. Önce .NET Framework 4, CAS ilkesini ile bunu yapmanın bir yolu sağlanan <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> yöntemi. Bunun yerine, .NET Framework 4 sağlar <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> yöntemi için sağlanan kanıt kümesi güvenli, standart bir izin verir.
 
 ### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Korumalı alana alma olmayan senaryolar: Derleme yüklerini için aşırı yüklemeleri
 
-Aksi takdirde derleme korumalı alana alma yerine mevcut olmayan parametreleri kullanmak bir derleme yük aşırı kullanılmasının nedeni olabilir. İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], gerekli olmayan derleme yük aşırı yüklemeler bir <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> bir bu gibi bir durumda parametre olarak nesne <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, bu senaryoyu etkinleştirmek.
+Aksi takdirde derleme korumalı alana alma yerine mevcut olmayan parametreleri kullanmak bir derleme yük aşırı kullanılmasının nedeni olabilir. .NET Framework 4 ile başlayarak, derleme yükleme gerektirmez aşırı bir <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> bir bu gibi bir durumda parametre olarak nesne <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, bu senaryoyu etkinleştirmek.
 
 Korumalı alan için bir derleme istiyorsanız kullanın <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> aşırı yükleme.
 

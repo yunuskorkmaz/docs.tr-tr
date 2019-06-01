@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 30d9517c404dc76cdc0f8206599cacdb430a1ae9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: adf2e3e3d10f4f32952dbca270be4ca0924d0b73
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613987"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457271"
 ---
 # <a name="in-process-side-by-side-execution"></a>Devam Eden Yan Yana Yürütme
 İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], işlem içi yan tek bir işlemde birden çok ortak dil çalışma zamanı (CLR) sürümünü çalıştırmak için barındırma yana kullanabilirsiniz. Varsayılan olarak, COM bileşenlerini .NET Framework sürümüyle birlikte, işlem için yüklenen .NET Framework sürümünden bağımsız olarak oluşturuldukları çalıştırın yönetiliyor.  
   
 ## <a name="background"></a>Arka Plan  
- .NET Framework yönetilen için yan yana barındırma kodu sağlanan uygulamalar, ancak önce her zaman sahip [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], işlevselliği için Yönetilen COM bileşenlerini sağlamadı. Geçmişte, zaten yüklü çalışma zamanı sürümü veya .NET Framework'ün en son yüklenen sürüm işlem içine yüklenmiş yönetilen COM bileşenlerini çalıştı. Bu sürüm COM bileşeni ile uyumlu değilse, bileşenin başarısız olur.  
+ .NET Framework için yan yana barındırma yönetilen kod uygulamalarının, ancak önce .NET Framework 4, bu işlevselliği için Yönetilen COM bileşenlerini sağlamadı sağlanan her zaman vardır. Geçmişte, zaten yüklü çalışma zamanı sürümü veya .NET Framework'ün en son yüklenen sürüm işlem içine yüklenmiş yönetilen COM bileşenlerini çalıştı. Bu sürüm COM bileşeni ile uyumlu değilse, bileşenin başarısız olur.  
   
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Aşağıdaki sağlayan yan yana barındırma için yeni bir yaklaşım sağlar:  
+ .NET Framework 4, aşağıdaki sağlayan yan yana barındırma için yeni bir yaklaşım sağlar:  
   
 - .NET Framework'ün yeni bir sürümünü yükleme mevcut uygulamalar üzerinde etkisi yoktur.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "64613987"
   
 - **Uygulama geliştiricileri**. Yan yana barındırma, uygulama geliştiricilerin neredeyse hiçbir etkisi vardır. Varsayılan olarak, uygulamalar her zaman üzerinde oluşturulmuş .NET Framework sürümünü çalıştırın; Bu değişiklik olmadı. Ancak, geliştiricilerin bu davranışı geçersiz kılabilir ve uygulamanın daha yeni bir sürümü .NET Framework'ün altında çalışması için doğrudan (bkz [Senaryo 2](#scenarios)).  
   
-- **Kitaplığı geliştiriciler ve tüketiciler**. Yan yana barındırma uyumluluk sorunları bu kitaplığı geliştiriciler yüz çözmez. Doğrudan bir uygulama--veya aracılığıyla bir doğrudan başvuru tarafından yüklenen bir kitaplığı bir <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> çağrı--çalışma zamanını kullanmaya devam eder <xref:System.AppDomain> içine yüklenir. Desteklemek istediğiniz .NET Framework'ün tüm sürümler karşı Kitaplıklarınızı test etmeniz gerekir. Bir uygulama kullanarak derlenirse [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] çalışma zamanı, ancak bir önceki çalışma zamanı kullanılarak oluşturulmuş bir kitaplık içerir, kitaplık kullanacak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] de çalışma zamanı. Ancak, bir önceki çalışma zamanı ve kullanılarak oluşturulmuş bir kitaplık kullanılarak oluşturulmuş bir uygulamanız varsa [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], ayrıca kullanmak için uygulamanızı zorlamanız gerekir [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (bkz [Senaryo 3](#scenarios)).  
+- **Kitaplığı geliştiriciler ve tüketiciler**. Yan yana barındırma uyumluluk sorunları bu kitaplığı geliştiriciler yüz çözmez. Doğrudan bir uygulama--veya aracılığıyla bir doğrudan başvuru tarafından yüklenen bir kitaplığı bir <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> çağrı--çalışma zamanını kullanmaya devam eder <xref:System.AppDomain> içine yüklenir. Desteklemek istediğiniz .NET Framework'ün tüm sürümler karşı Kitaplıklarınızı test etmeniz gerekir. Bir uygulama .NET Framework 4 çalışma zamanı kullanılarak derlenmiş olduğuna, ancak bir önceki çalışma zamanı kullanılarak oluşturulmuş bir kitaplık içerir, bu kitaplık de .NET Framework 4 çalışma zamanını kullanın. Ancak, bir önceki çalışma zamanı ve .NET Framework 4 kullanılarak oluşturulmuş bir kitaplık kullanılarak oluşturulmuş bir uygulamanız varsa, ayrıca .NET Framework 4 kullanmak için uygulamanızı zorlamanız gerekir (bkz [Senaryo 3](#scenarios)).  
   
 - **COM Bileşen geliştiriciler yönetilen**. Geçmişte, bilgisayarda yüklü olan çalışma zamanı en son sürümünü kullanarak yönetilen COM bileşenlerini otomatik olarak çalıştı. Şimdi, COM bileşenleriyle birlikte oluşturuldukları çalışma zamanı sürümüne karşı çalıştırabilirsiniz.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "64613987"
   
 - **Senaryo 1:** .NET Framework'ün önceki sürümleriyle oluşturulan COM bileşenlerini kullanan yerel uygulama.  
   
-     Yüklü .NET framework sürümleri: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Ve diğer tüm COM bileşenleri tarafından kullanılan .NET Framework sürümleri.  
+     Yüklü .NET framework sürümleri: .NET Framework 4 ve diğer tüm COM bileşenleri tarafından kullanılan .NET Framework sürümleri.  
   
      Yapmanız gerekenler: Bu senaryoda, hiçbir şey yapmayın. COM bileşenleri kayıtlı olan .NET Framework sürümü ile çalışır.  
   
-- **Senaryo 2**: Yönetilen uygulama ile oluşturulmuş [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] çalıştırmak tercih [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], ancak çalıştırmak istediğiniz [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 2.0 sürümünde mevcut değil.  
+- **Senaryo 2**: Yönetilen uygulama ile oluşturulmuş [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] çalıştırmak tercih [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], ancak sürüm 2.0 mevcut değilse .NET Framework 4'te çalıştırmak yararlı olur.  
   
-     Yüklü .NET framework sürümleri: .NET Framework'ün önceki bir sürümünü ve [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     Yüklü .NET framework sürümleri: Önceki bir sürümünü .NET Framework ve .NET Framework 4.  
   
      Yapmanız gerekenler: İçinde [uygulama yapılandırma dosyası](../../../docs/framework/configure-apps/index.md) uygulama dizininizde [ \<başlangıç > öğesi](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) ve [ \<supportedRuntime > öğesi](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) aşağıdaki gibi ayarlayın:  
   
@@ -71,9 +71,9 @@ ms.locfileid: "64613987"
     </configuration>  
     ```  
   
-- **Senaryo 3:** Çalıştırmak istediğiniz .NET Framework'ün önceki sürümleriyle oluşturulan COM bileşenlerini kullanan yerel uygulama [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+- **Senaryo 3:** .NET Framework 4 ile çalıştırmak istediğiniz .NET Framework'ün önceki sürümleriyle oluşturulan COM bileşenlerini kullanan yerel uygulama.  
   
-     Yüklü .NET framework sürümleri: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     Yüklü .NET framework sürümleri: .NET Framework 4.  
   
      Yapmanız gerekenler: Uygulama yapılandırma dosyasında uygulama dizinindeki kullanın `<startup>` öğeyle `useLegacyV2RuntimeActivationPolicy` özniteliğini `true` ve `<supportedRuntime>` öğesi aşağıdaki gibi ayarlayın:  
   

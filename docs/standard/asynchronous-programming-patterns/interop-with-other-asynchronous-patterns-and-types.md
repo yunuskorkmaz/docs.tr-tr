@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2736c4758cbaaeda902b43aeea55611a21ea38ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb99d6d78fc381e0b56efae51307eb469c535a9a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623807"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457353"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma
 .NET Framework 1.0 sunulan <xref:System.IAsyncResult> deseni, aksi takdirde olarak bilinen [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md), veya `Begin/End` deseni.  .NET Framework 2.0 eklenen [olay tabanlı zaman uyumsuz desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  .NET Framework 4 ile başlayarak [görev tabanlı zaman uyumsuz desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) APM hem de EAP yerini alır, ancak kolayca geçiş rutinleri önceki desenleri oluşturma imkanı sağlar.  
@@ -37,7 +37,7 @@ ms.locfileid: "64623807"
   
 <a name="ApmToTap"></a>   
 ### <a name="from-apm-to-tap"></a>Bir APM için DOKUNUN  
- Çünkü [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) desen çok yapılandırılmış, APM uygulaması bir TAP uygulaması olarak kullanıma sunmak için bir sarmalayıcı oluşturmak oldukça kolaydır. İle başlayarak .NET Framework, aslında [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], Yardımcısı biçiminde içerir <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> bu çeviri sağlamak için yöntem aşırı yüklemeleri.  
+ Çünkü [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) desen çok yapılandırılmış, APM uygulaması bir TAP uygulaması olarak kullanıma sunmak için bir sarmalayıcı oluşturmak oldukça kolaydır. Aslında, .NET Framework 4 ile başlayarak .NET Framework Yardımcısı biçiminde içerir <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> bu çeviri sağlamak için yöntem aşırı yüklemeleri.  
   
  Göz önünde bulundurun <xref:System.IO.Stream> sınıf ve onun <xref:System.IO.Stream.BeginRead%2A> ve <xref:System.IO.Stream.EndRead%2A> APM karşılığı temsil etmek için zaman uyumlu yöntemleri <xref:System.IO.Stream.Read%2A> yöntemi:  
   

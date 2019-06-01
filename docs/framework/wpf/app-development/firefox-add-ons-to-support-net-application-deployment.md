@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: ea42710f7963f485675279f25623f26bfd5d4f48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1c0ee38037e79fc93a4318fc5309f61c9060213c
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582960"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457082"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>.NET Uygulaması Dağıtımını Destekleyen Firefox Eklentileri
 Windows Presentation Foundation (WPF) Firefox ve .NET Framework Assistant Firefox için eklenti etkinleştirme [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ve Mozilla Firefox tarayıcısı ile çalışmak için ClickOnce uygulamaları.  
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) Firefox ve .NET Framework Assistant Firefo
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Firefox ile yüklü eklenti [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]. Windows 7 içerir [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], yer almaz ancak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Firefox için eklenti. Yükleyemezsiniz [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Windows 7, Firefox için eklenti.  
   
- [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] İçermemesi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Firefox için eklenti. Ancak, her iki [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] ve [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] olan yüklü Firefox WPF eklentisinin ile yüklenen [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]. Bu nedenle [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] uygulamaları hala çalışır çünkü WPF konağı doğru framework sürümünü yükler. Daha fazla bilgi için [WPF Konağı (PresentationHost.exe)](wpf-host-presentationhost-exe.md).  
+ .NET Framework 4 içermemesi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Firefox için eklenti. Ancak, her iki [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] ve .NET Framework 4 yüklü, ile Firefox WPF eklentisinin yüklü [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]. WPF konağı doğru framework sürümünü yüklenir çünkü bu nedenle .NET Framework 4 uygulamalarını çalışmaya devam edecektir. Daha fazla bilgi için [WPF Konağı (PresentationHost.exe)](wpf-host-presentationhost-exe.md).  
   
 ## <a name="net-framework-assistant-for-firefox"></a>Firefox için .NET Framework Assistant  
  .NET Framework Assistant Firefox için Firefox tarayıcıdan çalıştırmak tek başına ClickOnce uygulamaları etkinleştirir. .NET Framework Assistant aynı şekilde önce ve sonra Firefox tarayıcısı yüklendiğinde Firefox işlevleri için. Firefox tarayıcısı ne zaman başlatılır ve [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] olan yüklü Firefox bulur ve Firefox için .NET Framework Yardımcısı'nı yükler. Kullanıcılar, .NET Framework Assistant aşağıdakileri yapmak Firefox için yapılandırabilirsiniz:  

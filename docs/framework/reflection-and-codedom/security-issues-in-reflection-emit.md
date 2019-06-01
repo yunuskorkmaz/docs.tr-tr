@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6adbe4e5c82d5f886fcffd5ab272a337c377395
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5ca4a087b60e6cb857ec78273dad099e5e5da07a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586118"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457310"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Yansıma Yaymadaki Güvenlik Sorunları
 .NET Framework, Microsoft Ara dilini (MSIL), her biri kendi güvenlik sorunları yaymak için üç yol sunar:  
@@ -78,7 +78,7 @@ ms.locfileid: "65586118"
   
  Olarak herhangi diğer yayılan koduyla dinamik yöntem yürütme dinamik yöntem kullandığı yöntemleri tarafından talep edilen tüm izinler gerektirir.  
   
- Anonim olarak barındırılan dinamik yöntemler barındıran sistem derlemesi kullanan <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType> önce .NET Framework içinde kullanılan saydamlık modeli saydamlık modeli, [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+ Anonim olarak barındırılan dinamik yöntemler barındıran sistem derlemesi kullanan <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType> önce .NET Framework 4 .NET Framework'teki kullanılan saydamlık modeli olan saydamlık modeli.  
   
  Daha fazla bilgi için <xref:System.Reflection.Emit.DynamicMethod> sınıfı.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "65586118"
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>Sürüm Bilgileri  
- İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], makine genelindeki güvenlik ilkesi ortadan ve güvenlik saydamlık varsayılan zorlama mekanizması haline gelir. Bkz: [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
+ .NET Framework 4 ile başlayarak, makine genelindeki güvenlik ilkesi elenir ve güvenlik saydamlık varsayılan zorlama mekanizması olur. Bkz: [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
   
  İle başlayarak [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> bayrağı olduğunda artık gerekli dinamik derlemeler ve dinamik yöntemleri yayma. .NET Framework'ün tüm önceki sürümlerinde bu bayrağı gereklidir.  
   

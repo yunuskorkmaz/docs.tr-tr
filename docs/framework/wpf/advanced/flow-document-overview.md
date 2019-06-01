@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 082f5bf9f8cdd8e5f44aa74e7b34e03637b5c579
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b74ab89837592de2de6cfa43d9efb1ed0f63d69
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663360"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457451"
 ---
 # <a name="flow-document-overview"></a>Akış Belgesine Genel Bakış
 Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanmıştır. Önceden tanımlanmış bir düzene ayarlanıyor, yerine akış belgeleri dinamik olarak ayarlama ve çalışma zamanı değişkenleri isteğe bağlı kullanıcı tercihlerini pencere boyutunu ve cihaz çözünürlüğü gibi temel alarak kendi içerik yeniden akışı. Ayrıca, akış belgeleri sayfalandırma ve sütunlar gibi gelişmiş belge özellikleri sunar. Bu konu, akış belgeleri ve bunların nasıl oluşturulacağı hakkında genel bir bakış sağlar.  
@@ -152,7 +152,7 @@ Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanm
   
  [!code-xaml[FlowOvwSnippets_snip#RunExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
- **Not:**  İtibariyle [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], <xref:System.Windows.Documents.Run.Text%2A> özelliği <xref:System.Windows.Documents.Run> bağımlılık özelliği nesnedir. Bağlayabilirsiniz <xref:System.Windows.Documents.Run.Text%2A> gibi özellik bir veri kaynağı bir <xref:System.Windows.Controls.TextBlock>. <xref:System.Windows.Documents.Run.Text%2A> Özelliği, tek yönlü bağlamaya tam olarak destekler. <xref:System.Windows.Documents.Run.Text%2A> Özelliğini de destekleyen iki yönlü bağlama dışında <xref:System.Windows.Controls.RichTextBox>. Örnek için bkz. <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>  
+ **Not:**  .NET Framework 4'te başlangıç <xref:System.Windows.Documents.Run.Text%2A> özelliği <xref:System.Windows.Documents.Run> bağımlılık özelliği nesnedir. Bağlayabilirsiniz <xref:System.Windows.Documents.Run.Text%2A> gibi özellik bir veri kaynağı bir <xref:System.Windows.Controls.TextBlock>. <xref:System.Windows.Documents.Run.Text%2A> Özelliği, tek yönlü bağlamaya tam olarak destekler. <xref:System.Windows.Documents.Run.Text%2A> Özelliğini de destekleyen iki yönlü bağlama dışında <xref:System.Windows.Controls.RichTextBox>. Örnek için bkz. <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>  
   
  **yayılma**  
   

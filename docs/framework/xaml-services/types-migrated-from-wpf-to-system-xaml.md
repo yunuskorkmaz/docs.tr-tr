@@ -6,23 +6,23 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: f967cf6b7957c36fd66ed5eafe695a850cf101e1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c5e1c1ad838440419024a2abb44f86f6bce01061
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593353"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457032"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>WPF'den System.Xaml'e Geçirilen Türler
-İçinde [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] ve [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]hem [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ve Windows Workflow Foundation XAML dil uygulaması eklenir. Birçok genişletilebilirlik WPF XAML uygulaması için sağlanan genel tür WindowsBase ve PresentationCore PresentationFramework derlemelerde vardı. Benzer şekilde, Windows Workflow Foundation XAML için genişletilebilirlik sağlayan genel türleri System.Workflow.ComponentModel derlemede vardı. İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], XAML ile ilgili türlerinden bazıları System.Xaml derlemeye geçirilir. XAML dil Hizmetleri ortak bir .NET Framework uygulamasını ilk olarak belirli bir framework'ün XAML uygulaması tarafından tanımlanmadı, ancak artık genel bir parçası olan birçok XAML genişletilebilirlik senaryolarına olanak sağlayan [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML dil desteği. Bu konuda, geçirilir ve geçişle ilgili sorunlar ele alınmıştır türlerini listeler.  
+İçinde [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] ve [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]hem [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ve Windows Workflow Foundation XAML dil uygulaması eklenir. Birçok genişletilebilirlik WPF XAML uygulaması için sağlanan genel tür WindowsBase ve PresentationCore PresentationFramework derlemelerde vardı. Benzer şekilde, Windows Workflow Foundation XAML için genişletilebilirlik sağlayan genel türleri System.Workflow.ComponentModel derlemede vardı. İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], XAML ile ilgili türlerinden bazıları System.Xaml derlemeye geçirilir. XAML dil Hizmetleri ortak bir .NET Framework uygulamasını ilk olarak belirli bir framework'ün XAML uygulama tarafından tanımlanan, ancak artık .NET Framework 4 XAML dil desteği genel bir parçası olan birçok XAML genişletilebilirlik senaryolara olanak sağlar. Bu konuda, geçirilir ve geçişle ilgili sorunlar ele alınmıştır türlerini listeler.  
   
 <a name="assemblies_and_namespaces"></a>   
 ## <a name="assemblies-and-namespaces"></a>Derlemeler ve ad alanları  
  İçinde [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ve [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], WPF XAML desteklemek için uygulanan türleri içinde genel olarak <xref:System.Windows.Markup> ad alanı. Bu türlerin çoğu WindowsBase derlemesinde bulunmaktadır.  
   
- İçinde [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], yeni bir <xref:System.Xaml> ad alanı ve yeni bir System.Xaml derleme. WPF XAML için ilk olarak uygulanan türleri birçoğu artık genişletilebilirlik noktaları veya herhangi bir XAML uygulaması için hizmet olarak sağlanır. Bunları daha genel senaryolar için kullanılabilir hale getirme bir parçası olarak, türü-kendi özgün WPF derlemesinden System.Xaml derlemesine iletilen türleridir. Bu, XAML genişletilebilirlik senaryoları diğer çerçeveleri (örneğin, WPF ve Windows Workflow Foundation) derlemeleri eklemek zorunda kalmadan sağlar.  
+ .NET Framework 4'te var. yeni bir <xref:System.Xaml> ad alanı ve yeni bir System.Xaml derleme. WPF XAML için ilk olarak uygulanan türleri birçoğu artık genişletilebilirlik noktaları veya herhangi bir XAML uygulaması için hizmet olarak sağlanır. Bunları daha genel senaryolar için kullanılabilir hale getirme bir parçası olarak, türü-kendi özgün WPF derlemesinden System.Xaml derlemesine iletilen türleridir. Bu, XAML genişletilebilirlik senaryoları diğer çerçeveleri (örneğin, WPF ve Windows Workflow Foundation) derlemeleri eklemek zorunda kalmadan sağlar.  
   
- Türlerin çoğu geçirilen türler için kalan <xref:System.Windows.Markup> ad alanı. Bu dosya başına temelinde mevcut uygulamalarında CLR ad uzayı eşlemelerinden bozmayı önlemek için kısmen değildi. Sonuç olarak, <xref:System.Windows.Markup> ad alanında [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (System.Xaml derlemesinden) genel XAML dil desteği türleri bir karışımını içeren ve WPF XAML uygulaması için (WindowsBase ve diğer WPF derlemelerine) özgü türleri. System.xaml'e geçirilen, ancak daha önce bir WPF derlemede varolan herhangi bir tür sürüm WPF derleme 4 tür iletme desteği vardır.  
+ Türlerin çoğu geçirilen türler için kalan <xref:System.Windows.Markup> ad alanı. Bu dosya başına temelinde mevcut uygulamalarında CLR ad uzayı eşlemelerinden bozmayı önlemek için kısmen değildi. Sonuç olarak, <xref:System.Windows.Markup> ad alanı .NET Framework 4'te genel XAML dil desteği türleri (System.Xaml derlemesinden) bir karışımını içeren ve WPF XAML uygulaması için (WindowsBase ve diğer WPF derlemelerine) özgü türleri. System.xaml'e geçirilen, ancak daha önce bir WPF derlemede varolan herhangi bir tür sürüm WPF derleme 4 tür iletme desteği vardır.  
   
 ### <a name="workflow-xaml-support-types"></a>İş akışı XAML destek türleri  
  Windows Workflow Foundation XAML destek türleri de sağlanır ve çoğu durumda bu eşdeğer WPF özdeş kısa adlarına sahip. Windows Workflow Foundation XAML destek türlerinin bir listesi verilmiştir:  
@@ -33,11 +33,11 @@ ms.locfileid: "64593353"
   
 - <xref:System.Workflow.ComponentModel.Serialization.XmlnsPrefixAttribute>  
   
- Bu destek türü için Windows Workflow Foundation derlemelerde hala mevcut [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ve belirli Windows Workflow Foundation uygulamaları için hala kullanılabilir; Bununla birlikte, bunlar uygulamalar veya kullanmayan çerçeveleri tarafından başvurulmaması gereken Windows Workflow Foundation.  
+ Belirli Windows Workflow Foundation uygulamaları için kullanılan türleri hala Windows Workflow Foundation derlemeler .NET Framework 4 için mevcut ve hala bu desteği; Ancak, bunlar uygulamaları veya Windows Workflow Foundation'ı kullanmayın çerçeveleri başvurulmaması gereken.  
   
 <a name="markupextension"></a>   
 ## <a name="markupextension"></a>MarkupExtension  
- İçinde [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ve [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], <xref:System.Windows.Markup.MarkupExtension> WPF WindowsBase derlemesinde için sınıf. Windows Workflow Foundation için paralel bir sınıf <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>, önceden System.Workflow.ComponentModel derlemedeki. İçinde [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], <xref:System.Windows.Markup.MarkupExtension> sınıfı System.Xaml derlemeye geçirilir. İçinde [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], <xref:System.Windows.Markup.MarkupExtension> yalnızca bu belirli çerçevelerini temel yapı için .NET Framework XAML hizmetlerinde kullanan herhangi bir XAML genişletilebilirlik senaryo için tasarlanmıştır. Mümkün olduğunda, belirli çerçeveleri ya da Framework'te kullanıcı kodu aynı zamanda Sysprep.inf'in <xref:System.Windows.Markup.MarkupExtension> XAML uzantısı için sınıf.  
+ İçinde [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ve [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], <xref:System.Windows.Markup.MarkupExtension> WPF WindowsBase derlemesinde için sınıf. Windows Workflow Foundation için paralel bir sınıf <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>, önceden System.Workflow.ComponentModel derlemedeki. .NET Framework 4'te <xref:System.Windows.Markup.MarkupExtension> sınıfı System.Xaml derlemeye geçirilir. .NET Framework 4'te <xref:System.Windows.Markup.MarkupExtension> yalnızca bu belirli çerçevelerini temel yapı için .NET Framework XAML hizmetlerinde kullanan herhangi bir XAML genişletilebilirlik senaryo için tasarlanmıştır. Mümkün olduğunda, belirli çerçeveleri ya da Framework'te kullanıcı kodu aynı zamanda Sysprep.inf'in <xref:System.Windows.Markup.MarkupExtension> XAML uzantısı için sınıf.  
   
 <a name="markupextension_supporting_service_classes"></a>   
 ## <a name="markupextension-supporting-service-classes"></a>MarkupExtension destekleyen hizmet sınıfları  
@@ -50,11 +50,11 @@ ms.locfileid: "64593353"
 - <xref:System.Windows.Markup.IXamlTypeResolver>  
   
 > [!NOTE]
->  Başka bir hizmet [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] biçimlendirme uzantıları ilgili olan <xref:System.Windows.Markup.IReceiveMarkupExtension> arabirimi. <xref:System.Windows.Markup.IReceiveMarkupExtension> geçirilmemiş ve işaretlenmiş `[Obsolete]` için [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Daha önce kullanılan senaryoları <xref:System.Windows.Markup.IReceiveMarkupExtension> kullanmalısınız <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> geri çağırmaları öznitelikli. <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> Ayrıca işaretlenmiş `[Obsolete]`.  
+>  Başka bir hizmet [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] biçimlendirme uzantıları ilgili olan <xref:System.Windows.Markup.IReceiveMarkupExtension> arabirimi. <xref:System.Windows.Markup.IReceiveMarkupExtension> geçirilmemiş ve işaretlenmiş `[Obsolete]` için .NET Framework 4. Daha önce kullanılan senaryoları <xref:System.Windows.Markup.IReceiveMarkupExtension> kullanmalısınız <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> geri çağırmaları öznitelikli. <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> Ayrıca işaretlenmiş `[Obsolete]`.  
   
 <a name="xaml_language_features"></a>   
 ## <a name="xaml-language-features"></a>XAML dil özellikleri  
- Daha önce birkaç XAML dil özelliklerini ve WPF bileşenlerini PresentationFramework derlemesinde vardı. Bunlar olarak uygulanan bir <xref:System.Windows.Markup.MarkupExtension> XAML biçimlendirmede biçimlendirme uzantısı kullanımı göstermek için alt sınıfı. İçinde [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], WPF derlemeleri içermeyen projeler bu XAML dili düzeyinde özellikleri kullanabilmesi için bu System.Xaml bütünleştirilmiş kodda mevcut. WPF için aynı bu uygulamaları kullanan [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] uygulamalar. Bu konuda listelenen diğer durumlarda ile destekleyen türler devam mevcut <xref:System.Windows.Markup> önceki başvuruları bozmayı önlemek için ad alanı.  
+ Daha önce birkaç XAML dil özelliklerini ve WPF bileşenlerini PresentationFramework derlemesinde vardı. Bunlar olarak uygulanan bir <xref:System.Windows.Markup.MarkupExtension> XAML biçimlendirmede biçimlendirme uzantısı kullanımı göstermek için alt sınıfı. WPF derlemeleri içermeyen projeler bu XAML dili düzeyinde özellikleri kullanabilmesi için .NET Framework 4'te bu System.Xaml bütünleştirilmiş kodda mevcut. WPF, .NET Framework 4 uygulamaları için aynı bu uygulamalar kullanır. Bu konuda listelenen diğer durumlarda ile destekleyen türler devam mevcut <xref:System.Windows.Markup> önceki başvuruları bozmayı önlemek için ad alanı.  
   
  Aşağıdaki tabloda, System.Xaml içinde tanımlanan XAML özellik desteği sınıfları listesini içerir.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "64593353"
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## <a name="valueserializer-and-supporting-classes"></a>ValueSerializer ve Destek sınıfları  
- <xref:System.Windows.Markup.ValueSerializer> Sınıfı, özellikle, burada serileştirme gerektirebilir birden çok modları veya düğümleri çıktısında XAML serileştirme çalışmaları için tür dönüştürme bir dizeye destekler. İçinde [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ve [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], <xref:System.Windows.Markup.ValueSerializer> WPF WindowsBase derlemesinde için. İçinde [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], <xref:System.Windows.Markup.ValueSerializer> sınıfı System.Xaml içinde olan ve herhangi bir XAML genişletilebilirlik senaryo için yalnızca, WPF, derleme için tasarlanmıştır. <xref:System.Windows.Markup.IValueSerializerContext> (bir destek hizmeti) ve <xref:System.Windows.Markup.DateTimeValueSerializer> (belirli bir alt sınıf) System.xaml'e da geçirilir.  
+ <xref:System.Windows.Markup.ValueSerializer> Sınıfı, özellikle, burada serileştirme gerektirebilir birden çok modları veya düğümleri çıktısında XAML serileştirme çalışmaları için tür dönüştürme bir dizeye destekler. İçinde [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ve [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], <xref:System.Windows.Markup.ValueSerializer> WPF WindowsBase derlemesinde için. .NET Framework 4'te <xref:System.Windows.Markup.ValueSerializer> sınıfı System.Xaml içinde olan ve herhangi bir XAML genişletilebilirlik senaryo için yalnızca, WPF, derleme için tasarlanmıştır. <xref:System.Windows.Markup.IValueSerializerContext> (bir destek hizmeti) ve <xref:System.Windows.Markup.DateTimeValueSerializer> (belirli bir alt sınıf) System.xaml'e da geçirilir.  
   
 <a name="xamlrelated_attributes"></a>   
 ## <a name="xaml-related-attributes"></a>XAML ile ilgili öznitelikleri  
- WPF XAML CLR türleri, XAML davranışları hakkında bir şey belirtmek için uygulanabilecek bazı öznitelikler dahildir. WPF derlemeleri varolan özniteliklerin bir listesi verilmiştir [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ve [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]. Bu öznitelikler System.XAML'ye geçiş [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+ WPF XAML CLR türleri, XAML davranışları hakkında bir şey belirtmek için uygulanabilecek bazı öznitelikler dahildir. WPF derlemeleri varolan özniteliklerin bir listesi verilmiştir [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ve [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]. Bu öznitelikler, .NET Framework 4'te System.XAML'ye geçirilir.  
   
 - <xref:System.Windows.Markup.AmbientAttribute>  
   
@@ -107,13 +107,13 @@ ms.locfileid: "64593353"
   
 <a name="miscellaneous_classes"></a>   
 ## <a name="miscellaneous-classes"></a>Çeşitli sınıfları  
- <xref:System.Windows.Markup.IComponentConnector> Arabirimi içinde WindowsBase ayrıntıların [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ve [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], ancak System.Xaml içinde var. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. <xref:System.Windows.Markup.IComponentConnector> öncelikle desteği ve XAML biçimlendirme derleyicileri araç kullanımı için tasarlanmıştır.  
+ <xref:System.Windows.Markup.IComponentConnector> Arabirimi içinde WindowsBase ayrıntıların [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ve [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], ancak .NET Framework 4'te System.Xaml bulunmaktadır. <xref:System.Windows.Markup.IComponentConnector> öncelikle desteği ve XAML biçimlendirme derleyicileri araç kullanımı için tasarlanmıştır.  
   
- <xref:System.Windows.Markup.INameScope> Arabirimi içinde WindowsBase ayrıntıların [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ve [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], ancak System.Xaml içinde var. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. <xref:System.Windows.Markup.INameScope> temel XAML namescope işlemlerinde tanımlar.  
+ <xref:System.Windows.Markup.INameScope> Arabirimi içinde WindowsBase ayrıntıların [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ve [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], ancak .NET Framework 4'te System.Xaml bulunmaktadır. <xref:System.Windows.Markup.INameScope> temel XAML namescope işlemlerinde tanımlar.  
   
 <a name="xamlrelated_classes_with_shared_names_that_exist_in_wpf_and_systemxaml"></a>   
 ## <a name="xaml-related-classes-with-shared-names-that-exist-in-wpf-and-systemxaml"></a>System.Xaml ve WPF ile mevcut paylaşılan adları ile XAML ile ilgili sınıflar  
- WPF derlemeleri hem System.Xaml derlemesinde aşağıdaki sınıflar mevcut [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]:  
+ Hem WPF derlemeleri, hem de .NET Framework 4 System.Xaml derlemede aşağıdaki sınıflar mevcut:  
   
  `XamlReader`  
   

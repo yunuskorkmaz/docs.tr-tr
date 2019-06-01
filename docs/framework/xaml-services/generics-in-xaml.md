@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca0c1b466f5a89730c72f32321394ccfc6d9c7a2
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954108"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457364"
 ---
 # <a name="generics-in-xaml"></a>XAML'deki Genel Türler
 .NET Framework XAML System.Xaml içinde uygulandığı şekilde hizmetleri genel CLR Türleri kullanma desteği sağlar. Bu destek sınırlamalar genel türler tür bağımsız değişkeni belirtmek ve uygun çağırarak kısıtlamanın zorlanması içerir `Add` genel koleksiyon çalışmaları için yöntemi. Bu konuda, kullanma ve XAML genel türleri başvuran yönleri açıklanmaktadır.  
@@ -38,7 +38,7 @@ ms.locfileid: "61954108"
   
  Genel türler döndüren özel biçimlendirme uzantısı tanımlama ya bir sarmalama sağlayan genel kullanımları desteklemek için olası geçici çözümleri dahil sınıf tanımının genel türünden türer, ancak kendi sınıf tanımında genel kısıtlama düzleştirir.  
   
- WPF ve hedefleme [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], XAML 2009 özelliklerini ile birlikte kullanabileceğiniz `x:TypeArguments`, ancak yalnızca gevşek XAML (biçimlendirme yapılmayan XAML). WPF ve XAML, BAML formu için biçimlendirme derlenmiş XAML şu anda desteklemediğinden XAML 2009 anahtar sözcükleri ve özellikleri.  
+ WPF ve .NET Framework 4 hedefleyen, XAML 2009 özelliklerini ile birlikte kullanabileceğiniz `x:TypeArguments`, ancak yalnızca gevşek XAML (biçimlendirme yapılmayan XAML). WPF ve XAML, BAML formu için biçimlendirme derlenmiş XAML şu anda desteklemediğinden XAML 2009 anahtar sözcükleri ve özellikleri.  
   
  Windows Workflow Foundation için özel iş akışlarında [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] genel XAML kullanımını desteklemez.  
   

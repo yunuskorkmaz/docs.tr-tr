@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e425394df0d04ffbb4cde41c83a9efe3c5b4abe0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 011bb2d7a1a700ba4daf86d96d825373e353f57e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920029"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457421"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 
@@ -139,7 +139,7 @@ Ngen.exe'yi çalıştırabilmek için yönetici ayrıcalıklarınızın olması 
 > [!CAUTION]
 > Ngen.exe'yi tam güvenilir olmayan derlemeler üzerinde çalıştırmayın. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Ngen.exe derlemeleri tam güven ile derler ve kod erişimi güvenliği (CAS) ilkesi artık değerlendirilmez.
 
-İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], Ngen.exe ile oluşturulan yerel görüntüler artık kısmi güvende çalışan uygulamaların içine yüklenemez. Bunun yerine anlık (JIT) derleyici çağrılır.
+.NET Framework 4 ile başlayarak, Ngen.exe ile oluşturulan yerel görüntüler artık kısmi güvende çalışan uygulamaların içine yüklenemez. Bunun yerine anlık (JIT) derleyici çağrılır.
 
 Ngen.exe belirtilen derleme için yerel görüntüler oluşturur `assemblyname` bağımsız değişkeni `install` eylem ve tüm bağımlılıkları. Bağlılıklar derleme bildirisindeki referanslar ile belirlenir. Yansıma, örneğin çağırarak kullanarak uygulamayı yüklediğinde, içinde bir bağımlılığı ayrı olarak yüklemeniz gereken tek senaryo olduğundan <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi.
 

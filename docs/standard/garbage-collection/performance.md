@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da29bd6bc53b59f1f20e2272a8293b49e230bff0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 996ea7802473817594420a108470f7604170482e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622882"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456796"
 ---
 # <a name="garbage-collection-and-performance"></a>Çöp Toplama ve Performans
 <a name="top"></a> Bu konu, atık toplama ve bellek kullanımı ile ilgili sorunları açıklar. Yönetilen yığınla ilgili sorunları ele alır ve çöp toplamanın uygulamalarınız üzerindeki etkisinin nasıl en aza indirgenebileceğini açıklar. Her başlıkta, problemleri araştırmak için kullanabileceğiniz prosedürlerin bağlantıları yer alır.  
@@ -61,7 +61,7 @@ ms.locfileid: "64622882"
  Profil oluşturucular kapsamlı bilgi sağlayabilir. Ancak karmaşık profil oluşturucular, bir uygulamanın davranışını değiştirebilir.  
   
 ### <a name="application-domain-resource-monitoring"></a>Uygulama Etki Alanı Kaynak İzleme  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ile başlayarak, Uygulama etki alanı kaynak izleme (ARM), uygulama etki alanı tarafından CPU ve bellek kullanımını izlemek için ana bilgisayarları etkinleştirir. Daha fazla bilgi için [uygulama etki alanı Kaynak İzleme](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).  
+ Uygulama etki alanı kaynak izleme (ARM), .NET Framework 4 ile başlayarak, uygulama etki alanı tarafından CPU ve bellek kullanımını izlemek için ana bilgisayarları etkinleştirir. Daha fazla bilgi için [uygulama etki alanı Kaynak İzleme](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).  
   
  [Başa dön](#top)  
   

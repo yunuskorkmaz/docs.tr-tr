@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20a4ded811e0a62edb9ec138068a9439399c3282
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 6a1243ad856bc5f8cc104c9f2e08fce515a849d8
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380198"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457062"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework'teki eski türler
 <a name="introduction"></a> Bu makaledeki tablolar, .NET Framework 4.5 ve derleme tarafından düzenlenen .NET Framework 4.6 artık kullanılmayan türler listeleyin. Eski türler ve önerilen alternatifleri her derlemede bir listesini görmek için aşağıdaki bağlantıları kullanın. Bu tür geçersiz olduğundan, tüm üyeleri de artık kullanılmıyor. .NET Framework Sınıf Kitaplığı'nda ek eski üyeler listesi için bkz. [eski üyeler](obsolete-members.md).
@@ -588,7 +588,7 @@ ms.locfileid: "66380198"
 
 <a name="IEHost"></a>
 ### <a name="assembly-iehostdll-and-ieexecexe"></a>Derleme: IEHost.dll ve IEExec.exe
- IEHost.dll ve IEExec.exe derlemeler .NET Framework'den kaldırıldı. Tüm türleri ve üyeleri artık kullanılmayan ve sürümünden desteklenmez [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Bu derlemeler, Internet Explorer'da yürütülebilir dosyaları çalışan ve Windows Forms denetimleri barındırmak için kullanıldı. Önerilen alternatifler, ClickOnce, XAML tarayıcı uygulamaları (XBAP) içerir ve Microsoft Silverlight.
+ IEHost.dll ve IEExec.exe derlemeler .NET Framework'den kaldırıldı. Tüm türleri ve üyeleri artık kullanılmayan ve .NET Framework 4'ten itibaren desteklenmez. Bu derlemeler, Internet Explorer'da yürütülebilir dosyaları çalışan ve Windows Forms denetimleri barındırmak için kullanıldı. Önerilen alternatifler, ClickOnce, XAML tarayıcı uygulamaları (XBAP) içerir ve Microsoft Silverlight.
 
  [Başa dön](#introduction)
 

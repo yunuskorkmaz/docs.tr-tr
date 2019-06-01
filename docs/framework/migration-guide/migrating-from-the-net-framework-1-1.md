@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c683ce454e4db36367cb097371427d27dc4c555
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c43e17edf5795874d8b92db659f07e8f6ec3c30a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636323"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457237"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1'den Geçiş
 
@@ -62,10 +62,10 @@ Uygulamanızdaki olası yeni değişikliklerin etkisini değerlendirmek için ş
 
 - [.NET Framework 3.5 SP1 içindeki değişiklikleri](https://go.microsoft.com/fwlink/?LinkID=186989) arasındaki değişiklikleri belgeler [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ve [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)].
 
-- [.NET framework 4 geçiş sorunları](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) arasındaki değişiklikleri belgeler [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] ve [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].
+- [.NET framework 4 geçiş sorunları](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) arasındaki değişiklikleri belgeler [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] ve .NET Framework 4.
 
 ## <a name="obsolete-types-and-members"></a>Eski türler ve Üyeler
 
 Kullanım dışı türlerin ve üyelerin etkisi, yeniden hedeflenen uygulamalar için biraz farklıdır ve yeniden derlenmiş uygulamalar. Eski türler ve üyeler kullanımını, eski türü veya üye fiziksel olarak derlemesinden kaldırılmadığı sürece yeniden hedeflenen uygulamayı etkilemez. Genellikle eski türleri veya üyeleri kullanan bir uygulama yeniden derlendiğinde, derleyici bir derleyici hatası yerine uyarısı üretilir. Ancak, bazı durumlarda, bir derleyici hatası oluşturur ve eski türü veya üyeyi kullanan kod başarıyla derleme yapmaz. Bu durumda, uygulamanızı yeniden derlemeden önce kullanılmayan tür veya üyeyi çağıran kaynak kodunu yeniden yazmanız gerekir. Eski türler ve üyeler hakkında daha fazla bilgi için bkz. [Sınıf Kitaplığı'nda ne kullanılmıyor](../../../docs/framework/whats-new/whats-obsolete.md).
 
-Tür ve sürümünden itibaren kullanımdan üyelerin etkisini değerlendirmek için [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], bkz: [Sınıf Kitaplığı'nda ne kullanılmıyor](../../../docs/framework/whats-new/whats-obsolete.md). Eski tür ve üye listelerini gözden [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]ve [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].
+Tür ve sürümünden itibaren kullanımdan üyelerin etkisini değerlendirmek için [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], bkz: [Sınıf Kitaplığı'nda ne kullanılmıyor](../../../docs/framework/whats-new/whats-obsolete.md). Eski tür ve üye listelerini gözden [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]ve .NET Framework 4.

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c40e2150bf56540fc95281f07bd14c60e138abc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ed4533c934120c3400ddba68e65bc82aabc9370
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607665"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456777"
 ---
 # <a name="resolving-assembly-loads"></a>Derleme Yüklerini Çözme
 .NET Framework sağlar <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay yüklenirken derleme üzerinde daha fazla denetim gerektiren uygulamalar için. Bu olayını işleyerek, uygulamanız hangisinin birkaç derleme sürümlerini yüklemek için dinamik bir derleme yayılamıyor ve döndürün. yük bağlamdan normal algılama yolları, select dışındaki bir derlemeyi yüklemek vb. Bu konuda işleme yönelik yönergeler sağlanmaktadır <xref:System.AppDomain.AssemblyResolve> olay.  
@@ -72,7 +72,7 @@ ms.locfileid: "64607665"
  İşleme için birincil kuralı <xref:System.AppDomain.AssemblyResolve> olaydır tarafından tanınmayan bir derleme döndürülecek denememelisiniz. İşleyici yazdığınızda, hangi derlemelerin olay verilmesine neden olabilecek bilmeniz gerekir. İşleyicinizi diğer derlemeler için null değeri döndürmelidir.  
   
 > [!IMPORTANT]
->  İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], <xref:System.AppDomain.AssemblyResolve> olayı için uydu derlemeleri oluşturulur. Tüm derleme yük istekleri çözmek işleyici çalışırsa, bu değişiklik .NET Framework'ün önceki bir sürümü için yazılmış bir olay işleyicisi etkiler. Tarafından tanınmayan bütünleştirilmiş kodları yoksay olay işleyicileri, bu değişiklikten etkilenmez: Bunlar, null döndürür ve normal bir geri dönüş mekanizması izlenir.  
+>  .NET Framework 4 ile başlayarak <xref:System.AppDomain.AssemblyResolve> olayı için uydu derlemeleri oluşturulur. Tüm derleme yük istekleri çözmek işleyici çalışırsa, bu değişiklik .NET Framework'ün önceki bir sürümü için yazılmış bir olay işleyicisi etkiler. Tarafından tanınmayan bütünleştirilmiş kodları yoksay olay işleyicileri, bu değişiklikten etkilenmez: Bunlar, null döndürür ve normal bir geri dönüş mekanizması izlenir.  
   
  Bir derleme yüklenirken, olay işleyicisi herhangi birini kullanmak zorunda değilsiniz <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> neden olabilecek bir yöntem aşırı yüklemeleri <xref:System.AppDomain.AssemblyResolve> bu için yığın taşmasına neden olabileceği için yükseltilmiş yinelemeli olarak olay. (Bu konunun önceki kısımlarında sağlanan listesine bakın.) Bu, özel durum işleme yükleme isteği için sağladığınız tüm olay işleyicileri dönene kadar hiçbir özel durum nedeniyle olsa bile gerçekleşir. Bu nedenle, aşağıdaki kod, bir yığın taşması sonuçları `MyAssembly` bulunamadı:  
   

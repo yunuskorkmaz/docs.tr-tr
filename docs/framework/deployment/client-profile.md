@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a327cb25210be7b9b6c341e3d11ccdc856cf46d3
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 86058eb288b54a4bc316900f165ec61e4d05eb1f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379970"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457278"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework İstemci Profili
-Bir alt kümesi ile birlikte sağlanan .NET Framework'ün .NET istemci profilidir [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ve önceki sürümleriyle ve istemci uygulamaları için hale getirilmiş. .NET Framework, Windows, Windows Phone ve Microsoft Azure için bir geliştirme platformudur ve yönetilen uygulama yürütme ortamı ve .NET Framework sınıf kitaplığı sağlar. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Ve önceki sürümlerde iki dağıtım seçeneği sağlanıyordu: tam .NET Framework ve istemci profili. İstemci Profili daha hızlı dağıtım ve daha küçük uygulama yükleme paketlerini tam .NET Framework'ten etkinleştirdi.  
+.NET istemci profili .NET Framework 4 ve önceki sürümlerle birlikte sağlanan ve istemci uygulamaları için hale getirilmiş .NET Framework, bir alt kümesidir. .NET Framework, Windows, Windows Phone ve Microsoft Azure için bir geliştirme platformudur ve yönetilen uygulama yürütme ortamı ve .NET Framework sınıf kitaplığı sağlar. .NET Framework 4 ve önceki sürümlerde iki dağıtım seçeneği sağlanan: tam .NET Framework ve istemci profili. İstemci Profili daha hızlı dağıtım ve daha küçük uygulama yükleme paketlerini tam .NET Framework'ten etkinleştirdi.  
   
  İstemci profili .NET Framework 4.5 ile başlayarak, durduruldu ve yalnızca tam yeniden dağıtılabilir paketi kullanıma sunuldu. İyileştirmeleri, daha küçük indirme boyutu ve hızlı dağıtım gibi .NET Framework 4.5 sağlandığından dolayı ayrı bir dağıtım paketine gerek kalkmıştır. Tek yeniden dağıtılabilir yükleme işlemini kolaylaştırır ve uygulamaya dağıtım seçeneklerinizi daha da basitleştirir.  
   

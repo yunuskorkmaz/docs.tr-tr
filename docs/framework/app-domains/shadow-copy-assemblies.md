@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00dc191d53d01d33a5dce3ed2d012942e2672dae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 51bf359ea6ba4e5b45827928a50a095a7960a68f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607520"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456705"
 ---
 # <a name="shadow-copying-assemblies"></a>Gölge Kopyalama Derlemeleri
 Gölge kopyalama etki alanını kaldırmadan güncelleştirilmesi için bir uygulama etki alanında kullanılan etkinleştirir derlemeler. Bu, özellikle sürekli olarak ASP.NET siteleri gibi kullanılabilir olması gereken uygulamalar için yararlıdır.  
@@ -67,9 +67,9 @@ Gölge kopyalama etki alanını kaldırmadan güncelleştirilmesi için bir uygu
   
 <a name="StartupPerformance"></a>   
 ## <a name="startup-performance"></a>Başlangıç Performansı  
- Gölge kopyalama kullanan bir uygulama etki alanı başlatıldığında bir gecikme olur derlemeleri uygulama dizininde gölge kopya dizinine kopyalanır veya zaten bu konumda olup olmadıklarını doğrulandı. Önce [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], tüm derlemelerin geçici bir dizine kopyalandı. Her derlemenin derleme adını doğrulamak için açıldı ve tanımlayıcı adı doğrulandı. Her derleme, gölge kopya dizinde kopyadan daha yakın zamanda güncelleştirilmişse olup olmadığını görmek için iade. Bu durumda, gölge kopya dizinine kopyalandığı. Son olarak, geçici kopya atıldı.  
+ Gölge kopyalama kullanan bir uygulama etki alanı başlatıldığında bir gecikme olur derlemeleri uygulama dizininde gölge kopya dizinine kopyalanır veya zaten bu konumda olup olmadıklarını doğrulandı. .NET Framework 4 önce tüm derlemelerin geçici bir dizine kopyalandı. Her derlemenin derleme adını doğrulamak için açıldı ve tanımlayıcı adı doğrulandı. Her derleme, gölge kopya dizinde kopyadan daha yakın zamanda güncelleştirilmişse olup olmadığını görmek için iade. Bu durumda, gölge kopya dizinine kopyalandığı. Son olarak, geçici kopya atıldı.  
   
- İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], varsayılan başlangıç dosyası tarihi ve her derlemenin dosya tarih ile uygulama dizinindeki süreleri ve gölge kopya dizin kopyalama süresi doğrudan Karşılaştırılacak davranıştır. Derleme güncelleştirildiyse, .NET Framework'ün önceki sürümlerinde olduğu gibi aynı yordamı kullanarak kopyalanır; Aksi takdirde, gölge kopya dizin kopyalama yüklenir.  
+ .NET Framework 4 ile başlayarak, varsayılan başlangıç dosyası tarih ve saat dosya tarih ile uygulama dizinindeki her derleme ile gölge kopya dizin kopyalama süresi doğrudan Karşılaştırılacak davranışıdır. Derleme güncelleştirildiyse, .NET Framework'ün önceki sürümlerinde olduğu gibi aynı yordamı kullanarak kopyalanır; Aksi takdirde, gölge kopya dizin kopyalama yüklenir.  
   
  Derlemeleri sık değiştirmeyin ve genellikle derlemeleri küçük bir kısmı değişiklikler uygulamaları için en büyük ortaya çıkan performans geliştirmesi. Bir uygulama değişikliği sık derlemelerde çoğunu, yeni varsayılan davranışı bir performans gerileme neden olabilir. .NET Framework'ün önceki sürümlerini başlangıç davranışını ekleyerek geri yükleyebilirsiniz [ \<shadowCopyVerifyByTimestamp > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) yapılandırma dosyasına sahip `enabled="false"`.  
   

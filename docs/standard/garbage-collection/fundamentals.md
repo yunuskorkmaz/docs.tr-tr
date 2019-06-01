@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80559118140b8bf9f5228c3db3811faecc0e8f73
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: c6b7b120a5a21301ff82aa8ebd1cfc169f7884e4
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378239"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457443"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Çöp toplamanın temelleri
 <a name="top"></a> Ortak dil çalışma zamanı (CLR), çöp toplayıcı otomatik bellek yöneticisi görev yapar. Bunu, aşağıdaki avantajları sağlar:  
@@ -253,7 +253,7 @@ Eş zamanlı çöp toplama
  Arka plan çöp toplamada, kısa ömürlü nesiller (0 ve 1) 2. nesil koleksiyonu işlemi devam ederken gerektiği gibi toplanır. Arka plan çöp toplama için hiçbir ayar yoktur; eş zamanlı çöp toplama ile otomatik olarak etkinleştirilir. Arka plan çöp toplama, eşzamanlı çöp toplamanın yerini almıştır. Eş zamanlı çöp toplama ile arka plan çöp toplama adanmış bir iş parçacığı üzerinde gerçekleştirilir ve yalnızca 2. nesil koleksiyonlar için geçerlidir.  
   
 > [!NOTE]
->  Arka plan çöp toplama yalnızca [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ve sonraki sürümler. İçinde [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], yalnızca iş istasyonu çöp toplama için desteklenir. .NET Framework 4.5 ile başlayarak, arka plan çöp toplama hem iş istasyonu ve sunucu çöp toplama için kullanılabilir.  
+>  Arka plan çöp toplama, yalnızca .NET Framework 4 ve sonraki sürümlerinde kullanılabilir. .NET Framework 4'te yalnızca iş istasyonu çöp toplama için desteklenir. .NET Framework 4.5 ile başlayarak, arka plan çöp toplama hem iş istasyonu ve sunucu çöp toplama için kullanılabilir.  
   
  Arka plan çöp toplama sırasında kısa ömürlü nesillerdeki bir koleksiyon, ön plan çöp toplama koleksiyonu olarak bilinir. Ön plan atık toplamaları olduğunda, tüm yönetilen iş parçacıkları askıya alınır.  
   

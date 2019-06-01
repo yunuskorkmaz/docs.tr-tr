@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa4b8fdd56ed8a1304b6ee436ce3391c52ae7b9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 44e5f52ce2bfe03247ab25bb48607ae313523ff0
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622731"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456852"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Genel Türlerde Kovaryans ve Kontravaryans
 <a name="top"></a> Kovaryans ve kontravaryans daha türetilmiş türde (ayrıntılı) veya orijinal olarak belirtilenden daha az türetilmiş bir tür (less yazımına özgü) kullanma olanağı için başvuran terimlerdir. Genel tür parametreleri, genel türleri atamakta ve kullanmakta daha fazla esneklik sağlamak için birlikte değişme ve değişken karşıtlığını destekler. Bir tür sisteminden söz ederken, birlikte değişme, değişken karşıtlığı ve değişmezlik terimlerinin tanımları aşağıdaki gibidir. Örneklerde adlı bir temel sınıf varsayılmaktadır `Base` ve adlı bir türetilmiş sınıf `Derived`.  
@@ -81,7 +81,7 @@ ms.locfileid: "64622731"
   
 <a name="InterfaceCovariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>Birlikte Değişen Tür Parametreleriyle Genel Arabirimler  
- İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], çeşitli genel arabirimlerin birlikte değişen türde parametreleri vardır; örneğin: <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601>, ve <xref:System.Linq.IGrouping%602>. Bu arabirimlerin tüm tür parametreleri birlikte değişen olduğundan, tür parametreleri yalnızca üyelerin dönüş türleri için kullanılır.  
+ .NET Framework 4 ile başlayarak, çeşitli genel arabirimlerin birlikte değişen türde parametreleri vardır; Örneğin: <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601>, ve <xref:System.Linq.IGrouping%602>. Bu arabirimlerin tüm tür parametreleri birlikte değişen olduğundan, tür parametreleri yalnızca üyelerin dönüş türleri için kullanılır.  
   
  Aşağıdaki örnekte, birlikte değişen tür parametreleri gösterilmektedir. Örnekte iki tür tanımlanmaktadır: `Base` adlı statik bir yöntem olan `PrintBases` almayan bir `IEnumerable<Base>` (`IEnumerable(Of Base)` Visual Basic'te) ve öğeleri yazdıran. `Derived` devralınan `Base`. Boş bir örnek oluşturur `List<Derived>` (`List(Of Derived)` Visual Basic'te) ve bu tür için geçirilebileceğini gösterir `PrintBases` ve türünde bir değişkene atanan `IEnumerable<Base>` olmadan. <xref:System.Collections.Generic.List%601> uygulayan <xref:System.Collections.Generic.IEnumerable%601>, bir tek birlikte değişen türde parametresi vardır. Birlikte değişken tür parametresi nedeni budur örneği `IEnumerable<Derived>` yerine kullanılan `IEnumerable<Base>`.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "64622731"
   
 <a name="InterfaceContravariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>Değişken Karşıtı Genel Tür Parametrelerle Genel Arabirimler  
- İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], çeşitli genel arabirimlerin değişken karşıtı türde parametreleri vardır; örneğin: <xref:System.Collections.Generic.IComparer%601>, <xref:System.IComparable%601>, ve <xref:System.Collections.Generic.IEqualityComparer%601>. Bu arabirimlerin yalnızca değişken karşıtı türde parametreleri olduğundan, tür parametreleri yalnızca arabirimlerin üyelerinde parametre türleri olarak kullanılır.  
+ .NET Framework 4 ile başlayarak, çeşitli genel arabirimlerin değişken karşıtı türde parametreleri vardır; Örneğin: <xref:System.Collections.Generic.IComparer%601>, <xref:System.IComparable%601>, ve <xref:System.Collections.Generic.IEqualityComparer%601>. Bu arabirimlerin yalnızca değişken karşıtı türde parametreleri olduğundan, tür parametreleri yalnızca arabirimlerin üyelerinde parametre türleri olarak kullanılır.  
   
  Aşağıdaki örnekte, değişken karşıtı tür parametreleri gösterilmektedir. Örnek bir Özet tanımlar (`MustInherit` Visual Basic'te) `Shape` sınıfıyla birlikte bir `Area` özelliği. Örnek ayrıca tanımlar bir `ShapeAreaComparer` uygulayan sınıf `IComparer<Shape>` (`IComparer(Of Shape)` Visual Basic'te). Uygulamasını <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> yöntemi değerini temel alarak `Area` özelliği, bu nedenle `ShapeAreaComparer` sıralamak için kullanılan `Shape` nesnelerini alana göre.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "64622731"
   
 <a name="DelegateVariantTypeParameters"></a>   
 ## <a name="generic-delegates-with-variant-type-parameters"></a>Değişken Türü Parametrelerle Genel Temsilciler  
- İçinde [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], `Func` gibi genel temsilcilerinin <xref:System.Func%602>, birlikte değişken dönüş türleri ve değişken karşıtı parametre türleri vardır. `Action` Gibi genel temsilcilerinin <xref:System.Action%602>, değişken karşıtı parametre türleri vardır. Bu temsilciler daha fazla türetilmiş parametre türleri değişkenlere atanması anlamına gelir ve (durumunda `Func` genel temsilciler) daha az türetilmiş dönüş türleri.  
+ .NET Framework 4'te `Func` gibi genel temsilcilerinin <xref:System.Func%602>, birlikte değişken dönüş türleri ve değişken karşıtı parametre türleri vardır. `Action` Gibi genel temsilcilerinin <xref:System.Action%602>, değişken karşıtı parametre türleri vardır. Bu temsilciler daha fazla türetilmiş parametre türleri değişkenlere atanması anlamına gelir ve (durumunda `Func` genel temsilciler) daha az türetilmiş dönüş türleri.  
   
 > [!NOTE]
 >  Son genel tür parametresi `Func` genel temsilcilerin dönüş değeri türünü temsilci imzasında belirtir. Birlikte değişken olduğu (`out` anahtar sözcüğü), bir genel tür parametre değişken karşıtıdır (`in` anahtar sözcüğü).  
@@ -146,10 +146,10 @@ ms.locfileid: "64622731"
   
 <a name="DefiningVariantTypeParameters"></a>   
 ## <a name="defining-variant-generic-interfaces-and-delegates"></a>Değişken Genel Arabirimleri ve Temsilcileri Tanımlama  
- İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], Visual Basic ve C#, arabirimlerin genel tür parametreleri işaretlemek etkinleştirmeniz ve temsilcilerini birlikte değişken olarak anahtar sözcükler veya değişken karşıtı sahip.  
+ .NET Framework 4 ile Visual Basic başlayarak ve C# arabirimlerin genel tür parametreleri işaretlemek etkinleştirmeniz ve temsilcilerini birlikte değişken olarak anahtar sözcükler veya değişken karşıtı.  
   
 > [!NOTE]
->  .NET Framework sürüm 2.0 ile başlayarak, genel dil çalışma zamanı, genel tür parametrelerinde değişken açıklamalarını destekler. Öncesinde [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], bu ek açıklamaları içeren genel bir sınıf tanımlamanın tek yolu, Microsoft Ara dilini (MSIL) sınıfı içeren derlemeyi ya da kullanmaktır [Ilasm.exe (IL derleyici)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) veya dinamik yayma derleme.  
+>  .NET Framework sürüm 2.0 ile başlayarak, genel dil çalışma zamanı, genel tür parametrelerinde değişken açıklamalarını destekler. Önce .NET Framework 4, Microsoft Ara dilini (MSIL) sınıfı içeren derlemeyi ya da kullanmak için bu ek açıklamaları içeren genel bir sınıf tanımlamanın tek yolu olduğundan [Ilasm.exe (IL derleyici)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) veya dinamik yayma derleme.  
   
  Birlikte değişken tür parametresi ile işaretlenmiş `out` anahtar sözcüğü (`Out` Visual Basic'teki `+` için [MSIL Assembler](../../../docs/framework/tools/ilasm-exe-il-assembler.md)). Birlikte değişken türünde bir parametreyi, bir arabirime ait olan bir yöntemin dönüş değeri olarak veya bir temsilcinin dönüş türü olarak kullanabilirsiniz. Birlikte değişken türünde bir parametreyi, arabirim yöntemleri için genel türde bir kısıtlayıcı olarak kullanamazsınız.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "64622731"
   
 <a name="VariantList"></a>   
 ## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Değişken Genel Arabirim ve Temsilci Türleri Listesi  
- İçinde [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], aşağıdaki arabirim ve temsilci türlerinin birlikte değişken olması ve/veya değişken karşıtı türde parametreleri.  
+ .NET Framework 4'te aşağıdaki arabirim ve temsilci türlerinin birlikte değişken olması ve/veya değişken karşıtı türde parametreleri.  
   
 |Tür|Birlikte değişken türde parametreler|Değişken karşıtı türde parametreler|  
 |----------|-------------------------------|-----------------------------------|  

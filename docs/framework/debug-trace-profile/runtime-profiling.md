@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f02cbac83bd1e849c30f6c732395335464e6e4e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1f97892ecf7d891113cc7524dd8c1423e144583f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582818"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457329"
 ---
 # <a name="runtime-profiling"></a>Çalışma Zamanı Profili Oluşturma
 Profil oluşturma tüm geliştirme ve dağıtım senaryosunda performans verilerini toplama yöntemidir. Bu bölüm, geliştiriciler ve uygulama performansı hakkında bilgi toplamak isteyen sistem yöneticilerine yöneliktir.  
@@ -34,7 +34,7 @@ Profil oluşturma tüm geliştirme ve dağıtım senaryosunda performans veriler
   
 3. Performans İzleyicisi araç çubuğunda **Ekle** ise simgesi (artı işareti) sunar. Mevcut değilse İzleyicisi penceresinde sağ tıklayıp **Sayaç Ekle** seçeneği.  
   
-     Bu açılır **Sayaç Ekle** iletişim kutusu. **Kullanılabilir sayaçları** liste kutusu kullanılabilir performans nesneleri görüntüler. Önceden tanımlanmış nesneler için bellek yönetimi dahil olmak üzere, .NET Framework uygulamaları için bir dizi vardır (**.NET CLR bellek**), birlikte çalışabilirlik (**.NET CLR Interop**), özel durum işleme (**.NET CLR özel durumları**) ve çoklu iş parçacığı kullanımı (**.NET CLR LocksAndThreads**). Her performans nesnesi bireysel performans sayaçları içerir. Performans İzleyicisi'nde kullanılabilen performans sayaçlarının listesi için bkz. [performans sayaçları](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+     Bu açılır **Sayaç Ekle** iletişim kutusu. **Kullanılabilir sayaçları** liste kutusu kullanılabilir performans nesneleri görüntüler. Önceden tanımlanmış nesneler için bellek yönetimi dahil olmak üzere, .NET Framework uygulamaları için bir dizi vardır ( **.NET CLR bellek**), birlikte çalışabilirlik ( **.NET CLR Interop**), özel durum işleme ( **.NET CLR özel durumları**) ve çoklu iş parçacığı kullanımı ( **.NET CLR LocksAndThreads**). Her performans nesnesi bireysel performans sayaçları içerir. Performans İzleyicisi'nde kullanılabilen performans sayaçlarının listesi için bkz. [performans sayaçları](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
 4. Bunu destekleyen tek performans sayaçları listesini görüntülemek için bir performans nesnesinin adının yanındaki onay kutusunu seçin.  
   
@@ -54,7 +54,7 @@ Profil oluşturma tüm geliştirme ve dağıtım senaryosunda performans veriler
  Bir bölge içinde veya uzak bir paylaşıma var olan bir derleme profil isterseniz, uzak derleme performans sayaçlarını çalıştıran bilgisayarda tam güvene sahip olduğundan emin olun. Derleme yeterli güven yoksa, performans sayaçlarını çalışmaz. Farklı bölgelere güven verme hakkında daha fazla bilgi için bkz: [Caspol.exe (kod erişimi güvenliği ilke aracı)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
 > [!NOTE]
->  Üretileceği sistemlerde [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] olan yüklü, Performans İzleyicisi'ni verileri performans sayaçları için bazı kategorilerde gibi görüntülemeyebilir **Data .NET CLR** ve **.NET CLR ağ**, için kullanılarak geliştirilen uygulamaları [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]. Bu durumda, Performans İzleyicisi'ni ekleyerek bu verileri görüntülemek için yapılandırabileceğiniz [ \<forcePerformanceCounterUniqueSharedMemoryReads >](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) uygulamanın yapılandırma dosyası öğesi.  
+>  .NET Framework 4 yüklü olduğu sistemlerde, Performans İzleyicisi'ni verileri performans sayaçları için bazı kategorilerde gibi görüntülemeyebilir **Data .NET CLR** ve **.NET CLR ağ**, için kullanılarak geliştirilen uygulamaları [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]. Bu durumda, Performans İzleyicisi'ni ekleyerek bu verileri görüntülemek için yapılandırabileceğiniz [ \<forcePerformanceCounterUniqueSharedMemoryReads >](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) uygulamanın yapılandırma dosyası öğesi.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Okuma ve performans sayaçları program aracılığıyla oluşturma  
  .NET Framework Performans konsolunda kullanılabilir durumda aynı performans bilgileri programlı olarak erişmek için kullanabileceğiniz sınıflar sağlar. Bu sınıflar, özel performans Sayaçlarınızı oluşturma işlemleri de kullanabilirsiniz. Aşağıdaki tabloda bazı performans izleme .NET Framework içinde sağlanan sınıfları açıklar.  

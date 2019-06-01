@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 9c75f6add000b2055bcbf13a7fcdf635bd707947
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c99e44c7d373d050113687753d4f18eca27e0de5
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663232"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457402"
 ---
 # <a name="xaml-services"></a>XAML Hizmetleri
-Bu konu, .NET Framework XAML Hizmetleri bilinen bir teknoloji kümesi yeteneklerini açıklar. Çoğu açıklanan API'leri ve Hizmetleri ile sunulan bir derleme System.Xaml, derlemede bulunur [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] .NET core derleme kümesi. Hizmetler dahil okuyucular ve yazıcılar, şema sınıfları ve şema desteği, fabrikaları, sınıflar, XAML dil desteği ve diğer XAML dil özellikleri öznitelik atanıyor.  
+Bu konu, .NET Framework XAML Hizmetleri bilinen bir teknoloji kümesi yeteneklerini açıklar. Açıklanan API'leri ve Hizmetleri çoğunu, .NET core derlemeler .NET Framework 4 kümesi ile sunulan bir derleme System.Xaml, derleme bulunur. Hizmetler dahil okuyucular ve yazıcılar, şema sınıfları ve şema desteği, fabrikaları, sınıflar, XAML dil desteği ve diğer XAML dil özellikleri öznitelik atanıyor.  
   
 ## <a name="about-this-documentation"></a>Bu belge hakkında  
  .NET Framework XAML hizmetlerinde için kavramsal belgelerde, XAML dili ve nasıl, belirli bir framework örneğin geçerli olabilecek önceki deneyim sahibi olduğunuzu varsayar [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Windows Workflow Foundation ya da belirli bir teknoloji özelliği alan, örneğin yapı özelleştirmesini özellikleri <xref:Microsoft.Build.Framework.XamlTypes>. Bu belge, bir biçimlendirme dili, XAML sözdizimi terminolojisi veya diğer tanıtım malzemeleri XAML temelleri açıklamak denemez. Bunun yerine, bu belge, etkin .NET Framework XAML hizmetlerinde System.Xaml derleme Kitaplığı'nda özellikle kullanmaya odaklanmıştır. Bu API'lerin çoğu, XAML dili tümleştirme ve genişletilebilirlik senaryoları içindir. Bu, aşağıdakilerden herhangi birini içerebilir:  

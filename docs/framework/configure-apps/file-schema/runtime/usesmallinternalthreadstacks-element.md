@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9833d768b84faaf6e1dcf8c9cb8b00b92adc3d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f098065cc005c59ec558ffa1f95202715624e7d
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673992"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456108"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<Usesmallınternalthreadstacks > öğesi
 Ortak dil çalışma zamanı (CLR) bellek miktarını azaltmak istekleri, dahili olarak, bu iş parçacıkları için varsayılan yığın boyutu kullanmak yerine kullanan belirli iş parçacıklarını oluşturduğunda açık yığın boyutlarını belirterek kullanır.  
@@ -57,7 +57,7 @@ Ortak dil çalışma zamanı (CLR) bellek miktarını azaltmak istekleri, dahili
  İstek dikkate alınır, iç iş parçacıkları için CLR kullanan açık bir iş parçacığı boyutları varsayılan boyuttan daha küçük olduğundan, bu yapılandırma öğesi, bir işlemde daha az sanal bellek kullanımı istemek için kullanılır.  
   
 > [!IMPORTANT]
->  Bu yapılandırma öğesi, mutlak bir gereksinim yerine CLR isteğidir. İçinde [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], isteğin yalnızca x86 için geçerli olur mimarisi. Bu öğe CLR'ın gelecek sürümlerinde tamamen yoksayıldı ya da seçili iç iş parçacıkları için kullanılan her zaman açık yığın boyutlarını değiştirilmiştir.  
+>  Bu yapılandırma öğesi, mutlak bir gereksinim yerine CLR isteğidir. .NET Framework 4'te isteği yalnızca x86 için geçerli olur mimarisi. Bu öğe CLR'ın gelecek sürümlerinde tamamen yoksayıldı ya da seçili iç iş parçacıkları için kullanılan her zaman açık yığın boyutlarını değiştirilmiştir.  
   
  CLR, isteği kabul eder, daha küçük yığın boyutlarını yığın olası hale getirebilecek çünkü bu yapılandırma öğesi daha küçük sanal bellek kullanımı için güvenilirlik arasında denge kurar belirterek büyük olasılıkla taşıyor.  
   

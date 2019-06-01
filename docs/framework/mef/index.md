@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e40f52a6b6b8ea7a77f4e38a291621dab486cc72
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6fa91b6f2866ba2dee6963d7258fe193ce058f61
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648502"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457174"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -54,7 +54,7 @@ MEF ve Yönetilen Genişletilebilirlik Çerçevesi hafif Genişletilebilir uygul
 
 <a name="where_is_mef_available"></a>
 ## <a name="where-is-mef-available"></a>MEF nerede kullanılabilir?
- MEF bir parçası olan [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], .NET Framework kullanılan her yerde kullanılabilir. Windows Forms, WPF veya diğer herhangi bir teknoloji kullanıp kullanmayacağınızı veya ASP.NET kullanan sunucu uygulamaları, MEF istemci uygulamalarınızda kullanabilirsiniz.
+ MEF, .NET Framework 4'ün önemli bir parçasıdır ve .NET Framework kullanılan her yerde kullanılabilir. Windows Forms, WPF veya diğer herhangi bir teknoloji kullanıp kullanmayacağınızı veya ASP.NET kullanan sunucu uygulamaları, MEF istemci uygulamalarınızda kullanabilirsiniz.
 
 <a name="mef_and_maf"></a>
 ## <a name="mef-and-maf"></a>MEF ve MAF

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af68041cd016b457c449c283601bd5a0d4258c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfad184e30ec94c8add265db2ef8131d0d34396f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666060"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457233"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Profil Oluşturma Ortamını Ayarlama
 > [!NOTE]
@@ -37,10 +37,10 @@ ms.locfileid: "64666060"
  Bir CLR uygulamasının profilini çıkarmak için uygulamayı çalıştırmadan önce cor_enable_profılıng ve cor_profıler ortam değişkenleri ayarlamanız gerekir. Ayrıca Profil Oluşturucu DLL'SİNİN kayıtlı olduğundan emin olmanız gerekir.  
   
 > [!NOTE]
->  İle başlayarak [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], profil oluşturucular kaydedilmesi gerekmez.  
+>  .NET Framework 4 ile başlayarak, profil oluşturucular kaydedilmesi gerekmez.  
   
 > [!NOTE]
->  .NET Framework 2.0, 3.0 ve 3.5 sürümlerini kullanmak için [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] ve sonraki sürümlerinde, complus_profapı_profilercompatibilitysetting ortam değişkenini ayarlamanız gerekir.  
+>  .NET Framework 2.0, 3.0 ve 3.5 sürümleri .NET Framework 4 ve sonraki sürümlerinde kullanmak için complus_profapı_profilercompatibilitysetting ortam değişkenini ayarlamanız gerekir.  
   
 ## <a name="environment-variable-scope"></a>Ortam değişken kapsamı  
  Cor_enable_profılıng ve cor_profıler ortam değişkenlerini nasıl ayarladığınız etki kapsamlarını belirler. Bu değişkenleri aşağıdaki yollardan biriyle ayarlayabilirsiniz:  

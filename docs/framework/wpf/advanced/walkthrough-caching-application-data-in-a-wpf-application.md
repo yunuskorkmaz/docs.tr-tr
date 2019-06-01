@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4ee973eb5a81a6428ee5a5fcfc00e28425ff2a44
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591198"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457519"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanızı sağlar. Verileri yeniden erişildiğinde uygulamaları özgün kaynaktan almak yerine önbellekten veri alabilirsiniz. Bu, performansı ve ölçeklenebilirliği artırabilir. Ayrıca, önbelleğe alma, veri kaynağının geçici olarak devre dışı olduğunda yaptığı veri yok.
@@ -22,7 +22,7 @@ ms.locfileid: "65591198"
  .NET Framework, .NET Framework uygulamalarında önbelleğe almayı kullanmak üzere olanak tanıyan sınıflar sağlar. Bu sınıfların bulunan <xref:System.Runtime.Caching> ad alanı.
 
 > [!NOTE]
->  <xref:System.Runtime.Caching> Ad alanı yeni [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Bu ad alanı yaptığı önbelleğe alma, tüm .NET Framework uygulamaları için kullanılabilir. Önceki .NET Framework sürümlerinde, önbelleğe yalnızca <xref:System.Web> ad alanı ve bu nedenle ASP.NET sınıfları bir bağımlılık gerekli.
+>  <xref:System.Runtime.Caching> Ad alanı .NET Framework 4'te yenidir. Bu ad alanı yaptığı önbelleğe alma, tüm .NET Framework uygulamaları için kullanılabilir. Önceki .NET Framework sürümlerinde, önbelleğe yalnızca <xref:System.Web> ad alanı ve bu nedenle ASP.NET sınıfları bir bağımlılık gerekli.
 
  Bu izlenecek yol kapsamında .NET Framework içinde kullanılabilir olan önbelleğe alma işlevini nasıl kullanacağınızı gösterir bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama. Bu izlenecek yolda, bir metin dosyasının içeriğini önbelleğe alın.
 
@@ -30,7 +30,7 @@ ms.locfileid: "65591198"
 
 - WPF uygulama projesi oluşturma.
 
-- Bir başvuru eklemeyi [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
+- .NET Framework 4'e başvuru ekleniyor.
 
 - Bir önbelleği başlatılıyor.
 
@@ -62,12 +62,12 @@ ms.locfileid: "65591198"
 
      **Yeni proje** iletişim kutusu görüntülenir.
 
-3. Altında **yüklü şablonlar**, kullanmak istediğiniz programlama dili seçin (**Visual Basic** veya **Visual C#**).
+3. Altında **yüklü şablonlar**, kullanmak istediğiniz programlama dili seçin (**Visual Basic** veya **Visual C#** ).
 
 4. İçinde **yeni proje** iletişim kutusunda **WPF uygulaması**.
 
     > [!NOTE]
-    >  Görmüyorsanız, **WPF uygulaması** şablonu, WPF destekleyen .NET Framework sürümü hedefleme emin olun. İçinde **yeni proje** iletişim kutusunda [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] listeden.
+    >  Görmüyorsanız, **WPF uygulaması** şablonu, WPF destekleyen .NET Framework sürümü hedefleme emin olun. İçinde **yeni proje** iletişim kutusunda, listeden seçim .NET Framework 4.
 
 5. İçinde **adı** metin kutusunda, projeniz için bir ad girin. Örneğin, girdiğiniz **WPFCaching**.
 
@@ -78,7 +78,7 @@ ms.locfileid: "65591198"
      WPF Tasarımcısı açılır **tasarım** görüntüleyin ve MainWindow.xaml dosyayı görüntüler. Visual Studio oluşturur **Projem** klasörünü, Application.xaml dosyasını ve MainWindow.xaml dosyasını.
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>.NET Framework hedefleme ve önbelleğe alma derlemelere başvuru ekleme
- Varsayılan olarak, WPF uygulamaları hedef [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Kullanılacak <xref:System.Runtime.Caching> gerekir ad alanı WPF uygulamasında uygulama hedef [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (değil [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) ve ad alanına bir başvuru içermelidir.
+ Varsayılan olarak, WPF uygulamaları hedef [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Kullanılacak <xref:System.Runtime.Caching> bir WPF uygulamasında uygulama ad alanı .NET Framework 4 hedefleyen gerekir (değil [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) ve ad alanına bir başvuru içermelidir.
 
  Bu nedenle, .NET Framework hedefi ve bir başvuru eklemek için sonraki adım olan <xref:System.Runtime.Caching> ad alanı.
 
@@ -97,7 +97,7 @@ ms.locfileid: "65591198"
 
      **Gelişmiş derleyici ayarları** iletişim kutusu görüntülenir.
 
-4. İçinde **hedef Framework'ü (tüm yapılandırmaları)** listesinden [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Seçmeyin [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
+4. İçinde **hedef Framework'ü (tüm yapılandırmaları)** listesinde, .NET Framework 4'ı seçin. (Seçmeyin [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
 
 5. **Tamam**'ı tıklatın.
 
@@ -121,7 +121,7 @@ ms.locfileid: "65591198"
 
 2. Tıklayın **uygulama** sekmesi.
 
-3. İçinde **hedef Framework'ü** listesinden [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Seçmeyin **.NET Framework 4 istemci profili**.)
+3. İçinde **hedef Framework'ü** listesinde, .NET Framework 4'ı seçin. (Seçmeyin **.NET Framework 4 istemci profili**.)
 
 4. Aşağıdaki adımları izleyerek önbelleğe alma derlemesine bir başvuru ekleyin:
 
