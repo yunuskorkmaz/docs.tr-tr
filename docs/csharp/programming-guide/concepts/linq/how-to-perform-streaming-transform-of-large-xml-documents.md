@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Büyük XML belgelerinin akış dönüşümünü gerçekleştirme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: 8ddd7e25cf160526b741db5769a78682970c3724
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 033665d14938bc3970b83eddccc159f89e6451d1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701963"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486632"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Nasıl yapılır: Büyük XML belgelerinin akış dönüşümünü gerçekleştirme (C#)
 Bazen büyük XML dosyalarını dönüştürme ve uygulamanızı yazın, böylece bellek Ayak izi uygulamanın öngörülebilir gerekir. Çok büyük bir XML dosyası ile XML ağacı doldurma denerseniz, bellek kullanımınızı orantılı dosya boyutunu (diğer bir deyişle, aşırı). Bu nedenle, bir akış teknik yerine kullanmanız gerekir.  
@@ -322,6 +322,3 @@ static void Main(string[] args)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [Gelişmiş LINQ to XML programlama (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

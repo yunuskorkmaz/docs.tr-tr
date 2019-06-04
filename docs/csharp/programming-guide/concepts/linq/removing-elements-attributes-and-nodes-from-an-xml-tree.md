@@ -2,12 +2,12 @@
 title: XML ağacından (C#) öğe, öznitelik ve düğümleri kaldırma
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-ms.openlocfilehash: f3091c3f46d8b3283c961fffd4d1f0ce991083ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3877a09cc0b86522929079d46d74b7c01b0e658a
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61711986"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487224"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>XML ağacından (C#) öğe, öznitelik ve düğümleri kaldırma
 Bir XML ağacına öğe, öznitelik ve düğümleri diğer türleri kaldırma değiştirebilirsiniz.  
@@ -78,6 +78,3 @@ Console.WriteLine(root);
   
  İlk en alt öğeyi kaldırılmıştır bildirimi `Child1`. Tüm alt bağımlı öğelere öğeleri kaldırılmış olan `Child2` ve `Child3`.  
   
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [(LINQ to XML) XML ağaçlarını değiştirme (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

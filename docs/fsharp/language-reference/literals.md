@@ -2,12 +2,12 @@
 title: Sabit değerler
 description: Değişmez değer türleri hakkında bilgi edinin F# programlama dilidir.
 ms.date: 02/08/2019
-ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904572"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490982"
 ---
 # <a name="literals"></a>Sabit değerler
 
@@ -28,6 +28,7 @@ Aşağıdaki tabloda, değişmez değer türleri gösterilmektedir F#. Onaltıl�
 |uint16|İmzasız 16-bit doğal sayı|ABD|`86us`|
 |int<br /><br />Int32|İşaretli 32 bit tam sayı|l ya da yok|`86`<br /><br />`86l`|
 |uint<br /><br />uint32|işaretsiz 32-bit doğal sayı|u veya ul|`86u`<br /><br />`86ul`|
+|nativeint|imzalı bir doğal sayı yerel işaretçi|n|`123n`|
 |unativeint|işeritsiz doğal sayı olarak yerel işaretçi|Geri Al|`0x00002D3Fun`|
 |Int64|İşaretli 64 bit tam sayı|L|`86L`|
 |uint64|işaretsiz 64-bit doğal sayı|UL|`86UL`|

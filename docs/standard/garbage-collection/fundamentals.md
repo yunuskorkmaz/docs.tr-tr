@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6b7b120a5a21301ff82aa8ebd1cfc169f7884e4
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 8d3ac6acf756a0ac468eb4483432467429ed91ca
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457443"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483281"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Çöp toplamanın temelleri
 <a name="top"></a> Ortak dil çalışma zamanı (CLR), çöp toplayıcı otomatik bellek yöneticisi görev yapar. Bunu, aşağıdaki avantajları sağlar:  
@@ -186,7 +186,7 @@ ms.locfileid: "66457443"
   
      İş istasyonu çöp toplama, eşzamanlı veya eşzamansız olabilir. Eş zamanlı çöp toplama, yönetilen iş parçacıklarının çöp toplama sırasında işlemleri devam etmek sağlar.  
   
-     İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], arka plan çöp toplama, eşzamanlı çöp toplama değiştirir.  
+     .NET Framework 4 ile başlayarak, arka plan çöp toplama, eşzamanlı çöp toplama yerine geçer.  
   
 - Yüksek performans ve ölçeklenebilirlik gerektiren sunucu uygulamaları için tasarlanmış sunucu çöp toplama. Sunucu çöp toplama, eşzamansız ya da arka plan.  
   

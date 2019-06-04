@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44e5f52ce2bfe03247ab25bb48607ae313523ff0
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a7e4493fca5b73cfd0bdc59ceab9de097de799aa
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456852"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490749"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Genel Türlerde Kovaryans ve Kontravaryans
 <a name="top"></a> Kovaryans ve kontravaryans daha türetilmiş türde (ayrıntılı) veya orijinal olarak belirtilenden daha az türetilmiş bir tür (less yazımına özgü) kullanma olanağı için başvuran terimlerdir. Genel tür parametreleri, genel türleri atamakta ve kullanmakta daha fazla esneklik sağlamak için birlikte değişme ve değişken karşıtlığını destekler. Bir tür sisteminden söz ederken, birlikte değişme, değişken karşıtlığı ve değişmezlik terimlerinin tanımları aşağıdaki gibidir. Örneklerde adlı bir temel sınıf varsayılmaktadır `Base` ve adlı bir türetilmiş sınıf `Derived`.  
@@ -59,7 +59,7 @@ ms.locfileid: "66456852"
   
  Kovaryans ve kontravaryans topluca denir *varyansı*. Birlikte değişken olarak işaretlenmemiş bir genel tür parametresi veya değişken karşıtı olarak adlandırılır *sabit*. Genel dil çalışma zamanında değişken ile ilgili gerçeklerin kısa bir özeti:  
   
-- İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], değişken türünde parametreler genel arabirimle ve genel temsilci türleriyle için Yasak.  
+- .NET Framework 4'te değişken türünde parametreler genel arabirimle ve genel temsilci türleriyle için kısıtlanır.  
   
 - Bir genel arabirim veya genel temsilci türünün hem birlikte değişen hem de değişken karşıtı parametreleri olabilir.  
   

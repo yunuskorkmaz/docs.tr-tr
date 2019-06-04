@@ -2,15 +2,19 @@
 title: Giriş saf işlevsel dönüşümlere (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-ms.openlocfilehash: 63b7a69baeb42c82fb1c94d08cee17519330025c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9d187e9ee6750d8ad09e197839d107c3c79e4ed
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701586"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484498"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Giriş saf işlevsel dönüşümlere (C#)
 Bu bölümde temel kavramları dahil olmak üzere işlevsel dönüşümlere tanıtır ve destekleyici dil oluşturur. Bunu programlama için ikinci geçiş hakkında öneriler de dahil olmak üzere, nesne yönelimli ve işlevsel dönüşümü yaklaşımları karşılaştırır. XML dönüştürme işlevsel dönüşümlere birçok programlama senaryolarda kullanılabilir olsa da, kullanılan somut bir örnek burada.  
+  
+ [Öğreticisi: WordprocessingML belgesindeki içeriği düzenleme (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) öğretici, her eskisinin oluşturmayı örnekler, bir dizi sağlar. Bu örnekler, XML düzenleme saf işlevsel dönüşümsel yaklaşımı gösterir. Bu öğretici, C# bilgisine varsayar. Dil yapıları ayrıntılı semantikleri, bu öğreticide sağlanmaz, ancak uygun dil belgelerine bağlantılar sağlanır.  
+  
+ Temel bilgisayar bilimi kavramları ve XML XML ad alanları da dahil olmak üzere, bilgisine da varsayılır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
@@ -22,6 +26,3 @@ Bu bölümde temel kavramları dahil olmak üzere işlevsel dönüşümlere tan�
 |[(C#) işlev dönüşümün uygulanabilirliği](../../../../csharp/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|İşlevsel dönüşümlere tipik senaryolar açıklanmaktadır.|  
 |[(Visual Basic) XML işlevsel dönüşümü](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|XML ağaçlarını dönüştürmek işlevsel dönüşümlere bağlamında açıklar.|  
   
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [Saf işlevsel dönüşümlere XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

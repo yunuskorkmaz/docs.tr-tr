@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19dacae05766566521f563d0d24980c01dfb7a0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb19f950122f7b0db66830e9ed5dff44ccd370c2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796156"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490428"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure Numaralandırması
 Bir ana bilgisayar ilkesi eylemleri ayarlayabilirsiniz hataları kümesini açıklar.  
@@ -49,7 +49,7 @@ typedef enum {
 |`FAIL_FatalRuntime`|Ortak dil çalışma zamanı (CLR) artık yönetilen kod işlemde çalışan mümkün değildir. Henceforth, herhangi bir barındırma işlevleri çağrıları HOST_E_CLRNOTAVAILABLE bir HRESULT değerini döndürür.|  
 |`FAIL_OrphanedLock`|Bir iş parçacığı döndürme bağlı bir kilidi serbest bırakmak başarısız bir <xref:System.AppDomain> nesne. Konak bu hatanın neden iptal etmek için bir iş parçacığı ayarlanamıyor.|  
 |`FAIL_StackOverflow`|Bir yığın taşması oluştu.|  
-|`FAIL_AccessViolation`|Okuma veya yazma korumalı bellek girişimde bulunuldu. Desteklenmez [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].|  
+|`FAIL_AccessViolation`|Okuma veya yazma korumalı bellek girişimde bulunuldu. .NET Framework 4'te desteklenmez.|  
 |`FAIL_CodeContract`|Bir kod sözleşmesi hata oluştu. Bkz: [kod sözleşmeleri](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
   
 ## <a name="remarks"></a>Açıklamalar  

@@ -2,12 +2,12 @@
 title: WordprocessingML belgesinin Styles3 ile
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 1dc7f30bfdef66c31b5c262fd6d1a2c3f4365634
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f465294ad299e83156ca458f28717c3abae741f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710920"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483146"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>Stillerle WordprocessingML Belgesi
 Daha karmaşık WordprocessingML belgelerinin stilleri ile biçimlendirilmiş paragrafları vardır.  
@@ -136,7 +136,4 @@ Daha karmaşık WordprocessingML belgelerinin stilleri ile biçimlendirilmiş pa
   </w:body>  
 </w:document>  
 ```  
-  
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [Ayrıntılar Office Open XML WordprocessingML belgelerinin (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+ 

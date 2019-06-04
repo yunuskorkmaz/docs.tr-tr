@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e836329527740d490bc3ad96cd62d56bc0b7b3e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 0d5798b8067bde8b711982bfe4f78d66fe1521c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377744"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490843"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Desen Kullanma
 
@@ -64,7 +64,7 @@ await someTask.ConfigureAwait(continueOnCapturedContext:false);
 ```
 
 ## <a name="canceling-an-asynchronous-operation"></a>Zaman uyumsuz bir işlem iptal ediliyor
- İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], iptal desteği DOKUNUN yöntemler sağlar bir iptal belirteci kabul eden en az bir aşırı yükleme (<xref:System.Threading.CancellationToken> nesne).
+ .NET Framework 4 ile başlayarak, iptal desteği TAP yöntemi bir iptal belirteci kabul eder, en az bir aşırı sağlayın (<xref:System.Threading.CancellationToken> nesne).
 
  Bir iptal belirteci iptal belirteci kaynağı oluşturulur (<xref:System.Threading.CancellationTokenSource> nesne).  Kaynağın <xref:System.Threading.CancellationTokenSource.Token%2A> özelliği işareti iptal belirtecini döndürür, kaynağın <xref:System.Threading.CancellationTokenSource.Cancel%2A> yöntemi çağrılır.  Örneğin, tek bir Web sayfasından indirin ve işlemi iptal edemezsiniz eklemek istiyorsanız, oluşturduğunuz bir <xref:System.Threading.CancellationTokenSource> nesne, TAP yöntemi, belirtecin geçip ve ardından kaynağın çağrısı <xref:System.Threading.CancellationTokenSource.Cancel%2A> işlemi iptal etmek hazır olduğunuzda yöntemi:
 

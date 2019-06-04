@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: LINQ to XML örnekleri derleme (C#)'
 ms.date: 07/20/2015
 ms.assetid: e5d18fa1-2704-48fe-a44b-1564f97c9e9c
-ms.openlocfilehash: 9884fa27cd0bad7c869596fd54e52df85871088e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 116f708eb18d642cbe914cea1ea44bd1833f2af6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668282"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486068"
 ---
 # <a name="how-to-build-linq-to-xml-examples-c"></a>Nasıl yapılır: LINQ to XML örnekleri derleme (C#)
 Çeşitli kod parçacıkları ve bu belgedeki örneklerde, sınıfları ve türleri çeşitli ad alanları kullanın. C# kodu derlerken sağlamak uygun ihtiyacınız `using` yönergeleri.  
@@ -36,4 +36,4 @@ using System.IO.Packaging;
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML programlamaya genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML programlamaya genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

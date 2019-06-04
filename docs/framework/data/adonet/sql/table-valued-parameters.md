@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: ccef487eb27a5a170d197a6bc670ec4d2bcf8bdf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a7a39677bbd975ac384357481ef419f57b96d977
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645793"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489813"
 ---
 # <a name="table-valued-parameters"></a>Tablo Değerli Parametreler
-Tablo değerli parametreler birden çok gidiş dönüş veya özel sunucu tarafı mantık verilerin işlenmesi için gerek kalmadan birden çok SQL Server için bir istemci uygulamasından veri satırı sıralama için kolay bir yol sağlar. Bir istemci uygulamasında veri satırı kapsüllemek ve tek bir Parametreli komutu sunucuda veri göndermek için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları sonra üzerinde kullanarak işletilebilir bir tablo değişkeninde depolanan [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
+Tablo değerli parametreler birden çok gidiş dönüş veya özel sunucu tarafı mantık verilerin işlenmesi için gerek kalmadan birden çok SQL Server için bir istemci uygulamasından veri satırı sıralama için kolay bir yol sağlar. Bir istemci uygulamasında veri satırı kapsüllemek ve tek bir Parametreli komutu sunucuda veri göndermek için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları, ardından üzerinde Transact-SQL kullanarak işletilebilir bir tablo değişkeninde depolanır.  
   
- Sütun değerleri tablo değerli parametreleri standardını kullanarak erişilebilir [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] SELECT deyimleri. Tablo değerli parametre kesin olarak belirlenmiştir ve yapılarını otomatik olarak doğrulanır. Tablo değerli parametre boyutunu, yalnızca sunucu bellekle sınırlıdır.  
+ Tablo değerli parametre de sütun değerleri, standart Transact-SQL SELECT deyimi kullanılarak erişilebilir. Tablo değerli parametre kesin olarak belirlenmiştir ve yapılarını otomatik olarak doğrulanır. Tablo değerli parametre boyutunu, yalnızca sunucu bellekle sınırlıdır.  
   
 > [!NOTE]
 >  Tablo değerli parametre veri döndüremez. Tablo değerli salt giriş parametreleridir; Çıkış anahtar sözcüğü desteklenmiyor.  
@@ -39,7 +39,7 @@ Tablo değerli parametreler birden çok gidiş dönüş veya özel sunucu taraf�
 - Kullanım `bcp` yardımcı programı veya <xref:System.Data.SqlClient.SqlBulkCopy> birçok veri satırı bir tabloya yüklemek için nesne. Bu teknik çok etkili olsa da, verileri bir geçici tablo veya tablo değişkeni içine yüklenen sürece, sunucu tarafı işleme desteklemez.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Tablo değerli parametre türleri oluşturma  
- Tablo değerli parametreleri kullanılarak tanımlanmış tabloyu kesin tür belirtilmiş yapıları dayanır [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] türü oluştur deyimleri. Bir tablo türü oluştur, istemci uygulamalarınız tablo değerli parametre kullanmadan önce SQL Server'da yapısı tanımlamanız gerekir. Tablo türleri oluşturma hakkında daha fazla bilgi için bkz. [kullanıcı tanımlı tablo türleri](https://go.microsoft.com/fwlink/?LinkID=98364) SQL Server Books Online.  
+ Tablo değerli parametre CREATE TYPE Transact-SQL deyimleri kullanılarak tanımlanmış tabloyu kesin tür belirtilmiş yapıları temel alır. Bir tablo türü oluştur, istemci uygulamalarınız tablo değerli parametre kullanmadan önce SQL Server'da yapısı tanımlamanız gerekir. Tablo türleri oluşturma hakkında daha fazla bilgi için bkz. [kullanıcı tanımlı tablo türleri](https://go.microsoft.com/fwlink/?LinkID=98364) SQL Server Books Online.  
   
  Aşağıdaki deyim, kullanıcı, Categoryıd'si ve CategoryName sütundan oluşan CategoryTableType adlı bir tablo türü oluşturur:  
   
@@ -48,7 +48,7 @@ CREATE TYPE dbo.CategoryTableType AS TABLE
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
- Bir tablo türü oluşturduktan sonra o türde bağlı tablo değerli parametreler bildirebilirsiniz. Aşağıdaki [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] parça bir saklı yordam tanımında tablo değerli bir parametre bildirmek nasıl gösterir. READONLY anahtar sözcüğü bir tablo değerli parametre bildirmek için gerekli olduğunu unutmayın.  
+ Bir tablo türü oluşturduktan sonra o türde bağlı tablo değerli parametreler bildirebilirsiniz. Aşağıdaki Transact-SQL parçası, bir saklı yordam tanımında tablo değerli bir parametre bildirmek gösterilmektedir. READONLY anahtar sözcüğü bir tablo değerli parametre bildirmek için gerekli olduğunu unutmayın.  
   
 ```  
 CREATE PROCEDURE usp_UpdateCategories   
@@ -58,7 +58,7 @@ CREATE PROCEDURE usp_UpdateCategories
 ## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>Tablo değerli parametreleri (Transact-SQL) ile verileri değiştirme  
  Tablo değerli parametre birden çok satır tek bir deyimde yürüterek etkileyen veri kümesi tabanlı değişiklikler kullanılabilir. Örneğin, bir tablo değerli parametre tüm satırları seçin ve bunları bir veritabanı tablosuna eklemek veya güncelleştirmek istediğiniz tabloya bir tablo değerli parametre katılarak bir güncelleştirme deyimiyle oluşturabilirsiniz.  
   
- Aşağıdaki [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] güncelleştirme bildirimi kategorileri tabloya katılarak tablo değerli bir parametre kullanmayı gösterir. Bir birleştirme işleminde bir FROM yan tümcesi içeren bir tablo değerli parametre kullandığınızda, ayrıca diğer adı, tablo değerli parametre "AB" Next olduğu burada gösterildiği gibi gerekir:  
+ Aşağıdaki güncelleştirme Transact-SQL deyimini bir tablo değerli parametre kategorileri tabloya birleştirerek nasıl yapılacağı açıklanır. Bir birleştirme işleminde bir FROM yan tümcesi içeren bir tablo değerli parametre kullandığınızda, ayrıca diğer adı, tablo değerli parametre "AB" Next olduğu burada gösterildiği gibi gerekir:  
   
 ```  
 UPDATE dbo.Categories  
@@ -67,7 +67,7 @@ UPDATE dbo.Categories
     ON dbo.Categories.CategoryID = ec.CategoryID;  
 ```  
   
- Bu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] örnek tablo değerli bir parametre kümesi tabanlı tek bir işlem ile INSERT işlemi satırları seçmek nasıl gösterir.  
+ Bu Transact-SQL örnek tablo değerli bir parametre kümesi tabanlı tek bir işlem ile INSERT işlemi satırları seçmek nasıl gösterir.  
   
 ```  
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
@@ -81,7 +81,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
 - Tablo değerli parametrelere, yalnızca UNIQUE ve PRIMARY KEY kısıtlamaları destekleyecek şekilde sıralanabilir. SQL Server tablo değerli parametre istatistiklerle korumaz.  
   
-- Tablo değerli parametre, salt okunur [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] kod. Tablo değerli bir parametre satırlarını sütun değerleri güncelleştirilemiyor ve ekleyemez veya satırları sil. Bir saklı yordam için geçirilen veya tablo değerli parametre deyiminde parametreli verileri değiştirmek için verileri geçici bir tablo veya tablo değişkeni eklemeniz gerekir.  
+- Tablo değerli parametreleri, Transact-SQL kodu salt okunurdur. Tablo değerli bir parametre satırlarını sütun değerleri güncelleştirilemiyor ve ekleyemez veya satırları sil. Bir saklı yordam için geçirilen veya tablo değerli parametre deyiminde parametreli verileri değiştirmek için verileri geçici bir tablo veya tablo değişkeni eklemeniz gerekir.  
   
 - Tablo değerli parametre tasarımını değiştirmek için ALTER TABLE deyimleri kullanamazsınız.  
   

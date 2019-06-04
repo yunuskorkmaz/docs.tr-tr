@@ -2,12 +2,12 @@
 title: Entity Framework için SqlClient’ta Bilinen Sorunlar
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 0a6fec7e2d129523e5f68955e51ac50154cb58df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631718"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489540"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework için SqlClient’ta Bilinen Sorunlar
 Bu bölümde, .NET Framework veri sağlayıcısı için SQL Server (SqlClient) ilgili bilinen sorunlar açıklanmaktadır.  
@@ -43,9 +43,9 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>Doğru SQL Server sürümünü hedefleme  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Hedefleri [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] belirtilen SQL Server sürümünü temel sorgu `ProviderManifestToken` depolama modeli (.ssdl) dosyasında şema öğesinin özniteliği. Bu sürüm, bağlı olduğunuz gerçek SQL Server sürümünden farklı olabilir. Örneğin, SQL Server 2005 kullanıyorsanız ancak, `ProviderManifestToken` özniteliği, 2008, oluşturulan ayarlanmışsa [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] sorgu sunucuda değil yürütme. Örneğin, SQL Server 2008'de tanıtılan yeni bir tarih saat türleri kullanan bir sorgu, SQL Server'ın önceki sürümlerinde yürütülmez. SQL Server 2005 kullanıyorsanız ancak sizin `ProviderManifestToken` 2000, oluşturulan özniteliğinin ayarlanmış [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] sorgu olabilir daha az en iyi duruma getirilmiş ya da sorgu desteklenmediğini söyleyen özel durum alabilir. Çapraz ve dış UYGULA işleçleri bölümünde, bu konunun önceki kısımlarında daha fazla bilgi için bkz.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Belirtilen SQL Server sürümünü temel Transact-SQL sorgusu hedefleyen `ProviderManifestToken` depolama modeli (.ssdl) dosyasında şema öğesinin özniteliği. Bu sürüm, bağlı olduğunuz gerçek SQL Server sürümünden farklı olabilir. Örneğin, SQL Server 2005 kullanıyorsanız ancak sizin `ProviderManifestToken` 2008'e ayarlandığında, oluşturulan Transact-SQL sorgusunun sunucuda yürütülemeyebilir. Örneğin, SQL Server 2008'de tanıtılan yeni bir tarih saat türleri kullanan bir sorgu, SQL Server'ın önceki sürümlerinde yürütülmez. SQL Server 2005 kullanıyorsanız ancak sizin `ProviderManifestToken` 2000'e ayarlandığında, oluşturulan Transact-SQL sorgusu daha az iyileştirilebilir veya sorgu desteklenmediğini söyleyen özel durum alabilir. Çapraz ve dış UYGULA işleçleri bölümünde, bu konunun önceki kısımlarında daha fazla bilgi için bkz.  
   
- Veritabanı uyumluluk düzeyini belirli veritabanı davranışları bağlıdır. Varsa, `ProviderManifestToken` 2005'e ayarlandığında ve 2005, SQL Server sürümüdür, ancak bir veritabanının uyumluluk düzeyini "80" (SQL Server 2000) oluşturulan ayarlanır [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] SQL Server 2005 hedefliyor olabilir, ancak şu nedenle beklendiği gibi yürütülemeyebilir uyumluluk düzeyi ayarı. Örneğin, bir sütun adı Seçici içinde ORDER BY listesinde bir sütun adı eşleşiyorsa, sipariş bilgileri kaybedilebilir.  
+ Veritabanı uyumluluk düzeyini belirli veritabanı davranışları bağlıdır. Varsa, `ProviderManifestToken` 2005'e ayarlandığında ve 2005, SQL Server sürümünüz olduğunu ancak bir veritabanının uyumluluk düzeyini "80" (SQL Server 2000) ayarlandığında, oluşturulan Transact-SQL, SQL Server 2005 hedefliyor olabilir, ancak nedeniyle beklendiği gibi yürütülemeyebilir uyumluluk düzeyi ayarı. Örneğin, bir sütun adı Seçici içinde ORDER BY listesinde bir sütun adı eşleşiyorsa, sipariş bilgileri kaybedilebilir.  
   
 ## <a name="nested-queries-in-projection"></a>İç içe geçmiş sorgularda projeksiyonu  
  Bir projeksiyon yan tümcesi iç içe geçmiş sorgularda sunucuda Kartezyen ürün sorgulara çevrilmiş. SQL Server dahil olmak üzere bazı arka uç sunucularda, TempDB tablonun oldukça büyük almak bu neden olabilir. Bu sunucu performansını düşürebilir.  

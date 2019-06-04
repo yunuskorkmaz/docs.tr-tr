@@ -2,12 +2,12 @@
 title: Windows'ta Olay İzleme ile Olayları İzleme
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3afc04fec996f4e24eb6e5ad771886480cd9cb9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004815"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491047"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows'ta Olay İzleme ile Olayları İzleme
 Bu örnek, Windows Workflow Foundation (WF) iş akışı hizmeti izleme etkinleştirme ve izleme olayları, olay izleme için Windows (ETW) yayma gösterir. Örnek iş akışı ETW kayıtları izleme yaymak için ETW İzleme katılımcı kullanır (<xref:System.Activities.Tracking.EtwTrackingParticipant>).
@@ -47,7 +47,7 @@ Bu örnek, Windows Workflow Foundation (WF) iş akışı hizmeti izleme etkinle�
 
      Varsayılan olarak, hizmet bağlantı noktasını 53797 dinlediğini (http://localhost:53797/SampleWorkflowService.xamlx).
 
-4. Kullanarak [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], WCF test İstemcisi'ni açın.
+4. Dosya Gezgini'ni kullanarak WCF test İstemcisi'ni açın.
 
      WCF test istemcisi (WcfTestClient.exe) bulunan \<Visual Studio 2010 yükleme klasörü > \Common7\IDE\ klasör.
 

@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac2a5d7f72479d5b5f4180de4452143c4dbc8127
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 1fd594ef1fea4c8723965ad483a5a124892bcf00
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456632"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487876"
 ---
 # <a name="security-transparent-code-level-1"></a>Güvenliği saydam kod, düzey 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Saydamlık, kısmen güvenilen kod işlevselliği kullanıma sunan daha güvenli .NET Framework kitaplıkları yazma geliştiricilerin yardımcı olur. Düzey 1 saydamlık, .NET Framework 2.0 sürümünde kullanıma sunulmuştur ve yalnızca Microsoft'ta öncelikli olarak kullanıldı. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], kullanabileceğiniz [Düzey 2 saydamlık](../../../docs/framework/misc/security-transparent-code-level-2.md). Ancak, eski güvenlik kuralları çalıştırmalısınız eski kodu bulabilmeniz düzey 1 saydamlık korundu.  
+ Saydamlık, kısmen güvenilen kod işlevselliği kullanıma sunan daha güvenli .NET Framework kitaplıkları yazma geliştiricilerin yardımcı olur. Düzey 1 saydamlık, .NET Framework 2.0 sürümünde kullanıma sunulmuştur ve yalnızca Microsoft'ta öncelikli olarak kullanıldı. Kullanabileceğiniz .NET Framework 4 ile başlayarak, [Düzey 2 saydamlık](../../../docs/framework/misc/security-transparent-code-level-2.md). Ancak, eski güvenlik kuralları çalıştırmalısınız eski kodu bulabilmeniz düzey 1 saydamlık korundu.  
   
 > [!IMPORTANT]
 >  Yalnızca uyumluluk için düzey 1 saydamlığını belirtmelisiniz; diğer bir deyişle, kullandığı .NET Framework 3.5 veya daha önce geliştirilmiştir yalnızca kod için düzey 1 belirtin <xref:System.Security.AllowPartiallyTrustedCallersAttribute> veya saydamlık modeli kullanmayan. Örneğin, kısmen güvenilmeyen çağrıcılara (APTCA) gelen çağrıları izin veren .NET Framework 2.0 derlemeleri için seviye 1 saydamlık kullanın. .NET Framework 4 için geliştirilmiş kod için her zaman Düzey 2 Asetatını kullanın.  

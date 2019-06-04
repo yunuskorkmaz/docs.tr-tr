@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8500abe590d4c85dcb5ecda54212a1ba9cc7950d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d858ef4c2f70c55b0a36e845f90d9a8e08f5e2d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586980"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487817"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Kısmen Güvenilen Koddan Kitaplıkları Kullanma
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  Bu konu, tanımlayıcı adlı derlemeler davranışını yöneliktir ve yalnızca geçerli [düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md) derlemeler. [Güvenliği saydam kod, 2. düzey](../../../docs/framework/misc/security-transparent-code-level-2.md) derlemelerde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] veya üzeri tanımlayıcı adlar tarafından etkilenmez. Güvenlik sistemine yapılan değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
+>  Bu konu, tanımlayıcı adlı derlemeler davranışını yöneliktir ve yalnızca geçerli [düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md) derlemeler. [Güvenliği saydam kod, 2. düzey](../../../docs/framework/misc/security-transparent-code-level-2.md) derlemeler .NET Framework 4 veya sonraki sürümlerde, tanımlayıcı adlar tarafından etkilenmez. Güvenlik sistemine yapılan değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
   
  Paylaşılan çağırmak için tam güven konak ya da korumalı alan izin verilmez daha az alan uygulamalar yönetilen kitaplıkları kitaplığı yazıcı özellikle kullanımının kendisine izin vermediği sürece <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliği. Bu nedenle, uygulama yazarları bazı kitaplıklar kendisine kısmen güvenilen bağlamından kullanılabilir olmayacağını farkında olmanız gerekir. Varsayılan olarak, tüm kod, yürütür kısmi güven [korumalı alan](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) ve de tam güven derleme listesini kısmen güvenilir değil. Kısmen güvenilen bir bağlamdan yürütülecek veya kısmen güvenilen kod tarafından çağrılmak için kodunuzu düşünmüyorsanız bu bölümdeki bilgiler hakkında merak gerekmez. Ancak, kısmen güvenilen bir bağlamdan gerekir ya da kısmen güvenilen kod ile etkileşim çalışmasına bir kod yazarsanız, aşağıdaki faktörleri dikkate almanız gerekir:  
   

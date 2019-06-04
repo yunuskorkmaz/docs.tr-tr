@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 011bb2d7a1a700ba4daf86d96d825373e353f57e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 0c806366e8f80e9fd770b45a5f1154d388ac49ab
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457421"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489670"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 
 Yerel Görüntü Oluşturucusu (Ngen.exe), yönetilen uygulamaların performansını artıran bir araçtır. Ngen.exe, işlemciye özel derlenmiş makine kodu içeren dosyalar olan yerel görüntüler oluşturur ve bunları yerel bilgisayarın yerel görüntü önbelleğine yükler. Çalışma zamanı orijinal derlemeyi derlemek için anlık (JIT) derleyiciyi kullanmak yerine önbellekteki yerel görüntüleri kullanabilir.
 
-Ngen.exe değişiklikleri [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]:
+Ngen.exe'ye .NET Framework 4 içinde yapılan değişiklikler:
 
 - Ngen.exe artık derlemeleri tam güven ile derler ve kod erişimi güvenliği (CAS) ilkesi artık değerlendirilmez.
 
@@ -77,7 +77,7 @@ Aşağıdaki tabloda her söz dizimi görülmektedir `action`. Ayrı bölümleri
 |Eylem|Açıklama|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Bir derleme ve bağımlılıkları için yerel görüntüler oluştur ve görüntüleri yerel görüntü önbelleğine yükle.<br /><br /> Varsa `/queue` belirtilirse, eylem yerel görüntü hizmetinde sıraya alınır. Varsayılan öncelik 3'tür. Bkz: [öncelik düzeyleri](#PriorityTable) tablo.|
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Bir derleme ve bağımlılıklarının yerel görüntülerini yerel görüntü önbelleğinden sil.<br /><br /> Tek bir görüntüyü ve bağımlılıklarını kaldırmak için, görüntüyü yüklemek için kullanılan aynı komut satırı bağımsız değişkenlerini kullanın. **Not:**  İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], eylem `uninstall` * artık desteklenmiyor.|
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Bir derleme ve bağımlılıklarının yerel görüntülerini yerel görüntü önbelleğinden sil.<br /><br /> Tek bir görüntüyü ve bağımlılıklarını kaldırmak için, görüntüyü yüklemek için kullanılan aynı komut satırı bağımsız değişkenlerini kullanın. **Not:**  .NET Framework 4, eylem başlangıç `uninstall` * artık desteklenmiyor.|
 |`update` [`/queue`]|Geçersiz olan yerel görüntüleri güncelleştir.<br /><br /> Varsa `/queue` belirtilirse, güncelleştirmeler yerel görüntü hizmetinde sıraya alınır. Güncelleştirmeler her zaman 3 önceliğindedir ve bilgisayar boşta olduğunda çalışır.|
 |`display` [`assemblyName` &#124; `assemblyPath`]|Bir derleme ve bağımlılıkları için yerel görüntülerin durumunu görüntüle.<br /><br /> Eğer bağımsız değişken sağlanmazsa, yerel görüntü önbelleğindeki her şey görüntülenir.|
 |`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -veya-<br /><br /> `eqi` [1&#124;2&#124;3]|Sıraya alınan derleme işlerini yürüt.<br /><br /> Eğer bir öncelik belirtilirse, ona eşit veya daha büyük önceliğe sahip derleme işleri yürütülür. Eğer öncelik belirtilmezse, sıraya alınan tüm derleme işleri yürütülür.|
@@ -137,7 +137,7 @@ Aşağıdaki tabloda her söz dizimi görülmektedir `action`. Ayrı bölümleri
 Ngen.exe'yi çalıştırabilmek için yönetici ayrıcalıklarınızın olması gerekir.
 
 > [!CAUTION]
-> Ngen.exe'yi tam güvenilir olmayan derlemeler üzerinde çalıştırmayın. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Ngen.exe derlemeleri tam güven ile derler ve kod erişimi güvenliği (CAS) ilkesi artık değerlendirilmez.
+> Ngen.exe'yi tam güvenilir olmayan derlemeler üzerinde çalıştırmayın. .NET Framework 4 ile başlayarak, Ngen.exe derlemeleri tam güven ile derler ve kod erişimi güvenliği (CAS) ilkesi artık değerlendirilmez.
 
 .NET Framework 4 ile başlayarak, Ngen.exe ile oluşturulan yerel görüntüler artık kısmi güvende çalışan uygulamaların içine yüklenemez. Bunun yerine anlık (JIT) derleyici çağrılır.
 

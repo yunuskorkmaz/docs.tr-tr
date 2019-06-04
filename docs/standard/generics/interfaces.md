@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3085812f2467c1e73d94335530441d6bb12db6af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9570578e8ae4397f060805b891f86d7d4f273cd4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683372"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487038"
 ---
 # <a name="generic-interfaces"></a>Genel Arabirimler
 Bu konu, genel türlerin aileleri arasında ortak işlevselliği sağlayan genel arabirimler genel bir bakış sağlar.  
@@ -24,7 +24,7 @@ Bu konu, genel türlerin aileleri arasında ortak işlevselliği sağlayan genel
  Genel arabirimler tür kullanımı uyumlu seçilen jenerik olmayan arabirimleri sıralama ve eşitlik karşılaştırmaları için ve genel koleksiyon türleri tarafından paylaşılan işlevselliği sağlar.  
   
 > [!NOTE]
->  İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], tür parametreleri çeşitli genel arabirimlerin birlikte değişen işaretlenmiş veya değişken karşıtı, atama ve kullanarak daha fazla esneklik sağlayan bu arabirimleri uygulayan türleri. Bkz: [Kovaryans ve kontravaryans](../../../docs/standard/generics/covariance-and-contravariance.md).  
+>  .NET Framework atama ve bu arabirimleri uygulayan türler kullanarak daha fazla esneklik sağlayan 4 ile parametrelerini çeşitli genel arabirimlerin birlikte değişen işaretlenmiş tür veya değişken karşıtı, başlatılıyor. Bkz: [Kovaryans ve kontravaryans](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
 ### <a name="equality-and-ordering-comparisons"></a>Eşitlik ve sıralama karşılaştırmaları  
  İçinde <xref:System> ad alanı, <xref:System.IComparable%601?displayProperty=nameWithType> ve <xref:System.IEquatable%601?displayProperty=nameWithType> bunların genel olmayan karşılıklarına gibi genel arabirimlerde duyarsızlığı karşılaştırmalarına ve eşitlik karşılaştırmaları sırasıyla sıralama yöntemleri tanımlar. Bu tür karşılaştırmaları gerçekleştirmenize olanak sağlamak için bu arabirimler türleri uygulayın.  

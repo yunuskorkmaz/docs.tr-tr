@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa256fe95013494488ff52258186763fab7a85c9
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: b16f169ca61485cf3031076d32178a9407aa54ff
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456660"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66488006"
 ---
 # <a name="code-access-security"></a>Kod Erişimi Güvenliği
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -34,7 +34,7 @@ ms.locfileid: "66456660"
  .NET Framework, bilgisayar sistemlerine korumasıyla çalıştırın ve güvenilen koddan veya kazayla önlemeye yardımcı olmak için bilinmeyen kaynaklardan gelen koddan izin vermek için kötü amaçlı mobil kod korunmalarına yardımcı olmak amacıyla kod erişimi güvenliği adlı bir güvenlik mekanizması sağlar. güvenlikten ödün. Kod erişimi güvenliği, kodun diğer yönleri ve kod kaynaklandığı bağlı olarak değişen düzeylerde güvenilir kodun sağlar. Kod erişimi güvenliği, ayrıca çalıştırmak için tam olarak güvenilir olması gereken kod miktarını en aza indirir, kod güven düzeyleri uygulayan zorlar. Kod erişimi güvenliği kullanarak kodunuzu olacak olasılığını azaltabilirsiniz kötü amaçlı ya da hata doldurulan kod tarafından kötüye kullanılıyor. İşlemleri gerçekleştirmek için kodunuzu izin kümesini belirtebildiğinizden bunu, sorumluluk azaltabilir. Kod erişimi güvenliği, kodunuzdaki güvenlik açıklarına neden olabilir zararı en aza indirmek da yardımcı olabilir.  
   
 > [!NOTE]
->  Kod erişimi güvenliği, için önemli değişiklikler yapıldı [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. En önemli bir değişiklik olmuştur [güvenlik saydamlık](../../../docs/framework/misc/security-transparent-code.md), vardır, ancak aynı zamanda kod erişim güvenliğini etkileyen diğer önemli değişiklikler. Bu değişiklikler hakkında daha fazla bilgi için bkz: [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
+>  Kod erişimi güvenliği .NET Framework 4, önemli değişiklikler yapılmıştır. En önemli bir değişiklik olmuştur [güvenlik saydamlık](../../../docs/framework/misc/security-transparent-code.md), vardır, ancak aynı zamanda kod erişim güvenliğini etkileyen diğer önemli değişiklikler. Bu değişiklikler hakkında daha fazla bilgi için bkz: [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
   
  Kod erişimi güvenliği, kitaplık kodu ve kısmen güvenilir uygulamaların öncelikli olarak etkiler. Kitaplığı geliştiriciler kodlarını kısmen güvenilir uygulamaların yetkisiz erişimden korunmasına gerekir. Kısmen güvenilir uygulamaların Internet gibi dış kaynaklardan yüklenen uygulamalardır. Masaüstünde veya yerel intranet üzerindeki yüklü uygulamalarını tam güvende çalıştırın. Tam güven uygulamaları olarak işaretlenmediği sürece kod erişim güvenliği tarafından etkilenmez [güvenlik açısından saydam](../../../docs/framework/misc/security-transparent-code.md), tam olarak güvenilirdir. Tek sınırlama tam güven uygulamaları için olan ile işaretlenmiş uygulamaları <xref:System.Security.SecurityTransparentAttribute> özniteliği ile işaretlenmiş kod çağıramaz <xref:System.Security.SecurityCriticalAttribute> özniteliği. Böylece kod erişim güvenliği uygulanabilir kısmen güvenilir uygulamaların (örneğin, Internet Explorer'da) bir korumalı alan çalıştırmanız gerekir. Internet'ten bir uygulamayı indirmek ve masaüstünüzden çalıştırmak çalışırsanız, erişmenizi sağlayacak bir <xref:System.NotSupportedException> iletisi: "Derlemesi .NET Framework'ün önceki sürümlerinde korumalı olmasını neden bir ağ konumundan bir derlemeyi yüklemek için girişimde bulunuldu. Bu yük tehlikeli olabilir. .NET Framework'ün bu sürümü CAS ilkesini varsayılan olarak etkinleştirmez." Uygulama güvenilirliğinden emin olup, bunu kullanarak tam güven çalıştırılacak etkinleştirebilirsiniz [ \<loadFromRemoteSources > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md). Bir korumalı alan içinde bir uygulamayı çalıştırma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
   

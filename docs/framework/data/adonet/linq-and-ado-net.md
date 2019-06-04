@@ -2,15 +2,15 @@
 title: LINQ ve ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 312eb4b1c0512ca1244daec5bcda3ed864c3646d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bfd5bb845917f9ca8ba3b154a51a946b610ca571
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878326"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489826"
 ---
 # <a name="linq-and-adonet"></a>LINQ ve ADO.NET
-Günümüzde, birçok iş Geliştirici iki (veya daha fazla) programlama dilleri kullanmanız gerekir: iş mantığı ve bir sunu katmanı (örneğin, Visual C# veya Visual Basic) için yüksek düzey bir dil ve veritabanıyla etkileşime girmek için bir sorgu dili (gibi [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Bu Geliştirici etkili olması için çeşitli dillerde usta olmasını gerektirir ve aynı zamanda geliştirme ortamında dil uyuşmazlığı neden olur. Örneğin, bir veritabanında bir sorgu yürütmek için veri erişimi API'si kullanan bir uygulamayı tırnak işaretleri'ni kullanarak sorgu dize sabit değeri olarak belirtir. Bu sorgu dizesi derleyiciye beklemediğiniz okunabilir ve geçersiz sözdizimi veya başvurduğu satırları veya sütunları olup gerçekten var gibi hatalara alınmamış. Sorgu parametreleri ve Hayır denetimi türü yoktur `IntelliSense` ya da destekler.  
+Günümüzde, birçok iş Geliştirici iki (veya daha fazla) programlama dilleri kullanmanız gerekir: iş mantığı ve bir sunu katmanı için yüksek düzey bir dil (Visual gibi C# veya Visual Basic) ve veritabanı (örneğin, Transact-SQL) ile etkileşim kurmak için bir sorgu dili . Bu Geliştirici etkili olması için çeşitli dillerde usta olmasını gerektirir ve aynı zamanda geliştirme ortamında dil uyuşmazlığı neden olur. Örneğin, bir veritabanında bir sorgu yürütmek için veri erişimi API'si kullanan bir uygulamayı tırnak işaretleri'ni kullanarak sorgu dize sabit değeri olarak belirtir. Bu sorgu dizesi derleyiciye beklemediğiniz okunabilir ve geçersiz sözdizimi veya başvurduğu satırları veya sütunları olup gerçekten var gibi hatalara alınmamış. Sorgu parametreleri ve Hayır denetimi türü yoktur `IntelliSense` ya da destekler.  
   
  [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] geliştiricilerin ayrı sorgu dili kullanmak zorunda kalmadan, uygulama kodunda kümesi tabanlı sorgular oluşturmasını sağlar. Yazabileceğiniz [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] çeşitli numaralandırılabilir veri kaynaklarına karşı sorgular (diğer bir deyişle, uygulayan bir veri kaynağı <xref:System.Collections.IEnumerable> arabirimi) gibi bellek içi veri yapıları, XML belgeleri, SQL veritabanları ve <xref:System.Data.DataSet> nesneleri. Bu numaralandırılabilir veri kaynaklarının çeşitli şekillerde uygulanan olsa da, bunların tümü aynı söz dizimi ve dil yapıları kullanıma sunar. Sorguları programlama dilinde oluşturulmuş olması nedeniyle dize değişmez değerleri anladım veya derleyici tarafından doğrulanmış olarak katıştırılır başka bir sorgu dili kullanmak zorunda değil. Programlama diline sorguları tümleştirmek ayrıca Visual Studio programcıların derleme zamanı tür ve söz dizimi denetimini, sunarak daha üretken olmanıza olanak sağlar ve `IntelliSense`. Bu özellikler için sorgu hata ayıklama ve hata düzeltme ihtiyacınızı azaltır.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: ab30d44ed2a91fd7f7e53cb868d90a2c5af0fef6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457299"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489720"
 ---
 # <a name="security-considerations-for-reflection"></a>Yansımayla İlgili Güvenlik Konuları
 Yansıma üyelerine erişmek ve bu türler ve üyeler hakkında bilgi alma özelliği sağlar (diğer bir deyişle, yöntemler ve almak ve özellik ayarlamak için oluşturucuları çağırmak için değerleri, ekleyin ve olay işleyicilerini kaldırmak ve benzeri). Türler ve üyeler hakkında bilgi edinmek için yansıma kullanmak sınırlı değildir. Tüm kod, yansıma aşağıdaki görevleri gerçekleştirmek için kullanabilirsiniz:  
@@ -26,7 +26,7 @@ Yansıma üyelerine erişmek ve bu türler ve üyeler hakkında bilgi alma özel
   
 - Listeleme ve derlemeler ve modüller inceleyin.  
   
- Üyelerine erişmek için yansıma kullanmak, aksine, sınırlamalara tabi olabilir. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], yalnızca güvenilen kod güvenlik kritik üyelere erişim için yansıma kullanabilir. Ayrıca, yalnızca güvenilen kod, yansıma derlenmiş kodu doğrudan erişilebilir olmaz ortak olmayan üyelere erişmek için kullanabilirsiniz. Son olarak, güvenli kritik bir üyesine erişmek için yansımayı kullanan kod ile derlenmiş kodu olarak yalnızca güvenli kritik üye taleplerini izinlere olmalıdır.  
+ Üyelerine erişmek için yansıma kullanmak, aksine, sınırlamalara tabi olabilir. .NET Framework 4 ile başlayarak, yalnızca güvenilen kod güvenlik kritik üyelere erişim için yansıma kullanabilirsiniz. Ayrıca, yalnızca güvenilen kod, yansıma derlenmiş kodu doğrudan erişilebilir olmaz ortak olmayan üyelere erişmek için kullanabilirsiniz. Son olarak, güvenli kritik bir üyesine erişmek için yansımayı kullanan kod ile derlenmiş kodu olarak yalnızca güvenli kritik üye taleplerini izinlere olmalıdır.  
   
  Gerekli izinleri tabi kodu yansıma erişimi şu tür gerçekleştirmek için kullanabilirsiniz:  
   
@@ -48,7 +48,7 @@ Yansıma üyelerine erişmek ve bu türler ve üyeler hakkında bilgi alma özel
   
 <a name="accessingSecurityCritical"></a>   
 ## <a name="accessing-security-critical-members"></a>Güvenlik açısından kritik üyelerine erişme  
- Üye güvenlik varsa kritik <xref:System.Security.SecurityCriticalAttribute>, olan bir türe ait <xref:System.Security.SecurityCriticalAttribute>, ya da güvenlik açısından kritik bir derlemede ise. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], güvenlik açısından kritik üyelere erişim için kuralları aşağıdaki gibidir:  
+ Üye güvenlik varsa kritik <xref:System.Security.SecurityCriticalAttribute>, olan bir türe ait <xref:System.Security.SecurityCriticalAttribute>, ya da güvenlik açısından kritik bir derlemede ise. .NET Framework 4 ile başlayarak, erişim güvenlik açısından kritik üyeleri için kurallar aşağıda belirtilmiştir:  
   
 - Tam olarak güvenilen olsa bile saydam kod güvenlik kritik üyelere erişim için yansıma kullanamazsınız. A <xref:System.MethodAccessException>, <xref:System.FieldAccessException>, veya <xref:System.TypeAccessException> oluşturulur.  
   
@@ -98,7 +98,7 @@ Yansıma üyelerine erişmek ve bu türler ve üyeler hakkında bilgi alma özel
   
 ## <a name="version-information"></a>Sürüm Bilgileri  
   
-- İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], saydam kod güvenlik kritik üyelere erişim için yansıma kullanamazsınız.  
+- .NET Framework 4 ile başlayarak, saydam kod güvenlik kritik üyelere erişim için yansıma kullanamazsınız.  
   
 - <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Bayrağı sunulmuştur [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. .NET Framework'ün önceki sürümlerini gerektirir <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> ortak olmayan üyelere erişmek için yansımayı kullanan kod için bayrak. Kısmen güvenilen koda hiçbir zaman verilen bir izni budur.  
   

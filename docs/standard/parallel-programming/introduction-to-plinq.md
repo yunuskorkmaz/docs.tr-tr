@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d41a88b7a9197a19a131cbda078297a96acdabfb
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 39ca7ca02c2bb1050653daf1b53450533cc950dd
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457495"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490962"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ'e Giriş
 
 ## <a name="what-is-a-parallel-query"></a>Paralel Sorgu nedir?
 
-Dil ile tümleşik sorgu (LINQ) öğesinde tanıtılmıştır [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Bunu herhangi sorgulamak için bir birleşik modele sahiptir <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> tür açısından güvenli bir şekilde veri kaynağı. LINQ to Objects'in gibi bellek içi koleksiyonlara karşı çalışan LINQ sorguları addır <xref:System.Collections.Generic.List%601> ve diziler. Bu makalede, LINQ temel bir anlayışa sahip olduğunuz varsayılır. Daha fazla bilgi için [dil ile tümleşik sorgu (LINQ) - C# ](../../csharp/programming-guide/concepts/linq/index.md) veya [dil ile tümleşik sorgu (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).
+Dil ile tümleşik sorgu (LINQ), .NET Framework 3. 5 ' sunulmuştur. Bunu herhangi sorgulamak için bir birleşik modele sahiptir <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> tür açısından güvenli bir şekilde veri kaynağı. LINQ to Objects'in gibi bellek içi koleksiyonlara karşı çalışan LINQ sorguları addır <xref:System.Collections.Generic.List%601> ve diziler. Bu makalede, LINQ temel bir anlayışa sahip olduğunuz varsayılır. Daha fazla bilgi için [dil ile tümleşik sorgu (LINQ) - C# ](../../csharp/programming-guide/concepts/linq/index.md) veya [dil ile tümleşik sorgu (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).
 
 Paralel LINQ (PLINQ) bir paralel LINQ desen uygulamasıdır. Bir PLINQ sorgusu birçok yönden paralel olmayan LINQ to Objects sorgusuna benzer. PLINQ sorguları, tıpkı gibi sıralı [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] sorguları, tüm bellek üzerinde çalışan <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601> veri kaynağı ve değil çalışmaya ve sorgu numaralandırılana kadar yürütme yani yürütme ertelenmiş yürütmeleri vardır. PLINQ sistemde tüm işlemcileri tam kullanabilmesine dener birincil farktır. Veri kaynağını parçalara bölümleme ve ardından her segmentine ayrı iş parçacığı üzerinde birden çok işlemci üzerinde paralel sorgu yürütme bunu yapar. Çoğu durumda, Paralel yürütme sorgunun önemli ölçüde daha hızlı çalışmasını anlamına gelir.
 
@@ -36,7 +36,7 @@ Bu makalenin geri kalanında ana PLINQ sınıflarına genel bir bakış sunar ve
 
 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> Sınıfı hemen hemen tüm PLINQ işlevselliğini gösterir. Bu ve diğer <xref:System.Linq?displayProperty=nameWithType> ad alanı türleri, System.Core.dll dosyasına derlenir derlenir. Visual Studio'daki varsayılan C# ve Visual Basic projeleri derleme başvurusu hem ad alanını içeri aktarır.
 
-<xref:System.Linq.ParallelEnumerable> Bunu her birini paralelleştirmeye çalışmasa LINQ to Objects'in desteklediği tüm standart sorgu işleçlerinin uygulamalarını içerir. İle aşina değilseniz [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], bkz: [LINQ'e giriş (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq.md) ve [Lınq'ye giriş (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).
+<xref:System.Linq.ParallelEnumerable> Bunu her birini paralelleştirmeye çalışmasa LINQ to Objects'in desteklediği tüm standart sorgu işleçlerinin uygulamalarını içerir. İle aşina değilseniz [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], bkz: [LINQ'e giriş (C#)](../../csharp/programming-guide/concepts/linq/index.md) ve [Lınq'ye giriş (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).
 
 Standart sorgu işleçler ek olarak <xref:System.Linq.ParallelEnumerable> sınıfı, bir paralel yürütmeye özel davranışları etkinleştirme yöntemleri kümesi içerir. PLINQ'ya özgü bu yöntemler aşağıdaki tabloda listelenmiştir.
 

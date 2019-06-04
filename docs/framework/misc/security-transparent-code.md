@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456506"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487851"
 ---
 # <a name="security-transparent-code"></a>Güvenliği Saydam Kod
 
@@ -23,7 +23,7 @@ ms.locfileid: "66456506"
 Güvenlik, etkileşen üç parça içerir: korumalı alana alma, izinler ve zorlama. Korumalı alana alma, tam olarak güvenilir ve diğer kodların korumalı bir alanda izinlerle kısıtlanmış olduğu yere bazı kod yalıtılmış etki alanları oluşturma uygulaması anlamına gelir. Korumalı alan izin kümesi içinde çalışan uygulama kodu, saydam olarak kabul edilir; diğer bir deyişle, güvenliği etkileyen herhangi bir işlem gerçekleştirilemiyor. Korumalı alan kanıt tarafından belirlenir kodların (<xref:System.Security.Policy.Evidence> sınıfı). Kanıt, korumalı alanlar hangi belirli izinleri gerektirir ve hangi tür korumalı alanların oluşturulabileceğini oluşturulabilir tanımlar. Zorlama yalnızca kendi izin kümesinde yürütmek için saydam kodu anlamındadır.
 
 > [!IMPORTANT]
-> Güvenlik İlkesi, .NET Framework'ün önceki sürümlerinde anahtar bir öğe bulunamadı. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], güvenlik ilkesi kullanılmıyor. Güvenlik İlkesi saydamlığından güvenlik farklıdır. Bu değişikliğin etkileri hakkında daha fazla bilgi için bkz. [kod erişimi güvenliği ilkesi uyumluluğu ve geçiş](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
+> Güvenlik İlkesi, .NET Framework'ün önceki sürümlerinde anahtar bir öğe bulunamadı. .NET Framework 4 ile başlayarak, güvenlik ilkesi kullanılmıyor. Güvenlik İlkesi saydamlığından güvenlik farklıdır. Bu değişikliğin etkileri hakkında daha fazla bilgi için bkz. [kod erişimi güvenliği ilkesi uyumluluğu ve geçiş](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
 
 Bu konuda, saydamlık modeli daha ayrıntılı açıklanmaktadır. Aşağıdaki bölümleri içerir:
 
@@ -70,7 +70,7 @@ Düzeyler şunlardır:
 
 ### <a name="level-2-transparency"></a>Düzey 2 saydamlık
 
-Düzey 2 saydamlık öğesinde tanıtılmıştır [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Bu modelin üç İlkesi saydam kod güvenlik güvenli kritik kod ve güvenlik açısından kritik kod ' dir.
+Düzey 2 saydamlık, .NET Framework 4'te tanıtıldı. Bu modelin üç İlkesi saydam kod güvenlik güvenli kritik kod ve güvenlik açısından kritik kod ' dir.
 
 - (Tam güven dahil), verilen izinleri bakılmaksızın saydam kod, yalnızca diğer saydam kodu veya güvenli-kritik kodu çağırabilir. Kod kısmen güvenilen ise, yalnızca etki alanı izin kümesi tarafından izin verilen eylemleri gerçekleştirebilir. Saydam kod aşağıdaki işlemleri yapamaz:
 

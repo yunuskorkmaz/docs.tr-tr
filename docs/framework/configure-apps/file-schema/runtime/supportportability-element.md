@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cc26f9721e911e05c5b5d4092be21a4e1191c84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab9feaa1c46a45471395fd4c6158490a24882a65
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704758"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489370"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > öğesi
 Bir uygulama derlemeleri uygulama taşınabilirliği amacıyla eşdeğer kabul eder varsayılan davranışı devre dışı bırakarak aynı derlemenin iki farklı uygulamalarında .NET Framework'ün başvurabileceğini belirtir.  
@@ -57,7 +57,7 @@ Bir uygulama derlemeleri uygulama taşınabilirliği amacıyla eşdeğer kabul e
 |`assemblyBinding`|Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İle başlayarak [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], destek .NET Framework'ün iki uygulamasından birini kullanan uygulamalar için otomatik olarak sağlanan örnek ya da .NET Framework uygulaması veya Silverlight uygulaması için .NET Framework. Belirli bir .NET Framework derlemesinin iki uygulaması derleme cildiyle eşdeğer olarak görülür. Birkaç senaryoda bu uygulama taşınabilirlik özelliği sorunlara neden olur. Bu senaryolarda `<supportPortability>` öğesi özelliği devre dışı bırakmak için kullanılabilir.  
+ .NET Framework 4 ile başlayarak, destek otomatik olarak .NET Framework'ün iki uygulamasından birini kullanan uygulamalar için sağlanan örnek ya da .NET Framework uygulaması veya Silverlight uygulaması için .NET Framework. Belirli bir .NET Framework derlemesinin iki uygulaması derleme cildiyle eşdeğer olarak görülür. Birkaç senaryoda bu uygulama taşınabilirlik özelliği sorunlara neden olur. Bu senaryolarda `<supportPortability>` öğesi özelliği devre dışı bırakmak için kullanılabilir.  
   
  Bu tür senaryolardan hem .NET Framework uygulamasına hem de belirli bir başvuru derlemesinin Silverlight için .NET Framework başvurması gereken bir derlemedir. Örneğin, Windows Presentation Foundation (WPF) yazılı bir XAML tasarımcının hem WPF masaüstü uygulaması için tasarımcının kullanıcı arabirimi ve Silverlight uygulamasında gelen WPF alt kümesi başvuru gerekebilir. Varsayılan olarak, derleme bağlama iki derlemeyi eşdeğer olarak gördüğünden ayrı başvurular bir derleyici hatasına neden olur. Bu öğe, varsayılan davranışı devre dışı bırakır ve derlemenin başarılı olması sağlar.  
   

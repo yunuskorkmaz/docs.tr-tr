@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4adfa5d592514c9a91c93095e7199f4b425b712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: abbc817142ab6906a04b4dc053693f87109922dc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596645"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487901"
 ---
 # <a name="securing-wrapper-code"></a>Sarmalayıcı Kodunun Güvenliğini Sağlama
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -76,7 +76,7 @@ ms.locfileid: "64596645"
 - [LinkDemand](../../../docs/framework/misc/link-demands.md) just-ın-time (JIT) derleme zamanında olur ve yalnızca şu anki çağırıcı denetler. Bu güvenlik denetimi, arayanın arayan denetlemez. Bu denetimi başarılı olduğunda, ek güvenlik yükü kaç kez çağıran çağırabilirsiniz ne olursa olsun yoktur. Ancak, ayrıca gelen saldırıları luring koruması yoktur. İle **LinkDemand**, testin başarılı olması ve kodunuzu başvurabilirsiniz herhangi bir kod olası güvenlik yetkili kod kullanarak çağırmak kötü amaçlı kod vererek bozabilir. Bu nedenle, kullanmayın **LinkDemand** sürece tüm olası zayıflıkları kapsamlı önlenebilir.  
   
     > [!NOTE]
-    >  İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], bağlantı talepleri tarafından değiştirildi <xref:System.Security.SecurityCriticalAttribute> özniteliğini <xref:System.Security.SecurityRuleSet.Level2> derlemeler. <xref:System.Security.SecurityCriticalAttribute> Tam güven için bağlantı talebi eşdeğerdir ancak, devralma kuralları da etkiler. Bu değişiklik hakkında daha fazla bilgi için bkz. [güvenliği saydam kod, 2. düzey](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+    >  .NET Framework 4'te bağlantı talepleri tarafından değiştirilmiştir <xref:System.Security.SecurityCriticalAttribute> özniteliğini <xref:System.Security.SecurityRuleSet.Level2> derlemeler. <xref:System.Security.SecurityCriticalAttribute> Tam güven için bağlantı talebi eşdeğerdir ancak, devralma kuralları da etkiler. Bu değişiklik hakkında daha fazla bilgi için bkz. [güvenliği saydam kod, 2. düzey](../../../docs/framework/misc/security-transparent-code-level-2.md).  
   
  Kullanırken gereken ek güvenlik önlemleri **LinkDemand** ayrı ayrı programlanmak gerekir; zorlamasıyla yardımcı güvenlik sistemi olabilir. Herhangi bir hata, bir güvenlik açığına açılır. Tüm yetkili kod kullandığından kodunuzu aşağıdakileri yaparak ek güvenlik uygulamak için sorumlu olması gerekir:  
   

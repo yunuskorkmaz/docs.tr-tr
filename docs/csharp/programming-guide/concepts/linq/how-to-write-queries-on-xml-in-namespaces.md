@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Ad alanlarında XML üzerinde sorgu yazma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: e6b966e90d1f7fc86efaa422ecd8afb030d97163
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d33ecc22d8eb6ea4a08b56fbed6b6b437a5e3216
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667476"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484637"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Nasıl yapılır: Ad alanlarında XML üzerinde sorgu yazma (C#)
 Bir ad alanındaki XML üzerinde sorgu yazmak için kullanmalısınız <xref:System.Xml.Linq.XName> doğru ad alanı olan nesne.  
@@ -78,4 +78,4 @@ foreach (XElement el in c1)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML ad alanları (C#) ile çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [XML ad alanları (C#) ile çalışma](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)

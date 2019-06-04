@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81110736651db9fe00b116c3abbbdaa8d3670bee
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 995aeca60d462c96f951411aff9fcb2c772169d1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456103"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489656"
 ---
 # <a name="net-framework-tools"></a>.NET Framework Araçları
 .NET Framework araçları, .NET Framework'ü hedefleyen uygulamaları ve bileşenleri oluşturmayı, dağıtmayı ve yönetmeyi kolaylaştırmayı sağlar.  
@@ -36,7 +36,7 @@ Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile 
  Bir ActiveX denetimi için bir COM tür kitaplığındaki tür tanımlarını bir Windows Forms denetimine dönüştürür.  
   
  [Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- Makine ilke düzeyi, kullanıcı ilke düzeyi ve kurumsal ilke düzeyi için güvenlik ilkesi görüntülemenize ve yapılandırmanıza olanak tanır. İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] ve daha sonra bu araç kod erişim güvenliği (CAS) ilkesini etkilemez [ \<legacyCasPolicy > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) ayarlanır `true`. Daha fazla bilgi için [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
+ Makine ilke düzeyi, kullanıcı ilke düzeyi ve kurumsal ilke düzeyi için güvenlik ilkesi görüntülemenize ve yapılandırmanıza olanak tanır. .NET Framework 4 ve sonraki sürümlerinde, bu araç kod erişim güvenliği (CAS) ilkesini etkilemez [ \<legacyCasPolicy > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) ayarlanır `true`. Daha fazla bilgi için [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
   
  [Cert2spc.exe (Yazılım Yayımcısı Sertifika Test Aracı)](../../../docs/framework/tools/cert2spc-exe-software-publisher-certificate-test-tool.md)  
  Bir veya daha fazla X.509 sertifikasından bir Yazılım Yayımcıları Sertifikası (SPC) oluşturur. Bu araç yalnızca test içindir.  

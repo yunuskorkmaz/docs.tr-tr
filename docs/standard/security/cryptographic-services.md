@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fa05fe1e170a0285df73d179ef39db6301059ac8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592740"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490954"
 ---
 # <a name="cryptographic-services"></a>Şifreleme Hizmetleri
 
@@ -39,7 +39,7 @@ ms.locfileid: "65592740"
 
 .NET Framework'teki sınıflarda <xref:System.Security.Cryptography?displayProperty=nameWithType> ad alanı sizin için birçok şifreleme ayrıntılarını yönetme. Diğerleri yalnızca yönetilen uygulamalar bazı sarmalayıcıları yönetilmeyen Microsoft Şifreleme API'si (CryptoAPI) bağlıdır. Bu sınıfların kullanılacak şifreleme konusunda uzman olmanız gerekmez. Algoritma sınıfları şifreleme birini yeni bir örneğini oluşturduğunuzda, kullanım kolaylığı için otomatik olarak oluşturulan anahtarları olan ve varsayılan olarak güvenli ve mümkün olduğunca güvenli özellikleridir.
 
-ClickOnce bildirimlerini Suite B dahil olan .NET Framework tarafından desteklenen uygulamalar ve şifreleme yöntemleri doğrulanır bu genel bakış sağlar ve şifreleme yeni nesil (CNG) destek sunulan [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].
+Bu genel bir özeti ClickOnce bildirimlerini, Suite B ve .NET Framework 3. 5 ' tanıtılan şifreleme yeni nesil (CNG) desteği gibi .NET Framework tarafından desteklenen uygulamalar ve şifreleme yöntemleri sağlar.
 
 Bu genel bakış aşağıdaki bölümleri içerir:
 
@@ -114,7 +114,7 @@ Alice ve Bob güvenli bir kanal üzerinden iletişim kurmak isteyen iki tarafın
 
 .NET Framework, gizli anahtar şifreleme algoritmalarını uygulayan aşağıdaki sınıfları sağlar:
 
-- <xref:System.Security.Cryptography.AesManaged> (sürümünde [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).
+- <xref:System.Security.Cryptography.AesManaged> (.NET Framework 3. 5 ' sunulmuştur).
 
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 

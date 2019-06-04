@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d5a5658fcb6bbba72938a16a9e5c82fd779e2e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c41becaa149b933d46a01f6ada0ea4b29b68fe8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868777"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66488026"
 ---
 # <a name="code-access-security-basics"></a>Kod Erişim Güvenliği Temelleri
 
@@ -32,7 +32,7 @@ Ortak dil çalışma zamanını hedefleyen etkili uygulamalar yazmak üzere aşa
 
 - **Güvenli sınıf kitaplıkları**: Güvenli sınıf kitaplığı, kitaplık çağıranlar kitaplığı kullanan kaynaklara erişim izni sağlamak için güvenlik taleplerini kullanır. Örneğin, bir güvenli sınıf kitaplığı çağıranlarını dosyaları oluşturmak için izinlere sahip isteğe bağlı dosyaları oluşturmak için bir yöntem olabilir. Güvenli sınıf kitaplıkları .NET Framework oluşur. Kodunuzun kullandığı herhangi bir kitaplığı erişmek için gerekli izinleri farkında olması gerekir. Daha fazla bilgi için [güvenli sınıf kitaplıkları kullanarak](#secure_library) bu konunun ilerleyen bölümlerinde.
 
-- **Saydam kod**: İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], özel izinler belirlemeye ek olarak, ayrıca kodunuz gibi güvenlik saydam çalıştırılması gerekip gerekmediğini belirlemeniz gerekir. Güvenliği saydam kod türleri veya üyeleri tanımlanmış olarak güvenlik kritik çağrılamıyor. Bu kural, kısmen güvenilir uygulamaların yanı sıra tam güven uygulamaları için geçerlidir. Daha fazla bilgi için [güvenliği saydam kod](../../../docs/framework/misc/security-transparent-code.md).
+- **Saydam kod**: Özel izinler tanımlayan yanı sıra .NET Framework 4 ile başlayarak, kod olarak güvenlik saydam çalıştırılması gerekip gerekmediğini de belirlemelisiniz. Güvenliği saydam kod türleri veya üyeleri tanımlanmış olarak güvenlik kritik çağrılamıyor. Bu kural, kısmen güvenilir uygulamaların yanı sıra tam güven uygulamaları için geçerlidir. Daha fazla bilgi için [güvenliği saydam kod](../../../docs/framework/misc/security-transparent-code.md).
 
 <a name="typesafe_code"></a>
 
@@ -55,7 +55,7 @@ Kod erişimi güvenliği, kod yazma İnsan hatası olasılığını ortadan kald
 Bildirim temelli güvenlik sözdizimi kullanan [öznitelikleri](../../../docs/standard/attributes/index.md) güvenlik bilgileri yerleştirmek için [meta verileri](../../../docs/standard/metadata-and-self-describing-components.md) kodunuzun. İstek, isteğe bağlı veya kullanmak istediğiniz geçersiz kılma türünü belirtmek için derleme, sınıf veya üye düzeyinde öznitelikler yerleştirilebilir. İstekleri, çalışma zamanı güvenlik sistemi uygulamanız gereken veya istediğiniz izinleri hakkında bilgilendirmek için ortak dil çalışma zamanını hedefleyen uygulamalarda kullanılır. Talepleri ve geçersiz kılmalar kitaplıklarında çağrı yapanlardan kaynaklarını korumak için veya varsayılan güvenlik davranışı geçersiz kılmak için kullanılır.
 
 > [!NOTE]
-> İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], terminolojisi ve .NET Framework güvenlik modelinin önemli değişiklikler olmuştur. Bu değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).
+> .NET Framework 4'te .NET Framework güvenlik modeli ve terminoloji önemli değişiklikler olmuştur. Bu değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).
 
 Bildirim temelli güvenlik çağrıları kullanmak için izne ihtiyacınız belirli şeklinde gösterir böylece izni nesne durumu verilerini başlatmanız gerekir. Geçirilen bir öznitelik her yerleşik izni bir <xref:System.Security.Permissions.SecurityAction> uygulamak istediğiniz güvenlik işleminin türünü açıklayan sabit listesi. Ancak, izinleri de bunları dışlar kendi parametreleri kabul eder.
 

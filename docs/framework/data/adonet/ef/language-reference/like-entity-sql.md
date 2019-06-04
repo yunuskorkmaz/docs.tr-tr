@@ -2,12 +2,12 @@
 title: (SQL varlık gibi)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98940c075a01de2ebe061b6dff53917247fc5193
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780451"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489919"
 ---
 # <a name="like-entity-sql"></a>(SQL varlık gibi)
 Belirli bir karakter olup olmadığını belirleyen `String` belirtilen desenle eşleşir.  
@@ -49,7 +49,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 > [!NOTE]
 >  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] İşleci ve KAÇIŞ yan tümcesinde uygulanamaz gibi `System.DateTime` veya `System.Guid` değerleri.  
   
- Destekler ASCII desen eşleştirme ve Unicode desen eşleştirme gibi. Tüm parametreler ASCII karakterler olduğunda ASCII desen eşleştirme gerçekleştirilir. Bir veya daha fazla bağımsız değişken Unicode kullanıyorsanız, tüm bağımsız değişkenler, Unicode'a dönüştürülür ve Unicode desen eşleştirme gerçekleştirilir. Unicode gibi ile kullandığınızda, sondaki boşluk önemlidir; Ancak, Unicode olmayan için sondaki boşluklar önemli değildir. Desen dizesi söz dizimi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] , aynı [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
+ Destekler ASCII desen eşleştirme ve Unicode desen eşleştirme gibi. Tüm parametreler ASCII karakterler olduğunda ASCII desen eşleştirme gerçekleştirilir. Bir veya daha fazla bağımsız değişken Unicode kullanıyorsanız, tüm bağımsız değişkenler, Unicode'a dönüştürülür ve Unicode desen eşleştirme gerçekleştirilir. Unicode gibi ile kullandığınızda, sondaki boşluk önemlidir; Ancak, Unicode olmayan için sondaki boşluklar önemli değildir. Desen dizesi söz dizimi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] , Transact-SQL ile aynıdır.  
   
  Bir desen, normal bir karakter ve joker karakterler içerebilir. Desen eşleştirme sırasında normal karakter tam olarak belirtilen karakter karakterleri eşleşmelidir `string`. Ancak, joker karakter, karakter dizesi rastgele parçalarını eşleştirilebilir. = Joker karakterlerle kullanıldığında LIKE işleci daha esnektir ve! = dize karşılaştırma işleçleri.  
   

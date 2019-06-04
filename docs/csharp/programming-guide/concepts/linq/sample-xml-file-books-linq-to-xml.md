@@ -2,12 +2,12 @@
 title: 'Örnek XML Dosyası: Kitaplar (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: b75ab1a2-fb76-4df9-bd01-c45ec22a29ef
-ms.openlocfilehash: 9072c7e741525156719a5b6d65a8c3a6991c67ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2e3971119812862fc9c059ea947dc46cf7fe1ad
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61711960"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483820"
 ---
 # <a name="sample-xml-file-books-linq-to-xml"></a>Örnek XML Dosyası: Kitaplar (LINQ to XML)
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Dosya kitapları hakkında bilgi içerir.  
@@ -38,7 +38,3 @@ Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecx
    </Book>  
 </Catalog>  
 ```  
-  
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [Örnek XML Belgeleri (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

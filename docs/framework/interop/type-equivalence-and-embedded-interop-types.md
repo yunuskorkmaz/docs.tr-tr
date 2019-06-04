@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9ec21a21ce3c81c2d29d2edf353a098489c9026
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 137aeaab4e63adbb81c0f3d90718def10f906e6a
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032896"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489240"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Tür eşdeğerliği ve katıştırılmış birlikte çalışma türleri
 
-İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], birlikte çalışma derlemeleri COM türleri için tür bilgisi almak Yönetilen derlemeler göstermek zorunda kalmadan doğrudan Yönetilen derlemeler, COM türleri için tür bilgilerini katıştırma ortak dil çalışma zamanı destekler. Gömülü tür bilgileri yalnızca türler ve gerçekten yönetilen bir derleme tarafından kullanılan üyeler içerdiğinden, iki Yönetilen derlemeler çok farklı görünümleri aynı COM tür olabilir. Yönetilen her derlemenin farklı bir sahip <xref:System.Type> COM türü onun görünümünü temsil eden nesne. Ortak dil çalışma zamanı tür denklik arabirimleri, yapılar, sabit listeleri ve temsilciler için bu farklı görünümleri arasında destekler.
+.NET Framework 4 ile başlayarak, ortak dil çalışma zamanı tür bilgilerini katıştırma COM türleri için doğrudan birlikte çalışma derlemeleri COM türleri için tür bilgisi almak Yönetilen derlemeler yerine Yönetilen derlemeler içine destekler. Gömülü tür bilgileri yalnızca türler ve gerçekten yönetilen bir derleme tarafından kullanılan üyeler içerdiğinden, iki Yönetilen derlemeler çok farklı görünümleri aynı COM tür olabilir. Yönetilen her derlemenin farklı bir sahip <xref:System.Type> COM türü onun görünümünü temsil eden nesne. Ortak dil çalışma zamanı tür denklik arabirimleri, yapılar, sabit listeleri ve temsilciler için bu farklı görünümleri arasında destekler.
 
 Tür eşdeğerliği birinden diğerine yönetilen bütünleştirilmiş kod uygun olarak atanabilir geçirilen bir COM nesnesi türü alma derlemedeki yönetilen anlamına gelir.
 

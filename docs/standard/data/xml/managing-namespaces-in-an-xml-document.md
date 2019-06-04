@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b0ace73d81783852242a52bec006b0ad2edaadd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83ea398f18ab02840ea811c74a6053dba11a3baa
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650199"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490894"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML Belgesinde Ad Alanlarını Yönetme
 XML ad alanları XML belgesinde öğe ve öznitelik adları, özel ve önceden tanımlanmış bir URI'leri ile ilişkilendirin. Bu ilişkileri oluşturmak için URI ad alanı ön eklerini tanımlayın ve bu ön ekler öğe ve öznitelik adları XML verisindeki nitelemek için kullanın. Ad alanları, öğe ve öznitelik adı çakışmalarını önlemek ve öğeleri ve öznitelikleri aynı ada sahip işlenmesini ve farklı şekilde doğrulanmış etkinleştirin.  
@@ -63,7 +63,7 @@ XML ad alanları XML belgesinde öğe ve öznitelik adları, özel ve önceden t
  Ad alanı Yöneticisi'ni ad alanlarında herhangi doğrulaması gerçekleştirmez, ancak önek ve ad alanları zaten doğrulandı ve uygun varsayar [W3C ad alanları](https://www.w3.org/TR/REC-xml-names/) belirtimi.  
   
 > [!NOTE]
-> [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) ve [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) kullanmayın <xref:System.Xml.XmlNamespaceManager> ad alanlarını yönetmek için. Bkz: [XML ad alanları ile çalışma (C#)](../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) ve [(Visual Basic) XML ad alanları ile çalışma](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) LINQ to XML kullanarak ad alanlarını yönetme hakkında bilgi için LINQ belgelerinde.  
+> XML için LINQ [ C# ](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) ve [Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) kullanmayın <xref:System.Xml.XmlNamespaceManager> ad alanlarını yönetmek için. Bkz: [XML ad alanları ile çalışma (C#)](../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) ve [(Visual Basic) XML ad alanları ile çalışma](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) LINQ to XML kullanarak ad alanlarını yönetme hakkında bilgi için LINQ belgelerinde.  
   
  Bazı görevlerin ile gerçekleştirebileceğiniz yönetim ve arama <xref:System.Xml.XmlNamespaceManager> sınıfı. Daha fazla bilgi ve örnekler için her bir metot veya Özellik Başvurusu sayfasına bağlantıları izleyin.  
   

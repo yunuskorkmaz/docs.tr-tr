@@ -2,12 +2,12 @@
 title: LINQ to XML ile Diğer XML Technologies3
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 8e2a6b11e450890373de449c0a55839460b97566
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 345e777b93497f483ca30f5c42fbf5a5c146dea3
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61682410"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484315"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML ile Diğer XML Teknolojileri Karşılaştırması
 Bu konuda karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aşağıdaki XML teknolojiler: <xref:System.Xml.XmlReader>, XSLT ve MSXML XmlLite. Bu bilgiler, kullanılacak teknolojileri karar vermenize yardımcı olabilir.  
@@ -54,4 +54,4 @@ Bu konuda karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başlarken (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+- [Başlarken (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

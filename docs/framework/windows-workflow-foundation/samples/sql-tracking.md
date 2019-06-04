@@ -2,12 +2,12 @@
 title: SQL İzleme
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: f3c48b40e2d3d7dec2b9008b3de738f9b2983610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b69336e9a6fd0d3cf91c2a187412638d08490eea
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785924"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491088"
 ---
 # <a name="sql-tracking"></a>SQL İzleme
 Bu örnek nasıl yazılacağını özel SQL izleme katılımcı gösterir, bu bir SQL veritabanı'na izleme kayıtları yazar. Windows Workflow Foundation (WF) iş akışı yürütme iş akışı örneğinin görünürlük elde etmek için izleme sağlar. İzleme çalışma zamanı iş akışı iş akışı yürütülürken kayıtları izleme yayar. İş akışı izleme hakkında daha fazla bilgi için bkz: [takip ve izleme iş akışı](../workflow-tracking-and-tracing.md).
@@ -35,7 +35,7 @@ Bu örnek nasıl yazılacağını özel SQL izleme katılımcı gösterir, bu bi
   
      Yerel Hizmet WSDL adresi örneğidir `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
   
-8. Kullanarak [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], WCF test istemcisi (WcfTestClient.exe) çalıştırın. Bunu yapmak için Microsoft Visual Studio 10.0\Common7\IDE dizininde bulunur.  
+8. Dosya Gezgini'ni kullanarak WCF test istemcisi (WcfTestClient.exe) çalıştırın. Bunu yapmak için Microsoft Visual Studio 10.0\Common7\IDE dizininde bulunur.  
   
 9. WCF test İstemcisi'nde tıklayın **dosya** menü ve select **Hizmet Ekle**. Yerel hizmet adresi metin kutusuna yapıştırın. Tıklayın **Tamam** iletişim kutusunu kapatmak için.  
   

@@ -4,12 +4,12 @@ ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 72e2f49ae7c39b4a0486ec053ff1164c2d833cbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b89d135d7412f10cb9de1e4bda1aaab14b29cbf0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990099"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490776"
 ---
 # <a name="findprivatekey-sample"></a>FindPrivateKey örnek
 
@@ -46,7 +46,7 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 Projeyi indirmek için şurayı ziyaret edin [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://www.microsoft.com/download/details.aspx?id=21459).
 
-1. Açık [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] gidin *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* klasörü altında örnek yüklediğiniz dizin konumu.
+1. Dosya Gezgini'ni açın ve gidin *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* klasörü altında örnek yüklediğiniz dizin konumu.
 
 2. Visual Studio'da dosyayı açmak için bir .sln dosya simgesini çift tıklatın.
 

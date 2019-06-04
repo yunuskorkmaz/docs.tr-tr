@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 681a9e71dcfb139c364d750383f13cdabbf33366
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7beb22c68450d7ae4aeb6d0bcae45fafdfe78191
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644900"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490910"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>İş Parçacığında Yerel Depolama: İş Parçacığı Göreli Statik Alanları ve Veri Yuvaları
 Bir iş parçacığı ve uygulama etki alanı için benzersiz olan yönetilen iş parçacığı yerel depolaması (TLS) verileri depolamak için kullanabilirsiniz. .NET Framework yönetilen TLS kullanmak için iki yol sunar: iş parçacığı göreli statik alanları ve veri yuvaları.  
@@ -26,7 +26,7 @@ Bir iş parçacığı ve uygulama etki alanı için benzersiz olan yönetilen i�
   
  Yönetilmeyen C++'da, kullandığınız `TlsAlloc` yuvaları dinamik olarak ayırabilir ve `__declspec(thread)` iş parçacığı göreli depolama ayrılması gereken bir değişken bildirmek için. İş parçacığı göreli statik alanları ve veri yuvaları bu davranışı yönetilen bir sürümünü sağlayın.  
   
- İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], kullanabileceğiniz <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> nesne ilk kez kullanıldığında, gevşek başlatılır iş parçacığı-yerel nesneleri oluşturmak için sınıf. Daha fazla bilgi için [yavaş başlatma](../../../docs/framework/performance/lazy-initialization.md).  
+ .NET Framework 4'te kullanabileceğiniz <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> nesne ilk kez kullanıldığında, gevşek başlatılır iş parçacığı-yerel nesneleri oluşturmak için sınıf. Daha fazla bilgi için [yavaş başlatma](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Yönetilen TLS veri benzersizliği  
  İş parçacığı göreli statik alanları veya veri yuvaları kullanmanıza bakılmaksızın, iş parçacığı ve uygulama etki alanı birleşimi için yönetilen TLS verilerinde benzersizdir.  

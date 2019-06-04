@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf7424c8aa2ae816340f6fa641e5c79a56ae0dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811819"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491102"
 ---
 # <a name="standard-timespan-format-strings"></a>Standart TimeSpan Biçim Dizeleri
 <a name="Top"></a> Standart <xref:System.TimeSpan> biçim dizesi metin temsilini tanımlamak için bir tek biçim belirticisi kullanan bir <xref:System.TimeSpan> bir biçimlendirme işleminden kaynaklanan değeri. Beyaz boşluk da dahil olmak üzere birden fazla karakter içeren herhangi bir biçim dizesi, özel olarak yorumlanır <xref:System.TimeSpan> biçimlendirme dizesi. Daha fazla bilgi için [Custom TimeSpan Format Strings](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
@@ -64,7 +64,7 @@ ms.locfileid: "61811819"
 |*ss*|"0", "59" aralıkları saniye sayısı.|  
 |*fffffff*|İkinci bir isteğe bağlı kesirli bölümü.  Değerini "9999999" için "0000001 biçim önekini" (bir değer çizgisi veya saniyede bir on milyon) değişebilir (9,999,999 on milyonda birini veya daha az bir değer çizgisi ikinci).|  
   
- "C" biçim belirtici "g" ve "G" biçim belirticisi aksine, kültüre duyarlı değil. Dize gösterimini üreten bir <xref:System.TimeSpan> önce .NET Framework'ün tüm önceki sürümleri için ortak olan ve olmayan sabit değer [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. "c", varsayılan <xref:System.TimeSpan> biçimlendirme dizesi; <xref:System.TimeSpan.ToString?displayProperty=nameWithType> yöntemi, "c" biçim dizesini kullanarak bir zaman aralığı değeri biçimlendirir.  
+ "C" biçim belirtici "g" ve "G" biçim belirticisi aksine, kültüre duyarlı değil. Dize gösterimini üreten bir <xref:System.TimeSpan> sabit ve .NET Framework 4 önce .NET Framework'ün tüm önceki sürümleri için ortak olan değer. "c", varsayılan <xref:System.TimeSpan> biçimlendirme dizesi; <xref:System.TimeSpan.ToString?displayProperty=nameWithType> yöntemi, "c" biçim dizesini kullanarak bir zaman aralığı değeri biçimlendirir.  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> "t" ve "c" standart biçim dizesine davranışı özdeş "T" standart biçim dizeleri de destekler.  

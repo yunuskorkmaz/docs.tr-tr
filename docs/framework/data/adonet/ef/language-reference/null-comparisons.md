@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3bbb55ec65df1af776779682d307a67034e34b3
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760434"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489905"
 ---
 # <a name="null-comparisons"></a>Null Karşılaştırmalar
 A `null` değerindeki veri kaynağı değeri bilinmeyen olduğunu gösterir. İçinde [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular, denetleyebilirsiniz null değerler, bu nedenle, bazı hesaplamalar veya karşılaştırmalar yalnızca geçerli veya null olmayan, içeren satırları üzerinde gerçekleştirilen veri. CLR null semantikler, ancak veri kaynağı bir null semantiğe farklı olabilir. Çoğu veritabanı, null karşılaştırmalar işlemek için mantığı üç değerli bir sürümünü kullanın. Diğer bir deyişle, bir null değeri karşılaştırmak için değerlendirilmiyor `true` veya `false`, olarak değerlendirilen `unknown`. ANSI null değerlere uygulaması genellikle budur ancak bu her zaman böyle değildir.  
   
- SQL Server'da varsayılan olarak null eşittir null karşılaştırma null değeri döndürür. Aşağıdaki örnekte, satırları burada `ShipDate` null sonuç kümesinden dışlanan ve [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] deyimi şunu 0 satırları döndürür.  
+ SQL Server'da varsayılan olarak null eşittir null karşılaştırma null değeri döndürür. Aşağıdaki örnekte, satırları burada `ShipDate` olan null sonuç kümesinden dışlanan ve Transact-SQL deyimini 0 satırları döndürür.  
   
 ```  
 -- Find order details and orders with no ship date.  

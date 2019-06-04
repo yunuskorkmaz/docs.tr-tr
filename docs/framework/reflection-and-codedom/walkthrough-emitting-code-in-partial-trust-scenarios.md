@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8842c189abc0f82e81553a1ef33c71b3fa0bef13
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585916"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489699"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>İzlenecek yol: Kısmi Güven Senaryolarında Kod Yayma
 Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak bazı özellikler kısmen güvenilen kodda özel izinler gerektirir. Ayrıca, yansıma yayılımı, güvenlikli saydam derlemeler tarafından kısmi güven ile kullanılmak üzere tasarlanmış bir özelliği, anonim olarak barındırılan dinamik yöntemler vardır.  
   
 > [!NOTE]
->  Önce [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)], kod yaymak <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> bayrağı. Bu izin varsayılan olarak dahil edilen `FullTrust` ve `Intranet` adlandırılmış izin kümelerine, ancak içinde olmayan `Internet` izin kümesi. Yalnızca sahipse, bu nedenle, bir kitaplık kısmi güvenden kullanılabilir <xref:System.Security.SecurityCriticalAttribute> özniteliği ve ayrıca bir <xref:System.Security.PermissionSet.Assert%2A> yöntemi <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Kodlama hataları güvenlik açıklarına neden olabileceğinden tür kitaplıkların dikkatli bir güvenlik incelemesinden geçmesi gerekir. [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] Çünkü kod oluşturma herhangi bir güvenlik talebi verme doğası gereği ayrıcalıklı bir işlem değil olmadan kısmi güvenlik senaryolarına yayılmasını sağlar. Diğer bir deyişle, oluşturulan kod, yayan derlemenin daha fazla izne sahiptir. Güvenliği saydam kod yayan ve ihtiyacını kaldırır kitaplıkları böylece <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, böylece güvenli bir kitaplık yazmak gibi kapsamlı bir güvenlik incelemesi gerektirmez.  
+>  .NET Framework 3.5, kod yaymak önce <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> bayrağı. Bu izin varsayılan olarak dahil edilen `FullTrust` ve `Intranet` adlandırılmış izin kümelerine, ancak içinde olmayan `Internet` izin kümesi. Yalnızca sahipse, bu nedenle, bir kitaplık kısmi güvenden kullanılabilir <xref:System.Security.SecurityCriticalAttribute> özniteliği ve ayrıca bir <xref:System.Security.PermissionSet.Assert%2A> yöntemi <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Kodlama hataları güvenlik açıklarına neden olabileceğinden tür kitaplıkların dikkatli bir güvenlik incelemesinden geçmesi gerekir. [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] Çünkü kod oluşturma herhangi bir güvenlik talebi verme doğası gereği ayrıcalıklı bir işlem değil olmadan kısmi güvenlik senaryolarına yayılmasını sağlar. Diğer bir deyişle, oluşturulan kod, yayan derlemenin daha fazla izne sahiptir. Güvenliği saydam kod yayan ve ihtiyacını kaldırır kitaplıkları böylece <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, böylece güvenli bir kitaplık yazmak gibi kapsamlı bir güvenlik incelemesi gerektirmez.  
   
  Bu izlenecek yol aşağıdaki görevleri gösterir:  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d530f37c979a1ecddf2cb3895234aab2f7556b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698167"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489622"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess Yöntemi
 Ortak dil çalışma zamanı (CLR) modül işleme yüklendiğinde karşılık gelen Icordebugprocess arabirimi alır.  
@@ -78,7 +78,7 @@ HRESULT OpenVirtualProcess(
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[Iclrdebugginglibraryprovider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) geri çağırma bir hata döndürür veya geçerli bir tanıtıcı sağlamaz.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` çalışma zamanının bu sürümü için gerekli verileri hedef arabirimi uygulamıyor.|  
 |CORDBG_E_NOT_CLR|Belirtilen modül bir CLR modülünü değil. Bir CLR modül bellek bozulmuş, modül kullanılabilir olmadığı veya CLR sürümünün dolgu sürümden daha sonraki algılanamıyor olduğunda bu HRESULT da döndürülür.|  
-|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Bu çalışma zamanı sürümü, bu hata ayıklama modelini desteklemiyor. Şu anda, hata ayıklama modeli önce CLR sürümleri tarafından desteklenmeyen [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. `pwszVersion` Çıkış parametresi doğru değer yine de bu hatadan sonra ayarlanır.|  
+|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Bu çalışma zamanı sürümü, bu hata ayıklama modelini desteklemiyor. Şu anda, hata ayıklama modeli CLR sürümleri önce .NET Framework 4'tarafından desteklenmiyor. `pwszVersion` Çıkış parametresi doğru değer yine de bu hatadan sonra ayarlanır.|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|Bu hata ayıklayıcı desteği iddia sürümünden büyük CLR sürümüdür. `pwszVersion` Çıkış parametresi doğru değer yine de bu hatadan sonra ayarlanır.|  
 |E_NO_INTERFACE|`riidProcess` Arabirimi kullanılabilir değil.|  
 |CORDBG_E_UNSUPPORTED_VERSION_STRUCT|`CLR_DEBUGGING_VERSION` Yapısı için tanınan bir değer yok `wStructVersion`. Şu anda yalnızca kabul edilen değeri 0'dır.|  

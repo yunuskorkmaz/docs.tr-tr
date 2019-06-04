@@ -2,12 +2,12 @@
 title: Kod Tırnak İşaretleri
 description: Hakkında bilgi edinin F# kod tırnak işaretleri, oluşturmak ve bunlarla çalışmak sağlayan bir dil özelliği F# ifadeleri programlı bir şekilde kod.
 ms.date: 05/16/2016
-ms.openlocfilehash: 464df5e3fafa683c93fd5fb6e94d24c229903491
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5523d54a271ad1c53c6de85f37f261e0ecf6cced
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641999"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490799"
 ---
 # <a name="code-quotations"></a>Kod Tırnak İşaretleri
 
@@ -39,9 +39,7 @@ Ancak, aşağıdaki ifadeler geçerlidir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
-Kod tırnak işaretleri kullanmak için içeri aktarma bildirimi ekleyin (kullanarak `open` anahtar sözcüğü) açılır [Microsoft.FSharp.Quotations](https://msdn.microsoft.com/library/e9ce8a3a-e00c-4190-bad5-cce52ee089b2) ad alanı.
-
-F# PowerPack değerlendirmek ve yürütme için destek sağlar F# ifade nesneleri.
+Evalutate için F# teklifleri kullanmalıdır [ F# tırnak değerlendirici](https://github.com/fsprojects/FSharp.Quotations.Evaluator). Değerlendirme ve yürütme için destek sağlar F# ifade nesneleri.
 
 ## <a name="expr-type"></a>İfade türü
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7241dfb7e31ed2f83bf7af0ecc6bf0d97363b999
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: a47946ab8eb26045e641c44642bfe7a026269f3d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960365"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486335"
 ---
 # <a name="managed-threading-basics"></a>Yönetilen iş parçacığı oluşturma temelleri
 
@@ -24,7 +24,7 @@ Bu bölümün ilk beş konular, yönetilen iş parçacığı kullanılacağını
  Bu bölümde kapak konularındaki geri kalanı Windows işletim sistemi ile yönetilen iş parçacığı etkileşimi gibi konuları, Gelişmiş.  
   
 > [!NOTE]
->  İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], görev paralel kitaplığı ve PLINQ'da çok iş parçacıklı programlarda görev ve veri paralelliği için API'leri sağlar. Daha fazla bilgi için [paralel programlama](../../../docs/standard/parallel-programming/index.md).  
+>  .NET Framework 4'te, görev paralel kitaplığı ve PLINQ'da, çok iş parçacıklı programlarda görev ve veri paralelliği için API'leri sağlar. Daha fazla bilgi için [paralel programlama](../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>Bu bölümde
 

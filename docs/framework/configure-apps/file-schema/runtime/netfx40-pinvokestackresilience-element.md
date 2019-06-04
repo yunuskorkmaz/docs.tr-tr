@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60fcdd902c6acf919e68806ff65e3b8142533280
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: f7a1cf34f63b1ba0dfced8ff23c252f3363723c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456388"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489403"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<Netfx40_pınvokestackresilience > öğesi
 Olup çalışma zamanı düzeltmeleri yanlış platform çağırma bildirimler arasında yavaş geçişler, çalışma zamanında otomatik olarak yönetilen ve yönetilmeyen kod belirtir.  
@@ -40,7 +40,7 @@ Olup çalışma zamanı düzeltmeleri yanlış platform çağırma bildirimler a
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`0`|Çalışma zamanı sürümünde mimarisi hazırlama daha hızlı bir şekilde birlikte çalışma kullanır [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], hangi algılamazsa ve düzeltme yanlış platform çağırma bildirimleri. Bu varsayılandır.|  
+|`0`|Çalışma zamanı, .NET Framework, algılamadığı 4'te tanıtılan mimarisi hazırlama daha hızlı bir şekilde birlikte çalışma kullanır ve düzeltme yanlış platform çağırma bildirimleri. Bu varsayılandır.|  
 |`1`|Algılayan ve yanlış platform düzeltme çalışma zamanı kullanan daha yavaş geçişleri bildirimleri çağırın.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f098065cc005c59ec558ffa1f95202715624e7d
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 70113d98c5a4ab41700f6c9842dba89e2b49c297
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456108"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489334"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<Usesmallınternalthreadstacks > öğesi
 Ortak dil çalışma zamanı (CLR) bellek miktarını azaltmak istekleri, dahili olarak, bu iş parçacıkları için varsayılan yığın boyutu kullanmak yerine kullanan belirli iş parçacıklarını oluşturduğunda açık yığın boyutlarını belirterek kullanır.  
@@ -41,7 +41,7 @@ Ortak dil çalışma zamanı (CLR) bellek miktarını azaltmak istekleri, dahili
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |true|Açık yığın boyutlarını isteyin.|  
-|false|Varsayılan yığın boyutunu kullanın. İçin varsayılan [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|false|Varsayılan yığın boyutunu kullanın. Bu, .NET Framework 4 için varsayılan değerdir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  

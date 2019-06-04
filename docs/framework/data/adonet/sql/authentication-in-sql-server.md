@@ -2,12 +2,12 @@
 title: SQL Server’da Kimlik Doğrulaması
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 94de49fe89f2b7f4aabaade624e960202f9973bf
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5809a75dbadffbd2528f6882aa586aecd3232408
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877455"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490091"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server’da Kimlik Doğrulaması
 SQL Server, iki kimlik doğrulama modu, Windows kimlik doğrulama modu ve karma mod destekler.  
@@ -46,7 +46,7 @@ SQL Server, iki kimlik doğrulama modu, Windows kimlik doğrulama modu ve karma 
 - ASP.NET gibi Internet uygulamaları.  
   
 > [!NOTE]
->  Belirten Windows kimlik doğrulaması, SQL Server oturumu devre dışı bırakmaz. ALTER oturum açma devre dışı kullanın [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] üst düzeyde ayrıcalıklı SQL Server oturum açma devre dışı bırakma bildirimi.  
+>  Belirten Windows kimlik doğrulaması, SQL Server oturumu devre dışı bırakmaz. Üst düzeyde ayrıcalıklı SQL Server oturum açma devre dışı bırakmak için ALTER oturum açma devre dışı Transact-SQL deyimini kullanın.  
   
 ## <a name="login-types"></a>Oturum açma türleri  
  SQL Server oturumu açma üç türlerini destekler:  

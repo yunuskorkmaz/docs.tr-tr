@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51bf359ea6ba4e5b45827928a50a095a7960a68f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 5bbf579540ccb93101dba05c5b2577ae8f24ec09
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456705"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486516"
 ---
 # <a name="shadow-copying-assemblies"></a>Gölge Kopyalama Derlemeleri
 Gölge kopyalama etki alanını kaldırmadan güncelleştirilmesi için bir uygulama etki alanında kullanılan etkinleştirir derlemeler. Bu, özellikle sürekli olarak ASP.NET siteleri gibi kullanılabilir olması gereken uygulamalar için yararlıdır.  
@@ -32,7 +32,7 @@ Gölge kopyalama etki alanını kaldırmadan güncelleştirilmesi için bir uygu
   
 - [Etkinleştirme ve kullanma gölge kopyalama](#EnablingAndUsing) temel kullanımı ve gölge kopyalama için kullanılabilir seçenekleri açıklar.  
   
-- [Başlangıç performansı](#StartupPerformance) içinde kopyalama gölge yapılan değişiklikleri açıklar [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] başlangıç performansı ve önceki sürümleri davranışa dönmek nasıl geliştirmek için.  
+- [Başlangıç performansı](#StartupPerformance) başlangıç performansı ve önceki sürümleri davranışa dönmek nasıl geliştirmek için .NET Framework 4'te kopyalama gölge yapılan değişiklikleri açıklar.  
   
 - [Eski yöntemler](#ObsoleteMethods) özellikleri ve yöntemleri için bu denetim gölge içinde kopyalama yapılan değişiklikleri açıklar [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)].  
   

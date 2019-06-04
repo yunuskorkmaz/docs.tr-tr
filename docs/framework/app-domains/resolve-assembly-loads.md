@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed4533c934120c3400ddba68e65bc82aabc9370
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 350cc91a2d423bc40cc44466e679db769daac1d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456777"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486978"
 ---
 # <a name="resolving-assembly-loads"></a>Derleme Yüklerini Çözme
 .NET Framework sağlar <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay yüklenirken derleme üzerinde daha fazla denetim gerektiren uygulamalar için. Bu olayını işleyerek, uygulamanız hangisinin birkaç derleme sürümlerini yüklemek için dinamik bir derleme yayılamıyor ve döndürün. yük bağlamdan normal algılama yolları, select dışındaki bir derlemeyi yüklemek vb. Bu konuda işleme yönelik yönergeler sağlanmaktadır <xref:System.AppDomain.AssemblyResolve> olay.  
@@ -52,7 +52,7 @@ ms.locfileid: "66456777"
 > [!NOTE]
 >  İşleyicinin derleme load-from bağlamı, yükleme bağlamı veya bağlam olmadan içine yüklemeniz gerekir. İşleyicinin derleme salt yansıma bağlamına kullanarak yükler, <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> yöntemi, yükleme denemesi başlatan <xref:System.AppDomain.AssemblyResolve> event başarısız olur.  
   
- Uygun bir derleme döndürmek için olay işleyicisinin sorumluluğundadır. İşleyicinin istenen derlemenin görünen adını geçirerek ayrıştırabilirsiniz <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> özellik değerini <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> Oluşturucusu. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], işleyici kullanabilirsiniz <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> geçerli istek başka bir derlemenin bir bağımlılık olup olmadığını belirlemek için özellik. Bu bilgiler bağımlılığını yerine getirecek bir derleme belirlemenize yardımcı olabilir.  
+ Uygun bir derleme döndürmek için olay işleyicisinin sorumluluğundadır. İşleyicinin istenen derlemenin görünen adını geçirerek ayrıştırabilirsiniz <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> özellik değerini <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> Oluşturucusu. .NET Framework 4 ile başlayarak, işleyici kullanabilirsiniz <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> geçerli istek başka bir derlemenin bir bağımlılık olup olmadığını belirlemek için özellik. Bu bilgiler bağımlılığını yerine getirecek bir derleme belirlemenize yardımcı olabilir.  
   
  Olay işleyicisi, istenen sürümden derlemenin farklı bir sürümünü geri dönebilirsiniz.  
   

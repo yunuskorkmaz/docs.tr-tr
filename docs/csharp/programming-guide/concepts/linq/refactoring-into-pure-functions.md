@@ -2,12 +2,12 @@
 title: Saf işlevler halinde (C#) yeniden düzenleme
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 3a498588e9ca1ab85602946b75b593804fa0953a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0ddf3eb937f0ff9ee6b0ce289d73be7640499ba4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596891"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483981"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Saf işlevler halinde (C#) yeniden düzenleme
 
@@ -24,7 +24,7 @@ Saf işlevsel dönüşümlere önemli bir yönüdür saf işlevler kullanarak ko
   
  Yollarından fonksiyonel programlama için geçiş, gereksiz yan etkileri ve dış bağımlılıkları ortadan kaldırmak için mevcut kodu yeniden düzenleyin sağlamaktır. Bu şekilde, varolan kod sürümlerini saf işlev oluşturabilirsiniz.  
   
- Bu konuda ele alınmıştır saf işlev ne olduğunu ve ne değildir. [Öğreticisi: WordprocessingML belgesindeki içeriği düzenleme (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) öğretici WordprocessingML belgesinin işlemek nasıl gösterir ve nasıl saf işlev kullanarak yeniden düzenleme için iki örnek verilmiştir.  
+ Bu konuda ele alınmıştır saf işlev ne olduğunu ve ne değildir. [Öğreticisi: WordprocessingML belgesindeki içeriği düzenleme (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) öğretici WordprocessingML belgesinin işlemek nasıl gösterir ve nasıl saf işlev kullanarak yeniden düzenleme için iki örnek verilmiştir.  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Yan etkiler ve dış bağımlılıkları ortadan kaldırır.  
  Aşağıdaki örnekler, iki saf olmayan işlevler ve saf işlev karşılaştırın.  

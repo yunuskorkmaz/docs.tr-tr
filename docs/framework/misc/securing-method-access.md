@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9d423ef71b76b2dcbbf2812e13850922fb50ac0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8be971cee4aa2ae09745a090396269c80ca62198
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625886"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487953"
 ---
 # <a name="securing-method-access"></a>Yöntem Erişiminin Güvenliğini Sağlama
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -60,7 +60,7 @@ public class Class1
  Bu bölümde gösterilen bildirimler, kısmen güvenilen kod tarafından kullanılan sınıflar ve yöntemler, yanı sıra özellikleri ve olayları, engellemek için kullanın. Bu bildirimleri bir sınıfa uygulandığında, koruma tüm, yöntemler, özellikler ve olaylar için geçerlidir; alan erişimini tarafından bildirim temelli güvenlik etkilenmez ancak unutmayın. Ayrıca, bağlantı talepleri yalnızca anında arayanlar karşı korumaya yardımcı olmak ve hala saldırıları luring tabi olabilir unutmayın.  
   
 > [!NOTE]
->  Yeni bir saydamlık modeli içindeki sunulan [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. [Güvenliği saydam kod, 2. düzey](../../../docs/framework/misc/security-transparent-code-level-2.md) modeli ile güvenli kod tanımlayan <xref:System.Security.SecurityCriticalAttribute> özniteliği. Güvenlik açısından kritik kod, Arayanların ve devralanlar tam güvenilir olmasını gerektirir. Önceki .NET Framework sürümlerinden kod erişim güvenliği kuralları altında çalışan derlemeler, Düzey 2 derlemeler çağırabilirsiniz. Bu durumda, güvenlik açısından kritik öznitelikleri tam güven için bağlantı talepleri olarak kabul edilir.  
+>  Yeni bir saydamlık modeli, .NET Framework 4'te sunulmuştur. [Güvenliği saydam kod, 2. düzey](../../../docs/framework/misc/security-transparent-code-level-2.md) modeli ile güvenli kod tanımlayan <xref:System.Security.SecurityCriticalAttribute> özniteliği. Güvenlik açısından kritik kod, Arayanların ve devralanlar tam güvenilir olmasını gerektirir. Önceki .NET Framework sürümlerinden kod erişim güvenliği kuralları altında çalışan derlemeler, Düzey 2 derlemeler çağırabilirsiniz. Bu durumda, güvenlik açısından kritik öznitelikleri tam güven için bağlantı talepleri olarak kabul edilir.  
   
  Tanımlayıcı adlı derlemeler içinde bir [LinkDemand](../../../docs/framework/misc/link-demands.md) tüm genel olarak erişilebilir yöntemler, özellikler ve bunların kullanılması için tam olarak güvenilmeyen bir çağırıcıya sıralamadaki kısıtlamak için olayları uygulanır. Bu özellik devre dışı bırakmak için uygulamalısınız <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliği. Bu nedenle, güvenilmeyen çağıranlar dışlanacak sınıfları açıkça işaretleme yalnızca imzasız derlemeler veya bu özniteliğe sahip derlemeler için gereklidir. Güvenilmeyen arayanlar için amaçlanmayan türleri kümesini sıralamadaki işaretlemek için bu bildirimleri kullanabilirsiniz.  
   

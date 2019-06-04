@@ -2,12 +2,12 @@
 title: ADO.NET’te Veri İzleme
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 120a9e2a817401ba04e0dce8052caecb83115e0e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583773"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489526"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET’te Veri İzleme
 
@@ -41,7 +41,7 @@ Bağlantı işlemleri için bir istemci ADO.NET gönderir bağlantı kimliği. B
 
 ADO.NET bir iş parçacığına özgü etkinlik kimliğini de gönderir. TRACK_CAUSALITY seçeneği etkin oturumları başlattıysanız, etkinlik kimliği genişletilmiş olaylar oturumunda yakalanır. Etkin bir bağlantı ile performans sorunlarını için istemcinin veri erişim izlemesinden etkinlik kimliği alabilirsiniz (`ActivityID` alan) ve etkinlik kimliği genişletilmiş olaylar çıktısında bulun. Genişletilmiş olaylar etkinlik Kimliğini dört bayt sıralı numara ekli bir 16 baytlık (değil GUID istemci bağlantı kimliği aynı) GUID'dir. Sıra numarası, bir isteğin bir iş parçacığından sırayı temsil eder ve toplu işlem ve iş parçacığı için RPC deyimleri göreli sıralamasını belirtir. `ActivityID` SQL toplu deyimleri ve RPC istekleri için veri erişimini izlemeye etkinleştirilir ve yapılandırma word izleme veri erişimi 18 bit açık olduğunda şu anda isteğe bağlı olarak gönderilir.
 
-Kullanan bir örnek verilmiştir [!INCLUDE[tsql](../../../../includes/tsql-md.md)] RPC ve toplu işlemler üzerinde bir istemciden gönderilen bir halka arabelleği içinde depolanır ve etkinlik kimliği kaydedilecek bir genişletilmiş olaylar oturumu başlatmak için.
+Bir halka arabelleği içinde depolanır ve RPC ve toplu işlemler bir istemciye gönderilen etkinlik kimliği kaydedilecek bir genişletilmiş olaylar oturumu başlatmak için Transact-SQL kullanan bir örnek verilmiştir.
 
 ```sql
 create event session MySession on server

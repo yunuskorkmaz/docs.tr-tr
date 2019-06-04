@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 996ea7802473817594420a108470f7604170482e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 23c1bf7412f18674e87896949e0b57ff8bd60d14
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456796"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489590"
 ---
 # <a name="garbage-collection-and-performance"></a>Çöp Toplama ve Performans
 <a name="top"></a> Bu konu, atık toplama ve bellek kullanımı ile ilgili sorunları açıklar. Yönetilen yığınla ilgili sorunları ele alır ve çöp toplamanın uygulamalarınız üzerindeki etkisinin nasıl en aza indirgenebileceğini açıklar. Her başlıkta, problemleri araştırmak için kullanabileceğiniz prosedürlerin bağlantıları yer alır.  
@@ -44,7 +44,7 @@ ms.locfileid: "66456796"
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>Çöp Toplama ETW Olayları  
- Windows için olay izleme (ETW), .NET Framework tarafından sağlanan ve profil oluşturma ile hata ayıklama desteğini tamamlayan bir izleme sistemidir. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], [çöp toplama ETW olayları](../../../docs/framework/performance/garbage-collection-etw-events.md) Yönetilen yığın istatistiksel bir açısından analiz etmek için yararlı bilgiler yakalayın. Örneğin, çöp toplama olayı gerçekleşmek üzereyken oluşturulan `GCStart_V1` olayı, aşağıdaki bilgileri sağlar:  
+ Windows için olay izleme (ETW), .NET Framework tarafından sağlanan ve profil oluşturma ile hata ayıklama desteğini tamamlayan bir izleme sistemidir. .NET Framework 4 ile başlayarak [çöp toplama ETW olayları](../../../docs/framework/performance/garbage-collection-etw-events.md) Yönetilen yığın istatistiksel bir açısından analiz etmek için yararlı bilgiler yakalayın. Örneğin, çöp toplama olayı gerçekleşmek üzereyken oluşturulan `GCStart_V1` olayı, aşağıdaki bilgileri sağlar:  
   
 - Hangi nesne neslinin toplandığı.  
   

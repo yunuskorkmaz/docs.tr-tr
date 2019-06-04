@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 5165f3ec1ef41e3fb0dd053c112610183197108a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dca5830a73d0f4374302862e7ccdffdf9dc48cb2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877440"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490114"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server Bağlantı Havuzu (ADO.NET)
 Veritabanı sunucusuna bağlanması, zaman birkaç adımdan oluşur. Bir yuva ya da bir adlandırılmış kanal gibi fiziksel bir kanal, sunucu ile ilk el sıkışma gerçekleşmelidir, oluşturulmalıdır bağlantı dizesi bilgilerini ayrıştırıldığında, bağlantı sunucu tarafından doğrulanması, denetimleri kaydetme için çalıştırılması gerekir Geçerli işlem ve benzeri.  
@@ -99,7 +99,7 @@ Bağlantı kapatma ve açma ile ilgili olaylar hakkında daha fazla bilgi için 
 ### <a name="pool-fragmentation-due-to-many-databases"></a>Havuzu parçalanması nedeniyle çok sayıda veritabanı  
  Çoğu Internet hizmet sağlayıcıları, çeşitli Web sitelerini tek bir sunucu üzerinde barındırın. Bunlar, Forms kimlik doğrulaması oturum açma onaylayın ve ardından bu kullanıcı veya kullanıcı grubu için belirli bir veritabanına bir bağlantı açmak için tek bir veritabanı kullanabilir. Kimlik doğrulama veritabanı bağlantısı havuza ve herkes tarafından kullanılır. Ancak, ayrı bir havuz sunucuya bağlantı sayısını artırmak her veritabanı için bağlantı yoktur.  
   
- Uygulama tasarımı, yan etkisi de budur. SQL sunucusuna bağlandığınızda, güvenliği tehlikeye atmadan bu yan etkiyi önlemek için görece basit bir yolu yoktur. Her bir kullanıcı veya grup için ayrı bir veritabanına bağlanma, yerine sunucuda aynı veritabanına bağlanmak ve yürüten [!INCLUDE[tsql](../../../../includes/tsql-md.md)] istenen veritabanına değiştirmek için deyimi kullanın. Aşağıdaki kod parçası, bir ilk bağlantı oluşturma gösterilmektedir `master` veritabanını ve ardından belirtilen istenen veritabanı derlemesine geçme `databaseName` string değişkeni.  
+ Uygulama tasarımı, yan etkisi de budur. SQL sunucusuna bağlandığınızda, güvenliği tehlikeye atmadan bu yan etkiyi önlemek için görece basit bir yolu yoktur. Her bir kullanıcı veya grup için ayrı bir veritabanına bağlanma, yerine sunucuda aynı veritabanına bağlanmak ve istenen veritabanına değiştirmek için Transact-SQL kullanım deyimi yürütebilirsiniz. Aşağıdaki kod parçası, bir ilk bağlantı oluşturma gösterilmektedir `master` veritabanını ve ardından belirtilen istenen veritabanı derlemesine geçme `databaseName` string değişkeni.  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  

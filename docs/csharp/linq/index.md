@@ -3,12 +3,12 @@ title: C# dil ile tümleşik sorgu (LINQ)
 description: C# dil ile tümleşik sorgu (LINQ) sunar.
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-ms.openlocfilehash: 5a5c33f41a668835e7b83f1f717fa5605e53e010
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fe408210b30b5f6118dc66b4c8f7057fb6654881
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633908"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66482987"
 ---
 # <a name="language-integrated-query-linq"></a>Dil ile Tümleşik Sorgu (LINQ)
 
@@ -42,7 +42,7 @@ Aşağıdaki örnek, tam bir sorgu işlemi gösterilmektedir. Veri kaynağı olu
 
 LINQ hakkında daha fazla bilgi edinmek için bazı temel kavramları hakkında bilgi sahibi olma Başlat [sorgu ifadesi Temelleri](query-expression-basics.md), ve ardından, olduğu ilgilenen LINQ teknolojisi için belgeleri okuyun:
 
-- XML belgeleri: [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml.md)
+- XML belgeleri: [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml-overview.md)
 
 - ADO.NET varlık çerçevesi: [LINQ to entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 

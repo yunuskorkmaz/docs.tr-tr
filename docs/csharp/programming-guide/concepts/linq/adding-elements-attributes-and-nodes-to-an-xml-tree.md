@@ -2,12 +2,12 @@
 title: (C#) XML ağacına öğe, öznitelik ve düğümleri ekleme
 ms.date: 07/20/2015
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-ms.openlocfilehash: 87b63df1011af9594ff44bed6385f9d82dee08a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fee03dd2ba0818778afb3447e8930a2c2567b067
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702535"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486229"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>(C#) XML ağacına öğe, öznitelik ve düğümleri ekleme
 Varolan bir XML ağacına içeriği (öğe, öznitelik, yorumlar, işleme yönergeleri, metin ve CDATA) ekleyebilirsiniz.  
@@ -77,6 +77,3 @@ Console.WriteLine(xmlTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [(LINQ to XML) XML ağaçlarını değiştirme (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

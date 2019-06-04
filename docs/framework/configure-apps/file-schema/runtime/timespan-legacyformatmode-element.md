@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38adde3cd51a96f0e15ed5a0c539e088f2d3b480
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31e2a075f9202439cd62c81a06528b20c4971656
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701638"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489342"
 ---
 # <a name="timespanlegacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > öğesi
 Çalışma zamanı işlemleriyle biçimlendirmede eski davranışı korur olup olmadığını belirler <xref:System.TimeSpan?displayProperty=nameWithType> değerleri.  
@@ -58,7 +58,7 @@ ms.locfileid: "61701638"
 |`runtime`|Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İle başlayarak [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], <xref:System.TimeSpan?displayProperty=nameWithType> Implements yapısı <xref:System.IFormattable> arabirimi ve biçimlendirme işlemleri ile standart ve özel biçim dizeleri destekler. Bir ayrıştırma yönteminin bir desteklenmeyen biçim belirticisi veya biçim dizesi karşılaşırsa, oluşturur bir <xref:System.FormatException>.  
+ .NET Framework 4 ile başlayarak <xref:System.TimeSpan?displayProperty=nameWithType> Implements yapısı <xref:System.IFormattable> arabirimi ve biçimlendirme işlemleri ile standart ve özel biçim dizeleri destekler. Bir ayrıştırma yönteminin bir desteklenmeyen biçim belirticisi veya biçim dizesi karşılaşırsa, oluşturur bir <xref:System.FormatException>.  
   
  .NET Framework'ün önceki sürümlerindeki <xref:System.TimeSpan> uygulamaz yapısı <xref:System.IFormattable> ve biçim dizeleri desteklemiyor. Ancak, birçok geliştiricinin yanlışlıkla kabul eden <xref:System.TimeSpan> bir dizi biçim dizesini desteklemediği ve kullanılan [bileşik biçimlendirme işlemleri](../../../../../docs/standard/base-types/composite-formatting.md) gibi yöntemlerle <xref:System.String.Format%2A?displayProperty=nameWithType>. Normalde, bir tür uyguluyorsa <xref:System.IFormattable> ve destekler biçim dizeleri, biçimlendirme yöntemlerine desteklenmeyen bir biçimde çağrı dizeler genellikle throw bir <xref:System.FormatException>. Ancak, çünkü <xref:System.TimeSpan> uygulamaz <xref:System.IFormattable>, çalışma zamanı biçim dizesi yoksayıldı ve bunun yerine adlı <xref:System.TimeSpan.ToString?displayProperty=nameWithType> yöntemi. Biçim dizeleri, biçimlendirme işlemi üzerinde hiçbir etkisi olmasına rağmen varlıklarını neden değil, yani bir <xref:System.FormatException>.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "61701638"
 12:30:45  
 ```  
   
- Örneği çalıştırmak, bu ile çıktısı farklıdır [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] veya sonraki bir sürümü:  
+ .NET Framework 4 veya sonraki bir sürümü örneği çalıştırırsanız bu çıkışı ile farklıdır:  
   
 ```  
 Invalid Format  
 ```  
   
- Ancak, örneği aşağıdaki yapılandırma dosyası eklerseniz dizinine ve sonra örneği çalıştırırsanız [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] veya sonraki bir sürümünü çıktı, çalıştırıldığında örnek tarafından oluşturulanla aynıdır [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ Ancak örneğin dizinine şu yapılandırma dosyasını ekleyin ve sonra .NET Framework 4 veya sonraki bir sürümü örneği çalıştırırsanız, çıkış, çalıştırıldığında örnek tarafından oluşturulanla aynıdır [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
   
 ```xml  
 <?xml version ="1.0"?>  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 36c3f139564b39555370cd5d41133f39c6b271bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456563"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487838"
 ---
 # <a name="security-transparent-code-level-2"></a>Güvenliği Saydam Kod, 2. Düzey
 
@@ -22,7 +22,7 @@ ms.locfileid: "66456563"
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-Düzey 2 saydamlık öğesinde tanıtılmıştır [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Bu modelin üç İlkesi saydam kod güvenlik güvenli kritik kod ve güvenlik açısından kritik kod ' dir.
+Düzey 2 saydamlık, .NET Framework 4'te tanıtıldı. Bu modelin üç İlkesi saydam kod güvenlik güvenli kritik kod ve güvenlik açısından kritik kod ' dir.
 
 - Saydam kod tam güven çalışan kodu da dahil olmak üzere, diğer saydam kod veya yalnızca güvenlik-güvenli-kritik kodu çağırabilir. Yalnızca, (varsa) ayarlayın etki alanının kısmi güven izni tarafından izin verilen eylemleri de gerçekleştirebilir. Saydam kod aşağıdaki işlemleri yapamaz:
 

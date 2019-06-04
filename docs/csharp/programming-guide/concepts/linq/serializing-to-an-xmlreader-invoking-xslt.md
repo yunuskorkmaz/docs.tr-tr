@@ -2,12 +2,12 @@
 title: (Çağrılıyor XSLT) XmlReader'a serileştirme (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cc3ee03-ef4c-429b-a408-fedd10b728cd
-ms.openlocfilehash: 7faf86badad116d9e6ea920d9d745261c078c43c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b079fe05fa8c230f644e011dcb62ec54f55cae60
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680863"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487185"
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>(Çağrılıyor XSLT) XmlReader'a serileştirme (C#)
 Kullanırken <xref:System.Xml?displayProperty=nameWithType> birlikte çalışabilirlik özelliklerini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], kullanabileceğiniz <xref:System.Xml.Linq.XNode.CreateReader%2A> oluşturmak için bir <xref:System.Xml.XmlReader>. Buradan okur Modülü <xref:System.Xml.XmlReader> XML ağacından düğümleri okur ve bunları uygun şekilde işler.  
@@ -61,4 +61,4 @@ Console.WriteLine(newTree);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Serileştirmek XML ağaçları (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [Serileştirmek XML ağaçları (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

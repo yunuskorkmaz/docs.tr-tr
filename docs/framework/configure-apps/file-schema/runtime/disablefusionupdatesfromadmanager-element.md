@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27c8c1cac68aca1c40826ff549d62d9636d9b0c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c96d5aea150c0dbb55889e9fc26417e7803a155
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704914"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487670"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager > öğesi
 Uygulama etki alanı için yapılandırma ayarlarını geçersiz kılmak çalışma zamanı ana bilgisayarı izin vermek için varsayılan davranışı devre dışı bırakılıp bırakılmadığını belirtir.  
@@ -40,7 +40,7 @@ Uygulama etki alanı için yapılandırma ayarlarını geçersiz kılmak çalı�
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|0|Fusion ayarları geçersiz kılma yeteneği devre dışı bırakmayın. İle başlayarak varsayılan, davranıştır [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|0|Fusion ayarları geçersiz kılma yeteneği devre dışı bırakmayın. .NET Framework 4 ile başlayarak varsayılan davranışı budur.|  
 |1.|Fusion ayarları geçersiz kılma yeteneği devre dışı bırakın. Bu, .NET Framework'ün önceki sürümlerinde, davranıştır döner.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -54,7 +54,7 @@ Uygulama etki alanı için yapılandırma ayarlarını geçersiz kılmak çalı�
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İle başlayarak [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], izin vermek için varsayılan davranıştır <xref:System.AppDomainManager> kullanarak yapılandırma ayarlarını geçersiz kılmak için nesne <xref:System.AppDomainSetup.ConfigurationFile%2A> özelliği veya <xref:System.AppDomainSetup.SetConfigurationBytes%2A> yöntemi <xref:System.AppDomainSetup> uygulamanız için geçirilen nesne ' ın <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> yönteminde, öğesinin <xref:System.AppDomainManager>. Varsayılan uygulama etki alanı için ayarları değiştirmeniz, uygulama yapılandırma dosyasında belirtilen ayarları geçersiz kılar. Diğer uygulama etki alanları için bunlar için geçirilmiş yapılandırma ayarları geçersiz kılar <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> veya <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> yöntemi.  
+ .NET Framework 4 ile başlayarak izin vermek için varsayılan davranış olduğu <xref:System.AppDomainManager> kullanarak yapılandırma ayarlarını geçersiz kılmak için nesne <xref:System.AppDomainSetup.ConfigurationFile%2A> özelliği veya <xref:System.AppDomainSetup.SetConfigurationBytes%2A> yöntemi <xref:System.AppDomainSetup> uygulamanız için geçirilen nesne ' ın <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> yönteminde, öğesinin <xref:System.AppDomainManager>. Varsayılan uygulama etki alanı için ayarları değiştirmeniz, uygulama yapılandırma dosyasında belirtilen ayarları geçersiz kılar. Diğer uygulama etki alanları için bunlar için geçirilmiş yapılandırma ayarları geçersiz kılar <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> veya <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> yöntemi.  
   
  Yeni yapılandırma bilgilerini geçirmek veya null değeri geçirmeye (`Nothing` Visual Basic'te) geçirilen yapılandırma bilgilerini ortadan kaldırmak için.  
   

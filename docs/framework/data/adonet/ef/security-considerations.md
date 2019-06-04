@@ -2,12 +2,12 @@
 title: Güvenlik konuları (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879928"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489840"
 ---
 # <a name="security-considerations-entity-framework"></a>Güvenlik konuları (varlık çerçevesi)
 Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konuları açıklanmaktadır. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamalar. Güvenli .NET Framework uygulamaları oluşturmaya yönelik önerileri de izlemelidir. Daha fazla bilgi için [güvenliğine genel bakış](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -92,7 +92,7 @@ Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konu
  Aşağıdaki güvenlik hususlarını kavramsal model sorgulanırken uygulayın. Bu noktalar uygulamak [!INCLUDE[esql](../../../../../includes/esql-md.md)] EntityClient kullanan sorgular ve LINQ, kullanarak nesne sorgularını [!INCLUDE[esql](../../../../../includes/esql-md.md)]ve Sorgu Oluşturucu yöntemleri.  
   
 #### <a name="prevent-sql-injection-attacks"></a>SQL ekleme saldırıları engeller.  
- Uygulamaları sık dış girişi (bir kullanıcı veya başka bir dış aracı) alan ve bu giriş temelinde eylemleri gerçekleştirebilirsiniz. Herhangi bir kullanıcı veya bir dış aracı doğrudan veya dolaylı olarak türetilmiş giriş izinsiz eylemler gerçekleştirmek için hedef dili söz dizimini kullanan içerik olabilir. Hedef dil olduğunda bir yapılandırılmış sorgu dili (SQL), aşağıdakiler gibi [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], bu işleme, SQL ekleme saldırısına bilinir. Kötü niyetli bir kullanıcı sorguyu doğrudan komutları ekleme ve bir veritabanı tablosu bırakın, hizmet reddine neden veya aksi halde gerçekleştirilmekte olan işlemin yapısını değiştirebilirsiniz.  
+ Uygulamaları sık dış girişi (bir kullanıcı veya başka bir dış aracı) alan ve bu giriş temelinde eylemleri gerçekleştirebilirsiniz. Herhangi bir kullanıcı veya bir dış aracı doğrudan veya dolaylı olarak türetilmiş giriş izinsiz eylemler gerçekleştirmek için hedef dili söz dizimini kullanan içerik olabilir. Bu işleme, hedef dil bir yapılandırılmış sorgu dili (SQL), Transact-SQL gibi olduğunda SQL ekleme saldırısına bilinir. Kötü niyetli bir kullanıcı sorguyu doğrudan komutları ekleme ve bir veritabanı tablosu bırakın, hizmet reddine neden veya aksi halde gerçekleştirilmekte olan işlemin yapısını değiştirebilirsiniz.  
   
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)] ekleme saldırılarını:  
   

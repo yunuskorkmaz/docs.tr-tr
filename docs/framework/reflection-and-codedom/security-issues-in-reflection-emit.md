@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ca4a087b60e6cb857ec78273dad099e5e5da07a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: d2995e64d9e8eed365498bcbc1047a321edc10c5
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457310"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489737"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Yansıma Yaymadaki Güvenlik Sorunları
 .NET Framework, Microsoft Ara dilini (MSIL), her biri kendi güvenlik sorunları yaymak için üç yol sunar:  
@@ -36,7 +36,7 @@ ms.locfileid: "66457310"
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>Dinamik derlemeler  
- Dinamik derlemeler aşırı yüklemeleri kullanılarak oluşturulan <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> yöntemi. Bu yöntemin çoğu aşırı kullanım dışı olan [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], makine genelindeki güvenlik ilkesi saydamlığından nedeniyle. (Bkz [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).) Kalan aşırı güven düzeyi bağımsız olarak herhangi bir kod tarafından yürütülebilir. Bu aşırı yüklemeler iki gruba ayrılır: Bu oluşturulduğunda dinamik derlemeye uygulanacak özniteliklerin listesini belirtin ve değişmeyen. Saydamlık modeli derleme için uygulayarak belirtmezseniz <xref:System.Security.SecurityRulesAttribute> özniteliği, saydamlık modeli oluşturduğunuzda, yayan derlemenin devralınır.  
+ Dinamik derlemeler aşırı yüklemeleri kullanılarak oluşturulan <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> yöntemi. Bu yöntemin çoğu aşırı saydamlığından makine genelindeki güvenlik ilkesi nedeniyle .NET Framework 4'te kullanım dışı bırakılmıştır. (Bkz [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).) Kalan aşırı güven düzeyi bağımsız olarak herhangi bir kod tarafından yürütülebilir. Bu aşırı yüklemeler iki gruba ayrılır: Bu oluşturulduğunda dinamik derlemeye uygulanacak özniteliklerin listesini belirtin ve değişmeyen. Saydamlık modeli derleme için uygulayarak belirtmezseniz <xref:System.Security.SecurityRulesAttribute> özniteliği, saydamlık modeli oluşturduğunuzda, yayan derlemenin devralınır.  
   
 > [!NOTE]
 >  Kullanarak oluşturulduktan sonra dinamik derlemeye uygulanan öznitelikleri <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> yöntemi, derleme diske kaydedilebilir ve yeniden belleğe yüklenen kadar geçerlilik kazanmaz.  

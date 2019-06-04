@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc3f9c9c61afd4c231846adffc4b304a01d59281
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: dd3501bc74da2c9a812f9c4816b5a081b3780cd0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457262"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490037"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Performans Sayaçları ve Devam Eden Yan Yana Uygulamalar
 Performans İzleyicisi'ni (Perfmon.exe) kullanarak, çalışma zamanı başına temelinde performans sayaçları ayırmak mümkündür. Bu konu, bu özelliği etkinleştirmek için gerekli kayıt defteri değişikliği açıklar.  
@@ -27,7 +27,7 @@ Performans İzleyicisi'ni (Perfmon.exe) kullanarak, çalışma zamanı başına 
   
 - Ne zaman aynı ada sahip iki uygulamaları izleyin. Her iki uygulamayı myapp.exe olarak adlandırılmışsa, örneğin, biri olarak görüntülenir **myapp** ve diğer **myapp #1** içinde **örneği** sütun. Bu durumda, belirli bir uygulama için bir performans sayacı eşleştirilecek zordur. İçin toplanan verileri olup olmadığını NET değil **myapp #1** ilk myapp.exe veya ikinci myapp.exe anlamına gelir.  
   
-- Ne zaman bir uygulama, ortak dil çalışma zamanının birden çok örneğini kullanır. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] Destekler işlem içi yan yana barındırma senaryolarını; diğer bir deyişle, tek bir işlem veya uygulama ortak dil çalışma zamanının birden çok örneğini yükleyebilirsiniz. Tek bir uygulama myapp.exe yükleri iki çalışma zamanı örneği, varsayılan olarak adlandırılan, bunlar içinde atanacak **örneği** sütun olarak **myapp** ve **myapp #1**. Bu durumda, NET değil olmadığını **myapp** ve **myapp #1** aynı ada sahip iki uygulama ya da iki çalışma zamanları ile aynı uygulama. Birden çok uygulama aynı ada sahip birden fazla çalışma zamanı yüklerseniz, belirsizliği daha büyüktür.  
+- Ne zaman bir uygulama, ortak dil çalışma zamanının birden çok örneğini kullanır. .NET Framework 4, işlem içi yan yana barındırma senaryolarını destekler. diğer bir deyişle, tek bir işlem veya uygulama ortak dil çalışma zamanının birden çok örneğini yükleyebilirsiniz. Tek bir uygulama myapp.exe yükleri iki çalışma zamanı örneği, varsayılan olarak adlandırılan, bunlar içinde atanacak **örneği** sütun olarak **myapp** ve **myapp #1**. Bu durumda, NET değil olmadığını **myapp** ve **myapp #1** aynı ada sahip iki uygulama ya da iki çalışma zamanları ile aynı uygulama. Birden çok uygulama aynı ada sahip birden fazla çalışma zamanı yüklerseniz, belirsizliği daha büyüktür.  
   
  Bu belirsizliği ortadan kaldırmak için bir kayıt defteri anahtarını ayarlayabilirsiniz. .NET Framework 4 kullanılarak geliştirilen uygulamalar için uygulama adı için bir çalışma zamanı örneği tanımlayıcısı tarafından izlenen işlem tanımlayıcısı bu kayıt defteri değişikliği ekler **örneği** sütun. Yerine *uygulama* veya *uygulama*#1, uygulama artık tanımlanmıştır *uygulama*_`p`*ProcessId* \_ `r` *runtimeID* içinde **örneği** sütun. Ortak dil çalışma zamanı'nın önceki bir sürümünü kullanarak bir uygulama geliştirildiği bilgisayardakinden, bu örneği olarak temsil edilen *uygulama\_* `p`*ProcessId* koşuluyla. NET Framework 4 yüklü.  
   

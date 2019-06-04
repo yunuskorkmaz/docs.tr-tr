@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8811fd916afcb39c466b8c9a60f7c7ed2a62ea8
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d76615b5bd4d140917b84a52f7d1c251ca32302f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301425"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489993"
 ---
 # <a name="mitigation-product-versioning"></a>Azaltma: Ürün sürümü oluşturma
 .NET Framework 4.6 ve daha sonra ürün sürümü oluşturma (.NET Framework 4, 4.5, 4.5.1 ve 4.5.2'yi) .NET Framework'ün önceki sürümlerinden değişti.  
@@ -23,7 +23,7 @@ ms.locfileid: "66301425"
   
 - <xref:System.Reflection.AssemblyFileVersionAttribute> Ve <xref:System.Reflection.AssemblyInformationalVersionAttribute> Yönetilen derlemeler için öznitelikleri <xref:System.Version> ve formdaki değerler `4.6.X.0` .NET Framework 4.6 ve onun nokta sürümleri ve `4.7.X.0` için .NET Framework 4.7.  
   
-- .NET Framework 4.6, 4.6.1, 4.6.2 ve 4.7, <xref:System.Environment.Version%2A?displayProperty=nameWithType> özellik sabit sürüm dizesi döndürür `4.0.30319.42000`. İsteğe bağlı olarak .NET Framework 4, 4.5, 4.5.1 ve 4.5.2'yi, sürüm dizeleri biçimde döndürür `4.0.30319.xxxxx` (örneğin, "4.0.30319.18010"). Uygulama kodu herhangi bir yeni bağımlılık almayı önermiyoruz Not <xref:System.Environment.Version%2A?displayProperty=nameWithType> özelliği.  
+- .NET Framework 4.6 ile başlayan <xref:System.Environment.Version%2A?displayProperty=nameWithType> özellik sabit sürüm dizesi döndürür `4.0.30319.42000`. İsteğe bağlı olarak .NET Framework 4, 4.5, 4.5.1 ve 4.5.2'yi, sürüm dizeleri biçimde döndürür `4.0.30319.xxxxx` burada `xxxxx` küçüktür 42000 (örneğin, "4.0.30319.18010") olduğunu. Uygulama kodu herhangi bir yeni bağımlılık almayı önermiyoruz Not <xref:System.Environment.Version%2A?displayProperty=nameWithType> özelliği.
   
 ### <a name="handling-the-product-versioning-changes"></a>Ürün sürümü oluşturma değişiklikleri işleme  
  Genel olarak, uygulamaların çalışma zamanı sürümü, .NET Framework ve yükleme dizini gibi şeyler saptamak için önerilen teknikleri bağımlı:  

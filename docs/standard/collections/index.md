@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ba780692d59157438da1e04f3bdc3577a3eaef65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5b25d35f9c356b6d55806611a3ce39d193b42586
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664567"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491033"
 ---
 # <a name="collections-and-data-structures"></a>Koleksiyonlar ve Veri Yapıları
 Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyonu olarak yönetilebilir işlenebilir. Kullanabileceğiniz <xref:System.Array?displayProperty=nameWithType> sınıf veya sınıflardan <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, eklemek, gt;System.Collections.Immutable ad alanlarını kaldırın ve ayrı ayrı öğeleri veya koleksiyondaki öğelerin bir aralığını değiştirin.  
   
  Koleksiyonların iki ana türü vardır; Genel koleksiyonlar ve genel olmayan koleksiyon. Genel koleksiyonlar .NET Framework 2.0 sürümünde eklenen ve tür kullanımı uyumlu koleksiyonlar sağlamak derleme zamanında. Bu nedenle, genel koleksiyonlar normalde daha iyi performans sunar. Genel koleksiyonlar oluşturulur ve ve ondan dönüştürme gerektirmeyen bir tür parametresini kabul <xref:System.Object> eklediğinizde veya öğeleri koleksiyondan Kaldır yazın.  Ayrıca, en genel koleksiyonlar desteklenen [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] uygulamalar. Genel olmayan koleksiyonları depolayabileceğiniz öğeleri olarak <xref:System.Object>atama gerektirir ve çoğu için desteklenmez [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] uygulama geliştirme. Ancak, eski kod içinde genel olmayan koleksiyon görebilirsiniz.  
   
- İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], koleksiyonlar <xref:System.Collections.Concurrent> ad alanı, koleksiyon öğelerine birden fazla iş parçacığından erişmek için verimli bir iş parçacığı açısından güvenli işlemler sağlar. Gt;System.Collections.Immutable ad alanındaki değişmez koleksiyon sınıfları ([NuGet paketini](https://www.nuget.org/packages/System.Collections.Immutable)) özgün koleksiyon ve özgün koleksiyon bir kopyası üzerinde gerçekleştirilen işlemler doğası gereği iş parçacığı açısından güvenli değildir değiştirilemez.  
+ Koleksiyonları'nda .NET Framework 4 ile başlayarak <xref:System.Collections.Concurrent> ad alanı, koleksiyon öğelerine birden fazla iş parçacığından erişmek için verimli bir iş parçacığı açısından güvenli işlemler sağlar. Gt;System.Collections.Immutable ad alanındaki değişmez koleksiyon sınıfları ([NuGet paketini](https://www.nuget.org/packages/System.Collections.Immutable)) özgün koleksiyon ve özgün koleksiyon bir kopyası üzerinde gerçekleştirilen işlemler doğası gereği iş parçacığı açısından güvenli değildir değiştirilemez.  
 
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>Genel koleksiyon özellikleri  

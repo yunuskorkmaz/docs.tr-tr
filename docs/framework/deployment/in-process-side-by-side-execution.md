@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: adf2e3e3d10f4f32952dbca270be4ca0924d0b73
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 86d735bf84cdb33736701410d365ec90e6177e0e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457271"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489771"
 ---
 # <a name="in-process-side-by-side-execution"></a>Devam Eden Yan Yana Yürütme
-İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], işlem içi yan tek bir işlemde birden çok ortak dil çalışma zamanı (CLR) sürümünü çalıştırmak için barındırma yana kullanabilirsiniz. Varsayılan olarak, COM bileşenlerini .NET Framework sürümüyle birlikte, işlem için yüklenen .NET Framework sürümünden bağımsız olarak oluşturuldukları çalıştırın yönetiliyor.  
+.NET Framework 4 ile başlayarak işlem içi yan tek bir işlemde birden çok ortak dil çalışma zamanı (CLR) sürümünü çalıştırmak için barındırma yana kullanabilirsiniz. Varsayılan olarak, COM bileşenlerini .NET Framework sürümüyle birlikte, işlem için yüklenen .NET Framework sürümünden bağımsız olarak oluşturuldukları çalıştırın yönetiliyor.  
   
 ## <a name="background"></a>Arka Plan  
  .NET Framework için yan yana barındırma yönetilen kod uygulamalarının, ancak önce .NET Framework 4, bu işlevselliği için Yönetilen COM bileşenlerini sağlamadı sağlanan her zaman vardır. Geçmişte, zaten yüklü çalışma zamanı sürümü veya .NET Framework'ün en son yüklenen sürüm işlem içine yüklenmiş yönetilen COM bileşenlerini çalıştı. Bu sürüm COM bileşeni ile uyumlu değilse, bileşenin başarısız olur.  
@@ -88,7 +88,7 @@ ms.locfileid: "66457271"
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, yönetilen bir COM bileşeni bileşen için derlenmiş .NET Framework sürümünü kullanarak çalışan bir yönetilmeyen COM konak gösterir kullanın.  
   
- Aşağıdaki örnek çalıştırmak, derlemek ve aşağıdaki kaydetmek için COM bileşenini kullanarak yönetilen [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Bileşeni üzerinde kaydetmek için **proje** menüsünde tıklayın **özellikleri**, tıklayın **derleme** sekmesine tıklayın ve ardından **COMbirlikteçalışmasıiçinkaydol**onay kutusu.  
+ Aşağıdaki örnek çalıştırmak için derleme ve .NET Framework 3.5 kullanarak aşağıdaki yönetilen COM bileşeni kaydedin. Bileşeni üzerinde kaydetmek için **proje** menüsünde tıklayın **özellikleri**, tıklayın **derleme** sekmesine tıklayın ve ardından **COMbirlikteçalışmasıiçinkaydol**onay kutusu.  
   
 ```csharp
 using System;  

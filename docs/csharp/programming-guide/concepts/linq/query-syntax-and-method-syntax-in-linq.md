@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3fced818a257cb0bde166b0dd98c59c3b41e8ac
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61681809"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484107"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ'te Sorgu Sözdizimi ve Yöntem Sözdizimi (C#)
 Çoğu sorgularda tanıtım dil ile tümleşik sorgu ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) belgeleri LINQ Sorgu bildirim temelli söz dizimini kullanarak yazılır. Ancak, kod yeniden derlendiğinde sorgu söz dizimi yöntem çağrıları için .NET ortak dil çalışma zamanı (CLR) içine çevrilmelidir. Bu yöntem çağrıları gibi adlara sahip standart sorgu işleçleri çağırma `Where`, `Select`, `GroupBy`, `Join`, `Max`, ve `Average`. Sorgu söz dizimi yerine doğrudan yöntem sözdizimini kullanarak bunları çağırabilirsiniz.  
@@ -41,7 +41,3 @@ ms.locfileid: "61681809"
   
 ## <a name="composability-of-queries"></a>Sorgu Oluşturabilirliği  
  Önceki kod örneğinde unutmayın `OrderBy` yöntemi çağrısında dot işleci kullanılarak çağrıldığında `Where`. `Where` filtrelenmiş bir dizi üretir ve ardından `Orderby` sıralama tarafından o dizi üzerinde çalışır. Sorguları döndürdüğünden bir `IEnumerable`, siz bunları yöntemi sözdiziminde birlikte yöntem çağrıları zinciri tarafından oluşturun. Sorgu söz dizimi kullanılarak sorgular yazdığınızda derleyici arka planda ne yaptığını budur. Ve bir sorgu değişkeni sorgu sonuçlarını depolamaz olduğundan, değiştirin veya hatta yürütüldükten sonra istediğiniz zaman yeni bir sorgu için temel olarak kullanmak.  
-  
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

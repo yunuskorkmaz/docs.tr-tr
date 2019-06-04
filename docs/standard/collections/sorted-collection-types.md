@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d2b8866d3a1922988518dfe2857c98d4725cc464
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 96841d23da342fdb4da6c7d53420d6c3319f75c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664554"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491019"
 ---
 # <a name="sorted-collection-types"></a>Sıralanmış Koleksiyon Türleri
 <xref:System.Collections.SortedList?displayProperty=nameWithType> Sınıfı <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> genel bir sınıf ve <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> genel sınıf benzer <xref:System.Collections.Hashtable> sınıfı ve <xref:System.Collections.Generic.Dictionary%602> genel sınıf içeren uyguladıkları <xref:System.Collections.IDictionary> arabirimi ancak korumak, anahtara göre sıralama öğeleri sıralama ve O(1) ekleme ve alma karma tablosu özellik yoktur. Üç sınıfları yaygın olarak kullanılan çeşitli özellikler vardır:  
@@ -46,7 +46,7 @@ ms.locfileid: "64664554"
 > [!NOTE]
 >  (Çalışan kimlik numarası içeren örnek çalışan kayıtları), kendi anahtarlarına içeren değerler için bazı özellikleri bir listesi ve bir sözlük özelliklerinden bazıları türeterek sahip anahtarlanmış koleksiyon oluşturabilirsiniz <xref:System.Collections.ObjectModel.KeyedCollection%602> genel sınıf.  
   
- İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], <xref:System.Collections.Generic.SortedSet%601> sınıf verileri ekleme, silme ve aramalar sonra sıralanmış olarak tutar Self karşı bir ağaç sağlar. Bu sınıf ve <xref:System.Collections.Generic.HashSet%601> sınıfı uygulama <xref:System.Collections.Generic.ISet%601> arabirimi.  
+ .NET Framework 4 ile başlayarak <xref:System.Collections.Generic.SortedSet%601> sınıf verileri ekleme, silme ve aramalar sonra sıralanmış olarak tutar Self karşı bir ağaç sağlar. Bu sınıf ve <xref:System.Collections.Generic.HashSet%601> sınıfı uygulama <xref:System.Collections.Generic.ISet%601> arabirimi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

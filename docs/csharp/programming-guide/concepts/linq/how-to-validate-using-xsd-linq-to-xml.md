@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: XSD (LINQ to XML) kullanarak doğrulama (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: eea274380cd9b1a601059c12ee7bf654dff10437
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99ff764c5e5ae51720d257bcb2ff0bb8e2591243
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667515"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484771"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Nasıl yapılır: XSD (LINQ to XML) kullanarak doğrulama (C#)
 <xref:System.Xml.Schema> Ad alanı, bir XML ağacı bir XML Şeması Tanım Dili (XSD) dosyası karşı doğrulamak kolaylaştıran genişletme yöntemleri içerir. Daha fazla bilgi için <xref:System.Xml.Schema.Extensions.Validate%2A> yöntemi belgeleri.  
@@ -123,4 +123,4 @@ custOrdDoc did not validate
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
-- [XML ağaçları oluşturma (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML ağaçları oluşturma (C#)](creating-xml-trees-linq-to-xml-2.md)

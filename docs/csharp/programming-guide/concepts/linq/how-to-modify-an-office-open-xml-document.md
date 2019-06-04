@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Bir Office Open XML belgesi değiştirme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 6770e661c90f9eee432933edafb28a615991775e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a6edd31ff2a22e32c979e1a6a548b212406cbf5
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701898"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486655"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>Nasıl yapılır: Bir Office Open XML belgesi değiştirme (C#)
 Bu konuda kaydeder Office Open XML belge açılır ve değiştirdiği bir örnek sunulmaktadır.  
@@ -147,6 +147,3 @@ class Program
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [Gelişmiş sorgu teknikleri (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

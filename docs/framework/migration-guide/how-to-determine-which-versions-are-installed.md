@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c558c744ee31d8e8299da87e6c2715875dd2dcd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e6086772b807440570b94cfff268aa1d78fa048
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873314"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490009"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme
 
@@ -33,7 +33,7 @@ Kullanıcılar [yükleme](https://docs.microsoft.com/dotnet/framework/install) v
 >
 > .NET Framework sürümü ve CLR sürümü arasında bir fark vardır:
 > - .NET Framework sürümü .NET Framework sınıf kitaplığı oluşturan derlemeleri kümesini temel alır. Örneğin, .NET Framework sürüm 4.5, 4.6.1 ve 4.7.2 içerir.
->- CLR sürümü, .NET Framework uygulamaları, üzerinde yürütme çalışma zamanı temel alır. Tek bir CLR sürümü, genellikle birden çok .NET Framework sürümlerini destekler. Örneğin, CLR sürüm 4.0.30319. *xxxxx* 4.5.2 aracılığıyla .NET Framework sürüm 4 ve 4.0.30319.42000 .NET Framework 4. 6'ile başlayan .NET Framework sürümlerini destekleyen CLR sürümünü destekler.
+>- CLR sürümü, .NET Framework uygulamaları, üzerinde yürütme çalışma zamanı temel alır. Tek bir CLR sürümü, genellikle birden çok .NET Framework sürümlerini destekler. Örneğin, CLR sürüm 4.0.30319. *xxxxx* .NET Framework sürüm 4.5.2, 4 destekler burada *xxxxx* küçüktür 42000 olduğunu ve CLR sürümü 4.0.30319.42000 .NET Framework 4. 6'ile başlayan .NET Framework sürümlerini destekler.
 >
 > Sürümleri hakkında daha fazla bilgi için bkz. [.NET Framework sürümleri ve bağımlılıkları](versions-and-dependencies.md).
 
@@ -204,7 +204,7 @@ Kullanım [CLR sürüm Aracı (Clrver.exe)](../tools/clrver-exe-clr-version-tool
 
     Döndürülen `System.Version` nesne şu anda kodu yürüten çalışma zamanının sürümünü tanımlar. Derleme sürümlerini ya da diğer sürümleri bilgisayarda yüklü çalışma zamanı döndürmüyor.
 
-    .NET Framework sürüm 4, 4.5, 4.5.1 ve 4.5.2'yi, döndürülen dize gösterimi için <xref:System.Version> nenesindeki formun 4.0.30319. *xxxxx*. .NET Framework 4.6 ve sonraki sürümler için formun 4.0.30319.42000 sahiptir.
+    .NET Framework sürüm 4, 4.5, 4.5.1 ve 4.5.2'yi, döndürülen dize gösterimi için <xref:System.Version> nenesindeki formun 4.0.30319. *xxxxx*burada *xxxxx* küçüktür 42000 olduğu. .NET Framework 4.6 ve sonraki sürümler için formun 4.0.30319.42000 sahiptir.
 
 2. Sonra `Version` nesne, şu şekilde sorgulayın:
 

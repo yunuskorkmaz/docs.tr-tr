@@ -2,12 +2,12 @@
 title: 'Taşıma: Örnek UDP üzerinden özel işlemler'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: ff53890da73d81165da6b0e845360424ec869a87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a7b0c4e9ea73fa952710f2b415082b56062dad0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637118"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483105"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Taşıma: Örnek UDP üzerinden özel işlemler
 Bu örnek dayanır [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows Communication Foundation (WCF) örnek[taşıma genişletilebilirliği](../../../../docs/framework/wcf/samples/transport-extensibility.md). UDP taşıma örnek özel işlem akışını destekleyecek şekilde genişletir ve kullanımını gösteren <xref:System.ServiceModel.Channels.TransactionMessageProperty> özelliği.  
@@ -178,7 +178,7 @@ if (transaction != null)
   
 1. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2. Geçerli örneğe benzer şekilde çalıştırılması gereken [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örnek. Çalıştırmak için hizmeti UdpTestService.exe ile başlatın. Çalıştırıyorsanız [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], yükseltilmiş ayrıcalıklarla hizmetini başlatmanız gerekir. Bunu yapmak için de UdpTestService.exe sağ [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] tıklatıp **yönetici olarak çalıştır**.  
+2. Geçerli örneğe benzer şekilde çalıştırılması gereken [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örnek. Çalıştırmak için hizmeti UdpTestService.exe ile başlatın. Çalıştırıyorsanız [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], yükseltilmiş ayrıcalıklarla hizmetini başlatmanız gerekir. Bunu yapmak için dosya Gezgini'nde UdpTestService.exe sağ tıklatıp **yönetici olarak çalıştır**.  
   
 3. Bu, aşağıdaki çıktıyı üretir.  
   

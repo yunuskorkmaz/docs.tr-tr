@@ -7,24 +7,24 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d8c7d65f593f2ba5c21625835a0be7a77a44afb5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2122213e69512b06d1328272740ac4ffdc36c1eb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881114"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483037"
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijital sertifikalar sık iletileri dijital olarak imzala istemcilere ve sunuculara kimlik doğrulaması ve şifreleme için kullanılır. Bu konuda kısaca X.509 dijital sertifika özellikleri ve bunların WCF'de nasıl kullanılacağını açıklar ve WCF ve sertifikaları kullanarak yaygın görevlerin nasıl yerine getirileceğini gösteren ya da, bu kavramları daha açıklayan konulara bağlantılar içerir.  
   
- Kısaca, bir dijital sertifika bir parçası olan bir *ortak anahtar altyapısı* (PKI) bir sistem dijital sertifikalar, sertifika yetkililerini ve geçerliliğini doğrulayan ve diğer yetkililerden olduğu Ortak anahtar şifrelemesi kullanarak elektronik bir işlemde katılan her iki taraf. Bir sertifika yetkilisi sertifikaları dağıtır ve her sertifika gibi verileri içeren bir alanlar kümesine sahiptir *konu* (sertifikanın verildiği varlık) geçerlilik tarihleri, veren ((sertifikanın olduğunda geçerli) Sertifikayı veren varlığı) ve ortak anahtar. WCF'de, bu özelliklerin her biri olarak işlenir bir <xref:System.IdentityModel.Claims.Claim>, ve her talep daha iki türe ayrılır: kimlik ve sağ. X.509 hakkında daha fazla bilgi için bkz: sertifikaları [X.509 ortak anahtar sertifikaları](https://go.microsoft.com/fwlink/?LinkId=209952). Beyanlar ve yetkilendirmeyi WCF hakkında daha fazla bilgi için bkz. [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Bir PKI uygulama hakkında daha fazla bilgi için bkz. [Windows Server 2008 R2 - Sertifika Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=209949).  
+ Kısaca, bir dijital sertifika bir parçası olan bir *ortak anahtar altyapısı* (PKI) bir sistem dijital sertifikalar, sertifika yetkililerini ve geçerliliğini doğrulayan ve diğer yetkililerden olduğu Ortak anahtar şifrelemesi kullanarak elektronik bir işlemde katılan her iki taraf. Bir sertifika yetkilisi sertifikaları dağıtır ve her sertifika gibi verileri içeren bir alanlar kümesine sahiptir *konu* (sertifikanın verildiği varlık) geçerlilik tarihleri, veren ((sertifikanın olduğunda geçerli) Sertifikayı veren varlığı) ve ortak anahtar. WCF'de, bu özelliklerin her biri olarak işlenir bir <xref:System.IdentityModel.Claims.Claim>, ve her talep daha iki türe ayrılır: kimlik ve sağ. X.509 hakkında daha fazla bilgi için bkz: sertifikaları [X.509 ortak anahtar sertifikaları](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Beyanlar ve yetkilendirmeyi WCF hakkında daha fazla bilgi için bkz. [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](managing-claims-and-authorization-with-the-identity-model.md). Bir PKI uygulama hakkında daha fazla bilgi için bkz. [Kuruluş PKI ile Windows Server 2012 R2 Active Directory Sertifika Hizmetleri](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/).  
   
  Diğer sertifika sahibinin kimliğini doğrulamak için bir sertifika birincil işlevi olduğu. Bir sertifika içerir *ortak anahtar* sahibi özel anahtarı tutarken sahip. Ortak anahtar sertifika sahibine gönderilen iletileri şifrelemek için kullanılabilir. Özel anahtarına erişime sahip yalnızca bunu yalnızca sahibi bu iletilerin şifresini çözebilir.  
   
  Sertifikaları çoğunlukla sertifika bir üçüncü taraf veren olduğu bir sertifika yetkilisi tarafından verilmiş olması gerekir. Bir Windows etki alanında sertifika yetkilisi dahildir etki alanındaki bilgisayar sertifikaları için kullanılabilir.  
   
 ## <a name="viewing-certificates"></a>Sertifikaları görüntüleme  
- Sertifikalar ile çalışmak için genellikle bunları görüntülemek ve bunların özelliklerini incelemek gereklidir. Bu, Microsoft Yönetim Konsolu (MMC) ek bileşenini aracıyla kolayca gerçekleştirilir. Daha fazla bilgi için [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+ Sertifikalar ile çalışmak için genellikle bunları görüntülemek ve bunların özelliklerini incelemek gereklidir. Bu, Microsoft Yönetim Konsolu (MMC) ek bileşenini aracıyla kolayca gerçekleştirilir. Daha fazla bilgi için [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="certificate-stores"></a>Sertifika depoları  
  Sertifika deposunda bulunamadı. Daha fazla alt depolarına bölünür iki ana depo konum yok. Bilgisayarda yöneticiyseniz MMC ek bileşenini aracını kullanarak her iki ana depoları görüntüleyebilirsiniz. Yönetici olmayan kullanıcılar, yalnızca geçerli kullanıcı deposu görüntüleyebilirsiniz.  
@@ -52,12 +52,12 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
 - Hizmet veya istemcinin bir kullanıcı hesabı altında çalışan bir uygulama ise, ardından kullanın **geçerli kullanıcının** depolayın.  
   
 ### <a name="accessing-stores"></a>Depoları erişme  
- Depoları, bir bilgisayardaki klasörler gibi erişim denetim listeleri (ACL'ler) korunur. Internet Information Services (IIS) tarafından barındırılan hizmet oluşturulurken ASP.NET işlemi ASP.NET hesabı altında çalışır. Hesabı sertifikaları içeren depoya erişimine sahip olmalıdır, bir hizmeti kullanır. Ana mağazaların her biri varsayılan erişim listesi ile korunuyor, ancak liste değiştirilebilir. Bir mağazaya erişmek için ayrı bir rol oluşturursanız, bu rolü erişim izni vermeniz gerekir. WinHttpCertConfig.exe aracını kullanarak erişimi listesini değiştirme konusunda bilgi almak için bkz: [nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). IIS ile istemci sertifikaları kullanma hakkında daha fazla bilgi için bkz. [nasıl bir ASP.NET Web uygulaması kimlik doğrulaması için bir istemci sertifikasını kullanarak bir Web hizmeti çağırmak amacıyla](https://go.microsoft.com/fwlink/?LinkId=88914).  
+ Depoları, bir bilgisayardaki klasörler gibi erişim denetim listeleri (ACL'ler) korunur. Internet Information Services (IIS) tarafından barındırılan hizmet oluşturulurken ASP.NET işlemi ASP.NET hesabı altında çalışır. Hesabı sertifikaları içeren depoya erişimine sahip olmalıdır, bir hizmeti kullanır. Ana mağazaların her biri varsayılan erişim listesi ile korunuyor, ancak liste değiştirilebilir. Bir mağazaya erişmek için ayrı bir rol oluşturursanız, bu rolü erişim izni vermeniz gerekir. WinHttpCertConfig.exe aracını kullanarak erişimi listesini değiştirme konusunda bilgi almak için bkz: [nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](how-to-create-temporary-certificates-for-use-during-development.md). IIS ile istemci sertifikaları kullanma hakkında daha fazla bilgi için bkz. [nasıl bir ASP.NET Web uygulaması kimlik doğrulaması için bir istemci sertifikasını kullanarak bir Web hizmeti çağırmak amacıyla](https://support.microsoft.com/en-us/help/901183/how-to-call-a-web-service-by-using-a-client-certificate-for-authentica).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Güven zinciri ve sertifika yetkilileri  
  Sertifikalar, bir hiyerarşideki her bir sertifika sertifikayı veren CA'ya burada bağlı oluşturulur. Bu CA'ın sertifikasını bağlantıdır. CA'ın ardından bağlantıları özgün CA'ın sertifika veren CA sertifikası. Kök CA sertifikasını ulaşılana kadar bu işlem tekrarlanır. Kök CA sertifikasını kendiliğinden güveniliyor.  
   
- Varlık olarak da adlandırılan bu hiyerarşide bağlı olarak kimlik doğrulaması için kullanılan dijital sertifikalar bir *güven zinciri*. Tüm sertifika zincirinin herhangi bir sertifikayı çift tıklayıp tıklayarak MMC ek bileşenini kullanarak görüntüleyebileceğiniz **sertifika yolu** sekmesi. Sertifika yetkilisi için sertifika zincirleri içeri aktarma hakkında daha fazla bilgi için bkz. [nasıl yapılır: İmzaları doğrulamak için kullanılan sertifika yetkilendirme sertifika zincirini belirtme](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
+ Varlık olarak da adlandırılan bu hiyerarşide bağlı olarak kimlik doğrulaması için kullanılan dijital sertifikalar bir *güven zinciri*. Tüm sertifika zincirinin herhangi bir sertifikayı çift tıklayıp tıklayarak MMC ek bileşenini kullanarak görüntüleyebileceğiniz **sertifika yolu** sekmesi. Sertifika yetkilisi için sertifika zincirleri içeri aktarma hakkında daha fazla bilgi için bkz. [nasıl yapılır: İmzaları doğrulamak için kullanılan sertifika yetkilendirme sertifika zincirini belirtme](specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
   
 > [!NOTE]
 >  Verenin sertifika güvenilir kök yetkilisi sertifika deposuna yerleştirerek veren herhangi bir güvenilir kök yetkilisi belirlenebilir.  
@@ -96,7 +96,7 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
   
 3. Kök yetkilisi sertifikası güvenilen kök sertifika yetkilileri deposuna aktarın.  
   
-4. Adım adım yönergeler için bkz: [nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+4. Adım adım yönergeler için bkz: [nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ## <a name="which-certificate-to-use"></a>Hangi sertifikanın kullanılacağını?  
  Sertifikaları hakkında sık sorulan sorular, hangi sertifikanın kullanılacağını, olan ve neden. Yanıt, istemci veya hizmet programlama üzerinde bağlıdır. Aşağıdaki bilgileri, genel bir kılavuz sağlar ve bu soruların kapsamlı bir çözüm değildir.  
