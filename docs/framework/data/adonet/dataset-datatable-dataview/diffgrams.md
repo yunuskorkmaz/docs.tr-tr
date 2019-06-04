@@ -83,9 +83,9 @@ Bir DiffGram veri öğelerinin geçerli ve orijinal sürümler tanımlayan bir X
   
 |Ek Açıklama|Açıklama|  
 |----------------|-----------------|  
-|**id**|Öğeleri eşleştirmiş  **\<diffgr: önce >** ve  **\<diffgr:errors >** blokları öğelere **\<** ***DataInstance*** **>** blok. İle değerleri **diffgr:id** ek açıklama biçiminde olan *[TableName] [RowIdentifier]*. Örneğin: `<Customers diffgr:id="Customers1">`|  
-|**parentId**|Hangi öğeyi tanımlayan **\<** ***DataInstance*** **>** blok, geçerli öğenin üst öğesidir. İle değerleri **diffgr:parentId** ek açıklama biçiminde olan *[TableName] [RowIdentifier]*. Örneğin: `<Orders diffgr:parentId="Customers1">`|  
-|**hasChanges**|Bir satır tanımlayan **\<** ***DataInstance*** **>** değiştirilmiş olarak engelleyin. **HasChanges** ek açıklama aşağıdaki iki değerden birine sahip olabilir:<br /><br /> **eklenen**<br /> Tanımlayan bir **eklenen** satır.<br /><br /> **Değiştiren**<br /> Tanımlayan bir **değiştirilen** içeren satır bir **özgün** satır sürümünde  **\<diffgr: önce >** blok. Unutmayın **silinmiş** satırları sahip olacak bir **özgün** satır sürümünde  **\<diffgr: önce >** blok, ancak hiçbir ek açıklamalı öğesindeolmasıbulunmaz**\<** ***DataInstance*** **>** blok.|  
+|**id**|Öğeleri eşleştirmiş  **\<diffgr: önce >** ve  **\<diffgr:errors >** blokları öğelere **\<** ***DataInstance*** **>** blok. İle değerleri **diffgr:id** ek açıklama biçiminde olan *[TableName] [RowIdentifier]* . Örneğin: `<Customers diffgr:id="Customers1">`|  
+|**parentId**|Hangi öğeyi tanımlayan **\<** ***DataInstance*** **>** blok, geçerli öğenin üst öğesidir. İle değerleri **diffgr:parentId** ek açıklama biçiminde olan *[TableName] [RowIdentifier]* . Örneğin: `<Orders diffgr:parentId="Customers1">`|  
+|**hasChanges**|Bir satır tanımlayan **\<** ***DataInstance*** **>** değiştirilmiş olarak engelleyin. **HasChanges** ek açıklama aşağıdaki iki değerden birine sahip olabilir:<br /><br /> **eklenen**<br /> Tanımlayan bir **eklenen** satır.<br /><br /> **Değiştiren**<br /> Tanımlayan bir **değiştirilen** içeren satır bir **özgün** satır sürümünde  **\<diffgr: önce >** blok. Unutmayın **silinmiş** satırları sahip olacak bir **özgün** satır sürümünde  **\<diffgr: önce >** blok, ancak hiçbir ek açıklamalı öğesindeolmasıbulunmaz **\<** ***DataInstance*** **>** blok.|  
 |**hasErrors**|Bir satır tanımlayan **\<** ***DataInstance*** **>** ile engelleyecek bir **RowError**. Hata yerleştirilmemiş  **\<diffgr:errors >** blok.|  
 |**Hata:**|Metni içeren **RowError** belirli bir öğe için  **\<diffgr:errors >** blok.|  
   
@@ -94,7 +94,7 @@ Bir DiffGram veri öğelerinin geçerli ve orijinal sürümler tanımlayan bir X
 |Ek Açıklama|Açıklama|  
 |----------------|-----------------|  
 |**RowOrder**|Özgün veriler satır sıralamasını korur ve belirli bir satır dizini tanımlayan <xref:System.Data.DataTable>.|  
-|**Gizli**|Sahip olarak bir sütun tanımlayan bir **Columnmapping'in** özelliğini **MappingType.Hidden**. Öznitelik bir biçimde yazılmış **msdata: gizli** *[ColumnName]*= "*değer*". Örneğin: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`<br /><br /> Veri içeren, gizli sütunlarda yalnızca DiffGram özniteliği olarak yazıldığını unutmayın. Aksi takdirde, bunlar yoksayılır.|  
+|**Gizli**|Sahip olarak bir sütun tanımlayan bir **Columnmapping'in** özelliğini **MappingType.Hidden**. Öznitelik bir biçimde yazılmış **msdata: gizli** *[ColumnName]* = "*değer*". Örneğin: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`<br /><br /> Veri içeren, gizli sütunlarda yalnızca DiffGram özniteliği olarak yazıldığını unutmayın. Aksi takdirde, bunlar yoksayılır.|  
   
 ## <a name="sample-diffgram"></a>Örnek DiffGram  
  Biçimini örneği aşağıda gösterilmiştir. Değişiklikleri işlendikten önce bu örnek bir tabloda bir satır için bir güncelleştirme sonucunu gösterir. "ALFKI" satırının bir CustomerID ile değiştirilmiş, ancak güncelleştirilmez. Sonuç olarak, var olan bir **geçerli** ile satırın bir **diffgr:id** "Customers1", **\<** ***DataInstance*** **>** bloğu ve **özgün** ile satırın bir **diffgr:id** "Customers1",  **\<diffgr: önce >** blok. "ANATR" ile bir CustomerID satırını içeren bir **RowError**, ile açıklanıyor `diffgr:hasErrors="true"` ve ilgili bir öğe içinde  **\<diffgr:errors >** blok.  
