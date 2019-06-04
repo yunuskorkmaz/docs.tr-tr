@@ -16,45 +16,45 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "66300669"
 ---
-# <a name="remove-element-for-configsections"></a><span data-ttu-id="a9c11-102">\<kaldırma > öğesi için \<configSections ></span><span class="sxs-lookup"><span data-stu-id="a9c11-102">\<remove> element for \<configSections></span></span>
+# <a name="remove-element-for-configsections"></a><span data-ttu-id="9a27f-102">\<kaldırma > öğesi için \<configSections ></span><span class="sxs-lookup"><span data-stu-id="9a27f-102">\<remove> element for \<configSections></span></span>
 
-<span data-ttu-id="a9c11-103">Önceden tanımlanmış bir bölüm veya bölüm grubu kaldırır.</span><span class="sxs-lookup"><span data-stu-id="a9c11-103">Removes a predefined section or section group.</span></span>
+<span data-ttu-id="9a27f-103">Önceden tanımlanmış bir bölüm veya bölüm grubu kaldırır.</span><span class="sxs-lookup"><span data-stu-id="9a27f-103">Removes a predefined section or section group.</span></span>
 
-<span data-ttu-id="a9c11-104">[ **\<Yapılandırma >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="a9c11-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="a9c11-105">&nbsp;&nbsp;[ **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="a9c11-105">&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span></span>  
-<span data-ttu-id="a9c11-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<kaldırma >**</span><span class="sxs-lookup"><span data-stu-id="a9c11-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
+<span data-ttu-id="9a27f-104">[ **\<Yapılandırma >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="9a27f-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="9a27f-105">&nbsp;&nbsp;[ **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="9a27f-105">&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span></span>  
+<span data-ttu-id="9a27f-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<kaldırma >**</span><span class="sxs-lookup"><span data-stu-id="9a27f-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="a9c11-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a9c11-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="9a27f-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9a27f-107">Syntax</span></span>
 
 ```xml
 <remove name="section name or section group name" />
 ```
 
-## <a name="attribute"></a><span data-ttu-id="a9c11-108">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="a9c11-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="9a27f-108">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="9a27f-108">Attribute</span></span>
 
-|           | <span data-ttu-id="a9c11-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a9c11-109">Description</span></span> |
+|           | <span data-ttu-id="9a27f-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9a27f-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="a9c11-110">**name**</span><span class="sxs-lookup"><span data-stu-id="a9c11-110">**name**</span></span>  | <span data-ttu-id="a9c11-111">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="a9c11-111">Required attribute.</span></span><br><br><span data-ttu-id="a9c11-112">Bölüm veya kaldırmak için bölüm grubu adını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a9c11-112">Specifies the name of the section or section group to remove.</span></span> |
+| <span data-ttu-id="9a27f-110">**name**</span><span class="sxs-lookup"><span data-stu-id="9a27f-110">**name**</span></span>  | <span data-ttu-id="9a27f-111">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="9a27f-111">Required attribute.</span></span><br><br><span data-ttu-id="9a27f-112">Bölüm veya kaldırmak için bölüm grubu adını belirtir.</span><span class="sxs-lookup"><span data-stu-id="9a27f-112">Specifies the name of the section or section group to remove.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="a9c11-113">Üst öğe</span><span class="sxs-lookup"><span data-stu-id="a9c11-113">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="9a27f-113">Üst öğe</span><span class="sxs-lookup"><span data-stu-id="9a27f-113">Parent element</span></span>
 
-|     | <span data-ttu-id="a9c11-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a9c11-114">Description</span></span> |
+|     | <span data-ttu-id="9a27f-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9a27f-114">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="a9c11-115"> *\*\<configSections >** öğesi</span><span class="sxs-lookup"><span data-stu-id="a9c11-115">**\<configSections>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="a9c11-116">Yapılandırma bölümü ve ad alanı bildirimi içerir.</span><span class="sxs-lookup"><span data-stu-id="a9c11-116">Contains configuration section and namespace declarations.</span></span> |
+| [<span data-ttu-id="9a27f-115"> *\*\<configSections >** öğesi</span><span class="sxs-lookup"><span data-stu-id="9a27f-115">**\<configSections>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="9a27f-116">Yapılandırma bölümü ve ad alanı bildirimi içerir.</span><span class="sxs-lookup"><span data-stu-id="9a27f-116">Contains configuration section and namespace declarations.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="a9c11-117">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="a9c11-117">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="9a27f-117">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="9a27f-117">Child elements</span></span>
 
-<span data-ttu-id="a9c11-118">Yok.</span><span class="sxs-lookup"><span data-stu-id="a9c11-118">None</span></span>
+<span data-ttu-id="9a27f-118">Yok.</span><span class="sxs-lookup"><span data-stu-id="9a27f-118">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="a9c11-119">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a9c11-119">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="9a27f-119">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9a27f-119">Remarks</span></span>
 
-<span data-ttu-id="a9c11-120">Kullanabileceğiniz  **\<kaldırma >** uygulamanızdan yapılandırma dosyası hiyerarşisindeki daha yüksek düzeyde tanımlanan bölümler ve bölüm grupları'nı kaldırmak için öğesi.</span><span class="sxs-lookup"><span data-stu-id="a9c11-120">You can use the **\<remove>** element to remove sections and section groups from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
+<span data-ttu-id="9a27f-120">Kullanabileceğiniz  **\<kaldırma >** uygulamanızdan yapılandırma dosyası hiyerarşisindeki daha yüksek düzeyde tanımlanan bölümler ve bölüm grupları'nı kaldırmak için öğesi.</span><span class="sxs-lookup"><span data-stu-id="9a27f-120">You can use the **\<remove>** element to remove sections and section groups from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
 
-## <a name="example"></a><span data-ttu-id="a9c11-121">Örnek</span><span class="sxs-lookup"><span data-stu-id="a9c11-121">Example</span></span>
+## <a name="example"></a><span data-ttu-id="9a27f-121">Örnek</span><span class="sxs-lookup"><span data-stu-id="9a27f-121">Example</span></span>
 
-<span data-ttu-id="a9c11-122">Aşağıdaki örnek nasıl kullanılacağını gösterir  **\<kaldırma >** makine yapılandırma dosyasında önceden tanımlanmış bir bölümü kaldırmak için bir uygulama yapılandırma dosyasında öğesi.</span><span class="sxs-lookup"><span data-stu-id="a9c11-122">The following example shows how to use the **\<remove>** element in an application configuration file to remove a section previously defined in the machine configuration file.</span></span>
+<span data-ttu-id="9a27f-122">Aşağıdaki örnek nasıl kullanılacağını gösterir  **\<kaldırma >** makine yapılandırma dosyasında önceden tanımlanmış bir bölümü kaldırmak için bir uygulama yapılandırma dosyasında öğesi.</span><span class="sxs-lookup"><span data-stu-id="9a27f-122">The following example shows how to use the **\<remove>** element in an application configuration file to remove a section previously defined in the machine configuration file.</span></span>
 
-<span data-ttu-id="a9c11-123">Aşağıdaki makine yapılandırma dosyası kod bölümü bildirir  **\<sampleSection >** :</span><span class="sxs-lookup"><span data-stu-id="a9c11-123">The following machine configuration file code declares the section **\<sampleSection>**:</span></span>
+<span data-ttu-id="9a27f-123">Aşağıdaki makine yapılandırma dosyası kod bölümü bildirir  **\<sampleSection >** :</span><span class="sxs-lookup"><span data-stu-id="9a27f-123">The following machine configuration file code declares the section **\<sampleSection>**:</span></span>
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ ms.locfileid: "66300669"
 </configuration>
 ```
 
-<span data-ttu-id="a9c11-124">Aşağıdaki uygulama yapılandırma dosyası kodu kaldırır  **\<sampleSection >** bölümü.</span><span class="sxs-lookup"><span data-stu-id="a9c11-124">The following application configuration file code removes the **\<sampleSection>** section.</span></span> <span data-ttu-id="a9c11-125">Kaldırma işleminden sonra uygulama ayarlarında alınamıyor  **\<sampleSection >** .</span><span class="sxs-lookup"><span data-stu-id="a9c11-125">After removal, the application cannot retrieve the settings in **\<sampleSection>**.</span></span>
+<span data-ttu-id="9a27f-124">Aşağıdaki uygulama yapılandırma dosyası kodu kaldırır  **\<sampleSection >** bölümü.</span><span class="sxs-lookup"><span data-stu-id="9a27f-124">The following application configuration file code removes the **\<sampleSection>** section.</span></span> <span data-ttu-id="9a27f-125">Kaldırma işleminden sonra uygulama ayarlarında alınamıyor  **\<sampleSection >** .</span><span class="sxs-lookup"><span data-stu-id="9a27f-125">After removal, the application cannot retrieve the settings in **\<sampleSection>**.</span></span>
 
 ```xml
 <!-- Application configuration file -->
@@ -80,10 +80,10 @@ ms.locfileid: "66300669"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="a9c11-126">Yapılandırma dosyası</span><span class="sxs-lookup"><span data-stu-id="a9c11-126">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="9a27f-126">Yapılandırma dosyası</span><span class="sxs-lookup"><span data-stu-id="9a27f-126">Configuration file</span></span>
 
-<span data-ttu-id="a9c11-127">Bu öğe, uygulama yapılandırma dosyasında, makine yapılandırma dosyası kullanılabilir (*Machine.config*), ve *Web.config* uygulama dizin düzeyinde olmayan dosyalar.</span><span class="sxs-lookup"><span data-stu-id="a9c11-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="9a27f-127">Bu öğe, uygulama yapılandırma dosyasında, makine yapılandırma dosyası kullanılabilir (*Machine.config*), ve *Web.config* uygulama dizin düzeyinde olmayan dosyalar.</span><span class="sxs-lookup"><span data-stu-id="9a27f-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a9c11-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a9c11-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9a27f-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9a27f-128">See also</span></span>
 
-- [<span data-ttu-id="a9c11-129">.NET Framework yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="a9c11-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="9a27f-129">.NET Framework yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="9a27f-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
