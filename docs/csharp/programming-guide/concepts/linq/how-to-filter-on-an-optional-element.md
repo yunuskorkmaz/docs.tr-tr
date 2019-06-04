@@ -2,18 +2,18 @@
 title: 'Nasıl yapılır: İsteğe bağlı öğeyi filtreleme (C#)'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 1aeb234365fa5d02911f70bb70a860258ce62f30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6dba732268ff9ff1a206cd13e31f94c394a17b39
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702067"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485712"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a><span data-ttu-id="054f7-102">Nasıl yapılır: İsteğe bağlı öğeyi filtreleme (C#)</span><span class="sxs-lookup"><span data-stu-id="054f7-102">How to: Filter on an Optional Element (C#)</span></span>
-<span data-ttu-id="054f7-103">Bazen, XML belgesinde varolduğundan emin olmadığınız halde bir öğe için filtrelemek istersiniz.</span><span class="sxs-lookup"><span data-stu-id="054f7-103">Sometimes you want to filter for an element even though you are not sure it exists in your XML document.</span></span> <span data-ttu-id="054f7-104">Arama, böylece belirli bir öğenin alt öğesi yoksa, bir null başvurusu özel durumu için filtreleyerek tetiklemez yürütülmelidir.</span><span class="sxs-lookup"><span data-stu-id="054f7-104">The search should be executed so that if the particular element does not have the child element, you do not trigger a null reference exception by filtering for it.</span></span> <span data-ttu-id="054f7-105">Aşağıdaki örnekte, `Child5` öğesi yok bir `Type` alt öğesi, ancak sorgu hala yürütür doğru.</span><span class="sxs-lookup"><span data-stu-id="054f7-105">In the following example, the `Child5` element does not have a `Type` child element, but the query still executes correctly.</span></span>  
+# <a name="how-to-filter-on-an-optional-element-c"></a><span data-ttu-id="40eb4-102">Nasıl yapılır: İsteğe bağlı öğeyi filtreleme (C#)</span><span class="sxs-lookup"><span data-stu-id="40eb4-102">How to: Filter on an Optional Element (C#)</span></span>
+<span data-ttu-id="40eb4-103">Bazen, XML belgesinde varolduğundan emin olmadığınız halde bir öğe için filtrelemek istersiniz.</span><span class="sxs-lookup"><span data-stu-id="40eb4-103">Sometimes you want to filter for an element even though you are not sure it exists in your XML document.</span></span> <span data-ttu-id="40eb4-104">Arama, böylece belirli bir öğenin alt öğesi yoksa, bir null başvurusu özel durumu için filtreleyerek tetiklemez yürütülmelidir.</span><span class="sxs-lookup"><span data-stu-id="40eb4-104">The search should be executed so that if the particular element does not have the child element, you do not trigger a null reference exception by filtering for it.</span></span> <span data-ttu-id="40eb4-105">Aşağıdaki örnekte, `Child5` öğesi yok bir `Type` alt öğesi, ancak sorgu hala yürütür doğru.</span><span class="sxs-lookup"><span data-stu-id="40eb4-105">In the following example, the `Child5` element does not have a `Type` child element, but the query still executes correctly.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="054f7-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="054f7-106">Example</span></span>  
- <span data-ttu-id="054f7-107">Bu örnekte <xref:System.Xml.Linq.Extensions.Elements%2A> genişletme yöntemi.</span><span class="sxs-lookup"><span data-stu-id="054f7-107">This example uses the <xref:System.Xml.Linq.Extensions.Elements%2A> extension method.</span></span>  
+## <a name="example"></a><span data-ttu-id="40eb4-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="40eb4-106">Example</span></span>  
+ <span data-ttu-id="40eb4-107">Bu örnekte <xref:System.Xml.Linq.Extensions.Elements%2A> genişletme yöntemi.</span><span class="sxs-lookup"><span data-stu-id="40eb4-107">This example uses the <xref:System.Xml.Linq.Extensions.Elements%2A> extension method.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -45,7 +45,7 @@ foreach(string str in cList)
     Console.WriteLine(str);  
 ```  
   
- <span data-ttu-id="054f7-108">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="054f7-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="40eb4-108">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="40eb4-108">This code produces the following output:</span></span>  
   
 ```  
 Child One Text  
@@ -53,8 +53,8 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="example"></a><span data-ttu-id="054f7-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="054f7-109">Example</span></span>  
- <span data-ttu-id="054f7-110">Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir.</span><span class="sxs-lookup"><span data-stu-id="054f7-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="054f7-111">Daha fazla bilgi için [(C#) XML ad alanları ile çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="054f7-111">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="40eb4-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="40eb4-109">Example</span></span>  
+ <span data-ttu-id="40eb4-110">Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir.</span><span class="sxs-lookup"><span data-stu-id="40eb4-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="40eb4-111">Daha fazla bilgi için [(C#) XML ad alanları ile çalışma](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="40eb4-111">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root xmlns='http://www.adatum.com'>  
@@ -87,7 +87,7 @@ foreach (string str in cList)
     Console.WriteLine(str);  
 ```  
   
- <span data-ttu-id="054f7-112">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="054f7-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="40eb4-112">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="40eb4-112">This code produces the following output:</span></span>  
   
 ```  
 Child One Text  
@@ -95,11 +95,10 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="054f7-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="054f7-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="40eb4-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="40eb4-113">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="054f7-114">Temel sorgular (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="054f7-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [<span data-ttu-id="054f7-115">Standart sorgu işleçlerine genel bakış (C#)</span><span class="sxs-lookup"><span data-stu-id="054f7-115">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="054f7-116">Projeksiyon işlemleri (C#)</span><span class="sxs-lookup"><span data-stu-id="054f7-116">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+- [<span data-ttu-id="40eb4-114">Standart sorgu işleçlerine genel bakış (C#)</span><span class="sxs-lookup"><span data-stu-id="40eb4-114">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="40eb4-115">Projeksiyon işlemleri (C#)</span><span class="sxs-lookup"><span data-stu-id="40eb4-115">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

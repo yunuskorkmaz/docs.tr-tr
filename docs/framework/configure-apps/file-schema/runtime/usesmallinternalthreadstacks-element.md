@@ -7,62 +7,62 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f098065cc005c59ec558ffa1f95202715624e7d
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 70113d98c5a4ab41700f6c9842dba89e2b49c297
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456108"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489334"
 ---
-# <a name="usesmallinternalthreadstacks-element"></a><span data-ttu-id="7a896-102">\<Usesmallınternalthreadstacks > öğesi</span><span class="sxs-lookup"><span data-stu-id="7a896-102">\<UseSmallInternalThreadStacks> Element</span></span>
-<span data-ttu-id="7a896-103">Ortak dil çalışma zamanı (CLR) bellek miktarını azaltmak istekleri, dahili olarak, bu iş parçacıkları için varsayılan yığın boyutu kullanmak yerine kullanan belirli iş parçacıklarını oluşturduğunda açık yığın boyutlarını belirterek kullanır.</span><span class="sxs-lookup"><span data-stu-id="7a896-103">Requests that the common language runtime (CLR) reduce memory use by specifying explicit stack sizes when it creates certain threads that it uses internally, instead of using the default stack size for those threads.</span></span>  
+# <a name="usesmallinternalthreadstacks-element"></a><span data-ttu-id="f8e46-102">\<Usesmallınternalthreadstacks > öğesi</span><span class="sxs-lookup"><span data-stu-id="f8e46-102">\<UseSmallInternalThreadStacks> Element</span></span>
+<span data-ttu-id="f8e46-103">Ortak dil çalışma zamanı (CLR) bellek miktarını azaltmak istekleri, dahili olarak, bu iş parçacıkları için varsayılan yığın boyutu kullanmak yerine kullanan belirli iş parçacıklarını oluşturduğunda açık yığın boyutlarını belirterek kullanır.</span><span class="sxs-lookup"><span data-stu-id="f8e46-103">Requests that the common language runtime (CLR) reduce memory use by specifying explicit stack sizes when it creates certain threads that it uses internally, instead of using the default stack size for those threads.</span></span>  
   
- <span data-ttu-id="7a896-104">\<Yapılandırma > öğesi</span><span class="sxs-lookup"><span data-stu-id="7a896-104">\<configuration> Element</span></span>  
-<span data-ttu-id="7a896-105">\<çalışma zamanı > öğesi</span><span class="sxs-lookup"><span data-stu-id="7a896-105">\<runtime> Element</span></span>  
-<span data-ttu-id="7a896-106">\<Usesmallınternalthreadstacks > öğesi</span><span class="sxs-lookup"><span data-stu-id="7a896-106">\<UseSmallInternalThreadStacks> Element</span></span>  
+ <span data-ttu-id="f8e46-104">\<Yapılandırma > öğesi</span><span class="sxs-lookup"><span data-stu-id="f8e46-104">\<configuration> Element</span></span>  
+<span data-ttu-id="f8e46-105">\<çalışma zamanı > öğesi</span><span class="sxs-lookup"><span data-stu-id="f8e46-105">\<runtime> Element</span></span>  
+<span data-ttu-id="f8e46-106">\<Usesmallınternalthreadstacks > öğesi</span><span class="sxs-lookup"><span data-stu-id="f8e46-106">\<UseSmallInternalThreadStacks> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7a896-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7a896-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8e46-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f8e46-107">Syntax</span></span>  
   
 ```xml  
 <UseSmallInternalThreadStacks enabled="true|false" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="7a896-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="7a896-108">Attributes and Elements</span></span>  
- <span data-ttu-id="7a896-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="7a896-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f8e46-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="f8e46-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="f8e46-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="f8e46-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="7a896-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="7a896-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f8e46-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="f8e46-110">Attributes</span></span>  
   
-|<span data-ttu-id="7a896-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="7a896-111">Attribute</span></span>|<span data-ttu-id="7a896-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7a896-112">Description</span></span>|  
+|<span data-ttu-id="f8e46-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="f8e46-111">Attribute</span></span>|<span data-ttu-id="f8e46-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f8e46-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="7a896-113">Etkin</span><span class="sxs-lookup"><span data-stu-id="7a896-113">enabled</span></span>|<span data-ttu-id="7a896-114">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="7a896-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="7a896-115">Dahili olarak kullandığı belirli bir iş parçacığı oluşturur CLR kullanın açık yığın boyutu varsayılan yığın boyutu yerine, istenip istenmeyeceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="7a896-115">Specifies whether to request that the CLR use explicit stack sizes instead of the default stack size when it creates certain threads that it uses internally.</span></span> <span data-ttu-id="7a896-116">Açık yığın boyutu varsayılan yığın boyutu 1 MB küçüktür.</span><span class="sxs-lookup"><span data-stu-id="7a896-116">The explicit stack sizes are smaller than the default stack size of 1 MB.</span></span>|  
+|<span data-ttu-id="f8e46-113">Etkin</span><span class="sxs-lookup"><span data-stu-id="f8e46-113">enabled</span></span>|<span data-ttu-id="f8e46-114">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="f8e46-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="f8e46-115">Dahili olarak kullandığı belirli bir iş parçacığı oluşturur CLR kullanın açık yığın boyutu varsayılan yığın boyutu yerine, istenip istenmeyeceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="f8e46-115">Specifies whether to request that the CLR use explicit stack sizes instead of the default stack size when it creates certain threads that it uses internally.</span></span> <span data-ttu-id="f8e46-116">Açık yığın boyutu varsayılan yığın boyutu 1 MB küçüktür.</span><span class="sxs-lookup"><span data-stu-id="f8e46-116">The explicit stack sizes are smaller than the default stack size of 1 MB.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="7a896-117">etkin Öznitelik</span><span class="sxs-lookup"><span data-stu-id="7a896-117">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="f8e46-117">etkin Öznitelik</span><span class="sxs-lookup"><span data-stu-id="f8e46-117">enabled Attribute</span></span>  
   
-|<span data-ttu-id="7a896-118">Değer</span><span class="sxs-lookup"><span data-stu-id="7a896-118">Value</span></span>|<span data-ttu-id="7a896-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7a896-119">Description</span></span>|  
+|<span data-ttu-id="f8e46-118">Değer</span><span class="sxs-lookup"><span data-stu-id="f8e46-118">Value</span></span>|<span data-ttu-id="f8e46-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f8e46-119">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="7a896-120">true</span><span class="sxs-lookup"><span data-stu-id="7a896-120">true</span></span>|<span data-ttu-id="7a896-121">Açık yığın boyutlarını isteyin.</span><span class="sxs-lookup"><span data-stu-id="7a896-121">Request explicit stack sizes.</span></span>|  
-|<span data-ttu-id="7a896-122">false</span><span class="sxs-lookup"><span data-stu-id="7a896-122">false</span></span>|<span data-ttu-id="7a896-123">Varsayılan yığın boyutunu kullanın.</span><span class="sxs-lookup"><span data-stu-id="7a896-123">Use the default stack size.</span></span> <span data-ttu-id="7a896-124">İçin varsayılan [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7a896-124">This is the default for the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span></span>|  
+|<span data-ttu-id="f8e46-120">true</span><span class="sxs-lookup"><span data-stu-id="f8e46-120">true</span></span>|<span data-ttu-id="f8e46-121">Açık yığın boyutlarını isteyin.</span><span class="sxs-lookup"><span data-stu-id="f8e46-121">Request explicit stack sizes.</span></span>|  
+|<span data-ttu-id="f8e46-122">false</span><span class="sxs-lookup"><span data-stu-id="f8e46-122">false</span></span>|<span data-ttu-id="f8e46-123">Varsayılan yığın boyutunu kullanın.</span><span class="sxs-lookup"><span data-stu-id="f8e46-123">Use the default stack size.</span></span> <span data-ttu-id="f8e46-124">Bu, .NET Framework 4 için varsayılan değerdir.</span><span class="sxs-lookup"><span data-stu-id="f8e46-124">This is the default for the .NET Framework 4.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="7a896-125">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="7a896-125">Child Elements</span></span>  
- <span data-ttu-id="7a896-126">Yok.</span><span class="sxs-lookup"><span data-stu-id="7a896-126">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f8e46-125">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="f8e46-125">Child Elements</span></span>  
+ <span data-ttu-id="f8e46-126">Yok.</span><span class="sxs-lookup"><span data-stu-id="f8e46-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="7a896-127">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="7a896-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f8e46-127">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="f8e46-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="7a896-128">Öğe</span><span class="sxs-lookup"><span data-stu-id="7a896-128">Element</span></span>|<span data-ttu-id="7a896-129">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7a896-129">Description</span></span>|  
+|<span data-ttu-id="f8e46-128">Öğe</span><span class="sxs-lookup"><span data-stu-id="f8e46-128">Element</span></span>|<span data-ttu-id="f8e46-129">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f8e46-129">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="7a896-130">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="7a896-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="7a896-131">Derleme bağlama ve atık toplama hakkında bilgi içerir.</span><span class="sxs-lookup"><span data-stu-id="7a896-131">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="f8e46-130">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="f8e46-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="f8e46-131">Derleme bağlama ve atık toplama hakkında bilgi içerir.</span><span class="sxs-lookup"><span data-stu-id="f8e46-131">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7a896-132">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7a896-132">Remarks</span></span>  
- <span data-ttu-id="7a896-133">İstek dikkate alınır, iç iş parçacıkları için CLR kullanan açık bir iş parçacığı boyutları varsayılan boyuttan daha küçük olduğundan, bu yapılandırma öğesi, bir işlemde daha az sanal bellek kullanımı istemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="7a896-133">This configuration element is used to request reduced virtual memory use in a process, because the explicit thread sizes that the CLR uses for its internal threads, if the request is honored, are smaller than the default size.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f8e46-132">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f8e46-132">Remarks</span></span>  
+ <span data-ttu-id="f8e46-133">İstek dikkate alınır, iç iş parçacıkları için CLR kullanan açık bir iş parçacığı boyutları varsayılan boyuttan daha küçük olduğundan, bu yapılandırma öğesi, bir işlemde daha az sanal bellek kullanımı istemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="f8e46-133">This configuration element is used to request reduced virtual memory use in a process, because the explicit thread sizes that the CLR uses for its internal threads, if the request is honored, are smaller than the default size.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="7a896-134">Bu yapılandırma öğesi, mutlak bir gereksinim yerine CLR isteğidir.</span><span class="sxs-lookup"><span data-stu-id="7a896-134">This configuration element is a request to the CLR rather than an absolute requirement.</span></span> <span data-ttu-id="7a896-135">.NET Framework 4'te isteği yalnızca x86 için geçerli olur mimarisi.</span><span class="sxs-lookup"><span data-stu-id="7a896-135">In the .NET Framework 4, the request is honored only for the x86 architecture.</span></span> <span data-ttu-id="7a896-136">Bu öğe CLR'ın gelecek sürümlerinde tamamen yoksayıldı ya da seçili iç iş parçacıkları için kullanılan her zaman açık yığın boyutlarını değiştirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="7a896-136">This element might be ignored completely in future versions of the CLR, or replaced by explicit stack sizes that are always used for selected internal threads.</span></span>  
+>  <span data-ttu-id="f8e46-134">Bu yapılandırma öğesi, mutlak bir gereksinim yerine CLR isteğidir.</span><span class="sxs-lookup"><span data-stu-id="f8e46-134">This configuration element is a request to the CLR rather than an absolute requirement.</span></span> <span data-ttu-id="f8e46-135">.NET Framework 4'te isteği yalnızca x86 için geçerli olur mimarisi.</span><span class="sxs-lookup"><span data-stu-id="f8e46-135">In the .NET Framework 4, the request is honored only for the x86 architecture.</span></span> <span data-ttu-id="f8e46-136">Bu öğe CLR'ın gelecek sürümlerinde tamamen yoksayıldı ya da seçili iç iş parçacıkları için kullanılan her zaman açık yığın boyutlarını değiştirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="f8e46-136">This element might be ignored completely in future versions of the CLR, or replaced by explicit stack sizes that are always used for selected internal threads.</span></span>  
   
- <span data-ttu-id="7a896-137">CLR, isteği kabul eder, daha küçük yığın boyutlarını yığın olası hale getirebilecek çünkü bu yapılandırma öğesi daha küçük sanal bellek kullanımı için güvenilirlik arasında denge kurar belirterek büyük olasılıkla taşıyor.</span><span class="sxs-lookup"><span data-stu-id="7a896-137">Specifying this configuration element trades reliability for smaller virtual memory use if the CLR honors the request, because smaller stack sizes could potentially make stack overflows more likely.</span></span>  
+ <span data-ttu-id="f8e46-137">CLR, isteği kabul eder, daha küçük yığın boyutlarını yığın olası hale getirebilecek çünkü bu yapılandırma öğesi daha küçük sanal bellek kullanımı için güvenilirlik arasında denge kurar belirterek büyük olasılıkla taşıyor.</span><span class="sxs-lookup"><span data-stu-id="f8e46-137">Specifying this configuration element trades reliability for smaller virtual memory use if the CLR honors the request, because smaller stack sizes could potentially make stack overflows more likely.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7a896-138">Örnek</span><span class="sxs-lookup"><span data-stu-id="7a896-138">Example</span></span>  
- <span data-ttu-id="7a896-139">Aşağıdaki örnek, CLR kullanım açık yığın belirli dahili olarak kullandığı iş parçacıklarının boyutları istek gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="7a896-139">The following example shows how to request that the CLR use explicit stack sizes for certain threads that it uses internally.</span></span>  
+## <a name="example"></a><span data-ttu-id="f8e46-138">Örnek</span><span class="sxs-lookup"><span data-stu-id="f8e46-138">Example</span></span>  
+ <span data-ttu-id="f8e46-139">Aşağıdaki örnek, CLR kullanım açık yığın belirli dahili olarak kullandığı iş parçacıklarının boyutları istek gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="f8e46-139">The following example shows how to request that the CLR use explicit stack sizes for certain threads that it uses internally.</span></span>  
   
 ```xml  
 <configuration>  
@@ -72,7 +72,7 @@ ms.locfileid: "66456108"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7a896-140">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7a896-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8e46-140">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f8e46-140">See also</span></span>
 
-- [<span data-ttu-id="7a896-141">Çalışma Zamanı Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="7a896-141">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="7a896-142">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="7a896-142">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="f8e46-141">Çalışma Zamanı Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="f8e46-141">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="f8e46-142">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="f8e46-142">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

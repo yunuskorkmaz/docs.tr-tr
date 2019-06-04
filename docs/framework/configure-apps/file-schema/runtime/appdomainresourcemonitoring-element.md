@@ -7,62 +7,62 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71cc69eba17de8465cc7999f334c724e4ec14e7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad0ae023215eeb1f42f9351369ee77d41d537b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705005"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487735"
 ---
-# <a name="appdomainresourcemonitoring-element"></a><span data-ttu-id="a8c0a-102">\<appDomainResourceMonitoring > öğesi</span><span class="sxs-lookup"><span data-stu-id="a8c0a-102">\<appDomainResourceMonitoring> Element</span></span>
-<span data-ttu-id="a8c0a-103">Ömür işlemin işlemdeki tüm uygulama etki alanlarında istatistikleri toplamak için çalışma zamanı bildirir.</span><span class="sxs-lookup"><span data-stu-id="a8c0a-103">Instructs the runtime to collect statistics on all application domains in the process for the life of the process.</span></span>  
+# <a name="appdomainresourcemonitoring-element"></a><span data-ttu-id="be59d-102">\<appDomainResourceMonitoring > öğesi</span><span class="sxs-lookup"><span data-stu-id="be59d-102">\<appDomainResourceMonitoring> Element</span></span>
+<span data-ttu-id="be59d-103">Ömür işlemin işlemdeki tüm uygulama etki alanlarında istatistikleri toplamak için çalışma zamanı bildirir.</span><span class="sxs-lookup"><span data-stu-id="be59d-103">Instructs the runtime to collect statistics on all application domains in the process for the life of the process.</span></span>  
   
- <span data-ttu-id="a8c0a-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="a8c0a-104">\<configuration></span></span>  
-<span data-ttu-id="a8c0a-105">\<çalışma zamanı ></span><span class="sxs-lookup"><span data-stu-id="a8c0a-105">\<runtime></span></span>  
-<span data-ttu-id="a8c0a-106">\<appDomainResourceMonitoring ></span><span class="sxs-lookup"><span data-stu-id="a8c0a-106">\<appDomainResourceMonitoring></span></span>  
+ <span data-ttu-id="be59d-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="be59d-104">\<configuration></span></span>  
+<span data-ttu-id="be59d-105">\<çalışma zamanı ></span><span class="sxs-lookup"><span data-stu-id="be59d-105">\<runtime></span></span>  
+<span data-ttu-id="be59d-106">\<appDomainResourceMonitoring ></span><span class="sxs-lookup"><span data-stu-id="be59d-106">\<appDomainResourceMonitoring></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a8c0a-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a8c0a-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be59d-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="be59d-107">Syntax</span></span>  
   
 ```xml  
 <appDomainResourceMonitoring    
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="a8c0a-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="a8c0a-108">Attributes and Elements</span></span>  
- <span data-ttu-id="a8c0a-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a8c0a-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="be59d-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="be59d-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="be59d-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="be59d-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="a8c0a-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="a8c0a-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="be59d-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="be59d-110">Attributes</span></span>  
   
-|<span data-ttu-id="a8c0a-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="a8c0a-111">Attribute</span></span>|<span data-ttu-id="a8c0a-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a8c0a-112">Description</span></span>|  
+|<span data-ttu-id="be59d-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="be59d-111">Attribute</span></span>|<span data-ttu-id="be59d-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="be59d-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="a8c0a-113">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="a8c0a-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="a8c0a-114">Çalışma zamanı istatistikleri uygulama etki alanı kaynak izleme toplayıp toplamayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a8c0a-114">Specifies whether the runtime collects statistics for application domain resource monitoring.</span></span>|  
+|`enabled`|<span data-ttu-id="be59d-113">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="be59d-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="be59d-114">Çalışma zamanı istatistikleri uygulama etki alanı kaynak izleme toplayıp toplamayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="be59d-114">Specifies whether the runtime collects statistics for application domain resource monitoring.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="a8c0a-115">etkin Öznitelik</span><span class="sxs-lookup"><span data-stu-id="a8c0a-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="be59d-115">etkin Öznitelik</span><span class="sxs-lookup"><span data-stu-id="be59d-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="a8c0a-116">Değer</span><span class="sxs-lookup"><span data-stu-id="a8c0a-116">Value</span></span>|<span data-ttu-id="a8c0a-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a8c0a-117">Description</span></span>|  
+|<span data-ttu-id="be59d-116">Değer</span><span class="sxs-lookup"><span data-stu-id="be59d-116">Value</span></span>|<span data-ttu-id="be59d-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="be59d-117">Description</span></span>|  
 |-----------|-----------------|  
-|`true`|<span data-ttu-id="a8c0a-118">Uygulama etki alanı kaynak izleme için İstatistikler toplanır.</span><span class="sxs-lookup"><span data-stu-id="a8c0a-118">Statistics for application domain resource monitoring are collected.</span></span>|  
-|`false`|<span data-ttu-id="a8c0a-119">Uygulama etki alanı kaynak izleme istatistiklerini toplanmadı.</span><span class="sxs-lookup"><span data-stu-id="a8c0a-119">Statistics for application domain resource monitoring are not collected.</span></span>|  
+|`true`|<span data-ttu-id="be59d-118">Uygulama etki alanı kaynak izleme için İstatistikler toplanır.</span><span class="sxs-lookup"><span data-stu-id="be59d-118">Statistics for application domain resource monitoring are collected.</span></span>|  
+|`false`|<span data-ttu-id="be59d-119">Uygulama etki alanı kaynak izleme istatistiklerini toplanmadı.</span><span class="sxs-lookup"><span data-stu-id="be59d-119">Statistics for application domain resource monitoring are not collected.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="a8c0a-120">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="a8c0a-120">Child Elements</span></span>  
- <span data-ttu-id="a8c0a-121">Yok.</span><span class="sxs-lookup"><span data-stu-id="a8c0a-121">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="be59d-120">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="be59d-120">Child Elements</span></span>  
+ <span data-ttu-id="be59d-121">Yok.</span><span class="sxs-lookup"><span data-stu-id="be59d-121">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="a8c0a-122">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="a8c0a-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="be59d-122">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="be59d-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="a8c0a-123">Öğe</span><span class="sxs-lookup"><span data-stu-id="a8c0a-123">Element</span></span>|<span data-ttu-id="a8c0a-124">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a8c0a-124">Description</span></span>|  
+|<span data-ttu-id="be59d-123">Öğe</span><span class="sxs-lookup"><span data-stu-id="be59d-123">Element</span></span>|<span data-ttu-id="be59d-124">Açıklama</span><span class="sxs-lookup"><span data-stu-id="be59d-124">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="a8c0a-125">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="a8c0a-125">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="a8c0a-126">Derleme bağlama ve atık toplama hakkında bilgi içerir.</span><span class="sxs-lookup"><span data-stu-id="a8c0a-126">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="be59d-125">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="be59d-125">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="be59d-126">Derleme bağlama ve atık toplama hakkında bilgi içerir.</span><span class="sxs-lookup"><span data-stu-id="be59d-126">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a8c0a-127">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a8c0a-127">Remarks</span></span>  
- <span data-ttu-id="a8c0a-128">Uygulama etki alanı kaynak izleme, barındırma yönetilen uygulama etki alanı sınıfı kullanılabilir [Iclrappdomainresourcemonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) arabirimi ve olay izleme için Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="a8c0a-128">Application domain resource monitoring is available through the managed application domain class, the hosting [ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) interface, and event tracing for Windows (ETW).</span></span> <span data-ttu-id="a8c0a-129">İzleme etkin olduğunda istatistikleri ömrü işlemin işlemdeki tüm uygulama etki alanları için toplanır.</span><span class="sxs-lookup"><span data-stu-id="a8c0a-129">When monitoring is enabled, statistics are collected for all application domains in the process for the life of the process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="be59d-127">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="be59d-127">Remarks</span></span>  
+ <span data-ttu-id="be59d-128">Uygulama etki alanı kaynak izleme, barındırma yönetilen uygulama etki alanı sınıfı kullanılabilir [Iclrappdomainresourcemonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) arabirimi ve olay izleme için Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="be59d-128">Application domain resource monitoring is available through the managed application domain class, the hosting [ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) interface, and event tracing for Windows (ETW).</span></span> <span data-ttu-id="be59d-129">İzleme etkin olduğunda istatistikleri ömrü işlemin işlemdeki tüm uygulama etki alanları için toplanır.</span><span class="sxs-lookup"><span data-stu-id="be59d-129">When monitoring is enabled, statistics are collected for all application domains in the process for the life of the process.</span></span>  
   
- <span data-ttu-id="a8c0a-130">Yönetilen koddan izlemeyi etkinleştirmek için <xref:System.AppDomain.MonitoringIsEnabled%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="a8c0a-130">To enable monitoring from managed code, use the <xref:System.AppDomain.MonitoringIsEnabled%2A> property.</span></span>  
+ <span data-ttu-id="be59d-130">Yönetilen koddan izlemeyi etkinleştirmek için <xref:System.AppDomain.MonitoringIsEnabled%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="be59d-130">To enable monitoring from managed code, use the <xref:System.AppDomain.MonitoringIsEnabled%2A> property.</span></span>  
   
- <span data-ttu-id="a8c0a-131">Bu yapılandırma öğesi yalnızca [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] ve daha sonra.</span><span class="sxs-lookup"><span data-stu-id="a8c0a-131">This configuration element is available only in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] and later.</span></span>  
+ <span data-ttu-id="be59d-131">Bu yapılandırma öğesi, yalnızca .NET Framework 4'teki kullanılabilir ve üzerinde desteklenir.</span><span class="sxs-lookup"><span data-stu-id="be59d-131">This configuration element is available only in the .NET Framework 4 and later.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a8c0a-132">Örnek</span><span class="sxs-lookup"><span data-stu-id="a8c0a-132">Example</span></span>  
- <span data-ttu-id="a8c0a-133">Aşağıdaki örnek, uygulama etki alanı kaynak izleme etkinleştirmek gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="a8c0a-133">The following example shows how to enable application domain resource monitoring.</span></span>  
+## <a name="example"></a><span data-ttu-id="be59d-132">Örnek</span><span class="sxs-lookup"><span data-stu-id="be59d-132">Example</span></span>  
+ <span data-ttu-id="be59d-133">Aşağıdaki örnek, uygulama etki alanı kaynak izleme etkinleştirmek gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="be59d-133">The following example shows how to enable application domain resource monitoring.</span></span>  
   
 ```xml  
 <configuration>  
@@ -72,8 +72,8 @@ ms.locfileid: "61705005"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a8c0a-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a8c0a-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be59d-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="be59d-134">See also</span></span>
 
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="a8c0a-135">Çalışma Zamanı Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="a8c0a-135">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="a8c0a-136">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="a8c0a-136">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="be59d-135">Çalışma Zamanı Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="be59d-135">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="be59d-136">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="be59d-136">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

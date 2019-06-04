@@ -2,24 +2,24 @@
 title: 'Nasıl yapılır: Okuma ve yazma kodlanmış belge (C#)'
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: fdf3e05c705ca9caea32306616c79ade0aeb9be3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6340443fddbedb4e27e1d1f8ab3e7c006a039f25
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702314"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485145"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-c"></a><span data-ttu-id="38e31-102">Nasıl yapılır: Okuma ve yazma kodlanmış belge (C#)</span><span class="sxs-lookup"><span data-stu-id="38e31-102">How to: Read and Write an Encoded Document (C#)</span></span>
-<span data-ttu-id="38e31-103">Kodlanmış bir XML belgesi oluşturmak için eklediğiniz bir <xref:System.Xml.Linq.XDeclaration> için istenen kod sayfası adı kodlama XML ağacına ayarlama.</span><span class="sxs-lookup"><span data-stu-id="38e31-103">To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.</span></span>  
+# <a name="how-to-read-and-write-an-encoded-document-c"></a><span data-ttu-id="29c3b-102">Nasıl yapılır: Okuma ve yazma kodlanmış belge (C#)</span><span class="sxs-lookup"><span data-stu-id="29c3b-102">How to: Read and Write an Encoded Document (C#)</span></span>
+<span data-ttu-id="29c3b-103">Kodlanmış bir XML belgesi oluşturmak için eklediğiniz bir <xref:System.Xml.Linq.XDeclaration> için istenen kod sayfası adı kodlama XML ağacına ayarlama.</span><span class="sxs-lookup"><span data-stu-id="29c3b-103">To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.</span></span>  
   
- <span data-ttu-id="38e31-104">Tarafından döndürülen herhangi bir değer <xref:System.Text.Encoding.WebName%2A> , geçerli bir değer.</span><span class="sxs-lookup"><span data-stu-id="38e31-104">Any value returned by <xref:System.Text.Encoding.WebName%2A> is a valid value.</span></span>  
+ <span data-ttu-id="29c3b-104">Tarafından döndürülen herhangi bir değer <xref:System.Text.Encoding.WebName%2A> , geçerli bir değer.</span><span class="sxs-lookup"><span data-stu-id="29c3b-104">Any value returned by <xref:System.Text.Encoding.WebName%2A> is a valid value.</span></span>  
   
- <span data-ttu-id="38e31-105">Kodlanmış belge okuma <xref:System.Xml.Linq.XDeclaration.Encoding%2A> özelliği kod sayfası adına ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="38e31-105">If you read an encoded document, the <xref:System.Xml.Linq.XDeclaration.Encoding%2A> property will be set to the code page name.</span></span>  
+ <span data-ttu-id="29c3b-105">Kodlanmış belge okuma <xref:System.Xml.Linq.XDeclaration.Encoding%2A> özelliği kod sayfası adına ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="29c3b-105">If you read an encoded document, the <xref:System.Xml.Linq.XDeclaration.Encoding%2A> property will be set to the code page name.</span></span>  
   
- <span data-ttu-id="38e31-106">Ayarlarsanız <xref:System.Xml.Linq.XDeclaration.Encoding%2A> geçerli kod sayfasına adına [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belirtilen kodlama ile serileştirme.</span><span class="sxs-lookup"><span data-stu-id="38e31-106">If you set <xref:System.Xml.Linq.XDeclaration.Encoding%2A> to a valid code page name, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] will serialize with the specified encoding.</span></span>  
+ <span data-ttu-id="29c3b-106">Ayarlarsanız <xref:System.Xml.Linq.XDeclaration.Encoding%2A> geçerli kod sayfasına adına [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belirtilen kodlama ile serileştirme.</span><span class="sxs-lookup"><span data-stu-id="29c3b-106">If you set <xref:System.Xml.Linq.XDeclaration.Encoding%2A> to a valid code page name, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] will serialize with the specified encoding.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="38e31-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="38e31-107">Example</span></span>  
- <span data-ttu-id="38e31-108">Aşağıdaki örnek, iki belge, utf-8 kodlamalı, diğeri utf-16 kodlamalı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="38e31-108">The following example creates two documents, one with utf-8 encoding, and one with utf-16 encoding.</span></span> <span data-ttu-id="38e31-109">Belgeleri yükler ve kodlama konsola yazdırır.</span><span class="sxs-lookup"><span data-stu-id="38e31-109">It then loads the documents and prints the encoding to the console.</span></span>  
+## <a name="example"></a><span data-ttu-id="29c3b-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="29c3b-107">Example</span></span>  
+ <span data-ttu-id="29c3b-108">Aşağıdaki örnek, iki belge, utf-8 kodlamalı, diğeri utf-16 kodlamalı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="29c3b-108">The following example creates two documents, one with utf-8 encoding, and one with utf-16 encoding.</span></span> <span data-ttu-id="29c3b-109">Belgeleri yükler ve kodlama konsola yazdırır.</span><span class="sxs-lookup"><span data-stu-id="29c3b-109">It then loads the documents and prints the encoding to the console.</span></span>  
   
 ```csharp  
 Console.WriteLine("Creating a document with utf-8 encoding");  
@@ -54,7 +54,7 @@ Console.WriteLine();
 Console.WriteLine("Encoding of loaded document is:{0}", newDoc16.Declaration.Encoding);  
 ```  
   
- <span data-ttu-id="38e31-110">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="38e31-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="29c3b-110">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="29c3b-110">This example produces the following output:</span></span>  
   
 ```  
 Creating a document with utf-8 encoding  
@@ -76,7 +76,6 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="38e31-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="38e31-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="29c3b-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="29c3b-111">See also</span></span>
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="38e31-112">Gelişmiş LINQ to XML programlama (C#)</span><span class="sxs-lookup"><span data-stu-id="38e31-112">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

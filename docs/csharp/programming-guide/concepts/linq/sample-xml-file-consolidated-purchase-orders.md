@@ -2,17 +2,17 @@
 title: 'Örnek XML Dosyası: Birleştirilmiş satın alma Orders2'
 ms.date: 07/20/2015
 ms.assetid: 9d9698a5-95f2-4564-813b-ba536cdf3bfb
-ms.openlocfilehash: d1f6af1f326b5a3e4bb115a02a62ac30a6e29602
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abd9a8f49cbd1308dfb1c043f310601decf64336
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61712034"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483785"
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="bb1e1-102">Örnek XML Dosyası: Birleştirilmiş Satın Alma Siparişleri</span><span class="sxs-lookup"><span data-stu-id="bb1e1-102">Sample XML File: Consolidated Purchase Orders</span></span>
-<span data-ttu-id="bb1e1-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="bb1e1-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="bb1e1-104">Bu dosyayı, birden çok şirketlerin farklı şekiller ile satın alma siparişleri kümesidir.</span><span class="sxs-lookup"><span data-stu-id="bb1e1-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="bb1e1-105">Her bir şirketten satın alma siparişleri ayrı ad alanlarında ' dir.</span><span class="sxs-lookup"><span data-stu-id="bb1e1-105">Purchase orders from each company are in separate namespaces.</span></span>  
+# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="aa065-102">Örnek XML Dosyası: Birleştirilmiş Satın Alma Siparişleri</span><span class="sxs-lookup"><span data-stu-id="aa065-102">Sample XML File: Consolidated Purchase Orders</span></span>
+<span data-ttu-id="aa065-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="aa065-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="aa065-104">Bu dosyayı, birden çok şirketlerin farklı şekiller ile satın alma siparişleri kümesidir.</span><span class="sxs-lookup"><span data-stu-id="aa065-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="aa065-105">Her bir şirketten satın alma siparişleri ayrı ad alanlarında ' dir.</span><span class="sxs-lookup"><span data-stu-id="aa065-105">Purchase orders from each company are in separate namespaces.</span></span>  
   
-## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="bb1e1-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="bb1e1-106">ConsolidatedPurchaseOrders.xml</span></span>  
+## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="aa065-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="aa065-106">ConsolidatedPurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -143,7 +143,3 @@ ms.locfileid: "61712034"
   </aw:PurchaseOrder>  
 </PurchaseOrders>  
 ```  
-  
-## <a name="see-also"></a><span data-ttu-id="bb1e1-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bb1e1-107">See also</span></span>
-
-- [<span data-ttu-id="bb1e1-108">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="bb1e1-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
