@@ -48,7 +48,7 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
- **\<Temizle >** uygulamanızdan geçerli yapılandırma dosyasında ya da daha yüksek bir düzeyde yapılandırma dosyası hiyerarşisinde daha önce tanımlanan öğeyi kaldırır tüm bölümler ve bölüm grupları.
+**\<Temizle >** uygulamanızdan geçerli yapılandırma dosyasında ya da daha yüksek bir düzeyde yapılandırma dosyası hiyerarşisinde daha önce tanımlanan öğeyi kaldırır tüm bölümler ve bölüm grupları.
 
 ## <a name="example"></a>Örnek
 

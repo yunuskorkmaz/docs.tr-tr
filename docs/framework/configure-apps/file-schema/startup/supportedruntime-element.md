@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: c6bf4c6b262bc9066277a683d5eda67ada6f4d08
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 90bdd5b8c5fdebe2c5d7ec580975dc63144b2401
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456218"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489304"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > öğesi
 
@@ -34,7 +34,7 @@ Hangi ortak dil çalışma zamanı sürüm ve isteğe bağlı olarak, uygulama .
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|**version**|İsteğe bağlı öznitelik.<br /><br /> Bu uygulamanın desteklediği ortak dil çalışma zamanı (CLR) sürümünü belirten bir dize değeri. Geçerli değerler için `version` özniteliği için bkz: ["çalışma zamanı sürümü" değerleri](#version) bölümü. **Not:**  .NET Framework 3.5 aracılığıyla "*çalışma zamanı sürümü*" değeri alan formun *ana*. *küçük*. *derleme*. İle başlayarak [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], sadece birincil ve ikincil sürüm numaraları gereklidir (yani, "v4.0.30319" yerine "v4.0"). Kısa dize önerilir.|
+|**version**|İsteğe bağlı öznitelik.<br /><br /> Bu uygulamanın desteklediği ortak dil çalışma zamanı (CLR) sürümünü belirten bir dize değeri. Geçerli değerler için `version` özniteliği için bkz: ["çalışma zamanı sürümü" değerleri](#version) bölümü. **Not:**  .NET Framework 3.5 aracılığıyla "*çalışma zamanı sürümü*" değeri alan formun *ana*. *küçük*. *derleme*. .NET Framework 4 ile başlayarak, yalnızca birincil ve ikincil sürüm numaraları gereklidir (yani, "v4.0.30319" yerine "v4.0"). Kısa dize önerilir.|
 |**sku**|İsteğe bağlı öznitelik.<br /><br /> Sırayla bu uygulamanın desteklediği hangi .NET Framework sürüm belirten stok tutma birimini (STB) belirten bir dize değeri.<br /><br /> .NET Framework 4.0 ile kullanımı başlangıç `sku` özniteliği önerilir.  Varsa, .NET Framework sürümünü gösterir. Bu uygulama hedefler.<br /><br /> Geçerli sku öznitelik değerleri için bkz: ["sku kimliği" değerleri](#sku) bölümü.|
 
 ## <a name="remarks"></a>Açıklamalar

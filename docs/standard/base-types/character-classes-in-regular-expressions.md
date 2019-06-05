@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 556181d32f0539b4a9e24cb1a898b4ccc3788f4e
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 0b70545c2252d6e8b82d6f4d57522ac4bb2481d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250885"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490875"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Normal ifadelerdeki karakter sınıfları
 
@@ -51,7 +51,7 @@ Bir karakter sınıfı, bir eşleşmenin başarılı olması için giriş dizesi
  .NET karakter sınıfı çıkarma ifadelerini, bir karakter sınıfı, başka bir karakter sınıfını çıkararak sonucu olarak bir karakter kümesi tanımlamanıza olanak sağlayan destekler. Daha fazla bilgi için [karakter sınıfı çıkarma](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Karakter karakter kategoriye göre gibi eşleşen sınıfları [\w](#WordCharacter) sözcük karakteri eşleştirmek için veya [\p{} ](#CategoryOrBlock) bir Unicode kategorisinin eşleştirilecek dayanan <xref:System.Globalization.CharUnicodeInfo> bilgi sağlamak için sınıfı karakter kategorileri hakkında.  .NET Framework 4.6.2 ile başlayarak, karakter kategorileri temel alan [Unicode standardı, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] .NET Framework 4.6.1 temel [Unicode standardı, sürüm 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+>  Karakter karakter kategoriye göre gibi eşleşen sınıfları [\w](#WordCharacter) sözcük karakteri eşleştirmek için veya [\p{} ](#CategoryOrBlock) bir Unicode kategorisinin eşleştirilecek dayanan <xref:System.Globalization.CharUnicodeInfo> bilgi sağlamak için sınıfı karakter kategorileri hakkında.  .NET Framework 4.6.2 ile başlayarak, karakter kategorileri temel alan [Unicode standardı, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). .NET Framework 4.6.1 aracılığıyla .NET Framework 4 temel [Unicode standardı, sürüm 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Pozitif karakter grubu:]  
