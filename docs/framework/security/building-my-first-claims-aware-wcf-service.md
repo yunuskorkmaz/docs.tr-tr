@@ -3,12 +3,12 @@ title: Talep Kullanan İlk WCF Hizmetimi Derleme
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: 63f6e2141c06c903b2e03de4b5124013220d0b09
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f242de43f1917dd6b01e15914359049ee754aa92
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650484"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690180"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Talep Kullanan İlk WCF Hizmetimi Derleme
 ## <a name="applies-to"></a>Uygulanan Öğe  
@@ -34,7 +34,7 @@ ms.locfileid: "64650484"
   
 - [Active Directory Federasyon Hizmetleri (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
-- [Windows Azure erişim denetimi hizmeti (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
+- [Windows Azure erişim denetimi hizmeti (ACS)](https://docs.microsoft.com/previous-versions/azure/azure-services/hh147631(v=azure.100))
   
  AD FS 2.0, Windows Server R2'nin bir parçasıdır ve şirket içi senaryolar için STS olarak kullanılabilir. Azure Active Directory erişim denetimi (Access Control Service veya ACS olarak da bilinir), Microsoft Azure'nın bir parçası olarak sunulan bulut hizmetidir. Test ve eğitim amaçları için talep kullanan uygulamalar oluşturmak üzere başka STS'ler de kullanabilirsiniz. Örneğin, bir parçası olan yerel geliştirme STS'si kullanabilirsiniz [kimlik ve erişim aracı Visual Studio için](https://go.microsoft.com/fwlink/?LinkID=245849) olduğu ücretsiz çevrimiçi.  
   

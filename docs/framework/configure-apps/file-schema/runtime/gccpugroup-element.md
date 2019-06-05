@@ -7,71 +7,76 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85cfe57f7a3b8cfecfae4c4ae00efaea464e6120
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1251f286a4e6168ef1d18b05288e0c5f353ad828
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674096"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689876"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup > öğesi
-Çöp toplama, birden fazla CPU grubu destekleyip desteklemediğini belirtir.  
-  
- \<Yapılandırma >  
-\<çalışma zamanı >  
-\<GCCpuGroup>  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```xml  
-<GCCpuGroup    
-   enabled="true|false"/>  
-```  
-  
-## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
-  
-### <a name="attributes"></a>Öznitelikler  
-  
-|Öznitelik|Açıklama|  
-|---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> Çöp toplama, birden fazla CPU grubu destekleyip desteklemediğini belirtir.|  
-  
-## <a name="enabled-attribute"></a>etkin Öznitelik  
-  
-|Değer|Açıklama|  
-|-----------|-----------------|  
-|`false`|Çöp toplama, birden fazla CPU grubu desteklemiyor. Bu varsayılandır.|  
-|`true`|Sunucu çöp toplama etkin olduğunda çöp toplama, birden fazla CPU grubu destekler.|  
-  
-### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
-  
-### <a name="parent-elements"></a>Üst Öğeler  
-  
-|Öğe|Açıklama|  
-|-------------|-----------------|  
-|`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
-  
-## <a name="remarks"></a>Açıklamalar  
- Ne zaman bir bilgisayarda birden fazla CPU grubu ve sunucu çöp toplama etkin (bkz [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) öğe), bu öğenin etkinleştirilmesi, çöp toplama, tüm CPU grupları arasında genişletir ve tüm çekirdek içine alır hesabı oluştururken ve Yığınlar Dengeleme.  
-  
+
+Çöp toplama, birden fazla CPU grubu destekleyip desteklemediğini belirtir.
+
+\<Yapılandırma > \
+\<çalışma zamanı > \
+\<GCCpuGroup>
+
+## <a name="syntax"></a>Sözdizimi
+
+```xml
+<GCCpuGroup
+   enabled="true|false"/>
+```
+
+## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler
+
+Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
+
+### <a name="attributes"></a>Öznitelikler
+
+|Öznitelik|Açıklama|
+|---------------|-----------------|
+|`enabled`|Gerekli öznitelik.<br /><br /> Çöp toplama, birden fazla CPU grubu destekleyip desteklemediğini belirtir.|
+
+## <a name="enabled-attribute"></a>etkin Öznitelik
+
+|Değer|Açıklama|
+|-----------|-----------------|
+|`false`|Çöp toplama, birden fazla CPU grubu desteklemiyor. Bu varsayılandır.|
+|`true`|Sunucu çöp toplama etkin olduğunda çöp toplama, birden fazla CPU grubu destekler.|
+
+### <a name="child-elements"></a>Alt Öğeler
+
+Yok.
+
+### <a name="parent-elements"></a>Üst Öğeler
+
+|Öğe|Açıklama|
+|-------------|-----------------|
+|`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|
+|`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|
+
+## <a name="remarks"></a>Açıklamalar
+
+Ne zaman bir bilgisayarda birden fazla CPU grubu ve sunucu çöp toplama etkin (bkz [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) öğe), bu öğenin etkinleştirilmesi, çöp toplama, tüm CPU grupları arasında genişletir ve tüm çekirdek içine alır hesabı oluştururken ve Yığınlar Dengeleme.
+
 > [!NOTE]
->  Bu öğe yalnızca çöp toplama iş parçacığı için geçerlidir. Kullanıcı iş parçacıklarını tüm CPU grupları arasında dağıtmak çalışma zamanını etkinleştirmek üzere, ayrıca etkinleştirmelisiniz [< Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) öğesi.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek, çöp toplama için birden fazla CPU grubu etkinleştirmek gösterilmektedir.  
-  
-```xml  
-<configuration>  
-   <runtime>  
-      <GCCpuGroup enabled="true"/>  
-      <gcServer enabled="true"/>  
-   </runtime>  
-</configuration>  
-```  
-  
+> Bu öğe yalnızca çöp toplama iş parçacığı için geçerlidir. Kullanıcı iş parçacıklarını tüm CPU grupları arasında dağıtmak çalışma zamanını etkinleştirmek üzere, ayrıca etkinleştirmelisiniz [ \<Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) öğesi.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki örnek, çöp toplama için birden fazla CPU grubu etkinleştirmek gösterilmektedir.
+
+```xml
+<configuration>
+   <runtime>
+      <GCCpuGroup enabled="true"/>
+      <gcServer enabled="true"/>
+   </runtime>
+</configuration>
+```
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)

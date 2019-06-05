@@ -7,21 +7,21 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 7c373d9fd5934be98735cd814dafb35ed81fddfe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 69dfa0eb8d9ad9b780d258a874d255484f270cfe
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592633"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690440"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Nasıl yapılır: .NET Framework 3.5'in Yüklü Olup Olmadığını Algılama
-Yöneticiler Windows Presentation Foundation (WPF) uygulamaları hedefleyen bir sistemde dağıtmadan önce [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], bunlar ilk olduğunu onaylaması gerekir [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] çalışma zamanının. Bu konu, yazılan bir betik sağlar. Yöneticiler belirlemek için kullanabileceğiniz HTML/JavaScript içinde olup olmadığını [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] bir sistemde mevcut.  
+Yöneticiler, .NET Framework 3. 5'i hedefleyen bir sistemde Windows Presentation Foundation (WPF) uygulamaları dağıtmadan önce ilk olarak, .NET Framework 3.5 çalışma zamanı mevcut olduğunu onaylamanız gerekir. Bu konu, HTML/JavaScript dilinde yazılmış bir komut dosyası sağlar. Yöneticiler, .NET Framework 3.5 bir sistemde mevcut olup olmadığını belirlemek için kullanabilirsiniz.  
   
 > [!NOTE]
 >  Yükleme hakkında daha ayrıntılı bilgi için bkz: dağıtma ve .NET Framework'ü algılama [geliştiriciler için .NET Framework yükleme](../../install/guide-for-developers.md).  
   
 ## <a name="example"></a>Örnek  
- Zaman [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] olan yüklü MSI ".NET CLR" ve sürüm numarasını UserAgent dizesi olarak ekler. Aşağıdaki örnek, basit bir HTML sayfasında yerleşik bir komut dosyası gösterir. Komut dosyası belirlemek için UserAgent dizesi arar olmadığını [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] yüklenir ve arama sonuçlarını temel bir durum iletisi görüntüler.  
+ .NET Framework 3.5 yüklendiğinde, MSI ".NET CLR" ve sürüm numarasını UserAgent dizesi olarak ekler. Aşağıdaki örnek, basit bir HTML sayfasında yerleşik bir komut dosyası gösterir. Komut dosyası, .NET Framework 3.5 yüklenir ve arama sonuçlarını temel durum iletisini görüntüler olup olmadığını belirlemek için UserAgent dizesi arar.  
   
 > [!NOTE]
 >  Bu betik, Internet Explorer için tasarlanmıştır. Diğer tarayıcılarda UserAgent dizesi içinde .NET CLR bilgileri içermeyebilir.  

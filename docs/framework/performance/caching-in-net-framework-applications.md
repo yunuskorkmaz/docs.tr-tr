@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 14565c3e73618a4290166d89f0ae6c2c9150f3b3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 54e0c8f8153780e5a5d45b91b1aea391dec19933
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586185"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689389"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework Uygulamalarında Önbelleğe Alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanızı sağlar. Verileri yeniden erişildiğinde uygulamaları özgün kaynaktan almak yerine önbellekten veri alabilirsiniz. Bu, performansı ve ölçeklenebilirliği artırabilir. Ayrıca, önbelleğe alma, veri kaynağının geçici olarak devre dışı olduğunda yaptığı veri yok.  
@@ -19,7 +19,7 @@ ms.locfileid: "65586185"
  .NET Framework, ASP.NET dahil olmak üzere iki Windows istemci ve sunucu uygulamaları, ölçeklenebilirliğini ve performansı artırmak için kullanabileceğiniz önbelleğe alma işlevselliği sağlar.  
   
 > [!NOTE]
->  İçinde [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ve önceki sürümleri, ASP.NET bir bellek içi önbelleği uygulamasında sağlanan <xref:System.Web.Caching> ad alanı. Önceki .NET Framework sürümlerinde, önbelleğe yalnızca <xref:System.Web> ad alanı ve bu nedenle ASP.NET sınıfları bir bağımlılık gerekli. .NET Framework 4'te <xref:System.Runtime.Caching> ad alanı, hem Web hem de olmayan Web uygulamaları için tasarlanmış API'ler içerir.  
+>  .NET Framework 3.5 ve önceki sürümlerinde, bir bellek içi önbelleği uygulamasında ASP.NET sağlanan <xref:System.Web.Caching> ad alanı. Önceki .NET Framework sürümlerinde, önbelleğe yalnızca <xref:System.Web> ad alanı ve bu nedenle ASP.NET sınıfları bir bağımlılık gerekli. .NET Framework 4'te <xref:System.Runtime.Caching> ad alanı, hem Web hem de olmayan Web uygulamaları için tasarlanmış API'ler içerir.  
   
 ## <a name="caching-data"></a>Verileri Önbelleğe Alma  
  Sınıflarını kullanarak bilgileri önbelleğe alabilir <xref:System.Runtime.Caching> ad alanı. Bu ad alanındaki önbelleğe alma sınıflar aşağıdaki özellikleri sağlar:  
@@ -47,7 +47,7 @@ ms.locfileid: "65586185"
  Önbelleğe almayı yer alan sınıfları <xref:System.Runtime.Caching> ad alanı, ASP.NET'te verileri önbelleğe alma için işlevselliği sağlar.  
   
 > [!NOTE]
->  Uygulama hedeflerinizi [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ya da daha önce tanımlanan önbelleğe alma sınıfları kullanmalısınız <xref:System.Web.Caching> ad alanı. Daha fazla bilgi için [ASP.NET önbelleğe alma genel bakış](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
+>  Uygulamanızı hedefi .NET Framework 3.5 veya daha önce tanımlanan önbelleğe alma sınıfları kullanmalısınız <xref:System.Web.Caching> ad alanı. Daha fazla bilgi için [ASP.NET önbelleğe alma genel bakış](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
   
 > [!NOTE]
 >  Yeni uygulamalar geliştirirken kullanmanızı öneririz <xref:System.Runtime.Caching.MemoryCache> sınıfı. Sağlanan API <xref:System.Runtime.Caching> ad alanı gibi sağlanan API <xref:System.Web.Caching.Cache> ad alanı. Bu nedenle, API, ASP.NET'in önceki sürümlerinde önbelleğe alma kullandıysanız tanıdık gelecektir. ASP.NET uygulamalarında önbelleğe almayı kullanmak üzere nasıl bir örnek için bkz [izlenecek yol: ASP.NET'te uygulama verilerini önbelleğe alma](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100)).  
