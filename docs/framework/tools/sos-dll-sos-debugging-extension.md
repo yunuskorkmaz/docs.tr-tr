@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ddd075de6152d7f040d69682dde0361843971922
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0821b4a680db4822cea1787edb095309e6333cbf
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631839"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690160"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS hata ayıklama uzantısı)
 
@@ -68,11 +68,11 @@ SOS hata ayıklama uzantısı (SOS.dll) iç ortak dil çalışma zamanı (CLR) o
 |**HeapStat** [ **- inclUnrooted** &#124; **-IU**]|Her bir yığın için oluşturma büyüklüğünü ve her bir yığındaki her bir oluşturmada bulunan toplam boş alanı görüntüler. Varsa**inclUnrooted** seçeneği belirtilmemişse, rapor artık kökü olmayan çöp toplama yığınındaki yönetilen nesnelerle ilgili bilgiler içerir.|
 |**Histınit**|Ailesi tarafından kullanılan tüm kaynakları serbest bırakır `Hist` komutları.<br /><br /> Genellikle, açıkça çağırmanız gerekmez `HistClear`, çünkü her `HistInit` önceki kaynakları temizlediğinden.|
 |**Histclear**|Hatası ayıklanana kaydedilen yük günlüğünden SOS yapılarını başlatır.|
-|**HistObj** *< obj_address >*|Tüm yük günlüğü yeniden yerleştirme kayıtlarını inceler ve bir bağımsız değişken olarak geçirilen adrese yönlendirebilecek çöp toplama yeniden konumlandırmaları zincirini görüntüler.|
-|**HistObjFind**  *<obj_address>*|Belirtilen adresteki bir nesneye başvuran tüm günlük girişlerini görüntüler.|
+|**HistObj**  *\<obj_address >*|Tüm yük günlüğü yeniden yerleştirme kayıtlarını inceler ve bir bağımsız değişken olarak geçirilen adrese yönlendirebilecek çöp toplama yeniden konumlandırmaları zincirini görüntüler.|
+|**HistObjFind** *\<obj_address >*|Belirtilen adresteki bir nesneye başvuran tüm günlük girişlerini görüntüler.|
 |**HistRoot**  *\<kök >*|Belirtilen kökün tanıtımlarıyla ve yeniden konumlandırılmalarıyla ilişkili bilgileri görüntüler.<br /><br /> Kök değeri, bir nesnenin çöp toplamalar içindeki hareketini izlemek için kullanılabilir.|
 |**IP2MD** \< *kod adresi*>|Görüntüler `MethodDesc` JIT derlemeli kod içinde belirtilen adreste yapısı.|
-|`ListNearObj` (`lno`) *< obj_address >*|Belirtilen adresten önceki ve sonraki nesneleri görüntüler. Komut, yönetilen bir nesnenin (geçerli bir yöntem tablosuna dayalı olarak) ve bağımsız değişken adresini izleyen nesnenin geçerli bir başlangıcı gibi görünen çöp toplama yığınında adresi arar.|
+|`ListNearObj` (`lno`)  *\<obj_address >*|Belirtilen adresten önceki ve sonraki nesneleri görüntüler. Komut, yönetilen bir nesnenin (geçerli bir yöntem tablosuna dayalı olarak) ve bağımsız değişken adresini izleyen nesnenin geçerli bir başlangıcı gibi görünen çöp toplama yığınında adresi arar.|
 |**MinidumpMode** [**0**] [**1**]|Bir mini döküm kullanırken, güvenli olmayan komutların çalışmasını önler.<br /><br /> Geçirmek **0** bu özelliği devre dışı bırakmak veya **1** bu özelliği etkinleştirmek için. Varsayılan olarak, **MinidumpMode** değeri ayarı **0**.<br /><br /> Oluşturulan Mini dökümler **.dump /m** komutu veya **.dump** komut CLR özel sınırlı veriler içerir ve SOS komutlarının yalnızca bir kısmı düzgün çalıştırmanıza olanak tanır. Gerekli bellek alanları eşleşmediğinden veya kısmen eşleştiğinden, bazı komutlar beklenmeyen hatalarla başarısız olabilir. Bu seçenek, mini dökümlere karşı güvenli olmayan komutları çalıştırmaktan sizi korur.|
 |**Name2EE** \< *modül adı*> \<*tür veya yöntem adı*><br /><br /> -veya-<br /><br /> **Name2EE** \< *modül adı*> **!** \< *tür veya yöntem adı*>|Görüntüler `MethodTable` yapısı ve `EEClass` belirtilen tür veya yöntemin belirtilen modüldeki yapısı.<br /><br /> Belirtilen modülün işlemde yüklenmesi gerekir.<br /><br /> Uygun tür adını almak için kullanarak modüle gözatın [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). De geçirebilirsiniz `*` modül olarak tüm arama için ad yüklü yönetilen modülleri. *Modül adı* parametresi ayrıca olabilir bir modül için hata ayıklayıcı'nın adı gibi `mscorlib` veya `image00400000`.<br /><br /> Bu komut Windows hata ayıklayıcı sözdizimini destekler <`module`>`!`<`type`>. Tür, tam olarak nitelenmiş olmalıdır.|
 |**ObjSize** [\<*nesnesi adresi*>] &#124; [ **-toplama**] [ **-stat**]|Belirtilen nesnenin boyutunu görüntüler. Herhangi bir parametre belirtmezseniz, **ObjSize** komutu yönetilen iş parçacıklarında bulunan tüm nesnelerin boyutunu görüntüler, işlemdeki tüm çöp toplayıcı tanıtıcılarını görüntüler ve bu tanıtıcıların işaret ettiği tüm nesnelerin boyutunu toplar. **ObjSize** komut üst ek olarak tüm alt nesnelerin büyüklüğünü içerir.<br /><br /> **-Toplama** seçeneği ile birlikte kullanılabilir **-stat** bağımsız değişkeni, hala köklü olan türlerin ayrıntılı bir görünüm elde edin. Kullanarak **! dumpheap-stat** ve **! objsize-toplama - stat**, hangi nesnelerin artık köklü olmayan ve çeşitli bellek sorunlarını tanılamak belirleyebilirsiniz.|
