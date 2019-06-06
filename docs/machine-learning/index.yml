@@ -27,7 +27,7 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">GitHub sorunları sınıflı sınıflandırma kullanarak kategorilere ayırma</a></li>
           - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">NYC taksi fares regresyon kullanarak tahmin etme</a>
           - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">Satmanın Kümelemesi kullanarak özelliklerine göre kategorilere ayırın</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommmendation">Bir film öneren matris factorization ile oluşturma</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Bir film öneren matris factorization ile oluşturma</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Özel görüntü sınıflandırıcı TensorFlow ile oluşturma</a>
   - title: Başvuru ve kaynaklar
     items:

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: d1cc6043afb7f795bb1208d2cf333aeca321462f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6d859f5f341eaf7c86573077ec56eab7b4cd7bb8
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457378"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722549"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları
 Tür dönüştürücülerinde ve İşaretleme uzantılarında Nesne grafiği bileşenleri oluşturmak için XAML türü sistemleri ve XAML yazarları kullanan iki tekniklerdir. Farklı bazı özellikleri paylaşır olsa da, tür dönüştürücüleri ve İşaretleme uzantılarında XAML düğümü akışı temsil edilir. Bu belgede kümesi, tür dönüştürücüleri, biçimlendirme uzantılarını ve benzer yapıları bazen topluca için değer dönüştürücüler adlandırılır.  
@@ -45,7 +45,7 @@ Tür dönüştürücülerinde ve İşaretleme uzantılarında Nesne grafiği bil
  XAML işaretleme uzantısı uygulama modeli hakkında daha fazla bilgi için bkz. [genel XAML işaretleme uzantılarına](markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> Ve <xref:System.Windows.Markup.ValueSerializer> türleridir hem de <xref:System.Windows.Markup> ad alanı ve de <xref:System.Xaml> ad alanı. Bu bu tür aksi dizeyi içeren CLR ad alanları doldurmak WPF veya Windows Forms teknolojiye özgü göstermez `Windows`. <xref:System.Windows.Markup.MarkupExtension> ve <xref:System.Windows.Markup.ValueSerializer> System.Xaml derlemede ve belirli framework bağımlılığı olmayan sahiptir. Bu türler için CLR ad alanı varolan [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] ve CLR ad alanı başvuruları varolan WPF projelerinde bozmayı önlemek için .NET Framework 4 içinde kalır. Daha fazla bilgi için [geçirilen türler wpf'den System.XAML'ye](types-migrated-from-wpf-to-system-xaml.md).  
+>  <xref:System.Windows.Markup.MarkupExtension> Ve <xref:System.Windows.Markup.ValueSerializer> türleridir hem de <xref:System.Windows.Markup> ad alanı ve de <xref:System.Xaml> ad alanı. Bu bu tür aksi dizeyi içeren CLR ad alanları doldurmak WPF veya Windows Forms teknolojiye özgü göstermez `Windows`. <xref:System.Windows.Markup.MarkupExtension> ve <xref:System.Windows.Markup.ValueSerializer> System.Xaml derlemede ve belirli framework bağımlılığı olmayan sahiptir. Bu türler, .NET Framework 3.0 için CLR ad alanında varolduğunu ve CLR ad alanı başvuruları varolan WPF projelerinde bozmayı önlemek için .NET Framework 4 içinde kalır. Daha fazla bilgi için [geçirilen türler wpf'den System.XAML'ye](types-migrated-from-wpf-to-system-xaml.md).  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>Değer seri hale getiricileri genişletme  

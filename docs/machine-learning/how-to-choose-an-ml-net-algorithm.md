@@ -4,12 +4,12 @@ description: ML.NET machine learning modeli için algoritma seçme hakkında bil
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 89c3c612d79f02d58a16070feadb645b081dd3e3
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557771"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722627"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET algoritma seçme
 
@@ -21,7 +21,7 @@ Algoritmalar çalışması üzerinde **özellikleri**. Sayısal giriş verilerin
 
 Bir algoritmadır üretmek için yürütür matematik bir **model**. Farklı algoritmalar, farklı özelliklere sahip modelleri üretin. 
 
-ML.NET ile aynı algoritmayı farklı görevler için uygulanabilir. Örneğin, ikili Sınıflandırma, veya çoklu sınıflar sınıflandırma ve regresyon Stokastik iniş Eşgüdümlü Ascent kullanılabilir. Nasıl algoritmasının çıktı görevi eşleşecek şekilde yorumlanır içinde farktır. 
+ML.NET ile aynı algoritmayı farklı görevler için uygulanabilir. Örneğin, ikili Stokastik Eşgüdümlü Ascent ikili Sınıflandırma, veya çoklu sınıflar sınıflandırma ve regresyon için kullanılabilir. Nasıl algoritmasının çıktı görevi eşleşecek şekilde yorumlanır içinde farktır. 
 
 Her bir algoritma/görev birleşimi için eğitim algoritması yürütür ve yorumunu yapar bir bileşen ML.NET sağlar. Bu bileşenler Eğitmenler çağrılır. Örneğin, <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> kullanan **StochasticDualCoordinatedAscent** uygulanan algoritması **regresyon** görev.
 
@@ -42,7 +42,7 @@ Doğrusal algoritmaları eğitim verilerini birden çok geçiş yapın. Veri kü
 |Algoritması|Özellikler|Eğitmenler|
 |---------|----------|--------|
 |Ortalama perceptron|Metin sınıflandırma için en iyi|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
-|Stokastik iniş Eşgüdümlü ascent|Varsayılan iyi performans için gereken otomatik ayarlama|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
+|Stokastik çift Eşgüdümlü ascent|Varsayılan iyi performans için gereken otomatik ayarlama|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
 |L-BFGS|Birçok özellik büyük olduğunda kullanın. Lojistik regresyon eğitim İstatistikler oluşturur, ancak yanı sıra AveragedPerceptronTrainer ölçeklendirilemez|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
 |Sembolik stokastik aşama|Hızlı ve en doğru doğrusal ikili sınıflandırma trainer. İşlemci sayısı ile iyi ölçeklendirilir|<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>|
 

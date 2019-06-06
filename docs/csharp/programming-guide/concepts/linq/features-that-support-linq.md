@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: d0b35bec3bbc30f411a705220c468fa8961b83cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf9af90c9695ad9428a887a901a95282672a4f75
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702431"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722543"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ'i Destekleyen C# Özellikleri
 
@@ -49,7 +49,7 @@ Daha fazla bilgi için [örtük olarak yazılan yerel değişkenler](../../../..
 Nesne ve koleksiyon başlatıcıları nesne için açıkça bir oluşturucu çağırmaya gerek kalmadan nesneleri başlatmak mümkün kılar. Bunlar kaynak verileri yeni bir veri türüne projenizin başlatıcılar genellikle sorgu ifadelerinde kullanılır. Adlı bir sınıf varsayılarak `Customer` ortak `Name` ve `Phone` nesne Başlatıcı özellikleri, aşağıdaki kodda gösterildiği gibi kullanılabilir:
 
 ```csharp
-Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };
+var cust = new Customer { Name = "Mike", Phone = "555-1212" };
 ```
 
 Devam etmeden bizim `Customer` sınıfı, adlandırılan bir veri kaynağı olduğunu varsayın `IncomingOrders`ve her sipariş büyük ile ilgili `OrderSize`, yeni bir istiyoruz `Customer` dışına o sırada temel. LINQ sorgusu, bu veri kaynağında yürütülen ve bir koleksiyonu doldurmak için nesne başlatmayı kullanın:

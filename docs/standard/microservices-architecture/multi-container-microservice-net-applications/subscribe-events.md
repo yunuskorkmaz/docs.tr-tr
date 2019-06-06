@@ -2,12 +2,12 @@
 title: Olaylara abone olma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Yayımlama ve tümleştirme olayları için abonelik ayrıntılarını anlayın.
 ms.date: 10/02/2018
-ms.openlocfilehash: ff165f6bba7940b99ef9712049191e356b893897
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c0eaacce51b186191431bf827bb84d3a2d2b7b1f
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639715"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722674"
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
@@ -367,7 +367,7 @@ Aralıklı ağ hataları meydana geldiğinde iletileri çoğaltılabilir ve ilet
 - **Veri tutarlılığı temel bilgileri** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Saling rick. CAP Teoremi: "Her şey farklı Bulut ve Internet ile budur"** \
+- **Saling rick. CAP Teoremi: "Her şey farklı Bulut ve Internet ile budur"**  \
     <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
 - **Eric Brewer. CAP on yıl: "Kurallar" nasıl değişti** \
@@ -378,12 +378,6 @@ Aralıklı ağ hataları meydana geldiğinde iletileri çoğaltılabilir ve ilet
 
 - **Güvenilirlik Kılavuzu** (RabbitMQ belgeleri) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
-
-- **Azure hizmet veri yolu. Aracılı Mesajlaşma: Yinelenen algılama** \
-    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
-
-- **Güvenilirlik Kılavuzu** (RabbitMQ belgeleri) \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)
 
 > [!div class="step-by-step"]
 > [Önceki](rabbitmq-event-bus-development-test-environment.md)

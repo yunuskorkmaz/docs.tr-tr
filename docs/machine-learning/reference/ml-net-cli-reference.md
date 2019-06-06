@@ -3,12 +3,12 @@ title: ML.NET CLI aracında otomatik train komutu
 description: Genel bakış, örnekler ve ML.NET CLI aracında otomatik train komut başvurusu.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 28eb56eb018e3d1cc76f300ee78c298af77c9b91
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557936"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722605"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>ML.NET CLI 'train otomatik' komutu
 
@@ -228,7 +228,7 @@ Kullanmak için `--label-column-name` bağımsız değişkeni, bir üst bilgi ve
 
 `--max-exploration-time | -x` (dize)
 
-Varsayılan olarak, en fazla araştırma süre 10 saniyedir.
+Varsayılan olarak, en fazla araştırma süresi 30 dakikadır.
 
 Bu bağımsız değişken birden çok eğitmenler ve yapılandırmalarını keşfetmek işlemi için en uzun süreyi (saniye cinsinden) ayarlar. Belirtilen saat (örneğin, 2 saniye) tek bir yineleme için çok kısa ise, yapılandırılan süre aşılmış olabilir. Bu durumda, gerçek bir model yapılandırmasında tek bir yineleme oluşturmak için gereken zamanı zamandır.
 
