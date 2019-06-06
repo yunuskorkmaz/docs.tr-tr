@@ -8,18 +8,18 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: 1b2a1164f02208cc7578820d8f8ed3bc145fb5b8
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: ae2c75607f7b9cdc40fc5c163ce533f0472ab454
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196072"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689546"
 ---
-# <a name="debugview-syntax"></a>`DebugView` Söz dizimi 
+# <a name="debugview-syntax"></a>`DebugView` Söz dizimi
 
 `DebugView` Özelliği (yalnızca hata ayıklama sırasında kullanılabilir) ifade ağaçları dize işlenmesini sağlar. Çoğu söz dizimini anlamak oldukça açıktır; özel durumlar aşağıdaki bölümlerde açıklanmıştır.
 
-Her örneğin bir açıklama bloğu içeren ardından `DebugView`. 
+Her örneğin bir açıklama bloğu içeren ardından `DebugView`.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -47,13 +47,13 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 Bazı sayısal türleri için bir sonek değerine eklenir:
 
-| Tür | Anahtar sözcüğü | Son eki |  
+| Tür | Anahtar sözcüğü | Son eki |
 |--|--|--|
 | <xref:System.UInt32> | [Uınteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [uzun](../../../language-reference/data-types/long-data-type.md) | L |
 | <xref:System.UInt64> | [ULong](../../../language-reference/data-types/ulong-data-type.md) | UL |
 | <xref:System.Double> | [çift](../../../language-reference/data-types/double-data-type.md) | D |
-| <xref:System.Single> | [Tek](../../../language-reference/data-types/single-data-type.md) | F | 
+| <xref:System.Single> | [Tek](../../../language-reference/data-types/single-data-type.md) | F |
 | <xref:System.Decimal> | [Ondalık](../../../language-reference/data-types/decimal-data-type.md) | M |
 
 ### <a name="examples"></a>Örnekler
@@ -87,7 +87,7 @@ Dim block As BlockExpression = Expression.Block(Expression.Constant("test"))
 '
 
 Dim block As BlockExpression = Expression.Block(
-    GetType(Object), 
+    GetType(Object),
     Expression.Constant("test")
 )
 '
@@ -154,7 +154,7 @@ Dim label1 As BlockExpression = Expression.Block(
 
 Dim target As LabelTarget = Expression.Label()
 Dim block As BlockExpression = Expression.Block(
-    Expression.Goto(target), 
+    Expression.Goto(target),
     Expression.Label(target)
 )
 '

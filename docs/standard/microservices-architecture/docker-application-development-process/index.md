@@ -2,12 +2,12 @@
 title: Docker Tabanlı Uygulamalar için Geliştirme İşlemi
 description: Seçenekler Docker tabanlı uygulamalar geliştirmeye yönelik üst düzey bir bakış edinin. Windows için Visual Studio, Visual Studio seçtiğiniz Mac ya da Visual Studio Code için çok platformlu destek için (Windows, Mac ve Linux) kullanarak.
 ms.date: 09/27/2018
-ms.openlocfilehash: 8807bc57365e70a0cbf265dc7bce28c93de16098
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a32b27f3d98ed7ebf63b637ec0c979c22ee8e1e8
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300641"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690624"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker tabanlı uygulamalar için geliştirme işlemi
 
@@ -46,5 +46,5 @@ Yükleyerek [Docker Masaüstü Community Edition'ı (CE)](https://hub.docker.com
 Geliştirme Docker kapsayıcılı .NET uygulamaları, bu kılavuzun önceki bölümlerde belirtildiği gibi .NET Framework, .NET Core ve açık kaynaklı Mono projesi kullanabilirsiniz. C'de geliştirebilirsiniz\#, F\#, ya da Linux veya Windows kapsayıcıları, bağlı olarak hangi .NET framework, kullanımda olan hedeflenirken VisualBasic. Daha fazla ayrıntı about.NET diller için blog gönderisine bakın [.NET dil stratejisi](https://devblogs.microsoft.com/dotnet/the-net-language-strategy/).
 
 >[!div class="step-by-step"]
->[Önceki](../architect-microservice-container-applications/using-azure-service-fabric.md)
+>[Önceki](../architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md)
 >[İleri](docker-app-development-workflow.md)

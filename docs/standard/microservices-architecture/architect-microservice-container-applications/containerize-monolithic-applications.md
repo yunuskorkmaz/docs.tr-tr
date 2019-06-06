@@ -2,12 +2,12 @@
 title: Tek Yapılı Uygulamaları Kapsayıcıya Alma
 description: Tek yapılı uygulamaları rağmen kapsayıcılı hale getirmek, mikro hizmetler mimarisi tüm avantajlarını elde edemez, hemen dağıtılabilecek dağıtım önemli faydası vardır.
 ms.date: 09/20/2018
-ms.openlocfilehash: 061afe86e0d38f058becde2b3afdb45b4428517a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640822"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690539"
 ---
 # <a name="containerizing-monolithic-applications"></a>Tek Yapılı Uygulamaları Kapsayıcıya Alma
 
@@ -63,9 +63,9 @@ Azure'a dağıtılan bir kapsayıcının doğrulama almak isteyip istemediğiniz
 
 **Şekil 4-4**. Bir tek kapsayıcı uygulamasını Azure App Service'e Visual Studio'dan yayımlama
 
-Docker, diğer özellikleri, çerçeveleri veya Azure App Service'te desteklenmeyen bağımlılıkları gerekirse bu bağımlılıkların App Service'te Azure ekibi güncelleştirilmiş bekleyin gerekiyordu. Veya Azure Service Fabric, Azure bulut Hizmetleri veya burada daha fazla denetim sahipti ve uygulamanız için gerekli bileşen veya framework yükleyebilir Vm'leri bile, gibi diğer hizmetlere geçiş gerekiyordu.
+Docker, diğer özellikleri, çerçeveleri veya Azure App Service'te desteklenmeyen bağımlılıkları gerekirse bu bağımlılıkların App Service'te Azure ekibi güncelleştirilmiş bekleyin gerekiyordu. Veya Azure bulut Hizmetleri veya burada daha fazla denetim sahipti ve uygulamanız için gerekli bileşen veya framework yükleyebilir VM'ler gibi diğer hizmetlere geçiş gerekiyordu.
 
-Kapsayıcı desteği Visual Studio 2017'de, Şekil 4-4'te gösterildiği gibi uygulama ortamınızda istediğiniz ekleme olanağı sağlar. Uygulamanıza bir bağımlılık eklerseniz, bir kapsayıcıdaki çalıştırıyorsanız bu yana Dockerfile ya da Docker görüntünüzü bağımlılık içerebilir.
+Kapsayıcı desteği Visual Studio 2017 ve sonraki sürümlerinde, Şekil 4-4'te gösterildiği gibi uygulama ortamınızda istediğiniz ekleme olanağı sağlar. Uygulamanıza bir bağımlılık eklerseniz, bir kapsayıcıdaki çalıştırıyorsanız bu yana Dockerfile ya da Docker görüntünüzü bağımlılık içerebilir.
 
 Yayımlama akışı da görüldüğü gibi Şekil 4-4'te, görüntüyü bir kapsayıcı kayıt defteri iter. Bu, Azure Container Registry (bir kayıt defteri için Azure dağıtımlarınızda kapatın ve Azure Active Directory'de gruplar ve hesaplar tarafından güvenli) veya tüm diğer Docker kayıt defteri, Docker Hub veya bir şirket içi kayıt defteri gibi olabilir.
 

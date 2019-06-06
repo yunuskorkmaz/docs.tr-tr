@@ -8,25 +8,25 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: de82a738430cdd37c4905a5ae7da5faeb46f00a4
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: bc3fc579ed8031d818241f41ac728ef7e5be0b99
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196522"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690112"
 ---
 # <a name="debugview-syntax"></a>`DebugView` Söz dizimi
 
 `DebugView` Özelliği (yalnızca hata ayıklama sırasında kullanılabilir) ifade ağaçları dize işlenmesini sağlar. Çoğu söz dizimini anlamak oldukça açıktır; özel durumlar aşağıdaki bölümlerde açıklanmıştır.
 
-Her örneğin bir blok açıklama tarafından izlenir içeren `DebugView`. 
+Her örneğin bir blok açıklama tarafından izlenir içeren `DebugView`.
 
-## <a name="parameterexpression"></a>ParameterExpression 
+## <a name="parameterexpression"></a>ParameterExpression
 
 <xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> değişken adları ile görüntülenir bir `$` simge başlangıcındaki.
-  
+
 Parametre bir adı yoksa, otomatik olarak oluşturulmuş bir adı gibi atandıktan `$var1` veya `$var2`.
-  
+
 ### <a name="examples"></a>Örnekler
 
 ```csharp
@@ -41,31 +41,31 @@ ParameterExpression numParam =  Expression.Parameter(typeof(int));
 */
 ```
 
-## <a name="constantexpression"></a>SabitDeyim'in  
+## <a name="constantexpression"></a>SabitDeyim'in
 
-İçin <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> dize, tamsayı değerlerini temsil eden nesneleri ve `null`, sabit değeri görüntülenir.  
-  
-C# sabit değer olarak standart sonekleri olan sayısal türleri için sonek değerine eklenir. Aşağıdaki tabloda, çeşitli sayısal türler ile ilişkili soneklerini gösterir.  
+İçin <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> dize, tamsayı değerlerini temsil eden nesneleri ve `null`, sabit değeri görüntülenir.
 
-| Tür | Anahtar sözcüğü | Son eki |  
-|--|--|--|  
-| <xref:System.UInt32?displayProperty=nameWithType> | [uint](../../../language-reference/keywords/uint.md) | U |  
-| <xref:System.Int64?displayProperty=nameWithType> | [long](../../../language-reference/keywords/long.md) | L |  
-| <xref:System.UInt64?displayProperty=nameWithType> | [ulong](../../../language-reference/keywords/ulong.md) | UL |  
-| <xref:System.Double?displayProperty=nameWithType> | [double](../../../language-reference/keywords/double.md) | D |  
-| <xref:System.Single?displayProperty=nameWithType> | [float](../../../language-reference/keywords/float.md) | F |  
-| <xref:System.Decimal?displayProperty=nameWithType> | [decimal](../../../language-reference/keywords/decimal.md) | M |  
-  
-### <a name="examples"></a>Örnekler  
+C# sabit değer olarak standart sonekleri olan sayısal türleri için sonek değerine eklenir. Aşağıdaki tabloda, çeşitli sayısal türler ile ilişkili soneklerini gösterir.
+
+| Tür | Anahtar sözcüğü | Son eki |
+|--|--|--|
+| <xref:System.UInt32?displayProperty=nameWithType> | [uint](../../../language-reference/keywords/uint.md) | U |
+| <xref:System.Int64?displayProperty=nameWithType> | [long](../../../language-reference/keywords/long.md) | L |
+| <xref:System.UInt64?displayProperty=nameWithType> | [ulong](../../../language-reference/keywords/ulong.md) | UL |
+| <xref:System.Double?displayProperty=nameWithType> | [double](../../../language-reference/keywords/double.md) | D |
+| <xref:System.Single?displayProperty=nameWithType> | [float](../../../language-reference/keywords/float.md) | F |
+| <xref:System.Decimal?displayProperty=nameWithType> | [decimal](../../../language-reference/keywords/decimal.md) | M |
+
+### <a name="examples"></a>Örnekler
 
 ```csharp
-int num = 10; 
+int num = 10;
 ConstantExpression expr = Expression.Constant(num);
 /*
     10
 */
 
-double num = 10; 
+double num = 10;
 ConstantExpression expr = Expression.Constant(num);
 /*
     10D
@@ -73,10 +73,10 @@ ConstantExpression expr = Expression.Constant(num);
 ```
 
 ## <a name="blockexpression"></a>BlockExpression
- 
-Varsa türünü bir <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> bloğundaki son ifadenin türü nesne farklıdır, açılı ayraçlar içinde türü görüntülenir (`<` ve `>`). Aksi halde, türünü <xref:System.Linq.Expressions.BlockExpression> nesne görüntülenmez.  
-  
-### <a name="examples"></a>Örnekler  
+
+Varsa türünü bir <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> bloğundaki son ifadenin türü nesne farklıdır, açılı ayraçlar içinde türü görüntülenir (`<` ve `>`). Aksi halde, türünü <xref:System.Linq.Expressions.BlockExpression> nesne görüntülenmez.
+
+### <a name="examples"></a>Örnekler
 
 ```csharp
 BlockExpression block = Expression.Block(Expression.Constant("test"));
@@ -97,9 +97,9 @@ BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("t
 ## <a name="lambdaexpression"></a>LambdaExpression
 
 <xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> nesneler, temsilci türleri ile birlikte görüntülenir.
-  
+
 Bir lambda ifadesi bir adı yoksa, otomatik olarak oluşturulmuş bir adı gibi atandıktan `#Lambda1` veya `#Lambda2`.
-  
+
 ### <a name="examples"></a>Örnekler
 
 ```csharp
@@ -117,15 +117,15 @@ LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), 
     }
 */
 ```
-  
+
 ## <a name="labelexpression"></a>LabelExpression
 
 İçin varsayılan bir değer belirtirseniz <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType> nesnesi, bu değer, önce görüntülenir <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType> nesne.
-  
+
 `.Label` Belirteci etiketi başlangıcını gösterir. `.LabelTarget` Belirteci atlamak için hedef hedefinin gösterir.
-  
+
 Bir etiket bir ad yoksa otomatik olarak oluşturulmuş bir adı gibi atandıktan `#Label1` veya `#Label2`.
-  
+
 ### <a name="examples"></a>Örnekler
 
 ```csharp
@@ -156,12 +156,12 @@ BlockExpression block = Expression.Block(
     }
 */
 ```
-  
-## <a name="checked-operators"></a>İşaretli işleçleri  
 
-İşaretli işleçleri ile görüntülenir `#` işleci önünde simge. Örneğin, işaretli Toplama işleci olarak görüntülenir `#+`.  
-  
-### <a name="examples"></a>Örnekler  
+## <a name="checked-operators"></a>İşaretli işleçleri
+
+İşaretli işleçleri ile görüntülenir `#` işleci önünde simge. Örneğin, işaretli Toplama işleci olarak görüntülenir `#+`.
+
+### <a name="examples"></a>Örnekler
 
 ```csharp
 Expression expr = Expression.AddChecked( Expression.Constant(1), Expression.Constant(2));

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa05fe1e170a0285df73d179ef39db6301059ac8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490954"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690524"
 ---
 # <a name="cryptographic-services"></a>Şifreleme Hizmetleri
 
@@ -266,7 +266,7 @@ Rastgele sayı oluşturma birçok şifreleme işlemleri için tam sayı. Örneğ
 
 ## <a name="clickonce-manifests"></a>ClickOnce Manifests
 
-İçinde [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], aşağıdaki şifreleme sınıflarını almak ve bildirim imzalar kullanılarak dağıtılan uygulamalar için bilgi doğrulayın izin [ClickOnce teknoloji](/visualstudio/deployment/clickonce-security-and-deployment):
+.NET Framework 3.5, aşağıdaki şifreleme sınıflarını almak ve bildirim imzalar kullanılarak dağıtılan uygulamalar için bilgi doğrulayın izin [ClickOnce teknoloji](/visualstudio/deployment/clickonce-security-and-deployment):
 
 - <xref:System.Security.Cryptography.ManifestSignatureInformation> Sınıfı kullandığınızda bir bildirim imza hakkında bilgi edinir, <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> yöntemi aşırı yüklemeleri.
 
@@ -290,7 +290,7 @@ Rastgele sayı oluşturma birçok şifreleme işlemleri için tam sayı. Örneğ
 
 ## <a name="suite-b-support"></a>Suite B desteği
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] Suite B şifreleme algoritmaları Ulusal Güvenlik Agency (NSA) tarafından yayınlanan kümesini destekler. Suite B hakkında daha fazla bilgi için bkz: [NSA Suite B şifreleme bilgi sayfası](https://www.nsa.gov/what-we-do/information-assurance/).
+.NET Framework 3.5 Suite B şifreleme algoritmaları Ulusal Güvenlik Agency (NSA) tarafından yayınlanan kümesini destekler. Suite B hakkında daha fazla bilgi için bkz: [NSA Suite B şifreleme bilgi sayfası](https://www.nsa.gov/what-we-do/information-assurance/).
 
 Aşağıdaki algoritmaları dahil edilir:
 
@@ -314,7 +314,7 @@ Yönetilen kod sarmalayıcıları için Federal Bilgi İşleme Standardı (FIPS)
 
 <xref:System.Security.Cryptography.CngKey> Sınıfı, çeşitli açma, oluşturma, silme ve anahtarlarının dışa aktarılması gibi ek işlemleri için kullanılır. Ayrıca, doğrudan yerel işlevleri çağırma sırasında kullanılacak temel alınan anahtar tanıtıcısı erişim sağlar.
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] Destek CNG sınıfları, aşağıdaki gibi çeşitli de içerir:
+.NET Framework 3.5 de aşağıdaki gibi CNG sınıfları destekleyen çeşitli içerir:
 
 - <xref:System.Security.Cryptography.CngProvider> anahtar depolama sağlayıcısı tutar.
 

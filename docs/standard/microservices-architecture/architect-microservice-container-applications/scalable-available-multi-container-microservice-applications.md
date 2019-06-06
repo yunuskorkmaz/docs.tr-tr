@@ -2,12 +2,12 @@
 title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Kubernetes uygulama yaşam döngüsü geliştirirken, mikro hizmetler ve çok kapsayıcılı uygulamalar için yüksek ölçeklenebilirlik ve kullanılabilirlik ve Azure Dev alanları olasılıklarını düzenlemek için seçenekleri keşfedin.
 ms.date: 09/20/2018
-ms.openlocfilehash: 27155736c6b5308d4794b17e5f5bd0b93109b5c1
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: a0f7efa4b21aedfb574659df283adc65741cefdb
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196032"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690502"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 
@@ -27,7 +27,7 @@ Kapsayıcılara veya çok basit oluşturulmuş uygulamalar ve mikro Hizmetleri d
 
 Mikro hizmet tabanlı uygulamaları, oluşan büyük bir kurumsal oluşturuyorsanız bir mimari ve geliştirme açısından bakıldığında, aşağıdaki platformları ve Gelişmiş senaryolar destekleyen ürünleri anlamak önemlidir:
 
-**Kümeler ve düzenleyiciler.** Büyük bir mikro hizmet tabanlı uygulama, bu konak tarafından temel platform karmaşıklığını özetleyen tek bir küme halinde yönetmek için kritik olduğu gibi birçok Docker konakları arasında uygulamalarının ölçeğini gerektiğinde. Neler kapsayıcı kümeleri ve düzenleyicileri sağlar olmasıdır. Azure Service Fabric ve Kubernetes düzenleyicileri örnekleridir. Kubernetes, azure'da Azure Kubernetes hizmeti aracılığıyla kullanılabilir.
+**Kümeler ve düzenleyiciler.** Büyük bir mikro hizmet tabanlı uygulama, bu konak tarafından temel platform karmaşıklığını özetleyen tek bir küme halinde yönetmek için kritik olduğu gibi birçok Docker konakları arasında uygulamalarının ölçeğini gerektiğinde. Neler kapsayıcı kümeleri ve düzenleyicileri sağlar olmasıdır. Kubernetes orchestrator bir örnektir ve azure'da Azure Kubernetes hizmeti aracılığıyla kullanılabilir.
 
 **Zamanlayıcılar.** *Zamanlama* özelliğine de bir kullanıcı Arabirimi sağlar, böylece bir kümedeki kapsayıcıları başlatmak bir yöneticinin anlamına gelir. Bir küme Zamanlayıcı çeşitli sorumlulukları vardır: küme kaynaklarını verimli bir şekilde kullanmak için verimli bir şekilde düğümleri veya konaklar arasında Yük Dengeleme kapsayıcıları için kullanıcı tarafından sağlanan kısıtlamaları ayarlamak ve yüksek sağlarken hatalarına karşı güçlü Kullanılabilirlik.
 
@@ -51,31 +51,9 @@ Genellikle farklı satıcılar tarafından sağlanan ürün iki yetenekleri sağ
 
 > [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) olduğu yönetilen bir Kubernetes kapsayıcı düzenleme hizmeti azure'da Kubernetes küme yönetimi, dağıtımı ve işlemleri basitleştirir.
 
-### <a name="azure-service-fabric"></a>Azure Service Fabric
-
-![Azure Service Fabric logosu](./media/image27.png)
-
-> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) uygulamaları oluşturmaya yönelik bir Microsoft mikro hizmet platformudur. Bu bir [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) , hizmetleri ve makine kümeleri oluşturur. Service Fabric Hizmetleri düz işlemleri veya kapsayıcıları olarak dağıtabilirsiniz. Hatta işlemlerde karışımı Hizmetleri aynı uygulama ve küme kapsayıcılara hizmetleriyle alabilir.
->
-> *Service Fabric* kümeleri, azure'da, şirket içi veya buluttaki dağıtılabilir. Ancak, dağıtım azure'da yönetilen bir yaklaşım ile basitleştirilmiştir.
->
-> *Service Fabric* ek ve isteğe bağlı sağlar öngörücü [Service Fabric programlama modellerini](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) gibi [durum bilgisi olan hizmetler](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) ve [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction) .
->
-> *Service Fabric* (yıl içinde Windows gelişen) Windows, daha az olgun Linux'ta olgun bileşenidir.
->
-> Hem Linux hem de Windows kapsayıcıları Service Fabric'te 2017 itibarıyla desteklenir.
-
-### <a name="azure-service-fabric-mesh"></a>Azure Service Fabric Mesh
-
-![Azure Service Fabric Mesh logosu](./media/image35.png)
-
-> [*Azure Service Fabric Mesh* ](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) aynı güvenilirlik, görev açısından kritik performans ve Service Fabric ölçeğinden sunar, ancak tam olarak yönetilen ve sunucusuz bir platform sunar. Bir küme sanal makineleri, depolama veya ağ yapılandırmasını yönetmenize gerek yoktur. Yalnızca uygulamanızın geliştirmeye odaklanın.
->
-> *Service Fabric Mesh* tüm programlama dili ve framework tercih ettiğiniz geliştirme olanak tanıyan, hem Windows hem de Linux kapsayıcıları destekler.
-
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Microsoft Azure'daki kapsayıcı tabanlı düzenleyicileri kullanarak
 
-Docker kapsayıcıları desteği yanı sıra Docker kümeler ve düzenleme desteği, Microsoft Azure, Amazon EC2 Container Service ve Google Container altyapısı dahil olmak üzere birden fazla bulut satıcılarına sunar. Microsoft Azure Docker, Azure Kubernetes Service (AKS) ve Azure Service Fabric ve Azure Service Fabric Mesh aracılığıyla küme ve orchestrator desteği sağlar.
+Docker kapsayıcıları desteği yanı sıra Docker kümeler ve düzenleme desteği, Microsoft Azure, Amazon EC2 Container Service ve Google Container altyapısı dahil olmak üzere birden fazla bulut satıcılarına sunar. Microsoft Azure desteği aracılığıyla Azure Kubernetes Service (AKS) kümesi ve orchestrator Docker sağlar.
 
 ## <a name="using-azure-kubernetes-service"></a>Azure Kubernetes hizmetini kullanarak
 
@@ -156,4 +134,4 @@ Daha fazla bilgi için makaleyi kontrol [Azure geliştirme alanları ile takım 
 
 >[!div class="step-by-step"]
 >[Önceki](resilient-high-availability-microservices.md)
->[İleri](using-azure-service-fabric.md)
+>[İleri](docker-application-development-process.md)

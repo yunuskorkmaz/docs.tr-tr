@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c9e85b2a884f6f348d801a27b7f362bd0236b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16e20214981bb5c0f96b26f34be99026aac19266
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644053"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690194"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework ile çalışmaya başlama
 
@@ -53,7 +53,7 @@ Genel olarak, bilgisayarınızda yüklü .NET Framework sürümlerini kaldırman
 
 - Kullandığınız uygulama .NET Framework'ün belirli bir sürüme bağlı olduğu durumlarda, uygulama o sürüm kaldırılırsa kesilmesine neden olabilir.
 
-- .NET Framework'ün bazı sürümleri, önceki sürümlerin yerinde güncelleştirmelerdir. Örneğin, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] sürüm 2.0 bir yerinde güncelleştirmedir ve .NET Framework 4.8 sürüm 4 4.7.2 aracılığıyla için bir yerinde güncelleştirmedir. Daha fazla bilgi için [.NET Framework sürümleri ve bağımlılıkları](../migration-guide/versions-and-dependencies.md).
+- .NET Framework'ün bazı sürümleri, önceki sürümlerin yerinde güncelleştirmelerdir. Örneğin, .NET Framework 3.5 sürüm 2.0 için bir yerinde güncelleştirmedir ve .NET Framework 4.8 sürüm 4 4.7.2 aracılığıyla için bir yerinde güncelleştirmedir. Daha fazla bilgi için [.NET Framework sürümleri ve bağımlılıkları](../migration-guide/versions-and-dependencies.md).
 
 Windows 8 öncesi Windows sürümlerinde .NET Framework'ü seçerseniz, her zaman kullanın **programlar ve Özellikler** kaldırmak için Denetim Masası'ndan. Hiçbir zaman bir .NET Framework sürümünü el ile kaldırın. Windows 8 ve üzeri, .NET Framework, işletim sisteminin bir bileşeni olan ve bağımsız olarak kaldırılamaz.
 

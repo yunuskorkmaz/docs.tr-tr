@@ -2,12 +2,12 @@
 title: Mikro hizmet mimarisinde iletişim
 description: Zaman uyumlu ve zaman uyumsuz yöntemler etkilerini anlama, mikro hizmetler iletişimin farklı yolları keşfedin.
 ms.date: 09/20/2018
-ms.openlocfilehash: 7f7a65ef53d401a8533f82168db5a412d5ac9756
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 25d99d3d9b00b8c20c5ded6d8b40c77fcbe0eb46
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644331"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690560"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Mikro hizmet mimarisinde iletişim
 
@@ -67,9 +67,9 @@ Aşağıdaki bölümlerde mikro hizmet tabanlı bir uygulama kullanmayı birden 
 
 ## <a name="communication-styles"></a>İletişim stilleri
 
-Birçok protokolleri ve kullanmak istediğiniz iletişim türüne bağlı olarak, iletişimi için kullanabileceğiniz seçenekleri vardır. Bir eş zamanlı istek/yanıt tabanlı iletişim mekanizması kullanıyorsanız, özellikle hizmetleriniz Docker konağı veya mikro hizmet küme dışındaki yayımlıyorsanız HTTP ve diğer yaklaşımlar gibi en yaygın kurallarıdır. Dahili olarak (Docker konağı veya mikro hizmetler kümeniz içindeki) Hizmetleri arasındaki iletişim, ikili biçimi (Service Fabric uzaktan iletişimini veya TCP ve ikili biçimi kullanarak WCF gibi) iletişim mekanizmasını kullanmak isteyebilirsiniz. Alternatif olarak, zaman uyumsuz, ileti tabanlı iletişim mekanizmasını AMQP gibi kullanabilirsiniz.
+Birçok protokolleri ve kullanmak istediğiniz iletişim türüne bağlı olarak, iletişimi için kullanabileceğiniz seçenekleri vardır. Bir eş zamanlı istek/yanıt tabanlı iletişim mekanizması kullanıyorsanız, özellikle hizmetleriniz Docker konağı veya mikro hizmet küme dışındaki yayımlıyorsanız HTTP ve diğer yaklaşımlar gibi en yaygın kurallarıdır. Dahili olarak (Docker konağı veya mikro hizmetler kümeniz içindeki) Hizmetleri arasındaki iletişim, ikili biçimi (WCF TCP ve ikili biçimi kullanarak) gibi iletişim mekanizmasını kullanmak isteyebilirsiniz. Alternatif olarak, zaman uyumsuz, ileti tabanlı iletişim mekanizmasını AMQP gibi kullanabilirsiniz.
 
-Vardır da JSON veya XML gibi birden çok ileti formatları veya bile ikili biçimden daha verimli olabilir. Seçilen bir ikili biçimi standart değilse, bu biçimi kullanarak kendi hizmetlerinizi herkese açık şekilde yayımlamak için iyi bir fikirdir olmayabilir. Mikro hizmetlerin dahili iletişim için standart bir biçim kullanabilirsiniz. Docker konağı veya mikro hizmet kümenizi (Docker düzenleyiciler veya Azure Service Fabric) veya konuşma mikro hizmetler için özel istemci uygulamaları için mikro hizmetler arasında iletişim kurarken bunu yapabilirsiniz.
+Vardır da JSON veya XML gibi birden çok ileti formatları veya bile ikili biçimden daha verimli olabilir. Seçilen bir ikili biçimi standart değilse, bu biçimi kullanarak kendi hizmetlerinizi herkese açık şekilde yayımlamak için iyi bir fikirdir olmayabilir. Mikro hizmetlerin dahili iletişim için standart bir biçim kullanabilirsiniz. Docker konağı veya mikro hizmet kümenizi (örneğin, Docker düzenleyicileri) veya konuşma mikro hizmetler için özel istemci uygulamaları için mikro hizmetler arasında iletişim kurarken bunu yapabilirsiniz.
 
 ### <a name="requestresponse-communication-with-http-and-rest"></a>HTTP ve REST ile istek/yanıt iletişim
 

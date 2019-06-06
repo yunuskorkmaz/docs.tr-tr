@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7db411e9ef38adb42c8df2059d166d1fa4184f95
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 810f49581d4cb28987ea41237645f75c50388084
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378367"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690482"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework sınıf kitaplığında artık Kullanılmayanlar
 
@@ -43,7 +43,7 @@ Yükseltme ve mevcut kodu yeniden derlemeniz, bir eski türü veya uygulamanızd
 
 - Nasıl için kullanımdan kaldırılma yanıtlanacağını belirlemek bu teknoloji alanı için belgeleri gözden geçirin.
 
-.NET Framework'ün daha sonraki bir sürüme karşı mevcut kodu yeniden derlemeniz değil tercih edebilirsiniz. Bunun yerine, karşı mevcut kodu çalıştırır derlenmiş .NET Framework sürümünü belirtebilirsiniz. Örneğin, karşı derlenen app1.exe adlı bir uygulama olduğunu varsayın [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], ancak uygulamayı .NET Framework 4.5 karşı çalıştırmak istiyor. Bu, aşağıdaki adımları gerektirir:
+.NET Framework'ün daha sonraki bir sürüme karşı mevcut kodu yeniden derlemeniz değil tercih edebilirsiniz. Bunun yerine, karşı mevcut kodu çalıştırır derlenmiş .NET Framework sürümünü belirtebilirsiniz. Örneğin, .NET Framework 3.5 karşı derlenen app1.exe adlı bir uygulama sahip, ancak uygulamayı .NET Framework 4.5 karşı çalıştırmak istediğiniz varsayalım. Bu, aşağıdaki adımları gerektirir:
 
 1. Ana, yürütülebilir dosya için bir yapılandırma dosyası oluşturun ve adlandırın *appName*. exe.config olarak, burada *appName* uygulama yürütülebilir adıdır. Bizim örneğimizde App1.exe adlı uygulama için app1.exe.config adlı bir yapılandırma dosyası oluşturursunuz.
 

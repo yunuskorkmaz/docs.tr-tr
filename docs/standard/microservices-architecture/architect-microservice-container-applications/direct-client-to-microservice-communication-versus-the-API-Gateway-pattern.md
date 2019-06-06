@@ -2,12 +2,12 @@
 title: Doğrudan istemci-mikro hizmet iletişimi ile API ağ geçidi düzeni
 description: Farklar ve API ağ geçidi düzeni ve doğrudan istemci-mikro hizmet iletişimi kullanımlarını anlayın.
 ms.date: 01/07/2019
-ms.openlocfilehash: 433ad8bc8204a9a57b8b494040a9de6c533bcca8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641405"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690354"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Doğrudan istemci-mikro hizmet iletişimi ile API ağ geçidi düzeni
 
@@ -146,7 +146,7 @@ Bu kılavuz ve referans örnek uygulaması (hizmetine), Azure API Management gib
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) bir basit API daha basit bir yaklaşım için önerilen, ağ geçididir. Ocelot tabanlı API ağ geçidi özellikle sistemlerine giriş birleşik noktalarına ihtiyaç mikro hizmet mimarisi için yapılan açık bir kaynak .NET Core ' dir. Bu basit, hızlı ve ölçeklenebilir ve Yönlendirme ve diğer birçok özelliği arasında kimlik doğrulaması sağlar.
 
-Temel nedeni için Ocelot seçin [hizmetine başvuru uygulaması](https://github.com/dotnet-architecture/eShopOnContainers) Ocelot bir .NET Core basit API, burada dağıtma aynı uygulama dağıtım ortamına dağıtabilirsiniz ağ geçidi olduğundan mikro hizmetler/kapsayıcıları, Docker konağı, Kubernetes, Service Fabric, vb. gibi. Ve .NET Core üzerine dayalı olduğundan, platformlar arası, Linux veya Windows üzerinde dağıtmanızı sağlar.
+Temel nedeni için Ocelot seçin [hizmetine başvuru uygulaması](https://github.com/dotnet-architecture/eShopOnContainers) Ocelot bir .NET Core basit API, burada dağıtma aynı uygulama dağıtım ortamına dağıtabilirsiniz ağ geçidi olduğundan mikro hizmetler/kapsayıcıları, Docker konağı, Kubernetes, vb. gibi. Ve .NET Core üzerine dayalı olduğundan, platformlar arası, Linux veya Windows üzerinde dağıtmanızı sağlar.
 
 Özel API kapsayıcılarda çalıştırılan ağ geçitleri gösteren önceki diyagramlarda tam olarak ne de Ocelot bir kapsayıcı ve mikro hizmet tabanlı uygulama çalıştırabilirsiniz olan.
 
@@ -185,7 +185,7 @@ Ayrıca, Apigee, Kong, MuleSoft, WSO2, API ağ geçitleri özellikleri sunan paz
 - **UDI Dahan. Hizmet yönelimli oluşturma** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Vasters. Mesajlaşma ve mikro hizmetler, GOTO 2016 (video)** \
+- **Clemens Vasters. Mesajlaşma ve mikro hizmetler, GOTO 2016 (video)**  \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **API ağ geçidi kısaca** (ASP.net Core API ağ geçidi öğretici serisi) \

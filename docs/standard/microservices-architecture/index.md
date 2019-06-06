@@ -2,12 +2,12 @@
 title: .NET mikro Hizmetleri. Kapsayıcılı .NET Uygulamaları Mimarisi
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mikro hizmetler, modüler ve bağımsız bir şekilde dağıtılabilen hizmetleridir. Docker kapsayıcıları (için Linux ve Windows), dağıtım ve bir hizmeti ve bağımlılıklarını ardından yalıtılmış bir ortamda çalıştırılır tek bir birim halinde paketleme tarafından test basitleştirin.
 ms.date: 01/07/2019
-ms.openlocfilehash: a348a9c122ef7f0293a1385aa05dc98f61deab7e
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: f1abeca8bb7eba615545a88862b20b2711b218fd
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195966"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690629"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET Mikro Hizmetleri: Kapsayıcılı .NET Uygulamaları Mimarisi
 
@@ -126,7 +126,7 @@ Katılımcılar ve gözden geçirenler:
 >
 > **Dylan Reisenberger**, Mimar ve Polly Bykov'un geliştirme
 >
-> **Steve Smith**, yazılım mesleğini geliştirme & ASPSmith Ltd., eğitmen
+> **Steve "ardalis" Smith** - yazılım mühendisi ve Eğitmen - [Ardalis.com](https://ardalis.com)
 >
 > **Ian Cooper**, kodlama mimari en parlak
 >

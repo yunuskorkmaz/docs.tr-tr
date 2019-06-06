@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Azur
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a93009e66d63aa7d9c3b60951d43eafa3c351a63
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: dab852cb72ee98d7e3e4a871f492a5d69b4ec580
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053273"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690490"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Azure barındırma önerileri için ASP.NET Core web uygulamaları
 
@@ -48,18 +48,11 @@ App Service Web Apps, web uygulamalarını barındırmak için en iyi duruma get
 
 Azure App Service, çoğu web uygulaması için en iyi seçenektir. Dağıtım ve yönetim süreçleri platform ile tümleştirilmiştir, siteler hızla yüksek trafik yüklerinin altından kalkacak şekilde ölçeklendirilebilir ve yerleşik Yük Dengeleme ve trafik Yöneticisi yüksek kullanılabilirlik sağlar. Bir çevrimiçi geçiş aracı ile kolayca Azure App Service için var olan siteler, Web uygulamaları Galerisi'nden açık kaynaklı uygulama kullanma veya çerçevesi ve tercih ettiğiniz araçları kullanarak yeni bir site oluşturmak taşıyabilirsiniz. WebJobs özelliği, App Service web uygulamanıza işleme arka plan işinin eklemenizi kolaylaştırır.
 
-### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
-
-Azure Kubernetes Service (AKS), barındırılan Kubernetes ortamınızı hızla ve kolayca kapsayıcı düzenleme uzmanlığı gerektirmeden kapsayıcıya alınmış uygulamaları dağıtmayı ve yönetmeyi yönetir. Sağlama, yükseltme ve uygulamalarınızı çevrimdışı duruma getirmeden kaynakları isteğe bağlı olarak ölçeklendirme Süren işlemlerin ve bakımın yükünü de kaldırır.
-
-AKS, karmaşıklığı ve azure'a SORUMLULUĞUN çoğunu devrederek bir Kubernetes kümesi yönetmenin işlemsel ek yükü azaltır. Barındırılan bir Kubernetes hizmeti, sistem durumu izleme ve sizin için bakım gibi kritik görevleri Azure tanıtıcıları. Ayrıca, yalnızca aracı düğümleri için yönetici değil, kümeleri içinde ödeme. Yönetilen bir Kubernetes hizmeti olarak Aks Aşağıdakileri sağlar:
-
-- Otomatik Kubernetes sürüm yükseltmeleri ve düzeltme eki uygulama.
-- Kolay küme ölçeklendirme.
-- Kendi kendini onaran barındırılan denetim düzlemi (Yöneticiler).
-- Maliyet tasarrufu - yalnızca çalışan aracı havuz düğümleri için ödeme yaparsınız.
-
 AKS kümenizde düğümleri yönetimi işlemleri Azure ile artık birçok el ile Küme yükseltme gibi görevleri gerekir. Azure Bu kritik bakım görevlerini sizin için gerçekleştirdiğinden, AKS doğrudan erişim sağlamaz (gibi SSH ile) kümeye.
+
+#### <a name="web-app-for-containers"></a>Kapsayıcılar için Web App
+
+Azure App Service sağlar gelen kapsayıcılar için Web App, kendi Docker biçimli kapsayıcı görüntülerinizi getirin ve kolayca dağıtın ve bunları Azure ile uygun ölçekte çalıştırın. Kapsayıcılar için Web App hem Linux hem de Windows kapsayıcılarını destekleyen ve büyük ölçekli uygulamaları desteklemek üzere ölçeklendirilebilir.
 
 ### <a name="azure-virtual-machines"></a>Azure sanal makineleri
 
