@@ -4,12 +4,12 @@ description: ML.NET ürün satış anomali algılama senaryoda anomali ani veril
 ms.date: 05/29/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d31765aa4ff2a0be9c4f140f33de1f5678fc7612
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: e092aea66ca9f439cf97c1ebee83097def0f520b
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423904"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758801"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Öğretici: ML.NET ürün satış anomali algılama için kullanın. 
 
@@ -373,4 +373,4 @@ Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 
 Bir güç tüketimi Anomali algılama örnek keşfetmek için Machine Learning örnekleri GitHub havuzuna göz atın.
 > [!div class="nextstepaction"]
-> [DotNet/machinelearning-samples GitHub deposu](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/TimeSeries_PowerAnomalyDetection)
+> [DotNet/machinelearning-samples GitHub deposu](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)

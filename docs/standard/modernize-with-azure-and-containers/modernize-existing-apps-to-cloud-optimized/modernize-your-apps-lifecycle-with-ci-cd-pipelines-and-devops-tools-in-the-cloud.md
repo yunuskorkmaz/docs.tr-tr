@@ -2,12 +2,12 @@
 title: Bulutta CI/CD işlem hatları ve DevOps araçları ile uygulama yaşam döngüsünü modernleştirme
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Uygulamanızın yaşam döngüsü ile CI/CD işlem hatları ve DevOps araçları bulutta modernleştirin
 ms.date: 04/30/2018
-ms.openlocfilehash: 7a0005da56e2d8ab7a2348f9032f887451132558
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cc991bba5df3a9cd972d9a172c1a8f1035ce8c58
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638949"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758645"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Bulutta CI/CD işlem hatları ve DevOps araçları ile uygulama yaşam döngüsünü modernleştirme
 
@@ -18,8 +18,6 @@ Sürekli tümleştirme ve dağıtım yöntemleri de oluşturulmuş olsa da, öze
 Azure DevOps hizmetleriyle, sürekli tümleştirme ve çeşitli ortamlarda resmi Azure DevOps Hizmetleri dağıtım görevleri aracılığıyla çoklu kapsayıcı uygulamalarının dağıtımını destekler:
 
 - [Tek başına konak VM'ye Docker dağıtma](https://docs.microsoft.com/azure/devops/build-release/apps/cd/deploy-docker-windowsvm) (Linux veya Windows Server 2016 veya üzeri)
-
-- [Service Fabric'e dağıtma](https://docs.microsoft.com/azure/service-fabric/service-fabric-tutorial-deploy-app-with-cicd-vsts)
 
 - [Azure Container Service – Kubernetes dağıtımı](https://docs.microsoft.com/azure/devops/build-release/apps/cd/azure/deploy-container-kubernetes)
 

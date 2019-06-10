@@ -2,12 +2,12 @@
 title: İzleme ve telemetri ile uygulamalarınızı modernleştirme
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | İzleme ve telemetri ile uygulamalarınızı modernleştirin
 ms.date: 04/30/2018
-ms.openlocfilehash: 94196365e6ed93839b28ed3b375e75a9119ae12d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5bffb336234f63dca150acc9ef31f9efa2e3937b
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643688"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758614"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>İzleme ve telemetri ile uygulamalarınızı modernleştirme
 
@@ -38,8 +38,6 @@ OMS portalı veya tüm tarayıcılarda çalıştırmak, Azure portalı Log Analy
 - DC/OS
 
 - Kubernetes
-
-- Service Fabric
 
 - Red Hat OpenShift
 
@@ -88,10 +86,6 @@ Log Analytics kapsayıcı izleme çözümü kullanabilirsiniz:
 - **Operations Management Suite (OMS) nedir?**
 
 <https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
-
-- **Windows Server kapsayıcıları Service fabric'te OMS ile izleme**
-
-<https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 
 >[!div class="step-by-step"]
 >[Önceki](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

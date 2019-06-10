@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a658a9f706a53697b341463b443c5145a727b4b9
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643627"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758256"
 ---
 # <a name="com-callable-wrapper"></a>COM Aranabilir Sarmalayıcısı
 
@@ -186,7 +186,7 @@ Otomatik olarak oluşturulan bir çift arabirim nadir durumlarda uygun olabilir;
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Tüm COM olay bildirimleri geç bağlanan olduğundan emin olun.
 
-Varsayılan olarak, COM tür bilgilerini doğrudan yönetilen derlemelere, birincil birlikte çalışma derlemeleri (PIA) gereksinimini ortadan kaldırır katıştırılır. Ancak, gömülü tür bilgileri sınırlamaları, vtable erken bağlanan çağrılar tarafından COM olay bildirimleri teslim desteklenmiyor ancak yalnızca geç bağlanan destekler biridir `IDispatch::Invoke` çağırır.
+Varsayılan olarak, COM tür bilgilerini doğrudan yönetilen derlemelere, birincil birlikte çalışma derlemeleri (PIA) gereksinimini ortadan kaldırır katıştırılır. Ancak, gömülü tür bilgileri sınırlamaları biri, COM olay bildirimleri teslim vtable erken bağlanan çağrılar tarafından desteklemez ancak yalnızca geç bağlanan destekler olan `IDispatch::Invoke` çağırır.
 
 Uygulamanıza erken bağlanan çağrılar COM olay arabirim yöntemleri için gerekiyorsa ayarlayabileceğiniz **birlikte çalışma türlerini katıştır** özelliği için Visual Studio'da `true`, veya proje dosyanızda aşağıdaki öğeyi ekleyin:
 

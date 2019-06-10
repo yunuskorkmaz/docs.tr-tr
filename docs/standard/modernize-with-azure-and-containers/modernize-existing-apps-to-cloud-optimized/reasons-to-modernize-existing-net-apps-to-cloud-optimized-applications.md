@@ -2,12 +2,12 @@
 title: Bulut için iyileştirilmiş uygulamalar için var olan .NET uygulamalarını modernleştirme nedenleri
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Bulut için iyileştirilmiş uygulamalar için var olan .NET uygulamalarını modernleştirme nedenleri
 ms.date: 04/28/2018
-ms.openlocfilehash: e09d8066e883aaef55408336e3817158e2c14be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639055"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758752"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Bulut için iyileştirilmiş uygulamalar için var olan .NET uygulamalarını modernleştirme nedenleri
 
@@ -27,7 +27,7 @@ Bulut iyileştirilmiş can, Çevik bir şekilde-diğer şirket içi uygulamalard
 
 Anahtar *çevikliği*. Tüm dağıtım geliştirmeden üretime kadar bir mutlak en aza indirmek sürece çeviklikle yollanamaz ve geliştirme/test ortamı sorunlarını. Kapsayıcılar (özellikle, Docker, pratikte bir standart olarak) ve yönetilen hizmetler, özellikle bu amaç için tasarlanmıştır.
 
-Çeviklik elde etmek için de bulutta ölçeklenebilir platformları için yayın CI/CD işlem hatları temel alan otomatik DevOps süreçlerini gerekir. Ölçeklenebilir ve esnek bulut Platformu (örneğin, Azure App Service, Azure Service Fabric veya Azure Kubernetes hizmeti) dağıtmak CI/CD platformları (örneğin, Azure DevOps Services veya Jenkins'i) bulut çevikliği elde etmek için anahtar teknolojilerdir.
+Çeviklik elde etmek için de bulutta ölçeklenebilir platformları için yayın CI/CD işlem hatları temel alan otomatik DevOps süreçlerini gerekir. Ölçeklenebilir ve esnek bulut Platformu (örneğin, Azure App Service veya Azure Kubernetes hizmeti) dağıtmak CI/CD platformları (örneğin, Azure DevOps Services veya Jenkins'i) bulut çevikliği elde etmek için anahtar teknolojilerdir.
 
 Aşağıdaki listede, ana sacayakları veya Bulut için iyileştirilmiş uygulamalarına yönelik yöntemler açıklanmaktadır. Tümünün veya yalnızca bu kurallara aşamalı ya da artımlı bir yaklaşım benimseyebilirsiniz dikkat edin:
 

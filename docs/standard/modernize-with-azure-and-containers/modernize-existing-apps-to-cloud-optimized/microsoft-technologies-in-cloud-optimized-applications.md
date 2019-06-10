@@ -2,12 +2,12 @@
 title: Bulut için iyileştirilmiş uygulamalarda Microsoft teknolojileri
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Bulut için iyileştirilmiş uygulamalarda Microsoft teknolojileri
 ms.date: 04/28/2018
-ms.openlocfilehash: ebdbc7bb3a5f51f8408b69a5e13f03f424eae242
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639025"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758627"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Bulut için iyileştirilmiş uygulamalarda Microsoft teknolojileri
 
@@ -17,7 +17,7 @@ Aşağıdaki listede, araçları, teknolojileri ve bulut için iyileştirilmiş 
 
 - **Çalışma zamanı**: Bu katman, uygulamayı çalıştırmak için ortamı sağlar. Kapsayıcıları kullanıyorsanız, bu katmanda genellikle dayanır [Docker altyapısı](https://docs.docker.com/engine/), Linux ana bilgisayarları veya Windows ana bilgisayarlarda çalışır. ([Windows kapsayıcıları](https://docs.microsoft.com/virtualization/windowscontainers/about/) ile Windows Server 2016'den itibaren desteklenir. Windows kapsayıcıları olan Windows üzerinde var olan .NET Framework uygulamaları için en iyi seçenek.)
 
-- **Yönetilen bulut**: Yönetilen bir bulut seçeneğini belirttiğinizde maliyetinden ve karmaşasından yönetme ve destekleme temel alınan altyapı, VM'ler, işletim sistemi düzeltme ekleri ve ağ yapılandırmasını önleyebilirsiniz. Iaas kullanılarak geçirmeye seçerseniz, ilişkili maliyetleri ve bu görevlerin tümü için sorumlu olursunuz. Yönetilen bir bulut seçeneğinde, yalnızca uygulama ve geliştirme Hizmetleri yönetin. Bulut hizmeti sağlayıcısı, genellikle diğer her şey yönetir. Azure'da yönetilen bulut Hizmetleri örnekleri [Azure SQL veritabanı](https://azure.microsoft.com/services/sql-database), [Azure Redis Cache](https://azure.microsoft.com/services/cache/), [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [Azure depolama](https://azure.microsoft.com/services/storage/), [MySQL için azure veritabanı](https://azure.microsoft.com/services/mysql/), [PostgreSQL için Azure veritabanı](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)ve yönetilen gibi işlem hizmetlerini [VM ölçek Ayarlar](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/), [Azure App Service](https://azure.microsoft.com/services/app-service/), ve [Azure Kubernetes hizmeti](https://azure.microsoft.com/services/container-service/).
+- **Yönetilen bulut**: Yönetilen bir bulut seçeneğini belirttiğinizde maliyetinden ve karmaşasından yönetme ve destekleme temel alınan altyapı, VM'ler, işletim sistemi düzeltme ekleri ve ağ yapılandırmasını önleyebilirsiniz. Iaas kullanılarak geçirmeye seçerseniz, ilişkili maliyetleri ve bu görevlerin tümü için sorumlu olursunuz. Yönetilen bir bulut seçeneğinde, yalnızca uygulama ve geliştirme Hizmetleri yönetin. Bulut hizmeti sağlayıcısı, genellikle diğer her şey yönetir. Azure'da yönetilen bulut Hizmetleri örnekleri [Azure SQL veritabanı](https://azure.microsoft.com/services/sql-database), [Azure Redis Cache](https://azure.microsoft.com/services/cache/), [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [Azure depolama](https://azure.microsoft.com/services/storage/), [MySQL için azure veritabanı](https://azure.microsoft.com/services/mysql/), [PostgreSQL için Azure veritabanı](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)ve yönetilen gibi işlem hizmetlerini [VM ölçek Ayarlar](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [Azure App Service](https://azure.microsoft.com/services/app-service/), ve [Azure Kubernetes hizmeti](https://azure.microsoft.com/services/container-service/).
 
 - **Uygulama geliştirme**: Kapsayıcılarda çalıştırılan uygulamalar oluştururken, birçok dillerden seçebilirsiniz. Bu kılavuzda odaklanır [.NET](https://www.microsoft.com/net), ancak/Java, Node.js, Python, Spring gibi diğer dilleri kullanarak kapsayıcı tabanlı uygulamalar geliştirebilir veya gidin.
 
@@ -27,7 +27,7 @@ Aşağıdaki listede, araçları, teknolojileri ve bulut için iyileştirilmiş 
 
 - **Uygulama yaşam döngüsü**: [Azure DevOps hizmetleriyle](https://azure.microsoft.com/services/devops/) ve Jenkins gibi başka araçlar olan yardımcı olan yerleşik otomasyon sunucuları uygulamak CI/CD işlem hatları, sürüm yönetimi dahil olmak üzere.
 
-Bu bölümde ve ilgili izlenecek yollar, sonraki bölümlerde özel çalışma zamanı katman (Windows kapsayıcıları) hakkındaki ayrıntıları odaklanır. Yönergeler, Windows Server 2016 (ve sonraki sürümler) Windows kapsayıcıları VM'ler ve Azure Container Instances'a dağıtma yöntemleri açıklar. Ayrıca, Azure App Service gibi daha gelişmiş PaaS platformları ve Azure Service Fabric ve Azure Kubernetes hizmeti gibi orchestrator kapsar.
+Bu bölümde ve ilgili izlenecek yollar, sonraki bölümlerde özel çalışma zamanı katman (Windows kapsayıcıları) hakkındaki ayrıntıları odaklanır. Yönergeler, Windows Server 2016 (ve sonraki sürümler) Windows kapsayıcıları VM'ler ve Azure Container Instances'a dağıtma yöntemleri açıklar. Ayrıca, Azure App Service gibi daha gelişmiş PaaS platformları ve orchestrator Azure Kubernetes hizmeti gibi de kapsar.
 
 ## <a name="monolithic-applications-can-be-cloud-optimized"></a>Tek yapılı uygulamaları *olabilir* Bulutla optimize edilmiş olabilir
 

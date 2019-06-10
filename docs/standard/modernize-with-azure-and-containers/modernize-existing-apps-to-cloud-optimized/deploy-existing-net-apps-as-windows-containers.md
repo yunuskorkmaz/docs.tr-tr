@@ -2,12 +2,12 @@
 title: Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Mevcut .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 ms.date: 04/29/2018
-ms.openlocfilehash: 77d10867573765a7e86a9827825e1313de7a3035
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643749"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758839"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 
@@ -153,7 +153,6 @@ Aynı anda daha PaaS (hizmet olarak Platform) yerleştirdiğiniz düzeyi destekl
 
 - **Azure uygulama hizmeti**
 - **Azure Kubernetes Service (AKS ve ACS)**
-- **Azure Service Fabric** 
 - **Azure Batch** 
 
 Daha sonra Azure Container Registry, kaydetme ve özel kapsayıcı görüntülerinizi dağıtırken tüm önceki ürünlerden kullanabileceğiniz Azure'de barındırılan bir yüksek ölçeklenebilir kapsayıcı kayıt defteridir.

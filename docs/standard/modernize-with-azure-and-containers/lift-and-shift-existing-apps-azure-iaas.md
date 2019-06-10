@@ -2,12 +2,12 @@
 title: Kaldırma ve var olan .NET uygulamalarını Azure Iaas (bulut altyapısını kullanıma hazır) için kaydırma
 description: Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin.
 ms.date: 04/28/2018
-ms.openlocfilehash: 24e413ad82742067b2fee6cd3a7a99e6f0f87b0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643713"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758869"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Kaldırma ve var olan .NET uygulamalarını Azure Iaas (bulut altyapısını kullanıma hazır) için kaydırma
 
@@ -39,7 +39,7 @@ Sonraki bölümlerde, PaaS platformları ve Hizmetleri çoğunlukla göre bulut 
 
 Amacınız yalnızca mevcut uygulamalarınızı buluta taşımak için ise, ilk olarak, Azure App Service'te çalıştırılacak değişikliği gerektirmez, mevcut uygulamaları tanımlayın. Bu uygulamalar için ilk aday olmalıdır Bulutla optimize edilmiş. 
 
-App Service veya Azure Service Fabric gibi düzenleyicilerle geçirme gibi bu basit düz vm'lere (Iaas) sonra uygulamalar için yine de Windows kapsayıcıları ve PaaS taşıyamazsınız. 
+App Service veya Azure Kubernetes hizmeti gibi düzenleyicilerle geçirme gibi bu basit düz vm'lere (Iaas) sonra uygulamalar için yine de Windows kapsayıcıları ve PaaS taşıyamazsınız. 
 
 Ancak, doğru şekilde yapılandırma, güvenlik altına alma ve Vm'leri koruma çok daha fazla zaman ve IT uzmanlığı Azure PaaS hizmetleri kullanmaya kıyasla gerektirdiğini aklınızda bulundurun. Azure sanal makineleri düşünüyorsanız, düzeltme eki uygulama, güncelleştirme ve VM ortamınızı yönetmek için gereken sürekli bir bakım çabası hesaba katması emin olun. Azure sanal makineleri Iaas olur.
 

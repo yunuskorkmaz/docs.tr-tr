@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 5476e99cbd1a5af2acf91ed6bf854fded3425e72
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 64f650df0a9f6e6279e21b9cbd5ff444ef5c7a49
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452455"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758442"
 ---
 # <a name="abstract-c-reference"></a>abstract (C# Başvurusu)
 `abstract` Değiştiricisi değiştirilmekte olan bir şey yok veya eksik bir uygulama olduğunu gösterir. Soyut değiştiricisi sınıflar, yöntemler, özellikler, dizin oluşturucular ve olaylar ile kullanılabilir. Kullanım `abstract` değiştiricisi bir sınıf yalnızca, kendi örneği değil, diğer sınıfların temel sınıf olarak düşünüldüğünü göstermek için bir sınıf bildiriminde. Üyeleri, soyut soyut sınıftan türeyen sınıflar tarafından uygulanması gereken olarak işaretlendi.
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, sınıf `Square` uygulaması sağlamalısınız `Area` öğesinden türetildiği için `ShapesClass`:  
+ Bu örnekte, sınıf `Square` uygulaması sağlamalısınız `GetArea` öğesinden türetildiği için `Shape`:  
   
  [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
   

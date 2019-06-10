@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e69cbb281970b3113842adc270009e913e009812
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 07c4ede076680f0d1b133b2d50c9055205d609ee
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690332"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758517"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1'den Geçiş
 
-[!INCLUDE[win7](../../../includes/win7-md.md)] ve Windows işletim sisteminin sonraki sürümlerini desteklemez [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. Sonuç olarak, uygulamalar hedef [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] değiştirilmeden çalışmaz [!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki bir işletim sistemi sürümleri. Bu konuda hedefleyen bir uygulamayı çalıştırmak için gereken adımlar açıklanmaktadır [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] altında [!INCLUDE[win7](../../../includes/win7-md.md)] ve Windows işletim sisteminin sonraki sürümleri. Hakkında daha fazla bilgi için [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] ve [!INCLUDE[win8](../../../includes/win8-md.md)], bkz: [Windows 8 ve sonraki sürümlerinde .NET Framework 1.1 uygulamalarını çalıştırma](../../../docs/framework/install/run-net-framework-1-1-apps.md).
+[!INCLUDE[win7](../../../includes/win7-md.md)] ve Windows işletim sisteminin sonraki sürümlerini desteklemez [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. Sonuç olarak, .NET Framework 1.1 hedefleyen uygulamalar değişiklik olmadan çalışmaz [!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki bir işletim sistemi sürümleri. Bu konu altında .NET Framework 1.1 hedefleyen bir uygulamayı çalıştırmak için gerekli adımları ele alınmaktadır [!INCLUDE[win7](../../../includes/win7-md.md)] ve Windows işletim sisteminin sonraki sürümleri. Hakkında daha fazla bilgi için [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] ve [!INCLUDE[win8](../../../includes/win8-md.md)], bkz: [Windows 8 ve sonraki sürümlerinde .NET Framework 1.1 uygulamalarını çalıştırma](../../../docs/framework/install/run-net-framework-1-1-apps.md).
 
 ## <a name="retargeting-or-recompiling"></a>Yeniden hedefleme veya yeniden derleme
 
-Kullanılarak derlenen bir uygulamayı almanın iki yolu vardır [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] çalıştırmak için [!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki bir Windows işletim sistemi:
+Çalıştırmak için .NET Framework 1.1 kullanılarak derlenen bir uygulamayı almanın iki yolu vardır [!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki bir Windows işletim sistemi:
 
 - Uygulamayı .NET Framework 4 ve sonraki sürümler altında çalışacak şekilde hedefleyebilirsiniz. Yeniden hegefleme gerektiriyor eklediğiniz bir [ \<supportedRuntime >](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) .NET Framework 4 ve sonraki sürümler altında çalıştırılmasına izin verir uygulamanın yapılandırma dosyası öğesi. Bu tür bir yapılandırma dosyası, aşağıdaki biçimi alır:
 
@@ -36,15 +36,15 @@ Kullanılarak derlenen bir uygulamayı almanın iki yolu vardır [!INCLUDE[net_v
 
 Olup, yeniden derleyin veya uygulamanızı yeniden hedeflediğinizde tercih ettiğinize bakılmaksızın, uygulamanızın sonraki .NET Framework sürümlerinde sunulan değişikliklerden etkilenip etkilenmediğini belirlemeniz gerekir. Bu değişiklikler iki çeşittir:
 
-- Arasında gerçekleşen değişiklikler [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] ve sonraki sürümlerinde .NET Framework'ün.
+- .NET Framework 1.1 ve sonraki sürümlerinde .NET Framework'ün arasında gerçekleşen değişikliklerin kesiliyor.
 
-- Türleri ve kullanım dışı olarak işaretlenmiş veya arasında eski tür üyeleri [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] ve sonraki sürümlerinde .NET Framework'ün.
+- Türleri ve kullanım dışı olarak işaretlenmiş veya sonraki sürümlerinde .NET Framework ve .NET Framework 1.1 arasında eski tür üyeleri.
 
-Uygulamanızı yeniden hedeflediğinizde veya yeniden derlemeniz olsun, hem büyük değişiklikleri ve kullanılmayan türlerin ve üyelerin sonra yayımlanmış olan .NET Framework'ün her sürümü için gözden geçirmelisiniz [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)].
+Uygulamanızı yeniden hedeflediğinizde veya yeniden derlemeniz olsun, hem büyük değişiklikleri ve kullanılmayan türlerin ve üyelerin .NET Framework 1.1 sonra yayımlanmış olan .NET Framework'ün her sürümü için gözden geçirmelisiniz.
 
 ## <a name="breaking-changes"></a>Yeni Değişiklikler
 
-Bir değişiklik gerçekleştiğinde, belirli değişikliğe bağlı olarak geçici bir çözüm kullanılabilir olan her ikisi için yeniden hedeflenmiş ve yeniden derlenmiş uygulamalar. Bazı durumlarda, bir alt öğesine ekleyebileceğiniz [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) önceki davranışı geri yüklemek için uygulamanızın yapılandırma dosyasına öğesidir. Örneğin, aşağıdaki yapılandırma dosyası içinde kullanılan dize sıralama ve karşılaştırma davranışını geri yükler [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] ve yeniden hedeflenen bir ya da yeniden derlenmiş bir uygulama ile kullanılabilir.
+Bir değişiklik gerçekleştiğinde, belirli değişikliğe bağlı olarak geçici bir çözüm kullanılabilir olan her ikisi için yeniden hedeflenmiş ve yeniden derlenmiş uygulamalar. Bazı durumlarda, bir alt öğesine ekleyebileceğiniz [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) önceki davranışı geri yüklemek için uygulamanızın yapılandırma dosyasına öğesidir. Örneğin, dize sıralama şu yapılandırma dosyasını geri yükler ve karşılaştırma davranışını .NET Framework 1. 1 ' kullanılan ve bir yeniden hedeflenen ya da yeniden derlenmiş bir uygulama ile kullanılabilir.
 
 ```xml
 <configuration>
@@ -58,7 +58,7 @@ Ancak, bazı durumlarda, kaynak kodunuzu değiştirmeniz ve uygulamanızı yenid
 
 Uygulamanızdaki olası yeni değişikliklerin etkisini değerlendirmek için şu değişiklik listesini gözden geçirmeniz gerekir:
 
-- [.NET Framework 2.0 sürümünde yeni değişiklikler](https://go.microsoft.com/fwlink/?LinkId=125263) içindeki belge değişiklikleri [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] hedefleyen bir uygulama etkileyebilecek [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)].
+- [.NET Framework 2.0 sürümünde yeni değişiklikler](https://go.microsoft.com/fwlink/?LinkId=125263) içindeki belge değişiklikleri [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] .NET Framework 1.1 hedefleyen bir uygulama etkileyebilir.
 
 - [.NET Framework 3.5 SP1 içindeki değişiklikleri](https://go.microsoft.com/fwlink/?LinkID=186989) .NET Framework 3.5 arasındaki değişiklikleri belgeler ve [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)].
 

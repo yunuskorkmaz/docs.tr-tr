@@ -2,12 +2,12 @@
 title: Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Kapsayıcı tabanlı uygulamalar için Azure işlem platformlarını seçme
 ms.date: 05/04/2018
-ms.openlocfilehash: 28e103c67f47d63582384c9ab468a5f631b5ce9e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d91cd279402dc24beb5f766c06cb85ac8d74f482
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638992"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758808"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
 
@@ -16,9 +16,9 @@ ms.locfileid: "65638992"
 Olarak bir *varsayılan olarak* öneri, bu kılavuzda önerilen ana ölçüt aşağıdaki gibidir:
 
 - **Tek tek parçalı uygulama:** Azure uygulama hizmeti seçin
-- **N katmanlı uygulama:** Tek bir veya birkaç arka uç Hizmetleri varsa, Azure Kubernetes Service (AKS), Service Fabric (BT) veya App Service gibi düzenleyiciler arasından seçim yapın
+- **N katmanlı uygulama:** Tek bir veya birkaç arka uç Hizmetleri varsa, Azure Kubernetes Service (AKS) veya App Service gibi düzenleyiciler arasından seçim yapın
 - **Linux mikro hizmetler:** AKS/Kubernetes seçin
-- **Windows mikro hizmetler:** Service Fabric seçin
+- **Windows mikro hizmetler:** Azure Web uygulaması için kapsayıcı Seç
 - **& Olay işleyicileri sunucusuz İşlevler:** Azure işlevleri'ni seçin
 - **Büyük ölçekli Batch:** Azure Batch seçin
 
@@ -26,13 +26,9 @@ Ancak, ürünün seçimi belirli uygulamanızın gereksinimlerini ve özellikler
 
 Uygulama gereksinimleri hakkında daha ayrıntılı çözümleme sonrasında, seçili ürün farklı olabilir. Ancak, bir başlangıç noktası olarak değerlendiriliyor başlayabileceğiniz gelen başlangıç düzeyi bir kılavuz olmanız faydalı olacaktır ve belirli önceliğine bağlı olarak test etme.
 
-Sonraki şekilde, daha genel bir ayrıntılı karar tablosu sırasında çözümleyebilirsiniz.
+Sonraki şekilde, farklı türde uygulamaları ve bunların ideal Azure barındırma senaryolarında dökümünü görebilirsiniz.
 
 ![](./media/image8.5.png)
-
-Bildirim nasıl temel işletim sistemi (Windows vs. Linux) bir karar faktör daha olgun Linux kapsayıcıları üzerinde ve Windows kapsayıcılarına diğer bazı düzenleyiciler da olabilir. Örneğin, Linux kapsayıcıları Service Fabric üzerinde daha az olgun ancak (AKS azure'da) Kubernetes içinde çok olgun. Diğer taraftan, Windows kapsayıcıları Service Fabric (Mayıs 2017'de yayımlanan) daha olgun ve daha az AKS olgun.
-
-Ancak, bu işletim sistemi olgunluk farklılıkları gelecekte kaybolacaktır ve birden çok platform karşılaştırılabilir işletim sistemi olgunluk olduğundan ve kararı uygulamanız gerekebilir veya üzerinde her platformun ekosistemi dayalı belirli özelliklere bağlı olarak tercihleri üzerinde daha fazla düzenleme nedenleri.
 
 > [!div class="step-by-step"]
 > [Önceki](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

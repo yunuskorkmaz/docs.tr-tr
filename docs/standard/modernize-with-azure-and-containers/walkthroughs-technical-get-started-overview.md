@@ -2,12 +2,12 @@
 title: İzlenecek yollar ve teknik başlangıca genel bakış
 description: Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | İzlenecek yollar ve teknik başlangıca genel bakış
 ms.date: 04/28/2018
-ms.openlocfilehash: f5c1ca2b78d27b275845ada72d252450761f5091
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0b0dbae999e31150a55368d669f718eea0925d51
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638960"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758790"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>İzlenecek yollar ve teknik başlangıca genel bakış
 
@@ -30,8 +30,6 @@ Her biri aşağıdaki izlenecek yollar github'da kullanılabilir olan yeni örne
 - **Windows kapsayıcıları tabanlı uygulamanız Azure Vm'lerine dağıtma**
 
 - **Azure Container Service'te Kubernetes için Windows kapsayıcı tabanlı uygulamalarınızı dağıtın**
-
-- **Azure Service Fabric'e Windows kapsayıcıları tabanlı uygulamalarınızı dağıtın**
 
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>İzlenecek yol: 1: Elektronik Mağaza eski uygulamaları turu
 
@@ -119,7 +117,7 @@ Tek parça, uygulamanızın bir kapsayıcıda çalışan avantajları vardır. �
 
 Ek bir avantaj, geliştiricilerin uygulama Windows kapsayıcıları tarafından sağlanan tutarlı ortamında çalıştırabilirsiniz ' dir. Yalnızca belirli sürümler ile görünen sorunları hemen bir hazırlık veya üretim ortamında görünmesini yerine anlaþýlmaz. Kapsayıcı uygulamaları çalıştırdığınızda, geliştirme ekibi üyeleri tarafından kullanılan geliştirme ortamlarında farkları daha az önemli.
 
-Kapsayıcılı uygulamaları, ayrıca düzleştiren bir ölçek genişletme eğri vardır. Kapsayıcılı uygulamaları, daha fazla uygulama ve hizmet örnekleri (kapsayıcılarında dayanarak) sahip bir VM veya fiziksel makine normal uygulama dağıtım makine sayısı ile karşılaştırıldığında sağlar. Bu daha yüksek yoğunluklu ve daha az gerekli dönüşür özellikle Kubernetes veya Service Fabric gibi düzenleyicilerle kullandığınızda kaynakları.
+Kapsayıcılı uygulamaları, ayrıca düzleştiren bir ölçek genişletme eğri vardır. Kapsayıcılı uygulamaları, daha fazla uygulama ve hizmet örnekleri (kapsayıcılarında dayanarak) sahip bir VM veya fiziksel makine normal uygulama dağıtım makine sayısı ile karşılaştırıldığında sağlar. Bu daha yüksek yoğunluklu ve daha az gerekli dönüşür özellikle Kubernetes gibi düzenleyicilerle kullandığınızda kaynakları.
 
 İdeal durumda, kapsayıcı uygulama koduna herhangi bir değişiklik yapmadan gerektirmez (C\#). Çoğu senaryoda, Docker dağıtım meta veri dosyaları (dockerfile'ları ve Docker Compose dosyaları) yeterlidir.
 
@@ -210,7 +208,7 @@ Azure Container Instances, oluşturmak ve sanal makine sağlamak veya daha yüks
 
 ### <a name="considerations"></a>Dikkat Edilecekler
 
-Ya da tam .NET Framework ile Windows kapsayıcıları dağıtma / ASP.NET veya SQL Server ile Azure Container Instances'a (ACI) Docker görüntüsünü olması gerektiğinden (örneğin, bir Windows Server 2016 ile Windows kapsayıcıları) normal bir Docker konağı dağıtma olarak oldukça hızlı değil her seferinde (Docker kayıt defterinden çekilen) indirilir ve kendi docker Konağı (kalıcı olarak çevrimiçi tutmaktan daha ucuz ancak SQL kapsayıcı görüntüsü (15.1 GB) ve ASP.NET kapsayıcı görüntüsü (13.9 GB) boyutunu önemli ölçüde büyük Azure'da Windows kapsayıcılarını VM ile Windows Server 2016) değil, diğer taraftan, üretim dağıtımları için harika bir seçenek olan Kubernetes Azure (AKS/ACS) veya Azure Service Fabric gibi tam bir orchestrator bahsedebilirsiniz.
+Ya da tam .NET Framework ile Windows kapsayıcıları dağıtma / ASP.NET veya SQL Server ile Azure Container Instances'a (ACI) Docker görüntüsünü olması gerektiğinden (örneğin, bir Windows Server 2016 ile Windows kapsayıcıları) normal bir Docker konağı dağıtma olarak oldukça hızlı değil her seferinde (Docker kayıt defterinden çekilen) indirilir ve kendi docker Konağı (kalıcı olarak çevrimiçi tutmaktan daha ucuz ancak SQL kapsayıcı görüntüsü (15.1 GB) ve ASP.NET kapsayıcı görüntüsü (13.9 GB) boyutunu önemli ölçüde büyük Azure'da Windows kapsayıcılarını VM ile Windows Server 2016) Kubernetes Azure (Öte yandan, üretim dağıtımları için harika bir seçim olan AKS) gibi tam bir orchestrator bahsedebilirsiniz değil.
 
 Ana sonuç, Azure Container Instances kullanılarak bir çok ilgi çekici CI/CD işlem hatları ve geliştirme/Test senaryoları için seçeneğidir.
 
@@ -279,80 +277,6 @@ Kubernetes ile geliştiriciler fiziksel ve sanal makineler hakkında düşünmey
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Bu içerik daha derinlemesine GitHub Wiki'de keşfedin: <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
-
-## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>İzlenecek yol: 6: Azure Service Fabric'e Windows kapsayıcıları tabanlı uygulamalarınızı dağıtın
-
-### <a name="technical-walkthrough-availability"></a>Teknik kılavuz kullanılabilirlik
-
-Tam Teknik Gözden geçirme eShopModernizing GitHub deposuna wikide kullanılabilir:
-
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
-
-### <a name="overview"></a>Genel Bakış
-
-Windows kapsayıcılarında kolayca tabanlı bir uygulama platformları, Iaas sanal makinelerinden hemen daha da ileri taşıma kullanılmalıdır. Bu kolayca yüksek ölçeklenebilirlik elde etmek için gereklidir ve daha iyi ölçeklenebilirlik otomatik ve dağıtımları ve sürüm oluşturma için önemli bir iyileştirme otomatik. Azure bulut ortamında kullanılabilir, ancak şirket içinde de kullanılabilir olan, Azure Service Fabric, orchestrator'ı kullanarak veya hatta farklı bir genel bulut bu hedeflere elde edebilirsiniz.
-
-### <a name="goals"></a>Hedefleri
-
-Windows kapsayıcı tabanlı bir uygulamayı azure'da bir Service Fabric kümesine dağıtma hakkında bilgi edinmek için bu kılavuzun amacı olan. Sıfırdan Service Fabric'e dağıtma iki adımlı bir işlemdir:
-
-1. Service Fabric kümesi, Azure (veya farklı bir ortam) dağıtın.
-
-2. Uygulama ve ilgili kaynakları, Service Fabric kümesine dağıtın.
-
-### <a name="scenarios"></a>Senaryolar
-
-#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Senaryo A: Bir geliştirme ortamından doğrudan bir Service Fabric kümesine dağıtma
-
-![Bir geliştirme ortamından doğrudan bir Service Fabric kümesine dağıtma](./media/image5-9.png)
-
-> **Şekil 5-9.** Bir geliştirme ortamından doğrudan bir Service Fabric kümesine dağıtma
-
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Senaryo B: Bir Service Fabric kümesine CI/CD işlem hatları Azure DevOps Hizmetleri'nde dağıtan
-
-![Bir Service Fabric kümesine CI/CD işlem hatları Azure DevOps Hizmetleri'nde dağıtan](./media/image5-10.png)
-
-**Şekil 5-10.** Bir Service Fabric kümesine CI/CD işlem hatları Azure DevOps Hizmetleri'nde dağıtan
-
-## <a name="benefits"></a>Yararları
-
-Bir Service Fabric kümesine dağıtma avantajları, Kubernetes kullanmanın avantajları için benzerdir. Tek fark, yine de olan Service Fabric Windows uygulamaları, beta aşamasında Kubernetes sürümü 1.9 Windows kapsayıcıları için Kubernetes ile karşılaştırıldığında daha olgun bir üretim ortamında olduğunu (aralık 2017). Kubernetes Linux fazla olgun bir ortamdır.
-
-Azure Service Fabric kullanmanın ana Avantajı (var olan düğümleri iç ölçeklenebilirlik) kullanmak istiyorsanız ve sayısına göre kapsayıcı örneği sayısını göre uygulamanın içinde ölçeklendirebilirsiniz üretime hazır bir ortamın alma olduğu düğümleri veya Vm'leri kümede (genel ölçeklenebilirlik kümenin).
-
-Azure Service Fabric, kapsayıcılar için hem de uygulama yapılandırmanız için taşınabilirlik sunar. Azure'da küme ya da şirket içindeki kendi veri merkezinizde yüklemeyi Service Fabric olabilir. Hatta bir Service Fabric kümesi farklı bir buluta gibi yükleyebilirsiniz [Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/).
-
-Service Fabric sayesinde geliştiriciler fiziksel ve sanal makineler hakkında düşünmeye gelen Diğerlerinin yanında aşağıdaki özellikleri kolaylaştıran bir kapsayıcı merkezli Altyapı planlama ilerleme:
-
-- Birden çok kapsayıcılara göre uygulamaları.
-
-- Container Instances ve yatay ölçeklendirme çoğaltılıyor.
-
-- Adlandırma ve (örneğin, iç DNS) bulunuyor.
-
-- Yükü Dengeleme.
-
-- Güncelleştirmeleri alınıyor.
-
-- Gizli dizileri dağıtma.
-
-- Uygulama durumunu denetler.
-
-Aşağıdaki özellikleri (diğer düzenleyiciler için karşılaştırıldığında) Service fabric'te özel şunlardır:
-
-- Reliable Services uygulaması modeliyle durum bilgisi olan hizmetler yeteneği.
-
-- Reliable Actors uygulama modeli aracılığıyla aktörler deseni.
-
-- Çıplak bone süreçlerinin, Windows veya Linux kapsayıcıları dağıtın.
-
-- Gelişmiş sıralı güncelleştirme ve sistem durumu denetimleri.
-
-### <a name="next-steps"></a>Sonraki adımlar
-
-Bu içerik daha derinlemesine GitHub Wiki'de keşfedin:
-
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
 
 > [!div class="step-by-step"]
 > [Önceki](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)

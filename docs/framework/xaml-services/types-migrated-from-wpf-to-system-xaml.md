@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: ea8ab81b192e0e8cb40988cb67cce08a7d9dab82
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 37433768c1bca3c013fb1e505d55bd7295f34933
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722583"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758019"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>WPF'den System.Xaml'e Geçirilen Türler
-.NET Framework 3.5 ve [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]hem [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ve Windows Workflow Foundation XAML dil uygulaması eklenir. Birçok genişletilebilirlik WPF XAML uygulaması için sağlanan genel tür WindowsBase ve PresentationCore PresentationFramework derlemelerde vardı. Benzer şekilde, Windows Workflow Foundation XAML için genişletilebilirlik sağlayan genel türleri System.Workflow.ComponentModel derlemede vardı. .NET Framework 4'te bazı XAML ile ilgili türleri System.Xaml derlemeye geçirilir. XAML dil Hizmetleri ortak bir .NET Framework uygulamasını ilk olarak belirli bir framework'ün XAML uygulama tarafından tanımlanan, ancak artık .NET Framework 4 XAML dil desteği genel bir parçası olan birçok XAML genişletilebilirlik senaryolara olanak sağlar. Bu konuda, geçirilir ve geçişle ilgili sorunlar ele alınmıştır türlerini listeler.  
+.NET Framework 3.5 ve .NET Framework 3. 0'da, her ikisi de [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ve Windows Workflow Foundation XAML dil uygulaması eklenir. Birçok genişletilebilirlik WPF XAML uygulaması için sağlanan genel tür WindowsBase ve PresentationCore PresentationFramework derlemelerde vardı. Benzer şekilde, Windows Workflow Foundation XAML için genişletilebilirlik sağlayan genel türleri System.Workflow.ComponentModel derlemede vardı. .NET Framework 4'te bazı XAML ile ilgili türleri System.Xaml derlemeye geçirilir. XAML dil Hizmetleri ortak bir .NET Framework uygulamasını ilk olarak belirli bir framework'ün XAML uygulama tarafından tanımlanan, ancak artık .NET Framework 4 XAML dil desteği genel bir parçası olan birçok XAML genişletilebilirlik senaryolara olanak sağlar. Bu konuda, geçirilir ve geçişle ilgili sorunlar ele alınmıştır türlerini listeler.  
   
 <a name="assemblies_and_namespaces"></a>   
 ## <a name="assemblies-and-namespaces"></a>Derlemeler ve ad alanları  
