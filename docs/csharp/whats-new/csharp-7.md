@@ -3,12 +3,12 @@ title: C# 7.0 - C# Kılavuzu yenilikler nelerdir?
 description: Yeni özelliklere genel bakış sürümünü 7.0 almak C# dili.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 942a126ae026897d608c9fb077fc5f10ff73c110
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b4569f31211afc69efb1b853723fded9329ae41
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753066"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815977"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 yenilikleri
 
@@ -84,7 +84,7 @@ Tek tek alanları atayarak ayıklayabileceğiniz bir `Point` bir demet için:
 
 Diziler hakkında daha da ayrıntılı bilgi edinebilirsiniz [diziler makale](../tuples.md).
 
-## <a name="discards"></a>Atar
+## <a name="discards"></a>Atılanlar
 
 Olduğunda, genellikle bir demet ayrıştırma veya bir yöntemi çağırmak `out` parametreleri hakkında umursamaz ve kullanmayı düşünmüyorsanız değeri bir değişken tanımlayın zorunda. C# için destek ekler *atar* bu senaryonun işlenmesi için. Bir atma adı olan bir salt yazılır değişkendir `_` (alt çizgi karakteri); tüm tek bir değişkene atmak düşündüğünüz değerleri atayabilirsiniz. Bir atma gibi atanmamış bir değişkenidir; atama ifadesi dışında atma kodda kullanılamaz.
 
@@ -222,7 +222,7 @@ Bir ifade bodied üyesine bir yöntemi değiştirme bir [ikili uyumlu değişikl
 
 ## <a name="throw-expressions"></a>Throw ifadeleri
 
-C# ' ta, `throw` her zaman bir deyim olmuştur. Çünkü `throw` deyimi, bir ifade vardı C# uygulanamadı kullandığınız, yapıları. Bunlar, koşullu ifadeleri ve null birleşim ifadelerini bazı lambda ifadeleri dahil. İfade gövdeli üyeler eklenmesi için daha fazla konum ekler burada `throw` ifadeleri yararlı olacaktır. Bu yapıları hiçbirini yazabilmesi amacıyla da, C# 7.0 tanıtır *throw ifadelerini*.
+C# ' ta, `throw` her zaman bir deyim olmuştur. Çünkü `throw` deyimi, bir ifade vardı C# uygulanamadı kullandığınız, yapıları. Bunlar, koşullu ifadeleri ve null birleşim ifadelerini bazı lambda ifadeleri dahil. İfade gövdeli üyeler eklenmesi için daha fazla konum ekler burada `throw` ifadeleri yararlı olacaktır. Bu yapılar, yazabilmesi amacıyla C# 7.0 tanıtır [ *throw ifadelerini*](../language-reference/keywords/throw.md#the-throw-expression).
 
 Bu ayrıca daha fazla ifade tabanlı kod yazmayı kolaylaştırır. Hata denetimi için ek deyimleri gerekmez.
 

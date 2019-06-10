@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07c4ede076680f0d1b133b2d50c9055205d609ee
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 441a65f9a72dd0fcffb062710df74bb529767cef
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758517"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816067"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1'den Geçiş
 
-[!INCLUDE[win7](../../../includes/win7-md.md)] ve Windows işletim sisteminin sonraki sürümlerini desteklemez [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. Sonuç olarak, .NET Framework 1.1 hedefleyen uygulamalar değişiklik olmadan çalışmaz [!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki bir işletim sistemi sürümleri. Bu konu altında .NET Framework 1.1 hedefleyen bir uygulamayı çalıştırmak için gerekli adımları ele alınmaktadır [!INCLUDE[win7](../../../includes/win7-md.md)] ve Windows işletim sisteminin sonraki sürümleri. Hakkında daha fazla bilgi için [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] ve [!INCLUDE[win8](../../../includes/win8-md.md)], bkz: [Windows 8 ve sonraki sürümlerinde .NET Framework 1.1 uygulamalarını çalıştırma](../../../docs/framework/install/run-net-framework-1-1-apps.md).
+[!INCLUDE[win7](../../../includes/win7-md.md)] ve Windows işletim sisteminin sonraki sürümlerini .NET Framework 1.1 desteklemez. Sonuç olarak, .NET Framework 1.1 hedefleyen uygulamalar değişiklik olmadan çalışmaz [!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki bir işletim sistemi sürümleri. Bu konu altında .NET Framework 1.1 hedefleyen bir uygulamayı çalıştırmak için gerekli adımları ele alınmaktadır [!INCLUDE[win7](../../../includes/win7-md.md)] ve Windows işletim sisteminin sonraki sürümleri. .NET Framework 1.1 hakkında daha fazla bilgi ve [!INCLUDE[win8](../../../includes/win8-md.md)], bkz: [Windows 8 ve sonraki sürümlerinde .NET Framework 1.1 uygulamalarını çalıştırma](../../../docs/framework/install/run-net-framework-1-1-apps.md).
 
 ## <a name="retargeting-or-recompiling"></a>Yeniden hedefleme veya yeniden derleme
 
@@ -58,7 +58,7 @@ Ancak, bazı durumlarda, kaynak kodunuzu değiştirmeniz ve uygulamanızı yenid
 
 Uygulamanızdaki olası yeni değişikliklerin etkisini değerlendirmek için şu değişiklik listesini gözden geçirmeniz gerekir:
 
-- [.NET Framework 2.0 sürümünde yeni değişiklikler](https://go.microsoft.com/fwlink/?LinkId=125263) içindeki belge değişiklikleri [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] .NET Framework 1.1 hedefleyen bir uygulama etkileyebilir.
+- [.NET Framework 2.0 sürümünde yeni değişiklikler](https://go.microsoft.com/fwlink/?LinkId=125263) .NET Framework 1.1 hedefleyen bir uygulamayı etkileyebilecek bir .NET Framework 2.0 SP1 içindeki belge değişiklikleri.
 
 - [.NET Framework 3.5 SP1 içindeki değişiklikleri](https://go.microsoft.com/fwlink/?LinkID=186989) .NET Framework 3.5 arasındaki değişiklikleri belgeler ve [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)].
 
@@ -68,4 +68,4 @@ Uygulamanızdaki olası yeni değişikliklerin etkisini değerlendirmek için ş
 
 Kullanım dışı türlerin ve üyelerin etkisi, yeniden hedeflenen uygulamalar için biraz farklıdır ve yeniden derlenmiş uygulamalar. Eski türler ve üyeler kullanımını, eski türü veya üye fiziksel olarak derlemesinden kaldırılmadığı sürece yeniden hedeflenen uygulamayı etkilemez. Genellikle eski türleri veya üyeleri kullanan bir uygulama yeniden derlendiğinde, derleyici bir derleyici hatası yerine uyarısı üretilir. Ancak, bazı durumlarda, bir derleyici hatası oluşturur ve eski türü veya üyeyi kullanan kod başarıyla derleme yapmaz. Bu durumda, uygulamanızı yeniden derlemeden önce kullanılmayan tür veya üyeyi çağıran kaynak kodunu yeniden yazmanız gerekir. Eski türler ve üyeler hakkında daha fazla bilgi için bkz. [Sınıf Kitaplığı'nda ne kullanılmıyor](../../../docs/framework/whats-new/whats-obsolete.md).
 
-Tür ve sürümünden itibaren kullanımdan üyelerin etkisini değerlendirmek için [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], bkz: [Sınıf Kitaplığı'nda ne kullanılmıyor](../../../docs/framework/whats-new/whats-obsolete.md). Eski tür ve üye listelerini gözden [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], .NET Framework 3.5 ve .NET Framework 4.
+Tür ve .NET Framework 2.0 SP1 sürümünden itibaren kullanımdan üyelerin etkisini değerlendirmek için bkz: [Sınıf Kitaplığı'nda ne kullanılmıyor](../../../docs/framework/whats-new/whats-obsolete.md). Eski tür ve üye listelerini gözden geçirmek için .NET Framework 2.0 SP1, .NET Framework 3.5 ve .NET Framework 4.

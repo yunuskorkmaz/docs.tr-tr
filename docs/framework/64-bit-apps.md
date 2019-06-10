@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 703ebcf93af77be2d0034bcd99fab397d7729374
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 11295f4b0d1a425fd3859c904b8ebc7830c64d1f
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486998"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815950"
 ---
 # <a name="64-bit-applications"></a>64 bitlik Uygulamalar
 Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel uygulama olarak ya da WOW64 (Windows 64-bit üzerinde Windows-32-bit) altında çalışmasını belirtebilirsiniz. WOW64, 32 bitlik bir uygulamanın 64 bitlik bir sistemde çalışmasını sağlayan bir uyumluluk ortamıdır. WOW64, Windows işletim sisteminin tüm 64 bitlik sürümlerinde bulunur.  
@@ -45,7 +45,7 @@ Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel
   
 - Bir 64 bit Windows bilgisayarda CLR'nin 64 bitlik sürümü hakkında daha fazla bilgi için bkz. [.NET Framework Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=37079) MSDN Web sitesinde.  
   
-- İçinde [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] belgelerine bakın [64 bit Windows için Programlama Kılavuzu](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
+- Windows SDK belgelerinde bakın [64 bit Windows için Programlama Kılavuzu](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
   
 - CLR'nin 64-bit sürümü indirme hakkında daha fazla bilgi için bkz: [.NET Framework Geliştirici Merkezi indirmeleri](https://go.microsoft.com/fwlink/?LinkId=50953) MSDN Web sitesinde.  
   

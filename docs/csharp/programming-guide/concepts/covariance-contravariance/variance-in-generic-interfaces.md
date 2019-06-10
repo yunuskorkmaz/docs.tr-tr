@@ -1,13 +1,13 @@
 ---
 title: Variance in Generic Interfaces (C#)
-ms.date: 04/10/2019
+ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 5874a39a57f85695bedc3d1ffa61adf19fcdbe37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2d0bcc049d62978930b4e5cdef7920349e3b894
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702483"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815953"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Variance in Generic Interfaces (C#)
 
@@ -31,9 +31,9 @@ ms.locfileid: "61702483"
 
 .NET Framework 4.5 ile başlayarak, aşağıdaki arabirimlerinden değişken şunlardır:
 
-- <xref:System.Collections.Generic.IReadOnlyList%601> (T karşıtıdır)
+- <xref:System.Collections.Generic.IReadOnlyList%601> (T değişkendir)
 
-- <xref:System.Collections.Generic.IReadOnlyCollection%601> (T karşıtıdır)
+- <xref:System.Collections.Generic.IReadOnlyCollection%601> (T değişkendir)
 
 Kovaryans arabirimi genel tür parametresi tarafından tanımlanan daha fazla türetilmiş bir dönüş türüne sahip bir yöntem sağlar. Kovaryans özelliği açıklamak için bu genel arabirimler göz önünde bulundurun: `IEnumerable<Object>` ve `IEnumerable<String>`. `IEnumerable<String>` Arabirimi devralmaz `IEnumerable<Object>` arabirimi. Ancak, `String` türü devralma `Object` türü ve bazı durumlarda bu arabirimler nesnelerin birbirleriyle atamak isteyebilirsiniz. Bu aşağıdaki kod örneğinde gösterilir.
 

@@ -1,13 +1,13 @@
 ---
 title: Sabit değerler
 description: Değişmez değer türleri hakkında bilgi edinin F# programlama dilidir.
-ms.date: 02/08/2019
-ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.date: 06/08/2019
+ms.openlocfilehash: 93329cd868ff7a2daaffa1b87ba838bbbc98015c
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490982"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816236"
 ---
 # <a name="literals"></a>Sabit değerler
 
@@ -44,13 +44,16 @@ Aşağıdaki tabloda, değişmez değer türleri gösterilmektedir F#. Onaltıl�
 |byte[]|ASCII dizesi|B|`"text"B`|
 |Dize veya bayt]|Verbatim dizesi|@ ön ek|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
-## <a name="remarks"></a>Açıklamalar
+## <a name="named-literals"></a>Adlandırılmış değişmez değerler
 
-Unicode dizelerini kullanarak belirttiğiniz açık Kodlamalar içerebilir `\u` bir 16 bitlik onaltılık kod ya da kullanarak belirtebilirsiniz UTF-32 kodlamalarına ardından `\U` bir Unicode temsil eden bir 32 bit onaltılık kodla ve ardından vekil çifti.
+Sabit olması amaçlanır değerler ile işaretlenebilir [değişmez değer](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) özniteliği. Bu öznitelik değeri bir sabit olarak derlenmesine neden etkisi vardır.
 
-Sürümünden itibaren F# kullanabileceğiniz 3.1, `+` dize değişmez değerlerini birleştirmek için oturum açın. Bit düzeyinde kullanabilirsiniz veya (`|||`) numaralandırma bayraklarını birleştirmek istiyorsanız işleci. Örneğin, aşağıdaki yasal kodudur F# 3.1:
+Eşleştirme ifadesi deseninde, küçük harfle başlayan tanımlayıcılar her zaman bağlı değişkenleri olarak kabul edilir yerine sabit değerleri tanımlarken değişmez değer olarak, bu nedenle genellikle ilk harfleri büyük kullanmanız gerekir.
 
 ```fsharp
+[<Literal>]
+let SomeJson = """{"numbers":[1,2,3,4,5]}"""
+
 [<Literal>]
 let Literal1 = "a" + "b"
 
@@ -64,15 +67,13 @@ let Literal2 = 1 ||| 64
 let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
-Bit düzeyindeki diğer işleçlerin kullanımına izin verilmiyor.
+## <a name="remarks"></a>Açıklamalar
 
-## <a name="named-literals"></a>Adlandırılmış değişmez değerler
+Unicode dizelerini kullanarak belirttiğiniz açık Kodlamalar içerebilir `\u` bir 16 bitlik onaltılık kod ya da kullanarak belirtebilirsiniz UTF-32 kodlamalarına ardından `\U` bir Unicode temsil eden bir 32 bit onaltılık kodla ve ardından vekil çifti.
 
-Sabit olması amaçlanır değerler ile işaretlenebilir [değişmez değer](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) özniteliği. Bu öznitelik değeri bir sabit olarak derlenmesine neden etkisi vardır.
+Dışında bit düzeyindeki diğer işleçlerin kullanımına `|||` izin verilmiyor.
 
-Eşleştirme ifadesi deseninde, küçük harfle başlayan tanımlayıcılar her zaman bağlı değişkenleri olarak kabul edilir yerine sabit değerleri tanımlarken değişmez değer olarak, bu nedenle genellikle ilk harfleri büyük kullanmanız gerekir.
-
-## <a name="integers-in-other-bases"></a>Diğer Tabanlara tamsayılar
+## <a name="integers-in-other-bases"></a>Diğer tabanlara tamsayılar
 
 İşaretli 32 bit tam sayılar da belirtilebilir onaltılık, sekizlik veya ikili kullanarak bir `0x`, `0o` veya `0b` sırasıyla önek.
 
@@ -83,7 +84,7 @@ let numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Sayısal sabit değerlerde alt çizgiler
 
-İle başlayarak F# 4.1, basamak alt çizgi karakteriyle ayırın (`_`).
+Basamak alt çizgi karakteriyle ayırın (`_`).
 
 ```fsharp
 let value = 0xDEAD_BEEF

@@ -2,12 +2,12 @@
 title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Kubernetes uygulama yaşam döngüsü geliştirirken, mikro hizmetler ve çok kapsayıcılı uygulamalar için yüksek ölçeklenebilirlik ve kullanılabilirlik ve Azure Dev alanları olasılıklarını düzenlemek için seçenekleri keşfedin.
 ms.date: 09/20/2018
-ms.openlocfilehash: a0f7efa4b21aedfb574659df283adc65741cefdb
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 76fa68cee41f8d1f34ec399c346f457efae57151
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690502"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815846"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 
@@ -134,4 +134,4 @@ Daha fazla bilgi için makaleyi kontrol [Azure geliştirme alanları ile takım 
 
 >[!div class="step-by-step"]
 >[Önceki](resilient-high-availability-microservices.md)
->[İleri](docker-application-development-process.md)
+>[İleri](../docker-application-development-process/index.md)

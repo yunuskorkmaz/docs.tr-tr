@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: fdcacd1b312c1e0c0314cb66adaf1ae53b1afae4
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 2c99065dacbf391e94c97092336f5dda3adda5b0
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758427"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815990"
 ---
 # <a name="-and--operators-c-reference"></a>+ ve += işleçleri (C# Başvurusu)
 
@@ -75,7 +75,7 @@ Kullanıcı tanımlı bir tür için [aşırı](../keywords/operator.md) `+` iş
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [birli artı işleci](~/_csharplang/spec/expressions.md#unary-plus-operator) ve [Toplama işleci](~/_csharplang/spec/expressions.md#addition-operator) bölümlerini [ C# dil belirtimi](../language-specification/index.md).
+Daha fazla bilgi için [birli artı işleci](~/_csharplang/spec/expressions.md#unary-plus-operator) ve [Toplama işleci](~/_csharplang/spec/expressions.md#addition-operator) bölümlerini [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

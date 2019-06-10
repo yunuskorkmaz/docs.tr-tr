@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b4639402ee99d215edb3fb28ababe6f750fb353
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 0bc333a828a9d18cd5ad98af42a91c1d53c2569b
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457080"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816202"
 ---
 # <a name="thread-safe-collections"></a>İş Parçacığı Koleksiyonları
 .NET Framework 4 tanıtır <xref:System.Collections.Concurrent?displayProperty=nameWithType> iş parçacığı açısından güvenli ve ölçeklenebilir birkaç koleksiyon sınıfı içeren ad alanı. Birden çok iş parçacığı güvenli ve verimli bir şekilde ekleyebilir veya kullanıcı kodunda ek eşitleme gerek kalmadan bu koleksiyonlara öğeleri kaldırın. Yeni kod yazdığınızda, koleksiyon aynı anda birden çok iş parçacığı yazacak olduğunda eşzamanlı koleksiyon sınıflarını kullanın. Yalnızca paylaşılan bir koleksiyondan okuyorsanız <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanındaki sınıfları kullanabilirsiniz. .NET Framework 1.1 veya önceki çalışma zamanı sürümünü hedeflemeniz gerekmedikçe 1.0 koleksiyon sınıflarını kullanmamanızı öneririz.  
@@ -22,7 +22,7 @@ ms.locfileid: "66457080"
   
  .NET Framework 2.0'da tanıtılan koleksiyon sınıfları <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanında bulunur. Bunlar <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> ve benzerlerini içerir. Bu sınıflar, .NET Framework 1.0 sınıfları ile karşılaştırıldığında geliştirilmiş tür güvenliği ve performans sağlar. Ancak, .NET Framework 2.0 koleksiyon sınıfları herhangi bir iş parçacığı eşitlemesi sağlamaz; kullanıcı kodunun, öğeler aynı anda birden çok iş parçacığına eklendiğinde veya kaldırıldığında tüm eşitlemeyi sağlaması gerekir.  
   
- .NET Framework 4'te bulunan eşzamanlı koleksiyon sınıflarını öneririz yalnızca .NET Framework 2.0 koleksiyon sınıflarının tür güvenliği ancak daha etkili ve daha tam iş parçacığı güvenliği sağladığından [!INCLUDE[net_v10_short](../../../../includes/net-v10-short-md.md)] koleksiyonları sağlar.  
+ Yalnızca .NET Framework 2.0 koleksiyon sınıflarının tür güvenliği ancak .NET Framework 1.0 koleksiyonların değerinden daha etkili ve daha tam iş parçacığı güvenliği sağladığından .NET Framework 4'te bulunan eşzamanlı koleksiyon sınıflarını öneririz. sağlar.  
   
 ## <a name="fine-grained-locking-and-lock-free-mechanisms"></a>Hassas Kilitleme ve Kilitsiz Mekanizmalar  
  Bazı eşzamanlı koleksiyon türleri gibi hafif eşitleme mekanizmalarını kullanır <xref:System.Threading.SpinLock>, <xref:System.Threading.SpinWait>, <xref:System.Threading.SemaphoreSlim>, ve <xref:System.Threading.CountdownEvent>, .NET Framework 4'te yeni olduğu. Bu eşitleme türleri genellikle kullanmasına *meşgul dönme* bunlar iş parçacığını gerçek bir bekleme durumuna almadan önce kısa süreler için. Bekleme sürelerinin çok kısa olması beklendiğinde pahalı bir çekirdek dönüşümünü içeren dönme beklemeden hesaplama açısından çok daha ucuzdur. Dönme kullanan koleksiyon sınıfları için bu verimlilik, birden çok iş parçacığının yüksek bir hızda öğe ekleyip kaldırabildiği anlamına gelir. Dönen engelleme karşılaştırması hakkında daha fazla bilgi için bkz: [SpinLock](../../../../docs/standard/threading/spinlock.md) ve [SpinWait](../../../../docs/standard/threading/spinwait.md).  

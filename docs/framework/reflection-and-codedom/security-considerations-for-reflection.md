@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab30d44ed2a91fd7f7e53cb868d90a2c5af0fef6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 6446cc3ee102fa57f5bf60c1353f7b9d5522be69
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489720"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816124"
 ---
 # <a name="security-considerations-for-reflection"></a>Yansımayla İlgili Güvenlik Konuları
 Yansıma üyelerine erişmek ve bu türler ve üyeler hakkında bilgi alma özelliği sağlar (diğer bir deyişle, yöntemler ve almak ve özellik ayarlamak için oluşturucuları çağırmak için değerleri, ekleyin ve olay işleyicilerini kaldırmak ve benzeri). Türler ve üyeler hakkında bilgi edinmek için yansıma kullanmak sınırlı değildir. Tüm kod, yansıma aşağıdaki görevleri gerçekleştirmek için kullanabilirsiniz:  
@@ -42,7 +42,7 @@ Yansıma üyelerine erişmek ve bu türler ve üyeler hakkında bilgi alma özel
   
  Sürece, uygulama etki alanı ek izinler verir. Örneğin, bir koruma alanlı uygulama etki alanında çalışmasını kod bu listede tanımlanan erişim sınırlıdır.  
   
- İle başlayarak [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], normalde erişilemeyen üyeler erişmeye artı hedef nesnenin izin kümesi için bir talep oluşturur <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bayrağı. Tam güven (örneğin, komut satırından başlatıldığında bir uygulamadaki kodu) ile çalışan kodu her zaman bu izinleri karşılayabilecek. (Güvenlik açısından kritik üyeleri erişimde sınırlamalar bu makalenin sonraki bölümlerinde açıklandığı gibi budur.)  
+ .NET Framework 2.0 Service Pack 1 ile başlayarak, normalde erişilemeyen üyeler erişmeye artı hedef nesnenin izin kümesi için bir talep oluşturur <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bayrağı. Tam güven (örneğin, komut satırından başlatıldığında bir uygulamadaki kodu) ile çalışan kodu her zaman bu izinleri karşılayabilecek. (Güvenlik açısından kritik üyeleri erişimde sınırlamalar bu makalenin sonraki bölümlerinde açıklandığı gibi budur.)  
   
  İsteğe bağlı olarak, koruma alanlı uygulama etki alanı verebilirsiniz <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bölümünde açıklandığı gibi bayrak [erişme üyeleri emin olan normalde erişilemez](#accessingNormallyInaccessible), bu makalenin ilerleyen bölümlerinde.  
   
@@ -100,7 +100,7 @@ Yansıma üyelerine erişmek ve bu türler ve üyeler hakkında bilgi alma özel
   
 - .NET Framework 4 ile başlayarak, saydam kod güvenlik kritik üyelere erişim için yansıma kullanamazsınız.  
   
-- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Bayrağı sunulmuştur [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. .NET Framework'ün önceki sürümlerini gerektirir <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> ortak olmayan üyelere erişmek için yansımayı kullanan kod için bayrak. Kısmen güvenilen koda hiçbir zaman verilen bir izni budur.  
+- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Bayrağı, .NET Framework 2.0 Hizmet Paketi 1'de sunulmuştur. .NET Framework'ün önceki sürümlerini gerektirir <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> ortak olmayan üyelere erişmek için yansımayı kullanan kod için bayrak. Kısmen güvenilen koda hiçbir zaman verilen bir izni budur.  
   
 - İle başlayarak [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], ortak olmayan türler ve üyeler hakkında bilgi edinmek için yansıma kullanarak herhangi bir izni gerektirmez. Önceki sürümlerde <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> bayrağı gereklidir.  
   

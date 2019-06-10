@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 75fa3ec8d332d0424147095db400d43fc31c105f
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: ae3039df2c1260211f4c7ec3e813db1d0c6cd42b
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758158"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815927"
 ---
 # <a name="-operator-c-reference"></a>?: İşleci (C# Başvurusu)
 
@@ -52,7 +52,7 @@ a ? b : (c ? d : e)
 
 Aşağıdaki örnek, koşullu işlecinin kullanımını gösterir:
 
-[!code-csharp[non ref conditional](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalValue)]
+[!code-csharp-interactive[non ref conditional](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalValue)]
 
 ## <a name="conditional-ref-expression"></a>Ref koşullu ifadesi
 
@@ -70,7 +70,7 @@ Ref koşullu ifadenin türü söz konusu olduğunda `consequent` ve `alternative
 
 Aşağıdaki örnek, ref koşullu ifadesi kullanımını göstermektedir:
 
-[!code-csharp[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
+[!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
 
 Daha fazla bilgi için [özellik teklif Not](../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md).
 
@@ -86,7 +86,7 @@ Koşullu işleç aşırı yüklenemez.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [koşullu işleç](~/_csharplang/spec/expressions.md#conditional-operator) bölümünü [ C# dil belirtimi](../language-specification/index.md).
+Daha fazla bilgi için [koşullu işleç](~/_csharplang/spec/expressions.md#conditional-operator) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -94,6 +94,6 @@ Daha fazla bilgi için [koşullu işleç](~/_csharplang/spec/expressions.md#cond
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
 - [if-else deyimi](../keywords/if-else.md)
-- [?. and ?[] İşleçleri](member-access-operators.md#null-conditional-operators--and-)
-- [?? İşleç](null-coalescing-operator.md)
+- [?. ve? [] işleçleri](member-access-operators.md#null-conditional-operators--and-)
+- [?? işleci](null-coalescing-operator.md)
 - [ref anahtar sözcüğü](../keywords/ref.md)
