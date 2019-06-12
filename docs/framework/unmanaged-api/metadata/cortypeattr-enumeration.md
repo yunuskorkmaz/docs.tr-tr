@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43e7c973ee22350f26b4f86bcc8b4c4c727291ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f65c2f74ec5efda027d90b3ffda9a5da5c239122
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045194"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025722"
 ---
-# <a name="cortypeattr-enumeration"></a><span data-ttu-id="a902a-102">CorTypeAttr Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="a902a-102">CorTypeAttr Enumeration</span></span>
-<span data-ttu-id="a902a-103">Türü meta verileri gösteren değerleri içerir.</span><span class="sxs-lookup"><span data-stu-id="a902a-103">Contains values that indicate type metadata.</span></span>  
+# <a name="cortypeattr-enumeration"></a><span data-ttu-id="0492f-102">CorTypeAttr Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="0492f-102">CorTypeAttr Enumeration</span></span>
+<span data-ttu-id="0492f-103">Türü meta verileri gösteren değerleri içerir.</span><span class="sxs-lookup"><span data-stu-id="0492f-103">Contains values that indicate type metadata.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a902a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a902a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0492f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0492f-104">Syntax</span></span>  
   
 ```  
 typedef enum CorTypeAttr {  
@@ -75,51 +75,51 @@ typedef enum CorTypeAttr {
 } CorTypeAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a902a-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="a902a-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0492f-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="0492f-105">Members</span></span>  
   
-|<span data-ttu-id="a902a-106">Üye</span><span class="sxs-lookup"><span data-stu-id="a902a-106">Member</span></span>|<span data-ttu-id="a902a-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a902a-107">Description</span></span>|  
+|<span data-ttu-id="0492f-106">Üye</span><span class="sxs-lookup"><span data-stu-id="0492f-106">Member</span></span>|<span data-ttu-id="0492f-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0492f-107">Description</span></span>|  
 |------------|-----------------|  
-|`tdVisibilityMask`|<span data-ttu-id="a902a-108">Tür görünürlük bilgileri kullanılır.</span><span class="sxs-lookup"><span data-stu-id="a902a-108">Used for type visibility information.</span></span>|  
-|`tdNotPublic`|<span data-ttu-id="a902a-109">Türün genel kapsam içinde değil belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-109">Specifies that the type is not in public scope.</span></span>|  
-|`tdPublic`|<span data-ttu-id="a902a-110">Tür genel kapsamda olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-110">Specifies that the type is in public scope.</span></span>|  
-|`tdNestedPublic`|<span data-ttu-id="a902a-111">Türü genel görünürlük ile iç içe belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-111">Specifies that the type is nested with public visibility.</span></span>|  
-|`tdNestedPrivate`|<span data-ttu-id="a902a-112">Özel bir görünürlük türü iç içe yerleştirilmiş belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-112">Specifies that the type is nested with private visibility.</span></span>|  
-|`tdNestedFamily`|<span data-ttu-id="a902a-113">Tür ailesi görünürlük ile iç içe belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-113">Specifies that the type is nested with family visibility.</span></span>|  
-|`tdNestedAssembly`|<span data-ttu-id="a902a-114">Derleme bir görünürlük türü iç içe yerleştirilmiş belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-114">Specifies that the type is nested with assembly visibility.</span></span>|  
-|`tdNestedFamANDAssem`|<span data-ttu-id="a902a-115">Aile ve derleme bir görünürlük türü iç içe yerleştirilmiş belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-115">Specifies that the type is nested with family and assembly visibility.</span></span>|  
-|`tdNestedFamORAssem`|<span data-ttu-id="a902a-116">Aile veya derleme bir görünürlük türü iç içe yerleştirilmiş belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-116">Specifies that the type is nested with family or assembly visibility.</span></span>|  
-|`tdLayoutMask`|<span data-ttu-id="a902a-117">Düzen türü bilgilerini alır.</span><span class="sxs-lookup"><span data-stu-id="a902a-117">Gets layout information for the type.</span></span>|  
-|`tdAutoLayout`|<span data-ttu-id="a902a-118">Bu tür alanlar otomatik olarak düzenlenmiştir belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-118">Specifies that the fields of this type are laid out automatically.</span></span>|  
-|`tdSequentialLayout`|<span data-ttu-id="a902a-119">Bu tür alanlar sıralı olarak düzenlenmiştir belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-119">Specifies that the fields of this type are laid out sequentially.</span></span>|  
-|`tdExplicitLayout`|<span data-ttu-id="a902a-120">Bu alanı düzeni açıkça sağlanan belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-120">Specifies that field layout is supplied explicitly.</span></span>|  
-|`tdClassSemanticsMask`|<span data-ttu-id="a902a-121">Anlam türü bilgilerini alır.</span><span class="sxs-lookup"><span data-stu-id="a902a-121">Gets semantic information about the type.</span></span>|  
-|`tdClass`|<span data-ttu-id="a902a-122">Türün bir sınıf olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-122">Specifies that the type is a class.</span></span>|  
-|`tdInterface`|<span data-ttu-id="a902a-123">Türün bir arabirim olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-123">Specifies that the type is an interface.</span></span>|  
-|`tdAbstract`|<span data-ttu-id="a902a-124">Türün Özet olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-124">Specifies that the type is abstract.</span></span>|  
-|`tdSealed`|<span data-ttu-id="a902a-125">Tür genişletilemez belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-125">Specifies that the type cannot be extended.</span></span>|  
-|`tdSpecialName`|<span data-ttu-id="a902a-126">Sınıf adı özel olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-126">Specifies that the class name is special.</span></span> <span data-ttu-id="a902a-127">Adını açıklar nasıl.</span><span class="sxs-lookup"><span data-stu-id="a902a-127">Its name describes how.</span></span>|  
-|`tdImport`|<span data-ttu-id="a902a-128">Tür içe aktarılan belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-128">Specifies that the type is imported.</span></span>|  
-|`tdSerializable`|<span data-ttu-id="a902a-129">Türü seri hale getirilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-129">Specifies that the type is serializable.</span></span>|  
-|`tdWindowsRuntime`|<span data-ttu-id="a902a-130">Bu tür olduğunu belirten bir [!INCLUDE[wrt](../../../../includes/wrt-md.md)] türü.</span><span class="sxs-lookup"><span data-stu-id="a902a-130">Specifies that this type is a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] type.</span></span>|  
-|`tdStringFormatMask`|<span data-ttu-id="a902a-131">Dizeleri nasıl kodlanmış ve biçimlendirilmiş hakkında bilgi alır.</span><span class="sxs-lookup"><span data-stu-id="a902a-131">Gets information about how strings are encoded and formatted.</span></span>|  
-|`tdAnsiClass`|<span data-ttu-id="a902a-132">Bu tür bir LPTSTR ANSI olarak yorumlar belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-132">Specifies that this type interprets an LPTSTR as ANSI.</span></span>|  
-|`tdUnicodeClass`|<span data-ttu-id="a902a-133">Bu tür bir LPTSTR Unicode olarak yorumlar belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-133">Specifies that this type interprets an LPTSTR as Unicode.</span></span>|  
-|`tdAutoClass`|<span data-ttu-id="a902a-134">Bu tür bir LPTSTR otomatik olarak yorumlar belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-134">Specifies that this type interprets an LPTSTR automatically.</span></span>|  
-|`tdCustomFormatClass`|<span data-ttu-id="a902a-135">Türü bir standart kodlama, sahip olduğunu belirtir belirtildiği gibi `CustomFormatMask`.</span><span class="sxs-lookup"><span data-stu-id="a902a-135">Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.</span></span>|  
-|`tdCustomFormatMask`|<span data-ttu-id="a902a-136">Yerel birlikte çalışabilirliği için standart kodlama bilgi almak için bu maskesi kullanın.</span><span class="sxs-lookup"><span data-stu-id="a902a-136">Use this mask to get non-standard encoding information for native interop.</span></span> <span data-ttu-id="a902a-137">Bu iki bit değerlerin anlamı, belirtilmemiş.</span><span class="sxs-lookup"><span data-stu-id="a902a-137">The meaning of the values of these two bits is unspecified.</span></span>|  
-|`tdBeforeFieldInit`|<span data-ttu-id="a902a-138">Türü statik bir alana erişmek için yapılan ilk girişim önce başlatılmalıdır belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-138">Specifies that the type must be initialized before the first attempt to access a static field.</span></span>|  
-|`tdForwarder`|<span data-ttu-id="a902a-139">Türü dışarı belirtir ve bir tür ileticisi.</span><span class="sxs-lookup"><span data-stu-id="a902a-139">Specifies that the type is exported, and a type forwarder.</span></span>|  
-|`tdReservedMask`|<span data-ttu-id="a902a-140">Bu bayrak ve aşağıdaki bayrakları, ortak dil çalışma zamanı tarafından dahili olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="a902a-140">This flag and the flags below are used internally by the common language runtime.</span></span>|  
-|`tdRTSpecialName`|<span data-ttu-id="a902a-141">Ortak dil çalışma zamanı adı kodlama denetleyeceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-141">Specifies that the common language runtime should check the name encoding.</span></span>|  
-|`tdHasSecurity`|<span data-ttu-id="a902a-142">Türü güvenlik ilişkili olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a902a-142">Specifies that the type has security associated with it.</span></span>|  
+|`tdVisibilityMask`|<span data-ttu-id="0492f-108">Tür görünürlük bilgileri kullanılır.</span><span class="sxs-lookup"><span data-stu-id="0492f-108">Used for type visibility information.</span></span>|  
+|`tdNotPublic`|<span data-ttu-id="0492f-109">Türün genel kapsam içinde değil belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-109">Specifies that the type is not in public scope.</span></span>|  
+|`tdPublic`|<span data-ttu-id="0492f-110">Tür genel kapsamda olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-110">Specifies that the type is in public scope.</span></span>|  
+|`tdNestedPublic`|<span data-ttu-id="0492f-111">Türü genel görünürlük ile iç içe belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-111">Specifies that the type is nested with public visibility.</span></span>|  
+|`tdNestedPrivate`|<span data-ttu-id="0492f-112">Özel bir görünürlük türü iç içe yerleştirilmiş belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-112">Specifies that the type is nested with private visibility.</span></span>|  
+|`tdNestedFamily`|<span data-ttu-id="0492f-113">Tür ailesi görünürlük ile iç içe belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-113">Specifies that the type is nested with family visibility.</span></span>|  
+|`tdNestedAssembly`|<span data-ttu-id="0492f-114">Derleme bir görünürlük türü iç içe yerleştirilmiş belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-114">Specifies that the type is nested with assembly visibility.</span></span>|  
+|`tdNestedFamANDAssem`|<span data-ttu-id="0492f-115">Aile ve derleme bir görünürlük türü iç içe yerleştirilmiş belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-115">Specifies that the type is nested with family and assembly visibility.</span></span>|  
+|`tdNestedFamORAssem`|<span data-ttu-id="0492f-116">Aile veya derleme bir görünürlük türü iç içe yerleştirilmiş belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-116">Specifies that the type is nested with family or assembly visibility.</span></span>|  
+|`tdLayoutMask`|<span data-ttu-id="0492f-117">Düzen türü bilgilerini alır.</span><span class="sxs-lookup"><span data-stu-id="0492f-117">Gets layout information for the type.</span></span>|  
+|`tdAutoLayout`|<span data-ttu-id="0492f-118">Bu tür alanlar otomatik olarak düzenlenmiştir belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-118">Specifies that the fields of this type are laid out automatically.</span></span>|  
+|`tdSequentialLayout`|<span data-ttu-id="0492f-119">Bu tür alanlar sıralı olarak düzenlenmiştir belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-119">Specifies that the fields of this type are laid out sequentially.</span></span>|  
+|`tdExplicitLayout`|<span data-ttu-id="0492f-120">Bu alanı düzeni açıkça sağlanan belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-120">Specifies that field layout is supplied explicitly.</span></span>|  
+|`tdClassSemanticsMask`|<span data-ttu-id="0492f-121">Anlam türü bilgilerini alır.</span><span class="sxs-lookup"><span data-stu-id="0492f-121">Gets semantic information about the type.</span></span>|  
+|`tdClass`|<span data-ttu-id="0492f-122">Türün bir sınıf olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-122">Specifies that the type is a class.</span></span>|  
+|`tdInterface`|<span data-ttu-id="0492f-123">Türün bir arabirim olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-123">Specifies that the type is an interface.</span></span>|  
+|`tdAbstract`|<span data-ttu-id="0492f-124">Türün Özet olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-124">Specifies that the type is abstract.</span></span>|  
+|`tdSealed`|<span data-ttu-id="0492f-125">Tür genişletilemez belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-125">Specifies that the type cannot be extended.</span></span>|  
+|`tdSpecialName`|<span data-ttu-id="0492f-126">Sınıf adı özel olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-126">Specifies that the class name is special.</span></span> <span data-ttu-id="0492f-127">Adını açıklar nasıl.</span><span class="sxs-lookup"><span data-stu-id="0492f-127">Its name describes how.</span></span>|  
+|`tdImport`|<span data-ttu-id="0492f-128">Tür içe aktarılan belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-128">Specifies that the type is imported.</span></span>|  
+|`tdSerializable`|<span data-ttu-id="0492f-129">Türü seri hale getirilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-129">Specifies that the type is serializable.</span></span>|  
+|`tdWindowsRuntime`|<span data-ttu-id="0492f-130">Bu tür bir Windows çalışma zamanı türü olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-130">Specifies that this type is a Windows Runtime type.</span></span>|  
+|`tdStringFormatMask`|<span data-ttu-id="0492f-131">Dizeleri nasıl kodlanmış ve biçimlendirilmiş hakkında bilgi alır.</span><span class="sxs-lookup"><span data-stu-id="0492f-131">Gets information about how strings are encoded and formatted.</span></span>|  
+|`tdAnsiClass`|<span data-ttu-id="0492f-132">Bu tür bir LPTSTR ANSI olarak yorumlar belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-132">Specifies that this type interprets an LPTSTR as ANSI.</span></span>|  
+|`tdUnicodeClass`|<span data-ttu-id="0492f-133">Bu tür bir LPTSTR Unicode olarak yorumlar belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-133">Specifies that this type interprets an LPTSTR as Unicode.</span></span>|  
+|`tdAutoClass`|<span data-ttu-id="0492f-134">Bu tür bir LPTSTR otomatik olarak yorumlar belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-134">Specifies that this type interprets an LPTSTR automatically.</span></span>|  
+|`tdCustomFormatClass`|<span data-ttu-id="0492f-135">Türü bir standart kodlama, sahip olduğunu belirtir belirtildiği gibi `CustomFormatMask`.</span><span class="sxs-lookup"><span data-stu-id="0492f-135">Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.</span></span>|  
+|`tdCustomFormatMask`|<span data-ttu-id="0492f-136">Yerel birlikte çalışabilirliği için standart kodlama bilgi almak için bu maskesi kullanın.</span><span class="sxs-lookup"><span data-stu-id="0492f-136">Use this mask to get non-standard encoding information for native interop.</span></span> <span data-ttu-id="0492f-137">Bu iki bit değerlerin anlamı, belirtilmemiş.</span><span class="sxs-lookup"><span data-stu-id="0492f-137">The meaning of the values of these two bits is unspecified.</span></span>|  
+|`tdBeforeFieldInit`|<span data-ttu-id="0492f-138">Türü statik bir alana erişmek için yapılan ilk girişim önce başlatılmalıdır belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-138">Specifies that the type must be initialized before the first attempt to access a static field.</span></span>|  
+|`tdForwarder`|<span data-ttu-id="0492f-139">Türü dışarı belirtir ve bir tür ileticisi.</span><span class="sxs-lookup"><span data-stu-id="0492f-139">Specifies that the type is exported, and a type forwarder.</span></span>|  
+|`tdReservedMask`|<span data-ttu-id="0492f-140">Bu bayrak ve aşağıdaki bayrakları, ortak dil çalışma zamanı tarafından dahili olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="0492f-140">This flag and the flags below are used internally by the common language runtime.</span></span>|  
+|`tdRTSpecialName`|<span data-ttu-id="0492f-141">Ortak dil çalışma zamanı adı kodlama denetleyeceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-141">Specifies that the common language runtime should check the name encoding.</span></span>|  
+|`tdHasSecurity`|<span data-ttu-id="0492f-142">Türü güvenlik ilişkili olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="0492f-142">Specifies that the type has security associated with it.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a902a-143">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a902a-143">Requirements</span></span>  
- <span data-ttu-id="a902a-144">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a902a-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0492f-143">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0492f-143">Requirements</span></span>  
+ <span data-ttu-id="0492f-144">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0492f-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a902a-145">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="a902a-145">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="0492f-145">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="0492f-145">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="a902a-146">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a902a-146">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0492f-146">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0492f-146">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a902a-147">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a902a-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0492f-147">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0492f-147">See also</span></span>
 
-- [<span data-ttu-id="a902a-148">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="a902a-148">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="0492f-148">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="0492f-148">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
