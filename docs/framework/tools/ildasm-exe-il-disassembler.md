@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e72d093dd02f4a67386f58af5df40247c66dc378
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
-ms.translationtype: HT
+ms.openlocfilehash: 2239b73eb8418d469085ad72b8a28093146a1f6b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832805"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025974"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Ayrıştırıcı)
 
@@ -53,7 +53,7 @@ Aşağıdaki ek seçenekler kullanılabilir *.exe*, *.dll*, ve *.winmd* dosyalar
 |**/LineNum**|Özgün kaynak satırları için başvurular içerir.|
 |**/nobar**|Parçalara ayırma işleminin ilerleme durumu açılır penceresini gizler.|
 |**/noca**|Özel özniteliklerin çıkışını gizler.|
-|**/ Project**|Göründüğü şekilde yerine yönetilen kod için bu meta veriyi özgün görüntüler [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Varsa `PEfilename` Windows meta verileri değil ( *.winmd*) dosyası, bu seçenek, hiçbir etkiye sahiptir. Bkz: [Windows Store uygulamaları ve Windows çalışma zamanı için .NET Framework desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/ Project**|Yerel Windows çalışma zamanı'nda bu şekilde yerine yönetilen koda göründüğü meta veriyi görüntüler. Varsa `PEfilename` Windows meta verileri değil ( *.winmd*) dosyası, bu seçenek, hiçbir etkiye sahiptir. Bkz: [Windows Store uygulamaları ve Windows çalışma zamanı için .NET Framework desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Yalnızca genel türleri ve üyeleri ayrıştırır. Eşdeğer **/visibility:PUB**.|
 |**/quoteallnames**|Tüm adları tek tırnak işaretleri içine alır.|
 |**/raweh**|Özel durum işleme yan tümcelerini ham biçimde gösterir.|

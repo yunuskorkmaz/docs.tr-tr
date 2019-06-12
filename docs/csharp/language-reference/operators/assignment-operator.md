@@ -1,5 +1,5 @@
 ---
-title: = İşleci - C# başvurusu
+title: = işleci - C# başvurusu
 ms.custom: seodec18
 ms.date: 11/26/2018
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 85182acb84ea79cb00a9edb315c3954f440305f4
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 6b8f67f32287b18a9e4ac8f0fa822f6ca4919e7f
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758360"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025270"
 ---
-# <a name="-operator-c-reference"></a>= İşleci (C# Başvurusu)
+# <a name="-operator-c-reference"></a>= işleci (C# Başvurusu)
 
 Atama işleci `=` , sağ işleneninin değeri bir değişkene atar bir [özelliği](../../programming-guide/classes-and-structs/properties.md), veya bir [dizin oluşturucu](../../../csharp/programming-guide/indexers/index.md) , sol işlenen tarafından belirtilen öğe. Atama ifadesi sol işlenen için atanan değer sonucudur. Sağ işleneninin türü, sol işlenen veya örtük olarak dönüştürülebilir ona türü ile aynı olmalıdır.
 
@@ -54,7 +54,6 @@ Daha fazla bilgi için [basit atama](~/_csharplang/spec/expressions.md#simple-as
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# İşleçleri](index.md)
+- [C#başvuru](../index.md)
+- [C# işleçleri](index.md)
 - [ref anahtar sözcüğü](../keywords/ref.md)

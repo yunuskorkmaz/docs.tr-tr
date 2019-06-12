@@ -1,21 +1,19 @@
 ---
-title: 'Öğretici: TensorFlow ile bir ML.NET özel görüntü sınıflandırıcı oluşturma'
-description: Önceden eğitilmiş bir TensorFlow modeli yeniden kullanarak görüntüleri sınıflandırmak için senaryo bir TensorFlow aktarımlı ML.NET özel görüntü sınıflandırıcıda oluşturma keşfedin.
-ms.date: 05/06/2019
+title: 'Öğretici: Retrain TensorFlow görüntü sınıflandırıcı - aktarımlı öğrenme'
+description: Aktarımlı öğrenme ve ML.NET ile bir görüntü sınıflandırma TensorFlow modeli yeniden eğitme hakkında bilgi edinin. Özgün modeli ayrı görüntüleri sınıflandırmak için eğitim. Yeni modeli yeniden eğitme sonra görüntüleri kategoriden düzenler.
+ms.date: 06/12/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e248c5ae73281ed6cd492592ba4a51791db75aa2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 2ad9e71f572cb694897fd12ecbb15da069afe338
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593427"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026087"
 ---
-# <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>Öğretici: TensorFlow ile bir ML.NET özel görüntü sınıflandırıcı oluşturma
+# <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Öğretici: TensorFlow görüntü sınıflandırıcı ML.NET aktarımlı öğrenme ile yeniden eğitme
 
-Bu örnek öğretici, önceden eğitilen bir görüntü sınıflandırıcı nasıl kullanabileceğinizi gösteren `TensorFlow` görüntüleri birkaç kategoride sınıflandırmak için yeni özel modeli oluşturmak için model.
-
-Ne öncesi zaten bir model kullanabilirsiniz ya da tümünün veya bazılarının, sorununuzu çözmenize yardımcı olmak için bu modelinin katmanlarını yeniden eğitme ve benzer bir sorunu çözmek eğitilen? Bu teknik yeniden yeni bir model oluşturmak üzere önceden eğitilen bir modelin parçası olarak da bilinen [aktarım öğrenme](https://en.wikipedia.org/wiki/Transfer_learning).
+Aktarımlı öğrenme ve ML.NET ile bir görüntü classificaton TensorFlow modeli yeniden eğitme hakkında bilgi edinin. Özgün modeli ayrı görüntüleri sınıflandırmak için eğitim. Yeni modeli yeniden eğitme sonra görüntüleri kategoriden düzenler. 
 
 Eğitim bir [görüntü sınıflandırması](https://en.wikipedia.org/wiki/Outline_of_object_recognition) sıfırdan modeli, Parametreler, bir sürü etiketli eğitim verilerini ve işlem kaynakları (GPU saat yüzlerce) çok büyük miktarda milyonlarca ayarlama gerektirir. Aktarımlı öğrenme kadar etkili olarak sıfırdan özel bir model eğitim olsa da görüntüleri etiketlenmiş resimlerinizi milyonlarca karşılaştırması binlerce birlikte çalışarak bu işlem için kısayol sağlar ve oldukça hızlı bir şekilde özelleştirilmiş model derleme (bir makinede bir saat içinde bir GPU).
 
@@ -24,6 +22,10 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > * Sorunu anlama
 > * Yeniden kullanmak ve önceden eğitilmiş bir modeli ayarlama
 > * Resimleri sınıflandırma
+
+## <a name="what-is-transfer-learning"></a>Hangi aktarım öğrenmeye devam ettiği?
+
+Ne öncesi zaten bir model kullanabilirsiniz ya da tümünün veya bazılarının, sorununuzu çözmenize yardımcı olmak için bu modelinin katmanlarını yeniden eğitme ve benzer bir sorunu çözmek eğitilen? Bu teknik yeniden yeni bir model oluşturmak üzere önceden eğitilen bir modelin parçası olarak da bilinen [aktarım öğrenme](https://en.wikipedia.org/wiki/Transfer_learning).
 
 ## <a name="image-classification-sample-overview"></a>Görüntü sınıflandırma örneğine genel bakış
 

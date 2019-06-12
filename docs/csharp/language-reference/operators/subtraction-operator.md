@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: aae10f8b03a16e55f0b26981f17585c8790e00c1
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8e93b1d66a375f1f0af104e2a5dd6dfcbb39428d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816076"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024919"
 ---
 # <a name="--and---operators-c-reference"></a>- ve-= işleçleri (C# Başvurusu)
 
@@ -80,11 +80,9 @@ Daha fazla bilgi için [birli eksi işleci](~/_csharplang/spec/expressions.md#un
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# İşleçleri](index.md)
+- [C#başvuru](../index.md)
+- [C# işleçleri](index.md)
 - [Temsilciler](../../programming-guide/delegates/index.md)
 - [Olaylar](../../programming-guide/events/index.md)
-- [Checked ve unchecked](../keywords/checked-and-unchecked.md)
 - [Aritmetik işleçler](arithmetic-operators.md)
 - [+ ve += işleçleri](addition-operator.md)

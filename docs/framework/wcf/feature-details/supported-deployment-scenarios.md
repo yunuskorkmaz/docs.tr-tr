@@ -2,16 +2,16 @@
 title: Desteklenen dağıtım senaryoları - WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7b508f53365c1b4b90e2883ddb9d5f2a71c7e814
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881055"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025630"
 ---
 # <a name="supported-deployment-scenarios"></a>Desteklenen dağıtım senaryoları
 
-Kısmen güvenilir uygulamaların kullanım için desteklenen Windows Communication Foundation (WCF) özellikleri alt kümesi için WCF kullanan bazı, tümü değil, senaryolar gereksinimlerini karşılamak üzere tasarlanmıştır. Sunucuda, WCF karşıladığını Internet ölçeğinde gereksinimlerini paylaşılan üçüncü taraf uygulamaları barındırma sağlayıcıları, [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Medium Trust izni güvenlik nedenleriyle ayarlayın. İstemcide, WCF kısmi güven desteği gibi dağıtım teknolojileri gereksinimlerini karşılamak için tasarlanan [ClickOnce dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment) veya [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]'s XAML tarayıcı uygulaması teknolojisi, sorunsuz ve güvenli izin ver güvenilmeyen siteleri'ndan Masaüstü uygulamaların dağıtımı.
+Kısmen güvenilir uygulamaların kullanım için desteklenen Windows Communication Foundation (WCF) özellikleri alt kümesi için WCF kullanan bazı, tümü değil, senaryolar gereksinimlerini karşılamak üzere tasarlanmıştır. Sunucuda, WCF Internet ölçeğinde ASP.NET 2.0 Medium Trust izin üçüncü taraf uygulamaları çalıştıran paylaşılan barındırma sağlayıcılarının güvenlik nedeniyle ayarlanmış gereksinimlerini karşılar. İstemcide, WCF kısmi güven desteği gibi dağıtım teknolojileri gereksinimlerini karşılamak için tasarlanan [ClickOnce dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment) veya [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]'s XAML tarayıcı uygulaması teknolojisi, sorunsuz ve güvenli izin ver güvenilmeyen siteleri'ndan Masaüstü uygulamaların dağıtımı.
 
 ## <a name="minimum-permission-requirements"></a>En düşük izin gereksinimleri
 
@@ -27,7 +27,7 @@ Bu izin kümeleri, desteklenen özellikler hakkında daha fazla bilgi için bkz:
 
 ## <a name="partial-trust-on-the-server"></a>Sunucu üzerinde kısmi güven
 
-Barındırma hizmetleri, ASP.NET Web uygulamasının birçok ticari sağlayıcısı zorunlu kılabilir, kendi sunucuları üzerinde çalışan uygulamaları çalıştırmak [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Medium Trust izin kümesi. WCF hizmetleri, bu ortamlarda çalıştırabilirsiniz, kullandıkları sağlanan <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, veya <xref:System.ServiceModel.WSHttpBinding> aktarım düzeyi güvenlik ile.
+Birçok ticari sağlayıcılarının barındırma hizmetleri, ASP.NET Web uygulamasının kendi sunucuları üzerinde çalışan uygulamalar ASP.NET 2.0 Medium Trust izin kümesinde çalıştırma zorunlu kılabilir. WCF hizmetleri, bu ortamlarda çalıştırabilirsiniz, kullandıkları sağlanan <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, veya <xref:System.ServiceModel.WSHttpBinding> aktarım düzeyi güvenlik ile.
 
 WCF hizmetlerini barındırma ortamları Medium Trust ile çalışan istemci isteklerine yanıt diğer sunuculara yönelik iletiler göndererek orta katman hizmet olarak da işlev görebilir. Uygulama barındırma ortamı uygun izni vermiştir, orta katman senaryoları sunucuda desteklenir <xref:System.Net.WebPermission> istedikleri sunucuya giden isteklerde.
 

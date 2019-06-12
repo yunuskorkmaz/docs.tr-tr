@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: d881a75e95bc3c3eef1df651b380210ff51ea3ce
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8563662a4408d0425e92b960301311ce5d423f9d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877514"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025743"
 ---
 # <a name="hosting-in-internet-information-services"></a>Internet Information Services'te Barındırma
 Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir seçenek, içinde bir Internet Information Services (IIS) uygulamasıdır. Bu barındırma modeli, ASP.NET ve ASP.NET Web Hizmetleri (ASMX) Web Hizmetleri tarafından kullanılan modeline benzerdir.  
@@ -34,7 +34,7 @@ Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir seç
   
 - ASP.NET gibi birden çok uygulama geliştirilmiş sunucu yoğunluğu ve ölçeklenebilirlik için ortak bir çalışan işlemi bulunduğu ASP.NET'te barındırılan WCF hizmetleri ASP.NET paylaşılan barındırma modeli avantajlarından yararlanabilirsiniz.  
   
-- IIS barındırılan WCF hizmetleri kullanma aynı dinamik derleme modelde [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)], geliştirme basitleştirir ve dağıtım, barındırılan hizmetler.  
+- IIS barındırılan WCF hizmetleri, geliştirme ve barındırılan hizmetlere dağıtımını basitleştiren ASP.NET 2.0 aynı dinamik derleme modelini kullanın.  
   
  WCF hizmetlerinde IIS konak karar verirken unutmamak gerekir, IIS 5.1 ve [!INCLUDE[iis601](../../../../includes/iis601-md.md)] yalnızca HTTP iletişimi için sınırlıdır. Bir barındırma ortamı seçme hakkında daha fazla bilgi için bkz. [barındırma hizmetleri](../../../../docs/framework/wcf/hosting-services.md).  
   

@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dc7093edaf12e801a1e1adc52b0be823ff92b91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38e1b19d6340f559e6f8b7e0f7bc042a10df16c3
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651808"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025993"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping Yapısı
-Eşlemeleri bir [!INCLUDE[wrt](../../../../includes/wrt-md.md)] karşılık gelen Icordebugtype nesne için GUID.  
+Bir Windows çalışma zamanı GUID, karşılık gelen Icordebugtype nesnesine eşler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,11 +41,11 @@ typedef struct CorDebugGuidToTypeMapping {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`iid`|Önbelleğe alınan GUID [!INCLUDE[wrt](../../../../includes/wrt-md.md)] türü.|  
+|`iid`|Önbelleğe alınan Windows çalışma zamanı türü GUİD'si.|  
 |`pType`|Önbelleğe alınan türü hakkında bilgi sağlayan Icordebugtype nesne işaretçisi.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)].  
+ **Platformlar:** Windows çalışma zamanı.  
   
  **Üst bilgi:** CorDebug.idl, CorDebug.h  
   

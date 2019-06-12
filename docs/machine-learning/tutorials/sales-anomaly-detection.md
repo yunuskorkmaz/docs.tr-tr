@@ -1,19 +1,19 @@
 ---
-title: Bir satış anomali algılama senaryosunda ML.NET kullanın
-description: ML.NET ürün satış anomali algılama senaryoda anomali ani verileri analiz etmek ve uygun eylemi gerçekleştirin noktalarını değiştirmek nasıl anlamak için nasıl kullanılacağını keşfedin.
-ms.date: 05/29/2019
+title: 'Öğretici: Ürün satış anomalileri algılayın'
+description: Ürün satış verileri için anomali algılama uygulama oluşturmayı öğrenin. Bu öğreticide, bir .NET Core konsol uygulaması kullanarak oluşturur C# Visual Studio 2019 içinde.
+ms.date: 06/11/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e092aea66ca9f439cf97c1ebee83097def0f520b
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 6ea5adf79a17bb10ddea676eaea483c2cf627d82
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758801"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026040"
 ---
-# <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Öğretici: ML.NET ürün satış anomali algılama için kullanın. 
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Öğretici: ML.NET ile ürün satış anomalileri algılayın
 
-Bu örnek öğretici ML.NET ürün satış verileri bir .NET Core konsol uygulaması kullanarak aracılığıyla uygun eylemde için anomalileri algılamak için kullanma gösterilmektedir C# Visual Studio 2019 içinde. 
+Ürün satış verileri için anomali algılama uygulama oluşturmayı öğrenin. Bu öğreticide, bir .NET Core konsol uygulaması kullanarak oluşturur C# Visual Studio'da.
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 2c99065dacbf391e94c97092336f5dda3adda5b0
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 14e62d53fca16212fae374b2627d1e96cbbca6ac
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815990"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025325"
 ---
 # <a name="-and--operators-c-reference"></a>+ ve += işleçleri (C# Başvurusu)
 
@@ -79,13 +79,11 @@ Daha fazla bilgi için [birli artı işleci](~/_csharplang/spec/expressions.md#u
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# İşleçleri](index.md)
+- [C#başvuru](../index.md)
+- [C# işleçleri](index.md)
 - [Dize ilişkilendirme](../tokens/interpolated.md)
 - [Nasıl yapılır: birden çok dizeyi birleştirme](../../how-to/concatenate-multiple-strings.md)
 - [Temsilciler](../../programming-guide/delegates/index.md)
 - [Olaylar](../../programming-guide/events/index.md)
-- [Checked ve unchecked](../keywords/checked-and-unchecked.md)
 - [Aritmetik işleçler](arithmetic-operators.md)
 - [- ve-= işleçleri](subtraction-operator.md)

@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac253e5ff294360fff89e9746ca3038b4e1ee75c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3273b8babe44a48d6952620e4331cba4f22b6e9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751107"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026037"
 ---
 # <a name="formatting-types-in-net"></a>. NET'te biçimlendirme türleri
 
@@ -123,7 +123,7 @@ Türetilen her tür <xref:System.Object?displayProperty=nameWithType> otomatik o
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> İle başlayan [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] içeren bir <xref:Windows.Foundation.IStringable> tek bir yöntemi ile arabirim [Istringable](xref:Windows.Foundation.IStringable.ToString%2A), varsayılan biçimlendirme desteği sağlar. Ancak Yönetilen türlerin uygulamamasını öneririz `IStringable` arabirimi. Daha fazla bilgi için " [!INCLUDE[wrt](../../../includes/wrt-md.md)] ve `IStringable` arabirimi" bölümünde <xref:System.Object.ToString%2A?displayProperty=nameWithType> başvuru sayfası.
+> İle başlayan [!INCLUDE[win81](../../../includes/win81-md.md)], Windows çalışma zamanı içeren bir <xref:Windows.Foundation.IStringable> tek bir yöntemi ile arabirim [Istringable](xref:Windows.Foundation.IStringable.ToString%2A), varsayılan biçimlendirme desteği sağlar. Ancak Yönetilen türlerin uygulamamasını öneririz `IStringable` arabirimi. Daha fazla bilgi için bkz. "Windows çalışma zamanı ve `IStringable` arabirimi" bölümünde <xref:System.Object.ToString%2A?displayProperty=nameWithType> başvuru sayfası.
 
 Arabirimler dışında tüm türler türetildiği <xref:System.Object>, bu işlev özel sınıflarınıza ya da yapıları için otomatik olarak sağlanır. Bununla birlikte, varsayılan olarak sağlanan işlev `ToString` yöntemi sınırlıdır: Türü tanımlamasına rağmen türün bir örneğini hakkındaki tüm bilgileri sağlamak başarısız olur. Bu nesne hakkında bilgi sağlayan nesnenin dize gösterimini sağlamak için geçersiz kılmanız gerekir `ToString` yöntemi.
 

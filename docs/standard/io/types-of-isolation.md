@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 352848f9b14300a6e8291cefa8d7a7ee251e1d14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0d253e917d6f805c471f244cddea44f339343868
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647800"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025528"
 ---
 # <a name="types-of-isolation"></a>Yalıtım Türleri
 Yalıtılmış Depolama erişimi oluşturan kullanıcıya her zaman kısıtlandırılır. Bu tür bir yalıtım uygulamak için kod deposu açıldığında çalıştığı işlemle ilişkili kimlik olduğu ortak dil çalışma zamanı aynı işletim sistemini algılar, kullanıcı kimlik kavramını kullanır. Bu kimlik, kimliği doğrulanmış kullanıcı kimliği olmakla birlikte kimliğe bürünme dinamik olarak değiştirmek için geçerli kullanıcının kimliğini neden olabilir.  
@@ -53,7 +53,7 @@ Yalıtılmış Depolama erişimi oluşturan kullanıcıya her zaman kısıtland�
  Belirli bir bilgisayarın yerel depolama tesislerinin kullandığından depoları Dolaşım dışında yalıtılmış depolama her zaman örtük olarak bilgisayar tarafından izole edilmiş olduğunu unutmayın.  
   
 > [!IMPORTANT]
->  Yalıtılmış depolama için uygun değildir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Bunun yerine, uygulama verisi sınıflarını kullanın `Windows.Storage` uzaylarındaki [!INCLUDE[wrt](../../../includes/wrt-md.md)] yerel verileri ve dosyaları depolamak için API. Daha fazla bilgi için [uygulama verileri](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) Windows geliştirme Merkezi'nde.  
+>  Yalıtılmış depolama için uygun değildir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Bunun yerine, uygulama verisi sınıflarını kullanın `Windows.Storage` yerel verileri ve dosyaları depolamak için Windows çalışma zamanı API içinde bulunan ad alanları. Daha fazla bilgi için [uygulama verileri](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) Windows geliştirme Merkezi'nde.  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Kullanıcı ve Derlemeye Göre Yalıtım  

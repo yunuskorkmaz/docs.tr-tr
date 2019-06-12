@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055023"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025581"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Birden Çok Platformu Hedefleyen Kitaplıklar için Uygulama Kaynakları
 .NET Framework kullanabilirsiniz [taşınabilir sınıf kitaplığı](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) proje türü sınıf kitaplıklarınızdaki kaynakların birden çok platformdan erişilebildiğinden emin olmak için. Bu proje türü ve .NET Framework sınıf kitaplığının taşınabilir alt küme hedefleyen Visual Studio 2012'de kullanılabilir. Kullanarak bir [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] kitaplığınızı erişilip erişilemediğini Masaüstü uygulamaları, Silverlight uygulamaları, Windows Phone uygulamaları sağlar ve [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.
@@ -47,9 +47,9 @@ ms.locfileid: "62055023"
 ## <a name="the-includenetportableincludesnet-portable-mdmd-and-windows-store-apps"></a>[!INCLUDE[net_portable](../../../includes/net-portable-md.md)] Ve Windows Store uygulamaları
  [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projeleri ardından .resources dosyalarına derlenir ve ana derlemeye veya uydu derlemelerini derleme zamanında katıştırılmış .resx dosyaları, kaynakları depolar. [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar, diğer taraftan, ardından bir tek bir paket kaynak dizini (PRI) dosyasına derlenir .resw dosyalarında depolanan kaynakları gerektirir. Ancak, uyumsuz dosya biçimlerine rağmen [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] çalışacaktır bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama.
 
- Sınıf Kitaplığı'ndan kullanmak üzere bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama, Windows Store uygulaması projenize bir başvuru ekleyin. Visual Studio şeffaf bir şekilde kaynakları bir .resw dosyasına derlemenizi ayıklamak ve onu bir PRI dosyası oluşturmak için kullanabilirsiniz [!INCLUDE[wrt](../../../includes/wrt-md.md)] kaynakları ayıklayabilir. Çalışma zamanında [!INCLUDE[wrt](../../../includes/wrt-md.md)] kodu yürütür, [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], ancak, taşınabilir Sınıf Kitaplığı'nızın kaynaklarını PRI dosyasından alır.
+ Sınıf Kitaplığı'ndan kullanmak üzere bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama, Windows Store uygulaması projenize bir başvuru ekleyin. Visual Studio şeffaf bir şekilde kaynakları bir .resw dosyasına derlemenizi ayıklamak ve Windows çalışma zamanı kaynakları ayıklayabilir bir PRI dosyası oluşturmak için kullanın. Çalışma zamanında, Windows çalışma zamanı kodu yürütür, [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], ancak, taşınabilir Sınıf Kitaplığı'nızın kaynaklarını PRI dosyasından alır.
 
- Varsa, [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projeniz yerelleştirilmiş kaynakları içeriyorsa, masaüstü uygulamasındaki bir kitaplık için yaptığınız gibi bunları dağıtmak için hub-and-spoke modelini kullanın. Ana kaynak dosyanızı ve tüm tüketmeye içinde yerelleştirilmiş kaynak dosyalarını, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama, ana derlemeye bir başvuru ekleyin. Derleme zamanında, Visual Studio kaynakları, ana kaynak dosyasından ve yerelleştirilmiş herhangi bir kaynak dosyasından ayrı .resw dosyalarına aktarır. Ardından derler bir tek PRI dosyası [!INCLUDE[wrt](../../../includes/wrt-md.md)] çalışma zamanında.
+ Varsa, [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projeniz yerelleştirilmiş kaynakları içeriyorsa, masaüstü uygulamasındaki bir kitaplık için yaptığınız gibi bunları dağıtmak için hub-and-spoke modelini kullanın. Ana kaynak dosyanızı ve tüm tüketmeye içinde yerelleştirilmiş kaynak dosyalarını, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama, ana derlemeye bir başvuru ekleyin. Derleme zamanında, Visual Studio kaynakları, ana kaynak dosyasından ve yerelleştirilmiş herhangi bir kaynak dosyasından ayrı .resw dosyalarına aktarır. Ardından, çalışma zamanında Windows çalışma zamanı erişen bir tek PRI dosyası içine .resw dosyaları derler.
 
 <a name="NonLoc"></a>
 ## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Örnek: Yerelleştirilmemiş [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]

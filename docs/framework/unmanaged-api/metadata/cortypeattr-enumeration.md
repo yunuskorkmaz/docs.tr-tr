@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43e7c973ee22350f26b4f86bcc8b4c4c727291ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f65c2f74ec5efda027d90b3ffda9a5da5c239122
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045194"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025722"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr Numaralandırması
 Türü meta verileri gösteren değerleri içerir.  
@@ -100,7 +100,7 @@ typedef enum CorTypeAttr {
 |`tdSpecialName`|Sınıf adı özel olduğunu belirtir. Adını açıklar nasıl.|  
 |`tdImport`|Tür içe aktarılan belirtir.|  
 |`tdSerializable`|Türü seri hale getirilebilir olduğunu belirtir.|  
-|`tdWindowsRuntime`|Bu tür olduğunu belirten bir [!INCLUDE[wrt](../../../../includes/wrt-md.md)] türü.|  
+|`tdWindowsRuntime`|Bu tür bir Windows çalışma zamanı türü olduğunu belirtir.|  
 |`tdStringFormatMask`|Dizeleri nasıl kodlanmış ve biçimlendirilmiş hakkında bilgi alır.|  
 |`tdAnsiClass`|Bu tür bir LPTSTR ANSI olarak yorumlar belirtir.|  
 |`tdUnicodeClass`|Bu tür bir LPTSTR Unicode olarak yorumlar belirtir.|  

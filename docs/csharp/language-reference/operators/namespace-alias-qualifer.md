@@ -9,12 +9,12 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 0b456ed3ce9965ef389d8ce40167afa4ac33da18
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c494e8dbb18f44ce5520b21800a21d3feb03da59
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422530"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025067"
 ---
 # <a name="-operator-c-reference"></a>:: işleci (C# Başvurusu)
 
@@ -45,8 +45,7 @@ Nasıl kullanılacağına ilişkin bir örnek `::` işleci, aşağıdaki bölüm
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C#başvuru](../index.md)
 - [C# işleçleri](index.md)
 - [. işleci](member-access-operators.md#member-access-operator-)
 - [extern diğer adı](../keywords/extern-alias.md)

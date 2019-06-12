@@ -6,12 +6,12 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: eeacd7628a11c87c8d21c7b18687892105374587
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
-ms.translationtype: HT
+ms.openlocfilehash: 3be4e827e75e4e26a34d9ed70423af5aa317e7fb
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834102"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025008"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc işleci (C# Başvurusu)
 
@@ -19,11 +19,11 @@ ms.locfileid: "66834102"
 
 Sonucu atayabilirsiniz `stackalloc` şu türlerden birinde bir değişkene işleci:
 
-- İle başlayarak C# 7.2, <xref:System.Span%601?displayName=nameWithType> veya <xref:System.ReadOnlySpan%601?displayName=nameWithType>aşağıdaki örnekte gösterildiği gibi:
+- İle başlayarak C# 7.2, <xref:System.Span%601?displayProperty=nameWithType> veya <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>aşağıdaki örnekte gösterildiği gibi:
 
   [!code-csharp[stackalloc span](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToSpan)]
 
-  Kullanmak zorunda değilsiniz bir `unsafe` yığın atadığınızda içerik ayrılan bellek bloğu için bir <xref:System.Span%601> veya <xref:System.ReadOnlySpan%601> değişkeni.
+  Kullanmak zorunda değilsiniz bir [güvenli olmayan](../keywords/unsafe.md) yığın atadığınızda içerik ayrılan bellek bloğu için bir <xref:System.Span%601> veya <xref:System.ReadOnlySpan%601> değişkeni.
 
   Bu türler ile çalışırken kullanabileceğiniz bir `stackalloc` ifadesinde [koşullu](conditional-operator.md) veya atama ifadeleri, aşağıdaki örnekte gösterildiği gibi:
 
@@ -36,7 +36,7 @@ Sonucu atayabilirsiniz `stackalloc` şu türlerden birinde bir değişkene işle
 
   [!code-csharp[stackalloc pointer](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToPointer)]
 
-  Yukarıdaki örnekte gösterildiği gibi kullanmalısınız bir [güvenli](../keywords/unsafe.md) işaretçi türleri ile çalışırken bağlamı.
+  Yukarıdaki örnekte gösterildiği gibi kullanmalısınız bir `unsafe` işaretçi türleri ile çalışırken bağlamı.
 
 Yeni ayrılan bellek içeriğini tanımsızdır. İle başlayarak C# 7.3, yeni ayrılan bellek içeriğini tanımlamasını dizi Başlatıcısı sözdizimi kullanabilirsiniz. Aşağıdaki örnek, bunu yapmak için çeşitli yollar gösterir:
 

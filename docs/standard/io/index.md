@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8d95a347237b15dfa55586bb15fe605bd5c7a94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3b3dcc3b96e12f89508f4d2708c5ab083516dba
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947127"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025505"
 ---
 # <a name="file-and-stream-io"></a>Dosya ve Akış G/Ç
 
@@ -147,7 +147,7 @@ Bkz: [yalıtılmış depolama](isolated-storage.md).
 
 G/ç işlemlerini kullanırken dikkat edilecek bazı önemli farklar [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar:
 
-- Özellikle alakalı türler dosya işlemleri gibi <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> ve <xref:System.IO.DirectoryInfo>, dahil edilmeyen [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Bunun yerine, içindeki türleri kullanın <xref:Windows.Storage?displayProperty=nameWithType> ad [!INCLUDE[wrt](../../../includes/wrt-md.md)], gibi <xref:Windows.Storage.StorageFile> ve <xref:Windows.Storage.StorageFolder>.
+- Özellikle alakalı türler dosya işlemleri gibi <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> ve <xref:System.IO.DirectoryInfo>, dahil edilmeyen [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Bunun yerine, içindeki türleri kullanın <xref:Windows.Storage?displayProperty=nameWithType> ad alanı Windows çalışma zamanı gibi <xref:Windows.Storage.StorageFile> ve <xref:Windows.Storage.StorageFolder>.
 
 - Yalıtılmış Depolama kullanılamaz; Bunun yerine, [uygulama verileri](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
 

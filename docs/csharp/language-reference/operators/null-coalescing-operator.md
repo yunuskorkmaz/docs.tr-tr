@@ -1,5 +1,5 @@
 ---
-title: ?? Operator - C# başvurusu
+title: ?? operator - C# başvurusu
 ms.custom: seodec18
 ms.date: 06/07/2019
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - null-coalescing operator [C#]
 - ?? operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 8ca97261b348b7813ab179abbc1f2c5f535966a1
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: a19b5558da36ffb11dabd1b9bec419a3623a0f17
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816013"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024996"
 ---
-# <a name="-operator-c-reference"></a>?? operator (C# Başvurusu)
+# <a name="-operator-c-reference"></a>?? işleç (C# Başvurusu)
 
 Null birleşim işleci `??` değilse sol işlenenin değerini döndürür `null`; Aksi takdirde, sağ işlenen değerlendirilir ve sonucu döndürür. `??` İşleci sol işlenen null olmayan olarak değerlendirilirse, sağ işleneni değerlendirmek değil.
 
@@ -59,8 +59,7 @@ Daha fazla bilgi için [null birleşim işleci](~/_csharplang/spec/expressions.m
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C#başvuru](../index.md)
 - [C# işleçleri](index.md)
 - [?. ve? [] işleçleri](member-access-operators.md#null-conditional-operators--and-)
 - [?: işleci](conditional-operator.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: ecde6ca8d3a95e356c5b1389ba95c4ad72b68d45
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5c2332b7371ec4ac7b5cfc0681466536d49bb7be
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623898"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026077"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next Deyimi (Visual Basic)
 Bir koleksiyondaki her öğe için bir deyim grubunu yineler.  
@@ -49,7 +49,7 @@ Next [ element ]
 |Terim|Tanım|  
 |---|---|  
 |`element`|Gerekli `For Each` deyimi. İsteğe bağlı olarak `Next` deyimi. değişken. Koleksiyon öğelerinde yineleme yapmak için kullanılır.|  
-|`datatype`|Gerekli if `element` zaten bildirildi değil. Veri türü `element`.|  
+|`datatype`|İsteğe bağlı ise [ `Option Infer` ](option-infer-statement.md) (varsayılan) veya `element` önceden bildirilen; gerekir `Option Infer` kapalıdır ve `element` zaten bildirildi değil. Veri türü `element`.|  
 |`group`|Gerekli. Bir koleksiyon türü veya nesne bir türe sahip bir değişken. Hangi koleksiyona başvuran `statements` yinelenmesi üzeresiniz.|  
 |`statements`|İsteğe bağlı. Bir veya daha fazla deyim arasında `For Each` ve `Next` her öğe üzerinde çalışan `group`.|  
 |`Continue For`|İsteğe bağlı. Başlangıcına kadar denetim aktarır `For Each` döngü.|  
@@ -113,8 +113,8 @@ Next [ element ]
  Olduğunda bir `For Each`...`Next` deyimi çalıştırır, Visual Basic koleksiyon yalnızca bir kez döngü başlamadan önce değerlendirilir. Deyim bloğunu değişirse `element` veya `group`, bu değişiklikleri döngü etkilemez.  
   
  Ne zaman koleksiyondaki tüm öğeler sırayla atandı için `element`, `For Each` döngü durdurur ve denetim deyime geçer `Next` deyimi.  
-  
- Varsa `element` henüz bu döngü dışında bildirmelidir bildirilmiş içinde `For Each` deyimi. Türünü bildirebilirsiniz `element` kullanılarak açık şekilde bir `As` deyimi veya atamak üzere tür çıkarımı güvenebilirler. Her iki durumda da kapsamını `element` döngü gövdesi. Ancak, bildiremezsiniz `element` hem dışından hem de döngü içinde.  
+ 
+Varsa [Option Infer](option-infer-statement.md) olduğunu (varsayılan ayar üzerinde), Visual Basic Derleyicisi veri türünü çıkarabilir `element`. Kapalı ise ve `element` taşınmadığından döngünün dışında bildirmelidir bildirilmiş içinde `For Each` deyimi. Veri türü bildirmek için `element` açıkça kullanan bir `As` yan tümcesi. Öğesinin veri türü dışında tanımlanmadığı sürece `For Each`... `Next` , kapsamı yapıdır döngü gövdesi. Bildirip Not `element` hem dışından hem de döngü içinde.
   
  İsteğe bağlı olarak belirtebilirsiniz `element` içinde `Next` deyimi. Özellikle, iç içe geçmiş varsa bu programınızı okunabilirliğini artırır `For Each` döngüleri. Görüntülenen ilgili olarak aynı değişkene belirtmelisiniz `For Each` deyimi.  
   
@@ -124,7 +124,7 @@ Next [ element ]
   
  Belirli bir sırada bir koleksiyon geçiş üzerinde kodunuzu bağımlı olması durumunda bir `For Each`... `Next` döngü en iyi seçenek değilse, numaralandırıcı nesne özelliklerini bilmiyorsanız koleksiyonu kullanıma sunar. Geçişi sırasını Visual Basic, ancak göre belirlenen değil <xref:System.Collections.IEnumerator.MoveNext%2A> Numaralandırıcı nesnesi yöntemi. Bu nedenle, hangi öğedir, döndürülen ilk koleksiyonun tahmin etmek mümkün olmayabilir `element`, ya da belirli bir öğeden sonra döndürülecek sonraki olduğu. Bunu gibi farklı bir döngü yapısı, kullanılarak daha güvenilir sonuçlar elde `For`... `Next` veya `Do`... `Loop`.  
   
- Veri türü `element` öğelerin veri türü şekilde olmalıdır `group` kendisine dönüştürülebilir.  
+Çalışma zamanı öğeleri dönüştüremedi `group` için `element`. [`Option Strict`] Deyimi, hem genişletme ve daraltma dönüşümleri izin verilip verilmeyeceğini denetler (`Option Strict` kapalı, kendi varsayılan değerdir), veya yalnızca dönüştürmelerine izin verilip verilmediğini (`Option Strict` açıktır). Daha fazla bilgi için [daraltma dönüşümleri](#narrowing-conversions).
   
  Veri türü `group` numaralandırılabilir bir dizi veya koleksiyon başvuran bir başvuru türü olması gerekir. Buna genellikle `group` uygulayan bir nesneye başvuruyor <xref:System.Collections.IEnumerable> arabiriminin `System.Collections` ad alanı veya <xref:System.Collections.Generic.IEnumerable%601> arabiriminin `System.Collections.Generic` ad alanı. `System.Collections.IEnumerable` tanımlar <xref:System.Collections.IEnumerable.GetEnumerator%2A> koleksiyonu için bir numaralandırıcı nesnesi döndüren bir yöntem. Numaralandırıcı nesnesi uygulayan `System.Collections.IEnumerator` arabiriminin `System.Collections` ad alanı ve ortaya çıkaran <xref:System.Collections.IEnumerator.Current%2A> özelliği ve <xref:System.Collections.IEnumerator.Reset%2A> ve <xref:System.Collections.IEnumerator.MoveNext%2A> yöntemleri. Visual Basic koleksiyonu geçirmek için bunları kullanır.  
   

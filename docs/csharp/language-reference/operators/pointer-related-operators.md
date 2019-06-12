@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 0cc104c7246763ee32866fe5233b9774253a2888
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
-ms.translationtype: HT
+ms.openlocfilehash: 50243f148f37f5f33f0c69ddd896549e7aea9462
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833133"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025113"
 ---
 # <a name="pointer-related-operators-c-reference"></a>İşaretçi ilgili işleçleri (C# Başvurusu)
 
@@ -187,11 +187,10 @@ Daha fazla bilgi için aşağıdaki bölümlere bakın [ C# dil belirtimi](~/_cs
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# İşleçleri](index.md)
+- [C#başvuru](../index.md)
+- [C# işleçleri](index.md)
 - [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [`unsafe` Anahtar sözcüğü](../keywords/unsafe.md)
-- [`fixed` Anahtar sözcüğü](../keywords/fixed-statement.md)
-- [`stackalloc` İşleci](stackalloc.md)
-- [`sizeof` İşleci](../keywords/sizeof.md)
+- [güven olmayan anahtar sözcük](../keywords/unsafe.md)
+- [fixed anahtar sözcüğü](../keywords/fixed-statement.md)
+- [stackalloc işleci](stackalloc.md)
+- [sizeof işleci](../keywords/sizeof.md)

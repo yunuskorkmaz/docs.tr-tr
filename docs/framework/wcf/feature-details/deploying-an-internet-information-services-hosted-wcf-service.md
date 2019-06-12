@@ -2,12 +2,12 @@
 title: Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 99ed9ce5304717073057f6712a2b96d910d43bea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858331"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025740"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
 
@@ -41,7 +41,7 @@ Makinede IIS zaten varsa, .NET Framework yükleme işlemi ile IIS WCF otomatik o
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Yeni bir IIS uygulama oluşturun veya mevcut bir ASP.NET uygulamasını yeniden kullanma
 
-IIS barındırılan WCF hizmetlerini bir IIS uygulama içinde bulunmalıdır. WCF hizmetlerini barındırmak için yeni bir IIS uygulama amaçları oluşturabilirsiniz. Alternatif olarak, bir WCF Hizmeti barındırma zaten mevcut bir uygulamasına dağıtabilirsiniz [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] (örneğin, .aspx sayfaları ve ASP.NET Web Hizmetleri [ASMX]) içerik. Bu seçenekler hakkında daha fazla bilgi için bkz: "barındırma WCF yan yana ASP.NET ile" ve "ASP.NET uyumluluk modunda barındırma WCF hizmetleri" bölümleri içinde [WCF hizmetleri ve ASP.NET](wcf-services-and-aspnet.md).
+IIS barındırılan WCF hizmetlerini bir IIS uygulama içinde bulunmalıdır. WCF hizmetlerini barındırmak için yeni bir IIS uygulama amaçları oluşturabilirsiniz. Alternatif olarak, bir WCF hizmetini ASP.NET 2.0 içerik (örneğin, .aspx sayfaları ve ASP.NET Web Hizmetleri [ASMX]) barındırma zaten mevcut bir uygulamasına dağıtabilirsiniz. Bu seçenekler hakkında daha fazla bilgi için bkz: "barındırma WCF yan yana ASP.NET ile" ve "ASP.NET uyumluluk modunda barındırma WCF hizmetleri" bölümleri içinde [WCF hizmetleri ve ASP.NET](wcf-services-and-aspnet.md).
 
 Unutmayın [!INCLUDE[iis601](../../../../includes/iis601-md.md)] ve sonraki sürümleri düzenli olarak yalıtılmış bir nesne yönelimli programlama uygulama yeniden başlatın. Varsayılan değer 1740 dakikadır. Desteklenen en yüksek değer 71,582 dakikadır. Bu yeniden başlatma devre dışı bırakılabilir. Bu özellik hakkında daha fazla bilgi için bkz. [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
 
@@ -65,7 +65,7 @@ Hizmet için temel adres listesi oluşturma gibi ek barındırma yapılandırma 
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>IIS uygulaması için hizmet uygulaması dağıtma
 
-IIS barındırılan WCF hizmetleri kullanma aynı dinamik derleme modelde [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]. İle olduğu gibi ASP.NET ve IIS barındırılan WCF hizmetleri, çeşitli konumlarda ve çeşitli şekillerde uygulama kodunu gibi dağıtabilirsiniz:
+IIS barındırılan WCF hizmetleri ASP.NET 2.0 aynı dinamik derleme modelini kullanın. İle olduğu gibi ASP.NET ve IIS barındırılan WCF hizmetleri, çeşitli konumlarda ve çeşitli şekillerde uygulama kodunu gibi dağıtabilirsiniz:
 
 - Önceden derlenmiş bir .dll dosyası, genel derleme önbelleğinde (GAC) veya uygulamanın \bin dizinine bulunan gibi. Önceden derlenmiş ikili dosyaları, Sınıf Kitaplığı'nın yeni bir sürüm olarak dağıtılmadıkça güncelleştirilmez.
 
@@ -73,7 +73,7 @@ IIS barındırılan WCF hizmetleri kullanma aynı dinamik derleme modelde [!INCL
 
 - Derlenmemiş kodu doğrudan .svc dosyasına yerleştirilmiş olarak. Uygulama kodu da olabilir bu hizmetin .svc dosyasında bulunan satır içi sonra \@ServiceHost yönergesi. Satır içi kod değişiklikleri geri dönüştürüldü ve sonraki isteği aldığında yeniden derlenen uygulamanın neden.
 
-Hakkında daha fazla bilgi için [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] derleme modeli bkz [ASP.NET derleme genel bakış](https://go.microsoft.com/fwlink/?LinkId=94773).
+ASP.NET 2.0 derleme modeli hakkında daha fazla bilgi için bkz. [ASP.NET derleme genel bakış](https://go.microsoft.com/fwlink/?LinkId=94773).
 
 ## <a name="configure-the-wcf-service"></a>WCF hizmetini yapılandırma
 

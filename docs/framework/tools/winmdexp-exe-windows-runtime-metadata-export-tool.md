@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a00828eba91e4fea41e8b6a6da8953fc399387e3
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 01cdcbb93fde0d2d2f1c800613d9709da0d695f6
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378504"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026009"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)
-[!INCLUDE[wrt](../../../includes/wrt-md.md)] Meta verileri dışarı aktarma Aracı (Winmdexp.exe) bir .NET Framework modülünü içeren bir dosyaya dönüştürür [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta verileri. Ancak .NET Framework derlemeleri ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta veri dosyaları aynı fiziksel biçim kullanın, .NET Framework derlemeleri otomatik olarak kullanılamaz, yani meta veri tablolarının içeriğinde farklar vardır [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri . Bir .NET Framework modülünü işleminin bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni olarak adlandırılır *verme*. .NET Framework 4.5 ve .NET Framework 4.5.1, sonuçta elde edilen Windows meta veri (.winmd) dosyası hem meta veriler hem de uygulama içerir.  
+Windows çalışma zamanı meta verileri dışarı aktarma Aracı'nı (Winmdexp.exe) bir .NET Framework modülünü Windows çalışma zamanı meta verileri içeren bir dosyaya dönüştürür. .NET Framework derlemelerinin ve Windows çalışma zamanı meta veri dosyaları aynı fiziksel biçim kullansa da, hangi .NET Framework derlemeleri otomatik Windows çalışma zamanı bileşenleri kullanılabilir olmadığı anlamına gelir meta veri tablolarının içeriğinde farklar vardır . Bir .NET Framework modülünü bir Windows çalışma zamanı bileşeni kapatma işlemi olarak adlandırılır *verme*. .NET Framework 4.5 ve .NET Framework 4.5.1, sonuçta elde edilen Windows meta veri (.winmd) dosyası hem meta veriler hem de uygulama içerir.  
   
- Kullanırken  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşen** altında bulunan şablon **Windows Store** C# ve Visual Studio 2013 veya Visual Studio 2012'de Visual Basic için derleyici hedefi bir .winmdobj dosyası olduğunu ve sonraki Oluşturma adımı .winmdobj dosyasını bir .winmd dosyasına aktarmak için Winmdexp.exe'yi çağırır. Derleme için önerilen yöntem budur bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni. Oluşturma süreci üzerinde, Visual Studio'nun sağladığından daha fazla kontrol sahibi olmak istediğinizde doğrudan Winmdexp.exe'yi kullanın.  
+ Kullanırken **Windows çalışma zamanı bileşeni** altında bulunan şablon **Windows Store** için C# ve Visual Basic'te Visual Studio 2013 veya Visual Studio 2012, derleyici hedefi bir .winmdobj Dosya ve sonraki Oluşturma adımı .winmdobj dosyasını bir .winmd dosyasına aktarmak için Winmdexp.exe'yi çağırır. Bir Windows çalışma zamanı bileşeni oluşturmak için önerilen yöntem budur. Oluşturma süreci üzerinde, Visual Studio'nun sağladığından daha fazla kontrol sahibi olmak istediğinizde doğrudan Winmdexp.exe'yi kullanın.  
   
  Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için Visual Studio (veya Windows 7'de Visual Studio komut istemi) için geliştirici Komut İstemi'ni kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -46,9 +46,9 @@ winmdexp [options] winmdmodule
 |**@** `responsefile`|Seçenekleri içeren bir yanıt (.rsp) dosyasını belirtir (ve isteğe bağlı olarak `winmdmodule`). Her satırda `responsefile` tek bağımsız değişken veya seçenek bulunmalıdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Winmdexp.exe, rasgele bir .NET Framework derlemesini .winmd dosyasına dönüştürmek için tasarlanmamıştır. İle derlenmiş bir modül gerektirir `/target:winmdobj` seçeneği ve ek kısıtlamalar uygulanır. Bu kısıtlamaların en önemlisi derlemenin API yüzeyinde sunulan tüm türleri olması gerekliliğidir [!INCLUDE[wrt](../../../includes/wrt-md.md)] türleri. Daha fazla bilgi için makalenin "Windows çalışma zamanı bileşenleri türleri bildirme" bölümüne bakın. [C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](https://go.microsoft.com/fwlink/p/?LinkID=238313) Windows geliştirme Merkezi'nde.  
+ Winmdexp.exe, rasgele bir .NET Framework derlemesini .winmd dosyasına dönüştürmek için tasarlanmamıştır. İle derlenmiş bir modül gerektirir `/target:winmdobj` seçeneği ve ek kısıtlamalar uygulanır. Bu kısıtlamaların en önemlisi, derlemenin API yüzeyinde sunulan tüm türleri Windows çalışma zamanı türleri olması gerekliliğidir. Daha fazla bilgi için makalenin "Windows çalışma zamanı bileşenleri türleri bildirme" bölümüne bakın. [C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](https://go.microsoft.com/fwlink/p/?LinkID=238313) Windows geliştirme Merkezi'nde.  
   
- Yazdığınızda bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama veya [!INCLUDE[wrt](../../../includes/wrt-md.md)] C# veya Visual Basic ile bileşen, .NET Framework ile programlama hale getirmek için destek sağlar [!INCLUDE[wrt](../../../includes/wrt-md.md)] daha doğal. Bu makalede açıklanan [Windows Store uygulamaları için .NET Framework desteği ve Windows çalışma zamanı](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). İşlemde, sık kullanılan bazı [!INCLUDE[wrt](../../../includes/wrt-md.md)] türleri .NET Framework türleri ile eşleştirilir. Winmdexp.exe bu işlemi tersine çevirir ve karşılık gelen kullanan bir API yüzey oluşturur [!INCLUDE[wrt](../../../includes/wrt-md.md)] türleri. Örneğin, oluşturulan türler <xref:System.Collections.Generic.IList%601> oluşturulan türler için arabirim eşlemesi [!INCLUDE[wrt](../../../includes/wrt-md.md)] [Ivector\<T >](https://go.microsoft.com/fwlink/p/?LinkId=251132)arabirimi.  
+ Yazdığınızda bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama veya bir Windows çalışma zamanı bileşeni ile C# veya Visual Basic .NET Framework Windows çalışma zamanı ile programlama daha doğal hale getirmek için destek sağlar. Bu makalede açıklanan [Windows Store uygulamaları için .NET Framework desteği ve Windows çalışma zamanı](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). Bu süreçte bazı yaygın olarak kullanılan bir Windows çalışma zamanı türleri için .NET Framework türleri eşlenir. Winmdexp.exe bu işlemi tersine çevirir ve karşılık gelen Windows çalışma zamanı türlerini kullanan bir API yüzey oluşturur. Örneğin, oluşturulan türler <xref:System.Collections.Generic.IList%601> Windows çalışma zamanını şuradan oluşturulan türler için arabirim eşlemesi[Ivector\<T >](https://go.microsoft.com/fwlink/p/?LinkId=251132)arabirimi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

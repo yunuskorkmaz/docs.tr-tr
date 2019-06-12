@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 54657fb8ed4c0935c7c21fad333c7a62b42aec2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61688273"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025100"
 ---
 # <a name="methods"></a>Yöntemler
 
@@ -144,9 +144,9 @@ Bazı durumlarda, yönteminize tam sayı bağımsız değişkenleri belirtme ger
 - Yöntemine geçirerek uygun türde bağımsız değişkenlerin virgülle ayrılmış listesi.
 - Parametre dizisi bağımsız değişkeni sağlayarak değil.
 
-Aşağıdaki örnek adlı bir yöntem tanımlar `DoStringOperation` kendi ilk parametre tarafından belirtilen dize işlemi gerçekleştiren bir `StringOperation` numaralandırma üyesi. Bu işlemi gerçekleştirmek için olduğu dizeleri bir parametre dizisi tarafından tanımlanır. `Main` Yöntemi metodu çağrılırken, tüm üç yol göstermektedir. Yöntem ile etiketlenmiş Not `params` anahtar sözcüğü hazır, böylece değerini parametre dizisi için hiçbir bağımsız değişken sağlanmazsa durumu işlemek için `null`.
+Aşağıdaki örnek adlı bir yöntem tanımlar `GetVowels` parametresi dizisinden tüm sesli harflerle döndürür. `Main` Yöntemi metodu çağrılırken, tüm üç yol göstermektedir. Çağıranlar herhangi bir bağımsız değişken içeren parametreleri sağlamak için gerekli değildir `params` değiştiricisi. Bu durumda, parametredir `null`.
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
+[!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 
 <a name="optional"></a>
 

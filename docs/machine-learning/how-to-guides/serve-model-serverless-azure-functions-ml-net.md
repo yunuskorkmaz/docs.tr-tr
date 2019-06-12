@@ -1,16 +1,16 @@
 ---
 title: Modeli Azure İşlevleri’ne dağıtma
 description: ML.NET yaklaşım analizi makine öğrenme modelinin tahmin için Azure işlevleri'ni kullanarak internet üzerinden hizmet
-ms.date: 05/03/2019
+ms.date: 06/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 9e62d8826227aed07451387cc733d27094327f99
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7df7a6f9fcc5a4702171e1aac4b6b67e0c343748
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645105"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025984"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Modeli Azure İşlevleri’ne dağıtma
 
@@ -22,6 +22,7 @@ HTTP üzerinden Azure işlevleri ile sunucusuz ortam öğrenme modeli tahminler 
 ## <a name="prerequisites"></a>Önkoşullar
 
 - [Visual Studio 2017 15.6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) "Azure geliştirme yüklü" ve ".NET Core çoklu platform geliştirme" iş yükü.
+- NuGet paketi sürüm 1.0.28+ Microsoft.NET.Sdk.Functions.
 - [Azure işlevleri araçları](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
 - Önceden eğitilmiş model. Kullanım [ML.NET yaklaşım analizi Öğreticisi](../tutorials/sentiment-analysis.md) kendi modelinizi oluşturun veya bunu indirmek üzere [önceden eğitilmiş yaklaşım analizi, machine learning modeli](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
@@ -29,7 +30,7 @@ HTTP üzerinden Azure işlevleri ile sunucusuz ortam öğrenme modeli tahminler 
 ## <a name="create-azure-functions-project"></a>Azure işlevleri projesi oluşturma
 
 1. Visual Studio 2017'yi açın. Seçin **dosya** > **yeni** > **proje** menü çubuğundan. İçinde **yeni proje** iletişim kutusunda **Visual C#**  düğümünü ve ardından **bulut** düğümü. Ardından **Azure işlevleri** proje şablonu. İçinde **adı** metin kutusuna "SentimentAnalysisFunctionsApp" yazın ve ardından **Tamam** düğmesi.
-1. İçinde **yeni proje** iletişim kutusunda, proje seçeneklerinde Yukarıdaki açılan listeyi açın ve seçin **Azure işlevler v2 (.NET Core)**. Ardından, **Http tetikleyicisi** proje ve ardından **Tamam** düğmesi.
+1. İçinde **yeni proje** iletişim kutusunda, proje seçeneklerinde Yukarıdaki açılan listeyi açın ve seçin **Azure işlevler v2 (.NET Core)** . Ardından, **Http tetikleyicisi** proje ve ardından **Tamam** düğmesi.
 1. Adlı bir dizin oluşturmak *MLModels* modelinizi kaydetmek için projenizde:
 
     İçinde **Çözüm Gezgini**, projenize sağ tıklayıp **Ekle** > **yeni klasör**. "MLModels" yazın ve Enter tuşuna basın.
@@ -38,9 +39,17 @@ HTTP üzerinden Azure işlevleri ile sunucusuz ortam öğrenme modeli tahminler 
 
     Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin, Gözat sekmesini seçin, arama **Microsoft.ML**, bu paket listesinde seçip **yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz.
 
+1. Yükleme **Microsoft.Azure.Functions.Extensions NuGet paketini**:
+
+    Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin, Gözat sekmesini seçin, arama **Microsoft.Azure.Functions.Extensions**, bu paket listesinde seçip **yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz.
+
 1. Yükleme **Microsoft.Extensions.ML NuGet paketini**:
 
     Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin, Gözat sekmesini seçin, arama **Microsoft.Extensions.ML**, bu paket listesinde seçip **yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz.
+
+1. Güncelleştirme **Microsoft.NET.Sdk.Functions NuGet paketini** 1.0.28 sürümü için:
+
+    Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin, yüklü sekmesini seçin, arama **Microsoft.NET.Sdk.Functions**, bu paket listesinde, select 1.0.28 veya sonraki sürümü açılır listeden seçip **güncelleştirme**  düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz.
 
 ## <a name="add-pre-trained-model-to-project"></a>Önceden eğitilmiş model projeye Ekle
 
@@ -174,28 +183,6 @@ Yüksek düzeyde, bu kod nesneleri ve otomatik yerine el ile yapmanıza gerek ka
 
 > [!WARNING]
 > [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) iş parçacığı açısından güvenli değildir. Performansı artırmak ve iş parçacığı güvenliği için kullanmak `PredictionEnginePool` oluşturan hizmeti bir [ `ObjectPool` ](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) , `PredictionEngine` nesneleri uygulama kullanımı. 
-
-## <a name="register-startup-as-an-azure-functions-extension"></a>Azure işlevleri uzantı olarak başlangıç kaydetme
-
-Kullanmak için `Startup` uygulamanızda, Azure işlevleri uzantı olarak kaydetmeniz gerekir. Adlı yeni bir dosya oluşturun *extensions.json* projenizdeki bir zaten mevcut değilse.
-
-1. İçinde **Çözüm Gezgini**projeye sağ tıklayın ve ardından **Ekle** > **yeni öğe**.
-1. İçinde **yeni öğe** iletişim kutusunda **Visual C#**  düğümünü ve ardından **Web** düğümü. Ardından **Json dosyası** seçeneği. İçinde **adı** metin kutusuna "extensions.json" yazın ve ardından **Tamam** düğmesi.
-
-    *Extensions.json* dosyası Kod Düzenleyicisi'nde açılır. Aşağıdaki içeriği ekleyin *extensions.json*:
-    
-    ```json
-    {
-      "extensions": [
-        {
-          "name": "Startup",
-          "typename": "SentimentAnalysisFunctionsApp.Startup, SentimentAnalysisFunctionsApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
-        }
-      ]
-    }
-    ```
-
-1. Çözüm Gezgini'nde sağ tıklayın, *extensions.json* seçin ve dosya **özellikleri**. Altında **Gelişmiş**, değiştirin **çıkış dizinine Kopyala** için **yeniyse Kopyala**.
 
 ## <a name="load-the-model-into-the-function"></a>İşleve model yüklenemiyor
 
