@@ -39,13 +39,13 @@ ms.locfileid: "61674837"
 
 |     | <span data-ttu-id="a7e46-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a7e46-114">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="a7e46-115"> *\*\<Yapılandırma >** </span><span class="sxs-lookup"><span data-stu-id="a7e46-115">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="a7e46-116">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="a7e46-116">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="a7e46-115"> **\<Yapılandırma >** </span><span class="sxs-lookup"><span data-stu-id="a7e46-115">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="a7e46-116">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="a7e46-116">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
 ## <a name="child-element"></a><span data-ttu-id="a7e46-117">Alt öğe</span><span class="sxs-lookup"><span data-stu-id="a7e46-117">Child element</span></span>
 
 |     | <span data-ttu-id="a7e46-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a7e46-118">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="a7e46-119"> *\*\<linkedConfiguration>** </span><span class="sxs-lookup"><span data-stu-id="a7e46-119">**\<linkedConfiguration>**</span></span>](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | <span data-ttu-id="a7e46-120">Dahil edilecek bir yapılandırma dosyası belirtir.</span><span class="sxs-lookup"><span data-stu-id="a7e46-120">Specifies a configuration file to include.</span></span> |
+| [<span data-ttu-id="a7e46-119"> **\<linkedConfiguration>** </span><span class="sxs-lookup"><span data-stu-id="a7e46-119">**\<linkedConfiguration>**</span></span>](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | <span data-ttu-id="a7e46-120">Dahil edilecek bir yapılandırma dosyası belirtir.</span><span class="sxs-lookup"><span data-stu-id="a7e46-120">Specifies a configuration file to include.</span></span> |
 
 ## <a name="remarks"></a><span data-ttu-id="a7e46-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a7e46-121">Remarks</span></span>
 

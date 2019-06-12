@@ -42,7 +42,7 @@ ms.locfileid: "61674655"
 
 |     | <span data-ttu-id="75e44-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="75e44-116">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="75e44-117"> *\*\<assemblyBinding >** öğesi</span><span class="sxs-lookup"><span data-stu-id="75e44-117">**\<assemblyBinding>** Element</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | <span data-ttu-id="75e44-118">Derleme bağlama ilkesini yapılandırma düzeyinde belirtir.</span><span class="sxs-lookup"><span data-stu-id="75e44-118">Specifies assembly binding policy at the configuration level.</span></span> |
+| [<span data-ttu-id="75e44-117"> **\<assemblyBinding >** öğesi</span><span class="sxs-lookup"><span data-stu-id="75e44-117">**\<assemblyBinding>** Element</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | <span data-ttu-id="75e44-118">Derleme bağlama ilkesini yapılandırma düzeyinde belirtir.</span><span class="sxs-lookup"><span data-stu-id="75e44-118">Specifies assembly binding policy at the configuration level.</span></span> |
 
 ## <a name="child-elements"></a><span data-ttu-id="75e44-119">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="75e44-119">Child elements</span></span>
 
@@ -83,5 +83,5 @@ ms.locfileid: "61674655"
 
 ## <a name="see-also"></a><span data-ttu-id="75e44-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="75e44-138">See also</span></span>
 
-- [<span data-ttu-id="75e44-139"> *\*\<assemblyBinding >** öğesi</span><span class="sxs-lookup"><span data-stu-id="75e44-139">**\<assemblyBinding>** Element</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
+- [<span data-ttu-id="75e44-139"> **\<assemblyBinding >** öğesi</span><span class="sxs-lookup"><span data-stu-id="75e44-139">**\<assemblyBinding>** Element</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
 - [<span data-ttu-id="75e44-140">.NET Framework yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="75e44-140">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
