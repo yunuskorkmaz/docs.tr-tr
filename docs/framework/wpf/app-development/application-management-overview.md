@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: c4629b18a207f1146f97327088fabf5f85a31892
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c36de23a6a49e684330fc0f47fc46bd86c55e767
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623323"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834076"
 ---
 # <a name="application-management-overview"></a>Uygulama Yönetimine Genel Bakış
 Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan işlevselliği sahip eğilimindedir. Bu konuda işlevleri genel bakışını sağlar <xref:System.Windows.Application> oluşturma ve uygulamaları yönetmek için sınıf.  
@@ -127,7 +127,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
 
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>Giriş Ekranı  
- İtibariyle [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], başlangıç penceresinde, kullanılacak bir görüntü belirtebilirsiniz veya *giriş ekranı*. <xref:System.Windows.SplashScreen> Sınıfı, uygulama yüklenirken bir başlangıç penceresini görüntülemek kolaylaştırır. <xref:System.Windows.SplashScreen> Penceresi oluşturulur ve önce gösterilen <xref:System.Windows.Application.Run%2A> çağrılır. Daha fazla bilgi için [uygulama başlangıç zamanı](../advanced/application-startup-time.md) ve [WPF uygulamasına giriş ekranı ekleme](how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ .NET Framework 3.5 SP1'de başlayarak, bir başlangıç penceresinde, kullanılacak bir görüntü belirtebilirsiniz veya *giriş ekranı*. <xref:System.Windows.SplashScreen> Sınıfı, uygulama yüklenirken bir başlangıç penceresini görüntülemek kolaylaştırır. <xref:System.Windows.SplashScreen> Penceresi oluşturulur ve önce gösterilen <xref:System.Windows.Application.Run%2A> çağrılır. Daha fazla bilgi için [uygulama başlangıç zamanı](../advanced/application-startup-time.md) ve [WPF uygulamasına giriş ekranı ekleme](how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>Uygulama başlatma  

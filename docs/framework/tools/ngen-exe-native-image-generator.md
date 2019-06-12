@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c806366e8f80e9fd770b45a5f1154d388ac49ab
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489670"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832819"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 
@@ -233,7 +233,7 @@ Derlemeleri Ngen.exe ile ön derlemek bazı uygulamalar için başlangıç süre
 Sabit bağlama başlatma süresini etkileyebilir, çünkü ana uygulama derlemesine sabit bağlı olan tüm resimler aynı anda yüklenmelidirler.
 
 > [!NOTE]
-> Önce [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)], yükleyici genel derleme önbelleğinde etkili bir şekilde herhangi bir geliştirme ortadan olmayan tanımlayıcı adlı derlemeler ek doğrulama gerçekleştirdiğinden paylaşılan, tanımlayıcı adlı bileşenleri genel bütünleştirilmiş kod önbelleğinde koymanız gerekir Yerel görüntüler kullanmanın sağladığı başlangıç zamanında. Sürümünde yapılan iyileştirmeler [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] ek doğrulamayı kaldırır.
+> Yükleyici, genel derleme önbelleğinde etkili bir şekilde ortadan olmayan tanımlayıcı adlı derlemeler ek doğrulama gerçekleştirdiğinden önce .NET Framework 3.5 Service Pack 1, paylaşılan, tanımlayıcı adlı bileşenleri genel bütünleştirilmiş kod önbelleğinde koymanız gerekir Yerel görüntüler kullanmanın sağladığı başlangıç zamanını tüm geliştirme. .NET Framework 3.5 SP1'de tanıtılan iyileştirmeler ek doğrulamayı kaldırır.
 
 <a name="UsageSummary"></a>
 

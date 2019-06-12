@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: d536d141d1ac7126c5a3339f75ba374d3e071806
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 286ec3c67e296eb49776e0f2882954c75c53eed8
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591398"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833983"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML Tarayıcı Uygulamalarına Genel Bakış
 <a name="introduction"></a>
@@ -182,7 +182,7 @@ ms.locfileid: "64591398"
 ## <a name="xbap-start-time-performance-considerations"></a>XBAP başlangıç zamanı performans konuları  
  XBAP performansının önemli bir yönü, başlangıç zamanıdır. Bir XBAP yüklemek için ilk WPF uygulaması ise *hazırlıksız başlatma* zaman on saniye veya daha fazla olabilir. İlerleme durumu sayfası WPF tarafından işlenir ve CLR ve WPF soğuk-uygulamayı görüntülemek için başlatılması gerekir çünkü budur.  
   
- İtibariyle [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], XBAP soğuk başlangıç zamanı dağıtım döngüsünde erken bir yönetilmeyen ilerleme durumu sayfası görüntüleyerek azaltılabilir. İlerleme durumu sayfası hemen görünür olduğundan ve yerel barındırma kodu tarafından görüntülenen HTML olarak işlenen uygulamanın başlatılmasından sonra.  
+ .NET Framework 3.5 SP1'de başlayarak, XBAP soğuk başlangıç zamanı dağıtım döngüsünde erken bir yönetilmeyen ilerleme durumu sayfası görüntüleyerek azalır. İlerleme durumu sayfası hemen görünür olduğundan ve yerel barındırma kodu tarafından görüntülenen HTML olarak işlenen uygulamanın başlatılmasından sonra.  
   
  Ayrıca, geliştirilmiş eşzamanlılık ClickOnce yükleme sırasının en fazla on oranında başlangıç süresini artırır. ClickOnce yüklemeleri ve doğrulama sonra bildirimleri, uygulama yükleme başlar ve ilerleme çubuğu başlar güncelleştirilecek.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20ec022f378feba3368ea79fdd5c6ee7ecccf1b9
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: c4472adf2c309803d4d5ac57f3522cc260782d85
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469653"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833667"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>COM Bileşenlerini .NET Framework'te Gösterme
 Bu bölüm, yönetilen kod için varolan bir COM bileşeni kullanıma sunmak için gereken işlem özetler. COM sunucuları, sıkı bir şekilde yazma hakkında ayrıntılar .NET Framework ile tümleştirmek için bkz: [birlikte çalışma için tasarım konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).
@@ -32,7 +32,7 @@ Bu bölüm, yönetilen kod için varolan bir COM bileşeni kullanıma sunmak iç
   
 3. [Birlikte çalışma projesi derleme](compiling-an-interop-project.md).  
   
-     [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Birçok dilde uyumlu olan ortak dil belirtimi (Visual Basic dahil olmak üzere CLS), derleyiciler sağlar C#, ve C++.  
+     Windows Yazılım Geliştirme Seti (SDK), birçok dilde uyumlu olan ortak dil belirtimi (Visual Basic dahil olmak üzere CLS), derleyiciler sağlar. C#, ve C++.  
   
 4. [Birlikte çalışma uygulamasını dağıtma](deploying-an-interop-application.md).  
   

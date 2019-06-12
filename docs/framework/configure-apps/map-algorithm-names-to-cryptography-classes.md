@@ -7,15 +7,15 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 9e4154923b2bb0abfe48e7a530497c3d5bf28d91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c76f80273d37f838ca52efd3b8f8c028b76a4d30
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583740"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832678"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Algoritma Adlarını Şifreleme Sınıflarıyla Eşleştirme
-Bir geliştirici, şifreleme kullanarak nesne oluşturabilirsiniz dört yolla [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
+Bir geliştirici Windows Yazılım Geliştirme Seti (SDK) kullanarak şifreleme nesnesi oluşturabilirsiniz dört yolu vardır:  
   
 - Kullanarak bir nesne oluşturma **yeni** işleci.  
   
@@ -25,7 +25,7 @@ Bir geliştirici, şifreleme kullanarak nesne oluşturabilirsiniz dört yolla [!
   
 - Bir sınıf (örneğin, bir simetrik blok şifreleme) şifreleme algoritmalarının çağırarak uygulayan bir nesne oluşturma **Oluştur** algoritma türü için soyut sınıf yöntemini (gibi <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
   
- Örneğin, bir geliştirici bayt kümesinin SHA1 karması hesaplanamadı istediğini varsayalım. <xref:System.Security.Cryptography> Ad alanı, SHA1 algoritması, tamamen yönetilen bir uygulama ve CryptoAPI sarmalayan bir iki uygulamaları içerir. Belirli bir SHA1 uygulama oluşturmak Geliştirici seçebilirsiniz (gibi <xref:System.Security.Cryptography.SHA1Managed>) çağırarak **yeni** işleci. Ortak dil çalışma zamanını SHA1 karma algoritması sınıfın uyguladığı sürece hangi sınıfın önemli değildir, ancak geliştirici nesneyi çağırarak oluşturabilirsiniz <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> yöntemi. Bu yöntemin çağırdığı **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**, SHA1 karma algoritması uygulaması döndürmelidir.  
+ Örneğin, bir geliştirici bayt kümesinin SHA1 karması hesaplanamadı istediğini varsayalım. <xref:System.Security.Cryptography> Ad alanı, SHA1 algoritması, tamamen yönetilen bir uygulama ve CryptoAPI sarmalayan bir iki uygulamaları içerir. Belirli bir SHA1 uygulama oluşturmak Geliştirici seçebilirsiniz (gibi <xref:System.Security.Cryptography.SHA1Managed>) çağırarak **yeni** işleci. Ortak dil çalışma zamanını SHA1 karma algoritması sınıfın uyguladığı sürece hangi sınıfın önemli değildir, ancak geliştirici nesneyi çağırarak oluşturabilirsiniz <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> yöntemi. Bu yöntemin çağırdığı **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")** , SHA1 karma algoritması uygulaması döndürmelidir.  
   
  Geliştirici de çağırabilirsiniz **System.Security.Cryptography.CryptoConfig.CreateFromName("SHA1")** varsayılan olarak, .NET Framework'teki sevk algoritmalar için kısa adları şifreleme yapılandırma içerdiğinden,.  
   
@@ -34,7 +34,7 @@ Bir geliştirici, şifreleme kullanarak nesne oluşturabilirsiniz dört yolla [!
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>Yapılandırma dosyalarında algoritma adlarını eşleme  
  Varsayılan olarak, çalışma zamanı döndüren bir <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> tüm dört senaryo için nesne. Ancak, bir makine yöneticisinin en son iki senaryoda yöntemleri dönüş nesne türünü değiştirebilirsiniz. Bunu yapmak için makine yapılandırma dosyasındaki (Machine.config) kullanmak istediğiniz sınıf için kolay algoritma adı eşlemeniz gerekir.  
   
- Aşağıdaki örnek, çalışma zamanı yapılandırma işlemi gösterilmektedir böylece **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")**, ve  **System.Security.Cryptography.HashAlgorithm.Create** dönüş bir `MySHA1HashClass` nesne.  
+ Aşağıdaki örnek, çalışma zamanı yapılandırma işlemi gösterilmektedir böylece **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")** , ve  **System.Security.Cryptography.HashAlgorithm.Create** dönüş bir `MySHA1HashClass` nesne.  
   
 ```xml  
 <configuration>  

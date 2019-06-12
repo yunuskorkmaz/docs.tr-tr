@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a91890435b1c2b5b955875f52de86249c2ee79df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3b516e43c07666f4b52e67f85cb567ab310f020
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607817"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832913"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Ortak Dil Çalışma Zamanındaki Derlemeler
 .NET Framework uygulamalarının yapı taşları olan derlemeler dağıtım, sürüm denetimi, yeniden kullanma, aktivasyon kapsamı ve güvenlik izinlerinin de temel birimlerini oluşturur. Bir derleme, birlikte çalışacak ve mantıksal bir işlevsellik birimi oluşturacak biçimde oluşturulan bir tür ve kaynakların bir derlemesidir. Bir derleme, ortak dil çalışma zamanına tür uygulamalarına dikkat etmesi için gerekli bilgileri sunar. Çalışma zamanı için, bir derleme bağlamı dışında bir tür yoktur.  
@@ -42,7 +42,7 @@ ms.locfileid: "64607817"
   
  Derlemeler statik veya dinamik olabilir. Statik derlemeler .NET Framework türlerinin (arabirimler ve sınıflar) yanı sıra, derlemeler için kaynaklar (bitmap'ler, JPEG dosyaları, kaynak dosyaları, vb.) içerebilir. Statik derlemeler, disk üzerinde taşınabilir yürütülebilir (PE) dosyalarda saklanır. .NET Framework kullanarak doğrudan bellekten çalıştırılan ve yürütülmeden önce diske kaydedilmesi gerekmeyen dinamik derlemeler de oluşturabilirsiniz. Yürütüldükten sonra dinamik derlemeleri diske kaydedebilirsiniz.  
   
- Derleme oluşturmak için birçok yol vardır. Geçmişte .dll veya .exe dosyaları oluşturmak için kullandığınız Visual Studio gibi geliştirme araçları kullanabilirsiniz. Diğer geliştirme ortamlarında oluşturulan modüllere sahip derlemeler oluşturmak için [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] paketindeki araçları kullanabilirsiniz. Ortak dil çalışma zamanı API ' ları gibi kullanabileceğiniz <xref:System.Reflection.Emit?displayProperty=nameWithType>, dinamik derlemeler oluşturabilirsiniz.  
+ Derleme oluşturmak için birçok yol vardır. Geçmişte .dll veya .exe dosyaları oluşturmak için kullandığınız Visual Studio gibi geliştirme araçları kullanabilirsiniz. Diğer geliştirme ortamlarında oluşturulan modüllere sahip derlemeler oluşturmak için Windows Yazılım Geliştirme Seti (SDK) sağlanan araçları kullanabilirsiniz. Ortak dil çalışma zamanı API ' ları gibi kullanabileceğiniz <xref:System.Reflection.Emit?displayProperty=nameWithType>, dinamik derlemeler oluşturabilirsiniz.  
   
 ## <a name="related-topics"></a>İlgili Konular  
   

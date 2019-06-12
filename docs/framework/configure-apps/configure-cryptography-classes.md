@@ -9,15 +9,15 @@ helpviewer_keywords:
 - .NET Framework application configuration, cryptography
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
-ms.openlocfilehash: b5c1178519601d7dcb7c5b3014f413b6436746fb
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 23bf831a4374add55258f5fb41c17a5d4a8f14c3
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816167"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832808"
 ---
 # <a name="configuring-cryptography-classes"></a>Şifreleme Sınıflarını Yapılandırma
-[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Varsayılan şifreleme algoritmaları ve .NET Framework ve uygun şekilde yazılmış uygulamalar kullanan algoritması uygulamalarını yapılandırmak bilgisayarda administrators sağlar.  Örneğin, kendi uygulama şifreleme algoritması olan Kuruluş sevk edilen varsayılan uygulama yerine bu uygulamayı Windows SDK'da yapabilirsiniz. Şifreleme kullanan yönetilen uygulamaları açıkça belirli bir uygulamaya bağlamak her zaman seçebilmenize rağmen bunlar şifreleme nesneleri şifreleme yapılandırma sistemini kullanarak oluşturmanız önerilir.  
+Varsayılan şifreleme algoritmaları ve .NET Framework ve uygun şekilde yazılmış uygulamalar kullanan algoritması uygulamalarını yapılandırmak bilgisayarda yöneticiler Windows Yazılım Geliştirme Seti (SDK) sağlar.  Örneğin, kendi uygulama şifreleme algoritması olan Kuruluş sevk edilen varsayılan uygulama yerine bu uygulamayı Windows SDK'da yapabilirsiniz. Şifreleme kullanan yönetilen uygulamaları açıkça belirli bir uygulamaya bağlamak her zaman seçebilmenize rağmen bunlar şifreleme nesneleri şifreleme yapılandırma sistemini kullanarak oluşturmanız önerilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Algoritma Adlarını Şifreleme Sınıflarıyla Eşleme](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  

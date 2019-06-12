@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 441a65f9a72dd0fcffb062710df74bb529767cef
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 9671dd87e3185e9d4b997e2ea75770f756605efb
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816067"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833514"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1'den Geçiş
 
@@ -60,9 +60,9 @@ Uygulamanızdaki olası yeni değişikliklerin etkisini değerlendirmek için ş
 
 - [.NET Framework 2.0 sürümünde yeni değişiklikler](https://go.microsoft.com/fwlink/?LinkId=125263) .NET Framework 1.1 hedefleyen bir uygulamayı etkileyebilecek bir .NET Framework 2.0 SP1 içindeki belge değişiklikleri.
 
-- [.NET Framework 3.5 SP1 içindeki değişiklikleri](https://go.microsoft.com/fwlink/?LinkID=186989) .NET Framework 3.5 arasındaki değişiklikleri belgeler ve [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)].
+- [.NET Framework 3.5 SP1 içindeki değişiklikleri](https://go.microsoft.com/fwlink/?LinkID=186989) .NET Framework 3.5 ve .NET Framework 3.5 SP1 arasındaki değişiklikleri belgeler.
 
-- [.NET framework 4 geçiş sorunları](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) arasındaki değişiklikleri belgeler [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] ve .NET Framework 4.
+- [.NET framework 4 geçiş sorunları](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) .NET Framework 3.5 SP1'i ve .NET Framework 4 arasındaki değişiklikleri belgeler.
 
 ## <a name="obsolete-types-and-members"></a>Eski türler ve Üyeler
 

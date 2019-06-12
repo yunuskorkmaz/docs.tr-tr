@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b947aefae4924a70c394626ace5a5abe1ebf546f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816156"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832767"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Derleme Bağlayıcı)
 
@@ -108,7 +108,7 @@ Aşağıdaki tablo tarafından oluşturulan hataları listeler *Al.exe*.
 |al1015|Dosya 'alinkui.dll' iletileri bulunamıyor<br /><br /> *Al.exe* requires *Alinkui.dll*. Bu dosya, yolunda olduğundan emin olun. Gerekirse, ürün CD'SİNDEN kopyalayın.|
 |al1016|Geçerli giriş dosyası belirtilmedi<br /><br /> *Al.exe* derleme bilgileri olmayan bir veya daha fazla giriş dosyaları gerektirir.|
 |al1017|Hedef dosya adı belirtildi<br /><br /> Gerekli **/out** hedef dosya adı eksik belirtme seçeneği.|
-|al1018|Gerekli 'dosya' dosyası yüklenemedi<br /><br /> Belirli bir DLL dosyaları yüklenemiyor. Visual Studio'yu yeniden yükleyin veya [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].|
+|al1018|Gerekli 'dosya' dosyası yüklenemedi<br /><br /> Belirli bir DLL dosyaları yüklenemiyor. Visual Studio veya Windows Yazılım Geliştirme Seti (SDK) yeniden yükleyin.|
 |al1019|Derleme oluşturulurken meta veri hatası — nedeni<br /><br /> Derleme oluşturma, belirtilen nedeni yarıda kesildi. Örneğin, belirlediğiniz bir dosya ise bu hata oluşur **/win32res** seçeneği bulunamadı.|
 |al1020|Dahil edilen derlemesi 'dosya' yoksayılıyor<br /><br /> Bir derlemeyi içeren bir giriş dosyası belirtilmedi. *Al.exe* giriş dosyaları, derlemeleri içeremez.|
 |al1021|'ayarı': önceki ayar geçersiz kılma<br /><br /> Bir modül iletilen bir değerle geçersiz kılınmış büyük olasılıkla özel öznitelikler ile atanan bir özel ayarı için bir değer olan bir *Al.exe* komut satırı seçeneği.|

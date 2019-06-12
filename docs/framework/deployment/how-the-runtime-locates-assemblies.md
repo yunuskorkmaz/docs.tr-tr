@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613969"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833726"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Çalışma Zamanının Derlemelerin Konumunu Bulması
 .NET Framework uygulamanızı başarıyla dağıtmak için ortak dil çalışma zamanının nasıl bulur ve uygulamanızı oluşturan derlemeleri bağlar anlamanız gerekir. Varsayılan olarak, çalışma zamanı tamamen aynı sürümünün uygulamanın derlendiği bir derleme ile bağlamak çalışır. Bu varsayılan davranışı yapılandırma dosyası ayarlarının tarafından geçersiz kılınabilir.  
@@ -24,7 +24,7 @@ ms.locfileid: "64613969"
  Ortak dil çalışma zamanının bir derlemeyi bulmak ve bir bütünleştirilmiş kod başvurusu çözmek çalışırken birkaç adımı gerçekleştirir. Her adım, aşağıdaki bölümlerde açıklanmıştır. Algılama dönemi genellikle, çalışma zamanı derlemeleri nasıl konumlandırır tanımlarken kullanılır; derlemenin adı ve kültür üzerinde bulmak için kullanılan bir buluşsal yöntem kümesi ifade eder.  
   
 > [!NOTE]
->  Bağlama bilgileri kullanılarak günlük dosyasında görüntüleyebilirsiniz [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), içinde bulunan [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+>  Bağlama bilgileri kullanılarak günlük dosyasında görüntüleyebilirsiniz [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), Windows Yazılım Geliştirme Seti (SDK) bulunur.  
   
 ## <a name="initiating-the-bind"></a>Bağlama başlatma  
  Çalışma zamanı başka bir derlemeye başvuru çözümlemeye çalışırken bulmak ve bir bütünleştirilmiş kod bağlama işlemi başlar. Bu başvuru, statik veya dinamik olabilir. Derleme bildiriminin meta derleyici kayıtları statik başvuruları derleme zamanı. Dinamik başvuru oluşturulması gibi çeşitli yöntemleri çağırma sonucu olarak hareket halindeyken <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  

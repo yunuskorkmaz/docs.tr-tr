@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ae9470020449719ccb9760fef992898674ba696
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 858d651523ac6196aa2dcad008ea53674eb01b04
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593626"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832836"
 ---
 # <a name="global-assembly-cache"></a>Genel Derleme Önbelleği
 Ortak dil çalışma zamanının yüklendiği her bilgisayarda, genel derleme önbelleği olarak adlandırılan bir makine düzeyinde kod önbelleği bulunur. Özellikle bilgisayarda çeşitli uygulamalar tarafından paylaşılmak üzere belirtilen derlemeleri genel derleme önbelleği depolar.  
@@ -31,7 +31,7 @@ Ortak dil çalışma zamanının yüklendiği her bilgisayarda, genel derleme ö
   
 - Genel Derleme Önbelleği ile çalışmak üzere tasarlanmış bir yükleyici kullanın. Derlemeleri genel derleme önbelleğine yüklemek için tercih edilen seçenek budur.  
   
-- Adlı bir geliştirici araç [Genel Derleme Önbelleği aracını (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), tarafından sağlanan [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+- Adlı bir geliştirici araç [Genel Derleme Önbelleği aracını (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), Windows Yazılım Geliştirme Seti (SDK) tarafından sağlanan.  
   
     > [!NOTE]
     >  Dağıtım senaryolarında, derlemeleri genel derleme önbelleğine yüklemek için Windows Installer kullanın. Bütünleştirilmiş kod başvuru sayımı ve Windows Installer'ı kullanırken, sunulan diğer özellikleri sağlamaz çünkü yalnızca geliştirme senaryolarda, Genel Derleme Önbelleği aracını kullanın.  

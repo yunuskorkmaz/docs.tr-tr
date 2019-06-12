@@ -3,12 +3,12 @@ title: ML.NET komut satırı arabirimi (CLI) aracı yükleme
 description: Genel bakış ve ML.NET komut satırı arabirimi (CLI) aracı yükleme.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557867"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832927"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET komut satırı arabirimi (CLI) aracı yükleme
 
@@ -34,7 +34,7 @@ ML.NET CLI herhangi diğer dotnet gibi genel aracı yüklenir. Kullandığınız
 Aşağıdaki örnek, NuGet Özet akışı konumu varsayılan olarak ML.NET CLI'yı yükleme gösterilmektedir:
 
 ```console
-> dotnet tool install -g mlnet
+dotnet tool install -g mlnet
 ```
 
 (Diğer bir deyişle, NuGet akışı varsayılan olarak kullanılabilir değilse) araç yüklenemiyor, hata iletileri görüntülenir. Beklediğiniz akışları denetlendiği denetleyin.
@@ -49,7 +49,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 Aşağıdaki komutu yazarak yüklemenin başarılı olduğunu doğrulayabilirsiniz:
 
 ```console
-> mlnet
+mlnet
 ```
 
 'Otomatik train' komutu gibi mlnet aracı için kullanılabilir komutlar için Yardım görmeniz gerekir.
@@ -59,13 +59,13 @@ Aşağıdaki komutu yazarak yüklemenin başarılı olduğunu doğrulayabilirsin
 Yayın öncesi bir sürümü ya da aracının belirli bir sürümü yüklemeye çalıştığınız varsa, belirtebilmeniz için [framework](../../standard/frameworks.md) aşağıdaki biçimi kullanarak:
 
 ```console
-> dotnet tool install -g mlnet --framework <FRAMEWORK>
+dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 Aşağıdaki komutu yazarak paketi düzgün şekilde yüklendiğinden de göz atabilirsiniz:
 
 ```console
-> dotnet tool list -g
+dotnet tool list -g
 ```
 
 ## <a name="uninstall-the-cli-package"></a>CLI paketini Kaldır
@@ -73,7 +73,7 @@ Aşağıdaki komutu yazarak paketi düzgün şekilde yüklendiğinden de göz at
 Paket yerel makinenizden kaldırmak için aşağıdaki komutu yazın:
 
 ```console
-> dotnet tool uninstall mlnet -g
+dotnet tool uninstall mlnet -g
 ```
 
 ## <a name="update-the-cli-package"></a>CLI paketini güncelleştirmek
@@ -81,7 +81,7 @@ Paket yerel makinenizden kaldırmak için aşağıdaki komutu yazın:
 Güncelleştirme paketi, yerel makinenizde aşağıdaki komutu yazın:
 
 ```console
-> dotnet tool update -g mlnet
+dotnet tool update -g mlnet
 ```
 
 ## <a name="set-up-cli-suggestions-tab-based-auto-completion"></a>CLI önerileri (sekme tabanlı otomatik tamamlama) ayarlama
@@ -101,7 +101,7 @@ Tamamlama etkinleştirmek için istediğiniz makinede iki işlem gerçekleştirm
 1. Yükleme `dotnet-suggest` aşağıdaki komutu çalıştırarak genel aracı:
 
     ```console
-    > dotnet tool install dotnet-suggest -g
+    dotnet tool install dotnet-suggest -g
     ```
 
 2. Uygun dolgu komut kabuğu profilinize ekleyin. Bir kabuk profili dosyası oluşturmanız gerekebilir. Dolgu betik için kabuğundan tamamlama isteği iletir `dotnet-suggest` uygun temsilciler aracı `System.CommandLine`-uygulama tabanlı.
@@ -111,7 +111,7 @@ Tamamlama etkinleştirmek için istediğiniz makinede iki işlem gerçekleştirm
     * PowerShell için içeriğini Ekle [dotnet Öner shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) PowerShell profiliniz için. Konsolunuzda aşağıdaki komutu çalıştırarak PowerShell profiliniz için beklenen yoldan bulabilirsiniz:
 
     ```console
-    > echo $profile
+    echo $profile
     ``` 
 
 (Diğer Kabukları için [Ara](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) veya açık bir [sorunu](https://github.com/dotnet/System.CommandLine/issues).)

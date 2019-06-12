@@ -2,12 +2,12 @@
 title: F# kod biçimlendirme yönergeleri
 description: Biçimlendirme kuralları bilgi F# kod.
 ms.date: 02/08/2019
-ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8be5337d3f593c7e5a2f32cb7231cb7f759fb509
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816186"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833898"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# kod biçimlendirme yönergeleri
 
@@ -290,12 +290,13 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Genel türler için öneki sözdizimini kullanın (`Foo<T>`) sonek söz dizimi yerine (`T Foo`)
 
-F#genel türler adlandırma iki sonek ML stili devralır (örneğin, `int list`) öneki .NET stili yanı sıra (örneğin, `list<int>`). .NET stili dört belirli tür dışında tercih et:
+F#genel türler adlandırma iki sonek ML stili devralır (örneğin, `int list`) öneki .NET stili yanı sıra (örneğin, `list<int>`). Tercih ettiğiniz beş belirli türlerini hariç .NET stili:
 
 1. İçin F# listeleri, sonek biçimi kullanın: `int list` yerine `list<int>`.
 2. İçin F# seçenekleri, sonek biçimi kullanın: `int option` yerine `option<int>`.
-3. İçin F# diziler, söz dizimi adı kullanın `int[]` yerine `int array` veya `array<int>`.
-4. Başvuru hücreleri için kullanmak `int ref` yerine `ref<int>` veya `Ref<int>`.
+3. İçin F# değer seçenekleri sonek biçimi kullanın: `int voption` yerine `voption<int>`.
+4. İçin F# diziler, söz dizimi adı kullanın `int[]` yerine `int array` veya `array<int>`.
+5. Başvuru hücreleri için kullanmak `int ref` yerine `ref<int>` veya `Ref<int>`.
 
 Önek biçimi diğer tüm türleri için kullanın.
 

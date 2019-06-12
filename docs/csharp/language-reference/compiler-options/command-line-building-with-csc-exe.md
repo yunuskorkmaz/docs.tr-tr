@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 68f0c12d173587e8efc0fe283617b5805c6f7eae
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 0ebc4fa3029e16c5ee89da7d9af8b89924b2c4dc
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877024"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833357"
 ---
 # <a name="command-line-build-with-cscexe"></a>Csc.exe ile komut satırı derleme
 Yürütülebilir dosyanın adını yazarak C# derleyicisini çağırabilirsiniz (*csc.exe*) bir komut isteminde.
@@ -19,11 +19,11 @@ Kullanırsanız **Visual Studio için geliştirici komut istemi** penceresinde t
 
 Standart bir komut istemi penceresi kullanıyorsanız çağırabilirsiniz önce yolunuzu ayarlamanız gerekir *csc.exe* bilgisayarınızdaki herhangi bir alt dizinden. Ayrıca çalıştırmalısınız *vsvars32.bat* komut satırı yapılarını desteklemek üzere uygun ortam değişkenlerini ayarlamak için. Hakkında daha fazla bilgi için *vsvars32.bat*, bulmak ve çalıştırmak için bkz: hakkında yönergeler dahil olmak üzere [nasıl yapılır: Visual Studio komut satırı için ortam değişkenlerini ayarlama](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
-Yalnızca bir bilgisayarda çalışıyorsanız [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)], C# derleyicisi, kullanabileceğiniz **SDK Komut İstemi**, açtığınız **Microsoft .NET Framework SDK'sı** menü seçeneği.
+Yalnızca Windows Yazılım Geliştirme Seti (SDK) olan bir bilgisayarda çalışıyorsanız, kullanabileceğiniz C# derleyici en **SDK Komut İstemi**, açtığınız **Microsoft .NET Framework SDK'sı**menü seçeneği.
 
 Ayrıca C# programlarını program aracılığıyla oluşturmak için MSBuild'i kullanabilirsiniz. Daha fazla bilgi için [MSBuild](/visualstudio/msbuild/msbuild).
 
-*Csc.exe* yürütülebilir dosyası genellikle bulunan Microsoft.NET\Framework\\*\<sürüm >* klasörü altında *Windows* Dizin. Bu dosyanın yeri, belirli bir bilgisayarın tam yapılandırmasına bağlı olarak değişebilir. Bilgisayarınızda .NET Framework'ün birden fazla sürümü yüklüyse, bu dosyanın birden fazla sürümünü bulacaksınız. Bu tür yüklemeler hakkında daha fazla bilgi için bkz. [nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+*Csc.exe* yürütülebilir dosyası genellikle bulunan Microsoft.NET\Framework\\ *\<sürüm >* klasörü altında *Windows* Dizin. Bu dosyanın yeri, belirli bir bilgisayarın tam yapılandırmasına bağlı olarak değişebilir. Bilgisayarınızda .NET Framework'ün birden fazla sürümü yüklüyse, bu dosyanın birden fazla sürümünü bulacaksınız. Bu tür yüklemeler hakkında daha fazla bilgi için bkz. [nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!TIP]
 >  Visual Studio IDE kullanarak bir proje oluşturduğunuzda, görüntüleyebileceğiniz **csc** komut ve ilgili derleme seçeneklerini de **çıkış** penceresi. Bu bilgileri görüntülemek için yönergeleri izleyin. [nasıl yapılır: Görüntüleme, kaydetme ve yapılandırma derleme günlük dosyalarını](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) günlük verilerinin ayrıntı düzeyini değiştirmek için **Normal** veya **ayrıntılı**. Projenizi yeniden oluşturduktan sonra arama **çıkış** penceresi **csc** C# derleyicisinin çağrısını bulmak için.
@@ -93,7 +93,7 @@ csc -target:library -out:Something.xyz *.cs
 ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>C# Derleyici ve C++ Derleyici çıkışını arasındaki farklar
-Hiçbir nesne vardır (*.obj*) dosyaları oluşturan C# derleyicisini çağırma işleminin sonucu olarak; çıktı dosyaları doğrudan oluşturulur. Bunun bir sonucu olarak C# derleyicisinin bir bağlayıcı gerekmez.
+Hiçbir nesne vardır ( *.obj*) dosyaları oluşturan C# derleyicisini çağırma işleminin sonucu olarak; çıktı dosyaları doğrudan oluşturulur. Bunun bir sonucu olarak C# derleyicisinin bir bağlayıcı gerekmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

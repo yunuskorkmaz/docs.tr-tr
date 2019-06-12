@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377876"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832876"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Tanımlayıcı adlı derlemeler oluşturma ve kullanma
 
@@ -51,7 +51,7 @@ Bir derlemeyi katı bir adla imzalama ve daha sonra bu adla başvurduğu işlemi
 
 ## <a name="bypass-signature-verification-of-trusted-assemblies"></a>İmza doğrulaması güvenilen derlemeleri atlama
 
-İle başlayarak [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)], tanımlayıcı ad imzaları, bir derleme için varsayılan uygulama etki alanı gibi bir tam güvenilir uygulamanızı etki alanına yüklendiğinde doğrulanmaz `MyComputer` bölge. Bu atlama özelliğini tanımlayıcı ad adlandırılır. İçin tam güven ortamında, talepleri <xref:System.Security.Permissions.StrongNameIdentityPermission> imzalarına bağımsız olarak tam güven derlemeleri imzalı için her zaman başarılı. Tanımlayıcı adlı atlama özelliği, daha hızlı derlemeler sağlar, bu durumda, tam güven derleme tanımlayıcı ad imzası doğrulama gereksiz yükünü ortadan kaldırır.
+.NET Framework 3.5 Service Pack 1 ile başlayarak, bir derleme için varsayılan uygulama etki alanı gibi bir tam güvenilir uygulamanızı etki alanına yüklendiğinde tanımlayıcı ad imzaları doğrulanmaz `MyComputer` bölge. Bu atlama özelliğini tanımlayıcı ad adlandırılır. İçin tam güven ortamında, talepleri <xref:System.Security.Permissions.StrongNameIdentityPermission> imzalarına bağımsız olarak tam güven derlemeleri imzalı için her zaman başarılı. Tanımlayıcı adlı atlama özelliği, daha hızlı derlemeler sağlar, bu durumda, tam güven derleme tanımlayıcı ad imzası doğrulama gereksiz yükünü ortadan kaldırır.
 
 Atlama özelliği, güçlü bir adla imzalanır ve aşağıdaki özelliklere sahip herhangi bir derleme için geçerlidir:
 

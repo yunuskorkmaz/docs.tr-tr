@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378576"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833896"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL Derleyici)
 
@@ -104,7 +104,7 @@ Bunu yapmak için kullanımını birleştirilmiş *Ildasm.exe* ve *Ilasm.exe* va
 > [!NOTE]
 > *Ildasm.exe* yalnızca diskteki dosyalar üzerinde çalışır. Genel bütünleştirilmiş kod önbelleğine yüklü olan dosyalar üzerinde çalışmaz.
 
-IL grameri daha fazla bilgi için bkz: içindeki asmparse.grammar dosyasına [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+IL grameri daha fazla bilgi için Windows Yazılım Geliştirme Seti (SDK) içindeki asmparse.grammar dosyasına bakın.
 
 ## <a name="version-information"></a>Sürüm Bilgileri
 
@@ -137,7 +137,7 @@ IL grameri daha fazla bilgi için bkz: içindeki asmparse.grammar dosyasına [!I
         Test(object A_1) cil managed
 ```
 
-IL grameri daha fazla bilgi için bkz: içindeki asmparse.grammar dosyasına [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+IL grameri daha fazla bilgi için Windows Yazılım Geliştirme Seti (SDK) içindeki asmparse.grammar dosyasına bakın.
 
 ## <a name="examples"></a>Örnekler
 

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00347b295eb5d9a092fb817e75f852f16004bb87
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: acb4d3820d06845834b127d8f03763e7dd346f53
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489270"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833694"
 ---
 # <a name="deploying-an-interop-application"></a>Birlikte Çalışma Uygulamasını Dağıtma
-Birlikte çalışma uygulamasını genellikle bir .NET istemci bütünleştirilmiş kodu içeren bir veya daha fazla birlikte çalışma derlemelerini temsil eden ayrı bir COM tür kitaplığı ve COM bileşenlerini bir veya daha fazla kayıtlı. Visual Studio ve [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] bölümünde açıklandığı gibi içeri aktarma ve birlikte çalışma derlemesine bir tür kitaplığına dönüştürme için araçlar sağlar [bir tür kitaplığını derleme olarak içeri aktarma](importing-a-type-library-as-an-assembly.md). Birlikte çalışma uygulamasını dağıtmak için iki yolu vardır:  
+Birlikte çalışma uygulamasını genellikle bir .NET istemci bütünleştirilmiş kodu içeren bir veya daha fazla birlikte çalışma derlemelerini temsil eden ayrı bir COM tür kitaplığı ve COM bileşenlerini bir veya daha fazla kayıtlı. Visual Studio ve Windows Yazılım Geliştirme Seti (SDK) bölümünde açıklandığı gibi içeri aktarma ve birlikte çalışma derlemesine bir tür kitaplığına dönüştürme için araçlar sağlar [bir tür kitaplığını derleme olarak içeri aktarma](importing-a-type-library-as-an-assembly.md). Birlikte çalışma uygulamasını dağıtmak için iki yolu vardır:  
   
 - Gömülü birlikte çalışma türleri kullanarak: .NET Framework 4 ile başlayarak, derleyicinin tür bilgilerini birlikte çalışma bütünleştirilmiş kod yürütülebilir dosyanın içine gömmek için bildirebilirsiniz. Derleyici, uygulamanızın kullandığı tür bilgilerini katıştırır. Uygulamanızla birlikte çalışma derlemesi dağıtmak gerekmez. Önerilen yöntem budur.  
   

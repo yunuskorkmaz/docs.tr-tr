@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689333"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832696"
 ---
 # <a name="application-startup-time"></a>Uygulama Başlangıç Zamanı
 Bir WPF uygulamasını başlatmak gerekli süreyi büyük ölçüde farklılık gösterebilir. Bu konuda, bir Windows Presentation Foundation (WPF) uygulaması için algılanan ve gerçek başlangıç süresini azaltmak için çeşitli teknikler açıklanır.  
@@ -24,7 +24,7 @@ Bir WPF uygulamasını başlatmak gerekli süreyi büyük ölçüde farklılık 
  Orta Gecikmeli Başlangıç sayfaları ana ortak dil çalışma zamanı (CLR) bileşenleri için birçok pahalı disk erişim süresi kaydeder bellekte zaten yüklenmiş olan oluşur. İkinci kez yürütüldüğünde bir yönetilen uygulama daha hızlı başlatılan nedeni budur.  
   
 ## <a name="implement-a-splash-screen"></a>Uygulama giriş ekranı  
- Kaçınılmaz durumlarda, uygulama başlatma ve ilk kullanıcı arabirimini görüntüleyen arasındaki gecikme, kullanarak algılanan başlangıç zamanını iyileştirme bir *giriş ekranı*. Bu yaklaşım, hemen bir resim görüntüler sonra kullanıcı uygulamayı başlatır. Uygulama ilk kullanıcı arabirimini görüntülemek hazır olduğunda, giriş ekranı belirerek. İtibariyle [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], kullanabileceğiniz <xref:System.Windows.SplashScreen> giriş ekranı uygulamak için sınıfı. Daha fazla bilgi için [WPF uygulamasına giriş ekranı ekleme](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ Kaçınılmaz durumlarda, uygulama başlatma ve ilk kullanıcı arabirimini görüntüleyen arasındaki gecikme, kullanarak algılanan başlangıç zamanını iyileştirme bir *giriş ekranı*. Bu yaklaşım, hemen bir resim görüntüler sonra kullanıcı uygulamayı başlatır. Uygulama ilk kullanıcı arabirimini görüntülemek hazır olduğunda, giriş ekranı belirerek. Kullanabileceğiniz .NET Framework 3.5 SP1'de başlayarak, <xref:System.Windows.SplashScreen> giriş ekranı uygulamak için sınıfı. Daha fazla bilgi için [WPF uygulamasına giriş ekranı ekleme](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
  Ayrıca, yerel Win32 grafikler kullanarak kendi giriş ekranı uygulayabilirsiniz. Önce uygulamanızı görüntüleyin <xref:System.Windows.Application.Run%2A> yöntemi çağrılır.  
   

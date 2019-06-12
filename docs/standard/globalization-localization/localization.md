@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbe7a2c4e920021c925a13ae8873124bfdb6fd67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79ec24d16b43bd8e1312b3425e618adf163edd24
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683151"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834017"
 ---
 # <a name="localization"></a>Yerelleştirme
 
@@ -31,7 +31,7 @@ Yerelleştirme için hazır bir uygulama iki kavramsal bloklarda ayrılır: tüm
 
 Uygulamanızı yerelleştirilmiş her sürümü için yerelleştirilmiş kullanıcı arabirimi blok hedef kültüre uygun dili erişimcisine içeren yeni bir uydu derlemesini ekleyin. Kod bloğu tüm kültürler için aynı kalmalıdır. Kullanıcı arabirimi blok kod bloğu ile yerelleştirilmiş bir sürümünü birleşimi, uygulamanızın yerelleştirilmiş bir sürümünü oluşturur.
 
-[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Sağlayan Windows Forms Kaynak Düzenleyicisi'ni (Winres.exe), hızlı bir şekilde hedef kültür için Windows formlarını yerelleştirmeye olanak tanır. Bu aracı kullanma hakkında daha fazla bilgi için bkz: [Winres.exe (Windows Forms Kaynak Düzenleyici)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).
+Windows Forms Kaynak Düzenleyicisi'ni (Winres.exe), hızlı bir şekilde hedef kültür için Windows formlarını yerelleştirmeye olanak tanır Windows Yazılım Geliştirme Seti (SDK) sağlar. Bu aracı kullanma hakkında daha fazla bilgi için bkz: [Winres.exe (Windows Forms Kaynak Düzenleyici)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

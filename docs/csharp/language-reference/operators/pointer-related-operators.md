@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 6196cb52cb1b42b3354bc7f8836a171397d0af1e
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
-ms.translationtype: MT
+ms.openlocfilehash: 0cc104c7246763ee32866fe5233b9774253a2888
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758093"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833133"
 ---
 # <a name="pointer-related-operators-c-reference"></a>İşaretçi ilgili işleçleri (C# Başvurusu)
 
@@ -40,7 +40,7 @@ ms.locfileid: "66758093"
 İşaretçi türleri hakkında daha fazla bilgi için bkz. [işaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md).
 
 > [!NOTE]
-> İşaretçiler içeren herhangi bir işlem gerektiren [güvenli](../keywords/unsafe.md) bağlamı. Güvenli olmayan bloklar içeren kod ile derlenmelidir [ `-unsafe` ](../compiler-options/unsafe-compiler-option.md) derleyici seçeneği.
+> İşaretçiler içeren herhangi bir işlem gerektiren bir [güvenli](../keywords/unsafe.md) bağlamı. Güvenli olmayan bloklar içeren kod ile derlenmelidir [ `-unsafe` ](../compiler-options/unsafe-compiler-option.md) derleyici seçeneği.
 
 ## <a name="address-of-operator-amp"></a>Address-of işleci &amp;
 
@@ -96,7 +96,7 @@ Aşağıdaki örnek, bir işaretçi ile dizi öğelerini nasıl erişileceğini 
 
 [!code-csharp[pointer element access](~/samples/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
 
-Örnekte [ `stackalloc` işleci](../keywords/stackalloc.md) bir yığında bellek bloğu ayrılamadı.
+Örnekte [ `stackalloc` işleci](stackalloc.md) bir yığında bellek bloğu ayrılamadı.
 
 > [!NOTE]
 > İşaretçi öğesi erişim işleci için işlemleri denetlemez hataları.
@@ -193,5 +193,5 @@ Daha fazla bilgi için aşağıdaki bölümlere bakın [ C# dil belirtimi](~/_cs
 - [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [`unsafe` Anahtar sözcüğü](../keywords/unsafe.md)
 - [`fixed` Anahtar sözcüğü](../keywords/fixed-statement.md)
-- [`stackalloc` İşleci](../keywords/stackalloc.md)
+- [`stackalloc` İşleci](stackalloc.md)
 - [`sizeof` İşleci](../keywords/sizeof.md)

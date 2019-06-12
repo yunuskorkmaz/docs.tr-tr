@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 7c83b4819975f63c6fc19e5c4783603f37d2a885
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5bfd9f3f559e4780b910a2e5a3430b08a2183ee3
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708931"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833499"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Sabit Boyutlu Arabellekler (C# Programlama Kılavuzu)
 
@@ -40,7 +40,7 @@ Yukarıdaki örnekte erişme gösterir `fixed` sürümünden itibaren kullanıla
 Başka bir ortak sabit boyutlu dizi [bool](../../language-reference/keywords/bool.md) dizisi. Öğeleri bir `bool` dizi her zaman tek bir bayt boyutunda. `bool` diziler bit diziler veya arabellekler oluşturmak için uygun değildir.
 
 > [!NOTE]
-> Kullanılarak oluşturulan bellek dışında [stackalloc](../../language-reference/keywords/stackalloc.md), C# Derleyici ve ortak dil çalışma zamanı (CLR) herhangi bir güvenlik arabellek taşma denetimi gerçekleştirmeyin. Tüm güvenli olmayan kod gibi dikkatli kullanın.
+> Kullanılarak oluşturulan bellek dışında [stackalloc](../../language-reference/operators/stackalloc.md), C# Derleyici ve ortak dil çalışma zamanı (CLR) herhangi bir güvenlik arabellek taşma denetimi gerçekleştirmeyin. Tüm güvenli olmayan kod gibi dikkatli kullanın.
 
 Güvenli olmayan arabellekler normal dizilerden şu bakımlardan ayrılır:
 

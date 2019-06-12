@@ -6,17 +6,17 @@ helpviewer_keywords:
 - marshaling data, COM interop
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 807e514fac7d33cdacac3a48a37c7aa8dd92ef9c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d16f94e8b85a1bedb8b7791c2b7fcaf6d154ba1b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648638"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833533"
 ---
 # <a name="marshaling-data-with-com-interop"></a>COM Birlikte Çalışma ile Verileri Sıralama
 COM birlikte çalışma COM nesnelerine yönetilen COM nesneleri yönetilen kod kullanarak hem de kullanıma sunmak için destek sağlar. COM veri hazırlama için destek kapsamlı ve neredeyse her zaman doğru sıralama davranışını sağlar.  
   
- [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Aşağıdaki COM birlikte çalışma araçları içerir:  
+ Windows Yazılım Geliştirme Seti (SDK) aşağıdaki COM birlikte çalışma araçları içerir:  
   
 - [Tür kitaplığı alma programı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), birlikte çalışma derlemesi için bir COM tür kitaplığı dönüştürür. Bu derleme, birlikte çalışma hazırlama hizmeti veri arasında yönetilen ve yönetilmeyen bellek hazırlama gerçekleştirmek sarmalayıcıları oluşturur.  
   

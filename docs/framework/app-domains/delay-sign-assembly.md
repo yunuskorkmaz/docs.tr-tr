@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31c43607a710316696a9765feb6f36b7676f906f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eb055285af7365536f7e1ad7c7d9290e51be50db
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593639"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832861"
 ---
 # <a name="delay-signing-an-assembly"></a>Derleme İmzalamayı Geciktirme
 Bir kuruluş geliştiricileri her gün için erişimi yoktur yakından korumalı bir anahtar çifti olabilir. Genellikle ortak anahtarı mevcut ancak özel anahtarına erişime yalnızca birkaç kişilerle sınırlıdır. Derlemeleri tanımlayıcı adlarla geliştirirken, her derleme başvuruları tanımlayıcı adlı hedef derlemeye hedef derleme tanımlayıcı bir ad vermek için kullanılan ortak anahtar belirtecini içerir. Bu ortak anahtarı geliştirme sürecinde kullanılabilir olmasını gerektirir.  
@@ -28,7 +28,7 @@ Bir kuruluş geliştiricileri her gün için erişimi yoktur yakından korumalı
   
  Aşağıdaki adımlar, bir derlemeyi gecikmeli imza işleme özetlemektedir:  
   
-1. Anahtar çiftinden ortak anahtar kısmını nihai imzalama işlemi gerçekleştirecek kuruluşlardan. Genellikle bu anahtarı kullanılarak oluşturulan bir .snk dosyası biçiminde olan [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) tarafından sağlanan [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+1. Anahtar çiftinden ortak anahtar kısmını nihai imzalama işlemi gerçekleştirecek kuruluşlardan. Genellikle bu anahtarı kullanılarak oluşturulan bir .snk dosyası biçiminde olan [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) Windows Yazılım Geliştirme Seti (SDK) tarafından sağlanan.  
   
 2. Kaynak kodu derlemeyi iki özel öznitelikleri ile için ek açıklama <xref:System.Reflection>:  
   

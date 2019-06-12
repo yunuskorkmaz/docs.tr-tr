@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0c56018c61e5566043fb2b9ba8bbee042093f12
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 7214fa0342d0946044861c4e375c7797ad6a06b1
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758151"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833755"
 ---
 # <a name="runtime-profiling"></a>Çalışma Zamanı Profili Oluşturma
 Profil oluşturma tüm geliştirme ve dağıtım senaryosunda performans verilerini toplama yöntemidir. Bu bölüm, geliştiriciler ve uygulama performansı hakkında bilgi toplamak isteyen sistem yöneticilerine yöneliktir.  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>Performans İzleyicisi'ni (Perfmon.exe) kullanarak performans izleme  
- Performans İzleyicisi'ni, .NET Framework uygulamanızın profilini kullanmak için kolay bir araçtır. Performans İzleyicisi'ni, grafik ile ortak dil çalışma zamanı yüklü olan .NET Framework performans sayaçlarını bulunan verileri temsil eder ve [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Bu sayaçlar, just-ın-time (JIT) derleyici performans için bellek yönetimi kadar her şeyi izlemek için kullanılabilir. Bunlar, kaynaklar hakkında uygulamanız tarafından kullanılan, uygulamanızın performansını dolaylı bir ölçü olan söyleyin. Uygulamanız dahili olarak nasıl çalıştığını anlamak için bu sayaçlar kullanın.  
+ Performans İzleyicisi'ni, .NET Framework uygulamanızın profilini kullanmak için kolay bir araçtır. Performans İzleyicisi'ni, grafik ortak dil çalışma zamanı ve Windows Yazılım Geliştirme Seti (SDK) ile yüklü .NET Framework performans sayaçları bulunan verileri temsil eder. Bu sayaçlar, just-ın-time (JIT) derleyici performans için bellek yönetimi kadar her şeyi izlemek için kullanılabilir. Bunlar, kaynaklar hakkında uygulamanız tarafından kullanılan, uygulamanızın performansını dolaylı bir ölçü olan söyleyin. Uygulamanız dahili olarak nasıl çalıştığını anlamak için bu sayaçlar kullanın.  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Windows Vista ve sonraki sürümler Perfmon.exe çalıştırmak için  
   

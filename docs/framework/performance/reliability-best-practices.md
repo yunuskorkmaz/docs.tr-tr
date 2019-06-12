@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949233"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833797"
 ---
 # <a name="reliability-best-practices"></a>Güvenilirlik En İyi Yöntemleri
 
@@ -265,7 +265,7 @@ Sonlandırıcılar eşitleme sorunlarını boş olmalıdır. Bir sonlandırıcı
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>Yönetilmeyen bellek mümkün olduğunda kaçının
 
-Yönetilmeyen bellek, yalnızca bir işletim sistemi tanıtıcısı gibi be leaked.  Mümkünse, kullanarak yığın bellek kullanmaya çalıştığınızda [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) veya sabitlenmiş bir yönetilen nesne gibi [fixed Statement](~/docs/csharp/language-reference/keywords/fixed-statement.md) veya <xref:System.Runtime.InteropServices.GCHandle> kullanarak bir byte [].  <xref:System.GC> Sonunda bunlar temizler.  Yönetilmeyen bellek gerekir, ancak türetilen bir sınıf kullanmayı düşünün <xref:System.Runtime.InteropServices.SafeHandle> bellek ayırma sarmalamak için.
+Yönetilmeyen bellek, yalnızca bir işletim sistemi tanıtıcısı gibi be leaked. Mümkünse, kullanarak yığın bellek kullanmaya çalıştığınızda [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) veya sabitlenmiş bir yönetilen nesne gibi [fixed Statement](~/docs/csharp/language-reference/keywords/fixed-statement.md) veya <xref:System.Runtime.InteropServices.GCHandle> kullanarak bir byte []. <xref:System.GC> Sonunda bunlar temizler. Yönetilmeyen bellek gerekir, ancak türetilen bir sınıf kullanmayı düşünün <xref:System.Runtime.InteropServices.SafeHandle> bellek ayırma sarmalamak için.
 
 En az bir durumu olduğunu unutmayın. burada <xref:System.Runtime.InteropServices.SafeHandle> yeterli değil.  Ayırma ya da boş bellek COM yöntem çağrılarında aracılığıyla bellek ayırmak bir DLL için ortak olan `CoTaskMemAlloc` başka bir DLL ile bu bellek serbest bırakma sonra `CoTaskMemFree`.  Kullanarak <xref:System.Runtime.InteropServices.SafeHandle> yaşam ömrü yönetilmeyen bellek tie dener olduğundan bu sayfalarda uygunsuz olacaktır <xref:System.Runtime.InteropServices.SafeHandle> bir DLL denetim bellek kullanım ömrünü izin vermek yerine.
 

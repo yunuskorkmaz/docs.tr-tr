@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 92d0a61c2bbf9cc668b969c3e1420914b9f9f150
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c5bae64fbbeddedd905e5df0b5789542e29f2f1
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650778"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833925"
 ---
 # <a name="weak-event-patterns"></a>Zayıf Olay Desenleri
 Uygulamalar, olay kaynaklarına bağlı işleyicileri işleyicinin kaynağına bağlı dinleyici nesne ile koordinasyon halinde edilmeyeceği olduğunu mümkündür. Bu durum, bellek sızıntılarının neden olabilir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] belirli olaylar için adanmış yönetici sınıfı sağlayarak ve bu olayın dinleyicileri üzerinde arabirimi uygulama bu sorunu gidermek için kullanılabilecek bir tasarım desenini tanıtır. Bu tasarım deseni olarak bilinen *zayıf olay deseni*.  
@@ -71,7 +71,7 @@ Uygulamalar, olay kaynaklarına bağlı işleyicileri işleyicinin kaynağına b
      Benzer şekilde, kodunuzu bir olayın aboneliğini kaldırmak için şu desene kullanıyorsa:  
   
     ```  
-    source.SomeEvent -= new SomeEventEventHandler(OnSome);  
+    source.SomeEvent -= new SomeEventEventHandler(OnSomeEvent);  
     ```  
   
      Bu da aşağıdaki deseni için değiştirin:  

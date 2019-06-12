@@ -9,18 +9,18 @@ helpviewer_keywords:
 - pipeline processing
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76a5c32660c8a08ef34c40f8f4ee9430e5ead5c8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0ada6003cd6d1cd19036c42a3d0d976e18568f3a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644285"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833966"
 ---
 # <a name="memory--and-span-related-types"></a>Bellek ve aralık ilgili türler
 
 .NET, .NET Core 2.1 ile başlayarak, bir dizi bitişik, kesin türü belirtilmiş rastgele bir bellek bölgesini temsil eden birbiriyle türlerini içerir. Bu güncelleştirmeler şunlardır:
 
-- <xref:System.Span%601?displayProperty=nameWithType>, bitişik bellek bölgesini erişmek için kullanılan bir tür. A <xref:System.Span%601> örneği bir dizi türü tarafından desteklenen `T`, <xref:System.String>, arabellek ile ayrılan [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md), veya yönetilmeyen bellek işaretçisi. Yığında ayrılacak olduğundan, bazı kısıtlamalar vardır. Örneğin, bir alanın bir sınıf türünde olamaz <xref:System.Span%601>, ne de aralık içinde zaman uyumsuz işlemleri kullanılabilir.
+- <xref:System.Span%601?displayProperty=nameWithType>, bitişik bellek bölgesini erişmek için kullanılan bir tür. A <xref:System.Span%601> örneği bir dizi türü tarafından desteklenen `T`, <xref:System.String>, arabellek ile ayrılan [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md), veya yönetilmeyen bellek işaretçisi. Yığında ayrılacak olduğundan, bazı kısıtlamalar vardır. Örneğin, bir alanın bir sınıf türünde olamaz <xref:System.Span%601>, ne de aralık içinde zaman uyumsuz işlemleri kullanılabilir.
 
 - <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, sabit bir sürümünü <xref:System.Span%601> yapısı.
 

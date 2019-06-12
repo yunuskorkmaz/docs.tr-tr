@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: d86f3ea7b9ee2a7c511119d9b7c3e52f44bd5e6a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7b9551fe892b0335fb445ab9edce4facca0badbe
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634068"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833342"
 ---
 # <a name="sealed-c-reference"></a>sealed (C# Başvurusu)
 
@@ -56,10 +56,6 @@ Sonucu bir hata iletisi oluşturulur.
 
 `'MyDerivedC': cannot derive from sealed type 'SealedClass'`
 
-## <a name="c-language-specification"></a>C# dili belirtimi
-
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-
 ## <a name="remarks"></a>Açıklamalar
 
 Bir sınıf, yöntem veya özellik mühürlenecek belirlemek için genellikle iki aşağıdaki noktaları dikkate almanız gerekir:
@@ -67,6 +63,10 @@ Bir sınıf, yöntem veya özellik mühürlenecek belirlemek için genellikle ik
 - Olası faydaları sınıflardan türetme sınıfınıza özelleştirme olanağı elde edebilir.
 
 - Olası sınıflardan türetme gibi sınıflarınızdaki değiştirebilir, bunlar artık doğru şekilde çalışması veya olarak bir yöntem bekleniyor.
+
+## <a name="c-language-specification"></a>C# dili belirtimi
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

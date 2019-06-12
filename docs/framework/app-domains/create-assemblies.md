@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a8b6c37df398b7273bfcf082def572d4d0e7d87
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8e544976b0b801b08af238b2aeb36b5611154379
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634524"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832906"
 ---
 # <a name="creating-assemblies"></a>Derlemeler Oluşturma
 
-Visual Studio gibi bir IDE kullanarak tek dosya veya çok dosyalı derlemeler oluşturabilir veya derleyiciler ve araçlar sağlayan [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Basit, basit bir ada sahip ve tek bir uygulama etki alanına yüklü olduğu tek bir dosyaya derlemesidir. Bu derleme, uygulama dizininin dışındaki diğer derlemeler tarafından başvurulamaz ve sürüm denetimi yapmak değil. Derlemenin oluşan uygulamayı kaldırmak için basitçe bulunduğu dizini silin. Birçok geliştirici için bu özelliklere sahip bir derleme bir uygulamayı dağıtmak için gereken şey.
+Visual Studio veya derleyiciler ve ayrıca Windows Yazılım Geliştirme Seti (SDK) tarafından sağlanan araçları gibi bir IDE kullanarak tek dosya veya çok dosyalı derlemeler oluşturabilirsiniz. Basit, basit bir ada sahip ve tek bir uygulama etki alanına yüklü olduğu tek bir dosyaya derlemesidir. Bu derleme, uygulama dizininin dışındaki diğer derlemeler tarafından başvurulamaz ve sürüm denetimi yapmak değil. Derlemenin oluşan uygulamayı kaldırmak için basitçe bulunduğu dizini silin. Birçok geliştirici için bu özelliklere sahip bir derleme bir uygulamayı dağıtmak için gereken şey.
 
 Birkaç kod modülleri ve kaynak dosyalarını, bir çoklu dosya derlemesi oluşturabilirsiniz. Birden çok uygulama tarafından paylaşılabilen bir derlemeyi de oluşturabilirsiniz. Paylaşılan bir derleme tanımlayıcı bir ada sahip olmalıdır ve genel derleme önbelleğinde dağıtılabilir.
 

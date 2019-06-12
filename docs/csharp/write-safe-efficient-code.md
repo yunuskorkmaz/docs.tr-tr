@@ -3,12 +3,12 @@ title: Güvenli ve verimli yazma C# kod
 description: Son geliştirmeler C# dil performansını daha önce güvenli olmayan kod ile ilişkili doğrulanabilir bir güvenli kod yazmak etkinleştirin.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73ad7a84d2ad47f0e0242825d250247ffb39928e
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753893"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832940"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli yazma C# kod
 
@@ -189,7 +189,7 @@ Kullanarak performans farklarını gösteren bir örnek program gördüğünüz 
 
 Tek yığın çerçevesi için kısıtlı bir değer türünün bildirimi olanağı ilgili dil özelliğidir. Bu kısıtlama, çeşitli iyileştirmeler yapmak için derleyici sağlar. Bu özellik için birincil motivasyon olan <xref:System.Span%601> ve ilişkili yapıları. Bu geliştirmeler performans iyileştirmeleri yeni kullanarak elde edersiniz ve güncelleştirilmiş .NET API kullanımını <xref:System.Span%601> türü.
 
-Kullanılarak oluşturulan bellek ile çalışmaya benzer gereksinimlerine sahip olabilir [ `stackalloc` ](language-reference/keywords/stackalloc.md) veya Interop API'leri bellekten kullanırken. Kendi tanımlayabilirsiniz `ref struct` türleri bu ihtiyaçları için.
+Kullanılarak oluşturulan bellek ile çalışmaya benzer gereksinimlerine sahip olabilir [ `stackalloc` ](language-reference/operators/stackalloc.md) veya Interop API'leri bellekten kullanırken. Kendi tanımlayabilirsiniz `ref struct` türleri bu ihtiyaçları için.
 
 ## <a name="readonly-ref-struct-type"></a>`readonly ref struct` Türü
 

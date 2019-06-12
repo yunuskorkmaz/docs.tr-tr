@@ -2,12 +2,12 @@
 title: Sonuçlar
 description: Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Sonuçları
 ms.date: 10/26/2017
-ms.openlocfilehash: c5d4a3d504e7d62f74cf74e7b3f53f44f4b9b152
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: c7c4042b224577238ae74bd786d4803e487998e7
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758883"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833949"
 ---
 # <a name="conclusions"></a>Sonuçlar
 
@@ -15,7 +15,7 @@ ms.locfileid: "66758883"
 
 - Bir Docker kapsayıcısı standart birim için herhangi bir sunucu tabanlı uygulama veya hizmet dağıtımının gelmektedir.
 
-- Üretim ortamları için ölçeklenebilir Windows kapsayıcı tabanlı uygulamaları barındırmak için bir orchestrator (gibi Kubernetes) kullanmanız gerekir.
+- Üretim ortamları için ölçeklenebilir kapsayıcı tabanlı uygulamaları barındırmak için bir orchestrator (gibi Kubernetes) kullanmanız gerekir.
 
 - Kapsayıcıları barındıran azure sanal makineleri, bulutta küçük geliştirme ve Test ortamları oluşturmak için hızlı ve basit bir yoludur.
 

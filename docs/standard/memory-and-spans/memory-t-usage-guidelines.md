@@ -1,17 +1,17 @@
 ---
-title: Bellek<T> ve aralık<T> kullanım yönergeleri
+title: Memory<T> ve Span<T> kullanım yönergeleri
 ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 728f360d2e8f93ebdf2b17fec39477b95ed11357
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 380c0eef137eb5142c30e63f5446f5d60723087a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063287"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834052"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Bellek\<T > ve aralık\<T > kullanım yönergeleri
 
@@ -138,7 +138,7 @@ Aslında, bu kural ve kural 1 birleştirdik, biz daha da iyi yapın ve yöntem i
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-`DisplayBufferToConsole` Yöntemi hemen her arabellek türü hayal nasıl çalıştığını: `T[]`, depolama ile ayrılmış [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md)ve benzeri. Hatta geçirebilirsiniz bir <xref:System.String> doğrudan alın!
+`DisplayBufferToConsole` Yöntemi hemen her arabellek türü hayal nasıl çalıştığını: `T[]`, depolama ile ayrılmış [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md)ve benzeri. Hatta geçirebilirsiniz bir <xref:System.String> doğrudan alın!
 
 **#3. kural: Bellek yönteminizin kabul ediyorsa\<T > ve döndürür `void`, bellek kullanmamalıdır\<T >, yöntemin dönüşünün ardından örnek.**
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 6862ae72b235653d4576915605f14c9e4de92bce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45352d97372e556627ead75d969f088de9c85bd0
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662198"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833240"
 ---
 # <a name="c-reference"></a>C# Başvurusu
 Bu bölümde, ilgili başvuru malzemesi sağlar. C# anahtar sözcükleri, işleçler, özel karakterler, önişlemci yönergeleri, derleyici seçenekleri ve derleyici hataları ve Uyarıları.  
@@ -40,7 +40,7 @@ Bu bölümde, ilgili başvuru malzemesi sağlar. C# anahtar sözcükleri, işle�
  [C# dil belirtimi](../../../_csharplang/spec/introduction.md)  
  C# 6.0 dil belirtimi. Bu öneri taslağı, C# 6.0 dili. Sürüm 5.0, aralık 2017 ' yayımlandı [standart ECMA-334 5. sürüm](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf) belge.
 
-İçinde uygulanan özellikleri C# 6.0 dil belirtimi tekliflerinde gösterilir sonra sürümleri. Bu belgeler, bu yeni özellikler eklemek için deltaları dili özellikleri için açıklar. 
+İçinde uygulanan özellikleri C# 6.0 dil belirtimi tekliflerinde gösterilir sonra sürümleri. Bu belgeler, bu yeni özellikler eklemek için deltaları dili özellikleri için açıklar.
 
  [C#7.0 dil teklifleri](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
  Birçok yeni özellik uygulanan C# 7.0. Bunlar değişken bildirimlerini kullanıma desen eşleştirme, yerel işlevleri içerir, ifadeleri, ikili sabit değerler ve basamak ayırıcılar atar. Bu klasör, bu özelliklerin her biri için özellikleri içerir.
@@ -49,10 +49,10 @@ Bu bölümde, ilgili başvuru malzemesi sağlar. C# anahtar sözcükleri, işle�
  Eklenen yeni özellikler C# 7.1. İlk olarak, yazabileceğiniz bir `Main` döndüren yöntem `Task` veya `Task<int>`. Bu sayede eklemek `async` değiştiriciyi `Main`. `default` İfadesi, bir tür burada türü nelze odvodit konumlarda olmadan kullanılabilir. Ayrıca, üye çıkarsanan demet adları. Son olarak, desen eşleştirme genel türler ile kullanılabilir.
 
  [C#7.2 dil teklifleri](../../../_csharplang/proposals/csharp-7.2/readonly-ref.md)  
- C#7.2 çok sayıda küçük özelliği eklendi. Salt okunur başvuru kullanılarak bağımsız değişkenler geçirebilirsiniz `in` anahtar sözcüğü. Bir dizi için derleme zamanında güvenliği desteklemek için alt düzey değişiklik vardır `Span` ve ilgili türler. Sonraki bağımsız değişkenler bazı durumlarda konumsal nerede adlandırılmış bağımsız değişkenler kullanabilirsiniz. `private protected` Erişim değiştiricisi çağıranlar türetilen türlerin aynı derlemesinde uygulanmış sınırlı olduğunu belirtmenize imkan tanır. `?:` İşleci, bir değişken için bir başvuruya giderebilirsiniz. Ayrıca, bir ilk basamak ayıracı kullanarak onaltılık ve ikili sayılar biçimlendirebilirsiniz.   
+ C#7.2 çok sayıda küçük özelliği eklendi. Salt okunur başvuru kullanılarak bağımsız değişkenler geçirebilirsiniz `in` anahtar sözcüğü. Bir dizi için derleme zamanında güvenliği desteklemek için alt düzey değişiklik vardır `Span` ve ilgili türler. Sonraki bağımsız değişkenler bazı durumlarda konumsal nerede adlandırılmış bağımsız değişkenler kullanabilirsiniz. `private protected` Erişim değiştiricisi çağıranlar türetilen türlerin aynı derlemesinde uygulanmış sınırlı olduğunu belirtmenize imkan tanır. `?:` İşleci, bir değişken için bir başvuruya giderebilirsiniz. Ayrıca, bir ilk basamak ayıracı kullanarak onaltılık ve ikili sayılar biçimlendirebilirsiniz.
 
  [C#7.3 dil teklifleri](../../../_csharplang/proposals/csharp-7.3/blittable.md)  
- C#7.3 birkaç küçük güncelleştirmeler içeren başka bir noktası sürümdür. Genel tür parametrelerindeki yeni kısıtlamalar kullanabilirsiniz. Diğer değişiklikler ile çalışmak kolaylaştırır `fixed` alanları kullanma dahil olmak üzere, [ `stackalloc` ](./keywords/stackalloc.md) ayırmalar. Yerel değişkenleri `ref` anahtar sözcüğü, yeni depolama alanına başvurmak için reasssigned olabilir. Derleyici tarafından oluşturulan yedekleme alanını otomatik olarak uygulanan özellikler öznitelikler yerleştirebilirsiniz. İfade değişkenlerinin başlatıcıları içinde kullanılabilir. Tanımlama grubu eşitliği (ya da eşitsizlik) için karşılaştırılabilir. Aşırı yükleme çözümlemesi için bazı iyileştirmeler yapıldı.
+ C#7.3 birkaç küçük güncelleştirmeler içeren başka bir noktası sürümdür. Genel tür parametrelerindeki yeni kısıtlamalar kullanabilirsiniz. Diğer değişiklikler ile çalışmak kolaylaştırır `fixed` alanları kullanma dahil olmak üzere, [ `stackalloc` ](./operators/stackalloc.md) ayırmalar. Yerel değişkenleri `ref` anahtar sözcüğü, yeni depolama alanına başvurmak için reasssigned olabilir. Derleyici tarafından oluşturulan yedekleme alanını otomatik olarak uygulanan özellikler öznitelikler yerleştirebilirsiniz. İfade değişkenlerinin başlatıcıları içinde kullanılabilir. Tanımlama grubu eşitliği (ya da eşitsizlik) için karşılaştırılabilir. Aşırı yükleme çözümlemesi için bazı iyileştirmeler yapıldı.
   
  [C#8.0 dil teklifleri](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md) C# 8.0 önizlemede kullanılabilir. Bu özellikler için belirtimleri geçerli sürümleri önerilerdir. Daha eksiksiz bazıları; hala bir süreç bazılarıdır. Null başvuru türleri, özyinelemeli desen eşleştirme, zaman uyumsuz akışlar, aralıkları ve dizinleri, desen tabanlı kullanarak ve bildirimleri ve null birleşim atama kullanarak önizlemelerinde sevk olan özellikler içerir.
   

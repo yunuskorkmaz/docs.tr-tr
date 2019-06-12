@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
-ms.translationtype: MT
+ms.openlocfilehash: e72d093dd02f4a67386f58af5df40247c66dc378
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378563"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832805"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Ayrıştırıcı)
 
@@ -100,7 +100,7 @@ Tarafından üretilen metin dosyası *Ildasm.exe* IL derleyicisi giriş olarak k
 > [!NOTE]
 > Şu anda, bu tekniği gömülü yerel kod içeren (örneğin, Visual C++ tarafından üretilen PE dosyaları) PE dosyaları ile kullanamazsınız.  
 
-Meta veriyi ve varolan herhangi bir PE dosyasının ayrıştırılmış kodunu hiyerarşik bir ağaç görünümünde görüntülemek için varsayılan GUI'yi IL Ayrıştırıcısı'nda kullanabilirsiniz. GUI'yi kullanmak için yazmanız **ildasm** sağlama olmadan komut satırında *PEfilename* bağımsız değişkeni veya herhangi bir seçenek. Gelen **dosya** menüsünde gidebilirsiniz yüklemek istediğiniz PE dosyasına *Ildasm.exe*. Meta verileri ve seçili PE için görüntülenen ayrıştırılmış kodu kaydetmek için seçmeniz **dökümü** komutunu **dosya** menüsü. Seçeneğini yalnızca hiyerarşik ağaç görünümünü kaydetmek için **döküm Treeview** komutunu **dosya** menüsü. İçine bir dosya yüklemek için ayrıntılı bir kılavuz için *Ildasm.exe* ve çıktıyı yorumlama, *Ildasm.exe* ile birlikte gelen örnekler klasöründe bulunan öğreticide [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+Meta veriyi ve varolan herhangi bir PE dosyasının ayrıştırılmış kodunu hiyerarşik bir ağaç görünümünde görüntülemek için varsayılan GUI'yi IL Ayrıştırıcısı'nda kullanabilirsiniz. GUI'yi kullanmak için yazmanız **ildasm** sağlama olmadan komut satırında *PEfilename* bağımsız değişkeni veya herhangi bir seçenek. Gelen **dosya** menüsünde gidebilirsiniz yüklemek istediğiniz PE dosyasına *Ildasm.exe*. Meta verileri ve seçili PE için görüntülenen ayrıştırılmış kodu kaydetmek için seçmeniz **dökümü** komutunu **dosya** menüsü. Seçeneğini yalnızca hiyerarşik ağaç görünümünü kaydetmek için **döküm Treeview** komutunu **dosya** menüsü. İçine bir dosya yüklemek için ayrıntılı bir kılavuz için *Ildasm.exe* ve çıktıyı yorumlama, *Ildasm.exe* Öğreticisi, Windows Yazılım Geliştirme Seti (SDK ile birlikte gelen örnekler klasöründe bulunan ).
 
 Sağlarsanız *Ildasm.exe* ile bir *PEfilename* katıştırılmış kaynakları içeren bağımsız değişkeni, aracın birden çok çıktı dosyası üretir: IL kodunu içeren ve katıştırılmış her yönetilen bir metin dosyası Kaynak, kaynağın meta verideki adı kullanılarak oluşturulan bir .resources dosyası. Yönetilmeyen bir kaynağı olarak eklendiyse *PEfilename*, tarafından IL .çıktısı için belirtilen dosya adı kullanılarak bir .res dosyası üretilir **/output** seçeneği.
 

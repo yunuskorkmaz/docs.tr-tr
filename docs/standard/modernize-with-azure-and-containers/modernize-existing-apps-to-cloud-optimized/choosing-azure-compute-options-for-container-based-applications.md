@@ -2,12 +2,12 @@
 title: Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Kapsayıcı tabanlı uygulamalar için Azure işlem platformlarını seçme
 ms.date: 05/04/2018
-ms.openlocfilehash: d91cd279402dc24beb5f766c06cb85ac8d74f482
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 64ae542e006bf7a5d7a0be08fe1cff9770552a77
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758808"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833850"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
 
@@ -17,8 +17,7 @@ Olarak bir *varsayılan olarak* öneri, bu kılavuzda önerilen ana ölçüt aş
 
 - **Tek tek parçalı uygulama:** Azure uygulama hizmeti seçin
 - **N katmanlı uygulama:** Tek bir veya birkaç arka uç Hizmetleri varsa, Azure Kubernetes Service (AKS) veya App Service gibi düzenleyiciler arasından seçim yapın
-- **Linux mikro hizmetler:** AKS/Kubernetes seçin
-- **Windows mikro hizmetler:** Azure Web uygulaması için kapsayıcı Seç
+- **Mikro hizmetler:** AKS veya Azure Web uygulaması için kapsayıcı seçin
 - **& Olay işleyicileri sunucusuz İşlevler:** Azure işlevleri'ni seçin
 - **Büyük ölçekli Batch:** Azure Batch seçin
 

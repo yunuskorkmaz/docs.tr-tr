@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [WPF], WPF interoperation
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-ms.openlocfilehash: abfcb9f5398a6a8d264985543df585bea93a0446
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: acb8095b32364f1e22330f22df60085016bdc664
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669308"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834035"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Windows Forms Denetimleri ve Eşdeğer WPF Denetimleri
 Birçok [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetiminiz eşdeğer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrol eder, ancak bazı [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri olmayan eşdeğerleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Bu konu iki teknoloji tarafından sağlanan denetim türlerini karşılaştırır.  
@@ -82,7 +82,7 @@ Birçok [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md
 |<xref:System.Windows.Forms.TreeView>|<xref:System.Windows.Controls.TreeView>||  
 |<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Controls.UserControl>||  
 |<xref:System.Windows.Forms.VScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|Kaydırma kapsayıcı denetimlere yerleşik olarak bulunur.|  
-|<xref:System.Windows.Forms.WebBrowser>|<xref:System.Windows.Controls.Frame>, <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>|<xref:System.Windows.Controls.Frame> Denetimi, HTML sayfaları barındırabilir.<br /><br /> İtibariyle [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType> denetimi, HTML sayfaları ve de telefonla geri barındırabilir <xref:System.Windows.Controls.Frame> denetimi.|  
+|<xref:System.Windows.Forms.WebBrowser>|<xref:System.Windows.Controls.Frame>, <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>|<xref:System.Windows.Controls.Frame> Denetimi, HTML sayfaları barındırabilir.<br /><br /> .NET Framework 3.5 SP1'de başlayarak <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType> denetimi, HTML sayfaları ve de telefonla geri barındırabilir <xref:System.Windows.Controls.Frame> denetimi.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

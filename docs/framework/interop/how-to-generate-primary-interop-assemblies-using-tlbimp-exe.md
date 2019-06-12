@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3b1ae2734715c4204ac1887921505b5592e79e
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 09ee63a1283744da407cde2a99802969c7f55127
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910765"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833663"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Nasıl yapılır: Tlbimp.exe Kullanarak Birincil Birlikte Çalışma Derlemeleri Oluşturma
 Birincil birlikte çalışma derlemesi oluşturmak için iki yolunuz vardır:  
   
-- Kullanarak [tür kitaplığı alma programı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) tarafından sağlanan [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+- Kullanarak [tür kitaplığı alma programı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) Windows Yazılım Geliştirme Seti (SDK) tarafından sağlanan.  
   
      Birincil birlikte çalışma derlemeleri oluşturmak için en kolay yolu [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Tlbimp.exe aşağıdaki güvenlik önlemleri sağlar:  
   
@@ -38,7 +38,7 @@ Birincil birlikte çalışma derlemesi oluşturmak için iki yolunuz vardır:
   
 1. Komut isteminde, şunları yazın:  
   
-     **Tlbimp** *tlbfile***/birincil/keyfile:** *filename* **/out:** *assemblyname*  
+     **Tlbimp** *tlbfile* **/birincil/keyfile:** *filename* **/out:** *assemblyname*  
   
      Bu komutta *tlbfile* COM tür kitaplığı içeren bir dosya *filename* kapsayıcısı veya anahtar çiftini içeren dosyanın adı ve *assemblyname* olduğu tanımlayıcı ad ile işaretlenecek derlemenin adı.  
   

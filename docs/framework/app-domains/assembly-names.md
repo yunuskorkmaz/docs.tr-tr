@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bdd27511de18c6cb119ddbf8621c43606c82ad4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36993a13ed085f59fd6002f33e7884bdb1b5db8d
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675084"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832885"
 ---
 # <a name="assembly-names"></a>Derleme Adları
 Bir derlemenin adı meta verilerinde depolanır ve önemli bir derlemenin kapsamına etkileyebilir ve bir uygulama tarafından kullanılıyor sahiptir. Tanımlayıcı adlı bir derleme, derlemenin adı, kültür, ortak anahtarı ve sürüm numarasını içeren tam bir adı vardır. Görünen ad ve yüklenen derlemeler için kullanılarak elde edilebilir gibi bu sık adlandırılır <xref:System.Reflection.Assembly.FullName%2A> özelliği.  
@@ -45,7 +45,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ```  
   
 > [!NOTE]
->  Çalışma zamanı derleme adları büyük küçük harf duyarsız bir bütünleştirilmiş kod bağlama sırasında işler, ancak her durumda, bir derleme adı kullanılır korur. Çeşitli araçları [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] işleyecek derleme adları büyük/küçük harfe olarak. Bunlar büyük/küçük harfe gibi davranarak en iyi sonuçlar için derleme adları yönetin.  
+>  Çalışma zamanı derleme adları büyük küçük harf duyarsız bir bütünleştirilmiş kod bağlama sırasında işler, ancak her durumda, bir derleme adı kullanılır korur. Çeşitli araçlar Windows Yazılım Geliştirme Seti (SDK) derleme adları büyük/küçük harfe olarak işleyin. Bunlar büyük/küçük harfe gibi davranarak en iyi sonuçlar için derleme adları yönetin.  
   
 ## <a name="naming-application-components"></a>Uygulama bileşenleri adlandırma  
  Çalışma zamanı dosya adı bir derlemenin kimliğinin belirlerken dikkate almaz. Derleme adı, sürüm, kültür ve tanımlayıcı ad oluşur, derleme kimliği için çalışma zamanı açık olması gerekir.  

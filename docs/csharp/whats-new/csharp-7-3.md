@@ -2,12 +2,12 @@
 title: C# 7.3 yenilikler nelerdir?
 description: C# 7.3 içindeki yeni özelliklere genel bakış
 ms.date: 05/16/2018
-ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aca5c1b82253c02eccf24af1e5c45d0203d0b1b8
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675552"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832704"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 yenilikler nelerdir?
 
@@ -112,7 +112,7 @@ int* pArr2 = stackalloc int[] {1, 2, 3};
 Span<int> arr = stackalloc [] {1, 2, 3};
 ```
 
-Daha fazla bilgi için [ `stackalloc` deyimi](../language-reference/keywords/stackalloc.md) dil başvurusu makalesinde.
+Daha fazla bilgi için [ `stackalloc` işleci](../language-reference/operators/stackalloc.md) makalesi.
 
 ### <a name="more-types-support-the-fixed-statement"></a>Daha fazla türlerini destekleyen `fixed` deyimi
 
