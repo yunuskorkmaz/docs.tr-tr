@@ -5,7 +5,7 @@
       href: lift-and-shift-existing-apps-azure-iaas.md
     - name: İlişkisel veritabanlarınızı Azure'a geçirme
       href: migrate-your-relational-databases-to-azure.md
-    - name: Mevcut .NET uygulamalarını Bulut için İyileştirilmiş olarak modernize etme
+    - name: Bulut için iyileştirilmiş için var olan .NET uygulamalarını modernleştirme
       href: ./modernize-existing-apps-to-cloud-optimized/index.md
       items:
         - name: Mevcut .NET uygulamalarını Bulut için İyileştirilmiş olarak modernize etme nedenleri
@@ -24,8 +24,6 @@
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md
         - name: 'Windows Kapsayıcıları, Azure Container Instances’a (ACI) ne zaman dağıtılmalıdır?'
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-instances-ACI.md
-        - name: Service Fabric’e Windows Kapsayıcıları ne zaman dağıtılmalıdır?
-          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-service-fabric.md
         - name: 'Windows Kapsayıcıları, Azure Container Service’e (ACS-Kubernetes) ne zaman dağıtılmalıdır?'
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md
         - name: Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
