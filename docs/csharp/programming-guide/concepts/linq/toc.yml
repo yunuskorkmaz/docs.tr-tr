@@ -1,10 +1,8 @@
 - name: Dil ile Tümleşik Sorgu (LINQ)
-  href: index.md
   items:
-    - name: LINQ'e Giriş
-      href: introduction-to-linq.md
+    - name: Genel Bakış
+      href: index.md
     - name: 'C#''de LINQ''e Başlarken'
-      href: getting-started-with-linq.md
       items:
         - name: LINQ Sorgularına Giriş
           href: introduction-to-linq-queries.md
@@ -23,8 +21,9 @@
         - name: 'İzlenecek yol: C#''de Sorgu Yazma (LINQ)'
           href: walkthrough-writing-queries-linq.md
     - name: Standart Sorgu İşleçlerine Genel Bakış
-      href: standard-query-operators-overview.md
       items:
+        - name: Genel Bakış
+          href: standard-query-operators-overview.md
         - name: Standart Sorgu İşleçleri için Sorgu İfade Sözdizimi
           href: query-expression-syntax-for-standard-query-operators.md
         - name: Standart Sorgu İşleçlerinin Yürütme Yöntemine Göre Sınıflandırılması
@@ -58,10 +57,12 @@
         - name: Toplama İşlemleri
           href: aggregation-operations.md
     - name: Nesnelere LINQ
-      href: linq-to-objects.md
       items:
+        - name: Genel Bakış
+          href: linq-to-objects.md
         - name: LINQ ve Dizeler
           href: linq-and-strings.md
+        - name: Nasıl yapılır makaleleri
           items:
             - name: 'Nasıl yapılır: Bir Sözcüğün Bir Dizede Kaç Kez Geçtiğini Sayma (LINQ)'
               href: how-to-count-occurrences-of-a-word-in-a-string-linq.md
@@ -89,12 +90,12 @@
               href: how-to-compute-column-values-in-a-csv-text-file-linq.md
         - name: LINQ ve Yansıma
           href: linq-and-reflection.md
-          items:
-            - name: 'Nasıl yapılır: Bir Derlemenin Meta Verilerini Yansıma ile Sorgulama (LINQ)'
-              href: how-to-query-an-assembly-s-metadata-with-reflection-linq.md
+        - name: 'Nasıl yapılır: Bir Derlemenin Meta Verilerini Yansıma ile Sorgulama (LINQ)'
+          href: how-to-query-an-assembly-s-metadata-with-reflection-linq.md
         - name: LINQ ve Dosya Dizinleri
-          href: linq-and-file-directories.md
           items:
+            - name: Genel Bakış
+              href: linq-and-file-directories.md
             - name: 'Nasıl yapılır: Belirli bir Öznitelik veya Ada Sahip Dosyaları Sorgulama'
               href: how-to-query-for-files-with-a-specified-attribute-or-name.md
             - name: 'Nasıl yapılır: Dosyaları Uzantıya Göre Gruplama (LINQ)'
@@ -114,10 +115,8 @@
         - name: 'Nasıl yapılır: LINQ Sorguları için Özel Yöntemler'
           href: how-to-add-custom-methods-for-linq-queries.md
     - name: LINQ - XML
-      href: linq-to-xml.md
       items:
         - name: Başlarken (LINQ to XML)
-          href: getting-started-linq-to-xml.md
           items:
             - name: LINQ to XML’e Genel Bakış
               href: linq-to-xml-overview.md
@@ -126,10 +125,8 @@
             - name: LINQ to XML ile Diğer XML Teknolojileri Karşılaştırması
               href: linq-to-xml-vs-other-xml-technologies.md
         - name: Programlama Kılavuzu (LINQ to XML)
-          href: programming-guide-linq-to-xml.md
           items:
             - name: LINQ to XML Programlamaya Genel Bakış
-              href: linq-to-xml-programming-overview.md
               items:
                 - name: İşlevsel ve Yordam Programlama Karşılaştırması (LINQ to XML)
                   href: functional-vs-procedural-programming-linq-to-xml.md
@@ -143,15 +140,13 @@
                   href: xdocument-class-overview.md
                 - name: 'Nasıl yapılır: LINQ to XML Örnekleri Derleme'
                   href: how-to-build-linq-to-xml-examples.md
-            - name: XML Ağaçları Oluşturma
-              href: creating-xml-trees.md
+            - name: XML ağaçlarını
               items:
                 - name: İşlevsel Oluşturma (LINQ to XML) Karşılaştırması
                   href: functional-construction-linq-to-xml.md
                 - name: 'C# Dilinde XML Ağaçları Oluşturma (LINQ to XML)'
                   href: creating-xml-trees-linq-to-xml-2.md
                 - name: XML Ayrıştırma
-                  href: parsing-xml.md
                   items:
                     - name: 'Nasıl yapılır: Dize Ayrıştırma'
                       href: how-to-parse-a-string.md
@@ -172,7 +167,6 @@
                 - name: XElement ve XDocument Nesnelerinin Geçerli İçeriği
                   href: valid-content-of-xelement-and-xdocument-objects3.md
             - name: XML Ad Alanları ile Çalışma
-              href: working-with-xml-namespaces.md
               items:
                 - name: Ad Alanlarına Genel Bakış (LINQ to XML)
                   href: namespaces-overview-linq-to-xml.md
@@ -185,7 +179,6 @@
                 - name: 'Nasıl yapılır: Ad Alanlarında XML Üzerinde Sorgu Yazma'
                   href: how-to-write-queries-on-xml-in-namespaces.md
             - name: XML Ağaçlarını Serileştirme
-              href: serializing-xml-trees.md
               items:
                 - name: Serileştirirken Boşlukları Koruma
                   href: preserving-white-space-while-serializing.md
@@ -196,7 +189,6 @@
                 - name: XmlReader’a Serileştirme (XSLT Çağırma)
                   href: serializing-to-an-xmlreader-invoking-xslt.md
             - name: LINQ to XML Eksenleri
-              href: linq-to-xml-axes.md
               items:
                 - name: LINQ to XML Eksenlerine Genel Bakış
                   href: linq-to-xml-axes-overview.md
@@ -219,10 +211,8 @@
                 - name: 'Nasıl yapılır: Öğenin Yüzeysel Değerini Alma'
                   href: how-to-retrieve-the-shallow-value-of-an-element.md
             - name: XML Ağaçlarını Sorgulama
-              href: querying-xml-trees.md
               items:
                 - name: Temel Sorgular (LINQ to XML)
-                  href: basic-queries-linq-to-xml.md
                   items:
                     - name: 'Nasıl yapılır: Belirli Bir Özniteliğe Sahip Öğeyi Bulma'
                       href: how-to-find-an-element-with-a-specific-attribute.md
@@ -251,7 +241,6 @@
                     - name: 'Nasıl yapılır: Boş Sorgu Sonucu Kümelerinin Hatalarını Ayıklama'
                       href: how-to-debug-empty-query-results-sets.md
                 - name: Projeksiyonlar ve Dönüşümler (LINQ to XML)
-                  href: projections-and-transformations-linq-to-xml.md
                   items:
                     - name: 'Nasıl yapılır: LINQ to XML Kullanarak Sözlüklerle Çalışma'
                       href: how-to-work-with-dictionaries-using-linq-to-xml.md
@@ -270,7 +259,6 @@
                     - name: 'Nasıl yapılır: CSV Dosyalarından XML Oluşturma'
                       href: how-to-generate-xml-from-csv-files.md
                 - name: Gelişmiş Sorgu Teknikleri (LINQ to XML)
-                  href: advanced-query-techniques-linq-to-xml.md
                   items:
                     - name: 'Nasıl yapılır: İki Koleksiyonu Birleştirme (LINQ to XML)'
                       href: how-to-join-two-collections-linq-to-xml.md
@@ -291,7 +279,6 @@
                     - name: 'Nasıl yapılır: Dosya Sisteminden bir XML Ağacı Doldurma'
                       href: how-to-populate-an-xml-tree-from-the-file-system.md
                 - name: XPath Kullanıcıları için LINQ to XML
-                  href: linq-to-xml-for-xpath-users.md
                   items:
                     - name: XPath ile LINQ to XML Karşılaştırması
                       href: comparison-of-xpath-and-linq-to-xml.md
@@ -328,23 +315,32 @@
                     - name: 'Nasıl yapılır: Bir Önceki Eşdüzeyi Bulma (XPath-LINQ to XML)'
                       href: how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md
                 - name: Saf İşlevsel XML Dönüşümleri
-                  href: pure-functional-transformations-of-xml.md
                   items:
                     - name: Saf İşlevsel Dönüşümlere Giriş
                       href: introduction-to-pure-functional-transformations.md
-                      items:
-                        - name: Kavramlar ve Terimler (İşlevsel Dönüşüm)
-                          href: concepts-and-terminology-functional-transformation.md
-                        - name: İşlevsel Programlama ve Kesin Programlama Karşılaştırması
-                          href: functional-programming-vs-imperative-programming.md
-                        - name: Saf İşlevler Halinde Yeniden Düzenleme
-                          href: refactoring-into-pure-functions.md
-                        - name: İşlev Dönüşümün Uygulanabilirliği
-                          href: applicability-of-functional-transformation.md
-                        - name: XML İşlevsel Dönüşümü
-                          href: functional-transformation-of-xml.md
+                    - name: Kavramlar ve Terimler (İşlevsel Dönüşüm)
+                      href: concepts-and-terminology-functional-transformation.md
+                    - name: İşlevsel Programlama ve Kesin Programlama Karşılaştırması
+                      href: functional-programming-vs-imperative-programming.md
+                    - name: Saf İşlevler Halinde Yeniden Düzenleme
+                      href: refactoring-into-pure-functions.md
+                    - name: İşlev Dönüşümün Uygulanabilirliği
+                      href: applicability-of-functional-transformation.md
+                    - name: XML İşlevsel Dönüşümü
+                      href: functional-transformation-of-xml.md
                     - name: 'Öğretici: Sorguları Birbirine Zincirleme'
-                      href: tutorial-chaining-queries-together.md
+                      items:
+                        - name: LINQ to XML’de Ertelenmiş Yürütme ve Geç Değerlendirme
+                          href: deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
+                        - name: Ertelenmiş Yürütme Örneği
+                          href: deferred-execution-example.md
+                        - name: Sorguları Zincirleme Örneği
+                          href: chaining-queries-example.md
+                        - name: Ara Gerçekleştirme
+                          href: intermediate-materialization.md
+                        - name: Standart Sorgu İşleçlerini Birbirine Zincirleme
+                          href: chaining-standard-query-operators-together.md
+                    - name: 'Öğretici: Sorguları Birbirine Zincirleme'
                       items:
                         - name: LINQ to XML’de Ertelenmiş Yürütme ve Geç Değerlendirme
                           href: deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
@@ -357,7 +353,6 @@
                         - name: Standart Sorgu İşleçlerini Birbirine Zincirleme
                           href: chaining-standard-query-operators-together.md
                     - name: 'Öğretici: WordprocessingML Belgesindeki İçeriği Düzenleme'
-                      href: tutorial-manipulating-content-in-a-wordprocessingml-document.md
                       items:
                         - name: WordprocessingML Belgelerinin Şekli
                           href: shape-of-wordprocessingml-documents.md
@@ -378,7 +373,6 @@
                         - name: Word Belgelerinde Metin Bulma
                           href: finding-text-in-word-documents.md
                         - name: Office Open XML WordprocessingML Belgelerinin Ayrıntıları
-                          href: details-of-office-open-xml-wordprocessingml-documents.md
                           items:
                             - name: Stillerle WordprocessingML Belgesi
                               href: wordprocessingml-document-with-styles.md
@@ -387,7 +381,6 @@
                             - name: Office Open XML Belge Kısımları Çıkaran Örnek
                               href: example-that-outputs-office-open-xml-document-parts.md
             - name: XML Ağaçlarını Değiştirme (LINQ to XML)
-              href: modifying-xml-trees-linq-to-xml.md
               items:
                 - name: Bellek içi XML Ağacı Değişikliği ve İşlevsel Oluşturma (LINQ to XML) Karşılaştırması
                   href: in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md
@@ -402,7 +395,6 @@
                 - name: 'Nasıl yapılır: Tüm XML Ağacının Ad Alanını Değiştirme'
                   href: how-to-change-the-namespace-for-an-entire-xml-tree.md
             - name: Performans (LINQ to XML)
-              href: performance-linq-to-xml.md
               items:
                 - name: Zincirlenmiş Sorguların Performansı (LINQ to XML)
                   href: performance-of-chained-queries-linq-to-xml.md
@@ -413,7 +405,6 @@
                 - name: Statik Olarak Derlenmiş Sorgular (LINQ to XML)
                   href: statically-compiled-queries-linq-to-xml.md
             - name: Gelişmiş LINQ to XML Programlama
-              href: advanced-linq-to-xml-programming.md
               items:
                 - name: LINQ to XML Ek Açıklamaları
                   href: linq-to-xml-annotations.md
@@ -434,7 +425,6 @@
                 - name: 'Nasıl yapılır: XSLT Stilindeki LINQ to XML Ağaçlarını Dönüştürmek için Ek Açıklamalar Kullanma'
                   href: how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md
                 - name: XElement Nesneleri İçeren Nesne Grafiklerini Serileştirme
-                  href: serializing-object-graphs-that-contain-xelement-objects.md
                   items:
                     - name: 'Nasıl yapılır: XmlSerializer Kullanarak Serileştirme'
                       href: how-to-serialize-using-xmlserializer.md
@@ -443,7 +433,6 @@
             - name: LINQ to XML Güvenliği
               href: linq-to-xml-security.md
             - name: Örnek XML Belgeleri (LINQ to XML)
-              href: sample-xml-documents-linq-to-xml.md
               items:
                 - name: 'Örnek XML Dosyası: Tipik Satın Alma Siparişi (LINQ to XML)'
                   href: sample-xml-file-typical-purchase-order-linq-to-xml-1.md
