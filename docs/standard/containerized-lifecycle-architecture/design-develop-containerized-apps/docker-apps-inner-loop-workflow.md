@@ -3,10 +3,10 @@ title: Docker uygulamaları için iç döngü geliştirme iş akışı
 description: Docker uygulamaları geliştirmek için "İç döngü" iş akışı öğrenin.
 ms.date: 02/15/2019
 ms.openlocfilehash: ce573546f61b98c2f93e998203497fa949e9efe8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644847"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
@@ -39,7 +39,7 @@ Uygulamaları, kendi Hizmetleri artı ek kitaplıklar (bağımlılıklar) oluşu
 
 **Şekil 4-22**. Docker CLI'yı kullanarak kapsayıcılı Docker uygulamaları için yaşam döngüsü için üst düzey iş akışı
 
-### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>1. Adım: Visual Studio Code'da kodlamaya başlayın ve ilk uygulama/hizmet temel oluşturma
+### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>1\. Adım: Visual Studio Code'da kodlamaya başlayın ve ilk uygulama/hizmet temel oluşturma
 
 Uygulamanızı geliştirdiğiniz yolu Docker yaptığınız gibi benzer. Geliştirmeye devam ederken, dağıtma ve uygulama veya yerel ortamınızda (örneğin, bir Linux VM veya Windows) yerleştirilen Docker kapsayıcıları içinde çalışan hizmetleri test etme, farktır.
 
@@ -87,7 +87,7 @@ Docker uzantısını yüklemek için Ctrl + Shift + P tuşlarına basın yazın 
 
 **Şekil 4-23**. Visual Studio Code'da Docker uzantısını yükleme
 
-### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>2. Adım: Mevcut bir görüntüyü (düz işletim sistemi veya geliştirme ortamları .NET Core, Node.js ve Ruby gibi) ilgili bir DockerFile'ı oluşturma
+### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>2\. Adım: Mevcut bir görüntüyü (düz işletim sistemi veya geliştirme ortamları .NET Core, Node.js ve Ruby gibi) ilgili bir DockerFile'ı oluşturma
 
 İhtiyacınız olacak bir `DockerFile` ve dağıtılması için kapsayıcı başına oluşturulacak özel görüntü. Uygulamanızı tek bir özel hizmet yapılırsa, tek bir gerekir `DockerFile`. Ancak uygulamanız birden çok hizmetlerinin (olduğu gibi bir mikro hizmetler mimarisinde) oluşuyorsa, tane gerekecektir `Dockerfile` hizmet başına.
 
@@ -149,7 +149,7 @@ Bir tek bir görüntü adı bir depoda bir Linux görüntüsü ve bir Windows g�
 
 Bu konuda açıklandığı gibi sıfırdan kendi Docker temel görüntüsünde oluşturabilirsiniz [makale](https://docs.docker.com/engine/userguide/eng-image/baseimages/) docker. Bu senaryo sizin için en iyi Docker ile yeni başlıyor ister, ancak kendi temel görüntü belirli bitlerini ayarlamak istiyorsanız, bunu yapabilirsiniz, büyük olasılıkla değil.
 
-### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>3. Adım: Hizmetinizi katıştırarak, özel Docker görüntüleri oluşturma
+### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>3\. Adım: Hizmetinizi katıştırarak, özel Docker görüntüleri oluşturma
 
 Uygulamanızı oluşturan özel her hizmet için ilgili bir görüntü oluşturmak gerekir. Tek bir hizmeti veya web uygulaması, uygulamanızı oluşuyorsa, yalnızca tek bir görüntü gerekir.
 
@@ -177,7 +177,7 @@ Var olan görüntülerden yerel deponuzda (geliştirme makinenize) docker'ı kul
 
 **Şekil 4-26**. Docker görüntüleri kullanarak var olan görüntüleri görüntüleme
 
-### <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>4. Adım: Birden çok hizmeti ile oluşturulmuş bir Docker uygulaması derlerken, hizmetlerinizi docker-compose.yml tanımlayın
+### <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>4\. Adım: Birden çok hizmeti ile oluşturulmuş bir Docker uygulaması derlerken, hizmetlerinizi docker-compose.yml tanımlayın
 
 İle `docker-compose.yml` dosyası, bir dizi adım bir sonraki bölümde açıklanan dağıtım komutları ile oluşturulmuş bir uygulama olarak dağıtılması için ilgili hizmetler tanımlayabilirsiniz.
 
@@ -210,7 +210,7 @@ Bu durumda, bu dosya, iki hizmet tanımlar: web hizmeti (özel hizmeti) ve redis
 
 Redis hizmeti kullandığı [en son genel redis görüntüsünü](https://hub.docker.com/_/redis/) Docker Hub kayıt defterinden çekilir. [redis](https://redis.io/) sunucu tarafı uygulamalar için yaygın olarak kullanılan önbellek sistemidir.
 
-### <a name="step-5-build-and-run-your-docker-app"></a>5. Adım: Derleme ve Docker uygulamanızı çalıştırma
+### <a name="step-5-build-and-run-your-docker-app"></a>5\. Adım: Derleme ve Docker uygulamanızı çalıştırma
 
 Yalnızca tek bir kapsayıcı uygulamanız varsa, Docker Konağı (VM veya fiziksel sunucu) dağıtarak çalıştırmak yeterlidir. Uygulamanızı birden çok hizmetlerini yapılırsa, ancak yapmanız *onu oluşturan*, çok. Farklı seçenekler görelim.
 
@@ -238,7 +238,7 @@ Bu belirli dağıtım için biz 5000 iç bağlantı noktası için 80 numaralı 
 
 **Şekil 4-28**. Dağıtılmış Docker kapsayıcıları ile VM
 
-### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>6. Adım: (Yerel olarak, yerel CD sanal makinenizin) Docker uygulamanızı test edin
+### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>6\. Adım: (Yerel olarak, yerel CD sanal makinenizin) Docker uygulamanızı test edin
 
 Bu adım, uygulamanızı yapmak bağlı olarak değişir.
 

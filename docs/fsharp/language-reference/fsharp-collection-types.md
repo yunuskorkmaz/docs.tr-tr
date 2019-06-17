@@ -2,12 +2,12 @@
 title: F# Koleksiyon Türleri
 description: Hakkında bilgi edinin F# koleksiyon türlerini ve nasıl, .NET Framework koleksiyon türleri farklı.
 ms.date: 05/16/2016
-ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b370d850deaacc961dff9515ffa8c20634af4ed6
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996820"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041718"
 ---
 # <a name="f-collection-types"></a>F# Koleksiyon Türleri
 
@@ -31,7 +31,7 @@ Aşağıdaki tabloda F# koleksiyon türleri.
 
 Bu bölümde, kullanılabilir olan işlevlerin karşılaştırır F# koleksiyon türleri. Burada N birinci koleksiyon boyutudur ve M ikinci koleksiyon boyutu varsa işlevi hesaplama karmaşıklığını verilir. Bir tire (-) Bu işlev koleksiyonu üzerinde kullanılabilir olmadığını gösterir. Dizileri gevşek değerlendirildiği için hemen döndürüldüğünden rağmen yine de numaralandırıldığı zaman dizisi performansını etkiler Seq.distinct gibi bir işlevi O(1) olabilir.
 
-|İşlev|Dizi|List|Dizisi|Eşleme|Ayarlayın|Açıklama|
+|İşlev|Dizi|List|Sequence|Eşleme|Ayarlayın|Açıklama|
 |--------|-----|----|--------|---|---|-----------|
 |Ekleme|O(M)|O(N)|O(N)|-|-|İlk koleksiyonun ikinci koleksiyon öğelerini tarafından izlenen öğeleri içeren yeni bir koleksiyon döndürür.|
 |add|-|-|-|O (log N)|O (log N)|Eklenen öğeyi yeni bir koleksiyon döndürür.|
@@ -50,7 +50,7 @@ Bu bölümde, kullanılabilir olan işlevlerin karşılaştırır F# koleksiyon 
 |countBy|-|-|O(N)|-|-|Bir dizinin her öğesi için bir anahtar oluşturuluyor işlevi uygulanır ve benzersiz anahtarları ve kendi özgün dizideki yinelenme sayısını verir bir dizisini döndürür.|
 |copy|O(N)|-|O(N)|-|-|Koleksiyon kopyalar.|
 |oluşturma|O(N)|-|-|-|-|Tüm başlangıçta belirtilen değere eşit olan tüm öğeleri bir dizi oluşturur.|
-|gecikme|-|-|O(1)|-|-|Oluşturulan bir sıralı bir dizi belirli gecikmeli belirtiminden döndürür.|
+|delay|-|-|O(1)|-|-|Oluşturulan bir sıralı bir dizi belirli gecikmeli belirtiminden döndürür.|
 |difference|-|-|-|-|O (M &#42; log N)|İlk kümeden kaldırılmış ikinci kümenin öğeleri ile yeni bir küme döndürür.|
 |Farklı|||O(1)&AMP;#42;|||Genel karma ve eşitlik karşılaştırmaları girişlere göre yinelenen giriş olmadığından içeren bir dizi döndürür. Bir öğe sırasını birden çok kez oluşursa, sonraki örnekleri atılır.|
 |distinctBy|||O(1)&AMP;#42;|||Belirtilen anahtar oluşturuluyor işlevinin döndürdüğü anahtarlar genel karma ve eşitlik karşılaştırmaları göre yinelenen giriş olmadığından içeren bir dizi döndürür. Bir öğe sırasını birden çok kez oluşursa, sonraki örnekleri atılır.|
@@ -83,6 +83,7 @@ Bu bölümde, kullanılabilir olan işlevlerin karşılaştırır F# koleksiyon 
 |iteri|O(N)|O(N)|O(N)|-|-|Koleksiyonun her öğesine verilen işlevi uygular. İşleve geçirilen tamsayı, öğenin dizinini gösterir.|
 |iteri2|O(N)|O(N)|-|-|-|Dizinleri iki dizideki eşleşen dizinden çekilen bir öğe çiftine verilen işlevi uygular. İşleve geçirilen tamsayı elementler dizinini gösterir. İki dizi aynı uzunlukta olmalıdır.|
 |iter2|O(N)|O(N)|O(N)|-|-|Dizinleri iki dizideki eşleşen dizinden çekilen bir öğe çiftine verilen işlevi uygular. İki dizi aynı uzunlukta olmalıdır.|
+|Son|O(1)|O(N)|O(N)|-|-|Geçerli koleksiyon içinde son öğeyi döndürür.|
 |length|O(1)|O(N)|O(N)|-|-|Koleksiyondaki öğe sayısını döndürür.|
 |map|O(N)|O(N)|O(1)|-|-|Öğeleri verilen işlevin dizinin her öğesine uygulanması sonucu olan bir koleksiyon oluşturur.|
 |map2|O(N)|O(N)|O(1)|-|-|Öğeleri verilen işlevin iki koleksiyon karşılık gelen öğelerle için ikili uygulanması sonucu olan bir koleksiyon oluşturur. Giriş iki dizi aynı uzunlukta olmalıdır.|
@@ -120,7 +121,7 @@ Bu bölümde, kullanılabilir olan işlevlerin karşılaştırır F# koleksiyon 
 |sortInPlaceBy|Ortalama O (log N N)<br /><br />O(N^2) en kötü durumda|-|-|-|-|Yerinde diziyi ve verilen projeksiyon anahtarlarını kullanarak bir dizinin öğeleri sıralar. Öğeleri kullanılarak karşılaştırılır [karşılaştırma](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c).|
 |sortInPlaceWith|Ortalama O (log N N)<br /><br />O(N^2) en kötü durumda|-|-|-|-|Yerinde diziyi ve siparişi olarak verilen karşılaştırma işlevini kullanarak bir dizinin öğeleri sıralar.|
 |sortWith|Ortalama O (log N N)<br /><br />O(N^2) en kötü durumda|O (log N N)|-|-|-|Sırada verilen karşılaştırma işlevini kullanarak ve yeni bir koleksiyon döndüren bir koleksiyonun öğeleri sıralar.|
-|alt|O(N)|-|-|-|-|İNDİS ve uzunluk başlatarak belirtilen belirli alt aralığı içeren bir dizi oluşturur.|
+|sub|O(N)|-|-|-|-|İNDİS ve uzunluk başlatarak belirtilen belirli alt aralığı içeren bir dizi oluşturur.|
 |TOPLA|O(N)|O(N)|O(N)|-|-|Koleksiyondaki öğelerin toplamını döndürür.|
 |sumBy|O(N)|O(N)|O(N)|-|-|Koleksiyonun her öğesine işlevi uygulayarak oluşturulan sonuçları toplamını döndürür.|
 |Tail|-|O(1)|-|-|-|İlk öğesi olmayan listesi döndürür.|

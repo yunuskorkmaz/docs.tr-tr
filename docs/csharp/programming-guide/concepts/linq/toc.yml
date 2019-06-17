@@ -140,7 +140,7 @@
                   href: xdocument-class-overview.md
                 - name: 'Nasıl yapılır: LINQ to XML Örnekleri Derleme'
                   href: how-to-build-linq-to-xml-examples.md
-            - name: XML ağaçlarını
+            - name: XML Ağaçları
               items:
                 - name: İşlevsel Oluşturma (LINQ to XML) Karşılaştırması
                   href: functional-construction-linq-to-xml.md

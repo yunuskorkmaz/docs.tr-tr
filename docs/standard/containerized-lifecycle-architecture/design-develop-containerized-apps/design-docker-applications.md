@@ -3,10 +3,10 @@ title: Docker uygulamaları tasarlama
 description: Mikro hizmet mimarisi için kapsamlı bir kılavuz başvuru, bir konu olduğu için burada bulabilirsiniz, bu kılavuzda ayrıntılı değil.
 ms.date: 02/15/2019
 ms.openlocfilehash: 535b6cefb7371014527032972ec27ebfe4b67ebc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644649"
 ---
 # <a name="design-docker-applications"></a>Docker uygulamaları tasarlama

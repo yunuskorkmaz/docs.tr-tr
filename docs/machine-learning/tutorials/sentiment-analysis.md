@@ -4,12 +4,12 @@ description: Bu öğreticide, elde edilen Web sitesi açıklamaları duyarlılı
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e145e65e22c955bd547b67de545b883fb0fb3bc2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 674dc2d12cb8f65753730e187e13fc5e522ff6b3
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593407"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135701"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Öğretici: ML.NET ikili sınıflandırma ile Web sitesi yorumların düşüncelerini çözümleme
 
@@ -46,7 +46,7 @@ Bu öğreticide kaynak kodunu bulabilirsiniz [dotnet/samples](https://github.com
 ## <a name="prepare-your-data"></a>Verilerinizi hazırlama
 
 > [!NOTE]
-> Bu öğretici için veri kümeleri Kotzias 'kaynak grubundan ayrıntılı özelliklerini kullanarak her bir etiketi için' olan et. Al. 2015 ve barındırılan KDD UCI Machine Learning deposu - Dua, d ve Karra Taniskidou, e (2017). UCI Makine deposu [http://archive.ics.uci.edu/ml]. Irvine, CA: California Üniversitesi, okul bilgi ve bilgisayar Bilimine.
+> Bu öğretici için veri kümeleri Kotzias 'kaynak grubundan ayrıntılı özelliklerini kullanarak her bir etiketi için' olan et. Al. 2015 ve barındırılan KDD UCI Machine Learning deposu - Dua, d ve Karra Taniskidou, e (2017). UCI Makine deposu [http://archive.ics.uci.edu/ml ]. Irvine, CA: California Üniversitesi, okul bilgi ve bilgisayar Bilimine.
 
 1. İndirme [UCI yaklaşım cümleler etiketli veri kümesini ZIP dosyası](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)ve sıkıştırmasını açın.
 
@@ -90,8 +90,8 @@ Giriş veri kümesi sınıfı `SentimentData`, sahip bir `string` kullanıcı yo
 |--------------------------------------|----------|
 |Waitress hizmetinde biraz yavaş.|    0     |
 |Kabuk iyi değil.                    |    0     |
-|WOW... Burası sevdiği.              |    1.     |
-|Hizmet çok sor.              |    1.     |
+|WOW... Burası sevdiği.              |    1\.     |
+|Hizmet çok sor.              |    1\.     |
 
 `SentimentPrediction` Tahmin sınıf, model eğitiminin sonra kullanılır. Devraldığı `SentimentData` görüntülemek için `SentimentText` Öngörüler ile. `SentimentPrediction` sahip tek bir Boole değeri (`Sentiment`) ve bir `PredictedLabel` `ColumnName` özniteliği. `Label` Oluşturabilir ve ayrıca bölünmüş test veri kümesini kullanıma ile model değerlendirmek için kullanılan model ya da onun eğitmek için kullanılır. `PredictedLabel` Tahmin ve değerlendirme sırasında kullanılır. Değerlendirme, eğitim verileri, tahmin edilen değerleri ve modeli kullanılır.
 
@@ -179,8 +179,8 @@ Bir model hazırlarken ve modelin doğruluğunu test etmek için veri kümesinin
     |--------------------------------------|----------|----------------------|
     |Waitress hizmetinde biraz yavaş.|    0     |[0.76, 0.65, 0.44, …] |
     |Kabuk iyi değil.                    |    0     |[0.98, 0.43, 0.54, …] |
-    |WOW... Burası sevdiği.              |    1.     |[0.35, 0.73, 0.46, …] |
-    |Hizmet çok sor.              |    1.     |[0.39, 0, 0.75, …]    |
+    |WOW... Burası sevdiği.              |    1\.     |[0.35, 0.73, 0.46, …] |
+    |Hizmet çok sor.              |    1\.     |[0.39, 0, 0.75, …]    |
 
 ### <a name="add-a-learning-algorithm"></a>Bir öğrenme algoritması Ekle
 
@@ -276,13 +276,13 @@ Ayarlama tahmin aldıktan sonra (`predictions`), [Evaluate()](xref:Microsoft.ML.
 
     [!code-csharp[CallUseModelWithSingleItem](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallUseModelWithSingleItem "Call the UseModelWithSingleItem method")]
 
-3. ilk satırı olarak oluşturmak için aşağıdaki kodu ekleyin `Predict()` yöntemi:
+3. ilk satırı olarak oluşturmak için aşağıdaki kodu ekleyin `UseModelWithSingleItem()` yöntemi:
 
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
 
     [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) geçirin ve ardından verileri tek bir örneğini tahmin gerçekleştirin izin veren bir kolaylık API, bir özelliktir.
 
-4. Eğitilen modelin tahmine test etmek için bir açıklama ekleyin `Predict()` bir örneğini oluşturarak yöntemi `SentimentData`:
+4. Eğitilen modelin tahmine test etmek için bir açıklama ekleyin `UseModelWithSingleItem()` bir örneğini oluşturarak yöntemi `SentimentData`:
 
     [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
 

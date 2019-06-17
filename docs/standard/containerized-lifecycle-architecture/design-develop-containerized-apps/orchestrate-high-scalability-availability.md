@@ -3,10 +3,10 @@ title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri 
 description: Gerçek üretimde uygulamaların dağıtılması ve sistem durumu, iş yükü ve tüm kapsayıcıların yaşam döngüsü işleyen düzenleyicilerle yönetilen gerekir.
 ms.date: 02/15/2019
 ms.openlocfilehash: bde9a2815d0496608b3172582481c169cab37f04
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66195647"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme

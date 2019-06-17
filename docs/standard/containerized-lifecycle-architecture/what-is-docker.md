@@ -3,10 +3,10 @@ title: Docker nedir?
 description: Docker'ın Anlayışınızı içinde daha ayrıntılı alın, burada basit benzerleme yardımcı olabilir.
 ms.date: 02/15/2019
 ms.openlocfilehash: 7747c4985af27be0a073fad2f22622f697f4ce27
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644771"
 ---
 # <a name="what-is-docker"></a>Docker nedir?

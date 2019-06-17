@@ -3,10 +3,10 @@ title: AKS/Kubernetes kümeler halinde Linux kapsayıcıları olarak dağıtıla
 description: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
 ms.date: 02/25/2019
 ms.openlocfilehash: 89843e0041c12f001f974360da2e5903499155d1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644791"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Linux kapsayıcıları olarak dağıtılan bir AKS/Kubernetes orchestrator içinde ASP.NET Core 2.2 uygulamalar oluşturun
@@ -147,7 +147,7 @@ Bu komut biraz uzun sürebilir. görüntü karşıya ancak işlem sırasında ge
 
 **Şekil 4-46**. Düğüm görünümü
 
-Sonraki adım, AKS Kubernetes kümenize kapsayıcınızı dağıtmaktır. Bunun için bir dosyasına ihtiyacınız vardır (**.yml dosyası dağıtma**), aşağıdakileri içerir:
+Sonraki adım, AKS Kubernetes kümenize kapsayıcınızı dağıtmaktır. Bunun için bir dosyasına ihtiyacınız vardır ( **.yml dosyası dağıtma**), aşağıdakileri içerir:
 
 ```yml
 apiVersion: apps/v1beta1

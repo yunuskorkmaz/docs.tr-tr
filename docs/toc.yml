@@ -807,6 +807,10 @@
               href: fsharp/language-reference/generics/statically-resolved-type-parameters.md
         - name: Kayıtlar
           href: fsharp/language-reference/records.md
+        - name: Anonim Kayıtlar
+          href: fsharp/language-reference/anonymous-records.md
+        - name: Kayıt İfadelerini Kopyalama ve Güncelleştirme
+          href: fsharp/language-reference/copy-and-update-record-expressions.md
         - name: Ayrılmış Birleşimler
           href: fsharp/language-reference/discriminated-unions.md
         - name: Numaralandırmalar
@@ -854,8 +858,6 @@
           href: fsharp/language-reference/delegates.md
         - name: Nesne İfadeleri
           href: fsharp/language-reference/object-expressions.md
-        - name: Kayıt İfadelerini Kopyalama ve Güncelleştirme
-          href: fsharp/language-reference/copy-and-update-record-expressions.md
         - name: Atama ve Dönüştürmeler
           href: fsharp/language-reference/casting-and-conversions.md
         - name: Erişim Denetimi

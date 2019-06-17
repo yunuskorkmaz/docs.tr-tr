@@ -3,10 +3,10 @@ title: Kapsayıcı uygulamaları için Microsoft platformu ve araçlarına giri�
 description: Docker uygulama yaşam döngüsü desteklemek için Microsoft'un teklifleri tanışın.
 ms.date: 02/15/2019
 ms.openlocfilehash: 6907528a5d7ff354a312e7575531b9c608cb479f
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66195591"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft Platformu ve araçları kapsayıcılı uygulamalar için giriş

@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19f1d3d1d94db885938a5da3f3b66c8e554205b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d636496599d4419518ce53c956c83f6ae175aa8
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792853"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135655"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Paketleme ve dağıtma kaynakları .NET uygulamaları
 
@@ -55,7 +55,7 @@ Bu model için çeşitli avantajları vardır:
 
 ## <a name="resource-naming-conventions"></a>Kaynak Adlandırma Kuralları
 
-Uygulamanızdaki kaynaklarından paketlediğinizde, ortak dil çalışma zamanı bekliyor kaynak adlandırma kuralları kullanarak bunları adı olmalıdır. Çalışma zamanı kaynak kültür adını kullanarak tanımlar. Her kültür, genellikle bir dili ile ilişkilendirilmiş bir iki harf, küçük harf kültür adı birleşimi olan benzersiz bir ad verilir ve gerekirse, bir iki harfli, büyük bir alt ad ilişkili bir ülke veya bölge ile. Alt ad ayrılmış bir tire (-), bir kültür adı izler. Örnek, Japonya'da en-US olarak Amerika Birleşik Devletleri, Avusturya konuşulan gibi Almanca için Almanya veya de AT konuşulan gibi Almanca için de-DE, konuşulan İngilizce konuşulan olarak Japonca için ja-JP verilebilir. Bkz: [Ulusal dil desteği (NLS) API Başvurusu](https://go.microsoft.com/fwlink/?LinkId=200048) Go Global Geliştirme Merkezi kültür adları tam listesi için.
+Uygulamanızdaki kaynaklarından paketlediğinizde, ortak dil çalışma zamanı bekliyor kaynak adlandırma kuralları kullanarak bunları adı olmalıdır. Çalışma zamanı kaynak kültür adını kullanarak tanımlar. Her kültür, genellikle bir dili ile ilişkilendirilmiş bir iki harf, küçük harf kültür adı birleşimi olan benzersiz bir ad verilir ve gerekirse, bir iki harfli, büyük bir alt ad ilişkili bir ülke veya bölge ile. Alt ad ayrılmış bir tire (-), bir kültür adı izler. Örnek, Japonya'da en-US olarak Amerika Birleşik Devletleri, Avusturya konuşulan gibi Almanca için Almanya veya de AT konuşulan gibi Almanca için de-DE, konuşulan İngilizce konuşulan olarak Japonca için ja-JP verilebilir. Bkz: **dil etiketi** sütununda [Windows tarafından desteklenen dil/bölge adlarının listesini](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Kültür adları izleyin tarafından tanımlanan standart [BCP 47](https://tools.ietf.org/html/bcp47).
 
 > [!NOTE]
 > Kaynak dosyaları oluşturma hakkında daha fazla bilgi için bkz: [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) ve [uydu derlemeleri oluşturma](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).

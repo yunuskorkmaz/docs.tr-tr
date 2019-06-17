@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16776e83c8bae6cc82329a8f709fd9d1d7cab145
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63a3ee099d4256a4bc800f74615fca8eaec2a77f
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634334"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135689"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Normal İfadelerdeki Gruplandırma Yapıları
 Yapıları gruplandırma, normal ifade alt ifadeler tanımlamak ve bir Giriş dizesinin alt dizeler yakalayın. Yapıları gruplandırma, aşağıdakileri yapmak için kullanabilirsiniz:  
@@ -129,7 +129,7 @@ Yapıları gruplandırma, normal ifade alt ifadeler tanımlamak ve bir Giriş di
 |Sayı|Ad|Desen|  
 |------------|----------|-------------|  
 |0|0 (varsayılan adı)|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
-|1.|1 (varsayılan adı)|`((?<One>abc)\d+)`|  
+|1\.|1 (varsayılan adı)|`((?<One>abc)\d+)`|  
 |2|2 (varsayılan adı)|`(.*)`|  
 |3|Bir|`(?<One>abc)`|  
 |4|İki|`(?<Two>xyz)`|  
@@ -187,7 +187,7 @@ Yapıları gruplandırma, normal ifade alt ifadeler tanımlamak ve bir Giriş di
   
  Burada *name1* (isteğe bağlı), geçerli grubu, *name2* önceden tanımlanmış bir grup ve *subexpression* herhangi geçerli bir normal ifade deseni. Bir dengeleme grubu tanımını tanımını siler *name2* aralığını depolar *name2* ve *name1* içinde *name1*. Hayır ise *name2* grubu tanımlanır, eşleşme provided. Son tanımını silme çünkü *name2* önceki tanımını ortaya çıkarır *name2*, bu yapı için Grup yakalamaları yığınını kullanmanıza olanak tanıyan *name2* gibi bir parantezler gibi iç içe geçmiş yapılar izlemek veya açma ve kapatma köşeli ayraçlar sayacı.  
   
- Bir dengeleme grubu tanımını kullanan *name2* yığını olarak. Her iç içe geçmiş yapısı başlangıç karakteri grubunda ve yerleştirilir, <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> koleksiyonu. Kendi karakter açma karşılık gelen kapanış karakter eşleştiğinde grubundan kaldırılır ve <xref:System.Text.RegularExpressions.Group.Captures%2A> koleksiyonu bir azaltılır. Açılış ve kapanış karakterlerini tüm iç içe yapılar, eşleşen sonra *name1* boştur.  
+ Bir dengeleme grubu tanımını kullanan *name2* yığını olarak. Her iç içe geçmiş yapısı başlangıç karakteri grubunda ve yerleştirilir, <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> koleksiyonu. Kendi karakter açma karşılık gelen kapanış karakter eşleştiğinde grubundan kaldırılır ve <xref:System.Text.RegularExpressions.Group.Captures%2A> koleksiyonu bir azaltılır. Açılış ve kapanış karakterlerini tüm iç içe yapılar, eşleşen sonra *name2* boştur.  
   
 > [!NOTE]
 >  Sonra normal ifadeye uygun açma kullanmak için aşağıdaki örneği değiştirin ve bir iç içe geçmiş yapısı karakterinin kapatmadan önce matematik deyimlerde ya da içeren satırları program kod gibi en iç içe geçmiş yapılar işlemek için kullanabilirsiniz birden çok iç içe geçmiş yöntemi çağırır.  
@@ -225,7 +225,7 @@ Yapıları gruplandırma, normal ifade alt ifadeler tanımlamak ve bir Giriş di
   
 |Adım|Desen|Sonuç|  
 |----------|-------------|------------|  
-|1.|`^`|Giriş dizesinin başında eşleşmeye başlatır|  
+|1\.|`^`|Giriş dizesinin başında eşleşmeye başlatır|  
 |2|`[^<>]*`|Açılı ayraç karakterleri Sol açılı ayraç önce arar; herhangi bir eşleşme bulur.|  
 |3|`(((?'Open'<)`|Sol açılı ayraç içinde eşleşen "\<abc >" ve buna atayan `Open` grubu.|  
 |4|`[^<>]*`|"Abc" ile eşleşir.|  

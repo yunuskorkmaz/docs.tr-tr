@@ -2,12 +2,12 @@
 title: Dize İşlevleri
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3eb70151628e32f6ad0a87be8ff0cd071ae89235
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879131"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041601"
 ---
 # <a name="string-functions"></a>Dize İşlevleri
 SQL Server (SqlClient) için .NET Framework veri sağlayıcısı sağlar `String` girdi işlemleri işlevleri `String` ve dönüş bir `String` veya sayısal bir değer sonucu. Bu işlevler SqlServer ad alanında SqlClient kullanırken, kullanılabilir bağımlıdır. Bir sağlayıcının ad özelliği, hangi önekin türleri ve işlevleri gibi belirli yapılar için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar.  
@@ -27,7 +27,7 @@ SQL Server (SqlClient) için .NET Framework veri sağlayıcısı sağlar `String
 |`NCHAR(expression)`|Bir Unicode döndürür `String` belirtilen tamsayı kodla Unicode standardı tarafından tanımlanan.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: Bir `Int32`.<br /><br /> **Dönüş değeri**<br /><br /> Bir Unicode `String`.<br /><br /> **Örnek**<br /><br /> `SqlServer.NCHAR(65)`|  
 |`PATINDEX('%pattern%', expression)`|Belirtilen desenin dizenin başlangıç konumunu döndürür `String` ifade.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `'%pattern%'`: Bir ASCII veya Unicode `String` türü. Joker karakterler kullanılabilir. Ancak, % karakter önceki ve sonraki desen gelmelidir (ilk veya son karakter arar hariç).<br /><br /> `expression`: Bir ASCII veya Unicode `String` aramak için belirtilen deseni.<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.<br /><br /> **Örnek**<br /><br /> `SqlServer.PATINDEX('abc', 'ab')`|  
 |`QUOTENAME('char_string' [, 'quote_char'])`|Bir Unicode döndürür `String` tanımlayıcısı giriş dizesi geçerli bir SQL Server 2005 hale getirmek için eklenen sınırlayıcılar ile ayrılmış.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `char_string`: Bir Unicode `String`.<br /><br /> `quote_char`: Ayırıcı olarak kullanılacak bir tek karakter dizesi. Tek tırnak işareti ('), sol veya sağ köşeli ayraç ([]) veya çift tırnak işareti (") olabilir. Varsa `quote_char` belirtilmezse, köşeli ayraçlar kullanılır.<br /><br /> **Dönüş değeri**<br /><br /> Bir Unicode `String`.<br /><br /> **Örnek**<br /><br /> `SqlServer.QUOTENAME('abc[]def')`|  
-|`REPLACE(expression1, expression2, expression3)`|Bir karakter ifadesi saatleri için belirtilen sayıda yineler.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression1`: Aranacak dize ifadesi. string_expression1 bir Unicode veya bir ASCII dize türü olabilir.<br /><br /> `expression2`: Bulunacak alt dize. string_expression2 bir Unicode veya bir ASCII dize türü olabilir.<br /><br /> `expression3`; Yeni dize. string_expression3 bir Unicode veya bir ASCII dize türü olabilir.<br /><br /> **Örnek**<br /><br /> `SqlServer.REPLACE('aabbcc', 'bc', 'zz')`|  
+|`REPLACE(expression1, expression2, expression3)`|Bir karakter ifadesi, başka bir karakter ifadesi ile değiştirir.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression1`: Aranacak dize ifadesi. `expression1` bir Unicode veya ASCII dize türü olabilir.<br /><br /> `expression2`: Bulunacak alt dize. `expression2` bir Unicode veya ASCII dize türü olabilir.<br /><br /> `expression3`; Yeni dize. `expression3` bir Unicode veya ASCII dize türü olabilir.<br /><br /> **Örnek**<br /><br /> `SqlServer.REPLACE('aabbcc', 'bc', 'zz')`|  
 |`REPLICATE(char_expression, int_expression)`|Bir karakter ifadesi saatleri için belirtilen sayıda yineler.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `char_expression`: Bir Unicode veya ASCII `String` türü.<br /><br /> `int_expression`: `Int64` (SQL Server 2000'de desteklenmez) veya `Int32`.<br /><br /> **Dönüş değeri**<br /><br /> Bir Unicode veya ASCII `String` türü.<br /><br /> **Örnek**<br /><br /> `SqlServer.REPLICATE('aa',2)`|  
 |`REVERSE(expression)`|Giriş dizesi ters kendi karakter konumlarını içeren bir Unicode veya ASCII dizesi döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: Bir Unicode veya ASCII `String` türü.<br /><br /> **Dönüş değeri**<br /><br /> Bir Unicode veya ASCII `String` türü.<br /><br /> **Örnek**<br /><br /> `SqlServer.REVERSE('abcd')`|  
 |`RIGHT(char_expression, count)`|Belirtilen sayıda karakteri olan bir karakter dizesi sağ bölümünü döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `char_expression`: Bir Unicode veya ASCII dize türü. CAST işlevi açıkça character_expression dönüştürmek için kullanın.<br /><br /> `count`: Bir `Int64` (SQL Server 2000'de döndürülmez) veya `Int32` character_expression karakterlerinin kaçının tutulacağını döndürülecek belirten türü.<br /><br /> **Dönüş değeri**<br /><br /> Bir ASCII `String` türü.<br /><br /> **Örnek**<br /><br /> `SqlServer.RIGHT('SQL Server', 6)`|  

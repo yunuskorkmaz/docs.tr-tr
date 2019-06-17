@@ -3,10 +3,10 @@ title: Kapsayıcıları temel alan modern uygulamalara giden yol
 description: Docker, kapsayıcılar ve mikro hizmet mimarisi BT'ye çözüm olmadığını anlama. Burada karar vermenize yardımcı olacak bazı başvurular bulabilirsiniz.
 ms.date: 11/23/2018
 ms.openlocfilehash: bd5a53ec557b7dd90733a93d0cb03f19e3bc2940
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65641268"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>Kapsayıcıları temel alan modern uygulamalara giden yol

@@ -4,14 +4,14 @@ description: .NET yerel gösterimine türlerinizi nasıl sürekliliğe devreder 
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cb18a7607a3d99907401543b4d37995a956a3920
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065467"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041789"
 ---
-# <a name="type-marshaling"></a>Sıralama türü
+# <a name="type-marshaling"></a>Tür hazırlama
 
 **Hazırlama** yönetilen ve yerel kod arasında çapraz ihtiyaç duyduğunda, tür dönüştürme işlemidir.
 
@@ -80,6 +80,20 @@ Bazı türleri parametre olarak ve alanlar olarak değil yalnızca sıralanabili
 
 Bu varsayılanlar, tam olarak aradığınız şeyi yapmazsanız, parametreleri nasıl sıralanmış özelleştirebilirsiniz. [Parametreyi](customize-parameter-marshaling.md) makalesi Yürüyüşü nasıl farklı parametre türlerinin nasıl özelleştirildiği size hazırlanır.
 
+## <a name="default-marshaling-in-com-scenarios"></a>Varsayılan COM senaryolarda hazırlama
+
+. NET'te COM nesnelerinde yöntemleri çağırarak, .NET çalışma zamanı ortak COM semantiği eşleştirilecek kuralları hazırlama varsayılan değiştirir. Aşağıdaki tablo, .NET çalışma zamanları COM senaryolarda kullandığı kurallarını listeler:
+
+| .NET türü | Yerel bir tür (COM yöntem çağrıları) |
+|-----------|--------------------------------|
+| `bool`    | `VARIANT_BOOL`                 |
+| `StringBuilder` | `LPWSTR`                 |
+| `string`  | `BSTR`                         |
+| Temsilci türleri | `_Delegate*` .NET Framework'teki. ' De .NET Core izin verilmiyor. |
+| `System.Drawing.Color` | `OLECOLOR`        |
+| .NET dizisi | `SAFEARRAY`                   |
+| `string[]` | `SAFEARRAY` ' ın `BSTR`s        |
+
 ## <a name="marshaling-classes-and-structs"></a>Sınıfları ve yapıları sıralama
 
 Sıralama türü başka bir yapıda, yönetilmeyen bir yönteme geçirmek nasıl yönüdür. Örneğin, bazı yönetilmeyen yöntemler yapı parametre olarak gerektirir. Bu gibi durumlarda, yönetilen bölümünde bir parametresi olarak kullanılabilmesi için dünyanın karşılık gelen bir yapı ya da bir sınıf oluşturmanız gerekir. Ancak, yalnızca bir sınıf tanımlama yeterli değildir, ayrıca Sıralayıcı, yönetilmeyen yapı için sınıf alanları eşlemeyle ilgili bilgi istemek gerekir. Burada `StructLayout` özniteliği yararlı olur.
@@ -107,7 +121,7 @@ public static void Main(string[] args) {
 }
 ```
 
-Önceki kod çağırma basit bir örneğini gösterir `GetSystemTime()` işlevi. 4. satırda ilginç bitidir. Öznitelik sınıfı alanlarını (yönetilmeyen) diğer tarafında struct sırayla eşlenmelidir belirtir. Bu adlandırma alanlarını'aşağıdaki örnekte gösterilen yönetilmeyen yapının karşılık gerektiğinde yalnızca bunların sırası önemlidir, önemli olmadığı anlamına gelir:
+Önceki kod çağırma basit bir örneğini gösterir `GetSystemTime()` işlevi. 4\. satırda ilginç bitidir. Öznitelik sınıfı alanlarını (yönetilmeyen) diğer tarafında struct sırayla eşlenmelidir belirtir. Bu adlandırma alanlarını'aşağıdaki örnekte gösterilen yönetilmeyen yapının karşılık gerektiğinde yalnızca bunların sırası önemlidir, önemli olmadığı anlamına gelir:
 
 ```c
 typedef struct _SYSTEMTIME {

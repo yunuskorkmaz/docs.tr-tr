@@ -3,10 +3,10 @@ title: Docker ve Microsoft Azure kullanarak kapsayıcı uygulamaları tasarlama 
 description: Şimdi Docker uygulama yaşam döngüsü Geliştirme/tasarım iş yüküne içine alın.
 ms.date: 02/15/2019
 ms.openlocfilehash: ad7f635feab21cd6e6b31c0b5d43fb2598ffa16c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65641126"
 ---
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>Docker ve Microsoft Azure kullanarak uygulamaları tasarlama ve geliştirme kapsayıcılı
