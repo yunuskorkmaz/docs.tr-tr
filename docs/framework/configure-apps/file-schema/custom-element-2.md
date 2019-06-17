@@ -19,7 +19,7 @@ ms.locfileid: "66300766"
 
 <span data-ttu-id="b633f-103">Ayarları kullanan özel yapılandırma bölümleri tanımlar <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> sınıfları.</span><span class="sxs-lookup"><span data-stu-id="b633f-103">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span>
 
-<span data-ttu-id="b633f-104">[ **\<Yapılandırma >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)\\</span><span class="sxs-lookup"><span data-stu-id="b633f-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)\\</span></span>
+<span data-ttu-id="b633f-104">[ **\<Yapılandırma >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="b633f-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)</span></span>\
 <span data-ttu-id="b633f-105">&nbsp;&nbsp; **\<sectionName>**</span><span class="sxs-lookup"><span data-stu-id="b633f-105">&nbsp;&nbsp;**\<sectionName>**</span></span>
 
 ## <a name="attributes"></a><span data-ttu-id="b633f-106">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="b633f-106">Attributes</span></span>
@@ -30,7 +30,7 @@ ms.locfileid: "66300766"
 
 |     | <span data-ttu-id="b633f-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b633f-109">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="b633f-110"> *\*\<Yapılandırma >** </span><span class="sxs-lookup"><span data-stu-id="b633f-110">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="b633f-111">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="b633f-111">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="b633f-110"> **\<Yapılandırma >** </span><span class="sxs-lookup"><span data-stu-id="b633f-110">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="b633f-111">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="b633f-111">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
 ## <a name="child-elements"></a><span data-ttu-id="b633f-112">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="b633f-112">Child elements</span></span>
 

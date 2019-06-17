@@ -6,30 +6,30 @@ helpviewer_keywords:
 - TextFieldParser class, aboutTextFieldParser class
 - TextFieldParser class
 ms.assetid: d44bd2b0-7dfc-410b-a48b-534c1e97460b
-ms.openlocfilehash: 15eb5a30cf73f118dd4ad3a8d2194c8190d9c706
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da5f9058efcbd70c5c76bb1307c126a14861ffc7
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054854"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041769"
 ---
-# <a name="textfieldparser-object"></a><span data-ttu-id="5d44e-102">TextFieldParser Nesnesi</span><span class="sxs-lookup"><span data-stu-id="5d44e-102">TextFieldParser Object</span></span>
-<span data-ttu-id="5d44e-103">Yapılandırılmış metin ayrıştırmak için yöntemler ve özellikler sağlar. dosyaları.</span><span class="sxs-lookup"><span data-stu-id="5d44e-103">Provides methods and properties for parsing structured text files.</span></span>  
+# <a name="textfieldparser-object"></a><span data-ttu-id="6c6a6-102">TextFieldParser Nesnesi</span><span class="sxs-lookup"><span data-stu-id="6c6a6-102">TextFieldParser Object</span></span>
+<span data-ttu-id="6c6a6-103">Yapılandırılmış metin ayrıştırmak için yöntemler ve özellikler sağlar. dosyaları.</span><span class="sxs-lookup"><span data-stu-id="6c6a6-103">Provides methods and properties for parsing structured text files.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5d44e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5d44e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6c6a6-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6c6a6-104">Syntax</span></span>  
   
 ```  
 Public Class TextFieldParser  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="5d44e-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5d44e-105">Remarks</span></span>  
- <span data-ttu-id="5d44e-106">Yöntemleri ve özellikleri hakkında bilgi için `TextFieldParser` nesne, bkz: <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.</span><span class="sxs-lookup"><span data-stu-id="5d44e-106">For information about the methods and properties of the `TextFieldParser` object, see <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6c6a6-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6c6a6-105">Remarks</span></span>  
+ <span data-ttu-id="6c6a6-106">Yöntemleri ve özellikleri hakkında bilgi için `TextFieldParser` nesne, bkz: <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.</span><span class="sxs-lookup"><span data-stu-id="6c6a6-106">For information about the methods and properties of the `TextFieldParser` object, see <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.</span></span>  
   
- <span data-ttu-id="5d44e-107">Daha fazla bilgi için [dosyaları okuma](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).</span><span class="sxs-lookup"><span data-stu-id="5d44e-107">For more information, see [Reading from Files](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).</span></span>  
+ <span data-ttu-id="6c6a6-107">Daha fazla bilgi için [dosyaları okuma](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).</span><span class="sxs-lookup"><span data-stu-id="6c6a6-107">For more information, see [Reading from Files](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5d44e-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5d44e-108">Requirements</span></span>  
- <span data-ttu-id="5d44e-109">**Namespace:** <xref:Microsoft.VisualBasic.FileIO></span><span class="sxs-lookup"><span data-stu-id="5d44e-109">**Namespace:** <xref:Microsoft.VisualBasic.FileIO></span></span>  
+## <a name="requirements"></a><span data-ttu-id="6c6a6-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6c6a6-108">Requirements</span></span>  
+ <span data-ttu-id="6c6a6-109">**Namespace:** <xref:Microsoft.VisualBasic.FileIO></span><span class="sxs-lookup"><span data-stu-id="6c6a6-109">**Namespace:** <xref:Microsoft.VisualBasic.FileIO></span></span>  
   
- <span data-ttu-id="5d44e-110">**Sınıf:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser></span><span class="sxs-lookup"><span data-stu-id="5d44e-110">**Class:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser></span></span>  
+ <span data-ttu-id="6c6a6-110">**Sınıf:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser></span><span class="sxs-lookup"><span data-stu-id="6c6a6-110">**Class:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser></span></span>  
   
- <span data-ttu-id="5d44e-111">**Derleme:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d44e-111">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span></span>
+ <span data-ttu-id="6c6a6-111">**Derleme:** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)</span><span class="sxs-lookup"><span data-stu-id="6c6a6-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>

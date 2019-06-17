@@ -17,7 +17,7 @@
       href: tutorials/predict-prices.md
     - name: Süsen çiçeklerini kategorilere ayırma (k-ortalamalar kümesi)
       href: tutorials/iris-clustering.md
-    - name: Filmler (Matris factorization) öneririz.
+    - name: Film önerme (matrisi çarpanlarına ayırma)
       href: tutorials/movie-recommendation.md
     - name: Görüntü Sınıflandırması (öğrenme aktarımı)
       href: tutorials/image-classification.md

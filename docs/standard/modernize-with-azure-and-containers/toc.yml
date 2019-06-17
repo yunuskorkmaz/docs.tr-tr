@@ -5,7 +5,7 @@
       href: lift-and-shift-existing-apps-azure-iaas.md
     - name: İlişkisel veritabanlarınızı Azure'a geçirme
       href: migrate-your-relational-databases-to-azure.md
-    - name: Bulut için iyileştirilmiş için var olan .NET uygulamalarını modernleştirme
+    - name: Mevcut .NET uygulamalarını Bulut için İyileştirilmiş olarak modernize etme
       href: ./modernize-existing-apps-to-cloud-optimized/index.md
       items:
         - name: Mevcut .NET uygulamalarını Bulut için İyileştirilmiş olarak modernize etme nedenleri
