@@ -2,12 +2,12 @@
 title: Kaynak Satırı, Dosya ve Yol Tanımlayıcıları
 description: Yerleşik kullanmayı öğrenin F# kaynağına erişmek etkinleştirdiğiniz tanımlayıcı değerlerini, sayı, dizin ve dosya adı, kodunuzda satır.
 ms.date: 05/16/2016
-ms.openlocfilehash: 4b145fe1fe20e3d7f868558e33bab26204fb0125
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f2048aed9ef75037b43cd091a749e3d6bbaf9a3
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663628"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152060"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>Kaynak Satırı, Dosya ve Yol Tanımlayıcıları
 
@@ -31,7 +31,7 @@ Kullanılabilir kaynak satırı, dosya ve yol tanımlayıcıları aşağıdaki t
 |---------------------|-----------|
 |`__LINE__`|Geçerli satır numarası değerlendirir dikkate `#line` yönergeleri.|
 |`__SOURCE_DIRECTORY__`|Kaynak dizin geçerli tam yoluna değerlendirir dikkate `#line` yönergeleri.|
-|`__SOURCE_FILE__`|Geçerli kaynak dosya adını ve yolunu da değerlendirir dikkate `#line` yönergeleri.|
+|`__SOURCE_FILE__`|Yol olmadan geçerli kaynak dosya adı olarak değerlendirilen dikkate `#line` yönergeleri.|
 
 Hakkında daha fazla bilgi için `#line` yönergesine bakın [derleyici yönergeleri](compiler-directives.md).
 
@@ -46,7 +46,7 @@ Aşağıdaki kod örneği, bu değerlerin kullanımını gösterir.
 ```
 Line: 4
 Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo
-Source File: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo\Program.fs
+Source File: Program.fs
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.

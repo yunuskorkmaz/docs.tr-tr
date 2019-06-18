@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 9cf977be84a4d3098e009d5a58d0c12ad2000e92
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 43434b08d7eecde2a35ee3822d36c6da3a700c20
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135643"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67151961"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Statik Oluşturucular (C# Programlama Kılavuzu)
 Statik Oluşturucu herhangi başlatmak için kullanılan [statik](../../../csharp/language-reference/keywords/static.md) verileri veya yalnızca bir kez gerçekleştirilmesi gereken belirli bir eylemi gerçekleştirmek için. İlk örneği oluşturulduğunda veya herhangi bir statik üye başvurulan önce otomatik olarak adlandırılır.  
@@ -66,5 +66,5 @@ Daha fazla bilgi için [statik oluşturucular](~/_csharplang/spec/classes.md#sta
 - [Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)
 - [Statik Sınıflar ve Statik Sınıf Üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)
-- [Oluşturucu tasarımı yönergeleri](../../../docs/standard/design-guidelines/constructor.md#type-constructor-guidelines)
+- [Oluşturucu tasarımı yönergeleri](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
 - [Güvenlik Uyarısı - CA2121: Statik oluşturucular özel olmalıdır](https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2121-static-constructors-should-be-private)

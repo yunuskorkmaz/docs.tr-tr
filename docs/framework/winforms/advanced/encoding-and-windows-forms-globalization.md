@@ -19,12 +19,12 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: 3a9d891fe898cf691a5f0d36e6360c2a73fb199d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8e56642b6325454d2d55cd3a3d3a83d201c2eb5
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004529"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67151988"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>Kodlama ve Windows Forms Genelleştirme
 Windows Forms uygulamaları tamamen Unicode-her karakter, hangi platformu, program veya dili ne olursa olsun, benzersiz bir numara tarafından temsil edilen anlamı etkindir. Unicode hakkında daha fazla bilgi için bkz. [Unicode consortium Web sitesi](https://www.unicode.org).  
@@ -32,7 +32,7 @@ Windows Forms uygulamaları tamamen Unicode-her karakter, hangi platformu, progr
 ## <a name="benefits-of-unicode"></a>Unicode avantajları  
  Unicode etkin formlar avantajları dahil olan komut dosyaları ile çalışma olanağını salt Unicode, Hintçe gibi. Ayrıca, tek bir form üzerinde birden çok dil kullanabilirsiniz. Unicode tüm karakterleri iki bayt uzunluğunda olduğundan özel çaba çift baytlık karakterler temsil etmek için gereklidir. Ayrıca, tek bir kümesi tüm platformlarda çalışacak bir kod yazabilirsiniz. Bu, tablonuz Windows NT gibi farklı platformlar için farklı kod yazmak Visual Basic'in önceki sürümlerden farklıdır ve [!INCLUDE[win98](../../../../includes/win98-md.md)].  
   
- Ancak, belirli denetimler Unicode desteği olmayan [!INCLUDE[win98](../../../../includes/win98-md.md)] ve Windows Millennium Edition. Tüm ortak denetim devralır, bu denetimler, Windows kod sayfaları ile veri olarak işleyecek [!INCLUDE[vcpransi](../../../../includes/vcpransi-md.md)]. Bu denetimler: <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.DateTimePicker>, <xref:System.Windows.Forms.MonthCalendar>, <xref:System.Windows.Forms.TrackBar>, <xref:System.Windows.Forms.ProgressBar>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolBar>, ve <xref:System.Windows.Forms.StatusBar>. Sonuç olarak, listelenen platformları üzerinde bu denetimlerde Unicode veriler görüntülenemiyor. Örneğin, Japonca karakterler bir İngilizce görüntüleyemiyor [!INCLUDE[win98](../../../../includes/win98-md.md)] işletim sistemi.  
+ Ancak, belirli denetimler Unicode desteği olmayan [!INCLUDE[win98](../../../../includes/win98-md.md)] ve Windows Millennium Edition. Her biri, ortak denetim devralır, bu denetimler, Windows kod sayfaları verilerle ANSI işler. Bu denetimler: <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.DateTimePicker>, <xref:System.Windows.Forms.MonthCalendar>, <xref:System.Windows.Forms.TrackBar>, <xref:System.Windows.Forms.ProgressBar>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolBar>, ve <xref:System.Windows.Forms.StatusBar>. Sonuç olarak, listelenen platformları üzerinde bu denetimlerde Unicode veriler görüntülenemiyor. Örneğin, Japonca karakterler bir İngilizce görüntüleyemiyor [!INCLUDE[win98](../../../../includes/win98-md.md)] işletim sistemi.  
   
  Unicode uyumlu alternatifleri için <xref:System.Windows.Forms.ToolBar> ve <xref:System.Windows.Forms.StatusBar> denetimlerini kullanmaya <xref:System.Windows.Forms.ToolStrip> ve <xref:System.Windows.Forms.StatusStrip> eski bu denetimleri değiştirin kontrol eder. Uygulamanızı görsel öğe arasındaki benzer bir görünümü ve deneyimini korumak için kullanın <xref:System.Windows.Forms.MenuStrip> yerine işleme menü denetimi <xref:System.Windows.Forms.MainMenu>. Gibi <xref:System.Windows.Forms.ToolStrip> ve <xref:System.Windows.Forms.StatusStrip>, <xref:System.Windows.Forms.MenuStrip> ayrıca işleyebilir ve Unicode karakteri görüntülenir.  
   

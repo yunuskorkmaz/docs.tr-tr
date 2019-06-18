@@ -2,12 +2,12 @@
 title: İçindeki yenilikler C# 8.0 - C# Kılavuzu
 description: Uygulamasında kullanılabilen yeni özellikleri genel bakış C# 8.0. Bu makalede, preview 5 ile güncel durumda.
 ms.date: 02/12/2019
-ms.openlocfilehash: e2f3c4f2385873d37c3b125e526913c30d848932
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041589"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67151975"
 ---
 # <a name="whats-new-in-c-80"></a>İçindeki yenilikler C# 8.0
 
@@ -381,7 +381,7 @@ Bu dil desteği, iki yeni türler ve iki yeni işleç kullanır.
 
 Dizinler için kuralları başlayalım. Bir dizi göz önünde bulundurun `sequence`. `0` Dizin aynıdır `sequence[0]`. `^0` Dizin aynıdır `sequence[sequence.Length]`. Unutmayın `sequence[^0]` gibi bir özel durum `sequence[sequence.Length]` yapar. Herhangi bir sayı için `n`, dizin `^n` aynı `sequence.Length - n`.
 
-Bir aralığı belirtir *Başlat* ve *son* aralığının. Aralığın başlangıç kapsamlı ve aralığın özel anlamı *Başlat* aralığa dahil olan ancak *son* aralığında yer almaz. Aralığın `[0..^0]` gibi tüm aralığını temsil eden `[0..sequence.Length]` tüm aralığını temsil eder. 
+Bir aralığı belirtir *Başlat* ve *son* aralığının. Aralığın başlangıcını dahil, ancak aralığın özel anlamı *Başlat* aralığa dahil olan ancak *son* aralığında yer almaz. Aralığın `[0..^0]` gibi tüm aralığını temsil eden `[0..sequence.Length]` tüm aralığını temsil eder. 
 
 Bazı örneklere bakalım. Aşağıdaki dizinin başından ve sonundan dizinini ile açıklanan göz önünde bulundurun:
 
