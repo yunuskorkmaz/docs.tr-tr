@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 4641c1c63a4f3c13cefb573dacf4e88b5d63077e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2d926fb3f630d2a1af00242f94ddcb3c2dc284df
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881183"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170062"
 ---
 # <a name="hosting-services"></a>Barındırma Hizmetleri
 Etkin duruma gelmesi bir hizmet oluşturup kendi bağlam ve yaşam süresini denetleyen bir çalışma zamanı ortamında barındırılması gerekir. Windows Communication Foundation (WCF) hizmetlerini destekleyen yönetilen kodu herhangi bir Windows işlem içinde çalıştırmak için tasarlanmıştır.  
@@ -23,7 +23,7 @@ Etkin duruma gelmesi bir hizmet oluşturup kendi bağlam ve yaşam süresini den
 #### <a name="self-hosting-in-a-managed-application"></a>Kendi kendine yönetilen bir uygulamada barındırma  
  WCF hizmetleri, yönetilen bir uygulamada barındırılabilir. Dağıtmak için en az bir altyapı gerektiğinden bu en esnek bir seçenektir. Hizmet içinde yönetilen bir uygulama kodu için kod ekleme ve oluşturma ve bir örneğini açın <xref:System.ServiceModel.ServiceHost> hizmet kullanılabilir hale getirmek için. Daha fazla bilgi için [nasıl yapılır: Yönetilen bir uygulamada bir WCF Hizmeti barındırma](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   
- Bu seçenek, iki yaygın senaryolara olanak sağlar: Konsol uygulamaları ve Windows Presentation Foundation (WPF) veya Windows Forms (WinForms) göre gibi zengin istemci uygulamalarının içinde çalışan WCF hizmetleri. Bir konsol uygulaması içinde bir WCF Hizmeti barındırma uygulama geliştirme aşamasında genellikle yararlı olur. Bu bunları hata ayıklamak kolay, uygulama içinde neler olup bittiğine bulmak için izleme bilgilerini almak kolay ve bunları yeni konumlara kopyalayarak yerleri daha kolay hale getirir. Bu barındırma seçeneği ayrıca, zengin istemci uygulamaları gibi kolaylaştırır [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] ve dış dünya ile iletişim kurmak için WinForms uygulamaları. Örneğin, kullanan bir eşler arası işbirliği istemci [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] kullanıcı arabirimi için ve ayrıca diğer istemcilerin kendisine bağlanıp bilgi paylaşmak bir WCF hizmetini barındırır.  
+ Bu seçenek, iki yaygın senaryolara olanak sağlar: Konsol uygulamaları ve Windows Presentation Foundation (WPF) veya Windows Forms (WinForms) göre gibi zengin istemci uygulamalarının içinde çalışan WCF hizmetleri. Bir konsol uygulaması içinde bir WCF Hizmeti barındırma uygulama geliştirme aşamasında genellikle yararlı olur. Bu bunları hata ayıklamak kolay, uygulama içinde neler olup bittiğine bulmak için izleme bilgilerini almak kolay ve bunları yeni konumlara kopyalayarak yerleri daha kolay hale getirir. Bu barındırma seçeneği ayrıca, dış dünya ile iletişim kurmak için WPF ve WinForms uygulamaları gibi zengin istemci uygulamaları için kolaylaştırır. Örneğin, WPF için kullanıcı arabirimi kullanan ve ayrıca diğer istemcilerin kendisine bağlanıp bilgi paylaşmak bir WCF hizmetini barındıran bir eşler arası işbirliği istemci.  
   
 #### <a name="managed-windows-services"></a>Yönetilen Windows Hizmetleri  
  Bu barındırma seçeneği için işlem ömrü hizmetinin Hizmet Denetimi Yöneticisi (SCM) tarafından denetlenmesi (eski adıyla NT hizmeti olarak da bilinir) yönetilen bir Windows hizmeti olarak bir WCF hizmetini barındıran uygulama etki alanı (AppDomain) kaydetme oluşur. Windows Hizmetleri. Kendi kendine barındırma seçeneği gibi bazı barındırma kodu uygulamanın bir parçası yazılır, bu tür bir barındırma ortamı gerektirir. Hizmet hem de bir Windows hizmeti ve bir WCF hizmeti olarak devralmasına neden tarafından uygulanan <xref:System.ServiceProcess.ServiceBase> sınıfı olarak bir WCF Hizmeti sözleşmesi arabirimi. <xref:System.ServiceModel.ServiceHost> Ardından oluşturulur ve açık bir geçersiz kılınan içinde <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> yöntemi ve içinde bir geçersiz kılınan kapalı <xref:System.ServiceProcess.ServiceBase.OnStop> yöntemi. Devralınan bir yükleyici sınıfı <xref:System.Configuration.Install.Installer> Installutil.exe aracı tarafından bir Windows hizmeti olarak yüklenecek program izin vermek için de uygulanmalıdır. Daha fazla bilgi için [nasıl yapılır: Yönetilen bir Windows hizmetinde bir WCF Hizmeti barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md). Uzun süre çalışan, IIS dışında iletisi-etkinleştirilmemiş güvenli bir ortamda barındırılan bir WCF hizmeti, barındırma seçeneği yönetilen Windows hizmeti tarafından etkin bir senaryodur. Hizmet ömrü, bunun yerine işletim sistemi tarafından denetlenir. Barındırma bu seçenek, tüm Windows sürümlerinde kullanılabilir.  
@@ -43,7 +43,7 @@ Etkin duruma gelmesi bir hizmet oluşturup kendi bağlam ve yaşam süresini den
   
 |Barındırma ortamı|Yaygın senaryolar|Temel avantajlar ve sınırlamalar|  
 |-------------------------|----------------------|----------------------------------|  
-|Yönetilen uygulama ("şirket içinde barındırılan")|-Konsol uygulamaları geliştirme sırasında kullanılır.<br />-Zengin WinForm ve [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] istemci uygulama hizmetlerine erişme.|-Esnek.<br />-Kolayca dağıtın.<br />-Olmayan hizmetler için Kurumsal çözümü.|  
+|Yönetilen uygulama ("şirket içinde barındırılan")|-Konsol uygulamaları geliştirme sırasında kullanılır.<br />-Zengin WinForm ve WPF istemci uygulama hizmetlerine erişme.|-Esnek.<br />-Kolayca dağıtın.<br />-Olmayan hizmetler için Kurumsal çözümü.|  
 |Windows Hizmetleri (eski adıyla NT Hizmetleri da bilinir)|IIS dışında barındırılan uzun süreli WCF hizmeti.|-İleti etkinleştirilmemiş olan işletim sistemi tarafından denetlenen hizmet işlem yaşam süresi.<br />-Tüm Windows sürümleri tarafından desteklenir.<br />-Güvenli bir ortam.|  
 |IIS 5.1, [!INCLUDE[iis601](../../../includes/iis601-md.md)]|-Bir WCF Hizmeti yan yana ASP.NET içeriği ile HTTP protokolünü kullanarak Internet'te çalışıyor.|-İşlem geri dönüştürme.<br />-Boşta kapatın.<br />-Sistem durumu izleme işlemi.<br />-İleti tabanlı etkinleştirme.<br />-Yalnızca HTTP.|  
 |Windows İşlem Etkinleştirme Hizmeti (WAS)|-IIS çeşitli aktarım protokolünü kullanarak Internet'te yüklemeden bir WCF hizmeti çalışıyor.|-IIS gerekli değildir.<br />-İşlem geri dönüştürme.<br />-Boşta kapatın.<br />-Sistem durumu izleme işlemi.<br />-İleti tabanlı etkinleştirme.<br />-HTTP, TCP veya adlandırılmış kanallar ve MSMQ ile çalışır.|  

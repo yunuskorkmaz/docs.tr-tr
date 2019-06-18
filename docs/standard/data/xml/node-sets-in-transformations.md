@@ -5,18 +5,18 @@ ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23632a5df10c1ab2d1afa654d5438a4ebd903d5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8160ec37f097b688aa4263a442c08a031f2bfc0c
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698843"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170804"
 ---
 # <a name="node-sets-in-transformations"></a>Dönüşümlerdeki Düğüm Kümeleri
 Düğüm kümeleri XML Path Language (XPath) ifade döndürülen dört temel veri türlerinden biridir. Belge sırada oluşturulan yinelemeleri olmadan düğümler sırasız koleksiyonunun ise, bir stil sayfası bir değişkene atanabilir bir düğüm kümesi.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Sınıftır eski [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) dönüştürmeleri için kullanarak gerçekleştirebileceğiniz <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Bkz: [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [geçirme gelen XslTransform sınıfı](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) daha fazla bilgi için.  
+>  <xref:System.Xml.Xsl.XslTransform> Sınıfı .NET Framework 2. 0'kullanılmıyor. Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) dönüştürmeleri için kullanarak gerçekleştirebileceğiniz <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Bkz: [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [geçirme gelen XslTransform sınıfı](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) daha fazla bilgi için.  
   
  Düğüm kümeleri XPath ifadeleri döndürülen dört temel veri türlerinden biridir. Belge sırada oluşturulan yinelemeleri olmadan düğümler sırasız koleksiyonunun ise, bir stil sayfası bir değişkene atanabilir bir düğüm kümesi. Kullanılan ifade bir XPath bir sonuç bu düğüm kümesi bir `select` Dönüşümde öznitelik, XML belge nesne modeli (DOM) öğesinden ayarlanmış bir düğüm aynı davranışı sahiptir. Düğüm kümesi bir dizi yöntem gösterilen kullanarak gidebilirsiniz [kullanarak düğüm kümesi Gezinti XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), farklı bir sonuç ağacı parçası veya kullanan sonuç ağacı parçası olarak <xref:System.Xml.XPath.XPathNodeIterator> gezinme için.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89d71b3dfa71438b72fe622a491141364db25f52
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ea95789ea1623985a6a53fcf923b70d7df2ad460
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490661"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170432"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 ve 4.5'e Eklenen CLR Barındırma Arabirimleri
 Bu bölümde, yönetilmeyen arabirimler açıklanmaktadır. konakları ortak dil çalışma zamanı (CLR) tümleştirme için kullanabileceğiniz bir .NET Framework 4, .NET Framework 4.5 ve sonraki sürümlerinde uygulamalarına. Bu arabirimler, yapılandırmak ve çalışma zamanını bir işleme yüklemek bir konak için yöntemler sağlar.  
@@ -22,7 +22,7 @@ Bu bölümde, yönetilmeyen arabirimler açıklanmaktadır. konakları ortak dil
   
 - Ömür Yönetimi kullandıkları (`AddRef` ve `Release`), kapsülleme (örtük context) ve `QueryInterface` com gelen  
   
-- COM türleri gibi var. kullanmayın `BSTR`, `SAFEARRAY`, veya `VARIANT`.  
+- Aşağıdakiler gibi COM türlerini kullanmazlar `BSTR`, `SAFEARRAY`, veya `VARIANT`.  
   
 - Apartman modeli, toplama, veya kayıt defteri etkinleştirme kullanan [CoCreateInstance işlevi](https://go.microsoft.com/fwlink/?LinkId=142894).  
   

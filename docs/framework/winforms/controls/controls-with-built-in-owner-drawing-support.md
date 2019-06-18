@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: df3a61dae9ad926f56da4e9d15e0e8b8c6f1c8a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c053c14bb06d1bb28c7b7e6652ccc6e41af9c4e5
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648255"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170600"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Yerleşik Sahip Çizimi Destekli Denetimler
 Sahip çizim olarak da bilinen özel çizim olduğundan, Windows Forms içinde belirli denetimlerin görünümünü değiştirmek için kullanılan bir tekniktir.  
@@ -46,7 +46,7 @@ Sahip çizim olarak da bilinen özel çizim olduğundan, Windows Forms içinde b
   
 - <xref:System.Windows.Forms.TabControl>  
   
- Sahip çizim yalnızca aşağıdaki denetimleri desteği [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:  
+ Sahip çizim yalnızca .NET Framework 2.0 sürümünde aşağıdaki denetimleri destekler:  
   
 - <xref:System.Windows.Forms.ToolTip>  
   
@@ -54,7 +54,7 @@ Sahip çizim olarak da bilinen özel çizim olduğundan, Windows Forms içinde b
   
 - <xref:System.Windows.Forms.TreeView>  
   
- Sahip çizim ve yeni olan aşağıdaki denetimleri desteği [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:  
+ Aşağıdaki denetimleri, sahip çizim destekler ve .NET Framework 2.0 sürümünde yenidir:  
   
 - <xref:System.Windows.Forms.DataGridView>  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ad78c37dda00e0b52ec8e84b8c996ee3dca09a5
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 342c570bff89d4c03780cdc280199c722b53890a
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378675"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170458"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET framework sürümleri ve bağımlılıkları
 Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel sınıf kitaplıklarını ve diğer yönetilen kitaplıkları içerir. Bu konu, sürüme göre .NET Framework'ün temel özellikleri açıklar, temel CLR sürümleri ve ilişkili geliştirme ortamları hakkında bilgi sağlar ve Windows işletim sistemi tarafından yüklenen sürümleri tanımlar.  
@@ -27,7 +27,9 @@ Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel s�
  Bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md) için desteklenen işletim sistemlerinin tam bir listesi. İndirmeler için bkz. [geliştiriciler için .NET Framework yükleme](../../../docs/framework/install/guide-for-developers.md). Hangi .NET Framework sürümleri bir bilgisayarda yüklü belirlemek için bkz: [nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](how-to-determine-which-versions-are-installed.md).  
   
  Tabloda, işletim sistemi sürümleri yüklü .NET Framework sürümlerini ✓ ile işaretlenen **dahil / Windows üzerinde yüklü** ve **dahil /WindowsServer'dayüklü**sütunları olmalıdır [Denetim Masası'nda etkin](../../../docs/framework/install/dotnet-35-windows-10.md) (Windows için) veya Sunucu Yöneticisi üzerinden (Windows Server'de) etkin.  
-  
+
+[!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+ 
 |.NET Framework sürümü|CLR sürümü|Dahil<br /> Visual Studio<br/>sürüm|✓ Dahil<br />+ Yüklenebilir<br />Windows|✓ Dahil<br />+ Yüklenebilir<br />Windows Server|Yüklü .NET sürümü belirlemek için|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
 |4.8<br/><br/>[Yeni özellikler](../whats-new/index.md#whats-new-in-net-framework-48)<br/><br/>[Erişilebilirlik yenilikleri](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-net-framework-48)<br /><br >[Sürüm notları](https://github.com/Microsoft/dotnet/tree/master/releases/net48/README.md)|4| | ✓ 10 Mayıs 2019 güncelleştirme<br/><br/> + 10 Ekim 2018 Güncelleştirmesi (sürüm 1809) <br/> + 10 Nisan 2018 Güncelleştirmesi (sürüm 1803) <br/> + 10 Creators Update (1709 sürümü) ayrılır. <br/> + 10 Creators Update (sürüm 1703) <br/> + 10 Yıldönümü Güncelleştirmesi (sürüm 1607) <br/> + 8.1 <br/> +7 | + Windows Server 2019<br/> + Windows Server sürüm 1809 <br/> + Windows Server sürüm 1803 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |Kullanım `Release` DWORD:<br/><br/> -528040 (Windows 10 Mayıs 2019 güncelleştirme) <br/> -528049 (tüm diğer işletim sistemi sürümleri) <br/><br/> (bkz [yönergeleri](how-to-determine-which-versions-are-installed.md))|
@@ -66,7 +68,7 @@ Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel s�
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>Daha eski sürümler için uygulamalar hedefleme ve çalıştırma  
 
-.NET framework sürümleri 2.0, 3.0 ve 3.5 CLR (CLR 2.0) ile aynı sürümü oluşturulur. Bu sürümler, tek bir kurulumun ardışık katmanlarını temsil eder. Her sürüm kademeli olarak önceki sürümlerin üzerine yerleştirilir. 2.0, 3.0 ve 3.5 sürümlerini bir bilgisayar üzerinde yan yana çalıştırmak mümkün değildir. Sürüm 3.5'i yüklediğinizde, 2.0 ve 3.0 katmanlarını otomatik olarak alırsınız ve 2.0, 3.0 ve 3.5 sürümleri için oluşturulmuş olan uygulamaların tümü 3.5 sürümü üzerinde çalıştırılabilir. Ancak, .NET Framework 4 bu katmanlama yaklaşımını sona erer ve de ve sonraki sürümleri (.NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 ve 4.8) tek bir kurulumun ardışık katmanlarını temsil eder.  .NET Framework 4 ile başlayarak işlem içi yan tek bir işlemde CLR'nin birden çok sürümünü çalıştırılacak barındırma yana kullanabilirsiniz. Daha fazla bilgi için [derlemeler ve yan yana yürütme](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
+.NET framework sürümleri 2.0, 3.0 ve 3.5 CLR (CLR 2.0) ile aynı sürümü oluşturulur. Bu sürümler, tek bir kurulumun ardışık katmanlarını temsil eder. Her sürüm kademeli olarak önceki sürümlerin üzerine yerleştirilir. 2\.0, 3.0 ve 3.5 sürümlerini bir bilgisayar üzerinde yan yana çalıştırmak mümkün değildir. Sürüm 3.5'i yüklediğinizde, 2.0 ve 3.0 katmanlarını otomatik olarak alırsınız ve 2.0, 3.0 ve 3.5 sürümleri için oluşturulmuş olan uygulamaların tümü 3.5 sürümü üzerinde çalıştırılabilir. Ancak, .NET Framework 4 bu katmanlama yaklaşımını sona erer ve de ve sonraki sürümleri (.NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 ve 4.8) tek bir kurulumun ardışık katmanlarını temsil eder.  .NET Framework 4 ile başlayarak işlem içi yan tek bir işlemde CLR'nin birden çok sürümünü çalıştırılacak barındırma yana kullanabilirsiniz. Daha fazla bilgi için [derlemeler ve yan yana yürütme](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
   
  Ayrıca, uygulamanızı çalıştırabilirsiniz 2.0, 3.0 veya 3.5, kullanıcılarınızın uygulama hedef sürümü, önce bir Windows 8, Windows 8.1 veya Windows 10 bilgisayarda .NET Framework 3.5 etkinleştirmek için gerekli. Daha fazla bilgi için [Windows 10, Windows 8.1 ve Windows 8 üzerinde .NET Framework 3.5 yükleme](../../../docs/framework/install/dotnet-35-windows-10.md).  
   

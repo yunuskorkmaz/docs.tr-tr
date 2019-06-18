@@ -1,6 +1,6 @@
 ---
 title: Windows sistemlerinde dosya yolu biçimleri
-ms.date: 06/28/2018
+ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75261bc44b938432c9c22b90dc4db30ca00d630b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752301"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170736"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows sistemlerinde dosya yolu biçimleri
 
@@ -30,7 +30,7 @@ Standart bir DOS yol üç bileşeni oluşabilir:
 - Bir dizin adı. [Dizin ayırıcı karakterde](<xref:System.IO.Path.DirectorySeparatorChar>) iç içe geçmiş dizin sıradüzeni içinde alt dizinler ayırır.
 - İsteğe bağlı bir dosya adı. [Dizin ayırıcı karakterde](<xref:System.IO.Path.DirectorySeparatorChar>) dosya yolu ve dosya adını ayırır.
 
-Üç bileşen mevcut olması durumunda, mutlak bir yoludur. Birim veya sürücü harfi yok belirtilirse ve dizin adları ile başlayan [dizin ayırıcı karakterde](<xref:System.IO.Path.DirectorySeparatorChar>), geçerli sürücüsünün kökünden göreli yoludur. Aksi takdirde, geçerli dizine göreli yoludur. Aşağıdaki tabloda, bazı olası dizin ve dosya yolları gösterilmektedir.
+Üç bileşen mevcut olması durumunda, mutlak bir yoludur. Birim veya sürücü harfi yok belirtilirse ve dizin adı ile başlayan [dizin ayırıcı karakterde](<xref:System.IO.Path.DirectorySeparatorChar>), geçerli sürücüsünün kökünden göreli yoludur. Aksi takdirde, geçerli dizine göreli yoludur. Aşağıdaki tabloda, bazı olası dizin ve dosya yolları gösterilmektedir.
 
 |Yol  |Açıklama  |
 | -- | -- |
@@ -76,6 +76,11 @@ Windows işletim sistemi dosyaları dahil tüm kaynakları işaret eden bir birl
 `\\.\C:\Test\Foo.txt`  
 `\\?\C:\Test\Foo.txt`
 
+Bir sürücüye, sürücü harfini belirlemeye ek olarak bir birimi, birim GUID'sini kullanarak tanımlayabilirsiniz. Bu, şu biçimi alır:
+
+`\\.\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+`\\?\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+
 > [!NOTE]
 > DOS aygıtı yolu sözdizimi .NET Framework 4.6.2 ve .NET Core 1.1 ile başlayarak Windows üzerinde çalışan .NET uygulamalarında desteklenir.
 
@@ -85,8 +90,8 @@ DOS aygıtı yolu aşağıdaki bileşenlerden oluşur:
 
    > [!NOTE]
    > `\\?\` Tüm sürümlerinde .NET Core ve .NET Framework 4.6.2 sürümünden itibaren desteklenir.
-   
-- Sembolik bağlantıyı "gerçek" cihaz nesnesine (Bu durumda C:).
+
+- Bir birim GUID'si söz konusu olduğunda bir "gerçek" cihaz nesnesine (C: sürücüsüne adı söz konusu olduğunda) veya birim {b75e2c83-0000-0000-0000-602f00000000} sembolik bağlantı.
 
    İlk cihaz yolu tanımlayıcısı sonraki DOS aygıtı yol kesimi toplu veya sürücü tanımlar. (Örneğin, `\\?\C:\` ve `\\.\BootPartition\`.)
 
@@ -95,7 +100,7 @@ DOS aygıtı yolu aşağıdaki bileşenlerden oluşur:
   `\\.\UNC\Server\Share\Test\Foo.txt`  
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    Cihaz UNC paylaşımı/bölümü forms olan birim. Örneğin, `\\?\server1\e:\utilities\\filecomparer\`, server1\utilities paylaşımı/bölümüdür. Bir yöntemi gibi çağrılırken bu önemlidir <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> göreli directory bölümleri ile; hiçbir zaman birimi gitmek mümkündür. 
+    Cihaz UNC paylaşımı/bölümü birim oluşturur. Örneğin, `\\?\server1\e:\utilities\\filecomparer\`, server1\utilities paylaşımı/bölümüdür. Bir yöntemi gibi çağrılırken bu önemlidir <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> göreli directory bölümleri ile; hiçbir zaman birimi gitmek mümkündür. 
 
 DOS cihaz yolları tanımına göre tam. Göreli directory parçaları (`.` ve `..`) izin verilmez. Geçerli dizin, hiçbir zaman kendi kullanımlarına girin.
 

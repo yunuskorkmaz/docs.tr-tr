@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 05/06/2019
-ms.openlocfilehash: f7dc95a9f0b652f1509720fb987cbdb88f64e78c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 369c74d2d8e82f157de0eec4294a5ee50542292b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689257"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169781"
 ---
 # <a name="whats-new-in-net-core-30-preview-5"></a>.NET Core 3.0 (Preview 5) yenilikler
 
@@ -20,10 +20,11 @@ Bu makalede, .NET Core 3.0 içinde yeni (Önizleme 5) Yenilikler açıklanır. B
 
 .NET core 3.0 için destek ekler C# 8.0. OmniSharp uzantısıyla Visual Studio 2019 güncelleştirme 1 Preview veya VSCode en son sürümünü kullanmanız önerilir.
 
-[İndirin ve .NET Core 3.0 Preview 5 ile çalışmaya başlama](https://aka.ms/netcore3download) şu anda Windows, Mac ve Linux üzerinde.
+[İndirin ve .NET Core 3.0 Önizleme 6 ile çalışmaya başlama](https://aka.ms/netcore3download) şu anda Windows, Mac ve Linux üzerinde.
 
 Her önizleme sürümü hakkında daha fazla bilgi için aşağıdaki duyuruları bakın:
 
+- [.NET core 3.0 Önizleme 6 Duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [.NET core 3.0 Preview 5 Duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
 - [.NET core 3.0 Önizleme 4 Duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
 - [.NET core 3.0 Preview 3 Duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
@@ -112,6 +113,34 @@ dotnet publish -r win10-x64 /p:PublishSingleFile=true
 
 Tek dosya yayımlama hakkında daha fazla bilgi için bkz. [tek dosyalı bundler tasarım belge](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md).
 
+## <a name="assembly-linking"></a>Derleme bağlama
+
+.NET core SDK 3.0 IL analiz etme ve kullanılmayan derlemeleri kırpma uygulamaları boyutunu azaltabilirsiniz bir aracı ile gelir.
+
+Kendi içindeki uygulamaları ana bilgisayara yüklenmesi .NET gerek kalmadan kodunuzu çalıştırmak için gereken her şeyi içerir. Ancak, birçok kez uygulamayı yalnızca framework işlevi için küçük bir kısmı gerektirir ve diğer kullanılmayan kitaplıklar kaldırılamadı.
+
+.NET core kullanan bir ayarı artık içerir [IL bağlayıcı](https://github.com/mono/linker) uygulamanızın IL Tarama Aracı. Bu araç, hangi kod gereklidir ve kullanılmayan kitaplıkları ardından kırpar algılar. Bu araç, bazı uygulama dağıtım boyutunu önemli ölçüde azaltabilir.
+
+Bu aracı etkinleştirmek için `<PublishTrimmed>` projenizde ayarlama ve kendi başına bir uygulama yayımlama:
+
+```xml
+<PropertyGroup>
+  <PublishTrimmed>true</PublishTrimmed>
+</PropertyGroup>
+```
+
+```console
+dotnet publish -r <rid> -c Release
+```
+
+Örnek olarak, yaklaşık olarak 70 MB boyutunda yayımlandığında, verilen temel "Merhaba Dünya" yeni konsol projesi şablonu denk gelir. Kullanarak `<PublishTrimmed>`, boyutu yaklaşık 30 MB küçültülür.
+
+Uygulamalar veya yansıtma ya da ilgili dinamik özellikleri kullanın (ASP.NET Core ve WPF dahil) çerçeveleri genellikle durumunda, kırpılmış zaman göz önünde bulundurmanız önemlidir. Bu arıza bağlayıcı bu dinamik davranış hakkında bilmez ve hangi framework türlerinin yansıma için gerekli olup olmadığını belirleyemez oluşur. IL bağlayıcı aracı, bu senaryonun farkında olması için yapılandırılabilir.
+
+Aksi takdirde tüm kırpma sonra uygulamanızı test etmek emin olun.
+
+IL bağlayıcı aracı hakkında daha fazla bilgi için bkz. [belgeleri](https://aka.ms/dotnet-illink) veya ziyaret [mono/bağlayıcı]( https://github.com/mono/linker) depo.
+
 ## <a name="tiered-compilation"></a>Katmanlı derleme
 
 [Katmanlı derleme](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) .NET Core 3.0 ile varsayılan olarak (TC) etkin. Bu özellik daha Desenlerinizi daha iyi performans için tam zamanında (JIT) derleyici kullanmak çalışma zamanı sağlar.
@@ -131,6 +160,38 @@ TC tamamen devre dışı bırakmak için proje dosyanızda bu ayarı kullanın:
 ```xml
 <TieredCompilation>false</TieredCompilation>
 ```
+
+## <a name="readytorun-images"></a>ReadyToRun görüntüleri
+
+Uygulama derlemeleriniz ReadyToRun (R2R) biçiminde derleme tarafından .NET Core uygulamanızın başlangıç süresini iyileştirebilir. R2R, zaman üretim (AOT) derlemesi bir biçimidir.
+
+R2R ikili dosyaları, just-ın-time (JIT) derleyici, uygulama yükleri yapmanız gereken iş miktarını azaltarak başlangıç performansı artırın. İkili dosyaları, JIT oluşturmak için karşılaştırıldığında benzer yerel kod içerir.
+
+R2R ikili dosyaları yine de bazı senaryolar ve aynı kodu yerel sürümü için gerekli olan iki ara dil (IL) kodu içerdiğinden daha büyüktür. Hedefleyen x64 Linux veya Windows x64 gibi belirli çalışma zamanı ortamları (RID) kendi içinde bir uygulama yayımladığınızda R2R yalnızca kullanılabilir.
+
+Uygulamanızı R2R olarak derlemek için ekleme `<PublishReadyToRun>` ayarı:
+
+```xml
+<PropertyGroup>
+  <PublishReadyToRun>true</PublishReadyToRun>
+</PropertyGroup>
+```
+
+Kendi içinde bir uygulama yayımlayın. Örneğin, bu komut Windows 64-bit sürümü için kendi içinde bir uygulama oluşturur:
+
+```console
+dotnet publish -c Release -r win-x64 --self-contained true
+```
+
+### <a name="cross-platformarchitecture-restrictions"></a>Çapraz Platform/mimari kısıtlamaları
+
+ReadyToRun derleyici, şu anda çapraz hedefleme desteklememektedir. Belirli bir hedef derlemeniz gerekir. Örneğin, Windows için x64 R2R görüntüleri istiyorsanız, o ortamda publish komutunu çalıştırmak gerekir.
+
+Çapraz-hedefleyen için özel durumlar:
+
+- Windows x64 Windows ARM32 ve ARM64 x86 derlemek için kullanılabilir görüntüler.
+- Windows x86 Windows ARM32 görüntüleri derlemek için kullanılabilir.
+- Linux x64 Linux ARM32 ve ARM64 görüntüleri derlemek için kullanılabilir.
 
 ## <a name="build-copies-dependencies"></a>Derleme bağımlılıkları kopyalar.
 
@@ -362,13 +423,23 @@ Windows formunda düz C API'leri, COM ve WinRT zengin yerel bir API sunar. .NET 
 
 ## <a name="http2-support"></a>HTTP/2 desteği
 
-<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> HTTP/2 protokolüne türünü destekler. Destek şu anda devre dışıdır, ancak çağırarak açılabilir `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);` kullanmadan önce <xref:System.Net.Http.HttpClient>. HTTP/2 desteği ayarlayarak da etkinleştirebilirsiniz `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` ortam değişkenine `true` uygulamanızı çalıştırmadan önce.
+<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> HTTP/2 protokolüne türünü destekler. HTTP/2 etkinleştirilirse, HTTP protokolü sürümünü TLS/ALPN belirlenir ve kullanmak sunucu seçerse HTTP/2 kullanılır.
 
-HTTP/2 etkinleştirilirse, HTTP protokolü sürümünü TLS/ALPN gerçekleştirilir ve sunucu kullanılacağını seçerse, yalnızca HTTP/2 kullanılır.
+Varsayılan protokol HTTP/1.1 kalır, ancak HTTP/2 iki farklı şekilde etkinleştirilebilir. İlk olarak, HTTP/2 kullanmak için HTTP istek iletisi ayarlayabilirsiniz:
+
+[!CODE-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
+
+İkinci olarak, değiştirebileceğiniz <xref:System.Net.Http.HttpClient> HTTP/2 varsayılan olarak kullanmak üzere:
+
+[!CODE-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
+
+Birden çok kez bir uygulama geliştirirken, şifrelenmemiş bir bağlantı kullanmak istediğiniz. Hedef uç noktası, HTTP/2 kullanacaklardır biliyorsanız, şifrelenmemiş HTTP/2 bağlantılarında etkinleştirebilirsiniz. Bu ayarlayarak etkinleştirebilirsiniz `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` ortam değişkenine `1` veya uygulama bağlamında etkinleştirerek:
+
+[!CODE-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
 ## <a name="tls-13--openssl-111-on-linux"></a>TLS 1.3 & Linux'ta OpenSSL 1.1.1
 
-.NET core artık avantajlarından yararlanır [OpenSSL 1.1.1 TLS 1.3 desteği](https://www.openssl.org/blog/blog/2018/09/11/release111/), verilen ortamda kullanılabilir olduğunda. 1.3 TLS ile:
+.NET core artık avantajlarından yararlanır [OpenSSL 1.1.1 TLS 1.3 desteği](https://www.openssl.org/blog/blog/2018/09/11/release111/), verilen ortamda kullanılabilir olduğunda. 1\.3 TLS ile:
 
 * Defa bağlantı azaltılmış gidiş dönüş istemci ve sunucu arasında gerekli ile geliştirildi.
 * Geliştirilmiş güvenlik çeşitli eski ve güvenli şifreleme algoritmaları kaldırılmasını nedeniyle.

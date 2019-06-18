@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 49c7ceb431e9ab59b47e3b8b912e2881aeeef6c2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5e70b9c16c3af46b72ea8f8745806c7ebf849e2f
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583559"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169978"
 ---
 # <a name="application-settings-overview"></a>Uygulama Ayarlarına Genel Bakış
 Bu konuda, oluşturmak ve uygulamanız ve kullanıcılarınız adına ayar verileri depolamak nasıl ele alınmaktadır.  
   
  Windows Forms uygulaması ayarları özelliğini oluşturulacağı, depolanacağı ve özel uygulama ve istemci bilgisayarda kullanıcı tercihlerini korumak daha kolay hale getirir. İle Windows Forms uygulama ayarları, yalnızca veritabanı bağlantı dizeleri gibi uygulama verilerini, aynı zamanda kullanıcı uygulama tercihleri gibi kullanıcıya özgü verileri depolayabilirsiniz. Visual Studio veya özel yönetilmiş kod kullanarak, yeni ayarları oluşturabilir, bunları okuyun ve bunları disk formlarınızı özellikleri bağlamak ve yükleme ve kaydetme önce veri ayarlarını doğrulayın.  
   
- Uygulama ayarları, geliştiricilerin özel çok az kod kullanarak, uygulama durumunu kaydetmeyi etkinleştirir ve bir .NET Framework'ün önceki sürümlerinde Dinamik özellikler yerini alır. Uygulama ayarları, salt okunur, geç bağlanan ve daha fazla özel programlama gerektiren Dinamik özellikler üzerinde birçok geliştirme içerir. Dinamik özellik sınıfları görevlendirdiğimiz [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], ancak bunlar yalnızca ölçülü kaynak uygulama ayarları sınıfları sarmalamak Kabuk sınıfları.  
+ Uygulama ayarları, geliştiricilerin özel çok az kod kullanarak, uygulama durumunu kaydetmeyi etkinleştirir ve bir .NET Framework'ün önceki sürümlerinde Dinamik özellikler yerini alır. Uygulama ayarları, salt okunur, geç bağlanan ve daha fazla özel programlama gerektiren Dinamik özellikler üzerinde birçok geliştirme içerir. Dinamik özellik sınıfları .NET Framework 2.0 sürümünde korunur, ancak bunlar yalnızca ölçülü kaynak uygulama ayarları sınıfları sarmalamak Kabuk sınıfları.  
   
 ## <a name="what-are-application-settings"></a>Uygulama ayarları nelerdir?  
  Windows Forms uygulamalarınızı genellikle uygulamayı çalıştıran için kritik olan ancak doğrudan uygulama kodu dahil etmek istemediğiniz veri gerektirir. Uygulamanız bir Web hizmeti veya veritabanı sunucusu kullanıyorsa, böylece bunu gelecekte yeniden derleme olmadan değiştirebilirsiniz, ayrı bir dosyada bu bilgileri depolamak isteyebilirsiniz. Benzer şekilde, geçerli kullanıcıya özgü verileri depolamak, uygulamalarınızın gerektirebilir. Çoğu uygulama, örneğin, uygulamanın görünümünü ve davranışını özelleştirin kullanıcı tercihlerini sahip.  

@@ -2,16 +2,16 @@
 title: Desteklenen dağıtım senaryoları - WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 7b508f53365c1b4b90e2883ddb9d5f2a71c7e814
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 2da55176cbfe618b332f2df210e3e1c0516b17ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025630"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170045"
 ---
 # <a name="supported-deployment-scenarios"></a>Desteklenen dağıtım senaryoları
 
-Kısmen güvenilir uygulamaların kullanım için desteklenen Windows Communication Foundation (WCF) özellikleri alt kümesi için WCF kullanan bazı, tümü değil, senaryolar gereksinimlerini karşılamak üzere tasarlanmıştır. Sunucuda, WCF Internet ölçeğinde ASP.NET 2.0 Medium Trust izin üçüncü taraf uygulamaları çalıştıran paylaşılan barındırma sağlayıcılarının güvenlik nedeniyle ayarlanmış gereksinimlerini karşılar. İstemcide, WCF kısmi güven desteği gibi dağıtım teknolojileri gereksinimlerini karşılamak için tasarlanan [ClickOnce dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment) veya [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]'s XAML tarayıcı uygulaması teknolojisi, sorunsuz ve güvenli izin ver güvenilmeyen siteleri'ndan Masaüstü uygulamaların dağıtımı.
+Kısmen güvenilir uygulamaların kullanım için desteklenen Windows Communication Foundation (WCF) özellikleri alt kümesi için WCF kullanan bazı, tümü değil, senaryolar gereksinimlerini karşılamak üzere tasarlanmıştır. Sunucuda, WCF Internet ölçeğinde ASP.NET 2.0 Medium Trust izin üçüncü taraf uygulamaları çalıştıran paylaşılan barındırma sağlayıcılarının güvenlik nedeniyle ayarlanmış gereksinimlerini karşılar. İstemcide, WCF kısmi güven desteği gibi dağıtım teknolojileri gereksinimlerini karşılamak için tasarlanan [ClickOnce dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment) veya WPF'nin XAML tarayıcı uygulaması teknoloji, sorunsuz ve güvenli dağıtımına izin ver güvenilmeyen siteleri Masaüstü uygulamaları.
 
 ## <a name="minimum-permission-requirements"></a>En düşük izin gereksinimleri
 
@@ -39,7 +39,7 @@ Daha fazla bilgi için [nasıl yapılır: Orta güven ASP.NET 2.0 kullanan](http
 
 ## <a name="partial-trust-on-the-client"></a>İstemci üzerinde kısmi güven
 
-Belirli güvenlik önlemleri indiriliyor ve güvenilmeyen Internet siteleriyle kod çalıştırırken alınması gerekir. Her ikisi de [ClickOnce dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment) ve [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]kullanıcının teknoloji olun XAML tarayıcı uygulaması (XBAP) kullanın kısmi güven güvenilmeyen kod (Internet bölgesi) sınırlı izinler vermek için.
+Belirli güvenlik önlemleri indiriliyor ve güvenilmeyen Internet siteleriyle kod çalıştırırken alınması gerekir. Her ikisi de [ClickOnce dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment) ve WPF'nin XAML tarayıcı uygulaması (XBAP) teknolojisi olun kısmi güven güvenilmeyen kod (Internet bölgesi) sınırlı izinler vermek için kullanın.
 
 WCF tarafından dağıtılan kısmen güvenilir uygulamaların içinde uzak sunuculardan ile iletişim kurmak için kullanılabilir [ClickOnce dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment) veya XBAP. Internet bölgesi izin kümesi içeren <xref:System.Net.WebPermission> kaynak konağını sağlayan açıklanan desteklenen WCF bağlamaları birini kullanarak, kaynak sunucu ile iletişim kurmak bu uygulamaları [kısmi güven özelliği uyumluluğu ](partial-trust-feature-compatibility.md).
 

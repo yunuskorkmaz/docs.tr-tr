@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Özel Etkinlik Tasarımcısı Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c6d2ae695a04c85ade6ae4da0b812f4043fa2f6
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945658"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170674"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Nasıl yapılır: Özel Etkinlik Tasarımcısı Oluşturma
 
@@ -17,7 +17,7 @@ ms.locfileid: "61945658"
 
 <xref:System.Activities.Presentation.ActivityDesigner> iki Yardımcısı denetimlerini kullanır <xref:System.Activities.Presentation.WorkflowItemPresenter> ve <xref:System.Activities.Presentation.WorkflowItemsPresenter> özel etkinlik tasarımcıları geliştirmeyi daha kolay hale getirmek için. Bunlar alt öğeleri, silme, seçimi ve söz konusu alt öğelerin eklenmesi sürükleyip gibi ortak işlevselliği işleyin. <xref:System.Activities.Presentation.WorkflowItemPresenter> "Bırakma bölge", sağlayarak kullanıcı Arabirimi öğesi içinde tek bir alt sağlar, çalışırken <xref:System.Activities.Presentation.WorkflowItemsPresenter> destekleyen birden çok kullanıcı Arabirimi öğeleri, sıralama gibi dahil olmak üzere ek işlevler sağlayabilir, taşıma, silme ve alt öğeleri ekleme.
 
-Özel Etkinlik Tasarımcısı uygulamasında vurgulama gereken yazının diğer önemli parçası visual düzenlemeler, bağlı kullanarak şekliyle ilgilidir [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] ne biz tasarımcıda düzenleme bellek depolanan örnek veri bağlama. Bu, aynı zamanda değişiklik bildirimi ve durum değişiklikleri gibi olaylar izlenmesini etkinleştirmek için sorumlu olan Model öğesi ağacı tarafından gerçekleştirilir.
+Özel Etkinlik Tasarımcısı uygulamasında vurgulama gereken yazının diğer önemli parçası visual düzenlemeleri kullanarak WPF verilerini bağlama ne biz tasarımcıda düzenleme bellek depolanan örneğine ilişkili yolu ilgilidir. Bu, aynı zamanda değişiklik bildirimi ve durum değişiklikleri gibi olaylar izlenmesini etkinleştirmek için sorumlu olan Model öğesi ağacı tarafından gerçekleştirilir.
 
 Bu konu iki yordam açıklanmaktadır.
 

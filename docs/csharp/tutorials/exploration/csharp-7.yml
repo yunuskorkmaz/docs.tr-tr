@@ -8,12 +8,12 @@ metadata:
   ms.date: 03/20/2019
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 1b1de22769c86f75684f41635287a73558d1d15a
-  ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+  ms.openlocfilehash: 7cec35e0749ea0b38162244171459f311d27cb25
+  ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/28/2019
-  ms.locfileid: "64750374"
+  ms.lasthandoff: 06/18/2019
+  ms.locfileid: "67170232"
 items:
 - durationInMinutes: 1
   content: >
@@ -202,7 +202,7 @@ items:
     Eklemenize gerek döndürülen başvuru değiştirmek için `ref` çağırmadan önce yerel değişken bildirimi için değiştiricisinin `Find` dönüş değeri bir başvuru değişkeni başvuru yapmak için. Test kodu tarayıcınızda aşağıdaki eşleşecek şekilde değiştirin:
 
 
-    [!code-csharp[EverythingByValue](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByValue "test code for return object by reference")]
+    [!code-csharp[TestByRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByRef "test code for return object by reference")]
 
 
     Şimdi, ikinci `WriteLine` yukarıdaki örnekte deyimi yazdırır değerini `24`, Matristeki depolama değiştirilmiş olduğunu gösteren. Yerel değişken ile bildirilen `ref` değiştiricisi ve alacağınız bir `ref` döndürür. Başlatması gerekir bir `ref` değişkeni bildirildiğinde; bildirim ve başlatma bölünemiyor.

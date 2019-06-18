@@ -6,14 +6,14 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 4e0eb53a44a6348d0f5154a0a08222da90985864
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6887f6977511224a2a5c867e69df306e3bc2cc25
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672126"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169872"
 ---
-# <a name="how-to-safely-cast-by-using-pattern-matching-is-and-as-operators"></a>Nasıl yapılır: güvenli bir şekilde atama desen eşleştirme kullanarak olduğu ve işleçler
+# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Nasıl yapılır: desen eşleştirme kullanarak güvenli bir şekilde noktaya yayın ve olduğu ve işleçler
 
 Nesneler çok biçimli olduğundan türetilmiş tutmak için bir temel sınıf türünde bir değişken için olası [türü](../programming-guide/types/index.md). Türetilen türün örnek üyeleri erişmek için gerekli olduğu [atama](../programming-guide/types/casting-and-type-conversions.md) geri türetilmiş bir tür için değer. Ancak, bir yayın atma riskini oluşturur bir <xref:System.InvalidCastException>. C# sağlar [desen eşleştirme](../pattern-matching.md) yalnızca başarılı olur, koşullu olarak bir dönüştürme gerçekleştirmek deyimleri. C# ayrıca sağlar [olduğu](../language-reference/keywords/is.md) ve [olarak](../language-reference/keywords/as.md) belirli türde bir değer olup olmadığını sınayacak işleçleri.
 

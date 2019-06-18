@@ -2,12 +2,12 @@
 title: Görev zaman uyumsuz programlama modeli (TAP) ile async ve await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 002a64cf7f692ffa0cfb5de94cdfc4421d8656bf
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 6e8f5c91bec158ae46b95597d90aaf3a6ab811d3
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025468"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170315"
 ---
 # <a name="task-asynchronous-programming-model"></a>Zaman uyumsuz görev programlama modeli
 
@@ -127,7 +127,7 @@ Diyagramdaki sayılar kullanıcı "Başlat" düğmesine tıkladığında başlat
      Bu nedenle, `AccessTheWebAsync` bir await işleci kullanarak ilerlemesini askıya alır ve çağıran yönteme denetimi elde etmek üzere kullandığı `AccessTheWebAsync`. `AccessTheWebAsync` döndürür bir `Task<int>` çağırana. Görev, indirilen dizenin uzunluğu olan bir tamsayı sonucu verecek bir taahhüdü temsil eder.
 
     > [!NOTE]
-    > Varsa `GetStringAsync` (ve bu nedenle `getStringTask`) önce tamamlanan `AccessTheWebAsync` bekler, Denetim saklanır `AccessTheWebAsync`. Askıya alma ve daha sonra dönme gideri `AccessTheWebAsync` boşa gidecektir çağrılan zaman uyumsuz işlem (`getStringTask`) zaten tamamlanmışsa ve `AccessTheWebSync` için nihai sonucu bekleme zorunluluğu yoktur.
+    > Varsa `GetStringAsync` (ve bu nedenle `getStringTask`) önce tamamlanan `AccessTheWebAsync` bekler, Denetim saklanır `AccessTheWebAsync`. Askıya alma ve daha sonra dönme gideri `AccessTheWebAsync` boşa gidecektir çağrılan zaman uyumsuz işlem (`getStringTask`) zaten tamamlanmışsa ve `AccessTheWebAsync` için nihai sonucu bekleme zorunluluğu yoktur.
 
      Arayanın içinde (bu örnekte olay işleyicisi), işleme düzeni devam eder. Çağıranın sonucuna bağlı olmayan diğer işleri yapabilir `AccessTheWebAsync` sonucunda ortaya çıkan veya çağıranın bekleyen hemen beklemeye geçebilir.   Olay işleyicisi bekliyor `AccessTheWebAsync`, ve `AccessTheWebAsync` bekliyor `GetStringAsync`.
 

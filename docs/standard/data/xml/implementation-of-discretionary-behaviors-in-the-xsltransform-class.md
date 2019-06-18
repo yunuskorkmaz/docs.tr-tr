@@ -5,19 +5,19 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcc294f09172eb2029f92d2c05821837aa10c35f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d0a6b3faff0208634e711b9d7908e3fd8dc640ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591507"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170834"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform Sınıfında İsteğe Bağlı Davranışların Uygulanması
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> Sınıftır eski [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) dönüştürmeleri için kullanarak gerçekleştirebileceğiniz <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Bkz: [XslCompiledTransform sınıfını kullanma](using-the-xslcompiledtransform-class.md) ve [geçirme gelen XslTransform sınıfı](migrating-from-the-xsltransform-class.md) daha fazla bilgi için.
+> <xref:System.Xml.Xsl.XslTransform> Sınıfı .NET Framework 2. 0'kullanılmıyor. Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) dönüştürmeleri için kullanarak gerçekleştirebileceğiniz <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Bkz: [XslCompiledTransform sınıfını kullanma](using-the-xslcompiledtransform-class.md) ve [geçirme gelen XslTransform sınıfı](migrating-from-the-xsltransform-class.md) daha fazla bilgi için.
 
-İsteğe bağlı davranışların olarak listelenen davranışlar açıklanmıştır [World Wide Web Consortium (W3C) XSLT Dönüşümleri (XSLT) sürüm 1.0 öneri](https://www.w3.org/TR/1999/REC-xslt-19991116), hangi uygulama sağlayıcısı birkaç olası birini seçer, bir durumu işlemek için bir yol olarak seçenekleri. Örneğin, Bölüm 7.3 oluşturma işleme yönergeleri, W3C önerisi bir hata durumunda içeriğinin örnekleme 'un `xsl:processing-instruction` metin düğümleri dışındaki düğümlerde oluşturur. Bazı sorunlar için W3C hangi karar yapılmalıdır işlemci hatadan kurtarmayı karar verirse, söyler. 7.3 bölümde verilen sorun için uygulama bu hatadan düğümleri ve içeriklerini yoksayarak kurtarabilirsiniz W3C diyor.
+İsteğe bağlı davranışların olarak listelenen davranışlar açıklanmıştır [World Wide Web Consortium (W3C) XSLT Dönüşümleri (XSLT) sürüm 1.0 öneri](https://www.w3.org/TR/1999/REC-xslt-19991116), hangi uygulama sağlayıcısı birkaç olası birini seçer, bir durumu işlemek için bir yol olarak seçenekleri. Örneğin, Bölüm 7.3 oluşturma işleme yönergeleri, W3C önerisi bir hata durumunda içeriğinin örnekleme 'un `xsl:processing-instruction` metin düğümleri dışındaki düğümlerde oluşturur. Bazı sorunlar için W3C hangi karar yapılmalıdır işlemci hatadan kurtarmayı karar verirse, söyler. 7\.3 bölümde verilen sorun için uygulama bu hatadan düğümleri ve içeriklerini yoksayarak kurtarabilirsiniz W3C diyor.
 
 Bu nedenle, her W3C tarafından izin verilen isteğe bağlı davranışları için aşağıdaki tabloda isteğe bağlı davranışların uygulanması için .NET Framework uygulamasını uygulanan listeler <xref:System.Xml.Xsl.XslTransform> sınıfı ve hangi W3C XSLT 1.0 öneri de bölümünde bu sorunu ele alınmıştır.
 

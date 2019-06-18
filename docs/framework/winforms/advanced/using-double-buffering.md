@@ -7,12 +7,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - buffering [Windows Forms], double buffering
 ms.assetid: dc484e33-7101-4e4b-ada5-d3c96155fbcd
-ms.openlocfilehash: ac6c9b7f2cc1fea86a75eaaf4a2dde1ea60e4f40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b22336221c7bdda3c9dd7adf23308a2b0bad450
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777162"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169916"
 ---
 # <a name="using-double-buffering"></a>İki Kez Arabelleğe Almayı Kullanma
 İki kez arabelleğe alınan grafikler, karmaşık boyama işlemler içeren, uygulamalarınızda titreşimi azaltmak için kullanabilirsiniz. .NET Framework iki kez arabelleğe alma için yerleşik destek içerir veya yönetebilir ve grafikleri elle işleme.  
@@ -31,11 +31,9 @@ ms.locfileid: "61777162"
  İki kez arabelleğe alınan grafikler nasıl oluşturulacağını gösterir.  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Windows.Forms.Control.SetStyle%2A> ,  
- Denetim yöntemi iki kez arabelleğe almayı sağlar.  
+ <xref:System.Windows.Forms.Control.SetStyle%2A> Denetim yöntemi iki kez arabelleğe almayı sağlar.  
   
- <xref:System.Drawing.BufferedGraphicsContext> ,  
- Grafik arabellekleri oluşturmak için yöntemleri sağlar.  
+ <xref:System.Drawing.BufferedGraphicsContext> Grafik arabellekleri oluşturmak için yöntemleri sağlar.  
   
  <xref:System.Drawing.BufferedGraphicsManager>  
  Bir uygulama etki alanı için arabelleğe alınan grafikleri bağlam erişim sağlar.

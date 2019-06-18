@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 594f97d47d87d846ba27fc192096005e94587dd1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80f0b97d38b17740916ea5407b78f298aa42604b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608269"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169847"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office Programlama (C# ve Visual Basic)
 Visual Studio, C# ve Visual Basic, Microsoft Office programlama artıran özellikleri sunar. Yararlı C# özellikleri adlandırılmış ve isteğe bağlı bağımsız değişkenler içerir ve dönüş türü değerlerinin `dynamic`. COM programlama, atlayabilirsiniz `ref` Dizinli Özellikler anahtar sözcüğü ve kazanç erişim. Visual Basic'de özellikler, lambda ifadeleri ve koleksiyon başlatıcıları deyimlerinde otomatik uygulanan özellikler içerir.
@@ -37,7 +37,7 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
 2. Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**.  
   
-3. İçinde **yüklü şablonlar** bölmesini genişletin **Visual Basic** veya **Visual C#**, genişletin **Office**ve sürüm yılını'ye tıklayın Office Ürün.  
+3. İçinde **yüklü şablonlar** bölmesini genişletin **Visual Basic** veya **Visual C#** , genişletin **Office**ve sürüm yılını'ye tıklayın Office Ürün.  
   
 4. İçinde **şablonları** bölmesinde tıklayın **Excel \<sürüm > eklenti**.  
   
@@ -93,7 +93,7 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
      Bu yöntemi, iki yeni C# özellikleri kullanılır. Bu özelliklerin her ikisi de Visual Basic'te zaten mevcut.  
   
-    - Yöntemi [Ekle](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) sahip bir *isteğe bağlı parametre* belirli bir şablon belirtmek için. İsteğe bağlı parametreler, yeni [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], parametrenin varsayılan değeri kullanmak istiyorsanız, bu parametreye yönelik bağımsız değişkeni atlamak sağlar. Önceki örnekte hiçbir bağımsız değişken gönderildiği `Add` varsayılan şablonu kullanır ve yeni bir çalışma kitabı oluşturur. C# ' ın önceki sürümlerinde eşdeğer deyimi bir yer tutucu bağımsız değişken gerektiriyor: `excelApp.Workbooks.Add(Type.Missing)`.  
+    - Yöntemi [Ekle](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) sahip bir *isteğe bağlı parametre* belirli bir şablon belirtmek için. İsteğe bağlı parametreler, yeni C# 4, parametrenin varsayılan değeri kullanmak istiyorsanız, bu parametreye yönelik bağımsız değişkeni atlamak etkinleştirin. Önceki örnekte hiçbir bağımsız değişken gönderildiği `Add` varsayılan şablonu kullanır ve yeni bir çalışma kitabı oluşturur. C# ' ın önceki sürümlerinde eşdeğer deyimi bir yer tutucu bağımsız değişken gerektiriyor: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Daha fazla bilgi için [adlandırılmış ve isteğe bağlı bağımsız değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
@@ -178,7 +178,7 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
 2. İçinde **özellikleri** penceresinde değişiklik **birlikte çalışma türlerini katıştır** özelliğinden **True** için **False**.  
   
-3. 1. ve 2 için bu yordamdaki adımları yineleyin `Microsoft.Office.Interop.Word`.  
+3. 1\. ve 2 için bu yordamdaki adımları yineleyin `Microsoft.Office.Interop.Word`.  
   
 4. C# dilinde iki çağrıları açıklama `Autofit` sonunda `DisplayInExcel` yöntemi.  
   

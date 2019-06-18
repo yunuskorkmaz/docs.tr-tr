@@ -2,12 +2,12 @@
 title: Özel İfade Düzenleyicisi Kullanma
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 9d73134c3f17fad618d26f335d89fdab2d99dbdf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7bbd855595bc67f0e2837afd4876ac3690cac776
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650911"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169961"
 ---
 # <a name="using-a-custom-expression-editor"></a>Özel İfade Düzenleyicisi Kullanma
 Özel ifade düzenleyicisini düzenleme deneyimi daha zengin ya da daha basit bir ifade sağlamak üzere uygulanabilir. Özel ifade düzenleyicisini kullanma isteyebilirsiniz birçok senaryo vardır:  
@@ -222,7 +222,7 @@ namespace MyExpressionEditorService
 ```  
   
 ### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>Özel ifade düzenleyicisi içinde bir WPF projesi yayımlama  
- Tasarımcıda yeniden barındırma gösteren kodunu bir [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] uygulama ve oluşturma ve yayımlama `MyEditorService` hizmeti. Bu kodu kullanmadan önce avalon2 uygulamayı içeren projeden MyExpressionEditorService kitaplığı projesine bir başvuru ekleyin.  
+ WPF uygulamasında tasarımcıyı yeniden barındırma ve oluşturma ve yayımlama gösteren kodunu `MyEditorService` hizmeti. Bu kodu kullanmadan önce avalon2 uygulamayı içeren projeden MyExpressionEditorService kitaplığı projesine bir başvuru ekleyin.  
   
 ```  
 using System.Windows;  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816044"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170514"
 ---
 # <a name="in-process-side-by-side-execution"></a>Devam Eden Yan Yana Yürütme
 .NET Framework 4 ile başlayarak işlem içi yan tek bir işlemde birden çok ortak dil çalışma zamanı (CLR) sürümünü çalıştırmak için barındırma yana kullanabilirsiniz. Varsayılan olarak, COM bileşenlerini .NET Framework sürümüyle birlikte, işlem için yüklenen .NET Framework sürümünden bağımsız olarak oluşturuldukları çalıştırın yönetiliyor.  
@@ -56,7 +56,7 @@ ms.locfileid: "66816044"
   
      Yapmanız gerekenler: Bu senaryoda, hiçbir şey yapmayın. COM bileşenleri kayıtlı olan .NET Framework sürümü ile çalışır.  
   
-- **Senaryo 2**: Yönetilen uygulama ile çalıştırmayı tercih .NET Framework 2.0 SP1 ile oluşturulmuş [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], ancak sürüm 2.0 mevcut değilse .NET Framework 4'te çalıştırmak yararlı olur.  
+- **Senaryo 2**: Yönetilen uygulama .NET Framework 2.0, ancak bunlar 2.0 sürümünde mevcut değilse .NET Framework 4'te çalıştırmak istediğiniz ile çalıştırmayı tercih .NET Framework 2.0 SP1 ile oluşturulmuş.  
   
      Yüklü .NET framework sürümleri: Önceki bir sürümünü .NET Framework ve .NET Framework 4.  
   

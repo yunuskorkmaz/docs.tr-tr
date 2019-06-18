@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4deea506a616a3578261cb85f4d4dd1369f5718e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 179170c0cafc67027012d2306281eb2cd1d967a4
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873931"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170655"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET framework Dağıtım Kılavuzu
 Bu konu için .NET Framework 4.5 .NET Framework'ün herhangi bir sürümünü yüklemek için isteyen geliştiriciler için bilgi sağlamaktadır [!INCLUDE[net_current](../../../includes/net-current-version.md)] uygulamalarıyla birlikte.
@@ -267,6 +267,8 @@ Ortak dönüş kodları için bkz. [dönüş kodları](#return-codes) bölümü.
 > [!IMPORTANT]
 > İçin bir değer denetlemelisiniz **büyüktür veya eşittir** belirli bir sürümü mevcut olup olmadığını algılamak çalışırken sürüm anahtar değeri.
 
+[!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+
 |Sürüm|Yayın DWORD değeri|
 |-------------|--------------------------------|
 |Windows 10'da yüklü .NET framework 4.8 2019 güncelleştirebilir.|528040|
@@ -392,7 +394,7 @@ Aşağıdaki tablo, .NET Framework 4.5 redistributable uygulamanızın kurulumun
 |Seçenek|Açıklama|
 |------------|-----------------|
 |**/ CEIPConsent**|Varsayılan davranışını tekrardan yazar ve gelecekteki dağıtım deneyimleri geliştirmek üzere Microsoft'a anonim geri bildirim gönderir. Bu seçenek, yalnızca Kurulum programın rıza istemesine sebep olursa ve kullanıcı anonim görüşlerinizi Microsoft'a göndermek için izin verirse kullanılabilir.|
-|**/chainingpackage** `packageName`|Zincirlemeyi yapan yürütülebilir dosya adını belirtir. Gelecekteki dağıtım geliştirmeye yardımcı olmak için anonim görüş deneyimleri olarak bu bilgileri Microsoft'a gönderilmez.<br /><br /> Paket adı boşluk içeriyorsa, sınırlayıcı olarak çift tırnak işareti kullanın. Örneğin: **/chainingpackage "Lucerne Publishing"**. Zincirleme paketi örneği için bkz: [yükleme paketinden ilerleme bilgisi alma](https://go.microsoft.com/fwlink/?LinkId=181926) MSDN Kitaplığı'nda.|
+|**/chainingpackage** `packageName`|Zincirlemeyi yapan yürütülebilir dosya adını belirtir. Gelecekteki dağıtım geliştirmeye yardımcı olmak için anonim görüş deneyimleri olarak bu bilgileri Microsoft'a gönderilmez.<br /><br /> Paket adı boşluk içeriyorsa, sınırlayıcı olarak çift tırnak işareti kullanın. Örneğin: **/chainingpackage "Lucerne Publishing"** . Zincirleme paketi örneği için bkz: [yükleme paketinden ilerleme bilgisi alma](https://go.microsoft.com/fwlink/?LinkId=181926) MSDN Kitaplığı'nda.|
 |**/LCID**  `LCID`<br /><br /> Burada `LCID` bir yerel ayar tanımlayıcısını belirtir (bkz [desteklenen diller](#supported-languages))|Tarafından belirtilen dil paketini yükler `LCID` ve sessiz mod ayarlanmadığı sürece görüntülenen kullanıcı Arabirimi o dilde gösterilmesini zorlar.<br /><br /> Web Yükleyicisi için bu seçeneği zinciri-web dil paketini yükler. **Not:**  Bu seçeneği yalnızca web Yükleyicisi ile kullanın.|
 |**/log** `file` &#124; `folder`|Günlük dosyasının konumunu belirtir. Varsayılan işlem için geçici bir klasördür ve varsayılan dosya adı pakete dayalıdır. Dosya uzantısı .txt ise, bir metin günlüğü oluşturulur. Başka bir uzantı belirtirseniz veya bir uzantı belirtirseniz, bir HTML günlüğü oluşturulur.|
 |**/msioptions**|.Msi ve .msp öğeleri için geçirilecek seçeneklerini belirtir. Örneğin: `/msioptions "PROPERTY1='Value'"`.|
