@@ -6,16 +6,16 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 18e737ec1f6c6f76ff882d48ad311a45ba7b756b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a9e1f1fafcee4723c4aed37a0473c0f75512e11a
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456732"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169866"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Tür dinamiği (C# programlama Kılavuzu) kullanma
 
-[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] Yeni bir tür tanıtır `dynamic`. Türü bir nesne türü ancak statik bir tür olduğunda `dynamic` statik tür denetimi atlar. Çoğu durumda, bu tür gibi işlevleri `object`. Derleme zamanında olarak belirlenmiş bir öğe `dynamic` destekleyen herhangi bir işlem olarak kabul edilecektir. Bu nedenle olup nesne değeri COM API'sinden, IronPython gibi dinamik bir dili, HTML belge nesne modeli (DOM) öğesinden, yansıma veya programda başka bir yere öğesinden alır merak gerekmez. Ancak, kod geçerli değilse hataları çalışma zamanında yakalanır.
+C#4 tanıtır, yeni bir tür `dynamic`. Türü bir nesne türü ancak statik bir tür olduğunda `dynamic` statik tür denetimi atlar. Çoğu durumda, bu tür gibi işlevleri `object`. Derleme zamanında olarak belirlenmiş bir öğe `dynamic` destekleyen herhangi bir işlem olarak kabul edilecektir. Bu nedenle olup nesne değeri COM API'sinden, IronPython gibi dinamik bir dili, HTML belge nesne modeli (DOM) öğesinden, yansıma veya programda başka bir yere öğesinden alır merak gerekmez. Ancak, kod geçerli değilse hataları çalışma zamanında yakalanır.
 
 Örneğin, örnek yöntemi `exampleMethod1` aşağıdaki kodu yalnızca bir parametresi vardır, derleyici tanıyan yöntemine yapılan ilk çağrı `ec.exampleMethod1(10, 4)`, iki bağımsız değişkeni içerdiğinden geçerli değil. Çağrı, bir derleyici hatasına neden olur. Yöntem için yapılan ikinci çağrı `dynamic_ec.exampleMethod1(10, 4)`, derleyici tarafından çünkü işaretlenmediği türünü `dynamic_ec` olduğu `dynamic`. Bu nedenle, derleyici hata bildirilir. Ancak, hata bildirimi süresiz olarak kaçırmaz. Bu, çalışma zamanında yakalanabilmesini ve çalışma zamanı özel durumuna neden olur.
 
@@ -64,7 +64,7 @@ Dinamik dil çalışma zamanı (DLR), .NET Framework 4'te yeni bir API'dir. Dest
 
 ## <a name="com-interop"></a>COM birlikte çalışma
 
-[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] Office Otomasyonu API'leri gibi COM API'leri ile birlikte deneyimini geliştiren çeşitli özellikler içerir. Kullanımını geliştirmeleridir arasında `dynamic` türü ve [adlandırılmış ve isteğe bağlı bağımsız değişkenler](../classes-and-structs/named-and-optional-arguments.md).
+C#4 Office Otomasyon API'leri gibi COM API'leri ile birlikte deneyimini geliştiren çeşitli özellikler içerir. Kullanımını geliştirmeleridir arasında `dynamic` türü ve [adlandırılmış ve isteğe bağlı bağımsız değişkenler](../classes-and-structs/named-and-optional-arguments.md).
 
 Birçok COM yöntemi için bağımsız değişken türleri varyasyonu izin ve dönüş türü türleri olarak tanımlayarak `object`. Bu, C# türü kesin belirlenmiş değişkenleri ile koordine etmek için değerleri açık atama olmaması. Kullanarak derleme yaparsanız [/Link (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/link-compiler-option.md) seçeneği, giriş `dynamic` türü etkinleştirir, oluşumunu değerlendirilecek `object` COM imzalarında türünü değilmiş gibi `dynamic`ve dolayısıyla atama çoğunu önlemek için. Örneğin, aşağıdaki ifadeleri ile Microsoft Office Excel elektronik tablosundaki bir hücre erişmenizi nasıl Karşıtlık `dynamic` türü ve olmadan `dynamic` türü.
 
