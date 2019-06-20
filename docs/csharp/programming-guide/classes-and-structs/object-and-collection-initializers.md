@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: 6c713072e120f2b5a6740add296c957d499c93c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd49834c45f6e07a99be5a1f4293e938eed2cc77
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646218"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267727"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Nesne ve Koleksiyon Başlatıcıları (C# Programlama Kılavuzu)
 
@@ -42,7 +42,7 @@ var thing = new IndexersExample {
     [1] = '1',
     [2] = '4',
     [3] = '9',
-    Baz = Math.PI,
+    Size = Math.PI,
     ['C',4] = "Middle C"
 }
 ```
@@ -54,7 +54,6 @@ public string name;
 public double Size { set { ... }; }
 public char this[int i] { set { ... }; }
 public string this[char c, int i] {  set { ... }; }
-}
 ```
 
 ## <a name="object-initializers-with-anonymous-types"></a>Anonim türlerde Nesne Başlatıcıları
@@ -114,15 +113,15 @@ Bu Başlatıcı örnek <xref:System.Collections.Generic.Dictionary%602.Add(%600,
 
 Aşağıdaki örnek, nesne ve koleksiyon başlatıcıları kavramlarını birleştirir.
 
-[!code-csharp-interactive[InitializerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullExample)]  
+[!code-csharp[InitializerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullExample)]  
 
 Uygulayan bir nesne aşağıdaki örnekte <xref:System.Collections.IEnumerable> ve içeren bir `Add` yöntemi ile birden çok parametre listedeki bir öğe başına imzasıiçinkarşılıkgelenbirdençoköğeiçerenbirkoleksiyonBaşlatıcısıkullanır,`Add`yöntemi.
 
-[!code-csharp-interactive[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullListExample)]  
+[!code-csharp[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullListExample)]  
 
 `Add` yöntemleri kullanabilir `params` anahtar sözcüğü bir değişken sayıda bağımsız değişken, aşağıdaki örnekte gösterildiği gibi gerçekleştirilecek. Bu örnekte ayrıca dizinleri kullanarak bir koleksiyonu başlatmak için bir dizin oluşturucu özel uygulanışı gösterilmektedir.
 
-[!code-csharp-interactive[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
+[!code-csharp[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

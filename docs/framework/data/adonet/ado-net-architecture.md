@@ -2,18 +2,18 @@
 title: ADO.NET Mimarisi
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 13f65d0a2daf3b477a9b29c4de84fb359c946201
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 282f18cc7d379dffc410a0c62dc3b3e66e0a44f6
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877240"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267976"
 ---
 # <a name="adonet-architecture"></a>ADO.NET Mimarisi
 Geleneksel veri işleme öncelikli olarak bağlantı tabanlı, iki katmanlı modeli üzerinde yararlandı. Veri işleme, çok katmanlı mimariler giderek kullanır gibi programcılar kendi uygulamaları için daha iyi ölçeklenebilirlik sağlamak için bağlantısı kesik bir yaklaşıma geçirirsiniz.  
   
 ## <a name="adonet-components"></a>ADO.NET bileşenleri  
- İki ana bileşenden [!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] erişme ve verileri düzenleme .NET Framework veri sağlayıcıları için ve <xref:System.Data.DataSet>.  
+ ADO.NET erişme ve verileri yönlendirmek için iki ana bileşenden olan .NET Framework veri sağlayıcıları ve <xref:System.Data.DataSet>.  
   
 ### <a name="net-framework-data-providers"></a>.NET Framework Veri Sağlayıcıları  
  .NET Framework veri sağlayıcıları açıkça veri işleme ve verileri hızlı, yalnızca iletme, salt okunur erişim için tasarlanmış bileşenlerdir. `Connection` Nesnesi, bir veri kaynağına bağlantı sağlar. `Command` Nesne verileri döndürür, verileri değiştirme, saklı yordamları çalıştırmak ve gönderme veya parametre bilgilerini almak için veritabanı komutları erişim sağlar. `DataReader` Veri kaynağından veri yüksek performanslı akışını sağlar. Son olarak, `DataAdapter` arasında köprü sağlar `DataSet` nesnesi ve veri kaynağı. `DataAdapter` Kullanan `Command` veri kaynağında hem yük SQL komutları yürütme nesnelere `DataSet` verilerle ve verilerde yapılan değişiklikleri mutabık kılma `DataSet` veri kaynağına geri. Daha fazla bilgi için [.NET Framework veri sağlayıcıları](../../../../docs/framework/data/adonet/data-providers.md) ve [alınıyor ve ADO.NET veri değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md).  

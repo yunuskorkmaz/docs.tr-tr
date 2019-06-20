@@ -4,12 +4,12 @@ ms.date: 04/10/2018
 ms.assetid: 3ba543d8-15e5-4322-b6e7-1ebfc92ed7dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e365dff7c56ddca1d05f2e16605078ef46e4e2af
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: b29fc50e4bda23053c239292956f9b2cd0c628a3
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251149"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268074"
 ---
 # <a name="corprfhighmonitor-enumeration"></a>COR_PRF_HIGH_MONITOR Numaralandırması
 [.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
@@ -18,16 +18,23 @@ ms.locfileid: "66251149"
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```
 typedef enum {  
     COR_PRF_HIGH_MONITOR_NONE                     = 0x00000000,  
     COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES          = 0x00000001,  
-    COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED        = 0x00000002,     
-    COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS = 0x00000004,    
+    COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED        = 0x00000002,
+    COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS = 0x00000004,
+    COR_PRF_HIGH_DISABLE_TIERED_COMPILATION       = 0x00000008,
+    COR_PRF_HIGH_BASIC_GC                         = 0x00000010,
+    COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS         = 0x00000020,
+    COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED    = 0x00000040,
     COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE            = 0,  
     COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH           = COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | 
-                                                    COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS,  
-    COR_PRF_HIGH_MONITOR_IMMUTABLE                = 0  
+                                                    COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS |
+                                                    COR_PRF_HIGH_BASIC_GC |
+                                                    COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS |
+                                                    COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED,  
+    COR_PRF_HIGH_MONITOR_IMMUTABLE                = COR_PRF_HIGH_DISABLE_TIERED_COMPILATION  
 } COR_PRF_HIGH_MONITOR;  
 ```  
   
@@ -38,7 +45,11 @@ typedef enum {
 |`COR_PRF_HIGH_MONITOR_NONE`|Hiçbir bayrakları ayarlanmış.|  
 |`COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES`|Denetimleri [ICorProfilerCallback6::GetAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) CLR bütünleştirilmiş kod başvurusu kapanış ilerlemesi sırasında derleme başvuruları eklemek için geri çağırma.|  
 |`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`|Denetimleri [ICorProfilerCallback7::ModuleInMemorySymbolsUpdated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md) güncelleştirmeleri bir bellek içi modül ile ilişkili simge akışı için geri çağırma.|  
-|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|Denetimleri [ICorProfilerCallback9::DynamicMethodUnloaded](icorprofilercallback9-dynamicmethodunloaded-method.md) dinamik bir yöntem atık zaman olmuştur belirten geri çağırma toplanan ve kaldırıldı. <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|   
+|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|Denetimleri [ICorProfilerCallback9::DynamicMethodUnloaded](icorprofilercallback9-dynamicmethodunloaded-method.md) dinamik bir yöntem atık zaman olmuştur belirten geri çağırma toplanan ve kaldırıldı. <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|
+|`COR_PRF_HIGH_DISABLE_TIERED_COMPILATION`|.NET core 3.0 ve sonraki sürümler yalnızca: Devre dışı bırakır [katmanlı derleme](../../../core/whats-new/dotnet-core-3-0.md) profil oluşturucular için.|
+|`COR_PRF_HIGH_BASIC_GC`|.NET core 3.0 ve sonraki sürümler yalnızca: Profil oluşturma seçeneği GC karşılaştırdığınızda basit sağlar [ `COR_PRF_MONITOR_GC` ](cor-prf-monitor-enumeration.md). Yalnızca denetimleri [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md), ve [GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md) geri çağırmalar. Farklı `COR_PRF_MONITOR_GC` bayrak `COR_PRF_HIGH_BASIC_GC` eş zamanlı çöp toplama devre dışı bırakmaz.|
+|`COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS`|.NET core 3.0 ve sonraki sürümler yalnızca: Sağlar [MovedReferences](icorprofilercallback-movedreferences-method.md) ve [MovedReferences2](icorprofilercallback4-movedreferences2-method.md) yalnızca sıkıştırma GC'ler için geri çağırmaları.|
+|`COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED`|.NET core 3.0 ve sonraki sürümler yalnızca: Benzer şekilde [ `COR_PRF_MONITOR_OBJECT_ALLOCATED` ](cor-prf-monitor-enumeration.md), ancak nesne ayırma işlemleri için büyük nesne yığını (LOH) yalnızca hakkında bilgi sağlar.|
 |`COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE`|Tüm gösteren `COR_PRF_HIGH_MONITOR` profili Gelişmiş görüntüleri gerektiren bayrakları. Karşılık `COR_PRF_REQUIRE_PROFILE_IMAGE` bayrağını [cor_prf_monıtor](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) sabit listesi.|  
 |`COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH`|Tüm gösteren `COR_PRF_HIGH_MONITOR` profil oluşturucuyu çalışan bir uygulamaya bağlandıktan sonra ayarlanabilir bayrakları.|  
 |`COR_PRF_HIGH_MONITOR_IMMUTABLE`|Tüm gösteren `COR_PRF_HIGH_MONITOR` yalnızca başlatma sırasında ayarlanabilir bayrakları. Herhangi başka bir yerde sonuçlanıyor Bu bayrakların değiştirilmeye çalışılırken bir `HRESULT` başarısızlığı gösteren değer.|  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6939efa608f4887dfdb00abe8292bec841929440
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ddf4b84d44abb353cb9a5e025291690fb14b9461
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664636"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267922"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standart Tarih ve Saat Biçim Dizeleri
 Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat değerinin metin gösterimini tanımlamak için kullanır. Beyaz boşluk da dahil olmak üzere birden fazla karakter içeren bir tarih ve saat biçim dizesi, özel bir tarih ve saat biçimi dizesi yorumlanır; Daha fazla bilgi için [özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Standart veya özel bir biçim dizesi iki şekilde kullanılabilir:  
@@ -92,7 +92,7 @@ Standart tarih ve saat biçim dizeleri ile her ikisini de kullanılabilir <xref:
   
  Standart biçim dizeleri de kullanılabilir ayrıştırma işlemlerinde <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> veya <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> ayrıştırma işleminin başarılı olması belirli bir desene tam olarak uymak için bir Giriş dizesinin gerektiren yöntemleri. Birçok standart biçim dizesi birden çok özel biçim dizesine eşlenir, yani bir tarih ve saat değeri çeşitli biçimlerde temsil edilebilir ve ayrıştırma işlemi yine de başarılı olur. Özel biçim dizesi ya da çağırarak bir standart biçim dizesine karşılık gelen dizeleri belirleyebilirsiniz <xref:System.Globalization.DateTimeFormatInfo.GetAllDateTimePatterns%28System.Char%29?displayProperty=nameWithType> yöntemi. Aşağıdaki örnek "d" (kısa tarih deseni) standart biçim dizesiyle eşlenen özel biçim dizelerini görüntüler.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
+ [!code-csharp[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Standard#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/stdandparsing1.vb#17)]  
   
  Standart biçim tanımlayıcıları aşağıdaki bölümlerde <xref:System.DateTime> ve <xref:System.DateTimeOffset> değerleri.  
@@ -261,7 +261,7 @@ Standart tarih ve saat biçim dizeleri ile her ikisini de kullanılabilir <xref:
   
  Aşağıdaki örnek, bir dizi görüntülemek için "o" biçim tanımlayıcısını kullanır. <xref:System.DateTime> değerleri ve <xref:System.DateTimeOffset> ABD'deki bir sistemde değeri Pasifik Saat dilimi.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
+ [!code-csharp[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
   
  Aşağıdaki örnek biçimlendirilmiş bir dize oluşturmak için "o" biçim tanımlayıcısını kullanır ve ardından bir tarih ve saat çağırarak orijinal tarih ve saat değerini geri yükler `Parse` yöntemi.  

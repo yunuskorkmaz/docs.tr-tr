@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b945edca8bd739e6f122ed8b3e950508ecc28510
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649767"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268171"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Kategoriye göre listelenmiş Visual Basic derleyici seçenekleri
 Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme ortamında (IDE) programları derleme alternatif olarak sağlanır. İşlevsel kategoriye göre sıralanmış Visual Basic komut satırı derleyicisini seçeneklerin bir listesi verilmiştir.  
@@ -33,13 +33,13 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Çıktı dosyasının bölümlerinin hizalanacağı yeri belirtir.|  
 |[-optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|İyileştirmeleri etkinleştirir/devre dışı bırakır.|  
   
-## <a name="output-files"></a>Çıktı dosyaları  
+## <a name="output-files"></a>Çıkış dosyaları  
   
 |Seçenek|Amaç|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|İşlem belge yorumlarını bir XML dosyası.|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|İkili içeriği girişleri özdeş ise derlemeler arasında aynıdır derleme çıktısını almak derleyicinin neden olur.|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Derleyicinin hedef ayarlar [!INCLUDE[Compact](~/includes/compact-md.md)].|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|.NET Compact Framework'ü hedefleyen derleyicinin ayarlar.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Çıkış dosyasını belirtir.|  
 |[-refonly](refonly-compiler-option.md)|Yalnızca bir başvuru bütünleştirilmiş kodu çıkarır.|
 |[-refout](refout-compiler-option.md)|Başvuru bütünleştirilmiş kodu çıkış yolunu belirtir.|

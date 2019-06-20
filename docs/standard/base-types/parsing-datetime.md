@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4217221cc5199b9d8904be1ca3073878378b4e9
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765966"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268174"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Tarih ve saat dizelerini .NET ayrıştırma
 
@@ -65,14 +65,14 @@ Aşağıdaki örnek, kullanımını gösterir <xref:System.DateTime.Parse%2A?dis
 
 Bir dizeyi ayrıştırmak biçimlendirme kuralları kullanılır kültürü açıkça de tanımlayabilirsiniz. Standart birini belirtin <xref:System.Globalization.DateTimeFormatInfo> tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> özelliği. Aşağıdaki örnek, Alman bir dizeye ayrıştırmak için bir biçim sağlayıcısı kullanır. bir <xref:System.DateTime>. Oluşturur bir <xref:System.Globalization.CultureInfo> temsil eden `de-DE` kültür. Olduğunu `CultureInfo` nesne başarılı belirli bu dizenin ayrıştırma sağlar. Bu ayar ne olursa olsun ışığının <xref:System.Threading.Thread.CurrentCulture> , <xref:System.Threading.Thread.CurrentThread>.  
   
-[!code-csharp-interactive[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
+[!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
 [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#2)]
 
 Ancak, aşırı yüklemesini kullanmanız mümkün olmakla birlikte <xref:System.DateTime.Parse%2A> yöntemi özel biçim sağlayıcıları belirtmek için standart biçimler ayrıştırma yöntemini desteklemiyor. Bir tarih ve saat standart bir biçimde ifade ayrıştırma için kullanın <xref:System.DateTime.ParseExact%2A> yöntemi yerine.  
 
 <a name="styles-example"></a>Aşağıdaki örnekte <xref:System.Globalization.DateTimeStyles> geçerli tarih ve saat bilgilerini için eklenmemesi gerektiğini belirtmek için numaralandırma <xref:System.DateTime> belirtilmeyen alanları için.  
 
-[!code-csharp-interactive[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
+[!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
  
 ## <a name="parseexact"></a>ParseExact
@@ -81,7 +81,7 @@ Ancak, aşırı yüklemesini kullanmanız mümkün olmakla birlikte <xref:System
 
 Aşağıdaki örnekte, <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> yöntemi geçirilen ayrıştırmak için bir dize nesnesi tarafından izlenen bir biçim belirtici, ardından bir <xref:System.Globalization.CultureInfo> nesne. Bu <xref:System.DateTime.ParseExact%2A> yöntemi yalnızca uzun tarih düzenini izleyerek dizeleri ayrıştırma `en-US` kültür.  
 
-[!code-csharp-interactive[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
+[!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
 Her aşırı yüklemesini <xref:System.DateTime.Parse%2A> ve <xref:System.DateTime.ParseExact%2A> yöntemleri de sahip bir <xref:System.IFormatProvider> biçimlendirme dizenin kültüre özgü bilgiler sağlayan bir parametre. Bu <xref:System.IFormatProvider> nesnesi bir <xref:System.Globalization.CultureInfo> bir standart kültürü temsil eden bir nesne veya <xref:System.Globalization.DateTimeFormatInfo> tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> özelliği.  <xref:System.DateTime.ParseExact%2A> bir ek dize veya bir veya daha fazla özel tarih ve saat tanımlayan dize dizisi bağımsız değişkeni de kullanır biçimleri.  

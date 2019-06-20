@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90e9dbbd43751412c25dd5ca4dae2d503139db69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4d7cd61a771f1c9658b5bc98ec85259da1c77f9
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634546"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268234"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Özel tarih ve saat biçim dizeleri
 
@@ -41,7 +41,7 @@ Bir tarih ve saat biçimi dizesi metin olarak bildirimini tanımlar. bir <xref:S
 
 Ayrıştırma işlemlerinde, özel tarih ve saat biçimlendirme dizeleri kullanılabilir <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, ve <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> yöntemleri. Bu yöntemler, bir Giriş dizesinin tam olarak ayrıştırma işleminin başarılı olması için belirli bir desene uygun olduğunu gerektirir. Aşağıdaki örnek bir çağrıyı gösterir <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> gün, ay ve iki basamaklı bir yıl içermelidir bir tarihi ayrıştırmak için yöntemi.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
+[!code-csharp[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
 [!code-vb[Formatting.DateAndTime.Custom#18](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandparsing1.vb#18)]
 
 Aşağıdaki tabloda özel tarih ve saat biçimi belirteçleri açıklanır ve her biçim belirticisi tarafından üretilen bir sonuç dizesini görüntülenir. Varsayılan olarak, sonuç dizeleri en-US kültürünün, biçimlendirme kurallarını yansıtır. Belirli bir biçim belirticisi yerelleştirilmiş bir sonuç dizesi üretirse örnek aynı zamanda sonuç dizesinin uygulanacağı kültürü de not alır. Özel tarih ve saat biçim dizeleri kullanma hakkında daha fazla bilgi için bkz. [notları](#notes) bölümü.
@@ -509,7 +509,7 @@ Bir ayrıştırma işleminde "yy" özel biçim belirticisi kullanılarak Ayrış
 
 Aşağıdaki örnek bir özel biçim dizesinde "yy" özel biçim belirticisini içerir.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
+[!code-csharp[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
 [!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
 [Tabloya dön](#table)
@@ -638,7 +638,7 @@ Diğer tüm karakterler, her zaman karakter değişmez değer olarak yorumlanır
 
 Aşağıdaki örnek, bir biçim dizesindeki yerel saat dilimini temsil etmek için "PST" (Pasifik Standart Saati için) ve (Pasifik Yaz Saati için) "Pasifik Yaz SAATİ'ne" sabit karakterleriyle içerir. Dize sonuç dizesine eklenir ve yerel saat dilimi dizesini içeren bir dizeyi de başarıyla ayrıştırır olduğunu unutmayın.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
+[!code-csharp[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
 [!code-vb[Formatting.DateAndTime.Custom#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx1.vb#20)]
 
 Sonuç dizesinde veya bir giriş dizesinde başarıyla ayrıştırıldı ayrılmış karakterler olarak değil de değişmez karakter olarak yorumlanması için karakter olduğunu belirtmek için iki yolu vardır:
@@ -647,12 +647,12 @@ Sonuç dizesinde veya bir giriş dizesinde başarıyla ayrıştırıldı ayrılm
 
 Aşağıdaki örnek "pst" sabit karakterleriyle biçim dizesindeki yerel saat dilimini temsil etmek için (Pasifik Standart Saati) içerir. Hem "s" ve "t" özel biçim dizeleri olduğundan, her iki karakterleri karakter değişmez değerleri yorumlanması için kaçış karakterleri eklenmelidir.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
+[!code-csharp[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
 [!code-vb[Formatting.DateAndTime.Custom#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
 
 - Tüm sabit dizesini tırnak işareti veya kesme kapsayan tarafından. Aşağıdaki örnek Öncekine, "pst" tüm ayrılmış dizesini karakter değişmez değerleri yorumlanması gerektiğini belirtmek için tırnak işaretleri içine dışında aynıdır.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
+[!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
 ## <a name="notes"></a>Notlar

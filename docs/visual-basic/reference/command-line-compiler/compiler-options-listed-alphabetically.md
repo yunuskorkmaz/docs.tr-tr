@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 846d033c62d0168bab4661b9ab2b71a2139e2fcb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98d8b3eef0afd780b4a6568e8c067296d2243087
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649822"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268194"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Alfabetik listelenmiş Visual Basic derleyici seçenekleri
 Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme ortamından (IDE) programları derleme alternatif olarak sağlanır. Alfabetik olarak sıralanmış Visual Basic derleyici komut satırı seçeneklerinin listesi verilmiştir.  
@@ -45,7 +45,7 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|İçeren sınıf belirtir `Sub Main` başlatma sırasında kullanılacak yordamı.|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Bir modülün bir parçası olacağı derlemenin adını belirtir.|  
 |`-modulename:<string>`|Kaynak modülünün adını belirtin|  
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Derleyicinin hedef ayarlar [!INCLUDE[Compact](~/includes/compact-md.md)].|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|.NET Compact Framework'ü hedefleyen derleyicinin ayarlar.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Nezahrnovat ile derlenmiyor.|  
 |[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Derleyici başlık bilgilerini engellemesidir.|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Standart kitaplıkları başvuruda bulunmamaya derleyici neden olur.|  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab06c2d87de9483d7a3e9eb810f4be1f3278ddc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634519"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268217"
 ---
 # <a name="custom-numeric-format-strings"></a>Özel sayısal biçim dizeleri
 
@@ -41,7 +41,7 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
 |"0"|Sıfır yer tutucu|Eğer varsa, karşılık gelen rakamı sıfır ile değiştirir; aksi halde sonuç dizesinde sıfır görünür.<br /><br /> Daha fazla bilgi: ["0" özel Belirleyicisi](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0,46 0.45678 ("0,00", fr-FR) ->|  
 |"#"|Basamak yer tutucusu|Eğer varsa, karşılık gelen rakamı "#" sembolü ile değiştirir; aksi halde sonuç dizesinde hiçbir rakam gözükmez.<br /><br /> Giriş dizesindeki karşılık gelen rakamı önemli olmayan 0 ise sonuç dizesinde hiçbir rakam göründüğünü unutmayın. Örneğin, 0003 ("###") -> 3.<br /><br /> Daha fazla bilgi: ["#" Özel Belirleyicisi](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
 |"."|Ondalık noktası|Sonuç dizesindeki ondalık ayracının konumunu belirler.<br /><br /> Daha fazla bilgi: ["." Özel belirleyici](#SpecifierPt).|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0,46 0.45678 ("0,00", fr-FR) ->|  
-|","|Grup ayırıcısı ve numara ölçekleme|Hem bir grup ayracı, hem de sayı ölçekleme tanımlayıcısı olarak kullanılır. Grup ayracı olarak, her grup arasında yerelleştirilmiş bir grup ayracı karakteri ekler. Sayı ölçekleme tanımlayıcısı olarak, bir sayıyı belirtilen her virgül için 1000'e böler.<br /><br /> Daha fazla bilgi: ["," Özel Belirleyicisi](#SpecifierTh).|Grup ayracı tanımlayıcısı:<br /><br /> 2147483647 ("##, #", en-US) -> 2.147.483.647<br /><br /> 2147483647 ("##, #", es-ES) 2.147.483.647 -><br /><br /> Ölçekleme tanımlayıcısı:<br /><br /> 2147483647 ("#, #," en-US) -> 2,147<br /><br /> 2.147 2147483647'ye ("#, #,", es-ES) ->|  
+|","|Grup ayırıcısı ve numara ölçekleme|Hem bir grup ayracı, hem de sayı ölçekleme tanımlayıcısı olarak kullanılır. Grup ayracı olarak, her grup arasında yerelleştirilmiş bir grup ayracı karakteri ekler. Sayı ölçekleme tanımlayıcısı olarak, bir sayıyı belirtilen her virgül için 1000'e böler.<br /><br /> Daha fazla bilgi: ["," Özel Belirleyicisi](#SpecifierTh).|Grup ayracı tanımlayıcısı:<br /><br /> 2147483647 ("##, #", en-US) -> 2.147.483.647<br /><br /> 2147483647 ("##, #", es-ES) 2.147.483.647 -><br /><br /> Ölçekleme tanımlayıcısı:<br /><br /> 2147483647 ("#, #," en-US) -> 2,147<br /><br /> 2\.147 2147483647'ye ("#, #,", es-ES) ->|  
 |"%"|Yüzde yer tutucu|Sayıyı 100 ile çarpar ve sonuç dizesine yerelleştirilmiş bir yüzde simgesi ekler.<br /><br /> Daha fazla bilgi: ["%" Özel Belirleyicisi](#SpecifierPct).|% 36.97 0.3697 ("% #0.00" en-US) -><br /><br /> % 36,97 0.3697 ("% #0.00" el-GR) -><br /><br /> 0.3697 ("##.0%", en-US) -> %37.0<br /><br /> 0.3697 ("##.0%", el-GR) 37,0 -> %|  
 |"‰"|Her mille yer tutucu|Sayıyı 1000 ile çarpar ve sonuç dizesine yerelleştirilmiş bir binde simgesi ekler.<br /><br /> Daha fazla bilgi: ["‰" Özel Belirleyicisi](#SpecifierPerMille).|0.03697 ("#0.00‰" en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) 36 97‰ ->|  
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "e0"<br /><br /> "e+0"<br /><br /> "e-0"|Üstel simgeleme|Eğer ardından en az bir 0 (sıfır) geliyorsa, sonucu üstel gösterim kullanarak biçimlendirir. "E" veya "e" harfi üs sembolünün sonuç dizesinde büyük veya küçük harf olduğunu belirtir. "E" veya "e" karakterini izleyen sıfır sayısı üsteki en az basamak sayısını belirler. Artı işareti (+) üsten önce her zaman bir işaret karakterinin bulunacağını belirtir. Eksi işareti (-), işaret karakterinin yalnızca negatif üslerin önünde bulunacağını belirtir.<br /><br /> Daha fazla bilgi: ["E" ve "e" özel tanımlayıcıları](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
@@ -85,7 +85,7 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
  Basamak yok, bir sonuç dizesi veya 2f3b boşluk ile değiştirilir döndürmek için [bileşik biçimlendirme özelliği](../../../docs/standard/base-types/composite-formatting.md) ve aşağıdaki örnekte gösterildiği gibi bir alan genişliğini belirtin.  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
+ [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
  [Tabloya dön](#table)  

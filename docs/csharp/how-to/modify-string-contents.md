@@ -3,12 +3,12 @@ title: 'Nasıl yapılır: -Dize içeriklerini değiştirme C# Kılavuzu'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cc1166d98a6cc07e0827a138cecb09c0530b899
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672360"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267764"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Nasıl yapılır: C'de dize içeriklerini değiştirme\#
 
@@ -67,7 +67,7 @@ Aşağıdaki örnek bir dizedeki karakter kümesini nasıl değiştirileceğini 
 Kullanarak **güvenli** kod, sonra bir dize "yerinde" değiştirebilirsiniz oluşturulduktan. Güvenli olmayan kod .NET belirli türdeki bir kod hataları en aza indirmek için tasarlanmış özelliklerin çoğunu atlar. Güvenli olmayan kod string sınıfı olarak tasarlandığından, yerinde bir dize değiştirmek için kullanmanız gereken bir **değişmez** türü. Oluşturulduktan sonra değerini değiştirmez. Güvenli olmayan kod erişerek ve tarafından kullanılan bellek değiştirerek bu özelliği bozar bir `string` normal kullanmadan `string` yöntemleri.
 Aşağıdaki örnek, bir dize güvenli olmayan kod kullanarak yerinde değiştirmek için istediğiniz bu nadir durumlar için sağlanır. Bu örnek nasıl kullanılacağını gösterir `fixed` anahtar sözcüğü. `fixed` Anahtar sözcüğü atık toplayıcı (GC) kod güvenli olmayan işaretçiyi kullanarak bellek erişen sırasında dize nesnesine bellekte taşınmasını engeller. Ayrıca, bir olası yan, C# derleyicisi (Stajyer) dizeleri dahili olarak depolayan biçimi nedeniyle oluşur etkisi dizeleri güvenli olmayan işlemleri gösterir. Genel olarak, kesinlikle gerekli olmadığı sürece bu tekniği kullanması gerekir. Makalelerinde daha fazla bilgi edinebilirsiniz [güvenli olmayan](../language-reference/keywords/unsafe.md) ve [sabit](../language-reference/keywords/fixed-statement.md). API başvurusunu <xref:System.String.Intern%2A> dize kopyası kullanımı hakkında bilgi içerir.
 
-[!code-csharp-interactive[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
 Bu örnekler kodda bakarak deneyebilirsiniz bizim [GitHub deposu](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Örnekleri indirebilirsiniz [zip dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 

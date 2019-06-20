@@ -5,12 +5,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 05/03/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: 461a00c6ecc1d9a8b9caaca79f9d7905d2bb7528
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: abf43260a438c9b1febffc77cf39e7328e0377ee
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063469"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268241"
 ---
 # <a name="prepare-data"></a>Verileri hazırlama
 
@@ -124,7 +124,7 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-Min-Maks normalleştirme kullanarak veri Normalleştir [ `NormalizeMinMax` ](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) yöntemi.
+Normalleştirme vektörleri yanı sıra tek sayısal değerleri içeren sütunlar için uygulanabilir. Verileri Normalleştir `Price` min-maks normalleştirme ile kullanarak sütun [ `NormalizeMinMax` ](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) yöntemi.
 
 ```csharp
 // Define min-max estimator

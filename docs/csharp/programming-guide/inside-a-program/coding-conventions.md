@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 013d1d61e221e079fe68a6c6c7af5d6d5087b592
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a37109ab2712ea824baab95ca0b175cfa82aab3a
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608196"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267908"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# Kodlama Kuralları (C# Programlama Kılavuzu)
  Kodlama kuralları aşağıdaki amaçlara hizmet eder:  
@@ -27,7 +27,7 @@ ms.locfileid: "64608196"
 
  Bu konudaki yönergeleri, örnekler ve belgeler geliştirmek için Microsoft tarafından kullanılır.  
   
-## <a name="naming-conventions"></a>Adlandırma kuralları  
+## <a name="naming-conventions"></a>Adlandırma Kuralları  
   
 - Dahil etmezseniz kısa örneklerde [yönergeleri kullanarak](../../../csharp/language-reference/keywords/using-directive.md), ad alanı nitelikleri kullanın. Bir ad alanı, bir projedeki varsayılan olarak içeri aktarılır biliyorsanız, bu ad alanı adlarından tam olarak nitelemek gerekmez. Aşağıdaki örnekte gösterildiği gibi tek bir satır için çok uzun olmaları durumunda tam adları nokta (.) sonra bozuk olabilir.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "64608196"
   
      Aşağıdaki örnek örtük yazarak kullanan bir `for` deyimi.  
   
-     [!code-csharp[csProgGuideCodingConventions#11](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#11)]  
+     [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
   
      Aşağıdaki örnek örtük yazarak kullanan bir `foreach` deyimi.  
   

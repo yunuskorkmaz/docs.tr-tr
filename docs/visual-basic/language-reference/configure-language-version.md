@@ -2,12 +2,12 @@
 title: Visual Basic dil sürümünü seçin
 description: Belirli bir derleyici sürümü kullanarak söz dizimi doğrulama gerçekleştirmek için derleyicinin yapılandırın.
 ms.date: 05/24/2018
-ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4768d59a37d168b2883396f1dea4d0c1a0ff4ca7
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797039"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268273"
 ---
 # <a name="select-the-visual-basic-language-version"></a>Visual Basic dil sürümünü seçin
 
@@ -44,6 +44,7 @@ Değer `latest` Visual Basic dili küçük en son sürümünü kullanır. Geçer
 |15|Derleyici, Visual Basic 15.0 dahil veya daha düşük olan söz dizimini kabul eder.|
 |15.3|Derleyici, Visual Basic 15.3 dahil veya daha düşük olan söz dizimini kabul eder.|
 |15.5|Derleyici, Visual Basic 15.5 dahil veya daha düşük olan söz dizimini kabul eder.|
+|15.8|Derleyici, Visual Basic 15,8 dahil veya daha düşük olan söz dizimini kabul eder.|
 |en son|Derleyici bunu destekleyen tüm geçerli dili söz dizimini kabul eder.|
 
 Özel dizeler `default` ve `latest` sırasıyla yapı makinesinde yüklü en son büyük ve küçük dil sürümleri.

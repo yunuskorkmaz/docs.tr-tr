@@ -9,16 +9,16 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: b64c55b73a9c835ded0d7c81ff36329b8d6a8bc9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 028fa148d0e5622648a5fdfff1789c3d0bfde057
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586545"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268286"
 ---
 # <a name="-netcf"></a>-netcf
 
-Derleyicinin hedef ayarlar [!INCLUDE[Compact](~/includes/compact-md.md)].
+.NET Compact Framework'ü hedefleyen derleyicinin ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,7 +28,7 @@ Derleyicinin hedef ayarlar [!INCLUDE[Compact](~/includes/compact-md.md)].
 
 ## <a name="remarks"></a>Açıklamalar
 
-`-netcf` Seçeneği neden olur, Visual Basic Derleyicisi hedef [!INCLUDE[Compact](~/includes/compact-md.md)] tam .NET Framework yerine. Yalnızca tam .NET Framework içinde mevcut olan dil işlevselliği devre dışı bırakıldı.
+`-netcf` Seçeneği tam .NET Framework yerine .NET Compact Framework'ü hedeflemek Visual Basic Derleyicisi neden olur. Yalnızca tam .NET Framework içinde mevcut olan dil işlevselliği devre dışı bırakıldı.
 
 `-netcf` Seçeneği ile kullanılmak üzere tasarlanmıştır [- sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Devre dışı dil özellikleri `-netcf` aynı dil özellikleri ile hedeflenen dosyalarda mevcut olan `-sdkpath`.
 
@@ -85,7 +85,7 @@ Derleyicinin hedef ayarlar [!INCLUDE[Compact](~/includes/compact-md.md)].
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod derlenir `Myfile.vb` ile [!INCLUDE[Compact](~/includes/compact-md.md)], mscorlib.dll'nin ve Microsoft.VisualBasic.dll'nin sürümlerini kullanarak varsayılan yükleme dizininde bulunan [!INCLUDE[Compact](~/includes/compact-md.md)] C sürücüsünde. Genellikle, en son sürümünü kullanın [!INCLUDE[Compact](~/includes/compact-md.md)].
+Aşağıdaki kod derlenir `Myfile.vb` .NET Compact Framework ile mscorlib.dll'nin ve Microsoft.VisualBasic.dll'nin sürümlerini kullanan C sürücüsünde .NET Compact Framework'ün varsayılan yükleme dizini bulunamadı. Genellikle, .NET Compact Framework en son sürümünü kullanmanız gerekir.
 
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb

@@ -5,12 +5,12 @@ description: Windows 7 SP1'de .NET Framework'ü yüklemeyi öğrenin.
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: bc39a6658f300fc2cbe7f2686030b86a5f53802c
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 1e046641e5d09b13c41e1c5c4e07ed2531dfe058
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052716"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267947"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Windows 7 SP1 ve Windows Server 2008 R2’de .NET Framework Yükleme
 
@@ -23,7 +23,7 @@ Bu yönergeler ihtiyacınız .NET Framework sürümlerini yüklemenize yardımc�
 ## <a name="net-framework-48"></a>.NET Framework 4.8
 
 > [!div class="button"]
-> [.NET Framework'ün 4.8'ı indirin]https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [.NET Framework'ün 4.8 indirin](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) .NET Framework 4.0 veya daha sonra oluşturulan uygulamalarını çalıştırmak için kullanılabilir.
 

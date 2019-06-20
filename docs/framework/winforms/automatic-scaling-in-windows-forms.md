@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: cacda830a2501dcd127248955848d207d80bbe2c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f8afece073076b9ae94faaba8477f2a13e11b295
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636968"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268091"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows Forms'ta otomatik ölçeklendirme
 
@@ -48,7 +48,7 @@ Bu mekanizma birçok amaç için yeterli ederken aşağıdaki sınırlamalarınd
 
 - Yeni düzen yöneticileri gibi .NET Framework sürüm 2.0 ile sunulan uyumlu değil <xref:System.Windows.Forms.FlowLayoutPanel> ve <xref:System.Windows.Forms.TableLayoutPanel>.
 
-- Uyumluluk için gerekli olan ekran çözünürlüğünü doğrudan göre ölçeklendirme desteklememektedir [!INCLUDE[compact](../../../includes/compact-md.md)].
+- .NET Compact Framework için uyumluluk için gerekli olan ekran çözünürlüğünü doğrudan göre ölçeklendirme desteklememektedir.
 
 Bu mekanizma .NET geriye dönük uyumluluğu korumak için Framework 2.0 sürümünde korunur ancak sonraki bölümde açıklandığı daha sağlam ölçeklendirme mekanizması tarafından değiştirilmiştir. Sonuç olarak <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>ve belirli <xref:System.Windows.Forms.Control.Scale%2A> aşırı eski olarak işaretlendi.
 
@@ -63,7 +63,7 @@ Bu mekanizma .NET geriye dönük uyumluluğu korumak için Framework 2.0 sürüm
 
 - <xref:System.Windows.Forms.Control> Sınıfı ölçeklendirirken katılmasına olanak tanıyan birkaç yeni üyeler de sahiptir ve aynı formda ölçeklendirme desteklemek için karma. Özellikle <xref:System.Windows.Forms.Control.Scale%2A>, <xref:System.Windows.Forms.Control.ScaleChildren%2A>, ve <xref:System.Windows.Forms.Control.GetScaledBounds%2A> üyeleri destek ölçeklendirme.
 
-- Destek ölçeklendirme sırasında ekran çözünürlüğü tabanlı için eklenmiştir sistem yazı tipi desteği kapsamınızdaysa tarafından tanımlandığı gibi <xref:System.Windows.Forms.AutoScaleMode> sabit listesi. Bu modu desteklediği otomatik ölçeklendirme ile uyumlu [!INCLUDE[compact](../../../includes/compact-md.md)] daha kolay uygulama geçiş etkinleştiriliyor.
+- Destek ölçeklendirme sırasında ekran çözünürlüğü tabanlı için eklenmiştir sistem yazı tipi desteği kapsamınızdaysa tarafından tanımlandığı gibi <xref:System.Windows.Forms.AutoScaleMode> sabit listesi. Bu mod, .NET Compact daha kolay uygulama geçiş etkinleştirme Framework tarafından desteklenen otomatik ölçeklendirme ile uyumludur.
 
 - Düzen yöneticileri gibi uyumluluğunu <xref:System.Windows.Forms.FlowLayoutPanel> ve <xref:System.Windows.Forms.TableLayoutPanel> otomatik ölçeklendirme uygulaması eklendi.
 
