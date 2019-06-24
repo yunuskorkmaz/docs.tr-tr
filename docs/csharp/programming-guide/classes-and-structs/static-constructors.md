@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 43434b08d7eecde2a35ee3822d36c6da3a700c20
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: f053a74fcb87971506b83ca8ca2076517ddddf56
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67151961"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307098"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Statik Oluşturucular (C# Programlama Kılavuzu)
 Statik Oluşturucu herhangi başlatmak için kullanılan [statik](../../../csharp/language-reference/keywords/static.md) verileri veya yalnızca bir kez gerçekleştirilmesi gereken belirli bir eylemi gerçekleştirmek için. İlk örneği oluşturulduğunda veya herhangi bir statik üye başvurulan önce otomatik olarak adlandırılır.  
@@ -35,7 +35,7 @@ Statik Oluşturucular, aşağıdaki özelliklere sahiptir:
 
 - Statik alanları başlatmak için bir statik Oluşturucu sağlamazsanız, tüm statik alanları varsayılan değerlerine bağlantısında listelendiği gibi başlatılır [varsayılan değerler tablosu](../../../csharp/language-reference/keywords/default-values-table.md). 
   
-- Statik Oluşturucu bir özel durum oluşturursa, çalışma zamanı, ikinci kez çağırmayacaktır ve türü, programınızın çalıştığı uygulama etki alanı ömrü boyunca başlatılmamış kalır. En yaygın olarak, bir <xref:System.TypeInitializationException> statik Oluşturucu bir tür örneği işlenemediğinde özel durum ya da statik oluşturucu içinde bir işlenmeyen özel durum ortaya çıkma için. Kaynak kodunda açıkça tanımlanmayan örtük statik oluşturucular için sorun giderme Ara dil (IL) kod İnceleme gerektirebilir.
+- Statik Oluşturucu bir özel durum oluşturursa, çalışma zamanı, ikinci kez çağırmayacaktır ve türü, programınızın çalıştığı uygulama etki alanı ömrü boyunca başlatılmamış kalır. En yaygın olarak, bir <xref:System.TypeInitializationException> statik Oluşturucu bir tür örneği işlenemediğinde özel durum veya bir statik oluşturucu içinde gerçekleşen işlenmeyen bir özel durum. Kaynak kodunda açıkça tanımlanmayan örtük statik oluşturucular için sorun giderme Ara dil (IL) kod İnceleme gerektirebilir.
 
 - Statik Oluşturucu varlığını eklenmesini engeller <xref:System.Reflection.TypeAttributes.BeforeFieldInit> tür özniteliği. Bu, çalışma zamanı iyileştirmesi sınırlar.
 

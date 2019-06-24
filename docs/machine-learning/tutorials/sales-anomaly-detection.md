@@ -4,12 +4,12 @@ description: Ürün satış verileri için anomali algılama uygulama oluşturma
 ms.date: 06/11/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 6ea5adf79a17bb10ddea676eaea483c2cf627d82
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 3e3e368ed3bcb35e7e2c8bdf08abe71afd4ae87c
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026040"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306223"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Öğretici: ML.NET ile ürün satış anomalileri algılayın
 
@@ -157,7 +157,7 @@ Aşağıdaki çağrısı ekleyin `DetectSpike()`yöntemi sonraki kod satırı ol
 `DetectSpike()` Yöntemi aşağıdaki görevleri yürütür:
 
 * Modeli eğitir.
-* Geçmiş satış verilerini temel ani değişiklikleri algılar.
+* Geçmiş satış verilerini temel alarak ani değişiklikleri algılar.
 * Sonuçları görüntüler.
 
 Oluşturma `DetectSpike()` yöntemi hemen sonrasına `Main()` yöntemi, aşağıdaki kodu kullanarak:

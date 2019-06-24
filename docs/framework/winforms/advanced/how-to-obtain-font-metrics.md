@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 75177b609f14d335aa57aba77d647827f50a8692
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7d7ad92199bb8a8f01290066f8ae023a14c2f9ce
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881844"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307430"
 ---
 # <a name="how-to-obtain-font-metrics"></a>Nasıl yapılır: Yazı Tipi Ölçümleri Alma
 <xref:System.Drawing.FontFamily> Sınıfı belirli ailesi/stil birleşimi için çeşitli ölçümleri alma aşağıdaki yöntemleri sağlar:  
@@ -26,7 +26,7 @@ ms.locfileid: "65881844"
   
 - <xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)  
   
- Bu yöntem tarafından döndürülen sayılara boyutu ve belirli bir ölçü bağımsız oldukları yazı tipi tasarım birimlerinde olduğundan <xref:System.Drawing.Font> nesne.  
+ Bu yöntem tarafından döndürülen değerler bağımsız boyutu ve belirli bir birim olduklarından yazı tipi tasarım birimlerinde olduğundan <xref:System.Drawing.Font> nesne.  
   
  Aşağıda çeşitli ölçümler gösterilmektedir:
   

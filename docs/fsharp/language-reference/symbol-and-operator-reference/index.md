@@ -2,12 +2,12 @@
 title: Simge ve İşleç Başvurusu
 description: Simgeler ve kullanılan işleçleri hakkında F# programlama dilidir.
 ms.date: 02/11/2019
-ms.openlocfilehash: 0ea8337a9055c8df639fe6abdb6c79445d189d64
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 14ea7a66f7e9a79d24b62a4aa0564eecb891ee1a
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490805"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306183"
 ---
 # <a name="symbol-and-operator-reference"></a>Simge ve İşleç Başvurusu
 
@@ -47,7 +47,7 @@ Aşağıdaki tabloda kullanılan simgeler açıklanmaktadır F# dil daha fazla b
 |`+?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda ve sol tarafında ekler.<br /></li></ul>|
 |`,`|[Demetler](../tuples.md)|<ul><li>Bir tanımlama grubu ya da tür parametreleri öğelerini ayırır.<br /></li></ul>|
 |`-`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>İkili işleç olarak kullanıldığında, sol tarafta sağından çıkarır.<br /></li><li>Birli işleç kullanıldığında, bir değilleme işlemi gerçekleştirir.<br /></li></ul>|
-|`-`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda, sol taraftaki sağından çıkarır.<br /></li></ul>|
+|`-?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda, sol taraftaki sağından çıkarır.<br /></li></ul>|
 |`->`|[İşlevler](../functions/index.md)<br /><br />[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>İşlev türleri, bağımsız değişkenleri sınırlandırır ve dönüş değerleri.<br /></li><li>Bir ifade (sequence ifadeleri); verir eşdeğer `yield` anahtar sözcüğü.<br /></li><li>Eşleştirme ifadelerinde kullanılır<br /></li></ul>|
 |`.`|[Üyeler](../members/index.md)<br /><br />[İlkel Türler](../primitive-types.md)|<ul><li>Üye erişir ve bir tam ad bireysel adlarını ayırır.<br /></li><li>Bir ondalık kayan nokta numaralarını belirtir.<br /></li></ul>|
 |`..`|[Döngüler: `for...in` İfade](../loops-for-in-expression.md)|<ul><li>Bir aralığını belirtir.<br /></li></ul>|

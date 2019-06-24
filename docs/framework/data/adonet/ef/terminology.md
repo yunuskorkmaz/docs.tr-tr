@@ -2,12 +2,12 @@
 title: Entity Framework Terimleri
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877478"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306347"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework Terimleri
 Bu konu, sık başvurulan terimlerini tanımlar [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belgeleri. Ek bilgileri kullanılabildiği ilgili konulara bağlantılar sağlanmaktadır.  
@@ -27,7 +27,7 @@ Bu konu, sık başvurulan terimlerini tanımlar [!INCLUDE[adonet_ef](../../../..
 |eşzamanlılık|Paylaşılan verileri aynı anda birden çok kullanıcının erişmek ve bunları değiştirmek için izin veren bir işlem. Varsayılan olarak, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] iyimser eşzamanlılık modelini uygular.|  
 |yön|Bazı ilişkilendirmeleri asimetrik yapısı için ifade eder. Yön ile belirtilen `FromRole` ve `ToRole` özniteliklerinin bir `NavigationProperty` veya `ReferentialConstraint` bir şema öğesi.<br /><br /> Daha fazla bilgi için [NavigationProperty öğesi (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#navigationproperty-element-csdl) ve [gezinti özelliği](../../../../../docs/framework/data/adonet/navigation-property.md).|  
 |İstekli yükleme|İlgili nesnelerin yanı sıra, sorguda açıkça istenen nesneleri belirli bir dizi yükleme işlemi.|  
-|.edmx dosyası|Kavramsal modelde (CSDL), depolama modelinde (SSDL) ve bunları (MSL) arasındaki eşlemeleri içeren bir XML dosyası. .Edmx dosyasını tarafından oluşturulan [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] araçları. Daha fazla bilgi için [.edmx dosyasını genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).|  
+|.edmx dosyası|Kavramsal modelde (CSDL), depolama modelinde (SSDL) ve bunları (MSL) arasındaki eşlemeleri içeren bir XML dosyası. .Edmx dosyasını varlık veri modeli araçları tarafından oluşturulur. Daha fazla bilgi için [.edmx dosyasını genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).|  
 |end|İlişkilendirmesine katılan bir varlık.<br /><br /> Daha fazla bilgi için [son öğe (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl) ve [ilişkilendirme end](../../../../../docs/framework/data/adonet/association-end.md).|  
 |varlık|Bir kavram, bir veri türü tanımlandığı bir uygulama etki alanı.<br /><br /> Daha fazla bilgi için [EntityType öğesi (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl) ve [varlık türü](../../../../../docs/framework/data/adonet/entity-type.md).|  
 |EntityClient|Sınıflar gibi içeren depolama bağımsız bir ADO.NET veri sağlayıcısının `EntityConnection`, `EntityCommand`, ve `EntityDataReader`. Çalışan [!INCLUDE[esql](../../../../../includes/esql-md.md)] ve depolama belirli ADO.NET veri sağlayıcıları için aşağıdaki gibi bağlanır `SqlClient`.<br /><br /> Daha fazla bilgi için [Entity Framework için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).|  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 78286cde925a4583a3610ce100d23e16adcefe49
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7dd93e5aa44effcf9fc41598e41f6f612a209c86
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878081"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307141"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Nasıl yapılır: Bir ADO.NET varlık çerçevesi veri kaynağı (WCF Veri Hizmetleri) kullanarak veri hizmeti oluşturma
 
@@ -26,7 +26,7 @@ WCF Veri Hizmetleri, varlık verilerini bir veri hizmeti kullanıma sunar. Bu va
 
 3. Model adını girin ve ardından **Ekle**.
 
-     ' Nın ilk sayfasında [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] Sihirbazı görüntülenir.
+     Varlık veri modeli Sihirbazı'nın ilk sayfasında görüntülenir.
 
 4. İçinde **Choose Model Contents** iletişim kutusunda **veritabanından Oluştur**. Sonra **İleri**'ye tıklayın.
 

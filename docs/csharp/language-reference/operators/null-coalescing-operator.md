@@ -33,7 +33,7 @@ a ?? (b ?? c)
 
 `??` İşleci aşağıdaki senaryolarda yararlı olabilir:
 
-- İle ifadeler de [null koşullu işleçleri?. ve?] ](member-access-operators.md#null-conditional-operators--and-), null birleşim işleci ile null koşullu işlemler ifadenin sonucu olması durumunda değerlendirmek için alternatif bir ifade sağlamak için kullanabileceğiniz `null`:
+- İle ifadeler de [null koşullu işleçleri?. ve ?[]](member-access-operators.md#null-conditional-operators--and-), null birleşim işleci ile null koşullu işlemler ifadenin sonucu olması durumunda değerlendirmek için alternatif bir ifade sağlamak için kullanabileceğiniz `null`:
 
   [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
 
@@ -61,5 +61,5 @@ Daha fazla bilgi için [null birleşim işleci](~/_csharplang/spec/expressions.m
 
 - [C#başvuru](../index.md)
 - [C# işleçleri](index.md)
-- [?. ve? [] işleçleri](member-access-operators.md#null-conditional-operators--and-)
+- [?. ve ?[] işleçleri](member-access-operators.md#null-conditional-operators--and-)
 - [?: işleci](conditional-operator.md)

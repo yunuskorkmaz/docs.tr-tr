@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79a8d378f69ced0bc22926b066e76dc515b06559
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 04f31748fd53fe3281102fcadcc1e56ea3cc1109
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210440"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307084"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > öğesi
 Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.AppContext> yeni işlevselliği için bir geri çevirme mekanizma sağlar sınıfını.  
@@ -68,7 +68,7 @@ Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Bir paket bölümlerini imzalamak için PackageDigitalSignatureManager tarafından kullanılan varsayılan algoritma SHA1 veya SHA256 olup olmadığını denetler.<br>Microsoft, çakışma sorunları nedeniyle SHA1, SHA256 önerir.|.NET framework 4.7.1|
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|Ayarlandığında `false`, FIPS etkin olduğunda XAML tabanlı iş akışı projeleri Visual Studio ile hata ayıklamasını sağlar. Bu olmadan, bir <xref:System.NullReferenceException> System.Activities derlemedeki yöntemlere yapılan çağrılar oluşturulur.|.NET framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|Hata ayıklayıcı bir iş akışı örneği için sağlama toplamı MD5 veya SHA1 kullanıp kullanmadığını denetler. | .NET framework 4.7|
-|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|İş akışı sağlama toplamı karma varsayılan olarak .NET Framework 4.7 sunulan SHA1 algoritması kullanıp kullanmadığını denetler (`true`), veya bunu kullanıp kullanmadığını varsayılan .NET Framework 4.8 olarak sunulan varsayılan SHA256 algoritmasını (`false`).<br>Microsoft, çakışma sorunları nedeniyle SHA1, SHA256 önerir.|.NET Framework 4.8|
+|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|İş akışı sağlama toplamı karma varsayılan olarak .NET Framework 4.7 sunulan SHA1 algoritması kullanıp kullanmadığını denetler (`true`), veya .NET Framework 4.8 varsayılan olarak sunulan varsayılan SHA256 algoritmasını kullanmadığını (`false`).<br>Microsoft, çakışma sorunları nedeniyle SHA1, SHA256 önerir.|.NET Framework 4.8|
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|Denetimleri olup yığın izlemelerini taşınabilir pdb kullanırken elde kaynak dosya ve satır bilgileri içerir. `false` Kaynak dosya ve satır bilgilerini dahil etmek için; Aksi takdirde, `true`.|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|Denetimleri olup olmadığını <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> yöntemi bir özel durum oluşturursa, bir <xref:System.Drawing.Icon> nesnenin PNG çerçeve vardır. Daha fazla bilgi için [azaltma: Simge nesneleri PNG çerçevelerde](../../../migration-guide/mitigation-png-frames-in-icon-objects.md).|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|Belirler olmadığını <xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType> koleksiyonu eklendiğinde, nesneler atıldı düzgün <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> yöntemi. `true` eski davranışı korumak için; `false` tüm özel yazı tipi nesneleri atmak için. |.NET Framework 4.7.2|
@@ -134,7 +134,7 @@ Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.
 |`Switch.UseLegacyAccessibilityFeatures`|Kullanılabilir .NET Framework 4.7.1 ile başlayan erişilebilirlik özelliği olup olmadığını kontrol eder etkin veya devre dışı. | .NET framework 4.7.1 |
 |`Switch.UseLegacyAccessibilityFeatures.2`|Denetimlerin erişilebilirlik 4.7.2 .NET Framework'teki kullanılabilir özelliği etkinleştirilir (`false`) veya devre dışı (`true`). Varsa `true`, `Switch.UseLegacyAccessibilityFeatures` ayrıca olmalıdır `true` .NET Framework 4.7.1 erişilebilirlik özelliklerini etkinleştirmek için.|.NET Framework 4.7.2|
 |`Switch.UseLegacyAccessibilityFeatures.3`|Etkin olup olmadığını erişilebilirlik özellikleri .NET Framework 4.8 sunulan denetimler (`false`) veya devre dışı (`true`). Varsa `true`, `Switch.UseLegacyAccessibilityFeatures` ve `Switch.UseLegacyAccessibilityFeatures.2` ayrıca olmalıdır `true`.|.NET Framework 4.8|
-|`Switch.UseLegacyToolTipDisplay`|Denetimler araç ipuçları displaed bir kullanıcı olup olmadığını gezinen fare imlecini bir WPF denetime (`true`), veya hem klavye odağı ve klavye kısayolu aracılığıyla görüntülenme şeklini (`false`, varsayılan davranış). .NET Framework 4.8 üzerinde çalışan, ancak .NET Framework'ün önceki sürümlerini hedefleyen uygulamalar, klavye odağı her ikisini de etkinleştirmek ve kısayol anahtar desteği gerektiren `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, ve `Switch.UseLegacyAccessibilityFeatures.3` tüm ayarlanması `false`.|.NET Framework 4.8|
+|`Switch.UseLegacyToolTipDisplay`|Denetimler araç ipuçları kullanıcı görüntülenip görüntülenmeyeceğini gezinen fare imlecini bir WPF denetime (`true`), veya hem klavye odağı ve klavye kısayolu aracılığıyla görüntülenme şeklini (`false`, varsayılan davranış). .NET Framework 4.8 üzerinde çalışan, ancak .NET Framework'ün önceki sürümlerini hedefleyen uygulamalar, klavye odağı her ikisini de etkinleştirmek ve kısayol anahtar desteği gerektiren `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, ve `Switch.UseLegacyAccessibilityFeatures.3` tüm ayarlanması `false`.|.NET Framework 4.8|
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Bileşik anahtarlar boş anahtar sıralarında XSD şema doğrulaması tarafından göz ardı edilir olup olmadığını denetler. Daha fazla bilgi için [azaltma: XML şema doğrulaması](../../../migration-guide/mitigation-xml-schema-validation.md).|.NET Framework 4.6|  
   
 > [!NOTE]

@@ -3,12 +3,12 @@ title: Söz dizimi dönüştürme (Roslyn API'leri) ile çalışmaya başlama
 description: Geçiş, sorgulama ve söz dizimi ağacı walking giriş.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbd56f445a9f06b530a7d094b06f60e6123788da
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675916"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306923"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Söz dizimi dönüştürme ile çalışmaya başlama
 
@@ -30,7 +30,7 @@ Söz dizimi dönüştürmeleri için iki stratejileri birini seçin. **Fabrika y
 
 İlk söz dizimi dönüşümü Fabrika yöntemleri gösterir. Değiştirilecek gideceğinizi bir `using System.Collections;` deyimiyle bir `using System.Collections.Generic;` deyimi. Bu örnek nasıl oluşturabileceğinizi gösterir <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> kullanarak nesneleri <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> Fabrika yöntemleri. Her tür için **düğüm**, **belirteci**, veya **Meraklısına Notlar** o türün bir örneği oluşturan bir Üreteç yöntemi yoktur. Hiyerarşik olarak aşağıdan yukarıya çıktısından düğümler tarafından söz dizimi ağacı oluşturmak. Ardından, var olan dönüştürme programı var olan düğümleri oluşturduğunuz yeni ağaçta değiştirdiğiniz.
 
-Visual Studio'yu başlatın ve yeni C# oluşturma **tek başına kod analizi aracı** proje. Visual Studio'da **dosya** > **yeni** > **proje** yeni proje iletişim kutusu görüntülenecek. Altında **Visual C#** > **genişletilebilirlik** seçin bir **tek başına kod analizi aracı**. Bu hızlı başlangıçta iki örnek projeler varsa, bu nedenle çözümünü arlandırın **SyntaxTransformationQuickStart**, projeyi adlandırın **ConstructionCS**. **Tamam**'ı tıklatın.
+Visual Studio'yu başlatın ve yeni C# oluşturma **tek başına kod analizi aracı** proje. Visual Studio'da **dosya** > **yeni** > **proje** yeni proje iletişim kutusu görüntülenecek. Altında **Visual C#**  > **genişletilebilirlik** seçin bir **tek başına kod analizi aracı**. Bu hızlı başlangıçta iki örnek projeler varsa, bu nedenle çözümünü arlandırın **SyntaxTransformationQuickStart**, projeyi adlandırın **ConstructionCS**. **Tamam**'ı tıklatın.
 
 Bu proje kullanan <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> sınıfı oluşturmak için yöntemleri bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> temsil eden `System.Collections.Generic` ad alanı.
 
@@ -63,7 +63,7 @@ Yeniden olduğunuz, ağacında eklenecek kodu görmek için programı çalışt�
 
 ### <a name="create-a-modified-tree"></a>Değiştirilmiş bir ağaç oluşturun
 
-Bir ifade içeren bir küçük söz dizimi ağacı oluşturdunuz. Yeni düğümler oluşturma API'ları, tek deyimler veya diğer küçük kod blokları oluşturmak için doğru seçimdir. Ancak, daha büyük kod bloklarını oluşturmak için düğümleri değiştirin veya varolan bir ağacına düğümlerini eklemek yöntemlerini kullanmanız gerekir. Sözdizimi ağacı sabit olduğunu unutmayın. **Söz dizimi API** var olan bir söz dizimi ağacı oluşturma sonra değiştirmek için herhangi bir mekanizma sağlamaz. Bunun yerine, mevcut olanlara değişikliklere göre yeni ağaçları oluşturan yöntemleri sağlar. `With*` öğesinden türetilen somut sınıflar, yöntemlerin tanımlandığı <xref:Microsoft.CodeAnalysis.SyntaxNode> veya genişletme yöntemleri bildirilen <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions> sınıfı. Bu yöntemler, mevcut bir düğümün alt özellikleri için değişiklikleri uygulayarak yeni bir düğüm oluşturur. Ayrıca, <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> genişletme yöntemi, bir alt düğüm ağaçtaki değiştirmek için kullanılabilir. Bu yöntem ayrıca üst yeni oluşturulan alt öğeye işaret edecek şekilde güncelleştirir ve tüm ağacı - olarak da bilinen bir işlem bu işlemi yineler _re spining_ ağaç.
+Bir ifade içeren bir küçük söz dizimi ağacı oluşturdunuz. Yeni düğümler oluşturma API'ları, tek deyimler veya diğer küçük kod blokları oluşturmak için doğru seçimdir. Ancak, daha büyük kod bloklarını oluşturmak için düğümleri değiştirin veya varolan bir ağacına düğümlerini eklemek yöntemlerini kullanmanız gerekir. Sözdizimi ağacı sabit olduğunu unutmayın. **Söz dizimi API** var olan bir söz dizimi ağacı oluşturma sonra değiştirmek için herhangi bir mekanizma sağlamaz. Bunun yerine, mevcut olanlara değişikliklere göre yeni ağaçları oluşturan yöntemleri sağlar. `With*` öğesinden türetilen somut sınıflar, yöntemlerin tanımlandığı <xref:Microsoft.CodeAnalysis.SyntaxNode> veya genişletme yöntemleri bildirilen <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions> sınıfı. Bu yöntemler, mevcut bir düğümün alt özellikleri için değişiklikleri uygulayarak yeni bir düğüm oluşturur. Ayrıca, <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> genişletme yöntemi, bir alt düğüm ağaçtaki değiştirmek için kullanılabilir. Bu yöntem ayrıca üst yeni oluşturulan alt öğeye işaret edecek şekilde güncelleştirir ve tüm ağacı - olarak da bilinen bir işlem bu işlemi yineler _yeniden dönen_ ağaç.
 
 Sonraki adım, bir programın tamamındaki (küçük) temsil eden bir ağaç oluşturmak ve değiştirmek sağlamaktır. Aşağıdaki kodu ekleyin başlangıcına `Program` sınıfı:
 
@@ -94,7 +94,7 @@ Programı yeniden çalıştırın. Bu süre ağaç artık doğru şekilde içeri
 
 `With*` Ve <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> yöntemleri sağlayan bireysel dalları söz dizimi ağacı dönüştürmek için kullanışlı anlamına gelir. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> Sınıfı bir sözdizimi ağacında birden çok dönüşümleri gerçekleştirir. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> Sınıftır öğesinin <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType>. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> Belirli bir türüne dönüştürme uygulanan <xref:Microsoft.CodeAnalysis.SyntaxNode>. Dönüştürmeleri çoklu türleri için geçerli <xref:Microsoft.CodeAnalysis.SyntaxNode> söz dizimi ağacı içinde göründükleri yere nesneleri. İkinci projenin Bu hızlı başlangıçta, bir komut satırı tür çıkarımı, her yerde kullanılabilir yerel değişken bildirimlerinde türleri açık kaldıran yeniden düzenleme oluşturur.
 
-Yeni C# oluşturma **tek başına kod analizi aracı** proje. Visual Studio'da sağ `SyntaxTransformationQuickStart` çözüm düğümü. Seçin **Ekle** > **yeni proje** görüntülenecek **yeni proje iletişim kutusu**. Altında **Visual C#** > **genişletilebilirlik**, seçin **tek başına kod analizi aracı**. Projenizi adlandırın `TransformationCS` ve Tamam'a tıklayın.
+Yeni C# oluşturma **tek başına kod analizi aracı** proje. Visual Studio'da sağ `SyntaxTransformationQuickStart` çözüm düğümü. Seçin **Ekle** > **yeni proje** görüntülenecek **yeni proje iletişim kutusu**. Altında **Visual C#**  > **genişletilebilirlik**, seçin **tek başına kod analizi aracı**. Projenizi adlandırın `TransformationCS` ve Tamam'a tıklayın.
 
 Türetilen bir sınıf oluşturmak için ilk adımıdır <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> Bağlantılarınızdaki gerçekleştirilecek. Projeye yeni bir sınıf dosyası ekleyin. Visual Studio'da **proje** > **sınıfı Ekle...** . İçinde **Yeni Öğe Ekle** iletişim kutusuna `TypeInferenceRewriter.cs` dosya adı olarak.
 
@@ -112,7 +112,7 @@ Tutmak için özel bir salt okunur alanı bildirmek için aşağıdaki kodu ekle
 
 Geçersiz kılma <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> yöntemi:
 
-```C#
+```csharp
 public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
 {
 

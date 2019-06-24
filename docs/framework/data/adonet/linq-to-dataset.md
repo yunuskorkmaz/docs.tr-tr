@@ -2,19 +2,19 @@
 title: LINQ - DataSet
 ms.date: 03/30/2017
 ms.assetid: 743e3755-3ecb-45a2-8d9b-9ed41f0dcf17
-ms.openlocfilehash: 92be418e38039757437e6e673f39a7baef011528
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36335f90c7850fa00a15e7112b7473637250c656
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878624"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306243"
 ---
 # <a name="linq-to-dataset"></a>LINQ - DataSet
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] daha kolay ve hızlı sorgu için verileri önbelleğe üzerinde kolaylaştırır bir <xref:System.Data.DataSet> nesne. Özellikle, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorguları programlama dilinden kendisi yerine ayrı bir sorgu dilini kullanarak yazma geliştiricilerin etkinleştirerek sorgulama basitleştirir. Bu, özellikle artık derleme zamanı söz dizimi denetimini statik yazmaya ve sorguları Visual Studio tarafından sağlanan IntelliSense desteği yararlanabilirsiniz Visual Studio geliştiriciler için yararlıdır.  
   
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Ayrıca bir veya daha fazla veri kaynağından birleştirilmiş veriler üzerinde sorgu için. Bu, yerel olarak toplanan verileri ve orta katman Web uygulamalarında önbelleğe alma sorgulama gibi işlenen verilerin nasıl temsil ve esneklik gerektiren birçok senaryolarını olanaklı kılar. Özellikle, bu yöntem işlemlerinde genel raporlama, analiz ve iş zekası uygulamaları gerektirir.  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] İşlevi sunulmuştur alanında uzantı yöntemlerini yoluyla <xref:System.Data.DataRowExtensions> ve <xref:System.Data.DataTableExtensions> sınıfları. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] temel alır ve mevcut kullanan [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] mimari ve değiştirmek için tasarlanmamıştır [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] uygulama kodunda. Var olan ADO.NET 2.0 kod içinde çalışmaya devam edecek bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] uygulama. İlişkiyi [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] için [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] ve veri deposu Aşağıdaki diyagramda gösterilmiştir.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] İşlevi sunulmuştur alanında uzantı yöntemlerini yoluyla <xref:System.Data.DataRowExtensions> ve <xref:System.Data.DataTableExtensions> sınıfları. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] temel alır ve mevcut ADO.NET mimarisini kullanır ve uygulama kodunda ADO.NET değiştirmek üzere tasarlanmamıştır. Var olan ADO.NET kod içinde çalışmaya devam edecek bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] uygulama. İlişkiyi [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ADO.NET ve veri deposu Aşağıdaki diyagramda gösterilmiştir.  
   
  ![LINQ to DataSet ADO.NET sağlayıcısını dayalı olduğunu gösteren diyagram.](./media/linq-to-dataset/linq-dataset-ado-dotnet-provider.gif)  
   

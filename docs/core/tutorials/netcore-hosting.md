@@ -4,12 +4,12 @@ description: .NET Core çalışma zamanı nasıl çalıştığını denetleme ge
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 5b783bf7a5da55a3b5dada8ed024069f5fe3d3ba
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 6cddb6fa7dcd7a7d050749c26249f1f5d876322d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267853"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306197"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Yerel koddan .NET çalışma zamanı denetlemek için özel bir .NET Core konak yazma
 
@@ -65,9 +65,11 @@ Yönetilen bütünleştirilmiş kod yükleme ve yönetilen bir yönteme bir işl
 [!code-cpp[HostFxrHost#LoadAndGet](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadAndGet)]
 
 Geçirerek `nullptr` çalışma zamanı temsilci çağrılırken temsilci türü adı olarak örnek varsayılan imza için Yönetilen yöntemi kullanır:
-```C#
+
+```csharp
 public delegate int ComponentEntryPoint(IntPtr args, int sizeBytes);
 ```
+
 Farklı bir imza, çalışma zamanı temsilci çağırırken temsilci türü adı belirterek kullanılabilir.
 
 ### <a name="step-4---run-managed-code"></a>4\. adım - yönetilen kodu çalıştırma!

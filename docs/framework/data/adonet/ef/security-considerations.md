@@ -2,12 +2,12 @@
 title: Güvenlik konuları (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489840"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307309"
 ---
 # <a name="security-considerations-entity-framework"></a>Güvenlik konuları (varlık çerçevesi)
 Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konuları açıklanmaktadır. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamalar. Güvenli .NET Framework uygulamaları oluşturmaya yönelik önerileri de izlemelidir. Daha fazla bilgi için [güvenliğine genel bakış](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -86,7 +86,7 @@ Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konu
  Sağlayıcının değişmez adı app.config dosyasında değiştirilebilir. İstemci uygulaması, Fabrika modeline güçlü bir ad kullanarak alttaki sağlayıcı standart sağlayıcısı üzerinden erişmek için sorumluluğunu üstlenmelidir.  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Model ve eşleme dosyalarını kısıtlayın.  
- Bir yönetici, model ve eşleme dosyalarını (.edmx, .csdl, .ssdl ve .msl) yalnızca model veya eşlemelerini değiştirmek kullanıcılar için yazma erişimi kısıtlamanız gerekir. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Yalnızca çalışma zamanında bu dosyalarına yönelik okuma erişimi gerektirir. Yönetici nesne katmanı için de erişimi sınırlamanız gerekir ve tarafından oluşturulan önceden derlenmiş görünümü kaynak kodu dosyaları [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] araçları.  
+ Bir yönetici, model ve eşleme dosyalarını (.edmx, .csdl, .ssdl ve .msl) yalnızca model veya eşlemelerini değiştirmek kullanıcılar için yazma erişimi kısıtlamanız gerekir. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Yalnızca çalışma zamanında bu dosyalarına yönelik okuma erişimi gerektirir. Yönetici ayrıca nesne katmanı ve varlık veri modeli araçları tarafından oluşturulan önceden derlenmiş görünümü kaynak kodu dosyaları için erişimi sınırlamanız gerekir.  
   
 ## <a name="security-considerations-for-queries"></a>Sorgular için güvenlik konuları  
  Aşağıdaki güvenlik hususlarını kavramsal model sorgulanırken uygulayın. Bu noktalar uygulamak [!INCLUDE[esql](../../../../../includes/esql-md.md)] EntityClient kullanan sorgular ve LINQ, kullanarak nesne sorgularını [!INCLUDE[esql](../../../../../includes/esql-md.md)]ve Sorgu Oluşturucu yöntemleri.  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 99cf5b42700779a3eb48eb6452365056f5fa89ba
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025140"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306576"
 ---
 # <a name="c-operators-c-reference"></a>C#işleçler (C# Başvurusu)
 
@@ -53,7 +53,7 @@ En yüksek öncelik işleçleri şunlardır.
 
 [Yeni](../keywords/new-operator.md) – oluşturmada yazın.
 
-[typeof](../keywords/typeof.md) – döndürür <xref:System.Type> işlenen temsil eden nesne.
+[typeof](type-testing-and-conversion-operators.md#typeof-operator) – döndürür <xref:System.Type> işlenen temsil eden nesne.
 
 [işaretli](../keywords/checked.md) – taşma denetimi için tamsayı işlemleri sağlar.
 
@@ -87,7 +87,7 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 [--x](arithmetic-operators.md#decrement-operator---) – önek azaltma. Depolama konumu daha az bir x değeriyle güncelleştirdikten sonra x değeri döndürür (genelde tam sayı 1 çıkarır).
 
-[(T) x](invocation-operator.md) – atama yazın.
+[(T) x](type-testing-and-conversion-operators.md#cast-operator-) – atama yazın.
 
 [await](../keywords/await.md) – bekler bir `Task`.
 
@@ -137,9 +137,9 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 [x > y =](comparison-operators.md#greater-than-or-equal-operator-) – büyüktür veya eşittir.
 
-[olan](../keywords/is.md) – uyumluluk yazın. Değerlendirilen sol işlenen sağ işlenen (statik türü) belirtilen türe dönüştürülebilir ise true döndürür.
+[olan](type-testing-and-conversion-operators.md#is-operator) – uyumluluk yazın. Döndürür `true` değerlendirilen sol işlenen sağ işlenen tarafından belirtilen türün başvurusuna yayınlanabilir durumunda.
 
-[olarak](../keywords/as.md) – dönüştürmesi yazın. (Bir statik türü), sağ işlenen tarafından belirtilen tür için sol işlenen döndürür ancak `as` döndürür `null` burada `(T)x` bir özel durum oluşturması.
+[olarak](type-testing-and-conversion-operators.md#as-operator) – dönüştürmesi yazın. Sol işlenen sağ işlenen tarafından belirtilen türe dönüştürme döndürür ancak `as` döndürür `null` burada `(T)x` bir özel durum oluşturması.
 
 ## <a name="equality-operators"></a>Eşitlik İşleçleri
 

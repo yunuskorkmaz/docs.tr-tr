@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 6bf53cba73c4d7331b2a1c68bf7187c13281d844
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c7d5d4ef7d812e186813cd08f9e4e2adf2ab1a58
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633446"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306649"
 ---
 # <a name="lock-statement-c-reference"></a>lock deyimi (C# Başvurusu)
 
@@ -54,7 +54,7 @@ Kullanamazsınız [await](await.md) gövdesinde anahtar sözcüğü bir `lock` d
 İş parçacığı paylaşılan bir kaynağa erişmeye eşitlediğinizde, adanmış Pro instanci objektu kilitleme (örneğin, `private readonly object balanceLock = new object();`) ya da bir kilit nesnesi olarak kodun ilgisiz parçaları tarafından kullanılmak üzere düşüktür, başka bir örneği. Kilitlenme veya kilit Çekişme neden olabilir, farklı paylaşılan kaynaklar için aynı kilit nesne örneğini kullanarak kaçının. Özellikle, aşağıdaki nesneleri Kilitle kullanmaktan kaçının:
 
 - `this`, gibi bir kilit çağıranlar tarafından kullanılabilir.
-- <xref:System.Type> örnekler olanlar tarafından alınabilir olarak [typeof](typeof.md) işleci veya yansıma.
+- <xref:System.Type> örnekler olanlar tarafından alınabilir olarak [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) işleci veya yansıma.
 - dize değişmez değerleri, bu durumda olabileceğinden dahil olmak üzere örnekleri, dize [interned](/dotnet/api/system.string.intern#remarks).
 
 ## <a name="example"></a>Örnek

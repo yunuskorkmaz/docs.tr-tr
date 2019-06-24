@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 763682f1e4a6ee6d4235d9b9d53ac58db106bac4
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: b6bca26cc05a13e1384c4fc9642264f65b159ff7
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024932"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306535"
 ---
 # <a name="member-access-operators-c-reference"></a>Üye erişim işleçleri (C# Başvurusu)
 
@@ -147,7 +147,7 @@ Aşağıdaki örnek, olan veya olmayan bağımsız değişkenler, bir yöntem ç
 
 Ayrıca bir ifade işlemlerinde değerlendirilecek sırayı belirtmek için parantez kullanın. Daha fazla bilgi için [ayraç ekleme](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) bölümünü [işleçleri](../../programming-guide/statements-expressions-operators/operators.md) makalesi. İşleçler, öncelik düzeyine göre sıralı listesi için bkz. [ C# işleçleri](index.md).
 
-[Cast ifadeleri](invocation-operator.md#cast-expression), çağırmak bir dönüşüm işleci, parantez de kullanabilirsiniz.
+[Cast ifadeleri](type-testing-and-conversion-operators.md#cast-operator-), açık tür dönüştürmeleri gerçekleştirmek, aynı zamanda parantez kullanın.
 
 ## <a name="operator-overloadability"></a>İşleç overloadability
 

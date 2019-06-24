@@ -2,12 +2,12 @@
 title: Entity Framework’e Genel Bakış
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: c79055adc2be12a5806fe5e8ff129b6ecd3d76f5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: e6c96326991c6f883ad670393bb5c2691f8ad29e
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880028"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307341"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework'e Genel Bakış
 
@@ -39,7 +39,7 @@ Eşlemeleri ve depolama modeli, kavramsal model, veri sınıflarını veya uygul
 ## <a name="map-objects-to-data"></a>Verilere Map nesneleri
  Nesne yönelimli programlama, veri depolama sistemleri ile etkileşim kurmak için bir sınama oluşturur. Kuruluş sınıflarının sık ilişkisel veritabanı tabloları organizasyonu yansıtır olsa da, uygun kusursuz değil. Birden çok normalleştirilmiş tablo, tek bir sınıfa sık karşılık gelir ve tablolar arasındaki ilişkileri temsil daha sınıflar arasındaki ilişkileri genellikle farklı şekilde temsil edilir. Örneğin, bir satış siparişi için müşteri temsil etmek için bir `Order` sınıf örneğine başvuru içeren bir özellik kullanıyor olabileceğiniz bir `Customer` sınıfı sırada bir `Order` veritabanındaki tabloda satır içeren bir yabancı anahtar sütunu (veya sütun kümesi) birincil bir anahtar değere karşılık gelen bir değer ile `Customer` tablo. A `Customer` sınıf adında bir özelliğe sahip `Orders` örneklerinin bir koleksiyonunu içeren `Order` sınıfı sırada `Customer` tablolu bir veritabanında karşılaştırılabilir sütunu yok. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Geliştiricileri bu şekilde ya da daha yakından ilişkileri modellemek için ilişkileri veritabanında gösterildiği temsil etmek için esneklik sağlar.
 
- Mevcut çözümleri, bir "empedans Uyuşmazlığı", yalnızca nesne yönelimli eşleme sınıfları ve özellikleri ilişkisel tablolar ve sütunlar için sık çağrılması bu boşluğu arasında köprü kuracak şekilde çalıştınız. Geleneksel bu yaklaşımı tercih yerine [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ilişkisel tabloları, sütunları ve mantıksal modellerde yabancı anahtar kısıtlamaları, varlıkları ve ilişkileri kavramsal modellerde eşler. Bu nesneleri tanımlama ve mantıksal model en iyi duruma getirme, daha fazla esneklik sağlar. [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] Araçları kavramsal model temelinde genişletilebilir veri sınıfları oluşturun. Bu Geliştirici ekler, ek üyeleriyle genişletilmiş kısmi sınıflar sınıflardır. Varsayılan olarak, varlıklar nesneleri olarak gerçekleştirilmesini ve değişiklikleri kaydetme ve izleme hizmetleri sağlayan temel sınıflar için belirli bir kavramsal model oluşturulan sınıflar türetin. Geliştiriciler, bu sınıflar, varlıkları ve ilişkileri ilişkilendirmeleri ilgili nesneleri olarak çalışmak için kullanabilir. Geliştiriciler için kavramsal bir modeli oluşturulan sınıflar da özelleştirebilirsiniz. Daha fazla bilgi için [nesneleriyle çalışma](../../../../../docs/framework/data/adonet/ef/working-with-objects.md).
+ Mevcut çözümleri, bir "empedans Uyuşmazlığı", yalnızca nesne yönelimli eşleme sınıfları ve özellikleri ilişkisel tablolar ve sütunlar için sık çağrılması bu boşluğu arasında köprü kuracak şekilde çalıştınız. Geleneksel bu yaklaşımı tercih yerine [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ilişkisel tabloları, sütunları ve mantıksal modellerde yabancı anahtar kısıtlamaları, varlıkları ve ilişkileri kavramsal modellerde eşler. Bu nesneleri tanımlama ve mantıksal model en iyi duruma getirme, daha fazla esneklik sağlar. Varlık veri modeli araçları kavramsal model temelinde genişletilebilir veri sınıfları oluşturun. Bu Geliştirici ekler, ek üyeleriyle genişletilmiş kısmi sınıflar sınıflardır. Varsayılan olarak, varlıklar nesneleri olarak gerçekleştirilmesini ve değişiklikleri kaydetme ve izleme hizmetleri sağlayan temel sınıflar için belirli bir kavramsal model oluşturulan sınıflar türetin. Geliştiriciler, bu sınıflar, varlıkları ve ilişkileri ilişkilendirmeleri ilgili nesneleri olarak çalışmak için kullanabilir. Geliştiriciler için kavramsal bir modeli oluşturulan sınıflar da özelleştirebilirsiniz. Daha fazla bilgi için [nesneleriyle çalışma](../../../../../docs/framework/data/adonet/ef/working-with-objects.md).
 
 ## <a name="access-and-change-entity-data"></a>Varlık veri erişimi ve değiştirme
 
@@ -47,7 +47,7 @@ Birden fazla yalnızca başka bir nesne ilişkisel eşleme çözümü [!INCLUDE[
 
 - [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Kavramsal modelde tanımlı varlık türleri sorgulama için dil ile tümleşik sorgu (LINQ) desteği sağlar. Daha fazla bilgi için [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Doğrudan kavramsal modeldeki varlıklar ile çalışır ve destekleyen SQL depolamadan bağımsız SQL diyalektiği [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] kavramları. [!INCLUDE[esql](../../../../../includes/esql-md.md)] hem nesne sorguları ve EntityClient sağlayıcısı ile yürütülen sorguları ile kullanılır. Daha fazla bilgi için [Entity SQL'e genel bakış](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Bir depolama bağımsız SQL diyalektiği kavramsal modeldeki varlıklar ile doğrudan çalıştığını ve varlık veri modeli kavramları destekleyen SQL. [!INCLUDE[esql](../../../../../includes/esql-md.md)] hem nesne sorguları ve EntityClient sağlayıcısı ile yürütülen sorguları ile kullanılır. Daha fazla bilgi için [Entity SQL'e genel bakış](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] EntityClient veri sağlayıcısı içerir. Bu sağlayıcı bağlantıları yönetir, veri kaynağına özgü sorgulara varlık sorguları çevirir ve döndüren bir veri okuyucu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] varlık veri nesnelerini gerçekleştirmek için kullanır. Nesne gerçekleştirme gerekli olmadığı durumlarda, EntityClient sağlayıcısı de standart bir ADO.NET veri sağlayıcısı gibi çalıştırmak uygulamaları sağlayarak kullanılabilir [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgular ve döndürülen salt okunur veri okuyucu kullanma. Daha fazla bilgi için [Entity Framework için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
@@ -55,7 +55,7 @@ Aşağıdaki diyagramda gösterilmektedir [!INCLUDE[adonet_ef](../../../../../in
 
 ![Entity Framework mimari diyagramı](../../../../../docs/framework/data/adonet/ef/media/wd-efarchdiagram.gif "wd_EFArchDiagram")
 
-[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] Araçları, türetilen bir sınıf üretebilir `System.Data.Objects.ObjectContext` veya `System.Data.Entity.DbContext` , kavramsal modeldeki varlık kapsayıcısı temsil eder. Bu nesne bağlamı kimlikleri, eşzamanlılık ve ilişkileri yönetme ve değişiklikleri izleme olanakları sağlar. Bu sınıf ayrıca kullanıma sunan bir `SaveChanges` ekler, yazar yöntemi güncelleştirir ve veri kaynağına siler. Sorgular gibi komutları geliştirici tarafından belirtilen saklı yordamları veya sistem tarafından otomatik olarak oluşturulan ya da bu değişiklik yapılmaz.
+Varlık veri modeli araçları türetilen bir sınıf oluşturabilirsiniz `System.Data.Objects.ObjectContext` veya `System.Data.Entity.DbContext` , kavramsal modeldeki varlık kapsayıcısı temsil eder. Bu nesne bağlamı kimlikleri, eşzamanlılık ve ilişkileri yönetme ve değişiklikleri izleme olanakları sağlar. Bu sınıf ayrıca kullanıma sunan bir `SaveChanges` ekler, yazar yöntemi güncelleştirir ve veri kaynağına siler. Sorgular gibi komutları geliştirici tarafından belirtilen saklı yordamları veya sistem tarafından otomatik olarak oluşturulan ya da bu değişiklik yapılmaz.
 
 ## <a name="data-providers"></a>Veri sağlayıcıları
 

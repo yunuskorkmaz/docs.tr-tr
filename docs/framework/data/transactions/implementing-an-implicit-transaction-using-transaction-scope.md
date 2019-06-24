@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: e9e5e09bdde82c7b818fd47275bdbfeda5850682
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f45019ccc54056371954965e105e309fd41d9ffd
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645751"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306209"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>İşlem Kapsamı Kullanarak Örtük İşlem Uygulama
 <xref:System.Transactions.TransactionScope> Sınıfı bir işlem ile etkileşime gerek kalmadan bir işlemde katılan olarak kod bloğu işaretlemek için basit bir yol sağlar. İşlem kapsamı seçebilir ve ortam işlem otomatik olarak yönetir. Kendi kullanım kolaylığı ve verimliliği nedeniyle, kullanmanız önerilir <xref:System.Transactions.TransactionScope> sınıfı bir işlem uygulama geliştirirken.  
@@ -124,7 +124,9 @@ using(TransactionScope scope1 = new TransactionScope())
  Örnek kod bloğu yeni bir kapsam oluşturma ortam işlem gösterir (`scope1`) ile <xref:System.Transactions.TransactionScopeOption.Required>. Kapsam `scope1` (bir işlem) yeni bir işlem oluşturur ve işlem yapar gibi bir kök kapsamı olan ortam işlem. `Scope1`Daha sonra her farklı bir ile üç daha fazla nesne oluşturur <xref:System.Transactions.TransactionScopeOption> değeri. Örneğin, `scope2` ile oluşturulan <xref:System.Transactions.TransactionScopeOption.Required>, ve bir ortam işlem olduğundan, onu oluşturan ilk işlem birleştirir `scope1`. Unutmayın `scope3` yeni bir işlem ve kök kapsamı `scope4` ortam hiçbir işlem sahiptir.  
   
  Değerini varsayılan ve en sık kullanılan olsa da <xref:System.Transactions.TransactionScopeOption> olan <xref:System.Transactions.TransactionScopeOption.Required>, her diğer değerlerinin benzersiz amacı vardır.  
-  
+
+### <a name="non-transactional-code-inside-a-transaction-scope"></a>İşlem kapsamı içinde işlem olmayan kod
+
  <xref:System.Transactions.TransactionScopeOption.Suppress> kod bölümü tarafından gerçekleştirilen işlemleri korumak istediğiniz ve işlemleri başarısız olursa ortam işlemi durdurmak istiyor musunuz yararlı olur. Örneğin, günlük gerçekleştirmek veya işlemlerini denetleme istediğinizde veya bağımsız olarak abonelere olayları yayımlamak istediğiniz olup ortam işleminizin tamamlar veya durdurur. Bu değer, aşağıdaki örnekte gösterildiği gibi bir işlem kapsam içinde bir işlem olmayan kod bölümünde sahip olmanızı sağlar.  
   
 ```csharp  

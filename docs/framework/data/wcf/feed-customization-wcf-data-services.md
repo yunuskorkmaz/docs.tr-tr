@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: f35c1387d54fdc02cb421af477671a5a75939c57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36f0d50994593d1d575a836dfbd04e8c63a21204
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626401"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306273"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Akış özelleştirme (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] veri bir akış olarak kullanıma sunmak için. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] için veri akışı hem Atom hem de JavaScript nesne gösterimi (JSON) biçimlerini destekler. Atom akışı, kullandığınızda [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıklar ve ilişkiler, HTTP ileti gövdesine eklenebilir bir XML biçimine gibi verileri seri hale getirmek için standart bir yöntemini sağlar. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıklarda bulunan verileri ve Atom öğeleri arasında varsayılan varlık özelliği eşlemeyi tanımlar. Daha fazla bilgi için [OData: Atom biçimi](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -42,7 +42,7 @@ ms.locfileid: "64626401"
  Daha fazla bilgi için [nasıl yapılır: Entity Framework sağlayıcısı ile akışları özelleştirme](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
->  Veri modeline uzantıları varlık tasarımcısı tarafından desteklenmediği için veri modeli içeren XML dosyasını el ile değiştirmeniz gerekir. Tarafından oluşturulan .edmx dosyasını hakkında daha fazla bilgi için [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] araçları, görmek [.edmx dosyasını genel bakış (Entity Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).  
+>  Veri modeline uzantıları varlık tasarımcısı tarafından desteklenmediği için veri modeli içeren XML dosyasını el ile değiştirmeniz gerekir. Varlık veri modeli araçlarının ürettiği .edmx dosyası hakkında daha fazla bilgi için bkz: [.edmx dosyasını genel bakış (Entity Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).  
   
 ### <a name="custom-feed-attributes"></a>Özel öznitelik akışı  
  Aşağıdaki tabloda, veri modeli tanımlayan kavramsal şema tanım dili için (CSDL) ekleyebileceğiniz akışları özelleştirme XML öznitelikleri gösterir. Bu öznitelikler özelliklerine eşdeğerdir <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> yansıma sağlayıcısı ile kullanılır.  

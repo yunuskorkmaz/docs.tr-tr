@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-ms.openlocfilehash: d2aef5b2ed291aab917573408abf26b9fbedfbd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8748f1869e8e2d5246910fac0100a6c70790579
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661782"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306642"
 ---
 # <a name="dynamic-c-reference"></a>dynamic (C# Başvurusu)
 
@@ -68,10 +68,10 @@ Daha fazla bilgi ve örnekler için bkz. [türünü kullanarak dinamik](../../..
 
 - <xref:System.Dynamic.ExpandoObject?displayProperty=nameWithType>
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
-- [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [object](../../../csharp/language-reference/keywords/object.md)
-- [is](../../../csharp/language-reference/keywords/is.md)
-- [as](../../../csharp/language-reference/keywords/as.md)
-- [typeof](../../../csharp/language-reference/keywords/typeof.md)
-- [Nasıl yapılır: Desen eşleştirme, kullanarak güvenli bir şekilde atama, ve işleçler](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
-- [İzlenecek yol: Dinamik nesneler oluşturma ve kullanma](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [Tür dinamiği kullanma](../../programming-guide/types/using-type-dynamic.md)
+- [object](object.md)
+- [is](../operators/type-testing-and-conversion-operators.md#is-operator)
+- [as](../operators/type-testing-and-conversion-operators.md#as-operator)
+- [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator)
+- [Nasıl yapılır: güvenli bir şekilde desen eşleştirme ve olarak kullanarak AS ve is işleçlerini](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [İzlenecek yol: nesneler oluşturma ve dinamik kullanma](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
