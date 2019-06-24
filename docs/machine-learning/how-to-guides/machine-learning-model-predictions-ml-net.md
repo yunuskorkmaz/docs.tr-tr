@@ -1,24 +1,24 @@
 ---
 title: Eğitilen bir modelin ile tahminlerde
 description: Eğitilen bir modeli kullanarak tahmin yapmayı öğrenin
-ms.date: 05/03/2019
+ms.date: 06/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: dac3b3bfa68776975a2e5e762f46db16e39d61fb
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65066177"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307391"
 ---
-# <a name="make-predictions-with-a-trained-model"></a><span data-ttu-id="a30d0-103">Eğitilen bir modelin ile tahminlerde</span><span class="sxs-lookup"><span data-stu-id="a30d0-103">Make predictions with a trained model</span></span>
+# <a name="make-predictions-with-a-trained-model"></a><span data-ttu-id="93808-103">Eğitilen bir modelin ile tahminlerde</span><span class="sxs-lookup"><span data-stu-id="93808-103">Make predictions with a trained model</span></span>
 
-<span data-ttu-id="a30d0-104">Eğitilen bir modelin tahminlerde bulunmak üzere kullanmayı öğrenin</span><span class="sxs-lookup"><span data-stu-id="a30d0-104">Learn how to use a trained model to make predictions</span></span>
+<span data-ttu-id="93808-104">Eğitilen bir modelin tahminlerde bulunmak üzere kullanmayı öğrenin</span><span class="sxs-lookup"><span data-stu-id="93808-104">Learn how to use a trained model to make predictions</span></span>
 
-## <a name="create-data-models"></a><span data-ttu-id="a30d0-105">Veri modelleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="a30d0-105">Create data models</span></span>
+## <a name="create-data-models"></a><span data-ttu-id="93808-105">Veri modelleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="93808-105">Create data models</span></span>
 
-### <a name="input-data"></a><span data-ttu-id="a30d0-106">Giriş verileri</span><span class="sxs-lookup"><span data-stu-id="a30d0-106">Input data</span></span>
+### <a name="input-data"></a><span data-ttu-id="93808-106">Giriş verileri</span><span class="sxs-lookup"><span data-stu-id="93808-106">Input data</span></span>
 
 ```csharp
 public class HousingData
@@ -36,11 +36,11 @@ public class HousingData
 }
 ```
 
-### <a name="output-data"></a><span data-ttu-id="a30d0-107">Çıktı verileri</span><span class="sxs-lookup"><span data-stu-id="a30d0-107">Output data</span></span>
+### <a name="output-data"></a><span data-ttu-id="93808-107">Çıktı verileri</span><span class="sxs-lookup"><span data-stu-id="93808-107">Output data</span></span>
 
-<span data-ttu-id="a30d0-108">Gibi `Features` ve `Label` giriş sütun adları, ML.NET modeli tarafından üretilen tahmin edilen değer sütunlar için varsayılan adları vardır.</span><span class="sxs-lookup"><span data-stu-id="a30d0-108">Like the `Features` and `Label` input column names, ML.NET has default names for the predicted value columns produced by a model.</span></span> <span data-ttu-id="a30d0-109">Göreve bağlı olarak, ad farklı olabilir.</span><span class="sxs-lookup"><span data-stu-id="a30d0-109">Depending on the task the name may differ.</span></span>
+<span data-ttu-id="93808-108">Gibi `Features` ve `Label` giriş sütun adları, ML.NET modeli tarafından üretilen tahmin edilen değer sütunlar için varsayılan adları vardır.</span><span class="sxs-lookup"><span data-stu-id="93808-108">Like the `Features` and `Label` input column names, ML.NET has default names for the predicted value columns produced by a model.</span></span> <span data-ttu-id="93808-109">Göreve bağlı olarak, ad farklı olabilir.</span><span class="sxs-lookup"><span data-stu-id="93808-109">Depending on the task the name may differ.</span></span>
 
-<span data-ttu-id="a30d0-110">Bu örnekte kullanılan algoritmayı doğrusal regresyon algoritması çıkış sütununun varsayılan adı olduğu `Score` tarafından tanımlanan [ `ColumnName` ](xref:Microsoft.ML.Data.ColumnNameAttribute) özniteliği `PredictedPrice` özelliği.</span><span class="sxs-lookup"><span data-stu-id="a30d0-110">Because the algorithm used in this sample is a linear regression algorithm, the default name of the output column is `Score` which is defined by the [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) attribute on the `PredictedPrice` property.</span></span>
+<span data-ttu-id="93808-110">Bu örnekte kullanılan algoritmayı doğrusal regresyon algoritması çıkış sütununun varsayılan adı olduğu `Score` tarafından tanımlanan [ `ColumnName` ](xref:Microsoft.ML.Data.ColumnNameAttribute) özniteliği `PredictedPrice` özelliği.</span><span class="sxs-lookup"><span data-stu-id="93808-110">Because the algorithm used in this sample is a linear regression algorithm, the default name of the output column is `Score` which is defined by the [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) attribute on the `PredictedPrice` property.</span></span>
 
 ```csharp
 class HousingPrediction : HousingData
@@ -50,11 +50,11 @@ class HousingPrediction : HousingData
 }
 ```
 
-<span data-ttu-id="a30d0-111">`HousingPrediction` Veri modeli devraldığı `HousingData` özgün görselleştirmek kolay hale getirmek için veri modeli tarafından oluşturulan çıktı yanı sıra giriş.</span><span class="sxs-lookup"><span data-stu-id="a30d0-111">The `HousingPrediction` data model inherits from `HousingData` to make it easy to visualize the original input data along with the output generated by the model.</span></span>  
+<span data-ttu-id="93808-111">`HousingPrediction` Veri modeli devraldığı `HousingData` özgün görselleştirmek kolay hale getirmek için veri modeli tarafından oluşturulan çıktı yanı sıra giriş.</span><span class="sxs-lookup"><span data-stu-id="93808-111">The `HousingPrediction` data model inherits from `HousingData` to make it easy to visualize the original input data along with the output generated by the model.</span></span>  
 
-## <a name="set-up-a-prediction-pipeline"></a><span data-ttu-id="a30d0-112">Bir öngörü işlem hattı ayarlayın</span><span class="sxs-lookup"><span data-stu-id="a30d0-112">Set up a prediction pipeline</span></span>
+## <a name="set-up-a-prediction-pipeline"></a><span data-ttu-id="93808-112">Bir öngörü işlem hattı ayarlayın</span><span class="sxs-lookup"><span data-stu-id="93808-112">Set up a prediction pipeline</span></span>
 
-<span data-ttu-id="a30d0-113">Olup yapmadan tek veya toplu tahmin, tahmin işlem hattı uygulamasına yüklü olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="a30d0-113">Whether making a single or batch prediction, the prediction pipeline needs to be loaded into the application.</span></span> <span data-ttu-id="a30d0-114">Bu işlem hattı, hem veri ön işleme dönüşümleri, hem de eğitim modeli içerir.</span><span class="sxs-lookup"><span data-stu-id="a30d0-114">This pipeline contains both the data pre-processing transformations as well as the trained model.</span></span> <span data-ttu-id="a30d0-115">Aşağıdaki kod parçacığında tahmin işlem hattı adlı bir dosyadan yükler `model.zip`.</span><span class="sxs-lookup"><span data-stu-id="a30d0-115">The code snippet below loads the prediction pipeline from a file named `model.zip`.</span></span>
+<span data-ttu-id="93808-113">Olup yapmadan tek veya toplu tahmin, tahmin işlem hattı uygulamasına yüklü olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="93808-113">Whether making a single or batch prediction, the prediction pipeline needs to be loaded into the application.</span></span> <span data-ttu-id="93808-114">Bu işlem hattı, hem veri ön işleme dönüşümleri, hem de eğitim modeli içerir.</span><span class="sxs-lookup"><span data-stu-id="93808-114">This pipeline contains both the data pre-processing transformations as well as the trained model.</span></span> <span data-ttu-id="93808-115">Aşağıdaki kod parçacığında tahmin işlem hattı adlı bir dosyadan yükler `model.zip`.</span><span class="sxs-lookup"><span data-stu-id="93808-115">The code snippet below loads the prediction pipeline from a file named `model.zip`.</span></span>
 
 ```csharp
 //Create MLContext 
@@ -65,16 +65,16 @@ DataViewSchema predictionPipelineSchema;
 ITransformer predictionPipeline = mlContext.Model.Load("model.zip", out predictionPipelineSchema);
 ```
 
-## <a name="single-prediction"></a><span data-ttu-id="a30d0-116">Tek tahmin</span><span class="sxs-lookup"><span data-stu-id="a30d0-116">Single prediction</span></span>
+## <a name="single-prediction"></a><span data-ttu-id="93808-116">Tek tahmin</span><span class="sxs-lookup"><span data-stu-id="93808-116">Single prediction</span></span>
 
-<span data-ttu-id="a30d0-117">Tek bir tahminde bulunmak için oluşturun bir [ `PredictionEngine` ](xref:Microsoft.ML.PredictionEngine%602) yüklenen tahmin işlem hattını kullanma.</span><span class="sxs-lookup"><span data-stu-id="a30d0-117">To make a single prediction, create a [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) using the loaded prediction pipeline.</span></span>
+<span data-ttu-id="93808-117">Tek bir tahminde bulunmak için oluşturun bir [ `PredictionEngine` ](xref:Microsoft.ML.PredictionEngine%602) yüklenen tahmin işlem hattını kullanma.</span><span class="sxs-lookup"><span data-stu-id="93808-117">To make a single prediction, create a [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) using the loaded prediction pipeline.</span></span>
 
 ```csharp
 // Create PredictionEngines
 PredictionEngine<HousingData, HousingPrediction> predictionEngine = mlContext.Model.CreatePredictionEngine<HousingData, HousingPrediction>(predictionPipeline);
 ```
 
-<span data-ttu-id="a30d0-118">Ardından, [ `Predict` ](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) yöntemi ve verilerinizi giriş parametresi olarak geçirin.</span><span class="sxs-lookup"><span data-stu-id="a30d0-118">Then, use the [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) method and pass in your input data as a parameter.</span></span> <span data-ttu-id="a30d0-119">Bu kullanırken olduğunu [ `Predict` ](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) yöntemi giriş olmasını gerekli olmadığı bir [ `IDataView` ](xref:Microsoft.ML.IDataView)).</span><span class="sxs-lookup"><span data-stu-id="a30d0-119">Notice that using the [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) method does not require the input to be an [`IDataView`](xref:Microsoft.ML.IDataView)).</span></span> <span data-ttu-id="a30d0-120">Giriş veri türü bir nesne geçirdiğiniz şekilde bunu rahatça giriş veri türü işleme internalizes olmasıdır.</span><span class="sxs-lookup"><span data-stu-id="a30d0-120">This is because it conveniently internalizes the input data type manipulation so you can pass in an object of the input data type.</span></span> <span data-ttu-id="a30d0-121">Ayrıca, bu yana `CurrentPrice` hedef veya yeni verileri kullanarak tahmin etmek çalıştığınız etiket şu anda hiçbir değerini olduğu varsayılır.</span><span class="sxs-lookup"><span data-stu-id="a30d0-121">Additionally, since `CurrentPrice` is the target or label you're trying to predict using new data, it's assumed there is no value for it at the moment.</span></span>
+<span data-ttu-id="93808-118">Ardından, [ `Predict` ](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) yöntemi ve verilerinizi giriş parametresi olarak geçirin.</span><span class="sxs-lookup"><span data-stu-id="93808-118">Then, use the [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) method and pass in your input data as a parameter.</span></span> <span data-ttu-id="93808-119">Bu kullanırken olduğunu [ `Predict` ](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) yöntemi giriş olmasını gerekli olmadığı bir [ `IDataView` ](xref:Microsoft.ML.IDataView)).</span><span class="sxs-lookup"><span data-stu-id="93808-119">Notice that using the [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) method does not require the input to be an [`IDataView`](xref:Microsoft.ML.IDataView)).</span></span> <span data-ttu-id="93808-120">Giriş veri türü bir nesne geçirdiğiniz şekilde bunu rahatça giriş veri türü işleme internalizes olmasıdır.</span><span class="sxs-lookup"><span data-stu-id="93808-120">This is because it conveniently internalizes the input data type manipulation so you can pass in an object of the input data type.</span></span> <span data-ttu-id="93808-121">Ayrıca, bu yana `CurrentPrice` hedef veya yeni verileri kullanarak tahmin etmek çalıştığınız etiket şu anda hiçbir değerini olduğu varsayılır.</span><span class="sxs-lookup"><span data-stu-id="93808-121">Additionally, since `CurrentPrice` is the target or label you're trying to predict using new data, it's assumed there is no value for it at the moment.</span></span>
 
 ```csharp
 // Input Data
@@ -88,11 +88,11 @@ HousingData inputData = new HousingData
 HousingPrediction prediction = predictionEngine.Predict(inputData);
 ```
 
-<span data-ttu-id="a30d0-122">Erişirseniz `Score` özelliği `prediction` nesne almanız gerekir bir değer benzer `150079`.</span><span class="sxs-lookup"><span data-stu-id="a30d0-122">If you access the `Score` property of the `prediction` object, you should get a value similar to `150079`.</span></span>
+<span data-ttu-id="93808-122">Erişirseniz `Score` özelliği `prediction` nesne almanız gerekir bir değer benzer `150079`.</span><span class="sxs-lookup"><span data-stu-id="93808-122">If you access the `Score` property of the `prediction` object, you should get a value similar to `150079`.</span></span>
 
-## <a name="batch-prediction"></a><span data-ttu-id="a30d0-123">Batch tahmin</span><span class="sxs-lookup"><span data-stu-id="a30d0-123">Batch prediction</span></span>
+## <a name="batch-prediction"></a><span data-ttu-id="93808-123">Batch tahmin</span><span class="sxs-lookup"><span data-stu-id="93808-123">Batch prediction</span></span>
 
-<span data-ttu-id="a30d0-124">Aşağıdaki veriler göz önünde bulundurulduğunda, içine yüklemek bir [ `IDataView` ](xref:Microsoft.ML.IDataView).</span><span class="sxs-lookup"><span data-stu-id="a30d0-124">Given the following data, load it into an [`IDataView`](xref:Microsoft.ML.IDataView).</span></span> <span data-ttu-id="a30d0-125">Çünkü `CurrentPrice` hedef veya yeni verileri kullanarak tahmin etmek çalıştığınız etiket şu anda hiçbir değerini olduğu varsayılır.</span><span class="sxs-lookup"><span data-stu-id="a30d0-125">Because `CurrentPrice` is the target or label you're trying to predict using new data, it's assumed there is no value for it at the moment.</span></span>
+<span data-ttu-id="93808-124">Aşağıdaki veriler göz önünde bulundurulduğunda, içine yüklemek bir [ `IDataView` ](xref:Microsoft.ML.IDataView).</span><span class="sxs-lookup"><span data-stu-id="93808-124">Given the following data, load it into an [`IDataView`](xref:Microsoft.ML.IDataView).</span></span> <span data-ttu-id="93808-125">Bu durumda, adını [ `IDataView` ](xref:Microsoft.ML.IDataView) olduğu `inputData`.</span><span class="sxs-lookup"><span data-stu-id="93808-125">In this case, the name of the [`IDataView`](xref:Microsoft.ML.IDataView) is `inputData`.</span></span> <span data-ttu-id="93808-126">Çünkü `CurrentPrice` hedef veya yeni verileri kullanarak tahmin etmek çalıştığınız etiket şu anda hiçbir değerini olduğu varsayılır.</span><span class="sxs-lookup"><span data-stu-id="93808-126">Because `CurrentPrice` is the target or label you're trying to predict using new data, it's assumed there is no value for it at the moment.</span></span>
 
 ```csharp
 // Actual data
@@ -116,24 +116,24 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-<span data-ttu-id="a30d0-126">Ardından, [ `Transform` ](xref:Microsoft.ML.ITransformer.Transform*) veri dönüşümleri uygulayın ve tahminler üretmek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="a30d0-126">Then, use the [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) method to apply the data transformations and generate predictions.</span></span>
+<span data-ttu-id="93808-127">Ardından, [ `Transform` ](xref:Microsoft.ML.ITransformer.Transform*) veri dönüşümleri uygulayın ve tahminler üretmek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="93808-127">Then, use the [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) method to apply the data transformations and generate predictions.</span></span>
 
 ```csharp
 // Predicted Data
 IDataView predictions = predictionPipeline.Transform(inputData);
 ```
 
-<span data-ttu-id="a30d0-127">Tahmin edilen değerleri kullanarak inceleyin. [ `GetColumn` ](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="a30d0-127">Inspect the predicted values by using the [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) method.</span></span>
+<span data-ttu-id="93808-128">Tahmin edilen değerleri kullanarak inceleyin. [ `GetColumn` ](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="93808-128">Inspect the predicted values by using the [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) method.</span></span>
 
 ```csharp
 // Get Predictions
 float[] scoreColumn = predictions.GetColumn<float>("Score").ToArray();
 ```
 
-<span data-ttu-id="a30d0-128">Tahmin edilen puan sütundaki değerleri aşağıdaki gibi görünmelidir:</span><span class="sxs-lookup"><span data-stu-id="a30d0-128">The predicted values in the score column should look like the following:</span></span>
+<span data-ttu-id="93808-129">Tahmin edilen puan sütundaki değerleri aşağıdaki gibi görünmelidir:</span><span class="sxs-lookup"><span data-stu-id="93808-129">The predicted values in the score column should look like the following:</span></span>
 
-| <span data-ttu-id="a30d0-129">Gözlem</span><span class="sxs-lookup"><span data-stu-id="a30d0-129">Observation</span></span> | <span data-ttu-id="a30d0-130">Tahmin</span><span class="sxs-lookup"><span data-stu-id="a30d0-130">Prediction</span></span> |
+| <span data-ttu-id="93808-130">Gözlem</span><span class="sxs-lookup"><span data-stu-id="93808-130">Observation</span></span> | <span data-ttu-id="93808-131">Tahmin</span><span class="sxs-lookup"><span data-stu-id="93808-131">Prediction</span></span> |
 |---|---|
-| <span data-ttu-id="a30d0-131">1.</span><span class="sxs-lookup"><span data-stu-id="a30d0-131">1</span></span> | <span data-ttu-id="a30d0-132">144638.2</span><span class="sxs-lookup"><span data-stu-id="a30d0-132">144638.2</span></span> |
-| <span data-ttu-id="a30d0-133">2</span><span class="sxs-lookup"><span data-stu-id="a30d0-133">2</span></span> | <span data-ttu-id="a30d0-134">150079.4</span><span class="sxs-lookup"><span data-stu-id="a30d0-134">150079.4</span></span> |
-| <span data-ttu-id="a30d0-135">3</span><span class="sxs-lookup"><span data-stu-id="a30d0-135">3</span></span> | <span data-ttu-id="a30d0-136">107789.8</span><span class="sxs-lookup"><span data-stu-id="a30d0-136">107789.8</span></span> |
+| <span data-ttu-id="93808-132">1\.</span><span class="sxs-lookup"><span data-stu-id="93808-132">1</span></span> | <span data-ttu-id="93808-133">144638.2</span><span class="sxs-lookup"><span data-stu-id="93808-133">144638.2</span></span> |
+| <span data-ttu-id="93808-134">2</span><span class="sxs-lookup"><span data-stu-id="93808-134">2</span></span> | <span data-ttu-id="93808-135">150079.4</span><span class="sxs-lookup"><span data-stu-id="93808-135">150079.4</span></span> |
+| <span data-ttu-id="93808-136">3</span><span class="sxs-lookup"><span data-stu-id="93808-136">3</span></span> | <span data-ttu-id="93808-137">107789.8</span><span class="sxs-lookup"><span data-stu-id="93808-137">107789.8</span></span> |
