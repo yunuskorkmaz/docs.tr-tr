@@ -89,7 +89,7 @@ Derleme satıcıları, uygulamaları yükseltilen derlemeye bir yayımcı ilkesi
   
 1. Komut isteminde aşağıdaki komutu yazın:  
   
-     **Gacutil /i***publisherPolicyAssemblyFile*  
+     **Gacutil /i** *publisherPolicyAssemblyFile*  
   
      Aşağıdaki komut ekler `policy.1.0.myAssembly.dll` için Genel Derleme Önbelleği.  
   
