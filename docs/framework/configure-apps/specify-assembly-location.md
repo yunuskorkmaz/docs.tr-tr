@@ -43,7 +43,7 @@ Derlemenin konumunu belirtmek için iki yolu vardır:
 </configuration>  
 ```  
   
- **Sürüm** özniteliği için tüm Tanımlayıcı adlı derlemeler gereklidir ancak olmayan tanımlayıcı adlı derlemeler için atlanmış olabilir.  **\<CodeBase >** öğesi gerektiriyor **href** özniteliği. Sürüm aralığı belirtemezsiniz  **\<codeBase >** öğesi.  
+ **Sürüm** özniteliği için tüm Tanımlayıcı adlı derlemeler gereklidir ancak olmayan tanımlayıcı adlı derlemeler için atlanmış olabilir. **\<CodeBase>** öğesi gerektiriyor **href** özniteliği. Sürüm aralığı belirtemezsiniz  **\<codeBase >** öğesi.  
   
 > [!NOTE]
 >  Tanımlayıcı adlı değil bir derleme için bir kod temel ipucu sağlayarak, ipucu uygulama temel ya da uygulama temel dizininin bir alt işaret etmelidir.  
