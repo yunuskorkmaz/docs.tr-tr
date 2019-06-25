@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: e29e71974abda3e6e57d22d9faef28e386ebeefd
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 868afc36f08571d16285d0df52f6d1cad8c9c7a6
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169898"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348211"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Nasıl yapılır: Panodan Veri Alma
 <xref:System.Windows.Forms.Clipboard> Sınıfı, Windows işletim sistemi Pano özelliğini ile etkileşim kurmak için kullanabileceğiniz yöntemler sağlar. Birçok uygulama Pano verileri için geçici bir deposu olarak kullanın. Örneğin, Word'ün işlemci panoya kes/yapıştır işlemleri sırasında kullanın. Pano, bir uygulamadan diğerine bilgi aktarmak için kullanışlıdır.  
@@ -22,7 +22,7 @@ ms.locfileid: "67169898"
   
  Pano belirli bir biçimde veri içerip içermediğini belirlemek için aşağıdakilerden birini kullanın: `Contains` *biçimi* yöntemleri veya <xref:System.Windows.Forms.Clipboard.GetData%2A> yöntemi. Panodan veri almak için aşağıdakilerden birini kullanın: `Get` *biçimi* yöntemleri veya <xref:System.Windows.Forms.Clipboard.GetData%2A> yöntemi. Bu yöntemler .NET Framework 2.0 sürümünde yenidir.  
   
- Pano sürümlerini kullanarak verilere erişmek için daha önceki [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)], kullanın <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> yöntemi ve döndürülen in yöntemlerini çağırabilirsiniz <xref:System.Windows.Forms.IDataObject>. Örneğin, belirli bir biçimde döndürülen nesneyi kullanılabilir olup olmadığını belirlemek için çağrı <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> yöntemi.  
+ .NET Framework 2. 0'dan önceki sürümleri kullanılarak panodan veri erişmek için <xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType> yöntemi ve döndürülen in yöntemlerini çağırabilirsiniz <xref:System.Windows.Forms.IDataObject>. Örneğin, belirli bir biçimde döndürülen nesneyi kullanılabilir olup olmadığını belirlemek için çağrı <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> yöntemi.  
   
 > [!NOTE]
 >  Tüm Windows tabanlı uygulamalar, Pano sistem paylaşın. Bu nedenle, başka bir uygulamaya geçtiğinde içeriği değişikliğe tabi olduğu.  
@@ -49,7 +49,7 @@ ms.locfileid: "67169898"
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Birden çok biçimde panodan veri almak için  
   
-1. Kullanım <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> yöntemi. Sürümlerinde panodan veri almak için bu yöntemi kullanın öncesi [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1. Kullanım <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> yöntemi. Bu yöntem .NET Framework 2. 0'dan önceki sürümlerde panodan veri almak için kullanmanız gerekir.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

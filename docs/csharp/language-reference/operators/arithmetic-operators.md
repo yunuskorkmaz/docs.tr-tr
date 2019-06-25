@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: af3f7a9379aa8ac12ef8c12abc99a0ded9188eb8
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 9293071744ff104c91d5fb9b62fffd1ec51a53c4
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025300"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347945"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Aritmetik işleçler (C# Başvurusu)
 
@@ -97,7 +97,7 @@ Birli `*` işleci [işaretçi yöneltme işleci](pointer-related-operators.md#po
 
 ## <a name="division-operator-"></a>Bölme işleci /
 
-Bölme işleci `/` ilk işlenenin ikinci işleneni olarak böler.
+Bölme işleci `/` sol işleneniyle sağ işleneni olarak böler.
 
 ### <a name="integer-division"></a>Tamsayı bölme
 
@@ -119,11 +119,11 @@ Tamsayı türleri sonucunu işlenenleri için `/` işleci bir tamsayı türüdü
 
 ## <a name="remainder-operator-"></a>Kalan işleci %
 
-Kalan işleci `%` ilk işlenenin ikinci işleneni tarafından bölme işleminden kalanı hesaplar.
+Kalan işleci `%` sol işleneniyle sağ işleneni tarafından bölme işleminden kalanı hesaplar.
 
 ### <a name="integer-remainder"></a>Tamsayı kalan
   
-Tamsayı türleri sonucunu işlenenleri için `a % b` değeri tarafından üretilen `a - (a / b) * b`. Sıfır olmayan kalanı oturum, ilk işlenen, aşağıdaki örnekte gösterildiği gibi aynıdır:
+Tamsayı türleri sonucunu işlenenleri için `a % b` değeri tarafından üretilen `a - (a / b) * b`. Sıfır olmayan kalan'in sol işlenenin aşağıdaki örnekte gösterildiği gibi aynıdır:
 
 [!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
 
@@ -157,7 +157,7 @@ Ayrıca `+` dize birleştirme ve temsilci birleşimi için işleç. Daha fazla b
 
 ## <a name="subtraction-operator--"></a>Çıkarma işleci-
 
-Çıkarma işleci `-` gelen ilk işlenenin ikinci işleneni çıkarır:
+Çıkarma işleci `-` sağ, sol işleneniyle işlenenden çıkarır:
 
 [!code-csharp-interactive[subtraction operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
 

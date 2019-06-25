@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 558600c9256f205598288f9e20d38cb94608c920
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592612"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348480"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Denetimleri Görsel Stilde İşleme
 .NET Framework, bunları destekleyen işletim sistemlerinde görsel stilleri kullanarak arabirimi (UI) öğeleri işleme denetimleri ve diğer Windows kullanıcı için destek sağlar. Bu konuda, işleme denetimler ve diğer kullanıcı Arabirimi öğeleri için .NET Framework desteği çeşitli düzeylerde işletim sisteminin geçerli görsel stil ile anlatılmaktadır.  
@@ -23,7 +23,7 @@ ms.locfileid: "65592612"
 ## <a name="rendering-classes-for-common-controls"></a>Ortak denetimleri için işleme sınıfları  
  Bir denetim oluşturma kullanıcı arabirimi denetimi çizim ifade eder. <xref:System.Windows.Forms?displayProperty=nameWithType> Ad alanı sağlar <xref:System.Windows.Forms.ControlPaint> bazı yaygın işlemeye sınıfı Windows Forms denetimleri. Ancak, bu sınıf, tutarlı bir kullanıcı Arabirimi deneyimi çizim özel denetimleri görsel stilde uygulamalarında etkinleştirildiğinde sürdürülmesi zor zorlaştırabilir Klasik Windows stilde denetimler çizer.  
   
- [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] Sınıfları içeren <xref:System.Windows.Forms?displayProperty=nameWithType> parça ve durumlarını ortak denetimleri görsel stilde işleme ad alanı. Bu sınıfların her birini içeren `static` denetimi veya denetim bölümlerini işletim sisteminin geçerli görsel stil ile belirli bir durumunda çizmek için yöntemleri.  
+ .NET Framework 2.0 sınıfları içeren <xref:System.Windows.Forms?displayProperty=nameWithType> parça ve durumlarını ortak denetimleri görsel stilde işleme ad alanı. Bu sınıfların her birini içeren `static` denetimi veya denetim bölümlerini işletim sisteminin geçerli görsel stil ile belirli bir durumunda çizmek için yöntemleri.  
   
  Bu sınıfların bazıları, görsel stilleri olmanıza bakılmaksızın ilgili denetim çizmek için tasarlanmıştır. Görsel stiller etkinleştirilirse, sınıf üyeleri görsel stilde ilgili denetim çizme; görsel stiller devre dışıysa, sınıf üyeleri Klasik Windows stili denetim çizer. Bu sınıfları şunlardır:  
   

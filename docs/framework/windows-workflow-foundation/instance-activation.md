@@ -2,12 +2,12 @@
 title: Örnek Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 088722ba19a1f38e8a341e34a8344963021f1113
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e0d5a91a0f0ccc02d13ef96c3470da1942cc520
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584913"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348251"
 ---
 # <a name="instance-activation"></a>Örnek Etkinleştirme
 SQL iş akışı örneği Store düzenli olarak çalıştırılabilir veya etkinleştirilebilir iş akışı örnekleri Kalıcılık veritabanında algılar ve uyanır bir iç görev çalıştırır. Bir çalıştırılabilir iş akışı örneği bulursa örneğin etkinleştirme özelliğine sahip olan iş akışı ana bilgisayarı bildirir. Örnek deposuna etkinleştirilebilir iş akışı örneği bulursa, sırayla iş akışı örneği çalıştıran bir iş akışı ana etkinleştiren genel bir ana bilgisayar bildirir. Bu konunun aşağıdaki bölümlerinde ayrıntılı örnek etkinleştirme işlemi açıklanmaktadır.  
@@ -35,7 +35,7 @@ SQL iş akışı örneği Store düzenli olarak çalıştırılabilir veya etkin
 ## <a name="generic-hosts"></a>Genel konakları  
  Meta veri özelliğinin değeri olan bir konak genel yöneticisidir **WorkflowServiceType** genel konakları için ayarlanmış **WorkflowServiceType.Any** herhangi bir iş akışı türü işleyebileceğini belirtmek için. Genel bir ana bilgisayar adında bir XName parametresinin **ActivationType**.  
   
- Şu anda SQL iş akışı örneği Store kümesine ActivationType parametresinin değeri genel konaklarla destekler **WAS**. SQL iş akışı örneği Store ActivationType WAS için ayarlanmazsa, oluşturur bir <xref:System.Runtime.DurableInstancing.InstancePersistenceException>. İş akışı yönetimi hizmeti ile birlikte gelen [!INCLUDE[dublin](../../../includes/dublin-md.md)] kümesine etkinleştirme türü olan genel bir ana bilgisayar **WAS**.  
+ Şu anda SQL iş akışı örneği Store kümesine ActivationType parametresinin değeri genel konaklarla destekler **WAS**. SQL iş akışı örneği Store ActivationType WAS için ayarlanmazsa, oluşturur bir <xref:System.Runtime.DurableInstancing.InstancePersistenceException>. İş akışı yönetimi, Windows Server AppFabric barındırma özellikleri ile birlikte gelen kümesine etkinleştirme türü olan genel bir ana bilgisayar hizmetidir **WAS**.  
   
  WAS etkinleştirme için genel bir konağa bir dizi yeni konakları etkinleştirilebilmesi için uç nokta adresini türetmek için etkinleştirme parametresi gerektirir. WAS etkinleştirme için etkinleştirme site, uygulamanın site göreli yolunu ve hizmetinin uygulama göreli yolunu adını parametrelerdir. SQL iş akışı örneği Store yürütülmesi sırasında bu etkinleştirme parametreleri depolayan <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>.  
   

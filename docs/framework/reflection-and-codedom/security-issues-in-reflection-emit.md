@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 434a88e305f833a5a95bb62835b5badd4a2c4949
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4579e00bdaf89b4cf5d0da24a343fb5070609863
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816140"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347312"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Yansıma Yaymadaki Güvenlik Sorunları
 .NET Framework, Microsoft Ara dilini (MSIL), her biri kendi güvenlik sorunları yaymak için üç yol sunar:  
@@ -151,7 +151,7 @@ ms.locfileid: "66816140"
  Son olarak, .NET Framework 2.0 SP1'i, anonim olarak barındırılan yöntemleri tanıtır.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>Türler ve üyeler hakkında bilgi edinme  
- İle başlayarak [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], ortak olmayan türler ve üyeler hakkında bilgi edinmek için hiçbir izinleri gereklidir. Yansıma yayma dinamik yöntemler için gereken bilgileri elde etmek için kullanılır. Örneğin, <xref:System.Reflection.MethodInfo> nesneleri, yöntem çağrılarını yaymak için kullanılır. .NET Framework'ün önceki sürümlerini gerektirir <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> bayrağı. Daha fazla bilgi için [yansımayla ilgili güvenlik konuları](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
+ .NET Framework 2.0 ile başlayarak, ortak olmayan türler ve üyeler hakkında bilgi edinmek için hiçbir izinleri gereklidir. Yansıma yayma dinamik yöntemler için gereken bilgileri elde etmek için kullanılır. Örneğin, <xref:System.Reflection.MethodInfo> nesneleri, yöntem çağrılarını yaymak için kullanılır. .NET Framework'ün önceki sürümlerini gerektirir <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> bayrağı. Daha fazla bilgi için [yansımayla ilgili güvenlik konuları](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

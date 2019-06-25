@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
-ms.openlocfilehash: 69f5489d82511c249c1bde3ab65429561a87af59
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 9a2913de6534612455c14858f6baffea8ef78976
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307272"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347486"
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>Genel alan ve SetField yöntemleri (LINQ to DataSet)
-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] için genişletme yöntemleri sağlar <xref:System.Data.DataRow> sütun değerleri erişmek için sınıf: <xref:System.Data.DataRowExtensions.Field%2A> yöntemi ve <xref:System.Data.DataRowExtensions.SetField%2A> yöntemi. Bu yöntemler, geliştiriciler, özellikle ilgili null değerler için sütun değerlerini daha kolay erişim sağlar. <xref:System.Data.DataSet> Kullanan <xref:System.DBNull.Value> ise null değerleri temsil etmek için [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sürümünde boş değer atanabilir tür desteği kullanan [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]. Önceden mevcut olan sütun erişimcisi kullanarak <xref:System.Data.DataRow> dönüş nesnenin uygun türe gerektirir. Belirli bir alanda varsa bir <xref:System.Data.DataRow> açıkça null değerini denetlemelidir döndüren null olabilir çünkü <xref:System.DBNull.Value> ve örtük olarak başka bir tür verir tür atama bir <xref:System.InvalidCastException>. Aşağıdaki örnekte, <xref:System.Data.DataRow.IsNull%2A> yöntemi değil denetlemek için kullanılan bir null değer için özel durum dizin oluşturucu döndürdüyse <xref:System.DBNull.Value> ve yayınlayacağınızı denenen bir <xref:System.String>.  
+[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] için genişletme yöntemleri sağlar <xref:System.Data.DataRow> sütun değerleri erişmek için sınıf: <xref:System.Data.DataRowExtensions.Field%2A> yöntemi ve <xref:System.Data.DataRowExtensions.SetField%2A> yöntemi. Bu yöntemler, geliştiriciler, özellikle ilgili null değerler için sütun değerlerini daha kolay erişim sağlar. <xref:System.Data.DataSet> Kullanan <xref:System.DBNull.Value?displayProperty=nameWithType> ise null değerleri temsil etmek için [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] kullanan <xref:System.Nullable> ve <xref:System.Nullable%601> türleri. Önceden mevcut olan sütun erişimcisi kullanarak <xref:System.Data.DataRow> dönüş nesnenin uygun türe gerektirir. Belirli bir alanda varsa bir <xref:System.Data.DataRow> açıkça null değerini denetlemelidir döndüren null olabilir çünkü <xref:System.DBNull.Value?displayProperty=nameWithType> ve örtük olarak başka bir tür verir tür atama bir <xref:System.InvalidCastException>. Aşağıdaki örnekte, <xref:System.Data.DataRow.IsNull%2A?displayProperty=nameWithType> yöntemi değil denetlemek için kullanılan bir null değer için özel durum dizin oluşturucu döndürdüyse <xref:System.DBNull.Value?displayProperty=nameWithType> ve yayınlayacağınızı denenen bir <xref:System.String>.  
   
  [!code-csharp[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#whereisnull)]
  [!code-vb[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#whereisnull)]  

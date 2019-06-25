@@ -8,12 +8,12 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: 3c26b08dd7ec70a1763fce89b34376350b985fb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5545e89f744c3874840a773556e0670abc0a46a9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615382"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348063"
 ---
 # <a name="geometry-overview"></a>Geometriye Genel Bakış
 Bu genel bakışta nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> şekiller açıklamak için sınıflar. Bu konuda ayrıca arasındaki farkları karşılaştırır <xref:System.Windows.Media.Geometry> nesneleri ve <xref:System.Windows.Shapes.Shape> öğeleri.  
@@ -105,7 +105,7 @@ Küçük resim denetimi için kullanılan Ellipsegeometry'ye
   
 <a name="wcpsdk_graphics_geometry_pathgeometry"></a>   
 ## <a name="path-geometries"></a>Yol geometrileri  
- <xref:System.Windows.Media.PathGeometry> Sınıfı ve hafif eşdeğeri <xref:System.Windows.Media.StreamGeometry> sınıfı, birden çok karmaşık şekiller açıklamak için yay, eğriler ve satırlardan oluşan sağlayın.  
+ <xref:System.Windows.Media.PathGeometry> Sınıfı ve basit eşdeğeri <xref:System.Windows.Media.StreamGeometry> sınıfı, birden çok karmaşık şekiller açıklamak için yay, eğriler ve satırlardan oluşan sağlayın.  
   
  Temelini bir <xref:System.Windows.Media.PathGeometry> koleksiyonudur <xref:System.Windows.Media.PathFigure> nesneleri, her şekil merkezinde açıkladığı için bu şekilde adlandırılmış <xref:System.Windows.Media.PathGeometry>. Her <xref:System.Windows.Media.PathFigure> kendisi bir veya daha fazla oluşur <xref:System.Windows.Media.PathSegment> nesneleri, her biri bir parçası şekilde açıklar.  
   

@@ -4,16 +4,16 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: 146e9c2360cea153d2f487769d5b983516861e8d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16934232e1e202f1b100680a5101332aa622f2cc
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663303"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348495"
 ---
 # <a name="tuples-visual-basic"></a>Diziler (Visual Basic)
 
-Visual Basic 2017'den itibaren Visual Basic dili yapan diziler için yerleşik destek sunan tanımlama grupları oluşturma ve tanımlama grubu daha kolay öğelere erişme. Bir demet belirli sayıda ve sıralamadaki değerleri olan bir basit veri yapısıdır. Tanımlama grubu başlattığınızda, sayı ve her değeri (veya öğenin) veri türünü tanımlayın. Örneğin, iki öğe 2 bölütlü (veya çift) vardır. İlk olabilir bir `Boolean` ikinci olmakla birlikte, değeri bir `String`. Tanımlama grubu birden çok değeri tek bir nesnede depolamak kolaylaştırmak için bunlar genellikle bir yöntemden birden çok değer döndürmek için basit bir yolu olarak kullanılır.
+Visual Basic 2017'den itibaren Visual Basic dili yapan diziler için yerleşik destek sunan tanımlama grupları oluşturma ve tanımlama grubu daha kolay öğelere erişme. Bir demet belirli sayıda ve sıralamadaki değerleri olan bir hafif bir veri yapısıdır. Tanımlama grubu başlattığınızda, sayı ve her değeri (veya öğenin) veri türünü tanımlayın. Örneğin, iki öğe 2 bölütlü (veya çift) vardır. İlk olabilir bir `Boolean` ikinci olmakla birlikte, değeri bir `String`. Tanımlama grubu birden çok değeri tek bir nesnede depolamak kolaylaştırmak için bunlar genellikle bir yöntemden birden çok değer döndürmek için basit bir yolu olarak kullanılır.
 
 > [!IMPORTANT]
 > Tanımlama grubu desteği gerektiren <xref:System.ValueTuple> türü. .NET Framework 4.7 yüklü değilse, NuGet paketini eklemeniz gerekir `System.ValueTuple`, kullanılabildiği NuGet galerisinde. Bu paket olmadan bir derleme hatası benzer şekilde, "'ValueTuple(Of,,,)' tanımlı veya içeri aktarılmamış önceden tanımlanmış türü." alabilirsiniz

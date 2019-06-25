@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 1869a5c274b3308e718ca550e8e43ff6a72d4b5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 25803bd772832cd22e855f530d10a3f3639c180c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611845"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348440"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Performansı iyileştirme: 2B Grafikleri ve Görüntüleme
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulamanızın gereksinimleri için çok sayıda 2B grafikleri ve iyileştirilebilir görüntü işlevselliği sağlar. Bu konu, bu alanlarda performansı en iyi duruma getirme hakkında bilgi sağlar.  
@@ -52,7 +52,7 @@ ms.locfileid: "64611845"
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>StreamGeometry nesneleri  
- <xref:System.Windows.Media.StreamGeometry> Nesnedir bir hafif alternatif <xref:System.Windows.Media.PathGeometry> geometrik şekiller oluşturma. Kullanım bir <xref:System.Windows.Media.StreamGeometry> karmaşık geometri açıklamak gerektiğinde. <xref:System.Windows.Media.StreamGeometry> birçok işlem için iyileştirilmiş <xref:System.Windows.Media.PathGeometry> nesneleri ve birçok kişinin kullanarak karşılaştırıldığında daha iyi sonuç verdiğini <xref:System.Windows.Media.PathGeometry> nesneleri.  
+ <xref:System.Windows.Media.StreamGeometry> Nesnedir, basit bir alternatif <xref:System.Windows.Media.PathGeometry> geometrik şekiller oluşturma. Kullanım bir <xref:System.Windows.Media.StreamGeometry> karmaşık geometri açıklamak gerektiğinde. <xref:System.Windows.Media.StreamGeometry> birçok işlem için iyileştirilmiş <xref:System.Windows.Media.PathGeometry> nesneleri ve birçok kişinin kullanarak karşılaştırıldığında daha iyi sonuç verdiğini <xref:System.Windows.Media.PathGeometry> nesneleri.  
   
  Aşağıdaki örnek, bir üçgen oluşturmak için öznitelik sözdizimi kullanır. <xref:System.Windows.Media.StreamGeometry> içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   

@@ -5,16 +5,16 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 6c24c1ec04bdd7ce7ee2061c2551652e26a28cf9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7c5946f5df8a94bf8b54c10f33234b40338a622
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646741"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348156"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Demetleri ve diğer türleri ayrıştırma
 
-Bir demet basit bir yöntem çağrısından birden çok değer almanıza olanak sağlar. Ancak kayıt almak sonra bireysel öğelerini işlemek vardır. Bir öğeye göre temelinde bunu aşağıdaki örnekte gösterildiği gibi yavaşlatan bir yöntemdir. `QueryCityData` Yöntemi 3-tanımlama grubu döndürür ve alt öğelerin her biri ayrı bir işlemde bir değişkene atanır.
+Bir kayıt düzeni, bir yöntem çağrısından birden çok değer almak için basit bir yol sağlar. Ancak kayıt almak sonra bireysel öğelerini işlemek vardır. Bir öğeye göre temelinde bunu aşağıdaki örnekte gösterildiği gibi yavaşlatan bir yöntemdir. `QueryCityData` Yöntemi 3-tanımlama grubu döndürür ve alt öğelerin her biri ayrı bir işlemde bir değişkene atanır.
 
 [!code-csharp[WithoutDeconstruction](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple1.cs)]
 

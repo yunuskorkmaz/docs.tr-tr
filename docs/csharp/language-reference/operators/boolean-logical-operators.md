@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 37fe329026c16043abb20f8a9f030d877469951d
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 809c88d519cb75f42c1ac00a18e19097c01fd084
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025233"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347941"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Boolean mantıksal işleçleri (C# Başvurusu)
 
@@ -45,7 +45,7 @@ Aşağıdaki işleçleri ile mantıksal işlemleri [bool](../keywords/bool.md) i
 
 - Birli [ `!` (mantıksal olumsuzlama)](#logical-negation-operator-) işleci.
 - İkili [ `&` (mantıksal ve)](#logical-and-operator-), [ `|` (mantıksal veya)](#logical-or-operator-), ve [ `^` (mantıksal XOR)](#logical-exclusive-or-operator-) işleçleri. Bu işleçler, her iki işlenen de her zaman değerlendirin.
-- İkili [ `&&` (koşullu mantıksal ve)](#conditional-logical-and-operator-) ve [ `||` (koşullu mantıksal veya)](#conditional-logical-or-operator-) işleçleri. Bu işleçler, yalnızca gerekli olduğunda ikinci işlenenin değerlendirin.
+- İkili [ `&&` (koşullu mantıksal ve)](#conditional-logical-and-operator-) ve [ `||` (koşullu mantıksal veya)](#conditional-logical-or-operator-) işleçleri. Yalnızca gerekli olduğunda bu işleçleri atamada sağ işlenen değerlendirin.
 
 İşlenen için [integral](../keywords/integral-types-table.md) türleri `&`, `|`, ve `^` işleçleri mantıksal bit düzeyinde işlemler gerçekleştirin. Daha fazla bilgi için [işleçler bit düzeyinde and -shift](bitwise-and-shift-operators.md).
 
@@ -59,13 +59,13 @@ Aşağıdaki işleçleri ile mantıksal işlemleri [bool](../keywords/bool.md) i
 
 `&` İşlenenleri, mantıksal AND işleci hesaplar. Sonucu `x & y` olduğu `true` hem `x` ve `y` vermesi `true`. Aksi halde sonuç, `false`.
 
-`&` İşleci, birinci işlenenin değerlendirilir olsa bile her iki işlenen de değerlendirir `false`, sonuç olmalıdır böylece `false` ikinci işlenenin değerinden bağımsız olarak.
+`&` İşleci sol işlenenin değerlendirilir olsa bile her iki işlenen de değerlendirir `false`, sonuç olmalıdır böylece `false` sağ işlenenin değerinden bağımsız olarak.
 
-Aşağıdaki örnekte, ikinci işleneni `&` işleci, birinci işlenenin değerini bağımsız olarak gerçekleştirilen bir yöntem çağrısının:
+Aşağıdaki örnekte, sağ işleneni `&` işleci sol işlenenin değerini bağımsız olarak gerçekleştirilen bir yöntem çağrısının:
 
 [!code-csharp-interactive[logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#And)]
 
-[Koşullu mantıksal AND işlecinin](#conditional-logical-and-operator-) `&&` ayrıca mantıksal ve işlenenleri, hesaplar, ancak değerlendirme sonucu ilk işlenen ikinci işlenende değerlendirmez `false`.
+[Koşullu mantıksal AND işlecinin](#conditional-logical-and-operator-) `&&` ayrıca mantıksal ve işlenenleri, hesaplar, ancak atamada sağ işlenen, sol işlenen değerlendirilirse değerlendirmez `false`.
 
 İntegral türündeki işlenenler için `&` işleci hesaplar [mantıksal bit düzeyinde AND](bitwise-and-shift-operators.md#logical-and-operator-) işlenenleri biri. Birli `&` işleci [address-of işleci](pointer-related-operators.md#address-of-operator-).
 
@@ -81,21 +81,21 @@ Aşağıdaki örnekte, ikinci işleneni `&` işleci, birinci işlenenin değerin
 
 `|` İşlenenleri, mantıksal OR işleci hesaplar. Sonucu `x | y` olduğu `true` ya da `x` veya `y` değerlendiren `true`. Aksi halde sonuç, `false`.
 
-`|` İşleci, birinci işlenenin değerlendirilir olsa bile her iki işlenen de değerlendirir `true`, sonuç olmalıdır böylece `true` ikinci işlenenin değerinden bağımsız olarak.
+`|` İşleci sol işlenenin değerlendirilir olsa bile her iki işlenen de değerlendirir `true`, sonuç olmalıdır böylece `true` sağ işlenenin değerinden bağımsız olarak.
 
-Aşağıdaki örnekte, ikinci işleneni `|` işleci, birinci işlenenin değerini bağımsız olarak gerçekleştirilen bir yöntem çağrısının:
+Aşağıdaki örnekte, sağ işleneni `|` işleci sol işlenenin değerini bağımsız olarak gerçekleştirilen bir yöntem çağrısının:
 
 [!code-csharp-interactive[logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Or)]
 
-[Koşullu mantıksal OR işlecinin](#conditional-logical-or-operator-) `||` ayrıca mantıksal OR işlenenleri, hesaplar, ancak değerlendirme sonucu ilk işlenen ikinci işlenende değerlendirmez `true`.
+[Koşullu mantıksal OR işlecinin](#conditional-logical-or-operator-) `||` ayrıca mantıksal OR işlenenleri, hesaplar, ancak atamada sağ işlenen, sol işlenen değerlendirilirse değerlendirmez `true`.
 
 İntegral türündeki işlenenler için `|` işleci hesaplar [mantıksal bit düzeyinde OR](bitwise-and-shift-operators.md#logical-or-operator-) işlenenleri biri.
 
 ## <a name="conditional-logical-and-operator-ampamp"></a>Koşullu mantıksal AND işleci &amp;&amp;
 
-Koşullu mantıksal AND işlecinin `&&`, mantıksal ve işlenenleri, "kısa devre" mantıksal AND işleci, hesaplar olarak da bilinir. Sonucu `x && y` olduğu `true` hem `x` ve `y` vermesi `true`. Aksi halde sonuç, `false`. Birinci işlenenin değerlendirilirse `false`, ikinci işlenenin değerlendirilmez.
+Koşullu mantıksal AND işlecinin `&&`, mantıksal ve işlenenleri, "kısa devre" mantıksal AND işleci, hesaplar olarak da bilinir. Sonucu `x && y` olduğu `true` hem `x` ve `y` vermesi `true`. Aksi halde sonuç, `false`. Varsa `x` değerlendiren `false`, `y` değerlendirilmez.
 
-Aşağıdaki örnekte, ikinci işleneni `&&` işleci, birinci işlenenin değerlendirilirse yapılamaz bir yöntem çağrısının `false`:
+Aşağıdaki örnekte, sağ işleneni `&&` işleci sol işlenenin değerlendirilirse yapılamaz bir yöntem çağrısının, `false`:
 
 [!code-csharp-interactive[conditional logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalAnd)]
 
@@ -103,9 +103,9 @@ Aşağıdaki örnekte, ikinci işleneni `&&` işleci, birinci işlenenin değerl
 
 ## <a name="conditional-logical-or-operator-"></a>Mantıksal OR işlecinin koşullu ||
 
-Koşullu mantıksal OR işlecinin `||`, "kısa devre" mantıksal OR işleci, işlenenleri, mantıksal OR hesaplar olarak da bilinir. Sonucu `x || y` olduğu `true` ya da `x` veya `y` değerlendiren `true`. Aksi halde sonuç, `false`. Birinci işlenenin değerlendirilirse `true`, ikinci işlenenin değerlendirilmez.
+Koşullu mantıksal OR işlecinin `||`, "kısa devre" mantıksal OR işleci, işlenenleri, mantıksal OR hesaplar olarak da bilinir. Sonucu `x || y` olduğu `true` ya da `x` veya `y` değerlendiren `true`. Aksi halde sonuç, `false`. Varsa `x` değerlendiren `true`, `y` değerlendirilmez.
 
-Aşağıdaki örnekte, ikinci işleneni `||` işleci, birinci işlenenin değerlendirilirse yapılamaz bir yöntem çağrısının `true`:
+Aşağıdaki örnekte, sağ işleneni `||` işleci sol işlenenin değerlendirilirse yapılamaz bir yöntem çağrısının, `true`:
 
 [!code-csharp-interactive[conditional logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalOr)]
 

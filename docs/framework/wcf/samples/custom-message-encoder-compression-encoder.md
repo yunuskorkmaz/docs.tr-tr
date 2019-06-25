@@ -2,12 +2,12 @@
 title: 'Özel İleti Kodlayıcısı: Sıkıştırma Kodlayıcısı'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 6ada1cdeee02eb747f9f85abc9c99602d5f26b72
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 32ca96987a86c04c227f8bb0d680f647898dfccf
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878456"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348436"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Özel İleti Kodlayıcısı: Sıkıştırma Kodlayıcısı
 Bu örnek, Windows Communication Foundation (WCF) platformunu kullanarak özel bir kodlayıcı uygulamak nasıl gösterir.  
@@ -222,7 +222,7 @@ binding.Namespace = "http://tempuri.org/bindings";
   
  Bu kullanıcı senaryolarının çoğunluğu için yeterli olabilir, ancak dosya yapılandırmasını destekleyen bir hizmet Web barındırılan olması durumunda kritik öneme sahiptir. Web barındırma senaryosunda desteklemek için bir dosyada yapılandırılabilir olması bir özel bağlama öğeye izin vermek için özel yapılandırma işleyicisi geliştirmeniz gerekir.  
   
- Yapılandırma sistemi tarafından sağlanan üzerine bağlama öğesi için bir yapılandırma işleyicisi oluşturabileceğinizi [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]. Bağlama öğesi yapılandırması işleyicisi öğesinden türetilmelidir <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> sınıfı. `BindingElementType` Özelliği, bağlama öğesi bu bölüm için oluşturulacak tür yapılandırma sistemi bildirmek için kullanılır. Tüm yönlerini `BindingElement` , olabilir set ortaya özellikleri olarak <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> türetilmiş sınıf. <xref:System.Configuration.ConfigurationPropertyAttribute> Yapılandırma öğesi özniteliklerini eşleme özelliklerini ve özniteliklerini eksikse, varsayılan değerleri ayarlama yardımcı olmak için kullanılır. Yapılandırma değerleri yüklenir ve özelliklerine uygulanan sonra <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> yöntemi çağrıldığında, hangi özellikler bir bağlama öğesi somut bir örneğine dönüştürür. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A> Özelliklerini dönüştürmek için kullanılan yöntemi <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> yaratım bağlama öğesi üzerindeki ayarlamak için değerler türetilmiş sınıf.  
+ Yapılandırma sistemi üzerine bağlama öğesi için bir yapılandırma işleyicisi oluşturabilirsiniz. Bağlama öğesi yapılandırması işleyicisi öğesinden türetilmelidir <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> sınıfı. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> Bağlama öğesi bu bölüm için oluşturulacak tür yapılandırma sistemi bildirir. Tüm yönlerini `BindingElement` , olabilir set ortaya özellikleri olarak <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> türetilmiş sınıf. <xref:System.Configuration.ConfigurationPropertyAttribute> Öznitelikleri eksikse, varsayılan değerleri ayarlama ve yapılandırma öğesi özniteliklerini özelliklere eşleme de yardımcı olur. Yapılandırma değerleri yüklenir ve özelliklerine uygulanan sonra <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> yöntemi çağrıldığında, hangi özellikler bir bağlama öğesi somut bir örneğine dönüştürür. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> Özelliklerini dönüştürmek için kullanılan yöntemi <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> türetilmiş sınıf üzerinde yeni oluşturulan bağlama öğesi ayarlamak için değerler.  
   
  Aşağıdaki örnek kod uygulamasını gösterir `GZipMessageEncodingElement`.  
   

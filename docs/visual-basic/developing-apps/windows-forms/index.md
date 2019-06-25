@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 6ab898c93086e477bf4384b4d6c725fbdc8fe761
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d1f43a5b7a539c89a753d168fbf0e05ca4118f58
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879142"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347991"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms Uygulaması Temelleri (Visual Basic)
 Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel olarak çalışan Windows Forms uygulamaları oluşturmak için olanağıdır. Visual Studio, Windows formları kullanarak uygulama ve kullanıcı arabirimi oluşturmak için kullanabilirsiniz. Bir Windows Forms uygulaması sınıflardan geliştirilmiştir <xref:System.Windows.Forms> ad alanı.  
@@ -44,7 +44,7 @@ Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel o
   
  Bu özellikleri kullanmaya hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın.  
   
-|Bitiş|Bkz. |  
+|Bitiş|Bkz.|  
 |--------|---------|  
 |Visual Studio ile yeni bir Windows Forms uygulaması oluşturma|[Öğretici 1: Resim Görüntüleyici oluşturma](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
 |Form üzerinde denetimleri kullanın|[Nasıl yapılır: Windows Forms'a denetimler ekleme](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
@@ -54,7 +54,7 @@ Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel o
 ## <a name="displaying-and-manipulating-data"></a>Verileri görüntüleme ve düzenleme  
  Birçok uygulama, verileri bir veritabanından, XML dosyası, XML Web hizmeti veya başka bir veri kaynağı görüntülemeniz gerekir. Windows Forms adlı esnek bir denetim sağlar <xref:System.Windows.Forms.DataGridView> kendi hücrenin her veri parçası kapladığı bir geleneksel satır ve sütun biçiminde tablo gibi veri işleme için denetimi. Kullanarak <xref:System.Windows.Forms.DataGridView> bireysel hücrelerin görünüşünü özelleştirme, rastgele satırları ve sütunları yerinde kilitleyebilir ve karmaşık denetimlerin yanı sıra başka özellikler hücreleri içine görüntüleme.  
   
- Bir ağ üzerinden veri kaynaklarına bağlanma, Windows Forms akıllı istemciler ile basit bir görevdir. <xref:System.Windows.Forms.BindingSource> Bileşeni, yeni Visual Studio 2005'te Windows Forms ile ve [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], bir veri kaynağı bağlantısını temsil eder ve önceki ve sonraki kayıtlara gezinme, kayıtları düzenleme ve kaydetme denetimlere veri bağlama için yöntemleri sunar. özgün kaynağına değişiklikler. <xref:System.Windows.Forms.BindingNavigator> Denetim sağlayan basit bir arabirim üzerinden <xref:System.Windows.Forms.BindingSource> kayıtlar arasında gezinmek kullanıcılar için bileşen.  
+ Bir ağ üzerinden veri kaynaklarına bağlanma, Windows Forms akıllı istemciler ile basit bir görevdir. <xref:System.Windows.Forms.BindingSource> Bileşen, Visual Studio 2005 ve .NET Framework 2.0, Windows Forms ile yeni bir veri kaynağı bağlantısını temsil eder ve kayıtları düzenleme önceki ve sonraki kayıtlara gezinme denetimlere veri bağlama için yöntemlerini gösteren ve özgün kaynağına değişiklikler kaydediliyor. <xref:System.Windows.Forms.BindingNavigator> Denetim sağlayan basit bir arabirim üzerinden <xref:System.Windows.Forms.BindingSource> kayıtlar arasında gezinmek kullanıcılar için bileşen.  
   
 ### <a name="data-bound-controls"></a>Verilere bağlı denetimler  
  Veritabanları, Web servisleri ve nesneler gibi veri kaynakları projenizde görüntüler veri kaynakları penceresini kullanarak kolayca verilere bağlı denetimler oluşturabilirsiniz. Öğeleri bu pencereden projenizdeki formlara sürükleyerek veriye bağlı denetimler oluşturabilirsiniz. Ayrıca veri mevcut denetimleri için veri nesnelerini veri kaynakları penceresinden mevcut denetimlerin üzerine sürükleyerek bağlama.  
@@ -64,7 +64,7 @@ Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel o
   
  Bu özellikleri kullanmaya hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın.  
   
-|Bitiş|Bkz. |  
+|Bitiş|Bkz.|  
 |--------|---------|  
 |Kullanım <xref:System.Windows.Forms.BindingSource> bileşeni|[Nasıl yapılır: BindingSource bileşeniyle Tasarımcı kullanarak Windows Forms denetimleri bağlama](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
 |ADO.NET veri kaynaklarıyla çalışma|[Nasıl yapılır: Windows ile ADO.NET verilerini sıralama ve filtreleme Forms BindingSource bileşeni](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
@@ -79,7 +79,7 @@ Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel o
   
  Tam bir giriş için [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)], bkz: [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment). Bu özellikleri kullanmaya hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın:  
   
-|Bitiş|Bkz. |  
+|Bitiş|Bkz.|  
 |--------|---------|  
 |İle uygulama dağıtma [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |Güncelleştirme bir [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] dağıtım|[Nasıl yapılır: ClickOnce Uygulaması için Güncelleştirmeleri Yönetme](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
@@ -90,7 +90,7 @@ Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel o
   
  Bu özellikleri kullanmaya hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın:  
   
-|Bitiş|Bkz. |  
+|Bitiş|Bkz.|  
 |--------|---------|  
 |Form içeriklerini yazdırma|[Nasıl yapılır: Windows Forms'ta grafik yazdırma](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Nasıl yapılır: Windows Forms'ta çok sayfalı metin dosyası yazdırma](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |Windows Forms güvenliği hakkında daha fazla bilgi edinin|[Windows Forms'ta Güvenliğe Genel Bakış](../../../framework/winforms/security-in-windows-forms-overview.md)|  

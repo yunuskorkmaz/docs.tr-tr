@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 4a669b4eefeeb91c0835dc41a1c8736aacf0e14f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586654"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348463"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms'ta Güvenliğe Genel Bakış
 
@@ -30,7 +30,7 @@ Kod erişimi güvenliği, kodun diğer yönleri ve kod kaynaklandığı bağlı 
 Kullanıcı bir Windows Forms yürütülebilir dosyayı doğrudan bir Web sunucusu veya dosya paylaşımı dışına çalıştırırsanız, derecede güven, uygulamaya verilen kod bulunduğu ve kullanmaya nasıl bağlıdır. Bir uygulama çalıştırdığında, otomatik olarak değerlendirilir ve ortak dil çalışma zamanını şuradan adlandırılmış bir izin kümesini alır. Varsayılan olarak, yerel bilgisayardan kod tam güven izni verilir ayarlayın, bir yerel ağ koddan yerel Intranet izin kümesi verilir ve Internet'ten kod Internet izni verilir.
 
 > [!NOTE]
-> 1.0 Service Pack 1 ve Service Pack 2, Internet bölgesi kod .NET Framework sürümünde Grup hiçbir şey yapmayın aldığı izin kümesi. Tüm diğer .NET Framework sürümlerinde Internet bölgesi kod grubunda ayarlanmış Internet izinleri alır.
+> 1\.0 Service Pack 1 ve Service Pack 2, Internet bölgesi kod .NET Framework sürümünde Grup hiçbir şey yapmayın aldığı izin kümesi. Tüm diğer .NET Framework sürümlerinde Internet bölgesi kod grubunda ayarlanmış Internet izinleri alır.
 >
 > Her, bu izin kümeleri varsayılan izinler listelenir [varsayılan güvenlik ilkesini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100)) konu. Uygulamanın aldığı izinlerine bağlı olarak düzgün çalışıyor ya da bir güvenlik özel durumu oluşturur.
 >
@@ -52,7 +52,7 @@ Kısmi güvende çalışan bir uygulama geliştirdiğinizde, uygulamanızın ça
 
 İsteğe bağlı izinler istediğinde, uygulamanızı kendisine verilmemiş izinleri gerektiren bir eylem gerçekleştirdiğinde oluşturulacak güvenlik özel durumlarını işlemelidir. Uygun olan işleme <xref:System.Security.SecurityException> uygulamanızın çalışmaya devam edebilir sağlayacaktır. Uygulamanızın özel durum, kullanıcı için bir özelliği devre haline olup olmadığını belirlemek için kullanabilirsiniz. Örneğin, bir uygulamanın devre dışı bırakabilirsiniz **Kaydet** gerekli dosya iznin verilmediği, menü seçeneği.
 
-Bazı durumlarda, onaylanan tüm uygun izinleri varsa bilmek zordur. Yüzeysel olarak zararsız görünen bir yöntem çağrısının, örneğin, yürütme sırasında belirli bir noktada dosya sistemi erişebilir. Uygulamanızı gerekli tüm izinlere sahip dağıtılmaz, masaüstünüzde hata ayıklamak, ancak dağıtıldığında başarısız olduğunda bunu ince test. Her iki [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK'sını ve Visual Studio 2005 içeren bir uygulama için gerekli olan izinleri hesaplamak için Araçlar: MT.exe komut satırı aracı ve Visual Studio'nun hesaplama izinleri özelliği sırasıyla.
+Bazı durumlarda, onaylanan tüm uygun izinleri varsa bilmek zordur. Yüzeysel olarak zararsız görünen bir yöntem çağrısının, örneğin, yürütme sırasında belirli bir noktada dosya sistemi erişebilir. Uygulamanızı gerekli tüm izinlere sahip dağıtılmaz, masaüstünüzde hata ayıklamak, ancak dağıtıldığında başarısız olduğunda bunu ince test. Bir uygulama için gerekli olan izinleri hesaplamak için Araçlar .NET Framework 2.0 SDK'sını ve Visual Studio 2005 içerir: MT.exe komut satırı aracı ve Visual Studio'nun hesaplama izinleri özelliği sırasıyla.
 
 Aşağıdaki konular, ek Windows Forms güvenlik özellikleri açıklanmaktadır.
 
@@ -77,7 +77,7 @@ Aşağıdaki tabloda bu teknolojiler açıklanmaktadır.
 
 Seçtiğiniz teknolojileri dağıtım ortamınıza bağlıdır. Daha fazla bilgi için [ClickOnce dağıtım stratejisini seçme](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Varsayılan olarak, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] ya da Visual Studio kullanarak dağıtılmış uygulamalar veya [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK Araçları (Mage.exe ve MageUI.exe) tam güveni olan bir istemci bilgisayarda çalışması için yapılandırılır. Uygulamanızı kısmi güveni kullanmaya veya bazı ek izinler kullanarak dağıtıyorsanız bu varsayılanı değiştirmek gerekecektir. Visual Studio ile bunu yapabilirsiniz veya [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] dağıtımınız yapılandırdığınızda MageUI.exe SDK aracıdır. İzlenecek yol MageUI.exe kullanma hakkında daha fazla bilgi için bkz: Komut satırından ClickOnce uygulamasını dağıtma.  Ayrıca bkz: [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) veya [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+Varsayılan olarak, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Visual Studio veya .NET Framework SDK Araçları (Mage.exe ve MageUI.exe) kullanarak dağıtılmış uygulamalar, tam güven olan bir istemci bilgisayarda çalıştırmak için yapılandırılır. Uygulamanızı kısmi güveni kullanmaya veya bazı ek izinler kullanarak dağıtıyorsanız bu varsayılanı değiştirmek gerekecektir. Dağıtımınız yapılandırdığınızda, Visual Studio veya .NET Framework SDK aracı MageUI.exe ile bunu yapabilirsiniz. İzlenecek yol MageUI.exe kullanma hakkında daha fazla bilgi için bkz: Komut satırından ClickOnce uygulamasını dağıtma.  Ayrıca bkz: [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) veya [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Güvenlik yönleri hakkında daha fazla bilgi için [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] ve izin yükseltme bakın, [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications). Güvenilir uygulama dağıtımı hakkında daha fazla bilgi için bkz: [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).
 

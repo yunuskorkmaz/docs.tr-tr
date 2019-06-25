@@ -6,12 +6,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: f4391e73b17c3700dc04240e1289b523c4bdc596
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 4e386597594df3092fdb8b1f5329da6539766262
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025038"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347801"
 ---
 # <a name="true-and-false-operators-c-reference"></a>TRUE ve false işleçleri (C# Başvurusu)
 
@@ -28,7 +28,7 @@ Aşağıdaki örnek her ikisi de tanımlayan türü sunar `true` ve `false` işl
 
 [!code-csharp[true and false operators example](~/samples/csharp/language-reference/operators/TrueFalseOperators.cs)]
 
-Short-circuiting davranışla `&&` işleci. Zaman `GetFuelLaunchStatus` yöntemi döndürür `LaunchStatus.Red`, ikinci işleneni `&&` işleci değerlendirilmez. Çünkü `LaunchStatus.Red` kesinlikle false'tur. Ardından mantıksal AND sonucunu ikinci işlenenin değerine bağımlı değildir. Örnek çıktısı aşağıdaki gibidir:
+Short-circuiting davranışla `&&` işleci. Zaman `GetFuelLaunchStatus` yöntemi döndürür `LaunchStatus.Red`, sağ işleneni `&&` işleci değerlendirilmez. Çünkü `LaunchStatus.Red` kesinlikle false'tur. Ardından mantıksal AND sonucunu sağ işleneninin değerini temel bağımlı değildir. Örnek çıktısı aşağıdaki gibidir:
 
 ```console
 Getting fuel launch status...

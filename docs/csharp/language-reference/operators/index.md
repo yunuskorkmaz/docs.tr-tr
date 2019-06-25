@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 99cf5b42700779a3eb48eb6452365056f5fa89ba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: fecfe8473a33be1a777fc5dde80c292f940e0d41
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306576"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347855"
 ---
 # <a name="c-operators-c-reference"></a>C#işleçler (C# Başvurusu)
 
@@ -171,13 +171,13 @@ Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde d
 
 Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahiptir.
 
-[x & & y](boolean-logical-operators.md#conditional-logical-and-operator-) – mantıksal and İlk işlenen false olarak değerlendirilirse, ardından C# ikinci işlenenin değerlendirmez.
+[x & & y](boolean-logical-operators.md#conditional-logical-and-operator-) – mantıksal and Varsa `x` değerlendiren `false`, ardından `y` değerlendirilmez.
 
 ## <a name="conditional-or-operator"></a>Koşullu OR işleci
 
 Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahiptir.
 
-[x &#124; &#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – mantıksal OR. İlk işlenen true olarak değerlendirilirse, ardından C# ikinci işlenenin değerlendirmez.
+[x &#124; &#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – mantıksal OR. Varsa `x` değerlendiren `true`, ardından `y` değerlendirilmez.
 
 ## <a name="null-coalescing-operator"></a>Null birleşim işleci
 

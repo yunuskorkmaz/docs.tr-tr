@@ -2,12 +2,12 @@
 title: C# 7.2 yenilikleri
 description: C# 7.2 yenilikleri genel bakış.
 ms.date: 08/16/2017
-ms.openlocfilehash: b8b2be68aac3cba92e0dbd74dfe4ee3cbbef0e88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706097"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347421"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 yenilikleri
 
@@ -30,6 +30,13 @@ Bu sürümdeki yeni diz özellikleri şunlardır:
   - `private protected` Erişim değiştiricisi, aynı derlemedeki türetilmiş sınıflar için erişim sağlar.
 * [Koşullu `ref` ifadeleri](#conditional-ref-expressions)
   - Koşullu ifadenin sonucu (`?:`) artık bir başvuru olabilir.
+
+Bu makalenin geri kalanında her özelliğine genel bakış sağlar. Her bir özellik için ardındaki mantık öğreneceksiniz. Söz dizimi öğreneceksiniz. Bu özellikleri kullanarak ortamınıza keşfedebilirsiniz `dotnet try` genel aracı:
+
+1. Yükleme [dotnet deneyin](https://github.com/dotnet/try/blob/master/README.md#setup) genel aracı.
+1. Kopya [dotnet/try-samples](https://github.com/dotnet/try-samples) depo.
+1. Geçerli dizin kümesine *csharp7* alt *deneyin-samples* depo.
+1. `dotnet try`'i çalıştırın.
 
 ## <a name="safe-efficient-code-enhancements"></a>Güvenli verimli kod geliştirmeleri
 

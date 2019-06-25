@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 2fdbeb2b77e88f144bc541d01ee2e904f8a84678
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9d898756b6b17ae69d1af7dd747c20a26d88417
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013887"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347995"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Dosya Sistemi ve .NET Framework Dosyası G/Ç'de Kullanılan Sınıflar (Visual Basic)
 .NET Framework dosyası g/ç, dosya g/ç sınıfları, akışları oluşturmak için kullanılan sınıfları ve okuma ve akışlara yazmak için kullanılan sınıfları kategorilere için yaygın olarak kullanılan sınıfları aşağıdaki tablolarda listelenmiştir.  
   
- Girmek için [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] belgelere ve Bul daha kapsamlı bir liste bakın [sınıf kitaplığına genel bakış](../../../../standard/class-library-overview.md).  
+Daha kapsamlı bir listesi için bkz: [sınıf kitaplığına genel bakış](../../../../standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Dosyalar, sürücüler ve dizinler için temel bir g/ç sınıfları  
  Aşağıdaki tabloda, listeler ve dosya g/ç için kullanılan temel sınıflar açıklanmaktadır.  

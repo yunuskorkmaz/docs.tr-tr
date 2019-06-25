@@ -3,12 +3,12 @@ title: C# 7.0 - C# Kılavuzu yenilikler nelerdir?
 description: Yeni özelliklere genel bakış sürümünü 7.0 almak C# dili.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: c3fdee2bdb974640b56bfab3af4be57133ad2f7a
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307160"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347452"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 yenilikleri
 
@@ -34,7 +34,12 @@ C# 7.0 C# dili için yeni özellikler ekler:
 * [Sayısal sabit değer sözdizimi geliştirmeleri](#numeric-literal-syntax-improvements)
   - Yeni belirteç sayısal sabitlere okunabilirliği geliştirir.
 
-Bu makalenin geri kalanında her özelliğine genel bakış sağlar. Her bir özellik için ardındaki mantık öğreneceksiniz. Söz dizimi öğreneceksiniz. Bu özelliklerin keşfedebilirsiniz bizim [etkileşimli incelenmesi](../tutorials/exploration/csharp-7.yml) bu özellikleri.
+Bu makalenin geri kalanında her özelliğine genel bakış sağlar. Her bir özellik için ardındaki mantık öğreneceksiniz. Söz dizimi öğreneceksiniz. Bu özellikleri kullanarak ortamınıza keşfedebilirsiniz `dotnet try` genel aracı:
+
+1. Yükleme [dotnet deneyin](https://github.com/dotnet/try/blob/master/README.md#setup) genel aracı.
+1. Kopya [dotnet/try-samples](https://github.com/dotnet/try-samples) depo.
+1. Geçerli dizin kümesine *csharp7* alt *deneyin-samples* depo.
+1. `dotnet try`'i çalıştırın.
 
 ## <a name="out-variables"></a>`out` Değişkenleri
 

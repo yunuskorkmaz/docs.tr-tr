@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: afd4b77529f64852e77926b7fecc0e15033e7735
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82cecb42ebe9353073cca9fd2de7d8dc9f368b10
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052709"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348506"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Erişilebilirlik .NET Framework'teki yenilikler
 
@@ -247,7 +247,7 @@ Bu özelliği etkinleştirmek için bir uygulama .NET Framework 4.8 hedef veya k
 Denetimin klavye odağı aldığında etkinleştirildikten sonra bir araç ipucu içeren tüm denetimleri görüntüleyin. Araç ipucu, saati veya klavye odağı değiştiğinde üzerinden kapatılabilir. Kullanıcılar ayrıca araç ipucunu el ile yeni klavye kısayolu, Ctrl + Shift + F10 kullanarak yok sayabilirsiniz. Araç İpucu kapatıldı sonra tekrar aynı klavye kısayolunu kullanarak görüntülenebilir.
 
 > [!NOTE]
-> [Şerit araç ipuçları] (xref:System.Windows.Controls.Ribbon.RibbonToolTips > üzerinde <xref:System.Windows.Controls.Ribbon.Ribbon> denetimleri klavye odaklanmak Göster olmaz; bunlar yalnızca klavye kısayolunu gösterir.
+> [Şerit araç ipuçları](xref:System.Windows.Controls.Ribbon.RibbonToolTip) üzerinde <xref:System.Windows.Controls.Ribbon.Ribbon> denetimleri klavye odaklanmak Göster olmaz; bunlar yalnızca klavye kısayolunu gösterir.
 
 **SizeOfSet ve PositionInSet UIAutomation özellikleri için destek eklendi**
 
@@ -361,7 +361,7 @@ Uygulamanızı .NET Framework 4.7.2 veya önceki bir sürümü hedefliyorsa, aya
 
 **DataGridView geliştirmeleri**
 
-4.7.2, .NET Framework ile başlayarak <xref:System.Windows.Forms.DataGridView> denetimi aşağıdaki erişilebilirlik geliştirmeleri kullanıma sunulan:
+4\.7.2, .NET Framework ile başlayarak <xref:System.Windows.Forms.DataGridView> denetimi aşağıdaki erişilebilirlik geliştirmeleri kullanıma sunulan:
 
 - Klavyeyi kullanarak satır sıralanabilir. Bir kullanıcı, geçerli bir sütuna göre sıralamak için F3 tuşuna kullanabilirsiniz.
 

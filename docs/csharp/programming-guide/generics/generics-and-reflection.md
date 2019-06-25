@@ -6,17 +6,17 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 6a014309829d7dbd477a7ae4a658b84a3f35d91f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84583f96ab8493ff05a4e80dcc843eff1cc7a5ef
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710127"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347580"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Genel Türler ve Yansıma (C# Programlama Kılavuzu)
 Ortak dil çalışma zamanı (CLR) çalışma zamanında genel tür bilgilere erişimi olduğundan, genel olmayan türleri olduğu gibi genel türler hakkında bilgi edinmek için yansıma kullanabilirsiniz. Daha fazla bilgi için [çalışma zamanı'nda genel türler](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
   
- İçinde [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] birkaç yeni üyeler için eklenen <xref:System.Type> genel türler için çalışma zamanı bilgilerini etkinleştirmek için sınıf. Bu sınıflarda bu yöntemlerini ve özelliklerini kullanma hakkında daha fazla bilgi için belgelere bakın. <xref:System.Reflection.Emit> Ad alanı, genel türler destekleyen yeni üyeleri de içerir. Bkz: [nasıl yapılır: Yansıma ile genel tür tanımlama yayma](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
+ .NET Framework 2.0 sürümünde, birkaç yeni üyeler için eklenen <xref:System.Type> genel türler için çalışma zamanı bilgilerini etkinleştirmek için sınıf. Bu sınıflarda bu yöntemlerini ve özelliklerini kullanma hakkında daha fazla bilgi için belgelere bakın. <xref:System.Reflection.Emit> Ad alanı, genel türler destekleyen yeni üyeleri de içerir. Bkz: [nasıl yapılır: Yansıma ile genel tür tanımlama yayma](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
   
  Genel yansımada kullanılan terimlere ilişkin sabit koşulların listesi için bkz. <xref:System.Type.IsGenericType%2A> özelliği açıklamalar.  
   

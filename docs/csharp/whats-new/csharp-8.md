@@ -2,12 +2,12 @@
 title: İçindeki yenilikler C# 8.0 - C# Kılavuzu
 description: Uygulamasında kullanılabilen yeni özellikleri genel bakış C# 8.0. Bu makalede, preview 5 ile güncel durumda.
 ms.date: 02/12/2019
-ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 9d66d76d6d565d24e27fd021ec2c2c17db74789a
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67151975"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347320"
 ---
 # <a name="whats-new-in-c-80"></a>İçindeki yenilikler C# 8.0
 
@@ -30,7 +30,12 @@ ms.locfileid: "67151975"
 > [!NOTE]
 > Bu makale için en son güncelleştirildiği C# 8.0 Önizleme 5.
 
-Bu makalenin geri kalanında bu özelliklere kısaca açıklanmaktadır. Ayrıntılı makaleleri kullanılabiliyorsa, bu öğreticileri ve genel bakışlar bağlantılar verilmiştir.
+Bu makalenin geri kalanında bu özelliklere kısaca açıklanmaktadır. Ayrıntılı makaleleri kullanılabiliyorsa, bu öğreticileri ve genel bakışlar bağlantılar verilmiştir. Bu özellikleri kullanarak ortamınıza keşfedebilirsiniz `dotnet try` genel aracı:
+
+1. Yükleme [dotnet deneyin](https://github.com/dotnet/try/blob/master/README.md#setup) genel aracı.
+1. Kopya [dotnet/try-samples](https://github.com/dotnet/try-samples) depo.
+1. Geçerli dizin kümesine *csharp8* alt *deneyin-samples* depo.
+1. `dotnet try`'i çalıştırın.
 
 ## <a name="readonly-members"></a>Salt okunur üyeler
 
@@ -93,7 +98,7 @@ C#Daha fazla yerde daha fazla desen ifade kodunuzda kullanabilmeniz için bu sö
 
 Yeni yerde yeni desenler yanı sıra C# 8.0 ekler **özyinelemeli desenleri**. Bir ifade deseni herhangi bir ifade sonucudur. Yalnızca başka bir desen ifadesi çıkışına uygulanan bir desen ifadesi özyinelemeli modelidir.
 
-### <a name="switch-expressions"></a>Anahtar ifadeler
+### <a name="switch-expressions"></a>anahtar ifadeler
 
 Genellikle, bir [ `switch` ](../language-reference/keywords/switch.md) deyimi, her bir değer oluşturuyor, `case` engeller. **Anahtar ifadeler** , daha kısa ifade sözdizimini kullanacak şekilde etkinleştirin. Vardır daha az tekrarlı `case` ve `break` anahtar sözcükleri ve daha az küme ayraçları.  Örneğin, rainbow renklerini listeleyen aşağıdaki enum göz önünde bulundurun:
 

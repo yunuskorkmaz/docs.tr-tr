@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 76bd9d9bce8e41605b96e979c2a39ea15e1d15ad
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 9163bfa98d85a3268e154321d1aa6e55783a50f9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169935"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347636"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Nasıl yapılır: Visual kullanarak Office birlikte çalışma nesnelerine erişim C# özellikleri (C# Programlama Kılavuzu)
 Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahiptir. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, yeni özellikler olarak adlandırılan yeni türü `dynamic`ve değer parametreleri değilmiş gibi COM yöntemleri parametrelere başvuru bağımsız değişkenleri geçirmek olanağı.  
@@ -24,7 +24,6 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
  Bu izlenecek yolu tamamlamak için Microsoft Office Excel 2007 ve Microsoft Office Word 2007 veya sonraki sürümlerinde, bilgisayarınızda yüklü olması gerekir.  
   
- Daha eski bir işletim sistemi kullanıyorsanız [!INCLUDE[windowsver](~/includes/windowsver-md.md)], emin [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] yüklenir.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -114,13 +113,13 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
      Yapıştırma yöntemi `CreateIconInWordDoc`, daha sonra bu adımda, sağlanan içine `Program` sınıfı. `CreateIconInWordDoc` adlandırılmış ve isteğe bağlı bağımsız değişkenler için yöntem çağrılarının karmaşıklığını azaltmak için kullandığı <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> ve <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Eklenen diğer iki yeni özellikleri bu çağrılar dahil edilip derecelendirilir C# sahip bir COM yöntemlere yapılan çağrılar basitleştiren 4 başvuru parametreleri. İlk olarak, değer parametreleri değilmiş gibi bağımsız değişken başvuru parametreleri gönderebilirsiniz. Diğer bir deyişle, her başvuru parametresi için bir değişken oluşturmadan değerleri doğrudan gönderebilirsiniz. Derleyici, bağımsız değişken değerlerini tutmak için geçici değişken oluşturur ve çağrısından döndüğünüzde değişkenleri atar. İkinci olarak, atlayabilirsiniz `ref` anahtar sözcüğü bağımsız değişken listesinde.  
   
-     `Add` Yöntemi her biri, isteğe bağlı, dört başvuru parametresi vardır. İçinde C# 4 veya sonraki sürümleri, çıkarabilirsiniz tüm parametreler için bağımsız değişkenler, varsayılan değerleri kullanmak istiyorsanız. İçinde [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] ve önceki sürümleri, her parametre için bir bağımsız değişkeni sağlanmalı ve parametreleri başvuru parametreleri olduğundan, bağımsız değişken bir değişken olmalıdır.  
+     `Add` Yöntemi her biri, isteğe bağlı, dört başvuru parametresi vardır. İçinde C# 4.0 ve üzeri sürümleri çıkarabilirsiniz tüm parametreler için bağımsız değişkenler, varsayılan değerleri kullanmak istiyorsanız. İçinde C# 3.0 ve daha önceki sürümleri, her parametre için bir bağımsız değişkeni sağlanmalı ve parametreleri başvuru parametreleri olduğundan, bağımsız değişken bir değişken olmalıdır.  
   
-     `PasteSpecial` Yöntemi Pano içeriğini ekler. Yöntemi, tümü isteğe bağlı olan yedi başvuru parametresi vardır. Aşağıdaki kod iki tanesi bağımsız değişkenleri belirtir: `Link`, Pano içeriğini kaynağını bir bağlantı oluşturmak için ve `DisplayAsIcon`, bağlantı, simge olarak görüntüler. İçinde C# 4, adlandırılmış bağımsız değişkenler için bu iki kullanın ve diğerlerini atlayın. Bu başvuru parametreleri olsa da, kullanın gerekmez `ref` anahtar sözcüğü veya değişkenlerinin bağımsız değişken olarak gönderin. Değerleri doğrudan gönderebilirsiniz. İçinde [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] ve önceki sürümlerinde, bir değişken bağımsız değişken her başvuru parametresi için gönderme gerekir.  
+     `PasteSpecial` Yöntemi Pano içeriğini ekler. Yöntemi, tümü isteğe bağlı olan yedi başvuru parametresi vardır. Aşağıdaki kod iki tanesi bağımsız değişkenleri belirtir: `Link`, Pano içeriğini kaynağını bir bağlantı oluşturmak için ve `DisplayAsIcon`, bağlantı, simge olarak görüntüler. İçinde C# 4.0 ve üzeri sürümler için bu iki adlandırılmış bağımsız değişkenler kullanın ve diğerlerini atlayın. Bu başvuru parametreleri olsa da, kullanın gerekmez `ref` anahtar sözcüğü veya değişkenlerinin bağımsız değişken olarak gönderin. Değerleri doğrudan gönderebilirsiniz. İçinde C# 3.0 ve daha önceki sürümleri, her başvuru parametresi için bir değişken bağımsız değişkeni belirtmeniz gerekir.  
   
      [!code-csharp[csProgGuideOfficeHowTo#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#9)]  
   
-     İçinde [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] veya önceki sürümleri, aşağıdaki şekilde dilinin daha karmaşık kod gereklidir.  
+     İçinde C# dili, aşağıdaki 3.0 ve eski sürümlerine daha karmaşık kod gereklidir.  
   
      [!code-csharp[csProgGuideOfficeHowTo#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#10)]  
   
@@ -164,7 +163,7 @@ Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahipt
   
 2. Sonuçları görmek için CTRL + F5 tuşlarına basın. Diğer biçimlere listelenen <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat> sabit listesi.  
   
-3. 1\. adım gerekli bağımsız değişkenler gösteren aşağıdaki kod ile deyiminde karşılaştırma [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] veya önceki sürümleri.  
+3. 1\. adım gerekli bağımsız değişkenler gösteren aşağıdaki kod ile deyiminde karşılaştırma C# 3.0 ve daha önceki sürümleri.  
   
      [!code-csharp[csProgGuideOfficeHowTo#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#17)]  
   

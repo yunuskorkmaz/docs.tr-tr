@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 Performansı
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 51cd5b248789c85ab06073f1bb41a83e5f97c139
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592540"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348530"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 Performansı
 
@@ -31,7 +31,7 @@ ms.locfileid: "65592540"
 ### <a name="wf-runtime"></a>WF çalışma zamanı
  Setinin merkezinde [!INCLUDE[wf1](../../../includes/wf1-md.md)] yürütme etkinliklerinin bir iş akışında yönlendiren bir zaman uyumsuz bir zamanlayıcı çalışma zamanıdır. Bu yüksek performanslı, etkinlikler için öngörülebilir yürütme ortamı sağlar. Ortamda yürütme, devamlılık, tamamlama, iptal, özel durumlar ve öngörülebilir bir iş parçacığı modeli için iyi tanımlanmış bir sözleşme var.
 
- WF3 kolaylığına WF4 çalışma zamanı daha verimli bir zamanlayıcı var. Bu, toplu iş öğelerini yürütülürken en çok verimli olan WCF için kullanılan g/ç iş parçacığı havuzu yararlanır. İç iş öğesi Zamanlayıcı sıranın en sık karşılaşılan kullanım desenleri için optimize edilmiştir. WF4 çalışma zamanı yürütme durumları en az bir eşitleme ve olay ağır olay kaydı ve karmaşık eşitleme için durum geçişlerini gerçekleştirmek için çağırma WF3 bağlıdır ancak mantıksal, işleme çok hafif bir yolla da yönetir.
+ WF3 kolaylığına WF4 çalışma zamanı daha verimli bir zamanlayıcı var. Bu, toplu iş öğelerini yürütülürken en çok verimli olan WCF için kullanılan g/ç iş parçacığı havuzu yararlanır. İç iş öğesi Zamanlayıcı sıranın en sık karşılaşılan kullanım desenleri için optimize edilmiştir. WF4 çalışma zamanı için yürütme durumları en az bir eşitleme ve olay ağır olay kaydı ve karmaşık eşitleme için durum geçişlerini gerçekleştirmek için çağırma WF3 bağlıdır ancak mantıksal, işleme ile basit bir şekilde da yönetir.
 
 ### <a name="data-storage-and-flow"></a>Veri depolama ve akış
  WF3 içinde tür tarafından uygulanan bağımlılık özellikleri aracılığıyla bir etkinlikle ilişkili verileri modellenmiştir <xref:System.Windows.DependencyProperty>. Bağımlılık özelliği desenini Windows Presentation Foundation (WPF) kullanıma sunulmuştur. Genel olarak, bu düzen kolay veri bağlama ve diğer kullanıcı Arabirimi özellikleri desteklemek için çok esnektir. Ancak, deseni, iş akışı tanımında statik alanlar olarak tanımlanması için özellikleri gerektirir. Her [!INCLUDE[wf1](../../../includes/wf1-md.md)] çalışma zamanı özellik değerlerini alır veya ayarlar, yoğun ağırlıklı arama mantığı içerir.
@@ -43,7 +43,7 @@ ms.locfileid: "65592540"
 ### <a name="control-flow"></a>Denetim Akışı
  Herhangi bir programlama dilinde olduğu gibi [!INCLUDE[wf1](../../../includes/wf1-md.md)] sıralama, döngü, dallanma ve desenler için denetim akışı etkinlikleri kümesi sunarak iş akışı tanımları için Denetim akışları için destek sağlar. İçinde aynı etkinlik, yeni bir yeniden yürütülür gerektiğinde WF3 <xref:System.Workflow.ComponentModel.ActivityExecutionContext> oluşturulur ve etkinlik dayalı bir ağır serileştirme ve seri durumundan çıkarma mantık aracılığıyla kopyalanan <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Genellikle performans yinelemeli denetim akışı için bir etkinlik dizisini çalıştırma daha yavaştır.
 
- WF4 bu oldukça farklı işler. Etkinlik şablonunu alıp, yeni bir ActivityInstance nesnesi oluşturur ve Zamanlayıcı kuyruğa ekler. Tüm bu işlem yalnızca açık nesne oluşturma içerir ve çok hafif.
+ WF4 bu oldukça farklı işler. Etkinlik şablonunu alıp, yeni bir ActivityInstance nesnesi oluşturur ve Zamanlayıcı kuyruğa ekler. Tüm bu işlem yalnızca açık nesne oluşturma içerir ve basit.
 
 ### <a name="asynchronous-programming"></a>Zaman Uyumsuz Programlama
  Uygulamalar genellikle daha iyi performans ve ölçeklenebilirlik g/ç gibi uzun süre çalışan engelleme işlemleri veya dağıtılmış bilgi işlem işlemleri için zaman uyumsuz programlama ile sahiptir. Temel etkinlik türleri aracılığıyla zaman uyumsuz destek WF4 sağlar <xref:System.Activities.AsyncCodeActivity>, <xref:System.Activities.AsyncCodeActivity%601>. Çalışma zamanı zaman uyumsuz etkinlikler yerel olarak anlıyor ve zaman uyumsuz iş bekleyen olmakla birlikte bu nedenle otomatik olarak örnek no-persist bölgesinde koyabilirsiniz. Özel etkinlikler iş akışı Zamanlayıcı iş parçacığı bulunduran ve paralel olarak çalıştırmak için herhangi bir etkinlik engelleme olmadan zaman uyumsuz çalışmayı gerçekleştirmek için bu türlerinden türeyebilir.
@@ -432,7 +432,7 @@ public class Workflow1 : Activity
 
  Sistem durumu izleme kabaca bir %3 aktarım hızını etkiler.  Temel profilin maliyet yaklaşık % 8'dir.
 
-## <a name="interop"></a>Birlikte çalışma
+## <a name="interop"></a>Interop
  WF4 olan neredeyse tamamını yeniden yazmak [!INCLUDE[wf1](../../../includes/wf1-md.md)] ve bu nedenle WF3 iş akışları ve etkinlikler doğrudan WF4 ile uyumlu değildir.  Windows Workflow Foundation erken benimsenen birçok müşteri, şirket içi veya üçüncü taraf iş akışı tanımları ve özel etkinlikler için WF3 olacaktır.  WF4 geçişi kolaylaştırmak için bir yol, bir iş akışındaki WF4 WF3 etkinlikten yürütebilir birlikte çalışma etkinliği kullanmaktır.  Önerilir <xref:System.Activities.Statements.Interop> etkinliği yalnızca kullanılabilir gerektiğinde. İçin WF4 geçirme hakkında daha fazla bilgi için kullanıma [WF4 geçiş kılavuzuna](https://go.microsoft.com/fwlink/?LinkID=153313).
 
 ### <a name="environment-setup"></a>Ortam Kurulumu

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 8e93b1d66a375f1f0af104e2a5dd6dfcbb39428d
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 7c9863134cb2a12072954bb283c7828abece3adb
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024919"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347906"
 ---
 # <a name="--and---operators-c-reference"></a>- ve-= işleçleri (C# Başvurusu)
 
@@ -30,17 +30,17 @@ Aritmetik hakkında bilgi için `-` işleci bkz [birli artı ve eksi işleçleri
 
 Aynı işlenenleri için [temsilci](../keywords/delegate.md) türü `-` işleci aşağıdaki gibi hesaplanır bir temsilci örneği döndürür:
 
-- Her iki işlenen de null olmayan ve uygun bir bitişik alt liste çağırma listenin birinci işlenenin ikinci işlenenin çağırma listesi ise, işlemin sonucunu, ikinci işlenenin ait girişlerden kaldırarak alınan yeni çağırma listesidir birinci işlenenin çağırma listesi. İkinci işlenenin 's listesi birinci işlenenin 's listesinde birden çok bitişik alt listelerin eşleşirse, yalnızca en sağdaki eşleşen alt liste kaldırılır. Kaldırma işlemi boş bir liste sonuçlanırsa sonucudur `null`.
+- Her iki işlenen de null olmayan ve çağırma listesi sağ işlenenin çağırma listenin sol işlenenin uygun bitişik alt liste ise, işlemin sonucunu, sağ işlenen 's kaldırarak alınan yeni çağırma listesidir Sol işlenenin çağırma listeden girdileri. Sol işlenen 's listesinde birden çok bitişik alt listelerin atamada sağ işlenen 's listesiyle eşleşen yalnızca en sağdaki eşleşen alt liste kaldırılır. Kaldırma işlemi boş bir liste sonuçlanırsa sonucudur `null`.
 
   [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
 
-- Uygun bir bitişik alt liste çağırma listenin birinci işlenenin ikinci işlenenin çağırma listesi değilse, işlemin sonucu ilk işlenen ' dir. Örneğin, çok noktaya yayın temsilci bir parçası olmayan bir temsilci kaldırma hiçbir şey yapmaz ve değişmeden çok noktaya yayın Temsilcide sonuçlanır.
+- Sağ işlenen çağırma listesi çağırma listenin sol işlenenin uygun bitişik alt liste değilse, işlemin sonucunu sol işlenen ' dir. Örneğin, çok noktaya yayın temsilci bir parçası olmayan bir temsilci kaldırma hiçbir şey yapmaz ve değişmeden çok noktaya yayın Temsilcide sonuçlanır.
 
   [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
   Yukarıdaki örnekte, temsilci sırasında temizleme temsilci örneklerini karşılaştırılır de gösterir. Örneğin, özdeş bir değerlendirmesinden gelen üretilen Temsilciler [lambda ifadeleri](../../programming-guide/statements-expressions-operators/lambda-expressions.md) eşit değildir. Temsilci eşitlik hakkında daha fazla bilgi için bkz: [temsilci eşitlik işleçleri](~/_csharplang/spec/expressions.md#delegate-equality-operators) bölümünü [ C# dil belirtimi](../language-specification/index.md).
 
-- Birinci işlenenin ise `null`, işlem sonucu `null`. İkinci işlenen `null`, işlemi birinci işlenenin sonucudur.
+- Sol işlenen `null`, işlem sonucu `null`. Sağ işlenen `null`, sol işlenen işleminin sonucudur.
 
   [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 

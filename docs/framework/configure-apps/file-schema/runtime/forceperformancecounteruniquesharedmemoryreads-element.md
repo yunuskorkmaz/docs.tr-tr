@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26fed0a10b9a25f25a580c7ac9a468cbedeb3671
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 00af9cf60d0bd2bac60950617b1315579d1a5a4d
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489476"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347334"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> Element
 PerfCounter.dll CategoryOptions kayıt defteri ayarı bir .NET Framework sürüm 1.1 uygulamasında kategoriye özgü paylaşılan bellek ya da genel bellek performans sayacı verilerini yüklemek karar vermek için kullanıp kullanmayacağını belirtir.  
@@ -55,7 +55,7 @@ enabled="true|false"/>
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework 4 önce .NET Framework sürümlerinde, işlemde yüklü çalışma zamanı sürümü yüklendi PerfCounter.dll corresponded. Bir bilgisayar hem de .NET Framework sürüm 1.1 sahip olduğu ve [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)] yüklü .NET Framework 1.1 uygulama PerfCounter.dll .NET Framework 1.1 sürümü yüklenir. .NET Framework 4 ile başlayarak, PerfCounter.dll en yeni yüklü sürümü yüklendi. Başka bir deyişle, bilgisayarda .NET Framework 4 yüklü değilse .NET Framework 1.1 uygulama PerfCounter.dll .NET Framework 4 sürümünü yükler.  
+ .NET Framework 4 önce .NET Framework sürümlerinde, işlemde yüklü çalışma zamanı sürümü yüklendi PerfCounter.dll corresponded. Hem .NET Framework sürüm 1.1 hem de .NET Framework 2.0 yüklü bir bilgisayara sahipse, .NET Framework 1.1 uygulama PerfCounter.dll .NET Framework 1.1 sürümü yüklenir. .NET Framework 4 ile başlayarak, PerfCounter.dll en yeni yüklü sürümü yüklendi. Başka bir deyişle, bilgisayarda .NET Framework 4 yüklü değilse .NET Framework 1.1 uygulama PerfCounter.dll .NET Framework 4 sürümünü yükler.  
   
  Performans sayaçları tüketildiğinde .NET Framework 4 ile başlayarak, paylaşılan bellek kategorisi özel veya genel paylaşılan bellek gözükmelidir olup olmadığını belirlemek her bir sağlayıcı CategoryOptions kayıt defteri girişini PerfCounter.dll denetler. Kategori özgü paylaşılan bellek farkında olmadığından System.Numerics.vectors.dll o kayıt defteri girdisini .NET Framework 1.1 PerfCounter.dll okumaz; her zaman, paylaşılan genel bellekten okur.  
   

@@ -2,12 +2,12 @@
 title: İçindeki yenilikler C# 7.1
 description: İçinde yeni özelliklere genel bakış C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a95111b6f217a2ca5c520c2d4d70efa0e23742f9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881541"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347610"
 ---
 # <a name="whats-new-in-c-71"></a>İçindeki yenilikler C# 7.1
 
@@ -29,6 +29,13 @@ Bu sürümdeki yeni diz özellikleri şunlardır:
 Son olarak, derleyici iki seçeneğe sahiptir `-refout` ve `-refonly` denetleyen [başvuru bütünleştirilmiş kod oluşturmayı](#reference-assembly-generation).
 
 Bir nokta sürümde en son özellikleri kullanmak için yapmanız [derleyici dil sürüm yapılandırma](../language-reference/configure-language-version.md) ve sürüm seçin.
+
+Bu makalenin geri kalanında her özelliğine genel bakış sağlar. Her bir özellik için ardındaki mantık öğreneceksiniz. Söz dizimi öğreneceksiniz. Bu özellikleri kullanarak ortamınıza keşfedebilirsiniz `dotnet try` genel aracı:
+
+1. Yükleme [dotnet deneyin](https://github.com/dotnet/try/blob/master/README.md#setup) genel aracı.
+1. Kopya [dotnet/try-samples](https://github.com/dotnet/try-samples) depo.
+1. Geçerli dizin kümesine *csharp7* alt *deneyin-samples* depo.
+1. `dotnet try`'i çalıştırın.
 
 ## <a name="async-main"></a>Zaman uyumsuz ana
 

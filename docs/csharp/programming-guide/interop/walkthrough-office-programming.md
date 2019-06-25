@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 80f0b97d38b17740916ea5407b78f298aa42604b
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 47a388caecf3164f3b76db91f7c70f39f7b0f659
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169847"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347656"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office Programlama (C# ve Visual Basic)
 Visual Studio, C# ve Visual Basic, Microsoft Office programlama artıran özellikleri sunar. Yararlı C# özellikleri adlandırılmış ve isteğe bağlı bağımsız değişkenler içerir ve dönüş türü değerlerinin `dynamic`. COM programlama, atlayabilirsiniz `ref` Dizinli Özellikler anahtar sözcüğü ve kazanç erişim. Visual Basic'de özellikler, lambda ifadeleri ve koleksiyon başlatıcıları deyimlerinde otomatik uygulanan özellikler içerir.
@@ -27,7 +27,6 @@ Bu izlenecek yol bu özellikleri Office programlama bağlamında gösterir, anca
 
 Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Word'ün yüklü olması gerekir.  
   
- Daha eski bir işletim sistemi kullanıyorsanız [!INCLUDE[windowsver](~/includes/windowsver-md.md)], emin [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] yüklenir.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -115,7 +114,7 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]  
   
-     C# başka bir özellik bu eklemeleri gösterir: değerlendirmesini `Object` döndürülen Office gibi COM konaklarından türü yokmuş gibi [dinamik](../../../csharp/language-reference/keywords/dynamic.md). Bu otomatik olarak gerçekleşir, **birlikte çalışma türlerini katıştır** varsayılan değerine ayarlanır `True`, ya da eşdeğer, ne zaman derlemesi tarafından başvurulan [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği. Tür `dynamic` geç bağlama, zaten Visual Basic'te kullanılabilir izin verir ve Visual C# 2008 ve dilin önceki sürümlerinde gerekli açık atama önler.  
+     C# başka bir özellik bu eklemeleri gösterir: değerlendirmesini `Object` döndürülen Office gibi COM konaklarından türü yokmuş gibi [dinamik](../../../csharp/language-reference/keywords/dynamic.md). Bu otomatik olarak gerçekleşir, **birlikte çalışma türlerini katıştır** varsayılan değerine ayarlanır `True`, ya da eşdeğer, ne zaman derlemesi tarafından başvurulan [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği. Tür `dynamic` geç bağlama, zaten Visual Basic'te kullanılabilir izin verir ve gerekli açık atama önler C# 3.0 ve eski sürümlerine dili.  
   
      Örneğin, `excelApp.Columns[1]` döndürür bir `Object`, ve `AutoFit` bir Excel [aralığı](<xref:Microsoft.Office.Interop.Excel.Range>) yöntemi. Olmadan `dynamic`, tarafından döndürülen nesne dönüştürmelisiniz `excelApp.Columns[1]` örneği olarak `Range` çağırmadan önce yöntemi `AutoFit`.  
   

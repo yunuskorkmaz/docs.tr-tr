@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 4a495fb5ce353bcb4f7ccda975dfc74ba711db79
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 1f98435aba6994aaca76127cc20b5ffa29df455f
+ms.sourcegitcommit: d9c4808739c8c606957dd0964d952b98ea7b6533
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025244"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67349768"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bit düzeyinde ve kaydırma işleçleri (C# Başvurusu)
 
@@ -60,39 +60,39 @@ Ayrıca `~` sonlandırıcılar bildirmek için Sembol. Daha fazla bilgi için [s
 
 ## <a name="left-shift-operator-"></a>Sola kaydırma işleci \<\<
 
-`<<` İşleci, ilk işlenen tarafından ikinci işleneni tarafından tanımlanan bit sayısı kadar sola kaydırır.
+`<<` İşleci sol işleneniyle tarafından sağ işlenen tarafından tanımlanan bit sayısı kadar sola kaydırır.
 
 Sola kaydırma işleminin sonucu türü aralığının dışında olan ve düşük düzey boş bit konumları sıfır, aşağıdaki örnekte gösterildiği gibi ayarlar yüksek sıra bitleri atar:
 
 [!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
-Kaydırma işleçleri yalnızca tanımlandığından `int`, `uint`, `long`, ve `ulong` türlerini, her zaman bir işlemin sonucunu içeren en az 32 bit. Birinci işlenenin başka bir integral türü ise (`sbyte`, `byte`, `short`, `ushort`, veya `char`), değeri dönüştürülür `int` türü, aşağıdaki örnekte gösterildiği gibi:
+Kaydırma işleçleri yalnızca tanımlandığından `int`, `uint`, `long`, ve `ulong` türlerini, her zaman bir işlemin sonucunu içeren en az 32 bit. Sol işlenen başka bir integral türü ise (`sbyte`, `byte`, `short`, `ushort`, veya `char`), değeri dönüştürülür `int` türü, aşağıdaki örnekte gösterildiği gibi:
 
 [!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
-Hakkında bilgi için ikinci işleneni `<<` işleci tanımlar kaydırma sayısı, bkz: [kaydırma işleçlerinin sayısı](#shift-count-of-the-shift-operators) bölümü.
+Hakkında bilgi için sağ işleneni `<<` işleci tanımlar kaydırma sayısı, bkz: [kaydırma işleçlerinin sayısı](#shift-count-of-the-shift-operators) bölümü.
 
 ## <a name="right-shift-operator-"></a>Sağa kaydırma işleci >>
 
-`>>` İşleci kaydırır ilk işleneni sağ ikinci işleneni tarafından tanımlanan bit sayısı.
+`>>` İşleci kaydırır sol işleneniyle sağ tarafından sağ işlenen tarafından tanımlanan bit sayısı.
 
 Sağa kaydırma işlemi aşağıdaki örnekte gösterildiği gibi alt sıra bitleri atar:
 
 [!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
-Yüksek düzeyli boş bit konumları birinci işlenenin türünde şu şekilde göre ayarlanır:
+Yüksek düzeyli boş bit konumları sol işlenenin türü üzerinde aşağıdaki gibi temel ayarlanır:
 
-- Birinci işlenenin türü ise [int](../keywords/int.md) veya [uzun](../keywords/long.md), sağa kaydırma işleci gerçekleştiren bir *aritmetik* shift: ilk en önemli bite (imza biti) değeri işlenen, yüksek sıralı boş bit konumlarına yayılır. Diğer bir deyişle, ilk işlenen negatif ise yüksek düzeyli boş bit konumları sıfır olarak ayarlanır ve negatif ise birine ayarlayın.
+- Sol işlenen türü ise [int](../keywords/int.md) veya [uzun](../keywords/long.md), sağa kaydırma işleci gerçekleştiren bir *aritmetik* shift: en anlamlı biti (imza biti) değeri sol işlenen, yüksek sıralı boş bit konumlarına yayılır. Diğer bir deyişle, sol işlenen negatif ise yüksek düzeyli boş bit konumları sıfır olarak ayarlanır ve negatif ise birine ayarlayın.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- Birinci işlenenin türü ise [uint](../keywords/uint.md) veya [ulong](../keywords/ulong.md), sağa kaydırma işleci gerçekleştiren bir *mantıksal* shift: yüksek düzeyli boş bit konumları her zaman sıfır olarak ayarlayın.
+- Sol işlenen türü ise [uint](../keywords/uint.md) veya [ulong](../keywords/ulong.md), sağa kaydırma işleci gerçekleştiren bir *mantıksal* shift: yüksek düzeyli boş bit konumları her zaman sıfır olarak ayarlayın.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
-Hakkında bilgi için ikinci işleneni `>>` işleci tanımlar kaydırma sayısı, bkz: [kaydırma işleçlerinin sayısı](#shift-count-of-the-shift-operators) bölümü.
+Hakkında bilgi için sağ işleneni `>>` işleci tanımlar kaydırma sayısı, bkz: [kaydırma işleçlerinin sayısı](#shift-count-of-the-shift-operators) bölümü.
 
-## <a name="logical-and-operator-amp"></a>Mantıksal AND işleci &amp;
+## <a name="logical-and-operator-"></a> Mantıksal AND işleci &amp;
 
 `&` Kendi işlenenden bit seviyesinde mantıksal ve işlecini hesaplar:
 
@@ -158,13 +158,13 @@ Tam listesi için C# işleçler, öncelik düzeyine göre sıralanmış bkz [ C#
 
 ## <a name="shift-count-of-the-shift-operators"></a>Kaydırma işleçleri kaydırma sayısı
 
-Kaydırma işleçleri için `<<` ve `>>`, ikinci işlenenin türünde olmalıdır [int](../keywords/int.md) veya olan bir türü bir [örtülü sayısal dönüştürme önceden tanımlanmış](../keywords/implicit-numeric-conversions-table.md) için `int`.
+Kaydırma işleçleri için `<<` ve `>>`, sağ işlenenin türünde olmalıdır [int](../keywords/int.md) veya olan bir türü bir [örtülü sayısal dönüştürme önceden tanımlanmış](../keywords/implicit-numeric-conversions-table.md) için `int`.
 
 İçin `x << count` ve `x >> count` ifadeleri, gerçek kaydırma sayısı türüne bağlıdır `x` gibi:
 
-- Varsa türünü `x` olduğu [int](../keywords/int.md) veya [uint](../keywords/uint.md), kaydırma sayısı düşük düzey tarafından tanımlanan *beş* ikinci işlenenin bit. Kaydırma sayısı gelen diğer bir deyişle, hesaplanan `count & 0x1F` (veya `count & 0b_1_1111`).
+- Varsa türünü `x` olduğu [int](../keywords/int.md) veya [uint](../keywords/uint.md), kaydırma sayısı düşük düzey tarafından tanımlanan *beş* sağ işlenenin bit. Kaydırma sayısı gelen diğer bir deyişle, hesaplanan `count & 0x1F` (veya `count & 0b_1_1111`).
 
-- Varsa türünü `x` olduğu [uzun](../keywords/long.md) veya [ulong](../keywords/ulong.md), kaydırma sayısı düşük düzey tarafından tanımlanan *altı* ikinci işlenenin bit. Kaydırma sayısı gelen diğer bir deyişle, hesaplanan `count & 0x3F` (veya `count & 0b_11_1111`).
+- Varsa türünü `x` olduğu [uzun](../keywords/long.md) veya [ulong](../keywords/ulong.md), kaydırma sayısı düşük düzey tarafından tanımlanan *altı* sağ işlenenin bit. Kaydırma sayısı gelen diğer bir deyişle, hesaplanan `count & 0x3F` (veya `count & 0b_11_1111`).
 
 Aşağıdaki örnek, bu davranış gösterir:
 
@@ -180,7 +180,7 @@ Aşağıdaki örnek, bu davranış gösterir:
 
 Kullanıcı tanımlı bir tür için [aşırı](../keywords/operator.md) `~`, `<<`, `>>`, `&`, `|`, ve `^` işleçleri. İkili İşleç aşırı yüklendiğinde, karşılık gelen bileşik atama işleci de örtülü olarak aşırı yüklenmiş. Kullanıcı tanımlı bir türe açıkça bir bileşik atama işleci aşırı yüklenemez.
 
-Kullanıcı tanımlı bir tür ederse `T` aşırı `<<` veya `>>` işleci, birinci işlenenin türü olmalıdır `T` ve ikinci işlenenin türünde olmalıdır `int`.
+Kullanıcı tanımlı bir tür ederse `T` aşırı `<<` veya `>>` işleci sol işlenenin türü olmalıdır `T` ve sağ işleneninin türü olmalıdır `int`.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

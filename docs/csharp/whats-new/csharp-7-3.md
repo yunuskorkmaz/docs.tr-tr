@@ -2,12 +2,12 @@
 title: C# 7.3 yenilikler nelerdir?
 description: C# 7.3 içindeki yeni özelliklere genel bakış
 ms.date: 05/16/2018
-ms.openlocfilehash: aca5c1b82253c02eccf24af1e5c45d0203d0b1b8
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 4e45893be671b707efbde352eef04fa92af94954
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832704"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347399"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 yenilikler nelerdir?
 
@@ -34,7 +34,13 @@ Yeni derleyici seçenekleri şunlardır:
 - `-publicsign` Açık kaynak yazılım (OSS) derlemeleri imzalamayı etkinleştirmek için.
 - `-pathmap` Kaynak dizinleri için bir eşleme sağlamak için.
 
-Bu makalenin geri kalanında, Ayrıntılar ve her geliştirmeleri hakkında daha fazla bilgi için bağlantılar sağlar.
+Bu makalenin geri kalanında, Ayrıntılar ve her geliştirmeleri hakkında daha fazla bilgi için bağlantılar sağlar. Bu özellikleri kullanarak ortamınıza keşfedebilirsiniz `dotnet try` genel aracı:
+
+1. Yükleme [dotnet deneyin](https://github.com/dotnet/try/blob/master/README.md#setup) genel aracı.
+1. Kopya [dotnet/try-samples](https://github.com/dotnet/try-samples) depo.
+1. Geçerli dizin kümesine *csharp7* alt *deneyin-samples* depo.
+1. `dotnet try`'i çalıştırın.
+
 
 ## <a name="enabling-more-efficient-safe-code"></a>Daha verimli bir güvenli kod etkinleştirme
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 7d8a6b7f5bf83719f96009c301867056da755822
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 0e6edf9bcc0954bf06e76b238b2bb07dea040a9c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025216"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347893"
 ---
 # <a name="comparison-operators-c-reference"></a>Karşılaştırma işleçleri (C# Başvurusu)
 
@@ -39,25 +39,25 @@ Numaralandırma türleri, Karşılaştırma işleçleri de destekler. Aynı işl
 
 ## <a name="less-than-operator-"></a>Küçüktür işleci \<
 
-`<` İşleci döndürür `true` ilk işleneni küçükse değerinden ikinci işleneniyle `false` Aksi takdirde:
+`<` İşleci döndürür `true` sol işleneni, sağ işlenen altındaysa `false` Aksi takdirde:
 
 [!code-csharp-interactive[less than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
 
 ## <a name="greater-than-operator-"></a>Büyüktür işleci >
 
-`>` İşleci döndürür `true` , ikinci işlenenin ilk işlenenin büyükse `false` Aksi takdirde:
+`>` İşleci döndürür `true` sol işleneni, sağ işlenen büyükse `false` Aksi takdirde:
 
 [!code-csharp-interactive[greater than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
 
 ## <a name="less-than-or-equal-operator-"></a>Küçüktür veya eşittir işleci \<=
 
-`<=` İşleci döndürür `true` ilk işlenenin ikinci işleneni, küçük veya ona eşit olup olmadığını `false` Aksi takdirde:
+`<=` İşleci döndürür `true` sol işleneni, sağ işlenen küçük veya ona eşit olup olmadığını `false` Aksi takdirde:
 
 [!code-csharp-interactive[less than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
 
 ## <a name="greater-than-or-equal-operator-"></a>Büyüktür veya eşittir işleci > =
 
-`>=` İşleci döndürür `true` ilk işlenenin değerinden büyük veya eşittir, ikinci işleneni ise `false` Aksi takdirde:
+`>=` İşleci döndürür `true` sol işlenenin değerinden büyük veya eşittir, sağ işlenen ise `false` Aksi takdirde:
 
 [!code-csharp-interactive[greater than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
 

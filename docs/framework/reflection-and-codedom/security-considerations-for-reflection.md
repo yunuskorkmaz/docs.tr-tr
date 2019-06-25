@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6446cc3ee102fa57f5bf60c1353f7b9d5522be69
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 178255c03c2f5da41579f00c0c81ba3c85a0b0ee
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816124"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347345"
 ---
 # <a name="security-considerations-for-reflection"></a>Yansımayla İlgili Güvenlik Konuları
 Yansıma üyelerine erişmek ve bu türler ve üyeler hakkında bilgi alma özelliği sağlar (diğer bir deyişle, yöntemler ve almak ve özellik ayarlamak için oluşturucuları çağırmak için değerleri, ekleyin ve olay işleyicilerini kaldırmak ve benzeri). Türler ve üyeler hakkında bilgi edinmek için yansıma kullanmak sınırlı değildir. Tüm kod, yansıma aşağıdaki görevleri gerçekleştirmek için kullanabilirsiniz:  
@@ -102,7 +102,7 @@ Yansıma üyelerine erişmek ve bu türler ve üyeler hakkında bilgi alma özel
   
 - <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Bayrağı, .NET Framework 2.0 Hizmet Paketi 1'de sunulmuştur. .NET Framework'ün önceki sürümlerini gerektirir <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> ortak olmayan üyelere erişmek için yansımayı kullanan kod için bayrak. Kısmen güvenilen koda hiçbir zaman verilen bir izni budur.  
   
-- İle başlayarak [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], ortak olmayan türler ve üyeler hakkında bilgi edinmek için yansıma kullanarak herhangi bir izni gerektirmez. Önceki sürümlerde <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> bayrağı gereklidir.  
+- .NET Framework 2.0 ile başlayarak, ortak olmayan türler ve üyeler hakkında bilgi edinmek için yansıma kullanarak herhangi bir izni gerekli değildir. Önceki sürümlerde <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> bayrağı gereklidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

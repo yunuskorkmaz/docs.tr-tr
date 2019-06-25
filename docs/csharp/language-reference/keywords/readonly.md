@@ -8,23 +8,26 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c3d18a52068b17b4a4259200754819dd43e28a03
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 4a51bb0e854de127c632c28f613a7602bf09f432
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267651"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348019"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# Başvurusu)
 
 `readonly` Anahtar sözcüğü, üç bağlamlarda kullanılan bir değiştirici:
 
-- İçinde bir [alan bildirimi](#readonly-field-example), `readonly` alana atama bildirimin veya aynı sınıftaki bir oluşturucunun parçası olarak yalnızca oluşabilir gösterir. Salt okunur bir alan atanabilir ve alan bildirimi ve oluşturucu içinde birden çok kez yeniden atandı. A `readonly` alan oluşturucu çıktıktan sonra atanamaz. Değer türleri ve başvuru türleri için farklı biçimlerde olan:
-- Değer türleri verilerini doğrudan içerdiği için olan bir alan bir `readonly` değişmez değer türü. 
-- Başvuru türleri verilerine bir başvuru içerdiğinden olan bir alan bir `readonly` başvuru türü her zaman aynı nesneye başvurmalıdır. Bu nesne sabit değil. `readonly` Değiştiricisi başvuru türü farklı bir örneğine yerini alan engeller. Ancak değiştiricisi, örnek veri alanının salt okunur alanı değiştirilmiş engellemez.
+- İçinde bir [alan bildirimi](#readonly-field-example), `readonly` alana atama bildirimin veya aynı sınıftaki bir oluşturucunun parçası olarak yalnızca oluşabilir gösterir. Salt okunur bir alan atanabilir ve alan bildirimi ve oluşturucu içinde birden çok kez yeniden atandı. 
+  
+  A `readonly` alan oluşturucu çıktıktan sonra atanamaz. Değer türleri ve başvuru türleri için farklı biçimlerde olan:
+  
+  - Değer türleri verilerini doğrudan içerdiği için olan bir alan bir `readonly` değişmez değer türü. 
+  - Başvuru türleri verilerine bir başvuru içerdiğinden olan bir alan bir `readonly` başvuru türü her zaman aynı nesneye başvurmalıdır. Bu nesne sabit değil. `readonly` Değiştiricisi başvuru türü farklı bir örneğine yerini alan engeller. Ancak değiştiricisi, örnek veri alanının salt okunur alanı değiştirilmiş engellemez.
 
-> [!WARNING]
-> Dışarıdan görünen tür, kesilebilir başvuru türü olan bir dışarıdan görünen salt okunur alan içeren bir güvenlik açığı olabilir ve uyarı tetikleyebilir [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) : "Salt okunur kesilebilir başvuru türleri bildirmeyin."
+  > [!WARNING]
+  > Dışarıdan görünen tür, kesilebilir başvuru türü olan bir dışarıdan görünen salt okunur alan içeren bir güvenlik açığı olabilir ve uyarı tetikleyebilir [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) : "Salt okunur kesilebilir başvuru türleri bildirmeyin."
 
 - İçinde bir [ `readonly struct` tanımı](#readonly-struct-example), `readonly` belirten `struct` sabittir.
 - İçinde bir [ `ref readonly` yöntemi dönüş](#ref-readonly-return-example), `readonly` değiştiricisi gösteren bir başvuru ve yazma işlemleri bu başvurusuna izin verilmez yöntemi döndürür.
@@ -41,9 +44,9 @@ Bir değer atamak için bir `readonly` yalnızca şu bağlamlarda alan:
 
 - Ne zaman Değişken bildiriminde örneğin başlatılır:
 
-```csharp
-public readonly int y = 5;
-```
+  ```csharp
+  public readonly int y = 5;
+  ```
 
 - Bir sınıfın örnek oluşturucusunda örnek alan bildirimi içerir.
 - Statik Oluşturucu sınıfın statik alan bildirimi içerir.
