@@ -21,10 +21,10 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/24/2019
 ms.locfileid: "65589530"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Nasıl yapılır: Dizelerin Geçerli E-Posta Biçiminde Olduğunu Doğrulama
@@ -59,8 +59,8 @@ Aşağıdaki örnek, bir dize geçerli bir e-posta biçiminde olduğunu doğrula
 |`(?("")("".+?(?<!\\)""@)`|İlk karakter bir tırnak işareti ise, en az bir bitiş tırnak işaretinden sonra herhangi bir karakter, oluşumunu ardından bir başlangıç tırnağından eşleştirin. Bir ters eğik çizgi karakteriyle bitiş tırnak işareti gelmemelidir (\\). `(?<!` bir sıfır Genişlik negatif geriye yönelik onaydır başlangıcıdır. Dizenin sonunda bir at işareti (@).|  
 |<code>&#124;(([0-9a-z]</code>|İlk karakter bir tırnak işareti değil ise, gelen alfabetik bir karakterle eşleşen bir-z veya A (karşılaştırma büyük/küçük harfe duyarsız) Z ya da herhangi bir sayısal karakter 0-9.|  
 |`(\.(?!\.))`|Sonraki karakteri bir nokta ise, eşleştirin. Bir nokta değil ise, önceden sonraki karaktere bakın ve eşleştirmeyi devam ettirin. `(?!\.)` Art arda iki bir e-posta adresinin yerel kısmında görünmesini engelleyen bir sıfır Genişlik negatif ileriye yönelik olaydır.|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>| Sonraki karakteri bir nokta değil ise, herhangi bir sözcük karakteri veya şu karakterlerden birini eşleşen:-! #$% ' * +=? ^\`{}&#124;~.|  
-|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>| Değişim deseni (süre olmayan veya karakter sayısını biri tarafından izlenen bir nokta) sıfır veya daha fazla kez eşleştirin.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|Sonraki karakteri bir nokta değil ise, herhangi bir sözcük karakteri veya şu karakterlerden birini eşleşen:-! #$% ' * +=? ^\`{}&#124;~.|  
+|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>|Değişim deseni (süre olmayan veya karakter sayısını biri tarafından izlenen bir nokta) sıfır veya daha fazla kez eşleştirin.|  
 |`@`|Eşleşme @ karakteri.|  
 |`(?<=[0-9a-z])`|Karakter önceyse eşleştirmeyi devam ettirin. A-Z, A'dan Z'ye veya 0-9 @ karakterdir. `(?<=[0-9a-z])` Yapısı, sıfır genişlik pozitif geriye yönelik onayı tanımlar.|  
 |`(?(\[)`|@ İzleyen karakterin açılış ayracı olup olmadığını denetleyin.|  
