@@ -6,26 +6,28 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 5f3e7b831f701145caa1a4fb50f6bb1a4ece4103
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: f9884f353e58ff6119e3bc3b95aa55f0f60d0ad5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347750"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398491"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="946c1-102">Nasıl yapılır: Otomatik uygulanan özelliklerle hafif bir sınıf uygulama (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="946c1-102">How to: Implement a Lightweight Class with Auto-Implemented Properties (C# Programming Guide)</span></span>
-<span data-ttu-id="946c1-103">Bu örnekte, yalnızca otomatik uygulanan özellikler kümesi yalıtılacak veren sabit hafif bir sınıf oluşturma işlemi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="946c1-103">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="946c1-104">Başvuru türü anlamları kullandığınızda gerekir bu tür bir yapı yerine bir yapı kullanın.</span><span class="sxs-lookup"><span data-stu-id="946c1-104">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>  
-  
- <span data-ttu-id="946c1-105">Sabit bir özelliğin iki şekilde yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="946c1-105">You can make an immutable property in two ways:</span></span>
-  - <span data-ttu-id="946c1-106">Bildirebilirsiniz [ayarlamak](../../../csharp/language-reference/keywords/set.md) olmasını erişimci [özel](../../../csharp/language-reference/keywords/private.md).</span><span class="sxs-lookup"><span data-stu-id="946c1-106">You can declare the [set](../../../csharp/language-reference/keywords/set.md) accessor to be [private](../../../csharp/language-reference/keywords/private.md).</span></span>  <span data-ttu-id="946c1-107">Özelliği yalnızca bir tür içinde ayarlanabilir, ancak tüketicilere sabittir.</span><span class="sxs-lookup"><span data-stu-id="946c1-107">The property is only settable within the type, but it is immutable to consumers.</span></span>  
-    
-    <span data-ttu-id="946c1-108">Özel bir bildirdiğinizde `set` erişimci özelliğini başlatmak için bir nesne Başlatıcı kullanamazsınız.</span><span class="sxs-lookup"><span data-stu-id="946c1-108">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="946c1-109">Bir oluşturucu ya da bir Üreteç yöntemi kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="946c1-109">You must use a constructor or a factory method.</span></span>  
-  - <span data-ttu-id="946c1-110">Yalnızca bildirebilirsiniz [alma](../../../csharp/language-reference/keywords/get.md) özellik türün oluşturucusundaki her yerde dışında sabit getiren erişimcisi.</span><span class="sxs-lookup"><span data-stu-id="946c1-110">You can declare only the [get](../../../csharp/language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type’s constructor.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="946c1-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="946c1-111">Example</span></span>  
- <span data-ttu-id="946c1-112">Aşağıdaki örnek, otomatik uygulanan özellikleri olan sabit bir sınıf uygulamak için iki yolunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="946c1-112">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="946c1-113">Her iki yöntemle özel özelliklerle birini bildirir `set` ve özelliklere sahip bir `get` yalnızca.</span><span class="sxs-lookup"><span data-stu-id="946c1-113">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="946c1-114">Birinci sınıf kullandığı bir oluşturucu özelliklerini ve ikinci sınıfı yalnızca başlatmak için bir oluşturucuyu çağırır bir statik fabrika yöntemi kullanır.</span><span class="sxs-lookup"><span data-stu-id="946c1-114">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>  
-  
-```csharp  
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="cbcf5-102">Nasıl yapılır: Otomatik uygulanan özelliklerle hafif bir sınıf uygulama (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="cbcf5-102">How to: Implement a Lightweight Class with Auto-Implemented Properties (C# Programming Guide)</span></span>
+
+<span data-ttu-id="cbcf5-103">Bu örnekte, yalnızca otomatik uygulanan özellikler kümesi yalıtılacak veren sabit hafif bir sınıf oluşturma işlemi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="cbcf5-103">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="cbcf5-104">Başvuru türü anlamları kullandığınızda gerekir bu tür bir yapı yerine bir yapı kullanın.</span><span class="sxs-lookup"><span data-stu-id="cbcf5-104">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>
+
+<span data-ttu-id="cbcf5-105">Sabit bir özelliğin iki şekilde yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="cbcf5-105">You can make an immutable property in two ways:</span></span>
+- <span data-ttu-id="cbcf5-106">Bildirebilirsiniz [ayarlamak](../../../csharp/language-reference/keywords/set.md) olmasını erişimci [özel](../../../csharp/language-reference/keywords/private.md).</span><span class="sxs-lookup"><span data-stu-id="cbcf5-106">You can declare the [set](../../../csharp/language-reference/keywords/set.md) accessor to be [private](../../../csharp/language-reference/keywords/private.md).</span></span>  <span data-ttu-id="cbcf5-107">Özelliği yalnızca bir tür içinde ayarlanabilir, ancak tüketicilere sabittir.</span><span class="sxs-lookup"><span data-stu-id="cbcf5-107">The property is only settable within the type, but it is immutable to consumers.</span></span>
+
+  <span data-ttu-id="cbcf5-108">Özel bir bildirdiğinizde `set` erişimci özelliğini başlatmak için bir nesne Başlatıcı kullanamazsınız.</span><span class="sxs-lookup"><span data-stu-id="cbcf5-108">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="cbcf5-109">Bir oluşturucu ya da bir Üreteç yöntemi kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="cbcf5-109">You must use a constructor or a factory method.</span></span>
+- <span data-ttu-id="cbcf5-110">Yalnızca bildirebilirsiniz [alma](../../../csharp/language-reference/keywords/get.md) özellik türün oluşturucusundaki her yerde dışında sabit getiren erişimcisi.</span><span class="sxs-lookup"><span data-stu-id="cbcf5-110">You can declare only the [get](../../../csharp/language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type’s constructor.</span></span>
+
+## <a name="example"></a><span data-ttu-id="cbcf5-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="cbcf5-111">Example</span></span>
+
+<span data-ttu-id="cbcf5-112">Aşağıdaki örnek, otomatik uygulanan özellikleri olan sabit bir sınıf uygulamak için iki yolunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="cbcf5-112">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="cbcf5-113">Her iki yöntemle özel özelliklerle birini bildirir `set` ve özelliklere sahip bir `get` yalnızca.</span><span class="sxs-lookup"><span data-stu-id="cbcf5-113">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="cbcf5-114">Birinci sınıf kullandığı bir oluşturucu özelliklerini ve ikinci sınıfı yalnızca başlatmak için bir oluşturucuyu çağırır bir statik fabrika yöntemi kullanır.</span><span class="sxs-lookup"><span data-stu-id="cbcf5-114">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>
+
+```csharp
 // This class is immutable. After an object is created,
 // it cannot be modified from outside the class. It uses a
 // constructor to initialize its properties.
@@ -104,20 +106,20 @@ public class Program
         Console.ReadKey();
     }
 }
-  
-/* Output:  
-    Terry Adams, 123 Main St.  
-    Fadi Fakhouri, 345 Cypress Ave.  
-    Hanying Feng, 678 1st Ave  
-    Cesar Garcia, 12 108th St.  
-    Debra Garcia, 89 E. 42nd St.  
-*/  
-```  
-  
- <span data-ttu-id="946c1-115">Derleyici, her bir otomatik uygulanan özellik için yedekleme alanları oluşturur.</span><span class="sxs-lookup"><span data-stu-id="946c1-115">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="946c1-116">Alanlar doğrudan kaynak koddan erişilebilir değildir.</span><span class="sxs-lookup"><span data-stu-id="946c1-116">The fields are not accessible directly from source code.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="946c1-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="946c1-117">See also</span></span>
 
-- [<span data-ttu-id="946c1-118">Özellikler</span><span class="sxs-lookup"><span data-stu-id="946c1-118">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [<span data-ttu-id="946c1-119">struct</span><span class="sxs-lookup"><span data-stu-id="946c1-119">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)
-- [<span data-ttu-id="946c1-120">Nesne ve Koleksiyon Başlatıcıları</span><span class="sxs-lookup"><span data-stu-id="946c1-120">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+/* Output:
+    Terry Adams, 123 Main St.
+    Fadi Fakhouri, 345 Cypress Ave.
+    Hanying Feng, 678 1st Ave
+    Cesar Garcia, 12 108th St.
+    Debra Garcia, 89 E. 42nd St.
+*/
+```
+
+<span data-ttu-id="cbcf5-115">Derleyici, her bir otomatik uygulanan özellik için yedekleme alanları oluşturur.</span><span class="sxs-lookup"><span data-stu-id="cbcf5-115">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="cbcf5-116">Alanlar doğrudan kaynak koddan erişilebilir değildir.</span><span class="sxs-lookup"><span data-stu-id="cbcf5-116">The fields are not accessible directly from source code.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="cbcf5-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cbcf5-117">See also</span></span>
+
+- [<span data-ttu-id="cbcf5-118">Özellikler</span><span class="sxs-lookup"><span data-stu-id="cbcf5-118">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [<span data-ttu-id="cbcf5-119">struct</span><span class="sxs-lookup"><span data-stu-id="cbcf5-119">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)
+- [<span data-ttu-id="cbcf5-120">Nesne ve Koleksiyon Başlatıcıları</span><span class="sxs-lookup"><span data-stu-id="cbcf5-120">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
