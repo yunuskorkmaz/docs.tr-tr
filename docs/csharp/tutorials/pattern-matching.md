@@ -3,12 +3,12 @@ title: Veri türlerini genişletmek için desen eşleştirme özelliklerini kull
 description: Gelişmiş Bu öğretici, verileri ve ayrı oluşturulur algoritmaları kullanarak işlevi oluşturmak için desen eşleştirme teknikleri kullanmayı gösterir.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 58e4a9175752c7845507f48a3684747092dc609a
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: c42a917deee763e7c3e4e24949ec5c896d55016f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378076"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397815"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Öğretici: Veri türlerini genişletmek için özellikler desen kullanma
 
@@ -145,7 +145,7 @@ Desenler, kod ve verileri ayrı olduğu algoritmaları oluşturmanıza nasıl ya
 Maksimum kapasitede her fırsatta seyahat etmeye taşıtlardan teşvik etmek Ücretli yetkilisi istiyor. Araçlar daha az Yolcuların varsa ve daha düşük fiyatlandırma sunarak tam taşıtlardan teşvik daha kaydedilecek verdiyseniz:
 
 - Arabalar ve taksiler hiçbir Yolcuların ile bir ek 0,50 ABD Doları ücret ödersiniz.
-- Arabalar ve iki Yolcuların ile taksiler 0,50 indirim elde edin.
+- Arabalar ve iki Yolcuların ile taksiler bir 0,50 ABD Doları indirim kazanın.
 - Arabalar ve üç veya daha fazla Yolcuların ile taksiler 1,00 indirim elde edin.
 - Değerinden % 50 tam yolları 2,00 fazladan bir ücret ödersiniz.
 - Birden fazla % 90 tam olan yollarına 1,00 indirim alın.
@@ -199,7 +199,12 @@ vehicle switch
 };
 ```
 
-Ücretli yetkilisi yolcu teslimi kamyon içinde sayısı ile ilgili değildir. Bunun yerine, bunlar daha kamyon ağırlık sınıfında göre ücret alınır. Kamyon 5000 lbs üzerinde fazladan bir $5.00 ücretlendirilir. Açık kamyon altında 3000 lbs 2,00 fiyatla sunulur. Bu kural, aşağıdaki kod ile gerçekleştirilir:
+Ücretli yetkilisi yolcu teslimi kamyon içinde sayısı ile ilgili değildir. Bunun yerine, kamyon ağırlık sınıf üzerinde aşağıdaki gibi temel ücret tutarı ayarlayın:
+
+- Kamyon 5000 lbs üzerinde fazladan bir $5.00 ücretlendirilir.
+- Açık kamyon altında 3000 lbs 2,00 fiyatla sunulur.
+
+Bu kural, aşağıdaki kod ile gerçekleştirilir:
 
 ```csharp
 vehicle switch
@@ -292,8 +297,8 @@ Aşağıdaki tabloda, giriş değerleri birleşimlerini ve çarpan fiyatlandırm
 | ---------- | ------------ | --------- |--------:|
 | Haftanın günü    | sabah sağladığından | Gelen   | 2,00 x  |
 | Haftanın günü    | sabah sağladığından | Giden  | 1,00 x  |
-| Haftanın günü    | Daytime      | Gelen   | 1.50 x  |
-| Haftanın günü    | Daytime      | Giden  | 1.50 x  |
+| Haftanın günü    | Daytime      | Gelen   | 1\.50 x  |
+| Haftanın günü    | Daytime      | Giden  | 1\.50 x  |
 | Haftanın günü    | Akşam sağladığından | Gelen   | 1,00 x  |
 | Haftanın günü    | Akşam sağladığından | Giden  | 2,00 x  |
 | Haftanın günü    | gece    | Gelen   | 0,75 x  |

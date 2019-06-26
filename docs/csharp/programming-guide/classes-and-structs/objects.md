@@ -6,23 +6,23 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: de44f0c416de798fb42fba93e30ec6aa6ed0208d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1ba179c23d9b0e526cdc0dd436ca545377a0db81
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585999"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398423"
 ---
 # <a name="objects-c-programming-guide"></a>Nesneler (C# Programlama Kılavuzu)
 Bir sınıf veya yapı tanımı türü neler yapabileceğinizi belirten gibi plandır. Bir temel olarak ayrılmış ve şema göre yapılandırılmış bir bellek bloğunu nesnedir. Bir program, aynı sınıfın birçok nesne oluşturabilir. Nesne örneği olarak da adlandırılır ve adlandırılmış bir değişkeni veya bir dizi veya koleksiyon depolanabilir. İstemci kodu yöntemleri çağırın ve nesneyi genel özelliklerine erişmek için bu değişkenleri kullanır koda karşılık gelir. Bir nesne yönelimli dil C# gibi bir programın normal dinamik olarak etkileşim sahip birden çok nesne oluşur.  
   
 > [!NOTE]
->  Statik türleri burada açıklanan'den farklı davranır. Daha fazla bilgi için [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+> Statik türleri burada açıklanan'den farklı davranır. Daha fazla bilgi için [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
   
 ## <a name="struct-instances-vs-class-instances"></a>Yapı örnekleri vs. Sınıf örnekleri  
  Başvuru türleri sınıflar olduğu için bir sınıf nesnesi bir değişken yönetilen yığında nesnenin adresi için bir başvuru içerir. İkinci bir nesnesinin aynı türdeki ilk nesneye atanırsa, her iki değişken Bu adresteki bir nesneye başvurun. Bu nokta, bu konunun ilerleyen bölümlerinde daha ayrıntılı ele alınmıştır.  
   
- Sınıfların örneklerini kullanılarak oluşturulan [new işleci](../../../csharp/language-reference/keywords/new-operator.md). Aşağıdaki örnekte, `Person` türüdür ve `person1` ve `person 2` örnekleri ya da nesnelerin türü.  
+ Sınıfların örneklerini kullanılarak oluşturulan [new işleci](../../../csharp/language-reference/operators/new-operator.md). Aşağıdaki örnekte, `Person` türüdür ve `person1` ve `person 2` örnekleri ya da nesnelerin türü.  
   
  [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
@@ -33,7 +33,7 @@ Bir sınıf veya yapı tanımı türü neler yapabileceğinizi belirten gibi pla
  Hem bellek `p1` ve `p2` iş parçacığı yığında ayrılır. Bu bellek tür veya yöntem içinde bildirildiği birlikte geri kazanılır. Yapılar atamada neden kopyalanır nedenlerinden biri budur. Nesne tüm başvuruları kapsam dışına sahiplikten aksine, bir sınıf örneği için ayrılan bellek (otomatik olarak geri kazanılan çöp olarak toplanacak) ortak dil çalışma zamanı tarafından andır. C++'ta gibi bir sınıf nesnesi belirleyici yok etmek mümkün değildir. .NET Framework'te çöp toplama hakkında daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
->  Ayırmayı ve ayırmayı kaldırma yönetilen yığında bellek ortak dil çalışma zamanı yüksek oranda iyileştirilmiş. Çoğu durumda bir sınıf örneği yığında bir struct örneği ayırma karşı yığınındaki ayırma performans maliyeti, önemli bir fark yoktur.  
+> Ayırmayı ve ayırmayı kaldırma yönetilen yığında bellek ortak dil çalışma zamanı yüksek oranda iyileştirilmiş. Çoğu durumda bir sınıf örneği yığında bir struct örneği ayırma karşı yığınındaki ayırma performans maliyeti, önemli bir fark yoktur.
   
 ## <a name="object-identity-vs-value-equality"></a>Nesne Kimliği vs. Değer eşitliği  
  Eşitlik için iki nesneleri karşılaştırmak, iki değişken aynı nesneye bellekte olup olmadığını temsil eder ve bir veya daha fazla alanlarının değerlerini eşdeğer olup bilmek istemediğiniz ilk ayırdetmek. Değerleri Karşılaştır amaçlanıyorsa nesnenin örneğini değer türleri (yapı) veya başvuru türleri (sınıflar, temsilciler, diziler) olup olmadığını dikkate almanız gerekir.  
@@ -68,5 +68,5 @@ Bir sınıf veya yapı tanımı türü neler yapabileceğinizi belirten gibi pla
 - [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
 - [class](../../../csharp/language-reference/keywords/class.md)
 - [struct](../../../csharp/language-reference/keywords/struct.md)
-- [new İşleci](../../../csharp/language-reference/keywords/new-operator.md)
+- [new İşleci](../../../csharp/language-reference/operators/new-operator.md)
 - [Ortak Tür Sistemi](../../../standard/base-types/common-type-system.md)

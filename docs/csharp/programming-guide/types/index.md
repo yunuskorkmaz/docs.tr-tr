@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: c971a2d5d7caeb030cf504c44be8c8123decc3fc
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 796dbb012426cdaea7828afeea4fba15f57095c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423410"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398091"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 
@@ -126,7 +126,7 @@ Tüm numaralandırmalar devralınacak <xref:System.Enum?displayProperty=nameWith
 
 ### <a name="reference-types"></a>Başvuru Türleri
 
-Olarak tanımlanan bir tür bir [sınıfı](../../../csharp/language-reference/keywords/class.md), [temsilci](../../../csharp/language-reference/keywords/delegate.md), dizi veya [arabirimi](../../../csharp/language-reference/keywords/interface.md) olduğu bir *başvuru türüne*. Bir değişken bildirdiğinizde başvuru türü, çalışma zamanında değişken değeri içeren [null](../../../csharp/language-reference/keywords/null.md) açıkça kullanarak bir nesne oluşturma kadar [yeni](../../../csharp/language-reference/keywords/new.md) işleci veya olan bir nesne atama başka bir yerde kullanılarak oluşturulan `new`, aşağıdaki örnekte gösterildiği gibi:
+Olarak tanımlanan bir tür bir [sınıfı](../../../csharp/language-reference/keywords/class.md), [temsilci](../../../csharp/language-reference/keywords/delegate.md), dizi veya [arabirimi](../../../csharp/language-reference/keywords/interface.md) olduğu bir *başvuru türüne*. Bir değişken bildirdiğinizde başvuru türü, çalışma zamanında değişken değeri içeren [null](../../../csharp/language-reference/keywords/null.md) açıkça kullanarak bir nesne oluşturma kadar [yeni](../../../csharp/language-reference/operators/new-operator.md) işleci veya olan bir nesne atama başka bir yerde kullanılarak oluşturulan `new`, aşağıdaki örnekte gösterildiği gibi:
 
 ```csharp
 MyClass mc = new MyClass();

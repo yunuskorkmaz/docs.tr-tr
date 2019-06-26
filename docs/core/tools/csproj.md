@@ -2,12 +2,12 @@
 title: .NET Core csproj biçimine eklemeler
 description: Varolan ve .NET Core csproj dosyalarına arasındaki farklar hakkında bilgi edinin
 ms.date: 04/08/2019
-ms.openlocfilehash: 9c1f084af68010632cbe595858b2f242d37af598
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a9b1caf6068a7161258a6825ed16894ac41b3be7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631812"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397531"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core csproj biçimine eklemeler
 
@@ -74,7 +74,7 @@ Aşağıdaki tablo, hangi öğe ve hangi gösterir [eğik çizgi genelleştirmel
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Derleme           | \*\*/\*.cs (veya diğer dil uzantıları) | \*\*/\*.user;  \*\*/\*.\* Proj;  \* \* / \*.sln;  \* \* / \*.vssscc  | Yok                      |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | Yok                      |
-| None              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \* \* / \*.resx   |
+| Yok.              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \* \* / \*.resx   |
 
 > [!NOTE]
 > **Glob hariç** her zaman hariç `./bin` ve `./obj` tarafından temsil edilen klasörleri `$(BaseOutputPath)` ve `$(BaseIntermediateOutputPath)` MSBuild özellikleri sırasıyla. Bir bütün olarak tüm dışlar tarafından temsil edilen `$(DefaultItemExcludes)`.
@@ -291,7 +291,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="packagelicensefile"></a>PackageLicenseFile
 
-SPDX tanımlayıcı atanmamış lisans kullandığınız ya da özel bir lisanstır paket içindeki bir lisans dosyası yolu (Aksi takdirde `PackageLicenseExpression` VPN'ye olan)
+SPDX tanımlayıcı atanmamış lisans kullandığınız ya da özel bir lisanstır paket içindeki bir lisans dosyası yolu (Aksi takdirde `PackageLicenseExpression` tercih edilir)
 
 Değiştirir `PackageLicenseUrl`, ile birleştirilemez `PackageLicenseExpression` ve Visual Studio 15.9.4, .NET SDK'sı 2.1.502 veya 2.2.101, gerektirir ya da daha yeni.
 

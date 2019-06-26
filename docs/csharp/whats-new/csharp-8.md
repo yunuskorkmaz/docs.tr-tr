@@ -2,12 +2,12 @@
 title: İçindeki yenilikler C# 8.0 - C# Kılavuzu
 description: Uygulamasında kullanılabilen yeni özellikleri genel bakış C# 8.0. Bu makalede, preview 5 ile güncel durumda.
 ms.date: 02/12/2019
-ms.openlocfilehash: 9d66d76d6d565d24e27fd021ec2c2c17db74789a
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 962829b68c5d02c3a7e563a00d391c4698024d47
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347320"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397766"
 ---
 # <a name="whats-new-in-c-80"></a>İçindeki yenilikler C# 8.0
 
@@ -98,7 +98,7 @@ C#Daha fazla yerde daha fazla desen ifade kodunuzda kullanabilmeniz için bu sö
 
 Yeni yerde yeni desenler yanı sıra C# 8.0 ekler **özyinelemeli desenleri**. Bir ifade deseni herhangi bir ifade sonucudur. Yalnızca başka bir desen ifadesi çıkışına uygulanan bir desen ifadesi özyinelemeli modelidir.
 
-### <a name="switch-expressions"></a>anahtar ifadeler
+### <a name="switch-expressions"></a>Anahtar ifadeler
 
 Genellikle, bir [ `switch` ](../language-reference/keywords/switch.md) deyimi, her bir değer oluşturuyor, `case` engeller. **Anahtar ifadeler** , daha kısa ifade sözdizimini kullanacak şekilde etkinleştirin. Vardır daha az tekrarlı `case` ve `break` anahtar sözcükleri ve daha az küme ayraçları.  Örneğin, rainbow renklerini listeleyen aşağıdaki enum göz önünde bulundurun:
 
@@ -430,7 +430,7 @@ Aşağıdaki örnekler, açık olan başında, sonunda ya da her ikisi için bit
 ```csharp
 var allWords = words[..]; // contains "The" through "dog".
 var firstPhrase = words[..4]; // contains "The" through "fox"
-var lastPhrase = words[6..]; // contains "the, "lazy" and "dog"
+var lastPhrase = words[6..]; // contains "the", "lazy" and "dog"
 ```
 
 De aralık değişkenleri olarak bildirebilirsiniz:

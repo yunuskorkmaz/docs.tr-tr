@@ -2,12 +2,12 @@
 title: C# 7.3 yenilikler nelerdir?
 description: C# 7.3 içindeki yeni özelliklere genel bakış
 ms.date: 05/16/2018
-ms.openlocfilehash: 4e45893be671b707efbde352eef04fa92af94954
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347399"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397787"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 yenilikler nelerdir?
 
@@ -40,7 +40,6 @@ Bu makalenin geri kalanında, Ayrıntılar ve her geliştirmeleri hakkında daha
 1. Kopya [dotnet/try-samples](https://github.com/dotnet/try-samples) depo.
 1. Geçerli dizin kümesine *csharp7* alt *deneyin-samples* depo.
 1. `dotnet try`'i çalıştırın.
-
 
 ## <a name="enabling-more-efficient-safe-code"></a>Daha verimli bir güvenli kod etkinleştirme
 

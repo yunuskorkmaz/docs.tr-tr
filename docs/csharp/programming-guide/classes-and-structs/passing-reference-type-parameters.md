@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: 34e3370b0f6d28160be3ad9d918c110fc93f51fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b2aae49fbea138646b5f325919246238b2401ae
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703458"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398352"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Başvuru Türü Parametreleri Geçirme (C# Programlama Kılavuzu)
 Bir değişken bir [başvuru türüne](../../../csharp/language-reference/keywords/reference-types.md) verilerini içermiyor doğrudan; verilerine bir başvuru içeriyor. Değere göre bir başvuru türü parametresi geçirdiğinizde, bir sınıf üyesinin değerini gibi başvurulan nesnenin ait verileri değiştirmek mümkündür. Ancak, başvuru değeri değiştiremezsiniz; Örneğin, yeni bir nesne için bellek ayırın ve bu yöntemin kalıcı hale getirmek için aynı başvuru kullanamazsınız. Parametresini kullanarak bunu yapmak için geçirmek [ref](../../../csharp/language-reference/keywords/ref.md) veya [kullanıma](../../../csharp/language-reference/keywords/out-parameter-modifier.md) anahtar sözcüğü. Kolaylık olması için aşağıdaki örneklerde `ref`.  
@@ -21,7 +21,7 @@ Bir değişken bir [başvuru türüne](../../../csharp/language-reference/keywor
   
  [!code-csharp[csProgGuideParameters#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#7)]  
   
- Yukarıdaki örnekte, dizinin `arr`, bir başvuru türü olduğu yöntemine geçirilir `ref` parametresi. Böyle bir durumda kopyasını başvurunun işaret ettiği için `arr`, yönteme iletilir. Bu durumda olan bir dizi öğe içeriklerinin Değiştir yönteminin mümkündür çıktı gösterir `1` için `888`. Ancak, kullanarak yeni bir bölümü bellek ayırma [yeni](../../../csharp/language-reference/keywords/new.md) işleci içinde `Change` değişkeni hale getirdiğini `pArray` yeni bir dizi başvuru. Bu nedenle, orijinal diziyi etkilemez sonra değişiklikleri `arr`, içinde oluşturulan `Main`. Bu örnekte, biri içinde iki diziler aslında, oluşturulan `Main` ve bir iç `Change` yöntemi.  
+ Yukarıdaki örnekte, dizinin `arr`, bir başvuru türü olduğu yöntemine geçirilir `ref` parametresi. Böyle bir durumda kopyasını başvurunun işaret ettiği için `arr`, yönteme iletilir. Bu durumda olan bir dizi öğe içeriklerinin Değiştir yönteminin mümkündür çıktı gösterir `1` için `888`. Ancak, kullanarak yeni bir bölümü bellek ayırma [yeni](../../../csharp/language-reference/operators/new-operator.md) işleci içinde `Change` değişkeni hale getirdiğini `pArray` yeni bir dizi başvuru. Bu nedenle, orijinal diziyi etkilemez sonra değişiklikleri `arr`, içinde oluşturulan `Main`. Bu örnekte, biri içinde iki diziler aslında, oluşturulan `Main` ve bir iç `Change` yöntemi.  
   
 ## <a name="passing-reference-types-by-reference"></a>Başvuruya göre geçirme başvuru türleri  
  Aşağıdaki örnek dışında önceki örnekle aynıdır `ref` anahtar sözcüğü çağrısı ve yöntem üst bilgisi eklenir. Yönteminde gerçekleşecek herhangi bir değişiklik, çağıran program özgün değişkeninde etkiler.  

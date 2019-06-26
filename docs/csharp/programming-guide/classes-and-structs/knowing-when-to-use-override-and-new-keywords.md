@@ -7,15 +7,16 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: d653761236cae580eb78a35f9697764f600ec6ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eae57ae1f285e7f0e44c49e3d54fbd81bb4be591
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583104"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398435"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme (C# Programlama Kılavuzu)
-C# ' ta türetilen bir sınıfta bir yöntem temel sınıfta bir yöntem adıyla aynı olabilir. Yöntemleri kullanarak etkileşimini belirtebilirsiniz [yeni](../../../csharp/language-reference/keywords/new.md) ve [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) anahtar sözcükleri. `override` Değiştiricisi *genişletir* temel sınıf yöntemini ve `new` değiştiricisi *gizler* bu. Fark, bu konudaki örneklerde gösterilmiştir.  
+
+C# ' ta türetilen bir sınıfta bir yöntem temel sınıfta bir yöntem adıyla aynı olabilir. Yöntemleri kullanarak etkileşimini belirtebilirsiniz [yeni](../../../csharp/language-reference/keywords/new-modifier.md) ve [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) anahtar sözcükleri. `override` Değiştiricisi *genişletir* temel sınıf `virtual` yöntemi ve `new` değiştiricisi *gizler* erişilebilir temel sınıf yöntemi. Fark, bu konudaki örneklerde gösterilmiştir.  
   
  Bir konsol uygulamasında aşağıdaki iki sınıf bildirme `BaseClass` ve `DerivedClass`. `DerivedClass` devralınan `BaseClass`.  
   

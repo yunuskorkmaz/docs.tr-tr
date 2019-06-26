@@ -3,12 +3,12 @@ title: ML.NET CLI aracında otomatik train komutu
 description: Genel bakış, örnekler ve ML.NET CLI aracında otomatik train komut başvurusu.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 73bae0165af76226152de322d2951086646a1a1d
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722605"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397670"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>ML.NET CLI 'train otomatik' komutu
 
@@ -44,7 +44,7 @@ Komut isteminde kullanım örneği:
 
 İlk iki varlıklar ile oluşturulan, ML model doğrudan, son kullanıcı uygulamaları (ASP.NET Core web uygulaması, hizmetleri, masaüstü uygulaması, vb.) tahminlerde bulunmak üzere kullanılabilir.
 
-Üçüncü bir varlık, eğitim kod hangi ML.NET API kodu CLI tarafından hangi belirli trainer/algoritması araştırabilir ve parametrelerini hyper CLI ve ML.NET AutoML altyapısı tarafından seçilen oluşturulan modeli eğitmek için kullanılan gösterir.
+Üçüncü bir varlık, eğitim kod hangi ML.NET API kodu CLI tarafından hangi belirli trainer/algoritması araştırabilir ve hiper parametreler, CLI ve ML.NET AutoML altyapısı tarafından seçilmedi. böylece oluşturulan modeli eğitmek için kullanılan gösterir.
 
 ## <a name="the-auto-train-command-uses-the-automl-engine"></a>'Otomatik train' komut AutoML altyapısı kullanır.
 

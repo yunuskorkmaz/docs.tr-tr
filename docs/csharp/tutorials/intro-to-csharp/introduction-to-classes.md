@@ -3,12 +3,12 @@ title: Sınıflar ve nesneler - giriş C# Öğreticisi
 description: İlk C# programınızı oluşturma ve nesne yönelimli kavramları keşfedin
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 6b4c135b7adf96de3a234cde02485a1e84fc9fd3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0932ae8a9d3facd4b2a8469664922f163fe4c679
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706383"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397818"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Nesne yönelimli programlama ile ilgili sınıfları ve nesneleri keşfedin
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-Oluşturucuları kullanarak bir nesne oluşturduğunuzda çağrılır [ `new` ](../../language-reference/keywords/new.md). Satırı değiştirin `Console.WriteLine("Hello World!");` içinde ***program.cs*** aşağıdaki satırı ile (Değiştir `<name>` adınızla):
+Oluşturucuları kullanarak bir nesne oluşturduğunuzda çağrılır [ `new` ](../../language-reference/operators/new-operator.md). Satırı değiştirin `Console.WriteLine("Hello World!");` içinde ***program.cs*** aşağıdaki satırı ile (Değiştir `<name>` adınızla):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);

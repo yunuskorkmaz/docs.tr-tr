@@ -7,17 +7,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 4cea68e76c17e5393ab7213f457c0875cdc5b53b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad19099242a3bedbb7283219dfd7733db13231ec
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651890"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398585"
 ---
 # <a name="classes-c-programming-guide"></a>Sınıflar (C# Programlama Kılavuzu)
 
 ## <a name="reference-types"></a>Başvuru türleri  
-Olarak tanımlanan bir tür bir [sınıfı](../../../csharp/language-reference/keywords/class.md) olduğu bir *başvuru türüne*. Bir değişken bildirdiğinizde başvuru türü, çalışma zamanında değişken değeri içeren [null](../../../csharp/language-reference/keywords/null.md) açıkça kullanarak sınıfının bir örneğini oluşturana kadar [yeni](../../../csharp/language-reference/keywords/new.md) işleci veya bir nesne atama bir başka bir yerde, aşağıdaki örnekte gösterildiği gibi oluşturulmuş olabilir uyumlu türü:
+Olarak tanımlanan bir tür bir [sınıfı](../../../csharp/language-reference/keywords/class.md) olduğu bir *başvuru türüne*. Bir değişken bildirdiğinizde başvuru türü, çalışma zamanında değişken değeri içeren [null](../../../csharp/language-reference/keywords/null.md) açıkça kullanarak sınıfının bir örneğini oluşturana kadar [yeni](../../../csharp/language-reference/operators/new-operator.md) işleci veya bir nesne atama bir başka bir yerde, aşağıdaki örnekte gösterildiği gibi oluşturulmuş olabilir uyumlu türü:
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -47,7 +47,7 @@ Nesne oluşturulduğunda, yeterli bellek, belirli bir nesnesi için yönetilen y
 
 Bazen kavramlarının birbirinin yerine kullanıldığı olsa da, bir sınıf ve nesne farklı noktalardır. Bir nesne türüyle bir sınıf tanımlar, ancak bir nesne değil. Bir nesne sınıfına göre somut bir varlık ve bazen bir sınıfın bir örneği da adlandırılır.  
   
- Nesneleri kullanarak oluşturulabilir [yeni](../../language-reference/keywords/new.md) anahtar sözcüğü bir nesne, temel sınıfın adını ardından şöyle:  
+ Nesneleri kullanarak oluşturulabilir [yeni](../../language-reference/operators/new-operator.md) anahtar sözcüğü bir nesne, temel sınıfın adını ardından şöyle:  
 
  ```csharp
  Customer object1 = new Customer();

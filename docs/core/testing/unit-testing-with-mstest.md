@@ -5,12 +5,12 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: 4f6e1bb9a03a8f98052ec7bc911f22c288df6fe0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c396be926d743b672cb4611dc5569ecb48b09fec
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665494"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397480"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Birim testi MSTest ve .NET Core ile C#
 
@@ -58,7 +58,7 @@ Ardından, oluşturma *PrimeService.Tests* dizin. Ana hat aşağıdaki dizin yap
     /PrimeService.Tests
 ```
 
-Olun *PrimeService.Tests* dizini geçerli dizin ve kullanarak yeni bir proje oluşturma [ `dotnet new mstest` ](../tools/dotnet-new.md). Dotnet yeni komut MStest test kitaplık olarak kullanan bir test projesi oluşturur. Test Çalıştırıcısı'nda oluşturulan şablon yapılandırır *PrimeServiceTests.csproj* dosyası:
+Olun *PrimeService.Tests* dizini geçerli dizin ve kullanarak yeni bir proje oluşturma [ `dotnet new mstest` ](../tools/dotnet-new.md). Dotnet yeni komut MSTest test kitaplık olarak kullanan bir test projesi oluşturur. Test Çalıştırıcısı'nda oluşturulan şablon yapılandırır *PrimeServiceTests.csproj* dosyası:
 
 ```xml
 <ItemGroup>

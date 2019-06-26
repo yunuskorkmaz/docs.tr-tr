@@ -1,20 +1,20 @@
 ---
-title: Eğitme ve değerlendirme çapraz doğrulama kullanarak makine öğrenme modeli
-description: Eğitme ve değerlendirme çapraz doğrulama kullanarak makine öğrenme modeli hakkında bilgi edinin
-ms.date: 05/03/2019
+title: Çapraz doğrulama kullanarak makine öğrenme modeli eğitme
+description: Çapraz doğrulama ML.NET daha güçlü makine öğrenimi modelleri oluşturmak için kullanmayı öğrenin. Çapraz doğrulama, eğitim ve veriler çeşitli bölümlere ayırır ve bu bölümler birden çok algoritmalarına eğitir model değerlendirme teknik ' dir.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc,how-to
-ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.custom: mvc,how-to,title-hack-0625
+ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557832"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397654"
 ---
-# <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>Eğitme ve değerlendirme çapraz doğrulama kullanarak makine öğrenme modeli
+# <a name="train-a-machine-learning-model-using-cross-validation"></a>Çapraz doğrulama kullanarak makine öğrenme modeli eğitme
 
-Çapraz doğrulama ML.NET daha güçlü makine öğrenimi modelleri oluşturmak için kullanmayı öğrenin. 
+Çapraz doğrulama ML.NET daha güçlü makine öğrenimi modelleri eğitmek için kullanmayı öğrenin. 
 
 Çapraz doğrulama, eğitim ve veriler çeşitli bölümlere ayırır ve bu bölümler birden çok algoritmalarına eğitir model değerlendirme teknik ' dir. Bu teknik, eğitim işlem verileri tutarak modelinin sağlamlık artırır. Görünmeyen gözlemler performans iyileştirme yanı sıra veri kısıtlı ortamlarında, daha küçük bir veri kümesiyle eğitim modelleri için etkili bir aracı olabilir.
 
@@ -93,7 +93,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 Sonuç depolanan `cvResults` koleksiyonudur [ `CrossValidationResult` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) nesneleri. Bu nesne eğitilen model yanı sıra erişilebilir her iki formu olan ölçümler içerir [ `Model` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) ve [ `Metrics` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) özellikleri sırasıyla. Bu örnekte `Model` özelliği türüdür [ `ITransformer` ](xref:Microsoft.ML.ITransformer) ve `Metrics` özelliği türüdür [ `RegressionMetrics` ](xref:Microsoft.ML.Data.RegressionMetrics). 
 
-## <a name="extract-metrics"></a>Ölçümleri ayıklayın
+## <a name="evaluate-the-model"></a>Modeli değerlendirme
 
 Ölçümleri farklı eğitilen modelleri için üzerinden erişilebilir `Metrics` kişinin özelliği [ `CrossValidationResult` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) nesne. Bu durumda, [R karesi alınmış ölçüm](https://en.wikipedia.org/wiki/Coefficient_of_determination) erişilen ve değişkeninde depolanan `rSquared`. 
 
@@ -103,11 +103,7 @@ IEnumerable<double> rSquared =
         .Select(fold => fold.Metrics.RSquared);
 ```
 
-İçeriğini incelemek, `rSquared` değişken çıktısı beş değerleri 0-1'den daha yakın yerlerde 1 arasında en iyi anlamına gelir olmalıdır.
-
-## <a name="select-the-best-performing-model"></a>En iyi performansa sahip model seçin
-
-R kare seçme gibi ölçümleri kötü gerçekleştirmek için en iyi modellerinden kullanma. Ardından, tahminlerde veya ile ek işlemleri gerçekleştirmek için en iyi modeli seçin.
+İçeriğini incelemek, `rSquared` değişken çıktısı beş değerleri 0-1'den daha yakın yerlerde 1 arasında en iyi anlamına gelir olmalıdır. R kare seçme gibi ölçümleri kötü gerçekleştirmek için en iyi modellerinden kullanma. Ardından, tahminlerde veya ile ek işlemleri gerçekleştirmek için en iyi modeli seçin.
 
 ```csharp
 // Select all models

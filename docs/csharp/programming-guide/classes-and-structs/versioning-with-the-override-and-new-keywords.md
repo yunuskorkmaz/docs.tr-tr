@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: ec6040081d44a389bd42bb50cdd81ac0634abf91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b5097df8ee559f11bc29c12570e938965e6a9a5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583121"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398081"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Geçersiz Kılma ve Yeni Anahtar Sözcüklerle Sürüm Oluşturma (C# Programlama Kılavuzu)
 C# dili tasarlanmıştır böylece sürüm arasında [temel](../../../csharp/language-reference/keywords/base.md) ve türetilmiş sınıfları farklı kitaplıklarında evrim geçiren ve geriye dönük uyumluluk sağlamak. Örneğin, yani yeni üyesi temel sunulmasıyla [sınıfı](../../../csharp/language-reference/keywords/class.md) türetilmiş bir sınıf üyesi olarak aynı ada sahip tamamen C# tarafından desteklenir ve beklenmeyen davranışlara yol değil. Ayrıca, bir sınıf devralınan bir yöntemi geçersiz kılmak için bir yöntem amaçlanmamıştır veya yöntemi devralınan bir yöntemi benzer ada gizler yeni bir yöntem olup olmadığını açıkça belirtmelidir anlamına gelir.  
@@ -20,7 +20,7 @@ C# dili tasarlanmıştır böylece sürüm arasında [temel](../../../csharp/lan
   
 - Temel sınıf yöntemini tanımlanmalıdır [sanal](../../../csharp/language-reference/keywords/virtual.md).  
   
-- Yöntem türetilmiş sınıftaki öncesinde, [yeni](../../../csharp/language-reference/keywords/new.md) veya [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) anahtar sözcükler, derleyici bir uyarı verir ve yöntem davranacağını gibi `new` anahtar sözcüğü.  
+- Yöntem türetilmiş sınıftaki öncesinde, [yeni](../../../csharp/language-reference/keywords/new-modifier.md) veya [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) anahtar sözcükler, derleyici bir uyarı verir ve yöntem davranacağını gibi `new` anahtar sözcüğü.  
   
 - Türetilmiş sınıftaki yöntemi ile öncesinde, `new` anahtar sözcüğü, yöntem temel sınıfta yöntemin bağımsız olan olarak tanımlanır.  
   

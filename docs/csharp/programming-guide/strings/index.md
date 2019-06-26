@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e193d6a51c3d4f1d81e3b74b1474d0e7cdcfca53
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61678510"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398119"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Türünde bir nesne bir dizedir <xref:System.String> metin değeri olan. Metin sıralı salt okunur bir koleksiyonu dahili olarak depolanan <xref:System.Char> nesneleri. Bir C# dizenin sonuna kadar hiçbir null Sonlandırıcı karakter yoktur; Bu nedenle bir C# dize herhangi bir sayıda gömülü null karakterleri ('\0') içerebilir. <xref:System.String.Length%2A> Bir dize özelliğini sayısını temsil eden `Char` içerdiği, Unicode karakter sayısını nesneleri. Bir dizedeki tek Unicode kod noktaları erişmek için <xref:System.Globalization.StringInfo> nesne.  
@@ -24,7 +24,7 @@ Türünde bir nesne bir dizedir <xref:System.String> metin değeri olan. Metin s
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- Seçeneğini kullanmaz Not [yeni](../../../csharp/language-reference/keywords/new-operator.md) işleci, bir dizi karakter dizesiyle başlatma dışında bir dize nesnesi oluşturmak için.  
+ Seçeneğini kullanmaz Not [yeni](../../../csharp/language-reference/operators/new-operator.md) işleci, bir dizi karakter dizesiyle başlatma dışında bir dize nesnesi oluşturmak için.  
   
  Bir dizeyle başlatmak <xref:System.String.Empty> yeni bir sabit değer <xref:System.String> nesnesi, dize uzunluğu sıfır. Dize değişmez değer gösterimiyse sıfır uzunlukta bir dize, "". Başlatma dizeleri ile tarafından <xref:System.String.Empty> değeri yerine [null](../../../csharp/language-reference/keywords/null.md), olasılığını azaltmak bir <xref:System.NullReferenceException> gerçekleşiyor. Statik <xref:System.String.IsNullOrEmpty%28System.String%29> yeniden erişmeye çalışmadan önce bir dize değerini doğrulamak için yöntem.  
   

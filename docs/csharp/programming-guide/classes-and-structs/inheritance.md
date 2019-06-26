@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 9ad7253fb9efc891e1f0fdea118e1fe7bde6a857
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f49118ebff8dcdfee45ce30de9b35437141e2bb
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646322"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398466"
 ---
 # <a name="inheritance-c-programming-guide"></a>Devralma (C# Programlama Kılavuzu)
 
@@ -40,7 +40,7 @@ Devralma, kapsülleme ve çok biçimlilik, birlikte üç birincil nesne yönelim
  Ne zaman bir taban sınıfı yöntemi olarak bildirir [sanal](../../../csharp/language-reference/keywords/virtual.md), türetilmiş sınıf [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) kendi uygulaması ile yöntemi. Bir temel sınıf üyesi olarak bildirirse [soyut](../../../csharp/language-reference/keywords/abstract.md), doğrudan bu sınıftan devralınan tüm soyut olmayan sınıf içinde yöntemi geçersiz kılınmalıdır. Türetilmiş bir sınıf kendisi ise soyut, soyut üye uygulamadan devralır. Soyut ve sanal çok biçimlilik, temel nesne yönelimli programlama, ikinci birincil özelliği olduğu üyeleridir. Daha fazla bilgi için [çok biçimlilik](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
 ## <a name="abstract-base-classes"></a>Soyut taban sınıfları  
- Bir sınıf olarak bildirebilirsiniz [soyut](../../../csharp/language-reference/keywords/abstract.md) kullanarak doğrudan engellemek istiyorsanız [yeni](../../../csharp/language-reference/keywords/new.md) anahtar sözcüğü. Bunu yaparsanız, yalnızca yeni bir sınıf buradan cdocument'tan türetilirse sınıfı kullanılabilir. Bir Özet sınıf, bir veya daha fazla yöntem imzaları, kendilerini soyut olarak bildirilir. Bu imza parametreleri belirtin ve dönüş değeri ancak (yöntem gövdesi) uygulaması bulunmuyor. Bir soyut sınıfı soyut üye içermesi gerekmez; Ancak, bir sınıf, soyut bir üye içeriyorsa, sınıfı soyut olarak bildirilmelidir. Soyut olmayan türetilmiş sınıfları tüm soyut yöntemler soyut bir temel sınıftan uygulamasını kendilerini sağlamanız gerekir. Daha fazla bilgi için [soyut ve korumalı sınıflar ve sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Bir sınıf olarak bildirebilirsiniz [soyut](../../../csharp/language-reference/keywords/abstract.md) kullanarak doğrudan engellemek istiyorsanız [yeni](../../../csharp/language-reference/operators/new-operator.md) işleci. Bunu yaparsanız, yalnızca yeni bir sınıf buradan cdocument'tan türetilirse sınıfı kullanılabilir. Bir Özet sınıf, bir veya daha fazla yöntem imzaları, kendilerini soyut olarak bildirilir. Bu imza parametreleri belirtin ve dönüş değeri ancak (yöntem gövdesi) uygulaması bulunmuyor. Bir soyut sınıfı soyut üye içermesi gerekmez; Ancak, bir sınıf, soyut bir üye içeriyorsa, sınıfı soyut olarak bildirilmelidir. Soyut olmayan türetilmiş sınıfları tüm soyut yöntemler soyut bir temel sınıftan uygulamasını kendilerini sağlamanız gerekir. Daha fazla bilgi için [soyut ve korumalı sınıflar ve sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
 ## <a name="interfaces"></a>Arabirimler  
  Bir *arabirimi* oluşur yalnızca soyut üye bir soyut temel sınıf için biraz benzer bir başvuru türüdür. Bir sınıf bir arabirimi uygulayan, arabirimin tüm üyeleri için bir uygulama sağlamalıdır. Bu yalnızca bir tek doğrudan temel sınıftan türetilen olsa bile bir sınıf birden fazla arabirim uygulayabilir.  
@@ -51,7 +51,7 @@ Devralma, kapsülleme ve çok biçimlilik, birlikte üç birincil nesne yönelim
  Bir sınıfı diğer sınıflar bu veya herhangi bir grubun üyeleri kendisini veya üye olarak bildirerek devralmasını engelleyebilirsiniz [korumalı](../../../csharp/language-reference/keywords/sealed.md). Daha fazla bilgi için [soyut ve korumalı sınıflar ve sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
 ## <a name="derived-class-hiding-of-base-class-members"></a>Temel sınıf üyelerinin türetilmiş sınıf gizleme  
- Türetilmiş bir sınıf, taban sınıfı üyeleri aynı ada ve imzaya sahip üyeler bildirerek gizleyebilirsiniz. [Yeni](../../../csharp/language-reference/keywords/new.md) değiştiricisi üye, temel üyeyi geçersiz kılma olacak şekilde tasarlanmamıştır açıkça belirtmek için kullanılabilir. Kullanımını [yeni](../../../csharp/language-reference/keywords/new.md) gerekli değildir, ancak bir derleyici uyarısı oluşturulur [yeni](../../../csharp/language-reference/keywords/new.md) kullanılmaz. Daha fazla bilgi için [geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) ve [bilerek, kullanım geçersiz kılma ve yeni anahtar sözcüklerle](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
+ Türetilmiş bir sınıf, taban sınıfı üyeleri aynı ada ve imzaya sahip üyeler bildirerek gizleyebilirsiniz. [Yeni](../../../csharp/language-reference/keywords/new-modifier.md) değiştiricisi üye, temel üyeyi geçersiz kılma olacak şekilde tasarlanmamıştır açıkça belirtmek için kullanılabilir. Kullanımını [yeni](../../../csharp/language-reference/keywords/new-modifier.md) gerekli değildir, ancak bir derleyici uyarısı oluşturulur [yeni](../../../csharp/language-reference/keywords/new-modifier.md) kullanılmaz. Daha fazla bilgi için [geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) ve [bilerek, kullanım geçersiz kılma ve yeni anahtar sözcüklerle](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 719e4463806c9c7e8b5407f2494c3b548ffa43e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d221cb9071a2c58f9d7068d5a43dd3a750ba716b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61684035"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398567"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Tek Boyutlu Diziler (C# Programlama Kılavuzu)
 
@@ -19,7 +19,7 @@ Aşağıdaki örnekte gösterildiği gibi beş tamsayı tek boyutlu bir dizi bil
   
  [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
   
- Bu dizinin öğeleri içeren `array[0]` için `array[4]`. [Yeni](../../../csharp/language-reference/keywords/new.md) işleci dizi oluşturmak ve varsayılan değerlerine dizi öğelerini başlatmak için kullanılır. Bu örnekte, tüm dizi öğeleri sıfır olarak başlatılır.  
+ Bu dizinin öğeleri içeren `array[0]` için `array[4]`. [Yeni](../../../csharp/language-reference/operators/new-operator.md) işleci dizi oluşturmak ve varsayılan değerlerine dizi öğelerini başlatmak için kullanılır. Bu örnekte, tüm dizi öğeleri sıfır olarak başlatılır.  
   
  Dize öğesi depolayan bir dizi aynı şekilde bildirilebilir. Örneğin:  
   

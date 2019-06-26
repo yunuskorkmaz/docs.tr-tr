@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 93b414eea5849ed020b521fcd5e5d5f5d194c35f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6c37e494431eae9d17f442b2c32dea5f0b4bcf2b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589802"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397795"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>İlişkisel Veriler ve ADO.NET ile XML Tümleştirmesi
 **XmlDataDocument** , türetilmiş bir sınıfı **XmlDocument**ve XML verileri içerir. Avantajı **XmlDataDocument** ilişkisel ve hiyerarşik veriler arasında bir köprü sağlar. Bu bir **XmlDocument** için bağlanabilir bir **veri kümesi** ve hem sınıflarını iki sınıflarında bulunan verilere yapılan değişiklikleri eşitleyebilirsiniz. Bir **XmlDocument** bağlanan bir **veri kümesi** ilişkisel veriler ile tümleştirmek XML verir ve verilerinizin ya da XML olarak veya bir biçimde temsil gerekmez. Her ikisini de yapabilirsiniz ve tek bir veri temsilini için kısıtlı olabilir değil.  
@@ -45,7 +45,7 @@ ms.locfileid: "64589802"
   
  Yükleme ve XML doğrudan tanesi yazma bir **veri kümesi** ihtiyaçlarınızı adresleri bkz [XML'den DataSet yükleme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) ve [XML verileri olarak DataSet yazma](../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
   
- Yükleniyor, **veri kümesi** gelen bir **XmlDataDocument** ihtiyaçlarınızı adresleri bkz [bir XML belgesi bir Datasetwith eşitleme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
+ Yükleniyor, **veri kümesi** gelen bir **XmlDataDocument** ihtiyaçlarınızı adresleri bkz [bir XML belgesi bir veri kümesi eşitleme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

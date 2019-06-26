@@ -1,20 +1,20 @@
 ---
 title: Modeli eğitme ve değerlendirme
-description: Makine öğrenimi modellerini Derleme ve öğrenilen parametreleri Ayıkla ML.NET performansı ölçmek öğrenin. Bu örnek bir regresyon modeli eğitir olsa da, diğer algoritmalar çoğunu kavramları uygulanabilir.
-ms.date: 06/11/2019
+description: Makine öğrenimi modellerini oluşturun, Ölçümler ve Ölçüm performans ML.NET ile toplama öğrenin. Makine öğrenme modeli yeni verileri kullanarak tahmin yapmayı sağlayan eğitim verilerini içinde desen tanımlar.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to, title-hack-0612
-ms.openlocfilehash: d93353a3503ba67bde5fb61dc88f45d26e2f4306
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307438"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397636"
 ---
 # <a name="train-and-evaluate-a-model"></a>Modeli eğitme ve değerlendirme
 
-Makine öğrenimi modellerini Derleme ve öğrenilen parametreleri Ayıkla ML.NET performansı ölçmek öğrenin. Bu örnek bir regresyon modeli eğitir olsa da, diğer algoritmalar çoğunu kavramları uygulanabilir.
+Makine öğrenimi modellerini oluşturun, Ölçümler ve Ölçüm performans ML.NET ile toplama öğrenin. Bu örnek bir regresyon modeli eğitir olsa da, diğer algoritmalar çoğunu kavramları uygulanabilir.
 
 ## <a name="split-data-for-training-and-testing"></a>Verileri eğitim ve test için bölme
 

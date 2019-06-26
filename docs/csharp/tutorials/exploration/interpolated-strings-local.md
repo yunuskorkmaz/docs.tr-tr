@@ -4,12 +4,12 @@ description: Bu öğreticide nasıl kullanılacağını gösterir C# biçimlendi
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: c1e6fed2293b7447384a657e720fb847f2fa041f
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: a39ed5b320f16004f4ddcb35a7fcee5869b97137
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195890"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397814"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Dize ilişkilendirme, biçimlendirilmiş dizeler oluşturmak için kullanın
 
@@ -54,7 +54,7 @@ Aşağıdaki örnekte, ilk tanımlarız bir [sınıfı](../../programming-guide/
 public Vegetable(string name) => Name = name;
 ```
 
-Biz bir örneğini oluşturup `Vegetable` adlı sınıfı `item` kullanarak [ `new` anahtar sözcüğü](../../language-reference/keywords/new-operator.md) oluşturucusu için bir ad sağlayarak `Vegetable`:
+Biz bir örneğini oluşturup `Vegetable` adlı sınıfı `item` kullanarak [ `new` işleci](../../language-reference/operators/new-operator.md) oluşturucusu için bir ad sağlayarak `Vegetable`:
 
 ```csharp
 var item = new Vegetable("eggplant");

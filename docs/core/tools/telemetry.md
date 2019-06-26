@@ -4,12 +4,12 @@ description: Analiz, hangi verileri toplanır ve nasıl devre dışı bırakmak 
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 40d9f3f698f513306e087753b4c33d09e8df0046
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377498"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397750"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET core SDK'sı telemetri
 
@@ -102,7 +102,7 @@ Ek veri kümeleri, standart bir URL biçimi kullanılarak gönderilir. Değişti
 
 ## <a name="license"></a>Lisans
 
-Microsoft Dağıtım .NET Core ile lisanslanan [Microsoft Yazılımı Lisans koşulları: Mirosoft .NET kitaplığı](https://aka.ms/dotnet-core-eula). Veri toplama ve işleme hakkında daha fazla bilgi için "Veri" başlıklı bölüme bakın.
+Microsoft Dağıtım .NET Core ile lisanslanan [Microsoft Yazılımı Lisans koşulları: Microsoft .NET kitaplığı](https://aka.ms/dotnet-core-eula). Veri toplama ve işleme hakkında daha fazla bilgi için "Veri" başlıklı bölüme bakın.
 
 [.NET NuGet paketleri](https://www.nuget.org/profiles/dotnetframework) aynı lisans kullanın, ancak telemetri etkinleştirme (bkz [kapsam](#scope)).
 

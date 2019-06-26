@@ -6,17 +6,18 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 165793155aabac23245b352959be3188b0a5a6e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d8bdc5ceef5d82e4bc7e13ee932985cae6c2c10
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651850"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398552"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Anonim Türler (C# Programlama Kılavuzu)
+
 Anonim türleri açıkça bir tür ilk tanımlamak zorunda kalmadan tek bir nesnede salt okunur özellikler kümesi kapsüllemek için kullanışlı bir yol sağlar. Tür adı derleyici tarafından oluşturulan ve kaynak kod düzeyinde kullanılabilir değildir. Her bir özellik türü, derleyici tarafından algılanır.  
   
- Kullanarak anonim tür oluşturma [yeni](../../../csharp/language-reference/keywords/new.md) işleci birlikte bir nesne Başlatıcı. Nesne başlatıcıları hakkında daha fazla bilgi için bkz: [nesne ve koleksiyon başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ Kullanarak anonim tür oluşturma [yeni](../../../csharp/language-reference/operators/new-operator.md) işleci birlikte bir nesne Başlatıcı. Nesne başlatıcıları hakkında daha fazla bilgi için bkz: [nesne ve koleksiyon başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
  Aşağıdaki örnekte adlı iki özellik ile başlatılan bir anonim tür `Amount` ve `Message`.  
   
