@@ -2,12 +2,12 @@
 title: Windows Hizmet Uygulamasında Barındırma
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: b5167e61bd825ce56905149237dae05ebb44b134
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc95634745aa0c0246cf139d19e0777fde7e1aba
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613301"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402165"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows Hizmet Uygulamasında Barındırma
 (Eski adıyla Windows NT Hizmetleri da bilinir) Windows hizmetleri sağlayan bir işlem modeli özellikle uzun süre çalışan bir yürütülebilir dosya bulunmalıdır ve herhangi bir biçimde kullanıcı arabirimi gösterme uygulamalar için uygundur. Hizmet uygulaması başlatmaya olanak tanıyan hizmet denetimi yöneticisi tarafından (SCM), yönetilen bir Windows işlem ömrü durdurun ve Windows hizmeti uygulamalarını duraklatma. "Always on" uygulamalar için uygun bir barındırma ortamı yapmadan bilgisayar başlatıldığında otomatik olarak başlayacak şekilde bir Windows hizmeti işlemi yapılandırabilirsiniz. Windows hizmeti uygulamaları hakkında daha fazla bilgi için bkz: [Windows hizmet uygulamaları](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -20,7 +20,7 @@ ms.locfileid: "64613301"
   
 - Uygulamanızı barındıran işlem başlatıldığında çalışır durumda kalması gerekir. Başladıktan sonra bir Windows hizmeti işlemi sürece çalışmaya devam açıkça kapatma hizmeti Denetim Yöneticisi'ni kullanarak yöneticiler tarafından. IIS ya da WAS içinde barındırılan uygulamaları kullanmaya ve sistem kaynakları en iyi kullanılmasını sağlamak için dinamik olarak durduruldu. Kendi barındırma işlemi ömrü boyunca açık denetim gerektiren uygulamalar, IIS veya WAS yerine Windows Hizmetleri kullanmanız gerekir.  
   
-- WCF hizmetinizi, Windows Server 2003'te çalıştırmak ve dışındaki HTTP taşımaları kullanmanız gerekir. Windows Server 2003'te [!INCLUDE[iis601](../../../../includes/iis601-md.md)] barındırma ortamı yalnızca HTTP iletişimi için Yasak. Windows hizmet uygulamaları, bu kısıtlama tabi olmayan ve net.tcp net.pipe ve net.msmq dahil olmak üzere tüm aktarım WCF destekler kullanabilirsiniz.  
+- WCF hizmetinizi, Windows Server 2003'te çalıştırmak ve dışındaki HTTP taşımaları kullanmanız gerekir. Windows Server 2003'te, IIS 6.0 barındırma ortamı, HTTP iletişimi için sınırlıdır. Windows hizmet uygulamaları, bu kısıtlama tabi olmayan ve net.tcp net.pipe ve net.msmq dahil olmak üzere tüm aktarım WCF destekler kullanabilirsiniz.  
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>İçinde bir Windows hizmeti uygulaması WCF barındırmak için  
   

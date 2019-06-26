@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 50243f148f37f5f33f0c69ddd896549e7aea9462
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 03d6ed19ef01be7712ff2fdde0c1be2a6673e64f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025113"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401439"
 ---
 # <a name="pointer-related-operators-c-reference"></a>İşaretçi ilgili işleçleri (C# Başvurusu)
 
@@ -42,7 +42,7 @@ ms.locfileid: "67025113"
 > [!NOTE]
 > İşaretçiler içeren herhangi bir işlem gerektiren bir [güvenli](../keywords/unsafe.md) bağlamı. Güvenli olmayan bloklar içeren kod ile derlenmelidir [ `-unsafe` ](../compiler-options/unsafe-compiler-option.md) derleyici seçeneği.
 
-## <a name="address-of-operator-amp"></a>Address-of işleci &amp;
+## <a name="address-of-operator-"></a> Address-of işleci &amp;
 
 Birli `&` işleci, işlenenin adresini verir:
 

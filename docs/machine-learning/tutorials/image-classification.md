@@ -4,16 +4,16 @@ description: Aktarımlı öğrenme ve ML.NET ile bir görüntü sınıflandırma
 ms.date: 06/12/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 2ad9e71f572cb694897fd12ecbb15da069afe338
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 62a926795ce34a8c1639f1d42ebbb34b53dc67ad
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026087"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401736"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Öğretici: TensorFlow görüntü sınıflandırıcı ML.NET aktarımlı öğrenme ile yeniden eğitme
 
-Aktarımlı öğrenme ve ML.NET ile bir görüntü classificaton TensorFlow modeli yeniden eğitme hakkında bilgi edinin. Özgün modeli ayrı görüntüleri sınıflandırmak için eğitim. Yeni modeli yeniden eğitme sonra görüntüleri kategoriden düzenler. 
+Aktarımlı öğrenme ve ML.NET ile bir görüntü sınıflandırma TensorFlow modeli yeniden eğitme hakkında bilgi edinin. Özgün modeli ayrı görüntüleri sınıflandırmak için eğitim. Yeni modeli yeniden eğitme sonra görüntüleri kategoriden düzenler. 
 
 Eğitim bir [görüntü sınıflandırması](https://en.wikipedia.org/wiki/Outline_of_object_recognition) sıfırdan modeli, Parametreler, bir sürü etiketli eğitim verilerini ve işlem kaynakları (GPU saat yüzlerce) çok büyük miktarda milyonlarca ayarlama gerektirir. Aktarımlı öğrenme kadar etkili olarak sıfırdan özel bir model eğitim olsa da görüntüleri etiketlenmiş resimlerinizi milyonlarca karşılaştırması binlerce birlikte çalışarak bu işlem için kısayol sağlar ve oldukça hızlı bir şekilde özelleştirilmiş model derleme (bir makinede bir saat içinde bir GPU).
 

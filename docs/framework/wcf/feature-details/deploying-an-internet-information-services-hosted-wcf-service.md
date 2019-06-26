@@ -2,12 +2,12 @@
 title: Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025740"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402295"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
 
@@ -43,7 +43,7 @@ Makinede IIS zaten varsa, .NET Framework yükleme işlemi ile IIS WCF otomatik o
 
 IIS barındırılan WCF hizmetlerini bir IIS uygulama içinde bulunmalıdır. WCF hizmetlerini barındırmak için yeni bir IIS uygulama amaçları oluşturabilirsiniz. Alternatif olarak, bir WCF hizmetini ASP.NET 2.0 içerik (örneğin, .aspx sayfaları ve ASP.NET Web Hizmetleri [ASMX]) barındırma zaten mevcut bir uygulamasına dağıtabilirsiniz. Bu seçenekler hakkında daha fazla bilgi için bkz: "barındırma WCF yan yana ASP.NET ile" ve "ASP.NET uyumluluk modunda barındırma WCF hizmetleri" bölümleri içinde [WCF hizmetleri ve ASP.NET](wcf-services-and-aspnet.md).
 
-Unutmayın [!INCLUDE[iis601](../../../../includes/iis601-md.md)] ve sonraki sürümleri düzenli olarak yalıtılmış bir nesne yönelimli programlama uygulama yeniden başlatın. Varsayılan değer 1740 dakikadır. Desteklenen en yüksek değer 71,582 dakikadır. Bu yeniden başlatma devre dışı bırakılabilir. Bu özellik hakkında daha fazla bilgi için bkz. [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
+IIS 6.0 ve üzeri sürümleri düzenli olarak yalıtılmış bir nesne yönelimli programlama uygulama yeniden olduğunu unutmayın. Varsayılan değer 1740 dakikadır. Desteklenen en yüksek değer 71,582 dakikadır. Bu yeniden başlatma devre dışı bırakılabilir. Bu özellik hakkında daha fazla bilgi için bkz. [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>WCF hizmeti için bir .svc dosyası oluşturma
 
@@ -103,7 +103,7 @@ Ayrıca, IIS tarafından barındırılan hizmet uç noktaları için her zaman g
 
 ### <a name="available-transports"></a>Kullanılabilir taşımalar
 
-IIS 5.1 barındırılan WCF hizmetleri ve [!INCLUDE[iis601](../../../../includes/iis601-md.md)] HTTP tabanlı iletişimi kullanarak kısıtlanır. Bu IIS platformlarda bir HTTP olmayan bağlama bir barındırılan hizmetin yapılandırma hatayla hizmeti etkinleştirme sırasında sonuçlanır. İçin [!INCLUDE[iisver](../../../../includes/iisver-md.md)], desteklenen aktarmalar HTTP, Net.TCP, Net.Pipe, Net.MSMQ ve msmq.formatname için geriye doğru mevcut MSMQ uygulamalarla uyumluluk içerir.
+Barındırılan IIS 5.1 WCF hizmetleri ve HTTP tabanlı iletişimi kullanarak IIS 6.0 kısıtlanır. Bu IIS platformlarda bir HTTP olmayan bağlama bir barındırılan hizmetin yapılandırma hatayla hizmeti etkinleştirme sırasında sonuçlanır. İçin [!INCLUDE[iisver](../../../../includes/iisver-md.md)], desteklenen aktarmalar HTTP, Net.TCP, Net.Pipe, Net.MSMQ ve msmq.formatname için geriye doğru mevcut MSMQ uygulamalarla uyumluluk içerir.
 
 ### <a name="http-transport-security"></a>HTTP Taşıma Güvenliği
 

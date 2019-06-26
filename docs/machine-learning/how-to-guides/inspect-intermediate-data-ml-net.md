@@ -1,22 +1,22 @@
 ---
-title: ML.NET işleme sırasında ara veri değerlerini İnceleme
-description: Ardışık Düzen işleme öğrenme ML.NET makine sırasında gerçek ara veri değerlerini incelemek hakkında bilgi edinin
-ms.date: 04/29/2019
+title: ML.NET işleme sırasında Ara verileri İnceleme
+description: Yükleniyor, işleme işlem hattı öğrenme ML.NET makine sırasında ara veri İnceleme hakkında bilgi edinmek ve model eğitiminin ML.NET adımları.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: 06c4a473841db62a10dfc24025f842df7ae2c583
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: d6ddeb523fb229eb0ebc9c2f22809312060e4266
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063511"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402383"
 ---
-# <a name="inspect-intermediate-data-values-during-processing"></a>İşleme sırasında ara veri değerlerini İnceleme
+# <a name="inspect-intermediate-data-during-processing"></a>İşleme sırasında Ara verileri İnceleme
 
-Yükleniyor, işleme ve ML.NET eğitim adımları sırasında değerlerini İnceleme öğrenin.
+Yükleme, işleme ve modeli eğitimi ML.NET adımlarda sırasında Ara verileri İnceleme öğrenin. Makine öğrenimi işlem hattı her aşamasında çıktısını Ara verilerdir.
 
-İster temsil edilen bir veri uygulamasına yüklendiği aşağıda bir [ `IDataView` ](xref:Microsoft.ML.IDataView) ML.NET çeşitli şekillerde inceledi.
+Temsil edilen bir ara veriler ister içine yüklendiği aşağıda bir [ `IDataView` ](xref:Microsoft.ML.IDataView) ML.NET çeşitli şekillerde inceledi.
  
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -62,9 +62,9 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>IDataView IEnumerable öğesine dönüştürme
 
-Değerlerini incelemek için hızlı şekilde bir [ `IDataView` ](xref:Microsoft.ML.IDataView) öğesine dönüştürmek için olan bir [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601). Dönüştürülecek bir [ `IDataView` ](xref:Microsoft.ML.IDataView) için [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601) kullanın [ `CreateEnumerable` ](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) yöntemi. 
+Hızlı bir şekilde incelemek için bir [ `IDataView` ](xref:Microsoft.ML.IDataView) öğesine dönüştürmek için olan bir [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601). Dönüştürülecek bir [ `IDataView` ](xref:Microsoft.ML.IDataView) için [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601) kullanın [ `CreateEnumerable` ](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) yöntemi. 
 
-Performansı iyileştirmek için değerini ayarlamak `reuseRowObject` için `true`. Bunun yapılması her satır için yeni bir nesne içinde veri kümesi oluşturma yerine değerlendiriliyor gibi gevşek aynı nesneyi geçerli satırın verilerle dolduracaksınız.
+Performansı iyileştirmek için ayarlanmış `reuseRowObject` için `true`. Bunun yapılması her satır için yeni bir nesne içinde veri kümesi oluşturma yerine değerlendiriliyor gibi gevşek aynı nesneyi geçerli satırın verilerle dolduracaksınız.
 
 ```csharp
 // Create an IEnumerable of HousingData objects from IDataView
@@ -78,6 +78,8 @@ foreach (HousingData row in housingDataEnumerable)
     Console.WriteLine(row.Size);
 }
 ```
+
+## <a name="accessing-specific-indices-with-ienumerable"></a>Belirli dizinleri IEnumerable ile erişme
 
 Yalnızca bir kısmı veriler veya belirli dizinleri erişmeniz kullanırsanız [ `CreateEnumerable` ](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) ve `reuseRowObject` parametre değerine `false` için istenen satır kümesindeki her biri için yeni bir nesne oluşturulur. Ardından, dönüştürme [ `IEnumerable` ](xref:System.Collections.Generic.IEnumerable%601) bir dizi veya listesi.
 

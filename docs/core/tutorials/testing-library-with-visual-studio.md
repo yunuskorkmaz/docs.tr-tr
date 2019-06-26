@@ -8,14 +8,14 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 352599d60a42a034b3d6647b1fe8f1cbf2f4572d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32593465c1a161aa1293b7b233539fa930c7e1d8
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647931"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402202"
 ---
-# <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017'de .NET Core ile bir .NET Standard kitaplığını test etme
+# <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017’de NET Core ile bir .NET Standard kitaplığını test etme
 
 İçinde [bir .NET Standard kitaplığı ile derleme C# ve Visual Studio 2017'de .NET Core](library-with-visual-studio.md) veya [Visual Basic ve Visual Studio 2017'de .NET Core ile bir .NET Standard kitaplığı derleme](vb-library-with-visual-studio.md), basit bir sınıf oluşturuldu bir genişletme yöntemi için ekler Kitaplığı <xref:System.String> sınıfı. Şimdi beklendiği gibi çalıştığından emin olmak için birim testi oluşturmayı öğreneceksiniz. Önceki makalede oluşturduğunuz çözüm, birim testi projesi ekleyeceksiniz.
 
@@ -68,7 +68,7 @@ Birim test projesi oluşturmak için aşağıdakileri yapın:
 
    Birim test şablon tarafından oluşturulan kaynak kodu şunları yapar:
 
-   * [Microsoft.VisualStudio.TestTools.UnitTesting] aktarır<xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=namewithType> ad alanı birim testi için kullanılan türler içerir.
+   * Bunu aktarır <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> ad alanı birim testi için kullanılan türler içerir.
 
    * Geçerli <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>) özniteliğini `UnitTest1` sınıfı. Her bir test sınıfındaki test yönteminin etiketlenir <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> özniteliği birim testi çalıştırdığınızda otomatik olarak yürütülür.
 
@@ -165,7 +165,7 @@ Test çalıştırmanızın herhangi bir hata vardı, ancak test yöntemi başar�
 
    ![Test Gezgini penceresi olan False onaylama işlemi hatası gösteriliyor](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
-1. 1. adımda yaptığınız değişikliği geri almak ve "Error" dizesini kaldırın. Testi yeniden çalıştırın ve testlerin başarılı.
+1. 1\. adımda yaptığınız değişikliği geri almak ve "Error" dizesini kaldırın. Testi yeniden çalıştırın ve testlerin başarılı.
 
 ## <a name="testing-the-release-version-of-the-library"></a>Kitaplık sürümünü test etme
 

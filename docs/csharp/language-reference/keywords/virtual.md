@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: fa201b90a6d0e4afd15034c04b36bbbd25352886
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2568eed5a889f6c03e237875194b8adcb9334ef7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633098"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401820"
 ---
 # <a name="virtual-c-reference"></a>virtual (C# Başvurusu)
 
@@ -71,4 +71,4 @@ Aşağıdaki program hesaplar ve her bir şekil için uygun alan uygun uygulama 
 - [Çok biçimlilik](../../programming-guide/classes-and-structs/polymorphism.md)
 - [abstract](abstract.md)
 - [override](override.md)
-- [new](new.md)
+- [Yeni (değiştirici)](new-modifier.md)

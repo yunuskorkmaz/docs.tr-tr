@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 809c88d519cb75f42c1ac00a18e19097c01fd084
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 261c3fa2cc2f94e2a3f76a8a41982c21183e973a
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347941"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401359"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Boolean mantıksal işleçleri (C# Başvurusu)
 
@@ -55,7 +55,7 @@ Aşağıdaki işleçleri ile mantıksal işlemleri [bool](../keywords/bool.md) i
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-## <a name="logical-and-operator-amp"></a>Mantıksal AND işleci &amp;
+## <a name="logical-and-operator-"></a> Mantıksal AND işleci &amp;
 
 `&` İşlenenleri, mantıksal AND işleci hesaplar. Sonucu `x & y` olduğu `true` hem `x` ve `y` vermesi `true`. Aksi halde sonuç, `false`.
 
@@ -91,7 +91,7 @@ Aşağıdaki örnekte, sağ işleneni `|` işleci sol işlenenin değerini bağ�
 
 İntegral türündeki işlenenler için `|` işleci hesaplar [mantıksal bit düzeyinde OR](bitwise-and-shift-operators.md#logical-or-operator-) işlenenleri biri.
 
-## <a name="conditional-logical-and-operator-ampamp"></a>Koşullu mantıksal AND işleci &amp;&amp;
+## <a name="conditional-logical-and-operator-"></a> Koşullu mantıksal AND işleci &amp;&amp;
 
 Koşullu mantıksal AND işlecinin `&&`, mantıksal ve işlenenleri, "kısa devre" mantıksal AND işleci, hesaplar olarak da bilinir. Sonucu `x && y` olduğu `true` hem `x` ve `y` vermesi `true`. Aksi halde sonuç, `false`. Varsa `x` değerlendiren `false`, `y` değerlendirilmez.
 

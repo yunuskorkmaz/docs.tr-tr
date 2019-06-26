@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: b6bca26cc05a13e1384c4fc9642264f65b159ff7
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 4f1d79497f255f52a87dce44f1b5b8709adfada7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306535"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401482"
 ---
 # <a name="member-access-operators-c-reference"></a>Üye erişim işleçleri (C# Başvurusu)
 
@@ -141,7 +141,7 @@ Aşağıdaki örnek, olan veya olmayan bağımsız değişkenler, bir yöntem ç
 
 [!code-csharp-interactive[invocation with ()](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
 
-Çağırdığınızda parantez de kullanmak bir [Oluşturucusu](../../programming-guide/classes-and-structs/constructors.md) ile bir [ `new` ](../keywords/new-operator.md) işleci.
+Çağırdığınızda parantez de kullanmak bir [Oluşturucusu](../../programming-guide/classes-and-structs/constructors.md) ile [ `new` ](new-operator.md) işleci.
 
 ### <a name="other-usages-of-"></a>()'nin diğer kullanımları
 

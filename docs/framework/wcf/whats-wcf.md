@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 13108e86d76b0d806eddf71b2f7e50337ca0afba
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 37e12c499b19d196dd695e1e2970d750f4dc9b0e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348299"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402424"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
 Windows Communication Foundation (WCF) hizmet odaklı uygulamalar oluşturmaya yönelik bir çerçevedir. WCF kullanarak, verileri zaman uyumsuz ileti olarak bir hizmetin uç noktasından diğerine gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan sürekli olarak kullanılabilir bir hizmetin parçası veya barındırılan bir uygulamada bir hizmet olabilir. Bir uç nokta, bir istemci bir hizmet uç noktasından verileri isteyen bir hizmet olabilir. İletileri bir tek karakter ya da XML olarak gönderilen word kadar basit veya bir ikili veri akışı gibi karmaşık olabilir. Bazı örnek senaryolar şunlardır:
@@ -92,7 +92,7 @@ Microsoft BizTalk Server R2, ayrıca WCF iletişim teknolojisi olarak kullanır.
 
 Microsoft Silverlight geliştiriciler (örneğin, video akışı) medya yoğunluklu Web siteleri oluşturmasına imkan tanıyan birlikte çalışabilir ve zengin Web uygulamaları oluşturmaya yönelik bir platformdur. Sürüm 2 ile başlayarak, Silverlight, WCF bitiş noktalarını Silverlight uygulamalarını bağlamak için iletişim teknolojisi olarak WCF yaptıysa.
 
-Uygulama sunucusu Windows Server AppFabric barındırma özellikleri iletişimi için WCF kullanan uygulamaları dağıtma ve yönetme için özel olarak tasarlanmıştır. [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] WCF özellikli uygulamalar için özel olarak tasarlanmış zengin araç ve yapılandırma seçenekleri içerir.
+Uygulama sunucusu Windows Server AppFabric barındırma özellikleri iletişimi için WCF kullanan uygulamaları dağıtma ve yönetme için özel olarak tasarlanmıştır. Barındırma özellikleri, WCF özellikli uygulamalar için özel olarak tasarlanmış zengin araç ve yapılandırma seçenekleri içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

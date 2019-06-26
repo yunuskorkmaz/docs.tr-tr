@@ -2,12 +2,12 @@
 title: HTTP Taşıma Güvenliği
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: ab099302df93ce7d01c2730df88240265411bc8d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 386c24a9b51be56bf5a8195123e573cfced6392f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587678"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402313"
 ---
 # <a name="http-transport-security"></a>HTTP Taşıma Güvenliği
 HTTP taşıma kullanırken, güvenlik, Güvenli Yuva Katmanı (SSL) uygulaması tarafından sağlanır. SSL yaygın olarak Internet'te bir hizmete istemcinin kimliğini doğrulamak için kullanılır ve kanala gizliliği (şifreleme) sağlamak için. Bu konuda, SSL nasıl çalıştığını ve Windows Communication Foundation (WCF) nasıl uygulandığı açıklanmaktadır.  
@@ -43,9 +43,9 @@ HTTP taşıma kullanırken, güvenlik, Güvenli Yuva Katmanı (SSL) uygulaması 
  Sertifika ile kullanmak için yapılandırma [!INCLUDE[iisver](../../../../includes/iisver-md.md)], bkz: [IIS 7.0 Beta: IIS 7.0 sunucu sertifikalarını yapılandırma](https://go.microsoft.com/fwlink/?LinkID=88595).  
   
 #### <a name="iis-60"></a>IIS 6.0  
- Ayarlamak için [!INCLUDE[iis601](../../../../includes/iis601-md.md)] bakın (SSL kullanarak) güvenli bir konak [Güvenli Yuva Katmanı Yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88601).  
+ IIS 6. 0 ' (SSL kullanarak) güvenli bir konağı ayarlamak için bkz [Güvenli Yuva Katmanı Yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88601).  
   
- Sertifika ile kullanmak için yapılandırma [!INCLUDE[iis601](../../../../includes/iis601-md.md)], bkz: [Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602).  
+ IIS 6.0 ile kullanım için sertifikaları yapılandırmak için bkz [Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602).  
   
 ### <a name="using-httpcfg-for-ssl"></a>SSL için HttpCfg kullanma  
  Şirket içinde barındırılan bir WCF uygulaması oluşturuyorsanız, kullanılabilir HttpCfg.exe aracını indirin [Windows XP Service Pack 2 Destek Araçları site](https://go.microsoft.com/fwlink/?LinkId=29002).  

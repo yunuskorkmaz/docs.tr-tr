@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 4d5fe4c92f0d456942219bc3f7014f09a005aa5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 611e8df29b37efd880ee1d19515697d899e4fa7e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048302"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402153"
 ---
 # <a name="choosing-a-transport"></a>Taşıma Seçme
 Bu konuda, Windows Communication Foundation (WCF) içerdiği üç ana taşımalar arasından seçim ölçütleri ele alınmıştır: HTTP, TCP ve adlandırılmış kanallar. WCF de içeren bir message queuing (MSMQ olarak da bilinir) taşıma, ancak message queuing bu belgede ele alınmamaktadır.  
@@ -52,8 +52,8 @@ Bu konuda, Windows Communication Foundation (WCF) içerdiği üç ana taşımala
   
 |Öznitelik|Açıklama|Ayrıcalıklı taşımalar|  
 |---------------|-----------------|------------------------|  
-|Tanılamalar|Tanılama Aktarım bağlantısı sorunları otomatik olarak algılamasını sağlar. Tüm aktarımları bağlantı açıklayan geri hata bilgileri göndermeyi destekler. Ancak, WCF, ağ sorunlarını araştırma için tanılama araçları içermez.|Yok.|  
-|Barındırma|Tüm WCF uç noktaları, bir uygulama içinde barındırılması gerekir. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] ve yalnızca HTTP aktarımı kullanan uygulamaları barındırma önceki destekler. Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], destek TCP dahil olmak üzere tüm WCF taşımalar barındırmak için eklenir ve adlandırılmış kanallar. Daha fazla bilgi için [Internet Information Services'te barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) ve [Windows İşlem Etkinleştirme hizmetinde barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
+|Tanılamalar|Tanılama Aktarım bağlantısı sorunları otomatik olarak algılamasını sağlar. Tüm aktarımları bağlantı açıklayan geri hata bilgileri göndermeyi destekler. Ancak, WCF, ağ sorunlarını araştırma için tanılama araçları içermez.|None|  
+|Barındırma|Tüm WCF uç noktaları, bir uygulama içinde barındırılması gerekir. HTTP taşıma kullanan yalnızca barındırma uygulamaları, IIS 6.0 ve önceki sürümleri destekler. Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], destek TCP dahil olmak üzere tüm WCF taşımalar barındırmak için eklenir ve adlandırılmış kanallar. Daha fazla bilgi için [Internet Information Services'te barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) ve [Windows İşlem Etkinleştirme hizmetinde barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
 |İnceleme|İnceleme, ayıklayın ve iletim sırasında iletileri bilgi işlem yeteneğidir. HTTP protokolü, Yönlendirme ve denetim bilgileri inceleyin ve iletileri analiz araçları yapı kolaylaştıran verilerden ayırır. İncelemek kolay taşımalar daha az işlem gücü, ağ Gereçleri de gerektirebilir. İletileri inceledi olmadığını güvenlik düzeyini etkileri kullanılır.|HTTP|  
 |Gecikme süresi|Gecikme süresi en az bir exchange ileti tamamlamak için gereken süre miktarıdır. Tüm ağ işlemlerini daha fazla veya daha az gecikme süresine aktarım seçimi bağlı olarak sahiptir. İstek-yanıt HTTP gibi ek gecikme nedeniyle ileti zorlamalı bağıntı neden olabilir, yerel ileti değişim deseni olan bir taşıma ile çift yönlü veya tek yönlü iletişimi kullanarak. Bu durumda, yerel ileti değişim deseni TCP gibi çift yönlü bir taşıma kullanarak göz önünde bulundurun.|TCP ve adlandırılmış<br /><br /> Kanal|  
 |Ulaşın|Bir taşıma erişim ağını nasıl özellikli taşımanın olup diğer sistemleri ile bağlama sırasında yansıtır. Adlandırılmış kanal taşıma çok az ulaştığından; yalnızca aynı makinede çalışan hizmetlere bağlanabilir. TCP ve HTTP taşımaları hem mükemmel ulaşma sahiptir ve bazı NAT ve güvenlik duvarı yapılandırmaları duvarlarından geçebildiği. Daha fazla bilgi için [NAT ve güvenlik duvarlarıyla çalışma](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md).|HTTP, TCP|  

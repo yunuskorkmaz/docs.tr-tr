@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: af3eab1c2453f37aa5bd881dc9804d7504c89298
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: afefb1f7bebb66a915074e8f231e73962a1b0ab0
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422126"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401454"
 ---
 # <a name="value-types-c-reference"></a>Değer türleri (C# Başvurusu)
 
@@ -88,9 +88,9 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-Kullanarak [yeni](new.md) işleci belirli türün parametresiz oluşturucu çağırır ve varsayılan değer değişkenine atar. Önceki örnekte, parametresiz bir oluşturucu değer atanmış `0` için `myInt`. Varsayılan Oluşturucu çağırarak atanan değerler hakkında daha fazla bilgi için bkz: [varsayılan değerler tablosu](default-values-table.md).
+Kullanarak [yeni](../operators/new-operator.md) işleci belirli türün parametresiz oluşturucu çağırır ve varsayılan değer değişkenine atar. Önceki örnekte, parametresiz bir oluşturucu değer atanmış `0` için `myInt`. Varsayılan Oluşturucu çağırarak atanan değerler hakkında daha fazla bilgi için bkz: [varsayılan değerler tablosu](default-values-table.md).
 
-Kullanıcı tanımlı türler ile kullanın [yeni](new.md) parametresiz bir oluşturucu çağırmak için. Örneğin, aşağıdaki deyim, parametresiz oluşturucu çağırır `Point` yapısı:
+Kullanıcı tanımlı türler ile kullanın [yeni](../operators/new-operator.md) parametresiz bir oluşturucu çağırmak için. Örneğin, aşağıdaki deyim, parametresiz oluşturucu çağırır `Point` yapısı:
 
 ```csharp
 Point p = new Point(); // Invoke parameterless constructor for the struct.
@@ -98,7 +98,7 @@ Point p = new Point(); // Invoke parameterless constructor for the struct.
 
 Bu çağrıdan sonra kesinlikle atanacak yapı olarak kabul edilir; diğer bir deyişle, tüm üyeleri varsayılan değerlerine başlatılır.
 
-Hakkında daha fazla bilgi için `new` işleci bkz [yeni](new.md).
+Hakkında daha fazla bilgi için `new` işleci bkz [yeni](../operators/new-operator.md).
 
 Sayısal türlerin çıktı biçimlendirme hakkında daha fazla bilgi için bkz: [sayısal sonuçlar tablosunu biçimlendirme](formatting-numeric-results-table.md).
 

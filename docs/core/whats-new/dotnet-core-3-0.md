@@ -6,19 +6,19 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 05/06/2019
-ms.openlocfilehash: 369c74d2d8e82f157de0eec4294a5ee50542292b
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.date: 06/14/2019
+ms.openlocfilehash: bb100ea064585235768ecb46781eb830c7dae0c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169781"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401952"
 ---
-# <a name="whats-new-in-net-core-30-preview-5"></a>.NET Core 3.0 (Preview 5) yenilikler
+# <a name="whats-new-in-net-core-30-preview-6"></a>.NET Core 3.0 (Önizleme 6) yenilikler
 
-Bu makalede, .NET Core 3.0 içinde yeni (Önizleme 5) Yenilikler açıklanır. Büyük iyileştirmeler Windows Masaüstü uygulamaları (yalnızca Windows) için destek biridir. Windows Masaüstü .NET Core 3.0 SDK'sı bileşenini kullanarak, Windows Forms ve Windows Presentation Foundation (WPF), uygulamalarınızın bağlantı noktası. Gerekirse Windows Masaüstü bileşen yalnızca desteklenen ve Windows üzerinde dahil. Daha fazla bilgi için [Windows Masaüstü](#windows-desktop) bu makalenin devamındaki bölümü.
+Bu makalede, .NET Core 3.0 içinde yeni (Önizleme 6) Yenilikler açıklanır. Büyük iyileştirmeler Windows Masaüstü uygulamaları (yalnızca Windows) için destek biridir. Windows Masaüstü .NET Core 3.0 SDK'sı bileşenini kullanarak, Windows Forms ve Windows Presentation Foundation (WPF), uygulamalarınızın bağlantı noktası. Gerekirse Windows Masaüstü bileşen yalnızca desteklenen ve Windows üzerinde dahil. Daha fazla bilgi için [Windows Masaüstü](#windows-desktop) bu makalenin devamındaki bölümü.
 
-.NET core 3.0 için destek ekler C# 8.0. OmniSharp uzantısıyla Visual Studio 2019 güncelleştirme 1 Preview veya VSCode en son sürümünü kullanmanız önerilir.
+.NET core 3.0 için destek ekler C# 8.0. Kullanmanızı önemle tavsiye edilir [en son Visual Studio Preview sürümünü](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), veya Visual Studio Code OmniSharp uzantısına sahip.
 
 [İndirin ve .NET Core 3.0 Önizleme 6 ile çalışmaya başlama](https://aka.ms/netcore3download) şu anda Windows, Mac ve Linux üzerinde.
 
@@ -55,7 +55,7 @@ Sürüm oluşturma hakkında daha fazla bilgi için bkz. [nasıl .NET Core tutul
 </Project>
 ```
 
-Visual Studio kullanıyorsanız, Visual Studio 2017'yi desteklemediğinden Visual Studio 2019 gereken **.NET standart 2.1** veya **.NET Core 3.0**. Kullanmanızı öneririz [Visual Studio 2019 güncelleştirme 1 Preview](https://visualstudio.microsoft.com/vs/preview/).
+Visual Studio kullanıyorsanız, gereksinim duyduğunuz [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), Visual Studio 2017'yi desteklemediğinden **.NET standart 2.1** veya **.NET Core 3.0**.
 
 ## <a name="improved-net-core-version-apis"></a>Geliştirilmiş .NET Core sürümü API'leri
 
@@ -187,7 +187,7 @@ dotnet publish -c Release -r win-x64 --self-contained true
 
 ReadyToRun derleyici, şu anda çapraz hedefleme desteklememektedir. Belirli bir hedef derlemeniz gerekir. Örneğin, Windows için x64 R2R görüntüleri istiyorsanız, o ortamda publish komutunu çalıştırmak gerekir.
 
-Çapraz-hedefleyen için özel durumlar:
+Çapraz hedefleme için özel durumlar:
 
 - Windows x64 Windows ARM32 ve ARM64 x86 derlemek için kullanılabilir görüntüler.
 - Windows x86 Windows ARM32 görüntüleri derlemek için kullanılabilir.

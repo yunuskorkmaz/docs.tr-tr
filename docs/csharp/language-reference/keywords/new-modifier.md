@@ -5,16 +5,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 3a642996da8f0126e59e21d3553a7d8ba73dab23
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 675369936b9f90620b03365104255a622855fa9f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422684"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401793"
 ---
 # <a name="new-modifier-c-reference"></a>New değiştiricisi (C# Başvurusu)
 
 Bir bildirim değiştirici olarak kullanıldığında `new` anahtar sözcüğü açıkça bir temel sınıftan devralınan üyeyi gizler. Devralınmış bir üyeyi gizlediğinizde, üyenin sürümü temel sınıftaki sürümün yerine geçer. Üyeleri kullanmadan gizleyebilmenize rağmen `new` değiştiricisi, bir derleyici uyarısı alırsınız. Kullanırsanız `new` bir üyeyi açıkça gizlemek için bu uyarı bastırılır.
+
+Ayrıca `new` anahtar [bir türün bir örneğini oluşturmak](../operators/new-operator.md) veya farklı bir [genel tür kısıtlaması](../keywords/new-constraint.md).
 
 Devralınan bir üyeyi gizlemek için türetilen sınıfta aynı üye adını kullanarak bildirin ve değiştirin `new` anahtar sözcüğü. Örneğin:
 
@@ -24,7 +26,7 @@ Bu örnekte, `BaseC.Invoke` tarafından gizleniyor `DerivedC.Invoke`. Alan `x` �
 
 Devralma üzerinden ad gizleme aşağıdaki biçimlerden birini alır:
 
-- Genellikle, bir sabit, alan, özelliği veya bir sınıf veya yapı içinde tanıtılan türü kendi adını paylaşan tüm taban sınıfı üyelerini gizler.  Özel durumlar vardır.  Örneğin, adı ile yeni bir alan bildirmek `N` çağrılmayan bir tür ve temel tür olduğunu `N` bir yöntemi olması için yeni alan taban bildirimini çağırma sözdiziminde gizlemez.  Bkz: [5.0 C# dil belirtimi](https://www.microsoft.com/download/details.aspx?id=7029) için ayrıntıları ("Expressions" bölümünde "Üye arama" bölümüne bakın).
+- Genellikle, bir sabit, alan, özelliği veya bir sınıf veya yapı içinde tanıtılan türü kendi adını paylaşan tüm taban sınıfı üyelerini gizler. Özel durumlar vardır. Örneğin, adı ile yeni bir alan bildirmek `N` çağrılmayan bir tür ve temel tür olduğunu `N` bir yöntemi olması için yeni alan taban bildirimini çağırma sözdiziminde gizlemez. Daha fazla bilgi için [üye araması](~/_csharplang/spec/expressions.md#member-lookup) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
 
 - Bir sınıf ya da struct'a dahil edilen bir yöntem özellikleri, alanları ve temel sınıfta bu adı paylaşan türleri gizler. Ayrıca, aynı imzaya sahip tüm taban sınıfı yöntemlerini gizler.
 
@@ -48,13 +50,13 @@ Bu örnekte, iç içe geçmiş bir sınıf taban sınıfında aynı ada sahip bi
 
 Kaldırırsanız `new` değiştiricisi, program hala derler ve çalışır, ancak aşağıdaki uyarıyı alırsınız:
 
-```
+```text
 The keyword new is required on 'MyDerivedC.x' because it hides inherited member 'MyBaseC.x'.
 ```
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Daha fazla bilgi için [yeni değiştiricisini](~/_csharplang/spec/classes.md#the-new-modifier) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

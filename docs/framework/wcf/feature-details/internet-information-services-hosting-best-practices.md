@@ -2,12 +2,12 @@
 title: Internet Information Services Barındırma En İyi Uygulamaları
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bb60330aeedfe4b16a2a53d644e79a4a16636afa
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878599"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402443"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Internet Information Services Barındırma En İyi Uygulamaları
 Bu konuda, Windows Communication Foundation (WCF) hizmetlerini barındırmak için bazı en iyi uygulamalar açıklanmaktadır.  
@@ -16,7 +16,7 @@ Bu konuda, Windows Communication Foundation (WCF) hizmetlerini barındırmak iç
  Uygulama bir WCF hizmeti bir Web uygulamasının \bin dizinine dağıtılan bir DLL olarak dağıtılan Internet Information Services (IIS) sahip olmayan bir test ortamında Web uygulama modeli dışında hizmet Örneğin, yeniden sağlar.  
   
 ## <a name="service-hosts-in-iis-hosted-applications"></a>IIS barındırılan uygulamalarda hizmet konakları  
- Kesinlik temelli barındırılan API'ler, ağ aktarımı barındırma ortamı IIS tarafından yerel olarak desteklenen, dinleme yeni hizmet konakları oluşturmak için kullanmayın (örneğin, [!INCLUDE[iis601](../../../../includes/iis601-md.md)] TCP barındırmak için Hizmetleri, çünkü TCP iletişimi üzerinde yerel olarak desteklenmiyor [!INCLUDE[iis601](../../../../includes/iis601-md.md)]). Bu yaklaşım önerilmez. IIS barındırma ortamında kesin oluşturulan hizmet konakları bilinmiyor. Barındırma uygulama havuzu boşta olup olmadığını belirlerken kesin oluşturulan Hizmetleri tarafından gerçekleştirilen işleme için IIS tarafından tasarlanan değil kritik noktasıdır. Sonuç tür kesin oluşturulan hizmet konakları sahip uygulamalar IIS ana bilgisayarı işlemlerinin agresif siler bir IIS barındırma ortamı olmasıdır.  
+ Kesinlik temelli barındırma API'leri, dinleme yerel IIS barındırma ortamı tarafından desteklenen ağ aktarımı yeni hizmet konakları oluşturmak için kullanmayın (TCP iletişimi IIS 6.0 üzerinde yerel olarak desteklenmediğinden, IIS 6.0 ana bilgisayarda TCP hizmetler). Bu yaklaşım önerilmez. IIS barındırma ortamında kesin oluşturulan hizmet konakları bilinmiyor. Barındırma uygulama havuzu boşta olup olmadığını belirlerken kesin oluşturulan Hizmetleri tarafından gerçekleştirilen işleme için IIS tarafından tasarlanan değil kritik noktasıdır. Sonuç tür kesin oluşturulan hizmet konakları sahip uygulamalar IIS ana bilgisayarı işlemlerinin agresif siler bir IIS barındırma ortamı olmasıdır.  
   
 ## <a name="uris-and-iis-hosted-endpoints"></a>URI ve IIS tarafından barındırılan uç noktaları  
  IIS barındırılan hizmeti için uç noktalar göreli Tekdüzen Kaynak Tanımlayıcıları (URI'lar) değil mutlak adresleri kullanarak yapılandırılması gerekir. Bu uç nokta adresini barındırma uygulamaya ait URI adresleri kümesi içinde döner ve ileti tabanlı etkinleştirme beklendiği gibi olur sağlar güvence altına alır.  

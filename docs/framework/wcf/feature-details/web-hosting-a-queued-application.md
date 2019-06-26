@@ -2,15 +2,15 @@
 title: Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: c44a6b5059f5294646d95b4281dcf7845b369929
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8584f78b6b31bc95e088b424122a9cf77a17f27
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126028"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402275"
 ---
 # <a name="web-hosting-a-queued-application"></a>Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
-Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Windows Communication Foundation (WCF) hizmetlerini barındırmak içeren çalışan işlemleri yaşam süresini yönetir. WAS işlem modelini genelleştirir [!INCLUDE[iis601](../../../../includes/iis601-md.md)] HTTP sunucusu, HTTP bağımlılığını kaldırarak işlem modeli. Bu, hem HTTP hem de net.msmq ve ileti tabanlı etkinleştirme destekleyen ve belirli bir bilgisayardaki uygulamaları, çok sayıda konak imkanı barındırma ortamında msmq.formatname gibi HTTP olmayan protokolleri kullanmak WCF hizmetleri sağlar.  
+Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Windows Communication Foundation (WCF) hizmetlerini barındırmak içeren çalışan işlemleri yaşam süresini yönetir. WAS işlem modeli, HTTP bağımlılığını kaldırarak HTTP sunucusu için IIS 6.0 işlem modelini genelleştirir. Bu, hem HTTP hem de net.msmq ve ileti tabanlı etkinleştirme destekleyen ve belirli bir bilgisayardaki uygulamaları, çok sayıda konak imkanı barındırma ortamında msmq.formatname gibi HTTP olmayan protokolleri kullanmak WCF hizmetleri sağlar.  
   
  OLAN bir veya daha fazla ileti bir uygulama tarafından kullanılan kuyrukların yerleştirildiğinde, kuyruğa alınmış bir uygulamayı etkinleştirir bir Message Queuing (MSMQ) etkinleştirmesi hizmeti içerir. MSMQ Etkinleştirme hizmeti varsayılan olarak otomatik olarak başlatılan bir NT hizmetidir.  
   

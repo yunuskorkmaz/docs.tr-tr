@@ -4,12 +4,12 @@ description: .NET Core çalışma zamanı nasıl çalıştığını denetleme ge
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6cddb6fa7dcd7a7d050749c26249f1f5d876322d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: d3bdaacd4be776e0e9fff01698cca360ea4c9c6d
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306197"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402018"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Yerel koddan .NET çalışma zamanı denetlemek için özel bir .NET Core konak yazma
 
@@ -28,7 +28,7 @@ Bu nedenle yükleme yapılmalıdır Ayrıca, ana bilgisayarı sınamak için bas
 ## <a name="hosting-apis"></a>API'leri barındırma
 .NET Core konağı için kullanılabilecek üç farklı API'ler vardır. Bu belge (ve ilişkili [örnekleri](https://github.com/dotnet/samples/tree/master/core/hosting)) tüm seçeneklerini kapsar.
 
-* .NET Core 3.0 ve üstü'de .NET Core çalışma zamanı barındırma tercih edilen yöntemi olan `nethost` ve `hostfxr` kitaplıkları API'leri. Bu giriş noktaları, bulma ve başlatma için rutime ayarlama karmaşıklığı işlemek ve hem yönetilen bir uygulama başlatma ve statik bir yönetilen yöntemi sağlar.
+* .NET Core 3.0 ve üstü'de .NET Core çalışma zamanı barındırma tercih edilen yöntemi olan `nethost` ve `hostfxr` kitaplıkları API'leri. Bu giriş noktaları, bulma ve çalışma zamanı başlatma için ayarlama karmaşıklığı işlemek ve hem yönetilen bir uygulama başlatma ve statik bir yönetilen yöntemi sağlar.
 * .NET Core 3.0 önce .NET Core çalışma zamanı barındırma tercih edilen yöntemi olan [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h) API. Bu API işlevleri kolayca başlatmak için kullanıma sunar ve çalışma zamanı durduruluyor ve bunları çağırırken yönetilen kod (veya yönetilen bir exe açarak yönetilen statik yöntemleri çağırarak).
 * .NET core de barındırılabilir ile `ICLRRuntimeHost4` arabiriminde [mscoree.h](https://github.com/dotnet/coreclr/blob/master/src/pal/prebuilt/inc/mscoree.h). Eski konakları kullanmadan görülen şekilde bu API CoreClrHost.h, daha uzun etrafında olmuştur. Hala çalışır ve CoreClrHost daha barındırma işlemi üzerinde biraz daha fazla denetim sağlar. Çoğu senaryo için yine de CoreClrHost.h artık, daha basit API'ler nedeniyle tercih edilir.
 

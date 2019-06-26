@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: 8eb0a2a5b8b6edad17477e1fd65f72b540a8a674
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 4d7f28c692c7eb3527a851c6456473afc20a9aeb
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960042"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402459"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Bağlantı Noktası Paylaşımı
 Windows Communication Foundation (WCF), yüksek performanslı iletişim için yeni TCP tabanlı ağ protokolü (net.tcp://) sağlar. WCF da yeni bir sistem bileşeni olan birden çok kullanıcı süreçler arasında paylaşılacak net.tcp bağlantı noktası sağlayan Net.TCP bağlantı noktası paylaşma hizmeti tanıtılmaktadır.  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF), yüksek performanslı iletişim için ye
   
  HTTP. Trafiği birçok farklı HTTP uygulamaları için tek bir TCP bağlantı noktası üzerinde çoğaltıldı SYS modeli Windows platformunda standart haline gelmiştir. Bu güvenlik duvarı için ortak bir denetim noktası sağlar yapabileceğiniz yeni uygulamalar oluşturmak dağıtım maliyeti en aza indirmek, uygulama geliştiricilerinin sağlarken Yöneticiler ağ kullanın.  
   
- Birden çok uygulamada HTTP bağlantı noktası paylaşma olanağı, uzun bir özellik Internet Information Services (IIS) kaldırıldı. Ancak, yalnızca HTTP sunulmasıyla birlikte idi. SYS (çekirdek modu HTTP protokolü dinleyici) ile [!INCLUDE[iis601](../../../../includes/iis601-md.md)] bu altyapı tam olarak genelleştirilmiş. Aslında, HTTP. SYS TCP bağlantı noktası HTTP trafiğine ayrılmış paylaşmak rastgele kullanıcı işlemleri sağlar. Bu özellik, ayrı, yalıtılmış işlemlerde aynı fiziksel makinede gönderin ve TCP bağlantı noktası 80 üzerinden trafiği almak için gereken ağ altyapısını paylaşırken bulunabilmesi birçok HTTP uygulamaları tanır. Net.TCP bağlantı noktası paylaşma hizmeti aynı türde uygulamalar için net.tcp bağlantı noktası sağlar.  
+ Birden çok uygulamada HTTP bağlantı noktası paylaşma olanağı, uzun bir özellik Internet Information Services (IIS) kaldırıldı. Ancak, yalnızca HTTP sunulmasıyla birlikte idi. Bu altyapı tam olarak genelleştirilmiş IIS 6.0 ile SYS (çekirdek modu HTTP protokolü dinleyici). Aslında, HTTP. SYS TCP bağlantı noktası HTTP trafiğine ayrılmış paylaşmak rastgele kullanıcı işlemleri sağlar. Bu özellik, ayrı, yalıtılmış işlemlerde aynı fiziksel makinede gönderin ve TCP bağlantı noktası 80 üzerinden trafiği almak için gereken ağ altyapısını paylaşırken bulunabilmesi birçok HTTP uygulamaları tanır. Net.TCP bağlantı noktası paylaşma hizmeti aynı türde uygulamalar için net.tcp bağlantı noktası sağlar.  
   
 ## <a name="port-sharing-architecture"></a>Bağlantı noktası paylaşımı mimarisi  
  Wcf'de bağlantı noktası paylaşımı mimari üç ana bileşene sahiptir:  

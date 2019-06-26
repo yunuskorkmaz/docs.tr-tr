@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: fecfe8473a33be1a777fc5dde80c292f940e0d41
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347855"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401459"
 ---
 # <a name="c-operators-c-reference"></a>C#işleçler (C# Başvurusu)
 
@@ -51,7 +51,7 @@ En yüksek öncelik işleçleri şunlardır.
 
 [x--](arithmetic-operators.md#decrement-operator---) – son ek azaltma. X değerini döndürür ve ardından depolama konumu bir daha az x değeri ile güncelleştirir (genellikle 1 tamsayı çıkarır).
 
-[Yeni](../keywords/new-operator.md) – oluşturmada yazın.
+[Yeni](new-operator.md) – oluşturmada yazın.
 
 [typeof](type-testing-and-conversion-operators.md#typeof-operator) – döndürür <xref:System.Type> işlenen temsil eden nesne.
 

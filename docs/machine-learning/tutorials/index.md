@@ -3,12 +3,12 @@ title: ML.NET öğreticiler
 description: Özel yapay ZEKA çözümleri oluşturmanıza ve bunları .NET uygulamalarınızla tümleştirin hakkında bilgi edinmek için ML.NET öğreticileri keşfedin.
 ms.custom: seodec18
 ms.date: 04/05/2019
-ms.openlocfilehash: 3f14f463dcdb74beb1605626216acd52dd3f6e9a
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 4530e62a0ac8991f6ece37a0ad9909a4c4d08fe7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722326"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401656"
 ---
 # <a name="mlnet-tutorials"></a>ML.NET öğreticiler 
 
@@ -19,7 +19,7 @@ Aşağıdaki öğreticilerde nasıl kullanılacağını anlamak etkinleştirmeni
 - [Fiyat tahmini](taxi-fare.md): nasıl uygulanacağını gösterir bir **regresyon** ML.NET kullanarak görev.
 - [Kümeleme Iris](iris-clustering.md): nasıl uygulanacağını gösterir bir **Kümeleme** ML.NET kullanarak görev.
 - [Öneri](movie-recommendation.md): film oluşturmak **önerileri** önceki kullanıcı derecelendirmesine göre
-- [Görüntü sınıflandırma](image-classification.md): ML.NET kullanarak özel görüntü sınıflandırıcı oluşturmak için var olan bir Tensorflow modeli yeniden eğitme gösterilmektedir.
+- [Görüntü sınıflandırma](image-classification.md): ML.NET kullanarak özel görüntü sınıflandırıcı oluşturmak için var olan bir TensorFlow modeli yeniden eğitme gösterilmektedir.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 

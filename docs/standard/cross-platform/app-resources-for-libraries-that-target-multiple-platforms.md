@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: ba4546397adcfcf6142b41482f574cf86607a6b9
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025581"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402109"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Birden Çok Platformu Hedefleyen Kitaplıklar için Uygulama Kaynakları
 .NET Framework kullanabilirsiniz [taşınabilir sınıf kitaplığı](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) proje türü sınıf kitaplıklarınızdaki kaynakların birden çok platformdan erişilebildiğinden emin olmak için. Bu proje türü ve .NET Framework sınıf kitaplığının taşınabilir alt küme hedefleyen Visual Studio 2012'de kullanılabilir. Kullanarak bir [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] kitaplığınızı erişilip erişilemediğini Masaüstü uygulamaları, Silverlight uygulamaları, Windows Phone uygulamaları sağlar ve [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.
@@ -72,12 +72,12 @@ ms.locfileid: "67025581"
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
 
- Aşağıdaki kod gösterir nasıl `UILibrary` sınıfı ve kaynaklarının, konsol modu uygulamasından erişilebilir. Konsol uygulaması projesine eklemek için bir UILIbrary.dll başvurusu gerektirir.
+ Aşağıdaki kod gösterir nasıl `UILibrary` sınıfı ve kaynaklarının, konsol modu uygulamasından erişilebilir. Bu, bir konsol uygulaması projesine eklemek için bir Uılıbrary.dll başvurusu gerektirir.
 
  [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
  [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]
 
- Aşağıdaki kod gösterir nasıl `UILibrary` sınıfı ve kaynaklarının erişilebilir bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama. Windows Mağazası uygulama projesine eklenmesi için UILIbrary.dll 'e bir başvuru gerektirir.
+ Aşağıdaki kod gösterir nasıl `UILibrary` sınıfı ve kaynaklarının erişilebilir bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama. Windows Store uygulaması proje için bir Uılıbrary.dll başvurusu gerektirir.
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
@@ -94,12 +94,12 @@ ms.locfileid: "67025581"
 |Ad|Ad|
 |Başlık|Çalışanlar veritabanı|
 
- Aşağıdaki kod gösterir nasıl `UILibrary` sınıfı ve kaynaklarının, konsol modu uygulamasından erişilebilir. Konsol uygulaması projesine eklemek için bir UILIbrary.dll başvurusu gerektirir.
+ Aşağıdaki kod gösterir nasıl `UILibrary` sınıfı ve kaynaklarının, konsol modu uygulamasından erişilebilir. Bu, bir konsol uygulaması projesine eklemek için bir Uılıbrary.dll başvurusu gerektirir.
 
  [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
  [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]
 
- Aşağıdaki kod gösterir nasıl `UILibrary` sınıfı ve kaynaklarının erişilebilir bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama. Windows Mağazası uygulama projesine eklenmesi için UILIbrary.dll 'e bir başvuru gerektirir. Statik kullanan `ApplicationLanguages.PrimaryLanguageOverride` özelliği ayarlamak için tercih edilen dilini Fransızca için.
+ Aşağıdaki kod gösterir nasıl `UILibrary` sınıfı ve kaynaklarının erişilebilir bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama. Windows Store uygulaması proje için bir Uılıbrary.dll başvurusu gerektirir. Statik kullanan `ApplicationLanguages.PrimaryLanguageOverride` özelliği ayarlamak için tercih edilen dilini Fransızca için.
 
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
