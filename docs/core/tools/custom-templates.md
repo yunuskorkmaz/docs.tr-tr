@@ -3,12 +3,12 @@ title: Yeni dotnet için özel şablonlar
 description: Herhangi bir türde .NET proje veya dosya için özel şablonlar hakkında bilgi edinin.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: d7e9c549ff132deb4682ba81ab5ff354d6cc1522
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 738c6b07f77bdbf6fd946253f95c8691e4172f31
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169624"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410343"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Yeni dotnet için özel şablonlar
 
@@ -100,7 +100,7 @@ Kaynak dosyaları ve klasörleri kullanmak üzere hangi dosya ve klasörleri, is
 01. `<PackageType>` Ayarı eklenir ve kümesine `Template`.
 01. `<PackageVersion>` Ayarı eklenir ve geçerli bir kümesi [NuGet sürüm numarası](/nuget/reference/package-versioning).
 01. `<PackageId>` Ayarı eklenir ve benzersiz bir tanımlayıcı ile ayarlayın. Bu tanımlayıcı, şablon paketi kaldırmak için kullanılır ve NuGet tarafından kullanılır, şablon paketi kaydetmek için akışları.
-01. Genel meta veri ayarları ayarlanmalıdır: `<Title>`, `<Authors>`, `<Description>`, ve `<Tags>`.
+01. Genel meta veri ayarları ayarlanmalıdır: `<Title>`, `<Authors>`, `<Description>`, ve `<PackageTags>`.
 01. `<TargetFramework>` Ayarı ayarlanmalıdır, halde şablonunun işlem tarafından üretilen ikili kullanılmaz. Aşağıdaki örnekte ayarlanmış `netstandard2.0`.
 
 Biçiminde bir şablon paketi bir *.nupkg* NuGet paketini gerektiren tüm şablonları depolanması *içeriği* paket içindeki klasör. Birkaç daha fazla ayar eklemek için bir *.csproj* oluşturulan emin olmak için dosya *.nupkg* bir şablon paketi yüklenebilir:
@@ -125,7 +125,7 @@ Tüm Şablonları ayrı bir klasör ve ardından her şablon klasörü içine ko
     <Title>AdatumCorporation Templates</Title>
     <Authors>Me</Authors>
     <Description>Templates to use when creating an application for Adatum Corporation.</Description>
-    <Tags>dotnet-new;templates;contoso</Tags>
+    <PackageTags>dotnet-new;templates;contoso</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <IncludeContentInPack>true</IncludeContentInPack>

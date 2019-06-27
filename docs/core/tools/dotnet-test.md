@@ -2,14 +2,14 @@
 title: DotNet testi komutu
 description: Dotnet testi komut, belirli bir projede birim testleri yürütmek için kullanılır.
 ms.date: 05/29/2018
-ms.openlocfilehash: 1b2a3917a930db0c0a49ebea41f568aaf4a58ee3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b67273f549edd7712237756a5aba13d5cb59a61
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665539"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410360"
 ---
-# <a name="dotnet-test"></a>DotNet testi
+# <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
@@ -120,7 +120,7 @@ Test sonuçlarını yerleştirilmesi nerede bulunacağını dizin. Belirtilen di
 
 `-s|--settings <SETTINGS_FILE>`
 
-Testleri çalıştırırken kullanılacak ayarlar.
+`.runsettings` Testleri çalıştırmak için kullanılacak dosya. [Kullanarak birim testlerini yapılandırma bir `.runsettings` dosya.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
@@ -190,7 +190,7 @@ Test sonuçlarını yerleştirilmesi nerede bulunacağını dizin. Belirtilen di
 
 `-s|--settings <SETTINGS_FILE>`
 
-Testleri çalıştırırken kullanılacak ayarlar.
+`.runsettings` Testleri çalıştırmak için kullanılacak dosya. [Kullanarak birim testlerini yapılandırma bir `.runsettings` dosya.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
@@ -240,7 +240,7 @@ Test projesi çalıştırmadan önce derleme değil.
 
 `-s|--settings <SETTINGS_FILE>`
 
-Testleri çalıştırırken kullanılacak ayarlar.
+`.runsettings` Testleri çalıştırmak için kullanılacak dosya. [Kullanarak birim testlerini yapılandırma bir `.runsettings` dosya.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 

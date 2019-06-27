@@ -6,12 +6,12 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: 39e454d67f60280c6a43e3b80d788d873345ab77
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: e34694eedd06c0a3e3558c9137c6add9a7f802e4
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307382"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410514"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>Otomatik makine öğrenimi ile ML.NET
 
@@ -26,6 +26,6 @@ Otomatik machine learning otomatik model seçimi ve eğitim gerçekleştiren ML.
 Otomatik ML için machine learning şu anda sınırlı [görevleri](resources/tasks.md) ikili Sınıflandırma, çok sınıflı sınıflandırma ve regresyon. Görevlerin diğer makine öğrenimi, gelecek sürümlerde desteklenmeyecektir.
 
 Otomatik ML kullanmanın üç yolu vardır:
+1. Bir grafik kullanıcı arabirimi ile [ML.NET Model Oluşturucu](automate-training-with-model-builder.md)
 1. Komut satırında ile [ML.NET CLI](automate-training-with-cli.md)
 1. Bir uygulama yoluyla ile [ML API otomatik](how-to-guides/how-to-use-the-automl-api.md)
-1. Bir grafik kullanıcı arabirimi ile ML.NET Model Oluşturucu
