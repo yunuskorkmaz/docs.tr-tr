@@ -1,15 +1,15 @@
 ---
 title: DotNet Listele paket komutu
 description: "'Dotnet paket listeleme' komutu, bir proje veya çözüm için paket referanslarını listelemek için uygun bir seçenek sağlar."
-ms.date: 04/09/2019
-ms.openlocfilehash: 88ef3302a955eadc4167384312e4eb721dd496fb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 98cc456fff02364310cec98f0282700f7697f07e
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631765"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421951"
 ---
-# <a name="dotnet-list-package"></a>DotNet paket listeleme
+# <a name="dotnet-list-package"></a>dotnet list package
 
 [!INCLUDE [topic-appliesto-net-core-22plus](../../../includes/topic-appliesto-net-core-22plus.md)]
 
@@ -20,8 +20,8 @@ ms.locfileid: "65631765"
 ## <a name="synopsis"></a>Synopsis
 
 ```
-dotnet list [<PROJECT | SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
-   [--include-prerelease] [--include-transitive] [--outdated] [--source]
+dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
+   [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
 dotnet list package [-h|--help]
 ```
 
@@ -104,6 +104,10 @@ Project 'HelloPlugin' has the following package references
 * **`--include-transitive`**
 
   Üst düzey paketlerinin yanı sıra geçişli paketleri listeler. Bu seçeneği belirtmek, üst düzey paketleri bağımlı paketlerin listesini alın.
+
+* **`--interactive`**
+
+  Durdurmak ve kullanıcı girişi ya da eylem için beklemek için komutu sağlar. Örneğin, kimlik doğrulamasını tamamlamak için. .NET Core SDK 3.0 bu yana kullanılabilir.
 
 * **`--outdated`**
 

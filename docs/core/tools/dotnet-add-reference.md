@@ -1,13 +1,13 @@
 ---
 title: DotNet-başvuru komut ekleme
 description: Dotnet ekleyin başvuru komut projeden projeye başvurular eklemek için uygun bir seçenek sağlar.
-ms.date: 04/24/2019
-ms.openlocfilehash: e90f95527d4f14c7851ccd8d30201daaaaefa2ae
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 6e0ca40e701b62dcc18147f9de83cafa6aa2f50f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631935"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421999"
 ---
 # <a name="dotnet-add-reference"></a>DotNet-Başvuru Ekle
 
@@ -23,7 +23,7 @@ ms.locfileid: "65631935"
 
 ## <a name="synopsis"></a>Synopsis
 
-`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
+`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
 
 ## <a name="description"></a>Açıklama
 
@@ -56,6 +56,10 @@ ms.locfileid: "65631935"
 * **`-f|--framework <FRAMEWORK>`**
 
   Yalnızca belirli bir hedeflenirken proje başvuruları ekler [framework](../../standard/frameworks.md).
+
+* **`--interactive`**
+
+  Durdurmak ve kullanıcı girişi veya eylem (örneğin, kimlik doğrulamasını tamamlamak için) için beklemek için komutu sağlar. .NET Core SDK 3.0 bu yana kullanılabilir.
 
 ## <a name="examples"></a>Örnekler
 

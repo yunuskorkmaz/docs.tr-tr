@@ -1,15 +1,15 @@
 ---
 title: DotNet temizleme komutu
 description: Dotnet temiz komut geçerli dizinde temizler.
-ms.date: 04/14/2019
-ms.openlocfilehash: fa19f1b041e4031082f928135395a5f06ce702e9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 36630c046ff8f1ad8d513b4e64cfb74a8625776b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631815"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422013"
 ---
-# <a name="dotnet-clean"></a>DotNet Temizle
+# <a name="dotnet-clean"></a>dotnet clean
 
 **Bu konu için geçerlidir: ✓** .NET Core SDK'sı 1.x ve sonraki sürümler
 
@@ -24,7 +24,8 @@ ms.locfileid: "65631815"
 ## <a name="synopsis"></a>Synopsis
 
 ```
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+    [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -55,6 +56,10 @@ MSBuild proje veya çözüm temizlenemedi. Bir proje veya çözüm dosyası beli
 * **`--interactive`**
 
   Durdurmak ve kullanıcı girişi ya da eylem için beklemek için komutu sağlar. Örneğin, kimlik doğrulamasını tamamlamak için. .NET Core SDK 3.0 bu yana kullanılabilir.
+
+* **`--nologo`**
+
+  Başlangıç başlığını veya telif hakkı iletisini görüntülemez. .NET Core SDK 3.0 bu yana kullanılabilir.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 

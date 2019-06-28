@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cc4b691763c1aff4bacc2935a0a6cf32c880180
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032805"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422610"
 ---
 # <a name="runtime-callable-wrapper"></a>Çalışma Zamanı Aranabilir Sarmalayıcısı
 Ortak dil çalışma zamanı, COM nesneleri çalışma zamanı çağrılabilir sarmalayıcı (RCW) adlı bir ara sunucu aracılığıyla kullanıma sunar. RCW, .NET istemcileri için normal bir nesne görünmesine karşın, birincil bir .NET istemcisi ve COM nesnesi arasındaki çağrıların sıralamakta işlevidir.  
@@ -24,7 +24,7 @@ Ortak dil çalışma zamanı, COM nesneleri çalışma zamanı çağrılabilir s
 
 Aşağıdaki görüntüde, çalışma zamanı çağrılabilir sarmalayıcı COM nesnelerine erişme işlemi gösterilmektedir:
 
- ![COM nesneleri throug RCW erişme işlemi.](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
+ ![COM nesneleri RCW erişme işlemi.](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
 
  Türetilmiş bir tür kitaplığından meta verileri kullanarak, çalışma zamanı hem çağrılan COM nesnesi hem de bu nesne için bir sarmalayıcı oluşturur. Her RCW arabirim işaretçilerini sarmalar ve RCW artık gerekli olmadığında, başvuru COM nesnesi üzerinde serbest COM nesne üzerinde bir önbelleğini korur. Çalışma zamanı üzerinde RCW atık toplama gerçekleştirir.  
   

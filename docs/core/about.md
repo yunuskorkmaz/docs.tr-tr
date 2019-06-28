@@ -3,12 +3,12 @@ title: .NET Core hakkında
 description: .NET Core hakkında bilgi edinin.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: fb6088bcadcdc9c28699446df035b899485c406d
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: d81c6ad15c12d7bb1e866aef3bd1e799d5b62cde
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003753"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421879"
 ---
 # <a name="about-net-core"></a>.NET Core hakkında
 
@@ -30,7 +30,7 @@ C#, Visual Basic ve F# diller için .NET Core uygulamaları ve kitaplıkları ya
 
 .NET core, birkaçını izleyin birçok senaryo için API'leri kullanıma sunar:
 
-- Temel türler, gibi [bool](../csharp/language-reference/keywords/bool.md) ve [int](../csharp/language-reference/keywords/int.md).
+- Temel türler, gibi [bool](../csharp/language-reference/keywords/bool.md) ve [int](../csharp/language-reference/builtin-types/integral-numeric-types.md).
 - Koleksiyonları gibi <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Gibi yardımcı programı türleri <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>, ve <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Veri türleri, aşağıdaki gibi <xref:System.Data.DataSet?displayProperty=nameWithType>, ve [olan DB](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
