@@ -19,61 +19,61 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 0e6edf9bcc0954bf06e76b238b2bb07dea040a9c
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 5b6668e20e4d69b7d6bdf3e6283574f1b974ef54
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347893"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423964"
 ---
-# <a name="comparison-operators-c-reference"></a><span data-ttu-id="dc52d-103">Karşılaştırma işleçleri (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="dc52d-103">Comparison operators (C# reference)</span></span>
+# <a name="comparison-operators-c-reference"></a><span data-ttu-id="150bf-103">Karşılaştırma işleçleri (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="150bf-103">Comparison operators (C# reference)</span></span>
 
-<span data-ttu-id="dc52d-104">[ `<` (Küçüktür)](#less-than-operator-), [ `>` (büyüktür)](#greater-than-operator-), [ `<=` (küçüktür veya eşittir)](#less-than-or-equal-operator-), ve [ `>=` () büyüktür veya eşittir)](#greater-than-or-equal-operator-) karşılaştırması, işlenenleri Karşılaştırma işleçleri olarak ilişkisel'da bilinir.</span><span class="sxs-lookup"><span data-stu-id="dc52d-104">The [`<` (less than)](#less-than-operator-), [`>` (greater than)](#greater-than-operator-), [`<=` (less than or equal)](#less-than-or-equal-operator-), and [`>=` (greater than or equal)](#greater-than-or-equal-operator-) comparison, also known as relational, operators compare their operands.</span></span> <span data-ttu-id="dc52d-105">Tüm bu işleçleri destekler [integral](../keywords/integral-types-table.md) ve [kayan nokta](../keywords/floating-point-types-table.md) sayısal türler.</span><span class="sxs-lookup"><span data-stu-id="dc52d-105">Those operators support all [integral](../keywords/integral-types-table.md) and [floating-point](../keywords/floating-point-types-table.md) numeric types.</span></span>
+<span data-ttu-id="150bf-104">[ `<` (Küçüktür)](#less-than-operator-), [ `>` (büyüktür)](#greater-than-operator-), [ `<=` (küçüktür veya eşittir)](#less-than-or-equal-operator-), ve [ `>=` () büyüktür veya eşittir)](#greater-than-or-equal-operator-) karşılaştırması, işlenenleri Karşılaştırma işleçleri olarak ilişkisel'da bilinir.</span><span class="sxs-lookup"><span data-stu-id="150bf-104">The [`<` (less than)](#less-than-operator-), [`>` (greater than)](#greater-than-operator-), [`<=` (less than or equal)](#less-than-or-equal-operator-), and [`>=` (greater than or equal)](#greater-than-or-equal-operator-) comparison, also known as relational, operators compare their operands.</span></span> <span data-ttu-id="150bf-105">Tüm bu işleçleri destekler [integral](../builtin-types/integral-numeric-types.md) ve [kayan nokta](../keywords/floating-point-types-table.md) sayısal türler.</span><span class="sxs-lookup"><span data-stu-id="150bf-105">Those operators support all [integral](../builtin-types/integral-numeric-types.md) and [floating-point](../keywords/floating-point-types-table.md) numeric types.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="dc52d-106">İçin `==`, `<`, `>`, `<=`, ve `>=` herhangi işlenenden değilse, birkaç işleçleri (<xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType>), işlem sonucu `false`.</span><span class="sxs-lookup"><span data-stu-id="dc52d-106">For the `==`, `<`, `>`, `<=`, and `>=` operators, if any of the operands is not a number (<xref:System.Double.NaN?displayProperty=nameWithType> or <xref:System.Single.NaN?displayProperty=nameWithType>), the result of operation is `false`.</span></span> <span data-ttu-id="dc52d-107">Bu anlamına `NaN` değerdir ne büyük, küçük ya da diğer eşit `double` (veya `float`) dahil olmak üzere, değer `NaN`.</span><span class="sxs-lookup"><span data-stu-id="dc52d-107">That means that the `NaN` value is neither greater than, less than, nor equal to any other `double` (or `float`) value, including `NaN`.</span></span> <span data-ttu-id="dc52d-108">Daha fazla bilgi ve örnekler için bkz. <xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType> başvurusu makalesinde.</span><span class="sxs-lookup"><span data-stu-id="dc52d-108">For more information and examples, see the <xref:System.Double.NaN?displayProperty=nameWithType> or <xref:System.Single.NaN?displayProperty=nameWithType> reference article.</span></span>
+> <span data-ttu-id="150bf-106">İçin `==`, `<`, `>`, `<=`, ve `>=` herhangi işlenenden değilse, birkaç işleçleri (<xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType>), işlem sonucu `false`.</span><span class="sxs-lookup"><span data-stu-id="150bf-106">For the `==`, `<`, `>`, `<=`, and `>=` operators, if any of the operands is not a number (<xref:System.Double.NaN?displayProperty=nameWithType> or <xref:System.Single.NaN?displayProperty=nameWithType>), the result of operation is `false`.</span></span> <span data-ttu-id="150bf-107">Bu anlamına `NaN` değerdir ne büyük, küçük ya da diğer eşit `double` (veya `float`) dahil olmak üzere, değer `NaN`.</span><span class="sxs-lookup"><span data-stu-id="150bf-107">That means that the `NaN` value is neither greater than, less than, nor equal to any other `double` (or `float`) value, including `NaN`.</span></span> <span data-ttu-id="150bf-108">Daha fazla bilgi ve örnekler için bkz. <xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType> başvurusu makalesinde.</span><span class="sxs-lookup"><span data-stu-id="150bf-108">For more information and examples, see the <xref:System.Double.NaN?displayProperty=nameWithType> or <xref:System.Single.NaN?displayProperty=nameWithType> reference article.</span></span>
 
-<span data-ttu-id="dc52d-109">Numaralandırma türleri, Karşılaştırma işleçleri de destekler.</span><span class="sxs-lookup"><span data-stu-id="dc52d-109">Enumeration types also support comparison operators.</span></span> <span data-ttu-id="dc52d-110">Aynı işlenenleri için [enum](../keywords/enum.md) türü, temel alınan integral türünün karşılık gelen değerleri karşılaştırılır.</span><span class="sxs-lookup"><span data-stu-id="dc52d-110">For operands of the same [enum](../keywords/enum.md) type, the corresponding values of the underlying integral type are compared.</span></span>
+<span data-ttu-id="150bf-109">Numaralandırma türleri, Karşılaştırma işleçleri de destekler.</span><span class="sxs-lookup"><span data-stu-id="150bf-109">Enumeration types also support comparison operators.</span></span> <span data-ttu-id="150bf-110">Aynı işlenenleri için [enum](../keywords/enum.md) türü, temel alınan integral türünün karşılık gelen değerleri karşılaştırılır.</span><span class="sxs-lookup"><span data-stu-id="150bf-110">For operands of the same [enum](../keywords/enum.md) type, the corresponding values of the underlying integral type are compared.</span></span>
 
-<span data-ttu-id="dc52d-111">[ `==` Ve `!=` işleçleri](equality-operators.md) işlenenlerini eşit olup olmadığını denetleyin.</span><span class="sxs-lookup"><span data-stu-id="dc52d-111">The [`==` and `!=` operators](equality-operators.md) check if their operands are equal or not.</span></span>
+<span data-ttu-id="150bf-111">[ `==` Ve `!=` işleçleri](equality-operators.md) işlenenlerini eşit olup olmadığını denetleyin.</span><span class="sxs-lookup"><span data-stu-id="150bf-111">The [`==` and `!=` operators](equality-operators.md) check if their operands are equal or not.</span></span>
 
-## <a name="less-than-operator-"></a><span data-ttu-id="dc52d-112">Küçüktür işleci \<</span><span class="sxs-lookup"><span data-stu-id="dc52d-112">Less than operator \<</span></span>
+## <a name="less-than-operator-"></a><span data-ttu-id="150bf-112">Küçüktür işleci \<</span><span class="sxs-lookup"><span data-stu-id="150bf-112">Less than operator \<</span></span>
 
-<span data-ttu-id="dc52d-113">`<` İşleci döndürür `true` sol işleneni, sağ işlenen altındaysa `false` Aksi takdirde:</span><span class="sxs-lookup"><span data-stu-id="dc52d-113">The `<` operator returns `true` if its left-hand operand is less than its right-hand operand, `false` otherwise:</span></span>
+<span data-ttu-id="150bf-113">`<` İşleci döndürür `true` sol işleneni, sağ işlenen altındaysa `false` Aksi takdirde:</span><span class="sxs-lookup"><span data-stu-id="150bf-113">The `<` operator returns `true` if its left-hand operand is less than its right-hand operand, `false` otherwise:</span></span>
 
 [!code-csharp-interactive[less than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
 
-## <a name="greater-than-operator-"></a><span data-ttu-id="dc52d-114">Büyüktür işleci ></span><span class="sxs-lookup"><span data-stu-id="dc52d-114">Greater than operator ></span></span>
+## <a name="greater-than-operator-"></a><span data-ttu-id="150bf-114">Büyüktür işleci ></span><span class="sxs-lookup"><span data-stu-id="150bf-114">Greater than operator ></span></span>
 
-<span data-ttu-id="dc52d-115">`>` İşleci döndürür `true` sol işleneni, sağ işlenen büyükse `false` Aksi takdirde:</span><span class="sxs-lookup"><span data-stu-id="dc52d-115">The `>` operator returns `true` if its left-hand operand is greater than its right-hand operand, `false` otherwise:</span></span>
+<span data-ttu-id="150bf-115">`>` İşleci döndürür `true` sol işleneni, sağ işlenen büyükse `false` Aksi takdirde:</span><span class="sxs-lookup"><span data-stu-id="150bf-115">The `>` operator returns `true` if its left-hand operand is greater than its right-hand operand, `false` otherwise:</span></span>
 
 [!code-csharp-interactive[greater than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
 
-## <a name="less-than-or-equal-operator-"></a><span data-ttu-id="dc52d-116">Küçüktür veya eşittir işleci \<=</span><span class="sxs-lookup"><span data-stu-id="dc52d-116">Less than or equal operator \<=</span></span>
+## <a name="less-than-or-equal-operator-"></a><span data-ttu-id="150bf-116">Küçüktür veya eşittir işleci \<=</span><span class="sxs-lookup"><span data-stu-id="150bf-116">Less than or equal operator \<=</span></span>
 
-<span data-ttu-id="dc52d-117">`<=` İşleci döndürür `true` sol işleneni, sağ işlenen küçük veya ona eşit olup olmadığını `false` Aksi takdirde:</span><span class="sxs-lookup"><span data-stu-id="dc52d-117">The `<=` operator returns `true` if its left-hand operand is less than or equal to its right-hand operand, `false` otherwise:</span></span>
+<span data-ttu-id="150bf-117">`<=` İşleci döndürür `true` sol işleneni, sağ işlenen küçük veya ona eşit olup olmadığını `false` Aksi takdirde:</span><span class="sxs-lookup"><span data-stu-id="150bf-117">The `<=` operator returns `true` if its left-hand operand is less than or equal to its right-hand operand, `false` otherwise:</span></span>
 
 [!code-csharp-interactive[less than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
 
-## <a name="greater-than-or-equal-operator-"></a><span data-ttu-id="dc52d-118">Büyüktür veya eşittir işleci > =</span><span class="sxs-lookup"><span data-stu-id="dc52d-118">Greater than or equal operator >=</span></span>
+## <a name="greater-than-or-equal-operator-"></a><span data-ttu-id="150bf-118">Büyüktür veya eşittir işleci > =</span><span class="sxs-lookup"><span data-stu-id="150bf-118">Greater than or equal operator >=</span></span>
 
-<span data-ttu-id="dc52d-119">`>=` İşleci döndürür `true` sol işlenenin değerinden büyük veya eşittir, sağ işlenen ise `false` Aksi takdirde:</span><span class="sxs-lookup"><span data-stu-id="dc52d-119">The `>=` operator returns `true` if its left-hand operand is greater than or equal to its right-hand operand, `false` otherwise:</span></span>
+<span data-ttu-id="150bf-119">`>=` İşleci döndürür `true` sol işlenenin değerinden büyük veya eşittir, sağ işlenen ise `false` Aksi takdirde:</span><span class="sxs-lookup"><span data-stu-id="150bf-119">The `>=` operator returns `true` if its left-hand operand is greater than or equal to its right-hand operand, `false` otherwise:</span></span>
 
 [!code-csharp-interactive[greater than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
 
-## <a name="operator-overloadability"></a><span data-ttu-id="dc52d-120">İşleç overloadability</span><span class="sxs-lookup"><span data-stu-id="dc52d-120">Operator overloadability</span></span>
+## <a name="operator-overloadability"></a><span data-ttu-id="150bf-120">İşleç overloadability</span><span class="sxs-lookup"><span data-stu-id="150bf-120">Operator overloadability</span></span>
 
-<span data-ttu-id="dc52d-121">Kullanıcı tanımlı bir tür için [aşırı](../keywords/operator.md) `<`, `>`, `<=`, ve `>=` işleçleri.</span><span class="sxs-lookup"><span data-stu-id="dc52d-121">A user-defined type can [overload](../keywords/operator.md) the `<`, `>`, `<=`, and `>=` operators.</span></span>
+<span data-ttu-id="150bf-121">Kullanıcı tanımlı bir tür için [aşırı](../keywords/operator.md) `<`, `>`, `<=`, ve `>=` işleçleri.</span><span class="sxs-lookup"><span data-stu-id="150bf-121">A user-defined type can [overload](../keywords/operator.md) the `<`, `>`, `<=`, and `>=` operators.</span></span>
 
-<span data-ttu-id="dc52d-122">Bir tür birini aşırı `<` veya `>` operatörleri onu gerekir aşırı yükleme hem de `<` ve `>`.</span><span class="sxs-lookup"><span data-stu-id="dc52d-122">If a type overloads one of the `<` or `>` operators, it must overload both `<` and `>`.</span></span> <span data-ttu-id="dc52d-123">Bir tür birini aşırı `<=` veya `>=` operatörleri onu gerekir aşırı yükleme hem de `<=` ve `>=`.</span><span class="sxs-lookup"><span data-stu-id="dc52d-123">If a type overloads one of the `<=` or `>=` operators, it must overload both `<=` and `>=`.</span></span>
+<span data-ttu-id="150bf-122">Bir tür birini aşırı `<` veya `>` operatörleri onu gerekir aşırı yükleme hem de `<` ve `>`.</span><span class="sxs-lookup"><span data-stu-id="150bf-122">If a type overloads one of the `<` or `>` operators, it must overload both `<` and `>`.</span></span> <span data-ttu-id="150bf-123">Bir tür birini aşırı `<=` veya `>=` operatörleri onu gerekir aşırı yükleme hem de `<=` ve `>=`.</span><span class="sxs-lookup"><span data-stu-id="150bf-123">If a type overloads one of the `<=` or `>=` operators, it must overload both `<=` and `>=`.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="dc52d-124">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="dc52d-124">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="150bf-124">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="150bf-124">C# language specification</span></span>
 
-<span data-ttu-id="dc52d-125">Daha fazla bilgi için [ilişkisel ve tür testi işleçleri](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="dc52d-125">For more information, see the [Relational and type-testing operators](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+<span data-ttu-id="150bf-125">Daha fazla bilgi için [ilişkisel ve tür testi işleçleri](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="150bf-125">For more information, see the [Relational and type-testing operators](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="dc52d-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dc52d-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="150bf-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="150bf-126">See also</span></span>
 
-- [<span data-ttu-id="dc52d-127">C#başvuru</span><span class="sxs-lookup"><span data-stu-id="dc52d-127">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="dc52d-128">C# işleçleri</span><span class="sxs-lookup"><span data-stu-id="dc52d-128">C# operators</span></span>](index.md)
+- [<span data-ttu-id="150bf-127">C#başvuru</span><span class="sxs-lookup"><span data-stu-id="150bf-127">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="150bf-128">C# işleçleri</span><span class="sxs-lookup"><span data-stu-id="150bf-128">C# operators</span></span>](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
-- [<span data-ttu-id="dc52d-129">Eşitlik işleçleri</span><span class="sxs-lookup"><span data-stu-id="dc52d-129">Equality operators</span></span>](equality-operators.md)
+- [<span data-ttu-id="150bf-129">Eşitlik işleçleri</span><span class="sxs-lookup"><span data-stu-id="150bf-129">Equality operators</span></span>](equality-operators.md)
