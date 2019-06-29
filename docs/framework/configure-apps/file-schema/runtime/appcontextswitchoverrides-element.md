@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04f31748fd53fe3281102fcadcc1e56ea3cc1109
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 39060d503a006ab292818b58a6fa71f44dee68a0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307084"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423324"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > öğesi
 Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.AppContext> yeni işlevselliği için bir geri çevirme mekanizma sağlar sınıfını.  
@@ -99,7 +99,7 @@ Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Denetimleri olmadığını değerini [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) özelliği bir [IntPtr](xref:System.IntPtr) pencere bellek konumunu temsil işlemek veya bir pencere tutucu (HWND) olup. Daha fazla bilgi için [azaltma: HWND CspParameters.ParentWindowHandle bekliyor](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value). |.NET framework 4.7|   
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|Yönetilen bir şifreleme kullanımını FIPS modunda oluşturur sınıfları olup olmadığını denetleyen bir <xref:System.Security.Cryptography.CryptographicException> (`true`) veya sistem kitaplıkları uygulamasına bağlıdır (`false`).|.NET Framework 4.8|
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Bazı SignedCMS işlemleri için varsayılan, SHA1 veya SHA256 olup olmadığını belirler.<br>Microsoft, çakışma sorunları nedeniyle SHA1, SHA256 önerir.|.NET framework 4.7.1|
-|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|Denetimleri olmadığını <xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithtype> yöntemi doğru işletim sistemi tarafından desteklenen tüm adlandırılmış eğrileri işler (`false`) veya eski davranışa geri döner.|.NET Framework 4.8|
+|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|Denetimleri olmadığını <xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithType> yöntemi doğru işletim sistemi tarafından desteklenen tüm adlandırılmış eğrileri işler (`false`) veya eski davranışa geri döner.|.NET Framework 4.8|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|Bazı SignedXML işlemleri için varsayılan, SHA1 veya SHA256 olup olmadığını belirler.<br>Microsoft, çakışma sorunları nedeniyle SHA1, SHA256 önerir.|.NET framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Belirler olmadığını `TransportWithMessageCredential` güvenlik modu sağlar imzasız iletilerle "Kime" üst bilgisinde. Katılımı anahtar budur. Daha fazla bilgi için [.NET Framework 4.6.1 çalışma zamanı değişiklikleri](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Denetimleri olmadığını <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> Oluşturucusu oluşturur bir <xref:System.ArgumentException> öğeler ise `null`.|.NET framework 4.7.1| 
@@ -118,7 +118,7 @@ Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Windows Presentation Foundation eski bir algoritma geçerli olup olmadığını belirler (`true`) veya yeni bir algoritma (`false`) için alan ayırma, \*-sütun. Daha fazla bilgi için [azaltma: Kılavuz denetim alanı ayırma yıldız sütunlara](../../../migration-guide/retargeting/4.6.2-4.7.md#wpf-grid-allocation-of-space-to-star-columns). |.NET framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Değişti olayı denetimleri olup bir seçici veya bir sekme denetimini her zaman seçimi tetiklenmeden önce seçili değer özelliğinin değerini güncelleştirir.|.NET framework 4.7.1|
 |`Switch.System.Windows.Controls.Text.`<br/>`UseAdornerForTextboxSelectionRendering`|Donatıcı olmayan temel seçimi işleme için kullanılabilir olup olmadığını belirler <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.PasswordBox> occluded metin önlemek için denetimleri (`false`), veya metin yalnızca donatıcı katmanındaki olup işlenir (`true`).|.NET Framework 4.7.2|
-|`Switch.System.Windows.Data.Binding.`<br/>`IListIndexerHidesCustomIndexer`|Özel IList dizin oluşturucular yanlış kullanılıp kullanılmadığını denetler (`false`) veya doğru (`true`) tarafından <xref:System.Windows.Data.Binding?displayProperty=nameWithtype> sınıfı.|.NET Framework 4.8|
+|`Switch.System.Windows.Data.Binding.`<br/>`IListIndexerHidesCustomIndexer`|Özel IList dizin oluşturucular yanlış kullanılıp kullanılmadığını denetler (`false`) veya doğru (`true`) tarafından <xref:System.Windows.Data.Binding?displayProperty=nameWithType> sınıfı.|.NET Framework 4.8|
 |`Switch.System.Windows.DoNotScaleForDpiChanges`|DPI bir sistem üzerinde değişiklikler olup olmadığını belirler (değerini `false`) veya İzleyici başına temelinde (değerini `true`).|.NET Framework 4.6.2|
 |`Switch.System.Windows.`<br/>`DoNotUsePresentationDpiCapabilityTier2OrGreater`|Denetimleri olmadığını denetimlerinde boyutlandırma, geliştirmeleri bir <xref:System.Windows.Interop.HwndHost?displayProperty=nameWithType> WPF İzleyici başına kullanan modunda çalıştırıldığında devre dışı bırakıldı (`true`) veya etkin (`false`).|.NET Framework 4.8|
 |`Switch.System.Windows.Forms.`<br/>`DomainUpDown.UseLegacyScrolling`|Geliştirici özel olarak işlemek gereken olup olmadığını belirleyen <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> denetim metin mevcut olduğunda eylem. `true` İşlenecek <xref:System.Windows.Forms.DomainUpDown.UpButton> eylem; `false` için <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> ve <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> düzgün bir şekilde eşitlenmiş olması için Eylemler.|.NET Framework 4.7.2|

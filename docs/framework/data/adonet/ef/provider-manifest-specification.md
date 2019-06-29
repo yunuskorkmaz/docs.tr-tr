@@ -2,12 +2,12 @@
 title: Sağlayıcı Bildirimi Belirtimi
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 0f3eaa73a26c3f8519e1c168ab2e2968ed4ab28d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641161"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422712"
 ---
 # <a name="provider-manifest-specification"></a>Sağlayıcı Bildirimi Belirtimi
 Bu bölümde, nasıl bir veri deposu sağlayıcısı türleri ve işlevleri veri deposunda destekleyebileceğini açıklanmaktadır.  
@@ -83,9 +83,9 @@ Bu bölümde, nasıl bir veri deposu sağlayıcısı türleri ve işlevleri veri
  Sağlayıcı bildirimi (storeıtemcollection'ın) meta verileri Store yükleyicisi tarafından yüklenen, veri kullanılarak bağlantı veya sağlayıcı bildirimi belirteci depolama.  
   
 #### <a name="using-a-data-store-connection"></a>Data Store bağlantı kullanma  
- Verileri depolamak bağlantısı kullanılabilir, DbProvderServices.GetProviderManifestToken DbProviderManifest döndüren GetProviderManifest yöntemine geçirilen bir belirteç döndürecek şekilde çağırın. Bu yöntem, sağlayıcının uygulanmasına GetDbProviderManifestToken atar.  
+ Veri deposu bağlantısı kullanılabilir duruma geldiğinde çağrı <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> geçirilen bir belirteç döndürecek şekilde <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> döndüren yöntemi <xref:System.Data.Common.DbProviderManifest>. Bu yöntem, sağlayıcının uygulamasına yönelik temsilci `GetDbProviderManifestToken`.  
   
-```  
+```csharp
 public string GetProviderManifestToken(DbConnection connection);  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  

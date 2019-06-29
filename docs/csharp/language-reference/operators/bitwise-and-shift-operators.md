@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 1f98435aba6994aaca76127cc20b5ffa29df455f
-ms.sourcegitcommit: d9c4808739c8c606957dd0964d952b98ea7b6533
+ms.openlocfilehash: 8068ec09f0c7d05d6d711e4e7a607b6183727b41
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67349768"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424004"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bit düzeyinde ve kaydırma işleçleri (C# Başvurusu)
 
-Aşağıdaki işleçler bit düzeyinde gerçekleştirmek veya işlenenleri işlemleriyle kaydırmak [tam sayı türleri](../keywords/integral-types-table.md):
+Aşağıdaki işleçler bit düzeyinde gerçekleştirmek veya işlenenleri işlemleriyle kaydırmak [tam sayı türleri](../builtin-types/integral-numeric-types.md):
 
 - Birli [ `~` (bit düzeyinde tamamlayıcı)](#bitwise-complement-operator-) işleci
 - İkili [ `<<` (sola kaydırma)](#left-shift-operator-) ve [ `>>` (sağa kaydırma)](#right-shift-operator-) kaydırma işleçleri
@@ -82,11 +82,11 @@ Sağa kaydırma işlemi aşağıdaki örnekte gösterildiği gibi alt sıra bitl
 
 Yüksek düzeyli boş bit konumları sol işlenenin türü üzerinde aşağıdaki gibi temel ayarlanır:
 
-- Sol işlenen türü ise [int](../keywords/int.md) veya [uzun](../keywords/long.md), sağa kaydırma işleci gerçekleştiren bir *aritmetik* shift: en anlamlı biti (imza biti) değeri sol işlenen, yüksek sıralı boş bit konumlarına yayılır. Diğer bir deyişle, sol işlenen negatif ise yüksek düzeyli boş bit konumları sıfır olarak ayarlanır ve negatif ise birine ayarlayın.
+- Sol işlenen türü ise [int](../builtin-types/integral-numeric-types.md) veya [uzun](../builtin-types/integral-numeric-types.md), sağa kaydırma işleci gerçekleştiren bir *aritmetik* shift: en anlamlı biti (imza biti) değeri sol işlenen, yüksek sıralı boş bit konumlarına yayılır. Diğer bir deyişle, sol işlenen negatif ise yüksek düzeyli boş bit konumları sıfır olarak ayarlanır ve negatif ise birine ayarlayın.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- Sol işlenen türü ise [uint](../keywords/uint.md) veya [ulong](../keywords/ulong.md), sağa kaydırma işleci gerçekleştiren bir *mantıksal* shift: yüksek düzeyli boş bit konumları her zaman sıfır olarak ayarlayın.
+- Sol işlenen türü ise [uint](../builtin-types/integral-numeric-types.md) veya [ulong](../builtin-types/integral-numeric-types.md), sağa kaydırma işleci gerçekleştiren bir *mantıksal* shift: yüksek düzeyli boş bit konumları her zaman sıfır olarak ayarlayın.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
@@ -158,13 +158,13 @@ Tam listesi için C# işleçler, öncelik düzeyine göre sıralanmış bkz [ C#
 
 ## <a name="shift-count-of-the-shift-operators"></a>Kaydırma işleçleri kaydırma sayısı
 
-Kaydırma işleçleri için `<<` ve `>>`, sağ işlenenin türünde olmalıdır [int](../keywords/int.md) veya olan bir türü bir [örtülü sayısal dönüştürme önceden tanımlanmış](../keywords/implicit-numeric-conversions-table.md) için `int`.
+Kaydırma işleçleri için `<<` ve `>>`, sağ işlenenin türünde olmalıdır [int](../builtin-types/integral-numeric-types.md) veya olan bir türü bir [örtülü sayısal dönüştürme önceden tanımlanmış](../keywords/implicit-numeric-conversions-table.md) için `int`.
 
 İçin `x << count` ve `x >> count` ifadeleri, gerçek kaydırma sayısı türüne bağlıdır `x` gibi:
 
-- Varsa türünü `x` olduğu [int](../keywords/int.md) veya [uint](../keywords/uint.md), kaydırma sayısı düşük düzey tarafından tanımlanan *beş* sağ işlenenin bit. Kaydırma sayısı gelen diğer bir deyişle, hesaplanan `count & 0x1F` (veya `count & 0b_1_1111`).
+- Varsa türünü `x` olduğu [int](../builtin-types/integral-numeric-types.md) veya [uint](../builtin-types/integral-numeric-types.md), kaydırma sayısı düşük düzey tarafından tanımlanan *beş* sağ işlenenin bit. Kaydırma sayısı gelen diğer bir deyişle, hesaplanan `count & 0x1F` (veya `count & 0b_1_1111`).
 
-- Varsa türünü `x` olduğu [uzun](../keywords/long.md) veya [ulong](../keywords/ulong.md), kaydırma sayısı düşük düzey tarafından tanımlanan *altı* sağ işlenenin bit. Kaydırma sayısı gelen diğer bir deyişle, hesaplanan `count & 0x3F` (veya `count & 0b_11_1111`).
+- Varsa türünü `x` olduğu [uzun](../builtin-types/integral-numeric-types.md) veya [ulong](../builtin-types/integral-numeric-types.md), kaydırma sayısı düşük düzey tarafından tanımlanan *altı* sağ işlenenin bit. Kaydırma sayısı gelen diğer bir deyişle, hesaplanan `count & 0x3F` (veya `count & 0b_11_1111`).
 
 Aşağıdaki örnek, bu davranış gösterir:
 

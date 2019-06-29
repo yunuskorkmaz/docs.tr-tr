@@ -2,12 +2,12 @@
 title: Güvenlik Protokolleri sürüm 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 8114183109befcb77c3bf2b35fe246118da5afde
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 71855b73bb08d5edef05747dcff9e1ac04fb951f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586883"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425094"
 ---
 # <a name="security-protocols-version-10"></a>Güvenlik Protokolleri sürüm 1.0
 Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksinimlerini Mesajlaşma kapsayan Web Hizmetleri güvenlik mekanizmaları sağlar. Bu bölümde Windows Communication Foundation (WCF) sürüm 1.0 ayrıntılarını açıklar (uygulanan <xref:System.ServiceModel.Channels.SecurityBindingElement>) güvenlik protokollerini aşağıdaki Web Hizmetleri için.  
@@ -45,7 +45,7 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
 |KerberosOverTransport|Windows|X509|Taşıma|  
 |IssuedTokenOverTransport|Federasyon|X509|Taşıma|  
 |SspiNegotiatedOverTransport|Windows SSPI anlaşması|Windows SSPI anlaşması|Taşıma|  
-|AnonymousForCertificate|None|X509|`Message`|  
+|AnonymousForCertificate|Yok.|X509|`Message`|  
 |UserNameForCertificate|Kullanıcı adı/parola|X509|`Message`|  
 |MutualCertificate|X509|X509|`Message`|  
 |MutualCertificateDuplex|X509|X509|`Message`|  
@@ -53,7 +53,7 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
 |Kerberos|Windows|Windows|`Message`|  
 |IssuedToken|Federasyon|Federasyon|`Message`|  
 |SspiNegotiated|Windows SSPI anlaşması|Windows SSPI anlaşması|`Message`|  
-|AnonymousForSslNegotiated|None|X509, TLS-Nego|`Message`|  
+|AnonymousForSslNegotiated|Yok.|X509, TLS-Nego|`Message`|  
 |UserNameForSslNegotiated|Kullanıcı adı/parola|X509, TLS-Nego|`Message`|  
 |MutualSslNegotiated|X509|X509, TLS-Nego|`Message`|  
 |IssuedTokenForSslNegotiated|Federasyon|X509, TLS-Nego|`Message`|  
@@ -129,7 +129,7 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
  WCF WSS SAML belirteci profilleri 1.0 ve 1.1 için SAML v1.1 belirteçleri destekler. SAML belirteci biçimleri'nın diğer sürümlerinin uygulamak mümkündür.  
   
 ### <a name="15-security-context-token"></a>1.5 güvenlik bağlamı belirteci  
- WCF güvenlik bağlamı belirteci (WS-SecureCoversation sunulan SCT) destekler. SCT SecureConversation içinde de oluşturulan bir güvenlik bağlamı temsil etmek için kullanılan ikili anlaşma TLS ve SSPI protokoller olarak aşağıda açıklanmıştır.  
+ WCF güvenlik bağlamı belirteci (WS-SecureConversation sunulan SCT) destekler. SCT SecureConversation içinde de oluşturulan bir güvenlik bağlamı temsil etmek için kullanılan ikili anlaşma TLS ve SSPI protokoller olarak aşağıda açıklanmıştır.  
   
 ## <a name="2-common-message-security-parameters"></a>2. Ortak ileti güvenlik parametreleri  
   

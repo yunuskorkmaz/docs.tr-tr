@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: cd989b47c87ef32371b45650d531bd8cbeb85032
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 2aee15443172e753846574806565f7804f1716d1
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306948"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423685"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Atama ve tür dönüştürmeleri (C# Programlama Kılavuzu)
 
@@ -38,7 +38,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 ## <a name="implicit-conversions"></a>Örtük dönüşümler
 
- Depolanacak değer kısaltılır veya yuvarlanır olmadan değişkene uygun olduğunda yerleşik sayısal türler için örtük bir dönüştürme yapılabilir. Örneğin, bir değişken türü [uzun](../../../csharp/language-reference/keywords/long.md) (64-bit tamsayı) depolayabileceğiniz değerine herhangi bir [int](../../../csharp/language-reference/keywords/int.md) (32-bit tamsayı) depolayabilir. Aşağıdaki örnekte, derleyici değeri örtük olarak dönüştürür `num` türüne sağ taraftaki `long` giderek önce `bigNum`.  
+ Depolanacak değer kısaltılır veya yuvarlanır olmadan değişkene uygun olduğunda yerleşik sayısal türler için örtük bir dönüştürme yapılabilir. Tam sayı türleri için bu aralığın hedef türü için uygun bir alt kümesi kaynak türü aralığı anlamına gelir. Örneğin, bir değişken türü [uzun](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) (64-bit tamsayı) depolayabileceğiniz değerine herhangi bir [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) (32-bit tamsayı) depolayabilir. Aşağıdaki örnekte, derleyici değeri örtük olarak dönüştürür `num` türüne sağ taraftaki `long` giderek önce `bigNum`.  
   
  [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
@@ -53,7 +53,7 @@ Base b = d; // Always OK.
   
 ## <a name="explicit-conversions"></a>Açık dönüştürmeler
 
- Dönüştürme bilgileri kaybetme riski yapılamazsa, ancak derleyici çağrılır açık bir dönüştürme gerçekleştirmek gerektirir bir *atama*. Bir yayın derleyici, dönüştürme yapmak istediğiniz ve veri kaybı oluşabilir haberdar olduğunuzu açıkça bildiren bir yoludur. Bir dönüştürme gerçekleştirmek için değişkeni ve değer dönüştürülecek önünde parantez içinde için atama türünü belirtin. Aşağıdaki program yayınları bir [çift](../../../csharp/language-reference/keywords/double.md) için bir [int](../../../csharp/language-reference/keywords/int.md). Program yayın olmadan derlemeyecektir.  
+ Dönüştürme bilgileri kaybetme riski yapılamazsa, ancak derleyici çağrılır açık bir dönüştürme gerçekleştirmek gerektirir bir *atama*. Bir yayın derleyici, dönüştürme yapmak istediğiniz ve veri kaybı oluşabilir haberdar olduğunuzu açıkça bildiren bir yoludur. Bir dönüştürme gerçekleştirmek için değişkeni ve değer dönüştürülecek önünde parantez içinde için atama türünü belirtin. Aşağıdaki program yayınları bir [çift](../../../csharp/language-reference/keywords/double.md) için bir [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md). Program yayın olmadan derlemeyecektir.  
   
  [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   

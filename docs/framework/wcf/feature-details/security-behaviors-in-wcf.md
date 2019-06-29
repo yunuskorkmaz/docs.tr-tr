@@ -2,12 +2,12 @@
 title: WCF'de Güvenlik Davranışları
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: dd59bc97c2f4e2516528a6cbdf40b4c44f4b41eb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 53d8fedb5f562dfbc4aec566f8d0c442b255e1c9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650244"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424686"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF'de Güvenlik Davranışları
 Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranışını hizmet düzeyinde veya uç nokta düzeyine değiştirin. (Genel olarak, davranışları hakkında daha fazla bilgi için bkz [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Güvenlik davranışları* kimlik bilgileri, kimlik doğrulaması, yetkilendirme denetime izin vermek ve günlüklerini denetleme. Programlama veya yapılandırma yoluyla davranışları kullanabilirsiniz. Bu konu, aşağıdaki davranışları güvenlik işlevleri için ilgili yapılandırma üzerinde durulmaktadır:  
@@ -114,7 +114,7 @@ Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranı
  </endpointBehaviors>  
 ```  
   
-#### <a name="clientcertifictate-element"></a>\<clientCertifictate > öğesi  
+#### <a name="clientcertificate-element"></a>\<clientCertificate > öğesi  
  Bu öğe istemcinin kimliğini doğrulamak için kullanılan sertifika ayarlayın. Daha fazla bilgi için [nasıl yapılır: İstemci kimlik bilgileri değerlerini belirtme](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 #### <a name="httpdigest"></a>\<httpDigest >  

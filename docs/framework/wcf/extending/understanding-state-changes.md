@@ -2,12 +2,12 @@
 title: Durum Değişikliklerini Anlama
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 858da2a88c17920910c05966bb3b211d754fb278
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771620"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424772"
 ---
 # <a name="understanding-state-changes"></a>Durum Değişikliklerini Anlama
 Bu konuda, durumları ve kanalları sahip geçişleri, yapı kanal durumları ve bunların nasıl uygulanacağını kullanılan türleri açıklanmaktadır.  
@@ -28,7 +28,7 @@ Bu konuda, durumları ve kanalları sahip geçişleri, yapı kanal durumları ve
   
  Her <xref:System.ServiceModel.ICommunicationObject> Created durumundaki out başlatır. Bu durumda, uygulamanın nesne özelliklerini ayarlayarak yapılandırabilirsiniz. Dışında oluşturulan bir durumda bir nesne eklendiğinde, sabit olarak değerlendirilir.  
   
- ![Kanal durumu transitition](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
+ ![Kanal durumu geçişi](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 Şekil 1. ICommunicationObject Durum makinesi.  
   
  Windows Communication Foundation (WCF) adlı bir soyut temel sınıf sağlar <xref:System.ServiceModel.Channels.CommunicationObject> uygulayan <xref:System.ServiceModel.ICommunicationObject> ve kanal Durum makinesi. Aşağıdaki grafikte özgü bir değiştirilme diyagramıdır <xref:System.ServiceModel.Channels.CommunicationObject>. Ek olarak <xref:System.ServiceModel.ICommunicationObject> Durum makinesi ek zaman zamanlamasını gösterir <xref:System.ServiceModel.Channels.CommunicationObject> yöntemi çağrılır.  

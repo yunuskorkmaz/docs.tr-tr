@@ -2,12 +2,12 @@
 title: <messageSenderAuthentication> öğesi
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: 410fffd541926b9a2e75c04d26a2a1e08a262939
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 804c280bcdb0fecc87f71121b7d95b5fd0268de9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764094"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423117"
 ---
 # <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication > öğesi
 Eşler arası ileti gönderenler için kimlik doğrulama seçeneklerini belirtir.  
@@ -38,10 +38,10 @@ Eşler arası ileti gönderenler için kimlik doğrulama seçeneklerini belirtir
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|customCertificateValidatorType|Tür ve özel bir tür doğrulamak için kullanılan bir derleme. Bu öznitelik olduğunda ayarlanmalıdır `certificateValidationMode` ayarlanır `Custom`.|  
-|certifcateValidationMode|Kimlik bilgilerini doğrulamak için kullanılan üç moddan birini belirtir. Varsa kümesine `Custom`, ardından bir `customCertificateValidator` de sağlanmalıdır.|  
-|revocationMode|İptal edilen sertifikalar listelerini (CRL) denetlemek için kullanılan modlardan biri.|  
-|trustedStoreLocation|İki sistem depolama konumlarından biri: `LocalMachine` veya `CurrentUser`. Bir hizmet sertifikası istemciye anlaşıldığında, bu değer kullanılır. Doğrulama işlemi gerçekleştirildiğinde karşı **güvenilir kişiler** depolamak belirtilen depolama konumu.|  
+|`customCertificateValidatorType`|Tür ve özel bir tür doğrulamak için kullanılan bir derleme. Bu öznitelik olduğunda ayarlanmalıdır `certificateValidationMode` ayarlanır `Custom`.|  
+|`certificateValidationMode`|Kimlik bilgilerini doğrulamak için kullanılan üç moddan birini belirtir. Varsa kümesine `Custom`, ardından bir `customCertificateValidator` de sağlanmalıdır.|  
+|`revocationMode`|İptal edilen sertifikalar listelerini (CRL) denetlemek için kullanılan modlardan biri.|  
+|`trustedStoreLocation`|İki sistem depolama konumlarından biri: `LocalMachine` veya `CurrentUser`. Bir hizmet sertifikası istemciye anlaşıldığında, bu değer kullanılır. Doğrulama işlemi gerçekleştirildiğinde karşı **güvenilir kişiler** depolamak belirtilen depolama konumu.|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType özniteliği  
   

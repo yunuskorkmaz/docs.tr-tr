@@ -1,19 +1,19 @@
 ---
-title: Framework kitaplıkları
+title: Framework Kitaplıkları
 description: Birçok genel ve uygulamaya özgü türleri, algoritmaları ve yardımcı işlevleri için kitaplıkları uygulamaları nasıl sağladığını öğrenin.
 author: richlander
 ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 3e4fed8ddde007eb9ce233eea942d6c052f0f2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1e825efcb2a352c823391fb0dad3d566189da001
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615175"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425533"
 ---
-# <a name="framework-libraries"></a>Framework kitaplıkları
+# <a name="framework-libraries"></a>Framework Kitaplıkları
 
 .NET sınıf kitaplıkları için taban sınıfı kitaplıkları (çekirdek kümesi) veya framework sınıf kitaplıkları (eksiksiz) adlandırılır, inanılmaz bir standart kümesine sahiptir. Bu kitaplıklar birçok genel ve uygulamaya özgü türleri, algoritmaları ve yardımcı işlevleri için uygulamalar sağlar. Bilgi işlem görevlerini geniş bir kümesi için kullanımı kolay kullanıma hazır kitaplıkları sağlama framework sınıf kitaplıkları üzerinde hem ticari hem de topluluk kitaplıklar oluşturun.
 
@@ -28,11 +28,11 @@ BCL en temel türleri ve yardımcı işlevleri sağlar ve diğer tüm .NET sın�
 .NET (farklı derecelerde) bütün programlarda kullanılan ilkel türleri kümesi içerir. Bu türler, sayılar, dizeler, bayt ve rastgele nesneleri gibi verileri içerir. C# Dili anahtar sözcükleri bu türleri içerir. Bu tür bir örnek kümesini, eşleştirme ile aşağıda verilmiştir C# anahtar sözcükleri.
 
 * <xref:System.Object?displayProperty=nameWithType> ([nesne](../csharp/language-reference/keywords/object.md))-temel sınıfta ultimate CLR tür sistemi. Tür hiyerarşisi köküdür.
-* <xref:System.Int16?displayProperty=nameWithType> ([kısa](../csharp/language-reference/keywords/short.md))-bir 16-bit imzalı tamsayı türü. İmzasız <xref:System.UInt16> de bulunur.
-* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md))-bir 32-bit imzalı tamsayı türü. İmzasız [UInt32](../csharp/language-reference/keywords/uint.md) de bulunur.
+* <xref:System.Int16?displayProperty=nameWithType> ([kısa](../csharp/language-reference/builtin-types/integral-numeric-types.md))-bir 16-bit imzalı tamsayı türü. İmzasız <xref:System.UInt16> de bulunur.
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md))-bir 32-bit imzalı tamsayı türü. İmzasız [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) de bulunur.
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md))-bir 32 bit kayan nokta türü.
 * <xref:System.Decimal?displayProperty=nameWithType> ([ondalık](../csharp/language-reference/keywords/decimal.md))-A 128 bit decimal türü.
-* <xref:System.Byte?displayProperty=nameWithType> ([bayt](../csharp/language-reference/keywords/byte.md))-bir bayt bellek temsil eden bir imzalanmamış 8 bit tam sayı.
+* <xref:System.Byte?displayProperty=nameWithType> ([bayt](../csharp/language-reference/builtin-types/integral-numeric-types.md))-bir bayt bellek temsil eden bir imzalanmamış 8 bit tam sayı.
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md))-gösteren bir Boole türü `true` veya `false`.
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md))-bir Unicode karakteri temsil eden bir 16 bit sayısal türü.
 * <xref:System.String?displayProperty=nameWithType> ([dize](../csharp/language-reference/keywords/string.md))-bir dizi karakteri temsil eder. Farklı bir `char[]`, ancak her bir kişinin dizin oluşturma sağlar `char` içinde `string`.

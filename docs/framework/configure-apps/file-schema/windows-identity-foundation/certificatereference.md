@@ -3,12 +3,12 @@ title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: 6c9c77f96ff6032de43d9b5a257bc0796a19b858
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7dc9cfff15e70eff0086cfd98a19f3360ab8bb0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667385"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423035"
 ---
 # <a name="certificatereference"></a>\<certificateReference >
 Bulmak ve bir sertifika deposunda bir X.509 sertifikasını doğrulamak için kullanılan ayarları belirtir.  
@@ -59,4 +59,4 @@ Bulmak ve bir sertifika deposunda bir X.509 sertifikasını doğrulamak için ku
 |[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Şifreleme ve belirteç şifre çözme için kullanılan sertifikayı yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<certificateReference>` Öğesi bulmak ve bir sertifika deposunda bir X.509 sertifikasını doğrulamak için kullanılan ayarları belirtir. Bunu belirtildiğinde alt öğesi olarak `<serviceCertficate>` öğesi, şifreleme ve belirteç şifre çözme için kullanılan X.509 sertifikasının konumunu ve doğrulama ayarlarını belirtir. `<certificateReference>` Öğesi tarafından temsil edilen <xref:System.ServiceModel.Configuration.CertificateReferenceElement> sınıfı.
+ `<certificateReference>` Öğesi bulmak ve bir sertifika deposunda bir X.509 sertifikasını doğrulamak için kullanılan ayarları belirtir. Bunu belirtildiğinde alt öğesi olarak `<serviceCertificate>` öğesi, şifreleme ve belirteç şifre çözme için kullanılan X.509 sertifikasının konumunu ve doğrulama ayarlarını belirtir. `<certificateReference>` Öğesi tarafından temsil edilen <xref:System.ServiceModel.Configuration.CertificateReferenceElement> sınıfı.

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: e34350e8f431b6ece95186147762d1954b5dd10f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 669357bbd6527324bbedbcf1f537bf570c63ce5b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61711180"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423661"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Numaralandırma türleri (C# programlama Kılavuzu)
 
@@ -21,7 +21,7 @@ ms.locfileid: "61711180"
 
 [!code-csharp[csProgGuideEnums#1](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#1)]
 
-Varsayılan olarak temel alınan her öğenin sabit listesi türünde [int](../../csharp/language-reference/keywords/int.md). Önceki örnekte gösterilen şekilde bir virgül kullanarak başka bir integral sayısal tür belirtebilirsiniz. Olası türlerinin tam listesi için bkz. [enum (C# Başvurusu)](../../csharp/language-reference/keywords/enum.md).
+Varsayılan olarak temel alınan her öğenin sabit listesi türünde [int](../../csharp/language-reference/builtin-types/integral-numeric-types.md). Önceki örnekte gösterilen şekilde bir virgül kullanarak başka bir integral sayısal tür belirtebilirsiniz. Olası türlerinin tam listesi için bkz. [enum (C# Başvurusu)](../../csharp/language-reference/keywords/enum.md).
 
 Temel alınan sayısal değerler, aşağıdaki örnekte gösterildiği gibi temel türdeki tür atama doğrulayabilirsiniz.
 

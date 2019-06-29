@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 6aad851770fb886de5d5c00b544ac6eac2857e42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fd7f99b35730cf867bfad5da24bc3f223e9a0f8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801861"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425327"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Nasıl yapılır: Bir Windows Forms Uygulamasında Yazı Tipi Şeması Değişikliklerine Yanıt Verme
 Windows işletim sistemlerinde, bir kullanıcı, daha büyük veya küçük varsayılan yazı tipini görünür yapmak için sistem genelinde yazı tipi ayarlarını değiştirebilirsiniz. Bu yazı tipi ayarları değiştirmek, ekranlarda metin okuma için daha büyük türü gerektirir ve görme engelli kullanıcılar için kritik öneme sahiptir. Artırmayı veya yazı tipi düzeni değiştiğinde formun ve içerilen tüm metin boyutunu azaltmak için bu değişiklikler tepki vermek için Windows Forms uygulaması ayarlayabilirsiniz. Yazı tipi boyutlarını değişiklikleri dinamik olarak uyum sağlayacak şekilde formunuza istiyorsanız formunuza kod ekleyebilirsiniz.  
@@ -62,7 +62,7 @@ Windows işletim sistemlerinde, bir kullanıcı, daha büyük veya küçük vars
  [!code-csharp[WinFormsAutoScaling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
  [!code-vb[WinFormsAutoScaling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
- Bu kod örneğinde constructer bir çağrı içeren `InitializeComponent`, Visual Studio'da yeni bir Windows Forms projesi oluşturduğunuzda tanımlı olduğu. Komut satırında, bir uygulama oluşturuyorsanız bu kod satırını kaldırın.  
+ Bu kod örneği oluşturucuda bir çağrı içeren `InitializeComponent`, Visual Studio'da yeni bir Windows Forms projesi oluşturduğunuzda tanımlı olduğu. Komut satırında, bir uygulama oluşturuyorsanız bu kod satırını kaldırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

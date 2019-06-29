@@ -2,12 +2,12 @@
 title: <peerAuthentication> Öğesi
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 1e99f6d117604f9ba2672972a4b09e7fe9f96792
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6aa11c50ef950a8a9d902a0fb77fdf301d18f7cb
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783389"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423040"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication > öğesi
 Eşler arası istemcilerin kimlik doğrulama seçeneklerini belirtir.  
@@ -39,7 +39,7 @@ Eşler arası istemcilerin kimlik doğrulama seçeneklerini belirtir.
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |`customCertificateValidatorType`|İsteğe bağlı dize. Tür ve özel bir tür doğrulamak için kullanılan bir derleme. Bu öznitelik olduğunda ayarlanmalıdır `certificateValidationMode` ayarlanır `Custom`.|  
-|`certifcateValidationMode`|İsteğe bağlı sabit listesi. Kimlik bilgilerini doğrulamak için kullanılan üç moddan birini belirtir. Varsa kümesine `Custom`, ardından bir `customCertificateValidator` de sağlanmalıdır. Varsayılan, `ChainTrust` değeridir.|  
+|`certificateValidationMode`|İsteğe bağlı sabit listesi. Kimlik bilgilerini doğrulamak için kullanılan üç moddan birini belirtir. Varsa kümesine `Custom`, ardından bir `customCertificateValidator` de sağlanmalıdır. Varsayılan, `ChainTrust` değeridir.|  
 |`revocationMode`|İsteğe bağlı sabit listesi. İptal edilen sertifikalar listelerini (CRL) denetlemek için kullanılan modlardan biri. Varsayılan, `Online` değeridir.|  
 |`trustedStoreLocation`|İsteğe bağlı sabit listesi. İki sistem depolama konumlarından biri: `LocalMachine` veya `CurrentUser`. Bir hizmet sertifikası istemciye anlaşıldığında, bu değer kullanılır. Doğrulama işlemi gerçekleştirildiğinde karşı **güvenilir kişiler** depolamak belirtilen depolama konumu. Varsayılan, `CurrentUser` değeridir.|  
   

@@ -2,12 +2,12 @@
 title: 3312 - MessageReadByEncoder
 ms.date: 03/30/2017
 ms.assetid: cdcc8e3d-e2aa-4c5e-a580-bdf581a66709
-ms.openlocfilehash: c68170d127dbcb914539211be9ff2417ea20517e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20d7251c8df54c0780f7f29755b59ba4f475c65a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61596694"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422131"
 ---
 # <a name="3312---messagereadbyencoder"></a>3312 - MessageReadByEncoder
 ## <a name="properties"></a>Özellikler  
@@ -20,9 +20,9 @@ ms.locfileid: "61596694"
 |Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay iletisi tarafından encorder okuduğunuzda yayılır.  
+ İleti Kodlayıcı tarafından okurken bu olay yayılır.  
   
-## <a name="message"></a>İleti  
+## <a name="message"></a>`Message`  
  '%1' bayttan içeren bir ileti Kodlayıcı tarafından okundu.  
   
 ## <a name="details"></a>Ayrıntılar

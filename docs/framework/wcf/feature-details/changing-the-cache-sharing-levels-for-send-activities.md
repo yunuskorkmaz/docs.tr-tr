@@ -2,12 +2,12 @@
 title: Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: 1561d053dc04bbea18f4d6cb43399c2c625d5da1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 079eb037f074155aec3ad5473480bbf5d4d341b2
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614856"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425162"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> Uzantısı düzeyleri, kanal üreteci önbellek ayarlarını paylaşımı önbellek özelleştirmenize olanak sağlar ve ileti göndermek için hizmet uç noktaları kullanarak iş akışları için kanal ayarlarıyla önbelleğe <xref:System.ServiceModel.Activities.Send> Mesajlaşma etkinlikleri. Bu iş akışları genellikle istemci iş akışlarıdır ancak içinde barındırılan iş akışı Hizmetleri ayrıca olabilir bir <xref:System.ServiceModel.WorkflowServiceHost>. Kanal üreteci önbellek içeren önbelleğe alınmış <xref:System.ServiceModel.ChannelFactory%601> nesneleri. Kanal önbellek önbelleğe alınmış kanalları içerir.  
@@ -150,7 +150,7 @@ SendMessageChannelCache customChannelCacheExtension =
 clientInstance.Extensions.Add(customChannelCacheExtension);  
 ```  
   
- Barındırılan iş akışı hizmetinde, uygulama yapılandırma dosyasında üreteci önbellek ve kanal önbellek ayarları belirtebilirsiniz. Bunu yapmak için üretecini ve kanal önbellek için önbellek ayarlarını içeren bir hizmet davranışını ekleyin ve bu hizmet davranışını hizmetinize ekleyin. Aşağıdaki örnek, içeren bir yapılandırma dosyası içeriğini gösterir `MyChannelCacheBehavior` özel üreteci önbellek ve kanal önbellek ayarları ile hizmet davranışı. Bu hizmet davranışını hizmet aracılığıyla eklenen `behaviorConfiguarion` özniteliği.  
+ Barındırılan iş akışı hizmetinde, uygulama yapılandırma dosyasında üreteci önbellek ve kanal önbellek ayarları belirtebilirsiniz. Bunu yapmak için üretecini ve kanal önbellek için önbellek ayarlarını içeren bir hizmet davranışını ekleyin ve bu hizmet davranışını hizmetinize ekleyin. Aşağıdaki örnek, içeren bir yapılandırma dosyası içeriğini gösterir `MyChannelCacheBehavior` özel üreteci önbellek ve kanal önbellek ayarları ile hizmet davranışı. Bu hizmet davranışını hizmet aracılığıyla eklenen `behaviorConfiguration` özniteliği.  
   
 ```xml  
 <configuration>    

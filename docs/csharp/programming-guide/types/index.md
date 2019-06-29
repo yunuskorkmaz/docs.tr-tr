@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 796dbb012426cdaea7828afeea4fba15f57095c6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 65a7fbb2ef8fd24e80b4ccf979a7f3fc7cf19934
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398091"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423637"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 
@@ -39,12 +39,12 @@ Bir tür içinde depolanan bilgiler aşağıdakileri içerebilir:
 
 - İzin verilen işlem türleri.
 
-Derleyici, kodunuzda gerçekleştirilen tüm işlemler olduğundan emin olmak için tür bilgilerini kullanır. *denkliği*. Örneğin, türünde bir değişken bildirirseniz [int](../../../csharp/language-reference/keywords/int.md), derleyici değişkeni buna ek olarak kullanmanızı ve çıkarma işlemleri sağlar. Türünde bir değişkende aynı işlemleri gerçekleştirmeyi denerseniz [bool](../../../csharp/language-reference/keywords/bool.md), aşağıdaki örnekte gösterildiği gibi derleyici bir hata oluşturur:
+Derleyici, kodunuzda gerçekleştirilen tüm işlemler olduğundan emin olmak için tür bilgilerini kullanır. *denkliği*. Örneğin, türünde bir değişken bildirirseniz [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md), derleyici değişkeni buna ek olarak kullanmanızı ve çıkarma işlemleri sağlar. Türünde bir değişkende aynı işlemleri gerçekleştirmeyi denerseniz [bool](../../../csharp/language-reference/keywords/bool.md), aşağıdaki örnekte gösterildiği gibi derleyici bir hata oluşturur:
 
 [!code-csharp[csProgGuideTypes#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#42)]
 
 > [!NOTE]
-> C ve C++ geliştiricileri seçeneğinde bu C# ' ta [bool](../../../csharp/language-reference/keywords/bool.md) öğesine dönüştürülebilir değildir [int](../../../csharp/language-reference/keywords/int.md).
+> C ve C++ geliştiricileri seçeneğinde bu C# ' ta [bool](../../../csharp/language-reference/keywords/bool.md) öğesine dönüştürülebilir değildir [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md).
 
 Derleyicinin tür bilgisini yürütülebilir dosya meta veri olarak gömer. Ortak dil çalışma zamanı (CLR) ayırır ve belleği geri kazanır, daha fazla tür güvenliği sağlamak için çalışma zamanında bu meta verileri kullanır.
 
@@ -54,11 +54,11 @@ Ne zaman bir değişken bildirdiğinizde veya sabit bir program, türünü belir
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
-Yöntem parametreleri ve dönüş değerlerinin türleri Yöntem imzasında belirtilir. Aşağıdaki imza gerektiren bir yöntemi gösterir bir [int](../../../csharp/language-reference/keywords/int.md) giriş bağımsız değişkeni olarak bir dize döndürür:
+Yöntem parametreleri ve dönüş değerlerinin türleri Yöntem imzasında belirtilir. Aşağıdaki imza gerektiren bir yöntemi gösterir bir [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) giriş bağımsız değişkeni olarak bir dize döndürür:
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 
-Bir değişken bildirildikten sonra yeni bir türle yeniden bildirilemez ve bildirilen türle uyumlu olmayan bir değer atanamaz. Örneğin, bildiremezsiniz bir [int](../../../csharp/language-reference/keywords/int.md) Boolean değerini atayın [true](../../../csharp/language-reference/keywords/true-literal.md). Ancak, değerler örneğin yeni değişkenlere eklendiklerinde veya yöntem bağımsız değişkenleri olarak geçtiklerinde diğer türlere dönüştürülebilir. A *tür dönüştürme* , yoksa veri kaybına neden olmayan derleyici tarafından otomatik olarak gerçekleştirilir. Veri kaybına neden olabilecek bir dönüştürme gerektiren bir *atama* kaynak kodunda.
+Bir değişken bildirildikten sonra yeni bir türle yeniden bildirilemez ve bildirilen türle uyumlu olmayan bir değer atanamaz. Örneğin, bildiremezsiniz bir [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) Boolean değerini atayın [true](../../../csharp/language-reference/keywords/true-literal.md). Ancak, değerler örneğin yeni değişkenlere eklendiklerinde veya yöntem bağımsız değişkenleri olarak geçtiklerinde diğer türlere dönüştürülebilir. A *tür dönüştürme* , yoksa veri kaybına neden olmayan derleyici tarafından otomatik olarak gerçekleştirilir. Veri kaybına neden olabilecek bir dönüştürme gerektiren bir *atama* kaynak kodunda.
 
 Daha fazla bilgi için [atama ve tür dönüşümleri](../../../csharp/programming-guide/types/casting-and-type-conversions.md).
 
@@ -74,7 +74,7 @@ Kullandığınız [yapı](../../../csharp/language-reference/keywords/struct.md)
 
 .NET içindeki tür sisteminde iki temel noktanın anlaşılması önemlidir:
 
-- Bu devralma ilkesini destekler. Türleri olarak adlandırılan diğer türlerden türetilebilir *taban türler*. Türetilmiş bir tür, yöntemleri, özellikleri ve diğer temel türün üyelerini (bazı sınırlamalarla birlikte) devralır. Temel tür sırayla durumda türetilmiş tür devralma hiyerarşisinde her iki taban türün üyelerini devralan başka bir türden türeyebilir. Gibi yerleşik sayısal türler dahil olmak üzere tüm türleri <xref:System.Int32?displayProperty=nameWithType> (C# anahtar sözcüğünü: [int](../../../csharp/language-reference/keywords/int.md)), türetilen sonuçta tek temel türünden olduğu <xref:System.Object?displayProperty=nameWithType> (C# anahtar sözcüğünü: [nesne](../../../csharp/language-reference/keywords/object.md)). Bu birleşik tür hiyerarşisine adlı [ortak tür sistemi](../../../standard/base-types/common-type-system.md) (CTS). C# içinde devralma hakkında daha fazla bilgi için bkz: [devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md).
+- Bu devralma ilkesini destekler. Türleri olarak adlandırılan diğer türlerden türetilebilir *taban türler*. Türetilmiş bir tür, yöntemleri, özellikleri ve diğer temel türün üyelerini (bazı sınırlamalarla birlikte) devralır. Temel tür sırayla durumda türetilmiş tür devralma hiyerarşisinde her iki taban türün üyelerini devralan başka bir türden türeyebilir. Gibi yerleşik sayısal türler dahil olmak üzere tüm türleri <xref:System.Int32?displayProperty=nameWithType> (C# anahtar sözcüğünü: [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)), türetilen sonuçta tek temel türünden olduğu <xref:System.Object?displayProperty=nameWithType> (C# anahtar sözcüğünü: [nesne](../../../csharp/language-reference/keywords/object.md)). Bu birleşik tür hiyerarşisine adlı [ortak tür sistemi](../../../standard/base-types/common-type-system.md) (CTS). C# içinde devralma hakkında daha fazla bilgi için bkz: [devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md).
 
 - Cts'deki her tür olarak tanımlanan bir *değer türü* veya *başvuru türüne*. Bu, .NET sınıf kitaplığı'nda tüm özel türleri ve ayrıca kendi kullanıcı tanımlı türler içerir. Kullanarak tanımladığınız türler [yapı](../../../csharp/language-reference/keywords/struct.md) anahtar değer türleri; tüm yerleşik sayısal türler `structs`. Kullanarak tanımladığınız türler [sınıfı](../../../csharp/language-reference/keywords/class.md) anahtar sözcüğü olan başvuru türleri. Başvuru türleri ve değer türleri farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışı sahiptir.
 
@@ -205,4 +205,4 @@ Daha fazla bilgi için aşağıdaki konulara bakın:
 - [C# başvurusu](../../../csharp/language-reference/index.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [XML Veri Türlerini Dönüştürme](../../../standard/data/xml/conversion-of-xml-data-types.md)
-- [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tam sayı türleri](../../language-reference/builtin-types/integral-numeric-types.md)

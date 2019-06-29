@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: 804041991199dd2722e3a0f38800bafd8933bbab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 728bc77db959e25fe31d2ff37288b2359dca852e
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608404"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424587"
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Nasıl yapılır: Yönetilen HTML Belgesi Nesne Modelinde Bir Öğedeki Stilleri Değiştirme
 
@@ -22,11 +22,11 @@ Bir belge ve onun öğelerine görünümünü kontrol etmek için HTML stillerin
 
 İşte bir `DIV` bir stil dizesiyle kalın Arial ve tüm metin yazı tipini ayarlar:
 
-`<DIV style="font-face:arial;font-weight:bold;">`
-
-`Hello, world!`
-
-`</DIV>`
+```html
+<DIV style="font-face:arial;font-weight:bold;">
+Hello, world!
+</DIV>
+```
 
 Düzenleme stilleri kullanarak sorunu <xref:System.Windows.Forms.HtmlElement.Style%2A> özelliği ekleyin ve dizesi bağımsız stil ayarları kaldırmak için hantal kanıtlayabilirsiniz. Örneğin, karmaşık bir yordam, önceki metni italik kullanıcı imleci üzerine konumlandırır. her işleme olacak `DIV`ve imleci ayrıldığında kapalı italik yap `DIV`. Çok sayıda stilleri bu şekilde işlemek istiyorsanız zaman bir sorun oluşur.
 
@@ -63,19 +63,20 @@ Aşağıdaki yordam, HTML belgeleri ve öğeleri stilleri kolayca yönetmek içi
 6. Projenizin kod dosyasına aşağıdaki kodu ekleyin.
 
     > [!IMPORTANT]
-    >  Emin `webBrowser1_DocumentCompleted` olay işleyicisi için bir dinleyici olarak yapılandırıldığında <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> olay. Visual Studio'da çift tıklayarak <xref:System.Windows.Forms.WebBrowser> denetimi; bir metin düzenleyicisinde dinleyiciyi programlı bir şekilde yapılandırın.  
-  
+    > Emin `webBrowser1_DocumentCompleted` olay işleyicisi için bir dinleyici olarak yapılandırıldığında <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> olay. Visual Studio'da çift tıklayarak <xref:System.Windows.Forms.WebBrowser> denetimi; bir metin düzenleyicisinde dinleyiciyi programlı bir şekilde yapılandırın.
+
      [!code-csharp[ManagedDOMStyles#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
-     [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
-  
-7. Projeyi çalıştırın. İmlecinizi ilk çalıştırma `DIV` kod etkilerini gözlemleyin.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği için tam kod gösterilir `StyleGenerator` varolan bir stili değeri ayrıştırır, sınıf, destekler ekleme, değiştirme ve kaldırma stiller ve istenen değişiklikler yeni bir stil değeriyle döndürür.  
-  
- [!code-csharp[ManagedDOMStyles#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
- [!code-vb[ManagedDOMStyles#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]  
-  
+     [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]
+
+7. Projeyi çalıştırın. İmlecinizi ilk çalıştırma `DIV` kod etkilerini gözlemleyin.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki kod örneği için tam kod gösterilir `StyleGenerator` varolan bir stili değeri ayrıştırır, sınıf, destekler ekleme, değiştirme ve kaldırma stiller ve istenen değişiklikler yeni bir stil değeriyle döndürür.
+
+[!code-csharp[ManagedDOMStyles#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
+[!code-vb[ManagedDOMStyles#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.HtmlElement>

@@ -2,12 +2,12 @@
 title: 'İzlenecek yol: SQL Üretimi'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 380ab80a577fa103c33328047cd24cce6be5cb6e
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 5d8723c6a6d1ab12a2ba1f0f2f7cd5e09e82bfad
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690348"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422768"
 ---
 # <a name="walkthrough-sql-generation"></a>İzlenecek yol: SQL Üretimi
 
@@ -128,7 +128,7 @@ Sağ giriş sol giriş olarak aynı şekilde işlenir. Sonraki şekilde gösteri
 
 ![Diyagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
 
-Sonraki "false" IsParentAJoin yığını ve birleştirme koşulunun Var(Extent1) gönderilir. CategoryID Var(Extent2) ==. CategoryID işlenir. Var(Extenent1) Çözüldü \<symbol_Extent1 > Sembol tablosuna Ara sonra. Örneği basit bir sembole Var(Extent1) işleme sonucunda, çözümlenmiş olmasından dolayı. CategoryID, bir SqlBuilder ile \<symbol1 >. " CategoryID"döndürülür. Karşılaştırma diğer tarafında benzer şekilde işlenir ve birleştirme koşulunun ziyaret sonucunu FROM yan tümcesi SelectStatement1 ve "false" POP IsParentAJoin yığından değer eklenir.
+Sonraki "false" IsParentAJoin yığını ve birleştirme koşulunun Var(Extent1) gönderilir. CategoryID Var(Extent2) ==. CategoryID işlenir. Var(Extent1) Çözüldü \<symbol_Extent1 > Sembol tablosuna Ara sonra. Örneği basit bir sembole Var(Extent1) işleme sonucunda, çözümlenmiş olmasından dolayı. CategoryID, bir SqlBuilder ile \<symbol1 >. " CategoryID"döndürülür. Karşılaştırma diğer tarafında benzer şekilde işlenir ve birleştirme koşulunun ziyaret sonucunu FROM yan tümcesi SelectStatement1 ve "false" POP IsParentAJoin yığından değer eklenir.
 
 Bu, Join1 tamamen işlenmesi ve sembol tablodan bir kapsam kaldırılır.
 

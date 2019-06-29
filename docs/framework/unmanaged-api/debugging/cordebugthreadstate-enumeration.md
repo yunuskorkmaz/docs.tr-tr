@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: efb7f5b8e63742471123a0e0a38cebe605f3696f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba2ee070b7d03efc830058014aa445bb1a3d4329
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61724050"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422259"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState Numaralandırması
 Hata ayıklama için bir iş parçacığı durumunu belirtir.  
@@ -50,7 +50,7 @@ typedef enum CorDebugThreadState {
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDegug.h  
+ **Üst bilgi:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   

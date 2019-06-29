@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-ms.openlocfilehash: 9993a7ecb61d9a45d88162fdef488e79b155540c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6212fd911bd5b255347459a1b5a7b2f46e31963e
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586851"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425079"
 ---
 # <a name="security-protocols"></a>Güvenlik Protokolleri
 Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksinimlerini Mesajlaşma kapsayan Web Hizmetleri güvenlik mekanizmaları sağlar. Bu bölümde Windows Communication Foundation (WCF) ayrıntılarını açıklar (uygulanan <xref:System.ServiceModel.Channels.SecurityBindingElement>) güvenlik protokollerini aşağıdaki Web Hizmetleri için.  
@@ -47,7 +47,7 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
 |KerberosOverTransport|Windows|X509|Taşıma|  
 |IssuedTokenOverTransport|Federasyon|X509|Taşıma|  
 |SspiNegotiatedOverTransport|Windows SSPI anlaşması|Windows SSPI anlaşması|Taşıma|  
-|AnonymousForCertificate|None|X509|`Message`|  
+|AnonymousForCertificate|Yok.|X509|`Message`|  
 |UserNameForCertificate|Kullanıcı adı/parola|X509|`Message`|  
 |MutualCertificate|X509|X509|`Message`|  
 |MutualCertificateDuplex|X509|X509|`Message`|  
@@ -131,7 +131,7 @@ Web Hizmetleri Güvenlik protokollerini tüm var olan Kurumsal güvenlik gereksi
  WCF WSS SAML belirteci profilleri 1.0 ve 1.1 için SAML v1.1 belirteçleri destekler. SAML belirteci biçimleri'nın diğer sürümlerinin uygulamak mümkündür.  
   
 ### <a name="15-security-context-token"></a>1.5 güvenlik bağlamı belirteci  
- WCF güvenlik bağlamı belirteci (WS-SecureCoversation sunulan SCT) destekler. SCT SecureConversation içinde de oluşturulan bir güvenlik bağlamı temsil etmek için kullanılan ikili anlaşma TLS ve SSPI protokoller olarak aşağıda açıklanmıştır.  
+ WCF güvenlik bağlamı belirteci (WS-SecureConversation sunulan SCT) destekler. SCT SecureConversation içinde de oluşturulan bir güvenlik bağlamı temsil etmek için kullanılan ikili anlaşma TLS ve SSPI protokoller olarak aşağıda açıklanmıştır.  
   
 ## <a name="2-common-message-security-parameters"></a>2. Ortak ileti güvenlik parametreleri  
   

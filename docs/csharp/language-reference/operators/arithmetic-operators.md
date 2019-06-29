@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 9293071744ff104c91d5fb9b62fffd1ec51a53c4
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 155ce5ce4673008a61b4231a3aaee5a40ad9ead6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347945"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423991"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Aritmetik işleçler (C# Başvurusu)
 
@@ -41,7 +41,7 @@ Aşağıdaki işleçleri ile sayısal türleri aritmetik işlemleri gerçekleşt
 - Birli [ `++` (artırma)](#increment-operator-), [ `--` (azaltma)](#decrement-operator---), [ `+` (artı)](#unary-plus-and-minus-operators), ve [ `-` (eksi)](#unary-plus-and-minus-operators) işleçleri
 - İkili [ `*` (çarpma)](#multiplication-operator-), [ `/` (bölme)](#division-operator-), [ `%` (kalanını)](#remainder-operator-), [ `+` () ek olarak)](#addition-operator-), ve [ `-` (çıkarma)](#subtraction-operator--) işleçleri
 
-Tüm bu işleçleri destekler [integral](../keywords/integral-types-table.md) ve [kayan nokta](../keywords/floating-point-types-table.md) sayısal türler.
+Tüm bu işleçleri destekler [integral](../builtin-types/integral-numeric-types.md) ve [kayan nokta](../keywords/floating-point-types-table.md) sayısal türler.
 
 ## <a name="increment-operator-"></a>Artış işleci ++
 
@@ -85,7 +85,7 @@ Birli `+` işleci, işlenenin değerini döndürür. Birli `-` işleci, işlenen
 
 [!code-csharp-interactive[unary plus and minus](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
-Birli `-` işleci desteklemez [ulong](../keywords/ulong.md) türü.
+Birli `-` işleci desteklemez [ulong](../builtin-types/integral-numeric-types.md) türü.
 
 ## <a name="multiplication-operator-"></a>Çarpma işleci *
 

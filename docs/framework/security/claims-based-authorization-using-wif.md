@@ -3,12 +3,12 @@ title: WIF Kullanarak Talep Tabanlı Yetkilendirme
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 0c99053610c8df9b6825c773a09cb1330d1e22f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9d20f8fbce916a038fc8224492a4077e1978ed8c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650443"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422365"
 ---
 # <a name="claims-based-authorization-using-wif"></a>WIF Kullanarak Talep Tabanlı Yetkilendirme
 Bağlı taraf uygulamasında, yetkilendirme kimliği doğrulanmış bir kimliğin hangi kaynaklara erişebileceğini ve bu kaynaklar üzerinde hangi işlemleri gerçekleştirebileceğini belirler. Uygunsuz veya zayıf yetkilendirme, bilgi ifşasına ve verilerin izinsiz kullanımına neden olur. Bu konuda, Windows Identity Foundation (WIF) ve Microsoft Azure Erişim Denetimi Hizmeti (ACS) gibi Güvenlik Belirteci Hizmeti (STS) kullanılarak talep kullanan ASP.NET web uygulamaları ve hizmetleri için yetkilendirme uygulama yaklaşımları açıklanmaktadır.  
@@ -23,13 +23,13 @@ Bağlı taraf uygulamasında, yetkilendirme kimliği doğrulanmış bir kimliği
  RBAC, kullanıcı izinlerinin yönetildiği ve kullanıcı rollerine göre bir uygulama tarafından zorlanan yetkilendirme yaklaşımıdır. Kullanıcının bir eylemi gerçekleştirmesi gereken rolü varsa, erişim verilir; aksi takdirde, erişim engellenir.  
   
 ### <a name="iprincipalisinrole-method"></a>IPrincipal.IsInRole Yöntemi  
- Talep kullanan uygulamalarda RBAC yaklaşımı uygulamak için kullanma **Isınrole()** yönteminde **Isınrole()** talep kullanmayan uygulamalarda olduğu gibi arabirim. Kullanmanın birkaç yolu vardır **Isınrole()** yöntemi:  
+ Talep kullanan uygulamalarda RBAC yaklaşımı uygulamak için kullanma **Isınrole()** yönteminde **IPrincipal** talep kullanmayan uygulamalarda olduğu gibi arabirim. Kullanmanın birkaç yolu vardır **Isınrole()** yöntemi:  
   
-- Açıkça çağırma **gt;IPrincipal.ısınrole("Administrator")**. Bu yaklaşımda, sonuç olarak Boole değeri elde edilir. Kendi koşullu deyimlerinizde kullanın. Kodunuzdaki herhangi bir yerde rasgele kullanılabilir.  
+- Açıkça çağırma **gt;IPrincipal.ısınrole("Administrator")** . Bu yaklaşımda, sonuç olarak Boole değeri elde edilir. Kendi koşullu deyimlerinizde kullanın. Kodunuzdaki herhangi bir yerde rasgele kullanılabilir.  
   
-- Güvenlik talebini kullanma **PrincipalPermission.Demand()**. Bu yaklaşımda, talep karşılanmazsa sonuç olarak bir özel durum elde edilir. Bu, özel durum işleme stratejinizle uyumlu olmalıdır. Özel durumları atma Boolean döndürmekle karşılaştırıldığında performans açısından çok daha pahalı olur. Bu, kodunuzdaki herhangi bir yerde kullanılabilir.  
+- Güvenlik talebini kullanma **PrincipalPermission.Demand()** . Bu yaklaşımda, talep karşılanmazsa sonuç olarak bir özel durum elde edilir. Bu, özel durum işleme stratejinizle uyumlu olmalıdır. Özel durumları atma Boolean döndürmekle karşılaştırıldığında performans açısından çok daha pahalı olur. Bu, kodunuzdaki herhangi bir yerde kullanılabilir.  
   
-- Bildirim temelli öznitelikleri kullanma **[PrincipalPermission (SecurityAction.Demand, Role = "Administrator")]**. Bu yaklaşıma, yöntemleri donatmak için kullanıldığından bildirim temelli denir. Yöntem uygulamalarının içindeki kod bloklarında kullanılamaz. Talep karşılanmazsa sonuç olarak bir özel durum elde edilir. Özel durum işleme stratejinizle uyumlu olduğundan emin olmanız gerekir.  
+- Bildirim temelli öznitelikleri kullanma **[PrincipalPermission (SecurityAction.Demand, Role = "Administrator")]** . Bu yaklaşıma, yöntemleri donatmak için kullanıldığından bildirim temelli denir. Yöntem uygulamalarının içindeki kod bloklarında kullanılamaz. Talep karşılanmazsa sonuç olarak bir özel durum elde edilir. Özel durum işleme stratejinizle uyumlu olduğundan emin olmanız gerekir.  
   
 - URL yetkilendirmesi kullanma  **\<yetkilendirme >** konusundaki **web.config**. Bu yaklaşım, yetkilendirme URL düzeyinde yönetilirken uygundur. Bu, daha önce bahsedilenler arasında en genel düzeydir. Bu yaklaşımın avantajı, değişikliklerin yapılandırma dosyasında yapılması, yani değişiklikten yararlanmak için kodun derlenmesine gerek olmamasıdır.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: f05ba1ee4e926f9f4c1b6427ecc60b41b45b06e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c3efe1dbea355e8bc00ef44e08efcc9d0e0bdca
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661457"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424173"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Örtük sayısal dönüşümler tablosu (C# Başvurusu)
 
@@ -21,20 +21,20 @@ Aşağıdaki tablo, .NET sayısal türler arasında önceden tanımlanmış ört
   
 |Başlangıç|Bitiş|  
 |----------|--------|  
-|[sbyte](sbyte.md)|`short`, `int`, `long`, `float`, `double`, veya `decimal`|  
-|[byte](byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, veya `decimal`|  
+|[sbyte](../builtin-types/integral-numeric-types.md)|`short`, `int`, `long`, `float`, `double`, veya `decimal`|  
+|[byte](../builtin-types/integral-numeric-types.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, veya `decimal`|  
 |[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, veya `decimal`|  
-|[short](short.md)|`int`, `long`, `float`, `double`, veya `decimal`|  
-|[ushort](ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double`, veya `decimal`|  
-|[int](int.md)|`long`, `float`, `double`, veya `decimal`|  
-|[uint](uint.md)|`long`, `ulong`, `float`, `double`, veya `decimal`|  
-|[long](long.md)|`float`, `double`, veya `decimal`|  
-|[ulong](ulong.md)|`float`, `double`, veya `decimal`|  
+|[short](../builtin-types/integral-numeric-types.md)|`int`, `long`, `float`, `double`, veya `decimal`|  
+|[ushort](../builtin-types/integral-numeric-types.md)|`int`, `uint`, `long`, `ulong`, `float`, `double`, veya `decimal`|  
+|[int](../builtin-types/integral-numeric-types.md)|`long`, `float`, `double`, veya `decimal`|  
+|[uint](../builtin-types/integral-numeric-types.md)|`long`, `ulong`, `float`, `double`, veya `decimal`|  
+|[long](../builtin-types/integral-numeric-types.md)|`float`, `double`, veya `decimal`|  
+|[ulong](../builtin-types/integral-numeric-types.md)|`float`, `double`, veya `decimal`|  
 |[float](float.md)|`double`|  
   
 ## <a name="remarks"></a>Açıklamalar  
 
-- Tüm [integral türü](integral-types-table.md) için örtük olarak dönüştürülebilir [kayan nokta türü](floating-point-types-table.md).
+- Tüm [integral türü](../builtin-types/integral-numeric-types.md) için örtük olarak dönüştürülebilir [kayan nokta türü](floating-point-types-table.md).
 
 - Duyarlık ancak değil büyüklük kayıp dönüşümlerse içinde `int`, `uint`, `long`, veya `ulong` için `float` ve `long` veya `ulong` için `double`.  
   
@@ -57,7 +57,7 @@ Aşağıdaki tablo, .NET sayısal türler arasında önceden tanımlanmış ört
 
 - [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [Tam sayı türleri tablosu](integral-types-table.md)
+- [Tam sayı türleri](../builtin-types/integral-numeric-types.md)
 - [Kayan nokta türleri tablosu](floating-point-types-table.md)
 - [Yerleşik türler tablosu](built-in-types-table.md)
 - [Açık sayısal dönüşümler tablosu](explicit-numeric-conversions-table.md)

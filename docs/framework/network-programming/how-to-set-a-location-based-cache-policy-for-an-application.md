@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- expliciting defining cache behavior
+- explicitly defining cache behavior
 - location-based cache policies
 - local cache
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 1bbbb558134e5f11537de0efef594be2b964cdcb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5b4936a54627e6016cabc41954d1a18ae82cdf90
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647380"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422470"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Nasıl yapılır: Uygulama için Konum Temelli Önbellek İlkesi Ayarlama
 Konum temelli önbellek ilkeleri açıkça istenen kaynak konumunu temel alarak önbelleğe alma davranışını tanımlamak bir uygulama sağlar. Bu konuda önbellek ilkesini programlı olarak ayarlama gösterilir. Yapılandırma dosyalarını kullanarak bir uygulama için bir ilke ayarlama hakkında daha fazla bilgi için bkz. [ \<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  

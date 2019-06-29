@@ -1,7 +1,7 @@
 ---
 title: Eşitlik işleçleri - C# başvurusu
-description: Hakkında bilgi edinin C# eşitlik Karşılaştırma işleçleri.
-ms.date: 03/28/2019
+description: Hakkında bilgi edinin C# eşitlik Karşılaştırma işleçleri ve C# eşitlik yazın.
+ms.date: 06/26/2019
 author: pkulikov
 f1_keywords:
 - ==_CSharpKeyword
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: f60d62d1823a8bd06b0417638719a81e95d7438b
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 72e790dc008857a48602c92c9236588c531b64f9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267693"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423922"
 ---
 # <a name="equality-operators-c-reference"></a>Eşitlik işleçleri (C# Başvurusu)
 
@@ -60,6 +60,18 @@ Büyük/küçük harfe sıralı karşılaştırma olmasıdır. Dize karşılaşt
 [!code-csharp[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
 
 Örnekte gösterildiği gibi destek kullanıcı tarafından tanımlanan başvuru türleri `==` varsayılan işleci. Ancak, bir kullanıcı tarafından tanımlanan başvuru türü aşırı yüklenebilir `==` işleci. Bir başvuru türü aşırı `==` işleci, kullanım <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> iki başvuru türü aynı nesneye başvuruyorsa, denetlemek için yöntem.
+
+## <a name="delegate-equality"></a>Temsilci eşitlik
+
+İki [temsilci](../../programming-guide/delegates/index.md) işlenenler aynı çalışma zamanı tür, bunların her ikisi de eşit `null` veya çağırma listelerini aynı uzunluktadır ve her konumda eşit girdiniz:
+
+[!code-csharp-interactive[delegate equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#DelegateEquality)]
+
+Daha fazla bilgi için [temsilci eşitlik işleçleri](~/_csharplang/spec/expressions.md#delegate-equality-operators) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
+
+Anlamsal olarak özdeş bir değerlendirmesinden gelen üretilen Temsilciler [lambda ifadeleri](../../programming-guide/statements-expressions-operators/lambda-expressions.md) aşağıdaki örnekte gösterildiği gibi eşit değilse:
+
+[!code-csharp-interactive[from identical lambdas](~/samples/csharp/language-reference/operators/EqualityOperators.cs#IdenticalLambdas)]
 
 ## <a name="inequality-operator-"></a>Eşitsizlik işleci! =
 

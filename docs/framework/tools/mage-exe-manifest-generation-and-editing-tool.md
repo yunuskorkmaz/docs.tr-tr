@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 2109c764d0143a843f75fc0c14cc0d09550efd85
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 549eca835b2161429668a2ee340a71dfae658524
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877568"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422350"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Bildirim Üretme ve Düzenleme Aracı)
 
@@ -57,7 +57,7 @@ Aşağıdaki tablo tarafından desteklenen seçenekleri gösterir `-New` ve `-Up
 |**-IF, - IconFile**  `filePath`||Uygulama bildirimleri.|Bir .ICO simge dosyasının tam yolunu belirtir. Bu simge başlat menüsünde uygulamanızın adının yanında ve Program Ekle/Kaldır girdisinde görünür. Eğer simge sağlanmazsa, varsayılan bir simge kullanılır.|
 |**-IP, - IncludeProviderURL**  `url`|true|Dağıtım bildirimleri.|Dağıtım bildirimi ayarlanan güncelleştirme konumunu içerip içermediğini belirten **- ProviderURL**.|
 |**-i,-yükleme** `willInstall`|true|Dağıtım bildirimleri.|ClickOnce uygulamasının yerel bilgisayara yüklenip yüklenmeyeceğini veya Web'den çalışıp çalışmayacağını belirtir. Bir uygulamayı yüklemek, bu uygulamayı Windows bulunması verir **Başlat** menüsü. Geçerli değerler "true" veya "t" ve "false" veya "f" değerleridir.<br /><br /> Belirtirseniz **- MinVersion** seçeneği ve bir kullanıcı bir sürümüne sahip küçüktür **- MinVersion** yüklüyse, geçirdiğiniz değerinden bağımsız olarak yüklemek üzere uygulamayı zorlayacak **- Yükleme**.<br /><br /> Bu seçenek kullanılamaz **- BrowserHosted** seçeneği. Aynı bildirimde ikisini de belirtmeyi denemek hata oluşturur.|
-|**-kc, - Keycontaıner** `name`||Tüm dosya türleri.|Özel anahtar adını içeren bir anahtar kapsayıcı belirtir. Bu seçenek gerektirir **CyproProvider** seçeneği.<br/><br/>Bu seçenek, .NET Framework 4.7 ile başlayan kullanılabilir.|
+|**-kc, - Keycontaıner** `name`||Tüm dosya türleri.|Özel anahtar adını içeren bir anahtar kapsayıcı belirtir. Bu seçenek gerektirir **CryptoProvider** seçeneği.<br/><br/>Bu seçenek, .NET Framework 4.7 ile başlayan kullanılabilir.|
 |**-mv, - MinVersion**  `[version]`|ClickOnce dağıtım bildirimi tarafından belirtilen sürüm listelenen **-sürüm** bayrağı.|Dağıtım bildirimleri.|Bir kullanıcının çalıştırabileceği bu uygulamanın en düşük sürümü. Bu bayrak uygulamanızın adlandırılmış sürümünü gereken bir güncelleştirme yapar. Eğer ürününüzün bir sürümünü bozucu bir değişiklik veya kritik bir güvenlik açığı için güncelleştirirseniz, bu bayrağı kullanarak bu güncelleştirmenin yüklenmesi gerektiğini ve kullanıcının önceki sürümleri kullanamayacağını belirtebilirsiniz.<br /><br /> `version` bağımsız değişkeni ile aynı semantiğe sahip **-sürüm** bayrağı.|
 |**-n, - ad** `nameString`|Dağıt|Tüm dosya türleri.|Uygulamayı tanımlamak için kullanılan ad. ClickOnce, uygulamayı tanımlamak için bu ad kullanacağı **Başlat** (uygulama kendisini yükleyecek şekilde yapılandırılmışsa) menüsünde ve izin yükseltme iletişim kutularında. **Not:**  Varolan bir bildirimi güncelleştiriyorsanız ve bu seçenekle bir yayımcı adı belirtmezseniz, *Mage.exe* bildirimi bilgisayarda tanımlı olan kuruluş adı ile güncelleştirir. Farklı bir ad kullanmak için, bu seçeneği kullanmayı ve istediğiniz yayımcı adını belirtmeyi unutmayın.|
 |**-pwd,-parola** `passwd`||Tüm dosya türleri.|Bir bildirimi dijital sertifika ile imzalamak için kullanılan şifre. İle birlikte kullanılmalıdır **- CertFile** seçeneği.|
@@ -81,7 +81,7 @@ Aşağıdaki tablo tarafından desteklenen seçenekleri gösterir `-Sign` tüm d
 |**-cf, - CertFile** `filePath`|Bildirim imzalamak için bir dijital sertifikanın konumunu belirtir. Bu seçeneği ile birlikte kullanılabilir **-parola** sertifikası kişisel bilgi değişimi (PFX) dosyaları için bir parola gerektiriyorsa seçeneği. Dosya bir birleşimi bir özel anahtar içermiyorsa, .NET Framework 4.7 ile başlayan **- CryptoProvider** ve **- Keycontaıner** seçenekleri gereklidir.<br/><br/>.NET Framework 4.6.2, ile başlayarak *Mage.exe* işaretleri, sertifikaları CAPI yanı sıra CNG bildirimleri.|
 |**-ch, - CertHash** `hashSignature`|İstemci bilgisayarın kişisel sertifika deposunda tutulan bir dijital sertifikanın karması. Bu, Windows Sertifikaları Konsolu içinde görüntülenen bir dijital sertifikanın Parmak İzi özelliğine karşılık gelir.<br /><br /> `hashSignature` ya da büyük harf veya küçük harf ve tek bir dize olarak ya da izinin her sekizliğini boşluk ve tırnak işaretleri arasına parmak ayırarak ve parmak izini sağlanabilir olabilir.|
 **-csp, - CryptoProvider** `provider-name`|Özel anahtar kapsayıcısı içeren şifreleme hizmet sağlayıcısı (CSP) adını belirtir. Bu seçenek gerektirir **- Keycontaıner** seçeneği.<br/><br/>Bu seçenek, .NET Framework 4.7 ile başlayan kullanılabilir.|
-|**-kc, - Keycontaıner** `name`|Özel anahtar adını içeren bir anahtar kapsayıcı belirtir. Bu seçenek gerektirir **CyproProvider** seçeneği.<br/><br/>Bu seçenek, .NET Framework 4.7 ile başlayan kullanılabilir.|
+|**-kc, - Keycontaıner** `name`|Özel anahtar adını içeren bir anahtar kapsayıcı belirtir. Bu seçenek gerektirir **CryptoProvider** seçeneği.<br/><br/>Bu seçenek, .NET Framework 4.7 ile başlayan kullanılabilir.|
 |**-pwd,-parola** `passwd`|Bir bildirimi dijital sertifika ile imzalamak için kullanılan şifre. İle birlikte kullanılmalıdır **- CertFile** seçeneği.|
 |**-t, - ToFile** `filePath`|Oluşturulan veya değiştirilen dosyanın çıkış yolunu belirtir.|
 
@@ -214,7 +214,7 @@ mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
 Aşağıdaki örnek, geçerli çalışma dizinindeki bir dijital sertifika ve özel anahtarı kullanarak varolan bir dağıtım bildirimini imzalar.
 
 ```console
-mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enghanced Cryptographic Provider v1.0"
+mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.

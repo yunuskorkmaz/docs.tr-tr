@@ -3,12 +3,12 @@ title: Talep Kullanan İlk ASP.NET Web Uygulamamı Derleme
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: ae313cc16532cf6fc38d28161d4d5a2cf630bbc1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db5060826d3bfcc259c098a160354892a050554c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650478"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422387"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Talep Kullanan İlk ASP.NET Web Uygulamamı Derleme
 ## <a name="applies-to"></a>Uygulanan Öğe  
@@ -27,7 +27,7 @@ ms.locfileid: "64650478"
   
 3. Kullanıcı, istekte STS tarafından verilen belirteçle STS'den talep kullanan uygulamaya yönlendirilir.  
   
-4. Talep kullanan uygulama, STS'ye ve verdiği belirteçlere güvenecek şekilde yapılandırılmıştır. Talep kullanan uygulama, belirteci doğrulamak ve ayrıştırmak için WIF kullanır. Geliştiriciler uygun WIF API ve türleri gibi kullanın **ClaimsPrincpal** yetkilendirme gerçekleştirme gibi uygulamanın ihtiyaçları için.  
+4. Talep kullanan uygulama, STS'ye ve verdiği belirteçlere güvenecek şekilde yapılandırılmıştır. Talep kullanan uygulama, belirteci doğrulamak ve ayrıştırmak için WIF kullanır. Geliştiriciler uygun WIF API ve türleri gibi kullanın **ClaimsPrincipal** yetkilendirme gerçekleştirme gibi uygulamanın ihtiyaçları için.  
   
  .NET 4.5'ten başlayarak, WIF .NET Framework paketinin bir parçası olmuştur. WIF sınıflarının doğrudan çerçevede kullanılabilir olması tümleştirilmesini beyana dayalı kimliğin .NET taleplerin kullanılmasını kolaylaştırır, sağlar. WIF 4.5 ile, talep kullanan web uygulamaları geliştirmeye başlamak için bant dışı bileşenler yüklemenize gerek yoktur. WIF sınıfları artık çeşitli derlemeler arasında yayılmaktadır. Temel sınıflar System.Security.Claims, System.IdentityModel ve System.IdentityModel.Services'dır.  
   

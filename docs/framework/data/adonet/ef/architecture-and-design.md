@@ -2,12 +2,12 @@
 title: Mimari ve Tasarım
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 8f58fb521aa0d9f389dab8c061f40e41b779c743
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: c15bbeb22918b20010fddf373d1e80b7ff27f97c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690244"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422780"
 ---
 # <a name="architecture-and-design"></a>Mimari ve Tasarım
 
@@ -432,7 +432,7 @@ DbQuantifierExpression, çevirme yazdığınızda tüm verimsizlikleri sağlayı
 DbIsEmptyExpression olarak çevrilir:
 
 ```
-IsEmpty(inut) = Not Exists(input)
+IsEmpty(input) = Not Exists(input)
 ```
 
 ## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>İkinci aşama SQL oluşturma: STRING komutu oluşturma

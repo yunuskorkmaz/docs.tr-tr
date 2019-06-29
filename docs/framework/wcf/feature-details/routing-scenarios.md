@@ -2,14 +2,14 @@
 title: Yönlendirme Senaryoları
 ms.date: 03/30/2017
 helpviewer_keywords:
-- rounting [WCF], scenarios
+- routing [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: cab683c11c20f3373a1140a9fd5ad499b2e696e5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0ab071bf7996a296563fbda68dfdc731e95ed897
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626042"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425355"
 ---
 # <a name="routing-scenarios"></a>Yönlendirme Senaryoları
 Yönlendirme hizmeti yüksek oranda özelleştirilebilir olsa da, bunu yeni bir yapılandırma sıfırdan oluştururken, verimli yönlendirme mantığı tasarlamak için bir mücadele haline gelebilir.  Ancak, çoğu yönlendirme hizmeti yapılandırma izleyin birçok yaygın senaryo vardır. Bu senaryolar belirli yapılandırmanızı doğrudan geçerli değil. ancak, yönlendirme hizmeti bu senaryolar işlemek için nasıl yapılandırılabileceğini anlama, yönlendirme hizmeti anlaşılmasına yardımcı olur.  

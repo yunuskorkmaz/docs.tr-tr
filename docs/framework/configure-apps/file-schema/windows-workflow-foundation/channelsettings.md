@@ -3,12 +3,12 @@ title: <channelSettings>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 94a4457f-f43f-458d-a47e-2d11103ee75e
-ms.openlocfilehash: f70e30c903fa9bfc3f5d6054ef2ec34bf1b3cba1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f24efdf6e2ba99eb4fc20b81d238d33c60e6b35a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790214"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422934"
 ---
 # <a name="channelsettings"></a>\<channelSettings >
 Kanal önbellek ayarlarını belirtir.  
@@ -64,7 +64,7 @@ Kanal önbellek ayarlarını belirtir.
  Düzeyleri ve kanal fabrikası ve kanal önbellek için önbellek ayarlarını paylaşımı varsayılan önbelleği değiştirmek konusunda daha fazla bilgi için bkz. [etkinlikleri göndermek için önbellek paylaşımı düzeylerini değiştirme](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
   
 ## <a name="example"></a>Örnek  
- Barındırılan iş akışı hizmetinde, uygulama yapılandırma dosyasında üreteci önbellek ve kanal önbellek ayarları belirtebilirsiniz. Bunu yapmak için üretecini ve kanal önbellek için önbellek ayarlarını içeren bir hizmet davranışını ekleyin ve bu hizmet davranışını hizmetinize ekleyin. Aşağıdaki örnek, içeren bir yapılandırma dosyası içeriğini gösterir **MyChannelCacheBehavior** özel üreteci önbellek ve kanal önbellek ayarları ile hizmet davranışı. Bu hizmet davranışını hizmet aracılığıyla eklenen **behaviorConfiguarion** özniteliği.  
+ Barındırılan iş akışı hizmetinde, uygulama yapılandırma dosyasında üreteci önbellek ve kanal önbellek ayarları belirtebilirsiniz. Bunu yapmak için üretecini ve kanal önbellek için önbellek ayarlarını içeren bir hizmet davranışını ekleyin ve bu hizmet davranışını hizmetinize ekleyin. Aşağıdaki örnek, içeren bir yapılandırma dosyası içeriğini gösterir `MyChannelCacheBehavior` özel üreteci önbellek ve kanal önbellek ayarları ile hizmet davranışı. Bu hizmet davranışını hizmet aracılığıyla eklenen `behaviorConfiguration` özniteliği.  
   
 ```xml  
 <configuration>    

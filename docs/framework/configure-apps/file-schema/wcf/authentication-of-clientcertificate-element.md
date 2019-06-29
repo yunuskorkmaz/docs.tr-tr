@@ -2,12 +2,12 @@
 title: <authentication> ' ın <clientCertificate> öğesi
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: e232cde8f6838de734e37aeee3f52cd7f7e7502d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cbc850331dc6bf76c352f975fda834a309564c6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701339"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423232"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<kimlik doğrulama >, \<clientCertificate > öğesi
 Bir hizmet tarafından kullanılan istemci sertifikaları için kimlik doğrulaması davranışlarını belirtir.  
@@ -41,7 +41,7 @@ Bir hizmet tarafından kullanılan istemci sertifikaları için kimlik doğrulam
 |customCertificateValidatorType|İsteğe bağlı dize. Tür ve özel bir tür doğrulamak için kullanılan bir derleme. Bu öznitelik olduğunda ayarlanmalıdır `certificateValidationMode` ayarlanır `Custom`.|  
 |Certificatevalidationmode'u|İsteğe bağlı sabit listesi. Kimlik bilgilerini doğrulamak için kullanılan modlardan birini belirtir. Bu özniteliktir <xref:System.ServiceModel.Security.X509CertificateValidationMode> türü. Varsa kümesine <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>, ardından bir `customCertificateValidator` de sağlanmalıdır. Varsayılan, <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType> değeridir.|  
 |includeWindowsGroups|İsteğe bağlı Boolean. Windows gruplarını güvenlik bağlamına dahil edilip edilmediğini belirtir. Bu öznitelik ayarını `true` içinde bir tam Grup genişletme sonuçları gibi bir performans etkisi vardır. Bu öznitelik ayarlanan `false` gruplarının listesini oluşturmak ihtiyacınız yoksa bir kullanıcıya ait.|  
-|mapClientCertificateToWindowsAcccount|Boole değeri. İstemci sertifikasını kullanarak bir Windows kimliği eşlenen olup olmadığını belirtir. Bunu yapmak için Active Directory etkinleştirilmesi gerekir.|  
+|mapClientCertificateToWindowsAccount|Boole değeri. İstemci sertifikasını kullanarak bir Windows kimliği eşlenen olup olmadığını belirtir. Bunu yapmak için Active Directory etkinleştirilmesi gerekir.|  
 |revocationMode|İsteğe bağlı sabit listesi. İptal edilen sertifikalar listelerini (RCL) denetlemek için kullanılan modlardan biri. Varsayılan, `Online` değeridir. HTTP aktarım güvenliği kullanırken, bu değer yoksayılır.|  
 |trustedStoreLocation|İsteğe bağlı sabit listesi. İki sistem depolama konumlarından biri: `LocalMachine` veya `CurrentUser`. Bir hizmet sertifikası istemciye anlaşıldığında, bu değer kullanılır. Doğrulama işlemi gerçekleştirildiğinde karşı **güvenilir kişiler** depolamak belirtilen depolama konumu. Varsayılan, `CurrentUser` değeridir.|  
   

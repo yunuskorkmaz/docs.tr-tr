@@ -2,12 +2,12 @@
 title: Özel Belirteç
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 862b4b26295ef3e90064b27ecd753e9b541471a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11b89f6d4f2800f079ba6576801b39c85324f6e0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650211"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425065"
 ---
 # <a name="custom-token"></a>Özel Belirteç
 Bu örnek, bir Windows Communication Foundation (WCF) uygulamasına özel bir belirteç uygulamasını ekleme gösterir. Örnekte bir `CreditCardToken` istemci kredi kartı bilgilerini güvenli bir şekilde hizmetine geçirilecek. Belirteç WS-güvenlik ileti üstbilgisinde imzalanır ve yanı sıra ileti gövdesi ve diğer ileti üstbilgileri simetrik güvenlik bağlama öğesi kullanılarak şifrelenir. Bu, yerleşik belirteçleri yeterli olmadığı durumlarda kullanışlıdır. Bu örnek, bir yerleşik belirteçlerin kullanmak yerine bir hizmete özel güvenlik belirteci gösterilmiştir. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.
@@ -251,7 +251,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
  Yalnızca istemci hizmeti yönde bir kredi kartı belirteç aktarmaya istediğimizden Bu örnekte, bir belirteç sağlayıcısı istemci ve hizmet üzerinde yalnızca bir belirteç kimlik doğrulayıcısı kullanırız.
 
- İstemci işlevselliği bulunan `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` ve `CreditCardTokenProvider` sınıfları.
+ İstemci işlevselliği bulunan `CreditCardClientCredentials`, `CreditCardClientCredentialsSecurityTokenManager` ve `CreditCardTokenProvider` sınıfları.
 
  İşlevi hizmette yer `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` ve `CreditCardTokenAuthorizationPolicy` sınıfları.
 

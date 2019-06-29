@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: baf65340e390c7439e8639e334819fb0bf60f952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 376448502b7b9c7002213be5c3437849a3868166
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662623"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425030"
 ---
 # <a name="federation"></a>Federasyon
 Bu konuda birleşik güvenliği kavramını kısa bir genel bakış sağlar. Ayrıca, Federasyon güvenlik mimariyi dağıtmak için Windows Communication Foundation (WCF) desteği açıklanmaktadır. Federasyon gösteren örnek bir uygulama için bkz. [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -73,7 +73,7 @@ Bu konuda birleşik güvenliği kavramını kısa bir genel bakış sağlar. Ayr
   
  Kullanımını [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) Federasyon security'de senaryo iki mantıksal olarak bağımsızdır aşamaya, aşağıdaki bölümlerde açıklandığı gibi ölçeklendirilebilmeleri.  
   
-### <a name="phase-1-design-phase"></a>1. Aşama: Tasarım aşaması  
+### <a name="phase-1-design-phase"></a>1\. Aşama: Tasarım aşaması  
  Tasarım aşamasında, istemcinin kullandığı [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) hizmet uç noktasını kullanıma sunar politikasını okuyun ve hizmetin kimlik doğrulaması ve yetkilendirme gereksinimlerine toplanacak. İstemcide aşağıdaki güvenlik iletişim düzeni oluşturmak için uygun proxy oluşturulur:  
   
 - Bir güvenlik belirteci istemcisinin güven içinde STS almak.  
@@ -84,7 +84,7 @@ Bu konuda birleşik güvenliği kavramını kısa bir genel bakış sağlar. Ayr
   
 - Hizmete erişmek için hizmet belirteci sunar.  
   
-### <a name="phase-2-run-time-phase"></a>2. Aşama: Çalışma zamanı aşaması  
+### <a name="phase-2-run-time-phase"></a>2\. Aşama: Çalışma zamanı aşaması  
  Çalıştırma aşamasında, istemci bir WCF istemcisi sınıfı nesnesinin örneğini oluşturur ve WCF istemcisi kullanarak bir çağrı yapar. WCF temel çerçevesinde, Federasyon güvenlik iletişim deseni yukarıda açıklanan adımları işler ve sorunsuz bir şekilde hizmeti kullanmak ve istemcinin sağlar.  
   
 ## <a name="sample-implementation-using-wcf"></a>WCF kullanan örnek uygulama  
@@ -284,7 +284,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ### <a name="client-at-organization-a"></a>Bir kuruluştaki istemci  
  Aşağıdaki çizimde istemci kuruluşta A yer alan adımların yanı sıra yapma gösterir bir `MyService` hizmet çağrısı. İşlev diğer bileşenleri de bütünlük açısından dahil edilir.  
   
- ![Showwing MyService hizmet çağrısı adımları diyagram.](./media/federation/federation-myservice-service-call-process.gif)  
+ ![MyService hizmet çağrısında adımları gösteren diyagram.](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>Özet  
  Birleşik güvenliği sorumluluk temiz bir bölme sağlar ve güvenli, ölçeklenebilir hizmet mimarisi oluşturmak için yardımcı olur. Dağıtılmış uygulama oluşturup dağıtırken için bir platform, WCF, Federasyon güvenlik uygulamak için yerel destek sağlar.  

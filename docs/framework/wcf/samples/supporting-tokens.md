@@ -2,12 +2,12 @@
 title: Destek Belirteçleri
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 6257499b22506359c4a23ce7c11655c00c22ef62
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fba9a44342da5b064897b3ab81f34fa39498d379
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650964"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425444"
 ---
 # <a name="supporting-tokens"></a>Destek Belirteçleri
 WS-güvenlik kullanan bir iletiye ek belirteçler ekleme belirteçleri destekleyen örnek gösterir. Örneğin, bir kullanıcı adı güvenlik belirteci yanı sıra bir X.509 ikili güvenlik belirteci ekler. Belirteci bir WS-güvenlik uyarısı istemciden hizmete geçirilir ve iletisinin parçası X.509 sertifikası elinde alıcısına kanıtlamak için X.509 güvenlik belirteciyle ilişkili özel anahtarla imzalanır. Birden fazla talep kimlik doğrulaması veya yetkilendirme gönderen bir ileti ile ilişkili olan bir gereksinimi olduğunda bu durumda kullanışlıdır. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.
@@ -156,7 +156,7 @@ public class EchoService : IEchoService
             }
             else if (claimSet is X509CertificateClaimSet)
             {
-                // Try to find an X500DisinguishedName claim. This will
+                // Try to find an X500DistinguishedName claim. This will
                 // have been generated from the client certificate.
                 X500DistinguishedName tmpDistinguishedName;
                 if (TryGetClaimValue<X500DistinguishedName>(claimSet,
@@ -329,7 +329,7 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
         }
         else if (claimSet is X509CertificateClaimSet)
          {
-            //Try to find an X500DisinguishedName claim.
+            //Try to find an X500DistinguishedName claim.
             //This will have been generated from the client
             //certificate.
             X500DistinguishedName tmpDistinguishedName;

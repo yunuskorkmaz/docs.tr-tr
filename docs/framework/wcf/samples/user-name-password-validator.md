@@ -2,12 +2,12 @@
 title: Kullanıcı AdıParola Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: ee0e0e85389ecba39c140f383f57be95f15ae879
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 16e5f854dbe76150945145c0ce81d0d5fa4ac0d0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662375"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421820"
 ---
 # <a name="user-name-password-validator"></a>Kullanıcı AdıParola Doğrulayıcı
 Bu örnek bir özel UserNamePassword Doğrulayıcıyı uygulamak nasıl gösterir. Bu, yerleşik UserNamePassword doğrulama modları hiçbiri uygulama gereksinimlerini için uygun olduğu durumlarda kullanışlıdır. Örneğin, ne zaman kullanıcı adı/parola çiftleri bir veritabanı gibi bazı dış deposunda depolanır. Bu örnek için iki belirli bir kullanıcı adı/parola çiftleri denetleyen özel Doğrulayıcı sağlayıcısı olan bir hizmete gösterir. İstemci hizmete kimlik doğrulaması için bu tür bir kullanıcı adı/parola çift kullanır.

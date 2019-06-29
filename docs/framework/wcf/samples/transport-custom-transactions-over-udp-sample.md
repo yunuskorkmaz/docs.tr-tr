@@ -2,12 +2,12 @@
 title: 'Taşıma: Örnek UDP üzerinden özel işlemler'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 8a7b0c4e9ea73fa952710f2b415082b56062dad0
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ec6499a8e69c8512c33297ac4477eaafc397d78f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483105"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425521"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Taşıma: Örnek UDP üzerinden özel işlemler
 Bu örnek dayanır [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows Communication Foundation (WCF) örnek[taşıma genişletilebilirliği](../../../../docs/framework/wcf/samples/transport-extensibility.md). UDP taşıma örnek özel işlem akışını destekleyecek şekilde genişletir ve kullanımını gösteren <xref:System.ServiceModel.Channels.TransactionMessageProperty> özelliği.  
@@ -234,7 +234,7 @@ if (transaction != null)
 9. İstemci kodu ve Svcutil.exe kullanarak yapılandırmayı yeniden oluşturmak için hizmet uygulamasını başlatın ve ardından örnek kök dizininden aşağıdaki Svcutil.exe komutu çalıştırın.  
   
     ```  
-    svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
+    svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
     ```  
   
 10. Bağlama uzantı yapılandırması için svcutil.exe oluşturmaz Not `sampleProfileUdpBinding`; el ile eklemeniz gerekir.  

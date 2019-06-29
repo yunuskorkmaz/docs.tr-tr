@@ -2,12 +2,12 @@
 title: 'Taşıma: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 12981e970706c5fc1d954c237309f12c85320c75
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ae4bf22f452035d10ecba6bcf93bf580ab7f5f8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617380"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422159"
 ---
 # <a name="transport-udp"></a>Taşıma: UDP
 UDP taşıma örnek nasıl uygulanacağı UDP tek noktaya yayın ve çok noktaya yayın özel bir Windows Communication Foundation (WCF) aktarım olarak gösterir. Örnek kanal çerçevesi kullanarak ve en iyi yöntemleri WCF özel taşıma WCF'de, oluşturmak için önerilen yordamı açıklar. Özel bir taşıma oluşturmak için adımları aşağıdaki gibidir:  
@@ -446,7 +446,7 @@ Press <ENTER> to terminate the service and exit...
  İstemci kodu ve Svcutil.exe kullanarak yapılandırmayı yeniden oluşturmak için hizmet uygulamasını başlatın ve ardından örnek kök dizininden aşağıdaki Svcutil.exe'ı çalıştırın.  
   
 ```console
-svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
+svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
 ```  
   
  Bağlama uzantı yapılandırması için svcutil.exe oluşturmaz Not `SampleProfileUdpBinding`, el ile eklemeniz gerekir.  

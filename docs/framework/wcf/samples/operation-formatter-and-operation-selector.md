@@ -2,12 +2,12 @@
 title: İşlem Biçimlendirici ve İşlem Seçici
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 94daefbc05bf69cf7fa03c5ce4c2988f3b7db91a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 06f6d3e79844f719efc33788b6ea3bd5326e736b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664791"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424979"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>İşlem Biçimlendirici ve İşlem Seçici
 Bu örnek ileti verilerini ne WCF bekliyor farklı bir biçimde izin vermek için Windows Communication Foundation (WCF) genişletilebilirlik noktaları'nın nasıl kullanılabileceğini gösterir. Varsayılan olarak, WCF biçimlendiricileri altında dahil edilecek yöntem parametreleri beklediğiniz `soap:body` öğesi. Örnek uygulama, bunun yerine bir HTTP GET sorgu dizesi parametresi verileri ayrıştırır ve bu verileri kullanarak yöntemleri çağıran bir özel işlem biçimlendirici gösterir.  
@@ -168,7 +168,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 >   
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QuieryStringFormatter`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QueryStringFormatter`  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   

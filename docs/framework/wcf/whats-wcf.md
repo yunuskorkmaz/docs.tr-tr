@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 37e12c499b19d196dd695e1e2970d750f4dc9b0e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a7db79185d4445c68adda214d10be6d31f6ed9e0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402424"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425107"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
 Windows Communication Foundation (WCF) hizmet odaklı uygulamalar oluşturmaya yönelik bir çerçevedir. WCF kullanarak, verileri zaman uyumsuz ileti olarak bir hizmetin uç noktasından diğerine gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan sürekli olarak kullanılabilir bir hizmetin parçası veya barındırılan bir uygulamada bir hizmet olabilir. Bir uç nokta, bir istemci bir hizmet uç noktasından verileri isteyen bir hizmet olabilir. İletileri bir tek karakter ya da XML olarak gönderilen word kadar basit veya bir ikili veri akışı gibi karmaşık olabilir. Bazı örnek senaryolar şunlardır:
@@ -72,7 +72,7 @@ WCF aşağıdaki özellikleri içerir. Daha fazla bilgi için [WCF özellik ayr�
 
 - **İşlemler**
 
-     WCF işlem üç işlem modeli kullanarak da destekler: WS-AtomicTtransactions, API'leri <xref:System.Transactions> ad ve Microsoft Dağıtılmış İşlem Düzenleyicisi. Wcf'de destek işlem hakkında daha fazla bilgi için bkz [işlemleri](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).
+     WCF işlem üç işlem modeli kullanarak da destekler: WS-AtomicTransactions, API'leri <xref:System.Transactions> ad ve Microsoft Dağıtılmış İşlem Düzenleyicisi. Wcf'de destek işlem hakkında daha fazla bilgi için bkz [işlemleri](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).
 
 - **AJAX ve REST desteği**
 

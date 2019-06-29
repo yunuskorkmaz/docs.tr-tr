@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660612"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424120"
 ---
 # <a name="switch-c-reference"></a>geçiş (C# Başvurusu)
 
@@ -46,7 +46,7 @@ Eşleşme ifade desenlerinde eşleştirilecek değer sağlar `case` etiketler. K
 - bir [char](char.md).
 - bir [dize](string.md).
 - bir [bool](bool.md).
-- bir tamsayı değeri olan gibi bir [int](int.md) veya [uzun](long.md).
+- bir tamsayı değeri olan gibi bir [int](../builtin-types/integral-numeric-types.md) veya [uzun](../builtin-types/integral-numeric-types.md).
 - bir [enum](enum.md) değeri.
 
 C# 7.0 ile başlayarak, eşleştirme ifadesi null olmayan herhangi bir ifade olabilir.
@@ -121,7 +121,7 @@ Sabit desen eşleştirme ifadesi belirtilen bir sabit eşit olup olmadığını 
 Burada *sabit* sınamak için değer. *Sabit* aşağıdaki sabit ifadeler biri olabilir:
 
 - A [bool](bool.md) değişmez değer, ya da `true` veya `false`.
-- Herhangi bir integral sabit gibi bir [int](int.md), [uzun](long.md), veya bir [bayt](byte.md).
+- Herhangi bir integral sabit gibi bir [int](../builtin-types/integral-numeric-types.md), [uzun](../builtin-types/integral-numeric-types.md), veya bir [bayt](../builtin-types/integral-numeric-types.md).
 - Bildirilen bir adı `const` değişkeni.
 - Bir numaralandırma sabiti.
 - A [char](char.md) değişmez.

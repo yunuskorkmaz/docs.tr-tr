@@ -3,12 +3,12 @@ title: Temel türler - C# Kılavuzu
 description: Tüm C# programlarında temel türleri (sayısal türler, dizeler ve nesne) hakkında bilgi edinin
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 3619e1dc9a82c7f120680c198c327252744444b4
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c719177b6099104681f590b550014d9a67f3f3ba
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422090"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424464"
 ---
 # <a name="types-variables-and-values"></a>Türler, değişkenler ve değerleri
 
@@ -28,12 +28,12 @@ Bir tür içinde depolanan bilgiler aşağıdakileri içerebilir:
   
 - İzin verilen işlem türleri.  
   
-Derleyici, kodunuzda gerçekleştirilen tüm işlemler olduğundan emin olmak için tür bilgilerini kullanır. *denkliği*. Örneğin, türünde bir değişken bildirirseniz [int](language-reference/keywords/int.md), derleyici değişkeni buna ek olarak kullanmanızı ve çıkarma işlemleri sağlar. Türünde bir değişkende aynı işlemleri gerçekleştirmeyi denerseniz [bool](language-reference/keywords/bool.md), aşağıdaki örnekte gösterildiği gibi derleyici bir hata oluşturur:  
+Derleyici, kodunuzda gerçekleştirilen tüm işlemler olduğundan emin olmak için tür bilgilerini kullanır. *denkliği*. Örneğin, türünde bir değişken bildirirseniz [int](language-reference/builtin-types/integral-numeric-types.md), derleyici değişkeni buna ek olarak kullanmanızı ve çıkarma işlemleri sağlar. Türünde bir değişkende aynı işlemleri gerçekleştirmeyi denerseniz [bool](language-reference/keywords/bool.md), aşağıdaki örnekte gösterildiği gibi derleyici bir hata oluşturur:  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
 > [!NOTE]  
-> C ve C++ geliştiricileri seçeneğinde bu C# ' ta [bool](language-reference/keywords/bool.md) öğesine dönüştürülebilir değildir [int](language-reference/keywords/int.md).  
+> C ve C++ geliştiricileri seçeneğinde bu C# ' ta [bool](language-reference/keywords/bool.md) öğesine dönüştürülebilir değildir [int](language-reference/builtin-types/integral-numeric-types.md).  
   
 Derleyicinin tür bilgisini yürütülebilir dosya meta veri olarak gömer. Ortak dil çalışma zamanı (CLR) ayırır ve belleği geri kazanır, daha fazla tür güvenliği sağlamak için çalışma zamanında bu meta verileri kullanır.  
 
@@ -43,11 +43,11 @@ Ne zaman bir değişken bildirdiğinizde veya sabit bir program, türünü belir
   
 [!code-csharp[Variable Declaration](../../samples/snippets/csharp/concepts/basic-types/variable-declaration.cs)]  
   
-Yöntem parametreleri ve dönüş değerlerinin türleri Yöntem imzasında belirtilir. Aşağıdaki imza gerektiren bir yöntemi gösterir bir [int](language-reference/keywords/int.md) giriş bağımsız değişkeni olarak bir dize döndürür:  
+Yöntem parametreleri ve dönüş değerlerinin türleri Yöntem imzasında belirtilir. Aşağıdaki imza gerektiren bir yöntemi gösterir bir [int](language-reference/builtin-types/integral-numeric-types.md) giriş bağımsız değişkeni olarak bir dize döndürür:  
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-Bir değişken bildirildikten sonra yeni bir türle yeniden bildirilemez ve bildirilen türle uyumlu olmayan bir değer atanamaz. Örneğin, bildiremezsiniz bir [int](language-reference/keywords/int.md) Boolean değerini atayın [true](language-reference/keywords/true-literal.md). Ancak, değerler örneğin yeni değişkenlere eklendiklerinde veya yöntem bağımsız değişkenleri olarak geçtiklerinde diğer türlere dönüştürülebilir. A *tür dönüştürme* , yoksa veri kaybına neden olmayan derleyici tarafından otomatik olarak gerçekleştirilir. Veri kaybına neden olabilecek bir dönüştürme gerektiren bir *atama* kaynak kodunda.
+Bir değişken bildirildikten sonra yeni bir türle yeniden bildirilemez ve bildirilen türle uyumlu olmayan bir değer atanamaz. Örneğin, bildiremezsiniz bir [int](language-reference/builtin-types/integral-numeric-types.md) Boolean değerini atayın [true](language-reference/keywords/true-literal.md). Ancak, değerler örneğin yeni değişkenlere eklendiklerinde veya yöntem bağımsız değişkenleri olarak geçtiklerinde diğer türlere dönüştürülebilir. A *tür dönüştürme* , yoksa veri kaybına neden olmayan derleyici tarafından otomatik olarak gerçekleştirilir. Veri kaybına neden olabilecek bir dönüştürme gerektiren bir *atama* kaynak kodunda.
 
 Daha fazla bilgi için [atama ve tür dönüştürmeleri](programming-guide/types/casting-and-type-conversions.md).
 

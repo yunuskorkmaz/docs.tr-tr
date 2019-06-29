@@ -3,12 +3,12 @@ title: <sqlWorkflowInstanceStore>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
-ms.openlocfilehash: 8601f1c7f4e1dbf911020c328652c371bf039124
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5073d27ed2bea0b4d48d0568c30113cbe3d478e0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794440"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422878"
 ---
 # <a name="sqlworkflowinstancestore"></a>\<sqlWorkflowInstanceStore >
 Yapılandırmanıza olanak tanıyan bir hizmet davranışını <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> özellik, bir SQL Server 2005 veya SQL Server 2008 veritabanına iş akışı hizmet örneklerine yönelik sürüyor durumu bilgileri destekler. Bu özellik hakkında daha fazla bilgi için bkz. [SQL iş akışı örneği Store](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
@@ -26,7 +26,7 @@ Yapılandırmanıza olanak tanıyan bir hizmet davranışını <xref:System.Acti
   <serviceBehaviors>
     <behavior name="String">
       <sqlWorkflowInstanceStore connectionStringName="String" 
-                                honstLockRenewalPeriod="TimeSpan" 
+                                hostLockRenewalPeriod="TimeSpan" 
                                 instanceCompletionAction="DeleteNothing/DeleteAll" 
                                 instanceEncodingAction="None/GZip" 
                                 instanceLockedExceptionAction="NoRetry/BasicRetry/AggressiveRetry" 
@@ -45,7 +45,7 @@ Yapılandırmanıza olanak tanıyan bir hizmet davranışını <xref:System.Acti
 |---------------|-----------------|  
 |connectionString|Temel alınan bir Kalıcılık veritabanına bağlanmak için kullanılan bir bağlantı dizesi içeren bir dize.|  
 |connectionStringName|Veritabanı sunucusu için bir adlandırılmış bağlantı dizesi içeren bir dize. Bir adlandırılmış bağlantı dizesi "DefaultConnectionString" örneğidir.|  
-|honstLockRenewalPeriod|Ana bilgisayar örneği kilidi yenilemeniz gerekir süre belirten bir Timespan değeri. Ana bilgisayar belirli bir süre içinde kilidi yenileme değil, örnek kilidi açılmış ve başka bir ana bilgisayar tarafından çekilmesi.<br /><br /> Bir iş akışı kaldırılırken ayrıca kalıcı anlamına gelir. Bu öznitelik iş akışı örneği kalıcı ve hemen sonra kaldırıldığında sıfır olarak ayarlanırsa, iş akışı boş olur. Bu öznitelik için TimeSpan.MaxValue etkili bir şekilde ayarlanması kaldırma işlemi devre dışı bırakır. Boş iş akışı örnekleri hiçbir zaman kaldırılır.|  
+|hostLockRenewalPeriod|Ana bilgisayar örneği kilidi yenilemeniz gerekir süre belirten bir Timespan değeri. Ana bilgisayar belirli bir süre içinde kilidi yenileme değil, örnek kilidi açılmış ve başka bir ana bilgisayar tarafından çekilmesi.<br /><br /> Bir iş akışı kaldırılırken ayrıca kalıcı anlamına gelir. Bu öznitelik iş akışı örneği kalıcı ve hemen sonra kaldırıldığında sıfır olarak ayarlanırsa, iş akışı boş olur. Bu öznitelik için TimeSpan.MaxValue etkili bir şekilde ayarlanması kaldırma işlemi devre dışı bırakır. Boş iş akışı örnekleri hiçbir zaman kaldırılır.|  
 |instanceCompletionAction|İş akışı örneği tamamlandıktan sonra iş akışı örneği verileri sürdürme deposunda olup tutulur veya bu noktada silinmiş varsa belirten bir değer. Bu değer türünde <xref:System.Activities.DurableInstancing.InstanceCompletionAction>.<br /><br /> Numaralandırılan eylemleri sürdürme deposundan örneği verileri silme veya örnek kendi işlemi tamamlandığında örneği veri sürdürme deposundan silme değil oluşur.<br /><br /> Örnekleri engel olmak sonra tamamlama Kalıcılık oluşturuyorsa veritabanına neden olur ve bu veritabanı performansı etkiler. Performans gereksinimlerinize uygun düzenli aralıklarla veritabanının performans düzeyinde olduğundan emin olmak için bu kayıtları silmek için bir veritabanı temizleme İlkesi yapılandırmanız gerekir.|  
 |instanceEncodingOption|Örnek durum bilgilerini bilgileri sürdürme deposunda kaydedilmeden önce GZip algoritmasıyla sıkıştırılıp sıkıştırılmadığını belirtir isteğe bağlı bir değer... Bu değer türünde <xref:System.Activities.DurableInstancing.InstanceEncodingOption>. Bu özellik için olası değerler <xref:System.Activities.DurableInstancing.InstanceEncodingOption.None>, hiçbir sıkıştırma belirtir ve <xref:System.Activities.DurableInstancing.InstanceEncodingOption.GZip>, örnek veri sıkıştırılmış ve gzip algoritma belirtir.|  
 |instanceLockedExceptionAction|Yanıt olarak ana bilgisayar örneği şu anda başka bir ana bilgisayar tarafından kilitlendiğinden örneği kilitlemek çalıştığında oluşturulan bir özel durum ortaya çıkan eylem belirten bir değer. Bu değer türünde <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction>.<br /><br /> Bu alan için izin verilen Seçenekler şunlardır: None, temel yeniden deneyin ve etkin yeniden deneyin. Varsayılan değer, Yok'tur. Aşağıdaki liste bu üç seçenek için açıklamalar sağlar:<br /><br /> -Yok. Hizmet ana bilgisayar örneği ve geçişleri kilitlemek denemez <xref:System.Runtime.DurableInstancing.InstanceLockedException> çağırana.<br />-Temel yeniden deneyin. Hizmet Konağı bir doğrusal yeniden deneme aralığı örnekle kilitlemek tekrar dener ve dizisi sonunda çağırana özel durum geçirir.<br />-Etkin yeniden deneyin. Hizmet ana bilgisayarının reattempts bir üssel olarak artan gecikme ve geçişleri örnekle kilitlemek <xref:System.Runtime.DurableInstancing.InstanceLockedException> dizisi sonunda çağırana.|  

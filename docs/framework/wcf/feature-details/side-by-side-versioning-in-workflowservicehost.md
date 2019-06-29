@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 3ac8b2260e5da1e91c167e3e9ef91039deb983b2
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 0dfb2469ac3f497a40a3008c9933977947685979
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380240"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425496"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost Yan Yana Sürüm Oluşturma
 <xref:System.ServiceModel.Activities.WorkflowServiceHost> .NET Framework 4. 5 ' tanıtılan yan yana sürüm oluşturma, birden çok sürümünü tek bir uç nokta bir iş akışı hizmeti barındırma olanağı sağlar. Yeni iş akışı hizmeti örnekleri çalışırken örneklerini kullanarak varolan tanımın tam yeni iş akışı tanımı kullanarak oluşturulmasını sağlayacak şekilde yapılandırılması bir iş akışı hizmeti sağlanan yan yana işlevselliği sağlar. Bu konuda, iş akışı hizmeti yan yana yürütme kullanarak genel bir bakış sağlar <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
@@ -82,7 +82,7 @@ End With
 >  Hizmet olmadan başlangıçta dağıtıldıysa kullanışlıdır bir <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> yapılandırılmış, ve ardından güncelleştirilmiş bir sürüm oluşturulur.  
   
 ### <a name="adding-a-new-version-to-a-web-hosted-workflow-service"></a>Bir Web barındırılan iş akışı hizmeti için yeni bir sürüm ekleme  
- Bir iş akışı hizmeti yeni bir sürümü web barındırılan bir hizmete yapılandırmada ilk adım, yeni bir klasöre oluşturmaktır `App_Code` hizmet dosyası aynı ada sahip bir klasör. Varsa bu hizmetin `xamlx` dosya adlı `MortgageWorkflow.xamlx`, klasörü adlandırılmalıdır `MortgageWorkflow`. Özgün hizmetin bir kopyasını yerleştirmek `xamlx` gibi yeni bir ad ile yeniden adlandırın ve bu klasöre dosya `MortgageWorkflowV1.xamlx`. İstediğiniz değişiklikleri birincil hizmetinize, güncelleştirme, <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>ve ardından hizmeti dağıtmak. Aşağıdaki örnekte <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> ile güncelleştirilmiş bir <xref:System.Activities.WorkflowIdentity.Name%2A> , `MortageWorkflow` ve <xref:System.Activities.WorkflowIdentity.Version%2A> , `2.0.0.0`.  
+ Bir iş akışı hizmeti yeni bir sürümü web barındırılan bir hizmete yapılandırmada ilk adım, yeni bir klasöre oluşturmaktır `App_Code` hizmet dosyası aynı ada sahip bir klasör. Varsa bu hizmetin `xamlx` dosya adlı `MortgageWorkflow.xamlx`, klasörü adlandırılmalıdır `MortgageWorkflow`. Özgün hizmetin bir kopyasını yerleştirmek `xamlx` gibi yeni bir ad ile yeniden adlandırın ve bu klasöre dosya `MortgageWorkflowV1.xamlx`. İstediğiniz değişiklikleri birincil hizmetinize, güncelleştirme, <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>ve ardından hizmeti dağıtmak. Aşağıdaki örnekte <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> ile güncelleştirilmiş bir <xref:System.Activities.WorkflowIdentity.Name%2A> , `MortgageWorkflow` ve <xref:System.Activities.WorkflowIdentity.Version%2A> , `2.0.0.0`.  
   
  ![DefinitionIdentity, Workflowıdentity gösteren ekran görüntüsü.](./media/side-by-side-versioning-in-workflowservicehost/definitionidentity-workflowidentity.bmp)  
   

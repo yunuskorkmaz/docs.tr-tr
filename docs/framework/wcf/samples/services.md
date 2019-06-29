@@ -2,12 +2,12 @@
 title: Örnekleri - WCF hizmetleri
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: 4531e72711d17c57bb4e365b458f0b35d6b42577
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9c4c6c0083a685f2f85b01ed3a5bed377708dd13
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637593"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425460"
 ---
 # <a name="services"></a>Hizmetler
 
@@ -30,7 +30,7 @@ WCF Hizmeti Güvenlik gösterir.
 - [WCF hizmetleri için Basitleştirilmiş yapılandırma](simplified-configuration-for-wcf-services.md)\
 Uygulama ve tipik hizmeti ve WCF kullanarak istemci yapılandırma gösterilmektedir.
 
-- [Standart uç noktaları kullanma](usage-of-standard-endpoints.md)\
+- [Standart uç noktaları](usage-of-standard-endpoints.md)\
 Standart uç noktaları hizmet yapılandırma dosyalarında nasıl yapılacağı açıklanır.
 
 - [Genişletilmiş Koruma İlkesi](extended-protection-policy.md)\

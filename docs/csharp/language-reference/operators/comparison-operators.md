@@ -19,16 +19,16 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 0e6edf9bcc0954bf06e76b238b2bb07dea040a9c
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 5b6668e20e4d69b7d6bdf3e6283574f1b974ef54
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347893"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423964"
 ---
 # <a name="comparison-operators-c-reference"></a>Karşılaştırma işleçleri (C# Başvurusu)
 
-[ `<` (Küçüktür)](#less-than-operator-), [ `>` (büyüktür)](#greater-than-operator-), [ `<=` (küçüktür veya eşittir)](#less-than-or-equal-operator-), ve [ `>=` () büyüktür veya eşittir)](#greater-than-or-equal-operator-) karşılaştırması, işlenenleri Karşılaştırma işleçleri olarak ilişkisel'da bilinir. Tüm bu işleçleri destekler [integral](../keywords/integral-types-table.md) ve [kayan nokta](../keywords/floating-point-types-table.md) sayısal türler.
+[ `<` (Küçüktür)](#less-than-operator-), [ `>` (büyüktür)](#greater-than-operator-), [ `<=` (küçüktür veya eşittir)](#less-than-or-equal-operator-), ve [ `>=` () büyüktür veya eşittir)](#greater-than-or-equal-operator-) karşılaştırması, işlenenleri Karşılaştırma işleçleri olarak ilişkisel'da bilinir. Tüm bu işleçleri destekler [integral](../builtin-types/integral-numeric-types.md) ve [kayan nokta](../keywords/floating-point-types-table.md) sayısal türler.
 
 > [!NOTE]
 > İçin `==`, `<`, `>`, `<=`, ve `>=` herhangi işlenenden değilse, birkaç işleçleri (<xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType>), işlem sonucu `false`. Bu anlamına `NaN` değerdir ne büyük, küçük ya da diğer eşit `double` (veya `float`) dahil olmak üzere, değer `NaN`. Daha fazla bilgi ve örnekler için bkz. <xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType> başvurusu makalesinde.

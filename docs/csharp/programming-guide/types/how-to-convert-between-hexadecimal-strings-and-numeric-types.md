@@ -8,12 +8,12 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 99d30d6c2b50569312ff2d732a34020ab29ce81c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 046a406c32cd2ad0649cf88381a9e121f7566fe5
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595066"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423506"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Nasıl yapılır: Onaltılık dizeler ve sayısal türler arasında dönüştürme (C# Programlama Kılavuzu)
 Bu örnekler, aşağıdaki görevlerin nasıl gerçekleştirileceğini gösterir:  
@@ -22,11 +22,11 @@ Bu örnekler, aşağıdaki görevlerin nasıl gerçekleştirileceğini gösterir
   
 - Elde [char](../../../csharp/language-reference/keywords/char.md) karşılık gelen her değeri bir onaltılık dize.  
   
-- On altılı dönüştürme `string` için bir [int](../../../csharp/language-reference/keywords/int.md).  
+- On altılı dönüştürme `string` için bir [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md).  
   
 - On altılı dönüştürme `string` için bir [float](../../../csharp/language-reference/keywords/float.md).  
   
-- Dönüştürme bir [bayt](../../../csharp/language-reference/keywords/byte.md) dizi için bir onaltılık `string`.  
+- Dönüştürme bir [bayt](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) dizi için bir onaltılık `string`.  
   
 ## <a name="example"></a>Örnek  
  Bu örnekte her bir karakteri onaltılık değerini çıkarır bir `string`. İlk ayrıştırır `string` karakter dizisi. Çağrı sonra <xref:System.Convert.ToInt32%28System.Char%29> üzerinde sayısal değerini almak için her bir karakter. Son olarak, onaltılı gösterimine olarak sayı biçimlendiren bir `string`.  
@@ -34,7 +34,7 @@ Bu örnekler, aşağıdaki görevlerin nasıl gerçekleştirileceğini gösterir
  [!code-csharp[csProgGuideTypes#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#30)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte ayrıştırmak için bir `string` , on altılık değerleri ve her onaltılı değerine karşılık gelen karakteri çıkarır. İlk çağrı [bölme (Char\[\])](xref:System.String.Split(System.Char[])) bireysel olarak her bir onaltılık değer elde etmek için yöntemi `string` dizi. Çağrı sonra <xref:System.Convert.ToInt32%28System.String%2CSystem.Int32%29> olarak temsil edilen bir ondalık değer onaltılı değerine dönüştürmek için bir [int](../../../csharp/language-reference/keywords/int.md). Bu, o karakteri koduna karşılık gelen karakteri almak için iki farklı şekilde gösterir. İlk tekniği kullanan <xref:System.Char.ConvertFromUtf32%28System.Int32%29>, tamsayı bağımsız değişken olarak karşılık gelen karakteri döndürür bir `string`. İkinci yöntem açıkça bıraktığı `int` için bir [char](../../../csharp/language-reference/keywords/char.md).  
+ Bu örnekte ayrıştırmak için bir `string` , on altılık değerleri ve her onaltılı değerine karşılık gelen karakteri çıkarır. İlk çağrı [bölme (Char\[\])](xref:System.String.Split(System.Char[])) bireysel olarak her bir onaltılık değer elde etmek için yöntemi `string` dizi. Çağrı sonra <xref:System.Convert.ToInt32%28System.String%2CSystem.Int32%29> olarak temsil edilen bir ondalık değer onaltılı değerine dönüştürmek için bir [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md). Bu, o karakteri koduna karşılık gelen karakteri almak için iki farklı şekilde gösterir. İlk tekniği kullanan <xref:System.Char.ConvertFromUtf32%28System.Int32%29>, tamsayı bağımsız değişken olarak karşılık gelen karakteri döndürür bir `string`. İkinci yöntem açıkça bıraktığı `int` için bir [char](../../../csharp/language-reference/keywords/char.md).  
   
  [!code-csharp[csProgGuideTypes#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#31)]  
   
@@ -49,7 +49,7 @@ Bu örnekler, aşağıdaki görevlerin nasıl gerçekleştirileceğini gösterir
  [!code-csharp[csProgGuideTypes#39](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#39)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl dönüştürüleceğini gösterir bir [bayt](../../../csharp/language-reference/keywords/byte.md) kullanarak bir onaltılık dize dizisine <xref:System.BitConverter?displayProperty=nameWithType> sınıfı.  
+ Aşağıdaki örnek nasıl dönüştürüleceğini gösterir bir [bayt](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) kullanarak bir onaltılık dize dizisine <xref:System.BitConverter?displayProperty=nameWithType> sınıfı.  
   
  [!code-csharp[csProgGuideTypes#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#38)]  
   

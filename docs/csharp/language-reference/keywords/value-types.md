@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: afefb1f7bebb66a915074e8f231e73962a1b0ab0
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 9907811a43f408020e2ee76621d4975a53945570
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401454"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424025"
 ---
 # <a name="value-types-c-reference"></a>Değer türleri (C# Başvurusu)
 
@@ -40,11 +40,11 @@ Varsayılan değer türü başlatan örtük parametresiz bir oluşturucu her de�
 
 *Basit türler* bir dizi önceden tanımlanmış bir yapı türü tarafından sağlanan C# ve aşağıdaki türleri oluşturan:
 
-- [Tam sayı türleri](integral-types-table.md): tamsayı sayısal türleri ve [char](char.md) türü
+- [Tam sayı türleri](../builtin-types/integral-numeric-types.md): tamsayı sayısal türleri ve [char](char.md) türü
 - [Kayan nokta türleri](floating-point-types-table.md)
 - [bool](bool.md)
 
-Basit türler anahtar sözcükleri tanımlanır, ancak bu anahtar sözcükler yalnızca önceden tanımlanmış bir yapı türleri için diğer adlar <xref:System> ad alanı. Örneğin, [int](int.md) bir diğer adıdır <xref:System.Int32?displayProperty=nameWithType>. Diğer adlar tam bir listesi için bkz. [yerleşik türler tablosu](built-in-types-table.md).
+Basit türler anahtar sözcükleri tanımlanır, ancak bu anahtar sözcükler yalnızca önceden tanımlanmış bir yapı türleri için diğer adlar <xref:System> ad alanı. Örneğin, [int](../builtin-types/integral-numeric-types.md) bir diğer adıdır <xref:System.Int32?displayProperty=nameWithType>. Diğer adlar tam bir listesi için bkz. [yerleşik türler tablosu](built-in-types-table.md).
 
 Basit türler, bazı ek işlemler izin vermek, diğer yapı türlerden farklılık gösterir:
 

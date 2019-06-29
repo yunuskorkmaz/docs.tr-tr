@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 261c3fa2cc2f94e2a3f76a8a41982c21183e973a
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 60907eb1bbfeb1daa9d9a74733387c4771accb45
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401359"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423982"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Boolean mantıksal işleçleri (C# Başvurusu)
 
@@ -47,7 +47,7 @@ Aşağıdaki işleçleri ile mantıksal işlemleri [bool](../keywords/bool.md) i
 - İkili [ `&` (mantıksal ve)](#logical-and-operator-), [ `|` (mantıksal veya)](#logical-or-operator-), ve [ `^` (mantıksal XOR)](#logical-exclusive-or-operator-) işleçleri. Bu işleçler, her iki işlenen de her zaman değerlendirin.
 - İkili [ `&&` (koşullu mantıksal ve)](#conditional-logical-and-operator-) ve [ `||` (koşullu mantıksal veya)](#conditional-logical-or-operator-) işleçleri. Yalnızca gerekli olduğunda bu işleçleri atamada sağ işlenen değerlendirin.
 
-İşlenen için [integral](../keywords/integral-types-table.md) türleri `&`, `|`, ve `^` işleçleri mantıksal bit düzeyinde işlemler gerçekleştirin. Daha fazla bilgi için [işleçler bit düzeyinde and -shift](bitwise-and-shift-operators.md).
+İşlenen için [integral](../builtin-types/integral-numeric-types.md) türleri `&`, `|`, ve `^` işleçleri mantıksal bit düzeyinde işlemler gerçekleştirin. Daha fazla bilgi için [işleçler bit düzeyinde and -shift](bitwise-and-shift-operators.md).
 
 ## <a name="logical-negation-operator-"></a>Mantıksal değilleme işleci!
 

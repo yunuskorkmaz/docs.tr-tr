@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f6f6fa8afe2e4aaea6e9f2b96329542b7fe5292
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b78b770417b9599719ea219041a9fd6adaf5a84
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607688"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423404"
 ---
 # <a name="assembly-security-considerations"></a>Derleme Güvenliği Konuları
 <a name="top"></a> Bir derleme oluşturduğunuzda, derlemenin çalışması için gerekli izinler kümesi belirtebilirsiniz. Bir derlemeye belirli izinlerin verilip verilmediği kanıta göre belirlenir.  
@@ -31,7 +31,7 @@ ms.locfileid: "64607688"
   
 - Giriş kanıtı yükleyici tarafından toplanan kanıtla birleştirilerek ilke çözümlemesi için kullanılacak olan son kanıt kümesini oluşturur. Bu semantiği kullanan yöntemlerden **Assembly.Load**, **Assembly.LoadFrom**, ve **Activator.CreateInstance**.  
   
-- Giriş kanıtı, ilke çözümlemesi için kullanılan son kanıt kümesi olarak değiştirilmeden kullanılır. Bu semantiği kullanan yöntemlerden **Assembly.Load(byte[])** ve **AppDomain.DefineDynamicAssembly()**.  
+- Giriş kanıtı, ilke çözümlemesi için kullanılan son kanıt kümesi olarak değiştirilmeden kullanılır. Bu semantiği kullanan yöntemlerden **Assembly.Load(byte[])** ve **AppDomain.DefineDynamicAssembly()** .  
   
  Tarafından isteğe bağlı izinler verilebilir [Güvenlik İlkesi](../../../docs/framework/misc/code-access-security-basics.md) derlemenin çalışacağı bilgisayarda ayarlayın. Kodunuzun tüm olası güvenlik özel durumlarını işlemesini istiyorsanız, aşağıdakilerden birini yapabilirsiniz:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "64607688"
   
  Hiçbir güven düzeyi sağlayan bir tanımlayıcı ad ile ilişkilendirilen [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) önemli. İki imzalama aracı, bir yayımcının kimliğini üçüncü taraf bir yetkiliye kanıtlamasını ve bir sertifika almasını gerektirir. Bu sertifika ardından dosyanıza katıştırılır ve bir yönetici tarafından kodunuzun orijinalliğine güvenip güvenmemeye karar vermek için kullanılabilir.  
   
- Hem bir tanımlayıcı ad hem de kullanılarak oluşturulan bir dijital imza verebilirsiniz [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) bir derlemeye veya kullanabilirsiniz tek başına. İki imzalama aracı aynı anda yalnızca tek bir dosya imzalayabilir; bir çoklu dosya derlemesi için derleme bildirimini içeren dosyayı imzalarsınız. Tanımlayıcı ad derleme bildirimini içeren dosyada saklanır, ancak kullanarak oluşturulan bir imza [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) derleme bildirimini içeren taşınabilir yürütülebilir (PE) dosyanın içinde ayrılmış bir bölümde depolanır. Kullanarak bir derlemeyi imzalamak [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) (ile veya bir tanımlayıcı ad olmadan) kullanılabilir dayanan bir güven hiyerarşisine zaten varsa[SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) üretilen imzaları veya ne zaman ilkeniz yalnızca anahtar bölümünü kullanıp güven zinciri denetlemez.  
+ Hem bir tanımlayıcı ad hem de kullanılarak oluşturulan bir dijital imza verebilirsiniz [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) bir derlemeye veya kullanabilirsiniz tek başına. İki imzalama aracı aynı anda yalnızca tek bir dosya imzalayabilir; bir çoklu dosya derlemesi için derleme bildirimini içeren dosyayı imzalarsınız. Tanımlayıcı ad derleme bildirimini içeren dosyada saklanır, ancak kullanarak oluşturulan bir imza [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) derleme bildirimini içeren taşınabilir yürütülebilir (PE) dosyanın içinde ayrılmış bir bölümde depolanır. Kullanarak bir derlemeyi imzalamak [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) (ile veya bir tanımlayıcı ad olmadan) kullanılabilir dayanan bir güven hiyerarşisine zaten varsa [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) üretilen imzaları veya ne zaman ilkeniz yalnızca anahtar bölümünü kullanıp güven zinciri denetlemez.  
   
 > [!NOTE]
 >  Bir derleme üzerinde hem tanımlayıcı ad hem de bir imzalama aracı imzası kullanırken, tanımlayıcı ad önce atanmalıdır.  

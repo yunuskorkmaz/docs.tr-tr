@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 7cbd1a2c1a9968ae8ed4f96d503d472bbe9b32c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50b1cdb8b7e5087f1fd6669e7163e2c15e9b23bf
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710036"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423653"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Eşitlik karşılaştırmaları (C# Programlama Kılavuzu)
 
@@ -28,7 +28,7 @@ Bazen, eşitlik için iki değeri karşılaştırmak gereklidir. Bazı durumlard
 
 ## <a name="value-equality"></a>Değer eşitliği
 
- Değer eşitliği, iki nesnenin aynı değeri veya değerleri içerdiği anlamına gelir. İlkel değer türleri gibi [int](../../../csharp/language-reference/keywords/int.md) veya [bool](../../../csharp/language-reference/keywords/bool.md), için değer eşitliği testleri kolaydır. Kullanabileceğiniz [ == ](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) işleci, aşağıdaki örnekte gösterildiği gibi.  
+ Değer eşitliği, iki nesnenin aynı değeri veya değerleri içerdiği anlamına gelir. İlkel değer türleri gibi [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) veya [bool](../../../csharp/language-reference/keywords/bool.md), için değer eşitliği testleri kolaydır. Kullanabileceğiniz [ == ](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) işleci, aşağıdaki örnekte gösterildiği gibi.  
   
 ```csharp  
 int a = GetOriginalValue();  

@@ -3,12 +3,12 @@ title: C#Türler ve değişkenler - Turu C# dil
 description: Türleri tanımlama ve değişkenleri bildirme hakkında bilgi edininC#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 5623b4a1e85508ea7206df2c73b7aaffcbc3fbb1
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a3f31eca296265c1e7f0c14a9540e267a2165ec1
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881975"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423448"
 ---
 # <a name="types-and-variables"></a>Türler ve değişkenler
 
@@ -55,7 +55,7 @@ Genel bir bakış verilmiştir C#'s tür sistemi.
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-Sayısal türleri hakkında daha fazla bilgi için bkz. [tam sayı türleri tablosu](../language-reference/keywords/integral-types-table.md) ve [kayan nokta türleri tablosu](../language-reference/keywords/floating-point-types-table.md).
+Sayısal türleri hakkında daha fazla bilgi için bkz. [Integral türleri](../language-reference/builtin-types/integral-numeric-types.md) ve [kayan nokta türleri tablosu](../language-reference/keywords/floating-point-types-table.md).
 
 C#ın `bool` türü Boolean değerlerini temsil edecek şekilde kullanılır — ya da değerler `true` veya `false`.
 

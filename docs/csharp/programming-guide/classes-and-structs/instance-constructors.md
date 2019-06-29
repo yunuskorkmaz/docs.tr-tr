@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: b4257cfa1f50ebd9ce821fff2a0bfa15fae4ac2f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a5ed331c6b2960a56d7ab0d7812cb3a687ccfdd5
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398443"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423755"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Örnek Oluşturucuları (C# Programlama Kılavuzu)
 
@@ -32,7 +32,7 @@ ms.locfileid: "67398443"
   
  [!code-csharp[csProgGuideObjects#77](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#77)]  
   
- Bir sınıf bir oluşturucu yoksa, parametresiz bir oluşturucu otomatik olarak oluşturulur ve varsayılan değerler nesne alanları başlatmak için kullanılır. Örneğin, bir [int](../../../csharp/language-reference/keywords/int.md) 0 olarak başlatılır. Varsayılan değerleri hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](../../../csharp/language-reference/keywords/default-values-table.md). Bu nedenle, çünkü `Coords` sınıf parametresiz oluşturucu tüm veri üyeleri sıfırdan başlatır, sınıf şeklini değiştirmeden tamamen kaldırılabilir. Birden çok oluşturucuları kullanarak tam bir örnek daha sonra bu konudaki örnek 1'de sağlanan ve otomatik olarak oluşturulan bir oluşturucu örneği örnek 2'de sağlanır.  
+ Bir sınıf bir oluşturucu yoksa, parametresiz bir oluşturucu otomatik olarak oluşturulur ve varsayılan değerler nesne alanları başlatmak için kullanılır. Örneğin, bir [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 0 olarak başlatılır. Varsayılan değerleri hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](../../../csharp/language-reference/keywords/default-values-table.md). Bu nedenle, çünkü `Coords` sınıf parametresiz oluşturucu tüm veri üyeleri sıfırdan başlatır, sınıf şeklini değiştirmeden tamamen kaldırılabilir. Birden çok oluşturucuları kullanarak tam bir örnek daha sonra bu konudaki örnek 1'de sağlanan ve otomatik olarak oluşturulan bir oluşturucu örneği örnek 2'de sağlanır.  
   
  Örnek oluşturucuları, temel sınıfların örnek oluşturucuları çağırmak için de kullanılabilir. Sınıf oluşturucu başlatıcı aracılığıyla temel sınıfın Oluşturucusu gibi çağırabilirsiniz:  
   

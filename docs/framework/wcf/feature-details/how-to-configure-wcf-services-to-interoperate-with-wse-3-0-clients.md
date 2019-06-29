@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: WCF Hizmetlerini WSE 3.0 İstemcileriyle Birlikte Çalışmak için Yapılandırma'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 1c5a5e4e92eedb21e3405370e59344d3b861d1dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5034744059e7ed87d4f8b41c6ae89d1af1bf0f56
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619170"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425396"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Nasıl yapılır: WCF Hizmetlerini WSE 3.0 İstemcileriyle Birlikte Çalışmak için Yapılandırma
 Windows Communication Foundation (WCF) hizmetlerini WCF hizmetleri belirtiminin WS-Addressing Ağustos 2004 sürümü kullanmak üzere yapılandırılmış hat düzeyinde (WSE) Microsoft .NET istemcileri için Web Hizmetleri iyileştirmeleri 3.0 uyumlu olur.  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) hizmetlerini WCF hizmetleri belirtiminin 
   
     3. Bir kimlik doğrulama modu ve bir alt ekleyerek WSE 3.0 ile uyumlu olan iletileri güvenli hale getirmek için kullanılan WS-güvenlik belirtimleri sürümünü belirtin [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) için [ \<bağlama >](../../../../docs/framework/misc/binding.md).  
   
-         Kimlik doğrulama modu ayarlamak için ayarlayın `authenicationMode` özniteliği [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Bir kimlik doğrulama modu, bir kullanıma hazır güvenlik onaylama işlemi WSE 3.0 kabaca eşdeğerdir. Aşağıdaki tabloda, kullanıma hazır güvenlik onaylar WSE 3.0 wcf'de kimlik doğrulama modları eşlenir.  
+         Kimlik doğrulama modu ayarlamak için ayarlayın `authenticationMode` özniteliği [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Bir kimlik doğrulama modu, bir kullanıma hazır güvenlik onaylama işlemi WSE 3.0 kabaca eşdeğerdir. Aşağıdaki tabloda, kullanıma hazır güvenlik onaylar WSE 3.0 wcf'de kimlik doğrulama modları eşlenir.  
   
         |WCF kimlik doğrulama modu|WSE 3.0 kullanıma hazır güvenlik onaylama işlemi|  
         |-----------------------------|----------------------------------------|  

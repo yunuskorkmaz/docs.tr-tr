@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a9c9072c5565cf322bbf6a913255542fb46cb93
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: b7284975d717bdecc4127e09fe04163e8fd0d243
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378561"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424757"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 
@@ -199,7 +199,7 @@ Karma mod yüksek DPI ölçeklendirmesini desteğini etkinleştirmek için aşa�
 
 <a name="v472" />
 
-## <a name="whats-new-in-net-framework-472"></a>4.7.2 .NET Framework'teki yenilikler
+## <a name="whats-new-in-net-framework-472"></a>4\.7.2 .NET Framework'teki yenilikler
 
 .NET framework 4.7.2 aşağıdaki alanlarda yeni özellikler içerir:
 
@@ -328,11 +328,11 @@ Daha fazla bilgi ve kod örnekleri için bkz. "programlı oluşturulmasını PKC
 
 **Yeni SignerInfo üyeler**
 
-4.7.2, .NET Framework ile başlayarak <xref:System.Security.Cryptography.Pkcs.SignerInfo> sınıfı imza hakkında daha fazla bilgi gösterir. Değerini alabilir <xref:System.Security.Cryptography.Pkcs.SignerInfo.SignatureAlgorithm?displayProperty=fullName> imzalayan tarafından kullanılan imza algoritmasını belirlemek için özellik. <xref:System.Security.Cryptography.Pkcs.SignerInfo.GetSignature%2A?displayProperty=nameWithType> Bu imzalayan için şifreleme imzası bir kopyasını almak için çağrılabilir.
+4\.7.2, .NET Framework ile başlayarak <xref:System.Security.Cryptography.Pkcs.SignerInfo> sınıfı imza hakkında daha fazla bilgi gösterir. Değerini alabilir <xref:System.Security.Cryptography.Pkcs.SignerInfo.SignatureAlgorithm?displayProperty=fullName> imzalayan tarafından kullanılan imza algoritmasını belirlemek için özellik. <xref:System.Security.Cryptography.Pkcs.SignerInfo.GetSignature%2A?displayProperty=nameWithType> Bu imzalayan için şifreleme imzası bir kopyasını almak için çağrılabilir.
 
 **Sarmalanan bir akış CryptoStream bırakıldıktan sonra açık bırakın**
 
-4.7.2, .NET Framework ile başlayarak <xref:System.Security.Cryptography.CryptoStream> sınıfında sağlayan ek bir Oluşturucuda <xref:System.Security.Cryptography.CryptoStream.Dispose%2A> Sarmalanan akış kapatmadığınızdan. Sarmalanan akış sonra açık bırakmak <xref:System.Security.Cryptography.CryptoStream> örneği kullanıldığında, yeni bir çağrı <xref:System.Security.Cryptography.CryptoStream> Oluşturucu aşağıdaki gibi:
+4\.7.2, .NET Framework ile başlayarak <xref:System.Security.Cryptography.CryptoStream> sınıfında sağlayan ek bir Oluşturucuda <xref:System.Security.Cryptography.CryptoStream.Dispose%2A> Sarmalanan akış kapatmadığınızdan. Sarmalanan akış sonra açık bırakmak <xref:System.Security.Cryptography.CryptoStream> örneği kullanıldığında, yeni bir çağrı <xref:System.Security.Cryptography.CryptoStream> Oluşturucu aşağıdaki gibi:
 
 ```csharp
 var cStream = new CryptoStream(stream, transform, mode, leaveOpen: true);
@@ -563,7 +563,7 @@ public class StaticResourceResolvedEventArgs : EventArgs
 ```
 
 ```vb
-Public Class StaticResourceResolvedEvcentArgs : Inherits EventArgs
+Public Class StaticResourceResolvedEventArgs : Inherits EventArgs
    Public ReadOnly Property TargetObject As Object
    Public ReadOnly Property TargetProperty As Object
    Public ReadOnly Property ResourceDictionary As ResourceDictionary
@@ -1832,7 +1832,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
     ```vb
     <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name:="FullTrust")>
-    public Function PromoteAndEnlistDurable(GresourceManagerIdentifier As Guid,
+    public Function PromoteAndEnlistDurable(resourceManagerIdentifier As Guid,
                                             promotableNotification As IPromotableSinglePhaseNotification,
                                             enlistmentNotification As ISinglePhaseNotification,
                                             enlistmentOptions As EnlistmentOptions) As Enlistment

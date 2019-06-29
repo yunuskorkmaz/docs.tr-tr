@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38db390b8fad9cd36dacf33f9647b0272eddc4a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616416"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422420"
 ---
 # <a name="interop-etw-events"></a>Birlikte Çalışma ETW Olayları
 <a name="top"></a> Birlikte çalışma olayları, Microsoft Ara dili (MSIL) saplama oluşturma ve önbelleğe alma hakkında bilgi toplayın.  
@@ -43,7 +43,7 @@ ms.locfileid: "64616416"
 |----------------|---------------|-----------------|  
 |Modül kimliği|Kazanma: UInt16|Modül tanımlayıcısı.|  
 |StubMethodID|Kazanma: UInt64|Saplama yöntem tanımlayıcısı.|  
-|StubFlags|Kazanma: UInt64|Saptama için bayraklar:<br /><br /> 0x1 - ters birlikte çalışma.<br /><br /> 0x2 - COM birlikte çalışma.<br /><br /> 0x4 - NGen.exe ile oluşturulan saptama.<br /><br /> 0x8 - temsilci.<br /><br /> 0x10 - değişken arrgument.<br /><br /> 0x20 - yönetilmeyen çağrılan.|  
+|StubFlags|Kazanma: UInt64|Saptama için bayraklar:<br /><br /> 0x1 - ters birlikte çalışma.<br /><br /> 0x2 - COM birlikte çalışma.<br /><br /> 0x4 - NGen.exe ile oluşturulan saptama.<br /><br /> 0x8 - temsilci.<br /><br /> 0x10 - değişken bağımsız değişken.<br /><br /> 0x20 - yönetilmeyen çağrılan.|  
 |ManagedInteropMethodToken|Kazanma: UInt32|Yönetilen birlikte çalışma yöntemi için belirteci.|  
 |ManagedInteropMethodNameSpace|Kazanma: UnicodeString|Yönetilen birlikte çalışma yöntemi ad alanı.|  
 |ManagedInteropMethodName|Kazanma: UnicodeString|Yönetilen birlikte çalışma yöntemi adı.|  

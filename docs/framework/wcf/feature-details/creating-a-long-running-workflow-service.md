@@ -2,12 +2,12 @@
 title: Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 10a2c568f14c3f3c1818fd8b3240279b798777b8
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 1ca0f2ed4c2ab900191165d100848811e5436c3c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063807"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425415"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
 Bu konuda, uzun süre çalışan iş akışı hizmeti oluşturma işlemini açıklar. İş akışı hizmetleri uzun süre çalışan uzun süreler için çalıştırabilirsiniz. İş akışını belirli bir noktada bazı ek bilgiler için bekleyen boşta gidebilir. Bu meydana geldiğinde iş akışını bir SQL veritabanı'na kalıcı ve bellekten kaldırılır. Ek bilgilerin kullanıma sunulduğunda iş akışı örneği belleğe geri yüklenir ve yürütmeye devam eder.  Bu senaryoda, oldukça basitleştirilmiş bir sipariş sistemi uyguluyor.  İstemci sırasını başlatmak için iş akışı hizmeti için bir Başlangıç iletisi gönderir. İstemciye bir sipariş kimliği döndürür. Bu noktada iş akışı hizmeti istemciden başka bir ileti bekliyor ve boşta durumuna girer ve bir SQL Server veritabanına kalıcı hale getirilir.  İstemci bir öğe sıralamak için sonraki iletiyi gönderdiğinde, iş akışı hizmeti belleğe geri yüklenir ve sırasını işlemeyi tamamladıktan sonra. Kod örneğinde öğe sırasını eklenmiş belirten bir dize döndürür. Kod örneği, teknoloji, ancak bunun yerine uzun süre çalışan iş akışı hizmetleri gösteren basit örnek bir gerçek dünya uygulaması olarak hazırlanmamıştır. Bu konu Visual Studio 2012 projeler ve çözümler oluşturulacağını bildiğinizi varsayar.

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 768d8da320022a686f2ecfe5222880eccacee7dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6af1f7f23447f9f1379ac6d223e198a4a2ea5645
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661808"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424235"
 ---
 # <a name="enum-c-reference"></a>enum (C# Başvurusu)
 
@@ -35,13 +35,12 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 Bu sabit listesi öğeleri dizisi başlangıç zorlanır `1` yerine `0`. Ancak, 0 değerine sahip bir sabit dahil olmak üzere önerilir. Daha fazla bilgi için [Numaralandırma türleri](../../programming-guide/enumeration-types.md).
 
-Her sabit listesi türünde herhangi bir Entegral türü olabilir bir temel türü dışında [char](char.md). Sabit listesi öğeleri listesinin temel alınan türü varsayılandır [int](int.md). Bir numaralandırma başka bir integral türü gibi bildirmek için [bayt](byte.md), aşağıdaki örnekte gösterildiği gibi türü tarafından izlenen tanımlayıcısı sonra bir virgül kullanın.
+Herhangi bir temel türü her sabit listesi türünde [sayısal bir tamsayı türü](../builtin-types/integral-numeric-types.md). [Char](char.md) bir sabit listesi türünü temel türü olamaz. Sabit listesi öğeleri listesinin temel alınan türü varsayılandır [int](../builtin-types/integral-numeric-types.md). Bir numaralandırma başka bir integral türü gibi bildirmek için [bayt](../builtin-types/integral-numeric-types.md), aşağıdaki örnekte gösterildiği gibi türü tarafından izlenen tanımlayıcısı sonra bir virgül kullanın.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Enum için onaylanan türler [bayt](byte.md), [sbyte](sbyte.md), [kısa](short.md), [ushort](ushort.md), [int](int.md), [uint](uint.md), [uzun](long.md), veya [ulong](ulong.md).
 
 Bir değişken bir numaralandırma türünün temel türü aralığındaki herhangi bir değer atanabilir; değerleri için adlandırılmış sabitler sınırlı değildir.
 
@@ -50,7 +49,7 @@ Varsayılan değer olan bir `enum E` ifade tarafından üretilen değer `(E)0`.
 > [!NOTE]
 > Bir numaralandırıcı adı boşluk içeremez.
 
-Her Numaralandırıcı için ne kadar depolama alanı ayrılır, temel alınan türünü belirtir. Ancak, bir açık tür dönüştürme dönüştürmek gerekli `enum` türü için bir tamsayı türü. Örneğin aşağıdaki deyim, numaralandırıcı atar `Sun` türünde bir değişkene [int](int.md) dönüştürmek için bir tür dönüştürme kullanılarak `enum` için `int`.
+Her Numaralandırıcı için ne kadar depolama alanı ayrılır, temel alınan türünü belirtir. Ancak, bir açık tür dönüştürme dönüştürmek gerekli `enum` türü için bir tamsayı türü. Örneğin aşağıdaki deyim, numaralandırıcı atar `Sun` türünde bir değişkene [int](../builtin-types/integral-numeric-types.md) dönüştürmek için bir tür dönüştürme kullanılarak `enum` için `int`.
 
 ```csharp
 int x = (int)Day.Sun;
@@ -101,7 +100,7 @@ Kaldırırsanız `Flags`, örnek aşağıdaki değerleri görüntüler:
 - [C# başvurusu](../index.md)
 - [Sabit Listesi Türleri](../../programming-guide/enumeration-types.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [Tam Sayı Türleri Tablosu](integral-types-table.md)
+- [Tam sayı türleri](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Yerleşik Türler Tablosu](built-in-types-table.md)
 - [Örtük Sayısal Dönüştürmeler Tablosu](implicit-numeric-conversions-table.md)
 - [Açık Sayısal Dönüştürmeler Tablosu](explicit-numeric-conversions-table.md)

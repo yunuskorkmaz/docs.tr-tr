@@ -2,12 +2,12 @@
 title: PII Güvenlik Kilidi
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 18095845db094f0911578816e6bacdb7f3776156
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83c100459ca5cf522b9040a807008e66e1a5c9d8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664779"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425418"
 ---
 # <a name="pii-security-lockdown"></a>PII Güvenlik Kilidi
 Bu örnek, bir Windows Communication Foundation (WCF) hizmeti tarafından güvenlikle ilgili çeşitli özelliklerini denetlemek nasıl gösterir:  
@@ -37,7 +37,7 @@ Bu örnek, bir Windows Communication Foundation (WCF) hizmeti tarafından güven
  Bu örnek, bilinen kişisel bilgilerin (PII) kullanıcı adı ve parola gibi izleme ve ileti günlüklerde günlüğe kaydetmeyi denetlemek nasıl gösterir. Belirli durumlarda PII günlüğe bir uygulamada hata ayıklama içinde önemli olabilir ancak varsayılan olarak, bilinen PII günlüğünü devre dışı. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Ayrıca, bu örnek, izleme ve iletileri günlüğe kaydetme kullanır. Daha fazla bilgi için [izleme ve ileti günlüğe kaydetme](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) örnek.  
   
 ## <a name="encrypting-configuration-file-elements"></a>Yapılandırma dosyası öğeleri şifreleme  
- Paylaşılan Web barındırma ortamında güvenlik nedenleriyle, hassas bilgiler içerebilir, veritabanı bağlantı dizeleri gibi belirli yapılandırma öğelerini şifreleme istenebilir. Örneğin, % WINDIR%\Micrsoft.NET\Framework\v4.0.20728 .NET Framework klasörde bulunan aspnet_regiis.exe aracını kullanarak bir yapılandırma öğesi şifrelenmelidir.  
+ Paylaşılan Web barındırma ortamında güvenlik nedenleriyle, hassas bilgiler içerebilir, veritabanı bağlantı dizeleri gibi belirli yapılandırma öğelerini şifreleme istenebilir. Örneğin, % WINDIR%\Microsoft.NET\Framework\v4.0.20728 .NET Framework klasörde bulunan aspnet_regiis.exe aracını kullanarak bir yapılandırma öğesi şifrelenmelidir.  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Değerleri için örnek Web.config dosyasındaki appSettings bölümündeki şifrelemek için  
   

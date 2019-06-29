@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 69c647e57dead3b4f61bb45202c6b039099f0499
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 13ccdafc00f7a43d456126e3ec3afc1ae5897564
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052171"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422660"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 ve Windows Server 2016 ve sonraki sürümleri .NET Framework yükleme
 
@@ -34,7 +34,7 @@ Bir uygulama çalıştırmaya ve makinenizde aşağıdakine benzer bir iletişim
 Yükleyebileceğiniz [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) üzerinde:
 
 * Windows 10 Ekim 2018 Güncelleştirmesi (sürüm 1809)
-* Windows 10 Nisan 2018 Updae (sürüm 1803)
+* Windows 10 Nisan 2018 Güncelleştirmesi (sürüm 1803)
 * Windows 10 Fall Creators Update (1709 sürümü)
 * Windows 10 Creators Update (sürüm 1703)
 * Windows 10 Yıldönümü Güncelleştirmesi (sürüm 1607)

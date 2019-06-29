@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: b0aaf6c0b2f614fa5ff8611407cea567da1faafb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b4f04a1ba6244373e36cc6a6188edabe33ec453
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661951"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424338"
 ---
 # <a name="char-c-reference"></a>char (C# Başvurusu)
 
@@ -33,7 +33,7 @@ Sabitleri `char` tür karakter değişmez değerleri, onaltılık çıkış dizi
 
 ## <a name="conversions"></a>Dönüşümler
 
-A `char` örtük olarak dönüştürülebilir [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [uzun](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md) , [float](../../../csharp/language-reference/keywords/float.md), [çift](../../../csharp/language-reference/keywords/double.md), veya [ondalık](../../../csharp/language-reference/keywords/decimal.md). Ancak, diğer türlerinden herhangi bir örtük dönüştürme vardır `char` türü.
+A `char` örtük olarak dönüştürülebilir [ushort](../builtin-types/integral-numeric-types.md), [int](../builtin-types/integral-numeric-types.md), [uint](../builtin-types/integral-numeric-types.md), [çift](../../../csharp/language-reference/keywords/double.md), veya [ondalık](../../../csharp/language-reference/keywords/decimal.md). Ancak, diğer türlerinden herhangi bir örtük dönüştürme vardır `char` türü.
 
 <xref:System.Char?displayProperty=nameWithType> Türü ile çalışmak için birkaç statik yöntemler sağlar `char` değerleri.
 
@@ -47,7 +47,7 @@ Daha fazla bilgi için [Integral türleri](~/_csharplang/spec/types.md#integral-
 - [C# başvurusu](../../../csharp/language-reference/index.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
-- [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tam sayı türleri](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)
 - [Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

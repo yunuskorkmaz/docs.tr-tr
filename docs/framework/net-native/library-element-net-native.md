@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eda4f8d3819af05b022e0633d6883cca940f67e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce001ed25d7704301d7f809887a445e3492e93fc
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866870"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422532"
 ---
 # <a name="library-element-net-native"></a>\<Kitaplık > öğesi (.NET yerel)
 Türler ve tür üyeleri olan meta verilerini yansıma çalışma zamanında kullanılabilir içeren derlemeyi tanımlar.  
@@ -58,7 +58,7 @@ Türler ve tür üyeleri olan meta verilerini yansıma çalışma zamanında kul
   
  `<Library>` Olan meta verileri çalışma zamanında gereken program öğeleri tanımlamak için bir kapsayıcı öğe görür; bu öğe ilkesini ifade etmez. Derleme zamanında derleyici araçları yalnızca belirlenen kitaplık arama `<Library>` program öğeleri alt öğeleri tarafından tanımlanan öğe. Buna karşılık, derleyici arama araçları tüm kitaplıkları, alt öğeler tarafından tanıtılan program öğeler için including.NET Framework Çekirdek kitaplıkları [ \<uygulama >](../../../docs/framework/net-native/application-element-net-native.md) öğesi.  
   
- `<Library>` yönergeleri koşullu olarak kullanılabilir. Varsa adını `<Library>` öğesi başlar ve biter yıldız işaretiyle (\*), `<Library>` yönergesi, yalnızca uygulama tarafından arasında yıldız belirtilen derleme başvuruluyorsa bir etkiye sahiptir. Örneğin, yalnızca, uygulama tarafından Utillities.dll derlemeye başvurulduğundan durumunda aşağıdaki çalışma zamanı yönerge geçerlidir.  
+ `<Library>` yönergeleri koşullu olarak kullanılabilir. Varsa adını `<Library>` öğesi başlar ve biter yıldız işaretiyle (\*), `<Library>` yönergesi, yalnızca uygulama tarafından arasında yıldız belirtilen derleme başvuruluyorsa bir etkiye sahiptir. Örneğin, yalnızca, uygulama tarafından Utilities.dll derlemeye başvurulduğundan durumunda aşağıdaki çalışma zamanı yönerge geçerlidir.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

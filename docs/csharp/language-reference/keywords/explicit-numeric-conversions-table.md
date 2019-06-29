@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 22482a8f55cdb53f9826fbcc850992e20b7a8feb
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 24f7401538eb1eeb675e6c3de265688780d6b91a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306614"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424203"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Açık sayısal dönüşümler tablosu (C# Başvurusu)
 
@@ -23,14 +23,14 @@ Aşağıdaki tabloda önceden tanımlanmış açık dönüştürmeler kendisi i�
 
 |Başlangıç|Bitiş|  
 |----------|--------|  
-|[sbyte](sbyte.md)|`byte`, `ushort`, `uint`, `ulong`, veya `char`|  
-|[byte](byte.md)|`sbyte` veya `char`|  
-|[short](short.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong`, veya `char`|  
-|[ushort](ushort.md)|`sbyte`, `byte`, `short`, veya `char`|  
-|[int](int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong`, veya `char`|  
-|[uint](uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, veya `char`|  
-|[long](long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong`, veya `char`|  
-|[ulong](ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, veya `char`|  
+|[sbyte](../builtin-types/integral-numeric-types.md)|`byte`, `ushort`, `uint`, `ulong`, veya `char`|  
+|[byte](../builtin-types/integral-numeric-types.md)|`sbyte` veya `char`|  
+|[short](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong`, veya `char`|  
+|[ushort](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, veya `char`|  
+|[int](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong`, veya `char`|  
+|[uint](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, veya `char`|  
+|[long](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong`, veya `char`|  
+|[ulong](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, veya `char`|  
 |[char](char.md)|`sbyte`, `byte`, veya `short`|  
 |[float](float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, veya `decimal`|  
 |[double](double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, veya `decimal`|  
@@ -69,7 +69,7 @@ Aşağıdaki tabloda önceden tanımlanmış açık dönüştürmeler kendisi i�
 - [C#başvuru](../index.md)
 - [Atama ve tür dönüştürmeleri](../../programming-guide/types/casting-and-type-conversions.md)
 - [() işleci](../operators/type-testing-and-conversion-operators.md#cast-operator-)
-- [Tam sayı türleri tablosu](integral-types-table.md)
+- [Tam sayı türleri](../builtin-types/integral-numeric-types.md)
 - [Kayan nokta türleri tablosu](floating-point-types-table.md)
 - [Yerleşik türler tablosu](built-in-types-table.md)
 - [Örtük sayısal dönüşümler tablosu](implicit-numeric-conversions-table.md)

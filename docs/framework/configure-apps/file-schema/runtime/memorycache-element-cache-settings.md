@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 872084dabc5d345d10a39f0933ff2ef30ca40355
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4f1dd270ee1b317ec0d3a32e341680646ff0b69d
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584489"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423287"
 ---
 # <a name="memorycache-element-cache-settings"></a>\<memoryCache > öğesi (önbellek ayarları)
 Temel alan bir önbellek yapılandırmak için kullanılan bir öğe tanımlar <xref:System.Runtime.Caching.MemoryCache> sınıfı. <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> Sınıfı tanımlayan bir [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) önbelleğini yapılandırmak için kullanabileceğiniz bir öğesi. Birden çok örneğini <xref:System.Runtime.Caching.MemoryCache> sınıfı tek bir uygulama içinde kullanılabilir. Her `memoryCache` öğesi yapılandırma dosyasında bir adlandırılmış için ayarları içerebilir <xref:System.Runtime.Caching.MemoryCache> örneği.  
@@ -71,7 +71,7 @@ Temel alan bir önbellek yapılandırmak için kullanılan bir öğe tanımlar <
 - <xref:System.Runtime.Caching.MemoryCache.PollingInterval%2A>  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek adını ayarlama işlemi gösterilmektedir <xref:System.Runtime.Caching.MemoryCache> ayarlayarak varsayılan önbellek nesnesi adı nesnesine `name` "varsayılan" özniteliği.  
+ Aşağıdaki örnek adını ayarlama işlemi gösterilmektedir <xref:System.Runtime.Caching.MemoryCache> ayarlayarak varsayılan önbellek nesnesi adı nesnesine `name` "Varsayılan" özniteliği.  
   
  `cacheMemoryLimitMegabytes` Özniteliği ve `physicalMemoryLimitPercentage` öznitelik sıfır olarak ayarlanır. Bu öznitelik sıfır olarak ayarlandığında <xref:System.Runtime.Caching.MemoryCache> otomatik boyutlandırma buluşsal yöntemler, varsayılan olarak kullanılır. Önbellek uygulaması, iki dakikada mutlak ve yüzde tabanlı bellek sınırlarını karşı geçerli bellek yükü karşılaştırmanız gerekir.  
   
@@ -80,7 +80,7 @@ Temel alan bir önbellek yapılandırmak için kullanılan bir öğe tanımlar <
   <system.runtime.caching>  
     <memoryCache>  
       <namedCaches>  
-          <add name="default"   
+          <add name="Default"   
                cacheMemoryLimitMegabytes="0"   
                physicalMemoryLimitPercentage="0"  
                pollingInterval="00:02:00" />  

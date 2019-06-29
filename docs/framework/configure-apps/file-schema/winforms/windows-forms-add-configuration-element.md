@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75a66ee7ca1d7c99de6e2cc9a1d502ea58dbf9f7
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775849"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422821"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms yapılandırma öğesi Ekle
 
@@ -43,7 +43,7 @@ ms.locfileid: "61775849"
 | ---------- | ------ | ----------- |
 | "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Bağlantılı denetimleri tek bir geçişinde ölçeklenir olup olmadığını gösterir. tek devre dışı bırakmak için "true" ölçeklendirme geçirin; Aksi takdirde false. "Tek ölçeklendirme başarılı" bölümüne bakın [açıklamalar](#remarks) daha fazla bilgi için. |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | Uygulamanın DPI kullanan olup olmadığını belirtir. DPI tanıma; desteklemek için "PerMonitorV2" anahtarına ayarlayın Aksi takdirde, "false" olarak ayarlayın. DPI tanıma, bir katılım özelliğidir; Windows Forms yüksek DPI desteği avantajlarından yararlanmak için "PerMonitorV2" değerine ayarlamanız gerekir. Bkz: [açıklamalar](#remarks) bölümünde daha fazla bilgi için. |
-| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Belirtir olup olmadığını <xref:System.Windows.Forms.CheckedListBox> denetimi, .NET Framework 4.7 içinde tanıtılan ölçeklendirme ve Düzen geliştirmeleri avantajlarından yararlanır. "true" dışında caling ve Düzen iyileştirmeleri kabul etme; Aksi durumda, "false". |
+| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Belirtir olup olmadığını <xref:System.Windows.Forms.CheckedListBox> denetimi, .NET Framework 4.7 içinde tanıtılan ölçeklendirme ve Düzen geliştirmeleri avantajlarından yararlanır. "true" dışında ölçeklendirme ve Düzen iyileştirmeleri kabul etme; Aksi durumda, "false". |
 | "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | Belirtir olup olmadığını <xref:System.Windows.Forms.DataGridView> denetlemek .NET Framework 4.7 sunulan ölçeklendirme ve Düzen iyileştirmeleri. "true" dışında DPI tanıma kabul etme; "false" Aksi takdirde. |
 | "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true" DPI ölçeklendirme değişiklikler için ilgili iletilerini alma dışında kabul etme; "false" Aksi takdirde. Bkz: [açıklamalar](#remarks) bölümünde daha fazla bilgi için. |
 | "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Bir Windows Forms uygulaması DPI ölçeklendirme değişiklikleri nedeniyle otomatik olarak yeniden boyutlandırılır olup olmadığını gösterir. "true" otomatik yeniden boyutlandırma etkinleştirmek için; Aksi takdirde false. |

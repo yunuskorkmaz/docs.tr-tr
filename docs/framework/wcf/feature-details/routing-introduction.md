@@ -2,12 +2,12 @@
 title: Yönlendirme Tanıtımı
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 41545d0340ae222e427d1e6d428ed1e3f7b4fa76
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 478c9aa6563cab4ba7769c56d7084c8716c43c58
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912486"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425375"
 ---
 # <a name="routing-introduction"></a>Yönlendirme Tanıtımı
 Yönlendirme hizmeti, yönlendirme iletilerinin ileti içeriğine göre yeteneğine sahip bir genel takılabilir SOAP aracı sağlar. Yönlendirme hizmeti ile hizmet toplama, hizmet sürümü oluşturma, öncelikli Yönlendirme ve çok noktaya yayın yönlendirme gibi senaryolara olanak tanır ve yönlendirme karmaşık mantık oluşturabilirsiniz. Yönlendirme hizmeti, hata, işleme sağlar ve birincil hedef uç noktasına gönderilirken bir hata oluşması durumunda iletilerin gönderildiği listelerini yedekleme uç nokta ayarlamak de sağlar.  
@@ -250,7 +250,7 @@ rc.SoapProcessingEnabled = false;
 ### <a name="dynamic-configuration"></a>Dinamik yapılandırma  
  Ek istemci uç noktalarını eklemek veya iletileri yönlendirmek için kullanılan filtreler değiştirmeniz gerekir, şu anda aracılığıyla iletileri alma uç noktaları için hizmet kesilmesini önlemek için dinamik olarak çalışma zamanında yapılandırmasını güncelleştirmek için bir yol olmalıdır. Yönlendirme hizmeti. Her iki yöntem hiçbir ileti şu anda geçiş ve olası kaybı için kapalı kalma süresiyle için sunulmasını uygulamasını geri dönüşüme gerektiğinden bir yapılandırma dosyası veya ana bilgisayar uygulaması kodunu değiştirerek her zaman yeterli değildir hizmetin yeniden başlatılması bekliyor.  
   
- Yalnızca değiştirebileceğiniz **RoutingConfiguration** programlı olarak. Başlangıçta, bir yapılandırma dosyası kullanarak hizmet yapılandırabilirsiniz; ancak, yalnızca çalışma zamanında yapılandırmanın yeni bir oluşturarak değiştirebilirsiniz **RoutingConfigution** ve parametre olarak geçirerek <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> yöntemi tarafından kullanıma sunulan <xref:System.ServiceModel.Routing.RoutingExtension> hizmet uzantısı. Şu anda yoldaki tüm iletileri çağrısından sonra alınan iletilerin çalışırken önceki yapılandırmayı kullanarak yönlendirilmesini devam **ApplyConfiguration** yeni yapılandırmayı kullanın. Aşağıdaki örnek, yönlendirme hizmeti örneği oluşturma ve daha sonra yapılandırmayı değiştirme gösterir.  
+ Yalnızca değiştirebileceğiniz **RoutingConfiguration** programlı olarak. Başlangıçta, bir yapılandırma dosyası kullanarak hizmet yapılandırabilirsiniz; ancak, yalnızca çalışma zamanında yapılandırmanın yeni bir oluşturarak değiştirebilirsiniz **RoutingConfiguration** ve parametre olarak geçirerek <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> yöntemi tarafından kullanıma sunulan <xref:System.ServiceModel.Routing.RoutingExtension> hizmet uzantısı. Şu anda yoldaki tüm iletileri çağrısından sonra alınan iletilerin çalışırken önceki yapılandırmayı kullanarak yönlendirilmesini devam **ApplyConfiguration** yeni yapılandırmayı kullanın. Aşağıdaki örnek, yönlendirme hizmeti örneği oluşturma ve daha sonra yapılandırmayı değiştirme gösterir.  
   
 ```csharp  
 RoutingConfiguration routingConfig = new RoutingConfiguration();  

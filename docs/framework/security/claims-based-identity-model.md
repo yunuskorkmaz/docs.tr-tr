@@ -3,12 +3,12 @@ title: Talep Tabanlı Kimlik Modeli
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 8560c7fd1969cfed6e43e2982fb69313c45c9405
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b7cafa727251c28b79615a37adce4effe6885392
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650446"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422401"
 ---
 # <a name="claims-based-identity-model"></a>Talep Tabanlı Kimlik Modeli
 Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda talepler kümesi olarak temsil edilir. Bir talep kullanıcının adı, başka bir e-posta adresi olabilir. Bunun ardında yatan fikir, bir dış kimlik sisteminin uygulamanıza yaptığı her istekle kullanıcı hakkında bilmesi gereken her şeyi ve aldığınız verilerin güvenilir bir kaynaktan geldiğine dair şifreleme güvencesini sağlayacak şekilde yapılandırılmış olmasıdır.  
@@ -58,7 +58,7 @@ Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda ta
  Taleplere dayalı bir uygulama oluşturduğunuzda, bağlı taraf (RP) uygulaması oluşturursunuz. "Talep kullanan uygulama" ve "beyana dayalı uygulama", RP için eş anlamlı sözcükler içerir. Hem Web uygulamaları ve hem de Web hizmetleri RP olabilir. RP uygulaması, STS tarafından verilen belirteçleri kullanır ve talepleri kimlikle ilgili görevler için kullanmak üzere belirteçlerden ayıklar. WIF, RP uygulamaları oluşturmanıza yardımcı olacak işlevler sunar.  
   
 ### <a name="standards"></a>Standartlar  
- Bunların tümünü birlikte kullanılabilir hale getirmek için önceki senaryoda birkaç WS-* standardı kullanılır. İlke WS-MetadataExchange kullanarak alınır ve WS-Policy belirtimine göre yapılandırılır. STS, güvenlik belirteçlerinin nasıl isteneceğini ve alınacağını açıklayan WS-Güven belirtimini uygulayan uç noktalarını kullanır. Günümüzde Çoğu STS, Güvenlik Onaylama İşlemi Biçimlendirme Dili (SAML) ile biçimlendirilen belirteçler verir. SAML, talepleri birlikte çalışabilir bir şekilde temsil etmek için kullanılabilen sektörde tanınmış bir XML sözlüğüdür. Veya çok platformlu bir durumda bu, STS ile veya tamamen farklı bir platformla iletişim kurmanızı ve platform ne olursa olsun tüm uygulamalarınız arasında çoklu oturum açma gerçekleştirmenizi sağlar.  
+ Bunların tümünü birlikte kullanılabilir hale getirmek için önceki senaryoda birkaç WS-* standardı kullanılır. İlke WS-MetadataExchange kullanarak alınır ve WS-Policy belirtimine göre yapılandırılır. STS, güvenlik belirteçlerinin nasıl isteneceğini ve alınacağını açıklayan WS-Güven belirtimini uygulayan uç noktalarını kullanır. Çoğu STS, bugün güvenlik onaylama işlemi biçimlendirme dili (SAML) ile biçimlendirilen belirteçler verir. SAML, talepleri birlikte çalışabilir bir şekilde temsil etmek için kullanılabilen sektörde tanınmış bir XML sözlüğüdür. Veya çok platformlu bir durumda bu, STS ile veya tamamen farklı bir platformla iletişim kurmanızı ve platform ne olursa olsun tüm uygulamalarınız arasında çoklu oturum açma gerçekleştirmenizi sağlar.  
   
 ### <a name="browser-based-applications"></a>Tarayıcı Tabanlı Uygulamalar  
  Beyana dayalı kimlik modelini yalnızca akıllı istemciler kullanmazlar. Tarayıcı tabanlı uygulamalar (edilgen istemciler de denir) kullanabilir. Aşağıdaki senaryoda bunun nasıl çalıştığı anlatılmaktadır:  
