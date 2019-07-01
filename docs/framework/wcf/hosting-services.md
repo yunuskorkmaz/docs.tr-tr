@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: db7ca2690fc7b76d3e843a4ed51ef356890ab9eb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: b1a0a07876e9cc111e8c5eef56f208d7bf2cb49f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402402"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487706"
 ---
 # <a name="hosting-services"></a>Barındırma Hizmetleri
 Etkin duruma gelmesi bir hizmet oluşturup kendi bağlam ve yaşam süresini denetleyen bir çalışma zamanı ortamında barındırılması gerekir. Windows Communication Foundation (WCF) hizmetlerini destekleyen yönetilen kodu herhangi bir Windows işlem içinde çalıştırmak için tasarlanmıştır.  
@@ -34,7 +34,7 @@ Etkin duruma gelmesi bir hizmet oluşturup kendi bağlam ve yaşam süresini den
  IIS tarafından barındırılan hizmetleri yalnızca HTTP aktarımı kullanabileceğinizi unutmayın. IIS 5.1, uygulanması bazı sınırlamalar tanıttı [!INCLUDE[wxp](../../../includes/wxp-md.md)]. Bir WCF hizmeti için IIS 5.1 tarafından sağlanan ileti tabanlı etkinleştirme [!INCLUDE[wxp](../../../includes/wxp-md.md)] herhangi diğer kendini barındıran WCF hizmetinde aynı bilgisayarda iletişim kurmak için 80 numaralı bağlantı noktasını kullanmasını engeller. WCF hizmetleri aynı AppDomain/uygulama havuzu/çalışan işleminde IIS 6.0 tarafından üzerinde barındırıldığında diğer uygulamaları çalıştırabilir [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Ancak çekirdek modu HTTP yığınını (HTTP.sys) kullandığından WCF hem de IIS 6.0, IIS 6.0 80 numaralı bağlantı noktası IIS 5.1 aksine aynı makine üzerinde çalışan diğer şirket içinde barındırılan WCF hizmetleri paylaşabilirsiniz.  
   
 #### <a name="windows-process-activation-service-was"></a>Windows İşlem Etkinleştirme Hizmeti (WAS)  
- Windows İşlem Etkinleştirme Hizmeti (WAS) olduğu için yeni işlem etkinleştirme mekanizması [!INCLUDE[lserver](../../../includes/lserver-md.md)] , ayrıca üzerinde kullanılabilir [!INCLUDE[wv](../../../includes/wv-md.md)]. Tanıdık IIS 6.0 işlem modeli (uygulama havuzları ve işlem ileti tabanlı etkinleştirme) korur ve özellikleri (örneğin, hızlı hata koruması, sistem durumu izleme ve geri dönüştürme), ancak barındırma etkinleştirme işleminden HTTP üzerindeki bağımlılığı kaldırır Mimari. [!INCLUDE[iisver](../../../includes/iisver-md.md)] HTTP üzerinden ileti tabanlı etkinleştirme yapmanın WAS'ı kullanır. Ek WCF bileşenler de ileti tabanlı etkinleştirme, WCF destekleyen diğer protokolleri üzerinden, TCP MSMQ ve adlandırılmış kanallar gibi sağlamak üzere WAS takın. Bu işlem geri dönüşümü gibi IIS özellikleri hızlı kullanmak için iletişim protokolleri kullanan uygulamalar, koruma ve yalnızca HTTP tabanlı uygulamalarda kullanılabilen ortak yapılandırma sistemi başarısız sağlar.  
+ Windows İşlem Etkinleştirme Hizmeti (WAS) olduğu için yeni işlem etkinleştirme mekanizması [!INCLUDE[lserver](../../../includes/lserver-md.md)] , ayrıca üzerinde kullanılabilir [!INCLUDE[wv](../../../includes/wv-md.md)]. Tanıdık IIS 6.0 işlem modeli (uygulama havuzları ve işlem ileti tabanlı etkinleştirme) korur ve özellikleri (örneğin, hızlı hata koruması, sistem durumu izleme ve geri dönüştürme), ancak barındırma etkinleştirme işleminden HTTP üzerindeki bağımlılığı kaldırır Mimari. IIS 7.0 WAS HTTP üzerinden ileti tabanlı etkinleştirme gerçekleştirmek için kullanır. Ek WCF bileşenler de ileti tabanlı etkinleştirme, WCF destekleyen diğer protokolleri üzerinden, TCP MSMQ ve adlandırılmış kanallar gibi sağlamak üzere WAS takın. Bu işlem geri dönüşümü gibi IIS özellikleri hızlı kullanmak için iletişim protokolleri kullanan uygulamalar, koruma ve yalnızca HTTP tabanlı uygulamalarda kullanılabilen ortak yapılandırma sistemi başarısız sağlar.  
   
  Bu barındırma seçeneği gerektirir, olması düzgün şekilde yapılandırıldı, ancak uygulamanın bir parçası herhangi bir barındırma kod yazmanızı gerektirmez. Yapılandırma hakkında daha fazla bilgi barındırma için bkz: [nasıl yapılır: Was'ta WCF Hizmeti barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   

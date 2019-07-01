@@ -2,12 +2,12 @@
 title: Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: fcfad4c6cd7ffb0bf1233bab842b57a10bcc7f87
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402295"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486922"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
 
@@ -103,7 +103,7 @@ Ayrıca, IIS tarafından barındırılan hizmet uç noktaları için her zaman g
 
 ### <a name="available-transports"></a>Kullanılabilir taşımalar
 
-Barındırılan IIS 5.1 WCF hizmetleri ve HTTP tabanlı iletişimi kullanarak IIS 6.0 kısıtlanır. Bu IIS platformlarda bir HTTP olmayan bağlama bir barındırılan hizmetin yapılandırma hatayla hizmeti etkinleştirme sırasında sonuçlanır. İçin [!INCLUDE[iisver](../../../../includes/iisver-md.md)], desteklenen aktarmalar HTTP, Net.TCP, Net.Pipe, Net.MSMQ ve msmq.formatname için geriye doğru mevcut MSMQ uygulamalarla uyumluluk içerir.
+Barındırılan IIS 5.1 WCF hizmetleri ve HTTP tabanlı iletişimi kullanarak IIS 6.0 kısıtlanır. Bu IIS platformlarda bir HTTP olmayan bağlama bir barındırılan hizmetin yapılandırma hatayla hizmeti etkinleştirme sırasında sonuçlanır. IIS 7.0, desteklenen aktarmalar HTTP, Net.TCP, Net.Pipe, Net.MSMQ ve msmq.formatname için geriye doğru mevcut MSMQ uygulamalarla uyumluluk içerir.
 
 ### <a name="http-transport-security"></a>HTTP Taşıma Güvenliği
 

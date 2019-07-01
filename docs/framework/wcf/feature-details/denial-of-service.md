@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 0946e123e10fbad7357c9be356287e5e87b271d2
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423893"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486933"
 ---
 # <a name="denial-of-service"></a>Hizmet Reddi
 Hizmet reddi bir sistemde iletilerin işleneceğini veya oldukça yavaş işlenir şekilde doludur oluşur.  
@@ -67,7 +67,7 @@ Hizmet reddi bir sistemde iletilerin işleneceğini veya oldukça yavaş işleni
  X.509 sertifikası birden fazla alternatif konu adı içerir ve alternatif konu adı kullanarak Yetkilendirme, yetkilendirme başarısız olabilir, nadir durumda.  
   
 ## <a name="protect-configuration-files-with-acls"></a>ACL'ler ile yapılandırma dosyaları koruma  
- Kod ve yapılandırma dosyalarında gerekli ve isteğe bağlı taleplerin belirtebilirsiniz [!INCLUDE[infocard](../../../../includes/infocard-md.md)] verilen belirteçler. İçinde yayılan karşılık gelen öğelerle sonuçlanır `RequestSecurityToken` Security'ye gönderilen iletileri belirteç hizmeti. Bir saldırganın kod veya yapılandırma gerekli veya isteğe bağlı taleplerin kaldırmak için potansiyel olarak hedef hizmete erişmesine izin vermeyen bir belirteç vermek için güvenlik belirteci hizmeti başlama değiştirebilirsiniz.  
+ Verilen belirteçler CardSpace için kod ve yapılandırma dosyalarında gerekli ve isteğe bağlı taleplerin belirtebilirsiniz. İçinde yayılan karşılık gelen öğelerle sonuçlanır `RequestSecurityToken` Security'ye gönderilen iletileri belirteç hizmeti. Bir saldırganın kod veya yapılandırma gerekli veya isteğe bağlı taleplerin kaldırmak için potansiyel olarak hedef hizmete erişmesine izin vermeyen bir belirteç vermek için güvenlik belirteci hizmeti başlama değiştirebilirsiniz.  
   
  Azaltmak için: Yapılandırma dosyasını değiştirme bilgisayara erişim gerektirir. Yapılandırma dosyaları güvenli hale getirmek için listeleri (ACL'ler) dosya erişimi denetimi kullan. WCF kodların yapılandırmasından yüklenmesine izin verir önce kod uygulama dizini veya genel derleme önbelleği içinde olmasını gerektirir. Dizin ACL dizinleri güvenliğini sağlamak için kullanın.  
   

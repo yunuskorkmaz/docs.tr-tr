@@ -5,18 +5,18 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 629eb482768e4ed2b3d70ee3d27157b502eeb72b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d6c931ec904e9a7e58d5b747c74898208863b8e9
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832715"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486731"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > öğesi (Web Ayarları)
-Bir ASP.NET uygulaması tümleşik modda çalıştırılan işlem genelinde yönetmesi için ASP.NET tarafından kullanılan yapılandırma ayarlarını belirten [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki bir sürümü.  
+Bir ASP.NET uygulamasını IIS 7.0 veya sonraki bir sürümü üzerinde tümleşik modunda çalışırken işlem geneline yönelik davranışını yönetmek için ASP.NET tarafından kullanılan yapılandırma ayarlarını belirtir.  
   
 > [!IMPORTANT]
->  ASP.NET uygulamanızı üzerinde barındırılıyorsa bu öğeyi ve bu özellik yalnızca iş desteklediği [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki sürümler.  
+>  ASP.NET uygulamanızı IIS 7.0 veya üzeri sürümleri üzerinde barındırılıyorsa bu öğeyi ve bu özellik yalnızca iş destekler.  
   
  \<Yapılandırma >  
 \<System.Web > öğesi (Web Ayarları)  
@@ -52,12 +52,12 @@ Bir ASP.NET uygulaması tümleşik modda çalıştırılan işlem genelinde yön
 |[\<System.Web >](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|ASP.NET bir ana bilgisayar uygulaması ile nasıl etkileşim kurduğunu hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çalıştırdığınızda [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki bir sürümünü tümleşik modunda bu öğe birleşimi, nasıl ASP.NET iş parçacıkları ve Kuyruklar isteklerini yöneten bir IIS uygulama havuzunda uygulama barındırıldığında yapılandırmanıza olanak sağlar. IIS 6 çalıştırın ya da çalıştırdığınız [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] Klasik modda veya ISAPI modunu, bu ayarları göz ardı edilir.  
+ IIS 7.0 veya üzeri bir sürüm tümleşik modda çalıştırdığınızda, bu öğe birleşim nasıl ASP.NET iş parçacıkları ve Kuyruklar isteklerini yöneten bir IIS uygulama havuzunda uygulama barındırıldığında yapılandırmanıza olanak verir. IIS 6 Çalıştır veya Klasik modda veya ISAPI modunu IIS 7.0 çalıştırmak, bu ayarları göz ardı edilir.  
   
  `applicationPool` .NET Framework'ün belirli bir sürümü çalıştıran tüm uygulama havuzları için ayarlar uygulanır. Ayarları bir aspnet.config dosyasında bulunur. Bu dosya sürümleri 2.0 ve .NET Framework 4.0 sürümü yoktur. (Sürüm 3.0 ve 3.5 .NET Framework sürüm 2.0 ile aspnet.config dosyayı paylaşın.)  
   
 > [!IMPORTANT]
->  Çalıştırırsanız [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] üzerinde [!INCLUDE[win7](../../../../../includes/win7-md.md)], ayrı aspnet.config dosyası her bir uygulama havuzu için yapılandırabilirsiniz. Bu, her bir uygulama havuzu için bir iş parçacığı performansını uyumlu hale getirmenizi sağlar.  
+>  IIS 7.0 çalıştırırsanız, [!INCLUDE[win7](../../../../../includes/win7-md.md)], ayrı aspnet.config dosyası her bir uygulama havuzu için yapılandırabilirsiniz. Bu, her bir uygulama havuzu için bir iş parçacığı performansını uyumlu hale getirmenizi sağlar.  
   
  İçin `maxConcurrentRequestsPerCPU` ayarı varsayılan ayar "5000".NET Framework 4'te etkili bir şekilde ASP.NET tarafından denetlenen istek azaltma devre dışı bırakır gerçekten CPU başına 5000 veya daha fazla istek yoksa. Varsayılan ayar yerine CLR iş parçacığı eşzamanlılık CPU başına otomatik olarak yönetmek için havuzu bağlıdır. Zaman uyumsuz istek işlemeye kapsamlı kullanımını olun veya ağ g/ç üzerinde engellendi çok uzun süre çalışan istekleri olan uygulamaları .NET Framework 4'te artan varsayılan sınır yararlı olacaktır. Ayar `maxConcurrentRequestsPerCPU` için ASP.NET isteklerini işlemek için yönetilen iş parçacığı kullanımı sıfır kapatır. Bir IIS uygulama havuzunda uygulama çalıştığında, istekleri IIS g/ç iş parçacığı üzerinde kalır ve bu nedenle eşzamanlılık IIS iş parçacığı ayarları tarafından kısıtlanmış.  
   
@@ -66,9 +66,9 @@ Bir ASP.NET uygulaması tümleşik modda çalıştırılan işlem genelinde yön
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, aşağıdaki koşullarda aspnet.config dosyasında ASP.NET işlem geneline yönelik davranışını yapılandırmak gösterilmektedir:  
   
-- Uygulama içinde barındırılan bir [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] uygulama havuzu.  
+- Uygulama, IIS 7.0 uygulama havuzu içinde barındırılır.  
   
-- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] Tümleşik modda çalışıyor.  
+- IIS 7.0, tümleşik modunda çalışıyor.  
   
 - Uygulama, .NET Framework 3.5 SP1 veya sonraki bir sürümünü kullanıyor.  
   

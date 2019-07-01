@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: f9acadcb594005d7c7eadffcddad3649a3aefc29
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3940d8436ba5441d4e884879213a7a782214cb05
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402195"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486759"
 ---
 # <a name="hosting-in-internet-information-services"></a>Internet Information Services'te Barındırma
 Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir seçenek, içinde bir Internet Information Services (IIS) uygulamasıdır. Bu barındırma modeli, ASP.NET ve ASP.NET Web Hizmetleri (ASMX) Web Hizmetleri tarafından kullanılan modeline benzerdir.  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir seç
   
 - IIS 7.0 [!INCLUDE[wv](../../../../includes/wv-md.md)] ve [!INCLUDE[lserver](../../../../includes/lserver-md.md)]. IIS 7.0, IIS 6.0 olarak aynı Gelişmiş işlem modeli sağlar, ancak etkinleştirme ve ağ iletişimi HTTP dışındaki protokoller üzerinden izin vermek için Windows İşlem Etkinleştirme Hizmeti (WAS) kullanır. Bu ortam, WCF (HTTP, net.tcp, net.pipe ve net.msmq dahil) tarafından desteklenen herhangi bir ağ protokolü üzerinden iletişim kuran bir WCF hizmetleri geliştirmek için uygundur. WAS hakkında daha fazla bilgi için bkz: [Windows İşlem Etkinleştirme hizmetinde barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
-- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) çalışır [!INCLUDE[iisver](../../../../includes/iisver-md.md)] ve barındırma ortamı ve WF NET4 WCF hizmetleri için zengin bir uygulama sağlamak için Windows İşlem Etkinleştirme Hizmeti (WAS). Bu işlem yaşam döngüsü yönetimi, işlem geri dönüştürme, paylaşılan barındırma, hızlı hata koruması, işlem tek bırakma, isteğe bağlı etkinleştirme ve sistem durumu izleme avantajına sahip olur. Ayrıntılı bilgi için bkz. [AppFabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=196494) ve [AppFabric barındırma kavramları](https://go.microsoft.com/fwlink/?LinkId=196495).  
+- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) IIS 7.0 ve Windows İşlem Etkinleştirme Hizmeti (WAS) barındırma ortamı ve WF NET4 WCF hizmetleri için zengin bir uygulama sağlamak için birlikte çalışır. Bu işlem yaşam döngüsü yönetimi, işlem geri dönüştürme, paylaşılan barındırma, hızlı hata koruması, işlem tek bırakma, isteğe bağlı etkinleştirme ve sistem durumu izleme avantajına sahip olur. Ayrıntılı bilgi için bkz. [AppFabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=196494) ve [AppFabric barındırma kavramları](https://go.microsoft.com/fwlink/?LinkId=196495).  
   
 ## <a name="benefits-of-iis-hosting"></a>IIS barındırma avantajları  
  WCF hizmetlerinde IIS barındırma birçok faydası vardır:  

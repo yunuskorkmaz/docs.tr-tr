@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 029e4983ef270bb5272ad0bf541ee34febd9399c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f303583b1cff785ab0020e616fee58ef02a1c58
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920067"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487036"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)
 
@@ -50,7 +50,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |Arabirim Öğesi|Açıklama|  
 |----------------|-----------------|  
 |**Oturum açık Kaydet**|Bir dosyadaki değişikliklerinizi kaydedeceğiniz her zaman dosyayı imzalamanızı ister.|  
-|**Varsayılan imza sertifikasını kullanın**|Girilen anahtarı kullanır **sertifika dosyası** tüm dosyaları imzalamak için metin kutusu. Bu komut isteminde bir dosyayı kaydettiğinizde, genellikle görünen imzalama ortadan kaldırır ve **oturum kaydederken** seçilir. Üç nokta kullanın (**...** ) düğmesinin yanındaki **sertifika dosyası** anahtarı dosyasını seçmek için metin kutusu.|  
+|**Varsayılan imza sertifikasını kullanın**|Girilen anahtarı kullanır **sertifika dosyası** tüm dosyaları imzalamak için metin kutusu. Bu komut isteminde bir dosyayı kaydettiğinizde, genellikle görünen imzalama ortadan kaldırır ve **oturum kaydederken** seçilir. Üç nokta kullanın ( **...** ) düğmesinin yanındaki **sertifika dosyası** anahtarı dosyasını seçmek için metin kutusu.|  
 |Özet algoritması|Bağımlılık özetlerinin oluşturması için kullanılan algoritmayı belirtir. Değer "sha256RSA" veya "sha1RSA" olmalıdır. Varsayılan olarak SHA1 kullanılır. Hem uygulama hem de dağıtım bildirimlerinde kullanılır. Kullanıcı bildirimi kaydederken bir sertifika sunarsa, bağımlılık özetleri oluşturmak için sertifikadaki algoritmaları kullanır.|  
   
 ## <a name="signing-options-dialog-box"></a>İmzalama Seçenekleri İletişim Kutusu  
@@ -63,7 +63,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |**Sertifika dosyası ile imzala**|Bildirimi, dosya sisteminde depolanmış bir dijital sertifika ile imzalar.|  
 |**Dosya**|Sertifikayı temsil eden .pfx dosyasının yolunu yazmanız için bir alan sağlar.|  
 |**...**|Açılır bir **Dosya Seç** varolan bir .pfx dosyasını seçme iletişim kutusu.|  
-|**Yeni**|Bir Sertifika Yetkilisi (CA) aracılığıyla doğrulanamayan yeni bir .pfx oluşturur. İmzalama için kullanılan sertifika türleri hakkında daha fazla bilgi için [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dağıtımlar [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).|  
+|**Yeni**|Bir Sertifika Yetkilisi (CA) aracılığıyla doğrulanamayan yeni bir .pfx oluşturur. ClickOnce Dağıtımları imzalamak için kullanılan sertifika türleri hakkında daha fazla bilgi için bkz. [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).|  
 |**Parola**|Bu sertifikayla imzalamak için kullanılan parolayı yazmanız için bir alan sağlar. Parola yoksa boş bırakılabilir.|  
 |**Depolanmış sertifika ile imzala**|Bilgisayarınızın sertifika deposunda depolanmış dijital sertifikaların seçilebilir bir listesini görüntüler.|  
 |**Zaman damgası URI'si**|Dijital zaman damgası hizmeti Tekdüzen Kaynak Konumlandırıcı'yı (URI) görüntüler. Bildirimlere zaman damgası koymak, uygulamanızın sonraki sürümünü dağıtmadan önce dijital sertifikanızın süresi dolarsa bildirimleri yeniden imzalamanıza gerek kalmamasını sağlar. Daha fazla bilgi için [Windows kök sertifika programı üyeleri](https://go.microsoft.com/fwlink/?LinkId=159000) ve [ClickOnce ve Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
@@ -116,7 +116,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 |Arabirim Öğesi|Açıklama|  
 |----------------|-----------------|  
-|**Uygulama dizini**|Uygulamanın dosyaların bulunduğu dizin. Üç nokta simgesini kullanın (**...** ) düğmesini dizini seçin.|  
+|**Uygulama dizini**|Uygulamanın dosyaların bulunduğu dizin. Üç nokta simgesini kullanın ( **...** ) düğmesini dizini seçin.|  
 |**Doldur**|Uygulama bildirimine uygulama dizini ve alt dizinleri tüm dosyaları ekler. MageUI.exe dizinde tek bir yürütülebilir dosya bulursa, onu otomatik olarak bu istemcide ClickOnce uygulaması başlatıldığında ilk yürütülen dosya giriş noktası olarak işaretler.|  
 |**Uygulama dosyaları**|Tüm uygulama dosyaları listeler. Her dosyanın, aşağıda açıklanan üç düzenlenebilir özniteliği vardır.|  
 |**Dosya türü**|Dosya türü, dört değerlerden biri olabilir:<br /><br /> -Yok.<br />-Giriş noktası. Uygulama birincil yürütülebilir. Yalnızca bir yürütülebilir dosya giriş noktası olarak işaretlenebilir.<br />-Veri dosyası. Uygulama veri sağlayan bir XML dosyası gibi bir dosya.<br />-Simge dosyası. Bir uygulama simgesi, masaüstünde veya bir uygulama penceresinin üst köşesindeki gibi görünür.|  
@@ -139,7 +139,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |**Ad**|Bu dağıtım hakkında tanımlayıcı bilgileri belirtir.|  
 |**Açıklama**|Yayımcı, ürün ve Destek belirten bilgi.|  
 |**Dağıtım seçenekleri**|Uygulama türü ve başlangıç konumu gibi dağıtım hakkında ek bilgileri belirtir.|  
-|**Güncelleştirme Seçenekleri**|Ne sıklıkta belirtir [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] uygulama güncelleştirmeleri denetlesin.|  
+|**Güncelleştirme Seçenekleri**|ClickOnce uygulama güncelleştirmelerini ne sıklıkta denetleyeceğini belirtir.|  
 |**Uygulama başvurusu**|Bu dağıtım için uygulama bildirimini belirtir.|  
   
 ### <a name="name-tab"></a>Adı sekmesi  
@@ -167,9 +167,9 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |----------------|-----------------|  
 |**Uygulama türü**|İsteğe bağlı. Bu uygulama kendisini istemci bilgisayara yükler olup olmadığını belirtir (**yerel olarak yükleme**), çevrimiçi çalışır (**yalnızca çevrimiçi**), veya tarayıcıda çalışan bir WPF uygulaması (**WPF tarayıcısı Uygulama**). Varsayılan değer **yerel olarak yükleme**.|  
 |**Başlangıç konumu**|İsteğe bağlı. URL, gerçekte uygulamanın başlatılmalıdır. Uygulamanın kendisini Web'den güncelleştirmelisiniz CD'den dağıtırken yararlıdır.|  
-|**Başlangıç konumu (ProviderURL) bildirime dahil**|İsteğe bağlı. URL'sini belirtir, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] uygulama güncelleştirmeleri için inceleyeceği.|  
-|**Yükledikten sonra otomatik olarak Çalıştırma uygulaması**|Gerekli. Belirten [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] uygulama, ilk yüklemenin hemen sonrasında bir URL'den çalışmalı. Onay kutusu seçili varsayılandır.|  
-|**Uygulamaya geçirilecek URL parametrelerini izin ver**|Gerekli. Parametre veri aktarımını verir [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dağıtım bildiriminin URL'ye eklenen sorgu dizesi aracılığıyla uygulama. Onay kutusunun işareti varsayılandır.|  
+|**Başlangıç konumu (ProviderURL) bildirime dahil**|İsteğe bağlı. ClickOnce'ın uygulama güncelleştirmeleri için inceleyeceği URL'yi belirtir.|  
+|**Yükledikten sonra otomatik olarak Çalıştırma uygulaması**|Gerekli. ClickOnce uygulamasının bir URL'den ilk yüklemenin hemen sonrasında çalıştırılması gerektiğini belirtir. Onay kutusu seçili varsayılandır.|  
+|**Uygulamaya geçirilecek URL parametrelerini izin ver**|Gerekli. Parametre veri aktarımını dağıtım bildiriminin URL'ye eklenen sorgu dizesi aracılığıyla ClickOnce uygulaması için izin verir. Onay kutusunun işareti varsayılandır.|  
 |**.Deploy dosya uzantısını kullanma**|Gerekli. Bu onay kutusu seçildiğinde, uygulama bildiriminde tüm dosyaları .deploy uzantısını olmalıdır. Onay kutusunun işareti varsayılandır.|  
   
 ### <a name="update-options-tab"></a>Seçenekler sekmesinde güncelleştir  
@@ -177,9 +177,9 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 |Arabirim Öğesi|Açıklama|  
 |----------------|-----------------|  
-|**Bu uygulama güncelleştirmeleri denetlemeli**|Belirtir olup olmadığını [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] uygulama güncelleştirmeleri denetlesin. Bu onay kutusu seçili değilse, bu program aracılığıyla API'leri kullanarak güncelleştirme sürece uygulama güncelleştirmeleri denetlemeyecek <xref:System.Deployment.Application> ad alanı.|  
+|**Bu uygulama güncelleştirmeleri denetlemeli**|ClickOnce uygulama güncelleştirmelerini denetleyip denetlemeyeceğini belirtir. Bu onay kutusu seçili değilse, bu program aracılığıyla API'leri kullanarak güncelleştirme sürece uygulama güncelleştirmeleri denetlemeyecek <xref:System.Deployment.Application> ad alanı.|  
 |**Uygulamanın güncelleştirmeleri denetleyeceği zamanı seçin**|Güncelleme kontrolleri için iki seçenek sağlar:<br /><br /> -   **Uygulama başlatılmadan önce**. Güncelleştirme denetimi uygulamanın yürütülmesini önce gerçekleştirilir.<br />-   **Uygulama başlatıldıktan sonra**. Güncelleştirme denetimi uygulamanın ana formu başlatıldı ve uygulamayı bir sonraki başlatılışında çalışır sonra başlar.|  
-|**Güncelleştirme denetim sıklığı**|Ne sıklıkta belirler [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] güncelleştirmeleri denetlemeniz gerekir:<br /><br /> -   **Uygulama her çalıştırıldığında denetle**. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Kullanıcı uygulamayı her açtığında bir güncelleştirme kontrolü gerçekleştirir.<br />-   **Denetleme her**: Bir zaman aralığı ve güncelleştirmeleri denetlemeden önce geçmesi gereken bir birimi (saatlik, günlük veya haftalık) seçin.|  
+|**Güncelleştirme denetim sıklığı**|ClickOnce güncelleştirmeleri ne sıklıkla denetleyeceğini belirler:<br /><br /> -   **Uygulama her çalıştırıldığında denetle**. ClickOnce, kullanıcı uygulamayı her açtığında bir güncelleştirme kontrolü gerçekleştirir.<br />-   **Denetleme her**: Bir zaman aralığı ve güncelleştirmeleri denetlemeden önce geçmesi gereken bir birimi (saatlik, günlük veya haftalık) seçin.|  
 |**Bu uygulama için gerekli en düşük sürüm belirtin**|İsteğe bağlı. Uygulamanızın belirli bir sürümü eski bir sürümüyle çalışamıyor kullanıcılarınız, zorunlu bir yükleme olduğunu belirtir.|  
 |**Sürüm**|Gerekli if **bu uygulama için gerekli en düşük sürüm belirtin** onay kutusu seçilidir. Sağlanan sürüm numarası biçiminde olmalıdır *N.N.N.N*. Yalnızca ilk ana derleme numarası gereklidir. Örneğin, bir uygulama 1.0 sürümü, geçerli değerler verilebilir `1`, `1.0`, `1.0.0`, ve `1.0.0.0`.|  
   

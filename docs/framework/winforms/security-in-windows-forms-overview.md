@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348463"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487255"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms'ta Güvenliğe Genel Bakış
 
@@ -21,7 +21,7 @@ ms.locfileid: "67348463"
 
 .NET Framework'te kod erişimi güvenliği izinleri ayırt etmenize olanak sağlayan veya kullanıcının sahip olduğu hakları koduna sahip hakları adlı bir altyapı sunar. Varsayılan olarak, Internet ve Intranet gelen kod yalnızca kısmi güven bilinen içinde çalıştırabilirsiniz. Kısmi güven konuları kısıtlamaları bir dizi uygulamaya: diğer özelliklerin yanı sıra, bir uygulamanın yerel sabit disk erişimi sınırlıdır ve yönetilmeyen kod çalıştıramazsınız. .NET Framework kod erişim kimliğine göre kod izni kaynakları denetler: nereden geldiğini içerip içermediğine, bir [Strong-Named derlemeleri](../app-domains/strong-named-assemblies.md), bir sertifika ve benzeri ile imzalı olup olmadığını.
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Windows Forms uygulamaları dağıtmak için kullandığınız, teknoloji, yardımcı olur, kısmi güven, tam güven veya kısmi güven yükseltilmiş izinlerle çalışan uygulamalar geliştirmek kolaylaştırır. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] İzin yükseltilmesi ve güvenilir uygulama dağıtımı gibi özellikler sağlar, böylece uygulama tam güven veya yükseltilmiş izinler yerel kullanıcı sorumlu bir şekilde talep edebilir.
+Windows Forms uygulamaları dağıtmak için kullandığınız, ClickOnce teknoloji yardımcı olur, kısmi güven, tam güven veya kısmi güven yükseltilmiş izinlerle çalışan uygulamalar geliştirmek kolaylaştırır. ClickOnce, uygulama tam güven veya yükseltilmiş izinler yerel kullanıcı sorumlu bir şekilde isteyebilmesi izin yükseltilmesi ve güvenilir uygulama dağıtımı gibi özellikler sağlar.
 
 ## <a name="understanding-security-in-the-net-framework"></a>.NET Framework Güvenliği anlama
 
@@ -34,7 +34,7 @@ Kullanıcı bir Windows Forms yürütülebilir dosyayı doğrudan bir Web sunucu
 >
 > Her, bu izin kümeleri varsayılan izinler listelenir [varsayılan güvenlik ilkesini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100)) konu. Uygulamanın aldığı izinlerine bağlı olarak düzgün çalışıyor ya da bir güvenlik özel durumu oluşturur.
 >
-> Çok sayıda Windows Forms uygulamaları kullanarak dağıtılacak [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]. Oluşturmak için kullanılan araçları bir [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dağıtımınız ne daha önce bahsedilen daha farklı güvenlik Varsayılanları. Daha fazla bilgi için aşağıdaki tartışmalara bakın.
+> ClickOnce kullanarak çok sayıda Windows Forms uygulamaları dağıtılır. ClickOnce dağıtımı oluşturmak için kullanılan araçları, ne daha önce bahsedilen daha farklı güvenlik varsayılanlara sahiptir. Daha fazla bilgi için aşağıdaki tartışmalara bakın.
 
 Güvenlik İlkesi değiştirilebildiğinden, uygulamanız için gerçek izinler varsayılan değerlerden farklı olabilir; başka bir deyişle, bir bilgisayarda, ancak başka bir uygulama izni olabilir.
 
@@ -64,9 +64,9 @@ Aşağıdaki konular, ek Windows Forms güvenlik özellikleri açıklanmaktadır
 
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>Uygun izinlere sahip bir uygulama dağıtma
 
-Bir istemci bilgisayar için bir Windows Forms uygulaması dağıtmanın en yaygın ile yöntemdir [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], çalıştırılacak tüm bileşenlerin açıklayan bir dağıtım teknolojisi uygulamanızın ihtiyaç duyduğu. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] bildirimleri, uygulamanızı oluşturan dosyalar ve derlemeleri tanımlamak için kullandığı XML dosyaları adlı ve ayrıca uygulama izinleri gerektirir.
+ClickOnce, uygulamanızı çalıştırmak için gereken tüm bileşenleri açıklayan bir dağıtım teknolojisi ile istemci bilgisayar için bir Windows Forms uygulaması dağıtmanın en yaygın yoludur. ClickOnce bildirimlerini adlı XML dosyaları uygulamanızı oluşturan dosyalar ve derlemeleri tanımlamak için kullanır. ve ayrıca uygulama izinleri gerektirir.
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] İstemci bilgisayarda yükseltilmiş izinler isteyen iki teknoloji var. Her iki teknolojinin Authenticode sertifikalarının kullanımı hakkında kullanır. Sertifikalar, uygulamanın güvenilir bir kaynaktan geldi kullanıcılarınıza bazı güvencesi sağlamaya yardımcı.
+ClickOnce, istemci bilgisayarda yükseltilmiş izinler isteyen iki teknoloji vardır. Her iki teknolojinin Authenticode sertifikalarının kullanımı hakkında kullanır. Sertifikalar, uygulamanın güvenilir bir kaynaktan geldi kullanıcılarınıza bazı güvencesi sağlamaya yardımcı.
 
 Aşağıdaki tabloda bu teknolojiler açıklanmaktadır.
 
@@ -77,9 +77,9 @@ Aşağıdaki tabloda bu teknolojiler açıklanmaktadır.
 
 Seçtiğiniz teknolojileri dağıtım ortamınıza bağlıdır. Daha fazla bilgi için [ClickOnce dağıtım stratejisini seçme](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Varsayılan olarak, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Visual Studio veya .NET Framework SDK Araçları (Mage.exe ve MageUI.exe) kullanarak dağıtılmış uygulamalar, tam güven olan bir istemci bilgisayarda çalıştırmak için yapılandırılır. Uygulamanızı kısmi güveni kullanmaya veya bazı ek izinler kullanarak dağıtıyorsanız bu varsayılanı değiştirmek gerekecektir. Dağıtımınız yapılandırdığınızda, Visual Studio veya .NET Framework SDK aracı MageUI.exe ile bunu yapabilirsiniz. İzlenecek yol MageUI.exe kullanma hakkında daha fazla bilgi için bkz: Komut satırından ClickOnce uygulamasını dağıtma.  Ayrıca bkz: [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) veya [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+Varsayılan olarak, ClickOnce uygulamaları Visual Studio veya .NET Framework SDK Araçları (Mage.exe ve MageUI.exe) kullanılarak dağıtılan tam güveni olan bir istemci bilgisayarda çalışması için yapılandırılır. Uygulamanızı kısmi güveni kullanmaya veya bazı ek izinler kullanarak dağıtıyorsanız bu varsayılanı değiştirmek gerekecektir. Dağıtımınız yapılandırdığınızda, Visual Studio veya .NET Framework SDK aracı MageUI.exe ile bunu yapabilirsiniz. İzlenecek yol MageUI.exe kullanma hakkında daha fazla bilgi için bkz: Komut satırından ClickOnce uygulamasını dağıtma.  Ayrıca bkz: [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) veya [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
-Güvenlik yönleri hakkında daha fazla bilgi için [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] ve izin yükseltme bakın, [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications). Güvenilir uygulama dağıtımı hakkında daha fazla bilgi için bkz: [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).
+ClickOnce ve izin yükseltme güvenlik konuları hakkında daha fazla bilgi için bkz. [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications). Güvenilir uygulama dağıtımı hakkında daha fazla bilgi için bkz: [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).
 
 ### <a name="testing-the-application"></a>Uygulamayı Test Etme
 

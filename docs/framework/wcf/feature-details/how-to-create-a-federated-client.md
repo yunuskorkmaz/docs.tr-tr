@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 19ffe7e3fb0de9b377279d9cd274f998a104c6b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8de673fae16da8189589e20b6d9a66b96e1823ba
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047821"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487104"
 ---
 # <a name="how-to-create-a-federated-client"></a>Nasıl yapılır: Federe İstemci Oluşturma
 Windows Communication Foundation (WCF) oluşturmak için bir istemci bir *Federasyon Hizmeti* üç ana adımdan oluşur:  
@@ -39,7 +39,7 @@ Windows Communication Foundation (WCF) oluşturmak için bir istemci bir *Federa
   
 4. Ek inceleyin [ \<İssuermetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) açıklamalı içinde öğeleri kullanıma <`alternativeIssuedTokenParameters`> öğesi. Federe hizmet veya tüm ara güvenlik belirteci hizmetlerine veren adresi belirtmeyin, ancak bunun yerine bir kullanıma sunan bir güvenlik belirteci hizmeti meta veri adresini belirtin, bir Federasyon Hizmeti için yapılandırma üretmek için Svcutil.exe aracını kullanırken birden fazla uç nokta, elde edilen yapılandırma dosyası Birinci uç nokta için ifade eder. Ek uç noktalar olan derleme dışı bırakılan yapılandırma dosyasındaki <`alternativeIssuedTokenParameters`> öğeleri.  
   
-     Az olup olmadığını belirlemek bunların <`issuedTokenParameters`> zaten yapılandırmada mevcut bir tercih edilir. Örneğin, bir istemci kullanarak bir Windows Güvenlik belirteci hizmeti için kimlik doğrulaması tercih edebilirsiniz [!INCLUDE[infocard](../../../../includes/infocard-md.md)] yerine bir kullanıcı adı/parola çift belirteci.  
+     Az olup olmadığını belirlemek bunların <`issuedTokenParameters`> zaten yapılandırmada mevcut bir tercih edilir. Örneğin, istemci, bir kullanıcı adı/parola çift yerine bir Windows CardSpace belirteç güvenlik belirteci hizmeti için kimlik doğrulaması tercih edebilirsiniz.  
   
     > [!NOTE]
     >  Burada birden çok güvenlik belirteci Hizmetleri hizmet ile iletişim kurmadan önce geçmesi gereken yanlış güvenlik belirteci hizmeti istemcisi yönlendirmek bir ara güvenlik belirteci hizmeti mümkündür. Bu nedenle, güvenlik belirteç hizmeti için uç nokta emin [ \<İssuermetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) beklenen güvenlik belirteci hizmeti ve bir bilinmeyen bir güvenlik belirteci hizmeti değil.  

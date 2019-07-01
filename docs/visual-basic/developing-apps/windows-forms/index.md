@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: d1f43a5b7a539c89a753d168fbf0e05ca4118f58
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: dd3385d6459199d56f74abfb1b8e0e218a2adf78
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347991"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487799"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms Uygulaması Temelleri (Visual Basic)
 Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel olarak çalışan Windows Forms uygulamaları oluşturmak için olanağıdır. Visual Studio, Windows formları kullanarak uygulama ve kullanıcı arabirimi oluşturmak için kullanabilirsiniz. Bir Windows Forms uygulaması sınıflardan geliştirilmiştir <xref:System.Windows.Forms> ad alanı.  
@@ -71,19 +71,19 @@ Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel o
 |Veri Kaynakları penceresini kullanma|[İzlenecek yol: Bir Windows formunda veri görüntüleme](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>İstemci bilgisayarlara uygulamaları dağıtma  
- Uygulamanızı yazmış sonra yükleyebilir ve kendi istemci bilgisayarlarda çalıştırmak, kullanıcılarınıza göndermelisiniz. Kullanarak [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] teknolojisi, uygulamalarınızı Visual Studio'dan yalnızca birkaç tıklamayla kullanarak dağıtma ve kullanıcılara Web uygulamanıza işaret eden bir URL sağlar. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] tüm öğeleri ve bağımlılıkları uygulamanızdaki yönetir ve uygulama istemci bilgisayara düzgün yüklendiğini sağlar.  
+ Uygulamanızı yazmış sonra yükleyebilir ve kendi istemci bilgisayarlarda çalıştırmak, kullanıcılarınıza göndermelisiniz. ClickOnce teknolojisini kullanarak uygulamalarınızı Visual Studio'dan yalnızca birkaç tıklamayla kullanarak dağıtma ve kullanıcılara Web uygulamanıza işaret eden bir URL sağlar. ClickOnce, tüm öğeleri ve bağımlılıkları uygulamanızdaki yönetir ve uygulama istemci bilgisayara düzgün yüklendiğini sağlar.  
   
- [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] uygulamalar, yalnızca kullanıcı ağa bağlandığında çalıştırmak için veya her ikisi de çevrimiçi çalıştırmak için yapılandırılmış ve çevrimdışı olabilir. Uygulama çevrimdışı işlemi desteklemelidir belirttiğinizde [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] kullanıcının uygulamanızda bir bağlantı ekler **Başlat** menüsünde, böylece kullanıcı, URL kullanmadan açabilirsiniz.  
+ ClickOnce uygulamalarında, yalnızca kullanıcı ağa bağlandığında çalıştırmak için veya her ikisi de çevrimiçi çalıştırmak için yapılandırılmış ve çevrimdışı olabilir. Uygulama çevrimdışı işlemi desteklemelidir belirttiğinizde, ClickOnce uygulamanıza bir kullanıcının bir bağlantı ekler **Başlat** menüsünde, böylece kullanıcı, URL kullanmadan açabilirsiniz.  
   
- Uygulamanızı güncelleştirdiğinizde, yeni bir dağıtım bildirimi ve yeni bir kopya, uygulamanızın Web sunucunuza yayımlayın. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] bir güncelleştirme kullanılabilir olmadığını ve kullanıcının yükleme yükseltir algılar. özel programlama eski derlemeleri güncelleştirmek için gereklidir.  
+ Uygulamanızı güncelleştirdiğinizde, yeni bir dağıtım bildirimi ve yeni bir kopya, uygulamanızın Web sunucunuza yayımlayın. ClickOnce, bir güncelleştirmenin kullanılabilir olduğu ve kullanıcının yüklemeyi yükseltme algılar. özel programlama eski derlemeleri güncelleştirmek için gereklidir.  
   
- Tam bir giriş için [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)], bkz: [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment). Bu özellikleri kullanmaya hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın:  
+ ClickOnce tam bir giriş için bkz: [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment). Bu özellikleri kullanmaya hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın:  
   
 |Bitiş|Bkz.|  
 |--------|---------|  
-|İle uygulama dağıtma [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
-|Güncelleştirme bir [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] dağıtım|[Nasıl yapılır: ClickOnce Uygulaması için Güncelleştirmeleri Yönetme](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|İle güvenliği yönetme [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Nasıl yapılır: ClickOnce Güvenlik Ayarlarını Etkinleştirme](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|ClickOnce ile uygulama dağıtma|[Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|ClickOnce dağıtımını güncelleştirme|[Nasıl yapılır: ClickOnce Uygulaması için Güncelleştirmeleri Yönetme](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
+|ClickOnce ile güvenliği yönetme|[Nasıl yapılır: ClickOnce Güvenlik Ayarlarını Etkinleştirme](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Diğer denetimler ve özellikleri  
  Windows Forms'ta olun uygulayan ortak görevleri hızlı ve kolay, iletişim kutuları oluşturma, yazdırma, Yardım ve belgeler ekleme ve uygulamanızı birden çok dilde yerelleştirme desteği gibi diğer birçok özellik vardır. Ayrıca, Windows Forms, müşterilerinize daha güvenli uygulamalar yayımlamayı etkinleştirme .NET Framework'ün sağlam güvenlik sistemi kullanır.  

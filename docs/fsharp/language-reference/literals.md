@@ -1,13 +1,13 @@
 ---
 title: Sabit değerler
 description: Değişmez değer türleri hakkında bilgi edinin F# programlama dilidir.
-ms.date: 06/08/2019
-ms.openlocfilehash: 93329cd868ff7a2daaffa1b87ba838bbbc98015c
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.date: 06/28/2019
+ms.openlocfilehash: 53647d8cbc2a59527a50e122bc1abc6055c1fce5
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816236"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487775"
 ---
 # <a name="literals"></a>Sabit değerler
 
@@ -69,7 +69,7 @@ let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 
 ## <a name="remarks"></a>Açıklamalar
 
-Unicode dizelerini kullanarak belirttiğiniz açık Kodlamalar içerebilir `\u` bir 16 bitlik onaltılık kod ya da kullanarak belirtebilirsiniz UTF-32 kodlamalarına ardından `\U` bir Unicode temsil eden bir 32 bit onaltılık kodla ve ardından vekil çifti.
+Unicode dizelerini kullanarak belirttiğiniz açık Kodlamalar içerebilir `\u` bir 16 bitlik onaltılık kod (0000 - FFFF) ya da kullanarak belirtebilirsiniz UTF-32 kodlamalarına ardından `\U` temsil eden bir 32 bit onaltılık kodla ve ardından Her Unicode kod noktasını (00000000 - 00010FFFF).
 
 Dışında bit düzeyindeki diğer işleçlerin kullanımına `|||` izin verilmiyor.
 

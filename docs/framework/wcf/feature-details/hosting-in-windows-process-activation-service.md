@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: eeac535eac95b19889d0d8d74115bcddc3a15224
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: af40660d1af0a88710c4b53009474847cece6deb
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402346"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486633"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows İşlem Etkinleştirme Hizmetinde Barındırma
 Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Windows Communication Foundation (WCF) hizmetlerini barındırmak içeren çalışan işlemleri yaşam süresini yönetir. WAS işlem modeli, HTTP bağımlılığını kaldırarak HTTP sunucusu için IIS 6.0 işlem modelini genelleştirir. Bu, hem HTTP hem de ileti tabanlı etkinleştirme destekleyen ve çok sayıda belirli bir makinede uygulamaları barındırmak için eklenebilir bir barındırma ortamında Net.TCP gibi HTTP olmayan protokolleri kullanmak WCF hizmetleri sağlar.  
@@ -25,10 +25,7 @@ Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Win
 - Merkezi uygulama yapılandırması ve yönetimi.  
   
 - Dağıtım ayak izine tam IIS yüklemeye gerek kalmadan IIS işlem modelini yararlanmak uygulamaları sağlar.  
-  
- WAS özellikler hakkında daha fazla bilgi için bkz. [IIS 7.0 Beta: IIS 7.0 Web Yönetim](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
-  
- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) çalışır [!INCLUDE[iisver](../../../../includes/iisver-md.md)] ve barındırma ortamı ve WF NET4 WCF hizmetleri için zengin bir uygulama sağlamak için Windows İşlem Etkinleştirme Hizmeti (WAS). Bu işlem yaşam döngüsü yönetimi, işlem geri dönüştürme, paylaşılan barındırma, hızlı hata koruması, işlem tek bırakma, isteğe bağlı etkinleştirme ve sistem durumu izleme avantajına sahip olur. Ayrıntılı bilgi için bkz. [AppFabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=196494) ve [AppFabric barındırma kavramları](https://go.microsoft.com/fwlink/?LinkId=196495).  
+[Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) IIS 7.0 ve Windows İşlem Etkinleştirme Hizmeti (WAS) barındırma ortamı ve WF NET4 WCF hizmetleri için zengin bir uygulama sağlamak için birlikte çalışır. Bu işlem yaşam döngüsü yönetimi, işlem geri dönüştürme, paylaşılan barındırma, hızlı hata koruması, işlem tek bırakma, isteğe bağlı etkinleştirme ve sistem durumu izleme avantajına sahip olur. Ayrıntılı bilgi için bkz. [AppFabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=196494) ve [AppFabric barındırma kavramları](https://go.microsoft.com/fwlink/?LinkId=196495).  
   
 ## <a name="elements-of-the-was-addressing-model"></a>Model adresleme WAS öğeleri  
  Uygulamaları, yaşam süresi ve yürütme ortamı sunucusu tarafından yönetilen kod birimleri Tekdüzen Kaynak Tanımlayıcısı (URI) adreslerine sahiptir. Tek bir WAS sunucu örneği olabilir çok sayıda farklı uygulamaya giriş. Sunucularını düzenlemek uygulamalar olarak adlandırılan gruplara *siteleri*. Bir site içinde uygulamalar, dış adresleri hizmet veren bir URI'leri yapısını gösteren hiyerarşik bir şekilde düzenlenir.  

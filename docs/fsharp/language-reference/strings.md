@@ -1,13 +1,13 @@
 ---
 title: Dizeler
 description: Bilgi nasıl F# 'string' türü sabit metin Unicode karakter dizisi olarak temsil eder.
-ms.date: 05/16/2016
-ms.openlocfilehash: c2fda4d936abab5bc3f4653613991a7f5471d81d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/28/2019
+ms.openlocfilehash: 8bd7a65a8d8e9e6a2d3930cd1fc9e800342d9a18
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642079"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487763"
 ---
 # <a name="strings"></a>Dizeler
 
@@ -29,7 +29,7 @@ Dize değişmez değerleri tırnak işareti (") karakteriyle ayrılır. Ters eğ
 |Ters eğik çizgi|`\\`|
 |Tırnak işareti|`\"`|
 |Kesme işareti|`\'`|
-|Unicode karakter|`\uXXXX` veya `\UXXXX` (burada `X` onaltılık basamak gösterir)|
+|Unicode karakter|`\uXXXX` (UTF-16) veya `\U00XXXXXX` (UTF-32) (burada `X` onaltılık basamak gösterir)|
 
 Öncesinde, @ sembolü, değişmez değer verbatim bir dizedir. İki tırnak karakteri tek tırnak işareti karakteri yorumlanır dışında bu, herhangi bir kaçış dizileri göz ardı, anlamına gelir.
 

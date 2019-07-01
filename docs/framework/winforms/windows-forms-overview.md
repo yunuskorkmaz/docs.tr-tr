@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 71bf50bdcf058e94981dc5df4731b5d32dcc2069
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875880"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487201"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms'a genel bakış
 
@@ -72,21 +72,21 @@ Bu özelliklerin nasıl kullanılacağını hakkında adım adım bilgiler için
 
 ### <a name="deploy-apps-to-client-computers"></a>İstemci bilgisayarlara uygulamaları dağıtma
 
-Uygulamanızı yazdıktan sonra kullanıcılarınıza uygulama yükleyebilir ve kendi istemci bilgisayarlarda çalıştırmak göndermeniz gerekir. Kullanırken [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] teknolojisi, uygulamalarınızı Visual Studio'dan yalnızca birkaç tıklamayla kullanarak dağıtabilir ve kullanıcılarınızın Web uygulamanıza işaret eden bir URL sağlar. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] tüm öğeleri ve bağımlılıkları uygulamanızdaki yönetir ve uygulama istemci bilgisayarda doğru şekilde yüklendiğini sağlar.
+Uygulamanızı yazdıktan sonra kullanıcılarınıza uygulama yükleyebilir ve kendi istemci bilgisayarlarda çalıştırmak göndermeniz gerekir. ClickOnce teknoloji kullandığınızda, uygulamalarınızı Visual Studio'dan yalnızca birkaç tıklamayla kullanarak dağıtma ve Web uygulamanıza işaret eden bir URL ile kullanıcılarınızın sağlayın. ClickOnce tüm öğeleri ve bağımlılıkları uygulamanızdaki yönetir ve uygulama istemci bilgisayarda doğru şekilde yüklendiğini sağlar.
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] uygulamalar, yalnızca kullanıcı ağa bağlandığında çalıştırmak için veya her ikisi de çevrimiçi çalıştırmak için yapılandırılmış ve çevrimdışı olabilir. Uygulama çevrimdışı işlemi desteklemelidir belirttiğinizde [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] kullanıcının uygulamanızda bir bağlantı ekler **Başlat** menüsü. Kullanıcı daha sonra uygulama URL'sini kullanmadan açabilirsiniz.
+ClickOnce uygulamalarında, yalnızca kullanıcı ağa bağlandığında çalıştırmak için veya her ikisi de çevrimiçi çalıştırmak için yapılandırılmış ve çevrimdışı olabilir. Uygulama çevrimdışı işlemi desteklemelidir belirttiğinizde, ClickOnce uygulamanıza bir kullanıcının bir bağlantı ekler **Başlat** menüsü. Kullanıcı daha sonra uygulama URL'sini kullanmadan açabilirsiniz.
 
-Uygulamanızı güncelleştirdiğinizde, yeni bir dağıtım bildirimi ve yeni bir kopya, uygulamanızın Web sunucunuza yayımlayın. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] bir güncelleştirme kullanılabilir olduğunu algılar ve kullanıcının yüklemeyi yükseltme; özel programlama eski derlemeleri güncelleştirmek için gereklidir.
+Uygulamanızı güncelleştirdiğinizde, yeni bir dağıtım bildirimi ve yeni bir kopya, uygulamanızın Web sunucunuza yayımlayın. ClickOnce, bir güncelleştirme kullanılabilir olmadığını ve kullanıcının yüklemeyi yükseltme algılar; özel programlama eski derlemeleri güncelleştirmek için gereklidir.
 
 #### <a name="deploy-clickonce-apps"></a>ClickOnce uygulamaları dağıtma
 
-Tam bir giriş için [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], bkz: [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment). Bu özelliklerin nasıl kullanılacağını hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın,
+ClickOnce tam bir giriş için bkz: [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment). Bu özelliklerin nasıl kullanılacağını hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın,
 
 |Açıklama|Yardım konusu|
 |-----------------|----------------|
-|Kullanarak bir uygulama dağıtma [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
-|Güncelleştirme bir [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dağıtım|[Nasıl yapılır: ClickOnce Uygulaması için Güncelleştirmeleri Yönetme](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
-|İle güvenliği yönetme [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Nasıl yapılır: ClickOnce Güvenlik Ayarlarını Etkinleştirme](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
+|ClickOnce kullanarak uygulama dağıtma|[Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|ClickOnce dağıtımını güncelleştirme|[Nasıl yapılır: ClickOnce Uygulaması için Güncelleştirmeleri Yönetme](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|ClickOnce ile güvenliği yönetme|[Nasıl yapılır: ClickOnce Güvenlik Ayarlarını Etkinleştirme](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
 ### <a name="other-controls-and-features"></a>Diğer denetimler ve özellikleri
 

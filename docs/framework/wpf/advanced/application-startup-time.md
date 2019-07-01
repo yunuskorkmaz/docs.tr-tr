@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8bdd70a6eaea8aff196e2156d88460a6d24b5d3f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832696"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487182"
 ---
 # <a name="application-startup-time"></a>Uygulama Başlangıç Zamanı
 Bir WPF uygulamasını başlatmak gerekli süreyi büyük ölçüde farklılık gösterebilir. Bu konuda, bir Windows Presentation Foundation (WPF) uygulaması için algılanan ve gerçek başlangıç süresini azaltmak için çeşitli teknikler açıklanır.  
@@ -65,7 +65,7 @@ Bir WPF uygulamasını başlatmak gerekli süreyi büyük ölçüde farklılık 
  Ngen hem JIT modülleri sahip, en kötü bir etkisi olabilir. Bu mscorjit.dll yüklenmesi gereken ve JIT derleyicisi kodunuz üzerinde çalışırken, JIT Derleyici derlemelerin meta verilerini okuduğunda Ngen görüntülerinin birçok sayfalarında erişilmelidir olmasıdır.  
   
 ### <a name="ngen-and-clickonce"></a>Ngen ve ClickOnce  
- Uygulamanızı dağıtmayı planladığınız yolu bir fark yükleme süresi de yapabilirsiniz. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] Ngen uygulaması dağıtımını desteklemez. Uygulamanız için Ngen.exe kullanmaya karar verirseniz, Windows Installer gibi başka bir dağıtım mekanizmasının kullanılması gerekir.  
+ Uygulamanızı dağıtmayı planladığınız yolu bir fark yükleme süresi de yapabilirsiniz. ClickOnce uygulama dağıtımı Ngen desteklemez. Uygulamanız için Ngen.exe kullanmaya karar verirseniz, Windows Installer gibi başka bir dağıtım mekanizmasının kullanılması gerekir.  
   
  Daha fazla bilgi için [Ngen.exe (yerel Görüntü Oluşturucu)](../../tools/ngen-exe-native-image-generator.md).  
   
@@ -112,9 +112,9 @@ Bir WPF uygulamasını başlatmak gerekli süreyi büyük ölçüde farklılık 
  Kullanmanız gerekirse <xref:System.Xml.Serialization.XmlSerializer> sınıfı elde edebileceğiniz daha iyi performans serileştirme bütünleştirilmiş kodu önceden oluşturursanız.  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Başlangıcından sonra güncelleştirmeleri denetleme için ClickOnce yapılandırın  
- Uygulamanız kullanıyorsa [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], ağ erişimi başlangıçta yapılandırmamak [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] güncelleştirmeler için dağıtım sitesini uygulama başladıktan sonra denetlemek için.  
+ ClickOnce uygulamanızın kullandığı, ağ erişimi başlangıçta güncelleştirmeleri için dağıtım sitesini uygulama başladıktan sonra denetlemek için ClickOnce'ı yapılandırarak kaçının.  
   
- XAML tarayıcısı uygulaması (XBAP) modeli kullandığınız aklınızda [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] XBAP zaten kullanımda olsa bile dağıtım sitenin güncelleştirmeleri denetler [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] önbellek. Daha fazla bilgi için [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment).  
+ XAML tarayıcısı uygulaması (XBAP) modeli kullandığınız XBAP ClickOnce önbellekte zaten olsa bile, ClickOnce'nın güncelleştirmeler için dağıtım sitesini denetler aklınızda bulundurun. Daha fazla bilgi için [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>Otomatik olarak başlatmak için PresentationFontCache hizmetini yapılandırma  
  Yeniden başlatma sonrası çalıştırılacak ilk WPF uygulaması PresentationFontCache hizmetidir. Hizmet sistem yazı tiplerini önbelleğe alır, yazı tipi erişim artırır ve genel performansı artırır. Bir ek hizmeti başlatmayı ve denetlenen bazı ortamlarda, sistem yeniden başladığında otomatik olarak başlayacak şekilde hizmeti yapılandırabilirsiniz.  

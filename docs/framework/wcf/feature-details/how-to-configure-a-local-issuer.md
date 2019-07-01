@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98d4c01bf2b84a6379eca5d0e1d5dbee68dc7cdd
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779307"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487145"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Nasıl yapılır: Yerel Yayımlayan Yapılandırma
 Bu konuda verilen belirteçleri yerel yayımlayan kullanmak için bir istemciyi nasıl yapılandıracağınız açıklanmaktadır.  
@@ -23,7 +23,7 @@ Bu konuda verilen belirteçleri yerel yayımlayan kullanmak için bir istemciyi 
  Windows Communication Foundation (WCF) kullanan yerel yayımlayan bir federe bağlama veren adresini olduğu durumlarda `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` veya `null`. Bu gibi durumlarda, yapılandırmanız gereken <xref:System.ServiceModel.Description.ClientCredentials> adresiyle yerel dağıtımcının ve bağlama bu veren ile iletişim kurmak için kullanılacak.  
   
 > [!NOTE]
->  Varsa <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> özelliği `ClientCredentials` sınıf ayarlanmış `true`yerel yayımlayan adresi belirtilmedi ve veren adresi tarafından belirtilen [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) veya diğer Federe bağlama `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, veya `null`, ardından Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] veren kullanılır.  
+>  Varsa <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> özelliği `ClientCredentials` sınıf ayarlanmış `true`yerel yayımlayan adresi belirtilmedi ve veren adresi tarafından belirtilen [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) veya diğer Federe bağlama `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, veya `null`, Windows CardSpace veren kullanılır.  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>Kodu yerel yayımlayan yapılandırma  
   

@@ -2,12 +2,12 @@
 title: IdentityModel Özel Durumları
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b8af2620b6179ce4cff59d7f9871377f06ffe5f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998523"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486663"
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel Özel Durumları
 Bu konu IdentityModel tarafından oluşturulan tüm özel durumları listeler.  
@@ -100,11 +100,11 @@ Bu konu IdentityModel tarafından oluşturulan tüm özel durumları listeler.
 |SAMLAssertionMissingMajorVersionAttributeOnRead|Okunan SamlAssertion için MajorVersion eksik ya da 0 uzunluğunda.|  
 |SamlAttributeClaimRightShouldBePossessProperty|Bu SamlAttribute Oluşturucu talep sağındaki değer isteğinin System.IdentityModel.Claims.Rights.PossessProperty sahip olmasını gerektirir.|  
 |AuthorizationPolicyEvaluated|Belirli kimliğine sahip ilke değerlendirilir.|  
-|SAMLUnableToLoadCondtions|\<SAML: Conditions > öğesi yüklenemedi.|  
+|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|\<SAML: Conditions > öğesi yüklenemedi.|  
 |AESKeyLengthNotSupported|Belirli bir bit anahtar desteklenmiyor. Yalnızca 128, 192 ve 256 bit anahtar desteklenir.|  
 |UserNameCannotBeEmpty|Kullanıcı adı boş olamaz.|  
 |AlgorithmAndPublicKeyMisMatch|Belirtilen algoritma ve ortak anahtarı eşleşmiyor.|  
-|SAMLUnableToLoadCondtion|\<SAML: Conditions > öğesi yüklenemedi.|  
+|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|\<SAML: Conditions > öğesi yüklenemedi.|  
 |SamlAssertionMissingSigningCredentials|Samlassertion'da SigningCredentials ayarlanmamış. SamlAssertions oturum açın, Lütfen geçerli bir SigningCredentials devam etmek için Samlassertion'da ayarlayın.|  
 |SspiPayloadNotEncrypted|İkili verileri SSPI güvenlik bağlamı ile şifrelenmemiş.|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|Tüm SamlAction okunan özniteliği içermiyor.|  

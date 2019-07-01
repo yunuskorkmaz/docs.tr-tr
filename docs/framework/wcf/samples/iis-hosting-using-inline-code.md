@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 8e401d6ce73c036188d13f40c1293abd1f0de58c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a96e00adbe12365220a58d93edf9dc965825d07e
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781478"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487585"
 ---
 # <a name="iis-hosting-using-inline-code"></a>Satır İçi Kod Kullanarak IIS Barındırma
 
@@ -92,7 +92,7 @@ Press <ENTER> to terminate client.
 
 2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-3. Çözüm oluşturulduktan sonra ServiceModelSamples uygulamada ayarlamak için setup.bat çalıştırma [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. ServiceModelSamples dizin artık olarak görünmesi gereken bir [!INCLUDE[iisver](../../../../includes/iisver-md.md)] uygulama.
+3. IIS 7.0 ServiceModelSamples uygulamada ayarlamak için setup.bat çalıştırma sonra çözümü oluşturuldu. ServiceModelSamples dizin artık bir IIS 7.0 uygulama olarak görünmelidir.
 
 4. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md). Bu hizmeti çağıran bir istemci uygulaması oluşturma hakkında bir örnek için bkz [nasıl yapılır: Bir istemci oluşturmanız](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).
 

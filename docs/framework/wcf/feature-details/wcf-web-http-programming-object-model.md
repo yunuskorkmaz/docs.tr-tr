@@ -2,12 +2,12 @@
 title: WCF Web HTTP Programlama Nesnesi Modeli
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: f8bda6292506b64057dee006fa59b7723fa406b2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2401a8a051ed4dcd386c7794a2197672709ea423
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648405"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487686"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP Programlama Nesnesi Modeli
 WCF WEB HTTP programlama modeli, geliştiricilerin SOAP gerek kalmadan Windows Communication Foundation (WCF) Web Hizmetleri temel HTTP istekleri aracılığıyla kullanıma sunmak sağlar. WCF WEB HTTP programlama modeli, var olan WCF genişletilebilirlik model temelinde oluşturulmuştur. Aşağıdaki sınıfları tanımlar:  
@@ -97,7 +97,7 @@ WCF WEB HTTP programlama modeli, geliştiricilerin SOAP gerek kalmadan Windows C
  WCF WEB HTTP programlama modeli SOAP tabanlı iletileri kullanmaz ve bu nedenle WS - desteklemez * protokoller. Bununla birlikte, aynı sözleşme iki farklı uç noktası tarafından kullanıma sunma: SOAP ve diğer değil bir kullanarak SOAP kullanarak. Bkz: [nasıl yapılır: Bir sözleşmeyi SOAP ve Web istemcilerine sunma](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) örneği.  
   
 ## <a name="security"></a>Güvenlik  
- WCF WEB HTTP programlama modeli WS - desteklemediği için * protokolleri WCF WEB HTTP programlama modeli üzerinde oluşturulmuş bir Web hizmeti güvenli hale getirmek için tek yolu olduğundan SSL kullanarak hizmetinize kullanıma sunmak için. SSL ile ayarlama hakkında daha fazla bilgi için [!INCLUDE[iisver](../../../../includes/iisver-md.md)] bkz [IIS'te SSL uygulama](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ WCF WEB HTTP programlama modeli WS - desteklemediği için * protokolleri WCF WEB HTTP programlama modeli üzerinde oluşturulmuş bir Web hizmeti güvenli hale getirmek için tek yolu olduğundan SSL kullanarak hizmetinize kullanıma sunmak için. IIS 7.0 SSL ayarlama hakkında daha fazla bilgi için bkz: [IIS'te SSL uygulama](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

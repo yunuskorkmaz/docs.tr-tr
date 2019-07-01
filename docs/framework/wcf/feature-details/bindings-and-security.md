@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 12296fbd503a7e9f1866f407964a5e223d1afadd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 58dcfacba302ef3b85a8bc7b24b17f2435115594
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650326"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486656"
 ---
 # <a name="bindings-and-security"></a>Bağlamalar ve Güvenlik
 Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağlamalar program WCF uygulamaları için hızlı bir yol sunar. Bunun tek istisnası, etkin bir varsayılan güvenlik düzeni tüm bağlamaları vardır. Bu konuda güvenlik ihtiyaçları için doğru bağlama seçmenize yardımcı olur.  
@@ -210,7 +210,7 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
 |NTLM|NT LAN Manager (NTLM) kimlik doğrulaması.|  
 |Windows|Windows kimlik doğrulaması.|  
 |Sertifika|Kimlik doğrulaması, bir sertifika kullanılarak gerçekleştirilir.|  
-|IssuedToken|Gerekli izin verir, istemci kimlik doğrulaması ile veya bir güvenlik belirteci hizmeti tarafından verilmiş bir belirteç kullanarak [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Daha fazla bilgi için [Federasyon ve verilen belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|IssuedToken|Gerekli izin verir, istemci kimlik doğrulaması veya CardSpace güvenlik belirteci hizmeti tarafından verilmiş bir belirteç kullanarak. Daha fazla bilgi için [Federasyon ve verilen belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="message-client-credentials-in-bindings"></a>İleti bağlamaları istemci kimlik bilgileri  
  Aşağıdaki tabloda bir bağlama ileti güvenlik modunda kullanırken kullanılabilir istemci kimlik bilgisi türlerini listeler.  

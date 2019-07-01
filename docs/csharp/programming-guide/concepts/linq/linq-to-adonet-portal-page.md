@@ -2,18 +2,18 @@
 title: ADO.NET'e LINQ (Portal Sayfası)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: b21d19aaa0b470bd59acb59c84b0777d099e6274
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: ca6ea75aad1ecd2f4676b4a1a367428ea6c48cf9
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307167"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486915"
 ---
 # <a name="linq-to-adonet-portal-page"></a>ADO.NET'e LINQ (Portal Sayfası)
-[!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] ADO.NET'te numaralandırılabilir herhangi bir nesne üzerinde kullanarak sorgulama sayesinde [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] programlama modeli.  
+ADO.NET'e LINQ kullanarak sorgulama ADO.NET içinde herhangi bir numaralandırma nesnesi üzerinden olanak tanır [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] programlama modeli.  
   
 > [!NOTE]
->  [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] Belgeleri, ADO.NET .NET Framework SDK bölümünde bulunur: [LINQ ve ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).  
+>  LINQ to ADO.NET belgeleri, ADO.NET .NET Framework SDK bölümünde bulunur: [LINQ ve ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).  
   
  Üç ayrı ADO.NET vardır [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] teknolojileri: [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], ve [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] daha zengin, en iyi duruma getirilmiş üzerinde sorgulama sağlar <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] veritabanı şemalarını SQL Server, doğrudan sorgu sağlar ve [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] bir varlık veri modeli sorgu olanak tanır.  
   

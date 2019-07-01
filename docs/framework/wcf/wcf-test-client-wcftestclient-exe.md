@@ -2,12 +2,12 @@
 title: WCF Test İstemcisi (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: ee40ca7a07729cac284ef8c634d63d673be3fbd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9044dc2479e8e0a31a6152321231ee1936b74351
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613085"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487456"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF Test İstemcisi (WcfTestClient.exe)
 Windows Communication Foundation (WCF) Test İstemcisi (WcfTestClient.exe), kullanıcılara test parametreleri giriş, hizmete girdi gönderme olanağı sağlar ve hizmet geri gönderir yanıtı görüntüleyin bir GUI araçtır. Bu test WCF hizmet konağı ile birleştirildiğinde deneyimi sorunsuz bir hizmet sağlar.  
@@ -154,7 +154,7 @@ Windows Communication Foundation (WCF) Test İstemcisi (WcfTestClient.exe), kull
   
 - İşlem.  
   
-- Güvenlik: [!INCLUDE[infocard](../../../includes/infocard-md.md)] , sertifika ve kullanıcı adı/parola.  
+- Güvenlik: CardSpace, sertifika ve kullanıcı adı/parola.  
   
 - Bindings: WSFederationbinding, herhangi bir bağlam bağlamaları ve Https bağlaması, WebHttpbinding (Json yanıt iletisi desteği).  
   

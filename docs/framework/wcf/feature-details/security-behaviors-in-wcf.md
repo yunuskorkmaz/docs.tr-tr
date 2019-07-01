@@ -2,12 +2,12 @@
 title: WCF'de Güvenlik Davranışları
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 53d8fedb5f562dfbc4aec566f8d0c442b255e1c9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 378edb6ddd7a66249a0c7548a3d9465475f670a8
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424686"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487755"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF'de Güvenlik Davranışları
 Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranışını hizmet düzeyinde veya uç nokta düzeyine değiştirin. (Genel olarak, davranışları hakkında daha fazla bilgi için bkz [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Güvenlik davranışları* kimlik bilgileri, kimlik doğrulaması, yetkilendirme denetime izin vermek ve günlüklerini denetleme. Programlama veya yapılandırma yoluyla davranışları kullanabilirsiniz. Bu konu, aşağıdaki davranışları güvenlik işlevleri için ilgili yapılandırma üzerinde durulmaktadır:  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranı
  Bu yapılandırma öğesi kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>Anonim CardSpace kullanıcıların  
- Ayarı `AllowUntrustedRsaIssuers` özniteliği `<IssuedTokenAuthentication>` öğesine `true` açıkça herhangi bir istemci bir rastgele RSA anahtar çifti ile imzalanmış şirket içinde verilen bir belirteç sunmasını sağlar. Veren *güvenilmeyen* anahtar ile ilişkili hiçbir veren verileri sildiğinden. A [!INCLUDE[infocard](../../../../includes/infocard-md.md)] kullanıcı kendi kendine sağlanan talep kimliğini içeren kendi kendine verilen bir kart oluşturun. Bu özellik, dikkatli kullanın. Bu özelliği kullanmak için RSA ortak anahtarını bir veritabanında bir kullanıcı adı ile birlikte depolanmalıdır daha güvenli bir parola olarak düşünebilirsiniz. Bir istemci erişim hizmetine izin vermeden önce istemci sunulan RSA ortak anahtarı sunulan kullanıcı adı için depolanan ortak anahtarı ile karşılaştırarak doğrulayın. Bu, kayıt işleminden yapabildiği kullanıcılar kullanıcı adlarını kaydetmeleri ve bunları Self verilen RSA ortak anahtarlarla ilişkilendirme sağladıktan varsayılır.  
+ Ayarı `AllowUntrustedRsaIssuers` özniteliği `<IssuedTokenAuthentication>` öğesine `true` açıkça herhangi bir istemci bir rastgele RSA anahtar çifti ile imzalanmış şirket içinde verilen bir belirteç sunmasını sağlar. Veren *güvenilmeyen* anahtar ile ilişkili hiçbir veren verileri sildiğinden. Kendi kendine sağlanan talep kimliğini içeren kendi kendine verilen bir kart CardSpace kullanıcı oluşturabilirsiniz. Bu özellik, dikkatli kullanın. Bu özelliği kullanmak için RSA ortak anahtarını bir veritabanında bir kullanıcı adı ile birlikte depolanmalıdır daha güvenli bir parola olarak düşünebilirsiniz. Bir istemci erişim hizmetine izin vermeden önce istemci sunulan RSA ortak anahtarı sunulan kullanıcı adı için depolanan ortak anahtarı ile karşılaştırarak doğrulayın. Bu, kayıt işleminden yapabildiği kullanıcılar kullanıcı adlarını kaydetmeleri ve bunları Self verilen RSA ortak anahtarlarla ilişkilendirme sağladıktan varsayılır.  
   
 ## <a name="client-credentials"></a>İstemci kimlik bilgileri  
  İstemci kimlik bilgileri, hizmetleri karşılıklı kimlik doğrulaması gerekli olduğu durumlarda istemcinin kimliğini doğrulamak için kullanılır. Bölümü, istemci Hizmet sertifikası ile bir hizmeti iletileri burada güvenlik altına almanız gerekir senaryolar için hizmet sertifikaları belirtmek için kullanabilirsiniz.  

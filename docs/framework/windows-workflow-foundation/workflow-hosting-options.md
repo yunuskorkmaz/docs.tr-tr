@@ -2,24 +2,24 @@
 title: İş Akışı Barındırma Seçenekleri
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: 2a03c7b5e15b76eabc714f44624f04d3385720d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0cd9748c28cd6206e1fedffc5772b2849462dba
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670225"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487360"
 ---
 # <a name="workflow-hosting-options"></a>İş Akışı Barındırma Seçenekleri
-Bir konsol uygulamasında barındırılan iş akışı Windows Workflow Foundation (WF) örnekleri çoğu kullanın, ancak bu gerçek iş akışları için gerçekçi bir senaryo değildir. Gerçek iş uygulamalarını iş akışlarında barındırılacak kalıcı işlemleri bir Windows hizmeti yazılan geliştirici veya bir sunucu uygulaması gibi- [!INCLUDE[iisver](../../../includes/iisver-md.md)] veya AppFabric. Bu yaklaşımların arasındaki farklar aşağıdaki gibidir.  
+Bir konsol uygulamasında barındırılan iş akışı Windows Workflow Foundation (WF) örnekleri çoğu kullanın, ancak bu gerçek iş akışları için gerçekçi bir senaryo değildir. Gerçek iş uygulamalarını iş akışlarında kalıcı işlemleri yazılan bir Windows hizmeti-geliştirici ya da IIS 7.0 veya AppFabric gibi bir sunucu uygulaması tarafından barındırılacak. Bu yaklaşımların arasındaki farklar aşağıdaki gibidir.  
   
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>IIS Windows AppFabric ile iş akışları barındırma  
  AppFabric ile IIS kullanarak iş akışları için tercih edilen ana bilgisayardır. IIS üzerinde tek başına HTTP üzerindeki bağımlılığı kaldırır Windows Etkinleştirme hizmeti AppFabric kullanarak iş akışları için ana bilgisayar uygulamasıdır.  
   
 ## <a name="hosting-workflows-in-iis-alone"></a>Tek başına bir IIS iş akışları barındırma  
- Kullanarak [!INCLUDE[iisver](../../../includes/iisver-md.md)] yönetim ve izleme çalışan uygulamaların Bakımı kolaylaştıran AppFabric ile kullanılabilen araçları olduğundan tek başına önerilmez. İş akışları alanınızın yalnızca barındırılması [!INCLUDE[iisver](../../../includes/iisver-md.md)] AppFabric için taşıma ile altyapıyla ilgili endişelerini yoksa tek başına.  
+ Yönetim ve izleme çalışan uygulamaların Bakımı kolaylaştıran AppFabric ile kullanılabilen araçları olduğundan kullanarak tek başına bir IIS 7.0, önerilmez. İş akışları yalnızca IIS 7.0 AppFabric için taşıma ile altyapıyla ilgili endişelerini yoksa tek başına barındırılması.  
   
 > [!WARNING]
->  [!INCLUDE[iisver](../../../includes/iisver-md.md)] Uygulama havuzları, çeşitli nedenlerle düzenli aralıklarla geri dönüştürür. Bir uygulama havuzu geri dönüştürüldüğünde, IIS eski havuzuna iletileri kabul etmeye durdurur ve yeni isteklerini kabul etmek için yeni bir uygulama havuzu oluşturur. Bir iş akışı bir yanıt gönderdikten sonra çalışmaya devam ederse [!INCLUDE[iisver](../../../includes/iisver-md.md)] yapılmakta olan çalışmanın uyumlu olmaz ve barındırma uygulama havuzunu geri dönüştür. Böyle, iş akışını iptal edilecek ve izleme hizmetleri kayıt bir [1004 - WorkflowInstanceAborted](1004-workflowinstanceaborted.md) neden boş alan iletisi.  
+>  IIS 7.0 uygulama havuzu çeşitli nedenlerden dolayı düzenli aralıklarla geri dönüştürür. Bir uygulama havuzu geri dönüştürüldüğünde, IIS eski havuzuna iletileri kabul etmeye durdurur ve yeni isteklerini kabul etmek için yeni bir uygulama havuzu oluşturur. Bir iş akışı bir yanıt gönderdikten sonra çalışmaya devam ederse, IIS 7.0 yapılmakta olan çalışmanın uyumlu olmaz ve barındırma uygulama havuzunu geri dönüştür. Böyle, iş akışını iptal edilecek ve izleme hizmetleri kayıt bir [1004 - WorkflowInstanceAborted](1004-workflowinstanceaborted.md) neden boş alan iletisi.  
 >   
 >  Kalıcılık kullandıysanız, konak açıkça iptal edilmiş örneklerden son Kalıcılık noktası yeniden başlatmanız gerekir.  
 >   

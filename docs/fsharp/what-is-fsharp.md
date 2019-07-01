@@ -1,13 +1,13 @@
 ---
-title: NedirF#
+title: F# nedir?
 description: Hakkında bilgi edinin F# programlama dilinde olduğu ve neler F# programlama benzer. Zengin veri türleri, İşlevler ve bunlar birbirine nasıl uyduğunu hakkında bilgi edinin.
 ms.date: 08/03/2018
-ms.openlocfilehash: 9d5b0de9828aa91857d3961bf7d40c02c344adaa
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fc4f4db771c43a4ec08cc9d3a247cf1f38e60457
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641567"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486838"
 ---
 # <a name="what-is-f"></a>F nedir\#
 
@@ -40,7 +40,7 @@ F#dahil olmak üzere çok sayıda özelliğe sahiptir:
 * Basit sözdizimi
 * Varsayılan olarak sabit
 * Tür çıkarımı ve otomatik Genelleştirme
-* Birinci sınıf İşlevler
+* Birinci sınıf işlevler
 * Güçlü veri türleri
 * Desen eşleştirme
 * Zaman uyumsuz programlama
@@ -100,7 +100,7 @@ F#İşlevler ayrıca birinci parametre olarak geçirilen edilebilmeleri ve diğe
 F#blend veri ve işlevsellik gerektiğinde yararlı veri türleri olan nesneleri için tam destek sunar. F#işlevleri, nesneleri işlemek için kullanılır.
 
 ```fsharp
-type Set<[<EqualityConditionOn>] ‘T when ‘T: comparison>(elements: seq<'T>) =
+type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
     member s.IsEmpty = // Implementation elided
     member s.Contains (value) =// Implementation elided
     member s.Add (value) = // Implementation elided

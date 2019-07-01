@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 4200918057a32d077dbc44f48057f8e886d87a44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b09578bf39a081b1bed83614cff755f234f8e45
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624495"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487095"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma
 Windows Communication Foundation (WCF) Federasyon Hizmeti oluşturma ana aşağıdaki yordamlardan oluşur:  
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) Federasyon Hizmeti oluşturma ana aşağ�
   
 1. Kullanım <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> özelliği <xref:System.ServiceModel.Description.ServiceCredentials> sınıfı bir başvuru döndürmek için bir <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> örneği. Özellik erişilen <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> özelliği <xref:System.ServiceModel.ServiceHostBase> sınıfı.  
   
-2. Ayarlama <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> özelliğini `true` varsa gibi Self verilen belirteçler [!INCLUDE[infocard](../../../../includes/infocard-md.md)] kartlardır doğrulanamaz. Varsayılan, `false` değeridir.  
+2. Ayarlama <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> özelliğini `true` CardSpace kartları gibi otomatik olarak verilen belirteçler bağlanılabilir olduğunda. Varsayılan, `false` değeridir.  
   
 3. Tarafından döndürülen bir koleksiyonda doldurmak <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> örneklerini özelliğiyle <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> sınıfı. Her örneği, hizmet belirteçleri kimliğini doğrulayacak bir veren temsil eder.  
   
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF) Federasyon Hizmeti oluşturma ana aşağ�
   
 1. Oluşturma bir `<issuedTokenAuthentication>` öğesi alt öğesi olarak bir <`serviceCredentials`> öğesi.  
   
-2. Ayarlama `allowUntrustedRsaIssuers` özniteliği `<issuedTokenAuthentication>` öğesine `true` gibi Self verilen bir belirteç kimlik doğrulaması, bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] kart.  
+2. Ayarlama `allowUntrustedRsaIssuers` özniteliği `<issuedTokenAuthentication>` öğesine `true` CardSpace kartı gibi bir şirket içinde verilen belirteç kimlik doğrulaması durumunda.  
   
 3. Oluşturma bir `<knownCertificates>` öğesi alt öğesi olarak `<issuedTokenAuthentication>` öğesi.  
   

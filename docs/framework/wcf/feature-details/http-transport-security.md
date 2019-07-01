@@ -2,12 +2,12 @@
 title: HTTP Taşıma Güvenliği
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 386c24a9b51be56bf5a8195123e573cfced6392f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 456df42848c009dcf42022ac674a1d27e5b33972
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402313"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487027"
 ---
 # <a name="http-transport-security"></a>HTTP Taşıma Güvenliği
 HTTP taşıma kullanırken, güvenlik, Güvenli Yuva Katmanı (SSL) uygulaması tarafından sağlanır. SSL yaygın olarak Internet'te bir hizmete istemcinin kimliğini doğrulamak için kullanılır ve kanala gizliliği (şifreleme) sağlamak için. Bu konuda, SSL nasıl çalıştığını ve Windows Communication Foundation (WCF) nasıl uygulandığı açıklanmaktadır.  
@@ -38,9 +38,9 @@ HTTP taşıma kullanırken, güvenlik, Güvenli Yuva Katmanı (SSL) uygulaması 
 ### <a name="using-iis-for-transport-security"></a>Aktarım güvenliği için IIS kullanarak  
   
 #### <a name="iis-70"></a>IIS 7.0  
- Ayarlamak için [!INCLUDE[iisver](../../../../includes/iisver-md.md)] bakın (SSL kullanarak) güvenli bir konak [IIS 7.0 Beta: Güvenli Yuva Katmanı IIS 7.0 yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88600).  
+ IIS 7. 0 ' (SSL kullanarak) güvenli bir konağı ayarlamak için bkz [IIS 7.0 Güvenli Yuva Katmanı Yapılandırma](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10)).  
   
- Sertifika ile kullanmak için yapılandırma [!INCLUDE[iisver](../../../../includes/iisver-md.md)], bkz: [IIS 7.0 Beta: IIS 7.0 sunucu sertifikalarını yapılandırma](https://go.microsoft.com/fwlink/?LinkID=88595).  
+IIS 7. 0'ile kullanım için sertifikaları yapılandırmak için bkz [IIS 7.0 sunucu sertifikalarını yapılandırma](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
   
 #### <a name="iis-60"></a>IIS 6.0  
  IIS 6. 0 ' (SSL kullanarak) güvenli bir konağı ayarlamak için bkz [Güvenli Yuva Katmanı Yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88601).  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 717abc8f54669a5ca814a61827a0865215204e1b
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876217"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487349"
 ---
 # <a name="application-settings-architecture"></a>Uygulama Ayarları Mimarisi
 Bu konuda, uygulama ayarları mimarisi nasıl çalıştığını açıklanır ve mimarinin gruplandırılmış ayarları ve ayarları anahtarları gibi gelişmiş özellikleri keşfediyor.  
@@ -109,16 +109,16 @@ Bu konuda, uygulama ayarları mimarisi nasıl çalıştığını açıklanır ve
  Kendi ayarları sınıfı uygularsanız, kullanabileceğiniz <xref:System.Configuration.SettingsSerializeAsAttribute> ikili veya özel serileştirme kullanmak için bir ayar işaretlemek için <xref:System.Configuration.SettingsSerializeAs> sabit listesi. Kodda kendi ayarları sınıfı oluşturma ile ilgili daha fazla bilgi için bkz: [nasıl yapılır: Uygulama ayarları oluşturma](how-to-create-application-settings.md).  
   
 ### <a name="settings-file-locations"></a>Ayarlar dosyası konumları  
- Konumunu `app`. exe.config ve *kullanıcı*.config dosyalar farklı bağlı olarak uygulama nasıl yüklenir. Yerel bilgisayara kopyalanır ve Windows Forms tabanlı bir uygulama için `app`. exe.config olarak, uygulamanın ana yürütülebilir dosyasını temel dizini ile aynı dizinde bulunacağı ve *kullanıcı*.config bulunacağı tarafından belirtilen konuma <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> özelliği. Yoluyla yüklü bir uygulama için [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], bu dosyaların her ikisini de yer alacağı [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] veri dizini %InstallRoot%\Documents ve ayarlar altındaki\\*kullanıcıadı*\Local ayarları.  
+ Konumunu `app`. exe.config ve *kullanıcı*.config dosyalar farklı bağlı olarak uygulama nasıl yüklenir. Yerel bilgisayara kopyalanır ve Windows Forms tabanlı bir uygulama için `app`. exe.config olarak, uygulamanın ana yürütülebilir dosyasını temel dizini ile aynı dizinde bulunacağı ve *kullanıcı*.config bulunacağı tarafından belirtilen konuma <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> özelliği. ClickOnce kullanarak yüklü bir uygulama için bu dosyaların her ikisini de ClickOnce veri dizini altına %InstallRoot%\Documents ve ayarları alacağını\\*kullanıcıadı*\Local ayarları.  
   
- Bu dosyalar depolama konumu, bir kullanıcının gezici profiller etkinleştirilmişse ve isterse diğer bilgisayarlar bir etki alanı içinde kullanıldığında farklı Windows ve uygulama ayarlarını tanımlamak bir kullanıcı sağlayan biraz farklıdır. Bu durumda, her ikisi de [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] uygulamaları ve olmayan-[!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] sahip olacak uygulamaları kendi `app`. exe.config ve *kullanıcı*%InstallRoot%\Documents ve ayarları altında depolanan .config dosyaları\\ *kullanıcıadı*\Application veri.  
+ Bu dosyalar depolama konumu, bir kullanıcının gezici profiller etkinleştirilmişse ve isterse diğer bilgisayarlar bir etki alanı içinde kullanıldığında farklı Windows ve uygulama ayarlarını tanımlamak bir kullanıcı sağlayan biraz farklıdır. Bu durumda, hem ClickOnce uygulamaları hem de olmayan ClickOnce uygulamaları olacaktır kendi `app`. exe.config ve *kullanıcı*%InstallRoot%\Documents ve ayarları altında depolanan .config dosyalar\\  *Kullanıcı adı*\Application veri.  
   
- Yeni dağıtım teknolojisi ile uygulama ayarlarını özelliğinin işleyişi hakkında daha fazla bilgi için bkz. [ClickOnce ve uygulama ayarlarını](/visualstudio/deployment/clickonce-and-application-settings). Hakkında daha fazla bilgi için [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] veri dizini bkz [erişen yerel ve uzak veri ClickOnce uygulamalarında](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications).  
+ Yeni dağıtım teknolojisi ile uygulama ayarlarını özelliğinin işleyişi hakkında daha fazla bilgi için bkz. [ClickOnce ve uygulama ayarlarını](/visualstudio/deployment/clickonce-and-application-settings). ClickOnce veri dizini hakkında daha fazla bilgi için bkz: [erişen yerel ve uzak veri ClickOnce uygulamalarında](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications).  
   
 ## <a name="application-settings-and-security"></a>Uygulama ayarları ve güvenlik  
  Uygulama ayarları, kısmi güven, Internet veya intranet üzerinden barındırılan Windows Forms uygulamaları için varsayılan değer kısıtlı bir ortam içinde çalışacak şekilde tasarlanmıştır. Kısmi güven ötesinde özel izin uygulama ayarlarını varsayılan ayar sağlayıcısı ile kullanmak için gereklidir.  
   
- Ne zaman uygulama ayarları kullanılır bir [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] uygulama `user`.config dosyasında depolanan [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] veri dizini. Uygulamanın boyutunu `user`.config dosyasını belirlediği veri dizini kotasını aşamaz [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]. Daha fazla bilgi için [ClickOnce ve uygulama ayarlarını](/visualstudio/deployment/clickonce-and-application-settings).  
+ Uygulama ayarları bir ClickOnce uygulamasında kullanıldığında `user`.config dosyasını ClickOnce veri dizininde depolanır. Uygulamanın boyutunu `user`.config dosyasını ClickOnce tarafından belirlenen veri dizini kotayı aşamaz. Daha fazla bilgi için [ClickOnce ve uygulama ayarlarını](/visualstudio/deployment/clickonce-and-application-settings).  
   
 ## <a name="custom-settings-providers"></a>Özel ayarları sağlayıcıları  
  Uygulama ayarları mimaride sarmalayıcı sınıfından türetilen uygulamaları ayarları arasında gevşek bir bağlantı yoktur <xref:System.Configuration.ApplicationSettingsBase>, ve ilgili ayarları sağlayıcı veya sağlayıcıları, türetilen <xref:System.Configuration.SettingsProvider>. Bu ilişkilendirmeyi yalnızca tanımlanan <xref:System.Configuration.SettingsProviderAttribute> sarmalayıcı sınıfı veya özelliklerini tek tek uygulanır. Bir ayar sağlayıcısı değil açıkça belirtilmişse varsayılan sağlayıcı <xref:System.Configuration.LocalFileSettingsProvider>, kullanılır. Sonuç olarak, bu mimari, oluşturma ve özel ayarları sağlayıcılarını kullanarak destekler.  
