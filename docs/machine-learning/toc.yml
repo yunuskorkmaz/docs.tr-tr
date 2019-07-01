@@ -80,6 +80,14 @@
   items:
     - name: Genel Bakış
       href: automl-overview.md
+    - name: Model Oluşturucu
+      items:
+        - name: Model Oluşturucu nedir?
+          href: automate-training-with-model-builder.md
+        - name: Model Oluşturucu’yu yükleme
+          href: how-to-guides/install-model-builder.md
+        - name: Model Oluşturucu ile fiyatları tahmin etme
+          href: tutorials/predict-prices-with-model-builder.md
     - name: ML.NET CLI
       items:
         - name: CLI’yı yükleme
