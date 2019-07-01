@@ -302,8 +302,9 @@
     - name: .NET Core SDK’sına Genel Bakış
       href: core/sdk.md
     - name: .NET Core CLI Araçları
-      href: core/tools/index.md
       items:
+        - name: .NET Core CLI’ye Genel Bakış
+          href: core/tools/index.md
         - name: Telemetri
           href: core/tools/telemetry.md
         - name: Genel Araçlar
@@ -311,6 +312,8 @@
           items:
             - name: Genel Araç Oluşturma
               href: core/tools/global-tools-how-to-create.md
+        - name: Yükseltilmiş erişim
+          href: core/tools/elevated-access.md
         - name: Genişletilebilirlik Modeli
           href: core/tools/extensibility.md
         - name: Sürekli Tümleştirme
@@ -530,8 +533,6 @@
                   href: csharp/tutorials/intro-to-csharp/introduction-to-classes.md
         - name: 'C# 6’yı keşfetme'
           href: csharp/tutorials/exploration/csharp-6.yml
-        - name: 'C# 7.0’yi keşfetme'
-          href: csharp/tutorials/exploration/csharp-7.yml
         - name: Dize ilişkilendirmeyi keşfetme - etkileşimli
           href: csharp/tutorials/exploration/interpolated-strings.yml
         - name: Dize ilişkilendirmeyi keşfetme - ortamınızda
@@ -1224,7 +1225,7 @@
           href: visual-basic/language-reference/typographic-and-code-conventions.md
         - name: Visual Basic Çalışma Süresi Kitaplık Üyeleri
           href: visual-basic/language-reference/runtime-library-members.md
-        - name: Anahtar Sözcükler
+        - name: Anahtar sözcükler
           href: visual-basic/language-reference/keywords/index.md
           items:
             - name: Dizi Özeti
