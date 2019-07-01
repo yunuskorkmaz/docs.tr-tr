@@ -8,7 +8,7 @@
       items:
         - name: Genel Bakış
           href: keywords/index.md
-        - name: Türler
+        - name: Yerleşik türler
           items:
             - name: Değer Türleri
               items:
@@ -16,8 +16,9 @@
                   href: keywords/value-types.md
                 - name: bool
                   href: keywords/bool.md
-                - name: byte
-                  href: keywords/byte.md
+                - name: Tamsayı sayısal türler
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+                  href: builtin-types/integral-numeric-types.md
                 - name: char
                   href: keywords/char.md
                 - name: decimal
@@ -28,22 +29,8 @@
                   href: keywords/enum.md
                 - name: float
                   href: keywords/float.md
-                - name: int
-                  href: keywords/int.md
-                - name: long
-                  href: keywords/long.md
-                - name: sbyte
-                  href: keywords/sbyte.md
-                - name: short
-                  href: keywords/short.md
                 - name: struct
                   href: keywords/struct.md
-                - name: uint
-                  href: keywords/uint.md
-                - name: ulong
-                  href: keywords/ulong.md
-                - name: ushort
-                  href: keywords/ushort.md
             - name: Başvuru Türleri
               items:
                 - name: Başvuru türlerinin özellikleri
@@ -68,8 +55,6 @@
               items:
                 - name: Yerleşik türler tablosu
                   href: keywords/built-in-types-table.md
-                - name: Tam sayı türleri tablosu
-                  href: keywords/integral-types-table.md
                 - name: Kayan nokta türleri tablosu
                   href: keywords/floating-point-types-table.md
                 - name: Değer türleri tablosu
@@ -116,9 +101,11 @@
               href: keywords/event.md
             - name: extern
               href: keywords/extern.md
-            - name: in (Genel Değiştirici)
+            - name: in (genel değiştirici)
               href: keywords/in-generic-modifier.md
-            - name: out (Genel Değiştirici)
+            - name: new (üye değiştiricisi)
+              href: keywords/new-modifier.md
+            - name: out (genel değiştirici)
               href: keywords/out-generic-modifier.md
             - name: override
               href: keywords/override.md
@@ -214,28 +201,22 @@
                   href: keywords/using-statement.md
             - name: extern diğer adı
               href: keywords/extern-alias.md
-        - name: İşleç Anahtar Sözcükleri
+        - name: Tür testi anahtar sözcükleri
           items:
-            - name: as
-              href: keywords/as.md
-            - name: bekleme
-              href: keywords/await.md
             - name: is
               href: keywords/is.md
-            - name: new
-              items:
-                - name: 'new işleci, değiştirici ve kısıtlama'
-                  href: keywords/new.md
-                - name: new İşleci
-                  href: keywords/new-operator.md
-                - name: new Değiştiricisi
-                  href: keywords/new-modifier.md
-                - name: new Kısıtlaması
-                  href: keywords/new-constraint.md
+        - name: Genel Tür Kısıtlaması Anahtar Sözcükleri
+          items:
+            - name: new kısıtlaması
+              href: keywords/new-constraint.md
+            - name: Burada
+              href: keywords/where-generic-type-constraint.md
+        - name: İşleç Anahtar Sözcükleri
+          items:
+            - name: bekleme
+              href: keywords/await.md
             - name: sizeof
               href: keywords/sizeof.md
-            - name: typeof
-              href: keywords/typeof.md
             - name: nameof
               href: keywords/nameof.md
         - name: Dönüşüm Anahtar Sözcükleri
@@ -282,8 +263,6 @@
               href: keywords/set.md
             - name: when (filtre koşulu)
               href: keywords/when.md
-            - name: where (genel tür kısıtlaması)
-              href: keywords/where-generic-type-constraint.md
             - name: value
               href: keywords/value.md
             - name: yield
@@ -342,30 +321,36 @@
         - name: Üye erişimi işleçleri
           href: operators/member-access-operators.md
           displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+        - name: Tür testi ve dönüştürme işleçleri
+          href: operators/type-testing-and-conversion-operators.md
+          displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), cast'
         - name: İşaretçi bağlantılı işleçler
           href: operators/pointer-related-operators.md
           displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
-        - name: () işleci
-          href: operators/invocation-operator.md
-        - name: ':: işleci'
-          href: operators/namespace-alias-qualifer.md
+        - name: = işleci
+          href: operators/assignment-operator.md
+          displayName: 'assignment, ref'
         - name: + and += işleçleri
           href: operators/addition-operator.md
           displayName: 'string concatenation, delegate combination, event subscription'
         - name: '- and -= işleçleri'
           href: operators/subtraction-operator.md
           displayName: 'delegate removal, event unsubscription'
-        - name: = işleci
-          href: operators/assignment-operator.md
         - name: '?: işleci'
           href: operators/conditional-operator.md
-          displayName: 'conditional, ternary'
+          displayName: 'conditional, ternary, ref'
         - name: '?? operator'
           href: operators/null-coalescing-operator.md
           displayName: null-coalescing
         - name: => işleci
           href: operators/lambda-operator.md
-        - name: stackalloc
+          displayName: lambda
+        - name: ':: işleci'
+          href: operators/namespace-alias-qualifer.md
+          displayName: namespace alias qualifier
+        - name: new işleci
+          href: operators/new-operator.md
+        - name: stackalloc işleci
           href: operators/stackalloc.md
         - name: true ve false işleçleri
           href: operators/true-false-operators.md

@@ -194,6 +194,12 @@
           href: core/whats-new/dotnet-core-2-1.md
         - name: ​.NET Core 2.0’deki yenilikler
           href: core/whats-new/dotnet-core-2-0.md
+    - name: Uygulama Uyumluluğu
+      items:
+        - name: Hataya neden olan değişiklikleri değerlendirme
+          href: core/compatibility/index.md
+        - name: Hataya neden olan değişiklik kategorileri
+          href: core/compatibility/categories.md
     - name: Öğreticiler
       href: core/tutorials/index.md
       items:
@@ -1363,7 +1369,7 @@
               href: visual-basic/language-reference/modifiers/notinheritable.md
             - name: NotOverridable
               href: visual-basic/language-reference/modifiers/notoverridable.md
-            - name: İsteğe Bağlı
+            - name: İsteğe bağlı
               href: visual-basic/language-reference/modifiers/optional.md
             - name: Out (Genel Değiştirici)
               href: visual-basic/language-reference/modifiers/out-generic-modifier.md
