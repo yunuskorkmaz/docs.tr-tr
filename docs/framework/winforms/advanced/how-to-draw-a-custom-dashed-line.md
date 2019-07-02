@@ -9,15 +9,15 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 8dc1ad41cf8067bea5b811ca126ad29f5a600f69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2184a8d7d7f24b8f631818608ab4bcdb89857c7
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004373"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506042"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>Nasıl yapılır: Özel Kesikli Çizgi Çizme
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] listelenen birkaç çizgi stili sağlar <xref:System.Drawing.Drawing2D.DashStyle> sabit listesi. Bu standart çizgi stilleri gereksinimlerinizi karşılamıyorsa, özel çizgi desenine oluşturabilirsiniz.  
+GDI +'da listelenen birkaç çizgi stilleri sağlar <xref:System.Drawing.Drawing2D.DashStyle> sabit listesi. Bu standart çizgi stilleri gereksinimlerinizi karşılamıyorsa, özel çizgi desenine oluşturabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
  Özel kesikli çizgi çizmek için bir dizi içinde uzunluklarını çizgi ve boşluk yerleştirin ve dizi değeri olarak atama <xref:System.Drawing.Pen.DashPattern%2A> özelliği bir <xref:System.Drawing.Pen> nesne. Aşağıdaki örnek dizisine göre özel kesikli çizgi çizer `{5, 2, 15, 4}`. Kalem genişliği 5 tarafından dizinin öğeleri çarpmak varsa `{25, 10, 75, 20}`. 25 ve 75 arasındaki uzunluğu görüntülenen tireler alternatif ve alanları, uzunluğu 10 ile 20 arasında alternatif.  

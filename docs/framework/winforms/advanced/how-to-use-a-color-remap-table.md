@@ -9,17 +9,17 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-ms.openlocfilehash: bff5e3585804e027f2d0e78e5ea525f933a351a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 360ec30563ee5001d784dc7c4ccdb50563867c29
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593181"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505767"
 ---
 # <a name="how-to-use-a-color-remap-table"></a>Nasıl yapılır: Yeniden Renk Eşleme Tablosu Kullanma
 Yeniden eşleme yeniden renk eşleme tablosu göre görüntü renkleri dönüştürme işlemidir. Renk eşleme tablosu dizisidir <xref:System.Drawing.Imaging.ColorMap> nesneleri. Her <xref:System.Drawing.Imaging.ColorMap> dizi nesnesinde bir <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> özelliği ve <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> özelliği.  
   
- Zaman [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizer görüntü, her pikselin görüntünün bir diziye eski renk karşılaştırılır. Bir pikselin renk eski bir renk eşleşiyorsa rengini karşılık gelen yeni renge değişir. Renkleri işleme için yalnızca değiştirilen — görüntünün renk değerleri (depolanan bir <xref:System.Drawing.Image> veya <xref:System.Drawing.Bitmap> nesnesi) değiştirilmez.  
+ GDI +'da görüntü çizdiğinde, görüntünün her piksel eski renkleri dizisini karşılaştırılır. Bir pikselin renk eski bir renk eşleşiyorsa rengini karşılık gelen yeni renge değişir. Renkleri işleme için yalnızca değiştirilen — görüntünün renk değerleri (depolanan bir <xref:System.Drawing.Image> veya <xref:System.Drawing.Bitmap> nesnesi) değiştirilmez.  
   
  Remapped resim çizmek için bir dizi başlatma <xref:System.Drawing.Imaging.ColorMap> nesneleri. Bu dizi için geçirmek <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> yöntemi bir <xref:System.Drawing.Imaging.ImageAttributes> nesnesi ve ardından geçirmek <xref:System.Drawing.Imaging.ImageAttributes> nesnesini <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi bir <xref:System.Drawing.Graphics> nesne.  
   

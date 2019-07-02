@@ -20,19 +20,19 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e678195e96aea881777c44ab14bb2e56aef015bb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663948"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505300"
 ---
 # <a name="types-of-bitmaps"></a>Bit Eşlem Türleri
 Bir bit eşlem piksel dikdörtgen bir dizi her piksel rengi belirtin BITS dizisidir. Tek bir piksele şekillendiriyorsa bit sayısı kadar bu piksele atanabilir renk sayısını belirler. Her piksel 4 BITS tarafından temsil edilir, örneğin, ardından belirli bir pikselin 16 farklı renkler birini atanabilir (2 ^ 4 = 16). Aşağıdaki tabloda, BITS, verilen sayıda tarafından temsil edilen bir piksele atanabilir renklerin sayısı birkaç örnek gösterilmektedir.  
   
 |Piksel başına bit|Bir piksele atanabilir renk sayısı|  
 |--------------------|------------------------------------------------------|  
-|1.|2^1 = 2|  
+|1\.|2^1 = 2|  
 |2|2^2 = 4|  
 |4|2^4 = 16|  
 |8|2^8 = 256|  
@@ -53,7 +53,7 @@ Bir bit eşlem piksel dikdörtgen bir dizi her piksel rengi belirtin BITS dizisi
  ![Bit eşlem örnek](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Grafik dosya biçimleri  
- Bit eşlemleri kaydetme disk dosyaları için birçok standart biçimi vardır. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Dosya grafikler aşağıdaki paragrafta açıklanan biçimlerini destekler.  
+ Bit eşlemleri kaydetme disk dosyaları için birçok standart biçimi vardır. GDI +'da destekler, aşağıdaki paragrafta açıklanan biçimleri grafik dosyası.  
   
 ### <a name="bmp"></a>BMP  
  BMP, CİHAZDAN bağımsız ve uygulama bağımsız görüntüleri depolamak için Windows tarafından kullanılan standart bir biçimidir. Bit / piksel (1, 4, 8, 15, 24, 32 veya 64) için belirli bir BMP dosya sayısı, dosya üst bilgisinde belirtilir. BMP dosyaları 24 bit / piksel ile yaygındır. BMP dosyaları, genellikle değil sıkıştırılır ve bu nedenle, Internet üzerinden aktarım için uygun değildir.  

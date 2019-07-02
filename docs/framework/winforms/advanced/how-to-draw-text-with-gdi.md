@@ -10,15 +10,15 @@ helpviewer_keywords:
 - drawing [Windows Forms], text
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-ms.openlocfilehash: 6078f2418219dad193d1a49a704334046c33b082
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3d5b79e82185c044314ff8807b86835ef6a87c45
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582594"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505913"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>Nasıl yapılır: GDI ile Metin Çizme
-İle <xref:System.Windows.Forms.TextRenderer.DrawText%2A> yönteminde <xref:System.Windows.Forms.TextRenderer> sınıfı erişebilir [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bir form veya denetim metin çizme işlevi. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] metin işleme genellikle daha iyi performans ve daha ölçmek daha doğru metin sunar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+İle <xref:System.Windows.Forms.TextRenderer.DrawText%2A> yönteminde <xref:System.Windows.Forms.TextRenderer> sınıfı, bir form veya denetim metin çizme GDI işlevselliği erişebilirsiniz. GDI metin işleme, genellikle daha iyi performans ve GDI + ' ölçmek daha doğru metin sunar.  
   
 > [!NOTE]
 >  <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Yöntemlerinin <xref:System.Windows.Forms.TextRenderer> sınıf için yazdırma desteklenmez. Yazdırma sırasında her zaman kullan <xref:System.Drawing.Graphics.DrawString%2A> yöntemlerinin <xref:System.Drawing.Graphics> sınıfı.  

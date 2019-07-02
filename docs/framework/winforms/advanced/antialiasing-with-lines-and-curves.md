@@ -9,15 +9,15 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 871c5cb3cd9356f677633acb04fe82021a9787c5
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961115"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506142"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Nasıl yapılır: Çizgiler ve Eğrilerle Düzgünleştirme
-Kullanırken [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bir çizgi çizmek için başlangıç noktası ve bitiş noktasını sağlar, ancak satırda tek tek her piksel hakkında hiçbir bilgi sağlamanız gerekmez. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] özel görüntü cihazında çizgisini göstermek için hangi piksel yanar belirlemek için görüntüleme sürücü yazılım ile birlikte çalışır.  
+GDI +'da bir çizgi çizmek için kullandığınızda, başlangıç ve bitiş noktasını sağlar, ancak satırda tek tek her piksel hakkında hiçbir bilgi sağlamanız gerekmez. GDI +'da bir özel görüntü cihazında çizgisini göstermek için hangi piksel yanar belirlemek için görüntüleme sürücü yazılım ile birlikte çalışır.  
   
 ## <a name="aliasing"></a>Diğer ad kullanımı  
  (4, 2) noktadan noktaya (16, 10) giden düz kırmızı çizgi göz önünde bulundurun. Koordinat sistemi sol üst köşedeki kaynağına sahip ve ölçü piksel olduğunu varsayar. X ekseni aşağı sağ ve y ekseni noktaları işaret da varsayılır. Aşağıdaki çizimde, renkli bir arka plan üzerinde kırmızı çizgi genişletilmiş bir görünümünü gösterir.  

@@ -8,37 +8,37 @@ helpviewer_keywords:
 - fonts [Windows Forms], using in Windows Forms
 - strings [Windows Forms], drawing in Windows Forms
 ms.assetid: d43640f3-da94-4df2-a29d-a9d021a1c069
-ms.openlocfilehash: c9fe16752223203806c7d3828f632aad0cab0c28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73a4af5fe7367e777fcb83af8c84c09be91e5b1e
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769425"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505114"
 ---
 # <a name="using-fonts-and-text"></a>Yazı Tipleri ve Metin Kullanma
-Tarafından sunulan çeşitli sınıfı vardır [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ve [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] metin Windows Forms'ta çizme. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> Sınıfına sahip birkaç <xref:System.Drawing.Graphics.DrawString%2A> yöntemleri metnin konumu, dikdörtgen, yazı tipi ve biçim sınırlayıcı gibi çeşitli özelliklerini belirlemenize olanak tanır. Ayrıca, çizme ve ölçmek metinle [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 'using static <xref:System.Windows.Forms.TextRenderer.DrawText%2A> ve <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> yöntemleri tarafından sunulan `TextRenderer` sınıfı. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Yöntemleri de belirtmenize olanak tanır konumu, yazı tipi ve biçimi. Ya da tercih edebilirsiniz [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] veya [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ; metin işleme için ancak [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] performans ve daha doğru metin ölçme genellikle daha iyi sunar. Metin işlemeyle katkıda bulunan diğer sınıfları `FontFamily`, `Font`, <xref:System.Drawing.StringFormat>, ve `TextFormatFlags`.  
+Windows Form üzerinde metin çizim GDI +'da ve GDI tarafından sunulan çeşitli sınıfı vardır. GDI + <xref:System.Drawing.Graphics> sınıfına sahip birkaç <xref:System.Drawing.Graphics.DrawString%2A> yöntemleri metnin konumu, dikdörtgen, yazı tipi ve biçim sınırlayıcı gibi çeşitli özelliklerini belirlemenize olanak tanır. Ayrıca, çizme ve'using static GDI ile metin ölçmek <xref:System.Windows.Forms.TextRenderer.DrawText%2A> ve <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> yöntemleri tarafından sunulan `TextRenderer` sınıfı. GDI yöntemleri konumu, yazı tipi ve biçim belirtmenizi sağlar. GDI veya GDI +'da metin işleme için seçebilirsiniz; Ancak, GDI genellikle daha iyi performans ve daha doğru metin ölçme sunar. Metin işlemeyle katkıda bulunan diğer sınıfları `FontFamily`, `Font`, <xref:System.Drawing.StringFormat>, ve `TextFormatFlags`.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: Yazı tipi aileleri ve yazı tipleri](how-to-construct-font-families-and-fonts.md)  
  Oluşturma işlemi gösterilmektedir `Font` ve `FontFamily` nesneleri.  
   
  [Nasıl yapılır: Belirtilen bir konuma metin çizme](how-to-draw-text-at-a-specified-location.md)  
- Bir konum belirli kullanarak metin çizme açıklar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ve [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
+ GDI +'da ve GDI kullanarak bir belirli konumda metin çizme açıklar.  
   
  [Nasıl yapılır: Bir dikdörtgende sarmalanmış metin çizme](how-to-draw-wrapped-text-in-a-rectangle.md)  
- Metin kullanarak bir dikdörtgen çizmek kullanılan nasıl açıklanmaktadır [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ve [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
+ GDI +'da ve GDI kullanarak dikdörtgene metin çizme açıklanmaktadır.  
   
  [Nasıl yapılır: GDI ile metin çizme](how-to-draw-text-with-gdi.md)  
- Nasıl kullanılacağını gösteren [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] metin çizme.  
+ Metin çizim GDI nasıl yapılacağı açıklanır.  
   
  [Nasıl yapılır: Çizilmiş metni hizalama](how-to-align-drawn-text.md)  
- Biçimlendirilecek nasıl gösterir [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ve [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] metin.  
+ GDI +'da ve GDI metnin nasıl biçimlendirileceğini gösterir.  
   
  [Nasıl yapılır: Dikey metin oluşturma](how-to-create-vertical-text.md)  
- Dikey hizalı metin çizme açıklar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ GDI +'da dikey hizalı metin çizme açıklar.  
   
  [Nasıl yapılır: Çizilmiş metinde sekme durakları ayarlama](how-to-set-tab-stops-in-drawn-text.md)  
- Programlarını nasıl sekme durakları ile ile metin çizme [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Programlarını nasıl GDI + ile sekme durakları ile metin çizin.  
   
  [Nasıl yapılır: Yüklü yazı tiplerini numaralandırma](how-to-enumerate-installed-fonts.md)  
  Yüklü yazı tiplerini adlarını listelemek açıklanmaktadır.  

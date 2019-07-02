@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 88301663a78bb7d6f31c23bb03409ca44a2e55a9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487255"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506167"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms'ta Güvenliğe Genel Bakış
 
@@ -77,7 +77,7 @@ Aşağıdaki tabloda bu teknolojiler açıklanmaktadır.
 
 Seçtiğiniz teknolojileri dağıtım ortamınıza bağlıdır. Daha fazla bilgi için [ClickOnce dağıtım stratejisini seçme](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Varsayılan olarak, ClickOnce uygulamaları Visual Studio veya .NET Framework SDK Araçları (Mage.exe ve MageUI.exe) kullanılarak dağıtılan tam güveni olan bir istemci bilgisayarda çalışması için yapılandırılır. Uygulamanızı kısmi güveni kullanmaya veya bazı ek izinler kullanarak dağıtıyorsanız bu varsayılanı değiştirmek gerekecektir. Dağıtımınız yapılandırdığınızda, Visual Studio veya .NET Framework SDK aracı MageUI.exe ile bunu yapabilirsiniz. İzlenecek yol MageUI.exe kullanma hakkında daha fazla bilgi için bkz: Komut satırından ClickOnce uygulamasını dağıtma.  Ayrıca bkz: [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) veya [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+Varsayılan olarak, ClickOnce uygulamaları Visual Studio veya .NET Framework SDK Araçları (Mage.exe ve MageUI.exe) kullanılarak dağıtılan tam güveni olan bir istemci bilgisayarda çalışması için yapılandırılır. Uygulamanızı kısmi güveni kullanmaya veya bazı ek izinler kullanarak dağıtıyorsanız bu varsayılanı değiştirmek gerekecektir. Dağıtımınız yapılandırdığınızda, Visual Studio veya .NET Framework SDK aracı MageUI.exe ile bunu yapabilirsiniz. MageUI.exe kullanma hakkında daha fazla bilgi için bkz. [izlenecek yol: Bir ClickOnce uygulamasını el ile dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  Ayrıca bkz: [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) veya [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 ClickOnce ve izin yükseltme güvenlik konuları hakkında daha fazla bilgi için bkz. [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications). Güvenilir uygulama dağıtımı hakkında daha fazla bilgi için bkz: [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).
 

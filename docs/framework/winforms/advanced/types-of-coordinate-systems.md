@@ -15,15 +15,15 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 765df4bcd3cef83e624ad8b11676696b95f7d035
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24079f24bdae5fefd785a20dda9b29a190fb4068
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792372"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505253"
 ---
 # <a name="types-of-coordinate-systems"></a>Koordinat Sistemi Türleri
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] üç koordinat kullanır: dünya, sayfa ve cihaz. Dünya koordinatlarını bir belirli grafik grubuna ilişkin model için kullanılan koordinatları ve .NET Framework yöntemleri için geçirdiğiniz koordinatları. Bir form veya denetim gibi çizim yüzeyi tarafından kullanılan koordinat sistemini sayfa koordinatlarına bakın. Cihaz, bir ekran veya kağıt gibi üzerine çizilmiş fiziksel cihaz tarafından kullanılan koordinat koordinatları. Çağrısı yaptığınızda `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, geçirdiğiniz noktaları <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi —`(0, 0)` ve `(160, 80)`— dünyanın koordinat alanındadır. Önce [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ekranda çizgi çizmek, bir dizi dönüştürmeyi koordinatları geçirin. Gerçek koordinat dönüştürmesini adlı bir dönüştürme dünya koordinatlarını sayfa koordinatlarına dönüştüren ve sayfa dönüşümü adlı başka bir dönüştürme sayfa koordinatlarına cihaz koordinatlarına dönüştürür.  
+GDI +'da üç koordinat kullanır: dünya, sayfa ve cihaz. Dünya koordinatlarını bir belirli grafik grubuna ilişkin model için kullanılan koordinatları ve .NET Framework yöntemleri için geçirdiğiniz koordinatları. Bir form veya denetim gibi çizim yüzeyi tarafından kullanılan koordinat sistemini sayfa koordinatlarına bakın. Cihaz, bir ekran veya kağıt gibi üzerine çizilmiş fiziksel cihaz tarafından kullanılan koordinat koordinatları. Çağrısı yaptığınızda `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, geçirdiğiniz noktaları <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi —`(0, 0)` ve `(160, 80)`— dünyanın koordinat alanındadır. GDI +'da satırın ekranda çizebilirsiniz önce bir dizi dönüştürmeyi koordinatları geçirin. Gerçek koordinat dönüştürmesini adlı bir dönüştürme dünya koordinatlarını sayfa koordinatlarına dönüştüren ve sayfa dönüşümü adlı başka bir dönüştürme sayfa koordinatlarına cihaz koordinatlarına dönüştürür.  
   
 ## <a name="transforms-and-coordinate-systems"></a>Dönüşümler ve koordinat sistemi  
  Sol üst köşesinin yerine istemci alanını gövdesine, kaynağı olan bir koordinat sistemi çalışmak istediğinizi varsayalım. Örneğin, istemci alanın sol kenarından 100 piksel ve 50 piksel istemci alanının üst kaynağı istediğinizi varsayalım. Aşağıdaki çizimde, böyle bir koordinat sistemi gösterir.  

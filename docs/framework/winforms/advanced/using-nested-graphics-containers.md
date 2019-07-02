@@ -9,15 +9,15 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4533fbba62c36714f55cd8bd55fde7a1c8f6c9e6
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766304"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505050"
 ---
 # <a name="using-nested-graphics-containers"></a>İç İçe Grafik Kapsayıcılarını Kullanma
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] geçici olarak değiştirin ya da durumda parçası genişletmek için kullanabileceğiniz kapsayıcılar sağlayarak bir <xref:System.Drawing.Graphics> nesne. Bir kapsayıcı oluşturmanız <xref:System.Drawing.Graphics.BeginContainer%2A> yöntemi bir <xref:System.Drawing.Graphics> nesne. Çağırabilirsiniz <xref:System.Drawing.Graphics.BeginContainer%2A> sürekli olarak iç içe geçmiş kapsayıcılar oluşturmak için. Her çağrı <xref:System.Drawing.Graphics.BeginContainer%2A> bir çağrı ile eşleştirilmelidir <xref:System.Drawing.Graphics.EndContainer%2A>.  
+GDI +'da geçici olarak değiştirin ya da durumda parçası genişletmek için kullanabileceğiniz bir kapsayıcı sağlayan bir <xref:System.Drawing.Graphics> nesne. Bir kapsayıcı oluşturmanız <xref:System.Drawing.Graphics.BeginContainer%2A> yöntemi bir <xref:System.Drawing.Graphics> nesne. Çağırabilirsiniz <xref:System.Drawing.Graphics.BeginContainer%2A> sürekli olarak iç içe geçmiş kapsayıcılar oluşturmak için. Her çağrı <xref:System.Drawing.Graphics.BeginContainer%2A> bir çağrı ile eşleştirilmelidir <xref:System.Drawing.Graphics.EndContainer%2A>.  
   
 ## <a name="transformations-in-nested-containers"></a>İç içe geçmiş kapsayıcılar dönüşümleri  
  Aşağıdaki örnek, oluşturur bir <xref:System.Drawing.Graphics> nesnesi ve bir kapsayıcı içindeki <xref:System.Drawing.Graphics> nesne. Dünya dönüşümü <xref:System.Drawing.Graphics> nesnedir x yönünde 100 çeviri biriminde ve y yönünde 80 birimlik. Gerçek koordinat dönüştürmesini kapsayıcının 30 derece döndürme ' dir. Kod çağrıda `DrawRectangle(pen, -60, -30, 120, 60)` iki kez. İlk çağrıda <xref:System.Drawing.Graphics.DrawRectangle%2A> kapsayıcının içinde; diğer bir deyişle, çağrıları arasında çağrıdır <xref:System.Drawing.Graphics.BeginContainer%2A> ve <xref:System.Drawing.Graphics.EndContainer%2A>. İçin yapılan ikinci çağrı <xref:System.Drawing.Graphics.DrawRectangle%2A> çağrısı sonra <xref:System.Drawing.Graphics.EndContainer%2A>.  

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
-ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da637152737510847830e885fdcd065ab92f16b3
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967121"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505753"
 ---
 # <a name="how-to-render-images-with-gdi"></a>Nasıl yapılır: GDI+ ile Resim İşleme
-Kullanabileceğiniz [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] uygulamalarınızdaki dosyaları olarak mevcut görüntülerini işlemek için. Yeni bir nesne oluşturarak bunu bir <xref:System.Drawing.Image> sınıfı (gibi <xref:System.Drawing.Bitmap>), oluşturma bir <xref:System.Drawing.Graphics> kullanmak istediğiniz çizim yüzeyi başvuran nesne ve çağırma <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi <xref:System.Drawing.Graphics> nesne. Görüntü grafik sınıfı tarafından temsil edilen çizim yüzeyine boyanacak. Oluşturma ve tasarım zamanında resim dosyalarını düzenlemek için görüntü Düzenleyicisi'ni kullanın ve bunları işlemek [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çalışma zamanında. Daha fazla bilgi için [simgeler için görüntü Düzenleyicisi](/cpp/windows/image-editor-for-icons).  
+Uygulamalarınızda dosyaları olarak mevcut görüntülerini işlemek için GDI +'da kullanabilirsiniz. Yeni bir nesne oluşturarak bunu bir <xref:System.Drawing.Image> sınıfı (gibi <xref:System.Drawing.Bitmap>), oluşturma bir <xref:System.Drawing.Graphics> kullanmak istediğiniz çizim yüzeyi başvuran nesne ve çağırma <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi <xref:System.Drawing.Graphics> nesne. Görüntü grafik sınıfı tarafından temsil edilen çizim yüzeyine boyanacak. Oluşturma ve tasarım zamanında resim dosyalarını düzenlemek için görüntü Düzenleyicisi'ni kullanın ve bunları GDI + ile çalışma zamanında oluşturma. Daha fazla bilgi için [simgeler için görüntü Düzenleyicisi](/cpp/windows/image-editor-for-icons).  
   
 ### <a name="to-render-an-image-with-gdi"></a>GDI + ile görüntü oluşturmak için  
   

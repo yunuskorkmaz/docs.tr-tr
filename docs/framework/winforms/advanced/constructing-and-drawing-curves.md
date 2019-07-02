@@ -6,15 +6,15 @@ helpviewer_keywords:
 - examples [Windows Forms], drawing curves
 - curves [Windows Forms], drawing
 ms.assetid: 76e92623-4130-4644-b867-faca58bdb3a2
-ms.openlocfilehash: 92e7b1e8b4ce37db633b5dafe212a252b854d1af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c1b0cc6c6f878569fcf0c392f1b6f9683ec8afc
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935453"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506109"
 ---
 # <a name="constructing-and-drawing-curves"></a>Eğriler Oluşturma ve Çizme
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] eğrileri çeşitli türlerini destekler: üç nokta, yay, eğriler ve Bézier eğrileri. Bir elips, sınırlayıcı dikdörtgeni tarafından tanımlanır; Yay Başlangıç açısı ve bir tarama açısı tarafından tanımlanan bir elips bölümüdür. Kardinal eğri, bir dizi noktaları ve gerilimi parametresi tarafından tanımlanır; eğri dizideki her noktası sorunsuz geçtiği ve gerilimi parametre bends eğrinin şeklini etkiler. Bézier eğri iki uç nokta ve iki denetim noktaları eğri denetim noktaları üzerinden geçmez tanımlanır, ancak denetim noktaları yönünü etkiler ve eğri bir uç noktasından diğerine geçebileceği Kıvrım.  
+GDI +'da birden fazla eğrileri destekler: üç nokta, yay, eğriler ve Bézier eğrileri. Bir elips, sınırlayıcı dikdörtgeni tarafından tanımlanır; Yay Başlangıç açısı ve bir tarama açısı tarafından tanımlanan bir elips bölümüdür. Kardinal eğri, bir dizi noktaları ve gerilimi parametresi tarafından tanımlanır; eğri dizideki her noktası sorunsuz geçtiği ve gerilimi parametre bends eğrinin şeklini etkiler. Bézier eğri iki uç nokta ve iki denetim noktaları eğri denetim noktaları üzerinden geçmez tanımlanır, ancak denetim noktaları yönünü etkiler ve eğri bir uç noktasından diğerine geçebileceği Kıvrım.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: Eğriler çizme](how-to-draw-cardinal-splines.md)  

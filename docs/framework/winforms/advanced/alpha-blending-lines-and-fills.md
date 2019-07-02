@@ -11,15 +11,15 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], using with fills
 - shapes [Windows Forms], adding transparency
 ms.assetid: 5440f48c-3ac9-44c3-b170-c1c110bdbab8
-ms.openlocfilehash: 7a8286fb741effaf668b87e90da04f79d1490de2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 66061341ee6539e2172c537a0b2a6ec9ff87565c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960946"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506110"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Çizgi ve Dolgularda Alfa Karışım Kullanma
-İçinde [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 8 bitlik her alfa, kırmızı, yeşil ve mavi bir 32-bit değerle bir renktir. Renk saydam alfa değeri gösterir — istediğiniz rengi karışık arka plan rengi ile uzantısı. Alfa değerleri aralığı 0 ile 255, burada 0 tamamen saydam bir rengi temsil eder ve 255 arasında bir tam opak rengi temsil eder.  
+GDI +'da bir renk 32-bit 8 bit her alfa, kırmızı, yeşil ve mavi için değerdir. Renk saydam alfa değeri gösterir — istediğiniz rengi karışık arka plan rengi ile uzantısı. Alfa değerleri aralığı 0 ile 255, burada 0 tamamen saydam bir rengi temsil eder ve 255 arasında bir tam opak rengi temsil eder.  
   
  Alfa karıştırma piksel piksel karıştırma kaynak ve arka plan rengi veri olur. Her bir verilen kaynak rengin üç bileşen (kırmızı, yeşil, mavi) karşılık gelen bileşenle göre şu formül olarak ayarlayın arka plan renginin harmanlanan:  
   

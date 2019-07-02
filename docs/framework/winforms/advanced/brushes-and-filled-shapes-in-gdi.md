@@ -13,15 +13,15 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad3a4af2474ace61bbf35ea1357a2a6037af039a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779470"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506227"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+'da Fırçalar ve Dolgulu Şekiller
-Kapalı şekil, bir elips ya da dikdörtgen gibi bir anahat ve bir iç oluşur. Ana hat kalem ile çizilir ve iç fırça ile doldurulur. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] kapalı şekiller evin içindekiler doldurmak için birkaç fırça sınıfları sağlar: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, ve <xref:System.Drawing.Drawing2D.PathGradientBrush>. Bu sınıfların tümü devralınacak <xref:System.Drawing.Brush> sınıfı. Aşağıdaki çizimde, bir dikdörtgen ile düz fırça doldurulmuş ve elips tarama fırça ile doldurulmuş gösterir.  
+Kapalı şekil, bir elips ya da dikdörtgen gibi bir anahat ve bir iç oluşur. Ana hat kalem ile çizilir ve iç fırça ile doldurulur. GDI +'da birkaç fırça sınıflar sağlar evin içindekiler kapalı şekilleri doldurmak için: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, ve <xref:System.Drawing.Drawing2D.PathGradientBrush>. Bu sınıfların tümü devralınacak <xref:System.Drawing.Brush> sınıfı. Aşağıdaki çizimde, bir dikdörtgen ile düz fırça doldurulmuş ve elips tarama fırça ile doldurulmuş gösterir.  
   
  ![Doldurulmuş şekiller](./media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
@@ -40,7 +40,7 @@ Kapalı şekil, bir elips ya da dikdörtgen gibi bir anahat ve bir iç oluşur. 
  [!code-csharp[LinesCurvesAndShapes#122](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 50'den fazla tarama stili sağlar; Aşağıdaki çizimde gösterilen üç stillerdir <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, ve <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
+ GDI + ' 50'den fazla tarama stili sağlar; Aşağıdaki çizimde gösterilen üç stillerdir <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, ve <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
   
  ![Doldurulmuş şekiller](./media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
@@ -59,7 +59,7 @@ Kapalı şekil, bir elips ya da dikdörtgen gibi bir anahat ve bir iç oluşur. 
  ![Şekil doldurulmuş](./media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
 ## <a name="gradient-brushes"></a>Gradyan Fırçalar  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Gradyan Fırçalar iki çeşit sağlar: doğrusal ve yolu. Bir şekli şekli arasında hareket ettikçe yatay, dikey kademeli olarak veya çapraz değişiklikleri rengi ile doldurmak için doğrusal gradyan fırçası kullanabilirsiniz. Aşağıdaki kod örneği, bir elips sağ kenarına elipsin sol kenardan geçerken yeşil maviye değiştiren yatay bir gradyan fırçası doldurmak gösterilmektedir.  
+ GDI +'da iki çeşit gradyan Fırçalar sağlar: doğrusal ve yolu. Bir şekli şekli arasında hareket ettikçe yatay, dikey kademeli olarak veya çapraz değişiklikleri rengi ile doldurmak için doğrusal gradyan fırçası kullanabilirsiniz. Aşağıdaki kod örneği, bir elips sağ kenarına elipsin sol kenardan geçerken yeşil maviye değiştiren yatay bir gradyan fırçası doldurmak gösterilmektedir.  
   
  [!code-csharp[LinesCurvesAndShapes#124](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  

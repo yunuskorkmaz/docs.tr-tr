@@ -8,17 +8,17 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 3266724503960b8b45cd134dfa5b007a58d578fa
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 6c02f7e5744828fd8eddc88be8d7da28f3bc2a2a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169807"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505780"
 ---
 # <a name="how-to-read-image-metadata"></a>Nasıl yapılır: Görüntü Meta Verilerini Okuma
-Bazı görüntü dosyaları, görüntü özelliklerini belirlemek için okuyabilecekleri meta veriler içerir. Örneğin, dijital hello'nun marka ve model görüntü yakalamak için kullanılan kameranın belirlemek için okuyabilecekleri bir meta veri içerebilir. İle [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], var olan meta verileri okuyabilir ve görüntü dosyaları ayrıca yeni meta veriler yazabilirsiniz.  
+Bazı görüntü dosyaları, görüntü özelliklerini belirlemek için okuyabilecekleri meta veriler içerir. Örneğin, dijital hello'nun marka ve model görüntü yakalamak için kullanılan kameranın belirlemek için okuyabilecekleri bir meta veri içerebilir. GDI + ile var olan meta verileri okuyabilir ve görüntü dosyaları ayrıca yeni meta veriler yazabilirsiniz.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] meta verilerde tek bir parçası olarak depolayan bir <xref:System.Drawing.Imaging.PropertyItem> nesne. Okuyabilirsiniz <xref:System.Drawing.Image.PropertyItems%2A> özelliği bir <xref:System.Drawing.Image> bir dosyanın tüm meta verileri alınacak nesne. <xref:System.Drawing.Image.PropertyItems%2A> Özelliği, bir dizi döndürür <xref:System.Drawing.Imaging.PropertyItem> nesneleri.  
+ GDI +'da meta verilerde tek bir parçasını depolayan bir <xref:System.Drawing.Imaging.PropertyItem> nesne. Okuyabilirsiniz <xref:System.Drawing.Image.PropertyItems%2A> özelliği bir <xref:System.Drawing.Image> bir dosyanın tüm meta verileri alınacak nesne. <xref:System.Drawing.Image.PropertyItems%2A> Özelliği, bir dizi döndürür <xref:System.Drawing.Imaging.PropertyItem> nesneleri.  
   
  A <xref:System.Drawing.Imaging.PropertyItem> nesne aşağıdaki dört özelliklere sahiptir: `Id`, `Value`, `Len`, ve `Type`.  
   

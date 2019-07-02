@@ -6,12 +6,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], painting
 - user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
-ms.openlocfilehash: ec9002ffa4a7e2c82f59d52344764a01afe4c568
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14abac5678bfffa3cdb61307fd3cb54681c82a99
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011490"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506090"
 ---
 # <a name="custom-control-painting-and-rendering"></a>Özel Denetim Boyama ve İşleme
 Özel boyama denetimlerin .NET Framework tarafından daha kolay pek çok karmaşık görev biridir. Özel denetim yazarken, denetiminizin grafik görünümü ile ilgili birçok seçeneğiniz vardır. Devralınan bir denetim yazıyorsanız `Control`, Denetim, grafik gösterimi işleme veren kod sağlamanız gerekir. Devralarak bir kullanıcı denetimi oluşturuyorsanız `UserControl`, veya devraldığını Windows Forms denetimleri birinden, standart grafik gösterimi geçersiz kılabilir ya da kendi grafik kodunu sağlayın. Bağlı denetimler için özel işleme sağlamak istiyorsanız bir `UserControl` geliştirmekte olduğunuz, seçeneklerinizi daha sınırlı olur, ancak yine de çok çeşitli grafik denetimleri ve uygulamaları olasılıklarını izin.  
@@ -47,7 +47,7 @@ ms.locfileid: "62011490"
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](../advanced/how-to-create-graphics-objects-for-drawing.md)  
- Tanıtır [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] grafik işlevlerini Perspektif ve size bir Visual Studio bağlantılardan daha fazla bilgi için.  
+ Visual Studio açısından GDI + grafik işlevlerini sunar ve daha fazla bilgi için bağlantılar sağlar.  
   
  [Özel Denetim Çeşitleri](varieties-of-custom-controls.md)  
  Özel denetimler, yazabilirsiniz türlerini açıklar.

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: deb8f4396700086627aaef35ead7f15f38d9320c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f8fabd38ec49070bc588196b38ec64942feab93f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583872"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504699"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet Sorguları
 Bir sorgu, verileri bir veri kaynağından alır bir ifadedir. Sorgular genellikle ilişkisel veritabanları için SQL ve XML için XQuery gibi bir özel sorgu dilinde ifade edilir. Bu nedenle, geliştiriciler, her veri kaynağı veya veri biçimi, bunlar sorgu türü için yeni bir sorgu dili öğrenmek zorunda kalmışlardır. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] çeşitli veri kaynakları ve biçimler arasında verilerle çalışmak için daha basit ve tutarlı bir modeli sunar. İçinde bir [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sorgu, çalıştığınız her zaman programlama nesneleri.  
   
  A [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sorgu işlemi üç eylemden oluşur: sorguyu veri kaynağından veya kaynaklarından elde etmek ve sorgu oluşturun.  
   
- Veri kaynakları uygulayan <xref:System.Collections.Generic.IEnumerable%601> genel arabirimi aracılığıyla sorgulanabilen [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Çağırma <xref:System.Data.DataTableExtensions.AsEnumerable%2A> üzerinde bir <xref:System.Data.DataTable> genel uygulayan bir nesne döndürür <xref:System.Collections.Generic.IEnumerable%601> veri kaynağı olarak hizmet veren arabirimi [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgular.  
+ Veri kaynakları uygulayan <xref:System.Collections.Generic.IEnumerable%601> genel arabirimi aracılığıyla sorgulanabilen [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Çağırma <xref:System.Data.DataTableExtensions.AsEnumerable%2A> üzerinde bir <xref:System.Data.DataTable> genel uygulayan bir nesne döndürür <xref:System.Collections.Generic.IEnumerable%601> veri kaynağı olarak DataSet sorgularında LINQ için hizmet veren arabirimi.  
   
  Sorgu, veri kaynağından almak istediğiniz bilgi tam olarak belirtin. Bir sorgu, ayrıca nasıl bu bilgileri sıralanmış, gruplandırılmış ve döndürülmeden önce şeklinde belirtebilirsiniz. İçinde [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], sorguda bir değişkende depolanır. Değerleri bir dizisini döndürmek için sorguyu tasarlanmışsa, sorgu değişkeni sıralanabilir bir tür olmalıdır. Bu sorgu değişkeni hiç eylem almaması ve veri döndürmemesidir; yalnızca, sorgu bilgileri depolar. Bir sorguyu oluşturduktan sonra herhangi bir veri almak için bu sorguyu yürütmeniz gerekir.  
   
@@ -26,7 +26,7 @@ Bir sorgu, verileri bir veri kaynağından alır bir ifadedir. Sorgular genellik
  Değerleri bir dizisini döndürmek, ertelenmiş sorguları aksine, bir tek değer döndüren sorgular hemen çalıştırılır. Bazı örnekler tek sorgu <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A>, ve <xref:System.Linq.Enumerable.First%2A>. Sorgu sonuçları tekil sonucu hesaplamak için gerekli olduğundan bu hemen yürütün. Ortalama işlevi çalışmak üzere giriş verilerini, örneğin, sorgu sonuçlarının ortalamasını bulmak için sorgu yürütülmelidir. Ayrıca <xref:System.Linq.Enumerable.ToList%2A> veya <xref:System.Linq.Enumerable.ToArray%2A> tek bir değer üretmiyor bir sorgu hemen yürütülmesini zorlamak için bir sorgu yöntemleri. Hemen yürütme zorlamak için bu teknikler, bir sorgunun sonuçlarını önbelleğe almak istediğiniz durumlarda yararlı olabilir.
   
 ## <a name="queries"></a>Sorgular  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorguları içinde iki farklı sözdizimini ifade: sorgu ifadesi söz dizimi ve metot tabanlı sorgu söz dizimi.  
+ LINQ to DataSet sorgularında iki farklı sözdizimini içinde ifade: sorgu ifadesi söz dizimi ve metot tabanlı sorgu söz dizimi.  
   
 ### <a name="query-expression-syntax"></a>Sorgu ifadesi söz dizimi  
  Sorgu ifadeleri bir bildirim temelli bir sorgu söz dizimi var. Bu sözdizimi, C# veya Visual Basic'te bir SQL'e benzer bir biçimde sorgular yazmak bir geliştirici sağlar. Sorgu ifadesi söz dizimi kullanarak daha karmaşık filtreleme, sıralama ve gruplandırma işlemleri olabildiğince az kodla veri kaynaklarında gerçekleştirebilirsiniz. Daha fazla bilgi için [LINQ Sorgu ifadeleri](../../../csharp/linq/index.md#query-expression-overview) ve [temel sorgu işlemleri (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
@@ -39,7 +39,7 @@ Bir sorgu, verileri bir veri kaynağından alır bir ifadedir. Sorgular genellik
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>Metot tabanlı sorgu söz dizimi  
- Düzenleme için başka bir şekilde [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgulardır yöntem temelli sorgular kullanarak. Metot tabanlı sorgu söz dizimi bir doğrudan yöntem çağrısına sırasıdır [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] işleci yöntemleri, lambda ifadeleri parametre olarak geçirerek. Daha fazla bilgi için [Lambda ifadeleri](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ DataSet sorgularında LINQ formüle etmek için diğer bir yolu, yöntem temelli sorgular kullanmaktır. Metot tabanlı sorgu söz dizimi bir doğrudan yöntem çağrısına sırasıdır [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] işleci yöntemleri, lambda ifadeleri parametre olarak geçirerek. Daha fazla bilgi için [Lambda ifadeleri](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
  Bu örnekte <xref:System.Linq.Enumerable.Select%2A> bulunan tüm satırlar döndürülecek `Product` ve ürün adlarını görüntüler.  
   

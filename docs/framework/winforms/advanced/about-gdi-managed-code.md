@@ -6,19 +6,19 @@ helpviewer_keywords:
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-ms.openlocfilehash: 4c7632933e29a59c1db46f84360e271f27edf8b8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 73d1759aec3abe2e3e9c371f949cf051930d103c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588623"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506134"
 ---
 # <a name="about-gdi-managed-code"></a>GDI+ Yönetilen Kodu Hakkında
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] iki boyutlu bir vektör grafikleri ve görüntüleme tipografi sunan Windows işletim sisteminin bölümüdür. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] artırır [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (grafik cihaz önceki Windows sürümleriyle dahil arabirimi) yeni özellikleri ekleyerek ve var olan özellikleri iyileştirme.  
+GDI +'da iki boyutlu bir vektör grafikleri ve görüntüleme tipografi sunan Windows işletim sisteminin bölümüdür. GDI +'da (önceki Windows sürümleriyle grafik cihaz arabirimi dahil) GDI yeni özellikler ekleyerek ve var olan özellikleri iyileştirme artırır.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Yönetilen sınıf arabirimi (sarmalayıcılar kümesi) oluşturmak, dağıtmak ve XML Web Hizmetleri ve diğer uygulamaları çalıştırmak için bir ortam .NET Framework'ün bir parçasıdır.  
+ GDI + yönetilen sınıf arabirimi (sarmalayıcılar kümesi) oluşturmak, dağıtmak ve XML Web Hizmetleri ve diğer uygulamaları çalıştırmak için bir ortam .NET Framework'ün bir parçasıdır.  
   
- Bu bölümde, hakkında bilgi sağlar. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API kullanan programcılar için yönetilen kod.  
+ Bu bölüm, yönetilen kod kullanarak programcıları için GDI + ' API'si hakkında bilgi sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)  
@@ -28,7 +28,7 @@ ms.locfileid: "65588623"
  Kullanılabilir görüntüleri türünü ve bunlarla çalışmak nasıl ele alır.  
   
  [Koordinat Sistemleri ve Dönüştürmeler](coordinate-systems-and-transformations.md)  
- Grafik dönüştürme anlatılmaktadır [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ GDI + Grafik dönüştürme anlatılmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  

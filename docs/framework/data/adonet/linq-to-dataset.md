@@ -2,19 +2,19 @@
 title: LINQ - DataSet
 ms.date: 03/30/2017
 ms.assetid: 743e3755-3ecb-45a2-8d9b-9ed41f0dcf17
-ms.openlocfilehash: 36335f90c7850fa00a15e7112b7473637250c656
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: c4069ef760877935c4ce194144d131d0dc58b4d3
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306243"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504358"
 ---
 # <a name="linq-to-dataset"></a>LINQ - DataSet
-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] daha kolay ve hızlı sorgu için verileri önbelleğe üzerinde kolaylaştırır bir <xref:System.Data.DataSet> nesne. Özellikle, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorguları programlama dilinden kendisi yerine ayrı bir sorgu dilini kullanarak yazma geliştiricilerin etkinleştirerek sorgulama basitleştirir. Bu, özellikle artık derleme zamanı söz dizimi denetimini statik yazmaya ve sorguları Visual Studio tarafından sağlanan IntelliSense desteği yararlanabilirsiniz Visual Studio geliştiriciler için yararlıdır.  
+LINQ to DataSet kolaylaştırır ve veriler üzerinde sorgu için daha hızlı bir şekilde önbelleğe bir <xref:System.Data.DataSet> nesne. Özellikle, LINQ to DataSet sorguları programlama dilinden kendisi yerine ayrı bir sorgu dilini kullanarak yazma geliştiricilerin etkinleştirerek sorgulama basitleştirir. Bu, özellikle artık derleme zamanı söz dizimi denetimini statik yazmaya ve sorguları Visual Studio tarafından sağlanan IntelliSense desteği yararlanabilirsiniz Visual Studio geliştiriciler için yararlıdır.  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Ayrıca bir veya daha fazla veri kaynağından birleştirilmiş veriler üzerinde sorgu için. Bu, yerel olarak toplanan verileri ve orta katman Web uygulamalarında önbelleğe alma sorgulama gibi işlenen verilerin nasıl temsil ve esneklik gerektiren birçok senaryolarını olanaklı kılar. Özellikle, bu yöntem işlemlerinde genel raporlama, analiz ve iş zekası uygulamaları gerektirir.  
+ LINQ to DataSet de kullanılabilir bir veya daha fazla veri kaynağından birleştirilmiş veriler üzerinde sorgu için. Bu, yerel olarak toplanan verileri ve orta katman Web uygulamalarında önbelleğe alma sorgulama gibi işlenen verilerin nasıl temsil ve esneklik gerektiren birçok senaryolarını olanaklı kılar. Özellikle, bu yöntem işlemlerinde genel raporlama, analiz ve iş zekası uygulamaları gerektirir.  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] İşlevi sunulmuştur alanında uzantı yöntemlerini yoluyla <xref:System.Data.DataRowExtensions> ve <xref:System.Data.DataTableExtensions> sınıfları. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] temel alır ve mevcut ADO.NET mimarisini kullanır ve uygulama kodunda ADO.NET değiştirmek üzere tasarlanmamıştır. Var olan ADO.NET kod içinde çalışmaya devam edecek bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] uygulama. İlişkiyi [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ADO.NET ve veri deposu Aşağıdaki diyagramda gösterilmiştir.  
+ LINQ to DataSet işlevselliğini alanında uzantı yöntemlerini yoluyla kullanıma sunulan <xref:System.Data.DataRowExtensions> ve <xref:System.Data.DataTableExtensions> sınıfları. LINQ to DataSet temel alır ve mevcut ADO.NET mimarisini kullanır ve uygulama kodunda ADO.NET değiştirmek üzere tasarlanmamıştır. ADO.NET kod mevcut bir LINQ to DataSet uygulama çalışmaya devam eder. LINQ to DataSet ADO.NET ve veri deposu arasındaki ilişki, aşağıdaki diyagramda gösterilmiştir.  
   
  ![LINQ to DataSet ADO.NET sağlayıcısını dayalı olduğunu gösteren diyagram.](./media/linq-to-dataset/linq-dataset-ado-dotnet-provider.gif)  
   

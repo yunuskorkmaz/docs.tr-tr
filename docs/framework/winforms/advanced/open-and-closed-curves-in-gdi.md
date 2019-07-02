@@ -10,12 +10,12 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 - curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
-ms.openlocfilehash: 33a8954296a7e63637ad5e210fb30fba1a3fdd53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06afdc4549f7c3c9b0636e5c7052dcca87a153f1
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641481"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505457"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>GDI+'da Açık ve Kapalı Eğriler
 İki eğriye aşağıda gösterilmiştir: bir açık ve biri kapalı.  
@@ -23,7 +23,7 @@ ms.locfileid: "61641481"
  ![Açık ve kapalı Eğriler](./media/aboutgdip02-art24.gif "Aboutgdip02_art24")  
   
 ## <a name="managed-interface-for-curves"></a>Eğrileri yönetilen arabirimi  
- Kapalı Eğriler bir iç sahip ve bu nedenle bir fırça ile doldurulur. <xref:System.Drawing.Graphics> Sınıfını [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] kapalı şekiller ve eğriler doldurmak için aşağıdaki yöntemleri sağlar: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, ve <xref:System.Drawing.Graphics.FillRegion%2A>. Aşağıdaki yöntemlerden birini çağırma olduğunda, belirli bir fırça türlerinden birini geçmelidir (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, veya <xref:System.Drawing.Drawing2D.PathGradientBrush>) bağımsız değişken olarak.  
+ Kapalı Eğriler bir iç sahip ve bu nedenle bir fırça ile doldurulur. <xref:System.Drawing.Graphics> GDI +'daki sınıfı kapalı şekiller ve eğriler doldurmak için aşağıdaki yöntemleri sağlar: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, ve <xref:System.Drawing.Graphics.FillRegion%2A>. Aşağıdaki yöntemlerden birini çağırma olduğunda, belirli bir fırça türlerinden birini geçmelidir (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, veya <xref:System.Drawing.Drawing2D.PathGradientBrush>) bağımsız değişken olarak.  
   
  <xref:System.Drawing.Graphics.FillPie%2A> İçin bir yardımcı yöntemdir <xref:System.Drawing.Graphics.DrawArc%2A> yöntemi. Gibi <xref:System.Drawing.Graphics.DrawArc%2A> yöntemi çizen bir bölümü bir elips ana hat <xref:System.Drawing.Graphics.FillPie%2A> yöntemi, bir elips iç kısmını doldurur. Aşağıdaki örnek, bir yay çizer ve karşılık gelen koordinatlarıyla iç bölümünün doldurur:  
   

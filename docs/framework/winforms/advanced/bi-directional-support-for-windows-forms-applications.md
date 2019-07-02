@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2811674ad8d870062e3a0c67dbd21e6550f6c48d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d69de3265fa0954f640c8a2f08ba85c106320f3e
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655674"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506218"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms Uygulamalarında İki Yönlü Destek
 Visual Studio, Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri destekleyen Windows tabanlı uygulamalar oluşturmak için kullanabilirsiniz. Bu formlarda bu standart formlar, iletişim kutuları, MDI formları ve birlikte çalışabilen tüm denetimler içerir — diğer bir deyişle, tüm nesneleri <xref:System.Windows.Forms.Control> ad alanı.  
@@ -82,7 +82,7 @@ Visual Studio, Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri de
  Windows Forms Unicode desteğini, çift yönlü uygulamalarınızı oluşturduğunuzda herhangi bir karakter içerebilir. Ancak, tüm Windows Forms denetimleri, tüm platformlarda Unicode'u destekler. Daha fazla bilgi için [kodlama ve Windows Forms Genelleştirme](encoding-and-windows-forms-globalization.md).  
   
 ## <a name="gdi"></a>GDI+  
- Kullanabileceğiniz [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sağdan sola okuma düzeni ile metin çizin. <xref:System.Drawing.Graphics.DrawString%2A> Metin çizmek için kullanılan yöntemi destekleyen bir `StringFormat` ayarlamak için parametre <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> üyesi <xref:System.Drawing.StringFormatFlags> metin için başlangıç noktasını tersine çevirmek için sabit listesi.  
+ Sağdan sola okuma düzeni ile metin çizme için GDI +'da kullanabilirsiniz. <xref:System.Drawing.Graphics.DrawString%2A> Metin çizmek için kullanılan yöntemi destekleyen bir `StringFormat` ayarlamak için parametre <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> üyesi <xref:System.Drawing.StringFormatFlags> metin için başlangıç noktasını tersine çevirmek için sabit listesi.  
   
 ## <a name="common-dialog-boxes"></a>Ortak iletişim kutuları  
  Dosya Aç iletişim kutusu gibi sistem araçları Windows denetimi altında olan. Bunlar, işletim sistemi dil öğelerini devralır. Doğru dil ayarlarını bir Windows sürümü kullanıyorsanız, bu iletişim kutularından çift yönlü dillerde düzgün çalışacaktır.  

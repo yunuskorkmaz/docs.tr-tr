@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: 92aaeabfc12e964ac294fbd69998c4671fc8763c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e3c48aec830cdc3ccceb8683f93e3a99ee6364e2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582609"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506189"
 ---
 # <a name="overriding-the-onpaint-method"></a>OnPaint Yöntemini Geçersiz Kılma
 .NET Framework içinde tanımlanmış herhangi bir olayı geçersiz kılmak için temel adımlar aynıdır ve aşağıda özetlenmiştir.  
@@ -82,7 +82,7 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> boyanacak, dikdörtgen ve <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> özelliği başvurduğu bir <xref:System.Drawing.Graphics> nesne. Sınıflarda <xref:System.Drawing?displayProperty=nameWithType> ad alanı yönetilen işlevselliğini erişimi sağlayan sınıflar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], yeni bir Windows grafik kitaplığı. <xref:System.Drawing.Graphics> Nesne noktaları, dizeler, çizgiler, yaylar, üç nokta ve birçok diğer şekiller çizmek için yöntemleri vardır.  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> boyanacak, dikdörtgen ve <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> özelliği başvurduğu bir <xref:System.Drawing.Graphics> nesne. Sınıflarda <xref:System.Drawing?displayProperty=nameWithType> ad alanı yönetilen GDI +'da, yeni bir Windows grafik kitaplığı işlevlerini erişimi sağlayan sınıflar. <xref:System.Drawing.Graphics> Nesne noktaları, dizeler, çizgiler, yaylar, üç nokta ve birçok diğer şekiller çizmek için yöntemleri vardır.  
   
  Bir denetim çağırır, <xref:System.Windows.Forms.Control.OnPaint%2A> görsel görünümünü değiştirmek gerektiğinde yöntemi. Bu yöntem sırayla başlatır <xref:System.Windows.Forms.Control.Paint> olay.  
   

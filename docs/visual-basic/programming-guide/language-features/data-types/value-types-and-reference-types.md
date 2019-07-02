@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 541fe9f176a6210372b58753254692142f086992
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f25caec43b7118b7b64db1b14516b0c5ea80f4f6
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589826"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504884"
 ---
 # <a name="value-types-and-reference-types"></a>Değer Türleri ve Başvuru Türleri
-Visual Basic'de Veri türleri sınıflandırmalarına göre uygulanır. Visual Basic veri türleri, belirli bir tür değişkeninin kendi verilerini veya verileri için bir işaretçi depolar göre sınıflandırılabilir. Kendi verilerini depolayan ise bir *değer türü*; başka bir yerde olduğu bellekteki verileri için bir işaretçi tutan bir *başvuru türüne*.  
+Visual Basic'te tür iki tür vardır: başvuru türleri ve değer türleri. Başvuru türlerinin değişkenleri başvuruları kendi verilerine (nesneler) depolarken, değer türlerinin değişkenleri kendi verilerini doğrudan içerir. Başvuru türleri ile, iki değişken aynı nesneye başvurabilir; bu nedenle, bir değişken üzerinde yapılan işlemler diğer değişkenin başvurduğu nesneyi etkileyebilir. Değer türleri ile her değişkenin kendi veri kopyası vardır ve yapılan işlemlerin diğerini etkilemesi için bir değişken üzerinde değil (dışındaki durumunda [parametreleri ByRef değiştiricisi](../../../language-reference/modifiers/byref.md)).
   
 ## <a name="value-types"></a>Değer Türleri  
  Bir veri türü olan bir *değer türü* kendi bellek ayırma verileri tutuyorsa. Değer türleri aşağıdakileri kapsamaktadır:  
@@ -36,7 +36,7 @@ Visual Basic'de Veri türleri sınıflandırmalarına göre uygulanır. Visual B
  Ayrılmış anahtar sözcüğü, örneğin,'ı kullanarak bir değer türü bildirebilirsiniz `Decimal`. Ayrıca `New` anahtar sözcüğü, bir değer türü başlatılamadı. Tür parametreleri alan bir oluşturucu sahipse, bu özellikle yararlıdır. Bunun bir örneği <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> yeni bir derleme Oluşturucu `Decimal` sağlanan parçalarından değeri.  
   
 ## <a name="reference-types"></a>Başvuru Türleri  
- A *başvuru türüne* verilerini tutan başka bir bellek konumuna bir işaretçi içerir. Başvuru türleri aşağıdakileri kapsamaktadır:  
+ A *başvuru türüne* başvuru verilerini depolar. Başvuru türleri aşağıdakileri kapsamaktadır:  
   
 - `String`  
   
@@ -46,7 +46,7 @@ Visual Basic'de Veri türleri sınıflandırmalarına göre uygulanır. Visual B
   
 - Temsilciler  
   
- Bir sınıf bir *başvuru türüne*. Bu nedenle, başvuru türleri gibi `Object` ve `String` .NET Framework sınıfları tarafından desteklenir. Üyeleri, değer türleri olsa bile, her dizide bir başvuru türü olduğunu unutmayın.  
+ Bir sınıf bir *başvuru türüne*. Üyeleri, değer türleri olsa bile, her dizide bir başvuru türü olduğunu unutmayın.  
   
  Her bir başvuru türü temel alınan bir .NET Framework sınıfı temsil eder. bu yana kullanmalısınız [New işleci](../../../../visual-basic/language-reference/operators/new-operator.md) başlattığınızda, anahtar sözcüğü. Aşağıdaki deyim, bir dizi başlatır.  
   
@@ -68,7 +68,7 @@ Dim totals() As Single = New Single(8) {}
 - Değişkenleri, sabitleri ve alanlar  
   
 ## <a name="working-with-the-object-data-type"></a>Nesne veri türü ile çalışma  
- Bir başvuru türü veya değer türü bir değişkene atayabilirsiniz `Object` veri türü. Bir `Object` değişken veri için hiçbir zaman kendisi her zaman bir işaretçi tutar. Ancak, bir değer türüne atarsanız bir `Object` kendi verilerini tutan gibi değişken davranır. Daha fazla bilgi için [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
+ Bir başvuru türü veya değer türü bir değişkene atayabilirsiniz `Object` veri türü. Bir `Object` değişken her zaman bir başvuru veri hiçbir zaman kendisi tutar. Ancak, bir değer türüne atarsanız bir `Object` kendi verilerini tutan gibi değişken davranır. Daha fazla bilgi için [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
   
  Olup bulabilirsiniz bir `Object` değişkeni hareket bir başvuru türü veya değer türü olarak geçirerek <xref:Microsoft.VisualBasic.Information.IsReference%2A> yönteminde <xref:Microsoft.VisualBasic.Information> sınıfının <xref:Microsoft.VisualBasic?displayProperty=nameWithType> ad alanı. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> döndürür `True` durumunda içeriğinin `Object` değişkeninin bir başvuru türü temsil eder.  
   

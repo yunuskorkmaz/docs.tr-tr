@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 72e790dc008857a48602c92c9236588c531b64f9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: cd14b51daee12e8de18586b262bdf2928bffbdc2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423922"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504014"
 ---
 # <a name="equality-operators-c-reference"></a>Eşitlik işleçleri (C# Başvurusu)
 
@@ -45,6 +45,14 @@ Kullanıcı tanımlı [yapı](../keywords/struct.md) türleri desteklemez `==` v
 
 İle başlayarak C# 7.3, `==` ve `!=` işleçleri tarafından desteklenen C# [diziler](../../tuples.md). Daha fazla bilgi için [eşitlik ve diziler](../../tuples.md#equality-and-tuples) bölümünü [ C# tanımlama grubu türleri](../../tuples.md) makalesi.
 
+### <a name="reference-types-equality"></a>Başvuru türleri eşitlik
+
+Varsayılan olarak, iki başvuru türü işlenen, bunlar aynı nesneye başvuruyorsa eşitse:
+
+[!code-csharp[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
+
+Örnekte gösterildiği gibi destek kullanıcı tarafından tanımlanan başvuru türleri `==` varsayılan işleci. Ancak, bir başvuru türü aşırı yüklenebilir `==` işleci. Bir başvuru türü aşırı `==` işleci, kullanım <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> iki başvuru türü aynı nesneye başvuruyorsa, denetlemek için yöntem.
+
 ### <a name="string-equality"></a>Dize eşitliği
 
 İki [dize](../keywords/string.md) işlenenler, bunların her ikisi de eşit `null` veya her iki dize örnekleri aynı uzunluktadır ve aynı karakterlerin her karakter konumunda vardır:
@@ -53,15 +61,7 @@ Kullanıcı tanımlı [yapı](../keywords/struct.md) türleri desteklemez `==` v
 
 Büyük/küçük harfe sıralı karşılaştırma olmasıdır. Dize karşılaştırması hakkında daha fazla bilgi için bkz: [dizeleri karşılaştırmak nasıl C# ](../../how-to/compare-strings.md).
 
-### <a name="reference-types-equality"></a>Başvuru türleri eşitlik
-
-İki dışında `string` başvuru türü işlenen, bunlar aynı nesneye başvurduğunuzda eşit:
-
-[!code-csharp[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
-
-Örnekte gösterildiği gibi destek kullanıcı tarafından tanımlanan başvuru türleri `==` varsayılan işleci. Ancak, bir kullanıcı tarafından tanımlanan başvuru türü aşırı yüklenebilir `==` işleci. Bir başvuru türü aşırı `==` işleci, kullanım <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> iki başvuru türü aynı nesneye başvuruyorsa, denetlemek için yöntem.
-
-## <a name="delegate-equality"></a>Temsilci eşitlik
+### <a name="delegate-equality"></a>Temsilci eşitlik
 
 İki [temsilci](../../programming-guide/delegates/index.md) işlenenler aynı çalışma zamanı tür, bunların her ikisi de eşit `null` veya çağırma listelerini aynı uzunluktadır ve her konumda eşit girdiniz:
 

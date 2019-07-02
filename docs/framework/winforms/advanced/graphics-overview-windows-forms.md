@@ -8,41 +8,41 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: fce756fc9c6a22372bd849c8bd60f0e416f3031e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e14d60e5b77fab8490c373ad76ee2d829aad7c74
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938196"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505382"
 ---
 # <a name="graphics-overview-windows-forms"></a>Grafiklere Genel Bakış (Windows Forms)
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] programcıların CİHAZDAN bağımsız uygulamalar yazma olanağı tanıyan bir grafik cihaz arabirimi var. Hizmetlerini [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] yönetilen sınıflar bir dizi aracılığıyla sunulur.  
+GDI + grafik cihaz arabirimi programcılar CİHAZDAN bağımsız uygulamalar yazma olanağı sağlayan'dır. GDI + hizmetler, yönetilen sınıflar bir dizi aracılığıyla sunulur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Grafiklere Genel Bakış](overview-of-graphics.md)  
- Genel bir giriş sağlar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ GDI + genel bir giriş sağlar.  
   
  [Üç Grafik Hizmeti Kategorisi](three-categories-of-graphics-services.md)  
- İle programlama oluşturan üç kategoriye açıklar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ GDI + ile programlama oluşturan üç kategoriye açıklar.  
   
  [Grafik Arabiriminin Yapısı](structure-of-the-graphics-interface.md)  
- Yönetilen sınıf arabirimi açıklar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ GDI + yönetilen sınıf arabirimi açıklanmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Drawing>  
- Erişim sağlayan [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] temel grafik işlevselliği.  
+ GDI + grafik temel işlevlerini erişim sağlar.  
   
  <xref:System.Drawing.Drawing2D>  
  Gelişmiş iki boyutlu sağlar ve vektör grafik işlevlerini.  
   
  <xref:System.Drawing.Imaging>  
- Sağlayan gelişmiş [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] görüntüleme işlevlerini.  
+ Gelişmiş GDI görüntüleme işlevlerini + sağlar.  
   
  <xref:System.Drawing.Text>  
- Sağlayan gelişmiş [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] tipografi işlevselliği.  
+ Gelişmiş GDI + tipografi işlevlerini sağlar.  
   
  <xref:System.Drawing.Printing>  
  Yazdırma ile ilgili hizmetler sağlar.  
   
  <xref:System.Windows.Forms.TextRenderer>  
- Sağlar [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] çizim ve işlevsellik ölçme metin.
+ GDI metin çizme ve işlevleri ölçüm sağlar.

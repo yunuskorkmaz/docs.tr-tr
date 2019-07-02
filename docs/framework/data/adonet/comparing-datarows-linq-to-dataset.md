@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 0903aac366426e8b4d271ae4bfaa54c79a198e5c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c8687e0e14458c944e2dec2b51b9f78bb2377c3
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583746"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504213"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>(LINQ to DataSet) DataRow karşılaştırma
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] eşit olup olmadığını görmek için kaynak öğeleri karşılaştırmak için çeşitli küme işleci tanımlar. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Aşağıdaki işleçler kümesi sağlar:  
@@ -23,7 +23,7 @@ ms.locfileid: "64583746"
   
 - <xref:System.Linq.Enumerable.Except%2A>  
   
- Bu işleçler çağırarak kaynak öğeleri karşılaştırma <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> ve <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> öğelerinin her koleksiyonu yöntemleri. Durumunda, bir <xref:System.Data.DataRow>, genellikle ayarlama işlemleri için ideal davranışı sekmeli veriler üzerinde değil, bir başvuru karşılaştırması, bu işleçler gerçekleştirin. Ayarlama işlemleri için genellikle öğe değerlerini eşit olup olmadığı ve öğesi başvuruları belirlemek istersiniz. Bu nedenle, <xref:System.Data.DataRowComparer> sınıfı eklendi [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Bu sınıf, satır değerlerini karşılaştırmak için kullanılabilir.  
+ Bu işleçler çağırarak kaynak öğeleri karşılaştırma <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> ve <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> öğelerinin her koleksiyonu yöntemleri. Durumunda, bir <xref:System.Data.DataRow>, genellikle ayarlama işlemleri için ideal davranışı sekmeli veriler üzerinde değil, bir başvuru karşılaştırması, bu işleçler gerçekleştirin. Ayarlama işlemleri için genellikle öğe değerlerini eşit olup olmadığı ve öğesi başvuruları belirlemek istersiniz. Bu nedenle, <xref:System.Data.DataRowComparer> sınıfı, LINQ to DataSet eklendi. Bu sınıf, satır değerlerini karşılaştırmak için kullanılabilir.  
   
  <xref:System.Data.DataRowComparer> Sınıfı içeren bir değer karşılaştırma uygulaması <xref:System.Data.DataRow>, böylece bu sınıf kümesi işlemleri için aşağıdaki gibi kullanılabilir <xref:System.Linq.Enumerable.Distinct%2A>. Bu sınıf doğrudan oluşturulamaz; Bunun yerine, <xref:System.Data.DataRowComparer.Default%2A> özelliği örneği döndürmek için kullanılması gereken <xref:System.Data.DataRowComparer%601>. <xref:System.Data.DataRowComparer%601.Equals%2A> Yöntemi çağrıldıktan sonra ve iki <xref:System.Data.DataRow> Karşılaştırılacak nesne içinde giriş parametre olarak geçirilir. <xref:System.Data.DataRowComparer%601.Equals%2A> Yöntemi döndürür `true` sütun kümesini hem de değerleri, <xref:System.Data.DataRow> nesneler eşit; Aksi takdirde `false`.  
   

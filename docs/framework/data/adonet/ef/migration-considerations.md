@@ -2,12 +2,12 @@
 title: Geçiş konuları (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 0fafa786805a14d9adc3523a5eb876e7e5b0e9c5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f0b8e4918844da08ab48525836878b6a21230891
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489873"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504519"
 ---
 # <a name="migration-considerations-entity-framework"></a>Geçiş konuları (varlık çerçevesi)
 ADO.NET varlık çerçevesi, var olan bir uygulama için çeşitli avantajlar sağlar. Çoğu biri veri kaynağındaki şemasından uygulama tarafından kullanılan veri yapılarını ayırmak için kavramsal bir modeli kullanma olanağı Bu avantajlar önemlidir. Bu depolama modelinin veya uygulamaya telafi değişiklik yapmadan veri kaynağına kendisini gelecekteki değişikliklere kolayca yapmanıza olanak sağlar. Kullanmanın avantajları hakkında daha fazla bilgi için [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bkz: [Entity Framework'e Genel Bakış](../../../../../docs/framework/data/adonet/ef/overview.md) ve [varlık veri modeli](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -66,7 +66,7 @@ ADO.NET varlık çerçevesi, var olan bir uygulama için çeşitli avantajlar sa
 
   [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Birçok aynı işlevler bellek içi kalıcılığı dahil olmak üzere veri kümesi tarafından sağlanan değiştirmek izleme, veri bağlama ve XML verileri olarak nesneler serileştiriliyor sağlar. Daha fazla bilgi için [nesneleriyle çalışma](../../../../../docs/framework/data/adonet/ef/working-with-objects.md).  
   
-  Varsa [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] işlevlerini sağlamadığını uygulamanızın ihtiyaç duyduğu veri kümesi, yine de LINQ sorguları avantajlarını kullanarak yararlanabilirsiniz [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]. Daha fazla bilgi için [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md).  
+  Varsa [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] işlevlerini sağlamadığını uygulamanızın ihtiyaç duyduğu veri kümesi, yine de LINQ sorguları avantajlarını LINQ to DataSet kullanarak yararlanabilirsiniz. Daha fazla bilgi için [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>Verileri denetimlere bağlayabilirsiniz uygulamalar için dikkat edilmesi gerekenler  
  .NET Framework, bir veri kümesi veya bir ASP.NET veri kaynağı denetimi gibi bir veri kaynağındaki kapsülleyebilir ve ardından kullanıcı arabirimi öğeleri bu verileri denetimlere bağlama olanak tanır. Aşağıdaki listede, Entity Framework verilere denetimler bağlama konuları açıklanmaktadır.  

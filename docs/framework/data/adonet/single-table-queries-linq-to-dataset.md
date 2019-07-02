@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87a2f6853136b4b3e622968327bde01c9862bfdf
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664174"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504639"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Tek tablolu sorgular (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] İş sorguları, uygulayan veri kaynaklarında <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. <xref:System.Data.DataTable> Çağırmanız gerekir böylece sınıf ya da arabirimi uygulamıyor <xref:System.Data.DataTableExtensions.AsEnumerable%2A> kullanmak istiyorsanız yöntemi <xref:System.Data.DataTable> kaynağı olarak `From` yan tümcesi bir [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sorgu.  
@@ -20,7 +20,7 @@ ms.locfileid: "61664174"
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- Yerel değişken bir sorgu ile standart sorgu işleçleri bir veya daha fazla sorgu işleçleri veya uygulayarak bir veya daha fazla bilgi kaynakları üzerinde çalışır, bir sorgu ifadesinde, veya durumunda başlatılır [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], işleçler için belirli<xref:System.Data.DataSet>sınıfı. Önceki örnekteki sorgu ifadesinde iki standart sorgu işleçlerinin kullanır: `Where` ve `Select`.  
+ Yerel değişken sorgu standart sorgu işleçleri bir veya daha fazla sorgu işleçleri veya uygulayarak bir veya daha fazla bilgi kaynakları üzerinde çalışır, bir sorgu ifadesinde, veya LINQ to DataSet, işleçler için belirlibaşlatılır<xref:System.Data.DataSet>sınıfı. Önceki örnekteki sorgu ifadesinde iki standart sorgu işleçlerinin kullanır: `Where` ve `Select`.  
   
  `Where` Yan tümcesi filtreleyen bir koşula göre sırası, bu durumda `OnlineOrderFlag` ayarlanır `true`. `Select` İşleci ayırır ve işleç için geçirilen bağımsız değişkenler yakalayan bir numaralandırma nesnesi döndürür. Bu örnek yukarıda, anonim bir tür üç özellik ile oluşturulur: `SalesOrderID`, `OrderDate`, ve `SalesOrderNumber`. Bu üç özellik değerlerini değerleri ayarlanır `SalesOrderID`, `OrderDate`, ve `SalesOrderNumber` sütunlarından `SalesOrderHeader` tablo.  
   

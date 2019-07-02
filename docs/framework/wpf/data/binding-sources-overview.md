@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: a8129b2c8674fb5ecc4d513f57236fde66fdff14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe5cb97b4802c2b638a4b218a27da05468dc50fb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659917"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505555"
 ---
 # <a name="binding-sources-overview"></a>Kaynakların Bağlanmasına Genel Bakış
 Veri bağlamasında, bağlama kaynak nesne verilerden elde nesneye başvurur. Bu konu bağlama kaynağı olarak kullanabileceğiniz nesne türlerini açıklar.  
@@ -24,7 +24,7 @@ Veri bağlamasında, bağlama kaynak nesne verilerden elde nesneye başvurur. Bu
 |--------------------|-----------------|  
 |[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Nesneleri|Herhangi bir dizin oluşturucular yanı sıra ortak özellikler, alt özellikleri bağlayabilirsiniz [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesne. Bağlama altyapısı kullanır [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] yansıma özelliklerinin değerlerini almak için. Alternatif olarak, uygulayan nesneler <xref:System.ComponentModel.ICustomTypeDescriptor> veya kayıtlı bir <xref:System.ComponentModel.TypeDescriptionProvider> bağlama altyapısı ile de çalışır.<br /><br /> Bağlama kaynağı olarak hizmet verebilen bir sınıfın nasıl uygulanacağı hakkında daha fazla bilgi için bkz. [bağlama kaynağı için bir sınıf uygulama](#classes) bu konuda.|  
 |dinamik nesneler|Kullanılabilir özellikler ve dizin oluşturucular uygulayan nesnenin bağlayabilirsiniz <xref:System.Dynamic.IDynamicMetaObjectProvider> arabirimi. Üye kodu erişebiliyorsa, onu bağlayabilirsiniz. Örneğin, bir dinamik Nesne üyesi aracılığıyla kod içinde erişmenizi sağlayan `someObjet.AProperty`, onu bağlama yolu ayarlayarak bağlayabilirsiniz `AProperty`.|  
-|[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] Nesneleri|Adlarınıza bağlayabileceğiniz [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] gibi nesneleri <xref:System.Data.DataTable>. [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView> Uygulayan <xref:System.ComponentModel.IBindingList> bağlama altyapısı için bekleyen değişiklik bildirimleri sağlayan arabirim.|  
+|[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] Nesneleri|ADO.NET nesnelere gibi bağlayabilirsiniz <xref:System.Data.DataTable>. ADO.NET <xref:System.Data.DataView> uygulayan <xref:System.ComponentModel.IBindingList> bağlama altyapısı için bekleyen değişiklik bildirimleri sağlayan arabirim.|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] Nesneleri|Bağlamak ve çalıştırmak `XPath` üzerinde sorgular bir <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, veya <xref:System.Xml.XmlElement>. Erişim için kullanışlı bir yol [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] biçimlendirmede bağlama kaynağı veriler, kullanılacak bir <xref:System.Windows.Data.XmlDataProvider> nesne. Daha fazla bilgi için [XMLDataProvider ve XPath sorgularını kullanarak XML verilerine bağlama](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Ayrıca adlarınıza bağlayabileceğiniz bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument>, ya da LINQ to XML kullanarak bu tür nesneler üzerinde çalıştırılan sorguların sonuçlarını bağlayabilirsiniz. Bağlama kaynağı biçimlendirme içinde XML verilere erişmek, LINQ to XML kullanmak için kullanışlı bir yol kullanmaktır bir <xref:System.Windows.Data.ObjectDataProvider> nesne. Daha fazla bilgi için [XML sorgu sonuçları için XDocument, XElement veya LINQ'ya bağlama](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
 |<xref:System.Windows.DependencyObject> Nesneleri|Bağımlılık özelliklerine herhangi bağlayabilirsiniz <xref:System.Windows.DependencyObject>. Bir örnek için bkz. [özellikleri, iki denetim bağlama](how-to-bind-the-properties-of-two-controls.md).|  
   

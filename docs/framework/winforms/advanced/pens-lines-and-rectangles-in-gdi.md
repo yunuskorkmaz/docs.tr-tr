@@ -17,15 +17,15 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06d2351ffa7d7f009d7b049f4689df7038b4d202
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641401"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505345"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+'da Kalemler, Çizgiler ve Dikdörtgenler
-İle çizgi çizmek için [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] oluşturmak gereken bir <xref:System.Drawing.Graphics> nesnesi ve bir <xref:System.Drawing.Pen> nesne. <xref:System.Drawing.Graphics> Nesne çizim yapan yöntemler sağlar ve <xref:System.Drawing.Pen> nesnesi gibi çizgi rengini, genişliğini ve stili özniteliklerini depolar.  
+GDI + oluşturmanız gereken ile çizgi çizmek için bir <xref:System.Drawing.Graphics> nesnesi ve bir <xref:System.Drawing.Pen> nesne. <xref:System.Drawing.Graphics> Nesne çizim yapan yöntemler sağlar ve <xref:System.Drawing.Pen> nesnesi gibi çizgi rengini, genişliğini ve stili özniteliklerini depolar.  
   
 ## <a name="drawing-a-line"></a>Bir çizgi çizme  
  Bir çizgi çizmek için çağrı <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi <xref:System.Drawing.Graphics> nesne. <xref:System.Drawing.Pen> Bir bağımsız değişken olarak geçirilen nesne <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi. Aşağıdaki örnek, (4, 2) noktadan noktaya (12, 6) bir çizgi çizer:  
@@ -55,7 +55,7 @@ ms.locfileid: "61641401"
  ![Satırları](./media/aboutgdip02-art04.gif "Aboutgdip02_art04")  
   
 ## <a name="drawing-a-rectangle"></a>Dikdörtgen çizme  
- İle dikdörtgenler çizme [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] satırlar çizme için benzer. Bir dikdörtgen çizmek için gereken bir <xref:System.Drawing.Graphics> nesnesi ve bir <xref:System.Drawing.Pen> nesne. <xref:System.Drawing.Graphics> Nesnesi sağlayan bir <xref:System.Drawing.Graphics.DrawRectangle%2A> yöntemi ve <xref:System.Drawing.Pen> nesneyi çizgi genişliği ve rengine gibi özniteliklerini depolar. <xref:System.Drawing.Pen> Bir bağımsız değişken olarak geçirilen nesne <xref:System.Drawing.Graphics.DrawRectangle%2A> yöntemi. Aşağıdaki örnek, sol üst köşesinde bir dikdörtgen çizer (100, 50) bir 80 genişlik ve yükseklik 40'a:  
+ GDI + ile dikdörtgenler çizme satırlar çizme için benzerdir. Bir dikdörtgen çizmek için gereken bir <xref:System.Drawing.Graphics> nesnesi ve bir <xref:System.Drawing.Pen> nesne. <xref:System.Drawing.Graphics> Nesnesi sağlayan bir <xref:System.Drawing.Graphics.DrawRectangle%2A> yöntemi ve <xref:System.Drawing.Pen> nesneyi çizgi genişliği ve rengine gibi özniteliklerini depolar. <xref:System.Drawing.Pen> Bir bağımsız değişken olarak geçirilen nesne <xref:System.Drawing.Graphics.DrawRectangle%2A> yöntemi. Aşağıdaki örnek, sol üst köşesinde bir dikdörtgen çizer (100, 50) bir 80 genişlik ve yükseklik 40'a:  
   
  [!code-csharp[LinesCurvesAndShapes#45](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#45)]
  [!code-vb[LinesCurvesAndShapes#45](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#45)]  

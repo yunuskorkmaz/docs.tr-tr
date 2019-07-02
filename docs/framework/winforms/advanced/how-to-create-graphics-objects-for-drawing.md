@@ -10,15 +10,15 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: aa4c3e3cd21d702927b3784254184a9cd329f121
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee57b0409d7bb7574c965ff098e7f86c8332536d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643366"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505511"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma
-Çizgiler ve şekiller çizmek önce metin işlemek veya görüntülemek ve görüntülerle işlemek [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], oluşturmak gereken bir <xref:System.Drawing.Graphics> nesne. <xref:System.Drawing.Graphics> Nesnesini temsil eder bir [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizim yüzeyi ve grafik görüntüleri oluşturmak için kullanılan nesne.  
+Çizgiler ve şekiller çizmek, metin, işleme veya görüntüleyebilir ve GDI + ile görüntü işleme önce oluşturmak gereken bir <xref:System.Drawing.Graphics> nesne. <xref:System.Drawing.Graphics> Nesne bir GDI çizim yüzeyi + temsil eder ve grafik görüntüleri oluşturmak için kullanılan nesne.  
   
  Grafiklerle çalışma iki adımı vardır:  
   
@@ -163,7 +163,7 @@ ms.locfileid: "64643366"
   
      Daha fazla bilgi için aşağıdaki konulara bakın:  
   
-    |İşlemek için|Bkz. |  
+    |İşlemek için|Bkz.|  
     |---------------|---------|  
     |satırları|[Nasıl yapılır: Bir Windows formunda çizgi çizme](how-to-draw-a-line-on-a-windows-form.md)|  
     |Şekiller|[Nasıl yapılır: Anahatlı şekil çizme](how-to-draw-an-outlined-shape.md)|  

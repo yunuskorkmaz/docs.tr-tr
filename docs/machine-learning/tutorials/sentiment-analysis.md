@@ -4,12 +4,12 @@ description: Bu öğreticide, elde edilen Web sitesi açıklamaları duyarlılı
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a766d95c62fd3a89e3291e1ab803f5222fac46ea
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 833aeeb045ef1fd7bb0e6dbd2236bc3d9da2e8fc
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306176"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506157"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Öğretici: ML.NET ikili sınıflandırma ile Web sitesi yorumların düşüncelerini çözümleme
 
@@ -93,12 +93,16 @@ Giriş veri kümesi sınıfı `SentimentData`, sahip bir `string` kullanıcı yo
 |WOW... Burası sevdiği.              |    1\.     |
 |Hizmet çok sor.              |    1\.     |
 
-`SentimentPrediction` Tahmin sınıf, model eğitiminin sonra kullanılır. Devraldığı `SentimentData` görüntülemek için `SentimentText` Öngörüler ile. `SentimentPrediction` sahip tek bir Boole değeri (`Sentiment`) ve bir `PredictedLabel` `ColumnName` özniteliği. `Label` Oluşturabilir ve ayrıca bölünmüş test veri kümesini kullanıma ile model değerlendirmek için kullanılan model ya da onun eğitmek için kullanılır. `PredictedLabel` Tahmin ve değerlendirme sırasında kullanılır. Değerlendirme, eğitim verileri, tahmin edilen değerleri ve modeli kullanılır.
+`SentimentPrediction` Tahmin sınıf, model eğitiminin sonra kullanılır. Devraldığı `SentimentData` böylece giriş `SentimentText` çıkış tahmin birlikte görüntülenebilir. `Prediction` Yeni giriş ile sağlandığında modeli tahmin eden boolean değeridir `SentimentText`.
 
-[MLContext sınıfı](xref:Microsoft.ML.MLContext) tüm ML.NET işlemleri için bir başlangıç noktasıdır. Başlatma `mlContext` modeli oluşturma iş akışı nesneleri arasında paylaşılabilir bir yeni ML.NET ortamı oluşturur. Bu, kavramsal olarak, benzer `DBContext` Entity Framework.
+Çıkış sınıfı `SentimentPrediction` model tarafından hesaplanan iki özellik içerir: `Score` -model tarafından hesaplanan ham puan ve `Probability` -metnin pozitif yaklaşımı olması olasılığını kalibre puanı.
+
+Bu öğretici için en önemli bir özelliktir `Prediction`.
 
 ## <a name="load-the-data"></a>Verileri yükleme
 ML.NET verilerinde olarak temsil edilir bir [IDataView sınıfı](xref:Microsoft.ML.IDataView). `IDataView` Sekmeli veriler (sayısal ve metin) açıklayan bir esnek ve verimli yoludur. Veri yüklenebilir bir metin dosyasından veya gerçek zamanlı olarak (örneğin, SQL veritabanı veya günlük dosyaları) için bir `IDataView` nesne.
+
+[MLContext sınıfı](xref:Microsoft.ML.MLContext) tüm ML.NET işlemleri için bir başlangıç noktasıdır. Başlatma `mlContext` modeli oluşturma iş akışı nesneleri arasında paylaşılabilir bir yeni ML.NET ortamı oluşturur. Bu, kavramsal olarak, benzer `DBContext` Entity Framework.
 
 Uygulamayı hazırlama ve ardından veri yükleyebilirsiniz:
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: be5042e62da6a9a8afd51af08b85dbe16d8eaac0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ce645133af35271fe1de969621907c53183d9a54
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623631"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505600"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Bir Grafik Nesnesinin Durumunu Yönetme
-<xref:System.Drawing.Graphics> Sınıftır yaklaşımının temelindeki [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Herhangi bir şey çizmek için elde bir <xref:System.Drawing.Graphics> nesne özelliklerini ayarlayın ve yöntemlerinin çağrılması <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>vb.).  
+<xref:System.Drawing.Graphics> GDI + temelinde bir sınıftır. Herhangi bir şey çizmek için elde bir <xref:System.Drawing.Graphics> nesne özelliklerini ayarlayın ve yöntemlerinin çağrılması <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>vb.).  
   
  Aşağıdaki örnek çağrıları <xref:System.Drawing.Graphics.DrawRectangle%2A> yöntemi bir <xref:System.Drawing.Graphics> nesne. Geçirilen ilk bağımsız değişken <xref:System.Drawing.Graphics.DrawRectangle%2A> yöntemi bir <xref:System.Drawing.Pen> nesne.  
   

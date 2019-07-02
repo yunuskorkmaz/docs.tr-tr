@@ -9,18 +9,18 @@ helpviewer_keywords:
 - GDI+, metafiles
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-ms.openlocfilehash: f46c24b699aa49db2bc4b8467ce96a125602acec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df54289722cf12bad840722c6eafdaa43279a5dc
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645740"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504591"
 ---
 # <a name="metafiles-in-gdi"></a>GDI+'da Meta Dosyaları
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sağlar <xref:System.Drawing.Imaging.Metafile> kaydedebilir ve meta dosyaları görüntülemek için sınıf. Bir vektör görüntüsü olarak da adlandırılan bir meta dosyası, komutlar ve ayarlar çizim sırası depolanan bir görüntüsüdür. Komutlar ve ayarlar kaydedilen bir <xref:System.Drawing.Imaging.Metafile> nesne bellekte veya bir dosya veya akışınıza kaydedildi.  
+GDI + sağlar <xref:System.Drawing.Imaging.Metafile> kaydedebilir ve meta dosyaları görüntülemek için sınıf. Bir vektör görüntüsü olarak da adlandırılan bir meta dosyası, komutlar ve ayarlar çizim sırası depolanan bir görüntüsüdür. Komutlar ve ayarlar kaydedilen bir <xref:System.Drawing.Imaging.Metafile> nesne bellekte veya bir dosya veya akışınıza kaydedildi.  
   
 ## <a name="metafile-formats"></a>Meta dosyası biçimleri  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Aşağıdaki biçimlerde depolanan meta görüntüleyebilirsiniz:  
+ GDI +'da aşağıdaki biçimlerde depolanan meta görüntüleyebilirsiniz:  
   
 - Windows Meta dosyası (WMF)  
   
@@ -28,9 +28,9 @@ ms.locfileid: "64645740"
   
 - EMF+  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] meta dosyaları EMF ve EMF + biçimlerde ancak WMF biçiminde kaydedebilirsiniz.  
+ GDI +'da meta dosyaları EMF ve EMF + biçimlerde ancak WMF biçiminde kaydedebilirsiniz.  
   
- EMF + veren EMF uzantısı olan [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] depolanacak kaydeder. EMF + format iki çeşidi vardır: EMF + yalnızca ve EMF + çift. EMF + yalnızca meta dosyaları içeren yalnızca [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] kaydeder. Bu tür meta dosyaları tarafından görüntülenen [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ancak tarafından [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]. EMF + çift meta dosyaları içeren [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ve [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] kaydeder. Her [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] EMF + çift kayıt meta dosyası bir alternatif ile eşleştirilmiş [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] kaydı. Bu tür meta dosyaları tarafından görüntülenen [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ya da [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
+ EMF + depolanacak GDI +'da kayıtları veren EMF uzantısıdır. EMF + format iki çeşidi vardır: EMF + yalnızca ve EMF + çift. EMF + yalnızca meta dosyaları yalnızca GDI +'da kayıtları içerir. Bu tür meta dosyaları tarafından GDI + ancak GDI görüntülenebilir. GDI +'da ve GDI kayıtlarını EMF + çift meta dosyaları içerir. Bir çift EMF + meta dosyası her GDI +'da kayıt alternatif bir GDI kayıtla eşleştirilir. Bu tür meta GDI veya GDI +'TARAFINDAN görüntülenebilir.  
   
  Aşağıdaki örnek, bir dosya olarak daha önce kaydedilmiş bir meta dosyası görüntüler. Yazılmışsa, sol üst köşesinde görüntülenir (100, 100).  
   

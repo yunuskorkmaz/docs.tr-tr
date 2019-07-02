@@ -14,15 +14,15 @@ helpviewer_keywords:
 - lines [Windows Forms], joining
 - graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
-ms.openlocfilehash: 445d7f12f57137c6b06a074eeaf0574eb027a723
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 362ce0c701d6e5f640fecd143a60cf471045629c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723309"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505872"
 ---
 # <a name="how-to-join-lines"></a>Nasıl yapılır: Satırları Birleştirme
-Satır birleştirme, sona erer karşılamak ya da üst üste iki satırla ayrılan biçimlendirilmiş ortak bir alandır. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] üç çizgi birleştirme stili sağlar: gönye, eğim ve yuvarlar. Çizgisi birleştirme stili bir özelliği olan <xref:System.Drawing.Pen> sınıfı. Bir çizgi birleştirme stili belirttiğinizde bir <xref:System.Drawing.Pen> nesnesi, birleştirme stili herhangi bağlı tüm satırlara uygulanacak <xref:System.Drawing.Drawing2D.GraphicsPath> , kalem kullanarak nesne.  
+Satır birleştirme, sona erer karşılamak ya da üst üste iki satırla ayrılan biçimlendirilmiş ortak bir alandır. GDI +'da üç satır birleştirme stiller sağlar: gönye, eğim ve yuvarlar. Çizgisi birleştirme stili bir özelliği olan <xref:System.Drawing.Pen> sınıfı. Bir çizgi birleştirme stili belirttiğinizde bir <xref:System.Drawing.Pen> nesnesi, birleştirme stili herhangi bağlı tüm satırlara uygulanacak <xref:System.Drawing.Drawing2D.GraphicsPath> , kalem kullanarak nesne.  
   
  Aşağıdaki çizim, eğik çizgi birleştirme örnek sonuçları gösterilmektedir.  
   

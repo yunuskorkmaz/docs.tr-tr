@@ -5,17 +5,17 @@ helpviewer_keywords:
 - image encoders [Windows Forms], using
 - image decoders [Windows Forms], using
 ms.assetid: 0e838ea1-4e7e-4334-b882-ab25df607b8b
-ms.openlocfilehash: e56bc20eb55d694d19b25d9e94e5c9d9e3952628
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8cd66f3ce3da462867da9e23c38b3f6d877c058c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666442"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505095"
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma
-<xref:System.Drawing> Ad alanı sağlar <xref:System.Drawing.Image> ve <xref:System.Drawing.Bitmap> depolamak ve bu görüntüleri düzenleme için sınıflar. İçindeki görüntü Kodlayıcıları kullanarak [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], görüntüleri bellekten diske yazabilirsiniz. Görüntü kod çözücüleri kullanarak [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], görüntüleri diskten belleğe yükleyebilirsiniz. Verileri bir kodlayıcı çeviren bir <xref:System.Drawing.Image> veya <xref:System.Drawing.Bitmap> ayrılan disk dosya formatına nesne. Bir kod çözücü tarafından gerekli biçime bir disk dosyasındaki verilerin çevirir <xref:System.Drawing.Image> ve <xref:System.Drawing.Bitmap> nesneleri.  
+<xref:System.Drawing> Ad alanı sağlar <xref:System.Drawing.Image> ve <xref:System.Drawing.Bitmap> depolamak ve bu görüntüleri düzenleme için sınıflar. Görüntü Kodlayıcıları GDI +'da kullanarak, disk görüntüleri bellekten yazabilirsiniz. Görüntü kod çözücüleri GDI +'da kullanarak, görüntüleri diskten belleğe yükleyebilirsiniz. Verileri bir kodlayıcı çeviren bir <xref:System.Drawing.Image> veya <xref:System.Drawing.Bitmap> ayrılan disk dosya formatına nesne. Bir kod çözücü tarafından gerekli biçime bir disk dosyasındaki verilerin çevirir <xref:System.Drawing.Image> ve <xref:System.Drawing.Bitmap> nesneleri.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Yerleşik Kodlayıcıları ve aşağıdaki dosya türlerini destekleyen kod çözücüleri sahiptir:  
+ GDI + yerleşik Kodlayıcıları ve aşağıdaki dosya türlerini destekleyen kod çözücüleri sahiptir:  
   
 - BMP  
   
@@ -27,7 +27,7 @@ ms.locfileid: "64666442"
   
 - TIFF  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Ayrıca, aşağıdaki dosya türlerini destekleyen yerleşik kod çözücüleri vardır:  
+ GDI +'da aşağıdaki dosya türlerini destekleyen yerleşik kod çözücüleri sahiptir:  
   
 - WMF  
   

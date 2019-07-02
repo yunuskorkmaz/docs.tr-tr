@@ -6,19 +6,19 @@ helpviewer_keywords:
 - graphics [Windows Forms], using in Windows Forms
 - graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-ms.openlocfilehash: 86f6b3fff1937694f4b7890249e36d5e12b769dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b6811e1412e1dc5b0731810f159bac633cd1eb2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766174"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505038"
 ---
 # <a name="using-managed-graphics-classes"></a>Yönetilen Grafik Sınıflarını Kullanma
-Aşağıdaki konular nasıl kullanılacağını açıklar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] yönetilen sınıf Framework API.  
+Aşağıdaki konular yönetilen sınıf framework GDI + ' API'sini kullanmayı açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Grafik Programlamaya Başlarken](getting-started-with-graphics-programming.md)  
- Temel görevlerinde size nasıl yapılacağını anlatmaktadır [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ GDI + ile temel görevlerin nasıl gerçekleştirileceğini açıklar.  
   
  [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](using-a-pen-to-draw-lines-and-shapes.md)  
  Kalem oluşturmak ve çeşitli satırlar ve şekiller çizmek için kullanma gösterilmektedir.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 198d7f616d843a3c90b8d32cf33096ee253d2935
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 2d3dc99d78ee9ceb3e8e1cac22fc5571cc1545ba
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832730"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504099"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Kesin Türü Belirtilmiş DataSets Oluşturma
 XML şemasından XML şeması tanım dili ile (XSD) standart uyumlu göz önünde bulundurulduğunda, türü kesin belirlenmiş oluşturabileceğiniz <xref:System.Data.DataSet> Windows Yazılım Geliştirme Seti (SDK) ile sağlanan XSD.exe'nin aracını kullanarak.  
@@ -23,7 +23,7 @@ XML şemasından XML şeması tanım dili ile (XSD) standart uyumlu göz önünd
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- Bu sözdizimi `/d` yönergesi oluşturmak için aracı söyleyen bir **veri kümesi**ve `/l:` Aracı (örneğin, C# veya Visual Basic .NET) kullanmak için hangi dilde söyler. İsteğe bağlı `/eld` yönergesi belirtir, kullanabileceğiniz [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] sorgulamanın yapılacağı oluşturulan **veri kümesi.** Bu seçenek kullanılır, `/d` seçeneği de belirtildiğinde. Daha fazla bilgi için [yazılan veri kümelerini sorgulama](../../../../../docs/framework/data/adonet/querying-typed-datasets.md). İsteğe bağlı `/n:` yönergesi ayrıca bir ad alanı oluşturmak için aracı söyler **veri kümesi** adlı **XSDSchema.Namespace**. Komut çıktısı, derlenmiş ve bir ADO.NET uygulamasında kullanılan XSDSchemaFileName.cs ' dir. Oluşturulan kod, bir kitaplık veya bir modül derlenebilir.  
+ Bu sözdizimi `/d` yönergesi oluşturmak için aracı söyleyen bir **veri kümesi**ve `/l:` Aracı (örneğin, C# veya Visual Basic .NET) kullanmak için hangi dilde söyler. İsteğe bağlı `/eld` yönergesi belirtir, LINQ to DataSet oluşturulan sorgu için kullanabileceğiniz **veri kümesi.** Bu seçenek kullanılır, `/d` seçeneği de belirtildiğinde. Daha fazla bilgi için [yazılan veri kümelerini sorgulama](../../../../../docs/framework/data/adonet/querying-typed-datasets.md). İsteğe bağlı `/n:` yönergesi ayrıca bir ad alanı oluşturmak için aracı söyler **veri kümesi** adlı **XSDSchema.Namespace**. Komut çıktısı, derlenmiş ve bir ADO.NET uygulamasında kullanılan XSDSchemaFileName.cs ' dir. Oluşturulan kod, bir kitaplık veya bir modül derlenebilir.  
   
  Aşağıdaki kodu kullanarak C# Derleyici (csc.exe) kitaplık olarak oluşturulan kodu derlemek için sözdizimi gösterilmektedir.  
   

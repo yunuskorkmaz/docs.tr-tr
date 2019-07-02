@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a8c2b6ca9701f5eec4a8f43eaae531a0cfc18c1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: b53be90764c6537fb27cb1b5ed781a68e69effa0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377707"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504667"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-Görünüm-Görünüm Model ile Taşınabilir Sınıf Kitaplığı Kullanma
 .NET Framework kullanabilirsiniz [taşınabilir sınıf kitaplığı](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) Model-görünüm-görünüm Model (MVVM) desenini uygular ve birden çok platformda derlemeleri paylaşmak için.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
- MVVM temel iş mantığını kullanıcı arabiriminden yalıtan bir uygulama modelidir. Model ve görünüm modeli sınıflarda uygulayabilirsiniz bir [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] proje Visual Studio 2012'de ve ardından farklı platformlar için özelleştirilmiş görünümler oluşturun. Veri yazmak bu yaklaşım sayesinde modeli ve yalnızca bir kez iş mantığı ve kodu .NET Framework, Silverlight, Windows Phone, kullanım ve [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aşağıdaki çizimde gösterildiği gibi uygulamalar.
+ MVVM temel iş mantığını kullanıcı arabiriminden yalıtan bir uygulama modelidir. Visual Studio 2012'de taşınabilir sınıf kitaplığı projesinde modeli ve görünüm modeli sınıfları uygulayın ve ardından farklı platformlar için özelleştirilmiş görünümler oluşturun. Veri yazmak bu yaklaşım sayesinde modeli ve yalnızca bir kez iş mantığı ve kodu .NET Framework, Silverlight, Windows Phone, kullanım ve [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aşağıdaki çizimde gösterildiği gibi uygulamalar.
 
  ![Paylaşım derlemeleri MVVM ile taşınabilir sınıf kitaplığı platformlar arasında gösterir.](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 
- Bu konuda MVVM düzenini hakkında genel bilgiler sağlamaz. Yalnızca nasıl kullanılacağı hakkında bilgi sağlar [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] MVVM uygulamak için. MVVM hakkında daha fazla bilgi için bkz: [MVVM hızlı başlangıç adımlarını kullanarak Prism kitaplığı 5.0 WPF için](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40)).
+ Bu konuda MVVM düzenini hakkında genel bilgiler sağlamaz. Yalnızca taşınabilir sınıf kitaplığı MVVM uygulamak için kullanma hakkında bilgi sağlar. MVVM hakkında daha fazla bilgi için bkz: [MVVM hızlı başlangıç adımlarını kullanarak Prism kitaplığı 5.0 WPF için](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40)).
 
 ## <a name="classes-that-support-mvvm"></a>MVVM destekleyen sınıfları
- .NET Framework 4. 5'i hedeflediğiniz zaman [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight veya Windows Phone 7.5, [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] proje, aşağıdaki sınıflar MVVM düzenini uygulamak için kullanılabilir:
+ .NET Framework 4. 5'i hedeflediğiniz zaman [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight veya Windows Phone 7.5 taşınabilir sınıf kitaplığı projeniz için aşağıdaki sınıflar MVVM düzenini uygulamak için kullanılabilir:
 
 - <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> Sınıfı
 
@@ -55,17 +55,17 @@ ms.locfileid: "66377707"
 - Tüm sınıflarda <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> ad alanı
 
 ## <a name="implementing-mvvm"></a>MVVM uygulama
- MVVM uygulamak için genellikle hem model ve görünüm modeli içinde oluşturduğunuz bir [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] çünkü proje bir [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] proje, taşınabilir olmayan proje başvuramaz. Model ve görünüm modeli, aynı projede veya projelerde ayrı olabilir. Ayrı projeler kullanabilir, bir başvuru görünüm modeli projeden modeli projeye ekleyin.
+ Taşınabilir sınıf kitaplığı projesini bir taşınabilir olmayan proje başvuramadığından MVVM uygulamak için genellikle hem model ve görünüm modeli bir taşınabilir sınıf kitaplığı projesinde oluşturursunuz. Model ve görünüm modeli, aynı projede veya projelerde ayrı olabilir. Ayrı projeler kullanabilir, bir başvuru görünüm modeli projeden modeli projeye ekleyin.
 
  Model derleme ve model projelerini görüntülemek sonra bu derlemeleri görünümü içeren uygulama başvuru. Görünüm yalnızca görünüm model ile etkileşime giren, yalnızca görünüm modeli içeren derlemeye başvuru gerekir.
 
 ### <a name="model"></a>Model
- Aşağıdaki örnek, içinde yer alan bir basitleştirilmiş bir model sınıfı gösterir. bir [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] proje.
+ Aşağıdaki örnek, bir taşınabilir sınıf kitaplığı projesinde bulunan bir basitleştirilmiş bir model sınıfı gösterir.
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
  [!code-vb[PortableClassLibraryMVVM#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customer.vb#1)]
 
- Aşağıdaki örnek, doldurmak, almak ve verileri güncelleştirmek için basit bir yol gösterir. bir [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] proje. Gerçek bir uygulamada, bir Windows Communication Foundation (WCF) hizmeti gibi bir kaynaktan gelen verileri almak.
+ Aşağıdaki örnek, doldurmak, almak ve taşınabilir sınıf kitaplığı proje verileri güncelleştirmek için basit bir yol gösterir. Gerçek bir uygulamada, bir Windows Communication Foundation (WCF) hizmeti gibi bir kaynaktan gelen verileri almak.
 
  [!code-csharp[PortableClassLibraryMVVM#2](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customerrepository.cs#2)]
  [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]

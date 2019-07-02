@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: b41b95ba06f031dc45c0267432d0d6afb7f3a7d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1af8863dd22b5ebb3a2c87009b9c51d5ec25bb89
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645683"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504844"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>(LINQ to DataSet) DataView ile filtreleme
 Ardından bir UI denetimine üzerinden bir istemciye verileri sunmak ve belirli ölçütleri kullanarak veri filtreleme olanağı, veri bağlama, önemli bir yönüdür. <xref:System.Data.DataView> verileri filtreleme ve toplantı belirli filtre ölçütlerini veri satırları kümelerine döndürmek için birçok yol sağlar. Dize tabanlı yanı sıra filtreleme yetenekleri <xref:System.Data.DataView> kullanma olanağı da sağlar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeleri filtreleme ölçütlerine. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeler, dize tabanlı filtreleme daha çok daha karmaşık ve güçlü filtreleme işlemleri için izin verin.  
   
  Kullanarak verilere filtre uygulamak iki yolla bir <xref:System.Data.DataView>:  
   
-- Oluşturma bir <xref:System.Data.DataView> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu ile bir Where yan tümcesi.  
+- Oluşturma bir <xref:System.Data.DataView> gelen bir LINQ to DataSet sorgusunda ile bir Where yan tümcesi.  
   
 - Var olan ve dize tabanlı filtreleme yeteneklerini kullanın <xref:System.Data.DataView>.  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>Bir sorgunun filtre bilgilerle DataView oluşturma  
- A <xref:System.Data.DataView> nesne öğesinden oluşturulabilir bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu. Bu sorgu içeriyorsa bir `Where` yan tümcesi <xref:System.Data.DataView> sorguyu filtreleme bilgilerle oluşturulur. İfadede `Where` yan tümcesi hangi veri satırları dahil edilecek belirlemek için kullanılan <xref:System.Data.DataView>, ve filtre temelini oluşturur.  
+ A <xref:System.Data.DataView> nesne oluşturulan veri kümesini sorgulamak için bir LINQ. Bu sorgu içeriyorsa bir `Where` yan tümcesi <xref:System.Data.DataView> sorguyu filtreleme bilgilerle oluşturulur. İfadede `Where` yan tümcesi hangi veri satırları dahil edilecek belirlemek için kullanılan <xref:System.Data.DataView>, ve filtre temelini oluşturur.  
   
  İfade tabanlı filtreler daha basit dize tabanlı filtreler daha güçlü ve karmaşık filtreleme sağlar. Dize ve ifade tabanlı filtreler karşılıklı olarak birbirini dışlar. Zaman dize tabanlı <xref:System.Data.DataView.RowFilter%2A> sonra ayarlanmış bir <xref:System.Data.DataView> sorgudan çıkarılan göre filtre temizlendiğinde ifade bir sorgudan oluşturulur.  
   
@@ -59,14 +59,14 @@ Ardından bir UI denetimine üzerinden bir istemciye verileri sunmak ve belirli 
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  
   
 ## <a name="using-the-rowfilter-property"></a>RowFilter özelliğini kullanma  
- Var olan dize tabanlı filtreleme işlevselliğini <xref:System.Data.DataView> çalışmaya devam ettiğinden [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bağlamı. Dize tabanlı hakkında daha fazla bilgi için <xref:System.Data.DataView.RowFilter%2A> filtreleme, bkz: [sıralama ve filtreleme veri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Var olan dize tabanlı filtreleme işlevselliğini <xref:System.Data.DataView> LINQ to DataSet bağlam hala çalışıyor. Dize tabanlı hakkında daha fazla bilgi için <xref:System.Data.DataView.RowFilter%2A> filtreleme, bkz: [sıralama ve filtreleme veri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
  Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> kişi tablosunu ve ardından ayarlar <xref:System.Data.DataView.RowFilter%2A> özelliği kişinin soyadı "Zhu" olduğu satırları döndürür:  
   
  [!code-csharp[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvrowfilter)]
  [!code-vb[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvrowfilter)]  
   
- Sonra bir <xref:System.Data.DataView> öğesinden oluşturulan bir <xref:System.Data.DataTable> veya [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kullanabileceğiniz sorgu <xref:System.Data.DataView.RowFilter%2A> satır kümelerine belirtmek için özellik sütun değerlerine bağlı. Dize ve ifade tabanlı filtreler karşılıklı olarak birbirini dışlar. Ayarı <xref:System.Data.DataView.RowFilter%2A> özelliğini içinden gösterilen filtre ifadesi temizleyin [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu ve filtre ifadesi sıfırlanamıyor.  
+ Sonra bir <xref:System.Data.DataView> öğesinden oluşturulan bir <xref:System.Data.DataTable> veya kullanabileceğiniz LINQ to DataSet sorgusunda <xref:System.Data.DataView.RowFilter%2A> satır kümelerine belirtmek için özellik sütun değerlerine bağlı. Dize ve ifade tabanlı filtreler karşılıklı olarak birbirini dışlar. Ayar <xref:System.Data.DataView.RowFilter%2A> özelliğini veri kümesini sorgulamak için LINQ çıkarılan filtre ifadesi temizleyin ve filtre ifadesi sıfırlanamaz.  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywheresetrowfilter)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywheresetrowfilter)]  

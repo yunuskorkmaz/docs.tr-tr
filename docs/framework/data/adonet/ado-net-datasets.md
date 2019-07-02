@@ -2,12 +2,12 @@
 title: ADO.NET Veri Kümeleri
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 29aba76731c4170c8af3c913a06e78e89ce3a08d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: da6fb7bbe82e37787615518fa74a0d84bf95758f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877221"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504275"
 ---
 # <a name="adonet-datasets"></a>ADO.NET Veri Kümeleri
 <xref:System.Data.DataSet> Dağıtılmış ADO.NET ile veri senaryoları bağlantı kesildi, Destek Merkezi nesnedir. **Veri kümesi** bir veri kaynağını bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlayan veri bellekte gösterimidir. Birden çok ile kullanılabilir ve farklı veri kaynakları, XML verileriyle veya uygulamaya yerel verileri yönetmek için. **Veri kümesi** ilgili tabloları, kısıtlamalar ve tablolar arasındaki ilişkiler dahil eksiksiz bir kümesini temsil eder. Aşağıdaki çizimde gösterildiği **veri kümesi** nesne modeli.  
@@ -41,7 +41,7 @@ Veri kümesi nesne modeli
  **Veri kümesi**, **DataTable**, ve **DataColumn** tüm bir **ExtendedProperties** özelliği. **ExtendedProperties** olduğu bir **PropertyCollection** nereye yerleştirmeniz sonuç kümesi oluşturmak için kullanılan bir SELECT deyimi veya verilerin ne zaman oluşturulduğu zaman gibi özel bilgiler. **ExtendedProperties** koleksiyonu için şema bilgileri ile kalıcıdır **veri kümesi**.  
   
 ## <a name="linq-to-dataset"></a>LINQ - DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bir veri kümesinde depolanan bağlantısı kesilen veriler için dil ile tümleşik sorgulama özellikleri sağlar. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Standart kullanır [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] söz dizimi ve Visual Studio IDE kullanırken, derleme zamanı söz dizimi denetimini, statik yazmaya ve IntelliSense desteğini sağlar.  
+ LINQ to DataSet sorgulama özellikleri dil ile tümleşik bir veri kümesinde depolanan bağlantısı kesilen veriler için sağlar. LINQ to DataSet kullanan standart [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] söz dizimi ve Visual Studio IDE kullanırken, derleme zamanı söz dizimi denetimini, statik yazmaya ve IntelliSense desteğini sağlar.  
   
  Daha fazla bilgi için [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   

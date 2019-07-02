@@ -8,15 +8,15 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - curves [Windows Forms], drawing
 ms.assetid: ace6e8d4-4e94-486b-9681-758a6667dc7f
-ms.openlocfilehash: 746d757510776b8d6894c456bb1860a5d68632c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fef3361ca29ed3e118a54b3e81dd82e48b831bef
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942980"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505642"
 ---
 # <a name="lines-curves-and-shapes"></a>Çizgiler, Eğriler ve Şekiller
-Vektör grafik bölümünü [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizgi çizmek için eğriler çizme ve çizmek ve şekilleri doldurmak için kullanılır.  
+GDI + vektör grafik bölümü çizgi çizmek için eğriler çizme ve çizmek ve şekilleri doldurmak için kullanılır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Vektör Grafiklerine Genel Bakış](vector-graphics-overview.md)  

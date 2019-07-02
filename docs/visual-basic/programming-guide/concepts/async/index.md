@@ -2,12 +2,12 @@
 title: Zaman uyumsuz programlama ile Async ve Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 030ef4549bc820cab66d33fa81c205158c09fff9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 0d8810da424b0759dcfba882efe462514a14145a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026103"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505961"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Zaman uyumsuz programlama ile Async ve Await (Visual Basic)
 
@@ -39,7 +39,7 @@ Zaman uyumsuz tabanlı yaklaşım otomatik bir iletimin eşdeğerini, zaman uyum
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> Zaman uyumsuz yöntemleri yazmak daha kolaydır
 
-[Zaman uyumsuz](../../../../visual-basic/language-reference/modifiers/async.md) ve [Await](../../../../visual-basic/language-reference/modifiers/async.md) sözcükler Visual Basic'te zaman uyumsuz programlamanın kalbidir. Bu iki anahtar sözcüğü kullanarak neredeyse bir zaman uyumlu yöntem kolayca olarak zaman uyumsuz bir yöntem oluşturmak için .NET Framework veya Windows çalışma zamanı kaynakları kullanabilirsiniz. Kullanarak tanımladığınız zaman uyumsuz yöntemler `Async` ve `Await` zaman uyumsuz yöntemler olarak adlandırılır.
+[Zaman uyumsuz](../../../../visual-basic/language-reference/modifiers/async.md) ve [Await](../../../../visual-basic/language-reference/operators/await-operator.md) sözcükler Visual Basic'te zaman uyumsuz programlamanın kalbidir. Bu iki anahtar sözcüğü kullanarak neredeyse bir zaman uyumlu yöntem kolayca olarak zaman uyumsuz bir yöntem oluşturmak için .NET Framework veya Windows çalışma zamanı kaynakları kullanabilirsiniz. Kullanarak tanımladığınız zaman uyumsuz yöntemler `Async` ve `Await` zaman uyumsuz yöntemler olarak adlandırılır.
 
 Aşağıdaki örnekte zaman uyumsuz bir yöntem gösterilmektedir. Kodda yer alan hemen hemen her şey size tamamen tanıdık gelmiş olmalıdır. Açıklamalar, zaman uyumsuzluğu eklemek için oluşturduğunuz özellikleri çağırır.
 

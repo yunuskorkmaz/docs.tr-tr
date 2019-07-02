@@ -10,21 +10,21 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: 9641b6906bc2acaa525aed6df57f189d39317d35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76506e504fdaca83fee502111dbadab5cb41d9b9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614669"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506185"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Windows Forms Denetimini İşleme
-İşleme görsel bir temsili bir kullanıcının ekranda oluşturma işlemini gösterir. Windows Forms kullanan [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (yeni Windows grafik kitaplığının) işleme için. Erişim sağlayan bir yönetilen sınıflar [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bulunan <xref:System.Drawing?displayProperty=nameWithType> ad alanı ve bunun alt ad boşlukları.  
+İşleme görsel bir temsili bir kullanıcının ekranda oluşturma işlemini gösterir. Windows Forms (yeni Windows grafik kitaplığının) GDI işleme için kullanır. GDI için erişim sağlayan yönetilen sınıflar bulunan <xref:System.Drawing?displayProperty=nameWithType> ad alanı ve bunun alt ad boşlukları.  
   
  Aşağıdaki öğeler denetimi işlemede ilgilidir:  
   
 - Taban sınıfı tarafından sağlanan çizim işlevselliği <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
-- Temel öğelerini [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] grafik kitaplığı.  
+- Temel öğeler GDI grafik kitaplığı.  
   
 - Çizim bölge geometrisi.  
   
@@ -61,7 +61,7 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics> Çizim işlevi kapsülleyen bir yönetilen sınıf tartışmalarına açıklandığı olan [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bu konuda. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Örneğidir <xref:System.Drawing.Rectangle> yapı ve denetim çizebilir kullanılabilir alanı tanımlar. Bir denetim geliştiricisi hesaplayabilirsiniz <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> kullanarak <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> tartışma geometrisinin bu konunun ilerleyen bölümlerinde açıklandığı gibi bir denetimin özellik.  
+ <xref:System.Drawing.Graphics> Çizim işlevi kapsülleyen bir yönetilen GDI tartışılması bu konunun ilerleyen bölümlerinde açıklandığı sınıftır. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Örneğidir <xref:System.Drawing.Rectangle> yapı ve denetim çizebilir kullanılabilir alanı tanımlar. Bir denetim geliştiricisi hesaplayabilirsiniz <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> kullanarak <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> tartışma geometrisinin bu konunun ilerleyen bölümlerinde açıklandığı gibi bir denetimin özellik.  
   
  Bir denetim işleme mantığı geçersiz kılarak sağlamalısınız <xref:System.Windows.Forms.Control.OnPaint%2A> devraldığı yöntemi <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A> bir grafik nesnesinin ve bir dikdörtgen çizin aracılığıyla erişimi alır <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> ve <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> özelliklerini <xref:System.Windows.Forms.PaintEventArgs> kendisine geçirilen örneği.  
   
@@ -93,7 +93,7 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
  Sırada <xref:System.Windows.Forms.Control.OnPaintBackground%2A> aynı bağımsız değişken olarak alır ve bir olay benzeri terminolojisi sahip `OnPaint` yöntemi <xref:System.Windows.Forms.Control.OnPaintBackground%2A> true olay yöntemi değildir. Var olan hiçbir `PaintBackground` olay ve <xref:System.Windows.Forms.Control.OnPaintBackground%2A> olay temsilci çağrılmaz. Geçersiz kılarken <xref:System.Windows.Forms.Control.OnPaintBackground%2A> yöntem, türetilmiş bir sınıf değil çağırmak için gerekli <xref:System.Windows.Forms.Control.OnPaintBackground%2A> yöntemi kendi taban sınıfının.  
   
 ## <a name="gdi-basics"></a>GDI +'da temel bilgileri  
- <xref:System.Drawing.Graphics> Sınıfı yöntemleri metin görüntüleme için yanı sıra, daire, üçgen, yaylar ve elipsler gibi çeşitli şekiller çizmek için yöntemler sağlar. <xref:System.Drawing?displayProperty=nameWithType> Ad alanı ve bunun alt ad boşlukları grafik öğeleri şekilleri (daire, dikdörtgenler, yaylara ve diğerleri), renkleri, yazı tipleri, fırçaları ve benzeri gibi kapsayan sınıflar içerir. Hakkında daha fazla bilgi için [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], bkz: [yönetilen grafik sınıflarını kullanarak](../advanced/using-managed-graphics-classes.md). Temel bilgiler [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] da açıklanan [nasıl yapılır: İlerleme durumunu gösteren Windows Forms denetimi oluşturma](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ <xref:System.Drawing.Graphics> Sınıfı yöntemleri metin görüntüleme için yanı sıra, daire, üçgen, yaylar ve elipsler gibi çeşitli şekiller çizmek için yöntemler sağlar. <xref:System.Drawing?displayProperty=nameWithType> Ad alanı ve bunun alt ad boşlukları grafik öğeleri şekilleri (daire, dikdörtgenler, yaylara ve diğerleri), renkleri, yazı tipleri, fırçaları ve benzeri gibi kapsayan sınıflar içerir. GDI hakkında daha fazla bilgi için bkz: [yönetilen grafik sınıflarını kullanarak](../advanced/using-managed-graphics-classes.md). GDI temellerini de açıklanan [nasıl yapılır: İlerleme durumunu gösteren Windows Forms denetimi oluşturma](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ## <a name="geometry-of-the-drawing-region"></a>Geometri çizim bölgesi  
  <xref:System.Windows.Forms.Control.ClientRectangle%2A> Bir denetimin özellik dikdörtgen bölge yok kullanıcının ekranında, denetime belirtir ancak <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> özelliği <xref:System.Windows.Forms.PaintEventArgs> gerçekten boyanır alanı belirtir. (Boyama tamamlandı olduğunu unutmayın <xref:System.Windows.Forms.Control.Paint> alan olay yöntemi bir <xref:System.Windows.Forms.PaintEventArgs> örnek bağımsız olarak). Küçük bir bölümü, denetimin görüntü değişiklikleri olduğu gibi bir denetimin kendi kullanılabilir alanı yalnızca bir kısmını boyamak gerekebilir. Bu durumlarda, denetim geliştiricisi gerçek bir dikdörtgen çizin ve geçirebilirsiniz hesaplamanız gerekir <xref:System.Windows.Forms.Control.Invalidate%2A>. Aşırı yüklenmiş sürümlerini <xref:System.Windows.Forms.Control.Invalidate%2A> süren bir <xref:System.Drawing.Rectangle> veya <xref:System.Drawing.Region> oluşturmak için bu bağımsız değişken bağımsız değişken olarak kullanmak <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> özelliği <xref:System.Windows.Forms.PaintEventArgs>.  

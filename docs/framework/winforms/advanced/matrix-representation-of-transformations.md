@@ -16,12 +16,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ceaad7b4bb5a70a890d261e39bc608becb388c17
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967537"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505630"
 ---
 # <a name="matrix-representation-of-transformations"></a>Dönüşümlerin Matrisle Temsili
 M × n matris m satırları ve sütunları n düzenlenen numaraları kümesidir. Aşağıdaki resimde, birkaç matrislerde gösterilmektedir.  
@@ -66,7 +66,7 @@ M × n matris m satırları ve sütunları n düzenlenen numaraları kümesidir.
   
  ![Dönüşümler](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
- İçinde [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bir afin dönüşümünde depoladığınız bir <xref:System.Drawing.Drawing2D.Matrix> nesne. Üçüncü sütunda bir afin dönüşümü temsil eden bir matris her zaman olduğundan (0, 0, 1) oluşturduğunuzda, ilk iki sütunlarda yalnızca altı numaralarını belirtme bir <xref:System.Drawing.Drawing2D.Matrix> nesne. Deyim `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` önceki şekilde gösterildiği matris oluşturur.  
+ GDI +'da bir afin dönüşümünde depolayabileceğiniz bir <xref:System.Drawing.Drawing2D.Matrix> nesne. Üçüncü sütunda bir afin dönüşümü temsil eden bir matris her zaman olduğundan (0, 0, 1) oluşturduğunuzda, ilk iki sütunlarda yalnızca altı numaralarını belirtme bir <xref:System.Drawing.Drawing2D.Matrix> nesne. Deyim `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` önceki şekilde gösterildiği matris oluşturur.  
   
 ## <a name="composite-transformations"></a>Bileşik dönüşümler  
  Bileşik bir dönüştürme, Dönüşümlerin, biri tarafından izlenen bir dizidir. Matrisler ve dönüştürmeleri aşağıdaki listede göz önünde bulundurun:  

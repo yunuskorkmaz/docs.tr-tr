@@ -2,15 +2,15 @@
 title: Örnek Veritabanları (LINQ to DataSet) indirme
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: 1ef5a5ceac6a7f819551f6221b63197786ab4f09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 340ccd1e0e2d415fe60721775bd39acf9db00f85
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606903"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504506"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Örnek Veritabanları (LINQ to DataSet) indirme
-Örnekler ve izlenecek yollarında [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri AdventureWorks örnek veritabanını kullanın. Bu ürün ücretsiz olarak Microsoft Yükleme sitesinden indirebilirsiniz. Örnekler ve izlenecek yollarında [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri, SQL Server veri deposu olarak kullanın. SQL Server Express ücret kullanılabilir Edition, SQL Server yerine veri deposu olarak da kullanılabilir.  
+Örnekler ve izlenecek yollar LINQ to DataSet belgeleri AdventureWorks örnek veritabanını kullanın. Bu ürün ücretsiz olarak Microsoft Yükleme sitesinden indirebilirsiniz. Örnekler ve izlenecek yollar LINQ to DataSet belgeleri SQL Server veri deposu olarak kullanırsınız. SQL Server Express ücret kullanılabilir Edition, SQL Server yerine veri deposu olarak da kullanılabilir.  
   
 ## <a name="downloading-and-installing-the-adventureworks-database"></a>İndirme ve AdventureWorks veritabanını yükleme  
   
@@ -63,7 +63,7 @@ ms.locfileid: "61606903"
      Bu dosyalar farklı bir sürücü veya dizin yüklediyseniz, yürütmeden önce yolların uygun şekilde düzeltmeniz gerekir `sp_attach_db` saklı yordamı.  
   
 ## <a name="downloading-sql-server-express-edition"></a>SQL Server Express sürümü indiriliyor  
- Örnekler ve izlenecek yollarında [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bölümü SQL Server 2005 veri deposu olarak kullanabilirsiniz, ancak SQL Server Express Edition kullanmayı değiştirilebilir. SQL Server Express Edition ücretsiz kullanılabilir ve uygulamaları yeniden dağıtabilirsiniz. Visual Studio kullanıyorsanız, SQL Server Express Edition Pro ve üzeri sürümlerinde bulunur.  
+ Örnekler ve izlenecek yollar LINQ to DataSet bölümü SQL Server 2005 veri deposu olarak kullanabilirsiniz, ancak SQL Server Express Edition kullanmayı değiştirilebilir. SQL Server Express Edition ücretsiz kullanılabilir ve uygulamaları yeniden dağıtabilirsiniz. Visual Studio kullanıyorsanız, SQL Server Express Edition Pro ve üzeri sürümlerinde bulunur.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express Edition'ı indirip  
   

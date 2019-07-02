@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: bd2efcd28a8349ef07873adb5eaa69784e61d482
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 361a6669d5d638bbb39bc646607cce212bbb3bfa
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585946"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504025"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# Diline ve.NET Framework'e Giriş
 
@@ -54,7 +54,7 @@ C#.NET Framework üzerinde çalışan güvenli ve sağlam uygulamalar oluşturma
 
  C#.NET Framework, ortak dil çalışma zamanı (CLR) ve birleşik bir sınıf kitaplıkları kümesinin adlı bir sanal yürütme sistemi içeren Windows ayrılmaz bir bileşeni programları çalıştırın. CLR ticari Microsoft tarafından ortak dil altyapısı (CLI), yürütme ve diller ve kitaplıkların birlikte sorunsuz çalıştığı geliştirme ortamları oluşturmak için temel olan uluslararası bir standart uygulamasıdır.  
   
- C# dilinde yazılan kaynak kodu CLI belirtimine uyan bir ara dil (IL) derlenir. IL kodu ve bit eşlemler ve dizeler gibi kaynaklar genellikle .exe veya .dll uzantılı derleme adında çalıştırılabilir bir dosyada diskte depolanır. Bir derleme, derlemenin türleri, sürümü, kültürü ve güvenlik gereksinimleri hakkında bilgi sağlayan bir bildirim içerir.  
+ Kaynak yazılmış kod C# derlenir bir [Ara dil (IL)](../../standard/managed-code.md) CLI belirtimine uyan. IL kodu ve bit eşlemler ve dizeler gibi kaynaklar genellikle .exe veya .dll uzantılı derleme adında çalıştırılabilir bir dosyada diskte depolanır. Bir derleme, derlemenin türleri, sürümü, kültürü ve güvenlik gereksinimleri hakkında bilgi sağlayan bir bildirim içerir.  
   
  C# programı yürütüldüğünde derleme bildirimdeki bilgilere göre çeşitli eylemlerde bulunabilecek olan CLR'ye içine yüklenir. Ardından, güvenlik gereksinimleri karşılanırsa, CLR IL kodunu yerel makine yönergelerine dönüştürmek için tam zamanında (JIT) derleme gerçekleştirir. CLR ayrıca diğer hizmetleri ilgili otomatik çöp toplama, özel durum işleme ve kaynak yönetimi sağlar. CLR tarafından yürütülen kod bazen "yönetilen kod" ", belirli bir sistemi hedefleyen yerel makine dilinde derlenmiş yönetilmeyen kodun" aksine adlandırılır. Aşağıdaki diyagram, C# kaynak kodu dosyaları, .NET Framework sınıf kitaplıkları, derlemeler ve CLR derleme zamanı ve çalışma zamanı ilişkilerini gösterir.  
   

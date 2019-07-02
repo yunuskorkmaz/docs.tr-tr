@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: 7baf358d9cdabe8cadf6b297a1d0d63d64282525
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd39b40864703b6bb24c2cc6590787562f3f4f98
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583536"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504156"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView nesnesi (LINQ to DataSet) oluşturma
-Oluşturmanın iki yolu vardır. bir <xref:System.Data.DataView> içinde [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bağlamı. Oluşturabileceğiniz bir <xref:System.Data.DataView> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] üzerinden sorgu bir <xref:System.Data.DataTable>, ya da bir türü belirtilmiş veya türsüz oluşturabilirsiniz <xref:System.Data.DataTable>. Her iki durumda da, oluşturduğunuz <xref:System.Data.DataView> birini kullanarak <xref:System.Data.DataTableExtensions.AsDataView%2A> genişletme yöntemleri; <xref:System.Data.DataView> atmamalıdır doğrudan değil [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bağlamı.  
+Oluşturmanın iki yolu vardır. bir <xref:System.Data.DataView> LINQ to DataSet bağlamı. Oluşturabileceğiniz bir <xref:System.Data.DataView> bir LINQ to DataSet sorgu ' den bir <xref:System.Data.DataTable>, ya da bir türü belirtilmiş veya türsüz oluşturabilirsiniz <xref:System.Data.DataTable>. Her iki durumda da, oluşturduğunuz <xref:System.Data.DataView> birini kullanarak <xref:System.Data.DataTableExtensions.AsDataView%2A> genişletme yöntemleri; <xref:System.Data.DataView> LINQ to DataSet içeriği doğrudan atmamalıdır değil.  
   
  Sonra <xref:System.Data.DataView> olmuştur oluşturulan bir Windows forms uygulaması veya ASP.NET uygulaması bir UI denetimine bağlamak veya kullanabilirsiniz filtreleme ve sıralama ayarlarını değiştirin.  
   
@@ -22,7 +22,7 @@ Oluşturmanın iki yolu vardır. bir <xref:System.Data.DataView> içinde [!INCLU
  İle sıralama ve filtreleme hakkında daha fazla bilgi için <xref:System.Data.DataView>, bkz: [DataView ile filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) ve [DataView ile sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
   
 ## <a name="creating-dataview-from-a-linq-to-dataset-query"></a>DataView bir LINQ Sorgu veri kümesi oluşturma  
- A <xref:System.Data.DataView> nesne sonuçlarından oluşturulabilir bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu sonuçları, bir projeksiyon nerede <xref:System.Data.DataRow> nesneleri. Yeni oluşturulan <xref:System.Data.DataView> filtreleme ve sıralama oluşturulan gelen sorgu bilgilerinden devralır.  
+ A <xref:System.Data.DataView> nesne oluşturulabilir bir LINQ sonuçlarından sonuçları, bir projeksiyon olduğu veri kümesi sorguya <xref:System.Data.DataRow> nesneleri. Yeni oluşturulan <xref:System.Data.DataView> filtreleme ve sıralama oluşturulan gelen sorgu bilgilerinden devralır.  
   
 > [!NOTE]
 >  Çoğu durumda, filtreleme ve sıralama için kullanılan ifadeler yan etkileri olmamalıdır ve belirleyici olmalıdır. Ayrıca, ifadeleri herhangi içermemelidir sıralama ve filtreleme işlemleri olabileceğinden, yürütmeleri kümesi sayısına bağlı mantıksal kaç kez yürütüldü.  
@@ -45,18 +45,18 @@ Oluşturmanın iki yolu vardır. bir <xref:System.Data.DataView> içinde [!INCLU
   
 - <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
   
- Dikkat edin bir <xref:System.Data.DataView> içinden oluşturulan bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A> yöntemi sorguda adında gereken son yöntemi olması gerekir. Bu oluşturan aşağıdaki örnekte gösterildiği bir <xref:System.Data.DataView> çevrimiçi siparişler toplam süre göre sıralanır:  
+ Dikkat edin bir <xref:System.Data.DataView> bir LINQ Sorgu veri kümesi oluşturulur <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A> yöntemi sorguda adında gereken son yöntemi olması gerekir. Bu oluşturan aşağıdaki örnekte gösterildiği bir <xref:System.Data.DataView> çevrimiçi siparişler toplam süre göre sıralanır:  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquery1)]
  [!code-vb[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquery1)]  
   
- Dize tabanlı kullanabilirsiniz <xref:System.Data.DataView.RowFilter%2A> ve <xref:System.Data.DataView.Sort%2A> filtreleme ve sıralama özellikleri bir <xref:System.Data.DataView> bir sorgudan oluşturulduktan sonra. Bu sıralama temizler ve bilgi filtreleme sorgudan devralınan unutmayın. Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ile başlayan soyadlarına göre filtreleyen sorgu kullanıcının '. Dize tabanlı <xref:System.Data.DataView.Sort%2A> sırasını ve adlarını azalan düzende artan adların sıralanacak özelliğini ayarlayın:  
+ Dize tabanlı kullanabilirsiniz <xref:System.Data.DataView.RowFilter%2A> ve <xref:System.Data.DataView.Sort%2A> filtreleme ve sıralama özellikleri bir <xref:System.Data.DataView> bir sorgudan oluşturulduktan sonra. Bu sıralama temizler ve bilgi filtreleme sorgudan devralınan unutmayın. Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> ile başlayan soyadlarına göre filtreleyen sorgu veri kümesi için bir LINQ gelen kullanıcının '. Dize tabanlı <xref:System.Data.DataView.Sort%2A> sırasını ve adlarını azalan düzende artan adların sıralanacak özelliğini ayarlayın:  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquerystringsort)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  
   
 ## <a name="creating-a-dataview-from-a-datatable"></a>Bir DataTable nesnesinden DataView oluşturma  
- Öğesinden oluşturulan yanı sıra bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu, bir <xref:System.Data.DataView> nesne öğesinden oluşturulabilir bir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataTableExtensions.AsDataView%2A> yöntemi.  
+ Bir LINQ Sorgu veri kümesi, oluşturulan yanı sıra bir <xref:System.Data.DataView> nesne öğesinden oluşturulabilir bir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataTableExtensions.AsDataView%2A> yöntemi.  
   
  Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> veri kaynağı olarak ayarlar ve satış siparişi ayrıntısını tablo bir <xref:System.Windows.Forms.BindingSource> nesne. Bu nesne için bir proxy görevi gören bir <xref:System.Windows.Forms.DataGridView> denetimi.  
   

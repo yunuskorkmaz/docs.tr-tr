@@ -1,17 +1,17 @@
 ---
 title: Dizeleri - C# Programlama Kılavuzu
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: e193d6a51c3d4f1d81e3b74b1474d0e7cdcfca53
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398119"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67503991"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Türünde bir nesne bir dizedir <xref:System.String> metin değeri olan. Metin sıralı salt okunur bir koleksiyonu dahili olarak depolanan <xref:System.Char> nesneleri. Bir C# dizenin sonuna kadar hiçbir null Sonlandırıcı karakter yoktur; Bu nedenle bir C# dize herhangi bir sayıda gömülü null karakterleri ('\0') içerebilir. <xref:System.String.Length%2A> Bir dize özelliğini sayısını temsil eden `Char` içerdiği, Unicode karakter sayısını nesneleri. Bir dizedeki tek Unicode kod noktaları erişmek için <xref:System.Globalization.StringInfo> nesne.  
@@ -62,13 +62,16 @@ Türünde bir nesne bir dizedir <xref:System.String> metin değeri olan. Metin s
 |\n|Yeni satır|0x000A|  
 |\r|satır başı|0x000D|  
 |\t|Yatay sekme|0x0009|  
-|\U|Unicode çıkış dizisi vekil çiftleri için.|\Unnnnnnnn|  
-|\u|Unicode çıkış dizisi|\u0041 = "A"|  
+|\U|Unicode escape sequence (UTF-32)|`\U00nnnnnn` (örneğin `\U0001F47D` = "&#x1F47D;")|  
+|\u|Unicode çıkış dizisi (UTF-16)|`\unnnn` (örneğin `\u0041` = "A")|  
 |\v|dikey sekme|0x000B|  
-|\x|Unicode çıkış dizisi değişken uzunluğu dışında "\u" benzer.|\x0041 veya \x41 "A" =|  
+|\x|Unicode çıkış dizisi değişken uzunluğu dışında "\u" benzer.|`\x0041` veya `\x41` = "A"|  
+  
+> [!WARNING]
+>  Kullanırken `\x` kaçış dizisi ve onaltılık basamak 4'ten az belirleme kaçış sırası hemen izleyen karakterler geçerli bir onaltılık basamak yer alıyorsa (yani 0-9, A-F ve a-f), çıkış dizisinin bir parçası olacak şekilde yorumlanır. Örneğin, `\xA1` üretir "&#161;", kod noktası U + 00A1 olduğu. Ancak, sonraki karakteri "A" veya "a", ardından kaçış sırası bunun yerine olarak yorumlanacaktır `\xA1A` üreten ve "&#x0A1A;", kod noktası U + 0A1A olduğu. Böyle durumlarda tüm 4 onaltılık basamak belirtme (örneğin `\x00A1` ) bir olası yanlış yorumlanmasını önler.  
   
 > [!NOTE]
->  Derleme zamanında harfi harfine dizeler sıradan dizelerle aynı kaçış dizileri dönüştürülür. Bu nedenle, hata ayıklayıcı İzleme penceresinde verbatim dizesi görüntülerseniz, kaynak kodunuzdan verbatim sürümünü değil derleyici tarafından eklenmiş kaçış karakterleri görürsünüz. Örneğin, verbatim dizesi @"C:\files.txt" İzleme penceresinde görünür "C:\\\files.txt".  
+>  Derleme zamanında harfi harfine dizeler sıradan dizelerle aynı kaçış dizileri dönüştürülür. Bu nedenle, hata ayıklayıcı İzleme penceresinde verbatim dizesi görüntülerseniz, kaynak kodunuzdan verbatim sürümünü değil derleyici tarafından eklenmiş kaçış karakterleri görürsünüz. Örneğin, verbatim dizesi `@"C:\files.txt"` İzleme penceresinde görünür "C:\\\files.txt".  
   
 ## <a name="format-strings"></a>Biçim dizeleri  
  Bir biçim dizesi, içerikleri, çalışma zamanında dinamik olarak belirlenir bir dizedir. Biçim dizeleri ekleyerek oluşturulur *ilişkilendirilmiş ifade* veya küme ayraçları içinde bir dize içinde yer tutucular. Küme ayraçları içinde her şeyi (`{...}`) olarak biçimlendirilmiş bir dize çalışma zamanında bir değer ve çıkış çözülmüş olacaktır. Biçim dizesi oluşturmak için iki yöntem vardır: İlişkilendirme ve bileşik biçimlendirme dizesi.

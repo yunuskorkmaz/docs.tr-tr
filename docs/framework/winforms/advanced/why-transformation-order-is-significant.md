@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - transformations [Windows Forms], order significance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-ms.openlocfilehash: 4a65e588984241affea3083810b4901266480ea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08927ebaa460e19e558dce22f39c13c31f0e49d0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747465"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504910"
 ---
 # <a name="why-transformation-order-is-significant"></a>Dönüştürme Sırası Neden Önemlidir
 Tek bir <xref:System.Drawing.Drawing2D.Matrix> nesne tek bir dönüştürme veya bir dizi dönüşümleri depolayabilir. İkinci bir bileşik dönüştürme çağrılır. Bileşik bir dönüştürme matrisi, tek tek dönüşümlerinin matrislerde çarpılarak elde edilir.  
   
 ## <a name="composite-transform-examples"></a>Bileşik dönüştürme örnekleri  
- Bir bileşik dönüşümünde tek dönüştürmeler sırası önemlidir. İlk döndürebilir, ölçeklendirme, sonra Çevir, örneğin, farklı bir sonuç daha önce çeviri, döndürme sonra ölçeği alırsınız. İçinde [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], bileşik dönüşümler soldan sağa oluşturulur. S, R ve T ölçek, döndürme ve çeviri matrislerde sırasıyla varsa, ürün SRT (bu sırayla) ilk ölçeklendirilen bileşik dönüştürme matrisini olup, ardından döndürür, sonra çevirir. Ürün tarafından üretilen matris SRT TRS ürün tarafından üretilen matris farklıdır.  
+ Bir bileşik dönüşümünde tek dönüştürmeler sırası önemlidir. İlk döndürebilir, ölçeklendirme, sonra Çevir, örneğin, farklı bir sonuç daha önce çeviri, döndürme sonra ölçeği alırsınız. GDI +'da bileşik dönüşümler soldan sağa oluşturulur. S, R ve T ölçek, döndürme ve çeviri matrislerde sırasıyla varsa, ürün SRT (bu sırayla) ilk ölçeklendirilen bileşik dönüştürme matrisini olup, ardından döndürür, sonra çevirir. Ürün tarafından üretilen matris SRT TRS ürün tarafından üretilen matris farklıdır.  
   
  Sıralamanın önemli olduğu bir nedeni, döndürme ve ölçeklendirme dönüşümleri koordinat sistemi kaynağını göre yapılır olmasıdır. Kaynak ortalanmış bir nesneyi ölçekleme uzağa kaynağı taşıdığınız nesneyi ölçekleme değerinden farklı bir sonuç üretir. Benzer şekilde, kaynak ortalanmış bir nesneyi döndürme ayrılmak kaynağa taşınan bir nesneyi döndürme değerinden farklı bir sonuç üretir.  
   
