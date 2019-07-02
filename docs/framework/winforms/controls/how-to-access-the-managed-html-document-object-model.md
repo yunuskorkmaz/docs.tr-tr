@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 0374e63191f5f81891a0c7c78c5e739ac5ec7984
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a195dc6583d5a0a72bd08b66f8933f4002e879a
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624158"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487268"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Nasıl yapılır: Yönetilen HTML Belgesi Nesne Modeline Erişme
 Yönetilen HTML belgesi nesne modeli (DOM) iki tür uygulamalar arasında erişebilirsiniz:  
@@ -43,7 +43,7 @@ Yönetilen HTML belgesi nesne modeli (DOM) iki tür uygulamalar arasında erişe
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
   
-1. Uygulamanızı veya <xref:System.Windows.Forms.UserControl> yönetilen HTML DOM erişmek için tam güven gerektirir Bir Windows Forms uygulaması kullanarak dağıtıyorsanız [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], tam güven izni yükseltme ya da güvenilir uygulama dağıtımı kullanarak isteyebilir; bkz [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications) Ayrıntılar için.  
+1. Uygulamanızı veya <xref:System.Windows.Forms.UserControl> yönetilen HTML DOM erişmek için tam güven gerektirir ClickOnce kullanarak bir Windows Forms uygulaması dağıtıyorsanız, tam güven izni yükseltme ya da güvenilir uygulama dağıtımı kullanarak talep edebilir; bkz: [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications) Ayrıntılar için.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

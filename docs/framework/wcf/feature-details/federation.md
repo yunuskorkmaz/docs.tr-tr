@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 376448502b7b9c7002213be5c3437849a3868166
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 295e4bd5eca58bc190b31fd96e79f97678e381a4
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425030"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486781"
 ---
 # <a name="federation"></a>Federasyon
 Bu konuda birleşik güvenliği kavramını kısa bir genel bakış sağlar. Ayrıca, Federasyon güvenlik mimariyi dağıtmak için Windows Communication Foundation (WCF) desteği açıklanmaktadır. Federasyon gösteren örnek bir uygulama için bkz. [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -224,7 +224,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
   
  ![Federasyon](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS_B")  
   
- STS B, STS A de güvenlik belirteçleri sağlar ve bu amaç için tek bir uç noktayı kullanıma sunan bir Web hizmeti benzer. Ancak, farklı bir bağlama kullanır (`wsHttpBinding`) ve geçerli bir sunmak kullanıcıların gerektirir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] ile bir `emailAddress` talep. İsteğe bağlı olarak yanıtta ile SAML belirteçlerini çıkartan `userAuthenticated` talep. Bu, hizmet yapılandırmasında bildirimli olarak belirtilir.  
+ STS B, STS A de güvenlik belirteçleri sağlar ve bu amaç için tek bir uç noktayı kullanıma sunan bir Web hizmeti benzer. Ancak, farklı bir bağlama kullanır (`wsHttpBinding`) ve ile geçerli bir CardSpace sunmak kullanıcıların gerektiren bir `emailAddress` talep. İsteğe bağlı olarak yanıtta ile SAML belirteçlerini çıkartan `userAuthenticated` talep. Bu, hizmet yapılandırmasında bildirimli olarak belirtilir.  
   
 ```xml  
 <system.serviceModel>  
