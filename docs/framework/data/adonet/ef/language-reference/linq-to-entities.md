@@ -2,12 +2,12 @@
 title: LINQ - Varlıklar
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 570d6a60e4f34e89e758b505353a083b959d9def
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a69d74966b99d78b4a7addaa4323d61d82ce8d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630726"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539766"
 ---
 # <a name="linq-to-entities"></a>LINQ - Varlıklar
 LINQ to Entities, geliştiricilerin Visual Basic veya Visual C# kullanarak varlık çerçevesi kavramsal modeline karşı sorgular yazmaya olanak tanıyan dil ile tümleşik sorgu (LINQ) destekler. Entity Framework sorguları nesne bağlamı karşı yürütülen komut ağaç sorguları tarafından temsil edilir. LINQ to Entities ağaç sorgular, Entity Framework sorguları yürütür ve Entity Framework ve LINQ tarafından kullanılan nesneleri döndürür komut dil ile tümleşik sorgu (LINQ) sorguları dönüştürür. Oluşturma ve bir LINQ to Entities sorgusunda yürütme işlemi aşağıda verilmiştir:  
@@ -47,7 +47,7 @@ LINQ to Entities, geliştiricilerin Visual Basic veya Visual C# kullanarak varl�
   
  CLR yöntem çağrılarını kurallı işlevler veri kaynağında nasıl eşlendiğine ilişkin daha fazla bilgi için bkz: [CLR yöntemini kurallı işlev eşleme Mapping](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md).  
   
- Veritabanı nasıl kurallı çağırın ve içinden özel işlevler hakkında bilgi için [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgularını görmek [LINQ to Entities sorgularında çağırma işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
+ Çağrı canonical, veritabanını ve özel işlevlerini LINQ to Entities sorgularında hakkında daha fazla bilgi için bkz. [LINQ to Entities sorgularında çağırma işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
   
 ## <a name="query-execution"></a>Sorgu Yürütme  
  LINQ sorgusu, kullanıcı tarafından oluşturulduktan sonra veri kaynağına karşı yürütülür Entity Framework (formunda komut ağaçlarının) ile uyumlu bir temsili dönüştürülür. Sorgu yürütme zamanında istemci veya sunucuda tüm sorgu ifadeleri (veya sorgunun bileşenleri) değerlendirilir. Bu sonuç materialization veya varlık projeksiyonlar kullanılan ifadeleri içerir. Daha fazla bilgi için [sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md). Bir sorgu kez derleyerek ve ardından farklı parametrelerle birkaç kez yürütme performansı hakkında daha fazla bilgi için bkz: [derlenmiş sorgular (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  

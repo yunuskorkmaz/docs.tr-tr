@@ -4,16 +4,16 @@ description: ML.NET Model Oluşturucu otomatik olarak makine öğrenme modeli e�
 author: natke
 ms.date: 06/26/2019
 ms.custom: overview
-ms.openlocfilehash: 6f5bbe3c389e3ca42550a48ef3e6edbc963ac2e9
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 6049db79753986544de18faebfd047aa190af153
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410658"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539793"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Model Oluşturucu nedir ve nasıl çalışır?
 
-ML.NET Model Oluşturucu oluşturmak, eğitmek ve özel makine öğrenimi modellerini dağıtmak için bir kolayca anlaşılır grafik Visual Studio uzantısıdır. 
+ML.NET Model Oluşturucu oluşturmak, eğitmek ve özel makine öğrenimi modellerini dağıtmak için bir kolayca anlaşılır grafik Visual Studio uzantısıdır.
 
 Model oluşturucu farklı makine öğrenimi algoritmaları ve ayarları senaryonuza en uygun olanı bulmanıza yardımcı olmak için keşfetmek için otomatik machine learning (AutoML) kullanır.
 
@@ -52,7 +52,7 @@ Yaklaşım analizi, müşteri geri bildirimlerinden pozitif veya negatif yaklaş
 - Bu kredi kartı işlem sahte mi? (sahtekarlık algılama)
 
 Sınıflandırma iki kategoriye senaryonuz gerektiriyorsa, bu şablonu kendi kümesiyle kullanabilirsiniz.
- 
+
 #### <a name="issue-classification-multiclass-classification"></a>Sorun sınıflandırması (çok sınıflı sınıflandırma)
 
 Sorun sınıflandırması, müşteri geri bildirimi (örneğin GitHub) sorunları sorun başlığı ve açıklamayı kullanarak kategorilere ayırmak için kullanılabilir. Bu, çok sınıflı sınıflandırma görevi örneğidir.
@@ -142,10 +142,10 @@ Eğitim süresini sağlayabilir. Genel olarak, daha uzun bir süre için eğitim
 Veri kümesi boyutu  | Veri kümesi türü       | Ort. Eğitmek için saat
 ------------- | ------------------ | --------------
 0 - 10 mb     | Sayısal ve metin   | 10 saniye
-10 - 100 mb   | Sayısal ve metin   | 10 dakikalık 
-100 - 500 mb  | Sayısal ve metin   | 30 dakika 
-500 - 1 Gb    | Sayısal ve metin   | 60 dk önce 
-1 Gb+         | Sayısal ve metin   | 3 saat + 
+10 - 100 mb   | Sayısal ve metin   | 10 dakikalık
+100 - 500 mb  | Sayısal ve metin   | 30 dakika
+500 - 1 Gb    | Sayısal ve metin   | 60 dk önce
+1 Gb+         | Sayısal ve metin   | 3 saat +
 
 Eğitmek için tam zaman de bağlıdır:
 
@@ -160,13 +160,13 @@ Eğitmek için tam zaman de bağlıdır:
 
 Değerlendirme eğitilen modelin yeni test verileri ile tahminlerde kullanmayı işlemidir ve sonra ne kadar iyi tahmin ölçerek.
 
-Model Oluşturucu eğitim verileri Eğitim kümesi ve bir sınama kümesi halinde böler. Eğitim verileri (% 80) model ve test verilerini (% 20) eğitmek için kullanılır modelinizi değerlendirilecek geri tutulur.  Değerlendirme için kullanılan ölçüm, ML görevine bağlıdır. Daha fazla bilgi için [model değerlendirme ölçümleri](resources/metrics.md).  
+Model Oluşturucu eğitim verileri Eğitim kümesi ve bir sınama kümesi halinde böler. Eğitim verileri (% 80) model ve test verilerini (% 20) eğitmek için kullanılır modelinizi değerlendirilecek geri tutulur.  Değerlendirme için kullanılan ölçüm, ML görevine bağlıdır. Daha fazla bilgi için [model değerlendirme ölçümleri](resources/metrics.md).
 
 ### <a name="sentiment-analysis-binary-classification"></a>Yaklaşım analizi (ikili sınıflandırma)
 
 İkili sınıflandırma sorunlar için varsayılan ölçümü **doğruluğu**. Doğruluk oranı test veri modelinizi yapar doğru tahminler tanımlar. **% 100 yakın, daha iyi olduğu**.
 
-Gerçek pozitif sonuç oranına hatalı pozitif sonuç oranı karşılaştırması ölçer, AUC (alan) eğrisi altında olması gibi büyük 0,50 edilebilir modellere ilişkin diğer ölçümleri bildirdi. 
+Gerçek pozitif sonuç oranına hatalı pozitif sonuç oranı karşılaştırması ölçer, AUC (alan) eğrisi altında olması gibi büyük 0,50 edilebilir modellere ilişkin diğer ölçümleri bildirdi.
 
 F1 puanı gibi ek ölçümleri, duyarlık (doğru tahminler elde etmek için bu sınıfın toplam Öngörüler oranı) ve geri çağırma (doğru tahminler elde etmek için toplam fiili üyeleri söz konusu sınıfın oranını) arasındaki dengeyi denetlemek için kullanılabilir.
 
@@ -176,15 +176,14 @@ Sınıflı sınıflandırma sorunlar için varsayılan ölçümü **mikro doğru
 
 Veri çoklu sınıflarınızda burada kategorilere sorunları doğruluğu iki tür vardır:
 
-- Micro-doğruluğu: tüm örneklerinde doğru tahminler kesir. Sorun sınıflandırması senaryosunda, mikro doğruluk oranı doğru kategorisine atanmış gelen sorunları ' dir. 
+- Micro-doğruluğu: tüm örneklerinde doğru tahminler kesir. Sorun sınıflandırması senaryosunda, mikro doğruluk oranı doğru kategorisine atanmış gelen sorunları ' dir.
 - Makro doğruluk: sınıf düzeyinde ortalama doğruluğu. Sorun sınıflandırması senaryosunda doğruluğu her kategori için ölçülür ve ardından kategori doğruluk ortalaması alınır. Bu ölçüm için tüm sınıflar eşit ağırlık verilir. Mükemmel dengeli veri kümeleri için (mevcut olduğu her kategori örnekleri eşit sayıda), mikro doğruluk ve makro doğruluğu aynıdır.
-
 
 ### <a name="price-prediction-regression"></a>Fiyat tahmini (gerileme)
 
 Regresyon sorunlar için varsayılan ölçümü **RSquared**. 1 en iyi olası değerdir. Daha yakından RSquared, modelinizi daha iyi olduğu için 1 ' dir.
 
-Diğer ölçümleri bildirilen, mutlak kaybı gibi kare-kayıp ve RMS kaybı modelinizi anlamak ve diğer regresyon modeli ile karşılaştırmak için kullanılabilir. 
+Diğer ölçümleri bildirilen, mutlak kaybı gibi kare-kayıp ve RMS kaybı modelinizi anlamak ve diğer regresyon modeli ile karşılaştırmak için kullanılabilir.
 
 ## <a name="improve"></a>Geliştirin
 
@@ -192,7 +191,7 @@ Model performans puanınız değilse kadar iyi olmasını istiyorsanız, şunlar
 
 * Uzun bir süre için eğitin. Daha fazla zaman ile daha fazla bir algoritmalar ve ayarları denemek için otomatikleştirilmiş bir makine öğrenme altyapısı.
 
-* Daha fazla veri ekleyin. Bazen veri miktarı, yüksek kaliteli makine öğrenme modeli eğitmek yeterli değil. 
+* Daha fazla veri ekleyin. Bazen veri miktarı, yüksek kaliteli makine öğrenme modeli eğitmek yeterli değil.
 
 * Verilerinizi dengeleyin. Sınıflandırma görevleri için Eğitim kümesi kategoriler arasında dengelenir emin olun. Örneğin, 100 eğitim örnekler için dört sınıf varsa ve iki ilk sınıflar (etiket1 ve etiket2) 90 kaydeder, ancak diğer iki için kullanılır (etiket3 ve tag4) kalan 10 kayıtlar üzerindeki kullanılan yalnızca, dengeli veri eksikliği modelinizin corr için uğraşır neden olabilir ectly etiket3 veya tag4 tahmin edin.
 

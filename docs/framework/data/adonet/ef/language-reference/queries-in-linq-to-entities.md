@@ -2,24 +2,24 @@
 title: LINQ to Entities Sorguları
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: e8a3ce26c25bf8350460844110470d3a167c70ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 268906f8b79c8baf1ac6e29012b0ae7194b17084
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584616"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539430"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities Sorguları
 Bir sorgu, verileri bir veri kaynağından alır bir ifadedir. Sorgular genellikle ilişkisel veritabanları için SQL ve XML için XQuery gibi bir özel sorgu dilinde ifade edilir. Bu nedenle, geliştiriciler, her veri kaynağı veya veri biçimi, bunlar sorgu türü için yeni bir sorgu dili öğrenmek zorunda kalmışlardır. Dil ile tümleşik sorgu (LINQ), çeşitli veri kaynakları ve biçimler arasında verilerle çalışmak için daha basit ve tutarlı bir modeli sunar. Bir LINQ Sorgu her zaman nesneleri programlama ile çalışırsınız.  
   
  Bir LINQ Sorgu işlemi üç eylemden oluşur: sorguyu veri kaynağından veya kaynaklarından elde etmek ve sorgu oluşturun.  
   
- Veri kaynakları uygulayan <xref:System.Collections.Generic.IEnumerable%601> genel arabirim veya <xref:System.Linq.IQueryable%601> genel arabirim LINQ sorgulanabilir. Genel örneklerini <xref:System.Data.Objects.ObjectQuery%601> genel uygulayan sınıf <xref:System.Linq.IQueryable%601> arabirimi, veri kaynağı görevi gören [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular. <xref:System.Data.Objects.ObjectQuery%601> Genel bir sınıf, sıfır veya daha fazla yazılan nesnelerin bir koleksiyonunu döndüren bir sorgu temsil eder. Ayrıca C# anahtar sözcüğünü kullanarak bir varlık türü derleyicinin sağlayabilirsiniz `var` (Visual Basic'te Dim).  
+ Veri kaynakları uygulayan <xref:System.Collections.Generic.IEnumerable%601> genel arabirim veya <xref:System.Linq.IQueryable%601> genel arabirim LINQ sorgulanabilir. Genel örneklerini <xref:System.Data.Objects.ObjectQuery%601> genel uygulayan sınıf <xref:System.Linq.IQueryable%601> arabirimi, veri kaynağı olarak Entities sorgularında LINQ için hizmet. <xref:System.Data.Objects.ObjectQuery%601> Genel bir sınıf, sıfır veya daha fazla yazılan nesnelerin bir koleksiyonunu döndüren bir sorgu temsil eder. Ayrıca C# anahtar sözcüğünü kullanarak bir varlık türü derleyicinin sağlayabilirsiniz `var` (Visual Basic'te Dim).  
   
  Sorgu, veri kaynağından almak istediğiniz bilgi tam olarak belirtin. Bir sorgu, ayrıca nasıl bu bilgileri sıralanmış, gruplandırılmış ve döndürülmeden önce şeklinde belirtebilirsiniz. LINQ içinde bir sorgu bir değişkende depolanır. Sorgu değerler döndürürse, sorgu değişkeni sorgulanabilir tür olmalıdır. Bu sorgu değişkeni hiç eylem almaması ve veri döndürmemesidir; yalnızca, sorgu bilgileri depolar. Bir sorguyu oluşturduktan sonra herhangi bir veri almak için bu sorguyu yürütmeniz gerekir.  
   
 ## <a name="query-syntax"></a>Sorgu söz dizimi  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular iki farklı sözdizimini oluşan: sorgu ifadesi söz dizimi ve metot tabanlı sorgu söz dizimi. Sorgu ifadesi söz dizimi, C# 3.0 ve Visual Basic 9.0 yenidir ve yan tümceleri Transact-SQL veya XQuery benzer bir bildirim temelli söz yazılan bir dizi oluşur. Ancak, .NET Framework ortak dil çalışma zamanı (CLR) sorgu ifade sözdizimi kendisini okunamıyor. Bu nedenle, derleme zamanında sorgu ifadeleri CLR anlayan bir şey için çevrilmiş: yöntemi çağırır. Bu yöntemleri olarak bilinen *standart sorgu işleçleri*. Bir geliştirici olarak, doğrudan sorgu söz dizimi yerine yöntem sözdizimi kullanarak çağırma seçeneğiniz vardır. Daha fazla bilgi için [sorgu sözdizimi ve yöntem sözdizimi LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+ LINQ to Entities sorgularında iki farklı sözdizimini oluşan: sorgu ifadesi söz dizimi ve metot tabanlı sorgu söz dizimi. Sorgu ifadesi söz dizimi, C# 3.0 ve Visual Basic 9.0 yenidir ve yan tümceleri Transact-SQL veya XQuery benzer bir bildirim temelli söz yazılan bir dizi oluşur. Ancak, .NET Framework ortak dil çalışma zamanı (CLR) sorgu ifade sözdizimi kendisini okunamıyor. Bu nedenle, derleme zamanında sorgu ifadeleri CLR anlayan bir şey için çevrilmiş: yöntemi çağırır. Bu yöntemleri olarak bilinen *standart sorgu işleçleri*. Bir geliştirici olarak, doğrudan sorgu söz dizimi yerine yöntem sözdizimi kullanarak çağırma seçeneğiniz vardır. Daha fazla bilgi için [sorgu sözdizimi ve yöntem sözdizimi LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ### <a name="query-expression-syntax"></a>Sorgu ifadesi söz dizimi  
  Sorgu ifadeleri bir bildirim temelli bir sorgu söz dizimi var. Sorgular, Transact-SQL'e benzer biçimlendirilmiş üst düzey bir dilde yazmak bir geliştirici bu söz dizimi sağlar. Sorgu ifadesi söz dizimi kullanarak daha karmaşık filtreleme, sıralama ve gruplandırma işlemleri olabildiğince az kodla veri kaynaklarında gerçekleştirebilirsiniz. Daha fazla bilgi için [temel sorgu işlemleri (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md). Sorgu ifadesi söz dizimi kullanmayı gösteren örnekler için aşağıdaki konulara bakın:  
@@ -43,7 +43,7 @@ Bir sorgu, verileri bir veri kaynağından alır bir ifadedir. Sorgular genellik
 - [Sorgu ifadesi söz dizimi örnekleri: İlişkilerde gezinme](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>Metot tabanlı sorgu söz dizimi  
- Oluşturmak için başka bir yolu [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgulardır yöntem temelli sorgular kullanarak. Metot tabanlı sorgu söz dizimi, lambda ifadeleri parametre olarak geçirmeyi LINQ işleci yöntemlerinin doğrudan yöntem çağrılarının bir dizidir. Daha fazla bilgi için [Lambda ifadeleri](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Yöntem tabanlı sözdizimi kullanmayı gösteren örnekler için aşağıdaki konulara bakın:  
+ Entities sorgularında LINQ oluşturmak için başka bir yöntem temelli sorgular kullanarak yoludur. Metot tabanlı sorgu söz dizimi, lambda ifadeleri parametre olarak geçirmeyi LINQ işleci yöntemlerinin doğrudan yöntem çağrılarının bir dizidir. Daha fazla bilgi için [Lambda ifadeleri](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Yöntem tabanlı sözdizimi kullanmayı gösteren örnekler için aşağıdaki konulara bakın:  
   
 - [Metot tabanlı sorgu söz dizimi örnekleri: Projeksiyon](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
   

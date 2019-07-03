@@ -2,17 +2,21 @@
 title: DotNet nuget Yereller komutu
 description: Dotnet nuget Yereller komutu kaldırır veya http istek önbelleği, geçici bir önbellekte ya da makine genelindeki genel paketler klasörü gibi yerel NuGet kaynakları listeler.
 author: karann-msft
-ms.date: 12/04/2018
-ms.openlocfilehash: 0a9fd7876aa4d1907eb37e6bac54295d938d36d3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 6436bbaee7ae50f4b225c32b2245c737b0d359c3
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632419"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539263"
 ---
-# <a name="dotnet-nuget-locals"></a>DotNet nuget yerel öğeler
+# <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
+**Bu konu için geçerlidir: ✓** .NET Core SDK'sı 1.x ve sonraki sürümler
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Ad
 

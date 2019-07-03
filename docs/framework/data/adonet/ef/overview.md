@@ -2,12 +2,12 @@
 title: Entity Framework’e Genel Bakış
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: e6c96326991c6f883ad670393bb5c2691f8ad29e
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 498d0478dc94048a69c393151d3ff8a752706e1c
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307341"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539477"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework'e Genel Bakış
 
@@ -45,7 +45,7 @@ Eşlemeleri ve depolama modeli, kavramsal model, veri sınıflarını veya uygul
 
 Birden fazla yalnızca başka bir nesne ilişkisel eşleme çözümü [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] erişmek ve varlıklar ve ilişkiler kavramsal modeldeki olarak temsil edilen veri değiştirmek uygulamaları temelde yöneliktir. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Kavramsal modelde veri kaynağına özgü sorgulara temsil edilen varlık türleri nesne sorguları çevirmek için model ve eşleme dosyalarını bilgileri kullanır. Sorgu sonuçları nesnelerini gerçekleştirilmiş olan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] yönetir. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Kavramsal bir modeli sorgulama ve nesneleri döndürmek için aşağıdaki yöntemleri sağlar:
 
-- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Kavramsal modelde tanımlı varlık türleri sorgulama için dil ile tümleşik sorgu (LINQ) desteği sağlar. Daha fazla bilgi için [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
+- LINQ to Entities. Kavramsal modelde tanımlı varlık türleri sorgulama için dil ile tümleşik sorgu (LINQ) desteği sağlar. Daha fazla bilgi için [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Bir depolama bağımsız SQL diyalektiği kavramsal modeldeki varlıklar ile doğrudan çalıştığını ve varlık veri modeli kavramları destekleyen SQL. [!INCLUDE[esql](../../../../../includes/esql-md.md)] hem nesne sorguları ve EntityClient sağlayıcısı ile yürütülen sorguları ile kullanılır. Daha fazla bilgi için [Entity SQL'e genel bakış](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 

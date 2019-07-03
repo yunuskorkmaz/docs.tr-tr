@@ -2,12 +2,12 @@
 title: Entity Framework Terimleri
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: bc3712628d308629208af893e8fdee16cbba1e93
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306347"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539872"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework Terimleri
 Bu konu, sık başvurulan terimlerini tanımlar [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belgeleri. Ek bilgileri kullanılabildiği ilgili konulara bağlantılar sağlanmaktadır.  
@@ -44,7 +44,7 @@ Bu konu, sık başvurulan terimlerini tanımlar [!INCLUDE[adonet_ef](../../../..
 |Bağımsız ilişkilendirme|Temsil edilen ve bağımsız bir nesne tarafından izlenen varlıklar arasında ilişkilendirme.|  
 |anahtar|Hangi özelliği belirten bir varlık türü özniteliğini veya özellikler kümesini varlık türü benzersiz örneğini tanımlamak için kullanılır. Nesne katmanı tarafından temsil <xref:System.Data.EntityKey> sınıfı.<br /><br /> Daha fazla bilgi için [anahtarı öğesi (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#key-element-csdl) ve [Varlık anahtarı](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |Yavaş yükleniyor|Bir sorgu tarafından döndürülen nesneler, ilgili nesneleri aynı anda yüklü değil. Bunun yerine bunların gezinme özelliğini erişildiğinde otomatik olarak yüklenir.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Visual C# ve Visual Basic doğrudan, bildirime dayalı biçimde ifade edilmesi çapraz filtre ve projeksiyon işlemleri izin sorgu işleçleri kümesini tanımlayan bir sorgu söz dizimi.<br /><br /> Daha fazla bilgi için [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|LINQ - Varlıklar|Visual C# ve Visual Basic doğrudan, bildirime dayalı biçimde ifade edilmesi çapraz filtre ve projeksiyon işlemleri izin sorgu işleçleri kümesini tanımlayan bir sorgu söz dizimi.<br /><br /> Daha fazla bilgi için [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |eşleme|Kavramsal modeldeki öğeleri ve depolama modelindeki öğeleri arasındaki yazışmalar belirtimi.<br /><br /> Daha fazla bilgi için [MSL belirtimi](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |.MSL dosyası|Arasındaki kavramsal model ve depolama modeli MSL ifade, eşleme içeren bir XML dosyası.|  
 |eşleme belirtimi dili (MSL)|Depolama modelindeki öğeleri kavramsal modelde tanımlı öğeleri eşlemek için kullanılan bir XML tabanlı dil.<br /><br /> Daha fazla bilgi için [MSL belirtimi](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  

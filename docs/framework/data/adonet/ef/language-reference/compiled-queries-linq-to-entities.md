@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: f3ba6bfd0f83270bc6b9e980fe92f6630c90ad49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3f24fb335169c2b38ce945377bc4e64a47fe9d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785352"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539915"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Derlenmiş Sorgular (LINQ to Entities)
 Birden çok kez varlık Çerçevesi'nde yapısal olarak benzer sorguları yürüten bir uygulamanız varsa, sorgu bir kez derleyerek ve birkaç kez farklı parametrelerle yürütme sık performansı artırabilirsiniz. Örneğin, bir uygulama belirli bir şehirdeki tüm müşterileri alma gerekebilir; Şehir, çalışma zamanında bir forma kullanıcı tarafından belirtilir. LINQ to Entities, bu amaç için derlenmiş sorgular kullanmayı destekler.  
@@ -19,7 +19,7 @@ Birden çok kez varlık Çerçevesi'nde yapısal olarak benzer sorguları yürü
   
  <xref:System.Data.Objects.CompiledQuery> Sınıfı, derleme ve sorguları yeniden kullanım için önbelleğe alınmasını sağlar. Kavramsal olarak, bu sınıf içeren bir <xref:System.Data.Objects.CompiledQuery>'s `Compile` yöntemi ile çeşitli aşırı yükler. Çağrı `Compile` derlenmiş sorguyu temsil etmek için yeni bir temsilci oluşturmak için yöntemi. `Compile` İle sağlanan yöntemleri, bir <xref:System.Data.Objects.ObjectContext> ve bazı sonucu üreten bir temsilci dönüş parametresi değerleri (gibi bir <xref:System.Linq.IQueryable%601> örnek). Sorgu bir kez yalnızca ilk yürütme sırasında derler. Sorgu için derleme ayarlarken birleştirme seçeneklerini daha sonra değiştirilemez. Sorgu derlenmiş sonra yalnızca ilkel tür parametrelerinin sağlayabilirsiniz, ancak oluşturulan SQL değiştirirsiniz sorgunun bölümlerini değiştirilemiyor. Daha fazla bilgi için [Entity Framework birleştirme seçeneklerini ve derlenmiş sorgular](https://go.microsoft.com/fwlink/?LinkId=199591)  
   
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] Sorgu ifadesi, <xref:System.Data.Objects.CompiledQuery>'s `Compile` yöntemi derler genel biri tarafından temsil edilir `Func` gibi Temsilciler <xref:System.Func%605>. En fazla sorgu ifadesi kapsülleyebilir bir `ObjectContext` parametre, dönüş parametresi ve 16 sorgu parametreleri. 16'dan fazla sorgu parametreleri gerekiyorsa, sorgu parametreleri özelliklerini temsil eden bir yapı oluşturabilirsiniz. Özellikler ayarlandıktan sonra sorgu ifadesinde yapısına özelliklerini kullanabilirsiniz.  
+ LINQ to Entities sorgu ifadelerinde, <xref:System.Data.Objects.CompiledQuery>'s `Compile` yöntemi derler genel biri tarafından temsil edilir `Func` gibi Temsilciler <xref:System.Func%605>. En fazla sorgu ifadesi kapsülleyebilir bir `ObjectContext` parametre, dönüş parametresi ve 16 sorgu parametreleri. 16'dan fazla sorgu parametreleri gerekiyorsa, sorgu parametreleri özelliklerini temsil eden bir yapı oluşturabilirsiniz. Özellikler ayarlandıktan sonra sorgu ifadesinde yapısına özelliklerini kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, derler ve ardından kabul eden bir sorguyu çağırır bir <xref:System.Decimal> giriş parametresi ve toplam süre değerinden büyük veya eşittir $200,00 olduğu siparişler bir dizi döndürür:  

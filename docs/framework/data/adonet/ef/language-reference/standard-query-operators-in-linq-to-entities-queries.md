@@ -2,24 +2,24 @@
 title: LINQ to Entities Sorgularında Standart Sorgu İşleçleri
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2661f1b492ff8f2ed18c7b396326562050ca45b
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797728"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539452"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities Sorgularında Standart Sorgu İşleçleri
 Bir sorgu, veri kaynağından almak istediğiniz bilgileri belirtin. Bir sorgu, ayrıca nasıl bu bilgileri sıralanmış, gruplandırılmış ve döndürülmeden önce şeklinde belirtebilirsiniz. LINQ sorguda kullanabileceğiniz standart sorgu yöntem sunmaktadır. Bu yöntemlerin çoğu dizileri üzerinde çalışır; Bu bağlamda türü uygulayan bir nesne dizisidir <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. Standart sorgu işleçleri sorgu işlevselliği, filtreleme, projeksiyon, toplama, sıralama, gruplandırma, sayfalama ve daha fazlasını içerir. Bazıları, standart sorgu işleçleri anahtar sözcüğü sözdizimi adanmış böylece sorgu ifade sözdizimi kullanılarak çağrılabilir sık kullanılır. Bir sorgu ifadesinde, bir sorgu yöntemi tabanlı eşdeğer daha ifade etmek için farklı, daha okunabilir bir yoludur. Sorgu ifadesi tümceleri sorgu yöntemlere yapılan çağrılar derleme zamanında çevrilir. Eşdeğer sorgu ifadesi tümceleri sahip standart sorgu işleçleri bir listesi için bkz. [standart sorgu işleçlerine genel bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
   
- Standart sorgu işleçlerinin tüm desteklenen [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular. Daha fazla bilgi için [desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). Bu konuda özgü standart sorgu işleçleri hakkında bilgi sağlanır [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Bilinen sorunlar hakkında daha fazla bilgi için [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgularını görmek [bilinen sorunlar ve dikkat edilmesi gerekenler LINQ to Entities'de](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
+ Tüm standart sorgu işleçlerinin, LINQ to Entities sorgularında desteklenmez. Daha fazla bilgi için [desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). Bu konu LINQ to Entities özgü standart sorgu işleçleri hakkında bilgi sağlar. LINQ to Entities sorgularında bilinen sorunlarla ilgili daha fazla bilgi için bkz. [bilinen sorunlar ve dikkat edilmesi gerekenler LINQ to Entities'de](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
   
 ## <a name="projection-and-filtering-methods"></a>Öngörü ve yöntemleri filtreleme  
  *Projeksiyon* öğelerini bir sonuç kümesi istenilen biçime dönüştürme için ifade eder. Örneğin, bir özellik alt kümesi yansıtabilirsiniz sonuçta her bir nesneden ayarlamanız gerekir, proje bir özelliği ve bir matematiksel bir hesaplama gerçekleştirmek veya sonuç kümesinin tamamını nesneden yansıtabilirsiniz. Projeksiyon yöntemler `Select` ve `SelectMany`.  
   
  *Filtreleme* sonuç kümesini, belirtilen bir koşulla eşleşen öğeleri içerecek şekilde sınırlama işlemi için ifade eder. Filtreleme yöntemidir `Where`.  
   
- Projeksiyon ve yöntemleri filtreleme çoğu aşırı yüklemeler desteklenir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], konumsal bağımsız değişken kabul eden olanlar hariç.  
+ Projeksiyon ve filtreleme yöntemlerinin çoğu aşırı LINQ to Entities, konumsal bağımsız değişken kabul eden olanlar hariç olmak üzere desteklenir.  
   
 ## <a name="join-methods"></a>Yöntemleri katılın  
  Birleştirme, birbiriyle gezilebilir hiçbir ilişkisi olan veri kaynaklarını hedefleyen sorgularda önemli bir işlemdir. Birleşim iki veri kaynaklarının bir veri kaynağı nesneleri bir ortak özniteliği veya özelliği paylaşan diğer veri kaynağı nesneleri ile işbirliğidir. Birleşim yöntemleri `Join` ve `GroupJoin`.  
@@ -29,7 +29,7 @@ Bir sorgu, veri kaynağından almak istediğiniz bilgileri belirtin. Bir sorgu, 
 ## <a name="set-methods"></a>Yöntemler Ayarlama  
  LINQ ayarlama işlemleri, varlığı veya yokluğu, eşdeğer öğelerin aynı veya başka bir koleksiyonu (veya kümesi), sonuç kümesi temel sorgu işlemleri ' dir. Set yöntemleri `All`, `Any`, `Concat`, `Contains`, `DefaultIfEmpty`, `Distinct`, `EqualAll`, `Except`, `Intersect`, ve `Union`.  
   
- Kümesi yöntemlerinin çoğu aşırı yüklemeler desteklenir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], LINQ to Objects'in karşılaştırıldığında davranışı bazı farklılıklar olsa. Ancak, kullanan yöntemleri Ayarla bir <xref:System.Collections.Generic.IEqualityComparer%601> karşılaştırıcı veri kaynağına dönüştürülemeyen için desteklenmez.  
+ LINQ to Objects'in karşılaştırıldığında davranışı bazı farklılıklar olsa LINQ to Entities, kümesi yöntemlerinin çoğu aşırı yüklemeler desteklenir. Ancak, kullanan yöntemleri Ayarla bir <xref:System.Collections.Generic.IEqualityComparer%601> karşılaştırıcı veri kaynağına dönüştürülemeyen için desteklenmez.  
   
 ## <a name="ordering-methods"></a>Sıralama yöntemleri  
  Sıralama veya sıralama, bir veya daha fazla özniteliklerine dayalı bir sonuç kümesi öğelerinin sıralama için ifade eder. Birden fazla sıralama ölçütü belirterek, bir grup içindeki TIES bozabilir.  

@@ -2,12 +2,12 @@
 title: Güvenlik konuları (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: cf42787d7cc67d80f43a08b5fa71161fee20f5c3
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307309"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539834"
 ---
 # <a name="security-considerations-entity-framework"></a>Güvenlik konuları (varlık çerçevesi)
 Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konuları açıklanmaktadır. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamalar. Güvenli .NET Framework uygulamaları oluşturmaya yönelik önerileri de izlemelidir. Daha fazla bilgi için [güvenliğine genel bakış](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -100,9 +100,9 @@ Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konu
   
      [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgular, her yerde değişmez değerleri kabul edildiğini parametreleri kabul eder. Sorguyu doğrudan yerine bir dış aracı ekleme değişmez parametreli sorgular kullanmanız gerekir. Kullanmayı da düşünmelisiniz [Sorgu Oluşturucu yöntemleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) varlık SQL güvenli bir şekilde oluşturmak için.  
   
-- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] ekleme saldırılarını:  
+- LINQ to Entities ekleme saldırılarını:  
   
-     Sorgu oluşturmak mümkün olsa da [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)], nesne modeli API aracılığıyla gerçekleştirilir. Farklı [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgular [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] sorguları, dize düzenlemesi veya birleştirme kullanarak değil oluşur ve bunlar geleneksel SQL ekleme saldırılarına açık değildir.  
+     Sorgu oluşturma LINQ to Entities'de mümkün olsa da, bu nesne modeli API aracılığıyla gerçekleştirilir. Farklı [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgular, LINQ to Entities sorgularında, dize düzenlemesi veya birleştirme kullanarak değil oluşur ve bunlar geleneksel SQL ekleme saldırılarına açık değildir.  
   
 #### <a name="prevent-very-large-result-sets"></a>Çok büyük sonuç kümelerinin engelleyin.  
  Çok büyük bir sonuç kümesi, istemci sonuç kümesinin boyutuna orantılı kaynak kullanan işlemleri gerçekleştiriliyorsa kapatmak istemci sistemi neden olabilir. Beklenmedik bir şekilde büyük sonuç kümeleri, aşağıdaki koşullarda oluşabilir:  
@@ -113,7 +113,7 @@ Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konu
   
 - İçinde iç içe geçmiş [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgular.  
   
- Kullanıcı girişi kabul ederken giriş sonuç kümeleri sistem başa çıkabilir değerinden daha büyük hale gelmesine neden olamaz emin olmanız gerekir. Ayrıca <xref:System.Linq.Queryable.Take%2A> yönteminde [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] veya [sınırı](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) işlecinde [!INCLUDE[esql](../../../../../includes/esql-md.md)] sonuç kümesinin boyutunu sınırlamak için.  
+ Kullanıcı girişi kabul ederken giriş sonuç kümeleri sistem başa çıkabilir değerinden daha büyük hale gelmesine neden olamaz emin olmanız gerekir. Ayrıca <xref:System.Linq.Queryable.Take%2A> yöntemi LINQ to Entities'de veya [sınırı](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) işlecinde [!INCLUDE[esql](../../../../../includes/esql-md.md)] sonuç kümesinin boyutunu sınırlamak için.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Iqueryable sonuçları döndüren ifşa edildi yöntemlere çağıranlar potansiyel olarak güvenilmeyen olduğunda kaçının.  
  Geri dönmekten kaçının <xref:System.Linq.IQueryable%601> potansiyel olarak güvenilmeyen arayanlara aşağıdaki nedenlerle kullanıma sunulan yöntemleri türleri:  

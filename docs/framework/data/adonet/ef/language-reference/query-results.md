@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: 98dbb0185de88c6fd69c6daf1540e997c14cc9e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 165fb1524daa781c29037bf1c9cb2b3013504177
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641424"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539748"
 ---
 # <a name="query-results"></a>Sorgu Sonuçları
-Sonra bir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgu komut ağaçlarını dönüştürülür ve yürütülen, sorgu sonuçları genellikle aşağıdakilerden biri döndürülür:  
+Bir LINQ to Entities sorgusunda komut ağaçlarını dönüştürülür ve yürütülen sonra sorgu sonuçları genellikle aşağıdakilerden biri döndürülür:  
   
 - Sıfır veya daha fazla yazılan bir varlığın nesnelerin veya projeksiyon kavramsal modeldeki karmaşık türleri koleksiyonu.  
   

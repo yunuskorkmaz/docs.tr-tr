@@ -1,21 +1,28 @@
 ---
 title: DotNet komut geçirme
 description: Dotnet geçirme komutu, bir projeyi ve tüm bağımlılıklarını geçirir.
-ms.date: 05/25/2018
-ms.openlocfilehash: 861cd2cb982c6f41baf00a2cbd7e04b26816af76
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 3304f666d15d9188cdae76a401747d91791f817f
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631946"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539394"
 ---
-# <a name="dotnet-migrate"></a>DotNet geçirme
+# <a name="dotnet-migrate"></a>dotnet migrate
 
+**Bu konu için geçerlidir: ✓** .NET Core SDK'sı 1.x ve sonraki sürümler
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Ad
 
-`dotnet migrate` -Önizleme 2 .NET Core projesi bir .NET Core SDK'sı 1.0 projesine geçirir.
+`dotnet migrate` -Önizleme 2 .NET Core projesi bir .NET Core SDK stilinde projesine geçirir.
+
+> [!NOTE]
+> `dotnet migrate` .NET Core 3.0 SDK sonraki Önizleme sürümünde kaldırılacak.
 
 ## <a name="synopsis"></a>Synopsis
 
@@ -26,7 +33,7 @@ dotnet migrate [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet migrate` Komutu geçerli bir önizleme 2 geçirir *project.json*-geçerli bir .NET Core SDK'sı 1.0 projeye dayalı *csproj* proje.
+`dotnet migrate` Komutu geçerli bir önizleme 2 geçirir *project.json*-geçerli bir .NET Core SDK'sı-stili projeye dayalı *csproj* proje.
 
 Kök proje ve kök projesini içeren tüm proje başvuruları, varsayılan olarak, komut geçirir. Kullanarak bu davranışı devre dışı `--skip-project-references` zamanında seçeneği.
 

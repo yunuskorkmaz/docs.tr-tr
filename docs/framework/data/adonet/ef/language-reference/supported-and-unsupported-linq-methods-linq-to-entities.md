@@ -2,18 +2,18 @@
 title: Desteklenen ve Desteklenmeyen LINQ Yöntemleri (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 338069b5139999a046d1b1b10a8eac4acb1d9e06
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797689"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539426"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Desteklenen ve Desteklenmeyen LINQ Yöntemleri (LINQ to Entities)
-Bu bölümde desteklenen veya desteklenmeyen, dil ile tümleşik sorgu (LINQ) standart sorgu işleçleri hakkında bilgi [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular. LINQ standart sorgu işleçlerinin çoğu, tamsayı bağımsız değişken kabul eden aşırı yüklenmiş bir sürümü vardır. Tamsayı bağımsız değişkeni sıfır tabanlı bir dizin üzerinde çalıştırılan dizisindeki karşılık gelen bir <xref:System.Collections.Generic.IEqualityComparer%601>, veya <xref:System.Collections.Generic.IComparer%601>. Aksi belirtilmediği sürece, bu aşırı yüklenmiş sürümleri LINQ standart sorgu işleçlerinin desteklenmez ve kullanılmaya çalışılırsa, bir özel durum oluşturur.  
+Bu bölümde, desteklenen ya da LINQ to Entities sorgularında Desteklenmeyen dil ile tümleşik sorgu (LINQ) standart sorgu işleçleri hakkında bilgi sağlar. LINQ standart sorgu işleçlerinin çoğu, tamsayı bağımsız değişken kabul eden aşırı yüklenmiş bir sürümü vardır. Tamsayı bağımsız değişkeni sıfır tabanlı bir dizin üzerinde çalıştırılan dizisindeki karşılık gelen bir <xref:System.Collections.Generic.IEqualityComparer%601>, veya <xref:System.Collections.Generic.IComparer%601>. Aksi belirtilmediği sürece, bu aşırı yüklenmiş sürümleri LINQ standart sorgu işleçlerinin desteklenmez ve kullanılmaya çalışılırsa, bir özel durum oluşturur.  
   
 ## <a name="projection-and-restriction-methods"></a>Öngörü ve kısıtlama yöntemi  
- Çoğu LINQ öngörü ve kısıtlama yöntemleri desteklenir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] konumsal bağımsız değişken kabul eden olanlar hariç olmak üzere sorgular. Daha fazla bilgi için [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Aşağıdaki tabloda, desteklenen ve desteklenmeyen yansıtma ve kısıtlama yöntemler listelenmiştir.  
+ LINQ projeksiyon ve kısıtlama yöntemlerinin çoğu LINQ to Entities sorgularında, konumsal bağımsız değişken kabul eden olanlar hariç desteklenir. Daha fazla bilgi için [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Aşağıdaki tabloda, desteklenen ve desteklenmeyen yansıtma ve kısıtlama yöntemler listelenmiştir.  
   
 |Yöntem|Destek|Visual Basic işlev imzası|C# yöntem imzası|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -27,7 +27,7 @@ Bu bölümde desteklenen veya desteklenmeyen, dil ile tümleşik sorgu (LINQ) st
 |<xref:System.Linq.Queryable.Where%2A>|Desteklenmez|`Function Where(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Where<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="join-methods"></a>Yöntemleri katılın  
- LINQ birleşim yöntemleri desteklenir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], kabul olanlar hariç olmak üzere bir `IEqualityComparer` karşılaştırıcı veri kaynağına dönüştürülemeyen olduğundan. Daha fazla bilgi için [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Aşağıdaki tabloda, desteklenen ve desteklenmeyen birleşimi yöntemler listelenmiştir.  
+ LINQ birleşim yöntemleri LINQ to Entities'de, kabul olanlar hariç desteklenen bir `IEqualityComparer` karşılaştırıcı veri kaynağına dönüştürülemeyen olduğundan. Daha fazla bilgi için [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Aşağıdaki tabloda, desteklenen ve desteklenmeyen birleşimi yöntemler listelenmiştir.  
   
 |Yöntem|Destek|Visual Basic işlev imzası|C# yöntem imzası|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -37,7 +37,7 @@ Bu bölümde desteklenen veya desteklenmeyen, dil ile tümleşik sorgu (LINQ) st
 |<xref:System.Linq.Queryable.Join%2A>|Desteklenmez|`Function Join(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, TInner, TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Join\<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func\<TOuter, TKey>> outerKeySelector, Expression<Func\<TInner, TKey>> innerKeySelector, Expression<Func\<TOuter, TInner, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="set-methods"></a>Yöntemler Ayarlama  
- Çoğu yöntemleri desteklenir LINQ kümesinin [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorguları, kullananlar hariç olmak üzere bir <xref:System.Collections.Generic.EqualityComparer%601>. Daha fazla bilgi için [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Aşağıdaki tabloda, desteklenen ve desteklenmeyen küme yöntemler listelenmiştir.  
+ Çoğu LINQ ayarlama yöntemleri LINQ to Entities sorgularında, kullananlar hariç desteklenir bir <xref:System.Collections.Generic.EqualityComparer%601>. Daha fazla bilgi için [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Aşağıdaki tabloda, desteklenen ve desteklenmeyen küme yöntemler listelenmiştir.  
   
 |Yöntem|Destek|Visual Basic işlev imzası|C# yöntem imzası|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -59,7 +59,7 @@ Bu bölümde desteklenen veya desteklenmeyen, dil ile tümleşik sorgu (LINQ) st
 |<xref:System.Linq.Queryable.Union%2A>|Desteklenmez|`Function Union(Of TSource) ( _ source1 As IQueryable(Of TSource), _ source2 As IEnumerable(Of TSource), _ comparer As IEqualityComparer(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Union<TSource>( this IQueryable<TSource> source1, IEnumerable<TSource> source2, IEqualityComparer<TSource> comparer )`|  
   
 ## <a name="ordering-methods"></a>Sıralama yöntemleri  
- Sıralama yöntemleri LINQ çoğunu desteklenir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], kabul olanlar hariç olmak üzere bir <xref:System.Collections.Generic.IComparer%601>, veri kaynağına karşılaştırıcı çevrilemez. Daha fazla bilgi için [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Aşağıdaki tabloda, desteklenen ve desteklenmeyen sıralama yöntemleri listelenmektedir.  
+ Sıralama yöntemleri LINQ çoğunu desteklenen LINQ to Entities'de, kabul olanlar hariç olmak üzere bir <xref:System.Collections.Generic.IComparer%601>, veri kaynağına karşılaştırıcı çevrilemez. Daha fazla bilgi için [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Aşağıdaki tabloda, desteklenen ve desteklenmeyen sıralama yöntemleri listelenmektedir.  
   
 |Yöntem|Destek|Visual Basic işlev imzası|C# yöntem imzası|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -74,7 +74,7 @@ Bu bölümde desteklenen veya desteklenmeyen, dil ile tümleşik sorgu (LINQ) st
 |<xref:System.Linq.Queryable.Reverse%2A>|Desteklenmez|`Function Reverse(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Reverse<TSource>( this IQueryable<TSource> source )`|  
   
 ## <a name="grouping-methods"></a>Gruplandırma yöntemleri  
- Çoğu LINQ gruplandırma yöntemleri desteklenir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], kabul olanlar hariç olmak üzere bir <xref:System.Collections.Generic.IEqualityComparer%601>, veri kaynağına karşılaştırıcı çevrilemez. Daha fazla bilgi için [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Aşağıdaki tabloda, desteklenen ve desteklenmeyen gruplandırma yöntemler listelenmiştir.  
+ Çoğu LINQ gruplandırma yöntemleri desteklenir LINQ to Entities'de, kabul olanlar hariç olmak üzere bir <xref:System.Collections.Generic.IEqualityComparer%601>, veri kaynağına karşılaştırıcı çevrilemez. Daha fazla bilgi için [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Aşağıdaki tabloda, desteklenen ve desteklenmeyen gruplandırma yöntemler listelenmiştir.  
   
 |Yöntem|Destek|Visual Basic işlev imzası|C# yöntem imzası|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -88,7 +88,7 @@ Bu bölümde desteklenen veya desteklenmeyen, dil ile tümleşik sorgu (LINQ) st
 |<xref:System.Linq.Queryable.GroupBy%2A>|Desteklenmez|`Function GroupBy(Of TSource, TKey, TElement, TResult) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ elementSelector As Expression(Of Func(Of TSource, TElement)), _ resultSelector As Expression(Of Func(Of TKey, IEnumerable(Of TElement), TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupBy<TSource, TKey, TElement, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector, Expression<Func<TSource, TElement>> elementSelector, Expression<Func<TKey, IEnumerable<TElement>, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="aggregate-methods"></a>Toplama yöntemi  
- Temel veri türlerini kabul eden toplama yöntemleri çoğunu desteklenir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Daha fazla bilgi için [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Aşağıdaki tabloda desteklenen ve desteklenmeyen toplama yöntemleri listelenmiştir.  
+ Temel veri türlerini kabul eden toplama yöntemleri çoğunu, LINQ to Entities'de desteklenir. Daha fazla bilgi için [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Aşağıdaki tabloda desteklenen ve desteklenmeyen toplama yöntemleri listelenmiştir.  
   
 |Yöntem|Destek|Visual Basic işlev imzası|C# yöntem imzası|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -153,7 +153,7 @@ Bu bölümde desteklenen veya desteklenmeyen, dil ile tümleşik sorgu (LINQ) st
 |<xref:System.Linq.Queryable.OfType%2A>|Desteklenen <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
   
 ## <a name="paging-methods"></a>Disk belleği yöntemlerinin  
- LINQ disk belleği yöntemlerinin sayısı desteklenmiyor [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular. Daha fazla bilgi için [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Aşağıdaki tabloda, desteklenen ve desteklenmeyen bir disk belleği yöntemler listelenmiştir.  
+ LINQ disk belleği yöntemlerinin sayısı, LINQ to Entities sorgularında desteklenmez. Daha fazla bilgi için [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Aşağıdaki tabloda, desteklenen ve desteklenmeyen bir disk belleği yöntemler listelenmiştir.  
   
 |Yöntem|Destek|Visual Basic işlev imzası|C# yöntem imzası|  
 |------------|-------------|-------------------------------------|--------------------------|  

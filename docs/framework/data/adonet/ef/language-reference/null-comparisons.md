@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: f3bbb55ec65df1af776779682d307a67034e34b3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5862506960ae1e763baebee5d990df83f92cc784
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489905"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539731"
 ---
 # <a name="null-comparisons"></a>Null Karşılaştırmalar
-A `null` değerindeki veri kaynağı değeri bilinmeyen olduğunu gösterir. İçinde [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular, denetleyebilirsiniz null değerler, bu nedenle, bazı hesaplamalar veya karşılaştırmalar yalnızca geçerli veya null olmayan, içeren satırları üzerinde gerçekleştirilen veri. CLR null semantikler, ancak veri kaynağı bir null semantiğe farklı olabilir. Çoğu veritabanı, null karşılaştırmalar işlemek için mantığı üç değerli bir sürümünü kullanın. Diğer bir deyişle, bir null değeri karşılaştırmak için değerlendirilmiyor `true` veya `false`, olarak değerlendirilen `unknown`. ANSI null değerlere uygulaması genellikle budur ancak bu her zaman böyle değildir.  
+A `null` değerindeki veri kaynağı değeri bilinmeyen olduğunu gösterir. LINQ to Entities sorgularında, geçerli veya null olmayan, veri içeren satırları üzerinde bazı hesaplamalar veya karşılaştırmalar yalnızca gerçekleştirilir böylece null değerler için kontrol edebilirsiniz. CLR null semantikler, ancak veri kaynağı bir null semantiğe farklı olabilir. Çoğu veritabanı, null karşılaştırmalar işlemek için mantığı üç değerli bir sürümünü kullanın. Diğer bir deyişle, bir null değeri karşılaştırmak için değerlendirilmiyor `true` veya `false`, olarak değerlendirilen `unknown`. ANSI null değerlere uygulaması genellikle budur ancak bu her zaman böyle değildir.  
   
  SQL Server'da varsayılan olarak null eşittir null karşılaştırma null değeri döndürür. Aşağıdaki örnekte, satırları burada `ShipDate` olan null sonuç kümesinden dışlanan ve Transact-SQL deyimini 0 satırları döndürür.  
   
@@ -44,7 +44,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>Toplama işlevleri için boş koleksiyonları geçirme  
- İçinde [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], destekleyen bir koleksiyonu geçirdiğinizde `IQueryable` bir toplama işlevi toplama işlemleri veritabanına gerçekleştirilir. Bellek içinde gerçekleştirilen bir sorgu ve veritabanına gerçekleştirilen sorgu sonuçlarını farklılıklar olabilir. Herhangi bir eşleşme varsa bir bellek içi sorgusu ile sorgu sıfır döndürür. Veritabanını, aynı sorgu döndürür `null`. Varsa bir `null` LINQ Toplama işlevi için geçirilen değer, bir özel durum oluşturulur. Olası kabul edecek şekilde `null` değerleri, cast türleri ve türlerin boş değer atanabilir türler için sorgu sonuçlarını alma özellikleri.  
+ LINQ to Entities'de destekleyen bir koleksiyonu geçirdiğinizde, `IQueryable` bir toplama işlevi toplama işlemleri veritabanına gerçekleştirilir. Bellek içinde gerçekleştirilen bir sorgu ve veritabanına gerçekleştirilen sorgu sonuçlarını farklılıklar olabilir. Herhangi bir eşleşme varsa bir bellek içi sorgusu ile sorgu sıfır döndürür. Veritabanını, aynı sorgu döndürür `null`. Varsa bir `null` LINQ Toplama işlevi için geçirilen değer, bir özel durum oluşturulur. Olası kabul edecek şekilde `null` değerleri, cast türleri ve türlerin boş değer atanabilir türler için sorgu sonuçlarını alma özellikleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

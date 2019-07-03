@@ -1,15 +1,15 @@
 ---
 title: Docker öğreticisiyle bir uygulamayı kapsayıcılı hale getirme
 description: Bu öğreticide, bir .NET Core uygulamasını Docker ile kapsayıcılı hale getirme öğreneceksiniz.
-ms.date: 04/10/2019
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 2ea9e9bc2614e62fe6ec0d59e39d42c2e32a80a1
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 6a1d366aceecdf4bd22a04f823aa6805060f8069
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051811"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539183"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Öğretici: .NET Core uygulamasını kapsayıcılı hale getirme
 
@@ -29,16 +29,16 @@ Docker kapsayıcı derleme ve dağıtım görevleri için bir .NET Core uygulama
 
 Aşağıdaki önkoşulları yükleyin:
 
-- [.NET core SDK'sını 2.2](https://dotnet.microsoft.com/download)\
+* [.NET core SDK'sını 2.2](https://dotnet.microsoft.com/download)\
 .NET Core yüklü varsa `dotnet --info` kullandığınız hangi SDK belirlemek için komutu.
 
-- [Docker Community Edition](https://www.docker.com/products/docker-desktop)
+* [Docker Community Edition](https://www.docker.com/products/docker-desktop)
 
-- Geçici bir çalışma dizini için *Dockerfile* ve .NET Core örnek uygulaması.
+* Geçici bir çalışma klasörü için *Dockerfile* ve .NET Core örnek uygulaması. Bu öğreticide, adı `docker-working` çalışma klasörü olarak kullanılır.
 
 ### <a name="use-sdk-version-22"></a>SDK 2.2 sürümünü kullanın
 
-3.0 gibi yeni bir SDK kullanıyorsanız, uygulamanızı 2.2 SDK'yı kullanmaya zorlanır emin olun. Adlı bir dosya oluşturun `global.json` çalışma dizinine gidin ve aşağıdaki json kodunu yapıştırın:
+3\.0 gibi yeni bir SDK kullanıyorsanız, uygulamanızı 2.2 SDK'yı kullanmaya zorlanır emin olun. Adlı bir dosya oluşturun `global.json` çalışma klasörü ve aşağıdaki json kodunu yapıştırın:
 
 ```json
 {
@@ -48,17 +48,34 @@ Aşağıdaki önkoşulları yükleyin:
 }
 ```
 
-Bu dosyayı kaydedin. Sürüm 2.2 için kullanılacak .NET Core dosyasının varlığını zorlayacak `dotnet` bu dizinden ve aşağıdaki komutu olarak adlandırılır.
+Bu dosyayı kaydedin. Sürüm 2.2 için kullanılacak .NET Core dosyasının varlığını zorlayacak `dotnet` bu klasörden ve aşağıdaki komutu olarak adlandırılır.
 
 ## <a name="create-net-core-app"></a>Oluşturma .NET Core uygulaması
 
-Docker kapsayıcısı çalıştıracak bir .NET Core uygulaması gerekir. Terminalinizi açın, bir çalışma dizini oluşturun ve bunu girin. Çalışma dizininde, uygulama adlı bir alt dizinde yeni bir proje oluşturmak için aşağıdaki komutu çalıştırın:
+Docker kapsayıcısı çalıştıracak bir .NET Core uygulaması gerekir. Terminalinizi açın, henüz indirmediyseniz ve girin, bir çalışma klasörü oluşturun. Çalışma klasörü içinde uygulama adlı bir alt dizinde yeni bir proje oluşturmak için aşağıdaki komutu çalıştırın:
 
 ```console
 dotnet new console -o app -n myapp
 ```
 
-Komut adlı yeni bir dizin oluşturur *uygulama* ve bir "Hello World" uygulaması oluşturur. Neler yaptığını görmek için bu uygulamayı test edebilirsiniz. Girin *uygulama* dizin ve bağlamını `dotnet run`. Aşağıdaki çıktıyı görürsünüz:
+Klasörü ağacında aşağıdaki gibi görünür:
+
+```console
+docker-working
+│   global.json
+│
+└───app
+    │   myapp.csproj
+    │   Program.cs
+    │
+    └───obj
+            myapp.csproj.nuget.cache
+            myapp.csproj.nuget.g.props
+            myapp.csproj.nuget.g.targets
+            project.assets.json
+```
+
+`dotnet new` Komut adlı yeni bir klasör oluşturur *uygulama* ve bir "Hello World" uygulaması oluşturur. Girin *uygulama* klasör ve şu komutu çalıştırın `dotnet run`. Aşağıdaki çıktıyı görürsünüz:
 
 ```console
 > dotnet run
@@ -120,25 +137,25 @@ Counter: 4
 Uygulama için komut satırında bir sayı geçirirseniz, bunu yalnızca kadar tutar ve ardından çıkış sayılır. İle deneyin `dotnet run -- 5` beş sayısı.
 
 > [!NOTE]
-> Sonra herhangi bir parametre `--` uygulamanıza geçirilir.
+> Sonra herhangi bir parametre `--` için geçmedi `dotnet run` komut ve bunun yerine, uygulamanıza geçirilir.
 
 ## <a name="publish-net-core-app"></a>Yayımlama .NET Core uygulaması
 
-.NET Core uygulamanızı Docker görüntüsüne eklemeden önce yayımlayın. Başlatıldığında kapsayıcı uygulamanın yayımlanmış sürümü çalıştırır.
+.NET Core uygulamanızı Docker görüntüsüne eklemeden önce yayımlayın. Kapsayıcı başlatıldığında uygulama yayımlanmış sürümü çalıştığından emin olmanız gerekir.
 
-Çalışma dizinine girin **uygulama** directory örneği ile kaynak kodu ve şu komutu çalıştırın:
+Çalışma klasöründen girin **uygulama** klasörü örnek kaynak kodu ve şu komutu çalıştırın:
 
 ```console
 dotnet publish -c Release
 ```
 
-Bu komut, uygulamanızın derler **yayımlama** uygulamanızın çıkış klasöründeki klasörüne gidin. Yolu **yayımlama** klasöründen çalışma dizini olmalıdır. `.\app\bin\Release\netcoreapp2.2\publish\`
+Bu komut, uygulamanızın derler **yayımlama** klasör. Yolu **yayımlama** çalışma klasörü klasöründen olmalıdır. `.\app\bin\Release\netcoreapp2.2\publish\`
 
-Doğrulamak için yayımlama klasörünün dizin bir listesini **myapp.dll** oluşturuldu. Gelen **uygulama** dizin, aşağıdaki komutlardan birini çalıştırın:
+Doğrulamak için yayımlama klasörünün dizin bir listesini **myapp.dll** oluşturuldu. Gelen **uygulama** klasörü, aşağıdaki komutlardan birini çalıştırın:
 
 ```console
 > dir bin\Release\netcoreapp2.2\publish
- Directory of C:\path-to-working-dir\app\bin\Release\netcoreapp2.2\publish
+ Directory of C:\docker-working\app\bin\Release\netcoreapp2.2\publish
 
 04/05/2019  11:00 AM    <DIR>          .
 04/05/2019  11:00 AM    <DIR>          ..
@@ -149,15 +166,15 @@ Doğrulamak için yayımlama klasörünün dizin bir listesini **myapp.dll** olu
 ```
 
 ```bash
-me@DESKTOP:/path-to-working-dir/app$ ls bin/Release/netcoreapp2.2/publish
+me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp2.2/publish
 myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 ```
 
-Terminalinizde bir dizini çalışma dizinine gidin.
-
 ## <a name="create-the-dockerfile"></a>Dockerfile'ı oluşturma
 
-*Dockerfile* dosya tarafından kullanılan `docker build` bir kapsayıcı görüntüsü oluşturmak için komutu. Adlı bir düz metin dosyası bu dosyadır *Dockerfile* uzantı yok. Adlı bir dosya oluşturun *Dockerfile* çalışma dizininizdeki ve bir metin düzenleyicisinde açın. Aşağıdaki komut dosyasının ilk satırı ekleyin:
+*Dockerfile* dosya tarafından kullanılan `docker build` bir kapsayıcı görüntüsü oluşturmak için komutu. Adlı bir düz metin dosyası bu dosyadır *Dockerfile* uzantı yok.
+
+Terminalinizde başında oluşturduğunuz çalışma klasörü için bir dizin yukarı gidin. Adlı bir dosya oluşturun *Dockerfile* çalışma klasöründeki bir metin düzenleyicisinde açın. Aşağıdaki komut dosyasının ilk satırı ekleyin:
 
 ```dockerfile
 FROM mcr.microsoft.com/dotnet/core/runtime:2.2
@@ -165,7 +182,30 @@ FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 
 `FROM` Komutu bildirir etiketli görüntüyü çekmek için Docker **2.2** gelen **mcr.microsoft.com/dotnet/core/runtime** depo. Çalışma zamanı, SDK'sı tarafından hedeflenen eşleşen .NET Core çalışma zamanı çekme emin olun. Örneğin, önceki oluşturulan uygulama bölümünde kullanılan .NET Core 2.2 SDK ve .NET Core 2.2 hedefleyen bir uygulama oluşturdunuz. Temel görüntü başvurulan şekilde *Dockerfile* ile etiketlenmiş **2.2**.
 
-Dosyayı kaydedin. Uygulamanızı terminalden çalıştırın `docker build -t myimage .` ve Docker, her satır işleyecek *Dockerfile*. `.` İçinde `docker build` komut geçerli dizinde bulmak için kullanmak üzere docker söyleyen bir *Dockerfile*. Bu komut, görüntüyü oluşturur ve adlı yerel bir depo oluşturur **myımage** görüntüsünü işaret eder. Bu komut bittikten sonra Çalıştır `docker images` yüklü görüntülerin listesini görmek için:
+Kaydet *Dockerfile* dosya. Çalışma klasörünün dizin yapısı aşağıdaki gibi görünmelidir. Daha ayrıntılı düzeyinde dosya ve klasörleri bazıları makalesinde yer kazanmak için kaldırılmıştır:
+
+```console
+docker-working
+│   Dockerfile
+│   global.json
+│
+└───app
+    │   myapp.csproj
+    │   Program.cs
+    │
+    ├───bin
+    │   └───Release
+    │       └───netcoreapp2.2
+    │           └───publish
+    │                   myapp.deps.json
+    │                   myapp.dll
+    │                   myapp.pdb
+    │                   myapp.runtimeconfig.json
+    │
+    └───obj
+```
+
+Uygulamanızı terminalden çalıştırın `docker build -t myimage -f Dockerfile .` ve Docker, her satır işleyecek *Dockerfile*. `.` İçinde `docker build` komut geçerli klasörü bulmak için kullanmak üzere docker belirten bir *Dockerfile*. Bu komut, görüntüyü oluşturur ve adlı yerel bir depo oluşturur **myımage** görüntüsünü işaret eder. Bu komut bittikten sonra Çalıştır `docker images` yüklü görüntülerin listesini görmek için:
 
 ```console
 > docker images
@@ -186,10 +226,10 @@ ENTRYPOINT ["dotnet", "app/myapp.dll"]
 
 Sonraki komut `ENTRYPOINT`, yürütülebilir dosya olarak çalıştırmak için kapsayıcı yapılandırmak için docker söyler. Kapsayıcı başlatıldığında, `ENTRYPOINT` komutunu çalıştırır. Bu komut sona erdiğinde, kapsayıcı otomatik olarak durdurulur.
 
-Dosyayı kaydedin. Uygulamanızı terminalden çalıştırın `docker build -t myimage .` ve tamamlandığında, komut, çalıştırılabilir `docker images`.
+Uygulamanızı terminalden çalıştırın `docker build -t myimage -f Dockerfile .` ve tamamlandığında, komut, çalıştırılabilir `docker images`.
 
 ```console
-> docker build -t myimage .
+> docker build -t myimage -f Dockerfile .
 Sending build context to Docker daemon  819.7kB
 Step 1/3 : FROM mcr.microsoft.com/dotnet/core/runtime:2.2
  ---> d51bb4452469
@@ -255,7 +295,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ### <a name="connect-to-a-container"></a>Bir kapsayıcıya bağlanma
 
-Bir kapsayıcı çalışmaya başladıktan sonra çıktıyı görmek için bağlanabilirsiniz. Kullanım `docker start` ve `docker attach` kapsayıcı ve çıkış akışına göz at'ı başlatmak için komutları. Bu örnekte, <kbd>CTRL + C</kbd> komutu, çalışmakta olan kapsayıcıyı ayırmak için kullanılır. Bu, gerçekten kapsayıcı durdurur kapsayıcı işlemde sonlandırabiliriz. `--sig-proxy=false` Parametresi sağlar <kbd>CTRL + C</kbd> kapsayıcısında işlemi durdurur.
+Bir kapsayıcı çalışmaya başladıktan sonra çıktıyı görmek için bağlanabilirsiniz. Kullanım `docker start` ve `docker attach` kapsayıcı ve çıkış akışına göz at'ı başlatmak için komutları. Bu örnekte, <kbd>CTRL + C</kbd> komutu, çalışmakta olan kapsayıcıyı ayırmak için kullanılır. Bu, gerçekten kapsayıcı durdurur kapsayıcı işlemde sonlandırabiliriz. `--sig-proxy=false` Parametresi sağlar <kbd>CTRL + C</kbd> kapsayıcı işlemde durdurmaz.
 
 Kapsayıcıdan ayırdıktan sonra bunu hala çalışan sayım ve olduğunu doğrulamak için yeniden bağlayın.
 
@@ -324,7 +364,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 `docker run` Komut ayrıca, değiştirmenize imkan tanır `ENTRYPOINT` komutunu *Dockerfile* ve başka bir ancak için yalnızca o kapsayıcı çalıştırın. Örneğin, çalıştırmak için aşağıdaki komutu kullanın `bash` veya `cmd.exe`. Komutu, gerektiği gibi düzenleyin.
 
 #### <a name="windows"></a>Windows
-Bu örnekte `ENTRYPOINT` değiştirilir `cmd.exe`. <kbd>CTRL + C</kbd> işlemi sona erdirmek ve kapsayıcıyı durdurmak için basılan.
+Bu örnekte, `ENTRYPOINT` değiştirilir `cmd.exe`. <kbd>CTRL + C</kbd> işlemi sona erdirmek ve kapsayıcıyı durdurmak için basılan.
 
 ```console
 > docker run -it --rm --entrypoint "cmd.exe" myimage
@@ -351,7 +391,7 @@ C:\>^C
 
 #### <a name="linux"></a>Linux
 
-Bu örnekte `ENTRYPOINT` değiştirilir `bash`. `quit` İşlemi sonlandırır ve kapsayıcı Durdur komutu çalıştırın.
+Bu örnekte, `ENTRYPOINT` değiştirilir `bash`. `quit` İşlemi sonlandırır ve kapsayıcı Durdur komutu çalıştırın.
 
 ```bash
 root@user:~# docker run -it --rm --entrypoint "bash" myimage

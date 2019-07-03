@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: db9788e3065a0f2f21d712b2d4826efea2d8a829
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: d9a6f193d877fc1a679b7a3cafd7491e021cb2ad
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410655"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539627"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Regresyon modeli Oluşturucu ile kullanarak fiyatlarını tahmin etme
 
@@ -51,7 +51,7 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
 1. İçinde **Çözüm Gezgini**, sağ *taksi taksi train.csv* seçin ve dosya **özellikleri**. Altında **Gelişmiş**, değiştirin **çıkış dizinine Kopyala** için **yeniyse Kopyala**.
 
-Her satırda `taxi-fare-train.csv` veri kümesi bir taksi tarafından yapılan gelişlerin ayrıntılarını içerir. 
+Her satırda `taxi-fare-train.csv` veri kümesi bir taksi tarafından yapılan gelişlerin ayrıntılarını içerir.
 
 1. Açık **taksi taksi train.csv** veri kümesi
 
@@ -102,7 +102,7 @@ Modeli eğitmek gereken süreyi veri miktarı için uygun. Bu grafik için yeter
 Eğitim işlem boyunca ilerleme veri görüntülenen `Progress` eğitimi adım bölümü.
 
 - Durum eğitim işleminin tamamlanma durumunu görüntüler.
-- En yüksek doğruluğa en iyi performansa sahip Model Oluşturucu bulundu modelinin doğruluğunu görüntüler. Daha yüksek doğruluk testi veri daha doğru bir şekilde tahmin modeli anlamına gelir. 
+- En yüksek doğruluğa en iyi performansa sahip Model Oluşturucu bulundu modelinin doğruluğunu görüntüler. Daha yüksek doğruluk testi veri daha doğru bir şekilde tahmin modeli anlamına gelir.
 - En iyi algoritmayı bulundu modelinin oluşturucusu tarafından gerçekleştirilen en iyi performansa algoritma adını görüntüler.
 - Son algoritması, en son Model Oluşturucu, modeli eğitmek için kullanılan algoritma adını görüntüler.
 
@@ -122,8 +122,8 @@ Doğruluk ölçümlerinizi memnun değilseniz, deneyin ve doğruluğu artırmak 
 - TaxiFarePredictionML.Model: Giriş şemasını tanımlayan ve en iyi performansa sahip sırasında eğitim modeli kalıcı sürümünü yanı sıra model verileri çıkış veri modelleri içeren .NET Standard sınıf kitaplığı.
 
 1. Kod Model Oluşturucu aracının bölümünde **eklenen projeleri** projeleri çözüme eklemek için.
-1. Çözüm Gezgini'nde sağ *TaxiFarePrediction* proje. Ardından, **Ekle > var olan öğe**. İçin dosya türü açılan listesinde seçin `All Files`, gitmek *TaxiFarePredictionML.Model* dizin ve select projeyi `MLModel.zip` dosya. Son eklenen'ı sağ `MLModel.zip` seçin ve dosya *özellikleri*. Çıkış dizini seçeneğini Kopyala için *yeniyse Kopyala* açılır listeden.
-1. Sağ *TaxiFarePrediction* proje. Ardından, **Ekle > başvuru**. Seçin **projeleri > Çözüm** düğüm ve listeden *TaxiFarePredictionML.Model* proje ve Tamam'ı seçin.
+2. Çözüm Gezgini'nde sağ *TaxiFarePrediction* proje. Ardından, **Ekle > var olan öğe**. İçin dosya türü açılan listesinde seçin `All Files`, gitmek *TaxiFarePredictionML.Model* dizin ve select projeyi `MLModel.zip` dosya. Son eklenen'ı sağ `MLModel.zip` seçin ve dosya *özellikleri*. Çıkış dizini seçeneğini Kopyala için *yeniyse Kopyala* açılır listeden.
+3. Sağ *TaxiFarePrediction* proje. Ardından, **Ekle > başvuru**. Seçin **projeleri > Çözüm** düğüm ve listeden *TaxiFarePredictionML.Model* proje ve Tamam'ı seçin.
 
 4. Açık *Program.cs* dosyası *TaxiFarePrediction* proje.
 5. Aşağıdaki using deyimlerini:

@@ -2,17 +2,21 @@
 title: DotNet nuget delete komutu
 description: Dotnet-nuget-delete komutu siler veya sunucu bir paketten unlists.
 author: karann-msft
-ms.date: 12/04/2018
-ms.openlocfilehash: e1362413aa6458674518d68340634741994b34a3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 0b2ba64b70bae5e06f213457e30fedeca26a9819
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632054"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539247"
 ---
-# <a name="dotnet-nuget-delete"></a>DotNet nuget Sil
+# <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
+**Bu konu için geçerlidir: ✓** .NET Core SDK'sı 1.x ve sonraki sürümler
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Ad
 
@@ -20,23 +24,11 @@ ms.locfileid: "65632054"
 
 ## <a name="synopsis"></a>Synopsis
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
 dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
     [--non-interactive] [-s|--source]
 dotnet nuget delete [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
-
-```
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--non-interactive]
-    [-s|--source]
-dotnet nuget delete [-h|--help]
-```
-
----
 
 ## <a name="description"></a>Açıklama
 
@@ -53,8 +45,6 @@ dotnet nuget delete [-h|--help]
   Silmek için Paket sürümü.
 
 ## <a name="options"></a>Seçenekler
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`--force-english-output`**
 
@@ -83,30 +73,6 @@ dotnet nuget delete [-h|--help]
 * **`-s|--source <SOURCE>`**
 
   Sunucu URL'sini belirtir. Nuget.org eklemek için URL'leri desteklenen `https://www.nuget.org`, `https://www.nuget.org/api/v3`, ve `https://www.nuget.org/api/v2/package`. Özel akışları için ana bilgisayar adını değiştirin (örneğin, `%hostname%/api/v3`).
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
-
-* **`--force-english-output`**
-
-  Uygulamayı bir sabit, İngilizce tabanlı kültürü kullanarak çalıştırmak için zorlar.
-
-* **`-h|--help`**
-
-  Komut için kısa bir Yardım yazdırır.
-
-* **`-k|--api-key <API_KEY>`**
-
-  Sunucusu için API anahtarı.
-
-* **`--non-interactive`**
-
-  Kullanıcı girişini veya onayları için istemde değil.
-
-* **`-s|--source <SOURCE>`**
-
-  Sunucu URL'sini belirtir. Nuget.org eklemek için URL'leri desteklenen `https://www.nuget.org`, `https://www.nuget.org/api/v3`, ve `https://www.nuget.org/api/v2/package`. Özel akışları için ana bilgisayar adını değiştirin (örneğin, `%hostname%/api/v3`).
-
----
 
 ## <a name="examples"></a>Örnekler
 

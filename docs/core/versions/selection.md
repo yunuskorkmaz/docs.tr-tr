@@ -1,20 +1,18 @@
 ---
 title: Kullanılacak .NET Core sürüm seçin
 description: .NET Core otomatik olarak bulur ve nasıl programınızın çalışma zamanı sürümleri seçer öğrenin. Ayrıca, bu makalede belirli bir sürümü zorlama öğretir.
-author: billwagner
-ms.author: wiwagn
-ms.date: 06/27/2018
+author: thraka
+ms.author: adegeo
+ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ec22acf33884a5da0062b6e7aaded5dd4a0c665
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646920"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539298"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Kullanılacak .NET Core sürümünü seçin
-
-[!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
 Bu makalede, .NET Core araçları, SDK ve çalışma zamanı sürümleri seçmek için kullanılan ilkeleri açıklanır. Bu ilkeler çalışan uygulamalar belirtilen sürümlerini kullanan ve etkinleştirme kolaylaştırır hem geliştirme hem de son kullanıcı makineleri yükseltme arasında bir denge sağlar. Bu ilkeler, aşağıdaki eylemleri gerçekleştirin:
 
@@ -87,19 +85,20 @@ Ana makinede yüklü en son düzeltme eki sürümü seçer. Örneğin, belirtti�
 
 Hayır edilebilirse `2.0.*` sürümü bulundu, yeni bir `2.*` sürümü kullanılır. Örneğin, belirttiğiniz `netcoreapp2.0` ve yalnızca `2.1.0` kullanarak uygulama çalışırken, yüklü `2.1.0` çalışma zamanı. Bu davranışı "alt sürüm sarma." adlandırılır Ayrıca daha düşük sürümler kabul olmaz. Kabul edilebilir hiçbir çalışma zamanı yüklendiğinde, uygulama çalışmaz.
 
-Birkaç kullanım örnekleri davranış gösterir:
+2\.0 hedefliyorsanız davranışı birkaç kullanım örneği gösterilmektedir:
 
-- 2.0.4 gereklidir. 2.0.5 yüksek düzeltme eki sürümü yüklü olduğu. 2.0.5 kullanılan.
-- 2.0.4 gereklidir. Hayır 2.0. * sürümleri yüklenir. 1.1.1 yüklü olan en yüksek çalışma zamanı ' dir. Bir hata iletisi görüntülenir.
-- 2.0.4 gereklidir. 2.0.0 yüklü en yüksek sürüm var. Bir hata iletisi görüntülenir.
-- 2.0.4 gereklidir. Hayır 2.0. * sürümleri yüklenir. 2.2.2 yüksek 2.x çalışma zamanı sürümü var. 2.2.2 kullanılan.
-- 2.0.4 gereklidir. Hiçbir 2.x sürümleri yüklenir. 3.0.0 (şu anda kullanılabilir bir sürümü değil) yüklenir. Bir hata iletisi görüntülenir.
+- 2.0 belirtilir. 2.0.5 yüksek düzeltme eki sürümü yüklü olduğu. 2.0.5 kullanılan.
+- 2.0 belirtilir. Hayır 2.0. * sürümleri yüklenir. 1.1.1 yüklü olan en yüksek çalışma zamanı ' dir. Bir hata iletisi görüntülenir.
+- 2.0 belirtilir. Hayır 2.0. * sürümleri yüklenir. 2.2.2 yüksek 2.x çalışma zamanı sürümü var. 2.2.2 kullanılan.
+- 2.0 belirtilir. Hiçbir 2.x sürümleri yüklenir. 3.0.0 yüklü. Bir hata iletisi görüntülenir.
 
 Alt sürüm sarma bir yan son kullanıcıların etkileyebilecek etkisi vardır. Aşağıdaki senaryoyu göz önünde bulundurun:
 
-- 2.0.4 gereklidir. Hayır 2.0. * sürümleri yüklenir. 2.2.2 yüklü. 2.2.2 kullanılan.
-- 2.0.5 daha sonra yüklenir. sonraki uygulaması açılır, değil 2.2.2 2.0.5 kullanılır. En son düzeltme eki gerekli ikincil sürümü üzerinde daha yüksek bir ikincil sürüm tercih edilir.
-- 2.0.5 ve 2.2.2 farklı şekilde, özellikle ikili verileri seri hale getirme gibi senaryolar için davrandığını mümkündür.
+1. Uygulamayı 2.0 gerekli olduğunu belirtir.
+2. Çalıştırdığınızda, sürüm 2.0. * olduğu yüklü değil, ancak 2.2.2 olur. Sürüm 2.2.2 kullanılır.
+3. Daha sonra kullanıcı 2.0.5 yükler ve uygulamayı yeniden çalıştırır, 2.0.5 kullanılacaktır.
+
+2\.0.5 ve 2.2.2 farklı şekilde, özellikle ikili verileri seri hale getirme gibi senaryolar için davrandığını mümkündür.
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>Seçili olan çalışma zamanını müstakil dağıtımları içerecek
 

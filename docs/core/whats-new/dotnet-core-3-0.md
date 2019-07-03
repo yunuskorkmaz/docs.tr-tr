@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 06/14/2019
-ms.openlocfilehash: bb100ea064585235768ecb46781eb830c7dae0c6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a808a35876df8d2f6cee3c240c606b7bd979e9ee
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401952"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539283"
 ---
 # <a name="whats-new-in-net-core-30-preview-6"></a>.NET Core 3.0 (Önizleme 6) yenilikler
 
@@ -107,6 +107,15 @@ Sırasında `dotnet build` veya `dotnet publish`, kullandığınız SDK platform
 
 Tek dosyalı bir yürütülebilir dosya yayımlamayı ayarlamak `PublishSingleFile` projenizdeki veya komut satırı ile `dotnet publish` komutu:
 
+```xml
+<PropertyGroup>
+  <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+  <PublishSingleFile>true</PublishSingleFile>
+</PropertyGroup>
+```
+
+-veya-
+
 ```console
 dotnet publish -r win10-x64 /p:PublishSingleFile=true
 ```
@@ -121,7 +130,7 @@ Kendi içindeki uygulamaları ana bilgisayara yüklenmesi .NET gerek kalmadan ko
 
 .NET core kullanan bir ayarı artık içerir [IL bağlayıcı](https://github.com/mono/linker) uygulamanızın IL Tarama Aracı. Bu araç, hangi kod gereklidir ve kullanılmayan kitaplıkları ardından kırpar algılar. Bu araç, bazı uygulama dağıtım boyutunu önemli ölçüde azaltabilir.
 
-Bu aracı etkinleştirmek için `<PublishTrimmed>` projenizde ayarlama ve kendi başına bir uygulama yayımlama:
+Bu aracı etkinleştirmek için ekleme `<PublishTrimmed>` projenizde ayarlama ve kendi başına bir uygulama yayımlama:
 
 ```xml
 <PropertyGroup>

@@ -3,12 +3,12 @@ title: Windows üzerinde .NET Core önkoşulları
 description: Windows üzerinde gereken bağımlılıklar geliştirin ve .NET Core uygulamaları çalıştırmak için makine öğrenin.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 423a333edf5b2946a28855352adf2915642b1eae
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 9c4c15a08e0988955ecdf442307059868cb377d1
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051966"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539349"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows üzerinde .NET Core önkoşulları
 
@@ -57,7 +57,7 @@ Aşağıdaki makaleler sürüm başına .NET Core desteklenen işletim sistemler
 > [!NOTE]
 > **Windows 8.1 ve önceki sürümleri veya Windows Server 2012 R2 ve önceki sürümleri için:**
 >
-> Windows yüklemenizin güncel olduğundan ve içerir emin [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows), Windows güncelleştirmesi yüklenebilir. Bu yazılımın yüklü yoksa, .NET Core uygulamasını başlattığında aşağıdaki gibi bir hata görürsünüz: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> Windows yüklemenizin güncel olduğundan ve içerir emin [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows), Windows güncelleştirmesi yüklenebilir. Bu yazılımın yüklü yoksa, .NET Core uygulamasını başlattığında aşağıdaki gibi bir hata görürsünüz: `The program can't start because api-ms-win-crt-runtime-l1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
 > **Windows 7 veya Windows Server 2008 R2 için:**
 >

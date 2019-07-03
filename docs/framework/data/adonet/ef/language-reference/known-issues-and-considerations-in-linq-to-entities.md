@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 303e46e79786ce7f062db4a1a3ffb6c321169af8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e84319c60534c3ecf154c3f58973bcc429a73842
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631297"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539818"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities Hakkında Bilinen Sorunlar ve Dikkat Edilmesi Gerekenler
-Bu bölümde ile ilgili bilinen sorunlar hakkında bilgi [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular.  
+Bu bölümde, LINQ to Entities sorgularında bilinen sorunlar hakkında bilgi sağlar.  
   
 - [LINQ sorguları, önbelleğe alınamaz](#LINQQueriesThatAreNotCached)  
   
@@ -42,7 +42,7 @@ Bu bölümde ile ilgili bilinen sorunlar hakkında bilgi [!INCLUDE[linq_entities
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>İşaretsiz tamsayılar desteklenmiyor  
- İçinde bir işaretsiz tamsayı türü belirten bir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] nedeniyle sorgu desteklenmiyor [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] işaretsiz tamsayılar desteklemez. İşaretsiz bir tamsayı belirtmeniz durumunda bir <xref:System.ArgumentException> özel durumu aşağıdaki örnekte gösterildiği gibi sorgu ifade çevirisi sırasında oluşturulur. Bu örnek sorguları bir sipariş kimliği 48000 için.  
+ Bir işaretsiz tamsayı türü bir LINQ to Entities sorgusunda belirtilmesi desteklenmez çünkü [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] işaretsiz tamsayılar desteklemez. İşaretsiz bir tamsayı belirtmeniz durumunda bir <xref:System.ArgumentException> özel durumu aşağıdaki örnekte gösterildiği gibi sorgu ifade çevirisi sırasında oluşturulur. Bu örnek sorguları bir sipariş kimliği 48000 için.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  

@@ -2,12 +2,12 @@
 title: LINQ ve ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 16b06549573bc79378539cf7f5ccdcb60c812e81
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 9c517b3efca8cd2b41782858ef1e18e3cba76c1b
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504459"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539402"
 ---
 # <a name="linq-and-adonet"></a>LINQ ve ADO.NET
 Günümüzde, birçok iş Geliştirici iki (veya daha fazla) programlama dilleri kullanmanız gerekir: iş mantığı ve bir sunu katmanı için yüksek düzey bir dil (Visual gibi C# veya Visual Basic) ve veritabanı (örneğin, Transact-SQL) ile etkileşim kurmak için bir sorgu dili . Bu Geliştirici etkili olması için çeşitli dillerde usta olmasını gerektirir ve aynı zamanda geliştirme ortamında dil uyuşmazlığı neden olur. Örneğin, bir veritabanında bir sorgu yürütmek için veri erişimi API'si kullanan bir uygulamayı tırnak işaretleri'ni kullanarak sorgu dize sabit değeri olarak belirtir. Bu sorgu dizesi derleyiciye beklemediğiniz okunabilir ve geçersiz sözdizimi veya başvurduğu satırları veya sütunları olup gerçekten var gibi hatalara alınmamış. Sorgu parametreleri ve Hayır denetimi türü yoktur `IntelliSense` ya da destekler.  
@@ -16,7 +16,7 @@ Günümüzde, birçok iş Geliştirici iki (veya daha fazla) programlama dilleri
   
  Nesnelere bellekteki SQL tablolarından veri aktarımı genellikle sıkıcı ve hataya açık olur. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] LINQ to DataSet tarafından uygulanan sağlayıcısı ve [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] kaynak verileri dönüştürür <xref:System.Collections.IEnumerable>-nesne koleksiyonları bağlı. Programcı her zaman verileri görüntüleyen bir <xref:System.Collections.IEnumerable> koleksiyon, hem sorguladığınızda ve güncelleştirdiğinizde. Tam `IntelliSense` desteği, bu koleksiyonlarla karşı sorgular yazmak için sağlanır.  
   
- Üç ayrı ADO.NET vardır [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] teknolojileri: LINQ to DataSet, [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], ve [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. LINQ to DataSet sağlar üzerinden daha zengin, en iyi duruma getirilmiş sorgulama <xref:System.Data.DataSet> ve [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] veritabanı şemalarını SQL Server, doğrudan sorgu sağlar ve [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] bir varlık veri modeli sorgu olanak tanır.  
+ Üç ayrı ADO.NET vardır [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] teknolojileri: LINQ to DataSet, [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]ve LINQ to Entities. LINQ to DataSet sağlar üzerinden daha zengin, en iyi duruma getirilmiş sorgulama <xref:System.Data.DataSet> ve [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] , doğrudan SQL Server veritabanı şemaları ve LINQ to Entities sorgu sağlar, varlık veri modeli sorgulamak etkinleştirir.  
   
  Aşağıdaki diyagramda, üst düzey programlama dilleri ve LINQ özellikli veri kaynakları için ADO.NET LINQ teknolojilerden nasıl ilişki kuracağını genel bir bakış sağlar.  
   
@@ -24,7 +24,7 @@ Günümüzde, birçok iş Geliştirici iki (veya daha fazla) programlama dilleri
   
  LINQ hakkında daha fazla bilgi için bkz: [dil tümleşik sorgu (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md).
   
- Aşağıdaki bölümlerde, veri kümesi için LINQ hakkında daha fazla bilgi sağlanmaktadır [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], ve [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)].  
+ Aşağıdaki bölümlerde, veri kümesi için LINQ hakkında daha fazla bilgi sağlanmaktadır [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]ve LINQ to Entities.  
   
 ## <a name="linq-to-dataset"></a>LINQ - DataSet  
  <xref:System.Data.DataSet> ADO.NET üzerine kurulmuştur ve yaygın olarak kullanılan, bağlantısı kesilmiş bir programlama modeli önemli bir öğesidir. LINQ to DataSet, geliştiricilerin daha zengin sorgu özellikleri oluşturmanızı sağlar <xref:System.Data.DataSet> diğer birçok veri kaynakları için kullanılabilir sorgu oluşumunu mekanizmasını kullanarak. Daha fazla bilgi için [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
@@ -37,7 +37,7 @@ Günümüzde, birçok iş Geliştirici iki (veya daha fazla) programlama dilleri
 ## <a name="linq-to-entities"></a>LINQ - Varlıklar  
  Çoğu uygulama, şu anda ilişkisel veritabanlarının üzerine yazılır. Belirli bir noktada, ilişkisel bir biçimde temsil verilerle etkileşim kurmak bu uygulamaları gerekir. Veritabanı şemalarını her zaman uygulamalar oluşturmak için ideal değildir ve kavramsal modeller uygulamanızın mantıksal modellerini veritabanları ile aynı değildir. Varlık veri modeli, uygulamalar verileri nesne gibi etkileşim kurabilir, verileri belirli bir etki alanı model oluşturmak için kullanılan bir kavramsal veri modelidir. Bkz: [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) daha fazla bilgi için.  
   
- İlişkisel veri, varlık veri modeli .NET ortamını nesneler olarak kullanıma sunulur. Bu nesne için ideal bir hedef katman sağlar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] geliştiriciler, iş mantığı oluşturmak için kullanılan dil veritabanından karşı sorgular formüle etmek destek. Bu özellik olarak da bilinen [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. Bkz: [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md) daha fazla bilgi için.  
+ İlişkisel veri, varlık veri modeli .NET ortamını nesneler olarak kullanıma sunulur. Bu nesne için ideal bir hedef katman sağlar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] geliştiriciler, iş mantığı oluşturmak için kullanılan dil veritabanından karşı sorgular formüle etmek destek. Bu özellik, varlıklara LINQ bilinir. Bkz: [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md) daha fazla bilgi için.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
