@@ -3,12 +3,12 @@ title: .NET core komut satırı arabirimi (CLI) araçları
 description: .NET Core komut satırı arabirimi (CLI) araçları ve özellikleri genel bakış.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: e174867ce06e573fc85579183df0196d8276fb37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff96023dd0b161271e146f7a7e69924c9db9e769
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647430"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569525"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET core komut satırı arabirimi (CLI) araçlarını
 
@@ -99,7 +99,7 @@ CLI'yı projeleriniz için ek araçlar belirtmenizi sağlar bir genişletilebili
 
 ## <a name="command-structure"></a>Komut yapısı
 
-CLI komut yapısını oluşur [("dotnet") sürücü](#driver), [komutu (veya "eylem")](#command-verb)ve büyük olasılıkla komut [bağımsız değişkenleri](#arguments) ve [seçenekleri](#options). Adlı bir dizinden çalıştırıldığında Göster yeni bir konsol uygulaması oluşturma ve aşağıdaki komutları komut satırından çalıştırma gibi çoğu CLI işlemi bu düzende gördüğünüz *my_app_3.sft*:
+CLI komut yapısını oluşur [("dotnet") sürücü](#driver), [komutu](#command)ve büyük olasılıkla komut [bağımsız değişkenleri](#arguments) ve [seçenekleri](#options). Adlı bir dizinden çalıştırıldığında Göster yeni bir konsol uygulaması oluşturma ve aşağıdaki komutları komut satırından çalıştırma gibi çoğu CLI işlemi bu düzende gördüğünüz *my_app_3.sft*:
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -134,9 +134,9 @@ Sürücü komut sağladığında `dotnet.exe` CLI komut yürütme işlemi başla
 
 İlk olarak, sürücü kullanmak için SDK'sı sürümünü belirler. Yoksa hiçbir ['global.json'](global-json.md), kullanılabilir SDK'sının en son sürümü kullanılır. Bu bir önizleme veya kararlı bir sürüm makinede en son nedir bağlı olarak, olabilir.  SDK sürümü belirlendikten sonra komutu yürütür.
 
-### <a name="command-verb"></a>Komut ("eylem")
+### <a name="command"></a>Komut
 
-Komutu (veya "eylem") bir eylem gerçekleştiren yalnızca bir komuttur. Örneğin, `dotnet build` kod oluşturur. `dotnet publish` kodunuzu yayımlar. Konsolunu kullanarak bir uygulama olarak komutlar uygulanan bir `dotnet {verb}` kuralı.
+Komutu, bir eylem gerçekleştirir. Örneğin, `dotnet build` kod oluşturur. `dotnet publish` kod yayımlar. Konsolunu kullanarak bir uygulama olarak komutlar uygulanan bir `dotnet {command}` kuralı.
 
 ### <a name="arguments"></a>Arguments
 
@@ -148,7 +148,7 @@ Komut satırında geçirdiğiniz çağrılan komut seçenekleri seçeneklerdir. 
 
 ## <a name="migration-from-projectjson"></a>Project.json geçiş
 
-Preview 2'de üretmek için kullanılan *project.json*-tabanlı projeler başvurun [dotnet geçirme](dotnet-migrate.md) projenizi MSBuild'e geçirme hakkında bilgi için konu /*.csproj*yayın araçları ile kullanmak için. .NET Core için Önizleme 2 araçlarının sürümden önce ya da el ile oluşturulan projeleri kılavuzunda aşağıdaki proje güncelleştirmesi [: .NET Core CLI (project.json) DNX'ten geçiş](../migration/from-dnx.md) ve ardından `dotnet migrate` veya doğrudan yükseltme projelerinizi.
+Preview 2'de üretmek için kullanılan *project.json*-tabanlı projeler başvurun [dotnet geçirme](dotnet-migrate.md) projenizi MSBuild'e geçirme hakkında bilgi için konu / *.csproj*yayın araçları ile kullanmak için. .NET Core için Önizleme 2 araçlarının sürümden önce ya da el ile oluşturulan projeleri kılavuzunda aşağıdaki proje güncelleştirmesi [: .NET Core CLI (project.json) DNX'ten geçiş](../migration/from-dnx.md) ve ardından `dotnet migrate` veya doğrudan yükseltme projelerinizi.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

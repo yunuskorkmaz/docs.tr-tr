@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 2122213e69512b06d1328272740ac4ffdc36c1eb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 55d78ed9bf839d66b3487f91d71d7a07a2123c5f
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483037"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569565"
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijital sertifikalar sık iletileri dijital olarak imzala istemcilere ve sunuculara kimlik doğrulaması ve şifreleme için kullanılır. Bu konuda kısaca X.509 dijital sertifika özellikleri ve bunların WCF'de nasıl kullanılacağını açıklar ve WCF ve sertifikaları kullanarak yaygın görevlerin nasıl yerine getirileceğini gösteren ya da, bu kavramları daha açıklayan konulara bağlantılar içerir.  
@@ -85,8 +85,8 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
   
  Özel bir kimlik doğrulayıcı oluştururken, geçersiz kılmak için en önemli yöntemdir <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> yöntemi. Özel kimlik doğrulama örneği için bkz: [X.509 Sertifika Doğrulayıcı](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) örnek. Daha fazla bilgi için [özel kimlik bilgileri ve kimlik bilgisi doğrulaması](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
-## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Bir sertifika zinciri oluşturmak için yeni Powershell-SelfSignedCertificate cmdlet'ini kullanarak  
- New-SelfSignedCertificate Powershell cmdlet'i, X.509 sertifikaları ve özel anahtarı/genel anahtar çifti oluşturur. Disk ve vermek ve yeni sertifikaları imzalamak için kullanmak üzere özel anahtarı böylece Zincirli sertifikalar hiyerarşisini benzetimi kaydedebilirsiniz. Geliştirme Hizmetleri ve gerçek dağıtımı için sertifikaları oluşturmak için asla kullanılmamalıdır cmdlet'i yalnızca yardımcı olarak kullanıma yöneliktir. Bir WCF Hizmeti geliştirirken, bir New-SelfSignedCertificate cmdlet'i ile bir güven zinciri oluşturmak için aşağıdaki adımları kullanın.  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Bir sertifika zinciri oluşturmak için yeni PowerShell-SelfSignedCertificate cmdlet'ini kullanarak  
+ New-SelfSignedCertificate PowerShell cmdlet'i, X.509 sertifikaları ve özel anahtarı/genel anahtar çifti oluşturur. Disk ve vermek ve yeni sertifikaları imzalamak için kullanmak üzere özel anahtarı böylece Zincirli sertifikalar hiyerarşisini benzetimi kaydedebilirsiniz. Geliştirme Hizmetleri ve gerçek dağıtımı için sertifikaları oluşturmak için asla kullanılmamalıdır cmdlet'i yalnızca yardımcı olarak kullanıma yöneliktir. Bir WCF Hizmeti geliştirirken, bir New-SelfSignedCertificate cmdlet'i ile bir güven zinciri oluşturmak için aşağıdaki adımları kullanın.  
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>New-SelfSignedCertificate cmdlet'i ile bir güven zinciri oluşturmak için  
   
