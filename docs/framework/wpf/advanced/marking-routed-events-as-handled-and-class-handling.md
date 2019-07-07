@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 8cce3d1effa163c35cd219a6a52504b0f4d98c73
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1004ce10baf6293c4c93efc61b91b3b6361377f
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598651"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610378"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Gönderilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi
 Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olayı işaretleyebilirsiniz. Olay işleme rotayı verimli kısaltır. Sınıf işleme yönlendirilmiş olaylar tarafından desteklenen programlama bir kavramdır. İşleyicisi sınıfı sınıfın bir örneği üzerinde herhangi bir örnek işleyici önce çağrılan bir işleyici ile bir sınıf düzeyinde belirli gönderilmiş bir olayı işleme fırsatına sahiptir.  
@@ -49,7 +49,7 @@ Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olayı işa
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>Sınıf işleyicileri ve örnek işleyicileri  
- Yönlendirilmiş olaylar iki farklı türde olay dinleyicileri göz önünde bulundurun: sınıf dinleyicileri ve örnek dinleyiciler. Sınıf dinleyicileri türlerine belirli bir adlı için mevcut <xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, kullanıcının statik oluşturucuda veya öğesi ana sınıfı sınıfı işleyici sanal yöntemle silmiş. Örnek dinleyiciler, belirli bir sınıf örnekleri/öğe olduğu bir veya daha fazla işleyicileri gönderilmiş bir olay için bir çağrı tarafından eklenmiş olan <xref:System.Windows.UIElement.AddHandler%2A>. Varolan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönlendirilmiş olaylar aramalar yapma <xref:System.Windows.UIElement.AddHandler%2A> parçası olarak [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] olay sarmalayıcı ekleme{} kaldırıp{} uygulamaları nasıl olan etkinliğin basit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mekanizması ekleme olay işleyicileri bir öznitelik söz dizimi aracılığıyla etkinleştirilir. Bu nedenle basit bile [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanım sonuçta karşılık gelmektedir için bir <xref:System.Windows.UIElement.AddHandler%2A> çağırın.  
+ Yönlendirilmiş olaylar iki farklı türde olay dinleyicileri göz önünde bulundurun: sınıf dinleyicileri ve örnek dinleyiciler. Sınıf dinleyicileri türlerine belirli bir adlı için mevcut <xref:System.Windows.EventManager> API<xref:System.Windows.EventManager.RegisterClassHandler%2A>, kullanıcının statik oluşturucuda veya öğesi ana sınıfı sınıfı işleyici sanal yöntemle silmiş. Örnek dinleyiciler, belirli bir sınıf örnekleri/öğe olduğu bir veya daha fazla işleyicileri gönderilmiş bir olay için bir çağrı tarafından eklenmiş olan <xref:System.Windows.UIElement.AddHandler%2A>. Varolan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönlendirilmiş olaylar aramalar yapma <xref:System.Windows.UIElement.AddHandler%2A> parçası olarak [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] olay sarmalayıcı ekleme{} kaldırıp{} uygulamaları nasıl olan etkinliğin basit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mekanizması ekleme olay işleyicileri bir öznitelik söz dizimi aracılığıyla etkinleştirilir. Bu nedenle basit bile [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanım sonuçta karşılık gelmektedir için bir <xref:System.Windows.UIElement.AddHandler%2A> çağırın.  
   
  Görsel ağacı içindeki öğeler için kayıtlı işleyici uygulamaları denetlenir. Yönlendirilmiş olay yönlendirme stratejisini türünde devralınır sırayla yol boyunca, potansiyel olarak işleyicileri çağrılır. Örneğin, tırmanma yönlendirilmiş olaylar ilk yönlendirilmiş olayı başlatan aynı öğeye bağlı olan bu işleyicileri çağırır. Ardından yönlendirilmiş olay uygulama kök öğe ve benzeri ulaşılana kadar sonraki üst öğeye "baloncuklar".  
   

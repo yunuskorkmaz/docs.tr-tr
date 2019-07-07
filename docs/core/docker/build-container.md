@@ -4,12 +4,12 @@ description: Bu öğreticide, bir .NET Core uygulamasını Docker ile kapsayıc�
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 6a1d366aceecdf4bd22a04f823aa6805060f8069
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 16edb129be679179450c485ced2586cea9ed9763
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539183"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609293"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Öğretici: .NET Core uygulamasını kapsayıcılı hale getirme
 
@@ -177,7 +177,7 @@ myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 Terminalinizde başında oluşturduğunuz çalışma klasörü için bir dizin yukarı gidin. Adlı bir dosya oluşturun *Dockerfile* çalışma klasöründeki bir metin düzenleyicisinde açın. Aşağıdaki komut dosyasının ilk satırı ekleyin:
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/runtime:2.2
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 ```
 
 `FROM` Komutu bildirir etiketli görüntüyü çekmek için Docker **2.2** gelen **mcr.microsoft.com/dotnet/core/runtime** depo. Çalışma zamanı, SDK'sı tarafından hedeflenen eşleşen .NET Core çalışma zamanı çekme emin olun. Örneğin, önceki oluşturulan uygulama bölümünde kullanılan .NET Core 2.2 SDK ve .NET Core 2.2 hedefleyen bir uygulama oluşturdunuz. Temel görüntü başvurulan şekilde *Dockerfile* ile etiketlenmiş **2.2**.

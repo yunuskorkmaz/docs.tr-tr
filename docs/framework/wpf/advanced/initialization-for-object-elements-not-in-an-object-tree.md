@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0032492a9403660e91980f5e968b519a4306589
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001474"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610488"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Nesne Ağacında Olmayan Nesne Öğelerini Başlatma
 Bazı yönlerini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] başlatma erteleneceğini mantıksal ağaç veya görsel ağaç'için bağlı bu öğe genellikle kullanan işlemler. Bu konu, ya da ağacına bağlı olmayan bir öğe başlatmak için gereken adımları açıklar.  
@@ -33,7 +33,7 @@ Bazı yönlerini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-w
  Öğe özellikleri üzerinde ayarladığınız bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement> sınıf sürümlerini çağırabilirsiniz türetilmiş bir sınıf, <xref:System.Windows.FrameworkElement.BeginInit%2A> ve <xref:System.Windows.FrameworkElement.EndInit%2A> atamayı yerine <xref:System.ComponentModel.ISupportInitialize>.  
   
 ### <a name="sample-code"></a>Örnek Kod  
- Aşağıdaki örnek, işleme kullanan bir konsol uygulaması için örnek kod [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ve <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygun yerleşimini göstermek için dosya <xref:System.Windows.FrameworkElement.BeginInit%2A> ve <xref:System.Windows.FrameworkElement.EndInit%2A> diğer etrafında [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] çağrıları Bu işleme etkileyen özelliklerini ayarlayın.  
+ Aşağıdaki örnek, işleme kullanan bir konsol uygulaması için örnek kod [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ve <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygun yerleşimini göstermek için dosya <xref:System.Windows.FrameworkElement.BeginInit%2A> ve <xref:System.Windows.FrameworkElement.EndInit%2A> etrafında ayarlamak diğer API çağrıları işleme etkileyen özellikler.  
   
  Main işlevi yalnızca örnek gösterir. İşlevleri `Rasterize` ve `Save` görüntü işleme ve g/ç ilgileniriz yardımcı program işlevleri olan (gösterilmemiştir).  
   

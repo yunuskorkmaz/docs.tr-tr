@@ -6,12 +6,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: cb5cde6be16ecf8898c5976e8db23d5ef70d1a47
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 7cbfca932b5f9f8a6f658e84204da5005da5ffb8
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401302"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609832"
 ---
 # <a name="true-and-false-operators-c-reference"></a>TRUE ve false işleçleri (C# Başvurusu)
 
@@ -26,7 +26,7 @@ Tanımlanan bir türü `true` işleci denetleyen bir koşullu deyim sonucu tür�
 
 ## <a name="user-defined-conditional-logical-operators"></a>Kullanıcı tanımlı koşullu mantıksal işleçler
 
-Bir tür ederse ile tanımlanan `true` ve `false` işleçleri [aşırı](../keywords/operator.md) [mantıksal OR işlecinin](boolean-logical-operators.md#logical-or-operator-) `|` veya [mantıksal AND işleci](boolean-logical-operators.md#logical-and-operator-) `&` belirli bir şekilde [koşullu mantıksal OR işlecinin](boolean-logical-operators.md#conditional-logical-or-operator-) `||` veya [koşullu mantıksal AND işleci](boolean-logical-operators.md#conditional-logical-and-operator-) `&&`sırayla değerlendirilir Bu türündeki işlenenler için. Daha fazla bilgi için [kullanıcı tanımlı koşullu mantıksal işleçler](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
+Bir tür ederse ile tanımlanan `true` ve `false` işleçleri [aşırı](operator-overloading.md) [mantıksal OR işlecinin](boolean-logical-operators.md#logical-or-operator-) `|` veya [mantıksal AND işleci](boolean-logical-operators.md#logical-and-operator-) `&` belirli bir şekilde [koşullu mantıksal OR işlecinin](boolean-logical-operators.md#conditional-logical-or-operator-) `||` veya [koşullu mantıksal AND işleci](boolean-logical-operators.md#conditional-logical-and-operator-) `&&`sırayla değerlendirilir Bu türündeki işlenenler için. Daha fazla bilgi için [kullanıcı tanımlı koşullu mantıksal işleçler](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
 
 ## <a name="example"></a>Örnek
 

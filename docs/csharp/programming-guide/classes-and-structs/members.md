@@ -6,14 +6,15 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 9497eb265251f4f8affd5e2c6c7e6ed401263984
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: affe2752712bfd40516861abf84bdee11528168c
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646143"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609486"
 ---
 # <a name="members-c-programming-guide"></a>Üyeler (C# Programlama Kılavuzu)
+
 Sınıflar ve yapılar, kendi verilerini ve davranışlarını temsil eden üyelere sahiptir. Sınıfında, devralma hiyerarşisindeki tüm sınıflarda bildirilen tüm üyeleri (oluşturucular ve sonlandırıcılar dışında) bir sınıfın üyeleri bildirilen tüm üyeleri içerir. Temel sınıflardaki özel üyeler devralınır ancak türetilmiş sınıflardan erişilebilir değildir.  
   
  Aşağıdaki tablo, bir sınıfın veya yapının içerebileceği üye türlerini listeler:  
@@ -25,7 +26,7 @@ Sınıflar ve yapılar, kendi verilerini ve davranışlarını temsil eden üyel
 |[Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)|Özellikler, bir sınıftaki alanlar gibi erişilen o sınıftaki öğelerdir. Bir özellik, nesne bilgisi olmadan değiştirilmesini engellemek üzere bir sınıf alanı için koruma sağlayabilir.|  
 |[Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)|Yöntemler, bir sınıfın gerçekleştirebildiği eylemleri tanımlar. Yöntemler girdi verilerini sağlayan parametreleri alabilir ve parametreler ile çıktı verilerini döndürebilir. Ayrıca yöntemler parametre kullanmadan bir değeri doğrudan döndürebilir.|  
 |[Olaylar](../../../csharp/programming-guide/events/index.md)|Olaylar, diğer nesnelere düğme tıklamaları veya bir yöntemin başarıyla tamamlanması gibi örnekleri sağlar. Olaylar, temsilciler kullanılarak tanımlanır ve tetiklenir.|  
-|[İşleçler](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|Aşırı yüklenmiş operatörler sınıfı üyeleri olarak kabul edilir. Bir operatörü aşırı yüklediğinizde bu operatörü bir sınıftaki genel statik bir yöntem olarak tanımlarsınız. Önceden tanımlı operatörler (`+`, `*`, `<` vb.) üye olarak kabul edilmez. Daha fazla bilgi için [fazla yüklenebilir işleçler](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).|  
+|[İşleçler](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|Aşırı yüklenmiş işleçler, tür üyeleri olarak kabul edilir. Bir operatörü aşırı yüklediğinizde bu türde bir genel statik yöntem olarak tanımlayın. Daha fazla bilgi için [işleci aşırı yüklemesi](../../../csharp/language-reference/operators/operator-overloading.md).|  
 |[Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)|Dizinleyiciler, bir nesnenin dizilere benzer şekilde dizinlenmesini sağlar.|  
 |[Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)|Yapıcılar, nesne ilk oluşturulduğunda çağırılan yöntemlerdir. Bunlar genellikle bir nesneye ait verileri başlatmak için kullanılır.|  
 |[Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)|Sonlandırıcılar nadiren C# dilinde kullanılır. Bunlar, nesne bellekten kaldırılmak üzereyken çalışma zamanı yürütme alt yapısı tarafından çağrılan yöntemlerdir. Bu yöntemler, genellikle yayınlanması gereken tüm kaynakların uygun şekilde işlendiğinden emin olmak için kullanılır.|  
@@ -44,4 +45,3 @@ Sınıflar ve yapılar, kendi verilerini ve davranışlarını temsil eden üyel
 - [Olaylar](../../../csharp/programming-guide/events/index.md)
 - [İç içe Geçmiş Türler](../../../csharp/programming-guide/classes-and-structs/nested-types.md)
 - [İşleçler](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
-- [Aşırı Yüklenebilir İşleçler](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

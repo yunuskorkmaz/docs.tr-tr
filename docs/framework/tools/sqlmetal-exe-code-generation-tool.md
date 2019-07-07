@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: b6f7450b4f682ea5ac69fd1bab434b27451e58df
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d2ee9537df540936e0a5ec448e6aaddbbbc162b1
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586056"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610547"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Kod Üretme Aracı)
 SqlMetal komut satırı aracı için kod ve eşleme üretir [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] .NET Framework'ün bileşen. Bu konunun ilerisinde görünen seçenekleri uygulayarak, SqlMetal'den aşağıdakileri içeren çeşitli farklı eylemler gerçekleştirmesini isteyebilirsiniz:  
@@ -49,7 +49,7 @@ sqlmetal [options] [<input file>]
 |**/ Veritabanı:**  *\<adı >*|Sunucuda veritabanı kataloğu belirtir.|  
 |**/ User:**  *\<adı >*|Oturum açma kullanıcı kimliği belirtir. Varsayılan değer: Windows kimlik doğrulaması kullanın.|  
 |**/ Password:**  *\<parolası >*|Oturum açma parolasını belirtir. Varsayılan değer: Windows kimlik doğrulaması kullanın.|  
-|**/ conn:**  *\<bağlantı dizesi >*|Veritabanı bağlantısı dizesi belirtir. İle birlikte kullanılamaz **/Server**, **/veritabanı**, **/user**, veya **/Password** seçenekleri.<br /><br /> Dosya adını bağlantı dizesine eklemeyin. Bunun yerine, dosya adını giriş dosyası olarak komut satırına ekleyin. Örneğin, aşağıdaki satır giriş dosyası olarak "c:\northwnd.mdf"yi"belirtir: **sqlmetal /code:"c:\northwind.cs "/language:csharp"c:\northwnd.mdf"yi"**.|  
+|**/ conn:**  *\<bağlantı dizesi >*|Veritabanı bağlantısı dizesi belirtir. İle birlikte kullanılamaz **/Server**, **/veritabanı**, **/user**, veya **/Password** seçenekleri.<br /><br /> Dosya adını bağlantı dizesine eklemeyin. Bunun yerine, dosya adını giriş dosyası olarak komut satırına ekleyin. Örneğin, aşağıdaki satır giriş dosyası olarak "c:\northwnd.mdf"yi"belirtir: **sqlmetal /code:"c:\northwind.cs "/language:csharp"c:\northwnd.mdf"yi"** .|  
 |**/ timeout:**  *\<saniye >*|SqlMetal veritabanına eriştiğinde, zaman aşımı değerini belirtir. Varsayılan değer: 0 (diğer bir deyişle, zaman sınırı).|  
   
  **Ayıklama seçenekleri**  
@@ -72,18 +72,18 @@ sqlmetal [options] [<input file>]
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/Language:**  *\<dil >*|Kaynak kod dilini belirtir.<br /><br /> Geçerli  *\<dil >*: vb, csharp.<br /><br /> Varsayılan değer: Kod dosyası adındaki uzantıdan türetilir.|  
+|**/Language:**  *\<dil >*|Kaynak kod dilini belirtir.<br /><br /> Geçerli  *\<dil >* : vb, csharp.<br /><br /> Varsayılan değer: Kod dosyası adındaki uzantıdan türetilir.|  
 |**/ Namespace:**  *\<adı >*|Üretilen kodun ad alanını belirtir. Varsayılan değer: ad alanı yok.|  
 |**/ Context:**  *\<türü >*|Veri bağlamı sınıfının adını belirtir. Varsayılan değer: Veritabanı adından türetilir.|  
 |**/entitybase:**  *\<türü >*|Üretilen kodda varlık sınıflarının temel sınıfını belirtir. Varsayılan değer: Varlıkları temel sınıfa sahip.|  
 |**/ pluralize**|Sınıf ve üye adlarını otomatik olarak çoğullaştırır veya tekilleştirir.<br /><br /> Bu seçenek yalnızca ABD bölgesinde kullanılabilir İngilizce sürümü.|  
-|**/Serialization:**  *\<seçeneği >*|Seri hale getirilebilir sınıflar oluşturur.<br /><br /> Geçerli  *\<seçeneği >*: Hiçbiri, tek yönlü. Varsayılan değer: Yok.<br /><br /> Daha fazla bilgi için [serileştirme](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
+|**/Serialization:**  *\<seçeneği >*|Seri hale getirilebilir sınıflar oluşturur.<br /><br /> Geçerli  *\<seçeneği >* : Hiçbiri, tek yönlü. Varsayılan değer: Yok.<br /><br /> Daha fazla bilgi için [serileştirme](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
   
  **Giriş dosyası**  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**\<Giriş dosyası >**|Bir SQL Server Express .mdf dosyası belirtir bir [!INCLUDE[ssEW](../../../includes/ssew-md.md)] .sdf dosyası veya bir .dbml Ara dosyası.|  
+|**\<Giriş dosyası >**|Bir SQL Server Express .mdf dosyası, bir SQL Server Compact 3.5 .sdf dosyası veya bir .dbml Ara dosyası belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  SqlMetal işlevi aslında iki adımdan oluşur:  
@@ -98,7 +98,7 @@ sqlmetal [options] [<input file>]
   
  Hayır ise **/Server** belirtilen **localhost/sqlexpress** varsayılır.  
   
- [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] bir veya daha fazla aşağıdaki koşullardan biri doğruysa, bir özel durum oluşturur:  
+ Microsoft SQL Server 2005 varsa bir özel durum oluşturur ya da daha aşağıdaki koşullardan biri doğru olduğunda:  
   
 - SqlMetal, kendi kendini çağıran bir saklı yordam ayıklamaya çalışır.  
   

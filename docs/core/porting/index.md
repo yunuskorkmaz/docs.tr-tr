@@ -4,12 +4,12 @@ description: Taşıma işlemlerini anlamanıza ve .NET Core için bir .NET Frame
 author: cartermp
 ms.date: 07/03/2019
 ms.custom: seodec18
-ms.openlocfilehash: 4206907bcee7ff5c71c9898fee4cb6cad02f1696
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: c408beb97290c41d2ab6944b9d1f68bbc5e946fb
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569475"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609241"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>.NET Framework kodunuzu .NET Core için bağlantı noktası
 
@@ -40,14 +40,13 @@ Bu, projeniz .NET Core taşırken göz önüne almanız tavsiye ederiz işlemidi
 Aşağıdaki liste, taşıma işlemi sırasında kullanılacak yararlı bulabileceğiniz araçları gösterir:
 
 * .NET portability Analyzer - [komut satırı aracını](https://github.com/Microsoft/dotnet-apiport/releases) veya [Visual Studio Uzantısı](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), bir araç olan nasıl taşınabilir kod .NET Framework ve .NET Core hedef platform arasında olan bir rapor oluşturabilirsiniz. Rapor, bir derleme tarafından bütünleştirilmiş kod çözümleme eksik hedef .NET Core platformu üzerinde API'leri ve türü içerir. Daha fazla bilgi için [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md). Taşıma işlemine başlamadan önce .NET Portability Analyzer aracını çalıştırmak için önerilen, yardımcı olacak şekilde herhangi bir boşluk eksik API'lerindeki tanımlayın.
-* .NET API Çözümleyicisi - oluşturur .NET standart API bulduğu Roslyn çözümleyicinizi <xref:System.PlatformNotSupportedException> bazı platformlarda, kullanım dışı API'lere giden çağrıların algılar ve bazı diğer olası uyumluluk risk bulur C# farklı platformlarda API'leri. Daha fazla bilgi için [.NET API Çözümleyicisi](../../standard/analyzers/api-analyzer.md). Zaten farklı platformlarda çalışma zamanı davranışı farkları tanımlamak için .NET Core projenizi oluşturduktan sonra bu Çözümleyicisi yardımcı olur. 
+* .NET API Çözümleyicisi - oluşturur .NET standart API bulduğu Roslyn çözümleyicinizi <xref:System.PlatformNotSupportedException> bazı platformlarda, kullanım dışı API'lere giden çağrıların algılar ve bazı diğer olası uyumluluk risk bulur C# farklı platformlarda API'leri. Daha fazla bilgi için [.NET API Çözümleyicisi](../../standard/analyzers/api-analyzer.md). Zaten farklı platformlarda çalışma zamanı davranışı farkları tanımlamak için .NET Core projenizi oluşturduktan sonra bu Çözümleyicisi yardımcı olur.
 * Ters paket arama - A [yararlı web hizmeti](https://packagesearch.azurewebsites.net) türü için arama yapın ve bu türü içeren paketleri olanak tanır.
 
 Ayrıca, bağlantı noktası daha küçük çözümleri veya .NET Core proje dosyası biçimi ile tek tek projelere deneyebilirsiniz [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) aracı.
 
-> [!WARNING] 
+> [!WARNING]
 > CsprojToVs2017 üçüncü taraf bir araçtır. Tüm projeleriniz için çalışacak bir garanti yoktur ve ince değişiklikler, bağımlı davranış neden. CsprojToVs2017 olarak kullanılmalıdır bir _başlangıç noktası_ otomatikleştirilebilir temel işlemleri otomatikleştirir. Bu geçişi proje dosya biçimleri için garantili bir çözüm değildir.
 
 >[!div class="step-by-step"]
 >[Next](net-framework-tech-unavailable.md)
-

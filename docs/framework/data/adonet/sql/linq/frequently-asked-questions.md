@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 05ba633415f782d5edea7028c1b82b8031428576
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 68d4215129cf4481beb2d8561c1569b3049a287e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878248"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610578"
 ---
 # <a name="frequently-asked-questions"></a>Sıkça Sorulan Sorular
 Aşağıdaki bölümlerde, uyguladığınızda karşılaşabileceğiniz bazı yaygın sorunlar yanıt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -132,9 +132,9 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ```  
   
 ## <a name="errors-using-sql-compact-35"></a>SQL kullanarak hataları Compact 3.5  
- S. Ben tablolar / sürüklediğinizde bir hata iletisi bir [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] veritabanı.  
+ S. Ben dışında bir SQL Server Compact 3.5 veritabanı tabloları sürüklediğinizde bir hata alıyorum.  
   
- A. [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Desteklemediği [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)], ancak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çalışma zamanı yapar. Bu durumda, kendi varlık sınıfları oluşturma ve uygun öznitelikleri eklemeniz gerekir.  
+ A. [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] SQL Server Compact 3.5, ancak desteklememektedir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çalışma zamanı yapar. Bu durumda, kendi varlık sınıfları oluşturma ve uygun öznitelikleri eklemeniz gerekir.  
   
 ## <a name="errors-in-inheritance-relationships"></a>Devralma ilişkilerinde hataları  
  S. Araç kutusu devralma şeklinde kullandım [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] bağlanmak için iki varlık, ancak hatalar alınamıyor.  
@@ -144,7 +144,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>Sağlayıcı modeli  
  S. Bir ortak sağlayıcı modeli kullanılabilir mi?  
   
- A. Hiçbir genel sağlayıcı modeli kullanılabilir. Şu anda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL Server'ı destekler ve [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] yalnızca.  
+ A. Hiçbir genel sağlayıcı modeli kullanılabilir. Şu anda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yalnızca SQL Server ve SQL Server Compact 3.5 destekler.  
   
 ## <a name="sql-injection-attacks"></a>SQL ekleme saldırıları  
  S. Nasıl olduğunu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL ekleme saldırılarına karşı korunuyor?  

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 58e79cf0b017d65644f25250d05d252b5635c21e
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 06085091a13ad76dcd554cfe637bcc151bbb8476
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67151999"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610177"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET nedir ve nasıl çalışır?
 
@@ -164,16 +164,19 @@ Bu bölümde, biz ML.NET Mimari desenleri gidin. Deneyimli bir .NET geliştirici
 ML.NET uygulama ile başlayan bir <xref:Microsoft.ML.MLContext> nesne. Bu tekil nesnesini içeren **katalogları**. Veri yükleme ve kaydetme, dönüşümler ve Eğitmenler modeli işlemi bileşenleri için bir üreteci kataloğudur. Her bir katalog nesnesi bileşenleri farklı türleri oluşturmak için yöntemleri vardır:
 
 ||||
-|-|-|-|
-|Veri yükleme ve kaydetme||<xref:Microsoft.ML.DataOperationsCatalog>|
-|Veri hazırlama||<xref:Microsoft.ML.TransformsCatalog>|
-|Eğitim algoritmaları|İkili sınıflandırma|<xref:Microsoft.ML.BinaryClassificationCatalog>|
-||Sınıflı sınıflandırma|<xref:Microsoft.ML.MulticlassClassificationCatalog>|
-||Anomali algılama|<xref:Microsoft.ML.AnomalyDetectionCatalog>|
-||Derecelendirme|<xref:Microsoft.ML.RankingCatalog>|
-||Regresyon|<xref:Microsoft.ML.RegressionCatalog>|
-||Öneri|<xref:Microsoft.ML.RecommendationCatalog>|
-|Model kullanımı ||<xref:Microsoft.ML.ModelOperationsCatalog>|
+|-|-|-|-|
+|Veri yükleme ve kaydetme||<xref:Microsoft.ML.DataOperationsCatalog>||
+|Veri hazırlama||<xref:Microsoft.ML.TransformsCatalog>||
+|Eğitim algoritmaları|İkili sınıflandırma|<xref:Microsoft.ML.BinaryClassificationCatalog>||
+||Sınıflı sınıflandırma|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
+||Anomali algılama|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
+||Kümeleme|<xref:Microsoft.ML.ClusteringCatalog>||
+||Tahmin etme|<xref:Microsoft.ML.Forecasting>||
+||Derecelendirme|<xref:Microsoft.ML.RankingCatalog>||
+||Regresyon|<xref:Microsoft.ML.RegressionCatalog>||
+||Öneri|<xref:Microsoft.ML.RecommendationCatalog>|Microsoft.ML.Recommender ekleyin|
+||Zaman serisi|<xref:Microsoft.ML.TimeSeriesCatalog>|Microsoft.ML.TimeSeries ekleyin|
+|Model kullanımı ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 Yukarıdaki kategorilerden her biri oluşturma yöntemleri gidebilirsiniz. Visual Studio kullanarak, katalogları IntelliSense gösterilir.
 

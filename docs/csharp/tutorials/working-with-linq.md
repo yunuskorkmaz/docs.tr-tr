@@ -3,12 +3,12 @@ title: LINQ ile Çalışma
 description: Bu öğreticide LINQ ile dizileri oluşturmak, yöntemleri kullanmak için LINQ sorguları yazma ve eager ve geç değerlendirme arasında ayrım öğretir.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: cc9ff83b1db2972f12cc55eaf32a686a1e6f7f4c
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569543"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609302"
 ---
 # <a name="working-with-linq"></a>LINQ ile Çalışma
 
@@ -353,4 +353,3 @@ LINQ hakkında daha fazla bilgi için bkz:
   - [LINQ ile veri dönüştürmeler (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
   - [Sorgu sözdizimi ve yöntem sözdizimi LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
   - [LINQ'i Destekleyen C# Özellikleri](../programming-guide/concepts/linq/features-that-support-linq.md)
-    

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 280557a5098c513111557f52d835b20d9a2eeb62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876895"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610562"
 ---
 # <a name="standard-query-operator-translation"></a>Standart Sorgu İşleci Çevirisi
 
@@ -198,7 +198,7 @@ Bu SQL Server tarih ve saat türlerinin eşleme hakkında daha fazla bilgi için
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 desteği
 
-Aşağıdaki [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] sınırlamaları (karşılaştırıldığında [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]) etkileyen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekler.
+Aşağıdaki [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] sınırlamaları (Microsoft SQL Server 2005'e kıyasla) etkileyen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekler.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Çapraz Uygula ve dış işleçleri Uygula
 
@@ -208,7 +208,7 @@ Bu işleçler kullanılamaz [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.m
 
 ### <a name="text--ntext"></a>Text / ntext
 
-Veri türleri `text`  /  `ntext` karşı belirli sorgu işlemleri kullanılamaz `varchar(max)`  /  `nvarchar(max)`, tarafından hangi desteklendiği [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)].
+Veri türleri `text`  /  `ntext` karşı belirli sorgu işlemleri kullanılamaz `varchar(max)`  /  `nvarchar(max)`, Microsoft SQL Server 2005 tarafından desteklenir.
 
 Bu sınırlama için herhangi bir çözüm kullanılabilir. Özellikle, kullanamazsınız `Distinct()` eşlendiğine üyeleri içeren herhangi bir sonuç üzerinde `text` veya `ntext` sütunları.
 

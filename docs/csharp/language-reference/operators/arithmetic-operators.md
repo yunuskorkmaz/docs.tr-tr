@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 155ce5ce4673008a61b4231a3aaee5a40ad9ead6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 4108583a5f97d1349fb54c335d55252352ea4883
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423991"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610001"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Aritmetik işleçler (C# Başvurusu)
 
@@ -243,7 +243,7 @@ Açıklamalar, daha fazla bilgi için bkz. [System.Double](/dotnet/api/system.do
 
 ## <a name="operator-overloadability"></a>İşleç overloadability
 
-Kullanıcı tanımlı bir tür için [aşırı](../keywords/operator.md) birli (`++`, `--`, `+`, ve `-`) ve ikili (`*`, `/`, `%`, `+`ve `-`) Aritmetik işleçler. İkili İşleç aşırı yüklendiğinde, karşılık gelen bileşik atama işleci de örtülü olarak aşırı yüklenmiş. Kullanıcı tanımlı bir türe açıkça bir bileşik atama işleci aşırı yüklenemez.
+Kullanıcı tanımlı bir tür için [aşırı](operator-overloading.md) birli (`++`, `--`, `+`, ve `-`) ve ikili (`*`, `/`, `%`, `+`ve `-`) Aritmetik işleçler. İkili İşleç aşırı yüklendiğinde, karşılık gelen bileşik atama işleci de örtülü olarak aşırı yüklenmiş. Kullanıcı tanımlı bir türe açıkça bir bileşik atama işleci aşırı yüklenemez.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

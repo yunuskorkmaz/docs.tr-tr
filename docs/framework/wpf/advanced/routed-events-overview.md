@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 326900087f755b6c92d9ebb77dad36e5880fd2c0
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063888"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610433"
 ---
 # <a name="routed-events-overview"></a>Gönderilmiş Olaylara Genel Bakış
 Bu konuda yönlendirilmiş olaylar kavramını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Konu yönlendirilmiş olaylar terminolojisini, açıklar yönlendirilmiş olaylar öğe ağacındaki yönlendirilir nasıl nasıl işleyeceğinizi özetler ve kendi özel gönderilmiş olay oluşturma kullanıma sunar.
@@ -98,7 +98,7 @@ Bu konuda yönlendirilmiş olaylar kavramını açıklar [!INCLUDE[TLA#tla_wincl
   
  Önerilen senaryolardan birini kullanıyorsanız burada yönlendirilmiş olaylar güçlü hale olduğu: ortak bir kök en yaygın işleyicileri tanımlama birleştirme kendi denetiminizi veya kendi özel denetimi sınıfını tanımlama.  
   
- Yönlendirilmiş olay dinleyicileri ve yönlendirilmiş olay kaynakları hiyerarşilerini ortak bir olayı paylaşmak gerekmez. Tüm <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement> gönderilmiş bir olay için bir olay dinleyicisi olabilir. Bu nedenle, yönlendirilmiş olaylar çalışma boyunca kullanılabilir tam kümesini kullanabileceğiniz [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] "uygulama içindeki farklı öğelerin olay bilgi alışverişi verebileceğiniz bir kavramsal arabirimi" ayarlayın. Yönlendirilmiş olaylar için bu "arabirim" kavramı, giriş olayları için özellikle geçerlidir.  
+ Yönlendirilmiş olay dinleyicileri ve yönlendirilmiş olay kaynakları hiyerarşilerini ortak bir olayı paylaşmak gerekmez. Tüm <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement> gönderilmiş bir olay için bir olay dinleyicisi olabilir. Bu nedenle, "uygulama içindeki farklı öğelerin olay bilgi alışverişi yapabildiği bir kavramsal arabirimi" olarak çalışan API genelinde kullanılabilir yönlendirilmiş olaylar kümesini kullanabilirsiniz. Yönlendirilmiş olaylar için bu "arabirim" kavramı, giriş olayları için özellikle geçerlidir.  
   
  Olay verileri olayın rota içindeki her öğeyi perpetuated çünkü yönlendirilmiş olaylar öğesi ağacı ile iletişim kurmak için de kullanılabilir. Bir öğe bir şey olay verileri değiştirebilir ve bu değişiklik rota sonraki öğe için kullanılabilir hale gelir.  
   

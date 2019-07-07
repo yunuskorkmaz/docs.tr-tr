@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 7c9863134cb2a12072954bb283c7828abece3adb
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 80603107beb708e76a2c7446f300d71ede411570
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347906"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609852"
 ---
 # <a name="--and---operators-c-reference"></a>- ve-= işleçleri (C# Başvurusu)
 
@@ -72,7 +72,7 @@ Ayrıca `-=` abonelikten çıkma kaldırmak için bir olay işleyicisi yöntemi 
 
 ## <a name="operator-overloadability"></a>İşleç overloadability
 
-Kullanıcı tanımlı bir tür için [aşırı](../keywords/operator.md) `-` işleci. Bir ikili olduğunda `-` işleci aşırı yüklenmiş, `-=` işleci örtük olarak aşırı yüklenmiş, ayrıca. Kullanıcı tanımlı bir türe açıkça aşırı yüklenemez `-=` işleci.
+Kullanıcı tanımlı bir tür için [aşırı](operator-overloading.md) `-` işleci. Bir ikili olduğunda `-` işleci aşırı yüklenmiş, `-=` işleci örtük olarak aşırı yüklenmiş, ayrıca. Kullanıcı tanımlı bir türe açıkça aşırı yüklenemez `-=` işleci.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

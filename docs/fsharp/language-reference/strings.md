@@ -1,13 +1,13 @@
 ---
 title: Dizeler
 description: Bilgi nasıl F# 'string' türü sabit metin Unicode karakter dizisi olarak temsil eder.
-ms.date: 06/28/2019
-ms.openlocfilehash: 8bd7a65a8d8e9e6a2d3930cd1fc9e800342d9a18
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.date: 07/05/2019
+ms.openlocfilehash: b252aef7d7e6e299df8282407198714971e80cd5
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487763"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610170"
 ---
 # <a name="strings"></a>Dizeler
 
@@ -22,14 +22,26 @@ Dize değişmez değerleri tırnak işareti (") karakteriyle ayrılır. Ters eğ
 
 |Karakter|Kaçış sırası|
 |---------|---------------|
+|Uyarı|`\a`|
 |Geri Al tuşu|`\b`|
+|form besleme|`\f`|
 |Yeni satır|`\n`|
 |satır başı|`\r`|
 |Tab|`\t`|
+|dikey sekme|`\v`|
 |Ters eğik çizgi|`\\`|
 |Tırnak işareti|`\"`|
 |Kesme işareti|`\'`|
-|Unicode karakter|`\uXXXX` (UTF-16) veya `\U00XXXXXX` (UTF-32) (burada `X` onaltılık basamak gösterir)|
+|Unicode karakter|`\DDD` (burada `D` gösteren bir ondalık basamak; 000 - aralığını 255; örn `\231` "ç" =)|
+|Unicode karakter|`\xHH` (burada `H` onaltılık bir basamaktır; 00 - FF; aralığını gösteren örn `\xE7` "ç" =)|
+|Unicode karakter|`\uHHHH` (UTF-16) (burada `H` onaltılık bir basamaktır; 0000 - FFFF; aralığını gösterir  Örneğin `\u00E7` "ç" =)|
+|Unicode karakter|`\U00HHHHHH` (UTF-32) (burada `H` onaltılık bir basamaktır; 000000 - 10FFFF; aralığını gösterir  Örneğin `\U0001F47D` = "👽")|
+
+> [!IMPORTANT]
+> `\DDD` Kaçış dizisi olan ondalık gösterim, çoğu dil gibi değil sekizlik gösterim. Bu nedenle, basamak `8` ve `9` geçerli olduğundan ve bir dizi `\032` bir alanını temsil eder (U + 0020), o aynı kod noktası sekizlik gösterimde olabilir ancak `\040`.
+
+> [!NOTE]
+> 0 aralığına kısıtlanmasını - 255 (0xFF) `\DDD` ve `\x` kaçış dizileri, esas [ISO-8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1#Code_page_layout) , ilk 256 Unicode kod noktaları eşleştiğinden karakter kümesi.
 
 Öncesinde, @ sembolü, değişmez değer verbatim bir dizedir. İki tırnak karakteri tek tırnak işareti karakteri yorumlanır dışında bu, herhangi bir kaçış dizileri göz ardı, anlamına gelir.
 

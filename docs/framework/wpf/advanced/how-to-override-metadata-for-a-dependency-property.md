@@ -9,18 +9,18 @@ helpviewer_keywords:
 - dependency properties [WPF], overriding metadata for
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-ms.openlocfilehash: 7f20708722660aa4f86462efd50939935f840613
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef0309ae0d03c8278134012e645960996c6f93c4
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768634"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610506"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Nasıl yapılır: Bağımlılık Özelliği için Meta Verileri Geçersiz Kılma
 Bu örnek, devralınan bir sınıftan çağırarak gelen varsayılan bağımlılık özelliği meta verileri geçersiz kılma işlemi gösterilmektedir <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> yöntemi ve türe özgü meta veriler sağlar.  
   
 ## <a name="example"></a>Örnek  
- Tanımlayarak kendi <xref:System.Windows.PropertyMetadata>, bir sınıf kendi varsayılan değeri ve özellik sistemi geri aramaları gibi bağımlılık özelliği davranışları tanımlayabilirsiniz. Birçok bağımlılık özelliği sınıfları, kullanıcıların kayıt işleminin bir parçası oluşturulan varsayılan meta verileri zaten var. Bu parçası olan bağımlılık özelliklerini içeren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]. Bağımlılık özelliği, sınıf devralma yoluyla devralınan bir sınıf, meta veriler üzerinden değiştirilebilir özelliği özelliklerini herhangi bir alt sınıf özgü gereksinimler eşleşir, böylece özgün metaverileri gereğince geçersiz kılabilirsiniz.  
+ Tanımlayarak kendi <xref:System.Windows.PropertyMetadata>, bir sınıf kendi varsayılan değeri ve özellik sistemi geri aramaları gibi bağımlılık özelliği davranışları tanımlayabilirsiniz. Birçok bağımlılık özelliği sınıfları, kullanıcıların kayıt işleminin bir parçası oluşturulan varsayılan meta verileri zaten var. Bu parçası olan bağımlılık özelliklerini içeren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API. Bağımlılık özelliği, sınıf devralma yoluyla devralınan bir sınıf, meta veriler üzerinden değiştirilebilir özelliği özelliklerini herhangi bir alt sınıf özgü gereksinimler eşleşir, böylece özgün metaverileri gereğince geçersiz kılabilirsiniz.  
   
  Bağımlılık özelliği meta verileri geçersiz kılma kullanın (Bu özelliği kaydetme nesnelerin belirli örneklerini örneği saati karşılık gelir) özellik sistemi tarafından yerleştirilen bu özelliği önce yapılmalıdır. Çağrılar <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> olarak kendisini sağlayan bir tür statik oluşturucuları içinde gerçekleştirilmelidir `forType` parametresinin <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>. Sahip türünün örneği varolduğunda meta verileri değiştirmeye çalışırsanız, bu özel durumları oluşturmaz, ancak özellik sistemindeki tutarsız davranışlara neden olur. Ayrıca, meta veriler yalnızca bir kez başına türü geçersiz kılınabilir. Sonraki denemeler aynı tür meta verileri geçersiz kılma için bir özel durum oluşturacak.  
   

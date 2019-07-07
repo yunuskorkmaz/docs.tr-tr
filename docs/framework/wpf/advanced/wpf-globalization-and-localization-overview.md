@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: ce54c3299d599e990fa02abd3cea1460d588e280
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28aeaae7292224dc8f56787efbde82712340af11
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662263"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610394"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
 
@@ -90,7 +90,7 @@ Geliştirirken bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharpt
 
 Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dll` dosyası oluşturulur. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Öğeleri ve orijinal özelliklerinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] XAML anahtar-değer çiftlerine BAML formu kullanarak ayıklandığı [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] altında <xref:System.Windows.Markup.Localizer>. Uygulamayı yerelleştirmek için anahtar-değer çiftleri yerelleştiriciler kullanın. Yeni bir oluşturabilirsiniz. resource.dll yerelleştirme tamamlandıktan sonra yeni değerlerinin.
   
- Anahtar-değer çiftleri anahtarlar `x:Uid` özgün geliştirici tarafından yerleştirilen değerleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Bunlar `x:Uid` değerleri etkinleştir [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] izlemek ve geliştirici arasında yerelleştiriciye yerelleştirme sırasında gerçekleşen değişiklikleri birleştirir. Örneğin, geliştirici değişirse [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] yerelleştirme yerelleştiriciye başladıktan sonra en az bir çeviri iş böylece geliştirme değişiklik zaten tamamlanmış yerelleştirme çalışması ile birleştirebilirsiniz.  
+ Anahtar-değer çiftleri anahtarlar `x:Uid` özgün geliştirici tarafından yerleştirilen değerleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Bunlar `x:Uid` değerleri izlemek ve geliştirici arasında yerelleştiriciye yerelleştirme sırasında gerçekleşen değişiklikleri birleştirmek API etkinleştir. Örneğin, geliştirici değişirse [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] yerelleştirme yerelleştiriciye başladıktan sonra en az bir çeviri iş böylece geliştirme değişiklik zaten tamamlanmış yerelleştirme çalışması ile birleştirebilirsiniz.  
   
  Aşağıdaki grafikte, XAML bir BAML formu temel alan bir yerelleştirme tipik iş akışı gösterilmektedir. Bu diyagram, geliştirici bir uygulama İngilizce olarak yazar. varsayar. Geliştirici oluşturur ve WPF uygulaması globalizes. Projede Geliştirici ayarlar dosyası `<UICulture>en-US</UICulture>` derleme üzerinde dil nötr ana derleme bir uydu ile oluşturulan. tüm yerelleştirilebilir kaynakları içeren resources.dll. Alternatif olarak, WPF yerelleştirme API ana derleme ayıklama desteklediğinden bir kaynak dili ana derlemede tutun. Derleme işleminden sonra XAML derlenmiş BAML. Duyarlıymış nötr MyDialog.exe.resources.dll İngilizce konuşan müşteriye sevk.  
   

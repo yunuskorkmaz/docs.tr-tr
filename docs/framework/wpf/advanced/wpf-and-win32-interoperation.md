@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 997ea7bd1c18d3817457ad109cd611c989f50d8a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cbae3011634fb6c6b68e477a10931a1ef13c3f55
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650730"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610359"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF ve Win32 Birlikte Çalışması
 Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kod. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu olabilir bazı kodu yeniden kullanmak daha etkili.  
@@ -29,7 +29,7 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>WPF birlikte çalışabilirlik projeleri  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] yönetilen kod, ancak çoğu mevcut [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlar yazılır yönetilmeyen [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Çağıramazsınız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] gerçek bir program yönetilmeyen. Kullanarak ancak `/clr` seçeneğini [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] derleyici, yönetilen ve yönetilmeyen Burada, sorunsuz bir şekilde karışık bir karışık yönetilen-yönetilmeyen program oluşturabilirsiniz [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] çağırır.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] yönetilen kod, ancak çoğu mevcut [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlar yazılır yönetilmeyen [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Çağıramazsınız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] gerçek bir program yönetilmeyen. Kullanarak ancak `/clr` seçeneğini [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] derleyici, burada, sorunsuz bir şekilde karışık yönetilen ve yönetilmeyen API çağrıları karma bir yönetilen-yönetilmeyen program oluşturabilirsiniz.  
   
  Bir proje düzeyi komplikasyon olduğundan, derlenemez [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyalarınızı bir [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] proje.  Bunu düzeltmek için birçok proje bölme teknikler vardır.  
   

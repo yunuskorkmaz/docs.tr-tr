@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - implicit keyword [C#]
 ms.assetid: 34db590e-eb3a-4f11-88d0-ffb3cd753dab
-ms.openlocfilehash: d3e1cb9d6fb37617c6e2aa7070b006c594d39762
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00fe1a02b52ef2ddc393bc7424efa73fc4059a9c
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661483"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610119"
 ---
 # <a name="implicit-c-reference"></a>implicit (C# Başvurusu)
 
@@ -35,5 +35,5 @@ ms.locfileid: "61661483"
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [explicit](explicit.md)
-- [İşleci (C# Başvurusu)](operator.md)
+- [İşleç aşırı yüklemesi](../operators/operator-overloading.md)
 - [Nasıl yapılır: Yapılar arasında kullanıcı tanımlı Dönüşümler Uygulama](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

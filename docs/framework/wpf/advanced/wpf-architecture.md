@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: f4a6e6c2a63e58c40e0cca9c67b12d1f65af0d2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053151"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610352"
 ---
 # <a name="wpf-architecture"></a>WPF Mimarisi
 Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisi Kılavuzlu bir turu sağlar. Ana alt çoğunu kapsar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ve nasıl etkileşim kurduklarını açıklar. Bu ayrıca mimarları tarafından yapılan seçimleri bazıları ayrıntılı [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -62,7 +62,7 @@ Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisi Kılavuzlu b
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
- Sistem tanımlı bir sonraki adıma ekrana çizilmiş piksel almaktır. <xref:System.Windows.Media.Visual> Sınıfı, görsel nesneler bir ağaç her isteğe bağlı olarak çizim yönergeleri ve bu yönergeleri (kırpma, dönüştürme, vb.) işlemek nasıl hakkındaki meta verileri içeren oluşturmak için sağlar. <xref:System.Windows.Media.Visual> son derece basit ve esnek, böylece hiçbir genel özelliklerin çoğunu sahip olacak şekilde tasarlanan [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] Etkilenme ve yoğun olarak korumalı bir geri çağırma işlevleri kullanır.  
+ Sistem tanımlı bir sonraki adıma ekrana çizilmiş piksel almaktır. <xref:System.Windows.Media.Visual> Sınıfı, görsel nesneler bir ağaç her isteğe bağlı olarak çizim yönergeleri ve bu yönergeleri (kırpma, dönüştürme, vb.) işlemek nasıl hakkındaki meta verileri içeren oluşturmak için sağlar. <xref:System.Windows.Media.Visual> özelliklerin çoğunu Genel API gerçekleşmediğinden sahiptir ve yoğun olarak korumalı bir geri çağırma işlevleri kullanan son derece basit ve esnek olacak şekilde tasarlanmıştır.  
   
  <xref:System.Windows.Media.Visual> gerçekten giriş noktası olan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] oluşturma sistemi. <xref:System.Windows.Media.Visual> yönetilen iki bu sistemler arasında bağlantı noktasıdır [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] ve yönetilmeyen milcore.  
   
@@ -112,7 +112,7 @@ Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisi Kılavuzlu b
   
  Birincil ilke tarafından tanıtılan <xref:System.Windows.FrameworkElement> geçici bir çözüm uygulama düzeni. <xref:System.Windows.FrameworkElement> tarafından sunulan temel düzeni sözleşme üzerine inşa edilmiştir <xref:System.Windows.UIElement> ve bir düzen "özelliği düzeni semantiği temelli tutarlı özellik kümesi Düzen yazarlar kolaylaştırır yuvası" kavramı ekler. Özellikleri gibi <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>, <xref:System.Windows.FrameworkElement.MinWidth%2A>, ve <xref:System.Windows.FrameworkElement.Margin%2A> (birkaç örnek vermek gerekirse) öğesinden türetilen tüm bileşenleri vermek <xref:System.Windows.FrameworkElement> Düzen kapsayıcıları içinde tutarlı bir davranış.  
   
- <xref:System.Windows.FrameworkElement> Ayrıca daha kolay sağlar [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] maruz kalma riskinizi birçok özelliği temel katmanda bulunan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Örneğin, <xref:System.Windows.FrameworkElement> animasyon doğrudan erişim sağlayan <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> yöntemi. A <xref:System.Windows.Media.Animation.Storyboard> birden çok animasyon bir özellikler kümesini karşı komut dosyası için bir yol sağlar.  
+ <xref:System.Windows.FrameworkElement> Ayrıca temel katmanda bulunan birçok özelliklerini daha kolay API maruz sağlar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Örneğin, <xref:System.Windows.FrameworkElement> animasyon doğrudan erişim sağlayan <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> yöntemi. A <xref:System.Windows.Media.Animation.Storyboard> birden çok animasyon bir özellikler kümesini karşı komut dosyası için bir yol sağlar.  
   
  İki en önemli şey, <xref:System.Windows.FrameworkElement> tanıtır veri bağlama ve stilleri.  
   

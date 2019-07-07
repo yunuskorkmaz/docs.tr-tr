@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 2d896708c702f5261239eb74f925c10eacd89619
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f7505051cce3aee99e6b6ea88a6a94498926214
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61709893"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609627"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Deyimler, İfadeler ve İşleçler (C# Programlama Kılavuzu)
 
@@ -32,8 +32,6 @@ Bir uygulamayı oluşturan C# kodu anahtar sözcükler, ifadeler ve işleçler o
 - [İşleçler](operators.md)
 
 - [Anonim İşlevler](anonymous-functions.md)
-
-- [Aşırı Yüklenebilir İşleçler](overloadable-operators.md)
 
 - [Dönüştürme İşleçleri](conversion-operators.md)
 

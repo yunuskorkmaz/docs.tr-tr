@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: d328f8e73824a4773c6e10f506f3021d3c88d085
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6622612e927b800e1a4769c99df0e2fa7d99a33d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683944"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609647"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Erişim Değiştiricileri (C# Programlama Kılavuzu)
 Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelere başka koddan kullanılıp kullanılamayacağını denetleyen bir erişilebilirlik düzeyi vardır. Aşağıdaki erişim değiştiriciler, tür veya üyenin erişilebilirliğini bildirirken zaman belirtmek için kullanabilirsiniz:  
@@ -53,7 +53,7 @@ Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelere başka kodda
   
  Bir alan, özellik veya olay herhangi bir üyenin türü en az üyesi olarak olarak erişilebilir olması gerekir. Benzer şekilde, dönüş türü ve parametre türleri, yöntem, dizin oluşturucu veya temsilci olan herhangi bir üyenin en az üyesi olarak olarak erişilebilir olmalıdır. Örneğin, bir genel yöntem olamaz `M` bir sınıf döndüren `C` sürece `C` ayrıca geneldir. Benzer şekilde, bir korumalı özellik türü olamaz `A` varsa `A` özel olarak bildirilir.  
   
- Kullanıcı tanımlı işleçler her zaman ortak olarak bildirilmelidir. Daha fazla bilgi için [işleci (C# Başvurusu)](../../../csharp/language-reference/keywords/operator.md).  
+ Kullanıcı tanımlı işleçler, her zaman genel ve statik olarak bildirilmelidir. Daha fazla bilgi için [işleci aşırı yüklemesi](../../../csharp/language-reference/operators/operator-overloading.md).  
   
  Sonlandırıcılar erişilebilirlik değiştiricileri olamaz.  
   

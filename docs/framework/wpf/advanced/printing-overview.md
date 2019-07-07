@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: f82fd9803512dbd2466c4d0b49142e2c553d578a
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 2090c58369ed3c7bda5df1342291001d9550d48d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380227"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610463"
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış
 Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uygulama geliştiricileri sahip yeni zengin bir yazdırma ve yazdırma sistemi yönetimi API'leri. İle [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], bazı bu yazdırma sistemi geliştirmeler de oluşturma geliştiricilere sunulan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamaların ve geliştiricilerin kullanarak yönetilmeyen kod. Bu yeni işlevselliği özünde yenilikler [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosya biçimi ve [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu.  
@@ -31,7 +31,7 @@ Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uy
 ## <a name="about-xps"></a>XPS hakkında  
  XPS, bir elektronik belge biçimi, bir Biriktirme dosyası biçimi ve sayfa açıklaması dili içindir. Kullanan açık belge biçimi olan [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)]ve platformlar arası belgeleri oluşturmak için diğer endüstri standartları. XPS olarak dijital belgeleri oluşturulan, paylaşılan, yazdırılan, görüntülenen arşivlenmiş ve işlemini basitleştirir. XPS hakkında ek bilgi için bkz. [XPS belgeleri](/windows/desktop/printdocs/documents).  
   
- Yazdırma XPS tabanlı içerik kullanmaya yönelik çeşitli teknikler [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] örneklerde gösterildiği [program aracılığıyla XPS dosyalarını yazdırma](how-to-programmatically-print-xps-files.md). Bu konuda yer alan içeriği gözden geçirme sırasında bu örnekleri başvuru daha faydalı olabilir. (Yönetilmeyen kod geliştiriciler için belgeleri görmeniz [MXDC_ESCAPE işlevi](/windows/desktop/printdocs/mxdc-escape). Windows Forms geliştiriciler kullanmalıdır [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] içinde <xref:System.Drawing.Printing> tam desteklemeyen ad alanı [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu, ancak bir karma GDI XPS yazdırma yolu yoksa desteği. Bkz: **yazdırma yolu mimarisi** aşağıda.)  
+ Yazdırma XPS tabanlı içerik kullanmaya yönelik çeşitli teknikler [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] örneklerde gösterildiği [program aracılığıyla XPS dosyalarını yazdırma](how-to-programmatically-print-xps-files.md). Bu konuda yer alan içeriği gözden geçirme sırasında bu örnekleri başvuru daha faydalı olabilir. (Yönetilmeyen kod geliştiriciler için belgeleri görmeniz [MXDC_ESCAPE işlevi](/windows/desktop/printdocs/mxdc-escape). Windows Forms geliştiriciler API'de kullanmalıdır <xref:System.Drawing.Printing> tam desteklemeyen ad alanı [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu, ancak bir karma GDI XPS yazdırma yolu yoksa desteği. Bkz: **yazdırma yolu mimarisi** aşağıda.)  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS yazdırma yolu  
@@ -51,7 +51,7 @@ Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uy
   
 - Sektör standardı XPS biçim.  
   
- Temel yazdırma senaryolar için basit ve sezgisel bir [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] kullanıcı arabirimi, yapılandırma ve iş gönderme için tek giriş noktası ile kullanılabilir. Gelişmiş senaryolar için bir ek destek için eklenen [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] özelleştirme (veya hiç [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] hiç), zaman uyumlu veya zaman uyumsuz yazdırma ve yazdırma yetenekleri toplu. Seçeneklerin tam veya kısmi güven modunda yazdırma desteği sağlar.  
+ Temel yazdırma senaryoları için basit ve sezgisel bir API kullanıcı arabirimi, yapılandırma ve iş gönderme için tek giriş noktası ile kullanılabilir. Gelişmiş senaryolar için bir ek destek için eklenen [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] özelleştirme (veya hiç [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] hiç), zaman uyumlu veya zaman uyumsuz yazdırma ve yazdırma yetenekleri toplu. Seçeneklerin tam veya kısmi güven modunda yazdırma desteği sağlar.  
   
  XPS aklınızda genişletilebilirlik ile tasarlanmıştır. Genişletilebilirlik Çerçevesi'ni kullanarak, özellikler ve yetenekler için XPS modüler bir şekilde eklenebilir. Genişletilebilirlik özellikleri şunlardır:  
   
@@ -75,7 +75,7 @@ Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uy
  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Denetim için tek giriş noktası sağlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], yapılandırma ve XPS iş gönderme. Denetim oluşturulacağı ve kullanılacağı hakkında daha fazla bilgi için bkz. [Yazdır iletişim kutusu çağırma](how-to-invoke-a-print-dialog.md).  
   
 ### <a name="advanced-xps-printing"></a>Gelişmiş XPS yazdırma  
- XPS kümesinin tamamını erişmek için özellikleri, Gelişmiş Yazdırma [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] kullanılmalıdır. İlgili birkaç [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] aşağıda daha ayrıntılı olarak açıklanmıştır. XPS tam bir listesi için yazdırma yolu [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], bkz: <xref:System.Windows.Xps> ve <xref:System.Printing> ad alanı başvurularını.  
+ XPS özelliklerin tam bir set erişmek için Gelişmiş yazdırma API kullanılmalıdır. Birkaç ilgili API aşağıda daha ayrıntılı olarak açıklanmıştır. XPS tam bir listesi için yazdırma yolu [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], bkz: <xref:System.Windows.Xps> ve <xref:System.Printing> ad alanı başvurularını.  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket ve PrintCapabilities  
  <xref:System.Printing.PrintTicket> Ve <xref:System.Printing.PrintCapabilities> Gelişmiş XPS özelliklerine temel sınıflardır. Her iki tür nesneleri [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] yazdırma yönelimli özelliği harmanlaması, iki taraflı yazdırma, zımbalama, vb. gibi yapıları biçimlendirilmiş. Bu yapılar, yazdırma şeması tarafından tanımlanır. A <xref:System.Printing.PrintTicket> bir yazdırma işi işlemek nasıl bir yazıcı bildirir. <xref:System.Printing.PrintCapabilities> Sınıfı bir yazıcı yeteneklerini tanımlar. Bir yazıcı yeteneklerini sorgulamak bir <xref:System.Printing.PrintTicket> tam yararlanır yazıcı desteklenen özellikler oluşturulabilir. Benzer şekilde, desteklenmeyen özellikler önlenebilir.  

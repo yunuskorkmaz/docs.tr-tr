@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - explicit keyword [C#]
 ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
-ms.openlocfilehash: 4949b88a32dae2a727e623bb6e4db0a4f9d8418c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a260c6f1ccac6e09770f1cb8f43d5d872b4b2650
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661717"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610095"
 ---
 # <a name="explicit-c-reference"></a>explicit (C# Başvurusu)
 
@@ -55,6 +55,6 @@ Aşağıdaki örnek, bir yapı tanımlar `Digit`, temsil eden tek bir ondalık b
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [implicit](implicit.md)
-- [İşleci (C# Başvurusu)](operator.md)
+- [İşleç aşırı yüklemesi](../operators/operator-overloading.md)
 - [Nasıl yapılır: Yapılar arasında kullanıcı tanımlı Dönüşümler Uygulama](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
 - [Kullanıcı tanımlı C# ' de açık dönüştürmeler zincirleme](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)

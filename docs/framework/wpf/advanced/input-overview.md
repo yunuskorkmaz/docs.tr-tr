@@ -24,31 +24,31 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 6aae66de973c357b4b87578221a169bf750739fb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 47d892db8418b44fffeec870e56b49d5f986b563
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599025"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610472"
 ---
 # <a name="input-overview"></a>Girişe Genel Bakış
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Alt sistemi sağlayan güçlü [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] giriş çeşitli cihazlardan almak için fare, klavye, dokunmatik ve Kalem dahil. Bu konu tarafından sağlanan hizmetleri açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve giriş sistemleri mimarisini açıklar.
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>Giriş API'si
- Birincil Giriş [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] Etkilenme üzerinde temel öğe sınıfları bulundu: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, ve <xref:System.Windows.FrameworkContentElement>.  Temel öğeler hakkında daha fazla bilgi için bkz. [temel öğelere genel bakış](base-elements-overview.md).  Bu sınıflar, tuş basışlarını, fare düğmesini, fare tekerleğini, fare hareketini, odak yönetim ve fare yakalama için ilgili giriş olayları için işlevsellik sağlar. Giriş yerleştirerek [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] temel öğelerde değerlendirmesini yerine tüm olayları bir hizmet olarak giriş, giriş mimarisi, bir'birden fazla kullanıcı arabiriminde belirli bir nesnenin tarafından sağlanmasına ve bir olay yönlendirme şeması yapabildiği desteklemek için giriş olayları sağlar. öğesi, bir giriş olayı işlemek için fırsatına sahiptir. Birçok giriş olayları, bir çift bunlarla ilişkilendirilmiş olayları vardır.  Örneğin, olay tuşunu ilişkili olduğu <xref:System.Windows.Input.Keyboard.KeyDown> ve <xref:System.Windows.Input.Keyboard.PreviewKeyDown> olayları.  Bu olaylar, nasıl bunlar hedef öğeye yönlendirilir farktır.  Önizleme olayları tünel öğesi ağaç kök öğeden hedef öğeye.  Tırmanma olayları Kabarcık ayarlama hedef öğesinden için kök öğe.  Olay yönlendirme [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ilerleyen bölümlerinde bu genel bakış ve daha ayrıntılı anlatılan [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).
+ API Etkilenme temel öğe sınıflarında bulunan birincil giriş: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, ve <xref:System.Windows.FrameworkContentElement>.  Temel öğeler hakkında daha fazla bilgi için bkz. [temel öğelere genel bakış](base-elements-overview.md).  Bu sınıflar, tuş basışlarını, fare düğmesini, fare tekerleğini, fare hareketini, odak yönetim ve fare yakalama için ilgili giriş olayları için işlevsellik sağlar. Temel öğeler üzerinde ' % s'giriş API yerleştirme yerine hizmet olarak tüm giriş olayları değerlendirmek, giriş mimarisi, kullanıcı arabiriminde belirli bir nesnenin tarafından sağlanmasına ve verebileceğiniz bir opp birden fazla öğeye sahip bir olay yönlendirme düzenini desteklemek için giriş olayları sağlar. bir giriş olayı işlemek için ortunity. Birçok giriş olayları, bir çift bunlarla ilişkilendirilmiş olayları vardır.  Örneğin, olay tuşunu ilişkili olduğu <xref:System.Windows.Input.Keyboard.KeyDown> ve <xref:System.Windows.Input.Keyboard.PreviewKeyDown> olayları.  Bu olaylar, nasıl bunlar hedef öğeye yönlendirilir farktır.  Önizleme olayları tünel öğesi ağaç kök öğeden hedef öğeye.  Tırmanma olayları Kabarcık ayarlama hedef öğesinden için kök öğe.  Olay yönlendirme [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ilerleyen bölümlerinde bu genel bakış ve daha ayrıntılı anlatılan [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).
 
 ### <a name="keyboard-and-mouse-classes"></a>Klavye ve fare sınıfları
- Giriş yanı sıra [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] temel öğe sınıflarda <xref:System.Windows.Input.Keyboard> sınıfı ve <xref:System.Windows.Input.Mouse> sınıfları sağlar ek [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] klavye ve fare girişi ile çalışmak için.
+ Temel öğe sınıfları, giriş API yanı sıra <xref:System.Windows.Input.Keyboard> sınıfı ve <xref:System.Windows.Input.Mouse> sınıfları, klavye ve fare girişi ile çalışmak için ek bir API sağlar.
 
- Giriş örnekleri [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] üzerinde <xref:System.Windows.Input.Keyboard> sınıfı <xref:System.Windows.Input.Keyboard.Modifiers%2A> döndüren özellik <xref:System.Windows.Input.ModifierKeys> şu anda basılı ve <xref:System.Windows.Input.Keyboard.IsKeyDown%2A> yöntemi belirtilen bir tuşa basıldığında olup olmadığını belirler.
+ API giriş örnekleri <xref:System.Windows.Input.Keyboard> sınıfı <xref:System.Windows.Input.Keyboard.Modifiers%2A> döndüren özellik <xref:System.Windows.Input.ModifierKeys> şu anda basılı ve <xref:System.Windows.Input.Keyboard.IsKeyDown%2A> yöntemi belirtilen bir tuşa basıldığında olup olmadığını belirler.
 
  Aşağıdaki örnekte <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> belirlemek için yöntemi bir <xref:System.Windows.Input.Key> aşağı durumdadır.
 
  [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardgetkeystates)]
  [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardgetkeystates)]
 
- Giriş örnekleri [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] üzerinde <xref:System.Windows.Input.Mouse> sınıfı <xref:System.Windows.Input.Mouse.MiddleButton%2A>, orta fare düğmesi durumunu alır ve <xref:System.Windows.Input.Mouse.DirectlyOver%2A>, fare işaretçisi öğenin alır şu anda biter.
+ API giriş örnekleri <xref:System.Windows.Input.Mouse> sınıfı <xref:System.Windows.Input.Mouse.MiddleButton%2A>, orta fare düğmesi durumunu alır ve <xref:System.Windows.Input.Mouse.DirectlyOver%2A>, fare işaretçisi öğenin alır şu anda biter.
 
  Aşağıdaki örnek belirler olmadığını <xref:System.Windows.Input.Mouse.LeftButton%2A> üzerinde fareyi bulunduğu <xref:System.Windows.Input.MouseButtonState.Pressed> durumu.
 
@@ -58,7 +58,7 @@ ms.locfileid: "64599025"
  <xref:System.Windows.Input.Mouse> Ve <xref:System.Windows.Input.Keyboard> sınıfları bu genel bakış içindeki daha ayrıntılı ele alınmıştır.
 
 ### <a name="stylus-input"></a>İğne girişi
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Destek için tümleşik olan <xref:System.Windows.Input.Stylus>.  <xref:System.Windows.Input.Stylus> Popüler tarafından yapılan bir kalem girişi [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar kabul ekran kalemi fare fareyi kullanarak [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], ancak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de kullanan bir model klavye ve fare benzer bir ekran kalemi cihaz soyutlamayı kullanıma sunar.  Ekran kalemi ilgili tüm [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] "Kalem" sözcüğünü içermelidir.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Destek için tümleşik olan <xref:System.Windows.Input.Stylus>.  <xref:System.Windows.Input.Stylus> Popüler tarafından yapılan bir kalem girişi [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar kabul ekran kalemi fare API, fareyi kullanarak ancak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de kullanan bir model klavye ve fare benzer bir ekran kalemi cihaz soyutlamayı kullanıma sunar.  Ekran kalemi ilgili tüm [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] "Kalem" sözcüğünü içermelidir.
 
  Ekran kalemi fare davranıp çünkü yalnızca fare girişi destekleyen uygulamalar yine de bazı ekran kalemi destek düzeyini otomatik olarak edinebilirsiniz. Ekran kalemi bu tür bir şekilde kullanıldığında, uygulama uygun ekran kalemi olayı işlemek için fırsatı verilir ve daha sonra karşılık gelen bir fare olayını işler. Mürekkep giriş gibi daha üst düzey hizmetler buna Ayrıca ekran kalemi cihaz soyutlamayı olarak kullanılabilir.  Giriş olarak mürekkep hakkında daha fazla bilgi için bkz. [mürekkep ile çalışmaya başlama](getting-started-with-ink.md).
 
@@ -350,7 +350,7 @@ ms.locfileid: "64599025"
 
 <a name="mouse_position"></a>
 ## <a name="mouse-position"></a>Fare konumu
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Giriş [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] koordinat ilgili faydalı bilgiler sağlar.  Örneğin, koordine `(0,0)` sol üst koordinat ancak hangi öğe ağacında sol üst? Girişi hedef öğesi? Öğe, olay işleyicisine bağlı? Veya başka bir şey mi? Karışıklığı önlemek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] giriş [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] fareyi elde edilen koordinatları ile çalışırken, referans çerçevesi belirtmenizi gerektirir. <xref:System.Windows.Input.Mouse.GetPosition%2A> Yöntemi koordinat fare işaretçisinin göreli belirtilen öğeyi döndürür.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Giriş API koordinat ilgili yararlı bilgiler sağlar.  Örneğin, koordine `(0,0)` sol üst koordinat ancak hangi öğe ağacında sol üst? Girişi hedef öğesi? Öğe, olay işleyicisine bağlı? Veya başka bir şey mi? Karışıklığı önlemek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] giriş API gerektirir fareyi elde edilen koordinatları ile çalışırken, referans çerçevesi belirtin. <xref:System.Windows.Input.Mouse.GetPosition%2A> Yöntemi koordinat fare işaretçisinin göreli belirtilen öğeyi döndürür.
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>Fare yakalama

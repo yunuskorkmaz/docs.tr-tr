@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 01122991e99e41259c3b83a38eba002734d749ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a47f5a93cb161c9a87df25403cc86247619cd81
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655520"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610527"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Arka Plan Kod ve WPF İçindeki XAML
 <a name="introduction"></a> Arka plan kod biçimlendirme tanımlı nesneler ile birleştirilen kodu açıklamak için kullanılan bir terim olduğu durumlarda bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfasıdır biçimlendirme derlenmiş. Bu konuda, arka plan kod gereksinimleri yanı sıra bir kod için alternatif satır içi kod mekanizması açıklanmaktadır [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "64655520"
   
 <a name="Inline_Code_Limitations"></a>   
 ## <a name="inline-code-limitations"></a>Satır içi kod sınırlamaları  
- Engelleme veya satır içi kod kullanımını sınırlama düşünmelisiniz. Mimari ve kodlama felsefesi bakımından, biçimlendirme ve arka plan kod arasında ayrımları Tasarımcısı ve geliştirici rolleri çok daha farklı tutar. Her zaman içinde yazıyorsanız daha teknik bir düzeyde için satır içi kod yazdığınız kod yazmak garip olabilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kısmi sınıf oluşturulur ve varsayılan XML ad alanı eşlemeleri yalnızca kullanabilirsiniz. Ekleme yapamazsınız çünkü `using` deyimleri, tam olarak nitelemeniz gerekir birçok [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] yaptığınız çağırır. Varsayılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eşlemeleri dahil tümü değil en [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] bulunan ad alanlarını [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derlemeler; türleri ve üyeleri bir CLR ad içinde yer alan çağrıları tam olarak nitelemek gerekir. Kısmi sınıf dışında herhangi bir şey de satır içi kod tanımlayamazsınız ve tüm kullanıcı kodu varlıkları başvuru olarak bir üye veya değişken üretilen kısmi sınıf içinde bulunmalıdır. Dil belirli programlama gibi diğer özelliklerin makroları veya `#ifdef` genel değişkenler veya yapı değişkenleri karşı da kullanılabilir değil. Daha fazla bilgi için [x: Code iç XAML türü](../../xaml-services/x-code-intrinsic-xaml-type.md).  
+ Engelleme veya satır içi kod kullanımını sınırlama düşünmelisiniz. Mimari ve kodlama felsefesi bakımından, biçimlendirme ve arka plan kod arasında ayrımları Tasarımcısı ve geliştirici rolleri çok daha farklı tutar. Her zaman içinde yazıyorsanız daha teknik bir düzeyde için satır içi kod yazdığınız kod yazmak garip olabilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kısmi sınıf oluşturulur ve varsayılan XML ad alanı eşlemeleri yalnızca kullanabilirsiniz. Ekleme yapamazsınız çünkü `using` deyimleri, tam olarak nitelemeniz gerekir çoğu, yaptığınız API çağrılarının. Varsayılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eşlemeleri dahil tümü değil en [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] bulunan ad alanlarını [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derlemeler; türleri ve üyeleri bir CLR ad içinde yer alan çağrıları tam olarak nitelemek gerekir. Kısmi sınıf dışında herhangi bir şey de satır içi kod tanımlayamazsınız ve tüm kullanıcı kodu varlıkları başvuru olarak bir üye veya değişken üretilen kısmi sınıf içinde bulunmalıdır. Dil belirli programlama gibi diğer özelliklerin makroları veya `#ifdef` genel değişkenler veya yapı değişkenleri karşı da kullanılabilir değil. Daha fazla bilgi için [x: Code iç XAML türü](../../xaml-services/x-code-intrinsic-xaml-type.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

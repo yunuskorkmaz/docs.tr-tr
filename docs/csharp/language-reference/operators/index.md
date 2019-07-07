@@ -18,18 +18,18 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 0cd0a06dc919ecf11f1a3d343fe8ff023a5f8524
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401459"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609910"
 ---
 # <a name="c-operators-c-reference"></a>C#işleçler (C# Başvurusu)
 
 C#birkaç yerleşik türleri tarafından desteklenen önceden tanımlı operatörler sağlar. Örneğin, [aritmetik işleçler](arithmetic-operators.md) yerleşik sayısal türler, işlenenlerin aritmetik işlemler gerçekleştirme ve [Boolean mantıksal işleçler](boolean-logical-operators.md) mantıksal işlemleri ile [bool ](../keywords/bool.md) işlenen.
 
-Kullanıcı tanımlı bir tür o türündeki işlenenler için karşılık gelen davranışını tanımlamak için belirli işleçleri aşırı yüklenebilir. Daha fazla bilgi için [işleci](../keywords/operator.md) anahtar sözcüğü makalesi.
+Kullanıcı tanımlı bir tür o türündeki işlenenler için karşılık gelen davranışını tanımlamak için belirli işleçleri aşırı yüklenebilir. Daha fazla bilgi için [işleci aşırı yüklemesi](operator-overloading.md).
 
 Aşağıdaki bölümlerde liste C# en yüksek önceliğe düşüğe başlayarak işleçleri. Her bölüm içerisindeki işleçler aynı öncelik düzeyine paylaşın.
 
@@ -223,4 +223,3 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 - [C#başvuru](../index.md)
 - [İşleçler](../../programming-guide/statements-expressions-operators/operators.md)
-- [Fazla yüklenebilir işleçler](../../programming-guide/statements-expressions-operators/overloadable-operators.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b45a24e719a03d052c88b5afd64bbe13eb0793e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660846"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610060"
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
 
@@ -138,7 +138,7 @@ Amacı tutarken, bir `ref struct` yazın, tüm derleyici zorlayan çeşitli kura
 
 - Kutusunda edilemez bir `ref struct`. Atama yapılamaz bir `ref struct` türünde bir değişkene `object`, `dynamic`, veya herhangi bir arabirim türü.
 - `ref struct` türleri, arabirimleri uygulayamaz.
-- Bildirip bir `ref struct` bir sınıf veya normal yapı üyesi olarak.
+- Bildirip bir `ref struct` bir sınıf ya da normal yapı alan üye olarak. Bu, derleyicinin ürettiği destek alanı oluşturan otomatik uygulanan bir özellik, bildirme içerir. 
 - Yerel değişkenler bildiremezsiniz `ref struct` zaman uyumsuz yöntemlerde türleri. Döndüren zaman uyumlu yöntemleri bildirebilirsiniz <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> veya `Task`-türleri ister.
 - Bildirip `ref struct` yineleyiciler yerel değişkenler.
 - Yakalama gerçekleştiremez `ref struct` değişkenleri lambda ifadeleri veya yerel işlevler.

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 8068ec09f0c7d05d6d711e4e7a607b6183727b41
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: c18a06971887049a443f0bd1af7c77610a787a27
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424004"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609949"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bit düzeyinde ve kaydırma işleçleri (C# Başvurusu)
 
@@ -178,7 +178,7 @@ Aşağıdaki örnek, bu davranış gösterir:
 
 ## <a name="operator-overloadability"></a>İşleç overloadability
 
-Kullanıcı tanımlı bir tür için [aşırı](../keywords/operator.md) `~`, `<<`, `>>`, `&`, `|`, ve `^` işleçleri. İkili İşleç aşırı yüklendiğinde, karşılık gelen bileşik atama işleci de örtülü olarak aşırı yüklenmiş. Kullanıcı tanımlı bir türe açıkça bir bileşik atama işleci aşırı yüklenemez.
+Kullanıcı tanımlı bir tür için [aşırı](operator-overloading.md) `~`, `<<`, `>>`, `&`, `|`, ve `^` işleçleri. İkili İşleç aşırı yüklendiğinde, karşılık gelen bileşik atama işleci de örtülü olarak aşırı yüklenmiş. Kullanıcı tanımlı bir türe açıkça bir bileşik atama işleci aşırı yüklenemez.
 
 Kullanıcı tanımlı bir tür ederse `T` aşırı `<<` veya `>>` işleci sol işlenenin türü olmalıdır `T` ve sağ işleneninin türü olmalıdır `int`.
 
