@@ -225,8 +225,6 @@
               href: keywords/explicit.md
             - name: implicit
               href: keywords/implicit.md
-            - name: operator
-              href: keywords/operator.md
         - name: Erişim Anahtar Sözcükleri
           items:
             - name: taban
@@ -354,6 +352,8 @@
           href: operators/stackalloc.md
         - name: true ve false işleçleri
           href: operators/true-false-operators.md
+        - name: İşleç aşırı yüklemesi
+          href: operators/operator-overloading.md
     - name: 'C# özel karakterleri'
       items:
         - name: Genel Bakış
