@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 9907811a43f408020e2ee76621d4975a53945570
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424025"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661584"
 ---
 # <a name="value-types-c-reference"></a>Değer türleri (C# Başvurusu)
 
@@ -41,7 +41,7 @@ Varsayılan değer türü başlatan örtük parametresiz bir oluşturucu her de�
 *Basit türler* bir dizi önceden tanımlanmış bir yapı türü tarafından sağlanan C# ve aşağıdaki türleri oluşturan:
 
 - [Tam sayı türleri](../builtin-types/integral-numeric-types.md): tamsayı sayısal türleri ve [char](char.md) türü
-- [Kayan nokta türleri](floating-point-types-table.md)
+- [Kayan nokta türleri](../builtin-types/floating-point-numeric-types.md)
 - [bool](bool.md)
 
 Basit türler anahtar sözcükleri tanımlanır, ancak bu anahtar sözcükler yalnızca önceden tanımlanmış bir yapı türleri için diğer adlar <xref:System> ad alanı. Örneğin, [int](../builtin-types/integral-numeric-types.md) bir diğer adıdır <xref:System.Int32?displayProperty=nameWithType>. Diğer adlar tam bir listesi için bkz. [yerleşik türler tablosu](built-in-types-table.md).
@@ -93,7 +93,7 @@ Kullanarak [yeni](../operators/new-operator.md) işleci belirli türün parametr
 Kullanıcı tanımlı türler ile kullanın [yeni](../operators/new-operator.md) parametresiz bir oluşturucu çağırmak için. Örneğin, aşağıdaki deyim, parametresiz oluşturucu çağırır `Point` yapısı:
 
 ```csharp
-Point p = new Point(); // Invoke parameterless constructor for the struct.
+var p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 Bu çağrıdan sonra kesinlikle atanacak yapı olarak kabul edilir; diğer bir deyişle, tüm üyeleri varsayılan değerlerine başlatılır.

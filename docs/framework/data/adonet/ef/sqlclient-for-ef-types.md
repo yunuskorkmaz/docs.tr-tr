@@ -2,17 +2,17 @@
 title: Entity FrameworkTypes için SqlClient
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
-ms.openlocfilehash: eb12bde1e319fde5adf20ad6cd54f8776aeda31d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e3abe86128670656bfb2607b8531c9ceb0e4134
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879170"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662125"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Entity FrameworkTypes için SqlClient
 SQL Server (SqlClient) sağlayıcısı bildirim dosyası için .NET Framework veri sağlayıcısı sağlayıcısı ilkel türler, her bir türü için modelleri kavramsal ve depolama modeli ilkel türlerini ve yükseltme ve dönüştürme arasındaki eşlemeleri listesini içerir. Kural kavramsal ve depolama modeli ilkel türler arasında.  
   
- Aşağıdaki tabloda, SQL Server 2008 için türleri açıklanmaktadır [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], ve [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] veritabanları ve nasıl eşleştiği bu tür için kavramsal model türleri. Bazı yeni türlerini sunulan SQL Server'ın sonraki sürümlerinde, SQL Server'ın eski sürümlerinde desteklenmez. Bu tür, aşağıdaki tabloda belirtilmiştir.  
+ Aşağıdaki tabloda, SQL Server 2008, SQL Server 2005 ve SQL Server 2000 veritabanlarını ve bu tür için kavramsal model türleri nasıl eşleştiği için türler açıklanmaktadır. Bazı yeni türlerini sunulan SQL Server'ın sonraki sürümlerinde, SQL Server'ın eski sürümlerinde desteklenmez. Bu tür, aşağıdaki tabloda belirtilmiştir.  
   
 |Sağlayıcı türü<br /><br /> name|Sağlayıcı türü<br /><br /> öznitelikler|`EDMSimpleType`<br /><br /> name|Özellikleri|  
 |----------------------------|----------------------------------|------------------------------|------------|  
@@ -29,7 +29,7 @@ SQL Server (SqlClient) sağlayıcısı bildirim dosyası için .NET Framework ve
 |`money`|yok|`Edm.Decimal`|Duyarlık:<br /><br /> -Varsayılan: 19<br /><br /> -Sabit: Doğru<br /><br /> Ölçek:<br /><br /> -Varsayılan: 4<br /><br /> -Sabit: Doğru|  
 |`binary`|yok|`Edm.Binary`|MaxLength:<br /><br /> -En az: 1.<br /><br /> -En fazla: 8000<br /><br /> -Varsayılan: 8000<br /><br /> -Sabit: False<br /><br /> FixedLength:<br /><br /> -Varsayılan: Doğru<br /><br /> -Sabit: Doğru|  
 |`varbinary`|yok|`Edm.Binary`|MaxLength:<br /><br /> -En az: 1.<br /><br /> -En fazla: 8000<br /><br /> -Varsayılan: 8000<br /><br /> -Sabit: False<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: Doğru|  
-|`varbinary(max)`<br /><br /> Not: Bu tür desteklenmiyor [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|yok|`Edm.Binary`|MaxLength:<br /><br /> -Varsayılan: 214748364780<br /><br /> -Sabit: Doğru<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: Doğru|  
+|`varbinary(max)`<br /><br /> Not: Bu tür, SQL Server 2000'de desteklenmiyor.|yok|`Edm.Binary`|MaxLength:<br /><br /> -Varsayılan: 214748364780<br /><br /> -Sabit: Doğru<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: Doğru|  
 |`image`|yok|`Edm.Binary`|MaxLength:<br /><br /> -Varsayılan: 2147483647<br /><br /> -Sabit: Doğru<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: Doğru|  
 |`timestamp`|yok|`Edm.Binary`|MaxLength:<br /><br /> -Varsayılan: 8<br /><br /> -Sabit: Doğru<br /><br /> FixedLength:<br /><br /> -Varsayılan: Doğru<br /><br /> -Sabit: Doğru|  
 |`rowversion`|yok|`Edm.Binary`|MaxLength:<br /><br /> -Varsayılan: 8<br /><br /> -Sabit: Doğru<br /><br /> FixedLength:<br /><br /> -Varsayılan: Doğru<br /><br /> -Sabit: Doğru|  
@@ -39,8 +39,8 @@ SQL Server (SqlClient) sağlayıcısı bildirim dosyası için .NET Framework ve
 |`time`<br /><br /> Not: Bu tür, SQL Server 2005 ve SQL Server 2000'de desteklenmiyor.|yok|`Edm.Time`|Duyarlık:<br /><br /> -Varsayılan: 7<br /><br /> -Sabit: False|  
 |`datetime2`<br /><br /> Not: Bu tür, SQL Server 2005 ve SQL Server 2000'de desteklenmiyor.|yok|`Edm.DateTime`|Duyarlık:<br /><br /> -Varsayılan: 7<br /><br /> -Sabit: False|  
 |`datetimeoffset`<br /><br /> Not: Bu tür, SQL Server 2005 ve SQL Server 2000'de desteklenmiyor.|yok|`Edm.DateTimeOffset`|Duyarlık:<br /><br /> -Varsayılan: 7<br /><br /> -Sabit: False|  
-|`nvarchar`<br /><br /> Not: Bu tür desteklenmiyor [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|yok|`Edm.String`|MaxLength:<br /><br /> -En az: 1.<br /><br /> -En fazla: 4000<br /><br /> -Varsayılan: 4000<br /><br /> -Sabit: False<br /><br /> Unicode:<br /><br /> -Varsayılan: Doğru<br /><br /> -Sabit: Doğru<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: Doğru|  
-|`varchar`<br /><br /> Not: Bu tür desteklenmiyor [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|yok|`Edm.String`|MaxLength:<br /><br /> -En az: 1.<br /><br /> -En fazla: 8000<br /><br /> -Varsayılan: 8000<br /><br /> -Sabit: False<br /><br /> Unicode:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: Doğru<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: Doğru|  
+|`nvarchar`<br /><br /> Not: Bu tür, SQL Server 2000'de desteklenmiyor.|yok|`Edm.String`|MaxLength:<br /><br /> -En az: 1.<br /><br /> -En fazla: 4000<br /><br /> -Varsayılan: 4000<br /><br /> -Sabit: False<br /><br /> Unicode:<br /><br /> -Varsayılan: Doğru<br /><br /> -Sabit: Doğru<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: Doğru|  
+|`varchar`<br /><br /> Not: Bu tür, SQL Server 2000'de desteklenmiyor.|yok|`Edm.String`|MaxLength:<br /><br /> -En az: 1.<br /><br /> -En fazla: 8000<br /><br /> -Varsayılan: 8000<br /><br /> -Sabit: False<br /><br /> Unicode:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: Doğru<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: Doğru|  
 |`char`|yok|`Edm.String`|MaxLength:<br /><br /> -En az: 1.<br /><br /> -En fazla: 8000<br /><br /> -Varsayılan: 8000<br /><br /> -Sabit: False<br /><br /> Unicode:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: Doğru<br /><br /> FixedLength:<br /><br /> -Varsayılan: Doğru<br /><br /> -Sabit: Doğru|  
 |`nchar`|yok|`Edm.String`|MaxLength:<br /><br /> -En az: 1.<br /><br /> -En fazla: 4000<br /><br /> -Varsayılan: 4000<br /><br /> -Sabit: False<br /><br /> Unicode:<br /><br /> -Varsayılan: Doğru<br /><br /> -Sabit: Doğru<br /><br /> FixedLength:<br /><br /> -Varsayılan: Doğru<br /><br /> -Sabit: Doğru|  
 |`varchar`(`max`)|yok|`Edm.String`|MaxLength:<br /><br /> -Varsayılan: 2147483647<br /><br /> -Sabit: Doğru<br /><br /> Unicode:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: Doğru<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: Doğru|  

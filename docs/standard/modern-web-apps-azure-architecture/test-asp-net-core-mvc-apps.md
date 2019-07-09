@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06d2b576e70afb904683ca1a182c6e061faabf79
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628267"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663821"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC test uygulamaları
 
@@ -30,7 +30,7 @@ Dış bağımlılıkları olmayan, kodunuzun yalnızca tek bir birim test etmeni
 
 ### <a name="integration-tests"></a>Tümleştirme testleri
 
-Veritabanları ve dosya sistemleri gibi altyapı ile etkileşime giren kodunuzu kapsüllemek için iyi bir fikir olsa da hala bazı kod gerekir ve büyük olasılıkla bunu test etmek istersiniz. Ayrıca, uygulama bağımlılıklarınızın tamamen çözümlendiğinde beklediğiniz gibi kodunuzun katman etkileşim doğrulamanız gerekir. Bu tümleştirme testleri sorumluluğundadır. Tümleştirme testleri, genellikle dış bağımlılıkları ve altyapınıza bağlı olduğundan daha yavaş ve birim testleri ayarlamak daha zor olma eğilimindedir. Bu nedenle, testleri tümleştirme testleri, birim testleriyle olabilir öğeleri test kaçınmanız gerekir. Belirli bir senaryo bir birim testi ile test, birim testi ile test etmeniz gerekir. Çözemezseniz, bir tümleştirme testini kullanmayı deneyin.
+Veritabanları ve dosya sistemleri gibi altyapı ile etkileşime giren kodunuzu kapsüllemek için iyi bir fikir olsa da hala bazı kod gerekir ve büyük olasılıkla bunu test etmek istersiniz. Ayrıca, uygulama bağımlılıklarınızın tamamen çözümlendiğinde beklediğiniz gibi kodunuzun katman etkileşim doğrulamanız gerekir. Bu tümleştirme testleri sorumluluğundadır. Tümleştirme testleri, genellikle dış bağımlılıkları ve altyapınıza bağlı olduğundan daha yavaş ve birim testleri ayarlamak daha zor olma eğilimindedir. Bu nedenle, tümleştirme testlerini birim testleriyle denetlenecek noktalar test kaçınmanız gerekir. Belirli bir senaryo bir birim testi ile test, birim testi ile test etmeniz gerekir. Çözemezseniz, bir tümleştirme testini kullanmayı deneyin.
 
 Tümleştirme testleri genellikle daha karmaşık kurulum ve kaldırma yordamları birim testlerinden sahip olur. Örneğin, gerçek bir veritabanında giden bir tümleştirme testi veritabanını, her test çalışması önce bilinen bir duruma döndürmek için bir yol gerekir. Yeni testler eklenir ve üretim veritabanı şemasını geliştikçe, bu test betikleri boyutu ve karmaşıklığı büyümesine eğilimli. Birçok büyük sistemde, değişiklikleri paylaşılan kaynak denetimine iade etmeden önce Geliştirici iş istasyonları üzerinde tam paketleri tümleştirme testleri çalıştırmak için zordur. Bu durumlarda, tümleştirme testlerini bir yapı sunucusunda çalışabilir.
 

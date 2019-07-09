@@ -2,12 +2,12 @@
 title: Sorun giderme
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 8b34336871d599b72e548e2db90487c17377ba66
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: c09871abcdfb9243b5170386ffe79012c9c3f71d
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307199"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661858"
 ---
 # <a name="troubleshooting"></a>Sorun giderme
 Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalar ve aksi takdirde bu sorunların etkisini azaltmak veya önlemek için öneriler sunar.  
@@ -57,7 +57,7 @@ Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!IN
 ## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>Atla ve SQL Server 2000'de özel durumlarını Al  
  Kimlik üyeleri kullanmanız gerekir (<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>) kullandığınızda, <xref:System.Linq.Queryable.Take%2A> veya <xref:System.Linq.Queryable.Skip%2A> karşı bir SQL Server 2000 veritabanı. Sorgu gereken tek bir tabloyu (diğer bir deyişle, olmayan bir birleşim) karşı veya olmalıdır bir <xref:System.Linq.Queryable.Distinct%2A>, <xref:System.Linq.Queryable.Except%2A>, <xref:System.Linq.Queryable.Intersect%2A>, veya <xref:System.Linq.Queryable.Union%2A> işlemi ve içermemelidir bir <xref:System.Linq.Queryable.Concat%2A> işlemi. Daha fazla bilgi için "SQL Server 2000 desteği" bölümüne bakın. [standart sorgu işleci çevirisi](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
   
- Bu gereksinim geçerli değildir [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)].  
+ SQL Server 2005'e bu gereksinim geçerli değildir.  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
  Bir sütun değeri null olduğunda bu durum bir <xref:System.Linq.Enumerable.GroupBy%2A> göre gruplandırılan sorgu bir `boolean` ifade gibi `group x by (Phone==@phone)`. İfade, çünkü bir `boolean`, anahtar olarak algılanır `boolean`değil `nullable` `boolean`. Çevrilmiş karşılaştırma null vermediğinde girişimi atama yapılan bir `nullable` `boolean` için bir `boolean`, ve özel durum oluşturulur.  

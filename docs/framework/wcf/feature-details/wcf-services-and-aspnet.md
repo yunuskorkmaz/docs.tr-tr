@@ -2,12 +2,12 @@
 title: WCF hizmetleri ve ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: ef772a360ea53c2b5f177ed88ad14c4a1e1277ef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d42787492b00b8e0a5a732d641947fec61b5ff96
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637542"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663677"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF hizmetleri ve ASP.NET
 
@@ -29,15 +29,15 @@ Yan yana modeli sonuçları aşağıdaki gibidir:
 
 - Bir AppDomain içinde ASP.NET içeriği, ancak WCF HTTP çalışma zamanı tarafından uygulanan özellikleri geçerlidir. HTTP özel ASP.NET uygulama platformu özelliklerinin çoğu, ASP.NET içeriği içeren bir AppDomain içinde barındırılan WCF hizmetlerine uygulanmaz. Bu özelliklerin örnekler aşağıdakileri içerir:
 
-    - HttpContext: <xref:System.Web.HttpContext.Current%2A> her zaman `null` bir WCF hizmetinde erişildiğinde. Bunun yerine <xref:System.ServiceModel.Channels.RequestContext> kullanın.
+  - HttpContext: <xref:System.Web.HttpContext.Current%2A> her zaman `null` bir WCF hizmetinde erişildiğinde. Bunun yerine <xref:System.ServiceModel.Channels.RequestContext> kullanın.
 
-    - Dosya tabanlı yetkilendirme: WCF güvenlik modeli, bir hizmet isteğinin yetkilendirilip yetkilendirilmediğini verirken hizmet .svc dosyaya uygulanan erişim için Denetim listesi (ACL) izin vermez.
+  - Dosya tabanlı yetkilendirme: WCF güvenlik modeli, bir hizmet isteğinin yetkilendirilip yetkilendirilmediğini verirken hizmet .svc dosyaya uygulanan erişim için Denetim listesi (ACL) izin vermez.
 
-    - Yapılandırma temelli URL yetkilendirmesi: Benzer şekilde, WCF güvenlik modeli System.Web kullanıcının belirtilen tüm URL tabanlı yetkilendirme kuralları kalmıyor \<yetkilendirme > yapılandırma öğesi. Bir hizmet tarafından ASP güvenli bir URL alanında bulunuyorsa WCF istekleri için bu ayarları göz ardı edilir. NET URL yetkilendirme kuralları.
+  - Yapılandırma temelli URL yetkilendirmesi: Benzer şekilde, WCF güvenlik modeli System.Web kullanıcının belirtilen tüm URL tabanlı yetkilendirme kuralları kalmıyor \<yetkilendirme > yapılandırma öğesi. Bir hizmet tarafından ASP güvenli bir URL alanında bulunuyorsa WCF istekleri için bu ayarları göz ardı edilir. NET URL yetkilendirme kuralları.
 
-    - HttpModule genişletilebilirlik: WCF barındırma altyapısını WCF karşılar ne zaman istekleri <xref:System.Web.HttpApplication.PostAuthenticateRequest> olay tetiklenir ve ASP.NET HTTP işlem hattına işleme döndürmez. İşlem hattının sonraki aşamalarda isteklerin kesilmesi için kodlanmış modülleri WCF istekleri kesmenize değil.
+  - HttpModule genişletilebilirlik: WCF barındırma altyapısını WCF karşılar ne zaman istekleri <xref:System.Web.HttpApplication.PostAuthenticateRequest> olay tetiklenir ve ASP.NET HTTP işlem hattına işleme döndürmez. İşlem hattının sonraki aşamalarda isteklerin kesilmesi için kodlanmış modülleri WCF istekleri kesmenize değil.
 
-    - ASP.NET kimliğe bürünme: Kimlik, IIS'nin işlediği gibi ASP.NET kimliğe bürünme System.Web'ın kullanarak etkinleştirmek için ayarlanmış olsa bile varsayılan olarak, WCF çalışmaları her zaman ister. \<Kimliğe bürün = "true" / > yapılandırma seçeneği.
+  - ASP.NET kimliğe bürünme: Kimlik, IIS'nin işlediği gibi ASP.NET kimliğe bürünme System.Web'ın kullanarak etkinleştirmek için ayarlanmış olsa bile varsayılan olarak, WCF çalışmaları her zaman ister. \<Kimliğe bürün = "true" / > yapılandırma seçeneği.
 
 Bu kısıtlama, uygulama IIS barındırılan WCF hizmetleri için uygulanır. ASP.NET içeriği davranışını varlığını WCF tarafından etkilenmez.
 

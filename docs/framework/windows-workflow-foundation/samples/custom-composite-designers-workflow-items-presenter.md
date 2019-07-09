@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 403b0125e6b1966d201c891448ad25ec83f42be5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b28981196490e249d053ecd1704f6ba978585520
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881931"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662860"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Özel Bileşik Tasarımcılar - İş Akışı Öğeleri Sunucu
 
@@ -45,7 +45,7 @@ Bu örneğe yönelik kodun aşağıda gösterilmiştir:
   - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> koleksiyondaki öğelerin düzeni belirlemek için sağlanan bir şablonudur. Bu durumda, yatay yığın paneli kullanılır.
 
   Bu aşağıdaki kod örneği bunu gösterir.
-  
+
   ```xaml
   <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
                                 Items="{Binding Path=ModelItem.Branches}">
@@ -64,7 +64,7 @@ Bu örneğe yönelik kodun aşağıda gösterilmiştir:
 
 - İlişkilendirmesini gerçekleştirmek `DesignerAttribute` için `Parallel` türü ve ardından çıkış öznitelikleri bildirdi.
 
-    - İlk olarak, tüm varsayılan tasarımcıları kaydedin.
+  - İlk olarak, tüm varsayılan tasarımcıları kaydedin.
 
     Kod örneği verilmiştir.
 
@@ -82,7 +82,7 @@ Bu örneğe yönelik kodun aşağıda gösterilmiştir:
     RegisterCustomMetadata()
     ```
 
-    - Ardından, paralel olarak geçersiz kılma `RegisterCustomMetadata` yöntemi.
+  - Ardından, paralel olarak geçersiz kılma `RegisterCustomMetadata` yöntemi.
 
     Aşağıdaki kod, C# ve Visual Basic'te bu gösterir.
 

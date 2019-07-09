@@ -2,12 +2,12 @@
 title: ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: e5d249514ecad7507235bb8bd354c80bdc17c5dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b0e26f0b76ee56d06c426cd3c11b169a74b1896
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857600"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663363"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
 
@@ -151,22 +151,22 @@ Aşağıdakileri kullanarak arasındaki önemli farklar listesidir <xref:System.
 
 - <xref:System.Xml.Serialization.XmlSerializer> Ve özniteliklerini <xref:System.Xml.Serialization> ad alanı, XML Şeması'nda tanımlanan herhangi bir geçerli türü .NET Framework türleriyle eşlemek olanak sağlamak için tasarlanmıştır ve bu nedenle sağlamaları için bir tür XML'de nasıl temsil edildiğini üzerinde kesin denetim. <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.DataContractAttribute> Ve <xref:System.Runtime.Serialization.DataMemberAttribute> türü XML'de nasıl temsil edildiğini üzerinde çok az bir denetim sağlar. Yalnızca ad alanları ve tür ve alanlarını veya XML ve alanlar ve Özellikler XML dosyasında göründükleri sıra özelliklerinde temsil etmek için kullanılan adları belirtebilirsiniz:
 
-    ```csharp
-    [DataContract(
-    Namespace="urn:Contoso:2006:January:29",
-    Name="LineItem")]
-    public class LineItem
-    {
-         [DataMember(Name="ItemNumber",IsRequired=true,Order=0)]
-         public string itemNumber;
-         [DataMember(Name="Quantity",IsRequired=false,Order = 1)]
-         public decimal quantity;
-         [DataMember(Name="Price",IsRequired=false,Order = 2)]
-         public decimal unitPrice;
-    }
-    ```
+  ```csharp
+  [DataContract(
+  Namespace="urn:Contoso:2006:January:29",
+  Name="LineItem")]
+  public class LineItem
+  {
+        [DataMember(Name="ItemNumber",IsRequired=true,Order=0)]
+        public string itemNumber;
+        [DataMember(Name="Quantity",IsRequired=false,Order = 1)]
+        public decimal quantity;
+        [DataMember(Name="Price",IsRequired=false,Order = 2)]
+        public decimal unitPrice;
+  }
+  ```
 
-    .NET türü temsil etmek için kullanılan XML yapısı hakkında diğer her şey belirlenir <xref:System.Runtime.Serialization.DataContractSerializer>.
+  .NET türü temsil etmek için kullanılan XML yapısı hakkında diğer her şey belirlenir <xref:System.Runtime.Serialization.DataContractSerializer>.
 
 - Nasıl bir XML içinde temsil edilmesini türüdür kadar denetim vermeyerek seri hale getirme işlemi için son derece tahmin edilebilir hale <xref:System.Runtime.Serialization.DataContractSerializer>ve böylece iyileştirmek daha kolay. Tasarımını pratik bir yararı <xref:System.Runtime.Serialization.DataContractSerializer> daha iyi performans, yaklaşık olarak yüzde 10 oranında daha iyi performans.
 
@@ -180,9 +180,9 @@ Aşağıdakileri kullanarak arasındaki önemli farklar listesidir <xref:System.
 
 - <xref:System.Runtime.Serialization.DataContractSerializer> Bazı sürüm oluşturma desteği içerir:
 
-    - <xref:System.Runtime.Serialization.DataMemberAttribute> Sahip bir <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> böylece uygulamaların olmasını sözleşmenin daha yeni sürümü izin verecek şekilde önceki sürümlerde, mevcut olmayan bir veri anlaşması yeni sürümlerine eklenen üyeler için false değeri atanabilir özelliği önceki sürümlerde işlemek kullanabilirsiniz.
+  - <xref:System.Runtime.Serialization.DataMemberAttribute> Sahip bir <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> böylece uygulamaların olmasını sözleşmenin daha yeni sürümü izin verecek şekilde önceki sürümlerde, mevcut olmayan bir veri anlaşması yeni sürümlerine eklenen üyeler için false değeri atanabilir özelliği önceki sürümlerde işlemek kullanabilirsiniz.
 
-    - Uygulama bir veri anlaşması sahip <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimi, bir izin verebilir <xref:System.Runtime.Serialization.DataContractSerializer> uygulamalar üzerinden bir veri anlaşması daha yeni sürümlerinde sözleşme önceki sürümleriyle tanımlanan üyeler geçirilecek.
+  - Uygulama bir veri anlaşması sahip <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimi, bir izin verebilir <xref:System.Runtime.Serialization.DataContractSerializer> uygulamalar üzerinden bir veri anlaşması daha yeni sürümlerinde sözleşme önceki sürümleriyle tanımlanan üyeler geçirilecek.
 
 Tüm farklılıklar da XML'e rağmen <xref:System.Xml.Serialization.XmlSerializer> serileştiren bir türü varsayılan olarak anlamı da XML'e aynıdır <xref:System.Runtime.Serialization.DataContractSerializer> ad alanı XML açıkça tanımlanmış için sağlanan bir türü seri hale getirir. Anlamsal olarak aynı XML tarafından öznitelikleri hem seri hale getiricileri genişletme ile kullanmak için aşağıdaki sınıf çevrilir <xref:System.Xml.Serialization.XmlSerializer> ve <xref:System.Runtime.Serialization.DataContractAttribute>:
 
@@ -346,9 +346,9 @@ IIS 5.1, 6.0 veya WAS içinde bir hizmet ana bilgisayar için aşağıdaki adım
 
 4. Yapılandırma dosyasını sanal dizine kopyalayın ve bunu Web.config olarak adlandırın.
 
- Uygulama daha sonra uygulama kökü hizmet dosyasında URL'si kullanılarak erişilebilir.
+Uygulama daha sonra uygulama kökü hizmet dosyasında URL'si kullanılarak erişilebilir.
 
- Bir .NET uygulamasından bir WCF Hizmeti barındırma için hizmet türü uygulama tarafından başvurulan bir sınıf kitaplık derlemesine derlemek ve konak hizmetini kullanarak uygulamayı programlama <xref:System.ServiceModel.ServiceHost> sınıfı. Gerekli temel programlama örneği verilmiştir:
+Bir .NET uygulamasından bir WCF Hizmeti barındırma için hizmet türü uygulama tarafından başvurulan bir sınıf kitaplık derlemesine derlemek ve konak hizmetini kullanarak uygulamayı programlama <xref:System.ServiceModel.ServiceHost> sınıfı. Gerekli temel programlama örneği verilmiştir:
 
 ```csharp
 string httpBaseAddress = "http://www.contoso.com:8000/";

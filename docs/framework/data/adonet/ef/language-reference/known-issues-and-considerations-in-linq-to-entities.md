@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: e84319c60534c3ecf154c3f58973bcc429a73842
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539818"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662143"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities Hakkında Bilinen Sorunlar ve Dikkat Edilmesi Gerekenler
 Bu bölümde, LINQ to Entities sorgularında bilinen sorunlar hakkında bilgi sağlar.  
@@ -35,7 +35,7 @@ Bu bölümde, LINQ to Entities sorgularında bilinen sorunlar hakkında bilgi sa
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>Kayıp bilgileri sıralama  
- Sütunlar anonim bir tür yansıtma karşı yürütülen sorgular kaybolur sıralama bilgilerini neden olacak bir [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] veritabanı için "80" bir uyumluluk düzeyi ayarlayın.  Order by listesi bir sütun adı bir sütun adı Seçici içinde eşleştiğinde aşağıdaki örnekte gösterildiği gibi oluşur:  
+ Sütunlar anonim bir tür yansıtma sıralama "80" bir uyumluluk düzeyine ayarlanmış bir SQL Server 2005 veritabanı karşı yürütülen sorgular kaybolur bilgilere neden olur.  Order by listesi bir sütun adı bir sütun adı Seçici içinde eşleştiğinde aşağıdaki örnekte gösterildiği gibi oluşur:  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  

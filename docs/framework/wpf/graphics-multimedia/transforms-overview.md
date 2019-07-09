@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 7f5fad56d00e9a7e33843222a81593a90bf7e733
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28d990bc2ea043fa1770054877148f1f09acefd0
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651899"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662624"
 ---
 # <a name="transforms-overview"></a>Dönüşümlere Genel Bakış
-Bu konu nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> döndürme, ölçeklendirme, taşımak için sınıflar (çevirme) ve eğme <xref:System.Windows.FrameworkElement> nesneleri.  
+Bu konu, 2 D kullanmayı açıklar <xref:System.Windows.Media.Transform> döndürme, ölçeklendirme, taşımak için sınıflar (çevirme) ve eğme <xref:System.Windows.FrameworkElement> nesneleri.  
 
 <a name="whatIsATransformSection"></a>   
 ## <a name="what-is-a-transform"></a>Dönüşüm nedir?  
@@ -45,7 +45,7 @@ Bu konu nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../../i
   
 <a name="transformClassesSection"></a>   
 ## <a name="transform-classes"></a>Dönüşüm sınıfları  
- Windows Presentation Foundation (WPF), aşağıdakileri sağlar [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> ortak dönüşüm işlemleri için sınıflar:  
+ Windows Presentation Foundation (WPF) aşağıdaki 2B sağlar <xref:System.Windows.Media.Transform> ortak dönüşüm işlemleri için sınıflar:  
   
 |örneği|Açıklama|Örnek|Çizim|  
 |-----------|-----------------|-------------|------------------|  
@@ -61,7 +61,7 @@ Bu konu nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../../i
 |<xref:System.Windows.Media.TransformGroup>|Grupları birden çok <xref:System.Windows.Media.TransformGroup> nesnelerini tek <xref:System.Windows.Media.Transform> , ardından özellikleri dönüştürmek için uygulayabilirsiniz.|[Nesneye Birden Çok Dönüşüm Uygulama](how-to-apply-multiple-transforms-to-an-object.md)|  
 |<xref:System.Windows.Media.MatrixTransform>|Tarafından sağlanmayan özel dönüştürmeler oluşturur <xref:System.Windows.Media.Transform> sınıfları. Kullandığınızda, bir <xref:System.Windows.Media.MatrixTransform>, bir matris doğrudan düzenlemezsiniz.|[Özel Dönüşümler Oluşturmak için MatrixTransform Kullanma](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
- Windows Presentation Foundation (WPF) de sağlar [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] dönüşümler. Daha fazla bilgi için <xref:System.Windows.Media.Media3D.Transform3D> sınıfı.  
+ Windows Presentation Foundation (WPF), 3B dönüşümlere de sağlar. Daha fazla bilgi için <xref:System.Windows.Media.Media3D.Transform3D> sınıfı.  
   
 <a name="transformationproperties"></a>   
 ## <a name="common-transformation-properties"></a>Genel dönüşüm özellikleri  

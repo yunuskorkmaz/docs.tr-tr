@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 06085091a13ad76dcd554cfe637bcc151bbb8476
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 30e96d85ecc04332bc5e6c8f57badd000f729904
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610177"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660643"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET nedir ve nasıl çalışır?
 
@@ -163,7 +163,7 @@ Bu bölümde, biz ML.NET Mimari desenleri gidin. Deneyimli bir .NET geliştirici
 
 ML.NET uygulama ile başlayan bir <xref:Microsoft.ML.MLContext> nesne. Bu tekil nesnesini içeren **katalogları**. Veri yükleme ve kaydetme, dönüşümler ve Eğitmenler modeli işlemi bileşenleri için bir üreteci kataloğudur. Her bir katalog nesnesi bileşenleri farklı türleri oluşturmak için yöntemleri vardır:
 
-||||
+|||||
 |-|-|-|-|
 |Veri yükleme ve kaydetme||<xref:Microsoft.ML.DataOperationsCatalog>||
 |Veri hazırlama||<xref:Microsoft.ML.TransformsCatalog>||
@@ -171,11 +171,11 @@ ML.NET uygulama ile başlayan bir <xref:Microsoft.ML.MLContext> nesne. Bu tekil 
 ||Sınıflı sınıflandırma|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||Anomali algılama|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
 ||Kümeleme|<xref:Microsoft.ML.ClusteringCatalog>||
-||Tahmin etme|<xref:Microsoft.ML.Forecasting>||
+||Tahmin etme|<xref:Microsoft.ML.ForecastingCatalog>||
 ||Derecelendirme|<xref:Microsoft.ML.RankingCatalog>||
 ||Regresyon|<xref:Microsoft.ML.RegressionCatalog>||
-||Öneri|<xref:Microsoft.ML.RecommendationCatalog>|Microsoft.ML.Recommender ekleyin|
-||Zaman serisi|<xref:Microsoft.ML.TimeSeriesCatalog>|Microsoft.ML.TimeSeries ekleyin|
+||Öneri|<xref:Microsoft.ML.RecommendationCatalog>|ekleme `Microsoft.ML.Recommender` NuGet paketi|
+||Zaman serisi|<xref:Microsoft.ML.TimeSeriesCatalog>|ekleme `Microsoft.ML.TimeSeries` NuGet paketi|
 |Model kullanımı ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 Yukarıdaki kategorilerden her biri oluşturma yöntemleri gidebilirsiniz. Visual Studio kullanarak, katalogları IntelliSense gösterilir.

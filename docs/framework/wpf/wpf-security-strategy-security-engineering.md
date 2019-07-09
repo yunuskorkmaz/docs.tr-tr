@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 9123d59709b483c72ab49652bda1e547430fa33d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c28fc87a71a1262ed5b3a6a04f615efc58e685ab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663244"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663341"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF Güvenlik Stratejisi - Güvenlik Mühendisliği
 Güvenilir bilgi işlem, güvenli kod üretimini sağlamaya yönelik bir Microsoft girişimidir. Güvenilir bilgi işlem inisiyatifiyle önemli bir öğesidir [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Güvenli kod dağıtımını kolaylaştırmak için standart mühendislik süreçlerine ile birlikte kullanılan bir mühendislik uygulamasıdır. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Formalization measurability ve ek yapı ile en iyi birleştiren on aşamadan oluşan dahil olmak üzere:  
@@ -77,7 +77,7 @@ Güvenilir bilgi işlem, güvenli kod üretimini sağlamaya yönelik bir Microso
 ### <a name="testing-techniques"></a>Test teknikleri  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] çeşitli test teknikleri içeren güvenlik kullanır:  
   
-- **Whitebox Sınama**: Sınayıcılar kaynak kodunu görüntüleme ve sonra exploit testler oluşturun  
+- **Whitebox Sınama**: Test kaynak kodunu görüntülemek ve daha sonra yararlanma testleri oluşturabilirsiniz.
   
 - **Blackbox sınama**: Test ediciler, API ve özelliklerini inceleyerek güvenlik açığından yararlandıktan bulmaya ve ürün saldırılara karşı deneyin.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb3120887a1a42d01b8d8ddc3351d1209294ffc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e77fac49db4a2faadb5785c4ef15e401f340d8b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811479"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663977"
 ---
 # <a name="regular-expression-options"></a>Normal İfade Seçenekleri
 
@@ -44,26 +44,26 @@ Normal ifadeler için seçenekleri üç yoldan biriyle belirleyebilirsiniz:
 
 - İçinde `options` parametresinin bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıfı oluşturucusunun veya statik (`Shared` Visual Basic'te) desen eşleşmeli yöntemde gibi <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> veya <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. `options` Parametredir bir bit düzeyindeki OR kombinasyonudur <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> numaralandırılmış değerlerinin.
 
-    Ne zaman seçenekleri sağlanır için bir <xref:System.Text.RegularExpressions.Regex> kullanarak örneği `options` parametre sınıfı yapıcısının seçenekleri atanmış <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> özelliği. Ancak, <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> özelliği, normal ifade deseni satır içi seçenekler yansıtmıyor.
+  Ne zaman seçenekleri sağlanır için bir <xref:System.Text.RegularExpressions.Regex> kullanarak örneği `options` parametre sınıfı yapıcısının seçenekleri atanmış <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> özelliği. Ancak, <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> özelliği, normal ifade deseni satır içi seçenekler yansıtmıyor.
 
-    Aşağıdaki örnek, bir gösterim sağlar. Kullandığı `options` parametresinin <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> büyük küçük harf duyarsız eşleşmeyi etkinleştirmek ve "d" harfi ile başlayan sözcükleri tanımlamak için kullanıldığında desen beyaz boşluğu yok saymak için yöntemi.
+  Aşağıdaki örnek, bir gösterim sağlar. Kullandığı `options` parametresinin <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> büyük küçük harf duyarsız eşleşmeyi etkinleştirmek ve "d" harfi ile başlayan sözcükleri tanımlamak için kullanıldığında desen beyaz boşluğu yok saymak için yöntemi.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
-    [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
+  [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
+  [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
 
 - Sözdizimini içeren bir normal ifade deseninde satır içi seçenekler uygulayarak `(?imnsx-imnsx)`. Seçenek desen seçeneği seçeneği ile başka bir satır içi seçeneği tanımsız noktasına veya her iki desenin sonuna kadar tanımlanan noktasından uygulanır. Unutmayın <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> özelliği bir <xref:System.Text.RegularExpressions.Regex> örneği, bu satır içi seçenekler yansıtmıyor. Daha fazla bilgi için [çeşitli yapıları](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md) konu.
 
-    Aşağıdaki örnek, bir gösterim sağlar. Büyük küçük harf duyarsız eşleşmeyi etkinleştirmek ve "d" harfi ile başlayan sözcükleri tanımlamak için kullanıldığında desen beyaz boşluğu yok saymak için satıriçi seçeneklerini kullanır.
+  Aşağıdaki örnek, bir gösterim sağlar. Büyük küçük harf duyarsız eşleşmeyi etkinleştirmek ve "d" harfi ile başlayan sözcükleri tanımlamak için kullanıldığında desen beyaz boşluğu yok saymak için satıriçi seçeneklerini kullanır.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
-    [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
+  [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
+  [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
 - Söz dizimi ile normal ifade desenindeki belirli bir gruplandırma satır içi seçenekler uygulayarak oluşturmak `(?imnsx-imnsx:` *subexpression*`)`. Bir dizi seçenek kümesi kapanmadan önce hiçbir oturum; bir seçenek kümesi önce bir eksi işareti kümeyi kapatır. (`?` seçenekleri etkin veya devre dışı bırakılan, gerekli dil yapısı sözdiziminin sabit bir parçasıdır.) Seçeneği, yalnızca bu grup için geçerlidir. Daha fazla bilgi için bkz. [Gruplandırma Yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-    Aşağıdaki örnek, bir gösterim sağlar. Büyük küçük harf duyarsız eşleşmeyi etkinleştirmek ve "d" harfi ile başlayan sözcükleri tanımlamak için kullanıldığında desen beyaz boşluğu yok saymak için satıriçi seçeneklerini Gruplandırma yapısında kullanır.
+  Aşağıdaki örnek, bir gösterim sağlar. Büyük küçük harf duyarsız eşleşmeyi etkinleştirmek ve "d" harfi ile başlayan sözcükleri tanımlamak için kullanıldığında desen beyaz boşluğu yok saymak için satıriçi seçeneklerini Gruplandırma yapısında kullanır.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
-    [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]
+  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
+  [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]
 
 Seçenekler satır için belirtilirse, eksi işareti varsa (`-`) önce bir seçenek veya seçenek kümesi bu seçenekleri kapatır. Örneğin, satır içi yapısı `(?ix-ms)` açar <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> ve <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> seçenekleri ve kapanmadan <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> ve <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> seçenekleri. Tüm normal ifade seçenekleri varsayılan olarak kapalıdır.
 
@@ -296,9 +296,9 @@ Kullansanız bile ancak aşağıdaki durumlarda, boşluk karakterlerinin normal 
 
 - Boşluk bir dil öğesi tanıtan bir karakter dizisi içinde izin verilmiyor. Örneğin:
 
-    - Language öğesi `(?:` *subexpression* `)` Yakalama yapmayan grubu temsil eder ve `(?:` öğesi bir kısmı, alanları katıştırılmış olamaz. Desen `(? :` *subexpression* `)` oluşturur bir <xref:System.ArgumentException> çalışma zamanında normal ifade altyapısı, desen ve deseni ayrıştıramadığından `( ?:` *alt ifade*  `)` eşleştirilecek başarısız *subexpression*.
+  - Language öğesi `(?:` *subexpression* `)` Yakalama yapmayan grubu temsil eder ve `(?:` öğesi bir kısmı, alanları katıştırılmış olamaz. Desen `(? :` *subexpression* `)` oluşturur bir <xref:System.ArgumentException> çalışma zamanında normal ifade altyapısı, desen ve deseni ayrıştıramadığından `( ?:` *alt ifade*  `)` eşleştirilecek başarısız *subexpression*.
 
-    - Language öğesi `\p{` *adı*`}`, bir Unicode kategorisinin temsil eder veya adlandırılmış blok, içinde gömülü boşluklar içeremez `\p{` öğe kısmı. Öğenin bir boşluk içeriyorsa, oluşturur bir <xref:System.ArgumentException> çalışma zamanında.
+  - Language öğesi `\p{` *adı*`}`, bir Unicode kategorisinin temsil eder veya adlandırılmış blok, içinde gömülü boşluklar içeremez `\p{` öğe kısmı. Öğenin bir boşluk içeriyorsa, oluşturur bir <xref:System.ArgumentException> çalışma zamanında.
 
 Bu seçeneğin etkinleştirilmesi, genellikle ayrıştırılması ve anlaşılması zor olan normal ifadelerin basitleştirilmesine yardımcı olur. Okunabilirliğini artırır ve normal ifadeyi belgeleyebilir.
 
@@ -364,32 +364,32 @@ ECMAScript ve kurallı normal ifadelerin davranışı üç alanda farklılık g�
 
 - Karakter sınıfı sözdizimi. ECMAScript nin almadığı kurallı normal ifadeler Unicode'u desteklediğinden, ECMAScript karakter sınıfları daha sınırlı sözdizimine sahiptir ve bazı karakter sınıfı dil öğeleri farklı bir anlama sahip. Örneğin, ECMAScript Unicode kategorisi veya blok öğeler gibi Dil öğelerini desteklemez `\p` ve `\P`. Benzer şekilde, `\w` bir sözcük karakteri ile eşleşir, öğesi, eşdeğer `[a-zA-Z_0-9]` ECMAScript kullanılırken karakter sınıfını ve `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` kurallı davranışı kullanırken. Daha fazla bilgi için bkz.[Karakter Sınıfları](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).
 
-    Aşağıdaki örnek, kurallı arasındaki farkı gösterir ve ECMAScript desen eşleştirme. Bir normal ifade tanımlar `\b(\w+\s*)+`, boşluk karakterlerinin izlediği sözcükleri eşleştirir. Giriş, iki dizeyi, Latin karakter kümesi kullanan bir ve diğeri Kiril karakter kümesi kullanan oluşur. Çıktıda gösterildiği çağrısı olarak <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> ECMAScript eşleştirme kullanan yöntem başarısız Kiril sözcüklerle eşleştirilecek ancak kurallı eşleştirme kullanan yöntem çağrısı Bu sözcüklerle eşleşir.
+  Aşağıdaki örnek, kurallı arasındaki farkı gösterir ve ECMAScript desen eşleştirme. Bir normal ifade tanımlar `\b(\w+\s*)+`, boşluk karakterlerinin izlediği sözcükleri eşleştirir. Giriş, iki dizeyi, Latin karakter kümesi kullanan bir ve diğeri Kiril karakter kümesi kullanan oluşur. Çıktıda gösterildiği çağrısı olarak <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> ECMAScript eşleştirme kullanan yöntem başarısız Kiril sözcüklerle eşleştirilecek ancak kurallı eşleştirme kullanan yöntem çağrısı Bu sözcüklerle eşleşir.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript1.cs#16)]
-    [!code-vb[Conceptual.Regex.Language.Options#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript1.vb#16)]
+  [!code-csharp[Conceptual.Regex.Language.Options#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript1.cs#16)]
+  [!code-vb[Conceptual.Regex.Language.Options#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript1.vb#16)]
 
 - Kendi kendine başvurma yakalama grupları. Kendisine geri başvuru içeren bir normal ifade yakalama sınıfı, her yakalama yinelemesi ile güncelleştirilmelidir. Aşağıdaki örnekte gösterildiği gibi bu özellik, normal ifade sağlar. `((a+)(\1) ?)+` ECMAScript kullanılırken, ancak kurallı eşleştirme kullanılırken değil "aa aaaa aaaaaa" giriş dizesiyle eşleştirmek için.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript2.cs#21)]
-    [!code-vb[Conceptual.Regex.Language.Options#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript2.vb#21)]
+  [!code-csharp[Conceptual.Regex.Language.Options#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript2.cs#21)]
+  [!code-vb[Conceptual.Regex.Language.Options#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript2.vb#21)]
 
-    Normal ifade aşağıdaki tabloda gösterildiği gibi tanımlanır.
+  Normal ifade aşağıdaki tabloda gösterildiği gibi tanımlanır.
 
-    |Desen|Açıklama|
-    |-------------|-----------------|
-    |(a+)|Harf "a" bir veya daha fazla kez eşleştirin. Bu ikinci yakalama grubudur.|
-    |(\1)|İlk yakalama grubu tarafından yakalanan alt dizeyi eşleştirin. Bu, üçüncü yakalama grubudur.|
-    |?|Sıfır veya bir boşluk karakterini eşleştirin.|
-    |((a+)(\1)?) +|Eşleşen "ilk yakalama grubuyla eşleşen bir dize tarafından izlenen bir veya daha fazla a" karakteri desenini ardından sıfır veya bir boşluk karakteri bir veya daha fazla kez. Bu ilk yakalama grubudur.|
+  |Desen|Açıklama|
+  |-------------|-----------------|
+  |(a+)|Harf "a" bir veya daha fazla kez eşleştirin. Bu ikinci yakalama grubudur.|
+  |(\1)|İlk yakalama grubu tarafından yakalanan alt dizeyi eşleştirin. Bu, üçüncü yakalama grubudur.|
+  |?|Sıfır veya bir boşluk karakterini eşleştirin.|
+  |((a+)(\1)?) +|Eşleşen "ilk yakalama grubuyla eşleşen bir dize tarafından izlenen bir veya daha fazla a" karakteri desenini ardından sıfır veya bir boşluk karakteri bir veya daha fazla kez. Bu ilk yakalama grubudur.|
 
 - Sekizlik Kaçışlar ve geribaşvurular arasındaki belirsizliklerin çözümü. Aşağıdaki tabloda farklılıklar özetlenmektedir sekizliye karşı geribaşvuru yorumu tarafından kurallı ve ECMAScript normal ifadeler.
 
-    |Normal ifade|Kurallı davranışı|ECMAScript davranışı|
-    |------------------------|------------------------|-------------------------|
-    |`\0` ardından 0 ila 2 sekizli basamak|Sekizli olarak yorumlayın. Örneğin, `\044` her zaman sekiz bir değer olarak yorumlanır ve "$" anlamına gelir.|Aynı davranış.|
-    |`\` 1 ila 9, hiçbir ek ondalık basamak gelen ardından bir rakam,|Bir yeniden başvuru yorumlar. Örneğin, `\9` bir yakalama grubu dokuzuncu mevcut olsa bile her zaman geri başvuru 9 anlamına gelir. Yakalama grubu yoksa, normal ifade ayrıştırıcısı oluşturur bir <xref:System.ArgumentException>.|Bir tek bir ondalık basamak yakalama grubu varsa, o sayı için geri başvuru. Aksi takdirde, değeri değişmez değer olarak yorumlayın.|
-    |`\` ardından 1 ila 9, ek ondalık basamak gelen bir rakam|Rakamları ondalık değer olarak yorumlayın. Bu yakalama grubu varsa, ifadeyi bir geri başvuru olarak yorumlayın.<br /><br /> Aksi halde, önde gelen sekizlik sayıyı sekizlik 377 yorumlayın; diğer bir deyişle, yalnızca düşük 8 bitlik değerini göz önünde bulundurun. Kalan rakamları değişmez değer olarak yorumlayın. Örneğin, ifadede `\3000`, yakalama grubu 300 varsa, geri başvuru 300 yorumlayın; yakalama grubu 300 yoksa, ardından 0 gelen sekizlik 300 olarak yorumlayın.|Yakalamaya başvurabilirsiniz bir ondalık değer için mümkün olduğunca çok basamak dönüştürerek bir geribaşvuru yorumlar. Önde gelen sekizlik sayıyı sekizlik 377'ni kullanarak herhangi bir basamak dönüştürülemezse sekizli olarak yorumlayın; Kalan rakamları değişmez değer olarak yorumlayın.|
+  |Normal ifade|Kurallı davranışı|ECMAScript davranışı|
+  |------------------------|------------------------|-------------------------|
+  |`\0` ardından 0 ila 2 sekizli basamak|Sekizli olarak yorumlayın. Örneğin, `\044` her zaman sekiz bir değer olarak yorumlanır ve "$" anlamına gelir.|Aynı davranış.|
+  |`\` ardından 1 ila 9, hiçbir ek ondalık basamak, ardından bir rakam | Bir yeniden başvuru yorumlar. Örneğin, `\9` bir yakalama grubu dokuzuncu mevcut olsa bile her zaman geri başvuru 9 anlamına gelir. Yakalama grubu yoksa, normal ifade ayrıştırıcısı oluşturur bir <xref:System.ArgumentException>.|Bir tek bir ondalık basamak yakalama grubu varsa, o sayı için geri başvuru. Aksi takdirde, değeri değişmez değer olarak yorumlayın.|
+  |`\` ardından 1 ila 9, ek ondalık basamak gelen bir rakam | Rakamları ondalık değer olarak yorumlayın. Bu yakalama grubu varsa, ifadeyi bir geri başvuru olarak yorumlayın.<br /><br /> Aksi halde, önde gelen sekizlik sayıyı sekizlik 377 yorumlayın; diğer bir deyişle, yalnızca düşük 8 bitlik değerini göz önünde bulundurun. Kalan rakamları değişmez değer olarak yorumlayın. Örneğin, ifadede `\3000`, yakalama grubu 300 varsa, geri başvuru 300 yorumlayın; yakalama grubu 300 yoksa, ardından 0 gelen sekizlik 300 olarak yorumlayın.|Yakalamaya başvurabilirsiniz bir ondalık değer için mümkün olduğunca çok basamak dönüştürerek bir geribaşvuru yorumlar. Önde gelen sekizlik sayıyı sekizlik 377'ni kullanarak herhangi bir basamak dönüştürülemezse sekizli olarak yorumlayın; Kalan rakamları değişmez değer olarak yorumlayın.|
 
 [Başa dön](#Top)
 
@@ -399,7 +399,7 @@ ECMAScript ve kurallı normal ifadelerin davranışı üç alanda farklılık g�
 
 Normal ifade motoru büyük küçük harf duyarsız karşılaştırmalar gerçekleştirdiğinde, varsayılan olarak, geçerli kültürün büyük/küçük harf kuralları eşdeğer büyük ve küçük harf karakterleri belirlemek için kullanır.
 
-Ancak, bu özellikle, parolalar, dosyalar veya URL'ler gibi sistem kaynaklarının adları için kullanıcı girişi karşılaştırılırken bazı karşılaştırma türleri için istenmeyen bir davranıştır. Aşağıdaki örnek senaryoları gösterir. Kod URL'si ile giriş yapılmış herhangi bir kaynağa erişimi engelleyecek biçimde tasarlanmıştır **FILE://**. Normal ifade dizesini harf olarak eşleşen normal ifade kullanarak çalışır `$FILE://`. Geçerli sistem kültürü tr-TR (Türkçe-Türkiye) olduğunda, ancak "I" büyük harf eşdeğeri değildir "i". Sonuç olarak, çağrı <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> yöntemi döndürür `false`, ve dosyaya erişime izin verilir.
+Ancak, bu özellikle, parolalar, dosyalar veya URL'ler gibi sistem kaynaklarının adları için kullanıcı girişi karşılaştırılırken bazı karşılaştırma türleri için istenmeyen bir davranıştır. Aşağıdaki örnek senaryoları gösterir. Kod URL'si ile giriş yapılmış herhangi bir kaynağa erişimi engelleyecek biçimde tasarlanmıştır **FILE://** . Normal ifade dizesini harf olarak eşleşen normal ifade kullanarak çalışır `$FILE://`. Geçerli sistem kültürü tr-TR (Türkçe-Türkiye) olduğunda, ancak "I" büyük harf eşdeğeri değildir "i". Sonuç olarak, çağrı <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> yöntemi döndürür `false`, ve dosyaya erişime izin verilir.
 
 [!code-csharp[Conceptual.Regex.Language.Options#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#14)]
 [!code-vb[Conceptual.Regex.Language.Options#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#14)]

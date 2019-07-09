@@ -2,12 +2,12 @@
 title: Dizeler
 description: Bilgi nasıl F# 'string' türü sabit metin Unicode karakter dizisi olarak temsil eder.
 ms.date: 07/05/2019
-ms.openlocfilehash: b252aef7d7e6e299df8282407198714971e80cd5
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: ec895723cc6d21a701a27b5d70d053bb681ce2b3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610170"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660605"
 ---
 # <a name="strings"></a>Dizeler
 
@@ -32,10 +32,10 @@ Dize değişmez değerleri tırnak işareti (") karakteriyle ayrılır. Ters eğ
 |Ters eğik çizgi|`\\`|
 |Tırnak işareti|`\"`|
 |Kesme işareti|`\'`|
-|Unicode karakter|`\DDD` (burada `D` gösteren bir ondalık basamak; 000 - aralığını 255; örn `\231` "ç" =)|
-|Unicode karakter|`\xHH` (burada `H` onaltılık bir basamaktır; 00 - FF; aralığını gösteren örn `\xE7` "ç" =)|
-|Unicode karakter|`\uHHHH` (UTF-16) (burada `H` onaltılık bir basamaktır; 0000 - FFFF; aralığını gösterir  Örneğin `\u00E7` "ç" =)|
-|Unicode karakter|`\U00HHHHHH` (UTF-32) (burada `H` onaltılık bir basamaktır; 000000 - 10FFFF; aralığını gösterir  Örneğin `\U0001F47D` = "👽")|
+|Unicode karakter|`\DDD` (burada `D` gösteren bir ondalık basamak; aralığı 000 - 255; Örneğin, `\231` "ç" =)|
+|Unicode karakter|`\xHH` (burada `H` onaltılık bir basamaktır; 00 - FF; aralığını gösteren örnek `\xE7` "ç" =)|
+|Unicode karakter|`\uHHHH` (UTF-16) (burada `H` onaltılık bir basamaktır; 0000 - FFFF; aralığını gösterir  Örneğin, `\u00E7` "ç" =)|
+|Unicode karakter|`\U00HHHHHH` (UTF-32) (burada `H` onaltılık bir basamaktır; 000000 - 10FFFF; aralığını gösterir  Örneğin, `\U0001F47D` = "👽")|
 
 > [!IMPORTANT]
 > `\DDD` Kaçış dizisi olan ondalık gösterim, çoğu dil gibi değil sekizlik gösterim. Bu nedenle, basamak `8` ve `9` geçerli olduğundan ve bir dizi `\032` bir alanını temsil eder (U + 0020), o aynı kod noktası sekizlik gösterimde olabilir ancak `\040`.

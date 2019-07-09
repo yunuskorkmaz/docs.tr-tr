@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: d35e5b5127f335eac04caa8ee95749f45cb870bf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c7b30a854667a122ff30ec4a8e4855902489087f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674009"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660777"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI Otomasyon TextPattern Öğesine Genel Bakış
 
@@ -41,7 +41,7 @@ Kısacası, bir metin deposu salt okunur erişim gerektiren erişilebilir teknol
 
 ## <a name="control-types"></a>Denetim türleri
 
-#### <a name="text"></a>Metin
+### <a name="text"></a>Metin
 
 Metin denetimini temsil eden bir ekrana metnin temel öğesidir.
 
@@ -50,14 +50,14 @@ Tek başına metin denetimi, bir etiket ya da bir form üzerinde statik metin ol
 > [!NOTE]
 > Metin denetimi, içerik görünümünde görünmeyebilir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç (bkz [UI Otomasyon ağacına genel bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)). Metin denetimi genellikle başka bir denetimin Name özelliği görüntülenen olmasıdır. Örneğin, bir düzenleme denetimi etiketlemek için kullanılan metin düzenleme denetiminin Name özelliği kullanıma sunulur. Düzenleme denetimi içerik görünümünde olduğundan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı, bunu değil metin öğenin kendisinin bu görünümde olmasını gerekli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç. İçerik görünümünde gösterilir yalnızca metin, yedekli bilgiler metindir. Bu, yalnızca kullanıcıları gereken bilgi parçalarını üzerinde hızlı bir şekilde filtrelemek herhangi bir yardımcı teknoloji sağlar.
 
-#### <a name="edit"></a>Düzenle
+### <a name="edit"></a>Düzenle
 
 Denetimleri etkinleştirme görüntülemek ve tek satırlık metin düzenlemek için kullanıcıyı düzenleyin.
 
 > [!NOTE]
 > Tek satırlık metin düzeni belirli senaryolarda sarmalamanız.
 
-#### <a name="document"></a>Belge
+### <a name="document"></a>Belge
 
 Gidin ve birden çok metin sayfalarından bilgi edinme bir kullanıcı belge denetimleri sağlar.
 
@@ -93,8 +93,10 @@ A <xref:System.Windows.Automation.TextPattern> sağlayıcısı her zaman destekl
 |`System.Windows.Automation.TextPatternIdentifiers Class`|Metin sağlayıcıları için tanımlayıcı olarak kullanılan değerleri içerir (bkz <xref:System.Windows.Automation.TextPatternIdentifiers>).|
 
 <a name="Security"></a>
+
 ## <a name="security"></a>Güvenlik
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Mimarisi güvenlikten ödün tasarlanmıştır (bkz [UI Otomasyon güvenliğine genel bakış](../../../docs/framework/ui-automation/ui-automation-security-overview.md)). Ancak, bu genel bakışta açıklanan TextPattern sınıfları bazı belirli güvenlik konuları gerektirir.
+
+[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Mimarisi güvenlikten ödün tasarlanmıştır (bkz [UI Otomasyon güvenliğine genel bakış](../../../docs/framework/ui-automation/ui-automation-security-overview.md)). Ancak, bu genel bakışta açıklanan TextPattern sınıfları bazı belirli güvenlik konuları gerektirir.
 
 - [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] metin sağlayıcıları, salt okunur arabirimleri sağlayın ve var olan bir denetimdeki metin değiştirme olanağı sağlamaz.
 
@@ -104,9 +106,9 @@ A <xref:System.Windows.Automation.TextPattern> sağlayıcısı her zaman destekl
 
 - Güvenlik için en önemli değişikliklerden biri [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] problem için "Güvenli en az ayrıcalıklı (veya sınırlı) gibi teknolojileri kapsayan girişi" olarak adlandırılır (LUA) kullanıcı hesapları ve kullanıcı Arabirimi ayrıcalık düzeyi yalıtım (UIPI).
 
-    - UIPI denetleme ve/veya daha fazla "ayrıcalıklı" program, başka bir izleme bir program kullanıcı girişi sızmasını çapraz işlem pencere ileti saldırılarını önleme engeller.
+  - UIPI denetleme ve/veya daha fazla "ayrıcalıklı" program, başka bir izleme bir program kullanıcı girişi sızmasını çapraz işlem pencere ileti saldırılarını önleme engeller.
 
-    - LUA Yöneticiler grubundaki kullanıcılar tarafından çalıştırılan uygulamaların ayrıcalıkları limitler koyar. Uygulamalar, yönetici ayrıcalıklarına sahip olması gerekmez, ancak yerine gerekli en düşük ayrıcalık ile çalışacak. Sonuç olarak, bazı kısıtlamalar LUA senaryolarda zorunlu olabilir. En önemlisi kesilmesi burada uygulama devre dışı bırakma noktasına bellek ayırmak için zorunlu olmayan şekilde yönetici düzeyinde uygulamalardan alınan dize boyutunu sınırlamak gerekebilir (dahil olmak üzere TextPattern dizeler), dize.
+  - LUA Yöneticiler grubundaki kullanıcılar tarafından çalıştırılan uygulamaların ayrıcalıkları limitler koyar. Uygulamalar, yönetici ayrıcalıklarına sahip olması gerekmez, ancak yerine gerekli en düşük ayrıcalık ile çalışacak. Sonuç olarak, bazı kısıtlamalar LUA senaryolarda zorunlu olabilir. En önemlisi kesilmesi burada uygulama devre dışı bırakma noktasına bellek ayırmak için zorunlu olmayan şekilde yönetici düzeyinde uygulamalardan alınan dize boyutunu sınırlamak gerekebilir (dahil olmak üzere TextPattern dizeler), dize.
 
 <a name="Performance"></a>
 
@@ -120,19 +122,25 @@ Performansı artırmak için bir yöntem olan metin kullanarak, Orta boyutlu blo
 
 ## <a name="textpattern-terminology"></a>TextPattern terminolojisi
 
-**Öznitelik** bir metin aralığını biçimlendirme özelliği (örneğin, <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> veya <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).
+**Özniteliği**\
+Bir metin aralığını biçimlendirme özelliği (örneğin, <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> veya <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).
 
-**Bozabilirler aralığı** boş veya sıfır karakter metin aralığı bozuk bir aralıktır. TextPattern denetim düzeni amacı doğrultusunda, bozuk bir aralık metin ekleme noktasını (veya sistem giriş işareti) olarak kabul edilir. Hiçbir metin seçili değilse <xref:System.Windows.Automation.TextPattern.GetSelection%2A> metin ekleme noktasını bozuk bir aralığa döndürür ve <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> bozuk bir aralık, başlangıç uç noktası olarak döndürür. <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ve <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> metin sağlayıcı belirtilen koşulu ile eşleşen hiçbir metin aralığı bulamadığında bozuk aralıkları döndürebilir. Bozuk bu aralık içinde metin sağlayıcısı başlayan bir uç nokta olarak kullanılabilir. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> ve <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> null bir başvuru döndürür (`Nothing` Microsoft Visual Basic. NET'te) bozuk aralığı karşı bulunan bir aralıkla Karışıklığı önlemek için.
+**Bozabilirler aralığı**\
+Bozuk bir boş veya sıfır karakter metin aralığı aralıktır. TextPattern denetim düzeni amacı doğrultusunda, bozuk bir aralık metin ekleme noktasını (veya sistem giriş işareti) olarak kabul edilir. Hiçbir metin seçili değilse <xref:System.Windows.Automation.TextPattern.GetSelection%2A> metin ekleme noktasını bozuk bir aralığa döndürür ve <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> bozuk bir aralık, başlangıç uç noktası olarak döndürür. <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ve <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> metin sağlayıcı belirtilen koşulu ile eşleşen hiçbir metin aralığı bulamadığında bozuk aralıkları döndürebilir. Bozuk bu aralık içinde metin sağlayıcısı başlayan bir uç nokta olarak kullanılabilir. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> ve <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> null bir başvuru döndürür (`Nothing` Microsoft Visual Basic. NET'te) bozuk aralığı karşı bulunan bir aralıkla Karışıklığı önlemek için.
 
-**Katıştırılmış nesne** katıştırılmış nesnelerin iki türü vardır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin modeli. İçerik öğeleri Köprüler veya tablolar gibi metin tabanlı ve denetim öğeleri görüntüler ve düğmeler gibi oluşur. Daha ayrıntılı bilgi için bkz. [erişim katıştırılmış nesneleri kullanarak UI Otomasyonu](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md).
+**Eklenen nesne**\
+Katıştırılmış nesneler iki tür vardır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin modeli. İçerik öğeleri Köprüler veya tablolar gibi metin tabanlı ve denetim öğeleri görüntüler ve düğmeler gibi oluşur. Daha ayrıntılı bilgi için bkz. [erişim katıştırılmış nesneleri kullanarak UI Otomasyonu](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md).
 
-**Uç nokta** mutlak <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> veya <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> metin kapsayıcı içindeki bir metin aralığı noktasını.
+**Uç noktası**\
+Mutlak <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> veya <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> metin kapsayıcı içindeki bir metin aralığı noktasını.
 
 ![TextPatternRangeEndpoints &#40;başlangıç ve bitiş&#41;. ](../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints") aşağıdaki bir dizi başlangıç ve bitiş noktalarını gösterir.
 
-**TextRange** başlangıç ve bitiş noktaları, ilişkili tüm öznitelikleri ve işlevleri dahil olmak üzere bir metin kapsayıcıdaki bir metin gösterimi.
+**TextRange**\
+Başlangıç ve bitiş noktaları, ilişkili tüm öznitelikleri ve işlevleri dahil olmak üzere bir metin kapsayıcıdaki bir metin gösterimi.
 
-<xref:System.Windows.Automation.Text.TextUnit> Önceden tanımlanmış bir birim (karakter, sözcük, satır veya paragrafa) bir metin aralığını mantıksal parçalarını gezinmek için kullanılan metin.
+<xref:System.Windows.Automation.Text.TextUnit>\
+Önceden tanımlanmış bir birim (karakter, sözcük, satır veya paragrafa) bir metin aralığını mantıksal parçalarını gezinmek için kullanılan metin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

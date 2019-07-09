@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 4f2f9fa1cb1be421be57ae0671573150871ebd1d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6a6e057b45c1305a889ce4ed915b437a29ab2794
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880477"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662073"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET ve LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknolojileri ADO.NET ailesinin bir parçasıdır. ADO.NET sağlayıcısı modeli tarafından sağlanan hizmetleri temel alır. Bu nedenle karıştırabilirsiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ADO.NET uygulamalarınız ile kod ve geçerli ADO.NET çözümleri geçirme [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Aşağıdaki çizim, ilişki üst düzey bir görünümünü sağlar.  
   
  ![LINQ to SQL ve ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")  
   
-## <a name="connections"></a>Bağlantıları  
+## <a name="connections"></a>Bağlantılar  
  Oluşturduğunuzda, varolan bir ADO.NET bağlantı sağlayabilirsiniz bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.DataContext>. Tüm işlemler <xref:System.Data.Linq.DataContext> (sorgular gibi) Bu bağlantı sağlanan kullanın. Bağlantı zaten açık değilse [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ile işiniz bittiğinde olduğu gibi bırakır.  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#4)]
@@ -36,7 +36,7 @@ ms.locfileid: "65880477"
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  
   
- Bu yaklaşım, tüm veritabanları için kullanamazsınız. Örneğin, karşı çalışırken sistem işlemleri SqlClient bağlantı yükseltemiyor bir [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] sunucusu. Bunun yerine, kullanılan işlem kapsamı gördüğünde olduğunda otomatik olarak tam, dağıtılmış bir işlem için kaydeder.  
+ Bu yaklaşım, tüm veritabanları için kullanamazsınız. Örneğin, bir SQL Server 2000 sunucuda çalışırken SqlClient bağlantı sistem işlemleri yükseltilemiyor. Bunun yerine, kullanılan işlem kapsamı gördüğünde olduğunda otomatik olarak tam, dağıtılmış bir işlem için kaydeder.  
   
 ## <a name="direct-sql-commands"></a>Doğrudan SQL komutları  
  Bazen, durum karşılaşabilirsiniz burada yeteneğini <xref:System.Data.Linq.DataContext> sorgu veya değişiklikleri uygulamak istediğiniz özel bir görev için yetersiz göndermek için. Bu durumlarda, kullanabileceğiniz <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> veritabanına SQL komutlarını vermek ve sorgu sonuçları nesnelerine dönüştürmek için yöntemi.  

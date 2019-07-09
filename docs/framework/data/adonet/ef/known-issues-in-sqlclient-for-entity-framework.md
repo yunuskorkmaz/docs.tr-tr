@@ -2,12 +2,12 @@
 title: Entity Framework için SqlClient’ta Bilinen Sorunlar
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8cadb234ffc0f00049edd0c09475031eeec275df
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489540"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662265"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework için SqlClient’ta Bilinen Sorunlar
 Bu bölümde, .NET Framework veri sağlayıcısı için SQL Server (SqlClient) ilgili bilinen sorunlar açıklanmaktadır.  
@@ -21,7 +21,7 @@ Bu bölümde, .NET Framework veri sağlayıcısı için SQL Server (SqlClient) i
  Olmayan bir varsa`null` 0, ikinci bağımsız değişkeni olarak geçirilir ve ilk bağımsız değişken olarak geçirilen değer `RIGHT(nvarchar(max)`, 0`)` veya `RIGHT(varchar(max)`, 0`)`, `NULL` değeri yerine döndürüleceği bir `empty` dize.  
   
 ## <a name="cross-and-outer-apply-operators"></a>Çapraz ve OUTER APPLY işleçleri  
- Çapraz ve OUTER APPLY işleçleri de kullanıma sunulmuştur [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]. Bazı durumlarda, CROSS APPLY ve/veya OUTER APPLY işleç içeren bir Transact-SQL deyimini sorgu işlem hattındaki üretebilir. İçin SQL Server sürümleri dahil olmak üzere bazı arka uç sağlayıcıları öncesi [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], bu işleçleri desteklemez, bu arka uç sağlayıcılarında sorgularını yürütülemez.  
+ Çapraz ve OUTER APPLY işleçleri, SQL Server 2005'te sunulmuştur. Bazı durumlarda, CROSS APPLY ve/veya OUTER APPLY işleç içeren bir Transact-SQL deyimini sorgu işlem hattındaki üretebilir. SQL Server'ın SQL Server 2005'ten önceki sürümlerinde de dahil olmak üzere bazı arka uç sağlayıcıları bu işleçler desteklemediğinden, bu arka uç sağlayıcılarında sorgularını yürütülemez.  
   
  Çıkış sorgu CROSS APPLY ve/veya OUTER APPLY işleci varlığını neden bazı tipik senaryolar şunlardır:  
   
@@ -36,7 +36,7 @@ Bu bölümde, .NET Framework veri sağlayıcısı için SQL Server (SqlClient) i
 - Bir DEREF olan bir sorgu bir başvuru yapısı oluşturun.  
   
 ## <a name="skip-operator"></a>SKIP işleci  
- Kullanıyorsanız [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], anahtar olmayan sütun ORDER BY ile Atla kullanarak hatalı sonuçlar döndürebilir. Anahtar olmayan sütun yinelenen veri varsa birden çok belirtilen sayıda satırı atlanabilir. Bu nasıl Atla için çevrilir nedeniyle, [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]. Örneğin, aşağıdaki sorguda, beşten fazla satır varsa atlanabilir `E.NonKeyColumn` yinelenen değerlere sahip:  
+ SQL Server 2000'i kullanıyorsanız, anahtar olmayan sütun ORDER BY ile Atla kullanarak hatalı sonuçlar döndürebilir. Anahtar olmayan sütun yinelenen veri varsa birden çok belirtilen sayıda satırı atlanabilir. SQL Server 2000 için Atla nasıl çevrilir nedeniyle budur. Örneğin, aşağıdaki sorguda, beşten fazla satır varsa atlanabilir `E.NonKeyColumn` yinelenen değerlere sahip:  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  

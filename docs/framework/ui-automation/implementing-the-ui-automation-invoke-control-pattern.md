@@ -6,66 +6,73 @@ helpviewer_keywords:
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-ms.openlocfilehash: 79a407d6f62524fc1ee4c56d529b0b0e9004bde0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 74471ef7eec73c3bdab9299eb5c82af6545e9b6a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659858"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662274"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>UI Otomasyon Çağırma Denetim Düzenini Uygulama
+
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
-  
- Bu konu, yönergeleri ve uygulama kuralları tanıtır <xref:System.Windows.Automation.Provider.IInvokeProvider>, olayları ve özellikleri hakkında bilgi dahil olmak üzere. Ek başvurular bağlantılar konunun sonunda listelenmiştir.  
-  
- <xref:System.Windows.Automation.InvokePattern> Denetim düzeni etkinleştirildiğinde durumunu ancak bunun yerine başlatma korumak veya tek, belirli bir eylemi gerçekleştirmek denetimleri desteklemek için kullanılır. Durumunu, onay kutuları ve radyo düğmeleri gibi korumak denetimleri yerine uygulanmalı <xref:System.Windows.Automation.Provider.IToggleProvider> ve <xref:System.Windows.Automation.Provider.ISelectionItemProvider> sırasıyla. Invoke denetim desenini uygulama denetimleri örnekleri için bkz: [denetim düzeni eşlemesi için UI Otomasyonu istemcileri](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
-  
-<a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları  
- Çağır denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:  
-  
-- Denetimleri uygulayın <xref:System.Windows.Automation.Provider.IInvokeProvider> aynı davranışı başka bir denetim düzeni sağlayıcısı aracılığıyla açık değilse. Örneğin, varsa <xref:System.Windows.Automation.InvokePattern.Invoke%2A> denetim üzerinde yöntemi, aynı eylemi gerçekleştirir <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> veya <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> yöntemi, denetimin uygulamaz <xref:System.Windows.Automation.Provider.IInvokeProvider>.  
-  
-- Bir denetim çağırma genellikle tıklayarak veya çift tıklayın veya ENTER, önceden tanımlı klavye kısayolu ya da diğer bazı tuş birleşimi tuşuna basarak gerçekleştirilir.  
-  
-- <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> (bir yanıt kendi ilişkili eylemi taşıyan bir denetime) olarak etkinleştirilmiş denetim üzerinde oluşturulur. Mümkünse, Olay denetimi eylemi tamamlandı ve engellemeden döndürülen sonra oluşmalıdır. Aşağıdaki senaryolarda Invoke isteği karşılamada önce çağrılan olayı tetikleyen:  
-  
-    - Bu mümkün ve pratik eylem tamamlanana kadar beklenecek değildir.  
-  
-    - Eylem kullanıcı etkileşimini gerektirir.  
-  
-    - Eylem zaman alır ve önemli bir süre için engellemek çağıran istemci neden olur.  
-  
-- Aracılığıyla denetim çağırma önemli yan etkileri varsa, bu yan etkileri açılmamalıdır <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> özelliği. Örneğin, olsa bile <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> seçimi ile ilişkilendirilmemiş <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> başka bir denetim seçili hale neden olabilir.  
-  
-- Vurgu (veya fare bekletme) etkileri genellikle değil oluşturan çağrılan olay. Ancak, üzerine gelindiğinde kullanılacak durumuna bağlı bir eylem (aksine, görsel efekt neden) gerçekleştirmek denetimlerin desteklemelidir <xref:System.Windows.Automation.InvokePattern> denetim düzeni.  
-  
+> Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).
+
+Bu konu, yönergeleri ve uygulama kuralları tanıtır <xref:System.Windows.Automation.Provider.IInvokeProvider>, olayları ve özellikleri hakkında bilgi dahil olmak üzere. Ek başvurular bağlantılar konunun sonunda listelenmiştir.
+
+<xref:System.Windows.Automation.InvokePattern> Denetim düzeni etkinleştirildiğinde durumunu ancak bunun yerine başlatma korumak veya tek, belirli bir eylemi gerçekleştirmek denetimleri desteklemek için kullanılır. Durumunu, onay kutuları ve radyo düğmeleri gibi korumak denetimleri yerine uygulanmalı <xref:System.Windows.Automation.Provider.IToggleProvider> ve <xref:System.Windows.Automation.Provider.ISelectionItemProvider> sırasıyla. Invoke denetim desenini uygulama denetimleri örnekleri için bkz: [denetim düzeni eşlemesi için UI Otomasyonu istemcileri](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).
+
+<a name="Implementation_Guidelines_and_Conventions"></a>
+
+## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları
+
+Çağır denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:
+
+- Denetimleri uygulayın <xref:System.Windows.Automation.Provider.IInvokeProvider> aynı davranışı başka bir denetim düzeni sağlayıcısı aracılığıyla açık değilse. Örneğin, varsa <xref:System.Windows.Automation.InvokePattern.Invoke%2A> denetim üzerinde yöntemi, aynı eylemi gerçekleştirir <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> veya <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> yöntemi, denetimin uygulamaz <xref:System.Windows.Automation.Provider.IInvokeProvider>.
+
+- Bir denetim çağırma genellikle tıklayarak veya çift tıklayın veya ENTER, önceden tanımlı klavye kısayolu ya da diğer bazı tuş birleşimi tuşuna basarak gerçekleştirilir.
+
+- <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> (bir yanıt kendi ilişkili eylemi taşıyan bir denetime) olarak etkinleştirilmiş denetim üzerinde oluşturulur. Mümkünse, Olay denetimi eylemi tamamlandı ve engellemeden döndürülen sonra oluşmalıdır. Aşağıdaki senaryolarda Invoke isteği karşılamada önce çağrılan olayı tetikleyen:
+
+  - Bu mümkün ve pratik eylem tamamlanana kadar beklenecek değildir.
+
+  - Eylem kullanıcı etkileşimini gerektirir.
+
+  - Eylem zaman alır ve önemli bir süre için engellemek çağıran istemci neden olur.
+
+- Aracılığıyla denetim çağırma önemli yan etkileri varsa, bu yan etkileri açılmamalıdır <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> özelliği. Örneğin, olsa bile <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> seçimi ile ilişkilendirilmemiş <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> başka bir denetim seçili hale neden olabilir.
+
+- Vurgu (veya fare bekletme) etkileri genellikle değil oluşturan çağrılan olay. Ancak, üzerine gelindiğinde kullanılacak durumuna bağlı bir eylem (aksine, görsel efekt neden) gerçekleştirmek denetimlerin desteklemelidir <xref:System.Windows.Automation.InvokePattern> denetim düzeni.
+
 > [!NOTE]
->  Bu uygulama yalnızca bir fare ile ilgili yan etkisi sonucunda denetim çağrılabilir erişilebilirlik sorunu kabul edilir.  
-  
-- Bir denetim çağırma öğeyi seçmekten farklıdır. Ancak, denetimin bağlı olarak, onu çağırır bir yan etkisi olarak seçili hale neden olabilir. Örneğin, çağırma bir [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] Belgelerim klasöründeki belge liste öğesi hem öğeyi seçer ve belge açılır.  
-  
-- Bir öğe kaldırılmasını [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] açtıktan hemen sonra çağrılan ağaç. Olay geri çağırma tarafından sağlanan öğeden bilgi isteniyor sonucunda başarısız olabilir. Önbelleğe alınan bilgileri önceden getirme önerilen çözüm olabilir.  
-  
-- Birden çok denetim düzenleri denetimlerini uygulayabilir. Örneğin, dolgu rengi denetimde [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] araç hem de uygular <xref:System.Windows.Automation.InvokePattern> ve <xref:System.Windows.Automation.ExpandCollapsePattern> denetim desenleri. <xref:System.Windows.Automation.ExpandCollapsePattern> Menü kullanıma sunar ve <xref:System.Windows.Automation.InvokePattern> etkin seçimin seçilen renk ile doldurur.  
-  
-<a name="Required_Members_for_the_IValueProvider_Interface"></a>   
-## <a name="required-members-for-iinvokeprovider"></a>Gerekli üyeleri IInvokeProvider için  
- Aşağıdaki özellikleri ve yöntemleri uygulamak için gerekli olan <xref:System.Windows.Automation.Provider.IInvokeProvider>.  
-  
-|Gerekli üyeleri|Üye türü|Notlar|  
-|----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|yöntemi|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> zaman uyumsuz bir çağrı ve hemen engellemeden döndürmesi gerekir.<br /><br /> Bu davranış, doğrudan veya dolaylı olarak çağrıldığında kalıcı bir iletişim kutusu başlatma denetimleri için özellikle önemlidir. Kalıcı iletişim kapatılana kadar olay instigated herhangi bir UI Otomasyon istemcisi engellenmiş durumda kalır.|  
-  
-<a name="Exceptions"></a>   
-## <a name="exceptions"></a>Özel Durumlar  
- Sağlayıcıları, aşağıdaki özel durumlar gerekir.  
-  
-|Özel Durum Türü|Koşul|  
-|--------------------|---------------|  
-|<xref:System.Windows.Automation.ElementNotEnabledException>|Denetimin etkin değilse.|  
-  
+> Bu uygulama yalnızca bir fare ile ilgili yan etkisi sonucunda denetim çağrılabilir erişilebilirlik sorunu kabul edilir.
+
+- Bir denetim çağırma öğeyi seçmekten farklıdır. Ancak, denetimin bağlı olarak, onu çağırır bir yan etkisi olarak seçili hale neden olabilir. Örneğin, çağırma bir [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] Belgelerim klasöründeki belge liste öğesi hem öğeyi seçer ve belge açılır.
+
+- Bir öğe kaldırılmasını [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] açtıktan hemen sonra çağrılan ağaç. Olay geri çağırma tarafından sağlanan öğeden bilgi isteniyor sonucunda başarısız olabilir. Önbelleğe alınan bilgileri önceden getirme önerilen çözüm olabilir.
+
+- Birden çok denetim düzenleri denetimlerini uygulayabilir. Örneğin, dolgu rengi denetimde [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] araç hem de uygular <xref:System.Windows.Automation.InvokePattern> ve <xref:System.Windows.Automation.ExpandCollapsePattern> denetim desenleri. <xref:System.Windows.Automation.ExpandCollapsePattern> Menü kullanıma sunar ve <xref:System.Windows.Automation.InvokePattern> etkin seçimin seçilen renk ile doldurur.
+
+<a name="Required_Members_for_the_IValueProvider_Interface"></a>
+
+## <a name="required-members-for-iinvokeprovider"></a>Gerekli üyeleri IInvokeProvider için
+
+Aşağıdaki özellikleri ve yöntemleri uygulamak için gerekli olan <xref:System.Windows.Automation.Provider.IInvokeProvider>.
+
+|Gerekli üyeleri|Üye türü|Notlar|
+|----------------------|-----------------|-----------|
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|yöntemi|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> zaman uyumsuz bir çağrı ve hemen engellemeden döndürmesi gerekir.<br /><br /> Bu davranış, doğrudan veya dolaylı olarak çağrıldığında kalıcı bir iletişim kutusu başlatma denetimleri için özellikle önemlidir. Kalıcı iletişim kapatılana kadar olay instigated herhangi bir UI Otomasyon istemcisi engellenmiş durumda kalır.|
+
+<a name="Exceptions"></a>
+
+## <a name="exceptions"></a>Özel Durumlar
+
+Sağlayıcıları, aşağıdaki özel durumlar gerekir.
+
+|Özel Durum Türü|Koşul|
+|--------------------|---------------|
+|<xref:System.Windows.Automation.ElementNotEnabledException>|Denetimin etkin değilse.|
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)

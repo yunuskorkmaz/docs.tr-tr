@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 1e825efcb2a352c823391fb0dad3d566189da001
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 494ac194fe8dc9554c6e0d1d87ba2ed613d1d16b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425533"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663221"
 ---
 # <a name="framework-libraries"></a>Framework Kitaplıkları
 
@@ -30,8 +30,8 @@ BCL en temel türleri ve yardımcı işlevleri sağlar ve diğer tüm .NET sın�
 * <xref:System.Object?displayProperty=nameWithType> ([nesne](../csharp/language-reference/keywords/object.md))-temel sınıfta ultimate CLR tür sistemi. Tür hiyerarşisi köküdür.
 * <xref:System.Int16?displayProperty=nameWithType> ([kısa](../csharp/language-reference/builtin-types/integral-numeric-types.md))-bir 16-bit imzalı tamsayı türü. İmzasız <xref:System.UInt16> de bulunur.
 * <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md))-bir 32-bit imzalı tamsayı türü. İmzasız [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) de bulunur.
-* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md))-bir 32 bit kayan nokta türü.
-* <xref:System.Decimal?displayProperty=nameWithType> ([ondalık](../csharp/language-reference/keywords/decimal.md))-A 128 bit decimal türü.
+* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md))-bir 32 bit kayan nokta türü.
+* <xref:System.Decimal?displayProperty=nameWithType> ([ondalık](../csharp/language-reference/builtin-types/floating-point-numeric-types.md))-A 128 bit decimal türü.
 * <xref:System.Byte?displayProperty=nameWithType> ([bayt](../csharp/language-reference/builtin-types/integral-numeric-types.md))-bir bayt bellek temsil eden bir imzalanmamış 8 bit tam sayı.
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md))-gösteren bir Boole türü `true` veya `false`.
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md))-bir Unicode karakteri temsil eden bir 16 bit sayısal türü.

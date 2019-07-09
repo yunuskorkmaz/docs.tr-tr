@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 1bba36579fce4fe78289ccb986073280b531420a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610562"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661871"
 ---
 # <a name="standard-query-operator-translation"></a>Standart Sorgu İşleci Çevirisi
 
@@ -198,13 +198,13 @@ Bu SQL Server tarih ve saat türlerinin eşleme hakkında daha fazla bilgi için
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 desteği
 
-Aşağıdaki [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] sınırlamaları (Microsoft SQL Server 2005'e kıyasla) etkileyen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekler.
+Aşağıdaki SQL Server 2000 sınırlamalar (Microsoft SQL Server 2005'e kıyasla) etkileyen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekler.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Çapraz Uygula ve dış işleçleri Uygula
 
-Bu işleçler kullanılamaz [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir dizi uygun birleştirmelerle değiştirilecek yeniden dener.
+Bu işleçler, SQL Server 2000'de kullanılamaz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir dizi uygun birleştirmelerle değiştirilecek yeniden dener.
 
-`Cross Apply` ve `Outer Apply` ilişki gezintiler için oluşturulur. Bu tür yeniden olası sorgu kümesi iyi tanımlı değil. Bu nedenle, en küçük grup için desteklenen sorgu [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] ilişki Gezinti içermeyen kümesidir.
+`Cross Apply` ve `Outer Apply` ilişki gezintiler için oluşturulur. Bu tür yeniden olası sorgu kümesi iyi tanımlı değil. Bu nedenle, SQL Server 2000 için desteklenen en küçük grup sorguların ilişki Gezinti içermeyen kümesidir.
 
 ### <a name="text--ntext"></a>Text / ntext
 
@@ -214,11 +214,11 @@ Bu sınırlama için herhangi bir çözüm kullanılabilir. Özellikle, kullanam
 
 ### <a name="behavior-triggered-by-nested-queries"></a>İç içe geçmiş sorgular tarafından tetiklenen davranışı
 
-[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (SP4), bağlayıcı iç içe geçmiş sorgular tarafından tetiklenen olmasını sağlayan bazı özelliklere sahiptir. Bu idiosyncrasies tetikleyen SQL sorguları kümesini, iyi tanımlanmış değil. Bu nedenle, bir dizi tanımlanamaz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorguları SQL Server özel durumlarına neden.
+SQL Server 2000 (SP4) aracılığıyla bağlayıcı iç içe geçmiş sorgular tarafından tetiklenen olmasını sağlayan bazı özelliklere sahiptir. Bu idiosyncrasies tetikleyen SQL sorguları kümesini, iyi tanımlanmış değil. Bu nedenle, bir dizi tanımlanamaz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorguları SQL Server özel durumlarına neden.
 
 ### <a name="skip-and-take-operators"></a>Skip ve Take işleçleri
 
-<xref:System.Linq.Enumerable.Take%2A> ve <xref:System.Linq.Enumerable.Skip%2A> sorguları içinde kullanıldığında belirli sınırlamaları vardır [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. "Atla ve SQL Server 2000'de özel durumlar'ı Al" girdisinde daha fazla bilgi için bkz. [sorun giderme](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).
+<xref:System.Linq.Enumerable.Take%2A> ve <xref:System.Linq.Enumerable.Skip%2A> SQL Server 2000 sorguları içinde kullanıldığında belirli sınırlamaları vardır. "Atla ve SQL Server 2000'de özel durumlar'ı Al" girdisinde daha fazla bilgi için bkz. [sorun giderme](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).
 
 ## <a name="object-materialization"></a>Nesne Gerçekleştirme
 

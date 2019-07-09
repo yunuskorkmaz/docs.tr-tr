@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 061a8c7b73903b763de27e614e9b3067777afe58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85792aea8a72ffc0c9b579473332756c6ca3bb47
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64756020"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663831"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Nasıl yapılır: İş Akışının Birden Fazla Sürümünü Yan Yana Barındırma
 
@@ -27,11 +27,11 @@ ms.locfileid: "64756020"
 
 - [İş akışları güncelleştirmek için](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)
 
-    - [Durum makinesi iş akışını güncelleştirme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
+  - [Durum makinesi iş akışını güncelleştirme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
 
-    - [Akış Çizelgesi iş akışını güncelleştirme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
+  - [Akış Çizelgesi iş akışını güncelleştirme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
 
-    - [Sıralı iş akışını güncelleştirme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
+  - [Sıralı iş akışını güncelleştirme](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
 
 - [Önceki iş akışı sürümünün içerecek şekilde WorkflowVersionMap güncelleştirmek için](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)
 
@@ -68,7 +68,7 @@ ms.locfileid: "64756020"
 
 ### <a name="BKMK_UpdateWorkflows"></a> İş akışları güncelleştirmek için
 
- Bu bölümde, iş akışı tanımları güncelleştirilir. İki `WriteLine` güncelleştirilmiş ve yeni bir kullanıcının tahmin geri bildirimde bulunun etkinlikleri `WriteLine` etkinlik sayısını tahmin sonra oyun hakkında ek bilgi sağlayan eklenir.
+Bu bölümde, iş akışı tanımları güncelleştirilir. İki `WriteLine` güncelleştirilmiş ve yeni bir kullanıcının tahmin geri bildirimde bulunun etkinlikleri `WriteLine` etkinlik sayısını tahmin sonra oyun hakkında ek bilgi sağlayan eklenir.
 
 #### <a name="BKMK_UpdateStateMachine"></a> Durum makinesi iş akışını güncelleştirme
 

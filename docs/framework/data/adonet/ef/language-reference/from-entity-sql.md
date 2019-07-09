@@ -2,12 +2,12 @@
 title: (Varlıktan, SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 36e3059869ed048bd7c5294c4f5f5407288610b2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 69a6af868ace384a63d08d705c395b58a173ca8e
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489946"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662162"
 ---
 # <a name="from-entity-sql"></a>(Varlıktan, SQL)
 Kullanılan koleksiyon belirtir [seçin](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) deyimleri.  
@@ -96,7 +96,7 @@ LOB.Customers
 >  Farklı olarak Transact-SQL, gerek yoktur için bir açık unnest adımda [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 > [!NOTE]
->  `CROSS` ve `OUTER APPLY` işleçleri de kullanıma sunulmuştur [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. Bazı durumlarda, sorgu işlem hattındaki içeren Transact-SQL üretebilir `CROSS APPLY` ve/veya `OUTER APPLY` işleçleri. İçin SQL Server sürümleri dahil olmak üzere bazı arka uç sağlayıcıları öncesi [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], bu işleçleri desteklemez, bu arka uç sağlayıcılarında sorgularını yürütülemez.  
+>  `CROSS` ve `OUTER APPLY` işleçleri, SQL Server 2005'te sunulmuştur. Bazı durumlarda, sorgu işlem hattındaki içeren Transact-SQL üretebilir `CROSS APPLY` ve/veya `OUTER APPLY` işleçleri. SQL Server'ın SQL Server 2005'ten önceki sürümlerinde de dahil olmak üzere bazı arka uç sağlayıcıları bu işleçler desteklemediğinden, bu arka uç sağlayıcılarında sorgularını yürütülemez.  
 >   
 >  Varlığı için yol açabilecek bazı genel senaryolara `CROSS APPLY` ve/veya `OUTER APPLY` çıkış sorgu işleçler şunlardır: disk belleği ile; ilişkili alt sorgu AnyElement bağıntılı alt sorgu veya gezinti tarafından üretilen bir koleksiyon üzerinden; LINQ öğe Seçici kabul yöntemleri gruplandırma kullanan sorgular; bir sorguda bir `CROSS APPLY` veya `OUTER APPLY` açıkça belirtilir; olan bir sorgu bir `DEREF` üzerinden oluşturmak bir `REF` oluşturun.  
   

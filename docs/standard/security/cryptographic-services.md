@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: c026174e881768af245860d1b719184dc47f1798
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690524"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663995"
 ---
 # <a name="cryptographic-services"></a>Şifreleme Hizmetleri
 
@@ -207,19 +207,19 @@ Karma algoritmaları küçük ikili değerler karma değerleri olarak bilinen bi
 
 - Alice, Bob için düz metin iletisi ve karma iletisi (dijital imza) gönderir. Bob alır ve ileti karma hale getirir ve he Alice alınan karma değeri, karma değerini karşılaştırır. Karma değerleri aynıysa, ileti değiştirilmiş değil. Değerler aynı değilse, ileti Alice yazdığı sonra değiştirildi.
 
-    Ne yazık ki, bu yöntem, Gönderenin özgünlüğünü oluşturmaz. Herkes Alice kimliğine bürünmek ve bir ileti göndermek. Bob belirleyebilirsiniz olan ileti imzası eşleştiğini ve bunların iletiyi imzalamak için aynı karma algoritması kullanabilirsiniz. Bu bir adam-de-ortadaki adam saldırısı, bir biçimidir. Daha fazla bilgi için [şifreleme yeni nesil (CNG) güvenli iletişim örnek](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
+  Ne yazık ki, bu yöntem, Gönderenin özgünlüğünü oluşturmaz. Herkes Alice kimliğine bürünmek ve bir ileti göndermek. Bob belirleyebilirsiniz olan ileti imzası eşleştiğini ve bunların iletiyi imzalamak için aynı karma algoritması kullanabilirsiniz. Bu bir adam-de-ortadaki adam saldırısı, bir biçimidir. Daha fazla bilgi için [şifreleme yeni nesil (CNG) güvenli iletişim örnek](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
 
 - Alice, Bob için genel güvenli bir kanal üzerinden düz metin iletisi gönderir. Filiz karma ileti güvenli özel bir kanal üzerinden gönderir. Bob düz metin iletisini alır, bu karma hale getirir ve karmayı özel olarak alışverişi olur karma karşılaştırır. Karmalar eşleşiyorsa, iki şeyi Bob bilir:
 
-    - İleti değiştirilemez.
+  - İleti değiştirilemez.
 
-    - (Alice) iletiyi gönderenin gerçektir.
+  - (Alice) iletiyi gönderenin gerçektir.
 
-    Bu sistem çalışmaya Alice, Bob dışındaki tüm tarafları kendi özgün karma değeri gizlemeniz gerekir.
+  Bu sistem çalışmaya Alice, Bob dışındaki tüm tarafları kendi özgün karma değeri gizlemeniz gerekir.
 
 - Alice, güvenli olmayan genel bir kanal üzerinden düz metin ileti gönderir ve herkes tarafından izlenen her Web sitesi üzerinde karma ileti yerleştirir.
 
-    Bu yöntem, karma değerini değiştirmesini herkes engelleyerek ileti oynama engeller. İleti ve karma herkes tarafından okunabilir ancak karma değeri yalnızca Alice tarafından değiştirilebilir. Alice bürünülecek isteyen bir saldırganın Alice'in Web sitesine erişimi olması gerekir.
+  Bu yöntem, karma değerini değiştirmesini herkes engelleyerek ileti oynama engeller. İleti ve karma herkes tarafından okunabilir ancak karma değeri yalnızca Alice tarafından değiştirilebilir. Alice bürünülecek isteyen bir saldırganın Alice'in Web sitesine erişimi olması gerekir.
 
 Düz metin olarak aktarılan olduğundan Alice'in iletileri okumasını önceki yöntemlerden hiçbiri birisi engeller. Tam güvenlik genellikle (İleti imzalama) dijital imzalar ve şifreleme gerektirir.
 

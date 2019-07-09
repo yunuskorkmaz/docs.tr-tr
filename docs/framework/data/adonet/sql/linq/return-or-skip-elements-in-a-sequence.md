@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: bedb6df564e4301ec8009992ec0ec5c51de729e0
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: e0f2c6300f8dccb8cc316527af9c75f6a40ff2df
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910820"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661906"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Dizideki Öğeleri Döndürme veya Atlama
 Kullanım <xref:System.Linq.Queryable.Take%2A> işleci bir dizideki öğeler, verilen sayıda dönün ve sonra kalanını atlayın.  
@@ -49,9 +49,9 @@ Kullanım <xref:System.Linq.Queryable.Take%2A> işleci bir dizideki öğeler, ve
  SQL'de sıralama sınırlamaları nedeniyle [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bağımsız değişkeni sıralama taşımaya <xref:System.Linq.Queryable.Take%2A> veya <xref:System.Linq.Queryable.Skip%2A> işlecinin sonucunu işleci.  
   
 > [!NOTE]
->  Çeviri için farklı [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] ve [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)]. Kullanmayı planlıyorsanız <xref:System.Linq.Queryable.Skip%2A> ile bir sorgu tüm karmaşıklığı [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)].  
+>  Çeviri, SQL Server 2000 ve SQL Server 2005 için farklıdır. Kullanmayı planlıyorsanız <xref:System.Linq.Queryable.Skip%2A> tüm karmaşıklığı sorgusu ile SQL Server 2005 kullanın.  
   
- Aşağıdakileri göz önünde bulundurun [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorgu [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]:  
+ Aşağıdakileri göz önünde bulundurun [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL Server 2000 için sorgu:  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  

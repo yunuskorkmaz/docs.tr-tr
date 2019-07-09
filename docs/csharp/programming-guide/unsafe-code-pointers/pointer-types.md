@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 81e9a86c4761b329918bf04023dea42d2e1ad6f5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 59846affb1eea5bd9d6a80c623eab5e3aa9db87c
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423521"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661079"
 ---
 # <a name="pointer-types-c-programming-guide"></a>İşaretçi türleri (C# Programlama Kılavuzu)
 
@@ -24,10 +24,10 @@ void* identifier; //allowed but not recommended
 Önce belirtilen tür `*` bir işaretçi türü olarak adlandırılır **başvurulan türü**. Aşağıdaki türlerde herhangi bir grup türü olabilir:
 
 - Herhangi bir tamsayı türü: [sbyte](../../language-reference/builtin-types/integral-numeric-types.md), [bayt](../../language-reference/builtin-types/integral-numeric-types.md), [kısa](../../language-reference/builtin-types/integral-numeric-types.md), [ushort](../../language-reference/builtin-types/integral-numeric-types.md), [int](../../language-reference/builtin-types/integral-numeric-types.md), [uint](../../language-reference/builtin-types/integral-numeric-types.md), [uzun](../../language-reference/builtin-types/integral-numeric-types.md), [ulong](../../language-reference/builtin-types/integral-numeric-types.md).
-- Herhangi bir kayan nokta türü: [float](../../language-reference/keywords/float.md), [çift](../../language-reference/keywords/double.md).
+- Herhangi bir kayan nokta türü: [float](../../language-reference/builtin-types/floating-point-numeric-types.md), [çift](../../language-reference/builtin-types/floating-point-numeric-types.md).
 - [char](../../language-reference/keywords/char.md).
 - [bool](../../language-reference/keywords/bool.md).
-- [ondalık](../../language-reference/keywords/decimal.md).
+- [ondalık](../../language-reference/builtin-types/floating-point-numeric-types.md).
 - Tüm [enum](../../language-reference/keywords/enum.md) türü.
 - Herhangi bir işaretçi türü. Bu ifadeler gibi sağlar `void**`.
 - Yalnızca yönetilmeyen türlerde alanlar içeren, kullanıcı tarafından tanımlanmış herhangi bir yapı türü.

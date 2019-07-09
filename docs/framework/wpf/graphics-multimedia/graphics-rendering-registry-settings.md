@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 616c74ccd787d9acdcb2a3bbe281c2f43bb49c2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1c61aa333c428e5cb811a5d19469516cbb813e3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762741"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663166"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Grafik İşleme Kayıt Defteri Ayarları
 Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik etkileyen kayıt defteri ayarları oluşturma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
@@ -33,7 +33,7 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
 |Ayar|Açıklama|  
 |-------------|-----------------|  
 |**Donanım hızlandırma seçeneği devre dışı bırak**|Donanım hızlandırma etkin olup olmadığını belirtir.|  
-|**Çoklu örneklem en yüksek değer**|Düzgünleştirmek için çoklu örnekleme derecesini belirtir [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] içeriği.|  
+|**Çoklu örneklem en yüksek değer**|Düzgünleştirme 3B içerik için düzgünleştirmek çoklu örnekleme derecesini belirtir.|  
 |**Video sürücüsü gerekli tarih ayarı**|Sistem Kasım 2004'ten önce yayımlanan sürücüler için donanım hızlandırmasını devre dışı bırakır olup olmadığını belirtir.|  
 |**Başvuru tarayıcısını seçeneğini kullanın**|Belirtir olup olmadığını [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görüntüleyiciye kullanmanız gerekir.|  
   
@@ -57,9 +57,9 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- **Çoklu örneklem maksimum değer** düzgünleştirme en uzun süreyi ayarlamanıza olanak tanır [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] içeriği. Bu düzey devre dışı bırakma [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] içinde düzgünleştirme [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] veya içinde etkinleştirmek [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
+ **Çoklu örneklem maksimum değer** düzgünleştirme 3B içeriği en fazla ayarlamanıza olanak tanır. Bu düzey, 3-b düzgünleştirme devre dışı bırakma [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] veya içinde etkinleştirmek [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
   
- **Çoklu örneklem maksimum değer** 0 ile 16 arasında değişen bir DWORD değeri. 0 değeri, 3B içeriği çoklu örneklem düzgünleştirme devre dışı bırakılmalıdır ve 16 değerini 16 x çoklu örneklem düzgünleştirme kullanmayı video kartı tarafından destekleniyorsa dener belirtir. XPDM sürücüleri kullanan bilgisayarlarda bu kayıt defteri anahtarı değerini ayarlama uygulamaların çok miktarda ek video bellek kullanmasına, düşmesine neden olur sıralamaların [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] oluşturma ve işleme hatalara olanağına sahiptir ve kararlılık sorunlarını.  
+ **Çoklu örneklem maksimum değer** 0 ile 16 arasında değişen bir DWORD değeri. 0 değeri, 3B içeriği çoklu örneklem düzgünleştirme devre dışı bırakılmalıdır ve 16 değerini 16 x çoklu örneklem düzgünleştirme kullanmayı video kartı tarafından destekleniyorsa dener belirtir. Uygulamaların büyük miktarda bir ek video bellek kullanmasına, 3B işleme performansını azaltır XPDM sürücüleri kullanan bilgisayarlarda bu kayıt defteri anahtarı değeri ayarı neden olmayacağından emin olun ve işleme hataları ve kararlılık oluşma olasılığı vardır sorunları.  
   
  Bu kayıt defteri anahtarı olarak ayarlanmadığında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XPDM sürücüleri için 0 ile 4 WDDM sürücüler için varsayılan değeri.  
   

@@ -2,12 +2,12 @@
 title: İşlem Yönetimi Yükseltme
 ms.date: 03/30/2017
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-ms.openlocfilehash: 1e40244e1f6b5ffd7b52584a5da121d1203f8376
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2597d6fcce7fbd51f6f17bd42469cb7fcf3fdf
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630564"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662459"
 ---
 # <a name="transaction-management-escalation"></a>İşlem Yönetimi Yükseltme
 Windows bir Hizmetleri ve birlikte bir işlem yöneticisi oluşturan modülleri kümesini barındırır. İşlem Yönetim yükseltme bir işlem hareket yöneticisinin bileşenlerden biri diğerine geçiş işlemini açıklar.  
@@ -25,7 +25,7 @@ Windows bir Hizmetleri ve birlikte bir işlem yöneticisi oluşturan modülleri 
   
 - Tek aşamalı bildirimleri desteklemiyor en az bir kalıcı kaynak işleme kayıtlı.  
   
-- Tek aşamalı bildirimlerini desteklemek en az iki kalıcı kaynak kayıtlı. Örneğin, tek bir bağlantı kaydetme [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] yükseltilecek bir işlem neden olmayacak. Ancak, her açtığınız ikinci bağlantıya bir [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] listeleme veritabanına neden veritabanı <xref:System.Transactions> altyapı algılar, işlem ikinci kalıcı kaynak olan ve bir MSDTC işlem için iletir.  
+- Tek aşamalı bildirimlerini desteklemek en az iki kalıcı kaynak kayıtlı. Örneğin, SQL Server 2005 tek bir bağlantı kaydetme yükseltilecek bir işlem neden olmaz. Ancak, her açtığınız ikinci bağlantıya bir SQL Server 2005, listeleme veritabanına neden veritabanı <xref:System.Transactions> altyapı algılar, işlem ikinci kalıcı kaynak olan ve bir MSDTC işlem için iletir.  
   
 - "İşlem farklı uygulama etki alanı ya da farklı bir işlem sıralamakta" bir istek çağrılır. Örneğin, bir uygulama etki alanı sınırları üzerinden işlem nesnesi serileştirme. İşlem nesnesi sıralanmış-tarafından-her türlü girişim, uygulama etki alanı sınırı (hatta aynı işlemde) üzerinden geçmek için işlem nesnesi serileştirmede sonuçları başka bir deyişle değerdir. Alan bir uzak yöntem bir arama yaparak işlem nesneleri geçirebilirsiniz bir <xref:System.Transactions.Transaction> bir parametre veya uzak bir işlem hizmet bileşeni erişmek deneyebilirsiniz. Bu işlem nesnesini serileştirir ve bir uygulama etki bir işlem olduğunda serileştirildiği olarak bir yükseltme sonuçlanır. Bu dağıtılmış ve yerel hareket yöneticisi yeterlidir.  
   

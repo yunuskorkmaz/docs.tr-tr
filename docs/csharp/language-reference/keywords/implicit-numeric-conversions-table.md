@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 9c3efe1dbea355e8bc00ef44e08efcc9d0e0bdca
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 516505ccacfd2a8a5c275b0de033e1316fa06d3a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424173"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661325"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Örtük sayısal dönüşümler tablosu (C# Başvurusu)
 
@@ -30,11 +30,11 @@ Aşağıdaki tablo, .NET sayısal türler arasında önceden tanımlanmış ört
 |[uint](../builtin-types/integral-numeric-types.md)|`long`, `ulong`, `float`, `double`, veya `decimal`|  
 |[long](../builtin-types/integral-numeric-types.md)|`float`, `double`, veya `decimal`|  
 |[ulong](../builtin-types/integral-numeric-types.md)|`float`, `double`, veya `decimal`|  
-|[float](float.md)|`double`|  
+|[float](../builtin-types/floating-point-numeric-types.md)|`double`|  
   
 ## <a name="remarks"></a>Açıklamalar  
 
-- Tüm [integral türü](../builtin-types/integral-numeric-types.md) için örtük olarak dönüştürülebilir [kayan nokta türü](floating-point-types-table.md).
+- Tüm [integral türü](../builtin-types/integral-numeric-types.md) için örtük olarak dönüştürülebilir [kayan nokta türü](../builtin-types/floating-point-numeric-types.md).
 
 - Duyarlık ancak değil büyüklük kayıp dönüşümlerse içinde `int`, `uint`, `long`, veya `ulong` için `float` ve `long` veya `ulong` için `double`.  
   
@@ -58,7 +58,7 @@ Aşağıdaki tablo, .NET sayısal türler arasında önceden tanımlanmış ört
 - [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [Tam sayı türleri](../builtin-types/integral-numeric-types.md)
-- [Kayan nokta türleri tablosu](floating-point-types-table.md)
+- [Kayan nokta türleri tablosu](../builtin-types/floating-point-numeric-types.md)
 - [Yerleşik türler tablosu](built-in-types-table.md)
 - [Açık sayısal dönüşümler tablosu](explicit-numeric-conversions-table.md)
 - [Atama ve tür dönüştürmeleri](../../programming-guide/types/casting-and-type-conversions.md)

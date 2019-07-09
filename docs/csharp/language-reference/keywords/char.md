@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 0b4f04a1ba6244373e36cc6a6188edabe33ec453
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b58730d945582ded7b76fcd5c4c65bc1dd9324da
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424338"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661463"
 ---
 # <a name="char-c-reference"></a>char (C# Başvurusu)
 
@@ -33,7 +33,7 @@ Sabitleri `char` tür karakter değişmez değerleri, onaltılık çıkış dizi
 
 ## <a name="conversions"></a>Dönüşümler
 
-A `char` örtük olarak dönüştürülebilir [ushort](../builtin-types/integral-numeric-types.md), [int](../builtin-types/integral-numeric-types.md), [uint](../builtin-types/integral-numeric-types.md), [çift](../../../csharp/language-reference/keywords/double.md), veya [ondalık](../../../csharp/language-reference/keywords/decimal.md). Ancak, diğer türlerinden herhangi bir örtük dönüştürme vardır `char` türü.
+A `char` örtük olarak dönüştürülebilir [ushort](../builtin-types/integral-numeric-types.md), [int](../builtin-types/integral-numeric-types.md), [uint](../builtin-types/integral-numeric-types.md), [çift](../builtin-types/floating-point-numeric-types.md), veya [ondalık](../builtin-types/floating-point-numeric-types.md). Ancak, diğer türlerinden herhangi bir örtük dönüştürme vardır `char` türü.
 
 <xref:System.Char?displayProperty=nameWithType> Türü ile çalışmak için birkaç statik yöntemler sağlar `char` değerleri.
 

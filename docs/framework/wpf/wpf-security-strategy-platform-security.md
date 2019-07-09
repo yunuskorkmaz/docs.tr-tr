@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 6372f9cb4c332eb77cd70a9b0786eff005216516
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f99a9f38d5fbb62732f157720ee544042e346469
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642879"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663560"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
 Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlamasına karşın, bu da işletim sistemini içeren, temel alınan platformu'nın güvenlik özelliklerine yararlanır [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], ve [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Sağlamak üzere bu katmanları birleştirin [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] herhangi tek hata noktası önlemek için aşağıdaki şekilde gösterildiği gibi çalışır bir güçlü, savunma güvenlik modeli:  
@@ -132,7 +132,7 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
 - **LocalIntranet**. Gelen başlatılan uygulamalara **yerel Intranet** bölge. İzinler kümesini Orta yalıtılmış depolama, Kısıtlanmamış UI erişimine, sınırsız dosya iletişim kutuları, sınırlı yansıma, ortam değişkenleri sınırlı erişim de dahil olmak üzere bir istemci makine kaynaklarına erişim sağlamak için verilir. Kayıt defteri gibi önemli kaynakları için izinleri sağlanmadı.  
   
-- **Internet**. Gelen başlatılan uygulamalara **Internet** veya **Güvenilen siteler** bölge. İzinler kümesini yalıtılmış depolama da dahil olmak üzere bir istemci makine kaynaklarına sınırlı erişimi dosyasını açın. sağlanan yalnızca verilir ve kullanıcı Arabirimi sınırlı. Esas olarak, bu izni yalıtır uygulamaları İstemci makinesinden ayarlar.  
+- **Internet**. Gelen başlatılan uygulamalara **Internet** veya **Güvenilen siteler** bölge. İzinler kümesini yalıtılmış depolama da dahil olmak üzere bir istemci makine kaynaklarına sınırlı erişimi dosyasını açın. sağlanan yalnızca verilir ve kullanıcı Arabirimi sınırlı. Aslında, yalıtır uygulamaları İstemci makinesinden bu izni ayarlayın.  
   
  Uygulama olacak şekilde tanımlanan **güvenilmeyen siteleri** bölge tarafından izin verilen [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] hiç. Sonuç olarak, önceden tanımlanmış bir izin kümesi için yok.  
   
@@ -149,7 +149,7 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
  Bunu yürüttüğünüzden [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], arka plandaki [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kodu çağırmak için kullanılabilir olandan daha fazla işlevsellik yürütmek [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]de dahil olmak üzere:  
   
-- İşleme için bir pencere tutucu (hWnd) oluşturma  
+- İşleme için bir pencere tutucu (HWND) oluşturma  
   
 - İleti gönderme  
   
@@ -157,7 +157,7 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
  Bir güvenlik ile korumalı uygulamadan tüm bu işlemleri doğrudan erişim sağlayan açısından, geri dönülemez olacaktır.  
   
- Neyse ki, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulama korumalı adına yükseltilmiş ayrıcalıklarla yürütmek bu işlemler sağlayarak bu duruma oluşturabilmesine olanak sağlar. Tüm çalışırken [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] işlemleri sınırlı Internet bölgesi güvenlik izinlerini uygulama etki alanına karşı denetlenir [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (diğer sistem kitaplıkları olduğu gibi) tüm olası içeren bir izin kümesi verilir izinleri  
+ Neyse ki, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulama korumalı adına yükseltilmiş ayrıcalıklarla yürütmek bu işlemler sağlayarak bu duruma oluşturabilmesine olanak sağlar. Tüm çalışırken [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] işlemleri sınırlı Internet bölgesi güvenlik izinlerini uygulama etki alanına karşı denetlenir [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (diğer sistem kitaplıkları olduğu gibi) tüm olası içeren bir izin kümesi verilir izinler.
   
  Bunu gerektiren [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] konak uygulama etki alanı tarafından Internet bölgesi izinleri kümesi tabidir, bu ayrıcalıkları sağlarken yükseltilmiş ayrıcalıklar alır.  
   
@@ -174,7 +174,7 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
 ### <a name="clickonce-deployment"></a>ClickOnce dağıtımı  
  [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] .NET Framework ile birlikte ve tümleşik şekilde çalışarak, kapsamlı dağıtım teknolojisi [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (bkz [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment) ayrıntılı bilgi için). Tek başına [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kullanarak uygulamaları dağıtılabilir [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]tarayıcıda tutulan uygulamalar ile dağıtılmalıdır korurken [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
   
- Kullanılarak dağıtılan uygulamalar [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] bir ek güvenlik katmanı verilir [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]; aslında [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] dağıtılan uygulamaları, ihtiyaç duydukları izinleri isteyin. Yalnızca izinleri verilen kullanıcılar, uygulamanın dağıtıldığı bölge için izinler kümesini aşarsa değil. Uygulama erişimi olan kaynakların sayısını başlatma bölgenin izin kümesi tarafından sağlanan olanlardan daha az olsalar bile, yalnızca gerekli olan izin kümesini azaltarak için en az azaltın. Sonuç olarak, uygulama geçirilirse, istemci makineye zarar olası azaltılır.  
+ Kullanılarak dağıtılan uygulamalar [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] bir ek güvenlik katmanı verilir [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]; aslında [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] dağıtılan uygulamaları, ihtiyaç duydukları izinleri isteyin. Yalnızca izinleri verilen kullanıcılar, uygulamanın dağıtıldığı bölge için izinler kümesini aşarsa değil. Yalnızca gerekli olan izin kümesini azaltarak başlatma bölgenin izni tarafından sağlanan değerinden olsalar bile ayarlayın, uygulama için en az azaltıldı için erişimi olduğunu kaynak sayısı. Sonuç olarak, uygulama geçirilirse, istemci makineye zarar olası azaltılır.  
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>Güvenlik açısından kritik yöntemi  
@@ -208,7 +208,6 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Microsoft Internet Explorer 6, Windows XP SP2 güvenliği anlama](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
 - [Kod erişimi güvenliği](../misc/code-access-security.md)
 - [Güvenlik](security-wpf.md)
 - [WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)

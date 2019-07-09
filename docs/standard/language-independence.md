@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 79b74090a5a443c944df94f9df1c3f4d283df02f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af266a551a194f55bc4951a8bdb0e9af6f823663
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946996"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663005"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil bağımsızlığı ve dilden bağımsız bileşenler
 
@@ -29,35 +29,35 @@ Bu makalede:
 
 * [CLS uyumluluğu kuralları](#cls-compliance-rules)
 
-    * [Türler ve tür üyesi imzaları](#types-and-type-member-signatures)
+  * [Türler ve tür üyesi imzaları](#types-and-type-member-signatures)
 
-    * [Adlandırma kuralları](#naming-conventions)
+  * [Adlandırma kuralları](#naming-conventions)
 
-    * [Tür dönüştürme](#type-conversion)
+  * [Tür dönüştürme](#type-conversion)
 
-    * [Diziler](#arrays)
+  * [Diziler](#arrays)
 
-    * [Arabirimler](#interfaces)
+  * [Arabirimler](#interfaces)
 
-    * [Sabit Listeleri](#enumerations)
+  * [Sabit Listeleri](#enumerations)
 
-    * [Genel olarak tür üyeleri](#type-members-in-general)
+  * [Genel olarak tür üyeleri](#type-members-in-general)
 
-    * [Üye erişilebilirliği](#member-accessibility)
+  * [Üye erişilebilirliği](#member-accessibility)
 
-    * [Genel türler ve Üyeler](#generic-types-and-members)
+  * [Genel türler ve Üyeler](#generic-types-and-members)
 
-    * [Oluşturucular](#constructors)
+  * [Oluşturucular](#constructors)
 
-    * [Özellikler](#properties)
+  * [Özellikler](#properties)
 
-    * [Olaylar](#events)
+  * [Olaylar](#events)
 
-    * [Overloads](#overloads)
+  * [Overloads](#overloads)
 
-    * [Özel Durumlar](#exceptions)
+  * [Özel Durumlar](#exceptions)
 
-    * [Öznitelikler](#attributes)
+  * [Öznitelikler](#attributes)
 
 * [CLSCompliantAttribute özniteliği](#the-clscompliantattribute-attribute)
 
@@ -152,7 +152,7 @@ Kitaplığın Genel arabirimi aşağıdakilerden oluşur:
 
 CLS uyumluluğu kuralları, aşağıdaki tabloda listelenmiştir. Metin kuralları ndan alınmıştır [ECMA-335 standardı: Ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm), Ecma International telif hakkı 2012 olduğu. Aşağıdaki bölümlerde bu kurallar hakkında daha ayrıntılı bilgi bulunur.
 
-Kategori | Bkz.  | Kural | Kural numarası
+Kategori | Bkz. | Kural | Kural numarası
 -------- | --- | ---- | -----------
 Erişilebilirlik | [Üye erişilebilirliği](#member-accessibility) | Devralınan dışında olduğunda bir yöntemini geçersiz kılma farklı bir derlemeden devralınan yöntemi geçersiz kılma erişilebilirlik değiştirilmemelidir `family-or-assembly`. Bu durumda geçersiz kılma erişilebilirlik olmalıdır `family`. | 10
 Erişilebilirlik | [Üye erişilebilirliği](#member-accessibility) | Görünürlük ve erişilebilirliği türleri ve üyeleri üye bizzat görünür ve erişilebilir olduğunda herhangi bir üyenin İmzasındaki türler görünür ve erişilebilir olmasını olacaktır. Örneğin, kendi derlemesi dışında görülebilir bir genel yöntem türü yalnızca derleme içinde görünür olan bir bağımsız değişkene sahip olamaz. Üye bizzat görünür ve erişilebilir olduğunda görünürlük ve erişilebilirliği herhangi bir üyenin imzasında kullanılan örneklenmiş bir genel tür oluşturan türlerin görünür ve erişilebilir olmalıdır. Örneğin, örneklenmiş bir genel tür imzasında bulunan kendi derlemesi dışında görülebilir bir üyenin, türü yalnızca derleme içinde görünür olan bir genel bağımsız değişkene sahip olamaz. | 12
@@ -171,7 +171,7 @@ Olaylar | [Olaylar](#events) | `add` Ve `remove` yöntemleri için bir olay ya d
 Olaylar | [Olaylar](#events) | `add` Ve `remove` yöntemleri bir olay her bir parametre türü almalı olay türünü tanımlar ve öğesinden türetilmelidir [System.Delegate](xref:System.Delegate). |32
 Olaylar | [Olaylar](#events) | Olaylar, belirli bir adlandırma desenine uymalıdır. CLS kural 29 başvurulan SpecialName özniteliği uygun ad karşılaştırmalarında yoksayılmalı ve tanımlayıcı kurallarına uymalıdır.  |33
 Özel Durumlar | [Özel Durumlar](#exceptions) | Oluşan nesneler, türü olacaktır [System.Exception](xref:System.Exception) veya ondan devralınan bir türde. Öte yandan, CLS uyumlu yöntemler diğer tür özel durumların yayılmasını engellemek için gerekli değildir. | 40
-Genel | [CLS uyumluluğu kuralları](#cls-compliance-rules) | CLS kuralları yalnızca erişilebilir veya derlemenin dışında görünür olan bir tür bölümlerini uygulanır. | 1.
+Genel | [CLS uyumluluğu kuralları](#cls-compliance-rules) | CLS kuralları yalnızca erişilebilir veya derlemenin dışında görünür olan bir tür bölümlerini uygulanır. | 1\.
 Genel | [CLS uyumluluğu kuralları](#cls-compliance-rules) | CLS olmayan uyumlu türlerin üyeleri CLS uyumlu olarak işaretlenmeyecektir. | 2
 Genel Türler | [Genel türler ve Üyeler](#generic-types-and-members) | İç içe geçmiş türler en az kadar genel parametresi kapsayan tür olmalıdır. İç içe bir türde genel parametreler kapsayan türdeki genel parametrelere konuma göre karşılık gelir.  | 42
 Genel Türler | [Genel türler ve Üyeler](#generic-types-and-members) | Genel bir tür adını iç içe olmayan türde bildirilen veya yukarıda tanımlanan kurallara göre iç içe türü için yeni sunulan tür parametrelerinin sayısı kodlayın. | 43
@@ -1307,11 +1307,11 @@ CLS uyumlu numaralandırmalar şu kurallara uymalıdır:
 
 * Numaralandırmanın iki türü vardır:
 
-    * Birbirini dışlayan bir dizi adlandırılmış tamsayı değerlerini temsil eden bir sabit listesi. Bu numaralandırma türü yokluğuyla [System.FlagsAttribute](xref:System.FlagsAttribute) özel öznitelik.
+  * Birbirini dışlayan bir dizi adlandırılmış tamsayı değerlerini temsil eden bir sabit listesi. Bu numaralandırma türü yokluğuyla [System.FlagsAttribute](xref:System.FlagsAttribute) özel öznitelik.
 
-    * Adlandırılmamış değer üretmek için birleştirilebilen bit bayrakları kümesini temsil eden bir sabit listesi. Bu numaralandırma türü varlığını tarafından belirtilen [System.FlagsAttribute](xref:System.FlagsAttribute) özel öznitelik.
+  * Adlandırılmamış değer üretmek için birleştirilebilen bit bayrakları kümesini temsil eden bir sabit listesi. Bu numaralandırma türü varlığını tarafından belirtilen [System.FlagsAttribute](xref:System.FlagsAttribute) özel öznitelik.
 
- Daha fazla bilgi için belgelerine bakın [Enum](xref:System.Enum) yapısı.
+Daha fazla bilgi için belgelerine bakın [Enum](xref:System.Enum) yapısı.
 
 * Bir numaralandırma değeri, belirtilen değerler aralığıyla sınırlı değildir. Diğer bir deyişle, bir numaralandırmada değerler aralığı kendi temel değer aralığıdır. Kullanabileceğiniz `Enum.IsDefined` bir belirtilen değerin bir numaralandırma üyesi olup olmadığını belirlemek için yöntemi.
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 24f7401538eb1eeb675e6c3de265688780d6b91a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: d1533872850a953a38800aaeac85b9e6e565d374
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424203"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661365"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Açık sayısal dönüşümler tablosu (C# Başvurusu)
 
@@ -32,9 +32,9 @@ Aşağıdaki tabloda önceden tanımlanmış açık dönüştürmeler kendisi i�
 |[long](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong`, veya `char`|  
 |[ulong](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, veya `char`|  
 |[char](char.md)|`sbyte`, `byte`, veya `short`|  
-|[float](float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, veya `decimal`|  
-|[double](double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, veya `decimal`|  
-|[decimal](decimal.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, veya `double`|  
+|[float](../builtin-types/floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, veya `decimal`|  
+|[double](../builtin-types/floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, veya `decimal`|  
+|[decimal](../builtin-types/floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, veya `double`|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -70,6 +70,6 @@ Aşağıdaki tabloda önceden tanımlanmış açık dönüştürmeler kendisi i�
 - [Atama ve tür dönüştürmeleri](../../programming-guide/types/casting-and-type-conversions.md)
 - [() işleci](../operators/type-testing-and-conversion-operators.md#cast-operator-)
 - [Tam sayı türleri](../builtin-types/integral-numeric-types.md)
-- [Kayan nokta türleri tablosu](floating-point-types-table.md)
+- [Kayan nokta türleri tablosu](../builtin-types/floating-point-numeric-types.md)
 - [Yerleşik türler tablosu](built-in-types-table.md)
 - [Örtük sayısal dönüşümler tablosu](implicit-numeric-conversions-table.md)

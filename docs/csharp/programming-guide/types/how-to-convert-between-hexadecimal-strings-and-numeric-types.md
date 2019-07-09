@@ -8,12 +8,12 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 046a406c32cd2ad0649cf88381a9e121f7566fe5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 2b896fb645113bc33b6a320948770947adc16dab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423506"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661150"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Nasıl yapılır: Onaltılık dizeler ve sayısal türler arasında dönüştürme (C# Programlama Kılavuzu)
 Bu örnekler, aşağıdaki görevlerin nasıl gerçekleştirileceğini gösterir:  
@@ -24,7 +24,7 @@ Bu örnekler, aşağıdaki görevlerin nasıl gerçekleştirileceğini gösterir
   
 - On altılı dönüştürme `string` için bir [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md).  
   
-- On altılı dönüştürme `string` için bir [float](../../../csharp/language-reference/keywords/float.md).  
+- On altılı dönüştürme `string` için bir [float](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md).  
   
 - Dönüştürme bir [bayt](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) dizi için bir onaltılık `string`.  
   
@@ -44,7 +44,7 @@ Bu örnekler, aşağıdaki görevlerin nasıl gerçekleştirileceğini gösterir
  [!code-csharp[csProgGuideTypes#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#32)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir onaltılık dönüştürülecek gösterilmektedir `string` için bir [float](../../../csharp/language-reference/keywords/float.md) kullanarak <xref:System.BitConverter?displayProperty=nameWithType> sınıfı ve <xref:System.UInt32.Parse%2A?displayProperty=nameWithType> yöntemi.  
+ Aşağıdaki örnek, bir onaltılık dönüştürülecek gösterilmektedir `string` için bir [float](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md) kullanarak <xref:System.BitConverter?displayProperty=nameWithType> sınıfı ve <xref:System.UInt32.Parse%2A?displayProperty=nameWithType> yöntemi.  
   
  [!code-csharp[csProgGuideTypes#39](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#39)]  
   

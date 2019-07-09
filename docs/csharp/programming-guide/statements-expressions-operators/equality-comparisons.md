@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 50b1cdb8b7e5087f1fd6669e7163e2c15e9b23bf
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 4a634f99542b2cf1a2cca9314c5eb648e841b158
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423653"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661204"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Eşitlik karşılaştırmaları (C# Programlama Kılavuzu)
 
@@ -47,7 +47,7 @@ if( b == a)
   
 ### <a name="value-equality-for-floating-point-values"></a>Kayan nokta değerleri için değer eşitliği
 
- Kayan nokta değerlerinin eşitlik karşılaştırmaları ([çift](../../../csharp/language-reference/keywords/double.md) ve [float](../../../csharp/language-reference/keywords/float.md)) ikili bilgisayarlarda kayan nokta aritmetiği kesinlik eksikliği nedeniyle sorunludur. Daha fazla bilgi için başlığındaki açıklamalara bakın <xref:System.Double?displayProperty=nameWithType>.  
+ Kayan nokta değerlerinin eşitlik karşılaştırmaları ([çift](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md) ve [float](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) ikili bilgisayarlarda kayan nokta aritmetiği kesinlik eksikliği nedeniyle sorunludur. Daha fazla bilgi için başlığındaki açıklamalara bakın <xref:System.Double?displayProperty=nameWithType>.  
   
 ## <a name="related-topics"></a>İlgili konular  
   

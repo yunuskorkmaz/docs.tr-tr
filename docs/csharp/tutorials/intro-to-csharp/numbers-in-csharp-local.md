@@ -3,12 +3,12 @@ title: İçindeki numaralandırır C# -giriş C# Öğreticisi
 description: Bilgi C# sayısal türler, özellikler ve yöntemler keşfetmeye tarafından.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 65b31c29fa9662619f92efb7977577f12d23fb30
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: d95d5ce16abadf441158b7f8af93acc73b154e99
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423419"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661059"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>İntegral ve kayan nokta numaralarını c ile düzenleme\#
 
@@ -321,7 +321,7 @@ Tamamladınız "içindeki numaralandırır C#" Hızlı Başlangıç. İle devam 
 Aşağıdaki konularda C# dilinde sayılar hakkında daha fazla bilgi edinebilirsiniz:
 
 - [Tam sayı türleri](../../language-reference/builtin-types/integral-numeric-types.md)
-- [Kayan Nokta Türleri Tablosu](../../language-reference/keywords/floating-point-types-table.md)
+- [Kayan Nokta Türleri Tablosu](../../language-reference/builtin-types/floating-point-numeric-types.md)
 - [Yerleşik Türler Tablosu](../../language-reference/keywords/built-in-types-table.md)
 - [Örtük Sayısal Dönüştürmeler Tablosu](../../language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Açık Sayısal Dönüştürmeler Tablosu](../../language-reference/keywords/explicit-numeric-conversions-table.md)

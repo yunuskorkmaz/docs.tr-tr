@@ -14,28 +14,31 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 4ef97af17893fa7a4e85d09e989539f7f5b32a36
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 27554d7e0a7e980d240e0609fe0561c2138f0aa1
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627372"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664054"
 ---
 # <a name="custom-dependency-properties"></a>Özel Bağımlılık Özellikleri
 
 Bu konuda, nedenleri açıklanmaktadır, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama geliştiricileri ve bileşen yazarları özel bağımlılık özelliği oluşturmak isteyebilirsiniz ve performansı artırmak bazı uygulama seçenekleri yanı sıra uygulama adımlarını açıklar. Kullanılabilirlik veya çok yönlülük özelliği.
 
 <a name="prerequisites"></a>
+
 ## <a name="prerequisites"></a>Önkoşullar
 
 Bu konu, üzerinde bir tüketici mevcut bağımlılık özellikleri perspektifinden bağımlılık özellikleri anladığınızı varsayar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sınıfları ve okuma [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md) konu. Bu konudaki örnekleri izlemek için de anlamanız gereken [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve nasıl yazıldığını bilmeniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.
 
 <a name="whatis"></a>
+
 ## <a name="what-is-a-dependency-property"></a>Bağımlılık özelliği nedir?
 
 Aksi takdirde ne olacağını etkinleştirebilirsiniz bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] bağımlılık özelliği olarak uygulayarak stil, veri bağlama, devralma, animasyonları ve varsayılan değerleri desteklemek için özelliği. Bağımlılık özellikleri ile kaydedilen özellikleridir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çağırarak özellik sistemi <xref:System.Windows.DependencyProperty.Register%2A> yöntemi (veya <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>), ve tarafından desteklenen bir <xref:System.Windows.DependencyProperty> tanımlayıcı alanı. Bağımlılık özellikleri yalnızca kullanılabilir <xref:System.Windows.DependencyObject> türleri, ancak <xref:System.Windows.DependencyObject> oldukça yüksek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çoğunu bulunan sınıfları için sınıf hiyerarşisi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bağımlılık özellikleri destekler. Bağımlılık özellikleri ve bazı terimler ve bunları bu tanımlamak için kullanılan kuralları hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)], bkz: [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md).
 
 <a name="example_dp"></a>
+
 ## <a name="examples-of-dependency-properties"></a>Örnekleri bağımlılık özellikleri
 
 Örnekler üzerinde uygulanan bağımlılık özellikleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sınıflarını <xref:System.Windows.Controls.Control.Background%2A> özelliği <xref:System.Windows.FrameworkElement.Width%2A> özelliği ve <xref:System.Windows.Controls.TextBox.Text%2A> yanı sıra diğer birçok özelliği. Bir sınıf tarafından kullanıma sunulan her bir bağımlılık özelliği karşılık gelen bir genel statik alan türü olan <xref:System.Windows.DependencyProperty> kullanıma sunulan bu aynı sınıf. Bağımlılık özelliği tanıtıcısıdır. Bir kural kullanarak tanımlayıcı adlı: bağımlılık özelliği dizesiyle adını `Property` eklenmiş. Örneğin, karşılık gelen <xref:System.Windows.DependencyProperty> tanımlayıcı alanı <xref:System.Windows.Controls.Control.Background%2A> özelliği <xref:System.Windows.Controls.Control.BackgroundProperty>. Kayıtlı olduğu ve tanımlayıcı ardından daha sonra arama gibi bir bağımlılık özelliği ile ilgili diğer işlemleri için kullanılan tanımlayıcı bağımlılık özelliği hakkında bilgi depolar <xref:System.Windows.DependencyObject.SetValue%2A>.
@@ -43,6 +46,7 @@ Aksi takdirde ne olacağını etkinleştirebilirsiniz bir [!INCLUDE[TLA#tla_clr]
 Belirtildiği gibi [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md), tüm bağımlılık özellikleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (dışında en iliştirilmiş özellikler) olan ayrıca [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] özellikleri nedeniyle "sarmalayıcı" uygulaması. Bu nedenle, koddan alabilir veya çağırarak bağımlılık özelliklerini ayarlama [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] sarmalayıcıları diğer kullanacağınız aynı şekilde tanımlayan erişimcileri [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] özellikleri. Kurulan bağımlılık özellikleri tüketici olarak genellikle kullanmanızı <xref:System.Windows.DependencyObject> yöntemleri <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A>, temel alınan özellik sistemi için bağlantı noktası olduğu. Bunun yerine, mevcut uygulamasını [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] özellikleri zaten çağrıldı <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A> içinde `get` ve `set` özelliğin tanımlayıcı alanı uygun şekilde kullanarak kapsayıcı uygulamaları . Özel bağımlılık özelliği kendiniz gerçekleştiriyorsanız, benzer şekilde sarmalayıcısını tanımlayan.
 
 <a name="backing_with_dp"></a>
+
 ## <a name="when-should-you-implement-a-dependency-property"></a>Ne zaman bir bağımlılık özelliği uygulamanız gerekir?
 
 Uyguladığınızda bir özelliği bir sınıfta, sınıfın türetildiği sürece <xref:System.Windows.DependencyObject>, özelliğinizi ile yedekleme seçeneğine sahip bir <xref:System.Windows.DependencyProperty> tanımlayıcısı ve bu nedenle bir bağımlılık özelliği yapmak için. Bağımlılık özelliği, özellik sahip her zaman uygun değildir ve senaryo gereksinimlerinize bağlıdır. Bazı durumlarda, özel bir alan, özelliği yedekleyen tipik tekniği yeterlidir. Bir veya daha fazlasını desteklemek için özellik istediğinizde ancak özelliğinizi bağımlılık özelliği olarak uygulamalıdır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellikleri:
@@ -66,6 +70,7 @@ Uyguladığınızda bir özelliği bir sınıfta, sınıfın türetildiği süre
 Bu senaryolar incelediğinizde, senaryonuz var olan bir bağımlılık özelliği meta verileri geçersiz kılma yerine tamamen yeni bir özellik uygulama elde edebileceğiniz olup olmadığını da düşünmelisiniz. Meta verileri geçersiz kılma pratik olup kendi senaryonuza ve bu senaryonun varolan uygulama ne kadar yakın benzer bağlıdır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bağımlılık özellikleri ve sınıfları. Mevcut özellikler meta verileri geçersiz kılma hakkında daha fazla bilgi için bkz. [bağımlılık özelliği meta verisi](dependency-property-metadata.md).
 
 <a name="checklist"></a>
+
 ## <a name="checklist-for-defining-a-dependency-property"></a>Bağımlılık özelliği tanımlamak için Denetim listesi
 
 Bağımlılık özelliği tanımlama dört farklı kavramlarını oluşur. Bunların bazılarını, tek satırlık bir uygulamada kod olarak birleştirilen sonlandırmak için bu kavramları mutlaka katı yordamsal adımlar değildir:
@@ -79,6 +84,7 @@ Bağımlılık özelliği tanımlama dört farklı kavramlarını oluşur. Bunla
 - Tanımlayan bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "sarmalayıcı" özellik adı ile eşleşen bağımlılık özelliğinin adı. Uygulama [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "sarmalayıcı" özelliğin `get` ve `set` yedekler, bağımlılık özelliği ile bağlanmak için erişimcileri.
 
 <a name="registering"></a>
+
 ### <a name="registering-the-property-with-the-property-system"></a>Özellik sistemi ile özelliği kaydetme
 
 Bağımlılık özelliği olarak, bir özellik için sırada bu özellik özellik sistemi tarafından korunan bir tabloya kaydedin ve niteleyici sonraki özelliği sistem işlemleri için kullanılan benzersiz bir tanımlayıcı vermek gerekir. Bu işlemlerin iç işlemler ya da kendi kodunuzu arama özellik sistemi olabilir [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Arama özelliği kaydetmek için <xref:System.Windows.DependencyProperty.Register%2A> sınıfınıza (sınıf içinde ancak herhangi bir üye tanımı dışında) gövdesi içinde yöntemi. Tanımlayıcı alan ayrıca tarafından sağlanan <xref:System.Windows.DependencyProperty.Register%2A> dönüş değeri olarak bir yöntem çağrısı. Bunun nedeni, <xref:System.Windows.DependencyProperty.Register%2A> çağrı yapılır dışında diğer üye tanımları olduğundan bu dönüş değeri atamak ve oluşturmak için kullandığınız bir `public` `static` `readonly` alan türü <xref:System.Windows.DependencyProperty> sınıfınızın bir parçası olarak. Bu alan, bağımlılık özelliği için olan tanımlayıcıyla olur.
@@ -87,6 +93,7 @@ Bağımlılık özelliği olarak, bir özellik için sırada bu özellik özelli
 [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]
 
 <a name="nameconventions"></a>
+
 ### <a name="dependency-property-name-conventions"></a>Bağımlılık özelliği adı kuralları
 
 Tüm ancak olağanüstü durumlarda izlemeniz gereken bir bağımlılık özellikleri ile ilgili kurulan adlandırma kuralları vardır.
@@ -99,6 +106,7 @@ Tanımlayıcı alanı oluşturduğunuzda, ve bir son eke kayıtlı Bu alan özel
 > Bağımlılık özelliği sınıf gövdesine tanımlama tipik uygulamadır, ancak sınıfı statik oluşturucuda bir bağımlılık özelliği tanımlamak da mümkündür. Bağımlılık özelliği başlatmak için kod birden fazla satır gerekiyorsa bu yaklaşım mantıklı olabilir.
 
 <a name="wrapper1"></a>
+
 ### <a name="implementing-the-wrapper"></a>"Sarmalayıcı" uygulama
 
 Sarmalayıcı uygulamanız çağırmalıdır <xref:System.Windows.DependencyObject.GetValue%2A> içinde `get` uygulaması ve <xref:System.Windows.DependencyObject.SetValue%2A> içinde `set` uygulama (özgün kayıt çağrısı ve alan burada gösterilen çok daha anlaşılır olması için).
@@ -119,6 +127,7 @@ Kural gereği, sarmalayıcı özelliğin adı seçilen ve ilk parametresi olarak
 - Geçerli uygulaması [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yükleyici sarmalayıcıları tamamen atlar ve öznitelik değerleri işlerken adlandırma kuralı temelinde kullanır. Daha fazla bilgi için [XAML yükleme ve bağımlılık özellikleri](xaml-loading-and-dependency-properties.md).
 
 <a name="metadata"></a>
+
 ### <a name="property-metadata-for-a-new-dependency-property"></a>Yeni bir bağımlılık özelliği için özellik meta verileri
 
 Bağımlılık özelliği kaydolduğunuzda, kayıt özellik sistemi aracılığıyla özelliği özellikleriyle depolayan bir meta veri nesnesi oluşturur. Bu özelliklerin çoğu özellik ile basit imzalarını kayıtlıysa, ayarlanan varsayılanlara sahiptir <xref:System.Windows.DependencyProperty.Register%2A>. Diğer imzalarını <xref:System.Windows.DependencyProperty.Register%2A> özelliği kaydetme gibi istediğiniz meta verileri belirlemenize olanak tanır. Bağımlılık özellikleri için belirtilen en yaygın meta veriler, bunları özelliği kullanan yeni örneklerinde uygulanan varsayılan bir değer vermektir.
@@ -131,13 +140,13 @@ Var olan bir bağımlılık özelliği türetilmiş bir sınıf oluşturuyorsan�
 
 - Özellik (veya değişiklikleri değeri) etkiliyorsa [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], düzen sistemi boyutu veya bir sayfasında, öğe işleme nasıl özellikle etkiler bir veya daha fazla aşağıdaki bayraklarını ayarlayın: <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>.
 
-    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> Bu özellik için bir değişiklik için bir değişiklik yapılması gerektiğini belirtir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] burada içeren nesne gerektirebilecek daha az veya üst içine boşluk işleme. Örneğin, "Width" özelliği bu bayrağı ayarlanmış olması gerekir.
+  - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> Bu özellik için bir değişiklik için bir değişiklik yapılması gerektiğini belirtir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] burada içeren nesne gerektirebilecek daha az veya üst içine boşluk işleme. Örneğin, "Width" özelliği bu bayrağı ayarlanmış olması gerekir.
 
-    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> Bu özellik için bir değişiklik için bir değişiklik yapılması gerektiğini belirtir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] genellikle işleme ayrılmış alanı bir değişiklik gerektirmez, ancak içine boşluk konumlandırma değiştiğini gösterir. Örneğin, "Hizalama" özelliği bu bayrağı ayarlanmış olması gerekir.
+  - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> Bu özellik için bir değişiklik için bir değişiklik yapılması gerektiğini belirtir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] genellikle işleme ayrılmış alanı bir değişiklik gerektirmez, ancak içine boşluk konumlandırma değiştiğini gösterir. Örneğin, "Hizalama" özelliği bu bayrağı ayarlanmış olması gerekir.
 
-    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> gösteren başka bir değişiklik oluştuğunu düzeni ve ölçü etkilemez, ancak başka bir işleme gerektirir. Bir örnek, "Arka plan" gibi var olan öğenin rengini değiştiren bir özelliği olabilir.
+  - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> gösteren başka bir değişiklik oluştuğunu düzeni ve ölçü etkilemez, ancak başka bir işleme gerektirir. Bir örnek, "Arka plan" gibi var olan öğenin rengini değiştiren bir özelliği olabilir.
 
-    - Bu bayraklar genellikle meta verilerinde bir protokol olarak kendi özellik sistemi veya Düzen geri çağırmaları geçersiz kılma uygulamaları için kullanılır. Örneğin, sahip olabileceğiniz bir <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> çağıracak bir geri çağırma <xref:System.Windows.UIElement.InvalidateArrange%2A> örneğinin herhangi bir özellik değeri değişiklik raporları ve sahip <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> olarak `true` meta.
+  - Bu bayraklar genellikle meta verilerinde bir protokol olarak kendi özellik sistemi veya Düzen geri çağırmaları geçersiz kılma uygulamaları için kullanılır. Örneğin, sahip olabileceğiniz bir <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> çağıracak bir geri çağırma <xref:System.Windows.UIElement.InvalidateArrange%2A> örneğinin herhangi bir özellik değeri değişiklik raporları ve sahip <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> olarak `true` meta.
 
 - Bazı özellikler işleme özelliklerini içeren üst öğenin, yukarıda belirtilen gerekli boyutundaki değişiklikleri sunmayan şekilde etkileyebilir. Bir örnek <xref:System.Windows.Documents.Paragraph.MinOrphanLines%2A> bu özellik değişiklikleri genel işleme paragraf içeren akış belgenin burada değiştirebilirsiniz akış belge modelinde kullanılan özellik. Kullanım <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange> veya <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentMeasure> benzer durumlarda kendi özellikleri tanımlamak için.
 
@@ -150,21 +159,25 @@ Var olan bir bağımlılık özelliği türetilmiş bir sınıf oluşturuyorsan�
 - Ayarlama <xref:System.Windows.FrameworkPropertyMetadataOptions.Journal> , bağımlılık özelliği algılandı veya gezinti günlük kaydı hizmetleri tarafından kullanılan belirten bayrak. Örneğidir <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> özelliği; herhangi bir öğeyi bir seçim Seçili denetim kalıcı günlüğe kaydetme geçmişini çıkıldığında olduğunda.
 
 <a name="RODP"></a>
+
 ## <a name="read-only-dependency-properties"></a>Salt Okunur Bağımlılık Özellikleri
 
 Salt okunur bağımlılık özelliği tanımlayabilirsiniz. Ancak, kimlik doğrulamasıyla açığa çıkaran ve bunları özellik sistemi ile kaydetme yordamını olduğu gibi salt okunur olarak özelliğinizi neden tanımlayabilir senaryoları biraz farklı olabilir. Daha fazla bilgi için [salt okunur bağımlılık özellikleri](read-only-dependency-properties.md).
 
 <a name="CTDP"></a>
+
 ## <a name="collection-type-dependency-properties"></a>Koleksiyon Türü Bağımlılık Özellikleri
 
 Koleksiyon türü bağımlılık özellikleri dikkate alınması gereken bazı ek uygulama sorunlarına sahip. Ayrıntılar için bkz [koleksiyon türü bağımlılık özellikleri](collection-type-dependency-properties.md).
 
 <a name="SecurityC"></a>
+
 ## <a name="dependency-property-security-considerations"></a>Bağımlılık özelliği güvenlik konuları
 
 Bağımlılık özellikleri ortak özellik olarak bildirilmelidir. Bağımlılık özelliği tanımlayıcı alanlarını, genel statik alanlar bildirilmelidir. (Korumalı gibi) diğer erişim düzeyleri bildirme girişimi olsa bile, bir bağımlılık özelliği her zaman özellik sistemi ile birlikte tanımlayıcısı aracılığıyla erişilebilir [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Korumalı tanımlayıcı alan meta verileri raporlama ya da değer belirleme nedeniyle potansiyel olarak erişilebilir [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] gibi özellik sistemi parçası olan <xref:System.Windows.LocalValueEnumerator>. Daha fazla bilgi için [bağımlılık özelliği güvenliği](dependency-property-security.md).
 
 <a name="DPCtor"></a>
+
 ## <a name="dependency-properties-and-class-constructors"></a>Bağımlılık özellikleri ve sınıf oluşturucuları
 
 Genel bir sınıf oluşturucuları (genellikle FxCop gibi kod çözümleme araçları tarafından zorunlu tutulur) yönetilen kod programlama İlkesi sanal yöntemleri çağırmamalıdır yoktur. Bu temel bir türetilen sınıf oluşturucusu başlatma oluşturucular çağrılabilir ve Oluşturucusu aracılığıyla sanal yöntemin girilmesinin yapılandırılmakta nesne örneğinin bir tam başlatma durumunda oluşabilecek olmasıdır. Zaten türetilen herhangi bir sınıftan türetilen zaman <xref:System.Windows.DependencyObject>, özellik sistemi çağırır ve sanal yöntemleri dahili olarak sunan farkında olmalıdır. Bu sanal yöntemler parçası olan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliği Sistem Hizmetleri. Yöntemleri geçersiz kılma değeri belirleme katılmak türetilmiş sınıfları sağlar. Belirli bir oluşturucu desenler izleyen sürece çalışma zamanı başlatma ile ilgili olası sorunları önlemek için bağımlılık özellik değerleri, sınıfların oluşturuculardan ayarlanmamalıdır. Ayrıntılar için bkz [DependencyObjects için güvenli Oluşturucu desenleri](safe-constructor-patterns-for-dependencyobjects.md).
