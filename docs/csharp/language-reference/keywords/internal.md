@@ -8,38 +8,38 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: aefb806b452452d4837b29b6ab11ce158ea412bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9cfbea03a305dd17c07f549901bc91be0e05b792
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661366"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661176"
 ---
-# <a name="internal-c-reference"></a><span data-ttu-id="44cde-102">internal (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="44cde-102">internal (C# Reference)</span></span>
-<span data-ttu-id="44cde-103">`internal` Anahtar sözcüğü bir [erişim değiştiricisi](../../../csharp/language-reference/keywords/access-modifiers.md) türler ve tür üyeleri için.</span><span class="sxs-lookup"><span data-stu-id="44cde-103">The `internal` keyword is an [access modifier](../../../csharp/language-reference/keywords/access-modifiers.md) for types and type members.</span></span> 
+# <a name="internal-c-reference"></a><span data-ttu-id="12fbe-102">internal (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="12fbe-102">internal (C# Reference)</span></span>
+<span data-ttu-id="12fbe-103">`internal` Anahtar sözcüğü bir [erişim değiştiricisi](../../../csharp/language-reference/keywords/access-modifiers.md) türler ve tür üyeleri için.</span><span class="sxs-lookup"><span data-stu-id="12fbe-103">The `internal` keyword is an [access modifier](../../../csharp/language-reference/keywords/access-modifiers.md) for types and type members.</span></span> 
   
- > <span data-ttu-id="44cde-104">Bu sayfa kapsayan `internal` erişim.</span><span class="sxs-lookup"><span data-stu-id="44cde-104">This page covers `internal` access.</span></span> <span data-ttu-id="44cde-105">`internal` Anahtar sözcüğü, ayrıca parçası [ `protected internal` ](./protected-internal.md) erişim değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="44cde-105">The `internal` keyword is also part of the [`protected internal`](./protected-internal.md) access modifier.</span></span>
+ > <span data-ttu-id="12fbe-104">Bu sayfa kapsayan `internal` erişim.</span><span class="sxs-lookup"><span data-stu-id="12fbe-104">This page covers `internal` access.</span></span> <span data-ttu-id="12fbe-105">`internal` Anahtar sözcüğü, ayrıca parçası [ `protected internal` ](./protected-internal.md) erişim değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="12fbe-105">The `internal` keyword is also part of the [`protected internal`](./protected-internal.md) access modifier.</span></span>
   
-<span data-ttu-id="44cde-106">İç türleri veya üyeleri yalnızca bu örnekte olduğu gibi aynı derleme dosyalarında erişilebilir:</span><span class="sxs-lookup"><span data-stu-id="44cde-106">Internal types or members are accessible only within files in the same assembly, as in this example:</span></span>  
+<span data-ttu-id="12fbe-106">İç türleri veya üyeleri yalnızca bu örnekte olduğu gibi aynı derleme dosyalarında erişilebilir:</span><span class="sxs-lookup"><span data-stu-id="12fbe-106">Internal types or members are accessible only within files in the same assembly, as in this example:</span></span>  
   
 ```csharp  
 public class BaseClass   
 {  
-    // Only accessible within the same assembly  
-    internal static int x = 0;  
+    // Only accessible within the same assembly.
+    internal static int x = 0;
 }  
 ```  
 
- <span data-ttu-id="44cde-107">Bir karşılaştırması `internal` diğer erişim değiştiricileri ile bkz [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md) ve [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="44cde-107">For a comparison of `internal` with the other access modifiers, see [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md) and [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
+ <span data-ttu-id="12fbe-107">Bir karşılaştırması `internal` diğer erişim değiştiricileri ile bkz [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md) ve [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="12fbe-107">For a comparison of `internal` with the other access modifiers, see [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md) and [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
- <span data-ttu-id="44cde-108">Derlemeler hakkında daha fazla bilgi için bkz. [.NET derlemeleri](../../../standard/assembly/index.md).</span><span class="sxs-lookup"><span data-stu-id="44cde-108">For more information about assemblies, see [Assemblies in .NET](../../../standard/assembly/index.md).</span></span>  
+ <span data-ttu-id="12fbe-108">Derlemeler hakkında daha fazla bilgi için bkz. [.NET derlemeleri](../../../standard/assembly/index.md).</span><span class="sxs-lookup"><span data-stu-id="12fbe-108">For more information about assemblies, see [Assemblies in .NET](../../../standard/assembly/index.md).</span></span>  
   
- <span data-ttu-id="44cde-109">Bir grup için uygulama kodunun kalanı görmeden özel bir şekilde işbirliği bileşenlerinin sağladığından bir ortak iç erişim bileşeni tabanlı geliştirme kullanılır.</span><span class="sxs-lookup"><span data-stu-id="44cde-109">A common use of internal access is in component-based development because it enables a group of components to cooperate in a private manner without being exposed to the rest of the application code.</span></span> <span data-ttu-id="44cde-110">Örneğin, grafik kullanıcı arabirimleri oluşturmaya yönelik bir çerçeve sağlayabilir `Control` ve `Form` iç erişimle üyeleri kullanarak iş Birliği sınıfları.</span><span class="sxs-lookup"><span data-stu-id="44cde-110">For example, a framework for building graphical user interfaces could provide `Control` and `Form` classes that cooperate by using members with internal access.</span></span> <span data-ttu-id="44cde-111">Bu üyeleri iç olduğundan, framework kullanan kodu sunulmaz.</span><span class="sxs-lookup"><span data-stu-id="44cde-111">Since these members are internal, they are not exposed to code that is using the framework.</span></span>  
+ <span data-ttu-id="12fbe-109">Bir grup için uygulama kodunun kalanı görmeden özel bir şekilde işbirliği bileşenlerinin sağladığından bir ortak iç erişim bileşeni tabanlı geliştirme kullanılır.</span><span class="sxs-lookup"><span data-stu-id="12fbe-109">A common use of internal access is in component-based development because it enables a group of components to cooperate in a private manner without being exposed to the rest of the application code.</span></span> <span data-ttu-id="12fbe-110">Örneğin, grafik kullanıcı arabirimleri oluşturmaya yönelik bir çerçeve sağlayabilir `Control` ve `Form` iç erişimle üyeleri kullanarak iş Birliği sınıfları.</span><span class="sxs-lookup"><span data-stu-id="12fbe-110">For example, a framework for building graphical user interfaces could provide `Control` and `Form` classes that cooperate by using members with internal access.</span></span> <span data-ttu-id="12fbe-111">Bu üyeleri iç olduğundan, framework kullanan kodu sunulmaz.</span><span class="sxs-lookup"><span data-stu-id="12fbe-111">Since these members are internal, they are not exposed to code that is using the framework.</span></span>  
   
- <span data-ttu-id="44cde-112">Bu bir tür veya üye, içinde tanımlandı derleme dışından iç erişimle başvurmak için bir hatadır.</span><span class="sxs-lookup"><span data-stu-id="44cde-112">It is an error to reference a type or a member with internal access outside the assembly within which it was defined.</span></span>  
+ <span data-ttu-id="12fbe-112">Bu bir tür veya üye, içinde tanımlandı derleme dışından iç erişimle başvurmak için bir hatadır.</span><span class="sxs-lookup"><span data-stu-id="12fbe-112">It is an error to reference a type or a member with internal access outside the assembly within which it was defined.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="44cde-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="44cde-113">Example</span></span>  
- <span data-ttu-id="44cde-114">Bu örnek iki dosyayı içeren `Assembly1.cs` ve `Assembly1_a.cs`.</span><span class="sxs-lookup"><span data-stu-id="44cde-114">This example contains two files, `Assembly1.cs` and `Assembly1_a.cs`.</span></span> <span data-ttu-id="44cde-115">İlk dosya içeren bir iç temel sınıf `BaseClass`.</span><span class="sxs-lookup"><span data-stu-id="44cde-115">The first file contains an internal base class, `BaseClass`.</span></span> <span data-ttu-id="44cde-116">İkinci örneğini oluşturma girişiminde dosyasında `BaseClass` hataya neden olur.</span><span class="sxs-lookup"><span data-stu-id="44cde-116">In the second file, an attempt to instantiate `BaseClass` will produce an error.</span></span>  
+## <a name="example"></a><span data-ttu-id="12fbe-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="12fbe-113">Example</span></span>  
+ <span data-ttu-id="12fbe-114">Bu örnek iki dosyayı içeren `Assembly1.cs` ve `Assembly1_a.cs`.</span><span class="sxs-lookup"><span data-stu-id="12fbe-114">This example contains two files, `Assembly1.cs` and `Assembly1_a.cs`.</span></span> <span data-ttu-id="12fbe-115">İlk dosya içeren bir iç temel sınıf `BaseClass`.</span><span class="sxs-lookup"><span data-stu-id="12fbe-115">The first file contains an internal base class, `BaseClass`.</span></span> <span data-ttu-id="12fbe-116">İkinci örneğini oluşturma girişiminde dosyasında `BaseClass` hataya neden olur.</span><span class="sxs-lookup"><span data-stu-id="12fbe-116">In the second file, an attempt to instantiate `BaseClass` will produce an error.</span></span>  
   
 ```csharp  
 // Assembly1.cs  
@@ -57,13 +57,13 @@ class TestAccess
 {  
    static void Main()   
    {  
-      BaseClass myBase = new BaseClass();   // CS0122  
+      var myBase = new BaseClass();   // CS0122  
    }  
 }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="44cde-117">Örnek</span><span class="sxs-lookup"><span data-stu-id="44cde-117">Example</span></span>  
- <span data-ttu-id="44cde-118">Bu örnekte, örnek 1 kullanılan de indirdiğiniz dosyaları kullanarak ve erişilebilirlik düzeyini değiştirme `BaseClass` için `public`.</span><span class="sxs-lookup"><span data-stu-id="44cde-118">In this example, use the same files you used in example 1, and change the accessibility level of `BaseClass` to `public`.</span></span> <span data-ttu-id="44cde-119">Ayrıca üyenin erişilebilirlik düzeyi değiştirme `IntM` için `internal`.</span><span class="sxs-lookup"><span data-stu-id="44cde-119">Also change the accessibility level of the member `IntM` to `internal`.</span></span> <span data-ttu-id="44cde-120">Bu durumda, sınıfın örneğini oluşturabilir, ancak iç üyeye erişemez.</span><span class="sxs-lookup"><span data-stu-id="44cde-120">In this case, you can instantiate the class, but you cannot access the internal member.</span></span>  
+## <a name="example"></a><span data-ttu-id="12fbe-117">Örnek</span><span class="sxs-lookup"><span data-stu-id="12fbe-117">Example</span></span>  
+ <span data-ttu-id="12fbe-118">Bu örnekte, örnek 1 kullanılan de indirdiğiniz dosyaları kullanarak ve erişilebilirlik düzeyini değiştirme `BaseClass` için `public`.</span><span class="sxs-lookup"><span data-stu-id="12fbe-118">In this example, use the same files you used in example 1, and change the accessibility level of `BaseClass` to `public`.</span></span> <span data-ttu-id="12fbe-119">Ayrıca üyenin erişilebilirlik düzeyi değiştirme `intM` için `internal`.</span><span class="sxs-lookup"><span data-stu-id="12fbe-119">Also change the accessibility level of the member `intM` to `internal`.</span></span> <span data-ttu-id="12fbe-120">Bu durumda, sınıfın örneğini oluşturabilir, ancak iç üyeye erişemez.</span><span class="sxs-lookup"><span data-stu-id="12fbe-120">In this case, you can instantiate the class, but you cannot access the internal member.</span></span>  
   
 ```csharp  
 // Assembly2.cs  
@@ -81,24 +81,24 @@ public class TestAccess
 {  
    static void Main()   
    {  
-      BaseClass myBase = new BaseClass();   // Ok.  
+      var myBase = new BaseClass();   // Ok.  
       BaseClass.intM = 444;    // CS0117  
    }  
 }  
 ```  
   
-## <a name="c-language-specification"></a><span data-ttu-id="44cde-121">C# Dil Belirtimi</span><span class="sxs-lookup"><span data-stu-id="44cde-121">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="12fbe-121">C# Dil Belirtimi</span><span class="sxs-lookup"><span data-stu-id="12fbe-121">C# Language Specification</span></span>  
 
-<span data-ttu-id="44cde-122">Daha fazla bilgi için [erişilebilirlik bildirilen](~/_csharplang/spec/basic-concepts.md#declared-accessibility) içinde [ C# dil belirtimi](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="44cde-122">For more information, see [Declared accessibility](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="44cde-123">Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.</span><span class="sxs-lookup"><span data-stu-id="44cde-123">The language specification is the definitive source for C# syntax and usage.</span></span>
+<span data-ttu-id="12fbe-122">Daha fazla bilgi için [erişilebilirlik bildirilen](~/_csharplang/spec/basic-concepts.md#declared-accessibility) içinde [ C# dil belirtimi](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="12fbe-122">For more information, see [Declared accessibility](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="12fbe-123">Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.</span><span class="sxs-lookup"><span data-stu-id="12fbe-123">The language specification is the definitive source for C# syntax and usage.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="44cde-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="44cde-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="12fbe-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="12fbe-124">See also</span></span>
 
-- [<span data-ttu-id="44cde-125">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="44cde-125">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="44cde-126">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="44cde-126">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="44cde-127">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="44cde-127">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
-- [<span data-ttu-id="44cde-128">Erişim Değiştiricileri</span><span class="sxs-lookup"><span data-stu-id="44cde-128">Access Modifiers</span></span>](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [<span data-ttu-id="44cde-129">Erişilebilirlik Düzeyleri</span><span class="sxs-lookup"><span data-stu-id="44cde-129">Accessibility Levels</span></span>](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [<span data-ttu-id="44cde-130">Değiştiriciler</span><span class="sxs-lookup"><span data-stu-id="44cde-130">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)
-- [<span data-ttu-id="44cde-131">public</span><span class="sxs-lookup"><span data-stu-id="44cde-131">public</span></span>](../../../csharp/language-reference/keywords/public.md)
-- [<span data-ttu-id="44cde-132">private</span><span class="sxs-lookup"><span data-stu-id="44cde-132">private</span></span>](../../../csharp/language-reference/keywords/private.md)
-- [<span data-ttu-id="44cde-133">protected</span><span class="sxs-lookup"><span data-stu-id="44cde-133">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)
+- [<span data-ttu-id="12fbe-125">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="12fbe-125">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="12fbe-126">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="12fbe-126">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="12fbe-127">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="12fbe-127">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="12fbe-128">Erişim Değiştiricileri</span><span class="sxs-lookup"><span data-stu-id="12fbe-128">Access Modifiers</span></span>](../../../csharp/language-reference/keywords/access-modifiers.md)
+- [<span data-ttu-id="12fbe-129">Erişilebilirlik Düzeyleri</span><span class="sxs-lookup"><span data-stu-id="12fbe-129">Accessibility Levels</span></span>](../../../csharp/language-reference/keywords/accessibility-levels.md)
+- [<span data-ttu-id="12fbe-130">Değiştiriciler</span><span class="sxs-lookup"><span data-stu-id="12fbe-130">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)
+- [<span data-ttu-id="12fbe-131">public</span><span class="sxs-lookup"><span data-stu-id="12fbe-131">public</span></span>](../../../csharp/language-reference/keywords/public.md)
+- [<span data-ttu-id="12fbe-132">private</span><span class="sxs-lookup"><span data-stu-id="12fbe-132">private</span></span>](../../../csharp/language-reference/keywords/private.md)
+- [<span data-ttu-id="12fbe-133">protected</span><span class="sxs-lookup"><span data-stu-id="12fbe-133">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)

@@ -9,25 +9,25 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: 57e32d3e56c3f319f7ee8aa58020d37e46a6454d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e98575b2569ebc20a5421de54bc13fb14cb3cdac
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762271"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663143"
 ---
-# <a name="geometries"></a><span data-ttu-id="b0f4d-102">Geometriler</span><span class="sxs-lookup"><span data-stu-id="b0f4d-102">Geometries</span></span>
-<span data-ttu-id="b0f4d-103"><xref:System.Windows.Media.Geometry> işlemek için kullanılan, çok yönlü bir sınıf [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] grafik, isabet testi nesneleri ve kırpma bölgeleri tanımlayın</span><span class="sxs-lookup"><span data-stu-id="b0f4d-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  
+# <a name="geometries"></a><span data-ttu-id="7b35c-102">Geometriler</span><span class="sxs-lookup"><span data-stu-id="7b35c-102">Geometries</span></span>
+<span data-ttu-id="7b35c-103"><xref:System.Windows.Media.Geometry> 2B grafikleri işleme, isabet testi nesneleri ve kırpma bölgeleri tanımlamak için kullanılan yönlü bir sınıftır.</span><span class="sxs-lookup"><span data-stu-id="7b35c-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render 2-D graphics, hit-test objects, and define clipping regions</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b0f4d-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b0f4d-104">In This Section</span></span>  
- [<span data-ttu-id="b0f4d-105">Yol İşaretleme Söz Dizimi</span><span class="sxs-lookup"><span data-stu-id="b0f4d-105">Path Markup Syntax</span></span>](path-markup-syntax.md)  
- [<span data-ttu-id="b0f4d-106">Geometriye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b0f4d-106">Geometry Overview</span></span>](geometry-overview.md)  
- [<span data-ttu-id="b0f4d-107">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="b0f4d-107">How-to Topics</span></span>](geometries-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7b35c-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="7b35c-104">In This Section</span></span>  
+ [<span data-ttu-id="7b35c-105">Yol İşaretleme Söz Dizimi</span><span class="sxs-lookup"><span data-stu-id="7b35c-105">Path Markup Syntax</span></span>](path-markup-syntax.md)  
+ [<span data-ttu-id="7b35c-106">Geometriye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7b35c-106">Geometry Overview</span></span>](geometry-overview.md)  
+ [<span data-ttu-id="7b35c-107">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="7b35c-107">How-to Topics</span></span>](geometries-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="b0f4d-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b0f4d-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7b35c-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7b35c-108">See also</span></span>
 
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [<span data-ttu-id="b0f4d-109">2B Grafikleri ve Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="b0f4d-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="b0f4d-110">WPF’de Şekiller ve Temel Çizimlere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b0f4d-110">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
-- [<span data-ttu-id="b0f4d-111">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="b0f4d-111">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="7b35c-109">2B Grafikleri ve Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="7b35c-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="7b35c-110">WPF’de Şekiller ve Temel Çizimlere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7b35c-110">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="7b35c-111">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="7b35c-111">Graphics and Multimedia</span></span>](index.md)
