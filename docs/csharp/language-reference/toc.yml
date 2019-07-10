@@ -19,16 +19,13 @@
                 - name: Tamsayı sayısal türler
                   displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
                   href: builtin-types/integral-numeric-types.md
+                - name: Kayan nokta sayısal türleri
+                  displayName: 'float, decimal, double, rational, real'
+                  href: builtin-types/floating-point-numeric-types.md
                 - name: char
                   href: keywords/char.md
-                - name: decimal
-                  href: keywords/decimal.md
-                - name: çift
-                  href: keywords/double.md
                 - name: enum
                   href: keywords/enum.md
-                - name: float
-                  href: keywords/float.md
                 - name: struct
                   href: keywords/struct.md
             - name: Başvuru Türleri
@@ -55,8 +52,6 @@
               items:
                 - name: Yerleşik türler tablosu
                   href: keywords/built-in-types-table.md
-                - name: Kayan nokta türleri tablosu
-                  href: keywords/floating-point-types-table.md
                 - name: Değer türleri tablosu
                   href: keywords/value-types-table.md
                 - name: Varsayılan değerler tablosu
