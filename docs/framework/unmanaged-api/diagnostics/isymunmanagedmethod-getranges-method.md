@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94ca1db2bf85f42117f686a8cb483907003927c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef5a98d510eee8942a2cad0525b6902e3e4eaa52
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939600"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769381"
 ---
-# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="d9dd0-102">ISymUnmanagedMethod::GetRanges Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d9dd0-102">ISymUnmanagedMethod::GetRanges Method</span></span>
-<span data-ttu-id="d9dd0-103">Belgede bir konuma konumu bu yöntem içinde kapsayan Microsoft Ara dilini (MSIL) aralıklarına karşılık gelen başlangıç ve bitiş uzaklığında Çiftler dizisini döndürür.</span><span class="sxs-lookup"><span data-stu-id="d9dd0-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="d9dd0-104">Dizi tamsayı dizisi ve [Başlangıç, bitiş, başlangıç, bitiş] biçimi vardır.</span><span class="sxs-lookup"><span data-stu-id="d9dd0-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="d9dd0-105">2 tarafından ayrılmış dizi uzunluğu aralığın çiftleri sayısıdır.</span><span class="sxs-lookup"><span data-stu-id="d9dd0-105">The number of range pairs is the length of the array divided by 2.</span></span>  
+# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="86f62-102">ISymUnmanagedMethod::GetRanges Yöntemi</span><span class="sxs-lookup"><span data-stu-id="86f62-102">ISymUnmanagedMethod::GetRanges Method</span></span>
+<span data-ttu-id="86f62-103">Belgede bir konuma konumu bu yöntem içinde kapsayan Microsoft Ara dilini (MSIL) aralıklarına karşılık gelen başlangıç ve bitiş uzaklığında Çiftler dizisini döndürür.</span><span class="sxs-lookup"><span data-stu-id="86f62-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="86f62-104">Dizi tamsayı dizisi ve [Başlangıç, bitiş, başlangıç, bitiş] biçimi vardır.</span><span class="sxs-lookup"><span data-stu-id="86f62-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="86f62-105">2 tarafından ayrılmış dizi uzunluğu aralığın çiftleri sayısıdır.</span><span class="sxs-lookup"><span data-stu-id="86f62-105">The number of range pairs is the length of the array divided by 2.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d9dd0-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d9dd0-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="86f62-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="86f62-106">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetRanges(  
     [in]  ISymUnmanagedDocument* document,  
     [in]  ULONG32                line,  
@@ -40,31 +40,31 @@ HRESULT GetRanges(
         length_is(*pcRanges)] ULONG32 ranges[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d9dd0-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d9dd0-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="86f62-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="86f62-107">Parameters</span></span>  
  `document`  
- <span data-ttu-id="d9dd0-108">[in] Uzaklık istendiği belge.</span><span class="sxs-lookup"><span data-stu-id="d9dd0-108">[in] The document for which the offset is requested.</span></span>  
+ <span data-ttu-id="86f62-108">[in] Uzaklık istendiği belge.</span><span class="sxs-lookup"><span data-stu-id="86f62-108">[in] The document for which the offset is requested.</span></span>  
   
  `line`  
- <span data-ttu-id="d9dd0-109">[in] Aralıkları için karşılık gelen belge satır.</span><span class="sxs-lookup"><span data-stu-id="d9dd0-109">[in] The document line corresponding to the ranges.</span></span>  
+ <span data-ttu-id="86f62-109">[in] Aralıkları için karşılık gelen belge satır.</span><span class="sxs-lookup"><span data-stu-id="86f62-109">[in] The document line corresponding to the ranges.</span></span>  
   
  `column`  
- <span data-ttu-id="d9dd0-110">[in] Aralıkları için karşılık gelen belge sütun.</span><span class="sxs-lookup"><span data-stu-id="d9dd0-110">[in] The document column corresponding to the ranges.</span></span>  
+ <span data-ttu-id="86f62-110">[in] Aralıkları için karşılık gelen belge sütun.</span><span class="sxs-lookup"><span data-stu-id="86f62-110">[in] The document column corresponding to the ranges.</span></span>  
   
  `cRanges`  
- <span data-ttu-id="d9dd0-111">[in] Boyutu `ranges` dizisi.</span><span class="sxs-lookup"><span data-stu-id="d9dd0-111">[in] The size of the `ranges` array.</span></span>  
+ <span data-ttu-id="86f62-111">[in] Boyutu `ranges` dizisi.</span><span class="sxs-lookup"><span data-stu-id="86f62-111">[in] The size of the `ranges` array.</span></span>  
   
  `pcRanges`  
- <span data-ttu-id="d9dd0-112">[out] Bir işaretçi bir `ULONG32` içeriyor aralıkları için gerekli arabellek boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="d9dd0-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
+ <span data-ttu-id="86f62-112">[out] Bir işaretçi bir `ULONG32` içeriyor aralıkları için gerekli arabellek boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="86f62-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
   
  `ranges`  
- <span data-ttu-id="d9dd0-113">[out] Aralık alan arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="d9dd0-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
+ <span data-ttu-id="86f62-113">[out] Aralık alan arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="86f62-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d9dd0-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="d9dd0-114">Return Value</span></span>  
- <span data-ttu-id="d9dd0-115">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="d9dd0-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="86f62-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="86f62-114">Return Value</span></span>  
+ <span data-ttu-id="86f62-115">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="86f62-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d9dd0-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d9dd0-116">Requirements</span></span>  
- <span data-ttu-id="d9dd0-117">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d9dd0-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="86f62-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="86f62-116">Requirements</span></span>  
+ <span data-ttu-id="86f62-117">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="86f62-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d9dd0-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d9dd0-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="86f62-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="86f62-118">See also</span></span>
 
-- [<span data-ttu-id="d9dd0-119">ISymUnmanagedMethod Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d9dd0-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="86f62-119">ISymUnmanagedMethod Yöntemi</span><span class="sxs-lookup"><span data-stu-id="86f62-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

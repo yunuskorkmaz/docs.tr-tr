@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 823a172c05d2ce76fef790966f54d7216f579fde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2060a70e2a3ce355f43ade67e6d6843670e00ad3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777539"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778854"
 ---
-# <a name="imetadataimportgetsigfromtoken-method"></a><span data-ttu-id="5af87-102">IMetaDataImport::GetSigFromToken Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5af87-102">IMetaDataImport::GetSigFromToken Method</span></span>
-<span data-ttu-id="5af87-103">Belirtilen belirteçle ilişkili ikili meta veri imzası alır.</span><span class="sxs-lookup"><span data-stu-id="5af87-103">Gets the binary metadata signature associated with the specified token.</span></span>  
+# <a name="imetadataimportgetsigfromtoken-method"></a><span data-ttu-id="e4dca-102">IMetaDataImport::GetSigFromToken Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e4dca-102">IMetaDataImport::GetSigFromToken Method</span></span>
+<span data-ttu-id="e4dca-103">Belirtilen belirteçle ilişkili ikili meta veri imzası alır.</span><span class="sxs-lookup"><span data-stu-id="e4dca-103">Gets the binary metadata signature associated with the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5af87-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5af87-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e4dca-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e4dca-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetSigFromToken (   
    [in]   mdSignature        mdSig,   
    [out]  PCCOR_SIGNATURE    *ppvSig,   
@@ -37,26 +37,26 @@ HRESULT GetSigFromToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5af87-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5af87-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e4dca-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e4dca-105">Parameters</span></span>  
  `mdSig`  
- <span data-ttu-id="5af87-106">[in] İkili meta veri imzası döndürmek için belirteç.</span><span class="sxs-lookup"><span data-stu-id="5af87-106">[in] The token to return the binary metadata signature for.</span></span>  
+ <span data-ttu-id="e4dca-106">[in] İkili meta veri imzası döndürmek için belirteç.</span><span class="sxs-lookup"><span data-stu-id="e4dca-106">[in] The token to return the binary metadata signature for.</span></span>  
   
  `ppvSig`  
- <span data-ttu-id="5af87-107">[out] Döndürülen meta veri imzası bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5af87-107">[out] A pointer to the returned metadata signature.</span></span>  
+ <span data-ttu-id="e4dca-107">[out] Döndürülen meta veri imzası bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e4dca-107">[out] A pointer to the returned metadata signature.</span></span>  
   
  `pcbSig`  
- <span data-ttu-id="5af87-108">[out] İkili meta verileri imza bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="5af87-108">[out] The size in bytes of the binary metadata signature.</span></span>  
+ <span data-ttu-id="e4dca-108">[out] İkili meta verileri imza bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="e4dca-108">[out] The size in bytes of the binary metadata signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5af87-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5af87-109">Requirements</span></span>  
- <span data-ttu-id="5af87-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5af87-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e4dca-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e4dca-109">Requirements</span></span>  
+ <span data-ttu-id="e4dca-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e4dca-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5af87-111">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="5af87-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e4dca-111">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="e4dca-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5af87-112">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="5af87-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e4dca-112">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="e4dca-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5af87-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5af87-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e4dca-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e4dca-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5af87-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5af87-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e4dca-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e4dca-114">See also</span></span>
 
-- [<span data-ttu-id="5af87-115">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5af87-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="5af87-116">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5af87-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="e4dca-115">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e4dca-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="e4dca-116">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e4dca-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

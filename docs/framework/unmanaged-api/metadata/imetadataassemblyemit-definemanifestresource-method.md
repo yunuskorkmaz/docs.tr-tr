@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b617e29e2df22b59114c8b978daa645de1cc6176
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 781953fe5bf209f195ef4887dff45e1902741f0c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905274"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775312"
 ---
-# <a name="imetadataassemblyemitdefinemanifestresource-method"></a><span data-ttu-id="b4dc4-102">IMetaDataAssemblyEmit::DefineManifestResource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b4dc4-102">IMetaDataAssemblyEmit::DefineManifestResource Method</span></span>
-<span data-ttu-id="b4dc4-103">Oluşturur bir `ManifestResource` belirtilen bildirim kaynağı için meta veriler içeren yapı ve ilişkili meta veri belirteci döndürür.</span><span class="sxs-lookup"><span data-stu-id="b4dc4-103">Creates a `ManifestResource` structure containing metadata for the specified manifest resource, and returns the associated metadata token.</span></span>  
+# <a name="imetadataassemblyemitdefinemanifestresource-method"></a><span data-ttu-id="46e73-102">IMetaDataAssemblyEmit::DefineManifestResource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="46e73-102">IMetaDataAssemblyEmit::DefineManifestResource Method</span></span>
+<span data-ttu-id="46e73-103">Oluşturur bir `ManifestResource` belirtilen bildirim kaynağı için meta veriler içeren yapı ve ilişkili meta veri belirteci döndürür.</span><span class="sxs-lookup"><span data-stu-id="46e73-103">Creates a `ManifestResource` structure containing metadata for the specified manifest resource, and returns the associated metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b4dc4-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b4dc4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="46e73-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="46e73-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT DefineManifestResource (  
     [in] LPCWSTR                szName,   
     [in] mdToken                tkImplementation,   
@@ -39,34 +39,34 @@ HRESULT DefineManifestResource (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b4dc4-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b4dc4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="46e73-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="46e73-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="b4dc4-106">[in] Kaynak adı.</span><span class="sxs-lookup"><span data-stu-id="b4dc4-106">[in] The name of the resource.</span></span>  
+ <span data-ttu-id="46e73-106">[in] Kaynak adı.</span><span class="sxs-lookup"><span data-stu-id="46e73-106">[in] The name of the resource.</span></span>  
   
  `tkImplementation`  
- <span data-ttu-id="b4dc4-107">[in] Türü bir meta veri belirteci `mdtFile` veya `mdtAssemblyRef` kaynak sağlayıcıya eşler.</span><span class="sxs-lookup"><span data-stu-id="b4dc4-107">[in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider.</span></span> <span data-ttu-id="b4dc4-108">Bir NULL değer, dosyanın meta verileri, katıştırılmış kaynak sağlayıcısı olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="b4dc4-108">A NULL value indicates that the file in which the metadata is embedded is the resource provider.</span></span>  
+ <span data-ttu-id="46e73-107">[in] Türü bir meta veri belirteci `mdtFile` veya `mdtAssemblyRef` kaynak sağlayıcıya eşler.</span><span class="sxs-lookup"><span data-stu-id="46e73-107">[in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider.</span></span> <span data-ttu-id="46e73-108">Bir NULL değer, dosyanın meta verileri, katıştırılmış kaynak sağlayıcısı olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="46e73-108">A NULL value indicates that the file in which the metadata is embedded is the resource provider.</span></span>  
   
  `dwOffset`  
- <span data-ttu-id="b4dc4-109">[in] Kaynak dosyası içinde başlangıcına uzaklık.</span><span class="sxs-lookup"><span data-stu-id="b4dc4-109">[in] The offset to the beginning of the resource within the file.</span></span> <span data-ttu-id="b4dc4-110">Tek başına dosyalarındaki kaynaklar için bu her zaman sıfır olacaktır.</span><span class="sxs-lookup"><span data-stu-id="b4dc4-110">For resources in standalone files, this will always be zero.</span></span> <span data-ttu-id="b4dc4-111">Bir PE (taşınabilir çalıştırılabilir) dosyasında katıştırılmış kaynak, bir uzaklık cor.h üstbilgi dosyasında belirtilen konumda başlatan BLOB kaynağının budur.</span><span class="sxs-lookup"><span data-stu-id="b4dc4-111">If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.</span></span>  
+ <span data-ttu-id="46e73-109">[in] Kaynak dosyası içinde başlangıcına uzaklık.</span><span class="sxs-lookup"><span data-stu-id="46e73-109">[in] The offset to the beginning of the resource within the file.</span></span> <span data-ttu-id="46e73-110">Tek başına dosyalarındaki kaynaklar için bu her zaman sıfır olacaktır.</span><span class="sxs-lookup"><span data-stu-id="46e73-110">For resources in standalone files, this will always be zero.</span></span> <span data-ttu-id="46e73-111">Bir PE (taşınabilir çalıştırılabilir) dosyasında katıştırılmış kaynak, bir uzaklık cor.h üstbilgi dosyasında belirtilen konumda başlatan BLOB kaynağının budur.</span><span class="sxs-lookup"><span data-stu-id="46e73-111">If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.</span></span>  
   
  `dwResourceFlags`  
- <span data-ttu-id="b4dc4-112">[in] Kaynak tanımı özellik ayarlarını belirten bayrağı değerlerinin Bitsel bir birleşimi.</span><span class="sxs-lookup"><span data-stu-id="b4dc4-112">[in] A bitwise combination of flag values that specify property settings for the resource definition.</span></span>  
+ <span data-ttu-id="46e73-112">[in] Kaynak tanımı özellik ayarlarını belirten bayrağı değerlerinin Bitsel bir birleşimi.</span><span class="sxs-lookup"><span data-stu-id="46e73-112">[in] A bitwise combination of flag values that specify property settings for the resource definition.</span></span>  
   
  `pmdmr`  
- <span data-ttu-id="b4dc4-113">[out] Döndürülen meta veri belirteci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="b4dc4-113">[out] A pointer to the returned metadata token.</span></span>  
+ <span data-ttu-id="46e73-113">[out] Döndürülen meta veri belirteci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="46e73-113">[out] A pointer to the returned metadata token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b4dc4-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b4dc4-114">Remarks</span></span>  
- <span data-ttu-id="b4dc4-115">Bir `ManifestResource` meta veri yapısı, her derlemenin dosyalarının uygulanan her bir kaynak için tanımlanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="b4dc4-115">One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="46e73-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="46e73-114">Remarks</span></span>  
+ <span data-ttu-id="46e73-115">Bir `ManifestResource` meta veri yapısı, her derlemenin dosyalarının uygulanan her bir kaynak için tanımlanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="46e73-115">One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b4dc4-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b4dc4-116">Requirements</span></span>  
- <span data-ttu-id="b4dc4-117">**Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b4dc4-117">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="46e73-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="46e73-116">Requirements</span></span>  
+ <span data-ttu-id="46e73-117">**Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="46e73-117">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b4dc4-118">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="b4dc4-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="46e73-118">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="46e73-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b4dc4-119">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="b4dc4-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="46e73-119">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="46e73-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b4dc4-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b4dc4-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="46e73-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46e73-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b4dc4-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b4dc4-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="46e73-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="46e73-121">See also</span></span>
 
-- [<span data-ttu-id="b4dc4-122">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b4dc4-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="46e73-122">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="46e73-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

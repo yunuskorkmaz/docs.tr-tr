@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c797378f5e13f39c1c786237a3a7b9cf577fccc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5b387ee7fd4cc0088c90d2b8278fbf18bb36f51
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763657"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755686"
 ---
-# <a name="corsymvarflag-enumeration"></a><span data-ttu-id="911de-102">CorSymVarFlag Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="911de-102">CorSymVarFlag Enumeration</span></span>
-<span data-ttu-id="911de-103">Bir değişken, derleyicinin ürettiği olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="911de-103">Indicates whether a variable is compiler-generated.</span></span>  
+# <a name="corsymvarflag-enumeration"></a><span data-ttu-id="f9a66-102">CorSymVarFlag Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="f9a66-102">CorSymVarFlag Enumeration</span></span>
+<span data-ttu-id="f9a66-103">Bir değişken, derleyicinin ürettiği olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="f9a66-103">Indicates whether a variable is compiler-generated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="911de-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="911de-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f9a66-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f9a66-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorSymVarFlag   
 {  
     VAR_IS_COMP_GEN = 1  
 } CorSymVarFlag;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="911de-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="911de-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f9a66-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="f9a66-105">Members</span></span>  
   
-|<span data-ttu-id="911de-106">Üye</span><span class="sxs-lookup"><span data-stu-id="911de-106">Member</span></span>|<span data-ttu-id="911de-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="911de-107">Description</span></span>|  
+|<span data-ttu-id="f9a66-106">Üye</span><span class="sxs-lookup"><span data-stu-id="f9a66-106">Member</span></span>|<span data-ttu-id="f9a66-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f9a66-107">Description</span></span>|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|<span data-ttu-id="911de-108">Belirtilen değişken, derleyicinin ürettiği olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="911de-108">Indicates that the given variable is compiler-generated.</span></span>|  
+|`VAR_IS_COMP_GEN`|<span data-ttu-id="f9a66-108">Belirtilen değişken, derleyicinin ürettiği olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="f9a66-108">Indicates that the given variable is compiler-generated.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="911de-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="911de-109">Requirements</span></span>  
- <span data-ttu-id="911de-110">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="911de-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f9a66-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f9a66-109">Requirements</span></span>  
+ <span data-ttu-id="f9a66-110">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f9a66-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="911de-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="911de-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f9a66-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f9a66-111">See also</span></span>
 
-- [<span data-ttu-id="911de-112">Tanılama Simge Deposu Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="911de-112">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [<span data-ttu-id="f9a66-112">Tanılama Simge Deposu Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="f9a66-112">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

@@ -17,21 +17,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87ca5470fe5994d34d12a339c2d92a5f3917063d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 03bc5584d24efa790989f93426251f9f38e65904
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490229"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768527"
 ---
-# <a name="loadlibraryshim-function"></a><span data-ttu-id="131b0-102">LoadLibraryShim İşlevi</span><span class="sxs-lookup"><span data-stu-id="131b0-102">LoadLibraryShim Function</span></span>
-<span data-ttu-id="131b0-103">Belirtilen .NET Framework yeniden dağıtılabilir pakette bulunan bir DLL sürümünü yükler.</span><span class="sxs-lookup"><span data-stu-id="131b0-103">Loads a specified version of a DLL that is included in the .NET Framework redistributable package.</span></span>  
+# <a name="loadlibraryshim-function"></a><span data-ttu-id="8bee7-102">LoadLibraryShim İşlevi</span><span class="sxs-lookup"><span data-stu-id="8bee7-102">LoadLibraryShim Function</span></span>
+<span data-ttu-id="8bee7-103">Belirtilen .NET Framework yeniden dağıtılabilir pakette bulunan bir DLL sürümünü yükler.</span><span class="sxs-lookup"><span data-stu-id="8bee7-103">Loads a specified version of a DLL that is included in the .NET Framework redistributable package.</span></span>  
   
- <span data-ttu-id="131b0-104">Bu işlev .NET Framework 4'te kullanım dışıdır.</span><span class="sxs-lookup"><span data-stu-id="131b0-104">This function has been deprecated in the .NET Framework 4.</span></span> <span data-ttu-id="131b0-105">Kullanım [Iclrruntimeınfo::LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="131b0-105">Use the [ICLRRuntimeInfo::LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) method instead.</span></span>  
+ <span data-ttu-id="8bee7-104">Bu işlev .NET Framework 4'te kullanım dışıdır.</span><span class="sxs-lookup"><span data-stu-id="8bee7-104">This function has been deprecated in the .NET Framework 4.</span></span> <span data-ttu-id="8bee7-105">Kullanım [Iclrruntimeınfo::LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="8bee7-105">Use the [ICLRRuntimeInfo::LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="131b0-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="131b0-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8bee7-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8bee7-106">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT LoadLibraryShim (  
     [in]  LPCWSTR  szDllName,  
     [in]  LPCWSTR  szVersion,  
@@ -40,40 +40,40 @@ HRESULT LoadLibraryShim (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="131b0-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="131b0-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8bee7-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8bee7-107">Parameters</span></span>  
  `szDllName`  
- <span data-ttu-id="131b0-108">[in] .NET Framework Kitaplığı'ndan yüklenecek DLL adını temsil eden sıfır ile sonlandırılmış dize.</span><span class="sxs-lookup"><span data-stu-id="131b0-108">[in] A zero-terminated string that represents the name of the DLL to be loaded from the .NET Framework library.</span></span>  
+ <span data-ttu-id="8bee7-108">[in] .NET Framework Kitaplığı'ndan yüklenecek DLL adını temsil eden sıfır ile sonlandırılmış dize.</span><span class="sxs-lookup"><span data-stu-id="8bee7-108">[in] A zero-terminated string that represents the name of the DLL to be loaded from the .NET Framework library.</span></span>  
   
  `szVersion`  
- <span data-ttu-id="131b0-109">[in] Yüklenecek DLL sürümünü temsil eden sıfır ile sonlandırılmış dize.</span><span class="sxs-lookup"><span data-stu-id="131b0-109">[in] A zero-terminated string that represents the version of the DLL to be loaded.</span></span> <span data-ttu-id="131b0-110">Varsa `szVersion` null, 4 sürümünden küçük belirtilen DLL'yi en son sürümünü yükleme için seçilen sürüm olduğu.</span><span class="sxs-lookup"><span data-stu-id="131b0-110">If `szVersion` is null, the version selected for loading is the latest version of the specified DLL that is less than version 4.</span></span> <span data-ttu-id="131b0-111">Diğer bir deyişle, tüm sürümler sürüm 4'değerinden büyük veya eşit sayılır `szVersion` null ise, sürüm 4 değerinden hiçbir sürüm yüklüyse, DLL yüklenecek başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="131b0-111">That is, all versions equal to or greater than version 4 are ignored if `szVersion` is null, and if no version less than version 4 is installed, the DLL fails to load.</span></span> <span data-ttu-id="131b0-112">Bu, .NET Framework 4'ün yüklenmesi önceden mevcut olan uygulamaları veya bileşenleri etkilememesini sağlamak içindir.</span><span class="sxs-lookup"><span data-stu-id="131b0-112">This is to ensure that installation of the .NET Framework 4 does not affect pre-existing applications or components.</span></span> <span data-ttu-id="131b0-113">Girdisine bakın [In-Proc SxS ve geçiş Hızlı Başlangıç](https://go.microsoft.com/fwlink/?LinkId=200329) CLR Ekibi blogunda.</span><span class="sxs-lookup"><span data-stu-id="131b0-113">See the entry [In-Proc SxS and Migration Quick Start](https://go.microsoft.com/fwlink/?LinkId=200329) in the CLR team blog.</span></span>  
+ <span data-ttu-id="8bee7-109">[in] Yüklenecek DLL sürümünü temsil eden sıfır ile sonlandırılmış dize.</span><span class="sxs-lookup"><span data-stu-id="8bee7-109">[in] A zero-terminated string that represents the version of the DLL to be loaded.</span></span> <span data-ttu-id="8bee7-110">Varsa `szVersion` null, 4 sürümünden küçük belirtilen DLL'yi en son sürümünü yükleme için seçilen sürüm olduğu.</span><span class="sxs-lookup"><span data-stu-id="8bee7-110">If `szVersion` is null, the version selected for loading is the latest version of the specified DLL that is less than version 4.</span></span> <span data-ttu-id="8bee7-111">Diğer bir deyişle, tüm sürümler sürüm 4'değerinden büyük veya eşit sayılır `szVersion` null ise, sürüm 4 değerinden hiçbir sürüm yüklüyse, DLL yüklenecek başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="8bee7-111">That is, all versions equal to or greater than version 4 are ignored if `szVersion` is null, and if no version less than version 4 is installed, the DLL fails to load.</span></span> <span data-ttu-id="8bee7-112">Bu, .NET Framework 4'ün yüklenmesi önceden mevcut olan uygulamaları veya bileşenleri etkilememesini sağlamak içindir.</span><span class="sxs-lookup"><span data-stu-id="8bee7-112">This is to ensure that installation of the .NET Framework 4 does not affect pre-existing applications or components.</span></span> <span data-ttu-id="8bee7-113">Girdisine bakın [In-Proc SxS ve geçiş Hızlı Başlangıç](https://go.microsoft.com/fwlink/?LinkId=200329) CLR Ekibi blogunda.</span><span class="sxs-lookup"><span data-stu-id="8bee7-113">See the entry [In-Proc SxS and Migration Quick Start](https://go.microsoft.com/fwlink/?LinkId=200329) in the CLR team blog.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="131b0-114">Daha sonraki kullanımlar için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="131b0-114">Reserved for future use.</span></span>  
+ <span data-ttu-id="8bee7-114">Daha sonraki kullanımlar için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="8bee7-114">Reserved for future use.</span></span>  
   
  `phModDll`  
- <span data-ttu-id="131b0-115">[out] Modül tanıtıcısını işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="131b0-115">[out] A pointer to the handle of the module.</span></span>  
+ <span data-ttu-id="8bee7-115">[out] Modül tanıtıcısını işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="8bee7-115">[out] A pointer to the handle of the module.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="131b0-116">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="131b0-116">Return Value</span></span>  
- <span data-ttu-id="131b0-117">Bu yöntem standart Bileşen Nesne Modeli (COM) hata kodları, ek olarak aşağıdaki değerleri Wınerror içinde tanımlanan döndürür.</span><span class="sxs-lookup"><span data-stu-id="131b0-117">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8bee7-116">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="8bee7-116">Return Value</span></span>  
+ <span data-ttu-id="8bee7-117">Bu yöntem standart Bileşen Nesne Modeli (COM) hata kodları, ek olarak aşağıdaki değerleri Wınerror içinde tanımlanan döndürür.</span><span class="sxs-lookup"><span data-stu-id="8bee7-117">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="131b0-118">Dönüş kodu</span><span class="sxs-lookup"><span data-stu-id="131b0-118">Return code</span></span>|<span data-ttu-id="131b0-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="131b0-119">Description</span></span>|  
+|<span data-ttu-id="8bee7-118">Dönüş kodu</span><span class="sxs-lookup"><span data-stu-id="8bee7-118">Return code</span></span>|<span data-ttu-id="8bee7-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8bee7-119">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="131b0-120">S_OK</span><span class="sxs-lookup"><span data-stu-id="131b0-120">S_OK</span></span>|<span data-ttu-id="131b0-121">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="131b0-121">The method completed successfully.</span></span>|  
-|<span data-ttu-id="131b0-122">CLR_E_SHIM_RUNTIMELOAD</span><span class="sxs-lookup"><span data-stu-id="131b0-122">CLR_E_SHIM_RUNTIMELOAD</span></span>|<span data-ttu-id="131b0-123">Yükleme `szDllName` ortak dil çalışma zamanı (CLR) ve CLR'nin gereken sürümü yüklenemiyor yüklenmesini gerektirir.</span><span class="sxs-lookup"><span data-stu-id="131b0-123">Loading `szDllName` requires loading the common language runtime (CLR), and the necessary version of the CLR cannot be loaded.</span></span>|  
+|<span data-ttu-id="8bee7-120">S_OK</span><span class="sxs-lookup"><span data-stu-id="8bee7-120">S_OK</span></span>|<span data-ttu-id="8bee7-121">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="8bee7-121">The method completed successfully.</span></span>|  
+|<span data-ttu-id="8bee7-122">CLR_E_SHIM_RUNTIMELOAD</span><span class="sxs-lookup"><span data-stu-id="8bee7-122">CLR_E_SHIM_RUNTIMELOAD</span></span>|<span data-ttu-id="8bee7-123">Yükleme `szDllName` ortak dil çalışma zamanı (CLR) ve CLR'nin gereken sürümü yüklenemiyor yüklenmesini gerektirir.</span><span class="sxs-lookup"><span data-stu-id="8bee7-123">Loading `szDllName` requires loading the common language runtime (CLR), and the necessary version of the CLR cannot be loaded.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="131b0-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="131b0-124">Remarks</span></span>  
- <span data-ttu-id="131b0-125">Bu işlev, .NET Framework yeniden dağıtılabilir paketine dahil edilen DLL'lerini yüklemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="131b0-125">This function is used to load DLLs that are included in the .NET Framework redistributable package.</span></span> <span data-ttu-id="131b0-126">Kullanıcı tarafından oluşturulan DLL'leri yüklenmez.</span><span class="sxs-lookup"><span data-stu-id="131b0-126">It does not load user-generated DLLs.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8bee7-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8bee7-124">Remarks</span></span>  
+ <span data-ttu-id="8bee7-125">Bu işlev, .NET Framework yeniden dağıtılabilir paketine dahil edilen DLL'lerini yüklemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="8bee7-125">This function is used to load DLLs that are included in the .NET Framework redistributable package.</span></span> <span data-ttu-id="8bee7-126">Kullanıcı tarafından oluşturulan DLL'leri yüklenmez.</span><span class="sxs-lookup"><span data-stu-id="8bee7-126">It does not load user-generated DLLs.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="131b0-127">.NET Framework sürüm 2.0 ile başlayarak, Fusion.dll yüklenirken yüklenecek CLR neden olur.</span><span class="sxs-lookup"><span data-stu-id="131b0-127">Beginning with the .NET Framework version 2.0, loading Fusion.dll causes the CLR to be loaded.</span></span> <span data-ttu-id="131b0-128">Fusion.dll işlevler çalışma zamanı tarafından sağlanan uygulamaları sarmalayıcıları sunulmuştur olmasıdır.</span><span class="sxs-lookup"><span data-stu-id="131b0-128">This is because the functions in Fusion.dll are now wrappers whose implementations are provided by the runtime.</span></span>  
+>  <span data-ttu-id="8bee7-127">.NET Framework sürüm 2.0 ile başlayarak, Fusion.dll yüklenirken yüklenecek CLR neden olur.</span><span class="sxs-lookup"><span data-stu-id="8bee7-127">Beginning with the .NET Framework version 2.0, loading Fusion.dll causes the CLR to be loaded.</span></span> <span data-ttu-id="8bee7-128">Fusion.dll işlevler çalışma zamanı tarafından sağlanan uygulamaları sarmalayıcıları sunulmuştur olmasıdır.</span><span class="sxs-lookup"><span data-stu-id="8bee7-128">This is because the functions in Fusion.dll are now wrappers whose implementations are provided by the runtime.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="131b0-129">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="131b0-129">Requirements</span></span>  
- <span data-ttu-id="131b0-130">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="131b0-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8bee7-129">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8bee7-129">Requirements</span></span>  
+ <span data-ttu-id="8bee7-130">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8bee7-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="131b0-131">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="131b0-131">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8bee7-131">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8bee7-131">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="131b0-132">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="131b0-132">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8bee7-132">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8bee7-132">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="131b0-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="131b0-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8bee7-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8bee7-133">See also</span></span>
 
-- [<span data-ttu-id="131b0-134">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="131b0-134">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="8bee7-134">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="8bee7-134">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

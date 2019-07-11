@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55934ef08b10764bb705d7c166621ec7cfcadd0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 831f4665967f2cd07a7ebb4de750fbe456a82261
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992686"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781680"
 ---
-# <a name="coropenflags-enumeration"></a><span data-ttu-id="97722-102">CorOpenFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="97722-102">CorOpenFlags Enumeration</span></span>
-<span data-ttu-id="97722-103">Bildirim dosyaları açma bağlı meta veri davranışını denetleyen bayrak değerlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="97722-103">Contains flag values that control metadata behavior upon opening manifest files.</span></span>  
+# <a name="coropenflags-enumeration"></a><span data-ttu-id="4e0bd-102">CorOpenFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="4e0bd-102">CorOpenFlags Enumeration</span></span>
+<span data-ttu-id="4e0bd-103">Bildirim dosyaları açma bağlı meta veri davranışını denetleyen bayrak değerlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-103">Contains flag values that control metadata behavior upon opening manifest files.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="97722-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="97722-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4e0bd-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4e0bd-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorOpenFlags  
 {  
     ofRead              =   0x00000000,  
@@ -48,31 +48,31 @@ typedef enum CorOpenFlags
 } CorOpenFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="97722-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="97722-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="4e0bd-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="4e0bd-105">Members</span></span>  
   
-|<span data-ttu-id="97722-106">Üye</span><span class="sxs-lookup"><span data-stu-id="97722-106">Member</span></span>|<span data-ttu-id="97722-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="97722-107">Description</span></span>|  
+|<span data-ttu-id="4e0bd-106">Üye</span><span class="sxs-lookup"><span data-stu-id="4e0bd-106">Member</span></span>|<span data-ttu-id="4e0bd-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4e0bd-107">Description</span></span>|  
 |------------|-----------------|  
-|`ofRead`|<span data-ttu-id="97722-108">Yalnızca okumak için dosyanın açılması gerektiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="97722-108">Indicates that the file should be opened for reading only.</span></span>|  
-|`ofWrite`|<span data-ttu-id="97722-109">Dosya yazma için açılması gerektiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="97722-109">Indicates that the file should be opened for writing.</span></span><br /><br /> <span data-ttu-id="97722-110">Kullanıyorsanız `ofWrite` ne zaman bayrağı da geçmesi bir .winmd dosyası açılırken, `ofNoTransform` bayrağı.</span><span class="sxs-lookup"><span data-stu-id="97722-110">If you are using the `ofWrite` flag when opening a .winmd file, you should also pass the `ofNoTransform` flag.</span></span>|  
-|`ofReadWriteMask`|<span data-ttu-id="97722-111">Okuma ve yazma için bir maske.</span><span class="sxs-lookup"><span data-stu-id="97722-111">A mask for reading and writing.</span></span>|  
-|`ofCopyMemory`|<span data-ttu-id="97722-112">Dosya belleğe okunmalıdır gösterir.</span><span class="sxs-lookup"><span data-stu-id="97722-112">Indicates that the file should be read into memory.</span></span> <span data-ttu-id="97722-113">Meta verileri kendi kopyalama korumanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="97722-113">Metadata should maintain its own copy.</span></span>|  
-|`ofCacheImage`|<span data-ttu-id="97722-114">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="97722-114">Obsolete.</span></span> <span data-ttu-id="97722-115">Bu bayrak göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="97722-115">This flag is ignored.</span></span>|  
-|`ofManifestMetadata`|<span data-ttu-id="97722-116">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="97722-116">Obsolete.</span></span> <span data-ttu-id="97722-117">Bu bayrak göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="97722-117">This flag is ignored.</span></span>|  
-|`ofReadOnly`|<span data-ttu-id="97722-118">Okuma ve bu dosyanın açılması gerektiğini belirten bir çağrı `QueryInterface` için bir [Imetadataemit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) yapılamaz.</span><span class="sxs-lookup"><span data-stu-id="97722-118">Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.</span></span>|  
-|`ofTakeOwnership`|<span data-ttu-id="97722-119">Bellek yapılan bir çağrı kullanılarak ayrıldı gösterir [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) ve meta verileri tarafından serbest bırakılacak.</span><span class="sxs-lookup"><span data-stu-id="97722-119">Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.</span></span>|  
-|`ofNoTypeLib`|<span data-ttu-id="97722-120">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="97722-120">Obsolete.</span></span> <span data-ttu-id="97722-121">Bu bayrak göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="97722-121">This flag is ignored.</span></span>|  
-|`ofNoTransform`|<span data-ttu-id="97722-122">Otomatik dönüştürmeler .winmd dosyaları devre dışı olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="97722-122">Indicates that automatic transforms of .winmd files should be disabled.</span></span> <span data-ttu-id="97722-123">Diğer bir deyişle, bir .NET Framework türü için bir Windows çalışma zamanı tür projeksiyonu devre dışı bırakılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="97722-123">In other words, the projection of a Windows Runtime type to a .NET Framework type should be disabled.</span></span> <span data-ttu-id="97722-124">Daha fazla bilgi için [Windows çalışma zamanı ve CLR - altındaki Seçenekler .NET ve Windows çalışma zamanı ile](https://msdn.microsoft.com/magazine/jj651569.aspx).</span><span class="sxs-lookup"><span data-stu-id="97722-124">For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://msdn.microsoft.com/magazine/jj651569.aspx).</span></span>|  
-|`ofReserved1`|<span data-ttu-id="97722-125">İç kullanım için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="97722-125">Reserved for internal use.</span></span>|  
-|`ofReserved2`|<span data-ttu-id="97722-126">İç kullanım için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="97722-126">Reserved for internal use.</span></span>|  
-|`ofReserved`|<span data-ttu-id="97722-127">İç kullanım için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="97722-127">Reserved for internal use.</span></span>|  
+|`ofRead`|<span data-ttu-id="4e0bd-108">Yalnızca okumak için dosyanın açılması gerektiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-108">Indicates that the file should be opened for reading only.</span></span>|  
+|`ofWrite`|<span data-ttu-id="4e0bd-109">Dosya yazma için açılması gerektiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-109">Indicates that the file should be opened for writing.</span></span><br /><br /> <span data-ttu-id="4e0bd-110">Kullanıyorsanız `ofWrite` ne zaman bayrağı da geçmesi bir .winmd dosyası açılırken, `ofNoTransform` bayrağı.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-110">If you are using the `ofWrite` flag when opening a .winmd file, you should also pass the `ofNoTransform` flag.</span></span>|  
+|`ofReadWriteMask`|<span data-ttu-id="4e0bd-111">Okuma ve yazma için bir maske.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-111">A mask for reading and writing.</span></span>|  
+|`ofCopyMemory`|<span data-ttu-id="4e0bd-112">Dosya belleğe okunmalıdır gösterir.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-112">Indicates that the file should be read into memory.</span></span> <span data-ttu-id="4e0bd-113">Meta verileri kendi kopyalama korumanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-113">Metadata should maintain its own copy.</span></span>|  
+|`ofCacheImage`|<span data-ttu-id="4e0bd-114">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-114">Obsolete.</span></span> <span data-ttu-id="4e0bd-115">Bu bayrak göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-115">This flag is ignored.</span></span>|  
+|`ofManifestMetadata`|<span data-ttu-id="4e0bd-116">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-116">Obsolete.</span></span> <span data-ttu-id="4e0bd-117">Bu bayrak göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-117">This flag is ignored.</span></span>|  
+|`ofReadOnly`|<span data-ttu-id="4e0bd-118">Okuma ve bu dosyanın açılması gerektiğini belirten bir çağrı `QueryInterface` için bir [Imetadataemit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) yapılamaz.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-118">Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.</span></span>|  
+|`ofTakeOwnership`|<span data-ttu-id="4e0bd-119">Bellek yapılan bir çağrı kullanılarak ayrıldı gösterir [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) ve meta verileri tarafından serbest bırakılacak.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-119">Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.</span></span>|  
+|`ofNoTypeLib`|<span data-ttu-id="4e0bd-120">Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-120">Obsolete.</span></span> <span data-ttu-id="4e0bd-121">Bu bayrak göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-121">This flag is ignored.</span></span>|  
+|`ofNoTransform`|<span data-ttu-id="4e0bd-122">Otomatik dönüştürmeler .winmd dosyaları devre dışı olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-122">Indicates that automatic transforms of .winmd files should be disabled.</span></span> <span data-ttu-id="4e0bd-123">Diğer bir deyişle, bir .NET Framework türü için bir Windows çalışma zamanı tür projeksiyonu devre dışı bırakılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-123">In other words, the projection of a Windows Runtime type to a .NET Framework type should be disabled.</span></span> <span data-ttu-id="4e0bd-124">Daha fazla bilgi için [Windows çalışma zamanı ve CLR - altındaki Seçenekler .NET ve Windows çalışma zamanı ile](https://msdn.microsoft.com/magazine/jj651569.aspx).</span><span class="sxs-lookup"><span data-stu-id="4e0bd-124">For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://msdn.microsoft.com/magazine/jj651569.aspx).</span></span>|  
+|`ofReserved1`|<span data-ttu-id="4e0bd-125">İç kullanım için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-125">Reserved for internal use.</span></span>|  
+|`ofReserved2`|<span data-ttu-id="4e0bd-126">İç kullanım için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-126">Reserved for internal use.</span></span>|  
+|`ofReserved`|<span data-ttu-id="4e0bd-127">İç kullanım için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-127">Reserved for internal use.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="97722-128">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="97722-128">Requirements</span></span>  
- <span data-ttu-id="97722-129">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="97722-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4e0bd-128">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4e0bd-128">Requirements</span></span>  
+ <span data-ttu-id="4e0bd-129">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4e0bd-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="97722-130">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="97722-130">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="4e0bd-130">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="4e0bd-130">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="97722-131">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97722-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4e0bd-131">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4e0bd-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97722-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="97722-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4e0bd-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4e0bd-132">See also</span></span>
 
-- [<span data-ttu-id="97722-133">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="97722-133">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="4e0bd-133">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="4e0bd-133">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

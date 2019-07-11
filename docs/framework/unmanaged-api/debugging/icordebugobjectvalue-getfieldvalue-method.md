@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8778edf9ac6e32d5dab3a53a6d9cc643a8df13b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fc65f5b55082970a0cd59a6850aaaa6779d0821
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994571"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766413"
 ---
-# <a name="icordebugobjectvaluegetfieldvalue-method"></a><span data-ttu-id="246c3-102">ICorDebugObjectValue::GetFieldValue Yöntemi</span><span class="sxs-lookup"><span data-stu-id="246c3-102">ICorDebugObjectValue::GetFieldValue Method</span></span>
-<span data-ttu-id="246c3-103">Bu nesne değeri için belirtilen sınıf belirtilen alanının değerini alır.</span><span class="sxs-lookup"><span data-stu-id="246c3-103">Gets the value of the specified field of the specified class for this object value.</span></span>  
+# <a name="icordebugobjectvaluegetfieldvalue-method"></a><span data-ttu-id="01f74-102">ICorDebugObjectValue::GetFieldValue Yöntemi</span><span class="sxs-lookup"><span data-stu-id="01f74-102">ICorDebugObjectValue::GetFieldValue Method</span></span>
+<span data-ttu-id="01f74-103">Bu nesne değeri için belirtilen sınıf belirtilen alanının değerini alır.</span><span class="sxs-lookup"><span data-stu-id="01f74-103">Gets the value of the specified field of the specified class for this object value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="246c3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="246c3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01f74-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="01f74-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetFieldValue (  
     [in]  ICorDebugClass     *pClass,  
     [in]  mdFieldDef         fieldDef,  
@@ -37,28 +37,28 @@ HRESULT GetFieldValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="246c3-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="246c3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="01f74-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="01f74-105">Parameters</span></span>  
  `pClass`  
- <span data-ttu-id="246c3-106">[in] Alan değeri alınacağı bir sınıfı temsil eden bir "ICorDebugClass" nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="246c3-106">[in] A pointer to an "ICorDebugClass" object that represents the class for which to get the field value.</span></span>  
+ <span data-ttu-id="01f74-106">[in] Alan değeri alınacağı bir sınıfı temsil eden bir "ICorDebugClass" nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="01f74-106">[in] A pointer to an "ICorDebugClass" object that represents the class for which to get the field value.</span></span>  
   
  `fieldDef`  
- <span data-ttu-id="246c3-107">[in] Bir `mdFieldDef` başvuran alanı tanımlayan meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="246c3-107">[in] An `mdFieldDef` token that references the metadata describing the field.</span></span>  
+ <span data-ttu-id="01f74-107">[in] Bir `mdFieldDef` başvuran alanı tanımlayan meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="01f74-107">[in] An `mdFieldDef` token that references the metadata describing the field.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="246c3-108">[out] Belirtilen alanın değerini temsil eden bir "ICorDebugValue" nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="246c3-108">[out] A pointer to an "ICorDebugValue" object that represents the value of the specified field.</span></span>  
+ <span data-ttu-id="01f74-108">[out] Belirtilen alanın değerini temsil eden bir "ICorDebugValue" nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="01f74-108">[out] A pointer to an "ICorDebugValue" object that represents the value of the specified field.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="246c3-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="246c3-109">Remarks</span></span>  
- <span data-ttu-id="246c3-110">Belirtilen sınıfın `pClass` parametresi, nesne değerinin sınıfının hiyerarşisinde olmalıdır ve söz konusu sınıfın bir alan alan olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="246c3-110">The class, specified in the `pClass` parameter, must be in the hierarchy of the object value's class, and the field must be a field of that class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="01f74-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="01f74-109">Remarks</span></span>  
+ <span data-ttu-id="01f74-110">Belirtilen sınıfın `pClass` parametresi, nesne değerinin sınıfının hiyerarşisinde olmalıdır ve söz konusu sınıfın bir alan alan olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="01f74-110">The class, specified in the `pClass` parameter, must be in the hierarchy of the object value's class, and the field must be a field of that class.</span></span>  
   
- <span data-ttu-id="246c3-111">`GetFieldValue` Yöntemi yine de başarılı olur genel nesneleri ve Genel sınıflar için.</span><span class="sxs-lookup"><span data-stu-id="246c3-111">The `GetFieldValue` method will still succeed for generic objects and generic classes.</span></span> <span data-ttu-id="246c3-112">Örneğin, varsa MyDictionary\<V > sözlükten devralan\<dize, V >, ve nesne değeri MyDictionary türünde\<Int32 >, geçen `ICorDebugClass` sözlük nesnesi\<K, V > olur sözlüğün bir alan başarıyla alma\<string, Int32 >.</span><span class="sxs-lookup"><span data-stu-id="246c3-112">For example, if MyDictionary\<V> inherits from Dictionary\<string,V>, and the object value is of type MyDictionary\<int32>, passing the `ICorDebugClass` object for Dictionary\<K,V> will successfully get a field of Dictionary\<string,int32>.</span></span>  
+ <span data-ttu-id="01f74-111">`GetFieldValue` Yöntemi yine de başarılı olur genel nesneleri ve Genel sınıflar için.</span><span class="sxs-lookup"><span data-stu-id="01f74-111">The `GetFieldValue` method will still succeed for generic objects and generic classes.</span></span> <span data-ttu-id="01f74-112">Örneğin, varsa MyDictionary\<V > sözlükten devralan\<dize, V >, ve nesne değeri MyDictionary türünde\<Int32 >, geçen `ICorDebugClass` sözlük nesnesi\<K, V > olur sözlüğün bir alan başarıyla alma\<string, Int32 >.</span><span class="sxs-lookup"><span data-stu-id="01f74-112">For example, if MyDictionary\<V> inherits from Dictionary\<string,V>, and the object value is of type MyDictionary\<int32>, passing the `ICorDebugClass` object for Dictionary\<K,V> will successfully get a field of Dictionary\<string,int32>.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="246c3-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="246c3-113">Requirements</span></span>  
- <span data-ttu-id="246c3-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="246c3-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01f74-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="01f74-113">Requirements</span></span>  
+ <span data-ttu-id="01f74-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01f74-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="246c3-115">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="246c3-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="01f74-115">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="01f74-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="246c3-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="246c3-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="01f74-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01f74-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="246c3-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="246c3-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="01f74-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01f74-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="246c3-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="246c3-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="01f74-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="01f74-118">See also</span></span>

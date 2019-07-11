@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d66d24da05bc3b8f0c3d0a828456d7c61613d219
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afa2d35a193a11360b52bcbdc1d9e5dae16d1c90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049888"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782125"
 ---
-# <a name="imetadataimportenummodulerefs-method"></a><span data-ttu-id="5d94c-102">IMetaDataImport::EnumModuleRefs Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5d94c-102">IMetaDataImport::EnumModuleRefs Method</span></span>
-<span data-ttu-id="5d94c-103">İçeri aktarılan modülleri temsil eden ModuleRef belirteçleri numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="5d94c-103">Enumerates ModuleRef tokens that represent imported modules.</span></span>  
+# <a name="imetadataimportenummodulerefs-method"></a><span data-ttu-id="4bd52-102">IMetaDataImport::EnumModuleRefs Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4bd52-102">IMetaDataImport::EnumModuleRefs Method</span></span>
+<span data-ttu-id="4bd52-103">İçeri aktarılan modülleri temsil eden ModuleRef belirteçleri numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="4bd52-103">Enumerates ModuleRef tokens that represent imported modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5d94c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5d94c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4bd52-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4bd52-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnumModuleRefs (  
    [in, out] HCORENUM     *phEnum,  
    [out]     mdModuleRef  rModuleRefs[],  
@@ -38,36 +38,36 @@ HRESULT EnumModuleRefs (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5d94c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5d94c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4bd52-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4bd52-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="5d94c-106">[out içinde] Numaralandırıcı bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5d94c-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="5d94c-107">Bu, bu yöntemin ilk çağrı için NULL olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="5d94c-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="4bd52-106">[out içinde] Numaralandırıcı bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="4bd52-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="4bd52-107">Bu, bu yöntemin ilk çağrı için NULL olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="4bd52-107">This must be NULL for the first call of this method.</span></span>  
   
  `rModuleRefs`  
- <span data-ttu-id="5d94c-108">[out] Dizi ModuleRef simgeleri depolamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="5d94c-108">[out] The array used to store the ModuleRef tokens.</span></span>  
+ <span data-ttu-id="4bd52-108">[out] Dizi ModuleRef simgeleri depolamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="4bd52-108">[out] The array used to store the ModuleRef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="5d94c-109">[in] En büyük boyutunu `rModuleRefs` dizisi.</span><span class="sxs-lookup"><span data-stu-id="5d94c-109">[in] The maximum size of the `rModuleRefs` array.</span></span>  
+ <span data-ttu-id="4bd52-109">[in] En büyük boyutunu `rModuleRefs` dizisi.</span><span class="sxs-lookup"><span data-stu-id="4bd52-109">[in] The maximum size of the `rModuleRefs` array.</span></span>  
   
  `pcModuleRefs`  
- <span data-ttu-id="5d94c-110">[out] Döndürülen ModuleRef belirteçleri sayısı `rModuleRefs`.</span><span class="sxs-lookup"><span data-stu-id="5d94c-110">[out] The number of ModuleRef tokens returned in `rModuleRefs`.</span></span>  
+ <span data-ttu-id="4bd52-110">[out] Döndürülen ModuleRef belirteçleri sayısı `rModuleRefs`.</span><span class="sxs-lookup"><span data-stu-id="4bd52-110">[out] The number of ModuleRef tokens returned in `rModuleRefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5d94c-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="5d94c-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4bd52-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="4bd52-111">Return Value</span></span>  
   
-|<span data-ttu-id="5d94c-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5d94c-112">HRESULT</span></span>|<span data-ttu-id="5d94c-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5d94c-113">Description</span></span>|  
+|<span data-ttu-id="4bd52-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4bd52-112">HRESULT</span></span>|<span data-ttu-id="4bd52-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4bd52-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="5d94c-114">`EnumModuleRefs` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="5d94c-114">`EnumModuleRefs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="5d94c-115">Numaralandırılacak hiçbir belirteçleri vardır.</span><span class="sxs-lookup"><span data-stu-id="5d94c-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="5d94c-116">Bu durumda, `pcModuleRefs` sıfırdır.</span><span class="sxs-lookup"><span data-stu-id="5d94c-116">In that case, `pcModuleRefs` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="4bd52-114">`EnumModuleRefs` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="4bd52-114">`EnumModuleRefs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="4bd52-115">Numaralandırılacak hiçbir belirteçleri vardır.</span><span class="sxs-lookup"><span data-stu-id="4bd52-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="4bd52-116">Bu durumda, `pcModuleRefs` sıfırdır.</span><span class="sxs-lookup"><span data-stu-id="4bd52-116">In that case, `pcModuleRefs` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5d94c-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5d94c-117">Requirements</span></span>  
- <span data-ttu-id="5d94c-118">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5d94c-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4bd52-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4bd52-117">Requirements</span></span>  
+ <span data-ttu-id="4bd52-118">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4bd52-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5d94c-119">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="5d94c-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4bd52-119">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="4bd52-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5d94c-120">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="5d94c-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="4bd52-120">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="4bd52-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5d94c-121">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d94c-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4bd52-121">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4bd52-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5d94c-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5d94c-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4bd52-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4bd52-122">See also</span></span>
 
-- [<span data-ttu-id="5d94c-123">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5d94c-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="5d94c-124">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5d94c-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="4bd52-123">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4bd52-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="4bd52-124">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4bd52-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

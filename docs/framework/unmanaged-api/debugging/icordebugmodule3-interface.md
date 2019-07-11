@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a340086be042c790ae7bf750759ff80f7c9eaf23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37041764ad37221ea80cefa12adfb214287d8248
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942447"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764008"
 ---
-# <a name="icordebugmodule3-interface"></a><span data-ttu-id="aada3-102">ICorDebugModule3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="aada3-102">ICorDebugModule3 Interface</span></span>
-<span data-ttu-id="aada3-103">Dinamik modül için simge okuyucu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="aada3-103">Creates a symbol reader for a dynamic module.</span></span>  
+# <a name="icordebugmodule3-interface"></a><span data-ttu-id="e258c-102">ICorDebugModule3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e258c-102">ICorDebugModule3 Interface</span></span>
+<span data-ttu-id="e258c-103">Dinamik modül için simge okuyucu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="e258c-103">Creates a symbol reader for a dynamic module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aada3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="aada3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e258c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e258c-104">Syntax</span></span>  
   
-```  
+```cpp  
 interface ICorDebugModule3 : IUnknown  
 {  
     HRESULT CreateReaderForInMemorySymbols  
@@ -39,30 +39,30 @@ interface ICorDebugModule3 : IUnknown
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="aada3-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="aada3-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="e258c-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="e258c-105">Methods</span></span>  
   
-|<span data-ttu-id="aada3-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="aada3-106">Method</span></span>|<span data-ttu-id="aada3-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="aada3-107">Description</span></span>|  
+|<span data-ttu-id="e258c-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="e258c-106">Method</span></span>|<span data-ttu-id="e258c-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e258c-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="aada3-108">ICorDebugModule3::CreateReaderForInMemorySymbols Yöntemi</span><span class="sxs-lookup"><span data-stu-id="aada3-108">ICorDebugModule3::CreateReaderForInMemorySymbols Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|<span data-ttu-id="aada3-109">Simge okuyucu oluşturur (genellikle [Isymunmanagedreader arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) dinamik modül için.</span><span class="sxs-lookup"><span data-stu-id="aada3-109">Creates a symbol reader (typically [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) for a dynamic module.</span></span>|  
+|[<span data-ttu-id="e258c-108">ICorDebugModule3::CreateReaderForInMemorySymbols Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e258c-108">ICorDebugModule3::CreateReaderForInMemorySymbols Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|<span data-ttu-id="e258c-109">Simge okuyucu oluşturur (genellikle [Isymunmanagedreader arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) dinamik modül için.</span><span class="sxs-lookup"><span data-stu-id="e258c-109">Creates a symbol reader (typically [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) for a dynamic module.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="aada3-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="aada3-110">Remarks</span></span>  
- <span data-ttu-id="aada3-111">Bu arabirim "ICorDebugModule" ve "ICorDebugModule2" arabirimleri mantıksal olarak genişletir.</span><span class="sxs-lookup"><span data-stu-id="aada3-111">This interface logically extends the "ICorDebugModule" and "ICorDebugModule2" interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e258c-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e258c-110">Remarks</span></span>  
+ <span data-ttu-id="e258c-111">Bu arabirim "ICorDebugModule" ve "ICorDebugModule2" arabirimleri mantıksal olarak genişletir.</span><span class="sxs-lookup"><span data-stu-id="e258c-111">This interface logically extends the "ICorDebugModule" and "ICorDebugModule2" interfaces.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="aada3-112">Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.</span><span class="sxs-lookup"><span data-stu-id="aada3-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="e258c-112">Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.</span><span class="sxs-lookup"><span data-stu-id="e258c-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aada3-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="aada3-113">Requirements</span></span>  
- <span data-ttu-id="aada3-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aada3-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e258c-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e258c-113">Requirements</span></span>  
+ <span data-ttu-id="e258c-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e258c-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aada3-115">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="aada3-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e258c-115">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e258c-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="aada3-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aada3-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e258c-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e258c-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="aada3-117">**.NET framework sürümleri:** 4.5, 4, 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="aada3-117">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>
+ <span data-ttu-id="e258c-117">**.NET framework sürümleri:** 4.5, 4, 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="e258c-117">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="aada3-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aada3-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e258c-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e258c-118">See also</span></span>
 
-- [<span data-ttu-id="aada3-119">ICorDebugRemoteTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="aada3-119">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [<span data-ttu-id="aada3-120">ICorDebug Arabirimi</span><span class="sxs-lookup"><span data-stu-id="aada3-120">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="e258c-119">ICorDebugRemoteTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e258c-119">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [<span data-ttu-id="e258c-120">ICorDebug Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e258c-120">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 
-- [<span data-ttu-id="aada3-121">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="aada3-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="e258c-121">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="e258c-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

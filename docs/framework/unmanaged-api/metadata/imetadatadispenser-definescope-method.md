@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76a439effad9cb3f6dcdd232590cf2196ee7ab99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1763f9341af2d90cf465cb554bf7f282a4d92058
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044403"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777803"
 ---
-# <a name="imetadatadispenserdefinescope-method"></a><span data-ttu-id="f69b7-102">IMetaDataDispenser::DefineScope Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f69b7-102">IMetaDataDispenser::DefineScope Method</span></span>
-<span data-ttu-id="f69b7-103">Yeni meta verileri oluşturma bellekte yeni bir alan oluşturur.</span><span class="sxs-lookup"><span data-stu-id="f69b7-103">Creates a new area in memory in which you can create new metadata.</span></span>  
+# <a name="imetadatadispenserdefinescope-method"></a><span data-ttu-id="e4fa9-102">IMetaDataDispenser::DefineScope Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e4fa9-102">IMetaDataDispenser::DefineScope Method</span></span>
+<span data-ttu-id="e4fa9-103">Yeni meta verileri oluşturma bellekte yeni bir alan oluşturur.</span><span class="sxs-lookup"><span data-stu-id="e4fa9-103">Creates a new area in memory in which you can create new metadata.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f69b7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f69b7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e4fa9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e4fa9-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT DefineScope (  
     [in]  REFCLSID    rclsid,  
     [in]  DWORD       dwCreateFlags,  
@@ -38,39 +38,39 @@ HRESULT DefineScope (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f69b7-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f69b7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e4fa9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e4fa9-105">Parameters</span></span>  
  `rclsid`  
- <span data-ttu-id="f69b7-106">[in] Oluşturulacak CLSID meta veri yapıları sürümü.</span><span class="sxs-lookup"><span data-stu-id="f69b7-106">[in] The CLSID of the version of metadata structures to be created.</span></span> <span data-ttu-id="f69b7-107">Bu değer, .NET Framework sürüm 2.0 için CLSID_CorMetaDataRuntime olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="f69b7-107">This value must be CLSID_CorMetaDataRuntime for the .NET Framework version 2.0.</span></span>  
+ <span data-ttu-id="e4fa9-106">[in] Oluşturulacak CLSID meta veri yapıları sürümü.</span><span class="sxs-lookup"><span data-stu-id="e4fa9-106">[in] The CLSID of the version of metadata structures to be created.</span></span> <span data-ttu-id="e4fa9-107">Bu değer, .NET Framework sürüm 2.0 için CLSID_CorMetaDataRuntime olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="e4fa9-107">This value must be CLSID_CorMetaDataRuntime for the .NET Framework version 2.0.</span></span>  
   
  `dwCreateFlags`  
- <span data-ttu-id="f69b7-108">[in] Seçeneklerini belirten bayraklar.</span><span class="sxs-lookup"><span data-stu-id="f69b7-108">[in] Flags that specify options.</span></span> <span data-ttu-id="f69b7-109">Bu değer, .NET Framework 2.0 için sıfır olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="f69b7-109">This value must be zero for the .NET Framework 2.0.</span></span>  
+ <span data-ttu-id="e4fa9-108">[in] Seçeneklerini belirten bayraklar.</span><span class="sxs-lookup"><span data-stu-id="e4fa9-108">[in] Flags that specify options.</span></span> <span data-ttu-id="e4fa9-109">Bu değer, .NET Framework 2.0 için sıfır olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="e4fa9-109">This value must be zero for the .NET Framework 2.0.</span></span>  
   
  `riid`  
- <span data-ttu-id="f69b7-110">[in] Döndürülecek istenen meta veri arayüzü Laboratuvardaki; çağıran, yeni meta verileri oluşturmak için arabirim kullanır.</span><span class="sxs-lookup"><span data-stu-id="f69b7-110">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to create the new metadata.</span></span>  
+ <span data-ttu-id="e4fa9-110">[in] Döndürülecek istenen meta veri arayüzü Laboratuvardaki; çağıran, yeni meta verileri oluşturmak için arabirim kullanır.</span><span class="sxs-lookup"><span data-stu-id="e4fa9-110">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to create the new metadata.</span></span>  
   
- <span data-ttu-id="f69b7-111">Değerini `riid` "Yayımla" arabirimlerinden birini belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="f69b7-111">The value of `riid` must specify one of the "emit" interfaces.</span></span> <span data-ttu-id="f69b7-112">IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit veya IID_IMetaDataEmit2 değerler geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="f69b7-112">Valid values are IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit, or IID_IMetaDataEmit2.</span></span>  
+ <span data-ttu-id="e4fa9-111">Değerini `riid` "Yayımla" arabirimlerinden birini belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="e4fa9-111">The value of `riid` must specify one of the "emit" interfaces.</span></span> <span data-ttu-id="e4fa9-112">IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit veya IID_IMetaDataEmit2 değerler geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="e4fa9-112">Valid values are IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit, or IID_IMetaDataEmit2.</span></span>  
   
  `ppIUnk`  
- <span data-ttu-id="f69b7-113">[out] Döndürülen arabirim işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="f69b7-113">[out] The pointer to the returned interface.</span></span>  
+ <span data-ttu-id="e4fa9-113">[out] Döndürülen arabirim işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="e4fa9-113">[out] The pointer to the returned interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f69b7-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f69b7-114">Remarks</span></span>  
- <span data-ttu-id="f69b7-115">`DefineScope` bellek içi meta veri tabloları kümesi oluşturur, meta veriler için benzersiz GUID (modülü sürüm tanımlayıcısı veya MVID) oluşturur ve yayılan derleme birimini modülü tablosunda bir giriş oluşturur.</span><span class="sxs-lookup"><span data-stu-id="f69b7-115">`DefineScope` creates a set of in-memory metadata tables, generates a unique GUID (module version identifier, or MVID) for the metadata, and creates an entry in the module table for the compilation unit being emitted.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e4fa9-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e4fa9-114">Remarks</span></span>  
+ <span data-ttu-id="e4fa9-115">`DefineScope` bellek içi meta veri tabloları kümesi oluşturur, meta veriler için benzersiz GUID (modülü sürüm tanımlayıcısı veya MVID) oluşturur ve yayılan derleme birimini modülü tablosunda bir giriş oluşturur.</span><span class="sxs-lookup"><span data-stu-id="e4fa9-115">`DefineScope` creates a set of in-memory metadata tables, generates a unique GUID (module version identifier, or MVID) for the metadata, and creates an entry in the module table for the compilation unit being emitted.</span></span>  
   
- <span data-ttu-id="f69b7-116">Kullanarak bir bütün olarak meta veri kapsama öznitelikler ekleyebilirsiniz [Imetadataemit::setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) veya [Imetadataemit::definecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) , uygun şekilde yöntem.</span><span class="sxs-lookup"><span data-stu-id="f69b7-116">You can attach attributes to the metadata scope as a whole by using the [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) or [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) method, as appropriate.</span></span>  
+ <span data-ttu-id="e4fa9-116">Kullanarak bir bütün olarak meta veri kapsama öznitelikler ekleyebilirsiniz [Imetadataemit::setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) veya [Imetadataemit::definecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) , uygun şekilde yöntem.</span><span class="sxs-lookup"><span data-stu-id="e4fa9-116">You can attach attributes to the metadata scope as a whole by using the [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) or [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) method, as appropriate.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f69b7-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f69b7-117">Requirements</span></span>  
- <span data-ttu-id="f69b7-118">**Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f69b7-118">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e4fa9-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e4fa9-117">Requirements</span></span>  
+ <span data-ttu-id="e4fa9-118">**Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e4fa9-118">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f69b7-119">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="f69b7-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e4fa9-119">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="e4fa9-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f69b7-120">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="f69b7-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e4fa9-120">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="e4fa9-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f69b7-121">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f69b7-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e4fa9-121">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e4fa9-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f69b7-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f69b7-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e4fa9-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e4fa9-122">See also</span></span>
 
-- [<span data-ttu-id="f69b7-123">IMetaDataDispenser Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f69b7-123">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [<span data-ttu-id="f69b7-124">IMetaDataDispenserEx Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f69b7-124">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="f69b7-125">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f69b7-125">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [<span data-ttu-id="f69b7-126">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f69b7-126">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="f69b7-127">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f69b7-127">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="e4fa9-123">IMetaDataDispenser Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e4fa9-123">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [<span data-ttu-id="e4fa9-124">IMetaDataDispenserEx Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e4fa9-124">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="e4fa9-125">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e4fa9-125">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="e4fa9-126">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e4fa9-126">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="e4fa9-127">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e4fa9-127">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

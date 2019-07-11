@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52190583338f1c1ee9183a98d5f4a6cd7236342d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 994e007eabf8b7fdcf5446d905c06eb4ab91bb3f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992556"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777679"
 ---
-# <a name="imetadataemitdefinecustomattribute-method"></a><span data-ttu-id="e742a-102">IMetaDataEmit::DefineCustomAttribute Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e742a-102">IMetaDataEmit::DefineCustomAttribute Method</span></span>
-<span data-ttu-id="e742a-103">Belirtilen nesneyi, eklenecek belirtilen meta veri imzası ile özel bir öznitelik için bir tanım oluşturur ve bu özel öznitelik tanımı için bir belirteç alır.</span><span class="sxs-lookup"><span data-stu-id="e742a-103">Creates a definition for a custom attribute with the specified metadata signature, to be attached to the specified object, and gets a token to that custom attribute definition.</span></span>  
+# <a name="imetadataemitdefinecustomattribute-method"></a><span data-ttu-id="81259-102">IMetaDataEmit::DefineCustomAttribute Yöntemi</span><span class="sxs-lookup"><span data-stu-id="81259-102">IMetaDataEmit::DefineCustomAttribute Method</span></span>
+<span data-ttu-id="81259-103">Belirtilen nesneyi, eklenecek belirtilen meta veri imzası ile özel bir öznitelik için bir tanım oluşturur ve bu özel öznitelik tanımı için bir belirteç alır.</span><span class="sxs-lookup"><span data-stu-id="81259-103">Creates a definition for a custom attribute with the specified metadata signature, to be attached to the specified object, and gets a token to that custom attribute definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e742a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e742a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="81259-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="81259-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT DefineCustomAttribute (   
     [in]  mdToken     tkObj,   
     [in]  mdToken     tkType,   
@@ -39,32 +39,32 @@ HRESULT DefineCustomAttribute (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e742a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e742a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="81259-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="81259-105">Parameters</span></span>  
  `tkObj`  
- <span data-ttu-id="e742a-106">[in] Sahip öğe için belirteç.</span><span class="sxs-lookup"><span data-stu-id="e742a-106">[in] The token for the owner item.</span></span>  
+ <span data-ttu-id="81259-106">[in] Sahip öğe için belirteç.</span><span class="sxs-lookup"><span data-stu-id="81259-106">[in] The token for the owner item.</span></span>  
   
  `tkType`  
- <span data-ttu-id="e742a-107">[in] Özel öznitelik tanımlayan belirteç.</span><span class="sxs-lookup"><span data-stu-id="e742a-107">[in] The token that identifies the custom attribute.</span></span>  
+ <span data-ttu-id="81259-107">[in] Özel öznitelik tanımlayan belirteç.</span><span class="sxs-lookup"><span data-stu-id="81259-107">[in] The token that identifies the custom attribute.</span></span>  
   
  `pCustomAttribute`  
- <span data-ttu-id="e742a-108">[in] Özel öznitelik için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e742a-108">[in] A pointer to the custom attribute.</span></span>  
+ <span data-ttu-id="81259-108">[in] Özel öznitelik için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="81259-108">[in] A pointer to the custom attribute.</span></span>  
   
  `cbCustomAttribute`  
- <span data-ttu-id="e742a-109">[in] Bayt sayısı `pCustomAttribute`.</span><span class="sxs-lookup"><span data-stu-id="e742a-109">[in] The count of bytes in `pCustomAttribute`.</span></span>  
+ <span data-ttu-id="81259-109">[in] Bayt sayısı `pCustomAttribute`.</span><span class="sxs-lookup"><span data-stu-id="81259-109">[in] The count of bytes in `pCustomAttribute`.</span></span>  
   
  `pcv`  
- <span data-ttu-id="e742a-110">[out] `mdCustomAttribute` Atanan simgesi.</span><span class="sxs-lookup"><span data-stu-id="e742a-110">[out] The `mdCustomAttribute` token assigned.</span></span>  
+ <span data-ttu-id="81259-110">[out] `mdCustomAttribute` Atanan simgesi.</span><span class="sxs-lookup"><span data-stu-id="81259-110">[out] The `mdCustomAttribute` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e742a-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e742a-111">Requirements</span></span>  
- <span data-ttu-id="e742a-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e742a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="81259-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="81259-111">Requirements</span></span>  
+ <span data-ttu-id="81259-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="81259-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e742a-113">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="e742a-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="81259-113">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="81259-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e742a-114">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="e742a-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="81259-114">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="81259-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e742a-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e742a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="81259-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81259-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e742a-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e742a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81259-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="81259-116">See also</span></span>
 
-- [<span data-ttu-id="e742a-117">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e742a-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="e742a-118">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e742a-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="81259-117">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="81259-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="81259-118">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="81259-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

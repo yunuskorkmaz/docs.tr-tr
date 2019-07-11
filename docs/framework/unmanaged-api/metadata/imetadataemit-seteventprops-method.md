@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abfa8a3f58d3e9f7c80762c1faf2bc51514d71b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 271ecd7e757340becccb7bf52362487a2b277299
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050044"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737186"
 ---
-# <a name="imetadataemitseteventprops-method"></a><span data-ttu-id="513f8-102">IMetaDataEmit::SetEventProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="513f8-102">IMetaDataEmit::SetEventProps Method</span></span>
-<span data-ttu-id="513f8-103">Ayarlar veya önceki bir çağrı tarafından tanımlanan bir olayın belirtilen özellik güncelleştirmelerinin [Imetadataemit::defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).</span><span class="sxs-lookup"><span data-stu-id="513f8-103">Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).</span></span>  
+# <a name="imetadataemitseteventprops-method"></a><span data-ttu-id="4c0aa-102">IMetaDataEmit::SetEventProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4c0aa-102">IMetaDataEmit::SetEventProps Method</span></span>
+<span data-ttu-id="4c0aa-103">Ayarlar veya önceki bir çağrı tarafından tanımlanan bir olayın belirtilen özellik güncelleştirmelerinin [Imetadataemit::defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).</span><span class="sxs-lookup"><span data-stu-id="4c0aa-103">Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="513f8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="513f8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4c0aa-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4c0aa-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SetEventProps (  
     [in]  mdEvent     ev,   
     [in]  DWORD       dwEventFlags,   
@@ -41,38 +41,38 @@ HRESULT SetEventProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="513f8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="513f8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4c0aa-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4c0aa-105">Parameters</span></span>  
  `ev`  
- <span data-ttu-id="513f8-106">[in] Olay belirteç.</span><span class="sxs-lookup"><span data-stu-id="513f8-106">[in] The event token.</span></span>  
+ <span data-ttu-id="4c0aa-106">[in] Olay belirteç.</span><span class="sxs-lookup"><span data-stu-id="4c0aa-106">[in] The event token.</span></span>  
   
  `dwEventFlags`  
- <span data-ttu-id="513f8-107">[in] Olay bayrakları.</span><span class="sxs-lookup"><span data-stu-id="513f8-107">[in] Event flags.</span></span> <span data-ttu-id="513f8-108">Bu, bir bit maskesi, `CorEventAttr` değerleri.</span><span class="sxs-lookup"><span data-stu-id="513f8-108">This is a bitmask of `CorEventAttr` values.</span></span>  
+ <span data-ttu-id="4c0aa-107">[in] Olay bayrakları.</span><span class="sxs-lookup"><span data-stu-id="4c0aa-107">[in] Event flags.</span></span> <span data-ttu-id="4c0aa-108">Bu, bir bit maskesi, `CorEventAttr` değerleri.</span><span class="sxs-lookup"><span data-stu-id="4c0aa-108">This is a bitmask of `CorEventAttr` values.</span></span>  
   
  `tkEventType`  
- <span data-ttu-id="513f8-109">[in] Olay sınıfı için belirteci.</span><span class="sxs-lookup"><span data-stu-id="513f8-109">[in] The token for the event class.</span></span> <span data-ttu-id="513f8-110">Bu bir `mdTypeDef` veya `mdTypeRef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="513f8-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
+ <span data-ttu-id="4c0aa-109">[in] Olay sınıfı için belirteci.</span><span class="sxs-lookup"><span data-stu-id="4c0aa-109">[in] The token for the event class.</span></span> <span data-ttu-id="4c0aa-110">Bu bir `mdTypeDef` veya `mdTypeRef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4c0aa-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
   
  `mdAddOn`  
- <span data-ttu-id="513f8-111">[in] Olay ya da null için abone olmak için kullanılan yöntem.</span><span class="sxs-lookup"><span data-stu-id="513f8-111">[in] The method used to subscribe to the event, or null.</span></span>  
+ <span data-ttu-id="4c0aa-111">[in] Olay ya da null için abone olmak için kullanılan yöntem.</span><span class="sxs-lookup"><span data-stu-id="4c0aa-111">[in] The method used to subscribe to the event, or null.</span></span>  
   
  `mdRemoveOn`  
- <span data-ttu-id="513f8-112">[in] Olay ya da null için aboneliğinizi iptal etmek için kullanılan yöntem.</span><span class="sxs-lookup"><span data-stu-id="513f8-112">[in] The method used to unsubscribe to the event, or null.</span></span>  
+ <span data-ttu-id="4c0aa-112">[in] Olay ya da null için aboneliğinizi iptal etmek için kullanılan yöntem.</span><span class="sxs-lookup"><span data-stu-id="4c0aa-112">[in] The method used to unsubscribe to the event, or null.</span></span>  
   
  `mdFire`  
- <span data-ttu-id="513f8-113">[in] (Bir türetilmiş sınıf tarafından) olay oluşturmak için kullanılan yöntem.</span><span class="sxs-lookup"><span data-stu-id="513f8-113">[in] The method used (by a derived class) to raise the event.</span></span>  
+ <span data-ttu-id="4c0aa-113">[in] (Bir türetilmiş sınıf tarafından) olay oluşturmak için kullanılan yöntem.</span><span class="sxs-lookup"><span data-stu-id="4c0aa-113">[in] The method used (by a derived class) to raise the event.</span></span>  
   
  `rmdOtherMethods[]`  
- <span data-ttu-id="513f8-114">[in] Olay ile ilişkili diğer yöntemleri için belirteçleri dizisi.</span><span class="sxs-lookup"><span data-stu-id="513f8-114">[in] An array of tokens for other methods associated with the event.</span></span> <span data-ttu-id="513f8-115">Dizinin son öğesi olmalı `mdMethodDefNil`.</span><span class="sxs-lookup"><span data-stu-id="513f8-115">The last element of the array must be `mdMethodDefNil`.</span></span>  
+ <span data-ttu-id="4c0aa-114">[in] Olay ile ilişkili diğer yöntemleri için belirteçleri dizisi.</span><span class="sxs-lookup"><span data-stu-id="4c0aa-114">[in] An array of tokens for other methods associated with the event.</span></span> <span data-ttu-id="4c0aa-115">Dizinin son öğesi olmalı `mdMethodDefNil`.</span><span class="sxs-lookup"><span data-stu-id="4c0aa-115">The last element of the array must be `mdMethodDefNil`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="513f8-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="513f8-116">Requirements</span></span>  
- <span data-ttu-id="513f8-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="513f8-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4c0aa-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4c0aa-116">Requirements</span></span>  
+ <span data-ttu-id="4c0aa-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4c0aa-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="513f8-118">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="513f8-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4c0aa-118">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="4c0aa-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="513f8-119">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="513f8-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4c0aa-119">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="4c0aa-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="513f8-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="513f8-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4c0aa-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4c0aa-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="513f8-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="513f8-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4c0aa-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4c0aa-121">See also</span></span>
 
-- [<span data-ttu-id="513f8-122">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="513f8-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="513f8-123">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="513f8-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="4c0aa-122">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4c0aa-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="4c0aa-123">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4c0aa-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

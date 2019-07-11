@@ -17,42 +17,42 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b8a91a2c1ef9b68dcfc293a870ce3e9b9499a8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1e7181f50d94fa417bf9d00c3531747cefca82c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946815"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781469"
 ---
-# <a name="imetadatatablesgetnextblob-method"></a><span data-ttu-id="1daa6-102">IMetaDataTables::GetNextBlob Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1daa6-102">IMetaDataTables::GetNextBlob Method</span></span>
-<span data-ttu-id="1daa6-103">Tablodaki sonraki ikili büyük nesne (BLOB) dizinini alır.</span><span class="sxs-lookup"><span data-stu-id="1daa6-103">Gets the index of the next binary large object (BLOB) in the table.</span></span>  
+# <a name="imetadatatablesgetnextblob-method"></a><span data-ttu-id="0c2e3-102">IMetaDataTables::GetNextBlob Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0c2e3-102">IMetaDataTables::GetNextBlob Method</span></span>
+<span data-ttu-id="0c2e3-103">Tablodaki sonraki ikili büyük nesne (BLOB) dizinini alır.</span><span class="sxs-lookup"><span data-stu-id="0c2e3-103">Gets the index of the next binary large object (BLOB) in the table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1daa6-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1daa6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0c2e3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0c2e3-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetNextBlob (  
     [in]  ULONG   ixBlob,  
     [out] ULONG   *pNext  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1daa6-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1daa6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0c2e3-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0c2e3-105">Parameters</span></span>  
  `ixBlob`  
- <span data-ttu-id="1daa6-106">[in] BLOB sütundan döndürülen dizini.</span><span class="sxs-lookup"><span data-stu-id="1daa6-106">[in] The index, as returned from a column of BLOBs.</span></span>  
+ <span data-ttu-id="0c2e3-106">[in] BLOB sütundan döndürülen dizini.</span><span class="sxs-lookup"><span data-stu-id="0c2e3-106">[in] The index, as returned from a column of BLOBs.</span></span>  
   
  `pNext`  
- <span data-ttu-id="1daa6-107">[out] Sonraki BLOB dizini için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="1daa6-107">[out] A pointer to the index of the next BLOB.</span></span>  
+ <span data-ttu-id="0c2e3-107">[out] Sonraki BLOB dizini için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0c2e3-107">[out] A pointer to the index of the next BLOB.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1daa6-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1daa6-108">Requirements</span></span>  
- <span data-ttu-id="1daa6-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1daa6-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0c2e3-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0c2e3-108">Requirements</span></span>  
+ <span data-ttu-id="0c2e3-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0c2e3-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1daa6-110">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="1daa6-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0c2e3-110">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="0c2e3-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="1daa6-111">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="1daa6-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0c2e3-111">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="0c2e3-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="1daa6-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1daa6-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0c2e3-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0c2e3-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1daa6-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1daa6-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0c2e3-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0c2e3-113">See also</span></span>
 
-- [<span data-ttu-id="1daa6-114">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1daa6-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="1daa6-115">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1daa6-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="0c2e3-114">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0c2e3-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="0c2e3-115">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0c2e3-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

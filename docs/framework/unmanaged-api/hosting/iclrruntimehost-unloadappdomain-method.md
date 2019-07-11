@@ -17,55 +17,55 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 490af9ca67b538e0093115a6b371b65d9788772f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e1a2358590b95b39b6495b74078f079c5b34876
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641371"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765681"
 ---
-# <a name="iclrruntimehostunloadappdomain-method"></a><span data-ttu-id="aa8e9-102">ICLRRuntimeHost::UnloadAppDomain Yöntemi</span><span class="sxs-lookup"><span data-stu-id="aa8e9-102">ICLRRuntimeHost::UnloadAppDomain Method</span></span>
-<span data-ttu-id="aa8e9-103">Yönetilen bellekten <xref:System.AppDomain> belirtilen sayısal tanımlayıcısına karşılık gelir.</span><span class="sxs-lookup"><span data-stu-id="aa8e9-103">Unloads the managed <xref:System.AppDomain> that corresponds to the specified numeric identifier.</span></span>  
+# <a name="iclrruntimehostunloadappdomain-method"></a><span data-ttu-id="7cbda-102">ICLRRuntimeHost::UnloadAppDomain Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7cbda-102">ICLRRuntimeHost::UnloadAppDomain Method</span></span>
+<span data-ttu-id="7cbda-103">Yönetilen bellekten <xref:System.AppDomain> belirtilen sayısal tanımlayıcısına karşılık gelir.</span><span class="sxs-lookup"><span data-stu-id="7cbda-103">Unloads the managed <xref:System.AppDomain> that corresponds to the specified numeric identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aa8e9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="aa8e9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7cbda-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7cbda-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT UnloadAppDomain(  
     [in] DWORD dwAppDomainId  
     [in] BOOL  fWaitUntilDone  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="aa8e9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="aa8e9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7cbda-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7cbda-105">Parameters</span></span>  
  `dwAppDomainId`  
- <span data-ttu-id="aa8e9-106">[in] Uygulama etki alanını kaldırmak için sayısal tanımlayıcısıdır.</span><span class="sxs-lookup"><span data-stu-id="aa8e9-106">[in] The numeric identifier of the application domain to unload.</span></span>  
+ <span data-ttu-id="7cbda-106">[in] Uygulama etki alanını kaldırmak için sayısal tanımlayıcısıdır.</span><span class="sxs-lookup"><span data-stu-id="7cbda-106">[in] The numeric identifier of the application domain to unload.</span></span>  
   
  `fWaitUntilDone`  
- <span data-ttu-id="aa8e9-107">[in] `true` belirten ortak dil çalışma zamanı (CLR), uygulama etki alanını boşaltma çalışmadan önce uygulamanın geçerli iş parçacığının yürütmesini bitirene kadar beklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="aa8e9-107">[in] `true` to indicate that the common language runtime( CLR) must wait until it has finished executing the application's current thread before attempting to unload the application domain.</span></span>  
+ <span data-ttu-id="7cbda-107">[in] `true` belirten ortak dil çalışma zamanı (CLR), uygulama etki alanını boşaltma çalışmadan önce uygulamanın geçerli iş parçacığının yürütmesini bitirene kadar beklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="7cbda-107">[in] `true` to indicate that the common language runtime( CLR) must wait until it has finished executing the application's current thread before attempting to unload the application domain.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="aa8e9-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="aa8e9-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7cbda-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="7cbda-108">Return Value</span></span>  
   
-|<span data-ttu-id="aa8e9-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="aa8e9-109">HRESULT</span></span>|<span data-ttu-id="aa8e9-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="aa8e9-110">Description</span></span>|  
+|<span data-ttu-id="7cbda-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7cbda-109">HRESULT</span></span>|<span data-ttu-id="7cbda-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7cbda-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="aa8e9-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="aa8e9-111">S_OK</span></span>|<span data-ttu-id="aa8e9-112">`UnloadAppDomain` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="aa8e9-112">`UnloadAppDomain` returned successfully.</span></span>|  
-|<span data-ttu-id="aa8e9-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="aa8e9-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="aa8e9-114">CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.</span><span class="sxs-lookup"><span data-stu-id="aa8e9-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="aa8e9-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="aa8e9-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="aa8e9-116">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="aa8e9-116">The call timed out.</span></span>|  
-|<span data-ttu-id="aa8e9-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="aa8e9-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="aa8e9-118">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="aa8e9-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="aa8e9-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="aa8e9-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="aa8e9-120">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="aa8e9-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="aa8e9-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="aa8e9-121">E_FAIL</span></span>|<span data-ttu-id="aa8e9-122">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="aa8e9-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="aa8e9-123">CLR, artık bir yöntem E_FAIL döndürürse, işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="aa8e9-123">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="aa8e9-124">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="aa8e9-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="7cbda-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="7cbda-111">S_OK</span></span>|<span data-ttu-id="7cbda-112">`UnloadAppDomain` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="7cbda-112">`UnloadAppDomain` returned successfully.</span></span>|  
+|<span data-ttu-id="7cbda-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="7cbda-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="7cbda-114">CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.</span><span class="sxs-lookup"><span data-stu-id="7cbda-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="7cbda-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="7cbda-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="7cbda-116">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="7cbda-116">The call timed out.</span></span>|  
+|<span data-ttu-id="7cbda-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="7cbda-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="7cbda-118">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="7cbda-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="7cbda-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="7cbda-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="7cbda-120">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="7cbda-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="7cbda-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="7cbda-121">E_FAIL</span></span>|<span data-ttu-id="7cbda-122">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="7cbda-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="7cbda-123">CLR, artık bir yöntem E_FAIL döndürürse, işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="7cbda-123">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="7cbda-124">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="7cbda-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="aa8e9-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="aa8e9-125">Remarks</span></span>  
- <span data-ttu-id="aa8e9-126">Sayısal tanımlayıcı, geçerli iş parçacığının yürütülmekte çağırarak uygulama etki alanının alabilirsiniz [Getcurrentappdomainıd](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span><span class="sxs-lookup"><span data-stu-id="aa8e9-126">You can get the numeric identifier of the application domain in which the current thread is executing by calling [GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span></span> <span data-ttu-id="aa8e9-127">Bu tanımlayıcı karşılık gelen <xref:System.AppDomain.Id%2A> yönetilen özellik <xref:System.AppDomain> türü.</span><span class="sxs-lookup"><span data-stu-id="aa8e9-127">This identifier corresponds to the <xref:System.AppDomain.Id%2A> property of the managed <xref:System.AppDomain> type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7cbda-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7cbda-125">Remarks</span></span>  
+ <span data-ttu-id="7cbda-126">Sayısal tanımlayıcı, geçerli iş parçacığının yürütülmekte çağırarak uygulama etki alanının alabilirsiniz [Getcurrentappdomainıd](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span><span class="sxs-lookup"><span data-stu-id="7cbda-126">You can get the numeric identifier of the application domain in which the current thread is executing by calling [GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span></span> <span data-ttu-id="7cbda-127">Bu tanımlayıcı karşılık gelen <xref:System.AppDomain.Id%2A> yönetilen özellik <xref:System.AppDomain> türü.</span><span class="sxs-lookup"><span data-stu-id="7cbda-127">This identifier corresponds to the <xref:System.AppDomain.Id%2A> property of the managed <xref:System.AppDomain> type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aa8e9-128">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="aa8e9-128">Requirements</span></span>  
- <span data-ttu-id="aa8e9-129">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aa8e9-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7cbda-128">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7cbda-128">Requirements</span></span>  
+ <span data-ttu-id="7cbda-129">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7cbda-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aa8e9-130">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="aa8e9-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="7cbda-130">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7cbda-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="aa8e9-131">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="aa8e9-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7cbda-131">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="7cbda-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="aa8e9-132">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aa8e9-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7cbda-132">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7cbda-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aa8e9-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aa8e9-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7cbda-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7cbda-133">See also</span></span>
 
-- [<span data-ttu-id="aa8e9-134">ICLRRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="aa8e9-134">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [<span data-ttu-id="7cbda-134">ICLRRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7cbda-134">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
