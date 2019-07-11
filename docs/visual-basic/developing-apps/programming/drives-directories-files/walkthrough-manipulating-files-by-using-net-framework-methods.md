@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: f3fecf521ca4a9397bacffbb084c4107af97f5b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc96baaff3b70fcb32e19e2ce08bdb0187c86c01
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013939"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783208"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>İzlenecek yol: .NET Framework yöntemleri (Visual Basic) kullanarak dosyaları düzenleme
 Bu izlenecek yol, açın ve kullanarak bir dosyayı okumak gösterilmiştir <xref:System.IO.StreamReader> sınıfı, bir dosya erişilebilir olmadığını kontrol edin, bir dize örneği ile okuma dosya içindeki arama <xref:System.IO.StreamReader> sınıfı ve kullanarak bir dosyaya yazma <xref:System.IO.StreamWriter> sınıfı.  
@@ -30,7 +30,7 @@ Bu izlenecek yol, açın ve kullanarak bir dosyayı okumak gösterilmiştir <xre
 ## <a name="creating-the-application"></a>Uygulama oluşturma  
  Visual Studio'yu başlatın ve proje kullanıcı belirtilen dosyaya yazmak için kullanabileceğiniz bir form oluşturarak başlayın.  
   
-#### <a name="to-create-the-project"></a>Proje oluşturmak için  
+### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
 1. Üzerinde **dosya** menüsünde **yeni proje**.  
   
@@ -51,7 +51,7 @@ Bu izlenecek yol, açın ve kullanarak bir dosyayı okumak gösterilmiştir <xre
 ## <a name="writing-to-the-file"></a>Dosyaya yazma  
  Uygulama yoluyla bir dosyaya yazma olanağı eklemek için <xref:System.IO.StreamWriter> sınıfı. <xref:System.IO.StreamWriter> belirli bir kodlamaya, karakter çıkışını ise tasarlanmıştır <xref:System.IO.Stream> sınıfı giriş ve çıkış baytı için tasarlanmıştır. Kullanım <xref:System.IO.StreamWriter> satır bilgi standart bir metin dosyasına yazma. Daha fazla bilgi için <xref:System.IO.StreamWriter> sınıfı <xref:System.IO.StreamWriter>.  
   
-#### <a name="to-add-writing-functionality"></a>Yazma işlevselliği eklemek için  
+### <a name="to-add-writing-functionality"></a>Yazma işlevselliği eklemek için  
   
 1. Gelen **görünümü** menüsünde seçin **kod** Kod Düzenleyicisi'ni açın.  
   
@@ -96,7 +96,7 @@ Bu izlenecek yol, açın ve kullanarak bir dosyayı okumak gösterilmiştir <xre
 |<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**|`GetEntries`<br /><br /> **Girişlerini alma**|  
 |<xref:System.Windows.Forms.ComboBox>|**Ad**<br /><br /> **Metin**<br /><br /> **Etkin**|`PickEntries`<br /><br /> **Bir giriş seçin**<br /><br /> `False`|  
   
-#### <a name="to-populate-the-combo-box"></a>Birleşik giriş kutusunu doldurmak için  
+### <a name="to-populate-the-combo-box"></a>Birleşik giriş kutusunu doldurmak için  
   
 1. `PickEntries` <xref:System.Windows.Forms.ComboBox> Üzerinde bir kullanıcının gönderdiğini her girdi, kullanıcının belirli bir tarihten itibaren bir giriş seçebilmeniz tarihleri görüntülemek için kullanılır. Oluşturma bir <xref:System.Windows.Forms.Control.Click> olay işleyicisine `GetEntries` düğmesine tıklayın ve aşağıdaki kodu ekleyin.  
   
@@ -104,7 +104,7 @@ Bu izlenecek yol, açın ve kullanarak bir dosyayı okumak gösterilmiştir <xre
   
 2. Kodunuzu test etmek için uygulamayı derleyin ve ardından F5 tuşuna basarak **Girişleri Al**. Aşağı açılan oku tıklatın <xref:System.Windows.Forms.ComboBox> giriş tarihleri görüntülemek için.  
   
-#### <a name="to-choose-and-display-individual-entries"></a>Seçin ve girişler görüntülemek için  
+### <a name="to-choose-and-display-individual-entries"></a>Seçin ve girişler görüntülemek için  
   
 1. Oluşturma bir <xref:System.Windows.Forms.Control.Click> için olay işleyicisi `Display` düğmesine tıklayın ve aşağıdaki kodu ekleyin.  
   
@@ -123,7 +123,7 @@ Bu izlenecek yol, açın ve kullanarak bir dosyayı okumak gösterilmiştir <xre
 |<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**<br /><br /> **Etkin**|`EditEntry`<br /><br /> **Girişi düzenlemek**<br /><br /> `False`|  
 |<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**<br /><br /> **Etkin**|`SubmitEdit`<br /><br /> **Düzenleme gönderin**<br /><br /> `False`|  
   
-#### <a name="to-enable-deletion-and-modification-of-entries"></a>Silme ve girişleri değiştirilmesini etkinleştirmek için  
+### <a name="to-enable-deletion-and-modification-of-entries"></a>Silme ve girişleri değiştirilmesini etkinleştirmek için  
   
 1. Aşağıdaki kodu ekleyin `Display` düğmenin <xref:System.Windows.Forms.Control.Click> olay, sonra `DisplayEntry.Text = ReadString`.  
   

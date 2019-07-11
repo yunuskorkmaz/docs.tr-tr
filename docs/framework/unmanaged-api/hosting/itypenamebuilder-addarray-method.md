@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b203c9414a500116f2f3622fb7fb4a71afb9ce2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f37d11f36a3e9b7bd11f256f5312f033c563740
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672932"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778410"
 ---
 # <a name="itypenamebuilderaddarray-method"></a>ITypeNameBuilder::AddArray Yöntemi
 Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT AddArray (  
     [in] DWORD rank  
 );  

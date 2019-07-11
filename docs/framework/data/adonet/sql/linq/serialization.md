@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: ff2b2f6575c82f3769823431ec6363775bf9d698
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ff6f8b58e01c86ae1c1e2e1533b1997ba2eb6b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616075"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742894"
 ---
 # <a name="serialization"></a>Serileştirme
 Bu konu başlığı altında açıklanır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] seri hale getirme özellikleri. İzleyen paragrafları serileştirme kod oluşturma sırasında tasarım zamanı ve çalışma zamanı serileştirme davranışını ekleme hakkında bilgi sağlayan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sınıfları.  
   
  Serileştirme kodu aşağıdaki yöntemlerden birini bir tasarım zamanında ekleyebilirsiniz:  
   
-- İçinde [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], değiştirme **serileştirme modunu** özelliğini **tek yönlü**.  
+- Nesne İlişkisel Tasarımcısı'nda değiştirmek **serileştirme modunu** özelliğini **tek yönlü**.  
   
 - SQLMetal komut satırında ekleme **/serialization** seçeneği. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   

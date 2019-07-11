@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8851b3090685b19c4a7ef711d5adab232e46872e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 341972629e18213536919fe53bfae94613b4d6e9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665047"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777635"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember Yöntemi
 Bir türün veya geçerli kapsam dışında tanımlanan ve bu başvuru için bir belirteç tanımlar modülü belirtilen üyesine bir başvuru oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT DefineImportMember (   
     [in]  IMetaDataAssemblyImport  *pAssemImport,   
     [in]  const void               *pbHashValue,   

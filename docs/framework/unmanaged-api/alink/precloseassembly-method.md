@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aab42e939651d75b1933962d72ba8bec1090f52d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a820d5d742c722b495a5a4b3952450a0434110fd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753471"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741554"
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly Yöntemi
 Derleme dosyası kapatır. Diğer tüm dosyalar kapatıldıktan sonra ancak derleme dosyasını kapatmadan önce bu yöntemi çağırın. İlişkisiz modüller için bu yöntemi çağırmanız gerekmez.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT PreCloseAssembly(  
     mdAssembly AssemblyID  
 ) PURE;  

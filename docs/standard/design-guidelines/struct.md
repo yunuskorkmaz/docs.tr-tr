@@ -12,19 +12,19 @@ helpviewer_keywords:
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: KrzysztofCwalina
-ms.openlocfilehash: cc5b8d7effda31b0236477b217bccf5cf2137f8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e787c5b34848a561b43c3457341673f11cc2bd00
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650147"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775550"
 ---
 # <a name="struct-design"></a>Yapı Tasarımı
 Genel amaçlı bir değer türü, genellikle kendi C# anahtar sözcüğü bir yapı da adlandırılır. Bu bölümde, genel yapı tasarımı için yönergeler sağlar.  
   
- **X DO NOT** yapısı için varsayılan bir oluşturucu sağlayın.  
+ **X yok** parametresiz bir oluşturucu için bir yapı sağlar.  
   
- Bu kılavuz aşağıdaki dizinin her öğesinde Oluşturucusu çalıştırmak zorunda kalmadan oluşturulacak yapı dizileri sağlar. C# varsayılan oluşturucular yapılar izin vermediğini unutmayın.  
+ Bu kılavuz aşağıdaki dizinin her öğesinde Oluşturucusu çalıştırmak zorunda kalmadan oluşturulacak yapı dizileri sağlar. Dikkat C# parametresiz oluşturucular yapılar izin vermiyor.  
   
  **X DO NOT** değişmez değer türleri tanımlayın.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 0dd70eb5d3b3ad56a8597ce0658a296a03d5f4a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 27ac9de488a92d838df06d4a501a9148e87b9c9f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618057"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742725"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>İzlenecek yol: Verileri Düzenleme (Visual Basic)
 Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] senaryo ekleme, değiştirme ve bir veritabanındaki verileri siliniyor. Örnek Northwind veritabanının bir kopyasını bir müşteri eklemek, bir müşterinin adını değiştirin ve sipariş silmek için kullanın.  
@@ -29,7 +29,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 - Northwind veritabanından oluşturulan Visual Basic kod dosyası.  
   
-     Bu dosyayı kullanarak oluşturabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal aracı. Bu izlenecek yol, şu komut satırıyla SQLMetal Aracı'nı kullanarak yazılmıştır:  
+     Object Relational Designer'ı veya SQLMetal aracını kullanarak bu dosyayı oluşturabilirsiniz. Bu izlenecek yol, şu komut satırıyla SQLMetal Aracı'nı kullanarak yazılmıştır:  
   
      **sqlmetal /code:"c:\linqtest2\northwind.vb" /language:vb "C:\linqtest2\northwnd.mdf" /pluralize**  
   
@@ -63,7 +63,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 4. İçinde **adı** kutusuna **LinqDataManipulationApp**.  
   
-5. **Tamam**'ı tıklatın.  
+5.           **Tamam**'ı tıklatın.  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ başvuruları ve yönergeleri ekleme  
  Bu izlenecek yol, projenizdeki varsayılan olarak yüklü olmayabilir derlemeleri kullanır. Varsa `System.Data.Linq` projenize bir başvuru olarak listelenmemiş (tıklayın **tüm dosyaları göster** içinde **Çözüm Gezgini** genişletin **başvuruları** düğümü), açıklandığı gibi ekleyin Aşağıdaki adımlar.  

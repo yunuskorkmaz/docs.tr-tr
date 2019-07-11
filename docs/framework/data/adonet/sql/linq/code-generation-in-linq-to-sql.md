@@ -2,15 +2,15 @@
 title: LINQ to SQL’de Kod Oluşturma
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbc70669b9c03b59468f4f6a67c1f73432883193
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903285"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743607"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL’de Kod Oluşturma
-Kod kullanarak bir veritabanı göstermek için oluşturabilir [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal komut satırı aracı. Her iki durumda da, uçtan uca kod oluşturma üç aşamada gerçekleşir:  
+Kod Object Relational Designer'ı veya SQLMetal komut satırı aracını kullanarak bir veritabanı göstermek için oluşturabilir. Her iki durumda da, uçtan uca kod oluşturma üç aşamada gerçekleşir:  
   
 1. *DBML Ayıklayıcısı* veritabanı şema bilgilerini ayıklar ve bilgilerin bir XML biçimli DBML dosyasına yeniden birleştirir.  
   
@@ -18,7 +18,7 @@ Kod kullanarak bir veritabanı göstermek için oluşturabilir [!INCLUDE[vs_orde
   
 3. Doğrulama hataları görünüyorsa, dosyanın kod oluşturucuya geçirilir.  
   
- Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Visual Studio kullanan geliştiricilerin de kullanabilir [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] kod oluşturulacak. Bkz: [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Visual Studio kullanan geliştiricilerin, Nesne İlişkisel Tasarımcısı kod oluşturmak için de kullanabilirsiniz. Bkz: [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="dbml-extractor"></a>DBML Ayıklayıcısı  
  DBML Ayıklayıcısı olduğu bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bileşeni giriş olarak veritabanı meta verileri alır ve çıktı olarak bir DBML dosyası oluşturur.  

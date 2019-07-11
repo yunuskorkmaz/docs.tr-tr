@@ -2,12 +2,12 @@
 title: Entity Framework Core ile altyapı kalıcılık katmanını uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Entity Framework Core kullanarak altyapı kalıcılığı katmanını uygulama ayrıntılarını keşfedin.
 ms.date: 10/08/2018
-ms.openlocfilehash: c6b0a022dfecb24c479a0fd3c84dbde719a390a8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639533"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778059"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core ile altyapı Kalıcılık katmanını uygulama
 
@@ -21,7 +21,7 @@ Entity Framework (EF) Core hafif, Genişletilebilir, ve platformlar arası sür�
 
 EF Core giriş zaten Microsoft belgelerinde olduğundan, burada yalnızca bu bilgilere bağlantılar sağlıyoruz.
 
-#### <a name="additional-resources"></a>Ek kaynaklar
+### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Entity Framework Core** \
   [https://docs.microsoft.com/ef/core/](/ef/core/)
@@ -230,7 +230,7 @@ builder.RegisterType<OrderRepository>()
 
 DbContext ayarlandığında depo için singleton ömrü kullanarak ciddi eşzamanlılık sorunlara neden olabilecek unutmayın (InstancePerLifetimeScope) yaşam süresi (varsayılan yaşam süreleri bir DBContext) kapsamı.
 
-#### <a name="additional-resources"></a>Ek kaynaklar
+### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Bir ASP.NET MVC uygulamasındaki depo ve iş birimi desenleri uygulama** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
@@ -447,7 +447,7 @@ Filtreleme mantığı Kapsüllenen yanı sıra belirtimi doldurmak için hangi �
 
 Bir depodan Iqueryable döndürülecek önermemekteyiz olsa da, bunları bir sonuç kümesini oluşturmak için depo içinde kullanmak mükemmel bir şekilde daha uygundur. Bu yaklaşım, sorgunun listesini oluşturmak için Ara Iqueryable ifadeler kullanan yukarıdaki son satırında belirtimi ölçütlerle sorguyu çalıştırmadan önce includes yöntemi listesinde kullanılan görebilirsiniz.
 
-#### <a name="additional-resources"></a>Ek kaynaklar
+### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Tablo eşleme** \
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)

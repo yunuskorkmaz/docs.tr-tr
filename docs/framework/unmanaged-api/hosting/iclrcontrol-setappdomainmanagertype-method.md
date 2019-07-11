@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eacd3802c51cb6ccf3f7ba874c75a2d2774439d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bf20831b80df07f2861e3bab3b421b375d4774e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663833"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773210"
 ---
 # <a name="iclrcontrolsetappdomainmanagertype-method"></a>ICLRControl::SetAppDomainManagerType Yöntemi
 Türetilen bir türü ayarlar <xref:System.AppDomainManager> uygulama etki alanı yöneticileri için türü.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT SetAppDomainManagerType (  
     [in] LPCWSTR pwzAppDomainManagerAssembly,  
     [in] LPCWSTR pwzAppDomainManagerType  

@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf23a8f1893aa0f992d554d3c7533c3dc42f4e95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92366190c769344b41923cbb25ed4b04afceaae9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985900"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778661"
 ---
 # <a name="getcachepath-function"></a>GetCachePath İşlevi
 Belirtilen bayraklar kullanarak önbelleğe alınmış derleme yolunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT GetCachePath (  
     [in]      ASM_CACHE_FLAGS  dwCacheFlags,  
     [in]      LPWSTR           pwzCachePath,  

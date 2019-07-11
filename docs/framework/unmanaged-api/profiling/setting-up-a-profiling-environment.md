@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc5171b135facfbbe901b38a19fef9e9d47699b5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 33762e08192fae379f3cd249f50cc544e1c89b5a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490721"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775748"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Profil Oluşturma Ortamını Ayarlama
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "66490721"
   
 - COR_PROFILER: Cor_enable_profılıng geçişleri işaretlerseniz, CLR, bu CLSID veya önceden kayıt defterinde depolanmış olması gereken ProgID sahip profil oluşturucuya bağlanır. Cor_profıler ortam değişkeni, aşağıdaki iki örnekte gösterildiği gibi bir dize olarak tanımlanır.  
   
-    ```  
+    ```cpp  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
     set COR_PROFILER="MyProfiler"  
     ```  
@@ -66,7 +66,7 @@ ms.locfileid: "66490721"
 ## <a name="initializing-the-profiler"></a>Profiler'ı başlatma  
  Her iki ortam değişkeni denetimi başarılı olduğunda, CLR Profil Oluşturucu bir örneğini com benzer şekilde oluşturur. `CoCreateInstance` işlevi. Profil Oluşturucu doğrudan çağrı aracılığıyla yüklenmediğinden `CoCreateInstance`. Bu nedenle, bir çağrı `CoInitialize`, iş parçacığı modelinin ayarlanmasını gerektiren engellenir. CLR sonra çağıran [Icorprofilercallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) yönteminde profil oluşturucu. Bu yöntemin imzası aşağıdaki gibidir.  
   
-```  
+```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
@@ -75,7 +75,7 @@ HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)
 ## <a name="setting-event-notifications"></a>Olay bildirimlerini ayarlama  
  Daha sonra profil oluşturucuyu çağırır [Icorprofilerınfo::seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) , ilgileniyor olan hangi bildirim kategorilerini belirlemek için yöntemi. Örneğin, profil oluşturucu yalnızca işlev girişi ve bildirim ve çöp toplama bildirimleri bırakın, aşağıdakileri belirtir.  
   
-```  
+```cpp  
 ICorProfilerInfo* pInfo;  
 pICorProfilerInfoUnk->QueryInterface(IID_ICorProfilerInfo, (void**)&pInfo);  
 pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)  

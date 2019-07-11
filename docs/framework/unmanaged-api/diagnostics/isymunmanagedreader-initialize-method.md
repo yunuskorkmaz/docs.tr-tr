@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 661c27b9c21f77104b8a86163d3c92d44f8a85df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1986ed730c6f0a1ba8a2d8e3c688e6872184da9d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669981"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736758"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize Yöntemi
 Bu okuyucu modülü dosya adının yanı sıra, ile ilişkili meta verileri alma arabirimiyle sembol okuyucu başlatır.  
@@ -32,7 +32,7 @@ Bu okuyucu modülü dosya adının yanı sıra, ile ilişkili meta verileri alma
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT Initialize (  
     [in]  IUnknown     *importer,  
     [in]  const WCHAR  *filename,  

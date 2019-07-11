@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 412a01dc1dd498c2f55307958e5feec36a556b9c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80d82e26fe54c5422d1140bba84830879f0b5c2d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586914"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781279"
 ---
 # <a name="functionleave-function"></a>FunctionLeave İşlevi
 Profil Oluşturucu bir işlev hakkında çağırana döndürmesi olduğunu bildirir.  
@@ -31,7 +31,7 @@ Profil Oluşturucu bir işlev hakkında çağırana döndürmesi olduğunu bildi
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 void __stdcall FunctionLeave (  
     [in] FunctionID funcID  
 );  

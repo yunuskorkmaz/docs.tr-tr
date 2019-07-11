@@ -2,18 +2,18 @@
 title: İzlenecek Yollarla Öğrenme
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: d5c8457bc1e484d3c7c2b57225261a3ef74023d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6b5f77d6d918ae1402074c9c3037ccadec8ac02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582914"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743036"
 ---
 # <a name="learning-by-walkthroughs"></a>İzlenecek Yollarla Öğrenme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Belgeler birkaç izlenecek yollar sağlar. Bu konu (sorun giderme dahil) bazı genel kılavuz sorunları ele alır ve hakkında bilgi almak için birkaç adım izlenecek yollar için bağlantılar sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 > [!NOTE]
->  Bu Başlarken bölümünde izlenecek destekleyen temel kod kullanıma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknoloji. Gerçek bir uygulamada genellikle kullanacağınız [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] ve uygulamak için Windows Forms projeleri, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalar. [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Belgeler, bu amaç için örnekler ve izlenecek yollar sağlar.  
+>  Bu Başlarken bölümünde izlenecek destekleyen temel kod kullanıma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknoloji. Gerçek bir uygulamada genellikle bir nesne ilişkisel Tasarımcısı ve Windows Forms projeleri uygulamak için kullanacağınız, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalar. O/R Tasarımcısı belgeler, bu amaç için örnekler ve izlenecek yollar sağlar.  
   
 ## <a name="getting-started-walkthroughs"></a>Başlarken izlenecek yollar  
  Bu bölümde birkaç izlenecek yollar mevcuttur. Bu kılavuzlar, örnek Northwind veritabanına bağlı ve mevcut [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en düşük karmaşıklık ile size bir hızda özellikleri.  

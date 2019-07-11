@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f968d84ae695eb1da127538ebdc5e4f55d6ebf39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46dab35c44e59a149822005575c83c13e9350455
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985861"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758537"
 ---
 # <a name="corexemain2-function"></a>_CorExeMain2 İşlevi
 Belirtilen bellek eşlemeli kod içinde giriş noktasını yürütür. Bu işlev, işletim sistemi yükleyicisi tarafından çağrılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 __int32 STDMETHODCALLTYPE _CorExeMain2 (  
    [in] PBYTE           pUnmappedPE,  
    [in] DWORD           cUnmappedPE,  

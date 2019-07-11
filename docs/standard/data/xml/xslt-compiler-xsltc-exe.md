@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f423c37ca264c4f23aca3736a72164f5d13bdca3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8480e2d6817d0367e89542c0e6c89cd26183dd5e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026776"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774891"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT Derleyicisi (xsltc.exe)
 XSLT derleyicisi (xsltc.exe) XSLT stil sayfalarını derler ve bir derleme oluşturur. Derlenmiş bir stil sayfası sonra doğrudan geçirilebilir <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemi. İmzalı derlemeler xsltc.exe ile oluşturulamıyor.  
@@ -37,7 +37,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`/debug[`+&#124;-`]`|Hata ayıklama bilgilerini oluşturulup oluşturulmayacağını belirtir.<br /><br /> Belirtme `+` veya `/debug`, derleyicinin hata ayıklama bilgileri üret ve program veritabanı (PDB) dosyası içinde yerleştirin. Oluşturulan PDB dosyası adıdır `assemblyName`.pdb.<br /><br /> Belirtme `-`, hangi belirtmezseniz, geçerli olduğu `/debug`, oluşturulacak hata ayıklama bilgisi yok neden olur. Bir perakende derleme oluşturulur. **Not:**  Hata ayıklama modunda derleme XSLT performansını önemli ölçüde etkileyebilir.|  
 |`/help`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |`/nologo`|Derleyici telif hakkı iletisini görüntülenmesini bastırır.|  
-|`/platform:``string`|Derleme çalıştırılabileceği platformları belirtir. Geçerli platform değerleri açıklar:<br /><br /> `x86` derlemenizi 32-bit, x86 uyumlu ortak dil çalışma zamanı tarafından çalıştırılmak üzere<br /><br /> `x64` derlemenizi 64 bit ortak dil çalışma zamanı tarafından AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayarda çalıştırılması için derler.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] derlemenizi 64 bit ortak dil çalışma zamanı tarafından olan bir bilgisayarda çalıştırılması için bir [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] işlemci.<br /><br /> `anycpu` Herhangi bir platform üzerinde çalıştırmasını derlemenizin derler. Bu varsayılandır.|  
+|`/platform:``string`|Derleme çalıştırılabileceği platformları belirtir. Geçerli platform değerleri açıklar:<br /><br /> `x86` derlemenizi 32-bit, x86 uyumlu ortak dil çalışma zamanı tarafından çalıştırılmak üzere<br /><br /> `x64` derlemenizi 64 bit ortak dil çalışma zamanı tarafından AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayarda çalıştırılması için derler.<br /><br /> Itanium derlemenizi 64 bit ortak dil çalışma zamanı tarafından bir Itanium işlemci olan bir bilgisayarda çalıştırılması için derler.<br /><br /> `anycpu` Herhangi bir platform üzerinde çalıştırmasını derlemenizin derler. Bu varsayılandır.|  
 |`/out:``assemblyName`|Çıkış derlemesi adını belirtir. Birden çok stil sayfaları varsa ana stil sayfası veya ilk stil sayfası adı için varsayılan derleme adı içerir.<br /><br /> Betikleri stil sayfası içeriyorsa, komut dosyaları için ayrı bir derleme kaydedilir. Komut dosyası derleme adları ana derleme adından oluşturulur. Örneğin, derleme adınız için CustOrders.dll belirttiyseniz, ilk betik derleme CustOrders_Script1.dll olarak adlandırılır.|  
 |`/settings:``document+-, script+-, DTD+-,`|İzin verilip verilmeyeceğini belirten `document()` işlevleri, XSLT betik veya belge stil sayfası içinde tür tanımı (DTD'nin).<br /><br /> DTD desteği varsayılan davranışı devre dışı bırakır `document()` işlev ve betik oluşturma.|  
 |`@``file`|Derleyici seçenekleri içeren bir dosya belirtmenizi sağlar.|  

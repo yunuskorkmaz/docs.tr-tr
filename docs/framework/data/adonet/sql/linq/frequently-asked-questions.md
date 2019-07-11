@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 68d4215129cf4481beb2d8561c1569b3049a287e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 07801ee7bfbb32540880cdc8599e5b69797b09f9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610578"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743546"
 ---
 # <a name="frequently-asked-questions"></a>Sıkça Sorulan Sorular
 Aşağıdaki bölümlerde, uyguladığınızda karşılaşabileceğiniz bazı yaygın sorunlar yanıt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -53,7 +53,7 @@ Aşağıdaki bölümlerde, uyguladığınızda karşılaşabileceğiniz bazı ya
  A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ürettiği SQL kodunu incelemek için çeşitli araçlar sağlar. En önemli biri <xref:System.Data.Linq.DataContext.Log%2A>. Daha fazla bilgi için [hata ayıklama desteği](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
 ## <a name="unexpected-stored-procedure-results"></a>Beklenmeyen bir saklı yordam sonuçları  
- S. Dönüş değeri tarafından hesaplanan bir saklı yordam sahibim `MAX()`. Saklı yordamı sürüklediğinizde miyim [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] yüzey, dönüş değeri doğru değil.  
+ S. Dönüş değeri tarafından hesaplanan bir saklı yordam sahibim `MAX()`. Saklı yordam O/R Tasarımcısı yüzeyine sürüklediğinizde, dönüş değeri doğru değil.  
   
  A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veritabanı tarafından oluşturulan değerleri depolanmış yordamlar yoluyla döndürmek için iki yol sunar:  
   
@@ -107,7 +107,7 @@ Aşağıdaki bölümlerde, uyguladığınızda karşılaşabileceğiniz bazı ya
 ## <a name="multiple-dbml-files"></a>Birden çok DBML dosyaları  
  S. Bazı tablolar ortak paylaşan birden çok DBML dosyaları sahibim, bir derleyici hatası alıyorum.  
   
- A. Ayarlama **bağlam Namespace** ve **varlık Namespace** özelliklerinden [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] her DBML dosyasının farklı bir değer. Bu yaklaşım, ad/ad alanı çakışma ortadan kaldırır.  
+ A. Ayarlama **bağlam Namespace** ve **varlık Namespace** Nesne İlişkisel Tasarımcısı özelliklerinden her DBML dosyasının farklı bir değer. Bu yaklaşım, ad/ad alanı çakışma ortadan kaldırır.  
   
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Veritabanı tarafından oluşturulan değerleri ekleme veya güncelleştirme ayarı açık kaçınma  
  S. Bir veritabanı tablosu ile sahibim bir `DateCreated` SQL varsayılan sütun `Getdate()`. Kullanarak yeni bir kayıt eklemek çalıştığımda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], değer kümesine `NULL`. Veritabanı varsayılan olarak ayarlanması için beklenir.  
@@ -134,10 +134,10 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="errors-using-sql-compact-35"></a>SQL kullanarak hataları Compact 3.5  
  S. Ben dışında bir SQL Server Compact 3.5 veritabanı tabloları sürüklediğinizde bir hata alıyorum.  
   
- A. [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] SQL Server Compact 3.5, ancak desteklememektedir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çalışma zamanı yapar. Bu durumda, kendi varlık sınıfları oluşturma ve uygun öznitelikleri eklemeniz gerekir.  
+ A. Nesne İlişkisel Tasarımcısı SQL Server Compact 3.5, ancak desteklememektedir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çalışma zamanı yapar. Bu durumda, kendi varlık sınıfları oluşturma ve uygun öznitelikleri eklemeniz gerekir.  
   
 ## <a name="errors-in-inheritance-relationships"></a>Devralma ilişkilerinde hataları  
- S. Araç kutusu devralma şeklinde kullandım [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] bağlanmak için iki varlık, ancak hatalar alınamıyor.  
+ S. Araç kutusu devralma şekli Nesne İlişkisel Tasarımcısı'nda iki varlık bağlanmak için kullandım, ancak hata alıyorum.  
   
  A. İlişki oluşturmak yeterli değildir. Ayrıştırıcı sütununu temel sınıf ayrıştırıcı değeri gibi bilgiler sağlamanız gerekir ve türetilen sınıf ayrıştırıcı değeri.  
   
@@ -163,7 +163,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3. Varsayılan gözden geçirme <xref:System.Data.Linq.Mapping.UpdateCheck> değeri (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>), uygulamanız için doğru değeri olup olmadığını belirlemek için.  
   
     > [!CAUTION]
-    >  Kullanıyorsanız [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Visual Studio'da yaptığınız değişiklikleri üzerine yazılmış olabilir.  
+    >  Visual Studio'da Nesne İlişkisel Tasarımcısı'nı kullanıyorsanız, değişikliklerinizi yazılabilir.  
   
 ## <a name="aptca"></a>APTCA  
  S. System.Data.Linq kısmen güvenilen kod tarafından kullanılmak üzere işaretlenmiş mi?  
