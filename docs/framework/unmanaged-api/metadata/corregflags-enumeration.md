@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb6b303fa7569712c854e8dc4e7513d8608e2519
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf2a1bca6115902d96f72c19dc469d0a1c8588cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045363"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756222"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags Numaralandırması
 Bir modül veya bileşik görüntüsü yüklerken kayıt için kullanılan bayrak değerleri sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 typedef enum   
 {  
     regNoCopy  = 0x00000001,  

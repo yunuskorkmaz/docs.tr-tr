@@ -3,17 +3,17 @@ title: Windows Identity Foundation 4.5’e Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
 author: BrucePerlerMS
-ms.openlocfilehash: d3076bbda47ac4aac0c8f0b9f9c69d17f370e765
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eb896d2e702629e6339ee2b09ad6a1c96d64da33
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592409"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742425"
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Windows Identity Foundation 4.5’e Genel Bakış
 Windows Identity Foundation 4.5, uygulamalarınızda beyana dayalı kimlik uygulamak için kullanılan bir .NET Framework sınıf kümesidir. Bunu kullanarak, talep kullanan uygulama ve hizmetlerin avantajlarından daha kolay bir şekilde yararlanabilirsiniz. WIF 4.5, .NET Framework 4.5 veya sonraki sürümlerini kullanan herhangi bir Web uygulamasında veya Web hizmetinde kullanılabilir. WIF, Microsoft'un açık standartları temel alan ortak sektör vizyonunu uygulayan Federal Kimlik yazılım ailesinin bir parçasıdır. Federal Kimlik üç bileşenden oluşur: [Etkin Directory® Federasyon Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0 [Windows Azure erişim denetimi Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS) ve WIF. Bu üç bileşen birlikte Microsoft'un yeni beyana dayalı bulut kimliği ve erişim platformunun merkezini oluşturur.  
   
- WIF hakkında daha fazla bilgi için bkz: [Windows Identity Foundation Web sitesi](https://go.microsoft.com/fwlink/?LinkId=149009) MSDN'de güvenlik Geliştirici Merkezi'ndeki. WIF kullanarak uygulamalar oluşturmaya giriş için bkz [Windows Identity Foundation'ı Programlama](https://go.microsoft.com/fwlink/?LinkId=210158) tarafından Vittorio Bertocci'nin (Microsoft Press tarafından yayımlanmıştır).  
+ WIF hakkında daha fazla bilgi için bkz: [Windows Identity Foundation Web sitesi](https://go.microsoft.com/fwlink/?LinkId=149009) MSDN'de güvenlik Geliştirici Merkezi'ndeki. WIF kullanarak uygulamalar oluşturmaya giriş için bkz [Windows Identity Foundation'ı Programlama](https://www.microsoftpressstore.com/store/programming-windows-identity-foundation-9780735627185) tarafından Vittorio Bertocci'nin (Microsoft Press tarafından yayımlanmıştır).  
   
 ## <a name="wif-45-features"></a>WIF 4.5 Özellikleri  
  WIF 4.5, kimlik kullanan uygulamalar oluşturmak için kullanılan bir çerçevedir. Çerçeve, WS-Güven ve WS-Federasyon protokollerini özetler ve geliştiricilere talep kullanan uygulamalar ve gerekirse güvenlik belirteci hizmetleri (STS) oluşturmak için API'ler sunar. Uygulamalar AD FS ve ACS gibi STS'lerden verilen belirteçleri işlemek için WIF'yi kullanabilir ve web uygulamasında veya web hizmetinde kimlik tabanlı kararlar verebilir.  

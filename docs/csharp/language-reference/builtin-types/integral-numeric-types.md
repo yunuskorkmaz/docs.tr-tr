@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 141475c4d92278be02d6a832a93cd8553a4bcbd8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661134"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744219"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tamsayı sayısal türleri (C# Başvurusu)
 
@@ -76,14 +76,14 @@ var binaryLiteral = 0b_0010_1010;
 
 Ondalık sabit değerleri herhangi bir önek gerektirmez. `x` Veya `X` önek belirten bir *onaltılık değişmez değeri*. `b` Veya `B` önek belirten bir *ikili değişmez değer*. Bildirimi `binaryLiteral` kullanımını gösteren `_` olarak bir *basamak ayıracı*. Basamak ayırıcı, tüm sayısal değişmez değerleri ile kullanılabilir. İkili sabit değerler ve basamak ayıracı `_` başlayarak desteklenir C# 7.0.
 
-## <a name="literal-suffixes"></a>Değişmez değer soneki 
+### <a name="literal-suffixes"></a>Değişmez değer soneki 
 
 `l` Veya `L` sonekini belirtir, tam sayı sabiti olmalıdır `long` türü. `ul` Veya `UL` sonekini belirtir `ulong` türü. Varsa `L` soneki 9.223.372.036.854.775.807 büyük bir sabit değer ınternationalized (en büyük değerini `long`), değeri dönüştürülür `ulong` türü. Bir tamsayı sabit değeri tarafından temsil edilen değeri aşarsa <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, bir derleyici hatası [CS1021](../../misc/cs1021.md) gerçekleşir. 
 
 > [!NOTE]
 > Küçük harf "l" sonek olarak kullanabilirsiniz. Ancak, bu bir derleyici uyarısı oluşturur çünkü "m" harfinin basamağı "1" ile kolaylıkla karıştırılır "M" daha anlaşılır olması için kullanın.
 
-## <a name="type-of-an-integral-literal"></a>Bir integral sabit değerinin türü
+### <a name="type-of-an-integral-literal"></a>Bir integral sabit değerinin türü
 
 Bir tamsayı sabit değeri sonek türünü ilk değerini gösterilebilir aşağıdaki türlerde ise:
 

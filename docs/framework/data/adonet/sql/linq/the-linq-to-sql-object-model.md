@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: beb76f18a55d6e197c1c6bcfc91e3a8ef0f8119b
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: de3fc8b23bd132179fc7fb67d29010552138e3ab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063098"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742829"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL Nesne Modeli
 İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], geliştiricinin programlama dilinde ifade nesne modeli, ilişkisel veritabanı ve veri modelini eşlendi. Veriler üzerinde işlemler sonra nesne modeline göre yürütülür.  
@@ -72,7 +72,7 @@ ms.locfileid: "65063098"
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] saklı yordamları ve işlevleri kullanarak yöntemlere eşler <xref:System.Data.Linq.Mapping.FunctionAttribute> ve <xref:System.Data.Linq.Mapping.ParameterAttribute> öznitelikleri. Saklı yordamlar temsil eden yöntemleri temsil eden kullanıcı tanımlı işlevleri tarafından kullanılanlardan ayırt edici <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> özelliği. Bu özellik ayarlanırsa `false` (varsayılan), bir saklı yordam yöntemi temsil eder. Bu ayarlanırsa `true`, bir veritabanı işlevi yöntemi temsil eder.  
   
 > [!NOTE]
->  Visual Studio kullanıyorsanız, kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] saklı yordamları ve kullanıcı tanımlı işlevleri için eşlenmiş yöntemleri oluşturma.  
+>  Visual Studio kullanıyorsanız, saklı yordamları ve kullanıcı tanımlı işlevleri için eşlenmiş yöntemler oluşturmak için Nesne İlişkisel Tasarımcısı'nı kullanabilirsiniz.  
   
 ### <a name="example"></a>Örnek  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]

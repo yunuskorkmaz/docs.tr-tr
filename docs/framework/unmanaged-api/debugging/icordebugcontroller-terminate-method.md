@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c8dd8795fc3699176490ea0bb9b2e999038afb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06c91a813a80af5cf09914ca134ac9935ed787c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749078"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750065"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate Yöntemi
 Belirtilen çıkış kodu ile işlemi sonlandırır.  
@@ -32,7 +32,7 @@ Belirtilen çıkış kodu ile işlemi sonlandırır.
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT Terminate (  
     [in] UINT exitCode  
 );  

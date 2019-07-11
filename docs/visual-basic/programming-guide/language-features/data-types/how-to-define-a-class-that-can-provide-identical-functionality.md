@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 829ff08fe3805f37bc6189a66a6675b3518da138
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19988e766d0f9ec895a24dddfcd17d0854aaf8ad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601007"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757403"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Nasıl yapılır: (Visual Basic) farklı veri türlerinde aynı işlevselliği sağlayabilen bir sınıf tanımlama
 Bir sınıf tanımlayabilir, farklı veri türlerinde aynı işlevselliği sağlayan nesneleri oluşturabileceğiniz öğesinden. Bunu yapmak için bir veya daha fazla belirttiğiniz *tür parametrelerindeki* tanımında. Sınıf çeşitli veri türlerini kullanan nesneler için bir şablon olarak hizmet verebilir. Bu şekilde tanımlanan bir sınıfa bir *genel sınıf*.  
@@ -62,7 +62,7 @@ Bir sınıf tanımlayabilir, farklı veri türlerinde aynı işlevselliği sağl
   
 6. Kodunuzun kullandığı yalnızca işlemler ve için sağlayabilirler herhangi bir veri türü tarafından desteklenen yöntemleri mutlaka `itemType`.  
   
-     Aşağıdaki örnek çok basit bir listeyi yöneten bir sınıf tanımlar. İç dizide listesini tutar `items`ve kod kullanarak liste öğelerini veri türünü bildirebilirsiniz. Parametreli bir kurucu kullanarak sağlayan çokluğun ayarlamak üzere kod `items`, ve varsayılan oluşturucu, bu ayarlar 9 (için toplam 10 öğe).  
+     Aşağıdaki örnek çok basit bir listeyi yöneten bir sınıf tanımlar. İç dizide listesini tutar `items`ve kod kullanarak liste öğelerini veri türünü bildirebilirsiniz. Parametreli bir kurucu kullanarak sağlayan çokluğun ayarlamak üzere kod `items`, ve parametresiz bir oluşturucu bu ayarlar 9 (için toplam 10 öğe).  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   

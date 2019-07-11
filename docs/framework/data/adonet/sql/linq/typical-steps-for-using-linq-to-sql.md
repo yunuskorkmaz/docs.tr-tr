@@ -2,17 +2,17 @@
 title: LINQ to SQL Kullanmaya İlişkin Tipik Adımlar
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: 0c472fcac0e664e17c1869ba7ffc61ed2b802e8e
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: cbcd8099fd085d0198e5ba77ee0a3e86c1ca70d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063008"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742780"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>LINQ to SQL Kullanmaya İlişkin Tipik Adımlar
 Uygulamak için bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulama, bu konunun ilerleyen bölümlerinde açıklanan adımları izleyin. Çok adımlı isteğe bağlı olduğunu unutmayın. Varsayılan durumunda, nesne modelini kullanabilirsiniz çok mümkündür.  
   
- Hızlı Başlangıç için kullanmak [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] nesne modelinizi oluşturup sorgularınızı kodlamaya başlayın.  
+ Hızlı Başlangıç için Nesne İlişkisel Tasarımcısı nesne modelinizi oluşturup sorgularınızı kodlamaya başlayın kullanın.  
   
 ## <a name="creating-the-object-model"></a>Nesne Modeli Oluşturma  
  İlk adım, var olan bir ilişkisel veritabanının meta verilerine nesne modeli oluşturmaktır. Nesne modeli, geliştiricinin programlama diline göre kullanılan veritabanını temsil eder. Daha fazla bilgi için [LINQ to SQL nesne modeli](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
@@ -20,17 +20,17 @@ Uygulamak için bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Model oluşturmak için bir aracı seçin.  
  Üç Araçlar, model oluşturmak için kullanılabilir.  
   
-- , [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+- Nesne İlişkisel Tasarımcısı  
   
      Bu tasarımcı, varolan bir veritabanından nesne modeli oluşturmak için zengin kullanıcı arabirimi sağlar. Bu araç, Visual Studio IDE bir parçasıdır ve küçük veya Orta veritabanları için uygundur.  
   
 - SQLMetal kod oluşturma aracı  
   
-     Bu komut satırı yardımcı programını seçeneklerden biraz farklı takımına [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]. Büyük veritabanları modelleme bu aracı kullanarak en iyi şekilde gerçekleştirilir. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+     Bu komut satırı yardımcı programını biraz farklı bir seçenek kümesi O/R Tasarımcısı'ndan sağlar. Büyük veritabanları modelleme bu aracı kullanarak en iyi şekilde gerçekleştirilir. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 - Kod Düzenleyicisi  
   
-     Visual Studio Kod Düzenleyicisi'ni veya başka bir düzenleyici kullanarak kendi kodunuzu yazabilirsiniz. Mevcut bir veritabanı olan ve kullanabilirsiniz, bu hatalara olabilir, bu yaklaşım önerilmez [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] veya SQLMetal aracı. Ancak, Kod Düzenleyicisi iyileştirme veya diğer araçları kullanarak zaten oluşturulmuş kodu değiştirmek için yararlı olabilir. Daha fazla bilgi için [nasıl yapılır: Kod Düzenleyicisi'ni kullanarak varlık sınıflarını özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
+     Visual Studio Kod Düzenleyicisi'ni veya başka bir düzenleyici kullanarak kendi kodunuzu yazabilirsiniz. Mevcut bir veritabanı olan ve O/R Tasarımcısı veya SQLMetal Aracı'nı kullanabilirsiniz, bu hatalara olabilir, bu yaklaşım önerilmez. Ancak, Kod Düzenleyicisi iyileştirme veya diğer araçları kullanarak zaten oluşturulmuş kodu değiştirmek için yararlı olabilir. Daha fazla bilgi için [nasıl yapılır: Kod Düzenleyicisi'ni kullanarak varlık sınıflarını özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Oluşturmak istediğiniz kod türünü seçin.  
   
@@ -43,14 +43,14 @@ Uygulamak için bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-
      Bu yaklaşımı kullanarak, uygulama kodunuz dışında eşleme meta veri tutabilirsiniz. Daha fazla bilgi için [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
     > [!NOTE]
-    >  [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Dış eşleme dosyalarının oluşturulmasını desteklemiyor. Bu özelliği uygulamak için SQLMetal Aracı'nı kullanmanız gerekir.  
+    >  O/R Tasarımcısı dış eşleme dosyalarının oluşturulmasını desteklemiyor. Bu özelliği uygulamak için SQLMetal Aracı'nı kullanmanız gerekir.  
   
 - Son bir kod dosyası oluşturmadan önce değiştirebileceğiniz bir DBML dosyası.  
   
      Bu gelişmiş bir özelliktir.  
   
 ### <a name="3-refine-the-code-file-to-reflect-the-needs-of-your-application"></a>3. Uygulamanızın ihtiyaçlarını yansıtmak için kod dosyasını daraltın.  
- Bu amaç için ya da kullanabilirsiniz [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] ya da Kod Düzenleyicisi.  
+ Bu amaç için O/R Tasarımcısı ya da Kod Düzenleyicisi'ni kullanabilirsiniz.  
   
 ## <a name="using-the-object-model"></a>Nesne modelini kullanma  
  Aşağıdaki çizimde, iki katmanlı senaryoda Geliştirici ve verileri arasındaki ilişkiyi gösterir. Diğer senaryolar için bkz: [N katmanı ve uzak uygulamalarla LINQ-SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md).  

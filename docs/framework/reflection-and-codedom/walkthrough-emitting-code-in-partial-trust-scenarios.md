@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690302"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742469"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>İzlenecek yol: Kısmi Güven Senaryolarında Kod Yayma
 Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak bazı özellikler kısmen güvenilen kodda özel izinler gerektirir. Ayrıca, yansıma yayılımı, güvenlikli saydam derlemeler tarafından kısmi güven ile kullanılmak üzere tasarlanmış bir özelliği, anonim olarak barındırılan dinamik yöntemler vardır.  
@@ -57,7 +57,7 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
   
  Aşağıdaki yordam yayılan kodun sadece genel türlerin ortak üyeler erişebildiği test senaryolarında için kısmi güven ile kodunuzu çalıştıran bir koruma alanlı uygulama etki alanı oluşturur. Sonraki yordam, ekleme işlemi açıklanır <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>, hangi kodun erişebilir ortakdeğil türlere ve eşit veya daha az izin verilen derlemelerdeki üyeleri senaryolarını test etmek için.  
   
-##### <a name="to-create-an-application-domain-with-partial-trust"></a>Kısmi güven ile bir uygulama etki alanı oluşturmak için  
+#### <a name="to-create-an-application-domain-with-partial-trust"></a>Kısmi güven ile bir uygulama etki alanı oluşturmak için  
   
 1. Korumalı uygulama etki alanındaki derlemelere vermek amacıyla bir izin kümesi oluşturun. Bu durumda, Internet bölgesi izinleri kümesi kullanılır.  
   
@@ -87,7 +87,7 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
 > [!NOTE]
 >  Anonim olarak barındırılan dinamik yöntemler oluşturulduğunda ayrıcalık yükselmesini engellemek için yayan derleme için yığın bilgileri dahil edilir. Yöntem çağrıldığında, yığın bilgisi denetlenir. Bu nedenle, tam olarak güvenilen koddan çağrılan anonim olarak barındırılan dinamik bir yöntem yayan derlemenin güven düzeyine hala sınırlıdır.  
   
-##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Kısmi güvenli artı RMA'lı bir uygulama etki alanı oluşturmak için  
+#### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Kısmi güvenli artı RMA'lı bir uygulama etki alanı oluşturmak için  
   
 1. Yeni bir <xref:System.Security.Permissions.ReflectionPermission> nesnesi ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) kullanın <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> izin verme kümesine izin eklemek için yöntemi.  
   

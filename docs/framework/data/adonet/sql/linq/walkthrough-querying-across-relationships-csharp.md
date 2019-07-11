@@ -2,12 +2,12 @@
 title: 'İzlenecek yol: İlişkilerde Sorgulama (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: d9233bc7501544fff04c1c9eae215bd981fa4bd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f36f618cfcb82847f6763641ee64565dcdedd919
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618021"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742639"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>İzlenecek yol: İlişkilerde Sorgulama (C#)
 Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ilişkilendirmeleri* veritabanında yabancı anahtar ilişkileri göstermek için.  
@@ -31,7 +31,7 @@ Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../..
 ## <a name="mapping-relationships-across-tables"></a>Tablolar arasındaki ilişkileri eşleme  
  Sonra `Customer` sınıf tanımını, oluşturma `Order` bildiren aşağıdaki kodu içeren varlık sınıf tanımı `Order.Customer` yabancı anahtar olarak ilişkili `Customer.CustomerID`.  
   
-#### <a name="to-add-the-order-entity-class"></a>Sipariş varlık sınıfı eklemek için  
+### <a name="to-add-the-order-entity-class"></a>Sipariş varlık sınıfı eklemek için  
   
 - Sonra aşağıdaki kodu yazın veya yapıştırın `Customer` sınıfı:  
   
@@ -40,7 +40,7 @@ Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../..
 ## <a name="annotating-the-customer-class"></a>Müşteri sınıf ek açıklama ekleme  
  Bu adımda, ek açıklama `Customer` ilişkisini belirtmek için sınıf `Order` sınıfı. (Herhangi bir yönde ilişkiyi tanımlamadan bağlantıyı oluşturmak yeterli olduğundan bu eklenmesi kesinlikle gerekli değildir. Ancak bu ek açıklama ekleme nesneleri herhangi bir yönde kolayca gidin.)  
   
-#### <a name="to-annotate-the-customer-class"></a>Müşteri sınıf ek açıklama eklemek için  
+### <a name="to-annotate-the-customer-class"></a>Müşteri sınıf ek açıklama eklemek için  
   
 - İçine aşağıdaki kodu yazın veya yapıştırın `Customer` sınıfı:  
   
@@ -49,7 +49,7 @@ Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../..
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Oluşturma ve müşteri sipariş ilişki sorgu çalıştırma  
  Artık erişebilirsiniz `Order` doğrudan nesneleri `Customer` nesneleri veya ters sırada. Açık bir gerekmeyen *birleştirme* müşterilerle siparişler arasındaki.  
   
-#### <a name="to-access-order-objects-by-using-customer-objects"></a>Erişim için müşteri nesnesi kullanarak nesneleri  
+### <a name="to-access-order-objects-by-using-customer-objects"></a>Erişim için müşteri nesnesi kullanarak nesneleri  
   
 1. Değiştirme `Main` yazarak veya yönteme aşağıdaki kodu kopyalayıp yapıştırmak yöntemi:  
   
@@ -67,7 +67,7 @@ Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../..
   
  Aşağıdaki adımlarda, oluşturacağınız `Customers` veritabanındaki Müşteriler tablosunu eşlendiği kesin türü belirtilmiş bir tablo olarak.  
   
-#### <a name="to-strongly-type-the-datacontext-object"></a>Kesin DataContext nesne yazmak için  
+### <a name="to-strongly-type-the-datacontext-object"></a>Kesin DataContext nesne yazmak için  
   
 1. Yukarıdaki aşağıdaki kodu ekleyin `Customer` sınıfının bildirimi.  
   

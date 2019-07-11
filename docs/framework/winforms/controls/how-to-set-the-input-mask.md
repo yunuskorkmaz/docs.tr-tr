@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: dd156f9e5bf6519363f66ca61687f1e9f2bfc6ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac747bf46c4dd1451e58615b1ec0311d75c899e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630423"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760482"
 ---
 # <a name="how-to-set-the-input-mask"></a>Nasıl yapılır: Giriş Maskesini Ayarlama
 Maskelenmiş metin kutusu denetimini kabul etme veya reddetme kullanıcı girişi için bir bildirim temelli söz dizimi destekleyen Gelişmiş metin kutusu denetimidir. Maske özelliği ayarlayarak, uygulamanızda herhangi bir özel doğrulama mantığı yazmak zorunda kalmadan izin verilen kullanıcı girişini belirtebilirsiniz. Daha fazla bilgi için Açıklamalar bölümüne bakın. <xref:System.Windows.Forms.MaskedTextBox> sınıfı.  
@@ -19,18 +19,18 @@ Maskelenmiş metin kutusu denetimini kabul etme veya reddetme kullanıcı giriş
 ## <a name="setting-the-mask-property-manually"></a>Maske özelliği el ile ayarlama  
  Maske özelliği destekleyen karakterlerle biliyorsanız, el ile girebilirsiniz. Maske özelliği destekleyen karakterleri özeti için Açıklamalar bölümüne bakın. <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> özelliği.  
   
-#### <a name="to-set-the-mask-property-manually"></a>Maske özelliği el ile ayarlamak için  
+### <a name="to-set-the-mask-property-manually"></a>Maske özelliği el ile ayarlamak için  
   
 1. İçinde **tasarım** görüntülenecek bir <xref:System.Windows.Forms.MaskedTextBox>.  
   
 2. İçinde **özellikleri** penceresinde bulun <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> özelliği.  
   
-3. İstediğiniz maske yazın. Örneğin, `###`.  
+3. İstediğiniz maske yazın. Örneğin `###`yazın.  
   
 ## <a name="using-the-input-mask-dialog-box"></a>Giriş maskesi iletişim kutusunu kullanma  
  Giriş maskesi iletişim kutusu, bazı önceden tanımlanmış giriş maskeleri sağlar. Ayrıca, önceden tanımlanmış maskeleri değiştirebilir veya kendi maskesini el ile girin.  
   
-#### <a name="to-open-the-input-mask-dialog-box"></a>Giriş maskesi iletişim kutusunu açmak için  
+### <a name="to-open-the-input-mask-dialog-box"></a>Giriş maskesi iletişim kutusunu açmak için  
   
 1. İçinde **tasarım** görüntülenecek bir <xref:System.Windows.Forms.MaskedTextBox>.  
   
@@ -46,7 +46,7 @@ Maskelenmiş metin kutusu denetimini kabul etme veya reddetme kullanıcı giriş
   
      **Giriş maskesi** iletişim kutusu görüntülenir.  
   
-#### <a name="to-use-the-input-mask-dialog-box"></a>Giriş maskesi iletişim kutusunu kullanma  
+### <a name="to-use-the-input-mask-dialog-box"></a>Giriş maskesi iletişim kutusunu kullanma  
   
 1. (İsteğe bağlı) Önceden tanımlanmış maskeleri listesinde birine tıklayın.  
   
@@ -59,7 +59,7 @@ Maskelenmiş metin kutusu denetimini kabul etme veya reddetme kullanıcı giriş
   
 4. Seçin veya temizleyin **kullanım ValidatingType** onay kutusu. **Kullanım ValidatingType** onay kutusu, bir veri türü veri girişi doğrulamak için kullanıcı tarafından kullanılıp kullanılmayacağını belirtir. Daha fazla bilgi için <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> özelliği.  
   
-5. **Tamam**'ı tıklatın.  
+5.           **Tamam**'ı tıklatın.  
   
      Maske girildiğini **maskesi** özelliğinde **özellikleri** penceresi.  
   

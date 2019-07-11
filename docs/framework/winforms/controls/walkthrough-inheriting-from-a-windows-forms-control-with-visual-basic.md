@@ -10,12 +10,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: b606de4b7cf4648fdc7ada3c1f6faec81342d02c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcd65f231ab0e05da0ec152b05878233558f2cd9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792190"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772065"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>İzlenecek yol: Visual Basic ile beraber Windows Forms Denetimi'nden Devralma
 Visual Basic ile aracılığıyla güçlü özel denetimler oluşturabilirsiniz *devralma*. Devralma üzerinden tüm standart Windows Forms denetimleri devralınan işlevlerini korur, ancak özel işlevler de dahil denetimleri oluşturabilirsiniz. Bu izlenecek yolda, adlı basit bir devralınan denetim oluşturacaksınız `ValueButton`. Bu düğme, standart Windows Forms işlevselliği devralır <xref:System.Windows.Forms.Button> denetlemek ve adlı bir özel özellik açığa çıkarır `ButtonValue`.  
@@ -26,7 +26,7 @@ Visual Basic ile aracılığıyla güçlü özel denetimler oluşturabilirsiniz 
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
  Yeni bir proje oluşturduğunuzda, kök ad alanı, derleme adı ve proje adını ayarlayın ve varsayılan bileşeni doğru ad alanı içinde olmasını sağlamak için adını belirtin.  
   
-#### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>ValueButtonLib denetim kitaplığı ve ValueButton denetimi oluşturmak için  
+### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>ValueButtonLib denetim kitaplığı ve ValueButton denetimi oluşturmak için  
   
 1. Üzerinde **dosya** menüsünde **yeni** ve ardından **proje** açmak için **yeni proje** iletişim kutusu.  
   
@@ -54,7 +54,7 @@ Visual Basic ile aracılığıyla güçlü özel denetimler oluşturabilirsiniz 
 ## <a name="adding-a-property-to-your-inherited-control"></a>Devralınan denetiminize özellik ekleme  
  Bir olası devralınan Windows Forms denetimleri, standart Windows Forms denetimlerine görünümünü ve davranışını (Görünüm) içinde aynıdır, ancak özel özellikler kullanıma denetimleri oluşturulmasını kullanılır. Bu bölümde, adlı bir özellik ekleyeceksiniz `ButtonValue` denetiminiz için.  
   
-#### <a name="to-add-the-value-property"></a>Value özelliği eklemek için  
+### <a name="to-add-the-value-property"></a>Value özelliği eklemek için  
   
 1. İçinde **Çözüm Gezgini**, sağ **ValueButton.vb**ve ardından **kodu görüntüle** kısayol menüsünden.  
   
@@ -84,13 +84,13 @@ Visual Basic ile aracılığıyla güçlü özel denetimler oluşturabilirsiniz 
 ## <a name="testing-your-control"></a>Denetiminiz test etme  
  Denetimler, tek başına projeleri değildir; Bunlar, bir kapsayıcıda barındırılan gerekir. Denetiminiz test etmek için bir test projesi için bunu çalıştırmak için sağlamanız gerekir. Ayrıca, Denetim test projesi için erişilebilir (derleme) oluşturarak yapmanız gerekir. Bu bölümde, denetiminizi oluşturup bir Windows formunda test.  
   
-#### <a name="to-build-your-control"></a>Denetim oluşturmak için  
+### <a name="to-build-your-control"></a>Denetim oluşturmak için  
   
 1. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.  
   
      Derleme, derleyici hata veya uyarılar ile başarılı olmalıdır.  
   
-#### <a name="to-create-a-test-project"></a>Bir test projesi oluşturmak için  
+### <a name="to-create-a-test-project"></a>Bir test projesi oluşturmak için  
   
 1. Üzerinde **dosya** menüsünde **Ekle** ve ardından **yeni proje** açmak için **Yeni Proje Ekle** iletişim kutusu.  
   
@@ -108,7 +108,7 @@ Visual Basic ile aracılığıyla güçlü özel denetimler oluşturabilirsiniz 
   
 8. İçinde **Çözüm Gezgini** sağ **Test** seçip **yapı**.  
   
-#### <a name="to-add-your-control-to-the-form"></a>Forma denetim ekleme  
+### <a name="to-add-your-control-to-the-form"></a>Forma denetim ekleme  
   
 1. İçinde **Çözüm Gezgini**, sağ **Form1.vb** ve **Görünüm Tasarımcısı** kısayol menüsünden.  
   

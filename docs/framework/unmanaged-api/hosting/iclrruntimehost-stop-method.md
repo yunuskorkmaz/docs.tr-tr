@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85116244ad21842fab025ddd48106deef75f210b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97a0e6cbbd8972f58f9eedcfeb8aff1f93694064
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771839"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765663"
 ---
 # <a name="iclrruntimehoststop-method"></a>ICLRRuntimeHost::Stop Yöntemi
 Ortak dil çalışma zamanı tarafından (CLR), kodun yürütülmesini durdurur.  
@@ -32,7 +32,7 @@ Ortak dil çalışma zamanı tarafından (CLR), kodun yürütülmesini durdurur.
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT Stop();  
 ```  
   

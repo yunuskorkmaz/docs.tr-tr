@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d2dc80ec689f3e9fd2f36c36c3847ec4e5d1a576
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592717"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783150"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>İzlenecek yol: Windows API'ları çağırma (Visual Basic)
 Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplıklarını (DLL'ler) apı'lerdir. Bunları kendi eşdeğer yordamları yazmak zor olduğunda görevleri gerçekleştirmek için kullanın. Örneğin, Windows adlı bir işlev sağlar `FlashWindowEx` olanak tanıyan bir uygulama için başlık çubuğu arasında açık ve koyu gri alternatif olun.  
@@ -32,7 +32,7 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
 ## <a name="api-calls-using-declare"></a>API çağrıları kullanarak bildirin  
  Windows API'leri çağırmak için en yaygın yolu kullanmaktır `Declare` deyimi.  
   
-#### <a name="to-declare-a-dll-procedure"></a>Bir DLL yordam bildirmek için  
+### <a name="to-declare-a-dll-procedure"></a>Bir DLL yordam bildirmek için  
   
 1. Aramak istediğiniz işlevi ek bağımsız değişkenleri, bağımsız değişken türleri adını belirleyin ve değeri yanı sıra adı ve onu içeren DLL konumunu döndürür.  
   
@@ -69,7 +69,7 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
 #### <a name="windows-api-constants"></a>Windows API sabitleri  
  Bazı bağımsız değişkenler, sabitler birleşimleridir. Örneğin, `MessageBox` Bu izlenecek yolda gösterilen API adlı tamsayı bağımsız değişken kabul eden `Typ` ileti kutusunda nasıl görüntülendiğini denetler. Bu sabitler sayısal değerini inceleyerek belirleyebilirsiniz `#define` WinUser.h dosyasındaki deyimler. Ekleyip ondalığa dönüştürmek için bir hesap makinesi kullanmak isteyebilirsiniz sayısal değerleri genellikle onaltılık olarak gösterilir. Örneğin, sabitleri ünlem stili birleştirmek istiyorsanız `MB_ICONEXCLAMATION` 0x00000030 ve Evet/stil `MB_YESNO` 0x00000004, sayıları ve ondalık 0x00000034 veya 52 sonucu alın. Ondalık sonucu doğrudan kullanmanız mümkün olmakla birlikte, sabitler, uygulamanızda bu değerleri bildirir ve bunları birleştirmek daha iyi kullanarak `Or` işleci.  
   
-###### <a name="to-declare-constants-for-windows-api-calls"></a>Windows API çağrıları için sabitler bildirmek için  
+##### <a name="to-declare-constants-for-windows-api-calls"></a>Windows API çağrıları için sabitler bildirmek için  
   
 1. Aradığınız Windows işlevi belgelerine bakın. Kullandığı sabitleri adını ve bu sabitleri için sayısal değerleri içeren .h dosyası adını belirleyin.  
   
@@ -94,7 +94,7 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
 #### <a name="data-marshaling"></a>Veri hazırlama  
  Visual Basic, parametreler ve dönüş değerleri Windows API çağrıları için veri türlerini otomatik olarak dönüştürür ancak kullanabilirsiniz `MarshalAs` bir API'nin beklediği yönetilmeyen veri türleri açıkça belirtmek için özniteliği. Birlikte çalışma hazırlama hakkında daha fazla bilgi için bkz. [birlikte çalışma hazırlama](../../../framework/interop/interop-marshaling.md).  
   
-###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>Bir API çağrısında bildirin ve MarshalAs kullanmak için  
+##### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>Bir API çağrısında bildirin ve MarshalAs kullanmak için  
   
 1. Veri türleri, bağımsız değişkenlerinin yanı sıra, çağırmak istediğiniz işlevin adını belirlemek ve dönüş değeri.  
   
@@ -111,7 +111,7 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
   
  Kullanabileceğiniz `DllImport` çoğu Windows API ile çağrı paylaşılan bir başvuruyor sürece çağırır (bazen adlı *statik*) yöntemi. Bir sınıf örneği gerektiren yöntemleri kullanamaz. Farklı `Declare` deyimleri `DllImport` çağrıları kullanamaz `MarshalAs` özniteliği.  
   
-#### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>DllImport özniteliği kullanarak bir Windows API çağırmak için  
+### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>DllImport özniteliği kullanarak bir Windows API çağırmak için  
   
 1. Tıklayarak yeni bir Windows uygulaması projesi açın **yeni** üzerinde **dosya** menüsüne ve ardından **proje**. **Yeni Proje** iletişim kutusu görünür.  
   

@@ -2,18 +2,18 @@
 title: Web Hizmetleri ile LINQ to SQL N Katmanı
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fafaa60dd75def98b486e18faa5bd3ecd1d6315
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033546"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743042"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>Web Hizmetleri ile LINQ to SQL N Katmanı
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] özellikle orta katman Web hizmeti gibi bir zamanı gevşek bağlanmış veri erişim katmanı (DAL) olarak kullanılmak üzere tasarlanmıştır. Sunu katmanına bir ASP.NET Web sayfası olduğu sonra kullandığınız <xref:System.Web.UI.WebControls.LinqDataSource> Web sunucu denetimi, kullanıcı arabirimi arasında veri aktarımını yönetme ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] orta katman. Sunu katmanına bir ASP.NET sayfasına değil, serileştirme ve seri durumundan çıkarma veri yönetmek için bazı ek işleri hem Orta katmanda hem de sunu katmanı yapmalısınız.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>LINQ to SQL orta katman ayarlama  
- Bir Web hizmeti veya n-katmanlı uygulamaya orta katman veri bağlamı ve varlık sınıfları içerir. El ile veya her iki SQLMetal.exe kullanarak bu sınıflar oluşturabilir veya [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] belgelerinde açıklanan başka bir yerde. Tasarım zamanında, varlık sınıfları seri hale getirilebilir yapma seçeneğiniz vardır. Daha fazla bilgi için [nasıl yapılır: Varlıkları serileştirilebilir yapmak](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Verileri iade ettiğinizde bu seri hale getirilebilir bir tür olarak ayrı bir dizi verileri seri hale kapsayan sınıflar ve proje oluşturmak için başka bir seçenektir, [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] sorgular.  
+ Bir Web hizmeti veya n-katmanlı uygulamaya orta katman veri bağlamı ve varlık sınıfları içerir. Bu sınıfların el ile veya başka bir yerde belgelerinde açıklanan şekilde SQLMetal.exe veya Object Relational Designer kullanarak oluşturabilirsiniz. Tasarım zamanında, varlık sınıfları seri hale getirilebilir yapma seçeneğiniz vardır. Daha fazla bilgi için [nasıl yapılır: Varlıkları serileştirilebilir yapmak](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Verileri iade ettiğinizde bu seri hale getirilebilir bir tür olarak ayrı bir dizi verileri seri hale kapsayan sınıflar ve proje oluşturmak için başka bir seçenektir, [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] sorgular.  
   
  Ardından almak, eklemek ve verileri güncelleştirmek için istemcilere çağıran yöntemleri ile arabirimini tanımlar. Arabirim yöntemleri kaydırma, [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] sorgular. Uzak yöntem çağrıları ve veri seri hale getirme işlemek için serileştirme mekanizması herhangi bir türden kullanabilirsiniz. Döngüsel veya çift yönlü ilişkiler gibi müşteriler ve siparişler standart Northwind nesne modelinde arasında nesne modeliniz varsa ardından onu destekleyen bir seri hale getirici kullanmalısınız olduğunu tek gereksinim olmasıdır. Windows Communication Foundation (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> yönlü ilişkiler destekler ancak WCF Web Hizmetleri ile kullanılan XmlSerializer desteklemez. Ardından XmlSerializer kullanmayı seçerseniz, nesne modeliniz hiçbir döngüsel bir ilişki olduğundan emin olmalısınız.  
   

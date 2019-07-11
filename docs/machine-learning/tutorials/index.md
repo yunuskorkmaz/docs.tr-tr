@@ -2,13 +2,13 @@
 title: ML.NET öğreticiler
 description: Özel yapay ZEKA çözümleri oluşturmanıza ve bunları .NET uygulamalarınızla tümleştirin hakkında bilgi edinmek için ML.NET öğreticileri keşfedin.
 ms.custom: seodec18
-ms.date: 04/05/2019
-ms.openlocfilehash: 4530e62a0ac8991f6ece37a0ad9909a4c4d08fe7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.date: 07/08/2019
+ms.openlocfilehash: 16311a892f9b1da5d6de10f52bec2ad9410966b7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401656"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777960"
 ---
 # <a name="mlnet-tutorials"></a>ML.NET öğreticiler 
 
@@ -20,6 +20,7 @@ Aşağıdaki öğreticilerde nasıl kullanılacağını anlamak etkinleştirmeni
 - [Kümeleme Iris](iris-clustering.md): nasıl uygulanacağını gösterir bir **Kümeleme** ML.NET kullanarak görev.
 - [Öneri](movie-recommendation.md): film oluşturmak **önerileri** önceki kullanıcı derecelendirmesine göre
 - [Görüntü sınıflandırma](image-classification.md): ML.NET kullanarak özel görüntü sınıflandırıcı oluşturmak için var olan bir TensorFlow modeli yeniden eğitme gösterilmektedir.
+- [Anomali algılama](sales-anomaly-detection.md): ürün satış verilerini analiz için bir anomali algılama uygulamanın nasıl oluşturulacağını gösterir.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
