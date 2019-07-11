@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 138be940c6a03fc58e488e344455946bdb832bab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c87f2212c761dc31a75addabca6970c5497aa2a0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777799"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782422"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps Yöntemi
 Bildirim türü, Ekle ve Kaldır Temsilciler, yöntemleri ve tüm bayraklar ve ilişkili diğer veri gibi belirtilen olay belirteci tarafından temsil edilen olay için meta veri bilgilerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT GetEventProps (  
    [in]  mdEvent       ev,  
    [out] mdTypeDef     *pClass,   

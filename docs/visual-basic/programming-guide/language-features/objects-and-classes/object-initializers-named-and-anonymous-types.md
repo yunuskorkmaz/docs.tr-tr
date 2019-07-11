@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: bf608ebb36a2e8f29e8429b77e023eced67273e1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 151c2f6cbb560d83ef0fcfef518bc50cec246ca2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649768"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783245"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Nesne Başlatıcıları: Adlandırılmış ve anonim türler (Visual Basic)
 Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesnenin özelliklerini belirtmek etkinleştirin. Örnekleri adlandırılmış türler ve anonim türler oluşturmak için kullanılabilir.  
@@ -32,7 +32,7 @@ Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesnenin özell
  Gereksinimler ve iki bildirimi sonuçlarını aynı değildir. İçin `namedCust`, `Customer` sahip sınıf bir `Name` özelliği zaten var olmalıdır ve bu sınıfın bir örneğini bildirimi oluşturur. İçin `anonymousCust`, derleyici bir özelliği, bir dize olarak adlandırılan yeni bir sınıf tanımlar `Name`ve bu sınıfın yeni bir örneğini oluşturur.  
   
 ## <a name="named-types"></a>Adlandırılmış türler  
- Nesne başlatıcıları, bir türü oluşturucusunu çağırın ve ardından tek bir deyimde bazı veya tüm özelliklerin değerlerini ayarlamak için basit bir yol sağlar. Derleyici deyimi için uygun oluşturucuyu çağırır: varsayılan oluşturucu bağımsız değişken olmadan sunulursa ya da bir veya daha fazla bağımsız değişken gönderiliyorsa parametreli bir oluşturucu. Bundan sonra belirtilen özellikleri Başlatıcı listesinde görüntülenen sırayla başlatılır.  
+ Nesne başlatıcıları, bir türü oluşturucusunu çağırın ve ardından tek bir deyimde bazı veya tüm özelliklerin değerlerini ayarlamak için basit bir yol sağlar. Derleyici deyimi için uygun oluşturucuyu çağırır: bağımsız değişken olmadan sunulursa parametresiz oluşturucusu ya da bir veya daha fazla bağımsız değişken gönderiliyorsa parametreli bir oluşturucu. Bundan sonra belirtilen özellikleri Başlatıcı listesinde görüntülenen sırayla başlatılır.  
   
  Sınıf üyesi için bir başlangıç değeri atamasının Başlatıcı listesinde her başlatma oluşur. Sınıf tanımlandığı zaman adları ve veri türleri ve üyeleri belirlenir. Aşağıdaki örneklerde, `Customer` sınıfı var olmalıdır ve üyeleri adlı sahip `Name` ve `City` dize değerlerini kabul edebilir.  
   
@@ -42,7 +42,7 @@ Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesnenin özell
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- Her biri bu bildirimleri oluşturur aşağıdaki örneğe eşdeğerdir bir `Customer` nesnesinin varsayılan Oluşturucusu kullanarak ve ardından başlangıç değerlerini belirten `Name` ve `City` özellikleri kullanılarak bir `With` deyimi.  
+ Her biri bu bildirimleri oluşturur aşağıdaki örneğe eşdeğerdir bir `Customer` nesne parametresiz oluşturucusu kullanarak ve ardından başlangıç değerlerini belirten `Name` ve `City` özellikleri kullanılarak bir `With` deyimi.  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   
