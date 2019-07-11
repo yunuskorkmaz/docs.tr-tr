@@ -17,53 +17,53 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fcd7a3aa1a6c034985099c24071429384563700
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19aced41860002081caaf6436bad08f5f9a09e9a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985302"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766649"
 ---
-# <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a><span data-ttu-id="96903-102">ICLRAppDomainResourceMonitor::GetCurrentAllocated Metodu</span><span class="sxs-lookup"><span data-stu-id="96903-102">ICLRAppDomainResourceMonitor::GetCurrentAllocated Method</span></span>
-<span data-ttu-id="96903-103">Toplam boyutu bayt cinsinden, atık olarak toplanmış bellek çıkararak olmadan oluşturulduktan sonra uygulama etki alanı tarafından yapılan tüm bellek ayırmaları alır.</span><span class="sxs-lookup"><span data-stu-id="96903-103">Gets the total size, in bytes, of all memory allocations that have been made by the application domain since it was created, without subtracting memory that has been garbage-collected.</span></span>  
+# <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a><span data-ttu-id="69bc2-102">ICLRAppDomainResourceMonitor::GetCurrentAllocated Metodu</span><span class="sxs-lookup"><span data-stu-id="69bc2-102">ICLRAppDomainResourceMonitor::GetCurrentAllocated Method</span></span>
+<span data-ttu-id="69bc2-103">Toplam boyutu bayt cinsinden, atık olarak toplanmış bellek çıkararak olmadan oluşturulduktan sonra uygulama etki alanı tarafından yapılan tüm bellek ayırmaları alır.</span><span class="sxs-lookup"><span data-stu-id="69bc2-103">Gets the total size, in bytes, of all memory allocations that have been made by the application domain since it was created, without subtracting memory that has been garbage-collected.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="96903-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="96903-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="69bc2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="69bc2-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,  
                             [out] ULONGLONG* pBytesAllocated);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="96903-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="96903-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="69bc2-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="69bc2-105">Parameters</span></span>  
  `dwAppDomainId`  
- <span data-ttu-id="96903-106">[in] İstenen uygulama etki alanı kimliği.</span><span class="sxs-lookup"><span data-stu-id="96903-106">[in] The ID of the requested application domain.</span></span>  
+ <span data-ttu-id="69bc2-106">[in] İstenen uygulama etki alanı kimliği.</span><span class="sxs-lookup"><span data-stu-id="69bc2-106">[in] The ID of the requested application domain.</span></span>  
   
  `pBytesAllocated`  
- <span data-ttu-id="96903-107">[out] Tüm bellek ayırmaları toplam boyutu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="96903-107">[out] A pointer to the total size of all memory allocations.</span></span>  
+ <span data-ttu-id="69bc2-107">[out] Tüm bellek ayırmaları toplam boyutu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="69bc2-107">[out] A pointer to the total size of all memory allocations.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="96903-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="96903-108">Return Value</span></span>  
- <span data-ttu-id="96903-109">Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.</span><span class="sxs-lookup"><span data-stu-id="96903-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="69bc2-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="69bc2-108">Return Value</span></span>  
+ <span data-ttu-id="69bc2-109">Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.</span><span class="sxs-lookup"><span data-stu-id="69bc2-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="96903-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="96903-110">HRESULT</span></span>|<span data-ttu-id="96903-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="96903-111">Description</span></span>|  
+|<span data-ttu-id="69bc2-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="69bc2-110">HRESULT</span></span>|<span data-ttu-id="69bc2-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="69bc2-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="96903-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="96903-112">S_OK</span></span>|<span data-ttu-id="96903-113">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="96903-113">The method completed successfully.</span></span>|  
-|<span data-ttu-id="96903-114">COR_E_APPDOMAINUNLOADED</span><span class="sxs-lookup"><span data-stu-id="96903-114">COR_E_APPDOMAINUNLOADED</span></span>|<span data-ttu-id="96903-115">Uygulama etki alanı kaldırıldı veya yok.</span><span class="sxs-lookup"><span data-stu-id="96903-115">The application domain has been unloaded or does not exist.</span></span>|  
+|<span data-ttu-id="69bc2-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="69bc2-112">S_OK</span></span>|<span data-ttu-id="69bc2-113">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="69bc2-113">The method completed successfully.</span></span>|  
+|<span data-ttu-id="69bc2-114">COR_E_APPDOMAINUNLOADED</span><span class="sxs-lookup"><span data-stu-id="69bc2-114">COR_E_APPDOMAINUNLOADED</span></span>|<span data-ttu-id="69bc2-115">Uygulama etki alanı kaldırıldı veya yok.</span><span class="sxs-lookup"><span data-stu-id="69bc2-115">The application domain has been unloaded or does not exist.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="96903-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="96903-116">Remarks</span></span>  
- <span data-ttu-id="96903-117">Bu yöntem yönetilmeyen yönetilen eşdeğerdir <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> özelliği.</span><span class="sxs-lookup"><span data-stu-id="96903-117">This method is the unmanaged equivalent of the managed <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> property.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="69bc2-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="69bc2-116">Remarks</span></span>  
+ <span data-ttu-id="69bc2-117">Bu yöntem yönetilmeyen yönetilen eşdeğerdir <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> özelliği.</span><span class="sxs-lookup"><span data-stu-id="69bc2-117">This method is the unmanaged equivalent of the managed <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> property.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="96903-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="96903-118">Requirements</span></span>  
- <span data-ttu-id="96903-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="96903-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="69bc2-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="69bc2-118">Requirements</span></span>  
+ <span data-ttu-id="69bc2-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="69bc2-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="96903-120">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="96903-120">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="69bc2-120">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="69bc2-120">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="96903-121">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="96903-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="69bc2-121">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="69bc2-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="96903-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96903-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="69bc2-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="69bc2-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="96903-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="96903-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="69bc2-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="69bc2-123">See also</span></span>
 
-- [<span data-ttu-id="96903-124">ICLRAppDomainResourceMonitor Arabirimi</span><span class="sxs-lookup"><span data-stu-id="96903-124">ICLRAppDomainResourceMonitor Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [<span data-ttu-id="96903-125">Uygulama Etki Alanı Kaynak İzleme</span><span class="sxs-lookup"><span data-stu-id="96903-125">Application Domain Resource Monitoring</span></span>](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
-- [<span data-ttu-id="96903-126">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="96903-126">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="96903-127">Barındırma</span><span class="sxs-lookup"><span data-stu-id="96903-127">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="69bc2-124">ICLRAppDomainResourceMonitor Arabirimi</span><span class="sxs-lookup"><span data-stu-id="69bc2-124">ICLRAppDomainResourceMonitor Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [<span data-ttu-id="69bc2-125">Uygulama Etki Alanı Kaynak İzleme</span><span class="sxs-lookup"><span data-stu-id="69bc2-125">Application Domain Resource Monitoring</span></span>](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [<span data-ttu-id="69bc2-126">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="69bc2-126">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="69bc2-127">Barındırma</span><span class="sxs-lookup"><span data-stu-id="69bc2-127">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

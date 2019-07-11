@@ -17,47 +17,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f4794fb0383435f828626497036ad3458df2173
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e0217019aa9b8ff85716c62c27c0f4d5547074a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995338"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759785"
 ---
-# <a name="icordebugmanagedcallbackcontrolctrap-method"></a><span data-ttu-id="99c39-102">ICorDebugManagedCallback::ControlCTrap Yöntemi</span><span class="sxs-lookup"><span data-stu-id="99c39-102">ICorDebugManagedCallback::ControlCTrap Method</span></span>
-<span data-ttu-id="99c39-103">Hata ayıklayıcı, CTRL + C ayıklanmakta olan işlemin yakalanır bildirir.</span><span class="sxs-lookup"><span data-stu-id="99c39-103">Notifies the debugger that a CTRL+C is trapped in the process that is being debugged.</span></span>  
+# <a name="icordebugmanagedcallbackcontrolctrap-method"></a><span data-ttu-id="e2714-102">ICorDebugManagedCallback::ControlCTrap Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e2714-102">ICorDebugManagedCallback::ControlCTrap Method</span></span>
+<span data-ttu-id="e2714-103">Hata ayıklayıcı, CTRL + C ayıklanmakta olan işlemin yakalanır bildirir.</span><span class="sxs-lookup"><span data-stu-id="e2714-103">Notifies the debugger that a CTRL+C is trapped in the process that is being debugged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="99c39-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="99c39-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e2714-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e2714-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT ControlCTrap (  
     [in] ICorDebugProcess *pProcess  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="99c39-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="99c39-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e2714-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e2714-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="99c39-106">[in] CTRL + C ', yakalanan işlemini temsil eden bir Icordebugprocess nesneye bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="99c39-106">[in] A pointer to an ICorDebugProcess object that represents the process in which the CTRL+C is trapped.</span></span>  
+ <span data-ttu-id="e2714-106">[in] CTRL + C ', yakalanan işlemini temsil eden bir Icordebugprocess nesneye bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e2714-106">[in] A pointer to an ICorDebugProcess object that represents the process in which the CTRL+C is trapped.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="99c39-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="99c39-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e2714-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e2714-107">Return Value</span></span>  
   
-|<span data-ttu-id="99c39-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="99c39-108">HRESULT</span></span>|<span data-ttu-id="99c39-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="99c39-109">Description</span></span>|  
+|<span data-ttu-id="e2714-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e2714-108">HRESULT</span></span>|<span data-ttu-id="e2714-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e2714-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="99c39-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="99c39-110">S_OK</span></span>|<span data-ttu-id="99c39-111">Hata ayıklayıcı, CTRL + C yakalama işleyecektir.</span><span class="sxs-lookup"><span data-stu-id="99c39-111">The debugger will handle the CTRL+C trap.</span></span>|  
-|<span data-ttu-id="99c39-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="99c39-112">S_FALSE</span></span>|<span data-ttu-id="99c39-113">Hata ayıklayıcı CTRL + C yakalama işlememesi.</span><span class="sxs-lookup"><span data-stu-id="99c39-113">The debugger will not handle the CTRL+C trap.</span></span>|  
+|<span data-ttu-id="e2714-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="e2714-110">S_OK</span></span>|<span data-ttu-id="e2714-111">Hata ayıklayıcı, CTRL + C yakalama işleyecektir.</span><span class="sxs-lookup"><span data-stu-id="e2714-111">The debugger will handle the CTRL+C trap.</span></span>|  
+|<span data-ttu-id="e2714-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="e2714-112">S_FALSE</span></span>|<span data-ttu-id="e2714-113">Hata ayıklayıcı CTRL + C yakalama işlememesi.</span><span class="sxs-lookup"><span data-stu-id="e2714-113">The debugger will not handle the CTRL+C trap.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="99c39-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="99c39-114">Remarks</span></span>  
- <span data-ttu-id="99c39-115">İşlemdeki tüm uygulama etki alanları için bu geri çağırma durdurulur.</span><span class="sxs-lookup"><span data-stu-id="99c39-115">All application domains within the process are stopped for this callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e2714-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e2714-114">Remarks</span></span>  
+ <span data-ttu-id="e2714-115">İşlemdeki tüm uygulama etki alanları için bu geri çağırma durdurulur.</span><span class="sxs-lookup"><span data-stu-id="e2714-115">All application domains within the process are stopped for this callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="99c39-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="99c39-116">Requirements</span></span>  
- <span data-ttu-id="99c39-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="99c39-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e2714-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e2714-116">Requirements</span></span>  
+ <span data-ttu-id="e2714-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e2714-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="99c39-118">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="99c39-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e2714-118">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e2714-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="99c39-119">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="99c39-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e2714-119">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e2714-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="99c39-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="99c39-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e2714-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e2714-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="99c39-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="99c39-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2714-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e2714-121">See also</span></span>
 
-- [<span data-ttu-id="99c39-122">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="99c39-122">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="e2714-122">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e2714-122">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

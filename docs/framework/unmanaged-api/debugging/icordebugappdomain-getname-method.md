@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7939f7b1c0c725bb4e8c642bc38121dd755da5e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 535d94688d02a7315529d17fae555fba457bbb86
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785144"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737878"
 ---
-# <a name="icordebugappdomaingetname-method"></a><span data-ttu-id="1e7d4-102">ICorDebugAppDomain::GetName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1e7d4-102">ICorDebugAppDomain::GetName Method</span></span>
-<span data-ttu-id="1e7d4-103">Uygulama etki alanının adını alır.</span><span class="sxs-lookup"><span data-stu-id="1e7d4-103">Gets the name of the application domain.</span></span>  
+# <a name="icordebugappdomaingetname-method"></a><span data-ttu-id="d6671-102">ICorDebugAppDomain::GetName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d6671-102">ICorDebugAppDomain::GetName Method</span></span>
+<span data-ttu-id="d6671-103">Uygulama etki alanının adını alır.</span><span class="sxs-lookup"><span data-stu-id="d6671-103">Gets the name of the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1e7d4-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1e7d4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d6671-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d6671-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetName (  
     [in]  ULONG32           cchName,  
     [out] ULONG32           *pcchName,  
@@ -38,24 +38,24 @@ HRESULT GetName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1e7d4-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1e7d4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d6671-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d6671-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="1e7d4-106">[in] Boyutu `szName` dizisi.</span><span class="sxs-lookup"><span data-stu-id="1e7d4-106">[in] The size of the `szName` array.</span></span> <span data-ttu-id="1e7d4-107">Bu değer, bu yöntem sorgu moduna sıfıra ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="1e7d4-107">Set this value to zero to put this method in query mode.</span></span>  
+ <span data-ttu-id="d6671-106">[in] Boyutu `szName` dizisi.</span><span class="sxs-lookup"><span data-stu-id="d6671-106">[in] The size of the `szName` array.</span></span> <span data-ttu-id="d6671-107">Bu değer, bu yöntem sorgu moduna sıfıra ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="d6671-107">Set this value to zero to put this method in query mode.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="1e7d4-108">[out] Boyut adı ya da gerçekte döndürülen karakter sayısı için bir işaretçi `szName`.</span><span class="sxs-lookup"><span data-stu-id="1e7d4-108">[out] A pointer to the size of the name or the number of characters actually returned in `szName`.</span></span> <span data-ttu-id="1e7d4-109">Sorgu modunda, bu değer ne büyüklükte bir arabellek bilmeniz arayan olanak tanır. adı ayrılamıyor.</span><span class="sxs-lookup"><span data-stu-id="1e7d4-109">In query mode, this value lets the caller know how large a buffer to allocate for the name.</span></span>  
+ <span data-ttu-id="d6671-108">[out] Boyut adı ya da gerçekte döndürülen karakter sayısı için bir işaretçi `szName`.</span><span class="sxs-lookup"><span data-stu-id="d6671-108">[out] A pointer to the size of the name or the number of characters actually returned in `szName`.</span></span> <span data-ttu-id="d6671-109">Sorgu modunda, bu değer ne büyüklükte bir arabellek bilmeniz arayan olanak tanır. adı ayrılamıyor.</span><span class="sxs-lookup"><span data-stu-id="d6671-109">In query mode, this value lets the caller know how large a buffer to allocate for the name.</span></span>  
   
  `szName`  
- <span data-ttu-id="1e7d4-110">[out] Uygulama etki alanı adını depolar dizisi.</span><span class="sxs-lookup"><span data-stu-id="1e7d4-110">[out] An array that stores the name of the application domain.</span></span>  
+ <span data-ttu-id="d6671-110">[out] Uygulama etki alanı adını depolar dizisi.</span><span class="sxs-lookup"><span data-stu-id="d6671-110">[out] An array that stores the name of the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1e7d4-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1e7d4-111">Remarks</span></span>  
- <span data-ttu-id="1e7d4-112">Bir hata ayıklayıcı çağırır `GetName` adı gerekli bir arabellek boyutunu almak için bir kez yöntemi.</span><span class="sxs-lookup"><span data-stu-id="1e7d4-112">A debugger calls the `GetName` method once to get the size of a buffer needed for the name.</span></span> <span data-ttu-id="1e7d4-113">Hata ayıklayıcı arabelleği ayırır ve ardından arabellek doldurmak için ikinci bir kez yöntemini çağırır.</span><span class="sxs-lookup"><span data-stu-id="1e7d4-113">The debugger allocates the buffer, and then calls the method a second time to fill the buffer.</span></span> <span data-ttu-id="1e7d4-114">Adı boyutunu almak için birinci çağrı olarak adlandırılır *sorgu modu*.</span><span class="sxs-lookup"><span data-stu-id="1e7d4-114">The first call, to get the size of the name, is referred to as *query mode*.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d6671-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d6671-111">Remarks</span></span>  
+ <span data-ttu-id="d6671-112">Bir hata ayıklayıcı çağırır `GetName` adı gerekli bir arabellek boyutunu almak için bir kez yöntemi.</span><span class="sxs-lookup"><span data-stu-id="d6671-112">A debugger calls the `GetName` method once to get the size of a buffer needed for the name.</span></span> <span data-ttu-id="d6671-113">Hata ayıklayıcı arabelleği ayırır ve ardından arabellek doldurmak için ikinci bir kez yöntemini çağırır.</span><span class="sxs-lookup"><span data-stu-id="d6671-113">The debugger allocates the buffer, and then calls the method a second time to fill the buffer.</span></span> <span data-ttu-id="d6671-114">Adı boyutunu almak için birinci çağrı olarak adlandırılır *sorgu modu*.</span><span class="sxs-lookup"><span data-stu-id="d6671-114">The first call, to get the size of the name, is referred to as *query mode*.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1e7d4-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1e7d4-115">Requirements</span></span>  
- <span data-ttu-id="1e7d4-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1e7d4-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d6671-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d6671-115">Requirements</span></span>  
+ <span data-ttu-id="d6671-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d6671-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1e7d4-117">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1e7d4-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d6671-117">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d6671-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1e7d4-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1e7d4-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d6671-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d6671-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1e7d4-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e7d4-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="d6671-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d6671-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

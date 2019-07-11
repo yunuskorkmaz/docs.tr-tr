@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8d5f2123608af241095c966901bd227fa6152d3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a837a43594413ce175f2d52e398440fb6dcb8560
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919288"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766100"
 ---
-# <a name="icordebugprocessenumerateobjects-method"></a><span data-ttu-id="d1cb6-102">ICorDebugProcess::EnumerateObjects Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d1cb6-102">ICorDebugProcess::EnumerateObjects Method</span></span>
-<span data-ttu-id="d1cb6-103">Bu yöntem uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="d1cb6-103">This method has not been implemented.</span></span>  
+# <a name="icordebugprocessenumerateobjects-method"></a><span data-ttu-id="2574b-102">ICorDebugProcess::EnumerateObjects Yöntemi</span><span class="sxs-lookup"><span data-stu-id="2574b-102">ICorDebugProcess::EnumerateObjects Method</span></span>
+<span data-ttu-id="2574b-103">Bu yöntem uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="2574b-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d1cb6-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d1cb6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2574b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2574b-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnumerateObjects (  
     [out] ICorDebugObjectEnum **ppObjects  
 );  

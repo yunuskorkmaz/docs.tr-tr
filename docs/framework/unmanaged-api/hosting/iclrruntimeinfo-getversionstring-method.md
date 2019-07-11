@@ -17,62 +17,62 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c80b85171ac9dab270a267cf2dd33a9f1c23d60
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 20c7d6a1fd9c1f75f43e42ece59b7fbabd150564
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650309"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765503"
 ---
-# <a name="iclrruntimeinfogetversionstring-method"></a><span data-ttu-id="86482-102">ICLRRuntimeInfo::GetVersionString Yöntemi</span><span class="sxs-lookup"><span data-stu-id="86482-102">ICLRRuntimeInfo::GetVersionString Method</span></span>
-<span data-ttu-id="86482-103">Ortak dil çalışma zamanı (CLR) sürüm bilgileri ile ilişkili alır bir verilen [Iclrruntimeınfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="86482-103">Gets common language runtime (CLR) version information associated with a given [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
+# <a name="iclrruntimeinfogetversionstring-method"></a><span data-ttu-id="7816c-102">ICLRRuntimeInfo::GetVersionString Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7816c-102">ICLRRuntimeInfo::GetVersionString Method</span></span>
+<span data-ttu-id="7816c-103">Ortak dil çalışma zamanı (CLR) sürüm bilgileri ile ilişkili alır bir verilen [Iclrruntimeınfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="7816c-103">Gets common language runtime (CLR) version information associated with a given [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
   
- <span data-ttu-id="86482-104">Bu yöntem, aşağıdaki işlevleri yerine geçer:</span><span class="sxs-lookup"><span data-stu-id="86482-104">This method supersedes the following functions:</span></span>  
+ <span data-ttu-id="7816c-104">Bu yöntem, aşağıdaki işlevleri yerine geçer:</span><span class="sxs-lookup"><span data-stu-id="7816c-104">This method supersedes the following functions:</span></span>  
   
-- [<span data-ttu-id="86482-105">GetRequestedRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="86482-105">GetRequestedRuntimeInfo</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
+- [<span data-ttu-id="7816c-105">GetRequestedRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="7816c-105">GetRequestedRuntimeInfo</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
   
-- [<span data-ttu-id="86482-106">GetRequestedRuntimeVersion</span><span class="sxs-lookup"><span data-stu-id="86482-106">GetRequestedRuntimeVersion</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
+- [<span data-ttu-id="7816c-106">GetRequestedRuntimeVersion</span><span class="sxs-lookup"><span data-stu-id="7816c-106">GetRequestedRuntimeVersion</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
   
-## <a name="syntax"></a><span data-ttu-id="86482-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="86482-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7816c-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7816c-107">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetVersionString(  
     [out, size_is(*pcchBuffer)] LPWSTR pwzBuffer,  
     [in, out]  DWORD *pcchBuffer);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="86482-108">Parametreler</span><span class="sxs-lookup"><span data-stu-id="86482-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7816c-108">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7816c-108">Parameters</span></span>  
  `pwzBuffer`  
- <span data-ttu-id="86482-109">[out] .NET Framework derleme sürümü biçimi "v*A*. *B*[. *X*] ".</span><span class="sxs-lookup"><span data-stu-id="86482-109">[out] The .NET Framework compilation version in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="86482-110">*A*, *B*, ve *X* ana sürüm, ikincil sürüm ve derleme numarasını karşılık gelen ondalık sayılardır.</span><span class="sxs-lookup"><span data-stu-id="86482-110">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span> <span data-ttu-id="86482-111">*X* isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="86482-111">*X* is optional.</span></span> <span data-ttu-id="86482-112">Varsa *X* olan mevcut yoktur sonuna bir nokta.</span><span class="sxs-lookup"><span data-stu-id="86482-112">If *X* is not present, there is no trailing period.</span></span>  
+ <span data-ttu-id="7816c-109">[out] .NET Framework derleme sürümü biçimi "v*A*. *B*[. *X*] ".</span><span class="sxs-lookup"><span data-stu-id="7816c-109">[out] The .NET Framework compilation version in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="7816c-110">*A*, *B*, ve *X* ana sürüm, ikincil sürüm ve derleme numarasını karşılık gelen ondalık sayılardır.</span><span class="sxs-lookup"><span data-stu-id="7816c-110">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span> <span data-ttu-id="7816c-111">*X* isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="7816c-111">*X* is optional.</span></span> <span data-ttu-id="7816c-112">Varsa *X* olan mevcut yoktur sonuna bir nokta.</span><span class="sxs-lookup"><span data-stu-id="7816c-112">If *X* is not present, there is no trailing period.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="86482-113">C:\Windows\Microsoft.NET\Framework altında göründüğü gibi bu parametre .NET Framework sürümü için dizin adı eşleşmelidir.</span><span class="sxs-lookup"><span data-stu-id="86482-113">This parameter must match the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework.</span></span>  
+>  <span data-ttu-id="7816c-113">C:\Windows\Microsoft.NET\Framework altında göründüğü gibi bu parametre .NET Framework sürümü için dizin adı eşleşmelidir.</span><span class="sxs-lookup"><span data-stu-id="7816c-113">This parameter must match the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework.</span></span>  
   
- <span data-ttu-id="86482-114">Örnek değerler şunlardır: "v1.0.3705", "v1.1.4322", "v2.0.50727" ve "v4.0. *x*"burada *x* yüklü derleme sayısına bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="86482-114">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*x*", where *x* depends on the build number installed.</span></span> <span data-ttu-id="86482-115">"V" ön eki zorunlu olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="86482-115">Note that the "v" prefix is mandatory.</span></span>  
+ <span data-ttu-id="7816c-114">Örnek değerler şunlardır: "v1.0.3705", "v1.1.4322", "v2.0.50727" ve "v4.0. *x*"burada *x* yüklü derleme sayısına bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="7816c-114">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*x*", where *x* depends on the build number installed.</span></span> <span data-ttu-id="7816c-115">"V" ön eki zorunlu olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="7816c-115">Note that the "v" prefix is mandatory.</span></span>  
   
  `pchBuffer`  
- <span data-ttu-id="86482-116">[out içinde] Boyutunu belirtir `pwzBuffer` arabellek taşması önlemek için.</span><span class="sxs-lookup"><span data-stu-id="86482-116">[in, out] Specifies the size of `pwzBuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="86482-117">Varsa `pwzBuffer` olduğu `null`, `pchBuffer` gerekli boyutunu döndürür `pwzBuffer` serilerindeki izin vermek için.</span><span class="sxs-lookup"><span data-stu-id="86482-117">If `pwzBuffer` is `null`, `pchBuffer` returns the required size of `pwzBuffer` to allow preallocation.</span></span>  
+ <span data-ttu-id="7816c-116">[out içinde] Boyutunu belirtir `pwzBuffer` arabellek taşması önlemek için.</span><span class="sxs-lookup"><span data-stu-id="7816c-116">[in, out] Specifies the size of `pwzBuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="7816c-117">Varsa `pwzBuffer` olduğu `null`, `pchBuffer` gerekli boyutunu döndürür `pwzBuffer` serilerindeki izin vermek için.</span><span class="sxs-lookup"><span data-stu-id="7816c-117">If `pwzBuffer` is `null`, `pchBuffer` returns the required size of `pwzBuffer` to allow preallocation.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="86482-118">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="86482-118">Return Value</span></span>  
- <span data-ttu-id="86482-119">Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.</span><span class="sxs-lookup"><span data-stu-id="86482-119">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7816c-118">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="7816c-118">Return Value</span></span>  
+ <span data-ttu-id="7816c-119">Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.</span><span class="sxs-lookup"><span data-stu-id="7816c-119">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="86482-120">HRESULT</span><span class="sxs-lookup"><span data-stu-id="86482-120">HRESULT</span></span>|<span data-ttu-id="86482-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="86482-121">Description</span></span>|  
+|<span data-ttu-id="7816c-120">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7816c-120">HRESULT</span></span>|<span data-ttu-id="7816c-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7816c-121">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="86482-122">S_OK</span><span class="sxs-lookup"><span data-stu-id="86482-122">S_OK</span></span>|<span data-ttu-id="86482-123">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="86482-123">The method completed successfully.</span></span>|  
-|<span data-ttu-id="86482-124">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="86482-124">E_POINTER</span></span>|<span data-ttu-id="86482-125">`pwzBuffer` veya `pchBuffer` null.</span><span class="sxs-lookup"><span data-stu-id="86482-125">`pwzBuffer` or `pchBuffer` is null.</span></span>|  
+|<span data-ttu-id="7816c-122">S_OK</span><span class="sxs-lookup"><span data-stu-id="7816c-122">S_OK</span></span>|<span data-ttu-id="7816c-123">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="7816c-123">The method completed successfully.</span></span>|  
+|<span data-ttu-id="7816c-124">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="7816c-124">E_POINTER</span></span>|<span data-ttu-id="7816c-125">`pwzBuffer` veya `pchBuffer` null.</span><span class="sxs-lookup"><span data-stu-id="7816c-125">`pwzBuffer` or `pchBuffer` is null.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="86482-126">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="86482-126">Requirements</span></span>  
- <span data-ttu-id="86482-127">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="86482-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7816c-126">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7816c-126">Requirements</span></span>  
+ <span data-ttu-id="7816c-127">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7816c-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="86482-128">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="86482-128">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="7816c-128">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="7816c-128">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="86482-129">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="86482-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7816c-129">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="7816c-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="86482-130">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86482-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="7816c-130">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7816c-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="86482-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="86482-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7816c-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7816c-131">See also</span></span>
 
-- [<span data-ttu-id="86482-132">ICLRRuntimeInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="86482-132">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="86482-133">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="86482-133">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="86482-134">.NET Framework 4 ve 4.5'e Eklenen CLR Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="86482-134">CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
-- [<span data-ttu-id="86482-135">Barındırma</span><span class="sxs-lookup"><span data-stu-id="86482-135">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="7816c-132">ICLRRuntimeInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7816c-132">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="7816c-133">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="7816c-133">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="7816c-134">.NET Framework 4 ve 4.5'e Eklenen CLR Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="7816c-134">CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [<span data-ttu-id="7816c-135">Barındırma</span><span class="sxs-lookup"><span data-stu-id="7816c-135">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

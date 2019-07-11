@@ -17,63 +17,63 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccfe83707b6354c42a4c3c81e911918b2ea79ec4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 944e02fe83ba71b51ffb154748acff9c6dd662fe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942460"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764015"
 ---
-# <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a><span data-ttu-id="279fd-102">ICorDebugModule3::CreateReaderForInMemorySymbols Yöntemi</span><span class="sxs-lookup"><span data-stu-id="279fd-102">ICorDebugModule3::CreateReaderForInMemorySymbols Method</span></span>
-<span data-ttu-id="279fd-103">Dinamik modül için hata ayıklama simge okuyucu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="279fd-103">Creates a debug symbol reader for a dynamic module.</span></span>  
+# <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a><span data-ttu-id="8a3f8-102">ICorDebugModule3::CreateReaderForInMemorySymbols Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8a3f8-102">ICorDebugModule3::CreateReaderForInMemorySymbols Method</span></span>
+<span data-ttu-id="8a3f8-103">Dinamik modül için hata ayıklama simge okuyucu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="8a3f8-103">Creates a debug symbol reader for a dynamic module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="279fd-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="279fd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8a3f8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8a3f8-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT CreateReaderForInMemorySymbols (  
       [in] REFIID riid,  
       [out][iid_is(riid)] void **    ppObj  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="279fd-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="279fd-105">Parameters</span></span>  
- <span data-ttu-id="279fd-106">riid</span><span class="sxs-lookup"><span data-stu-id="279fd-106">riid</span></span>  
- <span data-ttu-id="279fd-107">[in] Döndürülecek COM arabirimi Laboratuvardaki.</span><span class="sxs-lookup"><span data-stu-id="279fd-107">[in] The IID of the COM interface to return.</span></span> <span data-ttu-id="279fd-108">Bu genellikle bir [Isymunmanagedreader arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).</span><span class="sxs-lookup"><span data-stu-id="279fd-108">Typically, this is an [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8a3f8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8a3f8-105">Parameters</span></span>  
+ <span data-ttu-id="8a3f8-106">riid</span><span class="sxs-lookup"><span data-stu-id="8a3f8-106">riid</span></span>  
+ <span data-ttu-id="8a3f8-107">[in] Döndürülecek COM arabirimi Laboratuvardaki.</span><span class="sxs-lookup"><span data-stu-id="8a3f8-107">[in] The IID of the COM interface to return.</span></span> <span data-ttu-id="8a3f8-108">Bu genellikle bir [Isymunmanagedreader arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).</span><span class="sxs-lookup"><span data-stu-id="8a3f8-108">Typically, this is an [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).</span></span>  
   
- <span data-ttu-id="279fd-109">ppObj</span><span class="sxs-lookup"><span data-stu-id="279fd-109">ppObj</span></span>  
- <span data-ttu-id="279fd-110">[out] Döndürülen arabirim işaretçisi için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="279fd-110">[out] Pointer to a pointer to the returned interface.</span></span>  
+ <span data-ttu-id="8a3f8-109">ppObj</span><span class="sxs-lookup"><span data-stu-id="8a3f8-109">ppObj</span></span>  
+ <span data-ttu-id="8a3f8-110">[out] Döndürülen arabirim işaretçisi için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="8a3f8-110">[out] Pointer to a pointer to the returned interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="279fd-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="279fd-111">Return Value</span></span>  
- <span data-ttu-id="279fd-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="279fd-112">S_OK</span></span>  
- <span data-ttu-id="279fd-113">Okuyucu başarıyla oluşturuldu.</span><span class="sxs-lookup"><span data-stu-id="279fd-113">Successfully created the reader.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8a3f8-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="8a3f8-111">Return Value</span></span>  
+ <span data-ttu-id="8a3f8-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="8a3f8-112">S_OK</span></span>  
+ <span data-ttu-id="8a3f8-113">Okuyucu başarıyla oluşturuldu.</span><span class="sxs-lookup"><span data-stu-id="8a3f8-113">Successfully created the reader.</span></span>  
   
- <span data-ttu-id="279fd-114">CORDBG_E_MODULE_LOADED_FROM_DISK</span><span class="sxs-lookup"><span data-stu-id="279fd-114">CORDBG_E_MODULE_LOADED_FROM_DISK</span></span>  
- <span data-ttu-id="279fd-115">Modül, bellek veya dinamik bir modül değil.</span><span class="sxs-lookup"><span data-stu-id="279fd-115">The module is not an in-memory or dynamic module.</span></span>  
+ <span data-ttu-id="8a3f8-114">CORDBG_E_MODULE_LOADED_FROM_DISK</span><span class="sxs-lookup"><span data-stu-id="8a3f8-114">CORDBG_E_MODULE_LOADED_FROM_DISK</span></span>  
+ <span data-ttu-id="8a3f8-115">Modül, bellek veya dinamik bir modül değil.</span><span class="sxs-lookup"><span data-stu-id="8a3f8-115">The module is not an in-memory or dynamic module.</span></span>  
   
- <span data-ttu-id="279fd-116">CORDBG_E_SYMBOLS_NOT_AVAILABLE</span><span class="sxs-lookup"><span data-stu-id="279fd-116">CORDBG_E_SYMBOLS_NOT_AVAILABLE</span></span>  
- <span data-ttu-id="279fd-117">Simgeleri uygulama tarafından sağlanan değil veya henüz kullanıma sunulmamıştır.</span><span class="sxs-lookup"><span data-stu-id="279fd-117">Symbols have not been supplied by the application or are not yet available.</span></span>  
+ <span data-ttu-id="8a3f8-116">CORDBG_E_SYMBOLS_NOT_AVAILABLE</span><span class="sxs-lookup"><span data-stu-id="8a3f8-116">CORDBG_E_SYMBOLS_NOT_AVAILABLE</span></span>  
+ <span data-ttu-id="8a3f8-117">Simgeleri uygulama tarafından sağlanan değil veya henüz kullanıma sunulmamıştır.</span><span class="sxs-lookup"><span data-stu-id="8a3f8-117">Symbols have not been supplied by the application or are not yet available.</span></span>  
   
- <span data-ttu-id="279fd-118">E_FAIL (veya diğer E_ dönüş kodları)</span><span class="sxs-lookup"><span data-stu-id="279fd-118">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="279fd-119">Okuyucusu oluşturulamıyor.</span><span class="sxs-lookup"><span data-stu-id="279fd-119">Unable to create the reader.</span></span>  
+ <span data-ttu-id="8a3f8-118">E_FAIL (veya diğer E_ dönüş kodları)</span><span class="sxs-lookup"><span data-stu-id="8a3f8-118">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="8a3f8-119">Okuyucusu oluşturulamıyor.</span><span class="sxs-lookup"><span data-stu-id="8a3f8-119">Unable to create the reader.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="279fd-120">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="279fd-120">Remarks</span></span>  
- <span data-ttu-id="279fd-121">Simgeleri ilk kullanılabilir olduktan sonra bu yöntem aynı zamanda bir bellek içi (dinamik olmayan) modüller için Sembol Okuyucu nesnesi oluşturmak için kullanılan, ancak yalnızca olabilir (belirttiği [UpdateModuleSymbols yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) geri çağırma).</span><span class="sxs-lookup"><span data-stu-id="279fd-121">This method can also be used to create a symbol reader object for in-memory (non-dynamic) modules, but only after the symbols are first available (indicated by the [UpdateModuleSymbols Method](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) callback).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8a3f8-120">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8a3f8-120">Remarks</span></span>  
+ <span data-ttu-id="8a3f8-121">Simgeleri ilk kullanılabilir olduktan sonra bu yöntem aynı zamanda bir bellek içi (dinamik olmayan) modüller için Sembol Okuyucu nesnesi oluşturmak için kullanılan, ancak yalnızca olabilir (belirttiği [UpdateModuleSymbols yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) geri çağırma).</span><span class="sxs-lookup"><span data-stu-id="8a3f8-121">This method can also be used to create a symbol reader object for in-memory (non-dynamic) modules, but only after the symbols are first available (indicated by the [UpdateModuleSymbols Method](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) callback).</span></span>  
   
- <span data-ttu-id="279fd-122">Her çağrıldığında bu yöntem, yeni bir okuyucu örneği döndürür. (gibi [CComPtrBase::CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)).</span><span class="sxs-lookup"><span data-stu-id="279fd-122">This method returns a new reader instance every time it is called (like [CComPtrBase::CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)).</span></span> <span data-ttu-id="279fd-123">Hata ayıklayıcı bu nedenle, ve sonuç önbellek ister yeni bir örneği temel alınan verileri yalnızca değişmiş olabilir (diğer bir deyişle, bir [LoadClass yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) geri alındığında).</span><span class="sxs-lookup"><span data-stu-id="279fd-123">Therefore, the debugger should cache the result and request a new instance only when the underlying data may have changed (that is, when a [LoadClass Method](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) callback is received).</span></span>  
+ <span data-ttu-id="8a3f8-122">Her çağrıldığında bu yöntem, yeni bir okuyucu örneği döndürür. (gibi [CComPtrBase::CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)).</span><span class="sxs-lookup"><span data-stu-id="8a3f8-122">This method returns a new reader instance every time it is called (like [CComPtrBase::CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)).</span></span> <span data-ttu-id="8a3f8-123">Hata ayıklayıcı bu nedenle, ve sonuç önbellek ister yeni bir örneği temel alınan verileri yalnızca değişmiş olabilir (diğer bir deyişle, bir [LoadClass yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) geri alındığında).</span><span class="sxs-lookup"><span data-stu-id="8a3f8-123">Therefore, the debugger should cache the result and request a new instance only when the underlying data may have changed (that is, when a [LoadClass Method](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) callback is received).</span></span>  
   
- <span data-ttu-id="279fd-124">Dinamik modüller kadar ilk türü yüklenmiş olan simgeleri kullanılabilir gerekmez (gösterildiği gibi [LoadClass yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) geri çağırma).</span><span class="sxs-lookup"><span data-stu-id="279fd-124">Dynamic modules do not have any symbols available until the first type has been loaded (as indicated by the [LoadClass Method](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) callback).</span></span>  
+ <span data-ttu-id="8a3f8-124">Dinamik modüller kadar ilk türü yüklenmiş olan simgeleri kullanılabilir gerekmez (gösterildiği gibi [LoadClass yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) geri çağırma).</span><span class="sxs-lookup"><span data-stu-id="8a3f8-124">Dynamic modules do not have any symbols available until the first type has been loaded (as indicated by the [LoadClass Method](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) callback).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="279fd-125">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="279fd-125">Requirements</span></span>  
- <span data-ttu-id="279fd-126">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="279fd-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8a3f8-125">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8a3f8-125">Requirements</span></span>  
+ <span data-ttu-id="8a3f8-126">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8a3f8-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="279fd-127">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="279fd-127">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8a3f8-127">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8a3f8-127">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="279fd-128">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="279fd-128">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8a3f8-128">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8a3f8-128">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="279fd-129">**.NET framework sürümleri:** 4.5, 4, 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="279fd-129">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
+ <span data-ttu-id="8a3f8-129">**.NET framework sürümleri:** 4.5, 4, 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="8a3f8-129">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="279fd-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="279fd-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8a3f8-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8a3f8-130">See also</span></span>
 
-- [<span data-ttu-id="279fd-131">ICorDebugRemoteTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="279fd-131">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [<span data-ttu-id="279fd-132">ICorDebug Arabirimi</span><span class="sxs-lookup"><span data-stu-id="279fd-132">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="8a3f8-131">ICorDebugRemoteTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8a3f8-131">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [<span data-ttu-id="8a3f8-132">ICorDebug Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8a3f8-132">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 
-- [<span data-ttu-id="279fd-133">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="279fd-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="8a3f8-133">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="8a3f8-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
