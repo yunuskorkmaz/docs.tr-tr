@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b05f5a3f29c7b72ed83c1456175f68ef9b986e3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59328c8b7e86694610de20ade72a98a4280b439d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987200"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762626"
 ---
-# <a name="icordebugthreadgetactivechain-method"></a><span data-ttu-id="52cdb-102">ICorDebugThread::GetActiveChain Yöntemi</span><span class="sxs-lookup"><span data-stu-id="52cdb-102">ICorDebugThread::GetActiveChain Method</span></span>
-<span data-ttu-id="52cdb-103">Bir arabirim işaretçisini bu Icordebugthread nesne üzerinde etkin (en son) yığın zincirinin alır.</span><span class="sxs-lookup"><span data-stu-id="52cdb-103">Gets an interface pointer to the active (most recent) stack chain on this ICorDebugThread object.</span></span>  
+# <a name="icordebugthreadgetactivechain-method"></a><span data-ttu-id="cf8ac-102">ICorDebugThread::GetActiveChain Yöntemi</span><span class="sxs-lookup"><span data-stu-id="cf8ac-102">ICorDebugThread::GetActiveChain Method</span></span>
+<span data-ttu-id="cf8ac-103">Bir arabirim işaretçisini bu Icordebugthread nesne üzerinde etkin (en son) yığın zincirinin alır.</span><span class="sxs-lookup"><span data-stu-id="cf8ac-103">Gets an interface pointer to the active (most recent) stack chain on this ICorDebugThread object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="52cdb-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="52cdb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cf8ac-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cf8ac-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetActiveChain (  
     [out] ICorDebugChain **ppChain  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="52cdb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="52cdb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cf8ac-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cf8ac-105">Parameters</span></span>  
  `ppChain`  
- <span data-ttu-id="52cdb-106">[out] Yığın zincirinin temsil eden bir Icordebugchain nesnenin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="52cdb-106">[out] A pointer to the address of an ICorDebugChain object that represents the stack chain.</span></span>  
+ <span data-ttu-id="cf8ac-106">[out] Yığın zincirinin temsil eden bir Icordebugchain nesnenin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="cf8ac-106">[out] A pointer to the address of an ICorDebugChain object that represents the stack chain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="52cdb-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="52cdb-107">Remarks</span></span>  
- <span data-ttu-id="52cdb-108">`ppChain` Parametredir hiçbir yığın zincirinin şu anda etkin değilse null.</span><span class="sxs-lookup"><span data-stu-id="52cdb-108">The `ppChain` parameter is null if no stack chain is currently active.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cf8ac-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="cf8ac-107">Remarks</span></span>  
+ <span data-ttu-id="cf8ac-108">`ppChain` Parametredir hiçbir yığın zincirinin şu anda etkin değilse null.</span><span class="sxs-lookup"><span data-stu-id="cf8ac-108">The `ppChain` parameter is null if no stack chain is currently active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="52cdb-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="52cdb-109">Requirements</span></span>  
- <span data-ttu-id="52cdb-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="52cdb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cf8ac-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cf8ac-109">Requirements</span></span>  
+ <span data-ttu-id="cf8ac-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cf8ac-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="52cdb-111">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="52cdb-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cf8ac-111">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cf8ac-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="52cdb-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="52cdb-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cf8ac-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cf8ac-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="52cdb-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52cdb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="cf8ac-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf8ac-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

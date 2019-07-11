@@ -16,39 +16,39 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2df4b87016394d1998ef90abe2e3eeb911886ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e33a18487da420eb3b317bb70e0ac9e68b4b8ad6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608976"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746547"
 ---
-# <a name="geterrorinfo-function"></a><span data-ttu-id="87834-103">Geterrorınfo işlevi</span><span class="sxs-lookup"><span data-stu-id="87834-103">GetErrorInfo function</span></span>
-<span data-ttu-id="87834-104">Önceki işlev çağrısında hata bilgilerini alır.</span><span class="sxs-lookup"><span data-stu-id="87834-104">Retrieves error information from the previous function call.</span></span>  
+# <a name="geterrorinfo-function"></a><span data-ttu-id="ef353-103">Geterrorınfo işlevi</span><span class="sxs-lookup"><span data-stu-id="ef353-103">GetErrorInfo function</span></span>
+<span data-ttu-id="ef353-104">Önceki işlev çağrısında hata bilgilerini alır.</span><span class="sxs-lookup"><span data-stu-id="ef353-104">Retrieves error information from the previous function call.</span></span>  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="87834-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="87834-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef353-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ef353-105">Syntax</span></span>  
   
-```  
+```cpp  
 IErrorInfo* GetErrorInfo(); 
 ```  
 
-## <a name="return-value"></a><span data-ttu-id="87834-106">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="87834-106">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="ef353-106">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="ef353-106">Return value</span></span>
 
-<span data-ttu-id="87834-107">Bir işaretçi bir [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) işlev çağrısı başarılı olursa, nesne veya `null` başarısız olması durumunda.</span><span class="sxs-lookup"><span data-stu-id="87834-107">An pointer to an [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) object if the function call succeeds, or `null` if it fails.</span></span>
+<span data-ttu-id="ef353-107">Bir işaretçi bir [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) işlev çağrısı başarılı olursa, nesne veya `null` başarısız olması durumunda.</span><span class="sxs-lookup"><span data-stu-id="ef353-107">An pointer to an [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) object if the function call succeeds, or `null` if it fails.</span></span>
   
-## <a name="remarks"></a><span data-ttu-id="87834-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="87834-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="ef353-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ef353-108">Remarks</span></span>
 
-<span data-ttu-id="87834-109">Bu işlev bir çağrı sarılır [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="87834-109">This function wraps a call to the [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
+<span data-ttu-id="ef353-109">Bu işlev bir çağrı sarılır [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="ef353-109">This function wraps a call to the [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="87834-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="87834-110">Requirements</span></span>  
- <span data-ttu-id="87834-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="87834-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ef353-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ef353-110">Requirements</span></span>  
+ <span data-ttu-id="ef353-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ef353-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="87834-112">**Üst bilgi:** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="87834-112">**Header:** WMINet_Utils.def</span></span>  
+ <span data-ttu-id="ef353-112">**Üst bilgi:** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="ef353-112">**Header:** WMINet_Utils.def</span></span>  
   
- <span data-ttu-id="87834-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="87834-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="ef353-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ef353-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="87834-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="87834-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef353-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ef353-114">See also</span></span>
 
-- [<span data-ttu-id="87834-115">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="87834-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="ef353-115">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="ef353-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

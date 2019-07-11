@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b3c9c637bdaa0d0e18dbfd9655790ff5ebd46f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c41c05d40187aaed8a4f3cce181c84460503d1f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986207"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751280"
 ---
-# <a name="isymunmanagedscopegetlocalcount-method"></a><span data-ttu-id="a86d0-102">ISymUnmanagedScope::GetLocalCount Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a86d0-102">ISymUnmanagedScope::GetLocalCount Method</span></span>
-<span data-ttu-id="a86d0-103">Bu kapsam içinde tanımlanan yerel değişkenler sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="a86d0-103">Gets a count of the local variables defined within this scope.</span></span>  
+# <a name="isymunmanagedscopegetlocalcount-method"></a><span data-ttu-id="eed35-102">ISymUnmanagedScope::GetLocalCount Yöntemi</span><span class="sxs-lookup"><span data-stu-id="eed35-102">ISymUnmanagedScope::GetLocalCount Method</span></span>
+<span data-ttu-id="eed35-103">Bu kapsam içinde tanımlanan yerel değişkenler sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="eed35-103">Gets a count of the local variables defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a86d0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a86d0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eed35-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="eed35-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetLocalCount(  
     [out, retval] ULONG32 *pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a86d0-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a86d0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eed35-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="eed35-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="a86d0-106">[out] Bir işaretçi bir `ULONG32` , yerel değişkenleri sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="a86d0-106">[out] A pointer to a `ULONG32` that receives the count of local variables.</span></span>  
+ <span data-ttu-id="eed35-106">[out] Bir işaretçi bir `ULONG32` , yerel değişkenleri sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="eed35-106">[out] A pointer to a `ULONG32` that receives the count of local variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a86d0-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="a86d0-107">Return Value</span></span>  
- <span data-ttu-id="a86d0-108">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="a86d0-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="eed35-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="eed35-107">Return Value</span></span>  
+ <span data-ttu-id="eed35-108">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="eed35-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a86d0-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a86d0-109">Requirements</span></span>  
- <span data-ttu-id="a86d0-110">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a86d0-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eed35-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="eed35-109">Requirements</span></span>  
+ <span data-ttu-id="eed35-110">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="eed35-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a86d0-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a86d0-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eed35-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="eed35-111">See also</span></span>
 
-- [<span data-ttu-id="a86d0-112">ISymUnmanagedScope Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a86d0-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="eed35-112">ISymUnmanagedScope Arabirimi</span><span class="sxs-lookup"><span data-stu-id="eed35-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

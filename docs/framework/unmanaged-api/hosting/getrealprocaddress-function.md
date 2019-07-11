@@ -16,52 +16,52 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40cd5b6298012ef4dc21987a2a2dbe95c02a0ff2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 0027514392dfbb93ab4189eb7c66a380fb77c1ae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490358"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778162"
 ---
-# <a name="getrealprocaddress-function"></a><span data-ttu-id="4707f-102">GetRealProcAddress İşlevi</span><span class="sxs-lookup"><span data-stu-id="4707f-102">GetRealProcAddress Function</span></span>
-<span data-ttu-id="4707f-103">En son yüklenen sürümünden ortak dil çalışma zamanı (CLR) dışarı aktarılan belirtilen işlevin adresini alır.</span><span class="sxs-lookup"><span data-stu-id="4707f-103">Gets the address of the specified function that is exported from the latest installed version of the common language runtime (CLR).</span></span>  
+# <a name="getrealprocaddress-function"></a><span data-ttu-id="7aefe-102">GetRealProcAddress İşlevi</span><span class="sxs-lookup"><span data-stu-id="7aefe-102">GetRealProcAddress Function</span></span>
+<span data-ttu-id="7aefe-103">En son yüklenen sürümünden ortak dil çalışma zamanı (CLR) dışarı aktarılan belirtilen işlevin adresini alır.</span><span class="sxs-lookup"><span data-stu-id="7aefe-103">Gets the address of the specified function that is exported from the latest installed version of the common language runtime (CLR).</span></span>  
   
- <span data-ttu-id="4707f-104">Bu işlev .NET Framework 4'te kullanım dışıdır.</span><span class="sxs-lookup"><span data-stu-id="4707f-104">This function has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="7aefe-104">Bu işlev .NET Framework 4'te kullanım dışıdır.</span><span class="sxs-lookup"><span data-stu-id="7aefe-104">This function has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4707f-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4707f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7aefe-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7aefe-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetRealProcAddress (  
     [in]  LPCSTR  pwszProcName,   
     [out] VOID  **ppv  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4707f-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4707f-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7aefe-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7aefe-106">Parameters</span></span>  
  `pwszProcName`  
- <span data-ttu-id="4707f-107">[in] İşlevin adı.</span><span class="sxs-lookup"><span data-stu-id="4707f-107">[in] The name of the function.</span></span>  
+ <span data-ttu-id="7aefe-107">[in] İşlevin adı.</span><span class="sxs-lookup"><span data-stu-id="7aefe-107">[in] The name of the function.</span></span>  
   
  `ppv`  
- <span data-ttu-id="4707f-108">[out] İşlevin adresini bir işaretçiye alan konumu.</span><span class="sxs-lookup"><span data-stu-id="4707f-108">[out] The location that receives a pointer to the address of the function.</span></span>  
+ <span data-ttu-id="7aefe-108">[out] İşlevin adresini bir işaretçiye alan konumu.</span><span class="sxs-lookup"><span data-stu-id="7aefe-108">[out] The location that receives a pointer to the address of the function.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4707f-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="4707f-109">Return Value</span></span>  
- <span data-ttu-id="4707f-110">Bu yöntem standart Bileşen Nesne Modeli (COM) hata kodları CorError.h içinde tanımlanan aşağıdaki değerlere ek olarak Wınerror içinde tanımlanan döndürür.</span><span class="sxs-lookup"><span data-stu-id="4707f-110">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values defined in CorError.h.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7aefe-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="7aefe-109">Return Value</span></span>  
+ <span data-ttu-id="7aefe-110">Bu yöntem standart Bileşen Nesne Modeli (COM) hata kodları CorError.h içinde tanımlanan aşağıdaki değerlere ek olarak Wınerror içinde tanımlanan döndürür.</span><span class="sxs-lookup"><span data-stu-id="7aefe-110">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values defined in CorError.h.</span></span>  
   
-|<span data-ttu-id="4707f-111">Dönüş kodu</span><span class="sxs-lookup"><span data-stu-id="4707f-111">Return code</span></span>|<span data-ttu-id="4707f-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4707f-112">Description</span></span>|  
+|<span data-ttu-id="7aefe-111">Dönüş kodu</span><span class="sxs-lookup"><span data-stu-id="7aefe-111">Return code</span></span>|<span data-ttu-id="7aefe-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7aefe-112">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="4707f-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="4707f-113">S_OK</span></span>|<span data-ttu-id="4707f-114">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="4707f-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="4707f-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="4707f-115">E_POINTER</span></span>|<span data-ttu-id="4707f-116">`ppv` geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="4707f-116">`ppv` is not valid.</span></span>|  
-|<span data-ttu-id="4707f-117">CLR_E_SHIM_RUNTIMEEXPORT</span><span class="sxs-lookup"><span data-stu-id="4707f-117">CLR_E_SHIM_RUNTIMEEXPORT</span></span>|<span data-ttu-id="4707f-118">İşlev, çalışma zamanını şuradan verilmez.</span><span class="sxs-lookup"><span data-stu-id="4707f-118">The function is not exported from the runtime.</span></span>|  
+|<span data-ttu-id="7aefe-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="7aefe-113">S_OK</span></span>|<span data-ttu-id="7aefe-114">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="7aefe-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="7aefe-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="7aefe-115">E_POINTER</span></span>|<span data-ttu-id="7aefe-116">`ppv` geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="7aefe-116">`ppv` is not valid.</span></span>|  
+|<span data-ttu-id="7aefe-117">CLR_E_SHIM_RUNTIMEEXPORT</span><span class="sxs-lookup"><span data-stu-id="7aefe-117">CLR_E_SHIM_RUNTIMEEXPORT</span></span>|<span data-ttu-id="7aefe-118">İşlev, çalışma zamanını şuradan verilmez.</span><span class="sxs-lookup"><span data-stu-id="7aefe-118">The function is not exported from the runtime.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4707f-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4707f-119">Requirements</span></span>  
- <span data-ttu-id="4707f-120">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4707f-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7aefe-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7aefe-119">Requirements</span></span>  
+ <span data-ttu-id="7aefe-120">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7aefe-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4707f-121">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4707f-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="7aefe-121">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7aefe-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="4707f-122">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4707f-122">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="7aefe-122">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7aefe-122">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="4707f-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4707f-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7aefe-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7aefe-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4707f-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4707f-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7aefe-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7aefe-124">See also</span></span>
 
-- [<span data-ttu-id="4707f-125">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="4707f-125">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="7aefe-125">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="7aefe-125">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

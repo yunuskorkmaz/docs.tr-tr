@@ -17,40 +17,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a25e52c6b858aaa602ffade0e407b1aaf6e5c67e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2af3f58fa7714b3c2b0ba387b1da650f0638dd6c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995598"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758779"
 ---
-# <a name="icordebugilframesetip-method"></a><span data-ttu-id="a26fe-102">ICorDebugILFrame::SetIP Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a26fe-102">ICorDebugILFrame::SetIP Method</span></span>
-<span data-ttu-id="a26fe-103">Microsoft Ara dil (MSIL) kodu belirtilen uzaklık konuma yönerge işaretçisini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="a26fe-103">Sets the instruction pointer to the specified offset location in the Microsoft intermediate language (MSIL) code.</span></span>  
+# <a name="icordebugilframesetip-method"></a><span data-ttu-id="af3b7-102">ICorDebugILFrame::SetIP Yöntemi</span><span class="sxs-lookup"><span data-stu-id="af3b7-102">ICorDebugILFrame::SetIP Method</span></span>
+<span data-ttu-id="af3b7-103">Microsoft Ara dil (MSIL) kodu belirtilen uzaklık konuma yönerge işaretçisini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="af3b7-103">Sets the instruction pointer to the specified offset location in the Microsoft intermediate language (MSIL) code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a26fe-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a26fe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="af3b7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="af3b7-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SetIP (  
     [in] ULONG32 nOffset  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a26fe-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a26fe-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="af3b7-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="af3b7-105">Parameters</span></span>  
  `nOffset`  
- <span data-ttu-id="a26fe-106">MSIL kodu uzaklık konumu.</span><span class="sxs-lookup"><span data-stu-id="a26fe-106">The offset location in the MSIL code.</span></span>  
+ <span data-ttu-id="af3b7-106">MSIL kodu uzaklık konumu.</span><span class="sxs-lookup"><span data-stu-id="af3b7-106">The offset location in the MSIL code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a26fe-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a26fe-107">Remarks</span></span>  
- <span data-ttu-id="a26fe-108">Çağrılar `SetIP` hemen tüm çerçeveleri ve zincirleri için geçerli iş parçacığı geçersiz.</span><span class="sxs-lookup"><span data-stu-id="a26fe-108">Calls to `SetIP` immediately invalidate all frames and chains for the current thread.</span></span> <span data-ttu-id="a26fe-109">Hata ayıklayıcı çağrısı yapıldıktan sonra çerçeve bilgileri gerekiyorsa `SetIP`, yeni bir yığın izlemesi gerçekleştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="a26fe-109">If the debugger needs frame information after a call to `SetIP`, it must perform a new stack trace.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="af3b7-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="af3b7-107">Remarks</span></span>  
+ <span data-ttu-id="af3b7-108">Çağrılar `SetIP` hemen tüm çerçeveleri ve zincirleri için geçerli iş parçacığı geçersiz.</span><span class="sxs-lookup"><span data-stu-id="af3b7-108">Calls to `SetIP` immediately invalidate all frames and chains for the current thread.</span></span> <span data-ttu-id="af3b7-109">Hata ayıklayıcı çağrısı yapıldıktan sonra çerçeve bilgileri gerekiyorsa `SetIP`, yeni bir yığın izlemesi gerçekleştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="af3b7-109">If the debugger needs frame information after a call to `SetIP`, it must perform a new stack trace.</span></span>  
   
- <span data-ttu-id="a26fe-110">[Icordebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) yığın çerçevesini geçerli bir durumda tutmak çalışacaktır.</span><span class="sxs-lookup"><span data-stu-id="a26fe-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) will attempt to keep the stack frame in a valid state.</span></span> <span data-ttu-id="a26fe-111">Ancak, çerçeve geçerli bir durumda olsa bile, yine de olabilir başlatılmamış yerel değişkenler gibi sorunlar.</span><span class="sxs-lookup"><span data-stu-id="a26fe-111">However, even if the frame is in a valid state, there still may be problems such as uninitialized local variables.</span></span> <span data-ttu-id="a26fe-112">Çağıran, çalışan programa önbelleklerinin sağlamaktan sorumludur.</span><span class="sxs-lookup"><span data-stu-id="a26fe-112">The caller is responsible for ensuring the coherency of the running program.</span></span>  
+ <span data-ttu-id="af3b7-110">[Icordebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) yığın çerçevesini geçerli bir durumda tutmak çalışacaktır.</span><span class="sxs-lookup"><span data-stu-id="af3b7-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) will attempt to keep the stack frame in a valid state.</span></span> <span data-ttu-id="af3b7-111">Ancak, çerçeve geçerli bir durumda olsa bile, yine de olabilir başlatılmamış yerel değişkenler gibi sorunlar.</span><span class="sxs-lookup"><span data-stu-id="af3b7-111">However, even if the frame is in a valid state, there still may be problems such as uninitialized local variables.</span></span> <span data-ttu-id="af3b7-112">Çağıran, çalışan programa önbelleklerinin sağlamaktan sorumludur.</span><span class="sxs-lookup"><span data-stu-id="af3b7-112">The caller is responsible for ensuring the coherency of the running program.</span></span>  
   
- <span data-ttu-id="a26fe-113">64-bit platformlarda, yönerge işaretçisini tanesi taşınamaz bir `catch` veya `finally` blok.</span><span class="sxs-lookup"><span data-stu-id="a26fe-113">On 64-bit platforms, the instruction pointer cannot be moved out of a `catch` or `finally` block.</span></span> <span data-ttu-id="a26fe-114">Varsa `SetIP` çağrılır böyle bir 64-bit platformlarda hareket ettirmek için hata olduğunu gösteren bir HRESULT döndürür.</span><span class="sxs-lookup"><span data-stu-id="a26fe-114">If `SetIP` is called to make such a move on a 64-bit platform, it will return an HRESULT indicating failure.</span></span>  
+ <span data-ttu-id="af3b7-113">64-bit platformlarda, yönerge işaretçisini tanesi taşınamaz bir `catch` veya `finally` blok.</span><span class="sxs-lookup"><span data-stu-id="af3b7-113">On 64-bit platforms, the instruction pointer cannot be moved out of a `catch` or `finally` block.</span></span> <span data-ttu-id="af3b7-114">Varsa `SetIP` çağrılır böyle bir 64-bit platformlarda hareket ettirmek için hata olduğunu gösteren bir HRESULT döndürür.</span><span class="sxs-lookup"><span data-stu-id="af3b7-114">If `SetIP` is called to make such a move on a 64-bit platform, it will return an HRESULT indicating failure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a26fe-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a26fe-115">Requirements</span></span>  
- <span data-ttu-id="a26fe-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a26fe-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="af3b7-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="af3b7-115">Requirements</span></span>  
+ <span data-ttu-id="af3b7-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="af3b7-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a26fe-117">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a26fe-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="af3b7-117">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="af3b7-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a26fe-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a26fe-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="af3b7-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="af3b7-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a26fe-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a26fe-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="af3b7-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af3b7-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

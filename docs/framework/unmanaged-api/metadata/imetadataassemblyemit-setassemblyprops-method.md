@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3361212f9a7f7ff0739e8544419a2b67abc8f457
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34335321207e98a518ff3e0fdb5ea1dc3ac68b75
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044740"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776258"
 ---
-# <a name="imetadataassemblyemitsetassemblyprops-method"></a><span data-ttu-id="78502-102">IMetaDataAssemblyEmit::SetAssemblyProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="78502-102">IMetaDataAssemblyEmit::SetAssemblyProps Method</span></span>
-<span data-ttu-id="78502-103">Belirtilen değiştirir `Assembly` meta veri yapısı.</span><span class="sxs-lookup"><span data-stu-id="78502-103">Modifies the specified `Assembly` metadata structure.</span></span>  
+# <a name="imetadataassemblyemitsetassemblyprops-method"></a><span data-ttu-id="213ec-102">IMetaDataAssemblyEmit::SetAssemblyProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="213ec-102">IMetaDataAssemblyEmit::SetAssemblyProps Method</span></span>
+<span data-ttu-id="213ec-103">Belirtilen değiştirir `Assembly` meta veri yapısı.</span><span class="sxs-lookup"><span data-stu-id="213ec-103">Modifies the specified `Assembly` metadata structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="78502-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="78502-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="213ec-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="213ec-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SetAssemblyProps (  
     [in] mdAssembly               pma,  
     [in] const void               *pbPublicKey,  
@@ -41,40 +41,40 @@ HRESULT SetAssemblyProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="78502-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="78502-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="213ec-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="213ec-105">Parameters</span></span>  
  `pma`  
- <span data-ttu-id="78502-106">[in] Belirten bir meta veri belirteci `Assembly` değiştirilecek meta veri yapısı.</span><span class="sxs-lookup"><span data-stu-id="78502-106">[in] The metadata token that specifies the `Assembly` metadata structure to be modified.</span></span>  
+ <span data-ttu-id="213ec-106">[in] Belirten bir meta veri belirteci `Assembly` değiştirilecek meta veri yapısı.</span><span class="sxs-lookup"><span data-stu-id="213ec-106">[in] The metadata token that specifies the `Assembly` metadata structure to be modified.</span></span>  
   
  `pbPublicKey`  
- <span data-ttu-id="78502-107">[in] Derlemenin yayımcı ortak anahtarı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="78502-107">[in] A pointer to the public key of the publisher of the assembly.</span></span>  
+ <span data-ttu-id="213ec-107">[in] Derlemenin yayımcı ortak anahtarı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="213ec-107">[in] A pointer to the public key of the publisher of the assembly.</span></span>  
   
  `cbPublicKey`  
- <span data-ttu-id="78502-108">[in] Bayt cinsinden boyutu `pbPublicKey`.</span><span class="sxs-lookup"><span data-stu-id="78502-108">[in] The size in bytes of `pbPublicKey`.</span></span>  
+ <span data-ttu-id="213ec-108">[in] Bayt cinsinden boyutu `pbPublicKey`.</span><span class="sxs-lookup"><span data-stu-id="213ec-108">[in] The size in bytes of `pbPublicKey`.</span></span>  
   
  `ulHashAlgId`  
- <span data-ttu-id="78502-109">[in] Derleme dosyalarını karması için kullanılan karma algoritması için tanımlayıcı.</span><span class="sxs-lookup"><span data-stu-id="78502-109">[in] The identifier for the hash algorithm used to hash the assembly files.</span></span>  
+ <span data-ttu-id="213ec-109">[in] Derleme dosyalarını karması için kullanılan karma algoritması için tanımlayıcı.</span><span class="sxs-lookup"><span data-stu-id="213ec-109">[in] The identifier for the hash algorithm used to hash the assembly files.</span></span>  
   
  `szName`  
- <span data-ttu-id="78502-110">[in] Derleme kullanıcı tarafından okunabilen metin adı.</span><span class="sxs-lookup"><span data-stu-id="78502-110">[in] The human-readable text name of the assembly.</span></span>  
+ <span data-ttu-id="213ec-110">[in] Derleme kullanıcı tarafından okunabilen metin adı.</span><span class="sxs-lookup"><span data-stu-id="213ec-110">[in] The human-readable text name of the assembly.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="78502-111">[in] Derleme sürümü, platforma ve yerel ayar bilgilerini içeren ASSEMBLYMETADATA işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="78502-111">[in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.</span></span>  
+ <span data-ttu-id="213ec-111">[in] Derleme sürümü, platforma ve yerel ayar bilgilerini içeren ASSEMBLYMETADATA işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="213ec-111">[in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.</span></span>  
   
  `dwAssemblyFlags`  
- <span data-ttu-id="78502-112">[in] Bitsel bir birleşimi [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) derleme çeşitli özniteliklerini belirten değerleri.</span><span class="sxs-lookup"><span data-stu-id="78502-112">[in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.</span></span>  
+ <span data-ttu-id="213ec-112">[in] Bitsel bir birleşimi [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) derleme çeşitli özniteliklerini belirten değerleri.</span><span class="sxs-lookup"><span data-stu-id="213ec-112">[in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="78502-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="78502-113">Remarks</span></span>  
- <span data-ttu-id="78502-114">Oluşturmak için bir `Assembly` meta veri yapısı, kullanım [Imetadataassemblyemit::defineassembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="78502-114">To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="213ec-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="213ec-113">Remarks</span></span>  
+ <span data-ttu-id="213ec-114">Oluşturmak için bir `Assembly` meta veri yapısı, kullanım [Imetadataassemblyemit::defineassembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="213ec-114">To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="78502-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="78502-115">Requirements</span></span>  
- <span data-ttu-id="78502-116">**Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="78502-116">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="213ec-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="213ec-115">Requirements</span></span>  
+ <span data-ttu-id="213ec-116">**Platform:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="213ec-116">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="78502-117">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="78502-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="213ec-117">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="213ec-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="78502-118">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="78502-118">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="213ec-118">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="213ec-118">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="78502-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78502-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="213ec-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="213ec-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="78502-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="78502-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="213ec-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="213ec-120">See also</span></span>
 
-- [<span data-ttu-id="78502-121">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="78502-121">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="213ec-121">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="213ec-121">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

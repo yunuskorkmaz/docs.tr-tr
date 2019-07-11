@@ -17,47 +17,47 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca176be93b92e44228d9b4063e87a62263e83e04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03b7ca218318df517832d198e72d4f79d30827b8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782512"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779244"
 ---
-# <a name="icorprofilercallback4getrejitparameters-method"></a><span data-ttu-id="ac099-102">ICorProfilerCallback4::GetReJITParameters Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ac099-102">ICorProfilerCallback4::GetReJITParameters Method</span></span>
-<span data-ttu-id="ac099-103">Kod profil oluşturucu, yeni bir znovu yöntem gövdesi için başka bir kod oluşturma bayrakları ayarlamanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="ac099-103">Allows the code profiler to set alternate code generation flags for a new recompiled method body.</span></span>  
+# <a name="icorprofilercallback4getrejitparameters-method"></a><span data-ttu-id="d8904-102">ICorProfilerCallback4::GetReJITParameters Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d8904-102">ICorProfilerCallback4::GetReJITParameters Method</span></span>
+<span data-ttu-id="d8904-103">Kod profil oluşturucu, yeni bir znovu yöntem gövdesi için başka bir kod oluşturma bayrakları ayarlamanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="d8904-103">Allows the code profiler to set alternate code generation flags for a new recompiled method body.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac099-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ac099-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d8904-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d8904-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef methodId,     [in] ICorProfilerFunctionControl *pFunctionControl);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ac099-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ac099-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d8904-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d8904-105">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="ac099-106">[in] Kendisi için CLR JIT yeniden derleme parametreleri gereken yöntemini içeren modül.</span><span class="sxs-lookup"><span data-stu-id="ac099-106">[in] The module that contains the method for which the CLR needs JIT recompilation parameters.</span></span>  
+ <span data-ttu-id="d8904-106">[in] Kendisi için CLR JIT yeniden derleme parametreleri gereken yöntemini içeren modül.</span><span class="sxs-lookup"><span data-stu-id="d8904-106">[in] The module that contains the method for which the CLR needs JIT recompilation parameters.</span></span>  
   
  `methodId`  
- <span data-ttu-id="ac099-107">[in] `MethodDef` Yönteminin CLR JIT yeniden derleme parametreleri gerekir.</span><span class="sxs-lookup"><span data-stu-id="ac099-107">[in] The `MethodDef` of the method for which the CLR needs JIT recompilation parameters.</span></span>  
+ <span data-ttu-id="d8904-107">[in] `MethodDef` Yönteminin CLR JIT yeniden derleme parametreleri gerekir.</span><span class="sxs-lookup"><span data-stu-id="d8904-107">[in] The `MethodDef` of the method for which the CLR needs JIT recompilation parameters.</span></span>  
   
  `pFunctionControl`  
- <span data-ttu-id="ac099-108">[in] Bir işaretçi bir [Icorprofilerfunctioncontrol](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) profil oluşturucuyu yeniden derlenen yöntem JIT yeniden derleme bilgilerini sağlamak için kullanabileceğiniz arabirimi.</span><span class="sxs-lookup"><span data-stu-id="ac099-108">[in] A pointer to an [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface that the profiler can use to provide JIT recompilation information for the method being recompiled.</span></span>  
+ <span data-ttu-id="d8904-108">[in] Bir işaretçi bir [Icorprofilerfunctioncontrol](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) profil oluşturucuyu yeniden derlenen yöntem JIT yeniden derleme bilgilerini sağlamak için kullanabileceğiniz arabirimi.</span><span class="sxs-lookup"><span data-stu-id="d8904-108">[in] A pointer to an [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface that the profiler can use to provide JIT recompilation information for the method being recompiled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ac099-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ac099-109">Remarks</span></span>  
- <span data-ttu-id="ac099-110">CLR sorunları bir `GetReJITParameters` geri çağırma profil oluşturucu, belirli bir yöntemin yeniden derlemeden parametrelerini belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ac099-110">The CLR issues a `GetReJITParameters` callback so that the profiler can specify the parameters for recompiling a given method.</span></span> <span data-ttu-id="ac099-111">`GetReJITParameters` Geri çağırma işlevi yalnızca bir kez verildiği; Profil Oluşturucu tarafından sağlanan parametreleri, bu işlevin tüm örneklerine uygulanır.</span><span class="sxs-lookup"><span data-stu-id="ac099-111">The `GetReJITParameters` callback is issued only once per function; the parameters supplied by the profiler apply to all instances of that function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d8904-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d8904-109">Remarks</span></span>  
+ <span data-ttu-id="d8904-110">CLR sorunları bir `GetReJITParameters` geri çağırma profil oluşturucu, belirli bir yöntemin yeniden derlemeden parametrelerini belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d8904-110">The CLR issues a `GetReJITParameters` callback so that the profiler can specify the parameters for recompiling a given method.</span></span> <span data-ttu-id="d8904-111">`GetReJITParameters` Geri çağırma işlevi yalnızca bir kez verildiği; Profil Oluşturucu tarafından sağlanan parametreleri, bu işlevin tüm örneklerine uygulanır.</span><span class="sxs-lookup"><span data-stu-id="d8904-111">The `GetReJITParameters` callback is issued only once per function; the parameters supplied by the profiler apply to all instances of that function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ac099-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ac099-112">Requirements</span></span>  
- <span data-ttu-id="ac099-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ac099-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d8904-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d8904-112">Requirements</span></span>  
+ <span data-ttu-id="d8904-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d8904-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ac099-114">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ac099-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d8904-114">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d8904-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ac099-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ac099-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d8904-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d8904-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ac099-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac099-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="d8904-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d8904-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac099-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ac099-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8904-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d8904-117">See also</span></span>
 
-- [<span data-ttu-id="ac099-118">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ac099-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="ac099-119">ICorProfilerCallback4 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ac099-119">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
-- [<span data-ttu-id="ac099-120">JITCompilationStarted Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ac099-120">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
-- [<span data-ttu-id="ac099-121">ReJITCompilationStarted Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ac099-121">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)
+- [<span data-ttu-id="d8904-118">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d8904-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="d8904-119">ICorProfilerCallback4 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d8904-119">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [<span data-ttu-id="d8904-120">JITCompilationStarted Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d8904-120">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+- [<span data-ttu-id="d8904-121">ReJITCompilationStarted Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d8904-121">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)

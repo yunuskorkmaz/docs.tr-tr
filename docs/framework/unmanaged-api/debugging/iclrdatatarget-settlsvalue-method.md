@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c0be35772b10d89f90da5b33f47aa781034b13a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34c0ab32d18d5aeeb81befa736cc42b678b11fb1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698089"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738552"
 ---
-# <a name="iclrdatatargetsettlsvalue-method"></a><span data-ttu-id="2ace7-102">ICLRDataTarget::SetTLSValue Yöntemi</span><span class="sxs-lookup"><span data-stu-id="2ace7-102">ICLRDataTarget::SetTLSValue Method</span></span>
-<span data-ttu-id="2ace7-103">Hedef işlemde belirtilen iş parçacığının iş parçacığı yerel depolama (TLS) bir değer ayarlar.</span><span class="sxs-lookup"><span data-stu-id="2ace7-103">Sets a value in the thread local storage (TLS) of the specified thread in the target process.</span></span> <span data-ttu-id="2ace7-104">Bu yöntem, ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.</span><span class="sxs-lookup"><span data-stu-id="2ace7-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
+# <a name="iclrdatatargetsettlsvalue-method"></a><span data-ttu-id="55ecb-102">ICLRDataTarget::SetTLSValue Yöntemi</span><span class="sxs-lookup"><span data-stu-id="55ecb-102">ICLRDataTarget::SetTLSValue Method</span></span>
+<span data-ttu-id="55ecb-103">Hedef işlemde belirtilen iş parçacığının iş parçacığı yerel depolama (TLS) bir değer ayarlar.</span><span class="sxs-lookup"><span data-stu-id="55ecb-103">Sets a value in the thread local storage (TLS) of the specified thread in the target process.</span></span> <span data-ttu-id="55ecb-104">Bu yöntem, ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.</span><span class="sxs-lookup"><span data-stu-id="55ecb-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2ace7-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2ace7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="55ecb-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="55ecb-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SetTLSValue (  
     [in] ULONG32            threadID,  
     [in] ULONG32            index,  
@@ -37,28 +37,28 @@ HRESULT SetTLSValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2ace7-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2ace7-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="55ecb-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="55ecb-106">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="2ace7-107">[in] Bir iş parçacığı hedef işlem, işletim sistemi tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="2ace7-107">[in] The operating system identifier of a thread in the target process.</span></span>  
+ <span data-ttu-id="55ecb-107">[in] Bir iş parçacığı hedef işlem, işletim sistemi tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="55ecb-107">[in] The operating system identifier of a thread in the target process.</span></span>  
   
  `index`  
- <span data-ttu-id="2ace7-108">[in] Konumun dizini.</span><span class="sxs-lookup"><span data-stu-id="2ace7-108">[in] The index of the location.</span></span> <span data-ttu-id="2ace7-109">Bu değer, belirtilen iş parçacığı yerel deposuna geçerli bir dizin olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="2ace7-109">This value must be a valid index in the local store of the specified thread.</span></span>  
+ <span data-ttu-id="55ecb-108">[in] Konumun dizini.</span><span class="sxs-lookup"><span data-stu-id="55ecb-108">[in] The index of the location.</span></span> <span data-ttu-id="55ecb-109">Bu değer, belirtilen iş parçacığı yerel deposuna geçerli bir dizin olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="55ecb-109">This value must be a valid index in the local store of the specified thread.</span></span>  
   
  `value`  
- <span data-ttu-id="2ace7-110">[in] A `CLRDATA_ADDRESS` değeri belirli TLS konuma yerleştirmek için belirten değer.</span><span class="sxs-lookup"><span data-stu-id="2ace7-110">[in] A `CLRDATA_ADDRESS` value that specifies the value to place in the given TLS location.</span></span>  
+ <span data-ttu-id="55ecb-110">[in] A `CLRDATA_ADDRESS` değeri belirli TLS konuma yerleştirmek için belirten değer.</span><span class="sxs-lookup"><span data-stu-id="55ecb-110">[in] A `CLRDATA_ADDRESS` value that specifies the value to place in the given TLS location.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2ace7-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2ace7-111">Remarks</span></span>  
- <span data-ttu-id="2ace7-112">Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="2ace7-112">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="55ecb-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="55ecb-111">Remarks</span></span>  
+ <span data-ttu-id="55ecb-112">Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="55ecb-112">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2ace7-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2ace7-113">Requirements</span></span>  
- <span data-ttu-id="2ace7-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2ace7-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="55ecb-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="55ecb-113">Requirements</span></span>  
+ <span data-ttu-id="55ecb-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="55ecb-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2ace7-115">**Üst bilgi:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="2ace7-115">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="55ecb-115">**Üst bilgi:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="55ecb-115">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="2ace7-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2ace7-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="55ecb-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="55ecb-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2ace7-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2ace7-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="55ecb-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55ecb-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2ace7-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2ace7-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="55ecb-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="55ecb-118">See also</span></span>
 
-- [<span data-ttu-id="2ace7-119">ICLRDataTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2ace7-119">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [<span data-ttu-id="55ecb-119">ICLRDataTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="55ecb-119">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
