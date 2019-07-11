@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0739cc38d1f12967f0daef2d6828e04a256ade6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0076b70c85c21f0c4b1fb140b15000f99dbff742
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650680"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755139"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace Yöntemi
 Tam ad alanı adı verilen açık sözlü kapsamda kullanılmakta olduğunu belirtir. Ad alanı içinde açık olan kapsamlardan devralır tüm kapsamlar kullanılır. Geçerli kapsamdaki kapatma ad alanı kullanımını durdurur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT UsingNamespace(  
     [in] const WCHAR *fullName);  
 ```  

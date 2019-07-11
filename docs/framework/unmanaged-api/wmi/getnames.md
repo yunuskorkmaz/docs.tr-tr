@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f664edf29e5d2f9ec4e523aa7f7b204cf999e01b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e75bf9aab820216373f2f33fe8aa567f10befcb1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61724089"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746522"
 ---
 # <a name="getnames-function"></a>GetNames işlevi
 Bir alt veya tümünü bir nesnenin özellik adlarını alır. 
@@ -30,7 +30,7 @@ Bir alt veya tümünü bir nesnenin özellik adlarını alır.
     
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT GetNames (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -85,7 +85,7 @@ Olarak geçirilen bayraklar `lEnumFlags` bağımsız değişkeni olan tanımlana
 | Grup 1 bayrakları |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_FLAG_ALWAYS` | 0 | Tüm özellik adlarını döndürür. `strQualifierName` ve `pQualifierVal` kullanılmadı. |
-| `WBEM_FLAG_ONLY_IF_TRUE` | 1. | Tarafından belirtilen adının niteleyicisi olan özellikler yalnızca dönüş `strQualifierName` parametresi. Bu bayrak kullanılırsa belirtmeniz gerekir `strQualifierName`. |
+| `WBEM_FLAG_ONLY_IF_TRUE` | 1\. | Tarafından belirtilen adının niteleyicisi olan özellikler yalnızca dönüş `strQualifierName` parametresi. Bu bayrak kullanılırsa belirtmeniz gerekir `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Tarafından belirtilen adının niteleyicisi olmayan özellikler yalnızca dönüş `strQualifierName` parametresi. Bu bayrak kullanılırsa belirtmeniz gerekir `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Yalnızca bir niteleyici tarafından belirtilen adı taşıyan özellikler dönüş `wszQualifierName` parametre ve bir değer tarafından belirtilen aynı de `pQualifierVal` yapısı. Bu bayrak kullanılırsa, her ikisini de belirtmelisiniz bir `wszQualifierName` ve `pQualifierValue`. |
 

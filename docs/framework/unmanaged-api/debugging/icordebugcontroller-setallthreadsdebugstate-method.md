@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 280dc3f0271d7326fe4c22b813abebfd4d45c89e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9348652129a3357784654006dc16d822298f28f8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749156"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749953"
 ---
 # <a name="icordebugcontrollersetallthreadsdebugstate-method"></a>ICorDebugController::SetAllThreadsDebugState Yöntemi
 İşlemdeki tüm yönetilen iş parçacığı hata ayıklama durumunu ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT SetAllThreadsDebugState (  
     [in] CorDebugThreadState  state,  
     [in] ICorDebugThread      *pExceptThisThread  

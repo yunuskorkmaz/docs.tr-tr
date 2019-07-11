@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 050ed0bbd4da38bede5a56ff95d0243f5f3cf1da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8fba433c5f7ef9701caf61971841672f46b425
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789915"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742031"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder Metodu
 Bir iç içe geçmiş bir tür ileticisi verilen derleme türü tabloya ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT ExportNestedTypeForwarder(  
     mdAssembly      AssemblyID,  
     mdToken         FileToken,  

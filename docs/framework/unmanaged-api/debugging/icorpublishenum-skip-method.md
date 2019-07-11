@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a98892964eb21746580e9115f86fd1be0832d9f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9be0c3b931130e0ea86766b5134ca514478f0201
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993505"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764934"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip Yöntemi
 İmleci İleri numaralandırmada tarafından belirtilen sayıda öğeyi taşır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT Skip (  
     [in] ULONG   celt  
 );  

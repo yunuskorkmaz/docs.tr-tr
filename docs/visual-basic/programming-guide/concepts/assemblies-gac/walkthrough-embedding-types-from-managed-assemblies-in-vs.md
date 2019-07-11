@@ -2,12 +2,12 @@
 title: "İzlenecek yol: Visual Studio'da (Visual Basic) yönetilen derlemelerden türler katıştırma"
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 18f22a771ab7279f177fe39d8c372a8517056890
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c0de529a0005c9dbaf1f8d0f25957b217280e31
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754823"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753014"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>İzlenecek yol: Visual Studio'da (Visual Basic) yönetilen derlemelerden türler katıştırma
 
@@ -51,7 +51,7 @@ Tür bilgilerini COM birlikte çalışma derlemelerini, destekliyoruz türü ekl
 
 ## <a name="creating-an-interface"></a>Bir arabirim oluşturma
 
-#### <a name="to-create-the-type-equivalence-interface-project"></a>Tür eşdeğerliği arabirimi projesi oluşturmak için
+### <a name="to-create-the-type-equivalence-interface-project"></a>Tür eşdeğerliği arabirimi projesi oluşturmak için
 
 1. Visual Studio'da üzerinde **dosya** menüsünde **yeni** ve ardından **proje**.
 
@@ -61,7 +61,7 @@ Tür bilgilerini COM birlikte çalışma derlemelerini, destekliyoruz türü ekl
 
 4. TypeEquivalenceInterface projeyi sağ tıklatıp **özellikleri**. Tıklayın **derleme** sekmesi. Çıkış yolu geçerli bir konum, geliştirme bilgisayarınızda gibi ayarlamak `C:\TypeEquivalenceSample`. Bu konum, ayrıca bu izlenecek yolda bir sonraki adımda kullanılır.
 
-5. Yine de proje özelliklerini düzenlerken tıklayın **imzalama** sekmesi. Seçin **derlemeyi imzalamayı** seçeneği. İçinde **bir tanımlayıcı ad anahtar dosyası seç** listesinde **< Yeni … >**. İçinde **anahtar dosya adı** kutusuna `key.snk`. NET **anahtar dosyamı bir parolayla korumak** onay kutusu. **Tamam**'ı tıklatın.
+5. Yine de proje özelliklerini düzenlerken tıklayın **imzalama** sekmesi. Seçin **derlemeyi imzalamayı** seçeneği. İçinde **bir tanımlayıcı ad anahtar dosyası seç** listesinde **< Yeni … >** . İçinde **anahtar dosya adı** kutusuna `key.snk`. NET **anahtar dosyamı bir parolayla korumak** onay kutusu. **Tamam**'ı tıklatın.
 
 6. ISampleInterface.vb dosyasını açın. Aşağıdaki kodu ISampleInterface arabirimi oluşturmak için ISampleInterface sınıf dosyası ekleyin.
 
@@ -96,7 +96,7 @@ Tür bilgilerini COM birlikte çalışma derlemelerini, destekliyoruz türü ekl
 
 ## <a name="creating-a-runtime-class"></a>Bir çalışma zamanı sınıf oluşturma
 
-#### <a name="to-create-the-type-equivalence-runtime-project"></a>Tür eşdeğerliği çalışma zamanı projesi oluşturmak için
+### <a name="to-create-the-type-equivalence-runtime-project"></a>Tür eşdeğerliği çalışma zamanı projesi oluşturmak için
 
 1. Visual Studio'da üzerinde **dosya** menüsünde **yeni** ve ardından **proje**.
 
@@ -106,7 +106,7 @@ Tür bilgilerini COM birlikte çalışma derlemelerini, destekliyoruz türü ekl
 
 4. TypeEquivalenceRuntime projeyi sağ tıklatıp **özellikleri**. Tıklayın **derleme** sekmesi. Örneğin, TypeEquivalenceInterface projesinde kullanılan aynı konuma çıkış yolunu ayarlayın `C:\TypeEquivalenceSample`.
 
-5. Yine de proje özelliklerini düzenlerken tıklayın **imzalama** sekmesi. Seçin **derlemeyi imzalamayı** seçeneği. İçinde **bir tanımlayıcı ad anahtar dosyası seç** listesinde **< Yeni … >**. İçinde **anahtar dosya adı** kutusuna `key.snk`. NET **anahtar dosyamı bir parolayla korumak** onay kutusu. **Tamam**'ı tıklatın.
+5. Yine de proje özelliklerini düzenlerken tıklayın **imzalama** sekmesi. Seçin **derlemeyi imzalamayı** seçeneği. İçinde **bir tanımlayıcı ad anahtar dosyası seç** listesinde **< Yeni … >** . İçinde **anahtar dosya adı** kutusuna `key.snk`. NET **anahtar dosyamı bir parolayla korumak** onay kutusu.           **Tamam**'ı tıklatın.
 
 6. TypeEquivalenceRuntime projeyi sağ tıklatıp **Başvuru Ekle**. Tıklayın **Gözat** sekmesini ve çıkış yol klasöre göz atın. TypeEquivalenceInterface.dll dosyasını seçin ve tıklayın **Tamam**.
 
@@ -142,7 +142,7 @@ Tür bilgilerini COM birlikte çalışma derlemelerini, destekliyoruz türü ekl
 
 ## <a name="creating-a-client-project"></a>Bir istemci projesi oluşturma
 
-#### <a name="to-create-the-type-equivalence-client-project"></a>Tür eşdeğerliği istemci projesi oluşturmak için
+### <a name="to-create-the-type-equivalence-client-project"></a>Tür eşdeğerliği istemci projesi oluşturmak için
 
 1. Visual Studio'da üzerinde **dosya** menüsünde **yeni** ve ardından **proje**.
 
@@ -181,7 +181,7 @@ Tür bilgilerini COM birlikte çalışma derlemelerini, destekliyoruz türü ekl
 
 ## <a name="modifying-the-interface"></a>Arabirim değiştirme
 
-#### <a name="to-modify-the-interface"></a>Arabirim değiştirmek için
+### <a name="to-modify-the-interface"></a>Arabirim değiştirmek için
 
 1. Visual Studio'da üzerinde **dosya** menüsünde **açık**ve ardından **proje/çözüm**.
 
@@ -201,7 +201,7 @@ Tür bilgilerini COM birlikte çalışma derlemelerini, destekliyoruz türü ekl
 
 ## <a name="modifying-the-runtime-class"></a>Çalışma zamanı sınıf değiştirme
 
-#### <a name="to-modify-the-runtime-class"></a>Çalışma zamanı sınıf değiştirmek için
+### <a name="to-modify-the-runtime-class"></a>Çalışma zamanı sınıf değiştirmek için
 
 1. Visual Studio'da üzerinde **dosya** menüsünde **açık**ve ardından **proje/çözüm**.
 

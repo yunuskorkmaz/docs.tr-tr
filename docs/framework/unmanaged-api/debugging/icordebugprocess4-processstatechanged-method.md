@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 5e3a6714489e2051a09b5855ab9f911ef2f57450
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: adfd563e19389642ac0ed0a3cef4aae8a32fa466
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632294"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767189"
 ---
 # <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::ProcessStateChanged yöntemi
 
@@ -28,7 +28,7 @@ Icordebug ardışık düzen işlemi hata ayıklayıcı dışı debugee'nın yür
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```cpp
 HRESULT ProcessStateChanged(
     [in] CorDebugStateChange change
 );
@@ -47,7 +47,7 @@ Sağlanan yöntem parçasıdır `ICorDebugProcess4` arabirim ve sanal yöntem ta
 
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
- **Üst bilgi:** None
+ **Üst bilgi:** Yok.
 
  **Kitaplığı:** Yok.
  

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-ms.openlocfilehash: 9d8515b6d5b0caf3552ed05a7e0cd4a271efaf54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 098ca95687d8b0e9f4ac90d5c7e0df9a9a0ad950
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608352"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760382"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf İşleci (Visual Basic)
-Özel yordam başvuran bir yordam temsilci örneği oluşturur.  
+Özel yordam başvuran bir temsilci örneği oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,10 +26,10 @@ AddressOf procedurename
   
 ## <a name="parts"></a>Bölümler  
  `procedurename`  
- Gerekli. Yeni oluşturulan yordamı temsilci tarafından başvurulabilmesi için yordamı belirtir.  
+ Gerekli. Yeni oluşturulan temsilci tarafından başvurulabilmesi için yordamı belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `AddressOf` İşleci tarafından belirtilen işlevin işaret eden bir işlev temsilcisi oluşturur `procedurename`. Örnek hem yöntemi bir örnek yöntemi ardından işlev temsilcisi başvuruyor belirtilen yordam olduğunda. Ardından, işlev temsilcisi çağrıldığında belirtilen örneğinin belirtilen yöntem çağrılır.  
+ `AddressOf` İşleci sub veya function tarafından belirtilen işaret eden bir temsilci oluşturur `procedurename`. Bir örnek yöntemi temsilci örneği hem yöntemi başvuruyor belirtilen yordam olduğunda. Ardından, temsilci çağrıldığında belirtilen örneğinin belirtilen yöntem çağrılır.  
   
  `AddressOf` İşleci, bir temsilci Oluşturucu işleneni kullanılabilir veya bir bağlamda, temsilci türü belirlenebilir derleyici tarafından kullanılabilir.  
   

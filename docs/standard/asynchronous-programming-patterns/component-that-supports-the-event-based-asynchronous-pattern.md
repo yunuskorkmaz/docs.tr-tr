@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 85e7f10643c57837cf0b66613825241db94c0065
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 5171b9b9878331069e354eeb17ad57ca9bd594a8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423883"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773656"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama
 Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanız uygulayarak zaman uyumsuz işlevleri vererek göz önünde bulundurun [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -53,14 +53,14 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
 ## <a name="creating-the-component"></a>Bileşeni oluşturma  
  İlk adım, olay tabanlı zaman uyumsuz desen uygulayan bileşeni oluşturmaktır.  
   
-#### <a name="to-create-the-component"></a>Bileşeni oluşturmak için  
+### <a name="to-create-the-component"></a>Bileşeni oluşturmak için  
   
 - Adlı bir sınıf oluşturmak `PrimeNumberCalculator` öğesinden devralan <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Genel zaman uyumsuz olayları ve temsilcileri tanımlama  
  Bileşeniniz olayları kullanan istemciler için iletişim kurar. _MethodName_**tamamlandı** olay uyarıları zaman uyumsuz bir görev tamamlandığında istemcilere ve _MethodName_**ProgressChanged**olay bildiren istemciler ilerleme durumunu zaman uyumsuz bir görev.  
   
-#### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Bileşeninizin istemciler için zaman uyumsuz olayları tanımlamak için:  
+### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Bileşeninizin istemciler için zaman uyumsuz olayları tanımlamak için:  
   
 1. İçeri aktarma <xref:System.Threading?displayProperty=nameWithType> ve <xref:System.Collections.Specialized?displayProperty=nameWithType> dosyanızın üst kısmındaki ad alanları.  
   
@@ -85,7 +85,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
 ## <a name="checkpoint"></a>Checkpoint  
  Bu noktada, bileşen oluşturabilirsiniz.  
   
-#### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
+### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
   
 - Bileşen derleyin.  
   
@@ -101,7 +101,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
 ## <a name="defining-private-delegates"></a>Özel temsilcileri tanımlama  
  Zaman uyumsuz yönlerini `PrimeNumberCalculator` bileşeni uygulanır dahili olarak bilinen özel bir temsilci ile bir <xref:System.Threading.SendOrPostCallback>. A <xref:System.Threading.SendOrPostCallback> üzerinde yürüten bir geri çağırma yöntemi temsil eden bir <xref:System.Threading.ThreadPool> iş parçacığı. Geri çağırma yöntemi türünde tek bir parametre alan bir imza içermelidir <xref:System.Object>, bunun anlamı bir sarmalayıcı sınıfı varyans arasında durumu iletmeniz gerekir. Daha fazla bilgi için bkz. <xref:System.Threading.SendOrPostCallback>.  
   
-#### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>Bileşeninizin iç zaman uyumsuz davranışı uygulamak için:  
+### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>Bileşeninizin iç zaman uyumsuz davranışı uygulamak için:  
   
 1. Bildirme ve oluşturma <xref:System.Threading.SendOrPostCallback> , temsilciler `PrimeNumberCalculator` sınıfı. Oluşturma <xref:System.Threading.SendOrPostCallback> bir yardımcı yöntem nesneleri adlı `InitializeDelegates`.  
   
@@ -132,7 +132,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
 ## <a name="implementing-public-events"></a>Genel olaylar uygulama  
  Olay tabanlı zaman uyumsuz deseni uygulama bileşenleri olayları kullanan istemciler için iletişim kurar. Bu olaylar, Yardım uygun iş parçacığı üzerinde çağrılır <xref:System.ComponentModel.AsyncOperation> sınıfı.  
   
-#### <a name="to-raise-events-to-your-components-clients"></a>Olayları bileşeninizin istemcilere yükseltmek için:  
+### <a name="to-raise-events-to-your-components-clients"></a>Olayları bileşeninizin istemcilere yükseltmek için:  
   
 1. İstemcilere raporlama genel olaylar uygulayın. Bir olay için raporlama ilerleme ve raporlama tamamlanması için bir tane gerekir.  
   
@@ -146,7 +146,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
  `CompletionMethod` İmza gerekir tutun tüm durumu zaman uyumsuz işlemin sonucunu açıklamak gerekli. Asal sayı değilse asal ve değeri, ilk bölen sayı olup olmadığını, bu belirli zaman uyumsuz işlem tarafından test edilen numaralı durum tutar. Ayrıca bir durum oluştu, herhangi bir özel durumu açıklayan tutar ve <xref:System.ComponentModel.AsyncOperation> bu belirli görev için karşılık gelen.  
   
-#### <a name="to-complete-an-asynchronous-operation"></a>Zaman uyumsuz bir işlemi tamamlamak için:  
+### <a name="to-complete-an-asynchronous-operation"></a>Zaman uyumsuz bir işlemi tamamlamak için:  
   
 - Tamamlama yöntemini uygulayın. Doldurmak için kullandığı altı parametreleri alan bir `CalculatePrimeCompletedEventArgs` aracılığıyla istemcinin istemciye döndürülen `CalculatePrimeCompletedEventHandler`. İstemcinin görev kimlik belirteci iç koleksiyondan kaldırır ve bir çağrı ile zaman uyumsuz işlem yaşam süresi sona ermeden <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. <xref:System.ComponentModel.AsyncOperation> İş parçacığı veya uygulama modeli için uygun olan bir bağlam çağrısı sürekliliğe devreder.  
   
@@ -156,7 +156,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
 ## <a name="checkpoint"></a>Checkpoint  
  Bu noktada, bileşen oluşturabilirsiniz.  
   
-#### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
+### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
   
 - Bileşen derleyin.  
   
@@ -178,7 +178,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
 > [!NOTE]
 >  İlerleme durumunu bildirme içinde gerçekleştirilir `BuildPrimeNumberList` yöntemi. Hızlı bilgisayarlarda `ProgressChanged` olayları hızlı art arda gerçekleştirilen. İstemci iş parçacığı üzerinde bu olaylar oluşturulur, bu durum işleyebilir olması gerekir. Kullanıcı arabirimi kodu iletilerle yayılmamış ve yanıt vermeyi durdurma sorununa bunun sonucunda, devam edilemiyor olabilir. Bu durum işleyen bir örnek kullanıcı arabirimi için bkz: [nasıl yapılır: Olay tabanlı zaman uyumsuz desenin istemcisini uygulama](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
-#### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Asal numarası hesaplamayı zaman uyumsuz olarak çalıştırmak için:  
+### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Asal numarası hesaplamayı zaman uyumsuz olarak çalıştırmak için:  
   
 1. Uygulama `TaskCanceled` yardımcı yöntemi. Bu görev ömrü koleksiyonunun belirtilen görev kimliği denetler ve döndürür `true` , görev kimliği bulunamadı.  
   
@@ -210,7 +210,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
 ## <a name="checkpoint"></a>Checkpoint  
  Bu noktada, bileşen oluşturabilirsiniz.  
   
-#### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
+### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
   
 - Bileşen derleyin.  
   
@@ -221,7 +221,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
   
  Belirli bir bekleyen bir işlem iptal <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> , buna karşılık gelen <xref:System.ComponentModel.AsyncOperation>. Bu, işlemi ve yapılan sonraki çağrılar sona kendi <xref:System.ComponentModel.AsyncOperation> bir özel durum oluşturur.  
   
-#### <a name="to-implement-start-and-cancel-functionality"></a>Başlangıç uygulamak ve iptal et işlevi:  
+### <a name="to-implement-start-and-cancel-functionality"></a>Başlangıç uygulamak ve iptal et işlevi:  
   
 1. Uygulama `CalculatePrimeAsync` yöntemi. İstemci tarafından sağlanan belirtecin (görev kimliği) göre şu anda bekleyen görevler temsil eden tüm belirteçlerin benzersiz olduğundan emin olun. İstemci benzersiz olmayan bir belirtece geçiyorsa `CalculatePrimeAsync` bir özel durum oluşturur. Aksi takdirde, belirteç, görev kimliği koleksiyona eklenir.  
   
@@ -236,7 +236,7 @@ Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanı
 ## <a name="checkpoint"></a>Checkpoint  
  Bu noktada, bileşen oluşturabilirsiniz.  
   
-#### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
+### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
   
 - Bileşen derleyin.  
   

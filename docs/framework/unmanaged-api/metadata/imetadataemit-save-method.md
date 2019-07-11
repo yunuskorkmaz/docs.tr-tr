@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49e45085b0fbca10e490f11ce588f68aa8237b46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ece16d8dcdc685db960a485cd19261f6b9f2fbe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043062"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757594"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save Yöntemi
 Belirtilen adresteki bir dosyaya geçerli kapsamdaki tüm meta verileri kaydeder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT Save (   
     [in]  LPCWSTR     szFile,   
     [in]  DWORD       dwSaveFlags  

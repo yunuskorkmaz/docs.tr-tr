@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: a51c709b0b331127b74d98c4dc42e2772fd7f2db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89b89a0cb056a0515bf0859069455a73f62aae4a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775472"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769621"
 ---
 # <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess::EnumMethodInstanceByAddress yöntemi
 
@@ -30,7 +30,7 @@ Bu işlem bir adresi uzaklıkta başlayan yöntemi örneklerini sıralar.
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```cpp
 HRESULT EnumMethodInstanceByAddress(
     [in] CLRDATA_ENUM              *handle,
     [out] IXCLRDataMethodInstance **method

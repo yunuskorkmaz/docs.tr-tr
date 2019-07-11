@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: e0d277eb039c1fb1668f292d83ab9e7dbe4be70e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457547"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762329"
 ---
 # <a name="xaml-overview-wpf"></a>XAML genel bakış (WPF)
 Bu konu XAML dilinin özelliklerini açıklar ve yazmak için XAML nasıl kullanabileceğinizi gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu konu özel olarak uygulandığı şekilde XAML tanımlayan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML kendisini olan daha büyük bir dil kavramını [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -117,7 +117,7 @@ Bu konu XAML dilinin özelliklerini açıklar ve yazmak için XAML nasıl kullan
   
 - Sınıfı bir içerik özelliğinin bildirmeniz gerekir ve bu içerik özelliği bir dizeye atanabilir bir tür olması gerekir (türü olabilir <xref:System.Object>). Örneğin, herhangi <xref:System.Windows.Controls.ContentControl> kullanan <xref:System.Windows.Controls.ContentControl.Content%2A> içerik özelliği ve bunu türüdür <xref:System.Object>, ve bunu aşağıdaki kullanımı bir pratik üzerinde destekler <xref:System.Windows.Controls.ContentControl> gibi bir <xref:System.Windows.Controls.Button>: `<Button>Hello</Button>`.  
   
-- Türü bir tür dönüştürücüsü metin içeriği çalışması için bu tür dönüştürücüsü başlatma metin olarak kullanılır, bildirmeniz gerekir. Örneğin: `<Brush>Blue</Brush>` Bu uygulamada daha az karşılaşılan bir durumdur.  
+- Türü bir tür dönüştürücüsü metin içeriği çalışması için bu tür dönüştürücüsü başlatma metin olarak kullanılır, bildirmeniz gerekir. Örneğin: `<Brush>Blue</Brush>`. Bu uygulamada daha az karşılaşılan bir durumdur.  
   
 - Bilinen bir XAML dil temel türü olmalıdır.  
   

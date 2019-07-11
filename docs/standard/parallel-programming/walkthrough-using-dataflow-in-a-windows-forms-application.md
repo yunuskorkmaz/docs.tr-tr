@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0c9447e53a874da856eb59932ec3871a9a1371d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f4f8e25edb7d61e21406a5f7719f6dc98f686a9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654422"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755055"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma
 Bu belge, bir Windows Forms uygulamasında görüntü işleme gerçekleştiren veri akışı bloğu ağının nasıl oluşturulacağını gösterir.  
@@ -41,7 +41,7 @@ Bu belge, bir Windows Forms uygulamasında görüntü işleme gerçekleştiren v
 ## <a name="creating-the-windows-forms-application"></a>Windows Forms uygulaması oluşturma  
  Bu bölümde, temel Windows Forms uygulaması oluşturma ve ana formu için denetimler ekleme işlemleri açıklanmaktadır.  
   
-#### <a name="to-create-the-windows-forms-application"></a>Formları uygulaması Windows oluşturmak için  
+### <a name="to-create-the-windows-forms-application"></a>Formları uygulaması Windows oluşturmak için  
   
 1. Bir Visual C# veya Visual Basic Visual Studio'da oluşturma **Windows Forms uygulaması** proje. Bu belgede, proje adı `CompositeImages`.  
   
@@ -57,7 +57,7 @@ Bu belge, bir Windows Forms uygulamasında görüntü işleme gerçekleştiren v
 ## <a name="creating-the-dataflow-network"></a>Veri akışı ağ oluşturma  
  Bu bölümde, görüntü işleme gerçekleştiren veri akışı ağ oluşturmayı açıklar.  
   
-#### <a name="to-create-the-dataflow-network"></a>Veri akışı ağı oluşturmak için  
+### <a name="to-create-the-dataflow-network"></a>Veri akışı ağı oluşturmak için  
   
 1. Projenize System.Threading.Tasks.Dataflow.dll'ye birer başvuru ekleyin.  
   
@@ -107,7 +107,7 @@ Bu belge, bir Windows Forms uygulamasında görüntü işleme gerçekleştiren v
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Veri akışı ağ kullanıcı arabirimine bağlanma  
  Bu bölümde, veri akışı ağ kullanıcı arabirimine bağlamak açıklar. Bileşik görüntü oluşturmayı ve iptal işleminin dan başlatılan **Klasör Seç** ve **iptal** düğmeleri. Kullanıcı bu düğme seçtiğinde, uygun eylemi zaman uyumsuz olarak başlatılır.  
   
-#### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Veri akışı ağ kullanıcı arabirimine bağlamak için  
+### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Veri akışı ağ kullanıcı arabirimine bağlamak için  
   
 1. Ana form için form tasarımcısı için bir olay işleyicisi oluşturun <xref:System.Windows.Forms.ToolStripItem.Click> olayı **Klasör Seç** düğmesi.  
   

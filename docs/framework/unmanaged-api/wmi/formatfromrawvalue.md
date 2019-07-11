@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a84b03c85cc1332c07ffbaf53187b7f01d0236
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47f92122eddf3cc8e6aec19d75fd2a95f76e9973
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609054"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746703"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue işlevi
 Biçim dönüştürme, zamana bağlı ise belirtilen biçimde bir ham performans veri değerine ya da iki ham performans veri değerleri dönüştürür. 
@@ -30,7 +30,7 @@ Biçim dönüştürme, zamana bağlı ise belirtilen biçimde bir ham performans
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```cpp
 int FormatFromRawValue (
    [in] uint                    dwCounterType, 
    [in] uint                    dwFormat, 

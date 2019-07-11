@@ -4,12 +4,12 @@ description: .NET Core, geliştiriciler için .NET sürümleri arasında uyumlul
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: b58edd9ff0bd56b12b861162cc92d484a3b36c8b
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: c68a19b8b98a98bb9c64f5b9fa60b378935e6e93
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307501"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736564"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>.NET core'da bozucu değişiklikleri değerlendir
 
@@ -107,7 +107,7 @@ Bu kategorideki değişiklikleri *değiştirme* genel yüzey alanı türü. Bunl
 
 - **✔️ sınıfı daha önce hiç Oluşturucusu varsa varsayılan (parametresiz) bir Oluşturucu ile birlikte bir sınıf oluşturucu ekleme**
 
-   Ancak, daha önce hiç Oluşturucusu olan bir sınıf için bir oluşturucu eklemesini *olmadan* varsayılan oluşturucu eklemesini izin verilmiyor.
+   Ancak, daha önce hiç Oluşturucusu olan bir sınıf için bir oluşturucu eklemesini *olmadan* parametresiz oluşturucu eklemesini izin verilmiyor.
 
 - **Bir üye değiştirme ✔️ [soyut](../../csharp/language-reference/keywords/abstract.md) için [sanal](../../csharp/language-reference/keywords/virtual.md)**
 
@@ -174,7 +174,7 @@ Bu kategorideki değişiklikleri *değiştirme* genel yüzey alanı türü. Bunl
 
   Bu, önceki aşırı yüklemesine bağlı olan mevcut istemcilerin keser. Örneğin, bir sınıf yönteminin tek bir sürüm varsa kabul eden bir <xref:System.UInt32>, geçerken var olan bir tüketici başarıyla için aşırı yükleyen bağlayacaksınız bir <xref:System.Int32> değeri. Ancak, bir aşırı eklerseniz kabul eden bir <xref:System.Int32>, yeniden derlemeden ya da geç bağlama kullanarak, derleyici artık yeni aşırı bağlar. Farklı bir davranış sonuçlanırsa, bir değişiklik budur.
 
-- **❌ önceden varsayılan oluşturucu eklemeden hiçbir oluşturucu sahip olan bir sınıf oluşturucu ekleme**
+- **❌ Parametresiz bir oluşturucu eklemeden hiçbir oluşturucu vardı bir sınıf oluşturucu ekleme**
 
 - **❌️ Ekleme [salt okunur](../../csharp/language-reference/keywords/readonly.md) bir alana**
 
