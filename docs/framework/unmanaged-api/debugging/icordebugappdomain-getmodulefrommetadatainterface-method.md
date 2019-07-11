@@ -17,37 +17,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2eaa48dcc7dad2d66f1a60922c94193120b59b32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48249bb634c301b7fda2c360c3b793e9206a759a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785170"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737894"
 ---
-# <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a><span data-ttu-id="b2645-102">ICorDebugAppDomain::GetModuleFromMetaDataInterface Metodu</span><span class="sxs-lookup"><span data-stu-id="b2645-102">ICorDebugAppDomain::GetModuleFromMetaDataInterface Method</span></span>
-<span data-ttu-id="b2645-103">Belirtilen meta veriler arabirimine karşılık gelen modülü alır.</span><span class="sxs-lookup"><span data-stu-id="b2645-103">Gets the module that corresponds to the given metadata interface.</span></span>  
+# <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a><span data-ttu-id="3d7ca-102">ICorDebugAppDomain::GetModuleFromMetaDataInterface Metodu</span><span class="sxs-lookup"><span data-stu-id="3d7ca-102">ICorDebugAppDomain::GetModuleFromMetaDataInterface Method</span></span>
+<span data-ttu-id="3d7ca-103">Belirtilen meta veriler arabirimine karşılık gelen modülü alır.</span><span class="sxs-lookup"><span data-stu-id="3d7ca-103">Gets the module that corresponds to the given metadata interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b2645-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b2645-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3d7ca-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3d7ca-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetModuleFromMetaDataInterface (  
     [in] IUnknown           *pIMetaData,  
     [out] ICorDebugModule  **ppModule  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b2645-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b2645-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3d7ca-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3d7ca-105">Parameters</span></span>  
  `pIMetaData`  
- <span data-ttu-id="b2645-106">[in] Biri olan bir nesneye bir işaretçi [meta veri arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span><span class="sxs-lookup"><span data-stu-id="b2645-106">[in] A pointer to an object that is one of the [Metadata interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span></span>  
+ <span data-ttu-id="3d7ca-106">[in] Biri olan bir nesneye bir işaretçi [meta veri arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span><span class="sxs-lookup"><span data-stu-id="3d7ca-106">[in] A pointer to an object that is one of the [Metadata interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span></span>  
   
  `ppModule`  
- <span data-ttu-id="b2645-107">[out] Bir işaretçi adresine Icordebugmodule nesnenin karşılık gelen bir modül için belirtilen meta veriler arabirimi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="b2645-107">[out] A pointer to the address of an ICorDebugModule object that represents the module corresponding to the given metadata interface.</span></span>  
+ <span data-ttu-id="3d7ca-107">[out] Bir işaretçi adresine Icordebugmodule nesnenin karşılık gelen bir modül için belirtilen meta veriler arabirimi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="3d7ca-107">[out] A pointer to the address of an ICorDebugModule object that represents the module corresponding to the given metadata interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b2645-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b2645-108">Requirements</span></span>  
- <span data-ttu-id="b2645-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2645-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3d7ca-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3d7ca-108">Requirements</span></span>  
+ <span data-ttu-id="3d7ca-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3d7ca-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b2645-110">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b2645-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3d7ca-110">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3d7ca-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b2645-111">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b2645-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3d7ca-111">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3d7ca-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b2645-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2645-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="3d7ca-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d7ca-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,30 +17,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0b9a1618bd37fa29e6db0ad09649ba2eba3a32d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f631be9462a569110e08fdb58d2609b0894f8d68
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994376"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737030"
 ---
-# <a name="icordebugprocessthreadforfibercookie-method"></a><span data-ttu-id="2d3e2-102">ICorDebugProcess::ThreadForFiberCookie Yöntemi</span><span class="sxs-lookup"><span data-stu-id="2d3e2-102">ICorDebugProcess::ThreadForFiberCookie Method</span></span>
-<span data-ttu-id="2d3e2-103">Bu yöntem uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="2d3e2-103">This method is not implemented.</span></span>  
+# <a name="icordebugprocessthreadforfibercookie-method"></a><span data-ttu-id="e560f-102">ICorDebugProcess::ThreadForFiberCookie Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e560f-102">ICorDebugProcess::ThreadForFiberCookie Method</span></span>
+<span data-ttu-id="e560f-103">Bu yöntem uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="e560f-103">This method is not implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2d3e2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2d3e2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e560f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e560f-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT ThreadForFiberCookie (  
     [in] DWORD fiberCookie,  
     [out] ICorDebugThread **ppThread  
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="2d3e2-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2d3e2-105">Requirements</span></span>  
- <span data-ttu-id="2d3e2-106">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2d3e2-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e560f-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e560f-105">Requirements</span></span>  
+ <span data-ttu-id="e560f-106">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e560f-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2d3e2-107">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2d3e2-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e560f-107">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e560f-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2d3e2-108">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2d3e2-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e560f-108">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e560f-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2d3e2-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2d3e2-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="e560f-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e560f-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

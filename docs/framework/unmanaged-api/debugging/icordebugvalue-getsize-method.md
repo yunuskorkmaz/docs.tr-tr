@@ -17,42 +17,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41a9ff2c94c98a5acc930d68e648b0ea577a82c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 94d8fbf4d93bbfbaaeb7c1268004aada22b9b7df
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986849"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768917"
 ---
-# <a name="icordebugvaluegetsize-method"></a><span data-ttu-id="98c23-102">ICorDebugValue::GetSize Metodu</span><span class="sxs-lookup"><span data-stu-id="98c23-102">ICorDebugValue::GetSize Method</span></span>
-<span data-ttu-id="98c23-103">Bu "ICorDebugValue" nesnesinin bayt cinsinden boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="98c23-103">Gets the size, in bytes, of this "ICorDebugValue" object.</span></span>  
+# <a name="icordebugvaluegetsize-method"></a><span data-ttu-id="4d1bb-102">ICorDebugValue::GetSize Metodu</span><span class="sxs-lookup"><span data-stu-id="4d1bb-102">ICorDebugValue::GetSize Method</span></span>
+<span data-ttu-id="4d1bb-103">Bu "ICorDebugValue" nesnesinin bayt cinsinden boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="4d1bb-103">Gets the size, in bytes, of this "ICorDebugValue" object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="98c23-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="98c23-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4d1bb-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4d1bb-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetSize (  
     [out] ULONG32   *pSize  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="98c23-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="98c23-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4d1bb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4d1bb-105">Parameters</span></span>  
  `pSize`  
- <span data-ttu-id="98c23-106">[out] Bu değer nesnesinin bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="98c23-106">[out] The size, in bytes, of this value object.</span></span>  
+ <span data-ttu-id="4d1bb-106">[out] Bu değer nesnesinin bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="4d1bb-106">[out] The size, in bytes, of this value object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="98c23-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="98c23-107">Remarks</span></span>  
- <span data-ttu-id="98c23-108">Değer türü bir başvuru türü ise, bu yöntem, nesnenin boyutu yerine işaretçinin boyutu döndürür.</span><span class="sxs-lookup"><span data-stu-id="98c23-108">If the value's type is a reference type, this method returns the size of the pointer rather than the size of the object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4d1bb-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4d1bb-107">Remarks</span></span>  
+ <span data-ttu-id="4d1bb-108">Değer türü bir başvuru türü ise, bu yöntem, nesnenin boyutu yerine işaretçinin boyutu döndürür.</span><span class="sxs-lookup"><span data-stu-id="4d1bb-108">If the value's type is a reference type, this method returns the size of the pointer rather than the size of the object.</span></span>  
   
- <span data-ttu-id="98c23-109">`ICorDebugValue::GetSize` Yöntemi döndürür `COR_E_OVERFLOW` 64-bit platformlarda 4 GB'den büyük olan nesneler için.</span><span class="sxs-lookup"><span data-stu-id="98c23-109">The `ICorDebugValue::GetSize` method returns `COR_E_OVERFLOW` for objects that are larger than 4 GB on 64-bit platforms.</span></span> <span data-ttu-id="98c23-110">Kullanım [Icordebugvalue3::getsize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) yöntemi yerine nesneler için 4 GB'den büyük.</span><span class="sxs-lookup"><span data-stu-id="98c23-110">Use the [ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) method instead for objects that are larger than 4 GB.</span></span>  
+ <span data-ttu-id="4d1bb-109">`ICorDebugValue::GetSize` Yöntemi döndürür `COR_E_OVERFLOW` 64-bit platformlarda 4 GB'den büyük olan nesneler için.</span><span class="sxs-lookup"><span data-stu-id="4d1bb-109">The `ICorDebugValue::GetSize` method returns `COR_E_OVERFLOW` for objects that are larger than 4 GB on 64-bit platforms.</span></span> <span data-ttu-id="4d1bb-110">Kullanım [Icordebugvalue3::getsize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) yöntemi yerine nesneler için 4 GB'den büyük.</span><span class="sxs-lookup"><span data-stu-id="4d1bb-110">Use the [ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) method instead for objects that are larger than 4 GB.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="98c23-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="98c23-111">Requirements</span></span>  
- <span data-ttu-id="98c23-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="98c23-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4d1bb-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4d1bb-111">Requirements</span></span>  
+ <span data-ttu-id="4d1bb-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4d1bb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="98c23-113">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="98c23-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4d1bb-113">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4d1bb-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="98c23-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="98c23-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4d1bb-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4d1bb-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="98c23-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="98c23-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4d1bb-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d1bb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98c23-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="98c23-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d1bb-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4d1bb-116">See also</span></span>
 
-- [<span data-ttu-id="98c23-117">GetSize64 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="98c23-117">GetSize64 Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)
+- [<span data-ttu-id="4d1bb-117">GetSize64 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4d1bb-117">GetSize64 Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)
