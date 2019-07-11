@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8251d21fe535f85cc6abd0a7bc6c96ab320007f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a23d3c4fd8eef2e361abf1602157cb4fbb820b48
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778046"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773851"
 ---
-# <a name="prebindassemblyex-function"></a><span data-ttu-id="7eb7a-102">PreBindAssemblyEx İşlevi</span><span class="sxs-lookup"><span data-stu-id="7eb7a-102">PreBindAssemblyEx Function</span></span>
-<span data-ttu-id="7eb7a-103">Derleme sonrası ilke görünen adını alır.</span><span class="sxs-lookup"><span data-stu-id="7eb7a-103">Gets the post-policy display name for an assembly.</span></span>  
+# <a name="prebindassemblyex-function"></a><span data-ttu-id="92553-102">PreBindAssemblyEx İşlevi</span><span class="sxs-lookup"><span data-stu-id="92553-102">PreBindAssemblyEx Function</span></span>
+<span data-ttu-id="92553-103">Derleme sonrası ilke görünen adını alır.</span><span class="sxs-lookup"><span data-stu-id="92553-103">Gets the post-policy display name for an assembly.</span></span>  
   
- <span data-ttu-id="7eb7a-104">Bu işlev .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="7eb7a-104">This function supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+ <span data-ttu-id="92553-104">Bu işlev .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="92553-104">This function supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7eb7a-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7eb7a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92553-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="92553-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT PreBindAssemblyEx (  
     [in]  IApplicationContext *pAppCtx,  
     [in]  IAssemblyName       *pName,  
@@ -41,37 +41,37 @@ HRESULT PreBindAssemblyEx (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7eb7a-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7eb7a-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="92553-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="92553-106">Parameters</span></span>  
  `pAppCtx`  
- <span data-ttu-id="7eb7a-107">[in] Uygulama bağlamı tanımlar.</span><span class="sxs-lookup"><span data-stu-id="7eb7a-107">[in] Identifies the application context.</span></span>  
+ <span data-ttu-id="92553-107">[in] Uygulama bağlamı tanımlar.</span><span class="sxs-lookup"><span data-stu-id="92553-107">[in] Identifies the application context.</span></span>  
   
  `pName`  
- <span data-ttu-id="7eb7a-108">[in] Derleme adını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="7eb7a-108">[in] Identifies the assembly name.</span></span>  
+ <span data-ttu-id="92553-108">[in] Derleme adını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="92553-108">[in] Identifies the assembly name.</span></span>  
   
  `pAsmParent`  
- <span data-ttu-id="7eb7a-109">[in] Üst derlemeyi tanımlar.</span><span class="sxs-lookup"><span data-stu-id="7eb7a-109">[in] Identifies the parent assembly.</span></span> <span data-ttu-id="7eb7a-110">Bu parametre yoksayıldı.</span><span class="sxs-lookup"><span data-stu-id="7eb7a-110">This parameter is ignored.</span></span>  
+ <span data-ttu-id="92553-109">[in] Üst derlemeyi tanımlar.</span><span class="sxs-lookup"><span data-stu-id="92553-109">[in] Identifies the parent assembly.</span></span> <span data-ttu-id="92553-110">Bu parametre yoksayıldı.</span><span class="sxs-lookup"><span data-stu-id="92553-110">This parameter is ignored.</span></span>  
   
  `pwzRuntimeVersion`  
- <span data-ttu-id="7eb7a-111">[in] Çalışma zamanı sürümünü tanımlar.</span><span class="sxs-lookup"><span data-stu-id="7eb7a-111">[in] Identifies the runtime version.</span></span>  
+ <span data-ttu-id="92553-111">[in] Çalışma zamanı sürümünü tanımlar.</span><span class="sxs-lookup"><span data-stu-id="92553-111">[in] Identifies the runtime version.</span></span>  
   
  `ppNamePostPolicy`  
- <span data-ttu-id="7eb7a-112">[out] İlke sonrası görünen adını içerir.</span><span class="sxs-lookup"><span data-stu-id="7eb7a-112">[out] Contains the post-policy display name.</span></span>  
+ <span data-ttu-id="92553-112">[out] İlke sonrası görünen adını içerir.</span><span class="sxs-lookup"><span data-stu-id="92553-112">[out] Contains the post-policy display name.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="7eb7a-113">[in] Sonra genişletilebilmek için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="7eb7a-113">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="7eb7a-114">`pvReserved` null bir başvuru olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="7eb7a-114">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="92553-113">[in] Sonra genişletilebilmek için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="92553-113">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="92553-114">`pvReserved` null bir başvuru olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="92553-114">`pvReserved` must be a null reference.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7eb7a-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7eb7a-115">Remarks</span></span>  
- <span data-ttu-id="7eb7a-116">`ppNamePostPolicy` Çıkış parametresi yalnızca işlev HRESULT FUSION_E_REF_DEF_MISMATCH döndürürse ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="7eb7a-116">The `ppNamePostPolicy` output parameter is set only if the function returns HRESULT FUSION_E_REF_DEF_MISMATCH.</span></span> <span data-ttu-id="7eb7a-117">Aksi takdirde null olur.</span><span class="sxs-lookup"><span data-stu-id="7eb7a-117">Otherwise, it is null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="92553-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="92553-115">Remarks</span></span>  
+ <span data-ttu-id="92553-116">`ppNamePostPolicy` Çıkış parametresi yalnızca işlev HRESULT FUSION_E_REF_DEF_MISMATCH döndürürse ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="92553-116">The `ppNamePostPolicy` output parameter is set only if the function returns HRESULT FUSION_E_REF_DEF_MISMATCH.</span></span> <span data-ttu-id="92553-117">Aksi takdirde null olur.</span><span class="sxs-lookup"><span data-stu-id="92553-117">Otherwise, it is null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7eb7a-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7eb7a-118">Requirements</span></span>  
- <span data-ttu-id="7eb7a-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7eb7a-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="92553-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="92553-118">Requirements</span></span>  
+ <span data-ttu-id="92553-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="92553-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7eb7a-120">**Üst bilgi:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="7eb7a-120">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="92553-120">**Üst bilgi:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="92553-120">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="7eb7a-121">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="7eb7a-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="92553-121">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="92553-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7eb7a-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7eb7a-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="92553-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92553-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7eb7a-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7eb7a-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="92553-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="92553-123">See also</span></span>
 
-- [<span data-ttu-id="7eb7a-124">Fusion Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="7eb7a-124">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [<span data-ttu-id="92553-124">Fusion Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="92553-124">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

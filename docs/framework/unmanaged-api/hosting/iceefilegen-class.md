@@ -16,24 +16,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb0e7a676fdbbe3cf04108266471833b28275b1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6fb0b11c26ff65f74681d1e3bf7324bfb0e559d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985367"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766617"
 ---
-# <a name="iceefilegen-class"></a><span data-ttu-id="c142f-102">ICeeFileGen Sınıfı</span><span class="sxs-lookup"><span data-stu-id="c142f-102">ICeeFileGen Class</span></span>
-<span data-ttu-id="c142f-103">Bir yerel taşınabilir yürütülebilir (PE) dosyası oluşturmak için işlevsellik sağlar.</span><span class="sxs-lookup"><span data-stu-id="c142f-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="c142f-104">Arabirimi, genellikle yürütülebilir derlenmiş çıktılarını oluşturmak için derleyiciler tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="c142f-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
+# <a name="iceefilegen-class"></a><span data-ttu-id="52503-102">ICeeFileGen Sınıfı</span><span class="sxs-lookup"><span data-stu-id="52503-102">ICeeFileGen Class</span></span>
+<span data-ttu-id="52503-103">Bir yerel taşınabilir yürütülebilir (PE) dosyası oluşturmak için işlevsellik sağlar.</span><span class="sxs-lookup"><span data-stu-id="52503-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="52503-104">Arabirimi, genellikle yürütülebilir derlenmiş çıktılarını oluşturmak için derleyiciler tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="52503-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c142f-105">`ICeeFileGen` .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="c142f-105">`ICeeFileGen` supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+>  <span data-ttu-id="52503-105">`ICeeFileGen` .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="52503-105">`ICeeFileGen` supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="c142f-106">Bu arabirimi kullanım dışıdır ve gelecek sürümde kaldırılacak.</span><span class="sxs-lookup"><span data-stu-id="c142f-106">This interface has been deprecated and will be removed in a future release.</span></span>  
+ <span data-ttu-id="52503-106">Bu arabirimi kullanım dışıdır ve gelecek sürümde kaldırılacak.</span><span class="sxs-lookup"><span data-stu-id="52503-106">This interface has been deprecated and will be removed in a future release.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c142f-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c142f-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52503-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="52503-107">Syntax</span></span>  
   
-```  
+```cpp  
 class ICeeFileGen {  
 public:  
     virtual HRESULT CreateCeeFile(HCEEFILE *ceeFile);  
@@ -236,13 +236,13 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="c142f-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c142f-108">Requirements</span></span>  
- <span data-ttu-id="c142f-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c142f-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52503-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="52503-108">Requirements</span></span>  
+ <span data-ttu-id="52503-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="52503-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c142f-110">**Üst bilgi:** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="c142f-110">**Header:** ICeeFileGen.h</span></span>  
+ <span data-ttu-id="52503-110">**Üst bilgi:** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="52503-110">**Header:** ICeeFileGen.h</span></span>  
   
- <span data-ttu-id="c142f-111">**.NET framework sürümü:** 1.0</span><span class="sxs-lookup"><span data-stu-id="c142f-111">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="52503-111">**.NET framework sürümü:** 1.0</span><span class="sxs-lookup"><span data-stu-id="52503-111">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c142f-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c142f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52503-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="52503-112">See also</span></span>
 
-- [<span data-ttu-id="c142f-113">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="c142f-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="52503-113">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="52503-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

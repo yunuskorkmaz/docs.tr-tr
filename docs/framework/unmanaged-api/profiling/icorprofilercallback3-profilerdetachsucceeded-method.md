@@ -17,44 +17,44 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: efe3070b41b1d71e0cf533a7f9f211f4c6626726
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cff277179be761bb0dc78b02702e7d35ad4b6a9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782570"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779254"
 ---
-# <a name="icorprofilercallback3profilerdetachsucceeded-method"></a><span data-ttu-id="b345a-102">ICorProfilerCallback3::ProfilerDetachSucceeded Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b345a-102">ICorProfilerCallback3::ProfilerDetachSucceeded Method</span></span>
-<span data-ttu-id="b345a-103">Profil Oluşturucu, ortak dil çalışma zamanı (CLR) profil oluşturucu DLL kaldırılmak üzere olduğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="b345a-103">Notifies the profiler that the common language runtime (CLR) is about to unload the profiler DLL.</span></span>  
+# <a name="icorprofilercallback3profilerdetachsucceeded-method"></a><span data-ttu-id="569ff-102">ICorProfilerCallback3::ProfilerDetachSucceeded Yöntemi</span><span class="sxs-lookup"><span data-stu-id="569ff-102">ICorProfilerCallback3::ProfilerDetachSucceeded Method</span></span>
+<span data-ttu-id="569ff-103">Profil Oluşturucu, ortak dil çalışma zamanı (CLR) profil oluşturucu DLL kaldırılmak üzere olduğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="569ff-103">Notifies the profiler that the common language runtime (CLR) is about to unload the profiler DLL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b345a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b345a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="569ff-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="569ff-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT ProfilerDetachSucceeded();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="b345a-105">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b345a-105">Return Value</span></span>  
- <span data-ttu-id="b345a-106">Bu geri dönüş değeri yok sayıldı.</span><span class="sxs-lookup"><span data-stu-id="b345a-106">The return value from this callback is ignored.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="569ff-105">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="569ff-105">Return Value</span></span>  
+ <span data-ttu-id="569ff-106">Bu geri dönüş değeri yok sayıldı.</span><span class="sxs-lookup"><span data-stu-id="569ff-106">The return value from this callback is ignored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b345a-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b345a-107">Remarks</span></span>  
- <span data-ttu-id="b345a-108">`ProfilerDetachSucceeded` Tüm iş parçacığı profil oluşturucu kodu çıkılana sonra geri çağırma verildiği.</span><span class="sxs-lookup"><span data-stu-id="b345a-108">The `ProfilerDetachSucceeded` callback is issued after all threads have exited the profiler's code.</span></span> <span data-ttu-id="b345a-109">Bu yöntem çağrıldığında, profil oluşturucu, kullanıcı Arabirimi veya günlük bileşeni bildirme gibi yok edici, uygun olmayan herhangi bir son dakika görevi gerçekleştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="b345a-109">When this method is called, the profiler should perform any last-minute tasks that are not appropriate for its destructor, such as notifying its UI or logging component.</span></span> <span data-ttu-id="b345a-110">Ancak, profil oluşturucu işlevleri bu geri çağırma sırasındaki CLR tarafından sağlanan arabirimlerindeki çağırmamalıdır (gibi [Icorprofilerınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) veya `IMetaData*` arabirimleri).</span><span class="sxs-lookup"><span data-stu-id="b345a-110">However, the profiler must not call functions on interfaces that are provided by the CLR during this callback (such as the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) or `IMetaData*` interfaces).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="569ff-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="569ff-107">Remarks</span></span>  
+ <span data-ttu-id="569ff-108">`ProfilerDetachSucceeded` Tüm iş parçacığı profil oluşturucu kodu çıkılana sonra geri çağırma verildiği.</span><span class="sxs-lookup"><span data-stu-id="569ff-108">The `ProfilerDetachSucceeded` callback is issued after all threads have exited the profiler's code.</span></span> <span data-ttu-id="569ff-109">Bu yöntem çağrıldığında, profil oluşturucu, kullanıcı Arabirimi veya günlük bileşeni bildirme gibi yok edici, uygun olmayan herhangi bir son dakika görevi gerçekleştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="569ff-109">When this method is called, the profiler should perform any last-minute tasks that are not appropriate for its destructor, such as notifying its UI or logging component.</span></span> <span data-ttu-id="569ff-110">Ancak, profil oluşturucu işlevleri bu geri çağırma sırasındaki CLR tarafından sağlanan arabirimlerindeki çağırmamalıdır (gibi [Icorprofilerınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) veya `IMetaData*` arabirimleri).</span><span class="sxs-lookup"><span data-stu-id="569ff-110">However, the profiler must not call functions on interfaces that are provided by the CLR during this callback (such as the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) or `IMetaData*` interfaces).</span></span>  
   
- <span data-ttu-id="b345a-111">CLR ayırma işlemi başarılı olduğunu göstermek için Windows uygulama olay günlüğünde bir giriş oluşturur.</span><span class="sxs-lookup"><span data-stu-id="b345a-111">The CLR creates an entry in the Windows Application event log to indicate that the detach operation is successful.</span></span>  
+ <span data-ttu-id="569ff-111">CLR ayırma işlemi başarılı olduğunu göstermek için Windows uygulama olay günlüğünde bir giriş oluşturur.</span><span class="sxs-lookup"><span data-stu-id="569ff-111">The CLR creates an entry in the Windows Application event log to indicate that the detach operation is successful.</span></span>  
   
- <span data-ttu-id="b345a-112">Profil Oluşturucu bu geri çağrısından döndükten sonra CLR Profil Oluşturucu nesnesini serbest bırakır ve profil oluşturucu DLL kaldırır.</span><span class="sxs-lookup"><span data-stu-id="b345a-112">After the profiler returns from this callback, the CLR releases the profiler object and unloads the profiler DLL.</span></span> <span data-ttu-id="b345a-113">Bu nedenle, profil oluşturucu bu geri çağrısından döndürdükten sonra Profil Oluşturucu DLL içinde gerçekleşmesi yürütme neden olan herhangi bir eylem gerçekleştirmemelisiniz.</span><span class="sxs-lookup"><span data-stu-id="b345a-113">Therefore, the profiler must not perform any actions that would cause execution to occur inside the profiler DLL after it returns from this callback.</span></span> <span data-ttu-id="b345a-114">Örneğin, bu olmayan iş parçacıkları oluşturmalı veya Zamanlayıcı geri aramaları kaydetme.</span><span class="sxs-lookup"><span data-stu-id="b345a-114">For example, it must not create threads or register timer callbacks.</span></span>  
+ <span data-ttu-id="569ff-112">Profil Oluşturucu bu geri çağrısından döndükten sonra CLR Profil Oluşturucu nesnesini serbest bırakır ve profil oluşturucu DLL kaldırır.</span><span class="sxs-lookup"><span data-stu-id="569ff-112">After the profiler returns from this callback, the CLR releases the profiler object and unloads the profiler DLL.</span></span> <span data-ttu-id="569ff-113">Bu nedenle, profil oluşturucu bu geri çağrısından döndürdükten sonra Profil Oluşturucu DLL içinde gerçekleşmesi yürütme neden olan herhangi bir eylem gerçekleştirmemelisiniz.</span><span class="sxs-lookup"><span data-stu-id="569ff-113">Therefore, the profiler must not perform any actions that would cause execution to occur inside the profiler DLL after it returns from this callback.</span></span> <span data-ttu-id="569ff-114">Örneğin, bu olmayan iş parçacıkları oluşturmalı veya Zamanlayıcı geri aramaları kaydetme.</span><span class="sxs-lookup"><span data-stu-id="569ff-114">For example, it must not create threads or register timer callbacks.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b345a-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b345a-115">Requirements</span></span>  
- <span data-ttu-id="b345a-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b345a-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="569ff-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="569ff-115">Requirements</span></span>  
+ <span data-ttu-id="569ff-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="569ff-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b345a-117">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b345a-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="569ff-117">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="569ff-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b345a-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b345a-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="569ff-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="569ff-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b345a-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b345a-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="569ff-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="569ff-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b345a-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b345a-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="569ff-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="569ff-120">See also</span></span>
 
-- [<span data-ttu-id="b345a-121">Meta Veri Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="b345a-121">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [<span data-ttu-id="b345a-122">ICorProfilerInfo3 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b345a-122">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="b345a-123">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="b345a-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="b345a-124">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b345a-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="569ff-121">Meta Veri Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="569ff-121">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="569ff-122">ICorProfilerInfo3 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="569ff-122">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="569ff-123">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="569ff-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="569ff-124">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="569ff-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
