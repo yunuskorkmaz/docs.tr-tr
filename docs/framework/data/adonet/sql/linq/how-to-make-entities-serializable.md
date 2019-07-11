@@ -2,17 +2,17 @@
 title: 'Nasıl yapılır: Varlıkları Serileştirilebilir Hale Getirme'
 ms.date: 03/30/2017
 ms.assetid: a6c5bf6e-064a-4f77-b74c-76b3a5dec309
-ms.openlocfilehash: bbe40ec448bef5f62d4182d96f82c6308639e27f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd687ba5dce16baee063f1d3bb9521c6664988b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033806"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743282"
 ---
 # <a name="how-to-make-entities-serializable"></a>Nasıl yapılır: Varlıkları Serileştirilebilir Hale Getirme
 Kodunuzu oluşturduğunuzda, varlıkları serileştirilebilir yapabilirsiniz. Varlık sınıfları ile düzenlenmiş <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği ve sütunları <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği.  
   
- Visual Studio kullanan geliştiricilerin kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] bu amaç için.  
+ Visual Studio kullanan geliştiricilerin, Nesne İlişkisel Tasarımcısı bu amaç için kullanabilirsiniz.  
   
  SQLMetal komut satırı aracı kullanıyorsanız **/serialization** seçeneğini `unidirectional` bağımsız değişken. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   

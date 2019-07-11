@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 4468bc86634ad97f2dfbdb5f842eb5206f957a79
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: a9e5139e6d650aa6935bff934ca25502fdc14775
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307512"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744081"
 ---
 # <a name="type-testing-and-conversion-operators-c-reference"></a>Tür test etme ve dönüştürme işleçleri (C# Başvurusu)
 
@@ -109,7 +109,7 @@ Aşağıdaki örnek, sayısal ve başvuru açık dönüştürmeler gösterir:
 
 [!code-csharp-interactive[cast expression](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#Cast)]
 
-Desteklenen açık dönüştürmeler hakkında daha fazla bilgi için bkz. [açık dönüştürmeler](~/_csharplang/spec/conversions.md#explicit-conversions) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md). Bir özel açık veya örtük tür dönüştürme tanımlama hakkında daha fazla bilgi için bkz: [açık](../keywords/explicit.md) veya [örtük](../keywords/implicit.md) anahtar sözcüğü makalesi, sırasıyla.
+Desteklenen açık dönüştürmeler hakkında daha fazla bilgi için bkz. [açık dönüştürmeler](~/_csharplang/spec/conversions.md#explicit-conversions) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md). Bir özel açık veya örtük tür dönüştürme tanımlama hakkında daha fazla bilgi için bkz: [kullanıcı tanımlı dönüştürme işleçleri](user-defined-conversion-operators.md).
 
 ### <a name="other-usages-of-"></a>()'nin diğer kullanımları
 
@@ -139,7 +139,7 @@ Kullanım `typeof` ifade sonucu çalışma zamanı türü verilen tür tam olara
 
 `is`, `as`, Ve `typeof` işleçleri aşırı yüklenebilir değildir.
 
-Kullanıcı tanımlı bir tür aşırı yüklenemez `()` işleci, ancak bir atama ifadesi tarafından gerçekleştirilen özel tür dönüştürmeler tanımlayabilirsiniz. Daha fazla bilgi için [açık](../keywords/explicit.md) ve [örtük](../keywords/implicit.md) anahtar sözcüğü makaleler.
+Kullanıcı tanımlı bir tür aşırı yüklenemez `()` işleci, ancak bir atama ifadesi tarafından gerçekleştirilen özel tür dönüştürmeler tanımlayabilirsiniz. Daha fazla bilgi için [kullanıcı tanımlı dönüştürme işleçleri](user-defined-conversion-operators.md).
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

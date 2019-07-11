@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95c1d8171d2d76ecf085252e7973c0da851b3225
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 74445b03e78ff68426f60c3e306d9151d0ba288a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666023"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780989"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen İşlevi
 Tanımlayıcı ad kullanmak için yeni bir ortak/özel anahtar çifti oluşturur.  
@@ -30,7 +30,7 @@ Tanımlayıcı ad kullanmak için yeni bir ortak/özel anahtar çifti oluşturur
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 BOOLEAN StrongNameKeyGen (  
     [in]  LPCWSTR   wszKeyContainer,  
     [in]  DWORD     dwFlags,  

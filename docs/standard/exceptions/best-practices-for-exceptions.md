@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 752a7e5233d8b1d88b49be450972fc964f82d2c4
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 1453b781f9466f7832e57140db04fedceedb5568
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690663"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775517"
 ---
 # <a name="best-practices-for-exceptions"></a>Özel durumlar için en iyi yöntemler
 
@@ -80,7 +80,7 @@ Bir özel durum gerekli olduğunda, uygun şekilde adlandırın ve türetmeniz <
 
 ## <a name="include-three-constructors-in-custom-exception-classes"></a>Üç Oluşturucusu özel durum sınıfları içerir.
 
-En az üç ortak oluşturucu kendi özel durum sınıflarınızı oluştururken kullanmak: varsayılan oluşturucu, bir dize iletisi alan bir oluşturucu ve bir dize iletisi ve bir iç özel durum alan bir oluşturucu.
+En az üç ortak oluşturucu kendi özel durum sınıflarınızı oluştururken kullanın: Parametresiz bir oluşturucu, bir dize iletisi alan bir oluşturucu ve bir dize iletisi ve bir iç özel durum alan bir oluşturucu.
 
 * <xref:System.Exception.%23ctor>, varsayılan değerleri kullanır.
 

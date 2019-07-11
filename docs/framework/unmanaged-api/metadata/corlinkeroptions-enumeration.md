@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc0554ed89d21607978d059b26c4ad69e59a2d4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 906b5ef2795d8fad996185f66f145a8cd3618c41
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045805"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781819"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions Numaralandırması
 Meta veri bağlayıcı seçeneklerini seçmek için bayrakları belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 typedef enum CorLinkerOptions {  
     MDAssembly          = 0x00000000,  
     MDNetModule         = 0x00000001,  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 26a43a4f-83c9-4732-806d-bb23aad0ff6b
-ms.openlocfilehash: 6a25ea5fe80da1fed16f44fd3243ebea4d64069f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa3690ae74869f5dc0fbaa8d824d4aebca8ce724
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902895"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743059"
 ---
 # <a name="insert-update-and-delete-operations"></a>Insert, Update ve Delete İşlemleri
 Gerçekleştirdiğiniz `Insert`, `Update`, ve `Delete` işlemlerinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ekleyerek, değiştirerek ve nesneler, nesne modelinde kaldırılıyor. Varsayılan olarak, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eylemlerinizi SQL çevirir ve veritabanı değişiklikleri gönderir.  
@@ -30,7 +30,7 @@ Gerçekleştirdiğiniz `Insert`, `Update`, ve `Delete` işlemlerinde [!INCLUDE[v
 > [!NOTE]
 >  Genellikle bir saklı yordam yoluyla özel kendi mantığınızı kullanarak bu davranışı geçersiz kılabilirsiniz. Daha fazla bilgi için [sorumlulukları geliştirici olarak geçersiz kılma varsayılan davranış](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  
 >   
->  Visual Studio kullanan geliştiricilerin kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] saklı yordamlar bu amaç için geliştirilir.  
+>  Visual Studio kullanan geliştiricilerin, Nesne İlişkisel Tasarımcısı, bu amaç için saklı yordamlar geliştirmek için kullanabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

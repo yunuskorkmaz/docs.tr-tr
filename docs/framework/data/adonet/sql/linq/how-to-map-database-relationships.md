@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: 5a20253e7164dabc22529d2238e9e85610d83706
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0637a2f32140081d310abf5f7254b526edc69fc6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624709"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743236"
 ---
 # <a name="how-to-map-database-relationships"></a>Nasıl yapılır: Veritabanı İlişkilerini Eşleme
 Her zaman aynı olacak herhangi bir veri ilişkileri varlık sınıfınızda özelliğine başvuruyor şifreleyebilirsiniz. Northwind örnek veritabanındaki gibi müşteriler genellikle, sipariş olduğundan her zaman bir ilişki yoktur modelinde müşterilerin ve siparişlerinin arasında.  
@@ -39,7 +39,7 @@ Her zaman aynı olacak herhangi bir veri ilişkileri varlık sınıfınızda öz
  Aşağıdaki örnekte bir-çok, `Customer` sınıfı, müşterilerin ve siparişlerinin arasındaki ilişkiyi bildiren bir özelliğe sahiptir.  `Orders` Özelliği türüdür <xref:System.Data.Linq.EntitySet%601>. Bu tür, bu ilişki tek-çok olduğunu belirten (bir müşteri için çok sayıda sipariş). <xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A> Özelliği nasıl Bu ilişkilendirme, yani bu biriyle Karşılaştırılacak ilgili sınıfında özelliğin adını belirterek gerçekleştirilir tanımlamak için kullanılır. Bu örnekte, `CustomerID` özelliği karşılaştırılır, yalnızca bir veritabanı *birleştirme* bu sütun değeri ile karşılaştırmak.  
   
 > [!NOTE]
->  Visual Studio kullanıyorsanız, kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] sınıfları arasında bir ilişki oluşturmak için.  
+>  Visual Studio kullanıyorsanız, Nesne İlişkisel Tasarımcısı sınıfları arasında bir ilişki oluşturmak için kullanabilirsiniz.  
   
  [!code-csharp[DlinqCustomize#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#3)]
  [!code-vb[DlinqCustomize#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#3)]  

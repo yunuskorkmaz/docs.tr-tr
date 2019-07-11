@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Mima
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74ff7196ce17807b98a975687a524041f15a7f5b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019577"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775892"
 ---
 # <a name="architectural-principles"></a>Mimari ilkeleri
 
@@ -50,7 +50,7 @@ Bağımlılık tersine çevirme ilkesinin uygulanması için çalışma zamanın
 
 ### <a name="explicit-dependencies"></a>Özel bağımlılıklar
 
-**Açıkça düzgün çalışması için ihtiyaç duydukları tüm birlikte çalışan nesnelerin yöntemleri ve sınıfları istemeniz gerekir.** Sınıf oluşturucuları, geçerli bir durumda olması ve düzgün şekilde çalışabilmesi için gereksinim duydukları şeyleri tanımlamak sınıflar için bir fırsattır. Sınıflar, kullanılabilir oluşturulur ve çağrılır, ancak, yalnızca çalışır düzgün belirli genel ya da altyapı bileşenlerini bulunmuyorsa tanımlarsanız, bu sınıflar gönderildiğini *yapan dürüst olmayan* istemcileri ile. Yalnızca belirtilen noktalar (muhtemelen hiçbir şey sınıfın varsayılan bir oluşturucu yalnızca kullanıyorsa), ancak ardından nesne kapatır çalışma zamanında gereken istemci gerçekten başka bir şey ihtiyaç duyduklarından Oluşturucu anlaşması söylüyor.
+**Açıkça düzgün çalışması için ihtiyaç duydukları tüm birlikte çalışan nesnelerin yöntemleri ve sınıfları istemeniz gerekir.** Sınıf oluşturucuları, geçerli bir durumda olması ve düzgün şekilde çalışabilmesi için gereksinim duydukları şeyleri tanımlamak sınıflar için bir fırsattır. Sınıflar, kullanılabilir oluşturulur ve çağrılır, ancak, yalnızca çalışır düzgün belirli genel ya da altyapı bileşenlerini bulunmuyorsa tanımlarsanız, bu sınıflar gönderildiğini *yapan dürüst olmayan* istemcileri ile. Yalnızca belirtilen noktalar (muhtemelen hiçbir şey sınıf parametresiz bir oluşturucu yalnızca kullanıyorsa), ancak ardından nesne kapatır çalışma zamanında gereken istemci gerçekten başka bir şey ihtiyaç duyduklarından Oluşturucu anlaşması söylüyor.
 
 Özel bağımlılıklar ilkesi uygulayarak, sınıflar ve yöntemler çalışabilmesi için gereksinim duydukları şeyleri hakkında istemcileri ile dürüst yükleniyor. Bu, kendi kendine daha fazla tanım kodunuzu sağlar ve kullanıcılara, sağladıkları yöntemi biçiminde gerekli olduğu sürece bu güven için gelir beri kodlamanızı daha kullanıcı dostu sözleşmeleri veya Oluşturucu parametresi, üzerinde çalıştığınız nesneleri farklı mı davranacak doğru çalışma zamanında.
 
@@ -85,7 +85,7 @@ Bu ilke ihlallerini bazı örnekleri şunlardır:
 
 - Sınıflar (etkin kayıt düzeni gibi) kaydetmek için kendileri sorumludur.
 
-- Gerekli bir varsayılan oluşturucu.
+- Parametresiz oluşturucu gereklidir.
 
 - Sanal anahtar sözcük gerektiren özellikleri.
 

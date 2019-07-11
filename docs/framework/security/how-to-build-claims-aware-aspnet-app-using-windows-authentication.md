@@ -3,12 +3,12 @@ title: 'Nasıl yapılır: Windows Kimlik Doğrulaması Kullanarak Talep Kullanan
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 039fccde55dd48571e38f064f68b16480b65cb44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b58a4066538441a48bc6646f364e846a25cc8c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650405"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742503"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Nasıl yapılır: Windows Kimlik Doğrulaması Kullanarak Talep Kullanan ASP.NET Uygulaması Derleme
 ## <a name="applies-to"></a>Uygulanan Öğe  
@@ -28,11 +28,11 @@ ms.locfileid: "64650405"
   
 - Adımların Özeti  
   
-- 1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
+- 1\. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
   
-- 2. adım: ASP.NET Web Forms uygulaması Windows kimlik doğrulaması kullanarak talep için yapılandırma  
+- 2\. adım: ASP.NET Web Forms uygulaması Windows kimlik doğrulaması kullanarak talep için yapılandırma  
   
-- 3. Adım – Çözümünüzü Test Etme  
+- 3\. Adım – Çözümünüzü Test Etme  
   
 ## <a name="objectives"></a>Amaçlar  
   
@@ -47,16 +47,16 @@ ms.locfileid: "64650405"
   
 ## <a name="summary-of-steps"></a>Adımların Özeti  
   
-- 1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
+- 1\. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
   
-- 2. adım: ASP.NET Web Forms uygulaması Windows kimlik doğrulaması kullanarak talep için yapılandırma  
+- 2\. adım: ASP.NET Web Forms uygulaması Windows kimlik doğrulaması kullanarak talep için yapılandırma  
   
-- 3. Adım – Çözümünüzü Test Etme  
+- 3\. Adım – Çözümünüzü Test Etme  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>1\. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
  Bu adımda, yeni bir ASP.NET Web Forms uygulaması oluşturacaksınız.  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>Basit bir ASP.NET uygulaması oluşturmak için  
+### <a name="to-create-a-simple-aspnet-application"></a>Basit bir ASP.NET uygulaması oluşturmak için  
   
 1. Visual Studio'yu başlatın, ardından tıklatın **dosya**, **yeni**, ardından **proje**.  
   
@@ -69,10 +69,10 @@ ms.locfileid: "64650405"
     > [!WARNING]
     >  El ile etkinleştirmeniz gerekir böylece Windows kimlik doğrulaması, yeni ASP.NET uygulamalarında varsayılan olarak devre dışıdır.  
   
-## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>2. adım: ASP.NET Web Forms uygulaması Windows kimlik doğrulaması kullanarak talep için yapılandırma  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>2\. adım: ASP.NET Web Forms uygulaması Windows kimlik doğrulaması kullanarak talep için yapılandırma  
  Bu adımda, bir yapılandırma girişi için ekler *Web.config* yapılandırma dosyası ve değiştirme *Default.aspx* dosyayı görüntülemek için bir hesap için bilgileri talep.  
   
-#### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>ASP.NET uygulaması için Windows kimlik doğrulaması kullanarak talep yapılandırmak için  
+### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>ASP.NET uygulaması için Windows kimlik doğrulaması kullanarak talep yapılandırmak için  
   
 1. İçinde **TestApp** projenin *Default.aspx* dosya, var olan bir biçimlendirme aşağıdakiyle değiştirin:  
   
@@ -133,9 +133,9 @@ ms.locfileid: "64650405"
     </authorization>  
     ```  
   
-## <a name="step-3--test-your-solution"></a>3. Adım – Çözümünüzü Test Etme  
+## <a name="step-3--test-your-solution"></a>3\. Adım – Çözümünüzü Test Etme  
  Bu adımda ASP.NET Web Forms uygulamanızı test edin ve bir kullanıcı Windows kimlik doğrulaması ile oturum açtığında beyanların sunulduğunu doğrulayın.  
   
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Windows kimlik doğrulaması kullanarak talep için ASP.NET Web Forms uygulamanızı test etmek için  
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Windows kimlik doğrulaması kullanarak talep için ASP.NET Web Forms uygulamanızı test etmek için  
   
 1. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın. İle sunulan *Default.aspx*, ve (etki alanı adı dahil), Windows hesap adı zaten üst kimliği doğrulanmış kullanıcı olarak görünmesi gereken sayfanın sağ. Sayfanın içeriğinin Windows hesabınızdan alınan talepleri ile doldurulan bir tablo içermelidir.

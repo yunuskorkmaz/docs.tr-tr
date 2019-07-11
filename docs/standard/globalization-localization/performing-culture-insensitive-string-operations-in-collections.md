@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86ddb4ed45479e483dde447983f6dc31edcc8930
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae1e5c89676eaebfed5bbcae76048c7c48db5a18
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026126"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779938"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Koleksiyonlarda Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme
-Sınıfları ve üyeleri <xref:System.Collections> varsayılan olarak kültüre duyarlı davranış sağlayan ad alanı. İçin varsayılan oluşturucular <xref:System.Collections.CaseInsensitiveComparer> ve <xref:System.Collections.CaseInsensitiveHashCodeProvider> sınıfları başlatma kullanarak yeni bir örneğini <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği. Tüm aşırı yüklemeler, <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> yöntemi yeni bir örneğini oluşturma <xref:System.Collections.Hashtable> kullanarak `Thread.CurrentCulture` özelliği varsayılan olarak. Overloads biri <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> yöntemi gerçekleştirmek varsayılan kullanarak kültüre duyarlı sıralamaları `Thread.CurrentCulture`. Sıralama ve arama bir <xref:System.Collections.SortedList> etkilenebilir `Thread.CurrentCulture` dizeleri anahtar olarak kullanılan zaman. Bu sınıfları ve yöntemleri kültüre duyarlı olmayan sonuçlar elde etmek için bu bölümde sağlanan kullanım önerilere uyun `Collections` ad alanı.  
+Sınıfları ve üyeleri <xref:System.Collections> varsayılan olarak kültüre duyarlı davranış sağlayan ad alanı. İçin parametresiz oluşturucular <xref:System.Collections.CaseInsensitiveComparer> ve <xref:System.Collections.CaseInsensitiveHashCodeProvider> sınıfları başlatma kullanarak yeni bir örneğini <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği. Tüm aşırı yüklemeler, <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> yöntemi yeni bir örneğini oluşturma <xref:System.Collections.Hashtable> kullanarak `Thread.CurrentCulture` özelliği varsayılan olarak. Overloads biri <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> yöntemi gerçekleştirmek varsayılan kullanarak kültüre duyarlı sıralamaları `Thread.CurrentCulture`. Sıralama ve arama bir <xref:System.Collections.SortedList> etkilenebilir `Thread.CurrentCulture` dizeleri anahtar olarak kullanılan zaman. Bu sınıfları ve yöntemleri kültüre duyarlı olmayan sonuçlar elde etmek için bu bölümde sağlanan kullanım önerilere uyun `Collections` ad alanı.  
   
  **Not** geçirme <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> karşılaştırma yöntemi kültüre duyarsız bir karşılaştırma gerçekleştirir. Ancak, bir dilsel karşılaştırma örneğin dosya yolları, kayıt defteri anahtarları ve ortam değişkenleri için neden olmaz. Karşılaştırma sonucuna dayalı güvenlik kararları diğerinden destekler. Uygulama, bir dilsel karşılaştırma veya sonuç dayalı güvenlik kararları desteği için kabul eden bir karşılaştırma yöntemi kullanmalıdır bir <xref:System.StringComparison> değeri. Uygulama ardından geçmelidir <xref:System.StringComparison>.  
   
 ## <a name="using-the-caseinsensitivecomparer-and-caseinsensitivehashcodeprovider-classes"></a>Caseınsensitivecomparer ve Caseınsensitivehashcodeprovider sınıfları kullanma  
- İçin varsayılan oluşturucular `CaseInsensitiveHashCodeProvider` ve `CaseInsensitiveComparer` sınıfı kullanarak yeni bir örneği başlatmak `Thread.CurrentCulture`, sonuçta elde edilen kültüre duyarlı davranış. Aşağıdaki kod örneği için oluşturucu gösteren bir `Hashtable` , kültüre duyarlı için varsayılan oluşturucular kullandığından `CaseInsensitiveHashCodeProvider` ve `CaseInsensitiveComparer`.  
+ İçin parametresiz oluşturucular `CaseInsensitiveHashCodeProvider` ve `CaseInsensitiveComparer` sınıfı kullanarak yeni bir örneği başlatmak `Thread.CurrentCulture`, sonuçta elde edilen kültüre duyarlı davranış. Aşağıdaki kod örneği için oluşturucu gösteren bir `Hashtable` , kültüre duyarlı için parametresiz oluşturucular kullandığından `CaseInsensitiveHashCodeProvider` ve `CaseInsensitiveComparer`.  
   
 ```vb  
 internalHashtable = New Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseInsensitiveComparer.Default)  

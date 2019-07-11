@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-ms.openlocfilehash: 93aa679e02482e5c237c233655ee19f3bae17fd3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9f8d15b46f6e5575bd206bf572ffda0365e58f6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032857"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743556"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>Saklı Yordamları Kullanarak İşlemleri Özelleştirme
 Saklı yordamlar, varsayılan davranışı geçersiz kılma için yaygın bir yaklaşım temsil eder. Bu konuda show nasıl kullanabileceğiniz örnekler yöntemi sarmalayıcıları saklı yordamlar ve nasıl saklı yordamlar doğrudan çağırabilir miyim oluşturulur.  
   
- Visual Studio kullanıyorsanız, kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] ekleme, güncelleştirme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama.  
+ Visual Studio kullanıyorsanız, ekleme, güncelleştirme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama için Nesne İlişkisel Tasarımcısı'nı kullanabilirsiniz.  
   
 > [!NOTE]
->  Geri veritabanı tarafından oluşturulan değerleri okumaya, saklı yordamlarınızı çıkış parametrelerini kullanın. Çıktı parametreleri kullanamıyorsanız, geçersiz kılmalar tarafından oluşturulan güvenmek yerine bir kısmi yöntem uygulaması yazma [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Veritabanı tarafından oluşturulan değerleri için eşlenmiş üyeleri ayarlayın, sonra uygun değerlere `INSERT` veya `UPDATE` işlemleri başarıyla tamamlandı. Daha fazla bilgi için [sorumlulukları geliştirici olarak geçersiz kılma varsayılan davranış](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  
+>  Geri veritabanı tarafından oluşturulan değerleri okumaya, saklı yordamlarınızı çıkış parametrelerini kullanın. Çıktı parametreleri kullanamıyorsanız, Nesne İlişkisel Tasarımcısı tarafından oluşturulan yazma güvenmek yerine bir kısmi yöntem uygulaması geçersiz kılar. Veritabanı tarafından oluşturulan değerleri için eşlenmiş üyeleri ayarlayın, sonra uygun değerlere `INSERT` veya `UPDATE` işlemleri başarıyla tamamlandı. Daha fazla bilgi için [sorumlulukları geliştirici olarak geçersiz kılma varsayılan davranış](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  
   
 ## <a name="example"></a>Örnek  
   

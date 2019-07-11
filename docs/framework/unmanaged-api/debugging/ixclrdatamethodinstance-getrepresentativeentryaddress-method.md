@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 6f204e2ed9cb1409d53432355467bb11946f8809
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c79e916a06e796fc87b57eb949cccda77b8a9bd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775538"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744654"
 ---
 # <a name="ixclrdatamethodinstancegetrepresentativeentryaddress-method"></a>IXCLRDataMethodInstance::GetRepresentativeEntryAddress yöntemi
 
@@ -30,7 +30,7 @@ Bir yöntem için tüm olası girdi noktalarını native derlemesi için en iyi 
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```cpp
 HRESULT GetRepresentativeEntryAddress(
     [out] CLRDATA_ADDRESS* addr
 );
@@ -48,8 +48,8 @@ Sağlanan yöntem parçasıdır [ `IXCLRDataMethodInstance` arabirimi](ixclrdata
 ## <a name="requirements"></a>Gereksinimler
 
 **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Yok.  
-**Kitaplığı:** None  
+**Üst bilgi:** None  
+**Kitaplığı:** Yok.  
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.

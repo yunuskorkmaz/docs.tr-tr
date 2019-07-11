@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9768dfd43b6b60df1660c48cb6d6f498b049e256
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3de3a9c152f3074339dba330b7827cf795a7e537
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905521"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745970"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate Yöntemi
 Oluşturur ve belirtilen ada ve bayrak değerini kullanarak bir kod bölümü alır.  
@@ -31,7 +31,7 @@ Oluşturur ve belirtilen ada ve bayrak değerini kullanarak bir kod bölümü al
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT GetSectionCreate (  
     [in]  const char     *name,  
     [in]  DWORD          flags,  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 63353f670528cd52f3e2927426ae715432422504
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5c776942bced836437fdcb8aaf30faef48e3aaff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663861"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780153"
 ---
 # <a name="animation-overview"></a>Animasyona Genel bakış
 
@@ -231,10 +231,10 @@ Aşağıdaki tabloda, birkaç ortak animasyon türü ve ile kullanıldıklarınd
 
 |Özellik türü|Karşılık gelen (From/To/By) temel animasyon|Karşılık gelen anahtar çerçeve animasyonu|Karşılık gelen yol animasyonu|Kullanım örneği|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Yok.|Animasyon <xref:System.Windows.Media.SolidColorBrush.Color%2A> , bir <xref:System.Windows.Media.SolidColorBrush> veya <xref:System.Windows.Media.GradientStop>.|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|Animasyon <xref:System.Windows.Media.SolidColorBrush.Color%2A> , bir <xref:System.Windows.Media.SolidColorBrush> veya <xref:System.Windows.Media.GradientStop>.|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Animasyon <xref:System.Windows.FrameworkElement.Width%2A> , bir <xref:System.Windows.Controls.DockPanel> veya <xref:System.Windows.FrameworkElement.Height%2A> , bir <xref:System.Windows.Controls.Button>.|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Animasyon <xref:System.Windows.Media.EllipseGeometry.Center%2A> birini konumlandırmak bir <xref:System.Windows.Media.EllipseGeometry>.|
-|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|Animasyon <xref:System.Windows.Controls.TextBlock.Text%2A> , bir <xref:System.Windows.Controls.TextBlock> veya <xref:System.Windows.Controls.ContentControl.Content%2A> , bir <xref:System.Windows.Controls.Button>.|
+|<xref:System.String>|Yok.|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Yok.|Animasyon <xref:System.Windows.Controls.TextBlock.Text%2A> , bir <xref:System.Windows.Controls.TextBlock> veya <xref:System.Windows.Controls.ContentControl.Content%2A> , bir <xref:System.Windows.Controls.Button>.|
 
 <a name="animationsaretimelines"></a>
 
@@ -242,7 +242,7 @@ Aşağıdaki tabloda, birkaç ortak animasyon türü ve ile kullanıldıklarınd
 
 Tüm animasyon türleri devralınacak <xref:System.Windows.Media.Animation.Timeline> sınıfı; bu nedenle, tüm animasyon zaman çizelgelerini, özelleştirilmiş türleridir. A <xref:System.Windows.Media.Animation.Timeline> zaman bir parçasını tanımlar. Belirtebileceğiniz *zamanlama davranışları* zaman çizelgesinin: kendi <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, kaç kez olduğu için yinelenen ve hatta zaman ne kadar hızlı ilerler.
 
-Bir animasyon olduğundan bir <xref:System.Windows.Media.Animation.Timeline>, ayrıca zaman kesimini temsil eder. Ancak, belirtilen zaman kesimi ilerledikçe animasyon de çıkış değerleri hesaplar (veya <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). Animasyon veya "çalar", ilişkili olduğu özelliğini güncelleştirir.
+Bir animasyon olduğundan bir <xref:System.Windows.Media.Animation.Timeline>, ayrıca zaman kesimini temsil eder. Animasyon zaman, belirtilen segmente ilerledikçe de çıkış değerleri hesaplar. (veya <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). Animasyon veya "çalar", ilişkili olduğu özelliğini güncelleştirir.
 
 Üç sık kullanılan zamanlama özellikleri <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, ve <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>.
 
@@ -321,7 +321,7 @@ Başlamak için bir <xref:System.Windows.Media.Animation.Storyboard> kodda kulla
 [!code-csharp[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/FillBehaviorExample.cs#fillbehaviorexamplerectangleinline)]
 [!code-vb[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/fillbehaviorexample.vb#fillbehaviorexamplerectangleinline)]
 
-Çünkü, <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> olan kendi varsayılan değerinden değiştirilmedi <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, animasyon sona erdiğinde son değer, 0, tutar. Bu nedenle, <xref:System.Windows.UIElement.Opacity%2A> dikdörtgen inene 0 animasyon sonra sona erer. Ayarlarsanız <xref:System.Windows.UIElement.Opacity%2A> animasyon hala etkileyen çünkü başka bir değerle dikdörtgen, kodunuzu hiçbir etkisi görünüyor <xref:System.Windows.UIElement.Opacity%2A> özelliği.
+Çünkü, <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> olan kendi varsayılan değerinden değiştirilmedi <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, sona erdiğinde animasyonun son değeri, 0, tutar. Bu nedenle, <xref:System.Windows.UIElement.Opacity%2A> dikdörtgen inene 0 animasyon sonra sona erer. Ayarlarsanız <xref:System.Windows.UIElement.Opacity%2A> animasyon hala etkileyen çünkü başka bir değerle dikdörtgen, kodunuzu hiçbir etkisi görünüyor <xref:System.Windows.UIElement.Opacity%2A> özelliği.
 
 Kodda bir animasyonlu özelliğin denetimi yeniden elde etmek için tek bir yolu <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yöntemi için null belirtin <xref:System.Windows.Media.Animation.AnimationTimeline> parametresi. Daha fazla bilgi ve örnek için bkz. [bir özellik sonra animasyon film şeridi ile ayarlayın](how-to-set-a-property-after-animating-it-with-a-storyboard.md).
 
@@ -372,7 +372,7 @@ Aşağıdaki örnekleri uygulamalarınıza animasyon ekleme başlamanıza yardı
 |[Animasyon ve Zamanlama Sistemine Genel Bakış](animation-and-timing-system-overview.md)|Zamanlama sistemi nasıl kullandığını açıklar <xref:System.Windows.Media.Animation.Timeline> ve <xref:System.Windows.Media.Animation.Clock> animasyonlar oluşturmanıza olanak sağlayan sınıflar.|
 |[Animasyon İpuçları ve Püf Noktaları](animation-tips-and-tricks.md)|Animasyonlarla performans gibi sorunları çözmek için yararlı ipuçları listeler.|
 |[Özel Animasyonlara Genel Bakış](custom-animations-overview.md)|Anahtar çerçeveler, animasyon sınıfları veya çerçeve başına geri çağırmaları animasyon sistemini genişletmek açıklar.|
-|Gelen/İçin/Göre Animasyonlarına Genel Bakış|İki değer geçişleri bir animasyon oluşturmayı açıklar.|
+|[Gelen/İçin/Göre Animasyonlarına Genel Bakış](from-to-by-animations-overview.md)|İki değer geçişleri bir animasyon oluşturmayı açıklar.|
 |[Anahtar-Çerçeve Animasyonlara Genel Bakış](key-frame-animations-overview.md)|Bir animasyon ilişkilendirme yöntemi denetleme olanağı dahil olmak üzere birden çok hedef değerle oluşturmayı açıklar.|
 |[Hızlandırma İşlevleri](easing-functions.md)|Matematik formülleri geçirmek gibi gerçekçi davranışını almak için animasyon uygulamak açıklanmaktadır.|
 |[Yol Animasyonlarına Genel Bakış](path-animations-overview.md)|Taşıma veya karmaşık bir yolda nesneyi döndürme işlemini açıklamaktadır.|

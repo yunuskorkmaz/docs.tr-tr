@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9be512bab30e08ddeb7deadf8a29263e928549a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77b164cdec0dd224042e4de3265d14a4991d60ba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000382"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771894"
 ---
 # <a name="gethashfromfilew-function"></a>GetHashFromFileW İşlevi
 Unicode dizesi tarafından belirtilen dosyanın içeriğini üzerinden bir karma oluşturur.  
@@ -30,7 +30,7 @@ Unicode dizesi tarafından belirtilen dosyanın içeriğini üzerinden bir karma
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT GetHashFromFileW (   
     [in]  LPCWSTR   wszFilePath,  
     [in, out] unsigned int   *piHashAlg,  

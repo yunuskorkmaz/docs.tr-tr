@@ -2,12 +2,12 @@
 title: 'İzlenecek yol: Yalnızca Saklı Yordamları Kullanma (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: f4c34252f7d92985dac94663c85d3cca0dc58ab3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f16cbdc1d22e7ec08237c0f13db9499ee2f9194f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655121"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742563"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>İzlenecek yol: Yalnızca Saklı Yordamları Kullanma (C#)
 Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yürüterek verilerine erişmek için senaryo, depolanan yordamlar yalnızca. Bu yaklaşım, genellikle veri deposu nasıl erişilir sınırlamak için Veritabanı yöneticileri tarafından kullanılır.  
@@ -17,7 +17,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
  Bu izlenecek yolda amacı doğrultusunda, Northwind örnek veritabanındaki saklı yordamlar için eşlenen iki yöntemi kullanır: CustOrdersDetail ve CustOrderHist. Eşleme oluşturmak için SqlMetal komut satırı aracını çalıştırdığınızda oluşur bir C# dosya. Daha fazla bilgi için bu kılavuzda daha sonra Önkoşullar bölümüne bakın.  
   
- Bu izlenecek yol üzerinde kullanmayan [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Visual Studio kullanan geliştiricilerin de kullanabilir [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] saklı yordam işlevselliği uygulamak için. Bkz: [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Bu izlenecek yol, Nesne İlişkisel Tasarımcısı bağımlı kalmayacak. Visual Studio kullanan geliştiricilerin, O/R Tasarımcısı saklı yordam işlevselliği uygulamak için de kullanabilirsiniz. Bkz: [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -112,7 +112,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-set-up-the-user-interface"></a>Kullanıcı arabirimi oluşturan ayarlamak için  
   
-1. İade için Windows Forms Tasarımcısı (**Form1.cs[Design]**).  
+1. İade için Windows Forms Tasarımcısı (**Form1.cs[Design]** ).  
   
 2. Üzerinde **görünümü** menüsünde tıklatın **araç kutusu**.  
   
@@ -127,9 +127,9 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 4. Sağ **label1**ve ardından **özellikleri**.  
   
-5. Değişiklik **metin** özelliğinden **label1** için **OrderID girin:**.  
+5. Değişiklik **metin** özelliğinden **label1** için **OrderID girin:** .  
   
-6. Aynı şekilde **etiket 2**, değiştirme **metin** özelliğinden **etiket 2** için **CustomerID girin:**.  
+6. Aynı şekilde **etiket 2**, değiştirme **metin** özelliğinden **etiket 2** için **CustomerID girin:** .  
   
 7. Aynı şekilde değiştirme **metin** özelliği **button1** için **sipariş ayrıntıları**.  
   
