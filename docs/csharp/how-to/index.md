@@ -2,12 +2,12 @@
 title: Nasıl yapılır makaleleri (C# Kılavuzu)
 description: Hızlı ipuçları ve kısa, odaklanmış kod örnekleri koleksiyonu
 ms.date: 12/20/2017
-ms.openlocfilehash: 062ce64f4f369ae70074fd81f39b60de29e4d7d2
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 011e2a8208e647fb2df2ea2e949bfe2d2274eb37
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609255"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744267"
 ---
 # <a name="how-to-c"></a>Nasıl yapılır (C#)
 
@@ -66,7 +66,7 @@ Nesneyi farklı bir türe dönüştürmeniz gerekebilir.
 - [Bir bayt dizisini int'e dönüştürme](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [Bir dizeyi sayıya dönüştürme](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
 - [Desen eşleştirme kullan `as` ve `is` güvenli bir şekilde farklı bir türe dönüştürme yapmak işleçleri](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
-- [Dönüştürme işleçleri tanımlama `struct` türleri](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
+- [Özel tür dönüştürmelerini tanımlayan](../language-reference/operators/user-defined-conversion-operators.md).
 - [Bir türü null bir değer türü olup olmadığını](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
 - [Boş değer atanabilir ve NULL olmayan değer türleri arasında dönüştürme](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
 

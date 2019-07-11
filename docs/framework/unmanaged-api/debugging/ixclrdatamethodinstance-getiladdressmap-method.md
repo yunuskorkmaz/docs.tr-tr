@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e88897342bf18111ebd4914948ab45085c35ea08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 66e4768acff7ab735c6ac9e8f8f51a9511f7e371
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942369"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744687"
 ---
 # <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance::GetILAddressMap yöntemi
 
@@ -30,7 +30,7 @@ IL adresi eşleme bilgileri alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```cpp
 HRESULT GetILAddressMap(
     [in] ULONG32                                   mapLen,
     [out] ULONG32                                 *mapNeeded,
@@ -57,7 +57,7 @@ Sağlanan yöntem parçasıdır `IXCLRDataMethodInstance` arabirim ve sanal yön
 
 **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
 **Üst bilgi:** Yok.  
-**Kitaplığı:** Yok.  
+**Kitaplığı:** None  
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -4,12 +4,12 @@ description: .NET Core üzerinde kullanılabilir olan .NET Framework teknolojile
 author: cartermp
 ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: 4a798e85adc056b09761bd17b5d9a143643e77ad
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: bfeea58f4d80b789a7174a77e0784f2326906416
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397632"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737096"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET framework teknolojilerini .NET Core üzerinde kullanılamaz
 
@@ -19,7 +19,7 @@ API veya teknoloji yalnızca şu anda uygulanmadı çünkü kasıtlı olarak des
 
 ## <a name="appdomains"></a>AppDomains
 
-Uygulama etki alanları (uygulama etki alanları) uygulamaları birbirinden yalıtın. Uygulama etki alanları, çalışma zamanı desteği gerektirir ve genellikle oldukça pahalıdır. Ek uygulama etki alanları oluşturma desteklenmiyor... Gelecekte bu özelliği eklemeyi planlıyoruz yok. Kod bir ayırma işlemi için ayrı işlemler öneririz veya alternatif olarak kapsayıcıları kullanma. Dinamik derlemeler yüklenmesi için yeni öneririz <xref:System.Runtime.Loader.AssemblyLoadContext> sınıfı.
+Uygulama etki alanları (uygulama etki alanları) uygulamaları birbirinden yalıtın. Uygulama etki alanları, çalışma zamanı desteği gerektirir ve genellikle oldukça pahalıdır. Ek uygulama etki alanları oluşturma desteklenmiyor. Gelecekte bu özelliği eklemeyi planlıyoruz yok. Kod bir ayırma işlemi için ayrı işlemler öneririz veya alternatif olarak kapsayıcıları kullanma. Dinamik derlemeler yüklenmesi için yeni öneririz <xref:System.Runtime.Loader.AssemblyLoadContext> sınıfı.
 
 .NET Framework'ten kod geçişi kolaylaştırmak için .NET Core bazı sunan <xref:System.AppDomain> API yüzeyi. Bazı API'leri işlev normal olarak (örneğin, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), bazı üyeleri hiçbir şey yapma (örneğin, <xref:System.AppDomain.SetCachePath%2A>), ve bunlardan bazıları throw <xref:System.PlatformNotSupportedException> (örneğin, <xref:System.AppDomain.CreateDomain%2A>). Kullandığınız karşı türlerini işaretleyin [ `System.AppDomain` başvuru kaynağı](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/AppDomain.cs) içinde [dotnet/corefx'te GitHub deposu](https://github.com/dotnet/corefx)ettiğinizden emin uygulanan sürümünüzle eşleşen dalı seçin.
 

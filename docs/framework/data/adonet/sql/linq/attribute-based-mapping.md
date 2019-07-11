@@ -2,19 +2,19 @@
 title: Öznitelik Tabanlı Eşleme
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a524e37640959c20c9883aa68e978a89428e43a4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032974"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743620"
 ---
 # <a name="attribute-based-mapping"></a>Öznitelik Tabanlı Eşleme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir SQL Server veritabanına eşleyen bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ya da uygulanan öznitelikleri veya bir dış eşleme dosyası kullanarak nesne modeli. Bu konuda, öznitelik tabanlı yaklaşım açıklanmaktadır.  
   
  En basit formunda, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veritabanına eşleyen bir <xref:System.Data.Linq.DataContext>, bir sınıf, sütunları ve söz konusu sınıfın özelliklerini ilişkileri bir tablo. Öznitelikler, devralma hiyerarşisi, nesne modelinde eşlemek için de kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Visual Basic'de nesne modeli oluşturmak veya C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
- Genellikle Visual Studio kullanan geliştiricilerin kullanarak öznitelik tabanlı eşleme gerçekleştirmek [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. SQLMetal komut satırı aracını da kullanabilirsiniz veya elle kod öznitelikleri kendiniz yapabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Visual Basic'de nesne modeli oluşturmak veya C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Genellikle Visual Studio kullanan geliştiricilerin öznitelik tabanlı eşleme, Nesne İlişkisel Tasarımcısı kullanarak gerçekleştirin. SQLMetal komut satırı aracını da kullanabilirsiniz veya elle kod öznitelikleri kendiniz yapabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Visual Basic'de nesne modeli oluşturmak veya C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
 > [!NOTE]
 >  Ayrıca, dış bir XML dosyası kullanarak da eşleştirebilirsiniz. Daha fazla bilgi için [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
@@ -114,7 +114,7 @@ ms.locfileid: "62032974"
   
 |Özellik|Tür|Varsayılan|Açıklama|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|Dize|Yok.|Veritabanı türü belirtir.|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|Dize|None|Veritabanı türü belirtir.|  
 |<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|Dize|Aynı dize olarak parametre adı veritabanında|Parametre için bir ad belirtir.|  
   
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.ParameterAttribute>.  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d326c801ed17fa6fe79f9e464e64844d0016e572
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea2c72a91aaa09d1c2d0e0944b73beb9ea313d0a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785164"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738033"
 ---
 # <a name="icordebugappdomainenumeratesteppers-method"></a>ICorDebugAppDomain::EnumerateSteppers Yöntemi
 Bir numaralandırıcı, uygulama etki alanı için tüm etkin adımlayıcıların alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT EnumerateSteppers (  
     [out] ICorDebugStepperEnum   **ppSteppers  
 );  
