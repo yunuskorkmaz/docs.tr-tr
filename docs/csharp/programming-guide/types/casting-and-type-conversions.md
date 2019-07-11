@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: b4f37acb295584e45baba8ca4e9d15f6d9602cf4
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e46083a9b8261cf8635d07e3b16f9c291bcc69a4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661218"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743805"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Atama ve tür dönüştürmeleri (C# Programlama Kılavuzu)
 
@@ -32,7 +32,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Açık dönüştürmeler (yayınları)** : Açık dönüştürmeler bir atama işleci gerektirir. Atama, bilgi dönüştürme sırasında kaybedilen veya diğer nedenlerle dönüştürme başarılı olmayabilir gereklidir.  Daha az duyarlılık ya da daha küçük bir aralığı olan bir türü sayısal dönüştürme ve türetilmiş bir sınıf bir taban sınıfı örneğini dönüştürme Bunun tipik örneklerindendir.  
   
-- **Kullanıcı tanımlı dönüşümler**: Bir türetilmiş sınıf – temel sınıf ilişkisi olmayan özel türler arasında açık ve örtük dönüştürme etkinleştirmek için tanımlayabileceğiniz özel yöntemler kullanıcı tanımlı dönüştürmeler gerçekleştirilir. Daha fazla bilgi için [dönüştürme işleçleri](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
+- **Kullanıcı tanımlı dönüşümler**: Bir türetilmiş sınıf – temel sınıf ilişkisi olmayan özel türler arasında açık ve örtük dönüştürme etkinleştirmek için tanımlayabileceğiniz özel yöntemler kullanıcı tanımlı dönüştürmeler gerçekleştirilir. Daha fazla bilgi için [kullanıcı tanımlı dönüştürme işleçleri](../../../csharp/language-reference/operators/user-defined-conversion-operators.md).  
   
 - **Yardımcı sınıfları dönüştürmeler**: Tam sayılar gibi uyumlu olmayan türleri arasında dönüştürme yapma ve <xref:System.DateTime?displayProperty=nameWithType> nesneleri veya onaltılık dizeler ve bayt dizileri kullanabilirsiniz <xref:System.BitConverter?displayProperty=nameWithType> sınıfı <xref:System.Convert?displayProperty=nameWithType> sınıfı ve `Parse` gibi yerleşik sayısal yöntemlerinin türleri <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Daha fazla bilgi için [nasıl yapılır: Byte dizisini int'e dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [nasıl yapılır: Bir dizeyi sayıya dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md), ve [nasıl yapılır: Onaltılık dizeler ve sayısal türler arasında dönüştürme](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
@@ -46,7 +46,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
  Başvuru türleri için örtük bir dönüştürme her zaman bir sınıftan herhangi biri, doğrudan veya dolaylı temel sınıfların veya arabirimleri bulunmaktadır. Hiçbir özel sözdizimi, türetilmiş bir sınıf her zaman temel sınıfın tüm üyeleri içerdiği için gereklidir.  
   
-```  
+```csharp
 Derived d = new Derived();  
 Base b = d; // Always OK.  
 ```  
@@ -87,15 +87,13 @@ Giraffe g2 = (Giraffe) a;
   
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+Daha fazla bilgi için [dönüştürmeler](~/_csharplang/spec/conversions.md) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [Türler](../../../csharp/programming-guide/types/index.md)
-- [() İşleci](../../../csharp/language-reference/operators/type-testing-and-conversion-operators.md#cast-operator-)
-- [explicit](../../../csharp/language-reference/keywords/explicit.md)
-- [implicit](../../../csharp/language-reference/keywords/implicit.md)
-- [Dönüştürme İşleçleri](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)
+- [() arama işleci](../../../csharp/language-reference/operators/type-testing-and-conversion-operators.md#cast-operator-)
+- [Kullanıcı tanımlı dönüştürme işleçleri](../../../csharp/language-reference/operators/user-defined-conversion-operators.md)
 - [Genelleşmiş tür dönüştürme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [Nasıl yapılır: Bir dizeyi sayıya dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

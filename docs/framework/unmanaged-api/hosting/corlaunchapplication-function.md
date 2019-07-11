@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64527221e81569bf08a3cfd34a66681725755a55
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9861de733a9acb43c7e2a4b4941f9945fc5f0ba7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490543"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758379"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication İşlevi
 Belirtilen bildirimleri ve diğer uygulama verilerini kullanarak belirtilen ağ yolunda uygulamayı başlatır.  
@@ -31,7 +31,7 @@ Belirtilen bildirimleri ve diğer uygulama verilerini kullanarak belirtilen ağ 
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT CorLaunchApplication (  
     [in]  HOST_TYPE                dwClickOnceHost,  
     [in]  LPCWSTR                  pwzAppFullName,  

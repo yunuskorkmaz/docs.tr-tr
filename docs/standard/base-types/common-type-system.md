@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: fdd7eef0994ca9c7b0533b6497d76a4720dd1f64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e916d7d335bcdeff64393a25ab697748209d147c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634638"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782626"
 ---
 # <a name="common-type-system"></a>Ortak Tür Sistemi
 Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışma zamanı'nda yönetilen tanımlar ve çalışma zamanının diller arası tümleştirme desteğinin önemli bir bölümü de olan. Ortak tür sistemi şu işlevleri gerçekleştirir:  
@@ -86,7 +86,7 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
   
  Hiçbir uygulamaya sahip olmayan sınıf üyeleri soyut üyelerdir. Bir veya daha fazla soyut üye olan bir sınıfı kendisi, soyut; Yeni örnekleri oluşturulamaz. Çalışma zamanını hedefleyen bazı diller bile üyelerinin hiçbiri soyut bir sınıfı soyut olarak işaretlemenize olanak tanır. Temel bir yalıtılacak istediğinizde soyut bir sınıfı kullanabilirsiniz kümesi türetilmiş sınıfların devralabileceği veya uygun olduğunda geçersiz. Soyut olmayan sınıflar somut sınıf olarak adlandırılır.  
   
- Bir sınıf herhangi bir sayıda arabirim uygulayabilir, ancak ek olarak yalnızca bir temel sınıftan devralabilir <xref:System.Object?displayProperty=nameWithType>, öğesinden, tüm sınıflar örtük olarak devralır. Tüm sınıflar, sınıfın yeni örneklerini başlatan en az bir oluşturucusu olmalıdır. Açıkça bir oluşturucu tanımlamazsanız, çoğu derleyici otomatik olarak varsayılan (parametresiz) bir oluşturucu sağlar.  
+ Bir sınıf herhangi bir sayıda arabirim uygulayabilir, ancak ek olarak yalnızca bir temel sınıftan devralabilir <xref:System.Object?displayProperty=nameWithType>, öğesinden, tüm sınıflar örtük olarak devralır. Tüm sınıflar, sınıfın yeni örneklerini başlatan en az bir oluşturucusu olmalıdır. Açıkça bir oluşturucu tanımlamazsanız, çoğu derleyicileri parametresiz bir oluşturucu otomatik olarak sağlar.  
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>Yapılar  
@@ -273,9 +273,9 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
 ### <a name="constructors"></a>Oluşturucular  
  Bir oluşturucu özel bir sınıf veya yapının yeni örneklerini oluşturan yöntemi türüdür. Diğer herhangi bir yöntemi gibi bir oluşturucu parametreler içerebilir. ancak oluşturucuların dönüş değeri yoktur (diğer bir deyişle, döndürmeleri `void`).  
   
- Bir sınıfın kaynak kodu açıkça bir oluşturucu tanımlamıyorsa, derleyici varsayılan (parametresiz) Oluşturucu içerir. Ancak, bir sınıfın kaynak kodu yalnızca parametreli yapıcıları tanımlıyorsa, Visual Basic ve C# Derleyicileri parametresiz bir oluşturucu oluşturmaz.  
+ Bir sınıfın kaynak kodu açıkça bir oluşturucu tanımlamıyorsa, derleyici parametresiz bir oluşturucu içerir. Ancak, bir sınıfın kaynak kodu yalnızca parametreli yapıcıları tanımlıyorsa, Visual Basic ve C# Derleyicileri parametresiz bir oluşturucu oluşturmaz.  
   
- Bir yapı için kaynak kodu oluşturucular tanımlıyorsa, bunlar parametrelenmelidir; bir yapı varsayılan (parametresiz) bir oluşturucu tanımlayamaz ve derleyiciler yapılar ya da diğer değer türleri için parametresiz oluşturucular oluşturmaz. Tüm değer türleri örtülü varsayılan bir oluşturucuya sahip. Bu oluşturucu, ortak dil çalışma zamanı tarafından uygulanır ve tüm alanları varsayılan değerlerine yapısının başlatır.  
+ Bir yapı için kaynak kodu oluşturucular tanımlıyorsa, bunlar parametrelenmelidir; bir yapı parametresiz bir oluşturucu tanımlayamaz ve derleyiciler yapılar ya da diğer değer türleri için parametresiz oluşturucular oluşturmaz. Tüm değer türleri örtülü bir parametresiz oluşturucuya sahiptir. Bu oluşturucu, ortak dil çalışma zamanı tarafından uygulanır ve tüm alanları varsayılan değerlerine yapısının başlatır.  
   
 <a name="Events"></a>   
 ### <a name="events"></a>Olaylar  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae097320ad7cd6e7c840122bf3f315812e9b2acd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe45322808a0a756b31f27f9f5c1549ece348e11
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763353"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770108"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>ICLRTaskManager::SetLocale Yöntemi
 Ortak dil çalışma zamanı (CLR), ana bilgisayar (hangi coğrafi kültür ve dil eşlemelerini) yerel ayar tanımlayıcısı şu anda yürütülen görevde değerini değiştirdi bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT SetLocale (  
     [in] LCID lcid  
 );  

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: cbea6c0562c68ae5d18247dc97bc53eb9dfbfd7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 145b06f89b45b165b9d6329a4c16ac5739406113
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965951"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739186"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress yapısı
 
@@ -30,7 +30,7 @@ Bir modül adresi isteği için bir kapsayıcı tanımlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```cpp
 struct DacpGetModuleAddress
 {
     CLRDATA_ADDRESS ModulePtr;
@@ -56,7 +56,7 @@ Bu yapı, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya
 ## <a name="requirements"></a>Gereksinimler
 **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
 **Üst bilgi:** None  
-**Kitaplığı:** Yok.  
+**Kitaplığı:** None  
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -2,12 +2,12 @@
 title: Sorun giderme
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: c09871abcdfb9243b5170386ffe79012c9c3f71d
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 697432dce5f7698a8b4eabde3586bb4f77fd62de
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661858"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742750"
 ---
 # <a name="troubleshooting"></a>Sorun giderme
 Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalar ve aksi takdirde bu sorunların etkisini azaltmak veya önlemek için öneriler sunar.  
@@ -26,7 +26,7 @@ Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!IN
  Bir giriş dosyası adı belirtmek için, adı komut satırına giriş dosyası olarak ekleyin. Dosya adının bağlantı dizesine eklenmesi (kullanarak **/conn** seçeneği) desteklenmiyor. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="class-library-projects"></a>Sınıf kitaplığı projeleri  
- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Bağlantı dizesinde oluşturur `app.config` proje dosyası. Sınıf kitaplık projeleri içinde `app.config` dosya kullanılmaz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Tasarım zamanı dosyalarında sağlanan bağlantı dizesi kullanır. Değer değiştirme `app.config` uygulamanızı bağlandığı veritabanını değiştirmez.  
+ Nesne İlişkisel Tasarımcısı bağlantı dizesinde oluşturur `app.config` proje dosyası. Sınıf kitaplık projeleri içinde `app.config` dosya kullanılmaz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Tasarım zamanı dosyalarında sağlanan bağlantı dizesi kullanır. Değer değiştirme `app.config` uygulamanızı bağlandığı veritabanını değiştirmez.  
   
 ## <a name="cascade-delete"></a>Art arda silme  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] desteklemez veya art arda silme işlemleri tanıyın. Bunu yönelik kısıtlamalar içeren bir tabloda bir satır silmek istiyorsanız, aşağıdakilerden birini yapmalısınız:  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0451ceac3018a3bab697a8ac82f5ef84f1026c6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85f788ec61cc441e7271fb7a8aba843f37d20a57
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597186"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782719"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a>ICorProfilerCallback::ExceptionUnwindFunctionEnter Yöntemi
 Profil Oluşturucu, özel durum işleme geriye doğru izleme aşaması, bir işlevi geriye doğru izleme başladı bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT ExceptionUnwindFunctionEnter(  
     [in] FunctionID functionId);  
 ```  

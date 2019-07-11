@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: a0b78afb653d3a47fa12b856de730131e5f8448e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c91fecf9e786f4a8e35486e7b30e9efe36c972e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606421"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771648"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme
 Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek öncelik taşır. Windows Form Tasarımcısı, bunu gerçekleştirmek için çok sayıda düzen araçları sunar. En önemli biri <xref:System.Windows.Forms.Design.Behavior.SnapLine> özelliği.  
@@ -53,7 +53,7 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
  İlk adım projeyi oluşturmak ve formu ayarlamaktır.  
   
-#### <a name="to-create-the-project"></a>Proje oluşturmak için  
+### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
 1. "SnaplineExample" adlı bir Windows tabanlı uygulama projesi oluşturun (**dosya** > **yeni** > **proje**  >  **Visual C#** veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms uygulamalarındaki**).  
   
@@ -62,7 +62,7 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 ## <a name="spacing-and-aligning-controls-using-snaplines"></a>Aralık ve dayama çizgileri kullanarak denetimleri hizalama  
  Dayama çizgileri size Formunuza denetim hizalamak için doğru ve kullanımı kolay bir yol sağlar. Seçili denetimi veya denetimleri başka bir denetimi veya denetimleri hizalama bir konuma yakın taşıdığınız zaman görünürler. "Diğer denetimleri hareket ederken sizin seçiminiz için önerilen konum yaslanır".  
   
-#### <a name="to-arrange-controls-using-snaplines"></a>Dayama çizgileri kullanarak denetimleri düzenlemek için  
+### <a name="to-arrange-controls-using-snaplines"></a>Dayama çizgileri kullanarak denetimleri düzenlemek için  
   
 1. Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** formunuza.  
   
@@ -85,7 +85,7 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 ## <a name="aligning-to-form-and-container-margins"></a>Form ve kapsayıcı kenar boşlukları hizalama  
  Dayama çizgileri form ve kapsayıcı kenar boşlukları, denetimleri tutarlı bir şekilde hizalayın yardımcı olur.  
   
-#### <a name="to-align-controls-to-form-and-container-margins"></a>Form ve kapsayıcı kenar boşlukları denetimleri hizalama  
+### <a name="to-align-controls-to-form-and-container-margins"></a>Form ve kapsayıcı kenar boşlukları denetimleri hizalama  
   
 1. Birini <xref:System.Windows.Forms.Button> denetler ve taşırsanız, formun sağ kenarının yakınında bir snapline görünene kadar. Sağ kenarlığın mesafe snapline'nın denetimin toplamıdır <xref:System.Windows.Forms.Control.Margin%2A> özelliği ve formun <xref:System.Windows.Forms.Control.Padding%2A> özellik değerleri.  
   
@@ -107,7 +107,7 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 ## <a name="aligning-to-grouped-controls"></a>Gruplandırılmış denetimleri hizalama  
  Dayama çizgileri gruplandırılmış denetimleri hizalama için kullanabileceğiniz de gibi denetimleri içinde bir <xref:System.Windows.Forms.GroupBox> denetimi.  
   
-#### <a name="to-align-to-grouped-controls"></a>Gruplandırılmış denetimleri hizalama  
+### <a name="to-align-to-grouped-controls"></a>Gruplandırılmış denetimleri hizalama  
   
 1. İki, form üzerindeki denetimleri seçin. Seçimi yorumuyla kabarcıklar etrafta seçiminizi ve diğer denetimler arasında görünür dayama çizgileri unutmayın.  
   
@@ -120,7 +120,7 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 ## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a>Bir denetimi boyutuna anahat oluşturma tarafından yerleştirmek için dayama çizgileri kullanarak  
  Dayama çizgileri Yardım, hizalama, önce bunları bir form üzerinde yerleştirdiğinizde denetler.  
   
-#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>Bir denetimi boyutuna anahat oluşturma tarafından yerleştirmek için dayama çizgileri kullanmak için  
+### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>Bir denetimi boyutuna anahat oluşturma tarafından yerleştirmek için dayama çizgileri kullanmak için  
   
 1. İçinde **araç kutusu**, tıklayın <xref:System.Windows.Forms.Button> denetim simgesi. Form üzerine sürükleyin değil.  
   
@@ -137,7 +137,7 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 ## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a>Bir denetimi araç kutusundan sürüklendiğinde dayama çizgileri kullanarak  
  Dayama çizgileri Yardım, hizalama denetimleri bunları sürüklediğinizde **araç kutusu** formunuza.  
   
-#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>Bir denetimi araç kutusundan sürüklendiğinde dayama çizgileri kullanmak için  
+### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>Bir denetimi araç kutusundan sürüklendiğinde dayama çizgileri kullanmak için  
   
 1. Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** formunuza, ancak fare düğmesini bırakın değil.  
   
@@ -150,7 +150,7 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 ## <a name="resizing-controls-using-snaplines"></a>Dayama çizgileri kullanarak denetimleri yeniden boyutlandırma  
  Dayama çizgileri yardımcı olarak bunları yeniden boyutlandırma denetimleri hizalama.  
   
-#### <a name="to-resize-a-control-using-snaplines"></a>Dayama çizgileri kullanarak bir denetimi yeniden boyutlandırmak için  
+### <a name="to-resize-a-control-using-snaplines"></a>Dayama çizgileri kullanarak bir denetimi yeniden boyutlandırmak için  
   
 1. Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** formunuza.  
   
@@ -163,7 +163,7 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 ## <a name="aligning-a-label-to-a-controls-text"></a>Etiket denetimin metni hizalama  
  Diğer denetimleri için görüntülenen metin hizalama için bir snapline bazı denetimler sunar.  
   
-#### <a name="to-align-a-label-to-a-controls-text"></a>Etiket denetimin metni hizalama  
+### <a name="to-align-a-label-to-a-controls-text"></a>Etiket denetimin metni hizalama  
   
 1. Sürükleme bir <xref:System.Windows.Forms.TextBox> denetimi **araç kutusu** formunuza. Bıraktığınız zaman <xref:System.Windows.Forms.TextBox> forma denetim, akıllı etiket karakterini tıklayıp seçin **metin ayarlamak için textBox1** seçeneği. Ayrıntılar için bkz [izlenecek yol: Denetimleri form üzerinde Windows akıllı etiketleri kullanarak ortak görevleri gerçekleştirme](performing-common-tasks-using-smart-tags-on-wf-controls.md).  
   
@@ -178,7 +178,7 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 ## <a name="using-snaplines-with-keyboard-navigation"></a>Klavye ile gezinti dayama çizgileri kullanarak  
  Dayama çizgileri Yardım, hizalama, ne zaman, klavye oklarını kullanarak bunları düzenleme denetler.  
   
-#### <a name="to-use-snaplines-with-keyboard-navigation"></a>Dayama çizgileri klavye gezintisi ile kullanmak için  
+### <a name="to-use-snaplines-with-keyboard-navigation"></a>Dayama çizgileri klavye gezintisi ile kullanmak için  
   
 1. Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** formunuza. Bunu, formun sol üst köşesinde bulunan yerleştirin.  
   
@@ -199,7 +199,7 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 ## <a name="snaplines-and-layout-panels"></a>Dayama çizgileri ve Düzen bölmeleri  
  Dayama çizgileri, Düzen bölmelerini içinde devre dışı bırakıldı.  
   
-#### <a name="to-selectively-disable-snaplines"></a>Seçmeli olarak dayama çizgileri devre dışı bırakmak için  
+### <a name="to-selectively-disable-snaplines"></a>Seçmeli olarak dayama çizgileri devre dışı bırakmak için  
   
 1. Sürükleme bir <xref:System.Windows.Forms.TableLayoutPanel> denetimi **araç kutusu** formunuza.  
   
@@ -214,13 +214,13 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 ## <a name="disabling-snaplines"></a>Dayama çizgileri devre dışı bırakma  
  Dayama çizgileri varsayılan olarak açık olabilir. Dayama çizgileri seçmeli olarak devre dışı ya da, bunları tasarım ortamında devre dışı bırakabilirsiniz.  
   
-#### <a name="to-selectively-disable-snaplines"></a>Seçmeli olarak dayama çizgileri devre dışı bırakmak için  
+### <a name="to-selectively-disable-snaplines"></a>Seçmeli olarak dayama çizgileri devre dışı bırakmak için  
   
 - ALT tuşuna basın ve bir denetimin form etrafında taşıma çalışırken.  
   
      Hiçbir dayama çizgileri görünür ve denetim, tüm olası hizalama konumlara Yasla değil unutmayın.  
   
-#### <a name="to-disable-snaplines-in-the-design-environment"></a>Tasarım ortamında dayama çizgileri devre dışı bırakmak için  
+### <a name="to-disable-snaplines-in-the-design-environment"></a>Tasarım ortamında dayama çizgileri devre dışı bırakmak için  
   
 1. Gelen **Araçları** menüsünde, açık **seçenekleri** iletişim kutusu. Windows Form Tasarımcısı iletişim kutusunu açın. Ayrıntılar için bkz [genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)).  
   

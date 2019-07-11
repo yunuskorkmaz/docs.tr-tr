@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: fee2aad90485d3d06f1730d5937fd4e1240b4801
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064039"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744259"
 ---
 # <a name="c-guide"></a>C# Kılavuzu
 
@@ -35,7 +35,7 @@ C# Kılavuzu'nda birkaç bölümü vardır. Bunları sırayla okuyabilir veya do
 * [Başlarken](getting-started/index.md)
   * Bu bölüm, bir C# geliştirme ortamı tercih edilen platformda yüklemek gerekenler kapsar. Bu bölümde farklı başlıklara, desteklenen farklı ortamlarda ilk C# programınızı oluşturma işlemleri açıklanmaktadır.
 
-* [Giriş C# öğreticiler](tutorials/intro-to-csharp/index.md):
+* [Giriş C# öğreticiler](tutorials/intro-to-csharp/index.md)
   * Giriş C# öğreticiler sunan etkileşimli öğreticileri keşfedin ve öğrenin almadığınızdan geliştiricilerin C# okuma-Eval-Print Loop (REPL) arabirimini kullanarak tarayıcının dili. Etkileşimli dersleri tamamladıktan sonra aynı dersleri makinenizde uygulayan tarafından kodlama becerilerinizi geliştirebilir.
 
 * [Öğreticiler](tutorials/index.md)

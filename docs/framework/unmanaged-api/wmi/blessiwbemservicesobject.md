@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d28497c637a40d7e2659b18868124ea898397f92
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b7f24606e3b021b0df5bdbaab795e4f672f724fa
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636902"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761721"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject işlevi
 Kullanıcı kimlik bilgilerini belirtilen erişim izni olup olmadığını gösteren [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) nesne. 
@@ -30,7 +30,7 @@ Kullanıcı kimlik bilgilerini belirtilen erişim izni olup olmadığını göst
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```cpp
 HRESULT BlessIWbemServicesObject (
    [in] IUnknown* pIUnknown,
    [in] BSTR strUser, 

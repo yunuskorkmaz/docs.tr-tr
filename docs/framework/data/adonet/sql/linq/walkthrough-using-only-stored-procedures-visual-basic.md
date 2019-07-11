@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 22db347afb45b981602d5a92516271f75b8e4359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 270b0f2123a20787a8e75d40f56a675c55824243
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648673"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742553"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>İzlenecek yol: Yalnızca Saklı Yordamlar Kullanma (Visual Basic)
 Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] senaryosu kullanarak verilerine erişmek için saklı yordamlar yalnızca. Bu yaklaşım, genellikle veri deposu nasıl erişilir sınırlamak için Veritabanı yöneticileri tarafından kullanılır.  
@@ -19,7 +19,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
  Bu izlenecek yolda amacı doğrultusunda, Northwind örnek veritabanındaki saklı yordamlar için eşlenen iki yöntemi kullanır: CustOrdersDetail ve CustOrderHist. Eşleme, bir Visual Basic dosyası oluşturmak için SqlMetal komut satırı aracını çalıştırdığınız oluşur. Daha fazla bilgi için bu kılavuzda daha sonra Önkoşullar bölümüne bakın.  
   
- Bu izlenecek yol üzerinde kullanmayan [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Visual Studio kullanan geliştiricilerin de kullanabilir [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] saklı yordam işlevselliği uygulamak için. Bkz: [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Bu izlenecek yol, Nesne İlişkisel Tasarımcısı bağımlı kalmayacak. Visual Studio kullanan geliştiricilerin, O/R Tasarımcısı saklı yordam işlevselliği uygulamak için de kullanabilirsiniz. Bkz: [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -60,7 +60,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
 ## <a name="creating-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturma  
  Bu ilk görevde oluşturduğunuz derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proje.  
   
-#### <a name="to-create-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturmak için  
+### <a name="to-create-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturmak için  
   
 1. Visual Studio **dosya** menüsünü tıklatın **yeni proje**.  
   
@@ -77,7 +77,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
 ## <a name="adding-the-linq-to-sql-assembly-reference"></a>LINQ SQL bütünleştirilmiş kod başvurusu ekleme  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Derleme standart Windows Forms uygulaması şablonu dahil değildir. Aşağıdaki adımlarda açıklandığı gibi derleme kendiniz eklemeniz gerekir:  
   
-#### <a name="to-add-systemdatalinqdll"></a>System.Data.Linq.dll eklemek için  
+### <a name="to-add-systemdatalinqdll"></a>System.Data.Linq.dll eklemek için  
   
 1. İçinde **Çözüm Gezgini**, tıklayın **tüm dosyaları göster**.  
   
@@ -90,7 +90,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
 ## <a name="adding-the-northwind-code-file-to-the-project"></a>Northwind kod dosyası projeye ekleniyor  
  Bu adım Northwind örnek veritabanındaki bir kod dosyası oluşturmak için SqlMetal Aracı'nı kullandığınızı varsayar. Daha fazla bilgi için bu kılavuzda daha önce açıklanan Önkoşullar bölümüne bakın.  
   
-#### <a name="to-add-the-northwind-code-file-to-the-project"></a>Northwind kod dosyası projeye eklemek için  
+### <a name="to-add-the-northwind-code-file-to-the-project"></a>Northwind kod dosyası projeye eklemek için  
   
 1. Üzerinde **proje** menüsünde tıklatın **varolan öğeyi Ekle**.  
   
@@ -101,7 +101,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
 ## <a name="creating-a-database-connection"></a>Veritabanı bağlantısı oluşturma  
  Bu adımda, Northwind örnek veritabanına bir bağlantı tanımlayın. Bu izlenecek yolu olarak "c:\linqtest3\northwnd.mdf" kullanır.  
   
-#### <a name="to-create-the-database-connection"></a>Veritabanı bağlantısı oluşturmak için  
+### <a name="to-create-the-database-connection"></a>Veritabanı bağlantısı oluşturmak için  
   
 1. İçinde **Çözüm Gezgini**, sağ **Form1.vb**ve ardından **kodu görüntüle**.  
   
@@ -114,9 +114,9 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
 ## <a name="setting-up-the-user-interface"></a>Kullanıcı arabirimi ayarlama  
  Bu görevde, böylece kullanıcılar, veritabanındaki verilere erişmek için saklı yordamlar yürütebilir bir arabirim oluşturun. Bu izlenecek yol ile geliştirdiğiniz uygulamada yalnızca katıştırılmış uygulama içinde saklı yordamları kullanarak veritabanındaki verileri kullanıcılar erişebilir.  
   
-#### <a name="to-set-up-the-user-interface"></a>Kullanıcı arabirimi oluşturan ayarlamak için  
+### <a name="to-set-up-the-user-interface"></a>Kullanıcı arabirimi oluşturan ayarlamak için  
   
-1. İade için Windows Forms Tasarımcısı (**Form1.vb[Design]**).  
+1. İade için Windows Forms Tasarımcısı (**Form1.vb[Design]** ).  
   
 2. Üzerinde **görünümü** menüsünde tıklatın **araç kutusu**.  
   
@@ -131,9 +131,9 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 4. Sağ **Label1**ve ardından **özellikleri**.  
   
-5. Değişiklik **metin** özelliğinden **Label1** için **OrderID girin:**.  
+5. Değişiklik **metin** özelliğinden **Label1** için **OrderID girin:** .  
   
-6. Aynı şekilde **etiket 2**, değiştirme **metin** özelliğinden **etiket 2** için **CustomerID girin:**.  
+6. Aynı şekilde **etiket 2**, değiştirme **metin** özelliğinden **etiket 2** için **CustomerID girin:** .  
   
 7. Aynı şekilde değiştirme **metin** özelliği **Button1** için **sipariş ayrıntıları**.  
   
@@ -141,7 +141,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
      Tüm metni görünür olması düğme denetimleri genişletebilirsiniz.  
   
-#### <a name="to-handle-button-clicks"></a>Düğme tıklamaları işlemek için  
+### <a name="to-handle-button-clicks"></a>Düğme tıklamaları işlemek için  
   
 1. Çift **sipariş ayrıntıları** üzerinde **Form1** oluşturmak için `Button1` olay işleyicisi ve Kod Düzenleyicisi'ni açın.  
   
@@ -158,7 +158,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
 ## <a name="testing-the-application"></a>Uygulamayı Test Etme  
  Artık uygulamanızı test etmek için zamanı geldi. Veri deposu ile ilgili iki saklı yordam hangi eylemleri için sınırlı olduğunu unutmayın. Bu, girdiğiniz tüm OrderID için dahil edilen ürünleri döndürmek için veya bir geçmiş girdiğiniz CustomerID sipariş edilen ürünleri döndürmek için eylemlerdir.  
   
-#### <a name="to-test-the-application"></a>Uygulamayı test etmek için  
+### <a name="to-test-the-application"></a>Uygulamayı test etmek için  
   
 1. Hata ayıklamayı başlatmak için F5 tuşuna basın.  
   

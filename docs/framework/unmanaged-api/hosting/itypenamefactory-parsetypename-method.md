@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbe5f634a5d0580c7e58b03f318da98a0112fa6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a4b2314adac222279e4cf0a53897725d63da0cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765372"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768573"
 ---
 # <a name="itypenamefactoryparsetypename-method"></a>ITypeNameFactory::ParseTypeName Yöntemi
 Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT ParseTypeName (  
     [in]  LPCWSTR             szName,  
     [out] DWORD*              pError,  

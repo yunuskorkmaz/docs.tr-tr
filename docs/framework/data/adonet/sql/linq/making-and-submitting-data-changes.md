@@ -2,12 +2,12 @@
 title: Veri Değişiklikleri Yapma ve Gönderme
 ms.date: 03/30/2017
 ms.assetid: d68c2dc3-99b3-49ab-b547-2ca5b386429a
-ms.openlocfilehash: c9d319727a750fbd3e2a186c28e79b20200c6bd0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23dc45c990763e69b41608f6c3ec15a8db17bf23
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903350"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743014"
 ---
 # <a name="making-and-submitting-data-changes"></a>Veri Değişiklikleri Yapma ve Gönderme
 Bu bölümdeki konular, sağlamak ve değişiklikleri veritabanına aktarmak ve iyimser eşzamanlılık çakışmalarını nasıl ele alınacağını açıklar.  
@@ -15,7 +15,7 @@ Bu bölümdeki konular, sağlamak ve değişiklikleri veritabanına aktarmak ve 
 > [!NOTE]
 >  Geçersiz kılabilirsiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] varsayılan yöntemleri `Insert`, `Update`, ve `Delete` operations veritabanı. Daha fazla bilgi için [özelleştirme ekleme, güncelleştirme ve silme işlemleri](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
 >   
->  Visual Studio kullanan geliştiricilerin kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] saklı yordamlar için aynı amaca geliştirilir.  
+>  Visual Studio kullanan geliştiricilerin, Nesne İlişkisel Tasarımcısı, aynı amaçla saklı yordamlar geliştirmek için kullanabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: Satır veritabanına Ekle](../../../../../../docs/framework/data/adonet/sql/linq/how-to-insert-rows-into-the-database.md)  

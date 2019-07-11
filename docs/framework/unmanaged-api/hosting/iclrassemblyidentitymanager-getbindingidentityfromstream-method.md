@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6dc4e3adf5adec1aa4626a31b6a9391e2a04f1ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16cb3495bbc2fa9ead25afd5e7120774b021a37f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970098"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773554"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromStream Yöntemi
 Belirtilen akış derlemede kurallı derleme kimlik verilerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT GetBindingIdentityFromStream (  
     [in] IStream    *pStream,  
     [in] DWORD       dwFlags,  

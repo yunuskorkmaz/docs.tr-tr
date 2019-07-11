@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 24b7af4b44d51da06e9d65104f1b469ef1d83b8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e0f56dd6ece32b1f05418ea288da409af5cad5f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992075"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782760"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>ICorProfilerInfo::GetInprocInspectionIThisThread Yöntemi
 Icordebugthread arabirimi sorgulanabilir bir nesne alır. Bu yöntem .NET Framework 2.0 sürümünde artık kullanılmıyor.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT GetInprocInspectionIThisThread(  
     [out] IUnknown **ppicd);  
 ```  

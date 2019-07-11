@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 383d7cd0e315089362b478eed6bdde6d0e4621a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e68178a71d7ba73b4956a7d23854c23300301d8e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586725"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747854"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>ICorProfilerInfo2::GetAppDomainStaticAddress Yöntemi
 Belirtilen uygulama etki alanı kapsamı içinde belirtilen uygulama etki alanı statik alanı adresini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 RESULT GetAppDomainStaticAddress(  
     [in] ClassID classId,  
     [in] mdFieldDef fieldToken,  

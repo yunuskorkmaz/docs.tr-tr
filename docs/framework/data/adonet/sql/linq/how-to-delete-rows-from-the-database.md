@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: a53a30d1da7dbc7e279a416db5709a256ee9272e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 89b552d919898f78c0733c2af4507728f59a3c8d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648707"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743337"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Nasıl yapılır: Veritabanından Satır Silme
 Buna karşılık gelen kaldırarak bir veritabanındaki satırları silebilirsiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ilgili tablo koleksiyonu nesneleri. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygun SQL yaptığınız değişiklikleri çevirir `DELETE` komutları.  
@@ -26,7 +26,7 @@ Buna karşılık gelen kaldırarak bir veritabanındaki satırları silebilirsin
 > [!NOTE]
 >  Geçersiz kılabilirsiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] varsayılan yöntemleri `Insert`, `Update`, ve `Delete` operations veritabanı. Daha fazla bilgi için [özelleştirme ekleme, güncelleştirme ve silme işlemleri](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
 >   
->  Visual Studio kullanan geliştiricilerin kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] saklı yordamlar için aynı amaca geliştirilir.  
+>  Visual Studio kullanan geliştiricilerin, Nesne İlişkisel Tasarımcısı, aynı amaçla saklı yordamlar geliştirmek için kullanabilirsiniz.  
   
  Aşağıdaki adımlardan istediğinizi düşünelim. geçerli bir <xref:System.Data.Linq.DataContext> Northwind veritabanına bağlar. Daha fazla bilgi için [nasıl yapılır: Bir veritabanına bağlanma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md).  
   

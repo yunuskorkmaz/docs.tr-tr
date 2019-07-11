@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dd2968f7ab528fa07ef0c5af85f2a7f07147a76e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591573"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755157"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Nesneler ve sınıflar Visual Basic'te
 
@@ -28,7 +28,7 @@ Bir nesne ve onun sınıfı arasındaki ilişkiyi anlamak için tanımlama bilgi
 
 Üyeleri erişebilmeniz için önce bir nesne oluşturmanız gerekir.
 
-#### <a name="to-create-an-object-from-a-class"></a>Nesne öğesinden bir sınıf oluşturmak için
+### <a name="to-create-an-object-from-a-class"></a>Nesne öğesinden bir sınıf oluşturmak için
 
 1. Hangi sınıfından bir nesne oluşturmak istediğinize karar verin.
 
@@ -135,7 +135,7 @@ Bildirilen üyeleri ile `Shared` anahtar sözcüğünü *üyeleri Paylaşılan*,
 
 #### <a name="accessing-nonshared-members"></a>Paylaşılmayan üyelerine erişme
 
-###### <a name="to-access-a-nonshared-member-of-an-object"></a>Bir nesnenin paylaşılmayan bir üyesine erişmek için
+##### <a name="to-access-a-nonshared-member-of-an-object"></a>Bir nesnenin paylaşılmayan bir üyesine erişmek için
 
 1. Nesnenin kendi sınıfından oluşturulur ve bir nesne değişkenine atanan emin olun.
 
@@ -151,7 +151,7 @@ Bildirilen üyeleri ile `Shared` anahtar sözcüğünü *üyeleri Paylaşılan*,
 
 #### <a name="accessing-shared-members"></a>Paylaşılan üyelerine erişme
 
-###### <a name="to-access-a-shared-member-of-an-object"></a>Bir nesnenin paylaşılan bir üyesine erişmek için
+##### <a name="to-access-a-shared-member-of-an-object"></a>Bir nesnenin paylaşılan bir üyesine erişmek için
 
 - Sınıf adını izleyin *üye erişim işleci* (`.`) ve ardından üye adı. Her zaman erişmeli bir `Shared` nesnenin sınıf adı aracılığıyla doğrudan üyesi.
 
@@ -204,7 +204,7 @@ Daha fazla temel sınıftan türetilmiş sınıflar, bunlar olduğu söylenir ve
 
 Aşağıdaki örnekte, özel bir tür tanımlamak istediğiniz varsayalım <xref:System.Windows.Forms.Button> normal gibi davranır <xref:System.Windows.Forms.Button> ancak aynı zamanda ön ve arka plan renkleri tersine bir yöntemi gösterir.
 
-##### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Zaten varolan bir sınıftan türetildiği durumda olduğu bir sınıf tanımlamak için
+#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Zaten varolan bir sınıftan türetildiği durumda olduğu bir sınıf tanımlamak için
 
 1. Kullanım bir [Class deyimi](../../../../visual-basic/language-reference/statements/class-statement.md) , nesneyi oluşturmak için ihtiyacınız olan bir sınıf tanımlamak için.
 
@@ -239,7 +239,7 @@ Aşağıdaki örnekte, özel bir tür tanımlamak istediğiniz varsayalım <xref
 
 Türetilen sınıfların üyeleri, siz ilerledikçe karmaşıklığı bir sınıf hiyerarşisi içinde eklemenize olanak sağlayan temel sınıfından devralır. Daha fazla bilgi için [devralma Temelleri](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).
 
-#### <a name="compiling-the-code"></a>Kod derleme
+### <a name="compiling-the-code"></a>Kod derleme
 
 Derleyici, yeni bir sınıf türetmek istediğinize sınıfı erişebildiğinden emin olun. Bu tam adı, önceki örnekte olduğu gibi uygun veya kendi ad alanında tanımlayan gelebilir bir [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Farklı bir projedeki sınıf ise bu projeye bir başvuru eklemeniz gerekebilir. Daha fazla bilgi için [bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project).
 

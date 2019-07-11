@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4c77ade46d2401e2499a94504808efd94f79f93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bdc1ef6490f250ebe93b0482adf244adfc0ffd56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789798"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741788"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob Metodu
 Win32 kaynak blob alır. Derleme Seçenekleri'ni ayarladıktan sonra bu yöntemi çağırın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT GetWin32ResBlob(  
     mdAssembly    AssemblyID,  
     mdToken       FileToken,  

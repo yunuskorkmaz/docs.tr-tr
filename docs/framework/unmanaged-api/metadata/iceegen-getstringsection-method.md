@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef22114b582ebfc9714dedc0cb6e66594d945ca1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68dc80c657c3794a416f6e142f70cfb05bee2c77
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905352"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745898"
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection Yöntemi
 Belirtilen tanıtıcı tarafından başvurulan kod bölümünde dize gösterimini alır.  
@@ -31,7 +31,7 @@ Belirtilen tanıtıcı tarafından başvurulan kod bölümünde dize gösterimin
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT GetStringSection (  
     [in, out] HCEESECTION     *section  
 );  

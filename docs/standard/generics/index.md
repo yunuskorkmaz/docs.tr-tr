@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e13689e0c8324781b86ae7b9568cb441a31ec70
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c4f59bdb0537ab6ce404ed0623c40f9f3b31598d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423959"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766828"
 ---
 # <a name="generics-in-net"></a>.NET içindeki Genel Türler
 
@@ -83,7 +83,7 @@ ms.locfileid: "66423959"
   
 - *Kovaryans* ve *kontravaryans* genel tür parametreleri, tür bağımsız değişkenleri: daha fazla türetilmiş (kovaryans) veya daha az türetilmiş (kontravaryans) oluşturulan genel türler kullanmak oluşturulmuş bir hedeften daha etkinleştir yazın. Kovaryans ve kontravaryans topluca denir *varyansı*. Daha fazla bilgi için [Kovaryans ve kontravaryans](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
-- *Kısıtlamaları* sınırları, genel tür parametrelerinde yerleştirilir. Örneğin, bir tür parametresine uygulayan türler sınırlayabilir <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> türün örneklerinin sıralanabilir emin olmak için genel arabirim. Ayrıca, varsayılan bir oluşturucuya sahip veya başvuru türleri veya değer türleri olan belirli bir temel sınıfa sahip türler için tür parametreleri kısıtlayabilirsiniz. Kullanıcılar genel tür kısıtlamaları karşılamayan tür bağımsız değişkenleri yerine geçemez.  
+- *Kısıtlamaları* sınırları, genel tür parametrelerinde yerleştirilir. Örneğin, bir tür parametresine uygulayan türler sınırlayabilir <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> türün örneklerinin sıralanabilir emin olmak için genel arabirim. Ayrıca, parametresiz bir oluşturucuya sahip veya başvuru türleri veya değer türleri olan belirli bir temel sınıfa sahip türler için tür parametreleri kısıtlayabilirsiniz. Kullanıcılar genel tür kısıtlamaları karşılamayan tür bağımsız değişkenleri yerine geçemez.  
   
 - A *genel yöntem tanımının* iki parametre listeleri ile bir yöntemdir: genel tür parametreleri ve biçimsel parametrelerinin listesi. Tür parametreleri, dönüş türü veya aşağıdaki kodun gösterdiği olarak biçimsel parametre türleri olarak görünebilir.  
   

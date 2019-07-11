@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6e5b74e508f55ec8e94b09960e496ff21936228
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 413cde3d0977c1fd6897fc5bd6fa7a3fef00ac02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586965"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763344"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 İşlevi
 Profil Oluşturucu bildirir: denetim bir işleve geçirilir ve çerçeve ve işlev bağımsız değişkenleri yığın hakkında bilgi sağlar. Bu işlevin yerini [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) işlevi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 void __stdcall FunctionEnter2 (  
     [in]  FunctionID                       funcId,   
     [in]  UINT_PTR                         clientData,   

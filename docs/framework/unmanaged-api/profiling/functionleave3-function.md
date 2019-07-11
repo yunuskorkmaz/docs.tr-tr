@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9dce2f961a01b70c0cba50894d670a586a40b605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 27b2241f7eb0e1ce8b0728a54028f9b4a6112e36
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586827"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781260"
 ---
 # <a name="functionleave3-function"></a>FunctionLeave3 İşlevi
 Profil Oluşturucu denetimi bir işlevden döndürülen uyarır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);  
 ```  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea71e984be42e3b1a7b4b9fa6df878aca911c412
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 218818097846709ec92e20f33a0707314edd562a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995767"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754734"
 ---
 # <a name="icordebugfunctiongetclass-method"></a>ICorDebugFunction::GetClass Yöntemi
 Bu işlev bir üyesi, sınıfın temsil ettiği bir Icordebugclass nesnesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT GetClass (  
     [out] ICorDebugClass **ppClass  
 );  

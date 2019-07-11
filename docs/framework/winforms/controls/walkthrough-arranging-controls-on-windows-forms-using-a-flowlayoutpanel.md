@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 8cfcdf8595733434cc56c621428c31238dd166dc
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: c9ee615a610c383c97b5d4f0de195cfc7422d3ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211165"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771654"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme
 
@@ -55,7 +55,7 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
 
  <xref:System.Windows.Forms.FlowLayoutPanel> Denetimi yeniden boyutlandırma veya üst formu değişiklik boyutları, alt denetimlerini yeniden akışı.
 
-#### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>Denetimleri yatay ve dikey olarak FlowLayoutPanel kullanarak düzenlemek için
+### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>Denetimleri yatay ve dikey olarak FlowLayoutPanel kullanarak düzenlemek için
 
 1. Sürükleme bir <xref:System.Windows.Forms.FlowLayoutPanel> denetimi **araç kutusu** formunuza.
 
@@ -76,7 +76,7 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
 ## <a name="changing-flow-direction"></a>Akış yönü değiştirme
  <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> Özelliği denetimleri düzenlenir yönünü değiştirmenize izin verir. Alt denetimler soldan sağa, sağdan sola, yukarıdan aşağıya veya aşağıdan yukarıya gelen düzenleyebilirsiniz.
 
-#### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>FlowLayoutPanel akış yönünü değiştirmek için
+### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>FlowLayoutPanel akış yönünü değiştirmek için
 
 1. Değiştirin <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> özelliğini <xref:System.Windows.Forms.FlowDirection.TopDown>. Alt denetimler denetimin yüksekliği bağlı olarak, bir veya daha fazla sütunlara düzenlenir unutmayın.
 
@@ -85,7 +85,7 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
 ## <a name="inserting-flow-breaks"></a>Ekleme akış sonu
  <xref:System.Windows.Forms.FlowLayoutPanel> Denetim, alt denetimlerini FlowBreak özellik sağlar. FlowBreak özelliğin değerini ayarlamak `true` neden <xref:System.Windows.Forms.FlowLayoutPanel> sonraki satır veya sütun kaydırılır ve geçerli akış yönü denetimlerinde düzenlemeyi durdurmak için denetimi.
 
-#### <a name="to-insert-flow-breaks"></a>Akış sonu eklemek için
+### <a name="to-insert-flow-breaks"></a>Akış sonu eklemek için
 
 1. Değiştirin <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> özelliğini <xref:System.Windows.Forms.FlowDirection.TopDown>.
 
@@ -96,7 +96,7 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
 ## <a name="positioning-controls-using-docking-and-anchoring"></a>Sabitleme ve yerleştirme kullanarak denetimleri konumlandırma
  Davranışlar alt denetimleri sabitleme ve yerleştirme diğer kapsayıcı denetimleri davranışları farklıdır. Hem yerleşik hem de bağlama göre akış yönü en büyük denetiminde olan.
 
-#### <a name="to-position-controls-using-docking-and-anchoring"></a>Denetimleri sabitleme ve yerleştirme kullanarak konumlandırmak için
+### <a name="to-position-controls-using-docking-and-anchoring"></a>Denetimleri sabitleme ve yerleştirme kullanarak konumlandırmak için
 
 1. Boyutu arttırmak <xref:System.Windows.Forms.FlowLayoutPanel> kadar <xref:System.Windows.Forms.Button> denetimleri tüm düzenlenir bir sütun.
 
@@ -115,7 +115,7 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
 
  <xref:System.Windows.Forms.Control.Margin%2A> Özellik denetimler arasındaki aralığı denetlemenize olanak tanır.
 
-#### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>Doldurma ve kenar boşluğu özelliklerini kullanarak denetimleri düzenlemek için
+### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>Doldurma ve kenar boşluğu özelliklerini kullanarak denetimleri düzenlemek için
 
 1. Değiştirin <xref:System.Windows.Forms.FlowLayoutPanel> denetimin <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>. Formunuza yeteri kadar büyük olursa <xref:System.Windows.Forms.Button> denetimleri ilk sütuna taşınacak <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.
 
@@ -126,7 +126,7 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
 ## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>Araç kutusunda çift tıklayarak denetimler ekleme
  Doldurabilirsiniz, <xref:System.Windows.Forms.FlowLayoutPanel> denetimlerinde çift tıklayarak denetim **araç kutusu**.
 
-#### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>Araç kutusunda çift tıklayarak denetim eklemek için
+### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>Araç kutusunda çift tıklayarak denetim eklemek için
 
 1. Çift <xref:System.Windows.Forms.Button> denetim simgesini **araç kutusu**. Unutmayın yeni <xref:System.Windows.Forms.Button> denetimi görünür <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.
 
@@ -135,7 +135,7 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>Anahattı çizerek bir denetim ekleme
  Bir denetime eklemek bir <xref:System.Windows.Forms.FlowLayoutPanel> denetlemek ve bir hücrede anahattı çizerek boyutunu belirtin.
 
-#### <a name="to-insert-a-control-by-drawing-its-outline"></a>Anahattı çizerek bir denetim eklemek için
+### <a name="to-insert-a-control-by-drawing-its-outline"></a>Anahattı çizerek bir denetim eklemek için
 
 1. İçinde **araç kutusu**, tıklayın <xref:System.Windows.Forms.Button> denetim simgesi. Form üzerine sürükleyin değil.
 
@@ -148,7 +148,7 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
 ## <a name="inserting-controls-using-the-insertion-bar"></a>Ekleme çubuğunu kullanarak denetimleri ekleme
  Belirli bir konumda denetimler ekleyebileceğiniz bir <xref:System.Windows.Forms.FlowLayoutPanel> denetimi. Bir denetime sürüklediğinizde <xref:System.Windows.Forms.FlowLayoutPanel> denetimin istemci alanı, bir ekleme çubuğu görünür denetim ekleneceği belirtmek için.
 
-#### <a name="to-insert-a-control-using-the-caret"></a>Şapka karakterini kullanarak bir denetim eklemek için
+### <a name="to-insert-a-control-using-the-caret"></a>Şapka karakterini kullanarak bir denetim eklemek için
 
 1. Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** içine <xref:System.Windows.Forms.FlowLayoutPanel> denetlemek ve iki arasındaki boşluk noktasına <xref:System.Windows.Forms.Button> denetimleri. Not ekleme çubuğu, yeri belirten çizileceğini <xref:System.Windows.Forms.Button> içine bırakıldığında yerleştirilecek <xref:System.Windows.Forms.FlowLayoutPanel> denetimi. Yeni atmadan önce <xref:System.Windows.Forms.Button> içine denetim <xref:System.Windows.Forms.FlowLayoutPanel> yaklaşık nasıl ekleme çubuğu taşır gözlemlemek için fare işaretçisini denetim.
 
@@ -157,7 +157,7 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
 ## <a name="reassigning-existing-controls-to-a-different-parent"></a>Mevcut denetimleri farklı bir üst öğeye yeniden atama
  Yeni bir formunuzdaki mevcut denetimleri atayabilirsiniz <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.
 
-#### <a name="to-reparent-existing-controls"></a>Mevcut denetimleri yeniden üst öğe yap için
+### <a name="to-reparent-existing-controls"></a>Mevcut denetimleri yeniden üst öğe yap için
 
 1. Üç sürükleyin <xref:System.Windows.Forms.Button> denetimler **araç kutusu** forma. Birbirine yakın yerleştirin, ancak bunları hizalanmamış bırakın.
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 3dcc6f763acfff076bb03076a17e3a8f8916267c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9456340834c06e87f977cd784a37f7436523d29e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033572"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743139"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Uygulama iş mantığı (LINQ to SQL)
 Terim "iş mantığı" Bu konu başlığı altındaki herhangi bir özel kural veya onu eklenen, güncelleştirilen veya veritabanından silinmiş önce verileri için geçerli doğrulama testlerini ifade eder. İş mantığı da bazen "iş kurallarını" veya "etki alanı mantığı." adlandırılır Böylece sunu katmanı veya veri erişim katmanı bağımsız olarak değiştirilebilir n katmanlı uygulamalarda, genellikle bir mantıksal katmanı olarak tasarlanmıştır. İş mantığı, öncesinde veya sonrasında herhangi bir güncelleştirme, ekleme veya silme işlemi veritabanındaki verilerin veri erişim katmanı tarafından çağrılabilir.  
@@ -18,14 +18,14 @@ Terim "iş mantığı" Bu konu başlığı altındaki herhangi bir özel kural v
  İş mantığı alanının türü tablo sütununun türü ile uyumlu olduğundan emin olmak için bir şema doğrulaması kadar basit olabilir. Veya, rasgele karmaşık şekillerde etkileşim kuran bir nesne oluşabilir. Kurallar, saklı yordamları veritabanında veya bellek içi nesneler olarak uygulanabilir. Ancak, iş mantığı uygulanır, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] etkinleştirir, kısmi sınıflar ve kısmi yöntemler iş mantığı veri erişim kodu ayırmak için virgül kullanın.  
   
 ## <a name="how-linq-to-sql-invokes-your-business-logic"></a>LINQ to SQL iş mantığınızı nasıl çağırır  
- Ne zaman oluşturduğunuz varlık sınıfı tasarım zamanında el ile ya da kullanarak [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal, kısmi bir sınıf olarak tanımlanır. Bu, ayrı kod dosyasında, başka bir parçası, özel iş mantığı içeren varlık sınıf tanımlayabilirsiniz, anlamına gelir. Derleme zamanında iki bölümü tek bir sınıf halinde birleştirilir. Ancak, varlık sınıfları kullanarak yeniden varsa [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal, bunu yapabilirsiniz ve sınıf bölümünüzün değiştirilmeyecek.  
+ Tasarım zamanında el ile veya SQLMetal ve Nesne İlişkisel Tasarımcısı'nı kullanarak bir varlık sınıfı oluşturduğunuzda, bu kısmi bir sınıf olarak tanımlanır. Bu, ayrı kod dosyasında, başka bir parçası, özel iş mantığı içeren varlık sınıf tanımlayabilirsiniz, anlamına gelir. Derleme zamanında iki bölümü tek bir sınıf halinde birleştirilir. Ancak Nesne İlişkisel Tasarımcısı veya SQLMetal kullanarak, varlık sınıfları yeniden varsa, bunu yapabilirsiniz ve bölümünüzün sınıfının değiştirilmeyecek.  
   
  Varlıklar tanımlayan kısmi sınıflar ve <xref:System.Data.Linq.DataContext> kısmi yöntemler içerir. Önce ve sonra herhangi bir update, INSERT veya delete bir varlık veya varlık özelliği için iş mantığı uygulamak için kullanabileceğiniz genişletilebilirlik noktaları şunlardır. Kısmi yöntemler, derleme zamanı olaylar olarak düşünülebilir. Kod oluşturucunun yöntem imzasını tanımlayan ve içinde get yöntemleri çağırır ve özellik erişimcileri `DataContext` oluşturucusu ve bazı durumlarda arka planda olduğunda <xref:System.Data.Linq.DataContext.SubmitChanges%2A> çağrılır. Ancak, belirli bir kısmi yöntemini uygulayamaz ve tanımı yapılan tüm başvurular derleme zamanında kaldırılır.  
   
  Ayrı bir kod dosyanızda yazdığınız uygulama tanımında özel mantığı gereklidir gerçekleştirebilirsiniz. Etki alanı katmanınızdaki, kısmi sınıf kullanabilir veya kısmi yönteminin uygulama tanımınızı ayrı bir nesne veya nesneler çağırabilirsiniz. Her iki durumda da, veri erişim kodu hem, sunu katmanı kodu iş mantığınızı düzgün bir şekilde ayrılır.  
   
 ## <a name="a-closer-look-at-the-extensibility-points"></a>Genişletilebilirlik noktaları daha yakından bakın  
- Tarafından oluşturulan kodun bir parçası aşağıdaki örnekte [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] için `DataContext` iki tablo sınıf: `Customers` ve `Orders`. INSERT, Update ve Delete yöntemleri unutmayın sınıftaki her tablo için tanımlanır.  
+ Aşağıdaki örnek, Nesne İlişkisel Tasarımcısı tarafından oluşturulan kodun bir parçası gösterir `DataContext` iki tablo sınıf: `Customers` ve `Orders`. INSERT, Update ve Delete yöntemleri unutmayın sınıftaki her tablo için tanımlanır.  
   
 ```vb  
 Partial Public Class Northwnd  

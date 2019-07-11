@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2db47f90e73922858013885e99e953ddcacbd450
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7750d50b772ff17cf9dcd05de2e2f34556714e4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763522"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770481"
 ---
 # <a name="iclrtaskrudeabort-method"></a>ICLRTask::RudeAbort Yöntemi
 Ortak dil çalışma zamanı (CLR) geçerli tarafından temsil edilen bir görev iptal etmek için bildirir [Iclrtask arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) koşulsuz olarak ve hemen örneği.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT RudeAbort ();   
 ```  
   
