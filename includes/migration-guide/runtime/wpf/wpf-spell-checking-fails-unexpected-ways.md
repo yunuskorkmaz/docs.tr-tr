@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 09e3f0e168e0dcbe79d8ee7216f2671c67bfb87e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8049bf01bc10c5913fa11b25e49afd1b1317eecc
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664621"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802957"
 ---
 ### <a name="wpf-spell-checking-fails-in-unexpected-ways"></a>WPF yazım denetimi beklenmedik bir şekilde başarısız oluyor
 
@@ -15,3 +15,4 @@ ms.locfileid: "61664621"
 |Kapsam|Kenar|
 |Sürüm|4.6.1|
 |Tür|Çalışma zamanı|
+

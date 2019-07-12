@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dbe96abebdc61fae469f7727673e6fcb93cbc739
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 78f4d533f1efdc8d43a9ab96508b84a77e3260bc
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664080"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803159"
 ---
 ### <a name="no-longer-able-to-set-enableviewstatemac-to-false"></a>Artık şunları EnableViewStateMac false olarak ayarlayın.
 
@@ -15,3 +15,4 @@ ms.locfileid: "61664080"
 |Kapsam|Ana|
 |Sürüm|4.5.2|
 |Tür|Çalışma zamanı|
+

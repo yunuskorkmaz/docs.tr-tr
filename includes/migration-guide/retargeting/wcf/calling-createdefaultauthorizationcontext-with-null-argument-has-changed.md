@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9ec5fa379556dedeaa7a35e34f004340ab47a39c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a29f0ca6d235250ac1f41e686178b2d6affcd8a0
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62093607"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804516"
 ---
 ### <a name="calling-createdefaultauthorizationcontext-with-a-null-argument-has-changed"></a>Null bir bağımsız değişkenle CreateDefaultAuthorizationContext arama değişti
 
@@ -16,3 +16,4 @@ ms.locfileid: "62093607"
 |Sürüm|4.6|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext(System.Collections.Generic.IList{System.IdentityModel.Policy.IAuthorizationPolicy})?displayProperty=nameWithType></li></ul>|
+

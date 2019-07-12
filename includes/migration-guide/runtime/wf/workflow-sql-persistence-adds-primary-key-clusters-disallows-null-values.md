@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 566a3e0455b30e901b09be88b4256ffe67bdc2b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e98d3bca645cf82bf4fe99160dd096b0e274ef7
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664975"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802454"
 ---
 ### <a name="workflow-sql-persistence-adds-primary-key-clusters-and-disallows-null-values-in-some-columns"></a>İş akışı SQL kalıcılığını birincil anahtar kümeleri ve bazı sütunları null değerleri izin vermiyor ekler.
 
@@ -15,3 +15,4 @@ ms.locfileid: "61664975"
 |Kapsam|Kenar|
 |Sürüm|4.7|
 |Tür|Çalışma zamanı|
+

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 088ebad0f822f791d05a8a8dafb0f7fd74f5581a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb3cfdfd39444536f423b65166a3413db67a0e01
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664625"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802962"
 ---
 ### <a name="item-scrolling-a-flat-list-with-items-of-different-pixel-height"></a>Farklı piksel yüksekliklerdeki öğelerin ile düz bir liste öğesi kaydırma
 
@@ -16,3 +16,4 @@ ms.locfileid: "61664625"
 |Sürüm|4.6.1|
 |Tür|Çalışma zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=nameWithType></li></ul>|
+

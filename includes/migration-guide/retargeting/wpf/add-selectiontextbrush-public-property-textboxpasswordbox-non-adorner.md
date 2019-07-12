@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e04134ec731c5e7bede3388621078c6518805ec2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01bbc49cb0febc5a29dafc7c311b848387a4094a
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644580"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803525"
 ---
 ### <a name="add-selectiontextbrush-public-property-to-textboxpasswordbox-non-adorner-selection"></a>Metin/PasswordBox donatıcı olmayan seçime SelectionTextBrush ortak özelliği Ekle
 
@@ -16,3 +16,4 @@ ms.locfileid: "61644580"
 |Sürüm|4.8|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionTextBrushProperty?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionTextBrush?displayProperty=nameWithType></li><li>[System.Windows.Controls.TextBox](xref:System.Windows.Controls.TextBox)</li><li>[System.Windows.Controls.PasswordBox](xref:System.Windows.Controls.PasswordBox)</li></ul>|
+

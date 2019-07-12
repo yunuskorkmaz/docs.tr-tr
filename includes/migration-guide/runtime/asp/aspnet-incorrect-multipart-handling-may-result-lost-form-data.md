@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e6b0387d9d04aa979de289ea0c5caa6c76f4d1be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a99ed916e4e86e85d7ebc2d6ea36a6372c00206
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665701"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802594"
 ---
 ### <a name="aspnet-incorrect-multipart-handling-may-result-in-lost-form-data"></a>ASP.NET yanlış çok bölümlü işleme kayıp form veri kaybına neden olabilir.
 
@@ -16,3 +16,4 @@ ms.locfileid: "61665701"
 |Sürüm|4.8|
 |Tür|Çalışma zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.Web.HttpRequest.Form?displayProperty=nameWithType></li><li><xref:System.Web.HttpRequest.Files?displayProperty=nameWithType></li><li><xref:System.Web.HttpRequest.ContentEncoding?displayProperty=nameWithType></li></ul>|
+

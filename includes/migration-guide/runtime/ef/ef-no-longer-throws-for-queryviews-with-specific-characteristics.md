@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 705e1a22b8a5791c1103dd374a8bab19356cadfb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc33266bb2af639d7d0d1cb532ed73abd7f1ba9a
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62093616"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803233"
 ---
 ### <a name="ef-no-longer-throws-for-queryviews-with-specific-characteristics"></a>EF QueryViews için belirli özelliklere sahip artık oluşturur.
 
@@ -15,3 +15,4 @@ ms.locfileid: "62093616"
 |Kapsam|Kenar|
 |Sürüm|4.5.2|
 |Tür|Çalışma zamanı|
+

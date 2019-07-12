@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e5d81d791e1a2f1a2dbdafc787dec1227423883d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64d540278544e74c46d46b77c97bccd26d4116dd
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62093617"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803219"
 ---
 ### <a name="opt-in-break-to-revert-from-different-45-sql-generation-to-simpler-40-sql-generation"></a>Öğesinden farklı 4.5 SQL oluşturma için daha basit 4.0 SQL oluşturma dönmek için kabul etme sonu
 
@@ -15,3 +15,4 @@ ms.locfileid: "62093617"
 |Kapsam|Geçirgen|
 |Sürüm|4.5.2|
 |Tür|Çalışma zamanı|
+

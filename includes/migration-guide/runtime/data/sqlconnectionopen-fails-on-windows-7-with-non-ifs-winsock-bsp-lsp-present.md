@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 65d9edc1e7377a86f8185ebf28bb5bee3a3f887d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7f61ad42305377331a7f65fb91d49d709d1b728
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649587"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803228"
 ---
 ### <a name="sqlconnectionopen-fails-on-windows-7-with-non-ifs-winsock-bsp-or-lsp-present"></a>SqlConnection.Open IFS olmayan Winsock BSP veya mevcut bir LSP ile Windows 7'de başarısız oluyor
 
@@ -16,3 +16,4 @@ ms.locfileid: "61649587"
 |Sürüm|4,5|
 |Tür|Çalışma zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType></li></ul>|
+

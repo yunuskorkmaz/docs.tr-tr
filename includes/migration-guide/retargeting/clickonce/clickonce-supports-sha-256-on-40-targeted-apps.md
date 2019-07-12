@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0358450024607a985f38564ec9743ba964949e8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9bf6972812bdf4a385b99fe34d2cd3cd8a91c8cf
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62093615"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804556"
 ---
 ### <a name="clickonce-supports-sha-256-on-40-targeted-apps"></a>ClickOnce uygulamaları 4.0 hedeflenen SHA-256'yı destekler
 
@@ -15,3 +15,4 @@ ms.locfileid: "62093615"
 |Kapsam|İkincil|
 |Sürüm|4.6|
 |Tür|Yeniden Hedefleme|
+

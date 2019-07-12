@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: efe8a2dd98865f6a24b65ce0f08eb0c574b708f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de40d16dbb5e7a7a49ae0988342b3eb75bc078c5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758414"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804505"
 ---
 ### <a name="currentculture-and-currentuiculture-flow-across-tasks"></a>CurrentCulture ve CurrentUICulture akışı görevleri arasında
 
@@ -16,3 +16,4 @@ ms.locfileid: "61758414"
 |Sürüm|4.6|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType></li><li><xref:System.Threading.Thread.CurrentCulture?displayProperty=nameWithType></li><li><xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=nameWithType></li><li><xref:System.Threading.Thread.CurrentUICulture?displayProperty=nameWithType></li></ul>|
+

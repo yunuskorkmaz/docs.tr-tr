@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f814703e187726d3988787fac52e5049988fd4d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c54572b8dcedaa103db8503cfc1155b4698c3ed
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783267"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803505"
 ---
 ### <a name="workflow-xaml-checksums-for-symbols-changed-from-sha1-to-sha256"></a>İş akışı XAML sağlama toplamı için SHA256 SHA1 değiştirilmiş sembolleri
 
@@ -15,3 +15,4 @@ ms.locfileid: "61783267"
 |Kapsam|İkincil|
 |Sürüm|4.8|
 |Tür|Yeniden Hedefleme|
+

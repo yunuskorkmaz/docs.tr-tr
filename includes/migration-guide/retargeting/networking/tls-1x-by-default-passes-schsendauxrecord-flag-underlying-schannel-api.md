@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5850d55023849fdc797ec0cb5464495179dcbb61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19dcdf006de0bfa7c6b0a8127612a49a66a24802
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640107"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804461"
 ---
 ### <a name="tls-1x-by-default-passes-the-schsendauxrecord-flag-to-the-underlying-schannel-api"></a>TLS 1.x varsayılan SCH_SEND_AUX_RECORD bayrağı temel alınan SCHANNEL API'sine geçirir
 
@@ -16,3 +16,4 @@ ms.locfileid: "61640107"
 |Sürüm|4.6|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Net.Security.SslStream?displayProperty=nameWithType></li><li><xref:System.Net.ServicePointManager?displayProperty=nameWithType></li><li><xref:System.Net.Http.HttpClient?displayProperty=nameWithType></li><li><xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType></li><li><xref:System.Net.HttpWebRequest?displayProperty=nameWithType></li><li><xref:System.Net.FtpWebRequest?displayProperty=nameWithType></li></ul>|
+

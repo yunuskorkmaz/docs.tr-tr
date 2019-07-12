@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe82012116ebc3883a801f95f62ffd4c81c9119f
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 245492a8a903593dc1532b67ed96224e171aad7e
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663806"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804729"
 ---
 # <a name="standard-numeric-format-strings"></a>Standart Sayısal Biçim Dizeleri
 
@@ -55,7 +55,7 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
 
 |Biçim belirteci|Ad|Açıklama|Örnekler|
 |----------------------|----------|-----------------|--------------|
-|"C" ya da "c"|Para Birimi|Sonuç: Para birimi değeri.<br /><br /> Tarafından desteklenir: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: Tarafından tanımlanan <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Daha fazla bilgi: [Currency ("C") biçim belirticisi](#CFormatString).|123,456 ("C", en-US) -> 123,46 $<br /><br /> 123,456 ("C", fr-FR) -> 123,46 €<br /><br /> 123,456 ("C", ja-JP) ¥ 123 -><br /><br /> ($123,456)-123.456 ("C3", en-US) -><br /><br /> -123,456 €-123.456 ("C3", fr-FR) -><br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
+|"C" ya da "c"|Para Birimi|Sonuç: Para birimi değeri.<br /><br /> Tarafından desteklenir: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: Tarafından tanımlanan <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Daha fazla bilgi: [Currency ("C") biçim belirticisi](#CFormatString).|123,456 ("C", en-US) -> `$123.46`<br /><br /> 123,456 ("C", fr-FR) -> 123,46 €<br /><br /> 123,456 ("C", ja-JP) ¥ 123 -><br /><br /> -123.456 ("C3", en-US) -> `($123.456)`<br /><br /> -123,456 €-123.456 ("C3", fr-FR) -><br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
 |"D" veya "d"|Ondalık|Sonuç: İsteğe bağlı eksi işaretli tamsayı basamaklar.<br /><br /> Tarafından desteklenir: Yalnızca integral türleri.<br /><br /> Duyarlık belirtici: En az basamak sayısını.<br /><br /> Varsayılan duyarlık belirtici: En az gereken basamak sayısı.<br /><br /> Daha fazla bilgi: [Decimal("D") biçim belirticisi](#DFormatString).|1234 1234 ("D") -><br /><br /> -001234 ("D6") -1234 ->|
 |"E" ya da "e"|Üstsel (bilimsel)|Sonuç: Üstel simgeleme.<br /><br /> Tarafından desteklenir: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: 6.<br /><br /> Daha fazla bilgi: [Üstel ("E") biçim belirteci](#EFormatString).|1052.0329112756 ("E" en-US) -> 1.052033E + 003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1, 052033e + 003<br /><br /> -1052.0329112756 ("e2", en-US) -> - 1.05e + 003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1, 05E + 003|
 |"F" ya da "f"|Sabit nokta|Sonuç: İsteğe bağlı eksi işaretli tamsayı ve ondalık basamaklar.<br /><br /> Tarafından desteklenir: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: Tarafından tanımlanan <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Daha fazla bilgi: [Sabit noktalı ("F") biçim belirteci](#FFormatString).|1234.567 ("F" en-US) -> 1234.57<br /><br /> 1234.567 ("F" de-DE) 1234,57 -><br /><br /> 1234 ("F1" en-US) -> 1234.0<br /><br /> 1234 ("F1" de-DE) 1234,0 -><br /><br /> -1234.5600-1234.56 ("F4", en-US) -><br /><br /> -1234.56 ("F4", de-DE) -> - 1234,5600|

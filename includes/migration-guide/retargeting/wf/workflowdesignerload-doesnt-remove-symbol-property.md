@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 19c613bf48479cb1e52531a4d6594db8ad89b8f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 97a92c6bce80b93e9a8bdd863bf881631eaffb27
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774487"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804672"
 ---
 ### <a name="workflowdesignerload-doesnt-remove-symbol-property"></a>Sembol özellik WorkflowDesigner.Load kaldırmaz
 
@@ -16,3 +16,4 @@ ms.locfileid: "59774487"
 |Sürüm|4,5|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Activities.Presentation.WorkflowDesigner.Load?displayProperty=nameWithType></li></ul>|
+

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5844dbc2c3c89baeb39b69f16846f92ac10e97f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0a281b05f453b68495e6fa6fca45f3f36a204a3
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62093614"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804500"
 ---
 ### <a name="xsd-schema-validation-now-correctly-detects-violations-of-unique-constraints-if-compound-keys-are-used-and-one-key-is-empty"></a>XSD şema doğrulaması artık doğru şekilde bileşik anahtarlar kullanılır ve bir anahtar boş ise benzersiz kısıtlamalar ihlalleri algılar
 
@@ -15,3 +15,4 @@ ms.locfileid: "62093614"
 |Kapsam|Kenar|
 |Sürüm|4.6|
 |Tür|Yeniden Hedefleme|
+

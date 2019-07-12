@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67503991"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802309"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Türünde bir nesne bir dizedir <xref:System.String> metin değeri olan. Metin sıralı salt okunur bir koleksiyonu dahili olarak depolanan <xref:System.Char> nesneleri. Bir C# dizenin sonuna kadar hiçbir null Sonlandırıcı karakter yoktur; Bu nedenle bir C# dize herhangi bir sayıda gömülü null karakterleri ('\0') içerebilir. <xref:System.String.Length%2A> Bir dize özelliğini sayısını temsil eden `Char` içerdiği, Unicode karakter sayısını nesneleri. Bir dizedeki tek Unicode kod noktaları erişmek için <xref:System.Globalization.StringInfo> nesne.  
@@ -62,10 +62,10 @@ Türünde bir nesne bir dizedir <xref:System.String> metin değeri olan. Metin s
 |\n|Yeni satır|0x000A|  
 |\r|satır başı|0x000D|  
 |\t|Yatay sekme|0x0009|  
-|\U|Unicode escape sequence (UTF-32)|`\U00nnnnnn` (örneğin `\U0001F47D` = "&#x1F47D;")|  
-|\u|Unicode çıkış dizisi (UTF-16)|`\unnnn` (örneğin `\u0041` = "A")|  
 |\v|dikey sekme|0x000B|  
-|\x|Unicode çıkış dizisi değişken uzunluğu dışında "\u" benzer.|`\x0041` veya `\x41` = "A"|  
+|\u|Unicode çıkış dizisi (UTF-16)|`\uHHHH` (aralık: 0000 - FFFF; Örnek: `\u00E7` "ç" =)|  
+|\U|Unicode escape sequence (UTF-32)|`\U00HHHHHH` (aralık: 000000 - 10FFFF; Örnek: `\U0001F47D` = "&#x1F47D;")|  
+|\x|Benzer şekilde, değişken uzunluğu dışında "\u" Unicode çıkış dizisi|`\xH[H][H][H]` (aralık: 0 - FFFF; Örnek: `\x00E7` veya `\x0E7` veya `\xE7` "ç" =)|  
   
 > [!WARNING]
 >  Kullanırken `\x` kaçış dizisi ve onaltılık basamak 4'ten az belirleme kaçış sırası hemen izleyen karakterler geçerli bir onaltılık basamak yer alıyorsa (yani 0-9, A-F ve a-f), çıkış dizisinin bir parçası olacak şekilde yorumlanır. Örneğin, `\xA1` üretir "&#161;", kod noktası U + 00A1 olduğu. Ancak, sonraki karakteri "A" veya "a", ardından kaçış sırası bunun yerine olarak yorumlanacaktır `\xA1A` üreten ve "&#x0A1A;", kod noktası U + 0A1A olduğu. Böyle durumlarda tüm 4 onaltılık basamak belirtme (örneğin `\x00A1` ) bir olası yanlış yorumlanmasını önler.  

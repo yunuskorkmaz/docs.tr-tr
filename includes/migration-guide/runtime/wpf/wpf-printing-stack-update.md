@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6fafb689af5d50b31b19f5d1fe7090a6c256ca45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e613f0c52c77efebf250f5935d5cbfc29bc09a6b
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764069"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802521"
 ---
 ### <a name="wpf-printing-stack-update"></a>WPF yazdırma yığını güncelleştirmesi
 
@@ -15,3 +15,4 @@ ms.locfileid: "61764069"
 |Kapsam|Kenar|
 |Sürüm|4.7|
 |Tür|Çalışma zamanı|
+

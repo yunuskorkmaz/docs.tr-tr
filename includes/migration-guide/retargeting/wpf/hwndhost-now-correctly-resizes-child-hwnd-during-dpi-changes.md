@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b92086c8ccf7592ce70b75bd31d4ea255c35b543
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d374ded6a29ce815beeb26505010563a26d978e8
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783258"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803564"
 ---
 ### <a name="hwndhost-now-correctly-resizes-child-hwnd-during-dpi-changes"></a>HwndHost artık doğru şekilde alt HWND DPI değişiklik sırasında yeniden boyutlandırır
 
@@ -15,3 +15,4 @@ ms.locfileid: "61783258"
 |Kapsam|Ana|
 |Sürüm|4.8|
 |Tür|Yeniden Hedefleme|
+

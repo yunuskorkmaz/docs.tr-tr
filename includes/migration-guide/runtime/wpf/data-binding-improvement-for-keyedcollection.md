@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 50d251d8e8ec28fa8a895f1ef66f7efc1657eff4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0dc2401155a162eaa5aa6b4d9e6af1ca1c2ccc8
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764456"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802706"
 ---
 ### <a name="data-binding-improvement-for-keyedcollection"></a>Veri bağlama geliştirme KeyedCollection için
 
@@ -15,3 +15,4 @@ ms.locfileid: "61764456"
 |Kapsam|Ana|
 |Sürüm|4.8|
 |Tür|Çalışma zamanı|
+

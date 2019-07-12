@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ea0e1583cd611a624cf2d2edf9defb2294eb89d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e605e0f2636d83745815ec4ed27bf72692f18d15
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665702"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802660"
 ---
 ### <a name="aspnet-fix-handling-of-inputattributes-and-labelattributes-for-webforms-checkbox-control"></a>WebForms CheckBox denetimi InputAttributes LabelAttributes ve ASP.NET düzeltme işleme
 
@@ -16,3 +16,4 @@ ms.locfileid: "61665702"
 |Sürüm|4.8|
 |Tür|Çalışma zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.Web.UI.WebControls.CheckBox?displayProperty=nameWithType></li></ul>|
+

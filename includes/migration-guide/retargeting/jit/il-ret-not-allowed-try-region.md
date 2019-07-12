@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1687b1b9a1a6861f9569a0e29426de7f32ffc32b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 060da3ebc60057554fd572bd2569652afee6bd0f
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62093618"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804480"
 ---
 ### <a name="il-ret-not-allowed-in-a-try-region"></a>IL ret deneyin bölgede izin verilmiyor
 
@@ -15,3 +15,4 @@ ms.locfileid: "62093618"
 |Kapsam|Kenar|
 |Sürüm|4.6|
 |Tür|Yeniden Hedefleme|
+

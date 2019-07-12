@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 06d2b576e70afb904683ca1a182c6e061faabf79
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 941c73f9a8b7b4c4336adfaec45775feec738f51
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663821"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804714"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC test uygulamaları
 
@@ -34,7 +34,7 @@ Veritabanları ve dosya sistemleri gibi altyapı ile etkileşime giren kodunuzu 
 
 Tümleştirme testleri genellikle daha karmaşık kurulum ve kaldırma yordamları birim testlerinden sahip olur. Örneğin, gerçek bir veritabanında giden bir tümleştirme testi veritabanını, her test çalışması önce bilinen bir duruma döndürmek için bir yol gerekir. Yeni testler eklenir ve üretim veritabanı şemasını geliştikçe, bu test betikleri boyutu ve karmaşıklığı büyümesine eğilimli. Birçok büyük sistemde, değişiklikleri paylaşılan kaynak denetimine iade etmeden önce Geliştirici iş istasyonları üzerinde tam paketleri tümleştirme testleri çalıştırmak için zordur. Bu durumlarda, tümleştirme testlerini bir yapı sunucusunda çalışabilir.
 
-LocalFileImageService uygulama sınıfımızın getirmeye ve bir görüntü dosyasının baytlar verilen bir kimlik, belirli bir klasörden döndüren mantığını uygular:
+`LocalFileImageService` Uygulama sınıfı getirmeye ve bir görüntü dosyasının baytlar verilen bir kimlik, belirli bir klasörden döndüren mantığını uygular:
 
 ```csharp
 public class LocalFileImageService : IImageService
@@ -147,7 +147,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-Birim testi bu yöntem, dosya sisteminden okumak için kullandığı System.IO.File doğrudan bağımlı tarafından zor olarak yapılır. Bu davranış, beklendiği gibi çalışır, ancak gerçek dosyalarıyla bunu bir tümleştirme testini olduğundan emin olmak için test edebilirsiniz. Birim yapamazsınız hatalarının ayıklanabileceğini belirtmekte yarar bu yöntemin rota test – işlevsel bir testi ile kısa bir süre sonra bunun nasıl yapılacağını görürsünüz.
+Birim testi bu yöntem zor tarafından yapılır doğrudan bağımlı `System.IO.File`, dosya sisteminden okumak için kullanılır. Bu davranış, beklendiği gibi çalışır, ancak gerçek dosyalarıyla bunu bir tümleştirme testini olduğundan emin olmak için test edebilirsiniz. Birim yapamazsınız hatalarının ayıklanabileceğini belirtmekte yarar bu yöntemin rota test – işlevsel bir testi ile kısa bir süre sonra bunun nasıl yapılacağını görürsünüz.
 
 Birim testi dosya sistemi davranışını doğrudan olamaz ve rota test edilemez, var. test etmek için nedir? De birim testi mümkün hale getirmek için yeniden düzenleme sonra bazı test çalışmaları ve hata işleme gibi eksik bir davranışı fark edebilirsiniz. Bir dosya bulunamadığında, yöntem ne yapar? Neler? Bu örnekte, işlenmiş yöntemi şöyle görünür:
 
@@ -175,7 +175,7 @@ public IActionResult GetImage(int id)
 
 ## <a name="integration-testing-aspnet-core-apps"></a>Tümleştirme testi ASP.NET Core uygulamaları
 
-ASP.NET Core uygulamalarınızı tümleştirme testleri çoğunu, hizmetler ve altyapı projenizde tanımlanan diğer uygulama türleri test. ASP.NET Core MVC projenize doğru mu davrandığı, test etmek için en iyi bir test ana bilgisayarı çalışan uygulamanızı çalıştırmanızı işlevsel testleri yoludur. Bu bölümde daha önce tümleştirme testi bölümündeki bir tümleştirme testini bir veri erişim sınıfın bir örneği gösterilmektedir.
+ASP.NET Core uygulamalarınızı tümleştirme testleri çoğunu, hizmetler ve altyapı projenizde tanımlanan diğer uygulama türleri test. Örneğin, şunları yapabilirsiniz [EF Core başarıyla güncelleştiriliyor ve beklediğiniz verileri alma, test](https://docs.microsoft.com/ef/core/miscellaneous/testing/) altyapı projesinde bulunan, veri erişim sınıfları'ndan. ASP.NET Core MVC projenize doğru mu davrandığı, test etmek için en iyi bir test ana bilgisayarı çalışan uygulamanızı çalıştırmanızı işlevsel testleri yoludur.
 
 ## <a name="functional-testing-aspnet-core-apps"></a>İşlevsel test ASP.NET Core uygulamaları
 
@@ -308,6 +308,15 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 ```
 
 Bu işlevsel test tam ASP.NET Core MVC sınayan / Razor sayfaları, tüm ara yazılım, filtreler, bağlayıcıları, yerinde olabilir vb. dahil olmak üzere uygulama yığını. Belirli bir yol ("/") beklenen başarılı durum kodu ve HTML çıktı döndürür doğrular. Gerçek bir web sunucusu ayarını olmadan bunu yapar ve bu nedenle, gerçek bir Web sunucusu test etmek için (örneğin, güvenlik duvarı ayarları ile ilgili sorunlar) oluşabilir brittleness çoğunu ortadan kaldırır. TestServer karşı çalışan işlevsel testleri genellikle tümleştirme ve birim testleri yavaş ancak ağ üzerinden bir test web sunucusuna çalıştıracağınız testleri hızlıdır. İşlevsel testleri, uygulamanızın ön uç yığın beklendiği gibi çalıştığından emin olmak için kullanmanız gerekir. Bu testler, sayfalar ve filtreler ekleyerek çoğaltma adres ya da çoğaltma denetleyicilerinizi içinde bulmak özellikle yararlı olur. İdeal olarak, bu yeniden düzenleme, uygulama davranışını değiştirmez ve işlevsel testleri paketi bu durumda doğrulayın.
+
+> ### <a name="references--test-aspnet-core-mvc-apps"></a>Başvuruları – Test ASP.NET Core MVC uygulamaları
+>
+> - **ASP.NET Core testi**  
+>   <https://docs.microsoft.com/aspnet/core/testing/>
+> - **Birim Test adlandırma kuralı**  
+>   <https://ardalis.com/unit-test-naming-convention>
+> - **EF Core testi**  
+>   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
 
 >[!div class="step-by-step"]
 >[Önceki](work-with-data-in-asp-net-core-apps.md)

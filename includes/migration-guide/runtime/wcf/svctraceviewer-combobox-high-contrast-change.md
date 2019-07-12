@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cc6d96bd614ff015ae2125c0f1477e18a91a68f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a45d616001be5a2a2bdf2c654c10526125d7d86
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665686"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802642"
 ---
 ### <a name="svctraceviewer-combobox-high-contrast-change"></a>svcTraceViewer ComboBox yüksek karşıtlık Değiştir
 
@@ -15,3 +15,4 @@ ms.locfileid: "61665686"
 |Kapsam|Kenar|
 |Sürüm|4.8|
 |Tür|Çalışma zamanı|
+

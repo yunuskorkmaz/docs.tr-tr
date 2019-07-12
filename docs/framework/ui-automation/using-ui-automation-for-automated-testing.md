@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 0e5e2252225c824dfbc9d799b29a16ab6206eb3c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1137052c13571cf31fdf98512f2fe62533387e80
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630658"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802246"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Otomatik Test İçin UI Otomasyonunu Kullanma
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "64630658"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Tüm sağlayan bir birleşik nesne modeli sağlar [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] çerçeveleri karmaşık ve zengin işlevleri erişilebilir ve kolayca otomatik bir şekilde kullanıma sunma.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için bir ardıl olarak geliştirilmiştir [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] Mevcut bir çerçeve denetimleri ve uygulamaları erişilebilir yapmak için bir çözüm sağlamak için tasarlanmıştır. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] Erişilebilirlik ve Otomasyon çok benzer gereksinimleri nedeniyle bu rolü içinde gelişerek olsa bile aklınızda test Otomasyonu ile tasarlanmamıştır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], daha iyi çözümler için erişilebilirlik sağlamanın yanı sıra da özellikle otomatik test için sağlam işlevselliği sağlamak için tasarlanmıştır. Örneğin, [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] hem kullanıcı Arabirimi hakkında bilgilerin açığa çıkmasına neden hem de; ürünler için gerekli bilgileri toplamak için tek bir arabirim kullanır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] iki model ayırır.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Microsoft Active Accessibility için bir ardıl olarak geliştirilmiştir. Etkin Erişilebilirlik denetimleri ve uygulamaları erişilebilir yapmak için bir çözüm sağlamak için tasarlanmış, var olan bir çerçevedir. Erişilebilirlik ve Otomasyon çok benzer gereksinimleri nedeniyle bu rolü içinde gelişerek olsa bile etkin erişilebilirlik aklınızda test Otomasyonu ile tasarlanmamıştır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], daha iyi çözümler için erişilebilirlik sağlamanın yanı sıra da özellikle otomatik test için sağlam işlevselliği sağlamak için tasarlanmıştır. Örneğin, Active Accessibility hem kullanıcı Arabirimi hakkında bilgilerin açığa çıkmasına neden ve ürünleri için gerekli bilgileri toplamak için tek bir arabirim kullanır; [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] iki model ayırır.  
   
  Hem sağlayıcı hem de istemci uygulamak için gereken [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bir otomatik test aracı olarak kullanışlı olması için. UI Otomasyonu sağlayıcıları, Microsoft Word, Excel, gibi uygulama ve diğer üçüncü taraf uygulamaların ve denetimlerin temel alarak [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] işletim sistemi. UI Otomasyon istemcileri, otomatik test betikleri ve yardımcı teknoloji uygulamalar içerir.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "64630658"
   
 - Inspect.exe olduğu bir [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)] toplamak için kullanılan uygulama [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcısı ve istemci geliştirme ve hata ayıklama bilgileri. Inspect.exe dahil [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)].  
   
-- MSAABridge sunan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bilgileri [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] istemciler. Köprü oluşturma birincil amacı [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] varolan izin vermektir [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] istemcileri gerçekleştirdiğini herhangi bir çerçeveyi etkileşme yeteneği [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+- MSAABridge sunan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Etkin Erişilebilirlik istemcileri için bilgi. Köprü oluşturma birincil amacı [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Etkin Erişilebilirlik gerçekleştirdiğini herhangi bir çerçeveyi etkileşme yeteneği var olan etkin erişilebilirlik istemcileri sağlamaktır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 <a name="Security"></a>   
 ## <a name="security"></a>Güvenlik  

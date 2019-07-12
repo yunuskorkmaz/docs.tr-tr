@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e600b8249096eecb13f63ea00343a771a8c12b60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ab6be6f2c6d8ebbe67051e4e3f967a325e654c8
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62093620"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804484"
 ---
 ### <a name="htmltextwriter-does-not-render-br-element-correctly"></a>HtmlTextWriter işleme değil `<br/>` öğesi doğru
 
@@ -16,3 +16,4 @@ ms.locfileid: "62093620"
 |Sürüm|4.6|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)?displayProperty=nameWithType></li><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)?displayProperty=nameWithType></li></ul>|
+

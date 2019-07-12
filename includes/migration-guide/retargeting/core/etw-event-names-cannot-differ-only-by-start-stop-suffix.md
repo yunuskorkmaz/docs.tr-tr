@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 71c81cf188fa4c2300661f10eb87e7ae00e031f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ad283af76085c228bedceb6db723a1d18b10210
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758408"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804559"
 ---
 ### <a name="etw-event-names-cannot-differ-only-by-a-start-or-stop-suffix"></a>ETW olay adları yalnızca "Başlangıç" veya "Durdur" soneki ile farklı olamaz
 
@@ -15,3 +15,4 @@ ms.locfileid: "61758408"
 |Kapsam|Kenar|
 |Sürüm|4.6|
 |Tür|Yeniden Hedefleme|
+

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 86cb328052c7a643cbd6080d222348d40179fdad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df13f6938ebaf8e96bb2825c1495044621f1c31b
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764457"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802582"
 ---
 ### <a name="aspnet-validationcontextmembername-is-not-null-when-using-custom-dataannotationsvalidationattribute"></a>ASP.NET ValidationContext.MemberName özel DataAnnotations.ValidationAttribute kullanırken NULL değil
 
@@ -16,3 +16,4 @@ ms.locfileid: "61764457"
 |Sürüm|4.8|
 |Tür|Çalışma zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.ComponentModel.DataAnnotations.ValidationContext.MemberName?displayProperty=nameWithType></li></ul>|
+

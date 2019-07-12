@@ -1,15 +1,15 @@
 ---
 title: 'Öğretici: Retrain TensorFlow görüntü sınıflandırıcı - aktarımlı öğrenme'
 description: Aktarımlı öğrenme ve ML.NET ile bir görüntü sınıflandırma TensorFlow modeli yeniden eğitme hakkında bilgi edinin. Özgün modeli ayrı görüntüleri sınıflandırmak için eğitim. Yeni modeli yeniden eğitme sonra görüntüleri kategoriden düzenler.
-ms.date: 06/12/2019
+ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 9344d0757e140995dfd9ce7d1a355910a81c6d31
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539843"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804753"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Öğretici: TensorFlow görüntü sınıflandırıcı ML.NET aktarımlı öğrenme ile yeniden eğitme
 
@@ -43,7 +43,7 @@ Bu öğreticide kaynak kodunu bulabilirsiniz [dotnet/samples](https://github.com
 
 * [Öğretici varlıklar dizin. ZIP dosyası](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
 
-* [InceptionV3 machine learning modeli](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
+* [InceptionV1 machine learning modeli](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>Uygun makine öğrenimi görevini seçin
 
@@ -77,7 +77,7 @@ Aktarımlı öğrenme içeren birkaç stratejileri gibi *tüm katmanlar yeniden 
 
 Görüntü sınıflandırma modelinizi yeniden [başlangıcı modeli](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip), üzerinde bir popüler görüntü tanıma modeli eğitilir `ImageNet` TensorFlow modeli nerede çalışırsa tüm sınıflandırmak için veri kümesi, binlerce sınıflara gibi görüntüleri " Genel","Jersey"ve"Dishwasher".
 
-`Inception v3 model` Olarak sınıflandırılan bir [derin konvolüsyonel sinir ağını](https://en.wikipedia.org/wiki/Convolutional_neural_network) ve eşleşen veya bazı etki alanlarına İnsan performansa aşan sabit visual tanıma görevleri, makul performans elde edebilirsiniz. Model/algoritması birden çok Araştırmacıları tarafından geliştirilmiş ve özgün kağıda tabanlı: ["Yeni mimarisi için görüntü işleme tarafından Szegedy yeniden değerlendirme", et. Al.](https://arxiv.org/abs/1512.00567)
+`Inception v1 model` Olarak sınıflandırılan bir [derin konvolüsyonel sinir ağını](https://en.wikipedia.org/wiki/Convolutional_neural_network) ve eşleşen veya bazı etki alanlarına İnsan performansa aşan sabit visual tanıma görevleri, makul performans elde edebilirsiniz. Model/algoritması birden çok Araştırmacıları tarafından geliştirilmiş ve özgün kağıda tabanlı: ["Yeni mimarisi için görüntü işleme tarafından Szegedy yeniden değerlendirme", et. Al.](https://arxiv.org/abs/1512.00567)
 
 Çünkü `Inception model` öncesi zaten içerdiği farklı görüntüleri binlerce üzerinde geliştirilen, [görüntü özellikleri](https://en.wikipedia.org/wiki/Feature_(computer_vision)) resim tanımlama için gerekli. Basit özellikleri (örneğin, kenarlar) alt görüntü özelliği katmanlarının tanır ve daha yüksek katmanları (şekiller gibi) daha karmaşık özelliklerden tanı. Son katmanı, zaten nasıl sınıflandırılacağıyla görüntüleri anlayan önceden eğitilen bir modelin ile başlatıyorsanız çünkü çok daha küçük veri kümesi karşı çalıştırılır. Modelinizi ikiden fazla kategorileri sınıflandırmak verdiğinden, bu örneği yer almaktadır. bir [çok sınıflı sınıflandırıcı](../resources/tasks.md#multiclass-classification). 
 

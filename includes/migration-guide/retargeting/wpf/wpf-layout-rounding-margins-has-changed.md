@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 73096e5f61e5257e062df9743cae0f5464892357
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a4f27c0b2bf95ed19e485881aba3c52073114117
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62093613"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804512"
 ---
 ### <a name="wpf-layout-rounding-of-margins-has-changed"></a>WPF Düzen kenar boşluklarını yuvarlama değişti
 
@@ -15,3 +15,4 @@ ms.locfileid: "62093613"
 |Kapsam|İkincil|
 |Sürüm|4.6|
 |Tür|Yeniden Hedefleme|
+

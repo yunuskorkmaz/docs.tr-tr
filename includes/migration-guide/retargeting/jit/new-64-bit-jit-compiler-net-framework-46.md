@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a9363750f8090434d0c304039330eff88e4748d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5aa37169ae0e5c5e6b88aae5ceb5d758286c3d3a
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62093609"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804445"
 ---
 ### <a name="new-64-bit-jit-compiler-in-the-net-framework-46"></a>.NET Framework 4.6 yeni 64 bit JIT Derleyici
 
@@ -15,3 +15,4 @@ ms.locfileid: "62093609"
 |Kapsam|Kenar|
 |Sürüm|4.6|
 |Tür|Yeniden Hedefleme|
+

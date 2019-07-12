@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 470fc2ddcfbb29a677cadb6e7e1d2e55784d7ac2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e5e90a4cfb862b3bfd74ac5a3715e97a736f598
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764070"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802484"
 ---
 ### <a name="workflow-now-throws-original-exception-instead-of-nullreferenceexception-in-some-cases"></a>İş akışı şimdi bazı durumlarda NullReferenceException yerine özgün özel durum oluşturur
 
@@ -16,3 +16,4 @@ ms.locfileid: "61764070"
 |Sürüm|4.7|
 |Tür|Çalışma zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.Activities.CodeActivity.Execute(System.Activities.CodeActivityContext)?displayProperty=nameWithType></li><li><xref:System.Activities.AsyncCodeActivity.BeginExecute(System.Activities.AsyncCodeActivityContext,System.AsyncCallback,System.Object)?displayProperty=nameWithType></li><li><xref:System.Activities.AsyncCodeActivity%601.BeginExecute(System.Activities.AsyncCodeActivityContext,System.AsyncCallback,System.Object)?displayProperty=nameWithType></li><li><xref:System.Activities.WorkflowInvoker.Invoke?displayProperty=nameWithType></li></ul>|
+

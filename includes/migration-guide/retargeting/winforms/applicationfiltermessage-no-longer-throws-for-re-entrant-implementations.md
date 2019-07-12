@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8a1e2ca0790cb62e3c2c879f2ba0bb169ef07d77
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e37007318a55188d44607fd5e4c4f3950c105df
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757813"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804325"
 ---
 ### <a name="applicationfiltermessage-no-longer-throws-for-re-entrant-implementations-of-imessagefilterprefiltermessage"></a>Application.FilterMessage IMessageFilter.PreFilterMessage a uygulamaları için artık oluşturur.
 
@@ -16,3 +16,4 @@ ms.locfileid: "61757813"
 |Sürüm|4.6.1|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Windows.Forms.Application.FilterMessage(System.Windows.Forms.Message@)?displayProperty=nameWithType></li></ul>|
+

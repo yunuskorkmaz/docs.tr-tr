@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 82e2794f262548105f9b7cb12204eaa8138e0630
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47aa67096f8dcd250521d9c34dde97cb2eb368d7
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783247"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803469"
 ---
 ### <a name="workflow-xoml-definition-and-sqltrackingservice-cache-keys-changed-from-md5-to-sha256"></a>İş akışı XOML tanımını ve SqlTrackingService önbellek anahtarları için SHA256 MD5 değiştirildi
 
@@ -15,3 +15,4 @@ ms.locfileid: "61783247"
 |Kapsam|İkincil|
 |Sürüm|4.8|
 |Tür|Yeniden Hedefleme|
+

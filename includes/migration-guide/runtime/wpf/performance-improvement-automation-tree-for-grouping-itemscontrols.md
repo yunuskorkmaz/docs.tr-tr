@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c8329fbaed68fde3a63a5c589896ffcdf64b1766
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad2f7bf981d56e06ec726942f1fd37dff6b5b09c
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665710"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802603"
 ---
 ### <a name="performance-improvement-in-automation-tree-for-grouping-itemscontrols"></a>Otomasyon ağacı ItemsControls gruplandırmak için performans geliştirmesi
 
@@ -14,3 +14,4 @@ ms.locfileid: "61665710"
 |Kapsam|Ana|
 |Sürüm|4.8|
 |Tür|Çalışma zamanı|
+

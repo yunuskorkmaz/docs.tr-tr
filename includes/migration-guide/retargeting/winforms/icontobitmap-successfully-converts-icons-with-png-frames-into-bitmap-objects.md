@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f4a5911787fa5f72be1dcd15c67b3f132c3f1110
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c2a8eca3f4498906cf703ff3b8ffb7336ff7a1b
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62093612"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804545"
 ---
 ### <a name="icontobitmap-successfully-converts-icons-with-png-frames-into-bitmap-objects"></a>Icon.ToBitmap, PNG çerçevelerle simgeler başarıyla bit eşlem nesnelerine dönüştürür.
 
@@ -16,3 +16,4 @@ ms.locfileid: "62093612"
 |Sürüm|4.6|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Drawing.Icon.ToBitmap?displayProperty=nameWithType></li></ul>|
+

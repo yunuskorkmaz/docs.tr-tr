@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c7a207618c290d016dd66ba52cae0494c11cc5bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7f8cec632965a75ac262fd6f1853a954d02ebec
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759549"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803467"
 ---
 ### <a name="accessibility-improvements-in-windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) iş akışı tasarımcısında erişilebilirlik geliştirmeleri
 
@@ -15,3 +15,4 @@ ms.locfileid: "61759549"
 |Kapsam|İkincil|
 |Sürüm|4.7.1|
 |Tür|Yeniden Hedefleme|
+

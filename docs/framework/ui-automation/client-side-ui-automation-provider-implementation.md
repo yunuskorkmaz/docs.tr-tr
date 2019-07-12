@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9e3f0941d2fd92b8657d2d9df5b050e7793eb1d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02d77dfeb7a00292639131cad72cff7e079704c5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647206"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802219"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>İstemci Tarafı UI Otomasyon Sağlayıcıyı Uygulama
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "64647206"
   
  Ancak, eski denetimleri olanlar gibi [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] doğrudan desteklemez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Bu denetimler, bunun yerine mevcut istemci işlemini ve çapraz proses haberleşmesi kullanarak denetimleri hakkında bilgi edinme sağlayıcıları tarafından sunulan; Örneğin, windows iletilerini ve denetimlerinden izleyerek. Gibi istemci tarafı sağlayıcıları bazen proxy'leri çağrılır.  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] Standart için sağlayıcılar sunar [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] ve Windows Forms denetimleri. Ayrıca, bir geri dönüş sağlayıcısı kısmi verir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] desteklemek için başka bir sunucu tarafı sağlayıcı tarafından sunulan değil herhangi bir denetimi veya proxy ancak sahip bir [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] uygulaması. Bu sağlayıcılar, otomatik olarak yüklenir ve istemci uygulamaları için kullanılabilir.  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] Standart için sağlayıcılar sunar [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] ve Windows Forms denetimleri. Ayrıca, bir geri dönüş sağlayıcısı kısmi verir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] desteklemek için başka bir sunucu tarafı sağlayıcı tarafından sunulan değil herhangi bir denetimi veya proxy, ancak Microsoft Active Accessibility uygulama vardır. Bu sağlayıcılar, otomatik olarak yüklenir ve istemci uygulamaları için kullanılabilir.  
   
  Yönelik destek hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] Windows Forms denetimleri görüp [UI Otomasyon desteği standart denetimler için](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
   

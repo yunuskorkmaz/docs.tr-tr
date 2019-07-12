@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e39b4e85b47902babac7a22a93aa64c2f86ef01f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c800b3fcc1eff5d7a669611cb0697aa8c87a37a4
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640074"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804673"
 ---
 ### <a name="dataobjectgetdata-now-retrieves-data-as-utf-8"></a>DataObject.GetData, verileri artık UTF-8 alır.
 
@@ -16,3 +16,4 @@ ms.locfileid: "61640074"
 |Sürüm|4.5.2|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Windows.DataObject.GetData(System.String)?displayProperty=nameWithType></li><li><xref:System.Windows.DataObject.GetData(System.Type)?displayProperty=nameWithType></li><li><xref:System.Windows.DataObject.GetData(System.String,System.Boolean)?displayProperty=nameWithType></li></ul>|
+

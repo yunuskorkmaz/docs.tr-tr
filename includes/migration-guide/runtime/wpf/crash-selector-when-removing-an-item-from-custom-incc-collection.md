@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a573a78109036b87201b53f72aa8dba6755e7a21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f4ee44e8432bae3537c6f064f564b9f044a7c33
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665170"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802564"
 ---
 ### <a name="crash-in-selector-when-removing-an-item-from-a-custom-incc-collection"></a>Özel bir INCC koleksiyondan bir öğe kaldırılırken seçicide kilitlenme
 
@@ -15,3 +15,4 @@ ms.locfileid: "61665170"
 |Kapsam|İkincil|
 |Sürüm|4.7|
 |Tür|Çalışma zamanı|
+
