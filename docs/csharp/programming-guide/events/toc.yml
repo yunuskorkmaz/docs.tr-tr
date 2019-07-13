@@ -9,7 +9,5 @@
       href: how-to-raise-base-class-events-in-derived-classes.md
     - name: 'Nasıl yapılır: Arabirim Olaylarını Uygulama'
       href: how-to-implement-interface-events.md
-    - name: 'Nasıl yapılır: Olay Örneklerini Depolamak için Sözlük Kullanma'
-      href: how-to-use-a-dictionary-to-store-event-instances.md
     - name: 'Nasıl yapılır: Özel Olay Erişimcilerini Uygulama'
       href: how-to-implement-custom-event-accessors.md
