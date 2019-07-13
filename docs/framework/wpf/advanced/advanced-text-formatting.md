@@ -9,15 +9,15 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: ef07e1acd250ceeb7c0e30f8a78dd8d7b196fdcd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ed6dd33efd5fdc5e2c61df4173bec5cc2f0d807
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655535"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859692"
 ---
 # <a name="advanced-text-formatting"></a>Gelişmiş Metin Biçimlendirme
-Windows Presentation Foundation (WPF) sağlayan bir dizi güçlü [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] uygulamanızda metin dahil etmek için. Düzen ve [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], gibi <xref:System.Windows.Controls.TextBlock>, en yaygın sağlar ve genel metin sunu öğelerini kullanın. Çizim [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], gibi <xref:System.Windows.Media.GlyphRunDrawing> ve <xref:System.Windows.Media.FormattedText>, biçimlendirilmiş metin çizimlerini dahil etmek için bir yol sağlar. En gelişmiş düzeyde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir Genişletilebilir metin biçimlendirme metin sunum, metin Depolama Yönetimi, çalıştırma metin biçimlendirme yönetim ve katıştırılmış nesne yönetimi gibi her yönüyle denetlemek için altyapı sağlar.  
+Windows Presentation Foundation (WPF), metin uygulamanıza dahil etmek için sağlam bir API kümesi sağlar. Düzen ve [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]API'leri gibi <xref:System.Windows.Controls.TextBlock>, en yaygın sağlar ve genel metin sunu öğelerini kullanın. API'leri gibi çizim <xref:System.Windows.Media.GlyphRunDrawing> ve <xref:System.Windows.Media.FormattedText>, biçimlendirilmiş metin çizimlerini dahil etmek için bir yol sağlar. En gelişmiş düzeyde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir Genişletilebilir metin biçimlendirme metin sunum, metin Depolama Yönetimi, çalıştırma metin biçimlendirme yönetim ve katıştırılmış nesne yönetimi gibi her yönüyle denetlemek için altyapı sağlar.  
   
  Bu konuda tanıtır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] metin biçimlendirmesi. İstemci uygulamasını ve kullanımını üzerinde odaklanır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] altyapısı biçimlendirme metin.  
   
@@ -26,7 +26,7 @@ Windows Presentation Foundation (WPF) sağlayan bir dizi güçlü [!INCLUDE[TLA#
 
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konuda, daha yüksek düzeyiyle ilgili bilgi sahibi olduğunuz varsayılır [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] metin sunu için kullanılır. Çoğu kullanıcı senaryoları Gelişmiş metin biçimlendirme gerektirmez [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] bu konuda tartışılan. Giriş için farklı bir metin [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], bkz: [WPF'deki Belgeler](documents-in-wpf.md).  
+ Bu konuda, metin sunumu için kullanılan yüksek düzey API'ler ile ilgili bilgi sahibi olduğunuz varsayılır. Çoğu kullanıcı senaryo bu konuda tartışılan API'leri biçimlendirme Gelişmiş metin gerektirmez. Farklı bir metin API'leri için bir giriş için bkz [WPF'deki Belgeler](documents-in-wpf.md).  
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>Gelişmiş Metin Biçimlendirme  

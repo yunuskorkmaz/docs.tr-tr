@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 47d892db8418b44fffeec870e56b49d5f986b563
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 5835cfb633451025ed32c2a26228e33a1b24473e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610472"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67857062"
 ---
 # <a name="input-overview"></a>Girişe Genel Bakış
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Alt sistemi sağlayan güçlü [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] giriş çeşitli cihazlardan almak için fare, klavye, dokunmatik ve Kalem dahil. Bu konu tarafından sağlanan hizmetleri açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve giriş sistemleri mimarisini açıklar.
@@ -58,7 +58,7 @@ ms.locfileid: "67610472"
  <xref:System.Windows.Input.Mouse> Ve <xref:System.Windows.Input.Keyboard> sınıfları bu genel bakış içindeki daha ayrıntılı ele alınmıştır.
 
 ### <a name="stylus-input"></a>İğne girişi
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Destek için tümleşik olan <xref:System.Windows.Input.Stylus>.  <xref:System.Windows.Input.Stylus> Popüler tarafından yapılan bir kalem girişi [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar kabul ekran kalemi fare API, fareyi kullanarak ancak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de kullanan bir model klavye ve fare benzer bir ekran kalemi cihaz soyutlamayı kullanıma sunar.  Ekran kalemi ilgili tüm [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] "Kalem" sözcüğünü içermelidir.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Destek için tümleşik olan <xref:System.Windows.Input.Stylus>.  <xref:System.Windows.Input.Stylus> Popüler tarafından yapılan bir kalem girişi [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar kabul ekran kalemi fare API, fareyi kullanarak ancak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de kullanan bir model klavye ve fare benzer bir ekran kalemi cihaz soyutlamayı kullanıma sunar.  Ekran kalemi ile ilgili tüm API'leri "Kalem" sözcük içerir.
 
  Ekran kalemi fare davranıp çünkü yalnızca fare girişi destekleyen uygulamalar yine de bazı ekran kalemi destek düzeyini otomatik olarak edinebilirsiniz. Ekran kalemi bu tür bir şekilde kullanıldığında, uygulama uygun ekran kalemi olayı işlemek için fırsatı verilir ve daha sonra karşılık gelen bir fare olayını işler. Mürekkep giriş gibi daha üst düzey hizmetler buna Ayrıca ekran kalemi cihaz soyutlamayı olarak kullanılabilir.  Giriş olarak mürekkep hakkında daha fazla bilgi için bkz. [mürekkep ile çalışmaya başlama](getting-started-with-ink.md).
 
@@ -354,7 +354,7 @@ ms.locfileid: "67610472"
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>Fare yakalama
- Fare cihazlarına özellikle fare yakalamayı bilinen bir kalıcı özellik tutun. Fare yakalama, bir Sürükle ve bırak işlemi başlatıldığında, böylece nominal ekrandaki ilgili diğer işlemleri fare işaretçisi konumunun mutlaka gerçekleşmez bir geçiş giriş durumunu korumak için kullanılır. Sürükleme sırasında sürükle ve fare yakalama sürüklemenin çıkış noktası tarafından açık tutulduğu sürece çoğu fareyi üzerine getirme ipuçları uygun hale getiren bırak, durduruluyor olmadan kullanıcı tıklayamazsınız. Giriş sistemi sunan [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] fare yakalama durumunu belirleyebilir yanı [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] , fare yakalamayı zorlamak için belirli bir öğe veya fare yakalama durumu temizleyin. Sürükle ve bırak işlemleri hakkında daha fazla bilgi için bkz. [sürükle ve bırak genel bakış](drag-and-drop-overview.md).
+ Fare cihazlarına özellikle fare yakalamayı bilinen bir kalıcı özellik tutun. Fare yakalama, bir Sürükle ve bırak işlemi başlatıldığında, böylece nominal ekrandaki ilgili diğer işlemleri fare işaretçisi konumunun mutlaka gerçekleşmez bir geçiş giriş durumunu korumak için kullanılır. Sürükleme sırasında sürükle ve fare yakalama sürüklemenin çıkış noktası tarafından açık tutulduğu sürece çoğu fareyi üzerine getirme ipuçları uygun hale getiren bırak, durduruluyor olmadan kullanıcı tıklayamazsınız. Giriş sistemi, fare yakalamayı zorlamak için belirli bir öğe veya fare yakalama durumunu temizlemeniz API'leri yanı sıra, fare yakalama durumu belirlemek API'leri kullanıma sunar. Sürükle ve bırak işlemleri hakkında daha fazla bilgi için bkz. [sürükle ve bırak genel bakış](drag-and-drop-overview.md).
 
 <a name="commands"></a>
 ## <a name="commands"></a>Komutlar

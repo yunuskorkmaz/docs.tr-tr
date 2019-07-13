@@ -7,23 +7,22 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 81f85ce60f423cad8aecccad8f97e90897ba86db
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 2e2897ff647140b58b3a1812e153a44a6fcdaef7
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661595"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859566"
 ---
 # <a name="value-types-table-c-reference"></a>Değer türleri tablosu (C# Başvurusu)
 
 Aşağıdaki tabloda C# değer türleri:
 
-|Değer türü|Kategori|Tür soneki|
+|Değer türü|Category|Tür soneki|
 |----------------|--------------|-----------------|
 |[bool](bool.md)|Boole değeri||
 |`byte`|İmzasız, sayısal, [tamsayı](../builtin-types/integral-numeric-types.md)||
 |[char](char.md)|İmzasız, sayısal, [tamsayı](../builtin-types/integral-numeric-types.md)
-)||
 |`decimal`|Sayısal, [kayan nokta](../builtin-types/floating-point-numeric-types.md)|M veya m|
 |`double`|Sayısal, [kayan nokta](../builtin-types/floating-point-numeric-types.md)|D veya d|
 |[enum](enum.md)|Sabit Listesi||

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: cbae3011634fb6c6b68e477a10931a1ef13c3f55
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: c9e94eef6caf5b4c9a64623d5c578af89acc616a
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610359"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859923"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF ve Win32 Birlikte Çalışması
 Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kod. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu olabilir bazı kodu yeniden kullanmak daha etkili.  
@@ -29,7 +29,7 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>WPF birlikte çalışabilirlik projeleri  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] yönetilen kod, ancak çoğu mevcut [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlar yazılır yönetilmeyen [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Çağıramazsınız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] gerçek bir program yönetilmeyen. Kullanarak ancak `/clr` seçeneğini [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] derleyici, burada, sorunsuz bir şekilde karışık yönetilen ve yönetilmeyen API çağrıları karma bir yönetilen-yönetilmeyen program oluşturabilirsiniz.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API'leri yönetilen kod, ancak çoğu mevcut [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlar yazılır yönetilmeyen [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Çağıramazsınız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gerçek bir API'lerinden yönetilmeyen program. Kullanarak ancak `/clr` seçeneğini [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] derleyici, burada, sorunsuz bir şekilde karışık yönetilen ve yönetilmeyen API çağrıları karma bir yönetilen-yönetilmeyen program oluşturabilirsiniz.  
   
  Bir proje düzeyi komplikasyon olduğundan, derlenemez [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyalarınızı bir [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] proje.  Bunu düzeltmek için birçok proje bölme teknikler vardır.  
   
@@ -89,7 +89,7 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
   
 <a name="hosting_an_hwnd"></a>   
 ## <a name="hosting-a-microsoft-win32-window-in-wpf"></a>WPF Microsoft Win32 penceresinde barındırma  
- Barındırma anahtarını bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] diğer pencereye [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik <xref:System.Windows.Interop.HwndHost> sınıfı. Bu sınıf penceresinde sarmalar bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eklenebilir öğesi bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğe ağacı. <xref:System.Windows.Interop.HwndHost> Ayrıca destekler [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] iletilerini barındırılan pencere için işleme gibi görevleri yapmak izin. Temel yordam aynıdır:  
+ Barındırma anahtarını bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] diğer pencereye [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik <xref:System.Windows.Interop.HwndHost> sınıfı. Bu sınıf penceresinde sarmalar bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eklenebilir öğesi bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğe ağacı. <xref:System.Windows.Interop.HwndHost> Ayrıca barındırılan pencere için işlem iletileri gibi görevleri yapabilmeniz için API'leri destekler. Temel yordam aynıdır:  
   
 1. İçin bir öğe ağacı oluşturma bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama (olabilir başladığınız kodun veya). Öğe ağacındaki bir uygun ve izin verilen noktası bulmasını burada <xref:System.Windows.Interop.HwndHost> uygulaması bir alt öğesi eklenebilir. Kalanı Bu adımlar, bu öğe rezerve öğesi olarak adlandırılır.  
   

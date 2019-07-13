@@ -11,15 +11,15 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: da2576696b514dca882636125cfb3e31a82d7f6e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 4140152079b93e3c0a3d5fcda0e1b2c6f9fb89a4
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878196"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859859"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Nasıl yapılır: Uzaktan Yazıcıların Durumunu Araştırma
-Orta ve büyük şirketler belirli bir zamanda en nedeniyle bir kağıt sıkıştı çalışma veya kağıt veya diğer bazı sorunlu durum dışında olan birden çok yazıcılar olabilir. Zengin, kullanıma sunulan yazıcı Özellikler [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] hızlı yazıcıların durumunu araştırma gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  
+Orta ve büyük şirketler belirli bir zamanda en nedeniyle bir kağıt sıkıştı çalışma veya kağıt veya diğer bazı sorunlu durum dışında olan birden çok yazıcılar olabilir. Yazıcı özellikleri kullanıma sunulan API'ler, Microsoft .NET Framework için zengin, hızlı yazıcıların durumunu araştırma gerçekleştirmek için bir yol sağlar.  
   
 ## <a name="example"></a>Örnek  
  Bu tür bir yardımcı programı oluşturmak için önemli adımlar aşağıdaki gibidir.  

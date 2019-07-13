@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 90768a0c816e790138ba60bd24afee242e41e652
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010403"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860281"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource Biçimlendirme Uzantısı
 İçin herhangi bir değer sağlar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] özellik özniteliği tarafından tanımlanan kaynağına başvuru olması için bu değeri erteleniyor. Bu kaynak için arama davranışı için çalışma zamanı arama benzerdir.  
@@ -52,7 +52,7 @@ ms.locfileid: "62010403"
   
  Kaynak anahtarı içinde tanımlanan herhangi bir dize olabilir [XamlName Dilbilgisi](../../xaml-services/xamlname-grammar.md). Kaynak anahtarı diğer nesne türleri gibi de içerebilir bir <xref:System.Type>. A <xref:System.Type> anahtardır denetimleri tarafından temaları nasıl biçimlendirilebilir için temel. Daha fazla bilgi için [denetim yazmaya genel bakış](../controls/control-authoring-overview.md).  
   
- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] Kaynak değerler, arama için gibi <xref:System.Windows.FrameworkElement.FindResource%2A>, tarafından kullanılan aynı kaynak araması mantığını izleyin `DynamicResource`.  
+ Kaynak araması için API'leri değerleri, gibi <xref:System.Windows.FrameworkElement.FindResource%2A>, tarafından kullanılan aynı kaynak araması mantığını izleyin `DynamicResource`.  
   
  Alternatif bildirime dayanan bir kaynağa başvuran gibidir bir [StaticResource işaretleme uzantısı](staticresource-markup-extension.md).  
   

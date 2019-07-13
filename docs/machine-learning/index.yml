@@ -15,7 +15,7 @@ sections:
   - title: Başlarken
     items:
       - type: paragraph
-        text: Bir machine learning uygulama ML.NET ile nasıl oluşturulduğunu öğrenmek için <a href="/dotnet/machine-learning/how-does-mldotnet-work">ML.NET nedir ve nasıl onu çalışır</a>? Veya ekleyerek başlayın <b>Microsoft.ML</b> uygulamanıza nuget paketi.
+        text: Bir machine learning uygulama ML.NET ile nasıl oluşturulduğunu öğrenmek için <a href="/dotnet/machine-learning/how-does-mldotnet-work">ML.NET nedir ve nasıl onu çalışır</a>? Veya ekleyerek başlayın <b>Microsoft.ML</b> uygulamanıza NuGet paketi.
   - title: Adım adım öğreticiler
     items:
       - type: paragraph

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d9e1cd8d346a48fafc89367bddf923167a620889
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7cdd4ae030dfe9f1bc383092e041fd1f0739212
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764475"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857609"
 ---
 ### <a name="coerceisselectionboxhighlighted"></a>CoerceIsSelectionBoxHighlighted
 
@@ -12,7 +12,8 @@ ms.locfileid: "61764475"
 |---|---|
 |Ayrıntılar|Belirli dizileri eylemleri içeren bir <xref:System.Windows.Controls.ComboBox?displayProperty=name> ve veri kaynağına neden olabilir bir <xref:System.NullReferenceException?displayProperty=name>.|
 |Öneri|Mümkünse, .NET Framework 4.6.2 yükseltin.|
-|Kapsam|İkincil|
-|Sürüm|4.6|
-|Tür|Çalışma zamanı|
+|`Scope`|Küçük|
+|Version|4.6|
+|Type|Çalışma zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted?displayProperty=nameWithType></li></ul>|
+

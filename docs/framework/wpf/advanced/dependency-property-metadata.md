@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: a4b2edce76bc5ab97e644ec8dbdf045931e87786
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66628e8cc1e56bff2227721d6f6b3e511be7453e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663426"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860053"
 ---
 # <a name="dependency-property-metadata"></a>Bağımlılık Özelliği Meta Verisi
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ne bildirilen bir özellik üzerinden erişiyorsanız hakkında veya genel olabilir ötesine giden sistem raporlama bir meta veri özellik sistemi içerir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özellikleri. Meta verileri için bir bağımlılık özelliği bir bağımlılık özelliği tanımlayan bir sınıf tarafından da bir benzersiz bir şekilde atanabilir bağımlılık özelliği için farklı bir sınıf eklendiğinde değiştirilebilir ve özellikle devralan tüm türetilmiş sınıfları tarafından geçersiz kılınabilir bağımlılık özelliği tanımlayan temel sınıf.  
@@ -44,7 +44,7 @@ ms.locfileid: "64663426"
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>Meta verileri, geçersiz kılma ne zaman bir sınıf türetin  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Özellik sistemi tamamen yeniden uygulanmış olması için bağımlılık özellikleri özelliklerinden bazıları gerek kalmadan değiştirmek için özellikler kurulan. Bu işlem, belirli bir tür üzerinde mevcut olduğundan, bağımlılık özelliği için özellik meta verileri farklı bir örneği oluşturularak gerçekleştirilir. En mevcut bağımlılık özellikleri sanal özellikler değildir, bu nedenle NET olarak söylemek gerekirse "devralınan sınıflar üzerinde yeniden uygularken" yalnızca varolan bir üye gölgeleme tarafından gerçekleştirilmesi dikkat edin.  
   
- Senaryo türü üzerinde bir bağımlılık özelliği mevcut bağımlılık özellikleri özelliklerini değiştirerek elde edilemez etkinleştirmek üzere çalışıyorsanız, bunu daha sonra türetilmiş bir sınıf oluşturmak gerekli olabilir ve sonra özel bir bağımlılık özelliği bildirmek için türetilen. Özel bağımlılık özelliği tarafından tanımlanan bağımlılık özellikleri için aynı şekilde davranır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Özel bağımlılık özellikleri hakkında daha fazla ayrıntı için bkz. [özel bağımlılık özellikleri](custom-dependency-properties.md).  
+ Senaryo türü üzerinde bir bağımlılık özelliği mevcut bağımlılık özellikleri özelliklerini değiştirerek elde edilemez etkinleştirmek üzere çalışıyorsanız, bunu daha sonra türetilmiş bir sınıf oluşturmak gerekli olabilir ve sonra özel bir bağımlılık özelliği bildirmek için türetilen. Özel bağımlılık özelliği tarafından tanımlanan bağımlılık özellikleri için aynı şekilde davranır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API'leri. Özel bağımlılık özellikleri hakkında daha fazla ayrıntı için bkz. [özel bağımlılık özellikleri](custom-dependency-properties.md).  
   
  Bir önemli geçersiz kılamaz bir bağımlılık özelliği değer türü özelliğidir. Yaklaşık davranışı bir bağımlılık özelliği devralan varsa gerektirir, ancak farklı bir tür için gerekli, özel bağımlılık özelliği uygulama ve belki de özellikleri tür dönüştürme veya diğer aracılığıyla bağlamanız gerekir Özel sınıfınıza mantığınız. Ayrıca, mevcut bir değiştirilemiyor <xref:System.Windows.ValidateValueCallback>, bu geri çağırma kaydı alan ve meta verileri içinde değil bulunmaktadır.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "64663426"
 ### <a name="overriding-metadata"></a>Meta verileri geçersiz kılma  
  Meta verileri geçersiz kılma amacı, böylelikle öncelikle, türünüz üzerinde mevcut olduğundan, bağımlılık özelliği için uygulanan çeşitli meta verileri türetilmiş davranışlarını değiştirme olanağına sahiptir. Bunun nedeni, daha ayrıntılı olarak açıklanmıştır [meta verileri](#dp_metadata_contents) bölümü. Bazı kod örnekleri dahil olmak üzere daha fazla bilgi için bkz. [bağımlılık özelliği meta verileri geçersiz kılma](how-to-override-metadata-for-a-dependency-property.md).  
   
- Özellik meta veriler sağladı kayıt aramasında bir bağımlılık özelliği için (<xref:System.Windows.DependencyProperty.Register%2A>). Ancak, çoğu durumda, bu bağımlılık özelliği devraldığında sınıfınız için türe özgü meta veriler sağlamak isteyebilirsiniz. Bunu çağırarak yapmak <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> yöntemi.  Bir örnek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], <xref:System.Windows.FrameworkElement> sınıfı, ilk kaydeden türü <xref:System.Windows.UIElement.Focusable%2A> bağımlılık özelliği. Ancak <xref:System.Windows.Controls.Control> sınıfı ondan değiştirme kendi varsayılan başlangıç değeri sağlamak bağımlılık özelliği için meta verileri geçersiz kılar `false` için `true`, aksi takdirde özgün yeniden kullanır <xref:System.Windows.UIElement.Focusable%2A> uygulaması.  
+ Özellik meta veriler sağladı kayıt aramasında bir bağımlılık özelliği için (<xref:System.Windows.DependencyProperty.Register%2A>). Ancak, çoğu durumda, bu bağımlılık özelliği devraldığında sınıfınız için türe özgü meta veriler sağlamak isteyebilirsiniz. Bunu çağırarak yapmak <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> yöntemi.  Bir örnek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API'leri <xref:System.Windows.FrameworkElement> sınıfı, ilk kaydeden türü <xref:System.Windows.UIElement.Focusable%2A> bağımlılık özelliği. Ancak <xref:System.Windows.Controls.Control> sınıfı ondan değiştirme kendi varsayılan başlangıç değeri sağlamak bağımlılık özelliği için meta verileri geçersiz kılar `false` için `true`, aksi takdirde özgün yeniden kullanır <xref:System.Windows.UIElement.Focusable%2A> uygulaması.  
   
  Meta verileri geçersiz kılma, farklı bir meta veri özelliklerini birleştirilmiş değiştirildi veya olan.  
   

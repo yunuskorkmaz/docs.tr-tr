@@ -2,12 +2,12 @@
 title: Nasıl yapılır makaleleri (C# Kılavuzu)
 description: Hızlı ipuçları ve kısa, odaklanmış kod örnekleri koleksiyonu
 ms.date: 12/20/2017
-ms.openlocfilehash: 011e2a8208e647fb2df2ea2e949bfe2d2274eb37
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63410d687bd09f95a5ce7ce9304f2281b2f8d334
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744267"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859541"
 ---
 # <a name="how-to-c"></a>Nasıl yapılır (C#)
 
@@ -98,7 +98,6 @@ Olayları yayımlamak veya Bildirimlere abone için bir mekanizma sağlar.
 - [Arabirimde bildirilen olaylarını uygulama](../programming-guide/events/how-to-implement-interface-events.md).
 - [Kodunuzu olayları yayımlarken .NET Framework yönergeleriyle uyumlu](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
 - [Temel sınıftan türetilmiş sınıflar içinde tanımlanan olay](../programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md).
-- [Olay örnekleri bir sözlükte Store](../programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md).
 - [Özel olay erişimcilerini uygulama](../programming-guide/events/how-to-implement-custom-event-accessors.md).
 
 ## <a name="linq-practices"></a>LINQ yöntemleri

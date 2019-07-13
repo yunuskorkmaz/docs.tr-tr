@@ -1,70 +1,75 @@
 ---
-title: Seçin C# dil sürümü - C# Kılavuzu
-description: Belirli bir derleyici sürümü kullanarak söz dizimi doğrulama gerçekleştirmek için derleyici yapılandırma
-ms.date: 02/28/2019
-ms.openlocfilehash: feb3e51a107f9830071b55c7985f202edc842f4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+title: C#Dil sürümü oluşturma - C# Kılavuzu
+description: Hakkında nasıl bilgi C# dil sürümü, projenizi temel alarak belirlenir ve farklı değerler, el ile şekilde ayarlayabilirsiniz.
+ms.date: 07/10/2019
+ms.openlocfilehash: 2d593ca0588f291c61cdf52fbc1eb60a1f3f7ecb
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662286"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859598"
 ---
-# <a name="select-the-c-language-version"></a>Seçin C# dil sürümü
+# <a name="c-language-versioning"></a>C#Dil sürümü oluşturma
 
-C# Derleyici, proje hedef Framework'ü veya çerçeveleri göre varsayılan dil sürümü belirler. Projenize karşılık gelen bir önizleme dil sürümü olan bir önizleme framework hedeflediğinde, kullanılan dil sürümü Önizleme dil sürümüdür. Bir önizleme çerçeve proje hedeflemiyor, kullanılan dil son alt sürüm sürümüdür.
+C# Derleyici, proje hedef Framework'ü veya çerçeveleri göre varsayılan dil sürümü belirler. Bunun nedeni, C# dil türleri veya her bir .NET uygulamasında kullanılabilir olmayan bir çalışma zamanı bileşenlerini kullanan özellikler olabilir. Bu ayrıca, projenizin karşı yerleşik her hedef için en yüksek uyumlu dil sürümünü varsayılan olarak almasını sağlar.
 
-Örneğin, .NET Core 3.0 Önizleme dönemi boyunca herhangi hedefleyen bir proje `netcoreapp3.0` veya `netstandard2.1` (hem de Önizleme) kullanacağı C# 8.0 Dil (Ayrıca önizlemede). Herhangi bir kullanıma sunulan sürümünü hedefleyen projelerin kullanacağı C# 7.3 (son yayımlanan sürümü). Bu davranışı, .NET Framework'ü hedefleyen herhangi bir projenin son kullanacağı anlamına gelir (C# 7.3). 
+## <a name="defaults"></a>Varsayılanları
 
-Bu özellik, bir projede yeni dil özellikleri eklemelerine kararı geliştirme ortamınızdan araçları ve SDK'sı yeni sürümlerini yüklemek için karar ayırır. En son SDK'sı ve araçları, yapı makinesinde yükleyebilirsiniz. Her proje, derleme için belirli bir dil sürümünü kullanmak için yapılandırılabilir. Varsayılan davranış, yalnızca projeleri bu çerçeveleri hedeflediğinizde yeni türleri veya yeni bir CLR davranış dayalı tüm dil özelliklerinin etkin olduğu anlamına gelir.
+Derleyici, bu kurallara dayalı bir varsayılan belirler:
 
-Bir dil sürümü belirterek varsayılan davranışı geçersiz kılabilirsiniz. Dil sürümünü ayarlamak için birkaç yol vardır:
+|Hedef Çerçeve|version|C#Dil sürümü varsayılan|
+|----------------|-------|---------------------------|
+|.NET Core|3.x|C# 8.0|
+|.NET Core|2.x|C# 7.3|
+|.NET Standard|tüm|C# 7.3|
+|.NET Framework|tüm|C# 7.3|
 
-- Dayanan bir [Visual Studio hızlı eylem](#visual-studio-quick-action).
-- Dil sürümü ayarlama [Visual Studio UI](#set-the-language-version-in-visual-studio).
-- El ile düzenlemeniz, [ **.csproj** dosya](#edit-the-csproj-file).
+## <a name="default-for-previews"></a>Preview sürümleri için varsayılan
+
+Projenize karşılık gelen bir önizleme dil sürümü olan bir önizleme framework hedeflediğinde, kullanılan dil sürümü Önizleme dil sürümüdür. Bu, her türlü ortamda bu Önizleme ile projelerinizi etkilemeden yayımlanmış bir .NET Core sürümünü hedefleyen çalışacağı garanti en son özellikleri kullanabileceğiniz sağlar.
+
+## <a name="overriding-a-default"></a>Varsayılan bir geçersiz kılma
+
+Belirtmeniz gerekiyorsa, C# sürüm açıkça çeşitli yollarla bunu yapabilirsiniz:
+
+- El ile düzenlemeniz, [proje dosyası](#edit-the-project-file).
 - Dil sürümünü ayarlama [bir alt dizinde birden çok proje için](#configure-multiple-projects).
 - Yapılandırma [ `-langversion` derleyici seçeneği](#set-the-langversion-compiler-option).
 
-## <a name="visual-studio-quick-action"></a>Visual Studio hızlı eylem
+### <a name="edit-the-project-file"></a>Proje dosyası Düzenle
 
-Visual Studio ihtiyacınız olan dil sürümü belirlemenize yardımcı olur. Şu anda yapılandırılmış sürümü için kullanılabilir olmayan bir dil özelliğini kullanırsanız, Visual Studio projesi için dil sürümünü güncelleştirmek için bir olası düzeltme gösterir.
-
-## <a name="set-the-language-version-in-visual-studio"></a>Visual Studio'da dil sürümünü ayarlama
-
-Visual Studio'da sürüm ayarlayabilirsiniz. Çözüm Gezgini'nde proje düğümüne sağ tıklayıp **özellikleri**. Seçin **derleme** sekmenize **Gelişmiş** düğmesi. Açılır menüden sürümü seçin. Aşağıdaki görüntüde "son" ayarı gösterilmektedir:
-
-![Dil sürümü belirleyebileceğiniz Gelişmiş derleme ayarları görüntüsü](./media/configure-language-version/advanced-build-settings.png)
-
-> [!NOTE]
-> Csproj dosyalarınızı güncelleştirmek için Visual Studio IDE kullanırsanız, IDE her derleme yapılandırması için ayrı bir düğüm oluşturur. Genellikle aynı tüm derleme yapılandırmalarında ayarlamanız, ancak her derleme yapılandırması için açık olarak veya bu ayarı değiştirdiğinizde "Tüm yapılandırmaları" gerekir. Csproj dosyanıza aşağıdaki görüntüyle karşılaşırsınız:
->
->```xml
-> <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
->  <LangVersion>latest</LangVersion>
-></PropertyGroup>
->
-> <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
->  <LangVersion>latest</LangVersion>
-> </PropertyGroup>
-> ```
->
-
-## <a name="edit-the-csproj-file"></a>Csproj dosyasını düzenleyin
-
-Dil sürümü ayarlayabilirsiniz, **.csproj** dosya. Aşağıdaki gibi bir öğe ekleyin:
+Dil sürümü, proje dosyasında ayarlayabilirsiniz. Açıkça özelliklerin önizlemesini sağlamak erişim istediyseniz, örneğin, şunun gibi bir öğe ekleyebilirsiniz:
 
 ```xml
 <PropertyGroup>
-   <LangVersion>latest</LangVersion>
+   <LangVersion>preview</LangVersion>
 </PropertyGroup>
 ```
 
-Değer `latest` en son sürümü kullanan C# dili. Geçerli değerler şunlardır:
+Değer `preview` kullanılabilir en son Önizleme kullanan C# derleyicinizin destekleyen dili.
 
-|Değer|Açıklama|
+### <a name="configure-multiple-projects"></a>Birden çok proje yapılandırma
+
+Oluşturabileceğiniz bir **Directory.Build.props** içeren dosya `<LangVersion>` birden çok dizini yapılandırma öğesi. Genellikle, çözüm dizininizde yaparsınız. Ekleyin bir **Directory.Build.props** çözüm dizininizde dosya:
+
+```xml
+<Project>
+ <PropertyGroup>
+   <LangVersion>preview</LangVersion>
+ </PropertyGroup>
+</Project>
+```
+
+Bu dosyayı içeren dizine her alt yapılarında Önizleme artık, kullanacak C# sürümü. Daha fazla bilgi için makaleye bakın [derlemenizi özelleştirme](/visualstudio/msbuild/customize-your-build).
+
+## <a name="c-language-version-reference"></a>C#Dil sürümü başvurusu
+
+Aşağıdaki tablo geçerli tüm gösterir C# dil sürümleri. Eski ise, derleyici her değer mutlaka anlamayabilir. .NET Core 3.0 yüklerseniz, listelenen her şeye erişimi gerekir.
+
+|Value|Anlamı|
 |------------|-------------|
 |önizleme|Derleyici, en son Önizleme sürümünden tüm geçerli dili söz dizimini kabul eder.|
-|en son|Bir derleyici sürümünden en son yayımlanan (alt sürümü dahil) derleyici sözdizimini kabul eder.|
+|latest|Bir derleyici sürümünden en son yayımlanan (alt sürümü dahil) derleyici sözdizimini kabul eder.|
 |latestMajor|Bir derleyici sürümünden en son yayımlanan önemli derleyici sözdizimini kabul eder.|
 |8.0|Dahil edilen sözdizimi derleyici kabul C# 8.0 veya daha düşük.|
 |7.3|Dahil edilen sözdizimi derleyici kabul C# 7.3 ya da daha düşük.|
@@ -77,21 +82,3 @@ Değer `latest` en son sürümü kullanan C# dili. Geçerli değerler şunlardı
 |3|Dahil edilen sözdizimi derleyici kabul C# 3.0 veya daha düşük.|
 |ISO-2|Derleyici ISO/IEC 23270:2006 dahil edilen sözdizimi kabul eden C# (2.0) |
 |ISO-1|Derleyici ISO/IEC 23270:2003 dahil edilen sözdizimi kabul eden C# (1.0/1.2) |
-
-## <a name="configure-multiple-projects"></a>Birden çok proje yapılandırma
-
-Oluşturabileceğiniz bir **Directory.Build.props** içeren dosya `<LangVersion>` birden çok dizini yapılandırma öğesi. Genellikle, çözüm dizininizde yaparsınız. Ekleyin bir **Directory.Build.props** çözüm dizininizde dosya:
-
-```xml
-<Project>
- <PropertyGroup>
-   <LangVersion>7.3</LangVersion>
- </PropertyGroup>
-</Project>
-```
-
-Artık, her alt bu dosyayı içeren dizine yapılarında kullanacak C# sürüm 7.3 söz dizimi. Daha fazla bilgi için makaleye bakın [derlemenizi özelleştirme](/visualstudio/msbuild/customize-your-build).
-
-## <a name="set-the-langversion-compiler-option"></a>Langversion derleyici seçeneği ayarlama
-
-Kullanabileceğiniz `-langversion` komut satırı seçeneği. Daha fazla bilgi için makaleye bakın [- langversion](../language-reference/compiler-options/langversion-compiler-option.md) derleyici seçeneği. Yazarak geçerli değerlerin bir listesini görebilirsiniz `csc -langversion:?`.

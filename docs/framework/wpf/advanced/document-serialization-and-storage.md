@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: a1a3d422ea4d9766e6a9f8dda079c3739be4a626
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: b60b3964ff8e1b1f05b6c0820c63ec06d9ea0f4c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663673"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859648"
 ---
 # <a name="document-serialization-and-storage"></a>Belge Serileştirme ve Depolama
 
@@ -23,7 +23,7 @@ Microsoft .NET Framework, yüksek kaliteli belgeleri görüntülemek ve oluştur
 
 İdeal olarak seri hale getirme ve bir belge, gelen ve ardından geri belleğe seri kaldırma işlemi uygulamaya saydamdır.  Uygulama "yöntemi, bir seri durumdan çıkarıcının"yöntem veri deposu erişir ve bellek özgün örneğinde yeniden oluşturur okurken"belgeyi kaydetmek için yazma" seri hale getirici çağırır.  Veriler depolanır belirli biçimi, genel olarak serileştirme uzun ve belge için özgün biçimlerinde Yedekleme işleminin oluşturduğu seri durumdan uygulamanın önemli değil.
 
-Uygulamalar genellikle farklı Orta veya farklı bir biçim belgeleri kaydetmek kullanıcı izin veren birden fazla seri hale getirme seçeneği sağlar.  Örneğin, bir uygulama bir disk dosyası, veritabanı veya web hizmeti için bir belge depolamak için "Farklı Kaydet" seçeneğini sunar.  Benzer şekilde, farklı seri hale getiricileri genişletme farklı biçimlerde olduğu gibi HTML, RTF, XML, XPS veya bir üçüncü taraf biçimine alternatif belge saklayabilirsiniz.  Uygulamaya serileştirme depolama ortamına her özel seri hale getirici uygulamasında ayrıntılarını yalıtan bir arabirim tanımlar.  Depolama ayrıntıları, .NET Framework şifreleme avantajları yanı sıra <xref:System.Windows.Documents.Serialization> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] çeşitli önemli özellikleri sağlar.
+Uygulamalar genellikle farklı Orta veya farklı bir biçim belgeleri kaydetmek kullanıcı izin veren birden fazla seri hale getirme seçeneği sağlar.  Örneğin, bir uygulama bir disk dosyası, veritabanı veya web hizmeti için bir belge depolamak için "Farklı Kaydet" seçeneğini sunar.  Benzer şekilde, farklı seri hale getiricileri genişletme farklı biçimlerde olduğu gibi HTML, RTF, XML, XPS veya bir üçüncü taraf biçimine alternatif belge saklayabilirsiniz.  Uygulamaya serileştirme depolama ortamına her özel seri hale getirici uygulamasında ayrıntılarını yalıtan bir arabirim tanımlar.  Depolama ayrıntıları, .NET Framework şifreleme avantajları yanı sıra <xref:System.Windows.Documents.Serialization> API'leri, çeşitli önemli özellikleri sağlar.
 
 ### <a name="features-of-net-framework-30-document-serializers"></a>.NET Framework 3.0 belge seri hale getiricileri genişletme özellikleri
 

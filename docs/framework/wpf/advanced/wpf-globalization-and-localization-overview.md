@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 374ab546cb0ba7a4b1fd789b13aca0158f22f686
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6bccff6bf3bb061a430a9105d99f2fee3511c7fd
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662898"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859895"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
 
@@ -82,13 +82,13 @@ Yerelleştirme ne zaman bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
 
 Geliştirirken bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamayı yerelleştirme için yapı işlemini aşağıdaki gibidir:
 
-- Geliştirici oluşturur ve globalizes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. Projede Geliştirici ayarlar dosyası `<UICulture>en-US</UICulture>` uygulamanın ne zaman derlenir, böylece bir dilden ana derleme oluşturulur. Bu derleme bir uydu sahiptir. resources.dll dosyasını, tüm yerelleştirilebilir kaynakları içerir. İsteğe bağlı olarak, çünkü ana derlemede kaynak dili tutabilirsiniz bizim yerelleştirme [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ana derleme ayıklama destekler.
+- Geliştirici oluşturur ve globalizes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. Projede Geliştirici ayarlar dosyası `<UICulture>en-US</UICulture>` uygulamanın ne zaman derlenir, böylece bir dilden ana derleme oluşturulur. Bu derleme bir uydu sahiptir. resources.dll dosyasını, tüm yerelleştirilebilir kaynakları içerir. İsteğe bağlı olarak, bizim yerelleştirme API ana derleme ayıklama desteklediğinden ana derlemeye kaynak dili tutabilirsiniz.
 
 - Yapıda dosyası derlendiğinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] XAML BAML biçime dönüştürülür. Duyarlıymış nötr `MyDialog.exe` ve kültürel bağımlı (İngilizce) `MyDialog.resources.dll` dosyaları İngilizce konuşan müşteriye yayımlanmış.
 
 ### <a name="localization-workflow"></a>Yerelleştirme iş akışı
 
-Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dll` dosyası oluşturulur. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Öğeleri ve orijinal özelliklerinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] XAML anahtar-değer çiftlerine BAML formu kullanarak ayıklandığı [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] altında <xref:System.Windows.Markup.Localizer>. Uygulamayı yerelleştirmek için anahtar-değer çiftleri yerelleştiriciler kullanın. Yeni bir oluşturabilirsiniz. resource.dll yerelleştirme tamamlandıktan sonra yeni değerlerinin.
+Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dll` dosyası oluşturulur. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Öğeleri ve orijinal özelliklerinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] XAML anahtar-değer çiftlerine BAML formu altında API'lerini kullanarak ayıklandığı <xref:System.Windows.Markup.Localizer>. Uygulamayı yerelleştirmek için anahtar-değer çiftleri yerelleştiriciler kullanın. Yeni bir oluşturabilirsiniz. resource.dll yerelleştirme tamamlandıktan sonra yeni değerlerinin.
 
 Anahtar-değer çiftleri anahtarlar `x:Uid` özgün geliştirici tarafından yerleştirilen değerleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Bunlar `x:Uid` değerleri izlemek ve geliştirici arasında yerelleştiriciye yerelleştirme sırasında gerçekleşen değişiklikleri birleştirmek API etkinleştir. Örneğin, geliştirici değişirse [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] yerelleştirme yerelleştiriciye başladıktan sonra en az bir çeviri iş böylece geliştirme değişiklik zaten tamamlanmış yerelleştirme çalışması ile birleştirebilirsiniz.
 
@@ -130,9 +130,9 @@ Genel iletişim kutuları yapmak için bazı önemli noktalar şunlardır:
 
 `<Grid x:Uid="Grid_1">`
 
-<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikler için sırayla gereklidir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirme [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] düzgün çalışması için.
+<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikler için sırayla gereklidir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirme düzgün çalışması için API'leri.
 
-Tarafından kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirme [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] yerelleştirilmesi ve geliştirme değişiklikleri izlemek için [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikleri etkinleştirmek, daha yeni bir sürümü birleştirmek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] daha eski bir yerelleştirme ile [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Eklediğiniz bir <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> çalıştırarak özelliği `msbuild -t:updateuid RunDialog.csproj` komut kabuğu'nda. Ekleme önerilen yöntem budur <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikleri el ile ekleme, genellikle zaman alan ve daha az doğru olduğu için. Bunu kontrol edebiliriz <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikler doğru ayarlandığını çalıştırarak `msbuild -t:checkuid RunDialog.csproj`.
+Tarafından kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirme yerelleştirilmesi ve geliştirme değişiklikleri izlemek için API'leri [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikleri etkinleştirmek, daha yeni bir sürümü birleştirmek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] daha eski bir yerelleştirme ile [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Eklediğiniz bir <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> çalıştırarak özelliği `msbuild -t:updateuid RunDialog.csproj` komut kabuğu'nda. Ekleme önerilen yöntem budur <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikleri el ile ekleme, genellikle zaman alan ve daha az doğru olduğu için. Bunu kontrol edebiliriz <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> özellikler doğru ayarlandığını çalıştırarak `msbuild -t:checkuid RunDialog.csproj`.
 
 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Kullanarak yapılandırılmış <xref:System.Windows.Controls.Grid> otomatik düzen yararlanarak için faydalı bir denetim denetimi içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. İletişim kutusunda üç satır ve beş sütunlar halinde bölme unutmayın. Satır ve sütun tanımları birinin değil, sabit bir boyutu vardır; Bu nedenle, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] her hücreye konumlandırılmış öğeler bir artış uyum sağlamak ve yerelleştirme sırasında boyutunu azaltır.
 
@@ -178,27 +178,27 @@ Uygulamayı oluşturduktan sonra ilk adımı, yerelleştirme yerelleştirilebili
 
 Bu dosyayı düzenlemek için Unicode desteği tercih ettiğiniz CSV düzenleyiciyi kullanın. Yerelleştirme kategorisi "None" tüm girişlerle filtreleyin. Aşağıdaki girdiler görmeniz gerekir:
 
-|Kaynak anahtarı|Yerelleştirme kategorisi|Değer|
+|Kaynak anahtarı|Yerelleştirme kategorisi|Value|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Düğme|Tamam|
 |Button_2:System.Windows.Controls.Button.$Content|Düğme|İptal|
 |Button_3:System.Windows.Controls.Button.$Content|Düğme|Göz at...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Metin|Bir program, klasör, belge veya Internet kaynağının adını yazın ve Windows için açılır.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Metin|Açık:|
-|Window_1:System.Windows.Window.Title|Başlık|Çalıştır|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Bir program, klasör, belge veya Internet kaynağının adını yazın ve Windows için açılır.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Açık:|
+|Window_1:System.Windows.Window.Title|Başlık|Çalıştırın|
 
 Almanca için uygulamayı yerelleştirme aşağıdaki çevirileri gerekir:
 
-|Kaynak anahtarı|Yerelleştirme kategorisi|Değer|
+|Kaynak anahtarı|Yerelleştirme kategorisi|Value|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Düğme|Tamam|
 |Button_2:System.Windows.Controls.Button.$Content|Düğme|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|Düğme|Durchsuchen...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Metin|Geben SIE bey Namen eines Programms, Ordners, Dokuments sıralanan einer Internetresource bir.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Metin|Öffnen:|
-|Window_1:System.Windows.Window.Title|Başlık|Çalıştır|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben SIE bey Namen eines Programms, Ordners, Dokuments sıralanan einer Internetresource bir.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Öffnen:|
+|Window_1:System.Windows.Window.Title|Başlık|Çalıştırın|
 
 **Oluştur**
 
@@ -267,9 +267,9 @@ Burada içerik belirsiz ve çevirme zor olabilir, birçok durumlar vardır. Geli
 
 Bu açıklamayı LocBaml aracı söz konusu olduğunda TextBlock_1'ın içeriği ile ilişkilendirilir (bkz [bir uygulamayı yerelleştirme](how-to-localize-an-application.md)), çıkış .csv dosyasına TextBlock_1 satırın 6 sütunda görülebilir:
 
-|Kaynak anahtarı|Kategori|Okunabilir|Değiştirilebilir|Yorum|Değer|
+|Kaynak anahtarı|Category|Okunabilir|Değiştirilebilir|Yorum|Value|
 |-|-|-|-|-|-|
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Metin|TRUE|TRUE|Bu karakter dekoratif bir kural olarak kullanılır.|&#124;|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|TRUE|TRUE|Bu karakter dekoratif bir kural olarak kullanılır.|&#124;|
 
 İçerik veya özelliği aşağıdaki sözdizimini kullanarak herhangi bir öğenin açıklamaları yerleştirilebilir:
 

@@ -2,12 +2,12 @@
 title: DotNet komutu
 description: Dotnet komut (.NET Core CLI araçları için genel sürücü) ve kullanımı hakkında bilgi edinin.
 ms.date: 06/04/2018
-ms.openlocfilehash: 5278adf44d12e428cdeacf1d475377ce9155c314
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2134bf8ed66157619499b027f01d39e03e84411f
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648535"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859546"
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
@@ -304,7 +304,7 @@ DLL, uygulama çalıştırmak `myapp.dll`:
 
 `DOTNET_PACKAGES`
 
-Birincil paket önbelleğini. Ayarlanmazsa, varsayılan olarak, `$HOME/.nuget/packages` UNIX üzerinde veya `%HOME%\NuGet\Packages` Windows üzerinde.
+Genel paketleri klasör. Ayarlanmazsa, varsayılan olarak, `~/.nuget/packages` UNIX üzerinde veya `%userprofile%\.nuget\packages` Windows üzerinde.
 
 `DOTNET_SERVICING`
 
@@ -326,7 +326,7 @@ Devre dışı bırakır podverze Top iletme, eğer ayarlanmış `0`. Daha fazla 
 
 `DOTNET_PACKAGES`
 
-Birincil paket önbelleğini. Ayarlanmazsa, varsayılan olarak, `$HOME/.nuget/packages` UNIX üzerinde veya `%HOME%\NuGet\Packages` Windows üzerinde.
+Birincil paket önbelleğini. Ayarlanmazsa, varsayılan olarak, `$HOME/.nuget/packages` UNIX üzerinde veya `%userprofile%\.nuget\packages` Windows üzerinde.
 
 `DOTNET_SERVICING`
 
@@ -344,7 +344,7 @@ Birincil paket önbelleğini. Ayarlanmazsa, varsayılan olarak, `$HOME/.nuget/pa
 
 `DOTNET_PACKAGES`
 
-Birincil paket önbelleğini. Ayarlanmazsa, varsayılan olarak, `$HOME/.nuget/packages` UNIX üzerinde veya `%HOME%\NuGet\Packages` Windows üzerinde.
+Birincil paket önbelleğini. Ayarlanmazsa, varsayılan olarak, `$HOME/.nuget/packages` UNIX üzerinde veya `%userprofile%\.nuget\packages` Windows üzerinde.
 
 `DOTNET_SERVICING`
 

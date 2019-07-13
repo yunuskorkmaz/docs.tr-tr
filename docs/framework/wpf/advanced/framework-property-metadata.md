@@ -5,15 +5,15 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: f0385280cf01502a5b2786541c3d959fca24d239
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 81c1941ffd95afb01dcb6ebda2634832a91cd876
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912458"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859854"
 ---
 # <a name="framework-property-metadata"></a>Çerçeve Özelliği Meta Verileri
-Çerçeve özelliği meta verileri seçenekleri nesne öğelerini WPF framework düzeyde olduğu kabul özelliklerinin raporlanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mimarisi. Genel olarak, işleme, veri bağlama gibi özelliklerin WPF çerçeve düzeyi atamasını gerektirir ve özellik sistemi daraltmalar tarafından işlenmesini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sunu [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ve yürütülebilir dosyalar. Çerçeve özelliği meta verileri, belirli bir öğe özelliklerinin özelliğe özgü özellikleri belirlemek için bu sistemler tarafından sorgulanır.  
+Çerçeve özelliği meta verileri seçenekleri nesne öğelerini WPF framework düzeyde olduğu kabul özelliklerinin raporlanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mimarisi. Genel olarak, işleme, veri bağlama gibi özelliklerin WPF çerçeve düzeyi atamasını gerektirir ve özellik sistemi daraltmalar tarafından işlenmesini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sunu API'leri ve yürütülebilir dosyalar. Çerçeve özelliği meta verileri, belirli bir öğe özelliklerinin özelliğe özgü özellikleri belirlemek için bu sistemler tarafından sorgulanır.  
 
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
@@ -32,7 +32,7 @@ ms.locfileid: "64912458"
     > [!NOTE]
     >  Terim "özellik değerleri anlamına gelir bağımlılık özellikleri için özel bir durum bağlamında devralır"; alt öğeleri nedeniyle WPF çerçeve düzeyi özelliği üst öğelerden gerçek bağımlılık özelliği değer devralabilir geldiğini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi. Yönetilen kod türü ve üyeleri devralma yoluyla türetilmiş türler ile doğrudan yapılacak bir şey yok sahiptir. Ayrıntılar için bkz [özellik değeri kalıtımı](property-value-inheritance.md).  
   
-- Raporlama veri bağlama özellikleri (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>). Varsayılan olarak, Framework bağımlılık özellikleri ile tek yönlü bağlama davranışı veri bağlamayı destekler. Varsa bir senaryo için gerekli veri bağlama devre dışı bırakabilirsiniz (esnek ve Genişletilebilir olmasını yönelik olduğundan, birçok örnekleri gibi özellikleri varsayılan yok [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]). Varsayılan denetim davranışlarını bağlamayı, bileşen parçalarında birbirine özellikleri için iki yönlü bir bağlama kümesi (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> bir örnek verilmiştir) veya iki yönlü bir bağlama, kullanıcılar için genel ve beklenen senaryo olduğu (<xref:System.Windows.Controls.TextBox.Text%2A> örneğidir). Veri bağlama ile ilgili meta verileri değiştirme, yalnızca varsayılan etkiler; Varsayılan değer her zaman değiştirilebilir bir bağlama başına temelinde. Bağlama modları ve genel bağlama hakkında daha fazla bilgi için bkz: [Data Binding Overview](../data/data-binding-overview.md).  
+- Raporlama veri bağlama özellikleri (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>). Varsayılan olarak, Framework bağımlılık özellikleri ile tek yönlü bağlama davranışı veri bağlamayı destekler. Varsa bir senaryo için gerekli veri bağlama devre dışı bırakabilirsiniz (esnek ve Genişletilebilir olmasını yönelik olduğundan, birçok örnekleri gibi özellikleri varsayılan yok [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API'leri). Varsayılan denetim davranışlarını bağlamayı, bileşen parçalarında birbirine özellikleri için iki yönlü bir bağlama kümesi (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> bir örnek verilmiştir) veya iki yönlü bir bağlama, kullanıcılar için genel ve beklenen senaryo olduğu (<xref:System.Windows.Controls.TextBox.Text%2A> örneğidir). Veri bağlama ile ilgili meta verileri değiştirme, yalnızca varsayılan etkiler; Varsayılan değer her zaman değiştirilebilir bir bağlama başına temelinde. Bağlama modları ve genel bağlama hakkında daha fazla bilgi için bkz: [Data Binding Overview](../data/data-binding-overview.md).  
   
 - Uygulamalar veya günlük kaydı destekleyen hizmetler tarafından özellikleri günlük kaydının tutulup tutulmamasını raporlama (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>). Genel öğeler için günlük kaydı varsayılan olarak etkinleştirilmemiştir ancak seçmeli olarak belirli bir kullanıcı girişi denetimlerinden için etkin. Bu özellik dahil olmak üzere, günlük kaydı hizmetleri tarafından okunacak şekilde tasarlanmıştır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] günlük kaydı, uygulama ve genellikle kullanıcı denetimleri gibi Gezinti adımları kalıcı liste içindeki kullanıcı seçimleri ayarlanır. Günlüğü hakkında daha fazla bilgi için bkz. [gezintiye genel bakış](../app-development/navigation-overview.md).  
   

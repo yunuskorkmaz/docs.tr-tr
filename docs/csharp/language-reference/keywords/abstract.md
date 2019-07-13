@@ -8,15 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 64f650df0a9f6e6279e21b9cbd5ff444ef5c7a49
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 3a4d29ae4814ccceb7b405d9c1749150059a24a0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758442"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859584"
 ---
 # <a name="abstract-c-reference"></a>abstract (C# Başvurusu)
-`abstract` Değiştiricisi değiştirilmekte olan bir şey yok veya eksik bir uygulama olduğunu gösterir. Soyut değiştiricisi sınıflar, yöntemler, özellikler, dizin oluşturucular ve olaylar ile kullanılabilir. Kullanım `abstract` değiştiricisi bir sınıf yalnızca, kendi örneği değil, diğer sınıfların temel sınıf olarak düşünüldüğünü göstermek için bir sınıf bildiriminde. Üyeleri, soyut soyut sınıftan türeyen sınıflar tarafından uygulanması gereken olarak işaretlendi.
+`abstract` Değiştiricisi değiştirilmekte olan bir şey yok veya eksik bir uygulama olduğunu gösterir. Soyut değiştiricisi sınıflar, yöntemler, özellikler, dizin oluşturucular ve olaylar ile kullanılabilir. Kullanım `abstract` değiştiricisi bir sınıf yalnızca, kendi örneği değil, diğer sınıfların temel sınıf olarak düşünüldüğünü göstermek için bir sınıf bildiriminde. Üyeleri, soyut soyut sınıftan türetilen soyut olmayan sınıflar tarafından uygulanması gereken olarak işaretlendi.
   
 ## <a name="example"></a>Örnek  
  Bu örnekte, sınıf `Square` uygulaması sağlamalısınız `GetArea` öğesinden türetildiği için `Shape`:  

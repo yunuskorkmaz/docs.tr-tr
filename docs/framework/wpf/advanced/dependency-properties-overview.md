@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 483710281feafdf97cfef9b72a67af035dcf0efa
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052943"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860167"
 ---
 # <a name="dependency-properties-overview"></a>Bağımlılık özelliklerine genel bakış
 
@@ -78,14 +78,14 @@ XAML sözdizimi çeşitli özelliklerini ayarlamak için destekler. Belirli bir 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-Özellik sistemi de çağırabilirsiniz [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A> doğrudan. (Sarmalayıcılar daha kullanışlı ve daha iyi riskini özelliği sağlamak için geliştirici araçları) mevcut özellikleri kullanarak ancak çağırma bu genellikle gerekli değildir [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] doğrudan belirli senaryoları uygundur.
+Ayrıca, özellik sistemi API'leri çağırabilirsiniz <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A> doğrudan. Bu (sarmalayıcılar daha kullanışlı ve daha iyi riskini özelliği sağlamak için geliştirici araçları) mevcut özellikleri kullandığınız, ancak API'lerini doğrudan çağırmak belirli senaryolar için uygundur, genellikle gerekli değildir.
 
 Özellikleri, ayrıca XAML içinde ayarlayın ve daha sonra kodu, arka plan kod aracılığıyla erişilebilir. Ayrıntılar için bkz [arka plan kod ve WPF XAML](code-behind-and-xaml-in-wpf.md).
 
 ## <a name="property-functionality-provided-by-a-dependency-property"></a>Bağımlılık özelliği tarafından sağlanan özellik işlevselliği
 Bağımlılık özelliği, bir alan tarafından yedeklenen bir özelliğe karşı işlevselliğini genişleten işlevselliği sağlar. Genellikle, bu tür işlevleri temsil eder veya aşağıdaki belirli özellikler destekler:
 
-- [Kaynaklar](#resources)
+- [Kaynakları](#resources)
 
 - [Veri bağlama](#data-binding)
 
@@ -125,7 +125,7 @@ Aşağıdaki örnek kümeleri <xref:System.Windows.Controls.ContentControl.Conte
 
 Bağımlılık özellikleri veya <xref:System.Windows.DependencyObject> sınıfı, özgün olarak desteklemez <xref:System.ComponentModel.INotifyPropertyChanged> değişiklik bildirimleri üretme amacıyla <xref:System.Windows.DependencyObject> kaynak veri bağlama işlemleri için özellik değeri. Veri bağlama kullanımda değişiklikleri bir veri bağlama hedefine bildirebilirsiniz için özelliklerin nasıl oluşturulacağı hakkında daha fazla bilgi için bkz. [Data Binding Overview](../data/data-binding-overview.md).
 
-### <a name="styles"></a>Stiller
+### <a name="styles"></a>Stilleri
 Stilleri ve şablonları kullanarak bağımlılık özellikleri için baş motive edici temel senaryolar ikisidir. Stiller uygulama tanımlayan özellikleri ayarlamak için özellikle yararlı [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Stilleri, genellikle XAML kaynak olarak tanımlanır. Genellikle belirli özelliklerin yanı sıra, "başka bir özellik için gerçek zamanlı değere göre bir özellik değerini değiştirmek Tetikleyicileri" için "ayarlayıcılar" içerdiğinden stilleri özellik sistemi ile etkileşim kurun.
 
 Aşağıdaki örnekte çok basit bir stil oluşturur (hangi içinde tanımlanan bir <xref:System.Windows.FrameworkElement.Resources%2A> gösterilmez, sözlük), ardından o stilin doğrudan uygular <xref:System.Windows.FrameworkElement.Style%2A> özelliği için bir <xref:System.Windows.Controls.Button>. Stil kümelerinin ayarlandığı <xref:System.Windows.Controls.Control.Background%2A> özelliği için bir stil uygulanmış <xref:System.Windows.Controls.Button> yeşil.

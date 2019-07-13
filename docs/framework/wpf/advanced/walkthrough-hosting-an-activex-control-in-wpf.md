@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: f19186380b0cbc71cdd64013ca5e49361ba26cda
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0181093de1c40889110ab7eae75a3847a17845a9
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778386"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859946"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>İzlenecek yol: WPF'de ActiveX Denetimi Barındırma
-Tarayıcı ile Gelişmiş etkileşimi etkinleştirmek için kullanabileceğiniz [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] denetimlerini, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-tabanlı bir uygulama. Bu izlenecek yol, nasıl barındırabilirsiniz gösterir [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] denetim olarak bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sayfası.
+Tarayıcı ile Gelişmiş etkileşimi etkinleştirmek için Microsoft ActiveX denetimlerinde kullanabilirsiniz, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-tabanlı bir uygulama. Bu izlenecek yol, nasıl barındırabilirsiniz gösterir [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] denetim olarak bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sayfası.
 
  Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
 
@@ -26,7 +26,7 @@ Tarayıcı ile Gelişmiş etkileşimi etkinleştirmek için kullanabileceğiniz 
 
 - WPF sayfasında ActiveX denetimi barındırma.
 
- Bu izlenecek yolu tamamladığınızda, nasıl kullanılacağını anlayacaksınız [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] denetimlerini, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-tabanlı bir uygulama.
+ Bu izlenecek yolu tamamladığınızda, Microsoft ActiveX denetimlerinde kullanmayı anlayabileceği, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-tabanlı bir uygulama.
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
@@ -60,7 +60,7 @@ Tarayıcı ile Gelişmiş etkileşimi etkinleştirmek için kullanabileceğiniz 
 9. Tüm başvuruları yeniden adlandırmak için istenirse, tıklayın **Evet**.
 
 ## <a name="creating-the-activex-control"></a>ActiveX denetimi oluşturma
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] otomatik olarak oluşturduğu bir <xref:System.Windows.Forms.AxHost> sarmalayıcı sınıfı için bir [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] bir tasarım yüzeyine bir denetim eklendiğinde denetim. Aşağıdaki yordam AxInterop.WMPLib.dll yönetilen bir derleme oluşturur.
+ [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] otomatik olarak oluşturduğu bir <xref:System.Windows.Forms.AxHost> bir tasarım yüzeyine bir denetim eklendiğinde Microsoft ActiveX denetimi sarmalayıcı sınıfı. Aşağıdaki yordam AxInterop.WMPLib.dll yönetilen bir derleme oluşturur.
 
 ### <a name="to-create-the-activex-control"></a>ActiveX denetimi oluşturmak için
 
@@ -76,7 +76,7 @@ Tarayıcı ile Gelişmiş etkileşimi etkinleştirmek için kullanabileceğiniz 
 
 ### <a name="to-host-the-activex-control"></a>ActiveX denetimi barındırma
 
-1. HostingAxInWpf projesinde, oluşturulan bir başvuru ekleyin [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] birlikte çalışma derlemesi.
+1. HostingAxInWpf projesinde, oluşturulan ActiveX birlikte çalışma derlemesine bir başvuru ekleyin.
 
      Bu derleme AxInterop.WMPLib.dll adlandırılır ve Windows Media Player denetimi aktarıldığında WmpAxLib projenin hata ayıklama klasöre eklendi.
 

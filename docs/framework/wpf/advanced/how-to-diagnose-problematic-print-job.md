@@ -10,15 +10,15 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: c9da2e1daff23ef9ba39d8b5d53cb3be67f35a27
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d64e77b7fc6862eead3cb7e791b3a8f68ac52713
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878216"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859727"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Nasıl yapılır: Sorunlu Yazdırma İşini Tanımlama
-Ağ yöneticileri genellikle şikayetlerinin değil veya yavaş yazdırma, yazdırma işlerini ilgili olarak kullanıcılardan alan. Zengin, kullanıma sunulan yazdırma işi Özellikler [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] hızlı bir uzaktan tanılama yazdırma işi gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  
+Ağ yöneticileri genellikle şikayetlerinin değil veya yavaş yazdırma, yazdırma işlerini ilgili olarak kullanıcılardan alan. API'leri, Microsoft .NET Framework kullanıma sunulan yazdırma işi özellikler için zengin bir hızlı uzaktan tanılama yazdırma işlerinin gerçekleştirmek için bir yol sağlar.  
   
 ## <a name="example"></a>Örnek  
  Bu tür bir yardımcı programı oluşturmak için önemli adımlar aşağıdaki gibidir.  
@@ -45,7 +45,7 @@ Ağ yöneticileri genellikle şikayetlerinin değil veya yavaş yazdırma, yazd�
  [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
  [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
   
- 2. adım uygulamayı sonraki kod örneğinde seçer. (Yukarıya bakın.) Sorunlu iş belirlenmiştir ve uygulamayı tanımlayacak bilgileri ister. Bu bilgiyi oluşturduğu <xref:System.Printing.PrintServer>, <xref:System.Printing.PrintQueue>, ve <xref:System.Printing.PrintSystemJobInfo> nesneleri.  
+ 2\. adım uygulamayı sonraki kod örneğinde seçer. (Yukarıya bakın.) Sorunlu iş belirlenmiştir ve uygulamayı tanımlayacak bilgileri ister. Bu bilgiyi oluşturduğu <xref:System.Printing.PrintServer>, <xref:System.Printing.PrintQueue>, ve <xref:System.Printing.PrintSystemJobInfo> nesneleri.  
   
  Bu noktada uygulama, karşılık gelen bir yazdırma işin durumunu denetleme için iki yol bir dallandırma yapısını içerir:  
   

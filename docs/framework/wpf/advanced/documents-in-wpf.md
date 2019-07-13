@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: b83d9c972dbdadb721bae8b7d616c94a0c1c831f
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 020ea101ae38b9be854398a55ddd31e67b9fda35
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804737"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859666"
 ---
 # <a name="documents-in-wpf"></a>WPF'deki Belgeler
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çok çeşitli daha kolay erişilebilen ve önceki nesil içinde salt okunur olacak şekilde tasarlanan yüksek kaliteli içeriğinin oluşturulmasını belge özellikleri sunan [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Gelişmiş Özellikler ve kalite, ek olarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belge görüntüleme, paketleme ve güvenlik için tümleşik hizmetleri de sağlar. Bu konuda tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belge türleri ve belge paketleme.  
@@ -59,7 +59,7 @@ ms.locfileid: "67804737"
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>Belge paketleme  
- <xref:System.IO.Packaging> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] Uygulama verileri, belge içeriğini ve taşınabilir ve dağıtımı kolay erişim için basit bir tek bir kapsayıcıda ilgili kaynakları düzenlemek için verimli bir yöntem sağlar. Bir ZIP dosyası örneğidir bir <xref:System.IO.Packaging.Package> türünde tek bir birim olarak birden çok nesne tutabilen. Paketleme [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] varsayılan bir sağlamak <xref:System.IO.Packaging.ZipPackage> Open Packaging Conventions standart XML ve ZIP dosyası mimarisi ile kullanarak tasarlanmış uygulaması. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Paketleme [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] paketler oluşturmak ve depolamak ve bunları nesnelerinde erişmek basit hale getirin. İçinde depolanan bir nesne bir <xref:System.IO.Packaging.Package> şeklinde adlandırılan bir <xref:System.IO.Packaging.PackagePart> ("Bölüm"). Paketler ayrıca gönderene bir bölümü, tanımlamak ve bir paket içeriğini değiştirilmemiş doğrulamak için kullanılan dijital olarak imzalanan sertifikaları içerir.  Paketleri de dahil bir <xref:System.IO.Packaging.PackageRelationship> bir pakete eklenen ya da mevcut bölümlerinin içeriğinin değiştirmeden belirli bölümleri ile ilgili ek bilgiler sağlayan özelliği.  Paket Hizmetleri ayrıca Destek [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)].  
+ <xref:System.IO.Packaging> API'leri, uygulama verileri, belge içeriğini ve taşınabilir ve dağıtımı kolay erişim için basit bir tek bir kapsayıcıda ilgili kaynakları düzenlemek için etkili bir yol sağlar. Bir ZIP dosyası örneğidir bir <xref:System.IO.Packaging.Package> türünde tek bir birim olarak birden çok nesne tutabilen. Paketleme API'leri sağlayan bir varsayılan <xref:System.IO.Packaging.ZipPackage> Open Packaging Conventions standart XML ve ZIP dosyası mimarisi ile kullanarak tasarlanmış uygulaması. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API'leri olun, paketleri oluşturmak ve depolamak için basit paketleme ve bunların içindeki nesnelere erişme. İçinde depolanan bir nesne bir <xref:System.IO.Packaging.Package> şeklinde adlandırılan bir <xref:System.IO.Packaging.PackagePart> ("Bölüm"). Paketler ayrıca gönderene bir bölümü, tanımlamak ve bir paket içeriğini değiştirilmemiş doğrulamak için kullanılan dijital olarak imzalanan sertifikaları içerir.  Paketleri de dahil bir <xref:System.IO.Packaging.PackageRelationship> bir pakete eklenen ya da mevcut bölümlerinin içeriğinin değiştirmeden belirli bölümleri ile ilgili ek bilgiler sağlayan özelliği.  Paket Hizmetleri ayrıca Destek [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)].  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Paket mimarisi anahtar teknolojileri sayısı için temel olarak görev alır:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "67804737"
   
  API'sine, temel bir <xref:System.Windows.Xps.Packaging.XpsDocument> depolamak için özel olarak tasarlanmıştır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik belgeleri düzeltildi. Bir <xref:System.Windows.Xps.Packaging.XpsDocument> görüntülenen bir Görüntüleyicisi ' nde açılabilen bir bağımsız birer belge olur bir <xref:System.Windows.Controls.DocumentViewer> için bir yazdırma biriktiricisi yönlendirilen veya doğrudan çıkış denetimi bir [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-uyumlu yazıcı.  
   
- Aşağıdaki bölümlerde, ilgili ek bilgiler sağlar. <xref:System.IO.Packaging.Package> ve <xref:System.Windows.Xps.Packaging.XpsDocument> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ile sağlanan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ Aşağıdaki bölümlerde, ilgili ek bilgiler sağlar. <xref:System.IO.Packaging.Package> ve <xref:System.Windows.Xps.Packaging.XpsDocument> sağlanan API'leri ile [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 <a name="packages"></a>   
 ### <a name="package-components"></a>Paket bileşenleri  
@@ -144,7 +144,7 @@ ms.locfileid: "67804737"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [Metin](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Akış Belgesine Genel Bakış](flow-document-overview.md)
 - [Yazdırmaya Genel Bakış](printing-overview.md)
 - [Belge Serileştirme ve Depolama](document-serialization-and-storage.md)

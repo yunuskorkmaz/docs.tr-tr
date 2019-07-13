@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: f902d6a92f9d982dc00c3446f7b516c372f1a30e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 346cfccd076866e9c321974aaa8c8ddd367a17ea
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662055"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859572"
 ---
 # <a name="async-c-reference"></a>async (C# Başvurusu)
 Kullanım `async` değiştiricisi belirtmek için bir yöntemin [lambda ifadesi](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), veya [anonim yöntem](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) zaman uyumsuzdur. Bu değiştiriciyi bir yöntem veya ifadede kullanırsanız, şeklinde adlandırılan bir *zaman uyumsuz yöntem*. Aşağıdaki örnek adlı bir zaman uyumsuz yöntem tanımlar `ExampleMethodAsync`: 
@@ -65,12 +65,12 @@ Windows Store uygulaması olarak kodu çalıştırmak için:
 > [!IMPORTANT]
 >  Görevler ve bir görevi beklerken yürütülen kod hakkında daha fazla bilgi için bkz. [Asynchronous Programming with async ve await](../../../csharp/programming-guide/concepts/async/index.md). Benzer öğeleri kullanan bir tam WPF örneği için bkz. [izlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-## <a name="return-types"></a>Dönüş Türleri  
+## <a name="return-types"></a>Dönüş türleri  
 Zaman uyumsuz bir yöntem, aşağıdaki dönüş türlerine sahip olabilir:
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [void](../../../csharp/language-reference/keywords/void.md), hangi yalnızca kullanılmalıdır için olay işleyicileri.
+- [void](../../../csharp/language-reference/keywords/void.md). `async void` yöntem genellikle önerilmez olay işleyicileri dışındaki kod için çağıranlar olamaz çünkü `await` bu yöntemleri ve başarıyla tamamlandığında veya hata koşullarını raporlamak için farklı bir mekanizma uygulamanız gerekir.
 - C# 7.0, bir erişilebilir olan herhangi bir türü'ile başlayan `GetAwaiter` yöntemi. `System.Threading.Tasks.ValueTask<TResult>` Böyle bir uygulama türüdür. NuGet paketini ekleyerek kullanılabilir `System.Threading.Tasks.Extensions`. 
 
 Zaman uyumsuz yöntemin herhangi bildiremezsiniz [içinde](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) veya [kullanıma](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametreleri ya da can sahip bir [başvuru dönüş değeri](../../programming-guide/classes-and-structs/ref-returns.md), ancak bu yöntemleri çağırabilirsiniz parametrelere sahip.  

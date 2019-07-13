@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-ms.openlocfilehash: 6b8fcfb6b2795b1b41b5292a3d2c61ecd017f173
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b2e0ee85a7edd07e7372b04c3a26a06416fb39d9
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662271"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859874"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>WPF ve Windows Forms Birlikte Çalışması
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama arabirimleri oluşturmak için iki farklı mimari sunar. <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> Ad alanı, birlikte çalışabilirlik senaryoları etkinleştiren sınıflar sağlar. Birlikte çalışabilirlik özelliklerini uygulayan iki anahtar sınıf <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve <xref:System.Windows.Forms.Integration.ElementHost>. Bu konuda, birlikte çalışabilirlik hangi senaryolar desteklenir ve hangi senaryolar desteklenmez açıklanmaktadır.  
@@ -35,7 +35,7 @@ ms.locfileid: "64662271"
   
 - İle ana/ayrıntı formu barındırabilir bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ana ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ayrıntıları.  
   
-- Bir veya daha fazla barındırabilir [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] kontrol eder.  
+- Bir veya daha fazla ActiveX denetimleri barındırabilir.  
   
 - Bir veya daha fazla bileşik denetimler barındırabilir.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "64662271"
 ### <a name="behavior"></a>Davranış  
  Aşağıdaki tabloda birlikte çalışabilirlik davranışını tanımlar.  
   
-|Davranış|Desteklenir|Desteklenmez|  
+|Davranış|Desteklenen|Desteklenmiyor|  
 |--------------|---------------|-------------------|  
 |Saydamlık|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] saydamlık denetimi işlemeyi destekler. Arka plan üst [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimi, arka planını dönüşebilir barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri.|Bazı [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri saydamlık desteklemez. Örneğin, <xref:System.Windows.Forms.TextBox> ve <xref:System.Windows.Forms.ComboBox> denetimleri tarafından barındırıldığında saydam olmayacak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
 |Sekme|Sekme sırasını barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri aynıdır bu denetimler, barındırılan bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-tabanlı bir uygulama.<br /><br /> Denetiminden bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimi bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] sekme ve SHIFT + SEKME tuşlarını ile works zamanki denetim.<br /><br /> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri bir <xref:System.Windows.Forms.Control.TabStop%2A> özelliği değerinin `false` kullanıcı denetimleri aracılığıyla sekme odağı almazsınız.<br /><br /> -Her <xref:System.Windows.Forms.Integration.WindowsFormsHost> kontrolünde bir <xref:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex%2A> belirleyen değeri, <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetim odağı alır.<br />-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] içinde bulunan denetimleri bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> kapsayıcı tarafından belirtilen sırada takip <xref:System.Windows.Forms.Control.TabIndex%2A> özelliği. Son sekme dizininin, odak sonraki koyar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] varsa denetimi. Odaklanabilir diğer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimi yoksa, ilk döndürür sekmeyle gitmeyi [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] sekme sırasını denetimi.<br />-   <xref:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex%2A> içindeki denetimlerin değerleri <xref:System.Windows.Forms.Integration.WindowsFormsHost> eşdüzey olan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] bulunan denetimleri <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetimi.<br />-Sekme denetimine özgü davranış geliştirir. Örneğin, SEKME tuşuna basarak bir <xref:System.Windows.Forms.TextBox> olan denetim bir <xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A> özelliği değerinin `true` sekme odağı taşımak yerine metin kutusundaki girer.|Geçerli değildir.|  
@@ -107,7 +107,7 @@ ms.locfileid: "64662271"
 ### <a name="behavior"></a>Davranış  
  Aşağıdaki tabloda birlikte çalışabilirlik davranışını tanımlar.  
   
-|Davranış|Desteklenir|Desteklenmez|  
+|Davranış|Desteklenen|Desteklenmiyor|  
 |--------------|---------------|-------------------|  
 |Saydamlık|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] saydamlık denetimi işlemeyi destekler. Arka plan üst [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi, arka planını dönüşebilir barındırılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimleri.|Geçerli değildir.|  
 |Çoklu iş parçacığı kullanımı|Çoklu iş parçacığı tüm çeşitleri desteklenmiyor.|Hem [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] teknolojileri eşzamanlılık tek iş parçacıklı model varsayılır. Hata ayıklama sırasında framework nesneleri çağrıları diğer iş parçacıklarından bu gereksinimini zorlamak için bir özel durum oluşturacak.|  

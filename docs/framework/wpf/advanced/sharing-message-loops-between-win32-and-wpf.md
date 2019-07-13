@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: d2fe63ed4bdefc91e4847af799747219bd7b4a76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 31efc6e514682502e91487565869285dad22cab0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611723"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860017"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Win32 ve WPF Arasında İleti Döngüleri Paylaşma
 Bu konu ile birlikte çalışabilirlik için bir ileti döngüsü uygulanacağını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], varolan kullanılarak ileti döngüsü <xref:System.Windows.Threading.Dispatcher> veya üzerinde ayrı bir ileti döngüsü oluşturarak [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodunuzun tarafında.  
@@ -20,7 +20,7 @@ Bu konu ile birlikte çalışabilirlik için bir ileti döngüsü uygulanacağı
 ## <a name="componentdispatcher-and-the-message-loop"></a>ComponentDispatcher ve ileti döngüsü  
  Birlikte çalışabilirlik ve klavye olay desteği için normal bir senaryo uygulamaktır <xref:System.Windows.Interop.IKeyboardInputSink>, veya alt Sınıflama zaten uygulayan sınıflardan <xref:System.Windows.Interop.IKeyboardInputSink>, gibi <xref:System.Windows.Interop.HwndSource> veya <xref:System.Windows.Interop.HwndHost>. Ancak, tüm olası ileti döngüsü gereksinimleriniz arasında birlikte çalışabilirlik sınırlarınız ileti alma ve gönderme olabilir klavye havuz desteği adres değil. Bir uygulama ileti döngüsü mimarisinin resmileştirin yardımcı olmak için [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sağlar <xref:System.Windows.Interop.ComponentDispatcher> izlemek bir ileti döngüsü için basit bir protokol tanımlayan sınıf.  
   
- <xref:System.Windows.Interop.ComponentDispatcher> bazı üyeleri ortaya koyar statik bir sınıftır. Her yöntem kapsamını örtük olarak çağıran iş parçacığına bağlıdır. İleti döngüsü bazıları çağırmalıdır [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] kritik zamanlarda (sonraki bölümde tanımlanmaktadır).  
+ <xref:System.Windows.Interop.ComponentDispatcher> bazı üyeleri ortaya koyar statik bir sınıftır. Her yöntem kapsamını örtük olarak çağıran iş parçacığına bağlıdır. İleti döngüsü (sonraki bölümde tanımlanan) bu API'lerden bazılarını kritik zamanlarda çağırmalıdır.  
   
  <xref:System.Windows.Interop.ComponentDispatcher> diğer bileşenleri (örneğin, klavye havuz) dinlemek olayları sağlar. <xref:System.Windows.Threading.Dispatcher> Çağrıları tüm uygun sınıf <xref:System.Windows.Interop.ComponentDispatcher> uygun bir dizide yöntemleri. Kendi ileti döngüsü uyguluyorsanız, kodunuzu çağırmadan sorumludur <xref:System.Windows.Interop.ComponentDispatcher> benzer bir biçimde yöntemleri.  
   

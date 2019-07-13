@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 27554d7e0a7e980d240e0609fe0561c2138f0aa1
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 659497543d40c8eda18b55b4d98feac976c5abf5
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664054"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860238"
 ---
 # <a name="custom-dependency-properties"></a>Özel Bağımlılık Özellikleri
 
@@ -87,7 +87,7 @@ Bağımlılık özelliği tanımlama dört farklı kavramlarını oluşur. Bunla
 
 ### <a name="registering-the-property-with-the-property-system"></a>Özellik sistemi ile özelliği kaydetme
 
-Bağımlılık özelliği olarak, bir özellik için sırada bu özellik özellik sistemi tarafından korunan bir tabloya kaydedin ve niteleyici sonraki özelliği sistem işlemleri için kullanılan benzersiz bir tanımlayıcı vermek gerekir. Bu işlemlerin iç işlemler ya da kendi kodunuzu arama özellik sistemi olabilir [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Arama özelliği kaydetmek için <xref:System.Windows.DependencyProperty.Register%2A> sınıfınıza (sınıf içinde ancak herhangi bir üye tanımı dışında) gövdesi içinde yöntemi. Tanımlayıcı alan ayrıca tarafından sağlanan <xref:System.Windows.DependencyProperty.Register%2A> dönüş değeri olarak bir yöntem çağrısı. Bunun nedeni, <xref:System.Windows.DependencyProperty.Register%2A> çağrı yapılır dışında diğer üye tanımları olduğundan bu dönüş değeri atamak ve oluşturmak için kullandığınız bir `public` `static` `readonly` alan türü <xref:System.Windows.DependencyProperty> sınıfınızın bir parçası olarak. Bu alan, bağımlılık özelliği için olan tanımlayıcıyla olur.
+Bağımlılık özelliği olarak, bir özellik için sırada bu özellik özellik sistemi tarafından korunan bir tabloya kaydedin ve niteleyici sonraki özelliği sistem işlemleri için kullanılan benzersiz bir tanımlayıcı vermek gerekir. Bu işlemler, dahili işlemlerin olması ya da özellik sistemi API'leri çağırma kendi kodunuzu olabilir. Arama özelliği kaydetmek için <xref:System.Windows.DependencyProperty.Register%2A> sınıfınıza (sınıf içinde ancak herhangi bir üye tanımı dışında) gövdesi içinde yöntemi. Tanımlayıcı alan ayrıca tarafından sağlanan <xref:System.Windows.DependencyProperty.Register%2A> dönüş değeri olarak bir yöntem çağrısı. Bunun nedeni, <xref:System.Windows.DependencyProperty.Register%2A> çağrı yapılır dışında diğer üye tanımları olduğundan bu dönüş değeri atamak ve oluşturmak için kullandığınız bir `public` `static` `readonly` alan türü <xref:System.Windows.DependencyProperty> sınıfınızın bir parçası olarak. Bu alan, bağımlılık özelliği için olan tanımlayıcıyla olur.
 
 [!code-csharp[WPFAquariumSln#RegisterAG](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerag)]
 [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]
@@ -174,7 +174,7 @@ Koleksiyon türü bağımlılık özellikleri dikkate alınması gereken bazı e
 
 ## <a name="dependency-property-security-considerations"></a>Bağımlılık özelliği güvenlik konuları
 
-Bağımlılık özellikleri ortak özellik olarak bildirilmelidir. Bağımlılık özelliği tanımlayıcı alanlarını, genel statik alanlar bildirilmelidir. (Korumalı gibi) diğer erişim düzeyleri bildirme girişimi olsa bile, bir bağımlılık özelliği her zaman özellik sistemi ile birlikte tanımlayıcısı aracılığıyla erişilebilir [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Korumalı tanımlayıcı alan meta verileri raporlama ya da değer belirleme nedeniyle potansiyel olarak erişilebilir [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] gibi özellik sistemi parçası olan <xref:System.Windows.LocalValueEnumerator>. Daha fazla bilgi için [bağımlılık özelliği güvenliği](dependency-property-security.md).
+Bağımlılık özellikleri ortak özellik olarak bildirilmelidir. Bağımlılık özelliği tanımlayıcı alanlarını, genel statik alanlar bildirilmelidir. (Korumalı gibi) diğer erişim düzeyleri bildirme girişimi olsa bile, bir bağımlılık özelliği her zaman özellik sistemi API'leri ile birlikte tanımlayıcısı aracılığıyla erişilebilir. Korumalı tanımlayıcı alan meta verileri raporlama ya da değer belirleme nedeniyle gibi özellik sistemi parçası olan API'leri potansiyel olarak erişilebilir <xref:System.Windows.LocalValueEnumerator>. Daha fazla bilgi için [bağımlılık özelliği güvenliği](dependency-property-security.md).
 
 <a name="DPCtor"></a>
 

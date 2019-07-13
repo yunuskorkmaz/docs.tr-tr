@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c5547955a1d5d20938e3896406631da0fae0c5d
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981922"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860041"
 ---
 # <a name="property-value-inheritance"></a>Özellik Değeri Kalıtımı
 Özellik değeri kalıtımı özelliğidir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi. Özellik değeri kalıtımı alt öğelerini üstten öğeleri, bu değer en yakın üst öğede herhangi bir yerde ayarlanmış olarak devralınması belirli bir özellik değeri kalıtımı ağacındaki sağlar. Sistem büyük olasılıkla tüm sayfa kök recurses için üst öğe Ayrıca özellik değeri devralma yoluyla değeri elde. Özellik değeri devralma varsayılan özellik sistemi davranış değildir; bir özellik alt öğeleri üzerinde özellik değeri kalıtımı başlatmak bu özelliği neden için özel meta verileri ayarıyla oluşturulmalıdır.  
@@ -22,7 +22,7 @@ ms.locfileid: "61981922"
   
 <a name="Practical_Applications_of_Property_Value_Inheritance"></a>   
 ## <a name="practical-applications-of-property-value-inheritance"></a>Özellik değeri devralma pratik uygulamalar  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Özelliği devralım etkin olan çeşitli özellikler içerir. Genellikle bu senaryoda, özellik sayfa başına yalnızca bir kez ayarlanabilir, ancak bu özellik ayrıca temel öğe sınıflarından birinin üyesidir ve bu nedenle de alt öğeleri çoğunda var uygun olduğu bir özelliği içerirler oluşur. Örneğin, <xref:System.Windows.FrameworkElement.FlowDirection%2A> özellik denetimleri hangi yönde, içerik akışı yapılan işlemler sunulan verilecek ve sayfasında. Genellikle, tüm alt öğeleri tutarlı bir şekilde işlenecek metin akış kavramı istersiniz. Akış yönü, belli bir düzeyde öğe ağacı kullanıcı ya da ortam işlem tarafından sıfırlama herhangi bir nedenle olsaydı, boyunca genellikle sıfırlanması. Zaman <xref:System.Windows.FrameworkElement.FlowDirection%2A> devralmak için özelliği yapıldığında, değeri yalnızca ayarlanabilir veya uygulamada her sayfanın sunum gereksinimlerini kapsayan öğe ağacı düzeyinde sıfırlanmalıdır. Bu şekilde bile ilk varsayılan değeri devralır. Özellik değeri devralma modeli burada akış yönleri bir karışımını sahip kasıtlıdır nadiren değeri sıfırlamak ayrı ayrı öğeler yine de sağlar.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API'leri özelliği devralım etkin olan çeşitli özellikler içerir. Genellikle bu senaryoda, özellik sayfa başına yalnızca bir kez ayarlanabilir, ancak bu özellik ayrıca temel öğe sınıflarından birinin üyesidir ve bu nedenle de alt öğeleri çoğunda var uygun olduğu bir özelliği içerirler oluşur. Örneğin, <xref:System.Windows.FrameworkElement.FlowDirection%2A> özellik denetimleri hangi yönde, içerik akışı yapılan işlemler sunulan verilecek ve sayfasında. Genellikle, tüm alt öğeleri tutarlı bir şekilde işlenecek metin akış kavramı istersiniz. Akış yönü, belli bir düzeyde öğe ağacı kullanıcı ya da ortam işlem tarafından sıfırlama herhangi bir nedenle olsaydı, boyunca genellikle sıfırlanması. Zaman <xref:System.Windows.FrameworkElement.FlowDirection%2A> devralmak için özelliği yapıldığında, değeri yalnızca ayarlanabilir veya uygulamada her sayfanın sunum gereksinimlerini kapsayan öğe ağacı düzeyinde sıfırlanmalıdır. Bu şekilde bile ilk varsayılan değeri devralır. Özellik değeri devralma modeli burada akış yönleri bir karışımını sahip kasıtlıdır nadiren değeri sıfırlamak ayrı ayrı öğeler yine de sağlar.  
   
 <a name="Making_a_Custom_Property_Inheritable"></a>   
 ## <a name="making-a-custom-property-inheritable"></a>Özel bir özellik alınabilir hale getirme  

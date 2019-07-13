@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: eba59f81fa19ee3fe4fbb82682ca986d082e449f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94937b2c3e6935474d337c62bfd6698441dfcc2e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621583"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860109"
 ---
 # <a name="typography-in-wpf"></a>WPF'de Tipografi
 Bu konu, ana tipografik özelliklerini tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Geliştirilmiş kalitesini ve metin işleme performansını bu özellikler [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipografi destek, Gelişmiş uluslararası metin yazı tipi desteği geliştirilmiştir ve yeni metin uygulama programlama arabirimleri (API).  
@@ -71,7 +71,7 @@ ClearType y yönünde düzgünleştirme ile metin
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>Yeni metin uygulama programlama arabirimleri (API)  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] birkaç metin sağlar [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] geliştiricilerin uygulamalarında metin dahil olmak üzere kullanın. Bunlar [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] üç kategoriye ayrılır:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] birkaç metin uygulamalarında metin dahil olmak üzere kullanılacak geliştiriciler için API'leri sağlar. Bu API'ler, üç kategorilerde gruplanır:  
   
 - **Düzen ve kullanıcı arabirimi**. Genel metin denetimleri için [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)].  
   
@@ -80,7 +80,7 @@ ClearType y yönünde düzgünleştirme ile metin
 - **Gelişmiş metin biçimlendirme**. Bir özel metin altyapısı olanak tanır.  
   
 ### <a name="layout-and-user-interface"></a>Düzen ve kullanıcı arabirimi  
- En üst düzeyde işlevsellik, metin [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ortak sağlamak [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] gibi denetimler <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, ve <xref:System.Windows.Controls.TextBox>. Bu denetimlerin temel sağlamak [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğeleri içinde bir uygulama ve teklif sunmak ve metin ile etkileşim kurmak için kolay bir yol. Gibi denetimler <xref:System.Windows.Controls.RichTextBox> ve <xref:System.Windows.Controls.PasswordBox> etkinleştir daha gelişmiş veya özel metin işleme. Gibi sınıfları <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, ve <xref:System.Windows.Documents.TextPointer> yararlı metin düzenlemesini etkinleştirin. Bunlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] denetimleri sağlar özellikleri gibi <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, ve <xref:System.Windows.Controls.Control.FontStyle%2A>, metin işlemek için kullanılan yazı tipi denetlemenize olanak tanır.  
+ İşlevlerin yüksek düzeyde metin API'leri sağlayan ortak [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] gibi denetimler <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, ve <xref:System.Windows.Controls.TextBox>. Bu denetimlerin temel sağlamak [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğeleri içinde bir uygulama ve teklif sunmak ve metin ile etkileşim kurmak için kolay bir yol. Gibi denetimler <xref:System.Windows.Controls.RichTextBox> ve <xref:System.Windows.Controls.PasswordBox> etkinleştir daha gelişmiş veya özel metin işleme. Gibi sınıfları <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, ve <xref:System.Windows.Documents.TextPointer> yararlı metin düzenlemesini etkinleştirin. Bunlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] denetimleri sağlar özellikleri gibi <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, ve <xref:System.Windows.Controls.Control.FontStyle%2A>, metin işlemek için kullanılan yazı tipi denetlemenize olanak tanır.  
   
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>Bit eşlem efektleri ve dönüşümler Yazı efektleri  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metnin görsel açıdan ilgi çekici kullanır, bit eşlem efektleri ve dönüşümler Yazı efektleri gibi kullandığı özellikler tarafından oluşturmanıza olanak sağlar. Aşağıdaki örnek, tipik bir metne uygulanacak gölge etkisi türünü gösterir.  
@@ -140,7 +140,7 @@ ClearType y yönünde düzgünleştirme ile metin
  Daha fazla bilgi için <xref:System.Windows.Media.FormattedText> nesne, bkz: [çizim biçimlendirilmiş metin](drawing-formatted-text.md).  
   
 ### <a name="advanced-text-formatting"></a>Gelişmiş Metin Biçimlendirme  
- En gelişmiş düzeyde metnin [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanarak özel metin düzenini oluşturma olanağı sunan <xref:System.Windows.Media.TextFormatting.TextFormatter> nesne ve diğer türleri <xref:System.Windows.Media.TextFormatting> ad alanı. <xref:System.Windows.Media.TextFormatting.TextFormatter> Ve ilişkili sınıfları, karakter biçimlerini, stilleri, kendi tanımını destekleyen özel metin düzenini uygulamak için satır kesme kuralları ve diğer düzen özellikleri için Uluslararası metin izin verir. İstediğiniz varsayılan uygulamasını geçersiz kılmak çok az sayıda durumlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metin düzeni desteği. Bununla birlikte, metin denetim ya da uygulama düzenleme oluşturuyorsanız, varsayılandan farklı bir uygulama gerektirebilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulaması.  
+ En gelişmiş düzeyde API'leri, metnin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanarak özel metin düzenini oluşturma olanağı sunan <xref:System.Windows.Media.TextFormatting.TextFormatter> nesne ve diğer türleri <xref:System.Windows.Media.TextFormatting> ad alanı. <xref:System.Windows.Media.TextFormatting.TextFormatter> Ve ilişkili sınıfları, karakter biçimlerini, stilleri, kendi tanımını destekleyen özel metin düzenini uygulamak için satır kesme kuralları ve diğer düzen özellikleri için Uluslararası metin izin verir. İstediğiniz varsayılan uygulamasını geçersiz kılmak çok az sayıda durumlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metin düzeni desteği. Bununla birlikte, metin denetim ya da uygulama düzenleme oluşturuyorsanız, varsayılandan farklı bir uygulama gerektirebilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulaması.  
   
  Geleneksel bir metin aksine [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], <xref:System.Windows.Media.TextFormatting.TextFormatter> metin düzeni istemcisi kümesi geri çağırma yöntemleri ile etkileşime geçer. Bu yöntemleri uygulaması sağlamak için istemcinin gerektirir <xref:System.Windows.Media.TextFormatting.TextSource> sınıfı. Aşağıdaki diyagram, istemci uygulama arasındaki metin düzeni etkileşimi gösterir ve <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
@@ -156,5 +156,5 @@ ClearType y yönünde düzgünleştirme ile metin
 - [OpenType Yazı Tipi Özellikleri](opentype-font-features.md)
 - [Biçimlendirilmiş Metin Çizme](drawing-formatted-text.md)
 - [Gelişmiş Metin Biçimlendirme](advanced-text-formatting.md)
-- [Metin](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Microsoft tipografi](https://docs.microsoft.com/typography/)

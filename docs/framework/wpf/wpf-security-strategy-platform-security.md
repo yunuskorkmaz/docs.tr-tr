@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 5b40302d93ce1bfc378b86210ed7bb54732d294b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d7b76365178c78d2b20b9541d5e52a605158a77
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756764"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859822"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
 Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlamasına karşın, bu da işletim sistemini içeren, temel alınan platformu'nın güvenlik özelliklerine yararlanır [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], ve [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Sağlamak üzere bu katmanları birleştirin [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] herhangi tek hata noktası önlemek için aşağıdaki şekilde gösterildiği gibi çalışır bir güçlü, savunma güvenlik modeli:  
@@ -126,7 +126,7 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
 - **Güvenilmeyen siteleri**. Güvenilmeyen bir kullanıcı tarafından belirlenen uygulamalar. (Güvenilmeyen).  
   
- Her biri bu bölgeler için [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] eşleşen her ilişkilendirilmiş güven düzeyi izinleri içeren bir önceden tanımlanmış izin kümesi sağlar. Bu güncelleştirmeler şunlardır:  
+ Her biri bu bölgeler için [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] eşleşen her ilişkilendirilmiş güven düzeyi izinleri içeren bir önceden tanımlanmış izin kümesi sağlar. Bunlar:  
   
 - **FullTrust**. Gelen başlatılan uygulamalara **Bilgisayarım** bölge. Tüm olası izinleri verilir.  
   
@@ -196,11 +196,11 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
 - Bazı Web sitelerinde çok sayıda güvenlik iletişim kutuları.  
   
- Bazı durumlarda, kullanıcılar yükleme taklit ederek kandırmaya güvenilmeyen Web sitelerinden isteriz [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] ya da art arda gösterme bir [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)] yükleme iletişim kutusu, kullanıcı bu iptal olsa bile. Bu teknikler kullanarak, çok sayıda kullanıcı casus yazılım uygulamaların yüklenmesini ile sonuçlanan kötü kararların içine sağladı, mümkündür.  
+ Bazı durumlarda, kullanıcılar yükleme taklit ederek kandırmaya güvenilmeyen Web sitelerinden isteriz [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] veya kullanıcı bu iptal olsa da Microsoft ActiveX yükleme iletişim kutusunda, tekrar tekrar gösterme. Bu teknikler kullanarak, çok sayıda kullanıcı casus yazılım uygulamaların yüklenmesini ile sonuçlanan kötü kararların içine sağladı, mümkündür.  
   
  [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] Bu tür kullanıcı başlatma kavramı çalışmalarınızı sorunlarını gidermek için çeşitli özellikler içerir. [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] bir kullanıcı olarak da bilinen bir eylem önce bir bağlantı veya sayfa öğesinin tıkladığında algılar *kullanıcı başlatma*ve benzer bir eylem bunun yerine bir sayfadaki komut tarafından tetiklendiğinde'den farklı davranır. Örneğin, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] kapsayan bir **açılır pencere Engelleyicisine** bir kullanıcı bir açılır pencere oluşturma sayfasında önce bir düğmeyi tıkladığında algılar. Böylece [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] kullanıcılar için sorun ne istediğiniz açılır pencereleri sağlarken en zararsız açılır pencerelere izin verecek şekilde. Engellenen Açılır pencereleri yakalanan yeni altında **bilgi çubuğu**, el ile blok geçersiz kılmak ve açılır görüntülemek kullanıcının izin verir.  
   
- Aynı kullanıcı başlatma mantığı da uygulanan **açık**/**Kaydet** Güvenlik sorusu. [!INCLUDE[TLA2#tla_actx](../../../includes/tla2sharptla-actx-md.md)] Yükseltme daha önce yüklenen bir denetimi temsil ettikleri sürece yükleme iletişim kutuları her zaman bilgi çubuğunun altında yakalanır. İstenmeyen veya kötü amaçlı yazılım yüklemek için bunları taciz sitelere karşı korunduktan sonra kullanıcılara güvenli, daha denetlenen kullanıcı deneyimi sağlamak için bu ölçümleri birleştirin.  
+ Aynı kullanıcı başlatma mantığı da uygulanan **açık**/**Kaydet** Güvenlik sorusu. Yükseltme daha önce yüklenen bir denetimi temsil ettikleri sürece ActiveX yükleme iletişim kutusu, her zaman bilgi çubuğunun altında yakalanır. İstenmeyen veya kötü amaçlı yazılım yüklemek için bunları taciz sitelere karşı korunduktan sonra kullanıcılara güvenli, daha denetlenen kullanıcı deneyimi sağlamak için bu ölçümleri birleştirin.  
   
  Bu özellikleri kullanan müşteriler ayrıca koruma [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] yükleyip olanak tanıyan web sitelerine göz atmak için [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalar. Özellikle, bunun nedeni, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] kullanıcıların hangi teknoloji dahil olmak üzere derlemek için kullanılan bağımsız olarak kötü amaçlı veya devious uygulamaları yüklemek olasılığını düşürür daha iyi bir kullanıcı deneyimi sunar [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kullanarak için bu korumalar ekler [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] Internet üzerinden kendi uygulamalarının indirilmesini kolaylaştırmak için. Bu yana [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] bir Internet bölgesi güvenlik korumalı alan içinde yürütün, sorunsuz bir şekilde başlatılabilir. Diğer yandan, tek başına [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamaları çalıştırmak için tam güven gerektirir. Bu uygulamalar için [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] uygulamanın ek güvenlik gereksinimleri kullanımını bildirmek için başlatma işlemi sırasında bir güvenlik iletişim kutusu görüntülenir. Ancak, bu kullanıcı tarafından başlatılmış olması gerekir, ayrıca kullanıcı tarafından başlatılan mantığı tarafından yönetilecektir ve iptal edilebilir.  
   

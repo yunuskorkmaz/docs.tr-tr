@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: e0d277eb039c1fb1668f292d83ab9e7dbe4be70e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a067be444624ecffd8ab150f20740814dd9ee341
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762329"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859960"
 ---
 # <a name="xaml-overview-wpf"></a>XAML genel bakış (WPF)
 Bu konu XAML dilinin özelliklerini açıklar ve yazmak için XAML nasıl kullanabileceğinizi gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu konu özel olarak uygulandığı şekilde XAML tanımlayan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML kendisini olan daha büyük bir dil kavramını [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -301,7 +301,7 @@ Bu konu XAML dilinin özelliklerini açıklar ve yazmak için XAML nasıl kullan
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>Taban türleri ve XAML  
- Temel alınan WPF XAML ve XAML ad alanı, karşılık gelen türler koleksiyonudur [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesnelerin XAML için işaretleme öğeleri yanı sıra. Ancak, tüm sınıflar öğelerine eşlenebilir. Soyut sınıflar, gibi <xref:System.Windows.Controls.Primitives.ButtonBase>, ve belirli soyut olmayan temel sınıflar devralma için kullanılan [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesne modeli. Üyeleri somut XAML öğelerin her biri, hiyerarşideki bazı temel sınıftan devraldığı için temel sınıf, soyut olanlar da dahil olmak üzere XAML geliştirme için yine de önemlidir. Genellikle bu üyeler öznitelik olarak öğe üzerinde ayarlanabilir özellikleri veya işlenebilir olayları içerir. <xref:System.Windows.FrameworkElement> somut temeli [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] sınıfının [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] WPF framework düzeyinde. Tasarlarken [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]kullanacağınız çeşitli şekli, paneli, dekoratör veya denetim sınıfları, tüm türetilen <xref:System.Windows.FrameworkElement>. İlgili bir temel sınıf <xref:System.Windows.FrameworkContentElement>, iyi bir akış düzeni sunum için belge yönelimli ve iş öğeleri destekler kullanarak [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] kasıtlı olarak yansıtan [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] içinde <xref:System.Windows.FrameworkElement>. Öğe düzeyinde öznitelikler birleşimi ve [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesne modeli ile belirli bir XAML öğesini ve kendi temel türü ne olursa olsun en somut XAML öğeleri üzerinde ayarlanabilir ortak özellikler kümesi, sağlar.  
+ Temel alınan WPF XAML ve XAML ad alanı, karşılık gelen türler koleksiyonudur [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesnelerin XAML için işaretleme öğeleri yanı sıra. Ancak, tüm sınıflar öğelerine eşlenebilir. Soyut sınıflar, gibi <xref:System.Windows.Controls.Primitives.ButtonBase>, ve belirli soyut olmayan temel sınıflar devralma için kullanılan [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesne modeli. Üyeleri somut XAML öğelerin her biri, hiyerarşideki bazı temel sınıftan devraldığı için temel sınıf, soyut olanlar da dahil olmak üzere XAML geliştirme için yine de önemlidir. Genellikle bu üyeler öznitelik olarak öğe üzerinde ayarlanabilir özellikleri veya işlenebilir olayları içerir. <xref:System.Windows.FrameworkElement> somut temeli [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] sınıfının [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] WPF framework düzeyinde. Tasarlarken [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]kullanacağınız çeşitli şekli, paneli, dekoratör veya denetim sınıfları, tüm türetilen <xref:System.Windows.FrameworkElement>. İlgili bir temel sınıf <xref:System.Windows.FrameworkContentElement>, kasıtlı olarak API'leri yansıtan API'lerini kullanarak da bir akış düzeni sunum, belge yönelimli ve iş öğeleri destekler <xref:System.Windows.FrameworkElement>. Öğe düzeyinde öznitelikler birleşimi ve [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesne modeli ile belirli bir XAML öğesini ve kendi temel türü ne olursa olsun en somut XAML öğeleri üzerinde ayarlanabilir ortak özellikler kümesi, sağlar.  
   
 <a name="xaml_security"></a>   
 ## <a name="xaml-security"></a>XAML güvenlik  

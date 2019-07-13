@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 2090c58369ed3c7bda5df1342291001d9550d48d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: acfc252708bf8be7abacb1adc2968122501315a0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610463"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860206"
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış
 Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uygulama geliştiricileri sahip yeni zengin bir yazdırma ve yazdırma sistemi yönetimi API'leri. İle [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], bazı bu yazdırma sistemi geliştirmeler de oluşturma geliştiricilere sunulan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamaların ve geliştiricilerin kullanarak yönetilmeyen kod. Bu yeni işlevselliği özünde yenilikler [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosya biçimi ve [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu.  
@@ -75,7 +75,7 @@ Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uy
  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Denetim için tek giriş noktası sağlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], yapılandırma ve XPS iş gönderme. Denetim oluşturulacağı ve kullanılacağı hakkında daha fazla bilgi için bkz. [Yazdır iletişim kutusu çağırma](how-to-invoke-a-print-dialog.md).  
   
 ### <a name="advanced-xps-printing"></a>Gelişmiş XPS yazdırma  
- XPS özelliklerin tam bir set erişmek için Gelişmiş yazdırma API kullanılmalıdır. Birkaç ilgili API aşağıda daha ayrıntılı olarak açıklanmıştır. XPS tam bir listesi için yazdırma yolu [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], bkz: <xref:System.Windows.Xps> ve <xref:System.Printing> ad alanı başvurularını.  
+ XPS özelliklerin tam bir set erişmek için Gelişmiş yazdırma API kullanılmalıdır. Birkaç ilgili API aşağıda daha ayrıntılı olarak açıklanmıştır. XPS yazdırma yolu API'leri tam bir listesi için bkz. <xref:System.Windows.Xps> ve <xref:System.Printing> ad alanı başvurularını.  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket ve PrintCapabilities  
  <xref:System.Printing.PrintTicket> Ve <xref:System.Printing.PrintCapabilities> Gelişmiş XPS özelliklerine temel sınıflardır. Her iki tür nesneleri [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] yazdırma yönelimli özelliği harmanlaması, iki taraflı yazdırma, zımbalama, vb. gibi yapıları biçimlendirilmiş. Bu yapılar, yazdırma şeması tarafından tanımlanır. A <xref:System.Printing.PrintTicket> bir yazdırma işi işlemek nasıl bir yazıcı bildirir. <xref:System.Printing.PrintCapabilities> Sınıfı bir yazıcı yeteneklerini tanımlar. Bir yazıcı yeteneklerini sorgulamak bir <xref:System.Printing.PrintTicket> tam yararlanır yazıcı desteklenen özellikler oluşturulabilir. Benzer şekilde, desteklenmeyen özellikler önlenebilir.  
@@ -87,7 +87,7 @@ Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uy
  [!code-vb[xpscreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
   
 #### <a name="printserver-and-printqueue"></a>PrintServer ve PrintQueue  
- <xref:System.Printing.PrintServer> Sınıfı, bir ağ yazdırma sunucusu temsil eder ve <xref:System.Printing.PrintQueue> yazıcı ve onunla ilişkili çıkış iş kuyruğu sınıfı temsil eder. Birlikte, bunlar [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] sunucunun yazdırma işlerinin Gelişmiş yönetime izin verecek. A <xref:System.Printing.PrintServer>, ya da ondan türetilen sınıflardan birini yönetmek için kullanılan bir <xref:System.Printing.PrintQueue>. <xref:System.Printing.PrintQueue.AddJob%2A> Yöntemi yeni bir yazdırma işi kuyruğa eklemek için kullanılır.  
+ <xref:System.Printing.PrintServer> Sınıfı, bir ağ yazdırma sunucusu temsil eder ve <xref:System.Printing.PrintQueue> yazıcı ve onunla ilişkili çıkış iş kuyruğu sınıfı temsil eder. Birlikte, bu API'ler, bir sunucunun yazdırma işlerinin Gelişmiş Yönetim izin verir. A <xref:System.Printing.PrintServer>, ya da ondan türetilen sınıflardan birini yönetmek için kullanılan bir <xref:System.Printing.PrintQueue>. <xref:System.Printing.PrintQueue.AddJob%2A> Yöntemi yeni bir yazdırma işi kuyruğa eklemek için kullanılır.  
   
  Aşağıdaki örnek nasıl oluşturulacağını gösterir. bir <xref:System.Printing.LocalPrintServer> ve varsayılan erişim <xref:System.Printing.PrintQueue> kodu kullanarak.  
   

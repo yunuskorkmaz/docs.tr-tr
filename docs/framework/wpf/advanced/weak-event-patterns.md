@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 0c5bae64fbbeddedd905e5df0b5789542e29f2f1
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 61e7f6d29cf9275004238ca776d5af9bf027004f
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833925"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859910"
 ---
 # <a name="weak-event-patterns"></a>Zayıf Olay Desenleri
 Uygulamalar, olay kaynaklarına bağlı işleyicileri işleyicinin kaynağına bağlı dinleyici nesne ile koordinasyon halinde edilmeyeceği olduğunu mümkündür. Bu durum, bellek sızıntılarının neden olabilir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] belirli olaylar için adanmış yönetici sınıfı sağlayarak ve bu olayın dinleyicileri üzerinde arabirimi uygulama bu sorunu gidermek için kullanılabilecek bir tasarım desenini tanıtır. Bu tasarım deseni olarak bilinen *zayıf olay deseni*.  
@@ -21,7 +21,7 @@ Uygulamalar, olay kaynaklarına bağlı işleyicileri işleyicinin kaynağına b
   
  Bu teknik, olay kaynağından olay dinleyicisi için güçlü bir başvuru oluşturur. Normalde, bir dinleyici için bir olay işleyici ekleme (olay işleyici açıkça kaldırılana sürece), kaynak nesnenin ömrünü tarafından etkileyen bir nesne yaşam süresi dinleyici neden olur. Ancak bazı durumlarda, şu anda uygulama ve kaynak ömrünü tarafından görsel ağacı ait olup gibi diğer faktörler tarafından denetlenmesi için dinleyici nesne ömrünü isteyebilirsiniz. Kaynak nesne ömrü dinleyici nesne yaşam süresi genişletir olduğunda, normal olay deseni bir bellek sızıntısına neden olur: dinleyici istenenden daha uzun süre tutma tutulur.  
   
- Zayıf olay deseni, bu bellek sızıntısı sorunu çözmek için tasarlanmıştır. Zayıf olay deseni bir etkinliğe kaydolmak bir dinleyici gerekiyor, ancak zaman kaydını kaldırmak dinleyici açıkça bilmez olduğunda kullanılabilir. Zayıf olay deseni, kaynak nesnenin ömrünü dinleyicisinin yararlı nesne yaşam süresi değerini aştığında de kullanılabilir. (Bu durumda, *yararlı* sizin tarafından belirlenir.) Zayıf olay deseni için kaydolun ve nesne yaşam süresi özellikleri herhangi bir şekilde dinleyicinin etkilemeden olay almak dinleyici sağlar. Aslında, kaynak dolaylı başvuru dinleyici çöp toplama işlemi için uygun olup olmadığını belirlemez. Bu nedenle zayıf olay deseni ve ilgili adlandırma zayıf bir başvuru başvurudur [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Dinleyici atık toplanan veya yok olabilir ve kaynak toplanamayan işleyici başvuruları artık yok edilmiş nesne korumadan devam edebilirsiniz.  
+ Zayıf olay deseni, bu bellek sızıntısı sorunu çözmek için tasarlanmıştır. Zayıf olay deseni bir etkinliğe kaydolmak bir dinleyici gerekiyor, ancak zaman kaydını kaldırmak dinleyici açıkça bilmez olduğunda kullanılabilir. Zayıf olay deseni, kaynak nesnenin ömrünü dinleyicisinin yararlı nesne yaşam süresi değerini aştığında de kullanılabilir. (Bu durumda, *yararlı* sizin tarafından belirlenir.) Zayıf olay deseni için kaydolun ve nesne yaşam süresi özellikleri herhangi bir şekilde dinleyicinin etkilemeden olay almak dinleyici sağlar. Aslında, kaynak dolaylı başvuru dinleyici çöp toplama işlemi için uygun olup olmadığını belirlemez. Bu nedenle zayıf olay deseni ve ilgili API'leri adlandırma zayıf bir başvuru başvurudur. Dinleyici atık toplanan veya yok olabilir ve kaynak toplanamayan işleyici başvuruları artık yok edilmiş nesne korumadan devam edebilirsiniz.  
   
 ## <a name="who-should-implement-the-weak-event-pattern"></a>Zayıf olay deseni uygular kim?  
  Zayıf olay deseni uygulama öncelikli olarak denetim yazarları için ilginç. Bir denetim yazarı olarak kapsama, Denetim ve takılı olduğundan uygulamaları olan etkisini ve davranışı için büyük ölçüde sorumlu olursunuz. Bu denetim nesne yaşam süresi davranışı, özellikle açıklandığı gibi bir bellek sızıntısı sorununu işlenmesini içerir.  

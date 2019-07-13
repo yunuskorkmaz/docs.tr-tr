@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 327897d50bd23a739d015a4151459d9d4a6fc1a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e74f7c2790a73211bcc8e6f13dcf2dfdc02e678b
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611804"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859979"
 ---
 # <a name="read-only-dependency-properties"></a>Salt Okunur Bağımlılık Özellikleri
 Bu konuda, var olan salt okunur bağımlılık özellikleri senaryoları ve özel salt okunur bağımlılık özelliği oluşturmaya yönelik teknikleri dahil olmak üzere, salt okunur bağımlılık özellikleri açıklanmaktadır.  
@@ -37,7 +37,7 @@ Bu konuda, var olan salt okunur bağımlılık özellikleri senaryoları ve öze
   
 - Salt okunur kaydı tarafından döndürülen nesne <xref:System.Windows.DependencyPropertyKey> yerine <xref:System.Windows.DependencyProperty>. Bu alan üye olarak halen depolamanız gerekir, ancak genellikle, bu tür ortak üye yapacağınız değil.  
   
- Herhangi bir özel alan veya değer yedeklediğiniz Elbette, salt okunur bağımlılık özelliği için istediğinize karar mantığı kullanarak tam olarak yazılabilir. Ancak, özelliği başlangıçta veya çalışma zamanı mantığının parçası olarak ayarlamak için en kolay yolu özellik sisteminin kullanmaktır [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], özellik sistemi atlamak ve doğrudan özel yedekleme alanını ayarlamak yerine. Özellikle, bir imzası yok <xref:System.Windows.DependencyObject.SetValue%2A> türünde bir parametre kabul eden <xref:System.Windows.DependencyPropertyKey>. Nasıl ve nerede, bu değeri içinde uygulama mantığınızın programlanarak nasıl erişim ayarlamak isteyebilirsiniz etkiler <xref:System.Windows.DependencyPropertyKey> bağımlılık özelliği ilk kaydedildiğinde oluşturulur. Sınıf içindeki tüm bu mantığı işlemek, bunu özel bir duruma ya da derlemeyi diğer bölümlerinden ayarlanmış olması gerekiyorsa, bu iç ayarlayabilirsiniz. Bir yaklaşım ise çağrılacak <xref:System.Windows.DependencyObject.SetValue%2A> içinde saklanan özellik değerinin değiştirilmesi gereken bir sınıf örneğini bilgilendiren ilgili bir olayın olay işleyicisi sınıfı. Bağımlılık özellikleri eşleştirilmiş kullanarak birbirine bağlamak için başka bir yaklaşımdır <xref:System.Windows.PropertyChangedCallback> ve <xref:System.Windows.CoerceValueCallback> kayıt sırasında özelliklere meta veri parçası olarak geri çağırmalar.  
+ Herhangi bir özel alan veya değer yedeklediğiniz Elbette, salt okunur bağımlılık özelliği için istediğinize karar mantığı kullanarak tam olarak yazılabilir. Ancak, başlangıçta veya çalışma zamanı mantığının parçası olarak özelliğini ayarlamak için en kolay yolu özellik sisteminin API'leri yerine özellik sistemi atlanarak ve doğrudan özel yedekleme alanını ayarlama kullanmaktır. Özellikle, bir imzası yok <xref:System.Windows.DependencyObject.SetValue%2A> türünde bir parametre kabul eden <xref:System.Windows.DependencyPropertyKey>. Nasıl ve nerede, bu değeri içinde uygulama mantığınızın programlanarak nasıl erişim ayarlamak isteyebilirsiniz etkiler <xref:System.Windows.DependencyPropertyKey> bağımlılık özelliği ilk kaydedildiğinde oluşturulur. Sınıf içindeki tüm bu mantığı işlemek, bunu özel bir duruma ya da derlemeyi diğer bölümlerinden ayarlanmış olması gerekiyorsa, bu iç ayarlayabilirsiniz. Bir yaklaşım ise çağrılacak <xref:System.Windows.DependencyObject.SetValue%2A> içinde saklanan özellik değerinin değiştirilmesi gereken bir sınıf örneğini bilgilendiren ilgili bir olayın olay işleyicisi sınıfı. Bağımlılık özellikleri eşleştirilmiş kullanarak birbirine bağlamak için başka bir yaklaşımdır <xref:System.Windows.PropertyChangedCallback> ve <xref:System.Windows.CoerceValueCallback> kayıt sırasında özelliklere meta veri parçası olarak geri çağırmalar.  
   
  Çünkü <xref:System.Windows.DependencyPropertyKey> özeldir ve dağıtılmadığı kodunuz dışında özellik sistemi tarafından salt okunur bağımlılık özelliği salt okunur bağımlılık özelliği iyi güvenlik ayarına sahip. Bir salt okunur bağımlılık özelliği için açık veya örtük olarak genel tanımlayıcı alan ve bu nedenle özelliği yaygın olarak ayarlanabilir. Daha fazla ayrıntı için bkz. [bağımlılık özelliği güvenliği](dependency-property-security.md).  
   
