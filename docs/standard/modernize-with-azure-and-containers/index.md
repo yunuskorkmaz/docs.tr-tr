@@ -2,12 +2,12 @@
 title: Mevcut .NET uygulamaları ile Azure Bulut ve Windows kapsayıcıları modernleştirin (2 sürümü)
 description: Kaldırma ve kaydırma ve bu e-kitap kapsayıcılarla ve Azure bulut için mevcut uygulamaları modernize öğrenin.
 ms.date: 04/28/2018
-ms.openlocfilehash: 79e06c64867a7e1bb6c5d7da718886a713cb3c4c
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 4e632fcfbb8904a9def3fdad992286055c5df4f0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870592"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme (2 sürümü)
 
@@ -98,7 +98,7 @@ Tablo 1-1, başlıca avantajları ve her geçiş veya modernizasyonu yaklaşım�
 | **Avantajlar**|
 | <li>Hiçbir bütçeden, yeni kodu <li> Hızlı geçiş için en az çaba <li> Azure'da desteklenen en küçük ortak paydası <li> Temel kullanılabilirliği garanti eder <li> Buluta taşıdıktan sonra bunu daha da fazla modernleştirin kolaydır | <li> Hiçbir bütçeden <li> Çok az kod/yapılandırma değişiklikleri <li> Geliştirilmiş dağıtım ve DevOps çevikliği kapsayıcıları nedeniyle serbest bırakmak için <li> Yoğunluğu ve dağıtım maliyetlerini düşürün <li> Uygulamalar ve bağımlılıklar için taşınabilirlik <li> Ana hedef esneklik: Yaklaşım PaaS veya Iaas | <li> Mimarı bulut için buluttan en iyi avantajlarından yararlanın, ancak yeni kodu gereklidir <li> Mikro hizmetler bulutta yerel yaklaşımları <li> Modern iş açısından kritik uygulamalar, dayanıklı bulut ölçeklenebilir <li> Tam olarak yönetilen hizmetler <li> Ölçek için en iyi duruma getirilmiş <li> Alt sistemi tarafından otonom Çeviklik için en iyi duruma getirilmiş <li> Dağıtım ve DevOps üzerinde oluşturulmuş |
 | **Zorlukları** |
-| <li> Shift gider işletim ya da veri merkezleri kapatma dışında daha küçük bulut değer <li> Az yönetilir: Hiçbir işletim sistemi veya bir ara yazılım düzeltme eki uygulama; Terraform, Spinnaker veya Puppet gibi altyapı çözümlerini kullanıyor olabilir | <li> Kapsayıcılı hale getirmek geliştiricilerin ve BT işlemleri için öğrenme eğrisini içinde ek bir adım olduğunu <li> DevOps ve CI/CD işlem hatları 'şart' Bu yaklaşım genellikle olur. Aksi takdirde şu anda kuruluşun kültüründeki varsa, ek bir zorluğu olması olabilir| <li> Bulutta yerel uygulamalar ve mikro hizmet mimarileri için rearchitecture gerektirir ve genellikle yeniden düzenleme ya da modernleştirme olduğunda yeniden yazma önemli kod (daha fazla zaman ve bütçe) gerektirir <li> DevOps ve CI/CD işlem hatları 'şart' Bu yaklaşım genellikle olur. Aksi takdirde şu anda kuruluşun kültüründeki varsa, ek bir zorluğu olması olabilir|
+| <li> Shift gider işletim ya da veri merkezleri kapatma dışında daha küçük bulut değer <li> Az yönetilir: Hiçbir işletim sistemi veya bir ara yazılım düzeltme eki uygulama; Terraform, Spinnaker veya Puppet gibi altyapı çözümlerini kullanıyor olabilir | <li> Kapsayıcılı hale getirmek geliştiricilerin ve BT işlemleri için öğrenme eğrisini içinde ek bir adım olduğunu <li> DevOps ve CI/CD işlem hatları genellikle 'şart' Bu yaklaşıma olduğu. Aksi takdirde şu anda kuruluşun kültüründeki varsa, ek bir zorluğu olması olabilir| <li> Bulutta yerel uygulamalar ve mikro hizmet mimarileri için rearchitecture gerektirir ve genellikle yeniden düzenleme ya da modernleştirme olduğunda yeniden yazma önemli kod (daha fazla zaman ve bütçe) gerektirir|
 > **Tablo 1-1.** Avantajları ve zorluklarının modernizasyonu yol mevcut .NET uygulamaları ve Hizmetleri
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Temel teknolojileri ve olgunluk seviyesi ile mimarileri

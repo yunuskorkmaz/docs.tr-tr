@@ -2,14 +2,14 @@
 title: Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama
 description: Bu konu başlığı altında Mac ve .NET Core için Visual Studio kullanarak basit bir konsol uygulaması oluşturma sürecinde size yol gösterir.
 author: mairaw
-ms.date: 06/12/2017
+ms.date: 07/11/2019
 ms.custom: seodec18
-ms.openlocfilehash: 4467842c0b65ea536cc26601981d9fcc2bc68f2d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a6d58d2a54ce9742542a3f7e5c9378be89b8f89a
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870538"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama
 
@@ -24,21 +24,25 @@ Mac için Visual Studio, .NET Core uygulamaları geliştirmek için bir tam öze
 
 Bkz: [Mac üzerinde .NET Core önkoşulları](../../core/macos-prerequisites.md) konu.
 
+Denetleme [.NET Core desteği](https://docs.microsoft.com/visualstudio/mac/net-core-support?view=vsmac-2019) Kılavuzu .NET Core desteklenen bir sürümünü kullandığınızdan emin olun.
+
 ## <a name="get-started"></a>Kullanmaya başlayın
 
 Mac için Visual Studio ve önkoşullar önce yüklediğiniz, bu bölümü atlayarak devam [proje oluşturma](#creating-a-project). Mac için Visual Studio ve önkoşulları yüklemek için aşağıdaki adımları izleyin:
 
-İndirme [yükleyicisi Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Yükleyiciyi çalıştırın. Okuyun ve lisans sözleşmesini kabul edin. Yükleme sırasında Xamarin, platformlar arası mobil uygulama geliştirme teknolojisinden yüklemek için bir fırsat sunulur. Xamarin ve ilgili bileşenlerini yüklemek için .NET Core geliştirme isteğe bağlıdır. Yükleme işlemi Mac için Visual Studio ile ilgili kılavuz için bkz: [belgeleri Mac için Visual Studio](/visualstudio/mac/). Yükleme tamamlandığında, Mac IDE için Visual Studio'yu başlatın.
+İndirme [yükleyicisi Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Yükleyiciyi çalıştırın. Okuyun ve lisans sözleşmesini kabul edin. Yükleme sırasında .NET Core yükleme seçeneğini seçin. Xamarin, platformlar arası mobil uygulama geliştirme teknolojisinden yüklemek için bir fırsat sunulur. Xamarin ve ilgili bileşenlerini yüklemek için .NET Core geliştirme isteğe bağlıdır. Yükleme işlemi Mac için Visual Studio ile ilgili kılavuz için bkz: [belgeleri Mac için Visual Studio](/visualstudio/mac/). Yükleme tamamlandığında, Mac IDE için Visual Studio'yu başlatın.
 
 ## <a name="creating-a-project"></a>Proje oluşturma
 
-1. Seçin **yeni proje** Hoş Geldiniz ekranında.
+1. Seçin **yeni** başlangıç penceresinde.
 
-   ![Yeni Proje düğmesi Visual Studio Mac Hoş Geldiniz ekranı](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
+   ![Yeni düğmesi Visual Studio için Mac başlangıç ekranı](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
 1. İçinde **yeni proje** iletişim kutusunda **uygulama** altında **.NET Core** düğümü. Seçin **konsol uygulaması** şablonu ve ardından **sonraki**.
 
    ![Yeni proje şablonları listesi](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
+
+1. .NET Core yüklü birden fazla sürümü varsa, projeniz için hedef Framework'ü seçin.
 
 1. "HelloWorld" türü **proje adı**. **Oluştur**’u seçin.
 
@@ -50,7 +54,7 @@ Mac için Visual Studio ve önkoşullar önce yüklediğiniz, bu bölümü atlay
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-Uygulamayı hata ayıklama moduyla çalıştırma <kbd>F5</kbd> veya sürüm modu kullanarak <kbd>CTRL</kbd>+<kbd>F5</kbd>.
+Uygulamayı ⌘ ↵ kullanarak hata ayıklama modunda çalıştırın (komut + enter) veya yayın modunda ⌥ ⌘ ↵ kullanarak (seçenek + command + enter).
 
 ![Uygulama çıkış Bölmesi ' Hello World gösterir!](./media/using-on-mac-vs/visual-studio-mac-output.png)
 

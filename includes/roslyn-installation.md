@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 72acd0029d0189de1c724856572957f111b9d18f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dab6b435a885d862d08f94dd31de79625f19bcc0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870500"
 ---
-## <a name="installation-instructions"></a>Yükleme yönergeleri 
+## <a name="installation-instructions---visual-studio-installer"></a>Yükleme yönergeleri - Visual Studio yükleyicisi
 
 Bulmak için iki farklı yolu vardır **.NET derleyici Platformu SDK'sı** içinde **Visual Studio yükleyicisi**:
 
-### <a name="install-using-the-workloads-view"></a>İş yükleri görünümünü kullanarak yükleme
+### <a name="install-using-the-visual-studio-installer---workloads-view"></a>Visual Studio Yükleyicisi'ni kullanarak yükleyin - iş yüklerini görüntüleyin
 
 .NET derleyici Platformu SDK'sı, Visual Studio uzantısı geliştirme iş yükünün parçası otomatik olarak seçili değildir. İsteğe bağlı bir bileşen seçmelisiniz.
 
@@ -25,7 +25,7 @@ Bunu Ayrıca isteğe bağlı olarak, istersiniz **DGML düzenleyici** görselle�
 1. Açık **tek tek bileşenler** Özet ağaç düğümü.
 1. İçin kutuyu **DGML Düzenleyici**
 
-### <a name="install-using-the-individual-components-tab"></a>Bağımsız bileşenler sekmesinde kullanarak yükleme
+### <a name="install-using-the-visual-studio-installer---individual-components-tab"></a>Visual Studio yükleyicisi - bağımsız bileşenler sekmesinde kullanarak yükleme
 
 1. Çalıştırma **Visual Studio yükleyicisi** 
 1. Seçin **değiştirme** 

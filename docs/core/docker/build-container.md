@@ -4,12 +4,12 @@ description: Bu öğreticide, bir .NET Core uygulamasını Docker ile kapsayıc�
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 16edb129be679179450c485ced2586cea9ed9763
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: cb9a53520c513d96b9b1656ad64d55cf8aea1f08
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870432"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Öğretici: .NET Core uygulamasını kapsayıcılı hale getirme
 
@@ -177,7 +177,7 @@ myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 Terminalinizde başında oluşturduğunuz çalışma klasörü için bir dizin yukarı gidin. Adlı bir dosya oluşturun *Dockerfile* çalışma klasöründeki bir metin düzenleyicisinde açın. Aşağıdaki komut dosyasının ilk satırı ekleyin:
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 ```
 
 `FROM` Komutu bildirir etiketli görüntüyü çekmek için Docker **2.2** gelen **mcr.microsoft.com/dotnet/core/runtime** depo. Çalışma zamanı, SDK'sı tarafından hedeflenen eşleşen .NET Core çalışma zamanı çekme emin olun. Örneğin, önceki oluşturulan uygulama bölümünde kullanılan .NET Core 2.2 SDK ve .NET Core 2.2 hedefleyen bir uygulama oluşturdunuz. Temel görüntü başvurulan şekilde *Dockerfile* ile etiketlenmiş **2.2**.
@@ -205,7 +205,13 @@ docker-working
     └───obj
 ```
 
-Uygulamanızı terminalden çalıştırın `docker build -t myimage -f Dockerfile .` ve Docker, her satır işleyecek *Dockerfile*. `.` İçinde `docker build` komut geçerli klasörü bulmak için kullanmak üzere docker belirten bir *Dockerfile*. Bu komut, görüntüyü oluşturur ve adlı yerel bir depo oluşturur **myımage** görüntüsünü işaret eder. Bu komut bittikten sonra Çalıştır `docker images` yüklü görüntülerin listesini görmek için:
+Terminalde aşağıdaki komutu çalıştırın:
+
+```console
+docker build -t myimage -f Dockerfile .
+```
+
+Docker, her satır işleyecek *Dockerfile*. `.` İçinde `docker build` komut geçerli klasörü bulmak için kullanmak üzere Docker belirten bir *Dockerfile*. Bu komut, görüntüyü oluşturur ve adlı yerel bir depo oluşturur **myımage** görüntüsünü işaret eder. Bu komut bittikten sonra Çalıştır `docker images` yüklü görüntülerin listesini görmek için:
 
 ```console
 > docker images
@@ -224,7 +230,7 @@ ENTRYPOINT ["dotnet", "app/myapp.dll"]
 
 `COPY` Komut Docker kapsayıcısında bir klasöre bilgisayarınız üzerindeki belirtilen klasöre kopyalamak için bildirir. Bu örnekte, **yayımlama** klasör adlı bir klasöre kopyalanır **uygulama** kapsayıcısında.
 
-Sonraki komut `ENTRYPOINT`, yürütülebilir dosya olarak çalıştırmak için kapsayıcı yapılandırmak için docker söyler. Kapsayıcı başlatıldığında, `ENTRYPOINT` komutunu çalıştırır. Bu komut sona erdiğinde, kapsayıcı otomatik olarak durdurulur.
+Sonraki komut `ENTRYPOINT`, yürütülebilir dosya olarak çalıştırmak için kapsayıcı yapılandırmak için Docker söyler. Kapsayıcı başlatıldığında, `ENTRYPOINT` komutunu çalıştırır. Bu komut sona erdiğinde, kapsayıcı otomatik olarak durdurulur.
 
 Uygulamanızı terminalden çalıştırın `docker build -t myimage -f Dockerfile .` ve tamamlandığında, komut, çalıştırılabilir `docker images`.
 
