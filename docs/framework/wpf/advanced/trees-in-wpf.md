@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14ab9b5b36eee607679ee95423c2af912ed02310
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775004"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860009"
 ---
 # <a name="trees-in-wpf"></a>WPF İçinde Ağaçlar
 Birçok teknolojileri burada geliştiriciler nesne düğümleri işleme veya uygulamanın davranışını etkilemek için ağacında doğrudan düzenlemezsiniz ağaç yapısında öğeleri ve bileşenleri düzenlenir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ayrıca birkaç ağaç yapısı metaphors program öğeler arasındaki ilişkileri tanımlamak için kullanır. Çoğunlukla WPF geliştiricilerinin kod içinde bir uygulama oluşturun veya nesne ağaç benzetimini düşünmek kavramsal olarak çalışırken XAML içinde uygulama bölümlerini tanımlayan ancak olacak belirli bir API'yi çağırıp ya da bunu yerine bazı genel yapmak için özel biçimlendirme kullanma Nesne ağacında işlemeyi API gibi XML DOM kullanabilir WPF sunan bir ağaç benzetimini görünümü sağlayan iki yardımcı sınıflar <xref:System.Windows.LogicalTreeHelper> ve <xref:System.Windows.Media.VisualTreeHelper>. Bu aynı ağaçları belirli anahtar WPF özellikleri davranışını anlamak için yararlı olduğundan koşulları görsel ağacı ve mantıksal ağaç WPF belgelerinde de kullanılır. Bu konu ne görsel ağacı ve mantıksal ağaç temsil tanımlar, böyle ağaçları için genel bir nesne ağacında kavramdır nasıl ilişkili olduğunu açıklar ve tanıtır <xref:System.Windows.LogicalTreeHelper> ve <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -51,7 +51,7 @@ Birçok teknolojileri burada geliştiriciler nesne düğümleri işleme veya uyg
   
 <a name="override_logical_tree"></a>   
 ### <a name="overriding-the-logical-tree"></a>Mantıksal ağacı geçersiz kılma  
- Gelişmiş denetim yazarları, birkaç geçersiz kılarak mantıksal ağaç kılabilir [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] nasıl bir genel nesne veya içerik modeli ekler veya kaldırır mantıksal ağacı içindeki nesneleri tanımlayın. Mantıksal ağacı geçersiz kılma ilişkin bir örnek için bkz: [mantıksal ağacı geçersiz kılma](how-to-override-the-logical-tree.md).  
+ Gelişmiş denetim yazarları, nasıl bir genel nesne veya içerik modeli ekler veya kaldırır mantıksal ağacı içindeki nesneleri tanımlayan API'leri geçersiz kılarak mantıksal ağacı geçersiz kılabilirsiniz. Mantıksal ağacı geçersiz kılma ilişkin bir örnek için bkz: [mantıksal ağacı geçersiz kılma](how-to-override-the-logical-tree.md).  
   
 <a name="pvi"></a>   
 ### <a name="property-value-inheritance"></a>Özellik Değeri Kalıtımı  
