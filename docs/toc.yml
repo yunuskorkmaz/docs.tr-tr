@@ -203,6 +203,14 @@
     - name: Öğreticiler
       href: core/tutorials/index.md
       items:
+        - name: CLI için şablonlar
+          items:
+            - name: 1 - Öğe şablonu oluşturma
+              href: core/tutorials/cli-templates-create-item-template.md
+            - name: 2 - Proje şablonu oluşturma
+              href: core/tutorials/cli-templates-create-project-template.md
+            - name: 3 - Şablon paketi oluşturma
+              href: core/tutorials/cli-templates-create-template-pack.md
         - name: MacOS üzerinde .NET Core kullanmaya başlama
           href: core/tutorials/using-on-macos.md
         - name: Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama
@@ -219,8 +227,6 @@
           href: core/tutorials/aspnet-core.md
         - name: Yerel koddan .NET Core barındırma
           href: core/tutorials/netcore-hosting.md
-        - name: Dotnet new için özel şablon oluşturma
-          href: core/tutorials/create-custom-template.md
     - name: 'Paketler, Meta Paketler ve Çerçeveler'
       href: core/packages.md
     - name: CLI’daki değişikliklere genel bakış
