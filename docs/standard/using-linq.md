@@ -9,20 +9,20 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 2ee2ef57385d7fb0a396a1c08110fd810e6b0abd
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 2e4b23b7bf197c9984c53b2f4cc2acaa61731d38
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67857110"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238627"
 ---
-# <a name="linq-language-integrated-query"></a><span data-ttu-id="516e5-103">LINQ (dil ile tümleşik sorgu)</span><span class="sxs-lookup"><span data-stu-id="516e5-103">LINQ (Language Integrated Query)</span></span>
+# <a name="linq-language-integrated-query"></a><span data-ttu-id="ae943-103">LINQ (dil ile tümleşik sorgu)</span><span class="sxs-lookup"><span data-stu-id="ae943-103">LINQ (Language Integrated Query)</span></span>
 
-## <a name="what-is-it"></a><span data-ttu-id="516e5-104">Nedir?</span><span class="sxs-lookup"><span data-stu-id="516e5-104">What is it?</span></span>
+## <a name="what-is-it"></a><span data-ttu-id="ae943-104">Nedir?</span><span class="sxs-lookup"><span data-stu-id="ae943-104">What is it?</span></span>
 
-<span data-ttu-id="516e5-105">LINQ dil düzeyinde sorgulama özellikleri sağlar ve bir [yüksek sıralı işlev](https://en.wikipedia.org/wiki/Higher-order_function) C# ve VB ifadesel ve bildirim temelli bir kod yazmak için bir yol olarak API.</span><span class="sxs-lookup"><span data-stu-id="516e5-105">LINQ provides language-level querying capabilities and a [higher-order function](https://en.wikipedia.org/wiki/Higher-order_function) API to C# and VB as a way to write expressive, declarative code.</span></span>
+<span data-ttu-id="ae943-105">LINQ dil düzeyinde sorgulama özellikleri sağlar ve bir [yüksek sıralı işlev](https://en.wikipedia.org/wiki/Higher-order_function) C# ve VB ifadesel ve bildirim temelli bir kod yazmak için bir yol olarak API.</span><span class="sxs-lookup"><span data-stu-id="ae943-105">LINQ provides language-level querying capabilities and a [higher-order function](https://en.wikipedia.org/wiki/Higher-order_function) API to C# and VB as a way to write expressive, declarative code.</span></span>
 
-<span data-ttu-id="516e5-106">Dil düzeyi sorgu söz dizimi:</span><span class="sxs-lookup"><span data-stu-id="516e5-106">Language-level query syntax:</span></span>
+<span data-ttu-id="ae943-106">Dil düzeyi sorgu söz dizimi:</span><span class="sxs-lookup"><span data-stu-id="ae943-106">Language-level query syntax:</span></span>
 
 ```csharp
 var linqExperts = from p in programmers
@@ -36,7 +36,7 @@ Dim linqExperts = From p in programmers
                   Select New LINQExpert(p)
 ```
 
-<span data-ttu-id="516e5-107">Aynı örneği kullanarak `IEnumerable<T>` API:</span><span class="sxs-lookup"><span data-stu-id="516e5-107">Same example using the `IEnumerable<T>` API:</span></span>
+<span data-ttu-id="ae943-107">Aynı örneği kullanarak `IEnumerable<T>` API:</span><span class="sxs-lookup"><span data-stu-id="ae943-107">Same example using the `IEnumerable<T>` API:</span></span>
 
 ```csharp
 var linqExperts = programmers.Where(p => p.IsNewToLINQ)
@@ -48,11 +48,11 @@ Dim linqExperts = programmers.Where(Function(p) p.IsNewToLINQ).
                              Select(Function(p) New LINQExpert(p))
 ```
 
-## <a name="linq-is-expressive"></a><span data-ttu-id="516e5-108">LINQ Expressive olduğu</span><span class="sxs-lookup"><span data-stu-id="516e5-108">LINQ is Expressive</span></span>
+## <a name="linq-is-expressive"></a><span data-ttu-id="ae943-108">LINQ Expressive olduğu</span><span class="sxs-lookup"><span data-stu-id="ae943-108">LINQ is Expressive</span></span>
 
-<span data-ttu-id="516e5-109">Evcil Hayvanlar listesi vardır, ancak erişebileceğiniz bir evcil hayvan doğrudan göre bir sözlük içinde dönüştürmek istediğiniz Imagine kendi `RFID` değeri.</span><span class="sxs-lookup"><span data-stu-id="516e5-109">Imagine you have a list of pets, but want to convert it into a dictionary where you can access a pet directly by its `RFID` value.</span></span>
+<span data-ttu-id="ae943-109">Evcil Hayvanlar listesi vardır, ancak erişebileceğiniz bir evcil hayvan doğrudan göre bir sözlük içinde dönüştürmek istediğiniz Imagine kendi `RFID` değeri.</span><span class="sxs-lookup"><span data-stu-id="ae943-109">Imagine you have a list of pets, but want to convert it into a dictionary where you can access a pet directly by its `RFID` value.</span></span>
 
-<span data-ttu-id="516e5-110">Geleneksel kesinlik temelli kod:</span><span class="sxs-lookup"><span data-stu-id="516e5-110">Traditional imperative code:</span></span>
+<span data-ttu-id="ae943-110">Geleneksel kesinlik temelli kod:</span><span class="sxs-lookup"><span data-stu-id="ae943-110">Traditional imperative code:</span></span>
 
 ```csharp
 var petLookup = new Dictionary<int, Pet>();
@@ -71,9 +71,9 @@ For Each pet in pets
 Next
 ```
 
-<span data-ttu-id="516e5-111">Yeni bir oluşturmamayı niyetini kod arkasında olan `Dictionary<int, Pet>` ve eklemek için bir döngü yoluyla olan mevcut bir listeyi sözlükteki dönüştürmek için!</span><span class="sxs-lookup"><span data-stu-id="516e5-111">The intention behind the code is not to create a new `Dictionary<int, Pet>` and add to it via a loop, it is to convert an existing list into a dictionary!</span></span> <span data-ttu-id="516e5-112">Kesinlik temelli Kodun desteklemez LINQ niyetini korur.</span><span class="sxs-lookup"><span data-stu-id="516e5-112">LINQ preserves the intention whereas the imperative code does not.</span></span>
+<span data-ttu-id="ae943-111">Yeni bir oluşturmamayı niyetini kod arkasında olan `Dictionary<int, Pet>` ve eklemek için bir döngü yoluyla olan mevcut bir listeyi sözlükteki dönüştürmek için!</span><span class="sxs-lookup"><span data-stu-id="ae943-111">The intention behind the code is not to create a new `Dictionary<int, Pet>` and add to it via a loop, it is to convert an existing list into a dictionary!</span></span> <span data-ttu-id="ae943-112">Kesinlik temelli Kodun desteklemez LINQ niyetini korur.</span><span class="sxs-lookup"><span data-stu-id="ae943-112">LINQ preserves the intention whereas the imperative code does not.</span></span>
 
-<span data-ttu-id="516e5-113">Equivalent LINQ expression:</span><span class="sxs-lookup"><span data-stu-id="516e5-113">Equivalent LINQ expression:</span></span>
+<span data-ttu-id="ae943-113">Eşdeğer LINQ ifadesi:</span><span class="sxs-lookup"><span data-stu-id="ae943-113">Equivalent LINQ expression:</span></span>
 
 ```csharp
 var petLookup = pets.ToDictionary(pet => pet.RFID);
@@ -83,13 +83,13 @@ var petLookup = pets.ToDictionary(pet => pet.RFID);
 Dim petLookup = pets.ToDictionary(Function(pet) pet.RFID)
 ```
 
-<span data-ttu-id="516e5-114">LINQ kullanarak kodu oyun alanını hedefi ile kod arasında bir programcısı akıl olduğunda evens için değerlidir.</span><span class="sxs-lookup"><span data-stu-id="516e5-114">The code using LINQ is valuable because it evens the playing field between intent and code when reasoning as a programmer.</span></span> <span data-ttu-id="516e5-115">Başka bir ödül kod kısaltma ' dir.</span><span class="sxs-lookup"><span data-stu-id="516e5-115">Another bonus is code brevity.</span></span> <span data-ttu-id="516e5-116">1/3 yukarıdaki gibi büyük bir kod temeli bölümlerini azaltmayı düşünün.</span><span class="sxs-lookup"><span data-stu-id="516e5-116">Imagine reducing large portions of a codebase by 1/3 as done above.</span></span> <span data-ttu-id="516e5-117">Oldukça tatlı anlaşma, doğru?</span><span class="sxs-lookup"><span data-stu-id="516e5-117">Pretty sweet deal, right?</span></span>
+<span data-ttu-id="ae943-114">LINQ kullanarak kodu oyun alanını hedefi ile kod arasında bir programcısı akıl olduğunda evens için değerlidir.</span><span class="sxs-lookup"><span data-stu-id="ae943-114">The code using LINQ is valuable because it evens the playing field between intent and code when reasoning as a programmer.</span></span> <span data-ttu-id="ae943-115">Başka bir ödül kod kısaltma ' dir.</span><span class="sxs-lookup"><span data-stu-id="ae943-115">Another bonus is code brevity.</span></span> <span data-ttu-id="ae943-116">1/3 yukarıdaki gibi büyük bir kod temeli bölümlerini azaltmayı düşünün.</span><span class="sxs-lookup"><span data-stu-id="ae943-116">Imagine reducing large portions of a codebase by 1/3 as done above.</span></span> <span data-ttu-id="ae943-117">Oldukça tatlı anlaşma, doğru?</span><span class="sxs-lookup"><span data-stu-id="ae943-117">Pretty sweet deal, right?</span></span>
 
-## <a name="linq-providers-simplify-data-access"></a><span data-ttu-id="516e5-118">LINQ sağlayıcıları veri erişimini basitleştirme</span><span class="sxs-lookup"><span data-stu-id="516e5-118">LINQ Providers Simplify Data Access</span></span>
+## <a name="linq-providers-simplify-data-access"></a><span data-ttu-id="ae943-118">LINQ sağlayıcıları veri erişimini basitleştirme</span><span class="sxs-lookup"><span data-stu-id="ae943-118">LINQ Providers Simplify Data Access</span></span>
 
-<span data-ttu-id="516e5-119">Out joker yazılım önemli bir öbek için her şeyi (veritabanları, JSON, XML, vb.) bir kaynaktan veri uğraşmanızı geçici olarak döner.</span><span class="sxs-lookup"><span data-stu-id="516e5-119">For a significant chunk of software out in the wild, everything revolves around dealing with data from some source (Databases, JSON, XML, etc).</span></span> <span data-ttu-id="516e5-120">Genellikle bu sinir bozucu olabilecek her bir veri kaynağı için yeni bir API öğrenme içerir.</span><span class="sxs-lookup"><span data-stu-id="516e5-120">Often this involves learning a new API for each data source, which can be annoying.</span></span> <span data-ttu-id="516e5-121">LINQ veri erişiminin ortak öğeler aynı hangi veri kaynağı ne olursa olsun, çekme görünen bir sorgu söz dizimi özetleyen tarafından basitleştirir.</span><span class="sxs-lookup"><span data-stu-id="516e5-121">LINQ simplifies this by abstracting common elements of data access into a query syntax which looks the same no matter which data source you pick.</span></span>
+<span data-ttu-id="ae943-119">Out joker yazılım önemli bir öbek için her şeyi (veritabanları, JSON, XML, vb.) bir kaynaktan veri uğraşmanızı geçici olarak döner.</span><span class="sxs-lookup"><span data-stu-id="ae943-119">For a significant chunk of software out in the wild, everything revolves around dealing with data from some source (Databases, JSON, XML, etc).</span></span> <span data-ttu-id="ae943-120">Genellikle bu sinir bozucu olabilecek her bir veri kaynağı için yeni bir API öğrenme içerir.</span><span class="sxs-lookup"><span data-stu-id="ae943-120">Often this involves learning a new API for each data source, which can be annoying.</span></span> <span data-ttu-id="ae943-121">LINQ veri erişiminin ortak öğeler aynı hangi veri kaynağı ne olursa olsun, çekme görünen bir sorgu söz dizimi özetleyen tarafından basitleştirir.</span><span class="sxs-lookup"><span data-stu-id="ae943-121">LINQ simplifies this by abstracting common elements of data access into a query syntax which looks the same no matter which data source you pick.</span></span>
 
-<span data-ttu-id="516e5-122">Aşağıdakileri dikkate alın: özel öznitelik değeri olan tüm XML öğeleri bulma.</span><span class="sxs-lookup"><span data-stu-id="516e5-122">Consider the following: finding all XML elements with a specific attribute value.</span></span>
+<span data-ttu-id="ae943-122">Aşağıdakileri dikkate alın: özel öznitelik değeri olan tüm XML öğeleri bulma.</span><span class="sxs-lookup"><span data-stu-id="ae943-122">Consider the following: finding all XML elements with a specific attribute value.</span></span>
 
 ```csharp
 public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement documentRoot, string elementName,
@@ -111,13 +111,13 @@ End Function
 
 ```
 
-<span data-ttu-id="516e5-123">Bu görevi gerçekleştirmek için XML belgesi el ile geçirmek için kod yazma, çok daha zor olurdu.</span><span class="sxs-lookup"><span data-stu-id="516e5-123">Writing code to manually traverse the XML document to perform this task would be far more challenging.</span></span>
+<span data-ttu-id="ae943-123">Bu görevi gerçekleştirmek için XML belgesi el ile geçirmek için kod yazma, çok daha zor olurdu.</span><span class="sxs-lookup"><span data-stu-id="ae943-123">Writing code to manually traverse the XML document to perform this task would be far more challenging.</span></span>
 
-<span data-ttu-id="516e5-124">XML ile etkileşim LINQ sağlayıcıları ile yapmanız gereken tek şey değildir.</span><span class="sxs-lookup"><span data-stu-id="516e5-124">Interacting with XML isn’t the only thing you can do with LINQ Providers.</span></span> <span data-ttu-id="516e5-125">[LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) bir oldukça çıplak kemikler nesne-ilişkisel Eşleyici (ORM) bir MSSQL Server veritabanıdır.</span><span class="sxs-lookup"><span data-stu-id="516e5-125">[Linq to SQL](../../docs/framework/data/adonet/sql/linq/index.md) is a fairly bare-bones Object-Relational Mapper (ORM) for an MSSQL Server Database.</span></span> <span data-ttu-id="516e5-126">[JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) kitaplık etkin JSON belgesinde geçişi LINQ aracılığıyla sağlar.</span><span class="sxs-lookup"><span data-stu-id="516e5-126">The [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) library provides efficient JSON Document traversal via LINQ.</span></span> <span data-ttu-id="516e5-127">Aradığınızı yapan bir kitaplık yoksa, ayrıca, ayrıca [kendi LINQ sağlayıcınızı yazma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!</span><span class="sxs-lookup"><span data-stu-id="516e5-127">Furthermore, if there isn’t a library which does what you need, you can also [write your own LINQ Provider](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!</span></span>
+<span data-ttu-id="ae943-124">XML ile etkileşim LINQ sağlayıcıları ile yapmanız gereken tek şey değildir.</span><span class="sxs-lookup"><span data-stu-id="ae943-124">Interacting with XML isn’t the only thing you can do with LINQ Providers.</span></span> <span data-ttu-id="ae943-125">[LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) bir oldukça çıplak kemikler nesne-ilişkisel Eşleyici (ORM) bir MSSQL Server veritabanıdır.</span><span class="sxs-lookup"><span data-stu-id="ae943-125">[Linq to SQL](../../docs/framework/data/adonet/sql/linq/index.md) is a fairly bare-bones Object-Relational Mapper (ORM) for an MSSQL Server Database.</span></span> <span data-ttu-id="ae943-126">[JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) kitaplık etkin JSON belgesinde geçişi LINQ aracılığıyla sağlar.</span><span class="sxs-lookup"><span data-stu-id="ae943-126">The [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) library provides efficient JSON Document traversal via LINQ.</span></span> <span data-ttu-id="ae943-127">Aradığınızı yapan bir kitaplık yoksa, ayrıca, ayrıca [kendi LINQ sağlayıcınızı yazma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!</span><span class="sxs-lookup"><span data-stu-id="ae943-127">Furthermore, if there isn’t a library which does what you need, you can also [write your own LINQ Provider](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!</span></span>
 
-## <a name="why-use-the-query-syntax"></a><span data-ttu-id="516e5-128">Sorgu söz dizimi neden kullanmalısınız?</span><span class="sxs-lookup"><span data-stu-id="516e5-128">Why Use the Query Syntax?</span></span>
+## <a name="why-use-the-query-syntax"></a><span data-ttu-id="ae943-128">Sorgu söz dizimi neden kullanmalısınız?</span><span class="sxs-lookup"><span data-stu-id="ae943-128">Why Use the Query Syntax?</span></span>
 
-<span data-ttu-id="516e5-129">Genellikle gelen bir soru budur.</span><span class="sxs-lookup"><span data-stu-id="516e5-129">This is a question which often comes up.</span></span> <span data-ttu-id="516e5-130">Sonra bu,</span><span class="sxs-lookup"><span data-stu-id="516e5-130">After all, this,</span></span>
+<span data-ttu-id="ae943-129">Genellikle gelen bir soru budur.</span><span class="sxs-lookup"><span data-stu-id="ae943-129">This is a question which often comes up.</span></span> <span data-ttu-id="ae943-130">Sonra bu,</span><span class="sxs-lookup"><span data-stu-id="ae943-130">After all, this,</span></span>
 
 ```csharp
 var filteredItems = myItems.Where(item => item.Foo);
@@ -127,7 +127,7 @@ var filteredItems = myItems.Where(item => item.Foo);
 Dim filteredItems = myItems.Where(Function(item) item.Foo)
 ```
 
-<span data-ttu-id="516e5-131">Bundan çok daha kısa olabilir:</span><span class="sxs-lookup"><span data-stu-id="516e5-131">is a lot more concise than this:</span></span>
+<span data-ttu-id="ae943-131">Bundan çok daha kısa olabilir:</span><span class="sxs-lookup"><span data-stu-id="ae943-131">is a lot more concise than this:</span></span>
 
 ```csharp
 var filteredItems = from item in myItems
@@ -141,31 +141,31 @@ Dim filteredItems = From item In myItems
                     Select item
 ```
 
-<span data-ttu-id="516e5-132">API sözdizimi sorgu söz dizimi yapmak için yalnızca daha kısa bir yol değil mi?</span><span class="sxs-lookup"><span data-stu-id="516e5-132">Isn’t the API syntax just a more concise way to do the query syntax?</span></span>
+<span data-ttu-id="ae943-132">API sözdizimi sorgu söz dizimi yapmak için yalnızca daha kısa bir yol değil mi?</span><span class="sxs-lookup"><span data-stu-id="ae943-132">Isn’t the API syntax just a more concise way to do the query syntax?</span></span>
 
-<span data-ttu-id="516e5-133">Hayır.</span><span class="sxs-lookup"><span data-stu-id="516e5-133">No.</span></span> <span data-ttu-id="516e5-134">Sorgu söz dizimi için kullanılmasına **izin** tanıtır ve sonraki ifade parçalarını de kullanmayı ifadesi, kapsamı içinde bir değişken bağlamasına izin veren yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="516e5-134">The query syntax allows for the use of the **let** clause, which allows you to introduce and bind a variable within the scope of the expression, using it in subsequent pieces of the expression.</span></span> <span data-ttu-id="516e5-135">Aynı kodu yeniden oluştururken yalnızca API söz dizimi ile yapılabilir, ancak büyük olasılıkla okunması zor olan kodlara neden.</span><span class="sxs-lookup"><span data-stu-id="516e5-135">Reproducing the same code with only the API syntax can be done, but will most likely lead to code which is hard to read.</span></span>
+<span data-ttu-id="ae943-133">Hayır.</span><span class="sxs-lookup"><span data-stu-id="ae943-133">No.</span></span> <span data-ttu-id="ae943-134">Sorgu söz dizimi için kullanılmasına **izin** tanıtır ve sonraki ifade parçalarını de kullanmayı ifadesi, kapsamı içinde bir değişken bağlamasına izin veren yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="ae943-134">The query syntax allows for the use of the **let** clause, which allows you to introduce and bind a variable within the scope of the expression, using it in subsequent pieces of the expression.</span></span> <span data-ttu-id="ae943-135">Aynı kodu yeniden oluştururken yalnızca API söz dizimi ile yapılabilir, ancak büyük olasılıkla okunması zor olan kodlara neden.</span><span class="sxs-lookup"><span data-stu-id="ae943-135">Reproducing the same code with only the API syntax can be done, but will most likely lead to code which is hard to read.</span></span>
 
-<span data-ttu-id="516e5-136">Soru sorun bu şekilde **yalnızca sorgu söz dizimi kullanmalısınız?**</span><span class="sxs-lookup"><span data-stu-id="516e5-136">So this begs the question, **should you just use the query syntax?**</span></span>
+<span data-ttu-id="ae943-136">Soru sorun bu şekilde **yalnızca sorgu söz dizimi kullanmalısınız?**</span><span class="sxs-lookup"><span data-stu-id="ae943-136">So this begs the question, **should you just use the query syntax?**</span></span>
 
-<span data-ttu-id="516e5-137">Bu sorunun yanıtı **Evet** varsa...</span><span class="sxs-lookup"><span data-stu-id="516e5-137">The answer to this question is **yes** if...</span></span>
+<span data-ttu-id="ae943-137">Bu sorunun yanıtı **Evet** varsa...</span><span class="sxs-lookup"><span data-stu-id="ae943-137">The answer to this question is **yes** if...</span></span>
 
-* <span data-ttu-id="516e5-138">Mevcut codebase zaten kullandığı sorgu söz dizimi</span><span class="sxs-lookup"><span data-stu-id="516e5-138">Your existing codebase already uses the query syntax</span></span>
-* <span data-ttu-id="516e5-139">Sorgularınızın karmaşıklığı nedeniyle içinde kapsam değişkenleri gerekir</span><span class="sxs-lookup"><span data-stu-id="516e5-139">You need to scope variables within your queries due to complexity</span></span>
-* <span data-ttu-id="516e5-140">Tercih ettiğiniz sorgu söz dizimi ve kod temelinizde departmanınızı olmaz</span><span class="sxs-lookup"><span data-stu-id="516e5-140">You prefer the query syntax and it won’t distract from your codebase</span></span>
+* <span data-ttu-id="ae943-138">Mevcut codebase zaten kullandığı sorgu söz dizimi</span><span class="sxs-lookup"><span data-stu-id="ae943-138">Your existing codebase already uses the query syntax</span></span>
+* <span data-ttu-id="ae943-139">Sorgularınızın karmaşıklığı nedeniyle içinde kapsam değişkenleri gerekir</span><span class="sxs-lookup"><span data-stu-id="ae943-139">You need to scope variables within your queries due to complexity</span></span>
+* <span data-ttu-id="ae943-140">Tercih ettiğiniz sorgu söz dizimi ve kod temelinizde departmanınızı olmaz</span><span class="sxs-lookup"><span data-stu-id="ae943-140">You prefer the query syntax and it won’t distract from your codebase</span></span>
 
-<span data-ttu-id="516e5-141">Bu sorunun yanıtı **hiçbir** varsa...</span><span class="sxs-lookup"><span data-stu-id="516e5-141">The answer to this question is **no** if...</span></span>
+<span data-ttu-id="ae943-141">Bu sorunun yanıtı **hiçbir** varsa...</span><span class="sxs-lookup"><span data-stu-id="ae943-141">The answer to this question is **no** if...</span></span>
 
-* <span data-ttu-id="516e5-142">Mevcut codebase zaten kullandığı API söz dizimi</span><span class="sxs-lookup"><span data-stu-id="516e5-142">Your existing codebase already uses the API syntax</span></span>
-* <span data-ttu-id="516e5-143">İçinde sorgularınızı kapsam değişkenleri gerek sahip</span><span class="sxs-lookup"><span data-stu-id="516e5-143">You have no need to scope variables within your queries</span></span>
-* <span data-ttu-id="516e5-144">Tercih ettiğiniz API söz dizimi ve kod temelinizde departmanınızı olmaz</span><span class="sxs-lookup"><span data-stu-id="516e5-144">You prefer the API syntax and it won’t distract from your codebase</span></span>
+* <span data-ttu-id="ae943-142">Mevcut codebase zaten kullandığı API söz dizimi</span><span class="sxs-lookup"><span data-stu-id="ae943-142">Your existing codebase already uses the API syntax</span></span>
+* <span data-ttu-id="ae943-143">İçinde sorgularınızı kapsam değişkenleri gerek sahip</span><span class="sxs-lookup"><span data-stu-id="ae943-143">You have no need to scope variables within your queries</span></span>
+* <span data-ttu-id="ae943-144">Tercih ettiğiniz API söz dizimi ve kod temelinizde departmanınızı olmaz</span><span class="sxs-lookup"><span data-stu-id="ae943-144">You prefer the API syntax and it won’t distract from your codebase</span></span>
 
-## <a name="essential-samples"></a><span data-ttu-id="516e5-145">Temel örnekler</span><span class="sxs-lookup"><span data-stu-id="516e5-145">Essential Samples</span></span>
+## <a name="essential-samples"></a><span data-ttu-id="ae943-145">Temel örnekler</span><span class="sxs-lookup"><span data-stu-id="ae943-145">Essential Samples</span></span>
 
-<span data-ttu-id="516e5-146">LINQ örnekleri gerçekten kapsamlı bir listesi için ziyaret [101 LINQ örnekleri](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b).</span><span class="sxs-lookup"><span data-stu-id="516e5-146">For a truly comprehensive list of LINQ samples, visit [101 LINQ Samples](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b).</span></span>
+<span data-ttu-id="ae943-146">LINQ örnekleri gerçekten kapsamlı bir listesi için ziyaret [101 LINQ örnekleri](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b).</span><span class="sxs-lookup"><span data-stu-id="ae943-146">For a truly comprehensive list of LINQ samples, visit [101 LINQ Samples](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b).</span></span>
 
-<span data-ttu-id="516e5-147">Bazı önemli parçaları LINQ hızlı bir örnek verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="516e5-147">The following is a quick demonstration of some of the essential pieces of LINQ.</span></span> <span data-ttu-id="516e5-148">LINQ burada büyütmüş daha önemli ölçüde daha fazla işlevsellik sağladığından kapsamlı, hiçbir şekilde budur.</span><span class="sxs-lookup"><span data-stu-id="516e5-148">This is in no way comprehensive, as LINQ provides significantly more functionality than what is showcased here.</span></span>
+<span data-ttu-id="ae943-147">Bazı önemli parçaları LINQ hızlı bir örnek verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="ae943-147">The following is a quick demonstration of some of the essential pieces of LINQ.</span></span> <span data-ttu-id="ae943-148">LINQ burada büyütmüş daha önemli ölçüde daha fazla işlevsellik sağladığından kapsamlı, hiçbir şekilde budur.</span><span class="sxs-lookup"><span data-stu-id="ae943-148">This is in no way comprehensive, as LINQ provides significantly more functionality than what is showcased here.</span></span>
 
-* <span data-ttu-id="516e5-149">Ekmekler ve ezmesi - `Where`, `Select`, ve `Aggregate`:</span><span class="sxs-lookup"><span data-stu-id="516e5-149">The bread and butter - `Where`, `Select`, and `Aggregate`:</span></span>
+* <span data-ttu-id="ae943-149">Ekmekler ve ezmesi - `Where`, `Select`, ve `Aggregate`:</span><span class="sxs-lookup"><span data-stu-id="ae943-149">The bread and butter - `Where`, `Select`, and `Aggregate`:</span></span>
 
 ```csharp
 // Filtering a list.
@@ -209,7 +209,7 @@ Dim seed As Integer = 0
 Dim sumOfStrings As Integer = strings.Aggregate(seed, Function(s1, s2) s1.Length + s2.Length)
 ```
 
-* <span data-ttu-id="516e5-150">Bir liste düzleştirme:</span><span class="sxs-lookup"><span data-stu-id="516e5-150">Flattening a list of lists:</span></span>
+* <span data-ttu-id="ae943-150">Bir liste düzleştirme:</span><span class="sxs-lookup"><span data-stu-id="ae943-150">Flattening a list of lists:</span></span>
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
@@ -221,7 +221,7 @@ var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 Dim allDogsFromKennels = kennels.SelectMany(Function(kennel) kennel.Dogs)
 ```
 
-* <span data-ttu-id="516e5-151">UNION (ile özel bir karşılaştırıcı) iki kümesi arasında:</span><span class="sxs-lookup"><span data-stu-id="516e5-151">Union between two sets (with custom comparator):</span></span>
+* <span data-ttu-id="ae943-151">UNION (ile özel bir karşılaştırıcı) iki kümesi arasında:</span><span class="sxs-lookup"><span data-stu-id="ae943-151">Union between two sets (with custom comparator):</span></span>
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -282,8 +282,7 @@ End Class
 Dim allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, New DogHairLengthComparer())
 ```
 
-
-* <span data-ttu-id="516e5-152">İki kesişimi:</span><span class="sxs-lookup"><span data-stu-id="516e5-152">Intersection between two sets:</span></span>
+* <span data-ttu-id="ae943-152">İki kesişimi:</span><span class="sxs-lookup"><span data-stu-id="ae943-152">Intersection between two sets:</span></span>
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -297,7 +296,7 @@ Dim volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      New VolunteerTimeComparer())
 ```
 
-* <span data-ttu-id="516e5-153">Sıralama:</span><span class="sxs-lookup"><span data-stu-id="516e5-153">Ordering:</span></span>
+* <span data-ttu-id="ae943-153">Sıralama:</span><span class="sxs-lookup"><span data-stu-id="ae943-153">Ordering:</span></span>
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -313,7 +312,7 @@ Dim results = DirectionsProcessor.GetDirections(start, end).
                 ThenBy(Function(direction) direction.EstimatedTime)
 ```
 
-* <span data-ttu-id="516e5-154">Son olarak, örnek daha gelişmiş: iki örneği aynı türdeki özelliklerin değerlerini eşit olup olmadığını belirleme (Borrowed ve gelen değiştirilmiş [StackOverflow yazıya](https://stackoverflow.com/a/844855)):</span><span class="sxs-lookup"><span data-stu-id="516e5-154">Finally, a more advanced sample: determining if the values of the properties of two instances of the same type are equal (Borrowed and modified from [this StackOverflow post](https://stackoverflow.com/a/844855)):</span></span>
+* <span data-ttu-id="ae943-154">Son olarak, örnek daha gelişmiş: iki örneği aynı türdeki özelliklerin değerlerini eşit olup olmadığını belirleme (Borrowed ve gelen değiştirilmiş [StackOverflow yazıya](https://stackoverflow.com/a/844855)):</span><span class="sxs-lookup"><span data-stu-id="ae943-154">Finally, a more advanced sample: determining if the values of the properties of two instances of the same type are equal (Borrowed and modified from [this StackOverflow post](https://stackoverflow.com/a/844855)):</span></span>
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -351,11 +350,11 @@ Public Function PublicInstancePropertiesEqual(Of T As Class)(self As T, [to] As 
 End Function
 ```
 
-## <a name="plinq"></a><span data-ttu-id="516e5-155">PLINQ</span><span class="sxs-lookup"><span data-stu-id="516e5-155">PLINQ</span></span>
+## <a name="plinq"></a><span data-ttu-id="ae943-155">PLINQ</span><span class="sxs-lookup"><span data-stu-id="ae943-155">PLINQ</span></span>
 
-<span data-ttu-id="516e5-156">PLINQ ve paralel LINQ bir paralel yürütme için LINQ ifadelerini altyapısıdır.</span><span class="sxs-lookup"><span data-stu-id="516e5-156">PLINQ, or Parallel LINQ, is a parallel execution engine for LINQ expressions.</span></span> <span data-ttu-id="516e5-157">Diğer bir deyişle, normal bir LINQ ifadesini basit bir şekilde herhangi bir iş parçacığı sayısı arasında paralel.</span><span class="sxs-lookup"><span data-stu-id="516e5-157">In other words, a regular LINQ expression can be trivially parallelized across any number of threads.</span></span> <span data-ttu-id="516e5-158">Bu bir çağrı aracılığıyla gerçekleştirilir `AsParallel()` önceki ifade.</span><span class="sxs-lookup"><span data-stu-id="516e5-158">This is accomplished via a call to `AsParallel()` preceding the expression.</span></span>
+<span data-ttu-id="ae943-156">PLINQ ve paralel LINQ bir paralel yürütme için LINQ ifadelerini altyapısıdır.</span><span class="sxs-lookup"><span data-stu-id="ae943-156">PLINQ, or Parallel LINQ, is a parallel execution engine for LINQ expressions.</span></span> <span data-ttu-id="ae943-157">Diğer bir deyişle, normal bir LINQ ifadesini basit bir şekilde herhangi bir iş parçacığı sayısı arasında paralel.</span><span class="sxs-lookup"><span data-stu-id="ae943-157">In other words, a regular LINQ expression can be trivially parallelized across any number of threads.</span></span> <span data-ttu-id="ae943-158">Bu bir çağrı aracılığıyla gerçekleştirilir `AsParallel()` önceki ifade.</span><span class="sxs-lookup"><span data-stu-id="ae943-158">This is accomplished via a call to `AsParallel()` preceding the expression.</span></span>
 
-<span data-ttu-id="516e5-159">Aşağıdaki topluluklara bir göz atın:</span><span class="sxs-lookup"><span data-stu-id="516e5-159">Consider the following:</span></span>
+<span data-ttu-id="ae943-159">Aşağıdakileri göz önünde bulundurun:</span><span class="sxs-lookup"><span data-stu-id="ae943-159">Consider the following:</span></span>
 
 ```csharp
 public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> facebookUsers)
@@ -385,16 +384,16 @@ Public Shared GetAllFacebookUserLikesMessage(facebookUsers As IEnumerable(Of Fac
 }
 ```
 
-<span data-ttu-id="516e5-160">Bu kod bölüm `facebookUsers` gerekirse, toplam beğenilerin paralel, her bir iş parçacığı üzerinde toplama sistem iş parçacıklarını arasında her iş parçacığı tarafından hesaplanan sonuçlarını toplamak ve bu sonucu güzel bir dizeye proje.</span><span class="sxs-lookup"><span data-stu-id="516e5-160">This code will partition `facebookUsers` across system threads as necessary, sum up the total likes on each thread in parallel, sum the results computed by each thread, and project that result into a nice string.</span></span>
+<span data-ttu-id="ae943-160">Bu kod bölüm `facebookUsers` gerekirse, toplam beğenilerin paralel, her bir iş parçacığı üzerinde toplama sistem iş parçacıklarını arasında her iş parçacığı tarafından hesaplanan sonuçlarını toplamak ve bu sonucu güzel bir dizeye proje.</span><span class="sxs-lookup"><span data-stu-id="ae943-160">This code will partition `facebookUsers` across system threads as necessary, sum up the total likes on each thread in parallel, sum the results computed by each thread, and project that result into a nice string.</span></span>
 
-<span data-ttu-id="516e5-161">Diyagram formunda:</span><span class="sxs-lookup"><span data-stu-id="516e5-161">In diagram form:</span></span>
+<span data-ttu-id="ae943-161">Diyagram formunda:</span><span class="sxs-lookup"><span data-stu-id="ae943-161">In diagram form:</span></span>
 
 ![PLINQ diyagramı](./media/using-linq/plinq-diagram.png)
 
-<span data-ttu-id="516e5-163">LINQ ile kolayca ifade edilebilir paralelleştirilebilir CPU bağımlı iş (diğer bir deyişle, saf işlevler ve yan etkileri) PLINQ için mükemmel bir adaydır.</span><span class="sxs-lookup"><span data-stu-id="516e5-163">Parallelizable CPU-bound jobs which can be easily expressed via LINQ (in other words, are pure functions and have no side effects) are a great candidate for PLINQ.</span></span> <span data-ttu-id="516e5-164">İşler, _yapmak_ bir yan etkisi, kullanmayı [görev paralel Kitaplığı](./parallel-programming/task-parallel-library-tpl.md).</span><span class="sxs-lookup"><span data-stu-id="516e5-164">For jobs which _do_ have a side effect, consider using the [Task Parallel Library](./parallel-programming/task-parallel-library-tpl.md).</span></span>
+<span data-ttu-id="ae943-163">LINQ ile kolayca ifade edilebilir paralelleştirilebilir CPU bağımlı iş (diğer bir deyişle, saf işlevler ve yan etkileri) PLINQ için mükemmel bir adaydır.</span><span class="sxs-lookup"><span data-stu-id="ae943-163">Parallelizable CPU-bound jobs which can be easily expressed via LINQ (in other words, are pure functions and have no side effects) are a great candidate for PLINQ.</span></span> <span data-ttu-id="ae943-164">İşler, _yapmak_ bir yan etkisi, kullanmayı [görev paralel Kitaplığı](./parallel-programming/task-parallel-library-tpl.md).</span><span class="sxs-lookup"><span data-stu-id="ae943-164">For jobs which _do_ have a side effect, consider using the [Task Parallel Library](./parallel-programming/task-parallel-library-tpl.md).</span></span>
 
-## <a name="further-resources"></a><span data-ttu-id="516e5-165">Ek kaynaklar:</span><span class="sxs-lookup"><span data-stu-id="516e5-165">Further Resources:</span></span>
+## <a name="further-resources"></a><span data-ttu-id="ae943-165">Ek kaynaklar:</span><span class="sxs-lookup"><span data-stu-id="ae943-165">Further Resources:</span></span>
 
-* [<span data-ttu-id="516e5-166">101 LINQ örneği</span><span class="sxs-lookup"><span data-stu-id="516e5-166">101 LINQ Samples</span></span>](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-* <span data-ttu-id="516e5-167">[Linqpad](https://www.linqpad.net/), oyun alanı ortamı ve veritabanını sorgulama altyapısı için C#/F#/VB</span><span class="sxs-lookup"><span data-stu-id="516e5-167">[Linqpad](https://www.linqpad.net/), a playground environment and Database querying engine for C#/F#/VB</span></span>
-* <span data-ttu-id="516e5-168">[EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/),-LINQ nesnelerin nasıl gerçekleştirilir öğrenmek için kitap</span><span class="sxs-lookup"><span data-stu-id="516e5-168">[EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), an e-book for learning how LINQ-to-objects is implemented</span></span>
+* [<span data-ttu-id="ae943-166">101 LINQ örneği</span><span class="sxs-lookup"><span data-stu-id="ae943-166">101 LINQ Samples</span></span>](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* <span data-ttu-id="ae943-167">[Linqpad](https://www.linqpad.net/), oyun alanı ortamı ve veritabanını sorgulama altyapısı için C#/F#/VB</span><span class="sxs-lookup"><span data-stu-id="ae943-167">[Linqpad](https://www.linqpad.net/), a playground environment and Database querying engine for C#/F#/VB</span></span>
+* <span data-ttu-id="ae943-168">[EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/),-LINQ nesnelerin nasıl gerçekleştirilir öğrenmek için kitap</span><span class="sxs-lookup"><span data-stu-id="ae943-168">[EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), an e-book for learning how LINQ-to-objects is implemented</span></span>
