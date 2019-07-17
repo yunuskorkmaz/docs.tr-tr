@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 3ee02eca9719f4ffa3ee0c165ad2541c9ffd085e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7554471d8b812b60e0b1aeb6dd3096b542ca44d6
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625265"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238413"
 ---
 # <a name="opacity-masks-overview"></a>Opaklık Maskelerine Genel Bakış
 Opaklık maskeleri saydam veya saydam kısmen bölümleri bir öğe veya görselin yapmanızı sağlar. Geçirgenlik maskesi oluşturma için geçerli bir <xref:System.Windows.Media.Brush> için <xref:System.Windows.UIElement.OpacityMask%2A> özelliği bir öğe veya <xref:System.Windows.Media.Visual>.  Fırça öğeye veya görsel eşlenir ve her fırça piksel geçirgenlik değeri elde edilen opaklık öğe veya görselin karşılık gelen her pikselin belirlemek için kullanılır.  
@@ -69,15 +69,15 @@ DrawingBrush opaklık maskeleme örneği
 ## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>Gradyan durakları bir opaklık maskesi için belirtme  
  Önceki örnekte, sistem tarafından tanımlanan renk <xref:System.Windows.Media.Colors.Black%2A> gradyan başlangıç rengi olarak kullanılır. Çünkü tüm renkleri <xref:System.Windows.Media.Colors> sınıfı dışında <xref:System.Windows.Media.Colors.Transparent%2A>, bunlar yalnızca bir gradyan opaklık maskesi için başlangıç rengini tanımlamak için kullanılabilir tam opak olan.  
   
- Bir opaklık maskesi tanımlarken alfa değerleri üzerinde ek denetim için renkleri kullanarak alfa kanalı belirtebilirsiniz [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] biçimlendirme ya da onaltılık gösterimde <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> yöntemi.  
+ Bir opaklık maskesi tanımlarken alfa değerleri üzerinde ek denetim için alfa kanalı veya biçimlendirmede ARGB onaltılık gösterim kullanarak renkler belirtebilirsiniz <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> yöntemi.  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>"XAML" renk opaklığı belirtme  
- İçinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], kullandığınız [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] tek tek renkler opaklığını belirtmek için onaltılık gösterim. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] onaltılık gösterim aşağıdaki sözdizimini kullanır:  
+ İçinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], ARGB onaltılık gösterimde tek tek renkler opaklığını belirtmek için kullanın. ARGB onaltılık gösterim aşağıdaki sözdizimini kullanır:  
   
  `#` **aa** *rrggbb*  
   
- *Aa* önceki satıra rengin geçirgenliğini belirtmek için kullanılan iki basamaklı bir onaltılık değer temsil eder. *Rr*, *gg*, ve *bb* her rengin kırmızı, yeşil ve mavi miktarını belirtmek için kullanılan iki basamaklı bir onaltılık değeri temsil eder. Her bir onaltılık basamak 0-9 veya A-f arasında bir değer olabilir. en küçük değer 0 ise ve F en büyük değerdir. Alfa değeri 00 ila tamamen opak FF alfa değeri olan bir renk oluştururken tamamen şeffaf olduğundan bir renk belirtir.  Aşağıdaki örnekte, onaltılık [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] gösterim iki renkleri belirtmek için kullanılır. İlk tam opak açıkken ikinci tamamen saydamdır.  
+ *Aa* önceki satıra rengin geçirgenliğini belirtmek için kullanılan iki basamaklı bir onaltılık değer temsil eder. *Rr*, *gg*, ve *bb* her rengin kırmızı, yeşil ve mavi miktarını belirtmek için kullanılan iki basamaklı bir onaltılık değeri temsil eder. Her bir onaltılık basamak 0-9 veya A-f arasında bir değer olabilir. en küçük değer 0 ise ve F en büyük değerdir. Alfa değeri 00 ila tamamen opak FF alfa değeri olan bir renk oluştururken tamamen şeffaf olduğundan bir renk belirtir.  Aşağıdaki örnekte, ARGB onaltılık gösterim iki renkleri belirtmek için kullanılır. İlk tam opak açıkken ikinci tamamen saydamdır.  
   
  [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
   
