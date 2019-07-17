@@ -2,12 +2,12 @@
 title: C#Dil sürümü oluşturma - C# Kılavuzu
 description: Hakkında nasıl bilgi C# dil sürümü, projenizi temel alarak belirlenir ve farklı değerler, el ile şekilde ayarlayabilirsiniz.
 ms.date: 07/10/2019
-ms.openlocfilehash: 2d593ca0588f291c61cdf52fbc1eb60a1f3f7ecb
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859598"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236090"
 ---
 # <a name="c-language-versioning"></a>C#Dil sürümü oluşturma
 
@@ -17,9 +17,9 @@ C# Derleyici, proje hedef Framework'ü veya çerçeveleri göre varsayılan dil 
 
 Derleyici, bu kurallara dayalı bir varsayılan belirler:
 
-|Hedef Çerçeve|version|C#Dil sürümü varsayılan|
+|Hedef Çerçeve|sürüm|C#Dil sürümü varsayılan|
 |----------------|-------|---------------------------|
-|.NET Core|3.x|C# 8.0|
+|.NET Core|3.x|C#8.0|
 |.NET Core|2.x|C# 7.3|
 |.NET Standard|tüm|C# 7.3|
 |.NET Framework|tüm|C# 7.3|
@@ -34,7 +34,7 @@ Belirtmeniz gerekiyorsa, C# sürüm açıkça çeşitli yollarla bunu yapabilirs
 
 - El ile düzenlemeniz, [proje dosyası](#edit-the-project-file).
 - Dil sürümünü ayarlama [bir alt dizinde birden çok proje için](#configure-multiple-projects).
-- Yapılandırma [ `-langversion` derleyici seçeneği](#set-the-langversion-compiler-option).
+- Yapılandırma [ `-langversion` derleyici seçeneği](compiler-options/langversion-compiler-option.md)
 
 ### <a name="edit-the-project-file"></a>Proje dosyası Düzenle
 
@@ -66,7 +66,7 @@ Bu dosyayı içeren dizine her alt yapılarında Önizleme artık, kullanacak C#
 
 Aşağıdaki tablo geçerli tüm gösterir C# dil sürümleri. Eski ise, derleyici her değer mutlaka anlamayabilir. .NET Core 3.0 yüklerseniz, listelenen her şeye erişimi gerekir.
 
-|Value|Anlamı|
+|Değer|Açıklama|
 |------------|-------------|
 |önizleme|Derleyici, en son Önizleme sürümünden tüm geçerli dili söz dizimini kabul eder.|
 |latest|Bir derleyici sürümünden en son yayımlanan (alt sürümü dahil) derleyici sözdizimini kabul eder.|

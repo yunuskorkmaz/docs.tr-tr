@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 3e4438b309d4e443d07a6c2db2310733927fd38b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 86178f3e49dc25bee57b0896f2ebc2cf729b69bd
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625340"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238473"
 ---
 # <a name="data-binding-overview"></a>Veri Bağlamaya Genel Bakış
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama sunmak ve verilerle etkileşimde bulunmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Çeşitli veri kaynaklarından biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s gibi <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.ItemsControl>s gibi <xref:System.Windows.Controls.ListBox> ve <xref:System.Windows.Controls.ListView> esnek tek veri öğelerini stilini veya koleksiyonları etkinleştirmek için yerleşik bir işlevselliğe sahiptir. Sıralama, filtreleme ve Grup görünümleri, veri üzerinde oluşturulabilir.  
@@ -28,7 +28,7 @@ ms.locfileid: "64625340"
 ## <a name="what-is-data-binding"></a>Veri bağlama nedir?  
  Veri bağlama olan uygulama arasında bağlantı kuran işlem [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ve iş mantığı. Veriler, değeri değiştiğinde bağlama doğru ayarları varsa ve verileri uygun bildirimleri sağlar, daha sonra veriye bağlı öğeleri değişiklikleri otomatik olarak yansıtır. Veri bağlama, bir öğe verileri bir dış temsilini değişirse, ardından temel alınan verileri otomatik olarak değişikliği yansıtacak şekilde güncelleştirilmesi anlamına da gelebilir. Örneğin, kullanıcı değeri düzenlerse bir <xref:System.Windows.Controls.TextBox> öğesi, temel alınan veri değeri bu değişikliği yansıtacak şekilde otomatik olarak güncelleştirilir.  
   
- Forms veya diğer sunucu veya yerel yapılandırma verilerini yerleştirmek için tipik bir kullanımı, veri bağlama olan [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kontrol eder. İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bu kavram, çeşitli veri kaynaklarından özelliklerinin geniş bir bağlama eklemek için genişletilir. İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], öğelerin bağımlılık özellikleri bağlanabilir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri (dahil olmak üzere [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] nesneleri veya Web Hizmetleri ve Web özellikleri ile ilişkili nesneleri) ve [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri.  
+ Forms veya diğer sunucu veya yerel yapılandırma verilerini yerleştirmek için tipik bir kullanımı, veri bağlama olan [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kontrol eder. İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bu kavram, çeşitli veri kaynaklarından özelliklerinin geniş bir bağlama eklemek için genişletilir. İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], öğelerin bağımlılık özellikleri bağlanabilir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri (ADO.NET nesneleri veya Web Hizmetleri ve Web özellikleri ile ilişkili nesneleri dahil) ve [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri.  
   
  Veri bağlama örneği için aşağıdaki uygulama göz atın [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] gelen [veri bağlama tanıtım](https://go.microsoft.com/fwlink/?LinkID=163703):  
   
@@ -68,7 +68,7 @@ ms.locfileid: "64625340"
   
 - Hedef özelliği, bir bağımlılık özelliği olmalıdır. Çoğu <xref:System.Windows.UIElement> özelliklerdir bağımlılık özellikleri ve salt okunur olanlar dışında birçok bağımlılık özellikleri varsayılan olarak veri bağlamayı destekler. (Yalnızca <xref:System.Windows.DependencyObject> bağımlılık özellikleri ve tüm türleri tanımlayabilirsiniz <xref:System.Windows.UIElement>s türetilen <xref:System.Windows.DependencyObject>.)  
   
-- Aşağıdaki şekilde belirtilmemiş olsa da, özel olarak bağlama kaynak nesnesi sınırlı değildir unutulmamalıdır [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesne. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] veri bağlamayı destekleyen veri biçiminde [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Bazı örnekler sağlamak için bağlama kaynağınızı olabilir bir <xref:System.Windows.UIElement>, herhangi bir liste nesnesi bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ile ilişkili nesne [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] verileri veya Web Hizmetleri ya da içeren bir XmlNode, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri. Daha fazla bilgi için [bağlama kaynaklarına genel bakış](binding-sources-overview.md).  
+- Aşağıdaki şekilde belirtilmemiş olsa da, özel olarak bağlama kaynak nesnesi sınırlı değildir unutulmamalıdır [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesne. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] veri bağlamayı destekleyen veri biçiminde [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Bazı örnekler sağlamak için bağlama kaynağınızı olabilir bir <xref:System.Windows.UIElement>, herhangi bir liste nesnesi bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ADO.NET veri veya Web Hizmetleri ile ilişkili olan nesne ya da içeren bir XmlNode, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri. Daha fazla bilgi için [bağlama kaynaklarına genel bakış](binding-sources-overview.md).  
   
  Diğer okurken [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] konular, bağlama kurarken bir bağlama hedefi bağlıyorsanız unutmamak *için* bağlama kaynağı. Örneğin, bazı temel görüntülüyorsanız [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] verilerinde bir <xref:System.Windows.Controls.ListBox> kullanarak veri bağlama, bağlama, <xref:System.Windows.Controls.ListBox> için [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri.  
   
@@ -257,7 +257,7 @@ ms.locfileid: "64625340"
 |Kaynak koleksiyon türü|Koleksiyon görünüm türü|Notlar|  
 |----------------------------|--------------------------|-----------|  
 |<xref:System.Collections.IEnumerable>|Temel bir iç türü <xref:System.Windows.Data.CollectionView>|Öğeleri gruplandıramazsınız.|  
-|<xref:System.Collections.IList>|<xref:System.Windows.Data.ListCollectionView>|Fastest.|  
+|<xref:System.Collections.IList>|<xref:System.Windows.Data.ListCollectionView>|Hızlı.|  
 |<xref:System.ComponentModel.IBindingList>|<xref:System.Windows.Data.BindingListCollectionView>||  
   
 ##### <a name="using-a-default-view"></a>Varsayılan görünüm kullanma  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: ba4ee4366bf47d739c8a7ef98a4d5312c214bf54
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8bb61767324602ae54427c50c73e029a6c7bf3b7
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744106"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236013"
 ---
 # <a name="c-keywords"></a>C# Anahtar Sözcükleri
 
@@ -56,7 +56,7 @@ Anahtar sözcükler, derleyiciye özel anlamları olan önceden tanımlanmış, 
 |[descending](descending.md)|[dynamic](dynamic.md)|[equals](equals.md)|
 |[from](from-clause.md)|[get](get.md)|[global](global.md)|
 |[Grup](group-clause.md)|[into](into.md)|[Katılın](join-clause.md)|
-|[let](let-clause.md)|[nameof](nameof.md)|[on](on.md)|
+|[let](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
 |[OrderBy](orderby-clause.md)|[partial (tür)](partial-type.md)|[partial (yöntem)](partial-method.md)|
 |[remove](remove.md)|[Seçin](select-clause.md)|[set](set.md)|
 |[value](value.md)|[var](var.md)|[when (filtre koşulu)](when.md)|

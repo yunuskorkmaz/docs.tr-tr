@@ -4,12 +4,12 @@ description: '.NET Core, .NET standart, UWP ve Xamarin de dahil olmak üzere çe
 ms.date: 07/10/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: f05d4f4a2fce8fa9a4d2e334f44190ea37335038
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 73a9cacbce02880d236f87459673812af9828916
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859778"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238552"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -52,7 +52,7 @@ Hedef Platform tarafından desteklenmeyen API raporda görünür. Visual Studio'
 
 ![Taşınabilirlik özeti](./media/portability-analyzer/portabilitysummary.png)
 
-Taşınabilirlik Özet bölümünde rapor gösterir çalıştırmaya dahil her derleme için taşınabilirlik yüzdesi. .NET Framework API'ları %89.74 önceki örnekte kullanılan `ConsoleAppFramework` uygulama, .NET Core + uzantılar v2.2 içinde kullanılabilir. Birden çok bütünleştirilmiş koda karşı .NET Portability Analyzer aracını gerekiyorsa, her derleme taşınabilirlik Özeti raporunda bir satır olması gerekir.
+Raporun taşınabilirlik Özet bölümünde çalıştırmaya dahil her derleme için taşınabilirlik yüzdesini gösterir. .NET Framework API'ları %89.74 önceki örnekte kullanılan `ConsoleAppFramework` uygulama, .NET Core + uzantılar v2.2 içinde kullanılabilir. Birden çok bütünleştirilmiş koda karşı .NET Portability Analyzer aracını gerekiyorsa, her derleme taşınabilirlik Özeti raporunda bir satır olması gerekir.
 
 #### <a name="details"></a>Ayrıntılar
 
@@ -60,11 +60,11 @@ Taşınabilirlik Özet bölümünde rapor gösterir çalıştırmaya dahil her d
 
 Rapor ayrıntıları bölümü, Hedef platformlar birinden API'leri eksik listeler. 
 
- - Hedef türü: türü hedef Platform API'SİNDEN eksik 
- - Hedef üye: hedef platformdan yöntemi eksik 
- - Derleme adı: eksik API kendini .NET Framework derlemesi. 
- - Her bir seçili hedef platformlar ".NET Core" gibi bir sütun şöyledir: "Desteklenmiyor" değeri, API, bu hedef platformda desteklenmiyor anlamına gelir. 
- - Değişiklikleri önerilen: API veya değiştirmek için teknoloji önerilir. Şu anda, bu alan boş veya çok sayıda API'leri için güncel kalır. API'ları çok sayıda nedeniyle, bu kalmasını sağlamak için büyük zorluk sahibiz. Müşterilere yardımcı olacak bilgiler sağlamak için alternatif çözümler, arıyoruz.
+- Hedef türü: türü hedef Platform API'SİNDEN eksik 
+- Hedef üye: hedef platformdan yöntemi eksik 
+- Derleme adı: eksik API kendini .NET Framework derlemesi. 
+- Her bir seçili hedef platformlar ".NET Core" gibi bir sütun şöyledir: "Desteklenmiyor" değeri, API, bu hedef platformda desteklenmiyor anlamına gelir. 
+- Değişiklikleri önerilen: API veya değiştirmek için teknoloji önerilir. Şu anda, bu alan boş veya çok sayıda API'leri için güncel kalır. API'ları çok sayıda nedeniyle, bu kalmasını sağlamak için büyük zorluk sahibiz. Müşterilere yardımcı olacak bilgiler sağlamak için alternatif çözümler, arıyoruz.
 
 #### <a name="missing-assemblies"></a>Derlemeleri eksik
 
@@ -73,5 +73,3 @@ Rapor ayrıntıları bölümü, Hedef platformlar birinden API'leri eksik listel
 Raporunuzda eksik derlemeleri bölümünde bulabilirsiniz. Bu, bu derlemelerin listesini, analiz edilen derlemeler tarafından başvurulur ve çözümlenmedi bildirir. Sahip olduğunuz bir derleme ise, API düzey ayrıntılı taşınabilirlik rapor alabilmesi için API taşınabilirlik Çözümleyicisi içerir. Üçüncü taraf kitaplığı ise, bunlar hedef platformunuzu destekleyen daha yeni sürümüne sahipseniz arar. Bu durumda, en yeni sürüme taşıma göz önünde bulundurun. Sonuç olarak, bu liste, uygulamanıza bağlıdır ve hedef platformunuzu destekleyen bir sürüme sahip olduğunuzu onaylanan tüm üçüncü taraf derlemeleri içerir beklenir.  
 
 .NET Portability Analyzer hakkında daha fazla bilgi için ziyaret [GitHub belgeleri](https://github.com/Microsoft/dotnet-apiport#documentation) ve [bir kısa bakın .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer) kanal 9 videosu.
-
-

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 2fa2e039d73d079b6dacc9326c64fc2015eecc49
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610352"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238491"
 ---
 # <a name="wpf-architecture"></a>WPF Mimarisi
 Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisi Kılavuzlu bir turu sağlar. Ana alt çoğunu kapsar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ve nasıl etkileşim kurduklarını açıklar. Bu ayrıca mimarları tarafından yapılan seçimleri bazıları ayrıntılı [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -64,7 +64,7 @@ Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisi Kılavuzlu b
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
  Sistem tanımlı bir sonraki adıma ekrana çizilmiş piksel almaktır. <xref:System.Windows.Media.Visual> Sınıfı, görsel nesneler bir ağaç her isteğe bağlı olarak çizim yönergeleri ve bu yönergeleri (kırpma, dönüştürme, vb.) işlemek nasıl hakkındaki meta verileri içeren oluşturmak için sağlar. <xref:System.Windows.Media.Visual> özelliklerin çoğunu Genel API gerçekleşmediğinden sahiptir ve yoğun olarak korumalı bir geri çağırma işlevleri kullanan son derece basit ve esnek olacak şekilde tasarlanmıştır.  
   
- <xref:System.Windows.Media.Visual> gerçekten giriş noktası olan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] oluşturma sistemi. <xref:System.Windows.Media.Visual> yönetilen iki bu sistemler arasında bağlantı noktasıdır [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] ve yönetilmeyen milcore.  
+ <xref:System.Windows.Media.Visual> gerçekten giriş noktası olan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] oluşturma sistemi. <xref:System.Windows.Media.Visual> Bu iki alt sistemler, yönetilen API ve yönetilmeyen milcore arasında bir bağlantı noktasıdır.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tarafından yönetilen milcore tarafından yönetilmeyen veri yapılarını geçiş verilerini görüntüler. Birleşim düğüm olarak adlandırılan bu yapılar, her düğümde işleme yönergeleri içeren bir hiyerarşik görünüm ağacı temsil eder. Sağ tarafta, aşağıdaki şekilde gösterilen bu ağaç, yalnızca bir Mesajlaşma protokolü aracılığıyla erişilebilir.  
   

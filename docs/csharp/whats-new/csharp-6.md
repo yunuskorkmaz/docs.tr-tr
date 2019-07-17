@@ -2,12 +2,12 @@
 title: C# 6 - C# Kılavuzu yenilikler nelerdir?
 description: C# sürüm 6'daki yeni özelliklerin öğrenin
 ms.date: 12/12/2018
-ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49247109bd1acbf697f5700b5cfe9a2b85393b2c
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706188"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235713"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 yenilikleri
 
@@ -137,7 +137,7 @@ Dize ilişkilendirme ile çalışmaya başlamak için bkz. [dize ilişkilendirme
 
 ## <a name="the-nameof-expression"></a>`nameof` İfadesi
 
-`nameof` Bir sembol adı için ifadeyi hesaplar. Her bir değişken, bir özellik veya üye alan adını ihtiyaç duyduğunuzda çalışma araçları almak için harika bir yoludur. En yaygın birini kullanan için `nameof` bir özel durum nedeniyle bir sembol adını sağlar:
+[Nameof](../language-reference/operators/nameof.md) bir sembol adı için ifadeyi hesaplar. Her bir değişken, bir özellik veya üye alan adını ihtiyaç duyduğunuzda çalışma araçları almak için harika bir yoludur. En yaygın birini kullanan için `nameof` bir özel durum nedeniyle bir sembol adını sağlar:
 
 [!code-csharp[nameof](../../../samples/snippets/csharp/new-in-6/NewCode.cs#UsingStaticString)]
 

@@ -32,35 +32,40 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfb1298abaff0cfe8eae7536f94511a30012a4a9
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744219"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236083"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tamsayı sayısal türleri (C# Başvurusu)
 
-**Tamsayı sayısal türleri** bir alt kümesidir **basit türler** ve ile başlatılabilir [ *değişmez değerleri*](#integral-literals). Tüm tamsayı türleri de değer türleridir.
+**Tamsayı sayısal türleri** bir alt kümesidir **basit türler** ve ile başlatılabilir [ *değişmez değerleri*](#integral-literals). Tüm tamsayı türleri de değer türleridir. Tüm tamsayı sayısal türleri desteği [aritmetik](../operators/arithmetic-operators.md), [bit düzeyinde mantıksal](../operators/bitwise-and-shift-operators.md), [karşılaştırma ve eşitlik](../operators/equality-operators.md) işleçleri.
 
-Tüm tamsayı sayısal türleri desteği [aritmetik](../operators/arithmetic-operators.md), [bit düzeyinde mantıksal](../operators/bitwise-and-shift-operators.md), [karşılaştırma ve eşitlik](../operators/equality-operators.md) işleçleri.
+## <a name="characteristics-of-the-integral-types"></a>İntegral türündeki özellikleri
 
-## <a name="sizes-and-ranges"></a>Boyutları ve aralıkları
+C#Aşağıdaki önceden tanımlanmış tamsayı türlerini destekler:
 
-Aşağıdaki tabloda, boyutları ve tam sayı türleri aralığı gösterilmektedir:
+|C#anahtar yazın|Aralık|Boyut|.NET türü|
+|----------|-----------|----------|-------------|
+|`sbyte`|-128 ila 127 arasında|İşaretli 8 bit tam sayı|<xref:System.SByte?displayProperty=nameWithType>|
+|`byte`|0 ile 255 arasında|İmzalanmamış 8 bit tam sayı|<xref:System.Byte?displayProperty=nameWithType>|
+|`short`|-32.768 için 32.767|İşaretli 16 bit tam sayı|<xref:System.Int16?displayProperty=nameWithType>|
+|`ushort`|0 ile 65.535 arasındaki|16 bit işaretsiz tamsayı|<xref:System.UInt16?displayProperty=nameWithType>|
+|`int`|-2.147.483.648 için 2.147.483.647|İşaretli 32 bit tam sayı|<xref:System.Int32?displayProperty=nameWithType>|
+|`uint`|0 için 4.294.967.295'e|32-bit işaretsiz tamsayı|<xref:System.UInt32?displayProperty=nameWithType>|
+|`long`|-9,223,372,036,854,775,808 için 9.223.372.036.854.775.807|İşaretli 64 bit tam sayı|<xref:System.Int64?displayProperty=nameWithType>|
+|`ulong`|0 için 18,446,744,073,709,551,615|64-bit işaretsiz tamsayı|<xref:System.UInt64?displayProperty=nameWithType>|
 
-|Tür|Aralık|Boyut|  
-|----------|-----------|----------|  
-|`sbyte`|-128 ila 127 arasında|İşaretli 8 bit tam sayı|  
-|`byte`|0 ile 255 arasında|İmzalanmamış 8 bit tam sayı|  
-|`short`|-32.768 için 32.767|İşaretli 16 bit tam sayı|  
-|`ushort`|0 ile 65.535 arasındaki|16 bit işaretsiz tamsayı|  
-|`int`|-2.147.483.648 için 2.147.483.647|İşaretli 32 bit tam sayı|  
-|`uint`|0 için 4.294.967.295'e|32-bit işaretsiz tamsayı|  
-|`long`|-9,223,372,036,854,775,808 için 9.223.372.036.854.775.807|İşaretli 64 bit tam sayı|  
-|`ulong`|0 için 18,446,744,073,709,551,615|64-bit işaretsiz tamsayı|  
+Önceki tabloda her C# en soldaki sütun türü anahtar kelimedir karşılık gelen .NET türü için bir diğer ad. Birbirinin yerine kullanılabilir. Örneğin, aşağıdaki bildirimleri aynı türde değişkenleri bildirin:
 
-Tüm tamsayı türleri için varsayılan değerdir `0`. Her bir integral türü sabitleri adlı sahip `MinValue` ve `MaxValue` türü için minimum ve maksimum değeri.
+```csharp
+int a = 123;
+System.Int32 b = 123;
+```
+
+Her bir integral türünün varsayılan değeri sıfırdır `0`. Her bir integral türü olan `MinValue` ve `MaxValue` minimum ve maksimum değerin türü sağlayan sabitler.
 
 Kullanım <xref:System.Numerics.BigInteger?displayProperty=nameWithType> yapısı hiçbir üst işaretli bir tam sayı veya alt sınırlarını temsil etmek için.
 
@@ -76,7 +81,7 @@ var binaryLiteral = 0b_0010_1010;
 
 Ondalık sabit değerleri herhangi bir önek gerektirmez. `x` Veya `X` önek belirten bir *onaltılık değişmez değeri*. `b` Veya `B` önek belirten bir *ikili değişmez değer*. Bildirimi `binaryLiteral` kullanımını gösteren `_` olarak bir *basamak ayıracı*. Basamak ayırıcı, tüm sayısal değişmez değerleri ile kullanılabilir. İkili sabit değerler ve basamak ayıracı `_` başlayarak desteklenir C# 7.0.
 
-### <a name="literal-suffixes"></a>Değişmez değer soneki 
+### <a name="literal-suffixes"></a>Değişmez değer soneki
 
 `l` Veya `L` sonekini belirtir, tam sayı sabiti olmalıdır `long` türü. `ul` Veya `UL` sonekini belirtir `ulong` türü. Varsa `L` soneki 9.223.372.036.854.775.807 büyük bir sabit değer ınternationalized (en büyük değerini `long`), değeri dönüştürülür `ulong` türü. Bir tamsayı sabit değeri tarafından temsil edilen değeri aşarsa <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, bir derleyici hatası [CS1021](../../misc/cs1021.md) gerçekleşir. 
 
@@ -123,11 +128,3 @@ var anotherLong = (long)42;
 - [Sayısal sonuçlar tablosunu biçimlendirme](../keywords/formatting-numeric-results-table.md)
 - [Yerleşik türler tablosu](../keywords/built-in-types-table.md)
 - [.NET Sayısal Değerleri](../../../standard/numerics.md)
-- <xref:System.Byte?displayProperty=nameWithType>
-- <xref:System.SByte?displayProperty=nameWithType>
-- <xref:System.Int16?displayProperty=nameWithType>
-- <xref:System.UInt16?displayProperty=nameWithType>
-- <xref:System.Int32?displayProperty=nameWithType>
-- <xref:System.UInt32?displayProperty=nameWithType>
-- <xref:System.Int64?displayProperty=nameWithType>
-- <xref:System.UInt64?displayProperty=nameWithType>

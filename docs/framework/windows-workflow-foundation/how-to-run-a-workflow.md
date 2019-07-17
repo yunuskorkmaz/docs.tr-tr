@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: c47e1ba89179b38055244c01507318836c899fda
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a7784f37c9e8009adc3735974a6fb0423f24ea37
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637515"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238508"
 ---
 # <a name="how-to-run-a-workflow"></a>Nasıl yapılır: İş Akışı Çalıştırma
 Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı niteliğindedir ve bir iş akışı ana bilgisayarı oluşturun ve önceki tanımlanan iş akışı çalıştırma anlatılmaktadır [nasıl yapılır: Bir iş akışı oluşturmak](how-to-create-a-workflow.md) konu.
@@ -30,7 +30,7 @@ Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı 
     > [!TIP]
     >  Varsa **Çözüm Gezgini** penceresi görüntülenmiyorsa, seçin **Çözüm Gezgini** gelen **görünümü** menüsü.
 
-3. İçinde **yüklü** düğümünü **Visual C#**, **iş akışı** (veya **Visual Basic**, **iş akışı**).
+3. İçinde **yüklü** düğümünü **Visual C#** , **iş akışı** (veya **Visual Basic**, **iş akışı**).
 
     > [!NOTE]
     >  Hangi programlama diline bağlı olarak, Visual Studio'da birincil dili olarak yapılandırılmış **Visual C#** veya **Visual Basic** düğümü altında olabilir **diğer diller** düğümünde **yüklü** düğümü.
@@ -51,13 +51,13 @@ Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı 
      Bu proje kullanılarak oluşturulduğundan **iş akışı konsol uygulaması** şablon **Program.cs** veya **Module1.vb** aşağıdaki temel iş akışı barındırma içerir kodu.
 
     ```vb
-    ' Create and cache the workflow definition
-    Activity workflow1 = new Workflow1()
+    ' Create and cache the workflow definition.
+    Dim workflow1 As Activity = New Workflow1()
     WorkflowInvoker.Invoke(workflow1)
     ```
 
     ```csharp
-    // Create and cache the workflow definition
+    // Create and cache the workflow definition.
     Activity workflow1 = new Workflow1();
     WorkflowInvoker.Invoke(workflow1);
     ```

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: d40d1636b510fcfe667ab3e728d1688ce38641d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611940"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238445"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Performansı iyileştirme: Donanımdan Yararlanma
 Mimarisini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iki işlenen ardışık düzen, donanım ve yazılım vardır. Bu konuda, uygulamalarınızın performans iyileştirmeleri hakkında kararlar almanıza yardımcı olmak için bu işleme ardışık düzenleri hakkında bilgi sağlar.  
@@ -30,7 +30,7 @@ Mimarisini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-wincl
 ### <a name="graphics-rendering-tiers"></a>Grafik İşleme Katmanları  
  Uygulamanızın üzerinde çalışacağı donanım yapılandırması tahmin etmek oldukça zor olabilir. Ancak, her farklı donanım yapılandırması tüm avantajlarından yararlanabilmeniz sorunsuz bir şekilde özellikleri farklı bir donanım üzerinde çalışırken uygulamanızın izin veren bir tasarımı düşünün isteyebilirsiniz.  
   
- Bunu başarmak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zamanında sistemin grafik kapasitesini belirlemek için işlevsellik sağlar. Grafik yeteneği, üç işleme yeteneği katmanları biri olarak ekran kartı gruplayarak belirlenir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanıma sunan bir [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] işleme yeteneği katmanını sorgulamak bir uygulama sağlar. Uygulamanızı daha sonra donanım tarafından desteklenen işleme katmanına bağlı olarak çalışma zamanında farklı kod yollarını da alabilir.  
+ Bunu başarmak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zamanında sistemin grafik kapasitesini belirlemek için işlevsellik sağlar. Grafik yeteneği, üç işleme yeteneği katmanları biri olarak ekran kartı gruplayarak belirlenir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işleme yeteneği katmanını sorgulamak uygulamaya izin veren bir API'yi kullanıma sunar. Uygulamanızı daha sonra donanım tarafından desteklenen işleme katmanına bağlı olarak çalışma zamanında farklı kod yollarını da alabilir.  
   
  En çok katmanı işleme düzeyleri etkileyen grafik donanımının özellikleri şunlardır:  
   

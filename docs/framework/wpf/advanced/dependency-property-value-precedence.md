@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 4ea417b2a922574eb92a07aa845c360f6e843f17
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d5ff09bb9cc8da45f44cf6fe952411e7cd3f4c4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663409"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238538"
 ---
 # <a name="dependency-property-value-precedence"></a>Bağımlılık Özelliği Değer Önceliği
 <a name="introduction"></a> Bu konu açıklar nasıl işleyişini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi bir bağımlılık özelliğinin değeri etkileyebilir ve hangi yönlerini özelliği tarafından sistemi geçerli etkili bir özelliğinin değerini için öncelik açıklar.  
@@ -43,7 +43,7 @@ ms.locfileid: "64663409"
   
 2. **Etkin animasyonlar veya animasyonları tutma davranış.** Bu değer yerel olarak ayarlanmış olsa bile pratik etkili sahip olmak için bir özelliğin animasyon temel (unanimated) değer üzerinde önceliğe sahip mümkün olması gerekir. Ayrıntılar için bkz [zorlama, animasyon ve temel değer](#animations) bu konuda.  
   
-3. **Yerel değer.** Yerel değer özniteliği veya özelliği bir öğe olarak ayarı da karşılık gelir "sarmalayıcı" özelliği kolaylık aracılığıyla ayarlanabilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], veya bir çağrı tarafından <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] belirli bir örneğine bir özelliğini kullanarak. Bir bağlama veya kaynak kullanarak yerel bir değer ayarlarsanız, doğrudan bir değer olarak ayarlandıysa bu her önceliği işlevi görür.  
+3. **Yerel değer.** Yerel değer özniteliği veya özelliği bir öğe olarak ayarı da karşılık gelir "sarmalayıcı" özelliği kolaylık aracılığıyla ayarlanabilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], veya bir çağrı tarafından <xref:System.Windows.DependencyObject.SetValue%2A> belli bir sayıda örnek özelliğini kullanarak API. Bir bağlama veya kaynak kullanarak yerel bir değer ayarlarsanız, doğrudan bir değer olarak ayarlandıysa bu her önceliği işlevi görür.  
   
 4. **TemplatedParent şablonu özellikleri.** Bir öğeye sahip bir <xref:System.Windows.FrameworkElement.TemplatedParent%2A> bir şablonunun bir parçası oluşturulmuş olsa bile (bir <xref:System.Windows.Controls.ControlTemplate> veya <xref:System.Windows.DataTemplate>). Bu geçerli olduğunda hakkında daha fazla bilgi için bkz [TemplatedParent](#templatedparent) bu konuda. Şablon içerisinde, aşağıdaki öncelik geçerlidir:  
   

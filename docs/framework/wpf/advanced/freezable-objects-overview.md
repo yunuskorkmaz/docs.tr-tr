@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 79c539bd0117c712670601b7498c490fca76090e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: b2ef3c3dbbfbcef08f58c47948f76cb2c238b48a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610515"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238526"
 ---
 # <a name="freezable-objects-overview"></a>Freezable Nesnelerine Genel Bakış
 Bu konu, etkili bir şekilde kullanmak ve oluşturmak üzere açıklar <xref:System.Windows.Freezable> uygulama performansını iyileştirmeye yardımcı olabilecek özel özellikleri sağlayan nesne. Freezable nesneleri Fırçalar, kalemler, dönüştürmeleri, geometri ve animasyonları örneklerindendir.  
@@ -148,7 +148,7 @@ mc:Ignorable="PresentationOptions"
   
  Ayrıca erişme ve bağımlılık özellikleri olmayan veri üyelerine yazma için aşağıdaki kurallara uymanız gerekir:  
   
-- Tüm başındaki [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] bağımlılık özelliği olmayan veri üyeleri okuyan, çağrı <xref:System.Windows.Freezable.ReadPreamble%2A> yöntemi.  
+- Bağımlılık özelliği olmayan veri üyelerini okuyan herhangi bir API'yi başlangıcında, çağrı <xref:System.Windows.Freezable.ReadPreamble%2A> yöntemi.  
   
 - Bağımlılık özelliği olmayan veri üyeleri Yazar herhangi bir API'yi başlangıcında, çağrı <xref:System.Windows.Freezable.WritePreamble%2A> yöntemi. (Çağırdıktan sonra <xref:System.Windows.Freezable.WritePreamble%2A> bir API, ek bir çağrı yapmak gerekmez <xref:System.Windows.Freezable.ReadPreamble%2A> de bağımlılık özelliği olmayan veri üyelerini okuyorsanız.)  
   

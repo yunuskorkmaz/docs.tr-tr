@@ -17,30 +17,39 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 738368abd9db75fbd97d1913324cab3b6e869c56
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0d97b3ffd587e8398e5572706a47937716a6e709
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664208"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236056"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Kayan nokta sayısal türleri (C# Başvurusu)
 
-**Kayan nokta türleri** bir alt kümesidir **basit türler** ve ile başlatılabilir [ *değişmez değerleri*](#floating-point-literals). Tüm kayan nokta türleri de değer türleridir. Tüm kayan nokta sayısal türleri desteği [aritmetik](../operators/arithmetic-operators.md) [karşılaştırma ve eşitlik](../operators/equality-operators.md) işleçleri.
+**Kayan nokta türleri** bir alt kümesidir **basit türler** ve ile başlatılabilir [ *değişmez değerleri*](#floating-point-literals). Tüm kayan nokta türleri de değer türleridir. Tüm kayan nokta sayısal türleri desteği [aritmetik](../operators/arithmetic-operators.md), [karşılaştırma ve eşitlik](../operators/equality-operators.md) işleçleri.
 
-Kayan nokta türleri için yaklaşık aralık ve duyarlık aşağıdaki tabloda gösterilmektedir:
+## <a name="characteristics-of-the-floating-point-types"></a>Kayan nokta türleri özellikleri
+
+C#Aşağıdaki önceden tanımlanmış kayan nokta türlerini destekler:
   
-|Tür|Yaklaşık aralık|Duyarlık|  
-|----------|-----------------------|---------------|  
-|`float`|±1.5 x 10<sup>−45</sup> ±3.4 x 10 için<sup>38</sup>|~ 6-9 basamak|  
-|`double`|±5.0 × 10<sup>−324</sup> ±1.7 × 10 için<sup>308</sup>|yaklaşık 15-17 basamak|  
-|`decimal`|±1.0 x 10<sup>-28</sup> ±7.9228 x 10 için<sup>28</sup>|28-29 basamak|  
+|C#anahtar yazın|Yaklaşık aralık|Duyarlık|.NET türü|
+|----------|-----------------------|---------------|--------------|
+|`float`|±1.5 x 10<sup>−45</sup> ±3.4 x 10 için<sup>38</sup>|~ 6-9 basamak|<xref:System.Single?displayProperty=nameWithType>|
+|`double`|±5.0 × 10<sup>−324</sup> ±1.7 × 10 için<sup>308</sup>|yaklaşık 15-17 basamak|<xref:System.Double?displayProperty=nameWithType>|
+|`decimal`|±1.0 x 10<sup>-28</sup> ±7.9228 x 10 için<sup>28</sup>|28-29 basamak|<xref:System.Decimal?displayProperty=nameWithType>|
 
-Tüm kayan nokta türleri için varsayılan değerdir `0`. Her bir kayan nokta türleri adlandırılmış sabitler olan `MinValue` ve `MaxValue` türü için minimum ve maksimum değeri. `float` Ve `double` türleri için ek sabitler sahip `PositiveInfinity`, `NegativeInfinity`, ve `NaN` (için "bir sayı değil"). `decimal` Türü için sabitler içerir `Zero`, `One`, ve `MinusOne`.
+Önceki tabloda her C# en soldaki sütun türü anahtar kelimedir karşılık gelen .NET türü için bir diğer ad. Birbirinin yerine kullanılabilir. Örneğin, aşağıdaki bildirimleri aynı türde değişkenleri bildirin:
 
-`decimal` Türünde daha fazla duyarlık ve hem de daha küçük bir aralığı `float` ve `double`, getiren onu finansal ve parasal hesaplamalar için uygun.
+```csharp
+double a = 12.3;
+System.Double b = 12.3;
+```
 
-İntegral türleri ve kayan nokta türleri bir ifadede karıştırabilirsiniz. Bu durumda, tamsayı türleri için kayan nokta türleri dönüştürülür. İfadenin değerlendirilmesi aşağıdaki kurallara göre gerçekleştirilir:
+Her bir kayan nokta türünün varsayılan değeri sıfırdır `0`. Kayan nokta türlerinden her birinin sahip `MinValue` ve `MaxValue` türü minimum ve maksimum sonlu değeri sağlayan sabitler. `float` Ve `double` türleri temsil eden bir sayı değil ve sonsuz değerler sabitleri de sağlar. Örneğin, `double` türü aşağıdaki sabitler sunar: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>, ve <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.
+
+Çünkü `decimal` türünde daha fazla duyarlık ve hem de daha küçük bir aralığı `float` ve `double`, finansal ve parasal hesaplamalar için uygundur.
+
+Karıştırabilir miyim [integral](integral-numeric-types.md) türleri ve kayan nokta türlerinde bir ifade. Bu durumda, tamsayı türleri için kayan nokta türleri dönüştürülür. İfadenin değerlendirilmesi aşağıdaki kurallara göre gerçekleştirilir:
 
 - Kayan nokta türlerinden biri ise `double`, ifadenin değerlendirdiği `double`, veya [bool](../keywords/bool.md) karşılaştırmalar ilişkisel veya eşitlik karşılaştırmaları.
 - Yoksa hiçbir `double` değerlendirilen ifade ifadenin türü `float`, veya [bool](../keywords/bool.md) karşılaştırmalar ilişkisel veya eşitlik karşılaştırmaları.
@@ -77,7 +86,7 @@ myMoney = 400.75M;
 
 ## <a name="conversions"></a>Dönüşümler
 
-Örtük bir dönüştürme (adlı bir *dönüştürme genişletme*) öğesinden `float` için `double` çünkü aralığını `float` değerleri olan uygun bir alt kümesini `double` ve Duyarlılıkkaybıolmadan`float` için `double`. 
+Örtük bir dönüştürme (adlı bir *dönüştürme genişletme*) öğesinden `float` için `double` çünkü aralığını `float` değerleri olan uygun bir alt kümesini `double` ve Duyarlılıkkaybıolmadan`float` için `double`.
 
 Örtük bir dönüştürme kaynak türden hedef türe tanımlı değil, bir kayan nokta türü başka bir kayan nokta türüne dönüştürmek için açık bir tür dönüştürme kullanmanız gerekir. Bu adlı bir *daraltma dönüştürmesi*. Dönüştürme veri kaybıyla sonuçlanabildiğinden açık durumda gereklidir. Diğer kayan nokta türleri arasında örtük dönüştürme vardır ve `decimal` türü için `decimal` türünde daha da fazla duyarlığa `float` veya `double`.
 
@@ -89,15 +98,11 @@ Açık sayısal dönüştürmeler hakkında daha fazla bilgi için bkz. [Explici
 
 - [C# başvurusu](../index.md)
 - [Tam sayı türleri](integral-numeric-types.md)
-- [Varsayılan değerler tablosu](../keywords/default-values-table.md)
-- [Sayısal sonuçlar tablosunu biçimlendirme](../keywords/formatting-numeric-results-table.md)
 - [Yerleşik türler tablosu](../keywords/built-in-types-table.md)
 - [.NET Sayısal Değerleri](../../../standard/numerics.md)
 - [Tür Değiştirme ve Tür Dönüştürmeler](../../programming-guide/types/casting-and-type-conversions.md)
 - [Örtük Sayısal Dönüştürmeler Tablosu](../keywords/implicit-numeric-conversions-table.md)
 - [Açık Sayısal Dönüştürmeler Tablosu](../keywords/explicit-numeric-conversions-table.md)
-- <xref:System.Single?displayProperty=nameWithType>
-- <xref:System.Double?displayProperty=nameWithType>
-- <xref:System.Decimal?displayProperty=nameWithType>
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- [Sayısal sonuçlar tablosunu biçimlendirme](../keywords/formatting-numeric-results-table.md)
 - [Standart Sayısal Biçim Dizeleri](../../../standard/base-types/standard-numeric-format-strings.md)

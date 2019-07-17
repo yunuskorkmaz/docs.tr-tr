@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: bfd901d10fe3158c1c5cb32c3a75f3bc15efd0ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 46e7d9caf0bdf0be25a4ac76e96fe04d0e131ed1
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640929"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238583"
 ---
 # <a name="globalization-for-wpf"></a>WPF için Genelleştirme
 Bu konu yazarken farkında olmanız gereken sorunların tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] küresel pazarda uygulamalar. Genelleştirme programlama öğeleri tanımlanan [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] içinde `System.Globalization`.
@@ -105,23 +105,23 @@ Aşağıdaki örnek, bir onaltılık karakter başvurusu gösterir. Sahip olduğ
 
 - Telugu dili
 
-- Thaana
+- Thaana alfabesi
 
 - Tay dili *
 
 - Tibet dili
 
- * Bu görünen bırakın ve Tay metni düzenleme desteklenir; sözcük bölme değil.
+ \* Bu görünen bırakın ve Tay metni düzenleme desteklenir; sözcük bölme değil.
 
  Aşağıdaki komut, şu anda desteklenmemektedir:
 
-- Khmer
+- Khmer dili
 
 - Eski Hangul Kore dili
 
 - Myanmar
 
-- Sinhala
+- Sinhali dili
 
  Tüm yazı sistemi destek altyapıları [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] yazı tipleri içerebilir [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] daha iyi uluslararası ve yüksek kaliteli tipografik yazı tipleri tasarlamak için yazı tipi oluşturucularını etkinleştiren Düzen tabloları. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Yazı tipi düzeni tablolar, metin düzenini iyileştirmek metin işleme uygulamalarını etkinleştirme glif değişimler, karakter konumlandırması, yaslama ve temel konumlandırma, ilgili bilgiler içerir.
 
@@ -156,7 +156,7 @@ Aşağıdaki örnek, bir onaltılık karakter başvurusu gösterir. Sahip olduğ
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Yerelleştirilebilir Uygulamalar Oluşturma
- Yerelleştirme anlamına gelir uyum sağlamak bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] farklı kültürler için. Yapmak için bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirilebilir geliştiricilerin gereken bir kaynağı derlemeye tüm yerelleştirilebilir kaynakları oluşturmak bir uygulama. Kaynak derlemesi farklı dilde yerelleştirilmiş olan ve kaynak yönetimi arka plan kod kullanır [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] yüklenemedi. İçin gerekli dosyaları birini bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir proje dosyası (.proj) uygulamasıdır. Uygulamanızda kullandığınız tüm kaynakları, proje dosyasında eklenmelidir. .Csproj dosyasını aşağıdaki örnekte, bunun nasıl yapılacağı gösterilmektedir.
+ Yerelleştirme anlamına gelir uyum sağlamak bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] farklı kültürler için. Yapmak için bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirilebilir geliştiricilerin gereken bir kaynağı derlemeye tüm yerelleştirilebilir kaynakları oluşturmak bir uygulama. Kaynak derlemesi farklı dilde yerelleştirilmiş olan ve arka plan kod yüklemek için kaynak yönetimi API'sini kullanır. İçin gerekli dosyaları birini bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir proje dosyası (.proj) uygulamasıdır. Uygulamanızda kullandığınız tüm kaynakları, proje dosyasında eklenmelidir. .Csproj dosyasını aşağıdaki örnekte, bunun nasıl yapılacağı gösterilmektedir.
 
 ```xml
 <Resource Include="data\picture1.jpg"/>

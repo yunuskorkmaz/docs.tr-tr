@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8546516124b2156e02446e15d7bdcaf3cdbd717d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703432"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238603"
 ---
 # <a name="focus-overview"></a>Odağa Genel Bakış
 İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] odakla ilgili iki ana kavram vardır: klavye odağı ve mantıksal odak.  Klavye odağı klavye girişini alır öğeye başvuruyor ve odaklı bir odak kapsam içindeki öğeye mantıksal Odaklanıldığında başvurur.  Bu kavramlar, bu genel bakışta ayrıntılı ele alınmıştır.  Bu kavramlar farkını anlama, birden çok bölgede odak burada elde edilebilir sahip karmaşık uygulamalar oluşturmak için önemlidir.  
@@ -82,7 +82,7 @@ ms.locfileid: "61703432"
   
 <a name="Manipulating_Focus_Programmatically"></a>   
 ## <a name="navigating-focus-programmatically"></a>Odak gezinme  
- Ek [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] çalışmak için odağı olan <xref:System.Windows.UIElement.MoveFocus%2A> ve <xref:System.Windows.UIElement.PredictFocus%2A>.  
+ Odak ile çalışmak için ek API uyumludur <xref:System.Windows.UIElement.MoveFocus%2A> ve <xref:System.Windows.UIElement.PredictFocus%2A>.  
   
  <xref:System.Windows.FrameworkElement.MoveFocus%2A> sonraki öğeye uygulamada odak değiştirir.  A <xref:System.Windows.Input.TraversalRequest> yönünü belirtmek için kullanılır.   <xref:System.Windows.Input.FocusNavigationDirection> Geçirilen <xref:System.Windows.UIElement.MoveFocus%2A> farklı yönleri odağı taşınabilir, gibi belirtir <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> ve <xref:System.Windows.Input.FocusNavigationDirection.Down>.  
   

@@ -9,12 +9,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 2ee2ef57385d7fb0a396a1c08110fd810e6b0abd
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 2e4b23b7bf197c9984c53b2f4cc2acaa61731d38
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67857110"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238627"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (dil ile tümleşik sorgu)
 
@@ -73,7 +73,7 @@ Next
 
 Yeni bir oluşturmamayı niyetini kod arkasında olan `Dictionary<int, Pet>` ve eklemek için bir döngü yoluyla olan mevcut bir listeyi sözlükteki dönüştürmek için! Kesinlik temelli Kodun desteklemez LINQ niyetini korur.
 
-Equivalent LINQ expression:
+Eşdeğer LINQ ifadesi:
 
 ```csharp
 var petLookup = pets.ToDictionary(pet => pet.RFID);
@@ -282,7 +282,6 @@ End Class
 Dim allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, New DogHairLengthComparer())
 ```
 
-
 * İki kesişimi:
 
 ```csharp
@@ -355,7 +354,7 @@ End Function
 
 PLINQ ve paralel LINQ bir paralel yürütme için LINQ ifadelerini altyapısıdır. Diğer bir deyişle, normal bir LINQ ifadesini basit bir şekilde herhangi bir iş parçacığı sayısı arasında paralel. Bu bir çağrı aracılığıyla gerçekleştirilir `AsParallel()` önceki ifade.
 
-Aşağıdaki topluluklara bir göz atın:
+Aşağıdakileri göz önünde bulundurun:
 
 ```csharp
 public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> facebookUsers)

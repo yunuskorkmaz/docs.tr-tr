@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 1c3316fa88d3024af4e81072cbe64c13cfbdb18e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 11c872767b5e3595da1fb4982d3b12e0fc77db98
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610289"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238596"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Cam Çerçeveyi WPF Uygulamasında Genişletme
 
@@ -30,7 +30,7 @@ Aşağıdaki görüntüde, adres çubuğuna, Internet Explorer'a 7 genişletilmi
 
 ![Cam çerçeveyi IE7 adres çubuğuna genişletilmiş gösteren ekran görüntüsü.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Üzerinde cam çerçeveyi genişletmek için bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama erişimi yönetilmeyen [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] gereklidir. Aşağıdaki kod örneği, istemci alanına çerçeveyi genişletmek için gereken iki API için Platform Çağırma (PInvoke) desteklemez. Bu API'nin her adlı bir sınıf içinde bildirildiğinde **NonClientRegionAPI**.
+Üzerinde cam çerçeveyi genişletmek için bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulaması yönetilmeyen API erişimi gereklidir. Aşağıdaki kod örneği, istemci alanına çerçeveyi genişletmek için gereken iki API için Platform Çağırma (PInvoke) desteklemez. Bu API'nin her adlı bir sınıf içinde bildirildiğinde **NonClientRegionAPI**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]

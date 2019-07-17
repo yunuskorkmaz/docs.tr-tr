@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: 4e004b624c331375501c5f48d2566a664b734d3b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ba8127d5be24a9fdcccf0bebcc08e5699d98033
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649976"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238396"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış
 Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, ve <xref:System.Windows.Media.RadialGradientBrush> düz renkler, doğrusal gradyanlar ve radyal gradyanlar ile Boyama nesneleri.  
@@ -31,7 +31,7 @@ Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Media.SolidCol
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
-- Bir renk, 32 bit renk paletinden kırmızı, yeşil ve mavi tek bir düz renk birleştirilecek miktarda belirterek seçin.  32-bit paletinden bir renk belirtmeye yönelik biçimi "*#rrggbb*" burada *rr* kırmızı, göreli miktarını belirten iki basamaklı bir onaltılık sayı olduğu *gg* Yeşil, belirtir ve *bb* mavi miktarını belirtir.  Ayrıca, rengi olarak belirtilebilir "#*geçirgenliğini belirttiği*" nerede *aa* belirtir *alfa* değeri veya saydamlığını rengi. Bu yaklaşım, kısmen saydam olan renkleri oluşturmanıza olanak sağlar.  Aşağıdaki örnekte, <xref:System.Windows.Controls.Control.Background%2A> , bir <xref:System.Windows.Controls.Button> onaltılık gösterim kullanılarak tamamen opak kırmızı olarak ayarlayın.  
+- Bir renk, 32 bit renk paletinden kırmızı, yeşil ve mavi tek bir düz renk birleştirilecek miktarda belirterek seçin.  32-bit paletinden bir renk belirtmeye yönelik biçimi " *#rrggbb*" burada *rr* kırmızı, göreli miktarını belirten iki basamaklı bir onaltılık sayı olduğu *gg* Yeşil, belirtir ve *bb* mavi miktarını belirtir.  Ayrıca, rengi olarak belirtilebilir "#*geçirgenliğini belirttiği*" nerede *aa* belirtir *alfa* değeri veya saydamlığını rengi. Bu yaklaşım, kısmen saydam olan renkleri oluşturmanıza olanak sağlar.  Aşağıdaki örnekte, <xref:System.Windows.Controls.Control.Background%2A> , bir <xref:System.Windows.Controls.Button> onaltılık gösterim kullanılarak tamamen opak kırmızı olarak ayarlayın.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
@@ -142,15 +142,15 @@ Farklı ayarlarla GradientOrigin, merkezi RadiusX ve RadiusY RadialGradientBrush
   
 <a name="specifyinggradientcolors"></a>   
 ## <a name="specifying-transparent-or-partially-transparent-gradient-stops"></a>Saydam veya kısmen saydam gradyan durakları belirtme  
- Gradyan duraklarının donukluk özelliği sağlamadığından, alfa kanalı renkler kullanarak belirtmelisiniz [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] biçimlendirme veya onaltılık gösterimde <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> saydam veya saydam kısmen gradyan durakları oluşturmak için yöntemi. Aşağıdaki bölümlerde, kısmen saydam gradyan duraklarının oluşturma işlemleri açıklanmaktadır [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve kod.  
+ Gradyan duraklarının donukluk özelliği sağlamadığı için renk biçimlendirme veya ARGB onaltılık gösterim kullanılarak alfa kanalı belirtmelisiniz <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> saydam veya saydam kısmen gradyan durakları oluşturmak için yöntemi. Aşağıdaki bölümlerde, kısmen saydam gradyan duraklarının oluşturma işlemleri açıklanmaktadır [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve kod.  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>"XAML" renk opaklığı belirtme  
- İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], kullandığınız [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] tek tek renkler opaklığını belirtmek için onaltılık gösterim. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] onaltılık gösterim aşağıdaki sözdizimini kullanır:  
+ İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ARGB onaltılık gösterimde tek tek renkler opaklığını belirtmek için kullanın. ARGB onaltılık gösterim aşağıdaki sözdizimini kullanır:  
   
  `#` **aa** *rrggbb*  
   
- *Aa* önceki satıra rengin geçirgenliğini belirtmek için kullanılan iki basamaklı bir onaltılık değer temsil eder. *Rr*, *gg*, ve *bb* her rengin kırmızı, yeşil ve mavi miktarını belirtmek için kullanılan iki basamaklı bir onaltılık değeri temsil eder. Her bir onaltılık basamak 0-9 veya A-f arasında bir değer olabilir. en küçük değer 0 ise ve F en büyük değerdir. Alfa değeri 00 ila tamamen opak FF alfa değeri olan bir renk oluştururken tamamen şeffaf olduğundan bir renk belirtir.  Aşağıdaki örnekte, onaltılık [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] gösterim iki renkleri belirtmek için kullanılır. İlk (sahip x20 alfa değeri) kısmen saydamdır ikinci tamamen opak ederken.  
+ *Aa* önceki satıra rengin geçirgenliğini belirtmek için kullanılan iki basamaklı bir onaltılık değer temsil eder. *Rr*, *gg*, ve *bb* her rengin kırmızı, yeşil ve mavi miktarını belirtmek için kullanılan iki basamaklı bir onaltılık değeri temsil eder. Her bir onaltılık basamak 0-9 veya A-f arasında bir değer olabilir. en küçük değer 0 ise ve F en büyük değerdir. Alfa değeri 00 ila tamamen opak FF alfa değeri olan bir renk oluştururken tamamen şeffaf olduğundan bir renk belirtir.  Aşağıdaki örnekte, ARGB onaltılık gösterim iki renkleri belirtmek için kullanılır. İlk (sahip x20 alfa değeri) kısmen saydamdır ikinci tamamen opak ederken.  
   
  [!code-xaml[GradientBrushExamples_snip#TransparentGradientStopExample1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/GradientStopsExample.xaml#transparentgradientstopexample1xaml)]  
   

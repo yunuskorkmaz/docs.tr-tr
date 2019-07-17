@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 02700c75152c32ebee3a0898de1e322ddf9b6e17
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: a914f2c54e5e5b368533b686b1926f7f7ef2e12a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802237"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237331"
 ---
 # <a name="ui-automation-overview"></a>UI Otomasyonuna Genel Bakış
 > [!NOTE]
@@ -36,9 +36,9 @@ ms.locfileid: "67802237"
   
 |Bileşen|Açıklama|  
 |---------------|-----------------|  
-|Sağlayıcı [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] (UIAutomationProvider.dll ve UIAutomationTypes.dll)|UI Otomasyon sağlayıcıları tarafından uygulanan arabirim tanımlarının bir dizi ilgili bilgi sağlayan nesneleri [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğeleri ve programlı girişine yanıt vermedi.|  
+|API (UIAutomationProvider.dll ve UIAutomationTypes.dll) sağlayıcısı|UI Otomasyon sağlayıcıları tarafından uygulanan arabirim tanımlarının bir dizi ilgili bilgi sağlayan nesneleri [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğeleri ve programlı girişine yanıt vermedi.|  
 |İstemci API'si (UIAutomationClient.dll ve UIAutomationTypes.dll)|Bir dizi türleri hakkında bilgi edinmek için UI Otomasyonu istemci uygulamaları etkinleştiren yönetilen kod için [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ve denetimlerine giriş göndermek için.|  
-|UiAutomationCore.dll|Arka plandaki kod (olarak da adlandırılır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çekirdek), sağlayıcıları ve istemciler arasındaki iletişimi gerçekleştirir.|  
+|UIAutomationCore.dll|Arka plandaki kod (olarak da adlandırılır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çekirdek), sağlayıcıları ve istemciler arasındaki iletişimi gerçekleştirir.|  
 |UIAutomationClientsideProviders.dll|Eski standart denetimler için UI Otomasyonu sağlayıcıları bir dizi. ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] denetiminiz için yerel destek [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].) Bu destek, istemci uygulamaları için otomatik olarak kullanılabilir.|  
   
  Yazılım geliştirici açısından bakıldığında, kullanmanın iki yolu vardır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]: özel denetimler (' % s'sağlayıcısı API'si kullanarak) için destek oluşturmak için ve kullanan uygulamaları oluşturma [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ile iletişim kurmak için çekirdek [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] (kullanarak öğeleri İstemci API'si). Odağınızı bağlı olarak, belgelerinin farklı bölümlerine başvurmanız gerekir. Kavramları hakkında daha fazla bilgi edinmek ve aşağıdaki bölümlerde pratik yapılır bilgi elde edebilirsiniz.  
