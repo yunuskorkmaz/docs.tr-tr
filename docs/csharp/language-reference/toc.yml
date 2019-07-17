@@ -207,8 +207,6 @@
               href: keywords/await.md
             - name: sizeof
               href: keywords/sizeof.md
-            - name: nameof
-              href: keywords/nameof.md
         - name: Erişim Anahtar Sözcükleri
           items:
             - name: taban
@@ -333,6 +331,8 @@
         - name: ':: işleci'
           href: operators/namespace-alias-qualifer.md
           displayName: namespace alias qualifier
+        - name: nameof işleci
+          href: operators/nameof.md
         - name: new işleci
           href: operators/new-operator.md
         - name: stackalloc işleci
