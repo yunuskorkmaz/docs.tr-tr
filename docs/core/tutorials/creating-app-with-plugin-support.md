@@ -1,38 +1,38 @@
 ---
-title: Eklenti ile .NET Core uygulaması oluşturma
+title: Eklentilerle .NET Core uygulaması oluşturma
 description: Eklentileri destekleyen bir .NET Core uygulaması oluşturmayı öğrenin.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: a9431ee28c7df21a8688f845be20e062eca21887
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 308fd2f853261e87da71892c42e17e36984d1978
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647237"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330984"
 ---
-# <a name="create-a-net-core-application-with-plugins"></a>Eklenti ile .NET Core uygulaması oluşturma
+# <a name="create-a-net-core-application-with-plugins"></a>Eklentilerle .NET Core uygulaması oluşturma
 
-Bu öğretici, nasıl gösterir için:
+Bu öğreticide nasıl yapılacağı gösterilmektedir:
 
-- Eklentileri desteklemek için bir proje yapısı.
-- Bir özel Oluştur <xref:System.Runtime.Loader.AssemblyLoadContext> her Eklentisi yüklenemedi.
-- Kullanım `System.Runtime.Loader.AssemblyDependencyResolver` bağımlılıkları eklentileri izin vermek için türü.
-- Yalnızca derleme yapıtları kopyalayarak kolayca dağıtılabilir eklentileri yazar.
+- Eklentileri desteklemek için bir proje yapısı yapın.
+- Her bir eklentiyi <xref:System.Runtime.Loader.AssemblyLoadContext> yüklemek için özel oluşturun.
+- Eklentilerin bağımlılıklara sahip olmasını sağlamak için türükullanın.`System.Runtime.Loader.AssemblyDependencyResolver`
+- Yalnızca derleme yapıtları kopyalanarak kolayca dağıtılabilecek olan eklentileri yazar.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Yükleme [.NET Core 3.0 Önizleme 2 SDK](https://www.microsoft.com/net/core) ya da daha yeni bir sürümü.
+- [.NET Core 3,0 Preview 2 SDK](https://www.microsoft.com/net/core) veya daha yeni bir sürümünü yükler.
 
 ## <a name="create-the-application"></a>Uygulama oluşturma
 
-İlk adım, uygulama oluşturmaktır:
+İlk adım, uygulamayı oluşturmaktır:
 
-1. Yeni bir klasör oluşturun ve o klasördeki çalıştırmak `dotnet new console -o AppWithPlugin`. 
-2. Daha kolay proje derleme yapmak için Visual Studio çözüm dosyası oluşturun. Çalıştırma `dotnet new sln` aynı klasörde yer alan. 
-3. Çalıştırma `dotnet sln add AppWithPlugin/AppWithPlugin.csproj` uygulaması projesi çözüme eklemek için.
+1. Yeni bir klasör oluşturun ve bu klasörde ' i çalıştırın `dotnet new console -o AppWithPlugin`. 
+2. Projeyi daha kolay hale getirmek için bir Visual Studio çözüm dosyası oluşturun. Aynı `dotnet new sln` klasörde çalıştırın. 
+3. Uygulama `dotnet sln add AppWithPlugin/AppWithPlugin.csproj` projesini çözüme eklemek için ' i çalıştırın.
 
-Şimdi biz uygulamamız çatısında önizlememiz doldurabilirsiniz. Değiştirin *AppWithPlugin/Program.cs* dosyasındaki kodu aşağıdaki kodla:
+Şimdi uygulamamızın iskektlerini dolduracağız. *Appwithplugin/program. cs* dosyasındaki kodu aşağıdaki kodla değiştirin:
 
 ```csharp
 using PluginBase;
@@ -85,19 +85,19 @@ namespace AppWithPlugin
 
 ```
 
-## <a name="create-the-plugin-interfaces"></a>Eklentisi arabirimleri oluşturun
+## <a name="create-the-plugin-interfaces"></a>Eklenti arabirimlerini oluşturma
 
-Eklentiler ile bir uygulama oluşturmanın sonraki adımı eklentileri oluşturmanız arabirimi tanımlamaktır. Uygulama ve eklentiler arasında iletişim kurmak için kullanmayı planladığınız herhangi bir türü içeren bir sınıf kitaplığı yapmanızı öneririz. Bu bölme, tam uygulamanız göndermek zorunda kalmadan bir paket olarak, eklenti arabirimi yayımlamanızı sağlar.
+Eklentilerle uygulama oluşturmanın bir sonraki adımı, eklentilerin uygulanması gereken arabirimi tanımlar. Uygulamanız ve eklentiler arasında iletişim kurmak için kullanmayı planladığınız türleri içeren bir sınıf kitaplığı almanızı öneririz. Bu bölüm, tam uygulamanızı teslim etmek zorunda kalmadan eklenti arabiriminizi bir paket olarak yayımlamanıza olanak sağlar.
 
-Projenin kök klasöründe Çalıştır `dotnet new classlib -o PluginBase`. Ayrıca, `dotnet sln add PluginBase/PluginBase.csproj` projeyi çözüm dosyasına eklemek için. Silme `PluginBase/Class1.cs` dosya ve yeni bir dosya oluşturun `PluginBase` adlı klasöre `ICommand.cs` aşağıdaki arabirim tanımı ile:
+Projenin kök klasöründe, öğesini çalıştırın `dotnet new classlib -o PluginBase`. Ayrıca, projeyi `dotnet sln add PluginBase/PluginBase.csproj` çözüm dosyasına eklemek için öğesini çalıştırın. Dosyayı silin ve aşağıdaki arabirim tanımıyla adlı `PluginBase` `ICommand.cs` klasörde yeni bir dosya oluşturun: `PluginBase/Class1.cs`
 
 [!code-csharp[the-plugin-interface](~/samples/core/extensions/AppWithPlugin/PluginBase/ICommand.cs)]
 
-Bu `ICommand` arabirimidir arabirimi tüm eklentileri uygulamanız.
+Bu `ICommand` arabirim, tüm eklentilerin uygulayamayacağı arabirimdir.
 
-Şimdi `ICommand` arabirimi tanımlanır, uygulama projesine doldurulabilir biraz daha. Başvuru ekleme `AppWithPlugin` için proje `PluginBase` ile proje `dotnet add AppWithPlugin\AppWithPlugin.csproj reference PluginBase\PluginBase.csproj` kök klasörden komutu.
+`ICommand` Arabirim tanımlandığına göre, uygulama projesi biraz daha fazla doldurulabilir. Kök klasördeki `dotnet add AppWithPlugin\AppWithPlugin.csproj reference PluginBase\PluginBase.csproj` komutla projeye bir `AppWithPlugin` başvuru `PluginBase` ekleyin.
 
-Değiştirin `// Load commands from plugins` eklentilerini yüklemek etkinleştirmek için aşağıdaki kod parçacığı ile Açıklama gelen dosya yolu ele alalım:
+Verilen dosya yollarından eklentileri yüklemesini etkinleştirmek için yorumuaşağıdakikodparçacığıiledeğiştirin:`// Load commands from plugins`
 
 ```csharp
 string[] pluginPaths = new string[]
@@ -112,7 +112,7 @@ IEnumerable<ICommand> commands = pluginPaths.SelectMany(pluginPath =>
 }).ToList();
 ```
 
-Ardından değiştirin `// Output the loaded commands` aşağıdaki kod parçacığı ile Açıklama:
+Sonra `// Output the loaded commands` yorumu aşağıdaki kod parçacığı ile değiştirin:
 
 ```csharp
 foreach (ICommand command in commands)
@@ -121,7 +121,7 @@ foreach (ICommand command in commands)
 }
 ```
 
-Değiştirin `// Execute the command with the name passed as an argument` aşağıdaki kod parçacığıyla açıklaması:
+`// Execute the command with the name passed as an argument` Yorumu aşağıdaki kod parçacığıyla değiştirin:
 
 ```csharp
 ICommand command = commands.FirstOrDefault(c => c.Name == commandName);
@@ -134,7 +134,7 @@ if (command == null)
 command.Execute();
 ```
 
-Ve son olarak, statik yöntemler ekleyin `Program` adlı sınıfı `LoadPlugin` ve `CreateCommands`, burada gösterildiği gibi:
+Son olarak, burada gösterildiği gibi, ve `Program` `CreateCommands`adlı `LoadPlugin` sınıfa statik yöntemler ekleyin:
 
 ```csharp
 static Assembly LoadPlugin(string relativePath)
@@ -169,15 +169,15 @@ static IEnumerable<ICommand> CreateCommands(Assembly assembly)
 }
 ```
 
-## <a name="load-plugins"></a>Eklenti yükleme
+## <a name="load-plugins"></a>Eklentileri yükle
 
-Artık uygulamanın düzgün yüklenebileceği ve komutlar yüklü eklenti derlemelerden örneği, ancak Eklenti derlemeleri yüklemek hala işleyemiyor. Adlı bir dosya oluşturun *PluginLoadContext.cs* içinde *AppWithPlugin* klasöründe aşağıdaki içeriğe sahip:
+Artık uygulama, yüklenen eklenti derlemelerinden komutları doğru bir şekilde yükleyebilir ve örneklendirilecek, ancak hala eklenti derlemelerini yükleyemeyebilir. *Appwithplugin* klasöründe aşağıdaki içeriğe sahip *PluginLoadContext.cs* adlı bir dosya oluşturun:
 
 [!code-csharp[loading-plugins](~/samples/core/extensions/AppWithPlugin/AppWithPlugin/PluginLoadContext.cs)]
 
-`PluginLoadContext` Tür türetilir <xref:System.Runtime.Loader.AssemblyLoadContext>. `AssemblyLoadContext` Sayesinde geliştiriciler, yüklenen derlemeler derleme sürümlerini çakışmasını emin olmak için farklı gruplar halinde ayırmak için çalışma zamanında bir özel tür bir türdür. Ayrıca, bir özel `AssemblyLoadContext` derlemeleri yüklemek ve varsayılan davranışı geçersiz kılmak için farklı yollar seçebilirsiniz. `PluginLoadContext` Örneğini kullanan `AssemblyDependencyResolver` yolları için derleme adlarını çözümlemek için .NET Core 3.0 sürümünde türü. `AssemblyDependencyResolver` Nesnesi, bir .NET sınıf kitaplığı yoluyla oluşturulur. Temel kendi göreli yollar için derlemeler ve yerel kitaplıkları çözümler *deps.json* dosya yolu için geçirildi sınıf kitaplığı için `AssemblyDependencyResolver` Oluşturucusu. Özel `AssemblyLoadContext` kendi bağımlılıkları eklentiler sağlar ve `AssemblyDependencyResolver` bağımlılıkları doğru şekilde yük kolaylaştırır.
+`PluginLoadContext` Tür öğesinden<xref:System.Runtime.Loader.AssemblyLoadContext>türetilir. Bu `AssemblyLoadContext` tür çalışma zamanında, geliştiricilerin, derleme sürümlerinin çakışmadığından emin olmak için yüklü derlemeleri farklı gruplara yalıtmalarına olanak tanıyan özel bir türdür. Ayrıca, özel `AssemblyLoadContext` , derlemeleri yüklemek için farklı yollar seçebilir ve varsayılan davranışı geçersiz kılabilir. , `PluginLoadContext` Derleme adlarını yollara çözümlemek için `AssemblyDependencyResolver` .NET Core 3,0 ' de tanıtılan türün bir örneğini kullanır. `AssemblyDependencyResolver` Nesnesi, .NET sınıf kitaplığı yoluyla oluşturulur. Derlemeleri ve yerel kitaplıkları, yolu `AssemblyDependencyResolver` oluşturucuya geçilen sınıf kitaplığı için *. Deps. JSON* dosyasını temel alarak göreli yollarına çözümler. Özel `AssemblyLoadContext` , eklentilerin kendi bağımlılıklarına sahip olmasını sağlar `AssemblyDependencyResolver` ve bağımlılıkları doğru şekilde yüklemeyi kolaylaştırır.
 
-Şimdi `AppWithPlugin` projesinde `PluginLoadContext` yazın, güncelleştirme `Program.LoadPlugin` aşağıdaki gövdesi olan yöntemi:
+`AppWithPlugin` `Program.LoadPlugin` Projenin türüolduğunagöre,yöntemiaşağıdakigövdelegüncelleştirin`PluginLoadContext` :
 
 ```csharp
 static Assembly LoadPlugin(string relativePath)
@@ -197,19 +197,19 @@ static Assembly LoadPlugin(string relativePath)
 }
 ```
 
-Farklı bir kullanarak `PluginLoadContext` örneği her eklentinin, eklentiler için farklı veya hatta çakışan bağımlılıkları olmadan bir sorun olabilir.
+Her eklenti için farklı `PluginLoadContext` bir örnek kullanarak, Eklentiler, sorun olmadan farklı veya hatta çakışan bağımlılıklara sahip olabilir.
 
-## <a name="create-a-simple-plugin-with-no-dependencies"></a>Hiçbir bağımlılık ile basit bir eklenti oluşturun
+## <a name="create-a-simple-plugin-with-no-dependencies"></a>Bağımlılıkları olmayan basit bir eklenti oluşturma
 
-Geri kök klasöründe aşağıdakileri yapın:
+Kök klasöre geri döndüğünüzde şunları yapın:
 
-1. Çalıştırma `dotnet new classlib -o HelloPlugin` adlı yeni bir sınıf kitaplığı projesi oluşturmak için `HelloPlugin`.
-2. Çalıştırma `dotnet sln add HelloPlugin/HelloPlugin.csproj` projeye eklemek için `AppWithPlugin` çözüm. 
-3. Değiştirin *HelloPlugin/Class1.cs* adlı bir dosya dosyasıyla *HelloCommand.cs* aşağıdaki içeriklerle:
+1. `dotnet new classlib -o HelloPlugin` Adlı`HelloPlugin`yeni bir sınıf kitaplığı projesi oluşturmak için öğesini çalıştırın.
+2. `dotnet sln add HelloPlugin/HelloPlugin.csproj` Projeyi`AppWithPlugin` çözüme eklemek için ' i çalıştırın. 
+3. *Merhaba Plugin/Class1. cs* dosyasını aşağıdaki içeriklerle *HelloCommand.cs* adlı bir dosyayla değiştirin:
 
 [!code-csharp[the-hello-plugin](~/samples/core/extensions/AppWithPlugin/HelloPlugin/HelloCommand.cs)]
 
-Artık, *HelloPlugin.csproj* dosya. Aşağıdakine benzer görünmelidir:
+Şimdi, *Helloplugin. csproj* dosyasını açın. Şuna benzer olmalıdır:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -222,7 +222,7 @@ Artık, *HelloPlugin.csproj* dosya. Aşağıdakine benzer görünmelidir:
 
 ```
 
-Arasında `<Project>` etiketler, aşağıdaki öğeleri ekleyin:
+`<Project>` Etiketler arasında, aşağıdaki öğeleri ekleyin:
 
 ```xml
 <ItemGroup>
@@ -232,23 +232,23 @@ Arasında `<Project>` etiketler, aşağıdaki öğeleri ekleyin:
 </ItemGroup>
 ```
 
-`<Private>false</Private>` Öğesi çok önemlidir. Bu MSBuild kopyalamayacak şekilde söyler *PluginBase.dll* HelloPlugin çıkış dizinine. Varsa *PluginBase.dll* derleme Çıktı dizininde mevcut `PluginLoadContext` derleme var. bulup onu yüklediğinde, yükleyebilir *HelloPlugin.dll* derleme. Bu noktada, `HelloPlugin.HelloCommand` tür tarafından uygulanır `ICommand` alanından arabirim *PluginBase.dll* Çıktı dizininde `HelloPlugin` proje değil, `ICommand` yüklendiği arabirimi Varsayılan yükleme bağlamı. Çalışma zamanı bu iki farklı türden farklı derlemeler olarak görür. bu yana `AppWithPlugin.Program.CreateCommands` yöntemi değildir komut bulun. Sonuç olarak, `<Private>false</Private>` eklentisi arabirimleri içeren derlemenin başvurusunu için meta verileri gereklidir.
+`<Private>false</Private>` Öğesi çok önemlidir. Bu, MSBuild 'in *Pluginbase. dll dosyasını* helloplugin çıkış dizinine kopyalamamasını söyler. ' Nin çıkış dizininde *pluginbase. dll* derlemesi varsa, `PluginLoadContext` derlemeyi bulur ve *Merhaba Plugin. dll* derlemesini yüklediğinde yükler. Bu noktada, `HelloPlugin.HelloCommand` türü, varsayılan yükleme bağlamına `ICommand` yüklenen `ICommand` arabirimi değil,, `HelloPlugin` projenin çıkış dizinindeki *pluginbase. dll* ' den arabirimini uygular. Çalışma zamanı, bu iki türü farklı derlemelerden farklı türler olarak gördüğünden, `AppWithPlugin.Program.CreateCommands` bu yöntem komutları bulamaz. Sonuç olarak, `<Private>false</Private>` eklenti arabirimlerini içeren derlemeye başvuru için meta veriler gerekir.
 
-Şimdi `HelloPlugin` proje tamamladığınızda, güncelleştiriyoruz `AppWithPlugin` nereden başlayacağınızı bilemiyor için proje `HelloPlugin` eklentisi bulunabilir. Sonra `// Paths to plugins to load` açıklama, Ekle `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` öğesi olarak `pluginPaths` dizisi.
+Proje tamamlandığına göre, `HelloPlugin` eklentinin nerede bulunabileceğinizi bilmesi için `AppWithPlugin` projeyi güncelleştirmemiz gerekir. `HelloPlugin` Açıklamadan sonra, `pluginPaths` dizinin bir öğesi olarak ekleyin. `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` `// Paths to plugins to load`
 
-## <a name="create-a-plugin-with-library-dependencies"></a>Kitaplık bağımlılıkları olan bir eklenti oluşturun
+## <a name="create-a-plugin-with-library-dependencies"></a>Kitaplık bağımlılıklarıyla eklenti oluşturma
 
-Neredeyse tüm eklentiler bir basit "Hello World" daha karmaşıktır ve birçok eklenti bağımlılıkları diğer kitaplıkları vardır. `JsonPlugin` Ve `OldJson` örnek eklentisi projeleri göster eklentileri NuGet Paket bağımlılıklarını içeren iki örnek `Newtonsoft.Json`. Proje dosyaları proje başvuruları için herhangi bir özel bilgi yok ve (eklentisi yolları ekledikten sonra `pluginPaths` dizisi) eklentileri mükemmel bir şekilde, aynı yürütme AppWithPlugin uygulamanın çalıştırılmış olsa bile çalıştırın. Ancak, bu projeleri derlemeleri çalışmak eklentileri için kullanıcının makinede mevcut olması gerekmez, çıktı dizinine başvurulan derlemeleri kopyalamayın. Bu sorunu çözmek için iki yolu vardır. İlk seçenek kullanmaktır `dotnet publish` sınıf kitaplığı yayımlamak için komutu. Alternatif olarak, çıktısını kullanabilmelerini istiyorsanız `dotnet build` , eklenti için eklediğiniz `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` arasında özellik `<PropertyGroup>` eklenti ait proje dosyasında etiketler. Bkz: `XcopyablePlugin` eklentisi projesi bir örnek.
+Neredeyse tüm eklentiler basit bir "Merhaba Dünya" öğesinden daha karmaşıktır ve birçok eklenti diğer kitaplıklara bağımlılıkları vardır. Örnekteki `JsonPlugin` `Newtonsoft.Json`ve `OldJson` eklenti projeleri üzerinde NuGet paketi bağımlılıklarını içeren iki eklenti örneği gösterir. Proje dosyaları, proje başvuruları için özel bilgilere sahip değildir ve (eklenti yolları `pluginPaths` diziye eklendikten sonra) Eklentiler, appwithplugin uygulamasının yürütülmesi halinde çalıştırılsa bile kusursuz bir şekilde çalışır. Ancak, bu projeler başvurulan derlemeleri çıkış dizinine kopyalamadıkları için, eklentilerin çalışması için kullanıcının makinesinde derlemelerin mevcut olması gerekir. Bu sorunu geçici olarak çözmek için iki yol vardır. İlk seçenek, sınıf kitaplığını yayımlamak için `dotnet publish` komutunu kullanmaktır. Alternatif olarak, eklenti `dotnet build` için çıkışını kullanmak istiyorsanız, eklentinin proje dosyasındaki `<PropertyGroup>` Etiketler arasına `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` özelliği ekleyebilirsiniz. Örnek için bkz. eklentiprojesi.`XcopyablePlugin`
 
-## <a name="other-plugin-examples-in-the-sample"></a>Örneğindeki diğer eklenti örnekleri
+## <a name="other-plugin-examples-in-the-sample"></a>Örnekteki diğer eklenti örnekleri
 
-Bu öğretici için tam kaynak kodunu bulunabilir [dotnet/samples deposuna](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). Tamamlanan örnek diğer birkaç örnek verilmiştir `AssemblyDependencyResolver` davranışı. Örneğin, `AssemblyDependencyResolver` nesne NuGet paketlerinde yerelleştirilmiş yardımcı derlemeler yanı sıra yerel kitaplıkları da giderebilirsiniz. `UVPlugin` Ve `FrenchPlugin` örnek deposunda aşağıdaki senaryolar gösterilmektedir.
+Bu öğreticinin tüm kaynak kodu [DotNet/Samples deposunda](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)bulunabilir. Tamamlanan örnek, bazı `AssemblyDependencyResolver` davranış örneklerini içerir. Örneğin, `AssemblyDependencyResolver` nesne yerel kitaplıkları ve NuGet paketlerine dahil edilen yerelleştirilmiş uydu derlemelerini de çözümleyebilir. Örnekler deposunda `FrenchPlugin` ve bu senaryolar gösterilmektedir. `UVPlugin`
 
-## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>Nasıl bir NuGet paketi içinde tanımlanmış bir eklenti arabirimi derleme başvurusu
+## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>NuGet paketinde tanımlanan eklenti arabirimi derlemesine başvurma
 
-Adlı NuGet paketi içinde tanımlanmış bir eklenti arabirimi olan bir uygulama bir olduğunu varsayalım `A.PluginBase`. Nasıl paket eklenti projenizde doğru başvurmuyorsa? Kullanarak proje başvuruları için `<Private>false</Private>` meta veri çubuğunda `ProjectReference` öğesi proje dosyasında çıktı kopyalanan dll engelledi.
+Adlı bir uygulama olan, adlı `A.PluginBase`NuGet paketinde tanımlanmış bir eklenti arabirimi olduğunu varsayalım. Eklenti projenizde pakete doğru şekilde nasıl başvurdunuz? Proje başvuruları için, proje dosyasındaki `<Private>false</Private>` `ProjectReference` öğesindeki meta verilerin kullanılması dll 'nin çıkışa kopyalanmasını engelledi.
 
-Doğru şekilde başvurmak için `A.PluginBase` değiştirmek istediğiniz paketin `<PackageReference>` öğesi aşağıdaki proje dosyasında:
+`A.PluginBase` Pakete doğru bir şekilde başvurmak için proje dosyasındaki `<PackageReference>` öğeyi şu şekilde değiştirmek istersiniz:
 
 ```xml
 <PackageReference Include="A.PluginBase" Version="1.0.0">
@@ -256,8 +256,8 @@ Doğru şekilde başvurmak için `A.PluginBase` değiştirmek istediğiniz paket
 </PackageReference>
 ```
 
-Bu engeller `A.PluginBase` , eklenti çıktı dizinine kopyalanan gelen derlemeleri ve kendi eklenti A kullanmanızı sağlar sürümünü `A.PluginBase`.
+Bu, `A.PluginBase` derlemelerin eklentinin çıkış dizinine kopyalanmasını engeller ve eklenti 'un `A.PluginBase`bir sürümünü kullanmasını sağlar.
 
-## <a name="plugin-target-framework-recommendations"></a>Eklenti hedef framework önerileri
+## <a name="plugin-target-framework-recommendations"></a>Eklenti hedef Framework önerileri
 
-Eklenti bağımlılık yükleniyor kullandığından *deps.json* dosyası, eklenti'nın hedef framework ile ilgili bir sorunu yok. Özellikle, eklenti, bir çalışma zamanı, .NET Core 3.0 gibi .NET Standard'ın bir sürümü yerine hedeflemelidir. `deps.json` Dosyası oluşturulur hangi framework tabanlı Proje hedefleri ve başvuru derlemelerini karşı özel çalışma zamanları, için.NETStandardveuygulamaderlemelerioluşturmakiçinbirçok.NETStandarduyumlupaketikullanımasunulduğundanbuyana`deps.json` düzgün bkz uygulama derlemelerini olabilir veya bir derleme beklediğiniz .NET Core sürümünün yerine .NET Standard sürümünü alıp.
+Eklenti bağımlılık yüklemesi *. Deps. JSON* dosyasını kullandığından, eklentinin hedef çerçevesiyle ilgili bir Gotcha vardır. Özellikle, eklentilerinizin bir .NET Standard sürümü yerine .NET Core 3,0 gibi bir çalışma zamanını hedeflemesi gerekir. *. Deps. JSON* dosyası, projenin hedeflediği çerçeveye göre oluşturulur ve birçok .NET Standard uyumlu paket, belirli çalışma zamanları için .NET Standard ve uygulama derlemelerinin oluşturulmasına yönelik başvuru derlemeleri sunduğundan, *. Deps. JSON* uygulama derlemelerini doğru görmeyebilir veya Istediğiniz .NET Core sürümü yerine bir derlemenin .NET Standard sürümünü alabilir.

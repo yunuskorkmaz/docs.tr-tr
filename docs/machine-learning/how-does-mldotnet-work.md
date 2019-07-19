@@ -1,34 +1,34 @@
 ---
 title: ML.NET nedir ve nasıl çalışır?
-description: ML.NET machine Learning'i .NET uygulamalarına ekleme olanağı sunar. Bu özellik sayesinde, uygulamanızın kullanabileceği verileri kullanarak otomatik tahmin yapabilirsiniz. Bu makalede, makine öğrenimi ML.NET temelleri açıklanır.
-ms.date: 04/10/2019
+description: ML.NET, çevrimiçi veya çevrimdışı senaryolarda .NET uygulamalarına makine öğrenimi ekleme olanağı sunar. Bu özellik sayesinde, ML.NET kullanmak üzere bir ağa bağlı kalmak zorunda kalmadan, uygulamanızın kullanabildiği verileri kullanarak otomatik tahminler yapabilirsiniz. Bu makalede, ML.NET ' de makine öğrenmesinin temelleri açıklanmaktadır.
+ms.date: 07/17/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 30e96d85ecc04332bc5e6c8f57badd000f729904
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23e71e86b75854042068b6a68f90cf995749ee58
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660643"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331587"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET nedir ve nasıl çalışır?
 
-ML.NET machine Learning'i .NET uygulamalarına ekleme olanağı sunar. Bu özellik sayesinde, uygulamanızın kullanabileceği verileri kullanarak otomatik tahmin yapabilirsiniz. Bu makalede, makine öğrenimi ML.NET temelleri açıklanır. 
+ML.NET, çevrimiçi veya çevrimdışı senaryolarda .NET uygulamalarına makine öğrenimi ekleme olanağı sunar. Bu özellik sayesinde, bir ağa bağlı kalmak zorunda kalmadan uygulamanızın kullanabildiği verileri kullanarak otomatik tahminler yapabilirsiniz. Bu makalede, ML.NET ' de makine öğrenmesinin temelleri açıklanmaktadır. 
 
-ML.NET ile yapabileceğiniz Öngörüler türü örnekleri şunlardır:
+ML.NET ile yapabileceğiniz tahmin türlerine örnek olarak şunlar verilebilir:
 
 |||
 |-|-|
-|Sınıflandırma/kategorilere ayırma|Müşteri geri bildirimi pozitif ve negatif kategoriler halinde otomatik olarak Böl|
-|Regresyon/Predıct sürekli değerleri|Görev açısından kritik uygulamaları boyutu ve konuma bağlı fiyatını tahmin edin|
-|Anomali Algılama|Sahte bankacılık işlemleri algılayın |
-|Öneriler|Önceki aldıklarını temel satın almak için çevrimiçi bir adamın isteyebileceğiniz ürünler önerin|
+|Sınıflandırma/kategori oluşturma|Müşteri geri bildirimini otomatik olarak pozitif ve negatif kategorilere bölün|
+|Gerileme/sürekli değerleri tahmin etme|Boyut ve konuma göre barındırıldığı fiyatlarını tahmin etme|
+|Anomali Algılama|Sahte bankacılık işlemlerini Algıla |
+|Öneriler|Çevrimiçi alışverişçilerin, önceki satın alımlarına göre satın almasını isteyebileceğiniz ürünleri önerin|
 
-## <a name="hello-mlnet-world"></a>ML.NET World Hello
+## <a name="hello-mlnet-world"></a>Merhaba ML.NET dünya
 
-Aşağıdaki kod parçacığında kod basit ML.NET uygulamayı gösterir. Bu örneği kullanarak merkezi boyutu ve fiyat veri merkezi fiyatlarını tahmin etmek için bir doğrusal regresyon modeli oluşturur. Gerçek zamanlı konuşmaların uygulamalarınızı, verilerinizi ve model çok daha karmaşık olacaktır.
+Aşağıdaki kod parçacığındaki kod, en basit ML.NET uygulamasını gösterir. Bu örnek, ev boyutunu ve fiyat verilerini kullanarak ev fiyatlarını tahmin etmek için bir doğrusal regresyon modeli oluşturur. Gerçek yaşam uygulamalarınızda, verileriniz ve modeliniz çok daha karmaşık olacaktır.
 
  ```csharp
     using System;
@@ -79,60 +79,60 @@ Aşağıdaki kod parçacığında kod basit ML.NET uygulamayı gösterir. Bu ör
     } 
 ```
 
-## <a name="code-workflow"></a>İş akışı kodu
+## <a name="code-workflow"></a>Kod iş akışı
 
-Aşağıdaki diyagramda, yinelemeli model geliştirme sürecinin yanı sıra uygulama kod yapısını temsil eder:
-- Toplama ve yük eğitim verilerini bir **IDataView** nesnesi
-- İşlem özellikleri ayıklayın ve makine öğrenme algoritmasına uygulamak için bir işlem hattı belirtin
-- Çağırarak bir model eğitip **Fit()** işlem hattında
-- Modeli değerlendirme ve geliştirmek için yineleme
-- Model kullanmak bir uygulamada ikili biçimde kaydedin
-- Modeline geri yüklemek bir **ITransformer** nesnesi
-- Çağırarak tahminlerde **CreatePredictionEngine.Predict()**
+Aşağıdaki diyagram, uygulama kodu yapısını, ayrıca model geliştirmenin yinelemeli işlemini temsil eder:
+- Bir **ıdataview** nesnesinde eğitim verileri toplama ve yükleme
+- Özellikleri ayıklamak ve makine öğrenimi algoritmasını uygulamak için bir işlem hattı belirtin
+- İşlem hattına **sığdırma ()** yöntemini çağırarak bir modeli eğitme
+- Modeli değerlendirin ve geliştirmeyi yineleyin
+- Modeli bir uygulamada kullanılmak üzere ikili biçime Kaydet
+- Modeli bir **ıranseski** nesnesine geri yükleme
+- **CreatePredictionEngine. tahmin ()** öğesini çağırarak tahminleri yapın
 
-![ML.NET verisi oluşturma, ardışık düzen geliştirme, model eğitiminin, model değerlendirme ve model kullanımı için bileşenler dahil olmak üzere uygulama geliştirme akışı](./media/mldotnet-annotated-workflow.png) 
+![Veri oluşturma, işlem hattı geliştirme, model eğitimi, model değerlendirmesi ve model kullanımı bileşenleri dahil ML.NET uygulama geliştirme akışı](./media/mldotnet-annotated-workflow.png) 
 
-Biraz söz konusu kavrama biraz daha ayrıntılı açıklayalım.
+Bu kavramların biraz daha ayrıntılı bir şekilde bakalım.
 
-## <a name="machine-learning-model"></a>Machine learning modeli
+## <a name="machine-learning-model"></a>Machine Learning modeli
 
-ML.NET modeli tahmin edilen çıktısına gelmesi giriş verileriniz üzerinde gerçekleştirmek için dönüşümleri içeren bir nesnedir.
+ML.NET modeli, tahmin edilen çıkışa ulaşmak üzere giriş verilerinizde gerçekleştirilecek dönüşümleri içeren bir nesnedir.
 
 ### <a name="basic"></a>Temel
 
-En temel iki boyutlu doğrusal regresyon, sürekli bir miktar yukarıdaki ev fiyat örnekte olduğu gibi başka orantılı olduğu modelidir. 
+En temel model, yukarıdaki ev fiyat örneğinde olduğu gibi, bir sürekli miktarın birbiriyle orantılı olduğu iki boyutlu doğrusal regresyon olur. 
 
-![Doğrusal regresyon modeli sapması ve Ağırlık parametrelere sahip](./media/linear-regression-model.svg)
+![Sapma ve ağırlık parametrelerine sahip doğrusal regresyon modeli](./media/linear-regression-model.svg)
 
-Yalnızca modelidir: $Price = b + boyutu * w$. Bir dizi üzerinde bir uydurur $w$ ve parametreleri $b$ tahmini (boyut, Fiyat) çiftleri. Model parametreleri bulmak için kullanılan verileri çağrılır **eğitim verilerini**. Makine öğrenme modeli girişleri olarak adlandırılan **özellikleri**. Bu örnekte, $Size$ yalnızca özelliğidir. Machine learning modelini eğitmek için kullanılan taban truth değerler olarak adlandırılan **etiketleri**. Burada, $Price$ eğitim veri kümesi etiketleri değerler.
+Model yalnızca: $Price = b + size * w $. $B $ ve $w $ parametreleri, bir dizi (boyut, Fiyat) çiftleriyle bir satıra göre tahmin edilir. Modelin parametrelerini bulmak için kullanılan verilere **eğitim verileri**denir. Machine Learning modelinin girişleri **Özellikler**olarak adlandırılır. Bu örnekte, $Size $ tek özelliktir. Bir makine öğrenimi modelini eğitebilmeniz için kullanılan taban-Truth değerlerine **Etiketler**denir. Burada eğitim verileri kümesindeki $Price $ değerleri etiketlerdir.
 
 ### <a name="more-complex"></a>Daha karmaşık
 
-Daha karmaşık bir model kullanarak işlem metin açıklama kategoriler halinde Finansal işlemler sınıflandırır.
+Daha karmaşık bir model, işlem metni açıklamasını kullanarak finansal işlemleri kategoriler halinde sınıflandırır.
 
-Her bir işlem açıklaması bir özellikler kümesi yedekli sözcükler ve karakterleri kaldırarak ve word ve karakter birleşimini sayım ayrılmıştır. Özellik kümesini kategorileri eğitim veri kümesi temel olarak doğrusal bir model eğitip için kullanılır. Daha yeni bir açıklama için Eğitim kümesi dışındaki benzer, büyük olasılıkla aynı kategoriye atanır. 
+Her işlem açıklaması, gereksiz sözcük ve karakterleri kaldırarak ve sözcük ve karakter kombinasyonlarını sayarak bir özellik kümesine bölünür. Özellik kümesi, eğitim verilerinde kategori kümesini temel alan doğrusal bir modeli eğiteetmek için kullanılır. Daha benzer yeni bir açıklama, eğitim kümesindeki diğer bir deyişle, aynı kategoriye daha büyük olasılıkla atanır. 
 
-![Metin sınıflandırma modeli](./media/text-classification-model.svg)
+![Metin sınıflandırması modeli](./media/text-classification-model.svg)
 
-Hem merkezi fiyat modeli, hem de metin sınıflandırma modeli **doğrusal** modelleri. Verilerinizi ve Çözdüğünüz sorunun doğasına bağlı olarak da kullanabilirsiniz **karar ağacı** modelleri **eklenebilir genelleştirilmiş** modelleri ve diğerleri. Modelleri hakkında daha fazla bilgi bulabilirsiniz [görevleri](./resources/tasks.md).
+Hem ev fiyat modeli hem de metin sınıflandırma modeli **Doğrusal** modellerdir. Verilerinizin yapısına ve çözmeyle ilgili soruna bağlı olarak, **karar ağacı** modellerini, **Genelleştirilmiş** ek modellerini ve diğerlerini de kullanabilirsiniz. [Görevler](./resources/tasks.md)' de modeller hakkında daha fazla bilgi edinebilirsiniz.
 
 ## <a name="data-preparation"></a>Veri hazırlama
 
-Çoğu durumda veriler kullanılabilir olduğunu doğrudan makine öğrenme modeli eğitmek için kullanılacak uygun değildir. Ham verileri hazırlanmış veya modelinizin parametreleri bulmak için kullanılmadan önce ön işlemden gerekir. Verilerinizi dize değerlerden bir sayısal gösterimine dönüştürülmesi gerekebilir. Girdi verilerinizi yedekli bilgiler olabilir. Azaltın veya girişinizi boyutlarını genişletin gerekebilir. Verilerinizi normalleştirilmiş veya ölçeklendirildiğinde gerekebilir.
+Çoğu durumda, kullanılabilir olan veriler makine öğrenimi modelini eğitmek için doğrudan kullanılmaya uygun değildir. Ham verilerin, modelinizin parametrelerini bulmak için kullanılmadan önce hazırlanması veya önceden işlenmesi gerekir. Verilerinizin dize değerlerinden sayısal bir gösterimine dönüştürülmesi gerekebilir. Giriş verilerinizde gereksiz bilgilere sahip olabilirsiniz. Giriş verilerinizin boyutlarını azaltmanız veya genişletmeniz gerekebilir. Verilerinizin normalleştirilmesi veya ölçeklendirilmesi gerekebilir.
 
-[ML.NET öğreticiler](./tutorials/index.md) görüntü farklı veri işleme komut zincirini metin için ilgili öğretin, belirli bir makine öğrenimi görevlerini için kullanılan sayısal ve zaman serisi verileri.
+[Ml.net öğreticileri](./tutorials/index.md) , belirli makine öğrenimi görevleri için kullanılan metin, görüntü, sayısal ve zaman serisi verileri için farklı veri işleme işlem hatları hakkında bilgi öğretin.
 
-[Verilerinizi hazırlama](./how-to-guides/prepare-data-ml-net.md) gösterilmektedir veri hazırlama daha genel olarak uygulanır.
+Verilerinizi [hazırlamak](./how-to-guides/prepare-data-ml-net.md) , veri hazırlığının daha genel olarak nasıl uygulanacağını gösterir.
 
-Tüm ek bulabilirsiniz [kullanılabilir dönüştürmeler](./resources/transforms.md) kaynaklar bölümünde.
+Kaynaklar bölümünde tüm [kullanılabilir dönüşümlerinin](./resources/transforms.md) bir özetini bulabilirsiniz.
 
 ## <a name="model-evaluation"></a>Modeli değerlendirme
 
-Nasıl modelinizi eğitim almış sonra ne kadar iyi gelecekteki tahminler yapar biliyor musunuz? ML.NET ile modelinizi yeni bazı test verilerini karşı değerlendirebilirsiniz. 
+Modelinizi eğittikten sonra, gelecekteki tahminleri ne kadar iyi hale getirmek istediğinizi nasıl anlarsınız? ML.NET ile modelinizi bazı yeni test verileri için değerlendirebilirsiniz. 
 
-Machine learning görevinin her türü doğruluk ve sınama veri kümesi modelinde duyarlığını değerlendirmek için kullanılan ölçümü mevcuttur.
+Her makine öğrenimi görevi türü, modelin doğruluğunu ve duyarlığını test veri kümesine karşı değerlendirmek için kullanılan ölçümlere sahiptir.
 
-Ev fiyat Örneğimiz için kullandığımız **regresyon** görev. Modeli değerlendirme için özgün örneğe aşağıdaki kodu ekleyin.
+Evin fiyat örneğimiz için **regresyon** görevini kullandık. Modeli değerlendirmek için, özgün örneğe aşağıdaki kodu ekleyin.
 
 ```csharp
         HouseData[] testHouseData =
@@ -155,67 +155,67 @@ Ev fiyat Örneğimiz için kullandığımız **regresyon** görev. Modeli değer
         // RMS error: 0.19
 ```
 
-Değerlendirme ölçümleri low-ish bir hatadır ve bu bağıntı tahmin edilen çıkış ve test çıkışı arasında yüksek olduğunu bildirin. Bu kadar kolay! Gerçek örneklerde, daha fazla iyi model ölçümleri elde etmek için ayarlama alır.
+Değerlendirme ölçümleri, hatanın düşük bir şekilde olduğunu ve tahmin edilen çıkış ile test çıkışı arasındaki bağıntıdan yüksek olduğunu söyler. Bu çok kolay! Gerçek örneklerde, iyi model ölçümleri elde etmek için daha fazla ayarlama yapılır.
 
 ## <a name="mlnet-architecture"></a>ML.NET mimarisi
 
-Bu bölümde, biz ML.NET Mimari desenleri gidin. Deneyimli bir .NET geliştiricisi kullanıyorsanız, bu desenleri bazıları size tanıdık gelecektir ve bazı küçük tanıdık gelecektir. Biz kolları sıvayın sıkı, basılı!
+Bu bölümde, ML.NET mimari desenlerine gideceğiz. Deneyimli bir .NET geliştiricisiyseniz, bu desenlerden bazıları size tanıdık gelecektir ve bazıları daha az tanıdık olacaktır. Sıkı bir şekilde tutun.
 
-ML.NET uygulama ile başlayan bir <xref:Microsoft.ML.MLContext> nesne. Bu tekil nesnesini içeren **katalogları**. Veri yükleme ve kaydetme, dönüşümler ve Eğitmenler modeli işlemi bileşenleri için bir üreteci kataloğudur. Her bir katalog nesnesi bileşenleri farklı türleri oluşturmak için yöntemleri vardır:
+Bir ml.NET uygulaması bir <xref:Microsoft.ML.MLContext> nesneyle başlar. Bu tekil nesne **kataloglar**içerir. Katalog, veri yükleme ve kaydetme, dönüşümler, tracılar ve model işlemi bileşenlerine yönelik bir fabrikadır. Her Katalog nesnesi farklı bileşen türlerini oluşturma yöntemlerine sahiptir:
 
 |||||
 |-|-|-|-|
 |Veri yükleme ve kaydetme||<xref:Microsoft.ML.DataOperationsCatalog>||
 |Veri hazırlama||<xref:Microsoft.ML.TransformsCatalog>||
 |Eğitim algoritmaları|İkili sınıflandırma|<xref:Microsoft.ML.BinaryClassificationCatalog>||
-||Sınıflı sınıflandırma|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
+||Birden çok Lass sınıflandırması|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||Anomali algılama|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
-||Kümeleme|<xref:Microsoft.ML.ClusteringCatalog>||
+||Lenmesi|<xref:Microsoft.ML.ClusteringCatalog>||
 ||Tahmin etme|<xref:Microsoft.ML.ForecastingCatalog>||
-||Derecelendirme|<xref:Microsoft.ML.RankingCatalog>||
+||Sıralamasına|<xref:Microsoft.ML.RankingCatalog>||
 ||Regresyon|<xref:Microsoft.ML.RegressionCatalog>||
-||Öneri|<xref:Microsoft.ML.RecommendationCatalog>|ekleme `Microsoft.ML.Recommender` NuGet paketi|
-||Zaman serisi|<xref:Microsoft.ML.TimeSeriesCatalog>|ekleme `Microsoft.ML.TimeSeries` NuGet paketi|
+||Öneri|<xref:Microsoft.ML.RecommendationCatalog>|`Microsoft.ML.Recommender` NuGet paketini ekleme|
+||Zaman serisi|<xref:Microsoft.ML.TimeSeriesCatalog>|`Microsoft.ML.TimeSeries` NuGet paketini ekleme|
 |Model kullanımı ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
-Yukarıdaki kategorilerden her biri oluşturma yöntemleri gidebilirsiniz. Visual Studio kullanarak, katalogları IntelliSense gösterilir.
+Yukarıdaki kategorilerin her birinde oluşturma yöntemlerine gidebilirsiniz. Visual Studio 'yu kullanarak kataloglar IntelliSense aracılığıyla gösterilir.
 
-   ![Regresyon Eğitmenler için IntelliSense](./media/catalog-intellisense.png)
+   ![Gerileme Eğitiminleri için IntelliSense](./media/catalog-intellisense.png)
 
-### <a name="build-the-pipeline"></a>İşlem hattı oluşturma
+### <a name="build-the-pipeline"></a>İşlem hattını oluşturma
 
-İçinde her kataloğunu genişletme yöntemleri kümesidir. Genişletme yöntemleri bir eğitim işlem hattı oluşturmak için nasıl kullanılacağını bakalım.
+Her kataloğun içinde bir genişletme yöntemleri kümesidir. Bir eğitim işlem hattı oluşturmak için uzantı yöntemlerinin nasıl kullanıldığına göz atalım.
 
 ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
         .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
 ```
 
-Kod parçacığında `Concatenate` ve `Sdca` katalogdaki her iki yöntemlerdir. Oluşturdukları her bir [IEstimator](xref:Microsoft.ML.IEstimator%601) ardışık düzenine eklenen nesne.
+Kod parçacığında `Concatenate` ve `Sdca` her iki yöntemde de bulunur. Bunlar, işlem hattının sonuna eklenen bir [ıestimator](xref:Microsoft.ML.IEstimator%601) nesnesi oluşturur.
 
-Bu noktada, nesneleri yalnızca oluşturulabilir. Hiçbir yürütme gerçekleştirilmedi.
+Bu noktada, nesneler yalnızca oluşturulur. Yürütme yapılmadı.
 
 ### <a name="train-the-model"></a>Modeli eğitme
 
-İşlem hattı nesneleri için oluşturduktan sonra modeli eğitmek için verilerin kullanılabilir.
+İşlem hattındaki nesneler oluşturulduktan sonra, modeli eğitebilmeniz için veriler kullanılabilir.
 
 ```csharp
     var model = pipeline.Fit(trainingData);
 ```
 
-Çağırma `Fit()` parametreleri modelin tahmin etmek için giriş eğitim verileri kullanır. Bu, modeli eğitmek olarak bilinir. Unutmayın, doğrusal regresyon modelinin Yukarıdaki iki modeli parametre vardı: **sapması** ve **ağırlık**. Sonra `Fit()` çağrısı, parametre değerlerini bilinir. Çoğu modelleri bundan çok daha fazla parametre gerekir.
+Çağırma `Fit()` , modelin parametrelerini tahmin etmek için giriş eğitim verilerini kullanır. Bu, modeli eğitme olarak bilinir. Yukarıdaki doğrusal regresyon modelinin iki model parametresi olduğunu unutmayın: **sapma** ve **Ağırlık**. `Fit()` Çağrıdan sonra parametrelerin değerleri bilinmektedir. Çoğu modelde bundan çok daha fazla parametre olacaktır.
 
-Model eğitimi hakkında daha fazla bilgi [nasıl modelinizi eğitin](./how-to-guides/train-machine-learning-model-ml-net.md)
+[Modelinizi eğitme](./how-to-guides/train-machine-learning-model-ml-net.md) hakkında daha fazla bilgi için model eğitimi hakkında daha fazla bilgi edinebilirsiniz
 
-Oluşturulan model nesnesi uygulayan <xref:Microsoft.ML.ITransformer> arabirimi. Diğer bir deyişle, model öngörülere giriş verilerini dönüştürür.
+Elde edilen model nesnesi <xref:Microsoft.ML.ITransformer> arabirimini uygular. Diğer bir deyişle, model giriş verilerini tahmine göre dönüştürür.
 
 ```csharp
    IDataView predictions = model.Transform(inputData);
 ```
 
-### <a name="use-the-model"></a>Kullanım modeli
+### <a name="use-the-model"></a>Modeli kullanma
 
-Giriş verileri aynı anda Öngörüler toplu ya da bir giriş içine dönüştürebilirsiniz. Ev fiyat örnekte, her ikisi de yaptık: model ve yeni bir tahminde bulunmak için birer tane Değerlendirme amacıyla toplu. Tek Öngörüler kolaylaştırmayı bakalım.
+Giriş verilerini toplu olarak veya bir girişte tek seferde tahmin edilecek şekilde dönüştürebilirsiniz. Ev fiyatı örneğinde, her ikisi de, modeli değerlendirmek amacıyla toplu olarak ve yeni bir tahmin oluşturmak için bir seferde bir kez yaptık. Tek tahmin yapmaya bakalım.
 
 ```csharp
     var size = new HouseData() { Size = 2.5F };
@@ -223,27 +223,27 @@ Giriş verileri aynı anda Öngörüler toplu ya da bir giriş içine dönüşt�
     var price = predEngine.Predict(size);
 ```
  
-`CreatePredictionEngine()` Yöntemi, bir giriş ve çıkış sınıfı alır. Alan adları ve/veya kod öznitelikleri model eğitim ve tahmin sırasında kullanılan veri sütunlarının adlarını belirleyin. Okuyabilirsiniz [tek bir tahminde bulunmak nasıl](./how-to-guides/single-predict-model-ml-net.md) bölümünde yapılır.
+`CreatePredictionEngine()` Yöntemi bir giriş sınıfı ve bir çıkış sınıfı alır. Alan adları ve/veya kod öznitelikleri, model eğitimi ve tahmin sırasında kullanılan veri sütunlarının adlarını belirlenir. Nasıl yapılır bölümünde [tek bir tahmin yapma](./how-to-guides/single-predict-model-ml-net.md) hakkında bilgi edinebilirsiniz.
 
 ### <a name="data-models-and-schema"></a>Veri modelleri ve şema
 
-Bir ML.NET makine öğrenimi işlem hattı özünde olan [DataView](xref:Microsoft.ML.IDataView) nesneleri.
+Bir ML.NET Machine Learning işlem hattının Core 'da [DataView](xref:Microsoft.ML.IDataView) nesneleri bulunur.
 
-İşlem hattındaki her dönüştürme bir giriş şeması (veri adları, türleri ve boyutları dönüştürme hücredeki girişe göre görmek için beklediği); sahip ve bir çıkış şeması (veri adları, türleri ve sonra dönüştürme dönüştürme üreten boyutları). 
+İşlem hattındaki her dönüşümde bir giriş şeması (veri adları, türler ve boyutlar, dönüştürmenin girişte görmeyi beklediği boyutlar) vardır; ve bir çıkış şeması (veri adları, türler ve dönüşümün dönüşümden sonra ürettiği boyutlar). 
 
-ML.NET, işlem hattındaki bir dönüşüm çıkış şemasından sonraki dönüştürme giriş şemasını eşleşmiyorsa bir özel durum oluşturur.
+İşlem hattındaki bir dönüşümden çıkış şeması, sonraki dönüşümün giriş şemasıyla eşleşmiyorsa, ML.NET bir özel durum oluşturur.
 
-Veri Görünümü nesnesi satırları ve sütunları vardır. Her sütun bir ad ve bir tür ve bir süre vardır. Örneğin: ev fiyat örnekte giriş sütunlar **boyutu** ve **fiyat**. Bunlar olan hem de yazın ve bunlar skaler miktarlarının yerine olanları vektör.
+Veri görünümü nesnesinin sütunları ve satırları vardır. Her sütunun bir adı ve bir türü ve uzunluğu vardır. Örneğin: ev fiyatı örnekteki giriş sütunları **Boyut** ve **fiyattır**. Bunlar her ikisi de aynıdır ve vektörler yerine skaler miktarlardır.
 
-   ![Ev fiyatı tahmin verileriyle ML.NET veri görünümü örneği](./media/ml-net-dataview.png)
+   ![ML.NET veri görünümü örneği, ev fiyatı tahmin verileri](./media/ml-net-dataview.png)
 
-Tüm ML.NET algoritmalar bir vektördür bir giriş sütun arayın. Varsayılan olarak bu vektörü sütun çağrılır **özellikleri**. Biz birleştirilmiş bu yüzden **boyutu** adlı yeni bir sütun sütununa **özellikleri** ev fiyat örneğimizde.
+Tüm ML.NET algoritmaları vektör olan bir giriş sütununu arar. Varsayılan olarak bu vektör sütununa **Özellikler**denir. Bu nedenle, **Boyut** sütununu, evin fiyat örneğimizde **Özellikler** adlı yeni bir sütuna bitiştirtik.
 
  ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
  ```
 
-Tahmin gerçekleştirmemiş olan sonra tüm algoritmaları da yeni bir sütun oluşturun. Bu yeni sütunların sabit adları, makine öğrenme algoritmasına türüne bağlıdır. Regresyon görev için yeni sütunlar birini çağrılır **puanı**. Biz bu ada sahip fiyat verilerimizi öznitelikli nedeni budur.
+Tüm algoritmalar Ayrıca bir tahmin gerçekleştirildikten sonra yeni sütunlar oluşturur. Bu yeni sütunların sabit adları makine öğrenimi algoritmasının türüne bağlıdır. Regresyon görevi için, yeni sütunlardan birine **puan**denir. Bu nedenle fiyat verilerimizi bu adla ekledik.
 
 ```csharp
     public class Prediction
@@ -253,28 +253,28 @@ Tahmin gerçekleştirmemiş olan sonra tüm algoritmaları da yeni bir sütun ol
     }
 ```    
 
-Çıkış sütunları farklı makine öğrenimi görevleri hakkında daha fazla bilgi bulabilirsiniz [makine öğrenimi görevlerini](resources/tasks.md) Kılavuzu.
+[Machine Learning görevler](resources/tasks.md) kılavuzunda, farklı makine öğrenimi görevlerinin çıkış sütunları hakkında daha fazla bilgi edinebilirsiniz.
 
-DataView önemli bir özelliği nesnelerindeki değerlendirilme **gevşek**. Veri görünümleri yalnızca yüklenir ve üzerinde model eğitim ve değerlendirme ve veri tahmin sırasında işletilir. Yazma ve ML.NET uygulamanızı test ederken, Visual Studio hata ayıklayıcısını çağırarak herhangi bir veri görünümü nesne göz atalım için kullanabileceğiniz [Önizleme](xref:Microsoft.ML.DebuggerExtensions.Preview*) yöntemi.
+DataView nesnelerinin önemli bir özelliği, **geç**değerlendirilmesinden kaynaklanmaktadır. Veri görünümleri yalnızca model eğitimi ve değerlendirmesi sırasında yüklenir ve üzerinde çalıştırılır ve veri tahmini yapılır. ML.NET uygulamanızı yazarken ve test ederken, [Önizleme](xref:Microsoft.ML.DebuggerExtensions.Preview*) yöntemini çağırarak herhangi bir veri görünümü nesnesine bir göz atma işlemleri yapmak Için Visual Studio hata ayıklayıcısını kullanabilirsiniz.
 
 ```csharp
     var debug = testPriceDataView.Preview();
 ```
 
-İzleyebilir `debug` hata ayıklayıcı değişken ve içeriğini inceleyin. Önemli ölçüde performansı düşürür gibi üretim kodunda Önizleme yöntemi kullanmayın.
+`debug` Değişkeni hata ayıklayıcıda izleyebilir ve içeriğini inceleyebilirsiniz. Performansı önemli ölçüde düşürür, üretim kodunda önizleme yöntemini kullanmayın.
 
 ### <a name="model-deployment"></a>Model dağıtımı
 
-Gerçek zamanlı konuşmaların uygulamalarda, model eğitimi ve değerlendirmesi kodunuzu tahmininizde ayrı olacaktır. Aslında, bu iki etkinliği genellikle ayrı takımlar tarafından gerçekleştirilir. Model Geliştirme ekibiniz, tahmin uygulama modelini kullanmak için kaydedebilirsiniz.
+Gerçek yaşam uygulamalarında, model eğitimi ve değerlendirme kodunuz tahmininizden ayrı olacaktır. Aslında, bu iki etkinlik genellikle ayrı takımlar tarafından gerçekleştirilir. Model geliştirme ekibiniz, modeli tahmin uygulamasında kullanım için kaydedebilir.
 
 ```csharp   
    mlContext.Model.Save(model, trainingData.Schema,"model.zip");
 ```
 
-## <a name="where-to-now"></a>Şimdi nereye?
+## <a name="where-to-now"></a>Şimdi nereden?
 
-Daha gerçekçi veri kümelerinde farklı makine öğrenimi görevlerini kullanarak uygulamaları nasıl oluşturabileceğinizi öğrenebilirsiniz [öğreticiler](./tutorials/index.md).
+[Öğreticilerde](./tutorials/index.md)daha gerçekçi veri kümeleriyle farklı makine öğrenimi görevleri kullanarak nasıl uygulama oluşturacağınızı öğrenebilirsiniz.
 
-Veya belirli konuları bölümünde daha ayrıntılı olarak hakkında bilgi edinebilirsiniz [nasıl yapılır kılavuzları](./how-to-guides/index.md).
+Ya da [nasıl yapılır kılavuzlarında](./how-to-guides/index.md)daha ayrıntılı bilgi edinmek için belirli konular hakkında bilgi edinebilirsiniz.
 
-Ve Süper içeriğimizi, düz içine başlayabilirsiniz [API başvuru belgeleri](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)!
+Süper KEDE kullanıyorsanız, [API başvuru belgelerine](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)doğrudan gidebilirsiniz!

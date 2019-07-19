@@ -1,127 +1,127 @@
 ---
-title: Nasıl kullanılacağını ve hata ayıklama derlemesi unloadability .NET core'da
-description: Toplanabilir AssemblyLoadContext yönetilen derlemeleri yükleme ve kaldırma ve kaldırma başarılı engelleyen sorunları hata ayıklamak nasıl kullanılacağını öğrenin.
+title: .NET Core 'da derleme geri kullanımını kullanma ve hata ayıklama
+description: Yönetilen derlemeleri yüklemek ve kaldırmak için toplanabilir bir AssemblyLoadContext ve kaldırma başarısını önlemek için sorunları nasıl ayıklayacağınız hakkında bilgi edinin.
 author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
-ms.openlocfilehash: 2929110952feb0913f21a9c69975cc605f49c646
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3ba2c2809aedd0af03ec965089f8779c430a335
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627791"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331525"
 ---
-# <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Nasıl kullanılacağını ve hata ayıklama derlemesi unloadability .NET core'da
+# <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>.NET Core 'da derleme geri kullanımını kullanma ve hata ayıklama
 
-.NET Core 3.0 ile başlayarak, yükleme ve daha sonra bir derleme kümesi kaldırma olanağı desteklenir. .NET Framework'teki özel uygulama etki alanları bu amaç için kullanılan, ancak .NET Core, yalnızca tek bir varsayılan uygulama etki alanını destekler.
+.NET Core 3,0 ile başlayarak, bir derleme kümesini yükleme ve daha sonra kaldırma özelliği desteklenir. .NET Framework, bu amaçla özel uygulama etki alanları kullanılmıştır, ancak .NET Core yalnızca tek bir varsayılan uygulama etki alanını destekler.
 
-.NET core 3.0 ve sonraki sürümleri destekler unloadability aracılığıyla <xref:System.Runtime.Loader.AssemblyLoadContext>. Bir derleme kümesi toplanabilir yükleyebilir `AssemblyLoadContext`, bunları bir yöntem yürütülemez veya yalnızca bunları inceleyin yansıma kullanarak ve son olarak kaldırma `AssemblyLoadContext`. Yüklenen derlemeler bellekten `AssemblyLoadContext`.
+.NET Core 3,0 ve sonraki sürümleri, aracılığıyla <xref:System.Runtime.Loader.AssemblyLoadContext>tasbilirliğini destekler. Bir dizi derlemeyi toplanabilir `AssemblyLoadContext`bir şekilde yükleyebilir, bunlarda Yöntemler yürütebilir veya yansıma kullanarak bunları inceleyebilirsiniz, son olarak `AssemblyLoadContext`yüklemesini kaldırabilirsiniz. Bu, yüklenmiş `AssemblyLoadContext`derlemeleri kaldırır.
 
-Kaldırma kullanarak arasında önemli bir fark `AssemblyLoadContext` ve uygulama etki alanları kullanma. Uygulama etki alanları ile kaldırma zorlanır. Unload zaman hedef AppDomain tüm iş parçacıkları iptal edilir, yönetilen vb. AppDomain yok edilir hedef oluşturulan COM nesnelerini. İle `AssemblyLoadContext`, kaldırma "" ortaktır. Çağırma <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType> yöntemi yalnızca başlatır kaldırma. Kaldırma tamamlandıktan sonra:
+Uygulama etki alanları kullanarak `AssemblyLoadContext` ve kullanarak kaldırma arasında bir sorun olduğunu fark eden bir farklılık vardır. AppDomain ile, kaldırma zorlanır. Kaldırma sırasında, hedef AppDomain 'de çalışan tüm iş parçacıkları iptal edilir, hedef AppDomain 'de oluşturulan yönetilen COM nesneleri yok edilir, vb. İle `AssemblyLoadContext`, kaldırma "işbirliği" dir. <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType> Yöntemi çağırmak yalnızca kaldırma işlemini başlatır. Kaldırma işlemi şu tarihten sonra bitiyor:
 
-- İş parçacığı içine yüklenen derlemeler yöntemlerinden sahip `AssemblyLoadContext` çağrı yığınlarıyla üzerinde.
-- Yüklenen derlemeler türlerden hiçbiri `AssemblyLoadContext`, bu türleri ve derlemeleri örnekleri dışında `AssemblyLoadContext` tarafından başvurulan:
-  - Dışında başvuran `AssemblyLoadContext`, hariç zayıf başvurular (<xref:System.WeakReference> veya <xref:System.WeakReference%601>).
-  - Güçlü GC tutamaçlarını (<xref:System.Runtime.InteropServices.GCHandleType>.<xref:System.Runtime.InteropServices.GCHandleType.Normal> veya <xref:System.Runtime.InteropServices.GCHandleType>.<xref:System.Runtime.InteropServices.GCHandleType.Pinned>) hem Azure içindeki hem de dışında `AssemblyLoadContext`.
+- Hiçbir iş parçacığı, `AssemblyLoadContext` çağrı yığınlarında öğesine yüklenen derlemelerden yöntemlere sahip değildir.
+- İçinde `AssemblyLoadContext`yüklü derlemelerden hiçbir türden hiçbirisi, bu türlerin örneklerine ve kendi dışındaki `AssemblyLoadContext` derlemelere şunun tarafından başvuruluyor:
+  - Zayıf başvurular haricinde ( `AssemblyLoadContext`<xref:System.WeakReference> veya <xref:System.WeakReference%601>) dışında başvuruları.
+  - Güçlü GC tutamaçları (<xref:System.Runtime.InteropServices.GCHandleType>.<xref:System.Runtime.InteropServices.GCHandleType.Normal> ya <xref:System.Runtime.InteropServices.GCHandleType>da<xref:System.Runtime.InteropServices.GCHandleType.Pinned>.), `AssemblyLoadContext`hem içinde hem de dışında.
 
 ## <a name="using-collectible-assemblyloadcontext"></a>Toplanabilir AssemblyLoadContext kullanma
 
-Bu bölüm .NET Core uygulamasını toplanabilir yüklemek için basit bir yol gösteren ayrıntılı adım adım bir öğretici içerir `AssemblyLoadContext`, kendi giriş noktası yürütün ve bunu kaldırın. Bir tam örneğini şurada bulabilirsiniz <https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading>.
+Bu bölüm `AssemblyLoadContext`, bir .NET Core uygulamasını toplanabilir bir şekilde yüklemek, giriş noktasını yürütmek ve sonra kaldırmak için basit bir yol gösteren ayrıntılı bir adım adım öğretici içerir. ' De tüm bir örnek <https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading>bulabilirsiniz.
 
-### <a name="create-a-collectible-assemblyloadcontext"></a>Toplanabilir AssemblyLoadContext oluşturma
+### <a name="create-a-collectible-assemblyloadcontext"></a>Toplanabilir bir AssemblyLoadContext oluşturma
 
-Sizin sınıfınızdan türetmek gereken <xref:System.Runtime.Loader.AssemblyLoadContext> ve aşırı yükleme, <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> yöntemi. Yöntemi, yüklenen derlemelerin bağımlılıklar tüm derlemeleri başvuruları çözümleniyor `AssemblyLoadContext`.
-Aşağıdaki kod, en basit özel örneğidir `AssemblyLoadContext`:
+Sınıfından sınıfınızı <xref:System.Runtime.Loader.AssemblyLoadContext> türetmeniz ve <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> metodunu aşırı yüklemeniz gerekir. Bu yöntem, yüklenmiş `AssemblyLoadContext`derlemelerin bağımlılıkları olan tüm derlemelere başvuruları çözümler.
+Aşağıdaki kod, en basit özel `AssemblyLoadContext`örneğine bir örnektir:
 
 [!code-csharp[Simple custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/simple_example.cs#1)]
 
-Gördüğünüz gibi `Load` yöntemi döndürür `null`. Bu, tüm bağımlılık derlemelerin varsayılan bağlamına yüklü olduğundan ve yalnızca açıkça içine yüklenen derlemeler yeni bağlam içeren anlamına gelir.
+Gördüğünüz gibi, `Load` yöntemi döndürür `null`. Bu, tüm bağımlılık derlemelerinin varsayılan bağlamına yüklendiği ve yeni bağlamın yalnızca açıkça kendisine yüklenmiş derlemeleri içerdiği anlamına gelir.
 
-Bazı veya tüm bağımlılıklarınızı yüklemek istiyorsanız `AssemblyLoadContext` de kullanabileceğiniz `AssemblyDependencyResolver` içinde `Load` yöntemi. `AssemblyDependencyResolver` Kullanarak mutlak derleme dosya yolları için derleme adlarını çözümleyen `*.deps.json` ana derleme bağlamı ve derleme dosyaları dizindeki kullanarak yüklenen dizininde yer alan dosya.
+Bağımlılıkların `AssemblyLoadContext` bir kısmını veya tümünü de yüklemek istiyorsanız, `Load` yöntemi `AssemblyDependencyResolver` içinde kullanabilirsiniz. , `AssemblyDependencyResolver` Derleme adlarını, bağlam içine yüklenen ana derlemenin dizininde bulunan *. Deps. JSON* dosyasını ve bu dizindeki derleme dosyalarını kullanarak mutlak derleme dosya yollarına dönüştürür.
 
 [!code-csharp[Advanced custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/complex_assemblyloadcontext.cs)]
 
-### <a name="use-a-custom-collectible-assemblyloadcontext"></a>Özel bir toplanabilir AssemblyLoadContext kullanın
+### <a name="use-a-custom-collectible-assemblyloadcontext"></a>Özel toplanabilir bir AssemblyLoadContext kullanın
 
-Bu bölümde daha basit sürümü varsayılır `TestAssemblyLoadContext` kullanılıyor.
+Bu bölümde, öğesinin `TestAssemblyLoadContext` daha basit sürümünün kullanıldığını varsayılır.
 
-Özel bir örneğini oluşturabilirsiniz `AssemblyLoadContext` ve bir derleme içine aşağıdaki gibi yükleyin:
+Özel `AssemblyLoadContext` bir örneği oluşturabilir ve bunu aşağıdaki gibi bir derlemeyi yükleyebilirsiniz:
 
 [!code-csharp[Part 1](~/samples/snippets/standard/assembly/unloading/simple_example.cs#3)]
 
-Her yüklenen derlemesi tarafından başvurulan derlemelerin `TestAssemblyLoadContext.Load` yöntemi çağrıldığında böylece `TestAssemblyLoadContext` derlemeden nereden karar verebilirsiniz. Bu örnekte, döndürür `null` bu derlemeleri yüklemeye çalışma zamanı kullanan konumlardan varsayılan bağlamına varsayılan yükleneceğini göstermek için.
+Yüklenen derleme `TestAssemblyLoadContext.Load` tarafından başvurulan derlemelerin her biri için yöntemi çağrılır, böylece, `TestAssemblyLoadContext` derlemenin nereden alınacağını karar verebilir. Bizim örneğimizde, varsayılan olarak `null` çalışma zamanının derlemeleri yüklemek için kullandığı konumlardan varsayılan bağlamına yüklenmesi gerektiğini göstermek için döndürür.
 
-Bir derleme yüklendi, ondan bir yöntem yürütebilir. Çalıştırma `Main` yöntemi:
+Bir derleme yüklendikten sonra, bundan sonra bir yöntemi çalıştırabilirsiniz. `Main` Yöntemi çalıştırın:
 
 [!code-csharp[Part 2](~/samples/snippets/standard/assembly/unloading/simple_example.cs#4)]
 
-Sonra `Main` yöntemi döndürür, ya da çağrısı yaparak eklentiyi başlatabilirsiniz `Unload` özel metodunda `AssemblyLoadContext` veya zorunda başvurunun doğurduğu israftan `AssemblyLoadContext`:
+Yöntem çağrıldıktan sonra, `Unload` yöntemi özel `AssemblyLoadContext` üzerinde çağırarak veya bir başvuruya sahip olduğunuz başvurunun `AssemblyLoadContext`kurtumı aracılığıyla kaldırmayı başlatabilirsiniz. `Main`
 
 [!code-csharp[Part 3](~/samples/snippets/standard/assembly/unloading/simple_example.cs#5)]
 
-Bu test derlemesini kaldırmak yeterli olur. Şimdi tüm emin olmak için ayrı bir inlineable olmayan yönteme gerçekten put `TestAssemblyLoadContext`, `Assembly`, ve `MethodInfo` ( `Assembly.EntryPoint`) yığını yuvası başvuruları (gerçek veya JIT sunulan Yereller) tarafından etkin tutulan bağlantıyı destekliyorsa tutulması olamaz. Tutun `TestAssemblyLoadContext` etkin tutulan bağlantıyı destekliyorsa ve yüklemelerini kaldırma engelleyebilir.
+Bu, test derlemesini kaldırmak için yeterlidir. `TestAssemblyLoadContext`, ,Ve`MethodInfo` ( )`Assembly.EntryPoint`öğesinin yığın yuvası başvuruları (gerçek veya JIT tarafından tanıtılan Yereller) tarafından etkin tutulmasını gerektirmediğinden emin olmak için bunu tamamen ayrı bir bağımsız olmayan yönteme yerleştirelim `Assembly`. Bu, `TestAssemblyLoadContext` canlı kalmasını sağlayabilir ve kaldırma özelliğini engelleyebilir.
 
-Ayrıca, zayıf bir başvuru döndürmeyi `AssemblyLoadContext` böylece bunu daha sonra kaldırma tamamlama algılamak için kullanabilirsiniz.
+Ayrıca, daha sonra kaldırma tamamlamayı algılamak için `AssemblyLoadContext` kullanabilmeniz için zayıf bir başvuru döndürün.
 
 [!code-csharp[Part 4](~/samples/snippets/standard/assembly/unloading/simple_example.cs#2)]
 
-Artık, yükleme, yürütme ve derlemeyi kaldırmak için bu işlevi çalıştırabilirsiniz.
+Artık derlemeyi yüklemek, çalıştırmak ve kaldırmak için bu işlevi çalıştırabilirsiniz.
 
 [!code-csharp[Part 5](~/samples/snippets/standard/assembly/unloading/simple_example.cs#6)]
 
-Ancak, kaldırma, hemen tamamlanmıyor. Daha önce belirtildiği gibi tüm nesneleri test derlemesinden toplanacak GC kullanır. Çoğu durumda, kaldırma tamamlanmasını beklemeniz gerekmez. Ancak, kaldırma işleminin tamamlandığını bilmek de yararlı olduğu durumlar da vardır. Örneğin, özel yüklenen derleme dosyasını silmek isteyebilirsiniz `AssemblyLoadContext` diskten. Böyle bir durumda, aşağıdaki kod parçacığı kullanılabilir. GC tetikler ve bir döngüde sonlandırıcılar bekleyen özel zayıf başvuruyu kadar bekler `AssemblyLoadContext` ayarlanır `null`, hedef nesneyi gösteren toplanmıştır. Çoğu durumda, yalnızca tek seferde döngü gerekli olduğunu unutmayın. Ancak, nesne oluşturulduğu çalışan kod tarafından daha karmaşık durumlarda `AssemblyLoadContext` Sonlandırıcıları sahip daha fazla geçiş gerekli olabilir.
+Ancak, kaldırma hemen tamamlanmaz. Daha önce belirtildiği gibi, test derlemesindeki tüm nesneleri toplamak için GC 'yi kullanır. Çoğu durumda, kaldırma işleminin tamamlanmasını beklemek gerekli değildir. Ancak, kaldırma işlemi bittiğini bilmemiz yararlı olduğu durumlar vardır. Örneğin, diskten özel `AssemblyLoadContext` olarak yüklenen derleme dosyasını silmek isteyebilirsiniz. Böyle bir durumda, aşağıdaki kod parçacığı kullanılabilir. Bir GC tetikleyip, özel `AssemblyLoadContext` 'e yönelik zayıf başvuru olarak `null`, hedef nesnenin toplandığını belirten bir döngüde bekleyen sonlandırıcıları bekler. Çoğu durumda döngünün yalnızca bir geçişinin gerekli olduğunu unutmayın. Bununla birlikte, içinde `AssemblyLoadContext` çalışan kod tarafından oluşturulan nesnelerin sonlandırıcılarda olduğu daha karmaşık durumlarda daha fazla geçiş gerekebilir.
 
 [!code-csharp[Part 6](~/samples/snippets/standard/assembly/unloading/simple_example.cs#7)]
 
-### <a name="the-unloading-event"></a>Unloading olay
+### <a name="the-unloading-event"></a>Kaldırma olayı
 
-Bazı durumlarda, bir özel yüklenen kod için gerekli olabilir `AssemblyLoadContext` kaldırma başlatıldığında bazı temizleme işlemleri gerçekleştirmek için. Örneğin, gereksinim duymayabilirsiniz iş parçacıklarını durdurma, temiz bazı güçlü GC tanıtıcıları, vb. `Unloading` Olay bu gibi durumlarda kullanılabilir. Bu olay için gerekli temizleme işlemini gerçekleştiren bir işleyici bağlanabilir.
+Bazı durumlarda, kaldırma işlemi başlatıldığında bir özel `AssemblyLoadContext` öğesine yüklenen kodun bazı temizleme işlemleri gerçekleştirmesi gerekebilir. Örneğin, iş parçacıklarını durdurmalı, bazı güçlü GC tutamaçlarını temizleyebiliyor. `Unloading` Olay bu gibi durumlarda kullanılabilir. Gerekli temizleme işlemini gerçekleştiren bir işleyici bu olaya bağlanabilir.
 
-### <a name="troubleshoot-unloadability-issues"></a>Unloadability sorunlarını giderme
+### <a name="troubleshoot-unloadability-issues"></a>Kaldırma sorunları sorunlarını giderme
 
-İşbirlikçi yapısı nedeniyle, eklentiyi, her şeyi bir toplanabilir tutma başvurular hakkında unutmak çok kolaydır `AssemblyLoadContext` etkin tutulan bağlantıyı destekliyorsa ve engelleme kaldırma. Başvuruları tutabilen ve nesnelerin interneti (bunlardan bazıları belirgin olmayan) bir özeti aşağıda verilmiştir:
+Boşaltma 'nın işbirliksel doğası nedeniyle, verileri toplanabilir `AssemblyLoadContext` bir şekilde tutmanın ve kaldırma işlemini engellediği başvuruların hakkında unutmak çok kolay. Bu, başvuruları tutabilecek öğelerin (bazı belirgin olmayan) bir özeti aşağıdadır:
 
-- Normal başvuruları tutulan gelen toplanabilir dışında `AssemblyLoadContext`, yığın yuvası veya işlemci kaydı (ya da kullanıcı kod tarafından veya örtük olarak JIT tarafından açıkça oluşturulan yöntemi Yereller), bir statik değişken veya bir güçlü / sabitleme GC tanıtıcı depolanır ve geçişli işaret eden:
-  - Bir derleme yüklenen toplanabilir `AssemblyLoadContext`.
-  - Böyle bir derlemeden bir tür.
-  - Böyle bir derlemeden bir tür örneği.
-- Bir derlemeye ait kod çalıştıran iş parçacığı toplanabilir yüklenen `AssemblyLoadContext`.
-- Özel toplanabilir olmayan örneklerini `AssemblyLoadContext` toplanabilir içinde oluşturulan türleri `AssemblyLoadContext`
-- Bekleyen <xref:System.Threading.RegisteredWaitHandle> geri çağırmaları örnekleriyle ayarlanmış özel yöntemler `AssemblyLoadContext`
+- Bir yığın yuvasında veya bir işlemci kaydındaki saklanan düzenli `AssemblyLoadContext`başvurular (Kullanıcı kodu tarafından açıkça oluşturulan ya da dolaylı olarak JIT tarafından), bir statik değişken veya güçlü/sabitleme GC tutamacı ve geçişli işaret:
+  - Toplanabilir öğesine yüklenmiş bir bütünleştirilmiş kod `AssemblyLoadContext`.
+  - Bu tür bir derlemeden bir tür.
+  - Bu tür bir derlemeden bir türün örneği.
+- Toplanabilir öğesine yüklenen bir derlemeden kod çalıştıran iş parçacıkları `AssemblyLoadContext`.
+- Toplanabilir içinde oluşturulan özel toplanabilir `AssemblyLoadContext` türlerin örnekleri`AssemblyLoadContext`
+- Geri <xref:System.Threading.RegisteredWaitHandle> çağırmaların özel içindeki yöntemlere ayarlandığı bekleyen örnekler`AssemblyLoadContext`
 
-Yığın yuvası bulmak için ipuçları işlemci Register nesneyi kök dizini değiştirme:
+Yığın yuvası/işlemci kaydını bulma ipuçları bir nesneyi kök olarak kaydeder:
 
-- İşlev çağrısı sonuçları doğrudan başka bir işlev için hiçbir kullanıcı tarafından oluşturulan yerel değişken olsa bile bir kök oluşturabilir geçirme.
-- Bir nesneye bir başvuru bir yöntem herhangi bir noktada mevcut olduğunda, JIT yığın yuvasında başvurusunu korumanız karar verdiğiniz / işlemcisi kaydetmek için geçerli işlevde istediği sürece.
+- İşlev çağrısı sonuçlarının doğrudan başka bir işleve geçirilmesi, Kullanıcı tarafından oluşturulmuş bir yerel değişken olmasa da kök oluşturabilir.
+- Bir nesne başvurusu bir yöntemde herhangi bir noktada kullanılabilirse JıT, başvuruyu, geçerli işlevde istediği sürece bir yığın yuvası/işlemci kaydı içinde tutmaya karar vermiş olabilir.
 
-## <a name="debug-unloading-issues"></a>Kaldırma sorunlarında hata ayıklama
+## <a name="debug-unloading-issues"></a>Hata ayıklama kaldırma sorunları
 
-Hata ayıklama kaldırma sorunlarını can sıkıcı olabilir. Burada bilmediğiniz ne bulunduran durumlarda alabileceğiniz bir `AssemblyLoadContext` etkin tutulan bağlantıyı destekliyorsa, ancak kaldırma başarısız olur.
-İle yardımcı olması için en iyi Silah WinDbg (LLDB UNIX üzerinde) ile SOS eklentisidir. Tutuyor mu bulmanız gereken bir `LoaderAllocator` belirli ait `AssemblyLoadContext` tutma.
-Bu eklenti, GC yığın nesnelerini, hiyerarşiler ve kökleri aramak sağlar.
-Eklenti hata ayıklayıcısına yüklemek için hata ayıklayıcı komut satırında aşağıdaki komutu girin:
+Kaldırma ile ilgili hata ayıklama sorunları sıkıcı olabilir. `AssemblyLoadContext` Canlı neleri tutabilen, ancak kaldırma başarısız olursa, bu durumlara ulaşabilirsiniz.
+Bu, sos eklentisi ile WinDbg (UNIX üzerinde lldb) ile ilgili yardım için en iyi uygulamalar. `LoaderAllocator` Belirli`AssemblyLoadContext` bir canlı kuruluşa ait olanları bulmanız gerekir.
+Bu eklenti, GC yığın nesnelerine, hiyerarşilerine ve köklerine bakabilmeniz için izin verir.
+Eklentiyi hata ayıklayıcıya yüklemek için, hata ayıklayıcı komut satırına aşağıdaki komutu girin:
 
-(WinDbg otomatik olarak .NET Core uygulamasına bozucu olduğunda yapan görünüyor) WinDbg içinde:
+WinDbg 'de (.NET Core uygulamasına bölünmediği zaman, WinDbg olarak görünür):
 
 ```console
 .loadby sos coreclr
 ```
 
-LLDB içinde:
+LLDB 'de:
 
 ```console
 plugin load /path/to/libsosplugin.so
 ```
 
-Örnek kaldırma sorunları olan bir programı hata ayıklama deneyelim. Kaynak kodu, aşağıda yer almaktadır. WinDbg altında çalıştırdığınızda, programın kaldırma başarı için denetlenecek denemeden sonra hata ayıklayıcı sağındaki keser. Ardından, culprits için arama da başlatabilirsiniz.
+Daha sonra, kaldırma sorunları olan bir örnek programda hata ayıklamaya deneyelim. Kaynak kodu aşağıda verilmiştir. Bunu WinDbg altında çalıştırdığınızda, program, kaldırma başarısını denetlemeye çalıştıktan sonra hata ayıklayıcıya hemen sonra sonlandırır. Daha sonra Bu küller için aramaya başlayabilirsiniz.
 
-Aşağıdaki örneklerde SOS komutlarının LLDB UNIX kullanarak hata ayıklama, yüklü olmadığını unutmayın `!` bunları önünde.
+UNIX üzerinde lldb kullanarak hata ayıklaması yaparsanız, aşağıdaki örneklerde yer alan sos komutlarının önünde yoktur `!` .
 
 ```console
 !dumpheap -type LoaderAllocator
 ```
 
-Bu komut tüm nesneleri içeren bir tür adı ile dökümleri `LoaderAllocator` GC yığınında olan. Aşağıda bir örnek verilmiştir:
+Bu komut, GC yığınında olan içeren `LoaderAllocator` bir tür adı olan tüm nesneleri döker. Aşağıda bir örnek verilmiştir:
 
 ```console
          Address               MT     Size
@@ -135,17 +135,17 @@ Statistics:
 Total 2 objects
 ```
 
-İçinde "istatistikleri:" bölümü altındaki onay `MT` (`MethodTable`) ait `System.Reflection.LoaderAllocator`, biz önem verdiğiniz nesne olduğu. Ardından girişle başında listede bulun `MT` tek eşleştirme ve nesnenin adresini alın. Bu örnekte, "000002b78000ce40" olduğu
+Aşağıdaki "İstatistikler:" bölümünde, ilgilendiğimiz nesne olan `MT` öğesine`MethodTable` `System.Reflection.LoaderAllocator`ait olan () öğesini işaretleyin. Ardından, başındaki listede, `MT` eşleşen girdiyi bulun ve nesnenin adresini alın. Bu durumda, "000002b78000ce40"
 
-Biz adresini öğrendiğinize göre `LoaderAllocator` , GC kökleri bulmak için başka bir komuta kullanabileceğiniz nesnesi
+Artık `LoaderAllocator` nesnenin adresini öğrendiğimiz için, GC köklerinin bulunması için başka bir komut de kullanabiliriz
 
 ```console
 !gcroot -all 0x000002b78000ce40 
 ```
 
-Bu komut zincirini neden nesne başvuruları dökümleri `LoaderAllocator` örneği. Listenin tutan bir varlık kök ile başlar bizim `LoaderAllocator` etkin tutulan bağlantıyı destekliyorsa ve bu nedenle hata ayıklama sorunun temel. Kök yığın yuvası, işlemci kaydı, GC tanıtıcısı veya statik değişken olabilir.
+Bu komut, `LoaderAllocator` örneğe yol açabilecek nesne başvuruları zincirini döker. Liste, `LoaderAllocator` etkin olan ve bu nedenle hata ayıklaması yaptığınız sorunun çekirdeği olan köküyle başlar. Kök bir yığın yuvası, bir işlemci kaydı, bir GC tanıtıcısı veya statik değişken olabilir.
 
-İşte bir örnek çıktısı `gcroot` komutu:
+`gcroot` Komutun çıktısının bir örneği aşağıda verilmiştir:
 
 ```console
 Thread 4ac:
@@ -172,22 +172,22 @@ HandleTable:
 Found 3 roots.
 ```
 
-Şimdi Bunu düzeltmek için kök bulunduğu kullanıma şekil gerekir. Kök yığın yuvası ya da bir işlemci kayıt olduğunda kolay durum geçerlidir. Bu durumda, `gcroot` olan çerçeveyi içeren kök ve bu işlev yürütme iş parçacığı işlevin adını gösterir. Kök statik bir değişken veya GC tanıtıcı olduğunda zor bir durumdur. 
+Şimdi, bu işlemi çözebilmeniz için kökün bulunduğu yeri belirlemeniz gerekir. En kolay durum, kök bir yığın yuvası veya bir işlemci kaydı olduğunda olur. Bu durumda, `gcroot` çerçevesi kök içeren ve bu işlevi yürüten iş parçacığı olan işlevin adını gösterir. Zor durum, kökün bir statik değişken veya bir GC tutamacı olması durumunda olur. 
 
-Önceki örnekte, ilk kök yerel bir tür olan `System.Reflection.RuntimeMethodInfo` işlevi çerçevede depolanan `example.Program.Main(System.String[])` adresindeki `rbp-20` (`rbp` işlemci kaydıdır `rbp` ve -20 Bu kayıt onaltılık bir uzaklık).
+Önceki örnekte, ilk kök, adresindeki `System.Reflection.RuntimeMethodInfo` `rbp-20` işlevin `example.Program.Main(System.String[])` çerçevesinde depolanan tür yereldir (`rbp` işlemci yazmacı `rbp` olur ve-20 Bu kaydın onaltılık bir uzaklığında oluşur).
 
-İkinci köküdür (güçlü) normal `GCHandle` örneğine bir başvuru tutan `test.Test` sınıfı. 
+İkinci kök, `test.Test` sınıfının bir örneğine başvuru tutan normal `GCHandle` (güçlü) bir sınıftır. 
 
-Üçüncü kök sabitlenmiş olan `GCHandle`. Bu, aslında bir statik değişken ' dir. Ne yazık ki bildirmek için hiçbir yolu yoktur. Başvuru türleri için statikler iç çalışma zamanı yapılardaki bir yönetilen nesne dizisindeki depolanır.
+Üçüncü kök sabitlenmiş `GCHandle`bir. Bu, aslında statik bir değişkendir. Ne yazık ki, söylemek için bir yol yoktur. Başvuru türleri için statiği, iç çalışma zamanı yapılarında yönetilen nesne dizisinde depolanır.
 
-Yüklemesini kaldırmak engelleyebilecek başka bir örneği bir `AssemblyLoadContext` bir iş parçacığı bir metodun çerçeve sahip olduğunda bir derleme yüklenen `AssemblyLoadContext` , yığında. Yönetilen dökme tüm iş parçacığı yığınları çağırın denetleyebilirsiniz:
+Bir iş parçacığının, `AssemblyLoadContext` `AssemblyLoadContext` yığınında üzerine yüklenmiş bir derlemeden bir yöntemi olduğunda bir, öğesinin kaldırılmasını engelleyebilen başka bir durum. Tüm iş parçacıklarının yönetilen çağrı yığınlarının dökümünü yaparak bunu kontrol edebilirsiniz:
 
 ```console
 ~*e !clrstack
 ```
 
-Komut anlamına gelir "tüm iş parçacıkları için geçerli `!clrstack` komut". Örneğin bu komutun çıktısı aşağıda verilmiştir. Ne yazık ki LLDB UNIX üzerinde el ile geçiş iş parçacıkları ve yinelenen başvurmadan gerekecek bir komutu tüm iş parçacıkları için uygulamak için herhangi bir şekilde yok `clrstack` komutu.
-Burada "Yönetilen yığın yol alınamıyor." hata ayıklayıcı'ifadesini içeren tüm iş parçacıklarının yoksay
+Komut "tüm iş parçacıkları `!clrstack` için geçerlidir" anlamına gelir. Örnek için bu komutun çıktısı aşağıda verilmiştir. Ne yazık ki, UNIX üzerinde lldb tüm iş parçacıkları için bir komut uygulamak için herhangi bir yola sahip değildir, bu nedenle iş parçacıklarını el ile değiştirmek ve `clrstack` komutu yinelemek için çare olmanız gerekir.
+Hata ayıklayıcının "yönetilen yığında ilerleme yapılamıyor" ifadesini belirten tüm iş parçacıklarını yoksayın.
 
 ```console
 OS Thread Id: 0x6ba8 (0)
@@ -236,18 +236,18 @@ OS Thread Id: 0x60bc (7)
 
 ```
 
-Gördüğünüz gibi son iş parçacığı vardır `test.Program.ThreadProc()`. Bu derlemeden yüklenen işlevdir `AssemblyLoadContext`, ve sürdürür böylece `AssemblyLoadContext` tutma.
+Gördüğünüz gibi son iş parçacığı `test.Program.ThreadProc()`. Bu, öğesine `AssemblyLoadContext`yüklenen derlemeden bir işlevdir ve bu sayede `AssemblyLoadContext` canlı tutar.
 
-## <a name="example-source-with-unloadability-issues"></a>Örnek kaynak unloadability sorunları
+## <a name="example-source-with-unloadability-issues"></a>Loadability sorunları olan örnek kaynak
 
-Aşağıdaki kod, önceki örnekte hata ayıklama kullanılır.
+Aşağıdaki kod, önceki hata ayıklama örneğinde kullanılır.
 
-### <a name="main-testing-program"></a>Test ana program
+### <a name="main-testing-program"></a>Ana test programı
 
 [!code-csharp[Main testing program](~/samples/snippets/standard/assembly/unloading/unloadability_issues_example_main.cs)]
 
-## <a name="program-loaded-into-the-testassemblyloadcontext"></a>Program TestAssemblyLoadContext yüklendi
+## <a name="program-loaded-into-the-testassemblyloadcontext"></a>TestAssemblyLoadContext içine yüklenen program
 
-Aşağıdaki kod temsil `test.dll` geçirilen `ExecuteAndUnload` test eden ana program yöntemi.
+Aşağıdaki kod, ana test `test.dll` programındaki `ExecuteAndUnload` yöntemine geçirilen yöntemi temsil eder.
 
 [!code-csharp[Program loaded into the TestAssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/unloadability_issues_example_test.cs)]

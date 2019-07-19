@@ -1,134 +1,132 @@
 ---
-title: Regresyon modeli Oluşturucu ile kullanarak fiyatlarını tahmin etme
-description: Bu öğreticide ML.NET Model Fiyatlar, özellikle tahmin etmek için oluşturucu oturan taksi fares kullanarak bir regresyon modeli derler gösterilmektedir.
+title: Model Oluşturucu ile gerileme kullanarak fiyatları tahmin etme
+description: Bu öğreticide, özellikle New York City taksi Fares fiyatlarını tahmin etmek için ml.net model Oluşturucu kullanarak bir gerileme modeli oluşturma gösterilmektedir.
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d8c901a10c91c8a6c16ca59516b633a99785ebac
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: b4a08a9866bbc8816b57c95bdb22766bd1b07fdc
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238562"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331707"
 ---
-# <a name="predict-prices-using-regression-with-model-builder"></a>Regresyon modeli Oluşturucu ile kullanarak fiyatlarını tahmin etme
+# <a name="predict-prices-using-regression-with-model-builder"></a>Model Oluşturucu ile gerileme kullanarak fiyatları tahmin etme
 
-ML.NET Model Oluşturucu fiyatlarını tahmin etmek için regresyon model() oluşturmak için kullanmayı öğrenin.  Bu öğreticide geliştirdiğiniz .NET konsol uygulaması taksi fares geçmiş New York taksi taksi verilerini temel alarak tahmin eder.
+Fiyatları tahmin etmek için bir gerileme modeli () oluşturmak üzere ML.NET model Oluşturucu 'Yu nasıl kullanacağınızı öğrenin.  Bu öğreticide geliştirdiğiniz .NET konsol uygulaması, geçmiş New York taksi tarifeli havayolu verilerine dayalı olarak taksi Fares 'yi tahmin eder.
 
-Model Oluşturucu fiyatı tahmin şablon sayısal tahmin değeri gerektiren her senaryo için kullanılabilir. Örnek senaryoları şunları içerir: barındırmak fiyat tahmini, Talep tahmini ve satış tahmini.
+Model Oluşturucu fiyat tahmin şablonu, sayısal tahmin değeri gerektiren herhangi bir senaryo için kullanılabilir. Örnek senaryolar şunlardır: ev fiyat tahmini, talep tahmini ve satış tahmini.
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
-> * Hazırlama ve verileri anlama
+> * Verileri hazırlama ve anlama
 > * Senaryo seçin
 > * Verileri yükleme
 > * Modeli eğitme
 > * Modeli değerlendirme
-> * Kullanım modeli tahminler elde etmek için
+> * Tahmin için modeli kullanma
 
 > [!NOTE]
-> Model Oluşturucu şu anda Önizleme aşamasındadır.
+> Model Oluşturucu Şu anda önizleme aşamasındadır.
 
 ## <a name="pre-requisites"></a>Ön koşullar
 
-Önkoşullar ve yükleme yönergeleri bir listesi için ziyaret edin [Model Oluşturucu Yükleme Kılavuzu](../how-to-guides/install-model-builder.md).
+Önkoşul ve Yükleme yönergelerinin bir listesi için [model Oluşturucu Yükleme Kılavuzu](../how-to-guides/install-model-builder.md)' nu ziyaret edin.
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
-1. Oluşturma bir **.NET Core konsol uygulaması** "TaxiFarePrediction" denir.
+1. "Taxifaretahminini" adlı bir **.NET Core konsol uygulaması** oluşturun.
 
-## <a name="prepare-and-understand-the-data"></a>Hazırlama ve verileri anlama
+## <a name="prepare-and-understand-the-data"></a>Verileri hazırlama ve anlama
 
-1. Adlı bir dizin oluşturmak *veri* projenizdeki veri kümesi dosyaları depolamak için.
+1. Veri kümesi dosyalarını depolamak için projenizde *veri* adlı bir dizin oluşturun.
 
-1. Veri eğitmek ve machine learning modeli değerlendirmek için kullanılan özgün NYC TLC taksi seyahat veri kümesinden kümesidir. 
+1. Machine Learning modelini eğmekte ve değerlendirmek için kullanılan veri kümesi, ilk olarak NYC TLC TAXI seyahat veri kümesinden.
 
-    Veri kümesi indirmek için Git [taksi taksi train.csv indirme bağlantısı](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv). 
-    
-    Sayfa yüklendiğinde, herhangi bir sayfanın sağ tıklatın ve **Kaydet**. 
-    
-    Kullanım **Kaydet iletişim** dosyasına kaydetmek için *veri* önceki adımda oluşturduğunuz klasör. 
-    
-1. İçinde **Çözüm Gezgini**, sağ *taksi taksi train.csv* seçin ve dosya **özellikleri**. Altında **Gelişmiş**, değiştirin **çıkış dizinine Kopyala** için **yeniyse Kopyala**.
+    Veri kümesini indirmek için [Taxi-fare-train. csv indirme bağlantısına](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv)gidin.
 
-Her satırda `taxi-fare-train.csv` veri kümesi bir taksi tarafından yapılan gelişlerin ayrıntılarını içerir.
+    Sayfa yüklendiğinde, sayfada herhangi bir yere sağ tıklayın ve **farklı kaydet**' i seçin.
 
-1. Açık **taksi taksi train.csv** veri kümesi
+    Dosyayı önceki adımda oluşturduğunuz *veri* klasörüne kaydetmek Için **Farklı Kaydet iletişim kutusunu** kullanın.
 
-    Sağlanan veri kümesi şu sütunları içerir:
+1. **Çözüm Gezgini**, *Taxi-fare-train. csv* dosyasına sağ tıklayın ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala**olarak değiştirin.
 
-    * **vendor_id:** Taksi satıcı kimliği bir özelliktir.
-    * **rate_code:** Taksi dönüş oranı türünü bir özelliktir.
-    * **passenger_count:** Bir özellik Yolcuların seyahat üzerinde sayısıdır.
-    * **trip_time_in_secs:** Seyahat geçen süre miktarı. 
-    * **trip_distance:** Seyahat mesafesini bir özelliktir.
-    * **payment_type:** Ödeme yöntemini (nakit veya kredi kartı) bir özelliktir.
-    * **fare_amount:** Ücretli toplam taksi taksi etiketi olur.
+`taxi-fare-train.csv` Veri kümesindeki her satır bir TAXI tarafından yapılan gelişlerin ayrıntılarını içerir.
 
-`label` Tahmin etmek istediğiniz sütun. Bir regresyon görevi gerçekleştirirken, sayısal bir değer tahmin hedeftir. Bu fiyat tahmini senaryoda taksi kılma maliyetini tahmin edildiğinde. Bu nedenle, **fare_amount** etiketidir. Tanımlanan `features` modeli tahmin etmek için size girişleri `label`. Bu durumda, geri kalan sütunların özellikleri veya girişleri olarak taksi miktarı tahmin etmek için kullanılır.
+1. **Taxi-fare-train. csv** veri kümesini açın
+
+    Belirtilen veri kümesi şu sütunları içerir:
+
+    * **vendor_id:** Taxı satıcısının KIMLIĞI bir özelliktir.
+    * **rate_code:** Taxı seyahati 'ın hız türü bir özelliktir.
+    * **passenger_count:** Seyahat üzerindeki pascuların sayısı bir özelliktir.
+    * **trip_time_in_secs:** Seyahati için geçen süre.
+    * **trip_distance:** Seyahat uzaklığı bir özelliktir.
+    * **payment_type:** Ödeme yöntemi (nakit veya kredi kartı) bir özelliktir.
+    * **fare_amount:** Ödenen toplam TAXI tarifeli havayolu etikettir.
+
+`label` Tahmin etmek istediğiniz sütundur. Regresyon görevi gerçekleştirirken, amaç sayısal bir değeri tahmin etmek için kullanılır. Bu fiyat tahmin senaryosunda, bir TAXI arttırıldığında 'nın maliyeti tahmin ediliyor. Bu nedenle, **fare_amount** etikettir. `features` ,`label`Modeli tahmin etmek için size izin verdiğiniz girişlerdir. Bu durumda, sütunların geri kalanı tarifeli havayolu tutarını tahmin etmek için özellik veya giriş olarak kullanılır.
 
 ## <a name="choose-a-scenario"></a>Senaryo seçin
 
-Modelinizi eğitmek için kullanılabilir makine öğrenme modeli oluşturucusu tarafından sağlanan senaryolar listesinden seçmeniz gerekir. Bu durumda, senaryodur `Price Prediction`. 
+Modelinize eğitebilmeniz için, model Oluşturucu tarafından sağlanan kullanılabilir makine öğrenimi senaryoları listesinden seçim yapmanız gerekir. Bu durumda senaryo `Price Prediction`.
 
-1. İçinde **Çözüm Gezgini**, sağ *TaxiFarePrediction* proje ve seçin **Ekle** > **Machine Learning**.
-1. Model Oluşturucu aracı senaryo adımda seçin *fiyat tahmini* senaryo.
+1. **Çözüm Gezgini**, *taxifaretahmin* projesine sağ tıklayın ve**Machine Learning** **Ekle** > ' yi seçin.
+1. Model Oluşturucu aracının senaryo adımında *fiyat tahmini* senaryosu ' nı seçin.
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
-Model Oluşturucu iki kaynağı, bir SQL Server veritabanı veya yerel bir dosya biçiminde, csv veya tsv verileri kabul eder. 
+Model Oluşturucu, bir SQL Server veritabanı veya CSV ya da TSV biçimindeki yerel bir dosya olan iki kaynaktan verileri kabul eder.
 
-1. Model Oluşturucu aracı verileri adımda seçin *dosya* veri kaynağı açılır listeden.
-1. Düğmeyi seçin *bir dosya seçin* metin kutusu ve kullanım ve seçmek için dosya Gezgini'ni *taksi taksi test.csv* içinde *veri* dizini
-1. Seçin *fare_amount* içinde *etiket veya Predıct sütun* açılır ve Model Oluşturucu aracı train adımına gidin.
+1. Model Oluşturucu aracının veri adımında, veri kaynağı açılır listesinden *Dosya* ' yı seçin.
+1. *Dosya Seç* metin kutusunun yanındaki düğmeyi seçin ve *veri* dizinindeki *Taxi-fare-test. csv* dosyasına gidip seçmek için dosya Gezgini 'ni kullanın
+1. Açılan menüyü *tahmin etmek Için etiket veya sütunda* *fare_amount* öğesini seçin ve model Oluşturucu aracının eğitme adımına gidin.
 
 ## <a name="train-the-model"></a>Modeli eğitme
 
-Bu öğreticide fiyatı tahmin modeli eğitmek için kullanılan görev öğrenme regresyon makinedir. Model eğitimi işlemi sırasında en iyi performansa sahip veri kümeniz için model bulmak için farklı bir regresyon algoritmaları ve ayarları'nı kullanarak ayrı modeller Model Oluşturucu eğitir.
+Bu öğreticide fiyat tahmin modelini eğitmek için kullanılan makine öğrenimi görevi gerileme. Model oluşturma işlemi sırasında model Oluşturucu, veri kümeniz için en iyi işlem modelini bulmak üzere farklı gerileme algoritmaları ve ayarları kullanarak modelleri ayrı ayrı işler.
 
-Modeli eğitmek gereken süreyi veri miktarı için uygun. Bu grafik için yeterli bir değer seçmek için kılavuz kullanın. `Time to train (seconds)` alan:
+Modelin eğitilmesi için gereken süre, veri miktarına müşterinizin istekleriyle orantılı. `Time to train (seconds)` Alan için uygun bir değer seçmek üzere bu grafiği kılavuz olarak kullanın:
 
-\* Veri kümesi boyutu  | Veri kümesi türü       | Ort. Eğitimi * süresi
+\* Veri kümesi boyutu  | Veri kümesi türü       | Ort. Tren süresi *
 ------------- | ------------------ | --------------
-0 - 10 mb     | Sayısal ve metin   | 10 saniye
-10 - 100 mb   | Sayısal ve metin   | 10 dakikalık
-100 - 500 mb  | Sayısal ve metin   | 30 dakika
-500 - 1 Gb    | Sayısal ve metin   | 60 dk önce
-1 Gb +         | Sayısal ve metin   | 3 saat +
+0-10 MB     | Sayısal ve metin   | 10 sn
+10-100 MB   | Sayısal ve metin   | 10 dakika
+100-500 MB  | Sayısal ve metin   | 30 dakika
+500-1 GB    | Sayısal ve metin   | 60 dk
+1 GB +         | Sayısal ve metin   | 3 saat +
 
-1. Eğitim verileri dosyası 10 MB'tan fazla olduğundan, 600 saniye (10 dakika) değeri olarak kullanın *süresi (saniye) eğitmek için*.
-2. Seçin *eğitim Başlat*.
+1. Eğitim veri dosyası 10 MB 'tan fazla olduğundan, *tren süresi (saniye)* değeri olarak 600 saniye (10 dakika) kullanın.
+2. *Eğitimi Başlat*' ı seçin.
 
-Eğitim işlem boyunca ilerleme veri görüntülenen `Progress` eğitimi adım bölümü.
+Eğitim süreci boyunca, ilerleme verileri eğitme adımının `Progress` bölümünde görüntülenir.
 
-- Durum eğitim işleminin tamamlanma durumunu görüntüler.
-- En yüksek doğruluğa en iyi performansa sahip Model Oluşturucu bulundu modelinin doğruluğunu görüntüler. Daha yüksek doğruluk testi veri daha doğru bir şekilde tahmin modeli anlamına gelir.
-- En iyi algoritmayı bulundu modelinin oluşturucusu tarafından gerçekleştirilen en iyi performansa algoritma adını görüntüler.
-- Son algoritması, en son Model Oluşturucu, modeli eğitmek için kullanılan algoritma adını görüntüler.
+- Durum, eğitim sürecinin tamamlanma durumunu görüntüler.
+- En iyi doğruluk, şu ana kadar model Oluşturucu tarafından bulunan en iyi şekilde oluşan modelin doğruluğunu gösterir. Daha yüksek doğruluk, modelin test verilerinde daha doğru tahmin edilen anlamına gelir.
+- En iyi algoritma, şu ana kadar model Oluşturucu tarafından bulunan en iyi şekilde gerçekleştirilen algoritmanın adını görüntüler.
+- Son algoritma modeli eğitmek için model Oluşturucu tarafından en son kullanılan algoritmanın adını görüntüler.
 
-Alıştırma tamamlandıktan sonra değerlendir adımına gidin.
+Eğitim tamamlandıktan sonra değerlendir adımına gidin.
 
 ## <a name="evaluate-the-model"></a>Modeli değerlendirme
 
-En iyi performansı sahip bir model eğitimi adım olacaktır. Model Oluşturucu aracı değerlendir adımda çıkış bölümüne en iyi performansa sahip modeli tarafından kullanılan algoritmayı içerecek *en iyi modeli* ölçümlerde yanı sıra giriş *en iyi Model kalitesi (RSquared)* . İlk beş modelleri ve bunların ölçümleri içeren ek olarak, bir Özet Tablosu. 
+Eğitim adımının sonucu, en iyi performansa sahip bir model olacaktır. Model Oluşturucu aracının değerlendir adımında, çıkış bölümü en iyi *model girişinde en* iyi işlem modeli tarafından kullanılan algoritmayı *(RKARE)* içerir. Ayrıca, ilk beş modeli ve bunların ölçümlerini içeren bir Özet tablosu.
 
-Doğruluk ölçümlerinizi memnun değilseniz, deneyin ve doğruluğu artırmak için bazı kolay veya daha fazla veri modeli eğitme süre miktarını artırmak için yöntemlerdir. Aksi takdirde, kod adımına gidin. 
+Doğruluk ölçümlerinizi tatmin ediyorsanız, model doğruluğunu denemeye yönelik bazı kolay yollar, modelin eğilmesi veya daha fazla veri kullanmak için zaman miktarını artırmaktır. Aksi takdirde, kod adımına gidin.
 
-## <a name="add-the-code-to-make-predictions"></a>Tahminde bulunmak için kod ekleyin
+## <a name="add-the-code-to-make-predictions"></a>Tahminleri yapmak için kodu ekleyin
 
-İki proje eğitim işleminin sonucu olarak oluşturulacak.
+Eğitim sürecinin bir sonucu olarak iki proje oluşturulacaktır.
 
-- TaxiFarePredictionML.ConsoleApp: Model eğitimi ve tüketim kodunu içeren bir .NET Core konsol uygulaması.
-- TaxiFarePredictionML.Model: Giriş şemasını tanımlayan ve en iyi performansa sahip sırasında eğitim modeli kalıcı sürümünü yanı sıra model verileri çıkış veri modelleri içeren .NET Standard sınıf kitaplığı.
+- TaxiFarePredictionML. ConsoleApp: Model eğitimi ve tüketim kodu içeren bir .NET Core konsol uygulaması.
+- TaxiFarePredictionML. Model: Eğitim sırasında en iyi gerçekleştirme modelinin kalıcı sürümü ve giriş ve çıkış modeli verilerinin şemasını tanımlayan veri modellerini içeren .NET Standard sınıf kitaplığı.
 
-
-1. Model Oluşturucu aracı kod adımda seçin **ekleme projeleri** otomatik olarak oluşturulan projeleri çözüme eklemek için.
-1. Sağ *TaxiFarePrediction* proje. Ardından, **Ekle > başvuru**. Seçin **projeleri > Çözüm** düğüm ve listeden *TaxiFarePredictionML.Model* proje ve Tamam'ı seçin.
-1. Açık *Program.cs* dosyası *TaxiFarePrediction* proje.
-1. Aşağıdaki using deyimlerini başvurmak için *Microsoft.ML* NuGet paketi ve *TaxiFarePredictionML.Model* proje:
-
+1. Model Oluşturucu aracının kod adımında, otomatik olarak oluşturulan projeleri çözüme eklemek için **Proje Ekle** ' yi seçin.
+1. *Taxifaretahmin* projesi öğesine sağ tıklayın. Ardından **> başvuru ekleyin**. **Projeler > çözüm** düğümünü seçin ve listeden *TaxiFarePredictionML. model* projesini denetleyip Tamam ' ı seçin.
+1. *Program.cs* dosyasını *Taxifaretahmin* projesinde açın.
+1. *Microsoft.ml* NuGet paketini ve *TaxiFarePredictionML. model* projesine başvurmak için aşağıdaki using deyimlerini ekleyin:
 
     ```csharp
     using System;
@@ -136,7 +134,7 @@ Doğruluk ölçümlerinizi memnun değilseniz, deneyin ve doğruluğu artırmak 
     using TaxiFarePredictionML.Model.DataModels;
     ```
 
-1. Ekleme `ConsumeModel` yönteme `Program` sınıfı. 
+1. `ConsumeModel` Yöntemini`Program` sınıfına ekleyin.
 
     ```csharp
     static ModelOutput ConsumeModel(ModelInput input)
@@ -156,9 +154,9 @@ Doğruluk ölçümlerinizi memnun değilseniz, deneyin ve doğruluğu artırmak 
     }
     ```
 
-    `ConsumeModel` , Eğitilen model yük oluşturma bir [ `PredictionEngine` ](xref:Microsoft.ML.PredictionEngine%602) modeli için ve yeni veri tahminlerde bulunmak için kullanın.
+    Eğitilen modeli yükler, model için bir [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) oluşturun ve yeni verilerde tahmine dayalı hale getirmek için onu kullanın. `ConsumeModel`
 
-7. Üzerinde yeni veri modelini kullanarak bir tahminde bulunmak için yeni bir örneğini oluşturun. `ModelInput` kullanın ve sınıf `ConsumeModel` yöntemi. Taksi miktarı girişinin parçası olmadığına dikkat edin. Bu durum, onun için tahmin modeli oluşturur çünkü. Aşağıdaki kodu ekleyin `Main` yöntemi ve uygulama çalıştırma
+1. Modeli kullanarak yeni verileri tahmin etmek için, `ModelInput` sınıfın yeni bir örneğini oluşturun ve `ConsumeModel` yöntemini kullanın. Tarifeli havayolu tutarının girişin bir parçası olmadığına dikkat edin. Bunun nedeni, modelin tahmin oluşturması olacaktır. `Main` Yöntemine aşağıdaki kodu ekleyin ve uygulamayı çalıştırın
 
     ```csharp
     // Create sample data
@@ -180,31 +178,31 @@ Doğruluk ölçümlerinizi memnun değilseniz, deneyin ve doğruluğu artırmak 
     Console.ReadKey();
     ```
 
-    Program tarafından oluşturulan çıktı kod parçacığını aşağıdaki gibi görünmelidir:
+    Program tarafından oluşturulan çıkış aşağıdaki kod parçacığına benzemelidir:
 
     ```bash
     Predicted Fare: 16.82245
     ```
 
-Daha sonra başka bir çözüm içinde oluşturulan projeleri başvurmanız gerekiyorsa, içinde bulabilirsiniz `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` dizin.
+Oluşturulan projelere başka bir çözümün içinde daha sonraki bir zamanda başvurmanız gerekirse, bunları `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` dizin içinde bulabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
-> * Hazırlama ve verileri anlama
+> * Verileri hazırlama ve anlama
 > * Senaryo seçin
 > * Verileri yükleme
 > * Modeli eğitme
 > * Modeli değerlendirme
-> * Kullanım modeli tahminler elde etmek için
+> * Tahmin için modeli kullanma
 
 ### <a name="additional-resources"></a>Ek Kaynaklar
 
-Bu öğreticide bahsedilen konuları hakkında daha fazla bilgi için aşağıdaki kaynakları ziyaret edin:
+Bu öğreticide bahsedilen konular hakkında daha fazla bilgi edinmek için aşağıdaki kaynakları ziyaret edin:
 
 - [Model Oluşturucu senaryoları](../automate-training-with-model-builder.md#scenarios)
 - [Model Oluşturucu veri biçimleri](../automate-training-with-model-builder.md#data-formats)
 - [Regresyon](../resources/glossary.md#regression)
 - [Regresyon modeli ölçümleri](../resources/metrics.md#metrics-for-regression)
-- [NYC TLC taksi seyahat veri kümesi](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
+- [NYC TLC TAXI seyahat veri kümesi](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)

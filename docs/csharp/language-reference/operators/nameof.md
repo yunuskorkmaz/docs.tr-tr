@@ -1,39 +1,41 @@
 ---
-title: nameof işlecinin - C# başvurusu
+title: NameOf işleci- C# başvuru
 ms.custom: seodec18
 ms.date: 07/12/2019
 f1_keywords:
 - nameof_CSharpKeyword
 - nameof
+helpviewer_keywords:
+- nameof operator [C#]
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 945a8a8ff6d96cb505fa10e85c21a93347661a23
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 965b3e96a20906187df4c8693f050c550a747091
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238692"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331443"
 ---
-# <a name="nameof-operator-c-reference"></a>nameof işlecinin (C# Başvurusu)
+# <a name="nameof-operator-c-reference"></a>NameOf işleci (C# başvuru)
 
-`nameof` İşleci bir değişken, türü veya dize sabiti olarak üye adını alır:
+`nameof` İşleci, dize sabiti olarak bir değişkenin, türün veya üyenin adını edinir:
 
 [!code-csharp-interactive[nameof operator](~/samples/csharp/language-reference/operators/NameOfOperator.cs#Examples)]
 
-Bir tür ve ad alanı, söz konusu olduğunda yukarıdaki örnekte gösterildiği gibi üretilen adı genellikle değil [tam](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).
+Yukarıdaki örnekte gösterildiği gibi, bir tür ve ad alanı durumunda, oluşturulan ad genellikle [tam olarak nitelenir](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).
 
-`nameof` İşleci derleme zamanında değerlendirilir ve çalışma zamanında hiçbir etkisi olmaz.
+`nameof` İşleci derleme zamanında değerlendirilir ve çalışma zamanında hiçbir etkiye sahip değildir.
 
-Kullanabileceğiniz `nameof` bağımsız değişken denetimi kod daha sürdürülebilir hale getirmek için işleç:
+Bağımsız değişken denetleme kodunun `nameof` daha sürdürülebilir olması için işlecini kullanabilirsiniz:
 
 [!code-csharp[nameof and argument check](~/samples/csharp/language-reference/operators/NameOfOperator.cs#ExceptionMessage)]
 
-`nameof` İşleci kullanılabilir C# 6 ve üzeri.
+`nameof` İşleci C# 6 ve üzeri sürümlerde kullanılabilir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [Nameof ifadeleri](~/_csharplang/spec/expressions.md#nameof-expressions) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [NameOf ifadeleri](~/_csharplang/spec/expressions.md#nameof-expressions) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvuru](../index.md)
+- [C#başvurunun](../index.md)
 - [C# işleçleri](index.md)

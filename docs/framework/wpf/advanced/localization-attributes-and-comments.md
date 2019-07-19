@@ -5,39 +5,39 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: a242dc1f69c79b2c1a67c1a9235d3e942553caf1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ef18802ab3568df00e29eb4ccaf717f4bdf4863
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598738"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330988"
 ---
 # <a name="localization-attributes-and-comments"></a>Yerelleştirme Öznitelikleri ve Yorumlar
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Yerelleştirme açıklamalarını olan özellikleri içinde [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kaynak kodu, kurallar ve ipuçları için yerelleştirme sağlamak için geliştiriciler tarafından sağlanan. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Yerelleştirme açıklamalarını iki bilgi kümesi içerir: Yerelleştirme öznitelikleri ve serbest biçimli yerelleştirme yorumlar. Yerelleştirme öznitelikleri tarafından kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirme hangi kaynakların yerelleştirilmesi belirtmek için API. Serbest biçimli, uygulama yazarı eklemek isteyen herhangi bir bilgi yorumlardır.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Yerelleştirme Yorumları, geliştiriciler tarafından yerelleştirme [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] için kurallar ve ipuçları sağlamak üzere sağlanan kaynak kodu içindeki özelliklerdir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]yerelleştirme açıklamaları iki bilgi kümesi içerir: Yerelleştirilebilirlik öznitelikleri ve serbest biçimli yerelleştirme açıklamaları. Yerelleştirilebilirlik öznitelikleri, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirme API 'si tarafından hangi kaynakların yerelleştirileceğini göstermek için kullanılır. Serbest biçimli açıklamalar, uygulama yazarının eklemek istediği herhangi bir bilgi.  
 
 <a name="Localizer_Comments_"></a>   
-## <a name="localization-comments"></a>Yerelleştirme açıklamalarını  
- Biçimlendirme uygulama yazarları belirli öğeleri için gereksinimler varsa [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], metin uzunluğu, yazı tipi ailesi veya yazı tipi boyutu gibi kısıtlamalar, bu bilgileri yerelleştiriciler açıklamalar ile ifade edebilir [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kod. Kaynak koda açıklama ekleme işlemi aşağıdaki gibidir:  
+## <a name="localization-comments"></a>Yerelleştirme açıklamaları  
+ Biçimlendirme uygulaması yazarları, ' deki [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]belirli öğeler için, metin uzunluğu, yazı tipi ailesi veya yazı tipi boyutu kısıtlamaları gibi gereksinimlere sahip olursa, bu bilgileri [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] koddaki yorumlarla birlikte yerellere iletirler. Kaynak koda yorum ekleme işlemi aşağıdaki gibidir:  
   
-1. Uygulama geliştiricileri için yerelleştirme açıklamalarını ekler [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kaynak kodu.  
+1. Uygulama geliştiricisi, [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kaynak koduna yerelleştirme açıklamaları ekler.  
   
-2. Derleme işlemi sırasında .proj dosyasında serbest biçimli yerelleştirme derleme, Yorumlar parçası atmak veya tüm yorumları atmak yorumlarında verilip verilmeyeceğini belirtebilirsiniz. Çıkarılan yorumlar, ayrı bir dosyada yer alır. Seçeneğini kullanarak belirttiğiniz bir `LocalizationDirectivesToLocFile` etiketi, örneğin:  
+2. Oluşturma işlemi sırasında,. proj dosyasında, serbest biçimli yerelleştirme açıklamalarını derlemede bırakıp, yorumların bir kısmını bırakarak veya tüm yorumların dışına çıkaramayacağını belirtebilirsiniz. Açılan Yorumlar ayrı bir dosyaya yerleştirilir. Bir `LocalizationDirectivesToLocFile` etiket kullanarak seçeneğinizi belirtirsiniz, örneğin:  
   
-     `<LocalizationDirectivesToLocFile>` *Değer* `</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>`*değer*`</LocalizationDirectivesToLocFile>`  
   
-3. Atanabilecek değerleri şunlardır:  
+3. Atanabileceği değerler şunlardır:  
   
-    - **Hiçbiri** -hem açıklamalarını ve özniteliklerini derleme içinde kalır, hem de ayrı bir dosya oluşturulur.  
+    - **Hiçbiri** -yorumların ve özniteliklerin her ikisi de derlemenin içinde kalır ve ayrı bir dosya oluşturulmaz.  
   
-    - **CommentsOnly** - derleme yalnızca açıklamalardan ve bunları ayrı LocFile içine yerleştirir.  
+    - **CommentsOnly** -yalnızca derlemeden açıklamaları kaldırır ve ayrı bir LocFile içine yerleştirir.  
   
-    - **Tüm** - açıklamaları hem de derleme öznitelikleri ve bunları iki ayrı bir LocFile içine yerleştirir.  
+    - **All** -derlemeden hem açıklamaları hem de öznitelikleri şeritler ve bunları ayrı bir LocFile içine yerleştirir.  
   
-4. Gelen yerelleştirilebilir kaynaklar ayıklanırken [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], Yerelleştirme öznitelikleri tarafından uymaya [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] yerelleştirme API'si.  
+4. Yerelleştirilebilir kaynaklar BAML 'den ayıklandığında, Yerelleştirilebilirlik öznitelikleri BAML yerelleştirme API 'SI tarafından dikkate alınır.  
   
-5. Yalnızca serbest biçimli açıklamalar içeren yerelleştirme yorum dosyaları daha sonraki bir zamanda yerelleştirme işlemine dahil edilir.  
+5. Yalnızca ücretsiz form açıklamalarını içeren Yerelleştirme açıklama dosyaları, yerelleştirme sürecine daha sonra dahil edilir.  
   
- Aşağıdaki örnek, yerelleştirme açıklamalarını ekleme işlemi gösterilmektedir bir [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] dosya.  
+ Aşağıdaki örnek, bir [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] dosyaya yerelleştirme açıklamalarının nasıl ekleneceğini gösterir.  
   
  `<TextBlock x:Id = "text01"`  
   
@@ -57,45 +57,45 @@ ms.locfileid: "64598738"
   
  `</TextBlock>`  
   
- Önceki örnekte Localization.Attributes Yerelleştirme öznitelikleri ve Localization.Comments bölüm serbest biçimli Açıklamalar bölümü içerir. Aşağıdaki tablolarda, öznitelikleri ve yorumlar ve bunların anlamları yerelleştiriciye gösterilmektedir.  
+ Önceki örnekte, yerelleştirme. Öznitelikler bölümünde, ücretsiz form açıklamaları olan yerelleştirme öznitelikleri ve yerelleştirme. Comments bölümü bulunur. Aşağıdaki tablolarda öznitelikleri ve açıklamaları ve yerelleştiriciye ilişkin anlamı gösterilmektedir.  
   
 |Yerelleştirme öznitelikleri|Açıklama|  
 |-----------------------------|-------------|  
-|$Content (değiştirilemeyen okunabilir metin)|TextBlock öğe içeriklerinin değiştirilemez. "Microsoft" sözcüğünü yerelleştiriciler değiştiremezsiniz. İçeriği yerelleştiriciye görünür (okunabilir) olur. Metin içeriği kategorisidir.|  
-|FontFamily (değiştirilemeyen okunabilir)|TextBlock öğesinin yazı tipi ailesi özelliği değiştirilemez, ancak yerelleştiriciye görünür olur.|  
+|$Content (değiştirilemeyen okunabilir metin)|TextBlock öğesinin içeriği değiştirilemez. Yerelleştiriciler "Microsoft" sözcüğünü değiştiremiyor. İçerik, yerelleştirici için görünür (okunabilir). İçerik kategorisi metindir.|  
+|FontFamily (değiştirilemez okunabilir)|TextBlock öğesinin yazı tipi ailesi özelliği değiştirilemez, ancak Localizer tarafından görülebilir.|  
   
-|Yerelleştirme serbest biçimli açıklamalar|Açıklama|  
+|Yerelleştirme serbest form açıklamaları|Açıklama|  
 |--------------------------------------|-------------|  
-|$Content (ticari)|Uygulama yazarı TextBlock öğe içeriğinde ticari markasıdır yerelleştiriciye söyler.|  
-|FontSize (ticari marka yazı tipi boyutu)|Uygulama yazarı, yazı tipi boyutu özelliğinin standart ticari marka boyutu izlemesi gerektiğini gösterir.|  
+|$Content (ticari marka)|Uygulama yazarı, yerelleştiriciye TextBlock öğesindeki içeriğin bir ticari marka olduğunu söyler.|  
+|FontSize (ticari marka yazı tipi boyutu)|Uygulama yazarı, yazı tipi boyutu özelliğinin standart ticari marka boyutunu izlemesi gerektiğini gösterir.|  
   
-### <a name="localizability-attributes"></a>Yerelleştirme öznitelikleri  
- Çiftlerinin listesini Localization.Attributes bilgileri içerir: hedef değer adını ve ilişkili yerelleştirme değerleri. Hedef adı, özellik adı veya özel $Content adı olabilir. Bir özellik adı ise, hedeflenen özelliğinin değeri değerdir. $Content ise, hedef öğenin içeriğini değerdir.  
+### <a name="localizability-attributes"></a>Yerelleştirilebilirlik öznitelikleri  
+ Yerelleştirme. Attributes içindeki bilgiler, çiftler listesini içerir: hedeflenen değer adı ve ilişkili Yerelleştirilebilirlik değerleri. Hedef adı bir özellik adı veya özel $Content adı olabilir. Özellik adı ise, hedeflenen değer özelliğin değeridir. $Content, hedef değer öğenin içeridir.  
   
- Öznitelik üç tür vardır:  
+ Üç tür öznitelik vardır:  
   
-- **Kategori**. Bu değer bir yerelleştiriciye aracından değiştirilebilir olup olmayacağını belirtir. Bkz. <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
+- **Kategori**. Bu, bir değerin yerelleştirici aracından değiştirilebilir olup olmadığını belirtir. Bkz. <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
   
-- **Okunabilirlik**. Bu bir yerelleştiriciye aracı gerekip gerekmediğini belirten bir değer okuma (ve görüntüleme). Bkz. <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
+- **Okunabilirlik**. Bu, bir yorumdur aracının bir değeri okuyup okumayacağını (ve görüntülemesini) belirler. Bkz. <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
   
-- **Modifiability'e göre**. Bu, bir yerelleştiriciye aracı değiştirilmesi için bir değer izin verip vermediğini belirtir. Bkz. <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
+- **Modifibeceri**. Bu, bir yorumdur aracının bir değerin değiştirilmesini izin verip içermediğini belirtir. Bkz. <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
   
- Bu öznitelikler, boşlukla ayrılmış herhangi bir sırada belirtilebilir. Yinelenen öznitelikleri belirtilmesi durumunda, son özniteliğini eski olanları geçersiz kılar. Örneğin, Localization.Attributes son değeri olduğundan "Değiştirilemeyen değiştirilebilir" kümeleri Modifiability'i Modifiable =.  
+ Bu öznitelikler, boşlukla ayrılmış herhangi bir sıraya göre belirtilebilir. Yinelenen öznitelikler belirtilirse, son öznitelik eski olanları geçersiz kılar. Örneğin, yerelleştirme. Attributes = "değiştirilemez değiştirilebilir" değeri, son değer olduğundan, Modifibilirliği değiştirilebilir olarak ayarlar.  
   
- Modifiability'e göre ve okunabilirliği kendinden açıklamalıdır. Category özniteliği metin çevirme yerelleştiriciye yardımcı tanımlanmış kategorilerle sağlar. Kategorileri gibi metin, etiket ve başlık metni çevirmek nasıl yerelleştiriciye bilgi verin. Özel kategori vardır: None, devralma, Ignore ve NeverLocalize.  
+ Modifibilme ve okunabilirlik kendi kendine açıklayıcıdır. Kategori özniteliği, metin çevrilirken yerelleştiriciye yardımcı olan önceden tanımlanmış kategoriler sağlar. Metin, etiket ve başlık gibi kategoriler, metin çevirme hakkında yerelleştirici bilgilerini verir. Ayrıca özel kategoriler de vardır: None, Inherit, yoksay ve Neveryerelleştirin.  
   
- Aşağıdaki tabloda özel kategoriler anlamını gösterilmektedir.  
+ Aşağıdaki tabloda özel kategorilerin anlamı gösterilmektedir.  
   
 |Kategori|Açıklama|  
 |--------------|-------------|  
-|Yok.|Hedeflenen değeri tanımlı hiçbir kategori vardır.|  
-|Devral|Hedeflenen değeri, kategori, üst öğeden devralır.|  
-|Yoksayma|Hedeflenen değeri yerelleştirme işleminde göz ardı edilir. Yoksay yalnızca geçerli değer etkiler. Alt düğümleri etkilemez.|  
-|NeverLocalize|Geçerli değer yerelleştirilemez. Bu kategori, öğenin alt gruplar tarafından devralınır.|  
+|Yok.|Hedeflenen değerin tanımlı bir kategorisi yok.|  
+|Devralınır|Hedeflenen değer kendi üst öğesinden kategorisini devralır.|  
+|Yoksayma|Hedeflenen değer, yerelleştirme sürecinde yok sayılır. Ignore yalnızca geçerli değeri etkiler. Alt düğümleri etkilemez.|  
+|Neveryerelleştirin|Geçerli değer yerelleştirilemez. Bu kategori bir öğenin alt öğeleri tarafından devralınır.|  
   
 <a name="Localization_Comments"></a>   
-## <a name="localization-comments"></a>Yerelleştirme açıklamalarını  
- Localization.Comments hedeflenen değeri ile ilgili serbest biçimli dizeleri içerir. Uygulama geliştiricileri, çevirmenlerin vermek için bilgi ekleyebileceğiniz uygulamaların metnin nasıl çevrileceği hakkında ipuçları. Yorumları biçimi arasına "(") tarafından herhangi bir dize olabilir. Kullanım '\\' kaçış karakterleri için.  
+## <a name="localization-comments"></a>Yerelleştirme açıklamaları  
+ Yerelleştirme. Comments hedeflenen değerle ilgili serbest biçimli dizeler içerir. Uygulama geliştiricileri, uygulamalar metninin nasıl çevrilmesi gerektiği hakkında yerelleştiriciler ipuçlarına izin vermek için bilgi ekleyebilir. Yorumların biçimi "()" ile çevrelenen herhangi bir dize olabilir. Kaçış karakterleri\\için ' ' kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
