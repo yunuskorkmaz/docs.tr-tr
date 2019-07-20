@@ -19,8 +19,6 @@
           href: how-to-use-lambda-expressions-in-a-query.md
         - name: 'Nasıl yapılır: LINQ Dışında Lambda İfadeleri Kullanma'
           href: how-to-use-lambda-expressions-outside-linq.md
-        - name: Anonim Yöntemler
-          href: anonymous-methods.md
     - name: varsayılan değer ifadeleri
       href: default-value-expressions.md
     - name: Eşitlik ve eşitlik karşılaştırmaları
