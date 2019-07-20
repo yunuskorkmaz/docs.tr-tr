@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 786c2937a3f413170665c39464dc2c94417008ad
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 546feb6f3c4515ceecdb5b5afa14c0fc99ab7020
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331377"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363900"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda ifadeleri (C# Programlama Kılavuzu)
 
@@ -41,8 +41,6 @@ Ya da doğrudan yöntem bağımsız değişkeni olarak geçirebilirsiniz:
 [!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
 Sınıfında yöntemi çağırmak için yöntem tabanlı sözdizimi kullandığınızda (LINQ to Objects ve LINQ to XML) parametre bir temsilci türüdür <xref:System.Func%602?displayProperty=nameWithType>. <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> <xref:System.Linq.Enumerable?displayProperty=nameWithType> Lambda ifadesi, bu temsilciyi oluşturmak için en kullanışlı yoldur. Sınıfında yöntemini çağırdığınızda (LINQ to SQL içinde yaptığınız gibi) parametre türü bir ifade ağacı türüdür [`Expression<Func<TSource,TResult>>`.](<xref:System.Linq.Expressions.Expression%601>) <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> <xref:System.Linq.Queryable?displayProperty=nameWithType> Yine, Lambda ifadesi bu ifade ağacını oluşturmanın yalnızca çok kısa bir yoludur. Lambda tarafından oluşturulan nesnenin türü `Select` farklı olsa da Lambdalar, çağrıların benzer görünmesine izin verir.
-
-[Anonim yöntemler](anonymous-methods.md) için uygulanan tüm kısıtlamalar lambda ifadeleri için de geçerlidir.
   
 ## <a name="expression-lambdas"></a>İfade lambdaları
 
@@ -82,7 +80,7 @@ Bir lambda deyiminin gövdesi herhangi bir sayıda deyimden oluşabilir; ancak, 
 
 [!code-csharp-interactive[statement lambda](~/samples/snippets/csharp/programming-guide/lambda-expressions/ExpressionAndStatementLambdas.cs#StatementLambda)]
 
-Anonim yöntemler gibi deyim lambdaları da ifade ağacı oluşturmak için kullanılamaz.
+Deyim lambdaları ifade ağaçları oluşturmak için kullanılamaz.
   
 ## <a name="async-lambdas"></a>Zaman uyumsuz Lambdalar
 
@@ -198,7 +196,7 @@ Ortak tür sisteminin hiçbir "lambda ifadesi" kavramı olmadığından, lambda 
 
 ## <a name="capture-of-outer-variables-and-variable-scope-in-lambda-expressions"></a>Lambda ifadelerinde dış değişkenlerin ve değişken kapsamının yakalanması
 
-Lambdalar, lambda ifadesini tanımlayan yöntemde veya lambda ifadesini içeren türdeki kapsamda kapsamda olan *dış değişkenlere* (bkz. [Anonim yöntemler](anonymous-methods.md)) başvurabilir. Bu şekilde tutulan değişkenler, aksi halde kapsam dışına çıkacak ve çöp olarak toplanacak olsalar dahi kullanılmak üzere lambda ifadesinde saklanır. Bir lambda ifadesinde tüketilebilmesi için öncelikle mutlaka bir harici değişken tayin edilmelidir. Aşağıdaki örnek bu kuralları gösterir:
+Lambdalar, *dış değişkenlere*başvurabilir. Bunlar, lambda ifadesini tanımlayan yöntemde veya lambda ifadesini içeren türde kapsamda kapsam içinde olan değişkenlerdir. Bu şekilde tutulan değişkenler, aksi halde kapsam dışına çıkacak ve çöp olarak toplanacak olsalar dahi kullanılmak üzere lambda ifadesinde saklanır. Bir lambda ifadesinde tüketilebilmesi için öncelikle mutlaka bir harici değişken tayin edilmelidir. Aşağıdaki örnek bu kuralları gösterir:
 
 [!code-csharp[variable scope](~/samples/snippets/csharp/programming-guide/lambda-expressions/VariableScopeWithLambdas.cs#VariableScope)]
 
@@ -226,7 +224,6 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 
 - [C# Programlama Kılavuzu](../index.md)
 - [LINQ (dil ile tümleşik sorgu)](../concepts/linq/index.md)
-- [Anonim Metotlar](anonymous-methods.md)
 - [İfade Ağaçları](../concepts/expression-trees/index.md)
 - [Yerel işlevler lambda ifadeleriyle karşılaştırılır](../../local-functions-vs-lambdas.md)
 - [Örtük olarak yazılan lambda ifadeleri](../../implicitly-typed-lambda-expressions.md)

@@ -6,34 +6,34 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: 503858b717ef541675b642a735289e3903b91fdc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d11b0bb2086bb449c0ffc0ff89430a55096a28d
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777094"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364348"
 ---
 # <a name="annotations-schema"></a>Ek Açıklamalar Şeması
 
-Bu konuda, kaydedin ve kullanıcı ek açıklama verilerini almak için Microsoft ek açıklamaları Framework tarafından kullanılan XML şema tanımı (XSD) açıklanmaktadır.
+Bu konu başlığı altında, Kullanıcı ek açıklama verilerini kaydetmek ve almak için Microsoft ek açıklama çerçevesi tarafından kullanılan XML şema tanımı (XSD) açıklanmaktadır.
 
-[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML biçimine iç gösterimden ek verileri serileştirir.  Bu dönüştürme için kullanılan XML biçimi tarafından açıklanan [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD şeması.  Şema, uygulamalar arasında veri ek açıklama değişimi için kullanılan uygulamadan bağımsız XML biçiminde tanımlar.
+Ek açıklama çerçevesi, iç gösterimden bir XML biçimine ek açıklama verilerini seri hale getirir.  Bu dönüştürme için kullanılan XML biçimi ek açıklama çerçevesi XSD şeması tarafından açıklanmıştır.  Şema, uygulamalar arasında ek açıklama verileri alışverişi için kullanılabilecek uygulamayla bağımsız XML biçimi tanımlar.
 
-[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML şema tanımı iki alt şemadan oluşur
+Ek açıklama çerçevesi XML şeması tanımı iki alt şemadan oluşur
 
-- Ek Açıklamalar XML Çekirdek Şeması (Core şema).
+- Ek açıklama XML Çekirdek Şeması (Çekirdek Şeması).
 
-- Ek Açıklamalar XML Şeması (taban şema) temel.
+- Ek açıklamalar XML taban şeması (temel şema).
 
-Çekirdek Şeması birincil XML yapısını tanımlayan bir <xref:System.Windows.Annotations.Annotation>.  Çekirdek şemasında tanımlanan XML öğelerinin çoğunluğu karşılık gelen türlerine <xref:System.Windows.Annotations> ad alanı.  Çekirdek Şeması uygulamaları kendi XML verileri, ekleyebileceğiniz üç uzantı noktaları kullanıma sunar.  Bu uzantı noktaları dahil <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>ve "İçerik".  (İçerik öğeleri biçiminde sağlanan bir <xref:System.Xml.XmlElement> listesi.)
+Çekirdek Şeması, öğesinin <xref:System.Windows.Annotations.Annotation>birincil XML yapısını tanımlar.  Çekirdek şemasında tanımlanan xml öğelerinin çoğu <xref:System.Windows.Annotations> ad alanındaki türlere karşılık gelir.  Çekirdek Şeması, uygulamaların kendi XML verilerini ekleyebilecekleri üç uzantı noktası sunar.  Bu uzantı noktaları <xref:System.Windows.Annotations.Annotation.Authors%2A>,, ve <xref:System.Windows.Annotations.ContentLocatorPart>"içerik" i içerir.  (İçerik öğeleri bir <xref:System.Xml.XmlElement> liste biçiminde sağlanır.)
 
-Bu konuda açıklanan temel şema uzantılarını tanımlar <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>ve içerik türleri ile ilk Windows Presentation Foundation (WPF) sürümü dahildir.
+Bu konuda açıklanan temel şema <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, ve ilk Windows Presentation Foundation (WPF) sürümüne dahil olan içerik türleri için uzantıları tanımlar.
 
 <a name="CoreSchema"></a>
 
-## <a name="annotations-xml-core-schema"></a>Ek Açıklamalar XML Çekirdek Şeması
+## <a name="annotations-xml-core-schema"></a>Ek açıklama XML Core şeması
 
-Ek açıklamaları XML Çekirdek şemasını depolamak için kullanılan XML yapısını tanımlayan <xref:System.Windows.Annotations.Annotation> nesneleri.
+Ek açıklamalar XML Core şeması, nesneleri depolamak <xref:System.Windows.Annotations.Annotation> için kullanılan XML yapısını tanımlar.
 
 ```xml
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
@@ -185,9 +185,9 @@ Ek açıklamaları XML Çekirdek şemasını depolamak için kullanılan XML yap
 
 <a name="BaseSchema"></a>
 
-## <a name="annotations-xml-base-schema"></a>Ek açıklamalar temel XML Şeması
+## <a name="annotations-xml-base-schema"></a>Ek açıklamalar XML taban şeması
 
-Taban Şeması – Çekirdek şemada tanımlanan üç soyut öğeler için XML yapısını tanımlar <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, ve <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.
+Temel şema,, ve temel şemasında tanımlanan üç soyut öğe için XML yapısını tanımlar: <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, ve <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.
 
 ```xml
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
@@ -498,9 +498,9 @@ Taban Şeması – Çekirdek şemada tanımlanan üç soyut öğeler için XML y
 
 <a name="SampleXML"></a>
 
-## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>Örnek XML ek açıklamaları XmlStreamStore tarafından oluşturulan
+## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>Ek açıklamalar XmlStreamStore tarafından oluşturulan örnek XML
 
-Aşağıdaki XML ek açıklamalar çıktısını gösterir <xref:System.Windows.Annotations.Storage.XmlStreamStore> ve üç ek açıklamaları - bir Vurgu, metin yapışkan-not ve bir mürekkep Sopası Not içeren bir örnek dosya organizasyonu.
+Aşağıdaki XML, bir ek <xref:System.Windows.Annotations.Storage.XmlStreamStore> açıklamanın çıkışını ve üç ek açıklama içeren bir örnek dosya organizasyonunu gösterir. bir vurgulama, metin Yapışkan Not ve mürekkep çubuğu-Not.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

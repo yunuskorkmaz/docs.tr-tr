@@ -7,52 +7,52 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 287bb3a30776cfd8d30a93cce3e3bb04f32733c3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 8760c847d9e73fdff9f10f0dfa55a6c674021667
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663744"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364181"
 ---
 # <a name="structured-navigation-overview"></a>Yapılandırılmış Gezintiye Genel Bakış
 
-Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, veya bir <xref:System.Windows.Navigation.NavigationWindow> paketi tarafından tanımlanan sayfaların oluşan [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] ve için köprüler tarafından gitme. Sayfalar ve, bunlar, köprüler tarafından tanımlandığı şekilde gezinilebilir yolları yapısını gezinti topolojisi bilinir. Böyle bir topoloji, çeşitli uygulama türleri, belgeler içinde gezinmek, uygun. Bu tür uygulamalar için kullanıcı bir sayfadan başka bir sayfaya ya da sayfa diğer ilgili hiçbir şeyi bilmenize gerek olmadan gidebilirsiniz.
+Bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] ,, veya <xref:System.Windows.Navigation.NavigationWindow> ile barındırılabilen içerikler, Paketle ve köprüler tarafından tanımlanabilen sayfalardan oluşur. <xref:System.Windows.Controls.Frame> Sayfaların yapısı ve köprüler tarafından tanımlandığı şekilde gezinilebilecekleri yollar, gezinti topolojisi olarak bilinir. Bu tür bir topoloji, özellikle belgelerde gezinenler gibi çeşitli uygulama türlerine uygun değildir. Bu tür uygulamalar için, Kullanıcı bir sayfadan diğerine kadar herhangi bir şeyi bilmeleri gerekmeden başka bir sayfaya gidebilir.
 
-Ancak, diğer uygulama türleri arasında bunlar geçiş yaptığınızda bilmem gerekenler sayfaları sahip. Örneğin, bir kuruluştaki tüm çalışanlar listelemek için bir sayfa olan insan kaynakları bir uygulama düşünün; "Listesi Çalışanlar" sayfası. Bu sayfa ayrıca bir köprüyü tıklatarak yeni bir çalışan eklemek kullanıcılar izin verebilir. Tıklandığında, sayfanın yeni çalışanın ayrıntıları toplamak ve bunları yeni çalışan oluşturup listesini güncelleştirmek için "Liste Çalışanlar" sayfasına geri dönmek için "Bir çalışan Ekle" sayfasına götürür. Bu gezinti stilini yapısal programlama bilinen bir değer döndürmez ve bazı işleme gerçekleştirmek için bir yöntem çağırmak için benzerdir. Bu nedenle, bu stil Gezinti olarak da bilinen *yapılandırılmış Gezinti*.
+Ancak, diğer uygulama türleri arasında gezindikleri zaman bilmeleri gereken sayfalar vardır. Örneğin, bir kuruluştaki tüm çalışanları listelemek için bir sayfa içeren bir insan kaynakları uygulaması düşünün — "çalışanları listele" sayfası. Bu sayfa, kullanıcıların bir köprüye tıklayarak yeni bir çalışan eklemesine de izin verebilir. Tıklandığı zaman, yeni çalışanın ayrıntılarını toplamak ve listeyi güncelleştirmek için "çalışan Ekle" sayfasına gider ve bunları "çalışanları listele" sayfasına geri döndürür. Bu gezinti stili, bazı işlemleri gerçekleştirmek ve yapılandırılmış programlama olarak bilinen bir değer döndürmek için bir yöntemi çağırmaya benzerdir. Bu şekilde, bu gezinti stili *yapılandırılmış gezinti*olarak bilinir.
 
-<xref:System.Windows.Controls.Page> Sınıf yapılandırılmış gezintiye desteği uygulama değil. Bunun yerine, <xref:System.Windows.Navigation.PageFunction%601> sınıf türetilir <xref:System.Windows.Controls.Page> ve yapılandırılmış gezinti için gerekli temel yapılarıyla genişletir. Bu konuda yapılandırılmış gezintiye kullanarak oluşturmak nasıl gösterilmektedir <xref:System.Windows.Navigation.PageFunction%601>.
+Sınıfı <xref:System.Windows.Controls.Page> , yapılandırılmış gezinti için destek uygulamaz. Bunun yerine, <xref:System.Windows.Navigation.PageFunction%601> sınıfı öğesinden <xref:System.Windows.Controls.Page> türetilir ve yapısal gezinti için gereken temel yapılar ile genişletir. Bu konu, kullanılarak <xref:System.Windows.Navigation.PageFunction%601>yapılandırılmış gezintiyi oluşturmayı gösterir.
 
 <a name="Structured_Navigation"></a>
 
-## <a name="structured-navigation"></a>Yapılandırılmış gezintiye
+## <a name="structured-navigation"></a>Yapılandırılmış gezinti
 
-Bir sayfa yapılandırılmış bir gezinti başka bir sayfa çağırdığında, bazılarını veya tümünü aşağıdaki davranışları gereklidir:
+Bir sayfa yapılandırılmış bir gezinmede başka bir sayfa çağırdığında, aşağıdaki davranışların bazıları veya tümü gereklidir:
 
-- Arama sayfası, isteğe bağlı olarak adlandırılan sayfası için gerekli parametreleri geçirme çağrılan sayfasına gider.
+- Çağıran sayfa, isteğe bağlı olarak çağrılan sayfanın gerektirdiği parametreleri geçirerek çağrılan sayfaya gider.
 
-- Bir kullanıcı arama sayfası kullanılarak tamamlandığında Aranan sayfasında, özel arama sayfası isteğe bağlı olarak döndürür:
+- Çağrılan sayfa, bir Kullanıcı arama sayfasını kullanarak tamamlandığında, isteğe bağlı olarak, arama sayfasına özel olarak döner:
 
-  - Açıklayan nasıl (örneğin, bir kullanıcı bir Tamam düğmesine veya iptal düğmesi basılı olup olmadığını) arama sayfası tamamlandıktan sonra durum bilgilerini döndürüyor.
+  - Çağırma sayfasının nasıl tamamlandığını açıklayan durum bilgilerini döndürme (örneğin, bir kullanıcının Tamam düğmesine veya bir Iptal düğmesine basıldığında).
 
-  - (Örneğin, yeni çalışan ayrıntıları) kullanıcıdan toplanan bu veri döndürüyor.
+  - Kullanıcıdan toplanan verileri döndürme (örneğin, yeni çalışan ayrıntıları).
 
-- Arama sayfası çağrılan sayfaya geri döndüğünde, çağrılan sayfanın adlı başka bir sayfadan bir örneğini ayırmak için Gezinti geçmişinden kaldırılır.
+- Çağıran sayfa çağrılan sayfaya döndüğünde, çağrılan sayfa bir diğer sayfanın bir örneğini başka bir şekilde yalıtmak için gezinme geçmişinden kaldırılır.
 
-Bu davranışların aşağıdaki şekilde gösterilmiştir:
+Bu davranışlar aşağıdaki şekilde gösterilmiştir:
 
-![Ekran arama sayfası ve çağrılan sayfa arasındaki akışını gösterir.](./media/structured-navigation-overview/flow-between-calling-page-called-page.png)
+![Ekran görüntüsü, arama sayfası ve çağrılan sayfa arasındaki akışı gösterir.](./media/structured-navigation-overview/flow-between-calling-page-called-page.png)
 
-Bu davranışların kullanarak uygulayabileceğiniz bir <xref:System.Windows.Navigation.PageFunction%601> çağrılan sayfası.
+Çağrılan sayfa olarak bir <xref:System.Windows.Navigation.PageFunction%601> kullanarak bu davranışları uygulayabilirsiniz.
 
 <a name="Structured_Navigation_with_PageFunction"></a>
 
-## <a name="structured-navigation-with-pagefunction"></a>Yapılandırılmış gezintiye PageFunction ile
+## <a name="structured-navigation-with-pagefunction"></a>PageFunction ile yapılandırılmış gezinti
 
-Bu konuda, yapılandırılmış gezintiye içeren tek bir temel mekanikleri uygulamak gösterilmektedir <xref:System.Windows.Navigation.PageFunction%601>. Bu örnekte, bir <xref:System.Windows.Controls.Page> çağrıları bir <xref:System.Windows.Navigation.PageFunction%601> almak için bir <xref:System.String> kullanıcıdan değer ve döndürün.
+Bu konu başlığı altında, tek tek <xref:System.Windows.Navigation.PageFunction%601>içeren yapılandırılmış gezinmede temel bir katıcs 'nin nasıl uygulanacağı gösterilmektedir. Bu örnekte,, <xref:System.Windows.Controls.Page> kullanıcıdan bir <xref:System.String> değer <xref:System.Windows.Navigation.PageFunction%601> almak ve bunu döndürmek için bir çağırır.
 
-### <a name="creating-a-calling-page"></a>Bir arama sayfası oluşturma
+### <a name="creating-a-calling-page"></a>Arama sayfası oluşturma
 
-Çağıran sayfasını bir <xref:System.Windows.Navigation.PageFunction%601> olabilir bir <xref:System.Windows.Controls.Page> veya <xref:System.Windows.Navigation.PageFunction%601>. Bu örnekte olduğu bir <xref:System.Windows.Controls.Page>aşağıdaki kodda gösterildiği gibi.
+' A <xref:System.Windows.Navigation.PageFunction%601> çağrı yapan sayfa ya <xref:System.Windows.Controls.Page> da bir <xref:System.Windows.Navigation.PageFunction%601>olabilir. Bu örnekte, aşağıdaki kodda gösterildiği gibi <xref:System.Windows.Controls.Page>bir olur.
 
 [!code-xaml[StructuredNavigationSample#CallingPageDefaultMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml#callingpagedefaultmarkup1)]
 [!code-xaml[StructuredNavigationSample#CallingPageDefaultMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml#callingpagedefaultmarkup2)]
@@ -64,9 +64,9 @@ Bu konuda, yapılandırılmış gezintiye içeren tek bir temel mekanikleri uygu
 [!code-csharp[StructuredNavigationSample#CallingPageDefaultCODEBEHIND3](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#callingpagedefaultcodebehind3)]
 [!code-vb[StructuredNavigationSample#CallingPageDefaultCODEBEHIND3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CallingPage.xaml.vb#callingpagedefaultcodebehind3)]
 
-### <a name="creating-a-page-function-to-call"></a>Sayfa işlevi çağırmak için oluşturma
+### <a name="creating-a-page-function-to-call"></a>Çağırmak için bir sayfa Işlevi oluşturma
 
-Arama sayfası toplamak ve kullanıcı verileri döndürmek için çağrılan sayfanın kullanabileceğinizden <xref:System.Windows.Navigation.PageFunction%601> , bağımsız değişken türü adlı sayfanın geri dönecek değerin türünü belirten bir genel sınıf olarak uygulanır. Aşağıdaki kod çağrılan ilk uygulamasını gösterir kullanarak sayfasında bir <xref:System.Windows.Navigation.PageFunction%601>, döndüren bir <xref:System.String>.
+Çağıran sayfa, kullanıcıdan veri toplamak ve döndürmek için çağrılan sayfayı kullanabilmesi için, <xref:System.Windows.Navigation.PageFunction%601> tür bağımsız değişkeni, çağrılan sayfanın döndürdüğü değerin türünü belirten bir genel sınıf olarak uygulanır. Aşağıdaki kod, <xref:System.Windows.Navigation.PageFunction%601>' i <xref:System.String>döndüren adlı, kullanılarak çağrılan sayfanın ilk uygulamasını gösterir.
 
 [!code-xaml[StructuredNavigationSample#CalledPageFunctionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml#calledpagefunctionmarkup)]
 
@@ -75,9 +75,9 @@ Arama sayfası toplamak ve kullanıcı verileri döndürmek için çağrılan sa
 [!code-csharp[StructuredNavigationSample#CalledPageFunctionCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#calledpagefunctioncodebehind2)]
 [!code-vb[StructuredNavigationSample#CalledPageFunctionCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#calledpagefunctioncodebehind2)]
 
-Bildirimi bir <xref:System.Windows.Navigation.PageFunction%601> bildirimi için benzer bir <xref:System.Windows.Controls.Page> ek olarak, tür bağımsız değişkenleri. Kod örnekte görebileceğiniz gibi tür bağımsız değişkenlerini içinde her ikisi de belirtilirse [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme kullanarak `x:TypeArguments` özniteliği ve kod arka plan, standart genel tür bağımsız değişkeni söz dizimini kullanarak.
+Bir <xref:System.Windows.Navigation.PageFunction%601> öğesinin bildirimi, tür bağımsız değişkenlerinin eklenmesiyle bir <xref:System.Windows.Controls.Page> öğesinin bildirimine benzerdir. Kod örneğinde görebileceğiniz gibi, tür bağımsız değişkenleri, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] `x:TypeArguments` özniteliği ve standart genel tür bağımsız değişkeni sözdizimi kullanılarak arka plan kodu kullanılarak her iki biçimlendirmede belirtilir.
 
-Tür bağımsız değişkeni olarak yalnızca .NET Framework sınıflarını kullanmak zorunda değilsiniz. A <xref:System.Windows.Navigation.PageFunction%601> özel bir tür olarak soyutlanır etki alanına özgü verileri toplamak için çağrılabilir. Aşağıdaki kod özel bir tür için tür bağımsız değişkeni olarak kullanma işlemini gösterir. bir <xref:System.Windows.Navigation.PageFunction%601>.
+Tür bağımsız değişkenleri olarak yalnızca .NET Framework sınıfları kullanmak zorunda değilsiniz. Özel <xref:System.Windows.Navigation.PageFunction%601> bir tür olarak soyut olan, etki alanına özgü verileri toplamak için bir çağrılabilir. Aşağıdaki kod, bir özel türün bir <xref:System.Windows.Navigation.PageFunction%601>tür bağımsız değişkeni olarak nasıl kullanılacağını gösterir.
 
 [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode1)]
 [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode1)]
@@ -92,15 +92,15 @@ Tür bağımsız değişkeni olarak yalnızca .NET Framework sınıflarını kul
 [!code-csharp[CustomTypePageFunctionSnippets#CustomTypePageFunctionCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomTypePageFunction.xaml.cs#customtypepagefunctioncodebehind2)]
 [!code-vb[CustomTypePageFunctionSnippets#CustomTypePageFunctionCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomTypePageFunction.xaml.vb#customtypepagefunctioncodebehind2)]
 
-Tür bağımsız değişkenleri için <xref:System.Windows.Navigation.PageFunction%601> aşağıdaki bölümlerde açıklanan arama sayfası ve çağrılan sayfanın arasındaki iletişim için temel sağlar.
+İçin tür bağımsız değişkenleri, <xref:System.Windows.Navigation.PageFunction%601> bir arama sayfası ile çağrılan sayfa arasındaki iletişimin temelini sağlar ve aşağıdaki bölümlerde ele alınmıştır.
 
-Bildirimi ile tanımlanan bir türü göreceksiniz olarak bir <xref:System.Windows.Navigation.PageFunction%601> verileri döndüren önemli bir rol oynar bir <xref:System.Windows.Navigation.PageFunction%601> arama sayfası.
+Gördüğünüz gibi, bir <xref:System.Windows.Navigation.PageFunction%601> öğesinin bildirimiyle tanımlanan tür, verileri bir <xref:System.Windows.Navigation.PageFunction%601> ' dan çağırma sayfasına döndürmekte önemli bir rol oynar.
 
-### <a name="calling-a-pagefunction-and-passing-parameters"></a>Bir PageFunction çağırma ve parametreleri geçirme
+### <a name="calling-a-pagefunction-and-passing-parameters"></a>PageFunction çağırma ve parametreleri geçirme
 
-Bir sayfa çağırmak için arama sayfası adlı sayfanın örneği oluşturmalı ve Git kullanarak <xref:System.Windows.Navigation.NavigationService.Navigate%2A> yöntemi. Bu, çağrılan sayfa tarafından toplanan veriler için varsayılan değerleri gibi çağrılan sayfasında ilk veri geçirmek arama sayfası sağlar.
+Bir sayfayı çağırmak için, çağıran sayfanın çağrılan sayfanın örneğini oluşturması ve <xref:System.Windows.Navigation.NavigationService.Navigate%2A> yöntemi kullanılarak buna gitmeniz gerekir. Bu, çağıran sayfanın, çağrılan sayfa tarafından toplanmakta olan veriler için varsayılan değerler gibi ilk verileri çağrılan sayfaya geçmesini sağlar.
 
-Aşağıdaki kod, arama sayfasından parametreler kabul etmek için varsayılan olmayan bir Oluşturucu ile çağrılan sayfada gösterilir.
+Aşağıdaki kod, çağırma sayfasından parametreleri kabul etmek için parametresiz bir oluşturucuya sahip çağrılan sayfayı gösterir.
 
 [!code-csharp[StructuredNavigationSample#AcceptsInitialDataCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#acceptsinitialdatacodebehind1)]
 [!code-vb[StructuredNavigationSample#AcceptsInitialDataCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#acceptsinitialdatacodebehind1)]
@@ -111,7 +111,7 @@ Aşağıdaki kod, arama sayfasından parametreler kabul etmek için varsayılan 
 [!code-csharp[StructuredNavigationSample#AcceptsInitialDataCODEBEHIND4](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#acceptsinitialdatacodebehind4)]
 [!code-vb[StructuredNavigationSample#AcceptsInitialDataCODEBEHIND4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#acceptsinitialdatacodebehind4)]
 
-Aşağıdaki kod arama sayfası işleme gösterir <xref:System.Windows.Documents.Hyperlink.Click> olayı <xref:System.Windows.Documents.Hyperlink> çağrılan sayfası örneği oluşturun ve ilk dize değeri geçirin.
+Aşağıdaki kod, çağrılan sayfanın örneğini oluşturmak ve bunu <xref:System.Windows.Documents.Hyperlink.Click> bir ilk dize <xref:System.Windows.Documents.Hyperlink> değeri geçirmek için olayını işleyen arama sayfasını gösterir.
 
 [!code-xaml[StructuredNavigationSample#PassingDataMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml#passingdatamarkup2)]
 [!code-csharp[StructuredNavigationSample#PassingDataCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#passingdatacodebehind1)]
@@ -121,63 +121,63 @@ Aşağıdaki kod arama sayfası işleme gösterir <xref:System.Windows.Documents
 [!code-csharp[StructuredNavigationSample#PassingDataCODEBEHIND3](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#passingdatacodebehind3)]
 [!code-vb[StructuredNavigationSample#PassingDataCODEBEHIND3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CallingPage.xaml.vb#passingdatacodebehind3)]
 
-Çağrılan sayfasına parametreleri geçirmek için gerekli değildir. Bunun yerine, aşağıdakileri yapabilirsiniz:
+Çağrılan sayfaya parametreleri geçirmek zorunda değilsiniz. Bunun yerine şunları yapabilirsiniz:
 
-- Arama sayfasından:
+- Çağırma sayfasından:
 
-  1. Çağrılan örneği <xref:System.Windows.Navigation.PageFunction%601> kullanan varsayılan oluşturucu.
+  1. Parametresiz oluşturucuyu kullanarak <xref:System.Windows.Navigation.PageFunction%601> çağrılan öğesini oluştur.
 
-  2. Parametrelerinde Store <xref:System.Windows.Application.Properties%2A>.
+  2. Parametreleri ' de <xref:System.Windows.Application.Properties%2A>depolayın.
 
-  3. Çağrılan gidin <xref:System.Windows.Navigation.PageFunction%601>.
+  3. Çağrılan <xref:System.Windows.Navigation.PageFunction%601>öğesine gidin.
 
-- Çağrılan gelen <xref:System.Windows.Navigation.PageFunction%601>:
+- Çağrılan <xref:System.Windows.Navigation.PageFunction%601>:
 
-  - Alma ve içerisinde depolanan parametreleri kullanma <xref:System.Windows.Application.Properties%2A>.
+  - İçinde <xref:System.Windows.Application.Properties%2A>depolanan parametreleri alın ve kullanın.
 
-Ancak, kısa süre içinde anlatıldığı gibi hala kod örneği ve çağrılan sayfa tarafından döndürülen veriler toplamak için çağrılan sayfasına gitmek için kullanacağınız. Bu nedenle, <xref:System.Windows.Navigation.PageFunction%601> Canlı; Aksi halde tutulması için gereksinimleri, sonraki açışınızda ulaşmanıza <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] başlatır <xref:System.Windows.Navigation.PageFunction%601> kullanan varsayılan oluşturucu.
+Ancak, kısa bir süre içinde gördüğünüz gibi, çağrılan sayfada döndürülen verileri toplamak için kod örneğini kullanmanız ve çağrılan sayfaya gitmeniz gerekir. Bu nedenle <xref:System.Windows.Navigation.PageFunction%601> , etkin tutulması gerekir; Aksi halde, bir sonraki <xref:System.Windows.Navigation.PageFunction%601>öğesine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gittiğinizde parametresiz oluşturucuyu <xref:System.Windows.Navigation.PageFunction%601> kullanarak örneği oluşturur.
 
-Ancak, çağrılan sayfasına dönmek önce bu arama sayfası tarafından alınan veri döndürmesi gerekir.
+Ancak çağrılan sayfanın dönebilmesi için, çağıran sayfa tarafından alınabilecek verileri döndürmesi gerekir.
 
-### <a name="returning-task-result-and-task-data-from-a-task-to-a-calling-page"></a>Görev dönen sonuç ve bir arama sayfasına bir görevden görev verileri
+### <a name="returning-task-result-and-task-data-from-a-task-to-a-calling-page"></a>Görev sonucu ve görev verilerini bir görevden bir arama sayfasına döndürme
 
-Kullanıcı çağrılan sayfasını kullanarak tamamlandıktan sonra bu örnekte Tamam veya İptal düğmeleri, döndürmek için çağrılan bir sayfa gereksinimlerini tuşlarına basarak miktarlara. Bu yana arama sayfası adlı kullanıcıdan veri toplamak için kullanılan iki tür bilgi arama sayfası gerektirir:
+Kullanıcı çağrılan sayfayı kullanmayı bitirdikten sonra, bu örnekte Tamam ya da Iptal düğmelerine basarak, çağrılan sayfanın döndürmesi gerekir. Çağıran sayfa, kullanıcıdan veri toplamak için çağrılan sayfayı kullandığından, çağıran sayfa iki tür bilgi gerektirir:
 
-1. Olup kullanıcı (Tamam düğmesine veya iptal düğmesi Bu örnekte tuşlarına basarak) adlı sayfanın iptal edildi. Bu, arama sayfası kullanıcıdan toplanan veriyi işlemek belirlemek arama sayfası sağlar.
+1. Kullanıcının çağrılan sayfayı (Tamam düğmesine veya bu örnekteki Iptal düğmesine basarak) iptal edilip edilmeyeceğini belirtir. Bu, çağıran sayfanın kullanıcıdan topladığı verilerin kullanılıp kullanılmayacağını belirlemesine olanak sağlar.
 
-2. Kullanıcı tarafından sağlanan veriler.
+2. Kullanıcı tarafından sağlanmış olan veriler.
 
-Bilgi, döndürülecek <xref:System.Windows.Navigation.PageFunction%601> uygulayan <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> yöntemi. Aşağıdaki kodu çağırmak nasıl gösterir.
+Bilgi <xref:System.Windows.Navigation.PageFunction%601> döndürmek için <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> yöntemini uygular. Aşağıdaki kod nasıl çağrılacağını gösterir.
 
 [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind1)]
 [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind1)]
 [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind2)]
 [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind2)]
 
-Bu örnekte, bir kullanıcı değerini iptal düğmesine bastığında `null` arama sayfasına döndürülür. Tamam düğmesine basıldığını bunun yerine, kullanıcı tarafından sağlanan dize değeri döndürülür. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> olan bir `protected virtual` verilerinizi arama sayfasına dönmek için çağırma yöntemi. Verilerinizi genel örneğinde paketlenmesi gereken <xref:System.Windows.Navigation.ReturnEventArgs%601> türü, tür bağımsız değişken türünü belirtir, değeri <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> döndürür. Bu şekilde, bildirdiğinizde bir <xref:System.Windows.Navigation.PageFunction%601> belirli tür bağımsız değişkeni ile ifadesi bir <xref:System.Windows.Navigation.PageFunction%601> tür bağımsız değişkeni tarafından belirtilen türün örneğini döndürür. Bu örnekte, tür bağımsız değişkeni ve sonuç olarak, dönüş değeri olduğu tür <xref:System.String>.
+Bu örnekte, bir Kullanıcı İptal düğmesine basarsa, bir değeri `null` çağırma sayfasına döndürülür. Bunun yerine Tamam düğmesine basıldığında, Kullanıcı tarafından verilen dize değeri döndürülür. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>, verilerinizi `protected virtual` çağırma sayfasına döndürmek için çağırdığınız bir yöntemdir. Verilerinizin, türü bağımsız değişkeni <xref:System.Windows.Navigation.ReturnEventArgs%601> <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> döndüren değerin türünü belirten genel türün bir örneğinde paketlenmesi gerekir. Bu şekilde, belirli bir tür bağımsız değişkeni <xref:System.Windows.Navigation.PageFunction%601> ile bir bildirdiğinizde, bir <xref:System.Windows.Navigation.PageFunction%601> öğesinin tür bağımsız değişkeni tarafından belirtilen türün bir örneğini döndürmediğini siz belirtmezsiniz. Bu örnekte, tür bağımsız değişkeni ve sonuç olarak, dönüş değeri türündedir <xref:System.String>.
 
-Zaman <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> çağrılır, arama sayfası gereksinimlerini dönüş değerini alma şekilde <xref:System.Windows.Navigation.PageFunction%601>. Bu nedenle, <xref:System.Windows.Navigation.PageFunction%601> uygulayan <xref:System.Windows.Navigation.PageFunction%601.Return> sayfaları işlemek için çağırma olay. Zaman <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> çağrıldığında <xref:System.Windows.Navigation.PageFunction%601.Return> oluşturulur, arama sayfası ile kaydedebilirsiniz şekilde <xref:System.Windows.Navigation.PageFunction%601.Return> bildirim almak için.
+Çağrıldığında, çağıran sayfanın dönüş değerini <xref:System.Windows.Navigation.PageFunction%601>alma yöntemi olması gerekir. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> Bu nedenle, <xref:System.Windows.Navigation.PageFunction%601> işlenecek sayfaları çağıran <xref:System.Windows.Navigation.PageFunction%601.Return> olayı uygular. Çağrıldığında, <xref:System.Windows.Navigation.PageFunction%601.Return> ortaya çıkar, bu nedenle arama sayfası bildirimi almak için ile <xref:System.Windows.Navigation.PageFunction%601.Return> kayıt yapabilir. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>
 
 [!code-csharp[StructuredNavigationSample#ProcessResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#processresultcodebehind1)]
 [!code-vb[StructuredNavigationSample#ProcessResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CallingPage.xaml.vb#processresultcodebehind1)]
 [!code-csharp[StructuredNavigationSample#ProcessResultCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#processresultcodebehind2)]
 [!code-vb[StructuredNavigationSample#ProcessResultCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CallingPage.xaml.vb#processresultcodebehind2)]
 
-### <a name="removing-task-pages-when-a-task-completes"></a>Bir görev tamamlandığında, görev sayfaları kaldırma
+### <a name="removing-task-pages-when-a-task-completes"></a>Görev tamamlandığında görev sayfalarını kaldırma
 
-Adlı bir sayfasını döndürür ve kullanıcı iptal çağrılan sayfasında siz arama sayfası kullanıcı tarafından sağlanan ve ayrıca adlı sayfadan döndürülen verileri işler. Bu şekilde veri alım genellikle yalıtılmış bir etkinliktir; çağrılan sayfanın geri döndüğünde, oluşturun ve daha fazla veri yakalamak için yeni bir arama sayfasına gitmek arama sayfası gerekiyor.
+Çağrılan bir sayfa döndürüldüğünde ve Kullanıcı çağrılan sayfayı iptal etmediyse, çağıran sayfa Kullanıcı tarafından sağlanmış olan verileri işler ve çağrılan sayfadan de döndürülür. Bu şekilde veri alımı genellikle yalıtılmış bir etkinliktir; çağrılan sayfa döndürüldüğünde, çağıran sayfanın daha fazla veri yakalamak için yeni bir arama sayfası oluşturması ve bu sayfada gezinilmesi gerekir.
 
-Ancak, çağrılan bir sayfa günlükten kaldırılmadığı sürece, bir kullanıcı için arama sayfası önceki kopyası geri gidebilirsiniz olacaktır. Olup olmadığını bir <xref:System.Windows.Navigation.PageFunction%601> içinde tutulur günlüğü tarafından belirlenen <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> özelliği. Varsayılan olarak, bir sayfa işlev otomatik olarak, ne zaman kaldırıldı <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> denir, çünkü <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> ayarlanır `true`. Sayfa işlevi sonra gezinti geçmişinde tutulacak <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> çağrıldığında ayarlamak <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> için `false`.
+Ancak, çağrılan bir sayfa günlükten kaldırılmadığı takdirde, bir Kullanıcı, çağıran sayfanın önceki bir örneğine geri gidebilecektir. Günlükte saklanan <xref:System.Windows.Navigation.PageFunction%601> bir değer, <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> özelliği tarafından belirlenir. Varsayılan olarak, çağrıldığında bir sayfa işlevi otomatik olarak kaldırılır <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> çünkü <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> olarak ayarlanır `true`. Çağrıldıktan sonra <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> bir sayfa işlevini gezinme geçmişinde tutmak için, olarak `false`ayarlayın <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> .
 
 <a name="Other_Types_of_Structured_Navigation"></a>
 
-## <a name="other-types-of-structured-navigation"></a>Yapılandırılmış gezintiye diğer türleri
+## <a name="other-types-of-structured-navigation"></a>Diğer yapılandırılmış gezinti türleri
 
-Bu konuda en temel kullanışını bir <xref:System.Windows.Navigation.PageFunction%601> Gezinti çağrı/return'e destekleyecek şekilde yapılandırılmış. Bu temel yapılandırılmış gezintiye daha karmaşık türleri oluşturma olanağı sağlar.
+Bu konuda, bir <xref:System.Windows.Navigation.PageFunction%601> en temel kullanımı, çağrı/dönüş yapılandırılmış gezintiyi desteklemek için gösterilmektedir. Bu temel, daha karmaşık türlerde yapısal gezinti oluşturma olanağı sağlar.
 
-Örneğin, bazen birden çok sayfa arama sayfası tarafından bir kullanıcı tarafından yeterli veri toplamak için veya bir görevi gerçekleştirmek için gereklidir. Birden çok sayfa kullanımını "Sihirbazı" adlandırılır.
+Örneğin, bazen bir kullanıcının yeterli miktarda veri toplamak veya bir görevi gerçekleştirmek için bir arama sayfası için birden çok sayfa gerekir. Birden çok sayfanın kullanımı "sihirbaz" olarak adlandırılır.
 
-Diğer durumlarda, uygulamalarını verimli bir şekilde çalışması için yapılandırılmış gezintiye bağımlı karmaşık gezinti topolojilerine sahip olabilir. Daha fazla bilgi için [gezinti topolojilerine genel bakış](navigation-topologies-overview.md).
+Diğer durumlarda, uygulamalar etkin şekilde çalışacak şekilde yapılandırılmış gezintiye bağlı karmaşık gezinti topolojilerine sahip olabilir. Daha fazla bilgi için bkz. [gezinti topolojilerine genel bakış](navigation-topologies-overview.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,91 +6,91 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 99f01983a575e9c6f96fdb66590e9d762eb882f7
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 48df7083d990dde157c9b7b2a062c865954cf38a
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238431"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364209"
 ---
 # <a name="binding-sources-overview"></a>Kaynakların Bağlanmasına Genel Bakış
-Veri bağlamasında, bağlama kaynak nesne verilerden elde nesneye başvurur. Bu konu bağlama kaynağı olarak kullanabileceğiniz nesne türlerini açıklar.  
+Veri bağlamada bağlama kaynak nesnesi, verileri aldığınız nesneye başvurur. Bu konuda, bağlama kaynağı olarak kullanabileceğiniz nesne türleri ele alınmaktadır.  
 
 <a name="binding_sources"></a>   
-## <a name="binding-source-types"></a>Bağlama kaynağı türleri  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama, aşağıdaki bağlama kaynak türlerini destekler:  
+## <a name="binding-source-types"></a>Bağlama kaynak türleri  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]veri bağlama, aşağıdaki bağlama kaynak türlerini destekler:  
   
 |Bağlama kaynağı|Açıklama|  
 |--------------------|-----------------|  
-|[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Nesneleri|Herhangi bir dizin oluşturucular yanı sıra ortak özellikler, alt özellikleri bağlayabilirsiniz [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesne. Bağlama altyapısı kullanır [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] yansıma özelliklerinin değerlerini almak için. Alternatif olarak, uygulayan nesneler <xref:System.ComponentModel.ICustomTypeDescriptor> veya kayıtlı bir <xref:System.ComponentModel.TypeDescriptionProvider> bağlama altyapısı ile de çalışır.<br /><br /> Bağlama kaynağı olarak hizmet verebilen bir sınıfın nasıl uygulanacağı hakkında daha fazla bilgi için bkz. [bağlama kaynağı için bir sınıf uygulama](#classes) bu konuda.|  
-|dinamik nesneler|Kullanılabilir özellikler ve dizin oluşturucular uygulayan nesnenin bağlayabilirsiniz <xref:System.Dynamic.IDynamicMetaObjectProvider> arabirimi. Üye kodu erişebiliyorsa, onu bağlayabilirsiniz. Örneğin, bir dinamik Nesne üyesi aracılığıyla kod içinde erişmenizi sağlayan `someObjet.AProperty`, onu bağlama yolu ayarlayarak bağlayabilirsiniz `AProperty`.|  
-|ADO.NET nesneleri|ADO.NET nesnelere gibi bağlayabilirsiniz <xref:System.Data.DataTable>. ADO.NET <xref:System.Data.DataView> uygulayan <xref:System.ComponentModel.IBindingList> bağlama altyapısı için bekleyen değişiklik bildirimleri sağlayan arabirim.|  
-|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] Nesneleri|Bağlamak ve çalıştırmak `XPath` üzerinde sorgular bir <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, veya <xref:System.Xml.XmlElement>. Erişim için kullanışlı bir yol [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] biçimlendirmede bağlama kaynağı veriler, kullanılacak bir <xref:System.Windows.Data.XmlDataProvider> nesne. Daha fazla bilgi için [XMLDataProvider ve XPath sorgularını kullanarak XML verilerine bağlama](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Ayrıca adlarınıza bağlayabileceğiniz bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument>, ya da LINQ to XML kullanarak bu tür nesneler üzerinde çalıştırılan sorguların sonuçlarını bağlayabilirsiniz. Bağlama kaynağı biçimlendirme içinde XML verilere erişmek, LINQ to XML kullanmak için kullanışlı bir yol kullanmaktır bir <xref:System.Windows.Data.ObjectDataProvider> nesne. Daha fazla bilgi için [XML sorgu sonuçları için XDocument, XElement veya LINQ'ya bağlama](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
-|<xref:System.Windows.DependencyObject> Nesneleri|Bağımlılık özelliklerine herhangi bağlayabilirsiniz <xref:System.Windows.DependencyObject>. Bir örnek için bkz. [özellikleri, iki denetim bağlama](how-to-bind-the-properties-of-two-controls.md).|  
+|[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]nesneyi|Herhangi bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesnenin dizin oluşturucularının yanı sıra ortak özellikler, alt özellikler ve Dizin oluşturucular bağlayabilirsiniz. Bağlama altyapısı, özelliklerin [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] değerlerini almak için yansıma kullanır. Alternatif olarak, uygulayan <xref:System.ComponentModel.ICustomTypeDescriptor> veya <xref:System.ComponentModel.TypeDescriptionProvider> içeren nesneler, bağlama altyapısı ile de çalışır.<br /><br /> Bağlama kaynağı olarak kullanılabilecek bir sınıfın nasıl uygulanacağı hakkında daha fazla bilgi için, bu konunun ilerleyen kısımlarında yer alan [bağlama kaynağı için bir sınıf uygulama](#classes) bölümüne bakın.|  
+|dinamik nesneler|<xref:System.Dynamic.IDynamicMetaObjectProvider> Arabirim uygulayan bir nesnenin kullanılabilir özelliklerine ve dizin oluşturucularının bağlama yapabilirsiniz. Kodda üyeye erişebilmek için bağlayabilirsiniz. Örneğin, dinamik bir nesne koddaki bir üyeye aracılığıyla `someObjet.AProperty`erişmenizi sağlar, bağlama `AProperty`yolunu ayarlayarak buna bağlanabilirsiniz.|  
+|ADO.NET nesneleri|Gibi ADO.NET nesnelerine <xref:System.Data.DataTable>bağlayabilirsiniz. ADO.net <xref:System.Data.DataView> , bağlama altyapısının <xref:System.ComponentModel.IBindingList> dinlediği değişiklik bildirimleri sağlayan arabirimini uygular.|  
+|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]nesneyi|<xref:System.Xml.XmlNode>, `XPath` Veya<xref:System.Xml.XmlDocument>' de sorguları bağlanabilir ve üzerinde sorgu çalıştırabilirsiniz. <xref:System.Xml.XmlElement> Biçimlendirme içindeki bağlama kaynağı olan [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] verilere erişmenin kolay bir yolu bir <xref:System.Windows.Data.XmlDataProvider> nesne kullanmaktır. Daha fazla bilgi için bkz. [XMLDataProvider ve XPath sorgularını kullanarak XML verilerine bağlama](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Ayrıca, bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument>' a bağlanabilir veya LINQ to XML kullanarak bu türlerin nesnelerinde çalıştırılan sorguların sonuçlarına bağlayabilirsiniz. Biçimlendirme içindeki bağlama kaynağı olan XML verilerine erişmek için LINQ to XML kullanmanın kolay bir yolu bir <xref:System.Windows.Data.ObjectDataProvider> nesne kullanmaktır. Daha fazla bilgi için bkz. [XML sorgu sonuçları Için XDocument, XElement veya LINQ 'A bağlama](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
+|<xref:System.Windows.DependencyObject>nesneyi|Herhangi <xref:System.Windows.DependencyObject>birinin bağımlılık özelliklerine bağlanabilirsiniz. Bir örnek için bkz. [Iki denetimin özelliklerini bağlama](how-to-bind-the-properties-of-two-controls.md).|  
   
 <a name="classes"></a>   
 ## <a name="implementing-a-class-for-the-binding-source"></a>Bağlama kaynağı için bir sınıf uygulama  
- Kendi kaynakları bağlama oluşturabilirsiniz. Bu bölümde, bağlama kaynağı olarak görev yapacak bir sınıf uygulama, bilmeniz gereken şeyleri ele alınmaktadır.  
+ Kendi bağlama kaynaklarınızı oluşturabilirsiniz. Bu bölümde, bağlama kaynağı olarak kullanılacak bir sınıf uyguladığınızda bilmeniz gereken noktalar açıklanmaktadır.  
   
-### <a name="providing-change-notifications"></a>Değişiklik bildirimleri oluşturma  
- Ya da kullanıyorsanız <xref:System.Windows.Data.BindingMode.OneWay> veya <xref:System.Windows.Data.BindingMode.TwoWay> bağlama (içermesini istediğinizden, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bağlama kaynağı özellikleri dinamik olarak değiştirdiğinizde güncelleştirmek için), uygun özellik değiştirildi bildirim mekanizması uygulamanız gerekir. İçin önerilen mekanizmadır [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] veya dinamik bir sınıf uygulamak için <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi. Daha fazla bilgi için [özellik değişikliği bildirimi uygulama](how-to-implement-property-change-notification.md).  
+### <a name="providing-change-notifications"></a>Değişiklik bildirimleri sağlama  
+ Ya <xref:System.Windows.Data.BindingMode.OneWay> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] da bağlamayı kullanıyorsanız (bağlama kaynak özellikleri dinamik olarak değiştiğinde güncelleştirilmesini istiyorsanız), uygun bir özellik değiştirildi bildirim mekanizması uygulamanız gerekir. <xref:System.Windows.Data.BindingMode.TwoWay> Önerilen mekanizma, [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.ComponentModel.INotifyPropertyChanged> arabirimini uygulamak için veya dinamik sınıfa yöneliktir. Daha fazla bilgi için bkz. [özellik değişiklik bildirimini uygulama](how-to-implement-property-change-notification.md).  
   
- Oluşturursanız, bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] uygulamıyor nesne <xref:System.ComponentModel.INotifyPropertyChanged>, bir bağlamada kullanılan verilerin güncel olduğundan emin olmak kendi bildirim sistemi düzenlemeniz gerekir. Değişiklik bildirimleri destekleyerek sağlayabilirsiniz `PropertyChanged` bildirimleri için değiştirmek istediğiniz her bir özellik için bir desen. Bu desenin desteklenmesi için tanımladığınız bir *PropertyName*değiştirilen olay her bir özellik için burada *PropertyName* özelliğin adıdır. Size özelliği her değiştiğinde olayı oluşturun.  
+ [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Gerçekleştirmeyen<xref:System.ComponentModel.INotifyPropertyChanged>bir nesne oluşturursanız, bir bağlamada kullanılan verilerin güncel kalmasını sağlamak için kendi bildirim sisteminiz için düzenleme yapmanız gerekir. Değişiklik bildirimlerini istediğiniz her bir özelliğin `PropertyChanged` modelini destekleyerek değişiklik bildirimleri sağlayabilirsiniz. Bu kalıbı desteklemek için her bir özellik için *PropertyName*Changed olayını tanımlarsınız; burada *PropertyName* özelliğin adıdır. Olay, özellik her değiştiğinde tetiklenir.  
   
- Bağlama kaynağınızı bu bildirim mekanizması uygularsa, hedef güncelleştirmeleri otomatik olarak gerçekleşir. Bağlama kaynak uygun özellik sağlamaz herhangi bir nedenle bildirimleri değiştirdiyseniz kullanma seçeneğini sahip <xref:System.Windows.Data.BindingExpression.UpdateTarget%2A> hedef özelliği açıkça güncelleştirmek için yöntemi.  
+ Bağlama kaynağınız bu bildirim mekanizmalarından birini uygularsa, hedef güncelleştirmeler otomatik olarak gerçekleşir. Herhangi bir nedenden dolayı bağlama kaynağınız uygun özellik değiştirme bildirimlerini sağlamıyorsa, hedef özelliği açıkça güncelleştirmek için <xref:System.Windows.Data.BindingExpression.UpdateTarget%2A> yöntemini kullanma seçeneğiniz vardır.  
   
 ### <a name="other-characteristics"></a>Diğer özellikler  
- Dikkat edilecek diğer önemli noktaları listelenmektedir:  
+ Aşağıdaki listede dikkat edilecek diğer önemli noktaları verilmiştir:  
   
-- Nesneyi oluşturmak istiyorsanız [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], sınıfın bir varsayılan oluşturucuya sahip olmalıdır. Bazı [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] diller gibi C#, varsayılan oluşturucu sizin için oluşturulmuş olabilir.  
+- İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]nesnesini oluşturmak istiyorsanız, sınıfının parametresiz bir oluşturucusu olmalıdır. Gibi bazı [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] dillerde C#parametresiz Oluşturucu sizin için oluşturulmuş olabilir.  
   
-- Özellikleri bağlama kaynak özellikleri bir bağlama için kendi sınıfınızı genel özelliklerini olması gerektiği kullanırsınız. Açıkça tanımlanmış arabirimi özellikleri, bağlama amacıyla erişilemiyor ya da temel uygulaması olmayan korumalı, özel, iç veya sanal özelliklerine erişebilirsiniz.  
+- Bağlama için bağlama kaynak özellikleri olarak kullandığınız özellikler, sınıfınızın ortak özellikleri olmalıdır. Açıkça tanımlanan arabirim özelliklerine bağlama amaçları için erişilemez, ya da hiçbir temel uygulamasına sahip olmayan korumalı, özel, iç veya sanal özellikler olabilir.  
   
-- Genel alanlar için bağlanamıyor.  
+- Ortak alanlara bağlayamazsınız.  
   
-- Sınıfınız içinde bildirilen özellik türünü bağlamaya geçirilen türüdür. Ancak, sonuçta bağlama tarafından kullanılan tür bağlama hedefi özelliği türüne bağlıdır bağlama kaynak özelliği değil. Türü bir fark varsa, özel özelliğinizi bağlamaya başlangıçta nasıl geçtiğini işlemek üzere bir dönüştürücü yazmak isteyebilirsiniz. Daha fazla bilgi için bkz. <xref:System.Windows.Data.IValueConverter>.  
+- Sınıfınıza göre belirtilen özelliğin türü, bağlamaya geçirilen türdür. Ancak, son olarak bağlama tarafından kullanılan tür bağlama kaynak özelliği değil, bağlama hedefi özelliğinin türüne bağlıdır. Türünde bir fark varsa, özel özelliğinin ilk olarak bağlamaya nasıl geçtiğini işlemek için bir dönüştürücü yazmak isteyebilirsiniz. Daha fazla bilgi için bkz. <xref:System.Windows.Data.IValueConverter>.  
   
 <a name="objects"></a>   
-## <a name="using-entire-objects-as-a-binding-source"></a>Tüm nesneleri bağlama kaynağı kullanma  
- Bir nesnenin tamamını bağlama kaynağı olarak kullanabilirsiniz. Kullanarak bir bağlama kaynağı belirtebilirsiniz <xref:System.Windows.Data.Binding.Source%2A> veya <xref:System.Windows.FrameworkElement.DataContext%2A> özelliği ve ardından boş bir bağlama bildirimi sağlayın: `{Binding}`. Bu faydalı olduğu senaryolar ilgilendiğiniz birden fazla özelliğe sahip nesneleri bağlama veya koleksiyon nesnelere bağlama bağlama dize türünde nesneler içerir. Tüm koleksiyon nesne bağlama örneği için bkz [hiyerarşik veriler ile ana öğe-ayrıntı desenini kullanma](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).  
+## <a name="using-entire-objects-as-a-binding-source"></a>Tüm nesneleri bağlama kaynağı olarak kullanma  
+ Tüm nesneyi bağlama kaynağı olarak kullanabilirsiniz. Veya özelliğini kullanarak bir bağlama kaynağı belirtebilir ve ardından boş bir bağlama bildirimi sağlayabilirsiniz: `{Binding}`. <xref:System.Windows.Data.Binding.Source%2A> <xref:System.Windows.FrameworkElement.DataContext%2A> Bunun yararlı olduğu senaryolar, tür String olan nesnelere bağlamayı, ilgilendiğiniz birden fazla özelliğe sahip nesnelere bağlamayı veya koleksiyon nesnelerine bağlamayı içerir. Tüm koleksiyon nesnesine bağlama örneği için bkz. [hiyerarşik verilerle ana ayrıntı modelini kullanma](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).  
   
- Böylece veriler, ilişkili hedef özelliği için anlamlı olan özel mantığı uygulamak gerekebileceğini unutmayın. (Varsayılan tür dönüştürmesi mevcut değilse) özel mantığı özel bir dönüştürücü biçiminde olabilir veya <xref:System.Windows.DataTemplate>. Veri dönüştürme bölümünü dönüştürücüler hakkında daha fazla bilgi için bkz. [Data Binding Overview](data-binding-overview.md). Veri şablonları hakkında daha fazla bilgi için bkz. [veri şablonu oluşturmaya genel bakış](data-templating-overview.md).  
+ Verilerin, bağlantılı hedef özelliği için anlamlı olması için özel mantık uygulamanız gerekebileceğini unutmayın. Özel mantık özel bir dönüştürücü biçiminde olabilir (varsayılan tür dönüştürmesi yoksa) veya bir <xref:System.Windows.DataTemplate>. Dönüştürücüler hakkında daha fazla bilgi için [veri bağlamaya genel bakış](data-binding-overview.md)' ın veri dönüştürme bölümüne bakın. Veri şablonları hakkında daha fazla bilgi için bkz. [veri şablonu oluşturmaya genel bakış](data-templating-overview.md).  
   
 <a name="collections"></a>   
-## <a name="using-collection-objects-as-a-binding-source"></a>Bağlama kaynağı koleksiyon nesnelerini kullanma  
- Genellikle, bağlama kaynağı kullanmak istediğiniz nesne bir özel nesneler topluluğudur. Her nesne bir örneğini yinelenen bir bağlama için kaynak görevi görür. Örneğin, sahip olabileceğiniz bir `CustomerOrders` oluşan bir koleksiyon `CustomerOrder` nesneleri, uygulamanızın nerede yinelenir koleksiyonu kaç siparişleri var olup olmadığını belirleyin ve her yer alan veriler üzerinde.  
+## <a name="using-collection-objects-as-a-binding-source"></a>Koleksiyon nesnelerini bağlama kaynağı olarak kullanma  
+ Genellikle, bağlama kaynağı olarak kullanmak istediğiniz nesne bir özel nesneler koleksiyonudur. Her nesne, yinelenen bir bağlamanın bir örneğinin kaynağı olarak görev yapar. Örneğin, uygulamanızın, kaç tane siparişin `CustomerOrders` mevcut olduğunu ve her `CustomerOrder` birinde yer alan verileri öğrenmek için koleksiyon üzerinde yineleme yapan nesnelerden oluşan bir koleksiyonunuz olabilir.  
   
- Uygulayan herhangi bir koleksiyonu numaralandırabilirsiniz <xref:System.Collections.IEnumerable> arabirimi. Ancak, dinamik bağlamaları eklemeler ve silmeleri koleksiyondaki güncelleştirecek şekilde ayarlamak için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] koleksiyonu otomatik olarak, uygulamalıdır <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimi. Bu arabirim, altta yatan seçki değiştiğinde oluşturulması gereken bir olayı kullanıma sunar.  
+ <xref:System.Collections.IEnumerable> Arabirimini uygulayan herhangi bir koleksiyonun üzerinde listeleme yapabilirsiniz. Bununla birlikte, koleksiyondaki ekleme veya silme işlemlerinin [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] otomatik olarak güncelleştirilmesini sağlamak için dinamik bağlamaları ayarlamak için koleksiyonun <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimini uygulaması gerekir. Bu arabirim, temeldeki koleksiyon değiştiğinde oluşturulması gereken bir olay gösterir.  
   
- <xref:System.Collections.ObjectModel.ObservableCollection%601> Sınıfı, bir yerleşik uygulama kullanıma sunan bir veri toplama <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimi. Koleksiyon içindeki tek veri nesneleri, önceki bölümde açıklanan gereksinimleri karşılaması gerekir. Bir örnek için bkz. [oluşturup bağladığı ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md). Kendi koleksiyon uygulamadan önce kullanmayı <xref:System.Collections.ObjectModel.ObservableCollection%601> veya gibi bir mevcut koleksiyon sınıfları <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>, ve <xref:System.ComponentModel.BindingList%601>, birçok diğerlerinin yanı sıra.  
+ Sınıfı, <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimi kullanıma sunan bir veri koleksiyonunun yerleşik bir uygulamasıdır. <xref:System.Collections.ObjectModel.ObservableCollection%601> Koleksiyon içindeki bireysel veri nesneleri, önceki bölümlerde açıklanan gereksinimleri karşılamalıdır. Bir örnek için bkz. [oluşturma ve bir ObservableCollection bağlama](how-to-create-and-bind-to-an-observablecollection.md). Kendi koleksiyonunuzu uygulamadan önce, <xref:System.Collections.ObjectModel.ObservableCollection%601> , ve <xref:System.ComponentModel.BindingList%601>gibi var olan koleksiyon sınıflarından <xref:System.Collections.Generic.List%601> <xref:System.Collections.ObjectModel.Collection%601>birini ya da birçok başka konuda kullanmayı düşünün.  
   
- WPF hiçbir zaman doğrudan bir derlemeye bağlar. Bağlama kaynağı olarak bir koleksiyonu belirtirseniz, WPF gerçekten koleksiyonunun varsayılan görünümünü olarak bağlar. Varsayılan görünümleri hakkında daha fazla bilgi için bkz: [Data Binding Overview](data-binding-overview.md).  
+ WPF hiçbir şekilde doğrudan bir koleksiyona bağlanmaz. Bir koleksiyonu bağlama kaynağı olarak belirtirseniz, WPF aslında koleksiyonun varsayılan görünümüne bağlanır. Varsayılan görünümler hakkında daha fazla bilgi için bkz. [veri bağlamaya genel bakış](data-binding-overview.md).  
   
- Gelişmiş bir senaryo varsa ve kendi koleksiyon uygulamak istediğiniz kullanmayı <xref:System.Collections.IList> arabirimi. <xref:System.Collections.IList> tek tek performansını iyileştirebilir dizin tarafından erişilebilen nesneleri genel olmayan koleksiyonu sağlar.  
+ Gelişmiş bir senaryonuz varsa ve kendi koleksiyonunuzu uygulamak istiyorsanız, <xref:System.Collections.IList> arabirimini kullanmayı göz önünde bulundurun. <xref:System.Collections.IList>, dizin tarafından tek tek erişilebilen, performansı iyileştirebilecek, genel olmayan nesnelerin bir koleksiyonunu sağlar.  
   
 <a name="permissions"></a>   
-## <a name="permission-requirements-in-data-binding"></a>Veri bağlamaya izin gereksinimleri  
- Ne zaman veri bağlama, uygulamanın güven düzeyini düşünmelisiniz. Aşağıdaki tabloda, hangi özellik türleri tam güven veya kısmi güven yürüten bir uygulama bağlanabilir özetlenmektedir:  
+## <a name="permission-requirements-in-data-binding"></a>Veri bağlamada izin gereksinimleri  
+ Veri bağlama sırasında uygulamanın güven düzeyini göz önünde bulundurmanız gerekir. Aşağıdaki tabloda, hangi özellik türlerinin tam güvende ya da kısmi güvende yürütülen bir uygulamada bağlanacağı özetlenmektedir:  
   
-|Özellik türü<br /><br /> (tüm erişim değiştiricileri)|Dinamik Nesne özelliği|Dinamik Nesne özelliği|CLR özelliği|CLR özelliği|Bağımlılık özelliği|Bağımlılık özelliği|  
+|Özellik türü<br /><br /> (tüm erişim değiştiricileri)|Dinamik nesne özelliği|Dinamik nesne özelliği|CLR özelliği|CLR özelliği|Dependency özelliği|Dependency özelliği|  
 |------------------------------------------------|-----------------------------|-----------------------------|------------------|------------------|-------------------------|-------------------------|  
 |**Güven düzeyi**|**Tam güven**|**Kısmi güven**|**Tam güven**|**Kısmi güven**|**Tam güven**|**Kısmi güven**|  
 |Genel sınıf|Evet|Evet|Evet|Evet|Evet|Evet|  
-|Genel olmayan sınıfı|Evet|Hayır|Evet|Hayır|Evet|Evet|  
+|Genel olmayan sınıf|Evet|Hayır|Evet|Hayır|Evet|Evet|  
   
- Bu tablo, veri bağlama izni gereksinimleri hakkında aşağıdaki önemli noktaları açıklar:  
+ Bu tabloda, veri bağlamasındaki izin gereksinimleriyle ilgili aşağıdaki önemli noktaları açıklanmaktadır:  
   
-- İçin [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] özellikleri, veri bağlama çalışır bağlama altyapısı yansıma kullanarak bağlama kaynak özelliğine erişmek mümkün olduğu sürece. Aksi takdirde, bağlama altyapısı özelliği bulunamayan bir uyarı verir ve varsa, geri dönüş veya varsayılan değeri kullanır.  
+- Özellikler [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] için, bağlama altyapısı yansıma kullanarak bağlama kaynağı özelliğine erişebilmiş olduğu sürece veri bağlama işe yarar. Aksi halde bağlama altyapısı, özelliğin bulunamadığını ve geri dönüş değerini ya da varsa varsayılan değeri kullanacağını belirten bir uyarı verir.  
   
-- Derleme zamanı veya çalışma zamanı tanımlanan dinamik nesnelerdeki özelliklerin bağlayabilirsiniz.  
+- Derleme zamanında veya çalışma zamanında tanımlanan dinamik nesnelerdeki özelliklere bağlanabilirsiniz.  
   
-- Bağımlılık özellikleri için her zaman bağlayabilirsiniz.  
+- Bağımlılık özelliklerine her zaman bağlanabilirsiniz.  
   
- İzni gereksinimini [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] bağlama benzerdir. Kısmi güven korumalı alanı içinde <xref:System.Windows.Data.XmlDataProvider> başarısız olduğunda, belirtilen veri erişim izni yok.  
+ Bağlama için [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] izin gereksinimi benzerdir. Kısmi güven korumalı alanında, <xref:System.Windows.Data.XmlDataProvider> belirtilen verilere erişim izni olmadığında başarısız olur.  
   
- Anonim bir tür ile iç nesneleridir. Yalnızca tam güvende çalıştırıldığında, anonim türler özelliklerine bağlayabilirsiniz. Anonim türler hakkında daha fazla bilgi için bkz. [anonim türler (C# Programlama Kılavuzu)](~/docs/csharp/programming-guide/classes-and-structs/anonymous-types.md) veya [anonim türleri (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic).  
+ Anonim türe sahip nesneler iç. Anonim türlerin özelliklerine yalnızca tam güvende çalışırken bağlayabilirsiniz. Anonim türler hakkında daha fazla bilgi için bkz. [anonim türlerC# (Programlama Kılavuzu)](~/docs/csharp/programming-guide/classes-and-structs/anonymous-types.md) veya [anonim türler (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic).  
   
- Kısmi güven güvenliği hakkında daha fazla bilgi için bkz. [WPF kısmi güven güvenliği](../wpf-partial-trust-security.md).  
+ Kısmi güven güvenliği hakkında daha fazla bilgi için bkz. [WPF Kısmi güven güvenliği](../wpf-partial-trust-security.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

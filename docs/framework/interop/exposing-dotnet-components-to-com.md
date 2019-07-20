@@ -8,49 +8,49 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a6c2b755b87f6f01f08f54a2f2fc567868dbb55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b2b2f550b21a8d64968c6280cc1a29c1d18bfabd
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626344"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364014"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>.NET Framework Bileşenlerini COM'da Gösterme
-.NET türüne yazma ve bu tür, yönetilmeyen koddan kullanan geliştiriciler için ayrı etkinliklerdir. Bu bölümde, COM istemcileri ile birlikte çalışan yönetilen kod yazma için bazı ipuçları açıklanmaktadır:  
+.NET türü yazmak ve yönetilmeyen koddan Bu türün kullanılması, geliştiriciler için ayrı etkinliklerdir. Bu bölümde, COM istemcileriyle birlikte çalışan yönetilen kod yazmak için çeşitli ipuçları açıklanmaktadır:  
   
 - [Birlikte çalışma için .NET türlerini niteleme](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
   
-     Tüm yönetilen türleri, yöntemleri, özellikleri, alanları ve COM öğesine göstermek istediğiniz olayların ortak olması gerekir. Türler, COM içinden çağrılabilen tek Oluşturucu olan bir genel varsayılan oluşturucuya sahip olmalıdır  
+     COM 'da kullanıma sunmak istediğiniz tüm yönetilen türler, Yöntemler, özellikler, alanlar ve olaylar ortak olmalıdır. Türler, COM ile çağrılabilen tek Oluşturucu olan ortak parametresiz bir oluşturucuya sahip olmalıdır.  
   
-- [Birlikte çalışma özniteliklerini uygulama](../../../docs/framework/interop/applying-interop-attributes.md).  
+- [Birlikte çalışma öznitelikleri uygulanıyor](../../../docs/framework/interop/applying-interop-attributes.md).  
   
-     Yönetilen kod içinde özel öznitelikler, bir bileşenin birlikte çalışabilirliği geliştirebilirsiniz.  
+     Yönetilen kod içindeki özel öznitelikler bir bileşenin birlikte çalışabilirliğini artırabilir.  
   
-- [COM için derlemeyi paketleme](../../../docs/framework/interop/packaging-an-assembly-for-com.md).  
+- [Com için bir derleme paketleniyor](../../../docs/framework/interop/packaging-an-assembly-for-com.md).  
   
-     COM geliştiriciler, başvuru ve bütünleştirilmiş kodlarınızı dağıtma adımlarını özetleyen gerektirebilir.  
+     COM geliştiricileri, derlemelerinizi başvurma ve dağıtma konusunda yer alan adımları özetlemenizi gerektirebilir.  
   
- Ayrıca, bu bölümü, COM istemciden yönetilen bir tür kullanan için ilgili görevleri tanımlar.  
+ Ayrıca, bu bölüm bir COM istemcisinden yönetilen bir tür tüketme ile ilgili görevleri tanımlar.  
   
-#### <a name="to-consume-a-managed-type-from-com"></a>Yönetilen bir COM türünden kullanma  
+#### <a name="to-consume-a-managed-type-from-com"></a>COM 'dan yönetilen bir tür kullanmak için  
   
-1. [Derlemeleri COM ile kaydetme](../../../docs/framework/interop/registering-assemblies-with-com.md).  
+1. [DERLEMELERI com Ile kaydedin](../../../docs/framework/interop/registering-assemblies-with-com.md).  
   
-     Tasarım zamanında bir derleme (ve tür kitaplıklarını) türlerinde kayıtlı olması gerekir. Bir yükleyici bütünleştirilmiş kod kaydedilmiyorsa COM geliştiriciler Regasm.exe isteyin.  
+     Bir derlemedeki türlerin (ve tür kitaplıklarının) tasarım zamanında kayıtlı olması gerekir. Bir yükleyici derlemeyi KAYDETMEZSE, COM geliştiricilerine Regasm. exe kullanmayı söyleyin.  
   
-2. [Com'dan .NET türlerine başvurma](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).  
+2. [Com 'dan .net türlerine başvurun](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).  
   
-     Aynı araçları ve bugün kullandıkları teknikleri kullanarak derlemedeki türleri COM geliştiriciler başvurabilirsiniz.  
+     COM geliştiricileri, günümüzde kullandıkları aynı araçları ve teknikleri kullanarak bir derlemedeki türlere başvurabilir.  
   
-3. [Bir .NET nesnesini çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).  
+3. [.Net nesnesi çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).  
   
-     COM geliştiriciler, bunlar herhangi bir yönetilmeyen türü üzerinde yöntemleri çağırmak aynı şekilde .NET nesne üzerinde yöntemleri çağırabilir. Örneğin, COM **CoCreateInstance** API .NET nesneleri etkinleştirir.  
+     COM geliştiricileri, hiçbir yönetilmeyen türdeki yöntemleri çağırdıkları şekilde .NET nesnesi üzerinde Yöntemler çağırabilirler. Örneğin, COM **Cocreateınstance** API 'si .net nesnelerini etkinleştirir.  
   
-4. [COM erişimi için bir uygulamayı dağıtmak](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).  
+4. [Com erişimi için bir uygulamayı dağıtın](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).  
   
-     Bir katı adlı derleme genel derleme önbelleğinde yüklü ve yayımcısını imzasının gerektirir. İstemci uygulama dizininde olmayan kesin adlı derlemeler yüklenmesi gerekir.  
+     Tanımlayıcı adlı bir derleme, genel derleme önbelleğine yüklenebilir ve yayımcısından imza gerektirir. Tanımlayıcı olarak adlandırılmış olmayan derlemeler istemcinin uygulama dizininde yüklü olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yönetilmeyen Kod ile Birlikte Çalışma](../../../docs/framework/interop/index.md)
-- [COM birlikte çalışma örneği: COM istemcisi ve .NET sunucusu](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [COM birlikte çalışma örneği: COM Istemcisi ve .NET sunucusu](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)

@@ -2,34 +2,34 @@
 title: Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: 079eb037f074155aec3ad5473480bbf5d4d341b2
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ac4f2e4fe85d6b243999add6bda65f4fb202f79c
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425162"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363843"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme
-<xref:System.ServiceModel.Activities.SendMessageChannelCache> Uzantısı düzeyleri, kanal üreteci önbellek ayarlarını paylaşımı önbellek özelleştirmenize olanak sağlar ve ileti göndermek için hizmet uç noktaları kullanarak iş akışları için kanal ayarlarıyla önbelleğe <xref:System.ServiceModel.Activities.Send> Mesajlaşma etkinlikleri. Bu iş akışları genellikle istemci iş akışlarıdır ancak içinde barındırılan iş akışı Hizmetleri ayrıca olabilir bir <xref:System.ServiceModel.WorkflowServiceHost>. Kanal üreteci önbellek içeren önbelleğe alınmış <xref:System.ServiceModel.ChannelFactory%601> nesneleri. Kanal önbellek önbelleğe alınmış kanalları içerir.  
+Uzantı, önbellek paylaşım düzeylerini, kanal fabrikası önbelleğinin ayarlarını ve mesajlaşma etkinliklerini kullanarak <xref:System.ServiceModel.Activities.Send> hizmet uç noktalarına ileti gönderen iş akışları için kanal önbelleğinin ayarlarını özelleştirmenize olanak sağlar. <xref:System.ServiceModel.Activities.SendMessageChannelCache> Bu iş akışları genellikle istemci iş akışlarıdır ancak içinde barındırılan iş akışı Hizmetleri ayrıca olabilir bir <xref:System.ServiceModel.WorkflowServiceHost>. Kanal fabrikası önbelleğinde önbelleğe alınmış <xref:System.ServiceModel.ChannelFactory%601> nesneler bulunur. Kanal önbelleği, önbelleğe alınmış kanalları içerir.  
   
 > [!NOTE]
->  İş akışları kullanabilirsiniz <xref:System.ServiceModel.Activities.Send> Mesajlaşma iletileri ya da parametreler göndermek için etkinlikleri. İş akışı çalışma zamanı kanal fabrikaları kanal türü oluşturan önbelleğe ekler <xref:System.ServiceModel.Channels.IRequestChannel> kullandığınızda bir <xref:System.ServiceModel.Activities.ReceiveReply> etkinliği ile bir <xref:System.ServiceModel.Activities.Send> etkinliği ve bir <xref:System.ServiceModel.Channels.IOutputChannel> kullanırken yalnızca bir <xref:System.ServiceModel.Activities.Send> etkinlik (hiçbir <xref:System.ServiceModel.Activities.ReceiveReply>).  
+>  İş akışları ileti <xref:System.ServiceModel.Activities.Send> ya da parametre göndermek için mesajlaşma etkinliklerini kullanabilir. İş akışı çalışma zamanı, etkinlik ile <xref:System.ServiceModel.Channels.IRequestChannel> <xref:System.ServiceModel.Activities.Send> bir etkinlik kullandığınızda ve yalnızca bir <xref:System.ServiceModel.Activities.Send> etkinlik (Hayır <xref:System.ServiceModel.Activities.ReceiveReply>) kullandığınızda <xref:System.ServiceModel.Activities.ReceiveReply> , bir <xref:System.ServiceModel.Channels.IOutputChannel> türü kanallar oluşturan önbelleğe kanal fabrikaları ekler.  
   
-## <a name="the-cache-sharing-levels"></a>Önbellek paylaşımı düzeylerini  
- Varsayılan olarak, bir iş akışı tarafından barındırılan bir <xref:System.ServiceModel.WorkflowServiceHost> tarafından kullanılan önbellek <xref:System.ServiceModel.Activities.Send> Mesajlaşma etkinlikleriyle iş akışı durumlarda arasında paylaşılır <xref:System.ServiceModel.WorkflowServiceHost> (ana bilgisayar önbelleğe alma düzeyi). Tarafından barındırılmadığında bir istemci iş akışı için bir <xref:System.ServiceModel.WorkflowServiceHost>, önbelleğe yalnızca (örnek düzeyi önbelleğe alma) iş akışı örneği için kullanılabilir. Önbelleği yalnızca kullanılabilir <xref:System.ServiceModel.Activities.Send> bitiş noktaları yapılandırmasında tanımlandığı, güvenli olmayan önbelleğe almanın etkin olup sürece kullanmayan etkinlikler.  
+## <a name="the-cache-sharing-levels"></a>Önbellek paylaşım düzeyleri  
+ Varsayılan olarak, ileti etkinlikleri tarafından <xref:System.ServiceModel.WorkflowServiceHost> <xref:System.ServiceModel.Activities.Send> kullanılan önbellek tarafından barındırılan bir iş akışında, <xref:System.ServiceModel.WorkflowServiceHost> (konak düzeyinde önbelleğe alma) içindeki tüm iş akışı örnekleri arasında paylaşılır. Tarafından barındırılmadığında bir istemci iş akışı için bir <xref:System.ServiceModel.WorkflowServiceHost>, önbelleğe yalnızca (örnek düzeyi önbelleğe alma) iş akışı örneği için kullanılabilir. Önbellek yalnızca, güvenli olmayan önbelleğe <xref:System.ServiceModel.Activities.Send> alma etkin olmadığı takdirde yapılandırmada tanımlanan uç noktaları kullanmayan etkinliklerde kullanılabilir.  
   
- Aşağıdakiler için kullanılabilir düzeyleri paylaşımı farklı bir önbellek, <xref:System.ServiceModel.Activities.Send> etkinlikleri iş akışı ve önerilen kullanımları:  
+ Aşağıda, bir iş akışındaki etkinlikler için <xref:System.ServiceModel.Activities.Send> kullanılabilen farklı önbellek paylaşım düzeyleri ve bunların önerilen kullanımları verilmiştir:  
   
-- **Konak düzeyinde**: Konak paylaşım düzeyi, önbelleğe yalnızca iş akışı hizmeti ana bilgisayarında barındırılan iş akışı örnekleri için kullanılabilir. Bir önbellek, ayrıca iş akışı hizmeti konak işlem genelinde önbelleğinde arasında paylaşılabilir.  
+- **Ana bilgisayar düzeyi**: Konak paylaşım düzeyinde, önbellek yalnızca iş akışı hizmeti ana bilgisayarında barındırılan iş akışı örnekleri için kullanılabilir. Bir önbellek, işlem genelinde bir önbellekte iş akışı hizmeti konakları arasında da paylaşılabilir.  
   
-- **Örnek düzeyi**: Önbellek paylaşım düzeyi örneğin ömrü boyunca belirli bir iş akışı örneği için kullanılabilir ancak önbelleği için diğer iş akışı örnekleri kullanılabilir değil.  
+- **Örnek düzeyi**: Örnek paylaşım düzeyinde, önbellek, ömrü boyunca belirli bir iş akışı örneği tarafından kullanılabilir, ancak önbellek diğer iş akışı örnekleri için kullanılamaz.  
   
-- **Önbelleğin**: Bitiş noktaları yapılandırmasında tanımlandığı kullanan bir iş akışı varsa önbelleği varsayılan olarak kapalıdır. Ayrıca, açma güvensiz olabilir çünkü bu durumda kapalı önbellek tutmanız önerilir. Örneğin, farklı bir kimlik (farklı kimlik bilgileri veya kimliğe bürünme kullanma) her gönderme için gereklidir.  
+- **Önbellek yok**: Yapılandırma bölümünde tanımlanan uç noktaları kullanan bir iş akışınız varsa önbellek varsayılan olarak kapalıdır. Bu durumda, önbelleğin açık olması güvenli hale getirildiğinden önbelleğin kapalı tutulması de önerilir. Örneğin, her gönderme için farklı bir kimlik (farklı kimlik bilgileri veya kimliğe bürünme kullanılarak) gerekliyse.  
   
-## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>Bir istemci iş akışı için paylaşım düzeyi önbellek değiştirme  
- Bir istemci iş akışında paylaşımı önbellek ayarlamak için bir örneğini ekleme <xref:System.ServiceModel.Activities.SendMessageChannelCache> istenen iş akışı örnekleri kümesi için bir genişletme olarak sınıf. Bu, tüm iş akışı örnekleri arasında önbellek paylaşımı ile sonuçlanır. Aşağıdaki kod örnekleri, bu adımların nasıl gerçekleştirileceğini gösterir.  
+## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>Istemci Iş akışı için önbellek paylaşım düzeyini değiştirme  
+ Bir istemci iş akışında önbellek paylaşımını ayarlamak için, istenen iş akışı örnekleri kümesine uzantı <xref:System.ServiceModel.Activities.SendMessageChannelCache> olarak sınıfın bir örneğini ekleyin. Bu, önbelleğin tüm iş akışı örnekleri arasında paylaşılmasına neden olur. Aşağıdaki kod örnekleri, bu adımların nasıl gerçekleştirileceğini gösterir.  
   
- İlk olarak, türün bir örneğini bildirmeniz <xref:System.ServiceModel.Activities.SendMessageChannelCache>.  
+ İlk olarak, türünün <xref:System.ServiceModel.Activities.SendMessageChannelCache>bir örneğini bildirin.  
   
 ```csharp  
 // Create an instance of SendMessageChannelCache with default cache settings.  
@@ -37,7 +37,7 @@ static SendMessageChannelCache sharedChannelCacheExtension =
     new SendMessageChannelCache();  
 ```  
   
- Ardından, her istemci iş akışı örneği için önbellek uzantısı ekleyin.  
+ Ardından, her bir istemci iş akışı örneğine önbellek uzantısını ekleyin.  
   
 ```csharp 
 WorkflowApplication clientInstance1 = new WorkflowApplication(new clientWorkflow1());  
@@ -49,10 +49,10 @@ clientInstance1.Extensions.Add(sharedChannelCacheExtension);
 clientInstance2.Extensions.Add(sharedChannelCacheExtension);  
 ```  
   
-## <a name="changing-the-cache-sharing-level-for-a-hosted-workflow-service"></a>Paylaşım düzeyi barındırılan iş akışı hizmeti için önbellek değiştirme  
- Bir barındırılan iş akışı hizmetinde paylaşımı önbellek ayarlamak için bir örneğini ekleme <xref:System.ServiceModel.Activities.SendMessageChannelCache> tüm iş akışı hizmet konakları için bir genişletme olarak sınıf. Bu, tüm iş akışı hizmeti konak arasında önbellek paylaşımı ile sonuçlanır. Bu adımları gerçekleştirmek için aşağıdaki kod örnekleri göster.  
+## <a name="changing-the-cache-sharing-level-for-a-hosted-workflow-service"></a>Barındırılan Iş akışı hizmeti için önbellek paylaşım düzeyini değiştirme  
+ Barındırılan iş akışı hizmetinde önbellek paylaşımını ayarlamak için, <xref:System.ServiceModel.Activities.SendMessageChannelCache> sınıfın bir örneğini bir uzantı olarak tüm iş akışı hizmeti konaklarına ekleyin. Bu, önbelleğin tüm iş akışı hizmeti konakları arasında paylaşılmasına neden olur. Aşağıdaki kod örnekleri, bu adımları gerçekleştirmek için gösterir.  
   
- İlk olarak, türün bir örneğini bildirmeniz <xref:System.ServiceModel.Activities.SendMessageChannelCache> sınıf düzeyinde.  
+ İlk olarak, sınıf düzeyinde türünün <xref:System.ServiceModel.Activities.SendMessageChannelCache> bir örneğini bildirin.  
   
 ```csharp  
 // Create static instance of SendMessageChannelCache with default cache settings.  
@@ -60,7 +60,7 @@ static SendMessageChannelCache sharedChannelCacheExtension = new
     SendMessageChannelCache();  
 ```  
   
- Ardından, her iş akışı hizmeti konağı için statik önbellek uzantısı ekleyin.  
+ Sonra, her iş akışı hizmeti konağına statik önbellek uzantısını ekleyin.  
   
 ```csharp  
 WorkflowServiceHost host1 = new WorkflowServiceHost(new serviceWorkflow1(), new Uri(baseAddress1));  
@@ -71,7 +71,7 @@ host1.WorkflowExtensions.Add(sharedChannelCacheExtension);
 host2.WorkflowExtensions.Add(sharedChannelCacheExtension);  
 ```  
   
- Örnek düzeyi bir barındırılan iş akışı hizmetinde paylaşımı önbellek için ekleyin bir `Func<SendMessageChannelCache>` temsilci iş akışı hizmeti konağı için bir genişletme olarak ve yeni bir örneğini başlatan kodu bu temsilci atama <xref:System.ServiceModel.Activities.SendMessageChannelCache> sınıfı. İş akışı hizmeti konak tüm iş akışı örnekleri tarafından paylaşılan tek bir önbellek yerine her bir ayrı ayrı iş akışı örneği için farklı bir önbellek sonuçlanır. Aşağıdaki kod örneği, doğrudan tanımlamak için bir lambda ifadesi kullanarak bunu başarmanın gösterilmektedir <xref:System.ServiceModel.Activities.SendMessageChannelCache> temsilci işaret uzantısı.  
+ Barındırılan bir iş akışı hizmetindeki önbellek paylaşımını örnek düzeyine ayarlamak için, bir `Func<SendMessageChannelCache>` temsilciyi iş akışı hizmet konağına uzantı olarak ekleyin ve bu temsilciyi, <xref:System.ServiceModel.Activities.SendMessageChannelCache> sınıfının yeni bir örneğini örnekleyen koda atayın. Bu, iş akışı hizmet ana bilgisayarındaki tüm iş akışı örnekleri tarafından paylaşılan tek bir önbellek yerine her bir iş akışı örneği için farklı bir önbellekte sonuçlanır. Aşağıdaki kod örneği, temsilcinin işaret ettiği <xref:System.ServiceModel.Activities.SendMessageChannelCache> uzantıyı doğrudan tanımlamak için bir lambda ifadesi kullanarak bunu nasıl elde ettiğini gösterir.  
   
 ```csharp 
 serviceHost.WorkflowExtensions.Add(() => new SendMessageChannelCache  
@@ -86,14 +86,14 @@ serviceHost.WorkflowExtensions.Add(() => new SendMessageChannelCache
 ```  
   
 ## <a name="customizing-cache-settings"></a>Önbellek ayarlarını özelleştirme  
- Kanal üreteci önbellek ve kanal önbellek için önbellek ayarlarını özelleştirebilirsiniz. Önbellek ayarları tanımlanan <xref:System.ServiceModel.Activities.ChannelCacheSettings> sınıfı. <xref:System.ServiceModel.Activities.SendMessageChannelCache> Sınıf varsayılan oluşturucusuna varsayılan kanal üreteci önbellek ve kanal önbellek için önbellek ayarlarını tanımlar. Aşağıdaki tabloda, bu önbelleğin her türü için önbellek ayarları için varsayılan değerleri listelenmektedir.  
+ Kanal fabrikası önbelleği ve kanal önbelleği için önbellek ayarlarını özelleştirebilirsiniz. Önbellek ayarları <xref:System.ServiceModel.Activities.ChannelCacheSettings> sınıfta tanımlanmıştır. <xref:System.ServiceModel.Activities.SendMessageChannelCache> Sınıfı, kanal fabrikası önbelleğinin varsayılan önbellek ayarlarını ve parametresiz oluşturucusunda kanal önbelleğini tanımlar. Aşağıdaki tabloda her önbellek türü için bu önbellek ayarlarının varsayılan değerleri listelenmektedir.  
   
-|Ayarlar|LeaseTimeout (min)|IdleTimeout (min)|MaxItemsInCache|  
+|Ayarlar|LeaseTimeout (dk)|IdleTimeout (dk)|MaxItemsInCache|  
 |-|-|-|-|  
-|Önbellek varsayılan fabrika|TimeSpan.MaxValue|2|16|  
-|Kanal önbellek varsayılan|5|2|16|  
+|Fabrika önbelleği varsayılanı|TimeSpan. MaxValue|2|16|  
+|Kanal önbelleği varsayılanı|5|2|16|  
   
- Üreteci önbellek ve kanal önbellek ayarlarını özelleştirmek için örneği <xref:System.ServiceModel.Activities.SendMessageChannelCache> parametreli bir kurucu kullanarak <xref:System.ServiceModel.Activities.SendMessageChannelCache.%23ctor%2A> ve yeni bir örneğini geçirin <xref:System.ServiceModel.Activities.ChannelCacheSettings> her biri için özel değerlerle `factorySettings` ve `channelSettings` Parametreler. Ardından, bu sınıfın yeni bir örneğini bir iş akışı hizmeti konak ya da bir iş akışı örneği bir uzantısı olarak ekleyin. Aşağıdaki kod örneği, bir iş akışı örneği için bu adımları gösterilmektedir.  
+ Fabrika önbelleğini ve kanal önbelleği ayarlarını özelleştirmek için <xref:System.ServiceModel.Activities.SendMessageChannelCache> parametreli oluşturucuyu <xref:System.ServiceModel.Activities.SendMessageChannelCache.%23ctor%2A> kullanarak sınıfı örneğini oluşturun ve `factorySettings` ve ' `channelSettings` nin her birine özel değerleri <xref:System.ServiceModel.Activities.ChannelCacheSettings> içeren yeni bir örneğini geçirin parametrelere. Sonra, bu sınıfın yeni örneğini bir iş akışı hizmet konağına veya bir iş akışı örneğine uzantı olarak ekleyin. Aşağıdaki kod örneği, bir iş akışı örneği için bu adımların nasıl gerçekleştirileceğini gösterir.  
   
 ```csharp  
 ChannelCacheSettings factorySettings = new ChannelCacheSettings{  
@@ -112,7 +112,7 @@ SendMessageChannelCache customChannelCacheExtension =
 clientInstance.Extensions.Add(customChannelCacheExtension);  
 ```  
   
- İş akışı hizmetinizi bitiş noktaları yapılandırmasında tanımlandığı sahip olduğunda önbelleğe almayı etkinleştirmek için örneği <xref:System.ServiceModel.Activities.SendMessageChannelCache> parametreli bir kurucu kullanarak <xref:System.ServiceModel.Activities.SendMessageChannelCache.%23ctor%2A> ile `allowUnsafeCaching` parametresini `true`. Ardından, bu sınıfın yeni bir örneğini bir iş akışı hizmeti konak ya da bir iş akışı örneği bir uzantısı olarak ekleyin. Aşağıdaki kod örneği, bir iş akışı örneği için önbelleğe almayı etkinleştirmek gösterilmektedir.  
+ İş akışı hizmetiniz yapılandırmada tanımlı uç noktalara sahip olduğunda önbelleğe almayı etkinleştirmek <xref:System.ServiceModel.Activities.SendMessageChannelCache> için, `allowUnsafeCaching` parametresi olarak `true`ayarlanmış parametreli oluşturucuyu <xref:System.ServiceModel.Activities.SendMessageChannelCache.%23ctor%2A> kullanarak sınıfı örneğini oluşturun. Sonra, bu sınıfın yeni örneğini bir iş akışı hizmet konağına veya bir iş akışı örneğine uzantı olarak ekleyin. Aşağıdaki kod örneğinde, bir iş akışı örneği için önbelleğe almanın nasıl etkinleştirileceği gösterilmektedir.  
   
 ```csharp  
 SendMessageChannelCache customChannelCacheExtension =   
@@ -121,7 +121,7 @@ SendMessageChannelCache customChannelCacheExtension =
 clientInstance.Extensions.Add(customChannelCacheExtension);  
 ```  
   
- Kanal fabrikaları ve kanallar için tamamen önbelleğini devre dışı bırakmak için kanal üreteci önbellek devre dışı bırakın. Kanal tarafından karşılık gelen, kanal fabrikaları sahip olduğu gibi Bunun yapılması kanal önbellek de etkinleştirir. Kanal üreteci önbellek devre dışı bırakmak için geçirmek `factorySettings` parametresi <xref:System.ServiceModel.Activities.SendMessageChannelCache.%23ctor%2A> oluşturucusu için başlatılan bir <xref:System.ServiceModel.Activities.ChannelCacheSettings> ile örnek bir <xref:System.ServiceModel.Activities.ChannelCacheSettings.MaxItemsInCache%2A> 0 değeri. Aşağıdaki kod örneği bunu gösterir.  
+ Kanal fabrikaları ve kanallar için önbelleği tamamen devre dışı bırakmak için, kanal fabrikası önbelleğini devre dışı bırakın. Bunun yapılması, kanalların ilgili kanal fabrikalarına ait olduğu için kanal önbelleğini de kapatır. Kanal fabrikası önbelleğini devre dışı bırakmak için `factorySettings` , parametresini <xref:System.ServiceModel.Activities.SendMessageChannelCache.%23ctor%2A> 0 <xref:System.ServiceModel.Activities.ChannelCacheSettings.MaxItemsInCache%2A> değerine sahip bir <xref:System.ServiceModel.Activities.ChannelCacheSettings> örneğe başlatılan oluşturucuya geçirin. Aşağıdaki kod örneği bunu gösterir.  
   
 ```csharp  
 // Disable the factory cache. This results in the channel cache to be turned off as well.  
@@ -136,7 +136,7 @@ SendMessageChannelCache customChannelCacheExtension =
 clientInstance.Extensions.Add(customChannelCacheExtension);  
 ```  
   
- Yalnızca kanal üreteci önbellek ve kanal önbellek geçirerek devre dışı seçebilirsiniz `channelSettings` parametresi <xref:System.ServiceModel.Activities.SendMessageChannelCache.%23ctor%2A> oluşturucusu için başlatılan bir <xref:System.ServiceModel.Activities.ChannelCacheSettings> ile örnek bir <xref:System.ServiceModel.Activities.ChannelCacheSettings.MaxItemsInCache%2A> 0 değeri. Aşağıdaki kod örneği bunu gösterir.  
+ Yalnızca kanal fabrikası önbelleğini kullanmayı seçebilir `channelSettings` ve parametresini <xref:System.ServiceModel.Activities.SendMessageChannelCache.%23ctor%2A> 0 <xref:System.ServiceModel.Activities.ChannelCacheSettings.MaxItemsInCache%2A> değerine sahip bir <xref:System.ServiceModel.Activities.ChannelCacheSettings> örneğe başlatılan oluşturucuya geçirerek kanal önbelleğini devre dışı bırakabilirsiniz. Aşağıdaki kod örneği bunu gösterir.  
   
 ```csharp  
 ChannelCacheSettings factorySettings = new ChannelCacheSettings();  
@@ -150,7 +150,7 @@ SendMessageChannelCache customChannelCacheExtension =
 clientInstance.Extensions.Add(customChannelCacheExtension);  
 ```  
   
- Barındırılan iş akışı hizmetinde, uygulama yapılandırma dosyasında üreteci önbellek ve kanal önbellek ayarları belirtebilirsiniz. Bunu yapmak için üretecini ve kanal önbellek için önbellek ayarlarını içeren bir hizmet davranışını ekleyin ve bu hizmet davranışını hizmetinize ekleyin. Aşağıdaki örnek, içeren bir yapılandırma dosyası içeriğini gösterir `MyChannelCacheBehavior` özel üreteci önbellek ve kanal önbellek ayarları ile hizmet davranışı. Bu hizmet davranışını hizmet aracılığıyla eklenen `behaviorConfiguration` özniteliği.  
+ Barındırılan iş akışı hizmetinde, uygulama yapılandırma dosyasında üreteci önbellek ve kanal önbellek ayarları belirtebilirsiniz. Bunu yapmak için üretecini ve kanal önbellek için önbellek ayarlarını içeren bir hizmet davranışını ekleyin ve bu hizmet davranışını hizmetinize ekleyin. Aşağıdaki örnek, özel fabrika önbelleği ve kanal önbelleği ayarları ile `MyChannelCacheBehavior` hizmet davranışını içeren bir yapılandırma dosyasının içeriğini gösterir. Bu hizmet davranışı, `behaviorConfiguration` özelliği aracılığıyla hizmete eklenir.  
   
 ```xml  
 <configuration>    

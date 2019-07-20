@@ -4,115 +4,115 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-ms.openlocfilehash: fea5c656cf5e793ca0717cf3ef60016128a942be
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e563c0d7e5113d55d4b942fb1d175a64f5b71abc
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617302"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364300"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>.NET Framework XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama
-İş nesneler özel türleri tanımlama ya da bir bağımlılık belirli çerçeveler sahip olmayan türleri izleyebilirsiniz XAML için bazı en iyi yöntemler vardır. Bu uygulamaları izlerseniz, .NET Framework XAML hizmetlerinde ve XAML okuyucular ve yazıcılar XAML türünüz XAML özelliklerini bulabilir ve XAML tür sistemi kullanarak XAML düğüm akış uygun gösterimi verin. Bu konu için tür tanımları, üye tanımları ve CLR türleri veya üyeleri öznitelik atanıyor en iyi uygulamaları açıklar.  
+İş nesneleri olan veya belirli çerçevelere bağımlılığı olmayan türler olan özel türler tanımladığınızda, kullanabileceğiniz XAML için bazı en iyi uygulamalar vardır. Bu yöntemleri izlerseniz .NET Framework XAML Hizmetleri ve XAML okuyucuları ve XAML yazarları, bu türün XAML özelliklerini bulabilir ve xaml tür sistemini kullanarak XAML düğüm akışında uygun gösterimi verebilir. Bu konuda tür tanımları, üye tanımları ve tür veya üyelerin CLR Attributing için en iyi yöntemler açıklanmaktadır.  
   
-## <a name="constructor-patterns-and-type-definitions-for-xaml"></a>Oluşturucu desenler ve XAML için tür tanımları  
- Bir XAML nesne öğesi olarak örneği için özel bir sınıf aşağıdaki gereksinimleri karşılamalıdır:  
+## <a name="constructor-patterns-and-type-definitions-for-xaml"></a>XAML için Oluşturucu desenleri ve tür tanımları  
+ XAML 'de bir nesne öğesi olarak örneklendirmak için, özel bir sınıf aşağıdaki gereksinimleri karşılamalıdır:  
   
-- Özel bir sınıf, ortak olmalıdır ve bir varsayılan (parametresiz) ortak oluşturucu kullanıma açmalıdır. (Aşağıdaki bölümde yapıları ile ilgili notlar için bkz.)  
+- Özel sınıf ortak olmalıdır ve varsayılan (parametresiz) bir ortak Oluşturucu kullanıma sunmalıdır. (Yapılar hakkında notlar için aşağıdaki bölüme bakın.)  
   
-- Özel bir sınıf, iç içe geçmiş bir sınıf olmalıdır. Tam ad yolunda "dot" ekstra sınıf ad alanı bölme belirsiz hale getirir ve iliştirilmiş özellikler gibi diğer XAML özelliklerle uğratır.  
+- Özel sınıf iç içe geçmiş bir sınıf olmamalıdır. Tam ad yolundaki fazladan "nokta", sınıf ad alanı bölümünün belirsizleşmesini sağlar ve ekli özellikler gibi diğer XAML özellikleriyle kesintiye uğratır.  
   
- Bir nesne bir nesne öğesi olarak oluşturulabilir, oluşturulan nesne nesnesi olarak temel alan herhangi bir özelliği özellik öğesi biçiminin doldurabilirsiniz.  
+ Bir nesne bir nesne öğesi olarak örneklenebilir, oluşturulan nesne nesneyi temel alınan türü olarak alan özelliklerin özellik öğesi biçimini doldurabilir.  
   
- Yine de bir değer dönüştürücü etkinleştirirseniz, bu ölçütleri karşılamayan türleri için nesne değerleri sağlayabilirsiniz. Daha fazla bilgi için [tür dönüştürücüleri ve İşaretleme uzantıları için XAML](type-converters-and-markup-extensions-for-xaml.md).  
+ Değer dönüştürücüsünü etkinleştirirseniz, bu kriterleri karşılamayan türler için nesne değerleri de sağlayabilirsiniz. Daha fazla bilgi için bkz. [xaml Için tür dönüştürücüleri ve biçimlendirme uzantıları](type-converters-and-markup-extensions-for-xaml.md).  
   
 ### <a name="structures"></a>Yapılar  
- Yapıları her zaman XAML içinde CLR tanımı tarafından oluşturulması olanağına sahip olursunuz. Bu durum, CLR derleyici örtük olarak bir yapı için varsayılan bir oluşturucu oluşturur çünkü. Bu oluşturucu, tüm özellik değerlerini varsayılanlarına başlatır.  
+ Yapılar, CLR tanımına göre her zaman XAML 'de oluşturulabilir. Bunun nedeni, bir CLR derleyicisinin bir yapı için örtük olarak parametresiz bir Oluşturucu oluşturmasıdır. Bu Oluşturucu tüm özellik değerlerini varsayılan değerlerine başlatır.  
   
- Bazı durumlarda, bir yapı için varsayılan yapı davranış arzu değil. Bu yapı, değerleri ve işlevi bir birleşimi olarak kavramsal olarak doldurmak için tasarlandığından olabilir. Bir birleşimi olarak içerdiği değerlerin birbirini dışlayan yorumlaması olabilir ve bu nedenle, özelliklerini hiçbiri ayarlanabilir. Böyle bir yapı içinde WPF sözlüğü örneğidir <xref:System.Windows.GridLength>. Böylece değerleri öznitelik formunda yapısı değerlerinin modları ve farklı ınterpretations oluşturma dize kurallarını kullanarak ifade edilebilir bir tür dönüştürücüsü gibi yapıları uygulamalıdır. Yapısı, varsayılan olmayan bir oluşturucu aracılığıyla kod oluşturma için benzer bir davranış da sunmalıdır.  
+ Bazı durumlarda, bir yapı için varsayılan yapım davranışı istenmez. Bunun nedeni, yapının değerleri birleşim olarak kavramsal bir şekilde doldurmasını amaçladığı bir durum olabilir. Birleşim olarak, içerilen değerler birbirini dışlayan yorumlayıcıya sahip olabilir ve bu nedenle, özelliklerinden hiçbiri ayarlanabilir değildir. WPF sözlüğbir <xref:System.Windows.GridLength>yapısına örnek olarak. Bu tür yapılar, değerlerin öznitelik biçiminde ifade edilmesi için, farklı yorumlamalar veya yapı değerlerinin modlarını oluşturan dize kurallarını kullanarak bir tür dönüştürücüsü uygulamalıdır. Yapı Ayrıca, parametresiz bir Oluşturucu aracılığıyla kod oluşturma için benzer davranışları kullanıma sunmalıdır.  
   
 ### <a name="interfaces"></a>Arabirimler  
- Arabirimleri, temel alınan üye türleri olarak kullanılabilir. XAML tür sistemi atanabilir listenin denetler ve değeri olarak sağlanan nesne arabirimine atanabilir bekliyor. XAML yapı gereksinimleri ilgili atanabilir bir tür desteklediği sürece, arabirimi XAML türü olarak nasıl sunulmalıdır konsepti yoktur.  
+ Arabirimler, temel üye türleri olarak kullanılabilir. XAML tür sistemi atanabilir listeyi denetler ve değer olarak belirtilen nesnenin arabirime atanabileceği bekliyor. İlgili atanabilir bir tür XAML oluşturma gereksinimlerini desteklediği sürece, arabirimin XAML türü olarak nasıl sunulması gerektiği konusunda bir kavram yoktur.  
   
 ### <a name="factory-methods"></a>Fabrika yöntemleri  
- Fabrika yöntemleri bir XAML 2009 özelliğidir. Bunlar, nesneler varsayılan oluşturucular olmalıdır XAML ilkesini değiştirin. Bu konu başlığında, Fabrika yöntemleri belgelenmemiştir. Bkz: [x: FactoryMethod yönergesi](x-factorymethod-directive.md).  
+ Fabrika yöntemleri bir XAML 2009 özelliğidir. Nesneler parametresiz oluşturuculara sahip olması gereken XAML ilkesini değiştirir. Bu konuda Fabrika yöntemleri açıklanmamıştır. Bkz. [X:FactoryMethod yönergesi](x-factorymethod-directive.md).  
   
 ## <a name="enumerations"></a>Numaralandırmalar  
- Numaralandırmaların XAML yerel tür dönüştürme davranışı. XAML içinde belirtilen numaralandırma sabit adları, temel alınan numaralandırma türüne göre çözümlenir ve bir XAML nesne yazıcısı numaralandırma değerini döndürür.  
+ Numaralandırmalar XAML yerel tür dönüştürme davranışına sahiptir. XAML 'de belirtilen sabit listesi sabit adları, temeldeki numaralandırma türüne göre çözümlenir ve sabit listesi değerini bir XAML nesne yazıcısına döndürür.  
   
- XAML ile numaralandırmalar bayrakları stili kullanım desteği <xref:System.FlagsAttribute> uygulanır. Daha fazla bilgi için [içinde XAML söz dizimi ayrıntı](../wpf/advanced/xaml-syntax-in-detail.md). ([İçinde XAML söz dizimi ayrıntı](../wpf/advanced/xaml-syntax-in-detail.md) WPF izleyiciler için yazılmıştır ancak çoğu bu konu başlığı altındaki bilgiler, ilgili belirli bir uygulama çerçevesine özgü olmayan XAML.)  
+ XAML, <xref:System.FlagsAttribute> uygulanan Numaralandırmalar için bir bayraklar stili kullanımını destekler. Daha fazla bilgi için bkz. [XAML sözdizimi ayrıntılı](../wpf/advanced/xaml-syntax-in-detail.md). ([Ayrıntılı XAML SÖZDIZIMI](../wpf/advanced/xaml-syntax-in-detail.md) WPF hedef kitlesi için yazılmıştır, ancak bu konudaki bilgilerin çoğu, belirli bir uygulama çerçevesine özgü olmayan XAML için geçerlidir.)  
   
 ## <a name="member-definitions"></a>Üye tanımları  
- Tür üyeleri için XAML kullanım tanımlayabilirsiniz. Bu işlem, bu türdeki XAML kullanılabilir olsa bile, XAML kullanılabilir üyeler tanımlayan türler için de mümkündür. Bu, CLR devralma nedeniyle mümkün olur. Üye devralınan tür XAML kullanım türü olarak destekler ve üye, temel alınan türü için XAML kullanım destekler veya bir yerel XAML sözdizimi sürece bu XAML kullanılabilir bir üyesidir.  
+ Türler, XAML kullanımı için üyeleri tanımlayabilir. Söz konusu tür XAML ile kullanılabilir olmasa bile XAML ile kullanılabilen üyeleri tanımlayan türler mümkündür. Bu, CLR devralımı nedeniyle mümkündür. Bu nedenle, üyeyi devralan bir tür bir tür olarak XAML kullanımını desteklediğinden ve üye temel alınan türü için XAML kullanımını desteklediğinde ya da kullanılabilir yerel XAML sözdizimi varsa, bu üye XAML ile kullanılabilir.  
   
 ### <a name="properties"></a>Özellikler  
- Özellikleri tipik CLR kullanarak genel bir CLR özelliği olarak tanımlarsanız `get` ve `set` erişimci desenleri ve uygun dilde keywording, XAML tür sistemi rapor özelliği uygun bilgilerle bir üyesi olarak sağlanan için <xref:System.Xaml.XamlMember> özellikleri gibi <xref:System.Xaml.XamlMember.IsReadPublic%2A> ve <xref:System.Xaml.XamlMember.IsWritePublic%2A>.  
+ Tipik CLR `get` ve `set` erişimci düzenlerini ve dile uygun KeySize özelliğini kullanarak özellikleri genel bir CLR özelliği olarak tanımlarsanız, XAML tür sistemi, <xref:System.Xaml.XamlMember> ve<xref:System.Xaml.XamlMember.IsWritePublic%2A>gibiözellikler. <xref:System.Xaml.XamlMember.IsReadPublic%2A>  
   
- Belirli özellikler, bir metin söz dizimi uygulayarak etkinleştirebilir <xref:System.ComponentModel.TypeConverterAttribute>. Daha fazla bilgi için [tür dönüştürücüleri ve İşaretleme uzantıları için XAML](type-converters-and-markup-extensions-for-xaml.md).  
+ Belirli özellikler, bir metin söz dizimini uygulayarak <xref:System.ComponentModel.TypeConverterAttribute>etkinleştirebilir. Daha fazla bilgi için bkz. [xaml Için tür dönüştürücüleri ve biçimlendirme uzantıları](type-converters-and-markup-extensions-for-xaml.md).  
   
- Bir metin sözdizimi veya yerel XAML dönüştürme ve biçimlendirme uzantısı kullanımı, bir özelliğin türünü gibi daha fazla yöneltme olmaması (<xref:System.Xaml.XamlMember.TargetType%2A> XAML içinde tür sistemi) bir örnek t düşünerek bir XAML nesne yazıcısı geri olmalıdır Hedef türü bir CLR türü.  
+ Bir metin sözdizimi veya yerel xaml dönüştürmesi yokluğunda ve biçimlendirme uzantısı kullanımı gibi daha fazla yöneltme yokluğunda, bir özelliğin türü (<xref:System.Xaml.XamlMember.TargetType%2A> xaml tür sisteminde) t 'yi düşünerek bir xaml nesne yazıcısında bir örnek döndürebilmelidir bir CLR türü olarak arget türü.  
   
- XAML 2009 kullanıyorsanız [x: Reference işaretleme uzantısı](x-reference-markup-extension.md) önceki konuları karşılanmazsa değerlerini sağlamak için kullanılabilir; ancak, bu tür tanımı sorunu daha kullanım sorunu daha fazla bilgi.  
+ XAML 2009 kullanıyorsanız, önceki noktalara uyulmazsa değer sağlamak için [X:Reference Işaretleme uzantısı](x-reference-markup-extension.md) kullanılabilir; Ancak, bir tür tanımı sorunundan daha fazla kullanım sorunu vardır.  
   
 ### <a name="events"></a>Olaylar  
- Olaylar genel bir CLR olay olarak tanımlarsanız, XAML tür sistemi olay sahip bir üye olarak bildirebilirsiniz <xref:System.Xaml.XamlMember.IsEvent%2A> olarak `true`. Olay işleyicileri bağlama .NET Framework XAML hizmetlerinde özellikleri kapsamında değildir; Bu, uygulamaları ve belirli çerçeveleri ile bırakılır.  
+ Olayları ortak bir clr olayı olarak tanımlarsanız, XAML tür sistemi olayı <xref:System.Xaml.XamlMember.IsEvent%2A> olarak `true`bir üye olarak rapor edebilir. Bağlantı, olay işleyicilerinin .NET Framework XAML Hizmetleri özellikleri kapsamında değildir; Bu, belirli çerçeveler ve uygulamalar için bırakılır.  
   
 ### <a name="methods"></a>Yöntemler  
- Satır içi kod yöntemleri için bir varsayılan XAML özelliği değil. Çoğu durumda doğrudan yöntem üyeleri XAML başvuru değildir ve XAML yöntemleri yalnızca belirli XAML desenleri için destek sağlamak için rolüdür. [x: FactoryMethod yönergesi](x-factorymethod-directive.md) bir özel durumdur.  
+ Metotlar için satır içi kod varsayılan XAML özelliği değildir. Çoğu durumda, XAML 'den Yöntem üyelerine doğrudan başvurmayın ve XAML içindeki yöntemlerin rolü yalnızca belirli XAML desenleri için destek sağlamaktır. [X:FactoryMethod yönergesi](x-factorymethod-directive.md) özel bir durumdur.  
   
 ### <a name="fields"></a>Alanlar  
- CLR tasarım yönergeleri statik olmayan alanları önleyin. Statik alanlar için statik alan değerlerini erişebileceğiniz yalnızca aracılığıyla [x: Static işaretleme uzantısı](x-static-markup-extension.md); bu durumda, özel bir alan için kullanıma sunmak için CLR tanımındaki herhangi bir şey yapmakta olduğunuz değil [x: Static](x-static-markup-extension.md) kullanımları.  
+ CLR tasarım yönergeleri statik olmayan alanları önleyin. Statik alanlar için yalnızca [X:static biçimlendirme uzantısı](x-static-markup-extension.md)aracılığıyla statik alan değerlerine erişebilirsiniz; Bu durumda, [X:static](x-static-markup-extension.md) kullanımlar için bir alan sunmak üzere clr tanımında özel bir şey yapmamanız gerekir.  
   
-## <a name="attachable-members"></a>İliştirilebilir üyeleri  
- İliştirilebilir üyeleri için XAML, bir erişimci yöntemi deseni tanımlayan bir türe göre aracılığıyla sunulur. Tanımlama türü XAML-kullanışlı bir nesne olarak olması gerekmez. Aslında, bir hizmet sınıfı, rol bildirmek için yaygın bir düzen olduğunu iliştirilebilir üye kendi ve ilgili davranışları uygulayın, ancak kullanıcı Arabirimi gösterimi gibi diğer bir işlev hizmet. Aşağıdaki bölümler, yer tutucu *PropertyName* iliştirilebilir, üyenin adını temsil eder. Bu ad geçerli [XamlName Dilbilgisi](xamlname-grammar.md).  
+## <a name="attachable-members"></a>Eklenebilir Üyeler  
+ Eklenebilir Üyeler, tanımlama türündeki bir erişimci yöntemi düzeniyle XAML 'ye sunulur. Tanımlama türünün kendisi bir nesne olarak kullanılabilir olması gerekmez. Aslında ortak bir model, rolü eklenebilir üyeye sahip olan bir hizmet sınıfı bildirmek ve ilgili davranışları uygulamaktır, ancak kullanıcı arabirimi gösterimi gibi başka bir işlev sunmaz. Aşağıdaki bölümlerde yer tutucu *PropertyName* , eklenebilir üyenin adını temsil eder. Bu ad, [XamlName dilbilgisinde](xamlname-grammar.md)geçerli olmalıdır.  
   
- Bu desenleri ve bir türün diğer yöntemleri arasındaki ad çakışmalarının dikkatli olun. Desenlerden biriyle eşleşen bir üye zaten varsa, amacınız değildi olsa bile, bir iliştirilebilir üye kullanım yol XAML işlemcisi tarafından yorumlanabilir.  
+ Bu desenler ve bir türün diğer yöntemleri arasındaki ad çarpışmalarının dikkatli olun. Desenlerden biriyle eşleşen bir üye varsa, sizin amacınız olmasa bile bir XAML işlemcisi tarafından eklenebilir üye kullanım patika olarak yorumlanamaz.  
   
 #### <a name="the-getpropertyname-accessor"></a>GetPropertyName erişimcisi  
- İmzası `Get` *PropertyName* erişimcisi olmalıdır:  
+ `Get` *PropertyName* erişimcisi için imza şu olmalıdır:  
   
- `public static object Get` *PropertyName* `(object`  `target` `)`  
+ `public static object Get`*PropertyName* `(object``target`  `)`  
   
-- `target` Nesnesi, uygulamanızdaki daha belirli bir tür olarak belirtilebilir. İliştirilebilir üyelik kullanımını kapsamını belirlemek için kullanabilirsiniz; hedeflenen Kapsamınız dışında kullanımları, ardından bir XAML ayrıştırma hatası ortaya çıkmış geçersiz dönüştürme özel durumlar. Parametre adı `target` bir gereksinim değildir, ancak adlı `target` çoğu uygulamalarında kural tarafından.  
+- Nesne `target` , uygulamanızda daha belirli bir tür olarak belirtilebilir. Bunu, eklenebilir üyenin kullanımını kapsam için kullanabilirsiniz; hedeflenen kapsamınız dışında kullanımlar, daha sonra bir XAML ayrıştırma hatası ile ortaya çıkacak geçersiz atama özel durumları oluşturur. Parametre adı `target` bir gereksinim değildir, ancak çoğu uygulamada kuralına göre `target` adlandırılır.  
   
 - Dönüş değeri, uygulamanızda daha belirli bir tür olarak belirtilebilir.  
   
- Desteklemek için bir <xref:System.ComponentModel.TypeConverter> öznitelik kullanımı iliştirilebilir üyesi için etkin metin sözdizimi geçerli <xref:System.ComponentModel.TypeConverterAttribute> için `Get` *PropertyName* erişimcisi. Uygulama `get` yerine `set` nonintuitive; görünebilir ancak bu kavramı destekler, seri hale getirilebilir salt okunur iliştirilebilir üyesi, olan Tasarımcı senaryolarda yararlıdır.  
+ Eklenebilir üyenin öznitelik <xref:System.ComponentModel.TypeConverter> kullanımı için etkin bir metin sözdizimini desteklemek için *PropertyName* erişimcisine uygulayın <xref:System.ComponentModel.TypeConverterAttribute>. `Get` `get` Yerine`set` öğesine uygulamak, sezgisel olmayan görünebilir; ancak, bu kural, tasarımcı senaryolarında yararlı olan, seri hale getirilebilir olan salt okunurdur eklenebilir Üyeler kavramını destekleyebilir.  
   
 #### <a name="the-setpropertyname-accessor"></a>SetPropertyName erişimcisi  
- Küme için imza*PropertyName* erişimcisi olmalıdır:  
+ Set*PropertyName* erişimcisinin imzası şu olmalıdır:  
   
- `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
+ `public static void Set`*PropertyName* `(object``target` `, object``value`    `)`  
   
-- `target` Nesne belirtilebilir, uygulamanızda aynı mantığı ve sonuçları daha belirli bir tür olarak önceki bölümde açıklandığı gibi.  
+- `target` Nesnesi, uygulamanızda, önceki bölümde açıklandığı gibi aynı mantık ve sonuçlarla daha belirli bir tür olarak belirtilebilir.  
   
-- `value` Nesnesi, uygulamanızdaki daha belirli bir tür olarak belirtilebilir.  
+- Nesne `value` , uygulamanızda daha belirli bir tür olarak belirtilebilir.  
   
- Bu yöntem değeri öznitelik formunda genellikle XAML kullanım gelen giriş olduğunu unutmayın. Öznitelik formunda olmalıdır değer dönüştürücü metin söz dizimi desteğini ve şirket özniteliğini `Get` *PropertyName* erişimcisi.  
+ Bu yöntemin değerinin, genellikle öznitelik biçiminde XAML kullanımının geldiği giriş olduğunu unutmayın. Öznitelik formunda, bir metin sözdizimi için değer Dönüştürücüsü desteği ve `Get` *PropertyName* erişimcisinde özniteliği olmalıdır.  
   
-### <a name="attachable-member-stores"></a>İliştirilebilir üye depoları  
- Erişimci metotlarını genellikle bir nesne grafiğine iliştirilebilir üye değerlerinin yerleştirileceği veya Nesne grafiğini değerleri almak ve bunları düzgün bir şekilde serileştirmek için bir yol sağlamak yeterli değildir. Bu işlevselliği sağlayacak şekilde `target` önceki erişimci imzalarında nesneleri değerleri depolayabilen özelliğine sahip olmalıdır. Depolama mekanizmasını tutarlı iliştirilebilir üye üye listesinde olduğu hedeflere iliştirilebilir bir üyesidir iliştirilebilir üye ilkesine sahip olması gerekir. .NET framework XAML hizmetlerinde iliştirilebilir üye API'ler aracılığıyla depolayan bir uygulama teknik sağlar <xref:System.Xaml.IAttachedPropertyStore> ve <xref:System.Xaml.AttachablePropertyServices>. <xref:System.Xaml.IAttachedPropertyStore> Mağaza uygulamasını bulmak için XAML yazarlar tarafından kullanılır ve olan tür uygulanması gereken `target` erişimcileri. Statik <xref:System.Xaml.AttachablePropertyServices> API'leri erişimcileri gövdesi içinde kullanılır ve iliştirilebilir üyesi tarafından bakın, <xref:System.Xaml.AttachableMemberIdentifier>.  
+### <a name="attachable-member-stores"></a>Eklenebilir üye depoları  
+ Erişimci yöntemleri genellikle, eklenebilir üye değerlerinin bir nesne grafiğine yerleştirileceği veya nesne grafiğinin dışına değer alıp bunları doğru şekilde serileştirmek için bir yol sağlamak üzere yeterli değildir. Bu işlevi sağlamak için, `target` önceki erişimci imzalarındaki nesnelerin değerleri depolaması yeterli olmalıdır. Depolama mekanizması, eklenebilir üyenin üye listesinde olmadığı yerde, üyenin iliştirilebildiği üye ilkesiyle tutarlı olması gerekir. .NET Framework xaml Hizmetleri, API 'ler <xref:System.Xaml.IAttachedPropertyStore> ve <xref:System.Xaml.AttachablePropertyServices>aracılığıyla eklenebilir üye depoları için bir uygulama tekniği sağlar. <xref:System.Xaml.IAttachedPropertyStore>, bir mağaza uygulamasını keşfetmesi için XAML yazarları tarafından kullanılır ve erişimcilerinin bir türü `target` üzerinde uygulanmalıdır. Statik <xref:System.Xaml.AttachablePropertyServices> API 'ler erişimcilerinin gövdesinde kullanılır ve eklenebilir üyeye <xref:System.Xaml.AttachableMemberIdentifier>öğesine başvurur.  
   
-## <a name="xaml-related-clr-attributes"></a>XAML ilişkili CLR öznitelikleri  
- Doğru türleri, üyeleri ve derlemeleri öznitelik atanıyor, .NET Framework XAML hizmetlerinde XAML tür sistem bilgileri rapor sırada önemlidir. Bu, türlerinizi .NET Framework XAML Hizmetleri XAML okuyucular ve yazıcılar XAML doğrudan göre XAML sistemleri ile kullanmak istiyorsanız veya tanımlayın veya bu XAML okuyucular ve yazıcılar XAML tabanlı ve XAML kullanan bir framework kullanıyorsanız geçerlidir.  
+## <a name="xaml-related-clr-attributes"></a>XAML ile Ilgili CLR öznitelikleri  
+ Türler, Üyeler ve derlemeleriniz .NET Framework XAML Hizmetleri için XAML türü sistem bilgilerini raporlamak için önemli Attributing. Bu, türlerinizi .NET Framework XAML Hizmetleri XAML okuyucuları ve XAML yazıcılarında doğrudan temel alan XAML sistemleriyle kullanım için istiyorsanız veya bu XAML okuyucuları ve XAML yazıcılarını temel alan XAML kullanan bir çerçeve tanımladıktan veya kullandıysanız geçerlidir.  
   
- XAML özel türlerinizi desteği ile ilgili her XAML ile ilgili bir öznitelik listesi için bkz. [özel türler ve Kitaplıkar için CLR öznitelikleri XAML-Related](xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
+ Özel türleriniz için XAML desteğiyle ilgili olan XAML ile ilgili her özniteliğin listelenmesi için bkz. [özel türler ve kitaplıklar Için xaml ıle ılgılı clr öznitelikleri](xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="usage"></a>Kullanım  
- Özel türleri kullanım, biçimlendirme Yazar özel türü içeren derlemeyi ve CLR ad alanı için bir önek gerekir eşlemenizi gerektirir. Bu yordam, bu konudaki belgelenmemiştir.  
+ Özel türlerin kullanımı, biçimlendirme yazarının, özel türü içeren derleme ve CLR ad alanı için bir önek eşlemesini gerektirir. Bu yordam, bu konuda açıklanmamıştır.  
   
 ## <a name="access-level"></a>Erişim düzeyi  
- XAML yükleme ve türleri oluşturmak için bir yol sağlayan bir `internal` erişim düzeyi. Bu özellik, kullanıcı kodu kendi türlerini tanımlayın ve ardından bu sınıflardan de aynı kullanıcı kod kapsamı parçası biçimlendirme örneği sağlanmıştır.  
+ XAML, `internal` erişim düzeyi olan türleri yüklemek ve örneklemek için bir yol sağlar. Bu özellik, kullanıcı kodunun kendi türlerini tanımlayabilmesi ve ardından aynı kullanıcı kodu kapsamının bir parçası olan biçimlendirmeden bu sınıfların örneklemesinin sağlanması için sağlanır.  
   
- Kullanıcı kodu tanımlar zaman wpf'den bir örnek olduğuna bir <xref:System.Windows.Controls.UserControl> bir kullanıcı Arabirimi davranışı yeniden düzenlemenin yolu, ancak değil destekleyici sınıf ile bildirerek örtük herhangi bir olası uzantı mekanizması bir parçası olarak hedeflenen `public` erişim düzeyi. Böyle bir <xref:System.Windows.Controls.UserControl> ile bildirilen `internal` erişmeye içinden, başvurulan bir XAML türü olarak aynı derlemenin yedekleme kod derlenir.  
+ WPF 'den bir örnek, Kullanıcı kodu, bir UI <xref:System.Windows.Controls.UserControl> davranışını yeniden düzenleme yöntemi olarak tasarlanan, ancak destekleme `public` sınıfı erişim düzeyiyle tanımlanarak ima edilebilir olan herhangi bir uzantı mekanizmalarının bir parçası olarak değil, her ne zaman bir örnektir. Bu tür <xref:System.Windows.Controls.UserControl> bir, yedekleme kodu `internal` bir xaml türü olarak başvurulduğu aynı derlemeye derlenirse erişim ile bildirilemez.  
   
- XAML tam güven altında yükler ve kullanan bir uygulama için <xref:System.Xaml.XamlObjectWriter>, sınıflarla yüklenirken `internal` erişim düzeyi her zaman etkindir.  
+ Tam güven ve kullanımları <xref:System.Xaml.XamlObjectWriter>altında xaml yükleyen bir uygulama için, `internal` erişim düzeyiyle sınıfları yüklemek her zaman etkindir.  
   
- Kısmi güven altında XAML yükleyen bir uygulama için erişim düzeyi özellikleri kullanarak denetleyebilirsiniz <xref:System.Xaml.Permissions.XamlAccessLevel> API. Ayrıca, (örneğin, WPF şablonu sistemi) erteleme mekanizmaları herhangi bir erişim düzeyi izinleri yayar ve bunları korumak için son çalışma zamanı değerlendirmeleri olması gerekir; Bu geçirerek dahili olarak işlenir <xref:System.Xaml.Permissions.XamlAccessLevel> bilgileri.  
+ Kısmi güven altına xaml yükleyen bir uygulama için, <xref:System.Xaml.Permissions.XamlAccessLevel> API 'yi kullanarak erişim düzeyi özelliklerini kontrol edebilirsiniz. Ayrıca, erteleme mekanizmaları (WPF şablon sistemi gibi), herhangi bir erişim düzeyi izni yayabilir ve bunları nihai çalışma süresi değerlendirmelerine karşı koruyabilmelidir; Bu, <xref:System.Xaml.Permissions.XamlAccessLevel> bilgileri geçirerek dahili olarak işlenir.  
   
-### <a name="wpf-implementation"></a>WPF uygulaması  
- WPF XAML kullanan bir kısmi güven erişim modeli kısmi güven altında BAML yüklenirse, erişimin sınırlı olduğu <xref:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessTo%2A> BAML kaynağı derleme. WPF erteleme için kullandığı <xref:System.Xaml.IXamlObjectWriterFactory.GetParentSettings%2A?displayProperty=nameWithType> erişim düzeyi bilgileri geçirmek için bir mekanizma olarak.  
+### <a name="wpf-implementation"></a>WPF uygulama  
+ WPF XAML, kısmi güven altında BAML 'nin yüklendiği durumlarda kısmi güven erişim modeli kullanır, bu da BAML kaynağı olan derleme <xref:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessTo%2A> için erişim kısıtlıdır. Deferral için WPF, erişim <xref:System.Xaml.IXamlObjectWriterFactory.GetParentSettings%2A?displayProperty=nameWithType> düzeyi bilgilerini geçirmek için bir mekanizma kullanır.  
   
- WPF XAML terminolojisinde, bir *iç tür* başvuruda bulunan bir XAML de içeren aynı derleme tarafından tanımlanan bir tür. Böyle bir türü derleme kasıtlı olarak atlar XAML ad alanı eşlenebilir bir eşleme, örneğin, bir kısmını = `xmlns:local="clr-namespace:WPFApplication1"`.  BAML iç tür başvuruyorsa ve türü olduğunu `internal` erişim düzeyi, bu işlem oluşturur. bir `GeneratedInternalTypeHelper` derleme için sınıf. Kaçınmak istiyorsanız `GeneratedInternalTypeHelper`, ya da kullanmalısınız `public` erişim düzeyi, veya ayrı bir derleme içine ilgili sınıfı faktörü ve bu derlemeye bağımlı olmanız gerekir.  
+ WPF XAML terminolojisinde, *dahili bir tür* , başvuran xaml de içeren aynı derleme tarafından tanımlanan bir türdür. Böyle bir tür, bir eşlemenin derleme = bölümünü (örneğin, `xmlns:local="clr-namespace:WPFApplication1"`) kasıtlı olarak atbir xaml ad alanı aracılığıyla eşlenebilir.  BAML bir iç türe başvuruyorsa ve bu türün `internal` erişim düzeyi varsa, bu derleme için bir `GeneratedInternalTypeHelper` sınıf oluşturur. Kaçınmak `GeneratedInternalTypeHelper`isterseniz, erişim düzeyini kullanmanız `public` ya da ilgili sınıfı ayrı bir derlemede çarpanlara katmalıdır ve bu derlemeye bağımlı hale gelmelidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

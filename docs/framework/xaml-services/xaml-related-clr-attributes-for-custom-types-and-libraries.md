@@ -4,269 +4,269 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 0984028e0a09c9939f68ae64be8c401182b57274
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2f907d097f52f13e733713d8ad68cc2390b051ed
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622907"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364233"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Özel Türler ve Kitaplıkar İçin XAML İlişkili CLR Öznitelikleri
-Bu konuda, .NET Framework XAML hizmetlerinde tarafından tanımlanan ortak dil çalışma zamanı (CLR) öznitelikleri açıklanmaktadır. Ayrıca, XAML ile ilgili bir senaryo uygulamayı derlemeler veya türler için olan .NET Framework içinde tanımlanan diğer CLR öznitelikleri açıklar. Derlemeleri, türleri veya üyeleri bu CLR öznitelikleri ile öznitelik atanıyor, türleriyle ilgili XAML türü sistem bilgileri sağlar. XAML düğümü akışı doğrudan işlemek veya ayrılmış XAML okuyucular ve yazıcılar XAML aracılığıyla .NET Framework XAML hizmetlerinde kullanan herhangi bir XAML tüketici bilgileri sağlanır.  
+Bu konuda, .NET Framework XAML Hizmetleri tarafından tanımlanan ortak dil çalışma zamanı (CLR) öznitelikleri açıklanmaktadır. Ayrıca, uygulamalar için derlemeler veya türler için XAML ile ilgili bir senaryoya sahip .NET Framework tanımlanan diğer CLR özniteliklerini açıklar. Bu CLR özniteliklerine sahip Attributing derlemeleri, türleri veya üyeleri, türleriniz ile ilgili XAML türü sistem bilgilerini sağlar. Bilgiler XAML düğümü akışını doğrudan veya adanmış XAML okuyucular ve XAML yazarları aracılığıyla işlemek için .NET Framework XAML Hizmetleri kullanan tüm XAML tüketicisine sağlanır.  
   
-## <a name="xaml-related-clr-attributes-for-custom-types-and-custom-members"></a>Özel türler ve özel üyeler için XAML ilişkili CLR öznitelikleri  
- CLR öznitelikleri kullanarak genel CLR türlerinizi tanımlamak için kullandığınız, aksi takdirde bu öznitelikler kullanılamıyor kapsar. Ardından yedekleme türü tanımlamak için CLR kullanırsanız, .NET Framework XAML Hizmetleri XAML yazarlar tarafından kullanılan varsayılan XAML şema içeriği CLR attribution üzerinden erişiyorsanız, derlemeleri yedekleme karşı okuyabilirsiniz.  
+## <a name="xaml-related-clr-attributes-for-custom-types-and-custom-members"></a>Özel türler ve özel Üyeler için XAML ile Ilgili CLR öznitelikleri  
+ CLR özniteliklerinin kullanılması, türlerinizi tanımlamak için genel CLR 'yi kullanmanızı gerektirir, aksi takdirde bu tür öznitelikler kullanılamaz. Tür yedeklemesini tanımlamak için CLR kullanırsanız, .NET Framework XAML Hizmetleri XAML yazarları tarafından kullanılan varsayılan XAML şeması bağlamı, derlemelerin yedeklenmesinden dolayı yansıma aracılığıyla CLR atışı okuyabilir.  
   
- Aşağıdaki bölümlerde, özel türler veya özel üyeler için uygulayabileceğiniz XAML ile ilgili özniteliklerini açıklar. Her bir CLR öznitelik, bir XAML tür sistemiyle ilgili bilgileri iletişim kurar. Yükleme yolu öznitelikli bilgiler, geçerli bir XAML düğüm akış form XAML okuyucu ya da yardımcı olur veya geçerli nesne grafiği oluşturmak XAML yazıcı sağlar. Kaydetme yolu, öznitelikli bilgilerin reconstitutes XAML türü sistem bilgileri; geçerli bir XAML düğüm akış form XAML okuyucu ya da yardımcı olur veya seri hale getirme ipuçları veya XAML yazıcı veya diğer XAML tüketiciler gereksinimlerini bildirir.  
+ Aşağıdaki bölümlerde, özel türlere veya özel üyelere uygulayabileceğiniz XAML ile ilgili öznitelikler açıklanır. Her CLR özniteliği bir XAML tür sistemiyle ilgili bilgileri iletişim kurar. Yükleme yolunda, öznitelikli bilgiler XAML okuyucunun geçerli bir XAML düğüm akışı biçimine yardımcı olur ya da XAML yazıcısının geçerli bir nesne grafiği üretmesine yardımcı olur. Kayıt yolunda, öznitelikli bilgiler XAML okuyucusuna reconstitutes XAML türü sistem bilgileri olan geçerli bir XAML düğüm akışı biçimine yardımcı olur. ya da XAML yazıcı veya diğer XAML tüketicileri için serileştirme ipuçları veya gereksinimler bildirir.  
   
 ### <a name="ambientattribute"></a>AmbientAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.AmbientAttribute>  
   
- **Uygulama hedefi:** Sınıfı, özelliği veya `get` iliştirilebilir özellikleri için destek erişimci üyeleri.  
+ **Uygulama hedefi:** Eklenebilir özellikleri destekleyen sınıf, `get` özellik veya erişimci üyeleri.  
   
- **Bağımsız değişkenleri:** Yok.  
+ **Değişkenlerinden** Yok.  
   
- <xref:System.Windows.Markup.AmbientAttribute> özellik veya alan öznitelikli türü tüm özellikleri XAML içinde ortam özelliği kavramı altında yorumlanması gerektiğini gösterir. XAML işlemci türü sahipleri üyelerinin nasıl belirlemek için ortam kavramı ilişkilendirir. Ortam özellikleri, burada değeri bir nesne grafiğinin oluştururken, ancak tipik türü üye araması oluşturulan hemen XAML düğüm kümesi için askıya alındı ayrıştırıcı bağlamda kullanılabilir olması beklenen bir özelliktir.  
+ <xref:System.Windows.Markup.AmbientAttribute>özelliğin veya öznitelikli türü alan tüm özelliklerin XAML 'deki çevresel Özellik kavramı altında yorumlanması gerektiğini gösterir. Çevresel kavram, XAML işlemcilerin üye tür sahiplerini nasıl belirlemeleriyle ilgilidir. Ambient özelliği, bir nesne grafiği oluştururken değerin ayrıştırıcı bağlamında kullanılabilir olması beklenen bir özelliktir, ancak normal tür-üye aramasının oluşturulan hemen XAML düğüm kümesi için askıya alındığı yer.  
   
- Ortam kavramı, CLR attribution nasıl tanımladığını açısından özellikleri olarak temsil edilmeyen iliştirilebilir üyelerine uygulanabilir <xref:System.AttributeTargets>. Yalnızca durumunda, yöntem attribution kullanım uygulanması gereken bir `get` iliştirilebilir kullanım için XAML destekleyen erişimcisi.  
+ Çevresel kavram, CLR atışının nasıl tanımladığına <xref:System.AttributeTargets>ilişkin özellikler olarak temsil edilmeyen eklenebilir üyelere uygulanabilir. Yöntem attributıon kullanımı, yalnızca XAML için eklenebilir kullanımı destekleyen bir `get` erişimci olması durumunda uygulanmalıdır.  
   
 ### <a name="constructorargumentattribute"></a>ConstructorArgumentAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.ConstructorArgumentAttribute>  
   
  **Uygulama hedefi:** örneği  
   
- **Bağımsız değişkenleri:** Tek bir oluşturucu bağımsız değişkeni eşleşen özelliğin adını belirten dize.  
+ **Değişkenlerinden** Tek bir Oluşturucu bağımsız değişkeniyle eşleşen özelliğin adını belirten bir dize.  
   
- <xref:System.Windows.Markup.ConstructorArgumentAttribute> Bir nesne bir varsayılan olmayan bir oluşturucu sözdizimi kullanılarak başlatılabilir ve belirtilen adda bir özelliği yapı bilgileri sağlayan belirtir. Bu bilgiler, öncelikle XAML serileştirme için sağlar. Daha fazla bilgi için bkz. <xref:System.Windows.Markup.ConstructorArgumentAttribute>.  
+ <xref:System.Windows.Markup.ConstructorArgumentAttribute>bir nesnenin parametresiz bir Oluşturucu sözdizimi kullanılarak başlatıla, ve belirtilen adın bir özelliğinin ise oluşturma bilgilerini sağladığı belirtir. Bu bilgiler öncelikle XAML serileştirme içindir. Daha fazla bilgi için bkz. <xref:System.Windows.Markup.ConstructorArgumentAttribute>.  
   
 ### <a name="contentpropertyattribute"></a>ContentPropertyAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.ContentPropertyAttribute>  
   
  **Uygulama hedefi:** örneği  
   
- **Bağımsız değişkenleri:** Öznitelik türünün bir üyenin adını belirten dize.  
+ **Değişkenlerinden** Öznitelikli türdeki bir üyenin adını belirten bir dize.  
   
- <xref:System.Windows.Markup.ContentPropertyAttribute> adlandırılmış bağımsız değişkeni tarafından özellik türü için XAML içerik özelliği olarak kullanılmalıdır gösterir. XAML İçerik özellik tanımı tanımlama türüne atanabilir tüm türetilmiş türlere devralır. Uygulama tarafından belirli bir türetilmiş tür tanımında geçersiz kılabilirsiniz <xref:System.Windows.Markup.ContentPropertyAttribute> belirli türetilmiş tür.  
+ <xref:System.Windows.Markup.ContentPropertyAttribute>bağımsız değişken tarafından adlandırılan özelliğin, bu tür için XAML içerik özelliği olarak işlev görmesi gerektiğini gösterir. XAML içerik özelliği tanımı, tanımlama türüne atanabilen tüm türetilmiş türlere devralınır. Belirli türetilmiş tür üzerine uygulayarak <xref:System.Windows.Markup.ContentPropertyAttribute> , belirli bir türetilmiş tür üzerinde tanımlamayı geçersiz kılabilirsiniz.  
   
- XAML içerik özelliği hizmet veren özelliği için etiketleme özelliği için özellik öğesi XAML kullanımı atlanabilir. Genellikle, içerik ve kapsama Modellerinizi için kolaylaştırılmış bir XAML biçimlendirmesi Yükselt XAML İçerik özellikleri belirleyin. Tek bir üye XAML içerik özelliği belirtilmiş olduğundan, bazen tasarımı seçimleri yapmak için birden fazla kapsayıcı ile ilgili türün özelliklerini XAML içerik özelliği belirlenmiş da sahip olursunuz. Kapsayıcı özellikleri açık özellik öğelerle kullanılması gerekir.  
+ XAML içerik özelliği olarak hizmet veren özelliği için, özelliği için özellik öğesi etiketleme XAML kullanımında atlanabilir. Genellikle, içerik ve kapsama modelleriniz için kolaylaştırılmış XAML işaretlemesini yükselterek XAML içerik özelliklerini belirlersiniz. Yalnızca bir üye XAML içerik özelliği olarak atanabileceğinden, bazen bir türün çeşitli kapsayıcı özelliklerinden hangisinin XAML içerik özelliği olarak belirlenmesi gerektiğine ilişkin tasarım seçimlerine sahip olursunuz. Diğer kapsayıcı özelliklerinin açık özellik öğeleriyle kullanılması gerekir.  
   
- XAML düğümü akışı XAML İçerik özellikleri hala üretmek `StartMember` ve `EndMember` için özellik adını kullanarak düğümleri <xref:System.Xaml.XamlMember>. XAML içerik özelliği bir üyesi olup olmadığını belirlemek için inceleyin <xref:System.Xaml.XamlType> değerini `StartObject` getirin ve değeri elde etmek <xref:System.Xaml.XamlType.ContentProperty%2A>.  
+ Xaml düğüm akışında xaml içerik özellikleri, için `StartMember` <xref:System.Xaml.XamlMember>özelliğinin adını kullanarak hala `EndMember` ve düğümleri üretir. Bir üyenin xaml içerik özelliği olup olmadığını anlamak için, <xref:System.Xaml.XamlType> `StartObject` konumundan değeri inceleyin <xref:System.Xaml.XamlType.ContentProperty%2A>ve değerini alın.  
   
 ### <a name="contentwrapperattribute"></a>ContentWrapperAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.ContentWrapperAttribute>  
   
- **Uygulama hedefi:** Sınıfı, özellikle koleksiyon türleri.  
+ **Uygulama hedefi:** Sınıf, özellikle koleksiyon türleri.  
   
- **Bağımsız değişkenleri:** A <xref:System.Type> türü için yabancı içeriği içerik sarmalayıcı türü olarak kullanmak için belirtir.  
+ **Değişkenlerinden** Yabancı <xref:System.Type> içerik için içerik sarmalayıcı türü olarak kullanılacak türü belirten bir.  
   
- <xref:System.Windows.Markup.ContentWrapperAttribute> Bir veya daha fazla türlerini yabancı içeriğini kaydırmak için kullanılacak olan ilişkili koleksiyon türü belirtir. Yabancı içeriği burada tür sistem kısıtlamalarını içerik özelliği türüne sahip olan türü için XAML kullanım destekleyecektir olası içerik durumların tümünde yakalamayın çalışmalarına ifade eder. Örneğin, XAML desteklemek için belirli bir türün içerik türü kesin belirlenmiş bir genel dizeleri destekleyebilir <xref:System.Collections.ObjectModel.Collection%601>. İçerik sarmalayıcıları geçişini önceden var olan biçimlendirme kuralları için XAML'ın conception koleksiyonları, metin ilgili geçirme içerik modelleri gibi atanabilir değer olarak yararlıdır.  
+ <xref:System.Windows.Markup.ContentWrapperAttribute>yabancı içeriği kaydırmak için kullanılacak, ilişkili koleksiyon türünde bir veya daha fazla türü belirtir. Yabancı içerik özelliği, içerik özelliğinin türü sistem kısıtlamalarının, sahip olan türdeki XAML kullanımının desteklediği tüm olası içerik durumlarını yakalamamasıdır. Örneğin, belirli bir türün içeriği için XAML desteği, kesin tür belirtilmiş bir genel <xref:System.Collections.ObjectModel.Collection%601>içindeki dizeleri destekleyebilir. İçerik sarmalayıcıları, daha önceden eklenen biçimlendirme kurallarını XAML için, metin ile ilgili içerik modellerini geçirme gibi, koleksiyonlara yönelik atanabilir değerlerin daha da geçirilmesi için yararlıdır.  
   
- Birden fazla içerik sarmalayıcı türü belirtmek için birden çok kez özniteliğini uygulayın.  
+ Birden fazla içerik sarmalayıcı türü belirtmek için, özniteliği birden çok kez uygulayın.  
   
-### <a name="dependsonattribute"></a>DependsOnAttribute  
+### <a name="dependsonattribute"></a>Bağımlıdsonattribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.DependsOnAttribute>  
   
  **Uygulama hedefi:** Özellik  
   
- **Bağımsız değişkenleri:** Öznitelikli türünün başka bir üyenin adını belirten dize.  
+ **Değişkenlerinden** Öznitelikli türdeki başka bir üyenin adını belirten bir dize.  
   
- <xref:System.Windows.Markup.DependsOnAttribute> Öznitelikli özelliği başka bir özelliğin değerine bağlı olduğunu gösterir. Bu özniteliği için bir özellik tanımı uygulama bağımlı özellikler önce XAML nesne yazılı olarak işlenmesini sağlar. Açık olan <xref:System.Windows.Markup.DependsOnAttribute> burada ayrıştırma belirli bir sırada gelmelidir için geçerli bir nesne oluşturma türlerinde olağanüstü durumlar özellikleri belirtin.  
+ <xref:System.Windows.Markup.DependsOnAttribute>Öznitelikli özelliğin başka bir özelliğin değerine bağlı olduğunu gösterir. Bu özniteliği bir özellik tanımına uygulamak, bağımlı özelliklerin öncelikle XAML nesne yazma içinde işlenmesini sağlar. Belirli bir ayrıştırma sırasının geçerli nesne oluşturmak için izlenmesi gereken türlerin özelliklerinin olağanüstü durumlarını belirtmekullanımları.<xref:System.Windows.Markup.DependsOnAttribute>  
   
- Birden çok uygulayabilirsiniz <xref:System.Windows.Markup.DependsOnAttribute> çalışmalarına bir özellik tanımı.  
+ Bir özellik tanımına birden <xref:System.Windows.Markup.DependsOnAttribute> çok durum uygulayabilirsiniz.  
   
 ### <a name="markupextensionreturntypeattribute"></a>MarkupExtensionReturnTypeAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute>  
   
- **Uygulama hedefi:** Olması beklenir sınıfı bir <xref:System.Windows.Markup.MarkupExtension> türetilmiş tür.  
+ **Uygulama hedefi:** Türetilmiş bir <xref:System.Windows.Markup.MarkupExtension> tür olması beklenen sınıf.  
   
- **Bağımsız değişkenleri:** A <xref:System.Type> olarak beklediğiniz en hassas türünü belirten `ProvideValue` öznitelikli sonucunu <xref:System.Windows.Markup.MarkupExtension>.  
+ **Değişkenlerinden** Bu <xref:System.Type> , öznitelik `ProvideValue` sonucuolarakbeklenenkesin<xref:System.Windows.Markup.MarkupExtension>türü belirten bir.  
   
- Daha fazla bilgi için [genel XAML işaretleme uzantılarına](markup-extensions-for-xaml-overview.md).  
+ Daha fazla bilgi için bkz. [xaml Için biçimlendirme uzantıları genel bakış](markup-extensions-for-xaml-overview.md).  
   
 ### <a name="namescopepropertyattribute"></a>NameScopePropertyAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.NameScopePropertyAttribute>  
   
  **Uygulama hedefi:** örneği  
   
- **Bağımsız değişkenleri:** Attribution iki biçimini destekler:  
+ **Değişkenlerinden** İki tür atısyonu destekler:  
   
-- Öznitelikli türüne bir özelliğin adını belirten dize.  
+- Öznitelikli türdeki bir özelliğin adını belirten bir dize.  
   
-- Bir özelliğin adını belirten dize ve bir <xref:System.Type> türünün adlı özelliği tanımlar. Bu form XAML namescope özelliği iliştirilebilir bir üye belirtmek için geçerlidir.  
+- Bir özelliğin adını belirten bir dize ve <xref:System.Type> adlandırılmış özelliği tanımlayan tür için. Bu form, XAML namescope özelliği olarak eklenebilir bir üye belirtmek içindir.  
   
- <xref:System.Windows.Markup.NameScopePropertyAttribute> Öznitelikli sınıf için XAML namescope değer sağlayan bir alan özelliği belirtir. XAML namescope özelliği uygulayan bir nesne başvurusu beklenir <xref:System.Windows.Markup.INameScope> ve gerçek XAML namescope, depolama ve davranışını içerir.  
+ <xref:System.Windows.Markup.NameScopePropertyAttribute>Öznitelikli sınıf için XAML namescope değerini sağlayan bir özelliği belirtir. Xaml namescope özelliğinin, gerçek xaml namescope, mağazasının ve <xref:System.Windows.Markup.INameScope> davranışını uygulayan ve tutan bir nesneye başvurması beklenir.  
   
 ### <a name="runtimenamepropertyattribute"></a>RuntimeNamePropertyAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>  
   
  **Uygulama hedefi:** örneği  
   
- **Bağımsız değişkenleri:** Öznitelikli türüne göre çalışma zamanı adı özelliğin adını belirten dize.  
+ **Değişkenlerinden** Öznitelikli türdeki çalışma zamanı adı özelliğinin adını belirten bir dize.  
   
- <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> XAML için eşlenen öznitelikli türünün bir özelliği bildirir [x: Name yönergesi](x-name-directive.md). Özellik türü olmalıdır <xref:System.String> ve okuma/yazma olmalıdır.  
+ <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>XAML [X:Name yönergesiyle](x-name-directive.md)eşleşen öznitelikli türün bir özelliğini raporlar. Özellik türünde <xref:System.String> olmalı ve okuma/yazma olmalıdır.  
   
- Tanımlama türüne atanabilir tüm türetilmiş türlere tanımı devralır. Uygulama tarafından belirli bir türetilmiş tür tanımında geçersiz kılabilirsiniz <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> belirli türetilmiş tür.  
+ Tanım, tanımlama türüne atanabilen tüm türetilmiş türlere devralınır. Belirli türetilmiş tür üzerine uygulayarak <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> , belirli bir türetilmiş tür üzerinde tanımlamayı geçersiz kılabilirsiniz.  
   
 ### <a name="trimsurroundingwhitespaceattribute"></a>TrimSurroundingWhitespaceAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>  
   
  **Uygulama hedefi:** Türler  
   
- **Bağımsız değişkenleri:** Yok.  
+ **Değişkenlerinden** Yok.  
   
- <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> içindeki boşluk önemli içeriği alt öğe olarak görünebilir belirli türlere uygulanır (içeriği içeren bir koleksiyon tarafından tutulan <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>). <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> esas olarak Kaydet geçerlidir, ancak yoludur yükleme yolu XAML türü sistemde bulunan inceleyerek <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>. Daha fazla bilgi için [boşluk XAML içinde işleme](whitespace-processing-in-xaml.md).  
+ <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, boşluk açısından önemli içerik (sahip <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>olan bir koleksiyon tarafından tutulan içerik) içinde alt öğe olarak görünebilen belirli türlere uygulanır. <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>genellikle kaydetme yoluyla ilgilidir, ancak inceleyerek <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>yükleme yolundaki xaml tür sisteminde kullanılabilir. Daha fazla bilgi için bkz. [xaml 'de beyaz boşluk işleme](whitespace-processing-in-xaml.md).  
   
 ### <a name="typeconverterattribute"></a>TypeConverterAttribute  
  **Başvuru belgeleri:**  <xref:System.ComponentModel.TypeConverterAttribute>  
   
- **Uygulama hedefi:** Sınıf, özellik, yöntemi (yalnızca XAML geçerli yöntemi durumda bir `get` iliştirilebilir bir üye destekleyen erişimci).  
+ **Uygulama hedefi:** Class, Property, Method (tek xaml-geçerli yöntem durumu eklenebilir bir üyeyi `get` destekleyen bir erişimdir).  
   
- **Bağımsız değişkenleri:** <xref:System.Type> , <xref:System.ComponentModel.TypeConverter>.  
+ **Değişkenlerinden** <xref:System.Type> , <xref:System.ComponentModel.TypeConverter>.  
   
- <xref:System.ComponentModel.TypeConverterAttribute> bir XAML içinde özel bağlam başvuran <xref:System.ComponentModel.TypeConverter>. Bu <xref:System.ComponentModel.TypeConverter> özel türleri veya üyeleri bu tür için tür dönüştürme davranış sağlar.  
+ <xref:System.ComponentModel.TypeConverterAttribute>XAML bağlamında özel <xref:System.ComponentModel.TypeConverter>bir başvurusu vardır. Bu <xref:System.ComponentModel.TypeConverter> , özel türler veya bu türdeki Üyeler için tür dönüştürme davranışı sağlar.  
   
- Uyguladığınız <xref:System.ComponentModel.TypeConverterAttribute> öznitelik, bir tür dönüştürücüsü gerçeklemesi başvuran türünüz için. Sınıflar, yapılar veya arabirimlerini XAML için tür dönüştürücüleri tanımlayabilirsiniz. Numaralandırmalar için tür dönüştürme dönüştürme yerel olarak etkin olduğunu sağlamak gerekmez.  
+ Türüne <xref:System.ComponentModel.TypeConverterAttribute> özniteliği, tür dönüştürücü uygulamanıza başvurarak türüne uygularsınız. Sınıflarda, yapılarda veya arabirimlerde XAML için tür dönüştürücüleri tanımlayabilirsiniz. Numaralandırmalar için tür dönüştürmesi sağlamanız gerekmez, bu dönüştürme yerel olarak etkinleştirilir.  
   
- Bir tür dönüştürücüsü hedeflenen hedef türünüz öznitelikleri ya da başlatma metin biçimlendirme için kullanılan bir dize dönüştürmek başlatabilmeniz gerekir. Daha fazla bilgi için [TypeConverters ve XAML](../wpf/advanced/typeconverters-and-xaml.md).  
+ Tür dönüştürüceniz, biçimlendirme içindeki öznitelikler veya başlatma metni için kullanılan bir dizeden amaçlanan hedef türüne dönüştürebilmelidir. Daha fazla bilgi için bkz. [TypeConverters ve xaml](../wpf/advanced/typeconverters-and-xaml.md).  
   
- Bir türdeki tüm değerlere uygulamak yerine, XAML için tür dönüştürücüsü davranış da belirli bir özellik üzerinde kurulabilir. Bu durumda, uyguladığınız <xref:System.ComponentModel.TypeConverterAttribute> özellik tanımı için (Dış tanımı, söz konusu `get` ve `set` tanımları).  
+ Bir türün tüm değerlerine uygulamak yerine, XAML için bir tür dönüştürücü davranışı belirli bir özellik üzerinde de oluşturulabilir. Bu durumda, özellik tanımına ( <xref:System.ComponentModel.TypeConverterAttribute> özel `get` ve `set` tanımları değil, dış tanım) uygularsınız.  
   
- XAML kullanım özel iliştirilebilir üyesi için türü dönüştürücü davranış uygulayarak atanabilir <xref:System.ComponentModel.TypeConverterAttribute> için `get` yöntemi erişimci, XAML kullanımını destekler.  
+ Özel eklenebilir bir üyenin xaml kullanımına yönelik bir tür dönüştürücü davranışı, XAML kullanımını destekleyen <xref:System.ComponentModel.TypeConverterAttribute> `get` Yöntem erişimcisine uygulanarak atanabilir.  
   
- Benzer şekilde <xref:System.ComponentModel.TypeConverter>, <xref:System.ComponentModel.TypeConverterAttribute> XAML varlığını önce .NET Framework içinde var ve tür dönüştürücüsünü modeli başka amaçlarla hizmet. Başvuru ve kullanmak için <xref:System.ComponentModel.TypeConverterAttribute>, tam olarak bunu uygun veya sağlayan bir `using` bildirimi <xref:System.ComponentModel>. Bu gibi durumlarda, sistem derlemesi ayrıca projenize eklemelisiniz.  
+ Benzer şekilde <xref:System.ComponentModel.TypeConverter>, <xref:System.ComponentModel.TypeConverterAttribute> xaml 'nin varlığı öncesinde .NET Framework vardı ve tür dönüştürücü modeli başka amaçlar halinde sunulur. Başvurmak ve kullanmak <xref:System.ComponentModel.TypeConverterAttribute>için, tam olarak nitelemeniz veya için <xref:System.ComponentModel>bir `using` ifade sağlamanız gerekir. Ayrıca, projenize sistem derlemesini dahil etmeniz gerekir.  
   
-### <a name="uidpropertyattribute"></a>UidPropertyAttribute  
+### <a name="uidpropertyattribute"></a>Uıdpropertyattribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.UidPropertyAttribute>  
   
  **Uygulama hedefi:** örneği  
   
- **Bağımsız değişkenleri:** İlgili özellik adıyla başvuran bir dize.  
+ **Değişkenlerinden** Ada göre ilgili özelliğe başvuran bir dize.  
   
- Bir sınıfın CLR özelliği bu diğer adları gösterir [x: Uid yönergesi](x-uid-directive.md).  
+ [X:Uid yönergesine](x-uid-directive.md)diğer adı olan BIR sınıfın clr özelliğini gösterir.  
   
 ### <a name="usableduringinitializationattribute"></a>UsableDuringInitializationAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.UsableDuringInitializationAttribute>  
   
  **Uygulama hedefi:** örneği  
   
- **Bağımsız değişkenleri:** Bir Boole değeri. Özniteliğin hedeflenen amaç için kullanıyorsanız, bu her zaman olarak belirtilmelidir `true`.  
+ **Değişkenlerinden** Boole değeri. Özniteliğin hedeflenen amacı için kullanılırsa, bu her zaman olarak `true`belirtilmelidir.  
   
- Bu tür yukarıdan aşağıya XAML Nesne grafiği oluşturma sırasında kurulmuştur olup olmadığını gösterir. Programlama modelinizin tanımına büyük olasılıkla çok yakından ilgili gelişmiş bir kavram olmasıdır. Daha fazla bilgi için bkz. <xref:System.Windows.Markup.UsableDuringInitializationAttribute>.  
+ Bu türün XAML nesne grafiğinin oluşturulması sırasında yukarıdan aşağı doğru oluşturulup oluşturulmayacağını gösterir. Bu, büyük olasılıkla programlama modelinizin tanımıyla yakından ilgili olan gelişmiş bir kavramdır. Daha fazla bilgi için bkz. <xref:System.Windows.Markup.UsableDuringInitializationAttribute>.  
   
 ### <a name="valueserializerattribute"></a>ValueSerializerAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.ValueSerializerAttribute>  
   
- **Uygulama hedefi:** Sınıf, özellik, yöntemi (yalnızca XAML geçerli yöntemi durumda bir `get` iliştirilebilir bir üye destekleyen erişimci).  
+ **Uygulama hedefi:** Class, Property, Method (tek xaml-geçerli yöntem durumu eklenebilir bir üyeyi `get` destekleyen bir erişimdir).  
   
- **Bağımsız değişkenleri:** A <xref:System.Type> öznitelikli türü tüm özelliklerde serileştirilirken kullanılacak değeri seri hale getirici destek sınıfı belirtir ya da belirli öznitelikli özelliği.  
+ **Değişkenlerinden** <xref:System.Type> Öznitelik atanmış türün tüm özellikleri serileştirilirken kullanılacak değer seri hale getirici desteği sınıfını ya da öznitelikli özelliği belirtir.  
   
- <xref:System.Windows.Markup.ValueSerializer> Daha fazla durum ve bağlamını anlamaktan gerektiren bir değer serileştirme sınıfı belirtir bir <xref:System.ComponentModel.TypeConverter> yapar. <xref:System.Windows.Markup.ValueSerializer> uygulayarak iliştirilebilir bir üyeyle ilişkilendirilebilir <xref:System.Windows.Markup.ValueSerializerAttribute> statik özniteliği `get` iliştirilebilir üye erişimci yöntemi. Değer serileştirme geçerli ayrıca numaralandırmalar, arabirimler ve yapıları, ancak temsilciler için değil.  
+ <xref:System.Windows.Markup.ValueSerializer>bir <xref:System.ComponentModel.TypeConverter> öğesinden daha fazla durum ve bağlam gerektiren bir değer serileştirme sınıfını belirtir. <xref:System.Windows.Markup.ValueSerializer>eklenebilir üyenin statik <xref:System.Windows.Markup.ValueSerializerAttribute> `get` erişimci metoduna özniteliği uygulanarak eklenebilir bir üyeyle ilişkilendirilebilir. Değer serileştirme Ayrıca, numaralandırmalar, arabirimler ve yapılar için de geçerlidir, ancak temsilciler için değildir.  
   
 ### <a name="whitespacesignificantcollectionattribute"></a>WhitespaceSignificantCollectionAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>  
   
- **Uygulama hedefi:** Sınıfı, özellikle nesne öğelerini karışık içerik burada beyaz boşluk barındırmak için beklenen koleksiyon türleri için kullanıcı Arabirimi gösterimi önemli olabilir.  
+ **Uygulama hedefi:** Sınıf, özellikle nesne öğelerinde beyaz boşluk Kullanıcı arabirimi gösterimi için önemli olabilecek, karışık içeriği barındırmak beklenen koleksiyon türleri.  
   
- **Bağımsız değişkenleri:** Yok.  
+ **Değişkenlerinden** Yok.  
   
- <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> bir koleksiyon türü boşluk önemli XAML düğümü akışın değeri düğümleri koleksiyonundaki oluşumu etkileyen bir XAML işlemcisi tarafından işlenmesi gerektiğini gösterir. Daha fazla bilgi için [boşluk XAML içinde işleme](whitespace-processing-in-xaml.md).  
+ <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>bir koleksiyon türünün, bir XAML işlemcisi tarafından, koleksiyonda XAML düğüm akışının değer düğümlerinin oluşturulmasını etkileyen, bir XAML işlemcisi tarafından bir boşluk olarak işlenmesi gerektiğini gösterir. Daha fazla bilgi için bkz. [xaml 'de beyaz boşluk işleme](whitespace-processing-in-xaml.md).  
   
 ### <a name="xamldeferloadattribute"></a>XamlDeferLoadAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.XamlDeferLoadAttribute>  
   
- **Uygulama hedefi:** Özellik sınıfı.  
+ **Uygulama hedefi:** Sınıf, özellik.  
   
- **Bağımsız değişkenleri:** Destekleyen iki attribution forms dizeler olarak türleri veya devre dışı olarak türleri <xref:System.Type>. Bkz. <xref:System.Windows.Markup.XamlDeferLoadAttribute>.  
+ **Değişkenlerinden** , Dize veya tür <xref:System.Type>olarak iki atfı form türünü destekler. Bkz. <xref:System.Windows.Markup.XamlDeferLoadAttribute>.  
   
- Bir sınıf ya da özellik ertelenmiş yük kullanım için XAML (şablon davranış gibi) sahip ve raporları erteleniyor davranışı ve hedef/içerik türünü sağlar sınıfını gösterir.  
+ Bir sınıf veya özelliğin XAML için ertelenmiş yük kullanımına sahip olduğunu belirtir (örneğin, bir şablon davranışı) ve erteleme davranışını ve hedef/içerik türünü sağlayan sınıfı raporlar.  
   
 ### <a name="xamlsetmarkupextensionattribute"></a>XamlSetMarkupExtensionAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute>  
   
  **Uygulama hedefi:** örneği  
   
- **Bağımsız değişkenleri:** Geri çağırma adları.  
+ **Değişkenlerinden** Geri aramayı adlandırır.  
   
- Bir sınıf bir işaretleme uzantısı, bir veya daha fazla özelliği için bir değer sağlamak için kullanabilirsiniz ve XAML yazan bir sınıfın herhangi bir özellikte işaretleme uzantısı ayarlama işlemi gerçekleştirmeden önce çağırmalıdır bir işleyici başvuruları gösterir.  
+ Bir sınıfın bir veya daha fazla özelliği için bir değer sağlamak üzere bir biçimlendirme uzantısı kullanabilir ve sınıfın herhangi bir özelliğinde bir biçimlendirme uzantısı kümesi işlemi gerçekleştirmeden önce bir XAML yazıcısının çağrı gerçekleştirmesi gereken bir işleyiciye başvuruda bulunduğunu gösterir.  
   
 ### <a name="xamlsettypeconverterattribute"></a>XamlSetTypeConverterAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.XamlSetTypeConverterAttribute>  
   
  **Uygulama hedefi:** örneği  
   
- **Bağımsız değişkenleri:** Geri çağırma adları.  
+ **Değişkenlerinden** Geri aramayı adlandırır.  
   
- Bir sınıf bir veya daha fazla özelliği için bir değer sağlamak için bir tür dönüştürücüsü kullanabilirsiniz ve XAML yazan bir sınıfın herhangi bir özellikte türü dönüştürücü ayarlama işlemi gerçekleştirmeden önce çağırmalıdır bir işleyici başvuran gösterir.  
+ Bir sınıfın bir veya daha fazla özelliği için bir değer sağlamak üzere tür dönüştürücüsü kullanabilir ve sınıfın herhangi bir özelliğinde bir tür dönüştürücü ayarlama işlemi gerçekleştirmeden önce bir XAML yazıcısının çağrı gerçekleştirmesi gereken bir işleyiciye başvuruda bulunabilir.  
   
 ### <a name="xmllangpropertyattribute"></a>XmlLangPropertyAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.XmlLangPropertyAttribute>  
   
  **Uygulama hedefi:** örneği  
   
- **Bağımsız değişkenleri:** Diğer özellik adını belirten bir dize `xml:lang` öznitelikli türü.  
+ **Değişkenlerinden** Öznitelikli tür `xml:lang` üzerinde diğer ad olarak kullanılacak özelliğin adını belirten bir dize.  
   
- <xref:System.Windows.Markup.XmlLangPropertyAttribute> bir özelliği eşleyen XML öznitelik türü bildirir `lang` yönergesi. Özelliği değil gerekmeyen türünde <xref:System.String>, ancak bir dizeden (Bu elde edilebilir bir tür dönüştürücüsü özelliğin türü veya belirli bir özellik ile ilişkilendirilmesi yoluyla) atanabilir olmalıdır. Okuma/yazma özelliği olmalıdır.  
+ <xref:System.Windows.Markup.XmlLangPropertyAttribute>XML `lang` yönergesiyle eşleşen öznitelikli türün bir özelliğini raporlar. Özelliğin türü <xref:System.String>olması gerekmez, ancak bir dizeden atanabilir olması gerekir (Bu, bir tür dönüştürücüsünün özelliğin türüyle veya belirli bir özelliği ile ilişkilendirilmesi yoluyla gerçekleştirilebilir). Özelliğin okuma/yazma olması gerekir.  
   
- Eşleme senaryosu `xml:lang` , böylelikle bir çalışma zamanı nesne modelini XML belirtilen dil bilgileri ile bir XMLDOM özellikle işlemeden erişebilir.  
+ Eşleme `xml:lang` senaryosu, bir çalışma zamanı nesne modelinin xml tarafından belirtilen dil bilgilerine bir XMLDOM ile özellikle işlenmeksizin erişmesini sağlar.  
   
- Tanımlama türüne atanabilir tüm türetilmiş türlere tanımı devralır. Uygulama tarafından belirli bir türetilmiş tür tanımında geçersiz kılabilirsiniz <xref:System.Windows.Markup.XmlLangPropertyAttribute> , seyrek bir senaryo olsa da, belirli türü, türetilmiş.  
+ Tanım, tanımlama türüne atanabilen tüm türetilmiş türlere devralınır. Belirli türetilmiş tür üzerinde uygulayarak <xref:System.Windows.Markup.XmlLangPropertyAttribute> , belirli bir türetilmiş tür için tanımı geçersiz kılabilirsiniz, ancak bu durum yaygın olmayan bir senaryodur.  
   
-## <a name="xaml-related-clr-attributes-at-the-assembly-level"></a>XAML ilişkili CLR öznitelikleri derleme düzeyinde  
- Aşağıdaki bölümlerde, tür veya üye tanımları uygulanmaz, ancak bunun yerine derlemeler için uygulanan XAML ile ilgili özniteliklerini açıklar. Bu öznitelikler, ilgili XAML içinde kullanılacak özel türleri içeren bir kitaplık tanımlama, genel amaç için. Bazı öznitelikleri mutlaka etkisi XAML düğümü akışı doğrudan değildir, ancak diğer tüketiciler kullanmak düğüm akışına geçirilir. Tasarım ortamları veya XAML ad alanı bilgisi gerekiyor ve ön ek bilgi ilişkili seri hale getirme işlemleri Tüketiciler için bilgileri içerir. (.NET Framework XAML hizmetlerinde varsayılan dahil) bir XAML şema içeriği de bu bilgileri kullanır.  
+## <a name="xaml-related-clr-attributes-at-the-assembly-level"></a>Derleme düzeyinde XAML ile Ilgili CLR öznitelikleri  
+ Aşağıdaki bölümler, türlere veya üye tanımlarına uygulanmamış, ancak derlemeler için uygulanan XAML ile ilgili öznitelikleri tanımlar. Bu öznitelikler XAML 'de kullanmak için özel türler içeren bir kitaplık tanımlamanın genel hedefi ile ilgili değildir. Özniteliklerin bazıları XAML düğüm akışını doğrudan etkilemeyebilir, ancak diğer tüketicilerin kullanması için düğüm akışında geçirilir. Bilgiler için tüketiciler, XAML ad alanı bilgilerine ve ilişkili önek bilgilerine ihtiyacı olan tasarım ortamlarını veya serileştirme süreçlerini içerir. XAML şeması bağlamı (.NET Framework XAML Hizmetleri varsayılanı dahil) bu bilgileri de kullanır.  
   
 ### <a name="xmlnscompatiblewithattribute"></a>XmlnsCompatibleWithAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute>  
   
- **Bağımsız değişkenleri:**  
+ **Değişkenlerinden**  
   
-- XAML ad alanı listelense tanımlayıcısını belirten bir dize.  
+- Alt sume için XAML ad alanının tanımlayıcısını belirten bir dize.  
   
-- Önceki bağımsız XAML ad alanı listelense XAML ad alanı tanımlayıcısını belirten bir dize.  
+- Önceki bağımsız değişkenden XAML ad alanını engelleyen XAML ad alanı tanımlayıcısını belirten bir dize.  
   
- <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> XAML ad alanı tarafından başka bir XAML ad alanı birden fazla yolu eklendi olduğunu belirtir. Genellikle, subsuming XAML ad alanı belirtilirse, önceden tanımlanmış <xref:System.Windows.Markup.XmlnsDefinitionAttribute>. Bu bir teknik olabilir bir XAML sözlük bir kitaplıkta ve daha önce tutulan sözlük karşı önceden tanımlanmış biçimlendirme ile uyumlu hale getirmek için sürüm oluşturma için kullanılır.  
+ <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute>XAML ad alanının başka bir XAML ad alanı tarafından bir alt grup olarak adlandırılmış olduğunu belirtir. Genellikle, Subsuming XAML ad alanı önceden tanımlanmış <xref:System.Windows.Markup.XmlnsDefinitionAttribute>olarak belirtilir. Bu teknik, bir kitaplıkta XAML sözlüğüne sürüm oluşturmak ve önceki sürümlü sözlük için önceden tanımlanmış biçimlendirme ile uyumlu hale getirmek için kullanılabilir.  
   
 ### <a name="xmlnsdefinitionattribute"></a>XmlnsDefinitionAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.XmlnsDefinitionAttribute>  
   
- **Bağımsız değişkenleri:**  
+ **Değişkenlerinden**  
   
-- Tanımlamak için XAML ad alanı tanımlayıcısını belirten bir dize.  
+- Tanımlanacak XAML ad alanının tanımlayıcısını belirten bir dize.  
   
-- Bir CLR ad alanı adları bir dize. CLR ad uzayı genel türler, derlemede tanımlamanız gerekir ve en az bir CLR ad alanı türleri için XAML kullanım kullanılmaya.  
+- CLR ad alanı adında bir dize. CLR ad alanı, derlemenizin ortak türlerini tanımlamalıdır ve CLR ad alanı türlerinden en az birinin XAML kullanımı için tasarlanmış olması gerekir.  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute> Derleme başına temelinde XAML ad alanı için tür çözümlemesi XAML nesne yazıcısı veya XAML şema içeriği tarafından kullanılan sonra bir CLR ad alanı arasındaki eşlemeyi belirtir.  
+ <xref:System.Windows.Markup.XmlnsDefinitionAttribute>xaml ad alanı ile CLR ad alanı arasında derleme temelinde bir eşlemeyi belirtir, daha sonra bir XAML nesne yazıcısı veya XAML şeması bağlamı tarafından tür çözümlemesi için kullanılır.  
   
- Birden fazla <xref:System.Windows.Markup.XmlnsDefinitionAttribute> bir bütünleştirilmiş koda uygulanabilir. Bu, aşağıdaki nedenlerden herhangi bir birleşimini için yapılabilir:  
+ Bir derlemeye birden <xref:System.Windows.Markup.XmlnsDefinitionAttribute> fazla tane uygulanabilir. Bu işlem aşağıdaki nedenlerden herhangi bir bileşim için yapılabilir:  
   
-- Kitaplık tasarım mantıksal organizasyonu çalışma zamanı API erişimi için birden çok CLR ad alanını içerir. Ancak, bu ad alanlarında tüm türleri aynı XAML ad başvurarak XAML kullanılabilir olmasını istersiniz. Bu durumda, birkaç uygulama <xref:System.Windows.Markup.XmlnsDefinitionAttribute> aynı öznitelikleri <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> ancak farklı değer <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> değerleri. Framework veya uygulama varsayılan XAML ad alanı, ortak kullanım olabilir amaçlamaktadır XAML ad alanı eşlemeleri tanımlıyorsanız, bu özellikle yararlıdır.  
+- Kitaplık tasarımı, çalışma zamanı API 'SI erişiminin mantıksal organizasyonu için birden çok CLR ad alanı içerir; Ancak, aynı XAML ad alanına başvurarak bu ad alanındaki tüm türlerin XAML ile kullanılabilir olmasını istersiniz. Bu durumda, aynı <xref:System.Windows.Markup.XmlnsDefinitionAttribute> <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> değeri ancak farklı <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> değerleri kullanarak birkaç öznitelik uygularsınız. Bu, özellikle Framework veya uygulamanızın ortak kullanımda varsayılan XAML ad alanı olmasını amaçladığı XAML ad alanı için eşlemeler tanımlıyorsanız yararlıdır.  
   
-- Birden çok CLR ad kitaplığı tasarım içerir ve söz konusu CLR ad alanlarında türleri kullanımları arasında bilinçli bir XAML ad alanı ayrım istediğiniz.  
+- Kitaplık tasarımı birden çok CLR ad alanı içerir ve bu CLR ad alanlarında türlerin kullanımları arasında bir bilinçli XAML ad alanı ayrımı istiyorsanız.  
   
-- Birden fazla XAML ad alanı erişilebilir olmasını istediğiniz ve derlemede bir CLR ad alanı tanımlayın. Bu senaryoda, aynı kod temeli ile birden çok sözcük dağarcıklarını desteklediğiniz oluşur.  
+- Derlemede bir CLR ad alanı tanımlarsınız ve bunun birden çok XAML ad alanı üzerinden erişilebilir olmasını istersiniz. Bu senaryo, aynı kod temeli ile birden çok sözcük dağarcıklarını desteklerken oluşur.  
   
-- XAML dil desteği bir veya birden çok CLR ad alanlarında tanımlarsınız. Bu, <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> değeri `http://schemas.microsoft.com/winfx/2006/xaml`.  
+- XAML dil desteğini bir veya daha fazla CLR ad alanında tanımlarsınız. Bunlar <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> için değer olmalıdır `http://schemas.microsoft.com/winfx/2006/xaml`.  
   
 ### <a name="xmlnsprefixattribute"></a>XmlnsPrefixAttribute  
  **Başvuru belgeleri:**  <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
   
- **Bağımsız değişkenleri:**  
+ **Değişkenlerinden**  
   
-- XAML ad alanı tanımlayıcısını belirten bir dize.  
+- XAML ad alanının tanımlayıcısını belirten dize.  
   
-- Bir önerilen ön eki belirten bir dize.  
+- Önerilen öneki belirten bir dize.  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute> XAML ad alanı için kullanılacak bir önerilen ön ekini belirtir. .NET Framework XAML hizmetlerinde tarafından seri hale getirilmiş bir XAML dosyasında öğeler ve öznitelikler yazarken önek yararlıdır <xref:System.Xaml.XamlXmlWriter>, veya düzenleme özellikleri ne zaman bir XAML uygulama kitaplığı olan XAML tasarım ortamı ile etkileşim kurar.  
+ <xref:System.Windows.Markup.XmlnsDefinitionAttribute>XAML ad alanı için kullanılmak üzere önerilen bir ön ek belirtir. Ön ek, .NET Framework xaml Hizmetleri <xref:System.Xaml.XamlXmlWriter>tarafından seri hale getirilen bir xaml dosyasına öğe ve öznitelik yazarken veya xaml uygulayan bir kitaplık, XAML düzenlemesi özelliklerine sahip bir tasarım ortamıyla etkileşime geçtiğinde yararlı olur.  
   
- Birden fazla <xref:System.Windows.Markup.XmlnsPrefixAttribute> bir bütünleştirilmiş koda uygulanabilir. Bu, aşağıdaki nedenlerden herhangi bir birleşimini için yapılabilir:  
+ Bir derlemeye birden <xref:System.Windows.Markup.XmlnsPrefixAttribute> fazla tane uygulanabilir. Bu işlem aşağıdaki nedenlerden herhangi bir bileşim için yapılabilir:  
   
-- Derlemenizi türleri için birden fazla XAML ad alanı tanımlar. Bu durumda her XAML ad alanı için farklı bir önek değerleri tanımlamanız gerekir.  
+- Derlemeniz birden fazla XAML ad alanı için türleri tanımlıyor. Bu durumda, her XAML ad alanı için farklı önek değerleri tanımlamanız gerekir.  
   
-- Birden çok sözcük dağarcıklarını destekleme ve her bir sözlük ve XAML ad alanı için farklı önekler kullanın.  
+- Birden çok sözcük dağarcıklarını destekliyorsanız ve her bir sözlük ve XAML ad alanı için farklı ön ekler kullanıyorsunuz.  
   
-- XAML dil desteği derlemesinde tanımlayın ve sahip bir <xref:System.Windows.Markup.XmlnsDefinitionAttribute> için `http://schemas.microsoft.com/winfx/2006/xaml`. Bu durumda, genellikle önek Yükselt `x`.  
+- Derlemede xaml dil desteği tanımlarsınız ve için <xref:System.Windows.Markup.XmlnsDefinitionAttribute> `http://schemas.microsoft.com/winfx/2006/xaml`bir öğesine sahip olursunuz. Bu durumda, genellikle öneki `x`yükseltmeniz gerekir.  
   
 > [!NOTE]
->  .NET framework XAML hizmetlerinde, ayrıca XAML ile ilgili öznitelik tanımlar <xref:System.Windows.Markup.RootNamespaceAttribute>. Bu öznitelik bir proje sistemi desteği için derleme düzeyi özniteliktir ve XAML özel türleri için uygun değil.  
+>  .NET Framework XAML Hizmetleri XAML ile ilgili özniteliği <xref:System.Windows.Markup.RootNamespaceAttribute>de tanımlar. Bu öznitelik, proje sistemi desteği için derleme düzeyi bir özniteliktir ve XAML özel türleri için uygun değildir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

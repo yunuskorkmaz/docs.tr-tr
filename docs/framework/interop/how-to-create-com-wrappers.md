@@ -7,71 +7,71 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0e34785fce3cd88bfe4fe4b075ba34b8d22bff4
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: e10b6fd7df003de739b57bbb3e17deb46215763f
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469644"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363995"
 ---
 # <a name="how-to-create-com-wrappers"></a>Nasıl yapılır: COM Sarmalayıcıları Oluşturma
 
-Bileşen Nesne Modeli (COM) sarmalayıcılar Visual Studio 2005 özellikleri veya .NET Framework Araçları, Tlbimp.exe ve RegAsm.exe'yi kullanarak oluşturabilirsiniz. Her iki yöntem de iki tür COM sarmalayıcıları oluşturma:
+Visual Studio 2005 özelliklerini veya .NET Framework araçları Tlbimp. exe ve Regasm. exe ' yi kullanarak bileşen nesne modeli (COM) sarmalayıcıları oluşturabilirsiniz. Her iki yöntem de iki tür COM sarmalayıcıları üretir:
 
-- A [çalışma zamanı çağrılabilir sarmalayıcı](../../../docs/framework/interop/runtime-callable-wrapper.md) COM nesnesinin yönetilen kodu çalıştırmak için bir tür kitaplığından.
+- Yönetilen kodda bir COM nesnesi çalıştırmak için bir tür kitaplığından bir [çalışma zamanı çağrılabilir sarmalayıcı](../../../docs/framework/interop/runtime-callable-wrapper.md) .
 
-- A [COM çağrılabilir sarmalayıcısı](../../../docs/framework/interop/com-callable-wrapper.md) ile yönetilen bir nesneye yerel bir uygulamada çalıştırmak için gerekli kayıt defteri ayarları.
+- Yerel bir uygulamada yönetilen bir nesne çalıştırmak için gerekli kayıt defteri ayarlarına sahip [com çağrılabilir sarmalayıcı](../../../docs/framework/interop/com-callable-wrapper.md) .
 
-Visual Studio 2005'te, projenize bir başvuru olarak COM sarmalayıcı ekleyebilirsiniz.
+Visual Studio 2005 ' de COM sarmalayıcısı ' ı projenize bir başvuru olarak ekleyebilirsiniz.
 
-## <a name="wrap-com-objects-in-a-managed-application"></a>Yönetilen bir uygulamada COM nesneleri Kaydır
+## <a name="wrap-com-objects-in-a-managed-application"></a>Yönetilen bir uygulamadaki COM nesnelerini sarın
 
-### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Visual Studio kullanarak bir çalışma zamanı aranabilir sarmalayıcısı oluşturmak için
+### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Visual Studio kullanarak bir çalışma zamanı çağrılabilir sarmalayıcı oluşturmak için
 
 1. Yönetilen uygulamanız için projeyi açın.
 
-2. Üzerinde **proje** menüsünü tıklatın **tüm dosyaları göster**.
+2. **Proje** menüsünde **tüm dosyaları göster**' e tıklayın.
 
-3. Üzerinde **proje** menüsünü tıklatın **Başvuru Ekle**.
+3. **Proje** menüsünde, **Başvuru Ekle**' ye tıklayın.
 
-4. Başvuru Ekle iletişim kutusuna tıklayın **COM** sekmesinde, seçmek istediğiniz tıklatın ve bileşeni **Tamam**.
+4. Başvuru Ekle iletişim kutusunda, **com** sekmesine tıklayın, kullanmak istediğiniz bileşeni seçin ve **Tamam**' a tıklayın.
 
-     İçinde **Çözüm Gezgini**, projenizi başvurular klasörüne COM bileşeninin eklendiğine dikkat edin.
+     **Çözüm Gezgini**, com bileşeninin projenizdeki başvurular klasörüne eklendiğini unutmayın.
 
-Artık, COM nesnesi erişmek için kod yazabilirsiniz. Nesne gibi ile bildirerek başlayın bir `Imports` Visual Basic için ifade veya `Using` bildirimi C#.
+Artık COM nesnesine erişmek için kod yazabilirsiniz. Nesnesini bildirerek, örneğin, Visual Basic için bir `Imports` deyimle veya bir `Using` bildirimi ile başlayabilirsiniz. C#
 
 > [!NOTE]
-> Program için Microsoft Office bileşenleri istiyorsanız, önce yükleme [Microsoft Office birincil birlikte çalışma derlemeleri](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA) gelen Microsoft Download Center. 4. adımda Nesne Kitaplığı gibi yüklemek istediğiniz Office ürün için kullanılabilen en son sürümünü seçin **Microsoft Word 11.0 Nesne Kitaplığı**.  
+> Microsoft Office bileşenleri programlamak istiyorsanız, önce Microsoft Indirme merkezi 'nden [Microsoft Office birincil birlikte çalışma derlemelerini](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA) yükleyin. 4\. adımda, **Microsoft Word 11,0 nesne kitaplığı**gibi istediğiniz Office ürünü için uygun nesne kitaplığının en son sürümünü seçin.  
   
-### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>.NET Framework Araçları'nı kullanarak bir çalışma zamanı aranabilir sarmalayıcısı oluşturmak için  
+### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>.NET Framework araçlarını kullanarak bir çalışma zamanı çağrılabilir sarmalayıcı oluşturmak için  
   
-- Çalıştırma [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) aracı.  
+- [Tlbimp. exe (tür kitaplığı Içeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) aracını çalıştırın.  
   
- Bu araç, özgün tür kitaplığında tanımlanan türler için çalışma zamanı meta verileri içeren bir derleme oluşturur.  
+ Bu araç, özgün tür kitaplığında tanımlanan türler için çalışma zamanı meta verilerini içeren bir derleme oluşturur.  
   
-## <a name="wrap-managed-objects-in-a-native-application"></a>Yerel bir uygulamada yönetilen nesneleri saran  
+## <a name="wrap-managed-objects-in-a-native-application"></a>Yönetilen nesneleri yerel bir uygulamada sarın  
   
-### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Visual Studio kullanarak COM çağrılabilir sarmalayıcısı oluşturmak için  
+### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Visual Studio kullanarak COM çağrılabilir bir sarmalayıcı oluşturmak için  
   
-1. Yerel kodda çalıştırmak istediğiniz yönetilen sınıf için bir sınıf kitaplığı projesi oluşturun. Sınıfı, bir varsayılan oluşturucuya sahip olmalıdır.  
+1. Yerel kodda çalıştırmak istediğiniz yönetilen sınıf için bir sınıf kitaplığı projesi oluşturun. Sınıf parametresiz bir oluşturucuya sahip olmalıdır.  
   
-     AssemblyInfo dosyası içinde derleme için bir tam Dört bölümlü sürüm numarasına sahip olduğunuzu doğrulayın. Bu sayı, sürüm oluşturma Windows kayıt defterinde bakımı için gereklidir. Sürüm numaraları hakkında daha fazla bilgi için bkz: [derleme sürümlendirme](../../../docs/framework/app-domains/assembly-versioning.md).  
+     AssemblyInfo dosyasında derlemelerinizin dört bölümden oluşan tam bir sürüm numarasına sahip olduğunuzu doğrulayın. Bu sayı, Windows kayıt defterinde sürüm oluşturmayı sürdürmek için gereklidir. Sürüm numaraları hakkında daha fazla bilgi için bkz. [derleme sürümü oluşturma](../../../docs/framework/app-domains/assembly-versioning.md).  
   
-2. Üzerinde **proje** menüsünü tıklatın **özellikleri**.  
+2. **Proje** menüsünde **Özellikler**' e tıklayın.  
   
-3. Tıklayın **derleme** sekmesi.  
+3. **Derle** sekmesine tıklayın.  
   
-4. Seçin **kaydetme COM birlikte çalışması için** onay kutusu.  
+4. **Com birlikte çalışması Için kaydol** onay kutusunu seçin.  
   
- Proje oluşturduğunuzda, derlemenin COM birlikte çalışması için otomatik olarak kaydedilir. Visual Studio 2005 yerel bir uygulama oluşturuyorsanız tıklayarak derleme kullanabilirsiniz **Başvuru Ekle** üzerinde **proje** menüsü.  
+ Projeyi derlediğinizde, derleme otomatik olarak COM birlikte çalışma için kaydedilir. Visual Studio 2005 ' de yerel bir uygulama oluşturuyorsanız, **Proje** menüsünde **Başvuru Ekle** ' ye tıklayarak derlemeyi kullanabilirsiniz.  
   
-### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>.NET Framework araçları kullanarak COM çağrılabilir sarmalayıcısı oluşturmak için  
+### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>.NET Framework araçlarını kullanarak COM çağrılabilir bir sarmalayıcı oluşturmak için  
   
-Çalıştırma [Regasm.exe (derleme kayıt aracı)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) aracı.  
+[Regasm. exe (derleme kayıt aracı)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) aracını çalıştırın.  
   
-Bu araç, derleme meta verileri okur ve kayıt defterine gerekli girişleri ekler. Sonuç olarak, COM istemcilerinin şeffaf bir şekilde .NET Framework sınıfları oluşturabilirsiniz. Yerel bir COM sınıfı gibi derleme kullanabilirsiniz.  
+Bu araç derleme meta verilerini okur ve gerekli girdileri kayıt defterine ekler. Sonuç olarak, COM istemcileri .NET Framework sınıfları saydam şekilde oluşturabilir. Derlemeyi yerel bir COM sınıfı gibi kullanabilirsiniz.  
   
-Herhangi bir dizinde bulunan bir derlemeyi Regasm.exe çalıştırın ve ardından çalıştırın [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) genel bütünleştirilmiş kod önbelleğine taşıyın. Derleme başka bir yerde bulunamazsa genel derleme önbelleği her zaman incelenir çünkü derleme taşıma konumu, kayıt defteri girdilerini geçersiz kılmaz.  
+Herhangi bir dizinde bulunan bir derlemede Regasm. exe ' yi çalıştırabilir ve ardından [Gacutil. exe ' yi (genel bütünleştirilmiş kod önbelleği aracı)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) çalıştırarak genel derleme önbelleğine taşıyabilirsiniz. Derlemenin taşınması konum kayıt defteri girdilerini geçersiz kılmaz, çünkü derleme başka bir yerde bulunmazsa genel derleme önbelleği her zaman incelenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

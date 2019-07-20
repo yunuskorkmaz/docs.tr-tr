@@ -11,41 +11,41 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e57ec1a70aaae384f73b1ffdbf92e93fc0a7bdd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b2e14a7508d4a5e8069a3b98dee38a0ac62750c
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648558"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363988"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Birlikte Çalışma için Niteleyici .NET Türleri
-COM uygulamaları için bir bütünleştirilmiş kodundaki türler kullanıma sunmak istiyorsanız, tasarım zamanında COM birlikte çalışabilirlik gereksinimlerini göz önünde bulundurun. Aşağıdaki yönergelere uyunuz, yönetilen türler (sınıfı, arabirim, yapı ve sabit listesi) COM türleri ile sorunsuz şekilde tümleştirin:  
+Türleri bir derlemede COM uygulamalarına sunmak istiyorsanız, tasarım zamanında COM birlikte çalışma gereksinimlerini göz önünde bulundurun. Yönetilen türler (sınıf, arabirim, yapı ve numaralandırma) aşağıdaki yönergelere uydığınızda COM türleriyle sorunsuz bir şekilde tümleşir:  
   
-- Sınıfları, arabirimleri açıkça uygulamalıdır.  
+- Sınıfların arabirimleri açıkça uygulaması gerekir.  
   
-     COM birlikte çalışma otomatik olarak bir sınıfın tüm üyeleri ve temel sınıfın üyelerini içeren bir arabirim oluşturmak için bir mekanizma sağlar, ancak açık bir arabirim sağlamak çok daha iyidir. Otomatik olarak oluşturulan arabirimi sınıf arabirimi çağrılır. Yönergeler için bkz: [sınıf arabirimine giriş](com-callable-wrapper.md#introducing-the-class-interface).  
+     COM birlikte çalışabilirliği, sınıfın tüm üyelerini ve temel sınıfının üyelerini içeren bir arabirimi otomatik olarak oluşturmak için bir mekanizma sağlar, ancak açık arabirimler sağlamak çok daha iyidir. Otomatik olarak oluşturulan arabirime sınıf arabirimi denir. Yönergeler için bkz. [sınıf arabirimine giriş](com-callable-wrapper.md#introducing-the-class-interface).  
   
-     Visual Basic kullanabileceğiniz C#ve C++ arabirim tanımlama dili (IDL) ya da eşdeğerine kullanmak zorunda olmak yerine kodunuzun içinde Arabirim tanımları birleştirmek için. Söz dizimi ayrıntılarını dil belgelerinize bakın.  
+     Visual Basic, C#ve C++ ' yi kullanarak, kodunuzda ARABIRIM tanımlarını ekleyebilirsiniz (IDL) veya eşdeğerini kullanmak yerine. Sözdizimi ayrıntıları için dil belgelerinize bakın.  
   
-- Yönetilen türler genel olmalıdır.  
+- Yönetilen türler ortak olmalıdır.  
   
-     Yalnızca genel türleri bir derlemede kayıtlı ve için tür kitaplığı dışarı. Sonuç olarak, yalnızca genel türler COM'a görünebilir  
+     Yalnızca bir derlemedeki ortak türler kaydedilir ve tür kitaplığına verilir. Sonuç olarak, yalnızca ortak türler COM tarafından görülebilir.  
   
-     Türleri sunmaya özellikleri COM'a gösterilmeyen diğer yönetilen kod için yönetilen Örneğin, parametreli Oluşturucular, statik yöntemleri ve sabit alanlarını COM istemcilerine sunulmaz. Çalışma zamanı türü veriyi sürekliliğe devreder gibi daha fazla veri dönüştürülür ve kopyalanmak.  
+     Yönetilen türler, COM 'a sunulmayan diğer yönetilen koda özellikler sunar. Örneğin, parametreli oluşturucular, statik yöntemler ve sabit alanlar COM istemcilerine gösterilmez. Diğer bir deyişle, çalışma zamanı bir tür içinde ve dışında veri sıraladığında, veriler kopyalanabilir veya dönüştürülebilirler.  
   
-- Yöntemler, özellikler, alanlar ve olaylar, ortak olmalıdır.  
+- Yöntemler, özellikler, alanlar ve olaylar ortak olmalıdır.  
   
-     Genel türlerin üyelerini de COM'a görünür olmasını olmaları durumunda ortak olmalıdır Uygulayarak bir derleme, ortak bir türü veya genel bir türün genel üyeleri görünürlüğünü kısıtlayabilirsiniz <xref:System.Runtime.InteropServices.ComVisibleAttribute>. Varsayılan olarak, tüm genel türler ve üyeler görülebilir.  
+     Ortak türlerin üyeleri COM 'a görünür olmaları durumunda da genel olmalıdır. Bir derlemenin görünürlüğünü, ortak bir türü veya genel bir türün genel üyelerini ' a uygulayarak <xref:System.Runtime.InteropServices.ComVisibleAttribute>kısıtlayabilirsiniz. Varsayılan olarak, tüm genel türler ve Üyeler görünür durumdadır.  
   
-- Türleri COM'dan etkinleştirilmesi için bir ortak varsayılan oluşturucusu olmalıdır  
+- Türler COM 'dan etkinleştirilecek Ortak parametresiz bir oluşturucuya sahip olmalıdır.  
   
-     Yönetilen, genel türler COM'a görünebilir Ancak, bir ortak varsayılan Oluşturucusu (bağımsız değişken içermeyen bir oluşturucu) tür COM istemcileri oluşturulamıyor. Başka bir yolla tarafından etkinleştirilmişse COM istemcileri türü kullanmaya devam edebilirsiniz.  
+     Yönetilen, ortak türler COM tarafından görülebilir. Ancak, Ortak parametresiz bir Oluşturucu (bağımsız değişken içermeyen bir Oluşturucu) olmadan, COM istemcileri türü oluşturamaz. COM istemcileri, başka bir yöntemle etkinleştirildiyse türü kullanmaya devam edebilir.  
   
-- Türleri Özet olamaz.  
+- Türler özet olamaz.  
   
-     Soyut türlerin COM istemcilerini ne .NET istemcileri oluşturabilirsiniz.  
+     Ne COM istemcisi ne de .NET istemcisi soyut türler oluşturabilir.  
   
- COM dışarı aktardığınızda, yönetilen bir tür devralma hiyerarşisinde düzleştirilir. Sürüm oluşturma, yönetilen ve yönetilmeyen ortamlar arasında da farklılık gösterir. Türler com'a diğer yönetilen türleri aynı sürüm özelliklere sahip değilsiniz.  
+ COM 'a aktarıldığında, yönetilen bir türün devralma hiyerarşisi düzleştirilir. Sürüm oluşturma yönetilen ve yönetilmeyen ortamlar arasında da farklılık gösterir. COM 'a sunulan türler, diğer yönetilen türlerle aynı sürüm oluşturma özelliklerine sahip değildir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

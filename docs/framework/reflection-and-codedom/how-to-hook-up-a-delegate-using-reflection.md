@@ -12,94 +12,94 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4640e776cc76ef56227858f6a4aa04e77ecbbdc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586009"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364057"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Nasıl yapılır: Yansıma Kullanarak Temsilci Bağlama
-Yansıma yüklemek ve derlemeleri çalıştırmak için kullandığınız zaman gibi dil özellikleri kullanamazsınız C# `+=` işleci veya Visual Basic [AddHandler deyimi](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) olayları yeteneklerinizi. Aşağıdaki yordamlar, gerekli tüm türlerin yansıma yoluyla alarak bir olay için varolan bir yöntem denetime nasıl gösterir ve yansıma kullanarak dinamik bir yöntem oluşturma yayma ve en fazla olay bağlama.  
+Derlemeleri yüklemek ve çalıştırmak için yansıma kullandığınızda, olayları bağlamak için C# `+=` işleç veya Visual Basic [AddHandler ifadesiyle](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) gibi dil özelliklerini kullanamazsınız. Aşağıdaki yordamlarda, tüm gerekli türleri yansıma aracılığıyla alarak bir olaya mevcut bir yöntemi nasıl yedekleyerek, yansıma yayma kullanarak dinamik bir yöntem oluşturma ve bir olaya bağlama işlemleri gösterilmektedir.  
   
 > [!NOTE]
->  Kod örneği için bir olay işleme temsilci bağlama başka bir yol için bkz <xref:System.Reflection.EventInfo.AddEventHandler%2A> yöntemi <xref:System.Reflection.EventInfo> sınıfı.  
+>  Bir olay işleme temsilcisini bağlamak için başka bir yöntem için, <xref:System.Reflection.EventInfo.AddEventHandler%2A> <xref:System.Reflection.EventInfo> sınıfının yöntemi için kod örneğine bakın.  
   
-### <a name="to-hook-up-a-delegate-using-reflection"></a>Yansıma kullanarak temsilci bağlama için  
+### <a name="to-hook-up-a-delegate-using-reflection"></a>Yansımayı kullanarak bir temsilciyi bağlama  
   
-1. Olayları oluşturan bir tür içeren bir bütünleştirilmiş kod yükleme. Derlemeler ile yüklenen genellikle <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi. Bu örneği basit tutmak için geçerli derlemedeki türetilmiş bir form kullanılır, böylece <xref:System.Reflection.Assembly.GetExecutingAssembly%2A> yöntemi geçerli derlemeyi yüklemek için kullanılır.  
+1. Olayları başlatan bir tür içeren bir derleme yükleyin. Derlemeler genellikle <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemiyle yüklenir. Bu örneği basit tutmak için geçerli derlemede bulunan türetilmiş bir form kullanılır, bu nedenle <xref:System.Reflection.Assembly.GetExecutingAssembly%2A> yöntem geçerli derlemeyi yüklemek için kullanılır.  
   
      [!code-cpp[HookUpDelegate#3](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#3)]
      [!code-csharp[HookUpDelegate#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#3)]
      [!code-vb[HookUpDelegate#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#3)]  
   
-2. Alma bir <xref:System.Type> türünü temsil eden nesne ve türün bir örneğini oluşturun. <xref:System.Activator.CreateInstance%28System.Type%29> Biçiminde varsayılan bir oluşturucuya sahip olduğundan aşağıdaki kodda yöntemi kullanılır. Birkaç diğer aşırı yüklemeleri vardır <xref:System.Activator.CreateInstance%2A> oluşturmakta olduğunuz türü varsayılan bir oluşturucuya sahip değilse, kullanabileceğiniz yöntemi. Yeni örnek türü olarak saklanır <xref:System.Object> kurgu korumak için hiçbir şeyin hakkında derleme adı verilir. (Yansıma türlerini adlarını önceden farkında olmadan bir derlemede yararlanmanıza olanak sağlar.)  
+2. Türü temsil <xref:System.Type> eden bir nesne alın ve türün bir örneğini oluşturun. Yöntemi <xref:System.Activator.CreateInstance%28System.Type%29> , parametresiz bir oluşturucuya sahip olduğu için aşağıdaki kodda kullanılır. Oluşturmakta olduğunuz türün parametresiz bir Oluşturucusu yoksa <xref:System.Activator.CreateInstance%2A> kullanabileceğiniz daha fazla başka aşırı yükleme yöntemi vardır. Yeni örnek, derleme hakkında hiçbir şeyin <xref:System.Object> bilinmediğini belirten derlemeyi sürdürmek için tür olarak depolanır. (Yansıma, adlarını önceden bilmeden bir derlemede almanızı sağlar.)  
   
      [!code-cpp[HookUpDelegate#4](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#4)]
      [!code-csharp[HookUpDelegate#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#4)]
      [!code-vb[HookUpDelegate#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#4)]  
   
-3. Alma bir <xref:System.Reflection.EventInfo> olayı temsil eden nesne ve kullanmak <xref:System.Reflection.EventInfo.EventHandlerType%2A> olayı işlemek için kullanılan temsilci türünü alınacağı özellik. Aşağıdaki kodda bir <xref:System.Reflection.EventInfo> için <xref:System.Windows.Forms.Control.Click> olay elde edilir.  
+3. Olayı temsil <xref:System.Reflection.EventInfo> eden bir nesne alın ve olayı işlemek için <xref:System.Reflection.EventInfo.EventHandlerType%2A> kullanılan temsilcinin türünü almak için özelliğini kullanın. Aşağıdaki kodda, <xref:System.Windows.Forms.Control.Click> olay için bir <xref:System.Reflection.EventInfo> elde edilir.  
   
      [!code-cpp[HookUpDelegate#5](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#5)]
      [!code-csharp[HookUpDelegate#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#5)]
      [!code-vb[HookUpDelegate#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#5)]  
   
-4. Alma bir <xref:System.Reflection.MethodInfo> olayı işleyen yöntemi temsil eden nesne. Örnek bölümünde bu konunun ilerleyen bölümlerinde tam program kodunda imzası eşleşen bir yöntem içerir <xref:System.EventHandler> temsilcisi, yürüten <xref:System.Windows.Forms.Control.Click> olay, ancak aynı zamanda oluşturabileceği dinamik yöntemler çalışma zamanında. Dinamik bir yöntem kullanarak çalışma zamanında bir olay işleyicisi oluşturmak için eşlik eden yordamı, Ayrıntılar için bkz.  
+4. Olayı işleyen <xref:System.Reflection.MethodInfo> yöntemi temsil eden bir nesne alır. Bu konunun ilerleyen kısımlarında örnek bölümünde yer alan tüm program kodu, <xref:System.EventHandler> <xref:System.Windows.Forms.Control.Click> olayı işleyen temsilcinin imzasıyla eşleşen bir yöntemi içerir, ancak çalışma zamanında dinamik yöntemler de oluşturabilirsiniz. Ayrıntılar için, dinamik bir yöntem kullanarak çalışma zamanında olay işleyicisi oluşturmak için eşlik eden yordama bakın.  
   
      [!code-cpp[HookUpDelegate#6](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#6)]
      [!code-csharp[HookUpDelegate#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#6)]
      [!code-vb[HookUpDelegate#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#6)]  
   
-5. Kullanarak temsilci örneğini oluşturmak <xref:System.Delegate.CreateDelegate%2A> yöntemi. Bu yöntem statiktir (`Shared` Visual Basic'te), temsilci türü sağlanmalı. Aşırı yüklemeleri kullanılarak <xref:System.Delegate.CreateDelegate%2A> süren bir <xref:System.Reflection.MethodInfo> önerilir.  
+5. <xref:System.Delegate.CreateDelegate%2A> Yöntemini kullanarak temsilcinin bir örneğini oluşturun. Bu Yöntem statiktir (`Shared` Visual Basic), bu nedenle temsilci türü sağlanmalıdır. ' A <xref:System.Delegate.CreateDelegate%2A> <xref:System.Reflection.MethodInfo> sahip olan aşırı yüklemelerin kullanılması önerilir.  
   
      [!code-cpp[HookUpDelegate#7](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#7)]
      [!code-csharp[HookUpDelegate#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#7)]
      [!code-vb[HookUpDelegate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#7)]  
   
-6. Alma `add` erişimci yöntemi ve bu olay yeteneklerinizi çağırın. Tüm olayları sahip bir `add` erişimci ve `remove` üst düzey dillerin sözdizimi tarafından gizlenmiş erişimcisi. Örneğin, C# kullanan `+=` olayları ve Visual Basic kullanan yeteneklerinizi işleci [AddHandler deyimi](~/docs/visual-basic/language-reference/statements/addhandler-statement.md). Aşağıdaki kod alır `add` erişimcisine <xref:System.Windows.Forms.Control.Click> olay ve çağırdığı geç temsilci örneğini geçirerek bağlama,. Bağımsız değişken bir dizi olarak geçirilmelidir.  
+6. `add` Erişimci yöntemini alın ve olayı bağlamak için çağırın. Tüm olayların, üst `add` düzey dillerin sözdizimi `remove` tarafından gizlenen bir erişimcisi ve erişimcisi vardır. Örneğin, C# olayları bağlamak için `+=` işlecini kullanır ve Visual Basic [AddHandler ifadesini](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)kullanır. Aşağıdaki kod, `add` <xref:System.Windows.Forms.Control.Click> olayın erişimcisini alır ve temsilci örneğini geçirerek geç sınırı çağırır. Bağımsız değişkenlerin bir dizi olarak geçirilmesi gerekir.  
   
      [!code-cpp[HookUpDelegate#8](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#8)]
      [!code-csharp[HookUpDelegate#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#8)]
      [!code-vb[HookUpDelegate#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#8)]  
   
-7. Olay test edin. Aşağıdaki kod, aşağıdaki kod örneğinde tanımlanan bir form gösterir. Form tıklayarak olay işleyicisini çağırır.  
+7. Olayı test edin. Aşağıdaki kod, kod örneğinde tanımlanan formu gösterir. Forma tıklanması olay işleyicisini çağırır.  
   
      [!code-cpp[HookUpDelegate#12](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#12)]
      [!code-csharp[HookUpDelegate#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#12)]
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
 <a name="procedureSection1"></a>   
-### <a name="to-generate-an-event-handler-at-run-time-by-using-a-dynamic-method"></a>Dinamik bir yöntem kullanarak çalışma zamanında bir olay işleyicisi oluşturmak için  
+### <a name="to-generate-an-event-handler-at-run-time-by-using-a-dynamic-method"></a>Çalışma zamanında dinamik bir yöntem kullanarak olay işleyicisi oluşturmak için  
   
-1. Olay işleyicisi yöntemleri basit dinamik yöntemler kullanarak çalışma zamanında oluşturulabilir ve yansıma yayma. Bir olay işleyicisi oluşturmak için dönüş türü ve parametre türleri temsilci gerekir. Bu temsilcinin inceleyerek alınabilir `Invoke` yöntemi. Aşağıdaki kod `GetDelegateReturnType` ve `GetDelegateParameterTypes` bu bilgileri almak için yöntemleri. Bu yöntemleri için kod, bu konunun ilerleyen bölümlerinde örnek bölümünde bulunabilir.  
+1. Olay işleyici yöntemleri, basit dinamik yöntemler ve yansıma yayma kullanılarak çalışma zamanında oluşturulabilir. Bir olay işleyicisi oluşturmak için temsilcinin dönüş türü ve parametre türlerine ihtiyacınız vardır. Bu, temsilcinin `Invoke` yöntemi incelenerek elde edilebilir. Aşağıdaki kod, `GetDelegateReturnType` bu bilgileri elde `GetDelegateParameterTypes` etmek için ve yöntemlerini kullanır. Bu yöntemlerin kodu, bu konunun ilerleyen kısımlarında örnek bölümünde bulunabilir.  
   
-     Ad için gerekli değil bir <xref:System.Reflection.Emit.DynamicMethod>, bu nedenle boş dize kullanılabilir. Aşağıdaki kodda, dinamik yöntem son bağımsız değişken, temsilci erişimi tüm genel ve özel üyelerine vererek geçerli türü ile ilişkilendirir. `Example` sınıfı.  
+     Bir <xref:System.Reflection.Emit.DynamicMethod>adı vermek gerekli değildir, bu nedenle boş dize kullanılabilir. Aşağıdaki kodda, son bağımsız değişken dinamik yöntemi geçerli türle ilişkilendirir ve bu temsilci, `Example` sınıfın tüm ortak ve özel üyelerine erişim sağlar.  
   
      [!code-cpp[HookUpDelegate#9](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#9)]
      [!code-csharp[HookUpDelegate#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#9)]
      [!code-vb[HookUpDelegate#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#9)]  
   
-2. Bir yöntem gövdesi oluşturur. Bu yöntem bir dize yükler, aşırı yüklemesini çağırır <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> (işleyicisi yok dönüş türüne sahip olduğundan) yönteminin bir dize alan POP yığından dönüş değeri ve döndürür. Dinamik yöntemleri yayma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Dinamik yöntemleri tanımlama ve yürütme](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md).  
+2. Bir yöntem gövdesi oluşturun. Bu yöntem bir dize yükler, bir dizeyi alan <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> metodun aşırı yüklemesini çağırır, dönüş değerini yığından kapatır (işleyicinin dönüş türü olmadığından) ve döndürür. Dinamik yöntemleri yayma hakkında daha fazla bilgi edinmek için [bkz. nasıl yapılır: Dinamik yöntemleri](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)tanımlayın ve yürütün.  
   
      [!code-cpp[HookUpDelegate#10](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#10)]
      [!code-csharp[HookUpDelegate#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#10)]
      [!code-vb[HookUpDelegate#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#10)]  
   
-3. Dinamik yöntem çağırarak tamamlamak kendi <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> yöntemi. Kullanım `add` çağırma listesi olayı için temsilci eklemek için erişimcisi.  
+3. <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> Yöntemini çağırarak dinamik metodu doldurun. Olayın çağırma listesine temsilciyi eklemek için erişimcisinikullanın.`add`  
   
      [!code-cpp[HookUpDelegate#11](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#11)]
      [!code-csharp[HookUpDelegate#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#11)]
      [!code-vb[HookUpDelegate#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#11)]  
   
-4. Olay test edin. Aşağıdaki kod, aşağıdaki kod örneğinde tanımlanan formu yükler. Form tıklayarak, önceden tanımlanmış bir olay işleyicisi hem yayılan olay işleyicisini çağırır.  
+4. Olayı test edin. Aşağıdaki kod, kod örneğinde tanımlanan formu yükler. Formu tıklatmak, hem önceden tanımlanmış olay işleyicisini hem de yayınlanan olay işleyicisini çağırır.  
   
      [!code-cpp[HookUpDelegate#12](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#12)]
      [!code-csharp[HookUpDelegate#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#12)]
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde nasıl yansıma kullanarak bir olay için varolan bir yöntem bağlama ve nasıl kullanılacağını gösterir. <xref:System.Reflection.Emit.DynamicMethod> en fazla olay bağlama ve çalışma zamanında bir yöntem yaymak için sınıf.  
+ Aşağıdaki kod örneği, var olan bir yöntemin yansıma kullanarak bir olaya nasıl bağlanacağını ve ayrıca, <xref:System.Reflection.Emit.DynamicMethod> çalışma zamanında bir yöntemi göstermek ve bir olaya bağlamak için sınıfını nasıl kullanacağınızı gösterir.  
   
  [!code-cpp[HookUpDelegate#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#1)]
  [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)]

@@ -6,34 +6,34 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: ba8b0a48b2b75a9191553392d5ec0a1f66575807
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dffe06d340c7256ba8af687e30d90d51746ebe1
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053515"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364239"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObjects için Güvenli Oluşturucu Desenleri
-Genel olarak, sınıf oluşturucuları türetilmiş bir sınıf için temel oluşturucuları başlatma oluşturucular çağrılamayacağından sanal yöntemler veya temsilciler gibi geri çağırmaları çağırmalıdır değil. Herhangi bir nesne bir eksik başlatma durumuna girmek sanal yapılabilir. Ancak, özellik sistemi çağırır ve geri çağırmaları dahili olarak, bağımlılık özelliği sisteminin bir parçası kullanıma sunar. Bir bağımlılık özelliği değer ile ayarı olarak basit bir işlem <xref:System.Windows.DependencyObject.SetValue%2A> çağrı potansiyel olarak içeren bir geri çağırma yere belirlenmesi. Bu nedenle, bağımlılık türünüz temel sınıf olarak kullanılırsa, sorunlu olabilecek bir oluşturucu gövdesi içinde özellik değerlerini ayarlarken dikkatli olmanız gerekir. Uygulama için belirli bir desene yoktur <xref:System.Windows.DependencyObject> Oluşturucular, burada belgelenmektedir bağımlılık özelliği durumlar ve devralınmış geri çağırmalar belirli sorunları önler.  
+Genellikle, sınıf oluşturucular, türetilmiş bir sınıf için oluşturucuların temel başlatması olarak çağrılabilmesi için sanal yöntemler veya temsilciler gibi geri çağırmaları çağırmamalıdır. Sanal alanının girilmesi, belirli bir nesnenin tamamlanmamış bir başlatma durumunda yapılabilir. Ancak, özellik sistemi, bağımlılık özellik sisteminin bir parçası olarak, geri çağırmaları dahili olarak çağırır ve kullanıma sunar. Tek bir işlem, çağrı ile <xref:System.Windows.DependencyObject.SetValue%2A> bağımlılık özelliği değerini ayarlamaya yönelik bir işlemin büyük olasılıkla, belirlemenin bir yerinde geri çağırma içermesi. Bu nedenle, türü temel sınıf olarak kullanılıyorsa sorunlu olabilecek bir oluşturucunun gövdesinde bağımlılık özelliği değerlerini ayarlarken dikkatli olmanız gerekir. Bağımlılık özelliği durumlarıyla ilgili belirli sorunları ve <xref:System.Windows.DependencyObject> burada belgelenen devralınan geri çağırmaları engelleyen oluşturucular uygulamak için belirli bir model vardır.  
 
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>Özellik sistemi sanal yöntemleri  
- Sanal yöntemleri veya geri çağırmaları hesaplamaları sırasında adı verilir <xref:System.Windows.DependencyObject.SetValue%2A> bir bağımlılık özelliğinin değerini ayarlayan çağrı: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Bu sanal yöntemler veya geri çağırmaları her biri çeşitlikleri genişletme belirli bir amaca hizmet eder [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi ve bağımlılık özellikleri. Özellik değeri belirlemeyi özelleştirmek için bu sanalları kullanma hakkında daha fazla bilgi için bkz. [bağımlılık özelliği geri aramaları ve doğrulama](dependency-property-callbacks-and-validation.md).  
+ Aşağıdaki sanal yöntemler veya geri çağrılar, bir <xref:System.Windows.DependencyObject.SetValue%2A> bağımlılık özelliği değeri ayarlayan çağrının hesaplamaları sırasında çağrılabilir: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Bu sanal yöntemlerin veya geri aramaların her biri, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sisteminin ve bağımlılık özelliklerinin çok yönlülüğünü genişletmede belirli bir amaca hizmet eder. Özellik değeri belirlemeyi özelleştirmek için bu sanallaştırmaların nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [bağımlılık özelliği geri çağırmaları ve doğrulama](dependency-property-callbacks-and-validation.md).  
   
-### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>FXCop Kural zorlama vs. Özellik sistemi Uygula  
- Yapı işleminizin bir parçası olarak Microsoft FXCop aracı kullanıyorsanız ve bu belirli ya da türetilen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework sınıflarını temel oluşturucu, arama veya kendi bağımlılık özellikleri türetilen sınıflarda uygulamak, belirli bir karşılaşabileceğiniz FXCop kuralı ihlali. Bu ihlalin adı dize şöyledir:  
+### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>FXCop kural zorlaması ile Özellik sistemi sanal öğeleri  
+ Yapı işleminizin bir parçası olarak Microsoft araç FxCop ' yi kullanırsanız ve temel oluşturucuyu çağıran belirli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çerçeve sınıflarından türetirsiniz ya da türetilmiş sınıflarda kendi bağımlılık özelliklerinizi uygularsanız, belirli bir sorunla karşılaşabilirsiniz FXCop kural ihlali. Bu ihlalin ad dizesi:  
   
  `DoNotCallOverridableMethodsInConstructors`  
   
- Bu varsayılan genel kural kümesi için FXCop parçası olan bir kuraldır. Bu kural bir izleme sonunda bir bağımlılık özelliği sistem sanal yöntemini çağırır bağımlılık özelliği sistem aracılığıyla raporlama nedir olması. Bu kuralı ihlal devre dışı bırakın veya bu kuralda, FXCop Kural kümesi yapılandırması bastırmak ihtiyacınız olabilecek şekilde bu konu başlığında, belgelenen önerilen oluşturucu desenler izledikten sonra bile görüntülenmeye devam edebilir.  
+ Bu, FXCop için varsayılan genel kural kümesinin bir parçası olan bir kuraldır. Bu kuralın Raporlama işlemi, son olarak bağımlılık özellik sistemi sanal yöntemi çağıran bağımlılık özellik sistemi aracılığıyla yapılan bir izdir. Bu kural ihlali, bu konuda belgelenen önerilen Oluşturucu desenlerinden sonra bile görünmeye devam edebilir. bu nedenle, FXCop kural kümesi yapılandırmanızda bu kuralı devre dışı bırakmanız veya gizetmeniz gerekebilir.  
   
-### <a name="most-issues-come-from-deriving-classes-not-using-existing-classes"></a>Varolan sınıfları kullanarak değil, türetilmiş sınıflardan çoğu sorunu gelir  
- Bu kural tarafından bildirilen sorunları, kendi yapı dizisi sanal yöntemleri uygulayan bir sınıf ardından türetilir oluşur. Sınıfınızı veya aksi halde biliyorsanız veya sınıfınıza nesnesinden türetilmesi değil, zorunlu, burada açıklanan önemli noktalar ve FXCop Kural motive sorunları için geçerli değildir. Ancak, bunlar örneği için temel sınıf olarak kullanılacak yöneliktir şekilde sınıfları yazıyorsanız şablonları oluşturmakta olduğunuz ya da genişletilebilir denetim kitaplığı ayarlayın, Oluşturucular için burada önerilen desenleri izlemelidir.  
+### <a name="most-issues-come-from-deriving-classes-not-using-existing-classes"></a>Çoğu sorun, mevcut sınıfları kullanmadan değil, türetilen sınıflardan gelir  
+ Bu kural tarafından bildirilen sorunlar, yapı dizisinde sanal yöntemlerle uyguladığınız bir sınıf daha sonra öğesinden türetilmişse oluşur. Sınıfınızı mühürlemek veya sınıfınızın türetilemeyeceğini bilmeniz veya uygulamanız durumunda, burada açıklanan noktalar ve FXCop kuralını zorlayan sorunlar sizin için uygun değildir. Ancak, sınıfları temel sınıf olarak kullanılmak üzere tasarlanan bir şekilde yazıyorsanız, örneğin, şablonlar oluşturuyorsanız veya Genişletilebilir bir denetim kitaplığı ayarlandıysa, oluşturucular için burada önerilen desenleri izlemelisiniz.  
   
-### <a name="default-constructors-must-initialize-all-values-requested-by-callbacks"></a>Varsayılan Oluşturucu tüm değerleri geri çağırmalar tarafından istenen başlatmalıdır  
- Bu değerlerden bazıları "gerçek" değerlerle doldurulur olsa bile, sınıf varsayılan oluşturucusuna sınıf geçersiz kılmalarını veya geri çağırmaları (geri aramalar özellik sistem sanalları bölümündeki listeden) tarafından kullanılan tüm örnek üyeleri başlatılmalıdır Varsayılan olmayan oluşturucular parametreleri.  
+### <a name="default-constructors-must-initialize-all-values-requested-by-callbacks"></a>Varsayılan oluşturucular, geri çağırmalar tarafından Istenen tüm değerleri başlatmalıdır  
+ Sınıfınız tarafından kullanılan tüm örnek üyeleri (örneğin, özellik sistemi sanalları bölümündeki listeden geri çağırmalar), bu değerlerden bazıları ile "gerçek" değerler tarafından doldurulsa bile, Sınıfınal Oluşturucu içinde başlatılmalıdır. Parametresiz oluşturucuların parametreleri.  
   
- Aşağıdaki örnek kodu (ve sonraki örneklerde) pseudo - olanC# bu kuralı ihlal ediyor ve sorunu anlatan örnek:  
+ Aşağıdaki örnek kod (ve sonraki örnekler), bu kuralı ihlal edenC# ve sorunu açıklayan bir sözde örnektir:  
   
 ```  
 public class MyClass : DependencyObject  
@@ -60,16 +60,16 @@ public class MyClass : DependencyObject
 }  
 ```  
   
- Uygulama kodu çağırdığında `new MyClass(objectvalue)`, bu çağrı varsayılan oluşturucuyu ve temel sınıf oluşturucu. Bu ayarlar sonra `Property1 = object1`, sanal yöntemini çağırır `OnPropertyChanged` sahip olan üzerinde `MyClass` <xref:System.Windows.DependencyObject>.  Geçersiz kılma başvurduğu `_myList`, hangi başlatılmamış henüz.  
+ Uygulama kodu çağırdığında `new MyClass(objectvalue)`, bu, parametresiz oluşturucuyu ve temel sınıf oluşturucularını çağırır. Ardından, sahip `Property1 = object1` `OnPropertyChanged` `MyClass` olduğu sanal yöntemi çağıranayarlar.<xref:System.Windows.DependencyObject>  Override, henüz başlatılmamış `_myList`olan öğesine başvuruyor.  
   
- Bu sorunlardan kaçınmak için bir yolu geri çağırmaları yalnızca diğer bağımlılık özellikleri kullanmak ve böyle her bir bağımlılık özelliği meta verilerini kayıtlı bir parçası olarak oluşturulmuş varsayılan bir değere sahip olduğundan emin olmaktır.  
+ Bu sorunlardan kaçınmanın bir yolu, geri çağırmaların yalnızca diğer bağımlılık özelliklerini kullanmasını ve bu tür bağımlılık özelliklerinin kayıtlı meta verilerin bir parçası olarak belirlenen bir varsayılan değere sahip olmasını sağlar.  
   
 <a name="Safe_Constructor_Patterns"></a>   
 ## <a name="safe-constructor-patterns"></a>Güvenli Oluşturucu desenleri  
- Sınıfınızın bir temel sınıf olarak kullanılırsa, tamamlanmamış başlatma risklerini önlemek için bu desenleri izleyin:  
+ Sınıfınız temel sınıf olarak kullanılıyorsa tamamlanmamış başlatmanın risklerinden kaçınmak için şu desenleri izleyin:  
   
-#### <a name="default-constructors-calling-base-initialization"></a>Varsayılan oluşturucular temel başlatma çağırma  
- Temel varsayılan çağıran bu oluşturucular uygulayın:  
+#### <a name="parameterless-constructors-calling-base-initialization"></a>Temel başlatmayı çağıran parametresiz oluşturucular  
+ Temel varsayılanı çağıran bu oluşturucuları Uygula:  
   
 ```  
 public MyClass : SomeBaseClass {  
@@ -80,8 +80,8 @@ public MyClass : SomeBaseClass {
 }  
 ```  
   
-#### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>Varsayılan olmayan (kullanışlı) oluşturucuları, hiçbir temel imza ile eşleşmiyor  
- Bu oluşturucular ayarlamak için parametreleri kullanıyorsanız başlatma işlemindeki bağımlılık özellikleri için başlatma kendi sınıfın varsayılan oluşturucusunu çağırın ve ardından bağımlılık özellikleri ayarlamak için parametreleri kullanın. Bunlar ya da bağımlılık özellikleri, sınıf tarafından tanımlanan veya temel sınıftan devralınan bağımlılık özellikleri ancak her iki durumda da şu biçimi kullanın:  
+#### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>Hiçbir temel imzayı eşleştirmeyen varsayılan olmayan (kolay) oluşturucular  
+ Bu oluşturucular başlatma içindeki bağımlılık özelliklerini ayarlamak için parametreleri kullanıyorsa, önce başlatma için kendi sınıf parametresiz oluşturucuyu çağırın ve ardından bağımlılık özelliklerini ayarlamak için parametreleri kullanın. Bunlar, sınıfınız tarafından tanımlanan bağımlılık özellikleri ya da temel sınıflardan devralınan bağımlılık özellikleridir, ancak her iki durumda da aşağıdaki kalıbı kullanır:  
   
 ```  
 public MyClass : SomeBaseClass {  
@@ -93,8 +93,8 @@ public MyClass : SomeBaseClass {
 }  
 ```  
   
-#### <a name="non-default-convenience-constructors-which-do-match-base-signatures"></a>Temel imzaları eşleşen varsayılan (kullanışlı) olmayan oluşturucular  
- Aynı Parametreleştirme ile temel oluşturucuyu çağırmak yerine, kendi sınıf varsayılan oluşturucusuna yeniden çağırın. Temel Başlatıcı çağırmaz; Bunun yerine çağırmalısınız `this()`. Ardından özgün Oluşturucusu davranışı, ilgili özellikleri ayarlamak için değerleri olarak geçirilen parametreleri kullanarak yeniden oluşturun. Belirli parametreleri olan özellikleri belirlemede rehberlik için özgün temel oluşturucu belgeleri ayarlamak için hedeflenen kullanın:  
+#### <a name="non-default-convenience-constructors-which-do-match-base-signatures"></a>Taban imzalarıyla eşleşen varsayılan olmayan (kolay) oluşturucular  
+ Temel oluşturucuyu aynı Parametreleştirme ile çağırmak yerine kendi sınıfınızın ' parametresiz oluşturucuyu çağırın. Temel başlatıcıyı çağırmayın; Bunun yerine, öğesini `this()`çağırmanız gerekir. Ardından, ilgili özellikleri ayarlamak için geçirilen parametreleri değerler olarak kullanarak özgün Oluşturucu davranışını yeniden üretin. Belirli parametrelerin ayarlanması amaçlanan özellikleri belirlemede rehberlik için özgün temel Oluşturucu belgelerini kullanın:  
   
 ```  
 public MyClass : SomeBaseClass {  
@@ -106,11 +106,11 @@ public MyClass : SomeBaseClass {
 }  
 ```  
   
-#### <a name="must-match-all-signatures"></a>Tüm imzaları eşleşmelidir  
- Temel tür çoklu imzalara sahip olduğu durumlarda, tüm olası sonraki özellikleri ayarlamadan önce sınıfın varsayılan oluşturucusunu çağırma önerilen desen kullanan bir oluşturucu uygulaması kendi imzalar kasıtlı olarak eşleşmesi gerekir.  
+#### <a name="must-match-all-signatures"></a>Tüm imzalarla eşleşmelidir  
+ Temel türün birden çok imzaya sahip olduğu durumlarda, daha fazla ayarlamadan önce parametresiz oluşturucuyu çağırmak için önerilen kalıbı kullanan tüm olası imzaları kendi Oluşturucu uygulamasıyla eşleştirmelidir özelliklerinin.  
   
-#### <a name="setting-dependency-properties-with-setvalue"></a>SetValue bağımlılık özellikleri ayarlama  
- Özellik ayarı kolaylık sağlamak için bir sarmalayıcı üretilmesini, ve değerleri ile ayarlanır bir özelliği ayarlıyorsanız bu aynı desenleri uygulamak <xref:System.Windows.DependencyObject.SetValue%2A>. Aramalarınız <xref:System.Windows.DependencyObject.SetValue%2A> Oluşturucu parametresi bu geçiş başlatma için de sınıfının varsayılan oluşturucusunu çağırmalıdır.  
+#### <a name="setting-dependency-properties-with-setvalue"></a>DeğerBelirle ile bağımlılık özelliklerini ayarlama  
+ Bu aynı desenler özellik ayarı kolaylığı için sarmalayıcı içermeyen bir özellik ayarlıyorsanız ve değerlerini ile <xref:System.Windows.DependencyObject.SetValue%2A>ayarlarsanız geçerlidir. <xref:System.Windows.DependencyObject.SetValue%2A> Bu geçiş Oluşturucu parametrelerine yapılan çağrılarınız, başlatma için sınıf ' parametresiz oluşturucuyu de çağırmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

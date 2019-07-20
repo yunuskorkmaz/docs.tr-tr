@@ -10,28 +10,28 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09eb37fd2c1bf77e981a2eb7952b1fff5110e977
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bed67019fdd3bb81585d08349715a895dfe5a681
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61872384"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363953"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Öznitelikli Programlama Modeline Genel Bakış (MEF)
 
-İçinde Yönetilen Genişletilebilirlik Çerçevesi (MEF), bir *programlama modeli* MEF çalıştığı kavramsal nesne kümesini tanımlayan belirli bir yöntemdir. Kavramsal bu nesneler, bölümleri, içeri aktarmalar ve dışarı aktarmaları içerir. MEF bu nesneleri kullanan, ancak nasıl temsil belirtmiyor. Bu nedenle, çok çeşitli programlama modellerini programlama modelleri de dahil olmak üzere özelleştirilmiş mümkün.
+Managed Extensibility Framework (MEF) içinde, bir *programlama MODELI* MEF 'in üzerinde çalıştığı kavramsal nesneler kümesini tanımlamaya yönelik belirli bir yöntemdir. Bu kavramsal nesneler parçalar, içeri aktarmalar ve dışarı aktarmaları içerir. MEF bu nesneleri kullanır, ancak nasıl temsil edileceğini belirtmez. Bu nedenle, özelleştirilmiş programlama modelleri de dahil olmak üzere çok çeşitli programlama modelleri mümkündür.
 
-MEF kullanılan programlama modeli varsayılan *öznitelikli programlama modeli*. Öznitelikli Programlama modeli bölümleri, sıradan bir .NET Framework sınıf süslemek özniteliklerle içeri aktarmalar, dışarı aktarma ve diğer nesneleri tanımlanır. Bu konuda, bir MEF uygulaması oluşturmak için öznitelikli programlama modeli tarafından sağlanan özniteliklerin kullanmayı açıklar.
+MEF 'te kullanılan varsayılan programlama modeli, *öznitelikli programlama modelidir*. Öznitelikli programlama modeli bölümlerinde, içeri aktarmalar, dışarı aktarımlar ve diğer nesneler, sıradan .NET Framework sınıfları süsleten öznitelikler ile tanımlanmıştır. Bu konu başlığı altında, bir MEF uygulaması oluşturmak için Öznitelikli programlama modeli tarafından sunulan özniteliklerin nasıl kullanılacağı açıklanmaktadır.
 
 <a name="import_and_export_basics"></a>
 
 ## <a name="import-and-export-basics"></a>İçeri ve dışarı aktarma temelleri
 
-Bir *dışarı* diğer bölümlerinde kapsayıcı bir bölümü sağlayan bir değerdir ve *alma* erişilebilir dışarı doldurulması kapsayıcıya, bir bölümü ifade bir gereksinimdir. Öznitelikli programlama modelinde, içeri ve dışarı aktarmalar sınıfları ve üyeleri ile tasarlayarak bildirilen `Import` ve `Export` öznitelikleri. `Export` Özniteliği donatmak bir sınıf, alan, özelliği veya yöntemi sırasında `Import` öznitelik, bir alan, özelliği veya Oluşturucu parametresi süslemek.
+*Dışarı aktarma* , bir bölümün kapsayıcıdaki diğer bölümlere sağladığı bir değerdir ve *içeri aktarma* işlemi, kullanılabilir dışarı aktarımlardan doldurulacak bir bölümün kapsayıcının ifade olduğu gereksinimdir. Öznitelikli programlama modelinde, içeri aktarmalar ve dışarı aktarımlar, `Import` ve `Export` öznitelikleri ile sınıflar veya Üyeler dekorasyon tarafından tanımlanır. Özniteliği bir alanı, özelliği veya Oluşturucu parametresini süslemek için bir sınıfı, alanı, `Import` özelliği veya yöntemi süsedebilir. `Export`
 
-Bir dışarı aktarma ile eşleştirilecek bir içeri aktarma, içeri ve dışarı aktarma aynı olması gerekir *sözleşme*. Anlaşma adı verilen bir dizenin oluşur *sözleşme adı*ve adlı dışarı aktarılan veya içeri aktarılan nesnenin türü *sözleşme türü*. Yalnızca sözleşme adı ve sözleşme türü eşleşmesi durumunda bir dışarı aktarma belirli bir içeri aktarma yerine getirmek için değerlendirilir.
+İçeri aktarmanın bir dışarı aktarma işlemiyle eşleşmesi için, içeri ve dışarı aktarmanın aynı *sözleşmeye*sahip olması gerekir. Sözleşme, sözleşme *adı*olarak adlandırılan bir dizeden ve verilen ya da içeri aktarılan nesnenin türü, *anlaşma türü*olarak adlandırılır. Yalnızca anlaşma adı ve anlaşma türü eşleşiyorsa, belirli bir içeri aktarma işlemini yerine getirmek için kabul edilen bir dışarı aktarma işlemi olur.
 
-Sözleşme parametrelerinin her ikisini ya da örtük veya açık olabilir. Aşağıdaki kod, temel bir içeri aktarma bildiren bir sınıfı gösterir.
+Anlaşma parametrelerinden biri veya her ikisi örtük veya açık olabilir. Aşağıdaki kod, temel bir içeri aktarma bildiren bir sınıfı gösterir.
 
 ```vb
 Public Class MyClass1
@@ -48,9 +48,9 @@ public class MyClass
 }
 ```
 
-Bu içeri aktarma `Import` özniteliğine sahip bir sözleşme türü ya da bağlı bir sözleşme adı parametresi. Bu nedenle, her ikisi de düzenlenmiş özellikten. Bu durumda, sözleşme türü olacaktır `IMyAddin`, ve anlaşma türü ile oluşturulan benzersiz bir dize sözleşme adı olacaktır. (Diğer bir deyişle, yalnızca, adları da türünden çıkarsanan dışarı aktarmaları sözleşme adı eşleşir `IMyAddin`.)
+Bu içeri aktarımda, `Import` öznitelik bir anlaşma türüne veya bir anlaşma adı parametresine bağlı değildir. Bu nedenle, her ikisi de düzenlenmiş özelliğinden çıkarsedilir. Bu durumda, sözleşme türü `IMyAddin`olur ve anlaşma adı Sözleşme türünden oluşturulan benzersiz bir dize olur. (Başka bir deyişle, sözleşme adı yalnızca adları türden `IMyAddin`de çıkarılan dışarı aktarmalar ile eşleşir.)
 
-Önceki alma eşleşen bir dışarı aktarma gösterir.
+Aşağıda, önceki içeri aktarma ile eşleşen bir dışarı aktarma gösterilmektedir.
 
 ```vb
 <Export(GetType(IMyAddin))>
@@ -65,12 +65,12 @@ End Class
 public class MyLogger : IMyAddin { }
 ```
 
-Sözleşme türü bu dışarı aktarma, `IMyAddin` bir parametresi olarak belirtildiğinden `Export` özniteliği. Dışarı aktarılan tür ya da aynı anlaşma türü olması gerekir, Sözleşme türünden türetilmesi veya sözleşme türü bir arabirim ise uygulama. Bu dışarı aktarma, gerçek tür içinde `MyLogger` arabirimi uygulayan `IMyAddin`. Sözleşme adı, bu dışarı aktarma önceki alma eşleştiğini anlamına gelir. anlaşma türü ile algılanır.
+Bu dışarı aktarmada, sözleşme türü `IMyAddin` `Export` özniteliğin bir parametresi olarak belirtilmediği için olur. İçe aktarılmış tür, anlaşma türüyle aynı olmalıdır, anlaşma türünden türetilir ya da bir arabirimteise sözleşme türünü uygular. Bu dışa aktarmada gerçek tür `MyLogger` arabirimini `IMyAddin`uygular. Sözleşme adı, Sözleşme türünden algılanır, bu da dışarı aktarmanın önceki içeri aktarma ile eşleşmeyeceği anlamına gelir.
 
 > [!NOTE]
-> Dışarı ve içeri aktarmalar, genel bir sınıf veya üye üzerinde bildirilmelidir. Diğer bildirimler desteklenir, ancak dışarı aktarma veya özel bir içeri aktarma, korumalı veya iç üye bölümü ayırma modeli ayırır ve bu nedenle önerilmez.
+> Dışarı aktarmalar ve içeri aktarmalar genellikle ortak sınıflarda veya üyelerde bildirilmelidir. Diğer bildirimler desteklenir, ancak özel, korumalı veya dahili bir üyenin dışa aktarılması veya içe aktarılması bölümün yalıtım modelini keser ve bu nedenle önerilmez.
 
-Sözleşme türü dışarı ve içeri aktarma için bir eşleşme olarak kabul edilmesi için tam olarak eşleşmelidir. Aşağıdaki dışa aktarım göz önünde bulundurun.
+Anlaşma türü, dışa aktarma ve içeri aktarma için tam olarak eşleşmelidir ve bir eşleşme olarak değerlendirilir. Aşağıdaki dışarı aktarmayı göz önünde bulundurun.
 
 ```vb
 <Export()> 'WILL NOT match the previous import!
@@ -85,9 +85,9 @@ End Class
 public class MyLogger : IMyAddin { }
 ```
 
-Sözleşme türü bu dışarı aktarma, `MyLogger` yerine `IMyAddin`. Olsa da `MyLogger` uygulayan `IMyAddin`ve bu nedenle dönüştürülebilir bir `IMyAddin` nesnesi, bu dışarı aktarma anlaşması türleri aynı olmadığından önceki alma eşleşmez.
+Bu dışarı aktarmada, `MyLogger` `IMyAddin`bunun yerine anlaşma türü olur. , Ve bu nedenle bir `IMyAddin` nesneye tür atama yapılabileceğinden, bu dışarı aktarma önceki içeri aktarma ile eşleşmez, çünkü anlaşma türleri aynı değildir. `MyLogger` `IMyAddin`
 
-Genel olarak, sözleşme adı belirtmeniz gerekli değildir ve anlaşma türü ve meta verileri açısından çoğu sözleşmeleri tanımlanması gerekir. Ancak, belirli koşullar altında doğrudan sözleşme adı belirtmek önemlidir. Bir sınıf temelleri gibi bir ortak türü değerlerden verdiğinde en yaygın bir durumdur. Sözleşme adı, ilk parametresi olarak belirtilebilir `Import` veya `Export` özniteliği. Aşağıdaki kod, alma ve verme belirtilen sözleşme adıyla gösterir `MajorRevision`.
+Genel olarak, Sözleşmenin adını belirtmek gerekli değildir ve çoğu sözleşme, anlaşma türü ve meta veriler bakımından tanımlanmalıdır. Ancak, belirli koşullarda, anlaşma adını doğrudan belirtmek önemlidir. En yaygın durum, bir sınıfın temel öğeler gibi ortak bir türü paylaşan birkaç değeri dışarı aktardığı durumdur. Sözleşme adı, `Import` veya `Export` özniteliğinin ilk parametresi olarak belirtilebilir. Aşağıdaki kod, bir içeri aktarma ve belirtilen sözleşme adına `MajorRevision`sahip bir dışarı aktarma gösterir.
 
 ```vb
 Public Class MyExportClass
@@ -126,11 +126,11 @@ public class MyExportClass
 }
 ```
 
-Sözleşme türü belirtilmediği takdirde, yine de içeri veya dışarı aktarmayı türünden çıkarılabilir olacaktır. Ancak, sözleşme adı açıkça belirtilmiş olsa bile, sözleşme türü de içeri aktarma ve bir eşleşme olarak kabul edilmesi için dışarı aktarma için tam olarak eşleşmelidir. Örneğin, varsa `MajorRevision` alan bir dize olan, çıkarsanan anlaşması türleri eşleşmiyor ve dışarı aktarma, alma, aynı sözleşme adına sahip olmasına rağmen aynı olmamalıdır.
+Anlaşma türü belirtilmemişse, hala içeri veya dışarı aktarma türünden çıkarsanamıyor. Ancak, anlaşma adı açıkça belirtilmiş olsa bile, aynı zamanda içeri aktarma ve dışarı aktarma için bir eşleşme olarak kabul edilmesi için anlaşma türü de tam olarak eşleşmelidir. Örneğin, `MajorRevision` alan bir dize ise, çıkarılan anlaşma türleri eşleşmez ve dışarı aktarma, aynı anlaşma adına sahip olmasına rağmen içeri aktarma ile eşleşmez.
 
-### <a name="importing-and-exporting-a-method"></a>İçeri ve dışarı aktarma yöntemi
+### <a name="importing-and-exporting-a-method"></a>Bir yöntemi içeri ve dışarı aktarma
 
-`Export` Özniteliği de tasarlamanız bir yöntem bir sınıf, özellik veya işlev aynı şekilde. Türü çıkarsanamıyor olarak yöntemi dışarı bir sözleşme türü veya sözleşme adı belirtmeniz gerekir. Belirtilen tür gibi özel bir temsilci ya da genel bir tür olabilir `Func`. Aşağıdaki sınıf adlı bir yöntem dışarı aktarır `DoSomething`.
+`Export` Özniteliği aynı zamanda bir yöntemi sınıf, özellik veya işlevle aynı şekilde süsde edebilir. Yöntem dışarı aktarmaları bir anlaşma türü veya sözleşme adı belirtmeli, çünkü tür çıkarsanamıyor. Belirtilen tür özel bir temsilci ya da gibi `Func`genel bir tür olabilir. Aşağıdaki sınıf adlı `DoSomething`bir yöntemi dışa aktarır.
 
 ```vb
 Public Class MyAddin
@@ -153,7 +153,7 @@ public class MyAddin
 }
 ```
 
-Bu sınıftaki `DoSomething` yöntemi tek bir alan `int` parametresi ve döndürür bir `string`. Bu dışarı aktarma eşleştirmek için içeri aktarma bölümü uygun bir üye bildirmeniz gerekir. Sınıfına aşağıdaki içeri aktarmaları `DoSomething` yöntemi.
+Bu sınıfta, `DoSomething` yöntemi tek `int` bir parametre alır ve döndürür `string`. Bu dışarı aktarmayı eşleştirmek için, içeri aktarma bölümünde uygun bir üye bildirilmelidir. Aşağıdaki sınıf `DoSomething` yöntemi içeri aktarır.
 
 ```vb
 Public Class MyClass1
@@ -172,17 +172,17 @@ public class MyClass
 }
 ```
 
-Nasıl kullanıldığı hakkında daha fazla bilgi için `Func<T, T>` nesne, bkz: <xref:System.Func%602>.
+`Func<T, T>` Nesnesinin kullanımı hakkında daha fazla bilgi için bkz <xref:System.Func%602>.
 
 <a name="types_of_imports"></a>
 
-## <a name="types-of-imports"></a>İçeri aktarmalar türleri
+## <a name="types-of-imports"></a>Içeri aktarmalar türleri
 
-Yavaş, gerekli ve isteğe bağlı dinamik dahil olmak üzere birkaç içeri aktarma, MEF destek türleri.
+MEF, dinamik, geç, önkoşul ve isteğe bağlı olarak çeşitli içeri aktarma türlerini destekler.
 
-### <a name="dynamic-imports"></a>Dinamik içeri aktarmalar
+### <a name="dynamic-imports"></a>Dinamik Içeri aktarmalar
 
-Bazı durumlarda, içeri aktarma sınıfı sözleşmeye ada sahip dışarı aktarma herhangi bir türde eşleşen isteyebilirsiniz. Bu senaryoda sınıf bildirebilir bir *dinamik içeri aktarma*. Aşağıdaki içeri aktarma, hiçbir dışarı aktarma sözleşme adı "Width" ile eşleşir.
+Bazı durumlarda, içeri aktarma sınıfı belirli bir sözleşme adına sahip olan her türlü dışarı aktarmaları eşleştirmek isteyebilir. Bu senaryoda, sınıfı *dinamik bir içeri aktarma*bildirebilirler. Aşağıdaki içeri aktarma, sözleşme adı "TheString" olan tüm dışarı aktarma ile eşleşir.
 
 ```vb
 Public Class MyClass1
@@ -201,7 +201,7 @@ public class MyClass
 }
 ```
 
-Ne zaman anlaşma türü çıkarılan gelen `dynamic` anahtar sözcüğü, herhangi bir sözleşme türü eşleşir. Bu durumda, bir içeri aktarma gereken **her zaman** eşleştirmek için bir sözleşme adı belirtin. (Hiçbir sözleşme adı belirtilmezse, içeri aktarma hiçbir dışarı eşleşecek şekilde kabul edilir.) Aşağıdaki dışarı aktarmaları her ikisi de önceki alma eşleşir.
+Anlaşma türü `dynamic` anahtar sözcükten çıkarıldığında, herhangi bir anlaşma türüyle eşleşir. Bu durumda, bir içeri aktarmanın **her zaman** eşleştirilecek bir sözleşme adı belirtmesi gerekir. (Sözleşme adı belirtilmemişse, içeri aktarma işlemi hiçbir dışarı Aktarımsız olacak şekilde değerlendirilir.) Aşağıdaki dışarı aktarımlar, önceki içeri aktarma ile eşleşir.
 
 ```vb
 <Export("TheString", GetType(IMyAddin))>
@@ -224,11 +224,11 @@ public class MyLogger : IMyAddin { }
 public class MyToolbar { }
 ```
 
-Kuşkusuz, içeri aktarma sınıfı rastgele türünde bir nesne ile dağıtılacak hazırlanmalıdır.
+Açıkça içeri aktarma sınıfı, rastgele türdeki bir nesne ile başa çıkmak için hazırlanmalıdır.
 
-### <a name="lazy-imports"></a>İçeri aktarmaları
+### <a name="lazy-imports"></a>Yavaş Içeri aktarmalar
 
-Nesneyi hemen oluşturulmadı, bazı durumlarda, içeri aktarılan nesneye dolaylı bir başvuru alma sınıfı gerektirebilir. Bu senaryoda sınıf bildirebilir bir *yavaş alma* anlaşma türünü kullanarak `Lazy<T>`. Aşağıdaki içeri aktarma özelliği, yavaş bir içeri aktarma bildirir.
+Bazı durumlarda içeri aktarma sınıfı içeri aktarılan nesneye dolaylı bir başvuru gerektirebilir, böylece nesne hemen başlatılamaz. Bu senaryoda, sınıfı bir anlaşma türü `Lazy<T>`kullanarak bir *yavaş içeri aktarma* bildirebilir. Aşağıdaki içeri aktarma özelliği bir yavaş içeri aktarma bildirir.
 
 ```vb
 Public Class MyClass1
@@ -247,7 +247,7 @@ public class MyClass
 }
 ```
 
-Bakış açısıyla bileşim motoru, bir sözleşme türü `Lazy<T>` anlaşma türü ile aynı olarak kabul edilir `T`. Bu nedenle, önceki alma aşağıdaki dışa aktarım eşleşir.
+Birleşim altyapısının bakış noktasından, bir sözleşme türü `Lazy<T>` , sözleşme `T`türüyle aynı kabul edilir. Bu nedenle, önceki içeri aktarma aşağıdaki dışarı aktarma ile eşleşir.
 
 ```vb
 <Export(GetType(IMyAddin))>
@@ -262,22 +262,22 @@ End Class
 public class MyLogger : IMyAddin { }
 ```
 
-Sözleşme adı ve anlaşma türü belirtilebilir `Import` "Temel alır ve dışarı aktarma" bölümünde daha önce açıklandığı gibi yavaş bir alma işlemi için özniteliği.
+Sözleşme adı ve sözleşme türü, daha önce "temel içeri `Import` aktarmalar ve dışarı aktarmalar" bölümünde açıklandığı gibi bir yavaş içeri aktarma özniteliğinde belirtilebilir.
 
-### <a name="prerequisite-imports"></a>Önkoşul İçeri aktarmalar
+### <a name="prerequisite-imports"></a>Önkoşul Içeri aktarmaları
 
-Dışarı aktarılan MEF bölümleri genellikle yanıt olarak doğrudan bir istek veya eşleşen bir içeri aktarma doldurmak için gereken bileşim motoru tarafından oluşturulur. Bir bölüm oluşturulduğunda varsayılan olarak, parametresiz oluşturucuya bileşim motoru kullanır. Farklı bir oluşturucu kullanın altyapısı sağlamak için birlikte işaretleyebilirsiniz `ImportingConstructor` özniteliği.
+Dışarı aktarılan MEF bölümleri genellikle doğrudan bir isteğe yanıt olarak veya eşleşen bir içeri aktarmayı doldurmanız gerektiğinde bileşim altyapısı tarafından oluşturulur. Varsayılan olarak, bir bölüm oluştururken, bileşim altyapısı parametre-daha az oluşturucuyu kullanır. Altyapının farklı bir Oluşturucu kullanmasını sağlamak için onu `ImportingConstructor` özniteliğiyle işaretleyebilirsiniz.
 
-Yalnızca bir yapıcısı bileşim motoru tarafından kullanılmak üzere her bir bölümü olabilir. Varsayılan oluşturucu yok ve Hayır sağlayarak `ImportingConstructor` özniteliği veya birden fazla sağlama `ImportingConstructor` öznitelik, bir hata üretecektir.
+Her parçanın, bileşim altyapısı tarafından kullanılmak üzere yalnızca bir Oluşturucusu olabilir. Parametresiz Oluşturucu ve `ImportingConstructor` öznitelik yok ya da birden fazla `ImportingConstructor` öznitelik sağlanması bir hata üretir.
 
-İşaretli bir oluşturucuda parametrelerinin doldurmak için `ImportingConstructor` özniteliği, tüm bu parametreler otomatik olarak bildirilir alır. Bu bölümü başlatma sırasında kullanılan içeri aktarmalar bildirmek için kullanışlı bir yoldur. Aşağıdaki sınıf kullandığı `ImportingConstructor` alma bildirmek için.
+`ImportingConstructor` Özniteliği ile işaretlenmiş bir oluşturucunun parametrelerini dolduracak şekilde, bu parametrelerin hepsi otomatik olarak içeri aktarmalar olarak belirtilir. Bu, kısmi başlatma sırasında kullanılan içeri aktarmaları bildirmek için kullanışlı bir yoldur. Aşağıdaki sınıf bir içeri `ImportingConstructor` aktarma bildirmek için kullanır.
 
 ```vb
 Public Class MyClass1
 
     Private _theAddin As IMyAddin
 
-    'Default constructor will NOT be used
+    'Parameterless constructor will NOT be used
     'because the ImportingConstructor
     'attribute is present.
     Public Sub New()
@@ -300,7 +300,7 @@ public class MyClass
 {
     private IMyAddin _theAddin;
 
-    //Default constructor will NOT be
+    //Parameterless constructor will NOT be
     //used because the ImportingConstructor
     //attribute is present.
     public MyClass() { }
@@ -316,7 +316,7 @@ public class MyClass
 }
 ```
 
-Varsayılan olarak, `ImportingConstructor` özniteliğini kullanır anlaşması türleri ve sözleşme adları tüm parametre alır. Parametrelerle tasarlayarak bunu geçersiz kılmak mümkündür `Import` öznitelikleri, sözleşme adı ve anlaşma türü daha sonra açıkça tanımlayabilirsiniz. Aşağıdaki kod, bir üst sınıf yerine türetilmiş bir sınıf içeri aktarmak için şu söz dizimini kullanan bir oluşturucuyu gösterir.
+Varsayılan olarak, `ImportingConstructor` öznitelik, tüm parametre içeri aktarmaları için çıkarılan sözleşme türlerini ve sözleşme adlarını kullanır. Parametreleri öznitelikleri ile `Import` süsleyerek bunu geçersiz kılmak mümkündür. Bu, daha sonra sözleşme türünü ve sözleşme adını açıkça tanımlayabilirler. Aşağıdaki kod, bir üst sınıf yerine türetilmiş bir sınıfı içeri aktarmak için bu söz dizimini kullanan bir oluşturucuyu gösterir.
 
 ```vb
 <ImportingConstructor()>
@@ -333,17 +333,17 @@ public MyClass([Import(typeof(IMySubAddin))]IMyAddin MyAddin)
 }
 ```
 
-Özellikle, koleksiyon parametrelerle dikkatli olmanız gerekir. Örneğin belirtirseniz, `ImportingConstructor` türünde bir parametreye sahip bir Oluşturucuda `IEnumerable<int>`, içeri aktarma türünde tek bir dışarı aktarım eşleşecektir `IEnumerable<int>`, dışarı aktarma türü bir dizi yerine `int`. Bir dışarı aktarma türü eşleşecek şekilde `int`, parametresiyle donatmak sahip olduğunuz `ImportMany` özniteliği.
+Özellikle, koleksiyon parametreleriyle dikkatli olmanız gerekir. Örneğin, türünde `IEnumerable<int>`bir parametre içeren `ImportingConstructor` bir Oluşturucu üzerinde belirtirseniz, içeri aktarma türü bir dışarı aktarma kümesi `int`yerine, türü `IEnumerable<int>`tek bir dışarı aktarımdan eşleşir. Türünde `int`bir dışarı aktarım kümesini eşleştirmek için parametresini `ImportMany` özniteliğiyle tasarlamanız gerekir.
 
-Alınanlar tarafından bildirilen parametreler `ImportingConstructor` özniteliği olarak da işaretlenir *önkoşul aktarır*. MEF normalde dışarı aktarmaları sağlar ve forma alır bir *döngüsü*. Örneğin, bir döngü nesne A içeri aktarmalar sırayla nesne A. aktarır B, nesne olur. Normal koşullar altında bir döngü bir sorun değildir ve kapsayıcının normalde iki nesneleri oluşturur.
+`ImportingConstructor` Özniteliği tarafından içeri aktarmalar olarak belirtilen parametreler de *önkoşul içeri aktarmaları*olarak işaretlenir. MEF, normalde dışarı aktarmalar ve içeri aktarmalar oluşturmak için bir *döngüye*izin verir. Örneğin, bir döngüde nesne A 'nın, nesne a 'nın içe aktardığı, nesne a 'nın içe aktardığı yerdir. Normal koşullarda, bir döngüyle ilgili bir sorun değildir ve bileşim kapsayıcısı her iki nesneyi normal şekilde oluşturur.
 
-Bir bölüm Oluşturucu tarafından içeri aktarılan bir değer gerektiğinde, o nesnenin bir döngü alamaz. Nesne A B Bu nesne, oluşturduğu önce oluşturulmasını gerektiriyorsa, kendisi ve nesne B alır nesne A, sonra döngüsü çözemez ve bir birleştirme hatası meydana gelir. İçeri aktarmalar Oluşturucu parametrelere bildirilen olan bu nedenle önkoşul alır, tüm önce doldurulmalıdır herhangi dışarı gerektirdiği nesne kullanılabilir.
+Bir bölümün Oluşturucusu tarafından içeri aktarılan bir değer gerekliyse, bu nesne bir döngüye katılamaz. A nesnesi, nesne B 'nin oluşturulmadan önce oluşturulmasını gerektiriyorsa ve B nesnesi A nesnesini içeri aktardığında, bu durumda bir bileşim çözmeyecektir ve bir bileşim hatası oluşur. Bu nedenle, Oluşturucu parametrelerine göre belirtilen içeri aktarmalar, tüm ön dışarı aktarımlardan önce kullanılması gereken herhangi bir dışarı aktarımdan önce doldurulmaları gereken önkoşul içeri aktarımlardır.
 
-### <a name="optional-imports"></a>İsteğe bağlı içeri aktarmalar
+### <a name="optional-imports"></a>İsteğe bağlı Içeri aktarmalar
 
-`Import` Özniteliği bölümü işlevi için bir gereksinim belirtir. Bir içeri aktarma yerine getirilemiyor, bu bölümü olarak başarısız olur ve bölümü kullanılabilir olmaz.
+`Import` Özniteliği, bölümün çalışması için bir gereksinim belirtir. İçeri aktarma karşılanmıyorsa, bu bölümün kompozisyonu başarısız olur ve bölüm kullanılabilir olmayacaktır.
 
-Bir içeri aktarma olduğunu belirtebilirsiniz *isteğe bağlı* kullanarak `AllowDefault` özelliği. Bu durumda, bileşim alma mevcut dışarı eşleşmiyor ve içeri aktarma özelliği, kendi özellik türü için varsayılan ayarlanacak bile başarılı olur (`null` nesne özelliklerini `false` Boole değerlerini veya sayısal sıfır Özellikler.) Aşağıdaki sınıf isteğe bağlı bir içeri aktarma kullanır.
+`AllowDefault` Özelliğini kullanarak bir içeri aktarmanın *isteğe bağlı* olduğunu belirtebilirsiniz. Bu durumda, içeri aktarma işlemi kullanılabilir herhangi bir dışarı aktarımlarla eşleşmezse ve içeri aktarma özelliği özellik türü için varsayılan değer olarak ayarlanır (`null` nesne özellikleri için, `false` Boole değerleri veya sayısal için sıfır). Özellikler.) Aşağıdaki sınıf isteğe bağlı bir içeri aktarma kullanır.
 
 ```vb
 Public Class MyClass1
@@ -367,9 +367,9 @@ public class MyClass
 }
 ```
 
-### <a name="importing-multiple-objects"></a>Birden çok nesne alma
+### <a name="importing-multiple-objects"></a>Birden çok nesne içeri aktarılıyor
 
-`Import` Özniteliği yalnızca başarıyla oluşan bir ve yalnızca bir dışarı aktarma eşleştiğinde. Diğer durumlarda, bir birleştirme hatası oluşturur. Aynı anlaşmaya eşleşen birden fazla dışarı aktarmak için kullanın `ImportMany` özniteliği. İçeri aktarmalar bu özniteliği ile işaretlenmiş her zaman isteğe bağlıdır. Örneğin, eşleşen dışarı aktarımlar mevcut değilse birleştirme başarısız olmaz. Aşağıdaki sınıf herhangi bir sayıda tür dışarı aktarır `IMyAddin`.
+`Import` Özniteliği yalnızca bir ve yalnızca bir dışarı aktarma ile eşleştiğinde başarılı bir şekilde oluşturulur. Diğer durumlar, bir bileşim hatası oluşturur. Aynı sözleşmeyle eşleşen birden fazla dışarı aktarmayı içeri aktarmak için `ImportMany` özniteliğini kullanın. Bu öznitelikle işaretlenen içeri aktarmalar her zaman isteğe bağlıdır. Örneğin, hiçbir eşleşen dışarı aktarma yoksa, bileşim başarısız olmaz. Aşağıdaki sınıf, türünde `IMyAddin`herhangi bir sayıda dışarı aktarma içeri aktarır.
 
 ```vb
 Public Class MyClass1
@@ -388,9 +388,9 @@ public class MyClass
 }
 ```
 
-İçeri aktarılan dizi sıradan kullanarak erişilebilir `IEnumerable<T>` sözdizimi ve yöntem. Bir sıradan dizi kullanmak da mümkündür (`IMyAddin[]`) bunun yerine.
+İçeri aktarılan diziye, normal `IEnumerable<T>` sözdizimi ve yöntemleri kullanılarak erişilebilir. Bunun yerine sıradan bir Array (`IMyAddin[]`) kullanmak da mümkündür.
 
-İle birlikte kullandığınızda bu desen çok önemli olabilir `Lazy<T>` söz dizimi. Kullanarak örneğin, `ImportMany`, `IEnumerable<T>`, ve `Lazy<T>`, istediğiniz sayıda nesne dolaylı başvuru içeri aktarabilir ve yalnızca gerekli olanları örneği. Bu düzen aşağıdaki sınıfı gösterir.
+Bu model, `Lazy<T>` söz dizimi ile birlikte kullandığınızda çok önemli olabilir. Örneğin,, ve `ImportMany` `IEnumerable<T>` `Lazy<T>`kullanarak, dolaylı başvuruları herhangi bir sayıda nesneye aktarabilir ve yalnızca gerekli olanları örnekleyebilirsiniz. Aşağıdaki sınıf bu kalıbı gösterir.
 
 ```vb
 Public Class MyClass1
@@ -411,11 +411,11 @@ public class MyClass
 
 <a name="avoiding_discovery"></a>
 
-## <a name="avoiding-discovery"></a>Keşif Önleme
+## <a name="avoiding-discovery"></a>Bulmaktan kaçınma
 
-Bazı durumlarda, bir katalog bir parçası olarak bulunan bir bölümünün engellemek isteyebilirsiniz. Örneğin, parça öğesinden devralındı amaçlandı, ancak kullanılmayan bir temel sınıf olabilir. Bunu yapmanın iki yolu vardır. İlk olarak kullanabileceğiniz `abstract` bölümü sınıfı anahtar sözcüğü. Devralınan dışarı aktarımlar sınıfları sağlasa soyut sınıfları dışarı aktarma, hiçbir zaman sağlar.
+Bazı durumlarda, bir bölümün bir kataloğun parçası olarak bulunmasını engellemek isteyebilirsiniz. Örneğin, bölüm, öğesinden Devralınana yönelik bir temel sınıf olabilir, ancak kullanılmaz. Bunu yapmanın iki yolu vardır. İlk olarak, bölüm sınıfında `abstract` anahtar sözcüğünü kullanabilirsiniz. Soyut sınıflar hiçbir şekilde dışa aktarma sağlamaz, ancak onlardan türetilen sınıflara devralınan dışarı aktarmalar sağlayabilir.
 
-Sınıfı soyut olarak yapılamaz, kendisiyle tasarlayabilirsiniz `PartNotDiscoverable` özniteliği. Bu özniteliği ile donatılmış bir bölümü herhangi bir katalogda dahil edilmez. Aşağıdaki örnek, bu desenleri gösterir. `DataOne` katalog tarafından bulunacaktır. Bu yana `DataTwo` olan soyut, bu bulunmaz. Bu yana `DataThree` kullanılan `PartNotDiscoverable` özniteliği, bu bulunmaz.
+Sınıf soyut hale getiril, `PartNotDiscoverable` özniteliği ile süslenebilir. Bu öznitelikle donatılmış bir bölüm, hiçbir katalogda yer almaz. Aşağıdaki örnekte bu desenler gösterilmektedir. `DataOne`, katalog tarafından keşfedilir. `DataTwo` Soyut olduğundan, bulunamayacaktır. Özniteliği kullanılmasından bu yana `DataThree` bulunamayacaktır. `PartNotDiscoverable`
 
 ```vb
 <Export()>
@@ -464,11 +464,11 @@ public class DataThree
 
 <a name="metadata_and_metadata_views"></a>
 
-## <a name="metadata-and-metadata-views"></a>Meta verileri ve meta veri görünümleri
+## <a name="metadata-and-metadata-views"></a>Meta veriler ve meta veri görünümleri
 
-Dışarı aktarmalar kendileri olarak bilinen hakkında ek bilgiler sağlayabilir *meta verileri*. Meta verileri içeri aktarma bölümü dışarı aktarılan nesnenin özelliklerini belirtmek için kullanılabilir. İçeri aktarma bölümünü kullanın veya bu oluşturmak zorunda kalmadan bir dışarı aktarma hakkında bilgi toplamak için dışarı aktarır karar vermek için bu verileri kullanabilirsiniz. Bu nedenle, bir içeri aktarma meta verileri kullanmak için yavaş olması gerekir.
+Dışarı aktarmalar, kendileri hakkında, *meta veri*olarak bilinen ek bilgiler sağlayabilir. Meta veriler, aktarılan nesnenin özelliklerini içeri aktarma bölümüne iletmek için kullanılabilir. İçeri aktarma bölümü bu verileri kullanarak hangi dışarı aktarımların kullanılacağını seçebilir veya onu oluşturmak zorunda kalmadan bir dışarı aktarma hakkında bilgi toplayabilir. Bu nedenle, meta verilerin kullanılması için bir içeri aktarmanın yavaş olması gerekir.
 
-Meta veri kullanmak için tipik olarak bilinen bir arabirim bildirmelidir bir *meta veri görünümü*, hangi meta verileri kullanıma sunulacak bildirir. Meta veri görünümü arabirimi yalnızca özelliklere sahip olması gerekir ve bu özelliklere sahip olması gerekir `get` erişimcileri. Aşağıdaki örnek bir meta veri görünümü arabirimidir.
+Meta verileri kullanmak için genellikle meta veri *görünümü*olarak bilinen bir arabirim bildirirsiniz, bu da hangi meta verilerin kullanılabilir olacağını bildirir. Meta veri görünümü arabiriminin yalnızca özellikleri olmalıdır ve bu özelliklerin `get` erişimcileri olmalıdır. Aşağıdaki arabirim bir örnek meta veri görünümüdür.
 
 ```vb
 Public Interface IPluginMetadata
@@ -491,9 +491,9 @@ public interface IPluginMetadata
 }
 ```
 
-Bir genel koleksiyon kullanmak da mümkündür `IDictionary<string, object>`olarak meta veri görünümü, ancak bu tür denetimi kulanmanız ve kaçınılmalıdır.
+Ayrıca, meta veri görünümü olarak genel bir koleksiyon `IDictionary<string, object>`kullanmak da mümkündür, ancak bu, tür denetimi avantajlarından yararlanır ve kaçınılması gerekir.
 
-Normalde, gerekli olan tüm meta veri görünümü'nde adlı özellikleri ve bunları sağlamayan hiçbir dışarı aktarma işlemini bir eşleşme değerlendirilmeyecek. `DefaultValue` Özniteliği, bir özelliğin isteğe bağlı olduğunu belirtir. Özellik dahil edilmezse, bir parametre olarak belirtilen varsayılan değerin atanacak `DefaultValue`. Meta veri ile tasarlanmış iki farklı sınıfları şunlardır: Bu sınıfların her ikisi de önceki meta veri görünümü eşleşir.
+Normalde, meta veri görünümündeki adlı tüm özellikler zorunludur ve bunları sağlamayan tüm dışarı aktarımlar bir eşleşme olarak değerlendirilmez. `DefaultValue` Özniteliği bir özelliğin isteğe bağlı olduğunu belirtir. Özellik dahil değilse, parametresi `DefaultValue`olarak belirtilen varsayılan değere atanır. Aşağıdakiler meta verilerle donatılmış iki farklı sınıftır. Bu sınıfların her ikisi de önceki meta veri görünümüyle eşleşir.
 
 ```vb
 <Export(GetType(IPlugin))>
@@ -529,9 +529,9 @@ public class DWriter : IPlugin
 }
 ```
 
-Meta veri sonra ifade edilir `Export` kullanarak özniteliği `ExportMetadata` özniteliği. Her bir meta veri parçası bir ad/değer çiftinden oluşur. Meta veri adı kısmı meta veri görünümü'nde uygun özellik adıyla eşleşmelidir ve değeri, bu özelliğe atanır.
+Meta veriler özniteliği `Export` `ExportMetadata` kullanılarak öznitelikten sonra ifade edilir. Her meta veri parçası bir ad/değer çiftinden oluşur. Meta verilerin ad kısmı meta veri görünümündeki uygun özelliğin adıyla eşleşmelidir ve değer bu özelliğe atanır.
 
-Herhangi biri, olacaksa kullanımda hangi meta veri görünümü belirten alıcısı var. Meta veri alma ikinci tür parametresi olarak meta veriler arabirimi ile yavaş bir içeri aktarma bildirilmiş `Lazy<T,T>`. Aşağıdaki sınıf önceki bölümünde meta verilerle içeri aktarır.
+Varsa, hangi meta veri görünümünün kullanımda olacağını belirten içeri aktarıcıdır. Meta veri içeren bir içeri aktarma, için `Lazy<T,T>`ikinci tür parametresi olarak meta veri arabirimi ile bir yavaş içeri aktarma olarak belirtilir. Aşağıdaki sınıf önceki bölümü meta verilerle içe aktarır.
 
 ```vb
 Public Class Addin
@@ -549,7 +549,7 @@ public class Addin
 }
 ```
 
-Çoğu durumda, meta verilerle birleştirmek istersiniz `ImportMany` kullanılabilir Imports ayrıştırmak ve seçin ve yalnızca bir örneği veya belirli bir koşulla eşleşecek şekilde bir koleksiyonu filtrelemek için özniteliği. Aşağıdaki sınıf yalnızca başlatır `IPlugin` sahip nesneleri `Name` "Günlükçüsü" değeri.
+Birçok durumda, kullanılabilir içeri aktarmalar aracılığıyla ayrıştırılacak ve yalnızca bir `ImportMany` tane seçip örnekleyerek veya bir koleksiyonu belirli bir koşulla eşleşecek şekilde filtreleyecek şekilde meta verileri özniteliğiyle birleştirmek isteyeceksiniz. Aşağıdaki sınıf yalnızca `IPlugin` "günlükçü" `Name` değerine sahip nesneleri örnekleyen.
 
 ```vb
 Public Class User
@@ -595,13 +595,13 @@ public class User
 
 <a name="import_and_export_inheritance"></a>
 
-## <a name="import-and-export-inheritance"></a>İçeri ve dışarı aktarma devralma
+## <a name="import-and-export-inheritance"></a>Devralmayı içeri ve dışarı aktarma
 
-Bir sınıf bir bölümünden devralınırsa, bu sınıf ayrıca bir bölümü olabilir. İçeri aktarmalar her zaman alt sınıflar tarafından devralınır. Bu nedenle, bir parça öğesinin her zaman üst sınıfıyla aynı Alınanlarla bir parçası olur.
+Bir sınıf bir bölümden devralırsa, bu sınıf da bir parça olabilir. İçeri aktarmalar her zaman alt sınıflar tarafından devralınır. Bu nedenle, bir parçanın bir alt sınıfı her zaman üst sınıfı ile aynı içeri aktarmaları olan bir bölüm olacaktır.
 
-Dışarı aktarmalar kullanarak bildirilen `Export` özniteliği alt sınıflar tarafından devralınmaz. Ancak, bir kendisini kullanarak dışarı aktarabilir `InheritedExport` özniteliği. Adornerset'in alt bölümü devralır ve sözleşme adı ve anlaşma türü de dahil olmak üzere aynı dışarı aktarma da sağlar. Farklı bir `Export` özniteliği `InheritedExport` yalnızca sınıf düzeyinde ve üye düzeyinde uygulanabilir. Bu nedenle, hiçbir üye düzeyinde dışarı aktarmaları devralınabilir.
+Özniteliği kullanılarak belirtilen dışarı aktarmalar `Export` , alt sınıflar tarafından devralınmaz. Ancak, bir bölüm `InheritedExport` özniteliğini kullanarak kendisini dışarı aktarabilir. Bölümün alt sınıfları, sözleşme adı ve anlaşma türü dahil olmak üzere aynı dışarı aktarmayı alır ve verir. Bir `Export` özniteliğin aksine, `InheritedExport` üye düzeyinde değil yalnızca sınıf düzeyinde uygulanabilir. Bu nedenle, üye düzeyinde dışarı aktarımlar hiçbir şekilde devralınmaz.
 
-Aşağıdaki dört sınıflar, içeri aktarma sürecin prensiplerini göstermek ve devralma dışarı aktarın. `NumTwo` devralınan `NumOne`, bu nedenle `NumTwo` içeri aktaracak `IMyData`. Sıradan dışarı aktarmaları devralınmaz, bu nedenle `NumTwo` herhangi bir şey aktarmaz. `NumFour` devralınan `NumThree`. Çünkü `NumThree` kullanılan `InheritedExport`, `NumFour` sözleşme türü ile bir dışarı aktarma yok `NumThree`. Üye düzeyinde dışarı aktarmaları hiçbir zaman devralınır, bu nedenle `IMyData` aktarılmaz.
+Aşağıdaki dört sınıf içeri ve dışarı aktarma devralma ilkelerini gösterir. `NumTwo`öğesinden `NumOne` devraldığından`IMyData`içeri aktarma işlemi yapılır.`NumTwo` Sıradan dışarı aktarmalar devralınmaz, bu `NumTwo` nedenle hiçbir şeyi dışarı aktarmaz. `NumFour`öğesinden `NumThree`devralır. Kullanıldığı için, Sözleşme`NumFour` türünde`NumThree`bir dışarı aktarma işlemi vardır. `InheritedExport` `NumThree` Üye düzeyinde dışarı aktarımlar hiçbir şekilde devralınmaz, `IMyData` bu nedenle dışarı aktarılmaz.
 
 ```vb
 <Export()>
@@ -687,7 +687,7 @@ public class NumFour : NumThree
 }
 ```
 
-İle ilişkili meta veri varsa bir `InheritedExport` özniteliği, bu meta verileri de devralınır. (Daha fazla bilgi için önceki "Meta verileri ve meta veri görünümleri" bölümüne bakın.) Alt sınıf tarafından devralınan meta verileri değiştirilemez. Ancak, yeniden bildirme tarafından `InheritedExport` özniteliği aynı anlaşma ve sözleşme yazın, ancak yeni meta veriler, alt sınıfın yeni meta verileriyle devralınan meta verileri değiştirebilirsiniz. Aşağıdaki sınıf, bu ilkeyi gösterir. `MegaLogger` Bölümü devraldığı `Logger` ve içerir `InheritedExport` özniteliği. Bu yana `MegaLogger` durumu adlı yeniden bildirir yeni meta devralmaz adı ve sürümü meta verilerine `Logger`.
+Bir `InheritedExport` öznitelikle ilişkili meta veriler varsa, bu meta veriler de devralınacaktır. (Daha fazla bilgi için önceki "meta veriler ve meta veri görünümleri" bölümüne bakın.) Devralınan meta veriler alt sınıf tarafından değiştirilemez. Ancak, aynı sözleşme adı ve anlaşma `InheritedExport` türüyle özniteliği yeniden bildirerek, ancak yeni meta veriler ile, alt sınıf devralınan meta verileri yeni meta verilerle değiştirebilir. Aşağıdaki sınıf bu ilkeyi gösterir. Bölüm öğesinden `Logger` devralır ve `InheritedExport` özniteliği içerir. `MegaLogger` Durum `MegaLogger` adlı yeni meta verileri yeniden bildirdiğinden, ' den `Logger`adı ve sürüm meta verilerini içermez.
 
 ```vb
 <InheritedExport(GetType(IPlugin))>
@@ -747,17 +747,17 @@ public class MegaLogger : Logger        {
 }
 ```
 
-Yeniden bildirirken `InheritedExport` öznitelik meta verileri geçersiz kılma, anlaşması türleri aynı olduğundan emin olun. (Önceki örnekte, `IPlugin` anlaşma türü.) İkinci öznitelik bunlar geçersiz kılmak yerine, farklıysa ikinci bağımsız bir dışarı aktarma bölümünden oluşturacaksınız. Genellikle, bu sözleşme türü, geçersiz kıldığınızda açıkça belirtmek olacağı anlamına gelir bir `InheritedExport` , önceki örnekte gösterildiği gibi öznitelik.
+Meta verileri geçersiz kılmak için `InheritedExport` özniteliği yeniden bildirirken, anlaşma türlerinin aynı olduğundan emin olun. (Önceki örnekte, `IPlugin` Sözleşme türüdür.) Farklıysa, ikinci öznitelik bölümden ikinci bir bağımsız dışarı aktarma işlemi oluşturacaktır. Genellikle bu, önceki örnekte gösterildiği gibi bir `InheritedExport` özniteliği geçersiz kıldığınızda anlaşma türünü açıkça belirtmeniz gerektiği anlamına gelir.
 
-Arabirimler doğrudan oluşturulamaz olduğundan, bunlar genellikle ile donatılmış olmalıdır olamaz `Export` veya `Import` öznitelikleri. Ancak, bir arabirim ile tasarlanabilir bir `InheritedExport` özniteliği arabirim düzeyinde ve dışarı aktarma herhangi yanı sıra meta veri ilişkili tüm sınıflar tarafından devralınır. Bir parçası olarak, ancak arabirim kullanılamaz.
+Arabirimler doğrudan oluşturulamadıklarından, genellikle veya `Export` `Import` öznitelikleriyle birlikte tasarlanamazlar. Bununla birlikte, bir arabirim, arabirim düzeyinde bir `InheritedExport` öznitelikle ilişkilendirilebilir ve ilgili tüm meta verilerle birlikte dışarı aktarma işlemi herhangi bir uygulama sınıfı tarafından devralınır. Ancak, arabirim bir bölüm olarak kullanılamaz.
 
 <a name="custom_export_attributes"></a>
 
 ## <a name="custom-export-attributes"></a>Özel dışarı aktarma öznitelikleri
 
-Temel dışarı aktarma öznitelik `Export` ve `InheritedExport`, meta veri öznitelik özellikleri içerecek şekilde genişletilebilir. Bu teknik, birçok bölüme benzer meta veri uygulamak veya meta veri öznitelikleri, bir devralma ağacı oluşturma için kullanışlıdır.
+Temel dışa aktarma öznitelikleri `Export` ve `InheritedExport`, meta verileri öznitelik özellikleri olarak içerecek şekilde genişletilebilir. Bu teknik, benzer meta verileri birçok parçaya uygulamak veya meta veri özniteliklerinin devralma ağacını oluşturmak için faydalıdır.
 
-Sözleşme türü, sözleşme adı veya diğer meta verileri özel bir öznitelik belirtebilirsiniz. Özel bir öznitelik öğesinden devralan bir sınıf tanımlamak için `ExportAttribute` (veya `InheritedExportAttribute`) ile belirtilmiş olmalıdır `MetadataAttribute` özniteliği. Aşağıdaki sınıf özel bir öznitelik tanımlar.
+Özel bir öznitelik, anlaşma türünü, anlaşma adını veya diğer meta verileri belirtebilir. Özel bir öznitelik tanımlamak için, (veya `ExportAttribute` `InheritedExportAttribute`) öğesinden devralan bir sınıf, `MetadataAttribute` özniteliğiyle birlikte tasarlanmalıdır. Aşağıdaki sınıf özel bir özniteliği tanımlar.
 
 ```vb
 <MetadataAttribute()>
@@ -791,7 +791,7 @@ public class MyAttribute : ExportAttribute
 }
 ```
 
-Bu sınıf adlı özel bir öznitelik tanımlar `MyAttribute` sözleşme türüyle `IMyData` ve bazı meta veriler adlı `MyMetadata`. Bir sınıftaki tüm özellikler ile işaretlenen `MetadataAttribute` özniteliği özel özniteliğinde tanımlanan meta veriler olarak kabul edilir. Aşağıdaki iki bildirimi eşdeğerdir.
+Bu sınıf, anlaşma türü `MyAttribute` `IMyData` ile adlı özel bir özniteliği ve adında `MyMetadata`bazı meta verileri tanımlar. `MetadataAttribute` Özniteliği ile işaretlenmiş bir sınıftaki tüm özellikler özel özniteliğinde tanımlanmış meta veriler olarak kabul edilir. Aşağıdaki iki bildirim eşdeğerdir.
 
 ```vb
 <Export(GetType(IMyAddin))>
@@ -815,23 +815,23 @@ public MyAddin myAddin { get; set; }
 public MyAddin myAddin { get; set; }
 ```
 
-İlk bildiriminde sözleşme türü ve meta verileri açıkça tanımlanır. İkinci bildiriminde anlaşma türü ve meta veri özelleştirilmiş özniteliğinde örtüktür. Burada aynı meta verilerinin büyük bir miktarını birçok bölümü (örneğin, yazar veya telif hakkı bilgileri) uygulanması gereken durumlarda özellikle çok fazla zaman ve çoğaltma özel özniteliğini kullanarak kaydedebilirsiniz. Daha fazla özel özniteliklerin devralma ağacı farklılıklara izin vermek oluşturulabilir.
+İlk bildirimde, anlaşma türü ve meta veriler açıkça tanımlanmıştır. İkinci bildirimde, anlaşma türü ve meta veriler, özelleştirilmiş öznitelikte örtülü olarak bulunur. Özellikle, büyük miktarda özdeş meta verilerin birçok parçaya uygulanması gerektiği durumlarda (örneğin, yazar veya telif hakkı bilgileri), özel bir öznitelik kullanmak çok fazla zaman ve çoğaltma kazandırabilir. Ayrıca, çeşitlere izin vermek için özel özniteliklerin devralma ağaçları oluşturulabilir.
 
-İsteğe bağlı meta veri özel bir öznitelik oluşturmak için kullanabileceğiniz `DefaultValue` özniteliği. Bu öznitelik, bir özel öznitelik sınıftaki bir özelliğe uygulandığında, düzenlenmiş özellik isteğe bağlıdır ve bir dışarı Aktarıcı tarafından sağlanması gerekmez belirtir. Özellik için bir değer sağlanmazsa, bu özellik türü için varsayılan değer atanır (genellikle `null`, `false`, veya 0.)
+Özel bir öznitelikte isteğe bağlı meta veri oluşturmak için `DefaultValue` özniteliğini kullanabilirsiniz. Bu öznitelik özel öznitelik sınıfındaki bir özelliğe uygulandığında, düzenlenmiş özelliğin isteğe bağlı olduğunu ve bir dışarı aktarma tarafından sağlanması gerektiğini belirtir. Özelliği için bir değer sağlanmadığında, özellik türü (genellikle `null`, `false`, veya 0) için varsayılan değer atanır.
 
 <a name="creation_policies"></a>
 
-## <a name="creation-policies"></a>İlkeleri oluşturma
+## <a name="creation-policies"></a>Oluşturma Ilkeleri
 
-Bir bölümü bir içeri aktarma ve oluşturma işlemi gerçekleştirildiğinde belirttiğinde, kapsayıcının eşleşen bir dışarı aktarım bulmaya çalışır. Bir dışarı aktarma ile içeri aktarma başarıyla eşleşirse, içeri aktarma üye dışarı aktarılan nesne örneğine ayarlanır. Bu örnek nereden geldiğini dışarı aktarılan bölümün tarafından denetlenir *oluşturma ilkesi*.
+Bir parça bir içeri aktarma belirttiğinde ve bileşim gerçekleştirildiğinde, bileşim kapsayıcısı eşleşen bir dışarı aktarma bulmaya çalışır. İçeri aktarma işlemi başarıyla dışarı aktarma ile eşleşiyorsa, içeri aktarma üyesi dışa aktarılan nesnenin bir örneğine ayarlanır. Bu örneğin nereden geldiği, dışa aktarılan bölümün *oluşturma ilkesi*tarafından denetlenir.
 
-İki olası oluşturma ilke *paylaşılan* ve *paylaşılmayan*. Paylaşılan bir oluşturma ilkesiyle parçası sözleşme ile bir bölümü için kapsayıcıdaki her bir içeri aktarma arasında paylaştırılır. Bileşim motoru eşleşme bulur ve içeri aktarılırken bir özelliği ayarlamak yalnızca biri zaten mevcut değilse yeni bir kopya bölümünün örneği oluşturulmaz; Aksi takdirde, mevcut kopyalama kullanacaksınız. Bu, çok sayıda nesne aynı bölüme başvuruları olabileceği anlamına gelir. Bu bölümleri, birçok yerde değiştirilebilir; iç durumu dayanarak doğrulamamalısınız. Bu ilke, statik bölümleri, hizmetleri sağlamak bölümleri ve çok fazla bellek veya diğer kaynakları tüketen bölümleri için uygundur.
+Olası iki oluşturma ilkesi *paylaşılır* ve *paylaşılmaz*. Paylaşılan bir oluşturma ilkesinin bulunduğu bir bölüm, söz konusu sözleşmenin bir parçası için kapsayıcıdaki her içeri aktarma arasında paylaşılır. Bileşim altyapısı bir eşleşme bulduğunda ve bir içeri aktarma özelliği ayarlamaya sahipse, yalnızca bir tane yoksa, bölümün yeni bir kopyasını oluşturur. Aksi takdirde, mevcut kopyayı sağlar. Bu, birçok nesnenin aynı bölüme başvurmuş olabileceği anlamına gelir. Bu tür parçalar birçok yerden değiştirilebilen iç duruma dayanmamalıdır. Bu ilke statik bölümler, hizmet sağlayan parçalar ve çok fazla bellek veya diğer kaynakları kullanan parçalar için uygundur.
 
-Aktarımlarından biri için eşleşen bir içeri aktarma bulunan her zaman bir parçası oluşturma ilkesine paylaşılmayan oluşturulur. Parçanın dışarı aktarılan sözleşme biriyle eşleşen bir kapsayıcıdaki her bir içeri aktarma için yeni bir kopyasını dolayısıyla örneği oluşturulur. Bu kopyalar iç durumu paylaşılmaz. Bu ilke, burada kendi iç durumu her içeri aktarma gerektirir bölümleri için uygundur.
+Dışarı aktarmalarından biri için eşleşen bir içeri aktarma bulunduğunda, paylaşılmayan oluşturma ilkesini içeren bir bölüm oluşturulur. Bu nedenle, kapsayıcının dışarı aktarılan sözleşmelerinden biriyle eşleşen kapsayıcıdaki her içeri aktarma işlemi için yeni bir kopya oluşturulacak. Bu kopyaların iç durumu paylaşılmayacak. Bu ilke, her içeri aktarmanın kendi iç durumunu gerektirdiği parçalar için uygundur.
 
-Hem içeri aktarma ve dışarı aktarma değerleri arasından bir bölümü oluşturma ilkesi belirleyebilirsiniz `Shared`, `NonShared`, veya `Any`. Varsayılan değer `Any` hem içeri ve dışarı aktarımların. Belirten bir dışarı aktarma `Shared` veya `NonShared` yalnızca aynı belirtir ya da belirten bir içeri aktarma eşleşecektir `Any`. Benzer şekilde, belirten alma `Shared` veya `NonShared` yalnızca aynı belirtir ya da belirten bir dışarı aktarma eşleşecektir `Any`. İçeri ve dışarı aktarmalar uyumsuz oluşturma ilkeleri ile bir eşleşme aynı şekilde bir içeri aktarma ve dışarı aktarma, sözleşme adı ya da sözleşme türü bir eşleşme değil olarak kabul edilmez. İçeri aktarma ve dışarı aktarma hem de belirtirseniz `Any`, değil oluşturma ilkesi belirtin veya varsayılan `Any`, paylaşılan oluşturma ilkesi varsayılan olur.
+İçeri aktarma ve dışarı aktarma, bir bölümün oluşturma ilkesini, veya `Shared` `Any`değerlerinin `NonShared`arasından belirtebilir. Varsayılan değer `Any` içeri ve dışarı aktarma içindir. Yalnızca `Shared` aynısınıbelirten`NonShared` veya belirten bir içeri aktarma ile eşleşen bir dışarı aktarma işlemi. `Any` Benzer şekilde, `Shared` veya `NonShared` belirten bir içeri aktarma yalnızca aynısını belirten veya belirten `Any`bir dışarı aktarma ile eşleşir. Uyumsuz oluşturma ilkelerine sahip içeri aktarmalar ve dışarı aktarmalar, sözleşme adı veya sözleşme türü eşleşme olmayan bir içeri ve dışarı aktarma ile aynı şekilde bir eşleşme olarak kabul edilmez. Hem içeri ve dışarı aktarma `Any`hem de bir oluşturma ilkesi ve için `Any`varsayılan değer belirtmez, oluşturma ilkesi varsayılan olarak paylaşılacaktır.
 
-Aşağıdaki örnek, içeri aktarmalar hem oluşturma ilkeleri belirtme dışarı aktarmaları gösterir. `PartOne` Varsayılan olarak, bu nedenle, bir oluşturma ilkesi belirtmiyor `Any`. `PartTwo` Varsayılan olarak, bu nedenle, bir oluşturma ilkesi belirtmiyor `Any`. Her ikisi de içeri ve dışarı aktarmak için varsayılan olduğundan `Any`, `PartOne` paylaşılır. `PartThree` belirtir bir `Shared` oluşturma ilkesi, bu nedenle `PartTwo` ve `PartThree` aynı kopyasını paylaşır `PartOne`. `PartFour` belirtir bir `NonShared` oluşturma ilkesi, bu nedenle `PartFour` içinde paylaşılmayan olacaktır `PartFive`. `PartSix` belirtir bir `NonShared` oluşturma ilkesi. `PartFive` ve `PartSix` her ayrı kopyası alırsınız `PartFour`. `PartSeven` belirtir bir `Shared` oluşturma ilkesi. Olduğundan dışarı aktarılan `PartFour` oluşturma ilkesi ile `Shared`, `PartSeven` alma herhangi bir şey eşleşmiyor ve doldurulmaz.
+Aşağıdaki örnek, oluşturma ilkelerini belirten içeri ve dışarı aktarmaları gösterir. `PartOne`bir oluşturma ilkesi belirtmez, bu nedenle varsayılan olur `Any`. `PartTwo`bir oluşturma ilkesi belirtmez, bu nedenle varsayılan olur `Any`. Hem içeri hem de dışarı aktarma varsayılan `Any` `PartOne` olarak paylaşılacak. `PartThree`bir `Shared` oluşturma ilkesi belirtir, `PartThree` bu `PartTwo` nedenle aynı kopyasını `PartOne`paylaşır. `PartFour`bir `NonShared` oluşturma ilkesi belirtir, bu `PartFour` nedenle içinde `PartFive`paylaşılmayacak. `PartSix`bir `NonShared` oluşturma ilkesi belirtir. `PartFive`ve `PartSix` her biri ayrı `PartFour`birer kopyasını alır. `PartSeven`bir `Shared` oluşturma ilkesi belirtir. Oluşturma `PartFour` ilkesiyledışarı`PartSeven` aktarılmış olmadığından ,içeriaktarmahiçbirşeyleeşleşmezvedoldurulmayacaktır.`Shared`
 
 ```vb
 <Export()>
@@ -972,17 +972,17 @@ public class PartSeven
 
 <a name="life_cycle_and_disposing"></a>
 
-## <a name="life-cycle-and-disposing"></a>Yaşam döngüsü ve atma
+## <a name="life-cycle-and-disposing"></a>Yaşam döngüsü ve elden atma
 
-Kapsayıcının içinde bölümleri barındırıldığından, yaşam döngüsü sıradan nesnelerden daha karmaşık olabilir. Bölümleri iki önemli yaşam döngüsü ile ilgili arabirimler uygulayabilirsiniz: `IDisposable` ve `IPartImportsSatisfiedNotification`.
+Parçalar bileşim kapsayıcısında barındırıldığından, bunların yaşam döngüsü sıradan nesnelerden daha karmaşık olabilir. Parçalar, iki önemli yaşam döngüyle ilgili arabirimler uygulayabilir: `IDisposable` ve `IPartImportsSatisfiedNotification`.
 
-Aşağı kapatma sırasında gerçekleştirilecek işin gerektiren veya kaynakları serbest bırakmak gereken bölümleri uygulamanız gerekir `IDisposable`, .NET Framework nesneleri için her zamanki gibi. Ancak, kapsayıcı oluşturur ve bölümleri başvuruları korur olduğundan, yalnızca bir bölüm kapsayıcı çağırmalıdır `Dispose` yöntemini. Kapsayıcı uygulayan `IDisposable`ve kendisinin temizleme bölümü olarak `Dispose` çağırır `Dispose` sahip olduğu tüm bölümleri. Ve sahip olduğu herhangi bir bölümü artık gerekli değilse bu nedenle, her zaman kapsayıcının silmesi gerekir.
+Çalışma veya kaynakların serbest bırakılması gereken, .NET Framework nesneler için her zamanki gibi, çalışması gereken bölümlerin uygulanması `IDisposable`gerekir. Ancak, kapsayıcı parçalar için başvuruları oluşturduğundan ve sakladığı için, yalnızca bir bölüme sahip olan kapsayıcı üzerinde `Dispose` yöntemi çağırmalıdır. Kapsayıcının kendisi `IDisposable`ve içindeki `Dispose` Temizleme işleminin bir kısmı, sahip olduğu tüm bölümleri çağırır `Dispose` . Bu nedenle, derleme kapsayıcısını her zaman ve sahip olduğu tüm parçalar artık gerekli olmadığında atmalısınız.
 
-Uzun süreli bileşim kapsayıcılar için bellek tüketimi paylaşılmayan oluşturma ilkesi ile parçaları tarafından bir sorun olabilir. Bu paylaşılmayan bölümler birden çok kez oluşturulabilir ve kapsayıcı atılana kadar elden değil. Bu işlemel için kapsayıcı sağlar. `ReleaseExport` yöntemi. Bu yöntemin çağrılması bir paylaşılmayan dışarı aktarma, dışarı aktarma kaldırır ve siler. Yalnızca vb. ağaç aşağı kaldırılan dışarı aktarma tarafından kullanılan bölümleri de kaldırılır ve atıldı. Bu şekilde, kaynakları bileşim kapsayıcı disposing olmadan kazanılabilir.
+Uzun süreli oluşturma kapsayıcıları için, paylaşılmayan bir oluşturma ilkesiyle bölümlere göre bellek tüketimi bir sorun olabilir. Bu paylaşılmayan bölümler birden çok kez oluşturulabilir ve kapsayıcının kendisi atılana kadar atılamaz. Bu sorunu ele almak için kapsayıcı `ReleaseExport` yöntemini sağlar. Bu yöntemi paylaşılmayan bir dışarı aktarma üzerinde çağırmak, bu dışarı aktarmayı bileşim kapsayıcısından kaldırır ve bunu ortadan kaldırır. Yalnızca kaldırılan dışarı aktarma tarafından kullanılan ve bu nedenle ağacın üzerinde kullanılan parçalar da kaldırılır ve silinir. Bu şekilde, kaynaklar bileşim kapsayıcısının kendisini elden çıkarmadan geri kazanılabilirler.
 
-`IPartImportsSatisfiedNotification` adlı bir yöntem içerir `OnImportsSatisfied`. Bu yöntem, kapsayıcının oluşturma tamamlandı ve parça içeri aktarmalar kullanım için hazır olduğunuzda arabirimi uygulayan herhangi bir bölümü şirket tarafından çağrılır. Bölümleri aktarımlarının diğer bölümlerini doldurmak için bileşim motoru tarafından oluşturulur. Imports bölümünün ayarlamadan önce kullanır veya bu değerleri kullanarak önkoşul olarak belirtilmedi sürece bölümü oluşturucuda içeri aktarılan değerlerini işleyen başlatma gerçekleştirilemiyor `ImportingConstructor` özniteliği. Bu genellikle tercih edilen yöntemdir, ancak bazı durumlarda, oluşturucu ekleme kullanılamayabilir. Bu gibi durumlarda, başlatma gerçekleştirilebilir `OnImportsSatisfied`, ve bölümü uygulamalıdır `IPartImportsSatisfiedNotification`.
+`IPartImportsSatisfiedNotification`adlı `OnImportsSatisfied`bir yöntemi içerir. Bu yöntem, oluşturma işlemi tamamlandığında ve bölümün içeri aktarmaları kullanıma hazırlandığında arabirimini uygulayan herhangi bir bölümde bileşim kapsayıcısı tarafından çağırılır. Bölümler, diğer parçaların içeri aktarmalarını dolduracak şekilde bileşim altyapısı tarafından oluşturulur. Bir bölümün içeri aktarmaları bir şekilde ayarlanmadan önce, bu değerler `ImportingConstructor` öznitelik kullanılarak önkoşul olarak belirtilmediği sürece, Bölüm oluşturucusunda içeri aktarılan değerleri kullanan veya bunları değiştiren herhangi bir başlatma gerçekleştiremezsiniz. Bu normal olarak tercih edilen yöntemdir, ancak bazı durumlarda, Oluşturucu Ekleme kullanılamıyor olabilir. Bu durumlarda, ' de `OnImportsSatisfied`başlatma gerçekleştirilebilir ve bölümünün uygulanması `IPartImportsSatisfiedNotification`gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kanal 9 Video: Yönetilen Genişletilebilirlik Çerçevesi ile uygulamalarınızı açın](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
-- [Kanal 9 Video: Yönetilen Genişletilebilirlik Çerçevesi (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+- [Channel 9 videosu: Uygulamalarınızı Managed Extensibility Framework açın](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
+- [Channel 9 videosu: Managed Extensibility Framework (MEF) 2,0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

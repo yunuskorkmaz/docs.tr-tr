@@ -1,72 +1,79 @@
 ---
-title: ADO.NET bağlantı dizeleri
+title: ADO.NET içinde bağlantı dizeleri
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 3b7cb0ab061da8364a9fecc3868ba9aaf7501577
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 02fe8d984f1287673477bb142b3f9626e248898e
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881156"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363753"
 ---
-# <a name="connection-strings-in-adonet"></a>ADO.NET bağlantı dizeleri
+# <a name="connection-strings-in-adonet"></a>ADO.NET içinde bağlantı dizeleri
 
-Bir bağlantı dizesi, bir veri kaynağı için veri sağlayıcısı'ndan bir parametre olarak geçen başlatma bilgileri içerir. Veri sağlayıcısı değeri olarak bağlantı dizesini alan <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType> özelliği. Sağlayıcı bağlantı dizesini ayrıştırmak ve sözdiziminin doğru olduğunu ve anahtar sözcükleri desteklendiğinden emin olmanızı sağlar. Ardından <xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType> yöntemi, veri kaynağına ayrıştırılmış bağlantı parametrelerini geçirir. Veri kaynağını daha fazla doğrulama gerçekleştirir ve bir bağlantı kurar.
+Bir bağlantı dizesi, veri sağlayıcısından bir veri kaynağına parametre olarak geçirilen başlatma bilgilerini içerir. Veri sağlayıcısı, bağlantı dizesini <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType> özelliğin değeri olarak alır. Sağlayıcı bağlantı dizesini ayrıştırır ve sözdiziminin doğru olduğundan ve anahtar sözcüklerin desteklendiğinden emin olmanızı sağlar. Daha sonra <xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType> yöntemi, ayrıştırılmış bağlantı parametrelerini veri kaynağına geçirir. Veri kaynağı daha fazla doğrulama gerçekleştirir ve bir bağlantı oluşturur.
 
-## <a name="connection-string-syntax"></a>Bağlantı dizesi söz dizimi
+## <a name="connection-string-syntax"></a>Bağlantı dizesi sözdizimi
 
-Bir bağlantı dizesi anahtar/değer parametresi çiftleri noktalı virgülle ayrılmış bir listesi verilmiştir:
+Bağlantı dizesi, anahtar/değer parametre çiftlerinin noktalı virgülle ayrılmış listesidir:
 
 ```
 keyword1=value; keyword2=value;
 ```
 
-Anahtar sözcükler, büyük küçük harfe duyarlı değildir. Değerleri, ancak veri kaynağına bağlı olarak duyarlı olabilir. Hem anahtar hem de değerleri içerebilir [boşluk karakterleri](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Baştaki ve sondaki boşluk anahtar sözcükleri yok sayıldı ve tırnak işareti olmayan değerler.
+Anahtar sözcükler büyük/küçük harfe duyarlı değildir. Ancak değerler, veri kaynağına bağlı olarak büyük/küçük harfe duyarlı olabilir. Anahtar sözcüklerin ve değerlerin her ikisi de [boşluk karakterleri](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)içerebilir. Baştaki ve sondaki boşluk, anahtar sözcüklerde ve tırnak işaretsiz değerlerde yok sayılır.
 
-Bir değer virgül içeriyorsa [Unicode denetim karakterlerini](https://en.wikipedia.org/wiki/Unicode_control_characters), veya baştaki veya sondaki boşlukları, bunu tek veya çift tırnak içine alınmalıdır. Örneğin:
+Bir değer noktalı virgül, [Unicode denetim karakterleri](https://en.wikipedia.org/wiki/Unicode_control_characters)veya baştaki veya sondaki boşluk içeriyorsa, tek veya çift tırnak işareti içine alınmalıdır. Örneğin:
 
 ```
 Keyword=" whitespace  ";
 Keyword='special;character';
 ```
 
-Kapsayan karakter kendisini kapsayan değeri içinde gerçekleşmeyebilir. Bu nedenle, tek tırnak işareti içeren bir değeri yalnızca çift tırnak işareti bulunan ve tersi içine alınabilir:
+Kapsayan karakter, içerdiği değer içinde gerçekleşmeyebilir. Bu nedenle, tek tırnak işareti içeren bir değer yalnızca çift tırnak işaretleri içine alınabilir ve tam tersi de geçerlidir:
 
 ```
 Keyword='double"quotation;mark';
 Keyword="single'quotation;mark";
 ```
 
-Aşağıdaki bağlantı dizelerinin geçerli olduğu şekilde eşittir işareti yanı sıra, tırnak işaretleri kaçış, gerek yoktur:
+Ayrıca, kapsayan karakterden ikisini birlikte kullanarak da kaçış yapabilirsiniz:
+
+```
+Keyword="double""quotation";
+Keyword='single''quotation';
+```
+
+Tırnak işareti ve eşittir işareti, kaçış gerektirmez, bu nedenle aşağıdaki bağlantı dizeleri geçerlidir:
 
 ```
 Keyword=no "escaping" 'required';
 Keyword=a=b=c
 ```
 
-Sonraki noktalı virgül veya dizenin sonuna kadar her değer okunur olduğundan, ikinci örnek değer `a=b=c`, ve son noktalı virgül isteğe bağlıdır.
+Her değer bir sonraki noktalı virgül veya dize sonuna kadar okunduğundan, ikinci örnekteki `a=b=c`değer ve son noktalı virgül isteğe bağlıdır.
 
-Tüm bağlantı dizeleri, yukarıda açıklanan aynı temel sözdizimi paylaşın. Tanınan bir anahtar kümesini sağlayıcısında ancak bağlıdır ve önceki API'leri yıl boyunca gelişmiştir *ODBC*. *.NET Framework* için veri sağlayıcısı *SQL Server* (`SqlClient`) daha eski API'lar, birçok sözcüklerden destekler ancak genellikle daha esnek ve eş anlamlılar pek çok ortak bağlantı dizesini kabul eder. anahtar sözcükler.
+Tüm bağlantı dizeleri yukarıda açıklanan temel sözdizimini paylaşır. Tanınan anahtar sözcükler kümesi, sağlayıcıya bağlıdır ve *ODBC*gibi önceki API 'lerden yıllarca yaşmıştır. *SQL Server* (`SqlClient`) için *.NET Framework* veri sağlayıcısı, eski API 'lerden birçok anahtar sözcüğü destekler, ancak genellikle daha esnektir ve ortak bağlantı dizesi anahtar sözcüklerinin birçoğu için eş anlamlıları kabul eder.
 
-Yazım hatalarının hatalara neden olabilir. Örneğin, `Integrated Security=true` geçerlidir, ancak `IntegratedSecurity=true` bir hataya neden olur.
+Yazım hataları hatalara neden olabilir. Örneğin, `Integrated Security=true` geçerlidir, ancak `IntegratedSecurity=true` hataya neden olur.
 
-Bağlantı dizeleri çalışma anında doğrulanmamış kullanıcı girişini el ile oluşturulmuş dize enjeksiyon saldırılarına karşı savunmasız ve veri kaynağındaki güvenliği tehlikeye atabilir. Bu sorunları gidermeye yönelik *ADO.NET* 2.0 kullanılmaya [bağlantı dizesi oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md) her *.NET Framework* veri sağlayıcısı. Bu bağlantı dizesi oluşturucular parametreleri kesin türü belirtilmiş bir özellik olarak kullanıma sunmak ve veri kaynağına göndermeden önce bağlantı dizesini doğrulamak mümkün kılar.
+Kimliği doğrulanmamış Kullanıcı girişinden, çalışma zamanında el ile oluşturulan bağlantı dizeleri, dize ekleme saldırılarına karşı savunmasız kalır ve veri kaynağındaki güvenliği tehlikeye at. Bu sorunları gidermek için, *ADO.NET* 2,0 her bir *.NET Framework* veri sağlayıcısı için [bağlantı dizesi oluşturucuları](../../../../docs/framework/data/adonet/connection-string-builders.md) sunmuştur. Bu bağlantı dizesi oluşturucuları, parametreleri kesin türü belirtilmiş özellikler olarak kullanıma sunar ve veri kaynağına gönderilmeden önce bağlantı dizesinin doğrulanmasını mümkün hale getirir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[Bağlantı dizesi oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)\
-Nasıl kullanılacağını gösteren `ConnectionStringBuilder` sınıfları geçerli bağlantı dizeleri oluşturmak için çalışma zamanında.
+[Bağlantı dizesi oluşturucuları](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+Çalışma zamanında geçerli bağlantı dizeleri `ConnectionStringBuilder` oluşturmak için sınıfların nasıl kullanılacağını gösterir.
 
 [Bağlantı dizeleri ve yapılandırma dosyaları](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
-Bağlantı dizelerini yapılandırma dosyalarında depolanıp gösterilmektedir.
+Yapılandırma dosyalarındaki bağlantı dizelerinin nasıl depolanacağını ve alınacağını gösterir.
 
-[Bağlantı dizesi söz dizimi](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
-Sağlayıcıya özgü bağlantı dizeleri için yapılandırmayı açıklar `SqlClient`, `OracleClient`, `OleDb`, ve `Odbc`.
+[Bağlantı dizesi sözdizimi](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+, `SqlClient`, Ve `OracleClient` `OleDb`için sağlayıcıyaözelbağlantıdizelerininnasılyapılandırılacağınıaçıklar.`Odbc`
 
 [Bağlantı bilgilerini koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
-Bir veri kaynağına bağlanmak için kullanılan bilgileri korumaya yönelik teknikleri gösterir.
+Bir veri kaynağına bağlanmak için kullanılan bilgileri koruma tekniklerini gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Kaynağına Bağlanma](/cpp/data/odbc/connecting-to-a-data-source)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

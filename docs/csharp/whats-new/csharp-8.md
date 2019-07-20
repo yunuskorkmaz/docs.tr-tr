@@ -2,12 +2,12 @@
 title: C# 8,0 C# kılavuzundaki yenilikler
 description: 8,0 ' de C# bulunan yeni özelliklere genel bakış alın. Bu makale, Preview 5 ile güncel değildir.
 ms.date: 02/12/2019
-ms.openlocfilehash: 7c37d63e5fc412352b27f2362a1ca102b5c0c040
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: bf67baba926effd012ae01d3d802ba921e41ad5a
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331404"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363887"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8,0 sürümündeki yenilikler
 
@@ -265,7 +265,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
     foreach (string line in lines)
     {
-        // If the line doesn't contain the word 'Second', write the line to the file.
         if (!line.Contains("Second"))
         {
             file.WriteLine(line);
@@ -275,7 +274,7 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 }
 ```
 
-Yukarıdaki örnekte, yöntemi için kapanış ayracı ne zaman ulaşıldığında dosya atıldı. İçinde `file` bildirildiği kapsamın sonu. Yukarıdaki kod, klasik [using deyimleri](../language-reference/keywords/using-statement.md) deyimi kullanılarak aşağıdaki koda eşdeğerdir:
+Yukarıdaki örnekte, yöntemi için kapanış ayracı ne zaman ulaşıldığında dosya atıldı. İçinde `file` bildirildiği kapsamın sonu. Yukarıdaki kod, klasik [using ifadesini](../language-reference/keywords/using-statement.md)kullanan aşağıdaki koda eşdeğerdir:
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)
@@ -284,7 +283,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
     {
         foreach (string line in lines)
         {
-            // If the line doesn't contain the word 'Second', write the line to the file.
             if (!line.Contains("Second"))
             {
                 file.WriteLine(line);
@@ -296,7 +294,7 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 
 Önceki örnekte, `using` ifadesiyle ilişkilendirilen kapanış ayracı aşıldığında dosya atıldı.
 
-Her iki durumda da derleyici çağrısını `Dispose()`oluşturur. Using deyimindeki ifade atılabilir değilse derleyici bir hata oluşturur.
+Her iki durumda da derleyici çağrısını `Dispose()`oluşturur. `using` Deyimdeki ifade atılabilir değilse, derleyici bir hata oluşturur.
 
 ## <a name="static-local-functions"></a>Statik yerel işlevler
 

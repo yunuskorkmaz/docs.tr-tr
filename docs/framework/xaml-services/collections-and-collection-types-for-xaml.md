@@ -2,49 +2,49 @@
 title: XAML Koleksiyonları ve Koleksiyon Türleri
 ms.date: 03/30/2017
 ms.assetid: 58f8e7c6-9a41-4f25-8551-c042f1315baa
-ms.openlocfilehash: 4123b64545f7c47a96c4cae496046a89b7e576b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63f6346837f77dbdbdcb4a90ec5af725be69ee02
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954186"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364329"
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>XAML Koleksiyonları ve Koleksiyon Türleri
 
-Bu konu, bir koleksiyon desteklemek ve alt öğesi üst nesne öğesi ya da özellik öğesi koleksiyon öğeleri oluşturmak için XAML söz dizimi desteklemek için tasarlanan türleri özelliklerini tanımlamak açıklar.
+Bu konu, bir koleksiyonu desteklemek için tasarlanan türlerin özelliklerinin nasıl tanımlanacağını ve koleksiyon öğelerini bir üst nesne öğesi ya da özellik öğesinin öğe alt öğesi olarak örneği oluşturmak için XAML sözdizimini desteklemeyi açıklamaktadır.
 
 ## <a name="xaml-collection-concepts"></a>XAML koleksiyonu kavramları
 
-Kavramsal olarak, herhangi bir ilişki kapsamındaki bir XAML nesne öğesi birden çok alt öğelerini olduğunda veya XAML özellik öğesi koleksiyonu olarak uygulanması gereken XAML içinde. Bu koleksiyon söz konusu ilişki üst XAML türü belirli bir XAML özelliği ile ilişkilendirilmelidir. XAML işlemci yedekleme koleksiyon özelliğini yeni eklenen bir öğesi olarak işaretleme her öğe atamak beklediği özellik bir koleksiyon olması gerekir.
+Kavramsal olarak, XAML 'deki bir XAML nesne öğesi ya da XAML özellik öğesi kapsamında birden çok alt öğe olduğunda herhangi bir ilişki koleksiyon olarak uygulanmalıdır. Bu koleksiyonun, bu ilişkide üst öğe olan XAML türünün belirli bir XAML özelliğiyle ilişkilendirilmesi gerekir. Bir XAML işlemcisi, biçimlendirme içindeki her öğeyi, yeni eklenen koleksiyon özelliği için bir öğe olacak şekilde atamayı beklediği için, özelliği bir koleksiyon olmalıdır.
 
-XAML dili düzeyinde tam koleksiyonu desteği gereksinimlerini tam olarak tanımlanmamış. Bir koleksiyon ya da bir liste veya bir sözlük (ikisi) olabileceği kavramı XAML dili düzeyinde tanımlanır, ancak hangi yedekleme türlerinin ya da listeleri temsil eden veya sözlükler XAML dil tarafından tanımlanmaz.
+XAML dil düzeyinde, koleksiyon desteğinin tam gereksinimleri tam olarak tanımlanmamıştır. Bir koleksiyonun bir liste veya sözlük (her ikisi birden değil) olabilir kavramı XAML dil düzeyinde tanımlanır, ancak hangi yedekleme türleri liste veya sözlükleri temsil eder XAML dili tarafından tanımlanmamıştır.
 
-.NET Framework XAML hizmetlerinde kavramı XAML koleksiyonu desteği, .NET Framework türleri Yedekleme açısından daha net bir şekilde tanımlanır. Özellikle koleksiyonlar için XAML destek çeşitli .NET Framework kavramlarını ve listeleri ve genel .NET Framework programlamada sözlükleri için kullanılan API'leri temel alır.
+.NET Framework XAML hizmetlerinde, XAML koleksiyonu desteği kavramı, .NET Framework yedekleme türleri bakımından daha açık bir şekilde tanımlanmıştır. Özellikle, koleksiyonlar için XAML desteği, genel .NET Framework programlamada listeler ve sözlüklerde kullanılan birkaç .NET Framework kavram ve API 'Leri temel alır.
 
-1. <xref:System.Collections.IList> Arabirimi listesi koleksiyonunu belirtir.
+1. <xref:System.Collections.IList> Arabirim bir liste koleksiyonunu gösterir.
 
-2. <xref:System.Collections.IDictionary> Arabirimi sözlük koleksiyonu belirtir.
+2. <xref:System.Collections.IDictionary> Arabirim bir sözlük koleksiyonunu gösterir.
 
-3. <xref:System.Array> bir dizi ve bir dizi destekler temsil <xref:System.Collections.IList> yöntemleri.
+3. <xref:System.Array>bir diziyi temsil eder ve bir dizi yöntemleri <xref:System.Collections.IList> destekler.
 
-Her Bu koleksiyonu kavramları çağırmak bir .NET Framework XAML Hizmetleri XAML işlemci bekliyor `Add` koleksiyon özelliğin türü belirli bir örneğini yöntemi. Veya bir seri hale getirme senaryosunda, ayrık XAML türü örnekleri listesi, sözlük veya her bir koleksiyonun belirli "Öğelerin" kavramını temel dizi bulunan her öğe için bir XAML işlemci üretir. Bunlar: <xref:System.Collections.IList.Item%2A>; <xref:System.Collections.IDictionary.Item%2A>; açık <xref:System.Array.System%23Collections%23IList%23Item%2A> için <xref:System.Array>.
+Bu koleksiyon kavramlarının her birinde, bir .NET Framework xaml Hizmetleri XAML işlemcisi, bir koleksiyon özelliği `Add` türünün belirli bir örneğinde yöntemi çağırmayı bekler. Ya da bir serileştirme senaryosunda XAML işlemcisi, her bir koleksiyonun "öğe" kavramıyla ilgili olarak listede, sözlükte veya dizide bulunan her öğe için ayrı XAML türü örnekler üretir. Bunlar: <xref:System.Collections.IList.Item%2A>; <xref:System.Collections.IDictionary.Item%2A>; <xref:System.Array.System%23Collections%23IList%23Item%2A> için açık<xref:System.Array>.
 
-## <a name="generic-collections"></a>Genel koleksiyonlar
+## <a name="generic-collections"></a>Genel Koleksiyonlar
 
-Genel koleksiyonlar genel .NET Framework programlama kullanışlı olabilir ve XAML için koleksiyon özelliklerini de kullanılabilir. Ancak, genel arabirimleri <xref:System.Collections.Generic.IList%601> ve <xref:System.Collections.Generic.IDictionary%602> genel olmayan için eşdeğer olarak .NET Framework XAML Hizmetleri XAML işlemci ile tanımlanmayan <xref:System.Collections.IList> veya <xref:System.Collections.IDictionary>. Arayüzleri uygulamak yerine, sınıflarından için genel koleksiyon özellik türleri için önerilen bir yaklaşım olan <xref:System.Collections.Generic.List%601> veya <xref:System.Collections.Generic.Dictionary%602>. Bu sınıflar, genel olmayan arabirimleri uygulayan ve bu nedenle temel uygulamada XAML koleksiyonları için beklenen desteği içerir.
+Genel Koleksiyonlar genel .NET Framework programlama için kullanışlı olabilir ve XAML koleksiyon özellikleri için de kullanılabilir. Bununla birlikte, genel arabirimler <xref:System.Collections.Generic.IList%601> ve <xref:System.Collections.Generic.IDictionary%602> genel <xref:System.Collections.IList> olmayan veya <xref:System.Collections.IDictionary>.NET Framework xaml Hizmetleri XAML işlemcileri tarafından tanımlanmamış. Arabirimleri uygulamak yerine, genel koleksiyon özelliği türleri için önerilen bir yaklaşım, veya <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.Dictionary%602>sınıflarından türetmektir. Bu sınıflar genel olmayan arabirimleri uygular ve bu nedenle temel uygulamada XAML koleksiyonları için beklenen desteği içerir.
 
-## <a name="read-only-collections-and-initialization-logic"></a>Salt okunur koleksiyonları ve başlatma mantığı
+## <a name="read-only-collections-and-initialization-logic"></a>Salt okuma toplamaları ve başlatma mantığı
 
-.NET Framework programlama, bunu koleksiyon salt okunur bir koleksiyon olarak değerini tutan herhangi bir özelliği yapmak için bir ortak tasarım örüntüsüdür. Bu düzen koleksiyona neler daha iyi denetim toplama özelliğine sahip örnek verir... Özellikle, deseni yanlışlıkla tüm önceden mevcut olan koleksiyon özelliğini ayarlayarak önler. Bu düzende, herhangi bir erişim çağıranlar tarafından koleksiyonuna bunun yerine yöntemleri veya özellikleri gibi koleksiyon türü ve/veya ilgili koleksiyon arabirimleri tarafından desteklenen çağırarak yapılmalıdır <xref:System.Collections.IList>.
+.NET Framework programlamada, bir koleksiyonun değerini salt okunurdur bir koleksiyon olarak tutan herhangi bir özelliği oluşturmak için ortak bir tasarım modelidir. Bu kalıp, koleksiyona ne olduğunu daha iyi denetlemek için koleksiyon özelliğine sahip olan örneğe izin verir. Özellikle, model özelliği ayarlanarak önceden mevcut olan tüm koleksiyonun yanlışlıkla değiştirilmesini önler. Bu düzende, çağıranlar tarafından koleksiyona her türlü erişim, koleksiyon türü ve/veya gibi ilgili koleksiyon arabirimleri <xref:System.Collections.IList>tarafından desteklenen yöntemler veya özellikler çağırarak yapılmalıdır.
 
-Bu düzeni kullanmak, bir salt okunur koleksiyon özelliği sunan herhangi bir sınıf boş bir koleksiyon tutmak için bu özelliği ilk başlatmalıdır anlamına gelir. Genellikle başlatma sınıfı için oluşturma davranışı bir parçası olarak gerçekleştirilir. XAML genel varsayılan oluşturucu özelliklerini işleme önce çağırdığı için XAML kullanışlı olması için böyle bir mantık her zaman varsayılan oluşturucu tarafından başvurulan önemlidir (koleksiyon özellikleri veya başka türlü).
+Bu düzenin kullanılması, salt okunurdur bir koleksiyon özelliği sunan herhangi bir sınıfın, önce bu özelliği boş bir koleksiyonu tutacak şekilde başlatması gerektiğini gösterir. Genellikle başlatma, sınıf için oluşturma davranışının bir parçası olarak gerçekleştirilir. XAML için yararlı olması için bu tür mantığın parametresiz Oluşturucu tarafından her zaman başvurulduğundan önemlidir, çünkü XAML, özellikleri işlemeden önce parametresiz oluşturucuyu (koleksiyon özellikleri veya başka bir şekilde) çağırır.
 
-## <a name="xaml-type-system-support-and-collections"></a>XAML tür sistemi desteği ve koleksiyonları
+## <a name="xaml-type-system-support-and-collections"></a>XAML türü sistem desteği ve koleksiyonları
 
-XAML ayrıştırma ve doldurma veya koleksiyon özellikleri serileştirmek temel mekanizması, .NET Framework XAML hizmetlerinde uygulandığı şekilde XAML tür sistemi XAML koleksiyonlarında ilgili çeşitli tasarım özellikler içerir.
+XAML ayrıştırma ve koleksiyon özelliklerini doldurma veya serileştirme temel mekanizması ötesinde, .NET Framework XAML hizmetlerinde uygulanan XAML tür sistemi, XAML 'deki koleksiyonlara ait çeşitli tasarım özellikleri içerir.
 
-1. <xref:System.Xaml.XamlType.IsCollection%2A> XAML tür XAML koleksiyonu desteği sağlayan bir tür tarafından destekleniyorsa true değerini döndürür.
+1. <xref:System.Xaml.XamlType.IsCollection%2A>XAML türü XAML koleksiyonu desteği sağlayan bir tür tarafından kullanılıyorsa true döndürür.
 
-2. <xref:System.Xaml.XamlType.IsDictionary%2A> ve <xref:System.Xaml.XamlType.IsArray%2A> XAML türü destekliyorsa hangi koleksiyon modu daha ayrıntılı olarak tanımlayabilirsiniz. .NET Framework XAML hizmetlerinde ve XAML tabanlı işlemciler özel XAML için tür sistemi ancak var olan temel almayan <xref:System.Xaml.XamlWriter> uygulamaları hangi koleksiyon modu kullanıldığını olabilir hangi yöntemin için çağrılacak öğrenmek için gerekli Koleksiyon işleme.
+2. <xref:System.Xaml.XamlType.IsDictionary%2A><xref:System.Xaml.XamlType.IsArray%2A> Ayrıca XAML türünün desteklediği koleksiyon modunu daha da tanımlayabilir. .NET Framework xaml Hizmetleri ve xaml tür sistemi tabanlı, ancak mevcut <xref:System.Xaml.XamlWriter> uygulamaları temel alan özel XAML işlemcileri için, hangi koleksiyon modunun hangi yöntemin çağıracağına bilmek için gerekli olabileceğini bilmek için koleksiyon işleme.
 
-3. Önceki özellik değerleri büyük olasılıkla etkileyen geçersiz kılmalarına göre <xref:System.Xaml.XamlType.LookupCollectionKind%2A> XAML türü.
+3. Önceki özellik değerlerinin her biri, bir xaml türündeki geçersiz kılmalarla <xref:System.Xaml.XamlType.LookupCollectionKind%2A> etkilenebilir.
