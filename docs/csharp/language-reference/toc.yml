@@ -331,6 +331,9 @@
         - name: ':: işleci'
           href: operators/namespace-alias-qualifer.md
           displayName: namespace alias qualifier
+        - name: delegate işleci
+          href: operators/delegate-operator.md
+          displayName: anonymous
         - name: nameof işleci
           href: operators/nameof.md
         - name: new işleci
