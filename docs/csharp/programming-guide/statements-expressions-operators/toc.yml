@@ -1,4 +1,4 @@
-- name: 'Deyimler, İfadeler ve İşleçler'
+- name: 'Deyimler, ifadeler ve işleçler'
   href: index.md
   items:
     - name: Deyimler
@@ -9,23 +9,21 @@
       href: expression-bodied-members.md
     - name: İşleçler
       href: operators.md
-    - name: Anonim İşlevler
+    - name: Anonim işlevler
       items:
         - name: Genel Bakış
           href: anonymous-functions.md
-        - name: Lambda İfadeleri
+        - name: Lambda ifadeleri
           href: lambda-expressions.md
-        - name: 'Nasıl yapılır: Sorguda Lambda İfadeleri Kullanma'
+        - name: 'Nasıl yapılır: Sorguda lambda ifadeleri kullanma'
           href: how-to-use-lambda-expressions-in-a-query.md
-        - name: 'Nasıl yapılır: LINQ Dışında Lambda İfadeleri Kullanma'
-          href: how-to-use-lambda-expressions-outside-linq.md
     - name: varsayılan değer ifadeleri
       href: default-value-expressions.md
     - name: Eşitlik ve eşitlik karşılaştırmaları
       items:
-        - name: Eşitlik Karşılaştırmaları
+        - name: Eşitlik karşılaştırmaları
           href: equality-comparisons.md
-        - name: 'Nasıl yapılır: Tür için Değer Eşitliği Tanımlama'
+        - name: 'Nasıl yapılır: Tür için değer eşitliği tanımlama'
           href: how-to-define-value-equality-for-a-type.md
-        - name: 'Nasıl yapılır: Başvuru Eşitliği Testi (Kimlik)'
+        - name: 'Nasıl yapılır: Başvuru eşitliği testi (kimlik)'
           href: how-to-test-for-reference-equality-identity.md
