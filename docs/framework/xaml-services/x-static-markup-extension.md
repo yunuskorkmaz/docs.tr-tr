@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 462c8141b84fc8bdda673a45a7841e015b174a32
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9fa9e51e66af6df4d1a6b1ec94c5010651bbb21d
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647985"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401506"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static İşaretleme Uzantısı
-Tanımlanan herhangi bir statik değere göre kod varlığa başvuran bir [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– uyumlu şekilde. Başvurulan statik özelliği, XAML içinde bir özelliğinin değeri sağlamak için kullanılabilir.  
+Ortak dil belirtimi (CLS) ile uyumlu bir şekilde tanımlanan herhangi bir statik değere sahip kod varlığına başvurur. Başvurulan static özelliği, XAML içindeki bir özelliğin değerini sağlamak için kullanılabilir.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -30,30 +30,30 @@ Tanımlanan herhangi bir statik değere göre kod varlığa başvuran bir [!INCL
   
 | | |  
 |-|-|  
-|`prefix`|İsteğe bağlı. Eşlenmiş, varsayılan olmayan bir XAML ad alanına başvuruda önek. `prefix` açıkça varsayılan XAML ad alanından gelen statik özellikler nadiren aldığından kullanımı gösterilmektedir. Açıklamalara bakın.|  
-|`typeName`|Gerekli. İstenen statik üyeyi tanımlayan türü adı.|  
-|`staticMemberName`|Gerekli. (Bir sabit, statik bir özellik, alan veya bir sabit listesi değeri) istenen statik değere üyesinin adı.|  
+|`prefix`|İsteğe bağlı. Eşlenmiş, varsayılan olmayan XAML ad alanına başvuran bir ön ek. `prefix`, bir varsayılan XAML ad alanından gelen statik özelliklere nadiren başvurmanız nedeniyle açıkça kullanımda olarak gösterilir. Bkz. açıklamalar.|  
+|`typeName`|Gerekli. İstenen statik üyeyi tanımlayan türün adı.|  
+|`staticMemberName`|Gerekli. İstenen statik değer üyesinin adı (bir sabit, statik özellik, bir alan veya bir numaralandırma değeri).|  
   
 ## <a name="remarks"></a>Açıklamalar  
 
-Başvurulan kod varlık aşağıdakilerden biri olmalıdır:  
+Başvurulan kod varlığı aşağıdakilerden biri olmalıdır:  
   
-- Bir sabiti  
-- Statik bir özellik  
+- Bir sabit  
+- Statik Özellik  
 - Bir alan  
-- Bir sabit listesi değeri
+- Sabit listesi değeri
 
-XAML biçimlendirme veya bir XAML yükleme zamanı ayrıştırma özel durumu ise başka kod bir varlık, statik olmayan bir özellik gibi belirten bir derleme zamanı hatasına neden olur.  
+Statik olmayan bir özellik gibi başka bir kod varlığının belirtilmesi, XAML biçimlendirme derlenmişse ya da XAML yükleme zamanı ayrıştırma özel durumu olduğunda derleme zamanı hatasına neden olur.  
 
-Yapabileceğiniz `x:Static` başvurularını statik alanlar veya geçerli XAML belgesinin; varsayılan XAML ad alanı olmayan özellikler ancak bu bir ön ek eşleştirmesi gerektirir. XAML ad alanları, neredeyse her zaman XAML belgesinin kök öğesinde tanımlanır.  
+Geçerli xaml belgesi için varsayılan xaml ad alanında olmayan statik alanlara veya özelliklere Başvurularyapabilirsiniz;ancakbu,birönekeşlemesigerektirir.`x:Static` Xaml ad alanları, XAML belgesinin kök öğesinde neredeyse her zaman tanımlanır.  
 
-Varsayılan XAML şema içeriği ile çalışırken statik özellikler için arama işlemleri, .NET Framework XAML hizmetlerinde ve XAML okuyucular ve XAML yazarları tarafından gerçekleştirilebilir. Bu XAML şema içeriği CLR yansıma, gerekli statik değerler için Nesne grafiği oluşturmayı sağlamak için kullanabilirsiniz. `typeName` Belirtmeniz aslında bir XAML türü adı, bir CLR türü adı değil, bunlar aslında aynı ada varsayılan XAML şema içeriği kullanırken ya da tüm var olan CLR tabanlı XAML-uygulama çerçeveleri kullanırken olmasına rağmen.  
+Statik özelliklerin arama işlemleri, .NET Framework XAML Hizmetleri ve XAML okuyucuları ve XAML yazarları tarafından, varsayılan XAML şeması içeriğiyle çalışırken gerçekleştirilebilir. Bu XAML şema bağlamı, nesne grafiğinin oluşturulması için gerekli statik değerleri sağlamak üzere CLR yansımasını kullanabilir. `typeName` Aslında bir CLR tür adı değil, bir xaml tür adı değil, bu, varsayılan xaml şema bağlamı kullanılırken veya var olan tüm clr tabanlı xaml uygulayan çerçeveler kullanılırken aynı ada sahip olsa da.  
 
-Yaptığınız kullanırken dikkatli `x:Static` doğrudan bir özelliğin değerinin türü olmayan başvurular. XAML içinde dizisi, bir işaretleme uzantısı değerlerinden sağlanan işleme çağrılamadı ek değer dönüştürme. Bu doğru olsa bile, `x:Static` başvuru bir metin dizesi oluşturur ve bu belirli üye veya dönüş türünün hiçbir üyesi değerler için genellikle metin dizesine dayalı öznitelik değerleri için bir değer dönüştürme gerçekleşir.  
+Doğrudan bir özelliğin değerinin türü `x:Static` olmayan başvurular yaparken dikkatli olun. XAML işleme dizisinde, bir biçimlendirme uzantısından gelen değerler, ek değer dönüşümü çağırmaz. Bu, `x:Static` başvurunuz bir metin dizesi oluştursa ve metin dizesine dayalı öznitelik değerleri için değer dönüştürmesi genellikle söz konusu üye veya dönüş türünün herhangi bir üye değeri için ortaya çıkarsa, bu durum geçerlidir.  
 
-Öznitelik sözdizimi, bu işaretleme uzantısı ile kullanılan en yaygın sözdizimidir. Sonra sağlanan dize belirteci `x:Static` tanımlayıcı dizesi olarak atandığı <xref:System.Windows.Markup.StaticExtension.Member%2A> temel değer <xref:System.Windows.Markup.StaticExtension> uzantısı sınıfı.  
+Öznitelik sözdizimi, bu işaretleme uzantısı ile kullanılan en yaygın sözdizimidir. `x:Static` Tanımlayıcı dizeden sonra belirtilen dize belirteci, temel <xref:System.Windows.Markup.StaticExtension> uzantı sınıfının <xref:System.Windows.Markup.StaticExtension.Member%2A> değeri olarak atanır.  
 
-Teknik olarak mümkün olan diğer iki XAML kullanımları vardır. Ancak, bu kullanımları gereksiz yere ayrıntılıdır oldukları için daha az yaygın olan:  
+Teknik olarak mümkün olan iki farklı XAML kullanımı vardır. Ancak, bu kullanımlar gereksiz bir şekilde ayrıntılıdır, çünkü bu kullanımlar çok daha yaygındır:  
 
 1. Nesne öğesi sözdizimi.
 
@@ -61,26 +61,26 @@ Teknik olarak mümkün olan diğer iki XAML kullanımları vardır. Ancak, bu ku
     <x:Static Member="prefix:typeName.staticMemberName" ... />
     ```
 
-2. Başlatma dizesi için açık bir üye özelliği ile söz dizimi özniteliği.
+2. Başlatma dizesi için açık üye özelliği olan öznitelik sözdizimi.
 
     ```xaml
     <object property="{x:Static Member=prefix:typeName.staticMemberName}" ... />
     ```
 
-.NET Framework XAML hizmetlerinde uygulamasında, bu işaretleme uzantısının işlenmesi tarafından tanımlanan <xref:System.Windows.Markup.StaticExtension> sınıfı.  
+.NET Framework xaml Hizmetleri uygulamasında, bu biçimlendirme uzantısının işlenmesi <xref:System.Windows.Markup.StaticExtension> sınıfı tarafından tanımlanır.  
 
-`x:Static` bir işaretleme uzantısıdır. XAML kullanım içindeki tüm biçimlendirme uzantıları `{` ve `}` karakter kendi öznitelik sözdizimi kuralı tarafından bir XAML işlemcisinin bir işaretleme uzantısı bir değer belirtmeniz gerekir. Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz: [genel XAML işaretleme uzantılarına](markup-extensions-for-xaml-overview.md).  
+`x:Static`bir biçimlendirme uzantısıdır. Xaml 'deki tüm biçimlendirme uzantıları, `{` bir XAML işlemcisinin bir değer sağlaması gerektiğini tanıdığı kural olan öznitelik sözdiziminde ve `}` karakterlerini kullanır. Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz. [xaml Için biçimlendirme uzantıları genel bakış](markup-extensions-for-xaml-overview.md).  
   
 ## <a name="wpf-usage-notes"></a>WPF kullanım notları  
- WPF programlama için kullandığınız varsayılan XAML ad alanı birçok yararlı statik özellikleri içermiyor ve kullanışlı statik özelliklerin çoğu sahip gerek kalmadan, kullanımı kolaylaştırmak tür dönüştürücüleri gibi desteği `{x:Static}` . Statik özellikler için aşağıdakilerden biri doğruysa bir XAML ad alanı için bir önek eşlemeniz gerekir:  
+ WPF programlama için kullandığınız varsayılan XAML ad alanı çok sayıda faydalı statik özellik içermez ve yararlı statik özelliklerin çoğu, gerek `{x:Static}` olmadan kullanımı kolaylaştıran tür dönüştürücüler gibi destek içerir. Statik özellikler için aşağıdakilerden biri geçerliyse XAML ad alanı için bir ön eki eşlemeniz gerekir:  
   
-- WPF içinde var, ancak WPF için varsayılan XAML ad alanı bir parçası olmayan bir türe başvuruyor ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). Bunu kullanmak için oldukça sık karşılaşılan bir senaryodur `x:Static`. Örneğin, kullanabilirsiniz bir `x:Static` bir XAML ad alanı eşlemesi ile başvuru <xref:System> statik özelliklerini başvurmak için CLR ad alanı ve mscorlib derlemesi <xref:System.Environment> sınıfı.  
+- WPF 'de bulunan ancak WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]) için varsayılan xaml ad alanının bir parçası olmayan bir türe başvuruyorsunuz. Bu, kullanımı `x:Static`için oldukça yaygın bir senaryodur. Örneğin, <xref:System.Environment> sınıfın statik özelliklerine başvurmak için `x:Static` <xref:System> clr ad alanı ve mscorlib derlemesi için xaml ad alanı eşlemesi ile bir başvuru kullanabilirsiniz.  
   
-- Özel bir derlemeden bir tür başvuruyor.  
+- Özel bir derlemeden bir türe başvuruyorsunuz.  
   
-- Varsayılan WPF XAML ad alanı bir parçası olarak eşlenmedi CLR ad alanı içinde türüdür, ancak bir WPF derlemede mevcut bir türe başvuruyor. CLR ad alanları için WPF eşleme varsayılan XAML ad alanına çeşitli WPF derlemeleri tanımlarında tarafından gerçekleştirilen (Bu kavramı hakkında daha fazla bilgi için bkz: [XAML ad alanları ve WPF XAML için Namespace eşlemesi](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). XAML için genellikle gibi amaçlanmayan çoğunlukla sınıf tanımları, CLR ad uzayı oluşturuluyorsa olmayan eşlenen bir CLR ad alanları varolabilir <xref:System.Windows.Threading>.  
+- WPF derlemesinde bulunan bir türe başvuruyorsunuz, ancak bu tür WPF varsayılan XAML ad alanının parçası olacak şekilde eşlenmemiş bir CLR ad alanı içinde. CLR ad alanlarının WPF için varsayılan XAML ad alanı eşlemesi, çeşitli WPF derlemelerindeki tanımlar tarafından gerçekleştirilir (Bu kavram hakkında daha fazla bilgi için bkz. [WPF XAML Için xaml ad alanları ve ad alanı eşlemesi](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Eşlenen clr ad alanları, genellikle, gibi XAML için amaçlanan sınıf tanımlarından oluşuyorsa, <xref:System.Windows.Threading>bu CLR ad alanı var olabilir.  
   
- WPF için ön ekleri ve XAML ad alanları kullanma hakkında daha fazla bilgi için bkz. [XAML ad alanları ve WPF XAML Namespace eşleme](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ WPF için ön ekleri ve XAML ad alanlarını kullanma hakkında daha fazla bilgi için bkz. [WPF XAML Için xaml ad alanları ve ad alanı eşlemesi](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

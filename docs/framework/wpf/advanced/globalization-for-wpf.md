@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 4fc8c8e4d8c4cc2a53ed7e21ced9ab9c761e9d2b
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: fd99d97d677ef588c3f7e2a178190377d72c74ce
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331531"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400633"
 ---
 # <a name="globalization-for-wpf"></a>WPF için Genelleştirme
 Bu konu başlığı altında, küresel pazara yönelik uygulamalar yazarken [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bilmeniz gereken sorunlar açıklanır. Genelleştirme programlama öğeleri [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] içinde `System.Globalization`tanımlanmıştır.
@@ -147,12 +147,12 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>Yerelleştirilebilir kullanıcı arabirimi
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]uygulamalar, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bunları [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]tanımlamak için kullanır. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]geliştiricilerin bir dizi özellik ve mantığa sahip nesneler hiyerarşisi belirlemesine izin verir. ' Nin [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] birincil kullanımı, uygulamaları geliştirmektir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , ancak herhangi [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] bir nesne hiyerarşisini belirtmek için kullanılabilir. Çoğu geliştirici, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] uygulamasının uygulamasını belirtmek için kullanır ve kullanıcı etkileşimine tepki vermek için gibi C# bir programlama dili kullanır.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]uygulamalar, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bunları [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]tanımlamak için kullanır. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]geliştiricilerin bir dizi özellik ve mantığa sahip nesneler hiyerarşisi belirlemesine izin verir. ' Nin [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] birincil kullanımı, uygulamaları geliştirmektir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , ancak herhangi bir ortak dil çalışma zamanı (CLR) nesnesinin hiyerarşisini belirtmek için kullanılabilir. Çoğu geliştirici, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] uygulamasının uygulamasını belirtmek için kullanır ve kullanıcı etkileşimine tepki vermek için gibi C# bir programlama dili kullanır.
 
  Bir görünüm kaynak noktasından, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dile bağlı [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bir kaynak öğesidir ve bu nedenle son dağıtım biçimi Uluslararası dilleri desteklemek için yerelleştirilebilir olmalıdır. Olayları işleyemediği için birçok [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygulama, bunu yapmak için kod blokları içerir. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Daha fazla bilgi için bkz. [xaml genel bakış (WPF)](xaml-overview-wpf.md). Bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosya, XAML 'in BAML biçiminde simgeleştirilir, kod çıkarılır ve farklı ikili dosyalara derlenir. XAML dosyalarının, görüntülerinin ve diğer yönetilen kaynak nesne türlerinin BAML formu, uydu kaynak derlemesine katıştırılır. Bu, diğer dillere yerelleştirilebilir veya yerelleştirme gerekli olmadığında ana derlemedir.
 
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]uygulamalar dize tabloları, [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] görüntüler vb. dahil olmak üzere tüm [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] kaynakları destekler.
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]uygulamalar dize tabloları, [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]görüntüleri vb. dahil olmak üzere tüm clr kaynaklarını destekler.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Yerelleştirilebilir uygulamalar oluşturma

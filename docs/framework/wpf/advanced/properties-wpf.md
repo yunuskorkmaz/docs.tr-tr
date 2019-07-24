@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: 8e65e89fb0406d9d2849e0a1be4b1aa764b935ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c685a5227f4339a094ae74af4e1314d4c47f7585
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62030355"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400872"
 ---
 # <a name="properties-wpf"></a>Özellikler (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] işlevlerini genişletmek için kullanılan hizmetleri kümesi sağlar bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özelliği. Toplu olarak, bu hizmetleri genellikle WPF özellik sistemi adlandırılır. Tarafından desteklenen bir özellik [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] özellik sistemi, bir bağımlılık özelliği olarak bilinir.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ortak dil çalışma zamanı (CLR) özelliğinin işlevlerini genişletmek için kullanılabilen bir hizmet kümesi sağlar. Toplu olarak, bu hizmetler genellikle WPF özellik sistemi olarak adlandırılır. [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Özellik sistemi tarafından desteklenen bir özellik, bağımlılık özelliği olarak bilinir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 - [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020926"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401431"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Nasıl yapılır: ObservableCollection Oluşturma ve Bağlama
-Bu örnekte, oluşturma ve türeyen bir koleksiyona bağlama işlemi gösterilmektedir <xref:System.Collections.ObjectModel.ObservableCollection%601> bildirimleri öğeleri eklendiğinde veya kaldırıldığında sağlayan bir koleksiyon sınıf olan sınıf.  
+Bu örnek, öğe eklendiğinde veya kaldırıldığında bildirim sağlayan bir koleksiyon sınıfı olan <xref:System.Collections.ObjectModel.ObservableCollection%601> sınıfından türetilen bir koleksiyonun nasıl oluşturulacağını ve bağlanacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek uygulamasını gösterir. bir `NameList` koleksiyonu:  
+ Aşağıdaki örnek, bir `NameList` koleksiyonun uygulamasını göstermektedir:  
   
 ```csharp  
 public class NameList : ObservableCollection<PersonName>  
@@ -104,7 +104,7 @@ Public Class PersonName
 End Class  
 ```  
   
- Koleksiyon, başka şekilde bağlama için kullanılabilir hale getirebilirsiniz [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] açıklandığı gibi nesneleri [olun veri kullanılabilir için XAML bağlamasında](how-to-make-data-available-for-binding-in-xaml.md). Örneğin, koleksiyon içinde oluşturabileceğiniz [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve burada gösterildiği gibi bir kaynak olarak koleksiyonu belirtin:  
+ [VERILERI xaml 'de bağlamaya uygun hale getirme](how-to-make-data-available-for-binding-in-xaml.md)bölümünde açıklandığı gibi, koleksiyonu diğer ortak dil çalışma zamanı (CLR) nesneleriyle aynı şekilde bağlama için kullanılabilir hale getirebilirsiniz. Örneğin, içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] koleksiyonu örnekleyebilirsiniz ve koleksiyonu aşağıda gösterildiği gibi bir kaynak olarak belirtebilirsiniz:  
   
 ```xaml  
 <Window  
@@ -124,7 +124,7 @@ End Class
 </Window.Resources>  
 ```  
   
- Ardından koleksiyonuna bağlayabilirsiniz:  
+ Daha sonra koleksiyona bağlayabilirsiniz:  
   
 ```xaml  
 <ListBox Width="200"  
@@ -136,9 +136,9 @@ End Class
  Tanımı `NameItemTemplate` burada gösterilmez.  
   
 > [!NOTE]
->  Koleksiyonunuzdaki nesneleri açıklanan gereksinimleri karşılaması gerekir [bağlama kaynaklarına genel bakış](binding-sources-overview.md). Kullanıyorsanız özellikle <xref:System.Windows.Data.BindingMode.OneWay> veya <xref:System.Windows.Data.BindingMode.TwoWay> (örneğin, istediğiniz, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kaynak özelliklerini dinamik olarak değiştirdiğinizde güncelleştirmek için), uygun özellik değiştirildi bildirim mekanizması gibiuygulamalıdır<xref:System.ComponentModel.INotifyPropertyChanged>arabirimi.  
+>  Koleksiyonunuzdaki nesnelerin [bağlama kaynaklarına genel bakış](binding-sources-overview.md)bölümünde açıklanan gereksinimleri karşılaması gerekir. Özellikle, veya <xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay> kullanıyorsanız ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Örneğin, kaynak özellikleri dinamik olarak değiştiğinde güncelleştirilmesini istiyorsanız), gibi uygun bir özellik değiştirilmiş bildirim mekanizması <xref:System.ComponentModel.INotifyPropertyChanged>uygulamanızgerekirarabirim.  
   
- Daha fazla bilgi için bkz koleksiyonları bölümüne bağlama [Data Binding Overview](data-binding-overview.md).  
+ Daha fazla bilgi için [veri bağlamaya genel bakış](data-binding-overview.md)konusundaki koleksiyonlara bağlama bölümüne bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

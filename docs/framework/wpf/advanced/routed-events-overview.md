@@ -15,261 +15,261 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: e1e092e3dac481f28e2a355a22218cf86500b40e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 24fa283ec0c1fef2023845df0a05c3f1ebf5df06
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660830"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400757"
 ---
 # <a name="routed-events-overview"></a>Gönderilmiş Olaylara Genel Bakış
 
-Bu konuda yönlendirilmiş olaylar kavramını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Konu yönlendirilmiş olaylar terminolojisini, açıklar yönlendirilmiş olaylar öğe ağacındaki yönlendirilir nasıl nasıl işleyeceğinizi özetler ve kendi özel gönderilmiş olay oluşturma kullanıma sunar.
+Bu konu, içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]yönlendirilmiş olay kavramını açıklar. Bu konu, yönlendirilmiş olay terminolojisini tanımlar, yönlendirilmiş olayların bir öğe ağacı aracılığıyla nasıl yönlendirildiğini açıklar, yönlendirilmiş olayları nasıl işleyeceğinizi özetler ve kendi özel yönlendirilmiş olaylarınızı oluşturmayı tanıtır.
 
 <a name="prerequisites"></a>
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu konu temel bilgiye sahip olduğunuzu varsayar [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] ve nesne yönelimli programlama, hem de nasıl kavramını arasındaki ilişkileri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğeleri ağaç olarak kavramsallaştırılabileceği. Bu konudaki örnekleri izlemek için de anlamanız gereken [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve çok temel yazma ne yapılacağını bildiğiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar veya sayfaları. Daha fazla bilgi için [izlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md) ve [XAML genel bakış (WPF)](xaml-overview-wpf.md).
+Bu konu başlığı altında, ortak dil çalışma zamanı (CLR) ve nesne odaklı programlama hakkında temel bilgiye sahip olduğunuz ve öğeler arasındaki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ilişkilerin bir ağaç olarak nasıl anlaılabileceği kavramı varsayılmaktadır. Bu konudaki örnekleri izlemek için, ayrıca çok basit [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaların veya sayfaların nasıl yazılacağını anlamanız ve bilmeniz gerekir. Daha fazla bilgi için bkz [. İzlenecek yol: İlk WPF Masaüstü](../getting-started/walkthrough-my-first-wpf-desktop-application.md) Uygulamam ve [xaml 'ye Genel Bakış (WPF)](xaml-overview-wpf.md).
 
 <a name="routing"></a>
 
-## <a name="what-is-a-routed-event"></a>Gönderilmiş bir olayı nedir?
+## <a name="what-is-a-routed-event"></a>Yönlendirilmiş olay nedir?
 
-Düşünebilirsiniz yönlendirilmiş olayları ya da işlev ya da uygulama açısından. Bazı kişiler birini veya diğer tanım daha kullanışlı çünkü her iki tanımları burada gösterilir.
+Yönlendirilmiş olayları, işlevsel veya uygulama perspektifinden düşünebilirsiniz. Burada her iki tanım de sunulmuştur, çünkü bazı kişiler bir veya diğer tanımın daha kullanışlı olduğunu fark ettiğinden.
 
-İşlev tanımı: Yönlendirilmiş olay işleyicileri olayı tetikleyen nesne yerine bir öğe ağacında birden çok dinleyici çağırabilirsiniz olay türüdür.
+İşlevsel Tanım: Yönlendirilmiş olay, yalnızca olayı oluşturan nesne yerine bir öğe ağacındaki birden çok dinleyiciyle işleyicileri çağırabilen bir olay türüdür.
 
-Uygulama tanımı: Yönlendirilmiş olay bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] örneği tarafından desteklenen olay <xref:System.Windows.RoutedEvent> sınıfı ve tarafından işlenen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] olay sistemi.
+Uygulama tanımı: Yönlendirilmiş olay, <xref:System.Windows.RoutedEvent> sınıfının bir örneği tarafından desteklenen ve [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] olay sistemi tarafından işlenen bir clr olayıdır.
 
-Tipik bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulaması birçok öğe içerir. Kod içinde oluşturulan ya da bildirilen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bu öğeleri bir öğe ağacı ilişki birbirine mevcut. Olay tanımı bağlı olarak iki yönlü birinde olay rotada seyahat etmek, ancak genellikle rota kaynak öğeden hareket eder ve "öğesi ağaç kökü (genellikle bir sayfası veya pencere) ulaşana kadar ardından yukarı öğesi ağacı ile Balonlar". DHTML nesne modeli ile daha önce çalıştıysa tırmanma bu kavramı size tanıdık gelebilir.
+Tipik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir uygulama birçok öğesi içerir. Kodda oluşturulup açıklanmadığı veya içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]bildirildiği, bu öğeler birbirleriyle bir öğe ağacı ilişkisinde bulunur. Olay yolu, olay tanımına bağlı olarak iki yönden birine hareket edebilir, ancak genellikle yol kaynak öğeden geçer ve öğe ağacı köküne (genellikle bir sayfa veya pencere) ulaşana kadar öğe ağacı aracılığıyla "kabarcıklar". Bu kabarcıklanma kavramı, daha önce DHTML nesne modeliyle çalıştıysanız size tanıdık gelebilir.
 
-Aşağıdaki basit öğe ağacında göz önünde bulundurun:
+Aşağıdaki basit öğe ağacını göz önünde bulundurun:
 
 [!code-xaml[EventOvwSupport#GroupButton](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]
 
-Bu öğe ağacı aşağıdaki gibi üretir:
+Bu öğe ağacı aşağıdakine benzer bir şey üretir:
 
-![Evet, Hayır ve İptal düğmeleri](./media/routedevent-ovw-1.gif "RoutedEvent_ovw_1")
+![Evet, hayır ve iptal düğmeleri](./media/routedevent-ovw-1.gif "RoutedEvent_ovw_1")
 
-Bu Basitleştirilmiş öğe ağacında, kaynağı bir <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay biridir <xref:System.Windows.Controls.Button> öğeleri ve hangisi <xref:System.Windows.Controls.Button> tıklandığını olay işleme fırsatına sahip ilk öğedir. Ancak bağlı hiçbir işleyici <xref:System.Windows.Controls.Button> olayı, olay için yukarı doğru Kabarcık sonra davranır <xref:System.Windows.Controls.Button> olan öğe ağacında üst <xref:System.Windows.Controls.StackPanel>. Büyük olasılıkla olay baloncuklar için <xref:System.Windows.Controls.Border>ve daha sonra ötesine sayfa kök öğe ağacında (gösterilmemiştir).
+Bu basitleştirilmiş öğe ağacında, bir <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayın kaynağı <xref:System.Windows.Controls.Button> öğelerden biridir ve <xref:System.Windows.Controls.Button> tıklandığı, olayı işleme fırsatına sahip olan ilk öğedir. Ancak olay üzerinde işlem yapmak için <xref:System.Windows.Controls.Button> iliştirilen bir işleyici yoksa, olay, öğe <xref:System.Windows.Controls.StackPanel>ağacında yukarı doğru bir <xref:System.Windows.Controls.Button> şekilde kabarcık olur. Potansiyel olarak, olay kabarcıkları <xref:System.Windows.Controls.Border>ve daha sonra öğe ağacının sayfa kökünü (gösterilmez).
 
-Diğer bir deyişle, bu olay yolu <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay:
+Diğer bir deyişle, bu <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay için olay rotası şu şekilde olur:
 
-Düğme StackPanel-->--> kenarlık-->...
+Düğme--> StackPanel--> Border-->...
 
-### <a name="top-level-scenarios-for-routed-events"></a>Yönlendirilmiş olaylar için üst düzey senaryoları
+### <a name="top-level-scenarios-for-routed-events"></a>Yönlendirilmiş olaylar için üst düzey senaryolar
 
-Yönlendirilmiş olay kavramını motive senaryolara kısa bir özeti aşağıda verilmiştir ve tipik bir neden [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] olay bu senaryolar için yeterli değil:
+Aşağıda, yönlendirilmiş olay kavramını motive eden senaryoların kısa bir özeti ve tipik bir CLR olayının Bu senaryolar için yeterli olmadığı hakkında genel bir Özet verilmiştir:
 
-**Denetim oluşturma ve saklama:** Çeşitli denetimlerinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zengin içerik modeli vardır. Örneğin, görüntüyü içine yerleştirebilirsiniz bir <xref:System.Windows.Controls.Button>, düğmenin görsel ağacı etkili bir şekilde genişleten. Ancak, eklenen görüntü yanıt vermek bir düğme neden isabet sınaması davranışı bozmamalıdır bir <xref:System.Windows.Controls.Primitives.ButtonBase.Click> içeriği, görüntüsü teknik bir parçası olan piksel kullanıcı tıkladığında olsa bile.
+**Denetim oluşturma ve kapsülleme:** İçindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çeşitli denetimlerin zengin içerik modeli vardır. Örneğin, bir görüntüsünü, düğmenin görsel ağacını etkin bir şekilde <xref:System.Windows.Controls.Button>genişleten bir resim içine yerleştirebilirsiniz. Ancak, eklenen görüntü, Kullanıcı teknik olarak görüntünün parçası olan piksellere tıklasa bile, bir düğmenin içeriğine yanıt vermesine <xref:System.Windows.Controls.Primitives.ButtonBase.Click> neden olan isabet testi davranışını bozmamalıdır.
 
-**Tek işleyicinin ek noktaları:** İçinde [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], birden çok öğeden geçirilen olayları işlemek üzere birden çok kez aynı işleyiciyi eklemek gerekir. Yönlendirilmiş olaylar bu işleyici, yalnızca bir kez, önceki örnekte gösterildiği eklemek etkinleştirmeniz ve işleyici mantığını nereden olay gerekirse geldiğini belirlemek için kullanın. Örneğin, bu daha önce gösterilen işleyicisi olabilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:
+**Tekil işleyici ek noktaları:** ' [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]De, birden çok öğeden çıkarılan olayları işlemek için aynı işleyiciyi birden çok kez iliştirmeye ihtiyacınız vardır. Yönlendirilmiş olaylar, önceki örnekte gösterildiği gibi, bu işleyiciyi yalnızca bir kez iliştirmeyi sağlar ve gerekirse olayın nereden geldiğini tespit etmek için işleyici mantığını kullanır. Örneğin, bu, daha önce gösterilen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]işleyici olabilir:
 
 [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
 [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]
 
-**Sınıf işlemesi:** Olayları izin sınıfı tarafından tanımlanan statik bir işleyici yönlendirilir. Bu sınıfı işleyici herhangi bir bağlı örnek işleyicileri için önce bir olay işleme fırsatına sahiptir.
+**Sınıf işleme:** Yönlendirilmiş olaylar, sınıfı tarafından tanımlanan statik işleyiciye izin verir. Bu sınıf işleyicisinin, ekli örnek işleyicilerinin kullanabilmesi için önce bir olayı işleme fırsatı vardır.
 
-**Yansıma olmadan bir olay başvuruyor:** Belirli kod ve biçimlendirme teknikleri, belirli bir olayı belirlemek için bir yol gerekir. Gönderilmiş bir olay oluşturur bir <xref:System.Windows.RoutedEvent> statik veya çalışma zamanı yansıma gerektirmeyen güvenilir olay kimliği tekniği sağlayan bir tanımlayıcı olarak alan.
+**Yansıma olmadan bir olaya başvurma:** Belirli kod ve biçimlendirme teknikleri belirli bir olayı tanımlamak için bir yol gerektirir. Yönlendirilmiş olay, statik veya <xref:System.Windows.RoutedEvent> çalışma zamanı yansıması gerektirmeyen sağlam bir olay tanımlama tekniği sağlayan tanımlayıcı olarak bir alan oluşturur.
 
 ### <a name="how-routed-events-are-implemented"></a>Yönlendirilmiş olaylar nasıl uygulanır
 
-Yönlendirilmiş olay bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] örneği tarafından desteklenen olay <xref:System.Windows.RoutedEvent> sınıfı ve kayıtlı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay sistemi. <xref:System.Windows.RoutedEvent> Kayıttan alınan örnek olarak korunduğunda genellikle bir `public` `static` `readonly` alan kaydeder ve bu nedenle yönlendirilmiş olay "sahip" sınıf üyesi. Aynı adlı bağlantı [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] (bazen "sarmalayıcı" olayı olarak adlandırılır) olayını geçersiz kılınarak `add` ve `remove` uygulamaları [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] olay. Normalde, `add` ve `remove` ekleme ve kaldırma olay işleyicileri için dile özgü olay uygun sözdizimini kullanan örtülü varsayılan olarak kalır. Yönlendirilmiş olay yedekleme ve bağlantı mekanizması nasıl bir bağımlılık özelliği kavramsal olarak benzer bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] güçlendirilmiştir özelliği <xref:System.Windows.DependencyProperty> sınıfı ve kayıtlı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi.
+Yönlendirilmiş olay, <xref:System.Windows.RoutedEvent> sınıfının bir örneği tarafından desteklenen ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay sistemine kaydedilen bir clr olayıdır. Kayıt işleminden elde edilen `public` `static` `readonly` örnek genellikle, yönlendirilmiş olayı kaydeden ve bu nedenle "sahip olunan" sınıfının alan üyesi olarak tutulur. <xref:System.Windows.RoutedEvent> Aynı adlı CLR olayına bağlantı (bazen "sarmalayıcı" olayı), CLR olayının `add` ve `remove` uygulamaları geçersiz kılınarak yapılır. Genellikle, `remove` ve bu olayın işleyicilerini eklemek ve kaldırmak için dile özgü uygun olay sözdizimini kullanan örtülü bir varsayılan olarak bırakılır. `add` Yönlendirilmiş olay yedekleme ve bağlantı mekanizması, bağımlılık özelliğinin <xref:System.Windows.DependencyProperty> sınıf tarafından desteklenen ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemine kaydedilen bir CLR özelliği olan kavramsal olarak benzerdir.
 
-Aşağıdaki örnek, özel bir bildirimi gösterir `Tap` kaydı ve riskini de dahil olmak üzere, yönlendirilmiş olay <xref:System.Windows.RoutedEvent> tanımlayıcı alanı ve `add` ve `remove` uygulamaları `Tap` [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] olay.
+`Tap` Aşağıdaki örnek, <xref:System.Windows.RoutedEvent> tanımlayıcı alanın `add` kaydı ve pozlaması, `Tap` clr olayı için ve `remove` uygulamaları da dahil olmak üzere özel bir yönlendirilmiş olaya yönelik bildirimi gösterir.
 
 [!code-csharp[RoutedEventCustom#AddRemoveHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#addremovehandler)]
 [!code-vb[RoutedEventCustom#AddRemoveHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#addremovehandler)]
 
-### <a name="routed-event-handlers-and-xaml"></a>Yönlendirilmiş olay işleyicileri ve XAML
+### <a name="routed-event-handlers-and-xaml"></a>Yönlendirilmiş olay Işleyicileri ve XAML
 
-Kullanarak bir olay işleyicisi eklemek için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], olay adının bir olay dinleyicisi olan öğe üzerinde bir özniteliği olarak bildirin. Özniteliğin değeri arka plan kod dosyasının kısmi class içinde bulunmalıdır uygulanan işleyicisi yönteminiz adıdır.
+Kullanarak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]bir olaya bir işleyici eklemek için, olay adını olay dinleyicisi olan öğe üzerinde bir öznitelik olarak bildirirsiniz. Özniteliğin değeri, uygulanan işleyici yönteminizin, arka plan kod dosyasının kısmi sınıfında bulunması gereken addır.
 
 [!code-xaml[EventOvwSupport#SimplestSyntax](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]
 
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Standart ekleme söz dizimi [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] olay işleyicileri olduğundan yönlendirilmiş olay işleyicileri için aynı işleyicilerini gerçekten eklemekte olduğunuz [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] yönlendirilmiş olay uygulaması olan olay sarmalayıcı altında. Olay işleyicileri ekleme hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bkz: [XAML genel bakış (WPF)](xaml-overview-wpf.md).
+Standart CLR olay işleyicilerini eklemek için sözdizimi,aşağıdakiyönlendirilmişolayuygulamalarınasahipolanCLRolaysarmalayıcıyagerçektenişleyicilereklediğiniziçin,yönlendirilmişolayişleyicilerinieklemeiçinaynıdır.[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] İçindeki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]olay işleyicilerini ekleme hakkında daha fazla bilgi için bkz. [xaml genel bakış (WPF)](xaml-overview-wpf.md).
 
 <a name="routing_strategies"></a>
 
-## <a name="routing-strategies"></a>Stratejilerini yönlendirme
+## <a name="routing-strategies"></a>Yönlendirme stratejileri
 
-Üç yönlendirme stratejisi birini olayları kullanın yönlendirilir:
+Yönlendirilmiş olaylar üç yönlendirme stratejisinden birini kullanır:
 
-- **Tırmanma:** Olay işleyicileri olay kaynağı üzerinde çağrılır. Yönlendirilmiş olayı öğesi ağaç kökü ulaşana kadar art arda gelen üst öğelere ardından yönlendirir. En yönlendirilmiş olaylar, tırmanma yönlendirme stratejisi kullanın. Tırmanma yönlendirilmiş olaylar, genellikle ayrı denetimleri veya diğer kullanıcı Arabirimi öğeleri giriş durum değişikliklerini bildirmek için kullanılır.
+- **Tırmanma** Olay kaynağındaki olay işleyicileri çağrılır. Yönlendirilmiş olay daha sonra öğe ağacı köküne ulaşıncaya kadar art arda gelen üst öğelere yönlendirir. Çoğu yönlendirilmiş olay, kabarcıklanma yönlendirme stratejisini kullanır. Kabarcıklanma yönlendirilmiş olayları genellikle farklı denetimlerden veya diğer kullanıcı arabirimi öğelerinden giriş veya durum değişikliklerini raporlamak için kullanılır.
 
-- **Doğrudan:** Yalnızca kaynak öğenin kendisinin yanıt işleyicilerini çağırma fırsatı verilir. Bu ", üretim için" benzer [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] için olayları kullanır. Ancak, standart bir aksine [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] olay doğrudan yönlendirilmiş olaylar sınıfı işlemeyi destekler (gelecek bölümde sınıfı işleme açıklanmıştır) ve tarafından kullanılan <xref:System.Windows.EventSetter> ve <xref:System.Windows.EventTrigger>.
+- **DirectSound** Yalnızca kaynak öğeye, yanıt olarak işleyicileri çağırma fırsatı verilir. Bu, olaylar için [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kullanan "yönlendirmeye" benzerdir. Ancak, standart bir CLR olayının aksine, doğrudan yönlendirilmiş olaylar sınıf işlemeyi destekler (sınıf işleme yaklaşan bölümde açıklanmıştır) ve ve <xref:System.Windows.EventSetter> <xref:System.Windows.EventTrigger>tarafından kullanılabilir.
 
-- **Tünel oluşturma:** Başlangıçta, olay işleyicileri öğesi ağaç kökünde çağrılır. Yönlendirilmiş olay sonra art arda gelen alt öğeleri düğüm öğe yönlendirilmiş olay kaynağı (yönlendirilmiş olayı öğesi) doğru yol boyunca düzeninden rotayı dolaşır. Tünel yönlendirilmiş olaylar genellikle kullanılan veya birleştirme bir denetim için bir parçası olarak bileşik parçalarından olayları kasıtlı olarak gizlenen veya tam denetime özgü olaylar yerine şekilde işlenir. İçinde sağlanan giriş olayları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] genellikle bir tünel/tırmanma çift olarak uygulanan gelir. Tünel olayları da önizleme olayları çiftleri için kullanılan bir adlandırma kuralı nedeniyle adlandırılır.
+- **Kullanılamayan** Başlangıçta, öğe ağacı kökündeki olay işleyicileri çağrılır. Yönlendirilmiş olay daha sonra, yönlendirilmiş olay kaynağı (yönlendirilmiş olayı oluşturan öğe) olan node öğesine doğru yol boyunca ardışık alt öğeler aracılığıyla bir yol dolaşır. Tünel yönlendirilmiş olayları genellikle bir denetimin birleştirme parçası olarak kullanılır veya işlenir. Bu, bileşik parçalardan gelen olaylar kasıtlı olarak gizlenebilir veya tüm denetime özgü olaylar tarafından değiştirilebilir. Genellikle ' de sunulan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] giriş olayları, bir tünel oluşturma/kabarcıklanma çifti olarak uygulanır. Ayrıca, çiftler için kullanılan bir adlandırma kuralı nedeniyle, tünel olayları bazen önizleme olayları olarak adlandırılır.
 
 <a name="why_use"></a>
 
-## <a name="why-use-routed-events"></a>Yönlendirilmiş olaylar niçin kullanılır?
+## <a name="why-use-routed-events"></a>Neden yönlendirilmiş olayları kullanmalıyım?
 
-Bir uygulama geliştiricisi olarak, her zaman bilmek veya işlemekte olduğunuz olay gönderilmiş bir olay uygulandığını dikkate gerekmez. Yönlendirilmiş olaylar özel davranışa sahiptir, ancak bu öğe üzerinde bir olay oluşturulduğu işleniyorsa büyük ölçüde görünmez bir davranıştır.
+Uygulama geliştiricisi olarak, işlemekte olduğunuz olayın yönlendirilmiş olay olarak uygulandığını her zaman bilmeniz gerekmez. Yönlendirilmiş olaylar özel bir davranışa sahiptir, ancak oluşturulduğu öğede bir olayı işliyorsa bu davranış büyük ölçüde görünmez olur.
 
-Önerilen senaryolardan birini kullanıyorsanız burada yönlendirilmiş olaylar güçlü hale olduğu: ortak bir kök en yaygın işleyicileri tanımlama birleştirme kendi denetiminizi veya kendi özel denetimi sınıfını tanımlama.
+Önerilen senaryolardan birini kullanıyorsanız, yönlendirilmiş olaylar güçlü hale gelir: ortak bir kökte ortak işleyiciler tanımlama, kendi denetiminizi birleştirme veya kendi özel denetim sınıfınızı tanımlama.
 
-Yönlendirilmiş olay dinleyicileri ve yönlendirilmiş olay kaynakları hiyerarşilerini ortak bir olayı paylaşmak gerekmez. Tüm <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement> gönderilmiş bir olay için bir olay dinleyicisi olabilir. Bu nedenle, "uygulama içindeki farklı öğelerin olay bilgi alışverişi yapabildiği bir kavramsal arabirimi" olarak çalışan API genelinde kullanılabilir yönlendirilmiş olaylar kümesini kullanabilirsiniz. Yönlendirilmiş olaylar için bu "arabirim" kavramı, giriş olayları için özellikle geçerlidir.
+Yönlendirilmiş olay dinleyicileri ve yönlendirilmiş olay kaynakları, hiyerarşide ortak bir olay paylaşmalıdır. Herhangi bir yönlendirilmiş olay için herhangi <xref:System.Windows.UIElement> bir olay dinleyicisi olabilir. <xref:System.Windows.ContentElement> Bu nedenle, çalışma API 'SI kümesi boyunca, uygulamanın farklı öğelerinin olay bilgilerini değiş tokuş edebilir kavramsal bir "arabirim" olarak kullanılabilir olan tüm yönlendirilmiş olaylar kümesini kullanabilirsiniz. Yönlendirilmiş olaylar için bu "arabirim" kavramı özellikle giriş olayları için geçerlidir.
 
-Olay verileri olayın rota içindeki her öğeyi perpetuated çünkü yönlendirilmiş olaylar öğesi ağacı ile iletişim kurmak için de kullanılabilir. Bir öğe bir şey olay verileri değiştirebilir ve bu değişiklik rota sonraki öğe için kullanılabilir hale gelir.
+Yönlendirilmiş olaylar, öğe ağacı üzerinden iletişim kurmak için de kullanılabilir, çünkü olayın olay verileri rotadaki her bir öğeye yeniden yönlendirilir. Bir öğe olay verilerinde bir şeyi değiştirebilir ve bu değişiklik rotadaki bir sonraki öğe için kullanılabilir.
 
-Yönlendirme en boy dışındaki diğer iki nedeni vardır verilen herhangi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay yerine standart bir gönderilmiş bir olay olarak uygulanmasını [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] olay. Kendi olaylarınızı uyguluyorsanız, bu ilkelere dikkate almanız gerekebilir:
+Yönlendirme yönü dışında, belirli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir olayın standart bir clr olayı yerine yönlendirilmiş olay olarak uygulanmasının iki nedeni vardır. Kendi olaylarınızı uygulamadıysanız, şu ilkeleri de göz önünde bulundurmanız gerekebilir:
 
-- Belirli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stil ve şablon oluşturma özellikleri gibi <xref:System.Windows.EventSetter> ve <xref:System.Windows.EventTrigger> başvurulan olayı yönlendirilmiş olay olmasını gerektirir. Bu, daha önce bahsedilen olay tanımlayıcısı senaryodur.
+- Gibi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belirli stil ve şablon oluşturma özellikleri <xref:System.Windows.EventSetter> ve <xref:System.Windows.EventTrigger> başvurulan olayın yönlendirilmiş olay olması gerekir. Bu, daha önce bahsedilen olay tanımlayıcı senaryosudur.
 
-- Yönlendirilmiş olaylar işleme mekanizması sınıfı, tüm kayıtlı örnek işleyicileri erişebilmeniz için önce yönlendirilmiş olaylar işleme fırsatına sahip statik yöntemler yapabildiği belirtebilirsiniz bir sınıf destekler. Sınıfınıza örneği üzerinde bir olay işleme tarafından yanlışlıkla atlanması olamaz olay temelli sınıf davranışlarını zorunlu kılabilir denetim tasarımında, çok kullanışlı olmasıdır.
+- Yönlendirilmiş olaylar, bir kayıtlı örnek işleyicilerinin erişebilmesi için önce yönlendirilmiş olayları işleme fırsatına sahip statik yöntemler belirtebilir sınıf işleme mekanizmasını destekler. Sınıfınız, bir örnekteki olayı işleyerek yanlışlıkla gizlenemez olay odaklı sınıf davranışlarını zorlayabildiğinden, denetim tasarımında çok yararlı olur.
 
-Her yukarıdaki konuları, bu konunun ayrı bir bölümde ele alınmıştır.
+Yukarıdaki önemli noktalar, bu konunun ayrı bir bölümünde ele alınmıştır.
 
 <a name="event_handing"></a>
 
-## <a name="adding-and-implementing-an-event-handler-for-a-routed-event"></a>Ekleme ve bir olay işleyicisi için gönderilmiş bir olayı uygulama
+## <a name="adding-and-implementing-an-event-handler-for-a-routed-event"></a>Yönlendirilmiş bir olay için olay Işleyicisi ekleme ve uygulama
 
-Bir olay işleyicisi eklemek için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], sadece bir öğeye bir öznitelik olarak olay adı ekleyerek, öznitelik değeri aşağıdaki örnekte olduğu gibi uygun bir temsilci uygulayan bir olay işleyicisi adı olarak ayarlayın.
+' De [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]bir olay işleyicisi eklemek için, bir öğeye olay adını bir öznitelik olarak ekleyin ve öznitelik değerini, aşağıdaki örnekte olduğu gibi uygun bir temsilciyi uygulayan olay işleyicisinin adı olarak ayarlamanız yeterlidir.
 
 [!code-xaml[EventOvwSupport#SimplestSyntax](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]
 
-`b1SetColor` işleyen kodu içeren uygulanan işleyici adı <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay. `b1SetColor` aynı imzaya sahip olmalıdır <xref:System.Windows.RoutedEventHandler> olay işleyici temsilcisini olan bir temsilci için <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay. Tüm yönlendirilmiş olay işleyici temsilcilerini ilk parametresi, olay işleyicisi eklenir ve ikinci parametre olaya ilişkin veriler belirtir öğesi belirtir.
+`b1SetColor`, <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı işleyen kodu içeren uygulanan işleyicinin adıdır. `b1SetColor`, <xref:System.Windows.RoutedEventHandler> olay<xref:System.Windows.Controls.Primitives.ButtonBase.Click> için olay işleyicisi temsilcisi olan temsilciyle aynı imzaya sahip olmalıdır. Tüm yönlendirilmiş olay işleyicisi temsilcilerinin ilk parametresi, olay işleyicisinin eklendiği öğeyi belirtir ve ikinci parametre olay için verileri belirtir.
 
 [!code-csharp[EventOvwSupport#SimpleHandlerA](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
 [!code-vb[EventOvwSupport#SimpleHandlerA](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]
 
-<xref:System.Windows.RoutedEventHandler> temel yönlendirilmiş olay işleyicisi temsilcisidir. Böylece bunlar özelleştirilmiş olay veri iletebilir özelleştirilmiş belirli denetimler veya senaryoları yönlendirilmiş olaylar için yönlendirilmiş olay işleyicilerinde temsilcileri ayrıca daha özelleştirilmiş olabilirler. Örneğin, ortak bir giriş senaryosunda, işleyebilir bir <xref:System.Windows.UIElement.DragEnter> yönlendirilmiş olay. İşleyicinizi uygulamalıdır <xref:System.Windows.DragEventHandler> temsilci. En belirgin temsilci kullanarak, işleyebileceği <xref:System.Windows.DragEventArgs> işleyicisi ve okuma <xref:System.Windows.DragEventArgs.Data%2A> sürükleme işleminin Pano yükünü içeren özellik.
+<xref:System.Windows.RoutedEventHandler>, temel yönlendirilmiş olay işleyicisi temsilcisidir. Belirli denetimler veya senaryolar için özelleştirilmiş olan yönlendirilmiş olaylar için, yönlendirilmiş olay işleyicileri için kullanılacak temsilciler da daha özelleştirilmiş hale gelebilir, böylece özel olay verilerini iletebilirler. Örneğin, ortak bir giriş senaryosunda, yönlendirilmiş bir <xref:System.Windows.UIElement.DragEnter> olayı işleyebilirsiniz. İşleyiciniz <xref:System.Windows.DragEventHandler> temsilciyi uygulamalıdır. En belirli temsilciyi kullanarak, <xref:System.Windows.DragEventArgs> öğesini işleyicide işleyebilir ve sürükleme işleminin Pano yükünü içeren <xref:System.Windows.DragEventArgs.Data%2A> özelliğini okuyabilirsiniz.
 
-Bir olay işleyicisi kullanarak bir öğe eklemek tam bir örnek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bkz: [bir yönlendirilmiş olayı işleme](how-to-handle-a-routed-event.md).
+Kullanarak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]bir öğeye olay işleyicisi ekleme hakkında bir örnek için, bkz. [yönlendirilmiş olayı işleme](how-to-handle-a-routed-event.md).
 
-Kod içinde oluşturulan bir uygulamada gönderilmiş bir olay işleyicisi eklemek oldukça basittir. Yönlendirilmiş olay işleyicileri her zaman bir yardımcı yöntem aracılığıyla eklenecek <xref:System.Windows.UIElement.AddHandler%2A> (var olan yedekleme için çağıran yöntemin olduğu `add`.) Ancak, varolan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönlendirilmiş olaylar genellikle sahip yedekleme uygulamalarına `add` ve `remove` bir dile özgü olay sözdizimi tarafından eklenecek yönlendirilmiş olaylar için işleyiciler izin mantığı daha sezgisel sözdizimi olduğu yardımcı yöntemi. Yardımcı yöntemi kullanım örneği verilmiştir:
+Kodda oluşturulan bir uygulamaya yönlendirilmiş olay için bir işleyici eklemek basittir. Yönlendirilmiş olay işleyicileri her zaman bir yardımcı yöntem <xref:System.Windows.UIElement.AddHandler%2A> (mevcut yedeklemenin `add`çağırdığı Yöntem) aracılığıyla eklenebilir. Ancak, mevcut [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönlendirilmiş olaylar genellikle, yönlendirilmiş olayların işleyicilerinin `add` , `remove` dile özgü bir olay sözdizimi tarafından eklenmesine izin veren ve mantığın, bu değerden daha sezgisel bir sözdizimi olan yardımcı yöntemi. Yardımcı yönteminin örnek kullanımı aşağıda verilmiştir:
 
 [!code-csharp[EventOvwSupport#AddHandlerCode](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
 [!code-vb[EventOvwSupport#AddHandlerCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]
 
-Sonraki örnekte gösterildiği C# işleci sözdizimini (Visual Basic sahip biraz farklı işleci söz dizimi başvurusunun kaldırılması, işleme nedeniyle):
+Sonraki örnek, C# işleç söz dizimini gösterir (Visual Basic, başvurusunun işlenmesi nedeniyle biraz farklı işleç sözdizimine sahiptir):
 
 [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
 [!code-vb[EventOvwSupport#AddHandlerPlusEquals](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]
 
-Kodda bir olay işleyicisi ekleme örneği için bkz. [kullanarak bir olay işleyicisini eklemek](how-to-add-an-event-handler-using-code.md).
+Kodda olay işleyicisi ekleme hakkında bir örnek için bkz. [Code kullanarak olay Işleyicisi ekleme](how-to-add-an-event-handler-using-code.md).
 
-Visual Basic kullanıyorsanız, ayrıca kullanabileceğiniz `Handles` işleyici bildirimlerinin bir parçası olarak işleyicileri eklemek için anahtar sözcüğü. Daha fazla bilgi için [Visual Basic ve WPF olay işleme](visual-basic-and-wpf-event-handling.md).
+Visual Basic kullanıyorsanız, işleyicileri işleyici bildirimlerinin bir parçası olarak eklemek için `Handles` anahtar sözcüğünü de kullanabilirsiniz. Daha fazla bilgi için bkz. [Visual Basic ve WPF olay işleme](visual-basic-and-wpf-event-handling.md).
 
 <a name="concept_handled"></a>
 
-### <a name="the-concept-of-handled"></a>İşlenmiş kavramı
+### <a name="the-concept-of-handled"></a>Işlenen kavramı
 
-Bir ortak olay verileri temel sınıfı, tüm yönlendirilmiş olaylar paylaşmak <xref:System.Windows.RoutedEventArgs>. <xref:System.Windows.RoutedEventArgs> tanımlar <xref:System.Windows.RoutedEventArgs.Handled%2A> özelliği bir Boole değeri alır. Amacı <xref:System.Windows.RoutedEventArgs.Handled%2A> özelliktir yönlendirilmiş olay olarak işaretlemek için yol boyunca herhangi bir olay işleyici etkinleştirmek için *işlenen*, değerini ayarlayarak <xref:System.Windows.RoutedEventArgs.Handled%2A> için `true`. Bir öğe yol boyunca işleyici tarafından işlendikten sonra paylaşılan bir olay verileri, yol boyunca her dinleyici için yeniden bildirilir.
+Tüm yönlendirilmiş olaylar ortak bir olay veri tabanı sınıfını <xref:System.Windows.RoutedEventArgs>paylaşır. <xref:System.Windows.RoutedEventArgs>Boole değeri alan özelliği tanımlar. <xref:System.Windows.RoutedEventArgs.Handled%2A> <xref:System.Windows.RoutedEventArgs.Handled%2A> Özelliğinin amacı, ' nin <xref:System.Windows.RoutedEventArgs.Handled%2A> değerini olarak `true`ayarlayarak yönlendirilmiş olayı *işlenmiş*olarak işaretlemek için yol üzerinde herhangi bir olay işleyicisini etkinleştirmektir. Yol üzerinde bir öğede işleyici tarafından işlendikten sonra, paylaşılan olay verileri her bir dinleyiciye yol üzerinde yeniden bildirilir.
 
-Değerini <xref:System.Windows.RoutedEventArgs.Handled%2A> etkiler gönderilmiş bir olay rapor ya da bunu ilerledikçe işlenen nasıl yol boyunca daha fazla. Varsa <xref:System.Windows.RoutedEventArgs.Handled%2A> olduğu `true` olay verileri gönderilmiş bir olay ve diğer öğelerde bu yönlendirilmiş olayı dinleyen işleyicileri için genellikle artık bu belirli olay örneği için çağrılmaz. Bu işleyiciler için hem de bağlı geçerlidir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve gibi dile özgü olay işleyicisi ek sözdizimleri tarafından eklenen işleyiciler için `+=` veya `Handles`. En yaygın işleyici senaryoları için bir olay ayarlayarak işlenmiş olarak işaretleme <xref:System.Windows.RoutedEventArgs.Handled%2A> için `true` "tünel yolu ya da tırmanma bir rota için ve ayrıca bir noktasında rota sınıfı işleyici tarafından işlenir herhangi bir olay için yönlendirmeyi durdurur".
+Değeri, yönlendirilen <xref:System.Windows.RoutedEventArgs.Handled%2A> bir olayın yol üzerinde daha fazla hareket ettiği şekilde nasıl bildirileceğini veya işleneceğini etkiler. <xref:System.Windows.RoutedEventArgs.Handled%2A> ,Yönlendirilmişbirolayınolayverileriise,diğeröğelerdebuyönlendirilmişolayıdinleyenişleyicilergenelliklebubelirli`true` olay örneği için çağrılmaz. Bu, hem ' de eklenen işleyiciler için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] hem de `+=` veya `Handles`gibi dile özgü olay işleyicisi ek sözdizimleri tarafından eklenen işleyiciler için geçerlidir. En yaygın işleyici senaryolarında, bir olayı bir tünel yolu veya kabarcıklanma rotası <xref:System.Windows.RoutedEventArgs.Handled%2A> için `true` "Durdur" olarak işaretleyerek ve ayrıca, bir sınıf işleyicisi tarafından rotadaki bir noktada işlenen herhangi bir olay için, bir olayı ayarıyla işlenen olarak işaretleyin.
 
-Ancak, yapabildiği dinleyicileri yine de çalıştırabilir işleyicileri yönlendirilmiş olaylara yanıt olarak bir "handledEventsToo" mekanizması yoktur burada <xref:System.Windows.RoutedEventArgs.Handled%2A> olduğu `true` olay veri. Diğer bir deyişle, olay yolu tamamen olay verileri işlenmiş olarak işaretleme durdurulmaz. HandledEventsToo mekanizması kod ya da yalnızca kullanabilen bir <xref:System.Windows.EventSetter>:
+Ancak, dinleyicilerinin olay verilerinde <xref:System.Windows.RoutedEventArgs.Handled%2A> olduğu `true` yönlendirilmiş olaylara yanıt olarak işleyicileri hala çalıştırabildiği bir "handledEventsToo" mekanizması vardır. Diğer bir deyişle, olay rotası olay verileri işlenmiş olarak işaretlenerek gerçekten durdurulmaz. HandledEventsToo mekanizmasını yalnızca kodda veya bir <xref:System.Windows.EventSetter>' de kullanabilirsiniz:
 
-- Kodda, çalışan bir dile özgü olay söz dizimi genel kullanmak yerine [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] olayları çağırma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yöntemi <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> işleyicinizi eklemek için. Değerini belirtmek `handledEventsToo` olarak `true`.
+- Kodda, genel CLR olayları için çalışacak dile özgü bir olay sözdizimi kullanmak yerine, işleyiciyi eklemek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yöntemini <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> çağırın. Değerini `handledEventsToo` olarak`true`belirtin.
 
-- İçinde bir <xref:System.Windows.EventSetter>ayarlayın <xref:System.Windows.EventSetter.HandledEventsToo%2A> özniteliğini `true`.
+- Bir <xref:System.Windows.EventSetter>içinde, <xref:System.Windows.EventSetter.HandledEventsToo%2A> özniteliğini `true`olarak ayarlayın.
 
-Davranış yanı sıra, <xref:System.Windows.RoutedEventArgs.Handled%2A> durumu üretir yönlendirilmiş olaylar kavramı <xref:System.Windows.RoutedEventArgs.Handled%2A> , uygulamanızı tasarlayın ve bunları nasıl olay işleyicisi kodu yazmak için olası etkilere sahiptir. Kavramsallaştırmak <xref:System.Windows.RoutedEventArgs.Handled%2A> yönlendirilmiş olaylar tarafından gösterilen basit bir protokol olarak. Tam olarak bu protokolü kullanma, ancak nasıl kavramsal tasarımı kadar olan değerini <xref:System.Windows.RoutedEventArgs.Handled%2A> kullanılmaya yönelik aşağıdaki gibidir:
+' Nin <xref:System.Windows.RoutedEventArgs.Handled%2A> <xref:System.Windows.RoutedEventArgs.Handled%2A> yönlendirilmiş olaylarda durum üretmesinin yanı sıra, kavramı, uygulamanızı tasarlamak ve olay işleyici kodunu yazmak için bazı etkileri vardır. Yönlendirilmiş olaylar tarafından açığa çıkarılan <xref:System.Windows.RoutedEventArgs.Handled%2A> basit bir protokol olarak kavramsa getirebilirsiniz. Bu protokolü nasıl kullanacağınızı tam olarak kullanıyorsunuz, ancak değerinin <xref:System.Windows.RoutedEventArgs.Handled%2A> nasıl kullanılacağına yönelik kavramsal tasarım şu şekildedir:
 
-- Yönlendirilmiş olay işlenmiş olarak işaretlenmişse, onu yeniden o yol boyunca diğer öğeleri tarafından ele alınması gerekmez.
+- Yönlendirilmiş bir olay işlenmiş olarak işaretlenmişse, bu yol üzerindeki diğer öğeler tarafından yeniden işlenmesi gerekmez.
 
-- Yönlendirilmiş olay işlenmiş olarak işaretlenmemiş sonra yol boyunca önceki diğer dinleyicilere eylemleri bir işleyici veya olay verileri işlemek ve ayarlamak için kayıtlı seçtiğiniz olan işleyicileri kayıt ya da seçmiş olduğunuz <xref:System.Windows.RoutedEventArgs.Handled%2A> için `true`. (Veya doğal olarak geçerli dinleyici rotadaki ilk noktası olabilir.) Geçerli dinleyici işleyicileri, artık eylemi üç olası kurslarımız vardır:
+- Yönlendirilmiş bir olay işlenmiş olarak işaretlenmemişse, daha önce yol üzerinde olan diğer dinleyiciler bir işleyiciyi kaydetmemeyi ya da kayıtlı işleyiciler olay verilerini işlemek ve olarak <xref:System.Windows.RoutedEventArgs.Handled%2A> `true`ayarlamak için öğesini seçti. (Veya, geçerli dinleyicinin rotadaki ilk nokta olması mümkündür.) Geçerli dinleyicide bulunan işleyiciler artık olası üç işlem kurssuna sahiptir:
 
-  - Hiç eylem yok; olay işlenmeden kalır ve olay sonraki dinleyiciye yönlendirir.
+  - Hiç bir işlem yapın; olay işlenmemiş kalır ve olay bir sonraki dinleyiciye yönlendirir.
 
-  - Olay yanıt kodu yürütün, ancak bulguyu gerçekleştirilecek eylemi olayı işlenmiş olarak işaretleme garanti altına almak için önemli değil. Sonraki dinleyicisi olay yollar.
+  - Olaya yanıt olarak kod yürütün, ancak gerçekleştirilecek eylemin olayı işlenmiş olarak işaretlemeyi sağlamak için yeterince önemli olmadığını belirleme. Olay bir sonraki dinleyiciye yönlendirir.
 
-  - Olaya yanıt olarak bir kod yürütün. Olay gerçekleştirilecek eylemi işlenmiş olarak işaretleme garanti altına almak için önemli kabul edilen olduğundan olay işleyicisine geçirilen verileri işlenmiş olarak işaretler. Olay hala yönlendiren sonraki dinleyicisi ancak ile <xref:System.Windows.RoutedEventArgs.Handled%2A> = `true` yalnızca kendi olay verilerinde `handledEventsToo` dinleyicileri, işleyicileri daha çağrılacak şansınız vardır.
+  - Olaya yanıt olarak kodu yürütün. Gerçekleştirilen eylem, işlenen olarak işaretlemek için yeterince önemli bir değer kabul edildiğinden, olayı işleyiciye geçirilen olay verilerinde işlendi olarak işaretleyin. Olay yine de bir sonraki dinleyiciye yönlendirir, ancak olay <xref:System.Windows.RoutedEventArgs.Handled%2A> verilerinde ile = `true` , yalnızca `handledEventsToo` dinleyiciler daha fazla işleyicileri çağırma fırsatına sahiptir.
 
-Kavramsal bu tasarım, daha önce bahsedilen yönlendirme davranışı tarafından desteklenir: bir önceki işleyici yol boyunca zatenayarlanmışolsabileçağrılanyönlendirilmişolaylariçinişleyicilereklemekdahazor,(halamümkünolsadakodveyastilleri)olduğu<xref:System.Windows.RoutedEventArgs.Handled%2A>için `true`.
+Bu kavramsal tasarım daha önce bahsedilen yönlendirme davranışına göre zorlanmıştır: yol üzerinde önceki bir işleyici zaten ayarlanmış <xref:System.Windows.RoutedEventArgs.Handled%2A>olsabileçağrılanyönlendirilmişolaylarayönelikişleyicilereklemekdahazordur(kodveyastillerdehalamümkünolsa) .`true`
 
-Hakkında daha fazla bilgi için <xref:System.Windows.RoutedEventArgs.Handled%2A>sınıfı işlenmesini yönlendirilmiş olayları ve uygun olduğunda ilgili öneriler gönderilmiş bir olay olarak işaretlemek için <xref:System.Windows.RoutedEventArgs.Handled%2A>, bkz: [işaretleme yönlendirilmiş olayları işlenmiş ve bir sınıf olarak](marking-routed-events-as-handled-and-class-handling.md).
+Yönlendirilmiş olayların sınıf işlemesi ve yönlendirilmiş olayı olarak <xref:System.Windows.RoutedEventArgs.Handled%2A>işaretlemek için uygun olduğunda ilgili öneriler için, bkz. [yönlendirilmiş olayları işlenmiş olarak işaretleme ve sınıf işleme](marking-routed-events-as-handled-and-class-handling.md). <xref:System.Windows.RoutedEventArgs.Handled%2A>
 
-Uygulamalar, yalnızca ortaya çıkan nesne tırmanma yönlendirilmiş olayı işleme ve hiç olay yönlendirme özellikleriyle ilgili olmaması için oldukça yaygındır. Ancak, yine de yönlendirilmiş olay veri öğesi ağacın başka bir öğe ihtimale beklenmedik yan etkileri önlemek için Ayrıca, aynı yönlendirilmiş olay için bağlı bir işleyici olması durumunda işlenmiş olarak işaretlemek için iyi bir uygulamadır.
+Uygulamalarda, yalnızca onu oluşturan nesne üzerinde kabarcıklanma yönlendirilmiş olayını işlemek ve olayın yönlendirme özellikleriyle ilgili hiçbir şey olmaması çok yaygındır. Ancak, aynı zamanda aynı yönlendirilmiş olay için eklenen bir işleyici de varsa, bir yandan beklenmeyen yan etkileri engellemek için, yönlendirilmiş olayı olay verilerinde işlenmiş olarak işaretlemek iyi bir uygulamadır.
 
 <a name="class_handlers"></a>
 
-## <a name="class-handlers"></a>Sınıf işleyicileri
+## <a name="class-handlers"></a>Sınıf Işleyicileri
 
-Bazı şekilde türeyen bir sınıf tanımlıyorsanız, <xref:System.Windows.DependencyObject>, ayrıca tanımlayabilir ve sınıfınızın olayı, bildirilmiş veya devralınan bir üyesi olan gönderilmiş bir olay işleyicisi sınıfı ekleyin. Sınıf işleyicileri gönderilmiş bir olayı öğesi örneği yolunu eriştiğinde, söz konusu sınıfın bir örneğine eklenen herhangi bir örnek dinleyici işleyicileri önce çağrılır.
+' Dan <xref:System.Windows.DependencyObject>bir şekilde türetilen bir sınıf tanımlıyorsanız, sınıfınızın tanımlanmış veya devralınmış bir olay üyesi olan bir yönlendirilmiş olay için bir sınıf işleyicisi tanımlayabilir ve ekleyebilirsiniz. Sınıf işleyicileri, bir yönlendirilmiş olay kendi rotasında bir öğe örneğine ulaştığında, bu sınıfın örneğine iliştirilmiş herhangi bir örnek dinleyicisi işleyicisinden önce çağrılır.
 
-Bazı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimleri, devralınan sınıf belirli yönlendirilmiş olaylar için işleme sahiptir. Bu yönlendirilmiş olayı hiç gerçekleşmedi, ancak gerçekte işlenen sınıfı yapılıyor ve belirli teknikler kullanırsanız yönlendirilmiş olay hala olası örneği İşleyicileriniz tarafından işlenebilen dışa doğru görünümünü verebilir. Ayrıca, birçok temel sınıf ve denetim işleme sınıfı geçersiz kılmak için kullanılan sanal yöntemler kullanıma sunar. İstenmeyen sınıfı işleme etrafında çalışma konusunda ve kendi sınıf özel bir sınıf içinde işleme daha fazla bilgi için bkz: [işaretleme yönlendirilmiş olayları işlenmiş ve bir sınıf olarak](marking-routed-events-as-handled-and-class-handling.md).
+Bazı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimlerin, belirli yönlendirilmiş olaylar için devralınan sınıf işlemesi vardır. Bu, yönlendirilmiş olayın hiçbir zaman yükseltilmediği, ancak gerçekte sınıf işlendiği ve yönlendirilmiş olayın belirli teknikleri kullanıyorsanız örnek İşleyicileriniz tarafından hala işlenebileceği bir durum verebilir. Ayrıca, birçok temel sınıf ve denetim, sınıf işleme davranışını geçersiz kılmak için kullanılabilen sanal yöntemleri sunar. Hem istenmeyen sınıf işlemeyi geçici olarak yapma hem de özel bir sınıfta kendi sınıf işlemeyi tanımlama hakkında daha fazla bilgi için bkz. [yönlendirilmiş olayları işlenmiş olarak işaretleme ve sınıf işleme](marking-routed-events-as-handled-and-class-handling.md).
 
 <a name="attached_events"></a>
 
-## <a name="attached-events-in-wpf"></a>WPF içinde ekli olaylar
+## <a name="attached-events-in-wpf"></a>WPF 'de ekli olaylar
 
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Dil de olay olarak adlandırılan özel bir tür tanımlar bir *ekli olay*. Ekli olay belirli bir olay işleyicisi için rastgele bir öğe eklemenize olanak tanır. Olay işleme öğesi değil tanımlayın veya ekli olay devralır ve ne potansiyel olarak olayı tetiklenmeden nesne ya da hedef işleme örneği tanımlayın veya gerekir aksi takdirde bu olay bir sınıf üyesi olarak "sahibi".
+Dil Ayrıca ekli olay adlı özel bir olay türünü tanımlar.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Ekli bir olay, belirli bir olaya yönelik işleyiciyi rastgele bir öğeye eklemenizi sağlar. Olay işleme gereksinimi, ekli olayı belirtmemelidir veya almamalıdır; ne de nesne, olayı ya da hedef işleme örneği, bir sınıf üyesi olarak bu olayı tanımlamalıdır veya başka bir şekilde "sahip değil".
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Giriş sistemi ekli olaylar kapsamlı olarak kullanır. Ancak, neredeyse tüm iliştirilmiş bu olayların temel öğeler iletilir. Giriş olayları, ardından eşdeğer bağlı olmayan yönlendirilmiş temel öğe sınıfının üyesi olan olaylar gibi görünür. Ekli olay temel alınan örneği için <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> daha kolayca verilen herhangi işlenebilir <xref:System.Windows.UIElement> kullanarak <xref:System.Windows.UIElement.MouseDown> üzerindeki <xref:System.Windows.UIElement> ekli olay söz dizimi ile baş yerine içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] veya kod.
+Giriş [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistemi, ekli olayları kapsamlı olarak kullanır. Ancak, bu ekli olayların neredeyse hepsi temel öğeler aracılığıyla iletilir. Daha sonra giriş olayları, temel öğe sınıfının üyeleri olan eşdeğer, eklenmemiş yönlendirilmiş olaylar olarak görüntülenir. Örneğin, temel alınan eklenen <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> olay, veya kodu içindeki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ekli olay sözdizimi ile uğraşmaktansa <xref:System.Windows.UIElement.MouseDown> , üzerinde <xref:System.Windows.UIElement> kullanılarak <xref:System.Windows.UIElement> herhangi bir şekilde daha kolay işlenebilir.
 
-Ekli olaylar hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: [iliştirilmiş olaylara genel bakış](attached-events-overview.md).
+İçindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ekli olaylar hakkında daha fazla bilgi için bkz. [ekli olaylara genel bakış](attached-events-overview.md).
 
 <a name="Qualifying_Event_Names_in_XAML_for_Anticipated_Routing"></a>
 
-## <a name="qualified-event-names-in-xaml"></a>XAML içinde yetkili olay adları
+## <a name="qualified-event-names-in-xaml"></a>XAML 'de nitelikli olay adları
 
-Benzer başka bir sözdizimi kullanımı *typename*. *eventname* olay sözdizimi bağlı, ancak NET olarak söylemek gerekirse bir ekli olay kullanımı için alt öğeler tarafından başlatılan yönlendirilmiş olaylara işleyiciler eklediğinizde değil. Ortak üst ilgili yönlendirilmiş olay üyesi olmasa bile olay yönlendirme, avantajından yararlanmak için ortak bir üst işleyicileri ekleyin. Bu örnek yeniden göz önünde bulundurun:
+*TypeName*'e benzeyen başka bir sözdizimi kullanımı.  başvuran olay söz dizimi, ancak ekli olay kullanımını kesin bir şekilde söylemez, bu, alt öğeler tarafından oluşturulan yönlendirilmiş olaylar için işleyiciler iliştirilmesidir. Ortak üst öğe, ilgili yönlendirilmiş olaya üye olarak sahip olmasa bile, işleyicileri ortak bir üst öğeye iliştirmiş olursunuz. Bu örneği bir daha göz önünde bulundurun:
 
 [!code-xaml[EventOvwSupport#GroupButton](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]
 
-İşte, işleyici eklendi burada üst öğe dinleyicisi bir <xref:System.Windows.Controls.StackPanel>. Ancak, bildirildi ve tarafından gerçekleştirilen gönderilmiş bir olay işleyicisi ekleme <xref:System.Windows.Controls.Button> sınıfı (<xref:System.Windows.Controls.Primitives.ButtonBase> aslında, ancak kullanılabilir <xref:System.Windows.Controls.Button> devralma yoluyla). <xref:System.Windows.Controls.Button> "olay ancak yönlendirilmiş olay sistem izinleri işleyicileri herhangi birine bağlı tüm yönlendirilmiş olay için sahip" <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement> dinleyicileri için Aksi takdirde paylaşılmasıdır örneği dinleyicisi bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] olay. Bu tam olay öznitelik adları için varsayılan xmlns ad alanı genellikle varsayılandır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] xmlns ad alanı, ancak önekli ad alanları için özel yönlendirilmiş olaylar belirtebilirsiniz. Xmlns hakkında daha fazla bilgi için bkz: [XAML ad alanları ve WPF XAML Namespace eşleme](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).
+Burada, işleyicinin eklendiği üst öğe dinleyicisi ' dır <xref:System.Windows.Controls.StackPanel>. Ancak, yönlendirilmiş bir olay için bir işleyici ekliyor ve <xref:System.Windows.Controls.Button> sınıf tarafından tetiklenir (<xref:System.Windows.Controls.Primitives.ButtonBase> <xref:System.Windows.Controls.Button> aslında, devralma aracılığıyla kullanılabilir). <xref:System.Windows.Controls.Button>"buna sahip olan", ancak yönlendirilmiş olay sistemi, herhangi bir yönlendirilmiş olayın işleyicilerinin, başka bir ortak dil çalışma <xref:System.Windows.UIElement> zamanı <xref:System.Windows.ContentElement> (CLR) olayı için dinleyicileri iliştiremeyen herhangi bir veya örnek dinleyiciye iliştirmesine izin verir. Bu nitelikli olay özniteliği adları için varsayılan xmlns ad alanı genellikle varsayılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] xmlns ad alanıdır, ancak özel yönlendirilmiş olaylar için önekli ad alanlarını da belirtebilirsiniz. Xmlns hakkında daha fazla bilgi için bkz. [WPF XAML Için xaml ad alanları ve ad alanı eşlemesi](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).
 
 <a name="how_event_processing_works"></a>
 
 ## <a name="wpf-input-events"></a>WPF giriş olayları
 
-Yönlendirilmiş olaylar içinde sık bir uygulaması [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] giriş olayları için bir platformdur. İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], tünel adları kurala göre "Preview" sözcüğü öneki olayları yönlendirilmiş. Giriş olayları çiftler halinde, tırmanma olay ve diğer tünel olayı olan biriyle genellikle gelir. Örneğin, <xref:System.Windows.ContentElement.KeyDown> olay ve <xref:System.Windows.ContentElement.PreviewKeyDown> olay tırmanma giriş olayı olan önceki ile aynı imzaya sahip ve ikinci tünel giriş olayı. Bazen, giriş olayları yalnızca tırmanma sürümü veya belki de yalnızca doğrudan yönlendirilmiş sürümü gerekir. Belgelerde, yönlendirilmiş olay konuları böyle yönlendirilmiş olaylar varsa ve her yönlendirilmiş olay yönlendirme stratejisini yönetilen başvuru sayfalarına bölümlerde açıklamak alternatif stratejilerini yönlendirme ile benzer yönlendirilmiş olaylar çapraz başvuru.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Platform içinde yönlendirilmiş olayların sıklıkla bir uygulaması giriş olaylardır. ' [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]De, tünel yönlendirilmiş olayları adlarına göre "Önizleme" sözcüğünün ön eki alınır. Giriş olayları genellikle bir tane kabarcıklanma olayı ve diğeri de tünel oluşturma olayı olacak şekilde çiftler halinde gelir. Örneğin, <xref:System.Windows.ContentElement.KeyDown> olay <xref:System.Windows.ContentElement.PreviewKeyDown> ve olay aynı imzaya sahiptir, ilki kabarcıklanma giriş olayıdır ve bu, son tünel giriş olayıdır. Bazen, giriş olayları yalnızca bir kabarcıklanma sürümüne veya belki yalnızca doğrudan yönlendirilen sürüme sahiptir. Belgelerde, yönlendirilmiş olay konuları, bu tür yönlendirilmiş olaylar varsa diğer yönlendirme stratejileriyle benzer yönlendirilmiş olaylara çapraz başvuru yapılır ve yönetilen başvuru sayfalarındaki bölümler her bir yönlendirilmiş olayın yönlendirme stratejisini açıklığa kavuşturacaktır.
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çiftler halinde gelen giriş olayları, böylece bir fare düğmesine basma gibi bir giriş tek kullanıcı eyleminden sırayla çiftinin her iki yönlendirilmiş olaylar oluşturacak uygulanır. İlk olarak, tünel olayı tetiklenir ve yolunu dolaşır. Ardından tırmanma olay tetiklenir ve yolunu dolaşır. İki olay tam anlamıyla çünkü aynı olay verileri örneği paylaşma <xref:System.Windows.UIElement.RaiseEvent%2A> tırmanma olayı oluşturan uygulayan sınıfa yöntem çağrısında tünel olayı olay verileri dinler ve yeni oluşturulan olay içinde kullanır. Dinleyicileri tünel olay işleyicileri ile işlenen yönlendirilmiş olay işaretlemek için ilk şansınız vardır (sınıf işleyicileri ilk olarak, daha sonra örnek işleyiciler). Tünel yol boyunca bir öğe yönlendirilmiş olay işlenmiş olarak işaretlenmiş, tırmanma olayı için olay zaten işlenmiş veriler gönderilir ve tipik işleyicileri için giriş olayları tırmanma eşdeğer bağlı çağrılmaz. Dışa doğru olması için işlenen tırmanma olay değil bile yükseltildikten gibi olacaktır. Bu işleme davranışını giriş olayları veya bileşik parçalarının yerine, son denetim tarafından bildirilecek giriş olaylarını odak tabanlı tüm isabet sınaması göre isteyebileceğiniz denetim birleştirme için kullanışlıdır. Son denetim öğesi kök dizininde birleştirme yakındır ve bu nedenle ilk ve belki de bir "yönlendirilmiş olay denetimi yedekler kodun bir parçası bir daha özel denetim olayı ile değiştirmek için" tünel olayı işleme fırsatına sınıfına sahip sınıf.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]çiftler halinde gelen giriş olayları, bir fare düğmesine basma gibi bir girişten gelen tek bir kullanıcı eyleminin, çift yönlü olarak her iki yönlendirilmiş olayı da oluşturacak şekilde uygulanır. İlk olarak, Tünel olayı tetiklenir ve kendi rotasında dolaşır. Ardından, kabarcıklanma olayı oluşturulur ve kendi rotasında dolaşır. İki olay aynı olay veri örneğini paylaşır, çünkü <xref:System.Windows.UIElement.RaiseEvent%2A> kabarcıklanma olayını oluşturan uygulama sınıfında çağrı yapan yöntem çağrısı, tünel olayından olay verilerini dinler ve yeni oluşturulan olayda yeniden kullanır. Tünel olayına yönelik işleyicilerle olan dinleyiciler, yönlendirilmiş olayı işlenmiş olarak işaretlemek için ilk fırsata sahiptir (önce sınıf işleyicileri, sonra örnek işleyicileri). Tünel rotası boyunca yönlendirilmiş olayı işlenen olarak işaretlenen bir öğe, kabarcıklanma olayı için önceden işlenmiş olay verileri gönderilir ve eşdeğer kabarcıklanma giriş olayları için eklenen tipik işleyiciler çağrılmaz. Görünümleri dışa aktarmak için, işlenmiş kabarcıklanma olayı bile işlenmese de olur. Bu işleme davranışı, tüm isabet temelli giriş olayları veya odak tabanlı giriş olaylarının, bileşik parçaları yerine son denetiminiz tarafından bildirilmesini isteyebileceğiniz denetim birleştirme için yararlıdır. Son denetim öğesi, birleştirme içindeki köke daha yakındır ve bu nedenle, denetimi yedekleyen kodun bir parçası olarak bu yönlendirilmiş olayı daha fazla denetime özgü bir olayla "değiştirmek" sınıfı.
 
-Giriş olayı works işlemesinin nasıl bir çizim, aşağıdaki giriş olayı örneği göz önünde bulundurun. Aşağıdaki ağaç çizimde gösterilen `leaf element #2` kaynağı hem de bir `PreviewMouseDown` ve ardından bir `MouseDown` olay:
+Giriş olayı işlemenin nasıl çalıştığına ilişkin bir çizim olarak, aşağıdaki giriş olayı örneğini göz önünde bulundurun. Aşağıdaki ağaç çiziminde, `leaf element #2` hem a `PreviewMouseDown` hem de bir `MouseDown` olayın kaynağıdır:
 
 ![Olay yönlendirme diyagramı](./media/routed-events-overview/input-event-routing.png)
 
-Olay işleme sırası aşağıdaki gibidir:
+Olay işlemenin sırası aşağıdaki gibidir:
 
-1. `PreviewMouseDown` (kök öğe üzerinde tünel).
+1. `PreviewMouseDown`(Tunnel) in root öğesi.
 
-2. `PreviewMouseDown` (#1 Ara öğede tünel).
+2. `PreviewMouseDown`(Tunnel) ara öğesi #1.
 
-3. `PreviewMouseDown` (kaynak öğesinde #2 Tünel).
+3. `PreviewMouseDown`(Tunnel) #2 kaynak öğesi.
 
-4. `MouseDown` (kaynak öğesinde #2 kabarcık).
+4. `MouseDown`(kabarcık) #2 kaynak öğesi.
 
-5. `MouseDown` (#1 Ara öğede kabarcık).
+5. `MouseDown`(kabarcık) ara öğe #1.
 
-6. `MouseDown` (Kök öğede kabarcık).
+6. `MouseDown`(kabarcık) kök öğesi.
 
-Yönlendirilmiş olay işleyici temsilcisini iki nesne başvuru sağlar: olay ve burada işleyicinin çağrıldığı nesnesi başlatan nesne. İşleyicinin burada çağrıldığı nesnesi tarafından bildirilen nesnesidir `sender` parametresi. Burada olayın ilk oluşturulduğu nesnesi tarafından bildirilen <xref:System.Windows.RoutedEventArgs.Source%2A> olay verilerini bir özellik. Yönlendirilmiş olay yine de yükseltilmiş ve bu durumda aynı nesne tarafından işlenen `sender` ve <xref:System.Windows.RoutedEventArgs.Source%2A> özdeş olan (Bu, adım 3 ve 4 olay işleme örneği listesindeki çalışmasıyla).
+Yönlendirilmiş olay işleyicisi temsilcisi iki nesneye başvurular sağlar: olayı oluşturan nesne ve işleyicinin çağrıldığı nesne. İşleyicinin çağrıldığı nesne, `sender` parametre tarafından raporlanan nesnedir. Olayın ilk oluşturulduğu nesne, olay verilerinde <xref:System.Windows.RoutedEventArgs.Source%2A> özelliği tarafından raporlanır. Yönlendirilmiş bir olay hala aynı nesne `sender` <xref:System.Windows.RoutedEventArgs.Source%2A> tarafından oluşturulabilir ve işlenebilir ve aynı zamanda aynı olur (Bu durum, olay işleme örnek listesinde 3 ve 4. adımlarda yer alabilir).
 
-Tünel oluşturma ve tırmanma nedeniyle üst öğe giriş olaylarını almak burada <xref:System.Windows.RoutedEventArgs.Source%2A> bunların alt öğeleri biridir. Kaynak öğesi ne olduğunu bilmeniz önemlidir, erişerek kaynak öğesi tanımlayabilirsiniz <xref:System.Windows.RoutedEventArgs.Source%2A> özelliği.
+Tünelleme ve kabarcıklanma nedeniyle, üst öğeler, alt öğelerinden biri <xref:System.Windows.RoutedEventArgs.Source%2A> olan giriş olayları alır. Kaynak öğenin ne olduğunu bilmeniz önemli olduğunda, bu <xref:System.Windows.RoutedEventArgs.Source%2A> özelliğe erişerek kaynak öğeyi belirleyebilirsiniz.
 
-Genellikle, giriş olayı işaretlendikten sonra <xref:System.Windows.RoutedEventArgs.Handled%2A>, daha fazla işleyici çağrılamaz. Genellikle, giriş olayları, uygulamaya özgü mantıksal işleme giriş olayın anlamını ele alan bir işleyici çağrılmadan hemen sonra işlenmiş olarak işaretlemeniz gerekir.
+Genellikle, giriş olayı işaretlendiğinde <xref:System.Windows.RoutedEventArgs.Handled%2A>, daha fazla işleyici çağrılmaz. Genellikle, giriş olaylarınızın anlamı olan uygulamaya özgü mantıksal işleme adreslemek üzere bir işleyici çağrıldığında giriş olaylarını işlenmiş olarak işaretlemelisiniz.
 
-Özel durum hakkındaki bu genel ifadenin <xref:System.Windows.RoutedEventArgs.Handled%2A> durumunda kasıtlı olarak yoksaymak için kayıtlı olay işleyicileri giriş <xref:System.Windows.RoutedEventArgs.Handled%2A> olay verileri durumunu yol boyunca hala çağrıldığı. Daha fazla bilgi için [önizleme olayları](preview-events.md) veya [işaretleme yönlendirilmiş olayları işlenmiş ve bir sınıf olarak](marking-routed-events-as-handled-and-class-handling.md).
+Bu genel bildirimin durumu hakkında <xref:System.Windows.RoutedEventArgs.Handled%2A> , olay verilerinin kasıtlı olarak yoksayılmasına <xref:System.Windows.RoutedEventArgs.Handled%2A> kayıtlı giriş olay işleyicilerinin, her iki yol da çağrılabilir. Daha fazla bilgi için bkz. [olayları önizleme](preview-events.md) veya [yönlendirilmiş olayları işlenmiş olarak Işaretleme ve sınıf işleme](marking-routed-events-as-handled-and-class-handling.md).
 
-Tünel oluşturma ve tırmanma olayları ve sıralı arasında paylaşılan bir olay veri modeline ilk sonra olayları tırmanma tünel oluşturma, genellikle tüm yönlendirilmiş olaylar için true olan bir kavram değildir. Davranış özellikle olduğunu seçilmesiyle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] giriş olayı çiftlerini oluşturmak ve bağlamak giriş cihazları seçin. Uygulama kendi giriş olayları Gelişmiş bir senaryodur ancak bu modeli, kendi giriş olaylarını izlemek de seçebilirsiniz.
+Tünel oluşturma ve kabarcıklanma olayları arasındaki paylaşılan olay veri modeli ve ilk tünelin sıralı oluşturma ve ardından kabarcıklanma olayları, tüm yönlendirilmiş olaylar için genellikle doğru bir kavram değildir. Bu davranış, giriş cihazlarının giriş olay [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çiftlerini oluşturmayı ve bağlamayı nasıl seçmesinin özel olarak uygulandığı bir davranıştır. Kendi giriş olaylarınızı uygulamak Gelişmiş bir senaryodur, ancak bu modeli kendi giriş olaylarınız için de izlemeyi tercih edebilirsiniz.
 
-Belirli sınıfları, tanıtıcı sınıfı bu denetim içinde belirli bir kullanıcı temelli giriş olayı anlamı tanımlayarak ve yeni bir olay oluşturma amacıyla genellikle giriş belirli olaylar seçin. Daha fazla bilgi için [işaretleme yönlendirilmiş olayları işlenmiş ve bir sınıf olarak](marking-routed-events-as-handled-and-class-handling.md).
+Belirli sınıflar, genellikle belirli bir kullanıcı odaklı giriş olayının bu denetimde ne anlama geldiğini yeniden tanımlama ve yeni bir olay oluşturma amacıyla belirli giriş olaylarını sınıf olarak işleyecek şekilde tercih edilir. Daha fazla bilgi için bkz. [yönlendirilmiş olayları işlenmiş olarak işaretleme ve sınıf işleme](marking-routed-events-as-handled-and-class-handling.md).
 
-Giriş ve giriş ve olayların tipik uygulama senaryolarında nasıl etkileşim hakkında daha fazla bilgi için bkz. [girişe genel bakış](input-overview.md).
+Giriş ve olayların tipik uygulama senaryolarında nasıl etkileşim kurduğu hakkında daha fazla bilgi için bkz. [girişe genel bakış](input-overview.md).
 
 <a name="events_styles"></a>
 
-## <a name="eventsetters-and-eventtriggers"></a>EventSetters ve EventTriggers
+## <a name="eventsetters-and-eventtriggers"></a>EventSetter ve EventTriggers
 
-Önceden bildirilmiş dahil stillerinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olay işlemesi biçimlendirmede sözdizimini kullanarak bir <xref:System.Windows.EventSetter>. Stilin uygulandığı zaman, başvurulan işleyicisi stil uygulanmış bir örneğine eklenir. Bildirebilirsiniz bir <xref:System.Windows.EventSetter> yalnızca yönlendirilmiş olay için. Bir örnek verilmiştir. Unutmayın `b1SetColor` Burada başvurulan bir arka plan kod dosyasında yöntemidir.
+Stillerde, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.EventSetter>kullanarak biçimlendirme içinde önceden tanımlanmış bazı olay işleme sözdizimini ekleyebilirsiniz. Stil uygulandığında, başvurulan işleyici stilli örneğe eklenir. <xref:System.Windows.EventSetter> Yalnızca bir yönlendirilmiş olay için bildirebilirsiniz. Bir örnek verilmiştir. Burada başvurulan yöntemin bir arka plan kod dosyasında olduğunu unutmayın. `b1SetColor`
 
 [!code-xaml[EventOvwSupport#XAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]
 
-Burada elde edilen avantajı stili, uygulamanızda herhangi bir düğmeye uygulanabilecek diğer bilgileri büyük ölçüde bulunma olasılığı olmasıdır ve <xref:System.Windows.EventSetter> parçası olması o stilin bile biçimlendirme düzeyinde kod yeniden kullanımını yükseltir. Ayrıca, bir <xref:System.Windows.EventSetter> işleyicileri bir adım daha genel uygulama ve sayfa biçimlendirmeyi yöntem adlarını soyutlar.
+Burada elde edilen avantaj, stilin uygulamanızdaki herhangi bir düğmeye uygulanabilecek çok büyük bir bilgiyi içermesi ve <xref:System.Windows.EventSetter> bu stilin bir parçası olması, biçimlendirme düzeyinde bile kod yeniden kullanımını yükseltir. Ayrıca, işleyiciler <xref:System.Windows.EventSetter> için bir adım olarak genel uygulama ve sayfa işaretlemesinin bir adım daha uzakta bir yöntem adı da soyutlar.
 
-Yönlendirilmiş olay ve animasyon özelliklerini bir araya getiren başka bir özel sözdizimi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olduğu bir <xref:System.Windows.EventTrigger>. Olduğu gibi <xref:System.Windows.EventSetter>, yalnızca yönlendirilmiş olaylar için kullanılabilir bir <xref:System.Windows.EventTrigger>. Genellikle, bir <xref:System.Windows.EventTrigger> stili bir parçası olarak bildirilmiş ancak bir <xref:System.Windows.EventTrigger> sayfa düzeyi öğelerde kapsamında bildirilebilir <xref:System.Windows.FrameworkElement.Triggers%2A> koleksiyonuna veya bir <xref:System.Windows.Controls.ControlTemplate>. Bir <xref:System.Windows.EventTrigger> belirtmenize olanak tanıyan bir <xref:System.Windows.Media.Animation.Storyboard> gönderilmiş bir olay, bir öğedeki yolunu eriştiğinde çalıştırmaları bildirdiğini bir <xref:System.Windows.EventTrigger> bu olay için. Avantajı, bir <xref:System.Windows.EventTrigger> yalnızca olay işleme ve başlatmak bu neden üzerinden olan mevcut bir görsel taslağı bir <xref:System.Windows.EventTrigger> film şeridini ve çalışma zamanı davranışını üzerinde daha fazla denetim sağlar. Daha fazla bilgi için [bir film şeridini denetlemek için olay tetikleyicileri kullanma](../graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).
+' In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönlendirilmiş olay ve animasyon özelliklerini birleştiren bir özel sözdizimi bir <xref:System.Windows.EventTrigger>. ' De olduğu gibi, yalnızca yönlendirilmiş olaylar bir <xref:System.Windows.EventTrigger>için kullanılabilir. <xref:System.Windows.EventSetter> Genellikle, <xref:System.Windows.EventTrigger> bir stilin parçası olarak tanımlanır, ancak bir <xref:System.Windows.EventTrigger> <xref:System.Windows.FrameworkElement.Triggers%2A> koleksiyonun parçası olarak sayfa düzeyi öğelerde de veya bir <xref:System.Windows.Controls.ControlTemplate>içinde de belirtilebilir. , Bir yönlendirilmiş olay <xref:System.Windows.Media.Animation.Storyboard> <xref:System.Windows.EventTrigger> , bu olay için bildiren bir öğeye her ulaştığında çalışan bir öğesi belirtmenize olanaksağlar.<xref:System.Windows.EventTrigger> ' In <xref:System.Windows.EventTrigger> yalnızca olayı işleme ve var olan bir görsel taslağa başlatılmasına neden olan avantajı, film şeridi ve <xref:System.Windows.EventTrigger> onun çalışma zamanı davranışı üzerinde daha iyi bir denetim sağlar. Daha fazla bilgi için bkz. [bir film şeridini başladıktan sonra denetlemek Için Olay Tetikleyicilerini Kullanma](../graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).
 
 <a name="more_about"></a>
 
 ## <a name="more-about-routed-events"></a>Yönlendirilmiş olaylar hakkında daha fazla bilgi
 
-Bu konuda, temel kavramları açıklayan ve yönergeler konusunda ve yanıtlamak için zaten yönlendirilmiş olaylar çeşitli temel öğeler ve denetimlerin olduğunda sunan perspektifinden yönlendirilmiş olaylar çoğunlukla anlatılmaktadır. Ancak, tüm gerekli desteğiyle birlikte, özel olay veri sınıfları ve temsilciler gibi özel sınıfınıza kendi yönlendirilmiş olay oluşturabilirsiniz. Yönlendirilmiş olay sahibi herhangi bir sınıf olabilir, ancak yönlendirilmiş olaylar tarafından gerçekleştirilen ve tarafından işlenen <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement> faydalı olması için türetilmiş sınıflar. Özel olaylar hakkında daha fazla bilgi için bkz. [özel yönlendirilmiş olay oluşturma](how-to-create-a-custom-routed-event.md).
+Bu konu, temel kavramları açıklama açısından ve çeşitli temel öğelerde ve denetimlerde zaten mevcut olan yönlendirilmiş olaylara nasıl ve ne zaman yanıt verebileceğine ilişkin yönergeler sunarak yönlendirilmiş olayları ele alır. Ancak, özel sınıfınıza özel olay veri sınıfları ve temsilciler gibi tüm gerekli destekle birlikte kendi yönlendirilmiş olaylarınızı oluşturabilirsiniz. Yönlendirilmiş olay sahibi herhangi bir sınıf olabilir, ancak yönlendirilmiş olayların yararlı olması için <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement> türetilmiş sınıflar tarafından oluşturulması ve işlenmesi gerekir. Özel olaylar hakkında daha fazla bilgi için bkz. [özel bir yönlendirilmiş olay oluşturma](how-to-create-a-custom-routed-event.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

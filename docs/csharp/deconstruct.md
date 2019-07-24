@@ -1,106 +1,106 @@
 ---
 title: Demetleri ve diğer türleri ayrıştırma
-description: Demetleri ve diğer türleri ayrıştırma öğrenin.
+description: Tanımlama gruplarını ve diğer türleri oluşturmayı öğrenin.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: d7c5946f5df8a94bf8b54c10f33234b40338a622
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 5d37f9567570666c280be437aa0472a620a16c63
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348156"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400397"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Demetleri ve diğer türleri ayrıştırma
 
-Bir kayıt düzeni, bir yöntem çağrısından birden çok değer almak için basit bir yol sağlar. Ancak kayıt almak sonra bireysel öğelerini işlemek vardır. Bir öğeye göre temelinde bunu aşağıdaki örnekte gösterildiği gibi yavaşlatan bir yöntemdir. `QueryCityData` Yöntemi 3-tanımlama grubu döndürür ve alt öğelerin her biri ayrı bir işlemde bir değişkene atanır.
+Kayıt düzeni, bir yöntem çağrısından birden çok değer almanın hafif bir yolunu sağlar. Ancak, tanımlama grubunu aldıktan sonra ayrı öğelerini işlemeniz gerekir. Bu işlem, aşağıdaki örnekte gösterildiği gibi, öğe temelinde tek yapmanız gereken bir öğedir. `QueryCityData` Yöntemi 3 tanımlama grubu döndürür ve öğelerinden her biri ayrı bir işlemde bir değişkene atanır.
 
 [!code-csharp[WithoutDeconstruction](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple1.cs)]
 
-Bir nesneden birden çok alan ve özellik değerlerini alma eşit hantal olabilir: bir üye tarafından üyesi olarak bir değişken için bir alan veya özellik değer atamanız gerekir.
+Bir nesneden birden çok alan ve özellik değeri alınması eşit bir şekilde olabilir: üye üye temelinde bir değişkene bir alan veya özellik değeri atamanız gerekir.
 
-C# 7.0 ile başlayarak, birden çok öğe tanımlama grubundan almak veya tek bir nesnenin birden fazla alan, özellik ve hesaplanan değerleri almak *Ayrıştır* işlemi. Bir demet ayrıştırma bağımsız değişkenlerini öğelerine atayın. Bir nesne ayrıştırma bağımsız değişkenleri için seçilen değerler atayın.
+C# 7,0 ' den başlayarak, bir tanımlama grubundan birden çok öğe alabilir veya tek bir *Yapı* işlemindeki bir nesneden birden çok alan, özellik ve hesaplanan değer alabilirsiniz. Bir tanımlama grubu oluştururken, öğelerini ayrı değişkenlere atarsınız. Bir nesneyi kaldırdığınızda, seçili değerleri ayrı değişkenlere atarsınız.
 
-## <a name="deconstructing-a-tuple"></a>Bir demet ayrıştırma
+## <a name="deconstructing-a-tuple"></a>Kayıt düzeni kaldırma
 
-Tüm öğeleri tek bir işlemde bir tanımlama grubu gitmeniz olanak sağlayan bir tanımlama grubu ayrıştırma için C# özellikleri yerleşik destekler. Bir demet ayrıştırma genel sözdizimi bir tanımlama sözdizimi benzer: parantez içinde bir atama ifadesi sol tarafındaki atanacak her öğe için olan değişkenler alın. Örneğin aşağıdaki deyim 4 bölütlü öğelerini dört ayrı değişkenlere atar:
+C#, tek bir işlemde bir kayıt grubundaki tüm öğeleri paketlemenizi sağlayan tanımlama grupları için yerleşik destek özellikleri. Bir kayıt düzeni oluşturmak için genel sözdizimi, bir tanımlama sözdizimine benzer. bir atama ifadesinin sol tarafında parantez içine atanacak olan değişkenleri çevrelemektir. Örneğin, aşağıdaki ifade 4 kayıt öğelerinin öğelerini dört ayrı değişkene atar:
 
 ```csharp
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-Bir demet ayrıştırma için üç yol vardır:
+Tanımlama grubu oluşturmanın üç yolu vardır:
 
-- Parantez içinde her alanın türünü açıkça bildirebilirsiniz. Aşağıdaki örnek bu yaklaşım kullanan tarafından döndürülen 3 demet ayrıştırma `QueryCityData` yöntemi.
+- Her alanın türünü parantez içinde açık bir şekilde bildirebilirsiniz. Aşağıdaki örnek, `QueryCityData` yöntemi tarafından döndürülen 3 kayıt düzeni oluşturmak için bu yaklaşımı kullanır.
 
     [!code-csharp[Deconstruction-Explicit](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple2.cs#1)]
 
-- Kullanabileceğiniz `var` algılar, C# her bir değişken türü anahtar sözcüğü. Yerleştirdiğiniz `var` parantezler dışında anahtar sözcüğü. Aşağıdaki örnek tür çıkarımı tarafından döndürülen 3 demet ayrıştırma kullanır `QueryCityData` yöntemi.
+- Her değişkenin türünü karşılayan `var` C# anahtar sözcüğünü kullanabilirsiniz. `var` Anahtar sözcüğünü parantezlerin dışında yerleştirebilirsiniz. Aşağıdaki örnek, `QueryCityData` yöntem tarafından döndürülen 3 kayıt düzeni oluştururken tür çıkarımı kullanır.
 
     [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
 
-    Ayrıca `var` tek tek tüm değişken bildirimlerini parantez içinde ile anahtar sözcüğü.
+    `var` Anahtar sözcüğünü, parantez içindeki değişken bildirimlerinin herhangi biri veya tümü ile ayrı ayrı de kullanabilirsiniz.
 
     [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
 
-    Bu hantal ve önerilmez.
+    Bu, kısabera ve önerilmez.
 
-- Son olarak, zaten bildirilen değişkenlere demet ayrıştırma.
+- Son olarak, tanımlama grubunu zaten önceden tanımlanmış değişkenler halinde oluşturabilirsiniz.
 
     [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
 
-Dizideki her alan aynı türde olsa bile dışındaki parantezler belirli bir tür belirtemezsiniz. Bu, "ayrıştırma 'var (...)' form 'var' için belirli bir türe izin vermiyor." CS8136, derleyici hatası oluşturur.
+Kayıt grubundaki her alan aynı türde olsa bile, parantez dışında belirli bir tür belirtemezsiniz. Bu bir derleyici hatası oluşturur CS8136, "Deinşaat" var (...) ' formu, ' var ' için belirli bir türe izin vermez. ".
 
-Not, ayrıca her öğesi için bir değişken atamanız gerekir. Herhangi bir öğe atlarsanız, derleyici hatası CS8132, "'x' öğelerini tanımlama grubu 'y' değişkenlere ayrıştırılamıyor." oluşturur.
+Ayrıca, kayıt düzeni öğelerinin her birini bir değişkene atamanız gerektiğini unutmayın. Herhangi bir öğeyi atlarsanız, derleyici CS8132 hatasını üretir, "' x ' öğelerinden oluşan bir demet ' y ' değişkenlerine parçalanamaz."
 
-Bildirimler ve ayrıştırma deyiminin sol tarafında mevcut değişkenlere atamalarını karıştırılamaz unutmayın. Derleyici Hatası CS8184, "ayrıştırma deyiminin bildirimler ve sol taraftaki ifadelerini karıştırılamaz." oluşturur. ne zaman üyeleri yeni bildirilmiş ve mevcut değişkenler içerir.
+Bir oluşturma 'nın sol tarafındaki mevcut değişkenlere bildirimleri ve atamaları karıştırmayacağınızı unutmayın. Derleyici hata CS8184 oluşturuyor, "bir oluşturma, sol taraftaki bildirimleri ve ifadeleri karıştıramaz." üyeler yeni tanımlanan ve mevcut değişkenleri içerenleri içerir.
 
-## <a name="deconstructing-tuple-elements-with-discards"></a>Tanımlama grubu öğelerle ayrıştırma atar
+## <a name="deconstructing-tuple-elements-with-discards"></a>Kayıt düzeni öğeleri atma ile kaldırılıyor
 
-Genellikle bir demet ayrıştırma, bazı öğeler yalnızca değerlerde ilgilenen. C# 7.0 ile başlayarak, C# desteği avantajlarından yararlanabilirsiniz *atar*, değerleri yok saymak için seçtiğiniz salt yazılır değişkenleri olduğu. Bir atma eylemi atanmış bir alt çizgi karakteriyle ("\_") bir atama. İstediğiniz kadar çok değerle atabilirsiniz; tüm tek atma tarafından temsil edilen `_`.
+Genellikle bir kayıt düzeni oluştururken yalnızca bazı öğelerin değerleriyle ilgileniyorsunuz. 7,0 ' C# den itibaren, değerlerini yok saymayı C#seçtiğiniz salt yazılır değişkenler olan *atma*desteğinden yararlanabilirsiniz. Atma, bir atamada bir alt çizgi karakteriyle ("\_") belirtilir. İstediğiniz sayıda değeri atabilirsiniz; tümü, `_`tek atma tarafından temsil edilir.
 
-Aşağıdaki örnek, iptali ile tanımlama grubu kullanımını gösterir. `QueryCityDataForYears` Yöntemi bir şehir, kendi alanı, bir yıl, bu yıl, ikinci yıl ve bu ikinci yıl için city'nin popülasyonu city'nin nüfusunu adı ile 6-tanımlama grubu döndürür. Bu örnek, popülasyondaki bu iki yıl arasında değişiklik gösterir. Veri tanımlama grubu bulunan, şehir alanıyla unconcerned duyuyoruz ve şehir adı ve tasarım zamanında iki tarih biliyoruz. Sonuç olarak, biz tanımlama grubunda depolanan iki popülasyon değerleri yalnızca ilginizi çeken ve kalan değerleri atar olarak işleyebilir.  
+Aşağıdaki örnek, atma ile başlıkların kullanımını gösterir. Bu `QueryCityDataForYears` Yöntem, şehir adı, alanı, bir yıl, bu yıl için şehir popülasyonu, ikinci bir yıl ve bu ikinci yıl için şehir popülasyonu içeren 6 tanımlama grubu döndürür. Örnek, bu iki yıl arasındaki popülasyondaki değişikliği gösterir. Kayıt kümesinden kullanılabilen veriler, şehir alanıyla ilgilentik ve tasarım zamanında şehir adını ve iki tarihi biliyoruz. Sonuç olarak, yalnızca kayıt düzeninde depolanan iki popülasyon değeri ile ilgileniyoruz ve kalan değerlerini atma olarak işleyebilir.  
 
 [!code-csharp[Tuple-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-### <a name="deconstructing-user-defined-types"></a>Kullanıcı tanımlı türleri ayrıştırma
+## <a name="deconstructing-user-defined-types"></a>Kullanıcı tanımlı türleri kaldırma
 
-Olmayan tanımlama grubu türleri için yerleşik destek atar sağlamaz. Ancak, bir sınıf, yapı veya arabirim yazarı, bir veya daha fazla uygulayarak deconstructed için türün örneklerinin izin verebilirsiniz `Deconstruct` yöntemleri. Yöntemin void döndüren ve deconstructed için her bir değeri tarafından belirtilen bir [kullanıma](language-reference/keywords/out-parameter-modifier.md) parametresi yöntem imzası. Örneğin, aşağıdaki `Deconstruct` yöntemi bir `Person` sınıfı, Orta, adı ve Soyadı döndürür:
+C#, kayıt olmayan türler oluşturmak için yerleşik destek sunmaz. Ancak, bir sınıfın yazarı, bir struct veya Interface olarak, bir veya daha fazla `Deconstruct` yöntem uygulayarak tür örneklerinin çıkarılması için izin verebilirsiniz. Yöntemi void döndürür ve kaldırılacak her değer, yöntem imzasında bir [Out](language-reference/keywords/out-parameter-modifier.md) parametresi ile belirtilir. Örneğin, bir `Person` sınıfın aşağıdaki `Deconstruct` yöntemi birinci, orta ve soyadı döndürür:
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
 
-Ardından örneğini ayrıştırma `Person` adlı sınıfı `p` aşağıdaki gibi bir atama:
+Daha sonra, aşağıdaki gibi bir atamayla adlı `Person` `p` sınıfının bir örneğini kaldırabilirsiniz:
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#2)]
 
-Aşağıdaki örnek aşırı `Deconstruct` özelliklerini çeşitli birleşimlerini döndürülecek yöntemi bir `Person` nesne. Tek tek aşırı döndürür:
+Aşağıdaki örnek, bir `Deconstruct` `Person` nesnesinin özelliklerinin çeşitli birleşimlerini döndürmek için yöntemini aşırı yükler. Tek tek aşırı yükleme dönüşü:
 
-- İlk ve son adı.
-- Bir first, last ve ikinci adı.
-- Ad, Soyadı, bir şehir adı ve durum adı.
+- Ad ve soyadı.
+- Birinci, son ve orta ad.
+- Ad, soyadı, şehir adı ve durum adı.
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
 
-Aşırı yüklenme olabilir çünkü `Deconstruct` genellikle bir nesneden ayıklandıktan veri grupları yansıtacak şekilde yöntemi tanımlamak dikkatli olmanız gerekir `Deconstruct` ayırt edici ve anlaşılır imzalarla yöntemleri. Birden çok `Deconstruct` aynı sayıda içeren yöntemlerin `out` parametreleri veya aynı numara ve tür `out` farklı bir düzende parametreleri karışıklığa neden olabilir.
+Bir nesneden yaygın olarak ayıklanan `Deconstruct` veri gruplarını yansıtmak için yöntemini aşırı yükleyebilir. bu şekilde, benzersiz ve belirsiz imzalara sahip Yöntemler tanımlamalısınız. `Deconstruct` Aynı `Deconstruct` `out` sayıda parametreye sahip birden çok yöntem veya farklı bir düzende aynı parametre sayısı ve türleri karışıklığa neden olabilir. `out`
 
-Aşırı yüklenen `Deconstruct` yöntemi aşağıdaki örnekte bir olası kaynak karışıklık göstermektedir. İlk aşırı yükleme ilk adını, ikinci adı, Soyadı ve yaş döndürür bir `Person` o sırada bir nesne. İkinci aşırı yükleme yalnızca yıllık gelir yanı sıra ad bilgilerini döndürür, ancak farklı bir sırada, Orta, adı ve Soyadı olan. Bu, ayrıştırma, bağımsız değişkenlerin sırası karıştırılabilir kolaylaştırır bir `Person` örneği.
+Aşağıdaki örnekteki `Deconstruct` aşırı yüklenmiş yöntem, olası bir karışıklık kaynağını göstermektedir. İlk aşırı yükleme, bir `Person` nesnenin ilk adını, orta adını, soyadını ve yaşını bu sırada döndürür. İkinci aşırı yükleme yalnızca yıllık gelirle birlikte ad bilgilerini döndürür, ancak birinci, orta ve soyadı farklı bir sıralardır. Bu, bir `Person` örneği oluştururken bağımsız değişkenlerin sırasını karıştırmayı kolaylaştırır.
 
 [!code-csharp[Deconstruct-ambiguity](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-ambiguous.cs)]
 
-## <a name="deconstructing-a-user-defined-type-with-discards"></a>Kullanıcı tanımlı bir tür ile ayrıştırma atar
+## <a name="deconstructing-a-user-defined-type-with-discards"></a>Kullanıcı tanımlı bir türü atma ile kaldırma
 
-Yaptığınız gibi [diziler](#deconstructing-tuple-elements-with-discards), iptali seçilen öğeleri tarafından döndürülen yoksaymak için kullanabileceğiniz bir `Deconstruct` yöntemi. Her atma adlı bir değişkeni tarafından tanımlanan "\_", tek bir ayrıştırma işlemi birden çok atar içerebilir.
+[Tanımlama grupları](#deconstructing-tuple-elements-with-discards)ile yaptığınız gibi, bir `Deconstruct` yöntem tarafından döndürülen seçili öğeleri yoksaymak için atarsa ' u kullanabilirsiniz. Her atma "\_" adlı bir değişken tarafından tanımlanır ve tek bir ayrıştırma işlemi birden çok atma içerebilir.
 
-Aşağıdaki örnek deconstructs bir `Person` dört dizelere (ilk ve son adları, şehir ve durumu) nesne ancak son adını ve durumunu atar.
+Aşağıdaki örnek, bir `Person` nesnesini dört dizeye (ilk ve son adlar, şehir ve eyalet) ayırır, ancak son adı ve durumu atar.
 
 [!code-csharp[Class-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs#1)]
 
-## <a name="deconstructing-a-user-defined-type-with-an-extension-method"></a>Kullanıcı tanımlı bir tür bir uzantı yönteminiz ayrıştırma
+## <a name="deconstructing-a-user-defined-type-with-an-extension-method"></a>Uzantı yöntemiyle kullanıcı tanımlı bir tür kaldırma
 
-Bir sınıf, yapı veya arabirim yaramadı yazarsanız, yine de bu tür nesneleri bir veya daha fazla uygulayarak Ayrıştır `Deconstruct` [genişletme yöntemleri](programming-guide/classes-and-structs/extension-methods.md) içinde ilginizi değer döndürmek için.
+Bir sınıf, yapı veya arabirim yazmadıysanız, ilgilendiğiniz değerleri döndürmek için bir veya daha fazla `Deconstruct` [genişletme yöntemi](programming-guide/classes-and-structs/extension-methods.md) uygulayarak o türdeki nesneleri yine de oluşturabilirsiniz.
 
-Aşağıdaki örnek iki tanımlar `Deconstruct` için genişletme yöntemleri <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> sınıfı. İlk özelliğinin türünü statik olup dahil olmak üzere özellikleri belirtin veya örnek değerleri, salt okunur olup ve olup dizine kümesini döndürür. İkinci özelliğin erişilebilirlik gösterir. Çünkü erişilebilirliği get ve set erişimcileri gösterebileceğini, Boole değerleri göstermek özelliği ayrı olup get ve set erişimcileri ve bunların aynı erişilebilirliği sahip olup olmadığını, varsa. Yalnızca bir erişimci veya aynı erişilebilirlik, hem get hem de ayarlama erişimcisine sahip `access` değişkeni özelliğinin erişilebilirliğini bir bütün olarak gösterir. Aksi takdirde, Erişilebilirlik get ve set erişimcileri gösterilen `getAccess` ve `setAccess` değişkenleri.
+Aşağıdaki örnek, <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> sınıfı için `Deconstruct` iki genişletme yöntemini tanımlar. İlki, özelliğin özelliklerini gösteren, türü, statik mi, örnek mi olduğunu, salt okunurdur ve dizine eklenip eklenmeyeceğini içeren bir değerler kümesi döndürür. İkincisi, özelliğin erişilebilirliğini gösterir. Get ve set erişimcilerinin erişilebilirliği farklı olabileceğinden, Boole değerleri özelliğin ayrı Get ve set erişimcilerine sahip olup olmadığını ve varsa aynı erişilebilirliği içerip içermediğini gösterir. Yalnızca bir erişimci varsa veya hem Get hem de set erişimcisinin aynı erişilebilirliği `access` varsa değişkeni, özelliğin erişilebilirliğini bir bütün olarak gösterir. Aksi takdirde, Get ve set erişimcilerinin erişilebilirliği `getAccess` ve `setAccess` değişkenleri tarafından gösterilir.
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
 

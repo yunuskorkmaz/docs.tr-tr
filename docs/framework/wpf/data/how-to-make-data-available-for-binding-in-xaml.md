@@ -8,39 +8,39 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 2d51f06da31482c46b04d1eb86172c3eda246c20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3487a160cc49ab6b779a20157668915c2da33900
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010312"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401497"
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>Nasıl yapılır: XAML'de Bağlama için Veriyi Kullanılabilir Yapma
-Bu konuda çeşitli şekillerde yapabilirsiniz verileri için kullanılabilir bağlama anlatılmaktadır [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], uygulamanızın ihtiyaçlarına bağlı olarak.  
+Bu konuda [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], uygulamanızın gereksinimlerine bağlı olarak verileri bağlama için kullanılabilir hale getirmek için kullanabileceğiniz çeşitli yollar ele alınmaktadır.  
   
 ## <a name="example"></a>Örnek  
- Varsa bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] gelen bağlamak istediğiniz nesne [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]yapabilirsiniz nesne kullanılabilir bir kaynak olarak tanımlayan ve bu bağlama için tek yolu bir `x:Key`. Aşağıdaki örnekte bir `Person` adlı bir dize özelliği nesnesiyle `PersonName`. `Person` Nesne (vurgulanan gösterilen satırda içeren `<src>` öğesi) adı verilen ad alanında tanımlanan `SDKSample`.  
+ ' Den [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]bağlamak istediğiniz ortak dil çalışma zamanı (CLR) nesneniz varsa, nesneyi bağlama için kullanılabilir hale getirmenin bir yolu kaynak olarak tanımlamak ve `x:Key`ona vermektir. Aşağıdaki örnekte, bir String özelliği adlı `Person` `PersonName`bir nesneniz vardır. Nesnesi ( `<src>` öğesi içeren vurgulanmış olan satırdaki) adlı `SDKSample`ad alanında tanımlanır. `Person`  
   
  [!code-xaml[SimpleBinding#Instantiation](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
- Ardından bağlayabilirsiniz <xref:System.Windows.Controls.TextBlock> denetimi nesneye [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]vurgulanan satır gibi içeren `<TextBlock>` öğesi gösterir. 
+ Daha sonra, <xref:System.Windows.Controls.TextBlock> `<TextBlock>` öğeyi içeren vurgulanan çizgi gösterildiği gibi denetimi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]içindeki nesnesine bağlayabilirsiniz. 
   
- Alternatif olarak, <xref:System.Windows.Data.ObjectDataProvider> aşağıdaki örnekteki gibi bir sınıfı:  
+ Alternatif olarak, aşağıdaki örnekte olduğu <xref:System.Windows.Data.ObjectDataProvider> gibi sınıfını kullanabilirsiniz:  
   
  [!code-xaml[ObjectDataProvider}](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=10-14,42)]  
   
- Bağlama tanımlar içeren vurgulanan satırın aynı şekilde `<TextBlock>` öğesi gösterir.  
+ Bağlamayı, `<TextBlock>` öğeyi içeren vurgulanmış çizgi ile aynı şekilde tanımlarsınız.  
   
- Bu örnekte sonuç aynıdır: sahip olduğunuz bir <xref:System.Windows.Controls.TextBlock> metin içerikli `Joe`. Ancak, <xref:System.Windows.Data.ObjectDataProvider> sınıf özelliği bir yöntemin sonucu için bağlama gibi işlevler sağlar. Kullanmayı da tercih edebilirsiniz <xref:System.Windows.Data.ObjectDataProvider> sağladığı işlevsellik gerekiyorsa sınıfı.  
+ Bu örnekte, sonuç aynıdır: metin içeriğine <xref:System.Windows.Controls.TextBlock> `Joe`sahip olduğunuz bir. <xref:System.Windows.Data.ObjectDataProvider> Ancak sınıfı, bir yöntemin sonucuna bağlama özelliği gibi işlevler sağlar. Sınıfının sağladığı işlevselliğe gereksinim duyuyorsanız, <xref:System.Windows.Data.ObjectDataProvider> sınıfını kullanmayı tercih edebilirsiniz.  
   
- Önceden oluşturulmuş bir nesne için bağlıyorsanız, ancak ayarlamanız gerekir `DataContext` kodda, aşağıdaki örnekte olduğu gibi.  
+ Ancak, zaten oluşturulmuş bir nesneye bağlıyorsanız, aşağıdaki örnekte olduğu gibi kodu olarak ayarlamanız `DataContext` gerekir.  
   
  [!code-csharp[ADODataSet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml.cs#1)]
  [!code-vb[ADODataSet#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ADODataSet/VisualBasic/Window1.xaml.vb#1)]  
   
- Erişim için [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri bağlamasını kullanma <xref:System.Windows.Data.XmlDataProvider> sınıfı [XMLDataProvider ve XPath sorgularını kullanarak XML verilerine bağlama](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md). Erişim için [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri bağlamasını kullanma <xref:System.Windows.Data.ObjectDataProvider> sınıfı [XML sorgu sonuçları için XDocument, XElement veya LINQ'ya bağlama](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).  
+ Sınıfını kullanarak bağlama için verilere erişmek [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] üzere bkz. [XmlDataProvider ve XPath sorgularını kullanarak XML verilerine bağlama.](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md) <xref:System.Windows.Data.XmlDataProvider> Sınıfını kullanarak bağlama için verilere erişmek [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] üzere, bkz. [XML sorgu sonuçları için XDocument, XElement veya LINQ 'a bağlama.](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md) <xref:System.Windows.Data.ObjectDataProvider>  
   
- Dosyalar bağladığınız veri birçok yolu hakkında bilgi için bkz. [bağlama kaynağı belirtme](how-to-specify-the-binding-source.md). Hangi veri türlerini adlarınıza bağlayabileceğiniz veya kendi uygulama hakkında bilgi için [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] bağlama nesnelerini görmek [bağlama kaynaklarına genel bakış](binding-sources-overview.md).  
+ Bağladığınız verileri belirtebileceğiniz birçok yol hakkında daha fazla bilgi için bkz. [bağlama kaynağını belirtme](how-to-specify-the-binding-source.md). Bağlayacağınız veri türleri veya bağlama için kendi ortak dil çalışma zamanı (CLR) nesnelerinizi uygulama hakkında daha fazla bilgi için bkz. [bağlama kaynaklarına genel bakış](binding-sources-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

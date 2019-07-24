@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: ca00b4a0450539741719f5f5a56d241e4bebfcc2
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4679a114f4b6d0bc2b3773d46a4dffa774d38918
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331709"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401680"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bir WPF Uygulamasını Dağıtma (WPF)
 Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıtılması gerekir. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].NET Framework birçok dağıtım teknolojilerini içerir. Bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamayı dağıtmak için kullanılan dağıtım teknolojisi, uygulama türüne bağlıdır. Bu konuda her dağıtım teknolojisine ve bunların her [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir uygulama türünün dağıtım gereksinimleriyle birlikte nasıl kullanıldığı hakkında kısa bir genel bakış sunulmaktadır.  
@@ -23,7 +23,7 @@ Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıt�
   
 - [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]dağıtmak.  
   
-- [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]dağıtmak.  
+- ClickOnce dağıtımı.  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>XCopy dağıtımı  
@@ -47,7 +47,7 @@ Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıt�
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce dağıtımı  
- [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]Web dışı uygulamalar için Web stili uygulama dağıtımını mümkün bir şekilde sunar. Uygulamalar Web veya dosya sunucularına yayımlanır ve buradan dağıtılır. , [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] Yüklenen uygulamaların tam aralığını [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]desteklemez, ancak aşağıdakileri içeren bir alt kümeyi destekler:  
+ ClickOnce, Web olmayan uygulamalar için Web stili uygulama dağıtımına izin vermez. Uygulamalar Web veya dosya sunucularına yayımlanır ve buradan dağıtılır. ClickOnce, yüklenen uygulamaların tüm istemci özelliklerini [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]desteklememesine karşın, aşağıdakileri içeren bir alt kümeyi destekler:  
   
 - Başlat menüsü ve programlar Denetim Masası ile tümleştirme.  
   
@@ -59,7 +59,7 @@ Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıt�
   
 - Dosya uzantılarının kaydı.  
   
- Hakkında [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]daha fazla bilgi için bkz. [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment).  
+ ClickOnce hakkında daha fazla bilgi için bkz. [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 <a name="Deploying_WPF_Applications"></a>   
 ## <a name="deploying-wpf-applications"></a>WPF uygulamalarını dağıtma  
@@ -73,7 +73,7 @@ Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıt�
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Tek başına uygulamaları dağıtma  
- Tek başına uygulamalar [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] veya [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]kullanılarak dağıtılır. Her iki durumda da, tek başına uygulamalar çalıştırmak için tam güven gerektirir. Kullanılarak [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]dağıtılan tek başına uygulamalara tam güven otomatik olarak verilir. Kullanılarak [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] dağıtılan tek başına uygulamalara otomatik olarak tam güven verilmez. Bunun yerine [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] , tek başına bir uygulama yüklenmeden önce kullanıcıların kabul etmeleri gereken bir güvenlik uyarısı iletişim kutusu görüntüler. Kabul edilirse, tek başına uygulama yüklenir ve tam güven verilir. Aksi takdirde, tek başına uygulama yüklenmez.  
+ Tek başına uygulamalar ClickOnce veya [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]kullanılarak dağıtılır. Her iki durumda da, tek başına uygulamalar çalıştırmak için tam güven gerektirir. Kullanılarak [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]dağıtılan tek başına uygulamalara tam güven otomatik olarak verilir. ClickOnce kullanılarak dağıtılan tek başına uygulamalara otomatik olarak tam güven verilmez. Bunun yerine, ClickOnce, kullanıcıların tek başına bir uygulama yüklenmeden önce kabul etmeleri gereken bir güvenlik uyarısı iletişim kutusu görüntüler. Kabul edilirse, tek başına uygulama yüklenir ve tam güven verilir. Aksi takdirde, tek başına uygulama yüklenmez.  
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
 ### <a name="deploying-markup-only-xaml-applications"></a>Yalnızca biçimlendirme XAML uygulamalarını dağıtma  
@@ -100,7 +100,7 @@ Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıt�
   
  Bu dosyalar yapılandırıldığında üretilir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] . Daha fazla bilgi için [nasıl yapılır: Yeni bir WPF tarayıcı uygulaması projesi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))oluşturun. Yalnızca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme sayfaları gibi, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] genellikle bir Web sunucusuna yayımlanır ve kullanılarak [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]görüntülenir.  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], herhangi bir dağıtım tekniği kullanılarak istemcilere dağıtılabilir. Ancak, [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] aşağıdaki özellikleri sağladığından önerilir:  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], herhangi bir dağıtım tekniği kullanılarak istemcilere dağıtılabilir. Ancak, aşağıdaki özellikleri sağladığından ClickOnce önerilir:  
   
 1. Yeni bir sürüm yayımlandığında otomatik güncelleştirmeler.  
   

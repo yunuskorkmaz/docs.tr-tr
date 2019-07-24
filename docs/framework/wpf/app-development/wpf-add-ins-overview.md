@@ -12,206 +12,206 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 05e7c1558f37ac9f89b98bf3ac66379add10e66c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 4fd8fe00fe6974bdcbf7b4af4da25150996de8c3
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664143"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401701"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF Eklentilerine Genel Bakış
 
-<a name="Introduction"></a> .NET Framework, geliştiricilerin eklentiyi genişletilebilirlik destekleyen uygulamalar oluşturmak için kullanabileceğiniz bir eklenti modeli içerir. Bu eklenti modeli ile tümleştirin ve uygulama işlevselliğini genişleten eklentileri oluşturulmasına izin verir. Bazı senaryolarda uygulamalar eklenti tarafından sağlanan kullanıcı arabirimlerini görüntülemek de gerekir. Bu konuda, WPF bu senaryolar, mimarisi, aboneliğin avantajları ve kısıtlamalarını arkasında etkinleştirmek için .NET Framework eklenti modeli nasıl artırmaktadır gösterilmektedir.
+<a name="Introduction"></a>.NET Framework, geliştiricilerin eklenti genişletilebilirliği destekleyen uygulamalar oluşturmak için kullanabileceği bir eklenti modeli içerir. Bu eklenti modeli, uygulama işlevselliğini tümleştirmede ve genişlettirecek eklentilerin oluşturulmasına olanak sağlar. Bazı senaryolarda uygulamalar, eklentiler tarafından sunulan kullanıcı arabirimlerini de görüntülemesi gerekir. Bu konu başlığı altında, WPF 'in bu senaryoları etkinleştirmek için .NET Framework eklenti modelini nasıl genişlettiğini, arkasındaki mimariyi, avantajlarını ve onun sınırlamalarını gösterir.
 
 <a name="Requirements"></a>
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-.NET Framework eklenti modeli konusunda gereklidir. Daha fazla bilgi için [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+.NET Framework eklentisi modeliyle benzerlik gerekli. Daha fazla bilgi için bkz. eklentiler [ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="AddInsOverview"></a>
 
 ## <a name="add-ins-overview"></a>Eklentilere genel bakış
 
-Karmaşıklığını uygulama yeniden derleme ve yeni işlevsellikler eklemek için yeniden dağıtım kaçınmak için geliştiricilerin (hem birinci taraf hem de üçüncü taraf) genişletilebilirlik mekanizması uygulamaları uygular, diğer uygulamalar oluşturma onlarla tümleştirin. Add-INS kullanımı ("eklentiler" ve "eklentiler" olarak da bilinir) bu tür bir genişletilebilirlik desteklemek için en yaygın yoludur. Genişletilebilirlik eklentiler ile kullanıma gerçek uygulamaları örnekleri şunlardır:
+Uygulama yeniden derleme ve yeni işlevsellik birleştirme için karmaşıklıklardan kaçınmak amacıyla, uygulamalar geliştiricilerin (birinci taraf ve üçüncü taraf), diğer uygulamaları oluşturmalarına olanak tanıyan genişletilebilirlik mekanizmaları uygular. bunlarla tümleştirin. Bu tür genişletilebilirliği desteklemeye yönelik en yaygın yol, Eklentiler ("Eklentiler" ve "Eklentiler" olarak da bilinir) kullanmaktır. Eklentilerle genişletilebilirlik sunan gerçek dünya uygulamalarının örnekleri şunlardır:
 
-- Internet Explorer eklentiler.
+- Internet Explorer eklentileri.
 
-- Windows Media Player eklentiler.
+- Windows Media Player eklentileri.
 
 - Visual Studio eklentileri.
 
-Örneğin, "kod çözücüleri ve Windows tarafından yerel olarak desteklenmeyen medya biçimleri Kodlayıcıları oluşturma dahil olmak üzere çeşitli Windows Media Player'ı genişleten eklentiler" uygulamak üçüncü taraf geliştiriciler Windows Media Player eklenti modeli sağlar Media Player (örneğin, DVD, MP3), ses efekti ve dış. Her eklenti modeli, varlıklar ve eklenti tüm modelleri için ortak olan davranışları olsa bir uygulama için benzersiz olan işlevselliği göstermek için oluşturulmuştur.
+Örneğin, Windows Media Player eklenti modeli, üçüncü taraf geliştiricilerin Windows Media Player Windows tarafından desteklenmeyen medya biçimleri için kod çözücüleri ve kodlayıcıları oluşturma dahil olmak üzere çeşitli şekillerde genişletecek "Eklentiler" uygulamasına olanak tanır Media Player (örneğin, DVD, MP3), ses efektleri ve kaplamalar. Her eklenti modeli, bir uygulamaya özgü işlevselliği göstermek için oluşturulmuştur, ancak tüm eklenti modelleriyle ortak olan birkaç varlık ve davranış vardır.
 
-Üç ana varlıklardır tipik eklenti genişletilebilirliği çözümlerinin *sözleşmeleri*, *eklentileri*, ve *ana bilgisayar uygulamalarını*. Sözleşmeler, eklentiler iki yolla konak uygulamalarıyla tümleştirmek tanımlar:
+Tipik eklenti genişletilebilirlik çözümlerinin üç ana varlığı *sözleşmeler*, *Eklentiler*ve *ana bilgisayar uygulamalarıdır*. Sözleşmeler, eklentilerin ana bilgisayar uygulamalarıyla nasıl tümleştirileceğini iki şekilde tanımlar:
 
-- Eklentiler, konak uygulamalar tarafından uygulanan işlevleri ile tümleştirin.
+- Eklentiler, ana bilgisayar uygulamaları tarafından uygulanan işlevlerle tümleştirilir.
 
-- Ana bilgisayar uygulamaları tümleştirmek eklentiler için işlevselliği kullanıma sunar.
+- Konak uygulamalar, ile tümleştirilecek eklentiler için işlevselliği kullanıma sunar.
 
-Kullanılacak eklentiler için konak uygulamalar bulup bunları çalışma zamanında yük gerekir. Sonuç olarak, eklentiler destekleyen uygulamalar, aşağıdaki ek sorumluluklara sahiptir:
+Eklentilerin kullanılabilmesi için, ana bilgisayar uygulamalarının bunları bulması ve çalışma zamanında yüklemesi gerekir. Sonuç olarak, eklentileri destekleyen uygulamalar aşağıdaki ek sorumluluklara sahiptir:
 
-- **Bulma**: Konak uygulamalar tarafından desteklenen sözleşmeleri izliyor eklentiler bulma.
+- **Bulma**: Konak uygulamaları tarafından desteklenen sözleşmelere bağlı olan eklentileri bulma.
 
-- **Etkinleştirme**: Yükleniyor, çalıştırma ve eklentiler ile iletişim kurma.
+- **Etkinleştirme**: Eklentilerle iletişim yükleme, çalıştırma ve kurma.
 
-- **Yalıtım**: Uygulama olası güvenlik ve eklentileri yürütme sorunlarını korumak, yalıtım sınırlarını kurmak için uygulama etki alanları veya işlemleri kullanarak.
+- **Yalıtım**: Uygulama etki alanlarını veya işlemlerini kullanarak, uygulamaları, eklentilerle ilgili olası güvenlik ve yürütme sorunlarından koruyan yalıtım sınırları oluşturmak için kullanabilirsiniz.
 
-- **İletişim**: Eklentileri izin vererek ve birbirleriyle yöntemlerini çağırmaya ve veri geçirme yalıtım sınırlarının arasında iletişim için uygulamaları barındırın.
+- **İletişim**: Eklentilerin ve konak uygulamaların, yöntemleri çağırarak ve verileri geçirerek yalıtım sınırları genelinde birbirleriyle iletişim kurmasına izin verme.
 
-- **Ömür Yönetimi**: Yükleme ve temiz, tahmin edilebilir bir biçimde uygulama etki alanları ve işlemleri kaldırma (bkz [uygulama etki alanları](../../app-domains/application-domains.md)).
+- **Ömür yönetimi**: Uygulama etki alanlarını ve süreçlerini temiz, öngörülebilir bir şekilde yükleme ve kaldırma (bkz. [uygulama etki alanları](../../app-domains/application-domains.md)).
 
-- **Sürüm oluşturma**: Ya da yeni sürümlerini oluşturulduğunda konak uygulamalar ve eklentiler hala iletişim kurabildiğinden emin olma.
+- **Sürüm oluşturma**: Konak uygulamalarının ve eklentilerin, her birinin yeni sürümleri oluşturulduğunda iletişim kurabildiğinden emin olmak.
 
-Sonuç olarak, sağlam bir eklenti modeli geliştirme Önemsiz olmayan bir iş değil. Bu nedenle, .NET Framework eklenti modeli oluşturmaya yönelik bir altyapı sağlar.
+Son olarak, güçlü bir eklenti modelinin geliştirilmesi, önemsiz olmayan bir zorunluluğudur. Bu nedenle .NET Framework, eklenti modelleri oluşturmak için bir altyapı sağlar.
 
 > [!NOTE]
-> Eklentiler hakkında daha ayrıntılı bilgi için bkz: [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+> Eklentiler hakkında daha ayrıntılı bilgi için bkz. eklentiler [ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="NETFrameworkAddInModelOverview"></a>
 
-## <a name="net-framework-add-in-model-overview"></a>.NET framework eklenti modeli genel bakış
+## <a name="net-framework-add-in-model-overview"></a>.NET Framework eklenti modeline genel bakış
 
-.NET Framework eklenti modeli bulunan <xref:System.AddIn> ad alanı, eklenti genişletilebilirliği geliştirilmesini basitleştirmek için tasarlanmış türleri kümesi içerir. .NET Framework eklenti modeli temel birimidir *sözleşme*eklenti birbiriyle ve ana bilgisayar uygulamasına nasıl tanımlar. Bir anlaşma kullanarak bir konak uygulamaya özgü bir ana bilgisayar uygulamasına sunulur *görünümü* sözleşme. Benzer şekilde, bir ekleme-özel *görünümü* sözleşme eklenti için sunulur. Bir *bağdaştırıcısı* bir konak uygulama ve bir eklenti ilgili kendi ilgili görünümler arasında iletişim kurmasına izin vermek için kullanılır. Sözleşmeler, görünümler ve bağdaştırıcılar adlandırılır segmentler ve ilgili kesimleri kümesi oluşturan bir *işlem hattı*. İşlem hatları, bulma, etkinleştirme, güvenlik yalıtımı, yürütme yalıtım (uygulama etki alanları ve işlemleri kullanarak), iletişim, ömür yönetimi ve sürüm oluşturma .NET Framework eklenti modeli destekler temelidir.
+<xref:System.AddIn> Ad alanında bulunan .NET Framework eklenti modeli, eklenti genişletilebilirliği geliştirmeyi basitleştirmek için tasarlanan bir tür kümesi içerir. .NET Framework eklenti modelinin temel birimi, bir ana bilgisayar uygulamasının ve bir eklentinin birbirleriyle nasıl iletişim kuracağını tanımlayan *sözleşmedir*. Bir sözleşme, sözleşmenin ana uygulamaya özgü *görünümünü* kullanarak bir konak uygulamasına sunulur. Benzer şekilde, sözleşmenin eklentiye özgü *görünümü* , eklentiye sunulur. Bir *Bağdaştırıcı* , bir konak uygulamasına ve bir eklentinin sözleşmenin ilgili görünümleri arasında iletişim kurmasına izin vermek için kullanılır. Sözleşmeler, görünümler ve bağdaştırıcılar segment olarak adlandırılır ve ilgili bir kesim kümesi bir işlem *hattı*oluşturur. İşlem hatları, .NET Framework eklentisi modelinin bulma, etkinleştirme, güvenlik yalıtımı, yürütme yalıtımı (hem uygulama etki alanları, hem de süreçler kullanılarak), iletişim, ömür yönetimi ve sürüm oluşturmayı desteklediği temelidir.
 
-Bu destek toplamını konak uygulamanın işlevselliğini tümleştirmek eklentileri geliştiricilerin sağlar. Ancak, bazı senaryolar eklentiler tarafından sağlanan kullanıcı arabirimlerini görüntülemek için konak uygulamalar gerektirir. .NET Framework içindeki her bir sunu teknolojiyi kullanıcı arabirimlerini uygulamak için kendi modeli olduğundan, .NET Framework eklenti modeli herhangi belirli sunu teknolojisi desteklemez. Bunun yerine, WPF, .NET Framework eklenti modeli eklentiler için kullanıcı Arabirimi desteği genişletir.
+Bu desteğin toplamı, geliştiricilerin ana bilgisayar uygulamasının işlevselliğiyle tümleştirilen eklentiler oluşturmalarına olanak tanır. Ancak, bazı senaryolarda konak uygulamalarının eklentiler tarafından belirtilen kullanıcı arabirimlerini görüntülemesi gerekir. .NET Framework her sunu teknolojisinin kullanıcı arabirimlerini uygulamak için kendi modeli olduğundan, .NET Framework eklenti modeli belirli bir sunum teknolojisini desteklemez. Bunun yerine WPF, eklentiler için UI desteğiyle .NET Framework eklenti modelini genişletir.
 
 <a name="WPFAddInModel"></a>
 
 ## <a name="wpf-add-ins"></a>WPF eklentileri
 
-WPF, .NET Framework eklenti modeli ile birlikte, çok çeşitli eklentiler kullanıcı arabirimlerini görüntülemek için uygulamaları barındırmak gerektiren senaryolar adresi sağlar. Özellikle, bu senaryolar aşağıdaki iki programlama modeli ile WPF tarafından ele alınır:
+WPF, .NET Framework eklentisi modeliyle birlikte, ana bilgisayar uygulamalarının eklentilerden kullanıcı arabirimlerini görüntülemesini gerektiren çok çeşitli senaryolara olanak tanır. Özellikle, bu senaryolar aşağıdaki iki programlama modeli ile WPF tarafından karşılanır:
 
-1. **Eklenti UI döndüren**. Bir eklentiyi bir kullanıcı Arabirimi ana bilgisayar uygulamasına bir yöntem çağrısının anlaşma tarafından tanımlandığı şekilde döndürür. Bu senaryo, aşağıdaki durumlarda kullanılır:
+1. **Eklenti bir kullanıcı arabirimi döndürür**. Bir eklenti, anlaşma tarafından tanımlanan bir yöntem çağrısı aracılığıyla konak uygulamasına bir kullanıcı arabirimi döndürür. Bu senaryo aşağıdaki durumlarda kullanılır:
 
-    - Bir kullanıcı Arabirimi eklentisi tarafından döndürülen görünümünün ya da verilere bağımlı olduğundan veya yalnızca çalışma zamanında dinamik olarak gibi mevcut koşulları oluşturulan raporlar.
+    - Bir eklenti tarafından döndürülen bir kullanıcı arabiriminin görünümü, yalnızca çalışma zamanında bulunan, dinamik olarak oluşturulan raporlar gibi verilere veya koşullara bağlıdır.
 
-    - Kullanıcı Arabirimi eklentisi tarafından sağlanan hizmetleri için eklentiyi kullanan konak uygulamalar Arabiriminden farklıdır.
+    - Bir eklenti tarafından sunulan hizmetler için Kullanıcı arabirimi, eklentiyi kullanan konak uygulamalarının kullanıcı arabiriminden farklıdır.
 
-    - Eklentiyi öncelikle ana uygulama için bir hizmet gerçekleştirir ve bir kullanıcı Arabirimi ile ana bilgisayar uygulaması durumu bildirir.
+    - Eklenti öncelikle konak uygulama için bir hizmet gerçekleştirir ve konak uygulamasına durumu bir kullanıcı arabirimi ile bildirir.
 
-2. **Eklenti UI olan**. Bir eklenti, sözleşmesi tarafından tanımlandığı şekilde UI'dir. Bu senaryo, aşağıdaki durumlarda kullanılır:
+2. **Eklenti bir kullanıcı arabirimi**. Bir eklenti, anlaşma tarafından tanımlanan bir UI 'dir. Bu senaryo aşağıdaki durumlarda kullanılır:
 
-    - Bir eklenti gibi bir reklam görüntülenen dışındaki hizmetleri sağlamaz.
+    - Bir eklenti, bir reklam gibi gösterilenden farklı hizmetler sağlamaz.
 
-    - Hesaplayıcı veya Renk Seçici gibi eklenti kullanan tüm konak uygulamalar için kullanıcı Arabirimi eklentisi tarafından sağlanan hizmetleri için yaygındır.
+    - Bir eklenti tarafından sunulan hizmetler için Kullanıcı arabirimi, hesap makinesi veya renk seçici gibi bu eklentiyi kullanan tüm konak uygulamaları için ortaktır.
 
-Bu senaryolar, eklenti uygulama etki alanları ve ana bilgisayar uygulaması arasında UI nesneleri geçirilebilir gerektirir. Eklenti modeli uygulama etki alanları arasında iletişim kurmak için uzaktan iletişim kullanır olan .NET Framework beri bunlar arasında geçirilen nesneleri, Uzaktan erişilebilir olması gerekir.
+Bu senaryolar, konak uygulama ve eklenti uygulama etki alanları arasında UI nesnelerinin geçirilmesini gerektirir. .NET Framework eklentisi modeli, uygulama etki alanları arasında iletişim kurmak için uzaktan iletişimi temel aldığından, aralarında geçen nesneler Uzaktan erişilebilir olmalıdır.
 
-Uzaktan erişilebilir bir veya daha fazlasını yapan bir sınıf örneği nesnedir:
+Uzaktan erişilebilen bir nesne, aşağıdakilerden birini veya birkaçını yapan bir sınıfın örneğidir:
 
-- Öğesinden türetilen <xref:System.MarshalByRefObject> sınıfı.
+- <xref:System.MarshalByRefObject> Sınıfından türetilir.
 
-- Implements <xref:System.Runtime.Serialization.ISerializable> arabirimi.
+- <xref:System.Runtime.Serialization.ISerializable> Arabirimini uygular.
 
-- Sahip <xref:System.SerializableAttribute> özniteliği uygulandı.
+- <xref:System.SerializableAttribute> Özniteliği uygulandı.
 
 > [!NOTE]
-> Uzaktan erişilebilir .NET Framework nesneleri oluşturma hakkında daha fazla bilgi için bkz. [nesneleri Uzaktan erişilebilir hale getirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100)).
+> Uzaktan erişilebilir .NET Framework nesnelerinin oluşturulmasıyla ilgili daha fazla bilgi için bkz. [nesneleri uzaktan](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))oluşturma.
 
-WPF UI türleri Uzaktan erişilebilir değildir. Sorunu çözmek için ana uygulamalardan görüntülenecek WPF UI eklentileri tarafından oluşturulan etkinleştirmek için .NET Framework eklenti modeli WPF genişletir. Bu destek, iki tür tarafından WPF sağladığı: <xref:System.AddIn.Contract.INativeHandleContract> arabirimi ve iki statik yöntemler tarafından uygulanan <xref:System.AddIn.Pipeline.FrameworkElementAdapters> sınıfı: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Yüksek düzeyde, bu türleri ve yöntemleri şu şekilde kullanılır:
+WPF Kullanıcı arabirimi türleri uzaktan erişilebilir değildir. WPF, sorunu çözmek için, eklentiler tarafından oluşturulan WPF Kullanıcı arabirimini konak uygulamalardan görüntülenmek üzere .NET Framework eklenti modelini genişletir. Bu destek WPF tarafından iki tür <xref:System.AddIn.Contract.INativeHandleContract> tarafından sağlanır: arabirimi ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters> sınıfı tarafından uygulanan iki statik yöntem: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Yüksek düzeyde, bu türler ve yöntemler aşağıdaki şekilde kullanılır:
 
-1. WPF gerektiren eklentiler tarafından sağlanan kullanıcı arabirimleri doğrudan veya dolaylı olarak türetilen sınıflar olduklarını <xref:System.Windows.FrameworkElement>şekiller, denetimleri, kullanıcı denetimleri, Düzen bölmeleri ve sayfaları gibi.
+1. WPF, Eklentiler, denetimler, Kullanıcı denetimleri, düzen bölmeleri ve sayfalar gibi doğrudan ya da dolaylı <xref:System.Windows.FrameworkElement>olarak türetilmiş bir sınıf olmalıdır.
 
-2. Sözleşme, eklenti ve barındırma uygulaması UI'dir geçirilecek bildirir her yerde, onu olarak bildirilmelidir bir <xref:System.AddIn.Contract.INativeHandleContract> (değil bir <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırlarında geçirilebilir eklenti UI Uzaktan erişilebilir gösterimidir.
+2. Sözleşmenin, eklenti ile ana bilgisayar uygulaması arasında bir kullanıcı arabirimi geçirdiğini bildiren her yerde, bir <xref:System.AddIn.Contract.INativeHandleContract> ( <xref:System.Windows.FrameworkElement>değil) olarak bildirilmelidir; <xref:System.AddIn.Contract.INativeHandleContract> , yalıtım sınırları arasında geçirilebileceğini, eklenti Kullanıcı arabiriminin Uzaktan erişilebilir bir gösterimidir.
 
-3. Eklentinin uygulama etki alanından geçirilmeden önce bir <xref:System.Windows.FrameworkElement> olarak paketlenmiş bir <xref:System.AddIn.Contract.INativeHandleContract> çağırarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.
+3. Eklentinin uygulama etki alanından geçirilmeden önce, bir <xref:System.Windows.FrameworkElement> , çağırarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>bir <xref:System.AddIn.Contract.INativeHandleContract> olarak paketlenmiştir.
 
-4. Konak uygulamanın uygulama etki alanı için geçirilen sonra <xref:System.AddIn.Contract.INativeHandleContract> olarak paketlenmiş gereken bir <xref:System.Windows.FrameworkElement> çağırarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.
+4. Ana bilgisayar uygulamasının uygulama etki alanına geçtikten sonra, <xref:System.AddIn.Contract.INativeHandleContract> çağırarak <xref:System.Windows.FrameworkElement> <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>olarak yeniden paketlenmesi gerekir.
 
-Nasıl <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> kullanılan belirli bir senaryoya bağlıdır. Aşağıdaki bölümlerde, her bir programlama modeli için ayrıntıları sağlayın.
+, Ve kullanılması,<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> belirli senaryoya bağlıdır. <xref:System.AddIn.Contract.INativeHandleContract> <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> Aşağıdaki bölümlerde her bir programlama modeli için ayrıntılar sağlanmaktadır.
 
 <a name="ReturnUIFromAddInContract"></a>
 
-## <a name="add-in-returns-a-user-interface"></a>Eklenti kullanıcı arayüzü döndürür.
+## <a name="add-in-returns-a-user-interface"></a>Eklenti bir kullanıcı arabirimi döndürüyor
 
-Bir kullanıcı Arabirimi bir ana bilgisayar uygulamasına döndürülecek eklenti için aşağıdakiler gereklidir:
+Bir eklentinin bir konak uygulamasına bir kullanıcı arabirimi döndürmesi için aşağıdakiler gereklidir:
 
-1. Ana bilgisayar uygulaması, eklenti ve işlem hattı, .NET Framework tarafından açıklandığı oluşturulmalıdır [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) belgeleri.
+1. Ana bilgisayar uygulaması, eklenti ve işlem hattı, .NET Framework [eklentileri ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) belgelerinde açıklandığı şekilde oluşturulmalıdır.
 
-2. Sözleşme uygulamalıdır <xref:System.AddIn.Contract.IContract> ve bir kullanıcı Arabirimi döndürülecek sözleşme türü dönüş değerine sahip bir yöntemi bildirmeniz gerekir <xref:System.AddIn.Contract.INativeHandleContract>.
+2. Sözleşmenin, bir Kullanıcı <xref:System.AddIn.Contract.IContract> arabirimi döndürmesi ve bir UI döndürmesi gerekir, sözleşmenin bir dönüş değeri türünde <xref:System.AddIn.Contract.INativeHandleContract>bir yöntem bildirmesi gerekir.
 
-3. Eklenti ile ana bilgisayar uygulaması arasında geçirilen kullanıcı Arabirimi öğesinden türetilmelidir doğrudan veya dolaylı olarak <xref:System.Windows.FrameworkElement>.
+3. Eklenti ile konak uygulama arasında geçirilen kullanıcı arabirimi doğrudan veya dolaylı olarak türetilmiş <xref:System.Windows.FrameworkElement>olmalıdır.
 
-4. Kullanıcı Arabirimi eklentisi tarafından döndürülen dönüştürülmüş olmalıdır bir <xref:System.Windows.FrameworkElement> için bir <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırı geçmeden önce.
+4. Eklentinin döndürdüğü Kullanıcı arabiriminin, yalıtım sınırını geçmeden <xref:System.Windows.FrameworkElement> <xref:System.AddIn.Contract.INativeHandleContract> önce bir öğesine dönüştürülmesi gerekir.
 
-5. Öğesinden döndürülen UI dönüştürülmelidir bir <xref:System.AddIn.Contract.INativeHandleContract> için bir <xref:System.Windows.FrameworkElement> yalıtım sınırı geçmesinden sonra.
+5. Döndürülen Kullanıcı arabiriminin, yalıtım sınırını geçtikten <xref:System.AddIn.Contract.INativeHandleContract> <xref:System.Windows.FrameworkElement> sonra bir öğesine dönüştürülmesi gerekir.
 
-6. Konak uygulama döndürülen görüntüler <xref:System.Windows.FrameworkElement>.
+6. Ana bilgisayar uygulaması döndürülen <xref:System.Windows.FrameworkElement>öğesini görüntüler.
 
-UI döndüren eklenti uygulama yapmayı gösteren bir örnek için bkz: [bir eklenti döndüren bir kullanıcı Arabirimi oluşturma](how-to-create-an-add-in-that-returns-a-ui.md).
+UI döndüren bir eklentinin nasıl uygulanacağını gösteren bir örnek için, bkz. [Kullanıcı arabirimi döndüren eklenti oluşturma](how-to-create-an-add-in-that-returns-a-ui.md).
 
 <a name="AddInIsAUI"></a>
 
-## <a name="add-in-is-a-user-interface"></a>Bir kullanıcı arabirimi eklentisi olan
+## <a name="add-in-is-a-user-interface"></a>Eklenti bir kullanıcı arabirimidir
 
-Bir eklenti UI olduğunda, aşağıdakiler gereklidir:
+Bir eklenti bir kullanıcı arabirimi olduğunda aşağıdakiler gereklidir:
 
-1. Ana bilgisayar uygulaması, eklenti ve işlem hattı, .NET Framework tarafından açıklandığı oluşturulmalıdır [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) belgeleri.
+1. Ana bilgisayar uygulaması, eklenti ve işlem hattı, .NET Framework [eklentileri ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) belgelerinde açıklandığı şekilde oluşturulmalıdır.
 
-2. Eklenti anlaşma arabirimi uygulamalıdır <xref:System.AddIn.Contract.INativeHandleContract>.
+2. Eklentiye ait sözleşme arabiriminin uygulanması <xref:System.AddIn.Contract.INativeHandleContract>gerekir.
 
-3. Ana uygulamaya geçirilen eklentiyi doğrudan veya dolaylı olarak öğesinden türetilmelidir <xref:System.Windows.FrameworkElement>.
+3. Konak uygulamasına geçirilen eklenti doğrudan veya dolaylı olarak türetilmiş <xref:System.Windows.FrameworkElement>olmalıdır.
 
-4. Eklenti gelen dönüştürülmelidir bir <xref:System.Windows.FrameworkElement> için bir <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırı geçmeden önce.
+4. Eklenti, yalıtım sınırını geçmeden <xref:System.Windows.FrameworkElement> <xref:System.AddIn.Contract.INativeHandleContract> önce bir öğesinden öğesine dönüştürülmelidir.
 
-5. Eklenti gelen dönüştürülmelidir bir <xref:System.AddIn.Contract.INativeHandleContract> için bir <xref:System.Windows.FrameworkElement> yalıtım sınırı geçmesinden sonra.
+5. Bu eklenti, yalıtım sınırını geçtikten <xref:System.AddIn.Contract.INativeHandleContract> <xref:System.Windows.FrameworkElement> sonra bir öğesinden öğesine dönüştürülmelidir.
 
-6. Konak uygulama döndürülen görüntüler <xref:System.Windows.FrameworkElement>.
+6. Ana bilgisayar uygulaması döndürülen <xref:System.Windows.FrameworkElement>öğesini görüntüler.
 
-UI olan eklenti uygulama yapmayı gösteren bir örnek için bkz: [bir eklenti olan bir kullanıcı Arabirimi oluşturma](how-to-create-an-add-in-that-is-a-ui.md).
+Kullanıcı arabirimi olan bir eklentinin nasıl uygulanacağını gösteren bir örnek için, bkz. [UI olan eklenti oluşturma](how-to-create-an-add-in-that-is-a-ui.md).
 
 <a name="ReturningMultipleUIsFromAnAddIn"></a>
 
-## <a name="returning-multiple-uis-from-an-add-in"></a>Eklenti birden çok UI döndüren
+## <a name="returning-multiple-uis-from-an-add-in"></a>Bir eklentiden birden çok Uıto döndürme
 
-Eklentiler, genellikle görüntülemek uygulamaları barındırmak için birden çok kullanıcı arabirimi sağlar. Ayrıca konak uygulama durum bilgilerini de bir kullanıcı Arabirimi olarak sağlayan UI olan eklenti gibi göz önünde bulundurun. Böyle bir eklenti hem tekniklerinin bir bileşimini kullanarak uygulanabilir [bir kullanıcı arayüzü döndürür eklenti](#ReturnUIFromAddInContract) ve [eklenti kullanıcı arayüzü](#AddInIsAUI) modelleri.
+Eklentiler, ana bilgisayar uygulamalarının görüntülemesi için genellikle birden çok kullanıcı arabirimi sağlar. Örneğin, bir kullanıcı arabirimi olarak da konak uygulamasına durum bilgilerini sağlayan bir kullanıcı arabirimi olan bir eklentiyi düşünün. Bu gibi bir eklenti, her iki eklentinin de bir [Kullanıcı arabirimi döndürür](#ReturnUIFromAddInContract) ve [eklenti bir kullanıcı arabirimi](#AddInIsAUI) modelleridir.
 
 <a name="AddInsAndXBAPs"></a>
 
 ## <a name="add-ins-and-xaml-browser-applications"></a>Eklentiler ve XAML tarayıcı uygulamaları
 
-Örneklerde, şu ana kadar yüklü tek başına uygulama konak uygulama olmuştur. Ancak [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] eklentileri, aşağıdaki ek derleme ve uygulama gereksinimleri paralelleştirmeye da barındırabilirsiniz:
+Bu örnekte, ana bilgisayar uygulaması yüklenmiş bir tek başına uygulamadır. Ancak [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] , aşağıdaki ek derleme ve uygulama gereksinimleriyle birlikte eklentileri de barındırabilirsiniz:
 
-- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Uygulama bildirimi, işlem hattını (klasörleri ve derlemeleri) ve eklenti derlemesi için özel olarak indirmek için yapılandırılmalıdır [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] aynı klasörde bir istemci makine üzerinde uygulama önbelleğine [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].
+- Uygulama bildirimi, işlem hattını (klasörler ve derlemeler) ve eklenti derlemesini istemci makinedeki ClickOnce uygulama önbelleğine, ile aynı klasöre [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]indirmek için özel olarak yapılandırılmalıdır. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]
 
-- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Keşfedip eklentileri yükleyecek kod kullanmalıdır [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] uygulama önbelleği için [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] eklentisi ardışık düzen ve konum olarak.
+- Eklentilerin keşfedilmesine ve yüklenmesine yönelik [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kodun,işlemhattıveeklentikonumugibiClickOnceuygulamaönbelleğinikullanmasıgerekir.[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]
 
-- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Eklenti tarafından barındırıldığında; kaynak sitede bulunan gevşek dosyalar başvuruyorsa bir özel güvenlik bağlamına eklenti gerekir [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], add-INS konak uygulamanın sitede bulunan gevşek dosyalar yalnızca başvurabilir kaynağı.
+- Eklenti, kaynak sitesinde bulunan gevşek dosyalara başvuruyorsa, eklentileri özel bir güvenlik bağlamına yüklemesi [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] gerekir;tarafındanbarındırıldığındaeklentileryalnızcaanabilgisayaruygulamasınınsitesindebulunangevşekdosyalarabaşvurabilir[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kaynak.
 
-Bu görevleri, aşağıdaki alt bölümlerde ayrıntılı olarak açıklanmıştır.
+Bu görevler, aşağıdaki alt bölümlerde ayrıntılı olarak açıklanmıştır.
 
-### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>İşlem hattı ve ClickOnce dağıtımı için eklentiyi yapılandırma
+### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>ClickOnce dağıtımı için işlem hattı ve eklentiyi yapılandırma
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] için indirilir ve güvenli bir klasörde çalıştırılan [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] dağıtım önbellek. Sırayla bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] eklenti barındırmak için işlem hattı ve eklenti bütünleştirilmiş kod da güvenli klasöre yüklenmelidir. Bunu başarmak için uygulama bildirimini işlem hattı ve eklenti derlemesini içerecek şekilde yapılandırmanız gerekir. Bu en bir kolayca yapılabilir [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], işlem hattı ve eklenti derlemesi konak olması gerekiyor ancak [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projesinin kök klasörüne sırayla [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] ardışık düzen derlemeleri algılamak için.
+[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]ClickOnce dağıtım önbelleğindeki güvenli bir klasöre indirilir ve buradan çalıştırılır. Bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] eklentinin barındırmasını sağlamak için, işlem hattı ve eklenti derlemesi güvenli klasöre de indirilmelidir. Bunu başarmak için, uygulama bildirimini indirmek üzere hem işlem hattı hem de eklenti derlemesini içerecek şekilde yapılandırmanız gerekir. İşlem hattı ve eklenti derlemesinin, [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]ardışık düzen derlemelerini algılamak [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] için konak [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projesinin kök klasöründe olması gerekir, ancak ' de bu en kolay şekilde yapılır.
 
-Sonuç olarak, Eklenti derlemesine ve işlem hattı oluşturmak için ilk adım olan [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] yapı çıkışını her işlem hattı ayarlayarak derleme projeleri derleme ve Eklenti projesinin kök. Aşağıdaki tabloda çözüm ve kök klasörde konağı olarak işlem hattı derleme projeleri ve derleme eklenti projesi yapı çıkış yolları gösterilmektedir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] proje.
+Sonuç olarak, ilk adım, her bir ardışık düzen derlemesinin ve eklenti derleme projelerinin yapı çıkışını [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ayarlayarak projenin köküne ardışık düzen ve eklenti derlemesini oluşturmak için kullanılır. Aşağıdaki tabloda, konak [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projesi ile aynı çözümde ve kök klasörde bulunan işlem hattı derleme projeleri ve eklenti derleme projesi için yapı çıkış yolları gösterilmektedir.
 
-Tablo 1: Çıkış yolu bir XBAP tarafından barındırılan işlem hattı derlemeler için derleme
+Tablo 1: Bir XBAP tarafından barındırılan işlem hattı derlemeleri için derleme çıkış yolları
 
-|İşlem hattı derleme projesi|Yapı çıkış yolu|
+|Ardışık düzen derleme projesi|Derleme çıkış yolu|
 |-------------------------------|-----------------------|
 |Sözleşme|`..\HostXBAP\Contracts\`|
 |Eklenti görünümü|`..\HostXBAP\AddInViews\`|
-|Ekleme tarafı bağdaştırıcısı|`..\HostXBAP\AddInSideAdapters\`|
+|Eklenti tarafı bağdaştırıcı|`..\HostXBAP\AddInSideAdapters\`|
 |Konak tarafı bağdaştırıcısı|`..\HostXBAP\HostSideAdapters\`|
-|Eklentisi|`..\HostXBAP\AddIns\WPFAddIn1`|
+|Eklenti|`..\HostXBAP\AddIns\WPFAddIn1`|
 
-Eklenti derleme olarak ve işlem hattı derlemeleri belirtmek için sonraki adımdır [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] içerik dosyaları [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] aşağıdakileri yaparak:
+Sonraki adım, aşağıdaki işlemleri gerçekleştirerek işlem hattı derlemelerini ve eklenti derlemesini [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] içerik [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] dosyaları olarak belirtmektir:
 
-1. Her işlem hattı klasör Çözüm Gezgini'nde sağ tıklayıp seçerek işlem hattı ve eklenti bütünleştirilmiş kod projesinde dahil **projeye dahil et**.
+1. Çözüm Gezgini içindeki her bir işlem hattı klasörüne sağ tıklayıp projeye Ekle ' yi seçerek, işlem hattını ve eklenti derlemesini projeye dahil **edin**.
 
-2. Ayarı **derleme eylemi** her işlem hattı derleme ve Eklenti derlemesine **içerik** gelen **özellikleri** penceresi.
+2. Her bir işlem hattı derlemesinin **derleme eylemini** ve **Özellikler** penceresinden **içeriğe** eklenti derlemesini ayarlama.
 
-Son adım, işlem hattı derleme dosyaları ve derleme eklenti dosyası indirme için eklenecek uygulama bildirimi yapılandırmaktır. Klasörün kökünde klasörlerdeki dosyaları yerleştirilmelidir [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] önbelleğindeki [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] uygulama kaplar. Yapılandırma sağlanabilir [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] aşağıdakileri yaparak:
+Son adım, uygulama bildirimini indirme için işlem hattı derleme dosyalarını ve eklenti derleme dosyasını içerecek şekilde yapılandırmaktır. Dosyalar, [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] uygulamanın kapladığı ClickOnce önbelleğindeki klasörün kökündeki klasörlerde bulunmalıdır. Yapılandırma, aşağıdaki işlemleri yaparak ' [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] de elde edilebilir:
 
-1. Sağ tıklayın [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] proje, tıklayın **özellikleri**, tıklayın **Yayımla**ve ardından **uygulama dosyaları** düğmesi.
+1. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Projeye sağ tıklayın, **Özellikler**' e tıklayın, **Yayımla**' ya tıklayın ve ardından **uygulama dosyaları** düğmesine tıklayın.
 
-2. İçinde **uygulama dosyaları** iletişim kutusunda, kümesi **yayımlama durumu** her işlem hattı ve DLL eklentisini **Ekle (otomatik)** ve **indirmegrubu** her işlem hattı ve DLL eklentisini **(gerekli)** .
+2. **Uygulama dosyaları** iletişim kutusunda her bir ardışık düzen ve eklenti dll 'Inin **Yayımla durumunu** **(otomatik) içerecek**şekilde ayarlayın ve her BIR işlem hattı ve eklenti dll 'si için **indirme grubunu** **(gerekli)** ayarlayın.
 
-### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>İşlem hattı ve kullanarak uygulama tabanından
+### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Uygulama temelinden işlem hattını ve eklentiyi kullanma
 
-Ne zaman işlem hattı ve için yapılandırıldığında [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] dağıtım, aynı yüklenen [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] Önbellek klasörü olarak [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. İşlem hattını kullanma ve gelen eklentisi için [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kodu gerekir alma bunları uygulamadan temel. Çeşitli türleri ve üyeleri için işlem hatları ve eklentiler kullanarak .NET Framework eklenti modeli, bu senaryo için özel desteği sağlar. İlk olarak, yol ile tanımlanan <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> numaralandırma değeri. Aşağıdakileri içeren işlem hattı kullanmak için uygun eklenti üyeleri aşırı yüklemeleri ile bu değeri kullanın:
+İşlem hattı ve eklenti ClickOnce dağıtımı için yapılandırıldığında, ile aynı ClickOnce önbellek klasörüne [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]indirilir. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]'Danişlem hattını ve eklentiyi kullanmak için, kodbunları[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] uygulama tabanından almalıdır. İşlem hatları ve eklentileri kullanmak için .NET Framework eklentisi modelinin çeşitli türleri ve üyeleri, bu senaryo için özel destek sağlar. İlk olarak, yol <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> numaralandırma değeri tarafından tanımlanır. Bu değeri, aşağıdakileri içeren işlem hatlarını kullanmak için ilgili eklenti üyelerinin aşırı yüklemeleri ile birlikte kullanırsınız:
 
 - <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 
@@ -221,98 +221,98 @@ Ne zaman işlem hattı ve için yapılandırıldığında [!INCLUDE[TLA2#tla_cli
 
 - <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 
-### <a name="accessing-the-hosts-site-of-origin"></a>Ana bilgisayarın Site kaynak erişimi
+### <a name="accessing-the-hosts-site-of-origin"></a>Konağın kaynak sitesine erişme
 
-Eklenti dosyaları kaynak siteden başvurabileceğini emin olmak için eklentinin ana bilgisayar uygulamasına eşdeğerdir ve güvenlik yalıtımı ile yüklenmesi gerekir. Bu güvenlik düzeyi tarafından tanımlanan <xref:System.AddIn.Hosting.AddInSecurityLevel.Host?displayProperty=nameWithType> numaralandırma değeri geçirilir <xref:System.AddIn.Hosting.AddInToken.Activate%2A> eklenti etkinleştirildiğinde yöntemi.
+Bir eklentinin kaynak sitesinden dosyalara başvurmasına olanak sağlamak için, eklenti konak uygulamasına denk gelen güvenlik yalıtımıyla birlikte yüklenmelidir. Bu güvenlik düzeyi, <xref:System.AddIn.Hosting.AddInSecurityLevel.Host?displayProperty=nameWithType> numaralandırma değeri tarafından tanımlanır ve bir eklenti etkinleştirildiğinde <xref:System.AddIn.Hosting.AddInToken.Activate%2A> yöntemine geçirilir.
 
 <a name="WPFAddInModelArchitecture"></a>
 
 ## <a name="wpf-add-in-architecture"></a>WPF eklentisi mimarisi
 
-Anlatıldığı gibi en üst düzeyde, WPF .NET Framework kullanıcı arabirimlerini eklentiler sağlar. (Bu türetilen doğrudan veya dolaylı olarak <xref:System.Windows.FrameworkElement>) kullanarak <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Ana bilgisayar uygulaması döndürülür sonucu olan bir <xref:System.Windows.FrameworkElement> görüntülenen kullanıcı Arabiriminden ana uygulamada.
+En yüksek düzeyde, bu şekilde, WPF <xref:System.Windows.FrameworkElement>, ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>kullanarak <xref:System.AddIn.Contract.INativeHandleContract>kullanıcı arabirimlerini (doğrudan veya dolaylı olarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> türetilmiş) uygulamak için .NET Framework eklentilerin kullanılmasını sağlar. Sonuç olarak ana bilgisayar uygulamasının konak uygulamasındaki kullanıcı arabiriminden görüntülenen <xref:System.Windows.FrameworkElement> bir sonucu döndürülür.
 
-Basit kullanıcı Arabirimi eklentisi senaryolar için bir geliştiricinin ihtiyaç duyduğu kadar ayrıntı budur. Daha karmaşık senaryolarda, düzen, kaynakları ve veri bağlama gibi ek WPF hizmetlerini kullanan denemek için WPF UI desteği ile .NET Framework eklenti modeli nasıl genişlettiğini, daha ayrıntılı bilgiye faydalarını anlamak için gereklidir ve sınırlamaları.
+Basit UI eklenti senaryolarında bu, geliştirici ihtiyaçlarına göre çok ayrıntıdır. Özellikle, düzen, kaynak ve veri bağlama gibi ek WPF hizmetlerinden yararlanmaya başlayan daha karmaşık senaryolar için WPF 'nin .NET Framework eklenti modelini nasıl genişlettiği hakkında daha ayrıntılı bilgi için bkz. avantajları anlamak için Kullanıcı arabirimi desteği ve sınırlamaları.
 
-Temelde, WPF bir ana bilgisayar uygulaması için bir eklentiyi bir UI geçirmez; Bunun yerine, WPF WPF birlikte çalışabilirliği kullanılarak Win32 pencere tanıtıcısı kullanıcı Arabiriminde geçirir. Bir kullanıcı Arabiriminden bir eklenti için bir ana bilgisayar uygulaması geçirildiğinde, bu nedenle, aşağıdakiler gerçekleşir:
+Temelde, WPF bir konak uygulamasına bir eklentinin Kullanıcı arabirimini geçirmez; Bunun yerine WPF, WPF birlikte çalışabilirliği kullanarak Kullanıcı arabirimi için Win32 pencere tanıtıcısını geçirir. Bu nedenle, bir eklentinin bir konak uygulamasına bir kullanıcı arabirimi geçirildiğinde aşağıdakiler gerçekleşir:
 
-- Eklenti tarafında WPF konak uygulama tarafından görüntülenen kullanıcı Arabirimi için bir pencere tutucu devralır. Türetilen bir iç WPF sınıf pencere tanıtıcısı yalıtılan <xref:System.Windows.Interop.HwndSource> ve uygulayan <xref:System.AddIn.Contract.INativeHandleContract>. Bu sınıfın bir örneği tarafından döndürülen <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> ve eklentinin uygulama etki alanından konak uygulamanın uygulama etki alanına taşınır.
+- Eklenti tarafında, WPF konak uygulama tarafından görüntülenecek kullanıcı arabirimi için bir pencere tutamacı alır. Pencere tutamacı, <xref:System.Windows.Interop.HwndSource> <xref:System.AddIn.Contract.INativeHandleContract>ve ' den türetilen bir iç WPF sınıfı tarafından kapsüllenir. Bu sınıfın bir örneği tarafından <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> döndürülür ve eklentinin uygulama etki alanından ana bilgisayar uygulamasının uygulama etki alanına sıralanır.
 
-- Konak uygulama tarafında WPF tüketen <xref:System.Windows.Interop.HwndSource> türetildiği bir iç WPF sınıf olarak <xref:System.Windows.Interop.HwndHost> ve <xref:System.AddIn.Contract.INativeHandleContract>. Bu sınıfın bir örneği tarafından döndürülen <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> konak uygulama.
+- Konak uygulama tarafında WPF, ' den <xref:System.Windows.Interop.HwndSource> <xref:System.Windows.Interop.HwndHost> türetilen ve tüketen <xref:System.AddIn.Contract.INativeHandleContract>dahili bir WPF sınıfı olarak yeniden paketler. Bu sınıfın bir örneği tarafından <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> ana bilgisayar uygulamasına döndürülür.
 
-<xref:System.Windows.Interop.HwndHost> pencere tanıtıcısı, WPF kullanıcı arabirimleri ile tanımlanan kullanıcı arabirimlerini görüntülemek için var. Daha fazla bilgi için [WPF ve Win32 birlikte çalışması](../advanced/wpf-and-win32-interoperation.md).
+<xref:System.Windows.Interop.HwndHost>WPF kullanıcı arabirimlerinden, pencere tutamaçları tarafından tanımlanan kullanıcı arabirimlerini göstermek için mevcuttur. Daha fazla bilgi için bkz. [WPF ve Win32 birlikte](../advanced/wpf-and-win32-interoperation.md)çalışma.
 
-Özet olarak, <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> bir eklentiyi bir ana bilgisayar uygulamasına Burada, saklanmış olduğu tarafından geçirilecek bir WPF UI için Pencere işleyicisi izin vermek için mevcut bir <xref:System.Windows.Interop.HwndHost> ve konak uygulamanın kullanıcı Arabiriminde görüntülenir.
+<xref:System.AddIn.Contract.INativeHandleContract>Özet, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> ' de bir WPF Kullanıcı arabirimi için pencere tutamacının bir eklentinin bir konak uygulamasına geçirilmesine izin vermek, burada bir <xref:System.Windows.Interop.HwndHost> , ve ana bilgisayar uygulamasının Kullanıcı arabirimini görüntülendiği yerdir.
 
 > [!NOTE]
-> Ana bilgisayar uygulaması aldığından bir <xref:System.Windows.Interop.HwndHost>, ana bilgisayar uygulaması tarafından döndürülen nesne dönüştürülemiyor <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> eklenti tarafından uygulanan türüne (örneğin, bir <xref:System.Windows.Controls.UserControl>).
+> Konak uygulama bir <xref:System.Windows.Interop.HwndHost>aldığından, konak uygulama tarafından <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> döndürülen nesneyi eklenti tarafından (örneğin, a <xref:System.Windows.Controls.UserControl>) olarak uygulandığı türüne dönüştüremiyor.
 
-Doğası, <xref:System.Windows.Interop.HwndHost> uygulamalarını barındırmak bunları nasıl kullanabileceğiniz etkileyen belirli sınırlamaları vardır. Ancak WPF genişletir <xref:System.Windows.Interop.HwndHost> eklenti senaryoları için çeşitli özelliklere sahip. Bu avantajlar ve sınırlamalar aşağıda açıklanmıştır.
+Doğası gereği, <xref:System.Windows.Interop.HwndHost> konak uygulamalarının bunları nasıl kullanabileceğinizi etkileyen belirli sınırlamalara sahiptir. Ancak WPF, eklenti <xref:System.Windows.Interop.HwndHost> senaryoları için çeşitli yetenekler ile genişletilir. Bu avantajlar ve sınırlamalar aşağıda açıklanmıştır.
 
 <a name="WPFAddInModelBenefits"></a>
 
 ## <a name="wpf-add-in-benefits"></a>WPF eklentisi avantajları
 
-WPF eklentisi kullanıcı arabirimleri, türetilen bir iç sınıf kullanarak ana uygulamadan görüntülendiğinden <xref:System.Windows.Interop.HwndHost>, bu kullanıcı arabirimleri yeteneklerini tarafından kısıtlanmıştır <xref:System.Windows.Interop.HwndHost> düzeni gibi bir WPF UI Hizmetleri göre işleme, veri bağlama, stiller, şablonlar ve kaynaklar. Ancak WPF iç artırmaktadır <xref:System.Windows.Interop.HwndHost> aşağıdakiler dahil ek özellikler olan alt sınıf:
+WPF eklentisi kullanıcı arabirimleri, ' den <xref:System.Windows.Interop.HwndHost>türetilen bir iç sınıf kullanılarak konak uygulamalardan görüntülendiğinden, bu kullanıcı arabirimleri, düzen gibi WPF Kullanıcı arabirimi hizmetleriyle ilgili <xref:System.Windows.Interop.HwndHost> yetenekler ile kısıtlanır işleme, veri bağlama, stiller, şablonlar ve kaynaklar. Ancak WPF, iç <xref:System.Windows.Interop.HwndHost> alt sınıfını aşağıdakileri içeren ek yetenekler ile genişlettiğini:
 
-- Konak uygulamanın kullanıcı Arabirimi ile bir eklentinin kullanıcı Arabirimi arasında sekmeyle gitmeyi. "Eklenti UI'dir." bir programlama modeli için geçersiz kılmak Ekle tarafı bağdaştırıcısı gerektiğini unutmayın <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> sekmeyi, eklentinin tam güvenilir veya kısmen güvenilen etkinleştirmek için.
+- Ana bilgisayar uygulamasının Kullanıcı arabirimi ve bir eklentinin Kullanıcı arabirimi arasında sekme. "Eklenti bir kullanıcı arabirimi" programlama modelinin, eklentinin tam olarak güvenilir veya kısmen güvenilir olup olmadığına bakılmaksızın, sekmeye izin vermek <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> için eklenti tarafı bağdaştırıcısının geçersiz kılınmasını gerektirdiğini unutmayın.
 
-- Konak uygulama kullanıcı arabirimlerinden görüntülenen bir eklenti kullanıcı arabirimleri için erişilebilirlik gereksinimleri uygularken.
+- Ana bilgisayar uygulaması kullanıcı arabirimlerinden görüntülenen eklenti Kullanıcı arabirimleri için erişilebilirlik gereksinimlerini manlama.
 
-- WPF uygulamaları birden çok uygulama etki alanı senaryolarında güvenli bir şekilde çalıştırmak etkinleştiriliyor.
+- WPF uygulamalarının birden çok uygulama etki alanı senaryosunda güvenle çalışmasını sağlama.
 
-- Eklentileri (diğer bir deyişle, kısmi güven güvenliği sandbox) güvenlik yalıtımı ile çalıştırdığınızda kullanıcı Arabirimi eklentisi için geçersiz erişimi önleme penceresi işler. Çağırma <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> bu güvenlik sağlar:
+- Eklentiler güvenlik yalıtımı (yani, kısmi güven güvenlik korumalı alanı) ile çalıştırıldığında eklenti UI penceresine geçersiz erişimi engellemek. Çağırma <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> bu güvenliği sağlar:
 
-  - "Eklenti UI döndüren" programlama modeli için Pencere işleyicisi eklenti UI için yalıtım sınırı arasında geçirmek için tek yolu çağırmaktır <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.
+  - "Eklenti bir kullanıcı arabirimi döndürüyor" programlama modeli için, yalıtım sınırının içindeki bir eklenti Kullanıcı arabirimine yönelik pencere tanıtıcısını geçirmenin tek yolu çağrıladır <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.
 
-  - "Eklenti UI olan" programlama modeli için geçersiz kılma <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> arama ve ekleme tarafı bağdaştırıcısı <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (önceki örneklerde gösterildiği gibi), ekleme tarafı bağdaştırıcının çağırma gibi gereklidir `QueryContract` uygulamasından konak tarafı bağdaştırıcısı.
+  - "Eklenti bir kullanıcı arabirimi" programlama modeli için, eklenti tarafı bağdaştırıcısını ve <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> çağrılmasını <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (önceki örneklerde gösterildiği gibi) geçersiz kılmak, bu durumda eklenti tarafı bağdaştırıcısının `QueryContract` uygulamasını konak tarafı bağdaştırıcısı.
 
-- Birden çok uygulama etki alanı yürütme korumasını sağlama. Yalıtım sınırı yer alsa bile uygulama etki alanlarıyla sınırlamaları nedeniyle, eklenti uygulama etki alanında oluşturulan işlenmeyen özel durumları uygulamanın tamamı çökmesine neden. Ancak, WPF ve .NET Framework eklenti modeli, bu sorunu gidermek ve uygulama kararlılığını artırmak için basit bir yol sağlar. Bir kullanıcı Arabirimi görüntüler WPF eklentisi oluşturur bir <xref:System.Windows.Threading.Dispatcher> konak uygulama WPF uygulaması ise, uygulama etki alanı üzerinde çalıştığı iş parçacığı için. Uygulama etki alanında işleyerek meydana gelen tüm işlenmemiş özel durumları algılayabilirsiniz <xref:System.Windows.Threading.Dispatcher.UnhandledException> WPF eklentisi olayı <xref:System.Windows.Threading.Dispatcher>. Alabileceğiniz <xref:System.Windows.Threading.Dispatcher> gelen <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> özelliği.
+- Birden çok uygulama etki alanı yürütme koruması sağlama. Uygulama etki alanlarıyla ilgili sınırlamalar nedeniyle, eklenti uygulama etki alanlarında oluşturulan işlenmemiş özel durumlar, yalıtım sınırı var olsa bile tüm uygulamanın kilitlenmesine neden olur. Ancak WPF ve .NET Framework eklenti modeli, bu sorunu geçici olarak çözmek için basit bir yol sağlar ve uygulama kararlılığını geliştirir. Bir kullanıcı arabirimini görüntüleyen bir WPF eklentisi, uygulama etki alanının <xref:System.Windows.Threading.Dispatcher> üzerinde çalıştığı iş parçacığı için, konak uygulama bir WPF uygulaması ise bir oluşturur. WPF eklentisinin <xref:System.Windows.Threading.Dispatcher.UnhandledException> <xref:System.Windows.Threading.Dispatcher>olayını işleyerek uygulama etki alanında gerçekleşen tüm işlenmeyen özel durumları tespit edebilirsiniz. Özelliğinden ' i edinebilirsiniz <xref:System.Windows.Threading.Dispatcher>. <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>
 
 <a name="WPFAddInModelLimitations"></a>
 
 ## <a name="wpf-add-in-limitations"></a>WPF eklentisi sınırlamaları
 
-WPF tarafından sağlanan varsayılan davranışlar ekler avantajları ötesinde <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>ve pencere işleyicilerini, aynı zamanda ana uygulamalardan görüntülenen bir eklenti kullanıcı arabirimleri için sınırlamalar vardır:
+WPF 'in, <xref:System.Windows.Interop.HwndSource> <xref:System.Windows.Interop.HwndHost>, ve pencere tutamaçları tarafından sağlanan varsayılan davranışlara eklediği avantajların ötesinde, konak uygulamalardan görüntülenen eklenti Kullanıcı arabirimleri için de sınırlamalar vardır:
 
-- Bir konak uygulamasından görüntülenen eklenti kullanıcı arabirimleri konak uygulamanın kırpma davranışını dikkate almaz.
+- Bir konak uygulamasından görüntülenmiş eklenti Kullanıcı arabirimleri, ana bilgisayar uygulamasının kırpma davranışına uymaz.
 
-- Kavramını *hava sahası* birlikte çalışabilirlik senaryolarında de eklentiler için geçerlidir (bkz [teknoloji bölgelerine genel bakış](../advanced/technology-regions-overview.md)).
+- Birlikte çalışabilirlik senaryolarında *hava sahası* kavramı, eklentiler için de geçerlidir (bkz. [teknoloji bölgelerine genel bakış](../advanced/technology-regions-overview.md)).
 
-- Kaynağın devralmayı, veri bağlama ve komut vermeye genel, eklenti otomatik olarak kullanılabilir değil gibi bir konak uygulamanın UI Hizmetleri kullanıcı arabirimleri. Eklenti, bu hizmetleri sağlamak üzere işlem hattı güncelleştirmeniz gerekiyor.
+- Ana bilgisayar uygulamasının kaynak devralma, veri bağlama ve verme gibi kullanıcı ARABIRIMI Hizmetleri, eklenti Kullanıcı arabirimleri için otomatik olarak kullanılamaz. Bu hizmetleri eklentiye sağlamak için işlem hattını güncelleştirmeniz gerekir.
 
-- Eklentinin kullanıcı Arabirimi döndürülemez, ölçeği, dengesiz veya aksi halde bir dönüştürme tarafından etkilenen (bkz [dönüştüren genel bakış](../graphics-multimedia/transforms-overview.md)).
+- Bir eklenti Kullanıcı arabirimi, dönüşümden döndürülemez, ölçeklendirilemez, çarpıtılmış veya başka bir şekilde etkilenilemez (bkz. [dönüşümler genel bakış](../graphics-multimedia/transforms-overview.md)).
 
-- İçerik işlemlerinden çizerek işlenen eklenti kullanıcı arabirimi içinde <xref:System.Drawing> ad alanı, alfa karıştırma içerebilir. Ancak, hem eklenti kullanıcı Arabirimi hem de ana bilgisayar uygulaması içerdiği UI % 100 donuk olmalıdır; diğer bir deyişle, `Opacity` hem de özelliği 1 olarak ayarlanması gerekir.
+- <xref:System.Drawing> Ad alanından çizim işlemleri tarafından oluşturulan eklenti kullanıcı arabirimlerinin içindeki içerikler, Alfa karışımı içerebilir. Ancak, hem eklenti Kullanıcı arabirimi hem de içeren konak uygulama kullanıcı arabirimi% 100 opak olmalıdır; diğer bir deyişle, `Opacity` her ikisinin de özelliğinin 1 olarak ayarlanması gerekir.
 
-- Varsa <xref:System.Windows.Window.AllowsTransparency%2A> özelliği eklenti kullanıcı Arabirimi içeren konak uygulama pencerenin `true`, eklentiyi görünmezdir. Eklentinin kullanıcı Arabirimi % 100 donuk olsa bile bu geçerlidir (yani `Opacity` özelliği 1 değerine sahip).
+- Bir eklenti Kullanıcı arabirimi içeren konak uygulamasındaki bir pencerenin `true` özelliğiolarakayarlandıysa,eklentigörünmezolur.<xref:System.Windows.Window.AllowsTransparency%2A> Bu, eklenti Kullanıcı arabirimi% 100 donuk (yani, `Opacity` özelliğin değeri 1) olsa da geçerlidir.
 
-- Eklentinin kullanıcı Arabirimi, aynı üst düzey penceresinde diğer WPF öğeleri üzerinde yer almalıdır.
+- Bir eklenti Kullanıcı arabirimi, aynı üst düzey penceredeki diğer WPF öğelerinin üstünde yer almalıdır.
 
-- Hiçbir kısmı bir eklentinin kullanıcı Arabirimi kullanarak işlenebilecek bir <xref:System.Windows.Media.VisualBrush>. Bunun yerine, eklenti anlaşmada tanımlanan yöntemleri kullanarak konak uygulamaya geçirilen bir bit eşlem oluşturmak için oluşturulan kullanıcı arabirimini anlık görüntüsünü alabilir.
+- Eklentiyi kullanarak bir <xref:System.Windows.Media.VisualBrush>eklentinin Kullanıcı arabiriminin hiçbir bölümünün işlenemeyeceğini. Bunun yerine, eklenti, anlaşma tarafından tanımlanan yöntemler kullanılarak konak uygulamasına geçirilebilecek bir bit eşlem oluşturmak için oluşturulan kullanıcı arabiriminin anlık görüntüsünü alabilir.
 
-- Medya dosyaları, gelen yürütülemez bir <xref:System.Windows.Controls.MediaElement> eklenti kullanıcı arabiriminde.
+- Medya dosyaları bir <xref:System.Windows.Controls.MediaElement> eklenti Kullanıcı arabirimindeki içinden yürütülemez.
 
-- Fare olayları için eklenti kullanıcı Arabirimi tarafından üretilen almaz veya konak uygulama tarafından oluşturulan ve `IsMouseOver` konak uygulama kullanıcı Arabirimi için özellik değerine sahip `false`.
+- Eklenti kullanıcı arabirimi için oluşturulan fare olayları, ana bilgisayar uygulaması tarafından alınmaz veya oluşturulmaz ve `IsMouseOver` konak uygulama kullanıcı arabirimine yönelik özelliğin bir `false`değeri vardır.
 
-- Odak bir eklenti UI denetimleri arasındaki geçtiğinde `GotFocus` ve `LostFocus` olayları almaz veya konak uygulama tarafından oluşturulur.
+- Odak, eklenti Kullanıcı arabirimindeki `GotFocus` denetimler arasında kayıldığında, ve `LostFocus` olayları konak uygulama tarafından alınmaz veya oluşturulmaz.
 
-- Eklentinin kullanıcı Arabirimi içeren bir ana bilgisayar uygulaması bölümünü yazdırıldığında beyaz görünür.
+- Eklenti kullanıcı arabirimi içeren bir ana bilgisayar uygulamasının bölümü yazdırıldığında beyaz görünür.
 
-- Tüm dağıtıcıları (bkz <xref:System.Windows.Threading.Dispatcher>) tarafından oluşturulan kullanıcı Arabirimi kapatılması gerekiyor el ile ana bilgisayar uygulaması yürütme devam ederse sahibi Eklenti kaldırılmadan önce. Sözleşme, eklenti, böylece kendi Dispatcher eklenti UI kaldırılmadan önce eklentiyi göstermek konak uygulama izin yöntemleri uygulayabilirsiniz.
+- Konak uygulama yürütmeye devam ederse <xref:System.Windows.Threading.Dispatcher>, eklenti Kullanıcı arabirimi tarafından oluşturulan tüm sevkiyatcıların (bkz.), sahip eklentisi kaldırılmadan önce el ile kapatılmalıdır. Sözleşme, Eklenti kaldırılmadan önce ana bilgisayar uygulamasının eklentiye sinyal vermesini sağlayan yöntemler uygulayabilir ve bu sayede eklenti Kullanıcı arabiriminin dispatchlarını kapatmasına izin vermiş olur.
 
-- Eklentinin kullanıcı Arabirimi ise bir <xref:System.Windows.Controls.InkCanvas> ya da içeren bir <xref:System.Windows.Controls.InkCanvas>, eklentiyi kaldıramıyor.
+- Bir eklenti Kullanıcı arabirimi bir <xref:System.Windows.Controls.InkCanvas> veya <xref:System.Windows.Controls.InkCanvas>içeriyorsa, eklentiyi kaldıramazsınız.
 
 <a name="PerformanceOptimization"></a>
 
-## <a name="performance-optimization"></a>Performansı iyileştirme
+## <a name="performance-optimization"></a>Performans Iyileştirmesi
 
-Birden çok uygulama etki alanı kullanıldığında, varsayılan olarak, her uygulama için gereken çeşitli .NET Framework derlemeleri tüm uygulamanın etki alanına yüklenir. Sonuç olarak, yeni uygulama etki alanları oluşturma ve uygulamalar bunları başlatmak için gereken süreyi performansını etkileyebilir. Ancak, .NET Framework uygulamaları zaten yüklü olduğundan, derlemeleri uygulama etki alanları arasında paylaşmak için yönlendirerek başlangıç zamanı azaltmak bir yol sağlar. Kullanarak bunu <xref:System.LoaderOptimizationAttribute> giriş noktası yöntemi için uygulanması gereken özniteliği (`Main`). Bu durumda, uygulama tanımınız uygulamak için yalnızca kod kullanmanız gerekir (bkz [uygulama yönetimine genel bakış](application-management-overview.md)).
+Varsayılan olarak, birden çok uygulama etki alanı kullanıldığında, her bir uygulama için gereken çeşitli .NET Framework derlemeleri bu uygulamanın etki alanına yüklenir. Sonuç olarak, yeni uygulama etki alanları oluşturmak için gereken süre ve içindeki uygulamaları başlatmak performansı etkileyebilir. Ancak .NET Framework, uygulamaların zaten yüklü olmaları durumunda derlemeleri uygulama etki alanları arasında paylaşmasını sağlayarak başlangıç zamanlarını düşürmeniz için bir yol sağlar. Bunu, giriş noktası yöntemine ( <xref:System.LoaderOptimizationAttribute> `Main`) uygulanması gereken özniteliğini kullanarak yapabilirsiniz. Bu durumda, uygulama tanımınızı uygulamak için yalnızca kod kullanmanız gerekir (bkz. [uygulama yönetimine genel bakış](application-management-overview.md)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.LoaderOptimizationAttribute>
 - [Eklentiler ve Genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Uygulama Etki Alanları](../../app-domains/application-domains.md)
-- [.NET framework uzaktan iletişimi genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [.NET Framework uzaktan Iletişim genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Nesneleri Uzaktan erişilebilir hale getirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [Nasıl Yapılır Konuları](how-to-topics.md)

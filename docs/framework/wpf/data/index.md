@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8fc25407eda75c7f2fbb188b96c68ac1b8342ad
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020549"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400365"
 ---
 # <a name="data"></a>Veri
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama sunmak ve verilerle etkileşimde bulunmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Çeşitli veri kaynaklarından biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri ve XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ayrıca, sürükle ve bırak işlemleri üzerinden veri aktarımı için bir mekanizma sağlar.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]veri bağlama, uygulamaların sunmak ve verilerle etkileşim kurmak için basit ve tutarlı bir yol sağlar. Öğeler, ortak dil çalışma zamanı (CLR) nesneleri ve XML biçimindeki çeşitli veri kaynaklarından verilere bağlanabilir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Ayrıca, sürükle ve bırak işlemleri aracılığıyla veri aktarımı için bir mekanizma sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Veri Bağlama](data-binding-wpf.md)  
@@ -41,4 +41,4 @@ ms.locfileid: "62020549"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [İzlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [İzlenecek yol: WPF uygulamasında uygulama verilerini önbelleğe alma](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: 03439a2c4a1a4de375e90d0e5121e690541e2f0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40c1a8513608728a84b6b605f9ad18603123ea2e
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61805151"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401535"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable Özniteliği
-Belirten [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] biçimlendirme dosyasında karşılaşılan ad alanı öneklerini tarafından dikkate bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci. `mc:Ignorable` Özniteliği işaretleme uyumluluk destekler ve özel ad alanı eşlemesi için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sürüm oluşturma.  
+Bir biçimlendirme dosyasında karşılaşılan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] adalanıöneklerinebirişlemcitarafındanyoksayılacağınıbelirtir.[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Öznitelik `mc:Ignorable` , hem özel ad alanı eşlemesi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] hem de sürüm oluşturma için biçimlendirme uyumluluğunu destekler.  
   
 ## <a name="xaml-attribute-usage-single-prefix"></a>XAML öznitelik kullanımı (tek ön ek)  
   
@@ -30,7 +30,7 @@ Belirten [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] b
 </object>  
 ```  
   
-## <a name="xaml-attribute-usage-two-prefixes"></a>XAML öznitelik kullanımı (iki önek)  
+## <a name="xaml-attribute-usage-two-prefixes"></a>XAML öznitelik kullanımı (Iki ön ek)  
   
 ```  
 <object  
@@ -46,24 +46,24 @@ Belirten [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] b
   
 |||  
 |-|-|  
-|*ignorablePrefix, ignorablePrefix1, vb.*|XML 1.0 belirtimi başına herhangi geçerli bir önek dizesi.|  
-|*ignorableUri*|XML 1.0 belirtimi başına bir ad atamak için geçerli bir URI.|  
-|*ThisElementCanBeIgnored*|Tarafından göz ardı edilebilir öğenin [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] işlemcisi uygulamaları, temel alınan türü çözümlenemiyor.|  
+|*ıgnorableprefix, ignorablePrefix1, vb.*|XML 1,0 belirtimine göre geçerli herhangi bir ön ek dizesi.|  
+|*ıgnorableuri*|XML 1,0 belirtimine göre bir ad alanı atamak için geçerli bir URI.|  
+|*Thiselementcanbeyoksayıldı*|Temel alınan tür çözümlenemiyorsa, işlemci [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] uygulamaları tarafından yoksayılabilir bir öğe.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Ad alanı öneki olan eşlerken kullanılacak önerilen ön eki kuralı [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uyumluluk ad [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)].  
+ Ad alanı ön eki, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uyumluluk ad alanını [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]eşlerken kullanılacak önerilen önek kuralıdır. `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]  
   
- Öğeler veya öznitelikleri burada öğe adı öneki bölümü olarak tanımlandığında `mc:Ignorable` tarafından işlendiğinde bir hata oluşturmaz bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci. Bu öznitelik için bir temel tür veya programlama yapısı çözümlenemedi varsa, o öğenin gözardı edilir. Ancak, yok sayılan öğeleri yan etkileri işlenmeyen o öğenin ek öğesi gereksinimleri için ek ayrıştırma hataları oluşturabilir unutmayın. Örneğin, belirli bir öğenin içerik modeli içinde belirtilen alt öğe bulunamadı, ancak tam olarak bir alt öğesi gerektirebilir bir `mc:Ignorable` öneki ve belirtilen alt öğesi bir türe çözümlenemedi sonra [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci olabilir hata oluşturur.  
+ Öğe adının `mc:Ignorable` önek kısmının, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcinin işlendiği sırada hata oluşturmayacağını, öğe veya öznitelikler. Bu öznitelik, temel alınan bir tür veya programlama yapısına çözümlenemiyorsa, bu öğe yok sayılır. Ancak yoksayılan öğelerin, bu öğenin işlenmediği yan etkileri olan ek öğe gereksinimleri için ek ayrıştırma hataları ürettiğine de devam edebileceğine unutmayın. Örneğin, belirli bir öğe içerik modeli tam olarak bir alt öğe gerektirebilir, ancak belirtilen alt öğe `mc:Ignorable` bir ön ekse ve belirtilen alt öğe bir tür [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olarak çözümlenemiyorsa, işlemci bir hata oluştur.  
   
- `mc:Ignorable` yalnızca ad alanı eşlemeleri tanımlayıcısı dizeleri için geçerlidir. `mc:Ignorable` ad uzayı eşlemelerinden belirtin derlemeye uygulanamaz bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ad alanı ve bir derleme (veya varsayılan yürütülebilir dosyanın geçerli derleme gibi).  
+ `mc:Ignorable`yalnızca tanımlayıcı dizelerine ad alanı eşlemeleri için geçerlidir. `mc:Ignorable`, bir CLR ad alanı ve derleme (veya varsayılan olarak geçerli yürütülebilir dosya için derleme) belirten derlemelerdeki ad alanı eşlemeleri için geçerli değildir.  
   
- Uyguluyorsanız bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci, işlemci uygulamanız gerekir değil yükseltmek ayrıştırma veya herhangi bir öğe veya olarak tanımlanan bir ön eke göre koşullu öznitelik için tür çözümlemesi hataları işleme `mc:Ignorable`. Ancak, işlemci uygulamanız hala yüklenemiyor veya daha önce verilen bir alt öğe örneği gibi işlenmesi başarısız olan bir öğenin ikincil sonucunda oluşan özel durumlar oluşturabilir.  
+ Bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci uygularsınız, işlemci uygulamanız, olarak `mc:Ignorable`tanımlanan bir ön ek tarafından nitelenen herhangi bir öğe veya öznitelik için tür çözünürlüğünde ayrıştırma veya işleme hatalarını yükseltmemelidir. Ancak işlemci uygulamanız, daha önce verilen tek alt öğe örneği gibi, yükleme veya işleme başarısız olan bir öğenin ikincil sonucu olan özel durumları yine de oluşturabilir.  
   
- Varsayılan olarak, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci yoksayılan öğe içindeki içeriği yoksayar. Ancak, ek bir öznitelik belirtebilirsiniz [mc: ProcessContent özniteliği](mc-processcontent-attribute.md), devam eden işlemi sonraki kullanılabilir üst öğe tarafından yok sayıldı öğe içindeki içeriğinin gerektirecek şekilde.  
+ Varsayılan olarak, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci yoksayılan bir öğe içindeki içeriği yoksayar. Ancak, bir sonraki kullanılabilir üst öğe tarafından yoksayılan bir öğe içinde içeriğin sürekli işlenmesini gerektirmek için, [mc: ProcessContent özniteliği](mc-processcontent-attribute.md)ek özniteliğini belirtebilirsiniz.  
   
- Birden çok ön ek bir veya daha fazla boşluk karakterlerini ayırıcı olarak örneğin kullanarak özniteliği belirtilebilir: `mc:Ignorable="ignore1 ignore2"`.  
+ Bir veya daha fazla boşluk karakteri ayırıcı olarak kullanılarak özniteliğinde birden çok önek belirtilebilir, örneğin: `mc:Ignorable="ignore1 ignore2"`.  
 
- [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] Diğer öğeleri ve bu alanı içinde belgelenmeyen öznitelikleri ad alanını tanımlayan [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]. Daha fazla bilgi için [XML işaretleme Uyumluluk Belirtimi](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification).  
+ Ad alanı, [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]öğesinin bu alanı içinde belgelenmeyen diğer öğeleri ve öznitelikleri tanımlar. [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] Daha fazla bilgi için bkz. [XML biçimlendirme uyumluluğu belirtimi](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

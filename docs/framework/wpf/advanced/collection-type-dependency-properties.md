@@ -10,49 +10,49 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: 9ce0b70bfdd70b47857167ff14e62ed2bbda569d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd268c0c132f4ecefe7b2336432442d9569ca38f
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010702"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401562"
 ---
 # <a name="collection-type-dependency-properties"></a>Koleksiyon Türü Bağımlılık Özellikleri
-Bu konuda, rehberlik ve özellik türü bir koleksiyon türü olduğu bir bağımlılık özelliği uygulama öğrenmek için önerilen desenler sağlar.  
+Bu konu, özelliğin türünün bir koleksiyon türü olduğu bir bağımlılık özelliğinin nasıl uygulanacağı hakkında rehberlik ve önerilen desenler sağlar.  
 
 <a name="implementing"></a>   
 ## <a name="implementing-a-collection-type-dependency-property"></a>Koleksiyon türü bağımlılık özelliği uygulama  
- Genel olarak, bir bağımlılık özelliği için tanımladığınız takip ettiğiniz uygulama düzeni olan bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] özelliği sarmalayıcı, burada bu özellik destekli bir <xref:System.Windows.DependencyProperty> tanımlayıcısı yerine bir alan veya diğer yapı. Bir koleksiyon türü özelliği uyguladığınızda bu aynı deseni izleyin. Ancak koleksiyonda bulunan tür kendisini olduğunda koleksiyon türü özelliği düzeni karmaşıklık getirir bir <xref:System.Windows.DependencyObject> veya <xref:System.Windows.Freezable> türetilmiş sınıf.  
+ Genel olarak bir bağımlılık özelliği için, takip ettiğiniz uygulama deseninin, bu özelliğin bir alan veya diğer yapı yerine bir <xref:System.Windows.DependencyProperty> tanımlayıcı tarafından desteklendiği bir CLR özellik sarmalayıcısı tanımlamanız gerekir. Koleksiyon türü özelliğini uygularken bu aynı kalıbı takip edersiniz. Ancak, koleksiyon türü bir özellik, koleksiyonda bulunan türün kendisi ya da <xref:System.Windows.DependencyObject> <xref:System.Windows.Freezable> türetilmiş bir sınıf olması durumunda, düzene yönelik bazı karmaşıklıklar getirir.  
   
 <a name="initializing"></a>   
-## <a name="initializing-the-collection-beyond-the-default-value"></a>Varsayılan değer dışında koleksiyon başlatılıyor  
- Bağımlılık özelliği oluşturduğunuzda, ilk alan değeri olarak özellik varsayılan değeri belirtmeyin. Bunun yerine, bağımlılık özelliği meta verisi aracılığıyla varsayılan değeri belirtin. Bağımlılık özelliği meta verilerinde belirtilen varsayılan değerin, özellik bir başvuru türü ise, örnek başına varsayılan bir değer değil; Bunun yerine, türün tüm örnekleri için geçerli bir varsayılan değerdir. Bu nedenle yeni oluşturulan örneklerinin çalışan varsayılan değer olarak koleksiyon özelliği meta verileri tarafından tanımlanan tekil statik koleksiyon kullanmayı dikkatli olmanız gerekir. Bunun yerine, kasıtlı olarak koleksiyon değeri benzersiz (örnek) koleksiyonuna sınıfı Oluşturucu mantığınızın bir parçası olarak ayarladığınız emin olmanız gerekir. Aksi takdirde, yanlışlıkla singleton sınıfı oluşturmuş olacaksınız.  
+## <a name="initializing-the-collection-beyond-the-default-value"></a>Koleksiyon varsayılan değerin ötesinde başlatılıyor  
+ Bir bağımlılık özelliği oluşturduğunuzda, özelliğin varsayılan değerini başlangıç alanı değeri olarak belirtmeyin. Bunun yerine, bağımlılık özelliği meta verileri aracılığıyla varsayılan değeri belirtirsiniz. Eğer özelliği bir başvuru türü ise, bağımlılık özelliği meta verilerinde belirtilen varsayılan değer örnek başına varsayılan değer değildir; Bunun yerine, türün tüm örnekleri için geçerli olan varsayılan bir değerdir. Bu nedenle, bir koleksiyon özelliği meta verileri tarafından tanımlanan tekil statik koleksiyonu, yeni oluşturulan örnekler için çalışma varsayılan değeri olarak kullanmamaya dikkat etmeniz gerekir. Bunun yerine, koleksiyon değerini sınıf Oluşturucu mantığınızın bir parçası olarak benzersiz bir (örnek) koleksiyona ayarladığınızdan emin olmanız gerekir. Aksi takdirde, istemeden tek bir sınıf oluşturmuş olursunuz.  
   
- Aşağıdaki örnek göz önünde bulundurun. Aşağıdaki bölümde örneğin bir sınıf tanımını gösterir `Aquarium`. Sınıfı koleksiyon türü bağımlılık özelliğini tanımlar `AquariumObjects`, genel kullanan <xref:System.Collections.Generic.List%601> tür bir <xref:System.Windows.FrameworkElement> tür kısıtlaması. İçinde <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> çağrısı bağımlılık özelliği meta verileri için yeni bir genel varsayılan değer kurar <xref:System.Collections.Generic.List%601>.  
+ Aşağıdaki örneği göz önünde bulundurun. Aşağıdaki örnek bölümünde bir sınıfının `Aquarium`tanımı gösterilmektedir. Sınıfı, genel `AquariumObjects` <xref:System.Collections.Generic.List%601> türü bir <xref:System.Windows.FrameworkElement> tür kısıtlaması ile kullanan koleksiyon türü bağımlılık özelliğini tanımlar. Bağımlılık özelliği <xref:System.Collections.Generic.List%601>çağrısında, meta veriler varsayılan değeri yeni bir genel olacak şekilde oluşturur. <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29>  
   
  [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
  [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   
- Ancak, kod gösterildiği çıktığınız ise, tüm örnekleri için tek bir liste varsayılan değeri paylaşılır `Aquarium`. İki ayrı nasıl ekleneceğini göstermek için tasarlanmıştır aşağıdaki test kodu çalıştırdıysanız `Aquarium` örnekler ve farklı tek `Fish` her biri için şaşırtıcı bir sonuç görmeniz:  
+ Ancak, yalnızca kodu gösterildiği gibi bıraktıysanız, bu tek liste varsayılan değeri tüm örnekleri `Aquarium`için paylaşılır. İki ayrı `Aquarium` örneği nasıl örneklendiribileceğinizi ve bunların her birine nasıl bir `Fish` tane ekleneceğini göstermek için tasarlanan aşağıdaki test kodunu çalıştırdıysanız, ortaya çıkmış bir sonuç görürsünüz:  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
   
- Bir sayısına sahip her bir koleksiyon yerine, her bir koleksiyon iki sayısını var! Bunun nedeni, her `Aquarium` eklenen kendi `Fish` varsayılan değer koleksiyonu için bir tek oluşturucu çağrısı meta verilerinde kullanmasından ve bu nedenle tüm örnekleri arasında paylaşılır. Bu neredeyse hiçbir zaman, istediğiniz durumdur.  
+ Her koleksiyonun bir sayısına sahip olması yerine, her koleksiyonun iki sayısı vardır! Bunun nedeni, her `Aquarium` birinin meta `Fish` verilerdeki tek bir Oluşturucu çağrısından kaynaklanan ve bu nedenle tüm örnekler arasında paylaşıldığı varsayılan değer koleksiyonuna eklenmesinden kaynaklanır. Bu durum neredeyse hiçbir şekilde istediğiniz şeydir.  
   
- Bu sorunu düzeltmek için sınıf oluşturucu çağrısının parçası olarak benzersiz bir örnek için koleksiyon bağımlılık özelliği değeri sıfırlamanız gerekir. Özellik salt okunur bağımlılık özelliği olduğundan, kullandığınız <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> yöntemi kullanarak ayarlamak için <xref:System.Windows.DependencyPropertyKey> olan yalnızca sınıfın içinden erişilebilir.  
+ Bu sorunu düzeltmek için, koleksiyon bağımlılığı özellik değerini, sınıf Oluşturucu çağrısının bir parçası olarak benzersiz bir örneğe sıfırlamanız gerekir. Özelliği salt okunurdur bir bağımlılık özelliği olduğundan, öğesini <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> <xref:System.Windows.DependencyPropertyKey> kullanarak, yalnızca sınıfı içinde erişilebilir olan öğesini kullanarak bu yöntemi kullanabilirsiniz.  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
   
- Şimdi beklenen sonuçları görmeniz aynı kodu yeniden test çalıştırdıysanız, burada her `Aquarium` kendi benzersiz koleksiyonu desteklenmez.  
+ Artık aynı test kodunu yeniden çalıştırdıysanız, her birinin `Aquarium` kendi benzersiz koleksiyonunu desteklediği beklenen sonuçları görebilirsiniz.  
   
- Okuma-yazma, koleksiyon özelliği seçtiyseniz, bu düzen küçük bir değişim olacaktır. Bu durumda hala anahtarı olmayan imzası çağırma başlatmanın oluşturucudan genel set erişimcisine çağırabilir <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> küme kapsayıcısı içinde bir ortak kullanarak <xref:System.Windows.DependencyProperty> tanımlayıcısı.  
+ Koleksiyon özelliğinin okuma-yazma olmasını seçtiyseniz bu düzende küçük bir değişim olur. Bu durumda, bir genel <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> <xref:System.Windows.DependencyProperty> tanımlayıcı kullanarak, başlatma işlemi yapmak için oluşturucudan ortak küme erişimcisini çağırabilirsiniz, bu da küme sarmalayıcı içindeki anahtar olmayan imzayı çağırmaya devam eder.  
   
-## <a name="reporting-binding-value-changes-from-collection-properties"></a>Koleksiyon Özellikleri bağlama değeri değişiklikleri raporlama  
- Kendisini bir bağımlılık özelliği olan bir koleksiyon özelliği için onun alt değişiklikleri otomatik olarak bildirmez. Derlemeye bağlamalar oluşturuyorsanız, bu nedenle bazı veri bağlama senaryoları geçersiz kılmalarını değişiklikleri bağlama engelleyebilir. Ancak, koleksiyon türü kullanıyorsanız <xref:System.Windows.FreezableCollection%601> , koleksiyon türü olarak ardından alt özellik değişiklikleri koleksiyondaki içerilen öğelerin düzgün şekilde bildirilir ve bağlama beklendiği gibi çalışır.  
+## <a name="reporting-binding-value-changes-from-collection-properties"></a>Koleksiyon özelliklerindeki değer değişikliklerini raporlama  
+ Kendisi bir bağımlılık özelliği olan bir koleksiyon özelliği, alt özelliklerine yapılan değişiklikleri otomatik olarak raporlamaz. Bir koleksiyona bağlamalar oluşturuyorsanız, bu, bağlamanın değişiklikleri raporlamasına engel olabilir ve bu nedenle bazı veri bağlama senaryolarını geçersiz hale getirebilirsiniz. Ancak koleksiyon türünü koleksiyon türü <xref:System.Windows.FreezableCollection%601> olarak kullanırsanız, koleksiyonda içerilen öğelerin alt özellik değişiklikleri doğru raporlanır ve bağlama beklendiği gibi çalışacaktır.  
   
- Alt özellik bağlamasını bağımlılık nesne koleksiyonundaki etkinleştirmek için koleksiyon özelliği türü olarak oluşturma <xref:System.Windows.FreezableCollection%601>, o koleksiyon herhangi bir tür kısıtlaması ile <xref:System.Windows.DependencyObject> türetilmiş sınıf.  
+ Bağımlılık nesne koleksiyonunda alt özellik bağlamasını etkinleştirmek için, koleksiyon özelliğini tür <xref:System.Windows.FreezableCollection%601>olarak oluşturun, bu koleksiyonun herhangi <xref:System.Windows.DependencyObject> bir türetilmiş sınıfa bir tür kısıtlaması vardır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

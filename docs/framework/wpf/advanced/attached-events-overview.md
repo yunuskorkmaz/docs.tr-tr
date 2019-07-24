@@ -12,82 +12,82 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 2b3f659a5916aa63d510959583e8ae038085460c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3a2f711840ad7f6e28443dac3c18501cd4400e0
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655500"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401409"
 ---
 # <a name="attached-events-overview"></a>Ekli Olaylara Genel Bakış
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] bir dil bileşeni ve adlı olayın türünü tanımlayan bir *ekli olay*. Ekli olay kavramını belirli bir olay işleyicisi gerçekten tanımlar veya olay devralan bir öğe yerine rastgele bir öğe eklemenize olanak tanır. Bu durumda, ne potansiyel olarak olayı tetiklenmeden nesnesi veya örneği işleme hedef tanımlar veya aksi takdirde olay "sahip".  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]bir dil bileşeni ve *ekli olay*olarak adlandırılan olay türünü tanımlar. Ekli bir olay kavramı, olayı gerçekten tanımlayan veya devralan bir öğe yerine, belirli bir olaya yönelik bir işleyiciyi rastgele bir öğeye eklemenizi sağlar. Bu durumda, nesne potansiyel olarak ne tür bir şekilde tetiklemez ve hedef işleme örneği, olayı tanımlar veya başka bir şekilde "sahip değildir".  
 
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konuda, okuduğunuz varsayılır [yönlendirilmiş olaylara genel bakış](routed-events-overview.md) ve [XAML genel bakış (WPF)](xaml-overview-wpf.md).  
+ Bu konuda, [yönlendirilmiş olaylara genel bakış](routed-events-overview.md) ve [xaml 'ye Genel Bakış (WPF)](xaml-overview-wpf.md)okumanız varsayılmaktadır.  
   
 <a name="Syntax"></a>   
-## <a name="attached-event-syntax"></a>Ekli olay söz dizimi  
- Ekli olaylar sahip bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] söz dizimi ve yedekleme kodu tarafından ekli olay kullanımını desteklemek için kullanılacak kodlama düzeni.  
+## <a name="attached-event-syntax"></a>Ekli olay sözdizimi  
+ Ekli olaylarda, ekli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olay kullanımını desteklemek için, yedekleme kodu tarafından kullanılması gereken bir sözdizimi ve kodlama düzeni vardır.  
   
- İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] söz dizimi, ekli olay, olay adına göre değil, ancak bir nokta (.) ayrılmış alt türü artı tarafından belirtilir. Olay adı, kendi türü adı ile tam olduğundan, oluşturulabilir herhangi bir öğe eklenmesi hiçbir ekli olay ekli olay söz dizimi sağlar.  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Sözdiziminde, ekli olay yalnızca kendi olay adı tarafından değil, sahip türü ve bir noktayla (.) ayrılmış olan olay adı ile belirtilir. Olay adı, sahip olduğu türün adıyla nitelenbildiğinden, ekli olay sözdizimi, hiçbir ekli olayın, örneklenebilir herhangi bir öğeye eklenmesini sağlar.  
   
- Örneğin, aşağıdaki gibidir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] özel bir işleyici ekleme söz dizimi `NeedsCleaning` ekli olay:  
+ Örneğin, özel `NeedsCleaning` ekli bir olay için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bir işleyici eklemek için sözdizimi aşağıdaki gibidir:  
   
  [!code-xaml[WPFAquariumSln#AE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
   
- Not `aqua:` önek; ön eki Bu durumda özel bir eşlenen xmlns gelen özel olay ekli olay olduğu için gereklidir.  
+ `aqua:` Ön eke göz önünde, ekli olay özel eşlenmiş bir xmlns 'den gelen özel bir olay olduğundan, bu örnekte önek gereklidir.  
   
 <a name="WPFImplements"></a>   
-## <a name="how-wpf-implements-attached-events"></a>Ekli olayları nasıl WPF uygular  
- İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ekli olayları tarafından desteklenen bir <xref:System.Windows.RoutedEvent> alan ve oluşturulduktan sonra ağaç yönlendirilir. Genellikle, bir sistem veya hizmet kaynağı (olayı başlatan nesne) ekli olay kaynağıdır ve olayı başlatan kod çalışan nesne bu nedenle öğe ağacında doğrudan bir parçası değil.  
+## <a name="how-wpf-implements-attached-events"></a>WPF ekli olayları nasıl uygular  
+ ' [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]De, ekli olaylar bir <xref:System.Windows.RoutedEvent> alan tarafından desteklenir ve oluşturulduktan sonra ağaç üzerinden yönlendirilir. Genellikle, ekli olayın kaynağı (olayı oluşturan nesnesi) bir sistem veya hizmet kaynağıdır ve olayı oluşturan kodu çalıştıran nesne bu nedenle öğe ağacının doğrudan bir parçası değildir.  
   
 <a name="Scenarios"></a>   
-## <a name="scenarios-for-attached-events"></a>Ekli olaylar için senaryolar  
- İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ekli olayları belirli özellik alanlarında mevcut olduğu gibi yerlerde hizmet düzeyi soyutlama statik tarafından etkinleştirilen olaylar <xref:System.Windows.Input.Mouse> sınıfı veya <xref:System.Windows.Controls.Validation> sınıfı. Hizmeti kullanmak ya da etkileşime sınıflar ya da ekli olay sözdiziminde olay kullanabilirsiniz veya sınıf özelliklerini nasıl tümleştirildiğini bir parçası olan gönderilmiş bir olay olarak ekli olay yüzey seçebilirsiniz.  
+## <a name="scenarios-for-attached-events"></a>Ekli olaylara yönelik senaryolar  
+ ' [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]De, ekli olaylar, statik <xref:System.Windows.Input.Mouse> sınıf veya <xref:System.Windows.Controls.Validation> sınıf tarafından etkinleştirilen olaylar gibi, hizmet düzeyi soyutlama olan belirli özellik alanlarında mevcuttur. Ya da hizmetini kullanan sınıflar, ekli olay söz diziminde olayını kullanabilir ya da ekli olayı sınıfın hizmetin yeteneklerini nasıl tümleştirdiğini gösteren yönlendirilmiş bir olay olarak yüzey seçebilirler.  
   
- Ancak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekli olaylar, burada olacaktır kullanın ya da ekli olay işleyici doğrudan çok sınırlı senaryoları sayısını tanımlar. Genellikle, ekli olay mimarisi amaca hizmet eder, ancak daha sonra bir ekli olmayan iletilen (yedeklenen bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] olay "sarmalayıcı") yönlendirilmiş olay.  
+ , [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eklenen olayların bir sayısını tanımlar, ancak doğrudan ekli olayı kullanacağınız veya işleyebileceğiniz senaryolar çok sınırlı olur. Genellikle, ekli olay bir mimari amaca hizmet eder, ancak daha sonra eklenmemiş (CLR olayı "sarmalayıcı") yönlendirilmiş bir olayla iletilir.  
   
- Ekli olay temel alınan örneği için <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> daha kolayca verilen herhangi işlenebilir <xref:System.Windows.UIElement> kullanarak <xref:System.Windows.UIElement.MouseDown> üzerindeki <xref:System.Windows.UIElement> ekli olay söz dizimi ile baş yerine içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] veya kod. Giriş cihazlarının gelecekteki genişleme için izin verdiğinden ekli olay mimarisinde bir amaca hizmet verir. Yükseltmek kuramsal bir cihazı yalnızca gerekir <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> fare girişi benzetmekte siparişi ve türetilen ihtiyaç duymaz <xref:System.Windows.Input.Mouse> Bunu yapmak için. Ancak, bu senaryo kod olayların işlenmesini içerir ve [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ekli olay işlemeyi bu senaryoyla ilgili değildir.  
+ Örneğin, temel alınan eklenen <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> olay, veya kodu içindeki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ekli olay sözdizimi ile uğraşmaktansa <xref:System.Windows.UIElement.MouseDown> , üzerinde <xref:System.Windows.UIElement> kullanılarak <xref:System.Windows.UIElement> herhangi bir şekilde daha kolay işlenebilir. Eklenen olay, giriş cihazlarının gelecekteki genişlemesine izin verdiğinden, mimaride bir amaca hizmet eder. Kuramsal cihazın yalnızca fare girişinin benzetimini yapmak için <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> yapması gerekir ve ' dan <xref:System.Windows.Input.Mouse> ' a türetmeleri gerekmez. Ancak, bu senaryo olayların kod işlemesini içerir ve [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ekli olayın işlenmesi Bu senaryoyla ilgili değildir.  
   
 <a name="Handling"></a>   
-## <a name="handling-an-attached-event-in-wpf"></a>WPF içinde ekli bir olay işleme  
- Ekli olay ve yazılacak, işleyici kodu işleme işlemi temel gönderilmiş bir olay ile aynıdır.  
+## <a name="handling-an-attached-event-in-wpf"></a>WPF 'de ekli olay işleme  
+ Ekli olayı işleme işlemi ve yazacağınız işleyici kodu, bir yönlendirilmiş olayla aynı şekilde temelde aynıdır.  
   
- Genel olarak, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekli olay çok farklı değil bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönlendirilmiş olay. Olay kaynağı nasıl ve ne bir sınıf üyesi tarafından sunulduğunu fark vardır (da etkileyen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işleyici sözdizimi).  
+ Genel olarak, ekli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir olay, yönlendirilmiş bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olaydan çok farklı değildir. Farklar, olayın kaynağını belirleme ve bir sınıf tarafından bir üye olarak nasıl sunulduğunu (Ayrıca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işleyici söz dizimini da etkiler) belirler.  
   
- Ancak, daha önce belirtildiği gibi mevcut [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekli olaylar özellikle amaçlanmayan işlemede için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Daha sık amacı olayı, olay durumu genellikle kodda oluşturulur ve ayrıca sınıf ilgili üst sınıfta işleme kullanır birleştirme üst öğede bir durum rapor bileşik bir öğeyi etkinleştirmektir. Örneğin, içindeki öğelerin bir <xref:System.Windows.Controls.Primitives.Selector> ekli oluşturması beklenir <xref:System.Windows.Controls.Primitives.Selector.Selected> sınıfı olayı tarafından işlenir <xref:System.Windows.Controls.Primitives.Selector> sınıfı ve tarafından potansiyel olarak dönüştürülür <xref:System.Windows.Controls.Primitives.Selector> farklı gönderilmiş bir olay sınıfına <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Yönlendirilmiş olaylar ve sınıf işlemesi hakkında daha fazla bilgi için bkz. [işaretleme yönlendirilmiş olayları işlenmiş ve bir sınıf olarak](marking-routed-events-as-handled-and-class-handling.md).  
+ Ancak, daha önce belirtildiği gibi, mevcut [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekli olaylar özellikle içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]işleme için tasarlanmamıştır. Daha sık, olayın amacı, bir örneği birleştirme sırasında bir üst öğeye raporlamak için bir Oluşturucu bir öğe sağlamaktır, bu durumda olay genellikle kodda tetiklenir ve ayrıca ilgili üst sınıfta sınıf işlemeye dayanır. <xref:System.Windows.Controls.Primitives.Selector> Örneğin, bir içindeki öğelerin, <xref:System.Windows.Controls.Primitives.Selector> daha sonra sınıf tarafından işlenen ve <xref:System.Windows.Controls.Primitives.Selector.Selected> daha sonra <xref:System.Windows.Controls.Primitives.Selector> sınıf tarafından farklı bir yönlendirilmiş olaya <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> dönüştürüldüğü, eklenen olayı oluşturması beklenir. . Yönlendirilmiş olaylar ve sınıf işlemesi hakkında daha fazla bilgi için bkz. [yönlendirilmiş olayları işlenmiş olarak işaretleme ve sınıf işleme](marking-routed-events-as-handled-and-class-handling.md).  
   
 <a name="Custom"></a>   
-## <a name="defining-your-own-attached-events-as-routed-events"></a>Yönlendirilmiş olaylar kendi ekli olaylar olarak tanımlama  
- Ortak türevi, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] temel sınıflar, sınıfınız içinde belirli bir desen yöntemlerini dahil ederek kendi ekli olaylar uygulayabilir ve yardımcı programını kullanarak temel zaten olan yöntemler sunar.  
+## <a name="defining-your-own-attached-events-as-routed-events"></a>Kendi ekli olaylarınızı yönlendirilmiş olaylar olarak tanımlama  
+ Ortak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] temel sınıflardan türetmeniz durumunda, sınıfınıza belirli model yöntemlerini ekleyerek ve temel sınıflarda zaten mevcut olan yardımcı program yöntemlerini kullanarak kendi ekli olaylarınızı uygulayabilirsiniz.  
   
- Desen aşağıdaki gibidir:  
+ Bu model aşağıdaki gibidir:  
   
-- Bir yöntem **Ekle*EventName*işleyici** iki parametrelere sahip. İlk parametre, olay işleyicisi ekleneceği örneğidir. Olay işleyicisi eklemek için ikinci parametredir. Yöntem olmalıdır `public` ve `static`, dönüş değeri ile.  
+- Bir yöntem, iki parametreli bir ***EventName*işleyicisi ekler** . İlk parametre olay işleyicisinin eklendiği örneğidir. İkinci parametre, eklenecek olay işleyicisidir. Yöntemi, dönüş değeri `public` olmadan `static`ve olmalıdır.  
   
-- Bir yöntem **Kaldır*EventName*işleyici** iki parametrelere sahip. İlk parametre, olay işleyicisi kaldırılır örneğidir. Kaldırılacak olay işleyicisi ikinci parametredir. Yöntem olmalıdır `public` ve `static`, dönüş değeri ile.  
+- Bir yöntem **,*EventName*Işleyicisini** iki parametreyle kaldırır. İlk parametre olay işleyicisinin kaldırıldığı örneğidir. İkinci parametre, kaldırılacak olay işleyicisidir. Yöntemi, dönüş değeri `public` olmadan `static`ve olmalıdır.  
   
- **Ekle*EventName*işleyici** erişimci yöntemi kolaylaştıran [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemesini ekli olay işleyicisi öznitelikleri bir öğe üzerinde bildirilir. **Ekle*EventName*işleyici** ve **Kaldır*EventName*işleyici** yöntemleri de olay işleyicisi deposu için kod erişimi etkinleştirme ekli olay.  
+ ***EventName*işleyicisi ekleme** erişimcisi yöntemi, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ekli olay işleyicisi öznitelikleri bir öğede bildirildiğinde işlemeyi kolaylaştırır. ***EventName*Handler** ve **Remove*EventName*Handler** yöntemleri, ekli olay için olay işleyicisi deposuna kod erişimini de etkinleştirir.  
   
- Bu genel düzen henüz bir çerçeve uygulaması pratik için yeterince kesin değildir çünkü verilen herhangi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] okuyucu uygulaması mimarisi ve destekleyici dil temelindeki olayları tanımlamak için farklı şemalara sahip. Bu nedenlerden biri, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygular ekli olayları yönlendirilmiş olaylar olarak; bir olay için kullanılacak bir tanımlayıcı (<xref:System.Windows.RoutedEvent>) tarafından tanımlanan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay sistemi. Ayrıca, bir olay yönlendirme bir doğal uygulama uzantısıdır [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ekli olay kavramını dil düzeyi.  
+ Bu genel düzen, bir çerçevede pratik uygulama için yeterince kesin değildir, çünkü belirli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bir okuyucu uygulamasının destekleyici dilde ve mimaride temel olayları belirlemek için farklı şemaları olabilir. Bu, ekli olayları yönlendirilmiş olaylar olarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulayan nedenlerinden biridir; bir olay (<xref:System.Windows.RoutedEvent>) için kullanılacak tanımlayıcı zaten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay sistemi tarafından tanımlandı. Ayrıca, bir olayı yönlendirme, eklenen bir olayın [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dil düzeyi kavramında doğal bir uygulama uzantısıdır.  
   
- **Ekle*EventName*işleyici** uygulama için bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekli olay çağırmadan oluşur <xref:System.Windows.UIElement.AddHandler%2A> yönlendirilmiş olay ve bağımsız değişkenler olarak işleyici.  
+ Ekli bir[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay için ***EventName*işleyici ekleme** , bağımsız değişken olarak yönlendirilmiş olay ve işleyici ileçağırmabilgisindenoluşur.<xref:System.Windows.UIElement.AddHandler%2A>  
   
- Bu uygulama stratejisi ve yönlendirilmiş olay sistemi Genel ekli olayları işleme ya da kısıtlama <xref:System.Windows.UIElement> türetilmiş sınıflar veya <xref:System.Windows.ContentElement> sınıfları, çünkü yalnızca söz konusu sınıfın türetilmiş <xref:System.Windows.UIElement.AddHandler%2A> uygulamaları.  
+ Bu uygulama stratejisi ve yönlendirilmiş olay sistemi, yalnızca bu sınıfların <xref:System.Windows.UIElement> <xref:System.Windows.UIElement.AddHandler%2A> uygulamaları olduğundan, eklenen olaylar için türetilmiş sınıflara veya <xref:System.Windows.ContentElement> türetilmiş sınıflara yönelik işlemeyi kısıtlar.  
   
- Örneğin, aşağıdaki kod tanımlar `NeedsCleaning` sahip sınıf bir olayda bağlı `Aquarium`kullanarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekli olay stratejisini gönderilmiş bir olay olarak ekli olay bildirme.  
+ Örneğin, aşağıdaki kod, ekli olayı bir `NeedsCleaning` yönlendirilmiş olay olarak bildiren ekli olay `Aquarium`stratejisini kullanarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sahip sınıfında ekli olayı tanımlar.  
   
  [!code-csharp[WPFAquariumSln#AECode](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
  [!code-vb[WPFAquariumSln#AECode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
   
- Ekli olay tanımlayıcı alanı oluşturmak için kullanılan yöntem Not <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, bağlı olmayan yönlendirilmiş olay kaydetmek için kullanılan gerçekten yöntem ile aynıdır. Tüm ekli olaylar ve yönlendirilmiş olaylar için merkezi bir iç deposuna kaydedilir. Bu olay deposu uygulaması içinde ele alınmıştır "olayları için bir arabirim olarak" kavramsal konuları etkinleştirir [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).  
+ Ekli olay tanımlayıcı alanını <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>oluşturmak için kullanılan yöntemin gerçekten, eklenmemiş bir yönlendirilmiş olayı kaydetmek için kullanılan yöntem olduğunu unutmayın. Ekli olaylar ve yönlendirilmiş olaylar, merkezi bir dahili depoya kaydedilir. Bu olay depolama uygulama, [yönlendirilmiş olaylara genel bakış](routed-events-overview.md)bölümünde ele alınan "arabirim olarak olaylar" kavramsal değerlendirmesi sunar.  
   
 <a name="Raising"></a>   
-## <a name="raising-a-wpf-attached-event"></a>Bir WPF ekli olayı oluşturma  
- Genellikle varolan yükseltme gerekmez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kodunuzu ekli olayları tanımlanmış. Bu olaylar "hizmet" genel kavramsal model izleyin ve hizmet sınıfları gibi <xref:System.Windows.Input.InputManager> olayları oluşturma için sorumludur.  
+## <a name="raising-a-wpf-attached-event"></a>WPF ekli olayını yükseltme  
+ Genellikle, kodınızdan mevcut [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tanımlanmış ekli olayları yükseltmeniz gerekmez. Bu olaylar genel "hizmet" kavramsal modelini izler ve gibi hizmet sınıfları <xref:System.Windows.Input.InputManager> olayları oluşturmaktan sorumludur.  
   
- Ancak, temel bir özel ekli olay tanımlıyorsanız, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] alma modelini ekli olayları üzerinde <xref:System.Windows.RoutedEvent>, kullanabilirsiniz <xref:System.Windows.UIElement.RaiseEvent%2A> herhangi bir ekli olay oluşturmak için <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement>. (Veya ekli) gönderilmiş bir olay oluşturma, belirli bir öğe öğe ağacında olay kaynağı olarak bildirilmesini gerektirir; Bu kaynağı olarak bildirilen <xref:System.Windows.UIElement.RaiseEvent%2A> çağırıcı. Hangi öğe belirleme ağacında kaynak hizmetinizin sorumluluğundadır olarak bildirildi  
+ Bununla birlikte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , ekli <xref:System.Windows.RoutedEvent>olayları temel alan modele göre özel bir ekli olay tanımlıyorsanız, herhangi <xref:System.Windows.UIElement> bir veya <xref:System.Windows.ContentElement>arasında ekli olay yükseltmek için <xref:System.Windows.UIElement.RaiseEvent%2A> kullanabilirsiniz. Yönlendirilmiş bir olayı (ekli veya değil) yükseltmek için, öğe ağacında olay kaynağı olarak belirli bir öğeyi bildirmeniz gerekir; Bu kaynak <xref:System.Windows.UIElement.RaiseEvent%2A> çağıran olarak bildirilir. Ağaçta kaynak olarak hangi öğenin bildirileceğini belirleme hizmetinizin sorumluluğu  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

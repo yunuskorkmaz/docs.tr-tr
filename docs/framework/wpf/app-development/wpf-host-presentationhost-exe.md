@@ -5,29 +5,29 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 543076c3b00bf7946111df4c18d8c71928ce7ee2
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 16618042324387bfc15f4685f4759378c50a80b7
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487317"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401709"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF Konağı (PresentationHost.exe)
-Windows Presentation Foundation (WPF) Konağı (PresentationHost.exe) sağlayan bir uygulama olan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uyumlu tarayıcılarda uygulamaları (dahil olmak üzere [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] ve üzeri). Varsayılan olarak, Windows Presentation Foundation (WPF) konak olarak kabuğa kayıtlı ve [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] işleyicisi için tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] içeriği olarak da içerir:  
+Windows Presentation Foundation (WPF) ana bilgisayarı (PresentationHost. exe), uygulamaların uyumlu tarayıcılarda [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] barındırılmasına olanak tanıyan uygulamadır (ve sonraki sürümler [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] dahil). Varsayılan olarak, Windows Presentation Foundation (WPF) ana bilgisayarı, aşağıdakiler de dahil olmak [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] üzere tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] içerik için kabuk ve işleyici olarak kaydedilir:  
   
-- Gevşek (derlenmemiş) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyaları (.xaml).  
+- Gevşek (derlenmemiş) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyalar (. xaml).  
   
-- [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap).  
+- [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)](. XBAP).  
   
- Bu tür dosyalar için Windows Presentation Foundation (WPF) ana bilgisayar için:  
+ Bu türlerin dosyaları için Windows Presentation Foundation (WPF) ana bilgisayarı:  
   
-- Kayıtlı başlatır [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] Windows Presentation Foundation (WPF) içeriğini barındırmak için işleyici.  
+- Windows Presentation Foundation (WPF [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] ) içeriğini barındırmak için kayıtlı işleyiciyi başlatır.  
   
-- Gerekli doğru sürümlerini yükler [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] ve Windows Presentation Foundation (WPF) derlemeleri.  
+- Gerekli ortak dil çalışma zamanı (CLR) ve Windows Presentation Foundation (WPF) derlemelerinin doğru sürümlerini yükler.  
   
-- Dağıtım bölgesi için uygun izin düzeylerini yerinde olmasını sağlar.  
+- Dağıtım bölgesi için uygun izin düzeylerinin yerinde olmasını sağlar.  
   
- Bu konu ile PresentationHost.exe kullanılabilir komut satırı parametreleri açıklar.  
+ Bu konu, PresentationHost. exe ile kullanılabilecek komut satırı parametrelerini açıklar.  
   
 ## <a name="usage"></a>Kullanım  
  `PresentationHost.exe [parameters] uri|filename`  
@@ -36,25 +36,25 @@ Windows Presentation Foundation (WPF) Konağı (PresentationHost.exe) sağlayan 
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|filename|Etkinleştirilecek dosyasının yolu. Ayrıca olabilir bir [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].|  
-|-debug|Bir uygulama etkinleştirilirken bırakmaz için işleme veya mağaza'dan çalıştırın. Bu, yalnızca yerel bir dosyaya etkinleştirildiğinde çalışır.|  
-|-debugSecurityZoneURL \<URL'si >|İle kullanılan bir [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] PresentationHost.exe için gibi dağıtıldıysa uygulamanın hata ayıklaması belirtmek için değer belirtilen [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]. Bu dağıtım bölgesi hem kaynak siteyi belirler.|  
-|-ekleme|OLE için gereklidir. Varsa `-event` veya `-debug` parametresi belirtilirse, belirtmek gerekli değil `-embedding` parametresi, çünkü bu parametre, dahili olarak ayarlanır.|  
-|-olay \<eventname >|Bu ada sahip olayı açın ve PresentationHost.exe konak başlatıldı ve hazır olduğunda sinyal [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] içeriği. PresentationHost.exe sonlandırılacak olay açılırken bir hata olduğunda, IF gibi onu değil zaten oluşturuldu.|  
-|-launchApplication \<URL'si >|Tek başına bir ClickOnce uygulaması belirtilen URL'den başlatır. [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] ve .NET uygulamaları ile ilgili WinINet güvenlik ilkesi uygulanır.|  
+|filename|Etkinleştirilecek dosyanın yolu. Aynı zamanda bir [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]de olabilir.|  
+|-debug|Bir uygulamayı etkinleştirirken, bir uygulamayı üzerinde yürütmez veya mağazadan çalıştırmaz. Bu yalnızca yerel bir dosya etkinleştirildiğinde işe yarar.|  
+|-DebugSecurityZoneURL \<URL 'si >|PresentationHost. exe [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] ' ye, bir uygulamanın, belirtilen [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]sunucudan dağıtılmışsa olarak hata ayıklaması gerektiğini belirten bir değerle birlikte kullanılır. Bu hem dağıtım bölgesini hem de kaynak sitesini belirler.|  
+|-Gömme|OLE tarafından gerektirilir. Ya da parametresi belirtilirse, bu parametre dahili olarak ayarlandığı için `-embedding` parametresini belirtmeniz gerekmez. `-debug` `-event`|  
+|-Event \<EventName >|Bu adı taşıyan olayı açın ve PresentationHost. exe başlatıldığında ve içeriği barındırmak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] için hazırsanız bunu işaret edin. Olay açılırken bir hata oluşursa (örneğin, zaten oluşturulmadıysa) PresentationHost. exe sonlandırılır.|  
+|-launchApplication \<URL >|Belirtilen URL 'den tek başına ClickOnce uygulaması başlatır. [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]ve .NET uygulamalarıyla ilgili WinINet güvenlik ilkesi uygulanır.|  
   
 ## <a name="scenarios"></a>Senaryolar  
   
-### <a name="shell-handler"></a>Kabuk işleyicisi  
+### <a name="shell-handler"></a>Kabuk Işleyicisi  
  `PresentationHost.exe example.xbap`  
   
-### <a name="mime-handler"></a>MIME işleyicisi  
+### <a name="mime-handler"></a>MIME Işleyicisi  
  `PresentationHost.exe -embedding example.xbap`  
   
-### <a name="visual-studio-debugging"></a>Visual Studio hata ayıklama  
+### <a name="visual-studio-debugging"></a>Visual Studio hata ayıklaması  
  `PresentationHost.exe -debug example.xbap`  
   
-### <a name="visual-studio-debugging-in-zone"></a>Visual Studio bölgede hata ayıklama  
+### <a name="visual-studio-debugging-in-zone"></a>Bölgede Visual Studio hata ayıklaması  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
 ## <a name="see-also"></a>Ayrıca bkz.

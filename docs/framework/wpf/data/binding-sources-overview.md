@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 48df7083d990dde157c9b7b2a062c865954cf38a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364209"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401441"
 ---
 # <a name="binding-sources-overview"></a>Kaynakların Bağlanmasına Genel Bakış
 Veri bağlamada bağlama kaynak nesnesi, verileri aldığınız nesneye başvurur. Bu konuda, bağlama kaynağı olarak kullanabileceğiniz nesne türleri ele alınmaktadır.  
@@ -22,7 +22,7 @@ Veri bağlamada bağlama kaynak nesnesi, verileri aldığınız nesneye başvuru
   
 |Bağlama kaynağı|Açıklama|  
 |--------------------|-----------------|  
-|[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]nesneyi|Herhangi bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesnenin dizin oluşturucularının yanı sıra ortak özellikler, alt özellikler ve Dizin oluşturucular bağlayabilirsiniz. Bağlama altyapısı, özelliklerin [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] değerlerini almak için yansıma kullanır. Alternatif olarak, uygulayan <xref:System.ComponentModel.ICustomTypeDescriptor> veya <xref:System.ComponentModel.TypeDescriptionProvider> içeren nesneler, bağlama altyapısı ile de çalışır.<br /><br /> Bağlama kaynağı olarak kullanılabilecek bir sınıfın nasıl uygulanacağı hakkında daha fazla bilgi için, bu konunun ilerleyen kısımlarında yer alan [bağlama kaynağı için bir sınıf uygulama](#classes) bölümüne bakın.|  
+|ortak dil çalışma zamanı (CLR) nesneleri|Ortak özellikler, alt özellikler ve tüm ortak dil çalışma zamanı (CLR) nesnesinin dizin oluşturucularının bağlayabilirsiniz. Bağlama altyapısı, özelliklerin değerlerini almak için CLR Reflection kullanır. Alternatif olarak, uygulayan <xref:System.ComponentModel.ICustomTypeDescriptor> veya <xref:System.ComponentModel.TypeDescriptionProvider> içeren nesneler, bağlama altyapısı ile de çalışır.<br /><br /> Bağlama kaynağı olarak kullanılabilecek bir sınıfın nasıl uygulanacağı hakkında daha fazla bilgi için, bu konunun ilerleyen kısımlarında yer alan [bağlama kaynağı için bir sınıf uygulama](#classes) bölümüne bakın.|  
 |dinamik nesneler|<xref:System.Dynamic.IDynamicMetaObjectProvider> Arabirim uygulayan bir nesnenin kullanılabilir özelliklerine ve dizin oluşturucularının bağlama yapabilirsiniz. Kodda üyeye erişebilmek için bağlayabilirsiniz. Örneğin, dinamik bir nesne koddaki bir üyeye aracılığıyla `someObjet.AProperty`erişmenizi sağlar, bağlama `AProperty`yolunu ayarlayarak buna bağlanabilirsiniz.|  
 |ADO.NET nesneleri|Gibi ADO.NET nesnelerine <xref:System.Data.DataTable>bağlayabilirsiniz. ADO.net <xref:System.Data.DataView> , bağlama altyapısının <xref:System.ComponentModel.IBindingList> dinlediği değişiklik bildirimleri sağlayan arabirimini uygular.|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]nesneyi|<xref:System.Xml.XmlNode>, `XPath` Veya<xref:System.Xml.XmlDocument>' de sorguları bağlanabilir ve üzerinde sorgu çalıştırabilirsiniz. <xref:System.Xml.XmlElement> Biçimlendirme içindeki bağlama kaynağı olan [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] verilere erişmenin kolay bir yolu bir <xref:System.Windows.Data.XmlDataProvider> nesne kullanmaktır. Daha fazla bilgi için bkz. [XMLDataProvider ve XPath sorgularını kullanarak XML verilerine bağlama](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Ayrıca, bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument>' a bağlanabilir veya LINQ to XML kullanarak bu türlerin nesnelerinde çalıştırılan sorguların sonuçlarına bağlayabilirsiniz. Biçimlendirme içindeki bağlama kaynağı olan XML verilerine erişmek için LINQ to XML kullanmanın kolay bir yolu bir <xref:System.Windows.Data.ObjectDataProvider> nesne kullanmaktır. Daha fazla bilgi için bkz. [XML sorgu sonuçları Için XDocument, XElement veya LINQ 'A bağlama](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
@@ -33,9 +33,9 @@ Veri bağlamada bağlama kaynak nesnesi, verileri aldığınız nesneye başvuru
  Kendi bağlama kaynaklarınızı oluşturabilirsiniz. Bu bölümde, bağlama kaynağı olarak kullanılacak bir sınıf uyguladığınızda bilmeniz gereken noktalar açıklanmaktadır.  
   
 ### <a name="providing-change-notifications"></a>Değişiklik bildirimleri sağlama  
- Ya <xref:System.Windows.Data.BindingMode.OneWay> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] da bağlamayı kullanıyorsanız (bağlama kaynak özellikleri dinamik olarak değiştiğinde güncelleştirilmesini istiyorsanız), uygun bir özellik değiştirildi bildirim mekanizması uygulamanız gerekir. <xref:System.Windows.Data.BindingMode.TwoWay> Önerilen mekanizma, [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.ComponentModel.INotifyPropertyChanged> arabirimini uygulamak için veya dinamik sınıfa yöneliktir. Daha fazla bilgi için bkz. [özellik değişiklik bildirimini uygulama](how-to-implement-property-change-notification.md).  
+ Ya <xref:System.Windows.Data.BindingMode.OneWay> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] da bağlamayı kullanıyorsanız (bağlama kaynak özellikleri dinamik olarak değiştiğinde güncelleştirilmesini istiyorsanız), uygun bir özellik değiştirildi bildirim mekanizması uygulamanız gerekir. <xref:System.Windows.Data.BindingMode.TwoWay> Önerilen mekanizma, clr veya dinamik sınıfın <xref:System.ComponentModel.INotifyPropertyChanged> arabirimini uygulaması içindir. Daha fazla bilgi için bkz. [özellik değişiklik bildirimini uygulama](how-to-implement-property-change-notification.md).  
   
- [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Gerçekleştirmeyen<xref:System.ComponentModel.INotifyPropertyChanged>bir nesne oluşturursanız, bir bağlamada kullanılan verilerin güncel kalmasını sağlamak için kendi bildirim sisteminiz için düzenleme yapmanız gerekir. Değişiklik bildirimlerini istediğiniz her bir özelliğin `PropertyChanged` modelini destekleyerek değişiklik bildirimleri sağlayabilirsiniz. Bu kalıbı desteklemek için her bir özellik için *PropertyName*Changed olayını tanımlarsınız; burada *PropertyName* özelliğin adıdır. Olay, özellik her değiştiğinde tetiklenir.  
+ Gerçekleştirmeyen <xref:System.ComponentModel.INotifyPropertyChanged>bir CLR nesnesi oluşturursanız, bir bağlamada kullanılan verilerin güncel kalmasını sağlamak için kendi bildirim sisteminizi düzenlemeniz gerekir. Değişiklik bildirimlerini istediğiniz her bir özelliğin `PropertyChanged` modelini destekleyerek değişiklik bildirimleri sağlayabilirsiniz. Bu kalıbı desteklemek için her bir özellik için *PropertyName*Changed olayını tanımlarsınız; burada *PropertyName* özelliğin adıdır. Olay, özellik her değiştiğinde tetiklenir.  
   
  Bağlama kaynağınız bu bildirim mekanizmalarından birini uygularsa, hedef güncelleştirmeler otomatik olarak gerçekleşir. Herhangi bir nedenden dolayı bağlama kaynağınız uygun özellik değiştirme bildirimlerini sağlamıyorsa, hedef özelliği açıkça güncelleştirmek için <xref:System.Windows.Data.BindingExpression.UpdateTarget%2A> yöntemini kullanma seçeneğiniz vardır.  
   
@@ -80,7 +80,7 @@ Veri bağlamada bağlama kaynak nesnesi, verileri aldığınız nesneye başvuru
   
  Bu tabloda, veri bağlamasındaki izin gereksinimleriyle ilgili aşağıdaki önemli noktaları açıklanmaktadır:  
   
-- Özellikler [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] için, bağlama altyapısı yansıma kullanarak bağlama kaynağı özelliğine erişebilmiş olduğu sürece veri bağlama işe yarar. Aksi halde bağlama altyapısı, özelliğin bulunamadığını ve geri dönüş değerini ya da varsa varsayılan değeri kullanacağını belirten bir uyarı verir.  
+- CLR özellikleri için, bağlama altyapısı yansıma kullanarak bağlama kaynağı özelliğine erişebilmiş olduğu sürece veri bağlama işe yarar. Aksi halde bağlama altyapısı, özelliğin bulunamadığını ve geri dönüş değerini ya da varsa varsayılan değeri kullanacağını belirten bir uyarı verir.  
   
 - Derleme zamanında veya çalışma zamanında tanımlanan dinamik nesnelerdeki özelliklere bağlanabilirsiniz.  
   

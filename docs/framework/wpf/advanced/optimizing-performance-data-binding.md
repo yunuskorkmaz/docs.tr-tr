@@ -1,75 +1,75 @@
 ---
-title: 'Performansı iyileştirme: Veri Bağlama'
+title: 'Performansı İyileştirme: Veri Bağlama'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: ac7ca815bedf180c8a680840f585d08f7018d6ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25c0906e9f23948476732b10b2c5fb10fe4eb55f
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773119"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401455"
 ---
-# <a name="optimizing-performance-data-binding"></a>Performansı iyileştirme: Veri Bağlama
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama sunmak ve verilerle etkileşimde bulunmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Çeşitli veri kaynaklarından biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
+# <a name="optimizing-performance-data-binding"></a>Performansı İyileştirme: Veri Bağlama
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]veri bağlama, uygulamaların sunmak ve verilerle etkileşim kurmak için basit ve tutarlı bir yol sağlar. Öğeler, CLR nesneleri [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]biçimindeki çeşitli veri kaynaklarından verilere bağlanabilir.  
   
- Bu konu, veri bağlama performans önerileri sağlar.  
+ Bu konu veri bağlama performans önerileri sağlar.  
 
 <a name="HowDataBindingReferencesAreResolved"></a>   
-## <a name="how-data-binding-references-are-resolved"></a>Veri bağlama başvuruları nasıl çözümlenir  
- Veri bağlama performans sorunlarını ele almadan önce keşfetmek için faydalı olduğu nasıl [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama altyapısı nesne başvuru bağlamasının giderir.  
+## <a name="how-data-binding-references-are-resolved"></a>Veri bağlama başvurularının çözümlenmesi  
+ Veri bağlama performans sorunlarını tartışmadan önce, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama altyapısının bağlama için nesne başvurularını nasıl çözümlediği araştırılamaz.  
   
- Kaynağı bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama herhangi olabilir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesne. Özellikler, alt özellik veya dizin oluşturucular, adlarınıza bağlayabileceğiniz bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesne. Bağlama başvurularının ya da Microsoft .NET Framework yansıma kullanarak çözümlenir veya <xref:System.ComponentModel.ICustomTypeDescriptor>. Bağlama için nesne başvurularını çözümlemek için üç yöntem şunlardır.  
+ Veri bağlamasının kaynağı herhangi [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bir CLR nesnesi olabilir. Bir CLR nesnesinin özelliklerine, alt özelliklerine veya dizin oluşturucularının bağlama yapabilirsiniz. Bağlama başvuruları Microsoft .NET Framework Reflection veya bir <xref:System.ComponentModel.ICustomTypeDescriptor>kullanılarak çözümlenir. Bağlama için nesne başvurularını çözümlemek için üç yöntem aşağıda verilmiştir.  
   
- Yansıma kullanarak ilk yöntem içerir. Bu durumda, <xref:System.Reflection.PropertyInfo> nesne özelliğin özniteliklerini bulmak için kullanılır ve özellik meta verilerine erişim sağlar. Kullanırken <xref:System.ComponentModel.ICustomTypeDescriptor> arabirimi, veri bağlama altyapısı bu arabirim özellik değerlerine erişmek için kullanır. <xref:System.ComponentModel.ICustomTypeDescriptor> Arabirimidir burada nesnesinin yok statik bir özellikler kümesini durumlarda özellikle yararlıdır.  
+ İlk yöntem, yansıma kullanımını içerir. Bu durumda, <xref:System.Reflection.PropertyInfo> nesne özelliğin özniteliklerini saptamak için kullanılır ve özellik meta verilerine erişim sağlar. <xref:System.ComponentModel.ICustomTypeDescriptor> Arabirimi kullanılırken, veri bağlama altyapısı özellik değerlerine erişmek için bu arabirimi kullanır. <xref:System.ComponentModel.ICustomTypeDescriptor> Arabirim, özellikle nesnenin statik bir özellik kümesine sahip olmadığı durumlarda faydalıdır.  
   
- Özellik değişikliği bildirimleri uygulayarak ya da sağlanabilir <xref:System.ComponentModel.INotifyPropertyChanged> ilişkili değişiklik bildirimleri kullanarak veya arabirim <xref:System.ComponentModel.TypeDescriptor>. Ancak, özellik değişikliği bildirimlerini uygulamak için tercih edilen bir strateji kullanmaktır <xref:System.ComponentModel.INotifyPropertyChanged>.  
+ Özellik değişikliği bildirimleri, <xref:System.ComponentModel.INotifyPropertyChanged> <xref:System.ComponentModel.TypeDescriptor>arabirimini uygulayarak veya ile ilişkili değişiklik bildirimleri kullanılarak gerçekleştirilebilir. Ancak, özellik değişikliği bildirimlerinin uygulanması için tercih edilen strateji kullanılır <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
- Kaynak nesne ise bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesne ve kaynak özelliği bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] özelliği [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama altyapısı olan ilk almak için kaynak nesnesindeki yansıma kullanmak <xref:System.ComponentModel.TypeDescriptor>ve ardından sorgu bir <xref:System.ComponentModel.PropertyDescriptor>. Bu yansıma işlemlerin sırasını büyük olasılıkla bir performans açısından çok zaman alır.  
+ Kaynak nesne bir CLR nesnesi ise ve kaynak özelliği bir CLR özelliği ise, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama altyapısının öncelikle kaynak nesnesinde <xref:System.ComponentModel.TypeDescriptor>yansıma kullanması gerekir ve ardından bir <xref:System.ComponentModel.PropertyDescriptor>için sorgu alır. Bu yansıma işlemi sırası, performans açısından çok zaman alabilir.  
   
- Nesne başvuruları çözümlemek için ikinci yöntem içerir bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] uygulayan kaynak nesne <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi ve bir kaynak özelliği bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] özelliği. Bu durumda, veri bağlama altyapısı doğrudan kaynak türüne yansıma kullanır ve gerekli özelliği alır. Bu yine de en iyi yöntem değildir, ancak ilk yöntem kümesi gereksinimlerinde çalışırken daha az maliyetlidir.  
+ Nesne başvurularını çözümlemek için ikinci yöntem, <xref:System.ComponentModel.INotifyPropertyChanged> arabirimini uygulayan bir clr kaynak nesnesi ve CLR özelliği olan bir kaynak özelliği içerir. Bu durumda, veri bağlama altyapısı doğrudan kaynak türünde yansıma kullanır ve gerekli özelliği alır. Bu, en iyi yöntem olmaya devam eder, ancak çalışma kümesi gereksinimlerinde ilk yöntemden daha az ücret alınacaktır.  
   
- Nesne başvurularını çözümlemek için üçüncü bir yöntem olan bir kaynak nesne içeren bir <xref:System.Windows.DependencyObject> ve bir kaynak özelliği bir <xref:System.Windows.DependencyProperty>. Bu durumda, yansıma kullanmak veri bağlama altyapısı gerekmez. Bunun yerine özellik altyapısı ve veri bağlama altyapısı birlikte özellik başvurusu bağımsız olarak çözümler. Bu, veri bağlama için kullanılan nesne başvurularını çözümlemek için en iyi yöntemdir.  
+ Nesne başvurularını çözmenin üçüncü yöntemi bir olan kaynak nesnesi <xref:System.Windows.DependencyObject> ve bir olan kaynak özelliği <xref:System.Windows.DependencyProperty>içerir. Bu durumda, veri bağlama altyapısının yansıma kullanması gerekmez. Bunun yerine, özellik altyapısı ve veri bağlama altyapısı birlikte Özellik başvurusunu bağımsız olarak çözümler. Bu, veri bağlama için kullanılan nesne başvurularını çözümlemek için en iyi yöntemdir.  
   
- Aşağıdaki tabloda veri bağlama hızına karşılaştırır <xref:System.Windows.Controls.TextBlock.Text%2A> bin özelliği <xref:System.Windows.Controls.TextBlock> öğeleri bu üç yöntemi kullanarak.  
+ Aşağıdaki tabloda, bu üç yöntemi kullanarak 1000 <xref:System.Windows.Controls.TextBlock.Text%2A> <xref:System.Windows.Controls.TextBlock> öğelerinin özelliği ile veri bağlama hızı karşılaştırılır.  
   
-|**Bir TextBlock Text özelliğine bağlama**|**Bağlama süresi (ms)**|**İşleme zamanı--bağlama (ms) içerir**|  
+|**TextBlock öğesinin Text özelliğini bağlama**|**Bağlama süresi (MS)**|**İşleme süresi--bağlama dahildir (MS)**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
-|Bir özelliğine bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesnesi|115|314|  
-|Bir özelliğine bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] uygulayan nesne <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
-|İçin bir <xref:System.Windows.DependencyProperty> , bir <xref:System.Windows.DependencyObject>.|90|263|  
+|Bir CLR nesnesinin özelliğine|115|314|  
+|Uygulayan bir CLR nesnesinin özelliğine<xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
+|' A bir <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyProperty>|90|263|  
   
 <a name="Binding_to_Large_CLR_Objects"></a>   
-## <a name="binding-to-large-clr-objects"></a>Büyük boyutlu CLR nesnelere bağlama  
- Verileri tek bir bağladığınızda önemli performans etkisi olan [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] özellikleri binlerce nesne. Tek bir nesnede birden çok bölerek Bu etkiyi en aza indirebilirsiniz [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri ile daha az özellik. Tablo Bağlama ve veri bağlama için tek bir işleme sürelerini büyük gösterir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] birden çok daha küçük nesneleri ve nesne.  
+## <a name="binding-to-large-clr-objects"></a>Büyük CLR nesnelerine bağlama  
+ Binlerce özellik içeren tek bir CLR nesnesine veri bağladığınızda önemli bir performans etkisi vardır. Bu etkiyi, tek nesneyi birden çok CLR nesnesine daha az özelliklerle bölerek bu etkiyi en aza indirebilir. Tablo, tek bir büyük CLR nesnesine ve birden çok daha küçük nesneye veri bağlamanın bağlama ve işleme sürelerini gösterir.  
   
-|**Veri bağlama 1000 TextBlock nesneleri**|**Bağlama süresi (ms)**|**İşleme zamanı--bağlama (ms) içerir**|  
+|**Veri bağlama 1000 TextBlock nesneleri**|**Bağlama süresi (MS)**|**İşleme süresi--bağlama dahildir (MS)**|  
 |---------------------------------------------|-----------------------------|--------------------------------------------------|  
-|İçin bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 1000 özelliklere sahip nesne|950|1200|  
-|1000 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] bir özelliği olan nesneler|115|314|  
+|1000 özelliklerine sahip bir CLR nesnesine|950|1200|  
+|Tek bir özellikle 1000 CLR nesnesine|115|314|  
   
 <a name="Binding_to_an_ItemsSource"></a>   
-## <a name="binding-to-an-itemssource"></a>Bir ItemsSource bağlama  
- Sahip olduğunuz bir senaryo düşünün bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> görüntülemek istediğiniz çalışanların bir listesini tutan nesne bir <xref:System.Windows.Controls.ListBox>. Bu iki nesne arasındaki ilişkiyi oluşturmak için çalışan listenize bağlamak <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> özelliği <xref:System.Windows.Controls.ListBox>. Ancak, yeni bir çalışan, gruba katılıyor olduğunu varsayalım. Bu yeni bir kişiye bağımlı eklemek için düşündüğünüzden <xref:System.Windows.Controls.ListBox> değerleri yalnızca bu kişinin çalışan listenize eklediğinizde ve veri bağlama altyapısı tarafından otomatik olarak tanınması için bu değişikliğin. Bu varsayım yanlış olur; çünkü değişiklik içinde yansıtılmaz <xref:System.Windows.Controls.ListBox> otomatik olarak. Bunun nedeni, [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> nesne olmayan otomatik olarak Yükselt bir koleksiyon değişti olayı. Ürününü <xref:System.Windows.Controls.ListBox> değişiklikleri almak için çalışanların listesi yeniden oluşturun ve yeniden bağlamanız gerekir <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> özelliği <xref:System.Windows.Controls.ListBox>. Bu çözüm çalışırken, bir büyük performans etkisi tanıtır. Her zaman, yeniden atama <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> , <xref:System.Windows.Controls.ListBox> yeni bir nesne <xref:System.Windows.Controls.ListBox> ilk olarak önceki öğelerinden hemen oluşturur ve tüm listeyi yeniden oluşturur. Performans etkisi, büyütülür, <xref:System.Windows.Controls.ListBox> karmaşık bir <xref:System.Windows.DataTemplate>.  
+## <a name="binding-to-an-itemssource"></a>Itembir kaynağa bağlama  
+ İçinde görüntülenmesini <xref:System.Collections.Generic.List%601> <xref:System.Windows.Controls.ListBox>istediğiniz çalışanların listesini tutan bir CLR nesnesine sahip olduğunuz bir senaryoyu düşünün. Bu iki nesne arasında bir yazışmalar oluşturmak için, çalışan listenizi <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> <xref:System.Windows.Controls.ListBox>öğesinin özelliğine bağlarsınız. Ancak, grubunuza katılan yeni bir çalışana sahip olduğunuzu varsayalım. Bu yeni kişiyi ilişkili <xref:System.Windows.Controls.ListBox> değerlerinizle eklemek için, bu kişiyi yalnızca çalışan listenize eklemenizi ve bu değişikliğin veri bağlama altyapısı tarafından otomatik olarak tanınmasını beklemeniz gerektiğini düşünebilirsiniz. Bu varsayım yanlış olduğunu kanıtlayacaktı; Bu durumda değişiklik <xref:System.Windows.Controls.ListBox> otomatik olarak yansıtılmaz. Bunun nedeni, clr <xref:System.Collections.Generic.List%601> nesnesinin bir koleksiyon değişti olayını otomatik olarak oluşturmaz. Değişiklikleri almak <xref:System.Windows.Controls.ListBox> için, çalışanların listesini yeniden oluşturmanız ve ' nin <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> <xref:System.Windows.Controls.ListBox>özelliğine yeniden iliştirmeye ihtiyacınız vardır. Bu çözüm çalışırken çok büyük bir performans etkisi ortaya koymaktadır. ' Yi yeni <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> birnesneye<xref:System.Windows.Controls.ListBox> her atadığınızda, ilkiöncekiöğeleriniyerineatarvetümlistesiniyenidenoluşturur.<xref:System.Windows.Controls.ListBox> Daha karmaşık <xref:System.Windows.Controls.ListBox> <xref:System.Windows.DataTemplate>bir eşleme yaptıysanız performans etkisi büyütülür.  
   
- Bu sorun için çok etkili bir çözüm çalışan listesini olmaktır bir <xref:System.Collections.ObjectModel.ObservableCollection%601>. Bir <xref:System.Collections.ObjectModel.ObservableCollection%601> nesnesi başlatan bir değişiklik bildirimi veri bağlama altyapısı alabilir. Olay ekler veya kaldırır bir <xref:System.Windows.Controls.ItemsControl> listesinin tümünü yeniden oluşturmak zorunda kalmadan.  
+ Bu soruna yönelik çok verimli bir çözüm, çalışan listenizi bir <xref:System.Collections.ObjectModel.ObservableCollection%601>hale getirir. Bir <xref:System.Collections.ObjectModel.ObservableCollection%601> nesne, veri bağlama altyapısının alabileceği bir değişiklik bildirimi oluşturur. Olay, tüm listeyi yeniden oluşturmak gerekmeden bir <xref:System.Windows.Controls.ItemsControl> öğeyi öğesinden ekler veya kaldırır.  
   
- Aşağıdaki tabloda bir güncelleştirme süresini gösterir <xref:System.Windows.Controls.ListBox> (devre dışı kullanıcı Arabirimi sanallaştırma ile) bir öğe eklendiğinde. İlk satır numarasında geçen süreyi temsil eder, [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> nesne bağlı <xref:System.Windows.Controls.ListBox> öğenin <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. İkinci satır numarasında geçen süreyi temsil eder, bir <xref:System.Collections.ObjectModel.ObservableCollection%601> bağlı <xref:System.Windows.Controls.ListBox> öğenin <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Not önemli zaman tasarrufu kullanarak <xref:System.Collections.ObjectModel.ObservableCollection%601> veri bağlama stratejisi.  
+ Aşağıdaki tabloda, <xref:System.Windows.Controls.ListBox> bir öğe eklendiğinde (UI Sanallaştırması kapatılmış) öğesini güncelleştirmek için gereken süre gösterilmektedir. İlk satırdaki sayı, clr <xref:System.Collections.Generic.List%601> nesnesi <xref:System.Windows.Controls.ListBox> öğenin öğesine <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>bağlandığında geçen süreyi temsil eder. İkinci satırdaki sayı, bir <xref:System.Collections.ObjectModel.ObservableCollection%601> <xref:System.Windows.Controls.ListBox> öğe öğesine <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>bağlandığında geçen süreyi temsil eder. <xref:System.Collections.ObjectModel.ObservableCollection%601> Veri bağlama stratejisini kullanarak önemli zaman tasarruflarını aklınızda edin.  
   
-|**Veri ItemsSource bağlama**|**Güncelleştirme 1 için süresi (ms) öğesi**|  
+|**ItemSource verileri bağlama**|**1 öğe için güncelleştirme zamanı (MS)**|  
 |--------------------------------------|---------------------------------------|  
-|İçin bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> nesnesi|1656|  
-|İçin bir <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
+|Bir clr <xref:System.Collections.Generic.List%601> nesnesine|1656|  
+|Bir<xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
   
 <a name="Binding_IList_to_ItemsControl_not_IEnumerable"></a>   
-## <a name="bind-ilist-to-itemscontrol-not-ienumerable"></a>IList değil IEnumerable ItemsControl için bağlama  
- Bağlama arasında seçim yapma varsa bir <xref:System.Collections.Generic.IList%601> veya <xref:System.Collections.IEnumerable> için bir <xref:System.Windows.Controls.ItemsControl> nesne öğesini <xref:System.Collections.Generic.IList%601> nesne. Bağlama <xref:System.Collections.IEnumerable> için bir <xref:System.Windows.Controls.ItemsControl> zorlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir sarmalayıcı oluşturmak için <xref:System.Collections.Generic.IList%601> nesnesidir performansınızı ikinci bir nesnesinin gereksiz yükü tarafından etkilenen anlamına gelir.  
+## <a name="bind-ilist-to-itemscontrol-not-ienumerable"></a>IList 'i ıtem' öğesine bağlama IEnumerable denetimi  
+ Bir <xref:System.Collections.Generic.IList%601> veya<xref:System.Windows.Controls.ItemsControl> bir nesnesine bağlama arasında bir seçeneğiniz varsa <xref:System.Collections.Generic.IList%601> nesneyi seçin. <xref:System.Collections.IEnumerable> Bir <xref:System.Collections.IEnumerable> <xref:System.Windows.Controls.ItemsControl> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sarmalayıcı nesnesioluşturmakiçinbirzorlamaylabağlama,budaPerformanslarınızınikincibirnesneningereksizekyükündenetkilenmesidir.<xref:System.Collections.Generic.IList%601>  
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
-## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>CLR nesnelerini yalnızca XML veri bağlama için yapın.  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] veri bağlama için verir [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] içerik; ancak, veri bağlama [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] içeriktir veri bağlama daha yavaş [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri. Dönüştürme işlemini [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] tek amacı, veri bağlama için ise XML veri nesnesi.  
+## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>Yalnızca veri bağlama için CLR nesnelerini XML 'e dönüştürmeyin.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] içeriğe veri bağlamayı sağlar; ancak [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] içeriğe veri bağlama, clr nesnelerine veri bağlamaktan daha yavaştır. Tek amaç veri bağlama için ise, CLR nesne verilerini XML 'e dönüştürmeyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -83,4 +83,4 @@ ms.locfileid: "61773119"
 - [Metin](optimizing-performance-text.md)
 - [Diğer Performans Önerileri](optimizing-performance-other-recommendations.md)
 - [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)
-- [İzlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [İzlenecek yol: WPF uygulamasında uygulama verilerini önbelleğe alma](walkthrough-caching-application-data-in-a-wpf-application.md)

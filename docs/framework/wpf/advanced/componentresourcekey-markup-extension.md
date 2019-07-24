@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 93735d12426042fd6517c10a55d1a9bd32f906bb
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: b373b33fcc962e49aa220f31e24b1484a0a8cd98
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363064"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401595"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey Biçimlendirme Uzantısı
 Dış derlemelerden yüklenen kaynaklar için anahtarlar tanımlar ve başvurur. Bu, bir derlemede veya bir sınıftaki açık kaynak sözlüğü yerine bir derlemede hedef türü belirtmesini sağlar.  
@@ -46,7 +46,7 @@ Dış derlemelerden yüklenen kaynaklar için anahtarlar tanımlar ve başvurur.
   
 |||  
 |-|-|  
-|`targetTypeName`|Kaynak derlemesinde tanımlanan ortak [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] türün adı.|  
+|`targetTypeName`|Kaynak derlemesinde tanımlanan ortak ortak dil çalışma zamanı (CLR) türünün adı.|  
 |`targetID`|Kaynak için anahtar. Kaynaklar arandığında, `targetID` kaynağın [x:Key yönergesine](../../xaml-services/x-key-directive.md) benzer olacaktır.|  
   
 ## <a name="remarks"></a>Açıklamalar  

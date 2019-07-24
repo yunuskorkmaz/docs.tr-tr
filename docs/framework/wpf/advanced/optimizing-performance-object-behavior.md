@@ -1,5 +1,5 @@
 ---
-title: 'Performansı iyileştirme: Nesne Davranışı'
+title: 'Performansı İyileştirme: Nesne Davranışı'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,99 +11,99 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-ms.openlocfilehash: 49318059435c5f5669510f7cf3fb7c93a4bc05e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 025c8691eb1aaf9483a222530a5590670ede486b
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773015"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400472"
 ---
-# <a name="optimizing-performance-object-behavior"></a>Performansı iyileştirme: Nesne Davranışı
-İç davranışını anlamak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nesneleri işlevi ve performans arasında doğru avantajları yapmanıza yardımcı olur.  
+# <a name="optimizing-performance-object-behavior"></a>Performansı İyileştirme: Nesne Davranışı
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Nesnelerin iç davranışını anlamak, işlevsellik ve performans arasındaki doğru avantajları yapmanıza yardımcı olur.  
 
 <a name="Not_Removing_Event_Handlers"></a>   
-## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>Olay işleyicileri nesneler üzerinde nesneleri canlı olabilir  
- Bir nesne için kendi olay geçirdiği temsilci etkili bir şekilde bu nesneye bir başvurudur. Bu nedenle, olay işleyicileri nesneleri canlı beklenenden daha uzun tutabilirsiniz. Bir nesnenin olayına dinlemek için kayıtlı olan bir nesne temizleme gerçekleştirirken nesneyi serbest bırakmadan önce bu temsilciyi kaldırmak için gereklidir. Gereksiz nesneleri canlı tutma uygulamanın bellek kullanımı artırır. Bu, özellikle nesne mantıksal ağaç veya görsel ağaç kökünde olduğunda geçerlidir.  
+## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>Nesneler üzerinde olay Işleyicilerini kaldırma, nesneleri canlı tutmaya devam edebilir  
+ Bir nesnenin olayına geçirdiği temsilci, bu nesneye etkin bir şekilde başvurur. Bu nedenle, olay işleyicileri nesneleri beklenenden uzun süre canlı tutabilirler. Bir nesnenin olayını dinlemek için kayıtlı olan bir nesnenin temizlenmesini gerçekleştirirken, nesneyi serbest bırakmadan önce o temsilciyi kaldırmak önemlidir. Gereksiz nesnelerin canlı tutulması, uygulamanın bellek kullanımını artırır. Nesne bir mantıksal ağacın veya görsel ağacın kökü olduğunda bu özellikle doğrudur.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Kaynak ve dinleyici nesne yaşam süresi ilişkilerini izlemek zor olduğu durumlarda kullanışlı olabilir olaylar için zayıf olay dinleyicisi desen tanıtır. Var olan bazı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olayları bu deseni kullanır. Özel olaylar nesneleriyle uyguluyorsanız, bu düzen, kullanımı olabilir. Ayrıntılar için bkz [zayıf olay desenleri](weak-event-patterns.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Kaynak ve dinleyici arasındaki nesne yaşam süresi ilişkilerinin izlemek zor olduğu durumlarda yararlı olabilecek olaylar için zayıf bir olay dinleyicisi deseninin kullanımını sağlar. Bazı mevcut [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olaylar bu kalıbı kullanır. Özel olaylar içeren nesneler uyguladığınızda, bu model sizin için kullanılabilir. Ayrıntılar için bkz. [zayıf olay desenleri](weak-event-patterns.md).  
   
- CLR Profiler ve çalışma kümesi belirtilen işlem bellek kullanımı hakkında bilgi sağlayan Görüntüleyicisi, gibi birçok araç vardır. CLR Profiler çok kullanışlı bir histogram ayrılmış türler, ayırma ve çağrı grafikleri, çöp koleksiyonlarının çeşitli nesiller ve sonra yönetilen yığın elde edilen durumunu gösteren bir zaman çizgisi'dahil olmak üzere ayırma profili görünümlerini içerir Bu koleksiyonlar ve yöntem başına yüklemeleri ve derleme yüklerini gösteren bir çağrı ağacı. Daha fazla bilgi için [.NET Framework Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=117435).  
+ CLR Profiler ve çalışma kümesi Görüntüleyicisi gibi çeşitli araçlar vardır. Bu, belirtilen bir işlemin bellek kullanımı hakkında bilgi sağlar. CLR Profiler, ayrılmış türlerin bir histogramı, ayırma ve çağrı grafikleri dahil olmak üzere ayırma profilinin çok sayıda kullanışlı görünümünü içerir. Bu, çeşitli nesiller atık koleksiyonlarını ve sonrasında yönetilen yığının sonuç durumunu gösteren bir zaman çizgisi içerir Bu koleksiyonlar ve yöntem başına ayırmaları ve derleme yüklerini gösteren bir çağrı ağacı. Daha fazla bilgi için bkz. [.NET Framework Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=117435).  
   
 <a name="DPs_and_Objects"></a>   
 ## <a name="dependency-properties-and-objects"></a>Bağımlılık özellikleri ve nesneler  
- Genel olarak, bir bağımlılık özelliği erişen bir <xref:System.Windows.DependencyObject> erişme daha yavaş değil bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] özelliği. Bir özellik değerini ayarlamak için ek yükü küçük bir performans olsa da, bir değer alma değerini alma olarak hızlı bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] özelliği. Küçük bir performans yükü mahsubu bağımlılık özellikleri, veri bağlama, animasyon, devralma ve stil gibi güçlü özellikleri desteklediğini gerçeğidir. Daha fazla bilgi için [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md).  
+ Genel olarak, bir <xref:System.Windows.DependencyObject> bağımlılık özelliğine erişim bir CLR özelliğine erişmekten daha yavaş değildir. Bir özellik değerini ayarlamaya yönelik küçük bir performans yükü olsa da, bir değeri almak bir CLR özelliğinden değer elde etmek kadar hızlıdır. Küçük performans yükünün mahsuplanması, bağımlılık özelliklerinin veri bağlama, animasyon, devralma ve stil oluşturma gibi güçlü özellikleri desteklemesidir. Daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md).  
   
-### <a name="dependencyproperty-optimizations"></a>DependencyProperty en iyi duruma getirme  
- Uygulamanızda, bağımlılık özellikleri'ni çok dikkatli bir şekilde tanımlamanız gerekir. Varsa, <xref:System.Windows.DependencyProperty> etkiler, yalnızca işleme diğer meta veri seçenekleri yerine türü meta verileri seçenekleri gibi <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, bu nedenle, meta verileri geçersiz kılarak işaretlemeniz gerekir. Geçersiz kılma veya özellik meta verileri alma hakkında daha fazla bilgi için bkz. [bağımlılık özelliği meta verisi](dependency-property-metadata.md).  
+### <a name="dependencyproperty-optimizations"></a>DependencyProperty Iyileştirmeleri  
+ Uygulamanızda bağımlılık özelliklerini dikkatle tanımlamanız gerekir. Gibi diğer meta veri seçenekleri <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>yerine yalnızca işleme türü meta veri seçeneklerini etkiliyorsa,metaverilerinigeçersizkılarakbuşekildeişaretlemenizgerekir.<xref:System.Windows.DependencyProperty> Özellik meta verilerini geçersiz kılma veya alma hakkında daha fazla bilgi için bkz. [bağımlılık özelliği meta verileri](dependency-property-metadata.md).  
   
- Bir özellik değişiklik işleyici ölçüsü geçersiz, düzenlemek ve geçişleri el ile işlemek için daha verimli olabilir değilse tüm özellik değişiklikleri gerçekten ölçü etkiler, düzenlemek ve işleyin. Örneğin, yalnızca bir değer kümesi sınırdan daha büyük olduğunda yeniden arka plan işlemesi karar verebilirsiniz. Bu durumda, özellik değişiklik işleyicisi yalnızca değer kümesi sınırınızı aştığında işlemeyi geçersiz kılar.  
+ Tüm özellik değişiklikleri ölçü, düzenleme ve işlemeyi etkilemediği takdirde, bir özellik değişikliği işleyicisinin ölçüyü, düzenlemeyi ve işlemeyi el ile geçersiz kılması daha verimli olabilir. Örneğin, bir arka planı yalnızca bir değer ayarlanan sınırdan daha büyük olduğunda yeniden işlemeye karar verebilirsiniz. Bu durumda, özellik değişikliği işleyiciniz yalnızca değer ayarlanan sınırı aştığında işlemeyi geçersiz kılar.  
   
-### <a name="making-a-dependencyproperty-inheritable-is-not-free"></a>Bir DependencyProperty devralınabilir yapmak uygun değildir  
- Varsayılan olarak, kayıtlı bir bağımlılık özellikleri devralınamaz. Ancak, açıkça herhangi bir özelliği devralınabilir yapabilirsiniz. Bu yararlı bir özellik olsa da, devralınabilir üzere bir özelliğe dönüştürme özelliği geçersiz kılma süreyi artırarak performansını etkiler.  
+### <a name="making-a-dependencyproperty-inheritable-is-not-free"></a>DependencyProperty devralınabilir hale getirme işlemi ücretsizdir  
+ Varsayılan olarak, kayıtlı bağımlılık özellikleri devralınamaz. Ancak, herhangi bir özelliği açıkça devralınabilir yapabilirsiniz. Bu kullanışlı bir özellik olsa da, bir özelliğin devralınabilir olarak dönüştürülmesi, özellik geçersiz kılma süresini artırarak performansı etkiler.  
   
-### <a name="use-registerclasshandler-carefully"></a>RegisterClassHandler'ı dikkatli kullanın  
- Çağrılırken <xref:System.Windows.EventManager.RegisterClassHandler%2A> , örnek durumu kaydetmenize olanak tanır, işleyici performans sorunlarına neden olabilir her örneğinde çağrılır dikkat etmeniz önemlidir. Yalnızca <xref:System.Windows.EventManager.RegisterClassHandler%2A> uygulamanızı gerektirdiğinde, örnek durumu kaydedin.  
+### <a name="use-registerclasshandler-carefully"></a>RegisterClassHandler 'i dikkatle kullanın  
+ Çağırma <xref:System.Windows.EventManager.RegisterClassHandler%2A> işlemi, örnek durumlarınızı kaydetmenize izin verdiğinden, işleyicinin her örnekte çağrıldığından, performans sorunlarına neden olabilecek şekilde farkında olmak önemlidir. Yalnızca uygulamanızın <xref:System.Windows.EventManager.RegisterClassHandler%2A> örnek durumunu kaydetmenizi gerektirdiğinde kullanın.  
   
-### <a name="set-the-default-value-for-a-dependencyproperty-during-registration"></a>Kayıt sırasında bir DependencyProperty için varsayılan değer ayarlama  
- Oluştururken bir <xref:System.Windows.DependencyProperty> gerektiren bir varsayılan değer, bir parametre olarak geçirilen varsayılan meta verileri kullanarak ayarlayın <xref:System.Windows.DependencyProperty.Register%2A> yöntemi <xref:System.Windows.DependencyProperty>. Bir oluşturucu ya da her bir öğenin örneğini özellik değerini ayarlamak yerine bu tekniği kullanın.  
+### <a name="set-the-default-value-for-a-dependencyproperty-during-registration"></a>Kayıt sırasında DependencyProperty için varsayılan değeri ayarlama  
+ Varsayılan değer gerektiren <xref:System.Windows.DependencyProperty> bir oluştururken, bir parametresi <xref:System.Windows.DependencyProperty.Register%2A> <xref:System.Windows.DependencyProperty>olarak geçirilen varsayılan meta verileri kullanarak değerini ayarlayın. Bir oluşturucuda veya bir öğenin her örneğindeki özellik değerini ayarlamak yerine bu tekniği kullanın.  
   
-### <a name="set-the-propertymetadata-value-using-register"></a>Yazmaç Kullanarak PropertyMetadata değerini ayarlayın  
- Oluştururken bir <xref:System.Windows.DependencyProperty>, ayarı seçeneğiniz <xref:System.Windows.PropertyMetadata> kullanarak <xref:System.Windows.DependencyProperty.Register%2A> veya <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> yöntemleri. Nesnenizin çağırmak için bir statik Oluşturucu sahip, ancak <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, bu en iyi çözüm değildir ve performansını etkiler. En iyi performans için ayarlanmış <xref:System.Windows.PropertyMetadata> çağrı sırasında <xref:System.Windows.DependencyProperty.Register%2A>.  
+### <a name="set-the-propertymetadata-value-using-register"></a>Register kullanarak PropertyMetadata değerini ayarlama  
+ Bir <xref:System.Windows.DependencyProperty>oluştururken, <xref:System.Windows.DependencyProperty.Register%2A> ya <xref:System.Windows.PropertyMetadata> da<xref:System.Windows.DependencyProperty.OverrideMetadata%2A> yöntemlerini kullanarak ayarlama seçeneğiniz vardır. Nesneniz çağırmak <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>için bir statik oluşturucuya sahip olsa da, bu en iyi çözüm değildir ve performansı etkiler. En iyi performans için, <xref:System.Windows.PropertyMetadata> <xref:System.Windows.DependencyProperty.Register%2A>çağrısı sırasında öğesini ayarlayın.  
   
 <a name="Freezable_Objects"></a>   
 ## <a name="freezable-objects"></a>Freezable nesneleri  
- A <xref:System.Windows.Freezable> iki durumlu nesnesi özel bir türdür: çözülmüş ve donmuş. Mümkün olduğunda nesneleri dondurma uygulamanızın performansını artırır ve çalışma kümesi azaltır. Daha fazla bilgi için [Freezable nesnelerine genel bakış](freezable-objects-overview.md).  
+ <xref:System.Windows.Freezable> , İki durumu olan özel bir nesne türüdür: dondurulmamış ve dondurulmuş. Mümkün olduğunda nesneleri dondurmak, uygulamanızın performansını geliştirir ve çalışma kümesini azaltır. Daha fazla bilgi için bkz. [Freezable nesnelerine genel bakış](freezable-objects-overview.md).  
   
- Her <xref:System.Windows.Freezable> sahip bir <xref:System.Windows.Freezable.Changed> değiştiğinde olayı. Ancak, değişiklik bildirimleri uygulama performans açısından maliyetlidir.  
+ Her <xref:System.Windows.Freezable> birinin her <xref:System.Windows.Freezable.Changed> değişiklik yapıldığında oluşan bir olayı vardır. Ancak, değişiklik bildirimleri uygulama performansı açısından maliyetlidir.  
   
- Aşağıdaki örnek her göz önünde bulundurun <xref:System.Windows.Shapes.Rectangle> ndedir <xref:System.Windows.Media.Brush> nesnesi:  
+ Her birinin <xref:System.Windows.Shapes.Rectangle> aynı <xref:System.Windows.Media.Brush> nesneyi kullandığı aşağıdaki örneği göz önünde bulundurun:  
   
  [!code-csharp[Performance#PerformanceSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet2)]
  [!code-vb[Performance#PerformanceSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet2)]  
   
- Varsayılan olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] için bir olay işleyicisi sağlar <xref:System.Windows.Media.SolidColorBrush> nesnenin <xref:System.Windows.Freezable.Changed> geçersiz kılmak için olay <xref:System.Windows.Shapes.Rectangle> nesnenin <xref:System.Windows.Shapes.Shape.Fill%2A> özelliği. Bu durumda, her zaman <xref:System.Windows.Media.SolidColorBrush> ateşlenmesine sahip kendi <xref:System.Windows.Freezable.Changed> gereken her biri için geri çağırma işlevi çağrılacak olay <xref:System.Windows.Shapes.Rectangle>— bu geri çağırma işlevi etkinleştirmeleri gerekir, önemli bir performans cezası büyük oranda yansıtmaktadır. Ayrıca, çok performans eklemek ve uygulama Bunu yapmak için listenin tamamını geçirmek zorunda olduğundan işleyicileri bu noktada kaldırmak için yoğun olduğundan. Uygulama senaryonuzu hiçbir zaman değişirse <xref:System.Windows.Media.SolidColorBrush>, bakım maliyetini ödeme <xref:System.Windows.Freezable.Changed> olay işleyicileri gereksiz.  
+ Varsayılan olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nesnenin <xref:System.Windows.Shapes.Shape.Fill%2A> özelliğini geçersiz kılmak <xref:System.Windows.Shapes.Rectangle> için <xref:System.Windows.Media.SolidColorBrush> nesnenin <xref:System.Windows.Freezable.Changed> olayı için bir olay işleyicisi sağlar. Bu durumda, her seferinde <xref:System.Windows.Media.SolidColorBrush> <xref:System.Windows.Freezable.Changed> olayını her tetiklemesi gerektiğinde <xref:System.Windows.Shapes.Rectangle>, bu geri çağırma işlevinin birikmesi, önemli bir performans cezası uygular. Buna ek olarak, bu noktada işleyicileri eklemek ve kaldırmak çok performansa sahiptir çünkü uygulamanın tüm listeyi gezmeleri gerekir. Uygulama senaryonuz hiçbir şekilde hiçbir şekilde değişiklik <xref:System.Windows.Media.SolidColorBrush>görmüyorsa, etkinlik işleyicilerinin gereksiz bir şekilde sürdürülmesi <xref:System.Windows.Freezable.Changed> için ücret ödeirsiniz.  
   
- Dondurma bir <xref:System.Windows.Freezable> değişiklik bildirimleri koruma şirket kaynakları harcaması artık gerektiğinden, performansı geliştirebilir. Aşağıdaki tablo basit bir boyutunu gösterir <xref:System.Windows.Media.SolidColorBrush> olduğunda kendi <xref:System.Windows.Freezable.IsFrozen%2A> özelliği `true`, edilmediğinde karşılaştırıldığında. Bu uygulama için bir fırça varsayar <xref:System.Windows.Shapes.Shape.Fill%2A> on özelliği <xref:System.Windows.Shapes.Rectangle> nesneleri.  
+ Değişiklik bildirimlerinin <xref:System.Windows.Freezable> korunmasıyla ilgili kaynakları daha iyi bir şekilde almak zorunda olmadığından, bir değişikliği sürdürmek, performansını iyileştirebilir. Aşağıdaki tabloda, <xref:System.Windows.Media.SolidColorBrush> <xref:System.Windows.Freezable.IsFrozen%2A> özelliği özelliği olarak `true`ayarlandığında, ne zaman olduğu ile karşılaştırıldığında bir basit öğesinin boyutu gösterilmektedir. Bu, <xref:System.Windows.Shapes.Shape.Fill%2A> on <xref:System.Windows.Shapes.Rectangle> nesnenin özelliğine bir fırça uygulayan olduğunu varsayar.  
   
-|**State**|**Boyutu**|  
+|**State**|**Boyutla**|  
 |---------------|--------------|  
-|Dondurulmuş <xref:System.Windows.Media.SolidColorBrush>|212 bayt|  
-|Olmayan dondurulmuş <xref:System.Windows.Media.SolidColorBrush>|972 bayt|  
+|Lamadığı<xref:System.Windows.Media.SolidColorBrush>|212 bayt|  
+|Dondurulmuş olmayan<xref:System.Windows.Media.SolidColorBrush>|972 bayt|  
   
- Aşağıdaki kod örneği, bu kavramı gösterir:  
+ Aşağıdaki kod örneği bu kavramı göstermektedir:  
   
  [!code-csharp[Performance#PerformanceSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet3)]
  [!code-vb[Performance#PerformanceSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet3)]  
   
-### <a name="changed-handlers-on-unfrozen-freezables-may-keep-objects-alive"></a>Çözülmüş Freezable nesneleri değiştirilen işleyicileri nesneleri canlı olabilir  
- Bir nesne geçirir temsilci bir <xref:System.Windows.Freezable> nesnenin <xref:System.Windows.Freezable.Changed> olaydır etkili bir şekilde, bu nesneye bir başvuru. Bu nedenle, <xref:System.Windows.Freezable.Changed> olay işleyicileri etkin tutma nesneleri beklenenden daha uzun. Temizleme dinlemek için kayıtlı olan bir nesnenin gerçekleştirirken bir <xref:System.Windows.Freezable> nesnenin <xref:System.Windows.Freezable.Changed> olayı olduğu nesneyi serbest bırakmadan önce bu temsilciyi kaldırmak için gerekli.  
+### <a name="changed-handlers-on-unfrozen-freezables-may-keep-objects-alive"></a>Dondurulmamış Freezable nesneleri üzerinde değiştirilen Işleyiciler nesneleri canlı tutamayabilir  
+ Bir nesnenin bir <xref:System.Windows.Freezable> <xref:System.Windows.Freezable.Changed> nesnenin olayına geçirdiği temsilci, bu nesneye etkin bir şekilde başvurur. Bu nedenle <xref:System.Windows.Freezable.Changed> , olay işleyicileri nesneleri beklenenden uzun süre canlı tutabilirler. <xref:System.Windows.Freezable> Bir<xref:System.Windows.Freezable.Changed> nesnenin olayını dinlemek için kayıtlı olan bir nesnenin temizlenmesini gerçekleştirirken, nesneyi serbest bırakmadan önce o temsilciyi kaldırmak önemlidir.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca <xref:System.Windows.Freezable.Changed> olayları dahili olarak. Örneğin, ele tüm bağımlılık özellikleri <xref:System.Windows.Freezable> gibi bir değer dinleyeceği <xref:System.Windows.Freezable.Changed> olayları otomatik olarak. <xref:System.Windows.Shapes.Shape.Fill%2A> Alan, özelliği bir <xref:System.Windows.Media.Brush>, bu kavramı gösterir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Ayrıca <xref:System.Windows.Freezable.Changed> olayları dahili olarak takar. Örneğin, bir değer <xref:System.Windows.Freezable> olarak kullanan tüm bağımlılık özellikleri, <xref:System.Windows.Freezable.Changed> olayları otomatik olarak dinler. ' I<xref:System.Windows.Media.Brush>alan özelliğibukavramıgösterir.<xref:System.Windows.Shapes.Shape.Fill%2A>  
   
  [!code-csharp[Performance#PerformanceSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
  [!code-vb[Performance#PerformanceSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
   
- ' In `myBrush` için `myRectangle.Fill`, geri işaret eden bir temsilci <xref:System.Windows.Shapes.Rectangle> nesne eklenecek <xref:System.Windows.Media.SolidColorBrush> nesnenin <xref:System.Windows.Freezable.Changed> olay. Aşağıdaki kodu gerçekten yapmaz yani `myRect` çöp toplama işlemi için uygun:  
+ `myRectangle.Fill`' A atama `myBrush` üzerinde, nesnesine geri <xref:System.Windows.Shapes.Rectangle> işaret eden bir temsilci <xref:System.Windows.Media.SolidColorBrush> nesnenin <xref:System.Windows.Freezable.Changed> olayına eklenecektir. Bu, aşağıdaki kodun gerçekte çöp toplama için uygun `myRect` hale getirmediği anlamına gelir:  
   
  [!code-csharp[Performance#PerformanceSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet5)]
  [!code-vb[Performance#PerformanceSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet5)]  
   
- Bu durumda `myBrush` hala tutma `myRectangle` etkin tutulan bağlantıyı destekliyorsa ve bunu başlatıldığında geri için çağırır, <xref:System.Windows.Freezable.Changed> olay. İşaretlemediğine dikkat edin `myBrush` için <xref:System.Windows.Shapes.Shape.Fill%2A> yeni bir özellik <xref:System.Windows.Shapes.Rectangle> yalnızca başka bir olay işleyicisine ekler `myBrush`.  
+ Bu durumda `myBrush` , `myRectangle` hala etkin olmaya devam eder ve <xref:System.Windows.Freezable.Changed> olayını harekete çağırdığınızda geri çağırır. Yeni `myBrush` <xref:System.Windows.Shapes.Shape.Fill%2A> bir özelliğine atama, ' ye `myBrush`yalnızca başka bir olay işleyicisi ekleneceğini unutmayın. <xref:System.Windows.Shapes.Rectangle>  
   
- Bu tür nesneler temizlemek için önerilen yöntem kaldırmaktır <xref:System.Windows.Media.Brush> gelen <xref:System.Windows.Shapes.Shape.Fill%2A> sırayla kaldıracak özelliği <xref:System.Windows.Freezable.Changed> olay işleyicisi.  
+ Bu nesne türlerini temizlemek için önerilen yol, <xref:System.Windows.Media.Brush> <xref:System.Windows.Shapes.Shape.Fill%2A> özelliği içinden <xref:System.Windows.Freezable.Changed> kaldırılacağından olay işleyicisini de kaldırır.  
   
  [!code-csharp[Performance#PerformanceSnippet6](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet6)]
  [!code-vb[Performance#PerformanceSnippet6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet6)]  
   
 <a name="User_Interface_Virtualization"></a>   
 ## <a name="user-interface-virtualization"></a>Kullanıcı arabirimi sanallaştırma  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca bir çeşitlemesi sağlar <xref:System.Windows.Controls.StackPanel> otomatik olarak "sanallaştırır verilere bağlı alt içeriğin" öğesi. Sözcüğü bu bağlamda sanallaştırmak tarafından bir alt nesnelerin oluşturulduğu çok sayıda veri öğelerinin hangi öğelerin ekranda görülebilir olduğuna göre bir teknik ifade eder. Bu, hem bellek ve yalnızca birkaç belirli bir zamanda ekranda olabilir, çok sayıda UI öğesi oluşturmak için işlemci açısından yoğun bir işlemdir. <xref:System.Windows.Controls.VirtualizingStackPanel> (tarafından sağlanan işlevsellik aracılığıyla <xref:System.Windows.Controls.VirtualizingPanel>) görünen öğeler hesaplar ve çalışır <xref:System.Windows.Controls.ItemContainerGenerator> gelen bir <xref:System.Windows.Controls.ItemsControl> (gibi <xref:System.Windows.Controls.ListBox> veya <xref:System.Windows.Controls.ListView>) yalnızca görünür öğeler için oluşturulacak.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Ayrıca, <xref:System.Windows.Controls.StackPanel> veri bağlantılı alt içeriği otomatik olarak "sanallaştırın" bir öğe çeşitlemesi sağlar. Bu bağlamda, sanalbir sözcük, nesnelerin bir alt kümesinin ekranda görünür olduğu çok sayıda veri öğesinden oluşturulduğu bir tekniğe başvurur. Belirli bir zamanda ekranda yalnızca birkaç tane olabilir, çok sayıda UI öğesi oluşturmak için hem bellek hem de işlemci bakımından yoğun bir şekilde yoğundur. <xref:System.Windows.Controls.VirtualizingStackPanel>( <xref:System.Windows.Controls.VirtualizingPanel>tarafından sunulan işlevsellik aracılığıyla) görünür öğeleri hesaplar ve ' <xref:System.Windows.Controls.ListBox> <xref:System.Windows.Controls.ItemContainerGenerator> den <xref:System.Windows.Controls.ItemsControl> (veya <xref:System.Windows.Controls.ListView>gibi) ile birlikte çalışarak yalnızca görünür öğeler için öğeleri oluşturur.  
   
- Performans iyileştirme, bu öğeler için görsel nesneler yalnızca oluşturulan veya ekranda görünür durumdaysa Canlı tutulur. Görsel nesneler artık denetim görüntülenebilir alanında olmaları durumunda kaldırılabilir. Nereye veri nesnelerini yerel koleksiyonu yerine gerektiği gibi akışla-tüm mevcut olmayan verileri sanallaştırma ile karıştırılmamalıdır budur.  
+ Performans iyileştirmesi olarak, bu öğelerin görsel nesneleri yalnızca ekranda görünür durumdaysa oluşturulur veya etkin tutulur. Artık denetimin görüntülenebilir alanında olmadığında görsel nesneler kaldırılabilir. Bu, veri nesnelerinin, gerekli olduğu gibi akan şekilde yerel koleksiyonda bulunmadığı veri sanallaştırmayla karıştırılmamalıdır.  
   
- Aşağıdaki tablo ekleme ve 5000 işleme geçen süreyi gösterir <xref:System.Windows.Controls.TextBlock> öğelerine bir <xref:System.Windows.Controls.StackPanel> ve <xref:System.Windows.Controls.VirtualizingStackPanel>. Bu senaryoda, ölçümler için bir metin dizesi ekleme arasındaki zamanı temsil eder. <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> özelliği bir <xref:System.Windows.Controls.ItemsControl> panel öğeleri metin dizesi görüntülediğinizde zamana nesne.  
+ Aşağıdaki tabloda, bir <xref:System.Windows.Controls.TextBlock> <xref:System.Windows.Controls.StackPanel> ve ' <xref:System.Windows.Controls.VirtualizingStackPanel>a 5000 öğeleri ekleme ve işleme geçen süre gösterilmektedir. Bu senaryoda ölçümler, bir <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> <xref:System.Windows.Controls.ItemsControl> nesnenin özelliğine metin dizesi ekleme arasındaki süreyi, panel öğelerinin metin dizesini görüntülemesi için zaman gösterir.  
   
-|**Konak paneli**|**İşleme süresi (ms)**|  
+|**Ana bilgisayar paneli**|**İşleme süresi (MS)**|  
 |--------------------|----------------------------|  
 |<xref:System.Windows.Controls.StackPanel>|3210|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
