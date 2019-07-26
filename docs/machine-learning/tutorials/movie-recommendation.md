@@ -1,100 +1,100 @@
 ---
-title: 'Öğretici: Bir film öneren - matris factorization oluşturun'
-description: Bu öğreticide bir .NET Core konsol uygulaması içinde bir film öneren ML.NET ile derleme gösterilmektedir. Adımları C# ve Visual Studio 2019.
+title: 'Öğretici: Film oluşturma öneren-matris oluşturma'
+description: Bu öğreticide, bir .NET Core konsol uygulamasında ML.NET ile bir film öneren oluşturma yöntemi gösterilmektedir. Adımları ve Visual C# Studio 2019 ' i kullanın.
 author: briacht
 ms.author: johalex
 ms.date: 07/09/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: bf04f5a098bd2c378a2b73d7684eb74e16feb728
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b58afca0671468d3e981c7615e0af1c0f8ae632f
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779043"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331661"
 ---
-# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Öğretici: Matris factorizaton ML.NET ile kullanarak bir film öneren oluşturun
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Öğretici: ML.NET ile matris factorizaton kullanarak bir film öneren oluşturun
 
-Bu öğreticide bir .NET Core konsol uygulaması içinde bir film öneren ML.NET ile derleme gösterilmektedir. Adımları C# ve Visual Studio 2019.
+Bu öğreticide, bir .NET Core konsol uygulamasında ML.NET ile bir film öneren oluşturma yöntemi gösterilmektedir. Adımları ve Visual C# Studio 2019 ' i kullanın.
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
-> * Bir machine learning algoritması seçin
-> * Verilerinizi yüklemek ve hazırlamak
-> * Yapı ve model eğitme
-> * Bir modeli değerlendirme
-> * Dağıtma ve bir modeli kullanma
+> * Makine öğrenimi algoritması seçin
+> * Verilerinizi hazırlayın ve yükleyin
+> * Model oluşturma ve eğitme
+> * Modeli değerlendirme
+> * Bir modeli dağıtma ve kullanma
 
-Bu öğreticide kaynak kodunu bulabilirsiniz [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) depo.
+Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) deposunda bulabilirsiniz.
 
-## <a name="machine-learning-workflow"></a>Machine learning iş akışı
+## <a name="machine-learning-workflow"></a>Machine Learning iş akışı
 
-Göreviniz yanı sıra diğer ML.NET görev gerçekleştirmek için aşağıdaki adımları kullanın:
+Görevinizi ve diğer ML.NET görevlerini gerçekleştirmek için aşağıdaki adımları kullanacaksınız:
 
-1. [Veri yükleme](#load-your-data)
-2. [Derleme ve modelinizi eğitin](#build-and-train-your-model)
-3. [Modelinizi değerlendir](#evaluate-your-model)
+1. [Verilerinizi yükleme](#load-your-data)
+2. [Modelinizi derleyin ve eğitme](#build-and-train-your-model)
+3. [Modelinizi değerlendirin](#evaluate-your-model)
 4. [Modelinizi kullanın](#use-your-model)
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* [Visual Studio 2017 15.6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) yüklü ".NET Core çoklu platform geliştirme" iş yüküyle birlikte sağlanır.
+* [Visual Studio 2017 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>Uygun makine öğrenimi görevini seçin
 
-Öneri sorunları, filmler listesini önerme veya ilgili ürünler listesi öneren gibi yaklaşan çeşitli yolları vardır, ancak derecelendirme hangi (1-5) bir kullanıcı belirli bir filmi verin ve da ise, film önerir. Bu durumda tahmin tanımlı bir eşiğin (yüksek derecelendirme, bir kullanıcı belirli bir filmi özelleştirebilir olma olasılığı daha) daha yüksek.
+Bir film listesi önermek veya ilgili ürünlerin bir listesini önermek gibi öneri sorunlarına yaklaşımak için birkaç yol vardır. Bu durumda, bir kullanıcının belirli bir filmi hangi derecelendirmeye sunduu (1-5) tahmin edecek ve bu filmin tanımlı eşikten yüksek (derecelendirme arttıkça, bir kullanıcının belirli bir filmi beğenme olasılığı yüksektir).
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
 ### <a name="create-a-project"></a>Proje oluşturma
 
-1. Visual Studio 2017'yi açın. Seçin **dosya** > **yeni** > **proje** menü çubuğundan. İçinde **yeni proje** iletişim kutusunda **Visual C#** düğümünü ve ardından **.NET Core** düğümü. Ardından **konsol uygulaması (.NET Core)** proje şablonu. İçinde **adı** metin kutusuna "MovieRecommender" yazın ve ardından **Tamam** düğmesi.
+1. Visual Studio 2017'yi açın. Menü çubuğundan **Dosya** > **Yeni** > **Proje** ' yi seçin. **Yeni proje** iletişim kutusunda,  **C# Visual** düğümünü ve ardından **.NET Core** düğümünü seçin. Ardından **konsol uygulaması (.NET Core)** proje şablonunu seçin. **Ad** metin kutusuna "MovieRecommender" yazın ve **Tamam** düğmesini seçin.
 
-2. Adlı bir dizin oluşturmak *veri* projenizdeki veri kümesi depolamak için:
+2. Veri kümesini depolamak için projenizde *veri* adlı bir dizin oluşturun:
 
-    İçinde **Çözüm Gezgini**, projeye sağ tıklayıp seçin **Ekle** > **yeni klasör**. "Veri" yazın ve Enter tuşuna basın.
+    **Çözüm Gezgini**, projeye sağ tıklayın ve**Yeni klasör** **Ekle** > ' yi seçin. "Data" yazın ve ENTER tuşuna basın.
 
-3. Yükleme **Microsoft.ML** ve **Microsoft.ML.Recommender** NuGet paketleri:
+3. **Microsoft.ml** ve **Microsoft. ml. öneren** NuGet paketlerini yükler:
 
-    İçinde **Çözüm Gezgini**, projeye sağ tıklayıp seçin **NuGet paketlerini Yönet**. Paket kaynağı, seçin "nuget.org" seçin **Gözat** sekmesinde, arama **Microsoft.ML**, listeden bir paket seçin ve seçin **yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz. Bu adımı yineleyin **Microsoft.ML.Recommender**.
+    **Çözüm Gezgini**, projeye sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, **Araştır** sekmesini seçin, **Microsoft.ml**için arama yapın, listeden paketi seçin ve sonra da **Install** düğmesini seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin. **Microsoft. ml. öneren**için bu adımları tekrarlayın.
 
-4. Aşağıdaki `using` en üstündeki deyimleri, *Program.cs* dosyası:
+4. *Program.cs* dosyanızın en `using` üstüne aşağıdaki deyimleri ekleyin:
 
     [!code-csharp[UsingStatements](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#UsingStatements "Add necessary usings")]
 
 ### <a name="download-your-data"></a>Verilerinizi indirin
 
-1. İki veri kümesi indirmek ve bunları kaydetmek *veri* daha önce oluşturduğunuz klasör:
+1. İki veri kümesini indirin ve daha önce oluşturduğunuz *veri* klasörüne kaydedin:
 
-   * Sağ tıklayın [ *öneri derecelendirmeleri train.csv* ](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv) seçip "bağlantısına (veya hedef) olarak kaydedin. …"
-   * Sağ tıklayın [ *öneri derecelendirmeleri test.csv* ](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv) seçip "bağlantısına (veya hedef) olarak kaydedin. …"
+   * [*Recommendation-Ratings-train. csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv) ' ye sağ tıklayın ve "bağlantıyı (veya hedefi) farklı kaydet" i seçin.
+   * [*Recommendation-Ratings-test. csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv) ' ye sağ tıklayın ve "bağlantıyı (veya hedefi) farklı kaydet" i seçin.
 
-     Ya da kaydettiğinizden emin olun \*.csv dosyalarını *veri* klasöründe veya başka bir yerde kaydettikten sonra taşıma \*.csv dosyalarını *veri* klasör.
+     \*. Csv dosyalarını *veri* klasörüne kaydettiğinizden emin olun veya \*başka bir yere kaydettikten sonra. csv dosyalarını *veri* klasörüne taşıyın.
 
-2. Her bir Çözüm Gezgini'nde sağ \*.csv dosyalarını ve select **özellikleri**. Altında **Gelişmiş**, değiştirin **çıkış dizinine Kopyala** için **yeniyse Kopyala**.
+2. Çözüm Gezgini, \*. csv dosyalarının her birine sağ tıklayın ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala**olarak değiştirin.
 
-   ![vs'de yeniyse Kopyala](./media/movie-recommendation/copytoout.gif)
+   ![VS 'de daha yeniyse kopyala](./media/movie-recommendation/copytoout.gif)
 
-## <a name="load-your-data"></a>Veri yükleme
+## <a name="load-your-data"></a>Verilerinizi yükleme
 
-ML.NET sürecinde ilk adım, hazırlama ve model eğitiminin ve test verilerinin yük sağlamaktır.
+ML.NET işlemindeki ilk adım, model eğitimi ve test verilerini hazırlamaktır ve yükler.
 
-Öneri derecelendirmeleri verileri bölün `Train` ve `Test` veri kümeleri. `Train` Veri modelinizi sığdırmak için kullanılır. `Test` Veri modeliniz eğitilen tahminlerde bulunabilir ve model performansını değerlendirme için kullanılır. Bölme bir 80/20 çok yaygındır `Train` ve `Test` veri.
+Öneri derecelendirme verileri `Train` , ve `Test` veri kümelerine ayrılır. `Train` Veriler modelinize uyacak şekilde kullanılır. Veriler `Test` , eğitilen modelinizdeki tahminleri yapmak ve model performansını değerlendirmek için kullanılır. `Train` Ve`Test` verileri içeren bir 80/20 bölünmesi yaygındır.
 
-Aşağıda verilerden önizlemesidir, \*.csv dosyaları:
+\*. Csv dosyalarınızda verilerin önizlemesi aşağıda verilmiştir:
 
-![Veri önizlemesi](./media/movie-recommendation/csv-dataset-preview.png)
+![verilerin önizlemesi](./media/movie-recommendation/csv-dataset-preview.png)
 
-İçinde \*.csv dosyalarını dört sütun vardır:
+\*. Csv dosyalarında dört sütun vardır:
 
 * `userId`
 * `movieId`
 * `rating`
 * `timestamp`
 
-Machine learning'de bir tahminde bulunmak için kullanılan sütun olarak adlandırılan [özellikleri](../resources/glossary.md#feature), ve döndürülen tahmin sütunla çağrılır [etiket](../resources/glossary.md#label).
+Machine Learning 'de, bir tahmin yapmak için kullanılan sütunlara [Özellikler](../resources/glossary.md#feature)denir ve döndürülen tahmine sahip olan sütuna [etiket](../resources/glossary.md#label)denir.
 
-Film derecelendirme Derecelendirme sütunu, bu nedenle tahmin etmek istediğiniz `Label`. Diğer üç sütun `userId`, `movieId`, ve `timestamp` tümü `Features` tahmin etmek için kullanılan `Label`.
+Film derecelendirmelerini tahmin etmek istiyorsunuz, bu nedenle Derecelendirme sütunu `Label`. Diğer üç `userId`sütun, `movieId`, ve `timestamp` `Features` , tahmin`Label`etmek için kullanılır.
 
 | Özellikler      | Etiketle         |
 | ------------- |:-------------:|
@@ -102,46 +102,46 @@ Film derecelendirme Derecelendirme sütunu, bu nedenle tahmin etmek istediğiniz
 | `movieId`      |               |
 | `timestamp`     |               |
 
-Hangi karar vermek için size kalmıştır `Features` tahmin etmek için kullanılan `Label`. Gibi yöntemleri de kullanabilirsiniz [özellik permütasyon önem](../how-to-guides/determine-global-feature-importance-in-model.md) en iyi seçme ile yardımcı olmak için `Features`.
+' İ `Features` `Label`tahmin etmek için ne kadar kullanıldığına karar verirsiniz. En iyi `Features`seçimi seçmenize yardımcı olmak Için [özellik permütasyon önem derecesi](../how-to-guides/determine-global-feature-importance-in-model.md) gibi yöntemleri de kullanabilirsiniz.
 
-Bu durumda, ortadan `timestamp` sütun olarak bir `Feature` zaman damgası gerçekten ne bir kullanıcı belirli bir filmi derecelendirir etkilemez ve böylece daha doğru bir tahmin yapmaya katkıda değil çünkü:
+Bu durumda, zaman damgası bir kullanıcının belirli `timestamp` bir filmi nasıl `Feature` derecelendirmediğini etkilemediği ve bu nedenle daha doğru bir tahmin yapmaya katkıda bulunmamasının gerektiği için sütunu bir olarak kaldırmanız gerekir:
 
 | Özellikler      | Etiketle         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
 | `movieId`      |               |
 
-Sonraki giriş sınıfı için data yapınız tanımlamanız gerekir.
+Ardından, giriş sınıfı için veri yapınızı tanımlamanız gerekir.
 
-Yeni bir sınıf, projenize ekleyin:
+Projenize yeni bir sınıf ekleyin:
 
-1. İçinde **Çözüm Gezgini**projeye sağ tıklayın ve ardından **Ekle > Yeni öğe**.
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **> yeni öğe Ekle**' yi seçin.
 
-2. İçinde **Yeni Öğe Ekle iletişim kutusu**seçin **sınıfı** değiştirip **adı** alanı *MovieRatingData.cs*. Ardından, **Ekle** düğmesi.
+2. **Yeni öğe Ekle iletişim kutusunda** **sınıf** ' ı seçin ve **ad** alanını *MovieRatingData.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 
-*MovieRatingData.cs* dosyası Kod Düzenleyicisi'nde açılır. Aşağıdaki `using` üstüne deyimi *MovieRatingData.cs*:
+*MovieRatingData.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki `using` ifadeyi *MovieRatingData.cs*öğesinin en üstüne ekleyin:
 
 ```csharp
 using Microsoft.ML.Data;
 ```
 
-Adlı bir sınıf oluşturmak `MovieRating` varolan sınıf tanımına kaldırma ve aşağıdaki kodu ekleyerek *MovieRatingData.cs*:
+Var olan sınıf tanımını `MovieRating` kaldırarak ve *MovieRatingData.cs*içinde aşağıdaki kodu ekleyerek adlı bir sınıf oluşturun:
 
 [!code-csharp[MovieRatingClass](~/samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
 
-`MovieRating` bir giriş veri sınıfı belirtir. [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) özniteliği (sütun dizini tarafından) veri kümesindeki sütunları yüklenmesi gerektiğini belirtir. `userId` Ve `movieId` sütunlar, `Features` (girişleri tahmin modelini sunacak `Label`), ve Derecelendirme sütunu `Label` (modelin çıkış) tahmin.
+`MovieRating`bir giriş veri sınıfını belirtir. [Loadcolumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) özniteliği, veri kümesindeki hangi sütunların (sütun dizinine göre) yükleneceğini belirtir. `userId` Ve `Label` sütunları (modelin tahmin`Label`edilmesine izin verilecek girişler) ve derecelendirme sütunu, tahmin ettiğiniz ' dir (modelin çıktısı). `Features` `movieId`
 
-Başka bir sınıf oluşturun `MovieRatingPrediction`, sonra aşağıdaki kodu ekleyerek tahmin edilen sonuçları göstermek için `MovieRating` sınıfını *MovieRatingData.cs*:
+`MovieRatingPrediction` *MovieRatingData.cs*içindeki `MovieRating` sınıftan sonra aşağıdaki kodu ekleyerek tahmin edilen sonuçları temsil eden başka bir sınıf oluşturun:
 
 [!code-csharp[PredictionClass](~/samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#PredictionClass "Add the Movie Prediction Class")]
 
-İçinde *Program.cs*, değiştirin `Console.WriteLine("Hello World!")` içinde aşağıdaki kodla `Main()`:
+*Program.cs*' de, `Console.WriteLine("Hello World!")` öğesini içinde `Main()`aşağıdaki kodla değiştirin:
 
 [!code-csharp[MLContext](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#MLContext "Add MLContext")]
 
-[MLContext sınıfı](xref:Microsoft.ML.MLContext) bir tüm ML.NET işlemleri için başlangıç noktası ve başlatma `mlContext` modeli oluşturma iş akışı nesneleri arasında paylaşılabilir bir yeni ML.NET ortamı oluşturur. Bu, kavramsal olarak, benzer `DBContext` Entity Framework.
+[Mlcontext sınıfı](xref:Microsoft.ML.MLContext) tüm ml.NET işlemleri için bir başlangıç noktasıdır ve başlatılıyor `mlContext` , model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ml.net ortamı oluşturur. Entity Framework, kavramsal `DBContext` olarak da benzerdir.
 
-Sonra `Main()`, adında bir yöntem oluşturun `LoadData()`:
+Sonra `Main()`, adlı `LoadData()`bir yöntem oluşturun:
 
 ```csharp
 public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
@@ -151,37 +151,37 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 ```
 
 > [!NOTE]
-> Aşağıdaki adımlarda bir dönüş ifadesi eklenene kadar bu yöntem bir hata verir.
+> Bu yöntem, aşağıdaki adımlarda bir return ifadesini eklemeene kadar bir hata verir.
 
-Veri yolu değişkenlerinizi başlatmak, verilerden yük \*.csv dosyalarını ve dönüş `Train` ve `Test` verileri olarak `IDataView` sonraki kod satırı olarak aşağıdakileri ekleyerek nesneleri `LoadData()`:
+Veri yolu değişkenlerinizi başlatın, \*. csv dosyalarından verileri yükleyin ve aşağıdaki kod `LoadData()`satırı olarak aşağıdakini ekleyerek `Train` nesne `Test` olarak `IDataView` ve verileri döndürün:
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadData "Load data from data paths")]
 
-ML.NET verilerinde olarak temsil edilir bir [IDataView sınıfı](xref:Microsoft.ML.IDataView). `IDataView` Sekmeli veriler (sayısal ve metin) açıklayan bir esnek ve verimli yoludur. Veri yüklenebilir bir metin dosyasından veya gerçek zamanlı olarak (örneğin, SQL veritabanı veya günlük dosyaları) için bir `IDataView` nesne.
+ML.NET içindeki veriler [ıdataview sınıfı](xref:Microsoft.ML.IDataView)olarak temsil edilir. `IDataView`, tablo verilerini (sayısal ve metin) tanımlamaya yönelik esnek ve verimli bir yoldur. Veriler bir metin dosyasından veya gerçek zamanlı olarak (örneğin, SQL veritabanı veya günlük dosyaları) bir `IDataView` nesneye yüklenebilir.
 
-[LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) veri şemasını tanımlar ve dosyayı okur. Veri yolu değişkenlerinde alır ve döndürür bir `IDataView`. Bu durumda, yolu sağlamak, `Test` ve `Train` dosyaları ve hem (sütun adları düzgün kullanabilmesi için) metin dosya üstbilgisi hem de (varsayılan ayırıcısı olan bir sekme) virgülle karakter veri ayırıcısı gösterir.
+[Loadfromtextfile ()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) , veri şemasını ve dosyadaki okumaları tanımlar. Veri yolu değişkenlerini alır ve döndürür `IDataView`. Bu durumda, `Test` ve `Train` dosyalarınız için yol sağlar ve hem metin dosyası üst bilgisini hem de (sütun adlarını düzgün bir şekilde kullanabilmesi için) virgül karakter veri ayırıcısını (varsayılan ayırıcı bir sekmedir) belirtin.
 
-Sonraki iki kod satırlarını olarak aşağıdakileri ekleyin `Main()` çağrılacak yöntem, `LoadData()` yöntemi ve dönüş `Train` ve `Test` veri:
+Yönteminizi çağırmak ve `Main()` `Train` ve verilerini`Test` döndürmek için yöntemine sonraki iki kod satırı olarak aşağıdakileri ekleyin: `LoadData()`
 
 [!code-csharp[LoadDataMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadDataMain "Add LoadData method to Main")]
 
-## <a name="build-and-train-your-model"></a>Derleme ve modelinizi eğitin
+## <a name="build-and-train-your-model"></a>Modelinizi derleyin ve eğitme
 
-ML.NET içinde üç ana kavramı vardır: [Veri](../resources/glossary.md#data), [dönüştürücüler](../resources/glossary.md#transformer), ve [Estimators](../resources/glossary.md#estimator).
+ML.NET ' de üç ana kavram vardır: [Veri](../resources/glossary.md#data), [dönüştürücüler](../resources/glossary.md#transformer)ve [estimators](../resources/glossary.md#estimator).
 
-Makine öğrenimi eğitim algoritmalar, verileri belirli bir biçimde gerektirir. `Transformers` tablosal veri uyumlu bir biçime dönüştürmek için kullanılır.
+Machine Learning eğitim algoritmaları, verileri belirli bir biçimde gerektirir. `Transformers`tablo verilerini uyumlu bir biçime dönüştürmek için kullanılır.
 
-![Transformer görüntüsü](./media/movie-recommendation/transformer.png)
+![Transformatör resmi](./media/movie-recommendation/transformer.png)
 
-Oluşturduğunuz `Transformers` oluşturarak ML.NET içinde `Estimators`. `Estimators` veri ve dönüş ele `Transformers`.
+`Transformers` Oluşturarak`Estimators`ml.NET içinde oluşturursunuz. `Estimators`verileri alın ve döndürün `Transformers`.
 
-![Tahmin görüntüsü](./media/movie-recommendation/estimator.png)
+![tahmin aracı resmi](./media/movie-recommendation/estimator.png)
 
-Örneğidir, modeli eğitmek için kullanacağınız öneri eğitim algoritması bir `Estimator`.
+Modelinize eğitim için kullanacağınız öneri eğitimi algoritması bir `Estimator`örneğidir.
 
-Derleme bir `Estimator` aşağıdaki adımları:
+Aşağıdaki adımlarla `Estimator` bir oluşturun:
 
-Oluşturma `BuildAndTrainModel()` yöntemi hemen sonrasına `LoadData()` yöntemi, aşağıdaki kodu kullanarak:
+Aşağıdaki kodu kullanarak yönteminden hemen `LoadData()` sonra yönteminioluşturun:`BuildAndTrainModel()`
 
 ```csharp
 public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView trainingDataView)
@@ -191,52 +191,52 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 ```
 
 > [!NOTE]
-> Aşağıdaki adımlarda bir dönüş ifadesi eklenene kadar bu yöntem bir hata verir.
+> Bu yöntem, aşağıdaki adımlarda bir return ifadesini eklemeene kadar bir hata verir.
 
-Aşağıdaki kodu ekleyerek veri dönüşümlerini tanımlamak `BuildAndTrainModel()`:
+Aşağıdaki kodu öğesine `BuildAndTrainModel()`ekleyerek veri dönüşümlerini tanımlayın:
 
 [!code-csharp[DataTransformations](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#DataTransformations "Define data transformations")]
 
-Bu yana `userId` ve `movieId` temsil kullanıcılar ve başlık, değil gerçek değerler kullandığınız [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) her dönüştürmek için yöntemi `userId` ve her `movieId` sayısal anahtar türü `Feature`sütun (öneri algoritmalarda kabul biçimi) ve bunları yeni dataset sütunları ekleyin:
+`movieId` [](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) `userId` `Feature` Kullanıcılar ve film başlıklarını gerçek değerlerle değil, her bir sayısal anahtar türü sütununa dönüştürmek için mapvaluetokey () yöntemini kullanırsınız (bir biçim kabul edilir `userId` `movieId` öneri algoritmalarına göre) ve bunları yeni veri kümesi sütunları olarak ekleyin:
 
-| userId | movieId | Etiketle | userIdEncoded | movieIdEncoded |
+| UserID | Movieıd | Etiketle | Userıdencoded | Movieıdencoded |
 | ------------- |:-------------:| -----:|-----:|-----:|
 | 1\. | 1\. | 4 | userKey1 | movieKey1 |
 | 1\. | 3 | 4 | userKey1 | movieKey2 |
 | 1\. | 6 | 4 | userKey1 | movieKey3 |
 
-Makine öğrenme algoritmasını seçin ve sonraki kod satırı olarak aşağıdakileri ekleyerek veri dönüştürme tanımlarını ekleme `BuildAndTrainModel()`:
+Machine Learning algoritmasını seçin ve aşağıdaki kod `BuildAndTrainModel()`satırı olarak aşağıdakini ekleyerek veri dönüştürme tanımlarına ekleyin:
 
 [!code-csharp[AddAlgorithm](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#AddAlgorithm "Add the training algorithm with options")]
 
-[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) öneri eğitim algoritmasıdır.  [Matris Factorization](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) kullanıcıların geçmişte veri kümeleri için Bu öğreticide olduğu ürünleri nasıl değerlendirmiş şirket verileriniz öneri için yaygın bir yaklaşım gerekir. Farklı veri kullanılabilir olduğunda için diğer öneri algoritmalar vardır (bkz [diğer öneri algoritmalar](#other-recommendation-algorithms) daha fazla bilgi için aşağıdaki bölümü).
+[Matrixfactorizationtrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) , öneri eğitim algoritmanız.  [Matris](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) , kullanıcıların geçmişte ürünleri derecelendirirken, bu öğreticideki veri kümeleri için büyük/küçük bir yaklaşım olan genel bir yaklaşımdır. Farklı verilere sahip olduğunuzda kullanabileceğiniz başka öneri algoritmaları vardır (daha fazla bilgi için aşağıdaki [diğer öneri algoritmaları](#other-recommendation-algorithms) bölümüne bakın).
 
-Bu durumda, `Matrix Factorization` daha sonra kullanıcı 1. büyük olasılıkla aynı biçimde kullanıcı 2 farklı bir sorunla ilgili olarak algoritması kullanıcı 1 kullanıcı 2 belirli bir sorunla ilgili olarak aynı fikrim varsa, olduğunu varsayar, "işbirliğine dayalı filtreleme" adlı bir yöntem kullanır.
+Bu durumda `Matrix Factorization` , algoritma "işbirliğine dayalı filtreleme" adlı bir yöntem kullanır. Bu, Kullanıcı 1 ' in belirli bir sorun üzerinde Kullanıcı 2 ' de aynı görüşe sahip olduğunu varsaydığı, 1. Kullanıcı farklı bir sorun hakkında Kullanıcı 2 ' yi aynı şekilde hissetmesinin daha olasıdır.
 
-Kullanıcı 1, kullanıcı 2 filmler benzer şekilde oranı, örneğin, ardından kullanıcı 2 kullanıcı 1 olan ve izlenen yüksek dereceli bir filmi keyfini çıkarın daha kolaydır:
+Örneğin, Kullanıcı 1 ve Kullanıcı 2 filmleri benzer şekilde kullanıyorsanız, 1. Kullanıcı 2 ' nin, Kullanıcı 1 ' in izlenen ve yüksek oranda derecelendirdikleri bir filmin keyfini çıkarmak daha yüksektir:
 
 | | `Incredibles 2 (2018)` | `The Avengers (2012)` | `Guardians of the Galaxy (2014)` |
 | -------------:|-------------:| -----:|-----:|
-| Kullanıcı 1 | İzlenen ve bağlanan film | İzlenen ve bağlanan film | İzlenen ve bağlanan film |
-| Kullanıcı 2 | İzlenen ve bağlanan film | İzlenen ve bağlanan film | Olmayan izlenen--ÖNERİ film |
+| Kullanıcı 1 | İzlenen ve beğenilen film | İzlenen ve beğenilen film | İzlenen ve beğenilen film |
+| Kullanıcı 2 | İzlenen ve beğenilen film | İzlenen ve beğenilen film | İzleniyor--film öner |
 
-`Matrix Factorization` Trainer sahip birkaç [seçenekleri](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options), daha fazla ilgili bilgi de edinebilirsiniz hangi [algoritması hiperparametreleri](#algorithm-hyperparameters) bölümüne bakın.
+Eğitimci, `Matrix Factorization` aşağıdaki [algoritma hiper parametreleri](#algorithm-hyperparameters) bölümünde hakkında daha fazla bilgi edinmek için çeşitli [seçeneklere](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options)sahiptir.
 
-Modele uygun `Train` veri ve sonraki kod satırı olarak aşağıdakileri ekleyerek eğitilen model dönüş `BuildAndTrainModel()` yöntemi:
+Yöntemine bir sonraki kod satırı `Train` olarak aşağıdakileri ekleyerek modeli verilere sığdırın ve eğitilen modeli döndürün: `BuildAndTrainModel()`
 
 [!code-csharp[FitModel](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#FitModel "Call the Fit method and return back the trained model")]
 
-[Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) yöntemine sağlanan bir eğitim veri kümesi modelinizi eğitir. Teknik olarak yürütür `Estimator` verileri dönüştürme ve eğitim ve uygulama tanımlarını döndürür geri olan eğitilen model bir `Transformer`.
+[Fit ()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) yöntemi, modelinizi belirtilen eğitim veri kümesiyle eğliyor. Teknik olarak, verileri dönüştürerek `Estimator` ve eğitimi uygulayarak tanımları yürütür ve bir `Transformer`olan eğitilen modeli geri döndürür.
 
-Sonraki kod satırı olarak ekleyin `Main()` çağrılacak yöntem, `BuildAndTrainModel()` yöntemi ve dönüş eğitim modeli:
+Yönteminizi çağırmak ve eğitilen modeli döndürmek için `Main()` yöntemine bir sonraki kod satırı olarak aşağıdakini ekleyin: `BuildAndTrainModel()`
 
 [!code-csharp[BuildTrainModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#BuildTrainModelMain "Add BuildAndTrainModel method in Main")]
 
-## <a name="evaluate-your-model"></a>Modelinizi değerlendir
+## <a name="evaluate-your-model"></a>Modelinizi değerlendirin
 
-Modelinizi eğitim almış sonra modelinizi performansını değerlendirmek için test verilerini kullanın.
+Modelinizi eğittikten sonra, modelinizin nasıl çalıştığını değerlendirmek için test verilerinizi kullanın.
 
-Oluşturma `EvaluateModel()` yöntemi hemen sonrasına `BuildAndTrainModel()` yöntemi, aşağıdaki kodu kullanarak:
+Aşağıdaki kodu kullanarak yönteminden hemen `BuildAndTrainModel()` sonra yönteminioluşturun:`EvaluateModel()`
 
 ```csharp
 public static void EvaluateModel(MLContext mlContext, IDataView testDataView, ITransformer model)
@@ -245,25 +245,27 @@ public static void EvaluateModel(MLContext mlContext, IDataView testDataView, IT
 }
 ```
 
-Dönüştürme `Test` aşağıdakileri ekleyerek veri kod için `EvaluateModel()`: [!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
+Aşağıdaki kodu öğesine `EvaluateModel()`ekleyerek verileridönüştürün:`Test`
 
-[Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) yöntemi, birden çok test veri kümesini girdi satırları sağlanan için Öngörüler sağlar.
+[!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
 
-Sonraki kod satırı olarak aşağıdakileri ekleyerek modeli değerlendirme `EvaluateModel()` yöntemi:
+[Transform ()](xref:Microsoft.ML.ITransformer.Transform%2A) yöntemi, test veri kümesinin birden çok sağlanmış giriş satırları için tahminleri yapar.
+
+`EvaluateModel()` Yöntemine aşağıdaki kod satırı olarak aşağıdakini ekleyerek modeli değerlendirin:
 
 [!code-csharp[Evaluate](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Evaluate "Evaluate the model using predictions from the test data")]
 
-Ayarlanırsa, tahmin sonra [Evaluate()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A) yöntemi değerlendirir gerçek tahmin edilen değerlerle karşılaştırır modeli `Labels` modelin nasıl performans gösterdiğini üzerinde test veri kümesini ve döndürür ölçümleri de.
+Tahmin kümesine sahip olduktan sonra, tahmin edilen değerleri test veri kümesindeki gerçek `Labels` ile karşılaştıran ve modelin nasıl çalıştığı hakkında ölçümler döndüren [değerlendir ()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A) yöntemi, modeli değerlendirir.
 
-Sonraki kod satırı olarak aşağıdakileri ekleyerek değerlendirme ölçümlerinizi konsola yazdırma `EvaluateModel()` yöntemi:
+Aşağıdaki kod `EvaluateModel()` satırını yöntemine ekleyerek değerlendirme ölçümlerinizi konsola yazdırın:
 
 [!code-csharp[PrintMetrics](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PrintMetrics "Print the evaluation metrics")]
 
-Sonraki kod satırı olarak ekleyin `Main()` çağrılacak yöntem, `EvaluateModel()` yöntemi:
+Yönteminizi çağırmak için `Main()` yöntemi içindeki sonraki kod satırı olarak aşağıdakini ekleyin: `EvaluateModel()`
 
 [!code-csharp[EvaluateModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#EvaluateModelMain "Add EvaluateModel method in Main")]
 
-Şu ana kadar çıktı aşağıdaki metne benzer görünmelidir:
+Şu ana kadar çıkış aşağıdaki metne benzer görünmelidir:
 
 ```console
 =============== Training the model ===============
@@ -293,19 +295,19 @@ Rms: 0.994051469730769
 RSquared: 0.412556298844873
 ```
 
-Bu çıkış, 20 yinelemeler vardır. Her yinelemede hata ölçü azaltır ve daha yakın ve 0 yakın uygun sonuç verir.
+Bu çıktıda 20 yineleme vardır. Her yinelemede, hata ölçüsü azalır ve 0 ' a yaklaştırır.
 
-`root of mean squared error` (RMS veya RMSE) tahmin modeli arasındaki farklılıklar ölçmek için kullanılan değerleri ve test veri kümesini gözlenen değerler. Teknik olarak hataları kareler Ortalama kare kökünü olduğu. Daha düşük olan, daha iyi modelidir.
+`root of mean squared error` (RMS veya rmo), model tahmin edilen değerler ve test veri kümesi gözlenen değerleri arasındaki farkları ölçmek için kullanılır. Teknik olarak, hataların karelerinin ortalamasının karekökünü temel alır. Bunun ne kadar küçük olması, modelin ne kadar iyi olduğu.
 
-`R Squared` veri modeli ne kadar iyi uyduğunu gösterir. 1 Aralık 0. Değeri 0 anlamına gelir veri rastgele veya başka türlü modele sığamıyorsa. Değeri model verileri tam olarak eşleşen 1 anlamına gelir. İstediğiniz, `R Squared` 1 olarak mümkün olduğunca yakın olmasını puanı.
+`R Squared`verilerin bir modele ne kadar uygun olduğunu gösterir. 0 ile 1 arasında aralıklar. 0 değeri, verilerin rastgele olması veya başka türlü modele sığamayacak olması anlamına gelir. 1 değeri, modelin verilerle tam olarak eşleştiği anlamına gelir. Puanınızın `R Squared` mümkün olduğunca 1 ' e yakın olmasını istiyorsunuz.
 
-Başarılı modeller oluşturma yinelemeli bir işlemdir. Bu model düşük ilk kalite hızlı modeli eğitimi sağlamak için öğretici kullanan küçük veri kümeleri sahiptir. Model kalitesi memnun değilseniz daha büyük bir eğitim veri kümeleri sağlama veya farklı hyper-parametreleriyle her bir algoritmanın için farklı eğitim algoritmalarıyla seçerek geliştirmek deneyebilirsiniz. Daha fazla bilgi için kullanıma [modelinizin geliştirilmesine](#improve-your-model) bölümüne bakın.
+Başarılı modellerin oluşturulması, yinelemeli bir işlemdir. Öğretici, hızlı model eğitimi sağlamak için küçük veri kümeleri kullandığından, bu modelin ilk daha düşük kalitesi vardır. Model kalitede memnun kalmıyorsanız, daha büyük eğitim veri kümeleri sağlayarak veya her algoritma için farklı Hyper-parametreleri ile farklı eğitim algoritmaları seçerek bunu geliştirmeyi deneyebilirsiniz. Daha fazla bilgi için aşağıdaki [modelinizi geliştirme](#improve-your-model) bölümünü inceleyin.
 
 ## <a name="use-your-model"></a>Modelinizi kullanın
 
-Artık, eğitilen model üzerinde yeni veri tahmininde bulunmak amacıyla kullanabilirsiniz.
+Artık yeni verilerde öngörülere sahip olmak için eğitilen modeli kullanabilirsiniz.
 
-Oluşturma `UseModelForSinglePrediction()` yöntemi hemen sonrasına `EvaluateModel()` yöntemi, aşağıdaki kodu kullanarak:
+Aşağıdaki kodu kullanarak yönteminden hemen `EvaluateModel()` sonra yönteminioluşturun:`UseModelForSinglePrediction()`
 
 ```csharp
 public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer model)
@@ -314,40 +316,40 @@ public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer
 }
 ```
 
-Kullanım `PredictionEngine` derecelendirme aşağıdaki kodu ekleyerek tahmin etmek için `UseModelForSinglePrediction()`:
+Aşağıdaki kodu öğesine `UseModelForSinglePrediction()`ekleyerek derecelendirmeyi tahmin etmekiçinöğesinikullanın:`PredictionEngine`
 
 [!code-csharp[PredictionEngine](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PredictionEngine "Create Prediction Engine")]
 
-[PredictionEngine sınıfı](xref:Microsoft.ML.PredictionEngine%602) verileri tek bir örneğini geçirin ve ardından bu tek veri örneğinde bir tahmin gerçekleştirin izin veren bir kolaylık API.
+[PredictionEngine sınıfı](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğini geçirmenize ve sonra bu tek veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir.
 
-Bir örneğini oluşturmak `MovieRating` adlı `testInput` ve aşağıdaki kodda bir sonraki satırı olarak ekleyerek tahmin Altyapısı'na geçme `UseModelForSinglePrediction()` yöntemi:
+Aşağıdaki kod `MovieRating` `testInput` satırlarını yöntemineekleyerek,çağrılanbirörneğioluşturunvebunutahminaltyapısınageçirin:`UseModelForSinglePrediction()`
 
 [!code-csharp[MakeSinglePrediction](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#MakeSinglePrediction "Make a single prediction with the Prediction Engine")]
 
-[Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) işlevi, tek bir veri sütununu tahmin sağlar.
+PREDICT [()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) işlevi, tek bir veri sütunu üzerinde bir tahmin yapar.
 
-Ardından `Score`, ya da kullanıcı 6 movieId 10 film önerilir isteyip istemediğinizi belirlemek için tahmin edilen derecelendirmesi. En yüksek `Score`, daha yüksek bir kullanıcı olasılığını belirli bir filmi özelleştirebilir. Bu durumda, tahmin edilen bir derecelendirme > 3.5 filmlerle önerilir varsayalım.
+Daha sonra `Score`, filmi Kullanıcı 6 ' ya movieıd 10 ile önermek isteyip istemediğinizi öğrenmek için veya tahmin edilen derecelendirmeyi kullanabilirsiniz. Ne kadar yüksekse `Score`, bir kullanıcının belirli bir filmi beğenme olasılığı yüksektir. Bu durumda, > 3,5 ' nin tahmin edilen derecelendirmesine sahip filmler önertiğinizi varsayalım.
 
-Sonuçları yazdırmak için sonraki kod satırlarını olarak aşağıdakileri ekleyin `UseModelForSinglePrediction()` yöntemi:
+Sonuçları yazdırmak için aşağıdaki kod `UseModelForSinglePrediction()` satırları yöntemine ekleyin:
 
 [!code-csharp[PrintResults](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PrintResults "Print the recommendation prediction results")]
 
-Sonraki kod satırı olarak ekleyin `Main()` çağrılacak yöntem, `UseModelForSinglePrediction()` yöntemi:
+Yönteminizi çağırmak için `Main()` yöntemi içindeki sonraki kod satırı olarak aşağıdakini ekleyin: `UseModelForSinglePrediction()`
 
 [!code-csharp[UseModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#UseModelMain "Add UseModelForSinglePrediction method in Main")]
 
-Bu yöntem, çıktı aşağıdaki metne benzer görünmelidir:
+Bu yöntemin çıktısı aşağıdaki metne benzer görünmelidir:
 
 ```console
 =============== Making a prediction ===============
 Movie 10 is recommended for user 6
 ```
 
-### <a name="save-your-model"></a>Modelinizi Kaydet
+### <a name="save-your-model"></a>Modelinizi kaydetme
 
-Son kullanıcı uygulamaları tahminlerde bulunmak üzere modelinizi kullanmak için önce model kaydetmeniz gerekir.
+Son Kullanıcı uygulamalarında tahmine dayalı hale getirmek üzere modelinizi kullanmak için önce modeli kaydetmeniz gerekir.
 
-Oluşturma `SaveModel()` yöntemi hemen sonrasına `UseModelForSinglePrediction()` yöntemi, aşağıdaki kodu kullanarak:
+Aşağıdaki kodu kullanarak yönteminden hemen `UseModelForSinglePrediction()` sonra yönteminioluşturun:`SaveModel()`
 
 ```csharp
 public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataViewSchema, ITransformer model)
@@ -356,23 +358,23 @@ public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataVie
 }
 ```
 
-Aşağıdaki kodu ekleyerek, eğitilen modeli kaydedin `SaveModel()` yöntemi:
+Aşağıdaki kodu `SaveModel()` yöntemine ekleyerek eğitilen modelinizi kaydedin:
 
 [!code-csharp[SaveModel](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#SaveModel "Save the model to a zip file")]
 
-Bu yöntem, eğitilen model sonra diğer .NET uygulamalarında tahminlerde bulunmak için kullanılabilecek bir .zip dosyası olarak ("Veri" klasöründe farklı olarak) kaydeder.
+Bu yöntem, eğitilen modelinizi, daha sonra tahmine dayalı hale getirmek için diğer .NET uygulamalarında kullanılabilecek bir. zip dosyasına ("veri" klasöründe) kaydeder.
 
-Sonraki kod satırı olarak ekleyin `Main()` çağrılacak yöntem, `SaveModel()` yöntemi:
+Yönteminizi çağırmak için `Main()` yöntemi içindeki sonraki kod satırı olarak aşağıdakini ekleyin: `SaveModel()`
 
 [!code-csharp[SaveModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#SaveModelMain "Create SaveModel method in Main")]
 
-### <a name="use-your-saved-model"></a>Kaydedilen modelinizi kullanın
+### <a name="use-your-saved-model"></a>Kayıtlı modelinizi kullanın
 
-Eğitilen model kaydedildikten sonra farklı ortamlarda modeli raporlarını kullanabilirsiniz (bkz ["Nasıl yapılır kılavuzunda"](../how-to-guides/consuming-model-ml-net.md) uygulamalarında eğitilen machine learning modeli kullanıma hazır hale getirme hakkında bilgi edinmek için).
+Eğitilen modelinizi kaydettikten sonra modeli farklı ortamlarda kullanabilirsiniz (uygulamalarda eğitilen bir makine öğrenimi modelinin nasıl yapılacağını öğrenmek için bkz. ["nasıl yapılır Kılavuzu"](../how-to-guides/consuming-model-ml-net.md) ).
 
 ## <a name="results"></a>Sonuçlar
 
-Yukarıdaki adımları tamamladıktan sonra Konsol uygulamanızı (Ctrl + F5) çalıştırın. Yukarıdaki tek tahmin sonuçlarınızdan aşağıdakine benzer olmalıdır. Uyarı veya işlem iletileri görebilirsiniz, ancak bu iletiler anlaşılması için aşağıdaki sonuçları kaldırılmış olan.
+Yukarıdaki adımları tamamladıktan sonra konsol uygulamanızı çalıştırın (CTRL + F5). Yukarıdaki tek bir tahmine ait sonuçlarınız aşağıdakine benzer olmalıdır. Uyarıları veya işlem iletilerini görebilirsiniz, ancak bu iletiler netme için aşağıdaki sonuçlardan kaldırılmıştır.
 
 ```console
 =============== Training the model ===============
@@ -405,33 +407,33 @@ Movie 10 is recommended for user 6
 =============== Saving the model to a file ===============
 ```
 
-Tebrikler! Bir machine learning modeli filmler önermek için artık başarıyla oluşturdunuz. Bu öğreticide kaynak kodunu bulabilirsiniz [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) depo.
+Tebrikler! Artık film öneren bir makine öğrenimi modelini başarıyla oluşturdunuz. Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) deposunda bulabilirsiniz.
 
-## <a name="improve-your-model"></a>Modelinizi geliştirin
+## <a name="improve-your-model"></a>Modelinizi geliştirme
 
-Daha doğru tahminler alabilmesi modelinizi performansını artırmak birkaç yol vardır.
+Daha doğru öngörülere ulaşmak için modelinizin performansını iyileştirebilmeniz için birkaç yol vardır.
 
 ### <a name="data"></a>Veri
 
-Her kullanıcı ve film kimliği için yeterli örnekleri içeren daha fazla eğitim veri ekleme, öneri model kalitesini artırmaya yardımcı olabilir.
+Her Kullanıcı ve film kimliği için yeterli sayıda örnek içeren eğitim verileri eklemek, öneri modelinin kalitesini artırmaya yardımcı olabilir.
 
-[Çapraz doğrulama](../how-to-guides/train-cross-validation-ml-net.md) değerlendirme modelleri, rastgele verilerin (Bu öğreticide yaptığınız gibi yerine test veri kümesindeki verileri dışarı ayıklanıyor) alt kümelerini böler ve bazı grupların test verileri ve bazı grupları eğitin alır bir tekniktir veriler. Bu yöntem, model kalitesi açısından bölme train-test yaparak daha iyi.
+[Çapraz doğrulama](../how-to-guides/train-cross-validation-ml-net.md) , verileri rastgele kümeler halinde ayırır (Bu öğreticide yaptığınız gibi veri kümesinden test verilerinin ayıklanmasının yerine) ve bazı gruplardan verileri test verileri olarak eğitme ve gruplardan bazılarını alan bir yöntem. Bu yöntem, model kalitesi açısından bir eğitme testi ayırma yapmayı gerçekleştirir.
 
 ### <a name="features"></a>Özellikler
 
-Bu öğreticide, yalnızca üç kullandığınız `Features` (`user id`, `movie id`, ve `rating`) veri kümesi tarafından sağlanır.
+Bu öğreticide, yalnızca veri kümesi tarafından sunulan `Features` üç`user id`( `movie id`,, `rating`ve) kullanın.
 
-Bu çok iyi bir başlangıç olsa da, gerçekte, diğer öznitelikleri eklemek isteyebilirsiniz veya `Features` (örneğin, yaş, cinsiyet, coğrafi konum, vb.) kümesinde içeriyorsa. Daha fazla ilgili ekleme `Features` öneri modelinizin performansını artırmaya yardımcı olabilir.
+Bu iyi bir başlangıç olsa da, gerçekte veri kümesine dahil edildiklerinde başka öznitelikler veya `Features` (örneğin, Age, cinsiyeti, coğrafi konum vb.) eklemek isteyebilirsiniz. Daha fazla ilgisi `Features` eklemek, öneri modelinizin performansını artırmaya yardımcı olabilir.
 
-Konusunda emin değilseniz `Features` machine learning göreviniz için en uygun olabilir, özellik katkı hesaplama (FCC) birini kullanmak de yapabilirsiniz ve [özellik permütasyon önem](../how-to-guides/determine-global-feature-importance-in-model.md), hangi ML.NET sağlar en etkili Bul `Features`.
+Makinenizin öğrenimi göreviniz için en `Features` uygun olabilecek bir işlem olduğundan emin değilseniz, ml.net 'in en iyi şekilde bulmasını sağlamak için sunduğu özellik katkı hesaplamasını (FCC) ve [özellik](../how-to-guides/determine-global-feature-importance-in-model.md)bilimi önem derecesini de kullanabilirsiniz. `Features`etkili.
 
-### <a name="algorithm-hyperparameters"></a>Algoritma hiperparametreleri
+### <a name="algorithm-hyperparameters"></a>Algoritma hiper parametreleri
 
-ML.NET eğitim algoritmaları iyi varsayılan sağlasa da, daha fazla performans algoritması'nın değiştirerek ince ayar yapabilirsiniz [hiperparametreleri](../resources/glossary.md#hyperparameter).
+ML.NET, iyi varsayılan eğitim algoritmaları sağlarken, algoritmanın [hiper parametrelerini](../resources/glossary.md#hyperparameter)değiştirerek performansı daha ayrıntılı bir şekilde ayarlayabilirsiniz.
 
-İçin `Matrix Factorization`, gibi hiperparametreleri ile denemeler [Numberofıterations](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options.NumberOfIterations) ve [ApproximationRank](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options.ApproximationRank) , size daha iyi sonuç verdiğini olmadığını görmek için.
+İçin `Matrix Factorization`, numberofıterlationve [yaklaşık](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options.ApproximationRank) olarak, daha [](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options.NumberOfIterations) iyi sonuçlar verir.
 
-Örneğin, bu öğreticide algoritması Seçenekler şunlardır:
+Örneğin, bu öğreticide algoritma seçenekleri şunlardır:
 
 ```csharp
 var options = new MatrixFactorizationTrainer.Options
@@ -444,34 +446,34 @@ var options = new MatrixFactorizationTrainer.Options
 };
 ```
 
-### <a name="other-recommendation-algorithms"></a>Diğer öneri algoritmalar
+### <a name="other-recommendation-algorithms"></a>Diğer öneri algoritmaları
 
-Matris factorization algoritma işbirliğine dayalı filtreleme ile film önerileri gerçekleştirmek için yalnızca bir yaklaşımdır. Çoğu durumda, değil kullanılabilir derecelendirmeleri verilere sahip ve kullanıcıların film geçmiş yeterlidir. Diğer durumlarda, daha fazlasını kullanıcının derecelendirme veri olabilir.
+Ortak filtreleme ile matris ayırma algoritması, film önerileri gerçekleştirmeye yönelik yalnızca bir yaklaşımdır. Çoğu durumda, derecelendirme verileri kullanılabilir olmayabilir ve yalnızca film geçmişi kullanıcılardan bulunabilir. Diğer durumlarda, yalnızca kullanıcının derecelendirme verilerinden daha fazlasına sahip olabilirsiniz.
 
-| Algoritması       | Senaryo           | Örnek  |
+| Algoritmalar       | Senaryo           | Örnek  |
 | ------------- |:-------------:| -----:|
-| Bir sınıf matris Factorization | Kullanıcı kimliği ve movieId yalnızca varsa bunu kullanın. Ortak satın alma senaryosu bu stil önerileri temel alır ve ürünleri sık birlikte müşterilere ürün kendi satın alma siparişi geçmişi dayalı bir kümesi dtu'lara anlamına satın. | [> deneyin](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
-| Alan kullanan Factorization makineler | Daha fazla özellik UserID, ProductID ve derecelendirme (örneğin, ürün açıklaması veya ürün fiyatı) dışında olduğunda önerilerde için bunu kullanın. Bu yöntem, işbirliğine dayalı bir filtre yaklaşım da kullanır. | [> deneyin](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
+| Bir sınıf matrisi oluşturma | Yalnızca Kullanıcı kimliği ve Movieıd olduğunda bunu kullanın. Bu öneri stili, ortak satın alma senaryosuna veya genellikle birlikte satın alınan ürünlere dayalıdır. Bu, müşterilerin kendi satın alma siparişi geçmişine göre bir ürün kümesi önermesini önermeyeceği anlamına gelir. | [> deneyin](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
+| Alan duyarlı bir ayırma makinesi | Kullanıcı kimliği, ProductID ve derecelendirmeden daha fazla özelliğe sahip olduğunuzda (ürün açıklaması veya ürün fiyatı gibi) öneri sağlamak için bunu kullanın. Bu yöntem ayrıca birlikte çalışan bir filtreleme yaklaşımı kullanır. | [> deneyin](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
 
-### <a name="new-user-scenario"></a>Yeni kullanıcı senaryosu
+### <a name="new-user-scenario"></a>Yeni Kullanıcı senaryosu
 
-Ortak filtreleme bir yaygın sorun çıkarımı gelen çizmek için önceki veri içermeyen yeni bir kullanıcı varsa, hazırlıksız başlatma sorunudur. Bu sorun genellikle bir profil oluşturmak için yeni kullanıcılar isteyerek çözülür ve örneği için oranı filmler, geçmişte gördünüz. Bu yöntem, kullanıcı bazı yük koyar, ancak hiçbir derecelendirme geçmişi ile yeni kullanıcılar için bazı başlangıç verileri sağlar.
+İşbirliğine dayalı filtrelemede yaygın olarak karşılaşılan bir sorun, yeni bir kullanıcıya, ıntreler eklemek için önceki verileri olmayan yeni bir kullanıcı olduğunda oluşan soğuk başlatma sorunudur. Bu sorun genellikle yeni kullanıcılardan bir profil oluşturmasını isteyerek ve örneğin, geçmişte gördüğü filmleri derecelendirmek için çözülür. Bu yöntem kullanıcıya bazı yük koyar, ancak derecelendirme geçmişi olmayan yeni kullanıcılar için bazı veri başlatma verileri sağlar.
 
 ## <a name="resources"></a>Kaynaklar
 
-Bu öğreticide kullanılan veri türetilir [MovieLens Dataset](http://files.grouplens.org/datasets/movielens/).
+Bu öğreticide kullanılan veriler [Movielens veri kümesinden](http://files.grouplens.org/datasets/movielens/)türetilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 
 > [!div class="checklist"]
-> * Bir machine learning algoritması seçin
-> * Verilerinizi yüklemek ve hazırlamak
-> * Yapı ve model eğitme
-> * Bir modeli değerlendirme
-> * Dağıtma ve bir modeli kullanma
+> * Makine öğrenimi algoritması seçin
+> * Verilerinizi hazırlayın ve yükleyin
+> * Model oluşturma ve eğitme
+> * Modeli değerlendirme
+> * Bir modeli dağıtma ve kullanma
 
-Daha fazla bilgi edinmek için sonraki öğreticiye ilerleyin.
+Daha fazla bilgi edinmek için sonraki öğreticiye ilerleyin
 > [!div class="nextstepaction"]
 > [Yaklaşım analizi](sentiment-analysis.md)

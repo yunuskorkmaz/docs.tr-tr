@@ -1,5 +1,5 @@
 ---
-title: C#Operators - C# başvurusu
+title: C#işleçler- C# başvuru
 ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
@@ -18,208 +18,208 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 0639becb1620daf7d457995392d134d40b90e826
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
-ms.translationtype: MT
+ms.openlocfilehash: b6a1cc3ced3205037eb5b83ac3841efbfbd1b5b9
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68235936"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331223"
 ---
-# <a name="c-operators-c-reference"></a>C#işleçler (C# Başvurusu)
+# <a name="c-operators-c-reference"></a>C#İşleçler (C# başvuru)
 
-C#birkaç yerleşik türleri tarafından desteklenen önceden tanımlı operatörler sağlar. Örneğin, [aritmetik işleçler](arithmetic-operators.md) yerleşik sayısal türler, işlenenlerin aritmetik işlemler gerçekleştirme ve [Boolean mantıksal işleçler](boolean-logical-operators.md) mantıksal işlemleri ile [bool ](../keywords/bool.md) işlenen.
+C#Yerleşik türler tarafından desteklenen bir dizi önceden tanımlanmış işleç sağlar. Örneğin, [Aritmetik işleçler](arithmetic-operators.md) , yerleşik sayısal türlerin işlenenleriyle aritmetik işlemler gerçekleştirir ve [Boole mantıksal işleçleri](boolean-logical-operators.md) [bool](../keywords/bool.md) işlenenleri ile mantıksal işlemler gerçekleştirir.
 
-Kullanıcı tanımlı bir tür o türündeki işlenenler için karşılık gelen davranışını tanımlamak için belirli işleçleri aşırı yüklenebilir. Daha fazla bilgi için [işleci aşırı yüklemesi](operator-overloading.md).
+Kullanıcı tanımlı bir tür, bu türün işlenenleri için karşılık gelen davranışı tanımlamak üzere bazı işleçleri aşırı yükleyebilir. Daha fazla bilgi için bkz. [operatör aşırı yüklemesi](operator-overloading.md).
 
-Aşağıdaki bölümlerde liste C# en yüksek önceliğe düşüğe başlayarak işleçleri. Her bölüm içerisindeki işleçler aynı öncelik düzeyine paylaşın.
+Aşağıdaki bölümlerde en düşük önceliğe C# göre başlayan işleçler listelenmektedir. Her bölümün içindeki işleçler aynı öncelik düzeyini paylaşır.
 
-## <a name="primary-operators"></a>Birincil operatörler
+## <a name="primary-operators"></a>Birincil işleçler
 
-En yüksek öncelik işleçleri şunlardır.
+Bunlar en yüksek öncelik işleçleridir.
 
-[x.y](member-access-operators.md#member-access-operator-) – üye erişimi.
+[x. y](member-access-operators.md#member-access-operator-) – üye erişimi.
 
-[x? y](member-access-operators.md#null-conditional-operators--and-) – null koşullu üye erişimi. Döndürür `null` sol işlenen değerlendirilirse `null`.
+[x?. y](member-access-operators.md#null-conditional-operators--and-) – null koşullu üye erişimi. Sol `null` işlenenin olarak `null`değerlendirilip değerlendirilmeyeceğini döndürür.
 
-[x? [y] ](member-access-operators.md#null-conditional-operators--and-) - koşullu dizi öğesi null veya dizin oluşturucu erişim yazın. Döndürür `null` sol işlenen değerlendirilirse `null`.
+[x? [y]](member-access-operators.md#null-conditional-operators--and-) -null koşullu dizi öğesi veya tür Dizin Oluşturucu erişimi. Sol `null` işlenenin olarak `null`değerlendirilip değerlendirilmeyeceğini döndürür.
 
-[f(x)](member-access-operators.md#invocation-operator-) – yöntem çağrısı veya temsilci çağırma.
+[f (x)](member-access-operators.md#invocation-operator-) – Yöntem çağrısı veya temsilci çağırma.
 
-[bir&#91;x&#93; ](member-access-operators.md#indexer-operator-) – dizi öğesi veya dizin oluşturucu erişim yazın.
+x – Array öğesi veya tür Dizin Oluşturucu erişimi. [&#91;&#93; ](member-access-operators.md#indexer-operator-)
 
-[x ++](arithmetic-operators.md#increment-operator-) – sonek artırma. X değerini döndürür ve ardından depolama konumu büyük bir x değeri ile güncelleştirir (genellikle 1 tamsayı ekler).
+[x + +](arithmetic-operators.md#increment-operator-) – Sonek artışı. X değerini döndürür ve ardından depolama konumunu bir daha büyük olan x değeriyle güncelleştirir (genellikle 1 tamsayı ekler).
 
-[x--](arithmetic-operators.md#decrement-operator---) – son ek azaltma. X değerini döndürür ve ardından depolama konumu bir daha az x değeri ile güncelleştirir (genellikle 1 tamsayı çıkarır).
+[x--](arithmetic-operators.md#decrement-operator---) – sonek azalış. X değerini döndürür ve ardından depolama konumunu daha az olan x değeriyle güncelleştirir (genellikle 1 tamsayı çıkartır).
 
-[Yeni](new-operator.md) – oluşturmada yazın.
+[New](new-operator.md) – örneklemeyi yazın.
 
-[typeof](type-testing-and-conversion-operators.md#typeof-operator) – döndürür <xref:System.Type> işlenen temsil eden nesne.
+[typeof](type-testing-and-conversion-operators.md#typeof-operator) : işleneni temsil <xref:System.Type> eden nesneyi döndürür.
 
-[işaretli](../keywords/checked.md) – taşma denetimi için tamsayı işlemleri sağlar.
+[Checked](../keywords/checked.md) : tamsayı işlemleri için taşma denetimini etkinleştirilir.
 
-[denetlenmeyen](../keywords/unchecked.md) – taşma tamsayı işlemlerinde denetimini devre dışı bırakır. Varsayılan derleyici davranışı budur.
+[unchecked](../keywords/unchecked.md) : tamsayı işlemleri için taşma denetimini devre dışı bırakır. Bu, varsayılan derleyici davranışıdır.
 
-[Default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) – t türü varsayılan değerini üretir
+[varsayılan (t)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) : T türünde varsayılan değeri üretir.
 
-[nameof](nameof.md) -değişken, tür veya üyenin bir sabit dize olarak basit (nitelenmemiş) adını alır.
+[NameOf](nameof.md) -bir değişkenin, türün veya üyenin basit (nitelenmemiş) adını sabit bir dize olarak alır.
 
-[Temsilci](../../programming-guide/statements-expressions-operators/anonymous-methods.md) – bildirir ve temsilci örneği döndürür.
+[Delegate](delegate-operator.md) : bir temsilci örneği bildirir ve döndürür.
 
-[sizeof](../keywords/sizeof.md) -türü işlenen bayt cinsinden boyutunu döndürür.
+[sizeof](../keywords/sizeof.md) : tür işleneninin bayt cinsinden boyutunu döndürür.
 
-[stackalloc](stackalloc.md) -bir yığında bellek bloğu ayırır.
+[stackalloc](stackalloc.md) -yığında bellek bloğunu ayırır.
 
-[->](pointer-related-operators.md#pointer-member-access-operator--) – İşaretçi yöneltmesi birleştirilmiş üye erişimi ile.
+[->](pointer-related-operators.md#pointer-member-access-operator--)– işaretçi yöneltme, üye erişimiyle birleştirilir.
 
-## <a name="unary-operators"></a>Birli işleçler
+## <a name="unary-operators"></a>Birli İşleçler
 
-Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahip.
+Bu işleçler, sonraki bölümden daha önceliklidir ve önceki bölümden daha düşük önceliğe sahiptir.
 
-[+ x](addition-operator.md) – x değerini döndürür.
+[+ x](addition-operator.md) : x değerini döndürür.
 
-[-x](subtraction-operator.md) – sayısal olumsuzlama.
+[-x](subtraction-operator.md) – sayısal değilleme.
 
-[\!x](boolean-logical-operators.md#logical-negation-operator-) – mantıksal olumsuzlama.
+x – mantıksal değilleme. [ \!](boolean-logical-operators.md#logical-negation-operator-)
 
-[~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-) – bit düzeyinde tamamlayıcı.
+[~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-) – bit düzeyinde tamamlama.
 
-[++ x](arithmetic-operators.md#increment-operator-) – önek artırma. Depolama konumu bir x değeriyle güncelleştirdikten sonra x değerini büyük döndürür (genellikle 1 tamsayı ekler).
+[+ + x](arithmetic-operators.md#increment-operator-) – ön ek artışı. Depolama konumunu bir daha büyük olan x değeriyle güncelleştirdikten sonra x değerini döndürür (genellikle 1 tamsayı ekler).
 
-[--x](arithmetic-operators.md#decrement-operator---) – önek azaltma. Depolama konumu daha az bir x değeriyle güncelleştirdikten sonra x değeri döndürür (genelde tam sayı 1 çıkarır).
+[--x](arithmetic-operators.md#decrement-operator---) – ön ek azalış. Depolama konumu daha az olan x değeriyle güncelleştirildikten sonra x değerini döndürür (genellikle 1 tamsayı çıkartır).
 
-[(T) x](type-testing-and-conversion-operators.md#cast-operator-) – atama yazın.
+[(T) x](type-testing-and-conversion-operators.md#cast-operator-) – tür atama.
 
-[await](../keywords/await.md) – bekler bir `Task`.
+[await](../keywords/await.md) – bir a `Task`bekler.
 
-[& x](pointer-related-operators.md#address-of-operator-) : değişkenin adresini.
+[& x](pointer-related-operators.md#address-of-operator-) – bir değişkenin adresi.
 
-[* x](pointer-related-operators.md#pointer-indirection-operator-) – işaretçi yöneltmesi veya başvuru.
+[* x](pointer-related-operators.md#pointer-indirection-operator-) – işaretçi yöneltme veya başvuru.
 
-[true işleci](true-false-operators.md) -döndürür [bool](../keywords/bool.md) değer `true` işleneni kesinlikle doğru olduğunu belirtmek için.
+[true işleci](true-false-operators.md) -bir işlenenin [](../keywords/bool.md) kesinlikle doğru `true` olduğunu göstermek için bool değeri döndürür.
 
-[false işleci](true-false-operators.md) -döndürür [bool](../keywords/bool.md) değer `true` işleneni kesinlikle false olduğunu belirtmek için.
+[false işleci](true-false-operators.md) -bir işlenenin [](../keywords/bool.md) kesinlikle yanlış `true` olduğunu göstermek için bool değeri döndürür.
 
 ## <a name="multiplicative-operators"></a>Çarpma işleçleri
 
-Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahip.
+Bu işleçler, sonraki bölümden daha önceliklidir ve önceki bölümden daha düşük önceliğe sahiptir.
 
 [x * y](arithmetic-operators.md#multiplication-operator-) – çarpma.
 
-[x / y](arithmetic-operators.md#division-operator-) – bölme. İşlenenler tamsayılar, sonuç sıfıra yakınsayarak kesilmiş bir tamsayıdır (örneğin, `-7 / 2 is -3`).
+[x/y](arithmetic-operators.md#division-operator-) – bölüm. İşlenenler tamsayılar ise, sonuç sıfır (örneğin, `-7 / 2 is -3`) ile kesilmiş bir tamsayıdır.
 
-[% y x](arithmetic-operators.md#remainder-operator-) – kalan. İşlenen tamsayılar olursa bu y bölme x geri kalanı döndürür.  Varsa `q = x / y` ve `r = x % y`, ardından `x = q * y + r`.
+[x% y](arithmetic-operators.md#remainder-operator-) – geri kalanı. İşlenenler tamsayı ise bu, x ve y 'nin bölünen kalanı döndürür.  Ve `q = x / y` ise`r = x % y`, .`x = q * y + r`
 
 ## <a name="additive-operators"></a>Toplama işleçleri
 
-Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahip.
+Bu işleçler, sonraki bölümden daha önceliklidir ve önceki bölümden daha düşük önceliğe sahiptir.
 
 [x + y](arithmetic-operators.md#addition-operator-) – ekleme.
 
-[x-y](arithmetic-operators.md#subtraction-operator--) – çıkarma.
+[x – y](arithmetic-operators.md#subtraction-operator--) – çıkarma.
 
 ## <a name="shift-operators"></a>Kaydırma işleçleri
 
-Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahip.
+Bu işleçler, sonraki bölümden daha önceliklidir ve önceki bölümden daha düşük önceliğe sahiptir.
 
-[x <\< y](bitwise-and-shift-operators.md#left-shift-operator-) – bitlerini sola kaydırma ve sağ taraftaki sıfır ile doldurun.
+[x <\< y](bitwise-and-shift-operators.md#left-shift-operator-) : bitleri sola Ötele ve sağ tarafta sıfır ile doldur.
 
-[x >> y](bitwise-and-shift-operators.md#right-shift-operator-) – sağ shift bitleri. Sol işlenen ise `int` veya `long`, sonra da sol bit imza biti ile doldurulur. Sol işlenen ise `uint` veya `ulong`, sonra da sol bitler sıfır ile doldurulur.
+[x > > y](bitwise-and-shift-operators.md#right-shift-operator-) – bit kaydır sağ. Sol işlenen veya `int` `long`ise, sol bitler işaret biti ile doldurulur. Sol işlenen veya `uint` `ulong`ise, sol bitler sıfır ile doldurulur.
 
 ## <a name="relational-and-type-testing-operators"></a>İlişkisel ve tür testi işleçleri
 
-Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahip.
+Bu işleçler, sonraki bölümden daha önceliklidir ve önceki bölümden daha düşük önceliğe sahiptir.
 
-[x \< y](comparison-operators.md#less-than-operator-) – (x, y değerinden ise true) küçüktür.
+[ x\< y](comparison-operators.md#less-than-operator-) – küçüktür (x, y 'den küçükse true).
 
-[x > y](comparison-operators.md#greater-than-operator-) – büyük (x, y büyükse true).
+[x > y](comparison-operators.md#greater-than-operator-) – büyüktür (x y 'den büyükse true).
 
-[x \<y =](comparison-operators.md#less-than-or-equal-operator-) – küçük veya eşittir.
+[ x\<= y](comparison-operators.md#less-than-or-equal-operator-) – küçüktür veya eşittir.
 
-[x > y =](comparison-operators.md#greater-than-or-equal-operator-) – büyüktür veya eşittir.
+[x > = y](comparison-operators.md#greater-than-or-equal-operator-) – büyük veya eşittir.
 
-[olan](type-testing-and-conversion-operators.md#is-operator) – uyumluluk yazın. Döndürür `true` değerlendirilen sol işlenen sağ işlenen tarafından belirtilen türün başvurusuna yayınlanabilir durumunda.
+[,](type-testing-and-conversion-operators.md#is-operator) – tür uyumluluğu. Değerlendirilen `true` sol işlenenin sağ işlenen tarafından belirtilen türe tür ataması olup olmadığını döndürür.
 
-[olarak](type-testing-and-conversion-operators.md#as-operator) – dönüştürmesi yazın. Sol işlenen sağ işlenen tarafından belirtilen türe dönüştürme döndürür ancak `as` döndürür `null` burada `(T)x` bir özel durum oluşturması.
+[as](type-testing-and-conversion-operators.md#as-operator) -tür dönüşümü. Sol işlenenin sağ işlenen tarafından belirtilen türe saçılması, ancak `as` bir özel durum oluşturması gereken yeri `(T)x` döndürür. `null`
 
 ## <a name="equality-operators"></a>Eşitlik İşleçleri
 
-Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahip.
+Bu işleçler, sonraki bölümden daha önceliklidir ve önceki bölümden daha düşük önceliğe sahiptir.
 
-[x == y](equality-operators.md#equality-operator-) – eşitlik. Varsayılan olarak, başvuru için türleri dışındaki `string`, bu başvuru eşitliği (kimlik test) döndürür. Ancak, türleri aşırı yüklenebilir `==`, amacınız kimliğini test etmek için ise kullanmak en iyisidir `ReferenceEquals` metodunda `object`.
+[x = = y](equality-operators.md#equality-operator-) – eşitlik. Varsayılan olarak, dışındaki başvuru türleri `string`için başvuru eşitlik (kimlik testi) döndürür. Ancak, türleri aşırı `==`yükleyebilir, bu nedenle amaç test kimliğini test etmek için en iyisi, üzerinde `ReferenceEquals` `object`yöntemi kullanmaktır.
 
-[x! = y](equality-operators.md#inequality-operator-) – eşit değil. Açıklama için bkz. `==`. Bir tür aşırı `==`, aşırı gerekir sonra `!=`.
+[x! = y](equality-operators.md#inequality-operator-) – eşit değildir. İçin `==`bkz. açıklaması. Bir tür aşırı `==`yüklendiğinde, aşırı yüklemesi `!=`gerekir.
 
 ## <a name="logical-and-operator"></a>Mantıksal AND işleci
 
-Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahiptir.
+Bu operatör, sonraki bölümden daha yüksek önceliğe ve önceki bölümden daha düşük önceliğe sahiptir.
 
-`x & y` – [mantıksal AND](boolean-logical-operators.md#logical-and-operator-) için `bool` işlenenler veya [mantıksal bit düzeyinde AND](bitwise-and-shift-operators.md#logical-and-operator-) işleneni de integral türleri için.
+`x & y`– [](boolean-logical-operators.md#logical-and-operator-) `bool` işlenenler için ve işlenenleri veya [bit düzeyinde mantıksal ve](bitwise-and-shift-operators.md#logical-and-operator-) integral türlerinin işlenenleri için mantıksal ve.
 
 ## <a name="logical-xor-operator"></a>Mantıksal XOR işleci
 
-Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahiptir.
+Bu operatör, sonraki bölümden daha yüksek önceliğe ve önceki bölümden daha düşük önceliğe sahiptir.
 
-`x ^ y` – [mantıksal XOR](boolean-logical-operators.md#logical-exclusive-or-operator-) için `bool` işlenenler veya [mantıksal bit düzeyinde XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) işleneni de integral türleri için.
+`x ^ y`– `bool` işlenen için [Mantıksal xor](boolean-logical-operators.md#logical-exclusive-or-operator-) veya integral türlerinin işlenenleri için [bit düzeyinde mantıksal XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) .
 
 ## <a name="logical-or-operator"></a>Mantıksal OR işleci
 
-Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahiptir.
+Bu operatör, sonraki bölümden daha yüksek önceliğe ve önceki bölümden daha düşük önceliğe sahiptir.
 
-`x | y` – [mantıksal OR](boolean-logical-operators.md#logical-or-operator-) için `bool` işlenenler veya [mantıksal bit düzeyinde OR](bitwise-and-shift-operators.md#logical-or-operator-) işleneni de integral türleri için.
+`x | y`– [](boolean-logical-operators.md#logical-or-operator-) `bool` işlenenler veya integral türlerinin işlenenleri için mantıksal or veya [bit düzeyinde mantıksal veya](bitwise-and-shift-operators.md#logical-or-operator-) .
 
 ## <a name="conditional-and-operator"></a>Koşullu AND işleci
 
-Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahiptir.
+Bu operatör, sonraki bölümden daha yüksek önceliğe ve önceki bölümden daha düşük önceliğe sahiptir.
 
-[x & & y](boolean-logical-operators.md#conditional-logical-and-operator-) – mantıksal and Varsa `x` değerlendiren `false`, ardından `y` değerlendirilmez.
+[x & & y](boolean-logical-operators.md#conditional-logical-and-operator-) : mantıksal ve. , `x` Olarak `false`değerlendirilirse ,`y` değerlendirilmez.
 
 ## <a name="conditional-or-operator"></a>Koşullu OR işleci
 
-Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahiptir.
+Bu operatör, sonraki bölümden daha yüksek önceliğe ve önceki bölümden daha düşük önceliğe sahiptir.
 
-[x &#124; &#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – mantıksal OR. Varsa `x` değerlendiren `true`, ardından `y` değerlendirilmez.
+[ &#124; x &#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – mantıksal veya. , `x` Olarak `true`değerlendirilirse ,`y` değerlendirilmez.
 
 ## <a name="null-coalescing-operator"></a>Null birleşim işleci
 
-Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahiptir.
+Bu operatör, sonraki bölümden daha yüksek önceliğe ve önceki bölümden daha düşük önceliğe sahiptir.
 
-[x?? y](null-coalescing-operator.md) – döndürür `x` olmayan ise`null`; Aksi halde döndürür `y`.
+[x?? y](null-coalescing-operator.md) :- `x` `null`değilse döndürür; Aksi takdirde, döndürür `y`.
 
 ## <a name="conditional-operator"></a>Koşullu işleç
 
-Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahiptir.
+Bu operatör, sonraki bölümden daha yüksek önceliğe ve önceki bölümden daha düşük önceliğe sahiptir.
 
-[t? x: y](conditional-operator.md) – test `t` true, ardından değerlendirilip döndürülecek değerlendirir `x`; Aksi takdirde, değerlendirilip döndürülecek `y`.
+[t? x: y](conditional-operator.md) – test `t` doğru olarak değerlendirilirse, değerlendirin ve döndürün `x`; Aksi takdirde, değerlendirin ve geri döndürün `y`.
 
 ## <a name="assignment-and-lambda-operators"></a>Atama ve lambda işleçleri
 
-Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahip.
+Bu işleçler, sonraki bölümden daha önceliklidir ve önceki bölümden daha düşük önceliğe sahiptir.
 
 [x = y](assignment-operator.md) – atama.
 
-[x += y](arithmetic-operators.md#compound-assignment) – artırma. Değerini ekleme `y` değerine `x`, sonuçta depolamak `x`ve yeni bir değer. Varsa `x` atayan bir [olay](../keywords/event.md), ardından `y` uygun bir yöntem olmalı, C# bir olay işleyicisi ekler.
+[x + = y](arithmetic-operators.md#compound-assignment) – artış. Değerini değerine ekleyin `x`, sonucu içinde depolayın ve yeni değeri döndürün. `x` `y` Bir olayı [](../keywords/event.md) `y` belirtir, ardından olay işleyicisi olarak C# ekleyen uygun bir yöntem olmalıdır. `x`
 
-[x-= y](arithmetic-operators.md#compound-assignment) – azaltma. Değerini çıkarma `y` değerinden `x`, sonuçta depolamak `x`ve yeni bir değer. Varsa `x` atayan bir [olay](../keywords/event.md), ardından `y` uygun bir yöntem olmalı, C# bir olay işleyicisi kaldırır.
+[x-= y](arithmetic-operators.md#compound-assignment) – azaltma. Değerini değerinden çıkarın `x`, sonucu içinde depolayın ve yeni değeri döndürün. `x` `y` Bir `x` [olayı belirtir](../keywords/event.md) C# , birolayişleyicisiolarakkaldıranuygunbiryöntem`y` olmalıdır.
 
-[x * y =](arithmetic-operators.md#compound-assignment) – çarpma atama. Çarp değeri `y` değerine `x`, sonuçta depolamak `x`ve yeni bir değer.
+[x * = y](arithmetic-operators.md#compound-assignment) – çarpma ataması. Değerini `y` `x`değerine çarpın, sonucunu içinde depolayın ve yeni değeri döndürün. `x`
 
-[x / y =](arithmetic-operators.md#compound-assignment) – bölme ataması. Değerini ayırmak `x` değeriyle `y`, sonuçta depolamak `x`ve yeni bir değer.
+[x/= y](arithmetic-operators.md#compound-assignment) – bölüm atama. Değerini değerine göre bölün, sonucu içinde `x`depolayın ve yeni değeri döndürün. `y` `x`
 
-[%x y =](arithmetic-operators.md#compound-assignment) – kalanını atama. Değerini ayırmak `x` değeriyle `y`, kalanı depolamak `x`ve yeni bir değer.
+[x% = y](arithmetic-operators.md#compound-assignment) – kalan atama. Değerini değerine göre bölün `x`,kalanısaklayın ve yeni değeri döndürün. `y` `x`
 
-[x & y =](boolean-logical-operators.md#compound-assignment) – ve atama. DEĞERİ `y` değeriyle `x`, sonuçta depolamak `x`ve yeni bir değer.
+[x & = y](boolean-logical-operators.md#compound-assignment) ve atama. Ve değeri `y` ile `x`değerini, sonucunu içinde `x`depolayın ve yeni değeri döndürün.
 
-[x &#124;y =](boolean-logical-operators.md#compound-assignment) – OR ataması. YA da değerini `y` değeriyle `x`, sonuçta depolamak `x`ve yeni bir değer.
+[x &#124;= y](boolean-logical-operators.md#compound-assignment) – veya atama. Ya da değeri `y` ile `x`değerini, sonucunu içinde `x`depolayın ve yeni değeri döndürün.
 
-[x ^ y =](boolean-logical-operators.md#compound-assignment) – XOR atama. XOR değeri, `y` değeriyle `x`, sonuçta depolamak `x`ve yeni bir değer.
+[x ^ = y](boolean-logical-operators.md#compound-assignment) – XOR ataması. Değerini değeri ile XOR değeri `x` ,sonucunudepolarveyenideğeridöndürür.`x` `y`
 
-[x << y =](bitwise-and-shift-operators.md#compound-assignment) – sola kaydırma ataması. Değerini kaydırma `x` sol tarafından `y` yerde depolamak sonucunda `x`ve yeni bir değer.
+[x < < = y](bitwise-and-shift-operators.md#compound-assignment) – sola kaydırma ataması. Değeri `x` konumlarına göre `y` sola kaydırın, sonucu içinde `x`depolayın ve yeni değeri döndürün.
 
-[x >> y =](bitwise-and-shift-operators.md#compound-assignment) – sağa kaydırma ataması. Değerini kaydırma `x` sağa `y` yerde depolamak sonucunda `x`ve yeni bir değer.
+[x > > = y](bitwise-and-shift-operators.md#compound-assignment) – sağ Shift atama. Değeri `x` konumlarına göre `y` Sağa Ötele, sonucu ' de `x`depolayın ve yeni değeri döndürün.
 
-[=>](lambda-operator.md) – lambda bildirimi.
+[=>](lambda-operator.md)– Lambda bildirimi.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvuru](../index.md)
+- [C#başvurunun](../index.md)
 - [İşleçler](../../programming-guide/statements-expressions-operators/operators.md)

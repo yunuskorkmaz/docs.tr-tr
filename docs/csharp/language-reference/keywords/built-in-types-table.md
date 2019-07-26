@@ -1,24 +1,24 @@
 ---
-title: Yerleşik türler tablosu - C# başvurusu
+title: Yerleşik türler tablo- C# başvuru
 ms.custom: seodec18
-description: Yerleşik C# türleri için anahtar sözcükler
+description: Yerleşik C# türler için anahtar sözcükler
 ms.date: 08/17/2018
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: e770c305afe098e633700b039efb51770c77ada7
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5db982c0a94814bfece087eb4db119a4df246094
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661442"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330970"
 ---
-# <a name="built-in-types-table-c-reference"></a>Yerleşik türler tablosu (C# Başvurusu)
+# <a name="built-in-types-table-c-reference"></a>Yerleşik türler tablosu (C# başvuru)
 
-Önceden tanımlanmış tür diğer adları olan yerleşik C# türü için anahtar sözcükleri aşağıdaki tabloda gösterilmektedir, <xref:System> ad alanı.  
+Aşağıdaki tabloda, <xref:System> ad alanındaki önceden tanımlanmış türlerin diğer adları C# olan yerleşik türler için anahtar sözcükler gösterilmektedir.  
   
-|C# türü|.NET türü|  
+|C#türüyle|.NET türü|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
 |[byte](../builtin-types/integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|  
@@ -38,16 +38,16 @@ ms.locfileid: "67661442"
   
 ## <a name="remarks"></a>Açıklamalar
 
-Tüm türleri tabloda dışında `object` ve `string`, basit türler olarak adlandırılır.  
+`object` Ve`string`hariç olmak üzere tablodaki tüm türler basit türler olarak adlandırılır.  
   
-C# anahtar sözcükleri yazın ve diğer adlarını birbirinin yerine kullanılabilir. Örneğin, aşağıdaki bildirimleri birini kullanarak bir tam sayı değişkeni bildirebilirsiniz:  
+.NET türleri ve bunların C# tür anahtar sözcük diğer adları değiştirilebilir. Örneğin, aşağıdaki bildirimlerden birini kullanarak bir tamsayı değişkeni bildirebilirsiniz:  
 
 ```csharp
 int x = 123;
 System.Int32 y = 123;
 ```
 
-Kullanım [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) almak için işleci <xref:System.Type?displayProperty=nameWithType> belirtilen türünü temsil eden örneği:
+Belirtilen türü [](../operators/type-testing-and-conversion-operators.md#typeof-operator) temsil eden <xref:System.Type?displayProperty=nameWithType> örneği almak için typeof işlecini kullanın:
 
 ```csharp
 Type stringType = typeof(string);
@@ -63,7 +63,7 @@ Console.WriteLine(doubleType.FullName);
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C#Başvurunun](../../../csharp/language-reference/index.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [Değer türleri](value-types.md)

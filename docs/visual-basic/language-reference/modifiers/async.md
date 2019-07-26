@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: ad6d671a45cee7d534347d23963bb5035ecc8dac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf2c62878e8902afa9455c789d41393b73110172
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802719"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68434052"
 ---
 # <a name="async-visual-basic"></a>Zaman Uyumsuz (Visual Basic)
-`Async` Değiştiricisi gösterir yöntemi veya [lambda ifadesi](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) olduğunu değiştirdiği zaman uyumsuzdur. Bu tür yöntemler olarak adlandırılır *zaman uyumsuz yöntemler*.  
+Değiştirici, değiştirdiği yöntemin veya [lambda ifadesinin](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) zaman uyumsuz olduğunu gösterir. `Async` Bu tür yöntemler *zaman uyumsuz yöntemler*olarak adlandırılır.  
   
- Zaman uyumsuz yöntemin arayanın, iş parçacığını engellemeden muhtemelen uzun süren iş yapmak için kullanışlı bir yol sağlar. Zaman uyumsuz yöntemi çağıran kişi, zaman uyumsuz yöntemin tamamlanmasını beklemeden işine devam edebilir.  
+ Zaman uyumsuz bir yöntem, çağıranın iş parçacığını engellemeden uzun süre çalışan bir iş yapmak için kullanışlı bir yol sağlar. Zaman uyumsuz bir yöntemi çağıran, zaman uyumsuz yöntemin tamamlanmasını beklemeden işini sürdürür.  
   
 > [!NOTE]
->  `Async` Ve `Await` anahtar sözcükleri Visual Studio 2012'de kullanıma sunulmuştur. Zaman uyumsuz programlamaya giriş için bkz [Async ve Await ile zaman uyumsuz programlama](../../../visual-basic/programming-guide/concepts/async/index.md).  
+>  `Async` Ve`Await` anahtar sözcükleri Visual Studio 2012 ' de tanıtılmıştı. Zaman uyumsuz programlamaya giriş için bkz. [Async ve await Ile zaman uyumsuz programlama](../../../visual-basic/programming-guide/concepts/async/index.md).  
   
  Aşağıdaki örnek, bir zaman uyumsuz metodun yapısını gösterir. Kural olarak, zaman uyumsuz metot adları "Async." ile biter.  
   
@@ -42,21 +42,21 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function  
 ```  
   
- Genellikle, bir yöntem tarafından değiştirildi `Async` anahtar sözcüğü içeren en az bir [Await](../../../visual-basic/language-reference/modifiers/async.md) ifadesi veya deyimi. Bekleyen görev tamamlanıncaya kadar bekletilen nokta olan ilk `Await`'a ulaşana kadar metot zaman uyumlu olarak çalışır. Bu sırada, denetim, metodu çağırana döner. Metot bir `Await` ifade veya deyimi içermiyorsa, metot askıya alınmaz ve zaman uyumlu bir yöntem olarak yürütülür. Bir derleyici uyarısı içermeyen zaman uyumsuz yöntemler konusunda uyarır `Await` çünkü bu durumda bir hata gösterebilir. Daha fazla bilgi için [derleyici hatası](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).  
+ Genellikle, `Async` anahtar sözcüğü tarafından değiştirilen bir yöntem en az bir [await](../../../visual-basic/language-reference/modifiers/async.md) ifadesi veya deyimi içerir. Bekleyen görev tamamlanıncaya kadar bekletilen nokta olan ilk `Await`'a ulaşana kadar metot zaman uyumlu olarak çalışır. Bu sırada, denetim, metodu çağırana döner. Metot bir `Await` ifade veya deyimi içermiyorsa, metot askıya alınmaz ve zaman uyumlu bir yöntem olarak yürütülür. Bir derleyici uyarısı, bu durum bir hata belirtebileceğinden, içermeyen `Await` herhangi bir zaman uyumsuz metotlarda sizi uyarır. Daha fazla bilgi için bkz. [derleyici hatası](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).  
   
  `Async` anahtar kelimesi ayrılmamış bir anahtar sözcüktür. Bir metot veya lambda ifadesi değiştirdiği zaman bir anahtar sözcüktür. Diğer tüm bağlamlarda bu, bir tanımlayıcı olarak yorumlanır.  
   
-## <a name="return-types"></a>Dönüş Türleri  
- Zaman uyumsuz bir yöntem geçerli bir [alt](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) yordamı veya [işlevi](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) dönüş türüne sahip yordamı <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>. Herhangi bir yöntemi bildiremezsiniz [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) parametreleri.  
+## <a name="return-types"></a>Dönüş türleri  
+ Async yöntemi bir [alt](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) yordamdır ya <xref:System.Threading.Tasks.Task> da ya <xref:System.Threading.Tasks.Task%601>da dönüş türü olan bir [işlev](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) yordamdır. Yöntem herhangi bir [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) parametresi bildiremez.  
   
- Belirttiğiniz `Task(Of TResult)` zaman uyumsuz bir yöntemin dönüş türü, [dönüş](../../../visual-basic/language-reference/statements/return-statement.md) deyimi TResult türünde bir işlenene sahipse. Kullandığınız `Task` yöntem tamamlandığında anlamlı bir değer döndürülürse. Yani, yönteme bir çağrı, `Task`'i geri getirir, ancak `Task` tamamlandığı zaman, `Await`'i bekleyen herhangi bir `Task` deyimi bir sonuç değeri üretemez.  
+ Metodun Return `Task(Of TResult)` ifadesinin TResult türünde bir işleneni varsa, zaman uyumsuz [](../../../visual-basic/language-reference/statements/return-statement.md) bir yöntemin dönüş türü için belirtirsiniz. Yöntem tamamlandığında `Task` anlamlı bir değer döndürülmezse kullanırsınız. Yani, yönteme bir çağrı, `Task`'i geri getirir, ancak `Task` tamamlandığı zaman, `Await`'i bekleyen herhangi bir `Task` deyimi bir sonuç değeri üretemez.  
   
  Zaman uyumsuz alt rutinler, öncelikle bir `Sub` yordamının gerekli olduğu yerde olay işleyicilerini tanımlamak için kullanılır Zaman uyumsuz bir alt rutinin çağırıcısı onu bekleyemez ve metodun oluşturduğu özel durumları yakalayamaz.  
   
- Daha fazla bilgi ve örnekler için bkz. [Async Return Types](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+ Daha fazla bilgi ve örnek için bkz. [zaman uyumsuz dönüş türleri](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekler, zaman uyumsuz bir olay işleyicisi, bir zaman uyumsuz lambda ifadesi ve bir zaman uyumsuz metot gösterir. Bu öğeleri kullanan tam bir örnek için bkz. [izlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). İzlenecek yol koddan indirebileceğiniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
+ Aşağıdaki örnekler, zaman uyumsuz bir olay işleyicisi, bir zaman uyumsuz lambda ifadesi ve bir zaman uyumsuz metot gösterir. Bu öğeleri kullanan tam bir örnek için bkz [. İzlenecek yol: Async ve await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)kullanarak Web 'e erişme. [Geliştirici kodu örneklerinden](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)izlenecek yol kodunu indirebilirsiniz.  
   
 ```vb  
 ' An event handler must be a Sub procedure.  
@@ -78,7 +78,7 @@ AddHandler button1.Click, Async Sub(sender, e)
   
 ' The following async method returns a Task(Of T).  
 ' A typical call awaits the Byte array result:  
-'      Dim result As Byte() = Await GetURLContents("http://msdn.com")  
+'      Dim result As Byte() = Await GetURLContents("https://msdn.com")  
 Private Async Function GetURLContentsAsync(url As String) As Task(Of Byte())  
   
     ' The downloaded resource ends up in the variable named content.  
@@ -108,4 +108,4 @@ End Function
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
 - [Await İşleci](../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async ve Await ile Zaman Uyumsuz Programlama](../../../visual-basic/programming-guide/concepts/async/index.md)
-- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [İzlenecek yol: Async ve await kullanarak Web 'e erişme](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

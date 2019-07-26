@@ -1,53 +1,53 @@
 ---
-title: C# 7.3 yenilikler nelerdir?
-description: C# 7.3 içindeki yeni özelliklere genel bakış
+title: C# 7,3 sürümündeki yenilikler
+description: C# 7,3 sürümündeki yeni özelliklere genel bakış
 ms.date: 05/16/2018
-ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: ca53073db1b61300186a483001f79bf0caa79169
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397787"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433518"
 ---
-# <a name="whats-new-in-c-73"></a>C# 7.3 yenilikler nelerdir?
+# <a name="whats-new-in-c-73"></a>C# 7,3 sürümündeki yenilikler
 
-C# 7.3 sürüm için iki ana temaları vardır. Bir tema güvenli kod güvenli olmayan kod olarak yüksek performanslı olmasını sağlayan özellikler sunar. İkinci temanın mevcut özelliklere yapılan artımlı iyileştirmeleri sağlar. Ayrıca, yeni derleyici seçenekleri, bu sürümde eklendi.
+C# 7,3 sürümünün iki ana teması vardır. Bir tema, güvenli kodun güvenli olmayan kod olarak performans sağlamak için gereken özellikler sağlar. İkinci tema, mevcut özelliklerle artımlı iyileştirmeler sağlar. Ayrıca, bu yayına yeni derleyici seçenekleri eklenmiştir.
 
-Aşağıdaki yeni özellikleri temayı daha iyi performans için güvenli kod desteği:
+Aşağıdaki yeni özellikler, güvenli kod için daha iyi performans temasını destekler:
 
-- Sabit alanlar sabitleme olmadan erişebilir.
-- Yeniden atayabilirsiniz `ref` yerel değişkenler.
-- Başlatıcılar kullanabileceğiniz `stackalloc` dizileri.
-- Kullanabileceğiniz `fixed` ifadelerle desen destekleyen herhangi bir türü.
-- Ek genel kısıtlamalara kullanabilirsiniz.
+- Sabitlemeden sabit alanlara erişebilirsiniz.
+- Yerel değişkenleri yeniden `ref` atayabilirsiniz.
+- `stackalloc` Dizilerde başlatıcıları kullanabilirsiniz.
+- Deyimlerini, bir `fixed` kalıbı destekleyen herhangi bir türle birlikte kullanabilirsiniz.
+- Ek genel kısıtlamalar kullanabilirsiniz.
 
-Mevcut özellikler için aşağıdaki geliştirmeler yapılmıştır:
+Mevcut özelliklerde aşağıdaki geliştirmeler yapılmıştır:
 
-- Test edebilirsiniz `==` ve `!=` tanımlama grubu türleri ile.
-- Daha fazla konumda ifade değişkenleri kullanabilirsiniz.
-- Otomatik uygulanan özellikler için destek alanı öznitelikleri iliştirebilirsiniz.
-- Bağımsız değişkenleri farklı olduğunda yöntemi çözümleme `in` geliştirilmiştir.
-- Aşırı yükleme çözümlemesi belirsiz daha az servis taleplerini artık sahiptir.
+- Kayıt düzeni türlerini `==` test `!=` edebilirsiniz.
+- İfade değişkenlerini daha fazla konumda kullanabilirsiniz.
+- Otomatik uygulanan özelliklerin yedekleme alanına öznitelikler iliştirebilirsiniz.
+- Bağımsız değişkenler farklı `in` olduğunda yöntem çözümlemesi geliştirildi.
+- Aşırı yükleme çözümlemesi artık daha az belirsiz durum içeriyor.
 
 Yeni derleyici seçenekleri şunlardır:
 
-- `-publicsign` Açık kaynak yazılım (OSS) derlemeleri imzalamayı etkinleştirmek için.
-- `-pathmap` Kaynak dizinleri için bir eşleme sağlamak için.
+- `-publicsign`Açık kaynak yazılım (OSS) derlemelerinin imzalanmasını etkinleştirmek için.
+- `-pathmap`Kaynak dizinlere eşleme sağlamak için.
 
-Bu makalenin geri kalanında, Ayrıntılar ve her geliştirmeleri hakkında daha fazla bilgi için bağlantılar sağlar. Bu özellikleri kullanarak ortamınıza keşfedebilirsiniz `dotnet try` genel aracı:
+Bu makalenin geri kalanında, geliştirmelerin her biri hakkında daha fazla bilgi edinmek için Ayrıntılar ve bağlantılar sağlanmaktadır. `dotnet try` Genel aracı kullanarak ortamınızdaki bu özellikleri keşfedebilirsiniz:
 
-1. Yükleme [dotnet deneyin](https://github.com/dotnet/try/blob/master/README.md#setup) genel aracı.
-1. Kopya [dotnet/try-samples](https://github.com/dotnet/try-samples) depo.
-1. Geçerli dizin kümesine *csharp7* alt *deneyin-samples* depo.
-1. `dotnet try`'i çalıştırın.
+1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
+1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
+1. *TRY-Samples* deposu için geçerli dizini *csharp7* alt dizinine ayarlayın.
+1. `dotnet try` öğesini çalıştırın.
 
-## <a name="enabling-more-efficient-safe-code"></a>Daha verimli bir güvenli kod etkinleştirme
+## <a name="enabling-more-efficient-safe-code"></a>Daha verimli güvenli kod etkinleştirme
 
-Güvenli bir şekilde gerçekleştiren güvenli olmayan kod yanı sıra C# kodu yazacak olması gerekir. Güvenli kod hataları, arabellek taşmalarına parazit işaretçileri ve diğer bellek erişim hataları gibi sınıfları önler. Bu yeni özellikler doğrulanabilir bir güvenli kod yeteneklerini genişletmenizi sağlar. Daha fazla güvenli yapıları kullanarak kodunuzu yazmak çaba harcar. Bu özellikler, kolaylaştırır.
+Güvenli olmayan kod ve güvenli kod C# yazmanız gerekir. Güvenli kod, arabellek taşmaları, başıya işaretçileri ve diğer bellek erişim hataları gibi hata sınıflarını önler. Bu yeni özellikler, doğrulanabilir güvenli kod yeteneklerini genişletir. Güvenli yapılar kullanarak kodunuzun daha fazlasını yazmak için çaba harcar. Bu özellikler daha kolay hale getirir.
 
-### <a name="indexing-fixed-fields-does-not-require-pinning"></a>Dizin oluşturma `fixed` alanları sabitleme gerektirmez
+### <a name="indexing-fixed-fields-does-not-require-pinning"></a>Dizin `fixed` oluşturma alanları sabitleme gerektirmez
 
-Bu struct göz önünde bulundurun:
+Bu yapıyı göz önünde bulundurun:
 
 ```csharp
 unsafe struct S
@@ -56,7 +56,7 @@ unsafe struct S
 }
 ```
 
-Önceki sürümlerde, C#, erişim bir parçası olan bir tamsayı değişkene sabitlemek gereken `myFixedField`. Artık, aşağıdaki kod değişkeni sabitleme olmadan derler `p` içinde ayrı bir `fixed` deyimi:
+Önceki sürümlerinde C#, öğesinin `myFixedField`parçası olan tamsayıların birine erişmek için bir değişkeni sabitlemeyi gerekiyordu. Şimdi, aşağıdaki kod değişkeni `p` ayrı `fixed` bir ifadeye sabitlemeden derler:
 
 ```csharp
 class C
@@ -70,7 +70,7 @@ class C
 }
 ```
 
-Değişken `p` bir öğe üzerinde erişen `myFixedField`. Ayrı bir bildirmeniz gerekmez `int*` değişkeni. Unutmayın, yine bir `unsafe` bağlamı. Önceki sürümlerde, C#, ikinci sabit bir işaretçi bildirmeniz gerekir:
+Değişkeni `p` içindeki`myFixedField`bir öğeye erişir. Ayrı `int*` bir değişken bildirmeniz gerekmez. Hala bir `unsafe` bağlam gerekeceğini unutmayın. Önceki sürümlerinde C#ikinci bir sabit işaretçi bildirmeniz gerekir:
 
 ```csharp
 class C
@@ -87,29 +87,29 @@ class C
 }
 ```
 
-Daha fazla bilgi için makaleye bakın [ `fixed` deyimi](../language-reference/keywords/fixed-statement.md).
+Daha fazla bilgi için, [ `fixed` deyimindeki](../language-reference/keywords/fixed-statement.md)makaleye bakın.
 
-### <a name="ref-local-variables-may-be-reassigned"></a>`ref` yerel değişkenler atanabilir
+### <a name="ref-local-variables-may-be-reassigned"></a>`ref`Yerel değişkenler yeniden atanabilir
 
-Şimdi, `ref` Yereller başlatıldıktan sonra farklı örneklerine başvurmak için atanabilir. Aşağıdaki kod artık derlenmemektedir:
+Şimdi Yereller, başlatıldıktan sonra farklı örneklere başvuracak şekilde yeniden `ref` atanabilir. Aşağıdaki kod artık derlenir:
 
 ```csharp
 ref VeryLargeStruct refLocal = ref veryLargeStruct; // initialization
 refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to different storage.
 ```
 
-Daha fazla bilgi için makaleye bakın [ `ref` döndürür ve `ref` Yereller](../programming-guide/classes-and-structs/ref-returns.md)ve makale [ `foreach` ](../language-reference/keywords/foreach-in.md).
+Daha fazla bilgi için bkz [`foreach`](../language-reference/keywords/foreach-in.md) [ `ref` . dönüşler ve `ref` yerel öğeler](../programming-guide/classes-and-structs/ref-returns.md)ve hakkındaki makale.
 
-### <a name="stackalloc-arrays-support-initializers"></a>`stackalloc` başlatıcılar diziler desteği
+### <a name="stackalloc-arrays-support-initializers"></a>`stackalloc`diziler, başlatıcıları destekler
 
-Başlattığınızda bir dizide öğe değerlerini belirtin ettirebilmeyi başardım:
+Bir dizideki öğeler için değerleri, başlatma sırasında belirtebilirsiniz:
 
 ```csharp
 var arr = new int[3] {1, 2, 3};
 var arr2 = new int[] {1, 2, 3};
 ```
 
-Artık, aynı söz dizimi ile bildirilen diziler için uygulanabilir `stackalloc`:
+Artık, ile `stackalloc`belirtilen dizilere aynı söz dizimi uygulanabilir:
 
 ```csharp
 int* pArr = stackalloc int[3] {1, 2, 3};
@@ -117,33 +117,33 @@ int* pArr2 = stackalloc int[] {1, 2, 3};
 Span<int> arr = stackalloc [] {1, 2, 3};
 ```
 
-Daha fazla bilgi için [ `stackalloc` işleci](../language-reference/operators/stackalloc.md) makalesi.
+Daha fazla bilgi için bkz [ `stackalloc` . operatör](../language-reference/operators/stackalloc.md) makalesi.
 
-### <a name="more-types-support-the-fixed-statement"></a>Daha fazla türlerini destekleyen `fixed` deyimi
+### <a name="more-types-support-the-fixed-statement"></a>Daha fazla tür, `fixed` ifadeyi destekler
 
-`fixed` Deyimi sınırlı sayıda türleri desteklenir. C# 7.3, içeren herhangi bir türü'ile başlayan bir `GetPinnableReference()` döndüren yöntem bir `ref T` veya `ref readonly T` olabilir `fixed`. Bu özellik ekleme anlamına `fixed` kullanılabilir <xref:System.Span%601?displayProperty=nameWithType> ve ilgili türler.
+`fixed` İfade sınırlı bir tür kümesi destekliyordu. 7,3 ' C# den `GetPinnableReference()` başlayarak, `ref T` `ref readonly T` veya`fixed`döndüren bir yöntemi içeren herhangi bir tür olabilir. Bu özelliği eklemek, ve `fixed` ilgili türlerle birlikte <xref:System.Span%601?displayProperty=nameWithType> kullanılabilecek anlamına gelir.
 
-Daha fazla bilgi için [ `fixed` deyimi](../language-reference/keywords/fixed-statement.md) dil başvurusu makalesinde.
+Daha fazla bilgi için bkz [ `fixed` ](../language-reference/keywords/fixed-statement.md) . dil başvurusu içindeki ifade makalesi.
 
 ### <a name="enhanced-generic-constraints"></a>Gelişmiş genel kısıtlamalar
 
-Türü artık belirtebilirsiniz <xref:System.Enum?displayProperty=nameWithType> veya <xref:System.Delegate?displayProperty=nameWithType> bir tür parametresi için temel sınıf kısıtlama olarak.
+Artık tür parametresi için türü <xref:System.Enum?displayProperty=nameWithType> veya <xref:System.Delegate?displayProperty=nameWithType> temel sınıf kısıtlamalarını belirtebilirsiniz.
 
-Ayrıca yeni kullanabilirsiniz `unmanaged` kısıtlaması, bir tür parametresi olması gerektiğini belirtmek için bir **yönetilmeyen tür**. Bir **yönetilmeyen tür** , bir başvuru türü değil ve iç içe geçme herhangi bir düzeyde herhangi bir başvuru türü içermeyen bir türdür.
+Yeni `unmanaged` kısıtlamayı, bir tür parametresinin [yönetilmeyen bir tür](../language-reference/builtin-types/unmanaged-types.md)olması gerektiğini belirtmek için de kullanabilirsiniz.
 
-Daha fazla bilgi için üzerinde makalelerine bakın. [ `where` genel kısıtlamalara](../language-reference/keywords/where-generic-type-constraint.md) ve [tür parametrelerindeki kısıtlamalar](../programming-guide/generics/constraints-on-type-parameters.md).
+Daha fazla bilgi için bkz. tür parametrelerinde [ `where` genel kısıtlamalar](../language-reference/keywords/where-generic-type-constraint.md) ve [kısıtlamalar](../programming-guide/generics/constraints-on-type-parameters.md)hakkında makaleler.
 
-Bu kısıtlamaları var olan türlere ekleme bir [uyumsuz değişiklik](version-update-considerations.md#incompatible-changes). Kapalı genel türler, artık bu yeni kısıtlamalarını karşılamıyor.
+Bu kısıtlamaları var olan türlere eklemek uyumsuz bir [değişiklik](version-update-considerations.md#incompatible-changes). Kapalı genel türler artık bu yeni kısıtlamaları karşılamayabilir.
 
-## <a name="make-existing-features-better"></a>Mevcut özellikler daha iyi hale getirir
+## <a name="make-existing-features-better"></a>Mevcut özellikleri daha iyi yapın
 
-İkinci tema özelliklerinde dilde geliştirmeler sağlar. Bu özellikler, C# yazarken üretkenliği artırın.
+İkinci tema, dildeki özelliklere yönelik iyileştirmeler sağlar. Bu özellikler yazarken C#üretkenliği geliştirir.
 
-### <a name="tuples-support--and-"></a>Diziler Destek `==` ve `!=`
+### <a name="tuples-support--and-"></a>Tanımlama grubu `==` desteği ve`!=`
 
-C# demet türleri artık destek `==` ve `!=`. Bölüm kapsayan daha fazla bilgi için bkz. [eşitlik](../tuples.md#equality-and-tuples) makalede [diziler](../tuples.md).
+C# Demet türleri artık ve `==` `!=`destekler. Daha fazla bilgi için bkz. [tanımlama](../tuples.md)bilgileri hakkındaki [makaleleri kapsayan bölüm](../tuples.md#equality-and-tuples) .
 
-### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>Otomatik uygulanan özellikler için yedekleme alanları öznitelikleri ekleme
+### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>Otomatik uygulanan özellikler için yedekleme alanlarına öznitelikler iliştirme
 
 Bu sözdizimi artık desteklenmektedir:
 
@@ -152,27 +152,27 @@ Bu sözdizimi artık desteklenmektedir:
 public int SomeProperty { get; set; }
 ```
 
-Öznitelik `SomeThingAboutFieldAttribute` derleyicinin ürettiği yedekleme alanı için uygulanan `SomeProperty`. Daha fazla bilgi için [öznitelikleri](../programming-guide/concepts/attributes/index.md) C# programlama kılavuzu.
+Özniteliği `SomeThingAboutFieldAttribute` , için `SomeProperty`derleyicinin oluşturduğu yedekleme alanına uygulanır. Daha fazla bilgi için bkz [](../programming-guide/concepts/attributes/index.md) . C# programlama kılavuzundaki öznitelikler.
 
-### <a name="in-method-overload-resolution-tiebreaker"></a>`in` yöntemi aşırı yükleme çözünürlüğü tiebreaker
+### <a name="in-method-overload-resolution-tiebreaker"></a>`in`yöntem aşırı yükleme çözünürlüğü tiekesici
 
-Zaman `in` değiştirici bağımsız değişken eklendi, bu iki yöntem belirsizliğe neden olur:
+`in` Bağımsız değişken değiştiricisi eklendiğinde, bu iki yöntem bir belirsizliğe neden olur:
 
 ```csharp
 static void M(S arg);
 static void M(in S arg);
 ```
 
-Şimdi, (ilk olarak önceki örnek) değeriyle aşırı daha iyi salt okunur başvuru sürümüne göre. Sürüm salt okunur başvuru bağımsız değişkeni ile çağırmak için içermelidir `in` yöntemi çağırırken değiştiricisi.
+Artık, by değeri (önceki örnekte ilk olarak) aşırı yüklemesi, salt okunur başvuru sürümünden daha iyidir. Salt okunur başvuru bağımsız değişkeniyle sürümü çağırmak için, yöntemini çağırırken `in` değiştiricisini dahil etmeniz gerekir.
 
 > [!NOTE]
-> Bu, bir hata düzeltmesi uygulanmıştır. Bu artık bile "7.2 için" kümesi dil sürümü ile belirsiz.
+> Bu bir hata düzeltilme olarak uygulandı. Dil sürümü "7,2" olarak ayarlanmış olsa bile bu artık belirsizdir.
 
-Daha fazla bilgi için makaleye bakın [ `in` parametre değiştiricisi](../language-reference/keywords/in-parameter-modifier.md).
+Daha fazla bilgi için, [ `in` parametre değiştiricisiyle](../language-reference/keywords/in-parameter-modifier.md)ilgili makaleye bakın.
 
-### <a name="extend-expression-variables-in-initializers"></a>Başlatıcılar içindeki ifade değişkenleri genişletme
+### <a name="extend-expression-variables-in-initializers"></a>Başlatıcılarda ifade değişkenlerini genişletme
 
-C# izin vermek için 7.0 eklenen söz dizimi `out` değişken bildirimlerini eklemek alan başlatıcıları, özellik başlatıcılar, oluşturucu başlatıcıları sorgu yan tümceleri için genişletilmişse. Bu, aşağıdaki örnek gibi bir kod sağlar:
+Değişken bildirimlerine izin `out` vermek C# için 7,0 'e eklenen sözdizimi, alan başlatıcıları, özellik başlatıcıları, Oluşturucu başlatıcıları ve sorgu yan tümcelerini kapsayacak şekilde genişletilmiştir. Aşağıdaki örnek gibi kodu sunar:
 
 ```csharp
 public class B
@@ -194,26 +194,26 @@ public class D : B
 
 ### <a name="improved-overload-candidates"></a>Geliştirilmiş aşırı yükleme adayları
 
-Her sürümde, aşırı yükleme çözünürlüğü kuralları belirsiz yöntem çağrılarını "açık" bir seçeneğin sahip olduğu durumlara yönelik olarak güncelleştirilir. Bu sürüm, belirgin seçim çekme derleyici yardımcı olmak için üç yeni kurallar ekler:
+Her sürümde, aşırı yükleme çözümleme kuralları belirsiz Yöntem etkinleştirmeleri "belirgin" bir seçeneğe sahip olduğu durumlara göre güncelleştirilir. Bu sürüm, derleyicinin açık seçimi seçmesini sağlamaya yardımcı olmak için üç yeni kural ekler:
 
-1. Bir yöntem grubu örneği hem statik üyeler içeriyorsa, yöntem bir örnek alıcı ya da bağlam çağrıldı, derleyici örnek üyeleri atar. Yöntemi bir örnek alıcı ile çağırdığınız derleyici statik üyeleri olarak atar. Hiç alıcı olduğunda, derleyicinin yalnızca statik üyeleri statik bir bağlamda, aksi takdirde statik içerir ve örnek üyeleri. Alıcı, muğlak örneği veya türü olduğunda, derleyici her ikisi de içerir. Bir statik içerik, örtük burada `this` örneği alıcı kullanılamaz, üyeleri gövdesi yok burada içerir `this` statik üyeleri gibi tanımlanan yanı sıra yerlerde `this` gibi alan başlatıcıları kullanılamaz ve Oluşturucu başlatıcıları.
-1. Bir yöntem grubu türü bağımsız değişkenleri kendi kısıtlamaları karşılamayan bazı genel yöntemleri içeriyorsa, bu üyeler için aday kümesinden kaldırılır.
-1. Bir yöntem grubu dönüştürme, türü, kümeden kaldırıldığına aday yöntemleri, dönüş türü temsilcinin ile eşleşmiyor döndürür.
+1. Bir yöntem grubu hem örnek hem de statik üye içerdiğinde, yöntem bir örnek alıcısı veya bağlamı olmadan çağrılırsa, derleyici örnek üyelerini atar. Yöntem bir örnek alıcısıyla çağrılırsa derleyici statik üyeleri atar. Alıcı olmadığında, derleyici statik bir bağlamda yalnızca statik üyeleri ve statik ve örnek üyelerini içerir. Alıcı bir örnek veya tür ındexattributes, derleyici her ikisini de içerir. Örtük `this` bir örnek alıcısının kullanıldığı statik bir bağlam, statik üyeler gibi, hiçbir `this` üyenin, örneğin, alan başlatıcıları ve bu gibi kullanılamayan yerleri `this` de içerir. Oluşturucu başlatıcıları.
+1. Bir yöntem grubu, tür bağımsız değişkenleri kısıtlamalarını karşılamadığı bazı genel yöntemler içerdiğinde, bu üyeler aday kümesinden kaldırılır.
+1. Bir yöntem grubu dönüştürmesi için, dönüş türü, temsilcinin dönüş türüyle eşleşmeyen aday Yöntemler kümeden kaldırılır.
 
-Hangi daha iyi bir yöntemdir emin olduğunuzda belirsiz yöntemi aşırı yüklemeleri için daha az derleyici hataları bulabilirsiniz. çünkü bu değişiklik yalnızca fark edeceksiniz.
+Bu değişikliği yalnızca, hangi yöntemin daha iyi olduğundan emin olduğunuzda belirsiz yöntem aşırı yüklemeleri için daha az derleyici hatası bulacağınız için fark edeceksiniz.
 
 ## <a name="new-compiler-options"></a>Yeni derleyici seçenekleri
 
-Yeni derleme seçenekleri C# programları için yeni derleme ve DevOps senaryolarını destekler.
+Yeni derleyici seçenekleri, programlar için C# yeni derlemeyi ve DevOps senaryolarını destekler.
 
-### <a name="public-or-open-source-signing"></a>Genel veya açık kaynak imzalama
+### <a name="public-or-open-source-signing"></a>Ortak veya açık kaynak imzalama
 
-`-publicsign` Derleyici seçeneği, bir ortak anahtar kullanarak derlemeyi imzalamak için derleyicinin bildirir. Derleme işaretli olarak işaretlenmiş, ancak imza ortak anahtardan alınır. Bu seçenek, bir ortak anahtar kullanarak, açık kaynak projelerinden imzalı derlemeler oluşturmanıza olanak sağlar.
+`-publicsign` Derleyici seçeneği derleyiciye ortak anahtar kullanarak derlemeyi imzalamasını söyler. Derleme imzalanmış olarak işaretlenir, ancak imza ortak anahtardan alınır. Bu seçenek, açık kaynaklı projelerden ortak anahtar kullanarak imzalı derlemeler oluşturmanıza olanak sağlar.
 
-Daha fazla bilgi için [- publicsign derleyici seçeneği](../language-reference/compiler-options/publicsign-compiler-option.md) makalesi.
+Daha fazla bilgi için bkz. [-publicsign derleyici seçeneği](../language-reference/compiler-options/publicsign-compiler-option.md) makalesi.
 
 ### <a name="pathmap"></a>pathmap
 
-`-pathmap` Derleyici seçeneği, yapı ortamı'ndan kaynak yolları ile eşlenen kaynak yolları değiştirmek için derleyicinin bildirir. `-pathmap` Seçeneği denetimleri veya PDB dosyaları için derleyici tarafından yazılmış kaynak yolu <xref:System.Runtime.CompilerServices.CallerFilePathAttribute>.
+`-pathmap` Derleyici seçeneği, derleyicinin kaynak yollarını eşlenen kaynak yollarla derleme ortamından değiştirmesini söyler. Seçeneği, derleyici tarafından pdb dosyalarına veya <xref:System.Runtime.CompilerServices.CallerFilePathAttribute>için yazılan kaynak yolunu denetler. `-pathmap`
 
-Daha fazla bilgi için [- pathmap derleyici seçeneği](../language-reference/compiler-options/pathmap-compiler-option.md) makalesi.
+Daha fazla bilgi için bkz. [-pathmap derleyici seçeneği](../language-reference/compiler-options/pathmap-compiler-option.md) makalesi.

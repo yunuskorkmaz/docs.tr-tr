@@ -8,21 +8,21 @@ helpviewer_keywords:
 - classes [WPF], adding as owners of dependency properties
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
-ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ddc85d159b4bf81751428c13c234c5e53be8ad4
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777123"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401124"
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Nasıl yapılır: Bağımlılık Özelliği için Sahip Türü Ekleme
-Bu örnekte, farklı bir tür için kayıtlı bir bağımlılık özelliği sahibi olarak bir sınıf eklemek gösterilmektedir. Bunu yaparak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] okuyucu ve özellik sistemi olan her ikisi de ek bir özellik sahibi olarak sınıf tanıyabilir. Sahibi olarak isteğe bağlı olarak ekleme, türe özgü meta verilerini sağlamak ekleme sınıfına olanak tanır.  
+Bu örnek, farklı bir tür için kaydedilen Dependency özelliğinin sahibi olarak bir sınıfın nasıl ekleneceğini gösterir. Bunu yaptığınızda, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] okuyucu ve özellik sistemi, özelliğin ek sahibi olarak sınıfını tanıyabilecektir. Sahip olarak eklemek, isteğe bağlı olarak türe özgü meta veriler sağlamak için sınıfın eklenmesine izin verir.  
   
- Aşağıdaki örnekte, `StateProperty` bir özellik tarafından kaydedilen `MyStateControl` sınıfı. Sınıf `UnrelatedStateControl` kendisini sahiplerinden biri ekler `StateProperty` kullanarak <xref:System.Windows.DependencyProperty.AddOwner%2A> yöntemi, özellikle ekleme türü üzerinde var olduğundan, bağımlılık özelliği için yeni meta veriler sağlayan imza kullanılıyor. Sağlamalısınız dikkat edin [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] gösterilen örneğe benzer bir özellik için erişimciler [bağımlılık özelliği uygulama](how-to-implement-a-dependency-property.md) örnek yanı sıra yeniden eklenen sınıf bağımlılık özelliği tanımlayıcıyı kullanıma sunar. sahibi olarak.  
+ Aşağıdaki örnekte, `StateProperty` `MyStateControl` sınıfı tarafından kaydedilen bir özelliktir. Sınıfı `UnrelatedStateControl` , özellikle, ekleme türü üzerinde olduğu gibi `StateProperty` bağımlılık özelliği için yeni meta verilere izin veren imzayı kullanarak kendisini kullanarak <xref:System.Windows.DependencyProperty.AddOwner%2A> kendi sahibi olarak ekler. Özellik için ortak dil çalışma zamanı (CLR) erişimcileri sağlamanız gerektiğine dikkat edin. bunun yanı sıra, sahip olarak eklenmekte [](how-to-implement-a-dependency-property.md) olan sınıfta bağımlılık özellik tanımlayıcısını yeniden kullanıma sunar.  
   
- Sarmalayıcılar olmadan, bağımlılık özelliği hala programlı erişim kullanmanın açısından işe yarar <xref:System.Windows.DependencyObject.GetValue%2A> veya <xref:System.Windows.DependencyObject.SetValue%2A>. Ancak, genellikle bu özelliği sistem davranışı ile paralel istediğiniz [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] özelliği sarmalayıcıları. Sarmalayıcılar, bağımlılık özelliği program üzerinden ayarlamak daha kolay hale getirmek ve özellikleri olarak ayarlanacak mümkün kılar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] öznitelikleri.  
+ Sarmalayıcılar olmadan, bağımlılık özelliği, veya <xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A>kullanılarak programlı erişim perspektifinden çalışmaya devam eder. Ancak, bu özellik sistem davranışının CLR özellik sarmalayıcılarıyla paralel olmasını sağlar. Sarmalayıcılar, bağımlılık özelliğini programlı bir şekilde ayarlamayı kolaylaştırır ve özellikleri öznitelik olarak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ayarlamayı mümkün hale getirir.  
   
- Varsayılan meta verileri geçersiz kılma konusunda bilgi edinmek için bkz: [bağımlılık özelliği meta verileri geçersiz kılma](how-to-override-metadata-for-a-dependency-property.md).  
+ Varsayılan meta verileri nasıl geçersiz kılabileceğinizi öğrenmek için bkz. [bir bağımlılık özelliği Için meta verileri geçersiz kılma](how-to-override-metadata-for-a-dependency-property.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[PropertySystemEsoterics#MyStateControl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]

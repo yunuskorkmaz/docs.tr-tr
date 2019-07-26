@@ -1,5 +1,5 @@
 ---
-title: fixed Statement - C# başvurusu
+title: Fixed deyimidir- C# Reference
 ms.custom: seodec18
 ms.date: 05/10/2018
 f1_keywords:
@@ -7,42 +7,42 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 88e2b93fda786db15b3a3a693bdb9293ed31df4c
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d3c87f0e71095bbcc7c5a1d64b026e92838a6306
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833215"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433747"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed Deyimi (C# Başvurusu)
 
-`fixed` Deyimi, taşınabilir bir değişken yerini değiştirme alanından çöp toplayıcı engeller. `fixed` Deyimi izin yalnızca bir [güvenli](unsafe.md) bağlamı. Ayrıca `fixed` oluşturmak için anahtar sözcüğü [sabit boyutlu arabellekler](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
+`fixed` İfade, çöp toplayıcısının taşınabilir bir değişkenin yerini değiştirmesini engeller. Deyime yalnızca güvenli olmayan bir bağlamda izin verilir. [](unsafe.md) `fixed` [Sabit boyutlu arabellekler](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)oluşturmak için `fixed` anahtar sözcüğünü de kullanabilirsiniz.
 
-`fixed` Deyimi ayarlar bir işaretçi yönetilen bir değişken ve "Sabitlemeleri" değişken deyimin yürütülmesi sırasında. Yalnızca taşınabilir yönetilen değişkenleri işaretçileri kullanışlıdır bir `fixed` bağlamı. Olmadan bir `fixed` bağlamı, çöp toplama dışında yeniden konumlandırmakta değişkenleri ilgilenmeye. C# derleyicisi yalnızca, bir işaretçi yönetilen bir değişkene atamanıza olanak tanır bir `fixed` deyimi.
+`fixed` İfade, yönetilen bir değişkene bir işaretçi ayarlar ve deyimin yürütülmesi sırasında bu değişkene "PIN" koyar. Taşınabilir olarak yönetilen değişkenlere yönelik işaretçiler yalnızca bir `fixed` bağlamda yararlıdır. `fixed` Bağlam olmadan çöp toplama, değişkenleri tahmin edilmemiş şekilde yeniden konumlandırmaya yönelik olabilir. C# Derleyici yalnızca bir `fixed` ifadede yönetilen değişkene bir işaretçi atamanızı sağlar.
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#1)]
 
-Bir işaretçi, bir dizi, bir dize, bir sabit boyutlu arabellek veya değişkenin adresini kullanarak başlatabilirsiniz. Aşağıdaki örnekte, değişken adresleri, diziler ve dizeleri kullanımını gösterir:
+Bir diziyi, dizeyi, sabit boyutlu arabelleği veya bir değişkenin adresini kullanarak bir işaretçiyi başlatabilirsiniz. Aşağıdaki örnek, değişken adreslerinin, dizilerin ve dizelerin kullanımını göstermektedir:
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
 
-C# 7.3 ile başlangıç `fixed` deyimi yerler diziler, dizeler, sabit boyutlu arabellekler veya yönetilmeyen değişkenleri ötesinde ek türleri üzerinde çalışır. Adlı bir yöntem uygulayan herhangi bir tür `GetPinnableReference` sabitlenebilir. `GetPinnableReference` Döndürmelidir bir `ref` değişken için bir yönetilmeyen türe. Üzerinde konusuna [işaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md) daha fazla bilgi için. .NET türleri <xref:System.Span%601?displayProperty=nameWithType> ve <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> sunulan .NET Core 2.0 olun bu düzeni kullanın ve sabitlenebilir. Bu, aşağıdaki örnekte gösterilmiştir:
+7,3 ile C# başlayarak, `fixed` ifade diziler, dizeler, sabit boyutlu arabellekler veya yönetilmeyen değişkenlerin ötesinde ek türler üzerinde çalışır. Adlı `GetPinnableReference` bir yöntemi uygulayan herhangi bir tür sabitlenebilir. , `GetPinnableReference` [Yönetilmeyen türde](../builtin-types/unmanaged-types.md)bir `ref` değişken döndürmelidir. .NET Core 2,0 <xref:System.Span%601?displayProperty=nameWithType> ' <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> de sunulan .net türleri bu düzenin kullanımını ve sabitlenebilir. Bu, aşağıdaki örnekte gösterilmiştir:
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
 
-Bu düzende alması gereken türleri oluşturuyorsanız, bkz. <xref:System.Span%601.GetPinnableReference?displayProperty=nameWithType> desenini uygulama örneği.
+Bu modele katılması gereken türler oluşturuyorsanız, bu düzenin uygulanması örneği için bkz <xref:System.Span%601.GetPinnableReference?displayProperty=nameWithType> .
 
-Aynı türde ise tek bir deyimde birden çok işaretçi başlatılabilir:
+Aynı türde olan birden çok işaretçi tek bir bildirimde başlatılabilir:
 
 ```csharp
 fixed (byte* ps = srcarray, pd = dstarray) {...}
 ```
 
-Farklı türlerde işaretçileri başlatmak için yalnızca içe `fixed` ifadeleri, aşağıdaki örnekte gösterildiği gibi.
+Farklı türlerin işaretçilerini başlatmak için aşağıdaki örnekte gösterildiği gibi `fixed` deyimlerini iç içe geçirebilirsiniz.
 
 [!code-csharp[Initializing multiple pointers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#3)]
 
-Deyim kodda yürütüldükten sonra sabitlenmiş olan tüm değişkenler sabitlenmemiş ve çöp toplama var. Bu nedenle, bu değişkenlere dışında işaret etmeyen `fixed` deyimi. İçinde bildirilmiş değişkenlerin `fixed` deyimi bu kolaylaştıracak ifade, kapsamı:
+Deyimdeki kod yürütüldükten sonra, sabitlenmiş değişkenler sabitlenir ve çöp toplamaya tabidir. Bu nedenle, bu değişkenleri `fixed` deyimin dışında işaret etmez. `fixed` Bildiriminde belirtilen değişkenler, bu ifadeye göre kapsamlandırılır ve daha kolay hale getirir:
 
 ```csharp
 fixed (byte* ps = srcarray, pd = dstarray)
@@ -52,7 +52,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 // ps and pd are no longer in scope here.
 ```
 
-İşaretçileri başlatılamadı `fixed` deyimleri olan salt okunur değişkenler. İşaretçi değeri değiştirmek istiyorsanız, ikinci işaretçi değişkeninin bildirimini ve değiştiren gerekir. İçinde bildirilen değişken `fixed` deyimi değiştirilemez:
+`fixed` Deyimlerde başlatılan işaretçiler salt okunur değişkenlerdir. İşaretçi değerini değiştirmek istiyorsanız, ikinci bir işaretçi değişkeni bildirmeniz ve bunu değiştirmeniz gerekir. `fixed` İfadede belirtilen değişken değiştirilemez:
 
 ```csharp
 fixed (byte* ps = srcarray, pd = dstarray)
@@ -63,16 +63,17 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-Burada tabi atık koleksiyonu olması gerekmez ve bu nedenle sabitlenmiş gerekmez yığında bellek ayırabilirsiniz. Kullanan yapmak için [ `stackalloc` işleci](../operators/stackalloc.md).
+Yığın üzerinde bellek ayırabilirsiniz, burada çöp toplamaya tabi değildir ve bu nedenle sabitlenmiş olması gerekmez. Bunu yapmak için [ `stackalloc` işlecini](../operators/stackalloc.md)kullanın.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [fixed deyimi](~/_csharplang/spec/unsafe-code.md#the-fixed-statement) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [fixed deyimin](~/_csharplang/spec/unsafe-code.md#the-fixed-statement) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [unsafe](unsafe.md)
+- [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Sabit Boyutlu Arabellekler](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
