@@ -68,12 +68,7 @@
     - name: Özel durumları işleme ve atma
       href: standard/exceptions/
     - name: .NET’te bütünleştirilmiş kodlar
-      href: standard/assembly/index.md
-      items:
-        - name: .NET Bütünleştirilmiş Kodu Dosya Biçimi
-          href: standard/assembly/file-format.md
-        - name: 'Nasıl yapılır: .NET Core’da Bütünleştirilmiş Kodu Kaldırabilme Özelliğini Kullanma ve Sorun Giderme'
-          href: standard/assembly/unloadability-howto.md
+      href: standard/assembly/
     - name: Çöp Toplama
       href: standard/garbage-collection/
     - name: Genel türler
