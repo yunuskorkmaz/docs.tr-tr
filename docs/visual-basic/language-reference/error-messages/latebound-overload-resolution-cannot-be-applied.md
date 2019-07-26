@@ -8,62 +8,64 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 8ceff80842ec4e7364a55578c1c3fdb870c73ece
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1fe3c4a29b542302b3615459142a3c565aa8244f
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661955"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68513018"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Geç bağlanan aşırı yükleme çözünürlüğü uygulanamaz '\<procedurename >' örnek bir arabirim türü olduğundan
-Derleyici bir aşırı yüklenmiş özellik veya yordamı başvuru çözmeye çalışıyor, ancak başvuru türünde bir bağımsız değişken olduğu için başarısız `Object` ve başvurulan nesne bir arabirim için veri türüne sahip. `Object` Bağımsız değişken başvuru geç bağlama olarak çözümlemek için derleyici zorlar.  
-  
- Bu durumlarda, derleyici aşırı yükleme yerine temel alınan arabirimini uygulayan sınıfa aracılığıyla çözümler. Sınıfı aşırı yüklü sürümlerini adlandırdığında derleyici bu sürümü adını farklı olduğundan, bir yükleme olarak dikkate almaz. Bu sırayla başvuru gidermek için doğru seçim olabilir, yeniden adlandırılmış sürüm yoksayma konusunda derleyici neden olur.  
-  
- **Hata Kimliği:** BC30933  
-  
-## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
-  
-- Kullanım `CType` bağımsız değişkende bir şekilde `Object` istediğiniz çağırmak için aşırı yükleme imzası tarafından belirtilen tür için.  
-  
-     Bu temel arabirimi başvuran nesnenin korumaz unutmayın. Bu hatayı önlemek için bağımsız değişken dönüştürmeniz gerekir.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek, aşırı yüklenmiş bir çağrı gösterir `Sub` yordam derleme zamanında bu hataya neden olur.  
-  
-```  
-Module m1  
-    Interface i1  
-        Sub s1(ByVal p1 As Integer)  
-        Sub s1(ByVal p1 As Double)  
-    End Interface  
-    Class c1  
-        Implements i1  
-        Public Overloads Sub s1(ByVal p1 As Integer) Implements i1.s1  
-        End Sub  
-        Public Overloads Sub s2(ByVal p1 As Double) Implements i1.s1  
-        End Sub  
-    End Class  
-    Sub Main()  
-        Dim refer As i1 = New c1  
-        Dim o1 As Object = 3.1415  
-        ' The following reference is INVALID and causes a compiler error.  
-        refer.s1(o1)   
-    End Sub  
-End Module  
-```  
-  
- Önceki örnekte derleyici çağrısına izin veriliyorsa `s1` yazıldığı gibi çözümleme sınıfı üzerinden gerçekleşmesi `c1` arabirimi yerine `i1`. Bu derleyici değil dikkate alır anlamına gelir `s2` adını farklı olduğundan `c1`, doğru seçeneği tarafından tanımlanan olmasına rağmen `i1`.  
-  
- Hatayı düzeltmek için ya da aşağıdaki kod satırlarını çağrısı değiştirerek:  
-  
-```  
-refer.s1(CType(o1, Integer))  
-refer.s1(CType(o1, Double))  
-```  
-  
- Her biri önceki kod satırlarını açıkça bıraktığı `Object` değişkeni `o1` biri aşırı yüklemeleri için tanımlanmış bir parametre türleri olarak.  
-  
+# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Erişen örnek bir arabirim türü olduğundan, geç bağlanan\<aşırı yükleme çözümlemesi ' procedurename > ' öğesine uygulanamaz
+
+Derleyici aşırı yüklenmiş bir özellik veya yordama yönelik bir başvuruyu çözümlemeye çalışıyor, ancak bir bağımsız değişken türünde `Object` olduğu ve başvuran nesnenin bir arabirimin veri türü olduğu için başvuru başarısız olur. `Object` Bağımsız değişkeni, derleyicinin başvuruyu geç bağlantılı olarak çözmeye zorlar.
+
+Bu koşullarda derleyici, temel alınan arabirim yerine uygulama sınıfı aracılığıyla aşırı yüklemeyi çözer. Sınıf, aşırı yüklenmiş sürümlerden birini yeniden adlandırdığında, adı farklı olduğu için derleyici bu sürümü bir aşırı yükleme olarak kabul etmez. Bu işlem, derleyicinin başvuruyu çözümlemek için doğru seçim yapmış olabileceği zaman yeniden adlandırılan sürümü yoksaymasına neden olur.
+
+**Hata KIMLIĞI:** BC30933
+
+## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
+
+- Bağımsız değişkenini `CType`,çağırmak istediğiniz aşırı yüklemenin imzasıyla belirtilen türe dönüştürmek için kullanın. `Object`
+
+  Başvuran nesneyi temel arabirime dönüştürmeye yardımcı olmadığına unutmayın. Bu hatadan kaçınmak için bağımsız değişkeni atamalısınız.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki örnek, derleme zamanında bu hataya neden olan `Sub` aşırı yüklenmiş bir yordamın çağrısını gösterir.
+
+```vb
+Module m1
+    Interface i1
+        Sub s1(ByVal p1 As Integer)
+        Sub s1(ByVal p1 As Double)
+    End Interface
+    Class c1
+        Implements i1
+        Public Overloads Sub s1(ByVal p1 As Integer) Implements i1.s1
+        End Sub
+        Public Overloads Sub s2(ByVal p1 As Double) Implements i1.s1
+        End Sub
+    End Class
+    Sub Main()
+        Dim refer As i1 = New c1
+        Dim o1 As Object = 3.1415
+        ' The following reference is INVALID and causes a compiler error.
+        refer.s1(o1)
+    End Sub
+End Module
+```
+
+Önceki örnekte, derleyici çağrıyı `s1` yazıldığı gibi olarak izin verirdi, çözümleme arabirimi `i1`yerine sınıfı `c1` aracılığıyla gerçekleşir. Bu, tarafından `s2` `c1` tanımlandığıgibidoğruseçimolsada,derleyicininadıfarklıolduğuiçingözönündebulundurmadığı`i1`anlamına gelir.
+
+Çağrıyı aşağıdaki kod satırlarından birine değiştirerek hatayı düzeltebilirsiniz:
+
+```vb
+refer.s1(CType(o1, Integer))
+refer.s1(CType(o1, Double))
+```
+
+Önceki kod satırlarının her biri `Object` değişkeni `o1` açıkça aşırı yüklemeler için tanımlanan parametre türlerinden birine açıkça yayınlar.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yordam Aşırı Yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)

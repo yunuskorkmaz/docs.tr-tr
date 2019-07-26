@@ -7,56 +7,57 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: 1c7fb92c963ea7fa4129cddf060fe7c0b0261fc7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d5aae4d30abbf9ed2af260412352a5e0452e0dcc
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665149"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68513029"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>İfade bir değerdir, bu nedenle atama işleminin hedefi olamaz
-Bir deyim, deyim için bir değer atamak çalışır. Yalnızca bir yazılabilir değişken, özelliği veya dizi öğesi için çalışma zamanında bir değer atayabilirsiniz. Aşağıdaki örnek nasıl bu hata oluşabilir gösterir.  
-  
-```  
-Dim yesterday As Integer  
-ReadOnly maximum As Integer = 45  
-yesterday + 1 = DatePart(DateInterval.Day, Now)  
-' The preceding line is an ERROR because of an expression on the left.  
-maximum = 50  
-' The preceding line is an ERROR because maximum is declared ReadOnly.  
-```  
-  
- Benzer örnekler dizi öğeleri ve özellikleri ile uygulayabilirsiniz.  
-  
- **Dolaylı erişim.** Bir değer türü aracılığıyla dolaylı erişim de bu hata oluşturabilirsiniz. Değerini ayarlama girişiminde aşağıdaki kod örneği göz önünde bulundurun <xref:System.Drawing.Point> dolaylı olarak aracılığıyla erişerek <xref:System.Windows.Forms.Control.Location%2A>.  
-  
-```  
-' Assume this code runs inside Form1.  
-Dim exitButton As New System.Windows.Forms.Button()  
-exitButton.Text = "Exit this form"  
-exitButton.Location.X = 140  
-' The preceding line is an ERROR because of no storage for Location.  
-```  
-  
- Yalnızca geçici bir ayırma için oluşturduğundan önceki örnekteki son deyim başarısız <xref:System.Drawing.Point> yapısı tarafından döndürülen <xref:System.Windows.Forms.Control.Location%2A> özelliği. Bir yapı bir değer türüdür ve ifade çalıştıktan sonra geçici yapısı korunmaz. Sorun bildirme ve kullanma için bir değişken çözülür <xref:System.Windows.Forms.Control.Location%2A>, için daha kalıcı bir ayırma oluşturur <xref:System.Drawing.Point> yapısı. Aşağıdaki örnek, önceki örnekte bulunan son deyim değiştirebilirsiniz kod gösterir.  
-  
-```  
-Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)  
-exitButton.Location = exitLocation  
-```  
-  
- **Hata Kimliği:** BC30068  
-  
-## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
-  
-- Deyimi, deyim için bir değer atar, ifade tek yazılabilir değişkeni, özelliği veya dizi öğesi ile değiştirin.  
-  
-- İfade bir değer türü (genellikle bir yapı) aracılığıyla dolaylı erişim yaparsa, değer türü tutacak bir değişken oluşturun.  
-  
-- Uygun yapısını (veya başka bir değer türü) değişkene atayın.  
-  
-- Bir değer atamak üzere bir özelliğe erişmek için bu değişkeni kullanın.  
-  
+
+Deyim bir ifadeye değer atamaya çalışır. Çalışma zamanında yalnızca yazılabilir bir değişkene, özelliğe veya dizi öğesine bir değer atayabilirsiniz. Aşağıdaki örnekte bu hatanın nasıl gerçekleşebileceği gösterilmektedir.
+
+```vb
+Dim yesterday As Integer
+ReadOnly maximum As Integer = 45
+yesterday + 1 = DatePart(DateInterval.Day, Now)
+' The preceding line is an ERROR because of an expression on the left.
+maximum = 50
+' The preceding line is an ERROR because maximum is declared ReadOnly.
+```
+
+Benzer örnekler Özellikler ve dizi öğelerine uygulanabilir.
+
+**Dolaylı erişim.** Bir değer türü üzerinden dolaylı erişim bu hatayı da oluşturabilir. Aşağıdaki kod örneğini göz önünde bulundurun. Bu, değeri dolaylı <xref:System.Drawing.Point> olarak aracılığıyla <xref:System.Windows.Forms.Control.Location%2A>uygulamasına erişerek değerini ayarlamaya çalışır.
+
+```vb
+' Assume this code runs inside Form1.
+Dim exitButton As New System.Windows.Forms.Button()
+exitButton.Text = "Exit this form"
+exitButton.Location.X = 140
+' The preceding line is an ERROR because of no storage for Location.
+```
+
+Önceki örneğin son açıklaması, <xref:System.Drawing.Point> <xref:System.Windows.Forms.Control.Location%2A> özelliği tarafından döndürülen yapı için yalnızca geçici bir ayırma oluşturduğundan başarısız olur. Yapı bir değer türüdür ve ifade çalıştıktan sonra geçici yapı korunmaz. Bu sorun, için <xref:System.Windows.Forms.Control.Location%2A>bir değişkeni bildirerek ve kullanılarak çözümlenir ve bu da <xref:System.Drawing.Point> yapı için daha kalıcı bir ayırma oluşturur. Aşağıdaki örnek, önceki örnekte yer alan son deyimin yerini alacak kodu gösterir.
+
+```vb
+Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)
+exitButton.Location = exitLocation
+```
+
+**Hata KIMLIĞI:** BC30068
+
+## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
+
+- Deyim bir ifadeye değer atadığında, ifadeyi tek bir yazılabilir değişken, özellik veya dizi öğesiyle değiştirin.
+
+- İfade bir değer türü (genellikle bir yapı) üzerinden dolaylı erişim yapıyorsa, değer türünü tutmak için bir değişken oluşturun.
+
+- Değişkene uygun yapıyı (veya başka bir değer türünü) atayın.
+
+- Değerini bir değer atamak için özelliğe erişmek üzere kullanın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
