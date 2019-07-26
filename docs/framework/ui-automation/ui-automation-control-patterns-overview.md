@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 7587c8cd24197252506967208869bd454b4f27f2
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6e2b5eaff3ee80434d5cdf39391273685da9faf0
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400677"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68434083"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI Otomasyon Denetim Düzenlerine Genel Bakış
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "68400677"
   
 - Özellikler ve olaylar denetim deseninin işlevselliği ve denetimin durumu hakkında bilgi sağlar.  
   
- Denetim desenleri, [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] nesnelerle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] bağlantılı arabirimler gibi ile ilgilidir. İçinde [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)], hangi arabirimlerin desteklediğini sormak için bir nesneyi sorgulayabilir ve sonra bu arabirimleri işlevlerine erişmek için kullanabilirsiniz. ' [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]De, UI Otomasyonu istemcileri, desteklenen denetim desenleri tarafından kullanıma sunulan özellikler, Yöntemler, olaylar ve yapılar aracılığıyla denetimle etkileşime geçmesini sağlayan bir denetim sorabilir. Örneğin, çok satırlı bir düzenleme kutusu için UI Otomasyon sağlayıcıları uygular <xref:System.Windows.Automation.Provider.IScrollProvider>. Bir istemci bir <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.ScrollPattern> denetim modelini desteklediğinde, denetimi işlemek için bu denetim deseninin açığa çıkarılan özellikleri, yöntemleri ve olayları kullanabilir veya denetimle ilgili bilgilere erişebilirsiniz.  
+ Denetim desenleri, bileşen [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] nesne modeli (com) nesneleriyle bağlantılı olarak arabirimler ile ilgilidir. COM ' da, hangi arabirimlerin desteklediğini sormak için bir nesneyi sorgulayabilir ve sonra bu arabirimleri işlevlerine erişmek için kullanabilirsiniz. ' [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]De, UI Otomasyonu istemcileri, desteklenen denetim desenleri tarafından kullanıma sunulan özellikler, Yöntemler, olaylar ve yapılar aracılığıyla denetimle etkileşime geçmesini sağlayan bir denetim sorabilir. Örneğin, çok satırlı bir düzenleme kutusu için UI Otomasyon sağlayıcıları uygular <xref:System.Windows.Automation.Provider.IScrollProvider>. Bir istemci bir <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.ScrollPattern> denetim modelini desteklediğinde, denetimi işlemek için bu denetim deseninin açığa çıkarılan özellikleri, yöntemleri ve olayları kullanabilir veya denetimle ilgili bilgilere erişebilirsiniz.  
   
 <a name="uiautomation_control_pattern_client_provider"></a>   
 ## <a name="ui-automation-providers-and-clients"></a>UI Otomasyon sağlayıcıları ve Istemcileri  

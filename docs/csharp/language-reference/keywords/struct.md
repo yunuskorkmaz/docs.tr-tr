@@ -1,5 +1,5 @@
 ---
-title: Yapı - C# başvurusu
+title: struct- C# Reference
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 5317ea403575dca7ed64a5784fa9c993fa8d2f64
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1f1c512e1995df07fc4b9e18e34a85119e270bda
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633826"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433778"
 ---
 # <a name="struct-c-reference"></a>struct (C# Başvurusu)
 
-A `struct` türü, genelde küçük bir dikdörtgen koordinatlarını veya bir öğe bir stok özelliklerini gibi ilişkili değişken grupları kapsüllemek için kullanılan bir değer türüdür. Aşağıdaki örnek, bir basit yapı bildirimi gösterilmektedir:
+`struct` Tür, genellikle bir dikdörtgenin koordinatları veya Stoktaki bir öğenin özellikleri gibi ilgili değişkenlerin küçük gruplarını kapsüllemek için kullanılan bir değer türüdür. Aşağıdaki örnek, basit bir struct bildirimini göstermektedir:
 
 ```csharp
 public struct Book
@@ -30,25 +30,25 @@ public struct Book
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yapılar içerebilir [oluşturucular](../../programming-guide/classes-and-structs/constructors.md), [sabitleri](../../programming-guide/classes-and-structs/constants.md), [alanları](../../programming-guide/classes-and-structs/fields.md), [yöntemleri](../../programming-guide/classes-and-structs/methods.md), [özellikleri](../../programming-guide/classes-and-structs/properties.md), [dizin oluşturucular](../../programming-guide/indexers/index.md), [işleçleri](../../programming-guide/statements-expressions-operators/operators.md), [olayları](../../programming-guide/events/index.md), ve [türlerin](../../programming-guide/classes-and-structs/nested-types.md), ancak birçok üye gerekliyse, türünüz bunun yerine bir sınıf yapma dikkate almanız gerekir.
+Yapılar, birçok üye olsa da, [oluşturucular](../../programming-guide/classes-and-structs/constructors.md), [sabitler](../../programming-guide/classes-and-structs/constants.md), [alanlar](../../programming-guide/classes-and-structs/fields.md), [Yöntemler](../../programming-guide/classes-and-structs/methods.md), [Özellikler](../../programming-guide/classes-and-structs/properties.md), [Dizin oluşturucular](../../programming-guide/indexers/index.md), [işleçler](../../programming-guide/statements-expressions-operators/operators.md), [Olaylar](../../programming-guide/events/index.md)ve [iç içe türler](../../programming-guide/classes-and-structs/nested-types.md)içerebilir. gerekli, bunun yerine bir sınıf yazmanız gerekir.
 
-Örnekler için bkz [yapılar kullanarak](../../programming-guide/classes-and-structs/using-structs.md).
+Örnekler için bkz. [yapıları kullanma](../../programming-guide/classes-and-structs/using-structs.md).
 
-Yapı birimleri arabirim uygulayabilir, ancak bunlar başka bir yapı devralamaz. Bu nedenle, Yapı üyeleri olarak bildirilemez `protected`.
+Yapılar bir arabirim uygulayabilir, ancak başka bir struct 'tan devralınabilir. Bu nedenle, yapı üyeleri olarak `protected`bildirilemez.
 
-Daha fazla bilgi için [yapılar](../../programming-guide/classes-and-structs/structs.md).
+Daha fazla bilgi için bkz. [yapılar](../../programming-guide/classes-and-structs/structs.md).
 
 ## <a name="examples"></a>Örnekler
 
-Örnekler ve daha fazla bilgi için bkz. [yapılar kullanarak](../../programming-guide/classes-and-structs/using-structs.md).
+Örnekler ve daha fazla bilgi için bkz. [yapıları kullanma](../../programming-guide/classes-and-structs/using-structs.md).
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Örnekler için bkz [yapılar kullanarak](../../programming-guide/classes-and-structs/using-structs.md).
+Örnekler için bkz. [yapıları kullanma](../../programming-guide/classes-and-structs/using-structs.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [Varsayılan Değerler Tablosu](default-values-table.md)

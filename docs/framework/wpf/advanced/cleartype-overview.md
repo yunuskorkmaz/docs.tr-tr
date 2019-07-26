@@ -5,65 +5,65 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 0127ee4112c4b42a7a55b9233217ea1e02604042
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7bf04e7c22bf13ed681be7afb582176edc2f3072
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051357"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484694"
 ---
 # <a name="cleartype-overview"></a>ClearType Genel Bakışı
-Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] teknoloji bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+Bu konu, [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]içinde bulunan teknolojiye genel bir bakış sağlar.  
 
 <a name="overview"></a>   
-## <a name="technology-overview"></a>Teknoloji genel bakış  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] bir yazılım teknolojisi tarafından geliştirilen [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] , dizüstü ekranları, Pocket PC ekranları ve düz panel izleyiciler gibi mevcut LCD'ler (Sıvı Crystal gösterir), metnin okunabilirliğini artırır.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] her piksel LCD ekranın tek dikey renk Şerit öğelerine erişerek çalışır. Önce [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], küçük bir bilgisayar görüntüleyebilir ayrıntı düzeyini tek bir piksel olan ancak [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] LCD Monitör üzerinde çalışan, biz artık özellikleri bir pikselin kesir olarak küçük metnin genişliği görüntüleyebilir. Ek çözümleme uzun süreler okumak çok daha kolay hale metin görüntüleme, küçük ayrıntıları netliğini artırır.  
+## <a name="technology-overview"></a>Teknolojiye genel bakış  
+ ClearType, dizüstü ekranları, Pocket PC [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] ekranları ve düz panel izleyicileri gibi mevcut LCD 'lerde (sıvı kristal ekranlar) metnin okunabilirliğini artıran, tarafından geliştirilen bir yazılım teknolojisidir.  ClearType, bir LCD ekranın her pikseline tek dikey renk Stripe öğelerine erişerek işe yarar. ClearType 'Tan önce, bir bilgisayarın görüntüleyeceği en düşük ayrıntı düzeyi tek bir pikseldir, ancak bir LCD monitörde çalışan ClearType ile, artık metnin özelliklerini piksel genişliği kadar küçük bir sayı olarak görüntüleriz. Ek çözüm, metin görüntüleme içindeki küçük ayrıntıların keskinliğini artırarak uzun süreleri okumayı çok daha kolay hale getirir.  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] en son nesil [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] sürümü üzerinde çeşitli iyileştirmeler olduğu [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)].  
+ ' De [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kullanılabilir ClearType, sürümünde [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]bulunan sürüm üzerinde çeşitli geliştirmeler içeren en son ClearType sürümüdür.  
   
 <a name="sub-pixel_positioning"></a>   
 ## <a name="sub-pixel-positioning"></a>Alt piksel konumlandırma  
- Önceki sürümü üzerinde önemli bir iyileştirme [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] alt piksel konumlandırmanın kullanılır. Farklı [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] uygulaması içinde bulunan [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)], [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] piksel ve yalnızca piksel başına sınırları içinde başlatmasına izin verir. Bu ek çözümleme nedeniyle, karakterleri konumlandırmada karakterleri oranları ve aralığı daha kesin ve tutarlı.  
+ ClearType 'ın önceki sürümünde önemli bir geliştirme, alt piksel konumlandırmayı kullanmaktır. İçinde bulunan ClearType uygulamasının [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]aksine, içindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType karakterlerin yalnızca pikselin başlangıç sınırını değil, piksel içinde başlatılmasına izin verir. Glifleri konumlandırmada bu ek çözünürlük nedeniyle, gliflerin aralığı ve oranları daha kesin ve tutarlıdır.  
   
- Aşağıdaki iki örnek, alt piksel konumlandırma kullanıldığında karakterleri bir alt piksel sınırında nasıl başlatılacağını gösterir. Sol taraftaki örnek önceki sürümünü kullanarak işlenir [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] işleyici ise alt piksel konumlandırmayı değil. Sağ taraftaki örnek yeni bir sürümü kullanılarak işlenir [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] alt piksel konumlandırmayı kullanarak, işleyici. Not nasıl her **e** ve **l** her farklı bir alt pikselini başladığı için sağdaki resimde biraz farklı şekilde işlenir. Metin ekranında normal boyutunda görüntülerken, bu fark simge resminin yüksek karşıtlığı nedeniyle belirgin değildir. Bu yalnızca karmaşık renk içinde filtrelemesi nedeniyle mümkündür [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].  
+ Aşağıdaki iki örnekte, alt piksel konumlandırması kullanıldığında karakterlerin herhangi bir alt piksel sınırında nasıl başlayabileceğiniz gösterilmektedir. Sol taraftaki örnek, ClearType işleyicisinin alt piksel konumlandırmayı kullanmayan önceki bir sürümü kullanılarak işlenir. Sağdaki örnek, alt piksel konumlandırma kullanılarak ClearType işleyicisinin yeni sürümü kullanılarak işlenir. Her biri farklı bir alt piksel üzerinde başladığı için sağ görüntüdeki her bir **e** ve **l** 'nin nasıl biraz farklı şekilde işlendiğine göz önünde bulundurun. Metinde normal boyutunda metin görüntülenirken bu fark, glif resminin yüksek karşıtlığı nedeniyle dikkat çekici değildir. Bu yalnızca ClearType 'a eklenen gelişmiş renk filtrelemesi nedeniyle mümkündür.  
   
- ![ClearType iki sürümünü görüntülenen metin](./media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
-ClearType önceki ve sonraki sürümleri ile görüntülenen metin  
+ ![ClearType 'ın iki sürümüyle birlikte görünen metin](./media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
+ClearType 'ın önceki ve sonraki sürümleriyle birlikte görünen metin  
   
- Aşağıdaki iki örnek çıktısı önceki karşılaştırma [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] yeni sürümünü işleyiciyle [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Oluşturucu. Piksel konumlandırma, sağ tarafta gösterilen aralığı türü ekranında, özellikle küçük boyutlarda karakter genişliği önemli bir kısmı alt piksel ve tüm bir piksel arasındaki farkı temsil ettiği en önemli ölçüde artırır. Harfler aralığını daha da ikinci görüntüde olduğuna dikkat edin. Alt piksel ekrana metnin genel görünümünü konumlandırma toplu avantajı büyük ölçüde artar ve önemli bir aşamadır temsil eden [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] teknoloji.  
+ Aşağıdaki iki örnek, önceki ClearType işleyiciden gelen çıktıyı ClearType işleyicisinin yeni sürümüyle karşılaştırır. Sağ tarafta gösterilen alt piksel konumlandırma, özellikle bir alt piksel ve tam piksel arasındaki farkın önemli bir karakter genişliği oranını temsil eden küçük boyutlarda, ekranda tür boşluklarını büyük ölçüde geliştirir. Harfler arasındaki boşluğun ikinci görüntüde bile daha fazla olduğunu unutmayın. Alt piksel konumlandırmanın bir metin ekranının genel görünümüne toplam avantajı büyük ölçüde artar ve ClearType teknolojisindeki önemli bir evrimi temsil eder.  
   
- ![ClearType önceki bir sürümü ile görüntülenen metin](./media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
-ClearType önceki ve sonraki sürümleri ile metin  
+ ![ClearType 'ın önceki sürümüyle birlikte görünen metin](./media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
+ClearType 'ın önceki ve sonraki sürümlerini içeren metin  
   
 <a name="y-direction_antialiasing"></a>   
-## <a name="y-direction-antialiasing"></a>Y yönünde düzgünleştirme  
- Başka bir geliştirme [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] y yönünde düzgünleştirme olduğu. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] İçinde [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] y yönünde düzgünleştirme daha iyi çözüm x ekseninde y sağlar. Kırpın ve alta yüzeysel eğrilerinin çentikli kenarları okunabilirlik değerini düşürebilir.  
+## <a name="y-direction-antialiasing"></a>Y yönü düzgünleştirme  
+ ' De [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType 'ın başka bir geliştirmesi, y yönü kenar yumuşatmadır. Y yönü kenar [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] yumuşatma olmadan içindeki ClearType, x ekseninde daha iyi çözüm sağlar ancak y eksenini etkilemez. Yüzeysel eğrilerin üst ve botları üzerinde, pürüzlü kenarlar okunabilirliği kaldırır.  
   
- Aşağıdaki örnek, hiçbir y yönünde düzgünleştirme olan etkisini gösterir. Bu durumda, üst ve alt harfi sivri kenarlar görünür.  
+ Aşağıdaki örnek, y yönü düzgünleştirmenin etkilerini gösterir. Bu durumda, harfin üst ve altındaki pürüzlü kenarlar görünür.  
   
- ![Yüzeysel eğrileri çentikli kenarlara metinle](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
-Yüzeysel eğrileri çentikli kenarlara metin  
+ ![Yüzeysel eğrilerde pürüzlü kenarları olan metin](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
+Yüzeysel eğrilerde pürüzlü kenarları olan metin  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] düzgünleştirme herhangi çentikli kenarları yumuşak y yönünde düzeyi sağlar. Bu özellikle İdeogramlar eşit miktarda bir yatay ve dikey yüzeysel eğrileri sahip olduğu Doğu Asya dilleri okunabilirliğini artırmak için önemlidir.  
+ İçindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType, pürüzlü kenarları düzgünleştirmek için y yönü düzeyinde düzgünleştirme sağlar. Bu, ideogramların neredeyse eşit miktarda yatay ve dikey yüzeysel eğrilerinin bulunduğu Doğu Asya dillerinin okunabilirliğini geliştirmek için özellikle önemlidir.  
   
- Aşağıdaki örnek, y yönünde düzgünleştirme etkisini gösterir. Bu durumda, üst ve alt harfi düzgün bir eğri gösterir.  
+ Aşağıdaki örnek, y yönü düzgünleştirmenin etkisini gösterir. Bu durumda, harfin üst ve alt kısmı düz bir eğri gösterir.  
   
- ![ClearType y metinle&#45;anti yönü&#45;yumuşatma](./media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
-ClearType y yönünde düzgünleştirme ile metin  
+ ![ClearType y&#45;yönü düzgünleştirmesini&#45;içeren metin](./media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+ClearType y yönünde düzgünleştirme içeren metin  
   
 <a name="hardware_acceleration"></a>   
 ## <a name="hardware-acceleration"></a>Donanım hızlandırma  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] daha iyi performans ve CPU yükü ve sistem bellek gereksinimlerini azaltmak için donanım hızlandırma avantajlarından yararlanabilirsiniz. Piksel gölgelendiricileri ve bir grafik kartının video belleği kullanarak [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] özellikle animasyon kullanıldığında, metnin daha hızlı bir şekilde işlenmesini sağlar.  
+ İçindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType, daha iyi performans sağlamak ve CPU yükü ve sistem belleği gereksinimlerini azaltmak için donanım hızlandırmasının avantajlarından yararlanabilir. Bir grafik kartının piksel gölgelendiricilerini ve video belleğini kullanarak, özellikle animasyon kullanıldığında ClearType daha hızlı metin işleme sağlar.  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sistem genelinde değiştirmez [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ayarları. Devre dışı bırakma [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] içinde [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ayarlar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] düzgünleştirme gri tonlamalı modu. Ayrıca, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ayarlarını değiştirmez [ClearType tarayıcısı PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
+ İçindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType, sistem genelinde ClearType ayarlarını değiştirmez. ' De [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ClearType devre [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dışı bırakıldığında gri tonlamalı moda düzgünleştirme ayarlanır. Ayrıca, içindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType, [ClearType TV tarayıcısı poweroyunno](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)ayarlarını değiştirmez.  
   
- Aşağıdakilerden birini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mimari tasarım kararları olan bağımsız düzenini daha iyi desteklemek daha yaygın hale gelmektedir daha yüksek çözünürlüklü DPI izleyiciler çözümleme. Bu sonucu olan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çözünürlüğe bağımlı oldukları diğer adlı metin işleme ya da bit eşlemler bazı Doğu Asya yazı tiplerini destekleyen değil.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Mimari tasarım kararlarından biri, çözünürlükten bağımsız düzeninin daha yaygın hale geçen daha yüksek çözünürlüklü DPI izleyicilerini daha iyi desteklemesidir. Bunun nedeni, her ikisi [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] de çözünürlüğe bağımlı olduklarından, bazı Doğu Asya fontlarda diğer ad metin işlemesini veya bit eşlemlerini desteklememe sonucudur.  
   
 <a name="further_information"></a>   
 ## <a name="further-information"></a>Daha fazla bilgi  
  [ClearType bilgileri](https://www.microsoft.com/typography/ClearTypeInfo.mspx)  
   
- [ClearType tarayıcısı PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
+ [ClearType TV tarayıcısı Poweroyunno](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

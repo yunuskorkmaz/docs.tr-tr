@@ -1,5 +1,5 @@
 ---
-title: 'Performansı iyileştirme: Metin'
+title: 'Performansı İyileştirme: Text'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,175 +11,175 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: 67549e75244790973554d08de8f4dac99d28bd80
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 4835fb42a8976d94be223d8306d1eb16e330f8f5
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660769"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68434016"
 ---
-# <a name="optimizing-performance-text"></a>Performansı iyileştirme: Metin
+# <a name="optimizing-performance-text"></a>Performansı İyileştirme: Text
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanarak zengin metin içeriği sunumunu desteği içeren [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] kontrol eder. Genel olarak, üç katmanda metin işleme ayırabilirsiniz:
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Özellik zengin [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] denetimlerin kullanımı aracılığıyla metin içeriği sunumu için destek içerir. Genel olarak, metin işlemesini üç katmanda ayırabilirsiniz:
 
-1. Kullanarak <xref:System.Windows.Documents.Glyphs> ve <xref:System.Windows.Media.GlyphRun> nesnelerini doğrudan.
+1. <xref:System.Windows.Documents.Glyphs> Ve<xref:System.Windows.Media.GlyphRun> nesnelerini doğrudan kullanma.
 
-2. Kullanarak <xref:System.Windows.Media.FormattedText> nesne.
+2. <xref:System.Windows.Media.FormattedText> Nesnesini kullanarak.
 
-3. Üst düzey denetimleri gibi kullanarak <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Documents.FlowDocument> nesneleri.
+3. <xref:System.Windows.Controls.TextBlock> Ve<xref:System.Windows.Documents.FlowDocument> nesneleri gibi üst düzey denetimleri kullanma.
 
 Bu konu, metin işleme performans önerileri sağlar.
 
 <a name="Glyph_Level"></a>
 
-## <a name="rendering-text-at-the-glyph-level"></a>Glif düzeyinde metin oluşturma
+## <a name="rendering-text-at-the-glyph-level"></a>Glif düzeyinde metin işleme
 
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Glif düzeyinde biçimlendirme doğrudan erişimle dahil olmak üzere gelişmiş destek sağlar <xref:System.Windows.Documents.Glyphs> kesebilir ve metin biçimlendirme sonra devam etmek isteyen müşteriler için. Bu özellikler, aşağıdaki senaryolardan her işleme gereksinimleri için farklı metin kritik destek sağlar.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]biçimlendirmeden sonra metni kesme ve kalıcı hale getirmek isteyen müşterilere doğrudan erişim <xref:System.Windows.Documents.Glyphs> ile glif düzeyinde biçimlendirme dahil gelişmiş metin desteği sağlar. Bu özellikler, aşağıdaki senaryolardan her birinde farklı metin işleme gereksinimleri için kritik destek sağlar.
 
-- Sabit biçim belgeleri ekran görüntüsü.
+- Sabit biçimli belgelerin ekran görüntüsü.
 
 - Yazdırma senaryoları.
 
-  - [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] bir cihaz yazıcı dili olarak.
+  - [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]bir cihaz yazıcı dili olarak.
 
   - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].
 
-  - Çıktı, önceki yazıcı sürücülerini [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] sabit biçimde uygulamalar.
+  - Önceki yazıcı sürücüleri, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] uygulamalardan Sabit biçime çıkış.
 
-  - Yazdırma Biriktiricisi biçimi.
+  - Yazdırma kuyruğu biçimi.
 
-- Önceki sürümlerini istemciler dahil olmak üzere sabit biçimli belge gösterimi [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve diğer bilgi işlem cihazları.
+- Önceki sürümleri [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve diğer bilgi işlem cihazlarının istemcileri de dahil olmak üzere, sabit biçimli belge temsili.
 
 > [!NOTE]
-> <xref:System.Windows.Documents.Glyphs> ve <xref:System.Windows.Media.GlyphRun> sabit biçimli belge sunumu ve yazdırma senaryoları için tasarlanmıştır. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çeşitli öğeler için genel yerleşimi sağlar ve [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] gibi senaryoları <xref:System.Windows.Controls.Label> ve <xref:System.Windows.Controls.TextBlock>. Düzen hakkında daha fazla bilgi ve [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] senaryoları için bkz: [WPF'de tipografi](typography-in-wpf.md).
+> <xref:System.Windows.Documents.Glyphs>ve <xref:System.Windows.Media.GlyphRun> sabit biçimli belge sunumu ve yazdırma senaryoları için tasarlanmıştır. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Controls.Label> , [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] ve<xref:System.Windows.Controls.TextBlock>gibi genel düzen ve senaryolar için birkaç öğe sağlar. Düzen ve [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] senaryolar hakkında daha fazla bilgi için bkz. [WPF 'de tipografi](typography-in-wpf.md).
 
-Aşağıdaki örnekler özelliklerini tanımlamak nasıl bir <xref:System.Windows.Documents.Glyphs> nesnesine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. <xref:System.Windows.Documents.Glyphs> Nesnesini çıktısını gösteren bir <xref:System.Windows.Media.GlyphRun> içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Örneklerde Arial Courier yeni ve Times yeni Roman yazı tiplerinin yüklenir varsayılmaktadır **C:\WINDOWS\Fonts** yerel bilgisayarda klasör.
+Aşağıdaki örneklerde içindeki <xref:System.Windows.Documents.Glyphs> [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]bir nesnesinin özelliklerinin nasıl tanımlanacağı gösterilmektedir. Nesnesi, <xref:System.Windows.Media.GlyphRun> içindeki[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]çıktısınıtemsileder. <xref:System.Windows.Documents.Glyphs> Örneklerde, yerel bilgisayardaki **c:\Windows\Fonts** klasöründe Arial, Courier New ve Times New Roman yazı tiplerinin yüklendiği varsayılır.
 
 [!code-xaml[GlyphsOvwSample1#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]
 
-### <a name="using-drawglyphrun"></a>DrawGlyphRun Kullanma
+### <a name="using-drawglyphrun"></a>DrawGlyphRun kullanma
 
-Özel denetiminiz varsa ve karakterleri işlemek, kullanmak istediğiniz <xref:System.Windows.Media.DrawingContext.DrawGlyphRun%2A> yöntemi.
+Özel denetiminiz varsa ve glifleri işlemek istiyorsanız <xref:System.Windows.Media.DrawingContext.DrawGlyphRun%2A> yöntemini kullanın.
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Özel metin biçimlendirmesi kullanımının düşük düzeyli hizmetleri de sağlar <xref:System.Windows.Media.FormattedText> nesne. En verimli şekilde işleme metin [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] metin içeriğini kullanarak glif düzeyinde oluşturarak olan <xref:System.Windows.Documents.Glyphs> ve <xref:System.Windows.Media.GlyphRun>. Ancak, bu verimlilik kaybı yerleşik özellikleri olan, kullanımı kolay zengin metin biçimlendirmesini maliyetidir, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] denetimleri gibi <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Documents.FlowDocument>.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Ayrıca <xref:System.Windows.Media.FormattedText> nesnenin kullanımı aracılığıyla özel metin biçimlendirmesi için alt düzey hizmetler sağlar. İçinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] metin işlemenin en verimli yolu, ve <xref:System.Windows.Media.GlyphRun>kullanarak <xref:System.Windows.Documents.Glyphs> glif düzeyinde metin içeriği oluşturmaktan oluşur. Ancak, bu verimlilik maliyeti, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Documents.FlowDocument>gibi denetimlerin yerleşik özellikleri olan zengin metin biçimlendirmesinin kullanımı kolay bir işlemdir.
 
 <a name="FormattedText_Object"></a>
 
 ## <a name="formattedtext-object"></a>FormattedText nesnesi
 
-<xref:System.Windows.Media.FormattedText> Nesne, metindeki her karakter ayrı ayrı biçimlendirilebilir, çok satırlı metin çizme olanak tanır. Daha fazla bilgi için [çizim biçimlendirilmiş metin](drawing-formatted-text.md).
+<xref:System.Windows.Media.FormattedText> Nesnesi, metin içindeki her karakterin ayrı ayrı biçimlendirilebileceği çok satırlı metin çizmenizi sağlar. Daha fazla bilgi için bkz. [biçimli metin çizme](drawing-formatted-text.md).
 
-Biçimlendirilmiş metin oluşturmak için arama <xref:System.Windows.Media.FormattedText.%23ctor%2A> oluşturmak için bir <xref:System.Windows.Media.FormattedText> nesne. İlk biçimlendirilmiş metin dizesi oluşturduktan sonra bir aralık stilleri biçimlendirme uygulayabilirsiniz. Uygulamanız kendi düzenini uygulamak isterse sonra <xref:System.Windows.Media.FormattedText> nesnedir gibi bir denetim kullanmaktan daha iyi bir seçenek <xref:System.Windows.Controls.TextBlock>. Daha fazla bilgi için <xref:System.Windows.Media.FormattedText> nesne, bkz: [çizim biçimlendirilmiş metin](drawing-formatted-text.md) .
+Biçimlendirilen metin oluşturmak için, bir <xref:System.Windows.Media.FormattedText.%23ctor%2A> <xref:System.Windows.Media.FormattedText> nesnesi oluşturmak için oluşturucuyu çağırın. İlk biçimlendirilmiş metin dizesini oluşturduktan sonra bir dizi biçimlendirme stili uygulayabilirsiniz. Uygulamanız kendi yerleşimini <xref:System.Windows.Media.FormattedText> uygulamak istiyorsa,, gibi bir denetim <xref:System.Windows.Controls.TextBlock>kullanmaktan daha iyi bir seçenektir. <xref:System.Windows.Media.FormattedText> Nesnesi hakkında daha fazla bilgi için bkz. [biçimli metin çizme](drawing-formatted-text.md) .
 
-<xref:System.Windows.Media.FormattedText> Nesnesi, alt düzey metin biçimlendirme yeteneği sağlar. Bir veya daha fazla karakterle birden çok biçimlendirme stil uygulayabilirsiniz. Örneğin, her ikisi de çağırabilirsiniz <xref:System.Windows.Media.FormattedText.SetFontSize%2A> ve <xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A> ilk beş karakterlerini biçimini değiştirmek için yöntem.
+<xref:System.Windows.Media.FormattedText> Nesnesi alt düzey metin biçimlendirme yeteneği sağlar. Bir veya daha fazla karaktere birden çok biçimlendirme stili uygulayabilirsiniz. Örneğin, metin içindeki ilk beş karakterin biçimlendirmesini <xref:System.Windows.Media.FormattedText.SetFontSize%2A> değiştirmek <xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A> için ve yöntemlerini çağırabilirsiniz.
 
-Aşağıdaki kod örneği oluşturur bir <xref:System.Windows.Media.FormattedText> nesne ve bunu işler.
+Aşağıdaki kod örneği bir <xref:System.Windows.Media.FormattedText> nesnesi oluşturur ve onu işler.
 
 [!code-csharp[formattedtextsnippets#FormattedTextSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
 [!code-vb[formattedtextsnippets#FormattedTextSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]
 
 <a name="FlowDocument_TextBlock_Label"></a>
 
-## <a name="flowdocument-textblock-and-label-controls"></a>FlowDocument TextBlock ve etiket denetimleri
+## <a name="flowdocument-textblock-and-label-controls"></a>FlowDocument, TextBlock ve Label denetimleri
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekrana metnin çizmek için birden fazla denetim içerir. Her denetim için farklı bir senaryo hedeflenen ve kendi listesi özellikler ve sınırlamalar vardır.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ekrana metin çizme için birden çok denetim içerir. Her denetim farklı bir senaryoya yöneliktir ve kendi özellik ve kısıtlama listesine sahiptir.
 
-### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument performans birden fazla TextBlock veya etiket etkiler
+### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument, performansı TextBlock veya Label 'tan daha fazla etkiler
 
-Genel olarak, <xref:System.Windows.Controls.TextBlock> öğesi sınırlı metin desteği kısa bir cümle gibi gerekli olduğunda kullanılmalıdır bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> en az metin desteği gerekli olduğunda kullanılabilir. <xref:System.Windows.Documents.FlowDocument> Öğesi içeriği zengin sunumu yeniden akışkan olabilen belgeler için bir kapsayıcıdır ve bu nedenle, kullanarak daha büyük bir performans etkisi olur <xref:System.Windows.Controls.TextBlock> veya <xref:System.Windows.Controls.Label> kontrol eder.
+Genel <xref:System.Windows.Controls.TextBlock> olarak, öğesinde kısa bir cümle [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]gibi sınırlı metin desteği gerektiğinde öğesi kullanılmalıdır. <xref:System.Windows.Controls.Label>en az metin desteği gerekli olduğunda kullanılabilir. Öğesi, zengin içerik sunumunu destekleyen ve bu nedenle, <xref:System.Windows.Controls.TextBlock> veya <xref:System.Windows.Controls.Label> denetimlerini kullanmaktan daha fazla performans etkisi olan, yeniden Flowable belgeler için bir kapsayıcıdır. <xref:System.Windows.Documents.FlowDocument>
 
-Daha fazla bilgi için <xref:System.Windows.Documents.FlowDocument>, bkz: [akış belgesine genel bakış](flow-document-overview.md).
+Hakkında <xref:System.Windows.Documents.FlowDocument>daha fazla bilgi için bkz. [Flow belgesine genel bakış](flow-document-overview.md).
 
-### <a name="avoid-using-textblock-in-flowdocument"></a>FlowDocument içinde TextBlock kullanmaktan kaçının
+### <a name="avoid-using-textblock-in-flowdocument"></a>FlowDocument 'de TextBlock kullanmaktan kaçının
 
-<xref:System.Windows.Controls.TextBlock> Öğesi türetilen <xref:System.Windows.UIElement>. <xref:System.Windows.Documents.Run> Öğesi türetilen <xref:System.Windows.Documents.TextElement>, daha az masraflı olduğu bir <xref:System.Windows.UIElement>-türetilmiş bir nesneye. Mümkün olduğunda, kullanın <xref:System.Windows.Documents.Run> yerine <xref:System.Windows.Controls.TextBlock> içindeki metin içeriğini görüntülemek için bir <xref:System.Windows.Documents.FlowDocument>.
+<xref:System.Windows.Controls.TextBlock> Öğesi öğesinden<xref:System.Windows.UIElement>türetilir. Öğesi, türetilmiş bir <xref:System.Windows.Documents.TextElement> <xref:System.Windows.UIElement>nesneden daha az maliyetli olan öğesinden türetilir. <xref:System.Windows.Documents.Run> Mümkün olduğunda, ' <xref:System.Windows.Documents.Run> deki metin <xref:System.Windows.Controls.TextBlock> içeriğini <xref:System.Windows.Documents.FlowDocument>görüntülemek için yerine kullanın.
 
-Aşağıdaki biçimlendirme örneği içinde metin içeriğini ayarlama iki yolunu gösterir bir <xref:System.Windows.Documents.FlowDocument>:
+Aşağıdaki biçimlendirme örneği, içindeki <xref:System.Windows.Documents.FlowDocument>metin içeriğini ayarlamanın iki yolunu gösterir:
 
 [!code-xaml[Performance#PerformanceSnippet13](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/FlowDocument.xaml#performancesnippet13)]
 
-### <a name="avoid-using-run-to-set-text-properties"></a>Metin özellikleri ayarlamak için Çalıştır'ı kullanarak kaçının
+### <a name="avoid-using-run-to-set-text-properties"></a>Metin özelliklerini ayarlamak için çalıştırma kullanmaktan kaçının
 
-Genel olarak, kullanarak bir <xref:System.Windows.Documents.Run> içinde bir <xref:System.Windows.Controls.TextBlock> daha fazla performans açık bir kullanmadan daha yoğun olan <xref:System.Windows.Documents.Run> nesnesi. Kullanıyorsanız bir <xref:System.Windows.Documents.Run> metin özelliklerini ayarlamak için doğrudan bu özellikleri ayarlama <xref:System.Windows.Controls.TextBlock> yerine.
+Genel olarak, bir <xref:System.Windows.Documents.Run> <xref:System.Windows.Controls.TextBlock> içinde bir kullanmak, açık <xref:System.Windows.Documents.Run> bir nesne kullanmaktan daha yoğun bir performans açısından daha hızlıdır. Metin özelliklerini ayarlamak için bir <xref:System.Windows.Documents.Run> kullanıyorsanız, <xref:System.Windows.Controls.TextBlock> bunun yerine doğrudan bu özellikleri ayarlayın.
 
-Aşağıdaki biçimlendirme örneği bu durumda, bir metin özelliğini ayarlayarak bu iki yolunu gösterir <xref:System.Windows.Controls.TextBlock.FontWeight%2A> özelliği:
+Aşağıdaki biçimlendirme örneği, bir metin özelliğini ayarlamanın iki yolunu gösterir, bu durumda <xref:System.Windows.Controls.TextBlock.FontWeight%2A> özelliği:
 
 [!code-xaml[Performance#PerformanceSnippet12](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml#performancesnippet12)]
 
-Aşağıdaki tablo 1000 görüntüleme maliyetini gösterir <xref:System.Windows.Controls.TextBlock> nesneleri ve açık bir olmadan <xref:System.Windows.Documents.Run>.
+Aşağıdaki tabloda, açık <xref:System.Windows.Controls.TextBlock> <xref:System.Windows.Documents.Run>ve olmadan 1000 nesnelerinin görüntüleme maliyeti gösterilmektedir.
 
-|**TextBlock türü**|**Oluşturma zamanı (ms)**|**İşleme süresi (ms)**|
+|**TextBlock türü**|**Oluşturma zamanı (MS)**|**İşleme süresi (MS)**|
 |------------------------|------------------------------|----------------------------|
-|Çalıştırma ayarı metin özellikleri|146|540|
-|TextBlock metin özelliklerini ayarlama|43|453|
+|Çalışma ayarı metin özellikleri|146|540|
+|TextBlock ayarı metin özellikleri|43|453|
 
-### <a name="avoid-databinding-to-the-labelcontent-property"></a>Veri bağlama Label.Content özelliğine kaçının
+### <a name="avoid-databinding-to-the-labelcontent-property"></a>Label. Content özelliğine veri bağlamayı önleyin
 
-Sahip olduğunuz bir senaryoyu düşünün bir <xref:System.Windows.Controls.Label> sık güncelleştirildiği nesne bir <xref:System.String> kaynak. Veri bağlama <xref:System.Windows.Controls.Label> öğenin <xref:System.Windows.Controls.ContentControl.Content%2A> özelliğini <xref:System.String> kaynak nesnesi, kötü performansa karşılaşabilirsiniz. Her zaman kaynak <xref:System.String> güncelleştirilir, eski <xref:System.String> yoksayılır ve yeni bir nesne <xref:System.String> yeniden oluşturulur; çünkü bir <xref:System.String> nesne değişmez, değiştirilemez. Bu, buna neden <xref:System.Windows.Controls.ContentPresenter> , <xref:System.Windows.Controls.Label> eski içeriği atmak ve yeni görüntülemek için yeni içeriği yeniden oluşturmak için nesne <xref:System.String>.
+<xref:System.Windows.Controls.Label> Bir<xref:System.String> kaynaktan sık güncellenen bir nesneniz olan bir senaryo düşünün. Veri, <xref:System.Windows.Controls.Label> <xref:System.Windows.Controls.ContentControl.Content%2A> öğenin özelliğini<xref:System.String> kaynak nesneye bağladığınızda, performansı düşük olabilir. Kaynak <xref:System.String> her güncelleştirildiği zaman, eski <xref:System.String> nesne atılır ve yeni <xref:System.String> bir yeniden oluşturulur, çünkü bir <xref:System.String> nesne sabit olduğu için değiştirilemez. Bu, buna karşılık, <xref:System.Windows.Controls.ContentPresenter> <xref:System.Windows.Controls.Label> nesnesinin eski içeriğini atıp yeni içeriği yeniden oluşturmak için yeni <xref:System.String>içerik oluşturmasına neden olur.
 
-Bu sorunun çözümü, basit bir işlemdir. Varsa <xref:System.Windows.Controls.Label> özel olarak ayarlı değil <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> değeri, değiştirin <xref:System.Windows.Controls.Label> ile bir <xref:System.Windows.Controls.TextBlock> ve veri bağlama, <xref:System.Windows.Controls.TextBlock.Text%2A> özelliğini kaynak dizesi.
+Bu soruna yönelik çözüm basittir. <xref:System.Windows.Controls.Label> <xref:System.Windows.Controls.TextBlock.Text%2A> Özel bir değere ayarlanmamışsa ,<xref:System.Windows.Controls.TextBlock> öğesini ile ve veri bağlama özelliğini kaynak dizeye değiştirin. <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <xref:System.Windows.Controls.Label>
 
-|**Veri bağlama özelliği**|**Güncelleştirme zamanı (ms)**|
+|**Veri bağlantılı özelliği**|**Güncelleştirme zamanı (MS)**|
 |-----------------------------|----------------------------|
-|Label.Content|835|
-|TextBlock.Text|242|
+|Etiket. Içerik|835|
+|TextBlock. Text|242|
 
 <a name="Hyperlink"></a>
 
 ## <a name="hyperlink"></a>Köprü
 
-<xref:System.Windows.Documents.Hyperlink> Köprüler akış içeriği barındırmanıza olanak tanır bir satır içi düzeydeki akış içerik öğesi nesnedir.
+<xref:System.Windows.Documents.Hyperlink> Nesnesi, akış içeriği içinde köprüler barındırmanıza olanak sağlayan satır içi düzey bir akış içerik öğesidir.
 
-### <a name="combine-hyperlinks-in-one-textblock-object"></a>Bir TextBlock nesnesinde köprüler birleştirin
+### <a name="combine-hyperlinks-in-one-textblock-object"></a>Köprüleri tek bir TextBlock nesnesinde birleştirme
 
-Birden çok kullanımını en iyi duruma getirebilirsiniz <xref:System.Windows.Documents.Hyperlink> içinde aynı gruplama yoluyla tarafından öğeleri <xref:System.Windows.Controls.TextBlock>. Bu, uygulamanızı oluşturduğunuz nesne sayısını en aza indirmek için yardımcı olur. Örneğin, aşağıdaki gibi birden çok köprüleri görüntülemek isteyebilirsiniz:
+Birden çok <xref:System.Windows.Documents.Hyperlink> öğenin kullanımını aynı <xref:System.Windows.Controls.TextBlock>şekilde bir araya getirerek iyileştirebilirsiniz. Bu, uygulamanızda oluşturduğunuz nesne sayısını en aza indirmenize yardımcı olur. Örneğin, aşağıdakiler gibi birden çok köprü görüntülenmesini isteyebilirsiniz:
 
-MSN Giriş &#124; My MSN
+Msn ev &#124; ağım
 
-Aşağıdaki biçimlendirme örneği birden çok gösterir <xref:System.Windows.Controls.TextBlock> köprüleri görüntülemek için kullanılan öğeleri:
+Aşağıdaki biçimlendirme örneği, köprüleri göstermek <xref:System.Windows.Controls.TextBlock> için kullanılan birden çok öğeyi göstermektedir:
 
 [!code-xaml[Performance#PerformanceSnippet9](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet9)]
 
-Aşağıdaki biçimlendirme örneği kullanarak tek bir bu süre, köprüler görüntülemenin daha verimli bir şekilde gösteren <xref:System.Windows.Controls.TextBlock>:
+Aşağıdaki biçimlendirme örneği, bu kez, tek <xref:System.Windows.Controls.TextBlock>bir kullanarak köprüleri görüntülemenin daha verimli bir yolunu göstermektedir:
 
 [!code-xaml[Performance#PerformanceSnippet10](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet10)]
 
-### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a>Köprüleri MouseEnter olay üzerinde yalnızca alt çizgiler gösteriliyor
+### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a>Yalnızca MouseEnter olaylarında köprülerde alt çizgiler gösteriliyor
 
-A <xref:System.Windows.TextDecoration> nesne metni ekleyebileceğiniz görsel bir süsleme; ancak, örneklemek için yoğun performans olabilir. Kapsamlı kullanımını yaparsanız <xref:System.Windows.Documents.Hyperlink> öğeleri göz önünde bulundurun altçizgi gibi yalnızca bir olay tetiklendiğinde gösteren <xref:System.Windows.ContentElement.MouseEnter> olay. Daha fazla bilgi için [belirtin olmadığını köprünün altı çizilir](how-to-specify-whether-a-hyperlink-is-underlined.md).
+Bir <xref:System.Windows.TextDecoration> nesne, metne ekleyebileceğiniz görsel bir görüntü oluşturur; ancak, örneği oluşturmak için performansı yoğun hale getirebilirsiniz. <xref:System.Windows.Documents.Hyperlink> Öğelerin yoğun kullanımını yaparsanız, <xref:System.Windows.ContentElement.MouseEnter> olay gibi yalnızca bir olay tetiklendiğinde alt çizgiyi göstermeyi düşünün. Daha fazla bilgi için bkz. [bir köprünün altı çizili olup olmadığını belirtme](how-to-specify-whether-a-hyperlink-is-underlined.md).
 
-Aşağıdaki görüntüde, nasıl köprünün altı çizili MouseEnter olayı tetikler gösterilmektedir:
+Aşağıdaki görüntüde, MouseEnter olayının altı çizili köprü nasıl tetiklediği gösterilmektedir:
 
-![Köprüler TextDecorations görüntüleme](./media/how-to-specify-whether-a-hyperlink-is-underlined/text-decorations-hyperlinks.png)
+![Textsüslemeleri görüntüleyen köprüler](./media/how-to-specify-whether-a-hyperlink-is-underlined/text-decorations-hyperlinks.png)
 
-Aşağıdaki biçimlendirme örnek gösterildiği bir <xref:System.Windows.Documents.Hyperlink> ve alt çizgi olmadan tanımlanan:
+Aşağıdaki biçimlendirme örneği, ile tanımlanmış <xref:System.Windows.Documents.Hyperlink> bir ve altı çizili olmayan bir şekilde gösterir:
 
 [!code-xaml[Performance#PerformanceSnippet11](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]
 
-Aşağıdaki tablo performans maliyeti, 1000 görüntülemenin gösterir <xref:System.Windows.Documents.Hyperlink> öğeler ve alt çizgi olmadan.
+Aşağıdaki tabloda, altı çizili olmayan 1000 <xref:System.Windows.Documents.Hyperlink> öğelerinin görüntülenmesi için performans maliyeti gösterilmektedir.
 
-|**Köprü**|**Oluşturma zamanı (ms)**|**İşleme süresi (ms)**|
+|**Bağlanan**|**Oluşturma zamanı (MS)**|**İşleme süresi (MS)**|
 |-------------------|------------------------------|----------------------------|
-|Alt çizgi ile|289|1130|
-|Alt çizgi|299|776|
+|Altı çizili|289|1130|
+|Altı çizili olmadan|299|776|
 
 <a name="Text_Formatting_Features"></a>
 
 ## <a name="text-formatting-features"></a>Metin biçimlendirme özellikleri
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Zengin metin biçimlendirmesini otomatik hecelere ayırma gibi hizmetleri sağlar. Bu hizmetler, uygulama performansını etkileyebilir ve yalnızca gerekli olduğunda kullanılmalıdır.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Otomatik hecelere yönelik zengin metin biçimlendirme hizmetleri sağlar. Bu hizmetler, uygulama performansını etkileyebilir ve yalnızca gerektiğinde kullanılmalıdır.
 
-### <a name="avoid-unnecessary-use-of-hyphenation"></a>Gereksiz heceleme kullanmaktan kaçının
+### <a name="avoid-unnecessary-use-of-hyphenation"></a>Gereksiz heceleme kullanımını önleyin
 
-Otomatik heceleme tire kesme noktaları için çok metin satırı bulur ve satırlar için ek kesme konumları sağlayan <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Documents.FlowDocument> nesneleri. Varsayılan olarak, bu nesnelere Otomatik heceleme özellik devre dışıdır. Nesnenin IsHyphenationEnabled özelliğini ayarlayarak bu özelliği etkinleştirebilirsiniz `true`. Ancak, bu özelliğin etkinleştirilmesi neden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] başlatmak için [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)] birlikte çalışabilirlik uygulama performansını etkileyebilir. Gerekmedikçe Otomatik heceleme kullanmamanız önerilir.
+Otomatik heceleme metin satırları için kısa çizgi kesme noktaları bulur ve <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Documents.FlowDocument> nesnelerinde çizgiler için ek kesme konumlarına izin verir. Varsayılan olarak, otomatik heceleme özelliği bu nesnelerde devre dışıdır. Nesnenin ısshationenabled özelliğini olarak `true`ayarlayarak bu özelliği etkinleştirebilirsiniz. Ancak, bu özelliğin etkinleştirilmesi, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama performansını etkileyebilecek bileşen nesne modeli (com) birlikte çalışabilirliğini başlatmalarına neden olur. İhtiyaç duymadığınız takdirde otomatik hecelemeyi kullanmanız önerilir.
 
-### <a name="use-figures-carefully"></a>Şekilleri dikkatli kullanın
+### <a name="use-figures-carefully"></a>Rakamları dikkatle kullanın
 
-A <xref:System.Windows.Documents.Figure> öğesi konumlandırılmış içerisindeki bir sayfanın içeriğini akış içeriğinin bir kısmını temsil eder. Bazı durumlarda, bir <xref:System.Windows.Documents.Figure> konumuna düzenlenir genişletme zaten içerikle çakışırsa otomatik olarak yeniden biçimlendirmek bir sayfanın tamamını neden olabilir. Gereksiz gruplayarak biçimlendirme olasılığını en aza indirebilirsiniz <xref:System.Windows.Documents.Figure> birbiriyle veya bunları bir sabit sayfa boyutu senaryosunda içeriği üst kısmındaki bildirme yanındaki öğeleri.
+Bir <xref:System.Windows.Documents.Figure> öğe, bir içerik sayfasında mutlak olarak konumlandırılmış akış içeriğinin bir kısmını temsil eder. Bazı durumlarda, konumu zaten <xref:System.Windows.Documents.Figure> değiştirilmiş içerikle çakışıyorsa bir sayfanın tamamının otomatik olarak yeniden biçimlendirmeye neden olabilir. Birbirini izleyen veya bir sabit sayfa boyutu senaryosunda içeriğin üst kısmına <xref:System.Windows.Documents.Figure> yaklaşarak, gereksiz yeniden biçimlendirme olasılığını en aza indirmenize olanak sağlayabilirsiniz.
 
 ### <a name="optimal-paragraph"></a>En iyi paragraf
 
-En iyi paragraf özelliği <xref:System.Windows.Documents.FlowDocument> nesne yerleştirir paragrafları böylece boşluk mümkün olduğunca eşit olarak dağıtılır. Varsayılan olarak, uygun paragraf özelliği devre dışıdır. Nesnenin ayarlayarak bu özelliği etkinleştirebilirsiniz <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> özelliğini `true`. Ancak, bu özellik etkinleştirildiğinde, uygulama performansını etkiler. Gerekmedikçe uygun paragraf özelliği kullanmayın önerilir.
+<xref:System.Windows.Documents.FlowDocument> Nesnenin en iyi paragraf özelliği, beyaz alanın mümkün olduğunca eşit şekilde dağıtılması için paragrafları yerleştirir. Varsayılan olarak, en uygun paragraf özelliği devre dışıdır. Nesnenin <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> özelliğini olarak `true`ayarlayarak bu özelliği etkinleştirebilirsiniz. Ancak, bu özelliğin etkinleştirilmesi uygulama performansını etkiler. İhtiyaç duymadığınız takdirde en iyi paragraf özelliğini kullanmanız önerilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

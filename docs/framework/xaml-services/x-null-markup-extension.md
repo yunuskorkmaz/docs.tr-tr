@@ -1,5 +1,5 @@
 ---
-title: x:Null Biçimlendirme Uzantısı
+title: x:Null İşaretleme Uzantısı
 ms.date: 03/30/2017
 f1_keywords:
 - NullExtension
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - x:Null markup extension [XAML Services]
 - XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
-ms.openlocfilehash: e46d8561b62d9137d4fed4df447338a97fc0577b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dbea2c7d4010d8defc572dbdc14a0dfd6d7601e
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938924"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484715"
 ---
-# <a name="xnull-markup-extension"></a>x:Null Biçimlendirme Uzantısı
-Belirtir `null` XAML üyesi için bir değer olarak.  
+# <a name="xnull-markup-extension"></a>x:Null İşaretleme Uzantısı
+XAML `null` üyesi için değer olarak belirtir.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -29,20 +29,20 @@ Belirtir `null` XAML üyesi için bir değer olarak.
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Null başvuru anahtar sözcüğü C# ve [!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)] null. Bir null başvuru için Microsoft Visual Basic anahtar `Nothing`, ancak her zaman `{x:Null}` arka plan kod dili ile XAML ilişkilendirmek XAML kullanım bakılmaksızın olarak.  
+ Ve C# C++ içindeki null başvurusunun anahtar sözcüğü null. Bir null başvurusunun Microsoft Visual Basic anahtar sözcüğü vardır `Nothing`, ancak xaml ile ilişkilendirdiğiniz kod arkasındaki dilin ne olursa olsun, her zaman XAML kullanımı olarak kullanırsınız. `{x:Null}`  
   
- `x:Null` İşaretleme uzantısı ayarlanabilir özelliğe sahiptir.  
+ `x:Null` Biçimlendirme uzantısının ayarlanabilir bir özelliği yok.  
   
- Bir null kullanımı genellikle bir CLR XAML üye açığa ile ilişkilendirilir <xref:System.Nullable%601> değeri.  
+ Null kullanımı genellikle bir clr <xref:System.Nullable%601> değerinin xaml üye pozlaması ile ilişkilendirilir.  
   
- `x:Null` Tüm XAML biçimlendirme uzantıları gibi işaretleme uzantısı ayraçlar kullanır (`{,}`) değişmez değerler veya olay işleyicisi başvuruları dışındaki öznitelik değerlerinin işlenmesi kaçış. Öznitelik sözdizimi, bu işaretleme uzantısı ile en sık kullanılan sözdizimidir. Bir nesne öğesi sözdizimi `<x:Null />` teknik olarak mümkündür, ancak nadiren kullanılır çünkü `x:Null` biçimlendirme uzantısına sahip hiçbir konumsal parametreler ya da yapı bağımsız değişkenler.  
+ Biçimlendirme uzantısı, tüm XAML biçimlendirme uzantıları gibi, öznitelik değerlerinin işlenmesini, değişmez`{,}`değer veya olay işleyici başvuruları dışında bırakmak için parantez () kullanır. `x:Null` Öznitelik sözdizimi, bu biçimlendirme uzantısıyla en sık kullanılan sözdizimidir. Bir nesne öğesi sözdizimi `<x:Null />` teknik açıdan olasıdır, ancak `x:Null` biçimlendirme uzantısının Konumsal parametre veya oluşturma bağımsız değişkenleri olmadığından nadiren kullanılır.  
   
- Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz. [biçimlendirme uzantıları ve WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz. [Biçimlendirme uzantıları ve WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
- .NET Framework XAML hizmetlerinde bu işaretleme uzantısının işlenmesi tarafından tanımlanan <xref:System.Windows.Markup.NullExtension> sınıfı.  
+ .NET Framework XAML hizmetlerinde, bu biçimlendirme uzantısının işlenmesi <xref:System.Windows.Markup.NullExtension> sınıfı tarafından tanımlanır.  
   
 ## <a name="wpf-usage-notes"></a>WPF kullanım notları  
- Unutmayın `null` mutlaka bir başvuru türü bağımlılık özelliği için başlangıç unset değeri değil. İlk varsayılan değer, her bir bağımlılık özelliği için değişebilir ve özelliklere özgü meta veriler hakkında temel alabilir. Birçok bağımlılık özellikleri kabul `null` bir değer olarak işaretleme ya da kendi doğrulama geri çağırma uygulamaları nedeniyle kod aracılığıyla. Bağımlılık özellikleri hakkında daha fazla bilgi için bkz: [bağımlılık özelliklerine genel bakış](../wpf/advanced/dependency-properties-overview.md).  
+ `null` Bir başvuru türü bağımlılık özelliği için ilk önceden ayarlama değeri olması gerekmediğini unutmayın. İlk varsayılan değer her bağımlılık özelliği için farklılık gösterebilir ve özelliğe özgü meta verileri temel alabilir. Birçok bağımlılık özelliği, doğrulama geri `null` çağırma uygulamalarından dolayı biçimlendirme veya kod aracılığıyla bir değer olarak kabul etmez. Bağımlılık özellikleri hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](../wpf/advanced/dependency-properties-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: Ad alanlarını - kullanma C# Programlama Kılavuzu
+title: Ad alanlarını kullanma C# -Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: bb491ef93f0f2da89f0101d10e2cf3d158962850
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: abd4c34661d96d8c3188e92dd2d76f847e17aae7
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423299"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433528"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Ad Alanlarını Kullanma (C# Programlama Kılavuzu)
-Ad alanlarında, C# programları iki yolla içinde yoğun olarak kullanılır. İlk olarak, .NET Framework sınıfları ad alanları, çok sayıda sınıfa düzenlemek için kullanın. İkincisi, kendi ad alanlarını bildirme denetimi sınıf ve metod kapsamını daha büyük programlama projelerinde adları yardımcı olabilir.  
+Ad alanları programlar içinde C# yoğun olarak iki şekilde kullanılır. İlk olarak, .NET Framework sınıfları, birçok sınıfını düzenlemek için ad alanlarını kullanır. İkinci olarak, kendi ad alanlarınızı bildirmek, sınıf ve yöntem adlarının kapsamını daha büyük programlama projelerinde denetlemenize yardımcı olabilir.  
   
-## <a name="accessing-namespaces"></a>Ad alanları erişme  
- Çoğu C# uygulama bölümü ile başlayan `using` yönergeleri. Bu bölümde, uygulama sık sık kullanacağınız ve içinde yer alan bir yöntem kullanılır her zaman tamamen nitelikli ada belirtmelerini Programcı kaydeder ad alanlarını listeler.  
+## <a name="accessing-namespaces"></a>Ad alanlarına erişme  
+ Çoğu C# uygulama, `using` yönergelerin bir bölümüyle başlar. Bu bölüm, uygulamanın sıklıkla kullanacağı ad alanlarını listeler ve içinde yer alan bir yöntemin kullanıldığı her seferinde her defasında tam nitelikli bir ad belirtmekten tasarruf eder.  
   
- Örneğin, satır dahil ederek:  
+ Örneğin, satırını dahil ederek:  
   
  [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]  
   
- Bir program başlangıcında, programcılar kodu kullanabilirsiniz:  
+ Program başlangıcında, Programcı kodu kullanabilir:  
   
  [!code-csharp[csProgGuide#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#31)]  
   
@@ -33,60 +33,60 @@ Ad alanlarında, C# programları iki yolla içinde yoğun olarak kullanılır. �
   
  [!code-csharp[csProgGuide#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#30)]  
   
-## <a name="namespace-aliases"></a>Namespace diğer adları  
- [Using yönergesi](../../../csharp/language-reference/keywords/using-directive.md) için bir diğer ad oluşturmak için de kullanılabilir bir [ad alanı](../../../csharp/language-reference/keywords/namespace.md). Örneğin, iç içe ad alanlarını içeren önceden yazılmış bir ad alanı kullanıyorsanız, aşağıdaki örnekte olduğu gibi bir özellikle, başvuru toplu bir yol sağlamak üzere bir diğer ad bildirmek isteyebilirsiniz:  
+## <a name="namespace-aliases"></a>Ad uzayı diğer adları  
+ [Using yönergesi](../../../csharp/language-reference/keywords/using-directive.md) , bir [ad uzayı](../../../csharp/language-reference/keywords/namespace.md)için bir diğer ad oluşturmak için de kullanılabilir. Örneğin, iç içe geçmiş ad alanları içeren önceden yazılmış bir ad alanı kullanıyorsanız, aşağıdaki örnekte olduğu gibi, bir diğer ad bildirmek için bir diğer ad bildirmek isteyebilirsiniz:  
   
  [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
   
-## <a name="using-namespaces-to-control-scope"></a>Denetim kapsamı ad alanlarını kullanma  
- `namespace` Anahtar sözcüğü bir kapsamı bildirmek için kullanılır. Projenizi kapsamlarda oluşturma olanağı kodunu düzenlemenize yardımcı olur ve genel olarak benzersiz türleri oluşturmanıza olanak sağlar. Aşağıdaki örnekte, bir sınıf başlıklı `SampleClass` bir diğer içinde iç içe iki ad alanında tanımlanır. [Üye erişimi `.` işleci](../../language-reference/operators/member-access-operators.md#member-access-operator-) hangi yöntemi çağrıldığında ayırt etmek için kullanılır.  
+## <a name="using-namespaces-to-control-scope"></a>Kapsamı denetlemek için ad alanlarını kullanma  
+ `namespace` Anahtar sözcüğü bir kapsamı bildirmek için kullanılır. Projenizin içinde kapsam oluşturma özelliği, kodun düzenlenmesine yardımcı olur ve küresel olarak benzersiz türler oluşturmanıza olanak sağlar. Aşağıdaki örnekte, başlıklı `SampleClass` bir sınıf, diğeri içinde iç içe iki ad alanında tanımlanır. [ `.` Üye erişim işleci](../../language-reference/operators/member-access-operators.md#member-access-operator-) , hangi yöntemin çağracağını ayırt etmek için kullanılır.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
-## <a name="fully-qualified-names"></a>Tam olarak nitelenmiş adlar  
- Ad alanları ve türler, mantıksal bir hiyerarşi gösteren tam olarak nitelenmiş adlar tarafından açıklanan benzersiz başlıkları sahip. Örneğin, deyim `A.B` , gelir `A` ad alanı veya tür, adıdır ve `B` içinde iç içe geçmiş.  
+## <a name="fully-qualified-names"></a>Tam nitelikli adlar  
+ Ad alanları ve türler, bir mantıksal hiyerarşiyi gösteren tam nitelikli adlarla tanımlanan benzersiz başlıklara sahiptir. Örneğin, ifade `A.B` , ad alanının veya `A` türün adı olduğunu ve `B` içinde iç içe geçmiş olduğunu gösterir.  
   
- Aşağıdaki örnekte, iç içe geçmiş sınıflar ve ad alanları vardır. Tam adı, her varlık aşağıdaki açıklama olarak belirtilir.  
+ Aşağıdaki örnekte, iç içe geçmiş sınıflar ve ad alanları vardır. Tam nitelikli ad her bir varlıktan sonra bir yorum olarak belirtilir.  
   
  [!code-csharp[csProgGuideNamespaces#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#9)]  
   
- Önceki kod kesimi içinde:  
+ Önceki kod segmentinde:  
   
-- Ad alanı `N1` genel ad alanının bir üyesidir. Tam olarak nitelenmiş adını `N1`.  
+- Ad alanı `N1` , genel ad alanının bir üyesidir. Tam nitelikli adı `N1`.  
   
-- Ad alanı `N2` üyesi `N1`. Tam olarak nitelenmiş adını `N1.N2`.  
+- Ad alanı `N2` bir `N1`üyesidir. Tam nitelikli adı `N1.N2`.  
   
-- Sınıf `C1` üyesi `N1`. Tam olarak nitelenmiş adını `N1.C1`.  
+- Sınıfı `C1` öğesinin`N1`üyesidir. Tam nitelikli adı `N1.C1`.  
   
-- Sınıf adı `C2` iki kez bu kodda kullanılır. Ancak, tam nitelikli adları benzersizdir. İlk örneğinin `C2` içinde bildirilen `C1`; bu nedenle, tam ad: `N1.C1.C2`. İkinci bir örneğini `C2` bir ad alanı içinde bildirilen `N2`; bu nedenle, tam olarak nitelenmiş adını `N1.N2.C2`.  
+- Sınıf adı `C2` Bu kodda iki kez kullanılır. Ancak, tam nitelikli adlar benzersizdir. İlk örneği `C2` içinde `C1`, bu nedenle tam adı: `N1.C1.C2`. İkinci örneği `C2` bir ad alanı `N2`içinde bildirilmiştir; bu nedenle tam adı ' dir `N1.N2.C2`.  
   
- Önceki kod kesimi kullanarak yeni bir sınıf üyesi ekleyebilirsiniz `C3`, ad alanına `N1.N2` gibi:  
+ Önceki kod segmentini kullanarak, ad alanına `C3` `N1.N2` yeni bir sınıf üyesini aşağıdaki şekilde ekleyebilirsiniz:  
   
  [!code-csharp[csProgGuideNamespaces#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#10)]  
   
- Genel olarak, kullanın `::` ad alanı diğer ada başvuru yapmak veya `global::` genel ad başvurmak için ve `.` türleri veya üyeleri nitelemek için.  
+ Genel olarak, bir `::` ad alanı diğer adına başvurmak için `global::` veya genel ad alanına başvurmak ve `.` türleri veya üyeleri nitelemek için kullanın.  
   
- Kullanılacak bir hata olduğunu `::` bir ad alanı yerine bir türe başvuran bir takma ad ile. Örneğin:  
+ Ad alanı yerine bir türe başvuran `::` diğer adla birlikte kullanılması hatadır. Örneğin:  
   
  [!code-csharp[csProgGuideNamespaces#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#11)]  
   
  [!code-csharp[csProgGuideNamespaces#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#12)]  
   
- Unutmayın word `global` önceden tanımlanmış bir değil diğer adı; bu nedenle `global.X` özel bir anlamı yok. Yalnızca ile kullanıldığında, özel bir anlamı edinme `::`.  
+ Sözcüğün `global` önceden tanımlanmış bir diğer ad olmadığını unutmayın; bu nedenle, `global.X` özel bir anlamı yoktur. Yalnızca ile `::`kullanıldığında özel bir anlam elde edin.  
   
- Bir diğer ad tanımlarsanız CS0440 oluşturulan uyarı derleyici adlı genel çünkü `global::` her zaman genel ad ve bir diğer başvuruyor. Örneğin, aşağıdaki satırı uyarıyı üretir:  
+ Bir diğer ad değil genel ad alanına başvurduğu için, genel `global::` adlı bir diğer ad tanımlarsanız derleyici uyarısı CS0440 oluşturulur. Örneğin, aşağıdaki satır uyarı oluşturur:  
   
  [!code-csharp[csProgGuideNamespaces#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#13)]  
   
- Kullanarak `::` diğer adları ile iyi bir uygulamadır ve ek türleri beklenmeyen giriş karşı korur. Örneğin, bu örneği göz önünde bulundurun:  
+ Diğer `::` adlarla kullanmak iyi bir fikirdir ve ek türlerin beklenmedik şekilde tanıtılmasıyla karşı koruma sağlar. Örneğin, şu örneği göz önünde bulundurun:  
   
  [!code-csharp[csProgGuideNamespaces#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#14)]  
   
  [!code-csharp[csProgGuideNamespaces#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#15)]  
   
- Adlı bir tür, ancak bu, çalışan `Alias` sonradan tanıtılmak üzere olduğunuz `Alias.` bunun yerine o türüne bağlayın. Kullanarak `Alias::Exception` , oluşturmasını sağlar `Alias` bir ad alanı diğer ad olarak kabul edilir ve mistaken için bir tür değil.  
+ Bu işe yarar, ancak adlandırılmış `Alias` bir tür daha sonra tanıtılmışsa, `Alias.` bunun yerine bu türe bağlanır. Kullanmak `Alias::Exception` `Alias` , bir ad alanı diğer adı olarak değerlendirilip bir tür için hatalı alınmamasını sağlar.  
   
- Konusuna [nasıl yapılır: Genel Namespace diğer adlarını kullanma](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) daha fazla bilgi için ilgili `global` diğer adı.  
+ Bkz. nasıl yapılır: [ Diğer`global` ad hakkında daha fazla](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) bilgi için genel ad alanı diğer adını kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

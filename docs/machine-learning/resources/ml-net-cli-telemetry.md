@@ -1,79 +1,79 @@
 ---
-title: ML.NET CLI tarafından telemetri toplama
-description: Analiz için bilgileri, hangi verileri toplanır ve bunu devre dışı bırakma, kullanım verileri toplayan ML.NET CLI telemetri özellikler hakkında bilgi edinin. Ayrıca .NET lisans sözleşmesi ve Microsoft GDPR uyumluluğu hakkında bilgi için bağlantılar öğrenin.
+title: ML.NET CLı tarafından telemetri toplama
+description: Analiz için kullanım bilgilerini toplayan, hangi verilerin toplandığı ve devre dışı bırakılacağı ML.NET CLı telemetri özellikleri hakkında bilgi edinin. Ayrıca, .NET lisans sözleşmesinin bağlantılarını ve Microsoft GDPR uyumluluğu hakkındaki bilgileri bulabilirsiniz.
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 94c66267dfeec4b70ba4dd1fc47518eb0e01509a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: eab1e37d7d0d47251c4f92422730b105cf2db265
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053584"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433787"
 ---
-# <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI tarafından telemetri toplama
+# <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLı tarafından telemetri toplama
 
-[ML.NET CLI](http://aka.ms/mlnet-cli) kullanmak için Microsoft tarafından toplanan anonim kullanım verileri toplayan telemetri özelliğini içerir.
+[Ml.net CLI](https://aka.ms/mlnet-cli) , Microsoft tarafından kullanılmak üzere toplanan anonim kullanım verilerini toplayan bir telemetri özelliği içerir.
 
-## <a name="how-microsoft-uses-the-data"></a>Microsoft verileri nasıl kullanır
+## <a name="how-microsoft-uses-the-data"></a>Microsoft verileri nasıl kullanır?
 
-Ürün ekibine araçları geliştirmek nasıl anlamanıza yardımcı olması için ML.NET CLI telemetri verilerini kullanır. Örneğin, müşteriler seyrek belirli bir makine öğrenimi görevi kullanıyorsa, ürün ekibine neden araştırır ve bulguları özellik geliştirme önceliğini belirlemek için kullanır. ML.NET CLI telemetri Kilitlenmeler ve kod anormallikleri gibi sorunların hatalarını ayıklamaya yardımcı olur. 
+Ürün ekibi, araçların nasıl geliştirilmesine yardımcı olmak için ML.NET CLı telemetri verilerini kullanır. Örneğin, müşteriler belirli bir makine öğrenimi görevini sık sık kullanıyorsa, ürün ekibi, özellik geliştirmeyi önceliklendirmek için neden ve bulguları araştırır kullanır. ML.NET CLı telemetrisi, çökmeler ve kod bozuklukları gibi sorunların hatalarını ayıklamanıza de yardımcı olur. 
 
-Ürün ekibine bu öngörüleri appreciates olsa da herkes bu verileri göndermek istiyor da biliyoruz. [Telemetri devre dışı bırakmak öğrenin.](#opt-out-of-data-collection)
+Ürün ekibi bu öngörüleri öğrenirken, herkesin bu verileri göndermek istediğini da biliyoruz. [Telemetriyi devre dışı bırakmayı öğrenin.](#opt-out-of-data-collection)
 
-## <a name="scope"></a>Kapsam
+## <a name="scope"></a>`Scope`
 
-`mlnet` ML.NET CLI komutu çalıştırır, ancak komut telemetri toplamaz.
+`mlnet` Komut ml.net CLI 'yi başlatır, ancak komut telemetri toplamaz.
 
-Telemetri *etkin değilse* çalıştırdığınızda `mlnet` bağlı herhangi bir komut ile komutu. Örneğin:
+`mlnet` Komutu başka bir komut ekli olmadan çalıştırdığınızda telemetri *etkin değildir* . Örneğin:
 
 - `mlnet`
 - `mlnet --help`
 
-Telemetri *etkin* çalıştırdığınızda bir [ML.NET CLI komutunu](../reference/ml-net-cli-reference.md), gibi `mlnet auto-train`.
+Telemetri`mlnet auto-train`, gıbı bir [ml.net CLI komutu](../reference/ml-net-cli-reference.md)çalıştırdığınızda *etkinleştirilir* .
 
-## <a name="opt-out-of-data-collection"></a>Veri toplama işlemini iptal
+## <a name="opt-out-of-data-collection"></a>Veri toplamayı geri çevirme
 
-ML.NET CLI telemetri özellik varsayılan olarak etkindir.
+ML.NET CLı telemetri özelliği varsayılan olarak etkindir.
 
-Ayarlayarak telemetri özelliği iyileştirilmiş `DOTNET_CLI_TELEMETRY_OPTOUT` ortam değişkenine `1` veya `true`. Bu ortam değişkeni, genel .NET CLI aracı için geçerlidir.
+`DOTNET_CLI_TELEMETRY_OPTOUT` Ortam değişkenini `1` veya`true`olarak ayarlayarak telemetri özelliğini geri çevirin. Bu ortam değişkeni, .NET CLı aracı için global olarak geçerlidir.
 
 ## <a name="data-points-collected"></a>Toplanan veri noktaları
 
 Bu özellik aşağıdaki verileri toplar:
 
-- Hangi komut, gibi çağrıldı `auto-train`
-- Komut satırı parametresi adları kullanılır (yani "veri kümesi adı, etiket sütun adı, ml görev, çıkış yolu, araştırma zaman sınırı, ayrıntı düzeyi")
-- Karma MAC adresi: bir şifreleme açısından (SHA256) anonim ve benzersiz bir kimliği bir makine için
-- Zaman damgası bir çağırma
-- Yalnızca coğrafi konumunu belirlemek için kullanılan üç sekizli IP adresini (IP adresi değil tam)
-- Kullanılan tüm bağımsız değişkenler/parametreler adı. Dizeleri gibi müşteri'nin değerlerini değil
+- Çağrılan komut`auto-train`
+- Kullanılan komut satırı parametre adları (örneğin, "DataSet-Name, Label-Column-Name, ml-Task, Output-Path, Max-araştırma zamanı, ayrıntı")
+- Karma hale getirilmiş MAC adresi: bir makine için bir şifreleme (SHA256) anonim ve benzersiz KIMLIĞI
+- Bir çağrının zaman damgası
+- Yalnızca coğrafi konumu belirlemede kullanılan üç sekizli IP adresi (tam IP adresi değil)
+- Kullanılan tüm bağımsız değişkenlerin/parametrelerin adı. Müşterinin değerleri değil (dizeler gibi)
 - Karma veri kümesi dosya adı
-- Veri kümesi dosyası boyut demetinde
+- Veri kümesi dosya boyutu demeti
 - İşletim sistemi ve sürümü
-- --Görev parametresinin değeri: Gibi kategorik değerler `regression`, `binary-classification`, ve `multiclass-classification`
-- ML.NET CLI sürümü (yani 0.3.27703.4)
+- --Görev parametresi değeri: , Ve gibi kategorik değerler `regression` `binary-classification``multiclass-classification`
+- ML.NET CLı sürümü (ör. 0.3.27703.4)
 
-Veriler güvenli bir şekilde kullanarak Microsoft sunucularına gönderilir [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) kısıtlı erişim'in altında tutulması ve katı güvenlik denetimleri güvenli altında kullanılan teknoloji [Azure depolama](https://azure.microsoft.com/services/storage/) sistemler.
+Veriler, [azure Application Insights](https://azure.microsoft.com/services/application-insights/) teknolojisi kullanılarak Microsoft sunucularına güvenli bir şekilde gönderilir, kısıtlı erişim altında tutulur ve güvenli [Azure depolama](https://azure.microsoft.com/services/storage/) sistemlerinden katı güvenlik denetimleri altında kullanılır.
 
 ### <a name="data-points-not-collected"></a>Veri noktaları toplanmadı
-Telemetri özellik *değil* toplayın:
-- kullanıcı adları gibi kişisel veriler
+Telemetri *özelliği toplanmaz* :
+- Kullanıcı adları gibi kişisel veriler
 - veri kümesi dosya adları
-- veri kümesi dosyalardan alınan veriler
+- veri kümesi dosyalarından veriler
 
-ML.NET CLI telemetri hassas veriler ya da toplama şüpheleniyorsanız veri endpoınt yapılıyor veya uygunsuz bir şekilde ele, sorunu bildirin [ML.NET](https://github.com/dotnet/machinelearning) araştırma için depo.
+ML.NET CLı telemetrinin hassas verileri toplamasını veya verilerin güvenli veya uygun şekilde işlenmekte olduğunu kuşkulanıyorsanız, araştırma için [ml.net](https://github.com/dotnet/machinelearning) deposunda bir sorun verin.
 
 ## <a name="license"></a>Lisans
 
-Microsoft Dağıtım ML.NET CLI ile lisanslı [Microsoft Yazılımı Lisans koşulları: Microsoft .NET kitaplığı](https://aka.ms/dotnet-core-eula). Veri toplama ve işleme hakkında daha fazla bilgi için "Veri" başlıklı bölüme bakın.
+ML.net CLI 'nin Microsoft dağıtımı, [Microsoft yazılımı lisans koşulları ile lisanslanır: Microsoft .NET kitaplığı](https://aka.ms/dotnet-core-eula). Veri toplama ve işleme hakkında daha fazla bilgi için "veri" başlıklı bölüme bakın.
 
-## <a name="disclosure"></a>Açığa çıkması
+## <a name="disclosure"></a>Savunmasız
 
-İlk kez çalıştırdığınızda bir [ML.NET CLI komutunu](../reference/ml-net-cli-reference.md) gibi `mlnet auto-train`, ML.NET CLI araç telemetri dışında nasıl söyler açığa metin görüntüler. Metin, çalıştırmakta olduğunuz CLI sürümüne bağlı olarak biraz değişebilir.
+Gibi bir [ml.net CLI komutunu](../reference/ml-net-cli-reference.md) `mlnet auto-train`ilk kez çalıştırdığınızda, ml.net CLI aracı Telemetriyi nasıl kabul eteceklerini belirten açıklama metnini görüntüler. Metin, çalıştırdığınız CLı sürümüne bağlı olarak biraz farklılık gösterebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ML.NET CLI başvurusu](../reference/ml-net-cli-reference.md)
-- [Microsoft Yazılımı Lisans koşulları: Microsoft .NET kitaplığı](https://aka.ms/dotnet-core-eula)
-- [Microsoft gizlilik](https://www.microsoft.com/trustcenter/privacy/)
+- [ML.NET CLı başvurusu](../reference/ml-net-cli-reference.md)
+- [Microsoft yazılımı lisans koşulları: Microsoft .NET kitaplığı](https://aka.ms/dotnet-core-eula)
+- [Microsoft 'ta Gizlilik](https://www.microsoft.com/trustcenter/privacy/)
 - [Microsoft gizlilik bildirimi](https://privacy.microsoft.com/privacystatement)

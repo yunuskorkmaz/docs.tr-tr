@@ -1,5 +1,5 @@
 ---
-title: enum anahtar sözcüğü - C# başvurusu
+title: enum anahtar sözcüğü C# -başvurusu
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,83 +8,83 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 57043963640f3c384b1e1a9aa7aeb65114689e9f
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: e33877d2a5e79866bbef12cd9fec5cb11b044240
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569531"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433861"
 ---
 # <a name="enum-c-reference"></a>enum (C# Başvurusu)
 
-`enum` Anahtar sözcüğü bir numaralandırma, numaralandırıcı listesi olarak adlandırılan sabitler kümesinden oluşan ayrı bir türü bildirmek için kullanılır.
+`enum` Anahtar sözcüğü, Numaralandırıcı listesi olarak adlandırılan bir adlandırılmış sabitler kümesinden oluşan ayrı bir tür olan sabit listesini bildirmek için kullanılır.
 
-Genellikle ad alanındaki tüm sınıflar ile eşit kolaylık erişebilmeleri doğrudan bir ad alanındaki bir numaralandırma tanımlamak idealdir. Ancak, bir sabit listesi bir sınıf veya yapı içinde yuvalanabilir.
+Genellikle, ad alanındaki tüm sınıfların eşit kolaylık olmadan erişebilmesi için doğrudan bir ad alanı içinde bir numaralandırma tanımlamanız en iyisidir. Ancak, bir numaralandırma bir sınıf veya yapı içinde de iç içe olabilir.
 
-Varsayılan olarak, ilk Numaralandırıcı değeri 0 olan ve art arda gelen her Numaralandırıcı değeri 1 artar. Örneğin, aşağıdaki sabit listesi içinde `Sat` olduğu `0`, `Sun` olduğu `1`, `Mon` olduğu `2`vb.
+Varsayılan olarak, ilk Numaralandırıcı 0 değerine sahiptir ve art arda her bir Numaralandırıcı değeri 1 artırılır. Örneğin, aşağıdaki `Sat` numaralandırmada,,, vb. `Sun` olur. `Mon` `0` `1` `2`
 
 ```csharp
 enum Day {Sat, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Numaralandırıcılar başlatıcılar varsayılan değerlerini geçersiz kılması için aşağıdaki örnekte gösterildiği gibi kullanabilirsiniz.
+Numaralandırıcılar, aşağıdaki örnekte gösterildiği gibi varsayılan değerleri geçersiz kılmak için başlatıcıları kullanabilir.
 
 ```csharp
 enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Bu sabit listesi öğeleri dizisi başlangıç zorlanır `1` yerine `0`. Ancak, 0 değerine sahip bir sabit dahil olmak üzere önerilir. Daha fazla bilgi için [Numaralandırma türleri](../../programming-guide/enumeration-types.md).
+Bu numaralandırmada, öğelerin sırası `1` `0`yerine başlangıç olarak zorlanır. Ancak, 0 değeri olan bir sabit kullanılması önerilir. Daha fazla bilgi için bkz. [numaralandırma türleri](../../programming-guide/enumeration-types.md).
 
-Herhangi bir temel türü her sabit listesi türünde [sayısal bir tamsayı türü](../builtin-types/integral-numeric-types.md). [Char](char.md) bir sabit listesi türünü temel türü olamaz. Sabit listesi öğeleri listesinin temel alınan türü varsayılandır [int](../builtin-types/integral-numeric-types.md). Bir numaralandırma başka bir integral türü gibi bildirmek için [bayt](../builtin-types/integral-numeric-types.md), aşağıdaki örnekte gösterildiği gibi türü tarafından izlenen tanımlayıcısı sonra bir virgül kullanın.
+Her numaralandırma türünün bir temel türü vardır ve bu her türlü [integral sayısal tür](../builtin-types/integral-numeric-types.md)olabilir. [Char](char.md) türü bir sabit listesinin temel alınan türü olamaz. Enumeration öğelerinin temel alınan varsayılan türü [int](../builtin-types/integral-numeric-types.md)'tir. [Byte](../builtin-types/integral-numeric-types.md)gibi başka bir integral türünün bir sabit listesini bildirmek için, aşağıdaki örnekte gösterildiği gibi, tanımlayıcıdan sonra türün ardından bir iki nokta üst üste kullanın.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Bir değişken bir numaralandırma türünün temel türü aralığındaki herhangi bir değer atanabilir; değerleri için adlandırılmış sabitler sınırlı değildir.
+Sabit listesi türünün değişkenine, temel alınan türün aralığında herhangi bir değer atanabilir; değerler, adlandırılmış sabitler ile sınırlı değildir.
 
-Varsayılan değer olan bir `enum E` ifade tarafından üretilen değer `(E)0`.
+Varsayılan değeri `enum E` , ifadesi `(E)0`tarafından üretilen değerdir.
 
 > [!NOTE]
-> Bir numaralandırıcı adı boşluk içeremez.
+> Numaralandırıcı, adında boşluk içeremez.
 
-Her Numaralandırıcı için ne kadar depolama alanı ayrılır, temel alınan türünü belirtir. Ancak, bir açık tür dönüştürme dönüştürmek gerekli `enum` türü için bir tamsayı türü. Örneğin aşağıdaki deyim, numaralandırıcı atar `Sun` türünde bir değişkene [int](../builtin-types/integral-numeric-types.md) dönüştürmek için bir tür dönüştürme kullanılarak `enum` için `int`.
+Temel alınan tür, her Numaralandırıcı için ne kadar depolama ayrılacağını belirtir. Ancak, `enum` türden bir integral türüne dönüştürmek için açık bir dönüştürme gerekir. Örneğin, aşağıdaki ifade, ' den `Sun` `enum` ' a dönüştürmek `int`için bir cast kullanarak, numaralandırıcıyı [int](../builtin-types/integral-numeric-types.md) türünde bir değişkene atar.
 
 ```csharp
 int x = (int)Day.Sun;
 ```
 
-Uyguladığınızda <xref:System.FlagsAttribute?displayProperty=nameWithType> bit ile birleştirilebilir öğeleri içeren bir sabit listesi `OR` işlemi, öznitelik davranışını etkileyen `enum` bazı araçlarla kullanıldığında. Gibi araçları kullanın, bu değişiklikler fark <xref:System.Console> sınıfı yöntemleri ve ifade değerlendiricisi. (Üçüncü örneğe bakın.)
+Bit düzeyinde <xref:System.FlagsAttribute?displayProperty=nameWithType> `OR` işlemle birleştirilebilecek öğeleri içeren bir sabit listesi için uyguladığınızda, özniteliği bazı araçlarla kullanıldığında öğesinin `enum` davranışını etkiler. <xref:System.Console> Sınıf yöntemleri ve ifade değerlendiricisi gibi araçları kullandığınızda bu değişiklikleri fark edebilirsiniz. (Bkz. üçüncü örnek.)
 
 ## <a name="robust-programming"></a>Güçlü programlama
 
-Tek tek bir sabit listesi değerlerinin tüm başvurular olduğu herhangi bir sabit olduğu gibi sayısal değişmez değerleri için derleme zamanında dönüştürülür. Bu sürüm ile ilgili olası sorunları açıklandığı gibi oluşturabilirsiniz [sabitleri](../../programming-guide/classes-and-structs/constants.md).
+Her türlü Sabitte olduğu gibi, bir numaralandırmanın tek tek değerlerine yapılan tüm başvurular, derleme zamanında sayısal değişmez değerlere dönüştürülür. Bu, [sabitler](../../programming-guide/classes-and-structs/constants.md)bölümünde açıklandığı gibi olası sürüm oluşturma sorunları oluşturabilir.
 
-Sabit listeleri yeni sürümleri için ek değerler atama veya yeni bir sürümünde, sabit listesi üyelerinin değerlerini değiştirmek için bağımlı kaynak kodunuz için sorunlara neden olabilir. Sabit listesi değerlerinin sık sık kullanılır [geçiş](switch.md) deyimleri. Ek öğeler için eklenip eklenmediğini `enum` varsayılan bölümün switch ifadesinin türü beklenmedik bir şekilde seçilebilir.
+Yeni Numaralandırmaların yeni sürümlerine ek değerler atama veya yeni sürümde enum üyelerinin değerlerini değiştirme, bağımlı kaynak kodu sorunlarına neden olabilir. Numaralandırma değerleri genellikle [Switch](switch.md) deyimlerinde kullanılır. `enum` Türe ek öğeler eklendiyse, switch ifadesinin varsayılan bölümü beklenmedik şekilde seçilebilir.
 
-Diğer geliştiricilerin kodunuzu kullanırsanız, yeni öğeler için eklenirse kodlarını nasıl yanıt vermesini hakkında yönergeleri sağlamalıdır `enum` türleri.
+Diğer geliştiriciler kodunuzu kullanıyorsa, herhangi bir `enum` türe yeni öğe eklenirse kodun nasıl tepki vermesi hakkında yönergeler sağlamalısınız.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, bir numaralandırma `Day`, bildirilir. İki numaralandırıcılar açıkça tamsayıya dönüştürülüp ve tamsayı değişkenine atanır.
+Aşağıdaki örnekte, bir sabit listesi `Day`bildirilmiştir. İki Numaralandırıcı açıkça tam sayıya dönüştürülür ve tamsayı değişkenlerine atanır.
 
 [!code-csharp[csrefKeywordsTypes#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#10)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, temel türünde seçenek bildirmek için kullanılan bir `enum` üyeleri, tür `long`. Sabit listesi türünü temel olsa bile dikkat `long`, numaralandırma üyelerini hala açıkça türüne dönüştürülmesi gerekir `long` kullanarak bir cast.
+Aşağıdaki örnekte, üyeleri türünde `enum` `long`olan bir öğesini bildirmek için temel tür seçeneği kullanılır. Numaralandırmanın `long`temel alınan türü olsa da, sabit listesi üyelerinin bir tür dönüştürme kullanılarak açıkça türe `long` dönüştürülmesi gerekir.
 
 [!code-csharp[csrefKeywordsTypes#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#11)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği kullanım ve etkisini gösterir <xref:System.FlagsAttribute?displayProperty=nameWithType> özniteliği bir `enum` bildirimi.
+Aşağıdaki kod örneği, bir <xref:System.FlagsAttribute?displayProperty=nameWithType> `enum` bildirimde özniteliğin kullanımını ve etkisini gösterir.
 
 [!code-csharp[csrefKeywordsTypes#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#12)]
 
 ## <a name="comments"></a>Açıklamalar
 
-Kaldırırsanız `Flags`, örnek aşağıdaki değerleri görüntüler:
+' I kaldırırsanız `Flags`, örnek aşağıdaki değerleri görüntüler:
 
 `5`
 
@@ -96,11 +96,11 @@ Kaldırırsanız `Flags`, örnek aşağıdaki değerleri görüntüler:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C#Başvurunun](../index.md)
 - [Sabit Listesi Türleri](../../programming-guide/enumeration-types.md)
 - [C# Anahtar Sözcükleri](index.md)
-- [Tam sayı türleri](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
+- [Integral türleri](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Yerleşik Türler Tablosu](built-in-types-table.md)
 - [Örtük Sayısal Dönüştürmeler Tablosu](implicit-numeric-conversions-table.md)
 - [Açık Sayısal Dönüştürmeler Tablosu](explicit-numeric-conversions-table.md)
-- [Enum adlandırma kuralları](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
+- [Sabit Listesi adlandırma kuralları](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)

@@ -6,45 +6,45 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: fe07b01cfa62d8d1cbc2e4a61cac814425af7da0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 580a6e1caa78ea981b6d2be68a6e7c61e2ad55d7
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639845"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433817"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic Kodlama Kuralları
-Microsoft, örnekler ve bu konudaki yönergeleri izleyen belgeler geliştirir. Aynı kodlama kurallarını takip ederseniz, aşağıdaki faydaları elde edebilirsiniz:  
+Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. Aynı kodlama kurallarını izlerseniz, aşağıdaki avantajları elde edebilirsiniz:  
   
-- Okuyucular düzene değil içeriğe göre daha iyi odaklanabilmeniz için kodunuzu tutarlı bir görünüm olacaktır.  
+- Kodunuzun tutarlı bir görünümü olur, böylece okuyucular düzene göre değil içeriğe daha iyi odaklanabilir.  
   
-- Bunlar önceki deneyime dayanan varsayımlar yapabilecekleri için Okuyucular kodunuzu daha hızlı bir şekilde anlayın.  
+- Okuyucular, önceki deneyimle ilgili varsayımlar yapabildiğinden kodunuzu daha hızlı bir şekilde öğrenirler.  
   
-- Kopyalama, değiştirme ve kodu daha kolay korumak.  
+- Kodu daha kolay kopyalayabilir, değiştirebilir ve bakımını yapabilirsiniz.  
   
-- Kodunuzu Visual Basic için "en iyi uygulamaları" göstermesini sağlamaya yardımcı olur.  
+- Kodunuzun, Visual Basic için "en iyi uygulamaları" gösterdiği sağlanmasına yardımcı olursunuz.  
   
-## <a name="naming-conventions"></a>Adlandırma kuralları  
+## <a name="naming-conventions"></a>Adlandırma Kuralları  
   
-- Adlandırma yönergeleri hakkında daha fazla bilgi için bkz: [adlandırma yönergeleri](../../../standard/design-guidelines/naming-guidelines.md) konu.  
+- Adlandırma yönergeleri hakkında daha fazla bilgi için bkz. [Adlandırma yönergeleri](../../../standard/design-guidelines/naming-guidelines.md) konusu.  
   
-- Bir değişken adının parçası olarak "My" veya "my" kullanmayın. Bu yöntem karışıklık oluşturur `My` nesneleri.  
+- Değişken adının bir parçası olarak "My" veya "My" kullanmayın. Bu uygulama, `My` nesneleriyle karışıklık oluşturur.  
   
-- Nesnelerin yönergelere sığması olacak şekilde otomatik olarak oluşturulan kod adlarını değiştirmeniz gerekmez.  
+- Otomatik olarak oluşturulan koddaki nesnelerin adlarını, kurallara uyacak şekilde değiştirmeniz gerekmez.  
   
 ## <a name="layout-conventions"></a>Düzeni Kuralları  
   
-- Sekmeleri boşluk olarak ekleyin ve dört boşluklu akıllı girintileme kullanın.  
+- Sekmeleri boşluk olarak ekleyin ve dört boşluklu girintilerle akıllı girintileme kullanın.  
   
-- Kullanım **(yeniden biçimlendirme) kodu düzgün listeleme** Kod düzenleyicisinde kodunuzu yeniden biçimlendirmek için. Daha fazla bilgi için [seçenekler, metin düzenleyici, temel (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
+- Kod düzenleyicisinde kodunuzu yeniden biçimlendirmek için **kodun düzgün listesini (yeniden biçimlendirme)** kullanın. Daha fazla bilgi için bkz. [Seçenekler, metin düzenleyici, temel (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
   
-- Her satırda yalnızca bir deyim kullanın. Visual Basic Satır Ayırıcı karakterini (:) kullanmayın.  
+- Her satırda yalnızca bir ifade kullanın. Visual Basic çizgi ayırıcı karakterini kullanmayın (:).  
   
-- Dil her izin verdiğinde örtük satır devamlılığı açık satır devamlılığı karakterini "_" kullanmaktan kaçının.  
+- "_" Açık satır devamlılığı, dilin izin verdiği her yerde örtük satır devamlılığı kullanımına karşı kullanmaktan kaçının.  
   
 - Her satırda yalnızca bir bildirim kullanın.  
   
-- Varsa **(yeniden biçimlendirme) kodu düzgün listeleme** devamlılık satırlarını otomatik olarak, el ile devamlılık satırlarını bir sekme durağı girinti verin. Ancak, her zaman sola bir listedeki öğeler Hizala.  
+- **Kodun düzgün listelenmesi (yeniden biçimlendirilmesi)** devam satırlarını otomatik olarak biçimlendirmezse, devamlılık satırlarını bir sekme durağı olarak el ile girintileyin. Ancak, her zaman bir listedeki öğeleri sola hizalayın.  
   
     ```  
     a As Integer,  
@@ -55,19 +55,19 @@ Microsoft, örnekler ve bu konudaki yönergeleri izleyen belgeler geliştirir. A
   
 ## <a name="commenting-conventions"></a>Yorum Oluşturma Kuralları  
   
-- Açıklamaları bir kod satırının sonundaki yerine ayrı bir satıra yerleştirin.  
+- Açıklamaları bir kod satırının sonu yerine ayrı bir satıra koyun.  
   
-- Son yorum metnini noktayla yanı sıra büyük harfle yorum metni başlatın.  
+- Açıklama metnini büyük harfle başlatın ve açıklama metnini noktayla bitirin.  
   
-- Açıklama sınırlayıcısı (') ve açıklama metni arasına tek boşluk ekleyin.  
+- Açıklama sınırlayıcısı (') ve açıklama metni arasına bir boşluk ekleyin.  
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
-- Biçimlendirilmiş yıldız işareti blokları yorumlarla başına değil.  
+- Açıklamaları, biçimli yıldız blokları ile çevrelemeyin.  
   
 ## <a name="program-structure"></a>Program Yapısı  
   
-- Kullanırken `Main` yöntemi, yeni konsol uygulamaları için varsayılan yapıyı kullanın ve kullanmak `My` için komut satırı bağımsız değişkenleri.  
+- `Main` Yöntemini kullandığınızda, yeni konsol uygulamaları için varsayılan yapıyı kullanın ve komut satırı bağımsız değişkenleri için kullanın `My` .  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -75,22 +75,24 @@ Microsoft, örnekler ve bu konudaki yönergeleri izleyen belgeler geliştirir. A
   
 ### <a name="string-data-type"></a>Dize Veri Türü  
   
-- Dizeleri birleştirmek için bir ve işareti kullanın (&).  
+- Aşağıdaki kodda gösterildiği gibi, kısa dizeleri birleştirmek için [dize ilişkilendirmeyi](https://docs.microsoft.com/dotnet/visual-basic/programming-guide/language-features/strings/interpolated-strings) kullanın.
   
-     [!code-vb[VbVbalrGuidelines#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#4)]  
+     ```vb
+     MsgBox($"hello{vbCrLf}goodbye")
+     ```
   
-- Döngülere diziler eklemek için kullanın <xref:System.Text.StringBuilder> nesne.  
+- Döngülerde dizeler eklemek için <xref:System.Text.StringBuilder> nesnesini kullanın.  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
-### <a name="relaxed-delegates-in-event-handlers"></a>Olay işleyicileri'ndeki gevşek temsilciler  
- Bağımsız değişkenleri (Object ve EventArgs) açıkça olay işleyicilerine nitelendirmeyin. Bir olaya (örneğin, nesne olarak gönderen, EventArgs olarak e) geçirilen olay bağımsız değişkenlerinin kullanmıyorsanız, gevşek temsilcileri kullanın ve olay bağımsız değişkenlerini kodunuzun içinde bırakın:  
+### <a name="relaxed-delegates-in-event-handlers"></a>Olay Işleyicilerinde gevşek temsilciler  
+ Bağımsız değişkenleri (Object ve EventArgs) olay işleyicileriyle açıkça nitelemeyin. Bir olaya iletilen olay bağımsız değişkenlerini kullanmıyorsanız (örneğin, gönderen nesne, EventArgs olarak e), gevşek temsilciler kullanın ve kodunuzda olay bağımsız değişkenlerini bırakın:  
   
  [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
   
 ### <a name="unsigned-data-type"></a>İmzasız Veri Türü  
   
-- Kullanım `Integer` gerekli olduğu dışında imzasız türler yerine.  
+- Gerekli `Integer` olduğu durumlar dışında, imzasız türler yerine kullanın.  
   
 ### <a name="arrays"></a>Diziler  
   
@@ -102,7 +104,7 @@ Microsoft, örnekler ve bu konudaki yönergeleri izleyen belgeler geliştirir. A
   
      [!code-vb[VbVbalrGuidelines#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#9)]  
   
-- Dizi göstergesini, tür, değişken üzerinde yerleştirin. Örneğin, aşağıdaki sözdizimini kullanın:  
+- Dizi göstergesini değişkene değil, türüne koyun. Örneğin, aşağıdaki sözdizimini kullanın:  
   
      [!code-vb[VbVbalrGuidelines#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#11)]  
   
@@ -110,7 +112,7 @@ Microsoft, örnekler ve bu konudaki yönergeleri izleyen belgeler geliştirir. A
   
      [!code-vb[VbVbalrGuidelines#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#10)]  
   
-- Bildirme ve temel veri türleri dizilerini başlatmak {} sözdizimini kullanın. Örneğin, aşağıdaki sözdizimini kullanın:  
+- Temel veri türleri dizilerini bildirdiğinizde ve başlattığınızda {} sözdizimini kullanın. Örneğin, aşağıdaki sözdizimini kullanın:  
   
      [!code-vb[VbVbalrGuidelines#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#12)]  
   
@@ -118,60 +120,60 @@ Microsoft, örnekler ve bu konudaki yönergeleri izleyen belgeler geliştirir. A
   
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
-### <a name="use-the-with-keyword"></a>Kullanım anahtar sözcüğü ile  
- Bir dizi bir nesneye çağrısı yaptığınızda kullanmayı `With` anahtar sözcüğü:  
+### <a name="use-the-with-keyword"></a>WITH anahtar sözcüğünü kullanma  
+ Bir nesneye bir dizi çağrı yaptığınızda, `With` anahtar sözcüğünü kullanmayı düşünün:  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
-### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Try kullan... Catch ve Using deyimlerini özel durum işlemeyi kullandığınızda  
+### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>TRY... öğesini kullanın Özel durum Işleme kullandığınızda deyimleri yakalama ve kullanma  
  Kullanmayın `On Error Goto`.  
   
-### <a name="use-the-isnot-keyword"></a>IsNot anahtar sözcüğünü kullanın  
- Kullanım `IsNot` anahtar sözcüğü yerine `Not...Is Nothing`.  
+### <a name="use-the-isnot-keyword"></a>Inot anahtar sözcüğünü kullanma  
+ Yerine anahtar sözcüğünü kullanın. `Not...Is Nothing` `IsNot`  
   
-### <a name="new-keyword"></a>Yeni anahtar sözcüğü  
+### <a name="new-keyword"></a>Yeni anahtar sözcük  
   
-- Kısa örnekleme kullanın. Örneğin, aşağıdaki sözdizimini kullanın:  
+- Kısa örnek oluşturma kullanın. Örneğin, aşağıdaki sözdizimini kullanın:  
   
      [!code-vb[VbVbalrGuidelines#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#21)]  
   
-     Önceki satır aşağıdakine eşdeğerdir:  
+     Yukarıdaki satır buna eşdeğerdir:  
   
      [!code-vb[VbVbalrGuidelines#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#22)]  
   
-- Parametresiz oluşturucusu yerine yeni nesneler için nesne başlatıcıları kullanın:  
+- Parametresiz Oluşturucu yerine yeni nesneler için nesne başlatıcıları kullanın:  
   
      [!code-vb[VbVbalrGuidelines#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#23)]  
   
 ### <a name="event-handling"></a>Olay İşleme  
   
-- Kullanım `Handles` yerine `AddHandler`:  
+- Yerine kullanın `Handles`: `AddHandler`  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
-- Kullanım `AddressOf`ve temsilciyi açıkça örneklemeyin:  
+- Öğesini `AddressOf`kullanın ve temsilciyi açıkça örneğini oluşturun:  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
-- Bir olay tanımladığınızda kısa sözdizimi kullanın ve derleyicinin temsilciyi tanımlamasına olanak tanır:  
+- Bir olay tanımladığınızda, kısa sözdizimini kullanın ve derleyicinin temsilciyi tanımlamasına izin verin:  
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- Bir olay olup olmadığını doğrulamayın `Nothing` (null) çağırmadan önce `RaiseEvent` yöntemi. `RaiseEvent` denetler `Nothing` olayı yükseltmeden önce.  
+- Yöntemi çağırmadan önce bir olayın `Nothing` (null) olup olmadığını doğrulama. `RaiseEvent` `RaiseEvent``Nothing` olayı oluşturmadan önce olup olmadığını denetler.  
   
 ### <a name="using-shared-members"></a>Paylaşılan üyeleri kullanma  
- Çağrı `Shared` bir örnek değişkeninden değil sınıf adını kullanarak üyeleri.  
+ Bir `Shared` örnek değişkeninden değil sınıf adını kullanarak üyeleri çağırın.  
   
-### <a name="use-xml-literals"></a>XML değişmez değerleri kullanma  
- XML değişmez değerleri (örneğin, yük, sorgu ve dönüşüm) XML ile çalışırken karşılaştığınız en yaygın görevleri basitleştirir. XML ile geliştirdiğinizde, aşağıdaki yönergeleri izleyin:  
+### <a name="use-xml-literals"></a>XML değişmez değerlerini kullan  
+ XML sabit değerleri, XML ile çalışırken karşılaşabileceğiniz en yaygın görevleri basitleştirir (örneğin, Load, Query ve Transform). XML ile geliştirme yaparken şu yönergeleri izleyin:  
   
-- XML belgeleri ve XML API'lerini doğrudan çağırmak yerine parçaları oluşturmak için XML sabit değerleri kullanın.  
+- XML API 'Lerini doğrudan çağırmak yerine XML belgelerini ve parçalarını oluşturmak için XML değişmez değerlerini kullanın.  
   
-- XML ad alanları XML sabit değerleri için performans iyileştirmeleri yararlanmak için dosyası veya proje düzeyinde içeri aktarın.  
+- XML değişmez değerleri için performans iyileştirmelerinden faydalanmak için dosya veya proje düzeyinde XML ad alanlarını içeri aktarın.  
   
-- Öğeleri ve özniteliklerinin bir XML belgesi erişmek için XML eksen özelliklerini kullanın.  
+- XML belgesindeki öğelere ve özniteliklere erişmek için XML eksen özelliklerini kullanın.  
   
-- Değerler ve gibi API çağrılarını kullanmak yerine var olan değerlerden XML oluşturmak için katıştırılmış ifadeleri kullanın `Add` yöntemi:  
+- `Add` Yöntem gibi API çağrılarını kullanmak yerine mevcut değerlerden XML oluşturmak ve değerleri dahil etmek için gömülü ifadeleri kullanın:  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
@@ -181,27 +183,27 @@ Microsoft, örnekler ve bu konudaki yönergeleri izleyen belgeler geliştirir. A
   
      [!code-vb[VbVbalrGuidelines#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#28)]  
   
-- Pascal kullanarak anonim türlerinin özellik adlarının doğru olduğundan emin olmak için bir sorgu içindeki öğeler için adlar sağlamak büyük/küçük harf:  
+- Anonim türlerin özellik adlarının, Pascal büyük harfleri kullanarak doğru şekilde büyük harfli olduğundan emin olmak için bir sorgudaki öğelerin adlarını sağlayın:  
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
-- Sonuçtaki özellik adları belirsiz olduğunda özellikleri yeniden adlandırın. Sorgunuz bir müşteri adı ve sipariş kimliği verir, örneğin, bunları olarak bırakmak yerine Yeniden Adlandır `Name` ve `ID` sonuç:  
+- Sonuç içindeki Özellik adları belirsiz olduğunda özellikleri yeniden adlandırın. Örneğin, sorgunuz bir müşteri adı ve bir sipariş kimliği döndürürse, bunları ve `Name` `ID` sonuç olarak bırakmak yerine yeniden adlandırın:  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
-- Sorgu değişkenleri ve aralık değişkenleri bildiriminde tür çıkarımını kullanın:  
+- Sorgu değişkenleri ve Aralık değişkenleri bildiriminde tür çıkarımı kullanın:  
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- Altında sorgu yan tümcelerini hizalayın `From` deyimi:  
+- Sorgu yan tümcelerini `From` deyimin altına Hizala:  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
-- Kullanım `Where` yan tümceleri önce diğer sorgu yan tümceleri böylece sonraki sorgu yan tümcelerinin filtrelenmiş veri kümesinde çalışır:  
+- Daha `Where` sonra sorgu yan tümcelerinin filtrelenmiş veri kümesinde çalışması için diğer sorgu yan tümcelerinden önce yan tümceleri kullanın:  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- Kullanım `Join` kullanmak yerine bir birleştirme işlemini açıkça tanımlamak için `Where` örtük olarak bir birleştirme işlemi tanımlamak için:  
+- Bir JOIN işlemini örtük olarak tanımlamak için `Where` yan tümcesini kullanmak yerine bir JOIN işlemini açıkça tanımlamak için yantümcesinikullanın:`Join`  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   

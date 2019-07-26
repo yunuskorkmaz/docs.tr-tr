@@ -6,15 +6,15 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 0394522b8a006d6b187219c8ef7dfccd6556ffca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 646ad1ca99d83f9fb2994f3c394eca27a60c0eac
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617074"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484729"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier Yönergesi
-Adlandırılmış nesne başvuruları için alanları ile tanımlanan şekilde XAML derlemesi davranışı değiştirir <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> yerine erişim <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> varsayılan davranışı.  
+Adlandırılmış nesne başvuruları alanları <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> varsayılan davranış yerine erişim ile tanımlanabilmesi için xaml derleme davranışını değiştirir.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -26,34 +26,34 @@ Adlandırılmış nesne başvuruları için alanları ile tanımlanan şekilde X
   
 |||  
 |-|-|  
-|*Public*|Geçirdiğiniz belirtmek için tam dizeyi <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> karşı <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> , kullanılan arka plan kod programlama diline bağlı olarak değişir. Açıklamalara bakın.|  
+|*Public*|<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> Belirtmek<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> için geçirdiğiniz tam dize, kullanılan arka plan kod programlama diline bağlı olarak farklılık gösterir. Bkz. açıklamalar.|  
   
-## <a name="dependencies"></a>Bağımlılıklar  
- XAML üretim kullanıyorsa `x:FieldModifier` her yerden bu XAML üretim kök öğesi bildirmelidir bir [x: Class yönergesi](x-class-directive.md).  
+## <a name="dependencies"></a>Bağımlılıkları  
+ Bir xaml üretimi her yerde `x:FieldModifier` kullanılıyorsa, bu xaml üretiminin kök öğesi bir [x:Class yönergesi](x-class-directive.md)bildirmelidir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `x:FieldModifier` bir sınıf veya üyelerinin genel erişim düzeyi bildirmek için geçerli değildir. XAML üretim parçası olan özel bir XAML nesne işlenir ve bir uygulamanın nesne grafiğinde potansiyel olarak erişilebilen bir nesne haline gelir oluşturulurken yalnızca XAML işleme davranışını için geçerlidir. Varsayılan olarak, bu tür bir nesne için alan başvurusu denetimi tüketiciler Nesne grafiğini doğrudan değiştirmesini engeller özel tutulur. Bunun yerine, Denetim tüketicileri programlama modelleriyle gibi Düzen kök veya alt öğe koleksiyonlarını, adanmış ortak özellikler, elde ederek etkinleştirilen standart desenler kullanılarak nesne grafını değiştirin beklenir ve benzeri.  
+ `x:FieldModifier`, bir sınıfın veya üyelerinin genel erişim düzeyini bildirmek için uygun değildir. Xaml üretiminin bir parçası olan belirli bir XAML nesnesi işlendiğinde ve bir uygulamanın nesne grafiğinde erişilebilir olabilecek bir nesne haline gelirse, yalnızca XAML işleme davranışı geçerlidir. Varsayılan olarak, bu tür bir nesnenin alan başvurusu Private tutulur, bu da denetim tüketicilerinin doğrudan nesne grafiğini değiştirmesini önler. Bunun yerine, denetim tüketicilerinin, düzen kökü, alt öğe koleksiyonları, adanmış ortak özellikler vb. gibi programlama modelleri tarafından etkinleştirilen standart desenleri kullanarak, nesne grafiğini değiştirmesi beklenmektedir.  
   
- Değeri `x:FieldModifier` öznitelik programlama diline göre değişir ve belirli çerçeveleri amacı farklılık gösterebilir. Her bir dilin nasıl uyguladığını kullanılacak dize bağlıdır, <xref:System.CodeDom.Compiler.CodeDomProvider> ve döndürür anlamı tanımlamak için tür dönüştürücüleri <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ve <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, ve bu dilin büyük küçük harfe duyarlı olup olmadığını.  
+ `x:FieldModifier` Özniteliğin değeri programlama diline göre farklılık gösterir ve amacı belirli çerçevelerde farklılık gösterebilir. Kullanılacak dize, her dilin ve <xref:System.CodeDom.Compiler.CodeDomProvider> <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>için <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> anlamlarını ve bu dilin büyük/küçük harfe duyarlı olup olmadığını tanımlamak için döndürdüğü tür Dönüştürücülerine bağlıdır.  
   
-- C#, belirlemek üzere iletilecek dizeyi <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> olduğu `public`.  
+- İçin C#, atamak <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> için geçirilecek dize olur `public`.  
   
-- Microsoft Visual Basic .NET, atamak için geçirilecek dize için <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> olduğu `Public`.  
+- Microsoft Visual Basic .NET için, atamak <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> için geçirilecek dize olur. `Public`  
   
-- İçin [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], XAML için hiçbir hedef zaten var; Bu nedenle, dize geçirilecek tanımsızdır.  
+- /CLI C++için şu anda bir xaml hedefi yok; Bu nedenle, geçirilecek dize tanımsız.  
   
- Belirtebilirsiniz <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> (`internal` içinde C#, `Friend` Visual Basic'te) ancak belirten <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> olağan dışı çünkü `NotPublic` varsayılan davranışı olduğundan.  
+ Ayrıca, (`internal` içinde <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> C# <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> , `Friend` Visual Basic), ancak`NotPublic` davranış zaten varsayılan olduğundan belirtilebilir.  
   
- <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> kod derlenmiş XAML derleme dışından XAML oluşturulmuş bir öğe erişmesi seyrek olduğundan varsayılan davranıştır. WPF XAML derlemesi davranışı birlikte güvenlik mimarisi değil bildirmek öğesi örnekleri genel, depolama alanları, özel olarak ayarlamadığınız sürece `x:FieldModifier` genel erişime izin vermek için.  
+ <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>varsayılan davranıştır çünkü XAML 'yi derlenen derlemenin dışındaki kodun XAML tarafından oluşturulan bir öğeye erişmesi gerekir. XAML derleme davranışıyla birlikte WPF güvenlik mimarisi, `x:FieldModifier` özel olarak genel erişime izin verecek şekilde ayarlamadığınız sürece, öğe örneklerini ortak olarak depolayan alanları bildirmeyecektir.  
   
- `x:FieldModifier` yalnızca öğeler için uygun olan bir [x: Name yönergesi](x-name-directive.md) bu ad genel sonra alanına başvurmak için kullanıldığından.  
+ `x:FieldModifier`yalnızca bir [X:Name Yönergesi](x-name-directive.md) olan öğeler için geçerlidir çünkü bu ad, genel olduktan sonra alana başvurmak için kullanılır.  
   
- Varsayılan olarak, kısmi sınıf kök öğe için genel; Ancak, bunu kullanarak özel bir duruma getirebilirsiniz [x: ClassModifier yönergesi](x-classmodifier-directive.md). [X: ClassModifier yönergesi](x-classmodifier-directive.md) kök öğe sınıfı örneğini erişim düzeyini de etkiler. Her ikisi de koyabilirsiniz `x:Name` ve `x:FieldModifier` kök öğesi, ancak bu yalnızca yapar tarafından denetlenen bir ortak alan kopyasını kök öğesiyle true kök öğe sınıfı erişim düzeyi hala [x: ClassModifier yönergesi](x-classmodifier-directive.md).  
+ Varsayılan olarak, kök öğe için kısmi sınıf geneldir; Ancak, [X:ClassModifier yönergesini](x-classmodifier-directive.md)kullanarak bunu ortak hale getirebilirsiniz. [X:ClassModifier Yönergesi](x-classmodifier-directive.md) , kök öğe sınıfının örneğinin erişim düzeyini de etkiler. Hem hem de `x:Name` `x:FieldModifier` kök öğesine koyabilirsiniz, ancak bu yalnızca kök öğenin genel alan kopyasını, doğru kök öğe sınıfı erişim düzeyiyle birlikte [x:ClassModifier Yönergesi](x-classmodifier-directive.md)tarafından denetlenmeye devam edebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WPF için XAML ve Özel Sınıflar](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [Arka Plan Kod ve WPF İçindeki XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [x:Name Yönergesi](x-name-directive.md)
-- [WPF uygulaması (WPF) oluşturma](../wpf/app-development/building-a-wpf-application-wpf.md)
+- [WPF uygulaması oluşturma (WPF)](../wpf/app-development/building-a-wpf-application-wpf.md)
 - [x:ClassModifier Yönergesi](x-classmodifier-directive.md)

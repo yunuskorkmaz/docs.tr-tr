@@ -1,5 +1,5 @@
 ---
-title: sizeof - C# başvurusu
+title: sizeof C# başvurusu
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,25 +8,25 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: a00c4f96e62f7fd7d7c352aece097acd5b600ae2
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: e77076d022051cdf7d5545cc5204b3c74959d0ad
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422401"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433878"
 ---
 # <a name="sizeof-c-reference"></a>sizeof (C# Başvurusu)
 
-Yönetilmeyen bir tür için bayt cinsinden boyutunu almak için kullanılır.
+[Yönetilmeyen bir türün](../builtin-types/unmanaged-types.md)boyutunu bayt olarak almak için kullanılır.
 
-Yönetilmeyen türleri şunlardır:
+Yönetilmeyen türler şunlardır:
 
 - Aşağıdaki tabloda listelenen basit türler:
 
    |İfade|Sabit değer|
    |----------------|--------------------|
-   |`sizeof(sbyte)`|1.|
-   |`sizeof(byte)`|1.|
+   |`sizeof(sbyte)`|1\.|
+   |`sizeof(byte)`|1\.|
    |`sizeof(short)`|2|
    |`sizeof(ushort)`|2|
    |`sizeof(int)`|4|
@@ -37,15 +37,15 @@ Yönetilmeyen türleri şunlardır:
    |`sizeof(float)`|4|
    |`sizeof(double)`|8|
    |`sizeof(decimal)`|16|
-   |`sizeof(bool)`|1.|
+   |`sizeof(bool)`|1\.|
 
-- Numaralandırma türleri.
+- Sabit listesi türleri.
 
 - İşaretçi türleri.
 
-- Tüm örnek alanları veya başvuru türleri veya oluşturulan türler otomatik olarak uygulanan örnek özellikler içermeyen kullanıcı tarafından tanımlanan yapılar.
+- Başvuru türleri veya oluşturulmuş türler olan herhangi bir örnek alanı veya otomatik uygulanmış örnek özellikleri içermeyen Kullanıcı tanımlı yapılar.
 
-Aşağıdaki örnek boyutunu almak nasıl gösterir bir `int`:
+Aşağıdaki örnek, öğesinin `int`boyutunun nasıl alınacağını gösterir:
 
 ```csharp
 // Constant value 4:
@@ -54,11 +54,11 @@ int intSize = sizeof(int);
 
 ## <a name="remarks"></a>Açıklamalar
 
-C# 2.0 sürümünden itibaren uygulama `sizeof` basit veya sabit listesi türleri artık gerektirir kod içinde derlenecek bir [güvenli](unsafe.md) bağlamı.
+Sürüm 2,0 C#' den başlayarak, basit `sizeof` veya Enum türlerine uygulamak artık kodun [güvenli olmayan](unsafe.md) bir bağlamda derlenmesine gerek yoktur.
 
-`sizeof` İşleci aşırı yüklenemez. Tarafından döndürülen değerler `sizeof` işleci, tür `int`. Önceki tablonun gösterdiği için yerine sabit değerler `sizeof` işlenen olarak bazı basit türler sahip ifadeler.
+`sizeof` İşleç aşırı yüklenemez. `sizeof` İşleci tarafından döndürülen değerler türündedir `int`. Önceki tabloda, belirli basit türleri işlenen olarak bulunan ifadeler için `sizeof` değiştirilen sabit değerler gösterilir.
 
-Yapılar, diğer tüm türleri için de dahil olmak üzere `sizeof` işleci yalnızca güvenli olmayan kod blokları içinde kullanılabilir. Hizmetini kullanıyor olsanız da <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> yöntemi, bu yöntem tarafından döndürülen değeri değil her zaman aynı tarafından döndürülen değer olarak `sizeof`. <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> türü sıralanmış sonra ise boyutunu döndürür `sizeof` herhangi doldurma dahil olmak üzere ortak dil çalışma zamanı tarafından ayrılan boyutunu döndürür.
+Yapılar dahil tüm diğer türler için, `sizeof` işleci yalnızca güvenli olmayan kod bloklarda kullanılabilir. Yöntemini kullanabilseniz de, bu yöntemin döndürdüğü değer her zaman tarafından `sizeof`döndürülen değerle aynı değildir. <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>tür sıralandıktan sonra boyutu döndürür, ancak `sizeof` herhangi bir doldurma dahil olmak üzere ortak dil çalışma zamanı tarafından ayrılan boyutu döndürür.
 
 ## <a name="example"></a>Örnek
 
@@ -70,7 +70,7 @@ Yapılar, diğer tüm türleri için de dahil olmak üzere `sizeof` işleci yaln
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [enum](enum.md)

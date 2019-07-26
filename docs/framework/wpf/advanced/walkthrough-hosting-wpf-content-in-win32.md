@@ -6,23 +6,23 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 02f0831b46b8087c48b86e83a4b20f94bf3b79d0
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 3a0a6d09fe34fed9f5b0d353252461fdffbeb5e1
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401587"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484615"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>İzlenecek yol: WPF İçeriğini Win32 içinde Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak, kod içinde [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] önemli bir yatırımınız olduğunda, özgün kodunuzu yeniden yazmak yerine uygulamanıza işlevsellik eklemek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] daha etkili olabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencerede içerik barındırmak için basit bir mekanizma sağlar.  
   
- Bu öğreticide, bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencerede içerik barındıran [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [bir Win32 pencere örneğinde WPF içeriği barındıran](https://go.microsoft.com/fwlink/?LinkID=160004)örnek bir uygulamanın nasıl yazılacağı açıklanmaktadır. Bu örneği, herhangi bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencereyi barındırmak için genişletebilirsiniz. Yönetilen ve yönetilmeyen kodu karıştırmayı içerdiğinden, uygulamanın üzerine yazılır [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)].  
+ Bu öğreticide, bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencerede içerik barındıran [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [bir Win32 pencere örneğinde WPF içeriği barındıran](https://go.microsoft.com/fwlink/?LinkID=160004)örnek bir uygulamanın nasıl yazılacağı açıklanmaktadır. Bu örneği, herhangi bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencereyi barındırmak için genişletebilirsiniz. Yönetilen ve yönetilmeyen kodu karıştırmayı içerdiğinden, uygulama/Clide C++yazılır.  
 
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Gereksinimler  
  Bu öğreticide, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] hem hem de programlama ile ilgili temel bir benzerlik varsayılmaktadır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Programlamaya temel bir giriş için [bkz. Başlarken](../getting-started/index.md). [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Programlamaya giriş için, özellikle Charles Petzold tarafından yapılan belirli bir *programlama* penceresinde, konudaki çok sayıda kitaplardan birine başvurmanız gerekir.  
   
- Bu öğreticiye eşlik eden örnek ' de [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]uygulandığından, bu öğreticide [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]API 'yi programlama ve yönetilen kod [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] programlamayı anlama hakkında daha fazla bilgiye sahip olduğunu varsaymaktadır. Bilmeme [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] , yararlı ancak gerekli değildir.  
+ Bu öğreticiye eşlik eden örnek, C++/CLI ' da uygulandığından, bu öğreticide, Windows API 'sinin programlanması ve yönetilen kod programlamasını anlamak için kullanımı hakkında C++ bilgiler verilir. /CLI ile C++benzerlik yararlı ancak gerekli değildir.  
   
 > [!NOTE]
 >  Bu öğretici, ilişkili örnekten bir dizi kod örneği içerir. Ancak okunabilirlik için, örnek kodu tamamen içermez. Tüm örnek kod için bkz. [bir Win32 pencere ÖRNEĞINDE WPF Içeriğini barındırma](https://go.microsoft.com/fwlink/?LinkID=160004).  
@@ -35,7 +35,7 @@ ms.locfileid: "68401587"
   
 1. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçeriğinizi yönetilen bir sınıf olarak uygulayın.  
   
-2. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] İle[!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]uygulama uygulayın. Var olan bir uygulama ve yönetilmeyen [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] kod ile başlıyorsanız, genellikle proje ayarlarınızı `/clr` derleyici bayrağını içerecek şekilde değiştirerek yönetilen kodu çağırmak için bunu etkinleştirebilirsiniz.  
+2. /Cliile C++bir Windows uygulaması uygulayın. Var olan bir uygulama ve yönetilmeyen C++ kod ile başlıyorsanız, genellikle proje ayarlarınızı `/clr` derleyici bayrağını içerecek şekilde değiştirerek yönetilen kodu çağırmak için bunu etkinleştirebilirsiniz.  
   
 3. İş parçacığı modelini tek iş parçacıklı Apartment (STA) olarak ayarlayın.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68401587"
 
 <a name="implementing_the_application"></a>
 ## <a name="implementing-the-host-application"></a>Konak uygulamasını uygulama
- Bu bölümde, basit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] bir uygulamada içeriğin nasıl barındırılacağını açıklanmaktadır. İçerik, yönetilen bir sınıf olarak [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] ' de uygulanır. Çoğu bölümde, basit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir programlama olur. İçerik uygulamasının temel yönleri [WPF Içeriğini uygulama](#implementing_the_wpf_page)bölümünde ele alınmıştır.
+ Bu bölümde, basit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] bir uygulamada içeriğin nasıl barındırılacağını açıklanmaktadır. İçerik, bir yönetilen sınıf olarak C++/CLI ' da uygulanır. Çoğu bölümde, basit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir programlama olur. İçerik uygulamasının temel yönleri [WPF Içeriğini uygulama](#implementing_the_wpf_page)bölümünde ele alınmıştır.
 
 <a name="autoNestedSectionsOUTLINE1"></a>
 - [Temel uygulama](#the_basic_application)
@@ -79,7 +79,7 @@ ms.locfileid: "68401587"
 
 1. Visual Studio 2005 ' i açın ve **Dosya** menüsünden **Yeni proje** ' yi seçin.
 
-2. [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)] Proje türleri listesinden **Win32** öğesini seçin. Varsayılan diliniz [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]yoksa, bu proje türlerini **diğer diller**altında bulacaksınız.
+2. [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)] Proje türleri listesinden **Win32** öğesini seçin. Varsayılan diliniz yoksa C++, bu proje türlerini **diğer diller**altında bulacaksınız.
 
 3. Bir **Win32 Proje** şablonu seçin, projeye bir ad atayın ve **Win32 uygulama sihirbazını**başlatmak için **Tamam** ' a tıklayın.
 
@@ -129,7 +129,7 @@ ms.locfileid: "68401587"
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçeriği doğrudan uygulama pencerenizde barındıryükleyemezsiniz. Bunun yerine, önce <xref:System.Windows.Interop.HwndSource> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği kaydırmak için bir nesne oluşturun. Bu nesne temelde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği barındırmak için tasarlanan bir penceredir. Uygulamayı, uygulamanızın <xref:System.Windows.Interop.HwndSource> bir parçası olan bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencerenin alt öğesi olarak oluşturarak ana pencerede barındırabilirsiniz. Oluşturucu <xref:System.Windows.Interop.HwndSource> parametreleri, bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] alt pencere oluştururken CreateWindow 'a geçirdiğiniz bilgilerin çoğunu içerir.
 
- Bir sonraki adımda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesnesinin bir örneğini oluşturun. Bu durumda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , içerik, kullanılarak [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]ayrı bir `WPFPage`sınıf olarak uygulanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]içeriğini de uygulayabilirsiniz. Ancak bunu yapmak için ayrı bir proje ayarlamanız ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği bir [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]olarak oluşturmanız gerekir. Projenize bir başvuru [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] ekleyebilir ve bu başvuruyu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik örneği oluşturmak için kullanabilirsiniz.
+ Bir sonraki adımda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesnesinin bir örneğini oluşturun. Bu durumda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , içerik,/clikullanılarak `WPFPage` C++ayrı bir sınıf olarak uygulanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]içeriğini de uygulayabilirsiniz. Ancak bunu yapmak için ayrı bir proje ayarlamanız ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği bir [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]olarak oluşturmanız gerekir. Projenize bir başvuru [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] ekleyebilir ve bu başvuruyu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik örneği oluşturmak için kullanabilirsiniz.
 
  İçeriğine bir başvuru [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] atayarak<xref:System.Windows.Interop.HwndSource.RootVisual%2A> ,<xref:System.Windows.Interop.HwndSource>içeriği alt pencerenizde görüntüleyin.
 
@@ -167,7 +167,7 @@ ms.locfileid: "68401587"
 
 <a name="implementing_the_wpf_page"></a>
 ## <a name="implementing-the-wpf-page"></a>WPF sayfasını uygulama
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçeriği gerçek uygulamayla ilgili herhangi bir bilgi olmadan barındırabilirsiniz ve kullanabilirsiniz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçerik ayrı[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]olarak paketlenmişse, herhangi bir ortak dil çalışma zamanı (CLR) dilinde oluşturulmuş olabilir. Örnekte kullanılan [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] uygulamayla ilgili kısa bir anlatım aşağıda verilmiştir. Bu bölüm aşağıdaki alt bölümleri içerir.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçeriği gerçek uygulamayla ilgili herhangi bir bilgi olmadan barındırabilirsiniz ve kullanabilirsiniz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçerik ayrı[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]olarak paketlenmişse, herhangi bir ortak dil çalışma zamanı (CLR) dilinde oluşturulmuş olabilir. Örnekte kullanılan C++/CLI uygulamasına ilişkin kısa bir anlatım aşağıda verilmiştir. Bu bölüm aşağıdaki alt bölümleri içerir.
 
 <a name="autoNestedSectionsOUTLINE2"></a>
 - [Düzen](#page_layout)

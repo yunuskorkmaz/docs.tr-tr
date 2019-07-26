@@ -1,59 +1,61 @@
 ---
-title: stackalloc işleci - C# başvurusu
+title: stackalloc işleci- C# başvuru
 ms.custom: seodec18
 ms.date: 06/10/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 3be4e827e75e4e26a34d9ed70423af5aa317e7fb
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: f211acaa8c47ab42a1f7f06cff6c35570cd22b75
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025008"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433836"
 ---
-# <a name="stackalloc-operator-c-reference"></a>stackalloc işleci (C# Başvurusu)
+# <a name="stackalloc-operator-c-reference"></a>stackalloc işleci (C# başvuru)
 
-`stackalloc` İşleci bir yığında bellek bloğu ayırır. Bu yöntem döndürüldüğünde ayrılmış bellek bloğu yöntem yürütme işlemi sırasında oluşturulan bir yığın otomatik olarak atılır. Açıkça atanan bellek bırakılamıyor `stackalloc` işleci. Bir yığın ayrılmış bellek bloğu konusu değil [çöp toplama](../../../standard/garbage-collection/index.md) ve sabitlenmiş olmak zorunda değildir [ `fixed` deyimi](../keywords/fixed-statement.md).
+`stackalloc` İşleci, yığında bir bellek bloğu ayırır. Yöntem yürütme sırasında oluşturulan bir yığın ayrılmış bellek bloğu, bu yöntem döndüğünde otomatik olarak atılır. `stackalloc` İşleçle ayrılan belleği açık olarak serbest bırakılamaz. Yığın tarafından ayrılan bir bellek bloğu [çöp toplamaya](../../../standard/garbage-collection/index.md) tabi değildir ve [ `fixed` ifadesiyle](../keywords/fixed-statement.md)sabitlenmiş olması gerekmez.
 
-Sonucu atayabilirsiniz `stackalloc` şu türlerden birinde bir değişkene işleci:
+İfadesinde `stackalloc T[E]` `E` `int`, `T` [yönetilmeyen bir tür](../builtin-types/unmanaged-types.md) olmalıdır ve türünde bir ifade olmalıdır.
 
-- İle başlayarak C# 7.2, <xref:System.Span%601?displayProperty=nameWithType> veya <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>aşağıdaki örnekte gösterildiği gibi:
+`stackalloc` İşlecin sonucunu aşağıdaki türlerden birinin değişkenine atayabilirsiniz:
+
+- Aşağıdaki örnekte C# gösterildiği gibi <xref:System.Span%601?displayProperty=nameWithType> 7,2 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>veya sonraki bir sürümünden itibaren:
 
   [!code-csharp[stackalloc span](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToSpan)]
 
-  Kullanmak zorunda değilsiniz bir [güvenli olmayan](../keywords/unsafe.md) yığın atadığınızda içerik ayrılan bellek bloğu için bir <xref:System.Span%601> veya <xref:System.ReadOnlySpan%601> değişkeni.
+  Bir<xref:System.Span%601> veya<xref:System.ReadOnlySpan%601> değişkenine bir yığın ayrılmış bellek bloğu atadığınızda, [güvenli olmayan](../keywords/unsafe.md) bir bağlam kullanmanız gerekmez.
 
-  Bu türler ile çalışırken kullanabileceğiniz bir `stackalloc` ifadesinde [koşullu](conditional-operator.md) veya atama ifadeleri, aşağıdaki örnekte gösterildiği gibi:
+  Bu türlerle çalıştığınızda, aşağıdaki örnekte gösterildiği gibi [koşullu](conditional-operator.md) veya atama `stackalloc` ifadelerinde bir ifade kullanabilirsiniz:
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
   > [!NOTE]
-  > Kullanmanızı öneririz <xref:System.Span%601> veya <xref:System.ReadOnlySpan%601> ayrılan bellek mümkün olduğunda yığın ile çalışmak için türleri.
+  > Mümkün olduğunda yığın <xref:System.Span%601> tarafından <xref:System.ReadOnlySpan%601> ayrılan bellekle çalışmak için veya türlerini kullanmanızı öneririz.
 
-- A [işaretçi türü](../../programming-guide/unsafe-code-pointers/pointer-types.md)aşağıdaki örnekte gösterildiği gibi:
+- Aşağıdaki örnekte gösterildiği gibi bir [işaretçi türü](../../programming-guide/unsafe-code-pointers/pointer-types.md):
 
   [!code-csharp[stackalloc pointer](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToPointer)]
 
-  Yukarıdaki örnekte gösterildiği gibi kullanmalısınız bir `unsafe` işaretçi türleri ile çalışırken bağlamı.
+  Yukarıdaki örnekte gösterildiği gibi, işaretçi türleriyle çalışırken bir `unsafe` bağlam kullanmanız gerekir.
 
-Yeni ayrılan bellek içeriğini tanımsızdır. İle başlayarak C# 7.3, yeni ayrılan bellek içeriğini tanımlamasını dizi Başlatıcısı sözdizimi kullanabilirsiniz. Aşağıdaki örnek, bunu yapmak için çeşitli yollar gösterir:
+Yeni ayrılan belleğin içeriği tanımlı değil. 7,3 ile C# başlayarak, yeni ayrılan belleğin içeriğini tanımlamak için dizi başlatıcısı sözdizimini kullanabilirsiniz. Aşağıdaki örnek bunu yapmak için çeşitli yollar göstermektedir:
 
 [!code-csharp[stackalloc initialization](~/samples/csharp/language-reference/operators/StackallocOperator.cs#StackallocInit)]
 
 ## <a name="security"></a>Güvenlik
 
-Kullanımını `stackalloc` otomatik olarak ortak dil çalışma zamanı (CLR) arabellek taşması algılama özelliklerini etkinleştirir. İşlem, bir arabellek taşması algılanırsa, kötü amaçlı kod yürütülür olasılığını en aza indirmek için mümkün olan en kısa sürede sonlandırılır.
+Kullanımı, ortak `stackalloc` dil çalışma zamanında (CLR) arabellek taşması algılama özelliklerini otomatik olarak etkinleştirmektedir. Bir arabellek taşması algılanırsa, kötü amaçlı kodun yürütülmesi olasılığını en aza indirmek için işlem mümkün olduğunca hızlı bir şekilde sonlandırılır.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [yığın ayırma](~/_csharplang/spec/unsafe-code.md#stack-allocation) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [yığın ayırma](~/_csharplang/spec/unsafe-code.md#stack-allocation) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvuru](../index.md)
+- [C#başvurunun](../index.md)
 - [C# işleçleri](index.md)
-- [İşaretçi bağlantılı işleçleri](pointer-related-operators.md)
+- [İşaretçiyle ilgili işleçler](pointer-related-operators.md)
 - [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Bellek ve aralıkla ilgili türler](../../../standard/memory-and-spans/index.md)

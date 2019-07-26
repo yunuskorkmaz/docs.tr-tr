@@ -1,65 +1,65 @@
 ---
-title: Mac üzerinde .NET Core için Önkoşullar
-description: MacOS sürümleri ve geliştirme, dağıtma ve macOS makinelerinde .NET Core uygulamaları çalıştırmak için .NET Core bağımlılıklar desteklenmiyor.
+title: Mac üzerinde .NET Core önkoşulları
+description: MacOS makinelerinde .NET Core uygulamaları geliştirmek, dağıtmak ve çalıştırmak için desteklenen macOS sürümleri ve .NET Core bağımlılıkları.
 author: mairaw
 ms.author: adegeo
 ms.custom: updateeachvsrelease
-ms.date: 12/14/2018
-ms.openlocfilehash: 57346eb5cfdcc9f51c3aab173ed575067b124150
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.date: 07/13/2019
+ms.openlocfilehash: 5086b185ee2d49c7b569ed0cb62b4c8995f9982c
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66299979"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433908"
 ---
-# <a name="prerequisites-for-net-core-on-macos"></a>MacOS üzerinde .NET Core için Önkoşullar
+# <a name="prerequisites-for-net-core-on-macos"></a>MacOS 'ta .NET Core önkoşulları
 
-Bu makalede desteklenen macOS sürümleri ve geliştirme, dağıtma ve macOS makinelerinde .NET Core uygulamaları çalıştırmak için ihtiyacınız olan .NET Core bağımlılıkları gösterir. Desteklenen işletim sistemi sürümleri ve bağımlılıklarını izleyen bir Mac üzerinde .NET Core uygulamaları geliştirme üç yoldan uygulamak: aracılığıyla [komut satırı ile tercih ettiğiniz düzenleyiciyi](tutorials/using-with-xplat-cli.md), [Visual Studio Code](https://code.visualstudio.com/)ve [Mac için visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link).
+Bu makalede, macOS makinelerinde .NET Core uygulamaları geliştirmek, dağıtmak ve çalıştırmak için ihtiyacınız olan desteklenen macOS sürümleri ve .NET Core bağımlılıkları gösterilmektedir. Desteklenen işletim sistemi sürümleri ve bağımlılıklar, bir Mac üzerinde .NET Core uygulamaları geliştirmenin üç yolu için geçerlidir: en sevdiğiniz düzenleyici, [Visual Studio Code](https://code.visualstudio.com/)ve [Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) [ile komut satırı](tutorials/using-with-xplat-cli.md)aracılığıyla.
 
 ## <a name="supported-macos-versions"></a>Desteklenen macOS sürümleri
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
-.NET core 2.x, aşağıdaki macOS sürümlerinde desteklenir:
+.NET Core 2. x, macOS 'un aşağıdaki sürümlerinde desteklenir:
 
-* macOS 10.12 "Sierra" ve sonraki sürümler
+* macOS 10,12 "Sierra" ve sonraki sürümleri
 
-Bkz: [.NET Core 2.1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) ve [.NET Core 2.2 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) tam listesi, .NET Core 2.1 ve .NET Core 2.2 dışı işletim sistemleri, dağıtımlar ve sürümleri, desteklenen işletim sistemi sürümleri ve yaşam döngüsü İlkesi bağlantılarını destekler.
+.NET Core 2,1 ve .NET Core 2,2 tarafından desteklenen işletim sistemlerinin, dağıtımların ve sürümlerin tamamı, destek SISTEMI sürümleri ve yaşam döngüsü ilkesi için [.net core 2,1 desteklenen](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) işletim sistemi sürümleri ve [.NET Core 2,2 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) ' ne bakın Köprü.
 
-Daha fazla bilgi ve indirme bağlantıları [.NET Core 2.2 indirir](https://www.microsoft.com/net/download/dotnet-core/2.2) veya [.NET Core 2.1 yükler](https://www.microsoft.com/net/download/dotnet-core/2.1).
+İndirme bağlantıları ve daha fazla bilgi için bkz. [.net core 2,2 İndirmeleri](https://www.microsoft.com/net/download/dotnet-core/2.2) veya [.NET Core 2,1 İndirmeleri](https://www.microsoft.com/net/download/dotnet-core/2.1).
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
-.NET core 1.x macOS üzerinde aşağıdaki sürümleri desteklenir:
+.NET Core 1. x, macOS 'un aşağıdaki sürümlerinde desteklenir:
 
-* macOS 10.12 "Sierra"
-* macOS 10.11 "El Capitan"
+* macOS 10,12 "Sierra"
+* macOS 10,11 "El Capitan"
 
-Bkz: [.NET Core 1.1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md) ve [.NET Core 1.0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) tam listesi, .NET Core 1.1 ve .NET Core 1.0 dışı işletim sistemleri, dağıtımlar ve sürümleri, desteklenen işletim sistemi sürümleri ve yaşam döngüsü İlkesi bağlantılarını destekler.
+.NET Core 1,1 ve .NET Core 1,0 tarafından desteklenen işletim sistemlerinin, dağıtımların ve sürümlerin tamamı, destek SISTEMI sürümleri ve yaşam döngüsü ilkesi için [.net core 1,1 desteklenen](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md) işletim sistemi sürümleri ve [.NET Core 1,0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) ' ne bakın Köprü.
 
-Daha fazla bilgi ve indirme bağlantıları [.NET Core 1.1 indirir](https://www.microsoft.com/net/download/dotnet-core/1.1) veya [.NET Core 1.0 indirir](https://www.microsoft.com/net/download/dotnet-core/1.0).
+İndirme bağlantıları ve daha fazla bilgi için bkz. [.net core 1,1 İndirmeleri](https://www.microsoft.com/net/download/dotnet-core/1.1) veya [.NET Core 1,0 İndirmeleri](https://www.microsoft.com/net/download/dotnet-core/1.0).
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-.NET core 3.0 Preview 3, aşağıdaki macOS sürümlerinde desteklenir:
+.NET Core 3,0, macOS 'un aşağıdaki sürümlerinde desteklenir:
 
-* macOS 10.12 "Sierra" ve sonraki sürümler
+* macOS 10,13 "High Sierra" ve sonraki sürümler
 
-Bkz: [.NET Core 3.0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) tam listesi .NET Core 3.0, desteklenen işletim sistemleri, dağıtımlar ve sürümler, destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantılar dışında.
+.NET Core 3,0 desteklenen işletim sistemlerinin, dağıtımların ve sürümlerin, destek SISTEMI sürümlerinden ve yaşam döngüsü ilke bağlantılarının tüm listesi için bkz. [.net core 3,0 desteklenen IŞLETIM sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) .
 
-Daha fazla bilgi ve indirme bağlantıları [.NET Core 3.0 indirir](https://www.microsoft.com/net/download/dotnet-core/3.0).
+İndirme bağlantıları ve daha fazla bilgi için bkz. [.NET Core 3,0 İndirmeleri](https://www.microsoft.com/net/download/dotnet-core/3.0).
 
 ---
 
-## <a name="net-core-dependencies"></a>.NET core bağımlılıkları
+## <a name="net-core-dependencies"></a>.NET Core bağımlılıkları
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
-.NET Core SDK'sından yükleyip [.NET indirir](https://www.microsoft.com/net/download/core). Macos'ta yükleme ile ilgili sorunlar varsa, başvurun [bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/2.1) yüklü olan sürüm için konu.
+.NET Core SDK [.net Indirmelerinde](https://www.microsoft.com/net/download/core)indirin ve yükleyin. MacOS üzerinde yüklemeyle ilgili sorunlar yaşıyorsanız, yüklediğiniz sürüm için [bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/2.1) konusuna bakın.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
-.NET core 1.x macOS üzerinde çalışırken OpenSSL gerektirir. OpenSSL almak için kolay bir yol kullanmaktır [Homebrew ("brew")](https://brew.sh/) macOS için Paket Yöneticisi. Yükledikten sonra *brew*, OpenSSL Terminal (komut) isteminde aşağıdaki komutları çalıştırarak yükleyin:
+.NET Core 1. x, macOS üzerinde çalışırken OpenSSL gerektirir. OpenSSL almanın kolay bir yolu, macOS için [homebrew ("Brew")](https://brew.sh/) paket yöneticisini kullanmaktır. *Brew*yükledikten sonra, bir Terminal (komut) isteminde aşağıdaki komutları yürüterek OpenSSL 'yi yüklemeniz gerekir:
 
 ```console
 brew update
@@ -69,21 +69,21 @@ ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
 ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 ```
 
-.NET Core SDK'sından yükleyip [.NET indirir](https://www.microsoft.com/net/download/core). Macos'ta yükleme ile ilgili sorunlar varsa, başvurun [1.0.0 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) ve [1.0.1 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) konuları.
+.NET Core SDK [.net Indirmelerinde](https://www.microsoft.com/net/download/core)indirin ve yükleyin. MacOS üzerinde yüklemeyle ilgili sorunlar yaşıyorsanız, [1.0.0 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) ve [1.0.1 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) konularına bakın.
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-.NET Core SDK'sından yükleyip [.NET indirir](https://www.microsoft.com/net/download/core). Macos'ta yükleme ile ilgili sorunlar varsa, başvurun [sürüm notları](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) yüklü olan sürüm için konu.
+.NET Core SDK [.net Indirmelerinde](https://www.microsoft.com/net/download/core)indirin ve yükleyin. MacOS üzerinde yüklemeyle ilgili sorunlar yaşıyorsanız, yüklediğiniz sürümün [sürüm notları](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) konusuna başvurun.
 
 ---
 
-## <a name="increase-the-maximum-open-file-limit-net-core-versions-before-net-core-sdk-202"></a>(.NET Core sürümleri .NET Core SDK'sı 2.0.2 önce) en fazla açık dosya sınırını artırın
+## <a name="increase-the-maximum-open-file-limit-net-core-versions-before-net-core-sdk-202"></a>Açık dosya sınırının üst sınırını artır (.NET Core SDK 2.0.2 önce .NET Core sürümleri)
 
-(Önce .NET Core SDK 2.0.2) daha eski .NET Core sürümlerinde varsayılan açık dosya sınırı macos'ta projeleri geri yükleme veya birim testleri çalıştırma gibi bazı .NET Core iş yükleri için yeterli olmayabilir.
+Eski .NET Core sürümlerinde (.NET Core SDK 2.0.2), macOS 'ta varsayılan açık dosya sınırı, projeleri geri yükleme veya birim testlerini çalıştırma gibi bazı .NET Core iş yükleri için yeterli olmayabilir.
 
-Aşağıdaki adımları izleyerek bu sınırı artırabilirsiniz:
+Bu sınırı aşağıdaki adımları izleyerek artırabilirsiniz:
 
-1. Bir metin düzenleyicisi kullanarak yeni bir dosya oluşturun _/Library/LaunchDaemons/limit.maxfiles.plist_, söz konusu içeriklerle dosyayı kaydedin:
+1. Bir metin düzenleyicisi kullanarak yeni bir _/Library/LaunchDaemons/limit.maxfiles.plist_dosyası oluşturun ve dosyayı bu içerikle kaydedin:
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -108,21 +108,21 @@ Aşağıdaki adımları izleyerek bu sınırı artırabilirsiniz:
     </plist>
     ```
 
-2. Bir terminal penceresinde aşağıdaki komutu çalıştırın:
+2. Bir Terminal penceresinde aşağıdaki komutu çalıştırın:
 
    ```console
    echo 'ulimit -n 2048' | sudo tee -a /etc/profile
    ```
 
-3. Mac'iniz, bu ayarları uygulamak için yeniden başlatın.
+3. Bu ayarları uygulamak için Mac 'i yeniden başlatın.
 
 ## <a name="visual-studio-for-mac"></a>Mac için Visual Studio
 
-.NET Core SDK'sını kullanarak .NET Core uygulamaları geliştirmek için herhangi bir düzenleyici kullanabilirsiniz. Ancak, bir tümleşik geliştirme ortamında bir Mac üzerinde .NET Core uygulamaları geliştirmek istiyorsanız, kullanabileceğiniz [Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link).
+.NET Core SDK kullanarak .NET Core uygulamaları geliştirmek için herhangi bir düzenleyici kullanabilirsiniz. Ancak, tümleşik bir geliştirme ortamında Mac 'te .NET Core uygulamaları geliştirmek istiyorsanız [Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)kullanabilirsiniz.
 
-Mac için Visual Studio ile macOS üzerinde .NET core geliştirme gerektirir:
+MacOS 'ta Mac için Visual Studio .NET Core geliştirmesi şunları gerektirir:
 
 * MacOS işletim sisteminin desteklenen bir sürümü
-* OpenSSL (.NET Core 1.x yalnızca; .NET Core 2.x kullandığı güvenlik hizmetleri yerel olarak macOS kullanılabilir)
-* .NET core SDK'sı Mac için
+* OpenSSL (.NET Core 1. x yalnızca .NET Core 2. x, macOS 'ta yerel olarak bulunan güvenlik hizmetlerini kullanır)
+* Mac için .NET Core SDK
 * [Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
