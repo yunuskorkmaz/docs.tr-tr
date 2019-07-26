@@ -121,352 +121,352 @@
           href: linq-to-xml-vs-dom.md
         - name: LINQ to XML ile Diğer XML Teknolojileri Karşılaştırması
           href: linq-to-xml-vs-other-xml-technologies.md
-- name: Programlama Kılavuzu (LINQ to XML)
-  href: programming-guide-linq-to-xml.md
-  items:
-    - name: LINQ to XML Programlamaya Genel Bakış
-      href: linq-to-xml-programming-overview.md
-    - name: İşlevsel ve Yordam Programlama Karşılaştırması (LINQ to XML)
-      href: functional-vs-procedural-programming-linq-to-xml.md
-    - name: LINQ to XML Sınıflarına Genel Bakış
-      href: linq-to-xml-classes-overview.md
-    - name: XElement Sınıfına Genel Bakış
-      href: xelement-class-overview.md
-    - name: XAttribute Sınıfına Genel Bakış
-      href: xattribute-class-overview.md
+    - name: Programlama Kılavuzu (LINQ to XML)
+      href: programming-guide-linq-to-xml.md
       items:
-        - name: XDocument Sınıfına Genel Bakış
-          href: xdocument-class-overview.md
-        - name: 'Nasıl yapılır: LINQ to XML Örnekleri Derleme'
-          href: how-to-build-linq-to-xml-examples.md
-    - name: XML Ağaçları Oluşturma
-      href: creating-xml-trees.md
-      items:
-        - name: İşlevsel Oluşturma (LINQ to XML) Karşılaştırması
-          href: functional-construction-linq-to-xml.md
-        - name: XML Değişmez Değerlerine Giriş
-          href: introduction-to-xml-literals.md
-        - name: Kopyalama ve Ekleme Karşılaştırması
-          href: cloning-vs-attaching.md
-        - name: XML Ayrıştırma
-          href: parsing-xml.md
+        - name: LINQ to XML Programlamaya Genel Bakış
+          href: linq-to-xml-programming-overview.md
+        - name: İşlevsel ve Yordam Programlama Karşılaştırması (LINQ to XML)
+          href: functional-vs-procedural-programming-linq-to-xml.md
+        - name: LINQ to XML Sınıflarına Genel Bakış
+          href: linq-to-xml-classes-overview.md
+        - name: XElement Sınıfına Genel Bakış
+          href: xelement-class-overview.md
+        - name: XAttribute Sınıfına Genel Bakış
+          href: xattribute-class-overview.md
           items:
-            - name: 'Nasıl yapılır: Dize Ayrıştırma'
-              href: how-to-parse-a-string.md
-            - name: 'Nasıl yapılır: Dosyadan XML Yükleme'
-              href: how-to-load-xml-from-a-file.md
-            - name: XML Yükleme veya Ayrıştırma Sırasında Boşluk Koruma
-              href: preserving-white-space-while-loading-or-parsing-xml.md
-            - name: 'Nasıl yapılır: Ayrıştırma Hatalarını Yakalama'
-              href: how-to-catch-parsing-errors.md
-            - name: 'Nasıl yapılır: XmlReader’dan Ağaç Oluşturma'
-              href: how-to-create-a-tree-from-an-xmlreader.md
-            - name: 'Nasıl yapılır: XmlReader’dan XML Parçalarının Akışını Yapma'
-              href: how-to-stream-xml-fragments-from-an-xmlreader.md
-        - name: 'Nasıl yapılır: XML Ağacını XmlWriter ile Doldurma (LINQ to XML)'
-          href: how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md
-        - name: 'Nasıl yapılır: XSD Kullanarak Doğrulama (LINQ to XML)'
-          href: how-to-validate-using-xsd-linq-to-xml.md
-        - name: XElement ve XDocument Nesnelerinin Geçerli İçeriği
-          href: valid-content-of-xelement-and-xdocument-objects.md
-- name: XML Ad Alanları ile Çalışma
-  href: working-with-xml-namespaces.md
-  items:
-    - name: Ad Alanlarına Genel Bakış (LINQ to XML)
-      href: namespaces-overview-linq-to-xml.md
-    - name: 'Nasıl yapılır: Ad Alanları ile Belge Oluşturma (LINQ to XML)'
-      href: how-to-create-a-document-with-namespaces.md
-    - name: 'Nasıl yapılır: Ad Alanı Ön Eklerini Denetleme (LINQ to XML)'
-      href: how-to-control-namespace-prefixes-linq-to-xml.md
-    - name: Varsayılan Ad Alanlarının Kapsamı
-      href: scope-of-default-namespaces.md
-    - name: Genel Ad Alanları ile Çalışma (LINQ to XML)
-      href: working-with-global-namespaces-linq-to-xml.md
-    - name: 'Nasıl yapılır: Ad Alanlarında XML Üzerinde Sorgu Yazma'
-      href: how-to-write-queries-on-xml-in-namespaces.md
-- name: XML Ağaçlarını Serileştirme
-  href: serializing-xml-trees.md
-  items:
-    - name: Serileştirirken Boşlukları Koruma
-      href: preserving-white-space-while-serializing.md
-    - name: XML Bildirimi ile Serileştirme
-      href: serializing-with-an-xml-declaration.md
-    - name: 'Dosya, TextWriters ve XmlWriters Serileştirme'
-      href: serializing-to-files-textwriters-and-xmlwriters.md
-    - name: XmlReader’a Serileştirme (XSLT Çağırma)
-      href: serializing-to-an-xmlreader-invoking-xslt.md
-- name: LINQ to XML Eksenleri
-  href: linq-to-xml-axes.md
-  items:
-    - name: LINQ to XML Eksenlerine Genel Bakış
-      href: linq-to-xml-axes-overview.md
-    - name: 'Nasıl yapılır: Öğe Koleksiyonu Alma (LINQ to XML)'
-      href: how-to-retrieve-a-collection-of-elements-linq-to-xml.md
-    - name: 'Nasıl yapılır: Öğe Değerini Alma (LINQ to XML)'
-      href: how-to-retrieve-the-value-of-an-element-linq-to-xml.md
-    - name: 'Nasıl yapılır: Öğe Adlarını Filtreleme (LINQ to XML)'
-      href: how-to-filter-on-element-names-linq-to-xml.md
-    - name: 'Nasıl yapılır: Zincir Eksen Yöntem Çağrıları (LINQ to XML)'
-      href: how-to-chain-axis-method-calls-linq-to-xml.md
-    - name: 'Nasıl yapılır: Tek Bir Alt Öğe Alma (LINQ to XML)'
-      href: how-to-retrieve-a-single-child-element-linq-to-xml.md
-    - name: 'Nasıl yapılır: Öznitelik Koleksiyonu Alma (LINQ to XML)'
-      href: how-to-retrieve-a-collection-of-attributes-linq-to-xml.md
-    - name: 'Nasıl yapılır: Tek Bir Öznitelik Alma (LINQ to XML)'
-      href: how-to-retrieve-a-single-attribute-linq-to-xml.md
-    - name: 'Nasıl yapılır: Öznitelik Değerini Alma (LINQ to XML)'
-      href: how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md
-    - name: 'Nasıl yapılır: Öğenin Yüzeysel Değerini Alma'
-      href: how-to-retrieve-the-shallow-value-of-an-element.md
-    - name: Dille Tümleşik Eksenler (LINQ to XML)
-      href: language-integrated-axes.md
-- name: XML Ağaçlarını Sorgulama
-  href: querying-xml-trees.md
-  items:
-    - name: Temel Sorgular (LINQ to XML)
-      href: basic-queries-linq-to-xml.md
-      items:
-        - name: 'Nasıl yapılır: Belirli Bir Özniteliğe Sahip Öğeyi Bulma'
-          href: how-to-find-an-element-with-a-specific-attribute.md
-        - name: 'Nasıl yapılır: Belirli Bir Alt Öğeye Sahip Öğeyi Bulma'
-          href: how-to-find-an-element-with-a-specific-child-element.md
-        - name: XDocument Sorgulama ve XElement Sorgulama Karşılaştırması
-          href: querying-an-xdocument-vs-querying-an-xelement.md
-        - name: 'Nasıl yapılır: Belirli Bir Öğe Adına Sahip Alt Öğeleri Bulma'
-          href: how-to-find-descendants-with-a-specific-element-name.md
-        - name: 'Nasıl yapılır: Descendants Yöntemini Kullanarak Tek Bir Alt Öğeyi Bulma'
-          href: how-to-find-a-single-descendant-using-the-descendants-method.md
-        - name: 'Nasıl yapılır: Karmaşık Filtreleme ile Sorgu Yazma'
-          href: how-to-write-queries-with-complex-filtering.md
-        - name: 'Nasıl yapılır: İsteğe Bağlı Öğeyi Filtreleme'
-          href: how-to-filter-on-an-optional-element.md
-        - name: 'Nasıl yapılır: Ad Alanındaki Tüm Düğümleri Bulma'
-          href: how-to-find-all-nodes-in-a-namespace.md
-        - name: 'Nasıl yapılır: Öğeleri Sıralama'
-          href: how-to-sort-elements.md
-        - name: 'Nasıl yapılır: Birden Çok Anahtarda Öğeleri Sıralama'
-          href: how-to-sort-elements-on-multiple-keys.md
-        - name: 'Nasıl yapılır: Ara Değerleri Hesaplama'
-          href: how-to-calculate-intermediate-values.md
-        - name: 'Nasıl yapılır: Bağlama Göre Öğeleri Bulan Bir Sorgu Yazma'
-          href: how-to-write-a-query-that-finds-elements-based-on-context.md
-        - name: 'Nasıl yapılır: Boş Sorgu Sonucu Kümelerinin Hatalarını Ayıklama'
-          href: how-to-debug-empty-query-results-sets.md
-    - name: Projeksiyonlar ve Dönüşümler (LINQ to XML)
-      href: projections-and-transformations-linq-to-xml.md
-    - name: 'Nasıl yapılır: LINQ to XML Kullanarak Sözlüklerle Çalışma'
-      href: how-to-work-with-dictionaries-using-linq-to-xml.md
-      items:
-        - name: 'Nasıl yapılır: XML Ağacının Şeklini Dönüştürme'
-          href: how-to-transform-the-shape-of-an-xml-tree.md
-        - name: 'Nasıl yapılır: Projeksiyon Türünü Denetleme'
-          href: how-to-control-the-type-of-a-projection.md
-        - name: 'Nasıl yapılır: Yeni Bir Tür Yansıtma (LINQ to XML)'
-          href: how-to-project-a-new-type-linq-to-xml.md
-        - name: 'Nasıl yapılır: Nesne Grafiği Yansıtma'
-          href: how-to-project-an-object-graph.md
-        - name: 'Nasıl yapılır: Anonim Tip Yansıtma'
-          href: how-to-project-an-anonymous-type.md
-        - name: 'Nasıl yapılır: XML’den Metin Dosyaları Oluşturma'
-          href: how-to-generate-text-files-from-xml.md
-        - name: 'Nasıl yapılır: CSV Dosyalarından XML Oluşturma'
-          href: how-to-generate-xml-from-csv-files.md
-    - name: Gelişmiş Sorgu Teknikleri (LINQ to XML)
-      href: advanced-query-techniques-linq-to-xml.md
-      items:
-        - name: 'Nasıl yapılır: İki Koleksiyonu Birleştirme (LINQ to XML)'
-          href: how-to-join-two-collections-linq-to-xml.md
+            - name: XDocument Sınıfına Genel Bakış
+              href: xdocument-class-overview.md
+            - name: 'Nasıl yapılır: LINQ to XML Örnekleri Derleme'
+              href: how-to-build-linq-to-xml-examples.md
+        - name: XML Ağaçları Oluşturma
+          href: creating-xml-trees.md
           items:
-            - name: 'Nasıl yapılır: Gruplandırma Kullanarak Hiyerarşi Oluşturma'
-              href: how-to-create-hierarchy-using-grouping.md
-            - name: 'Nasıl yapılır: XPath Kullanarak LINQ to XML Sorgulama'
-              href: how-to-query-linq-to-xml-using-xpath.md
-            - name: 'Nasıl yapılır: LINQ to XML Eksen Yöntemi Yazma'
-              href: how-to-write-a-linq-to-xml-axis-method.md
-            - name: 'Nasıl yapılır: Bir Ağaçtaki Tüm Düğümleri Listeleme'
-              href: how-to-list-all-nodes-in-a-tree.md
-            - name: 'Nasıl yapılır: Bir Office Open XML Belgesinden Paragrafları Alma'
-              href: how-to-retrieve-paragraphs-from-an-office-open-xml-document.md
-            - name: 'Nasıl yapılır: Bir Office Open XML Belgesini Değiştirme'
-              href: how-to-modify-an-office-open-xml-document.md
-            - name: 'Nasıl yapılır: Dosya Sisteminden bir XML Ağacı Doldurma'
-              href: how-to-populate-an-xml-tree-from-the-file-system.md
-    - name: XPath Kullanıcıları için LINQ to XML
-      href: linq-to-xml-for-xpath-users.md
+            - name: İşlevsel Oluşturma (LINQ to XML) Karşılaştırması
+              href: functional-construction-linq-to-xml.md
+            - name: XML Değişmez Değerlerine Giriş
+              href: introduction-to-xml-literals.md
+            - name: Kopyalama ve Ekleme Karşılaştırması
+              href: cloning-vs-attaching.md
+            - name: XML Ayrıştırma
+              href: parsing-xml.md
+              items:
+                - name: 'Nasıl yapılır: Dize Ayrıştırma'
+                  href: how-to-parse-a-string.md
+                - name: 'Nasıl yapılır: Dosyadan XML Yükleme'
+                  href: how-to-load-xml-from-a-file.md
+                - name: XML Yükleme veya Ayrıştırma Sırasında Boşluk Koruma
+                  href: preserving-white-space-while-loading-or-parsing-xml.md
+                - name: 'Nasıl yapılır: Ayrıştırma Hatalarını Yakalama'
+                  href: how-to-catch-parsing-errors.md
+                - name: 'Nasıl yapılır: XmlReader’dan Ağaç Oluşturma'
+                  href: how-to-create-a-tree-from-an-xmlreader.md
+                - name: 'Nasıl yapılır: XmlReader’dan XML Parçalarının Akışını Yapma'
+                  href: how-to-stream-xml-fragments-from-an-xmlreader.md
+            - name: 'Nasıl yapılır: XML Ağacını XmlWriter ile Doldurma (LINQ to XML)'
+              href: how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md
+            - name: 'Nasıl yapılır: XSD Kullanarak Doğrulama (LINQ to XML)'
+              href: how-to-validate-using-xsd-linq-to-xml.md
+            - name: XElement ve XDocument Nesnelerinin Geçerli İçeriği
+              href: valid-content-of-xelement-and-xdocument-objects.md
+    - name: XML Ad Alanları ile Çalışma
+      href: working-with-xml-namespaces.md
       items:
-        - name: XPath ile LINQ to XML Karşılaştırması
-          href: comparison-of-xpath-and-linq-to-xml.md
-        - name: 'Nasıl yapılır: Alt Öğe Bulma (XPath-LINQ to XML)'
-          href: how-to-find-a-child-element-xpath-linq-to-xml.md
-        - name: 'Nasıl yapılır: Alt Öğe Listesini Bulma (XPath-LINQ to XML)'
-          href: how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md
-        - name: 'Nasıl yapılır: Kök Öğe Bulma (XPath-LINQ to XML)'
-          href: how-to-find-the-root-element-xpath-linq-to-xml.md
-        - name: 'Nasıl yapılır: Alt Öğe Bulma (XPath-LINQ to XML)'
-          href: how-to-find-descendant-elements-xpath-linq-to-xml.md
-        - name: 'Nasıl yapılır: Öznitelik Filtreleme (XPath-LINQ to XML)'
-          href: how-to-filter-on-an-attribute-xpath-linq-to-xml.md
-        - name: 'Nasıl yapılır: İlgili Öğeleri Bulma (XPath-LINQ to XML)'
-          href: how-to-find-related-elements-xpath-linq-to-xml.md
-        - name: 'Nasıl yapılır: Ad Alanındaki Öğeleri Bulma (XPath-LINQ to XML)'
-          href: how-to-find-elements-in-a-namespace.md
-        - name: 'Nasıl yapılır: Önceki Eşdüzeyleri Bulma (XPath-LINQ to XML)'
-          href: how-to-find-preceding-siblings-xpath-linq-to-xml.md
-        - name: 'Nasıl yapılır: Bir Alt Öğenin Alt Öğelerini Bulma (XPath-LINQ to XML)'
-          href: how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md
-        - name: 'Nasıl yapılır: İki Konum Yolunun Birleşimini Bulma (XPath-LINQ to XML)'
-          href: how-to-find-a-union-of-two-location-paths-xpath.md
-        - name: 'Nasıl yapılır: Eşdüzey Düğümleri Bulma (XPath-LINQ to XML)'
-          href: how-to-find-sibling-nodes-xpath-linq-to-xml.md
-        - name: 'Nasıl yapılır: Üst Öğenin Özniteliğini Bulma (XPath-LINQ to XML)'
-          href: how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md
-        - name: 'Nasıl yapılır: Belirli bir Ada Sahip Eşdüzeylerin Özniteliklerini Bulma (XPath-LINQ to XML)'
-          href: how-to-find-attributes-of-siblings-with-a-specific-name.md
-        - name: 'Nasıl yapılır: Belirli bir Özniteliğe Sahip Öğeleri Bulma (XPath-LINQ to XML)'
-          href: how-to-find-elements-with-a-specific-attribute.md
-        - name: 'Nasıl yapılır: Konuma Göre Alt Öğeleri Bulma (XPath-LINQ to XML)'
-          href: how-to-find-child-elements-based-on-position.md
-        - name: 'Nasıl yapılır: Bir Önceki Eşdüzeyi Bulma (XPath-LINQ to XML)'
-          href: how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md
-    - name: Saf İşlevsel XML Dönüşümleri
-      href: pure-functional-transformations-of-xml.md
+        - name: Ad Alanlarına Genel Bakış (LINQ to XML)
+          href: namespaces-overview-linq-to-xml.md
+        - name: 'Nasıl yapılır: Ad Alanları ile Belge Oluşturma (LINQ to XML)'
+          href: how-to-create-a-document-with-namespaces.md
+        - name: 'Nasıl yapılır: Ad Alanı Ön Eklerini Denetleme (LINQ to XML)'
+          href: how-to-control-namespace-prefixes-linq-to-xml.md
+        - name: Varsayılan Ad Alanlarının Kapsamı
+          href: scope-of-default-namespaces.md
+        - name: Genel Ad Alanları ile Çalışma (LINQ to XML)
+          href: working-with-global-namespaces-linq-to-xml.md
+        - name: 'Nasıl yapılır: Ad Alanlarında XML Üzerinde Sorgu Yazma'
+          href: how-to-write-queries-on-xml-in-namespaces.md
+    - name: XML Ağaçlarını Serileştirme
+      href: serializing-xml-trees.md
       items:
-        - name: Saf İşlevsel Dönüşümlere Giriş
-          href: introduction-to-pure-functional-transformations.md
-        - name: Kavramlar ve Terimler (İşlevsel Dönüşüm)
-          href: concepts-and-terminology-functional-transformation.md
-        - name: İşlevsel Programlama ve Kesin Programlama Karşılaştırması
-          href: functional-programming-vs-imperative-programming.md
-        - name: Saf İşlevler Halinde Yeniden Düzenleme
-          href: refactoring-into-pure-functions.md
-        - name: İşlev Dönüşümün Uygulanabilirliği
-          href: applicability-of-functional-transformation.md
-        - name: XML İşlevsel Dönüşümü
-          href: functional-transformation-of-xml.md
-        - name: 'Öğretici: Ertelenmiş Yürütme'
-          href: tutorial-deferred-execution.md
-        - name: LINQ to XML’de Ertelenmiş Yürütme ve Geç Değerlendirme
-          href: deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
-        - name: Ertelenmiş Yürütme Örneği
-          href: deferred-execution-example.md
-        - name: 'Öğretici: WordprocessingML Belgesindeki İçeriği Düzenleme'
-          href: tutorial-manipulating-content-in-a-wordprocessingml-document.md
-        - name: WordprocessingML Belgelerinin Şekli
-          href: shape-of-wordprocessingml-documents.md
-        - name: Kaynak Office Open XML Belgesi Oluşturma
-          href: creating-the-source-office-open-xml-document.md
-        - name: Varsayılan Paragraf Stilini Bulma
-          href: finding-the-default-paragraph-style.md
-        - name: Paragrafları ve Stillerini Alma
-          href: retrieving-the-paragraphs-and-their-styles.md
-        - name: Paragrafların Metnini Alma
-          href: retrieving-the-text-of-the-paragraphs.md
-        - name: Genişletme Yöntemi Kullanarak Yeniden Düzenleme
-          href: refactoring-using-an-extension-method.md
-        - name: Saf İşlev Kullanarak Yeniden Düzenleme
-          href: refactoring-using-a-pure-function.md
-        - name: XML’i Farklı Şekilde Yansıtma
-          href: projecting-xml-in-a-different-shape.md
-        - name: Word Belgelerinde Metin Bulma
-          href: finding-text-in-word-documents.md
-        - name: Office Open XML WordprocessingML Belgelerinin Ayrıntıları
-          href: details-of-office-open-xml-wordprocessingml-documents.md
-        - name: Stillerle WordprocessingML Belgesi
-          href: wordprocessingml-document-with-styles.md
-        - name: WordprocessingML Belgesinin Stil Kısmı
-          href: style-part-of-a-wordprocessingml-document.md
-        - name: Office Open XML Belge Kısımları Çıkaran Örnek
-          href: example-that-outputs-office-open-xml-document-parts.md
-- name: XML Ağaçlarını Değiştirme (LINQ to XML)
-  href: modifying-xml-trees-linq-to-xml.md
-  items:
-    - name: Bellek içi XML Ağacı Değişikliği ve İşlevsel Oluşturma (LINQ to XML) Karşılaştırması
-      href: in-memory-xml-tree-modification-vs-functional-construction.md
-    - name: 'XML Ağacına Öğe, Öznitelik ve Düğümler Ekleme'
-      href: adding-elements-attributes-and-nodes-to-an-xml-tree.md
-    - name: 'XML Ağacındaki Öğe, Öznitelik ve Düğümleri Değiştirme'
-      href: modifying-elements-attributes-and-nodes-in-an-xml-tree.md
-    - name: 'XML Ağacından Öğe, Öznitelik ve Düğümleri Kaldırma'
-      href: removing-elements-attributes-and-nodes-from-an-xml-tree.md
-    - name: Ad-Değer Çiftleri Sağlama
-      href: maintaining-name-value-pairs.md
-    - name: 'Nasıl yapılır: Tüm XML Ağacının Ad Alanını Değiştirme'
-      href: how-to-change-the-namespace-for-an-entire-xml-tree.md
-- name: Performans (LINQ to XML)
-  href: performance-linq-to-xml.md
-  items:
-    - name: Zincirlenmiş Sorguların Performansı (LINQ to XML)
-      href: performance-of-chained-queries-linq-to-xml.md
-    - name: Parçalara Ayrılmış XName ve XNamespace Nesneleri (LINQ to XML)
-      href: atomized-xname-and-xnamespace-objects-linq-to-xml.md
-    - name: Parçalara Ayırma Öncesi XName Nesneleri (LINQ to XML)
-      href: pre-atomization-of-xname-objects-linq-to-xml.md
-    - name: Statik Olarak Derlenmiş Sorgular (LINQ to XML)
-      href: statically-compiled-queries-linq-to-xml.md
-- name: Gelişmiş LINQ to XML Programlama
-  href: advanced-linq-to-xml-programming.md
-  items:
-    - name: LINQ to XML Ek Açıklamaları
-      href: linq-to-xml-annotations.md
-    - name: LINQ to XML Olayları
-      href: linq-to-xml-events.md
-    - name: Düğümlerle Programlama
-      href: programming-with-nodes.md
-    - name: Bildirim Temelli-Kesinlik Temelli Kod Hataları Karışımı (LINQ to XML)
-      href: mixed-declarative-code-imperative-code-bugs-linq-to-xml.md
-    - name: 'Nasıl yapılır: Üst Bilgilere Erişimle XML Parçalarının Akışını Yapma'
-      href: how-to-stream-xml-fragments-with-access-to-header-information.md
-    - name: 'Nasıl yapılır: Büyük XML Belgelerinin Akış Dönüşümünü Gerçekleştirme'
-      href: how-to-perform-streaming-transform-of-large-xml-documents.md
-    - name: 'Nasıl yapılır: Kodlanmış Belge Okuma ve Yazma'
-      href: how-to-read-and-write-an-encoded-document.md
-    - name: XML Ağacı Dönüştürmek için XSLT Kullanma
-      href: using-xslt-to-transform-an-xml-tree.md
-    - name: 'Nasıl yapılır: XSLT Stilindeki LINQ to XML Ağaçlarını Dönüştürmek için Ek Açıklamalar Kullanma'
-      href: how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md
-    - name: XElement Nesneleri İçeren Nesne Grafiklerini Serileştirme
-      href: serializing-object-graphs-that-contain-xelement-objects.md
+        - name: Serileştirirken Boşlukları Koruma
+          href: preserving-white-space-while-serializing.md
+        - name: XML Bildirimi ile Serileştirme
+          href: serializing-with-an-xml-declaration.md
+        - name: 'Dosya, TextWriters ve XmlWriters Serileştirme'
+          href: serializing-to-files-textwriters-and-xmlwriters.md
+        - name: XmlReader’a Serileştirme (XSLT Çağırma)
+          href: serializing-to-an-xmlreader-invoking-xslt.md
+    - name: LINQ to XML Eksenleri
+      href: linq-to-xml-axes.md
       items:
-        - name: 'Nasıl yapılır: XmlSerializer Kullanarak Serileştirme'
-          href: how-to-serialize-using-xmlserializer.md
-        - name: 'Nasıl yapılır: DataContractSerializer Kullanarak Serileştirme'
-          href: how-to-serialize-using-datacontractserializer.md
-    - name: LINQ to XML Güvenliği
-      href: linq-to-xml-security.md
-    - name: Örnek XML Belgeleri (LINQ to XML)
-      href: sample-xml-documents-linq-to-xml.md
+        - name: LINQ to XML Eksenlerine Genel Bakış
+          href: linq-to-xml-axes-overview.md
+        - name: 'Nasıl yapılır: Öğe Koleksiyonu Alma (LINQ to XML)'
+          href: how-to-retrieve-a-collection-of-elements-linq-to-xml.md
+        - name: 'Nasıl yapılır: Öğe Değerini Alma (LINQ to XML)'
+          href: how-to-retrieve-the-value-of-an-element-linq-to-xml.md
+        - name: 'Nasıl yapılır: Öğe Adlarını Filtreleme (LINQ to XML)'
+          href: how-to-filter-on-element-names-linq-to-xml.md
+        - name: 'Nasıl yapılır: Zincir Eksen Yöntem Çağrıları (LINQ to XML)'
+          href: how-to-chain-axis-method-calls-linq-to-xml.md
+        - name: 'Nasıl yapılır: Tek Bir Alt Öğe Alma (LINQ to XML)'
+          href: how-to-retrieve-a-single-child-element-linq-to-xml.md
+        - name: 'Nasıl yapılır: Öznitelik Koleksiyonu Alma (LINQ to XML)'
+          href: how-to-retrieve-a-collection-of-attributes-linq-to-xml.md
+        - name: 'Nasıl yapılır: Tek Bir Öznitelik Alma (LINQ to XML)'
+          href: how-to-retrieve-a-single-attribute-linq-to-xml.md
+        - name: 'Nasıl yapılır: Öznitelik Değerini Alma (LINQ to XML)'
+          href: how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md
+        - name: 'Nasıl yapılır: Öğenin Yüzeysel Değerini Alma'
+          href: how-to-retrieve-the-shallow-value-of-an-element.md
+        - name: Dille Tümleşik Eksenler (LINQ to XML)
+          href: language-integrated-axes.md
+    - name: XML Ağaçlarını Sorgulama
+      href: querying-xml-trees.md
       items:
-        - name: 'Örnek XML Dosyası: Tipik Satın Alma Siparişi (LINQ to XML)'
-          href: sample-xml-file-typical-purchase-order-linq-to-xml.md
-        - name: 'Örnek XML Dosyası: Bir Ad Alanında Tipik Satın Alma Siparişi'
-          href: sample-xml-file-typical-purchase-order-in-a-namespace.md
-        - name: 'Örnek XML Dosyası: Birden Fazla Satın Alma Siparişi (LINQ to XML)'
-          href: sample-xml-file-multiple-purchase-orders-linq-to-xml.md
-        - name: 'Örnek XML Dosyası: Bir Ad Alanında Birden Fazla Satın Alma Siparişi'
-          href: sample-xml-file-multiple-purchase-orders-in-a-namespace.md
-        - name: 'Örnek XML Dosyası: Test Yapılandırması (LINQ to XML)'
-          href: sample-xml-file-test-configuration-linq-to-xml.md
-        - name: 'Örnek XML Dosyası: Bir Ad Alanında Test Yapılandırması'
-          href: sample-xml-file-test-configuration-in-a-namespace.md
-        - name: 'Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ to XML)'
-          href: sample-xml-file-customers-and-orders-linq-to-xml.md
-        - name: 'Örnek XSD Dosyası: Müşteriler ve Siparişler'
-          href: sample-xsd-file-customers-and-orders.md
-        - name: 'Örnek XML Dosyası: Bir Ad Alanında Müşteriler ve Siparişler'
-          href: sample-xml-file-customers-and-orders-in-a-namespace.md
-        - name: 'Örnek XML Dosyası: Sayısal Veriler (LINQ to XML)'
-          href: sample-xml-file-numerical-data-linq-to-xml.md
-        - name: 'Örnek XML Dosyası: Bir Ad Alanında Sayısal Veriler'
-          href: sample-xml-file-numerical-data-in-a-namespace.md
-        - name: 'Örnek XML Dosyası: Kitaplar (LINQ to XML)'
-          href: sample-xml-file-books-linq-to-xml.md
-        - name: 'Örnek XML Dosyası: Birleştirilmiş Satın Alma Siparişleri'
-          href: sample-xml-file-consolidated-purchase-orders.md
-        - name: Başvuru (LINQ to XML)
-          href: reference-linq-to-xml.md
-    - name: ADO.NET'e LINQ (Portal Sayfası)
-      href: linq-to-adonet-portal-page.md
-    - name: LINQ Sorgusu için Veri Kaynağı Etkinleştirme
-      href: enabling-a-data-source-for-linq-querying.md
-    - name: Visual Studio IDE ve LINQ için Araçlar Desteği
-      href: visual-studio-ide-and-tools-support-for-linq.md
+        - name: Temel Sorgular (LINQ to XML)
+          href: basic-queries-linq-to-xml.md
+          items:
+            - name: 'Nasıl yapılır: Belirli Bir Özniteliğe Sahip Öğeyi Bulma'
+              href: how-to-find-an-element-with-a-specific-attribute.md
+            - name: 'Nasıl yapılır: Belirli Bir Alt Öğeye Sahip Öğeyi Bulma'
+              href: how-to-find-an-element-with-a-specific-child-element.md
+            - name: XDocument Sorgulama ve XElement Sorgulama Karşılaştırması
+              href: querying-an-xdocument-vs-querying-an-xelement.md
+            - name: 'Nasıl yapılır: Belirli Bir Öğe Adına Sahip Alt Öğeleri Bulma'
+              href: how-to-find-descendants-with-a-specific-element-name.md
+            - name: 'Nasıl yapılır: Descendants Yöntemini Kullanarak Tek Bir Alt Öğeyi Bulma'
+              href: how-to-find-a-single-descendant-using-the-descendants-method.md
+            - name: 'Nasıl yapılır: Karmaşık Filtreleme ile Sorgu Yazma'
+              href: how-to-write-queries-with-complex-filtering.md
+            - name: 'Nasıl yapılır: İsteğe Bağlı Öğeyi Filtreleme'
+              href: how-to-filter-on-an-optional-element.md
+            - name: 'Nasıl yapılır: Ad Alanındaki Tüm Düğümleri Bulma'
+              href: how-to-find-all-nodes-in-a-namespace.md
+            - name: 'Nasıl yapılır: Öğeleri Sıralama'
+              href: how-to-sort-elements.md
+            - name: 'Nasıl yapılır: Birden Çok Anahtarda Öğeleri Sıralama'
+              href: how-to-sort-elements-on-multiple-keys.md
+            - name: 'Nasıl yapılır: Ara Değerleri Hesaplama'
+              href: how-to-calculate-intermediate-values.md
+            - name: 'Nasıl yapılır: Bağlama Göre Öğeleri Bulan Bir Sorgu Yazma'
+              href: how-to-write-a-query-that-finds-elements-based-on-context.md
+            - name: 'Nasıl yapılır: Boş Sorgu Sonucu Kümelerinin Hatalarını Ayıklama'
+              href: how-to-debug-empty-query-results-sets.md
+        - name: Projeksiyonlar ve Dönüşümler (LINQ to XML)
+          href: projections-and-transformations-linq-to-xml.md
+        - name: 'Nasıl yapılır: LINQ to XML Kullanarak Sözlüklerle Çalışma'
+          href: how-to-work-with-dictionaries-using-linq-to-xml.md
+          items:
+            - name: 'Nasıl yapılır: XML Ağacının Şeklini Dönüştürme'
+              href: how-to-transform-the-shape-of-an-xml-tree.md
+            - name: 'Nasıl yapılır: Projeksiyon Türünü Denetleme'
+              href: how-to-control-the-type-of-a-projection.md
+            - name: 'Nasıl yapılır: Yeni Bir Tür Yansıtma (LINQ to XML)'
+              href: how-to-project-a-new-type-linq-to-xml.md
+            - name: 'Nasıl yapılır: Nesne Grafiği Yansıtma'
+              href: how-to-project-an-object-graph.md
+            - name: 'Nasıl yapılır: Anonim Tip Yansıtma'
+              href: how-to-project-an-anonymous-type.md
+            - name: 'Nasıl yapılır: XML’den Metin Dosyaları Oluşturma'
+              href: how-to-generate-text-files-from-xml.md
+            - name: 'Nasıl yapılır: CSV Dosyalarından XML Oluşturma'
+              href: how-to-generate-xml-from-csv-files.md
+        - name: Gelişmiş Sorgu Teknikleri (LINQ to XML)
+          href: advanced-query-techniques-linq-to-xml.md
+          items:
+            - name: 'Nasıl yapılır: İki Koleksiyonu Birleştirme (LINQ to XML)'
+              href: how-to-join-two-collections-linq-to-xml.md
+              items:
+                - name: 'Nasıl yapılır: Gruplandırma Kullanarak Hiyerarşi Oluşturma'
+                  href: how-to-create-hierarchy-using-grouping.md
+                - name: 'Nasıl yapılır: XPath Kullanarak LINQ to XML Sorgulama'
+                  href: how-to-query-linq-to-xml-using-xpath.md
+                - name: 'Nasıl yapılır: LINQ to XML Eksen Yöntemi Yazma'
+                  href: how-to-write-a-linq-to-xml-axis-method.md
+                - name: 'Nasıl yapılır: Bir Ağaçtaki Tüm Düğümleri Listeleme'
+                  href: how-to-list-all-nodes-in-a-tree.md
+                - name: 'Nasıl yapılır: Bir Office Open XML Belgesinden Paragrafları Alma'
+                  href: how-to-retrieve-paragraphs-from-an-office-open-xml-document.md
+                - name: 'Nasıl yapılır: Bir Office Open XML Belgesini Değiştirme'
+                  href: how-to-modify-an-office-open-xml-document.md
+                - name: 'Nasıl yapılır: Dosya Sisteminden bir XML Ağacı Doldurma'
+                  href: how-to-populate-an-xml-tree-from-the-file-system.md
+        - name: XPath Kullanıcıları için LINQ to XML
+          href: linq-to-xml-for-xpath-users.md
+          items:
+            - name: XPath ile LINQ to XML Karşılaştırması
+              href: comparison-of-xpath-and-linq-to-xml.md
+            - name: 'Nasıl yapılır: Alt Öğe Bulma (XPath-LINQ to XML)'
+              href: how-to-find-a-child-element-xpath-linq-to-xml.md
+            - name: 'Nasıl yapılır: Alt Öğe Listesini Bulma (XPath-LINQ to XML)'
+              href: how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md
+            - name: 'Nasıl yapılır: Kök Öğe Bulma (XPath-LINQ to XML)'
+              href: how-to-find-the-root-element-xpath-linq-to-xml.md
+            - name: 'Nasıl yapılır: Alt Öğe Bulma (XPath-LINQ to XML)'
+              href: how-to-find-descendant-elements-xpath-linq-to-xml.md
+            - name: 'Nasıl yapılır: Öznitelik Filtreleme (XPath-LINQ to XML)'
+              href: how-to-filter-on-an-attribute-xpath-linq-to-xml.md
+            - name: 'Nasıl yapılır: İlgili Öğeleri Bulma (XPath-LINQ to XML)'
+              href: how-to-find-related-elements-xpath-linq-to-xml.md
+            - name: 'Nasıl yapılır: Ad Alanındaki Öğeleri Bulma (XPath-LINQ to XML)'
+              href: how-to-find-elements-in-a-namespace.md
+            - name: 'Nasıl yapılır: Önceki Eşdüzeyleri Bulma (XPath-LINQ to XML)'
+              href: how-to-find-preceding-siblings-xpath-linq-to-xml.md
+            - name: 'Nasıl yapılır: Bir Alt Öğenin Alt Öğelerini Bulma (XPath-LINQ to XML)'
+              href: how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md
+            - name: 'Nasıl yapılır: İki Konum Yolunun Birleşimini Bulma (XPath-LINQ to XML)'
+              href: how-to-find-a-union-of-two-location-paths-xpath.md
+            - name: 'Nasıl yapılır: Eşdüzey Düğümleri Bulma (XPath-LINQ to XML)'
+              href: how-to-find-sibling-nodes-xpath-linq-to-xml.md
+            - name: 'Nasıl yapılır: Üst Öğenin Özniteliğini Bulma (XPath-LINQ to XML)'
+              href: how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md
+            - name: 'Nasıl yapılır: Belirli bir Ada Sahip Eşdüzeylerin Özniteliklerini Bulma (XPath-LINQ to XML)'
+              href: how-to-find-attributes-of-siblings-with-a-specific-name.md
+            - name: 'Nasıl yapılır: Belirli bir Özniteliğe Sahip Öğeleri Bulma (XPath-LINQ to XML)'
+              href: how-to-find-elements-with-a-specific-attribute.md
+            - name: 'Nasıl yapılır: Konuma Göre Alt Öğeleri Bulma (XPath-LINQ to XML)'
+              href: how-to-find-child-elements-based-on-position.md
+            - name: 'Nasıl yapılır: Bir Önceki Eşdüzeyi Bulma (XPath-LINQ to XML)'
+              href: how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md
+        - name: Saf İşlevsel XML Dönüşümleri
+          href: pure-functional-transformations-of-xml.md
+          items:
+            - name: Saf İşlevsel Dönüşümlere Giriş
+              href: introduction-to-pure-functional-transformations.md
+            - name: Kavramlar ve Terimler (İşlevsel Dönüşüm)
+              href: concepts-and-terminology-functional-transformation.md
+            - name: İşlevsel Programlama ve Kesin Programlama Karşılaştırması
+              href: functional-programming-vs-imperative-programming.md
+            - name: Saf İşlevler Halinde Yeniden Düzenleme
+              href: refactoring-into-pure-functions.md
+            - name: İşlev Dönüşümün Uygulanabilirliği
+              href: applicability-of-functional-transformation.md
+            - name: XML İşlevsel Dönüşümü
+              href: functional-transformation-of-xml.md
+            - name: 'Öğretici: Ertelenmiş Yürütme'
+              href: tutorial-deferred-execution.md
+            - name: LINQ to XML’de Ertelenmiş Yürütme ve Geç Değerlendirme
+              href: deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
+            - name: Ertelenmiş Yürütme Örneği
+              href: deferred-execution-example.md
+            - name: 'Öğretici: WordprocessingML Belgesindeki İçeriği Düzenleme'
+              href: tutorial-manipulating-content-in-a-wordprocessingml-document.md
+            - name: WordprocessingML Belgelerinin Şekli
+              href: shape-of-wordprocessingml-documents.md
+            - name: Kaynak Office Open XML Belgesi Oluşturma
+              href: creating-the-source-office-open-xml-document.md
+            - name: Varsayılan Paragraf Stilini Bulma
+              href: finding-the-default-paragraph-style.md
+            - name: Paragrafları ve Stillerini Alma
+              href: retrieving-the-paragraphs-and-their-styles.md
+            - name: Paragrafların Metnini Alma
+              href: retrieving-the-text-of-the-paragraphs.md
+            - name: Genişletme Yöntemi Kullanarak Yeniden Düzenleme
+              href: refactoring-using-an-extension-method.md
+            - name: Saf İşlev Kullanarak Yeniden Düzenleme
+              href: refactoring-using-a-pure-function.md
+            - name: XML’i Farklı Şekilde Yansıtma
+              href: projecting-xml-in-a-different-shape.md
+            - name: Word Belgelerinde Metin Bulma
+              href: finding-text-in-word-documents.md
+            - name: Office Open XML WordprocessingML Belgelerinin Ayrıntıları
+              href: details-of-office-open-xml-wordprocessingml-documents.md
+            - name: Stillerle WordprocessingML Belgesi
+              href: wordprocessingml-document-with-styles.md
+            - name: WordprocessingML Belgesinin Stil Kısmı
+              href: style-part-of-a-wordprocessingml-document.md
+            - name: Office Open XML Belge Kısımları Çıkaran Örnek
+              href: example-that-outputs-office-open-xml-document-parts.md
+    - name: XML Ağaçlarını Değiştirme (LINQ to XML)
+      href: modifying-xml-trees-linq-to-xml.md
+      items:
+        - name: Bellek içi XML Ağacı Değişikliği ve İşlevsel Oluşturma (LINQ to XML) Karşılaştırması
+          href: in-memory-xml-tree-modification-vs-functional-construction.md
+        - name: 'XML Ağacına Öğe, Öznitelik ve Düğümler Ekleme'
+          href: adding-elements-attributes-and-nodes-to-an-xml-tree.md
+        - name: 'XML Ağacındaki Öğe, Öznitelik ve Düğümleri Değiştirme'
+          href: modifying-elements-attributes-and-nodes-in-an-xml-tree.md
+        - name: 'XML Ağacından Öğe, Öznitelik ve Düğümleri Kaldırma'
+          href: removing-elements-attributes-and-nodes-from-an-xml-tree.md
+        - name: Ad-Değer Çiftleri Sağlama
+          href: maintaining-name-value-pairs.md
+        - name: 'Nasıl yapılır: Tüm XML Ağacının Ad Alanını Değiştirme'
+          href: how-to-change-the-namespace-for-an-entire-xml-tree.md
+    - name: Performans (LINQ to XML)
+      href: performance-linq-to-xml.md
+      items:
+        - name: Zincirlenmiş Sorguların Performansı (LINQ to XML)
+          href: performance-of-chained-queries-linq-to-xml.md
+        - name: Parçalara Ayrılmış XName ve XNamespace Nesneleri (LINQ to XML)
+          href: atomized-xname-and-xnamespace-objects-linq-to-xml.md
+        - name: Parçalara Ayırma Öncesi XName Nesneleri (LINQ to XML)
+          href: pre-atomization-of-xname-objects-linq-to-xml.md
+        - name: Statik Olarak Derlenmiş Sorgular (LINQ to XML)
+          href: statically-compiled-queries-linq-to-xml.md
+    - name: Gelişmiş LINQ to XML Programlama
+      href: advanced-linq-to-xml-programming.md
+      items:
+        - name: LINQ to XML Ek Açıklamaları
+          href: linq-to-xml-annotations.md
+        - name: LINQ to XML Olayları
+          href: linq-to-xml-events.md
+        - name: Düğümlerle Programlama
+          href: programming-with-nodes.md
+        - name: Bildirim Temelli-Kesinlik Temelli Kod Hataları Karışımı (LINQ to XML)
+          href: mixed-declarative-code-imperative-code-bugs-linq-to-xml.md
+        - name: 'Nasıl yapılır: Üst Bilgilere Erişimle XML Parçalarının Akışını Yapma'
+          href: how-to-stream-xml-fragments-with-access-to-header-information.md
+        - name: 'Nasıl yapılır: Büyük XML Belgelerinin Akış Dönüşümünü Gerçekleştirme'
+          href: how-to-perform-streaming-transform-of-large-xml-documents.md
+        - name: 'Nasıl yapılır: Kodlanmış Belge Okuma ve Yazma'
+          href: how-to-read-and-write-an-encoded-document.md
+        - name: XML Ağacı Dönüştürmek için XSLT Kullanma
+          href: using-xslt-to-transform-an-xml-tree.md
+        - name: 'Nasıl yapılır: XSLT Stilindeki LINQ to XML Ağaçlarını Dönüştürmek için Ek Açıklamalar Kullanma'
+          href: how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md
+        - name: XElement Nesneleri İçeren Nesne Grafiklerini Serileştirme
+          href: serializing-object-graphs-that-contain-xelement-objects.md
+          items:
+            - name: 'Nasıl yapılır: XmlSerializer Kullanarak Serileştirme'
+              href: how-to-serialize-using-xmlserializer.md
+            - name: 'Nasıl yapılır: DataContractSerializer Kullanarak Serileştirme'
+              href: how-to-serialize-using-datacontractserializer.md
+        - name: LINQ to XML Güvenliği
+          href: linq-to-xml-security.md
+        - name: Örnek XML Belgeleri (LINQ to XML)
+          href: sample-xml-documents-linq-to-xml.md
+          items:
+            - name: 'Örnek XML Dosyası: Tipik Satın Alma Siparişi (LINQ to XML)'
+              href: sample-xml-file-typical-purchase-order-linq-to-xml.md
+            - name: 'Örnek XML Dosyası: Bir Ad Alanında Tipik Satın Alma Siparişi'
+              href: sample-xml-file-typical-purchase-order-in-a-namespace.md
+            - name: 'Örnek XML Dosyası: Birden Fazla Satın Alma Siparişi (LINQ to XML)'
+              href: sample-xml-file-multiple-purchase-orders-linq-to-xml.md
+            - name: 'Örnek XML Dosyası: Bir Ad Alanında Birden Fazla Satın Alma Siparişi'
+              href: sample-xml-file-multiple-purchase-orders-in-a-namespace.md
+            - name: 'Örnek XML Dosyası: Test Yapılandırması (LINQ to XML)'
+              href: sample-xml-file-test-configuration-linq-to-xml.md
+            - name: 'Örnek XML Dosyası: Bir Ad Alanında Test Yapılandırması'
+              href: sample-xml-file-test-configuration-in-a-namespace.md
+            - name: 'Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ to XML)'
+              href: sample-xml-file-customers-and-orders-linq-to-xml.md
+            - name: 'Örnek XSD Dosyası: Müşteriler ve Siparişler'
+              href: sample-xsd-file-customers-and-orders.md
+            - name: 'Örnek XML Dosyası: Bir Ad Alanında Müşteriler ve Siparişler'
+              href: sample-xml-file-customers-and-orders-in-a-namespace.md
+            - name: 'Örnek XML Dosyası: Sayısal Veriler (LINQ to XML)'
+              href: sample-xml-file-numerical-data-linq-to-xml.md
+            - name: 'Örnek XML Dosyası: Bir Ad Alanında Sayısal Veriler'
+              href: sample-xml-file-numerical-data-in-a-namespace.md
+            - name: 'Örnek XML Dosyası: Kitaplar (LINQ to XML)'
+              href: sample-xml-file-books-linq-to-xml.md
+            - name: 'Örnek XML Dosyası: Birleştirilmiş Satın Alma Siparişleri'
+              href: sample-xml-file-consolidated-purchase-orders.md
+            - name: Başvuru (LINQ to XML)
+              href: reference-linq-to-xml.md
+- name: ADO.NET'e LINQ (Portal Sayfası)
+  href: linq-to-adonet-portal-page.md
+- name: LINQ Sorgusu için Veri Kaynağı Etkinleştirme
+  href: enabling-a-data-source-for-linq-querying.md
+- name: Visual Studio IDE ve LINQ için Araçlar Desteği
+  href: visual-studio-ide-and-tools-support-for-linq.md

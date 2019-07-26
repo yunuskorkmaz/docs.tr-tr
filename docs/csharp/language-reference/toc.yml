@@ -207,8 +207,6 @@
           items:
             - name: bekleme
               href: keywords/await.md
-            - name: sizeof
-              href: keywords/sizeof.md
         - name: Erişim Anahtar Sözcükleri
           items:
             - name: taban
@@ -340,6 +338,8 @@
           href: operators/nameof.md
         - name: new işleci
           href: operators/new-operator.md
+        - name: sizeof işleci
+          href: operators/sizeof.md
         - name: stackalloc işleci
           href: operators/stackalloc.md
         - name: true ve false işleçleri
