@@ -20,72 +20,76 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 00945e0f3cd4e605bf625068ab6693101ae3b164
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bab5a0bd7e0a85d550362bc3c1166566f6dcb81b
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647052"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512779"
 ---
-# <a name="decimal-data-type-visual-basic"></a><span data-ttu-id="15855-102">Onluk Veri Türü (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15855-102">Decimal Data Type (Visual Basic)</span></span>
-<span data-ttu-id="15855-103">Ayrı tutma 128-bit (16 baytlık) değerler tarafından 10 değişken güç ölçeği 96 bit (12-bayt) tamsayıları temsil eden imzalı.</span><span class="sxs-lookup"><span data-stu-id="15855-103">Holds signed 128-bit (16-byte) values representing 96-bit (12-byte) integer numbers scaled by a variable power of 10.</span></span> <span data-ttu-id="15855-104">Ölçeklendirme çarpanı ondalık noktasının sağındaki basamak sayısını belirtir; 0 ile 28 arasında çeşitlilik gösterir.</span><span class="sxs-lookup"><span data-stu-id="15855-104">The scaling factor specifies the number of digits to the right of the decimal point; it ranges from 0 through 28.</span></span> <span data-ttu-id="15855-105">İle bir ölçek 0 (ondalık basamak) 79,228,162,514,264,337,593,543,950,335 +/-olası en büyük değer olan (7 +/-.9228162514264337593543950335E + 28).</span><span class="sxs-lookup"><span data-stu-id="15855-105">With a scale of 0 (no decimal places), the largest possible value is +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9228162514264337593543950335E+28).</span></span> <span data-ttu-id="15855-106">28 ondalık basamakları olan en büyük değeri 7.9228162514264337593543950335 +/-, ise sıfır olmayan en küçük değeri +/-0.0000000000000000000000000001 (+/-1E-28).</span><span class="sxs-lookup"><span data-stu-id="15855-106">With 28 decimal places, the largest value is +/-7.9228162514264337593543950335, and the smallest nonzero value is +/-0.0000000000000000000000000001 (+/-1E-28).</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="15855-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="15855-107">Remarks</span></span>  
- <span data-ttu-id="15855-108">`Decimal` Veri türü, bir sayı için en fazla belirtici basamak sayısını sağlar.</span><span class="sxs-lookup"><span data-stu-id="15855-108">The `Decimal` data type provides the greatest number of significant digits for a number.</span></span> <span data-ttu-id="15855-109">29 önemli basamak destekler ve 7.9228 x 10 aşan değerleri temsil edebilen ^ 28.</span><span class="sxs-lookup"><span data-stu-id="15855-109">It supports up to 29 significant digits and can represent values in excess of 7.9228 x 10^28.</span></span> <span data-ttu-id="15855-110">Gibi özellikle hesaplamalar için uygun Finans, çok sayıda basamak gerektirir ancak yuvarlama hataları tolere olamaz.</span><span class="sxs-lookup"><span data-stu-id="15855-110">It is particularly suitable for calculations, such as financial, that require a large number of digits but cannot tolerate rounding errors.</span></span>  
-  
- <span data-ttu-id="15855-111">Varsayılan değer olan `Decimal` 0'dır.</span><span class="sxs-lookup"><span data-stu-id="15855-111">The default value of `Decimal` is 0.</span></span>  
-  
-## <a name="programming-tips"></a><span data-ttu-id="15855-112">Programlama İpuçları</span><span class="sxs-lookup"><span data-stu-id="15855-112">Programming Tips</span></span>  
-  
-- <span data-ttu-id="15855-113">**Duyarlık.**</span><span class="sxs-lookup"><span data-stu-id="15855-113">**Precision.**</span></span> <span data-ttu-id="15855-114">`Decimal` bir kayan nokta veri türü değil.</span><span class="sxs-lookup"><span data-stu-id="15855-114">`Decimal` is not a floating-point data type.</span></span> <span data-ttu-id="15855-115">`Decimal` Yapısı tutan bir imza biti ve Ölçeklendirme çarpanı ondalık kesir değeri hangi kısmı olduğunu belirten bir tamsayı ile birlikte bir ikili tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="15855-115">The `Decimal` structure holds a binary integer value, together with a sign bit and an integer scaling factor that specifies what portion of the value is a decimal fraction.</span></span> <span data-ttu-id="15855-116">Bu nedenle, `Decimal` numarasına sahip daha kesin bir gösterimi kayan nokta türleri daha bellekte (`Single` ve `Double`).</span><span class="sxs-lookup"><span data-stu-id="15855-116">Because of this, `Decimal` numbers have a more precise representation in memory than floating-point types (`Single` and `Double`).</span></span>  
-  
-- <span data-ttu-id="15855-117">**Performans.**</span><span class="sxs-lookup"><span data-stu-id="15855-117">**Performance.**</span></span> <span data-ttu-id="15855-118">`Decimal` Veri türü, tüm sayısal türlerin en yavaş.</span><span class="sxs-lookup"><span data-stu-id="15855-118">The `Decimal` data type is the slowest of all the numeric types.</span></span> <span data-ttu-id="15855-119">Bir veri türü seçmeden önce performans karşı duyarlılığı önemini tartmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="15855-119">You should weigh the importance of precision against performance before choosing a data type.</span></span>  
-  
-- <span data-ttu-id="15855-120">**Genişletme.**</span><span class="sxs-lookup"><span data-stu-id="15855-120">**Widening.**</span></span> <span data-ttu-id="15855-121">`Decimal` Widens veri türü için `Single` veya `Double`.</span><span class="sxs-lookup"><span data-stu-id="15855-121">The `Decimal` data type widens to `Single` or `Double`.</span></span> <span data-ttu-id="15855-122">Yani dönüştürebilirsiniz `Decimal` karşılaşmadan bu türlerden birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.</span><span class="sxs-lookup"><span data-stu-id="15855-122">This means you can convert `Decimal` to either of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.</span></span>  
-  
-- <span data-ttu-id="15855-123">**Sondaki sıfırlar.**</span><span class="sxs-lookup"><span data-stu-id="15855-123">**Trailing Zeros.**</span></span> <span data-ttu-id="15855-124">Visual Basic sıfırları depolamaz bir `Decimal` değişmez.</span><span class="sxs-lookup"><span data-stu-id="15855-124">Visual Basic does not store trailing zeros in a `Decimal` literal.</span></span> <span data-ttu-id="15855-125">Ancak, bir `Decimal` değişkeni hesaplama açısından alınan sonundaki sıfırları korur.</span><span class="sxs-lookup"><span data-stu-id="15855-125">However, a `Decimal` variable preserves any trailing zeros acquired computationally.</span></span> <span data-ttu-id="15855-126">Aşağıdaki örnek bunu göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="15855-126">The following example illustrates this.</span></span>  
-  
-    ```  
-    Dim d1, d2, d3, d4 As Decimal  
-    d1 = 2.375D  
-    d2 = 1.625D  
-    d3 = d1 + d2  
-    d4 = 4.000D  
-    MsgBox("d1 = " & CStr(d1) & ", d2 = " & CStr(d2) &  
-          ", d3 = " & CStr(d3) & ", d4 = " & CStr(d4))  
-    ```  
-  
-     <span data-ttu-id="15855-127">Çıkışı `MsgBox` önceki örnekte aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="15855-127">The output of `MsgBox` in the preceding example is as follows:</span></span>  
-  
-     <span data-ttu-id="15855-128">D1 2.375, d2 = 1.625, d3 = 4.000, d4 = 4 =</span><span class="sxs-lookup"><span data-stu-id="15855-128">d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4</span></span>  
-  
-- <span data-ttu-id="15855-129">**Tür karakterleri.**</span><span class="sxs-lookup"><span data-stu-id="15855-129">**Type Characters.**</span></span> <span data-ttu-id="15855-130">Değişmez değer türü karakterinin `D` sabit değerine zorlar `Decimal` veri türü.</span><span class="sxs-lookup"><span data-stu-id="15855-130">Appending the literal type character `D` to a literal forces it to the `Decimal` data type.</span></span> <span data-ttu-id="15855-131">Tanımlayıcı türü karakteri ekleme `@` herhangi bir tanımlayıcı zorlar `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="15855-131">Appending the identifier type character `@` to any identifier forces it to `Decimal`.</span></span>  
-  
-- <span data-ttu-id="15855-132">**Çerçeve türü.**</span><span class="sxs-lookup"><span data-stu-id="15855-132">**Framework Type.**</span></span> <span data-ttu-id="15855-133">.NET Framework içinde karşılık gelen türü <xref:System.Decimal?displayProperty=nameWithType> yapısı.</span><span class="sxs-lookup"><span data-stu-id="15855-133">The corresponding type in the .NET Framework is the <xref:System.Decimal?displayProperty=nameWithType> structure.</span></span>  
-  
-## <a name="range"></a><span data-ttu-id="15855-134">Aralık</span><span class="sxs-lookup"><span data-stu-id="15855-134">Range</span></span>  
- <span data-ttu-id="15855-135">Kullanmanız gerekebilir `D` türü için büyük bir değer atamak için karakteri bir `Decimal` değişken veya sabit.</span><span class="sxs-lookup"><span data-stu-id="15855-135">You might need to use the `D` type character to assign a large value to a `Decimal` variable or constant.</span></span> <span data-ttu-id="15855-136">Bu gereksinim olduğundan derleyici değişmez değer olarak yorumlar `Long` sürece bir değişmez değer türü karakteri aşağıdaki örnekte gösterildiği gibi değişmez değer izler.</span><span class="sxs-lookup"><span data-stu-id="15855-136">This requirement is because the compiler interprets a literal as `Long` unless a literal type character follows the literal, as the following example shows.</span></span>  
-  
-```  
-Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.  
-Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.  
-Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.  
-```  
-  
- <span data-ttu-id="15855-137">Bildirimi `bigDec1` kendisine atanmış değer aralığında kaldığından taşma üretemez `Long`.</span><span class="sxs-lookup"><span data-stu-id="15855-137">The declaration for `bigDec1` doesn't produce an overflow because the value that's assigned to it falls within the range for `Long`.</span></span> <span data-ttu-id="15855-138">`Long` Değer atanabilen `Decimal` değişkeni.</span><span class="sxs-lookup"><span data-stu-id="15855-138">The `Long` value can be assigned to the `Decimal` variable.</span></span>  
-  
- <span data-ttu-id="15855-139">Bildirimi `bigDec2` kendisine atanmış değer için çok büyük olduğundan overflow hata üretir `Long`.</span><span class="sxs-lookup"><span data-stu-id="15855-139">The declaration for `bigDec2` generates an overflow error because the value that's assigned to it is too large for `Long`.</span></span> <span data-ttu-id="15855-140">Sayısal sabit değer ilk olarak yorumlanamıyor çünkü bir `Long`, için atanamaz `Decimal` değişkeni.</span><span class="sxs-lookup"><span data-stu-id="15855-140">Because the numeric literal can't first be interpreted as a `Long`, it can't be assigned to the `Decimal` variable.</span></span>  
-  
- <span data-ttu-id="15855-141">İçin `bigDec3`, değişmez değer türü karakteri `D` değişmez değer olarak yorumlamak üzere zorlayarak sorunu çözer bir `Decimal` yerine olarak bir `Long`.</span><span class="sxs-lookup"><span data-stu-id="15855-141">For `bigDec3`, the literal type character `D` solves the problem by forcing the compiler to interpret the literal as a `Decimal` instead of as a `Long`.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="15855-142">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="15855-142">See also</span></span>
+# <a name="decimal-data-type-visual-basic"></a><span data-ttu-id="6beb1-102">Onluk Veri Türü (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6beb1-102">Decimal Data Type (Visual Basic)</span></span>
+
+<span data-ttu-id="6beb1-103">, 10 ' un bir değişken gücüne göre ölçeklendirilmiş 96 bit (12 baytlık) tamsayı sayılarını temsil eden imzalı 128 bitlik (16 baytlık) değerleri barındırır.</span><span class="sxs-lookup"><span data-stu-id="6beb1-103">Holds signed 128-bit (16-byte) values representing 96-bit (12-byte) integer numbers scaled by a variable power of 10.</span></span> <span data-ttu-id="6beb1-104">Ölçeklendirme faktörü, ondalık noktanın sağ tarafındaki basamak sayısını belirtir; 0 ile 28 arasında değişir.</span><span class="sxs-lookup"><span data-stu-id="6beb1-104">The scaling factor specifies the number of digits to the right of the decimal point; it ranges from 0 through 28.</span></span> <span data-ttu-id="6beb1-105">0 ölçeğinde (ondalık basamak yok), olası en büyük değer +/-79228162514264337593543950335 (+/-7.9228162514264337593543950335E + 28) olur.</span><span class="sxs-lookup"><span data-stu-id="6beb1-105">With a scale of 0 (no decimal places), the largest possible value is +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9228162514264337593543950335E+28).</span></span> <span data-ttu-id="6beb1-106">28 ondalık basamakla, en büyük değer +/-7.9228162514264337593543950335 ve sıfır olmayan en küçük değer +/-0,0000000000000000000000000001 (+/-1E-28) olur.</span><span class="sxs-lookup"><span data-stu-id="6beb1-106">With 28 decimal places, the largest value is +/-7.9228162514264337593543950335, and the smallest nonzero value is +/-0.0000000000000000000000000001 (+/-1E-28).</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="6beb1-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6beb1-107">Remarks</span></span>
+
+<span data-ttu-id="6beb1-108">`Decimal` Veri türü, bir sayı için en fazla sayıda önemli basamak sağlar.</span><span class="sxs-lookup"><span data-stu-id="6beb1-108">The `Decimal` data type provides the greatest number of significant digits for a number.</span></span> <span data-ttu-id="6beb1-109">29 ' dan fazla önemli basamağı destekler ve 7,9228 x 10 ^ 28 değerinden fazla değeri temsil edebilir.</span><span class="sxs-lookup"><span data-stu-id="6beb1-109">It supports up to 29 significant digits and can represent values in excess of 7.9228 x 10^28.</span></span> <span data-ttu-id="6beb1-110">Çok sayıda basamak gerektiren, ancak yuvarlama hatalarını kabul edemeyecek finansal gibi hesaplamalar için özellikle uygundur.</span><span class="sxs-lookup"><span data-stu-id="6beb1-110">It is particularly suitable for calculations, such as financial, that require a large number of digits but cannot tolerate rounding errors.</span></span>
+
+<span data-ttu-id="6beb1-111">Varsayılan değeri `Decimal` 0 ' dır.</span><span class="sxs-lookup"><span data-stu-id="6beb1-111">The default value of `Decimal` is 0.</span></span>
+
+## <a name="programming-tips"></a><span data-ttu-id="6beb1-112">Programlama İpuçları</span><span class="sxs-lookup"><span data-stu-id="6beb1-112">Programming Tips</span></span>
+
+- <span data-ttu-id="6beb1-113">**Duyarlılık.**</span><span class="sxs-lookup"><span data-stu-id="6beb1-113">**Precision.**</span></span> <span data-ttu-id="6beb1-114">`Decimal`kayan nokta veri türü değil.</span><span class="sxs-lookup"><span data-stu-id="6beb1-114">`Decimal` is not a floating-point data type.</span></span> <span data-ttu-id="6beb1-115">`Decimal` Yapı bir ikili tamsayı değerini, bir işaret biti ve değerin hangi kısmının ondalık kesir olduğunu belirten bir tamsayı ölçekleme faktörüyle birlikte tutar.</span><span class="sxs-lookup"><span data-stu-id="6beb1-115">The `Decimal` structure holds a binary integer value, together with a sign bit and an integer scaling factor that specifies what portion of the value is a decimal fraction.</span></span> <span data-ttu-id="6beb1-116">Bu nedenle, sayıların `Decimal` , kayan nokta türlerinden (`Single` ve `Double`) daha kesin bir temsili vardır.</span><span class="sxs-lookup"><span data-stu-id="6beb1-116">Because of this, `Decimal` numbers have a more precise representation in memory than floating-point types (`Single` and `Double`).</span></span>
+
+- <span data-ttu-id="6beb1-117">**Performans.**</span><span class="sxs-lookup"><span data-stu-id="6beb1-117">**Performance.**</span></span> <span data-ttu-id="6beb1-118">`Decimal` Veri türü, tüm sayısal türlerin en yavaş türüdür.</span><span class="sxs-lookup"><span data-stu-id="6beb1-118">The `Decimal` data type is the slowest of all the numeric types.</span></span> <span data-ttu-id="6beb1-119">Veri türü seçmeden önce, performans için duyarlık önem derecesine sahip olmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="6beb1-119">You should weigh the importance of precision against performance before choosing a data type.</span></span>
+
+- <span data-ttu-id="6beb1-120">**Kan.**</span><span class="sxs-lookup"><span data-stu-id="6beb1-120">**Widening.**</span></span> <span data-ttu-id="6beb1-121">Veya `Decimal` için`Double`widens veri türü. `Single`</span><span class="sxs-lookup"><span data-stu-id="6beb1-121">The `Decimal` data type widens to `Single` or `Double`.</span></span> <span data-ttu-id="6beb1-122">Bu, bir `Decimal` <xref:System.OverflowException?displayProperty=nameWithType> hatayla karşılaşmadan bu türlerden birine dönüştürebileceğiniz anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="6beb1-122">This means you can convert `Decimal` to either of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.</span></span>
+
+- <span data-ttu-id="6beb1-123">**Sondaki sıfırlar.**</span><span class="sxs-lookup"><span data-stu-id="6beb1-123">**Trailing Zeros.**</span></span> <span data-ttu-id="6beb1-124">Visual Basic sondaki sıfırları bir `Decimal` sabit değer içinde depolamaz.</span><span class="sxs-lookup"><span data-stu-id="6beb1-124">Visual Basic does not store trailing zeros in a `Decimal` literal.</span></span> <span data-ttu-id="6beb1-125">Ancak, bir `Decimal` değişken sondaki tüm sıfırları elde edilen hesaplama sırasında korur.</span><span class="sxs-lookup"><span data-stu-id="6beb1-125">However, a `Decimal` variable preserves any trailing zeros acquired computationally.</span></span> <span data-ttu-id="6beb1-126">Aşağıdaki örnek bunu göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="6beb1-126">The following example illustrates this.</span></span>
+
+  ```vb
+  Dim d1, d2, d3, d4 As Decimal
+  d1 = 2.375D
+  d2 = 1.625D
+  d3 = d1 + d2
+  d4 = 4.000D
+  MsgBox("d1 = " & CStr(d1) & ", d2 = " & CStr(d2) &
+        ", d3 = " & CStr(d3) & ", d4 = " & CStr(d4))
+  ```
+
+  <span data-ttu-id="6beb1-127">Önceki örnekteki çıktısı `MsgBox` aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="6beb1-127">The output of `MsgBox` in the preceding example is as follows:</span></span>
+
+  ```
+  d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4
+  ```
+
+- <span data-ttu-id="6beb1-128">**Tür karakterleri.**</span><span class="sxs-lookup"><span data-stu-id="6beb1-128">**Type Characters.**</span></span> <span data-ttu-id="6beb1-129">Değişmez değer türü karakterini `D` bir sabit değere eklemek, `Decimal` veri türüne zorlar.</span><span class="sxs-lookup"><span data-stu-id="6beb1-129">Appending the literal type character `D` to a literal forces it to the `Decimal` data type.</span></span> <span data-ttu-id="6beb1-130">Tanımlayıcı türü karakteri `@` herhangi bir tanımlayıcıya eklemek bunu öğesine `Decimal`zorlar.</span><span class="sxs-lookup"><span data-stu-id="6beb1-130">Appending the identifier type character `@` to any identifier forces it to `Decimal`.</span></span>
+
+- <span data-ttu-id="6beb1-131">**Çerçeve türü.**</span><span class="sxs-lookup"><span data-stu-id="6beb1-131">**Framework Type.**</span></span> <span data-ttu-id="6beb1-132">.NET Framework karşılık gelen tür <xref:System.Decimal?displayProperty=nameWithType> yapısıdır.</span><span class="sxs-lookup"><span data-stu-id="6beb1-132">The corresponding type in the .NET Framework is the <xref:System.Decimal?displayProperty=nameWithType> structure.</span></span>
+
+## <a name="range"></a><span data-ttu-id="6beb1-133">Aralık</span><span class="sxs-lookup"><span data-stu-id="6beb1-133">Range</span></span>
+ <span data-ttu-id="6beb1-134">`D` Bir`Decimal` değişkene veya sabitine büyük bir değer atamak için tür karakterini kullanmanız gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="6beb1-134">You might need to use the `D` type character to assign a large value to a `Decimal` variable or constant.</span></span> <span data-ttu-id="6beb1-135">Bu gereksinim, derleyicinin bir sabit değer türü karakteri değişmez `Long` değer olarak değişmez ve aşağıdaki örnekte gösterildiği gibi değişmez.</span><span class="sxs-lookup"><span data-stu-id="6beb1-135">This requirement is because the compiler interprets a literal as `Long` unless a literal type character follows the literal, as the following example shows.</span></span>
+
+```vb
+Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.
+Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
+Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
+```
+
+<span data-ttu-id="6beb1-136">Öğesine atanan değer `bigDec1` için `Long`aralığında yer aldığından, için bildirimi bir taşma oluşturmaz.</span><span class="sxs-lookup"><span data-stu-id="6beb1-136">The declaration for `bigDec1` doesn't produce an overflow because the value that's assigned to it falls within the range for `Long`.</span></span> <span data-ttu-id="6beb1-137">`Long` Değer `Decimal` değişkene atanabilir.</span><span class="sxs-lookup"><span data-stu-id="6beb1-137">The `Long` value can be assigned to the `Decimal` variable.</span></span>
+
+<span data-ttu-id="6beb1-138">Öğesine atanan değer `bigDec2` için `Long`çok büyük olduğundan, için bildirimi bir taşma hatası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="6beb1-138">The declaration for `bigDec2` generates an overflow error because the value that's assigned to it is too large for `Long`.</span></span> <span data-ttu-id="6beb1-139">Sayısal sabit değer önce bir `Long`olarak yorumlanamadığından `Decimal` değişkenine atanamaz.</span><span class="sxs-lookup"><span data-stu-id="6beb1-139">Because the numeric literal can't first be interpreted as a `Long`, it can't be assigned to the `Decimal` variable.</span></span>
+
+<span data-ttu-id="6beb1-140">İçin `bigDec3`, değişmez değer türü karakteri `D` , derleyicinin sabit değerini a `Decimal` `Long`yerine bir olarak yorumlamasını zorlayarak sorunu çözer.</span><span class="sxs-lookup"><span data-stu-id="6beb1-140">For `bigDec3`, the literal type character `D` solves the problem by forcing the compiler to interpret the literal as a `Decimal` instead of as a `Long`.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="6beb1-141">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6beb1-141">See also</span></span>
 
 - <xref:System.Decimal?displayProperty=nameWithType>
 - <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>
 - <xref:System.Math.Round%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="15855-143">Veri Türleri</span><span class="sxs-lookup"><span data-stu-id="15855-143">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
-- [<span data-ttu-id="15855-144">Single Veri Türü</span><span class="sxs-lookup"><span data-stu-id="15855-144">Single Data Type</span></span>](../../../visual-basic/language-reference/data-types/single-data-type.md)
-- [<span data-ttu-id="15855-145">Double Veri Türü</span><span class="sxs-lookup"><span data-stu-id="15855-145">Double Data Type</span></span>](../../../visual-basic/language-reference/data-types/double-data-type.md)
-- [<span data-ttu-id="15855-146">Tür Dönüştürme İşlevleri</span><span class="sxs-lookup"><span data-stu-id="15855-146">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="15855-147">Dönüştürme Özeti</span><span class="sxs-lookup"><span data-stu-id="15855-147">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [<span data-ttu-id="15855-148">Veri Türlerinin Etkili Kullanımı</span><span class="sxs-lookup"><span data-stu-id="15855-148">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [<span data-ttu-id="6beb1-142">Veri Türleri</span><span class="sxs-lookup"><span data-stu-id="6beb1-142">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
+- [<span data-ttu-id="6beb1-143">Single Veri Türü</span><span class="sxs-lookup"><span data-stu-id="6beb1-143">Single Data Type</span></span>](../../../visual-basic/language-reference/data-types/single-data-type.md)
+- [<span data-ttu-id="6beb1-144">Double Veri Türü</span><span class="sxs-lookup"><span data-stu-id="6beb1-144">Double Data Type</span></span>](../../../visual-basic/language-reference/data-types/double-data-type.md)
+- [<span data-ttu-id="6beb1-145">Tür Dönüştürme İşlevleri</span><span class="sxs-lookup"><span data-stu-id="6beb1-145">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="6beb1-146">Dönüştürme Özeti</span><span class="sxs-lookup"><span data-stu-id="6beb1-146">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [<span data-ttu-id="6beb1-147">Veri Türlerinin Etkili Kullanımı</span><span class="sxs-lookup"><span data-stu-id="6beb1-147">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
