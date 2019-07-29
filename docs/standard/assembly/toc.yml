@@ -1,0 +1,11 @@
+- name: .NET’te bütünleştirilmiş kodlar
+  href: index.md
+  items:
+    - name: Arkadaş derlemeleri
+      items:
+        - name: Genel Bakış
+          href: friend-assemblies.md
+    - name: .NET derlemesi dosya biçimi
+      href: file-format.md
+    - name: .NET Core’da kaldırabilme özelliğini kullanma ve hatalarını ayıklama
+      href: unloadability-howto.md
