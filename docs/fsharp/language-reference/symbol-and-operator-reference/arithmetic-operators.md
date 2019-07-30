@@ -1,68 +1,68 @@
 ---
 title: Aritmetik İşleçler
-description: Kullanılabilen aritmetik işleçler hakkında bilgi edinin F# programlama dilidir.
+description: F# Programlama dilinde kullanılabilen aritmetik işleçler hakkında bilgi edinin.
 ms.date: 04/04/2018
-ms.openlocfilehash: 74ab813a7ca5018b6bd084aea10627e4afd62015
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b783a0134541f11f06dde83af97676699b797da1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641656"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630788"
 ---
 # <a name="arithmetic-operators"></a>Aritmetik İşleçler
 
-Bu konu, kullanılabilen aritmetik işleçler açıklar F# dili.
+Bu konuda, F# dilde kullanılabilen aritmetik işleçler açıklanmaktadır.
 
-## <a name="summary-of-binary-arithmetic-operators"></a>İkili aritmetik işleçler özeti
+## <a name="summary-of-binary-arithmetic-operators"></a>Ikili aritmetik Işleçlerin Özeti
 
-Kutulanmamış integral ve kayan nokta türleri için kullanılabilen ikili aritmetik işleçleri aşağıdaki tabloda özetlenmiştir.
+Aşağıdaki tabloda, kutulanmamış integral ve kayan nokta türleri için kullanılabilen ikili aritmetik işleçler özetlenmektedir.
 
 |İkili işleç|Notlar|
 |---------------|-----|
-|`+` (Ayrıca, artı)|İşaretlenmemiş. Sayı birlikte eklendiğinde olası taşma durumu ve toplama türü tarafından desteklenen en fazla mutlak değeri aşıyor.|
-|`-` (çıkarma, eksi)|İşaretlenmemiş. Olası underflow imzasız türler çıkarılan veya kayan nokta değerleri türüne göre gösterilemeyecek kadar çok küçük olduğunda koşul.|
-|`*` (çarpma, saatler)|İşaretlenmemiş. Sayı çarpıldığında olası taşma durumu ve ürün türüne göre desteklenen maksimum mutlak değeri aşıyor.|
-|`/` (bölme, bölünen)|Neden sıfır ile bölme bir <xref:System.DivideByZeroException> tam sayı türleri için. Kayan nokta türleri için özel bir kayan nokta değerleri verir sıfıra bölünme `+Infinity` veya `-Infinity`. Aynı zamanda bir kayan noktalı sayı türü ile ifade için çok küçük olduğunda da olası yetersiz koşulu yoktur.|
-|`%` (geri kalan, rem)|Bölme işlemindeki kalanı döndürür. Sonucun işaretine göre birinci işlenenin oturum ile aynıdır.|
-|`**` (üs olarak gösterme üzeri)|Sonuç türü için en fazla mutlak değeri aştığında olası taşma durumu.<br /><br />Üs olarak gösterme işlecini yalnızca kayan nokta türleriyle çalışır.|
+|`+`(toplama, artı)|Olmayan. Sayılar birlikte eklendiğinde olası taşma koşulu ve toplam, türün desteklediği en büyük mutlak değeri aşıyor.|
+|`-`(çıkarma, eksi)|Olmayan. İşaretsiz türler çıkarıldığında veya kayan nokta değerleri tür tarafından gösterilemeyecek kadar küçük olduğunda olası yetersiz yer durumu.|
+|`*`(çarpma, saatler)|Olmayan. Sayılar çarpıldığı zaman ve ürün, türün desteklediği en büyük mutlak değeri aştığında olası taşma koşulu.|
+|`/`(bölme, bölünmüş olarak)|Sıfıra bölme, tam sayı <xref:System.DivideByZeroException> türlerine neden olur. Kayan nokta türleri için, sıfıra bölme size özel kayan nokta değerleri `+Infinity` veya `-Infinity`sağlar. Bir kayan noktalı sayı, tür tarafından gösterilemeyecek kadar küçük olduğunda da olası bir yetersiz yer vardır.|
+|`%`(kalan, REM)|Bölüm işleminin kalanını döndürür. Sonucun işareti, İlk işlenenin işaretiyle aynıdır.|
+|`**`(üs, kuvvetle)|Sonuç, türün en büyük mutlak değerini aştığında olası taşma koşulu.<br /><br />Üs işleci yalnızca kayan nokta türleri ile kullanılabilir.|
 
-## <a name="summary-of-unary-arithmetic-operators"></a>Birli aritmetik işleçler özeti
+## <a name="summary-of-unary-arithmetic-operators"></a>Birli aritmetik Işleçlerin Özeti
 
-İntegral ve kayan nokta türleri için kullanılabilen birli aritmetik işleçler aşağıdaki tabloda özetlenmiştir.
+Aşağıdaki tabloda, integral ve kayan nokta türleri için kullanılabilen birli aritmetik işleçler özetlenmektedir.
 
 |Birli işleç|Notlar|
 |--------------|-----|
-|`+` (pozitif)|Herhangi bir aritmetik ifade uygulanabilir. Değerin oturum değiştirmez.|
-|`-` (olumsuzlama, negatif)|Herhangi bir aritmetik ifade uygulanabilir. Oturum değeri değiştirir.|
+|`+`pozitif|Herhangi bir aritmetik ifadeye uygulanabilir. Değerin işaretini değiştirmez.|
+|`-`(olumsuzlama, negatif)|Herhangi bir aritmetik ifadeye uygulanabilir. Değerin işaretini değiştirir.|
 
-Taşma veya yetersiz gelme tam sayı türleri için davranış sarma yüklemektir. Bu, hatalı bir sonuç neden olur. Tamsayı taşması yazılım için hesap için değil yazıldığında, güvenlik sorunlarına katkıda bulunabilir Potansiyel ciddi bir sorundur. Bu, uygulamanız için önemliyse, işaretli işleçleri kullanarak göz önünde bulundurun `Microsoft.FSharp.Core.Operators.Checked`.
+Tam sayı türleri için taşma veya yetersiz gelme davranışı etrafında sarılmalıdır. Bu, hatalı bir sonuca neden olur. Tamsayı taşması, yazılım hesaba yazılmadığından güvenlik sorunlarına katkıda bulunabilecek ciddi bir sorundur. Uygulamanız için bir sorun varsa, içindeki `Microsoft.FSharp.Core.Operators.Checked`işaretli işleçleri kullanmayı göz önünde bulundurun.
 
-## <a name="summary-of-binary-comparison-operators"></a>İkili Karşılaştırma işleçleri özeti
+## <a name="summary-of-binary-comparison-operators"></a>Ikili karşılaştırma Işleçleri Özeti
 
-İntegral ve kayan nokta türleri için kullanılabilen ikili Karşılaştırma işleçleri aşağıdaki tabloda gösterilmektedir. Bu işleçler dönüş türü değerleri `bool`.
+Aşağıdaki tabloda, integral ve kayan nokta türleri için kullanılabilen ikili karşılaştırma işleçleri gösterilmektedir. Bu işleçler tür `bool`değerlerini döndürür.
 
-IEEE kayan Noktası temsili bir tam eşitlik işlemi desteklemediği için kayan nokta sayıları hiçbir zaman doğrudan eşitlik için karşılaştırılması gereken. Kodu inceleyerek eşit olacak şekilde kolayca doğrulayabilirsiniz iki sayı aslında farklı bit temsilleri olabilir.
+IEEE kayan nokta temsili tam bir eşitlik işlemini desteklemediğinden, kayan nokta numaraları asla eşitlik için karşılaştırılamaz. Kodu inceleyerek kolayca doğrulayabilecek iki sayı, aslında farklı bit temsillerine sahip olabilir.
 
 |İşleç|Notlar|
 |--------|-----|
-|`=` (eşitlik, eşittir)|Bu, bir atama işleci değil. Karşılaştırma için kullanılır. Bu genel bir işlecidir.|
-|`>` (büyüktür)|Bu genel bir işlecidir.|
-|`<` (küçüktür)|Bu genel bir işlecidir.|
-|`>=` (büyüktür veya eşittir)|Bu genel bir işlecidir.|
-|`<=` (küçüktür veya eşittir)|Bu genel bir işlecidir.|
-|`<>` (eşit değildir)|Bu genel bir işlecidir.|
+|`=`(eşitlik, eşittir)|Bu bir atama işleci değildir. Yalnızca karşılaştırma için kullanılır. Bu genel bir işleçtir.|
+|`>`(büyüktür)|Bu genel bir işleçtir.|
+|`<`(küçüktür)|Bu genel bir işleçtir.|
+|`>=`(büyüktür veya eşittir)|Bu genel bir işleçtir.|
+|`<=`(küçüktür veya eşittir)|Bu genel bir işleçtir.|
+|`<>`(eşit değildir)|Bu genel bir işleçtir.|
 
-## <a name="overloaded-and-generic-operators"></a>Aşırı yüklenmiş ve genel işleçler
+## <a name="overloaded-and-generic-operators"></a>Aşırı yüklenmiş ve genel Işleçler
 
-Tüm bu konuda tartışılan işleçlerinin tanımlanan **Microsoft.FSharp.Core.Operators** ad alanı. İşleçlerin bazıları, statik olarak çözümlenmiş tür parametreleri kullanılarak tanımlanır. Bu, tek tek operatörü ile çalışan her belirli tür tanımlarında olduğu anlamına gelir. Bu kategoride olan tüm tekli veya ikili aritmetik ve bit düzeyinde işleçler. Karşılaştırma işleçleri geneldir ve bu nedenle değil yalnızca temel aritmetik türlerin her tür ile çalışma. Ayrılmış birleşim ve kayıt türleri tarafından oluşturulan kendi özel uygulamalar sahip F# derleyici. Sınıf türleri yöntemi kullanın <xref:System.Object.Equals%2A>.
+Bu konuda açıklanan tüm işleçler **Microsoft. FSharp. Core. Operators** ad alanında tanımlanmıştır. Bazı işleçlerden bazıları statik olarak çözümlenen tür parametreleri kullanılarak tanımlanır. Bu, bu işleçle birlikte çalışarak her bir özel tür için ayrı tanımlar olduğu anlamına gelir. Birli ve ikili aritmetik ve bit düzeyinde işleçlerin hepsi bu kategoride bulunur. Karşılaştırma işleçleri geneldir ve bu nedenle yalnızca temel aritmetik türler değil, herhangi bir türle çalışır. Ayırt edici birleşim ve kayıt türlerinin, F# derleyici tarafından oluşturulan kendi özel uygulamaları vardır. Sınıf türleri yöntemini <xref:System.Object.Equals%2A>kullanır.
 
-Genel işleçler özelleştirilebilir. Karşılaştırma işlevleri özelleştirmek için geçersiz kılma <xref:System.Object.Equals%2A> kendi özel eşitlik karşılaştırması sağlayın ve ardından uygulamak için <xref:System.IComparable>. <xref:System.IComparable?displayProperty=nameWithType> Arabirimi tek bir yöntemi vardır <xref:System.IComparable.CompareTo%2A> yöntemi.
+Genel işleçler özelleştirilebilir. Karşılaştırma işlevlerini özelleştirmek için, özel eşitlik <xref:System.Object.Equals%2A> karşılaştırmayı sağlamak üzere geçersiz kılın ve ardından uygulayın. <xref:System.IComparable> Arabirimin tek bir yöntemi <xref:System.IComparable.CompareTo%2A> , yöntemi vardır. <xref:System.IComparable?displayProperty=nameWithType>
 
 ## <a name="operators-and-type-inference"></a>İşleçler ve tür çıkarımı
 
-Bu işlecinde tür çıkarımı bir işleç bir ifadede kullanılmasını kısıtlar. Ayrıca, işleçlerinin kullanımı bir aritmetik tür gösterdiğinden otomatik Genelleştirme işleçleri kullanımını engeller. Diğer herhangi bir bilgi olmadığında F# derleyici çıkarsar `int` aritmetik ifade türü. Başka bir tür belirterek bu davranışı geçersiz kılabilirsiniz. Bu nedenle bağımsız değişken türleri ve dönüş türünü `function1` olması için aşağıdaki kodda algılanır `int`, ancak türleri için `function2` olmasını çıkarılan `float`.
+Bir ifadede işleç kullanımı, bu işlecin tür çıkarımını kısıtlar. Ayrıca, işleçlerin kullanımı aritmetik bir tür gösterdiği için işleçlerin kullanılması otomatik genelleştirmeyi engeller. Diğer tüm bilgiler yokluğunda, F# derleyici `int` aritmetik ifadeler türü olarak ifade ediyor. Başka bir tür belirterek bu davranışı geçersiz kılabilirsiniz. Bu nedenle, aşağıdaki kodda bağımsız değişken türleri `function1` ve dönüş türü olarak algılanır `int` `function2` , ancak türleri olarak algılanır `float`.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3501.fs)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,30 +11,30 @@ helpviewer_keywords:
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb42c04df6e02ff43421b7af6bf2d51b53aa3e69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d97ee808ef7d2a14902259c47227b787f0830fb
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755135"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629386"
 ---
 # <a name="disconnectedcontext-mda"></a>disconnectedContext MDA
-`disconnectedContext` Yönetilen hata ayıklama Yardımcısı (MDA), bir COM nesnesi ile ilgili bir istek bakım sırasında geçiş bağlantısı kesilen grubu veya bağlamı CLR girişiminde bulunduğunda etkinleştirilir.  
+`disconnectedContext` Yönetilen hata ayıklama Yardımcısı (MDA), clr bir com nesnesiyle ilgili bir isteğe hizmet verirken, bağlantısı kesilen bir gruba veya içeriğe geçişe çalıştığında etkinleştirilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Üzerinde yapılan çağrıları bir [çalışma zamanı çağrılabilir sarmalayıcı](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) temel alınan bir COM bileşeni geçerli Grup ya da yerine, mevcut bir içerik teslim edilir. Bu, tek iş parçacıklı grup (STA) bileşenleri durumunda olduğu gibi birden çok iş parçacıklı COM bileşeni değilse bozulmasına ve/veya veri kaybına neden olabilir. RCW kendisi bir proxy varsa, alternatif olarak, arama, atma neden olabilir bir <xref:System.Runtime.InteropServices.COMException> , bir HRESULT RPC_E_WRONG_THREAD ile.  
+ [Çalışma zamanında çağrılabilir sarmalayıcı](../../../docs/standard/native-interop/runtime-callable-wrapper.md) (RCW) üzerinde yapılan çağrılar, mevcut grubun veya bağlamdaki temel alınan com bileşenine sahip oldukları bir yerine, geçerli grupta veya bağlamda dağıtılır. Bu, tek iş parçacıklı apartman (STA) bileşenlerinde olduğu gibi COM bileşeni çok iş parçacıklı değilse bozulma ve veri kaybına neden olabilir. Alternatif olarak, RCW kendisi bir ara sunucu ise, çağrı bir <xref:System.Runtime.InteropServices.COMException> HRESULT RPC_E_WRONG_THREAD ile birlikte Oluşturuma yol açabilir.  
   
 ## <a name="cause"></a>Sebep  
- İçine geçişi CLR girişiminde bulunduğunda OLE grubu veya bağlamı kapatıldı. Bu genellikle tüm grup tarafından sahip olunan COM bileşenleri tamamen olan bu serbest önce bilgisayarı Kapat kullanıcı kodundan bir RCW veya CLR, COM bileşeni düzenleme sırasında açık bir çağrı sonucu olarak ortaya çıkabilir STA apartmanlar kaynaklanır , örneğin, CLR serbest COM bileşeni ilişkili RCW atık bırakıldığında.  
+ CLR kendisine geçişe çalıştığında OLE Apartmanı veya bağlamı kapatıldı. Bu en yaygın olarak, grubun sahip olduğu tüm COM bileşenleri tamamen serbest bırakılmadan, bu durum genellikle, bir RCW 'daki kullanıcı kodundan gelen açık çağrının veya CLR 'nin COM bileşenini düzenleme yaptığı sırada gerçekleşebilir. Örneğin, CLR, ilişkili RCW atık olarak toplandığında COM bileşeni serbest bırakıldığında.  
   
 ## <a name="resolution"></a>Çözüm  
- Bu sorunu önlemek için uygulama grupta Canlı tüm nesneleri ile bitmeden önce STA sahip iş parçacığının sonlanmamasına emin olun. Aynı bağlamı için geçerlidir; uygulamanın bir bağlam içinde Canlı tüm COM bileşenlerini tamamen tamamlanmış olduğu önce bağlamları kapalı değil emin olun.  
+ Bu sorundan kaçınmak için, STA sahip olan iş parçacığının, uygulama, grupta bulunan tüm nesnelerle tamamlanmadan önce sonlandırılmadığından emin olun. Aynı bağlamda geçerlidir; uygulamanın, bağlam içinde yaşayan herhangi bir COM bileşeni ile tamamen bitmeden önce bağlamların kapanmadığından emin olun.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
- Bu mda'nın CLR üzerinde etkisi yoktur. Yalnızca veri bağlantısı kesilen bağlam hakkında raporlar.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Bu MDA, CLR üzerinde hiçbir etkisi yoktur. Yalnızca bağlantısı kesilen bağlamla ilgili verileri raporlar.  
   
 ## <a name="output"></a>Çıkış  
- Bağlantısı kesilen grubu veya bağlamı bağlam tanımlama bilgisini bildirir.  
+ Bağlantısı kesilen grubun veya bağlamın bağlam tanımlama bilgisini raporlar.  
   
 ## <a name="configuration"></a>Yapılandırma  
   

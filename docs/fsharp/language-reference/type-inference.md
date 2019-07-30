@@ -1,57 +1,57 @@
 ---
 title: Tür Çıkarma
-description: Bilgi nasıl F# derleyici değerleri, değişkenleri, parametreler ve dönüş değerleri türlerini algılar.
+description: F# Derleyicinin değer, değişken, parametre ve dönüş değeri türlerini nasıl kullandığını öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: ab1a4aa8df4312287df749d5d6d0ea2858091152
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4b18c1a67a8b7ddadb4fb334ea4736e9fd29feb0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641672"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630186"
 ---
 # <a name="type-inference"></a>Tür Çıkarma
 
-Bu konu açıklar nasıl F# derleyici değerleri, değişkenleri, parametreler ve dönüş değerleri türlerini algılar.
+Bu konu, F# derleyicinin değer, değişken, parametre ve dönüş değeri türlerini nasıl kullandığını açıklar.
 
-## <a name="type-inference-in-general"></a>Genel tür çıkarımı
+## <a name="type-inference-in-general"></a>Genel olarak tür çıkarımı
 
-Türlerini belirtmek gerekmez tür çıkarımı fikirdir F# yapıları hariç, derleyicinin türü yaratacağı çıkarılamıyor. Açık tür bilgileri atlama gelmez, F# dinamik olarak yazılmış bir dildir veya bu değerleri F# zayıf sahipli olan türü belirtilmiş. F#Derleyici, derleme sırasında her yapı için tam bir tür çıkarır anlamına gelen bir statik olarak belirlenmiş, dilidir. Her yapı türlerini kullanarak derleyicinin için yeterli bilgi değilse açık tür ek açıklamaları yere kod ekleyerek ek tür bilgileri, genellikle sağlamalısınız.
+Tür çıkarımı, derleyicinin türü yaratacağı ne zaman bir F# değer çıkarmadığını hariç, yapı türlerini belirtmeniz gerekmez. Açık tür bilgilerinin atlanması, dinamik olarak yazılmış F# bir dil olan veya ' deki F# değerlerin zayıf olarak yazıldığı anlamına gelmez. F#statik olarak yazılmış bir dildir, bu, derleyicinin derleme sırasında her bir yapı için tam bir tür olarak kesintiler anlamına gelir. Derleyicinin her bir yapının türünü vermesini sağlamak için yeterli bilgi yoksa, genellikle kodda bir yere açık tür ek açıklamaları ekleyerek ek tür bilgileri sağlamanız gerekir.
 
-## <a name="inference-of-parameter-and-return-types"></a>Çıkarım parametre ve dönüş türleri
+## <a name="inference-of-parameter-and-return-types"></a>Parametre ve dönüş türlerinin çıkarımı
 
-Bir parametre listesinde her parametresinin türünü belirtmeniz gerekmez. Ve henüz F# statik olarak yazılmış bir dildir ve bu nedenle her değer ve ifade derleme zamanında kesin bir türe sahip. Türlerine her zaman açık belirtmeyin bağlamına dayalı türü derleyicinin çıkarır. Belirtilen tür Aksi durumda değilse, genel olarak algılanır. Kod bir değer tutarsız kullanıyorsa, şekilde olduğunu Hayır tek bir değerin tüm kullanımları derleyici bir hata bildiriyor karşılayan türün gösterilmesi.
+Bir parametre listesinde, her parametrenin türünü belirtmeniz gerekmez. Ancak, F# statik olarak yazılmış bir dildir ve bu nedenle her değer ve ifadede derleme zamanında kesin bir tür vardır. Açıkça belirtmedikleri türler için, derleyici bu türü bağlama göre alır. Tür başka bir şekilde belirtilmemişse, genel olarak algılanır. Kod, bir değeri tutarsız bir şekilde kullanıyorsa, bir değerin tüm kullanımlarını karşılayan tek bir Çıkarsanan tür yoksa, derleyici bir hata bildirir.
 
-Bir işlevin dönüş türü işlevdeki son ifadenin türü tarafından belirlenir.
+İşlevin dönüş türü, işlevdeki son ifadenin türüne göre belirlenir.
 
-Örneğin, aşağıdaki kodda, parametre türleri `a` ve `b` ve dönüş türü tüm çıkarılan olmasını `int` çünkü değişmez değer `100` türünde `int`.
+Örneğin, aşağıdaki kodda, parametre türleri `a` ve `b` ve dönüş türü, değişmez değer `100` türünde `int`olduğu için `int` hepsi olarak algılanır.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet301.fs)]
 
-Tür çıkarımı değişmez değerleri değiştirerek etkileyebilir. Siz `100` bir `uint32` soneki ekleyerek `u`, türlerini `a`, `b`, ve dönüş değeri olarak ortaya çıkan `uint32`.
+Sabit değerleri değiştirerek tür çıkarımı etkileyebilir. `100` `uint32` `uint32` `b`Son Eki`u`ekleyerek bir yaparsanız,,, ve dönüş değerinin türü olarakalgılanır.`a`
 
-Ayrıca etkileyebilir çıkarımı işlevleri ve yalnızca belirli bir tür ile çalışan yöntemleri gibi tür kısıtlamalar yaptığından diğer yapıları kullanarak yazın.
+Tür çıkarımı, yalnızca belirli bir türle çalışan işlevler ve yöntemler gibi tür kısıtlamalarını belirten diğer yapıları kullanarak da etkileyebilir.
 
-Ayrıca, açık bir tür ek açıklamaları, ifadelerdeki değişkenler veya işlev veya metot parametreleri aşağıdaki örneklerde gösterildiği gibi uygulayabilirsiniz. Farklı kısıtlamaları arasında çakışma olursa, hatalara neden.
+Ayrıca, aşağıdaki örneklerde gösterildiği gibi, işlev veya yöntem parametrelerine ya da deyimlerdeki değişkenlere açık tür ek açıklamaları uygulayabilirsiniz. Hatalar, farklı kısıtlamalar arasında çakışmalar oluşursa oluşur.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet302.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet302.fs)]
 
-Ayrıca, bir tür ek açıklamasına tüm parametreleri sağlayarak bir işlevin dönüş değeri de açıkça belirtebilirsiniz.
+Ayrıca, tüm parametrelerden sonra bir tür ek açıklaması sağlayarak bir işlevin dönüş değerini açıkça belirtebilirsiniz.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet303.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet303.fs)]
 
-Bir tür ek açıklamasına parametre üzerinde kullanışlı olduğu bir yaygın parametresi bir nesne türü ve üye kullanmak istediğiniz bir durumdur.
+Bir parametre üzerinde yararlı bir tür ek açıklamanın, parametrenin nesne türü olması ve bir üyeyi kullanmak istediğinizde olduğu yaygın bir durumdur.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet304.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet304.fs)]
 
 ## <a name="automatic-generalization"></a>Otomatik Genelleştirme
 
-İşlev kodu bir parametre türüne bağımlı değilse, derleyici genel parametre olarak değerlendirir. Bu adlandırılır *otomatik Genelleştirme*, ve genel kod karmaşıklığı artırmadan yazma için güçlü bir yardımcı olabilir.
+İşlev kodu bir parametre türüne bağımlı değilse, derleyici parametreyi genel olacak şekilde değerlendirir. Buna *Otomatik Genelleştirme*denir ve karmaşıklık arttırmadan genel kod yazmak için güçlü bir yardım olabilir.
 
-Örneğin, aşağıdaki işlev bir demet içinde herhangi bir türde iki parametre birleştirir.
+Örneğin, aşağıdaki işlev herhangi bir türdeki iki parametreyi bir tanımlama grubu içinde birleştirir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet305.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet305.fs)]
 
-Türün olacak şekilde gösterilmesi
+Tür şu şekilde algılanır
 
 ```fsharp
 'a -> 'b -> 'a * 'b
@@ -59,8 +59,8 @@ Türün olacak şekilde gösterilmesi
 
 ## <a name="additional-information"></a>Ek Bilgiler
 
-Tür çıkarımı daha ayrıntılı olarak açıklanan F# dil belirtimi.
+Tür çıkarımı, F# dil belirtiminde daha ayrıntılı olarak açıklanmıştır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Otomatik Genelleştirme](generics/automatic-generalization.md)
+- [Otomatik Genelleştirme](./generics/automatic-generalization.md)

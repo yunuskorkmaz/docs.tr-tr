@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: ffbd59cb398d417a36d75ff0ef9ef4ef143c30c0
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 743b9ec45c138053fcfcb5cbb1ea9c8490ba919e
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484642"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629913"
 ---
 # <a name="typography-in-wpf"></a>WPF'de Tipografi
 Bu konuda, uygulamasının [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]önemli tipografik özellikleri tanıtılmaktadır. Bu özellikler, metin işleme, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipografi desteği, gelişmiş uluslararası metin, gelişmiş yazı tipi desteği ve yeni metin uygulama programlama arabirimleri (API 'ler) için geliştirilmiş kalite ve performans içerir.  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Metnin geliştirilmiş kalitesi ve performansı  
- İçindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metin, metnin açıklık [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]ve okunabilirliğini artıran kullanılarak işlenir. ClearType, dizüstü ekranları, Pocket PC [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] ekranları ve düz panel izleyicileri gibi mevcut LCD 'lerde (sıvı kristal ekranlar) metnin okunabilirliğini artıran, tarafından geliştirilen bir yazılım teknolojisidir. ClearType, bir pikselin kesirli bölümünde karakterler hizalanarak metnin gerçek şeklinin daha büyük bir uygunluğa eşit bir şekilde görüntülenmesine olanak sağlayan alt piksel işleme kullanır. Ek çözüm, metin görüntüleme içindeki küçük ayrıntıların keskinliğini artırarak uzun süreleri okumayı çok daha kolay hale getirir. ' Deki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] başka bir ClearType geliştirmesi, metin karakterlerine yönelik yüzeysel eğrilerinin ve altları düzgüneden, y yönü düzgünleştirmedir. ClearType özellikleri hakkında daha fazla bilgi için bkz. [ClearType Genel Bakış](cleartype-overview.md).  
+ İçindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metin, metnin açıklık ve okunabilirliğini artıran Microsoft ClearType kullanılarak işlenir. ClearType, dizüstü ekranları, Pocket PC [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] ekranları ve düz panel izleyicileri gibi mevcut LCD 'lerde (sıvı kristal ekranlar) metnin okunabilirliğini artıran, tarafından geliştirilen bir yazılım teknolojisidir. ClearType, bir pikselin kesirli bölümünde karakterler hizalanarak metnin gerçek şeklinin daha büyük bir uygunluğa eşit bir şekilde görüntülenmesine olanak sağlayan alt piksel işleme kullanır. Ek çözüm, metin görüntüleme içindeki küçük ayrıntıların keskinliğini artırarak uzun süreleri okumayı çok daha kolay hale getirir. ' Deki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] başka bir ClearType geliştirmesi, metin karakterlerine yönelik yüzeysel eğrilerinin ve altları düzgüneden, y yönü düzgünleştirmedir. ClearType özellikleri hakkında daha fazla bilgi için bkz. [ClearType Genel Bakış](cleartype-overview.md).  
   
  ![ClearType y yönü düzgünleştirmesini içeren metin](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 ClearType y yönünde düzgünleştirme içeren metin  
@@ -156,5 +156,5 @@ ClearType y yönünde düzgünleştirme içeren metin
 - [OpenType Yazı Tipi Özellikleri](opentype-font-features.md)
 - [Biçimlendirilmiş Metin Çizme](drawing-formatted-text.md)
 - [Gelişmiş Metin Biçimlendirme](advanced-text-formatting.md)
-- [Text](optimizing-performance-text.md)
+- [Metin](optimizing-performance-text.md)
 - [Microsoft Tipografi](https://docs.microsoft.com/typography/)

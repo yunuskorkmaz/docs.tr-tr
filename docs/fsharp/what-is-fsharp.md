@@ -1,19 +1,19 @@
 ---
 title: F# nedir?
-description: Hakkında bilgi edinin F# programlama dilinde olduğu ve neler F# programlama benzer. Zengin veri türleri, İşlevler ve bunlar birbirine nasıl uyduğunu hakkında bilgi edinin.
+description: F# Programlama dilinin ne olduğu ve F# programlamanın nasıl olduğu hakkında bilgi edinin. Zengin veri türleri, işlevleri ve nasıl birbirine sığması hakkında bilgi edinin.
 ms.date: 08/03/2018
-ms.openlocfilehash: fc4f4db771c43a4ec08cc9d3a247cf1f38e60457
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0c576fe49fadebd68e4fc9d2b20ea8f0cb991af5
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486838"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630453"
 ---
-# <a name="what-is-f"></a>F nedir\#
+# <a name="what-is-f"></a>F nedir?\#
 
-F#doğru ve sürdürülebilir kod yazmayı kolaylaştıran bir işlevsel programlama dilidir.
+F#, doğru ve sürdürülebilir kod yazmayı kolaylaştıran işlevsel bir programlama dilidir.
 
-F#öncelikle programlama, türler ve tür çıkarımı yapılan ve otomatik olarak genelleştirilmiş işlevleri tanımlama içerir. Bu, odağınızı sorun etki alanı ve programlama ayrıntılarını yerine verilerini düzenleme kalmasına izin verir.
+F#programlama öncelikle, türü çıkarılan ve otomatik olarak Genelleştirilmiş türleri ve işlevleri tanımlamayı içerir. Bu, odağın sorun etki alanında kalmasına ve programlama ayrıntıları yerine verilerinin işlenmesine olanak tanır.
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
@@ -35,9 +35,9 @@ let main args =
     0
 ```
 
-F#dahil olmak üzere çok sayıda özelliğe sahiptir:
+F#Aşağıdakiler dahil olmak üzere çeşitli özelliklere sahiptir:
 
-* Basit sözdizimi
+* Hafif sözdizimi
 * Varsayılan olarak sabit
 * Tür çıkarımı ve otomatik Genelleştirme
 * Birinci sınıf işlevler
@@ -45,11 +45,11 @@ F#dahil olmak üzere çok sayıda özelliğe sahiptir:
 * Desen eşleştirme
 * Zaman uyumsuz programlama
 
-Tam bir özellikler kümesi belgelenir [ F# dil başvurusu](language-reference/index.md).
+Tam özellikler kümesi, [ F# dil başvurusunda](./language-reference/index.md)belgelenmiştir.
 
 ## <a name="rich-data-types"></a>Zengin veri türleri
 
-Veri türleri gibi [kayıtları](language-reference/records.md) ve [ayırt edici birleşimler](language-reference/discriminated-unions.md) , karmaşık verileri ve etki alanları temsil eden olanak tanır.
+[Kayıtlar](./language-reference/records.md) ve [ayırt edici birleşimler](./language-reference/discriminated-unions.md) gibi veri türleri, karmaşık verileri ve etki alanlarını temsil etmenize olanak tanır.
 
 ```fsharp
 // Group data with Records
@@ -72,11 +72,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-F#kayıtlar ve ayrılmış birleşimler, null olmayan, sabit ve kullanımı çok kolay hale getirme varsayılan olarak karşılaştırılabilir.
+F#kayıtlar ve ayrılmış birleşimler, varsayılan olarak boş, değişmez ve karşılaştırılabilir değildir. Bu, kullanımı çok kolay hale getirir.
 
-## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>İşlevler ve desen eşleştirme ile zorlanan doğruluğu
+## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>İşlevler ve model eşleştirme ile uygulanan doğruluk
 
-F#bildirmek kolay ve güçlü uygulamada işlevlerdir. İle birlikte kullanıldığında [desen eşleştirme](language-reference/pattern-matching.md), bunlar, doğruluk, derleyici tarafından zorlanır davranışı tanımlamanızı sağlar.
+F#işlevler, kolayca bildirmek ve güçlü bir uygulamadır. [Desenler eşleştirilirken](./language-reference/pattern-matching.md), doğruluk derleyici tarafından zorlanan davranışı tanımlamanızı sağlar.
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,11 +93,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-F#İşlevler ayrıca birinci parametre olarak geçirilen edilebilmeleri ve diğer işlevlerden döndürülebilir anlamına gelir.
+F#işlevler ayrıca birinci sınıftır, yani Parametreler olarak geçirilebilir ve diğer işlevlerden geri döndürülebilecek anlamına gelir.
 
-## <a name="functions-to-define-operations-on-objects"></a>Nesneler üzerinde işlemleri tanımlamak için işlevleri
+## <a name="functions-to-define-operations-on-objects"></a>Nesneler üzerinde işlem tanımlamak için işlevler
 
-F#blend veri ve işlevsellik gerektiğinde yararlı veri türleri olan nesneleri için tam destek sunar. F#işlevleri, nesneleri işlemek için kullanılır.
+F#, veri ve işlevsellik Blend gerektiğinde yararlı veri türleri olan nesneler için tam desteğe sahiptir. F#işlevleri nesneleri işlemek için kullanılır.
 
 ```fsharp
 type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
@@ -119,8 +119,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-Nesne yönelimli, içinde bir kod yazmak yerine F#, işler kod nesneleri değiştirmek için başka veri türü işlevler için genellikle yazacaksınız. Gibi özellikleri [genel arabirimler](language-reference/interfaces.md), [nesne ifadeleri](language-reference/object-expressions.md)ve kullanmalıdır [üyeleri](language-reference/members/index.md) içinde ortak olan daha büyük F# programlar.
+İçinde F#nesne odaklı kod yazmak yerine, genellikle nesneleri işlemek için işlevleri farklı bir veri türü olarak karşılayan kodu yazarsınız. [Genel arabirimler](./language-reference/interfaces.md), [nesne ifadeleri](./language-reference/object-expressions.md)ve [üyenin](./language-reference/members/index.md) akıllıca kullanımı gibi özellikler daha büyük F# programlarda ortaktır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Daha büyük bir hakkında daha fazla bilgi edinmek için F# özellikleri kullanıma [ F# Turu](tour.md).
+Daha büyük bir F# özellikler kümesi hakkında daha fazla bilgi edinmek için [ F# tura](tour.md)göz atın.

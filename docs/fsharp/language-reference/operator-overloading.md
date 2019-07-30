@@ -1,17 +1,17 @@
 ---
 title: İşleç Aşırı Yüklemesi
-description: Aritmetik işleçler bir sınıf ya da kayıt türü ve içinde genel düzeyde aşırı öğrenin F#.
+description: Bir sınıf veya kayıt türündeki ve içindeki F#genel düzeyde aritmetik işleçleri aşırı yüklemeyi öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: f4b63818cbdc44d214dca6446162ec9a8922f601
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c656c1c47938e62386c8f063cf9a6caaaf69d0fe
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645358"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627393"
 ---
 # <a name="operator-overloading"></a>İşleç Aşırı Yüklemesi
 
-Bu konu, bir sınıf ya da kayıt türü ve genel düzeyde aritmetik işleçler aşırı açıklar.
+Bu konu, bir sınıf veya kayıt türünde ve genel düzeyde aritmetik işleçlerin nasıl aşırı yükleneceğini açıklar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -25,37 +25,37 @@ let [inline] (operator-symbols) parameter-list = function-body
 
 ## <a name="remarks"></a>Açıklamalar
 
-Önceki sözdiziminde, *operatör sembolünü* biri `+`, `-`, `*`, `/`, `=`ve benzeri. *Parametre-listesi* işlenenler sırada operatörü için her zamanki sözdiziminde görüntülendiğini belirtir. *Yöntem gövdesini* sonuç değeri oluşturur.
+Önceki sözdiziminde, *operator-symbol* `+` `-` `*` ,,`/`,, vb. ' denbiridir.`=` *Parametre-listesi* , işlenenleri söz konusu işlecin olağan sözdiziminde göründükleri sırada belirtir. *Yöntem-gövde* , elde edilen değeri oluşturur.
 
-İşleçler için işleç aşırı yüklemeleri statik olmalıdır. İşleç aşırı birli işleçler için gibi `+` ve `-`, bir tilde kullanmanız gerekir (`~`) içinde *operatör sembolünü* gösterildiği işleci birli işleç ve ikili bir işleç değil, olduğunu belirtmek için Aşağıdaki bildirimi.
+İşleçler için işleç aşırı yüklemelerinin statik olması gerekir. `+` `~`Ve gibi`-`Birli İşleçler için işleç aşırı yüklemeleri, işlecin, aşağıda gösterildiği gibi bir birli işleç olduğunu ve bir ikili işleç olduğunu göstermek için *operator-symbol* içinde bir tilde () kullanması gerekir bağımsız.
 
 ```fsharp
 static member (~-) (v : Vector)
 ```
 
-Aşağıdaki kod, yalnızca iki işleçleri olan vector sınıfı göstermektedir biri tek işlenenli eksi işareti, diğeri bir skaler tarafından çarpma için. İşleç skaler ve vektör görünme sırasını bağımsız olarak çalışması gerekir çünkü örnekte, skaler çarpma için iki aşırı yüklemesi gerekir.
+Aşağıdaki kod, biri birli eksi ve bir skalar ile çarpma için olmak üzere yalnızca iki işleçle bir vektör sınıfını gösterir. Örnekte, skalar çarpma için iki aşırı yükleme gerekir, çünkü operatör vektör ve skaler 'in göründüğü sıraya bakılmaksızın çalışır.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4001.fs)]
 
-## <a name="creating-new-operators"></a>Yeni işleçleri oluşturma
+## <a name="creating-new-operators"></a>Yeni Işleçler oluşturma
 
-Tüm standart işleçleri aşırı yükleyebilirler, ancak belirli karakter dizilerinin dışında yeni işleçleri de oluşturabilirsiniz. İşleç karakterler izin `!`, `%`, `&`, `*`, `+`, `-`, `.`, `/`, `<`, `=`, `>`, `?`, `@`, `^`, `|`, ve `~`. `~` Karakter işleci birli hale getirme özel bir anlamı vardır ve işleci karakter dizisinin bir parçası değil. Tüm işleçler birli yapılabilir.
+Tüm standart işleçleri aşırı yükleyebilirsiniz, ancak belirli karakter dizileri dışında yeni işleçler de oluşturabilirsiniz. İzin verilen işleç karakterleri `!` `%` `&`, ,`*`,, ,`-`, ,`/`,, ,`=`, `.` `+` `<` `>` `?`,,, ve`~`. `@` `^` `|` `~` Karakter, bir işleç birli oluşturma ve işleç karakter sırasının bir parçası olmayan özel anlamdadır. Tüm işleçler birli yapılamaz.
 
-Kullandığınız tam karakter dizisi bağlı olarak, belirli bir öncelik ve ilişkisellik operatörünüze sahip olur. Birleşim sağdan sola veya sağa ya da bırakılabilir ve parantezler olmadan dizisi aynı öncelik düzeyine operatörleri görünür olduğunda kullanılır.
+Kullandığınız tam karakter dizisine bağlı olarak, operatörünüzün belirli bir önceliği ve ilişkilendirilebilirliği olur. İlişkilendirilebilirlik, sola veya sağdan sola doğru olabilir ve aynı öncelik düzeyindeki operatörler parantez olmadan sırayla gösterildiğinde kullanılır.
 
 İşleç karakter `.` Örneğin, gibiişleçlerinoluşturmakaynıöncelikvebirleşimsıradançarpmaolaraksahipçarpmakendisürümünütanımlamakistiyorsanız,böyleceönceliği,etkilemez`.*`.
 
-Yalnızca işleçler `?` ve `?<-` ile başlayabilir `?`.
+Yalnızca işleçler `?` ve `?<-` ile `?`başlayabilir.
 
-Tüm işleçler, öncelik gösteren bir tablo F# bulunabilir [simge ve işleç başvurusu](symbol-and-operator-reference/index.md).
+İçindeki F# tüm işleçlerin önceliğini gösteren bir tablo, [sembol ve işleç başvurusunda](./symbol-and-operator-reference/index.md)bulunabilir.
 
-## <a name="overloaded-operator-names"></a>Aşırı yüklenmiş işleç adları
+## <a name="overloaded-operator-names"></a>Aşırı yüklenmiş Işleç adları
 
-Zaman F# derleyici derler işleci bir ifade, işleç için derleyici tarafından oluşturulan bir ada sahip bir yöntem oluşturur. Bu yöntemin Microsoft Ara dilini (MSIL) ve aynı zamanda yansıma ve IntelliSense görünen addır. Normalde bu adları kullanmanız gerekmez F# kod.
+F# Derleyici bir işleç ifadesi derlediğinde, bu işleç için derleyicinin ürettiği bir ada sahip bir yöntem oluşturur. Bu, yöntemi için Microsoft ara dili (MSIL) ve ayrıca yansıma ve IntelliSense içinde görünen addır. Normalde bu adları F# kodda kullanmanız gerekmez.
 
-Standart işleçleri aşağıdaki tabloda gösterilmiştir ve bunlara karşılık gelen adları oluşturulur.
+Aşağıdaki tabloda, standart işleçler ve bunlara karşılık gelen oluşturulan adlar gösterilmektedir.
 
-|İşleç|Oluşturulan adı|
+|İşleç|Oluşturulan ad|
 |--------|--------------|
 |`[]`|`op_Nil`|
 |`::`|`op_Cons`|
@@ -95,9 +95,9 @@ Standart işleçleri aşağıdaki tabloda gösterilmiştir ve bunlara karşılı
 |`..`|`op_Range`|
 |`.. ..`|`op_RangeStep`|
 
-Burada listelenmeyen işleci karakter diğer birleşimleri işleçleri kullanılabilir ve aşağıdaki tablodan karakterlerin tek tek adlarını birleştirerek oluşur adlara sahip. Örneğin, +! olur `op_PlusBang`.
+Burada listelenmeyen işleç karakterlerinin diğer birleşimleri, işleçler olarak kullanılabilir ve aşağıdaki tablodaki tek karakterlerin adlarını birleştirerek oluşturulan adlara sahip olabilir. Örneğin, +! olur `op_PlusBang`.
 
-|İşleç karakter|Ad|
+|İşleç karakteri|Ad|
 |------------------|----|
 |`>`|`Greater`|
 |`<`|`Less`|
@@ -121,17 +121,17 @@ Burada listelenmeyen işleci karakter diğer birleşimleri işleçleri kullanıl
 |`[`|`LBrack`|
 |`]`|`RBrack`|
 
-## <a name="prefix-and-infix-operators"></a>Önek ve İçtakı işleçleri
+## <a name="prefix-and-infix-operators"></a>Ön ek ve ınfıx Işleçleri
 
-*Önek* işleçleri, işleç veya işlev gibi işlenenler önüne yerleştirileceği beklenir. *İnfix* işleçleri arasında iki işlenenden yerleştirilecek beklenir.
+*Önek* işleçlerinin, bir işlev gibi bir işlenenin veya işlenenlerin önüne yerleştirilmesi beklenmektedir. *Indüzeltilme* işleçlerinin iki işlenen arasına yerleştirilmesi beklenmektedir.
 
-Yalnızca bazı işleçlerin önek operatörleri kullanılabilir. Bazı işleçleri her zaman önek operatörleri, diğerleri içtakı veya önek olabilir ve geri kalan her zaman işleçleri infix. Şununla işleçleri `!`, dışında `!=`and işleci `~`, veya yinelenen dizileri`~`, her zaman önek işleçleridir. İşleçler `+`, `-`, `+.`, `-.`, `&`, `&&`, `%`, ve `%%` önek işleçleri veya işleçler infix olabilir. Ekleyerek bu işleçlerin önek sürümünü iç sürümünden ayırt bir `~` başında tanımlandığında, bu önek işleci. `~` Yalnızca tanımlandığında işleci kullandığınızda kullanılmaz.
+Yalnızca belirli işleçler önek işleçleri olarak kullanılabilir. Bazı işleçler her zaman ön ek işleçleridir, diğerleri geçersiz veya ön ek olabilir ve REST, her zaman geri düzeltilebilirler. ,, `!=`, Ve `!`işleç `~`veya yinelenen dizileri`~`ile başlayan işleçler her zaman önek işleçleridir. ,, `+`, `-`, `+.`, `-.`, Ve işleçleri`&&`önek işleçleri veya ınfıx işleçleri olabilir. `&` `%` `%%` Bu işleçlerin ön ek sürümünü, tanımlandığında önek işlecinin başlangıcına ekleyerek bir `~` ınfıx sürümünden ayırt edersiniz. `~` İşleci kullanıldığında, yalnızca tanımlandığında kullanılmaz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod bir kesir türü uygulamak için işleç aşırı yüklemesi kullanımını gösterir. Bir kesir bir pay ve bir paydası tarafından temsil edilir. İşlev `hcf` kesir azaltmak için kullanılan en yüksek ortak çarpanını belirlemek için kullanılır.
+Aşağıdaki kod, bir kesir türü uygulamak için işleç aşırı yüklemesi kullanımını gösterir. Kesir, pay ve payda ile temsil edilir. İşlevi `hcf` , kesirleri azaltmak için kullanılan en yüksek ortak faktörü belirlemekte kullanılır.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4002.fs)]
 
 **Çıkış:**
 
@@ -143,18 +143,18 @@ Aşağıdaki kod bir kesir türü uygulamak için işleç aşırı yüklemesi ku
 3/4 + 1 = 7/4
 ```
 
-## <a name="operators-at-the-global-level"></a>Genel düzeyde işleçleri
+## <a name="operators-at-the-global-level"></a>Genel düzeyde işleçler
 
-Genel düzeyde işleçleri de tanımlayabilirsiniz. Aşağıdaki kod bir işleci tanımlar `+?`.
+Ayrıca, genel düzeyde işleçler tanımlayabilirsiniz. Aşağıdaki kod bir işleci `+?`tanımlar.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4003.fs)]
 
-Yukarıdaki kod çıktısı `12`.
+Yukarıdaki kodun `12`çıktısı.
 
-Bu şekilde normal aritmetik işleçler için kapsam kuralları yeniden tanımlayabilirsiniz F# dikte yeni tanımlanan işleçleri yerleşik işleçlerine göre önceliklidir.
+Bu şekilde, yeni tanımlanan işleçlerin, yerleşik işleçlerden öncelikli olmasını önleyecek olan F# kapsam kuralları için bu şekilde normal aritmetik işleçleri yeniden tanımlayabilirsiniz.
 
-Anahtar sözcüğü `inline` genellikle en iyi şekilde çağıran kodun içine tümleştirilmiştir küçük işlevleri genellikle olan genel işleçli kullanılır. Satır içi yapma işleci işlevleri statik olarak çözümlenmiş genel kod üretmek için statik olarak çözümlenmiş tür parametreleri ile çalışmak bunları sağlar. Daha fazla bilgi için [satır içi işlevleri](functions/inline-functions.md) ve [statik olarak çözümlenmiş tür Parametreleri'nde](generics/statically-resolved-type-parameters.md).
+Anahtar sözcüğü `inline` genellikle, çağıran kodla en iyi şekilde tümleşik olan küçük işlevler olan genel işleçlerle kullanılır. İşleç işlevlerini satır içi olarak oluşturmak, statik olarak çözümlenen genel kod üretmek için statik olarak çözümlenen tür parametreleriyle birlikte çalışabilmelerini de sağlar. Daha fazla bilgi için bkz. [satır Içi işlevler](./functions/inline-functions.md) ve [statik olarak çözümlenen tür parametreleri](./generics/statically-resolved-type-parameters.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Üyeler](members/index.md)
+- [Üyeler](./members/index.md)

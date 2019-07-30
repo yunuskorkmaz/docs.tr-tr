@@ -7,43 +7,43 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b859f109cc224ebf1a8fd62a1d3d3440cf906c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e599696b75ed1a0186276dfa47baef2cdf9d7097
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636097"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629380"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Nasıl yapılır: Birincil Birlikte Çalışma Derlemelerini Kaydetme
 
-Sınıflar yalnızca COM birlikte çalışma tarafından sıralanabilir ve her zaman arabirimleri olarak sıralanmış. Bazı durumlarda, sınıf hazırlamak için kullanılan arabirimi sınıf arabirimi bilinir. Tercih ettiğiniz bir arabirime sahip sınıf arabirimi geçersiz kılma hakkında daha fazla bilgi için bkz: [COM çağrılabilir sarmalayıcısı](../../../docs/framework/interop/com-callable-wrapper.md).
+Sınıflar yalnızca COM birlikte çalışabilirliğine göre sıralanabilir ve her zaman arabirim olarak sıralanır. Bazı durumlarda, sınıfı sıralamak için kullanılan arabirim sınıf arabirimi olarak bilinir. Sınıf arabirimini tercih ettiğiniz bir arabirimle geçersiz kılma hakkında daha fazla bilgi için bkz. [com çağrılabilir sarmalayıcı](../../../docs/standard/native-interop/com-callable-wrapper.md).
 
- Bir .NET Framework uygulamasından COM türlerini kullanmak isteyen herhangi bir geliştirici birlikte çalışma derlemesi oluşturabilirsiniz ancak bunun yapılması, bu nedenle bir sorun oluşturur. Her bir geliştirici alır ve geliştirici olanlar içeri aktarılıp başka bir geliştirici tarafından imzalanmış uyumlu benzersiz türleri kümesi oluşturan bir COM tür kitaplığı imzalar. Her geliştirici için satıcı tarafından sağlanan ve imzalı birincil birlikte çalışma derlemesi elde etmek bu tür uyumsuzluk sorun çözümüdür.
+ .NET Framework bir uygulamadan COM türlerini kullanmak isteyen herhangi bir geliştirici birlikte çalışma derlemesi oluşturabileceğinden, bu durum bir sorun oluşturur. Bir geliştirici bir COM tür kitaplığını içeri aktardığında ve imzaladığında, bu geliştirici, içeri aktarılan ve başka bir geliştirici tarafından imzalanan bir benzersiz türler kümesi oluşturur. Bu tür uyumsuzluk sorununa yönelik çözüm, her geliştiricinin satıcı tarafından sağlanan ve imzalı birincil birlikte çalışma derlemesini edinmesine yöneliktir.
 
- Diğer uygulamalar için üçüncü taraf COM türleri açığa planlıyorsanız, her zaman aynı yayımcının tanımlar tür kitaplığı tarafından sağlanan birincil birlikte çalışma derlemesi kullanın. Kesin tür uyumluluğu sağlamaya ek olarak, birincil birlikte çalışma derlemelerini genellikle birlikte çalışabilirlik geliştirmek için satıcı tarafından özelleştirilir.
+ Üçüncü taraf COM türlerini diğer uygulamalar için kullanıma sunmayı planlıyorsanız, her zaman tanımladığı tür kitaplığıyla aynı yayımcı tarafından sunulan birincil birlikte çalışma derlemesini kullanın. Garantili tür uyumluluğu sağlamanın yanı sıra, birincil birlikte çalışma derlemeleri genellikle birlikte çalışabilirliği iyileştirmek için satıcı tarafından özelleştirilir.
 
- Birincil birlikte çalışma derlemesi kullanarak, üçüncü taraf COM türleri kullanıma sunmak planlamıyorsanız olsa bile, COM bileşenleriyle birlikte görevini kolaylaştırabilir. Ancak, bu strateji satıcı birincil birlikte çalışma bütünleştirilmiş kodu içerisinde tanımlanmış türler için yapabileceğiniz değişikliklere karşı hiçbir yalıtımı sağlar. Uygulamanızın gerektirdiği gibi yalıtımı olduğunda, birincil birlikte çalışma derlemesi kullanmak yerine kendi birlikte çalışma derlemesi oluşturur.
+ Üçüncü taraf COM türlerini açığa çıkarmak için planlamasanız bile, birincil birlikte çalışma derlemesini kullanmak COM bileşenleriyle birlikte çalışma görevini kolaylaştırabilir. Ancak, bu strateji, bir satıcının birincil birlikte çalışma derlemesinde tanımlı türler üzerinde yapabildikleri değişikliklerden ayrı bir işlem sağlar. Uygulamanız bu tür yalıtımı gerektirdiğinde, birincil birlikte çalışma derlemesini kullanmak yerine kendi birlikte çalışma derlemenizi oluşturun.
 
- Visual Studio ile başvuru önce tüm alınan birincil birlikte çalışma derlemelerini geliştirme bilgisayarınızda uygulamanızı kaydetmeniz gerekir. Visual Studio arar ve bir birincil birlikte çalışma derlemesi ilk kez bir COM tür kitaplığından bir tür başvurusu kullanır. Visual Studio tür kitaplığı ile ilişkilendirilmiş birincil birlikte çalışma derlemesi bulamazsanız, almak isteyip istemediğinizi sorar veya bunun yerine bir birlikte çalışma derlemesi oluşturmak sunar. Benzer şekilde, [tür kitaplığı alma programı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) de birincil birlikte çalışma derlemelerini bulmak için kayıt kullanır.
+ Visual Studio ile başvurmadan önce, satın alınan tüm birincil birlikte çalışma derlemelerini geliştirme bilgisayarınıza kaydetmeniz gerekir. Visual Studio, bir COM tür kitaplığından bir türe ilk kez başvurduğunuzda bir birincil birlikte çalışma derlemesini arar ve kullanır. Visual Studio, tür kitaplığıyla ilişkili birincil birlikte çalışma derlemesini bulamıyorsa, bunun yerine bir birlikte çalışma derlemesi oluşturmak için size veya tekliflerini almanızı ister. Benzer şekilde, [tür kitaplığı alma programı (Tlbimp. exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) , birincil birlikte çalışma derlemelerini bulmak için kayıt defterini de kullanır.
 
- Visual Studio kullanmayı düşünmüyorsanız, birincil birlikte çalışma derlemelerini kaydetmek gerekli olmamasına karşın, kaydı iki avantaj sağlar:
+ Visual Studio 'Yu kullanmayı planlamıyorsanız birincil birlikte çalışma derlemelerini kaydetmek gerekli olmasa da, kayıt iki avantaj sağlar:
 
-- Özgün tür kitaplığının kayıt defteri anahtarı altında kayıtlı birincil birlikte çalışma derlemesine açıkça işaretlenmiştir. Kayıt, bilgisayarınızda bir birincil birlikte çalışma derlemesi bulmak en iyi yoludur.
+- Kayıtlı bir birincil birlikte çalışma derlemesi, özgün tür kitaplığının kayıt defteri anahtarı altında açıkça işaretlenir. Kayıt, bilgisayarınızda bir birincil birlikte çalışma derlemesini bulmanız için en iyi yoldur.
 
-- Yanlışlıkla oluşturma ve bir süre sonra gelecekte, kaydı birincil birlikte çalışma derlemesi olan bir tür başvurmak için Visual Studio kullanıyorsanız, yeni bir birlikte çalışma derlemesi kullanarak önleyebilirsiniz.
+- Yanlışlıkla yeni bir birlikte çalışma derlemesini oluşturmaktan ve kullanmaktan kaçınabilirsiniz. daha sonra, daha sonra, kayıtlı bir birincil birlikte çalışma derlemesine sahip olduğunuz bir türe başvurmak için Visual Studio 'Yu kullanabilirsiniz.
 
-Kullanım [derleme Kayıt Aracı (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) birincil birlikte çalışma derlemesi kaydedilecek.
+Birincil birlikte çalışma derlemesini kaydetmek için [derleme kayıt aracı 'nı (Regasm. exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) kullanın.
 
-## <a name="to-register-a-primary-interop-assembly"></a>Birincil birlikte çalışma derlemesi kaydetmek için
+## <a name="to-register-a-primary-interop-assembly"></a>Birincil birlikte çalışma derlemesini kaydetmek için
 
 1. Komut isteminde, şunları yazın:
 
-     **RegAsm** *assemblyname*
+     **Regasm** *AssemblyName*
 
-     Bu komutta *assemblyname* kayıtlı derlemenin dosya adı. RegAsm.exe özgün tür kitaplığıyla aynı kayıt defteri anahtarı altında birincil birlikte çalışma derlemesi için bir giriş ekler.
+     Bu komutta, *AssemblyName* kayıtlı derlemenin dosya adıdır. Regasm. exe, özgün tür kitaplığıyla aynı kayıt defteri anahtarı altında birincil birlikte çalışma derlemesi için bir girdi ekler.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek kaydeder `CompanyA.UtilLib.dll` birincil birlikte çalışma derlemesi.
+ Aşağıdaki örnek, `CompanyA.UtilLib.dll` birincil birlikte çalışma derlemesini kaydeder.
 
 ```console
 regasm CompanyA.UtilLib.dll
@@ -51,6 +51,6 @@ regasm CompanyA.UtilLib.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Birincil birlikte çalışma derlemeleriyle programlama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
-- [Birincil birlikte çalışma derlemelerini konumlandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
+- [Birincil birlikte çalışma Derlemeleriyle programlama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
+- [Birincil birlikte çalışma derlemelerini bulma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
 - [Birincil birlikte çalışma derlemelerini yeniden dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))

@@ -1,17 +1,17 @@
 ---
 title: Numaralandırmalar
-description: Nasıl kullanacağınızı öğrenin F# kodunuzu daha okunabilir ve sürdürülebilir hale getirmek için değişmez değerler yerine numaralandırmalar.
+description: Kodunuzun daha okunabilir ve F# sürdürülebilir olmasını sağlamak için sabit değerlerin yerine Numaralandırmaların nasıl kullanılacağını öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7ff62b1c0a6ab0fda58a30de9387acbb547f6b81
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 784cd9612b199e4648bb64432d3b4422ad35f649
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645542"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630343"
 ---
 # <a name="enumerations"></a>Numaralandırmalar
 
-*Numaralandırmalar*olarak da bilinen *numaralandırmalar*,, etiketleri değerlerin bir alt kümesine atanmış burada integral türleridir. Kod daha okunabilir ve sürdürülebilir hale getirmek için değişmez değerler yerine bunları kullanabilirsiniz.
+Numaralandırmalar olarak da bilinen *numaralandırmalar*, etiketlerin değerlerinin bir alt kümesine atandığı integral türleridir. Kodu daha okunaklı ve bakım yapılabilir hale getirmek için bunları değişmez değerler yerine kullanabilirsiniz.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -24,31 +24,31 @@ type enum-name =
 
 ## <a name="remarks"></a>Açıklamalar
 
-Değerleri belirtilen hariç, bir numaralandırma gibi basit değerler, ayrılmış bir birleşim arar. Genellikle 0 veya 1 başlayan tamsayılar ya da bit konumlarını temsil eden tamsayı değerler. Bit konumlarını temsil eden bir numaralandırma hedeflediyseniz de kullanmalısınız [bayrakları](xref:System.FlagsAttribute) özniteliği.
+Bir numaralandırma, değerlerin belirtilemesi dışında basit değerleri olan ayrılmış bir birleşime benzer şekilde görünür. Değerler genellikle 0 veya 1 ' den başlayan tamsayılar veya bit konumlarını temsil eden tamsayılardır. Bir numaralandırma, bit konumlarını temsil etmek için tasarlanıyorsa, [Flags](xref:System.FlagsAttribute) özniteliğini de kullanmalısınız.
 
-Örneğin, bir son eki ile sabit değerleri gibi kullanabilirsiniz, böylece sabit listesinin temel alınan türü kullanılan değişmez değer belirlenir `1u`, `2u`ve benzeri işaretsiz tamsayı (`uint32`) türü.
+Sabit listesinin temel alınan türü, kullanılan değişmez değere göre belirlenir, böylece örneğin, bir işaretsiz tamsayı ( `1u``uint32`) türü için,, ve gibi bir soneke `2u`sahip değişmez değerler kullanabilirsiniz.
 
-Adlandırılmış değerler için başvurduğunuzda, numaralandırma türü adı bir niteleyici diğer bir deyişle, kullanmalısınız `enum-name.value1`, yalnızca `value1`. Bu davranış, ayrılmış birleşimler farklıdır. Her zaman Numaralandırmaların olmasıdır [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) özniteliği.
+Adlandırılmış değerlere başvurduğunuzda, sabit listesi türünün adını bir niteleyici olarak kullanmanız gerekir, yani `enum-name.value1`, yalnızca `value1`değil. Bu davranış, ayrılmış birleşimlerden farklıdır. Bunun nedeni, Numaralandırmaların her zaman [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) özniteliğine sahip olmasından kaynaklanır.
 
-Aşağıdaki kod, bildirim ve bir numaralandırma kullanımını gösterir.
+Aşağıdaki kod, bir numaralandırmanın bildirimini ve kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2101.fs)]
 
-Kolayca numaralandırma için temeldeki tür uygun işleci kullanılarak aşağıdaki kodda gösterildiği gibi dönüştürebilirsiniz.
+Aşağıdaki kodda gösterildiği gibi, uygun işleci kullanarak numaralandırmaları kolayca temel alınan türe dönüştürebilirsiniz.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2102.fs)]
 
-Numaralandırılmış türler aşağıdaki temel türlerden biri olabilir: `sbyte`, `byte`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint16`, `uint64`, ve `char`. Numaralandırma türleri öğesinden devralınan türler olarak .NET Framework'teki gösterilir `System.Enum`, sırayla devralınır `System.ValueType`. Bu nedenle, yığın veya satır içeren bir nesne içinde bulunan değer türleri olduklarını ve temel türün herhangi bir değer geçerli bir numaralandırma değeridir. Sabit desen değerleri değiştiğinde, isimsiz değerler yakalayan bir desen sağlamak sahip olduğunuz için bu önemlidir.
+Numaralandırılmış türler aşağıdaki `sbyte`temel türlerden birine sahip olabilir:, `int64` `int32` `uint16` `byte`, `int16`,,, `uint32`,, `uint16`, `uint64`ve. `char` Sabit listesi türleri, ' den devralınan türler `System.Enum`olarak .NET Framework temsil edilir ve bundan sonra öğesinden `System.ValueType`devralınır. Bu nedenle, yığın üzerinde bulunan veya kapsayan nesnede satır içi olan değer türlerdir ve temel alınan türün herhangi bir değeri numaralandırmanın geçerli bir değeridir. Bu, adlandırılmamış değerleri yakalayan bir model sağlamanız gerektiğinden, numaralandırma değerleri üzerinde kalıp eşleştirilirken önemlidir.
 
-`enum` İşlevi F# kitaplığı bir sabit listesi değeri, hatta önceden tanımlanmış, biri dışında bir değer oluşturmak için kullanılabilir değerleri adlı. Kullandığınız `enum` gibi işlev.
+F# Kitaplığındaki işlev, önceden tanımlanmış adlandırılmış değerlerden biri dışında bir değer olan bir sabit listesi değeri oluşturmak için `enum` kullanılabilir. `enum` İşlevini aşağıdaki şekilde kullanırsınız.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
 
-Varsayılan `enum` işlev türüyle çalışır `int32`. Bu nedenle, temel alınan diğer türleri Numaralandırma türleri ile kullanılamaz. Bunun yerine, aşağıdaki kullanın.
+Varsayılan `enum` işlev, türüyle `int32`çalışır. Bu nedenle, diğer temel türlerine sahip sabit listesi türleriyle kullanılamaz. Bunun yerine, aşağıdakileri kullanın.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
 
-Ayrıca, her zaman sabit listeleri olarak gönderilir için durumlarda `public`. Bu, böylelikle C# ve .NET platformu geri kalanı ile hizalanır.
+Ayrıca, numaralandırmalar için durumlar her zaman olarak `public`yayılır. Bu sayede, ve .NET platformunun geri C# kalanı ile hizalanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

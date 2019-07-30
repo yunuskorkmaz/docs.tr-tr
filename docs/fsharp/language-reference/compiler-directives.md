@@ -1,52 +1,52 @@
 ---
 title: Derleyici Yönergeleri
-description: Hakkında bilgi edinin F# dil önişlemci yönergeleri, koşullu derleme yönergeleri, satır yönergeleri ve derleyici yönergeleri.
+description: Dil ön F# işlemci yönergeleri, koşullu derleme yönergeleri, hat yönergeleri ve derleyici yönergeleri hakkında bilgi edinin.
 ms.date: 12/10/2018
-ms.openlocfilehash: 2b62fb930a3b0c55103d6b0edbe20ae056ba86bd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 16db2efb2fee2c2c5e94aa98eb0a13183a4e0e0b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645505"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630406"
 ---
 # <a name="compiler-directives"></a>Derleyici Yönergeleri
 
-Bu konuda işlemci yönergeleri ve derleyici yönergeleri açıklar.
+Bu konu, işlemci yönergelerini ve derleyici yönergelerini açıklamaktadır.
 
 ## <a name="preprocessor-directives"></a>Ön işlemci Yönergeleri
 
-Önişlemci yönergesi # sembolü ile önek ve bir satırda kendiliğinden görünür. Bu, derleyici önce çalışır önişlemci tarafından yorumlanır.
+Önişlemci yönergesine # simgesiyle ön eki eklenir ve tek başına bir satırda görüntülenir. Derleyicinin kendisinden önce çalışan Önişlemci tarafından yorumlanır.
 
-Aşağıdaki tablo, kullanılabilen önişlemci yönergeleri listeler F#.
+Aşağıdaki tabloda, ' de F#kullanılabilen Önişlemci yönergeleri listelenmiştir.
 
 |Yönergesi|Açıklama|
 |---------|-----------|
-|`#if` *Sembol*|Koşullu derlemeyi destekler. Kod bölümünde sonra `#if` dahil ise *sembol* tanımlanır. Simgenin ayrıca ile negatif `!`.|
-|`#else`|Koşullu derlemeyi destekler. Sembol önceki kullandıysanız içerecek şekilde kodun bir bölümünü işaretler `#if` tanımlı değil.|
-|`#endif`|Koşullu derlemeyi destekler. Koşullu bir kod bölümünün sonuna işaret eder.|
-|`#`[satır] *int*,<br/>`#`[satır] *int* *dize*,<br/>`#`[satır] *int* *verbatim dizesi*|Hata ayıklama için orijinal kaynak kodu satır ve dosya adı belirtir. Bu özellik Oluştur araçlar için sağlanan F# kaynak kodu.|
-|`#nowarn` *warningcode*|Derleyici Uyarısı veya uyarıları devre dışı bırakır. Bir uyarıyı devre dışı bırakmak için numarasını derleme çıktısından bulun ve tırnak işaretleri içine alın. "FS" ön ekini atlayın. Aynı satırda birden çok uyarı numaralarını devre dışı bırakmak için her bir sayının tırnak işaretleri içine alın ve her bir dizenin bir boşlukla ayırın. Örneğin:
+|`#if`*sembol*|Koşullu derlemeyi destekler. `#if` *Sembol* tanımlanmışsa, öğesinden sonra gelen kod. Sembol Ayrıca ile `!`de olabilir.|
+|`#else`|Koşullu derlemeyi destekler. Öncekiyle `#if` birlikte kullanılan sembol tanımlanmazsa, kodun bir bölümünü içerecek şekilde işaretler.|
+|`#endif`|Koşullu derlemeyi destekler. Kodun koşullu bölümünün sonunu işaretler.|
+|`#`satırı *int*,<br/>`#`satırı *int* *dize*,<br/>`#`satırı *int* *Tam dize*|Hata ayıklama için özgün kaynak kodu satırını ve dosya adını gösterir. Bu özellik, kaynak kodu üreten F# araçlar için sağlanır.|
+|`#nowarn`*uyarı kodu*|Bir derleyici uyarısını veya uyarılarını devre dışı bırakır. Bir uyarıyı devre dışı bırakmak için, derleyici çıktısından numarasını bulun ve tırnak işaretleri içine ekleyin. "FS" önekini atlayın. Aynı satırda birden çok uyarı numarasını devre dışı bırakmak için, her sayıyı tırnak içine alın ve her dizeyi bir boşluk ile ayırın. Örneğin:
 
 `#nowarn "9" "40"`
 
-Uyarı devre dışı bırakma etkisini yönergesi önünde dosyasının bölümlerini dahil olmak üzere tüm dosyayı uygular. |
+Bir uyarının devre dışı bırakılması etkisi, dosyanın yönergeden önce gelen kısımları da dahil olmak üzere tüm dosya için geçerlidir. |
 
 ## <a name="conditional-compilation-directives"></a>Koşullu derleme yönergeleri
 
-Bu yönergeler biri tarafından devre dışı kod, Visual Studio Kod Düzenleyicisi'nde soluk görünür.
+Bu yönergelerden biri tarafından devre dışı bırakılan kod Visual Studio Code düzenleyicide soluk görünür.
 
 > [!NOTE]
-> Diğer dillerde olduğu gibi koşullu derleme yönergeleri davranışı aynı değildir. Örneğin, Boolean ifadeler sembolleri içeren kullanamazsınız ve `true` ve `false` özel bir anlamı yoktur. Kullandığınız sembolleri `if` yönergesi komut satırı veya proje ayarlarında tanımlanmalıdır; hiçbir `define` önişlemci yönergesi.
+> Koşullu derleme yönergelerinin davranışı, diğer dillerdeki gibi değildir. Örneğin, sembolleri `true` `false` içeren Boole deyimlerini kullanamaz ve özel bir anlamı yoktur. `if` Yönergede kullandığınız semboller komut satırı veya proje ayarlarında tanımlanmalıdır; hiçbir `define` Önişlemci yönergesi yoktur.
 
-Aşağıdaki kod kullanışını `#if`, `#else`, ve `#endif` yönergeleri. Bu örnekte, kod tanımı iki sürümünü içeren `function1`. Zaman `VERSION1` kullanılarak tanımlanmış [-define derleyici seçeneği](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04), kod arasında `#if` yönergesi ve `#else` yönergesi etkinleştirilir. Aksi takdirde, kod arasında `#else` ve `#endif` etkinleştirilir.
+Aşağıdaki kod `#if`, `#else`, ve `#endif` yönergelerinin kullanımını gösterir. Bu örnekte, kod, tanımının `function1`iki sürümünü içerir. -Define [derleyici seçeneği](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04)kullanılarak tanımlandığında, `#if` yönergesi ve `#else` yönergesi arasındaki kod etkinleştirilir. `VERSION1` Aksi halde, ve `#else` `#endif` arasındaki kod etkinleştirilir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7301.fs)]
 
-Var olan hiçbir `#define` önişlemci yönergesi F#. Tarafından kullanılan sembollerini tanımlamak için derleyici seçeneği veya proje ayarlarını kullanmanız gerekir `#if` yönergesi.
+' De F#bir ön işlemciyönergesiyoktur.`#define` `#if` Yönergesi tarafından kullanılan sembolleri tanımlamak için derleyici seçeneğini veya proje ayarlarını kullanmanız gerekir.
 
-Koşullu derleme yönergeleri yuvalanabilir. Girinti önişlemci yönergeleri için önemli değildir.
+Koşullu derleme yönergeleri iç içe olabilir. Girintileme, Önişlemci yönergeleri için önemli değildir.
 
-Ayrıca bir simgeyle negate `!`. Bir şey yalnızca bu örnekte, bir dizenin değerdir _değil_ hata ayıklama:
+Ayrıca, simgesiyle bir simge `!`de ekleyebilirsiniz. Bu örnekte, bir dizenin değeri _yalnızca hata ayıklama_ olmadığında bir şeydir:
 
 ```fsharp
 #if !DEBUG
@@ -56,27 +56,27 @@ let str = "Debugging!"
 #endif
 ```
 
-## <a name="line-directives"></a>Satır yönergeleri
+## <a name="line-directives"></a>Çizgi yönergeleri
 
-Oluşturma sırasında derleyici hataları bildirir F# satır başvuru ile kod numaraları her bir hata oluştuğu. Bu satır numaraları için bir dosyanın ilk satırı 1 konumunda başlatın. Ancak, oluşturuyorsanız, F# kaynak kodunuzdan oluşturulan kodun satır numaralarını başka bir aracı olmayan genellikle ilgi, çünkü oluşturulan hataları F# kod büyük olasılıkla başka bir kaynaktan ortaya çıkar. `#line` Yönergesi oluşturma araçları yazarları için bir yol sağlar F# kaynak kodu, sayılar ve kaynak dosyalarını orijinal satıra hakkında bilgi için oluşturulan geçirmek için F# kod.
+Derlerken derleyici, her hatanın gerçekleştiği satır numaralarına F# başvurarak koddaki hataları raporlar. Bu satır numaraları, bir dosyanın ilk satırı için 1 ' den başlar. Ancak, başka bir araçtan F# kaynak kodu oluşturuyorsanız oluşturulan koddaki satır numaraları genellikle ilgilenmez, çünkü oluşturulan F# koddaki hatalar büyük olasılıkla başka bir kaynaktan ortaya çıkar. Yönergesi, oluşturulan F# koda özgün satır numaraları ve kaynak dosyaları hakkında F# bilgi geçirmek için kaynak kodu üreten araç yazarları için bir yol sağlar. `#line`
 
-Kullanırken `#line` yönerge, dosya adları tırnak içine alınmalıdır. Sürece verbatim belirteci (`@`) gerekir kaçış ters eğik çizgi karakterleri iki ters eğik çizgi karakterleri yerine bunları yolu kullanmak için kullanarak dize önünde görünür. Geçerli satırı belirteçleri aşağıda verilmiştir. Bu örneklerde, varsayımında özgün dosya `Script1` sonuçları bir otomatik olarak oluşturulan içinde F# aracı ile çalışır ve bu yönergeleri konumunda kod satırı 25 dosyasındakibazıbelirteçlerioluşturulduğuzamankoddosyası`Script1`.
+`#line` Yönergesini kullandığınızda dosya adlarının tırnak içine alınması gerekir. Tam belirteç (`@`) dizenin önünde görünüp görüntülenmediği takdirde, yolda kullanabilmek için ters eğik çizgi karakterlerinden birini yerine iki ters eğik çizgi kullanarak kaçış yapmanız gerekir. Aşağıdakiler geçerli çizgi belirteçleridir. Bu örneklerde, özgün dosyanın `Script1` bir araç aracılığıyla çalıştırıldığında otomatik olarak oluşturulan F# bir kod dosyası ile sonuçlandığını ve bu yönergelerin konumundaki kodun dosyadaki `Script1`25.satırdakibazıbelirteçlerdenoluşturulduğunuvarsayın.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7303.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7303.fs)]
 
-Bu belirteçler belirtmek F# bu konumda oluşturulan kod satırına yakın veya bu bazı yapıları türetilen `25` içinde `Script1`.
+Bu belirteçler, bu konumda F# oluşturulan kodun, `25` içinde `Script1`veya yakınında bazı yapılardan türetilmediğini belirtir.
 
 ## <a name="compiler-directives"></a>Derleyici Yönergeleri
 
-Derleyici yönergeleri, önişlemci yönergeleri # işareti ile ön eki, ancak önişlemci tarafından yorumlanmasını yerine, bunlar derleyici yorumlar ve işlem yapmak için kalan benzerler.
+Derleyici yönergeleri, bir # işaretiyle ön eki olduklarından, ancak Önişlemci 'nin yorumlanması yerine, derleyicinin yorumlanması ve üzerinde işlem yapması nedeniyle, Önişlemci yönergelerine benzer.
 
-Aşağıdaki tabloda kullanılabilir derleyici yönergesi F#.
+Aşağıdaki tabloda ' de F#kullanılabilen derleyici yönergesi listelenmektedir.
 
 |Yönergesi|Açıklama|
 |---------|-----------|
-|`#light` ["on"&#124;"kapalı"]|Etkinleştirir veya diğer ML sürümleriyle uyumluluk için basit söz dizimi devre dışı bırakır. Varsayılan olarak, basit söz dizimi etkinleştirilir. Ayrıntılı sözdizimi her zaman etkindir. Bu nedenle, hem basit söz dizimi hem de ayrıntılı söz dizimini kullanabilirsiniz. Yönergenin `#light` kendisi tarafından değerine eşdeğer olan `#light "on"`. Belirtirseniz `#light "off"`, tüm dil yapıları için ayrıntılı sözdizimini kullanmanız gerekir. Söz dizimi için belgelerinde F# basit söz dizimi kullandığınız varsayılarak da sunulur. Daha fazla bilgi için [ayrıntılı sözdizimi](verbose-syntax.md).|
+|`#light`[""&#124;"kapalı"]|Diğer ML sürümleriyle uyumluluk için hafif söz dizimini etkinleştirilir veya devre dışı bırakır. Varsayılan olarak, hafif sözdizimi etkindir. Verbose sözdizimi her zaman etkindir. Bu nedenle, hem basit söz dizimi hem de ayrıntılı sözdizimini kullanabilirsiniz. Tek başına `#light` yönerge öğesine `#light "on"`eşdeğerdir. Belirtirseniz `#light "off"`, tüm dil yapıları için ayrıntılı sözdizimi kullanmanız gerekir. İçin F# belgelerindeki sözdizimi, hafif sözdizimi kullandığınızı varsayımıyla sunulur. Daha fazla bilgi için bkz. [ayrıntılı sözdizimi](verbose-syntax.md).|
 
-(Fsi.exe) yorumlayıcısını yeniden oluşturulmak yönergeleri için bkz. [etkileşimli programlama F# ](../tutorials/fsharp-interactive/index.md).
+Yorumlayıcı (fsi. exe) yönergeleri için bkz. [etkileşimli programlama F# ](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

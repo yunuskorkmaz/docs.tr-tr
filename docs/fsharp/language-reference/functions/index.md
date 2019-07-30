@@ -1,19 +1,19 @@
 ---
 title: İşlevler
-description: İşlevleri hakkında bilgi edinin F# ve nasıl F# ortak fonksiyonel programlama yapılarını destekler.
+description: İçindeki F# işlevleri hakkında bilgi edinin ve F# ortak fonksiyonel programlama yapılarını nasıl destekler.
 ms.date: 05/16/2016
-ms.openlocfilehash: f68a36de7af2bdb803b0b633929aa472806f61aa
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6f65ce692169b71abe8d2eff7ef07b66975d478b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645395"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630707"
 ---
 # <a name="functions"></a>İşlevler
 
-Tüm programlama dillerinde program yürütmenin temel birimi işlevlerdir. Diğer dillerde olduğu gibi bir F# işlevi bir ada sahip, parametreleri ve sınav zamanı bağımsız değişkenleri olabilir ve bir gövdeye sahip. F#Ayrıca ifadelerde örtülü bir tanım kısmi yoluyla işlevlerin yeni işlevleri ve curried işlevleri oluşturmak üzere işlevlerin oluşturulması adlandırılmamış işlevleri'ni kullanarak değerleri olarak işlevler değerlendirmesini gibi fonksiyonel programlama yapılarını destekler işlev bağımsız değişkenleri uygulama.
+İşlevler, herhangi bir programlama dilinde program yürütmenin temel birimidir. Diğer dillerde olduğu gibi, bir F# işlevin adı vardır, parametreleri olabilir ve bağımsız değişkenler alabilir ve bir gövdeye sahip olabilir. F#Ayrıca, işlevleri değer olarak davranma, ifadelerde adlandırılmamış işlevleri kullanma, yeni işlevler, curried işlevleri ve kısmi olarak işlevlerin örtük tanımına göre işlev oluşturma gibi işlev programlama yapılarını destekler. işlev bağımsız değişkenlerinin uygulaması.
 
-İşlevleri kullanarak tanımladığınız `let` anahtar sözcüğü veya işlev özyinelemeli ise `let rec` anahtar sözcüğü birleşimi.
+İşlevleri `let` anahtar sözcüğünü kullanarak tanımlarsınız veya işlev özyinelemeli `let rec` ise anahtar sözcük birleşimi.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -26,67 +26,67 @@ let rec function-name parameter-list = recursive-function-body
 
 ## <a name="remarks"></a>Açıklamalar
 
-*İşlevi adı* işlevi temsil eden bir tanımlayıcıdır. *Parametre-listesi* boşluklarla ayırarak art arda gelen parametreleri oluşur. Parametreler bölümünde açıklandığı gibi her parametre için açık bir tür belirtebilirsiniz. Belirli bir bağımsız değişken türü belirtmezseniz derleyici işlev gövdesi türünü çıkarsamak çalışır. *İşlev gövdesi* bir ifade içerir. İşlev gövdesi yapar genellikle dönüş değeri son bir ifadede sizin ifadeler bir dizi oluşan bileşik bir ifade deyimidir. *Dönüş türü* bir tür tarafından sonuna bir virgül ve isteğe bağlıdır. Derleyici, dönüş değeri türünü açıkça belirtmezseniz son deyim dönüş türünden belirler.
+*İşlev adı* , işlevini temsil eden bir tanıtıcıdır. *Parametre-listesi* , boşluklarla ayrılmış ardışık parametrelerden oluşur. Parametreler bölümünde açıklandığı gibi her bir parametre için açık bir tür belirtebilirsiniz. Belirli bir bağımsız değişken türü belirtmezseniz, derleyici türü işlev gövdesinden çıkarması için çalışır. *İşlev gövdesi* bir ifadeden oluşur. İşlev gövdesini oluşturan ifade, genellikle dönüş değeri olan bir son ifadede yer alan bir dizi ifadeden oluşan bir bileşik ifadedir. *Dönüş türü* , ardından bir tür ve isteğe bağlıdır. Dönüş değerinin türünü açıkça belirtmezseniz, derleyici son ifadeden dönüş türünü belirler.
 
-Basit bir işlev tanımı şuna benzer:
+Basit bir işlev tanımı aşağıdakine benzer:
 
 ```fsharp
 let f x = x + 1
 ```
 
-Önceki örnekte, işlev adıdır `f`, bağımsız değişken `x`, türüne sahip `int`, işlev gövdesidir `x + 1`, ve dönüş değeri türünde `int`.
+Önceki örnekte, `f`işlev adı, türü `int`, işlev gövdesi `x + 1`ve dönüş değeri `x`tür `int`olan bağımsız değişkendir.
 
-İşlevleri işaretlenebilir `inline`. Hakkında bilgi için `inline`, bkz: [satır içi işlevleri](../functions/inline-functions.md).
+İşlevler işaretlenebilir `inline`. Hakkında `inline`bilgi için bkz. [satır içi işlevler](../functions/inline-functions.md).
 
 ## <a name="scope"></a>Kapsam
 
-Hiçbir modül kapsamı dışında kapsam düzeyinde, bir değer veya işlev adı yeniden kullanmak için bir hata değil. Daha sonra bildirilen ad, bir adı yeniden kullanırsanız, daha önce bildirilen ad gölgeliyor. Ancak, Modül içindeki en üst düzey kapsamında adları benzersiz olmalıdır. Örneğin, aşağıdaki kodu, modül kapsamda göründüğünde, ancak bir işlev içinde görünür olmayan bir hata oluşturur:
+Modül kapsamı dışında herhangi bir kapsam düzeyinde bir değer veya işlev adını yeniden kullanmak bir hata değildir. Bir adı yeniden kullanırsanız daha sonra belirtilen ad daha önce belirtilen adı gölgeliyor. Ancak, modüldeki en üst düzey kapsamda adların benzersiz olması gerekir. Örneğin, aşağıdaki kod modül kapsamında göründüğünde bir hata üretir, ancak bir işlev içinde göründüğünde değil:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
 
-Ancak, aşağıdaki kod kapsamı herhangi bir düzeyde kabul edilebilir:
+Ancak aşağıdaki kod herhangi bir kapsam düzeyinde kabul edilebilir:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
 
 ### <a name="parameters"></a>Parametreler
 
-İşlev adından sonra parametrelerinin adları listelenmektedir. Aşağıdaki örnekte gösterildiği gibi bir parametrenin türünü belirtebilirsiniz:
+Parametrelerin adları, işlev adından sonra listelenir. Bir parametre için aşağıdaki örnekte gösterildiği gibi bir tür belirtebilirsiniz:
 
 ```fsharp
 let f (x : int) = x + 1
 ```
 
-Bir tür belirtirseniz, parametre adı ve adından virgül ile ayrılır. Parametre türü, tür parametresi için atlarsanız, derleyici tarafından algılanır. Örneğin, aşağıdaki işlev tanımında, bağımsız değişken `x` türünde olmasını çıkarılan `int` 1 türünde olduğu için `int`.
+Bir tür belirtirseniz, parametrenin adını izler ve iki nokta üst üste ile birbirinden ayrılır. Parametresinin türünü atlarsanız, parametre türü derleyici tarafından algılanır. Örneğin, aşağıdaki işlev tanımında, 1 türünde `x` `int`olduğu için bağımsız değişken türü `int` olarak algılanır.
 
 ```fsharp
 let f x = x + 1
 ```
 
-Ancak, derleyici işlev olarak genel yap dener. Örneğin, aşağıdaki kod dikkat edin:
+Ancak derleyici, işlevi mümkün olduğunca genel olarak yapmayı dener. Örneğin, aşağıdaki koda göz önünde yer verilmiştir:
 
 ```fsharp
 let f x = (x, x)
 ```
 
-İşlevi, herhangi bir türde bir bağımsız değişkeninden bir tanımlama grubu oluşturur. Türü belirtilmediğinden işlevi herhangi bir bağımsız değişken türü ile kullanılabilir. Daha fazla bilgi için [otomatik Genelleştirme](../generics/automatic-generalization.md).
+İşlevi herhangi bir türden bağımsız değişkenden bir tanımlama grubu oluşturur. Tür belirtilmediğinden, işlev herhangi bir bağımsız değişken türüyle kullanılabilir. Daha fazla bilgi için bkz. [Otomatik Genelleştirme](../generics/automatic-generalization.md).
 
 ## <a name="function-bodies"></a>İşlev Gövdeleri
 
-Bir işlev gövdesinin yerel değişkenlerin ve işlevlerin tanımlarını içerebilir. Bu değişkenlerin ve işlevlerin dışında ancak geçerli işlevin gövdesinde kapsamına dahildir. Basit sözdizimi seçeneği etkin olduğunda, aşağıdaki örnekte gösterildiği gibi bir tanımı bir işlev gövdesinde olduğunu belirtmek için Girintileme kullanmanız gerekir:
+Bir işlev gövdesi, yerel değişkenlerin ve işlevlerin tanımlarını içerebilir. Bu tür değişkenler ve işlevler, geçerli işlevin gövdesinde kapsam içinde ve dışında değil. Hafif sözdizimi seçeneğini etkinleştirdiğinizde, aşağıdaki örnekte gösterildiği gibi bir tanımın bir işlev gövdesinde olduğunu göstermek için girinti kullanmanız gerekir:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
-Daha fazla bilgi için [kod biçimlendirme yönergeleri](../code-formatting-guidelines.md) ve [ayrıntılı sözdizimi](../verbose-syntax.md).
+Daha fazla bilgi için bkz. [kod biçimlendirme yönergeleri](../code-formatting-guidelines.md) ve [ayrıntılı sözdizimi](../verbose-syntax.md).
 
 ## <a name="return-values"></a>Dönüş Değerleri
 
-Derleyici dönüş değeri ve türü belirlemek için bir işlev gövdesinde son ifade kullanır. Derleyicinin önceki ifadelerden son ifadesinden türü çıkarsayabilir. İşlevde `cylinderVolume`türünü önceki bölümde gösterildiği `pi` değişmez değer türünden belirlenir `3.14159` olmasını `float`. Derleyici türünü kullanan `pi` ifadenin türü belirlenemiyor `h * pi * r * r` olmasını `float`. Bu nedenle, işlevin genel dönüş türü olan `float`.
+Derleyici, dönüş değerini ve türünü belirleyebilmek için bir işlev gövdesinde son ifadeyi kullanır. Derleyici, önceki ifadelerden son ifadenin türünü çıkarmayabilir. Önceki bölümde gösterilen `cylinderVolume`işlevinde, `pi` türü, sabit değer `3.14159` türünden olacak `float`şekilde belirlenir. Derleyici, kullanılacak `pi` `h * pi * r * r` ifadenin`float`türünü öğrenmek için türünü kullanır. Bu nedenle, işlevinin genel dönüş türü ' dir `float`.
 
-Dönüş değeri açıkça belirtmek için bir kod aşağıdaki gibi yazın:
+Dönüş değerini açık olarak belirtmek için, kodu aşağıdaki gibi yazın:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
 
-Derleyici kod yukarıda yazıldığı gibi geçerli **float** parametre türleri de uygulamak istediyseniz, tüm işlevin; aşağıdaki kodu kullanın:
+Kod yukarıda yazıldığı için, derleyici tüm işleve **float** uygular; parametresi parametre türlerine de uygulamak için aşağıdaki kodu kullanın:
 
 ```fsharp
 let cylinderVolume (radius : float) (length : float) : float
@@ -94,7 +94,7 @@ let cylinderVolume (radius : float) (length : float) : float
 
 ## <a name="calling-a-function"></a>İşlev Çağırma
 
-İşlevler, işlev adının ardından bir boşluk ve boşluklarla ayırarak sonra herhangi bir bağımsız değişkeni belirterek çağırın. Örneğin, işlev çağrısı için **cylinderVolume** ve sonucu değerine atama **sesi**, aşağıdaki kodu yazın:
+İşlev adını ve ardından boşluk ile ayrılmış bağımsız değişkenleri belirterek işlevleri çağırabilirsiniz. Örneğin, **silindir Dervolume** işlevini çağırmak ve sonucu değer **Ses**'e atamak için aşağıdaki kodu yazarsınız:
 
 ```fsharp
 let vol = cylinderVolume 2.0 3.0
@@ -102,65 +102,65 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="partial-application-of-arguments"></a>Bağımsız Değişkenlerin Kısmi Uygulanması
 
-Belirtilen bağımsız değişkenler sayısından daha az sağlarsanız, kalan bağımsız değişken bekler, yeni bir işlev oluşturun. Bu yöntem bağımsız değişkenleri işleme olarak adlandırılır *currying* ve işlevsel programlama dilleri gibi bir karakteristik F#. Örneğin, kanal iki boyutlarıyla çalıştığınız düşünün: bir yarıçapını varsa **2.0** ve başka bir sahip **3.0**. Kanal hacmi gibi belirlemek işlevleri oluşturabilirsiniz:
+Belirtilen sayıda bağımsız değişkene daha az bir değer sağlarsanız, kalan bağımsız değişkenleri bekleyen yeni bir işlev oluşturursunuz. Bu bağımsız değişken işleme yöntemi, gibi F#işlevsel programlama dillerinin bir özelliğidir ve olarak adlandırılır. Örneğin, iki kanal boyutu ile çalıştığınızı varsayalım: biri **2,0** radius ve diğeri ise **3,0**yarıçapı vardır. Aşağıdaki gibi kanal hacmini tespit eden işlevler oluşturabilirsiniz:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
 
-Ardından, iki farklı boyutlardaki kanal çeşitli uzunluklarına gerektiği gibi ek bağımsız değişken sağlayın:
+Daha sonra, iki farklı boyuttan oluşan çeşitli uzunluklar için gereken ek bağımsız değişkeni sağlamanız gerekir:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
 
 ## <a name="recursive-functions"></a>Özyinelemeli İşlevler
 
-*Özyinelemeli işlevler* kendisini çağıran işlev. Belirttiğiniz gerektirdikleri **rec** anahtar sözcüğü aşağıdaki **izin** anahtar sözcüğü. Herhangi bir işlev çağrısındaki çağırma işlevinin gövdesi içinde özyinelemeli işlevini çağırın. Aşağıdaki özyinelemeli işlev hesaplar *n*<sup>th</sup> Fibonacci sayı. Fibonacci sayı dizisi antiquity bu yana bilinen ve art arda gelen her bir sayının sıradaki önceki iki sayının toplamı olduğu bir dizidir.
+*Özyinelemeli işlevler* kendilerini çağıran işlevlerdir. **Let** anahtar sözcüğünü takip eden **REC** anahtar sözcüğünü belirtmenizi gerektirir. Herhangi bir işlev çağrısını çağırırın olduğu gibi, işlev gövdesinin içinden özyinelemeli işlevi çağırın. Aşağıdaki özyinelemeli işlev *n*<sup>.</sup> fibonaccı numarasını hesaplar. Fibonaccı numara sırası, Antiquity 'in bilindiği ve ardışık her sayının dizideki önceki iki sayının toplamı olduğu bir sıralamadır.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
-Bazı özyinelemeli işlevler program yığın taşması veya bunları dikkatli ve biriktiricileri ve devamlılıklar kullanımı gibi özel teknikleri farkındalıkta yazdığınız değil, verimsiz gerçekleştirin.
+Bazı Özyinelemeli işlevler program yığınını taşımayabilir veya işlevindeki biriktiricileri ve devamlılık kullanımı gibi özel tekniklerin farkında olmak üzere, bunları dikkatli bir şekilde yazmayabilir.
 
 ## <a name="function-values"></a>İşlev Değerleri
 
-İçinde F#, tüm işlevleri; değerler olarak kabul edilir olarak aslında, bilinen *işlev değerleri*. İşlevleri değerler olduğundan, diğer işlevlere veya diğer bağlamlarda bağımsız değişkenler olarak değerleri kullanıldığı kullanılabilirler. Bir işlev değeri bağımsız değişken olarak alan bir işlev örneği aşağıdadır:
+' F#De, tüm işlevler değer olarak değerlendirilir; Aslında, *işlev değerleri*olarak bilinir. İşlevler değerler olduğundan, diğer işlevlerde veya değerlerin kullanıldığı diğer bağlamlarda bağımsız değişkenler olarak kullanılabilirler. Bağımsız değişken olarak bir işlev değeri alan bir işlev örneği aşağıda verilmiştir:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
-Bir işlevi değer türü kullanarak belirttiğiniz `->` belirteci. Bu belirteç sol tarafındaki bağımsız değişkenin türü ve sağ tarafta dönüş değeridir. Önceki örnekte, `apply1` bir işlev alır bir işlev, `transform` bir bağımsız değişken olarak nerede `transform` tamsayı alır ve başka bir tamsayı döndüren bir işlev değil. Aşağıdaki kod nasıl kullanılacağını gösterir `apply1`:
+`->` Belirteç kullanarak bir işlev değerinin türünü belirtirsiniz. Bu belirtecin sol tarafında, bağımsız değişkenin türü ve sağ tarafta ise dönüş değeri bulunur. Önceki örnekte, `apply1` bir işlevi `transform` bağımsız değişken `transform` olarak alan ve bir tamsayı alan ve başka bir tamsayı döndüren bir işlevdir. Aşağıdaki kod, nasıl `apply1`kullanılacağını gösterir:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
 
-Değerini `result` önceki kod çalıştırıldıktan sonra 101 olacaktır.
+Değeri `result` , önceki kod çalıştıktan sonra 101 olacaktır.
 
-Birden çok bağımsız değişkeni tarafından art arda ayrılan `->` belirteçleri, aşağıdaki örnekte gösterildiği gibi:
+Aşağıdaki örnekte gösterildiği gibi, birden `->` çok bağımsız değişken birbirini izleyen belirteçlerle ayrılır:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
 
-Sonuç 200'dür.
+Sonuç 200 ' dir.
 
 ## <a name="lambda-expressions"></a>Lambda İfadeleri
 
-A *lambda ifadesi* adlandırılmamış bir işlevdir. Önceki örneklerde işlevleri adlı tanımlamak yerine **artışı** ve **mul**, lambda ifadeleri şu şekilde kullanabilirsiniz:
+*Lambda ifadesi* adlandırılmamış bir işlevdir. Önceki örneklerde, adlandırılmış işlevleri **artırma** ve **MUL**tanımlamak yerine Lambda ifadelerini aşağıdaki şekilde kullanabilirsiniz:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Lambda ifadeleri kullanarak tanımladığınız `fun` anahtar sözcüğü. Bir lambda ifadesi yerine tek bir işlev tanımı benzer `=` belirteç `->` belirteci bağımsız değişken listesi işlevi gövdesinden ayırmak için kullanılır. Bir normal işlev tanımı gibi bağımsız değişken türleri çıkarılan veya açıkça belirtilen ve lambda ifadesinin dönüş türü, son ifadesinin gövdesinde türünden algılanır. Daha fazla bilgi için [Lambda ifadeleri: `fun` Anahtar sözcüğü](../functions/lambda-expressions-the-fun-keyword.md).
+Lambda ifadelerini, `fun` anahtar sözcüğünü kullanarak tanımlarsınız. Lambda ifadesi bir işlev tanımına benzer, `=` belirteç `->` yerine belirtecin bağımsız değişken listesini işlev gövdesinden ayırmak için kullanılır. Normal bir işlev tanımında olduğu gibi, bağımsız değişken türleri açıkça çıkarsanamıyor veya belirlenebilir ve lambda ifadesinin dönüş türü, gövdedeki son ifadenin türünden çıkarsanamıyor. Daha fazla bilgi için bkz [. Lambda ifadeleri: `fun` Anahtar sözcüğü](../functions/lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>İşlev Bileşimi ve Ardışık Düzen Oluşturma
 
-İçindeki işlevler F# diğer işlevleri oluşabilir. İki işlev bileşimi **işlev1** ve **function2** uygulamayı temsil eden başka bir işlev, **işlev1** uygulamayıveardından**function2**:
+İçindeki F# işlevler diğer işlevlerden oluşabilir. İki işlev **işlev1** ve **function2** bileşimi, **işlev1** uygulamasının **function2**uygulamasını temsil eden başka bir işlevdir:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
 
-202 sonucudur.
+Sonuç 202 ' dir.
 
-Ardışık Düzen art arda işlemlerin olarak birbirine zincirlenmiş için işlev çağrılarını etkinleştirir. Şu şekilde çalışır ardışık düzen oluşturma:
+Ardışık düzen oluşturma, işlev çağrılarının ardışık işlemler olarak birlikte zincirde olmasını sağlar. Ardışık düzen oluşturma aşağıdaki gibi çalışmaktadır:
 
 ```fsharp
 let result = 100 |> function1 |> function2
 ```
 
-Sonuç, 202 tekrar edilir.
+Sonuç yeniden 202 ' dir.
 
-Birleştirme işleçleri iki işlevler ve bir işlev döndürür. aksine, ardışık düzen operatörleri, bir işlev ve bağımsız değişken alır ve bir değer döndürür. Aşağıdaki kod örneği, kullanım ve işlev imzası farklılıkları göstererek işlem hattı ve birleştirme işleçleri arasındaki farkı gösterir.
+Kompozisyon işleçleri iki işlev alır ve bir işlev döndürür; Buna karşılık, işlem hattı işleçleri bir işlevi ve bir bağımsız değişkeni alır ve bir değer döndürür. Aşağıdaki kod örneği, işlev imzalarındaki ve kullanımındaki farklılıkları göstererek işlem hattı ve bileşim işleçleri arasındaki farkı gösterir.
 
 ```fsharp
 // Function composition and pipeline operators compared.
@@ -200,7 +200,7 @@ let result4 = Pipeline2 2
 
 ## <a name="overloading-functions"></a>Aşırı Yükleme İşlevleri
 
-Bir tür ancak değil işlevler yöntemlerinin aşırı yüklenebilir. Daha fazla bilgi için [yöntemleri](../members/methods.md).
+Bir türün yöntemlerini aşırı yükleyebilirsiniz ancak işlevleri kullanamazsınız. Daha fazla bilgi için bkz. [Yöntemler](../members/methods.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,64 +1,64 @@
 ---
 title: Otomatik Genelleştirme
-description: Bilgi nasıl F# bağımsız değişkenleri ve işlevleri bir türde birden çok tür mümkün olduğunda çalışmaları için otomatik olarak genelleştirir.
+description: Mümkün olduğunda F# birden çok tür ile çalışacak şekilde işlevlerin bağımsız değişkenlerini ve türlerini otomatik olarak genelleştirir.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8fc61b5e0c227474a5e913b37f4c0dad9b235a6f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 501749a190d9770cbcd9848e3d528cba32fe6762
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641867"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630632"
 ---
 # <a name="automatic-generalization"></a>Otomatik Genelleştirme
 
-F#tür işlevleri ve ifadeleri türlerini değerlendirilecek çıkarımı kullanır. Bu konu açıklar nasıl F# işlevleri türünü ve bağımsız değişkenler mümkün olduğunda bunlar birden çok türleriyle çalışmak üzere otomatik olarak genelleştirir.
+F#işlev ve ifade türlerini değerlendirmek için tür çıkarımı kullanır. Bu konu, bağımsız F# değişkenleri ve işlev türlerini otomatik olarak genelleştirerek, bu mümkün olduğunda birden çok tür ile çalışabilmesini açıklar.
 
 ## <a name="automatic-generalization"></a>Otomatik Genelleştirme
 
-F# Derleyici bir işlevi üzerinde tür çıkarımı gerçekleştirdiğinde, verilen bir parametre genel olup olmadığını belirler. Derleyici, her parametreyi inceler ve işlev bu parametrenin türünü üzerinde bir bağımlılık olup olmadığını belirler. Kullanmıyorsa, türü genel olarak algılanır.
+F# Derleyici, bir işlevde tür çıkarımı gerçekleştirdiğinde, belirli bir parametrenin genel olup olmayacağını belirler. Derleyici her parametreyi inceler ve işlevin belirli bir parametre türüne bağımlılığı olup olmadığını belirler. Değilse, tür genel olarak algılanır.
 
-Aşağıdaki kod örneği, genel olarak derleyici çıkarsar bir işlev gösterir.
+Aşağıdaki kod örneği, derleyicinin genel olmasını sağlayan bir işlevi gösterir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet101.fs)]
 
-Tür çıkarımı yapılan olmasını `'a -> 'a -> 'a`.
+Türü olarak algılanır `'a -> 'a -> 'a`.
 
-Türü, aynı bilinmeyen türde iki bağımsız değişkeni alır ve aynı türde bir değer döndüren bir işlev olduğunu gösterir. Önceki işlevi olabilir nedenlerden biri dolayısıyla genel, büyük-işleci (`>`) kendisi geneldir. Büyük-işleci imza olandan `'a -> 'a -> bool`. Tüm işleçler geneldir ve bir işlevdeki kod ile birlikte bir genel olmayan işlev veya işleci bir parametre türü kullanıyorsa, bu parametre türü genelleştirilemediği.
+Türü, aynı bilinmeyen türden iki bağımsız değişken alan ve aynı türde bir değer döndüren bir işlev olduğunu belirtir. Önceki işlevin genel olma nedenlerinden biri, büyüktür işlecinin (`>`) kendine genel olmasını sağlayabilir. Büyüktür işleci imzaya `'a -> 'a -> bool`sahiptir. Tüm işleçler geneldir ve bir işlevdeki kod bir parametre türünü genel olmayan bir işlev veya işleçle birlikte kullanıyorsa, bu parametre türü genelleştirilemez.
 
-Çünkü `max` olan genel, türleriyle gibi kullanılabilir `int`, `float`ve benzeri, aşağıdaki örneklerde gösterildiği gibi.
+Genel olduğundan, aşağıdaki örneklerde gösterildiği gibi,, vb. gibi `int`türlerle `float`kullanılabilir. `max`
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet102.fs)]
 
-Ancak, iki bağımsız değişkenler aynı türde olmalıdır. İmza `'a -> 'a -> 'a`değil `'a -> 'b -> 'a`. Bu nedenle, türleri eşleşmediğinden aşağıdaki kod bir hata oluşturur.
+Ancak, iki bağımsız değişken aynı türde olmalıdır. İmza `'a -> 'a -> 'a`, değildir `'a -> 'b -> 'a`. Bu nedenle, türler eşleşmediğinden aşağıdaki kod bir hata oluşturur.
 
 ```fsharp
 // Error: type mismatch.
 let biggestIntFloat = max 2.0 3
 ```
 
-`max` İşlevi büyük destekleyen herhangi bir türü ile de çalışır-işleci. Bu nedenle, ayrıca, bir dizesine, aşağıdaki kodda gösterildiği gibi kullanabilirsiniz.
+İşlevi `max` , büyüktür işlecini destekleyen her türlü tür ile de çalışır. Bu nedenle, aşağıdaki kodda gösterildiği gibi bir dize üzerinde de kullanabilirsiniz.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet104.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet104.fs)]
 
-## <a name="value-restriction"></a>Değer kısıtlama
+## <a name="value-restriction"></a>Değer kısıtlaması
 
-Basit değişmez değerler ve açık bağımsız değişken içeren tam işlev tanımları, derleyici otomatik Genelleştirme gerçekleştirir.
+Derleyici, yalnızca açık bağımsız değişkenlere ve basit sabit değerlere sahip olan tüm işlev tanımlarında otomatik Genelleştirme gerçekleştirir.
 
-Başka bir deyişle, yeterince belirli bir tür olması zorunlu değildir, ancak aynı zamanda genelleştirilebilir değil, kodu derlemek denerseniz derleyici bir hata verir. Bu kısıtlama için değerler olarak otomatik Genelleştirme üzerinde bu sorun için hata iletisini başvurduğu *değer kısıtlaması*.
+Bu, belirli bir tür olarak sınırlı olmayan, ancak genelleştirilebilir bir kod derlemeye çalıştığınızda derleyicinin bir hata verdiği anlamına gelir. Bu sorun için hata iletisi *değer kısıtlaması*olarak değerler için otomatik Genelleştirme üzerinde bu kısıtlamayı ifade eder.
 
-Genellikle, bir yapı genel olmasını istiyoruz, ancak derleyici bunu genelleştirmek için yeterli bilgiye sahip olduğunda veya bir jenerik olmayan yapısı yeterli tür bilgisi yanlışlıkla atladığınızda değer kısıtlama hatası gerçekleşir. Değer kısıtlama hatası çözüme daha tam tür çıkarımı sorun aşağıdaki yollardan biriyle sınırlamak için daha net bilgi sağlamak için verilmiştir:
+Genellikle, değer kısıtlaması hatası, bir yapının genel olmasını istediğinizde, derleyicinin Bunu genelleştirmek için yeterli bilgiye sahip olması veya genel olmayan bir yapı içinde yeterli tür bilgilerini yanlışlıkla atlarsanız meydana gelir. Değer kısıtlama hatasına çözüm, tür çıkarımı sorununu daha kesin bir şekilde kısıtlamak için aşağıdaki yollarla daha açık bilgi sağlamaktır:
 
-- Bir tür açık tür açıklamanın bir değer ya da parametre ekleyerek jenerik olmayan olacak şekilde kısıtlar.
+- Bir değere veya parametreye açık bir tür ek açıklaması ekleyerek bir türü genel olmayan olacak şekilde kısıtlayın.
 
-- Sorun kullanıyorsa, genel bir işlev, işlev bileşimi veya önişlemcinin tanımlamak için bir nongeneralizable yapısı curried işlev bağımsız değişkenleri uygulanır, bir normal işlev tanımı işlevi yeniden deneyin.
+- Sorun, işlev bileşimi veya eksik curried işlev bağımsız değişkenleri gibi genel bir işlev tanımlamak için genelleştirilsel olmayan bir yapı kullanıyorsa, işlevi sıradan bir işlev tanımı olarak yeniden yazmayı deneyin.
 
-- Sorun genelleştirilmesini karmaşık bir ifade ise, ek, kullanılmayan bir parametre ekleyerek bir işleve olun.
+- Sorun genelleştirilemeyecek kadar karmaşık bir ifadesiyse, fazladan, kullanılmamış bir parametre ekleyerek onu bir işlev haline getirin.
 
-- Açık genel tür parametreleri ekleyin. Bu seçeneği nadiren kullanılır.
+- Açık genel tür parametreleri ekleyin. Bu seçenek nadiren kullanılır.
 
-- Aşağıdaki kod örnekleri, bu senaryoların her birini göstermektedir.
+- Aşağıdaki kod örnekleri, bu senaryoların her birini gösterir.
 
-1. durum: Çok karmaşık bir ifade. Bu örnekte, listenin `counter` olması amaçlanmıştır `int option ref`, ancak basit bir değişmez değer tanımlı değil.
+Durum 1: İfade çok karmaşık. Bu örnekte, listenin `counter` olması `int option ref`amaçlanmıştır, ancak basit bir sabit değer olarak tanımlanmamıştır.
 
 ```fsharp
 let counter = ref None
@@ -66,7 +66,7 @@ let counter = ref None
 let counter : int option ref = ref None
 ```
 
-2. durum: Genel bir işlev tanımlamak için bir nongeneralizable yapısı kullanma. İşlev bağımsız değişkenlerinin kısmi uygulaması içerdiğinden bu örnekte, nongeneralizable yapıdır.
+Durum 2: Genel bir işlev tanımlamak için genelleştirtirilebilir olmayan bir yapı kullanma. Bu örnekte, işlev bağımsız değişkenlerinin kısmi bir uygulaması içerdiğinden, yapı genelleştirilebilir.
 
 ```fsharp
 let maxhash = max << hash
@@ -74,7 +74,7 @@ let maxhash = max << hash
 let maxhash obj = (max << hash) obj
 ```
 
-3. durum: Ek, kullanılmayan bir parametre ekleniyor. Bu ifade için genelleştirme kadar basit olmadığı için derleyici değeri kısıtlama hatası verir.
+Durum 3: Fazladan, kullanılmamış bir parametre ekleniyor. Bu ifade Genelleştirme için yeterince basit olmadığından, derleyici değer kısıtlaması hatası verir.
 
 ```fsharp
 let emptyList10 = Array.create 10 []
@@ -82,7 +82,7 @@ let emptyList10 = Array.create 10 []
 let emptyList10 () = Array.create 10 []
 ```
 
-4. durum: Tür parametreleri ekleniyor.
+Durum 4: Tür parametreleri ekleniyor.
 
 ```fsharp
 let arrayOf10Lists = Array.create 10 []
@@ -90,7 +90,7 @@ let arrayOf10Lists = Array.create 10 []
 let arrayOf10Lists<'T> = Array.create 10 ([]:'T list)
 ```
 
-En son durumda değer gibi birçok farklı türlerde değerler örnek oluşturmak için kullanılabilir bir türü işlevi olur:
+Son durumda, değer bir tür işlevi olur ve örneğin aşağıdaki gibi birçok farklı türde değer oluşturmak için kullanılabilir:
 
 ```fsharp
 let intLists = arrayOf10Lists<int>

@@ -1,62 +1,62 @@
 ---
-title: 'Kaynak Yönetimi: Use anahtar sözcüğü'
-description: Hakkında bilgi edinin F# anahtar sözcüğü 'use' ve yayın kaynakların ve başlatma denetleyebilirsiniz 'using' işlev.
+title: 'Kaynak yönetimi: Use anahtar sözcüğü'
+description: Kaynak başlatma ve F# serbest bırakma işlevlerini denetleyebilen ' Use ' anahtar sözcüğü ve ' Using ' işlevi hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3389f84713ec7cf5459dd0132249970f0e2ef3e0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5e0838401bee02050343b2f6dcc646a8dc8b4dc0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641702"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627264"
 ---
-# <a name="resource-management-the-use-keyword"></a>Kaynak Yönetimi: Use anahtar sözcüğü
+# <a name="resource-management-the-use-keyword"></a>Kaynak yönetimi: Use anahtar sözcüğü
 
-Bu konu, anahtar sözcüğünü açıklar `use` ve `using` işlevini başlatma ve kaynakları sürümünü kontrol edebilirsiniz.
+Bu konuda, kaynak başlatma `use` ve serbest `using` bırakma işlevlerini denetleyebilen anahtar sözcüğü ve işlevi açıklanmaktadır.
 
 ## <a name="resources"></a>Kaynaklar
 
-Terim *kaynak* birden fazla yolla kullanılır. Evet, kaynaklar, dizeler, grafik ve benzeri gibi ancak bu bağlamda, bir uygulamanın kullandığı veri olabilir *kaynakları* grafik cihaz bağlamları, dosya tanıtıcıları, ağ, yazılım ve işletim sistemi kaynaklarına başvuruyor ve veritabanı bağlantıları, bekleme tanıtıcıları vb. gibi eşzamanlılık nesneleri. Bu kaynakları uygulamalar tarafından kullanımını, işletim sistemi veya başka bir uygulamaya sağlanabilir böylece kaynak bir sonraki sürümü tarafından havuzuna ve ardından diğer kaynak sağlayıcısı kaynak alımını içerir. Uygulamaların kaynakları ortak havuzuna sunmamayı sorunlar ortaya çıkar.
+*Kaynak* terimi birden çok şekilde kullanılır. Evet, kaynaklar, bir uygulamanın kullandığı dizeler, grafikler ve gibi veriler olabilir, ancak bu bağlamda *kaynaklar* , grafik cihaz bağlamları, dosya tanıtıcıları, ağ ve veritabanı gibi yazılım veya işletim sistemi kaynaklarına başvurur bağlantılar, bekleme tutamaçları gibi eşzamanlılık nesneleri vb. Bu kaynakların uygulamalar tarafından kullanılması, kaynağın işletim sisteminden veya diğer kaynak sağlayıcısından alınması ve daha sonra kaynağın başka bir uygulamaya sağlanması için havuza daha sonraki bir sürümü ile ilgilidir. Uygulamalar, kaynakları ortak havuza geri bırakmayan sorunlar oluşur.
 
 ## <a name="managing-resources"></a>Kaynakları yönetme
 
-Bir uygulamadaki kaynakları depoladığımız ve etkili bir şekilde yönetmek için en kısa sürede ve tahmin edilebilir bir biçimde kaynakları bırakmalıdır. .NET Framework sağlayarak bunu yapmanıza yardımcı olur. `System.IDisposable` arabirimi. Uygulayan bir tür `System.IDisposable` sahip `System.IDisposable.Dispose` yönteminin doğru kaynakları serbest bırakır. İyi yazılmış uygulamalar garanti `System.IDisposable.Dispose` sınırlı bir kaynağı tutuyor herhangi bir nesne artık gerekmediğinde en kısa sürede çağrılır. Neyse ki, çoğu .NET dilleri, kolaylaştırmak için destek sağlar ve F# aynı durum geçerlidir. Dispose deseni destekleyen iki yararlı dil yapıları vardır: `use` bağlama ve `using` işlevi.
+Bir uygulamadaki kaynakları verimli ve sorumlu bir şekilde yönetmek için kaynakları hemen ve öngörülebilir bir şekilde serbest bırakmanız gerekir. .NET Framework, `System.IDisposable` arabirimi sağlayarak bunu yapmanıza yardımcı olur. Uygulayan `System.IDisposable` bir tür, kaynakları doğru `System.IDisposable.Dispose` bir şekilde serbest bırakma yöntemine sahiptir. İyi yazılmış uygulamalar, sınırlı bir `System.IDisposable.Dispose` kaynağı tutan herhangi bir nesne artık gerekli olmadığında hemen olarak adlandırılan garantisi verir. Neyse ki .NET dillerinin çoğu daha kolay hale getirmek için destek sağlar ve F# özel durum yoktur. Dispose modelini destekleyen iki yararlı dil yapıları vardır: `use` Binding `using` ve function.
 
-## <a name="use-binding"></a>Bağlama kullanın
+## <a name="use-binding"></a>Bağlamayı kullan
 
-`use` Anahtar sözcüğü, benzer bir biçime sahip `let` bağlama:
+Anahtar sözcüğünün `let` bağlamakla benzer bir formu vardır: `use`
 
-kullanma *değer* = *ifadesi*
+*değer* = *ifadesini* kullan
 
-Aynı işlevselliği sağlar bir `let` bağlama ancak bir çağrı ekler `Dispose` değeri kapsam dışına çıktığında değeri. Derleyici değeri olması durumunda, bu nedenle, değer üzerinde bir null denetimi ekler Not `null`, çağrı `Dispose` değil denenir.
+`let` Bağlama ile aynı işlevselliği sağlar, ancak değer kapsam dışına geçtiğinde değere bir `Dispose` çağrı ekler. Derleyicinin değer üzerinde null bir denetim eklediğinden, değeri ise `null`, `Dispose` çağrısının denenmediğini unutmayın.
 
-Aşağıdaki örneği kullanarak bir dosyayı otomatik olarak kapatmak gösterilmektedir `use` anahtar sözcüğü.
+Aşağıdaki örnek, `use` anahtar sözcüğü kullanılarak bir dosyanın otomatik olarak nasıl kapatılmasını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
 
 > [!NOTE]
-> Kullanabileceğiniz `use` hesaplama ifadeleri, özelleştirilmiş bir sürümünü durumda içinde `use` ifade kullanılır. Daha fazla bilgi için [dizileri](sequences.md), [zaman uyumsuz iş akışları](asynchronous-workflows.md), ve [hesaplama ifadeleri](computation-expressions.md).
+> Hesaplama ifadelerinde kullanabilirsiniz `use` , bu durumda `use` ifadenin özelleştirilmiş bir sürümü kullanılır. Daha fazla bilgi için bkz. [diziler](sequences.md), [zaman uyumsuz Iş akışları](asynchronous-workflows.md)ve [Hesaplama ifadeleri](computation-expressions.md).
 
-## <a name="using-function"></a>İşlevini kullanma
+## <a name="using-function"></a>Using Işlevi
 
-`using` İşlevi aşağıdaki biçime sahiptir:
+`using` İşlevi aşağıdaki biçimdedir:
 
-`using` (*expression1*) *function-or-lambda*
+`using`(*İfade1*) *işlev veya-lambda*
 
-İçinde bir `using` ifade *İfade1* çıkarılması gerekir nesnesi oluşturur. Sonucu *İfade1* (çıkarılması gereken nesne) bir bağımsız değişken olur *değer*, *işlevi veya lambda*, tek bir bekliyor ya da bir işlev olan tarafından üretilen değerle eşleşen türünde bağımsız değişken kalan *İfade1*, veya bir lambda ifadesi bu türden bir bağımsız değişken bekliyor. Çalışma zamanı yürütme işlevin sonunda çağırır `Dispose` ve kaynakları serbest bırakan (değer değilse `null`, bu durumda Dispose çağrısı denenmedi).
+Bir `using` ifadede *İfade1* , atılmalıdır olması gereken nesneyi oluşturur. *İfade1* (atılması gereken nesne) sonucu, tarafından *oluşturulan değerle eşleşen bir türün bir kalan bağımsız değişkenini bekleyen bir işlev olan Function veya-lambda öğesine bir bağımsız değişken, değer olur. İfade1*veya bu tür bir bağımsız değişken bekleyen bir lambda ifadesi. İşlevi yürütmenin sonunda, çalışma zamanı kaynakları çağırır `Dispose` ve serbest bırakır (değer olmadığı `null`takdirde, Dispose çağrısı denenmez).
 
-Aşağıdaki örnek, gösterir `using` ifade bir lambda ifadesi ile.
+Aşağıdaki örnek, bir Lambda `using` ifadesi ile ifadeyi gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6302.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6302.fs)]
 
-Sonraki örnekte gösterildiği `using` ifade bir işlev ile.
+Sonraki örnekte, `using` ifadesi bir işlev ile gösterilmektedir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6303.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6303.fs)]
 
-İşlevi uygulanmış bazı bağımsız değişkenlere sahip bir işlev olabileceğini unutmayın. Aşağıdaki kod örneği bunu gösterir. Dize içeren bir dosya oluşturur `XYZ`.
+İşlevin, zaten uygulanmış bazı bağımsız değişkenlerin bulunduğu bir işlev olabileceğini unutmayın. Aşağıdaki kod örneği bunu gösterir. Dizeyi `XYZ`içeren bir dosya oluşturur.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6304.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6304.fs)]
 
-`using` İşlevi ve `use` bağlanır neredeyse eşdeğer yolları aynı görevi gerçekleştirir. `using` Anahtar sözcüğü, ne zaman üzerinde daha fazla denetim sağlar `Dispose` çağrılır. Kullanırken `using`, `Dispose` kullandığınızda işlevi veya lambda ifadesi; sonunda çağrılır `use` anahtar sözcüğü, `Dispose` içeren kod bloğunun sonunda çağrılır. Genel olarak, kullanmaya tercih etmelisiniz `use` yerine `using` işlevi.
+`using` İşlevi`use` ve bağlama, aynı şeyi gerçekleştirmenin neredeyse denk bir yollardır. Anahtar sözcüğü çağrıldığında daha fazla denetim `Dispose` sağlar. `using` Kullandığınızda `using`, `Dispose` işlevin veya lambda ifadesinin sonunda çağrılır `use` ; anahtar sözcüğünü kullandığınızda, `Dispose` kapsayan kod bloğunun sonunda çağırılır. Genel olarak, `use` `using` işlevi yerine kullanmayı tercih etmelisiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

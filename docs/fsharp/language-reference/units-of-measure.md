@@ -1,17 +1,17 @@
 ---
 title: Ölçü Birimleri
-description: Nasıl kayan nokta edinin ve oturum açtığınızı tamsayı değerleri F# genellikle uzunluğu, ses ve yığın belirtmek için kullanılan ölçü birimlerini ilişkili.
+description: İçindeki F# kayan nokta ve işaretli tamsayı değerlerinin, genellikle uzunluğu, hacmi ve kütle belirtmek için kullanılan, ilişkili ölçü birimlerine nasıl sahip olabileceğini öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 217ef67912625c0a4b187a7ee13a739de811cfcb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f97eac9984f934c55aff8cf9f287afbc3aa098f3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641642"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630164"
 ---
 # <a name="units-of-measure"></a>Ölçü Birimleri
 
-Kayan nokta ve tamsayı değerleri oturum açtığınızı F# genellikle uzunluğu, toplu, yığın ve benzeri belirtmek için kullanılan ölçü birimlerini ilişkili. Birimleri ile miktarlar kullanarak önlemeye yardımcı olur aritmetik ilişkileri doğru birimleri, yüklü olduğunu doğrulamak derleyiciyi etkinleştir programlama hatalarını.
+İçindeki F# kayan nokta ve işaretli tamsayı değerleri, genellikle uzunluğu, hacmi, kütle, vb. belirtmek için kullanılan, ilişkili ölçü birimlerine sahip olabilir. Birimleri olan miktarları kullanarak, aritmetik ilişkilerin doğru birimlere sahip olduğunu doğrulamak için derleyicinin, programlama hatalarının önlenmesine yardımcı olan doğru birimlere sahip olduğunu doğrulaması için etkinleştirin.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -21,65 +21,65 @@ Kayan nokta ve tamsayı değerleri oturum açtığınızı F# genellikle uzunlu�
 
 ## <a name="remarks"></a>Açıklamalar
 
-Önceki söz dizimi *birim adı* ölçü birimi olarak. İsteğe bağlı bir parçası, önceden tanımlanmış birimleri yeni bir ölçü tanımlamak için kullanılır. Örneğin, aşağıdaki satırı ölçü tanımlar `cm` (santimetre).
+Önceki sözdizimi *birim adını* ölçü birimi olarak tanımlar. İsteğe bağlı bölüm, önceden tanımlanmış birimler açısından yeni bir ölçü tanımlamak için kullanılır. Örneğin, aşağıdaki satır ölçüyü `cm` (santimeter) tanımlar.
 
 ```fsharp
 [<Measure>] type cm
 ```
 
-Aşağıdaki satırı ölçü tanımlar `ml` (milliliter) üçüncü dereceden santimetre olarak (`cm^3`).
+Aşağıdaki satır, ölçüyü `ml` (milliliter) santimetrede (`cm^3`) olarak tanımlar.
 
 ```fsharp
 [<Measure>] type ml = cm^3
 ```
 
-Önceki sözdiziminde, *ölçü* birim içeren bir formül. Birim içeren formüllerde, tam sayı katlarını (pozitif ve negatif) desteklenir; birimleri arasında boşluk iki birimleri, bir ürünü belirtmek `*` de birimleri, bir ürün gösterir ve `/` birimlerinin bir bölümü gösterir. Karşılıklı bir birim için bir negatif tam sayı üssü ya da kullanabilirsiniz veya `/` payı ve bir birim formülün paydayı arasında bir ayrım gösterir. Payda içinde birden çok birimi parantez içine alınır. Sonraki boşluklar ayrılmış birim bir `/` payda, ancak izleyen tüm birimleri bir parçası olacak şekilde yorumlanır bir `*` pay parçası olacak şekilde yorumlanır.
+Önceki sözdiziminde, *Ölçü* birimleri içeren bir formüldür. Birimleri içeren formüllerde, tam sayı güçleri desteklenir (pozitif ve negatif), birimler arasındaki boşluklar iki birimin bir ürününü belirtir, `*` Ayrıca bir birim ürünü gösterir ve `/` birim bölümünü gösterir. Ters bir birim için, bir birim formülünün pay ve paydası arasındaki ayrımı belirten `/` negatif bir tamsayı gücü veya bir kullanabilirsiniz. Paydadaki birden çok birim parantezle çevrelenmelidir. Bir değeri paydaya bir `/` parçası olarak yorumlandıktan sonra boşluklara göre ayrılmış birimler, ancak bir sonraki birimler, payın bir `*` parçası olarak yorumlanır.
 
-1 birim ifadelerde ya da tek başına bir dimensionless miktar belirtmek için veya diğer birimleri, gibi pay birlikte kullanabilirsiniz. Örneğin, bir oran için birim olarak yazılacak `1/s`burada `s` saniye gösterir. Parantez birim formüllerde kullanılmaz. Birim formüllerde sayısal dönüştürme sabitleri belirtmeyin; Ancak, dönüşümü sabitleri birimleri ile ayrı olarak tanımlayın ve bunları birim işaretli hesaplamalar kullanın.
+Birim ifadelerinde 1 ' i, bir boyutsuz miktarı belirtmek için tek başına ya da pay içindeki gibi diğer birimlerle birlikte kullanabilirsiniz. Örneğin, bir hız için birimler olarak `1/s`yazılır; burada `s` saniyeler belirtilir. Parantezler, birim formüllerinde kullanılmaz. Birim formüllerinde sayısal dönüştürme sabitleri belirtmeyin; Ancak, birimlere ayrı olarak dönüştürme sabitleri tanımlayabilir ve bunları birim denetimli hesaplamalar halinde kullanabilirsiniz.
 
-Aynı anlamda birim formülleri eşdeğer çeşitli şekillerde yazılabilir. Bu nedenle, derleyici negatif powers reciprocals, grupları birimleri için tek bir pay ve bir paydası dönüştürür ve birimleri pay ve paydası alfabetik olarak sıralar tutarlı bir form birim formülleri dönüştürür.
+Aynı şeyi gösteren birim formülleri, çeşitli eşdeğer yollarla yazılabilir. Bu nedenle, derleyici birim formüllerini, negatif üsleri devrik bir biçimde, gruplar birimlerini tek bir pay ve paydaya dönüştürür ve pay ve paydadaki birimleri alfabetik hale getirir.
 
-Örneğin, birim formülleri `kg m s^-2` ve `m /s s * kg` hem dönüştürülür `kg m/s^2`.
+Örneğin, birim formülleri `kg m s^-2` ve `m /s s * kg` her ikisi de olarak `kg m/s^2`dönüştürülür.
 
-Kayan nokta ifadeleri ölçü kullanırsınız. Ölçü kayan noktalı sayıları ilişkili birimleri ile birlikte kullanarak başka bir tür güvenliği düzeyini ekler ve yardımcı formüllerde zayıf yazılmış kayan noktalı sayıları kullanırken oluşabilecek birim uyuşmazlığı hataları önleyebilirsiniz. Kayan yazarsanız birimleri kullanan noktası ifadesi ifade birimleriyle aynı olmalıdır.
+Kayan nokta ifadelerinde ölçü birimleri kullanırsınız. İlişkili ölçü birimleriyle birlikte kayan noktalı sayıların kullanılması, başka bir tür güvenliği düzeyi ekler ve zayıf yazılmış kayan noktalı sayılar kullandığınızda formüllerde oluşabilecek birim uyumsuzluğu hatalarından kaçınmaya yardımcı olur. Birimleri kullanan bir kayan nokta ifadesi yazarsanız, ifadedeki birimlerin eşleşmesi gerekir.
 
-Aşağıdaki örneklerde gösterildiği gibi bir birim formül köşeli parantez içinde sabit değerleri açıklama ekleyebilirsiniz.
+Aşağıdaki örneklerde gösterildiği gibi, bir birim formülüyle, açılı ayraç içinde sabit değerlere açıklama ekleyebilirsiniz.
 
 ```fsharp
 1.0<cm>
 55.0<miles/hour>
 ```
 
-Açılı ayraç arasındaki boşluk koymayın; Ancak, değişmez değer soneki gibi içerebilir `f`, aşağıdaki örnekte olduğu gibi.
+Sayı ve açılı ayraç arasına bir boşluk koymayın; Ancak, aşağıdaki örnekte olduğu gibi `f`, gibi bir sabit sonek dahil edebilirsiniz.
 
 ```fsharp
 // The f indicates single-precision floating point.
 55.0f<miles/hour>
 ```
 
-Böyle bir ek açıklama değişmez değer türü kendi temel türünden değiştirir (gibi `float`) dimensioned bir türe gibi `float<cm>` veya bu durumda, `float<miles/hour>`. Bir birim ek açıklamanın `<1>` dimensionless miktarını ve türünü ilkel tür bir birim parametresi olmadan eşdeğer olduğunu gösterir.
+Böyle bir ek açıklama, değişmez değer türünü (gibi `float`) temel türünden veya `float<miles/hour>`gibi `float<cm>` bir boyut türüne (örneğin,) değiştirir. Bir birim ek açıklaması `<1>` , bir boyutsuz miktarı gösterir ve türü bir birim parametresi olmadan temel tür ile eşdeğerdir.
 
-Ölçü türü bir kayan nokta veya imzalı tamsayı türü köşeli ayraç içinde gösterilen birim ek açıklamanın birlikte. Bu nedenle, bir dönüştürme türü yazdığınızda `g` (gram) için `kg` (kilogram) aşağıdaki gibi türleri açıklanmaktadır.
+Bir ölçü biriminin türü, parantez içinde belirtilen ek birim ek açıklaması ile birlikte bir kayan nokta veya imzalı integral türüdür. Bu nedenle, (gram `g` `kg` ) ' den (kilogram) dönüştürme türünü yazdığınızda, türleri aşağıdaki şekilde tanımlayabilirsiniz.
 
 ```fsharp
 let convertg2kg (x : float<g>) = x / 1000.0<g/kg>
 ```
 
-Ölçü birimleri için derleme zamanı birimi denetimi kullanılır ancak çalışma zamanı ortamında kalıcı değildir. Bu nedenle, performans etkilemez.
+Ölçü birimleri derleme zamanı birim denetlemesi için kullanılır, ancak çalışma zamanı ortamında kalıcı değildir. Bu nedenle, performansı etkilemezler.
 
-Ölçü birimleri, yalnızca kayan nokta tür herhangi bir tür uygulanabilir; Ancak, yalnızca kayan nokta türleri, tam sayı türleri ve ondalık türleri dimensioned destek miktarlar imzalanmış. Bu nedenle, yalnızca temel eleman türleri ve bu ilkel türler içeren toplamaları ölçü kullanılacak mantıklıdır.
+Ölçü birimleri yalnızca kayan nokta türleri değil herhangi bir türe uygulanabilir; Ancak, yalnızca kayan nokta türleri, işaretli integral türleri ve ondalık türler boyutlanır miktarları destekler. Bu nedenle, yalnızca temel türler ve bu ilkel türleri içeren toplamalarda ölçü birimleri kullanmak mantıklı olur.
 
-Aşağıdaki örnek, ölçü kullanımını gösterir.
+Aşağıdaki örnek ölçü birimlerinin kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
 
-Aşağıdaki kod örneği, dimensionless kayan noktası numarasından dimensioned kayan nokta değerine dönüştürmek gösterilmektedir. Yalnızca tarafından 1.0, 1.0 boyutları uygulama çarpın. Bu gibi bir işlev uygulamasına soyutlamak `degreesFahrenheit`.
+Aşağıdaki kod örneği, bir boyutsuz kayan nokta numarasından bir boyutlandırma kayan nokta değerine nasıl dönüştürüleceğini gösterir. 1,0 ile çarpıp, boyutları 1,0 ' ye uygulayarak yapmanız yeterlidir. Bunu, gibi `degreesFahrenheit`bir işlev içinde soyut hale getirebilirsiniz.
 
-Ayrıca, dimensioned değerlerini dimensionless kayan noktalı sayıları beklediğiniz bir işleve geçirdiğinizde, birimi iptal etmeli veya başvurusuna `float` kullanarak `float` işleci. Bu örnekte, bölen `1.0<degC>` bağımsız değişkenleri için `printf` çünkü `printf` dimensionless miktarlar bekliyor.
+Ayrıca, boyutlandırma değerlerini boyutsuz kayan noktalı sayılar bekleyen işlevlere geçirdiğinizde birimi iptal etmeniz veya `float` `float` işlecini kullanarak atamalısınız. Bu örnekte, için ' a kadar `1.0<degC>` olan bağımsız değişkenler, `printf` boyutsuz miktarlar gerektirdiğinden `printf` öğesine göre bölmektir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6902.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6902.fs)]
 
-Aşağıdaki örnekte oturum bu kodu girişleri ve çıkışları gösterir.
+Aşağıdaki örnek oturum, bu koda ait çıkış ve giriş gösterir.
 
 ```
 Enter a temperature in degrees Fahrenheit.
@@ -87,35 +87,35 @@ Enter a temperature in degrees Fahrenheit.
 That temperature in degrees Celsius is    32.22.
 ```
 
-## <a name="using-generic-units"></a>Genel birimler
+## <a name="using-generic-units"></a>Genel birimleri kullanma
 
-İlişkili bir ölçü olan veriler üzerinde çalışan genel işlevler yazabilirsiniz. Bir tür parametresi bir türle birlikte genel bir birim belirterek aşağıdaki kod örneğinde gösterildiği gibi yaparsınız.
+İlişkili ölçü birimi olan veriler üzerinde çalışan genel işlevler yazabilirsiniz. Bunu, aşağıdaki kod örneğinde gösterildiği gibi, bir türü bir genel birimle birlikte bir tür parametresi olarak belirterek yapabilirsiniz.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
 
-## <a name="creating-aggregate-types-with-generic-units"></a>Toplama türlerini genel birimleri ile oluşturma
+## <a name="creating-aggregate-types-with-generic-units"></a>Genel birimlerle toplama türleri oluşturma
 
-Aşağıdaki kod genel birimler sahip tek kayan nokta değerleri oluşan bir toplama türünü oluşturma işlemini gösterir. Bu, çeşitli birimleri ile birlikte çalışan oluşturulacak tek bir türü sağlar. Ayrıca, genel birimleri tür güvenliği birimleri bir dizi olan bir genel tür birimleri farklı bir dizi ile aynı genel tür farklı bir tür olduğundan emin olarak korur. Bu teknik temelini `Measure` özniteliği tür parametresi için uygulanabilir.
+Aşağıdaki kod, genel birimlere sahip bağımsız kayan nokta değerlerinden oluşan bir toplam türün nasıl oluşturulacağını gösterir. Bu, çeşitli birimlerle birlikte çalışarak tek bir türün oluşturulmasını sağlar. Ayrıca, genel birimler, tek bir birim kümesine sahip genel bir türün farklı bir birim kümesiyle aynı genel türden farklı türde olmasını sağlayarak tür güvenliğini korur. Bu tekniğin `Measure` temeli özniteliğin tür parametresine uygulanabilirler.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
 
-## <a name="units-at-runtime"></a>Çalışma zamanında birimleri
+## <a name="units-at-runtime"></a>Çalışma zamanında birimler
 
-Ölçü birimleri statik tür denetlemek için kullanılır. Kayan nokta değerleri derlendiğinde çalışma zamanında birimleri kayıp olacak şekilde ölçü, ortadan kalkar. Bu nedenle, her türlü girişim çalışma zamanında birim denetimini bağlıdır işlevselliği uygulamak için mümkün değildir. Örneğin, uygulama bir `ToString` işlevi birimi yazdırmak için mümkün değildir.
+Ölçü birimleri statik tür denetlemesi için kullanılır. Kayan nokta değerleri derlendiğinde, ölçü birimleri ortadan kaldırılır, bu nedenle birimler çalışma zamanında kaybedilir. Bu nedenle, çalışma zamanında birimleri denetlemeye bağlı olan işlevleri uygulama girişimi mümkün değildir. Örneğin, birimleri yazdırmak için `ToString` bir işlev uygulamak mümkün değildir.
 
 ## <a name="conversions"></a>Dönüşümler
 
-Birimleri olan bir türü dönüştürmek için (örneğin, `float<'u>`) birimleri sahip olmayan bir türe standart dönüştürme işlevini kullanabilirsiniz. Örneğin, kullanabileceğiniz `float` dönüştürmek için bir `float` birimleri, aşağıdaki kodda gösterildiği gibi yok değeri.
+Birimleri olan bir türü (örneğin, `float<'u>`) birimi olmayan bir türe dönüştürmek için Standart dönüştürme işlevini kullanabilirsiniz. Örneğin, aşağıdaki kodda gösterildiği gibi `float` , birimi olmayan bir `float` değere dönüştürmek için kullanabilirsiniz.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
 
-Unitless değeri birimleri olan bir değere dönüştürülecek uygun birimleri ile açıklanıyor 1 veya 1.0 değere göre çarpabilirsiniz. Ancak, birlikte çalışabilirlik katmanları yazmak için de bazı açık unitless değerleri birimleriyle değerlerine dönüştürmek için kullanabileceğiniz işlevi vardır. İçinde bunlar [Microsoft.FSharp.Core.LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3) modülü. Örneğin, unitless dönüştürmek için `float` için bir `float<cm>`, kullanın [FloatWithMeasure](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9)aşağıdaki kodda gösterildiği gibi.
+Bir unitless değerini birimlere sahip bir değere dönüştürmek için, uygun birimlerle açıklanmış bir 1 veya 1,0 değeri ile çarpmanız gerekir. Bununla birlikte, birlikte çalışabilirlik katmanları yazmak için, birimsiz değerleri birimlere eşit değerlere dönüştürmek üzere kullanabileceğiniz bazı açık işlevler de vardır. Bunlar [Microsoft. FSharp. Core. LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3) modülüdür. Örneğin, bir unitküçüktür `float` `float<cm>`öğesine dönüştürmek için aşağıdaki kodda gösterildiği gibi [FloatWithMeasure](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9)kullanın.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
 
-## <a name="units-of-measure-in-the-f-core-library"></a>Ölçü birimlerini F# çekirdek kitaplığı
+## <a name="units-of-measure-in-the-f-core-library"></a>F# Çekirdek kitaplığındaki ölçü birimleri
 
-Bir birim kitaplığı kullanılabilir `FSharp.Data.UnitSystems.SI` ad alanı. Bunların her iki simge biçiminde sı birimleri içerir (gibi `m` ölçüm için) içinde `UnitSymbols` alt ad alanı ve bunların tam adı (gibi `meter` ölçüm için) içinde `UnitNames` alt ad.
+`FSharp.Data.UnitSystems.SI` Ad alanında bir birim kitaplığı mevcuttur. Alt ad alanında hem sembol `m` biçiminde (ölçüm gibi) `UnitNames` `meter` hem de alt ad alanındaki tam adı (ölçüm için) olan sı birimleri içerir. `UnitSymbols`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

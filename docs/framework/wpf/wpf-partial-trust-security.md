@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 259db84c8ab3b9bbad809b9636ba18537dd6fe62
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: b8234dcb33e9d429329c6d68900119382ff2f1cb
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400726"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629798"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF Kısmi Güven Güvenliği
 <a name="introduction"></a>Genel olarak, kötü amaçlı hasar engellemek için Internet uygulamalarının kritik sistem kaynaklarına doğrudan erişimi olması kısıtlanmalıdır. Varsayılan olarak, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] istemci tarafı komut dosyası dilleri kritik sistem kaynaklarına erişemez. Windows Presentation Foundation (WPF) tarayıcıda barındırılan uygulamalar tarayıcıdan başlatılabildiğinden, benzer bir kısıtlama kümesine uymalıdır. Bu kısıtlamaları [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] zorlamak için hem kod erişim güvenliği (CAS) hem de ClickOnce kullanır (bkz. [WPF Güvenlik Stratejisi-Platform güvenliği](wpf-security-strategy-platform-security.md)). Varsayılan olarak, tarayıcıda barındırılan uygulamalar Internet, yerel intranet veya yerel bilgisayar tarafından başlatıldıklarından bağımsız olarak Internet bölgesi CA 'ları izin kümesi ister. Tüm izin kümesinden daha az bir şekilde çalışan uygulamalar kısmi güvenle çalışıyor olarak kabul edilir.  
@@ -113,7 +113,7 @@ ms.locfileid: "68400726"
   
  Çoğu durumda, kısmi bir güvenin alternatif olarak bulunması gerekir.  
   
- Bir intranet gibi denetlenen bir ortamda, özel yönetilen çerçeveler, [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]istemci tabanında üzerine yüklenebilir. Bu kitaplıklar, tam güven gerektiren ve yalnızca kullanarak <xref:System.Security.AllowPartiallyTrustedCallersAttribute> kısmi güvenle izin verilen uygulamalardan başvurulabilen kodu yürütebilir (daha fazla bilgi için bkz. [güvenlik](security-wpf.md) ve [WPF Güvenlik Stratejisi-Platform güvenliği](wpf-security-strategy-platform-security.md)).  
+ İntranet gibi denetlenen bir ortamda, özel yönetilen çerçeveler, genel derleme önbelleği 'ne (GAC) istemci tabanı üzerinden yüklenebilir. Bu kitaplıklar, tam güven gerektiren ve yalnızca kullanarak <xref:System.Security.AllowPartiallyTrustedCallersAttribute> kısmi güvenle izin verilen uygulamalardan başvurulabilen kodu yürütebilir (daha fazla bilgi için bkz. [güvenlik](security-wpf.md) ve [WPF Güvenlik Stratejisi-Platform güvenliği](wpf-security-strategy-platform-security.md)).  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>Tarayıcı ana bilgisayar algılama  

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Uzun bir nitelenmiş yola (Visual Basic) sahip nesneye erişimi hızlandırma'
+title: 'Nasıl yapılır: Uzun bir nitelik yolu (Visual Basic) ile bir nesneye erişimi hızlandırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], accessing
@@ -8,51 +8,52 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: 94c838a69aab9fcae9dc0c79b6038ee90e2369e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8e50a2ed04037b48091321dc0c9ac2ea1db35f4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769050"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68631091"
 ---
-# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Nasıl yapılır: Uzun bir nitelenmiş yola (Visual Basic) sahip nesneye erişimi hızlandırma
-Bir nitelenmiş yola çeşitli yöntemleri ve özellikleri gerektiren bir nesne sık erişirseniz, kodunuzu oluşturan nitelenmiş yola tekrarlayarak değil hızlandırabilirsiniz.  
-  
- Nitelenmiş yola kaçınmanızı iki yolu vardır. Nesneyi bir değişkene atayın ya da içinde kullanabileceğiniz bir `With`... `End With` blok.  
-  
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>Bir değişkene atayarak yoğun tam bir nesneye erişimi hızlandırma için  
-  
-1. Sık sık eriştiğiniz nesne türünde bir değişken bildirir. Nitelenmiş yola bildirimi başlatma kısmında belirtin.  
-  
-    ```  
-    Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl  
-    ```  
-  
-2. Bir nesnenin üyelerine erişmek için bu değişkeni kullanın.  
-  
-    ```  
-    ctrlActv.Text = "Test"  
-    ctrlActv.Location = New Point(100, 100)  
-    ctrlActv.Show()  
-    ```  
-  
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>Bir ile kullanarak, yoğun bir şekilde tam bir nesneye erişimi hızlandırma için... End With bloğu  
-  
-1. Nitelenmiş yola yerleştirecek bir `With` deyimi.  
-  
-    ```  
-    With someForm.ActiveForm.ActiveControl  
-    ```  
-  
-2. İçinde bir nesnenin üyelerine erişmek `With` önce bloğunda `End With` deyimi.  
-  
-    ```  
-        .Text = "Test"  
-        .Location = New Point(100, 100)  
-        .Show()  
-    End With  
-    ```  
-  
+# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Nasıl yapılır: Uzun bir nitelik yolu (Visual Basic) ile bir nesneye erişimi hızlandırma
+
+Birçok yöntem ve özellik için bir nitelik yolu gerektiren bir nesneye sık sık erişiyorsanız, nitelik yolunu tekrarlayarak kodunuzun hızını hızlandırabilirsiniz.
+
+Nitelik yolunu tekrardan kaçınmanın iki yolu vardır. Nesnesini bir değişkene atayabilir veya bir `With`... içinde kullanabilirsiniz. `End With` engelle.
+
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>Büyük ölçüde nitelikli bir nesneye erişimi bir değişkene atayarak hızlandırmak için
+
+1. Sıklıkla eriştiğiniz nesnenin türünde bir değişken bildirin. Bildirimin başlatma bölümünde nitelik yolunu belirtin.
+
+    ```vb
+    Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl
+    ```
+
+2. Nesnenin üyelerine erişmek için değişkenini kullanın.
+
+    ```vb
+    ctrlActv.Text = "Test"
+    ctrlActv.Location = New Point(100, 100)
+    ctrlActv.Show()
+    ```
+
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>Ile bir Ile kullanarak bir büyük ölçüde nitelenmiş nesneye erişimi hızlandırmak için... Blokla bitir
+
+1. Nitelik yolunu bir `With` deyime koyun.
+
+    ```vb
+    With someForm.ActiveForm.ActiveControl
+    ```
+
+2. Deyimden önce nesnenin `With` blok içindeki üyelerine erişin. `End With`
+
+    ```vb
+        .Text = "Test"
+        .Location = New Point(100, 100)
+        .Show()
+    End With
+    ```
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

@@ -1,17 +1,17 @@
 ---
 title: 'Döngüler: while...do İfadesi'
-description: 'Bkz: nasıl sırada... yapmak ifadesi belirtilen test koşulu true olduğu sürece, yinelemeli yürütme (döngü) gerçekleştirmek için kullanılır.'
+description: Bkz. while... do ifadesi, belirtilen test koşulu true olduğunda yinelemeli yürütme (döngü) gerçekleştirmek için kullanılır.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5823ace27348ff4d4397a726bf2254f8fa0ee09b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f05bdd9f8f4b9446d59f68e1231fb75e18e9b526
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641827"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630759"
 ---
 # <a name="loops-whiledo-expression"></a>Döngüler: while...do İfadesi
 
-`while...do` İfadesi belirtilen test koşulu true olduğu sürece, yinelemeli yürütme (döngü) gerçekleştirmek için kullanılır.
+`while...do` İfade, belirtilen bir test koşulu doğru olduğunda yinelemeli yürütme (döngü) gerçekleştirmek için kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -22,13 +22,13 @@ while test-expression do
 
 ## <a name="remarks"></a>Açıklamalar
 
-*Test ifade* ise; değerlendirilir `true`, *gövde ifadesi* yürütülür ve test ifade tekrar değerlendirilir. *Gövde ifadesi* türüne sahip olmalıdır `unit`. Test ifade ise `false`, yineleme sona erer.
+*Test ifadesi* değerlendirilir; Eğer ise `true`, *gövde ifadesi* yürütülür ve test ifadesi yeniden değerlendirilir. *Body ifadesinin* türü `unit`olmalıdır. Test ifadesi ise `false`, yineleme sonlanır.
 
-Aşağıdaki örnek, kullanımını gösterir `while...do` ifade.
+Aşağıdaki örnek, `while...do` ifadesinin kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5301.fs)]
 
-Önceki kodun çıktısı biri son 10'dur bir rastgele sayı 1 ile 20 arasında akışıdır.
+Önceki kodun çıktısı, en fazla 10 olan 1 ile 20 arasında rastgele sayıların bir akışıdır.
 
 ```
 13 19 8 18 16 2 10
@@ -36,10 +36,10 @@ Found a 10!
 ```
 
 > [!NOTE]
-> Kullanabileceğiniz `while...do` sequence ifadeleri ve diğer hesaplama ifadeleri, özelleştirilmiş bir sürümünü durumda `while...do` ifade kullanılır. Daha fazla bilgi için [dizileri](sequences.md), [zaman uyumsuz iş akışları](asynchronous-workflows.md), ve [hesaplama ifadeleri](computation-expressions.md).
+> Dizi ifadelerinde ve `while...do` diğer hesaplama ifadelerinde kullanabilirsiniz, bu durumda `while...do` ifadenin özelleştirilmiş bir sürümü kullanılır. Daha fazla bilgi için bkz. [diziler](sequences.md), [zaman uyumsuz Iş akışları](asynchronous-workflows.md)ve [Hesaplama ifadeleri](computation-expressions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F# Dili Başvurusu](index.md)
-- [Döngüler: `for...in` İfade](loops-for-in-expression.md)
-- [Döngüler: `for...to` İfade](loops-for-to-expression.md)
+- [Lerin `for...in`İfadesini](loops-for-in-expression.md)
+- [Lerin `for...to`İfadesini](loops-for-to-expression.md)

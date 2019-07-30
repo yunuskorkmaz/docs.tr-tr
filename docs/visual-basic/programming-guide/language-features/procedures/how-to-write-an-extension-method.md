@@ -1,81 +1,81 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) uzantı metodu yazma'
+title: 'Nasıl yapılır: Uzantı metodu yazma (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 00d62d275f7afc06e066a375dc1ffcd74b23c9ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a7a9d16d9f69071e9d1dacb0558f7ca92e1d21e
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666007"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68631026"
 ---
-# <a name="how-to-write-an-extension-method-visual-basic"></a>Nasıl yapılır: (Visual Basic) uzantı metodu yazma
-Genişletme yöntemleri varolan bir sınıfa yöntemler eklemenize imkan tanır. Bu sınıfın bir örneğini değilmiş gibi uzantı metodu volat pouze jednou.  
+# <a name="how-to-write-an-extension-method-visual-basic"></a>Nasıl yapılır: Uzantı metodu yazma (Visual Basic)
+Uzantı yöntemleri varolan bir sınıfa Yöntemler eklemenizi sağlar. Genişletme yöntemi, bu sınıfın bir örneği gibi çağrılabilir.
+
+### <a name="to-define-an-extension-method"></a>Bir genişletme yöntemi tanımlamak için
+
+1. Visual Studio 'da yeni veya mevcut bir Visual Basic uygulaması açın.
+
+2. Uzantı yöntemi tanımlamak istediğiniz dosyanın en üstünde, aşağıdaki içeri aktarma ifadesini ekleyin:
+
+    ```vb
+    Imports System.Runtime.CompilerServices
+    ```
+
+3. Yeni veya mevcut uygulamanızdaki bir modül içinde, yöntem tanımını uzantı özniteliğiyle başlatın:
+
+    ```vb
+    <Extension()>
+    ```
+
+4. Yöntemi sıradan bir şekilde bildirin, ancak ilk parametre türü genişletmek istediğiniz veri türü olmalıdır.
+
+    ```vb
+    <Extension()>
+    Public Sub SubName (ByVal para1 As ExtendedType, <other parameters>)
+         ' < Body of the method >
+    End Sub
+    ```
+
+## <a name="example"></a>Örnek
+ Aşağıdaki örnek, modülünde `StringExtensions`bir genişletme yöntemi bildirir. İkinci bir modül, `Module1`yöntemini içeri `StringExtensions` aktarır ve çağırır. Uzantı yöntemi çağrıldığında kapsam içinde olmalıdır. Genişletme yöntemi `PrintAndPunctuate` , <xref:System.String> sınıfını bir parametre olarak gönderilen bir noktalama sembolleri dizesi gelen dize örneğini görüntüleyen bir yöntemle genişletir.
   
-### <a name="to-define-an-extension-method"></a>Bir genişletme yöntemi tanımlamak için  
+```vb
+' Declarations will typically be in a separate module.
+Imports System.Runtime.CompilerServices
+
+Module StringExtensions
+    <Extension()>
+    Public Sub PrintAndPunctuate(ByVal aString As String,
+                                 ByVal punc As String)
+        Console.WriteLine(aString & punc)
+    End Sub
+
+End Module
+```
+
+```vb
+' Import the module that holds the extension method you want to use,
+' and call it.
+
+Imports ConsoleApplication2.StringExtensions
+
+Module Module1
   
-1. Yeni veya mevcut bir Visual Basic uygulamaları Visual Studio'da açın.  
+    Sub Main()
+        Dim example = "Hello"
+        example.PrintAndPunctuate("?")
+        example.PrintAndPunctuate("!!!!")
+    End Sub
+    
+End Module
+```
   
-2. Bir genişletme yöntemi tanımlamak istediğiniz dosyasının en üstüne aşağıdaki içeri aktarma deyimi içerir:  
-  
-    ```  
-    Imports System.Runtime.CompilerServices  
-    ```  
-  
-3. İçinde bir modül, yeni veya mevcut uygulamanızda uzantı özniteliğine sahip yöntem tanımını başlayın:  
-  
-    ```  
-    <Extension()>  
-    ```  
-  
-4. Dışında ilk parametresinin türü genişletmek istediğiniz veri türünde olmalıdır, yöntemi normal şekilde bildirin.  
-  
-    ```  
-    <Extension()>   
-    Public Sub subName (ByVal para1 As ExtendedType, <other parameters>)  
-         ' < Body of the method >  
-    End Sub  
-    ```  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir genişletme yöntemi modülünde bildirir `StringExtensions`. İkinci bir modül `Module1`, aktarır `StringExtensions` yöntemini çağırır. Genişletme yöntemi, çağrıldığı zaman kapsamda olması gerekir. Genişletme yöntemi `PrintAndPunctuate` genişletir <xref:System.String> sınıfı dize örneğinde görüntüleyen bir yöntem ile ardından noktalama simgeleri parametre olarak gönderilen bir dize.  
-  
-```vb  
-' Declarations will typically be in a separate module.  
-Imports System.Runtime.CompilerServices  
-  
-Module StringExtensions  
-    <Extension()>   
-    Public Sub PrintAndPunctuate(ByVal aString As String,   
-                                 ByVal punc As String)  
-        Console.WriteLine(aString & punc)  
-    End Sub  
-  
-End Module  
-```  
-  
-```vb  
-' Import the module that holds the extension method you want to use,   
-' and call it.  
-  
-Imports ConsoleApplication2.StringExtensions  
-  
-Module Module1  
-  
-    Sub Main()  
-        Dim example = "Hello"  
-        example.PrintAndPunctuate("?")  
-        example.PrintAndPunctuate("!!!!")  
-    End Sub  
-  
-End Module  
-```  
-  
- Yöntemi iki parametre ile tanımlanmıştır ve yalnızca bir adı olduğuna dikkat edin. İlk parametre `aString`, yöntem tanımını bağlı `example`, örneğini `String` yöntemi çağırır. Örnek çıktısı aşağıdaki gibidir:  
+ Yöntemin iki parametre ile tanımlandığından ve yalnızca bir ile çağırdığına dikkat edin. Yöntem tanımındaki ilk parametre `aString`, yöntemini çağıran örneği `String` olan öğesine `example`bağlanır. Örneğin çıktısı aşağıdaki gibidir:
   
  `Hello?`  
   
@@ -87,4 +87,4 @@ End Module
 - [Genişletme Yöntemleri](./extension-methods.md)
 - [Module Deyimi](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
-- [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

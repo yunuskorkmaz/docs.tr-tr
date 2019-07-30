@@ -1,17 +1,17 @@
 ---
 title: Girdi Noktası
-description: Giriş noktası kümesine öğrenin bir F# yürütme resmi olarak başladığı bir yürütülebilir dosyası olarak derlenmiş bir program.
+description: Yürütme resmi 'nin başladığı çalıştırılabilir dosya olarak derlenmiş bir F# programa giriş noktası ayarlamayı öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: c7aedda5834fb224507bfcecd4688978efa26547
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5e13416131d4dfd22583439fedf51f18f7a461da
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645448"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630526"
 ---
 # <a name="entry-point"></a>Girdi Noktası
 
-Bu konu, giriş noktası ayarlamak için kullandığınız yöntemin açıklar bir F# program.
+Bu konuda, giriş noktasını bir F# programa ayarlamak için kullandığınız yöntem açıklanmaktadır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -22,17 +22,17 @@ let-function-binding
 
 ## <a name="remarks"></a>Açıklamalar
 
-Önceki sözdiziminde, *let işlevi bağlaması* içinde bir işlev tanımı bir `let` bağlama.
+Önceki sözdiziminde, *Let-işlev-bağlama* bir `let` bağlamadaki bir işlevin tanımıdır.
 
-Yürütme resmi olarak başladığı bir yürütülebilir dosya olduğu gibi derlenmiş bir programın giriş noktası. Belirttiğiniz giriş noktası bir F# uygulayarak uygulama `EntryPoint` özniteliği programın `main` işlevi. Bu işlev (kullanılarak oluşturulan bir `let` bağlama) son derlenen dosyayı son işlev olmalıdır. Son derlenen son proje dosyasına veya komut satırına geçirilen dosyanın son dosyasıdır.
+Yürütülebilir dosya olarak derlenen bir programa giriş noktası, yürütmenin resmi olarak başladığı yerdir. F# `EntryPoint` Programın işlevine`main` özniteliğini uygulayarak giriş noktasını bir uygulamaya belirlersiniz. Bu işlev (bir `let` bağlama kullanılarak oluşturulan), son derlenmiş dosyadaki son işlev olmalıdır. Son derlenen dosya, projedeki son dosya veya komut satırına geçirilen son dosyadır.
 
-Giriş noktası işlevini türünde `string array -> int`. Komut satırında sağlanan bağımsız değişkenler geçirilen `main` işlevi bir dize dizisi. Dizinin ilk öğesi olmayan ilk bağımsız değişken; diğer dillerde olduğu gibi yürütülebilir dosyanın adını dizide dahil edilmez. Dönüş değeri çıkış kodu işlemi için kullanılır. Sıfır, genellikle başarılı gösterir; sıfır olmayan değerler, bir hata gösterir. Özel bir anlamı sıfır dönüş kodları için hiçbir kural yoktur; dönüş kodları anlamı, uygulamaya özgü olur.
+Giriş noktası işlevinde tür `string array -> int`vardır. Komut satırında verilen bağımsız değişkenler, dizeler dizisindeki `main` işleve geçirilir. Dizinin ilk öğesi ilk bağımsız değişkendir; yürütülebilir dosyanın adı, başka dillerde olduğu gibi diziye dahil değildir. Dönüş değeri, işlem için çıkış kodu olarak kullanılır. Sıfır genellikle başarıyı gösterir; sıfır olmayan değerler bir hatayı gösterir. Sıfır olmayan dönüş kodlarının belirli anlamı için bir kural yoktur; dönüş kodlarının anlamları uygulamaya özgüdür.
 
-Aşağıdaki örnekte basit bir `main` işlevi.
+Aşağıdaki örnekte basit `main` bir işlev gösterilmektedir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/entry-point/snippet501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/entry-point/snippet501.fs)]
 
-Ne zaman bu kod yürütüldüğünde komut satırından `EntryPoint.exe 1 2 3`, çıktı aşağıdaki gibidir.
+Bu kod komut satırıyla `EntryPoint.exe 1 2 3`yürütüldüğünde, çıkış aşağıdaki gibidir.
 
 ```console
 Arguments passed to function : [|"1"; "2"; "3"|]
@@ -40,7 +40,7 @@ Arguments passed to function : [|"1"; "2"; "3"|]
 
 ## <a name="implicit-entry-point"></a>Örtük giriş noktası
 
-Bir program, Hayır olduğunda **EntryPoint** giriş noktası, derlenecek dosyanın son en üst düzey bağlamaları açıkça belirten bir özniteliği, giriş noktası olarak kullanılır.
+Bir programın giriş noktasını açıkça belirten bir **entryPoint** özniteliği olmadığında, Derlenecek son dosyadaki en üst düzey bağlamalar giriş noktası olarak kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

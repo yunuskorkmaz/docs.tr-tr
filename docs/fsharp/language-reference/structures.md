@@ -1,17 +1,17 @@
 ---
 title: Yapılar
-description: Hakkında bilgi edinin F# yapısı, bir küçük nesne türü genellikle bir sınıf türleri ile küçük miktarda veri ve basit davranışı için daha verimlidir.
+description: Küçük bir veri F# miktarı ve basit davranışları olan türler için bir sınıftan daha verimli bir kompakt nesne türü yapı hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: dc302b975604bebcd145a385fb59b21417547c5e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e638b450fe43e0993c9980cade246c3f26d25e2d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645339"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630765"
 ---
 # <a name="structures"></a>Yapılar
 
-A *yapısı* küçük miktarda veri ve basit davranışı sahip türleri bir sınıf daha verimli olabilir compact nesne türüdür.
+*Yapı* , az miktarda veri ve basit davranışa sahip olan türler için bir sınıftan daha verimli olabilecek bir Compact nesne türüdür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,27 +30,27 @@ type [accessibility-modifier] type-name =
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yapıları, *değer türleri*, alanları doğrudan yığını veya olarak kullanılması durumunda depolanan anlamına gelir veya dizi öğeleri, satır içi üst yazın. Sınıfları ve kayıtları aksine, yapıları geçişi değerli semantiklere sahip. Bu, öncelikle küçük toplamları erişilen ve sık kopyalanan verileri için yararlı oldukları anlamına gelir.
+Yapılar *değer türlerdir*, bu, doğrudan yığında depolandıkları veya alan veya dizi öğeleri olarak kullanıldıkları zaman, üst tür içinde satır içi olarak kullanıldıkları anlamına gelir. Sınıfların ve kayıtlardan farklı olarak, yapıların değer geçişi semantiği vardır. Bu, öncelikli olarak sık erişilen ve kopyalandığı verilerin küçük toplamalar için yararlı oldukları anlamına gelir.
 
-Önceki sözdiziminde, iki formları gösterilmektedir. İlk basit söz dizimi değil, ancak yine de sık kullandığınız zaman için kullanılır `struct` ve `end` anahtar çıkarabilirsiniz `StructAttribute` ikinci formda görünen özniteliği. Kısaltabilirsiniz `StructAttribute` yalnızca `Struct`.
+Önceki sözdiziminde iki form gösterilir. İlki basit sözdizimi değildir, ancak, `struct` ve `end` anahtar sözcüklerini kullandığınızda, ikinci formda görünen `StructAttribute` özniteliği atlayabilirsiniz, ancak. `StructAttribute` Yalnızca`Struct`' i kısaltabilirsiniz.
 
-*Tür-definition-öğeleri-ve-üyeleri* üye bildirimleri ve tanımları önceki sözdiziminde temsil eder. Yapıları oluşturucular ve alanlar değişebilir ve sabit sahip olabilir ve üyeleri ve arabirim uygulamalarına bildirebilirsiniz. Daha fazla bilgi için [üyeleri](members/index.md).
+Önceki sözdiziminde bulunan *tür tanımı-öğeler-ve-Üyeler* üye bildirimlerini ve tanımlarını temsil eder. Yapılar, oluşturucular ve değişebilir ve sabit alanlara sahip olabilir ve üyeleri ve arabirim uygulamalarını bildirebilirler. Daha fazla bilgi için bkz. [Üyeler](./members/index.md).
 
-Yapıları Devralmada alamaz, içeremez `let` veya `do` bağlamaları ve yinelemeli olarak (kendi türüne başvuru hücreleri içerebilse) kendi türünde alanlar içeremez.
+Yapılar devralmaya katılamaz, `let` veya `do` bağlama içeremez ve kendi türündeki alanları özyinelemeli olarak içeremez (ancak kendi türlerine başvuran başvuru hücreleri içerebilse de).
 
-Yapıları izin vermez çünkü `let` bağlamaları kullanarak yapılardaki alanlar bildirmeniz gerekir `val` anahtar sözcüğü. `val` Anahtar sözcüğü bir alan ve türünü tanımlar ancak başlatma izin vermiyor. Bunun yerine, `val` bildirimlerdir sıfıra başlatılmış veya null. Bu nedenle, bir örtük Oluşturucu (diğer bir deyişle, hemen sonra bildiriminde yapısı adı verilen parametreleri) sahip yapıları gerektiren `val` bildirimleri ek açıklama ile `DefaultValue` özniteliği. Tanımlı bir oluşturucuya sahip yapıları sıfır başlatma yine de destekler. Bu nedenle, `DefaultValue` özniteliği, bu tür bir sıfır değeri alan için geçerli bir bildirim. Yapıları için örtük Oluşturucu olduğundan herhangi bir eylem gerçekleştirmeyin `let` ve `do` bağlamaları türüne izin verilmiyor, ancak geçirilen örtük Oluşturucu parametre değerlerini özel alanları olarak kullanılabilir.
+Yapılar bağlamalara izin `let` vermediğinden, `val` anahtar sözcüğünü kullanarak yapıların alanlarını bildirmeniz gerekir. Anahtar `val` sözcüğü bir alanı ve türünü tanımlar, ancak başlatmaya izin vermez. Bunun yerine `val` , bildirimler sıfır veya null olarak başlatılır. Bu nedenle, örtük Oluşturucusu olan yapılar (diğer bir deyişle, bildirimdeki yapı adından hemen sonra verilen Parametreler), `val` bildirimlerin `DefaultValue` özniteliğiyle açıklanabilmesini gerektirir. Tanımlı bir oluşturucuya sahip olan yapılar sıfır başlatmayı desteklemeye devam eder. Bu nedenle öznitelik, bu tür sıfır değeri alan için geçerli olan bir bildirimidir. `DefaultValue` Tür üzerinde `do` bağlamalara izin verilmediğinden, yapılar için örtük `let` oluşturucular hiçbir eylem gerçekleştirmez, ancak geçirilen örtük Oluşturucu parametre değerleri özel alanlar olarak kullanılabilir.
 
-Alan değerlerinin başlatma açık oluşturucuları gerektirebilir. Açık bir oluşturucu içeren bir yapıya sahip olduğunda sıfır başlatma yine de destekler. kullanmaz ancak `DefaultValue` özniteliği `val` bildirimleri içeren açık Oluşturucu çakıştığı için. Hakkında daha fazla bilgi için `val` bildirimleri için bkz: [açık alanlar: `val` Anahtar sözcüğü](members/explicit-fields-the-val-keyword.md).
+Açık oluşturucular alan değerlerinin başlatılmasını içerebilir. Açık Oluşturucusu olan bir yapınız varsa, yine de sıfır başlatmayı destekler; Ancak, açık Oluşturucu ile çakıştığından, `DefaultValue` bu özniteliği `val` bildirimlerinde kullanmayın. Bildirimler hakkında `val` daha fazla bilgi için bkz [. açık alanlar: `val` Anahtar sözcüğü](./members/explicit-fields-the-val-keyword.md).
 
-Öznitelikler ve erişilebilirlik değiştiricileri yapıları izin verilir ve diğer türleri için aynı kuralları uygulayın. Daha fazla bilgi için [öznitelikleri](attributes.md) ve [erişim denetimi](access-control.md).
+Yapılar üzerinde özniteliklere ve erişilebilirlik değiştiricilerine izin verilir ve diğer türlerle aynı kuralları izler. Daha fazla bilgi için bkz. [öznitelikler](attributes.md) ve [Access Control](access-control.md).
 
-Aşağıdaki kod örnekleri, yapı tanımları göstermektedir.
+Aşağıdaki kod örnekleri yapı tanımlarını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2501.fs)]
 
-## <a name="byreflike-structs"></a>ByRefLike yapılar
+## <a name="byreflike-structs"></a>ByRefLike yapıları
 
-Uyması için kendi yapılar tanımlayabilirsiniz `byref`-ister semantiği: bkz [Zkratka](byrefs.md) daha fazla bilgi için. Bunun <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> özniteliği:
+Benzer anlambilimi olan `byref`kendi yapı birimlerinizi tanımlayabilirsiniz: daha fazla bilgi için bkz. [byrefs](byrefs.md) . Bu, <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> özniteliğiyle yapılır:
 
 ```fsharp
 open System
@@ -62,20 +62,20 @@ type S(count1: Span<int>, count2: Span<int>) =
     member x.Count2 = count2
 ```
 
-`IsByRefLike` değil gelmez `Struct`. Her ikisi de türünde bulunmalıdır.
+`IsByRefLike`göstermez `Struct`. Her ikisi de türünde bulunmalıdır.
 
-Bir "`byref`-gibi" yapıda F# yığın bağlı değer türüdür. Bu, hiçbir zaman yönetilen yığında ayrılır. A `byref`-gibi yaşam süresi ve yakalama olmayan hakkında güçlü denetimleri kümesiyle zorlanmış olarak yapı yüksek performanslı programlama için kullanışlıdır. Kurallar şunlardır:
+İçindeki F# "`byref`-LIKE" yapısı, yığın bağlantılı bir değer türüdür. Yönetilen yığında hiçbir şekilde ayrılmadı. Bir `byref`-LIKE yapısı, yoğun ömür ve yakalama olmayan bir güçlü denetim kümesiyle zorlandığından, yüksek performanslı programlama için yararlıdır. Kurallar şunlardır:
 
-* İşlev parametrelerini, yöntem parametreleri, yerel değişkenler döner kullanılabilirler.
-* Statik olamaz veya bir sınıf ya da normal yapı üyelerinin örneği.
-* Herhangi bir kapanış yapısı tarafından yakalanamıyor (`async` yöntemlerde veya lambda ifadelerinde).
+* İşlev parametreleri, yöntem parametreleri, yerel değişkenler, yöntem geri dönüş olarak kullanılabilirler.
+* Bunlar statik veya bir sınıfın ya da normal yapının örnek üyeleri olamaz.
+* Bunlar herhangi bir kapanış yapısı (`async` Yöntemler veya lambda ifadeleri) tarafından yakalanamaz.
 * Genel parametre olarak kullanılamaz.
 
-Bu kurallar çok kesin kullanımını kısıtlıyor olsa da, bunlar promise yüksek performanslı bilgi işlem güvenli bir şekilde karşılamak için bunu yapın.
+Bu kurallar kullanımı çok kuvvetli olsa da, yüksek performanslı bilgi işlem taahhüdünü güvenli bir şekilde yerine getirmelerini sağlar.
 
-## <a name="readonly-structs"></a>Salt okunur yapılar
+## <a name="readonly-structs"></a>ReadOnly yapılar
 
-Yapılar ile açıklama ekleyebilirsiniz <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> özniteliği. Örneğin:
+<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> Özniteliği olan yapılara not ekleyebilirsiniz. Örneğin:
 
 ```fsharp
 [<IsReadOnly; Struct>]
@@ -84,19 +84,19 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-`IsReadOnly` değil gelmez `Struct`. Her ikisi de sahip olarak eklemelisiniz bir `IsReadOnly` yapısı.
+`IsReadOnly`göstermez `Struct`. `IsReadOnly` Yapısına sahip olmak için her ikisini de eklemeniz gerekir.
 
-Bu özniteliğin kullanımı yayan meta verileri izin vermek F# ve C# işleme biçimi için bilmeniz `inref<'T>` ve `in ref`sırasıyla.
+Bu özniteliğin kullanılması, verileri sırasıyla ve F# `in ref`olarak C# `inref<'T>` değerlendirmek için meta verileri yayar.
 
-Salt okunur yapı içinde değiştirilebilir bir değer tanımlayan bir hata oluşturur.
+Salt okunur bir yapının içinde kesilebilir değer tanımlamak bir hata oluşturur.
 
-## <a name="struct-records-and-discriminated-unions"></a>Yapı kayıtları ve ayrılmış birleşimler
+## <a name="struct-records-and-discriminated-unions"></a>Struct kayıtları ve ayırt edici birleşimler
 
-Temsil ettiğiniz [kayıtları](records.md) ve [ayırt edici birleşimler](discriminated-unions.md) yapılar ile olarak `[<Struct>]` özniteliği.  Daha fazla bilgi için her bir makaleye göz atın.
+Özniteliği`[<Struct>]` ile yapılar olarak [kayıtları](records.md) ve [ayırt edici birleşimleri](discriminated-unions.md) temsil edebilirsiniz.  Daha fazla bilgi için her makaleye bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F# Dili Başvurusu](index.md)
 - [Sınıflar](classes.md)
 - [Kayıtlar](records.md)
-- [Üyeler](members/index.md)
+- [Üyeler](./members/index.md)
