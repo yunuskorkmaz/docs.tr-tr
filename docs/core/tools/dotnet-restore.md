@@ -1,25 +1,25 @@
 ---
-title: DotNet restore komutu
-description: Bağımlılıklar ve projeye özgü araçları dotnet restore komutu ile geri yüklemeyi öğreneceksiniz.
+title: dotnet restore komutu
+description: Dotnet restore komutuyla bağımlılıkları ve projeye özel araçları nasıl geri yükleyeceğinizi öğrenin.
 ms.date: 05/29/2018
-ms.openlocfilehash: 3ddb9f679cfcab972483a4cb53ffe2b075867614
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17bbbe33e7cb7b13d6fb1c0e44bb77dd2bbe7020
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664811"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626344"
 ---
-# <a name="dotnet-restore"></a><span data-ttu-id="e783b-103">DotNet restore</span><span class="sxs-lookup"><span data-stu-id="e783b-103">dotnet restore</span></span>
+# <a name="dotnet-restore"></a><span data-ttu-id="beabc-103">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="beabc-103">dotnet restore</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="e783b-104">Ad</span><span class="sxs-lookup"><span data-stu-id="e783b-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="beabc-104">Ad</span><span class="sxs-lookup"><span data-stu-id="beabc-104">Name</span></span>
 
-<span data-ttu-id="e783b-105">`dotnet restore` -Bir projenin Araçlar ve bağımlılıkları yükler.</span><span class="sxs-lookup"><span data-stu-id="e783b-105">`dotnet restore` - Restores the dependencies and tools of a project.</span></span>
+<span data-ttu-id="beabc-105">`dotnet restore`-Bir projenin bağımlılıklarını ve araçlarını geri yükler.</span><span class="sxs-lookup"><span data-stu-id="beabc-105">`dotnet restore` - Restores the dependencies and tools of a project.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="e783b-106">Synopsis</span><span class="sxs-lookup"><span data-stu-id="e783b-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="beabc-106">Özeti</span><span class="sxs-lookup"><span data-stu-id="beabc-106">Synopsis</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="e783b-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="e783b-107">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="beabc-107">.NET Core 2. x</span><span class="sxs-lookup"><span data-stu-id="beabc-107">.NET Core 2.x</span></span>](#tab/netcore2x)
 
 ```
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
@@ -27,7 +27,7 @@ dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-
 dotnet restore [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="e783b-108">.NET core 1.x</span><span class="sxs-lookup"><span data-stu-id="e783b-108">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="beabc-108">.NET Core 1. x</span><span class="sxs-lookup"><span data-stu-id="beabc-108">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 ```
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache]
@@ -37,23 +37,39 @@ dotnet restore [-h|--help]
 
 ---
 
-## <a name="description"></a><span data-ttu-id="e783b-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e783b-109">Description</span></span>
+## <a name="description"></a><span data-ttu-id="beabc-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="beabc-109">Description</span></span>
 
-<span data-ttu-id="e783b-110">`dotnet restore` Komutu, proje dosyasında belirtilen projeye özgü araçları yanı sıra bağımlılıkları geri yüklemek için NuGet kullanır.</span><span class="sxs-lookup"><span data-stu-id="e783b-110">The `dotnet restore` command uses NuGet to restore dependencies as well as project-specific tools that are specified in the project file.</span></span> <span data-ttu-id="e783b-111">Varsayılan olarak, Araçlar ile bağımlılıkları ve geri yükleme işlemi paralel olarak yürütülür.</span><span class="sxs-lookup"><span data-stu-id="e783b-111">By default, the restoration of dependencies and tools are executed in parallel.</span></span>
+<span data-ttu-id="beabc-110">Bu `dotnet restore` komut, bağımlılıkları geri yüklemek için NuGet kullanır ve proje dosyasında belirtilen projeye özgü araçlardır.</span><span class="sxs-lookup"><span data-stu-id="beabc-110">The `dotnet restore` command uses NuGet to restore dependencies as well as project-specific tools that are specified in the project file.</span></span> <span data-ttu-id="beabc-111">Varsayılan olarak, bağımlılıklar ve araçların geri yüklenmesi paralel olarak yürütülür.</span><span class="sxs-lookup"><span data-stu-id="beabc-111">By default, the restoration of dependencies and tools are executed in parallel.</span></span>
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-<span data-ttu-id="e783b-112">Bağımlılıkları geri yüklemek için NuGet paketlerinin yer aldığı akışları gerekir.</span><span class="sxs-lookup"><span data-stu-id="e783b-112">To restore the dependencies, NuGet needs the feeds where the packages are located.</span></span> <span data-ttu-id="e783b-113">Akışları aracılığıyla genellikle sağlanan *NuGet.config* yapılandırma dosyası.</span><span class="sxs-lookup"><span data-stu-id="e783b-113">Feeds are usually provided via the *NuGet.config* configuration file.</span></span> <span data-ttu-id="e783b-114">CLI araçları yüklü olduğunda varsayılan yapılandırma dosyası sağlanır.</span><span class="sxs-lookup"><span data-stu-id="e783b-114">A default configuration file is provided when the CLI tools are installed.</span></span> <span data-ttu-id="e783b-115">Kendi oluşturarak ek akışları belirttiğiniz *NuGet.config* dosya proje dizininde.</span><span class="sxs-lookup"><span data-stu-id="e783b-115">You specify additional feeds by creating your own *NuGet.config* file in the project directory.</span></span> <span data-ttu-id="e783b-116">Bir komut isteminde çağrı başına ek akışları de belirtirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e783b-116">You also specify additional feeds per invocation at a command prompt.</span></span>
+<span data-ttu-id="beabc-112">Bağımlılıkları geri yüklemek için, NuGet paketlerin bulunduğu akışlara ihtiyaç duyuyor.</span><span class="sxs-lookup"><span data-stu-id="beabc-112">To restore the dependencies, NuGet needs the feeds where the packages are located.</span></span> <span data-ttu-id="beabc-113">Akışlar genellikle *NuGet. config* yapılandırma dosyası aracılığıyla sağlanır.</span><span class="sxs-lookup"><span data-stu-id="beabc-113">Feeds are usually provided via the *nuget.config* configuration file.</span></span> <span data-ttu-id="beabc-114">CLı araçları yüklendiğinde varsayılan bir yapılandırma dosyası sağlanır.</span><span class="sxs-lookup"><span data-stu-id="beabc-114">A default configuration file is provided when the CLI tools are installed.</span></span> <span data-ttu-id="beabc-115">Proje dizininde kendi *NuGet. config* dosyanızı oluşturarak ek akışlar belirlersiniz.</span><span class="sxs-lookup"><span data-stu-id="beabc-115">You specify additional feeds by creating your own *nuget.config* file in the project directory.</span></span> <span data-ttu-id="beabc-116">Komut isteminde her çağrı için ek akışlar da belirtirsiniz.</span><span class="sxs-lookup"><span data-stu-id="beabc-116">You also specify additional feeds per invocation at a command prompt.</span></span>
 
-<span data-ttu-id="e783b-117">Bağımlılıklar için geri yüklenen paketler geri yükleme kullanarak işlemi sırasında yerleştirildiği belirtin `--packages` bağımsız değişken.</span><span class="sxs-lookup"><span data-stu-id="e783b-117">For dependencies, you specify where the restored packages are placed during the restore operation using the `--packages` argument.</span></span> <span data-ttu-id="e783b-118">Belirtilmezse, varsayılan NuGet paket önbelleğini, içinde geçtiği yerin kullanılıp kullanılmadığını `.nuget/packages` dizini ile tüm işletim sistemlerinde kullanıcının ana dizini.</span><span class="sxs-lookup"><span data-stu-id="e783b-118">If not specified, the default NuGet package cache is used, which is found in the `.nuget/packages` directory in the user's home directory on all operating systems.</span></span> <span data-ttu-id="e783b-119">Örneğin, */home/user1* Linux üzerinde veya *C:\Users\user1* Windows üzerinde.</span><span class="sxs-lookup"><span data-stu-id="e783b-119">For example, */home/user1* on Linux or *C:\Users\user1* on Windows.</span></span>
+<span data-ttu-id="beabc-117">Bağımlılıklar için, geri yükleme işlemi sırasında `--packages` bağımsız değişkeni kullanarak geri yüklenen paketlerin nereye yerleştirileceğini belirtirsiniz.</span><span class="sxs-lookup"><span data-stu-id="beabc-117">For dependencies, you specify where the restored packages are placed during the restore operation using the `--packages` argument.</span></span> <span data-ttu-id="beabc-118">Belirtilmezse, varsayılan NuGet paketi önbelleği kullanılır ve bu, tüm işletim sistemlerindeki kullanıcının giriş dizinindeki `.nuget/packages` dizininde bulunur.</span><span class="sxs-lookup"><span data-stu-id="beabc-118">If not specified, the default NuGet package cache is used, which is found in the `.nuget/packages` directory in the user's home directory on all operating systems.</span></span> <span data-ttu-id="beabc-119">Örneğin, Linux üzerinde */home/user1* veya Windows üzerinde *c:\Users\User1* .</span><span class="sxs-lookup"><span data-stu-id="beabc-119">For example, */home/user1* on Linux or *C:\Users\user1* on Windows.</span></span>
 
-<span data-ttu-id="e783b-120">Projeye özgü araçları için `dotnet restore` öncelikle hangi aracın iyileştirmesiyle doludur ve kendi proje dosyasında belirtilen Aracı'nın bağımlılıkları geri yüklemek için devam eder paket geri yükler.</span><span class="sxs-lookup"><span data-stu-id="e783b-120">For project-specific tooling, `dotnet restore` first restores the package in which the tool is packed, and then proceeds to restore the tool's dependencies as specified in its project file.</span></span>
+<span data-ttu-id="beabc-120">Projeye özgü araçlar için, `dotnet restore` önce aracın paketlenmesi gereken paketi geri yükler ve ardından, araç bağımlılıklarını proje dosyasında belirtilen şekilde geri yüklemeye devam eder.</span><span class="sxs-lookup"><span data-stu-id="beabc-120">For project-specific tooling, `dotnet restore` first restores the package in which the tool is packed, and then proceeds to restore the tool's dependencies as specified in its project file.</span></span>
 
-<span data-ttu-id="e783b-121">Davranışını `dotnet restore` komut bazı ayarlar tarafından etkilendi *Nuget.Config* varsa, dosya.</span><span class="sxs-lookup"><span data-stu-id="e783b-121">The behavior of the `dotnet restore` command is affected by some of the settings in the *Nuget.Config* file, if present.</span></span> <span data-ttu-id="e783b-122">Örneğin, ayarlamak `globalPackagesFolder` içinde *NuGet.Config* belirtilen klasörde NuGet paketlerini geri yerleştirir.</span><span class="sxs-lookup"><span data-stu-id="e783b-122">For example, setting the `globalPackagesFolder` in *NuGet.Config* places the restored NuGet packages in the specified folder.</span></span> <span data-ttu-id="e783b-123">Bu belirten bir alternatifidir `--packages` seçeneğini `dotnet restore` komutu.</span><span class="sxs-lookup"><span data-stu-id="e783b-123">This is an alternative to specifying the `--packages` option on the `dotnet restore` command.</span></span> <span data-ttu-id="e783b-124">Daha fazla bilgi için [NuGet.Config başvuru](/nuget/schema/nuget-config-file).</span><span class="sxs-lookup"><span data-stu-id="e783b-124">For more information, see the [NuGet.Config reference](/nuget/schema/nuget-config-file).</span></span>
+### <a name="nugetconfig-differences"></a><span data-ttu-id="beabc-121">NuGet. config farklılıkları</span><span class="sxs-lookup"><span data-stu-id="beabc-121">nuget.config differences</span></span>
 
-## <a name="implicit-dotnet-restore"></a><span data-ttu-id="e783b-125">Örtük `dotnet restore`</span><span class="sxs-lookup"><span data-stu-id="e783b-125">Implicit `dotnet restore`</span></span>
+<span data-ttu-id="beabc-122">`dotnet restore` Komutun davranışı, varsa *NuGet. config* dosyasındaki ayarlardan etkilenir.</span><span class="sxs-lookup"><span data-stu-id="beabc-122">The behavior of the `dotnet restore` command is affected by the settings in the *nuget.config* file, if present.</span></span> <span data-ttu-id="beabc-123">Örneğin, `globalPackagesFolder` *NuGet. config* içindeki ayarı, geri yüklenen NuGet paketlerini belirtilen klasöre koyar.</span><span class="sxs-lookup"><span data-stu-id="beabc-123">For example, setting the `globalPackagesFolder` in *nuget.config* places the restored NuGet packages in the specified folder.</span></span> <span data-ttu-id="beabc-124">Bu `--packages` seçenek, `dotnet restore` komutunda seçeneğini belirtmeye yönelik bir alternatiftir.</span><span class="sxs-lookup"><span data-stu-id="beabc-124">This is an alternative to specifying the `--packages` option on the `dotnet restore` command.</span></span> <span data-ttu-id="beabc-125">Daha fazla bilgi için bkz. [NuGet. config başvurusu](/nuget/schema/nuget-config-file).</span><span class="sxs-lookup"><span data-stu-id="beabc-125">For more information, see the [nuget.config reference](/nuget/schema/nuget-config-file).</span></span>
 
-<span data-ttu-id="e783b-126">.NET Core 2.0 ile başlayarak `dotnet restore` aşağıdaki komutları gönderdiğinizde gerekirse örtük olarak çalıştırılan:</span><span class="sxs-lookup"><span data-stu-id="e783b-126">Starting with .NET Core 2.0, `dotnet restore` is run implicitly if necessary when you issue the following commands:</span></span>
+<span data-ttu-id="beabc-126">Yok sayan `dotnet restore` üç özel ayar vardır:</span><span class="sxs-lookup"><span data-stu-id="beabc-126">There are three specific settings that `dotnet restore` ignores:</span></span>
+
+* [<span data-ttu-id="beabc-127">Bindingyönlendirmeler</span><span class="sxs-lookup"><span data-stu-id="beabc-127">bindingRedirects</span></span>](/nuget/schema/nuget-config-file#bindingredirects-section)
+
+  <span data-ttu-id="beabc-128">Bağlama yeniden yönlendirmeleri `<PackageReference>` öğelerle çalışmaz ve .NET Core yalnızca NuGet paketleri `<PackageReference>` için öğeleri destekler.</span><span class="sxs-lookup"><span data-stu-id="beabc-128">Binding redirects don't work with `<PackageReference>` elements and .NET Core only supports `<PackageReference>` elements for NuGet packages.</span></span>
+
+* [<span data-ttu-id="beabc-129">çözümden</span><span class="sxs-lookup"><span data-stu-id="beabc-129">solution</span></span>](/nuget/schema/nuget-config-file#solution-section)
+
+  <span data-ttu-id="beabc-130">Bu ayar Visual Studio 'ya özeldir ve .NET Core için uygulanmaz.</span><span class="sxs-lookup"><span data-stu-id="beabc-130">This setting is Visual Studio specific and doesn't apply to .NET Core.</span></span> <span data-ttu-id="beabc-131">.NET Core bir `packages.config` dosya kullanmaz ve bunun yerine NuGet `<PackageReference>` paketleri için öğeleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="beabc-131">.NET Core doesn't use a `packages.config` file and instead uses `<PackageReference>` elements for NuGet packages.</span></span>
+
+* [<span data-ttu-id="beabc-132">trustedSigners</span><span class="sxs-lookup"><span data-stu-id="beabc-132">trustedSigners</span></span>](/nuget/schema/nuget-config-file#trustedsigners-section)
+
+  <span data-ttu-id="beabc-133">NuGet, güvenilen paketlerin [platformlar arası doğrulanmasını henüz desteklemediğinden](https://github.com/NuGet/Home/issues/7939) , bu ayar geçerli değildir.</span><span class="sxs-lookup"><span data-stu-id="beabc-133">This setting isn't applicable as [NuGet doesn't yet support cross-platform verification](https://github.com/NuGet/Home/issues/7939) of trusted packages.</span></span>
+
+## <a name="implicit-dotnet-restore"></a><span data-ttu-id="beabc-134">İndirgen`dotnet restore`</span><span class="sxs-lookup"><span data-stu-id="beabc-134">Implicit `dotnet restore`</span></span>
+
+<span data-ttu-id="beabc-135">.NET Core 2,0 ' den itibaren `dotnet restore` , aşağıdaki komutları verdiğinizde, gerekirse örtülü olarak çalıştırılır:</span><span class="sxs-lookup"><span data-stu-id="beabc-135">Starting with .NET Core 2.0, `dotnet restore` is run implicitly if necessary when you issue the following commands:</span></span>
 
 - [`dotnet new`](dotnet-new.md)
 - [`dotnet build`](dotnet-build.md)
@@ -63,130 +79,130 @@ dotnet restore [-h|--help]
 - [`dotnet publish`](dotnet-publish.md)
 - [`dotnet pack`](dotnet-pack.md)
 
-<span data-ttu-id="e783b-127">Çoğu durumda, artık açıkça kullanmanız gerekir `dotnet restore` komutu.</span><span class="sxs-lookup"><span data-stu-id="e783b-127">In most cases, you no longer need to explicitly use the `dotnet restore` command.</span></span>
+<span data-ttu-id="beabc-136">Çoğu durumda, artık `dotnet restore` komutunu açıkça kullanmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="beabc-136">In most cases, you no longer need to explicitly use the `dotnet restore` command.</span></span>
 
-<span data-ttu-id="e783b-128">Bazı durumlarda, çalıştırılacak kullanışsız olabilir `dotnet restore` örtük olarak.</span><span class="sxs-lookup"><span data-stu-id="e783b-128">Sometimes, it might be inconvenient to run `dotnet restore` implicitly.</span></span> <span data-ttu-id="e783b-129">Örneğin, yapı sistemi gibi bazı otomatik sistemler çağırmanız gerekir `dotnet restore` açıkça ağ kullanımını kontrol edebilir, böylece geri yükleme ne zaman gerçekleştiğini denetlemek için.</span><span class="sxs-lookup"><span data-stu-id="e783b-129">For example, some automated systems, such as build systems, need to call `dotnet restore` explicitly to control when the restore occurs so that they can control network usage.</span></span> <span data-ttu-id="e783b-130">Önlemek için `dotnet restore` kullanabileceğiniz örtük olarak çalıştırılmasının `--no-restore` örtük geri yükleme devre dışı bırakmak için aşağıdaki komutlardan birini bayrağıyla.</span><span class="sxs-lookup"><span data-stu-id="e783b-130">To prevent `dotnet restore` from running implicitly, you can use the `--no-restore` flag with any of these commands to disable implicit restore.</span></span>
+<span data-ttu-id="beabc-137">Bazen, örtülü olarak çalıştırılması `dotnet restore` uygun olmayabilir.</span><span class="sxs-lookup"><span data-stu-id="beabc-137">Sometimes, it might be inconvenient to run `dotnet restore` implicitly.</span></span> <span data-ttu-id="beabc-138">Örneğin, derleme sistemleri gibi bazı otomatikleştirilmiş sistemlerin, ağ kullanımını denetleyebilmeleri için geri `dotnet restore` yüklemenin ne zaman gerçekleşeceğini denetlemek için açıkça çağrılması gerekir.</span><span class="sxs-lookup"><span data-stu-id="beabc-138">For example, some automated systems, such as build systems, need to call `dotnet restore` explicitly to control when the restore occurs so that they can control network usage.</span></span> <span data-ttu-id="beabc-139">Örtülü geri yüklemeyi devre dışı bırakmak için bu komutlardan herhangi `--no-restore` biriyle bayrağı kullanabilirsiniz. `dotnet restore`</span><span class="sxs-lookup"><span data-stu-id="beabc-139">To prevent `dotnet restore` from running implicitly, you can use the `--no-restore` flag with any of these commands to disable implicit restore.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="e783b-131">Arguments</span><span class="sxs-lookup"><span data-stu-id="e783b-131">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="beabc-140">Arguments</span><span class="sxs-lookup"><span data-stu-id="beabc-140">Arguments</span></span>
 
 `ROOT`
 
-<span data-ttu-id="e783b-132">İsteğe bağlı geri yüklemek için proje dosyasının yolu.</span><span class="sxs-lookup"><span data-stu-id="e783b-132">Optional path to the project file to restore.</span></span>
+<span data-ttu-id="beabc-141">Geri yüklenecek proje dosyasının isteğe bağlı yolu.</span><span class="sxs-lookup"><span data-stu-id="beabc-141">Optional path to the project file to restore.</span></span>
 
-## <a name="options"></a><span data-ttu-id="e783b-133">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="e783b-133">Options</span></span>
+## <a name="options"></a><span data-ttu-id="beabc-142">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="beabc-142">Options</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="e783b-134">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="e783b-134">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="beabc-143">.NET Core 2. x</span><span class="sxs-lookup"><span data-stu-id="beabc-143">.NET Core 2.x</span></span>](#tab/netcore2x)
 
 `--configfile <FILE>`
 
-<span data-ttu-id="e783b-135">NuGet yapılandırma dosyası (*NuGet.config*) geri yükleme işlemi için kullanılacak.</span><span class="sxs-lookup"><span data-stu-id="e783b-135">The NuGet configuration file (*NuGet.config*) to use for the restore operation.</span></span>
+<span data-ttu-id="beabc-144">Geri yükleme işlemi için kullanılacak NuGet yapılandırma dosyası (*NuGet. config*).</span><span class="sxs-lookup"><span data-stu-id="beabc-144">The NuGet configuration file (*nuget.config*) to use for the restore operation.</span></span>
 
 `--disable-parallel`
 
-<span data-ttu-id="e783b-136">Paralel olarak birden çok proje geri yükleme devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="e783b-136">Disables restoring multiple projects in parallel.</span></span>
+<span data-ttu-id="beabc-145">Paralel olarak birden çok projenin geri yüklenmesini devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="beabc-145">Disables restoring multiple projects in parallel.</span></span>
 
 `--force`
 
-<span data-ttu-id="e783b-137">Son geri yükleme başarılı olduysa bile çözülmesi için tüm bağımlılıkların zorlar.</span><span class="sxs-lookup"><span data-stu-id="e783b-137">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="e783b-138">Bu bayrak belirten aynıdır silme *project.assets.json* dosya.</span><span class="sxs-lookup"><span data-stu-id="e783b-138">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
+<span data-ttu-id="beabc-146">Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar.</span><span class="sxs-lookup"><span data-stu-id="beabc-146">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="beabc-147">Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.</span><span class="sxs-lookup"><span data-stu-id="beabc-147">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="e783b-139">Komut için kısa bir Yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="e783b-139">Prints out a short help for the command.</span></span>
+<span data-ttu-id="beabc-148">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="beabc-148">Prints out a short help for the command.</span></span>
 
 `--ignore-failed-sources`
 
-<span data-ttu-id="e783b-140">Yalnızca sürüm gereksinimi Karşılama paketleri varsa başarısız kaynakları hakkında uyar.</span><span class="sxs-lookup"><span data-stu-id="e783b-140">Only warn about failed sources if there are packages meeting the version requirement.</span></span>
+<span data-ttu-id="beabc-149">Yalnızca sürüm gereksinimini karşılayan paketler varsa başarısız kaynaklar hakkında uyar.</span><span class="sxs-lookup"><span data-stu-id="beabc-149">Only warn about failed sources if there are packages meeting the version requirement.</span></span>
 
 `--no-cache`
 
-<span data-ttu-id="e783b-141">Paketler ve HTTP isteklerini önbelleğe belirtir.</span><span class="sxs-lookup"><span data-stu-id="e783b-141">Specifies to not cache packages and HTTP requests.</span></span>
+<span data-ttu-id="beabc-150">Paketlerin ve HTTP isteklerinin önbelleğe alınamadı belirtir.</span><span class="sxs-lookup"><span data-stu-id="beabc-150">Specifies to not cache packages and HTTP requests.</span></span>
 
 `--no-dependencies`
 
-<span data-ttu-id="e783b-142">Projeden projeye (P2P) başvurular içeren bir proje geri yüklerken, kök proje ve başvuruları geri yükler.</span><span class="sxs-lookup"><span data-stu-id="e783b-142">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
+<span data-ttu-id="beabc-151">Projeden projeye (P2P) başvuruları olan bir projeyi geri yüklerken, başvuruları değil kök projeyi geri yükler.</span><span class="sxs-lookup"><span data-stu-id="beabc-151">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
 
 `--packages <PACKAGES_DIRECTORY>`
 
-<span data-ttu-id="e783b-143">Geri yüklenen paketler için dizini belirtir.</span><span class="sxs-lookup"><span data-stu-id="e783b-143">Specifies the directory for restored packages.</span></span>
+<span data-ttu-id="beabc-152">Geri yüklenen paketlerin dizinini belirtir.</span><span class="sxs-lookup"><span data-stu-id="beabc-152">Specifies the directory for restored packages.</span></span>
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="e783b-144">Paket geri yükleme için bir çalışma zamanı belirtir.</span><span class="sxs-lookup"><span data-stu-id="e783b-144">Specifies a runtime for the package restore.</span></span> <span data-ttu-id="e783b-145">Bu açıkça listelenen çalışma zamanları için paketler geri yüklemek için kullanılan `<RuntimeIdentifiers>` içindeki *.csproj* dosya.</span><span class="sxs-lookup"><span data-stu-id="e783b-145">This is used to restore packages for runtimes not explicitly listed in the `<RuntimeIdentifiers>` tag in the *.csproj* file.</span></span> <span data-ttu-id="e783b-146">Çalışma zamanı tanımlayıcılarının (RID'ler) bir listesi için bkz. [RID Kataloğu](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="e783b-146">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="e783b-147">Bu seçeneği birden çok kez belirterek, birden fazla RID sağlar.</span><span class="sxs-lookup"><span data-stu-id="e783b-147">Provide multiple RIDs by specifying this option multiple times.</span></span>
+<span data-ttu-id="beabc-153">Paket geri yüklemesi için bir çalışma zamanı belirtir.</span><span class="sxs-lookup"><span data-stu-id="beabc-153">Specifies a runtime for the package restore.</span></span> <span data-ttu-id="beabc-154">Bu, `<RuntimeIdentifiers>` *. csproj* dosyasındaki etiketinde açıkça listelenmeyen çalışma zamanları paketlerini geri yüklemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="beabc-154">This is used to restore packages for runtimes not explicitly listed in the `<RuntimeIdentifiers>` tag in the *.csproj* file.</span></span> <span data-ttu-id="beabc-155">Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="beabc-155">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="beabc-156">Bu seçeneği birden çok kez belirterek birden çok grup belirtin.</span><span class="sxs-lookup"><span data-stu-id="beabc-156">Provide multiple RIDs by specifying this option multiple times.</span></span>
 
 `-s|--source <SOURCE>`
 
-<span data-ttu-id="e783b-148">Geri yükleme işlemi sırasında kullanılacak bir NuGet paket kaynağı belirtir.</span><span class="sxs-lookup"><span data-stu-id="e783b-148">Specifies a NuGet package source to use during the restore operation.</span></span> <span data-ttu-id="e783b-149">Bu ayar tüm kaynakları belirtilen geçersiz kılmaları *NuGet.config* dosyaları.</span><span class="sxs-lookup"><span data-stu-id="e783b-149">This setting overrides all of the sources specified in the *NuGet.config* files.</span></span> <span data-ttu-id="e783b-150">Bu seçeneği birden çok kez belirterek, birden çok kaynaktan sağlanabilir.</span><span class="sxs-lookup"><span data-stu-id="e783b-150">Multiple sources can be provided by specifying this option multiple times.</span></span>
+<span data-ttu-id="beabc-157">Geri yükleme işlemi sırasında kullanılacak bir NuGet paket kaynağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="beabc-157">Specifies a NuGet package source to use during the restore operation.</span></span> <span data-ttu-id="beabc-158">Bu ayar *NuGet. config* dosyalarında belirtilen tüm kaynakları geçersiz kılar.</span><span class="sxs-lookup"><span data-stu-id="beabc-158">This setting overrides all of the sources specified in the *nuget.config* files.</span></span> <span data-ttu-id="beabc-159">Bu seçenek birden çok kez belirtilerek birden çok kaynak sağlanarak sağlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="beabc-159">Multiple sources can be provided by specifying this option multiple times.</span></span>
 
 `--verbosity <LEVEL>`
 
-<span data-ttu-id="e783b-151">Komutun ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="e783b-151">Sets the verbosity level of the command.</span></span> <span data-ttu-id="e783b-152">İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="e783b-152">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="beabc-160">Komutun ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="beabc-160">Sets the verbosity level of the command.</span></span> <span data-ttu-id="beabc-161">İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`</span><span class="sxs-lookup"><span data-stu-id="beabc-161">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 `--interactive`
 
-<span data-ttu-id="e783b-153">Durdurmak ve kullanıcı girişi veya eylem (örneğin kimlik doğrulamasını tamamlamak için) için beklemek için komutu sağlar.</span><span class="sxs-lookup"><span data-stu-id="e783b-153">Allows the command to stop and wait for user input or action (for example to complete authentication).</span></span> <span data-ttu-id="e783b-154">.NET Core 2.1.400 itibaren.</span><span class="sxs-lookup"><span data-stu-id="e783b-154">Since .NET Core 2.1.400.</span></span>
+<span data-ttu-id="beabc-162">Komutun Kullanıcı girişini veya eylemini durdurmasına ve beklemesine izin verir (örneğin, kimlik doğrulamasını tamamlamaya).</span><span class="sxs-lookup"><span data-stu-id="beabc-162">Allows the command to stop and wait for user input or action (for example to complete authentication).</span></span> <span data-ttu-id="beabc-163">.NET Core 2.1.400 'dan beri.</span><span class="sxs-lookup"><span data-stu-id="beabc-163">Since .NET Core 2.1.400.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="e783b-155">.NET core 1.x</span><span class="sxs-lookup"><span data-stu-id="e783b-155">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="beabc-164">.NET Core 1. x</span><span class="sxs-lookup"><span data-stu-id="beabc-164">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 `--configfile <FILE>`
 
-<span data-ttu-id="e783b-156">NuGet yapılandırma dosyası (*NuGet.config*) geri yükleme işlemi için kullanılacak.</span><span class="sxs-lookup"><span data-stu-id="e783b-156">The NuGet configuration file (*NuGet.config*) to use for the restore operation.</span></span>
+<span data-ttu-id="beabc-165">Geri yükleme işlemi için kullanılacak NuGet yapılandırma dosyası (*NuGet. config*).</span><span class="sxs-lookup"><span data-stu-id="beabc-165">The NuGet configuration file (*nuget.config*) to use for the restore operation.</span></span>
 
 `--disable-parallel`
 
-<span data-ttu-id="e783b-157">Paralel olarak birden çok proje geri yükleme devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="e783b-157">Disables restoring multiple projects in parallel.</span></span>
+<span data-ttu-id="beabc-166">Paralel olarak birden çok projenin geri yüklenmesini devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="beabc-166">Disables restoring multiple projects in parallel.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="e783b-158">Komut için kısa bir Yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="e783b-158">Prints out a short help for the command.</span></span>
+<span data-ttu-id="beabc-167">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="beabc-167">Prints out a short help for the command.</span></span>
 
 `--ignore-failed-sources`
 
-<span data-ttu-id="e783b-159">Yalnızca sürüm gereksinimi Karşılama paketleri varsa başarısız kaynakları hakkında uyar.</span><span class="sxs-lookup"><span data-stu-id="e783b-159">Only warn about failed sources if there are packages meeting the version requirement.</span></span>
+<span data-ttu-id="beabc-168">Yalnızca sürüm gereksinimini karşılayan paketler varsa başarısız kaynaklar hakkında uyar.</span><span class="sxs-lookup"><span data-stu-id="beabc-168">Only warn about failed sources if there are packages meeting the version requirement.</span></span>
 
 `--no-cache`
 
-<span data-ttu-id="e783b-160">Paketler ve HTTP isteklerini önbelleğe belirtir.</span><span class="sxs-lookup"><span data-stu-id="e783b-160">Specifies to not cache packages and HTTP requests.</span></span>
+<span data-ttu-id="beabc-169">Paketlerin ve HTTP isteklerinin önbelleğe alınamadı belirtir.</span><span class="sxs-lookup"><span data-stu-id="beabc-169">Specifies to not cache packages and HTTP requests.</span></span>
 
 `--no-dependencies`
 
-<span data-ttu-id="e783b-161">Projeden projeye (P2P) başvurular içeren bir proje geri yüklerken, kök proje ve başvuruları geri yükler.</span><span class="sxs-lookup"><span data-stu-id="e783b-161">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
+<span data-ttu-id="beabc-170">Projeden projeye (P2P) başvuruları olan bir projeyi geri yüklerken, başvuruları değil kök projeyi geri yükler.</span><span class="sxs-lookup"><span data-stu-id="beabc-170">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
 
 `--packages <PACKAGES_DIRECTORY>`
 
-<span data-ttu-id="e783b-162">Geri yüklenen paketler için dizini belirtir.</span><span class="sxs-lookup"><span data-stu-id="e783b-162">Specifies the directory for restored packages.</span></span>
+<span data-ttu-id="beabc-171">Geri yüklenen paketlerin dizinini belirtir.</span><span class="sxs-lookup"><span data-stu-id="beabc-171">Specifies the directory for restored packages.</span></span>
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="e783b-163">Paket geri yükleme için bir çalışma zamanı belirtir.</span><span class="sxs-lookup"><span data-stu-id="e783b-163">Specifies a runtime for the package restore.</span></span> <span data-ttu-id="e783b-164">Bu açıkça listelenen çalışma zamanları için paketler geri yüklemek için kullanılan `<RuntimeIdentifiers>` içindeki *.csproj* dosya.</span><span class="sxs-lookup"><span data-stu-id="e783b-164">This is used to restore packages for runtimes not explicitly listed in the `<RuntimeIdentifiers>` tag in the *.csproj* file.</span></span> <span data-ttu-id="e783b-165">Çalışma zamanı tanımlayıcılarının (RID'ler) bir listesi için bkz. [RID Kataloğu](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="e783b-165">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="e783b-166">Bu seçeneği birden çok kez belirterek, birden fazla RID sağlar.</span><span class="sxs-lookup"><span data-stu-id="e783b-166">Provide multiple RIDs by specifying this option multiple times.</span></span>
+<span data-ttu-id="beabc-172">Paket geri yüklemesi için bir çalışma zamanı belirtir.</span><span class="sxs-lookup"><span data-stu-id="beabc-172">Specifies a runtime for the package restore.</span></span> <span data-ttu-id="beabc-173">Bu, `<RuntimeIdentifiers>` *. csproj* dosyasındaki etiketinde açıkça listelenmeyen çalışma zamanları paketlerini geri yüklemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="beabc-173">This is used to restore packages for runtimes not explicitly listed in the `<RuntimeIdentifiers>` tag in the *.csproj* file.</span></span> <span data-ttu-id="beabc-174">Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="beabc-174">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="beabc-175">Bu seçeneği birden çok kez belirterek birden çok grup belirtin.</span><span class="sxs-lookup"><span data-stu-id="beabc-175">Provide multiple RIDs by specifying this option multiple times.</span></span>
 
 `-s|--source <SOURCE>`
 
-<span data-ttu-id="e783b-167">Geri yükleme işlemi sırasında kullanılacak bir NuGet paket kaynağı belirtir.</span><span class="sxs-lookup"><span data-stu-id="e783b-167">Specifies a NuGet package source to use during the restore operation.</span></span> <span data-ttu-id="e783b-168">Bu kaynakları belirtilen tüm geçersiz kılmaları *NuGet.config* dosyaları.</span><span class="sxs-lookup"><span data-stu-id="e783b-168">This overrides all of the sources specified in the *NuGet.config* files.</span></span> <span data-ttu-id="e783b-169">Bu seçeneği birden çok kez belirterek, birden çok kaynaktan sağlanabilir.</span><span class="sxs-lookup"><span data-stu-id="e783b-169">Multiple sources can be provided by specifying this option multiple times.</span></span>
+<span data-ttu-id="beabc-176">Geri yükleme işlemi sırasında kullanılacak bir NuGet paket kaynağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="beabc-176">Specifies a NuGet package source to use during the restore operation.</span></span> <span data-ttu-id="beabc-177">Bu, *NuGet. config* dosyalarında belirtilen tüm kaynakları geçersiz kılar.</span><span class="sxs-lookup"><span data-stu-id="beabc-177">This overrides all of the sources specified in the *nuget.config* files.</span></span> <span data-ttu-id="beabc-178">Bu seçenek birden çok kez belirtilerek birden çok kaynak sağlanarak sağlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="beabc-178">Multiple sources can be provided by specifying this option multiple times.</span></span>
 
 `--verbosity <LEVEL>`
 
-<span data-ttu-id="e783b-170">Komutun ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="e783b-170">Sets the verbosity level of the command.</span></span> <span data-ttu-id="e783b-171">İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="e783b-171">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="beabc-179">Komutun ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="beabc-179">Sets the verbosity level of the command.</span></span> <span data-ttu-id="beabc-180">İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`</span><span class="sxs-lookup"><span data-stu-id="beabc-180">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 ---
 
-## <a name="examples"></a><span data-ttu-id="e783b-172">Örnekler</span><span class="sxs-lookup"><span data-stu-id="e783b-172">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="beabc-181">Örnekler</span><span class="sxs-lookup"><span data-stu-id="beabc-181">Examples</span></span>
 
-<span data-ttu-id="e783b-173">Bağımlılıklar ve geçerli dizinde proje için araçları geri yükleme:</span><span class="sxs-lookup"><span data-stu-id="e783b-173">Restore dependencies and tools for the project in the current directory:</span></span>
+<span data-ttu-id="beabc-182">Geçerli dizindeki proje için bağımlılıkları ve araçları geri yükle:</span><span class="sxs-lookup"><span data-stu-id="beabc-182">Restore dependencies and tools for the project in the current directory:</span></span>
 
 `dotnet restore`
 
-<span data-ttu-id="e783b-174">Bağımlılıklar ve araçlar için geri `app1` proje verilen yolda bulunamadı:</span><span class="sxs-lookup"><span data-stu-id="e783b-174">Restore dependencies and tools for the `app1` project found in the given path:</span></span>
+<span data-ttu-id="beabc-183">Verilen yolda bulunan `app1` projenin bağımlılıklarını ve araçlarını geri yükleyin:</span><span class="sxs-lookup"><span data-stu-id="beabc-183">Restore dependencies and tools for the `app1` project found in the given path:</span></span>
 
 `dotnet restore ~/projects/app1/app1.csproj`
 
-<span data-ttu-id="e783b-175">Kaynak olarak sağlanan dosya yolunu kullanarak geçerli dizinde proje için Araçlar ve bağımlılıklar geri yükleme:</span><span class="sxs-lookup"><span data-stu-id="e783b-175">Restore the dependencies and tools for the project in the current directory using the file path provided as the source:</span></span>
+<span data-ttu-id="beabc-184">Kaynak olarak belirtilen dosya yolunu kullanarak geçerli dizindeki proje için bağımlılıkları ve araçları geri yükleyin:</span><span class="sxs-lookup"><span data-stu-id="beabc-184">Restore the dependencies and tools for the project in the current directory using the file path provided as the source:</span></span>
 
 `dotnet restore -s c:\packages\mypackages`
 
-<span data-ttu-id="e783b-176">Kaynakları olarak sağlanan iki dosya yolları kullanarak geçerli dizinde proje için Araçlar ve bağımlılıklar geri yükleme:</span><span class="sxs-lookup"><span data-stu-id="e783b-176">Restore the dependencies and tools for the project in the current directory using the two file paths provided as sources:</span></span>
+<span data-ttu-id="beabc-185">Kaynak olarak girilen iki dosya yolunu kullanarak geçerli dizindeki proje için bağımlılıkları ve araçları geri yükleyin:</span><span class="sxs-lookup"><span data-stu-id="beabc-185">Restore the dependencies and tools for the project in the current directory using the two file paths provided as sources:</span></span>
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
 
-<span data-ttu-id="e783b-177">Bağımlılıklar ve araçlar için geçerli dizin ve programlarını yalnızca en az çıktı projede geri yükleme:</span><span class="sxs-lookup"><span data-stu-id="e783b-177">Restore dependencies and tools for the project in the current directory and shows only minimal output:</span></span>
+<span data-ttu-id="beabc-186">Geçerli dizindeki proje için bağımlılıkları ve araçları geri yükleyin ve yalnızca en az çıktıyı gösterir:</span><span class="sxs-lookup"><span data-stu-id="beabc-186">Restore dependencies and tools for the project in the current directory and shows only minimal output:</span></span>
 
 `dotnet restore --verbosity minimal`

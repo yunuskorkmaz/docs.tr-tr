@@ -8,29 +8,29 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 144b137550ff44a8ea4927e6cf611d4761fcb01a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981935"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629617"
 ---
-# <a name="typography"></a><span data-ttu-id="ff25d-102">Tipografi</span><span class="sxs-lookup"><span data-stu-id="ff25d-102">Typography</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="ff25d-103">Zengin metin içeriği sunumu için destek içerir.</span><span class="sxs-lookup"><span data-stu-id="ff25d-103">includes support for rich presentation of text content.</span></span> <span data-ttu-id="ff25d-104">Metinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanılarak oluşturulması [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], netliği ve okunabilirliği metin geliştirir.</span><span class="sxs-lookup"><span data-stu-id="ff25d-104">Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] is rendered using [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], which enhances the clarity and readability of text.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <span data-ttu-id="ff25d-105">Ayrıca destekler [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tarafından tanımlanan ötesinde ek özellikler sağlamak yazı tipleri [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] biçimi.</span><span class="sxs-lookup"><span data-stu-id="ff25d-105">also supports [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts, which provide additional capabilities beyond those defined by the [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] format.</span></span>  
+# <a name="typography"></a><span data-ttu-id="66604-102">Tipografi</span><span class="sxs-lookup"><span data-stu-id="66604-102">Typography</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="66604-103">zengin metin içeriği sunumu için destek içerir.</span><span class="sxs-lookup"><span data-stu-id="66604-103">includes support for rich presentation of text content.</span></span> <span data-ttu-id="66604-104">İçindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metin, metnin açıklık ve okunabilirliğini artıran Microsoft ClearType kullanılarak işlenir.</span><span class="sxs-lookup"><span data-stu-id="66604-104">Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] is rendered using Microsoft ClearType, which enhances the clarity and readability of text.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="66604-105">, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Biçim[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] tarafından tanımlananların ötesinde ek yetenekler sağlayan yazı tiplerini de destekler.</span><span class="sxs-lookup"><span data-stu-id="66604-105">also supports [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts, which provide additional capabilities beyond those defined by the [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] format.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ff25d-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="ff25d-106">In This Section</span></span>  
- [<span data-ttu-id="ff25d-107">WPF'de Tipografi</span><span class="sxs-lookup"><span data-stu-id="ff25d-107">Typography in WPF</span></span>](typography-in-wpf.md)  
- [<span data-ttu-id="ff25d-108">ClearType Genel Bakışı</span><span class="sxs-lookup"><span data-stu-id="ff25d-108">ClearType Overview</span></span>](cleartype-overview.md)  
- [<span data-ttu-id="ff25d-109">ClearType Kayıt Defteri Ayarları</span><span class="sxs-lookup"><span data-stu-id="ff25d-109">ClearType Registry Settings</span></span>](cleartype-registry-settings.md)  
- [<span data-ttu-id="ff25d-110">Biçimlendirilmiş Metin Çizme</span><span class="sxs-lookup"><span data-stu-id="ff25d-110">Drawing Formatted Text</span></span>](drawing-formatted-text.md)  
- [<span data-ttu-id="ff25d-111">Gelişmiş Metin Biçimlendirme</span><span class="sxs-lookup"><span data-stu-id="ff25d-111">Advanced Text Formatting</span></span>](advanced-text-formatting.md)  
- [<span data-ttu-id="ff25d-112">Yazı Tipleri</span><span class="sxs-lookup"><span data-stu-id="ff25d-112">Fonts</span></span>](fonts-wpf.md)  
- [<span data-ttu-id="ff25d-113">Karakterler</span><span class="sxs-lookup"><span data-stu-id="ff25d-113">Glyphs</span></span>](glyphs.md)  
- [<span data-ttu-id="ff25d-114">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="ff25d-114">How-to Topics</span></span>](typography-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="66604-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="66604-106">In This Section</span></span>  
+ [<span data-ttu-id="66604-107">WPF'de Tipografi</span><span class="sxs-lookup"><span data-stu-id="66604-107">Typography in WPF</span></span>](typography-in-wpf.md)  
+ [<span data-ttu-id="66604-108">ClearType Genel Bakışı</span><span class="sxs-lookup"><span data-stu-id="66604-108">ClearType Overview</span></span>](cleartype-overview.md)  
+ [<span data-ttu-id="66604-109">ClearType Kayıt Defteri Ayarları</span><span class="sxs-lookup"><span data-stu-id="66604-109">ClearType Registry Settings</span></span>](cleartype-registry-settings.md)  
+ [<span data-ttu-id="66604-110">Biçimlendirilmiş Metin Çizme</span><span class="sxs-lookup"><span data-stu-id="66604-110">Drawing Formatted Text</span></span>](drawing-formatted-text.md)  
+ [<span data-ttu-id="66604-111">Gelişmiş Metin Biçimlendirme</span><span class="sxs-lookup"><span data-stu-id="66604-111">Advanced Text Formatting</span></span>](advanced-text-formatting.md)  
+ [<span data-ttu-id="66604-112">Yazı Tipleri</span><span class="sxs-lookup"><span data-stu-id="66604-112">Fonts</span></span>](fonts-wpf.md)  
+ [<span data-ttu-id="66604-113">Karakterler</span><span class="sxs-lookup"><span data-stu-id="66604-113">Glyphs</span></span>](glyphs.md)  
+ [<span data-ttu-id="66604-114">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="66604-114">How-to Topics</span></span>](typography-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="ff25d-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ff25d-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="66604-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="66604-115">See also</span></span>
 
 - <xref:System.Windows.Documents.Typography>
-- [<span data-ttu-id="ff25d-116">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="ff25d-116">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="ff25d-117">OpenType Yazı Tipi Özellikleri</span><span class="sxs-lookup"><span data-stu-id="ff25d-117">OpenType Font Features</span></span>](opentype-font-features.md)
-- [<span data-ttu-id="ff25d-118">WPF Uygulama Performansını İyileştirme</span><span class="sxs-lookup"><span data-stu-id="ff25d-118">Optimizing WPF Application Performance</span></span>](optimizing-wpf-application-performance.md)
+- [<span data-ttu-id="66604-116">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="66604-116">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="66604-117">OpenType Yazı Tipi Özellikleri</span><span class="sxs-lookup"><span data-stu-id="66604-117">OpenType Font Features</span></span>](opentype-font-features.md)
+- [<span data-ttu-id="66604-118">WPF Uygulama Performansını İyileştirme</span><span class="sxs-lookup"><span data-stu-id="66604-118">Optimizing WPF Application Performance</span></span>](optimizing-wpf-application-performance.md)
