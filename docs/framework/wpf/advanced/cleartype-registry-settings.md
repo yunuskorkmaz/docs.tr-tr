@@ -5,15 +5,15 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: db7d6ec5663d657969e1508bd0b9f62c25e491b0
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 8f1c4415a834f7eb7c3048a89ab81de6921b7bf6
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484688"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629934"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType Kayıt Defteri Ayarları
-Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] uygulamalar tarafından [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanılan kayıt defteri ayarlarına genel bir bakış sağlar.  
+Bu konu, WPF uygulamaları tarafından kullanılan Microsoft ClearType kayıt defteri ayarlarına genel bir bakış sağlar.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Teknolojiye genel bakış  
@@ -80,7 +80,7 @@ Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclie
 ## <a name="pixel-structure"></a>Piksel yapısı  
  Piksel yapısı, bir görüntü cihazını oluşturan piksellerin türünü tanımlar. Piksel yapısı, üç türden biri olarak tanımlanır:  
   
-|Type|Value|Açıklama|  
+|Tür|Değer|Açıklama|  
 |----------|-----------|-----------------|  
 |Düz|0|Görüntü cihazının piksel yapısı yok. Bu, her renk için açık kaynakların piksel alanına eşit olarak yayıldığı anlamına gelir; buna gri ölçekli işleme denir. Bu, standart görüntü cihazının nasıl çalıştığı. ClearType, işlenen metne hiçbir şekilde uygulanmaz.|  
 |RGB|1\.|Görüntü cihazının şu sırada üç şeritden oluşan pikselleri vardır: kırmızı, yeşil ve mavi. ClearType, işlenen metne uygulanır.|  

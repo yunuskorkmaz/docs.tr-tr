@@ -1,51 +1,51 @@
 ---
 title: Dizeler
-description: Bilgi nasıl F# 'string' türü sabit metin Unicode karakter dizisi olarak temsil eder.
+description: F# ' Dize ' türünün Unicode karakter dizisi olarak sabit metni nasıl temsil ettiğini öğrenin.
 ms.date: 07/05/2019
-ms.openlocfilehash: ec895723cc6d21a701a27b5d70d053bb681ce2b3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 284de939c90c4d9d4ea064fb4db1fb90a37038e2
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660605"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627109"
 ---
 # <a name="strings"></a>Dizeler
 
 > [!NOTE]
-> Bu makaledeki API başvuru bağlantıları için MSDN sürer.  Docs.microsoft.com API başvuru tamamlanmadı.
+> Bu makaledeki API başvuru bağlantıları sizi MSDN 'ye götürür.  Docs.microsoft.com API başvurusu tamamlanmadı.
 
-`string` Türü sabit metin Unicode karakter dizisi olarak temsil eder. `string` için bir diğer addır `System.String` .NET Framework'teki.
+Tür `string` , Unicode karakter dizisi olarak sabit metni temsil eder. `string`, .NET Framework için `System.String` bir diğer addır.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Dize değişmez değerleri tırnak işareti (") karakteriyle ayrılır. Ters eğik çizgi karakteri ( \\ ) özel karakterleri kodlamak için kullanılır. Ters eğik çizgi ve birlikte sonraki karakteri olarak bilinen bir *kaçış dizisi*. Kaçış dizileri desteklenen F# dize değişmez değerleri aşağıdaki tabloda gösterilmiştir.
+Dize sabit değerleri tırnak işareti (") karakteriyle sınırlandırılmıştır. Ters eğik çizgi karakteri \\ () belirli özel karakterleri kodlamak için kullanılır. Ters eğik çizgi ve sonraki karakter birlikte *kaçış sırası*olarak bilinir. F# Dize sabit değerlerinde desteklenen kaçış dizileri aşağıdaki tabloda gösterilmiştir.
 
 |Karakter|Kaçış sırası|
 |---------|---------------|
 |Uyarı|`\a`|
 |Geri Al tuşu|`\b`|
-|form besleme|`\f`|
-|Yeni satır|`\n`|
-|satır başı|`\r`|
+|Form akışı|`\f`|
+|Metninde|`\n`|
+|Satır başı|`\r`|
 |Tab|`\t`|
-|dikey sekme|`\v`|
+|Dikey sekme|`\v`|
 |Ters eğik çizgi|`\\`|
 |Tırnak işareti|`\"`|
 |Kesme işareti|`\'`|
-|Unicode karakter|`\DDD` (burada `D` gösteren bir ondalık basamak; aralığı 000 - 255; Örneğin, `\231` "ç" =)|
-|Unicode karakter|`\xHH` (burada `H` onaltılık bir basamaktır; 00 - FF; aralığını gösteren örnek `\xE7` "ç" =)|
-|Unicode karakter|`\uHHHH` (UTF-16) (burada `H` onaltılık bir basamaktır; 0000 - FFFF; aralığını gösterir  Örneğin, `\u00E7` "ç" =)|
-|Unicode karakter|`\U00HHHHHH` (UTF-32) (burada `H` onaltılık bir basamaktır; 000000 - 10FFFF; aralığını gösterir  Örneğin, `\U0001F47D` = "👽")|
+|Unicode karakter|`\DDD`(ondalık basamağı `\231` belirtir;000-255aralığı;Örneğin,=`D` "ç")|
+|Unicode karakter|`\xHH`(onaltılık basamağı `\xE7` belirtir;00-FFaralığı;Örneğin,=`H` "ç")|
+|Unicode karakter|`\uHHHH`(UTF-16) (onaltılık basamağı belirtir; 0000-ffff aralığı; `H`  Örneğin, `\u00E7` = "ç")|
+|Unicode karakter|`\U00HHHHHH`(UTF-32) (onaltılık basamağı belirtir; 000000 yazın-10FFFF) aralığı `H`  Örneğin, `\U0001F47D` = "👽")|
 
 > [!IMPORTANT]
-> `\DDD` Kaçış dizisi olan ondalık gösterim, çoğu dil gibi değil sekizlik gösterim. Bu nedenle, basamak `8` ve `9` geçerli olduğundan ve bir dizi `\032` bir alanını temsil eder (U + 0020), o aynı kod noktası sekizlik gösterimde olabilir ancak `\040`.
+> `\DDD` Kaçış sırası, diğer dillerin çoğunda, sekizli gösterimi değil ondalık gösterimidir. Bu nedenle, `8` rakamlar `9` ve geçerli ve bir dizisi `\032` bir boşluk (U + 0020) temsil ederken, sekizlik gösterimde aynı kod noktası olur `\040`.
 
 > [!NOTE]
-> 0 aralığına kısıtlanmasını - 255 (0xFF) `\DDD` ve `\x` kaçış dizileri, esas [ISO-8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1#Code_page_layout) , ilk 256 Unicode kod noktaları eşleştiğinden karakter kümesi.
+> 0-255 (0xFF) `\DDD` aralığıyla sınırlandırılmakta, ve `\x` kaçış dizileri, ilk 256 Unicode kod noktalarıyla eşleştiğinden, etkin şekilde [ISO-8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1#Code_page_layout) karakter kümesidir.
 
-Öncesinde, @ sembolü, değişmez değer verbatim bir dizedir. İki tırnak karakteri tek tırnak işareti karakteri yorumlanır dışında bu, herhangi bir kaçış dizileri göz ardı, anlamına gelir.
+Önünde @ sembolü varsa, değişmez değer tam bir dizedir. Bu, iki tırnak işareti karakterinin tek tırnak işareti karakteri olarak yorumlanmasının dışında, tüm kaçış dizileri yok sayılır.
 
-Ayrıca, bir dize Üçlü tırnak işareti içine alınabilir. Bu durumda, çift tırnak işareti karakterleri dahil olmak üzere tüm kaçış dizileri yoksayılır. Sınırlandırılmış bir katıştırılmış içeren bir dize belirtmek için ya da bir harfi harfine veya bir Üçlü alıntılanmış dize kullanabilirsiniz. Verbatim dizesi kullanıyorsanız, iki tırnak karakteri tek tırnak işareti karakteri belirtmek için belirtmeniz gerekir. Üçlü tırnak içine bir dize kullanmak, bunları dize sonu Ayrıştırılmakta olmadan tek tırnak işareti karakter kullanabilirsiniz. Bu teknik, XML veya katıştırılmış tırnak işaretleri dahil diğer yapılar çalışırken yararlı olabilir.
+Ayrıca, bir dize, Üçlü tırnak içine alınmış olabilir. Bu durumda, çift tırnak işareti karakterleri de dahil olmak üzere tüm kaçış dizileri yok sayılır. Katıştırılmış bir alıntı dize içeren bir dize belirtmek için, tam bir dize veya Üçlü tırnak işareti kullanabilirsiniz. Tam bir dize kullanırsanız, tek tırnak işareti karakterini göstermek için iki tırnak işareti karakteri belirtmeniz gerekir. Üçlü olarak tırnak içine alınmış bir dize kullanırsanız, tek tırnak işareti karakterlerini dizenin sonu olarak ayrıştırılmaksızın kullanabilirsiniz. Bu teknik, ekli tırnak işaretleri içeren XML veya diğer yapılarla çalışırken yararlı olabilir.
 
 ```fsharp
 // Using a verbatim string
@@ -55,19 +55,19 @@ let xmlFragment1 = @"<book author=""Milton, John"" title=""Paradise Lost"">"
 let xmlFragment2 = """<book author="Milton, John" title="Paradise Lost">"""
 ```
 
-Kodda satır sonları olan dizeleri kabul edilir ve son karakter satır sonundan önce bir ters eğik çizgi karakteri olmadığı sürece satır sonları tam anlamıyla yeni satırlardan yorumlanır. Ters eğik çizgi karakteri kullanıldığında sonraki satıra önde gelen boşluk yoksayılır. Aşağıdaki kod bir dize üretir `str1` değeri olan `"abc\ndef"` ve bir dize `str2` değeri olan `"abcdef"`.
+Kod içinde, satır sonları içeren dizeler kabul edilir ve satır sonları satır sonundan önce son karakter olan bir ters eğik çizgi karakteri olmayan bir şekilde newlines olarak yorumlanır. Ters eğik çizgi karakteri kullanıldığında sonraki satırdaki baştaki boşluk yok sayılır. Aşağıdaki kod değeri `"abc\ndef"` olan bir dize `str1` ve değeri `"abcdef"`olan bir `str2` dize oluşturur.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1001.fs)]
 
-Aşağıdaki gibi bir dizi benzeri sözdizimi kullanarak, bir dizedeki karakterlerin tek tek erişebilirsiniz.
+Bir dizedeki ayrı karakterlere, aşağıdaki gibi dizi benzeri sözdizimini kullanarak erişebilirsiniz.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1002.fs)]
 
 Çıktı `b`.
 
-Veya, alt dizeler dizisi dilim söz dizimini kullanarak aşağıdaki kodda gösterildiği gibi ayıklayabilirsiniz.
+Ya da aşağıdaki kodda gösterildiği gibi, dizi dilimi söz dizimini kullanarak alt dizeleri de ayıklayabilirsiniz.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1003.fs)]
 
 Çıktı aşağıdaki gibidir:
 
@@ -76,29 +76,29 @@ abc
 def
 ```
 
-ASCII dizelerinde işaretsiz bayt sayısı, türü bir dizi temsil edebilen `byte[]`. Sonek Ekle `B` için bir ASCII dizesi olduğunu belirten bir dize. Bayt dizileri ile kullanılan ASCII dize değişmez değerleri, Unicode kaçış dizileri dışında Unicode dize olarak aynı kaçış dizileri destekler.
+ASCII dizelerini işaretsiz bayt dizileri ile temsil edebilirsiniz, şunu yazın `byte[]`. Bir ASCII dizesi olduğunu `B` göstermek için son eki bir dize değişmez değerine eklersiniz. Bayt dizileri ile kullanılan ASCII dize sabit değerleri, Unicode kaçış dizileri hariç, Unicode dizeleriyle aynı kaçış dizilerini destekler.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1004.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1004.fs)]
 
 ## <a name="string-operators"></a>Dize İşleçleri
 
-Dizeleri birleştirmek için iki yolu vardır: kullanarak `+` işleci kullanarak veya `^` işleci. `+` İşleci özellikleri işleme .NET Framework dize ile uyumluluk sağlar.
+Dizeleri birleştirmek için iki yol vardır: `+` işlecini kullanarak veya `^` işlecini kullanarak. `+` İşleci .NET Framework dize işleme özellikleriyle uyumluluğu korur.
 
-Aşağıdaki örnekte, dize birleştirme gösterilmektedir.
+Aşağıdaki örnekte dize birleştirme gösterilmektedir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1006.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1006.fs)]
 
-## <a name="string-class"></a>Dize sınıfı
+## <a name="string-class"></a>String sınıfı
 
-Çünkü dize türü içinde F# aslında bir .NET Framework `System.String` yazın, tümünü `System.String` üyeleri kullanılabilir. Bu içerir `+` dizeyi birleştirmek için kullanılır, operatör `Length` özelliği ve `Chars` dize Unicode karakter dizisi olarak döndüren özellik. Dizeleri hakkında daha fazla bilgi için bkz. `System.String`.
+İçindeki F# dize türü aslında .NET Framework `System.String` bir `System.String` tür olduğundan tüm Üyeler kullanılabilir. Bu, dizeleri `+` `Length` , özelliği ve `Chars` bir Unicode karakter dizisi olarak dizeyi döndüren özelliğini birleştirmek için kullanılan işleci içerir. Dizeler hakkında daha fazla bilgi için bkz `System.String`.
 
-Kullanarak `Chars` özelliği `System.String`, aşağıdaki kodda gösterildiği gibi bir dizin belirterek, bir dizedeki karakterlerin tek tek erişebilirsiniz.
+`Chars` Özelliğini kullanarak ,aşağıdakikoddagösterildiğigibibirdizinbelirterekbirdizedeki`System.String`ayrı karakterlere erişebilirsiniz.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1005.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1005.fs)]
 
-## <a name="string-module"></a>String modülü
+## <a name="string-module"></a>Dize modülü
 
-Dize işleme için ek işlevler dahil `String` modülünde `FSharp.Core` ad alanı. Daha fazla bilgi için [Core.String modülü](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
+Dize işleme için ek işlevler, `String` `FSharp.Core` ad alanındaki modüle dahil edilmiştir. Daha fazla bilgi için bkz. [Core. String modülü](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,70 +1,70 @@
 ---
 title: İmza dosyaları
-description: Nasıl kullanacağınızı öğrenin F# bir dizi ortak imzalarını hakkındaki bilgileri tutmak için imza dosyalarını F# türleri, ad alanları ve modüller gibi öğelerin program.
+description: Türler, ad alanları F# ve modüller gibi bir F# program öğeleri kümesinin genel imzaları hakkındaki bilgileri tutmak için imza dosyalarını nasıl kullanacağınızı öğrenin.
 ms.date: 06/15/2018
-ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c04ac8bf4ee360a2caa15be8f2bbea41105bd160
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770454"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627160"
 ---
 # <a name="signatures"></a>İmzalar
 
-Bir imza dosyası bir dizi ortak imzalarını hakkında bilgi içeren F# türleri, ad alanları ve modüller gibi öğelerin program. Bu program öğelerini erişilebilirliğini belirtmek için kullanılabilir.
+İmza dosyası türler, ad alanları ve modüller gibi bir F# program öğeleri kümesinin genel imzaları hakkında bilgiler içerir. Bu program öğelerinin erişilebilirliğini belirtmek için kullanılabilir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Her F# kod dosyası olabilir bir *imza dosyası*, kod dosyası ancak uzantı .fsi .fs yerine ile aynı ada sahip bir dosya olduğu. İmza dosyaları komut satırından doğrudan kullanıyorsanız, komut satırı derleme da eklenebilir. İmza dosyaları kod dosyaları arasında ayrım yapmak için kod dosyaları olarak da adlandırılır *uygulama dosyaları*. Bir projede, ilişkili kod dosyasına imza dosyası gelmelidir.
+Her F# kod dosyası için, kod dosyasıyla aynı ada sahip ancak. FS yerine. fsi uzantılı bir dosya olan bir *imza dosyasına*sahip olabilirsiniz. Komut satırını doğrudan kullanıyorsanız, imza dosyaları da derleme komut satırına eklenebilir. Kod dosyalarını ve imza dosyalarını ayırt etmek için, kod dosyaları bazen *uygulama dosyaları*olarak adlandırılır. Bir projede, imza dosyası ilişkili kod dosyasından önce gelmelidir.
 
-Ad alanları, modüller, türler ve üyeler uygulama dosyasında karşılık gelen bir imza dosyası açıklar. Hangi bölümlerinin belirtmek için bir imza dosyası bilgileri kullanın karşılık gelen uygulamasında kod dosyasına uygulama dosya dışındaki kod erişebilir ve hangi bölümlerinin uygulama dosyasına iç. Ad alanları, modülleri ve imza dosyasında bulunan türleri ad alanları, modülleri ve uygulama dosyasında bulunan türleri bir alt kümesi olmalıdır. Bu konunun ilerleyen kısımlarında belirtildiği bazı istisnalar v souboru signatury listede yer almayan bu dil öğeleri uygulama dosyanın özel olarak kabul edilir. Varsayılan erişilebilirlik, herhangi bir imza dosyası proje ya da komut satırı bulunursa kullanılır.
+İmza dosyası, ilgili uygulama dosyasındaki ad alanlarını, modülleri, türleri ve üyeleri açıklar. İlgili uygulama dosyasındaki kodun hangi bölümlerinin uygulama dosyası dışındaki koddan erişilebilir olduğunu ve uygulama dosyasına hangi parçaların dahili olduğunu belirtmek için bir imza dosyasındaki bilgileri kullanırsınız. İmza dosyasına dahil edilen ad alanları, modüller ve türler, uygulama dosyasına dahil edilen ad alanları, modüller ve türlerin bir alt kümesi olmalıdır. Bu konunun ilerleyen kısımlarında belirtilen bazı özel durumlarla birlikte, imza dosyasında listelenmeyen dil öğeleri uygulama dosyası için özel olarak kabul edilir. Projede veya komut satırında imza dosyası bulunmazsa, varsayılan erişilebilirlik kullanılır.
 
-Varsayılan erişilebilirlik hakkında daha fazla bilgi için bkz. [erişim denetimi](access-control.md).
+Varsayılan erişilebilirlik hakkında daha fazla bilgi için bkz. [Access Control](access-control.md).
 
-Bir imza dosyası içinde türlerinin tanımını ve her yöntem veya işlev uygulamalarını tekrarlamayın. Bunun yerine, her bir yöntemi ve bir modülde veya ad alanı parça tarafından uygulanan işlevleri tam belirtimini görevi gören işlevi için imza kullanın. Tür imzası için söz dizimi, arabirimleri ve soyut sınıflar, soyut yöntem bildirimleri içinde kullanılan aynıdır ve IntelliSense ve bunun da gösterilir F# doğru görüntülediğinde yorumlayıcı fsi.exe derlenmiş giriş.
+Bir imza dosyasında, türlerin ve her yöntemin veya işlevin uygulamalarının tanımını tekrarlamayın. Bunun yerine, bir modül veya ad alanı parçası tarafından uygulanan işlevselliğin tamamı olarak davranan her bir yöntem ve işlev için imza kullanırsınız. Bir tür imzasının sözdizimi, arabirimler ve soyut sınıflardaki soyut Yöntem bildirimlerinde kullanılan ile aynıdır ve ayrıca, doğru derlenmiş girişi görüntülediğinde, IntelliSense tarafından ve F# Ayrıca, fsi. exe ' de de gösterilir.
 
-Tür imzası bir tür korumalı olup olmadığını belirtmek için yeterli bilgi yok ya da bir arabirim türü olmasına bakılmaksızın, bir öznitelik eklemelisiniz derleyiciye tür yapısını gösterir. Bu amaçla kullandığınız öznitelikler aşağıdaki tabloda açıklanmıştır.
+Tür imzasında bir türün korumalı olup olmadığını veya bir arabirim türü olup olmadığını belirtmek için yeterli bilgi yoksa, türün yapısını derleyiciye belirten bir öznitelik eklemeniz gerekir. Bu amaçla kullandığınız öznitelikler aşağıdaki tabloda açıklanmıştır.
 
 |Öznitelik|Açıklama|
 |---------|-----------|
-|`[<Sealed>]`|Soyut üye bir tür için olan veya olmayan genişletilmesi.|
-|`[<Interface>]`|Bir arabirim için bir tür.|
+|`[<Sealed>]`|Soyut üyesi olmayan veya genişletilmemelidir olması gereken bir tür için.|
+|`[<Interface>]`|Arabirim olan bir tür için.|
 
-Öznitelikleri imza ve bildirimi uygulama dosyasında arasında tutarlı değilse, derleyici bir hata oluşturur.
+Öznitelikler imza ile uygulama dosyasındaki bildirim arasında tutarlı değilse derleyici bir hata oluşturur.
 
-Anahtar sözcüğünü kullanın `val` imza için bir değer ya da işlev değer oluşturmak için. Anahtar sözcüğü `type` tür imzası tanıtır.
+Bir değer veya `val` işlev değeri için imza oluşturmak için anahtar sözcüğünü kullanın. Anahtar sözcüğü `type` bir tür imzası tanıtır.
 
-Bir imza dosyası kullanarak oluşturabileceğiniz `--sig` derleyici seçeneği. Genellikle, .fsi dosyaları el ile yazmanız değil. Bunun yerine, derleyicinin .fsi dosyaları oluşturmak, bir varsa ve yöntem ve erişilebilir olmasını istemediğiniz işlevleri kaldırarak Düzenle bunları projenize ekleyin.
+`--sig` Derleyici seçeneğini kullanarak bir imza dosyası oluşturabilirsiniz. Genellikle. fsi dosyalarını el ile yazmayın. Bunun yerine, derleyicisini kullanarak. fsi dosyaları oluşturur, varsa bunları projenize ekler ve erişilebilir olmasını istemediğiniz yöntemleri ve işlevleri kaldırarak düzenleyebilirsiniz.
 
-Birkaç kural türü imzalar vardır:
+Tür imzaları için çeşitli kurallar mevcuttur:
 
-- Tür kısaltmaları bir uygulama dosyasında bir imza dosyası içinde bir kısaltma olmadan bir tür ile aynı olmamalıdır.
+- Bir uygulama dosyasındaki tür kısaltmaların bir imza dosyasında kısaltması olmadan bir türle eşleşmemesi gerekir.
 
-- Kayıtlar ve ayrılmış birleşimler tümü veya hiçbiri alanları ve oluşturucular kullanıma açmalıdır ve imza sırayla uygulama dosyasında eşleşmesi gerekir. Sınıflar, bazı, tümü veya hiçbiri alanlar ve yöntemler imzasında ortaya çıkarabilir.
+- Kayıtlar ve ayrılmış birleşimler, kendi alan ve oluşturucularından birini ya da hiçbirini kullanıma sunmalı ve İmzadaki sıranın uygulama dosyasındaki sıralamayla eşleşmesi gerekir. Sınıflar, İmzadaki bazı, hepsi veya hiçbirini ya da bir imzayı hiçbir şekilde gösterebilir.
 
-- Sınıf ve yapılardaki oluşturucular olan temel sınıflarının işaretçilerine bildirimlerini kullanıma gerekir ( `inherits` bildirimi). Ayrıca, sınıf ve yapılardaki oluşturucular sahip tüm soyut yöntemler ve arabirimi bildirimleri göstermesi gerekir.
+- Oluşturucuları olan sınıflar ve yapılar kendi temel sınıflarının ( `inherits` bildirim) bildirimlerini kullanıma sunmalıdır. Ayrıca, oluşturucuları olan sınıflar ve yapılar tüm soyut yöntemleri ve arabirim bildirimlerini kullanıma sunmalıdır.
 
-- Tüm yöntemleri ve arabirimleri arabirim türleri açığa çıkar gerekir.
+- Arabirim türleri tüm yöntemlerini ve arabirimlerini açığa çıkarmalıdır.
 
-Değer imzaları için kuralları aşağıdaki gibidir:
+Değer imzalarının kuralları aşağıdaki gibidir:
 
-- Erişilebilirlik değiştiricileri (`public`, `internal`, vb.) ve `inline` ve `mutable` imzasında değiştiriciler bu uygulamada eşleşmesi gerekir.
+- Erişilebilirlik (`public`, `internal`, vb. `inline` ) için değiştiriciler ve İmzadaki ve `mutable` değiştiricilerin uygulamadaki olanlarla eşleşmesi gerekir.
 
-- Genel tür parametreleri (ya da örtük olarak çıkarılan açıkça bildirildi) sayısı ile eşleşmelidir ve genel tür parametrelerindeki tür kısıtlamaları ve türleri eşleşmelidir.
+- Genel tür parametrelerinin sayısı (örtük olarak çıkarılmış veya açıkça bildirilmiştir) eşleşmelidir ve genel tür parametrelerindeki türler ve tür kısıtlamaları eşleşmelidir.
 
-- Varsa `Literal` özniteliği kullanılır, hem imza hem de uygulama görünmesi gerekir ve her ikisi için aynı değişmez değer kullanılmalıdır.
+- `Literal` Özniteliği kullanılırsa, hem imza hem de uygulamada görünmelidir ve her ikisi için de aynı sabit değer kullanılmalıdır.
 
-- Parametreleri desenini (olarak da bilinen *kutup*) imzalar ve uygulamaları tutarlı olmalıdır.
+- İmzaların ve uygulamaların parametrelerinin ( *parametre sayısı*olarak da bilinir) düzeninin tutarlı olması gerekir.
 
-- Parametre adları bir imza dosyası içinde karşılık gelen uygulama dosyasından farklıysa, imza dosyası adı, hata ayıklama veya profil oluşturma sırasında sorunlara neden olabilir bunun yerine kullanılır. Tür uyuşmazlığı, proje dosyanızda 3218 uyarı etkinleştir, bildirim almak istiyorsanız veya derleyicisini çağırma (bkz `--warnon` altında [derleyici seçenekleri](compiler-options.md)).
+- İmza dosyasındaki parametre adları karşılık gelen uygulama dosyasından farklıysa, bunun yerine imza dosyasındaki ad, hata ayıklama veya profil oluşturma sırasında sorunlara neden olabilecek şekilde kullanılacaktır. Bu tür uyuşmazlıkların bildirilmesini istiyorsanız, proje dosyanızda veya derleyicisini çağırırken uyarı 3218 ' yı etkinleştirin (bkz `--warnon` . [derleyici seçenekleri](compiler-options.md)altında).
 
-Aşağıdaki kod örneği, ad alanı, modül, işlevi ve türü imzalarını uygun öznitelikleri ile birlikte sahip bir imza dosyası örneği gösterir. Ayrıca, ilgili uygulama dosyasını gösterir.
+Aşağıdaki kod örneğinde, uygun özniteliklerle birlikte ad alanı, modül, işlev değeri ve tür imzaları içeren bir imza dosyası örneği gösterilmektedir. Ayrıca ilgili uygulama dosyasını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/fssignatures/snippet9002.fs)]
 
-Aşağıdaki kod uygulama dosyasını gösterir.
+Aşağıdaki kod, uygulama dosyasını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/fssignatures/snippet9001.fs)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

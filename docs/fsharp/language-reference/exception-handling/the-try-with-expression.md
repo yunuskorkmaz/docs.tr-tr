@@ -1,17 +1,17 @@
 ---
-title: 'Özel durumlar: Try... with ifadesi'
-description: Nasıl kullanacağınızı öğrenin F# 'ile özel durum işleme için ifade try...'.
+title: 'Özel durumlar: try...with İfadesi'
+description: F# ' TRY... ' yı kullanmayı öğrenin ' i ' de, özel durum işleme için ifadesi.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3ba13227ac55eff770ceb7631d3406ad80b6ea45
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e4d615086a93e26b76cca460e797659ca13792b5
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641933"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630251"
 ---
-# <a name="exceptions-the-trywith-expression"></a>Özel durumlar: Try... with ifadesi
+# <a name="exceptions-the-trywith-expression"></a>Özel durumlar: try...with İfadesi
 
-Bu konu başlığı altında açıklanır `try...with` ifade, özel durum işleme için kullanılan ifade F# dili.
+Bu konuda, `try...with` F# dildeki özel durum işleme için kullanılan ifade olan ifade açıklanmaktadır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -26,38 +26,38 @@ with
 
 ## <a name="remarks"></a>Açıklamalar
 
-`try...with` Özel durumları işlemek için kullanılan ifade F#. Benzer `try...catch` C# deyimi. Önceki sözdiziminde, kodda *İfade1* bir özel durum oluşturabilir. `try...with` İfade bir değer döndürür. Hiçbir özel durum oluşturulursa, ifadenin değerini döndürür. *İfade1*. Bir özel durum oluşur, her *deseni* sırayla karşılık gelen ilk eşleşen deseni yanı sıra, özel durum ile karşılaştırıldığında *ifade*olarak bilinen *özel durum işleyicisi*, o dalı çalıştırılır ve genel ifade, özel durum işleyicisinde ifadenin değerini döndürür. Herhangi bir desen eşleşirse, eşleşen bir işleyici bulunana kadar özel durum çağrı yığınına yayar. Özel durum işleyicileri her ifadesinden döndürülen değerlerin türleri ifade öğesinden döndürülen tür eşleşmelidir `try` blok.
+İfade `try...with` , içindeki F#özel durumları işlemek için kullanılır. İçindeki `try...catch` C#ifadeye benzerdir. Önceki sözdiziminde, *İfade1* içindeki kod bir özel durum oluşturabilir. `try...with` İfade bir değer döndürür. Özel durum oluşturulursa, tüm ifade *İfade1*değerini döndürür. Bir özel durum oluşursa, her bir *Düzen* özel durumla karşılaştırılır ve ilk eşleşen düzen için, *özel durum işleyicisi*olarak bilinen karşılık gelen *ifade*, bu dal için yürütülür ve genel ifade Bu özel durum işleyicisindeki ifadenin değerini döndürür. Herhangi bir model eşleşmesi yoksa, özel durum, eşleşen bir işleyici bulunana kadar çağrı yığınını yayar. Özel durum işleyicilerindeki her bir ifadeden döndürülen değerlerin türleri, `try` bloktaki ifadeden döndürülen türle aynı olmalıdır.
 
-Sık sık hatayla ayrıca oluştu her özel durum işleyicisi ifadelerinde döndürüldüğü geçerli bir değer yoktur anlamına gelir. Bir seçenek türünde ifade türüne sahip sık kullanılan bir desendir. Aşağıdaki kod örneği, bu deseni gösterilmektedir.
+Genellikle bir hata oluştuğu için, her bir özel durum işleyicisindeki ifadelerden döndürülebilecek geçerli bir değer olmadığı anlamına gelir. Sık kullanılan bir düzende, ifadenin türü bir seçenek türü olmalıdır. Aşağıdaki kod örneğinde bu desenler gösterilmektedir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5601.fs)]
 
-Özel durumlar, .NET özel durumları olabilir veya olabilir F# özel durumlar. Tanımlayabileceğiniz F# kullanarak özel durumları `exception` anahtar sözcüğü.
+Özel durumlar .NET özel durumları olabilir veya F# özel durumlar olabilir. `exception` Anahtar sözcüğünü kullanarak F# özel durumlar tanımlayabilirsiniz.
 
-Özel durum türü ve diğer koşulları filtrelemek için desenler çeşitli kullanabilirsiniz; Seçenekler aşağıdaki tabloda özetlenmiştir.
+Özel durum türü ve diğer koşulları filtrelemek için çeşitli desenler kullanabilirsiniz; Seçenekler aşağıdaki tabloda özetlenmiştir.
 
 |Desen|Açıklama|
 |-------|-----------|
-|:? *özel durum türü*|Belirtilen .NET özel durum türüyle eşleşen.|
-|:? *özel durum türü* olarak *tanımlayıcısı*|Belirtilen .NET özel durum türüyle eşleşen, ancak özel durum adlandırılmış bir değer sağlar.|
-|*özel durum adı*(*bağımsız değişkenleri*)|Eşleşen bir F# özel durum türünü ve bağımsız değişkenler bağlar.|
-|*tanımlayıcı*|Herhangi bir özel durum ile eşleşen ve adı özel durum nesnesine bağlar. Eşdeğer **:? System.Exception olarak**_tanımlayıcısı_|
-|*tanımlayıcı* olduğunda *koşulu*|Koşul true ise bir özel durumla eşleşir.|
+|:? *özel durum türü*|Belirtilen .NET özel durum türüyle eşleşir.|
+|:? *özel durum-* *tanımlayıcı* olarak tür|Belirtilen .NET özel durum türüyle eşleşir, ancak özel duruma adlandırılmış bir değer verir.|
+|*özel durum-adı* (*bağımsız değişkenler*)|Bir F# özel durum türüyle eşleşir ve bağımsız değişkenleri bağlar.|
+|*Tanımlayıcısını*|Herhangi bir özel durumla eşleşir ve adı özel durum nesnesine bağlar. **Eşdeğer:? System. Exception as**_Identifier_|
+|*koşul* olduğunda *tanımlayıcı*|Koşul doğru ise herhangi bir özel durumla eşleşir.|
 
 ## <a name="examples"></a>Örnekler
 
-Aşağıdaki kod örnekleri, çeşitli özel durum işleyicisi desenlerinin kullanımını gösterir.
+Aşağıdaki kod örnekleri çeşitli özel durum işleyici desenlerinin kullanımını gösterir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5602.fs)]
-
-> [!NOTE]
-> `try...with` Yapıdır ayrı bir ifadeden `try...finally` ifade. Bu nedenle, kodunuzu hem gerektiriyorsa bir `with` blok ve `finally` bloğu iki ifadelerini iç içe gerekecektir.
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5602.fs)]
 
 > [!NOTE]
-> Kullanabileceğiniz `try...with` içinde zaman uyumsuz iş akışları ve özelleştirilmiş sürümü durumda diğer hesaplama ifadeleri, hangi `try...with` ifade kullanılır. Daha fazla bilgi için [zaman uyumsuz iş akışları](../asynchronous-workflows.md), ve [hesaplama ifadeleri](../computation-expressions.md).
+> Yapı, `try...finally` ifadeden ayrı bir ifadedir. `try...with` Bu nedenle, kodunuz hem `with` blok `finally` hem de blok gerektiriyorsa, iki ifadeyi iç içe geçirebilirsiniz.
+
+> [!NOTE]
+> Zaman uyumsuz iş `try...with` akışları ve diğer hesaplama ifadelerinde kullanabilirsiniz, bu durumda `try...with` ifadenin özelleştirilmiş bir sürümü kullanılır. Daha fazla bilgi için bkz. [zaman uyumsuz Iş akışları](../asynchronous-workflows.md)ve [Hesaplama ifadeleri](../computation-expressions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Özel Durum İşleme](index.md)
 - [Özel Durum Türleri](exception-types.md)
-- [Özel Durumlar: `try...finally` İfadesi](the-try-finally-expression.md)
+- [Özel Durumlar: `try...finally` İfade](the-try-finally-expression.md)

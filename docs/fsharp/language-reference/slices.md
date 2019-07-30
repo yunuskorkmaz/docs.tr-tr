@@ -1,25 +1,25 @@
 ---
-title: Dilim (F#)
-description: Varolan dilimleri kullanma hakkında bilgi edinin F# veri türleri ve diğer veri türleri için kendi dilim tanımlama.
+title: Dilimler (F#)
+description: Mevcut F# veri türleri için dilimleri kullanma ve diğer veri türleri için kendi dilimlerinizi tanımlama hakkında bilgi edinin.
 ms.date: 01/22/2019
-ms.openlocfilehash: 1d8bb029ad18c8853ab58888959967ed279fb368
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926011"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627137"
 ---
 # <a name="slices"></a>Dilimler
 
-İçinde F#, bir dilim bir veri türü bir alt kümesidir. Bir veri türünden bir dilim yararlanabilmeniz için veri türü ya da tanımlamanız gerekir bir `GetSlice` yöntemi veya bir [türü uzantısı](type-extensions.md) diğer bir deyişle kapsamda. Bu makalede, mevcut dilimleri gerçekleştirilecek açıklanmaktadır F# türlerini ve nasıl kendi ölçümünüzü tanımlayın.
+' F#De, bir dilim veri türünün bir alt kümesidir. Veri türünün bir dilimini alabilmesi için, veri türü kapsam içinde olan bir `GetSlice` Yöntem ya da bir [tür uzantısı](type-extensions.md) içinde tanımlanmalıdır. Bu makalede, mevcut F# türlerden dilimlerin nasıl alınacağını ve kendinizinkini nasıl tanımlayabileceğiniz açıklanır.
 
-Dilimler benzer [dizin oluşturucular](members/indexed-properties.md), ancak temel alınan veri yapısından tek bir değer sonuçlanmıyor yerine, bunlar birden fazla yield.
+Dilimler, [Dizin oluşturuculardan](./members/indexed-properties.md)benzerdir, ancak temel alınan veri yapısından tek bir değer vermek yerine birden çok tane oluşur.
 
-F#şu anda dizeleri, listeler, diziler ve 2B bir dizi dilimleme iç desteği yok.
+F#Şu anda, Dilimleme dizeleri, listeler, diziler ve 2B diziler için iç destek içerir.
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a>İle temel dilimleme F# listeler ve diziler
+## <a name="basic-slicing-with-f-lists-and-arrays"></a>F# Listelerle ve dizilerle temel Dilimleme
 
-Dilimlenmiş en yaygın veri türleridir F# listeler ve diziler. Aşağıdaki örnek, bu listeleri ile bunu nasıl yapacağınızı gösterir:
+Dilimlenmiş en yaygın veri türleri F# listeler ve dizilerdir. Aşağıdaki örnek, listenin nasıl yapılacağını gösterir:
 
 ```fsharp
 // Generate a list of 100 integers
@@ -38,7 +38,7 @@ let unboundedEnd = fullList.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-Dizi dilimleme listeleri yalnızca dilimleme gibi verilmiştir:
+Dizileri dilimleme, yalnızca Dilimleme listelerine benzer:
 
 ```fsharp
 // Generate an array of 100 integers
@@ -57,11 +57,11 @@ let unboundedEnd = fullArray.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-## <a name="slicing-multidimensional-arrays"></a>Dilimleme çok boyutlu diziler
+## <a name="slicing-multidimensional-arrays"></a>Çok boyutlu dizileri Dilimleme
 
-F#çok boyutlu dizilerde destekler F# çekirdek kitaplığı. Tek boyutlu dizilerle gibi çok boyutlu diziler dilimleri da yararlı olabilir. Ancak, belirli satırları ve sütunları dilimleri yararlanabilmeniz ek boyutlar sunulmasıyla biraz farklı bir sözdizimi zorunlu kılar.
+F#F# çekirdek kitaplıkta çok boyutlu dizileri destekler. Tek boyutlu diziler gibi çok boyutlu dizilerin dilimleri de yararlı olabilir. Bununla birlikte, belirli satır ve sütun dilimlerini alabilmeniz için ek boyutların giriş, biraz farklı bir sözdizimi alır.
 
-Aşağıdaki örnekler, 2B bir dizi dilimleme göstermektedir:
+Aşağıdaki örneklerde bir 2B dizisinin nasıl dilimlenme gösterilmektedir:
 
 ```fsharp
 // Generate a 3x3 2D matrix
@@ -89,13 +89,13 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-F# Çekirdek kitaplığı tanımlamıyor `GetSlice`3B diziler için. Bu veya daha fazla boyutlarının diğer diziler dilim istiyorsanız tanımlamalıdır `GetSlice` üye kendiniz.
+F# Çekirdek kitaplık 3B diziler için tanımlamaz `GetSlice`. Daha fazla boyut için bu veya diğer dizileri dilimlemek isterseniz, `GetSlice` üyeyi kendiniz tanımlamanız gerekir.
 
-## <a name="defining-slices-for-other-data-structures"></a>Diğer veri yapılarını dilimleri tanımlama
+## <a name="defining-slices-for-other-data-structures"></a>Diğer veri yapıları için dilimleri tanımlama
 
-F# Çekirdek kitaplığı dilimler sınırlı sayıda türleri için tanımlar. Daha fazla veri türleri için dilim tanımlamak istiyorsanız, tür tanımını kendisi veya bir tür uzantısında bunu yapabilirsiniz.
+Çekirdek F# kitaplık, sınırlı bir tür kümesi için dilimleri tanımlar. Daha fazla veri türü için dilimleri tanımlamak isterseniz, tür tanımının kendisinde veya bir tür uzantısında bunu yapabilirsiniz.
 
-Örneğin, işte dilimleri nasıl tanımlayabilir <xref:System.ArraySegment%601> sınıfı için uygun veri işlemesine izin vermek için:
+Örneğin, uygun veri işlemeye izin vermek için <xref:System.ArraySegment%601> sınıfı için dilimleri nasıl tanımlayacağınızı aşağıda bulabilirsiniz:
 
 ```fsharp
 open System
@@ -110,9 +110,9 @@ let arr = ArraySegment [| 1 .. 10 |]
 let slice = arr.[2..5] //[ 3; 4; 5]
 ```
 
-### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Satır içi kullanım gerekli değilse, kutulama önlemek için kullanın
+### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Gerekirse kutulamayı önlemek için satır içi kullanın
 
-Aslında bir yapı türü dilimleri tanımlıyorsanız, öneririz, `inline` `GetSlice` üyesi. F# Derleyici dilimleme sonucunda herhangi bir yığın ayırma önleme isteğe bağlı bağımsız değişkenler yerine iyileştirir. Bu yapılar gibi dilimleme için kritik öneme <xref:System.Span%601> yığınında ayrılamaz.
+Aslında bir struct olan bir tür için dilim tanımlıyorsanız, `inline` `GetSlice` üye yapmanızı öneririz. F# Derleyici, Dilimleme sonucu olarak herhangi bir yığın ayırmasını önleyerek isteğe bağlı bağımsız değişkenleri en iyi duruma getirir. Bu, yığın üzerinde ayrılabilen gibi Dilimleme yapıları <xref:System.Span%601> için kritik öneme sahiptir.
 
 ```fsharp
 open System
@@ -137,4 +137,4 @@ printSpan sp.[1..2] // |2; 3|]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dizini oluşturulan özellikler](members/indexed-properties.md)
+- [Dizinli Özellikler](./members/indexed-properties.md)

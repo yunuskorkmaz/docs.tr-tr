@@ -1,17 +1,17 @@
 ---
 title: Modüller
-description: Bilgi nasıl bir F# modülüdür gruplandırması F# , değerleri, türleri ve işlev değerleri olarak gibi kod bir F# program.
+description: Bir F# modülün bir F# F# programdaki değerler, türler ve işlev değerleri gibi bir kod gruplandırması olduğunu öğrenin.
 ms.date: 04/24/2017
-ms.openlocfilehash: 07ea1eb9ed06988a780fd3c5acccbc8383a4dc55
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 685ab638e7e1b6c8d47d1a316483abcc18e40199
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641790"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627431"
 ---
 # <a name="modules"></a>Modüller
 
-Bağlamında F# dil bir *Modülü* gruplandırmasıdır F# , değerleri, türleri ve işlev değerleri olarak gibi kod bir F# program. Kod modüllerinde gruplandırma ilgili kod bir arada tutmaya yardımcı olur ve programınızdaki ad çakışmalarını önlemek yardımcı olur.
+Dil bağlamında *Modül* , bir F# programdaki değerler, türler ve işlev değerleri gibi F# bir kod gruplandırmasıdır. F# Modüllerde kod gruplandırma, ilgili kodu birlikte tutmaya yardımcı olur ve programınızda ad çakışmalarını önlemeye yardımcı olur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -26,69 +26,69 @@ module [accessibility-modifier] module-name =
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir F# modülüdür gruplandırması F# kod yapıları türleri, değerleri, işlev değerleri ve kodda gibi `do` bağlar. Bu, yalnızca statik üyeleri olan ortak dil çalışma zamanı (CLR) sınıfı uygulanır. Modül bildirimlerinde'olup tüm dosya modülüne dahil edilen bağlı olarak, iki tür vardır: üst düzey modül bildirimi ve bir yerel modül bildirimi. Üst düzey modül bildirimi modülünde dosyanın tamamını içerir. Üst düzey modül bildirimi yalnızca bir dosyadaki ilk bildirimi olarak görünebilir.
+F# Modül; türler, değerler, F# işlev değerleri ve bağlamalardaki `do` kod gibi kod yapılarının bir gruplandırmasıdır. Yalnızca statik üyelere sahip ortak dil çalışma zamanı (CLR) sınıfı olarak uygulanır. Tüm dosyanın modüle dahil edilip edilmeyeceğini bağlı olarak iki tür modül bildirimi vardır: en üst düzey modül bildirimi ve yerel bir modül bildirimi. Üst düzey modül bildirimi, modülün tüm dosyasını içerir. En üst düzey modül bildirimi, yalnızca bir dosyadaki ilk bildirim olarak görünebilir.
 
-İsteğe bağlı üst düzey modül bildirimi için sözdiziminde *nitelenmiş ad* modülü içeren iç içe geçmiş ad alanı adları dizisidir. Daha önce belirtilecek tam ad alanı yok.
+Üst düzey modül bildiriminin sözdiziminde, isteğe bağlı *nitelikli ad alanı* , modülünü içeren iç içe ad alanı adlarının sırasıdır. Nitelenmiş ad alanının önceden bildirilmesine izin yoktur.
 
-Üst düzey bir modül bildirimlerinde Girintile gerekmez. Tüm yerel modülleri bildirimlerinde Girintile gerekir. Bir yerel modül bildirimine yalnızca bu modül bildirimi altında girintili bildirimleri modülü bir parçasıdır.
+Üst düzey modüldeki bildirimleri girintilemek zorunda değilsiniz. Yerel modüllerdeki tüm bildirimlerin girintisini almanız gerekir. Yerel bir modül bildiriminde, yalnızca söz konusu modül bildiriminde girintili olan bildirimler modülün bir parçasıdır.
 
-Bir kod dosyası, bir üst düzey modül bildirimi ya da bir ad alanı bildirimi başlamazsa, yerel modüllerin de dahil olmak üzere dosyanın tüm içeriğini uzantısı olmadan bir dosyayla aynı ada sahip bir örtük olarak oluşturulan üst düzey modülü bir parçası olur, ilk harfi büyük harfe dönüştürülür. Örneğin, aşağıdaki dosya göz önünde bulundurun.
+Bir kod dosyası en üst düzey modül bildirimiyle veya bir ad alanı bildirimiyle başlamamışsa, tüm yerel modüller dahil olmak üzere dosyanın tüm içerikleri, uzantısı olmadan dosya ile aynı ada sahip örtük olarak oluşturulmuş bir üst düzey modülün bir parçası haline gelir. ilk harfle büyük harfe dönüştürülür. Örneğin, aşağıdaki dosyayı göz önünde bulundurun.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6601.fs)]
 
-Bu dosya bu şekilde yazılmışlar gibi derlenmesi:
+Bu dosya bu şekilde yazılmış gibi derlenir:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6602.fs)]
 
-Birden çok modül bir dosya varsa, her modül için bir yerel modül bildirimi kullanmanız gerekir. Bir kapsayan ad uzayı bildirirse, bu modülleri kapsayan ad uzayı bir parçasıdır. Modüller, kapsayan bir ad alanında bildirilmedi, örtük olarak oluşturulan üst düzey modülü bir parçası haline gelir. Aşağıdaki kod örneği, birden çok modül içeren bir kod dosyası gösterir. Derleyici örtük olarak adlı en üst düzey bir modül oluşturur `Multiplemodules`, ve `MyModule1` ve `MyModule2` , üst düzey modülü iç içe geçmiş.
+Bir dosyada birden çok modülünüz varsa, her modül için yerel bir modül bildirimi kullanmanız gerekir. Kapsayan bir ad alanı bildirilirse, bu modüller kapsayan ad alanının bir parçasıdır. Kapsayan bir ad alanı bildirilmemiş ise, modüller örtük olarak oluşturulan en üst düzey modülün bir parçası haline gelir. Aşağıdaki kod örneği, birden çok modül içeren bir kod dosyası gösterir. Derleyici örtük olarak adlı `Multiplemodules` `MyModule1` `MyModule2` bir üst düzey modül oluşturur ve bu üst düzey modülde iç içe geçmiş.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6603.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6603.fs)]
 
-Birden çok dosya bir proje veya tek bir derleme varsa veya bir kitaplık oluşturuyorsanız, ad alanı bildirimini veya modül bildirimi dosyasının üst eklemeniz gerekir. F# Derleyici yalnızca belirleyen bir modül adı örtük olarak bir proje veya derleme komut satırı yalnızca bir dosya olduğunda ve bir uygulama oluşturuyorsanız.
+Bir projede veya tek bir derlemede birden çok dosya varsa veya bir kitaplık oluşturuyorsanız, dosyanın üst kısmına bir ad alanı bildirimi veya modül bildirimi eklemeniz gerekir. F# Derleyici yalnızca bir proje veya derleme komut satırında yalnızca bir dosya olduğunda ve bir uygulama oluşturuyorsanız bir modül adını örtülü olarak belirler.
 
-*Erişilebilirlik değiştiricisi* aşağıdakilerden biri olabilir: `public`, `private`, `internal`. Daha fazla bilgi için [erişim denetimi](access-control.md). Genel varsayılandır.
+*Erişilebilirlik-değiştirici* aşağıdakilerden biri olabilir: `public`, `private`, `internal`. Daha fazla bilgi için bkz. [Access Control](access-control.md). Varsayılan değer geneldir.
 
-## <a name="referencing-code-in-modules"></a>Kod modüllerinde başvurma
+## <a name="referencing-code-in-modules"></a>Modüllerde koda başvurma
 
-İşlevleri, türleri ve değerleri başka bir modülden başvuruda bulunduğunuzda bir tam adı kullanın veya modül açmak gerekir. Bir tam adı kullanırsanız, ad alanları modülü ve istediğiniz program öğesi için tanımlayıcı belirtmeniz gerekir. Tam yolun her bölümü bir nokta (.), aşağıdaki gibi ayırır.
+Başka bir modülden işlevlere, türlere ve değerlere başvuru yaptığınızda tam adı kullanmanız veya modülünü açmanız gerekir. Nitelikli bir ad kullanırsanız, istediğiniz program öğesi için ad alanlarını, modülü ve tanımlayıcıyı belirtmeniz gerekir. Tam yolun her bölümünü aşağıdaki gibi bir nokta (.) ile ayırın.
 
 `Namespace1.Namespace2.ModuleName.Identifier`
 
-Modülün veya bir veya daha fazla ad alanları kodu basitleştirmek için açabilirsiniz. Açılış ad alanları ve modüller hakkında daha fazla bilgi için bkz. [içeri aktarma bildirimleri: `open` Anahtar sözcüğü](import-declarations-the-open-keyword.md).
+Kodu basitleştirmek için modülü veya bir veya daha fazla ad alanını açabilirsiniz. Ad alanlarını ve modülleri açma hakkında daha fazla bilgi için [bkz. içeri aktarma bildirimleri: `open` Anahtar sözcüğü](import-declarations-the-open-keyword.md).
 
-Aşağıdaki kod örneği, dosyanın sonuna kadar tüm kodu içeren bir üst düzey modülü gösterir.
+Aşağıdaki kod örneğinde, dosyanın sonuna kadar olan tüm kodu içeren bir üst düzey modül gösterilmektedir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6604.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6604.fs)]
 
-Aynı projede başka bir dosyadan bu kodu kullanmak için ya da nitelikli adlar kullanın veya İşlevler, kullanmadan önce modül aşağıdaki örneklerde gösterildiği gibi açın.
+Aynı projedeki başka bir dosyadan bu kodu kullanmak için, aşağıdaki örneklerde gösterildiği gibi, işlevleri kullanmadan önce nitelikli adları kullanırsınız veya modülü açarsınız.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6605.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6605.fs)]
 
-## <a name="nested-modules"></a>İç içe geçmiş modülleri
+## <a name="nested-modules"></a>İç içe modüller
 
-Modülleri içe olabilir. İç modülleri iç modülleri değil yeni modüller olduğunu belirtmek için dış modül bildirimlerinde sunulan ürünün kendinde girintili gerekir. Örneğin, aşağıdaki iki örnek ile karşılaştırın. Modül `Z` aşağıdaki kodda iç bir modüldür.
+Modüller iç içe olabilir. İç modüller, yeni modüller değil, iç modüller olduğunu göstermek için dış modül bildirimlerinin en çok olarak girintilenmelidir. Örneğin, aşağıdaki iki örneği karşılaştırın. Modül `Z` , aşağıdaki kodda yer aldığı bir iç modüldür.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6607.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6607.fs)]
 
-Ancak Modülü `Z` modülü eşdüzeye olduğu `Y` aşağıdaki kodda.
+Ancak modül `Z` aşağıdaki kodda bir eşdüzey modüldür `Y` .
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6608.fs)]
-Modül `Z` diğer modül bildirimlerinde sunulan ürünün kendinde girintili değil de bir eşdüzey Modülü aşağıdaki kodda, çünkü `Y`.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6608.fs)]
+Modül `Z` , modüldeki `Y`diğer bildirimlerde olduğu kadar girintili olmadığından, aşağıdaki kodda bir eşdüzey modüldür.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6609.fs)]
-Son olarak, dış modül yok bildirimler içeriyor ve başka bir modül bildirimi tarafından hemen ardından, yeni modül bildirimi bir iç modül olarak kabul edilir, ancak derleyici ikinci modül tanımı farther daha girintili değil durumunda uyaracak ilk.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6609.fs)]
+Son olarak, dış modülün bildirimi yoksa ve daha sonra başka bir modül bildirimi tarafından hemen ardından, yeni modül bildiriminin bir iç modül olduğu varsayılır, ancak ikinci modül tanımı adı.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6610.fs)]
-Uyarıyı ortadan kaldırmak için iç modül girinti.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6610.fs)]
+Uyarıyı ortadan kaldırmak için, iç modülün girintisini artırın.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6611.fs)]
-Tüm kodu dosyasında tek bir dış modülde olmasını istiyorsanız ve iç modülleri istediğiniz dış modül eşittir işareti gerektirmez ve dış modüle gidecek herhangi bir iç modül bildirimlerinde de dahil olmak üzere, bildirimleri girintili gerekmez. Bildirimi içinde iç modül bildirimlerinde girintili olmanız gerekir. Aşağıdaki kod, bu durumda gösterir.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6611.fs)]
+Bir dosyadaki tüm kodun tek bir dış modülde olmasını ve iç modüller olmasını istiyorsanız, dıştaki modül eşittir işaretine gerek yoktur ve dış modülün içindeki tüm iç modül bildirimleri de dahil olmak üzere, bu bildirimlerin girintileneceği bir girinti olması gerekmez. İç modül bildirimlerinin içindeki bildirimlerin girintili olması gerekir. Aşağıdaki kod bu durumu gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6612.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6612.fs)]
 
-## <a name="recursive-modules"></a>Özyinelemeli modülleri
+## <a name="recursive-modules"></a>Özyinelemeli modüller
 
-F#4.1 karşılıklı özyinelemeli olarak tüm kapsanan kodunu tanıyan modülleri kavramını sunar.  Bu aracılığıyla yapılır `module rec`.  Kullanım `module rec` türler ve modüller arasında karşılıklı başvurusal kod yazmak boyutlandırılmamışsa, bazı sorunlar hafifletmek.  Bunun bir örneği verilmiştir:
+F#4,1, içerilen tüm kodların birbirini karşılıklı olarak özyinelemeli olmasını sağlayan modül kavramını sunar.  Bu, aracılığıyla `module rec`yapılır.  Kullanımı, `module rec` ve modülleri arasında karşılıklı başvuru kodu yazamayacak bazı paıns 'leri hafifme edebilir.  Aşağıda buna bir örnek verilmiştir:
 
 ```fsharp
 module rec RecursiveModule =
@@ -128,12 +128,12 @@ module rec RecursiveModule =
             | Down -> b |> peelSides
 ```
 
-Unutmayın özel durum `DontSqueezeTheBananaException` ve sınıf `Banana` de birbirine başvuruyor.  Buna ek olarak, modül `BananaHelpers` ve sınıf `Banana` ayrıca birbirine bakın.  Bu, express mümkün olmazdı F# kaldırdıysanız `rec` from anahtar sözcüğü `RecursiveModule` modülü.
+Özel durumun `DontSqueezeTheBananaException` ve sınıfın `Banana` her ikisi de birbirine başvurmadığını unutmayın.  Ayrıca, modülü `BananaHelpers` ve sınıfı `Banana` birbirini da ifade eder.  `rec` Anahtar F# sözcüğünü`RecursiveModule` modülden kaldırdıysanız, bu, ' ın içinde ifade edilebilir.
 
-Bu özellik ayrıca mümkün [ad alanları](namespaces.md) ile F# 4.1.
+Bu özellik [ad alanlarında](namespaces.md) 4,1 ile F# de mümkündür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F# Dili Başvurusu](index.md)
 - [Ad Alanları](namespaces.md)
-- [F#RFC FS-1009 - karşılıklı başvurusal türler ve modüller daha büyük dosyaları kapsamlarda üzerinden izin ver](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F#RFC FS-1009-dosyalar içindeki daha büyük kapsamlar üzerinde karşılıklı başvuru türleri ve modülleri sağlar](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

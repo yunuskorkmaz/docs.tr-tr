@@ -1,52 +1,52 @@
 ---
 title: Değerler
-description: Bilgi nasıl değerler F# belirli bir tür olan miktarlar sunulmaktadır.
+description: İçindeki F# değerlerin belirli bir türe sahip miktarlar olduğunu öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: fe87bb568591b862737456ff92ba202ba7795e3d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ed7a5b069a5a47aacf0cce4cfa754ded46f6e84a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641626"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630792"
 ---
 # <a name="values"></a>Değerler
 
-Değerler F# ; belirli bir türüne sahip miktarlarının değerleri tamsayı veya kayan nokta numaralarını, karakter veya metin, listeler, dizileri, diziler, diziler, ayrılmış birleşimler, kayıtları, sınıf türleri veya işlev değerleri olabilir.
+İçindeki F# değerler belirli bir türe sahip olan miktarlardır; değerler tamsayı veya kayan nokta sayıları, karakterler veya metin, listeler, sıralar, diziler, tanımlama grupları, ayırt edici birleşimler, kayıtlar, sınıf türleri veya işlev değerleri olabilir.
 
-## <a name="binding-a-value"></a>Bir değer bağlama
+## <a name="binding-a-value"></a>Değer bağlama
 
-Terim *bağlama* bir adı bir tanımı ile ilişkilendirme anlamına gelir. `let` Anahtar sözcüğü, aşağıdaki örneklerde gösterildiği gibi bir değere bağlar:
+*Bağlama* terimi, bir adı tanımıyla ilişkilendirme anlamına gelir. `let` Anahtar sözcüğü, aşağıdaki örneklerde olduğu gibi bir değeri bağlar:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
 
-Bir değer türü tanımından algılanır. Bir tamsayı veya kayan noktalı sayı gibi basit bir tür için tür sabit değerinin türü belirlenir. Bu nedenle, önceki örnekte, derleyicinin türünü çıkarsar `b` olmasını `unsigned int`derleyici türünü çıkarsar bilgileriyse `a` olmasını `int`. Bir işlevi değer türü, işlev gövdesinde dönüş değerinden belirlenir. İşlev değer türleri hakkında daha fazla bilgi için bkz: [işlevleri](../functions/index.md). Değişmez değer türleri hakkında daha fazla bilgi için bkz: [değişmez değerleri](../literals.md).
+Bir değerin türü tanımdan algılanır. İntegral veya kayan noktalı sayı gibi temel bir tür için, tür değişmez değer türünden belirlenir. Bu nedenle, `b` önceki örnekte, derleyici `unsigned int`türünü olarak algılar, ancak derleyici türünü `a` `int`olarak algılar. İşlev değerinin türü, işlev gövdesindeki dönüş değerinden belirlenir. İşlev değeri türleri hakkında daha fazla bilgi için bkz. [işlevler](../functions/index.md). Değişmez türler hakkında daha fazla bilgi için bkz. [değişmez değerler](../literals.md).
 
-Derleyici, varsayılan olarak kullanılmayan bağlamalar hakkında tanılama kesmez. Bu iletileri almayı etkinleştirme derleyici çağrılırken 1182 proje dosyanızdaki veya uyarı (bkz `--warnon` altında [derleyici seçenekleri](../compiler-options.md)).
+Derleyici, varsayılan olarak kullanılmayan bağlamalar hakkında tanılama vermiyor. Bu iletileri almak için, proje dosyanızda veya derleyicisini çağırırken uyarı 1182 ' yı etkinleştirin (bkz `--warnon` . [derleyici seçenekleri](../compiler-options.md)altında).
 
-## <a name="why-immutable"></a>Sabit neden?
+## <a name="why-immutable"></a>Neden sabit?
 
-Değişmez değerler, program yürütme kurs değiştirilemez değerlerdir. C++, Visual Basic gibi diller için kullanılıyorsa veya C#, önler, bulabileceğiniz F# primacy bir programın yürütülmesi sırasında yeni değerler atanabilir değişkenler yerine sabit değerler üzerinden geçirir. Sabit veri, işlevsel programlama, önemli bir öğesidir. Çok iş parçacıklı bir ortamda yönetmek birçok farklı iş parçacıkları tarafından değiştirilebilecek paylaşılan değişebilir değişkenleri zordur. Ayrıca, değişebilir değişkenleri ile bazen bir değişken başka bir işleve geçirildiğinde değiştirilebilir, bildirmek zor olabilir.
+Sabit değerler, bir programın yürütülmesi sırasında değiştirilemeyen değerlerdir. C++, Visual Basic veya C#gibi dillerde kullandıysanız, bir programın yürütülmesi sırasında yeni değerler atanabileceği değişkenler yerine, sabit değerler üzerinde en fazla değer elde eden değişken olduğunu F# fark edebilirsiniz. Değişmez veriler fonksiyonel Programlamanın önemli bir öğesidir. Çok iş parçacıklı bir ortamda, birçok farklı iş parçacığı tarafından değiştirilebilen paylaşılan kesilebilir değişkenlerin yönetilmesi zordur. Ayrıca, değişebilir değişkenlerle, bazı durumlarda bir değişkenin başka bir işleve geçirildiğinde değiştirilip değiştirilemeyeceğini söylemek zor olabilir.
 
-Saf işlevsel dillerde, değişken yok ve İşlevler, kesinlikle matematiksel işlevler olarak davranır. Yordam bir dilde kod, bir değeri değiştirmek için değişken ataması kullanır. Burada, işlevsel bir dildir eşdeğer kodda giriş ve sabit bir işlevi farklı değişmez değerler çıktı olarak bir sabit değer var. Bu matematiksel katılık programın davranışını hakkında akıl sıkı sağlar. Ne derleyicileri daha kesin kodunu kontrol edin ve daha etkili bir şekilde en iyi duruma getirmeyi sağlayan sıkı bu mantık, ve geliştiricilerin anlamak ve doğru kod yazmak için kolaylaştırmak yardımcı olur. Bu nedenle işlev kodu sıradan yordam kodda hata ayıklamak daha kolay olacak şekilde olasıdır.
+Saf işlevsel dillerde değişken yoktur ve işlevler kesinlikle matematik işlevleri olarak davranır. Bir yordamsal dildeki kodun bir değeri değiştirmek için değişken atamasını kullanması durumunda, işlevsel dildeki denk kodun girdi, sabit bir işlev ve çıkış olarak farklı sabit değerler olan sabit bir değeri vardır. Bu matematiksel striclük, programın davranışı hakkında daha sıkı bir yaklaşım sağlar. Bu iyileştirme, derleyicilerin kodu daha kolay bir şekilde denetlemesini ve daha etkili bir şekilde iyileştirmesini sağlar ve geliştiricilerin doğru kodu anlamasına ve yazmasını kolaylaştırır. İşlevsel kodun, normal yordamsal koddan hata ayıklamanın daha kolay olması olasıdır.
 
-F#tam olarak işlevsel programlama destekler ancak saf işlevsel bir dil değil. Bunun yapılması bir önemli işlevsel programlama açısından yararlanmak kodunuzu izin verdiğinden değişmez değerleri kullanılarak iyi bir uygulamadır.
+F#, saf işlevsel bir dil değildir, ancak işlevsel programlamayı tam olarak destekler. Bu işlemin yapılması, kodunuzun işlevsel programlama açısından önemli bir yönden yararlanmasına olanak sağladığından, sabit değerlerin kullanılması iyi bir uygulamadır.
 
-## <a name="mutable-variables"></a>Değişebilir değişkenleri
+## <a name="mutable-variables"></a>Değişebilir değişkenler
 
-Anahtar sözcüğünü kullanabilirsiniz `mutable` değiştirilebilen bir bağımsız değişken belirtin. Değişebilir değişkenleri F# genellikle sınırlı bir kapsam, bir türün bir alanı veya yerel bir değer olarak olması gerekir. Kısıtlı bir kapsamla değişebilir değişkenleri denetlemek için daha kolay ve yanlış şekilde değiştirilmesi olasılığı daha düşüktür.
+Değiştirilebilecek bir değişken belirtmek için `mutable` anahtar sözcüğünü kullanabilirsiniz. ' Deki F# kesilebilir değişkenlerin, genellikle bir tür alanı veya yerel değer olarak sınırlı bir kapsamı olmalıdır. Sınırlı bir kapsama sahip kesilebilir değişkenlerin denetimi daha kolaydır ve yanlış yollarla değiştirilmesinin daha düşüktür.
 
-Kullanarak bir başlangıç değeri değişebilir bir değişkene atayabilirsiniz `let` aynı şekilde bir değer tanımlayacağınız anahtar sözcüğü. Ancak, daha sonra yeni değerleri değişebilir değişkenleri kullanarak atayabilirsiniz olduğunu fark `<-` işleci, aşağıdaki örnekte olduğu gibi.
+`let` Anahtar sözcüğünü bir değer tanımladığınız şekilde kullanarak, değişebilir bir değişkene bir başlangıç değeri atayabilirsiniz. Bununla birlikte, aşağıdaki örnekte olduğu gibi `<-` işleci kullanarak değiştirilebilir değişkenlere daha sonra yeni değerler atayabilmeniz fark olur.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
 
-İşaretli değerleri `mutable` için otomatik olarak yükseltilebilir `'a ref` kapanım tarafından yakalanan, kapanışları, gibi oluşturan formlar dahil `seq` oluşturucular. Bu gerçekleştiğinde bildirim almak istiyorsanız, uyarı etkinleştirin 3180 proje dosyanızdaki veya derleyicisini çağırma.
+Oluşturucular gibi `mutable` kapanışları `'a ref` oluşturan formlar da dahil olmak üzere, işaretlenen değerler otomatik olarak bir kapanış tarafından yakalanarak yükseltilir. `seq` Bu gerçekleştiğinde size bildirilmesini istiyorsanız, proje dosyanızda veya derleyicisini çağırırken uyarı 3180 ' yı etkinleştirin.
 
 ## <a name="related-topics"></a>İlgili Konular
 
 |Başlık|Açıklama|
 |-----|-----------|
-|[let Bağlamaları](../functions/let-bindings.md)|Kullanma hakkında bilgi sağlar `let` adlarını değerleri ve işlevlere bağlamak için anahtar sözcüğü.|
-|[İşlevler](../functions/index.md)|İşlevler genel bakışını sağlar F#.|
+|[let Bağlamaları](../functions/let-bindings.md)|Adları değerlere ve işlevlere bağlamak `let` için anahtar sözcüğünü kullanma hakkında bilgi sağlar.|
+|[İşlevler](../functions/index.md)|İçindeki F#işlevlere genel bir bakış sağlar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -10,39 +10,39 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 4e101fffbd7e53cadce0b621d73ade2d1459ba00
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: a59223bfbe9506aa0028933d55b74e24d5595c32
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68237452"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629544"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI Otomasyon ve Ekran Ölçeklendirme
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] Kullanıcıların değiştirmesine olanak tanır [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] böylece çoğu ayarı [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] daha büyük öğeler ekranda görünür. Bu özelliği uzun kullanılabilir olsa da [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], önceki sürümlerinde ölçeklendirme olduğu uygulamalar tarafından uygulanacak. İçinde [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], kendi ölçekleme işlememesi tüm uygulamalar için ölçeklendirme varsayılan Masaüstü Pencere Yöneticisi gerçekleştirir. UI Otomasyonu istemci uygulamaları bu özelliği dikkate almanız gerekir.  
+ [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]Kullanıcıların ekrandaki öğelerin çoğu [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] daha büyük görünmesi için nokta/inç (dpi) ayarı değiştirmesini sağlar. Sürümünde [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]bu özellik uzun süredir kullanılabilir olsa da, önceki sürümlerde ölçeklendirmenin uygulamalar tarafından uygulanması gerekiyordu. ' [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]De Masaüstü Pencere Yöneticisi, kendi ölçeklendirmeyi işlemeyen tüm uygulamalar için varsayılan ölçeklendirmeyi gerçekleştirir. UI Otomasyonu istemci uygulamaları bu özelliği dikkate almalıdır.  
   
 <a name="Scaling_in_Windows_Vista"></a>   
-## <a name="scaling-in-windows-vista"></a>Windows Vista'da ölçeklendirme  
- Varsayılan [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ayarı olan 96 96 piksel genişliği veya yüksekliği bir kuramsal inç kaplayabilir anlamına gelir. "İnch" tam ölçüsü, boyutu ve fiziksel monitör çözünürlüğü bağlıdır. Örneğin, bir izleyicide 12 inç genişlik, 1280 piksel yatay çözünürlükte 96 piksel yatay çizgi hakkında 9/10 inç genişletir.  
+## <a name="scaling-in-windows-vista"></a>Windows Vista 'da ölçeklendirme  
+ Varsayılan DPI ayarı 96 ' dir. Bu, 96 piksellik bir bir veya daha fazla inç genişlik veya yükseklik kaplayacağı anlamına gelir. "İnç" tam ölçüsü, izleyicinin boyutuna ve fiziksel çözünürlüğüne bağlıdır. Örneğin, 12 inç genişliğinde bir monitörde, 1280 piksellik yatay çözünürlükte, 96 piksellik yatay bir çizgi, bir inç 9/10.  
   
- Değiştirme [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ayarı ekran çözünürlüğünü değiştirme ile aynı değil. İle [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ölçeklendirme, fiziksel piksel ekranında sayısı aynı kalır. Ancak, ölçeklendirme boyutunu ve konumunu uygulanan [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğeleri. Bu ölçeklendirme tarafından Masaüstü Pencere Yöneticisi'ni (DWM) değil ölçeklendirilmesi açıkça sorma uygulamalar ve Masaüstü için otomatik olarak gerçekleştirilebilir.  
+ DPI ayarının değiştirilmesi, ekran çözünürlüğünü değiştirme ile aynı değildir. DPI ölçeklendirme sayesinde, ekrandaki fiziksel piksel sayısı aynı kalır. Ancak, ölçekleme [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğelerin boyutuna ve konumuna uygulanır. Bu ölçeklendirme, masaüstü için Masaüstü Pencere Yöneticisi (DWM) ve açıkça ölçeklendirilmemiş olmayan uygulamalar tarafından otomatik olarak gerçekleştirilebilir.  
   
- Aslında, ne zaman kullanıcı ayarlar ölçek faktörü için 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], ekranda bir dikey veya yatay inç yüzde 25 oranında daha büyük hale gelir. Tüm boyutlar uygun şekilde ölçeklendirilir. Ekranın üst ve sol kenarlarının bir uygulama penceresinde uzaklığını yüzde 25 oranında artar. Uygulama ölçeklendirme etkinleştirilir ve uygulama değil [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-uyumlu, pencerenin boyutu artar kaydırmalar ve tüm boyutları ile birlikte aynı oranda [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğeleri içeriyor.  
+ Aslında, Kullanıcı ölçek faktörünü 120 dpi olarak ayarladığında, ekrandaki dikey veya yatay inç yüzde 25 oranında daha büyük olur. Tüm boyutlar uygun şekilde ölçeklendirilir. Ekranın üst ve sol kenarlarından bir uygulama penceresinin kayması yüzde 25 oranında artar. Uygulama ölçekleme etkinse ve uygulama DPI duyarlı değilse, pencerenin boyutu, içerdiği tüm [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğelerin uzaklıkları ve boyutları ile aynı oranda artar.  
   
 > [!NOTE]
->  Varsayılan olarak, ölçeklendirmenin DWM gerçekleştirmez olmayan[!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-kullanıcı ayarladığında kullanan uygulamalar [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ile 120 gerçekleştirir ancak zaman [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] bir 144 veya üzerinin özel değere ayarlayın. Ancak, kullanıcı varsayılan davranışı geçersiz kılabilirsiniz.  
+>  Varsayılan olarak, Kullanıcı DPI 'yi 120 olarak ayarladığınızda, DWM DPI kullanmayan uygulamalar için ölçeklendirmeyi gerçekleştirmez, ancak DPI, 144 veya üzeri özel bir değere ayarlandığında bunu gerçekleştirir. Ancak, Kullanıcı varsayılan davranışı geçersiz kılabilir.  
   
- Ekran ölçeklendirme ekran koordinatları ile herhangi bir şekilde endişe uygulamalar için yeni zorluklar oluşturur. Ekranı, artık iki koordinat sistemi içerir: fiziksel ve mantıksal. Fiziksel bir noktasının gerçek uzaklık piksel cinsinden üst koordinatları kaynağı kaldı. Ölçeği piksel durumunda olduğu gibi mantıksal uzaklıklarını koordinatları.  
+ Ekran ölçeklendirme, ekran koordinatları ile herhangi bir şekilde ilgilenen uygulamalar için yeni zorluk oluşturur. Ekranda şu anda iki koordinat sistemi var: fiziksel ve mantıksal. Bir noktanın fiziksel koordinatları, kaynağın sol üst kısmından itibaren gerçek uzaklığa göre piksel cinsinden fark edilir. Mantıksal Koordinatlar, piksellerin kendisi ölçeklendiği gibi uzaklıklardır.  
   
- Bir düğme içeren bir iletişim kutusu tasarım koordinatlarda (100, 48) olduğunu varsayalım. Bu iletişim kutusunu 96 varsayılan olarak görüntülenen zaman [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], fiziksel koordinatlarda düğmesi bulunur (100, 48). 120 adresindeki [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], fiziksel koordinatlarda bulunur (125, 60). Ancak aynı anda tüm mantıksal koordinatları olan [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ayarı: (100, 48).  
+ Koordinatları (100, 48) olan bir düğmeye sahip bir iletişim kutusu tasarlayacağınızı varsayın. Bu iletişim kutusu varsayılan 96 DPI 'de görüntülendiğinde, düğme fiziksel koordinatlara (100, 48) yerleştirilir. 120 dpi sürümünde, (125, 60) fiziksel koordinatlarıyla bulunur. Ancak mantıksal koordinatlar herhangi bir DPI ayarında aynıdır: (100, 48).  
   
- İşletim sistemi ve uygulama davranışını öğesinden bağımsız olarak tutarlı hale getirdiklerinden mantıksal koordinatları önemli [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ayarı. Örneğin, <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> normalde mantıksal koordinatlarını döndürür. Bir iletişim kutusu içindeki bir öğenin üzerine imleci taşıma ise bağımsız olarak, aynı koordinatlara döndürülür [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ayarı. Bir denetimi çizerseniz (100, 100), bu mantıksal koordinatlarına çizilmiş ve aynı göreli konumda herhangi kaplayacağı [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ayarı.  
+ Mantıksal Koordinatlar, DPI ayarından bağımsız olarak işletim sisteminin ve uygulamaların davranışını tutarlı hale yaptığından önemlidir. Örneğin, <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> normalde mantıksal koordinatları döndürür. İmleci bir iletişim kutusunda bir öğenin üzerine taşırsanız, DPI ayarından bağımsız olarak aynı koordinatlar döndürülür. (100, 100) adresinde bir Denetim çiziyorsanız, bu mantıksal koordinatlara çizilir ve herhangi bir DPI ayarında aynı göreli konumu kaplayacaktır.  
   
 <a name="Scaling_in_UI_Automation_Clients"></a>   
-## <a name="scaling-in-ui-automation-clients"></a>UI Otomasyonu istemcilerinde ölçeklendirme  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API mantıksal koordinatları kullanmaz. Aşağıdaki yöntemleri ve özellikleri fiziksel koordinatlarını döndürür veya bunları parametre alır.  
+## <a name="scaling-in-ui-automation-clients"></a>UI Otomasyonu Istemcilerinde ölçekleme  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API mantıksal koordinatları kullanmaz. Aşağıdaki yöntemler ve Özellikler fiziksel koordinatları döndürür ya da bunları parametre olarak alır.  
   
 - <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
   
@@ -54,27 +54,27 @@ ms.locfileid: "68237452"
   
 - <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>  
   
- Varsayılan olarak,-96 olmayan bir içinde çalışan bir UI otomasyon istemci uygulaması [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ortamı bu yöntemlere ve özelliklere doğru sonuçları elde etmek mümkün olmayacak. İmleç konumu mantıksal koordinatlarında olduğundan, örneğin, istemci yalnızca bu koordinatlarına geçirilemez <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> imlecin altındaki öğeyi edinme. Ayrıca, uygulamanın doğru şekilde windows kendi istemci alanı dışına yerleştirmek mümkün olmayacaktır.  
+ Varsayılan olarak, 96 dpi olmayan bir ortamda çalışan bir UI Otomasyonu istemci uygulaması, bu yöntemler ve özelliklerden doğru sonuçlar elde edemeyecektir. Örneğin, imleç konumu mantıksal koordinatlardaki olduğundan, istemci imlecin altında olan öğeyi almak için bu koordinatları öğesine <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> geçiremez. Ayrıca, uygulama Windows 'u istemci alanının dışına doğru şekilde yerleştiremeyecektir.  
   
- İki parça halinde çözümüdür.  
+ Çözüm iki bölümden oluşur.  
   
-1. İlk olarak, istemci uygulaması olun [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-uyumlu. Bunu yapmak için [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] işlevi `SetProcessDPIAware` başlangıçta. Yönetilen kodda aşağıdaki bildirimi bu işlev kullanılabilir hale getirir.  
+1. İlk olarak, istemci uygulamayı DPI ile uyumlu hale getirin. Bunu yapmak için başlatma sırasında [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] işlevi `SetProcessDPIAware` çağırın. Yönetilen kodda, aşağıdaki bildirim bu işlevi kullanılabilir hale getirir.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Bu işlev, tüm işlem DPI kullanan, işleme ait tüm windows ölçeklendirilmemiş olduğu anlamına haline getirir. İçinde [vurgulayıcısı ile ilgili örnek](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), vurgulama dikdörtgeni dört windows örneği için UI Otomasyon, mantıksal koordinatları elde fiziksel koordinatları konumunda bulunur. Örnek DPI kullanan değilse, vurgulama 96 DPI ortamında yanlış yerleştirme neden olacağından Masaüstü, mantıksal koordinatlarda çizilmiş.  
+     Bu işlev tüm işlemi DPI 'ye duyarlı hale getirir. Bu, işleme ait olan tüm pencerelerin ölçeklendirilmemiş olması anlamına gelir. [Vurgulayıcı](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)örneğinde, örneğin, vurgulama dikdörtgenini oluşturan dört pencere, mantıksal koordinatları DEĞIL, UI otomasyonundan alınan fiziksel koordinatlara yerleştirilir. Örnek DPI duyarlı değilse, vurgu, masaüstündeki mantıksal koordinatlara çizilir, bu da 96 dpi olmayan bir ortamda yanlış yerleştirme oluşmasına neden olur.  
   
-2. İmleç koordinatlarını edinmek için çağrı [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] işlevi `GetPhysicalCursorPos`. Aşağıdaki örnek, bildirmek ve bu işlevi kullanmak gösterilmektedir.  
+2. İmleç koordinatlarını almak için [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] işlevini `GetPhysicalCursorPos`çağırın. Aşağıdaki örnekte, bu işlevin nasıl bildirilemeyeceğini ve kullanılacağı gösterilmektedir.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
   
 > [!CAUTION]
->  Kullanmayın <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. Bu özelliğin ölçeklendirilmiş bir ortamda windows istemcisi dışında davranış tanımsızdır.  
+>  Kullanmayın <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. Bu özelliğin ölçeklendirilen bir ortamda istemci penceresi dışında davranışı tanımsızdır.  
   
- Uygulamanız ile olmayan doğrudan işlem içi iletişimi gerçekleştirir, [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-uyumlu uygulamalarla sahip dönüştürmeniz kullanarak mantıksal ve fiziksel koordinatları arasında [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] işlevleri `PhysicalToLogicalPoint` ve `LogicalToPhysicalPoint`.  
+ Uygulamanız DPI kullanmayan uygulamalarla doğrudan işlemler arası iletişim gerçekleştiriyorsa, ve [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `LogicalToPhysicalPoint`işlevlerini `PhysicalToLogicalPoint` kullanarak mantıksal ve fiziksel koordinatlar arasında dönüştürme yapmış olabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Vurgulayıcısı ile ilgili örnek](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)
+- [Vurgulayıcı örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)

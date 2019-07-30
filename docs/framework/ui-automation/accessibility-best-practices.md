@@ -5,12 +5,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: 0fe09c0c261f36f1e9f241a6a6a8aacf3bf07d29
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: a29c31e93523e0843728d2fd7fa555946b139c55
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331487"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629604"
 ---
 # <a name="accessibility-best-practices"></a>En İyi Erişilebilirlik Uygulamaları
 > [!NOTE]
@@ -66,7 +66,7 @@ ms.locfileid: "68331487"
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>   
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>Tüm Kullanıcı arabiriminin tüm DPı ayarlarına göre doğru şekilde ölçeklendirdiğinden emin olun  
- Tüm [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Ayarlar[!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] tarafından doğru şekilde ölçeklenebilmesini sağlayın. Ayrıca, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğelerin 1024 x 768 bir ekranına, 120 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)]ile uygun olduğundan emin olun.  
+ Her bir nokta [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] /inç (dpi) ayarı için tümünün doğru şekilde ölçeklendiğinden emin olun. Ayrıca, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğelerin 1024 x 768 ekranına, inç başına 120 nokta (DPI) ile uygun olduğundan emin olun.  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Gezinti  

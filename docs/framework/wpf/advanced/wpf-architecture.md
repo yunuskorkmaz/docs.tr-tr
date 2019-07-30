@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 987e48f163d35d27f6736464d7497451cca82c0c
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 440a6d76e5295613d2887c0a77d9a49e870e580b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400851"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629822"
 ---
 # <a name="wpf-architecture"></a>WPF Mimarisi
 Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisinde kılavuzlu bir tur sağlar. Büyük alt sistemlerinin [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]çoğunu ele alır ve bunların nasıl etkileşime gireceğini açıklar. Ayrıca, mimarlarının mimarlarının [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]yaptığı seçimlerin bazılarını da ayrıntılarıyla görebilirsiniz.  
@@ -30,7 +30,7 @@ Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisinde kılavuzl
 ## <a name="systemobject"></a>System.Object  
  Birincil [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] programlama modeli, yönetilen kod aracılığıyla sunulur. Tasarım aşamasının [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] başlarında, sistemin yönetilen bileşenleri ve yönetilmeyen bileşenler arasında çizginin nerede çizildiğini öğrenmek için bir dizi yorumladığınıza vardı. CLR, geliştirmeyi daha üretken ve sağlam hale getirmek (bellek yönetimi, hata işleme, ortak tür sistemi vb. dahil olmak üzere), ancak bir maliyetle karşılaştıkları bir dizi özellik sağlar.  
   
- Ana bileşenleri [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aşağıdaki şekilde gösterilmiştir. Diyagramın kırmızı bölümleri (PresentationFramework, PresentationCore ve milcore), öğesinin ana kod bölümlerinden oluşur [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Bunlardan yalnızca biri yönetilmeyen bir bileşen-milcore ' dır. Milcore, ile [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]sıkı tümleştirmeyi sağlamak için yönetilmeyen kodda yazılmıştır. Uygulamasındaki [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tüm görüntüler, etkin donanım ve [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] yazılım işlemeye olanak tanıyan altyapıda gerçekleştirilir. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Ayrıca bellek ve yürütme üzerinde ince denetim gereklidir. Frecore 'daki bileşim altyapısı son derece performansa duyarlıdır ve performans kazanmak için CLR 'nin pek çok avantaj elde etmek için gereklidir.  
+ Ana bileşenleri [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aşağıdaki şekilde gösterilmiştir. Diyagramın kırmızı bölümleri (PresentationFramework, PresentationCore ve milcore), öğesinin ana kod bölümlerinden oluşur [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Bunlardan yalnızca biri yönetilmeyen bir bileşen-milcore ' dır. Milcore, DirectX ile sıkı tümleştirmeyi sağlamak için yönetilmeyen koda yazılır. İçindeki [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tüm görüntü, DirectX altyapısı aracılığıyla yapılır, bu da etkili donanım ve yazılım işleme sağlar. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Ayrıca bellek ve yürütme üzerinde ince denetim gereklidir. Frecore 'daki bileşim altyapısı son derece performansa duyarlıdır ve performans kazanmak için CLR 'nin pek çok avantaj elde etmek için gereklidir.  
   
  ![.NET Framework IÇINDE WPF 'nin konumu.](./media/wpf-architect1.PNG "wpf_architect1")  
   

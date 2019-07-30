@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: ee260d58cdb4dc971fc32ca5c889b459b6a48489
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 10bdeae8fe46f78e60d278fdbe93883a1c6bd356
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484736"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629891"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF'de Win32 İçeriği Barındırma
 
@@ -48,11 +48,11 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 
 Ancak kodun yalnızca [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kendi kendine dahil olmadığı varsayın. Bu durumda, bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] iletişim kutusu oluşturabilir ve içeriğini daha büyük [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir uygulamaya katabilirsiniz. Örnek bunu [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] ve C++' de bunu farklı bir dilde veya komut satırında yapmak mümkün olsa da gösterir.
 
-C++ Bir[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] projeye derlenen basit bir iletişim kutusuyla başlayın.
+Bir C++ DLL projesine derlenmiş basit bir iletişim kutusuyla başlayın.
 
 Daha sonra, iletişim kutusunu daha büyük [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaya tanıtın:
 
-- Yönetilen(`/clr`) olarak derle [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]
+- DLL 'yi yönetilen (`/clr`) olarak derle
 
 - İletişim kutusunu Denetim haline getirin
 
@@ -120,7 +120,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }
 ```
 
-Burada, `CreateDialog` gerçekten bir denetim olan iletişim kutusunu oluşturmak için kullanırsınız. Bu, içinde [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]çağrılan ilk metotlardan biri olduğundan, daha sonra `InitializeGlobals()`kullanacağınız bir işlevi çağırarak bazı standart [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] başlatma da yapmanız gerekir:
+Burada, `CreateDialog` gerçekten bir denetim olan iletişim kutusunu oluşturmak için kullanırsınız. Bu, dll içinde çağrılan ilk metotlardan biri olduğundan, daha sonra [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] `InitializeGlobals()`kullanacağınız bir işlevi çağırarak bazı standart başlatma da yapmanız gerekir:
 
 ```cpp
 bool initialized = false;

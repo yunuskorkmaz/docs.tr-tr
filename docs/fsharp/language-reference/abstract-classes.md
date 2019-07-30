@@ -1,17 +1,17 @@
 ---
 title: Soyut sınıflar
-description: Hakkında bilgi edinin F# bırakın bazı veya tüm üyeleri uygulanmayanları sınıflar, soyut ve nesne türleri farklı bir dizi ortak işlevselliği temsil eder.
+description: Bazı veya F# tüm üyeleri uygulanmayan ve çeşitli nesne türleri kümesinin yaygın işlevlerini temsil eden soyut sınıflar hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8251d481c9056d40a0b13ae3c89353406986c116
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a6bbfc23b858d5f3833f3f52b6dca46753080f03
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645538"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629673"
 ---
 # <a name="abstract-classes"></a>Soyut sınıflar
 
-*Soyut sınıflar* uygulanmayanları, bazı veya tüm üyeleri bırakın ve böylece uygulamaları türetilmiş sınıflar tarafından sağlanması sınıflardır.
+*Soyut sınıflar* , bazı veya tüm üyelerini uygulanmayan sınıflardır ve bu sayede uygulamalar türetilmiş sınıflar tarafından sağlanabilmelidir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,23 +28,23 @@ abstract member member-name : type-signature
 
 ## <a name="remarks"></a>Açıklamalar
 
-Nesne yönelimli programlama, soyut bir sınıf bir hiyerarşinin temel sınıf olarak kullanılan ve nesne türleri farklı bir dizi ortak işlevselliği temsil eder. Adı "Özet" da anlaşılacağı gibi soyut sınıflar genellikle doğrudan somut varlıkları sorun etki alanında oturum karşılık gelmez. Ancak, bunlar ne birçok farklı somut ortak varlıkların temsil.
+Nesne odaklı programlamada, soyut bir sınıf hiyerarşinin temel sınıfı olarak kullanılır ve farklı nesne türleri kümesinin yaygın işlevlerini temsil eder. "Soyut" adının gösterdiği gibi, soyut sınıflar genellikle sorun etki alanında doğrudan somut varlıklara karşılık gelmez. Ancak, yaygın olarak kaç farklı somut varlık olduğunu temsil eder.
 
-Soyut sınıflar olmalıdır `AbstractClass` özniteliği. Bunlar uygulanan ve üyeleri gerçeklenmemiş. Kullanımı *soyut* uygulandığında bir sınıf diğer .NET dilleri; aynı olan ancak kullanımı *soyut* yöntemleri (ve Özellikler) uygulandığında bir biraz farklıdır F# Diğer .NET dillerinde, kullanımdan. İçinde F#, bir yöntem ile işaretlenmiş `abstract` anahtar sözcüğü, bu gösterir bir üyesi olarak bilinen bir girdiye sahip bir *sanal dağıtım yuvası*, bu tür için sanal işlevleri iç tablosuna. Diğer bir deyişle, yöntem sanal rağmen `virtual` anahtar sözcüğü kullanılan değil F# dili. Anahtar sözcüğü `abstract` olup yöntemin bağımsız olarak sanal yöntemleri kullanılır. Bir sanal dağıtım yuvası bildirimi, bu dağıtım yuvası için bir yöntem tanımını ayrıdır. Bu nedenle, F# eşdeğerdir bir sanal yöntem bildiriminde ve başka bir .NET dil tanımında bir soyut yöntem bildiriminde hem ile ya da ayrı bir tanımı bir birleşimini `default` anahtar sözcüğü veya `override` anahtar sözcüğü. Daha fazla bilgi ve örnekler için bkz. [yöntemleri](members/methods.md).
+Soyut sınıfların `AbstractClass` özniteliği olmalıdır. Uygulanamazlar ve uygulanmayan Üyeler üyelere sahip olabilirler. Bir sınıfa uygulandığında *soyut* olan terim kullanımı, diğer .net dilleridir. Ancak, yöntemlere (ve özelliklere) uygulandığında *Özet* teriminin kullanımı, diğer .NET dillerinde kullanımı için biraz farklıdır F# . ' F#De, bir yöntem `abstract` anahtar sözcüğüyle işaretlendiğinde, bu bir üyenin sanal bir *dağıtım yuvası*olarak bilinen, bu tür için iç sanal işlevlerin iç tablosunda bir girişi olduğunu gösterir. Diğer bir deyişle, `virtual` anahtar sözcüğü F# dilde kullanılmasa da, yöntemi sanal olur. Anahtar sözcüğü `abstract` , yöntemin uygulanıp uygulanmadığına bakılmaksızın sanal yöntemlerde kullanılır. Bir sanal dağıtım yuvasının bildirimi, bu dağıtım yuvası için bir yöntemin tanımından ayrıdır. Bu nedenle, F# bir sanal yöntem bildiriminin ve tanımının başka bir .net dilinde eşdeğeri, `default` anahtar sözcüğü ya `override` da anahtar sözcüğüyle birlikte bir soyut Yöntem bildiriminin ve ayrı bir tanımın birleşimidir. Daha fazla bilgi ve örnek için bkz. [Yöntemler](./members/methods.md).
 
-Bir sınıf bildirimi yapıldı ancak tanımlanmadı soyut yöntemler varsa soyut olarak kabul edilir. Bu nedenle, soyut metotlar içeren sınıflar mutlaka soyut sınıflar değildir. Bir sınıf, soyut yöntemler tanımsız sürece kullanmayın **AbstractClass** özniteliği.
+Bir sınıf, yalnızca tanımlanmış ancak tanımlanmamış soyut yöntemler varsa Özet olarak değerlendirilir. Bu nedenle, soyut yöntemleri olan sınıfların soyut sınıflar olması gerekmez. Bir sınıfın tanımsız soyut yöntemleri yoksa, abstract **Ctclass** özniteliğini kullanmayın.
 
-Önceki sözdiziminde, *erişilebilirlik değiştiricisi* olabilir `public`, `private` veya `internal`. Daha fazla bilgi için [erişim denetimi](access-control.md).
+Önceki sözdiziminde, *Erişilebilirlik-değiştirici* `public` `private` veya `internal`olabilir. Daha fazla bilgi için bkz. [Access Control](access-control.md).
 
-Diğer bir tür olduğu gibi soyut sınıflar, bir temel sınıf ve bir veya daha fazla temel arabirimleri olabilir. Birlikte ayrı bir satırda her bir temel sınıf veya arabirim görünür `inherit` anahtar sözcüğü.
+Diğer türlerde olduğu gibi, soyut sınıfların bir temel sınıfı ve bir veya daha fazla temel arabirimi olabilir. Her temel sınıf veya arabirim, `inherit` anahtar sözcüğüyle birlikte ayrı bir satırda görüntülenir.
 
-Soyut bir sınıf türü tanımı tam olarak tanımlanan üyeler içerebilir, ancak soyut üyeler içerebilir. Soyut sözdizimi, önceki sözdiziminde ayrı olarak gösterilir. Bu sözdizimi *tür imzası* üyesi içeren bir liste sırası ve dönüş türleri, parametre türleri ile ayrılır `->` belirteçleri ve/veya `*` belirteçler uygun şekilde curried için ve tupled Parametreler. Soyut üye türü imzalarını sözdizimi imza dosyalarında kullanılan ve IntelliSense Visual Studio Kod Düzenleyicisi'nde gösterilen ile aynı olur.
+Soyut bir sınıfın tür tanımı, tam olarak tanımlanmış Üyeler içerebilir, ancak soyut Üyeler de içerebilir. Soyut üyelerin sözdizimi, Önceki sözdiziminde ayrı olarak gösterilir. Bu sözdiziminde, bir üyenin *tür imzası* , belirteç ve/veya `->` `*` belirteçlere göre ayrılmış parametrelere uygun şekilde, sırasıyla parametre türlerini ve dönüş türlerini içeren bir listesidir. Soyut üye türü imzaları için sözdizimi, imza dosyalarında kullanılan ve Visual Studio Code düzenleyicisinde IntelliSense tarafından gösterilen ile aynıdır.
 
-Aşağıdaki kod, iki soyut olmayan türetilmiş sınıflar, kare ve daire olan şekil, soyut bir sınıf göstermektedir. Örneğin, soyut sınıflar, yöntemler ve Özellikler kullanmayı gösterir. Örnekte, somut varlıkları daire ve köşeli ortak öğeleri şekil soyut sınıfını temsil eder. Ortak özelliklerini (iki boyutlu bir koordinat sistemi) tüm şekiller out şekli sınıfına soyutlanır: kılavuz, bir döndürme açısını ve alanında ve çevre özelliklerini konumu. Bu, hangi bireysel şekiller değiştirilemez davranışı konumu dışında geçersiz kılınabilir.
+Aşağıdaki kod, soyut olmayan iki türetilmiş sınıfa, kareyle ve daireye sahip olan bir soyut sınıf şeklini gösterir. Örnek, soyut sınıfların, yöntemlerin ve özelliklerin nasıl kullanılacağını gösterir. Örnekte, soyut sınıf şekli, somut varlıkların dairenin ve karenin ortak öğelerini temsil eder. Tüm şekillerin ortak özellikleri (iki boyutlu bir koordinat sisteminde) şekil sınıfına soyutlanır: kılavuzdaki konum, bir döndürme açısı ve alan ve çevre özellikleri. Bunlar, konum dışında, tek şekillerin değiştireamaması için geçersiz kılınabilir.
 
-Döndürme yöntemi, kendi Simetri nedeniyle döndürme sabit olan daire sınıfı olduğu gibi geçersiz kılınabilir. Bu nedenle daire sınıfında döndürme yöntemi hiçbir şey yapmaz bir yöntemle değiştirilir.
+Döndürme yöntemi, kendi simetri nedeniyle dönüş sabiti olan Circle sınıfında olduğu gibi geçersiz kılınabilir. Bu nedenle, Circle sınıfında, döndürme yöntemi hiçbir şey olmayan bir yöntemle değiştirilmiştir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2901.fs)]
 
 **Çıkış:**
 
@@ -58,6 +58,6 @@ Area of Circle: 78.539816
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sınıflar](classes.md)
-- [Üyeler](members/index.md)
-- [Yöntemler](members/methods.md)
-- [Özellikler](members/Properties.md)
+- [Üyeler](./members/index.md)
+- [Yöntemler](./members/methods.md)
+- [Özellikler](./members/Properties.md)

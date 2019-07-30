@@ -1,5 +1,5 @@
 ---
-title: bağlamsal anahtar sözcüğü genel - C# başvurusu
+title: Genel bağlamsal anahtar sözcük C# başvurusu
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - global keyword [C#]
 ms.assetid: 8932c16a-6959-42c2-86e7-2c4221ab788b
-ms.openlocfilehash: 1c0177c52e21ae60477a283085a2893e2e067c54
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9a8c7b5134cc29668aae53e8a3f86ddae4c8263a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633475"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627690"
 ---
 # <a name="global-c-reference"></a>global (C# Başvurusu)
 
-`global` Önce söz konusu olduğunda bağlamsal anahtar sözcük [:: işleci](../operators/namespace-alias-qualifer.md), herhangi bir C# programı için varsayılan ad alanı ve aksi takdirde adlandırılmamış genel ad alanına başvuruyor. Daha fazla bilgi için [nasıl yapılır: Genel Namespace diğer adlarını kullanma](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
+Bağlam anahtar sözcüğü, [:: işlecinden](../operators/namespace-alias-qualifier.md)önce geldiğinde, herhangi bir C# program için varsayılan ad alanı olan genel ad alanına başvurur ve aksi durumda adlandırılmamış olur. `global` Daha fazla bilgi için [nasıl yapılır: Genel ad alanı diğer adını](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)kullanın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek nasıl kullanılacağını gösterir `global` belirtmek için bağlamsal anahtar sözcük sınıfı `TestApp` genel ad alanında tanımlanır:
+Aşağıdaki örnek, sınıfının `global` `TestApp` genel ad alanında tanımlandığını belirtmek için bağlamsal anahtar sözcüğünün nasıl kullanılacağını gösterir:
 
 [!code-csharp[csrefKeywordsContextual#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#13)]
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: a942d72f27d394d31a52fd02ecaa158add4d2e0f
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 860e8f11859bfbd85d6a5f0e4420fda3047bb236
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484627"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629838"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF ve Win32 Birlikte Çalışması
 Bu konu, birlikte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çalışma ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kodun nasıl kullanılacağına ilişkin bir genel bakış sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak, kod içinde [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] önemli bir yatırımınız olduğunda, bu kodların bazılarını yeniden kullanmak daha etkili olabilir.  
@@ -33,9 +33,9 @@ Bu konu, birlikte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptl
   
  Proje düzeyinde bir karmaşıkma, dosyaları bir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] C++ projede derleyemezsiniz.  Bunun için telafi eden çeşitli proje bölmesi teknikleri vardır.  
   
-- Tüm [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] C# [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfalarınızı derlenmiş derleme olarak içeren bir DLL oluşturun ve ardından çalıştırılabilir dosyanızı C++ bir başvuru olarak ekleyin.  
+- Tüm C# [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfalarınızı derlenmiş bir derleme olarak içeren bir DLL oluşturun ve sonra yürütülebilir dosyanızı C++ bir başvuru olarak bu DLL 'yi içermesini sağlayabilirsiniz.  
   
-- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçerik için C# bir yürütülebilir dosya oluşturun ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] içeriği içeren bir C++ [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] öğesine başvurın.  
+- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçerik için C# bir yürütülebilir dosya oluşturun ve C++ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] içeriği içeren bir dll 'ye başvurın.  
   
 - [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Uygulamanızı <xref:System.Windows.Markup.XamlReader.Load%2A> derlemek[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]yerine çalışma zamanında yüklemek için kullanın.  
   
@@ -48,7 +48,7 @@ Bu konu, birlikte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptl
   
 <a name="hwnds"></a>   
 ## <a name="how-wpf-uses-hwnds"></a>WPF, HWNDs 'yi nasıl kullanır?  
- "HWND birlikte çalışabilirliği" [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nin en iyi şekilde kullanılabilmesini sağlamak için, HWNDs [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 'i nasıl kullandığını anlamanız gerekir. Herhangi bir HWND için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işleme veya [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]  /  işleme ileişlemekarıştırılamaz.[!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] Bu bir dizi etkilere sahiptir. Öncelikle, bu işleme modellerini hiç karıştırmak için, birlikte çalışabilirlik çözümü oluşturmanız ve kullanmayı seçtiğiniz her bir işleme modeli için birlikte çalışabilirlik 'nin belirlenen segmentlerini kullanmanız gerekir. Ayrıca, işleme davranışı, birlikte çalışma çözümünüzün gerçekleştirebilecekleri bir "hava sahası" kısıtlaması oluşturur. "Hava sahası" kavramı, [teknoloji bölgelerine genel bakış](technology-regions-overview.md)konusunda daha ayrıntılı olarak açıklanmıştır.  
+ "HWND birlikte çalışabilirliği" [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nin en iyi şekilde kullanılabilmesini sağlamak için, HWNDs [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 'i nasıl kullandığını anlamanız gerekir. Herhangi bir HWND için, işleme DirectX [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işleme veya [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]  /  [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] işleme ile karıştırılamaz. Bu bir dizi etkilere sahiptir. Öncelikle, bu işleme modellerini hiç karıştırmak için, birlikte çalışabilirlik çözümü oluşturmanız ve kullanmayı seçtiğiniz her bir işleme modeli için birlikte çalışabilirlik 'nin belirlenen segmentlerini kullanmanız gerekir. Ayrıca, işleme davranışı, birlikte çalışma çözümünüzün gerçekleştirebilecekleri bir "hava sahası" kısıtlaması oluşturur. "Hava sahası" kavramı, [teknoloji bölgelerine genel bakış](technology-regions-overview.md)konusunda daha ayrıntılı olarak açıklanmıştır.  
   
  Ekrandaki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tüm öğeler sonunda bir HWND tarafından desteklenir. Oluşturduğunuzda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ,üst[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzey bir <xref:System.Windows.Interop.HwndSource> HWNDoluşturur[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve içeriğini HWND içine koymak içinbirkullanır.<xref:System.Windows.Window> <xref:System.Windows.Window>  Uygulamanın geri kalanı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , bu tekil HWND paylaşır. Menüler, Birleşik giriş kutusu açılan listeleri ve diğer açılır pencereler özel bir durumdur. Bu öğeler kendi üst düzey penceresini oluşturur, bu nedenle bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] menü, kendisini içeren pencere HWND 'nin kenarını büyük olasılıkla geçebilirler. İçine <xref:System.Windows.Interop.HwndHost> [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] <xref:System.Windows.Window> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir HWND koymak için kullandığınızda, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yeni alt HWND 'yi HWND 'ye göre nasıl konumlandırmaya bildirilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   

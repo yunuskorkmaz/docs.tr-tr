@@ -1,72 +1,72 @@
 ---
 title: F# Türleri
-description: Kullanılan türleri hakkında bilgi edinin F# ve nasıl F# türleri adlı ve açıklanmıştır.
+description: "' De F# kullanılan türler ve F# türlerin adlandırılması ve açıklaması hakkında bilgi edinin."
 ms.date: 05/16/2016
-ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44bd9d985e0ce1afa1bf2a8457dcd9470b13dfe1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934647"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630225"
 ---
 # <a name="f-types"></a>F# Türleri
 
-Bu konuda kullanılan türleri açıklayan F# ve nasıl F# türleri adlı ve açıklanmıştır.
+Bu konu, içinde F# kullanılan türleri ve türlerin adlandırılması ve açıklanme biçimini F# açıklar.
 
-## <a name="summary-of-f-types"></a>Özeti F# türleri
-Bazı türler olarak kabul edilir *ilkel türler*, Boole türü gibi `bool` ve bayt ve karakter türleri dahil çeşitli boyutlardaki integral ve kayan nokta türleri. Bu tür açıklanan [ilkel türler](primitive-types.md).
+## <a name="summary-of-f-types"></a>F# Türlerin Özeti
+Bazı türler, bayt ve karakter türleri dahil olmak üzere çeşitli boyutlarda `bool` Boole türü ve integral ve kayan nokta türleri gibi *temel türler*olarak değerlendirilir. Bu türler [temel türler](primitive-types.md)bölümünde açıklanmıştır.
 
-Dilinde yerleşik diğer türleri, diziler, listeler, diziler, dizileri, kayıtları içerir ve ayrılmış birleşimler. Diğer .NET dilleri ile deneyime sahiptir ve öğrenme F#, bu türlerinin her biri için konuları okumalısınız. Bu türleri hakkında daha fazla bilgi için bağlantılar dahil edilecek [ilgili konular](https://msdn.microsoft.com/library/#rel) bu konudaki. Bunlar F#-belirli türlerini destekleyen işlevsel programlama dillerinde ortak olan programlama stili. Bu tür birçok modüllerde ilişkilendirdiğiniz F# bu türlerinde ortak işlemleri destekleyen kitaplığı.
+Dilde yerleşik olan diğer türler arasında tanımlama grupları, listeler, diziler, sıralar, kayıtlar ve ayırt edici birleşimler bulunur. Diğer .NET dilleri ile deneyiminiz varsa ve öğrenilleriniz F#varsa, bu türlerin her biri için konuları Okumalısınız. Bu türler hakkında daha fazla bilgi için bağlantılar, bu konunun [Ilgili konular](https://msdn.microsoft.com/library/#rel) bölümüne eklenmiştir. Bu F#özel türler, fonksiyonel programlama dilleri için ortak olan programlama stillerini destekler. Bu türlerin çoğunda kitaplıkta ilişkili modüller vardır ve F# bu türler üzerinde yaygın işlemleri destekler.
 
-Bir işlev türü parametre türleri hakkında bilgi içerir ve dönüş türü.
+İşlevin türü, parametre türleri ve dönüş türü hakkında bilgi içerir.
 
-.NET Framework nesne türlerini, arabirim türlerinde, temsilci türleri ve diğer kaynağıdır. Diğer bir .NET dilinde gibi kendi nesne türlerini tanımlayabilirsiniz.
+.NET Framework, nesne türlerinin, arabirim türlerinin, temsilci türlerinin ve diğer kullanıcıların kaynağıdır. Kendi nesne türlerinizi, diğer herhangi bir .NET dilinde olduğu gibi tanımlayabilirsiniz.
 
-Ayrıca, F# kod adlandırıldığı gibi diğer ad tanımlayabilirsiniz *tür kısaltmaları*, diğer adlar türleri için olan. Tür kısaltmaları türü gelecekte değişebilir ve türüne bağlıdır kodu değiştirmekten kaçının istediğinizde kullanabilirsiniz. Veya, bir türü kısaltması kod okumanız ve anlamanız daha kolay hale getirmek bir tür için bir kolay ad olarak kullanabilirsiniz.
+Ayrıca, F# kod, türler için alternatif adlar olan *tür kısaltmaları*olarak adlandırılan diğer adları tanımlayabilir. Tür kısaltmalarının, gelecekte değişiklik olabileceği ve türe bağlı olan kodun değiştirilmesini önlemek istediğiniz durumlarda kullanabilirsiniz. Ya da bir tür kısaltmayı, kodun daha kolay okunmasını ve anlaşılmasını sağlayan bir tür için kolay bir ad olarak kullanabilirsiniz.
 
-F#işlevsel programlama aklınızda tasarlanmış yararlı koleksiyon türleri sağlar. Bu koleksiyon türleri kullanarak stilinde daha işlevsel kod yazmanıza yardımcı olur. Daha fazla bilgi için [ F# koleksiyon türleri](fsharp-collection-types.md).
+F#fonksiyonel programlama ile tasarlanan yararlı koleksiyon türlerini göz önünde bulundurun. Bu koleksiyon türlerini kullanmak, stilde daha işlevsel olan kodu yazmanıza yardımcı olur. Daha fazla bilgi için bkz [ F# . koleksiyon türleri](fsharp-collection-types.md).
 
-## <a name="syntax-for-types"></a>Türleri için söz dizimi
-İçinde F# kod, genellikle zorunda türlerinin adlarını yazın. Formu sözdizimsel her türünde ve bu tür ek açıklamaları, soyut yöntem bildirimleri, temsilci bildirimleri, imzalar ve diğer yapıları söz dizimsel formlarında kullanın. Yorumlayıcısı içinde yeni bir program yapısı bildirmek her yorumlayıcı türü için yapısı ve söz dizimi adı yazdırır. Bu sözdizimi yalnızca kullanıcı tanımlı bir tür için bir tanımlayıcı ya da bir yerleşik tanımlayıcı olarak böyle olabilir `int` veya `string`, ancak daha karmaşık türler için söz dizimi daha karmaşıktır.
+## <a name="syntax-for-types"></a>Türler için sözdizimi
+F# Kodda, genellikle türlerin adlarını yazmanız gerekir. Her tür bir sözdizimsel biçimine sahiptir ve bu sözdizimsel formları tür ek açıklamalarında, Soyut yöntem bildirimlerinde, temsilci bildirimlerinde, imzalarda ve diğer yapılara kullanırsınız. Yorumlayıcıda yeni bir program yapısı bildirdiğinizde, yorumlayıcı yapının adını ve türünün sözdizimini yazar. Bu söz dizimi yalnızca Kullanıcı tanımlı bir tür için tanımlayıcı veya `int` ya `string`da gibi bir yerleşik tanımlayıcı olabilir, ancak daha karmaşık türler için sözdizimi daha karmaşıktır.
 
-Aşağıdaki tablo türü sözdizimi yönlerini gösterir F# türleri.
+Aşağıdaki tabloda türler için F# tür sözdiziminin yönleri gösterilmektedir.
 
-|Tür|Tür söz dizimi|Örnekler|
+|Tür|Tür sözdizimi|Örnekler|
 |----|-----------|--------|
-|temel tür|*tür adı*|`int`<br /><br />`float`<br /><br />`string`|
-|toplama türünü (sınıf, yapı, birleşim, kayıt, sabit listesi ve benzeri)|*tür adı*|`System.DateTime`<br /><br />`Color`|
-|türü kısaltması|*tür kısaltması adı*|`bigint`|
-|tam olarak nitelenmiş tür|*namespaces.Type adı*<br /><br />veya<br /><br />*Modules.Type adı*<br /><br />veya<br /><br />*namespaces.Modules.Type adı*|`System.IO.StreamWriter`|
-|dizi|*tür adı*[] veya<br /><br />*tür adı* dizi|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
-|iki boyutlu dizi|*tür adı*[,]|`int[,]`<br /><br />`float[,]`|
-|üç boyutlu dizi|*tür adı*[,]|`float[,,]`|
-|tuple|*tür name1* &#42; *türü name2* ...|Örneğin, `(1,'b',3)` türüne sahip `int * char * int`|
-|genel tür|*tür-parametresi* *genel tür adı*<br /><br />veya<br /><br />*genel tür adı*&lt;*tür parametresi listesi*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
-|oluşturulan türü (sağlanan belirli tür bağımsız değişkeni olan genel bir tür)|*tür bağımsız değişkeni* *genel tür adı*<br /><br />veya<br /><br />*genel tür adı*&lt;*türü bağımsız değişken listesi*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|tek bir parametre içeren işlev türü|*parametre type1*  - &gt; *dönüş türü*|Alan bir işlev bir `int` ve döndüren bir `string` türüne sahip `int -> string`|
-|birden çok parametre içeren işlev türü|*parameter-type1* -&gt; *parameter-type2* -&gt; ... -&gt; *return-type*|Alan bir işlev bir `int` ve `float` ve döndüren bir `string` türüne sahip `int -> float -> string`|
-|daha yüksek sıralı işlev bir parametre olarak|(*işlev türü*)|`List.map` türüne sahip `('a -> 'b) -> 'a list -> 'b list`|
-|temsilci|Temsilci *işlev türü*|`delegate of unit -> int`|
-|Esnek türü|#*tür adı*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
+|ilkel tür|*tür adı*|`int`<br /><br />`float`<br /><br />`string`|
+|Toplam türü (sınıf, yapı, birleşim, kayıt, Enum, vb.)|*tür adı*|`System.DateTime`<br /><br />`Color`|
+|tür kısaltması|*tür kısaltması-adı*|`bigint`|
+|tam nitelikli tür|*ad alanları. tür-adı*<br /><br />veya<br /><br />*modüller. tür-adı*<br /><br />veya<br /><br />*Namespaces. modüller. Type-Name*|`System.IO.StreamWriter`|
+|dizi|*tür adı* [] veya<br /><br />*tür adı* dizisi|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
+|iki boyutlu dizi|*tür adı* [,]|`int[,]`<br /><br />`float[,]`|
+|üç boyutlu dizi|*tür adı* [,,]|`float[,,]`|
+|tuple|*tür-name1* &#42; *tür-AD2* ...|Örneğin, `(1,'b',3)` türü`int * char * int`|
+|Genel tür|*tür parametresi* *genel tür-adı*<br /><br />veya<br /><br />*Genel tür adı*&lt;*türü-parametre-listesi*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
+|oluşturulmuş tür (belirli bir tür bağımsız değişkenine sahip olan genel bir tür)|*tür bağımsız değişkeni* *genel tür-adı*<br /><br />veya<br /><br />*Genel tür-adı*&lt;-*bağımsız değişken-listesi*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
+|tek parametreye sahip işlev türü|*Parameter-Type1*  - &gt; *Return-Type*|`int` ' A sahip olan ve bir `string` türü döndüren bir işlev`int -> string`|
+|birden çok parametreye sahip işlev türü|*Parameter-Type1*  - parametresi- - type2&gt; ...-Return-Type&gt; &gt;|Ve ' a `string` alan vebirtürüdöndürenbirişlev`float` `int``int -> float -> string`|
+|bir parametre olarak daha yüksek sıralı işlev|(*işlev türü*)|`List.map`türü vardır`('a -> 'b) -> 'a list -> 'b list`|
+|temsilci|*işlev türü* temsilcisi|`delegate of unit -> int`|
+|esnek tür|#*tür adı*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>İlgili Konular
 
 |Konu|Açıklama|
 |-----|-----------|
-|[İlkel Türler](primitive-types.md)|Tam sayı türleri, Boole türü ve karakter türleri gibi yerleşik basit türler açıklanmaktadır.|
-|[Birim Türü](unit-type.md)|Açıklar `unit` türü, bir değer olan ve () tarafından belirtilen bir tür; eşdeğer `void` içinde C# ve `Nothing` Visual Basic'te.|
-|[Demetler](tuples.md)|Demet türü, çiftleri, Üçlü, quadruples ve benzeri gruplandırılmış herhangi bir türde ilişkili değerleri içeren bir türü açıklar.|
-|[Seçenekler](options.md)|Seçenek türü bir değere sahip veya boş bir türü açıklar.|
-|[Listeler](lists.md)|Öğeleri dizi sıralı, sabit listelerini açıklar tümü aynı türde.|
-|[Diziler](arrays.md)|Bitişik bir bellek bloğunu kaplar ve sabit boyutludur değişebilir öğeleri aynı türde kümesi sıralı diziler açıklar.|
-|[Diziler](sequences.md)|Mantıksal bir değerler dizisini temsil eden dizisi türü açıklar; tek tek değerler yalnızca gerektiğinde hesaplanır.|
-|[Kayıtlar](records.md)|Adlandırılmış değerler küçük bir toplu kayıt türünü tanımlar.|
-|[Ayrılmış Birleşimler](discriminated-unions.md)|Ayrılmış birleşim türü değerleri olası türleri kümesi herhangi biri olabilir bir tür tanımlar.|
-|[İşlevler](functions/index.md)|İşlev değerleri açıklar.|
-|[Sınıflar](classes.md)|Sınıf türü, bir .NET başvurusu türüne karşılık gelen bir nesne türü açıklanır. Sınıf türleri, üyeler, özellikleri, uygulanan arabirimleri ve bir taban türü içerebilir.|
-|[Yapılar](structures.md)|Açıklar `struct` türü, bir .NET değer türüne karşılık gelen bir nesne türü. `struct` Türü genellikle veri küçük bir toplamasını temsil eder.|
-|[Arabirimler](interfaces.md)|Bazı işlevler sağlar, ancak hiçbir veri içeren üyelerin kümesini temsil eden türler arabirim türleri açıklanmaktadır. Bir arabirim türü kullanışlı olması için bir nesne türüne göre uygulanmalıdır.|
-|[Temsilciler](delegates.md)|Bir işlev nesnesi olarak temsil eden bir temsilci türü açıklar.|
-|[Sabit Listeleri](enumerations.md)|Numaralandırma türleri, değerleri bir adlandırılmış değerler kümesine ait açıklar.|
-|[Öznitelikler](attributes.md)|Başka bir türü için meta verilerini belirtmek için kullanılan öznitelikleri açıklanmaktadır.|
-|[Özel Durum Türleri](exception-handling/exception-types.md)|Hata bilgilerini belirten özel durumlar açıklanmaktadır.|
+|[İlkel Türler](primitive-types.md)|İntegral türleri, Boole türü ve karakter türleri gibi yerleşik basit türleri açıklar.|
+|[Birim Türü](unit-type.md)|Bir değere sahip olan ve () ile belirtilen bir tür olan C# `Nothing` `void` türüaçıklar,ve`unit` Visual Basic ile eşdeğerdir.|
+|[Demetler](tuples.md)|Çiftler, Üçlü ve çeyrek Rupisi gibi gruplanmış herhangi bir türdeki ilişkili değerlerden oluşan tür tanımlama grubu türünü açıklar.|
+|[Seçenekler](options.md)|Bir değeri olan veya boş olabilecek bir tür olan seçenek türünü açıklar.|
+|[Listeler](lists.md)|Aynı türden tümü sıralanmış, sabit öğe dizileri olan listeleri açıklar.|
+|[Diziler](arrays.md)|Ardışık bir bellek bloğunu kaplayan ve sabit boyutta olan aynı türde kesilebilir öğe kümesi olan dizileri açıklar.|
+|[Diziler](sequences.md)|Bir mantıksal değer serisini temsil eden dizi türünü açıklar; tek değerler yalnızca gerekli olduğu gibi hesaplanır.|
+|[Kayıtlar](records.md)|Adlandırılmış değerlerin küçük bir toplamı olan kayıt türünü açıklar.|
+|[Ayrılmış Birleşimler](discriminated-unions.md)|Değerleri olası bir tür kümesinden herhangi biri olabilecek bir tür olan ayırt edici birleşim türünü açıklar.|
+|[İşlevler](./functions/index.md)|İşlev değerlerini açıklar.|
+|[Sınıflar](classes.md)|.NET başvuru türüne karşılık gelen bir nesne türü olan sınıf türünü açıklar. Sınıf türleri Üyeler, özellikler, uygulanan arabirimler ve temel bir tür içerebilir.|
+|[Yapılar](structures.md)|.Net değer türüne karşılık gelen bir nesne türü olan türüaçıklar.`struct` `struct` Tür genellikle küçük bir veri toplamasını temsil eder.|
+|[Arabirimler](interfaces.md)|Belirli işlevselliği sağlayan, ancak hiçbir veri içermeyen bir üye kümesini temsil eden türler olan arabirim türlerini açıklar. Bir arabirim türünün yararlı olması için bir nesne türü tarafından uygulanması gerekir.|
+|[Temsilciler](delegates.md)|Bir işlevi bir nesne olarak temsil eden temsilci türünü açıklar.|
+|[Sabit Listeleri](enumerations.md)|Değerleri bir adlandırılmış değerler kümesine ait olan numaralandırma türlerini açıklar.|
+|[Öznitelikler](attributes.md)|Diğer bir tür için meta verileri belirtmek için kullanılan öznitelikleri açıklar.|
+|[Özel Durum Türleri](/.exception-handling/exception-types.md)|Hata bilgilerini belirten özel durumları açıklar.|

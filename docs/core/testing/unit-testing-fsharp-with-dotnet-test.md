@@ -1,28 +1,26 @@
 ---
-title: Birim testi F# .NET core'da dotnet testi ve xUnit ile
-description: Birim test kavramlarını öğrenin F# dotnet testi ve xUnit, adım adım örnek çözüm oluşturma etkileşimli deneyim aracılığıyla .NET Core kullanarak.
+title: DotNet test F# ve xUnit Ile .NET Core 'da birim testi
+description: .NET Core F# 'da, DotNet test ve xUnit kullanarak bir örnek çözüm oluşturma adlı etkileşimli bir deneyim aracılığıyla birim testi kavramlarını öğrenin.
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-dev_langs:
-- fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 9765c463bb427f79dcd0308e7e4fc643fdc06968
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a9744bfebd93c5004011819b8c6e739e84b97d0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665916"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626497"
 ---
-# <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Birim testi F# kitaplıkları .NET core'da dotnet testi ve xUnit kullanma
+# <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>DotNet test F# ve xUnit kullanarak .NET Core 'da birim testi kitaplıkları
 
-Bu öğretici örnek bir çözüm birim testi kavramlarını öğrenmek için adım adım oluşturmaya etkileşimli deneyim gösterir. Önceden oluşturulmuş bir çözümü kullanarak öğreticiyi uygulamak isterseniz [görüntülemek veya örnek kodu indirdikten](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/) başlamadan önce. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu öğreticide, birim testi kavramlarını öğrenmek için bir örnek çözüm oluşturma adım adım yönergeler sunarak etkileşimli bir deneyim sağlanır. Önceden oluşturulmuş bir çözüm kullanarak öğreticiyi izlemeyi tercih ediyorsanız, başlamadan önce [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/) . İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="creating-the-source-project"></a>Kaynak proje oluşturma
 
-Shell penceresini açın. Adlı bir dizin oluşturun *birim-test-ile-fsharp* çözüm tutacak.
-Bu yeni dizin içinde çalıştırma [ `dotnet new sln` ](../tools/dotnet-new.md) yeni bir çözüm oluşturmak için. Bu, hem sınıf kitaplığı ve birim testi projesi yönetmenizi kolaylaştırır.
-Çözüm dizini içinde bir *MathService* dizin. Dizin ve dosya yapısı, şimdiye kadarki aşağıda gösterilmiştir:
+Bir kabuk penceresi açın. Çözümü tutmak için- *FSharp ile birim-test* adlı bir dizin oluşturun.
+Yeni bir çözüm oluşturmak için bu [`dotnet new sln`](../tools/dotnet-new.md) yeni dizinin içinde öğesini çalıştırın. Bu, hem sınıf kitaplığını hem de birim testi projesini yönetmeyi kolaylaştırır.
+Çözüm dizini içinde bir *MathService* dizini oluşturun. Bu nedenle şu ana kadar dizin ve dosya yapısı aşağıda gösterilmiştir:
 
 ```
 /unit-testing-with-fsharp
@@ -30,18 +28,18 @@ Bu yeni dizin içinde çalıştırma [ `dotnet new sln` ](../tools/dotnet-new.md
     /MathService
 ```
 
-Olun *MathService* geçerli dizin ve çalışma [ `dotnet new classlib -lang F#` ](../tools/dotnet-new.md) kaynak proje oluşturmak için.  Matematik hizmet başarısız uyarlamasını oluşturacaksınız:
+*MathService* geçerli dizin yapın ve kaynak projeyi [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) oluşturmak için çalıştırın.  Matematik hizmeti için başarısız bir uygulama oluşturacaksınız:
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-Dizine dön değişiklik *birim-test-ile-fsharp* dizin. Çalıştırma [ `dotnet sln add .\MathService\MathService.fsproj` ](../tools/dotnet-sln.md) sınıf kitaplığı projesi çözüme eklemek için.
+Dizini- *FSharp dizinine sahip birim-test ile* yeniden değiştirin. Çözüme [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) Sınıf Kitaplığı projesini eklemek için ' i çalıştırın.
 
 ## <a name="creating-the-test-project"></a>Test projesi oluşturma
 
-Ardından, oluşturma *MathService.Tests* dizin. Ana hat aşağıdaki dizin yapısını gösterir:
+Sonra, *MathService. Tests* dizinini oluşturun. Aşağıdaki ana hat dizin yapısını gösterir:
 
 ```
 /unit-testing-with-fsharp
@@ -52,7 +50,7 @@ Ardından, oluşturma *MathService.Tests* dizin. Ana hat aşağıdaki dizin yap�
     /MathService.Tests
 ```
 
-Olun *MathService.Tests* dizini geçerli dizin ve kullanarak yeni bir proje oluşturma [ `dotnet new xunit -lang F#` ](../tools/dotnet-new.md). Bu, xUnit test kitaplık olarak kullanan bir test projesi oluşturur. Test Çalıştırıcısı'nda oluşturulan şablon yapılandırır *MathServiceTests.fsproj*:
+*MathService. Tests* dizinini geçerli dizin yapın ve kullanarak [`dotnet new xunit -lang F#`](../tools/dotnet-new.md)yeni bir proje oluşturun. Bu, test kitaplığı olarak xUnit kullanan bir test projesi oluşturur. Oluşturulan şablon, *MathServiceTests. fsproj*içindeki Test Çalıştırıcısı 'nı yapılandırır:
 
 ```xml
 <ItemGroup>
@@ -62,15 +60,15 @@ Olun *MathService.Tests* dizini geçerli dizin ve kullanarak yeni bir proje olu�
 </ItemGroup>
 ```
 
-Test projesi oluşturma ve birim testlerini çalıştırmak için diğer paketleri gerektirir. `dotnet new` Önceki adımda, xUnit ve xUnit Çalıştırıcısı eklendi. Şimdi ekleyin `MathService` sınıf kitaplığı projesine başka bir bağımlılık olarak. Kullanım [ `dotnet add reference` ](../tools/dotnet-add-reference.md) komutu:
+Test projesi, birim testlerini oluşturmak ve çalıştırmak için diğer paketlerin kullanılmasını gerektirir. `dotnet new`önceki adımda xUnit ve xUnit Çalıştırıcısı eklenmiştir. Şimdi, `MathService` sınıf kitaplığını projeye başka bir bağımlılık olarak ekleyin. [`dotnet add reference`](../tools/dotnet-add-reference.md) Şu komutu kullanın:
 
 ```
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
-Dosyanın tamamını görebilirsiniz [örnekleri depomuzdan](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) GitHub üzerinde.
+GitHub 'daki [örnekler deposunda](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) dosyanın tamamını görebilirsiniz.
 
-Aşağıdaki nihai çözüm Düzen vardır:
+Aşağıdaki son çözüm düzenine sahipsiniz:
 
 ```
 /unit-testing-with-fsharp
@@ -83,11 +81,11 @@ Aşağıdaki nihai çözüm Düzen vardır:
         MathServiceTests.fsproj
 ```
 
-Yürütme [ `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` ](../tools/dotnet-sln.md) içinde *birim-test-ile-fsharp* dizin. 
+\- [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md) FSharp diziniyle *birlikte birim-test* ' i çalıştırın. 
 
-## <a name="creating-the-first-test"></a>İlk testi oluşturma
+## <a name="creating-the-first-test"></a>İlk test oluşturma
 
-Bir yazma, test başarısız kolaylaştırır geçişi, sonra işlemi yineleyin. Açık *Tests.fs* ve aşağıdaki kodu ekleyin:
+Başarısız bir test yazdığınızda, geçişi yapıp işlemi tekrarlayabilirsiniz. *Tests. FS* ' i açın ve aşağıdaki kodu ekleyin:
 
 ```fsharp
 [<Fact>]
@@ -98,11 +96,11 @@ let ``My test`` () =
 let ``Fail every time`` () = Assert.True(false)
 ```
 
-`[<Fact>]` Test Çalıştırıcısı tarafından yürütülen bir test metodu özniteliği gösterir. Gelen *birim-test-ile-fsharp*, yürütme [ `dotnet test` ](../tools/dotnet-test.md) testler ve sınıf kitaplığı oluşturun ve ardından testleri çalıştırın. XUnit test Çalıştırıcısı, testlerinizi çalıştırmak için programın giriş noktası içerir. `dotnet test` oluşturduğunuz birim test projesi kullanarak test Çalıştırıcısı'nı başlatır.
+`[<Fact>]` Öznitelik, Test Çalıştırıcısı tarafından çalıştırılan bir test yöntemini gösterir. \- *FSharp olan birim-test*' den, testleri ve [`dotnet test`](../tools/dotnet-test.md) sınıf kitaplığını oluşturmak için yürütün ve ardından testleri çalıştırın. XUnit Test Çalıştırıcısı, testlerinizi çalıştırmak için program giriş noktasını içerir. `dotnet test`oluşturduğunuz birim test projesini kullanarak Test Çalıştırıcısı başlatır.
 
-Bu iki testleri en temel geçirme ve testleri başarısız gösterir. `My test` geçer, ve `Fail every time` başarısız olur. Şimdi, test için oluşturma `squaresOfOdds` yöntemi. `squaresOfOdds` Yöntemi Giriş dizisinin bir parçası olan tüm tek tamsayı değerleri kareleri bir dizisi döndürür. Bu işlevlerin tümü aynı anda yazma çalışmak yerine, tekrarlayarak işlevselliğini doğrulama testleri oluşturabilirsiniz. Her test yöntemi için gereken işlevselliği oluşturma anlamına gelir geçirmek yapılıyor.
+Bu iki test, en temel geçirme ve başarısız testleri gösterir. `My test`geçirilir ve `Fail every time` başarısız olur. Şimdi, `squaresOfOdds` yöntemi için bir test oluşturun. `squaresOfOdds` Yöntemi, giriş dizisinin parçası olan tüm tek tamsayı değerlerinin karelerinin dizisini döndürür. Bu işlevlerin tümünü aynı anda yazmaya çalışmak yerine, işlevi doğrulayan testleri tekrarlayarak oluşturabilirsiniz. Her test geçişinin yapılması, yöntemi için gerekli işlevselliğin oluşturulması anlamına gelir.
 
-Biz yazabilirsiniz basit test çağırmaktır `squaresOfOdds` ile sonucu boş bir tam sayı dizisidir olması burada tüm çift sayılarla.  Test şu şekildedir:
+Yazdığımız en basit test, sonucun boş bir `squaresOfOdds` tamsayılar dizisi olması gereken tüm çift sayılarla çağrıdır.  Bu test şu şekildedir:
 
 ```fsharp
 [<Fact>]
@@ -112,18 +110,18 @@ let ``Sequence of Evens returns empty collection`` () =
     Assert.Equal<Collections.Generic.IEnumerable<int>>(expected, actual)
 ```
 
-Test başarısız olur. Uygulama henüz oluşturmadınız. En basit kod yazarak bu testin geçmesini `MathService` çalışır sınıfı:
+Testiniz başarısız oluyor. Uygulamayı henüz oluşturmadınız. Bu test geçişini, çalıştıran `MathService` sınıfa en basit kodu yazarak yapın:
 
-```csharp
+```fsharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-İçinde *birim-test-ile-fsharp* çalışması dizini `dotnet test` yeniden. `dotnet test` Komut çalıştıran bir derleme için `MathService` proje ve ardından `MathService.Tests` proje. Her iki proje oluşturduktan sonra bu tek bir test çalıştırır. Bu geçirir.
+*Birim-test--FSharp diziniyle birlikte* yeniden çalıştırın `dotnet test` . Komutu, `MathService` proje için bir yapı ve ardından projeiçinçalışır.`MathService.Tests` `dotnet test` Her iki proje de oluşturulduktan sonra bu tek testi çalıştırır. Geçirir.
 
-## <a name="completing-the-requirements"></a>Gereksinimleri Tamamlanıyor
+## <a name="completing-the-requirements"></a>Gereksinimleri tamamlama
 
-Bir test geçirmek yaptığınız, daha fazla yazmak için zaman var. Basit bir sonraki durumda, yalnızca tek sayı içeren bir dizisini çalışır `1`. Sayı 1, 1 karesini 1 olduğundan daha kolay olur. Sonraki test şu şekildedir:
+Artık bir test geçişi yapmış olduğunuza göre daha fazla yazma zamanı vardır. Bir sonraki basit durum yalnızca tek sayı olan bir sıra ile birlikte kullanılır `1`. 1 numaralı kare 1 olduğundan, 1 sayısı daha kolay. İşte bu sonraki test:
 
 ```fsharp
 [<Fact>]
@@ -133,7 +131,7 @@ let ``Sequences of Ones and Evens returns Ones`` () =
     Assert.Equal<Collections.Generic.IEnumerable<int>>(expected, actual)
 ```
 
-Yürütme `dotnet test` Testlerinizi çalıştırma ve yeni test başarısız olduğunu gösterir. Şimdi, güncelleştirme `squaresOfOdds` bu yeni test işlemek için yöntemi. Tüm çift sayıları geçirmek bu testi yapmak için sıra dışı filtre. Küçük bir filtre işlevi yazma ve kullanarak bunu yapabilirsiniz `Seq.filter`:
+Yürütme `dotnet test` , testlerinizi çalıştırır ve yeni testin başarısız olduğunu gösterir. Şimdi bu yeni testi `squaresOfOdds` işleyecek yöntemi güncelleştirin. Bu test geçişini yapmak için tüm çift sayıları sıranın dışına filtreleyin. Bunu, küçük bir filtre işlevi yazarak ve kullanarak `Seq.filter`yapabilirsiniz:
 
 ```fsharp
 let private isOdd x = x % 2 <> 0
@@ -143,7 +141,7 @@ let squaresOfOdds xs =
     |> Seq.filter isOdd
 ```
 
-Gitmek için bir adım daha vardır: her biri tek sayıları kare. Yeni bir test yazarak başlatın:
+Bir adım daha vardır: her bir tek sayının kare sayısı. Yeni bir test yazarak başlayın:
 
 ```fsharp
 [<Fact>]
@@ -153,7 +151,7 @@ let ``SquaresOfOdds works`` () =
     Assert.Equal(expected, actual)
 ```
 
-Filtrelenmiş sırası tek her bir sayının karesini işlem için bir harita işlemi boyunca yönelterek test düzeltebilirsiniz:
+Her bir tek sayının karesini hesaplamak için, filtre uygulanmış sırayı bir eşleme işlemi aracılığıyla ayırarak testi giderebilirsiniz:
 
 ```fsharp
 let private square x = x * x
@@ -165,4 +163,4 @@ let squaresOfOdds xs =
     |> Seq.map square
 ```
 
-Küçük bir kitaplık ve bu kitaplık için birim testleri bir dizi oluşturdunuz. Böylece yeni paketler ekleme çözüm yapılandırılmış ve testleri normal iş akışı bir parçasıdır. Zaman ve çaba çözme hedeflerinden biri, uygulama üzerinde en yoğun.
+Bu kitaplık için küçük bir kitaplık ve birim testleri kümesi oluşturdunuz. Çözümü, yeni paket ve test eklemek normal iş akışının bir parçası olacak şekilde öğrendiniz. Uygulamanın hedeflerini çözme konusunda zaman ve çaba harcamanızı en iyi şekilde gördünüz.

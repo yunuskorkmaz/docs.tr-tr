@@ -1,101 +1,101 @@
 ---
 title: Listeler
-description: Hakkında bilgi edinin F# listeler, öğeleri aynı türde sıralı, sabit bir dizi.
+description: Aynı türdeki F# sıralı, sabit bir öğe serisi olan listeler hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: cc4e292280cca0dca37f69cf5a46ec2822d08d5c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8c4a464306cfedfd36a4685507684d3a1a97a2e
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904130"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630736"
 ---
 # <a name="lists"></a>Listeler
 
 > [!NOTE]
-> Bu makaledeki API başvuru bağlantıları için MSDN sürer.  Docs.microsoft.com API başvuru tamamlanmadı.
+> Bu makaledeki API başvuru bağlantıları sizi MSDN 'ye götürür.  Docs.microsoft.com API başvurusu tamamlanmadı.
 
-Bir listede F# öğeleri aynı türde sıralı, sabit bir dizi. Listeler temel işlemleri gerçekleştirmek için işlevleri kullanmak [List Modülü](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
+İçindeki F# bir liste, aynı türden bir sıralı, sabit bir öğe serisidir. Listelerde temel işlemleri gerçekleştirmek için, [liste modülündeki](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)işlevleri kullanın.
 
-## <a name="creating-and-initializing-lists"></a>Oluşturma ve başlatma listeler
+## <a name="creating-and-initializing-lists"></a>Liste oluşturma ve başlatma
 
-Bir liste öğeleri noktalı virgülle ayrılmış ve kod aşağıdaki satırda gösterildiği gibi köşeli parantezler içinde out açıkça listeleyerek tanımlayabilirsiniz.
+Aşağıdaki kod satırında gösterildiği gibi, noktalı virgülle ayırarak ve köşeli parantez içine alınmış öğeleri açıkça listeleyerek bir liste tanımlayabilirsiniz.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1301.fs)]
 
-Satır sonları öğeler arasındaki de koyabilirsiniz, bu durumda noktalı virgül isteğe bağlıdır. İkinci sözdizimi daha okunabilir bir kod öğesi başlatma ifadeleri uzun olduğunda ya da her öğe için bir açıklama eklemek istediğiniz neden olabilir.
+Ayrıca, öğelerin arasına satır sonları koyabilirsiniz, bu durumda noktalı virgül isteğe bağlıdır. İkinci sözdizimi, öğe başlatma ifadeleri daha uzun olduğunda veya her öğe için bir açıklama eklemek istediğinizde daha okunabilir kod oluşmasına neden olabilir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet13011.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet13011.fs)]
 
-Normalde, tüm liste öğeleri aynı türde olmalıdır. Öğeleri olan öğeler bir taban türü olmasını sağlayabilirsiniz belirtilir listesini türetilmiş bir özel durumdur. Aşağıdaki kabul edilebilir, bu nedenle çünkü her ikisi de `Button` ve `CheckBox` öğesinden türetilen `Control`.
+Normalde, tüm liste öğeleri aynı türde olmalıdır. Bir özel durum, öğelerin temel tür olarak belirtildiği bir listenin türetilmiş tür öğelerine sahip olması olabilir. Bu nedenle, her ikisi `Button` ve `CheckBox` öğesinden `Control`türetiğinden aşağıdakiler kabul edilebilir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet13012.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet13012.fs)]
 
-Aralık işleci tarafından ayrılmış tamsayı tarafından gösterilen bir aralık kullanarak liste öğelerini de tanımlayabilirsiniz (`..`), aşağıdaki kodda gösterildiği gibi.
+Ayrıca, aşağıdaki kodda gösterildiği gibi, Aralık işleci (`..`) ile ayrılmış tamsayılar tarafından belirtilen bir aralığı kullanarak liste öğelerini tanımlayabilirsiniz.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1302.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1302.fs)]
 
-Boş bir liste, bir çift köşeli ayraç ile bunların arasında bir şey tarafından belirtilir.
+Boş bir liste, aralarında hiçbir şey olmadan köşeli ayraç çifti ile belirtilir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1304.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1304.fs)]
 
-Bir sıralama ifadesi, bir liste oluşturmak için de kullanabilirsiniz. Bkz: [Sequence ifadeleri](sequences.md#sequence-expressions) daha fazla bilgi için. Örneğin, aşağıdaki kod, tamsayılar kareler listesini 1'den 10'a oluşturur.
+Bir liste oluşturmak için bir dizi ifadesi de kullanabilirsiniz. Daha fazla bilgi için bkz. [dizi ifadeleri](sequences.md#sequence-expressions) . Örneğin, aşağıdaki kod, 1 ile 10 arasındaki sayıların karelerinin bir listesini oluşturur.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1303.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1303.fs)]
 
-## <a name="operators-for-working-with-lists"></a>Listelerle çalışmak için işleçleri
+## <a name="operators-for-working-with-lists"></a>Listelerle çalışma için işleçler
 
-Kullanarak liste öğelerini ekleyebilirsiniz `::` (olumsuz) işleci. Varsa `list1` olduğu `[2; 3; 4]`, aşağıdaki kod oluşturur `list2` olarak `[100; 2; 3; 4]`.
+`::` (Cons) işlecini kullanarak bir listeye öğe ekleyebilirsiniz. İse, aşağıdaki `list2` kod olarak oluşturulur.`[100; 2; 3; 4]` `[2; 3; 4]` `list1`
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1305.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1305.fs)]
 
-Kullanarak uyumlu türleri olan listeleri bitiştirebilirsiniz `@` işleci, aşağıdaki kodda gösterildiği gibi. Varsa `list1` olduğu `[2; 3; 4]` ve `list2` olduğu `[100; 2; 3; 4]`, bu kod oluşturur `list3` olarak `[2; 3; 4; 100; 2; 3; 4]`.
+Aşağıdaki kodda olduğu gibi `@` işlecini kullanarak uyumlu türleri olan listeleri birleştirebilirsiniz. `list1` ,`list2` Ve ise,`list3` Bu kod olarak`[2; 3; 4; 100; 2; 3; 4]`oluşturulur. `[2; 3; 4]` `[100; 2; 3; 4]`
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1306.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1306.fs)]
 
-Liste işlemleri gerçekleştirmek için işlevleri kullanılabilir [List Modülü](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
+Listelerde işlem gerçekleştirmeye yönelik işlevler, [liste modülünde](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)mevcuttur.
 
-Çünkü listeler F# olan herhangi bir değiştirme işlemi varolan listelerini değiştirmek yerine yeni listeleri oluşturmak, değişmez.
+İçindeki F# listeler sabit olduğundan, tüm değiştirme işlemleri varolan listeleri değiştirmek yerine yeni listeler oluşturur.
 
-Listeler F# yalnızca listenin başındaki erişen işlemler: O(1) ve O öğe erişimi olan tek bağlantılı liste olarak uygulanır (*n*).
+İçindeki F# listeler, listedir bağlantılı listeler olarak uygulanır. Bu, yalnızca listenin baş başlarına erişen işlemlerin o (1) ve öğe erişiminin ise o (*n*) olduğu anlamına gelir.
 
 ## <a name="properties"></a>Özellikler
 
-Liste türü, aşağıdaki özellikleri destekler:
+Liste türü aşağıdaki özellikleri destekler:
 
 |Özellik|Tür|Açıklama|
 |--------|----|-----------|
-|[HEAD](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|İlk öğe.|
-|[boş](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Bir statik özellik uygun türde boş bir liste döndürür.|
-|[IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|`true` listeye öğe varsa.|
-|[Öğesi](https://msdn.microsoft.com/library/bdb2553a-0e54-4ff8-baed-ab1aac8f5dae)|`'T`|(Sıfır tabanlı) belirtilen dizindeki öğe.|
-|[Uzunluğu](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|Öğe sayısı.|
-|[Tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|İlk öğe olmadan listesi.|
+|[Başlı](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|İlk öğesi.|
+|[boş](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Uygun türdeki boş bir liste döndüren statik özellik.|
+|[IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|`true`listede öğe yoksa.|
+|[Öğesi](https://msdn.microsoft.com/library/bdb2553a-0e54-4ff8-baed-ab1aac8f5dae)|`'T`|Belirtilen dizindeki öğe (sıfır tabanlı).|
+|[Uzunluklu](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|Öğe sayısı.|
+|[Connect](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|İlk öğesi olmayan liste.|
 
-Bu özellikler kullanmanın bazı örnekler aşağıda verilmiştir.
+Aşağıda bu özellikleri kullanmaya ilişkin bazı örnekler verilmiştir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1307.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1307.fs)]
 
 ## <a name="using-lists"></a>Listeleri kullanma
 
-Programlama listeleriyle karmaşık işlemleri az miktarda kod ile sağlar. Bu bölümde, işlevsel programlama için önemli olan listelerde yaygın işlemleri açıklanmaktadır.
+Listelerle programlama, az miktarda kodla karmaşık işlemler gerçekleştirmenize olanak sağlar. Bu bölümde, işlevsel programlama için önemli olan listelerle ilgili genel işlemler açıklanmaktadır.
 
-### <a name="recursion-with-lists"></a>Özyineleme listeleri
+### <a name="recursion-with-lists"></a>Listelerle özyineleme
 
-Listeleri için yinelemeli teknikler programlama benzersiz olarak uygundur. Her bir liste öğesi üzerinde gerçekleştirilen bir işlem göz önünde bulundurun. Listenin başındaki üzerinde çalışan ve ardından özgün listedeki ilk öğe olmadan oluşan küçük bir listedir listenin sonu geçirerek bu yinelemeli olarak yapın, özyineleme sonraki düzeye yeniden.
+Listeler özyinelemeli programlama tekniklerine benzersiz bir şekilde uygundur. Listenin her öğesinde gerçekleştirilmesi gereken bir işlem düşünün. Bu işlemi, listenin başından yararlanarak ve sonra listenin kuyruğunu geçirerek, ilk öğe olmayan orijinal listeden oluşan daha küçük bir liste olan bir sonraki özyineleme düzeyine geri dönerek yapabilirsiniz.
 
-Böyle bir özyinelemeli işlevi yazmak için simgeler işlecini kullanın (`::`) desen eşleştirme içinde sağlayan tail listesini baş ayırmak.
+Bu tür bir özyinelemeli işlevi yazmak için, bir listenin başını bir kuyruklu`::`ayırmanızı sağlayan, model eşleme içinde Cons işlecini () kullanın.
 
-Aşağıdaki kod örneği, bir liste işlemleri gerçekleştiren bir özyinelemeli işlev uygulamak için desen eşleştirme kullan gösterilmektedir.
+Aşağıdaki kod örneği, bir liste üzerinde işlemler gerçekleştiren özyinelemeli bir işlevi uygulamak için nasıl model eşleştirmesinin kullanılacağını göstermektedir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet13071.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet13071.fs)]
 
-Önceki kodun küçük listeler için iyi çalışır, ancak daha büyük listeler için yığın taşması. Aşağıdaki kod, accumulator bağımsız değişken, özyinelemeli işlevler ile çalışmak için standart bir yöntemi kullanarak bu kodu geliştirir. Yığın alanı kaydeder işlevi tail özyinelemeli accumulator bağımsız değişken kullanımı sağlar.
+Önceki kod küçük listeler için iyi sonuç verir, ancak daha büyük listeler için yığın taşar. Aşağıdaki kod, özyinelemeli işlevlerle çalışmaya yönelik standart bir yöntem olan bir biriktirici bağımsız değişkeni kullanarak bu kodda gelişir. Biriktiricidir bağımsız değişkeninin kullanılması, yığın alanı kaydeden işlev kuyruklu özyinelemeli olur.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet13072.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet13072.fs)]
 
-İşlev `RemoveAllMultiples` iki liste götüren bir özyinelemeli işlevdir. İlk liste, katları kaldırılacak sayıları içeren ve ikinci listesi sayıları kaldırılacağı listesidir. Aşağıdaki örnek kodda, tüm olmayan-asal sayıları asal sayıları listesini sonucu olarak bırakarak listeden ortadan kaldırmak için bu özyinelemeli işlev kullanır.
+İşlevi `RemoveAllMultiples` , iki liste alan özyinelemeli bir işlevdir. İlk liste, katları kaldırılacak olan sayıları ve ikinci liste ise sayıların kaldırılacağı liste olduğunu içerir. Aşağıdaki örnekteki kod, bu özyinelemeli işlevi bir listeden tüm asal olmayan sayıları ortadan kaldırmak için kullanır ve sonuç olarak asal sayıların bir listesini bırakır.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1308.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1308.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -104,19 +104,19 @@ Primes Up To 100:
 [2; 3; 5; 7; 11; 13; 17; 19; 23; 29; 31; 37; 41; 43; 47; 53; 59; 61; 67; 71; 73; 79; 83; 89; 97]
 ```
 
-## <a name="module-functions"></a>Modül işlevleri
+## <a name="module-functions"></a>Modül Işlevleri
 
-[List Modülü](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788) liste öğelerini erişim işlevleri sunar. Head öğesi, en hızlı ve kolay erişim ' dir. Özelliğini kullanın [baş](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740) veya modül işlevi [List.head](https://msdn.microsoft.com/library/22514cc5-0511-498b-a2cc-837b688a6da2). Kuyruk listesini kullanarak erişebileceğiniz [Tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91) özelliği veya [List.tail](https://msdn.microsoft.com/library/da0a0638-4420-4571-84b6-d09ae601f601) işlevi. Dizine göre bir öğeyi bulmak için kullanın [List.nth](https://msdn.microsoft.com/library/1f717d57-89be-4007-a971-9cf5a28d83b1) işlevi. `List.nth` Listeyi dikkatle inceler. Bu nedenle, O olduğu (*n*). Kodunuzu kullanıyorsa `List.nth` sıklıkla bir dizi yerine bir liste kullanarak düşünmek isteyebilirsiniz. Öğe erişimi, diziler O(1) ' dir.
+[Liste modülü](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788) , bir listenin öğelerine erişen işlevler sağlar. Baş öğe, erişimin en hızlı ve en kolay yoludur. Özellik [kafasını](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740) veya [List. Head](https://msdn.microsoft.com/library/22514cc5-0511-498b-a2cc-837b688a6da2)modül işlevini kullanın. [Tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91) özelliğini veya [List. tail](https://msdn.microsoft.com/library/da0a0638-4420-4571-84b6-d09ae601f601) işlevini kullanarak bir listenin kuyruğunu erişebilirsiniz. Dizine göre bir öğe bulmak için [List. nth](https://msdn.microsoft.com/library/1f717d57-89be-4007-a971-9cf5a28d83b1) işlevini kullanın. `List.nth`listede yer geçer. Bu nedenle, O (*n*). Kodunuz sıklıkla kullanılıyorsa `List.nth` , bir liste yerine bir dizi kullanmayı düşünmek isteyebilirsiniz. Dizilerde öğe erişimi O (1).
 
-### <a name="boolean-operations-on-lists"></a>Boole işlemlerini listeler
+### <a name="boolean-operations-on-lists"></a>Listelerde Boole Işlemleri
 
-[List.isEmpty](https://msdn.microsoft.com/library/a7941d44-9e92-427c-b806-c378f4558107) işlevi, bir liste herhangi bir öğe olup olmadığını belirler.
+[List. IsEmpty](https://msdn.microsoft.com/library/a7941d44-9e92-427c-b806-c378f4558107) işlevi bir listenin herhangi bir öğeye sahip olup olmadığını belirler.
 
-[List.exists](https://msdn.microsoft.com/library/15a3ebd5-98f0-44c0-8220-7dedec3e68a8) işlevi geçerli bir Boolean test listesini döndürür ve öğelerine `true` herhangi bir öğeyi test karşılıyorsa. [List.exists2](https://msdn.microsoft.com/library/7532b39e-3f4f-4534-a60b-d7721dc6fa7e) benzer, ancak iki listelerindeki öğelerin art arda gelen çiftlerini çalışır.
+[List. Exists](https://msdn.microsoft.com/library/15a3ebd5-98f0-44c0-8220-7dedec3e68a8) işlevi bir listenin öğelerine Boole testi uygular ve herhangi bir öğe, testi `true` karşılıyorsa döndürür. [List. exists2](https://msdn.microsoft.com/library/7532b39e-3f4f-4534-a60b-d7721dc6fa7e) benzerdir ancak iki listede ardışık öğe çiftlerinde çalışır.
 
-Aşağıdaki kod kullanımını gösterir `List.exists`.
+Aşağıdaki kod öğesinin `List.exists`kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet1.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet1.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -124,9 +124,9 @@ Aşağıdaki kod kullanımını gösterir `List.exists`.
 For list [0; 1; 2; 3], contains zero is true
 ```
 
-Aşağıdaki örnek, kullanımını gösterir `List.exists2`.
+Aşağıdaki örnek öğesinin `List.exists2`kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet2.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet2.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -134,20 +134,9 @@ Aşağıdaki örnek, kullanımını gösterir `List.exists2`.
 Lists [1; 2; 3; 4; 5] and [5; 4; 3; 2; 1] have at least one equal element at the same position.
 ```
 
-Kullanabileceğiniz [List.forall](https://msdn.microsoft.com/library/e11a5233-d612-40ac-833b-d5cf496900b7) tüm liste öğelerinin bir koşulu karşılayıp karşılamadığını sınamak istiyorsanız.
+List [. forall](https://msdn.microsoft.com/library/e11a5233-d612-40ac-833b-d5cf496900b7) ' i kullanarak bir listedeki tüm öğelerin bir koşula uyup uymadığını test etmek istiyorsanız.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet3.fs)]
-
-Çıktı aşağıdaki şekilde olacaktır:
-
-```
-true
-false
-```
-
-Benzer şekilde, [List.forall2](https://msdn.microsoft.com/library/bb611f02-8277-48f5-9af3-6194ae27d07e) karşılık gelen konumlarda iki listelerindeki tüm öğeleri içeren her bir öğe çiftinin bir Boole ifadesi uygun olup olmadığını belirler.
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet4.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet3.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -156,15 +145,26 @@ true
 false
 ```
 
-### <a name="sort-operations-on-lists"></a>Sıralama işlemleri listeler
+Benzer şekilde, [List. forall2](https://msdn.microsoft.com/library/bb611f02-8277-48f5-9af3-6194ae27d07e) , iki liste içindeki karşılık gelen konumlarda bulunan tüm öğelerin her bir öğe çiftini Içeren bir Boolean ifade karşılayıp karşılamadığını belirler.
 
-[List.sort](https://msdn.microsoft.com/library/17f1030e-aa7e-41dd-94ea-72cb6c04fd3d), [List.sortBy](https://msdn.microsoft.com/library/955bfc5f-ad9c-4f2d-a7ab-91e43eb21359), ve [List.sortWith](https://msdn.microsoft.com/library/1d806a54-9166-4198-906d-15101f7916c7) işlevleri sıralama listeler. Sıralama işlevini kullanmak için bu üç işlevlerin belirler. `List.sort` Varsayılan genel karşılaştırma kullanır. Genel karşılaştırma genel karşılaştırma işleve göre genel işleçleri, değerleri karşılaştırmak için kullanır. Çok çeşitli gibi basit sayısal türler, diziler, kayıtları, ayrılmış birleşimler, listeler, diziler ve uygulayan herhangi bir tür öğe türleri ile verimli bir şekilde çalışır `System.IComparable`. Türleri uygulayan `System.IComparable`, genel karşılaştırma kullanır `System.IComparable.CompareTo()` işlevi. Genel karşılaştırma ayrıca dizeleri ile çalışır, ancak kültüre bağlı bir sıralama düzeni kullanır. Genel karşılaştırma işlevini türleri gibi desteklenmeyen türler üzerinde kullanılmamalıdır. Ayrıca, varsayılan genel karşılaştırma performansını küçük yapılandırılmış türleri için en iyi seçenektir; Karşılaştırma ve sık sıralanmış gereken büyük yapılandırılmış türleri için uygulamayı düşünün `System.IComparable` verimli uygulaması sağlayarak `System.IComparable.CompareTo()` yöntemi.
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet4.fs)]
 
-`List.sortBy` Sıralama ölçütü kullanılan bir değer döndüren bir işlev alır ve `List.sortWith` bir karşılaştırma işlevi bağımsız değişken olarak alır. Bu ikinci iki İşlevler, karşılaştırma desteklemez veya karşılaştırma kültüre duyarlı dize olduğu gibi daha karmaşık karşılaştırma semantiği gerektirdiğinde türleriyle çalışırken yararlıdır.
+Çıktı aşağıdaki şekilde olacaktır:
 
-Aşağıdaki örnek, kullanımını gösterir `List.sort`.
+```
+true
+false
+```
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet5.fs)]
+### <a name="sort-operations-on-lists"></a>Listelerde sıralama Işlemleri
+
+[List. Sort](https://msdn.microsoft.com/library/17f1030e-aa7e-41dd-94ea-72cb6c04fd3d), [List. sortBy](https://msdn.microsoft.com/library/955bfc5f-ad9c-4f2d-a7ab-91e43eb21359)ve [List. sortWith](https://msdn.microsoft.com/library/1d806a54-9166-4198-906d-15101f7916c7) işlevleri sıralama listeleri. Sıralama işlevi, bu üç işlevden hangisini kullanacağınızı belirler. `List.sort`Varsayılan genel karşılaştırmayı kullanır. Genel karşılaştırma, değerleri karşılaştırmak için genel karşılaştırma işlevini temel alan genel işleçleri kullanır. Basit sayısal türler, tanımlama grupları, kayıtlar, ayırt edici birleşimler, listeler, diziler ve uygulayan `System.IComparable`herhangi bir tür gibi çok sayıda öğe türü ile verimli bir şekilde çalışmaktadır. Uygulayan `System.IComparable`türler için, genel karşılaştırma `System.IComparable.CompareTo()` işlevini kullanır. Genel karşılaştırma dizelerle de birlikte çalışarak, ancak kültüre bağımsız bir sıralama düzeni kullanır. Genel karşılaştırma, işlev türleri gibi desteklenmeyen türlerde kullanılmamalıdır. Ayrıca, varsayılan genel karşılaştırmanın performansı, küçük yapılandırılmış türler için en iyisidir; sıklıkla karşılaştırılması ve sıralanması gereken daha büyük yapılandırılmış türler için, `System.IComparable` `System.IComparable.CompareTo()` yöntemini uygulamayı ve verimli bir uygulama sağlamayı düşünün.
+
+`List.sortBy`sıralama ölçütü olarak kullanılan bir değer döndüren bir işlev alır ve `List.sortWith` bir karşılaştırma işlevini bağımsız değişken olarak alır. Bu ikinci iki işlev, karşılaştırmayı desteklemeyen türlerle çalışırken ya da karşılaştırma, kültüre duyarlı dizeler söz konusu olduğunda olduğu gibi daha karmaşık karşılaştırma semantiği gerektirdiğinde yararlıdır.
+
+Aşağıdaki örnek öğesinin `List.sort`kullanımını gösterir.
+
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet5.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -172,9 +172,9 @@ Aşağıdaki örnek, kullanımını gösterir `List.sort`.
 [-2; 1; 4; 5; 8]
 ```
 
-Aşağıdaki örnek, kullanımını gösterir `List.sortBy`.
+Aşağıdaki örnek öğesinin `List.sortBy`kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet6.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet6.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -182,9 +182,9 @@ Aşağıdaki örnek, kullanımını gösterir `List.sortBy`.
 [1; -2; 4; 5; 8]
 ```
 
-Sonraki örnek, kullanımını gösterir `List.sortWith`. Bu örnekte, özel bir karşılaştırma işlevi `compareWidgets` önce bir alan karşılaştırmak için kullanılan özel bir tür ve başka bir zaman ilk alan değerlerini eşit.
+Sonraki örnek öğesinin `List.sortWith`kullanımını gösterir. Bu örnekte, özel karşılaştırma işlevi `compareWidgets` öncelikle bir özel türün bir alanını ve ardından ilk alanın değerleri eşitse başka bir değeri karşılaştırmak için kullanılır.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet7.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet7.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -197,19 +197,19 @@ Rev = 5;}; {ID = 110;
 Rev = 1;}]
 ```
 
-### <a name="search-operations-on-lists"></a>Listelerde arama işlemleri
+### <a name="search-operations-on-lists"></a>Listelerde arama Işlemleri
 
-Çok sayıda arama işlemleri listeler için desteklenir. Basit, [List.find](https://msdn.microsoft.com/library/0594593e-9c75-44c1-8f5a-a37b2e561c06), belirli bir koşul ile eşleşen ilk öğe bulmanızı sağlar.
+Listeler için çok sayıda arama işlemi desteklenir. En basit, [List. Find](https://msdn.microsoft.com/library/0594593e-9c75-44c1-8f5a-a37b2e561c06), belirli bir koşulla eşleşen ilk öğeyi bulmanızı sağlar.
 
-Aşağıdaki kod örneği, kullanımını gösterir `List.find` bölünebilir 5 listedeki ilk numarası bulunamadı.
+Aşağıdaki kod örneği, bir listede 5 ' `List.find` e bölünebilen ilk sayıyı bulmak için kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet8.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet8.fs)]
 
-Sonuç 5'tir.
+Sonuç 5 ' tir.
 
-İlk öğeleri dönüştürülür, çağrı [List.pick](https://msdn.microsoft.com/library/0430b515-7fe4-49a1-a616-d2286d8b08b2), bir işlev, alan bir seçenek verir ve ilk seçenek arar değeri olan `Some(x)`. Öğe döndürmek yerine `List.pick` sonucunu döndürür `x`. Eşleşen hiçbir öğe bulunamazsa `List.pick` oluşturur `System.Collections.Generic.KeyNotFoundException`. Aşağıdaki kod kullanımını gösterir `List.pick`.
+Öğelerin önce dönüştürülmesi gerekiyorsa, bir seçenek döndüren bir işlevi alan [List. Pick](https://msdn.microsoft.com/library/0430b515-7fe4-49a1-a616-d2286d8b08b2)çağırın ve olan `Some(x)`ilk seçenek değerini arar. Öğesini `List.pick` döndürmek yerine sonucunu `x`döndürür. Eşleşen bir öğe bulunamazsa, `List.pick` oluşturur. `System.Collections.Generic.KeyNotFoundException` Aşağıdaki kod öğesinin `List.pick`kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet9.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet9.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -217,9 +217,9 @@ Sonuç 5'tir.
 "b"
 ```
 
-Arama işlemleri, başka bir grup [List.tryFind](https://msdn.microsoft.com/library/37f4532e-9fd0-4802-8bbd-e1aa2380287d) ve ilgili işlevleri, bir seçenek değerini döndürür. `List.tryFind` İşlevi bu tür bir öğe varsa bir koşulu karşılayan bir liste, ancak seçenek değeri ilk öğeyi döndürür `None` Aksi takdirde. Değişim [List.tryFindIndex](https://msdn.microsoft.com/library/5e31968c-c3d3-43d2-859a-0526825895ec) , öğenin yerine bulunması durumunda, öğenin dizinini döndürür. Bu işlevler, aşağıdaki kodda gösterilmiştir.
+Başka bir arama işlemleri grubu olan [List. tryFind](https://msdn.microsoft.com/library/37f4532e-9fd0-4802-8bbd-e1aa2380287d) ve related işlevleri, bir seçenek değeri döndürür. İşlevi, böyle bir öğe varsa bir koşulu karşılayan bir listenin ilk öğesini döndürür, ancak değilse seçenek değeri `None`. `List.tryFind` Çeşitleme [listesi. tryFindIndex](https://msdn.microsoft.com/library/5e31968c-c3d3-43d2-859a-0526825895ec) , öğenin kendisi yerine, varsa, öğesinin dizinini döndürür. Bu işlevler aşağıdaki kodda gösterilmiştir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet10.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet10.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -228,27 +228,27 @@ The first even value is 22.
 The first even value is at position 8.
 ```
 
-### <a name="arithmetic-operations-on-lists"></a>Aritmetik işlemler listesi
+### <a name="arithmetic-operations-on-lists"></a>Listelerde aritmetik Işlemler
 
-Toplam ve ortalama gibi yaygın aritmetik işlemleri yerleşik olarak [List Modülü](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788). Çalışmak için [List.sum](https://msdn.microsoft.com/library/54d47fe3-5ecf-4883-beb5-e915342a17f9), liste öğesi türünü desteklemelidir `+` işleci ve sıfır değerine sahip. Tüm yerleşik aritmetik türler bu koşulları karşılayan. Çalışmak için [List.average](https://msdn.microsoft.com/library/2b9a627b-106d-4548-8c4c-ab5058b8f8e1), öğe türü olmadan tam sayı türleri dışlar ancak kayan nokta türleri için sağlayan bir geri kalan bölümü desteklemesi gerekir. [List.sumBy](https://msdn.microsoft.com/library/b7623389-0fe1-4762-9c67-51079903ab7d) ve [List.averageBy](https://msdn.microsoft.com/library/936cc9ec-62af-464d-8726-7999c2f48403) işlevler bir işlev bir parametre olarak alır ve bu işlevin sonuçlarını Topla veya ortalama değerleri hesaplamak için kullanılır.
+Toplam ve ortalama gibi yaygın aritmetik işlemler [liste modülüne](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)yerleştirilmiştir. [List. Sum](https://msdn.microsoft.com/library/54d47fe3-5ecf-4883-beb5-e915342a17f9)ile çalışmak için liste öğesi türü `+` işleci desteklemelidir ve sıfır değerine sahip olmalıdır. Tüm yerleşik aritmetik türler bu koşulları karşılar. [List. Average](https://msdn.microsoft.com/library/2b9a627b-106d-4548-8c4c-ab5058b8f8e1)ile çalışmak için, öğe türü, bir geri kalanı olmadan bir bölüm desteklemelidir, bu da integral türlerini dışlar, ancak kayan nokta türlerine izin verir. [List. sumBy](https://msdn.microsoft.com/library/b7623389-0fe1-4762-9c67-51079903ab7d) ve [List. averageBy](https://msdn.microsoft.com/library/936cc9ec-62af-464d-8726-7999c2f48403) işlevleri bir işlevi parametre olarak alır ve bu işlevin sonuçları Sum veya Average değerlerini hesaplamak için kullanılır.
 
-Aşağıdaki kod kullanımını gösterir `List.sum`, `List.sumBy`, ve `List.average`.
+Aşağıdaki kod `List.sum`, `List.sumBy`, ve `List.average`kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet11.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet11.fs)]
 
 Çıktı `1.000000`.
 
-Aşağıdaki kod kullanımını gösterir `List.averageBy`.
+Aşağıdaki kod öğesinin `List.averageBy`kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet12.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet12.fs)]
 
 Çıktı `5.5`.
 
-### <a name="lists-and-tuples"></a>Listeler ve diziler
+### <a name="lists-and-tuples"></a>Listeler ve tanımlama grupları
 
-Diziler içeren listeleri zip tarafından yönetilebilir ve işlevleri sıkıştırmasını açın. Bu işlevler, iki tek değerler listesi bir tanımlama grubu listesine birleştirebilir veya listelerini tek değerler bir diziler listesi ayırın. En basit [List.zip](https://msdn.microsoft.com/library/3028d790-8f48-4c94-bf08-b058bec3689c) işlevi iki tek öğeleri listesini alır ve tek bir kayıt düzeni çiftlerinin listesini oluşturur. Başka bir sürümü [List.zip3](https://msdn.microsoft.com/library/003cc28e-0de3-4d99-89ed-cb19028e3c5b), üç tek öğeleri listesini alır ve üç öğe içeren demetler tek bir listesini oluşturur. Aşağıdaki kod örneği, kullanımını gösterir `List.zip`.
+Tanımlama gruplarını içeren listeler, zip ve unzip işlevleri tarafından değiştirilebilir. Bu işlevler, tek değerlerden oluşan iki listeyi tek bir tanımlama grubu içinde birleştirir veya bir tanımlama grubu listesini tek değerlerden oluşan iki listeye ayırır. En basit [List. zip](https://msdn.microsoft.com/library/3028d790-8f48-4c94-bf08-b058bec3689c) işlevi, tek öğelerin iki listesini alır ve demet çiftleri tek bir listesini oluşturur. Başka bir sürüm olan [List. zip3](https://msdn.microsoft.com/library/003cc28e-0de3-4d99-89ed-cb19028e3c5b), tek öğelerin üç listesini alır ve üç öğesi içeren başlıkların tek bir listesini oluşturur. Aşağıdaki kod örneği öğesinin `List.zip`kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet13.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet13.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -256,9 +256,9 @@ Diziler içeren listeleri zip tarafından yönetilebilir ve işlevleri sıkışt
 [(1, -1); (2, -2); (3; -3)]
 ```
 
-Aşağıdaki kod örneği, kullanımını gösterir `List.zip3`.
+Aşağıdaki kod örneği öğesinin `List.zip3`kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet14.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet14.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -266,11 +266,11 @@ Aşağıdaki kod örneği, kullanımını gösterir `List.zip3`.
 [(1, -1, 0); (2, -2, 0); (3, -3, 0)]
 ```
 
-Unzip sürümleri, buna karşılık gelen [List.unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21) ve [List.unzip3](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4), tanımlama gruplarının listesini alan ve getiren listeleri bir tanımlama grubu burada ilk liste her bir tanımlama grubunu ilk tüm öğeleri içeren ve ikinci liste, her tanımlama grubu ve benzeri ikinci öğe içerir.
+Karşılık gelen unzip sürümleri, [List. unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21) ve [List. unzip3](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4), tanımlama grubu ve dönüş listelerinin listesini alır, burada ilk liste her bir tanımlama grubunda ilk olan tüm öğeleri içerir ve ikinci liste her birinin ikinci öğesini içerir tanımlama grubu, vb.
 
-Aşağıdaki kod örneği, kullanımını gösterir [List.unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21).
+Aşağıdaki kod örneği [List. unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21)öğesinin kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet15.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet15.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -279,9 +279,9 @@ Aşağıdaki kod örneği, kullanımını gösterir [List.unzip](https://msdn.mi
 [1; 3] [2; 4]
 ```
 
-Aşağıdaki kod örneği, kullanımını gösterir [List.unzip3](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4).
+Aşağıdaki kod örneği [List. unzip3](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4)kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet16.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet16.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -289,11 +289,11 @@ Aşağıdaki kod örneği, kullanımını gösterir [List.unzip3](https://msdn.m
 ([1; 4], [2; 5], [3; 6])
 ```
 
-### <a name="operating-on-list-elements"></a>Liste öğeleri üzerinde çalıştırma
+### <a name="operating-on-list-elements"></a>Liste öğelerinde çalışma
 
-F#liste öğeleri üzerinde işlemler çeşitli destekler. En basit olan [List.iter](https://msdn.microsoft.com/library/f778d075-81a9-4994-af60-cddcc53a201f), listesini her bir öğede bir işlev çağrısı sağlar. Çeşitlemeler içerir [List.iter2](https://msdn.microsoft.com/library/ea3b7761-916c-4016-9bd8-651124c98b40), iki listenin öğelerini bir işlem yapmanıza olanak sağlayan [List.iteri](https://msdn.microsoft.com/library/6dd21ae6-5c00-41cd-8306-821e513d8f60), olduğu gibi `List.iter` dışında her öğenin dizini olarak geçirilen bir her öğe için çağrılan işlev için bağımsız değişken ve [List.iteri2](https://msdn.microsoft.com/library/9658d740-9be5-4bf7-b663-c8ab2b3e196c), işlevselliğinin bir birleşimi olan `List.iter2` ve `List.iteri`. Aşağıdaki kod örneği, bu işlevler gösterilmiştir.
+F#liste öğelerinde çeşitli işlemleri destekler. Listenin her öğesinde bir işlevi çağırmanızı sağlayan en basit [List. iter](https://msdn.microsoft.com/library/f778d075-81a9-4994-af60-cddcc53a201f). Her bir öğenin dizininin her biri için çağrılan işleve bir bağımsız değişken olarak geçirilme `List.iter` hariç olmak üzere, iki [listedeki](https://msdn.microsoft.com/library/6dd21ae6-5c00-41cd-8306-821e513d8f60)öğeler üzerinde bir işlem gerçekleştirmenize olanak sağlayan Çeşitlemeler içerir [List. iter2.](https://msdn.microsoft.com/library/ea3b7761-916c-4016-9bd8-651124c98b40) öğesi ve, `List.iter2` ve `List.iteri`işlevlerinin bir birleşimi olan [List. iteri2](https://msdn.microsoft.com/library/9658d740-9be5-4bf7-b663-c8ab2b3e196c). Aşağıdaki kod örneği bu işlevleri gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet17.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet17.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -312,9 +312,9 @@ List.iteri2: element 1 of list1 is 2; element 1 of list2 is 5
 List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 ```
 
-Liste öğeleri dönüştüren başka bir sık kullanılan işlev [List.map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6), her bir liste öğesine bir işlev uygulamak ve tüm sonuçları yeni bir liste olarak yerleştirmek sağlar. [List.map2](https://msdn.microsoft.com/library/5f48cce7-6eaf-4e54-8996-2b04d3c31e57) ve [List.map3](https://msdn.microsoft.com/library/dd9fb190-6980-4537-be96-5645a64908f8) birden çok listelerini Al farklılıklar şunlardır. Ayrıca [List.mapi](https://msdn.microsoft.com/library/284b9234-3d26-409b-b328-ac79638d9e14) ve [List.mapi2](https://msdn.microsoft.com/library/680643af-233c-40a3-82f2-43d5af27ec49), öğe ek olarak, her öğenin dizinini geçirilecek işlevi gerekiyorsa. Arasındaki tek fark `List.mapi2` ve `List.mapi` olan `List.mapi2` iki liste ile çalışır. Aşağıdaki örnekte gösterilmiştir [List.map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6).
+Liste öğelerini dönüştüren başka bir sık kullanılan işlev List [. Map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6)olur ve bu, bir listedeki her öğeye bir işlev uygulamanıza ve tüm sonuçların yeni bir listeye yerleştirmenize olanak sağlar. [List. map2](https://msdn.microsoft.com/library/5f48cce7-6eaf-4e54-8996-2b04d3c31e57) ve [List. map3](https://msdn.microsoft.com/library/dd9fb190-6980-4537-be96-5645a64908f8) birden çok liste alan değişimlerdir. [List. mapi](https://msdn.microsoft.com/library/284b9234-3d26-409b-b328-ac79638d9e14) ve [List. mapi2](https://msdn.microsoft.com/library/680643af-233c-40a3-82f2-43d5af27ec49)öğesini de kullanabilirsiniz. Buna ek olarak, işlevine her öğenin dizinini geçirilmesi gerekir. `List.mapi2` Ve `List.mapi2` arasındakitekfark,ikilisteile`List.mapi` birlikte çalışmadır. Aşağıdaki örnekte [List. Map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6)gösterilmektedir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet18.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet18.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -322,9 +322,9 @@ Liste öğeleri dönüştüren başka bir sık kullanılan işlev [List.map](htt
 [2; 3; 4]
 ```
 
-Aşağıdaki örnek kullanımını gösterir `List.map2`.
+Aşağıdaki örnek öğesinin `List.map2`kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet19.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet19.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -332,9 +332,9 @@ Aşağıdaki örnek kullanımını gösterir `List.map2`.
 [5; 7; 9]
 ```
 
-Aşağıdaki örnek kullanımını gösterir `List.map3`.
+Aşağıdaki örnek öğesinin `List.map3`kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet20.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet20.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -342,9 +342,9 @@ Aşağıdaki örnek kullanımını gösterir `List.map3`.
 [7; 10; 13]
 ```
 
-Aşağıdaki örnek kullanımını gösterir `List.mapi`.
+Aşağıdaki örnek öğesinin `List.mapi`kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet21.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet21.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -352,9 +352,9 @@ Aşağıdaki örnek kullanımını gösterir `List.mapi`.
 [1; 3; 5]
 ```
 
-Aşağıdaki örnek kullanımını gösterir `List.mapi2`.
+Aşağıdaki örnek öğesinin `List.mapi2`kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet22.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet22.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -362,9 +362,9 @@ Aşağıdaki örnek kullanımını gösterir `List.mapi2`.
 [0; 7; 18]
 ```
 
-[List.collect](https://msdn.microsoft.com/library/cd08bbc7-a3b9-40ab-8c20-4e85ec84664f) benzer `List.map`, her öğe bir liste oluşturur ve bu listeler, son bir liste olarak bitiştirilir. Aşağıdaki kodda, listenin her öğesinin üç sayı oluşturur. Bunların tümünü tek listede toplanır.
+[List. Collect](https://msdn.microsoft.com/library/cd08bbc7-a3b9-40ab-8c20-4e85ec84664f) , her `List.map`öğe bir liste ürettiğinden ve tüm bu listelerin son bir liste ile bitiştirildiği durumlar haricinde gibidir. Aşağıdaki kodda, listenin her bir öğesi üç sayı üretir. Bunların hepsi tek bir listede toplanır.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet23.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet23.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -372,17 +372,17 @@ Aşağıdaki örnek kullanımını gösterir `List.mapi2`.
 [1; 2; 3; 2; 4; 6; 3; 6; 9]
 ```
 
-Ayrıca [List.filter](https://msdn.microsoft.com/library/11a8c926-547b-44dd-bbae-98d44f3dd248), bir Boolean koşulu alır ve belirtilen koşulu karşılayan öğeleri içeren yeni bir liste oluşturur.
+Ayrıca, Boolean koşulunu alan ve yalnızca verilen koşulu karşılayan öğelerden oluşan yeni bir liste üreten [List. Filter](https://msdn.microsoft.com/library/11a8c926-547b-44dd-bbae-98d44f3dd248)öğesini de kullanabilirsiniz.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet24.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet24.fs)]
 
-Sonuç listesi `[2; 4; 6]`.
+Elde edilen liste `[2; 4; 6]`.
 
-Bir harita ve filtresi bileşimi [List.choose](https://msdn.microsoft.com/library/2e21d3fb-ce35-4824-8a57-c4404616093d) , dönüştürme ve aynı anda öğeleri seçmek sağlar. `List.choose` bir seçenek listesini her öğeye döndürür ve işlevin seçenek değeri döndürüldüğünde yeni bir öğe için sonuçları listesi döndüren bir işlev uygular `Some`.
+Map ve Filter, [List.](https://msdn.microsoft.com/library/2e21d3fb-ce35-4824-8a57-c4404616093d) Select birleşimi, öğeleri aynı anda dönüştürmenizi ve seçmenizi sağlar. `List.choose`bir listedeki her öğeye bir seçenek döndüren bir işlev uygular ve işlev seçenek değerini `Some`döndürdüğünde öğelerin sonuçlarının yeni bir listesini döndürür.
 
-Aşağıdaki kod kullanımını gösterir `List.choose` büyük harfli bir sözcük dışında bir kelimelerin listesini seçin.
+Aşağıdaki kod, bir sözcük listesinden büyük `List.choose` harfli sözcükler seçmek için kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet25.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet25.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -390,57 +390,57 @@ Aşağıdaki kod kullanımını gösterir `List.choose` büyük harfli bir sözc
 ["Rome's"; "Bob's"]
 ```
 
-### <a name="operating-on-multiple-lists"></a>Birden çok listelerde çalışma
+### <a name="operating-on-multiple-lists"></a>Birden çok liste üzerinde çalışma
 
-Listeleri birlikte katılabilir. İki liste birine katılmak için kullanın [List.append](https://msdn.microsoft.com/library/2954da80-3f4a-4a4b-9371-794645c03426). İkiden fazla listeleri katılmak için kullanın [List.concat](https://msdn.microsoft.com/library/c5afd433-8764-4ea8-a6a8-937fb4d77c4c).
+Listeler birlikte birleştirilebilir. İki listeyi tek tek birleştirmek için [List. Append](https://msdn.microsoft.com/library/2954da80-3f4a-4a4b-9371-794645c03426)kullanın. İkiden fazla listeyi birleştirmek için [List. Concat](https://msdn.microsoft.com/library/c5afd433-8764-4ea8-a6a8-937fb4d77c4c)kullanın.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet26.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet26.fs)]
 
-### <a name="fold-and-scan-operations"></a>Katlama ve tarama işlemleri
+### <a name="fold-and-scan-operations"></a>Katlama ve tarama Işlemleri
 
-Tüm liste öğelerinin birbirine bazı listeleme işlemleri içerir. Katlama ve tarama işlemlerini gibidir `List.iter` ve `List.map` her öğe üzerinde bir işlevi çağırır, ancak bu işlemler adlı ek bir parametre sağlayın, *accumulator* , izleme bilgileri hesaplama.
+Bazı liste işlemleri liste öğeleri arasında bağımlılıkları kapsar. Katlama ve tarama işlemleri, her öğe `List.iter` üzerinde `List.map` bir işlevi çağırmanıza benzer ancak bu işlemler, hesaplama aracılığıyla bilgi taşıyan bir ek parametre sağlar.
 
-Kullanım `List.fold` bir listede bir hesaplama gerçekleştirmek için.
+Bir `List.fold` liste üzerinde hesaplama gerçekleştirmek için kullanın.
 
-Aşağıdaki kod örneği, kullanımını gösterir [List.fold](https://msdn.microsoft.com/library/c272779e-bae7-4983-8d7f-16b345bb33a0) çeşitli işlemler gerçekleştirmek için.
+Aşağıdaki kod örneği, çeşitli işlemleri gerçekleştirmek için [List. Fold](https://msdn.microsoft.com/library/c272779e-bae7-4983-8d7f-16b345bb33a0) öğesinin kullanımını gösterir.
 
-Listenin sonuna; accumulator `acc` hesaplama devam ettikçe boyunca geçirilen bir değerdir. İlk bağımsız değişken accumulator ve liste öğesi alır ve bu liste öğesi için hesaplama geçiş sonucunu döndürür. İkinci bağımsız değişkeni accumulator ilk değeridir.
+Listeye çapraz ve `acc` biriktirici, hesaplama ilerledikçe geçen bir değerdir. İlk bağımsız değişken, biriktiriciden ve List öğesini alır ve bu liste öğesi için hesaplamanın ara sonucunu döndürür. İkinci bağımsız değişken, biriktiricinin ilk değeridir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet27.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet27.fs)]
 
-İşlev adı bir basamak sahip bu işlevlerin sürümleri, birden fazla listede çalışır. Örneğin, [List.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) iki liste üzerinde hesaplamalar gerçekleştirir.
+İşlev adında basamak olan bu işlevlerin sürümleri birden fazla listede çalışır. Örneğin, [List. fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) iki listede hesaplamalar gerçekleştirir.
 
-Aşağıdaki örnek, kullanımını gösterir `List.fold2`.
+Aşağıdaki örnek öğesinin `List.fold2`kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet28.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet28.fs)]
 
-`List.fold` ve [List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) içinde farklı `List.fold` ek parametresinin son değeri döndürür, ancak `List.scan` ekstra parametresiyle Ara değerlerini (birlikte, son değer) listesini döndürür.
+`List.fold`ve [List. Scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) , ek parametrenin `List.fold` son değerini döndüren ' de farklılık gösterir, ancak `List.scan` ek parametrenin ara değerlerinin (son değeri ile birlikte) listesini döndürür.
 
-Örneğin, bu işlevlerin her biri bir ters değişim içerir [List.foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7), sırayla farklıdır, listenin sonuna ve bağımsız değişkenlerin sırası. Ayrıca, `List.fold` ve `List.foldBack` farklılıkları, sahip [List.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) ve [List.foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2), eşit uzunluktaki iki liste alır. Her bir öğede yürüten işlev karşılık gelen öğelerle iki listelerin bazı eylemleri gerçekleştirmek için kullanabilirsiniz. İki liste öğesi türlerinin bir listesi bir banka hesabı işlem tutarlarını içerir aşağıdaki örnekte olduğu gibi farklı olabilir ve diğer liste işlem türü bulunur: havale veya mevzuatı.
+Bu işlevlerin her biri, listenin geri alındığı sırada ve bağımsız değişkenlerin sırası farklı olan [List. foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7)gibi bir ters çeşitleme içerir. Ayrıca, `List.fold` ve `List.foldBack` aynı uzunlukta iki liste alan Çeşitlemeler, [List. fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) ve [List. foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2)' i de vardır. Her öğe üzerinde yürütülen işlev, bazı eylemler gerçekleştirmek için her iki listedeki ilgili öğeleri kullanabilir. Aşağıdaki örnekte olduğu gibi, iki listenin öğe türleri farklı olabilir. Bu, bir liste bir banka hesabı için işlem tutarlarını içerir ve diğer liste işlemin türünü içerir: depozito veya çekme al.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet29.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet29.fs)]
 
-Toplama gibi bir hesaplama `List.fold` ve `List.foldBack` sonucu bazında geçişi bağımlı değildir çünkü aynı etkiye sahiptir. Aşağıdaki örnekte, `List.foldBack` bir listedeki öğeleri eklemek için kullanılır.
+Toplama gibi bir hesaplama için, `List.fold` `List.foldBack` sonuç çapraz geçiş sırasına bağlı olmadığından aynı etkiye sahiptir. Aşağıdaki örnekte, `List.foldBack` bir listedeki öğeleri eklemek için kullanılır.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet30.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet30.fs)]
 
-Aşağıdaki örnek, banka hesabı örneği döndürür. Yeni bir işlem türü eklendiğinde bu süre: bir ilgi hesaplaması. Bitiş bakiyesi bazında işlemleri artık bağlıdır.
+Aşağıdaki örnek, banka hesabı örneğine geri döner. Yeni bir işlem türü eklendiğinde bu kez bir vade farkının hesaplanması. Bitiş bakiyesi artık işlem sırasına bağlıdır.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet34.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet34.fs)]
 
-İşlev [List.reduce](https://msdn.microsoft.com/library/048e1f95-691b-49cb-bb99-fb85f68f3d8b) bakıma olan `List.fold` ve `List.scan`dışında ayrı bir accumulator etrafında geçirmek yerine `List.reduce` yerine öğe türünün iki bağımsız değişken alan bir işlev alır Bu bağımsız değişkenlerden biri yanı sıra tek bir hesaplama Ara sonuçlarını saklar anlamı accumulator görev yapar. `List.reduce` ilk iki liste öğeleri üzerinde çalıştırılarak başlatılır ve ardından sonraki öğeye yanı sıra işleminin sonucu kullanır. Kendi türüne sahip ayrı bir accumulator olmadığından `List.reduce` yerine kullanılan `List.fold` yalnızca accumulator ve dizinin öğe türü aynı türe sahip olduğunda. Aşağıdaki kod kullanımını gösterir `List.reduce`. `List.reduce` sağlanan listesini hiçbir öğe içermeyen bir özel durum oluşturur.
+İşlev [listesi. küçültme](https://msdn.microsoft.com/library/048e1f95-691b-49cb-bb99-fb85f68f3d8b) biraz benzer `List.fold` ve `List.scan`, ayrı bir Biriktiricinin çevresinde geçirilmesi yerine, tek bir Biriktiricinin `List.reduce` yerine iki bağımsız değişken alan bir işlev alır, ancak bunlardan biri bağımsız değişkenler, bu, hesaplamanın ara sonucunu depoladığı anlamına gelir. `List.reduce`ilk iki liste öğesinde çalışmaya başlar ve sonra işlemin sonucunu Next öğesiyle birlikte kullanır. Kendi türüne sahip ayrı bir biriktiricidir çünkü, yalnızca biriktiricidir ve `List.reduce` öğe türü aynı türde olduğunda ' `List.fold` nin yerine kullanılabilir. Aşağıdaki kod öğesinin `List.reduce`kullanımını gösterir. `List.reduce`Belirtilen listede öğe yoksa bir özel durum oluşturur.
 
-Aşağıdaki kodda, ilk çağrı lambda ifadesine bağımsız değişkenleri 2 ve 4 verilir ve 6 döndürür ve 16 sonucu, bu nedenle sonraki çağrı bağımsız değişkenleri 6 ve 10 verilir.
+Aşağıdaki kodda, lambda ifadesine yapılan ilk çağrıya 2 ve 4 bağımsız değişkenleri verilir ve 6, sonraki çağrıya ise 6 ve 10 bağımsız değişkenleri verilir, dolayısıyla sonuç 16 ' dır.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet33.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet33.fs)]
 
-### <a name="converting-between-lists-and-other-collection-types"></a>Listeler ve diğer toplama türleri arasında dönüştürme
+### <a name="converting-between-lists-and-other-collection-types"></a>Listeler ve diğer koleksiyon türleri arasında dönüştürme
 
-`List` Modülü ve dizileri hem dizileri Bu nesnelerden dönüştürme için işlevler sağlar. İçin veya bir dizi dönüştürmek için [List.toSeq](https://msdn.microsoft.com/library/7024be4b-ee70-43cc-8d0a-e6564a4ff7c0) veya [List.ofSeq](https://msdn.microsoft.com/library/74ab9289-4a59-4433-92eb-3f662d7f7db0). İçin veya bir diziden dönüştürmek için [List.toArray](https://msdn.microsoft.com/library/ac87dd82-a0cd-40b3-b1fa-dd3168134547) veya [List.ofArray](https://msdn.microsoft.com/library/f4bddc26-8c8f-4307-a6d7-a49dceb97032).
+Modülü `List` , hem sıralara hem de dizilere dönüştürme için işlevler sağlar. Bir diziye veya bir diziye dönüştürmek için [List. toSeq](https://msdn.microsoft.com/library/7024be4b-ee70-43cc-8d0a-e6564a4ff7c0) veya [List. ofSeq](https://msdn.microsoft.com/library/74ab9289-4a59-4433-92eb-3f662d7f7db0)kullanın. Bir diziye veya bir diziyi dönüştürmek için [List. ToArray](https://msdn.microsoft.com/library/ac87dd82-a0cd-40b3-b1fa-dd3168134547) veya [List. ofArray](https://msdn.microsoft.com/library/f4bddc26-8c8f-4307-a6d7-a49dceb97032)kullanın.
 
-### <a name="additional-operations"></a>Ek işlemler
+### <a name="additional-operations"></a>Ek Işlemler
 
-Listeleri üzerinde ek işlemler hakkında daha fazla bilgi için Kitaplık Başvurusu konusuna [Collections.List Modülü](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.list-module-%5bfsharp%5d).
+Listelerle ilgili ek işlemler hakkında daha fazla bilgi için bkz. kitaplık başvurusu konu [koleksiyonları. List Module](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.list-module-%5bfsharp%5d).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

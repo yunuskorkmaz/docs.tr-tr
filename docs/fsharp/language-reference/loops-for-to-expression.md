@@ -1,17 +1,17 @@
 ---
 title: 'Döngüler: for...to İfadesi'
-description: Bkz. nasıl F# for... ifade bir döngüde bir dizi bir döngü değişkeninin değerleri üzerinden yinelemek için kullanılır.
+description: F# İçin bkz.... to ifadesi bir döngü değişkeninin değer aralığı üzerinde bir döngüde yinelemek için kullanılır.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5b7bb9bac659ddf1d457be1ce17e90a2593666de
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 910c04aa4ea6b2c637dcad147347c1c317b5e0c0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645243"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626620"
 ---
 # <a name="loops-forto-expression"></a>Döngüler: for...to İfadesi
 
-`for...to` İfadesi, bir dizi bir döngü değişkeninin değerleri üzerinden bir döngü içinde yineleme için kullanılır.
+İfade `for...to` , bir döngü değişkeninin değer aralığı üzerinde bir döngüde yinelemek için kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -22,11 +22,11 @@ for identifier = start [ to | downto ] finish do
 
 ## <a name="remarks"></a>Açıklamalar
 
-Tanımlayıcı türü türünden çıkarılan *Başlat* ve *son* ifadeler. Bu ifadeler için türler, 32 bit tamsayılar olmalıdır.
+Tanımlayıcının türü *Başlangıç* ve *bitiş* ifadelerinin türünden algılanır. Bu ifadeler için türler 32 bitlik tamsayılar olmalıdır.
 
-Teknik olarak bir ifade rağmen `for...to` daha geleneksel bir kesinlik temelli bir programlama dili deyiminde gibi. İçin dönüş türü *gövde ifadesi* olmalıdır `unit`. Aşağıdaki örnekler çeşitli kullanımları `for...to` ifade.
+Teknik olarak bir ifade, `for...to` bir zorunlu programlama dilinde geleneksel bir ifadeye benzer. *Body ifadesi* `unit`için dönüş türü olmalıdır. Aşağıdaki örneklerde, `for...to` ifadesinin çeşitli kullanımları gösterilmektedir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5101.fs)]
 
 Önceki kodun çıktısı aşağıdaki gibidir.
 
@@ -39,5 +39,5 @@ Teknik olarak bir ifade rağmen `for...to` daha geleneksel bir kesinlik temelli 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F# Dili Başvurusu](index.md)
-- [Döngüler: `for...in` İfade](loops-for-in-expression.md)
-- [Döngüler: `while...do` İfade](loops-while-do-expression.md)
+- [Lerin `for...in`İfadesini](loops-for-in-expression.md)
+- [Lerin `while...do`İfadesini](loops-while-do-expression.md)

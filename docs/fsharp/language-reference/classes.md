@@ -1,17 +1,17 @@
 ---
 title: Sınıflar
-description: Bilgi nasıl F# sınıfları, özellikleri, yöntemleri ve olayları olabilir nesneleri temsil eden türleridir.
+description: F# Sınıfların özelliklere, yöntemlere ve olaylara sahip olan nesneleri temsil eden türler olduğunu öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: a233fea538274216db3c6751f6fbabbf70cc2841
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5c012d028bc1f89e3e9f5969b3461faab9aad3a0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645525"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630446"
 ---
 # <a name="classes"></a>Sınıflar
 
-*Sınıflar* özellikleri, yöntemleri ve olayları olabilir nesneleri temsil türleridir.
+*Sınıflar* , özelliklere, yöntemlere ve olaylara sahip olabilir nesneleri temsil eden türlerdir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,51 +33,51 @@ and [access-modifier] type-name2 ...
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sınıflar, .NET nesne türlerini temel açıklamasını temsil; sınıfı, nesne odaklı programlamayı destekleyen birincil türü kavramdır F#.
+Sınıflar .NET nesne türlerinin temel açıklamasını temsil eder; sınıfı, içinde F#nesne odaklı programlamayı destekleyen birincil tür kavramıdır.
 
-Yukarıdaki söz diziminde `type-name` herhangi geçerli bir tanımlayıcıdır. `type-params` İsteğe bağlı bir genel tür parametreleri açıklar. Tür parametresi adlarına ve köşeli ayraçlar içine alınan kısıtlamalar oluşur (`<` ve `>`). Daha fazla bilgi için [genel türler](generics/index.md) ve [kısıtlamaları](generics/constraints.md). `parameter-list` Oluşturucu parametreler açıklanmıştır. İlk erişim değiştiricisi türünü içerir; ikinci birincil oluşturucuya ilgilidir. Her iki durumda da varsayılandır `public`.
+Önceki sözdiziminde `type-name` , geçerli bir tanıtıcıdır. İsteğe bağlı genel tür parametrelerini açıklar.`type-params` Bu, açılı ayraçlar (`<` ve `>`) içine alınmış parametre adları ve kısıtlamalarından oluşur. Daha fazla bilgi için bkz. [Genel türler](./generics/index.md) ve [kısıtlamalar](./generics/constraints.md). Oluşturucu `parameter-list` parametrelerini açıklar. İlk erişim değiştiricisi türe aittir; İkincisi, birincil oluşturucuya aittir. Her iki durumda da varsayılan olur `public`.
 
-Kullanarak bir sınıf için taban sınıf belirtin `inherit` anahtar sözcüğü. Temel sınıf oluşturucusu için parantez içinde bağımsız değişken sağlamalısınız.
+`inherit` Anahtar sözcüğünü kullanarak bir sınıf için taban sınıfı belirtirsiniz. Taban sınıf oluşturucusu için parantez içinde bağımsız değişkenler sağlamanız gerekir.
 
-Alan veya çalışması kullanarak sınıf için yerel olan değerleri `let` bağlamaları ve genel kuralları izlemelidir `let` bağlar. `do-bindings` Bölüm nesne oluşturma sırasında yürütülen kod içerir.
+Bağlamaları kullanarak `let` sınıfa yerel olan alanları veya işlev değerlerini bildirir ve `let` bağlamaların genel kurallarını izlemeniz gerekir. Bölüm `do-bindings` , nesne oluşturma sırasında yürütülecek kodu içerir.
 
-`member-list` Ek Oluşturucular, örneği ve statik yöntem bildirimleri, arabirim bildirimi, soyut bağlamaları ve özellik ve olay bildirimlerini oluşur. Bunlar [üyeleri](members/index.md).
+Ek oluşturucular, örnek ve statik yöntem bildirimleri, arabirim bildirimleri, soyut bağlamalar ve özellik ve olay bildirimleri oluşur.`member-list` Bunlar [Üyelerde](./members/index.md)açıklanmıştır.
 
-`identifier` Kullanılan isteğe bağlı `as` anahtar sözcüğü, örnek değişkeni veya tür tanımında türü örneğine başvurmak için kullanılan kendi kendine tanımlayıcısı için bir ad sağlar. Daha fazla bilgi için bu konunun ilerleyen bölümlerinde Self tanımlayıcıları bölümüne bakın.
+İsteğe `identifier` bağlı`as` anahtar sözcüğü ile birlikte kullanılan, örnek değişkenine veya türün örneğine başvurmak için tür tanımında kullanılabilecek bir ad verir. Daha fazla bilgi için, bu konunun ilerleyen kısımlarında yer almaktadır.
 
-Anahtar sözcükler `class` ve `end` başlangıç işaretlemek ve tanımının son isteğe bağlı.
+Tanımın başlangıcını `class` ve `end` bitişini işaretleyen anahtar sözcükler ve isteğe bağlıdır.
 
-İle birlikte birbirine başvuru türleri olan özyinelemeli türleri karşılıklı olarak katılan `and` karşılıklı özyinelemeli işlevler olarak yalnızca anahtar sözcüğü. Örneğin, karşılıklı özyinelemeli türleri bölümüne bakın.
+Birbirini gösteren türler olan birbirini dışlayan özyinelemeli türler, tıpkı karşılıklı özyinelemeli işlevlerin olduğu gibi `and` anahtar sözcükle birlikte birleştirilir. Bir örnek için, birbirini dışlayan özyinelemeli türler bölümüne bakın.
 
 ## <a name="constructors"></a>Oluşturucular
 
-Sınıf türünün bir örneği oluşturan kodu oluşturucudur. Sınıflar için oluşturucular biraz farklı iş F# diğer .NET dillerinde arkadaşlarınıza kıyasla. İçinde bir F# sınıfı, her zaman birincil oluşturucu bağımsız değişkenleri açıklanmıştır: `parameter-list` tür adı ve gövde oluşan aşağıdaki `let` (ve `let rec`) sınıf bildiriminin başındaki bağlamaları ve `do` izleyin bağlar. Birincil oluşturucu bağımsız değişkenleri sınıf bildirimi içinde kapsamına dahildir.
+Oluşturucu, sınıf türünün bir örneğini oluşturan koddur. Sınıfların oluşturucuları, F# diğer .NET dillerinde yapadıklarından farklı şekilde çalışır. Bir F# sınıfta her zaman bağımsız değişkenleri tür adını izleyen içinde `parameter-list` açıklanan ve `let` gövdesi sınıf bildiriminin başlangıcında (ve `let rec`) bağlamalardan oluşan bir birincil Oluşturucu vardır ve `do` izleyen bağlamalar. Birincil oluşturucunun bağımsız değişkenleri, sınıf bildiriminin tamamında kapsamdadır.
 
-Ek oluşturucuları kullanarak ekleyebilirsiniz `new` anahtar sözcüğü gibi bir üye eklemek için:
+Aşağıdaki gibi bir üye eklemek için `new` anahtar sözcüğünü kullanarak ek oluşturucular ekleyebilirsiniz:
 
 `new`(`argument-list`) = `constructor-body`
 
-Yeni Oluşturucu gövdesinde, sınıf bildiriminin başında belirtilen birincil Oluşturucu çağırmanız gerekir.
+Yeni oluşturucunun gövdesi, sınıf bildiriminin en üstünde belirtilen birincil oluşturucuyu çağırmalıdır.
 
-Aşağıdaki örnek bu kavramı gösterir. Aşağıdaki kodda, `MyClass` iki Oluşturucusu vardır, iki bağımsız değişken ve başka bir oluşturucu, alan birincil bir oluşturucu bağımsız değişken olur.
+Aşağıdaki örnekte bu kavram gösterilmektedir. Aşağıdaki kodda `MyClass` , iki bağımsız değişken alan bir birincil Oluşturucu ve bağımsız değişken içermeyen başka bir Oluşturucu olan iki Oluşturucu vardır.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2401.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2401.fs)]
 
-## <a name="let-and-do-bindings"></a>let ve do bağlamaları
+## <a name="let-and-do-bindings"></a>Let ve do bağlamaları
 
-`let` Ve `do` bağlamaları bir sınıf tanımı birincil sınıf oluşturucu gövdesinde oluşturur ve bu nedenle çalıştıkları her bir sınıf örneği oluşturulur. Varsa bir `let` bağlamadır bir işlev, ardından bir üye derlenir. Varsa `let` bağlama herhangi bir işlevi veya üye kullanılmayan bir değerdir ve ardından bu oluşturucuya yerel bir değişken derlenir. Aksi takdirde, bu sınıfın bir alana derlenir. `do` İzleyin ifadeleri birincil oluşturucuya derlenir ve her örneği için başlatma kodunu yürütün. Hiçbir ek Oluşturucu her zaman birincil oluşturucusunu çağırın çünkü `let` bağlamaları ve `do` her zaman bağlamaları yürütmek bağımsız olarak Oluşturucu çağrılır.
+Bir sınıf `do` tanımındaki vebağlamaları,birincilsınıfoluşturucusunungövdesinioluştururvebunedenleherbirsınıförneğioluşturulduğundaçalışır.`let` `let` Bağlama bir işlev ise, bir üyeye derlenir. `let` Bağlama herhangi bir işlevde veya üyede kullanılmayan bir değer ise, oluşturucunun yerel bir değişkenine derlenir. Aksi halde, sınıfının bir alanına derlenir. Aşağıdaki `do` ifadeler birincil oluşturucuya derlenir ve her örnek için başlatma kodunu yürütür. Herhangi bir ek Oluşturucu her zaman birincil oluşturucuyu çağırdığından, `let` bağlamalar ve `do` bağlamalar hangi oluşturucunun çağrıldığına bakılmaksızın her zaman yürütülür.
 
-Tarafından oluşturulan alanlar `let` sınıfının özellikleri ve yöntemleri bağlamaları erişilebilir; statik yöntemler parametre olarak bir örnek değişkeni bile alırsanız ancak bunlar statik yöntemleri, erişilemez. Varsa, kendi kendine tanımlayıcısı kullanılarak erişilemez.
+`let` Bağlamalarla oluşturulan alanlara sınıfının yöntemleri ve özellikleri boyunca erişilebilir; ancak, statik yöntemler parametre olarak bir örnek değişkeni alsa bile, bunlara statik metotlardan erişilemez. Bir varsa, kendi kendine tanımlayıcı kullanılarak erişilemez.
 
-## <a name="self-identifiers"></a>Kendine yönelik tanımlayıcılar
+## <a name="self-identifiers"></a>Kendi kendine tanımlayıcılar
 
-A *kendini tanımlayıcısı* geçerli örneği temsil eden bir addır. Kendine yönelik tanımlayıcılar benzer `this` C# veya C++ anahtar sözcüğü veya `Me` Visual Basic'te. Kendi kendine bir tanımlayıcı, kapsamdaki tüm sınıf tanımı için veya yalnızca tek bir yöntem olarak kendi kendine tanımlayıcısı istemenize bağlı olarak, iki farklı yolla tanımlayabilirsiniz.
+*Kendi kendine tanımlayıcı* , geçerli örneği temsil eden bir addır. Self `this` tanımlayıcıları, C# veya C++ `Me` Visual Basic içindeki anahtar sözcüğe benzer. Kendi sınıf tanımının veya yalnızca tek bir yöntemin kapsamında olmasını isteyip istemediğinize bağlı olarak, kendinden tanımlayıcıyı iki farklı şekilde tanımlayabilirsiniz.
 
-Tüm sınıf için kendi kendine bir tanımlayıcı tanımlamak için `as` Oluşturucu parametresi, ayraç sonra anahtar sözcüğü listesinde ve tanımlayıcı adı belirtin.
+Tüm sınıf için kendi kendine tanımlayıcı tanımlamak için, Oluşturucu parametre listesinin `as` kapatma parantezinden sonra anahtar sözcüğünü kullanın ve tanımlayıcı adını belirtin.
 
-Yalnızca bir yöntem için kendi kendine bir tanımlayıcı tanımlamak için üye bildiriminde hemen önce yöntem adını ve nokta (.) ayırıcı olarak kendi kendine tanımlayıcı sağlar.
+Yalnızca bir yöntem için kendi kendine tanımlayıcı tanımlamak üzere, üye bildiriminde, yöntem adından ve bir nokta (.) ayırıcı olarak kendi kendine tanımlayıcıyı sağlayın.
 
-Aşağıdaki kod örneği, bir kendi kendini tanımlayıcı oluşturmanın iki yolu gösterilmektedir. İlk satırda `as` anahtar sözcüğü, kendi kendine tanımlayıcısını tanımlamak için kullanılır. Beşinci satırında, tanımlayıcı `this` kapsamı yöntemi kısıtlıdır kendi kendine bir tanımlayıcı tanımlamak için kullanılan `PrintMessage`.
+Aşağıdaki kod örneği, kendi kendine tanımlayıcı oluşturmanın iki yolunu göstermektedir. İlk satırda, `as` anahtar sözcüğü kendi tanımlayıcısını tanımlamak için kullanılır. Beşinci satırda, kapsamı yöntemiyle `this` `PrintMessage`kısıtlanmış bir kendi tanımlayıcısını tanımlamak için tanımlayıcı kullanılır.
 
 ```fsharp
 type MyClass2(dataIn) as self =
@@ -88,53 +88,53 @@ type MyClass2(dataIn) as self =
         printf "Creating MyClass2 with Data %d" data
 ```
 
-İstediğiniz ancak aksine diğer .NET dillerinde, kendi kendine tanımlayıcı ad verebilirsiniz; adları gibi sınırlı değildir `self`, `Me`, veya `this`.
+Diğer .NET dillerinin aksine, kendi tanımlayıcısını istediğiniz şekilde adlandırın; `self` ,`Me`veya gibi`this`adlarla sınırlı değilsiniz.
 
-Kendi kendine tanımlayıcı ile bildirilen `as` kadar anahtar sözcüğü başlatılmadı sonra `let` bağlamaları yürütülür. Bu nedenle, içinde kullanılamaz `let` bağlar. Kendi kendine tanımlayıcıda kullanabileceğiniz `do` bağlamalar bölümü.
+`as` Anahtar sözcüğü ile belirtilen kendine tanımlayıcı, `let` bağlamalar yürütülene kadar başlatılmaz. Bu nedenle, `let` bağlamalarda kullanılamaz. `do` Bağlama bölümünde kendi kendine tanımlayıcıyı kullanabilirsiniz.
 
 ## <a name="generic-type-parameters"></a>Genel Tür Parametreleri
 
-Köşeli ayraçlar içine genel tür parametreleri belirtildi (`<` ve `>`), ardından bir tanımlayıcısını tek tırnak işareti biçiminde. Birden fazla genel tür parametreleri virgülle ayrılır. Bildirimi kapsamdadır genel tür parametresidir. Aşağıdaki kod örneği, genel tür parametreleri belirtmek gösterilmektedir.
+Genel tür parametreleri, tek tırnak işareti ve ardından`<` bir `>`tanımlayıcı tarafından izlenen köşeli ayraç (ve) biçiminde belirtilir. Birden çok genel tür parametresi virgülle ayrılır. Genel tür parametresi, bildirim genelinde kapsamdadır. Aşağıdaki kod örneği, genel tür parametrelerinin nasıl ekleneceğini gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2403.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2403.fs)]
 
-Tür bağımsız değişkeni türü kullanıldığında algılanır. Aşağıdaki kodda gösterilen türü diziler dizisidir.
+Tür bağımsız değişkenleri tür kullanıldığında algılanır. Aşağıdaki kodda, gösterilen tür bir tanımlama grubu dizisidir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet24031.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet24031.fs)]
 
-## <a name="specifying-inheritance"></a>Devralma belirtme
+## <a name="specifying-inheritance"></a>Devralmayı belirtme
 
-`inherit` Yan tümcesi varsa doğrudan temel sınıf tanımlar. İçinde F#, yalnızca bir doğrudan temel sınıf izin verilir. Bir sınıfın uyguladığı arabirimleri temel sınıflar olarak kabul edilmez. Arabirimler açıklanmıştır [arabirimleri](Interfaces.md) konu.
+`inherit` Yan tümcesi, varsa doğrudan temel sınıfı tanımlar. İçinde F#yalnızca bir doğrudan temel sınıfa izin verilir. Bir sınıfın uyguladığı arabirimler temel sınıflar olarak kabul edilmez. Arabirimler, [arabirimler](Interfaces.md) konusunda ele alınmıştır.
 
-Dil anahtar sözcüğü kullanarak türetilen sınıfın temel sınıf özellikler ve yöntemler erişebilirsiniz `base` tanımlayıcı olarak ve ardından bir nokta (.) ile üyesinin adı.
+Dil anahtar sözcüğünü `base` tanımlayıcı olarak ve ardından bir nokta (.) ve üyenin adını kullanarak türetilmiş sınıftan temel sınıfın yöntemlerine ve özelliklerine erişebilirsiniz.
 
-Daha fazla bilgi için [devralma](inheritance.md).
+Daha fazla bilgi için bkz. [Devralma](inheritance.md).
 
 ## <a name="members-section"></a>Üyeler bölümü
 
-Bu bölümde, statik veya örnek yöntemler, özellikler, arabirim uygulamaları, soyut üyeler, olay bildirimleri ve ek oluşturucular tanımlayabilirsiniz. Let ve bağlamaları Bu bölümde yer alamaz yapın. Üyeleri için çeşitli eklenebildiği F# türleri sınıflarının yanı sıra, ayrı bir konuda ele alınmıştır [üyeleri](members/index.md).
+Bu bölümde statik veya örnek yöntemleri, özellikleri, arabirim uygulamalarını, soyut üyeleri, olay bildirimlerini ve ek oluşturucuları tanımlayabilirsiniz. Let ve do bağlamaları bu bölümde görünemez. Üyeler sınıflara ek olarak çeşitli F# türlere eklenebildiğinden, bunlar ayrı bir konuda, [üyelerinde](./members/index.md)ele alınmıştır.
 
-## <a name="mutually-recursive-types"></a>Karşılıklı özyinelemeli türleri
+## <a name="mutually-recursive-types"></a>Birbirini dışlayan özyinelemeli türler
 
-Döngüsel bir şekilde birbirine başvuru türleri tanımladığınızda, birlikte tür tanımlarını kullanarak dize `and` anahtar sözcüğü. `and` Anahtar sözcüğü değiştirir `type` gösterildiği gibi ilk tanımının dışında tüm anahtar sözcüğü.
+Birbirini dairesel bir şekilde birbirlerine başvuran türler tanımladığınızda, `and` anahtar sözcüğünü kullanarak tür tanımlarını birlikte dizolursunuz. Anahtar sözcüğü, aşağıdaki `type` gibi, ilk tanım hariç tüm anahtar kelimesinin yerini alır. `and`
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2404.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2404.fs)]
 
-Çıkış, geçerli dizindeki tüm dosyaları listesidir.
+Çıktı, geçerli dizindeki tüm dosyaların bir listesidir.
 
-## <a name="when-to-use-classes-unions-records-and-structures"></a>Sınıflar, birleşimler, kayıtlar ve yapıları ne zaman kullanılacağı
+## <a name="when-to-use-classes-unions-records-and-structures"></a>Sınıfların, birleşimlerin, kayıtların ve yapıların ne zaman kullanılacağı
 
-Aralarından seçim yapabileceğiniz türleri çeşitli göz önünde bulundurulduğunda, hangi her türü için uygun bir özel durum türünü seçmek için tasarlanmıştır, iyi anlamış olmanız gerekir. Sınıflar, nesne yönelimli programlama bağlamlarda kullanmak için tasarlanmıştır. Nesne yönelimli programlama, .NET Framework için yazılan uygulamaları kullanılan baskın örnektir. Varsa, F# koduna sahip .NET Framework'ü veya başka bir nesne yönelimli kitaplığı ile yakından çalışmaya ve özellikle, bir kullanıcı Arabirimi kitaplığı gibi bir nesne yönelimli tür sisteminden genişletmek sınıflar büyük olasılıkla uygun vardır.
+Aralarından seçim yapabileceğiniz çeşitli türler verildiğinde, belirli bir durum için uygun türü seçmek üzere her bir türün ne şekilde tasarlandığına ilişkin iyi bir fikir sahibi olmanız gerekir. Sınıflar, nesne odaklı programlama bağlamlarında kullanılmak üzere tasarlanmıştır. Nesne odaklı programlama, .NET Framework için yazılan uygulamalarda kullanılan baskın paradigma. F# Kodunuzun .NET Framework veya başka bir nesne tabanlı kitaplıkla yakından çalışması gerekiyorsa ve özellikle de bir kullanıcı arabirimi kitaplığı gibi nesne yönelimli bir tür sisteminden genişletmeniz gerekiyorsa, sınıflar muhtemelen uygun olabilir.
 
-Size yakın bir tümleştirmede nesne yönelimli kod ile birlikte çalışma değil veya müstakil ve bu nedenle korunan nesne yönelimli kod sık etkileşim uygulamadan kod yazıyorsanız, kayıtları kullanmayı düşünmeniz gerekir ve ayrılmış birleşimler. Tek bir iyi düşünce – çıkış kodu, uygun desen ile birlikte birleşimdir genellikle bir nesne hiyerarşisine daha basit bir alternatif olarak kullanılabilir. Ayrılmış birleşimler hakkında daha fazla bilgi için bkz: [ayırt edici birleşimler](discriminated-unions.md).
+Nesne odaklı kodla yakından birlikte bulundurduysanız veya kendi içinde bulunan ve bu nedenle nesne odaklı kod ile sık etkileşim 'ten korunan bir kod yazıyorsanız, kayıtları ve ayırt edici birleşimleri kullanmayı göz önünde bulundurmanız gerekir. Uygun düzende eşleşen kod ile birlikte, tek ve iyi düşünce bir ayrılmış birleşim, genellikle bir nesne hiyerarşisinin daha basit bir alternatifi olarak kullanılabilir. Ayrılmış birleşimler hakkında daha fazla bilgi için bkz. [ayırt edici birleşimler](discriminated-unions.md).
 
-Kayıtların sınıfları basit olan avantajı vardır, ancak bir tür taleplerini kendi kolaylığıyla gerçekleştirilebilir aştığında kayıtları uygun değildir. Özel eylemler gerçekleştirebilir ayrı Oluşturucular, gizli alanlar, olmadan ve devralma veya arabirim uygulamaları değerleri temel basit toplamalarla kayıtlardır. Depolanan bir kayıttaki alanları yine de basit bir toplama değerleri, özellikler ve yöntemler gibi üyeleri davranışlarını daha karmaşık hale getirmek için kayıtlara eklenebilir ancak. Kayıt hakkında daha fazla bilgi için bkz: [kayıtları](records.md).
+Kayıtlar, sınıflardan daha basit olmasının avantajına sahiptir, ancak bir tür talepleri basitlikle neler yapılabileceğini aşarsa kayıtlar uygun değildir. Kayıtlar, gizli alanlar olmadan ve devralma ya da arabirim uygulamaları olmadan özel eylemler gerçekleştirebilen ayrı oluşturucular olmadan, temelde basit değer toplalarıdır. Özellikleri ve yöntemleri gibi Üyeler davranışlarını daha karmaşık hale getirmek için kayıtlara eklenebilse de, bir kayıtta depolanan alanlar yine de basit değerler toplamasıdır. Kayıtlar hakkında daha fazla bilgi için bkz. [kayıtlar](records.md).
 
-Yapıları da küçük veri Toplamalar için yararlı olan, ancak .NET değer türleridir, sınıflar ve kayıtları bunlar farklı. Sınıfları ve kayıtları .NET başvuru türleridir. Değer türleri değere göre geçirilir, değer türleri ve başvuru türleri semantiği farklıdır. Bu şekilde anlamına gelir. bir parametre olarak geçirilen veya bir işlevden döndürülen bit bit. Bunlar ayrıca yığında depolanmış alternatif olarak, yerine üst nesnenin içinde katıştırılmış bir alan olarak kullanılıyorsa yığında kendi ayrı konumlarda depolanır. Bu nedenle, yığın erişme yükünü bir sorun olduğunda yapıları sık erişilen veriler için uygundur. Yapılar hakkında daha fazla bilgi için bkz: [yapıları](structures.md).
+Yapıları, küçük veri toplamaları için de kullanışlıdır, ancak .NET değer türleri oldukları sınıfların ve kayıtlardan farklıdır. Sınıflar ve kayıtlar .NET başvuru türleridir. Değer türleri ve başvuru türleri semantiği değer tarafından geçirilir. Bu, bir parametre olarak geçirildiği veya bir işlevden döndürüldüğü zaman bit için bit olarak kopyalandığı anlamına gelir. Ayrıca, yığın üzerinde saklanır veya bir alan olarak kullanılıyorsa, yığın üzerinde kendi ayrı konumlarına depolanması yerine üst nesnenin içine gömülü olurlar. Bu nedenle, yığına erişim ek yükü bir sorun olduğunda yapılar sık erişilen veriler için uygundur. Yapılar hakkında daha fazla bilgi için bkz. [yapılar](structures.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F# Dili Başvurusu](index.md)
-- [Üyeler](members/index.md)
+- [Üyeler](./members/index.md)
 - [Devralma](inheritance.md)
 - [Arabirimler](interfaces.md)

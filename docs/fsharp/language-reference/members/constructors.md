@@ -2,12 +2,12 @@
 title: Oluşturucular
 description: Sınıf ve yapı nesneleri oluşturmak ve başlatmak için F# ' de oluşturucuları tanımlama ve kullanma hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: ef5dc134ad98179b6a365c4c34a9eca22fe5f7f6
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364363"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627602"
 ---
 # <a name="constructors"></a>Oluşturucular
 
@@ -23,7 +23,7 @@ Birincil Oluşturucu, sınıf `let` tanımının `do` başlangıcında görünt�
 
 Aşağıdaki kod, Oluşturucusu olan bir sınıfı ve nesne oluşturmanın çeşitli yollarını gösterir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
 Çıktı aşağıdaki gibidir:
 
@@ -40,7 +40,7 @@ Yapılar sınıfların tüm kurallarını izler. Bu nedenle, bir birincil oluşt
 
 Ayrıca, yapılar genellikle `val` anahtar sözcüğü kullanılarak oluşturulan alanlara sahiptir; sınıflar da bu alanları içerebilir. `val` Anahtar sözcüğü kullanılarak tanımlanmış olan yapılar ve sınıflar, aşağıdaki kodda gösterildiği gibi, kayıt ifadeleri kullanılarak ek oluşturuculara de başlatılabilir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
 Daha fazla bilgi için bkz [. açık alanlar: `val` Anahtar sözcüğü](explicit-fields-the-val-keyword.md).
 
@@ -48,7 +48,7 @@ Daha fazla bilgi için bkz [. açık alanlar: `val` Anahtar sözcüğü](explici
 
 Bir sınıftaki birincil Oluşturucu, bir `do` bağlamadaki kodu yürütebilir. Ancak, bir `do` bağlama olmadan kodu ek bir oluşturucuda yürütmeniz gerekiyorsa ne yapmanız gerekir? Bunu yapmak için `then` anahtar sözcüğünü kullanırsınız.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
 
 Birincil oluşturucunun yan etkileri hala yürütülür. Bu nedenle, çıkış aşağıdaki gibidir.
 
@@ -62,11 +62,11 @@ Created an invalid person object.
 
 Diğer üyelerde, her üyenin tanımında geçerli nesne için bir ad sağlarsınız. Ayrıca, Oluşturucu parametrelerinin hemen ardından gelen `as` anahtar sözcüğünü kullanarak sınıf tanımının ilk satırına kendi tanımlayıcısını koyabilirsiniz. Aşağıdaki örnekte bu söz dizimi gösterilmektedir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
 Ek oluşturucularda, `as` yan tümcesini Oluşturucu parametrelerinden sonra koyarak kendi kendine tanımlayıcıyı da tanımlayabilirsiniz. Aşağıdaki örnekte bu söz dizimi gösterilmektedir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
 Bir nesne, tam olarak tanımlanmadan önce kullanmaya çalıştığınızda sorunlar oluşabilir. Bu nedenle, kendi kendine tanımlayıcı kullanımları derleyicinin bir uyarı yaymasına ve nesne başlatılmadan önce bir nesnenin üyelerine erişilmemesini sağlamak için ek denetimler eklemesine neden olabilir. Self tanımlayıcıyı `do` yalnızca birincil oluşturucunun bağlamalarında veya ek oluşturuculardaki `then` anahtar sözcükten sonra kullanmanız gerekir.
 
@@ -76,11 +76,11 @@ Kendi tanımlayıcısının adının olması `this`gerekmez. Geçerli bir tanım
 
 Bir oluşturucunun bağımsız değişken listesine form `property = value` atamalarının bir listesini ekleyerek başlatma kodundaki bir sınıf nesnesinin özelliklerine değerler atayabilirsiniz. Bu, aşağıdaki kod örneğinde gösterilmiştir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
 Önceki kodun aşağıdaki sürümü, tek bir Oluşturucu çağrısında sıradan bağımsız değişkenlerin, isteğe bağlı bağımsız değişkenlerin ve özellik ayarlarının birleşimini gösterir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 
 ## <a name="constructors-in-inherited-class"></a>Devralınan sınıftaki oluşturucular
 

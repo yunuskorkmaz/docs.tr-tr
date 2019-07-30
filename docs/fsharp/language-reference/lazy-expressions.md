@@ -1,17 +1,17 @@
 ---
-title: Yavaş ifadeler
-description: Bilgi nasıl F# yavaş ifadeler, uygulamaları ve kitaplıkları performansını artırabilir.
+title: Gecikmeli İfadeler
+description: Yavaş ifadelerin F# uygulamalarınızın ve kitaplıklarınızın performansını nasıl geliştirebileceğinizi öğrenin.
 ms.date: 03/13/2019
-ms.openlocfilehash: 6d53d53093f4e93f53e1c956b94e2f1e4a1bbd55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97429e9a4c3838cbaa2ead197db4443e0820e8b3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904117"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630744"
 ---
-# <a name="lazy-expressions"></a>Yavaş ifadeler
+# <a name="lazy-expressions"></a>Gecikmeli İfadeler
 
-*Yavaş ifadeler* hemen değerlendirilmeyen, ancak bunun yerine sonucu gerektiğinde değerlendirilir ifadeler. Bu, kodunuzun performansını artırmak için yardımcı olabilir.
+*Lazy ifadeleri* hemen değerlendirilmeyecek ifadelerdir, ancak bunun yerine sonuç gerektiğinde değerlendirilir. Bu, kodunuzun performansını artırmaya yardımcı olabilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -21,19 +21,19 @@ let identifier = lazy ( expression )
 
 ## <a name="remarks"></a>Açıklamalar
 
-Önceki sözdiziminde, *ifade* kod, yalnızca bir sonuç gerekli olduğunda değerlendirilir ve *tanımlayıcı* sonucu depolayan bir değerdir. Değer türünde [ `Lazy<'T>` ](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), burada gerçek türü için kullanılan `'T` ifadenin sonuç belirlenir.
+Önceki sözdiziminde *ifade* , yalnızca bir sonuç gerekli olduğunda değerlendirilen koddur ve *tanımlayıcı* sonucu depolayan bir değerdir. Değer, için `'T` kullanılan gerçek [`Lazy<'T>`](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489)türün ifadenin sonucundan belirlendiği türdür.
 
-Yavaş ifadeler bir ifade içinde bir sonuç gereken durumlar için yürütme kısıtlayarak performansını artırmak etkinleştirin.
+Yavaş ifadeler, bir ifadenin yürütülmesini yalnızca bir sonucun gerekli olduğu durumlara göre kısıtlayarak performansı iyileştirmenize olanak tanır.
 
-Gerçekleştirilecek ifadeleri zorlamak için yöntemi çağırın. `Force`. `Force` yalnızca bir kez gerçekleştirilmek üzere yürütülmesine neden olur. Yapılan sonraki çağrılar `Force` aynı sonucu, ancak herhangi bir kod Yürütülmeyen döndürür.
+İfadeleri gerçekleştirilecek şekilde zorlamak için yöntemini `Force`çağırın. `Force`yürütmenin yalnızca bir kez gerçekleştirilmesine neden olur. Sonraki çağrılar `Force` aynı sonucu döndürecek, ancak herhangi bir kod yürütmüyor.
 
-Aşağıdaki kod yavaş ifadeler kullanımını ve kullanımını göstermektedir `Force`. Bu kodda, türü `result` olduğu `Lazy<int>`ve `Force` yöntemi döndürür bir `int`.
+Aşağıdaki kod, geç ifadelerin kullanımını ve `Force`kullanımını gösterir. `result` Bu kodda, türü `Lazy<int>`, `Force`veyöntemi döndürür. `int`
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet73011.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet73011.fs)]
 
-Geç değerlendirme, ama `Lazy` yazın, sıraları için de kullanılır. Daha fazla bilgi için [dizileri](sequences.md).
+Yavaş değerlendirme, ancak `Lazy` tür değil, diziler için de kullanılır. Daha fazla bilgi için bkz. [diziler](sequences.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F# Dili Başvurusu](index.md)
-- [LazyExtensions Modülü](https://msdn.microsoft.com/library/86671f40-84a0-402a-867d-ae596218d948)
+- [LazyExtensions modülü](https://msdn.microsoft.com/library/86671f40-84a0-402a-867d-ae596218d948)

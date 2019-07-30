@@ -1,25 +1,25 @@
 ---
-title: DotNet restore komutu
-description: Bağımlılıklar ve projeye özgü araçları dotnet restore komutu ile geri yüklemeyi öğreneceksiniz.
+title: dotnet restore komutu
+description: Dotnet restore komutuyla bağımlılıkları ve projeye özel araçları nasıl geri yükleyeceğinizi öğrenin.
 ms.date: 05/29/2018
-ms.openlocfilehash: 3ddb9f679cfcab972483a4cb53ffe2b075867614
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17bbbe33e7cb7b13d6fb1c0e44bb77dd2bbe7020
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664811"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626344"
 ---
-# <a name="dotnet-restore"></a>DotNet restore
+# <a name="dotnet-restore"></a>dotnet restore
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Ad
 
-`dotnet restore` -Bir projenin Araçlar ve bağımlılıkları yükler.
+`dotnet restore`-Bir projenin bağımlılıklarını ve araçlarını geri yükler.
 
-## <a name="synopsis"></a>Synopsis
+## <a name="synopsis"></a>Özeti
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
 ```
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
@@ -27,7 +27,7 @@ dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-
 dotnet restore [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 ```
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache]
@@ -39,21 +39,37 @@ dotnet restore [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet restore` Komutu, proje dosyasında belirtilen projeye özgü araçları yanı sıra bağımlılıkları geri yüklemek için NuGet kullanır. Varsayılan olarak, Araçlar ile bağımlılıkları ve geri yükleme işlemi paralel olarak yürütülür.
+Bu `dotnet restore` komut, bağımlılıkları geri yüklemek için NuGet kullanır ve proje dosyasında belirtilen projeye özgü araçlardır. Varsayılan olarak, bağımlılıklar ve araçların geri yüklenmesi paralel olarak yürütülür.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Bağımlılıkları geri yüklemek için NuGet paketlerinin yer aldığı akışları gerekir. Akışları aracılığıyla genellikle sağlanan *NuGet.config* yapılandırma dosyası. CLI araçları yüklü olduğunda varsayılan yapılandırma dosyası sağlanır. Kendi oluşturarak ek akışları belirttiğiniz *NuGet.config* dosya proje dizininde. Bir komut isteminde çağrı başına ek akışları de belirtirsiniz.
+Bağımlılıkları geri yüklemek için, NuGet paketlerin bulunduğu akışlara ihtiyaç duyuyor. Akışlar genellikle *NuGet. config* yapılandırma dosyası aracılığıyla sağlanır. CLı araçları yüklendiğinde varsayılan bir yapılandırma dosyası sağlanır. Proje dizininde kendi *NuGet. config* dosyanızı oluşturarak ek akışlar belirlersiniz. Komut isteminde her çağrı için ek akışlar da belirtirsiniz.
 
-Bağımlılıklar için geri yüklenen paketler geri yükleme kullanarak işlemi sırasında yerleştirildiği belirtin `--packages` bağımsız değişken. Belirtilmezse, varsayılan NuGet paket önbelleğini, içinde geçtiği yerin kullanılıp kullanılmadığını `.nuget/packages` dizini ile tüm işletim sistemlerinde kullanıcının ana dizini. Örneğin, */home/user1* Linux üzerinde veya *C:\Users\user1* Windows üzerinde.
+Bağımlılıklar için, geri yükleme işlemi sırasında `--packages` bağımsız değişkeni kullanarak geri yüklenen paketlerin nereye yerleştirileceğini belirtirsiniz. Belirtilmezse, varsayılan NuGet paketi önbelleği kullanılır ve bu, tüm işletim sistemlerindeki kullanıcının giriş dizinindeki `.nuget/packages` dizininde bulunur. Örneğin, Linux üzerinde */home/user1* veya Windows üzerinde *c:\Users\User1* .
 
-Projeye özgü araçları için `dotnet restore` öncelikle hangi aracın iyileştirmesiyle doludur ve kendi proje dosyasında belirtilen Aracı'nın bağımlılıkları geri yüklemek için devam eder paket geri yükler.
+Projeye özgü araçlar için, `dotnet restore` önce aracın paketlenmesi gereken paketi geri yükler ve ardından, araç bağımlılıklarını proje dosyasında belirtilen şekilde geri yüklemeye devam eder.
 
-Davranışını `dotnet restore` komut bazı ayarlar tarafından etkilendi *Nuget.Config* varsa, dosya. Örneğin, ayarlamak `globalPackagesFolder` içinde *NuGet.Config* belirtilen klasörde NuGet paketlerini geri yerleştirir. Bu belirten bir alternatifidir `--packages` seçeneğini `dotnet restore` komutu. Daha fazla bilgi için [NuGet.Config başvuru](/nuget/schema/nuget-config-file).
+### <a name="nugetconfig-differences"></a>NuGet. config farklılıkları
 
-## <a name="implicit-dotnet-restore"></a>Örtük `dotnet restore`
+`dotnet restore` Komutun davranışı, varsa *NuGet. config* dosyasındaki ayarlardan etkilenir. Örneğin, `globalPackagesFolder` *NuGet. config* içindeki ayarı, geri yüklenen NuGet paketlerini belirtilen klasöre koyar. Bu `--packages` seçenek, `dotnet restore` komutunda seçeneğini belirtmeye yönelik bir alternatiftir. Daha fazla bilgi için bkz. [NuGet. config başvurusu](/nuget/schema/nuget-config-file).
 
-.NET Core 2.0 ile başlayarak `dotnet restore` aşağıdaki komutları gönderdiğinizde gerekirse örtük olarak çalıştırılan:
+Yok sayan `dotnet restore` üç özel ayar vardır:
+
+* [Bindingyönlendirmeler](/nuget/schema/nuget-config-file#bindingredirects-section)
+
+  Bağlama yeniden yönlendirmeleri `<PackageReference>` öğelerle çalışmaz ve .NET Core yalnızca NuGet paketleri `<PackageReference>` için öğeleri destekler.
+
+* [çözümden](/nuget/schema/nuget-config-file#solution-section)
+
+  Bu ayar Visual Studio 'ya özeldir ve .NET Core için uygulanmaz. .NET Core bir `packages.config` dosya kullanmaz ve bunun yerine NuGet `<PackageReference>` paketleri için öğeleri kullanır.
+
+* [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
+
+  NuGet, güvenilen paketlerin [platformlar arası doğrulanmasını henüz desteklemediğinden](https://github.com/NuGet/Home/issues/7939) , bu ayar geçerli değildir.
+
+## <a name="implicit-dotnet-restore"></a>İndirgen`dotnet restore`
+
+.NET Core 2,0 ' den itibaren `dotnet restore` , aşağıdaki komutları verdiğinizde, gerekirse örtülü olarak çalıştırılır:
 
 - [`dotnet new`](dotnet-new.md)
 - [`dotnet build`](dotnet-build.md)
@@ -63,130 +79,130 @@ Davranışını `dotnet restore` komut bazı ayarlar tarafından etkilendi *Nuge
 - [`dotnet publish`](dotnet-publish.md)
 - [`dotnet pack`](dotnet-pack.md)
 
-Çoğu durumda, artık açıkça kullanmanız gerekir `dotnet restore` komutu.
+Çoğu durumda, artık `dotnet restore` komutunu açıkça kullanmanız gerekmez.
 
-Bazı durumlarda, çalıştırılacak kullanışsız olabilir `dotnet restore` örtük olarak. Örneğin, yapı sistemi gibi bazı otomatik sistemler çağırmanız gerekir `dotnet restore` açıkça ağ kullanımını kontrol edebilir, böylece geri yükleme ne zaman gerçekleştiğini denetlemek için. Önlemek için `dotnet restore` kullanabileceğiniz örtük olarak çalıştırılmasının `--no-restore` örtük geri yükleme devre dışı bırakmak için aşağıdaki komutlardan birini bayrağıyla.
+Bazen, örtülü olarak çalıştırılması `dotnet restore` uygun olmayabilir. Örneğin, derleme sistemleri gibi bazı otomatikleştirilmiş sistemlerin, ağ kullanımını denetleyebilmeleri için geri `dotnet restore` yüklemenin ne zaman gerçekleşeceğini denetlemek için açıkça çağrılması gerekir. Örtülü geri yüklemeyi devre dışı bırakmak için bu komutlardan herhangi `--no-restore` biriyle bayrağı kullanabilirsiniz. `dotnet restore`
 
 ## <a name="arguments"></a>Arguments
 
 `ROOT`
 
-İsteğe bağlı geri yüklemek için proje dosyasının yolu.
+Geri yüklenecek proje dosyasının isteğe bağlı yolu.
 
 ## <a name="options"></a>Seçenekler
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
 `--configfile <FILE>`
 
-NuGet yapılandırma dosyası (*NuGet.config*) geri yükleme işlemi için kullanılacak.
+Geri yükleme işlemi için kullanılacak NuGet yapılandırma dosyası (*NuGet. config*).
 
 `--disable-parallel`
 
-Paralel olarak birden çok proje geri yükleme devre dışı bırakır.
+Paralel olarak birden çok projenin geri yüklenmesini devre dışı bırakır.
 
 `--force`
 
-Son geri yükleme başarılı olduysa bile çözülmesi için tüm bağımlılıkların zorlar. Bu bayrak belirten aynıdır silme *project.assets.json* dosya.
+Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.
 
 `-h|--help`
 
-Komut için kısa bir Yardım yazdırır.
+Komut için kısa bir yardım yazdırır.
 
 `--ignore-failed-sources`
 
-Yalnızca sürüm gereksinimi Karşılama paketleri varsa başarısız kaynakları hakkında uyar.
+Yalnızca sürüm gereksinimini karşılayan paketler varsa başarısız kaynaklar hakkında uyar.
 
 `--no-cache`
 
-Paketler ve HTTP isteklerini önbelleğe belirtir.
+Paketlerin ve HTTP isteklerinin önbelleğe alınamadı belirtir.
 
 `--no-dependencies`
 
-Projeden projeye (P2P) başvurular içeren bir proje geri yüklerken, kök proje ve başvuruları geri yükler.
+Projeden projeye (P2P) başvuruları olan bir projeyi geri yüklerken, başvuruları değil kök projeyi geri yükler.
 
 `--packages <PACKAGES_DIRECTORY>`
 
-Geri yüklenen paketler için dizini belirtir.
+Geri yüklenen paketlerin dizinini belirtir.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Paket geri yükleme için bir çalışma zamanı belirtir. Bu açıkça listelenen çalışma zamanları için paketler geri yüklemek için kullanılan `<RuntimeIdentifiers>` içindeki *.csproj* dosya. Çalışma zamanı tanımlayıcılarının (RID'ler) bir listesi için bkz. [RID Kataloğu](../rid-catalog.md). Bu seçeneği birden çok kez belirterek, birden fazla RID sağlar.
+Paket geri yüklemesi için bir çalışma zamanı belirtir. Bu, `<RuntimeIdentifiers>` *. csproj* dosyasındaki etiketinde açıkça listelenmeyen çalışma zamanları paketlerini geri yüklemek için kullanılır. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md). Bu seçeneği birden çok kez belirterek birden çok grup belirtin.
 
 `-s|--source <SOURCE>`
 
-Geri yükleme işlemi sırasında kullanılacak bir NuGet paket kaynağı belirtir. Bu ayar tüm kaynakları belirtilen geçersiz kılmaları *NuGet.config* dosyaları. Bu seçeneği birden çok kez belirterek, birden çok kaynaktan sağlanabilir.
+Geri yükleme işlemi sırasında kullanılacak bir NuGet paket kaynağını belirtir. Bu ayar *NuGet. config* dosyalarında belirtilen tüm kaynakları geçersiz kılar. Bu seçenek birden çok kez belirtilerek birden çok kaynak sağlanarak sağlayabilirsiniz.
 
 `--verbosity <LEVEL>`
 
-Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
+Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`
 
 `--interactive`
 
-Durdurmak ve kullanıcı girişi veya eylem (örneğin kimlik doğrulamasını tamamlamak için) için beklemek için komutu sağlar. .NET Core 2.1.400 itibaren.
+Komutun Kullanıcı girişini veya eylemini durdurmasına ve beklemesine izin verir (örneğin, kimlik doğrulamasını tamamlamaya). .NET Core 2.1.400 'dan beri.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 `--configfile <FILE>`
 
-NuGet yapılandırma dosyası (*NuGet.config*) geri yükleme işlemi için kullanılacak.
+Geri yükleme işlemi için kullanılacak NuGet yapılandırma dosyası (*NuGet. config*).
 
 `--disable-parallel`
 
-Paralel olarak birden çok proje geri yükleme devre dışı bırakır.
+Paralel olarak birden çok projenin geri yüklenmesini devre dışı bırakır.
 
 `-h|--help`
 
-Komut için kısa bir Yardım yazdırır.
+Komut için kısa bir yardım yazdırır.
 
 `--ignore-failed-sources`
 
-Yalnızca sürüm gereksinimi Karşılama paketleri varsa başarısız kaynakları hakkında uyar.
+Yalnızca sürüm gereksinimini karşılayan paketler varsa başarısız kaynaklar hakkında uyar.
 
 `--no-cache`
 
-Paketler ve HTTP isteklerini önbelleğe belirtir.
+Paketlerin ve HTTP isteklerinin önbelleğe alınamadı belirtir.
 
 `--no-dependencies`
 
-Projeden projeye (P2P) başvurular içeren bir proje geri yüklerken, kök proje ve başvuruları geri yükler.
+Projeden projeye (P2P) başvuruları olan bir projeyi geri yüklerken, başvuruları değil kök projeyi geri yükler.
 
 `--packages <PACKAGES_DIRECTORY>`
 
-Geri yüklenen paketler için dizini belirtir.
+Geri yüklenen paketlerin dizinini belirtir.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Paket geri yükleme için bir çalışma zamanı belirtir. Bu açıkça listelenen çalışma zamanları için paketler geri yüklemek için kullanılan `<RuntimeIdentifiers>` içindeki *.csproj* dosya. Çalışma zamanı tanımlayıcılarının (RID'ler) bir listesi için bkz. [RID Kataloğu](../rid-catalog.md). Bu seçeneği birden çok kez belirterek, birden fazla RID sağlar.
+Paket geri yüklemesi için bir çalışma zamanı belirtir. Bu, `<RuntimeIdentifiers>` *. csproj* dosyasındaki etiketinde açıkça listelenmeyen çalışma zamanları paketlerini geri yüklemek için kullanılır. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md). Bu seçeneği birden çok kez belirterek birden çok grup belirtin.
 
 `-s|--source <SOURCE>`
 
-Geri yükleme işlemi sırasında kullanılacak bir NuGet paket kaynağı belirtir. Bu kaynakları belirtilen tüm geçersiz kılmaları *NuGet.config* dosyaları. Bu seçeneği birden çok kez belirterek, birden çok kaynaktan sağlanabilir.
+Geri yükleme işlemi sırasında kullanılacak bir NuGet paket kaynağını belirtir. Bu, *NuGet. config* dosyalarında belirtilen tüm kaynakları geçersiz kılar. Bu seçenek birden çok kez belirtilerek birden çok kaynak sağlanarak sağlayabilirsiniz.
 
 `--verbosity <LEVEL>`
 
-Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
+Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`
 
 ---
 
 ## <a name="examples"></a>Örnekler
 
-Bağımlılıklar ve geçerli dizinde proje için araçları geri yükleme:
+Geçerli dizindeki proje için bağımlılıkları ve araçları geri yükle:
 
 `dotnet restore`
 
-Bağımlılıklar ve araçlar için geri `app1` proje verilen yolda bulunamadı:
+Verilen yolda bulunan `app1` projenin bağımlılıklarını ve araçlarını geri yükleyin:
 
 `dotnet restore ~/projects/app1/app1.csproj`
 
-Kaynak olarak sağlanan dosya yolunu kullanarak geçerli dizinde proje için Araçlar ve bağımlılıklar geri yükleme:
+Kaynak olarak belirtilen dosya yolunu kullanarak geçerli dizindeki proje için bağımlılıkları ve araçları geri yükleyin:
 
 `dotnet restore -s c:\packages\mypackages`
 
-Kaynakları olarak sağlanan iki dosya yolları kullanarak geçerli dizinde proje için Araçlar ve bağımlılıklar geri yükleme:
+Kaynak olarak girilen iki dosya yolunu kullanarak geçerli dizindeki proje için bağımlılıkları ve araçları geri yükleyin:
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
 
-Bağımlılıklar ve araçlar için geçerli dizin ve programlarını yalnızca en az çıktı projede geri yükleme:
+Geçerli dizindeki proje için bağımlılıkları ve araçları geri yükleyin ve yalnızca en az çıktıyı gösterir:
 
 `dotnet restore --verbosity minimal`

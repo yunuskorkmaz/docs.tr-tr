@@ -1,17 +1,17 @@
 ---
 title: Yöntemler
-description: 'Bilgi nasıl bir F# yöntemdir: kullanıma sunmak ve davranışı nesnelerin ve türleri ve işlevleri uygulamak için kullanılan bir türü ile ilişkili bir işlev.'
+description: Bir F# yöntemin, nesnelerin ve türlerin işlevlerini ve davranışlarını göstermek ve uygulamak için kullanılan bir türle ilişkili bir işlev olduğunu öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9b661a3ff7fa9a7704f5a31570acb62deaac2fcf
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 13503690a59ace13dacba93b6fce9ea3240c5cc2
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641764"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627444"
 ---
 # <a name="methods"></a>Yöntemler
 
-A *yöntemi* türü ile ilişkilendirilmiş bir işlevdir. Nesne yönelimli programlama, yöntemleri, kullanıma ve davranışı nesnelerin ve türleri ve işlevleri uygulamak için kullanılır.
+Bir *Yöntem* , bir türle ilişkili bir işlevdir. Nesne odaklı programlamada Yöntemler, nesnelerin ve türlerin işlevlerini ve davranışını göstermek ve uygulamak için kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -49,59 +49,59 @@ override self-identifier.method-name parameter-list [ : return-type ] =
 
 ## <a name="remarks"></a>Açıklamalar
 
-Önceki sözdiziminde, çeşitli forms yöntemi bildirimlerinin ve tanımlarının görebilirsiniz. Uzun metot gövdeleri eşittir (=) satır sonu izler ve tüm yöntem gövdesini girintili hale getirilir.
+Önceki sözdiziminde, yöntem bildirimlerinin ve tanımlarının çeşitli biçimlerini görebilirsiniz. Daha uzun Yöntem gövdelerinde, bir satır sonu eşittir işareti (=) ve tüm Yöntem gövdesi girintilenir.
 
-Öznitelikler için herhangi bir yöntem bildiriminde uygulanabilir. Bunlar, bir yöntem tanımını sözdizimi koyun ve genellikle ayrı bir satıra listelenir. Daha fazla bilgi için [öznitelikleri](../attributes.md).
+Öznitelikler, herhangi bir yöntem bildirimine uygulanabilir. Bir yöntem tanımı için sözdiziminin önüne ve genellikle ayrı bir satırda listelenir. Daha fazla bilgi için bkz. [öznitelikler](../attributes.md).
 
-Yöntemleri işaretlenebilir `inline`. Hakkında bilgi için `inline`, bkz: [satır içi işlevleri](../functions/inline-functions.md).
+Yöntemler işaretlenebilir `inline`. Hakkında `inline`bilgi için bkz. [satır içi işlevler](../functions/inline-functions.md).
 
-Satır içi yöntemler türü içinde kullanılan yinelemeli olarak olabilir. açıkça kullanmaya gerek yoktur `rec` anahtar sözcüğü.
+Satır içi olmayan yöntemler, türü içinde yinelemeli olarak kullanılabilir; `rec` anahtar sözcüğünü açıkça kullanmaya gerek yoktur.
 
 ## <a name="instance-methods"></a>Örnek yöntemleri
 
-Örnek yöntemleri ile bildirilmiş `member` anahtar sözcüğü ve *kendi kendine tanımlayıcısı*ve ardından bir nokta (.) ve yöntem adı ve parametreleri. İçin olduğu gibi `let` bağlamaları *parametre-listesi* desen olabilir. Genellikle, yöntemlerin bir kayıt düzeni formunda parantez içinde parametreleri görünür yöntemi içine alın F# ne zaman oluşturulduğu diğer .NET Framework dillerinde. Ancak, curried (parametrelerini boşluklarla ayırarak) Ayrıca yaygın biçimidir ve diğer desenleri de desteklenir.
+Örnek yöntemleri, `member` anahtar sözcüğü ve bir *kendinden tanımlayıcı*ile, ardından bir nokta (.) ve Yöntem adı ve parametreleri ile birlikte bildirilmiştir. Bağlamalarda olduğu gibi, *parametre listesi* bir kalıp olabilir. `let` Genellikle, yöntem parametrelerini parantez içinde, yöntemlerin diğer .NET Framework dillerde F# oluşturulduklarında görünme yöntemi olan bir demet formunda çevreleolursunuz. Ancak, curried formu (boşluklarla ayrılmış parametreler) de ortaktır ve diğer desenler de desteklenir.
 
-Aşağıdaki örnekte, soyut olmayan örnek yöntemi kullanımını ve tanımı gösterilmektedir.
+Aşağıdaki örnek Özet olmayan bir örnek yönteminin tanımını ve kullanımını gösterir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3401.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3401.fs)]
 
-Örnek yöntemler let bağlamaları kullanılarak tanımlanmış erişim alanlarına erişmek için kendi kendine tanımlayıcısı kullanmayın. Diğer üyeleri ve özelliklerine erişirken kendini tanımlayıcısı kullanın.
+Örnek yöntemleri içinde, Let bağlamaları kullanılarak tanımlanan alanlara erişmek için kendi kendine tanımlayıcıyı kullanmayın. Diğer üyelere ve özelliklere erişirken kendi kendine tanımlayıcıyı kullanın.
 
 ## <a name="static-methods"></a>Statik yöntemler
 
-Anahtar sözcüğü `static` örneği olmadan bir yöntem çağrılabilir belirtmek için kullanılır ve bir nesne örneği ile ilişkili değil. Aksi takdirde, örnek yöntemler yöntemlerdir.
+Anahtar sözcüğü `static` , bir yöntemin bir örnek olmadan çağrılabilecek olduğunu ve bir nesne örneğiyle ilişkilendirilmediği belirtmek için kullanılır. Aksi halde Yöntemler örnek yöntemlerdir.
 
-Sonraki bölümde örnek alanları ile bildirilen gösterir `let` özelliği üyelerini anahtar sözcüğü ile bildirilmiş `member` anahtar sözcüğü ve ile bildirilen bir statik yöntem `static` anahtar sözcüğü.
+Sonraki bölümde yer alan örnek, anahtar sözcükle belirtilen özellik üyeleri `let` `member` ve anahtar sözcüğüyle belirtilen `static` statik bir yöntem ile tanımlanan alanları gösterir.
 
-Aşağıdaki örnek, statik yöntemler kullanımını ve tanımı gösterilmektedir. Bu yöntem tanımlarını olduğunu varsayın `SomeType` önceki bölümde sınıfı.
+Aşağıdaki örnek, statik yöntemlerin tanımını ve kullanımını gösterir. Bu yöntem tanımlarının `SomeType` önceki bölümdeki sınıfında olduğunu varsayın.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3402.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3402.fs)]
 
-## <a name="abstract-and-virtual-methods"></a>Soyut ve sanal yöntemleri
+## <a name="abstract-and-virtual-methods"></a>Soyut ve sanal yöntemler
 
-Anahtar sözcüğü `abstract` bir yöntem bir sanal dağıtım yuvasına sahiptir ve bir tanımı sınıfında olmayabilir gösterir. A *sanal dağıtım yuvası* olduğundan çalışma zamanında sanal işlevini aramak için kullanılan dahili olarak tutulan bir tabloda işlevlerin bir giriş bir nesne yönelimli türünün çağırır. Sanal dağıtım mekanizması uygular mekanizmadır *çok biçimlilik*, nesne yönelimli programlama önemli bir özelliğidir. Bir tanımı olmadan en az bir soyut yöntemi olan bir sınıfı, bir *soyut sınıf*, yani bu sınıfının hiçbir örneği oluşturulabilir. Soyut sınıflar hakkında daha fazla bilgi için bkz: [soyut sınıflar](../abstract-classes.md).
+Anahtar sözcüğü `abstract` , bir yöntemin sanal bir dağıtım yuvasına sahip olduğunu ve sınıfta tanımına sahip olabileceğini gösterir. *Sanal dağıtım yuvası* , bir nesne odaklı türdeki sanal işlev çağrılarını aramak için çalışma zamanında kullanılan, dahili olarak tutulan işlevlerin bir girişi olan bir giriştir. Sanal dağıtım mekanizması, nesne odaklı bir Programlamanın önemli bir özelliği olan çok *biçimlilik*uygulayan bir mekanizmadır. Tanımı olmayan en az bir soyut metoda sahip bir sınıf *soyut bir sınıftır*ve bu sınıfın hiçbir örneği oluşturulamadığını gösterir. Soyut sınıflar hakkında daha fazla bilgi için bkz. [soyut sınıflar](../abstract-classes.md).
 
-Soyut yöntem bildirimleri bir yöntem gövdesi içermez. Bunun yerine, yöntemin adı iki nokta üst üste (:) ve bir tür imzası yöntemi tarafından izlenir. Bir yöntem tür imzası, fare işaretçisini bir yöntem adı Visual Studio Kod Düzenleyicisi'nde, üzerinde dışında parametre adları duraklattığınızda IntelliSense tarafından gösterilen aynıdır. Etkileşimli olarak çalışırken türü imzalarını fsi.exe yorumlayıcısı tarafından da görüntülenir. Tür imzası bir yöntemin kullanıma uygun ayırıcı semboller dönüş türüyle ardından, parametre türleri listesi tarafından oluşturulur. Curried parametreleri ayrılır `->` ve demet parametre ayrılır `*`. Bağımsız değişken tarafından gelen dönüş değeri her zaman ayrılmış bir `->` sembol. Parantezler, bir işlev türü bir parametre olduğunda gibi karmaşık parametreler, Grup veya tek bir parametre yerine iki parametre olarak bir tanımlama grubu ne zaman işlendiğini belirten kullanılabilir.
+Soyut yöntem bildirimleri bir yöntem gövdesi içermez. Bunun yerine, yöntemin adı iki nokta üst üste gelir (:) ve yöntemi için bir tür imzası. Bir yöntemin tür imzası, fare işaretçisini parametre adları hariç Visual Studio Code düzenleyicisinde bir yöntem adı üzerinde duraklatdığınızda IntelliSense tarafından gösterilenle aynı olur. Etkileşimli olarak çalışırken tür imzaları, fsi. exe yorumlayıcı tarafından da görüntülenir. Bir yöntemin tür imzası, parametre türleri ve ardından dönüş türü, uygun ayırıcı sembolleri ile eklenerek oluşturulur. Curried parametreleri ile ayrılır `->` ve demet parametreleri ile `*`ayrılır. Dönüş değeri her zaman bağımsız değişkenlerden bir `->` sembol ile ayrılır. Parantezler, bir işlev türü parametre olduğunda ya da bir kayıt düzeninin iki parametre yerine tek bir parametre olarak ele alındığı zaman göstermek için, karmaşık parametreleri gruplandırmak için kullanılabilir.
 
-De soyut yöntemler varsayılan tanımları tanımı sınıfa ekleme ve kullanma tanıyabilirsiniz `default` anahtar sözcüğü, bu konudaki sözdizimi bloğunda gösterildiği gibi. Aynı sınıf içinde bir tanıma sahip soyut bir yöntemi, diğer .NET Framework dillerinde sanal bir yöntem eşdeğerdir. Bir tanımı var olup olmadığını `abstract` anahtar sözcüğü, sınıfın sanal işlev tablosuna yeni bir dağıtım yuvası oluşturur.
+Ayrıca, bu konudaki Sözdizimi bloğunda gösterildiği gibi, tanımı sınıfa ekleyerek ve `default` anahtar sözcüğünü kullanarak soyut yöntemlere varsayılan tanımlamalar da verebilirsiniz. Aynı sınıfta bir tanımı olan soyut bir yöntem, diğer .NET Framework dillerdeki sanal bir yönteme eşdeğerdir. Bir tanım olup olmadığı, `abstract` anahtar sözcüğü sınıfı için sanal işlev tablosunda yeni bir dağıtım yuvası oluşturur.
 
-Bir taban sınıfı soyut yöntemlerini mi uygulayan bağımsız olarak, türetilmiş sınıflar uygulamaları soyut yöntemler sağlar. Türetilen bir sınıfta bir soyut yönteminden uygulamak için kullanımı dışında türetilmiş sınıf içinde aynı ada ve imzaya sahip bir yöntemi tanımlamak `override` veya `default` anahtar sözcüğü ve yöntem gövdesini belirtin. Anahtar sözcükler `override` ve `default` tam olarak aynı anlama gelir. Kullanma `override` yeni bir temel sınıf uygulaması; kılma kullanırsanız `default` özgün soyut bildirimiyle aynı sınıftaki bir uygulama oluşturduğunuzda. Kullanmayın `abstract` anahtar sözcüğü, soyut temel sınıfta bildirilen yöntemini uygulayan bir yöntem.
+Bir temel sınıfın soyut yöntemlerini uygulayıp uygulamamasından bağımsız olarak, türetilmiş sınıflar soyut yöntemler için uygulamalar sağlayabilir. Türetilmiş bir sınıfta soyut bir yöntem uygulamak için, türetilmiş sınıfta aynı ada ve imzaya sahip bir yöntemi tanımlayın, `override` or `default` anahtar sözcüğünü kullanın ve Yöntem gövdesini sağlayın. Anahtar sözcükler `override` ve `default` tam olarak aynı şey anlamına gelir. Yeni `override` Yöntem bir temel sınıf uygulamasını geçersiz kıldığında kullanın; özgün `default` soyut bildirimle aynı sınıfta bir uygulama oluşturduğunuzda kullanın. Temel sınıfta soyut olarak `abstract` tanımlanan yöntemi uygulayan yöntemde anahtar sözcüğünü kullanmayın.
 
-Aşağıdaki örnekte bir soyut yönteminden `Rotate` bir varsayılan uygulama, .NET Framework sanal bir yöntem denk olan.
+Aşağıdaki örnek, bir .NET Framework sanal yönteminin `Rotate` eşdeğeri olan varsayılan bir uygulamaya sahip olan soyut bir yöntemi gösterir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3403.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3403.fs)]
 
-Aşağıdaki örnek, bir temel sınıf yöntemini geçersiz kılan türetilmiş bir sınıf göstermektedir. Bu durumda geçersiz kılma davranışı değiştirir, böylece yöntemi hiçbir şey yapmaz.
+Aşağıdaki örnek, bir temel sınıf yöntemini geçersiz kılan türetilmiş bir sınıfı gösterir. Bu durumda, geçersiz kılma yöntemi, yöntemin hiçbir şey yapabilmesi için davranışı değiştirir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3404.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3404.fs)]
 
 ## <a name="overloaded-methods"></a>Aşırı yüklenmiş yöntemler
 
-Belirli bir türde aynı ada sahip olan ancak farklı bağımsız değişkenleri olan yöntemleri aşırı yüklenmiş yöntemlerdir. İçinde F#, isteğe bağlı bağımsız değişkenler genellikle aşırı yüklenmiş yöntemler yerine kullanılır. Bununla birlikte, bağımsız değişken değil curried form, tanımlama grubu form olması koşuluyla aşırı yüklenmiş yöntemler dilde izin verilir.
+Aşırı yüklenmiş yöntemler, belirli bir tür içinde özdeş adlara sahip ancak farklı bağımsız değişkenleri olan yöntemlerdir. F#' Da, isteğe bağlı bağımsız değişkenler genellikle aşırı yüklenmiş yöntemler yerine kullanılır. Ancak, bağımsız değişkenlerin bir curried form değil, tanımlama grubu biçiminde olması şartıyla, dilde aşırı yüklenmiş yöntemlere izin verilir.
 
 ## <a name="optional-arguments"></a>İsteğe bağlı bağımsız değişkenler
 
-İle başlayarak F# 4.1, varsayılan parametre değeri ile isteğe bağlı bağımsız değişkenlere yöntemleri de vardır.  C# kod ile birlikte çalışma kolaylaştırmaya yardımcı olması için budur.  Aşağıdaki örnek, sözdizimini gösterir:
+4,1 ile F# başlayarak, metotlarda varsayılan parametre değeri ile isteğe bağlı bağımsız değişkenlere de sahip olabilirsiniz.  Bu, C# kodla birlikte çalışabilirliği kolaylaştırmaya yardımcı olur.  Aşağıdaki örnek söz dizimini göstermektedir:
 
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.
@@ -109,13 +109,13 @@ type C() =
     __.M([<Optional; DefaultParameterValue(12)>] i) = i + 1
 ```
 
-İçinde geçirilen değer için Not `DefaultParameterValue` giriş türüyle eşleşmelidir.  Yukarıdaki örnekte olduğu bir `int`.  Bir tamsayı olmayan değerde geçirmeye çalışırken `DefaultParameterValue` bir derleme hatasına neden olur.
+İçin `DefaultParameterValue` geçirilen değerin giriş türüyle eşleşmesi gerektiğini unutmayın.  Yukarıdaki örnekte, bir `int`.  Tamsayı olmayan bir değeri `DefaultParameterValue` ' a geçirmeye çalışmak, derleme hatasına neden olur.
 
-## <a name="example-properties-and-methods"></a>Örnek: Özellikleri ve yöntemleri
+## <a name="example-properties-and-methods"></a>Örnek: Özellikler ve Yöntemler
 
-Aşağıdaki örnek, alanları, özel işlevler, özellikler ve bir statik yöntem örnekleri olan bir türü içerir.
+Aşağıdaki örnek, alan, özel işlevler, Özellikler ve statik bir yöntem örnekleri içeren bir tür içerir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3406.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3406.fs)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

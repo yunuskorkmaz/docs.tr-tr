@@ -1,5 +1,5 @@
 ---
-title: extern diğer adı - C# başvurusu
+title: extern diğer ad C# -başvuru
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,42 +9,42 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: d2ecd566731c3d2d472034ecb6412432af24c847
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: cfb662203216aa6ca208ceec20d55164c65163dc
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422057"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626652"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (C# Başvurusu)
-İki sürümünü tam olarak nitelenmiş tür adları aynı bütünleştirilmiş kodları başvuru yapması gerekli olabilir. Örneğin, aynı uygulamada iki veya daha fazla derleme sürümünü kullanmanız gerekebilir. Bir dış bütünleştirilmiş diğer adı kullanarak, aynı dosyada kullanılmak üzere etkinleştirir diğer ad tarafından adlandırılan kök düzeyinde ad alanları içinde her derlemenin ad alanlarını sarmalanabilir.  
+Aynı tam tür adlarına sahip derlemelerin iki sürümüne başvurmanız gerekebilir. Örneğin, bir derlemenin iki veya daha fazla sürümünü aynı uygulamada kullanmanız gerekebilir. Bir dış derleme diğer adı kullanarak, her derlemeden ad alanları, diğer ad tarafından adlandırılan ve aynı dosyada kullanılmasına olanak sağlayan kök düzeyi ad alanları içinde sarmalanabilir.  
   
 > [!NOTE]
->  [Extern](../../../csharp/language-reference/keywords/extern.md) anahtar sözcüğü yönetilmeyen kodda yazılmış bir yöntemi bildirmek, bir yöntemi değiştirici olarak da kullanılır.  
+>  [Extern](../../../csharp/language-reference/keywords/extern.md) anahtar sözcüğü, yönetilmeyen kodda yazılmış bir yöntemi bildiren bir yöntem değiştiricisi olarak da kullanılır.  
   
- İki derlemenin aynı tam olarak nitelenmiş tür adları ile başvurmak için bir diğer ad bir komut isteminde şu şekilde belirtilmelidir:  
+ Aynı tam tür adlarıyla iki derlemeye başvurmak için, bir diğer ad aşağıdaki gibi bir komut isteminde belirtilmelidir:  
   
  `/r:GridV1=grid.dll`  
   
  `/r:GridV2=grid20.dll`  
   
- Bu dış diğer oluşturur `GridV1` ve `GridV2`. Bir programın gelen bu diğer adlar kullanmak için bunları kullanarak başvuru `extern` anahtar sözcüğü. Örneğin:  
+ Bu, dış diğer adları `GridV1` oluşturur `GridV2`ve. Bu diğer adları bir program içinden kullanmak için `extern` anahtar sözcüğünü kullanarak bunlara başvurun. Örneğin:  
   
  `extern alias GridV1;`  
   
  `extern alias GridV2;`  
   
- Parallels (ancak içinde yer almıyor) bir ek kök düzeyinde ad alanı her extern diğer ad bildirimi tanıtır genel ad. Bu nedenle her derlemesinden türleri için belirsizlik kökü uygun namespace-diğer kullanıcıların tam adı, kullanarak bulunulabilir.  
+ Her extern diğer ad bildirimi, genel ad alanını paraleller (ancak içinde olmayan) ek bir kök düzeyi ad alanı sunar. Bu nedenle, her bir derlemeden türler, uygun ad alanı-diğer adı altında belirtildiği gibi tam nitelikli adı kullanılarak belirsizlik olmadan başvuruda bulunulabilir.  
   
- Önceki örnekte, `GridV1::Grid` kılavuz denetiminden olacaktır `grid.dll`, ve `GridV2::Grid` kılavuz denetiminden olacaktır `grid20.dll`.  
+ Önceki örnekte, `GridV1::Grid` kılavuz `grid.dll`denetimi olur ve `GridV2::Grid` kılavuz denetimi `grid20.dll`olacaktır.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C#Başvurunun](../../../csharp/language-reference/index.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
-- [:: İşleç](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
-- [/ Reference (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
+- [:: İşleç](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
+- [/Reference (C# derleyici seçenekleri)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)

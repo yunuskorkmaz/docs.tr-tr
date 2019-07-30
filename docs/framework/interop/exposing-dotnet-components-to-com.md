@@ -8,21 +8,21 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2b2f550b21a8d64968c6280cc1a29c1d18bfabd
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c88466df32a4167b2b32a7cc0f64eb306e392611
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364014"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629351"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>.NET Framework Bileşenlerini COM'da Gösterme
 .NET türü yazmak ve yönetilmeyen koddan Bu türün kullanılması, geliştiriciler için ayrı etkinliklerdir. Bu bölümde, COM istemcileriyle birlikte çalışan yönetilen kod yazmak için çeşitli ipuçları açıklanmaktadır:  
   
-- [Birlikte çalışma için .NET türlerini niteleme](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
+- [Birlikte çalışma için .NET türlerini niteleme](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md).  
   
      COM 'da kullanıma sunmak istediğiniz tüm yönetilen türler, Yöntemler, özellikler, alanlar ve olaylar ortak olmalıdır. Türler, COM ile çağrılabilen tek Oluşturucu olan ortak parametresiz bir oluşturucuya sahip olmalıdır.  
   
-- [Birlikte çalışma öznitelikleri uygulanıyor](../../../docs/framework/interop/applying-interop-attributes.md).  
+- [Birlikte çalışma öznitelikleri uygulanıyor](../../../docs/standard/native-interop/apply-interop-attributes.md).  
   
      Yönetilen kod içindeki özel öznitelikler bir bileşenin birlikte çalışabilirliğini artırabilir.  
   

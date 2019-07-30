@@ -1,23 +1,23 @@
 ---
 title: Tür Genişletmeleri
-description: Bilgi nasıl F# türü uzantılara izin ver bir önceden tanımlanmış nesne türü için yeni üye ekleyin.
+description: Tür uzantılarının F# daha önce tanımlanmış bir nesne türüne yeni üyeler eklemenize nasıl izin vereceğinizi öğrenin.
 ms.date: 02/08/2019
-ms.openlocfilehash: 69fb3b771b5334c5771f2ac75341b38c1dad5b90
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 502b8636052139b39c800447870c6076a8cd2643
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982611"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630192"
 ---
 # <a name="type-extensions"></a>Tür uzantıları
 
-Tür Uzantıları (olarak da adlandırılan _genişletmelerinde_) olan bir aile özelliklerinin bir önceden tanımlanmış nesne türü için yeni üye eklemenizi sağlar. Üç özellikleri şunlardır:
+Tür uzantıları ( _genişletmeler_de denir), daha önce tanımlanmış bir nesne türüne yeni üyeler eklemenize olanak sağlayan bir özellik ailesidir. Üç özellik şunlardır:
 
 * İç tür uzantıları
-* İsteğe bağlı türü uzantıları
-* Genişletme yöntemleri
+* İsteğe bağlı tür uzantıları
+* Uzantı yöntemleri
 
-Her farklı senaryolarda kullanılabilir ve farklı Artıları ve eksileri vardır.
+Her biri farklı senaryolarda kullanılabilir ve farklı avantajları vardır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,11 +40,11 @@ type Extensions() =
 
 ## <a name="intrinsic-type-extensions"></a>İç tür uzantıları
 
-Gerçek tür uzantısı kullanıcı tarafından tanımlanan bir türü genişleten bir türü uzantısıdır.
+İç tür uzantısı, Kullanıcı tanımlı bir türü genişleten bir tür uzantısıdır.
 
-Aynı dosyada iç tür uzantıları tanımlanan **ve** aynı ad alanı veya modül olarak genişletme türü. Diğer bir tanımı bunları neden olacak olan [isteğe bağlı türü uzantıları](type-extensions.md#optional-type-extensions).
+İç tür uzantılarının, genişledikleri türle aynı dosyada **ve** aynı ad alanında veya modülde tanımlanması gerekir. Diğer herhangi bir tanım, [isteğe bağlı tür uzantılarına](type-extensions.md#optional-type-extensions)neden olur.
 
-İç tür uzantıları bazen işlevi türü bildirimden ayırmak için bir temizleme yoludur. Aşağıdaki örnek, gerçek tür uzantısı tanımlamak gösterilmektedir:
+İç tür uzantıları bazen tür bildiriminden işlevselliği birbirinden ayıran temizleyici bir yoldur. Aşağıdaki örnek, bir iç tür uzantısının nasıl tanımlanacağını göstermektedir:
 
 ```fsharp
 namespace Example
@@ -64,21 +64,21 @@ type Variant with
     member x.Print() = Variant.print x
 ```
 
-Bir tür uzantısı kullanarak aşağıdakilerin her biri ayrı sağlar:
+Bir tür uzantısı kullanmak, aşağıdakilerin her birini ayırmanızı sağlar:
 
-* Bildirimi bir `Variant` türü
-* Yazdırma işlevselliği `Variant` "şeklini" bağlı olarak sınıfı
-* Nesne stiliyle yazdırma işlevselliği erişmek için bir yol `.`-gösterimi
+* Bir `Variant` türün bildirimi
+* `Variant` Sınıfı "şekle" göre yazdırma işlevselliği
+* Nesne stili `.`gösterimle yazdırma işlevlerine erişmenin bir yolu
 
-Bu üye olarak her şey üzerinde tanımlama alternatiftir `Variant`. Doğal olarak daha iyi bir yaklaşım olmasa da, bu işlevsellik bazı durumlarda daha net bir temsilini olabilir.
+Bu, her şeyi üzerinde `Variant`üye olarak tanımlamaya alternatiftir. Doğal olarak daha iyi bir yaklaşım olmasa da, bazı durumlarda işlevlerin temizleyici bir gösterimi olabilir.
 
-İç tür uzantıları büyütmek ve tür yansıma tarafından incelendiğinde tür üzerinde görünür bir türün üyeleri olarak derlenir.
+İç tür uzantıları, genişlettikleri türün üyeleri olarak derlenir ve tür yansıma tarafından incelenirse tür üzerinde görünür.
 
-## <a name="optional-type-extensions"></a>İsteğe bağlı türü uzantıları
+## <a name="optional-type-extensions"></a>İsteğe bağlı tür uzantıları
 
-İsteğe bağlı tür uzantısı özgün modülü, ad alanı veya Genişletilmekte olan türün derlemenin dışında görünür bir uzantısıdır.
+İsteğe bağlı bir tür uzantısı, genişletilmekte olan türün özgün modülünün, ad alanının veya derlemenin dışında görünen bir uzantıdır.
 
-İsteğe bağlı türü uzantıları kendiniz tanımlamadığınız bir türü genişletmek için kullanışlıdır. Örneğin:
+İsteğe bağlı tür uzantıları, kendi tanımladığınız bir türü genişletmek için faydalıdır. Örneğin:
 
 ```fsharp
 module Extensions
@@ -95,19 +95,19 @@ type IEnumerable<'T> with
         }
 ```
 
-Artık erişebilirsiniz `RepeatElements` üyesi ise gibi <xref:System.Collections.Generic.IEnumerable%601> sürece `Extensions` modülü içinde çalışmakta olduğunuz kapsam içinde açılır.
+Artık, `Extensions` modül üzerinde `RepeatElements` çalıştığınız kapsamda açıldığı sürece bir üyesi olan <xref:System.Collections.Generic.IEnumerable%601> olarak erişebilirsiniz.
 
-Genişletilmiş tür yansıma tarafından incelendiğinde, isteğe bağlı uzantılar görünmez. İsteğe bağlı uzantılar, modüller halinde olmalıdır ve uzantıyı içeren modül açık veya aksi halde kapsam içinde olduğunda yalnızca kapsamda oldukları.
+İsteğe bağlı uzantılar, yansıma tarafından incelenmişse genişletilmiş tür üzerinde görünmez. İsteğe bağlı uzantılar modüllerde olmalıdır ve yalnızca uzantıyı içeren modül açık olduğunda ya da kapsamda yoksa kapsam içinde yer alır.
 
-İsteğe bağlı uzantı üyeleri, nesne örneğinin örtülü olarak ilk parametre olarak geçirildiği statik üyeler için derlenmiştir. Örnek üyeleri veya göre nasıl bildirilen statik üye oldukları gibi ancak bunlar işlevi görür.
+İsteğe bağlı uzantı üyeleri, nesne örneğinin örtük olarak ilk parametre olarak geçirildiği statik üyelere derlenir. Ancak bunlar, nasıl bildirilenler doğrultusunda örnek üye veya statik üyeler gibi davranır.
 
-İsteğe bağlı uzantı üyeleri olmayan de görünür C# veya VB tüketici. Bunlar yalnızca diğer tüketilebilir F# kod.
+İsteğe bağlı uzantı üyeleri, C# veya vb tüketicilerine de görünmez. Yalnızca başka F# bir kodda tüketilebilir.
 
-## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Genel SORUMLULUĞUN iç ve isteğe bağlı türü uzantıları
+## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>İç ve isteğe bağlı tür uzantılarının genel sınırlaması
 
-Burada tür değişkeni kısıtlı genel türde bir tür uzantısı bildirmek mümkündür. Uzantı bildirimi kısıtlaması bildirilen türü kısıtlamasını eşleştiğini gereksinimidir.
+Tür değişkeninin kısıtlı olduğu genel bir türde bir tür uzantısı bildirmek mümkündür. Gereksinim, uzantı bildiriminin kısıtlaması, belirtilen tür kısıtlamasıyla eşleşir.
 
-Bildirilen tür ve tür uzantısı arasında kısıtlamaları bile eşleştirilir, ancak bildirilen türünden tür parametresi üzerinde farklı bir gereksinim uygular genişletilmiş bir üyesinin gövdesi tarafından çıkarılan için bir kısıtlama mümkündür. Örneğin:
+Ancak, tanımlı bir tür ve tür uzantısı arasında kısıtlamalar eşleştirildiği halde, bir kısıtlama, tür parametresinde, belirtilen türden farklı bir gereksinim getiren bir genişletilmiş üyenin gövdesi tarafından çıkarsanamıyor. Örneğin:
 
 ```fsharp
 open System.Collections.Generic
@@ -119,19 +119,19 @@ type IEnumerable<'T> with
     member this.Sum() = Seq.sum this
 ```
 
-Bir isteğe bağlı tür uzantısı ile çalışmak için bu kodu erişmenin bir yolu vardır:
+Bu kodu isteğe bağlı bir tür uzantısıyla çalışacak şekilde almanın bir yolu yoktur:
 
-* Olduğu gibi `Sum` üye var. farklı bir kısıtlama `'T` (`static member get_Zero` ve `static member (+)`) daha ne tür uzantısı tanımlar.
-* Tür uzantısı olarak aynı kısıtlamasına sahip değiştirme `Sum` üzerinde tanımlanan kısıtlaması artık eşleşecektir `IEnumerable<'T>`.
-* Değiştirme `member this.Sum` için `member inline this.Sum` tür kısıtlamaları uyumsuz bir hata verir.
+* Olduğu gibi, `Sum` üyenin tür uzantısının tanımladığı sayıdan farklı bir `'T` kısıtlaması`static member get_Zero` ( `static member (+)`ve) vardır.
+* Tür uzantısının aynı kısıtlamaya `Sum` sahip olacak şekilde değiştirilmesi, ' deki `IEnumerable<'T>`tanımlı kısıtlamayla artık eşleşmeyecektir.
+* `member this.Sum` Olarak`member inline this.Sum` değiştirmek, tür kısıtlamalarının eşleşmeyen bir hata verir.
 
-İstenildiği gibi bir türü genişletmek gibi sunulan ve "alanında kayan" statik yöntem bulunmaktadır. Burada uzantı yöntemleri gerekli hale budur.
+İstenen, "boşluk olarak float" ve bir tür genişledikleri gibi sunulabilir statik yöntemlerdir. Bu, uzantı yöntemlerinin gerekli hale geldiği yerdir.
 
-## <a name="extension-methods"></a>Genişletme yöntemleri
+## <a name="extension-methods"></a>Uzantı yöntemleri
 
-Son olarak, genişletme yöntemleri (olarak da adlandırılır "C# stili uzantı üyeleri") içinde bildirilebilir F# olarak bir sınıf üzerinde bir statik üye yöntemi.
+Son olarak, uzantı yöntemleri (bazen "C# stil uzantısı üyeleri" olarak da adlandırılır) bir F# sınıf üzerinde statik üye yöntemi olarak ' de belirtilebilir.
 
-Genişletme yöntemleri, ne zaman uzantılar tür değişkeni sınırlamak bir genel tür tanımlamak istediğiniz için kullanışlıdır. Örneğin:
+Uzantı yöntemleri, tür değişkenini kısıtlayan genel bir tür üzerinde uzantı tanımlamak istediğinizde yararlıdır. Örneğin:
 
 ```fsharp
 namespace Extensions
@@ -144,32 +144,32 @@ type IEnumerableExtensions() =
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
-Kullanıldığında, bu kod görünmesini yapar gibi `Sum` tanımlanan <xref:System.Collections.Generic.IEnumerable%601>, sürece `Extensions` açılmış veya kapsamdadır.
+Kullanıldığında, bu kod ' de `Sum` <xref:System.Collections.Generic.IEnumerable%601>tanımlandığı gibi görünür, bu yüzden `Extensions` açık veya kapsam içinde yer alır.
 
 ## <a name="other-remarks"></a>Diğer açıklamalar
 
-Tür uzantıları ayrıca aşağıdaki özniteliklere sahiptir:
+Tür uzantıları da aşağıdaki özniteliklere sahiptir:
 
-* Erişilebilen herhangi bir türü genişletilebilir.
-* İç ve isteğe bağlı türü uzantıları tanımlayabilirsiniz _herhangi_ üye türü, yalnızca yöntemi. Bu nedenle uzantı özellikleri da örneğin, mümkündür.
-* `self-identifier` Belirtecini [söz dizimi](type-extensions.md#syntax) , sıradan üyelerdeki gibi çağrılmakta olan türün örneğini temsil eder.
-* Genişletilmiş üyeleri, statik veya örnek üyeler.
-* Bir tür uzantısı türü değişkenlerde bildirilen tür kısıtlamaları eşleşmesi gerekir.
+* Erişilebilen herhangi bir tür genişletilebilir.
+* İç ve isteğe bağlı tür uzantıları, yalnızca yöntemleri değil _herhangi bir_ üye türünü tanımlayabilir. Bu nedenle, örneğin uzantı özellikleri de mümkündür.
+* [Söz diziminde belirteç,](type-extensions.md#syntax) normal üyelerde olduğu gibi, çağrılan türün örneğini temsil eder. `self-identifier`
+* Genişletilmiş Üyeler statik veya örnek üyeleri olabilir.
+* Tür uzantısı üzerindeki tür değişkenleri, belirtilen tür kısıtlamasıyla eşleşmelidir.
 
-Aşağıdaki sınırlamalar türü uzantıları için de mevcuttur:
+Tür uzantıları için aşağıdaki sınırlamalar de mevcuttur:
 
 * Tür uzantıları sanal veya soyut yöntemleri desteklemez.
-* Tür uzantıları genişletmeleri geçersiz kılma yöntemleri desteklemez.
-* Tür uzantıları desteklemez [statik olarak çözümlenmiş tür Parametreleri'nde](generics/statically-resolved-type-parameters.md).
-* İsteğe bağlı türü uzantıları genişletmelerinde oluşturucuları desteklemez.
-* Tür uzantıları tanımlanamaz [yazın kısaltmalar](type-abbreviations.md).
-* Tür uzantıları için geçerli olmayan `byref<'T>` (bunlar bildirilebilir rağmen).
-* Tür Uzantıları (bunlar bildirilebilir rağmen) öznitelikler için geçerli değildir.
-* Aynı ada sahip diğer yöntemleri aşırı uzantıları tanımlayabilirsiniz ancak F# derleyici tercihi uzantısı olmayan yöntemlere belirsiz bir çağrı ise sağlar.
+* Tür uzantıları, geçersiz kılma yöntemlerini genişletmeler olarak desteklemez.
+* Tür uzantıları [statik olarak çözümlenen tür parametrelerini](./generics/statically-resolved-type-parameters.md)desteklemez.
+* İsteğe bağlı tür uzantıları, oluşturucuları genişletmeler olarak desteklemez.
+* Tür genişletmeleri [tür kısaltmaları](type-abbreviations.md)üzerinde tanımlanamaz.
+* Tür uzantıları için `byref<'T>` geçerli değildir (ancak bildirilenler olabilir).
+* Tür uzantıları, öznitelikler için geçerli değildir (ancak bildirilenler olabilir).
+* Aynı ada sahip diğer yöntemleri aşırı yükleyen uzantılar tanımlayabilirsiniz, ancak belirsiz bir çağrı varsa F# derleyici uzantı olmayan yöntemlere tercih verir.
 
-Son olarak, bir tür için birden çok gerçek tür uzantısı varsa, tüm üyelerin benzersiz olması gerekir. İsteğe bağlı türü uzantıları için farklı tür Uzantılardaki aynı türe üyeleri aynı adları olabilir. Belirsizlik hataları yalnızca istemci kodu aynı üye adını tanımlayan iki farklı kapsamı açarsa oluşur.
+Son olarak, bir tür için birden çok iç tür uzantısı varsa, tüm üyelerin benzersiz olması gerekir. İsteğe bağlı tür uzantıları için, aynı türe sahip farklı tür uzantılarındaki Üyeler aynı ada sahip olabilir. Belirsizlik hataları yalnızca istemci kodu aynı üye adlarını tanımlayan iki farklı kapsam açarsa oluşur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F# Dili Başvurusu](index.md)
-- [Üyeler](members/index.md)
+- [Üyeler](./members/index.md)

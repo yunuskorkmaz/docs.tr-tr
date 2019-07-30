@@ -1,17 +1,17 @@
 ---
-title: 'Özel durumlar: İnvalidArg işlevi'
-description: Bilgi nasıl F# 'invalidArg' işlevi bağımsız değişken özel durum oluşturur.
+title: 'Özel durumlar: invalidArg İşlevi'
+description: F# ' InvalidArg ' işlevinin bir bağımsız değişken özel durumu üretme hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1f0cbc9b7e805822544d6d54bc1fc69adf82967a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 010dbfe313f539093b4ee7a19984ef54500b072d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645483"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630296"
 ---
-# <a name="exceptions-the-invalidarg-function"></a>Özel durumlar: İnvalidArg işlevi
+# <a name="exceptions-the-invalidarg-function"></a>Özel durumlar: invalidArg İşlevi
 
-`invalidArg` İşlevi bağımsız değişken özel durum oluşturur.
+`invalidArg` İşlev bir bağımsız değişken özel durumu oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -21,13 +21,13 @@ invalidArg parameter-name error-message-string
 
 ## <a name="remarks"></a>Açıklamalar
 
-Önceki sözdiziminde parametre adı, bağımsız değişken geçersiz parametre adı bir dizedir. *Hata iletisi dizesi* bir, dize veya türünde bir değer `string`. Bu duruma `Message` özelliğini özel durum nesnesi.
+Önceki söz diziminde parametre adı, bağımsız değişkeni geçersiz olan parametre adına sahip bir dizedir. *Hata-ileti-dize* , sabit bir dize veya türünde `string`bir değer. Özel durum nesnesinin `Message` özelliği olur.
 
-Özel durum oluşturdu `invalidArg` olduğu bir `System.ArgumentException` özel durum. Aşağıdaki kod kullanışını `invalidArg` özel durum oluşturabilir.
+Tarafından `invalidArg` oluşturulan özel durum bir `System.ArgumentException` istisnadır. Aşağıdaki kod, bir özel durum `invalidArg` oluşturmak için kullanımını gösterir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6101.fs)]
 
-Aşağıdaki çıkış alınır (gösterilmemiştir) bir yığın çerçevesi izi tarafından izlenen.
+Çıktı, izleyen bir yığın izlemesi (gösterilmez) tarafından gerçekleştirilir.
 
 ```
 December
@@ -39,7 +39,7 @@ System.ArgumentException: Month parameter out of range.
 
 - [Özel Durum İşleme](index.md)
 - [Özel Durum Türleri](exception-types.md)
-- [Özel Durumlar: `try...with` İfadesi](the-try-with-expression.md)
-- [Özel Durumlar: `try...finally` İfadesi](the-try-finally-expression.md)
-- [Özel durumlar: `raise` işlevi](the-raise-function.md)
+- [Özel Durumlar: `try...with` İfade](the-try-with-expression.md)
+- [Özel Durumlar: `try...finally` İfade](the-try-finally-expression.md)
+- [Özel durumlar: `raise` işlev](the-raise-function.md)
 - [Özel Durumlar: `failwith` İşlevi](the-failwith-function.md)

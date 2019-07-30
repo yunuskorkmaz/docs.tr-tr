@@ -1,115 +1,115 @@
 ---
 title: F# Dili Başvurusu
-description: Bulma F# dili belirteçleri, kavramları, türleri, ifadeler ve derleyici tarafından desteklenen yapı konular bu başvuruyu dil özellik bilgileri.
+description: Bu F# başvurudan dil belirteçleri, kavramlar, türler, ifadeler ve derleyicinin desteklediği yapı konularına yönelik dil özelliği bilgilerini bulun.
 ms.date: 05/16/2016
-ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b37f9ddcd4fbf6939631f283be95ebf08cf072d6
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666449"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630688"
 ---
 # <a name="f-language-reference"></a>F# Dili Başvurusu
 
-Bu bölüm bir başvurudur F# dil, .NET hedefleyen bir çoklu paradigma programlama dili. F# Dil işlev, nesne yönelimli ve buyurgan programlama modellerini destekler.
+Bu bölüm, .NET hedefleyen çok faktörlü F# programlama dili olan dile bir başvurudur. F# Dil işlev, nesne yönelimli ve kesinlik temelli programlama modellerini destekler.
 
-## <a name="f-tokens"></a>F# Tokens
+## <a name="f-tokens"></a>F#Simgelerini
 
-Tablolarda anahtar sözcükler, simgeler ve belirteçleri olarak kullanılan sabit değerleri sağlayan başvuru konuları aşağıdaki tabloda gösterilmektedir F#.
+Aşağıdaki tabloda, içinde F#belirteç olarak kullanılan anahtar sözcükler, semboller ve sabit değerler tabloları sağlayan başvuru konuları gösterilmektedir.
 
 |Başlık|Açıklama|
 |-----|-----------|
-|[Klavye Başvurusu](keyword-reference.md)|Tüm hakkında daha fazla bilgi için bağlantılar içeren F# dil anahtar sözcükleri.|
-|[Simge ve İşleç Başvurusu](symbol-and-operator-reference/index.md)|Simgeler ve işleçler kullanılan bir tablo içeriyor F# dili.|
-|[Değişmez Değerler](literals.md)|Değişmez değerler için söz dizimini açıklar F# ve tür bilgilerini belirtmek nasıl F# değişmez.|
+|[Klavye Başvurusu](keyword-reference.md)|Tüm F# dil anahtar kelimeleri hakkındaki bilgilerin bağlantılarını içerir.|
+|[Simge ve İşleç Başvurusu](./symbol-and-operator-reference/index.md)|F# Dilde kullanılan bir sembol ve işleç tablosu içerir.|
+|[Değişmez Değerler](literals.md)|İçindeki F# değişmez değerler için söz dizimini ve değişmez değer için F# tür bilgilerinin nasıl belirtileceğini açıklar.|
 
 ## <a name="f-language-concepts"></a>F#Dil kavramları
 
-Dil kavramları açıklayan kullanılabilir başvuru konuları aşağıdaki tabloda gösterilmektedir.
+Aşağıdaki tabloda, dil kavramlarını tanımlayan kullanılabilir başvuru konuları gösterilmektedir.
 
 |Başlık|Açıklama|
 |-----|-----------|
-|[İşlevler](functions/index.md)|Tüm programlama dillerinde program yürütmenin temel birimi işlevlerdir. Diğer dillerde olduğu gibi bir F# işlevi bir ada sahip, parametreleri ve sınav zamanı bağımsız değişkenleri olabilir ve bir gövdeye sahip. F#Ayrıca ifadelerde örtülü bir tanım kısmi yoluyla işlevlerin yeni işlevleri ve curried işlevleri oluşturmak üzere işlevlerin oluşturulması adlandırılmamış işlevleri'ni kullanarak değerleri olarak işlevler değerlendirmesini gibi fonksiyonel programlama yapılarını destekler işlev bağımsız değişkenleri uygulama.|
-|[F# Türleri](fsharp-types.md)|Kullanılan türleri açıklayan F# ve nasıl F# türleri adlı ve açıklanmıştır.|
-|[Tür Çıkarımı](type-inference.md)|Açıklayan nasıl F# derleyici değerleri, değişkenleri, parametreler ve dönüş değerleri türlerini algılar.|
-|[Otomatik Genelleştirme](generics/automatic-generalization.md)|Genel yapılardan açıklar F#.|
-|[Devralma](inheritance.md)|Nesne yönelimli programlama subtyping ya da "olan bir" ilişkileri modellemek için kullanılan bir devralma açıklar.|
-|[Üyeler](members/index.md)|Üyelerini açıklar F# nesne türleri.|
-|[Parametreler ve Bağımsız Değişkenler](Parameters-and-Arguments.md)|Parametreleri tanımlama ve bağımsız değişkenleri işlevleri, yöntemlere ve özelliklere geçirme için dil desteğini açıklar. Bu başvuruya göre geçirme hakkında bilgi içerir.|
-|[İşleç Aşırı Yüklemesi](operator-overloading.md)|Aritmetik işleçler bir sınıf ya da kayıt türü ve genel düzeyde aşırı açıklar.|
-|[Tür Değiştirme ve Dönüştürmeler](casting-and-conversions.md)|Tür dönüştürmelerinde desteğini açıklar F#.|
-|[Erişim Denetimi](access-control.md)|Erişim denetimi açıklanmaktadır F#. Erişim denetimi, hangi istemcilerin vb. türleri, yöntemleri, İşlevler gibi belirli program öğelerini kullanabilir bildirme anlamına gelir.|
-|[Desen Eşleştirme](pattern-matching.md)|Tamamında kullanılan giriş verileri dönüştürmeye ilişkin kurallardır desenleri açıklar F# bir desen ile karşılaştırma verileri ayıklamak için dil, verileri bileşenlerine ayırmak veya çeşitli şekillerde verilerden bilgi ayıklamak.|
-|[Etkin Desenler](active-patterns.md)|Etkin desenler açıklanmaktadır. Etkin desenler, giriş verileri alt bölümlere adlandırılmış bölümler tanımlamanıza olanak sağlar. Etkin desenler, her bölüm için özelleştirilmiş bir şekilde veri ayırmak için kullanabilirsiniz.|
-|[Onaylamalar](assertions.md)|Açıklar `assert` bir ifade test etmek için kullanabileceğiniz bir hata ayıklama özelliği olan ifade. Hata ayıklama modunda başarısızlık durumunda, bir sistem hatası iletişim kutusu bir onay oluşturur.|
-|[Özel Durum İşleme](exception-handling/index.md)|Özel durum işleme desteği hakkında bilgi içeren F# dili.|
-|[Öznitelikleri](attributes.md)|Bir programlama yapısı için uygulanacak meta verilerini etkinleştir öznitelikleri açıklanmaktadır.|
-|[Kaynak Yönetimi: `use` Anahtar Sözcüğü](resource-management-the-use-keyword.md)|Anahtar sözcükler açıklar `use` ve `using`, hangi denetleyebilir başlatma ve kaynakların sürüm|
-|[Ad alanları](namespaces.md)|Ad alanı desteği açıklanmaktadır F#. Bir ad alanı program öğeleri gruplandırması için bir ad eklemek sağlayarak, ilgili işlevleri alanlarına kod düzenlemenize olanak tanır.|
-|[Modüller](modules.md)|Modüller açıklar. Bir F# modülüdür gruplandırması F# , değerleri, türleri ve işlev değerleri olarak gibi kod bir F# program. Kod modüllerinde gruplandırma ilgili kod bir arada tutmaya yardımcı olur ve programınızdaki ad çakışmalarını önlemek yardımcı olur.|
-|[Önemli Bildirimler: `open` Anahtar Sözcüğü](import-declarations-the-open-keyword.md)|Açıklayan nasıl `open` çalışır. İçeri aktarma bildirimi, modül veya öğeleri bir tam adı kullanmadan başvuru ad alanı belirtir.|
-|[İmzalar](signatures.md)|İmzalar ve imza dosyalarını açıklar. Bir imza dosyası bir dizi ortak imzalarını hakkında bilgi içeren F# türleri, ad alanları ve modüller gibi öğelerin program. Bu program öğelerini erişilebilirliğini belirtmek için kullanılabilir.|
-|[XML Belgeleri](xml-documentation.md)|Belge dosyaları için XML belge açıklamaları, olarak da bilinen üç eğik çizgi açıklamalarını oluşturma desteğini açıklar. Kod açıklamaları belgelerinden üretebilir F# diğer .NET dilleri olduğu gibi.|
-|[Ayrıntılı Söz Dizimi](verbose-syntax.md)|Sözdizimi açıklar F# basit söz dizimi etkinleştirilmediğinde oluşturur. Ayrıntılı sözdizimi tarafından belirtilen `#light "off"` kod dosyasının üst yönergesi.|
+|[İşlevler](./functions/index.md)|İşlevler, herhangi bir programlama dilinde program yürütmenin temel birimidir. Diğer dillerde olduğu gibi, bir F# işlevin adı vardır, parametreleri olabilir ve bağımsız değişkenler alabilir ve bir gövdeye sahip olabilir. F#Ayrıca, işlevleri değer olarak davranma, ifadelerde adlandırılmamış işlevleri kullanma, yeni işlevler, curried işlevleri ve kısmi olarak işlevlerin örtük tanımına göre işlev oluşturma gibi işlev programlama yapılarını destekler. işlev bağımsız değişkenlerinin uygulaması.|
+|[F# Türleri](fsharp-types.md)|İçinde F# kullanılan türleri ve türlerin adlandırılması ve açıklanme F# biçimini açıklar.|
+|[Tür Çıkarımı](type-inference.md)|F# Derleyicinin değer, değişken, parametre ve dönüş değeri türlerini nasıl kullandığını açıklar.|
+|[Otomatik Genelleştirme](./generics/automatic-generalization.md)|' De F#genel yapıları açıklar.|
+|[Devralma](inheritance.md)|Nesne odaklı programlamada "a-a" ilişkisini veya alt yazmayı modellemek için kullanılan devralmayı açıklar.|
+|[Üyeler](./members/index.md)|F# Nesne türlerinin üyelerini açıklar.|
+|[Parametreler ve Bağımsız Değişkenler](Parameters-and-Arguments.md)|Parametreleri tanımlama ve işlevlere, yöntemlere ve özelliklere bağımsız değişkenleri geçirme için dil desteğini açıklar. Başvuruya göre geçme hakkında bilgi içerir.|
+|[İşleç Aşırı Yüklemesi](operator-overloading.md)|Bir sınıf veya kayıt türünde ve genel düzeyde aritmetik işleçlerin nasıl aşırı yükleneceğini açıklar.|
+|[Tür Değiştirme ve Dönüştürmeler](casting-and-conversions.md)|İçindeki F#tür dönüştürmeleri için desteği açıklar.|
+|[Erişim Denetimi](access-control.md)|İçindeki F#erişim denetimini açıklar. Erişim denetimi, istemcilerin türler, Yöntemler, işlevler vb. gibi belirli program öğelerini kullanabildiklerini bildiren anlamına gelir.|
+|[Desen Eşleştirme](pattern-matching.md)|Verileri bir desenle karşılaştırmak, verileri yapısal parçalar halinde çıkarmak veya verileri çeşitli yollarla ayıklamak F# için dil genelinde kullanılan giriş verilerini dönüştürme kuralları olan desenleri açıklar.|
+|[Etkin Desenler](active-patterns.md)|Etkin desenleri açıklar. Etkin desenler, giriş verilerini bölümlendirilen adlandırılmış bölümler tanımlamanızı sağlar. Her bölüm için özelleştirilmiş bir şekilde verileri ayırmak için etkin desenleri kullanabilirsiniz.|
+|[Onaylamalar](assertions.md)|Bir ifadeyi test etmek için kullanabileceğiniz bir hata ayıklama özelliği olan ifadeyiaçıklar.`assert` Hata ayıklama modunda hata oluştuğunda bir onaylama işlemi bir sistem hatası iletişim kutusu oluşturur.|
+|[Özel Durum İşleme](/.exception-handling/index.md)|F# Dilde özel durum işleme desteği hakkında bilgi içerir.|
+|[özelliklerine](attributes.md)|Meta verilerin bir programlama yapısına uygulanmasını sağlayan öznitelikleri açıklar.|
+|[Kaynak yönetimi: `use` Anahtar Sözcüğü](resource-management-the-use-keyword.md)|, Kaynakların başlatılmasını ve serbest bırakılması için kullanabileceğiniz anahtar kelimeleri `use`açıklar `using`|
+|[öznitelikleri](namespaces.md)|İçinde F#ad alanı desteğini açıklar. Bir ad alanı, program öğeleri gruplandırmasına bir ad iliştirmenizi sağlayarak kodu ilgili işlevlerin alanlarıyla düzenlemenizi sağlar.|
+|[Modüller](modules.md)|Modüller açıklanmaktadır. F# Modül, bir F# programdaki değerler, türler ve işlev değerleri gibi bir F# kod gruplandırmasıdır. Modüllerde kod gruplandırma, ilgili kodu birlikte tutmaya yardımcı olur ve programınızda ad çakışmalarını önlemeye yardımcı olur.|
+|[Önemli Bildirimler: `open` Anahtar Sözcüğü](import-declarations-the-open-keyword.md)|Nasıl `open` çalıştığını açıklar. İçeri aktarma bildirimi, öğelerini tam nitelikli bir ad kullanmadan başvuralabileceğiniz bir modül veya ad alanını belirtir.|
+|[İmzalar](signatures.md)|İmzaları ve imza dosyalarını açıklar. İmza dosyası türler, ad alanları ve modüller gibi bir F# program öğeleri kümesinin genel imzaları hakkında bilgiler içerir. Bu program öğelerinin erişilebilirliğini belirtmek için kullanılabilir.|
+|[XML Belgeleri](xml-documentation.md)|Üçlü eğik çizgi açıklamaları olarak da bilinen XML belgesi açıklamaları için belge dosyası oluşturma desteğini açıklar. Kod açıklamalarından F# daha fazla .net dilinde olduğu gibi belgeler üretebilirsiniz.|
+|[Ayrıntılı Söz Dizimi](verbose-syntax.md)|Hafif sözdizimi etkin olmadığında F# yapıların sözdizimini açıklar. Ayrıntılı sözdizimi, kod dosyasının en `#light "off"` üstündeki yönergeyle belirtilir.|
 
 ## <a name="f-types"></a>F# Türleri
 
-Aşağıdaki tablo tarafından desteklenen türleri açıklayan başvuru konuları kullanılabilir gösterir F# dili.
+Aşağıdaki tabloda, F# dil tarafından desteklenen türleri tanımlayan kullanılabilir başvuru konuları gösterilmektedir.
 
 |Başlık|Açıklama|
 |-----|-----------|
-|[Değerleri](values/index.md)|Belirli bir türüne sahip sabit miktarlarının değerleri açıklar; değerleri tamsayı veya kayan nokta numaralarını, karakter veya metin, listeler, dizileri, diziler, diziler, ayrılmış birleşimler, kayıtları, sınıf türleri veya işlev değerleri olabilir.|
-|[Temel Türler](basic-types.md)|Kullanılan temel temel türleri açıklayan F# dili. Ayrıca karşılık gelen .NET türleri ve minimum ve maksimum değerler her türü için sağlar.|
-|[Birim Türü](unit-type.md)|Açıklar `unit` belirli bir değer; devamsızlık gösteren bir tür olan türü `unit` türüne sahip başka bir değer yok veya gerekli olduğunda, bir yer tutucu olarak görev yapar yalnızca tek bir değer.|
-|[Dizeler](strings.md)|Dizelerde açıklar F#. `string` Türü sabit metin, Unicode karakter dizisi olarak temsil eder. `string` için bir diğer addır `System.String` .NET Framework'teki.|
-|[Demetler](tuples.md)|Gruplandırmaları adlandırılmamış ancak sıralı değerleri muhtemelen farklı türde diziler açıklar.|
-|[F# Koleksiyon Türleri](fsharp-collection-types.md)|Genel bir bakış F# diziler, listeler, dizileri (seq), haritalar ve kümeler için türleri dahil olmak üzere, işlev koleksiyon türleri.|
-|[Listeler](lists.md)|Listelerini açıklar. Bir listede F# öğeleri sıralı, sabit bir dizi tümü aynı türde.|
-|[Seçenekler](options.md)|Seçenek türü açıklar. Bir seçenek F# bir değer olabilir veya olmayabilir kullanılır. Bir temel türü seçeneği vardır ve bu türde bir değer ya da tutabilir veya bir değer olmayabilir.|
-|[Diziler](sequences.md)|Dizileri açıklar. Mantıksal bir dizi öğelerinin bir dizisidir tümü tek. Gösterim literal öğesi sayısını gösteren daha küçük olabilir bireysel sırası öğeleri yalnızca gerekli olursa, hesaplanır.|
-|[Diziler](arrays.md)|Dizileri açıklar. Sabit boyutlu, sıfır tabanlı, kesilebilir dizileri ardışık veri öğelerinin tümü aynı türde dizilerdir.|
-|[Kayıtlar](records.md)|Kayıtları açıklar. Kayıtları basit toplamalarla üyeleri ile isteğe bağlı olarak adlandırılan değerleri temsil eder.|
-|[Ayrılmış Birleşimler](discriminated-unions.md)|Ayrılmış birleşimler, çeşitli adlandırılmış durumlarda, farklı olması olası değerlerini ve türlerini her biri olabilen değerleri için destek sağlayan açıklar.|
-|[Sabit Listeleri](enumerations.md)|Numaralandırmaları açıklar tanımlı bir dizi türleri değerleri olarak adlandırılır. Kod daha okunabilir ve sürdürülebilir hale getirmek için değişmez değerler yerine bunları kullanabilirsiniz.|
-|[Başvuru Hücreleri](reference-cells.md)|Başvuru semantiğiyle değişebilir değişkenleri oluşturmanıza olanak sağlayan depolama yerleridir başvuru hücreleri açıklar.|
-|[Tür Kısaltmaları](type-abbreviations.md)|Türleri için alternatif adlar olan tür kısaltmaları açıklar.|
-|[Sınıflar](classes.md)|Özellikleri, yöntemleri ve olayları olabilir nesneleri temsil eden türler sınıflarını açıklar.|
-|[Yapılar](structures.md)|Az miktarda veri ve basit davranışı sahip türleri bir sınıf daha verimli olabilir compact nesne türleri yapıları açıklar.|
-|[Arabirimler](interfaces.md)|Diğer sınıfları uygulayan ilgili üyeleri kümesini belirten ve arabirimler açıklanmaktadır.|
-|[Soyut Sınıflar](abstract-classes.md)|Uygulanmayanları, bazı veya tüm üyeleri bırakın ve böylece uygulamaları türetilmiş sınıflar tarafından sağlanması sınıflarının soyut sınıfları açıklar.|
-|[Tür Uzantıları](type-extensions.md)|Bir önceden tanımlanmış nesne türü için yeni üyeler eklemenize olanak sağlayan tür uzantıları açıklar.|
-|[Esnek Türler](flexible-types.md)|Esnek türler açıklanmaktadır. Bir esnek tür ek açıklamasına parametre, değişken veya değer türü ile uyumlu bir türe sahip bir göstergesi, uyumluluk sınıfları arabirimler ve nesne yönelimli bir hiyerarşideki konuma göre belirlendiği belirtilmiştir.|
-|[Temsilciler](delegates.md)|Bir nesne olarak bir işlev çağrısını temsil eden temsilciler açıklar.|
-|[Ölçü Birimleri](units-of-measure.md)|Ölçü birimleri açıklar. Kayan nokta değerleri olarak F# genellikle uzunluğu, toplu, yığın ve benzeri belirtmek için kullanılan ölçü birimlerini ilişkili.|
-|[Tür Sağlayıcıları](../tutorials/type-providers/index.md)|Açıklayan tür sağlar ve yerleşik tür sağlayıcılarını kullanarak veritabanları ve web hizmetleri için izlenecek yollar için bağlantılar sağlar.|
+|[deðerler](./values/index.md)|Belirli bir türe sahip sabit miktarlar olan değerleri açıklar; değerler tamsayı veya kayan nokta sayıları, karakterler veya metin, listeler, sıralar, diziler, tanımlama grupları, ayırt edici birleşimler, kayıtlar, sınıf türleri veya işlev değerleri olabilir.|
+|[Temel Türler](basic-types.md)|F# Dilde kullanılan temel temel türleri açıklar. Ayrıca, her tür için karşılık gelen .NET türlerini ve en düşük ve en yüksek değerleri sağlar.|
+|[Birim Türü](unit-type.md)|Belirli bir değerin yokluğunu gösteren bir tür olan türü açıklar `unit` ; tür, başka bir değer yoksa veya gerektiğinde yer tutucu görevi gören tek bir değer içerir. `unit`|
+|[Dizeler](strings.md)|İçindeki F#dizeleri açıklar. `string` Tür, Unicode karakter dizisi olarak sabit metni temsil eder. `string`, .NET Framework için `System.String` bir diğer addır.|
+|[Demetler](tuples.md)|Adlandırılmamış, ancak muhtemelen farklı türlerin sıralı değerlerinin gruplamaları olan tanımlama gruplarını açıklar.|
+|[F# Koleksiyon Türleri](fsharp-collection-types.md)|Diziler, listeler, F# diziler (seq), haritalar ve kümeler için türler de dahil olmak üzere işlevsel koleksiyon türlerine genel bakış.|
+|[Listeler](lists.md)|Listeleri açıklar. İçindeki F# bir liste, aynı türden tümü sıralanmış, sabit bir öğe dizisidir.|
+|[Seçenekler](options.md)|Seçenek türünü açıklar. ' De F# bir seçenek, bir değer varsa veya mevcut olmadığında kullanılır. Bir seçenek temel bir türe sahiptir ve bu tür bir değeri tutabilir ya da bir değere sahip olmayabilir.|
+|[Diziler](sequences.md)|Dizileri açıklar. Dizi, tek bir türdeki öğelerin mantıksal bir dizisidir. Tek tek dizi öğeleri yalnızca gerekliyse hesaplanır, bu nedenle gösterim bir sabit öğe sayısı değerinden daha küçük olabilir.|
+|[Diziler](arrays.md)|Dizileri açıklar. Diziler, hepsi aynı türde olan sabit boyutlu, sıfır tabanlı ve değiştirilebilir dizilerdir.|
+|[Kayıtlar](records.md)|Kayıtları açıklar. Kayıtlar, isteğe bağlı olarak Üyeler ile adlandırılmış değerlerin basit toplamlarını temsil eder.|
+|[Ayrılmış Birleşimler](discriminated-unions.md)|Her biri büyük olasılıkla farklı değerler ve türler içeren çeşitli adlandırılmış durumlardan biri olabilecek değerler için destek sağlayan ayırt edici birleşimleri açıklar.|
+|[Sabit Listeleri](enumerations.md)|Numaralandırmaların tanımlanmış bir adlandırılmış değerler kümesine sahip türleri olduğunu açıklar. Kodu daha okunaklı ve bakım yapılabilir hale getirmek için bunları değişmez değerler yerine kullanabilirsiniz.|
+|[Başvuru Hücreleri](reference-cells.md)|Başvuru semantiğinin değişebilir değişkenler oluşturmanızı sağlayan depolama konumları olan başvuru hücrelerini açıklar.|
+|[Tür Kısaltmaları](type-abbreviations.md)|Türler için alternatif adlar olan tür kısaltmalarını açıklar.|
+|[Sınıflar](classes.md)|Özelliklere, yöntemlere ve olaylara sahip olabilecek nesneleri temsil eden türler olan sınıfları açıklar.|
+|[Yapılar](structures.md)|Az miktarda veri ve basit davranışa sahip olan türler için bir sınıftan daha verimli olabilecek, Compact nesne türleri olan yapıları açıklar.|
+|[Arabirimler](interfaces.md)|Diğer sınıfların uygulayan ilgili üye kümelerini belirten arabirimlerini açıklar.|
+|[Soyut Sınıflar](abstract-classes.md)|Uygulamaların türetilmiş sınıflar tarafından sağlanabilmesi için bazı veya tüm üyeleri uygulanmayan sınıflar olan soyut sınıfları açıklar.|
+|[Tür Uzantıları](type-extensions.md)|Daha önce tanımlanmış bir nesne türüne yeni üyeler eklemenize olanak sağlayan tür uzantılarını açıklar.|
+|[Esnek Türler](flexible-types.md)|Esnek türleri açıklar. Esnek tür ek açıklaması, bir parametre, değişken veya değerin belirtilen tür ile uyumlu bir tür olduğunu belirtir; burada uyumluluk, nesne odaklı sınıfların veya arabirimlerin bulunduğu konuma göre belirlenir.|
+|[Temsilciler](delegates.md)|Bir işlev çağrısını nesne olarak temsil eden temsilcileri açıklar.|
+|[Ölçü Birimleri](units-of-measure.md)|Ölçü birimlerini açıklar. İçindeki F# kayan nokta değerleri, genellikle uzunluğu, hacmi, kütle, vb. belirtmek için kullanılan, ilişkili ölçü birimlerine sahip olabilir.|
+|[Tür Sağlayıcıları](../tutorials/type-providers/index.md)|Türü açıklar ve, veritabanlarına ve Web hizmetlerine erişmek için yerleşik tür sağlayıcılarını kullanma hakkındaki izlenecek yollara bağlantılar sağlar.|
 
-## <a name="f-expressions"></a>F# Expressions
+## <a name="f-expressions"></a>F#İfadelerde
 
-Aşağıdaki tabloda açıklayan konulara F# ifadeler.
+Aşağıdaki tabloda, ifadeleri betimleyen F# konular listelenmektedir.
 
 |Başlık|Açıklama|
 |-----|-----------|
-|[Koşullu ifadeler: `if...then...else`](conditional-expressions-if-then-else.md)|Açıklar `if...then...else` kodunun farklı dallara çalışan ve ayrıca verilen Boole ifadesi bağlı olarak farklı bir değer olarak değerlendirilen ifade.|
-|[Eşleşme İfadeleri](match-expressions.md)|Açıklar `match` karşılaştırma ifade desenleri temel alan dallanma denetim sağlayan bir ifade.|
-|[Döngüler: `for...to` İfade](loops-for-to-expression.md)|Açıklar `for...to` bir döngüde bir dizi bir döngü değişkeninin değerleri üzerinden yineleme yapmak için kullanılan ifade.|
-|[Döngüler: `for...in` İfade](loops-for-in-expression.md)|Açıklar `for...in` ifadesi, bir aralık ifadesi, sıra, list, dizi gibi bir sıralanabilir koleksiyonun içindeki bir desenle eşleşmeleri üzerinden yineleme yapmak için kullanılan uvozuje konstruktor veya numaralandırma destekleyen diğer yapı.|
-|[Döngüler: `while...do` İfade](loops-while-do-expression.md)|Açıklar `while...do` belirtilen test koşulu true olduğu sürece, yinelemeli yürütme (döngü) gerçekleştirmek için kullanılan ifade.|
-|[Nesne İfadeleri](object-expressions.md)|Bir mevcut temel tür, arabirimi veya arabirim kümesine göre bir dinamik olarak oluşturulmuş, anonim bir nesne türünün yeni örneğini oluşturma ifadeler nesne ifadeleri açıklar.|
-|[Gecikmeli İfadeler](lazy-expressions.md)|Hemen değerlendirilmeyen, ancak bunun yerine sonucu gerçekten gerekli olduğunda değerlendirilir hesaplamalar olan yavaş ifadeler açıklanmaktadır.|
-|[Hesaplama İfadeleri](computation-expressions.md)|Hesaplama ifadeleri açıklar F#, sıralı hesaplamalar yazmak için kullanışlı bir söz dizimi sağlayan ve birleşik kullanarak denetim akışı yapılarını ve bağlar. İçin kullanışlı bir söz dizimi sağlamak için kullanılabilir *monadları*, veri, Denetim ve yan etkileri işlevsel programlarda yönetmek için kullanılan bir işlevsel programlama özelliği. Hesaplama ifadesi, zaman uyumsuz iş akışı bir tür, zaman uyumsuz ve paralel hesaplamaları için destek sağlar. Daha fazla bilgi için [zaman uyumsuz iş akışları](asynchronous-workflows.md).|
-|[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)|Zaman uyumsuz iş akışları, zaman uyumsuz kod çok yakın şekilde, bir şekilde doğal olarak zaman uyumlu bir kod yazmak istediğiniz yazmanızı sağlayan bir dil özelliğini açıklar.|
-|[Kod Alıntıları](code-quotations.md)|Kod tırnak işaretleri, oluşturmak ve bunlarla çalışmak sağlayan bir dil özelliği açıklar F# ifadeleri programlı bir şekilde kod.|
-|[Sorgu İfadeleri](query-expressions.md)|Sorgu ifadeleri, LINQ için uygulayan bir dil özelliği açıklar F# ve bir veri kaynağı veya bir sıralanabilir koleksiyonun karşı sorgular yazmaya olanak tanır.|
+|[Koşullu Ifadeler:`if...then...else`](conditional-expressions-if-then-else.md)|Farklı kod dalları çalıştıran ve ayrıca verilen Boole ifadesine bağlı olarak farklı bir değer olarak değerlendirilen ifadeyiaçıklar.`if...then...else`|
+|[Eşleşme İfadeleri](match-expressions.md)|Desen kümesine sahip bir ifadenin karşılaştırmasına dayalı olarak dallanma denetimi sağlayan ifadeyiaçıklar.`match`|
+|[Lerin `for...to`İfadesini](loops-for-to-expression.md)|Bir döngü değişkeninin değer aralığı üzerinde bir döngüde yinelemek için kullanılan ifadeyiaçıklar.`for...to`|
+|[Lerin `for...in`İfadesini](loops-for-in-expression.md)|Bir Aralık ifadesi, sıra, liste, dizi ya da numaralandırmayı destekleyen diğer yapı gibi sıralanabilir bir koleksiyondaki bir düzenin eşleşmelerini yinelemek için kullanılan bir döngü yapısı olan ifadeyiaçıklar.`for...in`|
+|[Lerin `while...do`İfadesini](loops-while-do-expression.md)|Belirtilen test koşulu doğru olduğunda yinelemeli yürütmeyi (döngü) gerçekleştirmek için kullanılan ifadeyiaçıklar.`while...do`|
+|[Nesne İfadeleri](object-expressions.md)|Mevcut bir temel türü, arabirimi veya arabirim kümesini temel alan dinamik olarak oluşturulan, anonim nesne türünün yeni örneklerini oluşturan ifadeler olan nesne ifadelerini açıklar.|
+|[Gecikmeli İfadeler](lazy-expressions.md)|Hemen değerlendirilmediği hesaplamalar olan yavaş ifadeleri açıklar, ancak bunun yerine sonuç gerçekten gerektiğinde değerlendirilir.|
+|[Hesaplama İfadeleri](computation-expressions.md)|İçindeki F#hesaplama ifadelerini açıklar ve bu, denetim akışı yapıları ve bağlamaları kullanılarak sıralanmakta ve birleştirilebilir hesaplamalar yazmak için kullanışlı bir sözdizimi sağlar. Bunlar, işlevsel programlardaki verileri, denetimi ve yan etkileri yönetmek için kullanılabilen bir işlevsel programlama özelliği olan *monadları*için uygun bir sözdizimi sağlamak üzere kullanılabilir. Bir tür hesaplama ifadesi, zaman uyumsuz iş akışı, zaman uyumsuz ve paralel hesaplamalar için destek sağlar. Daha fazla bilgi için bkz. [zaman uyumsuz Iş akışları](asynchronous-workflows.md).|
+|[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)|Zaman uyumsuz kodu, doğal olarak zaman uyumlu olarak yazacağınız bir şekilde yazmanıza imkan tanıyan bir dil özelliği olan zaman uyumsuz iş akışlarını açıklar.|
+|[Kod Alıntıları](code-quotations.md)|Kod ifadelerini programlama yoluyla oluşturmanıza ve bunlarla F# çalışmanıza olanak tanıyan bir dil özelliği olan kod tekliflerini açıklar.|
+|[Sorgu İfadeleri](query-expressions.md)|İçin F# LINQ uygulayan ve bir veri kaynağına veya sıralanabilir koleksiyona karşı sorgular yazmanızı sağlayan bir dil özelliği olan sorgu ifadelerini açıklar.|
 
 ## <a name="compiler-supported-constructs"></a>Derleyici tarafından desteklenen yapılar
 
-Aşağıdaki tabloda, derleyici tarafından desteklenen özel yapıları açıklayan konulara listeler.
+Aşağıdaki tabloda, derleyicinin desteklediği özel yapıları anlatan konular listelenmektedir.
 
 |Konu|Açıklama|
 |-----|-----------|
-|[Derleyici Seçenekleri](compiler-options.md)|Komut satırı seçeneklerini açıklar F# derleyici.|
-|[Derleyici Yönergeleri](compiler-directives.md)|İşlemci yönergeleri ve derleyici yönergeleri açıklar.|
-|[Kaynak Satırı, Dosya ve Yol Tanımlayıcıları](source-line-file-path-identifiers.md)|Tanımlayıcılar açıklanmaktadır `__LINE__`, `__SOURCE_DIRECTORY__` ve `__SOURCE_FILE__`, kodunuzda kaynak satırı numarasını, dizin ve dosya adına erişmenize olanak tanıyan yerleşik değerleri şunlardır.|
+|[Derleyici Seçenekleri](compiler-options.md)|F# Derleyici için komut satırı seçeneklerini açıklar.|
+|[Derleyici Yönergeleri](compiler-directives.md)|İşlemci yönergelerini ve derleyici yönergelerini açıklar.|
+|[Kaynak Satırı, Dosya ve Yol Tanımlayıcıları](source-line-file-path-identifiers.md)|Kodunuzda kaynak satır `__LINE__`numarası, `__SOURCE_FILE__`dizin ve dosya adına erişmenizi sağlayan yerleşik değerler olan tanımlayıcıları `__SOURCE_DIRECTORY__` açıklar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

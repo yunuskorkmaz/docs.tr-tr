@@ -9,144 +9,144 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 93556d8345b09dcd196354e618f4d20f5db68998
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 1aa182ced462e5fc90b22019aaf424d400bb4fd5
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348522"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629667"
 ---
 # <a name="layout"></a>Düzen
-Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] düzen sistemi. Düzen hesaplamalar nasıl ve ne zaman ortaya anlamak, kullanıcı arabirimi oluşturmak için gerekli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+Bu konu başlığı altında [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , Düzen sistemi açıklanmaktadır. Düzen hesaplamalarının nasıl ve ne zaman gerçekleşeceğini anlamak içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Kullanıcı arabirimleri oluşturmak için önemlidir.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
-- [Sınırlayıcı kutular öğesi](#LayoutSystem_BoundingBox)  
+- [Öğe sınırlayıcı kutuları](#LayoutSystem_BoundingBox)  
   
 - [Düzen sistemi](#LayoutSystem_Overview)  
   
-- [Ölçme ve alt öğeleri düzenleme](#LayoutSystem_Measure_Arrange)  
+- [Alt öğeleri ölçme ve düzenleme](#LayoutSystem_Measure_Arrange)  
   
 - [Panel öğeleri ve özel düzen davranışları](#LayoutSystem_PanelsCustom)  
   
-- [Düzen performansla ilgili önemli noktalar](#LayoutSystem_Performance)  
+- [Düzen performansı konuları](#LayoutSystem_Performance)  
   
-- [Alt piksel işleme ve düzeni yuvarlama](#LayoutSystem_LayoutRounding)  
+- [Alt piksel Işleme ve yerleşim yuvarlama](#LayoutSystem_LayoutRounding)  
   
-- [Yenilikler](#LayoutSystem_whatsnext)  
+- [Sıradaki](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
-## <a name="element-bounding-boxes"></a>Sınırlayıcı kutular öğesi  
- Düzende hakkında düşünürken, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], tüm öğeler çevreleyen sınırlayıcı kutunun anlamak önemlidir. Her <xref:System.Windows.FrameworkElement> tüketilen düzeni sistem, düzene yarıklı bir dikdörtgen olarak düşünülebilir. <xref:System.Windows.Controls.Primitives.LayoutInformation> Sınıfı, bir öğenin Düzen ayırma veya yuva sınırları döndürür. Dikdörtgenin boyutu kullanılabilir ekran alanı, kısıtlamalar, Düzen özgü özellikler (örneğin, kenar boşlukları ve doldurma) ve üst bireysel davranışını boyutunu hesaplayarak belirlenir <xref:System.Windows.Controls.Panel> öğesi. Bu veri işleme, düzen sistemi belirli bir tüm alt öğeleri konumunu hesaplayabilirsiniz <xref:System.Windows.Controls.Panel>. Gibi özellikleri boyutlandırma üst öğede tanımlanan unutmamak gerekir bir <xref:System.Windows.Controls.Border>, alt öğelerini etkiler.  
+## <a name="element-bounding-boxes"></a>Öğe sınırlayıcı kutuları  
+ İçindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]yerleşimi düşünürken, tüm öğeleri çevreleyen sınırlayıcı kutuyu anlamak önemlidir. Düzen <xref:System.Windows.FrameworkElement> sistemi tarafından tüketilen her biri, düzene göre eğimli bir dikdörtgen olarak düşünülebilir. <xref:System.Windows.Controls.Primitives.LayoutInformation> Sınıfı, bir öğenin düzen ayırma veya yuvasının sınırlarını döndürür. Dikdörtgenin boyutu kullanılabilir ekran alanı, herhangi bir kısıtlamaların boyutu, düzene özgü özellikler (kenar boşluğu ve doldurma gibi) ve üst <xref:System.Windows.Controls.Panel> öğenin tek bir davranışı hesaplanarak belirlenir. Bu veriler işlenirken, Düzen sistemi belirli <xref:System.Windows.Controls.Panel>bir ' ın tüm alt öğelerinin konumunu hesaplayabilecektir. Üst öğede <xref:System.Windows.Controls.Border>tanımlanan boyutlandırma özelliklerinin, örneğin, alt öğelerini etkilediğini unutmamak önemlidir.  
   
- Aşağıdaki çizim basit bir düzen gösterir.  
+ Aşağıdaki çizimde basit bir düzen gösterilmektedir.  
   
- ![Tipik bir kılavuz, sınırlama kutusu yerleştirilmemiş gösteren ekran görüntüsü.](./media/layout/grid-no-bounding-box-superimpose.png)  
+ ![Sınırlama kutusu bulunmayan tipik bir kılavuz gösteren ekran görüntüsü.](./media/layout/grid-no-bounding-box-superimpose.png)  
   
- Bu düzen aşağıdaki kullanarak ulaşılabilecek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ Bu düzen aşağıdakiler [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]kullanılarak elde edilebilir.  
   
  [!code-xaml[LayoutInformation#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
   
- Tek bir <xref:System.Windows.Controls.TextBlock> öğesi içinde barındırılan bir <xref:System.Windows.Controls.Grid>. Metnin sol üst köşesinin yalnızca ilk sütun, için ayrılan alanı doldururken <xref:System.Windows.Controls.TextBlock> gerçekten çok büyük. Herhangi bir sınırlama kutusu <xref:System.Windows.FrameworkElement> kullanılarak alınabilir <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> yöntemi. Sınırlayıcı kutu için aşağıdaki çizimde <xref:System.Windows.Controls.TextBlock> öğesi.  
+ Tek <xref:System.Windows.Controls.TextBlock> bir öğe bir <xref:System.Windows.Controls.Grid>içinde barındırılır. Metin yalnızca ilk sütunun sol üst köşesini doldururken, için <xref:System.Windows.Controls.TextBlock> ayrılan alan gerçekten çok daha büyük olur. Herhangi bir <xref:System.Windows.FrameworkElement> sınırlayıcı kutusu <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> yöntemi kullanılarak alınabilir. Aşağıdaki çizimde <xref:System.Windows.Controls.TextBlock> öğesi için sınırlayıcı kutusu gösterilmektedir.  
   
- ![TextBlock sınırlama kutusu görünür olduğunu gösteren ekran görüntüsü.](./media/layout/visible-textblock-bounding-box.png)  
+ ![TextBlock sınırlayıcı kutusunun artık görünür olduğunu gösteren ekran görüntüsü.](./media/layout/visible-textblock-bounding-box.png)  
   
- Sarı bir dikdörtgen, için ayrılan alanı tarafından gösterilen şekilde <xref:System.Windows.Controls.TextBlock> öğedir göründüğü gerçekten çok büyük. Ek öğeler eklendikçe <xref:System.Windows.Controls.Grid>, bu ayırma daraltabilir veya eklenen öğelerin boyutunu ve türünü bağlı olarak genişletin.  
+ Sarı dikdörtgende gösterildiği gibi, <xref:System.Windows.Controls.TextBlock> öğe için ayrılan alan, gerçekten görüntülenenden çok daha büyük olur. Öğesine <xref:System.Windows.Controls.Grid>ek öğeler eklendikçe, eklenen öğelerin türüne ve boyutuna bağlı olarak bu ayırma küçülebilir veya genişleyebilir.  
   
- Düzen yuvasını <xref:System.Windows.Controls.TextBlock> erişimcisine bir <xref:System.Windows.Shapes.Path> kullanarak <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> yöntemi. Bu teknik, bir öğenin sınırlama kutusu görüntülemek için yararlı olabilir.  
+ Öğesinin <xref:System.Windows.Controls.TextBlock> düzen yuvası <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> yöntemi kullanılarak <xref:System.Windows.Shapes.Path> öğesine çevrilir. Bu teknik, bir öğenin sınırlayıcı kutusunu görüntülemek için yararlı olabilir.  
   
  [!code-csharp[LayoutInformation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
  [!code-vb[LayoutInformation#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="LayoutSystem_Overview"></a>   
 ## <a name="the-layout-system"></a>Düzen sistemi  
- En basit şekliyle, düzen, bir öğenin yeniden boyutlandırılmış, konumlandırılmış çizilmiş müşteri adaylarını ve bir özyinelemeli sistemidir. Daha açık belirtmek gerekirse ölçme ve üyelerinin düzenleme işleminin düzeninin açıklandığı bir <xref:System.Windows.Controls.Panel> öğenin <xref:System.Windows.Controls.Panel.Children%2A> koleksiyonu. Düzen yoğunluklu bir işlemdir. Büyük <xref:System.Windows.Controls.Panel.Children%2A> koleksiyonu, yapılmalıdır hesaplamalar büyük sayısı. Karmaşıklık de sunulan tarafından tanımlanan Düzen davranışa göre <xref:System.Windows.Controls.Panel> koleksiyona sahip olan öğe. Görece basit <xref:System.Windows.Controls.Panel>, gibi <xref:System.Windows.Controls.Canvas>, daha karmaşık önemli ölçüde daha iyi performans sağlayabilirsiniz <xref:System.Windows.Controls.Panel>, gibi <xref:System.Windows.Controls.Grid>.  
+ En basit olan düzen, boyutlandırılmış, konumlandırılmış ve çizilmiş bir öğeye yol gösteren özyinelemeli bir sistemdir. Daha belirgin olarak, düzen bir <xref:System.Windows.Controls.Panel> <xref:System.Windows.Controls.Panel.Children%2A> öğe koleksiyonunun üyelerini ölçme ve düzenleme sürecini açıklar. Düzen yoğun bir işlemdir. <xref:System.Windows.Controls.Panel.Children%2A> Koleksiyon ne kadar büyükse, yapılması gereken hesaplamaların sayısı artar. Karmaşıklık, koleksiyona sahip olan <xref:System.Windows.Controls.Panel> öğe tarafından tanımlanan düzen davranışına göre de kullanıma sunulmuştur. Gibi görece basit <xref:System.Windows.Controls.Panel> <xref:System.Windows.Controls.Canvas>olan, <xref:System.Windows.Controls.Panel> gibi<xref:System.Windows.Controls.Grid>daha karmaşık bir performansa sahip olabilir.  
   
- Her bir alt <xref:System.Windows.UIElement> konumunu değiştirir. yeni bir düzen sistemi geçişi tetikleme olasılığına sahiptir. Bu nedenle, gereksiz çağırma olarak düzen sistemi çağırabilirsiniz olayları kötü uygulama performansı artırabilir anlamak önemlidir. Düzen sistemi çağrıldığında oluşan süreci açıklanmaktadır.  
+ Bir alt öğe <xref:System.Windows.UIElement> konumunu her değiştirdiğinde, Düzen sistemi tarafından yeni bir geçiş tetiklenmesi olası olur. Bu nedenle, gereksiz çağrı kötü uygulama performansına neden olabileceği için, düzen sistemini çağırabilen olayları anlamak önemlidir. Aşağıda, Düzen sistemi çağrıldığında gerçekleşen işlem açıklanmaktadır.  
   
-1. Bir alt <xref:System.Windows.UIElement> çekirdek özellikleri sağlayarak düzen işlemine başlar.  
+1. Alt öğe <xref:System.Windows.UIElement> , öncelikle temel özellikleri ölçülerek düzen işlemini başlatır.  
   
-2. Tanımlanan özelliklerini boyutlandırma <xref:System.Windows.FrameworkElement> , aşağıdaki gibi değerlendirilir <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, ve <xref:System.Windows.FrameworkElement.Margin%2A>.  
+2. Üzerinde <xref:System.Windows.FrameworkElement> tanımlanan boyutlandırma özellikleri,, ve <xref:System.Windows.FrameworkElement.Margin%2A>gibi değerlendirilir <xref:System.Windows.FrameworkElement.Width%2A>. <xref:System.Windows.FrameworkElement.Height%2A>  
   
-3. <xref:System.Windows.Controls.Panel>-belirli bir mantıksal uygulandığı gibi <xref:System.Windows.Controls.Dock> yönünü veya yığın <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
+3. <xref:System.Windows.Controls.Panel><xref:System.Windows.Controls.Dock> yön veya yığınlama <xref:System.Windows.Controls.StackPanel.Orientation%2A>gibi belirli bir Logic uygulandı.  
   
-4. Tüm alt ölçüldükten sonra içeriği yerleştirilmiştir.  
+4. İçerik tüm alt öğeler ölçülerek düzenlenir.  
   
-5. <xref:System.Windows.Controls.Panel.Children%2A> Koleksiyonu, ekranda çizilir.  
+5. <xref:System.Windows.Controls.Panel.Children%2A> Koleksiyon ekranda çizilir.  
   
-6. İşlemi yeniden ek oluşursa çağrılır <xref:System.Windows.Controls.Panel.Children%2A> koleksiyona eklenen bir <xref:System.Windows.FrameworkElement.LayoutTransform%2A> uygulanan veya <xref:System.Windows.UIElement.UpdateLayout%2A> yöntemi çağrılır.  
+6. İşlem, koleksiyona ek <xref:System.Windows.Controls.Panel.Children%2A> eklenirse, bir <xref:System.Windows.FrameworkElement.LayoutTransform%2A> uygulanmışsa veya <xref:System.Windows.UIElement.UpdateLayout%2A> yöntemi çağrıldığında yeniden çağrılır.  
   
- Bu işlem ve nasıl çağrılır, aşağıdaki bölümlerde daha ayrıntılı tanımlanır.  
+ Bu işlem ve nasıl çağrıldığı, aşağıdaki bölümlerde daha ayrıntılı olarak tanımlanmıştır.  
   
 <a name="LayoutSystem_Measure_Arrange"></a>   
-## <a name="measuring-and-arranging-children"></a>Ölçme ve alt öğeleri düzenleme  
- Düzen sistemi her üyesi için iki geçiş tamamlandıktan <xref:System.Windows.Controls.Panel.Children%2A> koleksiyonu, bir ölçü geçişi ve düzenleme geçişi. Her alt <xref:System.Windows.Controls.Panel> kendi sağlar <xref:System.Windows.FrameworkElement.MeasureOverride%2A> ve <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> kendi özel düzen davranışını elde etmek için yöntemleri.  
+## <a name="measuring-and-arranging-children"></a>Alt öğeleri ölçme ve düzenleme  
+ Düzen sistemi, <xref:System.Windows.Controls.Panel.Children%2A> koleksiyonun her üyesi için iki geçişi tamamlar, bir ölçü geçti ve bir düzenleme geçişi. Her alt <xref:System.Windows.Controls.Panel> öğe kendi özel <xref:System.Windows.FrameworkElement.MeasureOverride%2A> Düzen <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> davranışına ulaşmak için kendi ve yöntemlerini sağlar.  
   
- Ölçü geçişi sırasında her üyesi <xref:System.Windows.Controls.Panel.Children%2A> koleksiyon değerlendirilir. İşlem çağrısı ile başlar <xref:System.Windows.UIElement.Measure%2A> yöntemi. Bu yöntem, üst uygulama içinde çağrılır <xref:System.Windows.Controls.Panel> öğesi ve düzeni gerçekleşmesi özel olarak çağrılması gerekmez.  
+ Ölçü geçişi sırasında <xref:System.Windows.Controls.Panel.Children%2A> koleksiyonun her üyesi değerlendirilir. İşlem <xref:System.Windows.UIElement.Measure%2A> yöntemi çağrısıyla başlar. Bu yöntem, üst <xref:System.Windows.Controls.Panel> öğe uygulamasının içinde çağrılır ve düzen gerçekleşmesi için açıkça çağrılması gerekmez.  
   
- İlk, yerel boyut özelliklerini <xref:System.Windows.UIElement> , aşağıdaki gibi değerlendirilir <xref:System.Windows.UIElement.Clip%2A> ve <xref:System.Windows.UIElement.Visibility%2A>. Bu adlı bir değer üreten `constraintSize` yapan <xref:System.Windows.FrameworkElement.MeasureCore%2A>.  
+ İlk olarak, <xref:System.Windows.UIElement> öğesinin yerel boyut özellikleri değerlendirilir, <xref:System.Windows.UIElement.Clip%2A> ve <xref:System.Windows.UIElement.Visibility%2A>gibi. Bu, öğesine <xref:System.Windows.FrameworkElement.MeasureCore%2A>geçirilen adlı `constraintSize` bir değer oluşturur.  
   
- Çerçeve Özellikleri İkincisi, tanımlanan <xref:System.Windows.FrameworkElement> işlenir, değerini etkiler `constraintSize`. Bu özellikler genellikle arka plandaki boyutlandırma özelliklerini açıklayan <xref:System.Windows.UIElement>, gibi kendi <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, ve <xref:System.Windows.FrameworkElement.Style%2A>. Bu özelliklerin her biri, öğe görüntülemek gerekli olan bir alanı değiştirebilirsiniz. <xref:System.Windows.FrameworkElement.MeasureOverride%2A> sonra çağrılır `constraintSize` bir parametre olarak.  
+ İkinci olarak, üzerinde <xref:System.Windows.FrameworkElement> tanımlanan çerçeve özellikleri işlenir ve bu `constraintSize`değerini etkiler. Bu özellikler genellikle,,, ve <xref:System.Windows.UIElement> <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.Height%2A> <xref:System.Windows.FrameworkElement.Margin%2A>gibitemeldekiboyut özelliklerinianlatmaktadır<xref:System.Windows.FrameworkElement.Style%2A>. Bu özelliklerin her biri, öğesini göstermek için gereken alanı değiştirebilir. <xref:System.Windows.FrameworkElement.MeasureOverride%2A>daha sonra parametresi `constraintSize` olarak çağırılır.  
   
 > [!NOTE]
->  Özellikleri arasında bir fark <xref:System.Windows.FrameworkElement.Height%2A> ve <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.ActualHeight%2A> ve <xref:System.Windows.FrameworkElement.ActualWidth%2A>. Örneğin, <xref:System.Windows.FrameworkElement.ActualHeight%2A> diğer yükseklik girişler ve düzen sistemi dayanan bir hesaplanan değer bir özelliktir. Değer bir gerçek işleme geçişte, temel düzen sistemi kendisi tarafından ayarlanır ve bu nedenle biraz özellikleri kümesi değerini gibi öteleme <xref:System.Windows.FrameworkElement.Height%2A>, giriş değiştirme temeli olan.  
+>  <xref:System.Windows.FrameworkElement.Height%2A> Ve ve özelliklerinin özellikleri <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.ActualHeight%2A> arasında<xref:System.Windows.FrameworkElement.ActualWidth%2A>bir farklılık vardır. Örneğin, <xref:System.Windows.FrameworkElement.ActualHeight%2A> özellik diğer yükseklik girdilerine ve Düzen sistemine göre hesaplanan bir değerdir. Değer, gerçek bir işleme geçişine göre düzen sisteminin kendisi tarafından ayarlanır ve bu nedenle, örneğin <xref:System.Windows.FrameworkElement.Height%2A>, giriş değişikliğinin temelini oluşturan özellikler kümesi değeri biraz daha geride olabilir.  
 >   
->  Çünkü <xref:System.Windows.FrameworkElement.ActualHeight%2A> bilmeniz gereken hesaplanmış bir değer olan birden çok da olabilir veya artımlı bildirilen için çeşitli işlemleri sonucunda düzen sistemi tarafından değiştirir. Düzen sistemi alt öğeleri, üst öğenin vb. kısıtlamaları için gerekli ölçü alanı hesaplanıyor.  
+>  Hesaplanan <xref:System.Windows.FrameworkElement.ActualHeight%2A> bir değer olduğundan, Düzen sistemine göre çeşitli işlemlere neden olarak, üzerinde birden fazla veya artımlı bildirilen değişiklik olduğunu bilmelisiniz. Düzen sistemi, alt öğeler için gerekli ölçü alanını, üst öğeye göre kısıtlamaları ve bu şekilde hesaplamayı gösterebilir.  
   
- Ölçü geçişi nihai amacı olduğunu belirlemek için alt kendi <xref:System.Windows.UIElement.DesiredSize%2A>, oluştuğu sırasında <xref:System.Windows.FrameworkElement.MeasureCore%2A> çağırın. <xref:System.Windows.UIElement.DesiredSize%2A> Tarafından depolanan değer <xref:System.Windows.UIElement.Measure%2A> içerik düzenleme geçişi sırasında kullanılacak.  
+ Ölçüm geçişinin nihai hedefi, alt öğesi, <xref:System.Windows.UIElement.DesiredSize%2A> <xref:System.Windows.FrameworkElement.MeasureCore%2A> çağrı sırasında oluşan öğesini tespit etmek için kullanılır. Değer, içerik düzenleme geçişi <xref:System.Windows.UIElement.Measure%2A> sırasında kullanılmak üzere tarafından depolanır. <xref:System.Windows.UIElement.DesiredSize%2A>  
   
- Düzenleme geçişi çağrısı ile başlayan <xref:System.Windows.UIElement.Arrange%2A> yöntemi. Üst düzenleme geçişi sırasında <xref:System.Windows.Controls.Panel> öğesi alt sınırlarını temsil eden bir dikdörtgen oluşturur. Bu değer gönderilirse <xref:System.Windows.FrameworkElement.ArrangeCore%2A> işleme için yöntemi.  
+ Düzenleme geçişi, <xref:System.Windows.UIElement.Arrange%2A> yöntemi çağrısıyla başlar. Düzenleme geçişi sırasında, üst <xref:System.Windows.Controls.Panel> öğe alt öğenin sınırlarını temsil eden bir dikdörtgen oluşturur. Bu değer, <xref:System.Windows.FrameworkElement.ArrangeCore%2A> işleme yöntemine geçirilir.  
   
- <xref:System.Windows.FrameworkElement.ArrangeCore%2A> Yöntemi değerlendirir <xref:System.Windows.UIElement.DesiredSize%2A> alt ve öğenin işlenmiş boyutunu etkileyebilecek herhangi ek bir kenar boşlukları değerlendirir. <xref:System.Windows.FrameworkElement.ArrangeCore%2A> oluşturur bir `arrangeSize`, için geçirilen <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> yöntemi <xref:System.Windows.Controls.Panel> bir parametre olarak. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> oluşturur `finalSize` alt. Son olarak, <xref:System.Windows.FrameworkElement.ArrangeCore%2A> yöntemi bir son değerlendirme gibi hizalama, kenar boşluğu bırakma ve uzaklık özelliklerinin yapar ve alt düzen yuvasındaki içinde koyar. Alt gerekmez (ve sık desteklemez) tüm ayrılmış alanı doldurun. Denetimi üst döndürülen <xref:System.Windows.Controls.Panel> ve Düzen işlemi tamamlanmış olur.  
+ Yöntemi, alt öğesini <xref:System.Windows.UIElement.DesiredSize%2A> değerlendirir ve öğenin işlenmiş boyutunu etkileyebilecek ek kenar boşluklarını değerlendirir. <xref:System.Windows.FrameworkElement.ArrangeCore%2A> <xref:System.Windows.FrameworkElement.ArrangeCore%2A>parametresi <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> `arrangeSize` olarak<xref:System.Windows.Controls.Panel> yöntemine geçirilen bir oluşturur. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>`finalSize` alt öğesinin öğesini oluşturur. Son olarak, <xref:System.Windows.FrameworkElement.ArrangeCore%2A> yöntemi kenar boşluğu ve hizalama gibi bir sınır özelliği değerlendirmesi yapar ve alt öğesini Düzen yuvasının içine koyar. Alt öğe, ayrılan alanın tamamını doldurmalı (ve sık değil). Sonra Denetim üst öğeye <xref:System.Windows.Controls.Panel> döndürülür ve düzen işlemi tamamlanmıştır.  
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## <a name="panel-elements-and-custom-layout-behaviors"></a>Panel öğeleri ve özel düzen davranışları  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğesinden türetilen öğeleri bir grup içeren <xref:System.Windows.Controls.Panel>. Bunlar <xref:System.Windows.Controls.Panel> öğeleri etkinleştirme birçok karmaşık düzenler. Örneğin, öğeleri yığma kolayca kullanarak gerçekleştirilebilir <xref:System.Windows.Controls.StackPanel> daha karmaşık ve ücretsiz akışı sağlama düzenleri kullanarak mümkün olsa da öğesi bir <xref:System.Windows.Controls.Canvas>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]öğesinden <xref:System.Windows.Controls.Panel>türetilen öğe grubunu içerir. Bu <xref:System.Windows.Controls.Panel> öğeler birçok karmaşık düzeni etkinleştirir. Örneğin, yığın öğeleri <xref:System.Windows.Controls.StackPanel> öğesi kullanılarak kolayca elde edilebilir, ancak daha karmaşık ve ücretsiz akış düzenleri bir <xref:System.Windows.Controls.Canvas>kullanılarak yapılabilir.  
   
- Aşağıdaki tabloda kullanılabilir Düzen özetlenmektedir <xref:System.Windows.Controls.Panel> öğeleri.  
+ Aşağıdaki tabloda kullanılabilir Düzen <xref:System.Windows.Controls.Panel> öğeleri özetlenmektedir.  
   
 |Panel adı|Açıklama|  
 |----------------|-----------------|  
-|<xref:System.Windows.Controls.Canvas>|İçinde açıkça konumlandırma alt öğeler tarafından göreli koordinatları bir alan tanımlar <xref:System.Windows.Controls.Canvas> alan.|  
-|<xref:System.Windows.Controls.DockPanel>|İçinde alt öğeleri yatay veya dikey olarak birbirlerine göreli dizebileceğiniz bir alan tanımlar.|  
+|<xref:System.Windows.Controls.Canvas>|Alt öğeleri <xref:System.Windows.Controls.Canvas> alana göreli olarak açıkça konumlandırabileceğiniz bir alan tanımlar.|  
+|<xref:System.Windows.Controls.DockPanel>|Alt öğeleri yatay veya dikey olarak birbirlerine göre düzenleyebileceğiniz bir alan tanımlar.|  
 |<xref:System.Windows.Controls.Grid>|Sütun ve satırlardan oluşan esnek bir kılavuz alanı tanımlar.|  
-|<xref:System.Windows.Controls.StackPanel>|Alt öğeleri yatay veya dikey olarak yönlendirilebilir tek bir çizgi yerleştirir.|  
-|<xref:System.Windows.Controls.VirtualizingPanel>|İçin bir çerçeve sunar <xref:System.Windows.Controls.Panel> alt veri koleksiyonlarını sanallaştıran öğeleri. Bu bir soyut sınıftır.|  
-|<xref:System.Windows.Controls.WrapPanel>|Sonraki satır kutusunun kenarında içerik bozucu sağa doğru ardışık konumları alt öğeleri kalmadı. Sonraki sıralama gerçekleşir sırayla üstten alta veya değerine bağlı olarak bir soldan sağa <xref:System.Windows.Controls.WrapPanel.Orientation%2A> özelliği.|  
+|<xref:System.Windows.Controls.StackPanel>|Alt öğeleri yatay veya dikey olarak yönelimli tek bir satıra yerleştirir.|  
+|<xref:System.Windows.Controls.VirtualizingPanel>|Alt veri koleksiyonlarını sanallaştıran öğeler için <xref:System.Windows.Controls.Panel> bir çerçeve sağlar. Bu soyut bir sınıftır.|  
+|<xref:System.Windows.Controls.WrapPanel>|Sol taraftaki alt öğeleri, kapsayan kutunun kenarındaki bir sonraki satıra kadar olan sıralı konumda konumlandırır. Sonraki sıralama, <xref:System.Windows.Controls.WrapPanel.Orientation%2A> özelliğin değerine bağlı olarak yukarıdan aşağıya veya sağdan sola doğru bir şekilde gerçekleşir.|  
   
- Önceden tanımlanmış kullanarak mümkün olmayan bir düzen gerektiren uygulamalar için <xref:System.Windows.Controls.Panel> öğeleri, özel düzen davranışları devralarak gerçekleştirilebilir <xref:System.Windows.Controls.Panel> ve geçersiz kılma <xref:System.Windows.FrameworkElement.MeasureOverride%2A> ve <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> yöntemleri. Bir örnek için bkz. [özel Radyal paneli örnek](https://go.microsoft.com/fwlink/?LinkID=159982).  
+ Önceden tanımlanmış <xref:System.Windows.Controls.Panel> öğelerden herhangi birini kullanarak mümkün olmayan bir düzen gerektiren uygulamalar için, <xref:System.Windows.FrameworkElement.MeasureOverride%2A> ve <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> yöntemlerini <xref:System.Windows.Controls.Panel> devralarak ve geçersiz kılarak özel düzen davranışları elde edilebilir. Bir örnek için bkz. [Custom radyal panel örneği](https://go.microsoft.com/fwlink/?LinkID=159982).  
   
 <a name="LayoutSystem_Performance"></a>   
-## <a name="layout-performance-considerations"></a>Düzen performansla ilgili önemli noktalar  
- Düzen yinelemeli bir işlemdir. Her bir alt öğesinde bir <xref:System.Windows.Controls.Panel.Children%2A> koleksiyon her düzen sistemi çağrılması sırasında işlenen. Gerekli olmadığı durumlarda sonuç olarak, düzen sistemi tetikleme kaçınılmalıdır. Aşağıdaki konular daha iyi performans elde etmenize yardımcı olabilir.  
+## <a name="layout-performance-considerations"></a>Düzen performansı konuları  
+ Düzen özyinelemeli bir işlemdir. Bir <xref:System.Windows.Controls.Panel.Children%2A> koleksiyondaki her alt öğe, düzen sisteminin her çağrılması sırasında işlenir. Sonuç olarak, gerekli olmadığında düzen sisteminin tetiklenmesi gerekir. Aşağıdaki noktalar daha iyi performans elde etmenize yardımcı olabilir.  
   
-- Hangi özellik değeri değiştiğinde bir özyinelemeli güncelleştirme düzen sistemi tarafından zorlar dikkat edin.  
+- Hangi özellik değeri değişikliklerinin düzen sistemi tarafından özyinelemeli güncelleştirme zorlayacaktır.  
   
-     Bağımlılık özellikleri değerleri başlatılacak düzen sistemi neden olabilir, Genel Bayrak ile işaretlenir. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> ve <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> yararlı ipuçları için hangi özelliğinin değeri değiştiğinde bir özyinelemeli zorlayacak güncelleştirme tarafından düzen sistemi sağlar. Genel olarak, bir öğenin sınırlayıcı kutusunun boyutunu etkileyen herhangi bir özellik olmalıdır bir <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> bayrağı true olarak ayarlanmış. Daha fazla bilgi için [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md).  
+     Değerleri, düzen sisteminin başlatılmasına neden olabilecek bağımlılık özellikleri, ortak bayraklarla işaretlenir. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>ve <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> hangi özellik değeri değişikliklerinin düzen sistemi tarafından özyinelemeli bir güncelleştirme zoracağı konusunda yararlı ipuçları sağlar. Genel olarak, bir öğenin sınırlayıcı kutusunun boyutunu etkileyebilecek herhangi bir özelliğin, true olarak ayarlanmış bir <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> bayrağı olmalıdır. Daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md).  
   
-- Mümkün olduğunda, kullanmak bir <xref:System.Windows.UIElement.RenderTransform%2A> yerine bir <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
+- Mümkün olduğunda, <xref:System.Windows.UIElement.RenderTransform%2A> yerine <xref:System.Windows.FrameworkElement.LayoutTransform%2A>bir kullanın.  
   
-     A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> içeriğini etkilemek için çok kullanışlı bir yol olabilir bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Dönüştürme etkisini diğer öğeleri konumunu etkileyen gerekmez, ancak bunu kullanmak en iyisidir bir <xref:System.Windows.UIElement.RenderTransform%2A> bunun yerine, çünkü <xref:System.Windows.UIElement.RenderTransform%2A> düzen sistemi çağrılmaz. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> dönüştürmenin uygular ve için etkilenen öğenin yeni konumu dikkate almak için özyinelemeli Düzen güncelleştirmenin yapılmasını sağlar.  
+     Bir <xref:System.Windows.FrameworkElement.LayoutTransform%2A> , içeriğini [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]etkilemek için çok kullanışlı bir yol olabilir. Ancak, dönüşümün etkisinin diğer öğelerin konumunu etkilemesi gerekmez, çünkü <xref:System.Windows.UIElement.RenderTransform%2A> <xref:System.Windows.UIElement.RenderTransform%2A> düzen sistemini çağırmaz, bunun yerine bunun kullanılması en iyisidir. <xref:System.Windows.FrameworkElement.LayoutTransform%2A>dönüşümünü uygular ve etkilenen öğenin yeni konumu için bir özyinelemeli Düzen güncelleştirmesini hesaba zorlar.  
   
-- Gereksiz çağrılar önlemek <xref:System.Windows.UIElement.UpdateLayout%2A>.  
+- İçin <xref:System.Windows.UIElement.UpdateLayout%2A>gereksiz çağrılardan kaçının.  
   
-     <xref:System.Windows.UIElement.UpdateLayout%2A> Yöntemi özyinelemeli düzeni güncelleştirme zorlar ve sık gerekli değildir. Tam bir güncelleştirme gerekli olduğundan emin değilseniz, sizin için bu yöntemi çağırmak için Düzen sistemi kullanır.  
+     <xref:System.Windows.UIElement.UpdateLayout%2A> Yöntemi özyinelemeli bir Düzen güncelleştirmesini zorlar ve genellikle gerekli değildir. Tam bir güncelleştirmenin gerekli olduğundan emin olmadığınız için, bu yöntemi sizin için çağırmak üzere Düzen sistemine güvenin.  
   
-- Büyük bir çalışırken <xref:System.Windows.Controls.Panel.Children%2A> koleksiyonu kullanmayı bir <xref:System.Windows.Controls.VirtualizingStackPanel> yerine normal <xref:System.Windows.Controls.StackPanel>.  
+- Büyük <xref:System.Windows.Controls.Panel.Children%2A> bir koleksiyonla çalışırken, normal <xref:System.Windows.Controls.StackPanel>yerine bir <xref:System.Windows.Controls.VirtualizingStackPanel> kullanmayı düşünün.  
   
-     Alt koleksiyon sanallaştırma tarafından <xref:System.Windows.Controls.VirtualizingStackPanel> yalnızca üst görünüm penceresinin içinde olan bellekte nesneleri tutar. Sonuç olarak, çoğu senaryoda performansı önemli ölçüde geliştirilmiştir.  
+     Alt koleksiyonu sanallaştırarak, <xref:System.Windows.Controls.VirtualizingStackPanel> yalnızca üst öğe görünüm içerisindeki bellekteki nesneleri tutar. Sonuç olarak, Çoğu senaryoda performans önemli ölçüde geliştirilmiştir.  
   
 <a name="LayoutSystem_LayoutRounding"></a>   
-## <a name="sub-pixel-rendering-and-layout-rounding"></a>Alt piksel işleme ve düzeni yuvarlama  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Grafik sistemi, çözümleme ve cihaz bağımsızlığı etkinleştirmek için CİHAZDAN bağımsız birimler kullanır. Her cihaz bağımsız piksel sistem otomatik olarak ölçeklenen [!INCLUDE[TLA#tla_dpi](../../../../includes/tlasharptla-dpi-md.md)] ayarı. Bu sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları için uygun ölçeklendirme farklı [!INCLUDE[TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)] ayarları ve uygulama otomatik olarak yapar [!INCLUDE[TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)]-uyumlu.  
+## <a name="sub-pixel-rendering-and-layout-rounding"></a>Alt piksel Işleme ve yerleşim yuvarlama  
+ Grafik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistemi, çözümleme ve cihaz bağımsızlığını etkinleştirmek için cihazdan bağımsız birimler kullanır. Her cihazdan bağımsız piksel, sistemin nokta/inç (dpi) ayarıyla otomatik olarak ölçeklendirilir. Bu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalara farklı DPI ayarları için uygun ölçeklendirmeyi sağlar ve uygulamayı otomatik olarak DPI duyarlı hale getirir.  
   
- Ancak, bu [!INCLUDE[TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)] bağımsızlığı Düzensiz kenarlı işleme nedeniyle düzgünleştirme oluşturabilirsiniz. Cihaz piksel arasında kenar konumu yerine bir cihaz piksel ortasında düştüğünde genellikle bulanık veya yarı saydam kenarları görüldüğü için bu yapılar, ortaya çıkabilir. Düzen sistemi bu düzen yuvarlama ile ayarlamak için bir yol sağlar. Düzen yuvarlama düzen sistemi herhangi bir tamsayı olmayan piksel değeri Düzen geçişi sırasında yere yuvarlar olur.  
+ Ancak, bu DPI bağımsızlık, kenar yumuşatma nedeniyle düzensiz kenar işleme oluşturabilir. Genellikle bulanık veya yarı saydam kenarlar olarak görülen bu yapıtlar, bir kenarın konumu cihaz pikselleri arasında değil bir cihaz pikseli ortasında kaldığında gerçekleşebilir. Düzen sistemi, düzen yuvarlama ile bunu yapmak için bir yol sağlar. Düzen yuvarlama, düzen sisteminin, düzen geçişi sırasında tam sayı olmayan piksel değerlerini yuvarlar.  
   
- Düzen yuvarlama, varsayılan olarak devre dışıdır. Düzen yuvarlama etkinleştirmek için ayarlayın <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> özelliğini `true` herhangi <xref:System.Windows.FrameworkElement>. Bağımlılık özelliği olduğundan, görsel ağaç tüm alt öğeleri için değer yayılır. Tüm kullanıcı Arabiriminde yuvarlama Düzen etkinleştirmek için <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> için `true` kök kapsayıcısı üzerinde. Örnek için bkz. <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A>  
+ Düzen yuvarlama varsayılan olarak devre dışıdır. Düzen yuvarlamayı etkinleştirmek için <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> özelliği herhangi bir <xref:System.Windows.FrameworkElement>üzerinde olarak `true` ayarlayın. Bir bağımlılık özelliği olduğundan, değer görsel ağaçtaki tüm alt öğelere yayılır. Tüm Kullanıcı arabiriminin düzen yuvarlamayı etkinleştirmek için, kök kapsayıcısında <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> olarak `true` ayarlayın. Örnek için bkz. <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A>  
   
 <a name="LayoutSystem_whatsnext"></a>   
-## <a name="whats-next"></a>Yenilikler  
- Öğeleri nasıl ölçülür ve düzenlenmiş anlama anlama Düzen ilk adımdır. Kullanılabilir hakkında daha fazla bilgi için <xref:System.Windows.Controls.Panel> öğeler, bkz [panellere genel bakış](../controls/panels-overview.md). Düzen etkileyen çeşitli konumlandırma özelliklerini daha iyi anlamak için bkz: [hizalama, kenar boşlukları ve dolguya genel bakış](alignment-margins-and-padding-overview.md). Özel bir örneği için <xref:System.Windows.Controls.Panel> öğesi bkz [özel Radyal paneli örnek](https://go.microsoft.com/fwlink/?LinkID=159982). Basit bir uygulamada araya getirelim hazır olduğunuzda bkz [izlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+## <a name="whats-next"></a>Sıradaki  
+ Öğelerin nasıl ölçüleceğini ve düzenlenmesini anlamak, düzeni anlamak için ilk adımdır. Kullanılabilir <xref:System.Windows.Controls.Panel> öğeler hakkında daha fazla bilgi için bkz. [panellere genel bakış](../controls/panels-overview.md). Düzeni etkileyebilecek çeşitli konumlandırma özelliklerini daha iyi anlamak için bkz. [Hizalama, kenar boşlukları ve doldurmaya genel bakış](alignment-margins-and-padding-overview.md). Özel <xref:System.Windows.Controls.Panel> bir öğe örneği için bkz. [Custom radyal panel örneği](https://go.microsoft.com/fwlink/?LinkID=159982). Bunu hafif bir uygulamada birlikte koymaya hazırsanız bkz [. İzlenecek yol: İlk WPF Masaüstü](../getting-started/walkthrough-my-first-wpf-desktop-application.md)Uygulamam.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

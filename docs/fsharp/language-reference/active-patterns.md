@@ -1,17 +1,17 @@
 ---
 title: Etkin Desenler
-description: Etkin desenler girdi verileri alt bölümlere adlandırılmış bölümler tanımlamak için kullanmayı öğrenin F# programlama dilidir.
+description: F# Programlama dilinde giriş verilerini bölümlendirilen adlandırılmış bölümleri tanımlamak için etkin desenleri nasıl kullanacağınızı öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 25ab255574390d3761fe788aeb413c8ee04fda2a
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 12f423abe05e649e0b527ed04124b991feb5d592
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690411"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629954"
 ---
 # <a name="active-patterns"></a>Etkin Desenler
 
-*Etkin desenler* , bir desen eşleme ifadesinde için ayrılmış bir birleşim olduğu gibi bu adlar kullanabilirsiniz, böylece giriş verileri alt bölümlere adlandırılmış bölümler tanımlamanıza olanak sağlar. Etkin desenler, her bölüm için özelleştirilmiş bir şekilde veri ayırmak için kullanabilirsiniz.
+*Etkin desenler* , bu adları ayrılmış bir birleşim için yaptığınız gibi bir desen eşleştirme ifadesinde kullanabilmeniz için, giriş verilerini bölümlendirilen adlandırılmış bölümler tanımlamanızı sağlar. Her bölüm için özelleştirilmiş bir şekilde verileri ayırmak için etkin desenleri kullanabilirsiniz.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,17 +30,17 @@ let (|identifier|_|) [arguments ] valueToMatch = expression
 
 ## <a name="remarks"></a>Açıklamalar
 
-Önceki sözdiziminde, bölümler tarafından temsil edilen giriş verileri için adları tanımlayıcılardır *bağımsız değişkenleri*, veya başka bir deyişle, bağımsız değişkenlerin tüm değerleri kümesi kümelerine adları. Bir etkin düzeni tanımında en fazla yedi bölüm olabilir. *İfade* , verileri ayırmak forma açıklar. Etkin desen tanımı, adlandırılmış bölüm ait bağımsız değişkenler olarak verilen değerlerden belirleyen kuralları tanımlamak için kullanabilirsiniz. (| Ve |) sembolleri denir *Muz klipleri* ve bu tür bir let bağlama tarafından oluşturulan işlev çağrılırsa bir *etkin tanıyıcı*.
+Önceki sözdiziminde, tanımlayıcılar *bağımsız değişkenlerle*temsil edilen giriş verilerinin bölümlerinin adlarıdır veya diğer bir deyişle, bağımsız değişkenlerin tüm değerleri kümesinin alt kümelerine yönelik adlar. Etkin bir model tanımında en fazla yedi bölüm olabilir. *İfade* , verilerin parçalara çıkarılması için kullanılacak formu açıklar. Adlandırılmış bölümlerin bağımsız değişken olarak verilen değerlerin hangisinin dahil olduğunu belirlemek için kuralları tanımlamak üzere etkin bir model tanımı kullanabilirsiniz. (| Ve |) sembolleri, *muz klip* olarak adlandırılır ve bu tür Let bağlamasıyla oluşturulan işleve *etkin bir tanıyıcı*denir.
 
-Örneğin, bir bağımsız değişken ile aşağıdaki etkin düzeni göz önünde bulundurun.
+Örnek olarak, aşağıdaki etkin düzene bir bağımsız değişkenle göz önünde bulundurun.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5001.fs)]
 
-Etkin desen bir desen eşleme ifadesinde, aşağıdaki örnekte olduğu gibi kullanabilirsiniz.
+Aşağıdaki örnekte olduğu gibi, bir model eşleştirme ifadesinde etkin bir model kullanabilirsiniz.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5002.fs)]
 
-Bu program çıktısı aşağıdaki gibidir:
+Bu programın çıktısı aşağıdaki gibidir:
 
 ```
 7 is odd
@@ -48,11 +48,11 @@ Bu program çıktısı aşağıdaki gibidir:
 32 is even
 ```
 
-Başka bir Etkin desenler veri türleri aynı temel alınan verilerin çeşitli olası gösterimleri olduğunda gibi birden çok yolla ayırmak için kullanılır. Örneğin, bir `Color` nesne ayrılmış bir RGB temsili ya da bir HSB temsili.
+Farklı bir etkin model kullanımı, veri türlerini birden çok şekilde oluşturmak, örneğin aynı temeldeki verilerin çeşitli olası temsiller olması olabilir. Örneğin, bir `Color` nesne bir rgb gösterimine veya bir HSB gösterimine parçalanamadı.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
-Yukarıdaki program çıktısı aşağıdaki gibidir:
+Yukarıdaki programın çıktısı aşağıdaki gibidir:
 
 ```
 Red
@@ -72,17 +72,17 @@ BlanchedAlmond
  Hue: 36.000000 Saturation: 1.000000 Brightness: 0.901961
 ```
 
-Birlikte, Etkin desenler kullanarak bu iki yolu bölüme etkinleştirin ve yalnızca uygun biçime verileri parçalayın ve hesaplama için en uygun biçimde uygun veri uygun hesaplamalar gerçekleştirin.
+Bunun yanında, etkin desenleri kullanmanın bu iki yolu, verileri yalnızca uygun biçimde bölümleyip oluştururın ve uygun hesaplamaları hesaplama için en kullanışlı biçimde gerçekleştirmenizi sağlar.
 
-Sonuçta elde edilen desen eşleştirme ifadeleri çok okunabilir, büyük ölçüde basitleştirme bulunabilecek karmaşık dallanma ve veri analizi kodu uygun şekilde yazılacak veriler etkinleştirin.
+Sonuç olarak eşleşen desenler, verilerin çok okunaklı, büyük olasılıkla karmaşık dallara ve veri analizi koduna büyük ölçüde basitleşerek kolay bir şekilde yazılmasına olanak tanır.
 
-## <a name="partial-active-patterns"></a>Kısmi Etkin desenler
+## <a name="partial-active-patterns"></a>Kısmi etkin desenler
 
-Bazen, giriş alanı yalnızca bir kısmını bölümlemek gerekir. Bu durumda, kısmi desenleri, bazı girişler eşleşen ancak diğer girişler eşleştirilecek başarısız yazın. Her zaman bir değer üretmez Etkin desenler çağrılır *kısmi Etkin desenler*; bunlar seçeneği türünde bir dönüş değerine sahip. Kısmi bir etkin düzeni tanımlamak için bir joker karakter kullanın. (\_) Muz klipleri içinde Desen listesinin sonunda. Aşağıdaki kodu kısmi bir etkin desen kullanımını gösterir.
+Bazen, giriş alanının yalnızca bir kısmını bölümleyebilirsiniz. Bu durumda, her biri bazı girdilerle eşleşen, ancak diğer girişlerle eşleşmeyecek bir kısmi desenler kümesi yazarsınız. Her zaman bir değer üretmeyen etkin desenler *kısmen etkin desenler*olarak adlandırılır; Bunlar bir seçenek türü olan bir dönüş değerine sahiptir. Kısmi bir etkin düzen tanımlamak için, muz kliplerin içindeki desenler listesinin\_sonunda bir joker karakteri () kullanın. Aşağıdaki kod, kısmen etkin bir düzenin kullanımını gösterir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
-Önceki örnek çıktısı aşağıdaki gibidir:
+Önceki örneğin çıktısı aşağıdaki gibidir:
 
 ```
 1.100000 : Floating point
@@ -92,7 +92,7 @@ Bazen, giriş alanı yalnızca bir kısmını bölümlemek gerekir. Bu durumda, 
 Something else : Not matched.
 ```
 
-Kısmi Etkin desenler kullanırken bazen tek tek seçimler ayrık veya birbirini dışlayan olabilir, ancak bunlar olmaması. Bazı sayılar kareler hem 64 gibi küpler olduğundan aşağıdaki örnekte, deseni kare ve küp deseni ayrık, değildir. Aşağıdaki program, kare ve küp desenleri birleştirmek ve deseni kullanır. Yazdırabilirsiniz hem kareler ve küpleri, hem de hangi yalnızca küpleri olan 1000'e kadar tüm tamsayıları. 
+Kısmi etkin desenler kullanılırken, bazen bağımsız seçimler ayrık veya birbirini dışlamalı olabilir, ancak bunların olmaması gerekir. Aşağıdaki örnekte, model karesi ve model küpü ayrık değildir, çünkü bazı sayılar hem kareler hem de küplerdir (örneğin, 64). Aşağıdaki program kare ve küp desenlerini birleştirmek için ve desenini kullanır. Hem kareler hem de küpler olan ve yalnızca küplerden oluşan tüm tamsayıları 1000 'e kadar yazdırır. 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
@@ -111,9 +111,9 @@ Kısmi Etkin desenler kullanırken bazen tek tek seçimler ayrık veya birbirini
 1000 is a cube
 ```
 
-## <a name="parameterized-active-patterns"></a>Parametreli Etkin desenler
+## <a name="parameterized-active-patterns"></a>Parametreli etkin desenler
 
-Etkin desenler, eşleştirilen öğesi için en az bir bağımsız değişkeni her zaman alır ancak adı bu durumda da, ek bağımsız değişken alabilir *parametreli etkin desen* uygular. Ek bağımsız değişkenler özelleştirilmesi için genel bir desen sağlar. Örneğin, normal ifade ayrıca kısmi etkin deseni kullanan aşağıdaki kod, olduğu gibi ek bir parametre olarak dizeler genellikle ayrıştırmak için normal ifadeleri kullanma Etkin desenler dahil `Integer` önceki kod örneğinde tanımlanan. Bu örnekte, çeşitli tarih biçimleri için normal ifadeleri kullanma dizeleri genel ParseRegex etkin düzeni özelleştirildiği verilir. Tamsayı etkin deseni, eşleşen dizeleri DateTime oluşturucuya geçirilen tamsayı dönüştürmek için kullanılır.
+Etkin desenler, eşleşen öğe için her zaman en az bir bağımsız değişken alır, ancak bu durumda, ad *Parametreli etkin düzeni* geçerli olacak şekilde ek bağımsız değişkenler de olabilir. Ek bağımsız değişkenler, genel bir düzenin özelleştireklenmesine izin verir. Örneğin, dizeleri ayrıştırmak için normal ifadeler kullanan etkin desenler, bir önceki kod örneğinde tanımlanan kısmi etkin deseni `Integer` de kullanan aşağıdaki kodda olduğu gibi normal ifadeyi ek bir parametre olarak içerir. Bu örnekte, çeşitli tarih biçimleri için normal ifadeler kullanan dizeler, genel ParseRegex etkin modelini özelleştirmek için verilmiştir. Tamsayı etkin stili, eşleşen dizeleri DateTime oluşturucusuna geçirilebilecek tamsayılara dönüştürmek için kullanılır.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
@@ -123,7 +123,7 @@ Etkin desenler, eşleştirilen öğesi için en az bir bağımsız değişkeni h
 12/22/2008 12:00:00 AM 1/1/2009 12:00:00 AM 1/15/2008 12:00:00 AM 12/28/1995 12:00:00 AM
 ```
 
-Etkin desenler yalnızca eşleşen bir ifade deseni için sınırlı değildir, ayrıca bunları let bağlamaları üzerinde kullanabilirsiniz.
+Etkin desenler yalnızca desen eşleştirme ifadelerine kısıtlanmaz, bunları Let bağlamaları üzerinde de kullanabilirsiniz.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
 

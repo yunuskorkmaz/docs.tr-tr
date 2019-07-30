@@ -19,42 +19,44 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 6273f6c9e71f286bdbebc3fe1953988b43de3101
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92adb26702d94dee08e51decd845d019c797e195
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663213"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630090"
 ---
 # <a name="double-data-type-visual-basic"></a>Double Veri Türü (Visual Basic)
-Ayrı tutma değeri - 1.79769313486231570E + 308 - aracılığıyla aralığındaki IEEE 64-bit (8 bayt) çift duyarlıklı kayan noktalı sayıların imzalı 4.94065645841246544E-324 negatif değerleri ve 4.94065645841246544E-324 1.79769313486231570E + 308 aracılığıyla pozitif değerler. Çift duyarlıklı sayılar yaklaşık bir gerçek sayı olarak depolar.  
-  
-## <a name="remarks"></a>Açıklamalar  
- `Double` Veri türü, bir sayı için en büyük ve küçük olası massively sağlar.  
-  
- Varsayılan değer olan `Double` 0'dır.  
-  
-## <a name="programming-tips"></a>Programlama İpuçları  
-  
-- **Duyarlık.** Kayan noktalı sayı ile çalıştığınızda, bunlar her zaman kesin bir gösterimi bellekte olmadığını unutmayın. Değer karşılaştırması gibi bazı işlemleri öğesinden bu beklenmeyen sonuçlara neden olabilir ve `Mod` işleci. Daha fazla bilgi için [veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
-  
-- **Sondaki sıfırlar.** Kayan nokta veri türleri, sondaki sıfır karakterleri, herhangi bir iç gösterimi yoktur. Örneğin, bunlar 4.2 4.2000 arasında ayrılmaz. Sonuç olarak, sıfır karakter sondaki görünmez görüntülediğinizde veya yazdırma kayan nokta değerleri.  
-  
-- **Tür karakterleri.** Değişmez değer türü karakterinin `R` sabit değerine zorlar `Double` veri türü. Örneğin, bir tamsayı değeri tarafından izlediyseniz `R`, değer değiştirilecek bir `Double`.  
-  
-    ```  
-    ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
-    Dim dub As Double = 4.0R  
-    ```  
-  
-     Tanımlayıcı türü karakteri ekleme `#` herhangi bir tanımlayıcı zorlar `Double`. Aşağıdaki örnekte, değişken `num` olarak yazılmış bir `Double`:  
-  
-    ```  
-    Dim num# = 3  
-    ```  
-  
-- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Double?displayProperty=nameWithType> yapısı.  
-  
+
+Negatif değerler için-1.79769313486231570 E + 308 ile-4.94065645841246544 E-324 arasında ve 4.94065645841246544 E-324 ile 1.79769313486231570 E + 308 arasında bir değer olarak bulunan imzalanmış IEEE 64-bit (8 baytlık) çift duyarlıklı kayan nokta sayılarını barındırır pozitif değerler. Çift duyarlıklı sayılar gerçek bir sayının yaklaşık bir kısmını depolar.
+
+## <a name="remarks"></a>Açıklamalar
+
+`Double` Veri türü, bir sayı için en büyük ve en küçük olası magnitudes sağlar.
+
+Varsayılan değeri `Double` 0 ' dır.
+
+## <a name="programming-tips"></a>Programlama İpuçları
+
+- **Duyarlılık.** Kayan noktalı sayılarla çalışırken her zaman bellekte kesin bir gösterimin olduğunu unutmayın. Bu, değer karşılaştırması ve `Mod` işleç gibi belirli işlemlerden beklenmedik sonuçlara neden olabilir. Daha fazla bilgi için bkz. [sorun giderme veri türleri](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+
+- **Sondaki sıfırlar.** Kayan nokta veri türlerinde sondaki sıfır karakteri iç temsili yok. Örneğin, 4,2000 ve 4,2 arasında ayrım yapmazlar. Sonuç olarak, kayan nokta değerlerini görüntülerken veya yazdırdığınızda sondaki sıfır karakter görünmez.
+
+- **Tür karakterleri.** Değişmez değer türü karakterini `R` bir sabit değere eklemek, `Double` veri türüne zorlar. Örneğin, bir tamsayı değerinin arkasından `R`, değer bir `Double`olarak değiştirilir.
+
+  ```vb
+  ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:
+  Dim dub As Double = 4.0R
+  ```
+
+  Tanımlayıcı türü karakteri `#` herhangi bir tanımlayıcıya eklemek bunu öğesine `Double`zorlar. Aşağıdaki örnekte, değişkeni `num` `Double`şöyle yazılır:
+
+  ```vb
+  Dim num# = 3
+  ```
+
+- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Double?displayProperty=nameWithType> yapısıdır.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Double?displayProperty=nameWithType>

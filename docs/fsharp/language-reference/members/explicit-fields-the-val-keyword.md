@@ -1,17 +1,17 @@
 ---
-title: 'Açık alanlar: Val anahtar sözcüğü'
-description: Hakkında bilgi edinin F# türü başlatma olmadan bir sınıf veya yapı türünde bir değeri depolamak için bir konum bildirmek için kullanılan 'val' anahtar sözcüğü.
+title: 'Açık Alanlar: Val anahtar sözcüğü'
+description: Türü başlatmadan bir F# sınıf veya yapı türünde bir değeri depolamak için bir konum bildirmek üzere kullanılan ' Val ' anahtar sözcüğü hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13e0ba2875e8accfd1c0da0e1c6fef4973309f9b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904923"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627537"
 ---
-# <a name="explicit-fields-the-val-keyword"></a>Açık alanlar: Val anahtar sözcüğü
+# <a name="explicit-fields-the-val-keyword"></a>Açık Alanlar: Val anahtar sözcüğü
 
-`val` Anahtar sözcüğü, bir değer başlatma olmadan bir sınıf veya yapı türü depolamak için bir konum bildirmek için kullanılır. Bu şekilde bildirilen depolama konumları çağrılır *açık alanlar*. Başka bir kullanımını `val` anahtar sözcüğü, birlikte `member` otomatik uygulanan bir özellik bildirmek için anahtar sözcüğü. Otomatik uygulanan özellikler hakkında daha fazla bilgi için bkz. [özellikleri](properties.md).
+`val` Anahtar sözcüğü, bir değeri, bir sınıf veya yapı türünde depolayacak bir konum bildirmek için kullanılır. Bu şekilde belirtilen depolama konumlarına *açık alanlar*denir. `val` Anahtar sözcüğünün başka bir kullanımı, otomatik olarak uygulanan bir `member` özelliği bildirmek için anahtar kelimesiyle birlikte bulunur. Otomatik uygulanan özellikler hakkında daha fazla bilgi için bkz. [Özellikler](properties.md).
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -21,30 +21,30 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir sınıf veya yapı türü alanlarını tanımlamak için her zamanki şekilde kullanmaktır bir `let` bağlama. Ancak, `let` bağlamaları her zaman mümkün, gerekli veya arzu değil, sınıf oluşturucusu bir parçası olarak başlatılması gerekir. Kullanabileceğiniz `val` başlatılmamış bir alan istediğinizde anahtar sözcüğü.
+Bir sınıf veya yapı türündeki alanları tanımlamanın olağan yolu bir `let` bağlama kullanmaktır. `let` Ancak bağlamalar, sınıf oluşturucusunun bir parçası olarak başlatılmalıdır, bu her zaman mümkün, gerekli veya istenmez. Başlatılmamış bir alanı istediğiniz `val` zaman anahtar sözcüğünü kullanabilirsiniz.
 
-Açık alanlar, statik veya statik olmayan olabilir. *Erişim değiştiricisi* olabilir `public`, `private`, veya `internal`. Varsayılan olarak açık alanlar ortaktır. Bu farklıdır `let` her zaman özel sınıflar, bağlarında.
+Açık Alanlar statik veya statik olmayan bir şekilde olabilir. *Erişim-değiştirici* , `public` `private`veya `internal`olabilir. Varsayılan olarak açık alanlar geneldir. Bu, her `let` zaman özel olan sınıflardaki bağlamalardan farklıdır.
 
-[DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58) özniteliği, birincil bir oluşturucuya sahip sınıf türleri açık alanları gereklidir. Bu öznitelik alanı sıfır olarak başlatılır belirtir. Sıfır başlatma alanın türünü desteklemesi gerekir. Aşağıdakilerden biri ise sıfır başlatma türü destekler:
+[DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58) özniteliği, birincil Oluşturucusu olan sınıf türlerindeki açık alanlar için gereklidir. Bu öznitelik, alanın sıfıra başlatıldığını belirtir. Alanın türü sıfır başlatmayı desteklemelidir. Bir tür, aşağıdakilerden biri ise sıfır başlatmayı destekler:
 
-- Sıfır değerine sahip bir basit türü.
+- Sıfır değeri olan temel bir tür.
 
-- Normal bir değer olarak, olağan dışı bir değer olarak veya bir temsili bir değer olarak null değeri destekleyen bir türü. Sınıflar, diziler, kayıtları, İşlevler, arabirimler, .NET başvuru türleri, bu içerir `unit` türü ve ayrılmış birleşim türleri.
+- Normal değer olarak, olağan dışı bir değer olarak veya bir değerin temsili olarak null değeri destekleyen bir tür. Bu sınıflar, tanımlama grupları, kayıtlar, işlevler, arabirimler, .net başvuru türleri, `unit` türü ve ayırt edici birleşim türlerini içerir.
 
-- Bir .NET değer türü.
+- .NET değer türü.
 
-- Tüm alanları varsayılan bir sıfır değeri destekleyen bir yapısı.
+- Alanlarının tümü varsayılan sıfır değerini destekleyen bir yapı.
 
-Örneğin, sabit bir alan olarak adlandırılan `someField` . NET'te destek alanı gösterimi adı ile derlenmiş olan `someField@`, ve depolanan değeri adlı bir özellik kullanarak erişim `someField`.
+Örneğin, adlı `someField` bir sabit alan, .NET derlenmiş temsilinin adına `someField@`sahip bir yedekleme alanına sahiptir ve depolanan değere adlı `someField`bir özellik kullanarak erişirsiniz.
 
-Değişebilir bir alan için bir .NET alan derlenmiş .NET gösterimidir.
+Kesilebilir bir alan için, .NET derlenmiş gösterimi .NET alanıdır.
 
 >[!WARNING]
->.NET Framework ad alanı `System.ComponentModel` aynı ada sahip bir öznitelik içeriyor. Bu özniteliği hakkında daha fazla bilgi için bkz: `System.ComponentModel.DefaultValueAttribute`.
+>.NET Framework ad alanı `System.ComponentModel` aynı ada sahip bir özniteliği içeriyor. Bu öznitelik hakkında daha fazla bilgi için `System.ComponentModel.DefaultValueAttribute`bkz.
 
-Açık alanlar ve karşılaştırma, kullanımı aşağıdaki kodda gösterildiği bir `let` birincil Oluşturucusu olan bir sınıf içinde bağlama. Unutmayın `let`-ilişkili alan `myInt1` özeldir. Zaman `let`-ilişkili alan `myInt1` bir üye yöntemi, kendi kendine tanımlayıcısı başvurulan `this` gerekli değildir. Ancak, başvuruda açık alanlar `myInt2` ve `myString`, kendi kendine tanımlayıcısı gereklidir.
+Aşağıdaki kod açık alanların kullanımını ve karşılaştırma `let` için, birincil Oluşturucusu olan bir sınıftaki bağlamayı gösterir. -Bağlanacak alanın `myInt1` özel olduğunu unutmayın. `let` Bir üye yönteminden bağlantılı alana `myInt1` başvuruluyorsa, kendi tanımlayıcısı `this` gerekli değildir. `let` Ancak açık alanlara `myInt2` `myString`başvururken, kendi tanımlayıcısı gereklidir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6701.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
@@ -53,28 +53,28 @@ Açık alanlar ve karşılaştırma, kullanımı aşağıdaki kodda gösterildi�
 30 def
 ```
 
-Aşağıdaki kod, birincil bir oluşturucuya sahip değil bir sınıfta açık alanlar kullanımını gösterir. Bu durumda, `DefaultValue` öznitelik gerekli değildir, ancak tüm alanları türü için tanımlanan Yapıcılardaki başlatılması gerekir.
+Aşağıdaki kod, birincil Oluşturucusu olmayan bir sınıfta açık alanların kullanımını gösterir. Bu durumda `DefaultValue` , öznitelik gerekli değildir, ancak tüm alanların tür için tanımlanan oluşturucularda başlatılmış olması gerekir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6702.fs)]
 
 Çıktı `35 22`.
 
-Aşağıdaki kod, bir yapıda açık alanlar kullanımını gösterir. Bir yapı bir değer türü olduğundan, otomatik olarak, alanların değerlerini sıfır olarak ayarlayan bir varsayılan oluşturucusu vardır. Bu nedenle, `DefaultValue` öznitelik gerekli değildir.
+Aşağıdaki kod, bir yapıda açık alanların kullanımını gösterir. Bir yapı bir değer türü olduğundan, kendi alanlarının değerlerini sıfıra ayarlayan bir varsayılan oluşturucuya otomatik olarak sahiptir. Bu nedenle, `DefaultValue` öznitelik gerekli değildir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
 
 Çıktı `11 xyz`.
 
-**Dikkat**, yapınızın ile başlatmak için kullanacaksanız `mutable` olmadan alanları `mutable` anahtar sözcüğü, atamalarınızı atamasından hemen sonra atılacak yapısının bir kopyası üzerinde çalışır. Bu nedenle, yapısı değişmez.
+**Dikkat**edin, yapınızı `mutable` anahtar sözcük içermeyen `mutable` alanlarla başlatacaksanız, atamalarınız, atamadan sonra atılacak yapının bir kopyası üzerinde çalışır. Bu nedenle, yapınız değişmeyecek.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
 
-Açık alanlar rutin kullanım için tasarlanmamıştır. Genel olarak, mümkün olduğunda kullanmalısınız bir `let` açık bir alanı yerine bir sınıftaki bağlama. Açık alanlar bazı birlikte çalışabilirlik senaryolarında yararlıdır, kullanılacak bir yapı tanımla gerektiğinde gibi bir platform çağırma çağrısı bir yerel API veya COM birlikte çalışma senaryolarda. Daha fazla bilgi için [dış işlevler](../functions/external-functions.md). Başka bir durum, açık bir alan olabilir gerekli ile çalışırken, bir F# Kod Oluşturucu, bir birincil Oluşturucu olmadan sınıfları yayar. Açık alanlar da iş parçacığı statik değişkenler veya benzer yapıları için kullanışlıdır. Daha fazla bilgi için bkz. `System.ThreadStaticAttribute`.
+Açık alanlar, rutin kullanım için tasarlanmamıştır. Genel olarak, mümkün olduğunda açık bir alan yerine `let` sınıfında bir bağlama kullanmanız gerekir. Açık alanlar, yerel API 'ye yönelik platform çağırma çağrısında veya COM birlikte çalışma senaryolarında kullanılacak bir yapı tanımlamanız gerektiğinde olduğu gibi, belirli birlikte çalışabilirlik senaryolarında yararlıdır. Daha fazla bilgi için bkz. [dış işlevler](../functions/external-functions.md). Bir açık alanın gerekli olabileceği başka bir durum ise, sınıfları birincil Oluşturucu olmadan yayar bir F# kod Oluşturucu ile çalışmaktır. Açık alanlar, iş parçacığı statik değişkenleri veya benzer yapılar için de kullanışlıdır. Daha fazla bilgi için bkz. `System.ThreadStaticAttribute`.
 
-Zaman anahtar sözcükleri `member val` bir arada göründüğünü tür tanımında, otomatik olarak uygulanan bir özellik tanımı öyledir. Daha fazla bilgi için [özellikleri](properties.md).
+Anahtar sözcükler `member val` bir tür tanımında birlikte görüntülendiğinde, otomatik olarak uygulanan bir özelliğin tanımıdır. Daha fazla bilgi için bkz. [Özellikler](properties.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Özellikler](properties.md)
 - [Üyeler](index.md)
-- [`let` Sınıflardaki bağlamaları](let-bindings-in-classes.md)
+- [`let`Sınıflarda bağlamalar](let-bindings-in-classes.md)

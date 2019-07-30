@@ -1,5 +1,5 @@
 ---
-title: 'Performansı iyileştirme: Donanımdan Yararlanma'
+title: 'Performansı İyileştirme: Donanımdan Yararlanma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], performance
@@ -9,50 +9,50 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 7acf5a3f48ac4987037873c63111d988ec3a4979
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238445"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629654"
 ---
-# <a name="optimizing-performance-taking-advantage-of-hardware"></a>Performansı iyileştirme: Donanımdan Yararlanma
-Mimarisini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iki işlenen ardışık düzen, donanım ve yazılım vardır. Bu konuda, uygulamalarınızın performans iyileştirmeleri hakkında kararlar almanıza yardımcı olmak için bu işleme ardışık düzenleri hakkında bilgi sağlar.  
+# <a name="optimizing-performance-taking-advantage-of-hardware"></a>Performansı İyileştirme: Donanımdan Yararlanma
+İç mimarisi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , iki işleme işlem hattı, donanım ve yazılım içerir. Bu konuda, uygulamalarınızın performans iyileştirmeleri hakkında kararlar almanıza yardımcı olmak üzere bu işleme işlem hatları hakkında bilgi verilmektedir.  
   
-## <a name="hardware-rendering-pipeline"></a>Donanımla işlenen ardışık düzen  
- Belirlemek için en önemli faktör [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] performansı, işleme bağlı olduğunu — daha fazla piksel işlemek zorunda kalırsanız maliyeti daha yüksek performans. Ancak, daha fazla işleme için boşaltılabilecek [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)], daha fazla performans avantajlarını elde edebilirsiniz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulama donanımla işlenen ardışık düzen tüm avantajlarından yararlanır [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] en az destekleyen donanım özellikleri [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] sürüm 7.0. İyileştirmelerin destekleyen donanım tarafından kazanılabilir [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] sürüm 7.0 ve PixelShader 2.0 + özellikleri.  
+## <a name="hardware-rendering-pipeline"></a>Donanım Işleme işlem hattı  
+ Performansı belirlemede [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en önemli faktörlerden biri işleme bağlıdır — daha fazla piksel işlemek için, performans maliyeti artar. Ancak, üzerinde boşaltılabilecek [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]daha fazla işleme kazanılabilecek daha fazla performans avantajı vardır. Uygulama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] donanımı işleme işlem hattı, en az Microsoft DirectX 7,0 sürümünü destekleyen donanımda Microsoft DirectX özelliklerinden tam olarak yararlanır. Microsoft DirectX sürüm 7,0 ve PixelShader 2.0 + özelliklerini destekleyen donanımlar tarafından daha fazla iyileştirmeler kazanılabilir.  
   
-## <a name="software-rendering-pipeline"></a>Yazılımla işlenen ardışık düzen  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Yazılımla işlenen ardışık düzen olan tamamen CPU'ya bağlıdır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SSE ve SSE2 yönerge yararlanır CPU bir en iyi duruma getirilmiş, tam özellikli yazılım tarayıcısı uygulamak için ayarlar. Geri dönüş için yazılım uygulama işlevselliği donanımla işlenen ardışık düzen kullanarak işlenemiyor. istediğiniz zaman sorunsuz olarak gerçekleştirilir.  
+## <a name="software-rendering-pipeline"></a>Yazılım Işleme işlem hattı  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Yazılım işleme işlem hattı tamamen CPU bağlanmıştır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], iyileştirilmiş ve tam özellikli bir yazılım tarayıcısı uygulamak için CPU 'daki SSE ve SSE2 yönerge kümelerinden faydalanır. Yazılıma geri dönüş, uygulama işlevlerinin donanım işleme işlem hattı kullanılarak işlenemediğinde sorunsuz bir şekilde gerçekleştirilir.  
   
- Büyük bir performans sorunu işlediğiniz piksel sayısı tanımlanır ve oranı doldurmak için işleme yazılım modunda işlerken karşılaşırsınız. Bir pikselin çizilme sayısını en aza indirmek yazılım işleme modunda performansıyla ilgili endişeleriniz varsa deneyin. Örneğin, ardından biraz saydam bir görüntü üzerinden işleyen, mavi arka plan ile bir uygulama varsa tüm pikselleri uygulamadaki iki kez işlenir. Sonuç olarak, iki kez mavi arka plan tablonuz varsa daha görüntü ile uygulama oluşturmak için uzun sürer.  
+ Yazılım modunda işleme yaparken karşılaşacağınız en büyük performans sorunu, işleme yaptığınız piksel sayısı olarak tanımlanmış olan Fill Rate ile ilgilidir. Yazılım işleme modundaki performansla ilgili endişeleriniz varsa, bir pikselin yeniden çizilme sayısını en aza indirmenize çalışın. Örneğin, mavi bir arka plana sahip bir uygulamanız varsa, daha sonra bunun üzerinde biraz saydam bir görüntü oluşturup uygulamadaki tüm pikselleri iki kez işleyebilirsiniz. Sonuç olarak, yalnızca mavi arka plana sahip olmak yerine, uygulamanın görüntüyle işlenmesi iki kat sürer.  
   
 ### <a name="graphics-rendering-tiers"></a>Grafik İşleme Katmanları  
- Uygulamanızın üzerinde çalışacağı donanım yapılandırması tahmin etmek oldukça zor olabilir. Ancak, her farklı donanım yapılandırması tüm avantajlarından yararlanabilmeniz sorunsuz bir şekilde özellikleri farklı bir donanım üzerinde çalışırken uygulamanızın izin veren bir tasarımı düşünün isteyebilirsiniz.  
+ Uygulamanızın üzerinde çalıştığı donanım yapılandırmasını tahmin etmek çok zor olabilir. Bununla birlikte, uygulamanızın farklı donanımlar üzerinde çalışırken sorunsuz bir şekilde geçiş yapmasına olanak tanıyan bir tasarıma göz önünde bulundurabilirsiniz, böylece her bir farklı donanım yapılandırmasının avantajlarından faydalanabilirsiniz.  
   
- Bunu başarmak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zamanında sistemin grafik kapasitesini belirlemek için işlevsellik sağlar. Grafik yeteneği, üç işleme yeteneği katmanları biri olarak ekran kartı gruplayarak belirlenir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işleme yeteneği katmanını sorgulamak uygulamaya izin veren bir API'yi kullanıma sunar. Uygulamanızı daha sonra donanım tarafından desteklenen işleme katmanına bağlı olarak çalışma zamanında farklı kod yollarını da alabilir.  
+ Bunu başarmak için, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çalışma zamanında bir sistemin grafik yeteneklerini belirleme işlevselliği sağlar. Grafik özelliği, video kartını üç işleme özelliği katmanlarından biri olarak kategorilere ayırarak belirlenir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]uygulamanın işleme yeteneği katmanını sorgulamasını sağlayan bir API sunar. Daha sonra uygulamanız, donanım tarafından desteklenen işleme katmanına bağlı olarak, çalışma zamanında farklı kod yolları alabilir.  
   
- En çok katmanı işleme düzeyleri etkileyen grafik donanımının özellikleri şunlardır:  
+ İşleme katmanı düzeylerini en çok etkileyen grafik donanımının özellikleri şunlardır:  
   
-- **Video RAM** birleştirme grafik için kullanılan arabellek sayısı ve boyutu grafik donanımının video bellek miktarı belirler.  
+- **VIDEO RAM** 'i Grafik donanımındaki video belleği miktarı, birleştirme grafikleri için kullanılabilecek arabelleklerin boyutunu ve sayısını belirler.  
   
-- **Piksel gölgelendirici** piksel gölgelendirici efektleri piksel başına temelinde hesaplar işlevi bir grafik olduğundan. Görüntülenen grafiklerin çözümleme bağlı olarak, her görüntü çerçevesi için işlenmesi gereken birkaç milyon piksel olabilir.  
+- **Piksel gölgelendiricisi** Piksel gölgelendiricisi, her piksel temelinde etkileri hesaplayan bir grafik işleme işlevidir. Görüntülenen grafiklerin çözümüne bağlı olarak, her bir görüntüleme çerçevesi için işlenmesi gereken birkaç milyon piksel olabilir.  
   
-- **Köşe gölgelendirici** köşe gölgelendiricisi olan nesnenin köşe verileri matematiksel işlemler gerçekleştiren işlevi bir grafik.  
+- **Köşe gölgelendiricisi** Köşe gölgelendiricisi, nesnenin köşe verilerinde matematik işlemleri gerçekleştiren bir grafik işleme işlevidir.  
   
-- **Çoklu doku desteği** bir 3B grafik nesnede karıştırma işlemi sırasında iki veya daha fazla farklı dokular uygulama özelliği başvurduğu çoklu doku desteği. Çoklu doku desteği derecesini grafik donanımının çoklu doku birimleri sayısına göre belirlenir.  
+- **Multitexture desteği** Multitexture desteği, 3B grafik nesnesindeki bir karıştırma işlemi sırasında iki veya daha fazla farklı doku uygulama imkanını ifade eder. Çoklu doku desteğinin derecesi, Grafik donanımındaki çok modelli birim sayısına göre belirlenir.  
   
- Piksel gölgelendirici, köşe gölgelendiricisi ve çoklu doku özellikleri belirli tanımlamak için kullanılan [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] , buna karşılık, farklı işleme katmanları tanımlamak için kullanılan sürüm düzeylerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ Piksel gölgelendirici, köşe gölgelendiricisi ve Multitexture özellikleri, içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]farklı işleme katmanlarını tanımlamak Için kullanılan belirli DirectX sürüm düzeylerini tanımlamak için kullanılır.  
   
- İşleme yeteneğini grafik donanımının özelliklerini belirlemek bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Sistem üç işleme katmanları tanımlar:  
+ Grafik donanımının özellikleri, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamanın işleme yeteneğini tespit. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Sistem üç işleme katmanı tanımlar:  
   
-- **Katman 0 işleme** donanım grafik ivmesi. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm düzeyi sürüm 7.0 azdır.  
+- **Işleme katmanı 0** Grafik donanım hızlandırma yok. DirectX sürüm düzeyi 7,0 sürümünden düşüktür.  
   
-- **Katman 1 işleme** kısmi grafik donanım hızlandırma. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Büyüktür veya eşittir sürüm 7.0 sürüm düzeyi ve **daha az** sürüm 9.0 daha.  
+- **Işleme katmanı 1** Kısmi grafik donanım hızlandırma. DirectX sürüm düzeyi 7,0 sürümüne eşit veya daha büyük ve sürüm 9,0 ' den **küçük** .  
   
-- **Katman 2 işleme** grafik donanım hızlandırmayı çoğu grafik özellikleri kullanın. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm düzeyi 9.0 sürümüne eşit veya daha büyük.  
+- **Işleme katmanı 2** Çoğu grafik özelliği grafik donanım hızlandırmasını kullanır. DirectX sürüm düzeyi 9,0 sürümüne eşit veya ondan daha büyük.  
   
- Daha fazla bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işleme katmanları bkz [grafik işleme katmanları](graphics-rendering-tiers.md).  
+ Katmanları işleme hakkında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] daha fazla bilgi için bkz. [grafik işleme katmanları](graphics-rendering-tiers.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

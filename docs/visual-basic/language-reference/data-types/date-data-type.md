@@ -15,65 +15,73 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 970c69b36eecd110dd81b6a3700fbb0a7eea2834
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: ee966cdfcc957f1164c73f577fa668b203a82113
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66424028"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630122"
 ---
 # <a name="date-data-type-visual-basic"></a>Date Veri Türü (Visual Basic)
-IEEE 64-bit (8 bayt) 12:00: 00'da (gece yarısı), 1 Ocak 0001-31 Aralık 9999 yılın yılın arasında değişen tarihleri ve saatleri temsil eden bir değer PM 11:59:59.9999999 tutar. Her artış, Gregoryen takvimindeki 1 yılının 1 Ocak başından beri geçen 100 nanosaniyelik geçen süreyi temsil eder. En yüksek değer 100 nanosaniyelik 10000 yılın 1 Ocak, başlamadan önce temsil eder.  
-  
-## <a name="remarks"></a>Açıklamalar  
- Kullanım `Date` tarih değerleri, saat değerleri veya tarih ve saat değerlerini içeren bir veri türü.  
-  
- Varsayılan değer olan `Date` 0:00:00 (gece yarısı) 1 Ocak 0001.  
-  
- Geçerli tarih ve saat alabilirsiniz <xref:Microsoft.VisualBasic.DateAndTime> sınıfı.  
-  
-## <a name="format-requirements"></a>Biçim gereksinimlerini  
- İçine almalısınız bir `Date` sayı işaretleri içindeki sabit değeri (`# #`). Örneğin a/yyyy biçiminde tarih değeri belirtmelisiniz `#5/31/1993#`, ya da yyyy-aa-gg, örneğin `#1993-5-31#`. Yılın ilk belirtirken, eğik çizgi kullanabilirsiniz.  Bu gereksinim, bölgeniz ve bilgisayarınızın tarih ve saat biçimi ayarlarını bağımsızdır.  
-  
- Bu kısıtlamanın nedeni anlamı kodunuzu, uygulamanızın çalıştığı yerel ayara bağlı olarak hiçbir zaman değiştirmelisiniz ' dir. Sabit kodlu varsayalım bir `Date` , değişmez değer `#3/4/1998#` ve ortalama 4 Mart 1998'de istediğiniz. İstediğiniz gibi aa/gg/yyyy kullanan bir yerel ayarda 3/4/1998'de derler. Ancak birçok ülkeler/bölgeler uygulamanızda dağıtma varsayalım. Gg/aa/yyyy kullanan bir yerel ayarında, sabit kodlanmış değişmez değeri 3 Nisan 1998 derlenir. Değişmez değer yyyy/aa/gg kullanan bir yerel ayarında geçersiz olur (Nisan 1998 ' 0003) ve bir derleyici hatasına neden olabilir.  
-  
-## <a name="workarounds"></a>Geçici Çözümler  
- Dönüştürülecek bir `Date` bölgeniz biçimi veya özel bir biçim için değişmez değerin değişmez değer sağlamanız <xref:Microsoft.VisualBasic.Strings.Format%2A> işlevi, bir ya da önceden tanımlı veya kullanıcı tanımlı tarih biçimini belirleme. Aşağıdaki örnekte bu gösterir.  
-  
-```  
-MsgBox("The formatted date is " & Format(#5/31/1993#, "dddd, d MMM yyyy"))  
-```  
-  
- Alternatif olarak, aşırı yüklü oluşturucular birini kullanabilirsiniz <xref:System.DateTime> bir tarih ve saat değerini derlemek için yapısı. Aşağıdaki örnek, 12:14 öğleden sonra 31 Mayıs 1993 temsil etmek için bir değer oluşturur.  
-  
-```  
-Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)  
-```  
-  
-## <a name="hour-format"></a>Saat biçimi  
- Örneğin 12 saat veya 24 saat biçiminde saat değeri belirtebilirsiniz `#1:15:30 PM#` veya `#13:15:30#`. Ancak, dakika veya saniye belirtmezseniz, AM veya PM belirtmeniz gerekir.  
-  
-## <a name="date-and-time-defaults"></a>Tarih ve saat Varsayılanları  
- Bir tarihi bir tarih/saat değişmez değer eklemezseniz, Visual Basic değerinin tarih bölümünü 1 Ocak, 0001 ayarlar. Bir süre içinde bir tarih değişmez eklemezseniz, Visual Basic değerinin saat bölümünü diğer bir deyişle, gece yarısı güne başlamak için ayarlar. (0: 00:00).  
-  
-## <a name="type-conversions"></a>Tür Dönüştürmeleri  
- Dönüştürürseniz, bir `Date` değerini `String` türü, Visual Basic çalışma zamanı tarafından belirtilen kısa tarih biçimini göre tarih oluşturur ve tarafından belirlenen süre saat biçimini (12 saat veya 24 saat) göre işler çalışma zamanı yerel ayar.  
-  
-## <a name="programming-tips"></a>Programlama İpuçları  
-  
-- **Birlikte çalışabilirlik değerlendirmeleri.** Örnek otomasyon ve COM nesneleri için .NET Framework için yazılmaz bileşenleriyle arabirim, tarih/saat türleri diğer ortamlarda unutmayın Visual Basic ile uyumlu değil `Date` türü. Bir tarih/saat değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `Double` yerine `Date` , yeni bir Visual Basic kod ve dönüştürme yöntemleri kullanın <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> ve <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
-  
-- **Tür karakterleri.** `Date` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri var. Ancak derleyici değişmez değerleri sayı işaretleri alınmış işler (`# #`) olarak `Date`.  
-  
-- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.DateTime?displayProperty=nameWithType> yapısı.  
-  
-## <a name="example"></a>Örnek  
- Bir değişken veya sabiti `Date` tarih ve saat veri türü tutar. Aşağıdaki örnek bunu göstermektedir.  
-  
-```  
-Dim someDateAndTime As Date = #8/13/2002 12:14 PM#  
-```  
-  
+
+0001 yılının 1 Ocak ayının 9999 31 Aralık 12:00:00 'a kadar (gece yarısı), 11:59:59.9999999 PM arasında değişen tarihleri temsil eden IEEE 64-bit (8 baytlık) değerleri barındırır. Her artış, Gregoryen takvimdeki 1 Ocak yılın başından itibaren geçen sürenin 100 nanosaniye süresini temsil eder. Maksimum değer 100, 1 Ocak 10000 yılın başından önce nanosaniye 'yi temsil eder.
+
+## <a name="remarks"></a>Açıklamalar
+
+Tarih değerlerini, zaman değerlerini veya tarih ve saat değerlerini içermesi için veritürünükullanın.`Date`
+
+1 Ocak 0001 tarihinde `Date` varsayılan değer 0:00:00 ' dir (gece yarısı).
+
+Geçerli tarih ve saati <xref:Microsoft.VisualBasic.DateAndTime> sınıftan alabilirsiniz.
+
+## <a name="format-requirements"></a>Biçim gereksinimleri
+
+Bir `Date` sabit değeri sayı işaretleri (`# #`) içine almalısınız. Tarih değerini M/d/yyyy biçiminde belirtmeniz gerekir, `#5/31/1993#`örneğin veya yyyy-aa-gg `#1993-5-31#`gibi. Önce yılı belirtirken eğik çizgi kullanabilirsiniz.  Bu gereksinim, yerel ayarınızı ve bilgisayarınızın tarih ve saat biçimi ayarlarını birbirinden bağımsızdır.
+
+Bu kısıtlamanın nedeni, kodunuzun anlamını uygulamanızın çalıştırıldığı yerel ayara bağlı olarak asla değiştirmemelidir. Bir `Date` sabit`#3/4/1998#` değer kodladığınızı ve 4 Mart 1998 ' den itibaren olduğunu varsayalım. Aa/gg/yyyy kullanan bir yerel ayarda, 3/4/1998 istediğiniz şekilde derlenir. Ancak uygulamanızı birçok ülkede/bölgede dağıttığınız varsayın. Gg/aa/yyyy kullanan bir yerel ayarda, sabit kodlanmış sabit değer 3 Nisan 1998 ' e derlenir. Yyyy/aa/gg kullanan bir yerel ayarda, değişmez değer geçersiz (1998 Nisan, 0003) ve bir derleyici hatasına neden olur.
+
+## <a name="workarounds"></a>Geçici Çözümler
+
+Bir `Date` sabit değeri yerel ayarınızdaki biçime veya özel bir biçime dönüştürmek için, önceden tanımlanmış veya Kullanıcı tanımlı bir tarih biçimini <xref:Microsoft.VisualBasic.Strings.Format%2A> belirterek, işleve değişmez değeri sağlayın. Aşağıdaki örnek bunu gösterir.
+
+```vb
+MsgBox("The formatted date is " & Format(#5/31/1993#, "dddd, d MMM yyyy"))
+```
+
+Alternatif olarak, bir tarih ve saat değerini birleştirmek için <xref:System.DateTime> yapının aşırı yüklenmiş oluşturucularından birini de kullanabilirsiniz. Aşağıdaki örnek, öğleden sonra 31 Mayıs 12:14 1993 ' i temsil eden bir değer oluşturur.
+
+```vb
+Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
+```
+
+## <a name="hour-format"></a>Saat biçimi
+
+Saat değerini 12 saat veya 24 saat biçiminde belirtebilirsiniz, örneğin `#1:15:30 PM#` veya. `#13:15:30#` Ancak, dakikalar veya saniyeler belirtmezseniz, har veya PM belirtmeniz gerekir.
+
+## <a name="date-and-time-defaults"></a>Tarih ve saat Varsayılanları
+
+Tarih/saat değişmez değerinde bir tarih eklemezseniz, Visual Basic değerin tarih bölümünü 1 Ocak 0001 olarak ayarlar. Tarih/saat değişmez değerinde bir saat eklemezseniz, Visual Basic değerin saat bölümünü günün başına, yani gece yarısı (0:00:00) olarak ayarlar.
+
+## <a name="type-conversions"></a>Tür Dönüştürmeleri
+
+Bir `Date` değeri`String` türüne dönüştürürseniz Visual Basic, tarihi, çalışma zamanı yerel ayarı tarafından belirtilen kısa tarih biçimine göre işler ve zaman biçimine (12 saatlik ya da 24 saat) göre belirtilen çalışma zamanı yerel ayarı.
+
+## <a name="programming-tips"></a>Programlama İpuçları
+
+- **Birlikte çalışma konuları.** Otomasyon veya com nesneleri gibi .NET Framework için yazılmayan bileşenlerle arabirimleriniz varsa, diğer ortamlardaki tarih/saat türlerinin Visual Basic `Date` türüyle uyumlu olmadığını aklınızda bulundurun. Böyle bir bileşene bir tarih/saat bağımsız `Double` değişkeni geçirdiğinizden, bunu yeni Visual Basic kodunuzda `Date` değil olarak bildirin ve dönüştürme yöntemlerini <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> ve <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>kullanın.
+
+- **Tür karakterleri.** `Date`değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok. Ancak derleyici, sayıları sayı işaretleri (`# #`) içinde olarak `Date`değerlendirir.
+
+- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.DateTime?displayProperty=nameWithType> yapısıdır.
+
+## <a name="example"></a>Örnek
+
+`Date` Veri türünün bir değişkeni veya sabiti hem tarih hem de saati tutar. Aşağıdaki örnek bunu göstermektedir.
+
+```vb
+Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
+```
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.DateTime?displayProperty=nameWithType>

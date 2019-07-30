@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Genel - Namespace diğer kullanın C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Genel ad alanı diğer ad C# programlama kılavuzunu kullanın'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,48 +7,48 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: 6d3e0740a472f74116712e737e49f86d4202dea5
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: f44bb1f010f154973fc6982882c9b5a09528da76
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452796"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629448"
 ---
-# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Nasıl yapılır: Genel Namespace diğer adlarını kullanma (C# Programlama Kılavuzu)
-Genel bir üyeye erişme olanağı [ad alanı](../../../csharp/language-reference/keywords/namespace.md) üye aynı ada sahip başka bir varlık tarafından gizlenmiş olabilir durumlarda faydalıdır.  
+# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Nasıl yapılır: Genel ad alanı diğer adını kullanınC# (Programlama Kılavuzu)
+Genel [ad](../../../csharp/language-reference/keywords/namespace.md) alanındaki bir üyeye erişme özelliği, üyenin aynı ada sahip başka bir varlık tarafından gizlenmesi durumunda faydalıdır.  
   
- Örneğin, aşağıdaki kodda, `Console` çözümler `TestApp.Console` çok yerine `Console` yazın <xref:System> ad alanı.  
+ Örneğin, aşağıdaki `Console` kodda, <xref:System> ad alanındaki `Console` türü yerine öğesine `TestApp.Console` çözümlenir.  
   
  [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]  
   
  [!code-csharp[csProgGuideNamespaces#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#1)]  
   
- Kullanarak `System.Console` olduğundan hata sonuçları hala `System` ad alanı, sınıf tarafından gizlenir `TestApp.System`:  
+ Ad `System.Console` alanı sınıf `System` tarafından`TestApp.System`gizlendiğinden, hâlâ bir hata ile sonuçlanır:  
   
  [!code-csharp[csProgGuideNamespaces#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#2)]  
   
- Kullanarak bu hatayı çözmek ancak çalışabilirsiniz `global::System.Console`, şöyle:  
+ Bununla birlikte, aşağıdaki gibi kullanarak `global::System.Console`bu hatayı geçici olarak çözebilirsiniz:  
   
  [!code-csharp[csProgGuideNamespaces#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#3)]  
   
- Sol tanımlayıcısı olduğunda `global`, aramayı sağ tanımlayıcısı için genel ad alanında başlatır. Örneğin, aşağıdaki bildirimi başvuruyor `TestApp` genel alanının bir üyesi olarak.  
+ Sol tanımlayıcı `global`olduğunda, doğru tanımlayıcı için arama genel ad alanında başlar. Örneğin, aşağıdaki bildirim genel alanın bir üyesi `TestApp` olarak başvuru yapılır.  
   
  [!code-csharp[csProgGuideNamespaces#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#4)]  
   
- Kuşkusuz, kendi ad alanları oluşturma adlı `System` önerilmez ve herhangi bir kod da gerçekleştiği karşılaşırsınız düşüktür. Ancak, daha büyük projelerinde, bir form veya başka bir ad alanı çoğaltma oluşabilir olasılığı yüksektir olur. Bu durumda, genel ad alanı niteleyicisi kök ad belirtebilirsiniz, bir garanti sağlar.  
+ Kuşkusuz, adlı `System` kendi ad alanlarınızı oluşturmanız önerilmez ve bunun gerçekleştiği bir kodla karşılaşmanız düşüktür. Ancak, daha büyük projelerde ad alanı çoğaltmasının tek bir formda veya başka bir biçimde gerçekleşebileceğini çok gerçek bir olasılık. Bu durumlarda, genel ad alanı niteleyicisi, kök ad alanını belirleyebilmenizi güvence altına alabilir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, ad alanı `System` sınıfı eklemek için kullanılan `TestClass` bu nedenle, `global::System.Console` kullanılmalıdır başvurusuna `System.Console` tarafından gizlenmiş sınıfı `System` ad alanı. Ayrıca, diğer `colAlias` ad alanına başvurmak için kullanılan `System.Collections`; bu nedenle, örneği bir <xref:System.Collections.Hashtable?displayProperty=nameWithType> ad alanı yerine bu diğer adı kullanılarak oluşturuldu.  
+ Bu örnekte, ad alanı `System` sınıfı `TestClass` eklemek için kullanılır, bu nedenle, `global::System.Console` `System` ad alanı tarafından gizlenen `System.Console` sınıfa başvurmak için kullanılmalıdır. Ayrıca, diğer `colAlias` ad ad alanına `System.Collections`başvurmak için kullanılır; bu nedenle <xref:System.Collections.Hashtable?displayProperty=nameWithType> , öğesinin örneği ad alanı yerine bu diğer ad kullanılarak oluşturulmuştur.  
   
  [!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]  
   
-**1**
+**A 1**
 **B 2**
-**3 C**
+**C 3**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [Ad Alanları](../../../csharp/programming-guide/namespaces/index.md)
-- [:: İşleç](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
+- [:: İşleç](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

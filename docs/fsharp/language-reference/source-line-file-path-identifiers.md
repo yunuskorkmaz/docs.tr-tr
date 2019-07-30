@@ -1,17 +1,17 @@
 ---
 title: Kaynak Satırı, Dosya ve Yol Tanımlayıcıları
-description: Yerleşik kullanmayı öğrenin F# kaynağına erişmek etkinleştirdiğiniz tanımlayıcı değerlerini, sayı, dizin ve dosya adı, kodunuzda satır.
+description: Kodunuzda kaynak satır numarası, dizin ve F# dosya adına erişmenizi sağlayan yerleşik tanımlayıcı değerlerini nasıl kullanacağınızı öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3f2048aed9ef75037b43cd091a749e3d6bbaf9a3
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 5ff36210edc75370f8baf9ee7be057f3ac0c3979
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67152060"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627123"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>Kaynak Satırı, Dosya ve Yol Tanımlayıcıları
 
-Tanımlayıcıları `__LINE__`, `__SOURCE_DIRECTORY__` ve `__SOURCE_FILE__` kodunuzda kaynak satırı numarasını, dizin ve dosya adına erişmenize olanak tanıyan yerleşik değerler.
+`__LINE__`, Vekodunuzda`__SOURCE_FILE__` kaynak satır numarası, dizin ve dosya adına erişmenizi sağlayan yerleşik değerlerdir. `__SOURCE_DIRECTORY__`
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -23,23 +23,23 @@ __SOURCE_FILE__
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu değerlerin her birini türünde `string`.
+Bu değerlerin her birinin türü `string`vardır.
 
-Kullanılabilir kaynak satırı, dosya ve yol tanımlayıcıları aşağıdaki tabloda özetlenmiştir F#. Bu tanımlayıcılar Önişlemci makroları değildir; Bunlar, derleyici tarafından tanınan yerleşik değerlerdir.
+Aşağıdaki tabloda, ' de F#bulunan kaynak satırı, dosya ve yol tanımlayıcıları özetlenmektedir. Bu tanımlayıcılar Önişlemci makroları değildir; derleyici tarafından tanınan yerleşik değerlerdir.
 
-|Önceden tanımlanmış tanımlayıcısı|Açıklama|
+|Önceden tanımlanmış tanımlayıcı|Açıklama|
 |---------------------|-----------|
-|`__LINE__`|Geçerli satır numarası değerlendirir dikkate `#line` yönergeleri.|
-|`__SOURCE_DIRECTORY__`|Kaynak dizin geçerli tam yoluna değerlendirir dikkate `#line` yönergeleri.|
-|`__SOURCE_FILE__`|Yol olmadan geçerli kaynak dosya adı olarak değerlendirilen dikkate `#line` yönergeleri.|
+|`__LINE__`|, Yönergeleri dikkate alarak `#line` geçerli satır numarasını değerlendirir.|
+|`__SOURCE_DIRECTORY__`|Kaynak dizinin geçerli tam yolu olarak değerlendirilir ve yönergeleri göz önünde `#line` bulundurur.|
+|`__SOURCE_FILE__`|Yolu ve yönergeleri dikkate `#line` almadan geçerli kaynak dosya adı olarak değerlendirilir.|
 
-Hakkında daha fazla bilgi için `#line` yönergesine bakın [derleyici yönergeleri](compiler-directives.md).
+`#line` Yönergesi hakkında daha fazla bilgi için bkz. [derleyici yönergeleri](compiler-directives.md).
 
 ## <a name="example"></a>Örnek
 
 Aşağıdaki kod örneği, bu değerlerin kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7401.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7401.fs)]
 
 Çıktı:
 

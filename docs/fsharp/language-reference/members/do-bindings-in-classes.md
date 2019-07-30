@@ -1,17 +1,17 @@
 ---
 title: Sınıflardaki do Bağlamaları
-description: Nasıl kullanacağınızı öğrenin bir F# 'nesne oluşturulduğunda veya türü ilk defa kullanıldığında eylemler gerçekleştiren bir sınıf tanımı bağlaması yapma'.
+description: Nesne oluşturulduğunda veya tür ilk F# kullanıldığında eylemler gerçekleştiren bir sınıf tanımında ' do ' bağlamayı nasıl kullanacağınızı öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: c924c882974989436d8ea404ebee0a7ef3c54fd3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ced4f1bb17d9e23bf51cc79b5a275cc334cca013
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641789"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627579"
 ---
 # <a name="do-bindings-in-classes"></a>Sınıflardaki do Bağlamaları
 
-A `do` nesne oluşturulduğunda veya statik bir sınıf tanımı bağlamasında eylemleri gerçekleştirir `do` bağlamayı türü ilk kez kullanıldığında.
+Bir sınıf tanımındaki `do` bağlama,nesneoluşturulduğundaveyabirstatikbağlamaiçintürilk`do` kullanıldığında eylemler gerçekleştirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -21,21 +21,21 @@ A `do` nesne oluşturulduğunda veya statik bir sınıf tanımı bağlamasında 
 
 ## <a name="remarks"></a>Açıklamalar
 
-A `do` bağlama ile birlikte veya sonra görünür `let` bağlamaları, ancak bir sınıf tanımının üye tanımlarında önce. Ancak `do` anahtar sözcüğü için isteğe bağlı `do` bağlamaları Modül düzeyinde bu için isteğe bağlı değil `do` bağlamaları bir sınıf tanımı.
+Bağlama bağlamalarla birlikte veya sonra `let` , ancak bir sınıf tanımındaki üye tanımlarından önce görüntülenir. `do` Anahtar sözcüğü, modül düzeyindeki bağlamalar `do` için isteğe bağlı olsa da, bir sınıf tanımındaki bağlamalar için `do` isteğe bağlı değildir. `do`
 
-Türü, statik olmayan her nesne herhangi oluşumu için verilen `do` bağlamaları ve statik olmayan `let` bağlamaları, sınıf tanımında göründükleri sırayla yürütülür. Birden çok `do` bağlamaları bir türüne meydana gelebilir. Statik olmayan `let` bağlamaları ve statik olmayan `do` bağlamaları birincil oluşturucusunun gövdesi olur. Statik olmayan kodda `do` bağlamalar bölümü birincil Oluşturucu parametreler ve değerler veya tanımlanan işlevleri başvurabilir `let` bağlamalar bölümü.
+Verili herhangi bir türdeki her nesnenin oluşturulması için, statik `do` olmayan bağlamalar ve statik `let` olmayan bağlamalar, sınıf tanımında göründükleri sırada yürütülür. Tek `do` bir türde birden çok bağlama meydana gelebilir. Statik `let` olmayan bağlamalar ve statik `do` olmayan bağlamalar, birincil oluşturucunun gövdesi olur. Statik `do` olmayan bağlamalar bölümündeki kod, birincil Oluşturucu parametrelerine ve `let` bağlamalar bölümünde tanımlanan herhangi bir değere veya işleve başvurabilir.
 
-Statik olmayan `do` bağlamaları, sınıfın üyelerine erişebilir, sınıf tarafından tanımlanan bir kendi kendini tanımlayıcısı olduğu sürece bir `as` başlık ve bu üyelerin tüm kullanımları sınıfı için kendi kendine tanımlayıcısı ile tam olarak uzun sınıfı anahtar sözcüğü.
+Statik `do` olmayan bağlamalar, sınıf başlığında bir `as` anahtar sözcük tarafından tanımlanan bir kendine tanımlayıcı olduğu sürece ve bu üyelerin tüm kullanımları sınıf için kendi kendine tanımlayıcı ile nitelendirilse de, sınıfın üyelerine erişebilir.
 
-Çünkü `let` bağlamaları başlatmak özel alanlar genellikle üyeleri beklendiği gibi davranmaya garanti etmek gerekli olan, bir sınıfın `do` bağlamaları sonra genellikle isimlerine `let` kod, bu nedenle bağlamaları `do` bağlama can tam olarak başlatılmış bir nesneyle yürütün. Kodunuzu başlatılması tamamlanmadan önce bir üyesini kullanın çalışırsa, bir InvalidOperationException ortaya çıkar.
+Bağlamalar, genellikle üyelerin `do` beklenen `let` şekilde davranmasını güvence altına almak için gerekli olan bir sınıfın özel alanlarını başlatırken, bağlamaların bağlamadaki `do`kodun `let` tamamen başlatılmış bir nesneyle yürütün. Kodunuz, başlatma tamamlanmadan önce bir üye kullanmayı denerse, bir InvalidOperationException oluşturulur.
 
-Statik `do` bağlamaları statik üyeleri başvurabilir veya kapsayan alan sınıfının ancak örnek üye veya alan değil. Statik `do` bağlamaları sınıfı ilk kez kullanılmadan önce yürütülecek garanti sınıfı için statik Başlatıcı bir parçası haline gelir.
+Statik `do` bağlamalar, kapsayan sınıfın statik üyelerine veya alanlarına başvurabilir ancak örnek üye veya alanlar değildir. Statik `do` bağlamalar, sınıfının ilk kullanılmadan önce yürütülmesi garanti edilen, sınıfının statik başlatıcısının bir parçası haline gelir.
 
-Öznitelikler için yoksayıldı `do` türlerinde bağlar. Bir öznitelik için yürütülen kodu gerekli olup olmadığını bir `do` bağlama, bunun birincil oluşturucuya uygulanması gerekir.
+Türler içindeki bağlamalar için `do` öznitelikler yok sayılır. Bir `do` bağlamada yürütülen kod için bir öznitelik gerekliyse, birincil oluşturucuya uygulanmalıdır.
 
-Aşağıdaki kodda, statik sınıfında `do` bağlama ve statik olmayan `do` bağlama. Nesne iki parametreye sahip bir oluşturucuya sahip `a` ve `b`, ve iki özel alan tanımlanmış `let` bağlamaları sınıfı. İki özellik de tanımlanır. Tüm bunların statik olmayan kapsamda bulunan `do` bağlamalar bölümü, tüm bu değerlere yazdırır çizgiyle gösterildiği gibi.
+Aşağıdaki kodda, bir sınıfta statik `do` bağlama ve statik `do` olmayan bağlama bulunur. Nesnesi iki parametreye `a` sahip bir oluşturucuya sahiptir ve `b`ve iki özel `let` alan, sınıf bağlamalarında tanımlanmıştır. İki özellik de tanımlanmıştır. Bunların hepsi, statik `do` olmayan bağlamalar bölümünde, tüm bu değerleri yazdıran satıra göre gösterildiği gibi kapsamdadır.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3101.fs)]
 
 Çıktı aşağıdaki gibidir:
 
@@ -49,5 +49,5 @@ Initializing object 1 2 2 4 8 16
 - [Üyeler](index.md)
 - [Sınıflar](../classes.md)
 - [Oluşturucular](constructors.md)
-- [`let` Sınıflardaki bağlamaları](let-bindings-in-classes.md)
-- [`do` Bağlamaları](../functions/do-Bindings.md)
+- [`let`Sınıflarda bağlamalar](let-bindings-in-classes.md)
+- [`do`Lara](../functions/do-Bindings.md)

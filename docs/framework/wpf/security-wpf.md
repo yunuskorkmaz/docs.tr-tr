@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 8d01e018e570a1ab530f476368d80f4082a73bda
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ec026fd9273e99c88ec2e30cf46c3147419ace94
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400796"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629802"
 ---
 # <a name="security-wpf"></a>Güvenlik (WPF)
 <a name="introduction"></a>Windows Presentation Foundation (WPF) tek başına ve tarayıcıda barındırılan uygulamalar geliştirirken güvenlik modelini göz önünde bulundurmanız gerekir. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]tek başına uygulamalar, Windows Installer (. msi), XCopy veya ClickOnce kullanılarak dağıtılıp dağıtılmayacağı Kısıtlanmamış izinlerle (CAS**FullTrust** izin kümesi) yürütülür. ClickOnce ile kısmi güven dağıtma, tek başına WPF uygulamaları desteklenmez. Ancak, bir tam güven ana bilgisayar uygulaması .NET Framework eklentisi modelini kullanarak kısmi güven <xref:System.AppDomain> oluşturabilir. Daha fazla bilgi için bkz. [WPF Eklentilerine Genel Bakış](./app-development/wpf-add-ins-overview.md).  
@@ -216,9 +216,9 @@ ms.locfileid: "68400796"
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>Kısmen güvenilen Istemci uygulamaları için APTCA derlemelerini devre dışı bırakma  
- Yönetilen derlemeler içine [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]yüklendiğinde, kullanıcının bunları yüklemek için açık izin sağlaması gerektiğinden, bunlar tamamen güvenilir hale gelir. Tam güvenilir oldukları için, yalnızca tam olarak güvenilen yönetilen istemci uygulamaları kullanabilir. Kısmen güvenilen uygulamaların bunları kullanmasına izin vermek için, <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (aptca) ile işaretlenmeleri gerekir. Yalnızca kısmi güvende yürütme için güvenli olarak test edilmiş derlemeler Bu öznitelikle işaretlenmelidir.  
+ Yönetilen derlemeler genel derleme önbelleği 'ne (GAC) yüklendiğinde, kullanıcının bunları yüklemek için açık izin sağlaması gerektiğinden, bunlar tamamen güvenilir hale gelir. Tam güvenilir oldukları için, yalnızca tam olarak güvenilen yönetilen istemci uygulamaları kullanabilir. Kısmen güvenilen uygulamaların bunları kullanmasına izin vermek için, <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (aptca) ile işaretlenmeleri gerekir. Yalnızca kısmi güvende yürütme için güvenli olarak test edilmiş derlemeler Bu öznitelikle işaretlenmelidir.  
   
- Ancak, bir APTCA derlemesinin öğesine [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]yüklendikten sonra bir güvenlik kusuru göstermesi mümkündür. Bir güvenlik kusurunu bulduktan sonra, derleme yayımcıları mevcut kurulumlarda sorunu gidermek ve sorun keşfedildiğinde oluşabilecek yüklemelere karşı korumak için bir güvenlik güncelleştirmesi oluşturabilir. Güncelleştirme için bir seçenek derlemeyi kaldırmakla birlikte, derlemeyi kullanan diğer tam güvenilir istemci uygulamaları da kesintiye uğramayabilir.  
+ Ancak, bir APTCA derlemesinin GAC 'ye yüklendikten sonra bir güvenlik kusuru göstermesi mümkündür. Bir güvenlik kusurunu bulduktan sonra, derleme yayımcıları mevcut kurulumlarda sorunu gidermek ve sorun keşfedildiğinde oluşabilecek yüklemelere karşı korumak için bir güvenlik güncelleştirmesi oluşturabilir. Güncelleştirme için bir seçenek derlemeyi kaldırmakla birlikte, derlemeyi kullanan diğer tam güvenilir istemci uygulamaları da kesintiye uğramayabilir.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]APTCA derlemesini kaldırmadan kısmen güvenilir [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] için bir aptca derlemesinin devre dışı bırakılabileceği bir mekanizma sağlar.  
   

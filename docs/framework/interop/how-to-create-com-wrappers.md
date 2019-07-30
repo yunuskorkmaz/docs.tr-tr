@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e10b6fd7df003de739b57bbb3e17deb46215763f
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: f4ae9710b99c85cfcbe3de2669c7ee85d0d24ef4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363995"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629352"
 ---
 # <a name="how-to-create-com-wrappers"></a>Nasıl yapılır: COM Sarmalayıcıları Oluşturma
 
 Visual Studio 2005 özelliklerini veya .NET Framework araçları Tlbimp. exe ve Regasm. exe ' yi kullanarak bileşen nesne modeli (COM) sarmalayıcıları oluşturabilirsiniz. Her iki yöntem de iki tür COM sarmalayıcıları üretir:
 
-- Yönetilen kodda bir COM nesnesi çalıştırmak için bir tür kitaplığından bir [çalışma zamanı çağrılabilir sarmalayıcı](../../../docs/framework/interop/runtime-callable-wrapper.md) .
+- Yönetilen kodda bir COM nesnesi çalıştırmak için bir tür kitaplığından bir [çalışma zamanı çağrılabilir sarmalayıcı](../../../docs/standard/native-interop/runtime-callable-wrapper.md) .
 
-- Yerel bir uygulamada yönetilen bir nesne çalıştırmak için gerekli kayıt defteri ayarlarına sahip [com çağrılabilir sarmalayıcı](../../../docs/framework/interop/com-callable-wrapper.md) .
+- Yerel bir uygulamada yönetilen bir nesne çalıştırmak için gerekli kayıt defteri ayarlarına sahip [com çağrılabilir sarmalayıcı](../../../docs/standard/native-interop/com-callable-wrapper.md) .
 
 Visual Studio 2005 ' de COM sarmalayıcısı ' ı projenize bir başvuru olarak ekleyebilirsiniz.
 
@@ -75,5 +75,5 @@ Herhangi bir dizinde bulunan bir derlemede Regasm. exe ' yi çalıştırabilir v
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanında Çağrılabilir Sarmalayıcı](../../../docs/framework/interop/runtime-callable-wrapper.md)
-- [COM Çağrılabilir Sarmalayıcısı](../../../docs/framework/interop/com-callable-wrapper.md)
+- [Çalışma Zamanında Çağrılabilir Sarmalayıcı](../../../docs/standard/native-interop/runtime-callable-wrapper.md)
+- [COM Çağrılabilir Sarmalayıcısı](../../../docs/standard/native-interop/com-callable-wrapper.md)

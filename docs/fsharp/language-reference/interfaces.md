@@ -1,17 +1,17 @@
 ---
 title: Arabirimler
-description: Bilgi nasıl F# arabirimleri diğer sınıfları uygulayan ilgili üyeleri kümesi belirtin.
+description: Arabirimlerin diğer F# sınıfların uygulayan ilgili üye kümelerini nasıl belirttireceğinizi öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5b57769af6c05b83b3a112635033abf4efaca772
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8f054a668ad0fbc2453a45883e8052471280eca3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645371"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627653"
 ---
 # <a name="interfaces"></a>Arabirimler
 
-*Arabirimleri* diğer sınıfları uygulayan ilgili üyeleri kümesi belirtin.
+*Arabirimler* , diğer sınıfların uygulayan ilgili üye kümelerini belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,53 +43,53 @@ let class-name (argument-list) =
 
 ## <a name="remarks"></a>Açıklamalar
 
-Hiç üye uygulanan dışında sınıf bildirimleri arabirimi bildirimleri benzer. Bunun yerine, tüm üyeleri anahtar sözcüğü tarafından belirtildiği şekilde soyuttur `abstract`. Soyut metotlar için bir yöntem gövdesi sağlamaz. Ancak, ayrı bir üye tanımı ile birlikte bir iletişim yöntemi olarak da dahil olmak üzere tarafından varsayılan bir uygulama sağlayabilirsiniz `default` anahtar sözcüğü. Bunun yapılması, diğer .NET dillerinde taban sınıfında sanal bir yöntem oluşturmaya eşdeğerdir. Arabirimini uygulayan sınıflar sanal bir yöntem geçersiz kılınabilir.
+Arabirim bildirimleri, hiçbir üye uygulanmamalıdır hariç sınıf bildirimlerine benzer. Bunun yerine, tüm Üyeler anahtar sözcüğüyle `abstract`gösterildiği gibi soyuttur. Soyut yöntemler için bir yöntem gövdesi sağlamazsanız. Ancak, `default` anahtar sözcükle birlikte bir yöntem olarak üyenin ayrı bir tanımını da ekleyerek varsayılan bir uygulama sağlayabilirsiniz. Bunun yapılması, diğer .NET dillerinin temel sınıfında bir sanal yöntem oluşturmaya eşdeğerdir. Bu tür bir sanal yöntem, arabirimini uygulayan sınıflarda geçersiz kılınabilir.
 
-Arabirimler için varsayılan erişilebilirlik, `public`.
+Arabirimler için varsayılan erişilebilirlik `public`.
 
-Her yöntem parametresi isteğe bağlı olarak normal kullanarak bir ad verebilirsiniz F# söz dizimi:
+İsteğe bağlı olarak, her yöntem parametresine normal F# sözdizimi kullanarak bir ad verebilirsiniz:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
 
-Yukarıdaki içinde `ISprintable` örnek, `Print` yöntemi türünde tek bir parametreye sahip `string` adıyla `format`.
+Yukarıdaki `ISprintable` örnekte `Print` , yönteminin adında `string` tek`format`bir parametresi vardır.
 
-Arayüzleri uygulamak için iki yolu vardır: Nesne ifadeleri kullanarak ve sınıf türleri kullanarak. Her iki durumda da sınıfı türü veya nesne ifadesi metot gövdeleri arabirimi soyut yöntemlerini sağlar. Arabirimini uygulayan her tür için belirli uygulamalarıdır. Bu nedenle, farklı türlerde arabirim yöntemleri birbirinden farklı olabilir.
+Arabirim uygulamak için iki yol vardır: nesne ifadelerini kullanarak ve sınıf türlerini kullanarak. Her iki durumda da, sınıf türü veya nesne ifadesi, arabirimin soyut yöntemleri için yöntem gövdeleri sağlar. Uygulamalar, arabirimini uygulayan her türe özeldir. Bu nedenle, farklı türlerde arabirim yöntemleri birbirinden farklı olabilir.
 
-Anahtar sözcükler `interface` ve `end`, başlangıç ve bitiş tanımının işaretlemek, isteğe bağlı basit sözdizimi kullandığınızda. Bu anahtar sözcükler kullanmazsanız derleyici türü bir sınıf veya arabirim kullandığınız yapılarını analiz ederek olup olmadığını çıkarsamak çalışır. Bir üye veya diğer sınıfı sözdizimi kullanıyorsanız, türü bir sınıf olarak yorumlanır.
+Basit sözdizimi `interface` kullandığınızda `end`, tanımın başlangıcını ve bitişini işaretleyen anahtar sözcükler ve, isteğe bağlıdır. Bu anahtar sözcükleri kullanmıyorsanız, derleyici, kullandığınız yapıları çözümleyerek türün bir sınıf mı yoksa bir arabirim mi olduğunu çıkarmayın. Bir üye tanımlayabilir veya diğer sınıf sözdizimini kullanırsanız, tür bir sınıf olarak yorumlanır.
 
-Tüm arabirimleri büyük harfle başlamak için kodlama stili .NET olan `I`.
+.NET kodlama stili, tüm arabirimlerin sermaye `I`olarak başlamadır.
 
-## <a name="implementing-interfaces-by-using-class-types"></a>Sınıf türleri kullanarak arabirimleri uygulama
+## <a name="implementing-interfaces-by-using-class-types"></a>Sınıf türlerini kullanarak arabirimleri uygulama
 
-Kullanarak bir sınıf türünde bir veya daha fazla arabirim uygulayabilir `interface` anahtar sözcüğü, arabirimin adını ve `with` arabirimi tarafından üye tanımları, aşağıdaki kodda gösterildiği gibi anahtar sözcüğü.
+Aşağıdaki kodda gösterildiği gibi `interface` anahtar sözcüğünü, arabirimin adını `with` ve anahtar sözcüğünü kullanarak bir sınıf türünde bir veya daha fazla arabirim uygulayabilirsiniz.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2801.fs)]
 
-Tüm türetilmiş sınıfları, bunları yeniden uygulayın gerekmez. Bu nedenle, arabirim uygulamalarına devralınır.
+Arabirim uygulamaları devralınır, bu nedenle türetilen sınıfların bunları yeniden uygulaması gerekmez.
 
-## <a name="calling-interface-methods"></a>Arabirim yöntemleri çağırma
+## <a name="calling-interface-methods"></a>Arabirim yöntemlerini çağırma
 
-Arabirim yöntemleri arabirimi uygulayan türün herhangi bir nesne üzerinden değil, yalnızca arabiriminden çağrılabilir. Bu nedenle, arabirim türüne yukarı çevrim kullanarak gerekebilir `:>` işleci veya `upcast` işleci bu yöntemleri çağırmak için.
+Arabirim yöntemleri, arabirimi uygulayan türdeki herhangi bir nesne yerine yalnızca arabirim üzerinden çağrılabilir. Bu nedenle, bu yöntemleri çağırmak için `:>` işlecini `upcast` veya işlecini kullanarak arabirim türüne yukarı atama yapmanız gerekebilir.
 
-Bir nesne türü olduğunda arabirim yöntemini çağırmak için `SomeClass`, aşağıdaki kodda gösterildiği gibi yukarı çevrim nesnesine bir arabirim türü olmalıdır.
+Türünde `SomeClass`bir nesneniz olduğunda arabirim yöntemini çağırmak için, aşağıdaki kodda gösterildiği gibi, nesneyi arabirim türüne yukarı atamalısınız.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2802.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2802.fs)]
 
-Alternatif bu upcasts nesne üzerinde bir yöntemi bildirmek için ve aşağıdaki örnekte olduğu gibi arabirim yöntemini çağırır.
+Alternatif olarak, aşağıdaki örnekte olduğu gibi, ve arabirim yöntemini çağıran nesne üzerinde bir yöntemi bildirmenin bir alternatifi.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2803.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2803.fs)]
 
-## <a name="implementing-interfaces-by-using-object-expressions"></a>Nesne ifadeleri kullanarak arabirimleri uygulama
+## <a name="implementing-interfaces-by-using-object-expressions"></a>Nesne Ifadeleri kullanarak arabirimleri uygulama
 
-Nesne ifadeleri, bir arabirim uygulamak için kısa bir yol sağlar. Bunlar, adlandırılmış bir tür oluşturmak zorunda değilsiniz ve ek yöntemleri olmadan arabirim yöntemleri destekleyen bir nesne yalnızca istediğinizde kullanışlıdır. Bir nesne ifadesi, aşağıdaki kodda gösterilmiştir.
+Nesne ifadeleri, arabirim uygulamak için kısa bir yol sağlar. Adlandırılmış bir tür oluşturmanız gerekmeden ve yalnızca arabirim yöntemlerini destekleyen bir nesne istediğinizde, ek yöntemler olmadan bu yöntemler faydalıdır. Bir nesne ifadesi aşağıdaki kodda gösterilmiştir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2804.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2804.fs)]
 
-## <a name="interface-inheritance"></a>Devralma arabirimi
+## <a name="interface-inheritance"></a>Arabirim devralma
 
-Arabirimleri, bir veya daha fazla temel Ara birimden devralınabilir.
+Arabirimler, bir veya daha fazla taban arabiriminden devralınabilir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2805.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2805.fs)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

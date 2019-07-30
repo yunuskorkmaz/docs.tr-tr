@@ -14,44 +14,37 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 2494eac2f61f112f3ba6321ada7404f8cd618049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6d10982cf199e9285334e0d72e6622275d51b4d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766642"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626200"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw Deyimi (Visual Basic)
-Bir yordam içinde özel durum oluşturur.  
+Bir yordam içinde özel durum oluşturur.
+
+## <a name="syntax"></a>Sözdizimi
+
+```vb
+Throw [ expression ]
+```
+
+## <a name="part"></a>Bölümüyle
+ `expression`Oluşturulacak özel durum hakkında bilgi sağlar. Bir `Catch` bildirimde bulunduğunda isteğe bağlı, aksi takdirde gereklidir.
   
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-Throw [ expression ]  
-```  
-  
-## <a name="part"></a>Bölümü  
- `expression`  
- Özel durum oluşturulmasına hakkında bilgi sağlar. Bulunan, isteğe bağlı bir `Catch` deyimi, aksi takdirde gereklidir.  
-  
-## <a name="remarks"></a>Açıklamalar  
- `Throw` Deyimi, yapılandırılmış özel durum işleme kodu ile işleyebilmeniz bir özel durum oluşturur (`Try`... `Catch`... `Finally`) ya da yapılandırılmamış özel durum işleme kodunu (`On Error GoTo`). Kullanabileceğiniz `Throw` uygun özel durum işleme kodu bulana kadar Visual Basic çağrı yığınında yukarı taşır. çünkü, kod içindeki hataları yakalamak için deyimi.  
-  
- A `Throw` herhangi bir ifade deyimi yalnızca kullanılabilir bir `Catch` deyimi, case deyiminde tarafından işlenmekte olan özel durum beklerseniz `Catch` deyimi.  
-  
- `Throw` Deyimi için çağrı yığınını sıfırlar `expression` özel durum. Varsa `expression` sağlanmadı, çağrı yığını sol değiştirilmez. Bir özel durum için çağrı yığınını erişebileceğiniz <xref:System.Exception.StackTrace%2A> özelliği.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki kod `Throw` deyimi bir özel durum:  
-  
- [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]  
-  
-## <a name="requirements"></a>Gereksinimler  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
-  
- **Modül:** `Interaction`  
-  
- **Derleme:** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)  
+## <a name="remarks"></a>Açıklamalar
+ Bu `Throw` ifade, yapılandırılmış özel durum işleme kodu (`Try`...) ile işleyebileceğiniz bir özel durum oluşturur. `Catch`... ) veya yapılandırılmamış özel durum işleme kodu (`On Error GoTo`). `Finally` Bu ifadeyi, `Throw` uygun özel durum işleme kodunu bulana kadar çağrı yığınını Visual Basic, kodunuzun içindeki hataları yakalamak için kullanabilirsiniz.
+ 
+ İfadesi `Throw` olmayan bir deyim yalnızca bir `Catch` deyimde kullanılabilir, bu durumda deyim deyim tarafından `Catch` işlenmekte olan özel durumu yeniden oluşturur.
+
+ İfade, `expression` özel durum için çağrı yığınını sıfırlar. `Throw` `expression` Sağlanmazsa, çağrı yığını değişmeden bırakılır. Özel durum için çağrı yığınına <xref:System.Exception.StackTrace%2A> özelliği aracılığıyla erişebilirsiniz.
+
+## <a name="example"></a>Örnek
+ Aşağıdaki kod bir özel durum `Throw` oluşturmak için ifadesini kullanır:
+ 
+ [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
+
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,30 +6,35 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 06/14/2019
-ms.openlocfilehash: b1dd243d754bfc3b682c084820547f6b7846f0ea
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.date: 07/25/2019
+ms.openlocfilehash: 5300ddd83330b9564e7154008c59737d0d642138
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484655"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626338"
 ---
-# <a name="whats-new-in-net-core-30-preview-6"></a>.NET Core 3,0 'deki yenilikler (Önizleme 6)
+# <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3,0 'deki yenilikler (Önizleme 7)
 
-Bu makalede .NET Core 3,0 ' deki yenilikler açıklanmaktadır (Preview 6 üzerinden). En büyük geliştirmelerden biri, Windows Masaüstü uygulamaları için destek içerir (yalnızca Windows). .NET Core 3,0 SDK bileşeni Windows Masaüstü 'Nü kullanarak Windows Forms ve Windows Presentation Foundation (WPF) uygulamalarınızın bağlantı noktası oluşturabilirsiniz. Temiz olması için, Windows Masaüstü bileşeni yalnızca Windows 'da desteklenir ve Windows 'a dahildir. Daha fazla bilgi için bu makalenin devamındaki [Windows Masaüstü](#windows-desktop) bölümüne bakın.
+Bu makalede .NET Core 3,0 'deki yenilikler açıklanmaktadır (Preview 7 üzerinden). En büyük geliştirmelerden biri, Windows Masaüstü uygulamaları için destek içerir (yalnızca Windows). .NET Core 3,0 SDK bileşeni Windows Masaüstü 'Nü kullanarak Windows Forms ve Windows Presentation Foundation (WPF) uygulamalarınızın bağlantı noktası oluşturabilirsiniz. Temiz olması için, Windows Masaüstü bileşeni yalnızca Windows 'da desteklenir ve Windows 'a dahildir. Daha fazla bilgi için bu makalenin devamındaki [Windows Masaüstü](#windows-desktop) bölümüne bakın.
 
 .NET Core 3,0, 8,0 için C# destek ekler. [En son Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)sürümünü kullanmanız veya OmniSharp uzantısıyla Visual Studio Code önerilir.
 
-Şimdi Windows, Mac ve Linux 'ta [.NET Core 3,0 Preview 6 ' yı indirip kullanmaya](https://aka.ms/netcore3download) başlayın.
+Şimdi Windows, Mac ve Linux 'ta [.NET Core 3,0 Preview 7 ' yi indirip kullanmaya](https://aka.ms/netcore3download) başlayın.
 
 Her önizleme sürümü hakkında daha fazla bilgi için aşağıdaki duyurulara bakın:
 
+- [.NET Core 3,0 Preview 7 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [.NET Core 3,0 Preview 6 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [.NET Core 3,0 Preview 5 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
 - [.NET Core 3,0 Preview 4 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
 - [.NET Core 3,0 Preview 3 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
 - [.NET Core 3,0 Preview 2 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 - [.NET Core 3,0 Preview 1 ilanı](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+
+## <a name="production-supported-preview"></a>Üretim için desteklenen Önizleme
+
+.NET Core Preview 7, Microsoft tarafından önceden hazırlanarak üretim olarak kabul edilir ve tam olarak desteklenmektedir. Sürüm 7 ' den itibaren, yayınlar yeni özellikler eklemek yerine polishing .NET Core 3,0 ' ye odaklanacaktır. Preview 7 ' de nelerin değiştiği hakkında daha fazla bilgi için [Preview 7 duyurusuna](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)bakın.
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
@@ -174,23 +179,23 @@ TC 'yi tamamen devre dışı bırakmak için, proje dosyanızda bu ayarı kullan
 
 Uygulama derlemelerinizi ReadyToRun (R2R) biçiminde derleyerek .NET Core uygulamanızın başlama süresini geliştirebilirsiniz. R2R, bir süre öncesi (AOT) derleme biçimidir.
 
-R2R ikilileri, tam zamanında (JıT) derleyicisinin uygulamanız yüklenirken yapması gereken iş miktarını azaltarak başlangıç performansını geliştirir. İkililer, JıT 'in üretmesine kıyasla benzer yerel kod içerir.
+R2R ikilileri, tam zamanında (JıT) derleyicisinin uygulamanız yüklenirken yapması gereken iş miktarını azaltarak başlangıç performansını geliştirir. İkililer, JıT 'in üretmesine kıyasla benzer yerel kod içerir. Ancak, R2R ikilileri, bazı senaryolar için hala gerekli olan hem ara dil (IL) kodunu hem de aynı kodun yerel sürümünü içerdiğinden, daha büyüktür. R2R yalnızca, Linux x64 veya Windows x64 gibi belirli çalışma zamanı ortamlarını (RID) hedefleyen bir kendi içinde bulunan uygulamayı yayımladığınızda kullanılabilir.
 
-R2R ikili dosyaları, bazı senaryolar için hala gerekli olan ara dil (IL) kodunu ve aynı kodun yerel sürümünü içerdiğinden, ikisi de daha büyüktür. R2R yalnızca, Linux x64 veya Windows x64 gibi belirli bir çalışma zamanı ortamlarını (RID) hedefleyen bir kendi içinde bulunan uygulamayı yayımladığınızda kullanılabilir.
+Projenizi ReadyToRun olarak derlemek için aşağıdakileri yapın:
 
-Uygulamanızı R2R olarak derlemek için şu `<PublishReadyToRun>` ayarı ekleyin:
+01. `<PublishReadyToRun>` Ayarı projenize ekleyin
 
-```xml
-<PropertyGroup>
-  <PublishReadyToRun>true</PublishReadyToRun>
-</PropertyGroup>
-```
+    ```xml
+    <PropertyGroup>
+      <PublishReadyToRun>true</PublishReadyToRun>
+    </PropertyGroup>
+    ```
 
-Kendi içinde bir uygulama yayımlayın. Örneğin, bu komut Windows 'un 64 bit sürümü için kendi kendine içerilen bir uygulama oluşturur:
+01. Kendi içinde bir uygulama yayımlayın. Örneğin, bu komut Windows 'un 64 bit sürümü için kendi kendine içerilen bir uygulama oluşturur:
 
-```console
-dotnet publish -c Release -r win-x64 --self-contained true
-```
+    ```console
+    dotnet publish -c Release -r win-x64 --self-contained true
+    ```
 
 ### <a name="cross-platformarchitecture-restrictions"></a>Platformlar arası/mimari kısıtlamaları
 
@@ -422,7 +427,7 @@ Bir JSON dizesinin bir nesneye serisini kaldırma örneği aşağıda verilmişt
 
 .NET Core 3,0, yerel API birlikte çalışabilirliği geliştirir.
 
-### <a name="type-nativelibrary"></a>Şunu yazın: NativeLibrary
+### <a name="type-nativelibrary"></a>Tür: NativeLibrary
 
 <xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType>Yerel bir kitaplığı (.NET Core P/Invoke ile aynı yük mantığını kullanarak) yüklemek ve gibi ilgili yardımcı işlevleri `getSymbol`sağlamak için bir kapsülleme sağlar. Kod örneği için bkz. [Dllmap tanıtımı](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin).
 

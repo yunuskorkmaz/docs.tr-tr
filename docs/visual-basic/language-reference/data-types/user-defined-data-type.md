@@ -23,54 +23,59 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 42aecd0a5d948ab76d7bd11990d4cdbdce611015
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76073037dcaac0e87bc8a352f3b438332d11d881
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646945"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630135"
 ---
 # <a name="user-defined-data-type"></a>Kullanıcı Tanımlı Veri Türü
-Tanımladığınız bir biçimde verileri tutar. `Structure` Biçimini tanımlar.  
-  
- Visual Basic'in önceki sürümlerindeki kullanıcı tanımlı tür (UDT) destekler. Geçerli sürümü için UDT genişleyen bir *yapısı*. Bir yapının bir veya daha fazla bir bitiştirmedir *üyeleri* çeşitli veri türleri. Visual Basic bir yapı üyelerinin tek tek erişebilirsiniz ancak tek bir birim olarak ele alır.  
-  
-## <a name="remarks"></a>Açıklamalar  
- Tanımlamak ve bir yapı veri türü, çeşitli veri türlerini tek bir birimde birleştirebilirsiniz ihtiyacınız olduğunda ya da hiçbiri başlangıç veri türleri ihtiyaçlarınızı karşılamak kullanın.  
-  
- Bir yapı veri türünün varsayılan değeri, her üyenin varsayılan değerlerinin birleşimi oluşur.  
-  
-## <a name="declaration-format"></a>Bildirim biçimi  
- Yapı bildirimleri ile başlayan [Structure deyimi](../../../visual-basic/language-reference/statements/structure-statement.md) ve ile sona eren `End Structure` deyimi. `Structure` Deyimi ayrıca veri türünün yapısını tanımlama tanımlayıcıdır yapının adını sağlar. Kodun diğer bölümleri bu tanımlayıcı değerleri bu yapının veri türünde olmasını değişkenleri, parametreler ve işlev dönüş bildirmek için kullanabilirsiniz.  
-  
- Bildirimler arasında `Structure` ve `End Structure` deyimi yapının üyeleri tanımlar.  
-  
-## <a name="member-access-levels"></a>Üye erişim düzeyleri  
- Kullanarak her üyesini bildirmeniz gerekir bir [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md) veya erişim düzeyi gibi belirten bir deyimi [genel](../../../visual-basic/language-reference/modifiers/public.md), [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md), veya [özel](../../../visual-basic/language-reference/modifiers/private.md). Kullanıyorsanız bir `Dim` deyimi, genel erişim düzeyi varsayılanlara.  
-  
-## <a name="programming-tips"></a>Programlama İpuçları  
-  
-- **Bellek tüketimi.** Tüm bileşik veri türleri gibi ile güvenli bir şekilde, üyelerinin nominal depolama ayırmalarını birlikte ekleyerek bir yapının toplam bellek tüketimini hesaplanamaz. Ayrıca, siparişin bellekteki depolama sırasının bildirim ile aynı olduğunu güvenli bir şekilde varsayamazsınız. Bir yapının depolama düzenini denetlemek için ihtiyacınız varsa, uygulayabilirsiniz <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliğini `Structure` deyimi.  
-  
-- **Birlikte çalışabilirlik değerlendirmeleri.** Örneğin, .NET Framework için yazılmaz bileşenleriyle arabirim, otomasyon ve COM nesneleri, kullanıcı tanımlı türler diğer ortamlarda Visual Basic ile uyumlu olmadığını unutmayın türlerini yapılandırın.  
-  
-- **Genişletme.** Otomatik dönüştürme için veya herhangi bir yapı veri türü yoktur. Dönüştürme işleçleri, yapısını kullanarak tanımlayabileceğiniz [Operator deyimi](../../../visual-basic/language-reference/statements/operator-statement.md), ve her dönüştürme işleci olmasını bildirebilirsiniz `Widening` veya `Narrowing`.  
-  
-- **Tür karakterleri.** Değişmez değer türü karakteri ya da tanımlayıcı türü karakteri yapısı veri türleri vardır.  
-  
-- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü yoktur. Tüm yapıları .NET Framework sınıfından <xref:System.ValueType?displayProperty=nameWithType>, ancak tek tek hiçbir yapısına karşılık gelen <xref:System.ValueType?displayProperty=nameWithType>.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki paradigma, bir yapının bildirimi özetini gösterir.  
-  
-```  
-[Public | Protected | Friend | Protected Friend | Private] Structure structname  
-    {Dim | Public | Friend | Private} member1 As datatype1  
-    ' ...  
-    {Dim | Public | Friend | Private} memberN As datatypeN  
-End Structure  
-```  
-  
+
+Verileri tanımladığınız biçimde tutar. `Structure` İfade biçimi tanımlar.
+
+Önceki Visual Basic sürümleri Kullanıcı tanımlı türü (UDT) destekler. Geçerli sürüm, UDT 'yi bir *yapıya*genişletir. Yapı, çeşitli veri türlerindeki bir veya daha fazla *üyenin* bitiştirilmesi olur. Visual Basic, üyelerine tek bir birim olarak davranır, ancak üyelerine ayrı ayrı de erişebilirsiniz.
+
+## <a name="remarks"></a>Açıklamalar
+
+Çeşitli veri türlerini tek bir birimde birleştirmeniz gerektiğinde veya temel veri türlerinden hiçbiri ihtiyaçlarınıza uygun olmadığında bir yapı veri türü tanımlayın ve kullanın.
+
+Bir yapı veri türünün varsayılan değeri, üyelerinden her birinin varsayılan değerlerinin birleşiminden oluşur.
+
+## <a name="declaration-format"></a>Bildirim biçimi
+
+Yapı bildirimi, [Yapı ifadesiyle](../../../visual-basic/language-reference/statements/structure-statement.md) başlar ve `End Structure` ifadesiyle biter. Bu `Structure` ifade yapının adını sağlar, bu da yapının tanımlayan veri türünün tanımlayıcısıdır. Kodun diğer kısımları, bu yapının veri türünde olması için değişkenleri, parametreleri ve işlev dönüş değerlerini bildirmek üzere bu tanımlayıcıyı kullanabilir.
+
+`Structure` Ve`End Structure` deyimleri arasındaki bildirimler yapının üyelerini tanımlar.
+
+## <a name="member-access-levels"></a>Üye erişim düzeyleri
+
+Her üyeyi, bir [Dim ifadesini](../../../visual-basic/language-reference/statements/dim-statement.md) veya [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)veya [Private](../../../visual-basic/language-reference/modifiers/private.md)gibi erişim düzeyini belirten bir bildirimi kullanarak bildirmeniz gerekir. Bir `Dim` ifade kullanırsanız, erişim düzeyi varsayılan olarak ortak olur.
+
+## <a name="programming-tips"></a>Programlama İpuçları
+
+- **Bellek tüketimi.** Tüm bileşik veri türlerinde olduğu gibi, üyelerinin nominal depolama ayırmalarını birlikte ekleyerek bir yapının toplam bellek tüketimini güvenle hesaplayabilirsiniz. Ayrıca, bellekteki depolama sırasının bildirimin sıralamayla aynı olduğunu güvenli bir şekilde varsayamaz. Bir yapının depolama yerleşimini denetetmeniz gerekirse, <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliğini `Structure` ifadeye uygulayabilirsiniz.
+
+- **Birlikte çalışma konuları.** Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle ilgili bir arabirimleriniz varsa, diğer ortamlardaki Kullanıcı tanımlı türlerin Visual Basic yapısı türleriyle uyumlu olmadığını aklınızda bulundurun.
+
+- **Kan.** Herhangi bir yapı veri türünden veya bundan otomatik dönüşüm yoktur. [İşleç ifadesini](../../../visual-basic/language-reference/statements/operator-statement.md)kullanarak yapınıza dönüştürme işleçleri tanımlayabilir ve her bir dönüştürme işlecini `Widening` veya `Narrowing`olarak bildirebilirsiniz.
+
+- **Tür karakterleri.** Yapı veri türlerinde değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok.
+
+- **Çerçeve türü.** .NET Framework ilgili hiçbir tür yoktur. Tüm yapılar .NET Framework sınıfından <xref:System.ValueType?displayProperty=nameWithType>devralınır, ancak tek bir yapı öğesine <xref:System.ValueType?displayProperty=nameWithType>karşılık gelir.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki paradigma, bir yapının bildiriminin ana hattını gösterir.
+
+```
+[Public | Protected | Friend | Protected Friend | Private] Structure structname
+    {Dim | Public | Friend | Private} member1 As datatype1
+    ' ...
+    {Dim | Public | Friend | Private} memberN As datatypeN
+End Structure
+```
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ValueType>

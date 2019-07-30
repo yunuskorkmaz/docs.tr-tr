@@ -1,17 +1,17 @@
 ---
-title: Eşleşme ifadeleri
-description: Bilgi nasıl F# eşleştirme ifadesi ifade desenleri ile karşılaştırma temel alan dallanma denetim sağlar.
+title: Match ifadeleri
+description: F# Match ifadesinin bir desen kümesine sahip bir ifadenin karşılaştırmasına dayalı olarak dallanma denetimi nasıl sağladığını öğrenin.
 ms.date: 04/19/2018
-ms.openlocfilehash: 69ff8de1617e6b55d112d310bfcd8b2f967b6e8a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 222cb0604300039d86ed0c80293651631d212eb6
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645210"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627615"
 ---
-# <a name="match-expressions"></a>Eşleşme ifadeleri
+# <a name="match-expressions"></a>Match ifadeleri
 
-`match` İfade karşılaştırma ifade desenleri temel alan dallanma denetim sağlar.
+`match` İfade, bir ifadenin bir dizi deseniyle karşılaştırmasını temel alan dallanma denetimi sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,9 +31,9 @@ function
 
 ## <a name="remarks"></a>Açıklamalar
 
-Desen eşleştirme ifadeler, karşılaştırma test ifade desenleri temel karmaşık dallara ayırmaya olanak tanır. İçinde `match` ifade *test ifade* etkinleştirin ve bir eşleşme bulunduğunda, karşılık gelen her desen ile karşılaştırıldığında *sonuç ifadesi* değerlendirilir ve elde edilen değer eşleştirme ifadesi değerini döndürdü.
+Desen eşleştirme ifadeleri, bir dizi desenle bir test ifadesinin karşılaştırmasına bağlı olarak karmaşık dallandırma sağlar. İfadede, *Test ifadesi* her bir düzen ile karşılaştırılır ve bir eşleşme bulunduğunda, karşılık gelen *Sonuç ifadesi* değerlendirilir ve elde edilen değer, eşleşme ifadesinin değeri olarak döndürülür. `match`
 
-Önceki sözdiziminde gösterilen işlev desen, hangi desen eşleştirme hemen bağımsız değişken üzerinde gerçekleştirilen bir lambda ifadesidir. Önceki sözdiziminde gösterilen işlev desen aşağıdakine eşdeğerdir.
+Önceki sözdiziminde gösterilen model eşleştirme işlevi, bir lambda ifadesidir ve bu ifade, bağımsız değişkende hemen bu düzende yapılır. Önceki sözdiziminde gösterilen kalıp eşleştirme işlevi aşağıdaki gibidir.
 
 ```fsharp
 fun arg ->
@@ -43,27 +43,27 @@ fun arg ->
     | ...
 ```
 
-Lambda ifadeleri hakkında daha fazla bilgi için bkz. [Lambda ifadeleri: `fun` Anahtar sözcüğü](functions/lambda-expressions-the-fun-keyword.md).
+Lambda ifadeleri hakkında daha fazla bilgi için bkz [. Lambda ifadeleri: `fun` Anahtar sözcüğü](./functions/lambda-expressions-the-fun-keyword.md).
 
-Desenler tam kümesini giriş değişkeni, tüm olası eşleşmeler kapsamalıdır. Joker karakter deseni sıkça kullandığınız (`_`) olarak daha önce eşleşmeyen tüm giriş değerlerini eşleştirmek için son desen.
+Tüm desen kümesi, giriş değişkeninin tüm olası eşleşmelerini kapsamalıdır. Genellikle, daha önce eşleşmeyen giriş değerleriyle eşleştirmek`_`için en son model olarak () joker karakter stilini kullanın.
 
-Aşağıdaki kod, bazı yöntemler gösterir `match` ifade kullanılır. Başvuru ve kullanılabilir tüm olası düzeni örnekleri için bkz: [desen eşleştirme](pattern-matching.md).
+Aşağıdaki kod, `match` ifadenin kullanıldığı bazı yolları gösterir. Bir başvuru ve kullanılabilecek tüm olası desenlerin örnekleri için bkz. [desen eşleştirme](pattern-matching.md).
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4601.fs)]
 
-## <a name="guards-on-patterns"></a>Cf desenleriyle ilgili
+## <a name="guards-on-patterns"></a>Desenlerdeki koruyucular
 
-Kullanabileceğiniz bir `when` yan tümcesi değişkeni bir desenle eşleşen için karşılaması gereken ek bir koşulu belirtmek için. Böyle bir yan tümce olarak adlandırılır bir *koruyucu*. İfade aşağıdaki `when` anahtar sözcüğü bir eşleşme deseni, koruyucusu ile ilişkili yapılmıyorsa değerlendirilmez.
+Değişkenin bir düzeniyle eşleştirmek `when` için karşılaması gereken ek bir koşul belirtmek için bir yan tümce kullanabilirsiniz. Böyle bir yan tümce *koruma*olarak adlandırılır. `when` Anahtar sözcüğünü izleyen ifade, bu Guard ile ilişkili bir eşleme yapılmadığı takdirde değerlendirilmez.
 
-Aşağıdaki örnek, bir değişken desen için sayısal bir aralık belirtmek için bir koruma kullanımını gösterir. Not Boole işleçleri kullanarak birden çok koşulu birleştirilir.
+Aşağıdaki örnek, bir değişken deseninin sayısal aralığını belirtmek için bir koruyucu kullanımını gösterir. Birden çok koşulun Boole işleçleri kullanılarak birleştirildiğine unutmayın.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-Değişmez değerler dışındaki değerler desende kullanılamaz çünkü kullanmanız gerektiğini unutmayın bir `when` değerle giriş kısmı Karşılaştırılacak varsa yan tümcesi. Bu, aşağıdaki kodda gösterilmiştir:
+Değişmez değerler dışındaki değerlerin, düzende kullanılmadığından, girişin bazı bölümlerini bir değere göre karşılaştırmanız gerekiyorsa, `when` bir yan tümce kullanmanız gerektiğini unutmayın. Bu, aşağıdaki kodda gösterilmiştir:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
-Bir birleşim deseni guard tarafından ele alınmıştır, koruma için geçerli olduğunu unutmayın **tüm** yalnızca sonuncu desenlerinin. Örneğin, aşağıdaki kod, koruma verilen `when a > 12` hem `A a` ve `B a`:
+Bir birleşim deseninin bir koruyucu kapsamında ele alındığına, koruanın yalnızca son bir değil, **Tüm** desenlere uygulandığını unutmayın. Örneğin, aşağıdaki kod verildiğinde, koruma `when a > 12` `B a`hem hem de `A a` için geçerlidir:
 
 ```fsharp
 type Union =

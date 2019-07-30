@@ -13,41 +13,41 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: f85acfe7592d7b90423107e0d45bb007fce5f4a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 68371a9f8d4dcc5d0a2b67955d5e88943a83b085
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601149"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68631111"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Veri Türlerinin Etkili Kullanımı (Visual Basic)
-Bildirilmemiş değişkenler ve bir veri türü bildirilen değişkenler atanmış `Object` veri türü. Bu hızlı yazma kolaylaştırır, ancak bunları daha yavaş çalışmasına neden olabilir.  
-  
-## <a name="strong-typing"></a>Yazarak güçlü  
- Tüm değişkenlerin veri türlerini belirtme olarak bilinir *güçlü yazım, yazım*. Güçlü yazım, yazım kullanarak çeşitli avantajları vardır:  
-  
-- Bu değişkenleri için IntelliSense desteği sağlar. Bu kod yazarken özelliklerini ve diğer üyeleri görmenizi sağlar.  
-  
-- Bu derleyici tür denetimi yararlanır. Bu, çalışma zamanında taşma gibi hatalar nedeniyle başarısız olabilir deyimleri yakalar. Ayrıca bunları desteği olmayan nesneler üzerinde yöntemlere yapılan çağrılar yakalar.  
-  
-- Bu, kodunuzun daha hızlı bir şekilde yürütülmesini sonuçlanır.  
-  
-## <a name="most-efficient-data-types"></a>En verimli veri türleri  
- Kesir hiçbir zaman içeren değişkenlerini tam sayı veri türleri nonintegral türleri daha büyük/küçük harf etkilidir. Visual Basic'te `Integer` ve `UInteger` en verimli sayısal türleri.  
-  
- Kesirli sayılar için `Double` en verimli veri türü, geçerli platformda işlemci çift duyarlıklı kayan nokta işlemleri olmasıdır. Ancak, işlemleriyle `Double` gibi tam sayı türleri gibi ile kısa sürede olmayan `Integer`.  
-  
-## <a name="specifying-data-type"></a>Veri türünü belirtme  
- Kullanım [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md) belirli bir türdeki bir değişken bildirmek için. Kullanarak aynı anda erişim düzeyini belirtebilirsiniz [genel](../../../../visual-basic/language-reference/modifiers/public.md), [korumalı](../../../../visual-basic/language-reference/modifiers/protected.md), [arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md), veya [özel](../../../../visual-basic/language-reference/modifiers/private.md) görüldüğü anahtar sözcüğü Aşağıdaki örnek.  
-  
-```  
-Private x As Double  
-Protected s As String  
-```  
-  
-## <a name="character-conversion"></a>Karakter dönüştürme  
- `AscW` Ve `ChrW` işlevler Unicode olarak çalışır. Bunları preference için kullanması gereken `Asc` ve `Chr`, hangi gerekir Çevir içine ve dışına Unicode.  
-  
+Bildirilmemiş değişkenlere ve veri türü olmadan belirtilen değişkenlere `Object` veri türü atanmamıştır. Bu, programları hızlı bir şekilde yazmayı kolaylaştırır, ancak bunların daha yavaş yürütülmesine neden olabilir.
+
+## <a name="strong-typing"></a>Güçlü yazma
+ Tüm değişkenlerinizin veri türlerini belirtme, *güçlü yazma*olarak bilinir. Güçlü yazma kullanmanın çeşitli avantajları vardır:
+
+- Değişkenleriniz için IntelliSense desteği sunar. Bu, kodu yazarken özelliklerini ve diğer üyelerini görmenizi sağlar.
+
+- Derleyici türü denetlemesinin avantajlarından yararlanır. Bu catch deyimleri, taşma gibi hatalar nedeniyle çalışma zamanında başarısız olabilir. Ayrıca, bunları desteklemeyen nesneler üzerindeki yöntemlere yapılan çağrıları yakalar.
+
+- Kodunuzun daha hızlı yürütülmesine neden olur.
+
+## <a name="most-efficient-data-types"></a>En verimli veri türleri
+ Kesirleri olmayan değişkenler için, integral veri türleri İntegral olmayan türlerden daha etkilidir. Visual Basic, `Integer` ve `UInteger` en verimli sayısal türlerdir.
+
+ Büyük sayılar `Double` için en etkili veri türü, geçerli platformlardaki işlemciler çift duyarlıklı olarak kayan nokta işlemleri gerçekleştirtiğinden. Ancak, ile `Double` işlemler, gibi integral türleriyle `Integer`kadar hızlı değildir.
+
+## <a name="specifying-data-type"></a>Veri türünü belirtme
+ Belirli bir türün değişkenini bildirmek için [Dim ifadesini](../../../../visual-basic/language-reference/statements/dim-statement.md) kullanın. Aşağıdaki örnekte olduğu gibi [ortak](../../../../visual-basic/language-reference/modifiers/public.md), [korumalı](../../../../visual-basic/language-reference/modifiers/protected.md), [arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md)veya [özel](../../../../visual-basic/language-reference/modifiers/private.md) anahtar sözcüğünü kullanarak erişim düzeyini eşzamanlı olarak belirtebilirsiniz.
+
+```vb
+Private x As Double
+Protected s As String
+```
+
+## <a name="character-conversion"></a>Karakter dönüştürme
+ `AscW` Ve`ChrW` işlevleri Unicode 'da çalışır. Bu uygulamaları, `Asc` ve ' ı tercih halinde `Chr`kullanmanız gerekir ve bu, Unicode 'a ve dışına çevirmelidir.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>

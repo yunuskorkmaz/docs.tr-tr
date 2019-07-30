@@ -1,78 +1,78 @@
 ---
-title: Docker giriş
-description: Bu makale Docker için bir .NET Core uygulaması bağlamında bir giriş ve genel bakış sağlar.
+title: Docker 'a giriş
+description: Bu makalede bir .NET Core uygulaması bağlamında Docker 'a bir giriş ve genel bakış sunulmaktadır.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d0bce09d7acdcf474fbb8849c8fc82dae4a69598
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5da71215e3b539f10993677d23d89e2b8a49cb39
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753301"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626482"
 ---
-# <a name="introduction-to-net-and-docker"></a>.NET ve Docker'a giriş
+# <a name="introduction-to-net-and-docker"></a>.NET ve Docker’a Giriş
 
-.NET core, Docker kapsayıcısında kolayca çalıştırabilirsiniz. Kapsayıcılar, uygulamanızın çekirdek paylaşma ve uygulamanıza verilen kaynaklarını kullanan konak sistemi geri kalanından ayırmak için basit bir yol sağlar. Docker ile bilmiyorsanız, Docker kişinin okuma önerilir [genel bakış belgeleri](https://docs.docker.com/engine/docker-overview/).
+.NET Core, bir Docker kapsayıcısında kolayca çalıştırılabilir. Kapsayıcılar, uygulamanızı konak sisteminin geri kalanından yalıtmak, yalnızca çekirdeği paylaşmak ve uygulamanıza verilen kaynakları kullanmak için basit bir yol sağlar. Docker hakkında bilginiz yoksa Docker 'ın [genel bakış belgelerini](https://docs.docker.com/engine/docker-overview/)okumanız önemle tavsiye edilir.
 
-Docker yükleme hakkında daha fazla bilgi için bkz: indirme sayfasını [Docker Masaüstü: Community sürümü](https://www.docker.com/products/docker-desktop).
+Docker 'ın nasıl yükleneceğine ilişkin daha fazla bilgi için bkz. Docker [Desktop için indirme sayfası: Community Edition](https://www.docker.com/products/docker-desktop).
 
-## <a name="docker-basics"></a>Docker temel bilgileri
+## <a name="docker-basics"></a>Docker temelleri
 
-Bilmeniz birkaç kavram vardır. Docker istemci görüntüleri ve kapsayıcılar yönetmek için kullandığınız bir komut satırı arabirimi programı vardır. Daha önce belirtildiği gibi okumak için zaman atmanız [Docker'a genel bakış](https://docs.docker.com/engine/docker-overview/) belgeleri. 
+Bilmeniz gereken birkaç kavram vardır. Docker istemcisinin, görüntüleri ve kapsayıcıları yönetmek için kullandığınız bir komut satırı arabirimi programı vardır. Daha önce belirtildiği gibi, [Docker genel bakış](https://docs.docker.com/engine/docker-overview/) belgelerini okumak için zaman yapmanız gerekir. 
 
 ### <a name="images"></a>Görüntüler
 
-Görüntüyü bir kapsayıcı temelini dosya sistemi değişikliklerini sıralı bir koleksiyonudur. Görüntü bir duruma sahip değil ve salt okunur. Başka bir görüntü, ancak bazı özelleştirme çok zaman görüntüyü temel alır. Uygulamanız için yeni bir görüntü oluşturun, örneğin, .NET Core çalışma zamanı zaten içeren mevcut bir görüntü üzerinde temel.
+Görüntü, bir kapsayıcının temelini oluşturan dosya sistemi değişikliklerinin sıralı koleksiyonudur. Görüntüde durum yok ve salt okunurdur. Görüntünün başka bir görüntüye göre, ancak bazı özelleştirmesiyle ilgili zamanı. Örneğin, uygulamanız için yeni bir görüntü oluşturduğunuzda, onu zaten .NET Core çalışma zamanının bulunduğu varolan bir görüntüye dayandırmanız gerekir.
 
-Kapsayıcı görüntülerini oluşturulduğundan, görüntüleri kapsayıcı başlatıldığında çalıştırılan çalışma parametreler (örneğin, bir başlangıç yürütülebilir dosya) kümesine sahiptir.
+Resimler görüntülerden oluşturulduğu için görüntüler, kapsayıcı başladığında çalışan bir çalıştırma parametreleri (örneğin, başlangıç yürütülebilir dosyası) kümesi vardır.
 
 ### <a name="containers"></a>Kapsayıcılar
 
-Bir kapsayıcı görüntüyü çalıştırılabilir bir örneğidir. Görüntünüzü oluşturmak gibi uygulamayı ve bağımlılıkları dağıtın. Birden çok kapsayıcı örneği sonra her birbirinden yalıtılır. Her kapsayıcı örneği kendi dosya sistemi, bellek ve ağ arabirimi var.
+Kapsayıcı bir görüntünün çalıştırılabilir örneğidir. Görüntünüzü oluştururken uygulamanızı ve bağımlılıklarınızı dağıtırsınız. Daha sonra, birden çok kapsayıcı, her biri bir diğerinden yalıtılmış olarak oluşturulabilir. Her kapsayıcı örneğinin kendi dosya sistemi, belleği ve ağ arabirimi vardır.
 
-### <a name="registries"></a>kayıt defterleri
+### <a name="registries"></a>Kayıt
 
-Kapsayıcı kayıt defterleri, görüntü deposu koleksiyonudur. Bir kayıt defteri görüntüsünde görüntülerinizi temel alabilir. Doğrudan kayıt defterindeki bir görüntüden kapsayıcılar oluşturabilirsiniz. [Docker kapsayıcıları, görüntüleri ve kayıt defterleri arasındaki ilişki](../../standard/microservices-architecture/container-docker-introduction/docker-containers-images-registries.md) önemli bir kavramdır olduğunda [tasarlama ve oluşturma kapsayıcılı uygulamalar veya mikro Hizmetler](../../standard/microservices-architecture/architect-microservice-container-applications/index.md). Bu yaklaşım, geliştirme ve dağıtım arasındaki süreyi önemli ölçüde kısaltır.
+Kapsayıcı kayıt defterleri, bir görüntü depoları koleksiyonudur. Görüntülerinizi bir kayıt defteri görüntüsünde temel alabilirsiniz. Kapsayıcılardan doğrudan kayıt defterindeki bir görüntüden kapsayıcı oluşturabilirsiniz. [Docker kapsayıcıları, görüntüleri ve kayıt defterleri arasındaki ilişki](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md) , [Kapsayıcılı uygulamaları veya mikro hizmetleri tasarlayarak ve derlerken](../../architecture/microservices/architect-microservice-container-applications/index.md)önemli bir kavramdır. Bu yaklaşım geliştirme ve dağıtım arasındaki süreyi büyük ölçüde kısaltır.
 
-Docker, barındırılan genel bir kayıt defteri sahip [Docker Hub](https://hub.docker.com/) kullanabileceğiniz. [.NET core ilgili görüntüleri](https://hub.docker.com/_/microsoft-dotnet-core/) Docker Hub listelenir. 
+Docker 'da, kullanabileceğiniz [Docker Hub 'ında](https://hub.docker.com/) barındırılan ortak bir kayıt defteri vardır. [.NET Core ile ilgili görüntüler](https://hub.docker.com/_/microsoft-dotnet-core/) Docker Hub 'ında listelenmiştir. 
 
-Microsoft kapsayıcı kayıt defteri (MCR) Microsoft tarafından sağlanan kapsayıcı görüntülerini resmi kaynağıdır. MCR genel olarak çoğaltılmasına görüntüleri sağlamak için Azure CDN'de yerleşik olarak bulunur. Ancak, MCR genel kullanıma yönelik bir Web sitesi yok ve Microsoft tarafından sağlanan kapsayıcı görüntüleri hakkında bilgi edinmek için birincil yollarından biri sayesinde [Microsoft Docker Hub sayfaları](https://hub.docker.com/_/microsoft-dotnet-core/).
+Microsoft Container Registry (MCR), Microsoft tarafından sunulan kapsayıcı görüntülerinin resmi kaynağıdır. MCR, genel olarak çoğaltılan görüntüler sağlamak için Azure CDN oluşturulmuştur. Ancak, MCR, herkese açık bir Web sitesine sahip değildir ve Microsoft tarafından sunulan kapsayıcı görüntüleri hakkında bilgi almanın birincil yolu [Microsoft Docker Hub sayfalarıdır](https://hub.docker.com/_/microsoft-dotnet-core/).
 
 ### <a name="dockerfile"></a>Dockerfile
 
-A **Dockerfile** , görüntüyü oluşturan yönerge kümesini tanımlayan bir dosyadır. Her yönerge **Dockerfile** görüntüde bir katman oluşturur. Görüntüyü yeniden oluşturduğunuzda çoğunlukla, değişen katmanları yeniden oluşturulur. **Dockerfile** başkalarına dağıtılabilir ve veren aynı şekilde yeni bir görüntü oluşturmak için yeniden oluşturmak için oluşturduğunuz. Bu sayede dağıtmak sırada *yönergeleri* görüntünüzü dağıtmak için ana yol görüntü oluşturmak nasıl bir kayıt defterine yayımlamak için açıktır.
+**Dockerfile** , bir görüntü oluşturan bir yönergeler kümesini tanımlayan bir dosyadır. **Dockerfile** dosyasındaki her yönerge görüntüde bir katman oluşturur. Çoğu bölümde, görüntüyü yeniden oluşturduğunuzda yalnızca değiştirilen katmanlar yeniden oluşturulur. **Dockerfile** , başkalarına dağıtılabilir ve yeni bir görüntüyü oluşturduğunuz şekilde oluşturmak için yeniden oluşturulmasına olanak sağlar. Bu, görüntüyü oluşturma *yönergelerini* dağıtmanıza izin verdiğinden, görüntünüzü dağıtmanın ana yolu bir kayıt defterine yayımlamaktır.
 
-## <a name="net-core-images"></a>.NET core görüntüleri
+## <a name="net-core-images"></a>.NET Core görüntüleri
 
-Resmi .NET Core Docker görüntüleri Microsoft kapsayıcı kayıt defteri (MCR) yayımlanır ve konumunda bulunabilir [Microsoft .NET Core, Docker Hub deposundaki](https://hub.docker.com/_/microsoft-dotnet-core/). Her depo görüntüler için kullanabileceğiniz bir işletim sistemi ve .NET (SDK'sı veya çalışma zamanı) farklı birleşimlerini içerir. 
+Resmi .NET Core Docker görüntüleri Microsoft Container Registry (MCR) ' de yayımlanır ve [Microsoft .NET Core Docker Hub deposunda](https://hub.docker.com/_/microsoft-dotnet-core/)bulunabilir. Her depo, .NET (SDK veya çalışma zamanı) ve kullanabileceğiniz farklı .NET birleşimlerinin görüntülerini içerir. 
 
-Microsoft, belirli senaryolar için uyarlanmış görüntüleri sağlar. Örneğin, [ASP.NET Core depo](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) ASP.NET Core uygulamaları üretim ortamında çalıştırmak için oluşturulan görüntüleri sağlar.
+Microsoft, belirli senaryolar için uyarlanmış görüntüler sağlar. Örneğin, [ASP.NET Core deposu](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) üretimde ASP.NET Core uygulamaları çalıştırmak için oluşturulmuş görüntüler sağlar.
 
-## <a name="azure-services"></a>Azure Hizmetleri
+## <a name="azure-services"></a>Azure hizmetleri
 
-Çeşitli Azure Hizmetleri, kapsayıcıları destekler. Uygulamanız için bir Docker görüntüsü oluşturun ve aşağıdaki hizmetlerden biri dağıtın:
+Çeşitli Azure Hizmetleri, kapsayıcıları destekler. Uygulamanız için bir Docker görüntüsü oluşturup aşağıdaki hizmetlerden birine dağıtırsınız:
 
-* [Azure Kubernetes Service'i (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
-Ölçeklendirin ve Kubernetes kullanarak Linux kapsayıcıları düzenleyin.
+* [Azure Kubernetes hizmeti (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
+Kubernetes kullanarak Linux kapsayıcılarını ölçeklendirin ve düzenleyin.
 
-* [Azure uygulama hizmeti](https://azure.microsoft.com/services/app-service/containers/)\
-Web uygulamaları veya API'leri bir PaaS ortamında Linux kapsayıcıları kullanarak dağıtın.
+* [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
+Bir PaaS ortamında Linux kapsayıcıları kullanarak Web uygulamaları veya API 'Ler dağıtın.
 
 * [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
-Kapsayıcınızı daha yüksek düzeydeki tüm Yönetim Hizmetleri gerektirmeden bulutta barındırın.
+Daha üst düzey yönetim hizmetleri olmadan kapsayıcınızı bulutta barındırın.
 
 * [Azure Batch](https://azure.microsoft.com/services/batch/)\
-Kapsayıcıları kullanarak yinelenen işlem işlerini çalıştırın.
+Kapsayıcıları kullanarak yinelenen işlem işleri çalıştırın.
 
 * [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
-Windows Server kapsayıcıları kullanarak mikro hizmetler için .NET uygulamalarını modernleştirme kaldırın ve kaydırma
+Windows Server kapsayıcıları kullanarak .NET uygulamalarını mikro hizmetlere kaldırma, kaydırma ve modernleştirin
 
-* [Azure kapsayıcı kayıt defteri](https://azure.microsoft.com/services/container-registry/)\
-Store ve tüm Azure dağıtımı türlerinde kapsayıcı görüntülerini yönetin.
+* [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
+Tüm Azure dağıtımı türlerinde kapsayıcı görüntüleri depolayın ve yönetin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* [.NET Core uygulamasını kapsayıcılı hale getirme hakkında bilgi edinin.](build-docker-netcore-container.md)
-* [Bir ASP.NET Core uygulamasını kapsayıcılı hale getirme hakkında bilgi edinin.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
-* [ASP.NET Core mikro hizmet öğrenin öğreticisini deneyin.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [Visual Studio kapsayıcı araçları hakkında bilgi edinin](/visualstudio/containers/overview)
+* [.NET Core uygulamasını kapsayıya kapsayıtabilecek hakkında bilgi edinin.](build-docker-netcore-container.md)
+* [ASP.NET Core uygulamasını kapsayıya kapsayıtabilecek hakkında bilgi edinin.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
+* [ASP.NET Core mikro hizmeti öğrenin öğreticisini deneyin.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+* [Visual Studio 'da kapsayıcı araçları hakkında bilgi edinin](/visualstudio/containers/overview)

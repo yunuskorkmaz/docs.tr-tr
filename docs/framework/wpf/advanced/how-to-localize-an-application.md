@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 68bb3b8cd080e5b454776433e65027b7d18e7c3b
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 749ba2dd9318976289d9d4140cfadd711e0548d4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331561"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629876"
 ---
 # <a name="how-to-localize-an-application"></a>Nasıl yapılır: Bir Uygulamayı Yerelleştirme
 Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanın nasıl oluşturulacağı açıklanmaktadır.  
@@ -66,7 +66,7 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>Nötr dil kaynakları uydu derlemesini oluşturma  
  Uygulama, dilden bağımsız bir dil kaynakları uydu derlemesi oluşturmak üzere yapılandırıldıktan sonra, uygulamayı derleyin. Bu, ana uygulama derlemesini ve yerelleştirme için LocBaml 'in gerektirdiği Nötr dil kaynakları uydu derlemesini oluşturur. Uygulamayı derlemek için:  
   
-1. Şunu oluşturmak [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]için HelloApp derleyin:  
+1. Dinamik bağlantı kitaplığı (DLL) oluşturmak için HelloApp 'yi derleyin:  
   
      **MSBuild HelloApp. csproj**  
   
@@ -91,7 +91,7 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
   
 4. LocBaml 'i çalıştırdığınızda belirtebileceğiniz seçenekler aşağıdaki gibidir:  
   
-    - **Parse** veya **-p:** Bir. csv veya. txt [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] dosyası oluşturmak için BAML, kaynakları veya dosyaları ayrıştırır.  
+    - **Parse** veya **-p:** Bir. csv veya. txt dosyası oluşturmak için BAML, kaynaklar veya DLL dosyalarını ayrıştırır.  
   
     - **Oluştur** veya **-g:** Çevrilmiş bir dosya kullanarak yerelleştirilmiş bir ikili dosya oluşturur.  
   
@@ -101,7 +101,7 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
   
     - **çeviri** veya **-Trans** {*Translation. csv*] **:** Çevrilmiş veya yerelleştirilmiş dosya.  
   
-    - **asmpath** veya **-asmpath:** {*FileDirectory*] **:** Kodunuz özel denetimler içeriyorsa, özel denetim derlemesine asmpath sağlamanız gerekir.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
+    - **asmpath** veya **-asmpath:** {*FileDirectory*] **:** Kodunuz özel denetimler içeriyorsa, özel denetim derlemesine asmpath sağlamanız gerekir. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
   
     - **nologo** Logo veya telif hakkı bilgileri görüntüler.  
   
@@ -152,8 +152,8 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
    |BAML adı|Kaynak anahtarı|Kategori|Luğunu|Modifibilme|Açıklamalar|Değer|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
    |HelloApp. g. en-US. resources: Window1. BAML|Stack1: System. Windows. Controls. StackPanel. $Content|Yoksayma|YANLÝÞ|YANLÝÞ||#Text1; #Text2|
-   |HelloApp. g. en-US. resources: Window1. BAML|Metin1: System. Windows. Controls. TextBlock. $Content|Yok.|TRUE|TRUE||Merhaba Dünya|
-   |HelloApp. g. en-US. resources: Window1. BAML|Metin2: System. Windows. Controls. TextBlock. $Content|None|TRUE|TRUE||Güle dünya|
+   |HelloApp. g. en-US. resources: Window1. BAML|Metin1: System. Windows. Controls. TextBlock. $Content|None|TRUE|TRUE||Merhaba Dünya|
+   |HelloApp. g. en-US. resources: Window1. BAML|Metin2: System. Windows. Controls. TextBlock. $Content|Yok.|TRUE|TRUE||Güle dünya|
   
    **Comments** alanı için tüm değerlerin değer içermediğini unutmayın; bir alanın değeri yoksa, boştur. Ayrıca, ilk satırdaki öğenin okunabilir ve değiştirilebilir olmadığından ve **Kategori** değeri olarak "Yoksay" değerine sahip olduğuna dikkat edin; hepsi değerin yerelleştirilemeyen olmadığını gösterir.  
   

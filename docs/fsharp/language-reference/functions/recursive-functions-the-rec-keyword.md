@@ -1,17 +1,17 @@
 ---
-title: 'Özyinelemeli İşlevler: Rec anahtar sözcüğü'
-description: Bilgi nasıl F# 'rec' anahtar sözcüğü, bir özyinelemeli işlev tanımlamak için 'let' anahtar sözcüğü ile kullanılır.
+title: 'Özyinelemeli Işlevler: REC anahtar sözcüğü'
+description: "' Rec ' F# anahtar sözcüğünün özyinelemeli bir işlev tanımlamak için ' Let ' anahtar sözcüğüyle nasıl kullanıldığını öğrenin."
 ms.date: 05/16/2016
-ms.openlocfilehash: 86eaf1c8a5566d8b9cbc4dcb72f945e2497e5439
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7edaa7206b2109c7b1a405624b9b2330968f9c52
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645313"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630655"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a>Özyinelemeli İşlevler: Rec anahtar sözcüğü
+# <a name="recursive-functions-the-rec-keyword"></a>Özyinelemeli Işlevler: REC anahtar sözcüğü
 
-`rec` Anahtar sözcüğü ile birlikte kullanılır `let` özyinelemeli işlev tanımlamak için anahtar sözcüğü.
+Anahtar sözcüğü özyinelemeli bir işlev tanımlamak için `let` anahtar sözcüğüyle birlikte kullanılır. `rec`
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,24 +30,24 @@ function2-body
 
 ## <a name="remarks"></a>Açıklamalar
 
-Özyinelemeli İşlevler, kendileri çağıran işlevler açıkça tanımlanır F# dili. Bu tanımlanıyorsa tanımlayıcısı işlev kapsamında kullanılabilmesini sağlar.
+Kendini çağıran işlevler, açıkça F# dilde tanımlanır. Bu, tanımlanmakta olan tanımlayıcıların işlevin kapsamında kullanılabilir olmasını sağlar.
 
-Aşağıdaki kod hesaplar bir özyinelemeli işlev göstermektedir *n*<sup>th</sup> Fibonacci sayı.
+Aşağıdaki kod, *n*<sup>.</sup> fibonaccı numarasını hesaplayan özyinelemeli bir işlevi gösterir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
 > [!NOTE]
-> Yeniden hesaplama yapmayı daha önce hesaplanan değerler içerdiğinden, yukarıdaki kod bellek ve işlemci zamanı kısıp uygulamadır.
+> Uygulamada, yukarıda yer alan kod, daha önce hesaplanmış değerlerin yeniden hesaplanmasını içerdiğinden, bellek ve işlemci süresinin boşa harcanmasından kaynaklanır.
 
-Yöntem türü içinde dolaylı olarak özyinelemelidir; eklemenize gerek yoktur `rec` anahtar sözcüğü. Sınıflardaki let bağlamaları örtülü olarak özyinelemeli değildir.
+Yöntemler tür içinde örtük olarak özyinelemeli; `rec` anahtar sözcüğü eklemeye gerek yoktur. Sınıfların içindeki bağlamaların örtülü olarak özyinelemeli olmadığından izin verin.
 
-## <a name="mutually-recursive-functions"></a>Karşılıklı özyinelemeli İşlevler
+## <a name="mutually-recursive-functions"></a>Birbirini karşılıklı özyinelemeli Işlevler
 
-Bazen işlevlerdir *karşılıklı özyinelemeli*, çağrıları burada bir işlevi çağırır sırayla çağrıları herhangi bir sayıda ile ilk çağıran başka arasında bir daire, form anlamına gelir. Bu tür işlevleri bir araya tanımlamalısınız `let` kullanarak binding `and` birbirine bağlamak için anahtar sözcüğü.
+Bazen işlevler *birbirini yinelemelidir*, yani bir işlevin bir kez çağrı yaptığı, aralarında herhangi bir sayıda çağrıya sahip olan diğeri çağıran bir daire oluşturur. Bu tür işlevleri bir `let` bağlamada birlikte tanımlamanız gerekir, `and` anahtar sözcüğünü kullanarak birbirine bağlayabilirsiniz.
 
-Aşağıdaki örnek iki birbirini gösterir özyinelemeli işlevler.
+Aşağıdaki örnekte birbirini dışlayan iki özyinelemeli işlev gösterilmektedir.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 144b137550ff44a8ea4927e6cf611d4761fcb01a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981935"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629617"
 ---
 # <a name="typography"></a>Tipografi
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Zengin metin içeriği sunumu için destek içerir. Metinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanılarak oluşturulması [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], netliği ve okunabilirliği metin geliştirir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca destekler [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tarafından tanımlanan ötesinde ek özellikler sağlamak yazı tipleri [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] biçimi.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zengin metin içeriği sunumu için destek içerir. İçindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metin, metnin açıklık ve okunabilirliğini artıran Microsoft ClearType kullanılarak işlenir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Biçim[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] tarafından tanımlananların ötesinde ek yetenekler sağlayan yazı tiplerini de destekler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [WPF'de Tipografi](typography-in-wpf.md)  

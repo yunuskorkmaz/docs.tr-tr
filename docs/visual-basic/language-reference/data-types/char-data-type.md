@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: ca40e6c8dcba3da29bdb68b29c91c852e477f8f7
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 8313c2282a3b4b7b035f9f3b685a786c4471f53a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512786"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630148"
 ---
 # <a name="char-data-type-visual-basic"></a>Char Veri Türü (Visual Basic)
 
@@ -37,16 +37,22 @@ Unicode sınıflandırmasını belirleyebilmeniz için <xref:System.Char.IsDigit
 
 Visual Basic, ve sayısal türler arasında `Char` doğrudan dönüştürmez. Ya <xref:Microsoft.VisualBasic.Strings.Asc%2A> `Char` `Integer` da işlevini, kod noktasını temsil eden bir değere dönüştürmek için kullanabilirsiniz. <xref:Microsoft.VisualBasic.Strings.AscW%2A> Veya <xref:Microsoft.VisualBasic.Strings.Chr%2A> `Integer` `Char` işlevini, bu kod noktasına sahip bir değeri öğesine dönüştürmek için kullanabilirsiniz. <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
 
-Tür denetleme anahtarı ([Option Strict deyimin](../../../visual-basic/language-reference/statements/option-strict-statement.md)) açık ise, `Char` veri türü olarak tanımlamak için, değişmez değer türü karakterini tek karakterli bir dize sabit değerine eklemeniz gerekir. Aşağıdaki örnek bunu göstermektedir.
+Tür denetimi anahtarı ( [katı ifade seçeneği](../../../visual-basic/language-reference/statements/option-strict-statement.md)) açık ise, `Char` veri türü olarak tanımlamak için, değişmez değer türü karakterini tek karakterli bir dize sabit değerine eklemeniz gerekir. Aşağıdaki örnek bunu göstermektedir. `charVar` Değişkene ilk atama, açık olduğu için derleyici hatası [BC30512](../../misc/bc30512.md) `Option Strict` oluşturur. `c` Sabit değer türü karakteri değeri bir `Char` değer olarak tanımladığı için ikinci derleme başarıyla derlenir.
 
 ```vb
 Option Strict On
-Dim charVar As Char
-' The following statement attempts to convert a String literal to Char.
-' Because Option Strict is On, it generates a compiler error.
-charVar = "Z"
-' The following statement succeeds because it specifies a Char literal.
-charVar = "Z"C
+
+Module CharType
+    Public Sub Main()
+        Dim charVar As Char
+
+        ' This statement generates compiler error BC30512 because Option Strict is On.  
+        charVar = "Z"  
+
+        ' The following statement succeeds because it specifies a Char literal.  
+        charVar = "Z"c
+    End Sub
+End Module
 ```
 
 ## <a name="programming-tips"></a>Programlama İpuçları
@@ -55,7 +61,7 @@ charVar = "Z"C
 
 - **Birlikte çalışma konuları.** Örneğin Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle arabiriminiz varsa, başka ortamlarda karakter türlerinin farklı bir veri genişliğine (8 bit) sahip olduğunu unutmayın. Böyle bir bileşene 8 bitlik bir bağımsız değişken geçirirseniz, bunu yeni Visual Basic kodunuzda `Byte` `Char` değil olarak bildirin.
 
-- **Kan.** `Char` Widens`String`veri türü. Bu, `Char` `String` ' a dönüştürebileceğiniz ve bir <xref:System.OverflowException?displayProperty=nameWithType> hatayla karşılaşacağınız anlamına gelir.
+- **Kan.** `Char` Widens`String`veri türü. Bu, `Char` `String` ' a <xref:System.OverflowException?displayProperty=nameWithType>dönüştürebileceğiniz ve ile karşılaşmayacak anlamına gelir.
 
 - **Tür karakterleri.** Değişmez değer türü karakterini `C` tek karakterli bir dize değişmez değerine eklemek, `Char` veri türüne zorlar. `Char`tanımlayıcı türü karakteri yok.
 

@@ -1,75 +1,62 @@
 ---
-title: Varsayılan değerler tablosu - C# başvurusu
+title: Varsayılan değerler tablo- C# başvuru
 ms.custom: seodec18
-description: C# değer türleri için varsayılan değerleri ne olduğunu öğrenin.
-ms.date: 08/23/2018
+description: C# Türlerin varsayılan değerlerini öğrenin.
+ms.date: 07/29/2019
 helpviewer_keywords:
-- constructors [C#], return values
-- keywords [C#], new
+- default [C#]
 - parameterless constructor [C#]
-- defaults [C#]
-- value types [C#], initializing
-- variables [C#], value types
-- constructors [C#], parameterless constructor
-- types [C#], parameterless constructor return values
-ms.openlocfilehash: ec5fb4681f0e0562c5aefdf336841416f96bdf98
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23fba8269670156000cb68b3aa07ae7c770eada1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661407"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627745"
 ---
-# <a name="default-values-table-c-reference"></a>Varsayılan değerler tablosu (C# Başvurusu)
+# <a name="default-values-table-c-reference"></a>Varsayılan değerler tablosu (C# başvuru)
 
-Varsayılan değerleri aşağıdaki tabloda gösterilmektedir [değer türleri](value-types.md).
+Aşağıdaki tabloda, C# türlerin varsayılan değerleri gösterilmektedir:
 
-|Değer türü|Varsayılan değer|
-|----------------|-------------------|
+|Tür|Varsayılan değer|
+|---------|------------------|
+|Herhangi bir başvuru türü|`null`|
+|Herhangi bir [yerleşik integral sayısal türü](../builtin-types/integral-numeric-types.md)|0 (sıfır)|
+|Herhangi bir [yerleşik kayan nokta sayısal türü](../builtin-types/floating-point-numeric-types.md)|0 (sıfır)|
 |[bool](bool.md)|`false`|
-|[byte](../builtin-types/integral-numeric-types.md)|0|
-|[char](char.md)|'\0'|
-|[decimal](../builtin-types/floating-point-numeric-types.md)|0M|
-|[double](../builtin-types/floating-point-numeric-types.md)|0,0 D|
-|[enum](enum.md)|Değer ifade tarafından üretilen `(E)0`burada `E` numaralandırma tanımlayıcı.|
-|[float](../builtin-types/floating-point-numeric-types.md)|0.0F|
-|[int](../builtin-types/integral-numeric-types.md)|0|
-|[long](../builtin-types/integral-numeric-types.md)|0 M|
-|[sbyte](../builtin-types/integral-numeric-types.md)|0|
-|[short](../builtin-types/integral-numeric-types.md)|0|
-|[struct](struct.md)|Değer üretilmediğini tüm değer tür alanları varsayılan değerlerine ve tüm başvuru türü alanları ayarlayarak `null`.|
-|[uint](../builtin-types/integral-numeric-types.md)|0|
-|[ulong](../builtin-types/integral-numeric-types.md)|0|
-|[ushort](../builtin-types/integral-numeric-types.md)|0|
+|[char](char.md)|`'\0'`(U + 0000)|
+|[enum](enum.md)|İfade `(E)0`tarafından üretilen `E` , numaralandırma tanımlayıcısı olan değer.|
+|[struct](struct.md)|Tüm değer türü alanları varsayılan değerlerine ve tüm başvuru türü alanlarına `null`ayarlanarak oluşturulan değer.|
+|Herhangi bir [Nullable değer türü](../../programming-guide/nullable-types/index.md)|<xref:System.Nullable%601.HasValue%2A> Özelliği ve özelliği<xref:System.Nullable%601.Value%2A> tanımsız olan bir örnek. `false` Bu varsayılan değer null yapılabilir değer türünün *null* değeri olarak da bilinir.|
 
-## <a name="remarks"></a>Açıklamalar
-
-C# dilinde başlatılmamış değişkenler kullanamazsınız. Varsayılan değer türüne sahip bir değişken başlatabilirsiniz. Bir yöntemin varsayılan değerini belirtmek için varsayılan değer olan bir türü kullanabilirsiniz [isteğe bağlı bağımsız değişkeni](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments).
-
-Kullanım [varsayılan değer ifadesi](../../programming-guide/statements-expressions-operators/default-value-expressions.md) aşağıdaki örnekte gösterildiği gibi bir türü varsayılan değerini oluşturmak için:
+Aşağıdaki örnekte gösterildiği gibi, bir türün varsayılan değerini oluşturmak için [varsayılan değer ifadesini](../../programming-guide/statements-expressions-operators/default-value-expressions.md) kullanın:
 
 ```csharp
 int a = default(int);
 ```
 
-Kullanabileceğiniz C# 7.1 ile başlayarak, [ `default` değişmez değer](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) varsayılan değer türüne sahip bir değişken başlatmak için:
+7,1 ' C# den başlayarak, bir değişkeni türünün varsayılan değeri ile başlatmak için [ `default` değişmez](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) değeri kullanabilirsiniz:
 
 ```csharp
 int a = default;
 ```
 
-Aşağıdaki örnekte gösterildiği gibi bir değer türünün varsayılan değeri üretmek için parametresiz bir oluşturucu ya da örtük parametresiz oluşturucu kullanabilirsiniz. Oluşturucular hakkında daha fazla bilgi için bkz. [oluşturucular](../../programming-guide/classes-and-structs/constructors.md) makalesi.
+Bir değer türü için, örtük parametresiz Oluşturucu, aşağıdaki örnekte gösterildiği gibi türün varsayılan değerini de üretir:
 
-```csharp
-int a = new int();
+```csharp-interactive
+var n = new System.Numerics.Complex();
+Console.WriteLine(n);  // output: (0, 0)
 ```
 
-Varsayılan değer aşağıdakilerden [başvuru türüne](reference-types.md) olduğu `null`. Varsayılan değer olan bir [boş değer atanabilir tür](../../programming-guide/nullable-types/index.md) bir örneği olduğu <xref:System.Nullable%601.HasValue%2A> özelliği `false` ve <xref:System.Nullable%601.Value%2A> özelliği tanımsız.
+## <a name="c-language-specification"></a>C# dili belirtimi
+
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
+
+- [Varsayılan değerler](~/_csharplang/spec/variables.md#default-values)
+- [Varsayılan oluşturucular](~/_csharplang/spec/types.md#default-constructors)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](index.md)
-- [Değer türleri](value-types.md)
-- [Değer türleri tablosu](value-types-table.md)
+- [C#başvurunun](../index.md)
+- [C# anahtar sözcükleri](index.md)
 - [Yerleşik türler tablosu](built-in-types-table.md)
+- [Oluşturucular](../../programming-guide/classes-and-structs/constructors.md)
