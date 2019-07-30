@@ -1,0 +1,15 @@
+- name: .NET Uygulama Mimarisi Kılavuzu
+  href: index.yml
+- name: E-kitaplar
+  expanded: true
+  items:
+    - name: ASP.NET Core ve Microsoft Azure ile modern web uygulamaları tasarlama
+      href: modern-web-apps-azure/
+    - name: Azure bulutu ve Windows Kapsayıcıları ile Mevcut .NET Uygulamalarını modernleştirme
+      href: modernize-with-azure-containers/
+    - name: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
+      href: containerized-lifecycle/
+    - name: '.NET Mikro Hizmetleri: Kapsayıcılı .NET Uygulamaları Mimarisi'
+      href: microservices/
+    - name: 'Sunucusuz uygulamalar: Mimari, desenler ve Azure’ı uygulama'
+      href: serverless/
