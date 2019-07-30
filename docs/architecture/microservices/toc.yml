@@ -1,0 +1,159 @@
+- name: '.NET Mikro Hizmetleri: Kapsayıcılı .NET Uygulamaları Mimarisi'
+  href: index.md
+  items:
+    - name: Kapsayıcılar ve Docker’a Giriş
+      href: container-docker-introduction/index.md
+      items:
+        - name: Docker nedir?
+          href: container-docker-introduction/docker-defined.md
+        - name: Docker terimleri
+          href: container-docker-introduction/docker-terminology.md
+        - name: 'Docker kapsayıcıları, görüntüleri ve kayıt defterleri'
+          href: container-docker-introduction/docker-containers-images-registries.md
+    - name: Docker Kapsayıcıları için NET Core ile NET Framework Arasında Seçim Yapma
+      href: net-core-net-framework-containers/index.md
+      items:
+        - name: Genel rehber
+          href: net-core-net-framework-containers/general-guidance.md
+        - name: Docker kapsayıcıları için ne zaman .NET Core seçilmelidir?
+          href: net-core-net-framework-containers/net-core-container-scenarios.md
+        - name: Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
+          href: net-core-net-framework-containers/net-framework-container-scenarios.md
+        - name: 'Karar tablosu: Docker için kullanılacak .NET çerçeveleri'
+          href: net-core-net-framework-containers/container-framework-choice-factors.md
+        - name: .NET kapsayıcıları ile hangi işletim sistemi hedeflenmelidir?
+          href: net-core-net-framework-containers/net-container-os-targets.md
+        - name: Resmi .NET Docker görüntüleri
+          href: net-core-net-framework-containers/official-net-docker-images.md
+    - name: Kapsayıcı ve Mikro Hizmet Tabanlı Uygulamalar Tasarlama
+      href: architect-microservice-container-applications/index.md
+      items:
+        - name: Tek Yapılı Uygulamaları Kapsayıcıya Alma
+          href: architect-microservice-container-applications/containerize-monolithic-applications.md
+        - name: Docker uygulamalarında durum ve veriler
+          href: architect-microservice-container-applications/docker-application-state-data.md
+        - name: Hizmet odaklı mimari
+          href: architect-microservice-container-applications/service-oriented-architecture.md
+        - name: Mikro hizmetler mimarisi
+          href: architect-microservice-container-applications/microservices-architecture.md
+        - name: Mikro hizmet başına veri hakimiyeti
+          href: architect-microservice-container-applications/data-sovereignty-per-microservice.md
+        - name: Mantıksal mimari ile fiziksel mimari karşılaştırması
+          href: architect-microservice-container-applications/logical-versus-physical-architecture.md
+        - name: Dağıtılmış veri yönetimi için sorunlar ve çözümler
+          href: architect-microservice-container-applications/distributed-data-management.md
+        - name: Her mikro hizmet için etki alanı modeli sınırlarını tanımlama
+          href: architect-microservice-container-applications/identify-microservice-domain-model-boundaries.md
+        - name: Doğrudan istemci-mikro hizmet iletişimi ile API Ağ Geçidi desenini karşılaştırma
+          href: architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md
+        - name: Mikro hizmet mimarisinde iletişim
+          href: architect-microservice-container-applications/communication-in-microservice-architecture.md
+        - name: Zaman uyumsuz ileti tabanlı iletişim
+          href: architect-microservice-container-applications/asynchronous-message-based-communication.md
+        - name: 'Mikro hizmet API’leri ve anlaşmaları oluşturma, geliştirme ve sürüm oluşturma'
+          href: architect-microservice-container-applications/maintain-microservice-apis.md
+        - name: Mikro hizmet adreslenebilirliği ve hizmet kayıt defteri
+          href: architect-microservice-container-applications/microservices-addressability-service-registry.md
+        - name: Birden fazla mikro hizmetin oluşturduğu görsel kullanıcı arabirimi şekli ve düzeni dahil olmak üzere mikro hizmet tabanlı bileşik kullanıcı arabirimi oluşturma
+          href: architect-microservice-container-applications/microservice-based-composite-ui-shape-layout.md
+        - name: Mikro hizmetlerde esneklik ve yüksek kullanılabilirlik
+          href: architect-microservice-container-applications/resilient-high-availability-microservices.md
+        - name: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
+          href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
+    - name: Docker Tabanlı Uygulamalar için Geliştirme İşlemi
+      href: docker-application-development-process/index.md
+      items:
+        - name: Docker uygulamaları için geliştirme iş akışı
+          href: docker-application-development-process/docker-app-development-workflow.md
+    - name: Çok Kapsayıcılı ve Mikro Hizmet Tabanlı NET Uygulamaları Tasarlama ve Geliştirme
+      href: multi-container-microservice-net-applications/index.md
+      items:
+        - name: Mikro hizmet odaklı bir uygulama tasarlama
+          href: multi-container-microservice-net-applications/microservice-application-design.md
+        - name: Basit bir veri temelli CRUD mikro hizmeti oluşturma
+          href: multi-container-microservice-net-applications/data-driven-crud-microservice.md
+        - name: docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
+          href: multi-container-microservice-net-applications/multi-container-applications-docker-compose.md
+        - name: Kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
+          href: multi-container-microservice-net-applications/database-server-container.md
+        - name: Mikro hizmetler arasında olay tabanlı iletişim uygulama (tümleştirme olayları)
+          href: multi-container-microservice-net-applications/integration-event-based-microservice-communications.md
+        - name: Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
+          href: multi-container-microservice-net-applications/rabbitmq-event-bus-development-test-environment.md
+        - name: Olaylara abone olma
+          href: multi-container-microservice-net-applications/subscribe-events.md
+        - name: ASP.NET Core hizmetlerini ve web uygulamalarını test etme
+          href: multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md
+        - name: IHostedService ile mikro hizmetler içindeki arka plan görevlerini uygulama
+          href: multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md
+        - name: Ocelot ile API Ağ Geçitlerini uygulama
+          href: multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md
+    - name: Bir Mikro Hizmetteki İş Karmaşıklığını DDD ve CQRS Desenleriyle Giderme
+      href: microservice-ddd-cqrs-patterns/index.md
+      items:
+        - name: Bir mikro hizmete CQRS ve DDD desenlerini uygulama
+          href: microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md
+        - name: eShopOnContainers üzerinde bir DDD mikro hizmetine CQRS ve CQS yaklaşımları uygulama
+          href: microservice-ddd-cqrs-patterns/eshoponcontainers-cqrs-ddd-microservice.md
+        - name: CQRS mikro hizmetinde okuma/sorgulama işlemleri uygulama
+          href: microservice-ddd-cqrs-patterns/cqrs-microservice-reads.md
+        - name: DDD odaklı bir mikro hizmet tasarlama
+          href: microservice-ddd-cqrs-patterns/ddd-oriented-microservice.md
+        - name: Mikro hizmet etki alan modeli tasarlama
+          href: microservice-ddd-cqrs-patterns/microservice-domain-model.md
+        - name: .NET Core ile bir mikro hizmet etki alanı modeli uygulama
+          href: microservice-ddd-cqrs-patterns/net-core-microservice-domain-model.md
+        - name: Seedwork (etki alanı modeliniz için yeniden kullanılabilir kök sınıflar ve arabirimler)
+          href: microservice-ddd-cqrs-patterns/seedwork-domain-model-base-classes-interfaces.md
+        - name: Değer nesneleri uygulama
+          href: microservice-ddd-cqrs-patterns/implement-value-objects.md
+        - name: Sabit listesi türleri yerine Sabit Listesi sınıfları kullanma
+          href: microservice-ddd-cqrs-patterns/enumeration-classes-over-enum-types.md
+        - name: Etki alanı model katmanında doğrulamaları tasarlama
+          href: microservice-ddd-cqrs-patterns/domain-model-layer-validations.md
+        - name: İstemci tarafı doğrulaması (sunum katmanlarında doğrulama)
+          href: microservice-ddd-cqrs-patterns/client-side-validation.md
+        - name: 'Etki alanı olayları: tasarım ve uygulama'
+          href: microservice-ddd-cqrs-patterns/domain-events-design-implementation.md
+        - name: Altyapı kalıcılık katmanını tasarlama
+          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design.md
+        - name: Entity Framework Core ile altyapı kalıcılık katmanını uygulama
+          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implemenation-entity-framework-core.md
+        - name: NoSQL veritabanlarını bir kalıcılık altyapısı olarak kullanma
+          href: microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure.md
+        - name: Mikro hizmet uygulama katmanı ve Web API’sini tasarlama
+          href: microservice-ddd-cqrs-patterns/microservice-application-layer-web-api-design.md
+        - name: Web API’si kullanarak mikro hizmet uygulama katmanını uygulama
+          href: microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md
+    - name: Dayanıklı Uygulamalar Uygulama
+      href: implement-resilient-applications/index.md
+      items:
+        - name: Kısmi hata işleme
+          href: implement-resilient-applications/handle-partial-failure.md
+        - name: Kısmi hata işleme stratejileri
+          href: implement-resilient-applications/partial-failure-strategies.md
+        - name: Üstel geri alma ile yeniden denemeleri uygulama
+          href: implement-resilient-applications/implement-retries-exponential-backoff.md
+        - name: Dayanıklı Entity Framework Core SQL bağlantıları uygulama
+          href: implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md
+        - name: Üstel geri alma ile özel HTTP çağrı yeniden denemelerini inceleme
+          href: implement-resilient-applications/explore-custom-http-call-retries-exponential-backoff.md
+        - name: Dayanıklı HTTP isteklerini uygulamak için HttpClientFactory kullanma
+          href: implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md
+        - name: Polly üstel geri alma ile HTTP çağrı yeniden denemelerini uygulama
+          href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md
+        - name: Devre Kesici desenini uygulama
+          href: implement-resilient-applications/implement-circuit-breaker-pattern.md
+        - name: Sistem durumu izleme
+          href: implement-resilient-applications/monitor-app-health.md
+    - name: NET Mikro Hizmet ve Web Uygulamalarının Güvenliğini Sağlama
+      href: secure-net-microservices-web-applications/index.md
+      items:
+        - name: .NET mikro hizmet ve web uygulamalarında yetkilendirme hakkında
+          href: secure-net-microservices-web-applications/authorization-net-microservices-web-applications.md
+        - name: Geliştirme sırasında uygulama gizli dizilerini güvenli bir şekilde depolama
+          href: secure-net-microservices-web-applications/developer-app-secrets-storage.md
+        - name: Üretim zamanında gizli dizileri korumak için Azure Key Vault kullanma
+          href: secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md
+    - name: Anahtar paketleri
+      href: key-takeaways.md

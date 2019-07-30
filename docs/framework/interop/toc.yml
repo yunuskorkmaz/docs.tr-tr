@@ -19,10 +19,6 @@
     - name: .NET Framework Bileşenlerini COM'da Gösterme
       href: exposing-dotnet-components-to-com.md
       items:
-        - name: Birlikte Çalışma için Niteleyici .NET Türleri
-          href: qualifying-net-types-for-interoperation.md
-        - name: Birlikte Çalışma Özniteliklerini Uygulama
-          href: applying-interop-attributes.md
         - name: COM için Derlemeyi Paketleme
           href: packaging-an-assembly-for-com.md
         - name: Derlemeleri COM ile Kaydetme
@@ -94,15 +90,8 @@
               href: how-to-migrate-managed-code-dcom-to-wcf.md
     - name: 'Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme'
       href: how-to-map-hresults-and-exceptions.md
-    - name: COM Sarmalayıcıları
-      href: com-wrappers.md
-      items:
-        - name: Çalışma Zamanı Aranabilir Sarmalayıcısı
-          href: runtime-callable-wrapper.md
-        - name: COM Aranabilir Sarmalayıcısı
-          href: com-callable-wrapper.md
-        - name: 'Nasıl yapılır: COM Sarmalayıcıları Oluşturma'
-          href: how-to-create-com-wrappers.md
+    - name: 'Nasıl yapılır: COM Sarmalayıcıları Oluşturma'
+      href: how-to-create-com-wrappers.md
     - name: Tür Eşdeğerliği ve Katıştırılmış Birlikte Çalışma Türleri
       href: type-equivalence-and-embedded-interop-types.md
     - name: 'Nasıl yapılır: Tlbimp.exe Kullanarak Birincil Birlikte Çalışma Derlemeleri Oluşturma'
