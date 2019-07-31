@@ -1,17 +1,17 @@
 ---
 title: Öznitelikler
-description: Bilgi nasıl F# bir programlama yapısı için uygulanacak meta veri öznitelikleri etkinleştirin.
+description: Özniteliklerin bir F# programlama yapısına nasıl uygulanacağını nasıl etkinleştirebileceğinizi öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: fed4c549b95d6d3701ab81cf5d62add411c16038
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3f3c3469192c09aa51f31ef3f00aca0196e3c382
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642023"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630083"
 ---
 # <a name="attributes"></a>Öznitelikler
 
-Bir programlama yapısı için uygulanacak meta veri öznitelikleri etkinleştirin.
+Öznitelikler meta verilerin bir programlama yapısına uygulanmasını sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -21,47 +21,47 @@ Bir programlama yapısı için uygulanacak meta veri öznitelikleri etkinleştir
 
 ## <a name="remarks"></a>Açıklamalar
 
-Önceki sözdiziminde, *hedef* isteğe bağlıdır ve varsa, öznitelik program varlık türünü belirtir. İçin geçerli değerler *hedef* bu belgenin sonraki bölümlerinde görüntülenen tabloda gösterilir.
+Önceki sözdiziminde, *hedef* isteğe bağlıdır ve varsa, özniteliğin uygulandığı program varlığının türünü belirtir. *Target* için geçerli değerler, bu belgenin ilerleyen kısımlarında görüntülenen tabloda gösteriliyor.
 
-*Öznitelik adı* geçerli öznitelik türü ile ya da soneki olmadan (büyük olasılıkla ad alanları ile tam) adını başvurduğu `Attribute` öznitelik türü adları genellikle kullanılır. Örneğin, türü `ObsoleteAttribute` yalnızca kısalttık `Obsolete` bu bağlamda.
+*Öznitelik adı* , genellikle öznitelik türü adlarında kullanılan soneke `Attribute` sahip olan veya olmayan geçerli bir öznitelik türünün adı (ad alanları ile nitelenme) anlamına gelir. Örneğin, türü `ObsoleteAttribute` yalnızca `Obsolete` bu bağlamda kısaltılarak yapılabilir.
 
-*Bağımsız değişkenleri* oluşturucusu için bağımsız değişkenler için öznitelik türü. Öznitelik bir varsayılan oluşturucusu yoksa, bağımsız değişken listesi ve parantezler atlanmış olabilir. Konumsal bağımsız değişkenlere hem adlandırılmış bağımsız değişkenler öznitelikler destekler. *Konumsal bağımsız değişkenlere* göründükleri sırayla kullanılan bağımsız değişkenler. Genel Özellikler özniteliğine sahipse, adlandırılmış bağımsız değişkenler kullanılabilir. Bu bağımsız değişken listesinde aşağıdaki söz dizimini kullanarak ayarlayabilirsiniz.
+*Bağımsız değişkenler* öznitelik türü için oluşturucunun bağımsız değişkenidir. Bir özniteliğin varsayılan Oluşturucusu varsa, bağımsız değişken listesi ve parantezleri atlanabilir. Öznitelikler hem Konumsal bağımsız değişkenleri hem de adlandırılmış bağımsız değişkenleri destekler. *Konumsal bağımsız değişkenler* göründükleri sırada kullanılan bağımsız değişkenlerdir. Adlandırılmış bağımsız değişkenler, özniteliğinde ortak özellikler varsa kullanılabilir. Bunları, bağımsız değişken listesinde aşağıdaki sözdizimini kullanarak ayarlayabilirsiniz.
 
 ```
 *property-name* = *property-value*
 ```
 
-Bu özellik başlatmalarının herhangi bir sırada olabilir, ancak herhangi bir konumsal bağımsız değişken izlemeniz gerekir. Konumsal bağımsız değişkenler ve özellik başlatmalarının kullanan bir öznitelik örneği aşağıda verilmiştir.
+Bu tür özellik başlatmaları herhangi bir sırada olabilir, ancak bunların herhangi bir Konumsal bağımsız değişkeni izlemesi gerekir. Aşağıda Konumsal bağımsız değişkenleri ve özellik başlatmaları kullanan bir özniteliğe örnek verilmiştir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
 
-Bu örnekte, bir özniteliktir `DllImportAttribute`, burada kısaltılmış içinde kullanılan. İlk bağımsız değişken konumsal bir parametredir ve ikinci bir özelliktir.
+Bu örnekte, özniteliği `DllImportAttribute`kısaltılmış biçimde kullanılır. İlk bağımsız değişken bir Konumsal parametredir ve ikincisi bir özelliktir.
 
-Öznitelikleri karşılıklı olarak bilinen bir nesne sağlayan bir .NET programlama yapısı bir *özniteliği* bir türü veya başka bir program öğesi ile ilişkilendirilmiş. Özniteliğin uygulandığı bir program öğesi olarak bilinen *öznitelik hedefi*. Öznitelik, genellikle hedefine hakkındaki meta veriler içeriyor. Bu bağlamda herhangi bir veri üyeleri ve alanları dışındaki türü hakkında meta veriler olabilir.
+Öznitelikler, bir *öznitelik* olarak bilinen bir nesnenin bir tür veya diğer program öğesiyle ilişkilendirilmesi için bir .NET programlama yapısıdır. Bir özniteliğin uygulandığı program öğesi *öznitelik hedefi*olarak bilinir. Özniteliği genellikle hedefi hakkında meta veriler içerir. Bu bağlamda meta veriler, alanları ve üyeleri dışındaki türle ilgili herhangi bir veri olabilir.
 
-Öznitelikleri F# aşağıdaki programlama yapıları için uygulanabilir: işlevleri, yöntemleri, derlemeler, modüller, türler (sınıflar, kayıtları, yapılar, arabirimler, temsilciler, numaralandırmalar, birleşimler ve benzeri), Oluşturucular, özellikleri, alanları, Parametreler, tür parametreleri ve dönüş değerleri. Öznitelikler üzerinde izin verilmez `let` sınıfları, ifadeler veya iş akışı ifadeler içinde bağlar.
+İçindeki F# öznitelikler şu programlama yapılarına uygulanabilir: işlevler, Yöntemler, derlemeler, modüller, türler (sınıflar, kayıtlar, yapılar, arabirimler, temsilciler, numaralandırmalar, birleşimler, vb.), oluşturucular, özellikler, alanlar, Parametreler, tür parametreleri ve dönüş değerleri. Sınıfların, ifadelerin veya iş `let` akışı ifadelerinin içindeki bağlamalarda özniteliklere izin verilmez.
 
-Genellikle, öznitelik bildiriminin doğrudan özniteliği hedef bildiriminden önce görünür. Birden çok öznitelik bildirimleri kullanılabilir birlikte, aşağıdaki gibi.
+Genellikle, öznitelik bildirimi doğrudan öznitelik hedefinin bildiriminden önce görünür. Birden çok öznitelik bildirimi, aşağıdaki şekilde birlikte kullanılabilir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
 
-Öznitelikler, çalışma zamanında .NET yansıma kullanarak sorgulayabilirsiniz.
+.NET Reflection kullanarak çalışma zamanında öznitelikleri sorgulayabilirsiniz.
 
-Önceki kod örneğinde olduğu gibi tek tek birden çok öznitelik bildirebilirsiniz veya burada gösterildiği gibi noktalı tek tek öznitelikler ve Oluşturucular, ayırmak için kullanıyorsanız bunları parantez kümesi içinde bildirebilirsiniz.
+Bir önceki kod örneğinde olduğu gibi birden çok özniteliği tek tek bir dizi şekilde bildirebilirsiniz veya bağımsız öznitelikleri ve oluşturucuları ayırmak için noktalı virgül kullanırsanız, burada gösterildiği gibi bunları tek bir köşeli ayraç kümesinde bildirebilirsiniz.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
 
-Sık rastlanan öznitelikleri yer `Obsolete` öznitelik, öznitelikler için güvenlik konuları öznitelikleri COM desteği, kod sahipliği ilişkili öznitelikleri ve bir türü seri hale belirten öznitelikleri. Aşağıdaki örnek, kullanımını gösterir `Obsolete` özniteliği.
+Tipik olarak, `Obsolete` öznitelik, güvenlik açısından dikkat edilecek öznitelikler, com desteği öznitelikleri, kod sahipliğiyle ilgili öznitelikler ve bir türün seri hale getirilebilir olup olmadığını belirten öznitelikler içerir. Aşağıdaki örnek, `Obsolete` özniteliğinin kullanımını gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
 
-Öznitelik hedefleri için `assembly` ve `module`, öznitelik için bir en üst düzey uygulama `do` , derlemede bağlama. Word içerebilir `assembly` veya `module` gösterildiği gibi öznitelik bildirimi.
+Öznitelik hedefleri `assembly` `module`için, özniteliklerini derlemenizin en üst düzey `do` bağlamaya uygularsınız. Word 'ü `assembly` veya `module` öznitelik bildirimine aşağıdaki gibi ekleyebilirsiniz.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
-İçin uygulanan bir öznitelik için öznitelik hedefi atlarsanız, bir `do` bağlamayı F# derleyici bu özniteliği için anlamlı öznitelik hedefi belirlemek dener. Çok sayıda öznitelik sınıfları bir öznitelik türü sahip `System.AttributeUsageAttribute` bu öznitelik için desteklenen olası hedefleri hakkında bilgi içerir. Varsa `System.AttributeUsageAttribute` gösterir öznitelik hedefleri olarak işlevleri destekler, öznitelik programının ana giriş noktasına uygulanacak alınır. Varsa `System.AttributeUsageAttribute` gösterir öznitelik hedefleri olarak derlemelerini destekler, derleyici derlemeye uygulanacak özniteliği alır. Çoğu öznitelikleri işlevleri ve derlemeler için geçerli değildir, ancak yaptıkları olduğu durumlarda, öznitelik için programın main işlevi uygulamak için alınır. Öznitelik, öznitelik hedefi açıkça belirtilmediği takdirde, belirtilen hedef uygulanır.
+Bir `do` bağlamaya uygulanan bir özniteliğin öznitelik hedefini atlarsanız, F# derleyici bu öznitelik için anlamlı olan öznitelik hedefini saptamaya çalışır. Birçok öznitelik sınıfı, bu öznitelik için desteklenen `System.AttributeUsageAttribute` olası hedefler hakkında bilgi içeren türünde bir özniteliğe sahiptir. Eğer özniteliğinin işlevleri hedef olarak desteklediğini gösteriyorsa,öznitelikprogramınanagirişnoktasınauygulanacakşekildealınır.`System.AttributeUsageAttribute` Eğer özniteliğin derlemeleri hedef olarak desteklediğini gösteriyorsa,derleyiciözniteliğiderlemeyeuygulanacakşekildealır.`System.AttributeUsageAttribute` Çoğu öznitelik hem işlevler hem de derlemeler için geçerlidir, ancak oldukları durumlarda özniteliği programın ana işlevine uygulanacak şekilde alınır. Öznitelik hedefi açıkça belirtilirse, öznitelik belirtilen hedefe uygulanır.
 
-Genellikle belirtmek gerekmez, ancak öznitelik hedef açıkça için geçerli değerler *hedef* öznitelik içinde kullanım örneklerinin yanı sıra aşağıdaki tabloda gösterilmiştir.
+Genellikle öznitelik hedefini açıkça belirtmeniz gerekmese de, bir öznitelikte *target* için geçerli değerler, kullanım örnekleri ile birlikte aşağıdaki tabloda gösterilmiştir.
 
 <table>
   <tr>
@@ -85,7 +85,7 @@ Genellikle belirtmek gerekmez, ancak öznitelik hedef açıkça için geçerli d
     <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x<code></pre></td> 
   </tr>
   <tr>
-    <td>param</td>
+    <td>larına</td>
     <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10<code></pre></td> 
   </tr>
   <tr>
