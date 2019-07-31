@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: e2c93f4471db2d72851a5d5bd8806b59a3e5ee28
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629855"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671830"
 ---
 # <a name="technology-regions-overview"></a>Teknoloji Bölgelerine Genel Bakış
 WPF, Win32 veya DirectX gibi bir uygulamada birden çok sunum teknolojisi kullanılıyorsa, ortak bir üst düzey pencere içinde işleme alanlarının paylaşılması gerekir. Bu konu, WPF birlikte çalışabilirlik uygulamanızın sunumunu ve girişini etkileyebilecek sorunları açıklar.  
@@ -52,13 +52,13 @@ WPF, Win32 veya DirectX gibi bir uygulamada birden çok sunum teknolojisi kullan
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]HRGNs; destekler Ancak, bu işlev için yönetilen API yok. Platform Invoke ' i ve ilgili <xref:System.Windows.Interop.HwndSource> [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] API 'leri çağırmak için ' i kullanabilirsiniz. Daha fazla bilgi için bkz. [yönetilen koddan yerel Işlevleri çağırma](/cpp/dotnet/calling-native-functions-from-managed-code).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]katmanlı pencerelerin farklı işletim sistemlerinde farklı özellikleri vardır. Bunun nedeni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , oluşturulacak DirectX 'in kullanıldığı ve katmanlı pencerelerin, DirectX işleme değil öncelikle [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] işleme için tasarlanmıştı.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]katmanlı pencerelerin farklı işletim sistemlerinde farklı özellikleri vardır. Bunun nedeni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , oluşturulacak DirectX 'in kullanıldığı ve katmanlı pencerelerin, DirectX işleme değil Öncelikle GDI işlemesi için tasarlanmıştı.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] ve üzeri donanım hızlandırmalı katmanlı pencereleri destekler. Üzerinde [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] donanım hızlandırmalı katmanlı pencereler Microsoft DirectX 'in desteğini gerektirir, bu nedenle yetenekler söz konusu makinedeki Microsoft DirectX sürümüne bağlı olacaktır.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], özellikle işleme donanım hızlandırılmasıyla, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] istediğiniz tam rengi işlemeyi garanti edemediğinden, saydamlık renk tuşlarını desteklemez.  
   
-- Uygulamanız üzerinde [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]çalışıyorsa DirectX yüzeyleri üzerinde katmanlı pencereler DirectX uygulaması tarafından oluşturulduğunda titreşebilir.  (Gerçek işleme sırası [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] katmanlı pencereyi ve ardından DirectX çizmesini ve sonra [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] katmanlı pencereyi geri koyar).  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Katmanlı olmayan pencereler de bu sınırlamaya sahiptir.  
+- Uygulamanız üzerinde [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]çalışıyorsa DirectX yüzeyleri üzerinde katmanlı pencereler DirectX uygulaması tarafından oluşturulduğunda titreşebilir.  (Gerçek işleme sırası, Microsoft Windows Grafik Cihaz Arabirimi (GDI) katmanlı pencereyi, sonra DirectX çizmesini ve sonra Microsoft Windows Grafik Cihaz Arabirimi (GDI) katmanlı pencereyi geri koyar.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Katmanlı olmayan pencereler de bu sınırlamaya sahiptir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

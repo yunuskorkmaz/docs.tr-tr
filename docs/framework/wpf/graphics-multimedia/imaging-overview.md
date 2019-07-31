@@ -21,25 +21,25 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: d1fcf15db750167a93344ff8efd5957933bed6c0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b6fb530bbc4132b09cc17ad692e6e9e23cd75598
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629849"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671850"
 ---
 # <a name="imaging-overview"></a>Görüntülemeye Genel Bakış
 Bu konu, [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]öğesine bir giriş sağlar. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]geliştiricilerin resimleri görüntülemesine, dönüştürmelerine ve biçimlendirmeye olanak sağlar.  
 
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF Imaging bileşeni  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]içindeki [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]görüntüleme özelliklerine önemli geliştirmeler sağlar. Bir bit eşlem görüntüleme veya ortak denetimde görüntü kullanma gibi görüntüleme özellikleri, daha önce [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] veya [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] kitaplıklarına bağımlıdır. Bu API, taban çizgisi görüntüleme işlevselliği sağlar, ancak codec genişletilebilirliği ve yüksek uygunlukta görüntü desteği gibi özelliklerin bulunmaması. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)], ve ' [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] nin eksikler düzeyini aşmak için tasarlanmıştır ve uygulamalarınızın görüntülerini görüntülemesi ve kullanmak için yeni bir API kümesi sağlar.  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]içindeki [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]görüntüleme özelliklerine önemli geliştirmeler sağlar. Bir bit eşlem görüntüleme veya ortak denetimde görüntü kullanma gibi görüntüleme özellikleri, daha önce Microsoft Windows Grafik Cihaz Arabirimi (GDI) veya Microsoft Windows GDI+ kitaplıklarına bağımlıdır. Bu API, taban çizgisi görüntüleme işlevselliği sağlar, ancak codec genişletilebilirliği ve yüksek uygunlukta görüntü desteği gibi özelliklerin bulunmaması. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)], GDI ve GDI+ 'ın eksiklılarını aşmak ve uygulamalarınızın içindeki görüntüleri görüntülemesi ve kullanmak için yeni bir API kümesi sağlamak üzere tasarlanmıştır.  
   
  Yönetilen bir bileşen ve yönetilmeyen bileşen [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] API 'sine erişmenin iki yolu vardır. Yönetilmeyen bileşen aşağıdaki özellikleri sağlar.  
   
 - Yeni veya özel görüntü biçimleri için genişletilebilirlik modeli.  
   
-- Bit eşlem (BMP [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]), [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)],,,, ve simgesi (. ico) dahil yerel görüntü biçimlerinde gelişmiş performans ve güvenlik. [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]  
+- Bit eşlem (BMP [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]), [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)],,, grafik değişim biçimi (GIF) ve simge (. ico) dahil yerel görüntü biçimlerinde gelişmiş performans ve güvenlik.  
   
 - Kanal başına 8 bite kadar yüksek bit derinlikli görüntü verilerinin korunması (piksel başına 32 bit).  
   
@@ -57,11 +57,11 @@ Bu konu, [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]öğ
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF resim biçimleri  
- Bir codec bileşeni, belirli bir medya biçiminin kodunu çözmek veya kodlamak için kullanılır. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]BMP, [!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)], [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)], [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], ,,veIcongörüntübiçimleriiçinbircodecbileşeniiçerir.[!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] Bu codec bileşenlerinden her biri, uygulamaların kodunu çözmelerini ve SIMGE dışında kendi görüntü biçimlerini kodlamalarını sağlar.  
+ Bir codec bileşeni, belirli bir medya biçiminin kodunu çözmek veya kodlamak için kullanılır. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]BMP, [!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)], [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)], [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], ,GIFveIconresimbiçimleriiçinbircodecbileşeniiçerir.[!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] Bu codec bileşenlerinden her biri, uygulamaların kodunu çözmelerini ve SIMGE dışında kendi görüntü biçimlerini kodlamalarını sağlar.  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>, görüntülerin kod çözmede ve kodlamasında kullanılan önemli bir sınıftır. Bu işlem [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] hattının temel yapı taşıdır ve belirli bir boyut ve çözünürlükte tek bir sabit piksel kümesini temsil eder. , Birden çok çerçeve görüntüsünün tek bir çerçevesi olabilir veya bir <xref:System.Windows.Media.Imaging.BitmapSource>üzerinde gerçekleştirilen dönüşümün sonucu olabilir. <xref:System.Windows.Media.Imaging.BitmapSource> Bu, Imaging [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] <xref:System.Windows.Media.Imaging.BitmapFrame>'de gibi kullanılan birincil sınıfların birçoğunun üst öğesidir.  
   
- Bir <xref:System.Windows.Media.Imaging.BitmapFrame> görüntü biçiminin gerçek bit eşlem verilerini depolamak için kullanılır. Birçok görüntü biçimi yalnızca tek <xref:System.Windows.Media.Imaging.BitmapFrame>bir destekler, ancak gibi biçimler [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] ve [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] görüntü başına birden çok çerçeveyi destekler. Çerçeveler, kod çözücüleri tarafından giriş verisi olarak kullanılır ve görüntü dosyaları oluşturmak için kodlayıcılara geçirilir.  
+ Bir <xref:System.Windows.Media.Imaging.BitmapFrame> görüntü biçiminin gerçek bit eşlem verilerini depolamak için kullanılır. Birçok görüntü biçimi yalnızca tek <xref:System.Windows.Media.Imaging.BitmapFrame>bir destekler, ancak GIF gibi biçimler ve [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] görüntü başına birden çok çerçeveyi destekler. Çerçeveler, kod çözücüleri tarafından giriş verisi olarak kullanılır ve görüntü dosyaları oluşturmak için kodlayıcılara geçirilir.  
   
  Aşağıdaki örnek, bir <xref:System.Windows.Media.Imaging.BitmapFrame> <xref:System.Windows.Media.Imaging.BitmapSource> ' dan nasıl oluşturulduğunu ve sonra bir görüntüyeeklendiğinigösterir.[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]  
   

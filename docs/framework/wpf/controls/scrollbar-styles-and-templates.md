@@ -9,45 +9,45 @@ helpviewer_keywords:
 - templates [WPF], ScrollBar
 - parts [WPF], ScrollBar
 ms.assetid: 066ea45a-e27d-43b0-adfe-cce6934c22f5
-ms.openlocfilehash: 22b2206067302f621a94a1e9abca1607792b3393
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 016556fb825ddf60af7dc572d6fda7323b9bb09d
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052891"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671977"
 ---
 # <a name="scrollbar-styles-and-templates"></a>ScrollBar Stilleri ve Şablonları
-Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.Primitives.ScrollBar> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
+Bu konuda, <xref:System.Windows.Controls.Primitives.ScrollBar> denetimin stilleri ve şablonları açıklanmaktadır. Denetim için benzersiz bir görünüm <xref:System.Windows.Controls.ControlTemplate> sağlamak üzere varsayılan ' i değiştirebilirsiniz. Daha fazla bilgi için, bkz. [bir ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="scrollbar-parts"></a>Kaydırma çubuğu bölümleri  
- Adlandırılmış bölümleri için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.ScrollBar> denetimi.  
+ Aşağıdaki tabloda, <xref:System.Windows.Controls.Primitives.ScrollBar> denetimin adlandırılmış parçaları listelenmektedir.  
   
-|Bölümü|Tür|Açıklama|  
+|Bölümüyle|Tür|Açıklama|  
 |-|-|-|  
-|PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Kapsayıcı konumunu gösteren bir öğe için <xref:System.Windows.Controls.Primitives.ScrollBar>.|  
+|PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Öğesinin konumunu <xref:System.Windows.Controls.Primitives.ScrollBar>gösteren öğesi için kapsayıcı.|  
   
 ## <a name="scrollbar-states"></a>Kaydırma çubuğu durumları  
- Görsel durumlar için aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.ScrollBar> denetimi.  
+ Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.ScrollBar> denetim için görsel durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |----------------------|---------------------------|-----------------|  
-|Normal|CommonStates|Varsayılan durumu.|  
-|Fareyi üzerine getirme|CommonStates|Fare işaretçisi denetimin üzerine yerleştirilir.|  
-|Devre dışı|CommonStates|Denetim devre dışıdır.|  
-|Geçerli|ValidationStates|Denetimi kullanan <xref:System.Windows.Controls.Validation> sınıfı ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Ekli özelliği `true` olan denetim odağa sahip değil.|  
+|Normal|Ortak durumlar|Varsayılan durum.|  
+|Gelme olayından|Ortak durumlar|Fare işaretçisi denetimin üzerine yerleştirilir.|  
+|Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|  
+|Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ve ekli özelliği `false`kullanır.|  
+|Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> İliştirilmiş`true` özelliği ve denetim odağa sahiptir.|  
+|Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> İliştirilmiş`true` özelliği ve denetim odağa sahip değildir.|  
   
-## <a name="scrollbar-controltemplate-example"></a>Kaydırma çubuğu ControlTemplate Örneği  
- Aşağıdaki örnek nasıl tanımlanacağını gösterir bir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.Primitives.ScrollBar> denetimi.  
+## <a name="scrollbar-controltemplate-example"></a>ScrollBar ControlTemplate örneği  
+ Aşağıdaki örnek, <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.Primitives.ScrollBar> denetimi için nasıl tanımlanacağını gösterir.  
   
  [!code-xaml[ControlTemplateExamples#ScrollBar](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/scrollbar.xaml#scrollbar)]  
   
- Yukarıdaki örnekte, bir veya daha fazla aşağıdaki kaynakları kullanır.  
+ Yukarıdaki örnekte aşağıdaki kaynaklardan biri veya daha fazlası kullanılmaktadır.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Tüm örnek için bkz. [ControlTemplates Ile stillendirme örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

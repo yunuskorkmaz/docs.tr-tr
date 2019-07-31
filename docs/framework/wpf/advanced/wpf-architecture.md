@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 440a6d76e5295613d2887c0a77d9a49e870e580b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 39cf4b60262afb1e3745a82c734391385669f5d3
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629822"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671917"
 ---
 # <a name="wpf-architecture"></a>WPF Mimarisi
 Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisinde kılavuzlu bir tur sağlar. Büyük alt sistemlerinin [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]çoğunu ele alır ve bunların nasıl etkileşime gireceğini açıklar. Ayrıca, mimarlarının mimarlarının [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]yaptığı seçimlerin bazılarını da ayrıntılarıyla görebilirsiniz.  
@@ -76,9 +76,9 @@ Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisinde kılavuzl
   
  Diyagramda gerçekten fark olmayan önemli bir ayrıntı, sistemin aslında oluşturma işlemini nasıl gerçekleştirdiğine ilişkin bir şeydir.  
   
- User32 ve [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]içinde sistem, bir anlık mod kırpma sisteminde çalışmaktadır. Bir bileşenin işlenmesi gerektiğinde, sistem, bileşenin piksellere dokunmasına izin verilmeyen bir kırpma sınırları oluşturur ve ardından bileşene bu kutudaki pikselleri boyamak istenir. Bu sistem, yalnızca etkilenen bileşene dokunmanız gerektiğinde hiçbir değişiklik yapıldığında, her zaman tek bir pikselin rengine katkıda bulunmadığı için bellek kısıtlı sistemlerde çok iyi çalışmaktadır.  
+ User32 ve GDI 'da sistem, bir anlık mod kırpma sisteminde çalışmaktadır. Bir bileşenin işlenmesi gerektiğinde, sistem, bileşenin piksellere dokunmasına izin verilmeyen bir kırpma sınırları oluşturur ve ardından bileşene bu kutudaki pikselleri boyamak istenir. Bu sistem, yalnızca etkilenen bileşene dokunmanız gerektiğinde hiçbir değişiklik yapıldığında, her zaman tek bir pikselin rengine katkıda bulunmadığı için bellek kısıtlı sistemlerde çok iyi çalışmaktadır.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]"boyacısı 'nın algoritması" boyama modelini kullanır. Bu, her bir bileşenin kırpılması yerine her bileşenin geri dönerek ekran önüne işlenmesi istenir. Bu, her bir bileşenin önceki bileşenin görüntüsüne göre boyamasına olanak tanır. Bu modelin avantajı karmaşık, kısmen saydam şekillere sahip olabilirsiniz. Günümüzün modern grafik donanımıyla, bu model görece hızlıdır (User32/ [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] oluşturulduğunda bu durum değildir).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]"boyacısı 'nın algoritması" boyama modelini kullanır. Bu, her bir bileşenin kırpılması yerine her bileşenin geri dönerek ekran önüne işlenmesi istenir. Bu, her bir bileşenin önceki bileşenin görüntüsüne göre boyamasına olanak tanır. Bu modelin avantajı karmaşık, kısmen saydam şekillere sahip olabilirsiniz. Günümüzün modern grafik donanımıyla, bu model görece hızlıdır (User32/GDI oluşturulduğunda bu durum değildir).  
   
  Daha önce belirtildiği gibi, bir çekirdek felseı [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] daha açıklayıcı, "Özellik merkezli" programlama modeline geçmektedir. Görsel sistemde bu, birkaç ilginç yerde görüntülenir.  
   

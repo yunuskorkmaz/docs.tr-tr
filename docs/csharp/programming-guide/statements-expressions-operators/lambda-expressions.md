@@ -1,7 +1,7 @@
 ---
 title: Lambda ifadeleri- C# Programlama Kılavuzu
 ms.custom: seodec18
-ms.date: 03/14/2019
+ms.date: 07/29/2019
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,38 +9,44 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 546feb6f3c4515ceecdb5b5afa14c0fc99ab7020
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 36dab520d67d08d1b3304f1453bfb2c07a2f1c32
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363900"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671701"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda ifadeleri (C# Programlama Kılavuzu)
 
-*Lambda ifadesi* , nesne olarak kabul edilen bir kod bloğu (bir ifade veya deyim bloğu). Yöntemlere bir bağımsız değişken olarak geçirilebilir ve Yöntem çağrıları tarafından da döndürülebilir. Lambda ifadeleri için kapsamlı olarak kullanılır:
+*Lambda ifadesi* aşağıdaki iki formdan herhangi birinin bir ifadesidir:
 
-- Yürütülecek kodu, <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType>gibi zaman uyumsuz yöntemlere geçirme.
+- Gövdesi olarak bir ifadeye sahip olan [ifade lambda](#expression-lambdas) :
 
-- [LINQ sorgu ifadeleri](../../linq/index.md)yazılıyor.
+  ```csharp
+  (input-parameters) => expression
+  ```
 
-- [İfade ağaçları](../concepts/expression-trees/index.md)oluşturma.
+- Gövdesi olarak bir ifade bloğuna sahip olan [ifade lambda](#statement-lambdas) :
 
-Lambda ifadeleri, bir temsilci olarak ya da bir temsilciye derlenen bir ifade ağacı olarak temsil edilebilir koddur. Bir lambda ifadesinin belirli temsilci türü, parametrelerine ve dönüş değerine bağlıdır. Değer döndürmeyen lambda ifadeleri, parametre sayısına bağlı olarak belirli `Action` bir temsilciye karşılık gelir. Değer döndüren lambda ifadeleri, parametre sayısına bağlı olarak belirli `Func` bir temsilciye karşılık gelir. Örneğin, iki parametresi olan bir lambda ifadesi, ancak bir <xref:System.Action%602> temsilciye karşılık gelen hiçbir değer döndürmez. Bir parametreye sahip olan ve <xref:System.Func%602> temsilciye karşılık gelen bir değer döndüren bir lambda ifadesi.
+  ```csharp  
+  (input-parameters) => { <sequence-of-statements> }
+  ```
 
-Lambda ifadesi, Lambda `=>`parametre listesini yürütülebilir kodundan ayırmak için [lambda bildirim işlecini](../../language-reference/operators/lambda-operator.md)kullanır. Lambda ifadesi oluşturmak için, lambda işlecinin sol tarafındaki giriş parametrelerini (varsa) belirtirsiniz ve ifadeyi veya deyim bloğunu diğer tarafa yerleştirebilirsiniz. Örneğin, tek satırlık lambda ifadesi `x => x * x` adlı `x` bir parametreyi belirtir `x` ve kare değerlerini döndürür. Bu ifadeyi aşağıdaki örnekte gösterildiği gibi bir temsilci türüne atayabilirsiniz:
+Lambda parametre listesini gövdesinden ayırmak için [lambda bildirimi işlecini `=>` ](../../language-reference/operators/lambda-operator.md) kullanın. Lambda ifadesi oluşturmak için, lambda işlecinin sol tarafında (varsa) giriş parametrelerini ve diğer tarafta bir ifade ya da deyim bloğunu belirtirsiniz.
+
+Herhangi bir lambda ifadesi, bir [temsilci](../../language-reference/builtin-types/reference-types.md#the-delegate-type) türüne dönüştürülebilir. Lambda ifadesinin dönüştürülebileceği temsilci türü, parametrelerinin ve dönüş değerinin türlerine göre tanımlanır. Lambda ifadesi bir değer döndürmezse, `Action` temsilci türlerinden birine dönüştürülebilir; Aksi takdirde, `Func` temsilci türlerinden birine dönüştürülebilir. Örneğin, iki parametresi olan ve değer döndüren bir lambda ifadesi bir <xref:System.Action%602> temsilciye dönüştürülemez. Bir parametreye sahip olan ve bir değer döndüren bir lambda ifadesi, bir <xref:System.Func%602> temsilciye dönüştürülebilir. Aşağıdaki örnekte, adlı `x => x * x` `x` `x` ve kare değeri döndüren bir parametreyi belirten lambda ifadesi, bir temsilci türü değişkenine atanır:
 
 [!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
 
-Ayrıca, bir ifade ağaç türüne bir lambda ifadesi atayabilirsiniz:
+Aşağıdaki örnekte gösterildiği gibi ifade lambdaları da [ifade ağacı](../concepts/expression-trees/index.md) türlerine dönüştürülebilir:
 
 [!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
 
-Ya da doğrudan yöntem bağımsız değişkeni olarak geçirebilirsiniz:
+Lambda ifadelerini, örneğin, arka planda yürütülmesi gereken kodu geçirmek için <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> yönteme bir bağımsız değişken olarak temsilci türleri veya ifade ağaçları örnekleri gerektiren herhangi bir kodda kullanabilirsiniz. Aşağıdaki örnekte gösterildiği gibi, [LINQ sorgu ifadeleri](../../linq/index.md)yazdığınızda Lambda ifadelerini de kullanabilirsiniz:
 
-[!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
+[!code-csharp-interactive[lambda is argument in LINQ](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
-Sınıfında yöntemi çağırmak için yöntem tabanlı sözdizimi kullandığınızda (LINQ to Objects ve LINQ to XML) parametre bir temsilci türüdür <xref:System.Func%602?displayProperty=nameWithType>. <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> <xref:System.Linq.Enumerable?displayProperty=nameWithType> Lambda ifadesi, bu temsilciyi oluşturmak için en kullanışlı yoldur. Sınıfında yöntemini çağırdığınızda (LINQ to SQL içinde yaptığınız gibi) parametre türü bir ifade ağacı türüdür [`Expression<Func<TSource,TResult>>`.](<xref:System.Linq.Expressions.Expression%601>) <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> <xref:System.Linq.Queryable?displayProperty=nameWithType> Yine, Lambda ifadesi bu ifade ağacını oluşturmanın yalnızca çok kısa bir yoludur. Lambda tarafından oluşturulan nesnenin türü `Select` farklı olsa da Lambdalar, çağrıların benzer görünmesine izin verir.
+Sınıfında yöntemi çağırmak için yöntem tabanlı sözdizimi kullandığınızda (örneğin, LINQ to Objects ve LINQ to XML, parametresi bir temsilci türüdür <xref:System.Func%602?displayProperty=nameWithType>. <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> <xref:System.Linq.Enumerable?displayProperty=nameWithType> Sınıfında yöntemini çağırdığınızda, örneğin LINQ to SQL, parametre türü bir ifade ağacı türüdür [`Expression<Func<TSource,TResult>>`.](<xref:System.Linq.Expressions.Expression%601>) <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> <xref:System.Linq.Queryable?displayProperty=nameWithType> Her iki durumda da, parametre değerini belirtmek için aynı lambda ifadesini kullanabilirsiniz. Aslında Lambdalar `Select` tarafından oluşturulan nesnelerin türü farklı olsa da, bu iki çağrının benzer görünmesini sağlar.
   
 ## <a name="expression-lambdas"></a>İfade lambdaları
 
@@ -73,7 +79,7 @@ Lambda ifadesinin gövdesi bir yöntem çağrısından oluşabilir. Ancak, SQL S
 Ayraçlar arasındaki deyimler hariç statement lambda, expression lambda'ya benzer:
 
 ```csharp  
-(input-parameters) => { statement; }
+(input-parameters) => { <sequence-of-statements> }
 ```
 
 Bir lambda deyiminin gövdesi herhangi bir sayıda deyimden oluşabilir; ancak, uygulamada genellikle iki veya üçten fazla değildir.
