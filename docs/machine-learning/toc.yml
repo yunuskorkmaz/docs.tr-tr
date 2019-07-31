@@ -23,6 +23,8 @@
       href: tutorials/image-classification.md
     - name: Ürün Satış Analizi (anomali algılama)
       href: tutorials/sales-anomaly-detection.md
+    - name: Görüntülerdeki nesneleri algılama (nesne algılama)
+      href: tutorials/object-detection-onnx.md
 - name: Nasıl yapılır kılavuzları
   items:
     - name: Veri yükleme
