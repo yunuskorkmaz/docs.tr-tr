@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 4f3d8a9f275a41b96b6518d63552ce9873cca0fb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ee5318b8ba1284f2805b80b3e41fab3ae739158c
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400824"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672007"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 'ye Genel Bakış (WPF)
+
 Bu konu xaml dilinin özelliklerini açıklar ve uygulamaları yazmak [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] için XAML 'yi nasıl kullanabileceğinizi gösterir. Bu konu, tarafından [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]uygulanan xaml 'yi özellikle açıklar. XAML, daha büyük bir dil kavramıdır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>XAML nedir?  
- XAML, bildirime dayalı bir biçimlendirme dilidir. .NET Framework programlama modeline uygulandığı gibi XAML, bir .NET Framework uygulaması [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] için oluşturmayı basitleştirir. Bildirim temelli xaml biçimlendirmesinde [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] görünür öğeler oluşturabilir ve ardından kod arkasında bulunan ve kısmi sınıf [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] tanımları aracılığıyla biçimlendirmeyi kullanarak çalışma zamanı mantığından tanımlamayı ayırabilirsiniz. XAML, derlemelerde tanımlanan belirli bir yedekleme türleri kümesindeki nesnelerin örneklenmesini doğrudan temsil eder. Bu, genellikle bir yedekleme türü sistemine doğrudan bir bağlama olmadan yorumlanan bir dil olan diğer birçok işaretleme dilinin aksine. XAML, farklı tarafların, potansiyel olarak farklı araçlar kullanarak, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] uygulamanın ve mantığındaki bir iş akışını mümkün bir şekilde sunar.  
+ XAML, bildirime dayalı bir biçimlendirme dilidir. .NET Framework programlama modeline uygulandığı gibi XAML, bir .NET Framework uygulaması [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] için oluşturmayı basitleştirir. Bildirim temelli xaml biçimlendirmesinde [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] görünür öğeler oluşturabilir ve ardından, kısmi sınıf tanımları aracılığıyla biçimlendirmeye [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] katılmış arka plan kod dosyalarını kullanarak, çalışma zamanı mantığından tanımlamayı ayırabilirsiniz. XAML, derlemelerde tanımlanan belirli bir yedekleme türleri kümesindeki nesnelerin örneklenmesini doğrudan temsil eder. Bu, genellikle bir yedekleme türü sistemine doğrudan bir bağlama olmadan yorumlanan bir dil olan diğer birçok işaretleme dilinin aksine. XAML, farklı tarafların, potansiyel olarak farklı araçlar kullanarak, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] uygulamanın ve mantığındaki bir iş akışını mümkün bir şekilde sunar.  
   
  Metin olarak temsil edildiğinde, XAML dosyaları genellikle `.xaml` uzantısına sahip xml dosyalarıdır. Dosyalar herhangi bir XML kodlamasıyla kodlanabilir, ancak UTF-8 olarak kodlama tipik bir davranıştır.  
   
@@ -64,7 +65,7 @@ Bu konu xaml dilinin özelliklerini açıklar ve uygulamaları yazmak [!INCLUDE[
 ### <a name="property-element-syntax"></a>Özellik öğesi sözdizimi  
  Bir nesne öğesinin bazı özellikleri için, özellik değeri sağlamak için gereken nesne veya bilgiler, öznitelik sözdiziminin tırnak işareti ve dize kısıtlamaları içinde yeterince ifade edilemediğinden öznitelik sözdizimi mümkün değildir. Bu gibi durumlarda, özellik öğesi sözdizimi olarak bilinen farklı bir sözdizimi kullanılabilir.  
   
- Özellik öğesi `<`başlangıç etiketinin sözdizimi *TypeName*`.`*PropertyName*`>`. Genellikle, bu etiketin içeriği özelliğin değeri olarak aldığı türün bir nesne öğesidir. İçeriği belirttikten sonra, özellik öğesini bir bitiş etiketiyle kapatmanız gerekir. `</`Bitiş etiketinin sözdizimi *TypeName*`.`PropertyName'tir.`>`  
+ Özellik öğesi `<`başlangıç etiketinin sözdizimi *TypeName*`.`*PropertyName*`>`. Genellikle, bu etiketin içeriği özelliğin değeri olarak aldığı türün bir nesne öğesidir. İçeriği belirttikten sonra, özellik öğesini bir bitiş etiketiyle kapatmanız gerekir. `</`Bitiş etiketinin sözdizimi *TypeName*`.`*PropertyName'tir.* `>`  
   
  Bir öznitelik sözdizimi mümkünse, öznitelik söz dizimini kullanmak genellikle daha kolay olur ve daha küçük bir biçimlendirme sunar, ancak bu genellikle bir stil, teknik bir kısıtlama değildir. Aşağıdaki örnek, önceki öznitelik sözdizimi örneğinde olduğu gibi ayarlanan özelliklerin aynısını gösterir, ancak bu kez öğesinin `Button`tüm özellikleri için özellik öğesi söz dizimi kullanılarak.  
   
@@ -104,7 +105,7 @@ Bu konu xaml dilinin özelliklerini açıklar ve uygulamaları yazmak [!INCLUDE[
   
  XAML dilinin bir kuralı olarak, XAML içerik özelliğinin değeri, nesne öğesindeki diğer herhangi bir özellik öğesinden tamamen önce veya tamamen bir değere verilmelidir. Örneğin, aşağıdaki biçimlendirme derlenmez:  
   
-```  
+```xaml
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -165,7 +166,7 @@ Bu konu xaml dilinin özelliklerini açıklar ve uygulamaları yazmak [!INCLUDE[
 ## <a name="markup-extensions"></a>Biçimlendirme uzantıları  
  Biçimlendirme uzantıları bir XAML dil kavramıdır. Bir öznitelik sözdizimi değeri sağlamak için kullanıldığında, küme ayraçları (`{` ve `}`) biçimlendirme uzantısı kullanımını gösterir. Bu kullanım, XAML işlemesini, bir sabit dize veya dize dönüştürülebilir bir değer olarak öznitelik değerlerinin genel işlemeden çıkmak için yönlendirir.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulama programlamada kullanılan en yaygın biçimlendirme uzantıları bağlamadır, [](binding-markup-extension.md)veri bağlama ifadeleri için kullanılır ve kaynak [StaticResource](staticresource-markup-extension.md) ve [DynamicResource](dynamicresource-markup-extension.md)öğesine başvurur. Biçimlendirme uzantıları ' nı kullanarak, bu özellik genel olarak bir öznitelik sözdizimini desteklemeseler bile özellikler için değerler sağlamak üzere öznitelik sözdizimini kullanabilirsiniz. Biçimlendirme uzantıları, değerleri erteleme veya çalışma zamanında mevcut olan diğer nesnelere başvuru gibi özellikleri etkinleştirmek için genellikle ara ifade türlerini kullanır.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulama programlamada kullanılan en yaygın biçimlendirme uzantıları [bağlamadır](binding-markup-extension.md), veri bağlama ifadeleri için kullanılır ve kaynak [StaticResource](staticresource-markup-extension.md) ve [DynamicResource](dynamicresource-markup-extension.md)öğesine başvurur. Biçimlendirme uzantıları ' nı kullanarak, bu özellik genel olarak bir öznitelik sözdizimini desteklemeseler bile özellikler için değerler sağlamak üzere öznitelik sözdizimini kullanabilirsiniz. Biçimlendirme uzantıları, değerleri erteleme veya çalışma zamanında mevcut olan diğer nesnelere başvuru gibi özellikleri etkinleştirmek için genellikle ara ifade türlerini kullanır.  
   
  Örneğin, aşağıdaki biçimlendirme öznitelik söz dizimini kullanarak <xref:System.Windows.FrameworkElement.Style%2A> özelliğin değerini ayarlar. Özelliği, <xref:System.Windows.Style> sınıfının bir örneğini alır ve bu, varsayılan olarak bir öznitelik sözdizimi dizesi tarafından örneklenemez. <xref:System.Windows.FrameworkElement.Style%2A> Ancak bu durumda öznitelik, [StaticResource](staticresource-markup-extension.md)belirli bir biçimlendirme uzantısına başvurur. Biçimlendirme Uzantısı işlendiğinde, daha önce kaynak sözlüğünde anahtarlı kaynak olarak örneklenen bir stile başvuru döndürür.  
   
@@ -188,7 +189,7 @@ Bu konu xaml dilinin özelliklerini açıklar ve uygulamaları yazmak [!INCLUDE[
  [!code-xaml[XAMLOvwSupport#MarginVerbose](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
   
 > [!NOTE]
->  Ayrıca, türün kendisi parametresiz bir oluşturucuya sahip olmadığı için, tür dönüştürmenin bir alt sınıf eklemeden bu türe bir özelliği ayarlamaya yönelik tek ortak yol olduğu sınırlı sayıda nesne vardır. <xref:System.Windows.Input.Cursor> bunun bir örneğidir.  
+> Ayrıca, türün kendisi parametresiz bir oluşturucuya sahip olmadığı için, tür dönüştürmenin bir alt sınıf eklemeden bu türe bir özelliği ayarlamaya yönelik tek ortak yol olduğu sınırlı sayıda nesne vardır. <xref:System.Windows.Input.Cursor> bunun bir örneğidir.  
   
  Tür dönüştürme ve öznitelik sözdizimi için kullanımı hakkında daha fazla bilgi için bkz. [TypeConverters ve xaml](typeconverters-and-xaml.md).  
   
@@ -228,7 +229,7 @@ Bu konu xaml dilinin özelliklerini açıklar ve uygulamaları yazmak [!INCLUDE[
   
  Özel ön eklerin XAML biçimlendirmesinde nasıl çalıştığı hakkında temel bir örnek aşağıda verilmiştir. Ön ek `custom` , kök öğe etiketinde tanımlanmıştır ve paketlenmiş ve uygulamayla kullanılabilir olan belirli bir derlemeyle eşleştirilir. Bu derleme, genel xaml `NumericUpDown`kullanımını desteklemek için uygulanan ve bir WPF XAML içerik modelinde bu belirli noktada eklenmesine izin veren bir sınıf devralma kullanan bir tür içerir. Bu `NumericUpDown` denetimin bir örneği, bir XAML ayrıştırıcısı türü hangi xaml ad alanının içerdiğini bilmesi ve bu nedenle, yedekleme derlemesinin tür tanımını içermesi halinde öneki kullanılarak nesne öğesi olarak bildirilmiştir.  
   
-```  
+```xaml
 <Page  
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"   
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"   
