@@ -1,49 +1,50 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) değeri değişmeyen bir değişken oluşturma'
+title: 'Nasıl yapılır: Değerde değişmez bir değişken Oluştur (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 3a9fa93b69c9abb42b2dd7eae623048f3628999e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d201e95463dd0431825fee03ebfd340ac80cc552
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663567"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630889"
 ---
-# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a><span data-ttu-id="a8aa0-102">Nasıl yapılır: (Visual Basic) değeri değişmeyen bir değişken oluşturma</span><span class="sxs-lookup"><span data-stu-id="a8aa0-102">How to: Create a Variable that Does Not Change in Value (Visual Basic)</span></span>
-<span data-ttu-id="a8aa0-103">Bir değişkenin değerini değiştirmez kavramımız çelişkili görünebilir.</span><span class="sxs-lookup"><span data-stu-id="a8aa0-103">The notion of a variable that does not change its value might appear to be contradictory.</span></span> <span data-ttu-id="a8aa0-104">Ancak bazı durumlarda bir sabit uygun olmadığı durumlarda ve sabit bir değere sahip bir değişken sağlamak kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="a8aa0-104">But there are situations when a constant is not feasible and it is useful to have a variable with a fixed value.</span></span> <span data-ttu-id="a8aa0-105">Böyle bir durumda olan bir üye değişkeni tanımlayabilirsiniz [salt okunur](../../../../visual-basic/language-reference/modifiers/readonly.md) anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="a8aa0-105">In such a case you can define a member variable with the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.</span></span>  
-  
- <span data-ttu-id="a8aa0-106">Kullanamazsınız [Const deyimi](../../../../visual-basic/language-reference/statements/const-statement.md) bildirmek ve aşağıdaki durumlarda bir sabit değer atamak için:</span><span class="sxs-lookup"><span data-stu-id="a8aa0-106">You cannot use the [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value in the following circumstances:</span></span>  
-  
-- <span data-ttu-id="a8aa0-107">`Const` Deyimi kullanmak istediğiniz veri türünü kabul etmiyor</span><span class="sxs-lookup"><span data-stu-id="a8aa0-107">The `Const` statement does not accept the data type you want to use</span></span>  
-  
-- <span data-ttu-id="a8aa0-108">Derleme zamanında bir değer kattığını değil</span><span class="sxs-lookup"><span data-stu-id="a8aa0-108">You do not know the value at compile time</span></span>  
-  
-- <span data-ttu-id="a8aa0-109">Sabit değer derleme zamanında işlem belirleyemiyoruz</span><span class="sxs-lookup"><span data-stu-id="a8aa0-109">You are unable to compute the constant value at compile time</span></span>  
-  
-### <a name="to-create-a-variable-that-does-not-change-in-value"></a><span data-ttu-id="a8aa0-110">Değeri değişmeyen bir değişken oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="a8aa0-110">To create a variable that does not change in value</span></span>  
-  
-1. <span data-ttu-id="a8aa0-111">Modül düzeyinde olan bir üye değişkeni bildirme [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)ve [salt okunur](../../../../visual-basic/language-reference/modifiers/readonly.md) anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="a8aa0-111">At module level, declare a member variable with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), and include the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.</span></span>  
-  
-    ```  
-    Dim ReadOnly timeStarted  
-    ```  
-  
-     <span data-ttu-id="a8aa0-112">Belirtebileceğiniz `ReadOnly` yalnızca bir üye değişkeni üzerinde.</span><span class="sxs-lookup"><span data-stu-id="a8aa0-112">You can specify `ReadOnly` only on a member variable.</span></span> <span data-ttu-id="a8aa0-113">Başka bir deyişle, her türlü yordam dışında Modül düzeyinde değişkeni tanımlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="a8aa0-113">This means you must define the variable at module level, outside of any procedure.</span></span>  
-  
-2. <span data-ttu-id="a8aa0-114">Değerin tek bir deyimde derleme zamanında bilgi işlem, bir başlatma yan tümcesi içinde kullanın. `Dim` deyimi.</span><span class="sxs-lookup"><span data-stu-id="a8aa0-114">If you can compute the value in a single statement at compile time, use an initialization clause in the `Dim` statement.</span></span> <span data-ttu-id="a8aa0-115">İzleyin [olarak](../../../../visual-basic/language-reference/statements/as-clause.md) yan tümcesiyle birlikte bir eşittir işareti (`=`) ve ardından bir ifade.</span><span class="sxs-lookup"><span data-stu-id="a8aa0-115">Follow the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause with an equal sign (`=`), followed by an expression.</span></span> <span data-ttu-id="a8aa0-116">Derleyici, bu ifade bir sabit değere değerlendirebilirsiniz emin olun.</span><span class="sxs-lookup"><span data-stu-id="a8aa0-116">Be sure the compiler can evaluate this expression to a constant value.</span></span>  
-  
-    ```  
-    Dim ReadOnly timeStarted As Date = Now  
-    ```  
-  
-     <span data-ttu-id="a8aa0-117">Bir değer atamak için bir `ReadOnly` değişken yalnızca bir kez.</span><span class="sxs-lookup"><span data-stu-id="a8aa0-117">You can assign a value to a `ReadOnly` variable only once.</span></span> <span data-ttu-id="a8aa0-118">Bunu yaptıktan sonra kod her zamankinden değerini değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a8aa0-118">Once you do so, no code can ever change its value.</span></span>  
-  
-     <span data-ttu-id="a8aa0-119">Değer derleme zamanında bilmiyorsanız veya tek bir deyimde derleme zamanında hesaplayamıyor, yine de uygulamayı çalışma zamanında bir oluşturucuda atayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a8aa0-119">If you do not know the value at compile time, or cannot compute it at compile time in a single statement, you can still assign it at run time in a constructor.</span></span> <span data-ttu-id="a8aa0-120">Bunu yapmak için size bildirmelidir `ReadOnly` sınıf veya yapı düzeyinde değişken.</span><span class="sxs-lookup"><span data-stu-id="a8aa0-120">To do this, you must declare the `ReadOnly` variable at class or structure level.</span></span> <span data-ttu-id="a8aa0-121">Bu sınıf veya yapı için oluşturucu, sabit değişkenin değerini hesaplamak ve oluşturucudan döndürmeden önce değişkene atayın.</span><span class="sxs-lookup"><span data-stu-id="a8aa0-121">In the constructor for that class or structure, compute the variable's fixed value, and assign it to the variable before returning from the constructor.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="a8aa0-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a8aa0-122">See also</span></span>
+# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a><span data-ttu-id="e4a40-102">Nasıl yapılır: Değerde değişmez bir değişken Oluştur (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e4a40-102">How to: Create a Variable that Does Not Change in Value (Visual Basic)</span></span>
 
-- [<span data-ttu-id="a8aa0-123">WriteOnly</span><span class="sxs-lookup"><span data-stu-id="a8aa0-123">WriteOnly</span></span>](../../../../visual-basic/language-reference/modifiers/writeonly.md)
-- [<span data-ttu-id="a8aa0-124">Const Deyimi</span><span class="sxs-lookup"><span data-stu-id="a8aa0-124">Const Statement</span></span>](../../../../visual-basic/language-reference/statements/const-statement.md)
+<span data-ttu-id="e4a40-103">Değerini değiştirolmayan bir değişken kavramı, çelişkili gibi görünebilir.</span><span class="sxs-lookup"><span data-stu-id="e4a40-103">The notion of a variable that does not change its value might appear to be contradictory.</span></span> <span data-ttu-id="e4a40-104">Ancak, bir sabit değer mümkün olmadığında ve sabit bir değere sahip bir değişken olması faydalı olduğunda durumlar vardır.</span><span class="sxs-lookup"><span data-stu-id="e4a40-104">But there are situations when a constant is not feasible and it is useful to have a variable with a fixed value.</span></span> <span data-ttu-id="e4a40-105">Böyle bir durumda, [salt okunur](../../../../visual-basic/language-reference/modifiers/readonly.md) anahtar sözcüğüyle bir üye değişkeni tanımlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e4a40-105">In such a case you can define a member variable with the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.</span></span>
+
+<span data-ttu-id="e4a40-106">[Const ifadesini](../../../../visual-basic/language-reference/statements/const-statement.md) aşağıdaki koşullarda bir sabit değer bildirmek ve atamak için kullanamazsınız:</span><span class="sxs-lookup"><span data-stu-id="e4a40-106">You cannot use the [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value in the following circumstances:</span></span>
+
+- <span data-ttu-id="e4a40-107">`Const` İfade, kullanmak istediğiniz veri türünü kabul etmiyor</span><span class="sxs-lookup"><span data-stu-id="e4a40-107">The `Const` statement does not accept the data type you want to use</span></span>
+
+- <span data-ttu-id="e4a40-108">Derleme zamanında değeri bilemezsiniz</span><span class="sxs-lookup"><span data-stu-id="e4a40-108">You do not know the value at compile time</span></span>
+
+- <span data-ttu-id="e4a40-109">Derleme zamanında sabit değeri hesaplayamıyor</span><span class="sxs-lookup"><span data-stu-id="e4a40-109">You are unable to compute the constant value at compile time</span></span>
+
+### <a name="to-create-a-variable-that-does-not-change-in-value"></a><span data-ttu-id="e4a40-110">Değerde değişiklik olmayan bir değişken oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="e4a40-110">To create a variable that does not change in value</span></span>
+
+1. <span data-ttu-id="e4a40-111">Modül düzeyinde, [Dim ifadesiyle](../../../../visual-basic/language-reference/statements/dim-statement.md)bir üye değişkeni bildirin ve [salt okunur](../../../../visual-basic/language-reference/modifiers/readonly.md) anahtar sözcüğünü ekleyin.</span><span class="sxs-lookup"><span data-stu-id="e4a40-111">At module level, declare a member variable with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), and include the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.</span></span>
+
+    ```vb
+    Dim ReadOnly timeStarted
+    ```
+
+    <span data-ttu-id="e4a40-112">Yalnızca bir üye `ReadOnly` değişkeninde belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e4a40-112">You can specify `ReadOnly` only on a member variable.</span></span> <span data-ttu-id="e4a40-113">Bu, herhangi bir yordamın dışında değişkeni modül düzeyinde tanımlamanız gereken anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="e4a40-113">This means you must define the variable at module level, outside of any procedure.</span></span>
+
+2. <span data-ttu-id="e4a40-114">Derleme zamanında değeri tek bir ifadede hesapladıysanız, `Dim` deyimindeki bir başlatma yan tümcesini kullanın.</span><span class="sxs-lookup"><span data-stu-id="e4a40-114">If you can compute the value in a single statement at compile time, use an initialization clause in the `Dim` statement.</span></span> <span data-ttu-id="e4a40-115">Eşittir işareti [](../../../../visual-basic/language-reference/statements/as-clause.md) (`=`) ve ardından bir ifade gelen as yan tümcesini izleyin.</span><span class="sxs-lookup"><span data-stu-id="e4a40-115">Follow the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause with an equal sign (`=`), followed by an expression.</span></span> <span data-ttu-id="e4a40-116">Derleyicinin bu ifadeyi sabit bir değere değerlendirebilmesi için emin olun.</span><span class="sxs-lookup"><span data-stu-id="e4a40-116">Be sure the compiler can evaluate this expression to a constant value.</span></span>
+
+    ```vb
+    Dim ReadOnly timeStarted As Date = Now
+    ```
+
+    <span data-ttu-id="e4a40-117">Bir `ReadOnly` değişkene yalnızca bir kez değer atayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e4a40-117">You can assign a value to a `ReadOnly` variable only once.</span></span> <span data-ttu-id="e4a40-118">Bunu yaptığınızda, herhangi bir kod hiçbir zaman değerini değiştiremez.</span><span class="sxs-lookup"><span data-stu-id="e4a40-118">Once you do so, no code can ever change its value.</span></span>
+
+    <span data-ttu-id="e4a40-119">Derleme zamanında değeri bilemezsiniz veya tek bir ifadede derleme zamanında hesapladıysanız, yine de bir oluşturucuda çalışma zamanında atayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e4a40-119">If you do not know the value at compile time, or cannot compute it at compile time in a single statement, you can still assign it at run time in a constructor.</span></span> <span data-ttu-id="e4a40-120">Bunu yapmak için `ReadOnly` değişkeni sınıf veya yapı düzeyinde bildirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="e4a40-120">To do this, you must declare the `ReadOnly` variable at class or structure level.</span></span> <span data-ttu-id="e4a40-121">Bu sınıf veya yapı için oluşturucuda, değişkenin sabit değerini hesaplayın ve oluşturucuyu döndürmeden önce değişkenine atayın.</span><span class="sxs-lookup"><span data-stu-id="e4a40-121">In the constructor for that class or structure, compute the variable's fixed value, and assign it to the variable before returning from the constructor.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="e4a40-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e4a40-122">See also</span></span>
+
+- [<span data-ttu-id="e4a40-123">WriteOnly</span><span class="sxs-lookup"><span data-stu-id="e4a40-123">WriteOnly</span></span>](../../../../visual-basic/language-reference/modifiers/writeonly.md)
+- [<span data-ttu-id="e4a40-124">Const Deyimi</span><span class="sxs-lookup"><span data-stu-id="e4a40-124">Const Statement</span></span>](../../../../visual-basic/language-reference/statements/const-statement.md)
