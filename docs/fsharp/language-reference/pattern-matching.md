@@ -2,12 +2,12 @@
 title: Desen Eşleştirme
 description: Verileri mantıksal yapılara göre karşılaştırmak, F# verileri yapısal parçalar halinde çıkarmak veya verilerden bilgi ayıklamak için desenlerin ' de nasıl kullanıldığını öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627303"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733472"
 ---
 # <a name="pattern-matching"></a>Desen Eşleştirme
 
@@ -15,7 +15,7 @@ Desenler, giriş verilerini dönüştürmek için kurallardır. Bu F# diller, ve
 
 ## <a name="remarks"></a>Açıklamalar
 
-Desenler, `match` ifadesi gibi birçok dil yapılarında kullanılır. `let` Bağlamalar, lambda ifadeleri ve `try...with` ifadeyle ilişkili özel durum işleyicilerde işlevler için bağımsız değişkenleri işlerken kullanılırlar. Daha fazla bilgi için bkz. [Match ifadeleri](match-expressions.md), [Let bağlamaları](./functions/let-bindings.md), [lambda ifadeleri: Anahtar sözcüğü](./functions/lambda-expressions-the-fun-keyword.md) ve[özeldurumlar: `fun` `try...with` İfade.](/.exception-handling/the-try-with-expression.md)
+Desenler, `match` ifadesi gibi birçok dil yapılarında kullanılır. `let` Bağlamalar, lambda ifadeleri ve `try...with` ifadeyle ilişkili özel durum işleyicilerde işlevler için bağımsız değişkenleri işlerken kullanılırlar. Daha fazla bilgi için bkz. [Match ifadeleri](match-expressions.md), [Let bağlamaları](./functions/let-bindings.md), [lambda ifadeleri: Anahtar sözcüğü](./functions/lambda-expressions-the-fun-keyword.md) ve[özeldurumlar: `fun` `try...with` İfade.](./exception-handling/the-try-with-expression.md)
 
 Örneğin, `match` ifadesinde, *Düzen* kanal sembolünü izleyen şeydir.
 
@@ -103,7 +103,7 @@ match shape with
 
 Etkin desenler, daha karmaşık özel desen eşleştirmeyi tanımlamanızı sağlar. Etkin desenler hakkında daha fazla bilgi için bkz. [Etkin desenler](active-patterns.md).
 
-Tanımlayıcının özel durum olduğu durum, özel durum işleyicileri bağlamında model eşleştirme içinde kullanılır. Özel durum işlemede model eşleştirme hakkında daha fazla bilgi için [bkz. özel durumlar: `try...with` İfade.](/.exception-handling/the-try-with-expression.md)
+Tanımlayıcının özel durum olduğu durum, özel durum işleyicileri bağlamında model eşleştirme içinde kullanılır. Özel durum işlemede model eşleştirme hakkında daha fazla bilgi için [bkz. özel durumlar: `try...with` İfade.](./exception-handling/the-try-with-expression.md)
 
 ## <a name="variable-patterns"></a>Değişken desenleri
 

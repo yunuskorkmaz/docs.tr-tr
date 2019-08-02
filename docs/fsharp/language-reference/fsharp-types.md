@@ -2,12 +2,12 @@
 title: F# Türleri
 description: "' De F# kullanılan türler ve F# türlerin adlandırılması ve açıklaması hakkında bilgi edinin."
 ms.date: 05/16/2016
-ms.openlocfilehash: 44bd9d985e0ce1afa1bf2a8457dcd9470b13dfe1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 826bcb56aad3b50fbfcf8f807bb34e9cdcdecaf7
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630225"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733494"
 ---
 # <a name="f-types"></a>F# Türleri
 
@@ -69,4 +69,4 @@ Aşağıdaki tabloda türler için F# tür sözdiziminin yönleri gösterilmekte
 |[Temsilciler](delegates.md)|Bir işlevi bir nesne olarak temsil eden temsilci türünü açıklar.|
 |[Sabit Listeleri](enumerations.md)|Değerleri bir adlandırılmış değerler kümesine ait olan numaralandırma türlerini açıklar.|
 |[Öznitelikler](attributes.md)|Diğer bir tür için meta verileri belirtmek için kullanılan öznitelikleri açıklar.|
-|[Özel Durum Türleri](/.exception-handling/exception-types.md)|Hata bilgilerini belirten özel durumları açıklar.|
+|[Özel Durum Türleri](./exception-handling/exception-types.md)|Hata bilgilerini belirten özel durumları açıklar.|

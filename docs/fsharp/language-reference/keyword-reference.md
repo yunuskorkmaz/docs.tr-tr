@@ -2,12 +2,12 @@
 title: Klavye Başvurusu
 description: Tüm F# dil anahtar kelimeleri hakkındaki bilgilerin bağlantılarını bulun.
 ms.date: 05/16/2016
-ms.openlocfilehash: f845db74fd7ffd4164cc74acd192e39df7d2d6b1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 680b270a99eff7aa98652579d2fd31b4b05080ca
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627625"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733478"
 ---
 # <a name="keyword-reference"></a>Klavye Başvurusu
 
@@ -35,10 +35,10 @@ Aşağıdaki tabloda, kısa açıklamalarla F# birlikte tüm anahtar sözcükler
 |`elif`|[Koşullu Ifadeler:`if...then...else`](conditional-expressions-if-then-else.md)|Koşullu dallandırma içinde kullanılır. Kısa bir biçimi `else if`.|
 |`else`|[Koşullu Ifadeler:`if...then...else`](conditional-expressions-if-then-else.md)|Koşullu dallandırma içinde kullanılır.|
 |`end`|[Yapılar](structures.md)<br /><br />[Ayrılmış Birleşimler](discriminated-unions.md)<br /><br />[Kayıtlar](records.md)<br /><br />[Tür Uzantıları](type-extensions.md)<br /><br />[Ayrıntılı Söz Dizimi](verbose-syntax.md)|Tür tanımlarında ve tür uzantılarında, üye tanımlarının bir bölümünün sonunu belirtir.<br /><br />Ayrıntılı söz diziminde, `begin` anahtar sözcüğüyle başlayan bir kod bloğunun sonunu belirtmek için kullanılır.|
-|`exception`|[Özel Durum İşleme](/.exception-handling/index.md)<br /><br />[Özel Durum Türleri](/.exception-handling/exception-types.md)|Bir özel durum türü bildirmek için kullanılır.|
+|`exception`|[Özel Durum İşleme](./exception-handling/index.md)<br /><br />[Özel Durum Türleri](./exception-handling/exception-types.md)|Bir özel durum türü bildirmek için kullanılır.|
 |`extern`|[Dış İşlevler](./functions/external-functions.md)|Belirtilen bir program öğesinin başka bir ikili veya derlemede tanımlandığını gösterir.|
 |`false`|[İlkel Türler](primitive-types.md)|Boolean sabit değeri olarak kullanılır.|
-|`finally`|[Özel Durumlar: `try...finally` İfade](/.exception-handling/the-try-finally-expression.md)|Bir özel durumun `try` gerçekleşmediğine bakılmaksızın yürütülen bir kod bloğunu tanıtmak için ile birlikte kullanılır.|
+|`finally`|[Özel Durumlar: `try...finally` İfade](./exception-handling/the-try-finally-expression.md)|Bir özel durumun `try` gerçekleşmediğine bakılmaksızın yürütülen bir kod bloğunu tanıtmak için ile birlikte kullanılır.|
 |`fixed`|[Düzenle](fixed.md)|Atık olarak toplanmasını engellemek için yığında bir işaretçiyi "sabitlemek" için kullanılır.|
 |`for`|[Lerin `for...to`İfadesini](loops-for-to-expression.md)<br /><br />[Döngüler: for...in İfadesi](loops-for-in-expression.md)|Döngü yapılarında kullanılır.|
 |`fun`|[Lambda Ifadeleri: `fun` Anahtar Sözcüğü](./functions/lambda-expressions-the-fun-keyword.md)|Anonim işlevler olarak da bilinen Lambda ifadelerinde kullanılır.|
@@ -62,7 +62,7 @@ Aşağıdaki tabloda, kısa açıklamalarla F# birlikte tüm anahtar sözcükler
 |`new`|[Oluşturucular](./members/constructors.md)<br /><br />[Kısıtlamalar](./generics/constraints.md)|Bir nesnesi oluşturan ya da oluşturabileceğiniz bir oluşturucuyu bildirmek, tanımlamak veya çağırmak için kullanılır.<br /><br />Ayrıca, bir türün belirli bir oluşturucuya sahip olması gerektiğini göstermek için genel parametre kısıtlamalarında de kullanılır.|
 |`not`|[Simge ve İşleç Başvurusu](./symbol-and-operator-reference/index.md)<br /><br />[Kısıtlamalar](./generics/constraints.md)|Gerçekte bir anahtar sözcük değil. Ancak, `not struct` içinde genel parametre kısıtlaması olarak kullanılır.|
 |`null`|[Null Değerler](./values/null-values.md)<br /><br />[Kısıtlamalar](./generics/constraints.md)|Bir nesnenin yokluğunu gösterir.<br /><br />Genel parametre kısıtlamalarında de kullanılır.|
-|`of`|[Ayrılmış Birleşimler](discriminated-unions.md)<br /><br />[Temsilciler](delegates.md)<br /><br />[Özel Durum Türleri](/.exception-handling/exception-types.md)|Değer kategorilerinin türünü ve temsilci ve özel durum bildirimlerini göstermek için ayrılmış birleşimlerde kullanılır.|
+|`of`|[Ayrılmış Birleşimler](discriminated-unions.md)<br /><br />[Temsilciler](delegates.md)<br /><br />[Özel Durum Türleri](./exception-handling/exception-types.md)|Değer kategorilerinin türünü ve temsilci ve özel durum bildirimlerini göstermek için ayrılmış birleşimlerde kullanılır.|
 |`open`|[Önemli Bildirimler: `open` Anahtar Sözcüğü](import-declarations-the-open-keyword.md)|Bir ad alanının veya modülün içeriğini nitelemeden kullanılabilir hale getirmek için kullanılır.|
 |`or`|[Simge ve İşleç Başvurusu](./symbol-and-operator-reference/index.md)<br /><br />[Kısıtlamalar](./generics/constraints.md)|Boole koşulları ile Boolean `or` işleci olarak kullanılır. İle `||`eşdeğerdir.<br /><br />Üye kısıtlamalarında da kullanılır.|
 |`override`|[Üyeler](./members/index.md)|Temel sürümden farklı bir soyut veya sanal yöntemin sürümünü uygulamak için kullanılır.|
@@ -77,7 +77,7 @@ Aşağıdaki tabloda, kısa açıklamalarla F# birlikte tüm anahtar sözcükler
 |`then`|[Koşullu Ifadeler:`if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Oluşturucular](./members/constructors.md)|Koşullu ifadelerde kullanılır.<br /><br />Nesne oluşturulduktan sonra yan etkileri gerçekleştirmek için de kullanılır.|
 |`to`|[Lerin `for...to`İfadesini](loops-for-to-expression.md)|Bir aralığı göstermek için Döngülerdekullanılır.`for`|
 |`true`|[İlkel Türler](primitive-types.md)|Boolean sabit değeri olarak kullanılır.|
-|`try`|[Özel Durumlar: TRY... with Ifadesi](/.exception-handling/the-try-with-expression.md)<br /><br />[Özel Durumlar: TRY... finally Ifadesi](/.exception-handling/the-try-finally-expression.md)|Özel durum oluşturabilen bir kod bloğunu tanıtmak için kullanılır. `with` Veya`finally`ile birlikte kullanılır.|
+|`try`|[Özel Durumlar: TRY... with Ifadesi](./exception-handling/the-try-with-expression.md)<br /><br />[Özel Durumlar: TRY... finally Ifadesi](./exception-handling/the-try-finally-expression.md)|Özel durum oluşturabilen bir kod bloğunu tanıtmak için kullanılır. `with` Veya`finally`ile birlikte kullanılır.|
 |`type`|[F# Türleri](fsharp-types.md)<br /><br />[Sınıflar](classes.md)<br /><br />[Kayıtlar](records.md)<br /><br />[Yapılar](structures.md)<br /><br />[Sabit Listeleri](enumerations.md)<br /><br />[Ayrılmış Birleşimler](discriminated-unions.md)<br /><br />[Tür Kısaltmaları](type-abbreviations.md)<br /><br />[Ölçü Birimleri](units-of-measure.md)|Bir sınıf, kayıt, yapı, ayırt edici birleşim, numaralandırma türü, ölçü birimi veya tür kısaltması bildirmek için kullanılır.|
 |`upcast`|[Tür Değiştirme ve Dönüştürmeler](casting-and-conversions.md)|Devralma zincirinde daha üst bir türe dönüştürmek için kullanılır.|
 |`use`|[Kaynak yönetimi: `use` Anahtar Sözcüğü](resource-management-the-use-keyword.md)|Serbest kaynaklar için `let` çağrılması gereken değerler `Dispose` için yerine kullanılır.|
@@ -86,7 +86,7 @@ Aşağıdaki tabloda, kısa açıklamalarla F# birlikte tüm anahtar sözcükler
 |`void`|[İlkel Türler](primitive-types.md)|.Net `void` türünü gösterir. Diğer .NET dilleri ile birlikte çalışırken kullanılır.|
 |`when`|[Kısıtlamalar](./generics/constraints.md)|Bir genel tür parametresi için bir kısıtlama yan tümcesi tanıtmak üzere, desenli Boole koşulları (*korumaları olduğunda*) için kullanılır.|
 |`while`|[Lerin `while...do`İfadesini](loops-while-do-expression.md)|Bir döngü yapısı tanıtır.|
-|`with`|[Eşleşme İfadeleri](match-expressions.md)<br /><br />[Nesne İfadeleri](object-expressions.md)<br /><br />[Kayıt İfadelerini Kopyalama ve Güncelleştirme](copy-and-update-record-expressions.md)<br /><br />[Tür Uzantıları](type-extensions.md)<br /><br />[Özel Durumlar: `try...with` İfade](/.exception-handling/the-try-with-expression.md)|Model eşleştirme ifadelerinde `match` anahtar sözcüğü ile birlikte kullanılır. Ayrıca, nesne ifadelerinde, üye tanımlarını tanıtmak ve özel durum işleyicilerini tanıtmak için tür uzantıları kaydetmek için kullanılır.|
+|`with`|[Eşleşme İfadeleri](match-expressions.md)<br /><br />[Nesne İfadeleri](object-expressions.md)<br /><br />[Kayıt İfadelerini Kopyalama ve Güncelleştirme](copy-and-update-record-expressions.md)<br /><br />[Tür Uzantıları](type-extensions.md)<br /><br />[Özel Durumlar: `try...with` İfade](./exception-handling/the-try-with-expression.md)|Model eşleştirme ifadelerinde `match` anahtar sözcüğü ile birlikte kullanılır. Ayrıca, nesne ifadelerinde, üye tanımlarını tanıtmak ve özel durum işleyicilerini tanıtmak için tür uzantıları kaydetmek için kullanılır.|
 |`yield`|[Diziler](sequences.md)|Bir dizi için değer üretmek üzere bir dizi ifadesinde kullanılır.|
 |`yield!`|[Hesaplama İfadeleri](computation-expressions.md)<br /><br />[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)|Belirli bir hesaplama ifadesinin sonucunu, kapsayan hesaplama ifadesi için bir sonuç koleksiyonuna eklemek üzere bir hesaplama ifadesinde kullanılır.|
 

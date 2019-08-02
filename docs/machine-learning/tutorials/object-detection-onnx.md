@@ -3,15 +3,15 @@ title: 'Öğretici: ONNX ve ML.NET ile derin öğrenme kullanarak nesneleri Alg�
 description: Bu öğreticide, görüntülerdeki nesneleri algılamak için ML.NET ' de önceden eğitilen ONNX derin öğrenme modelinin nasıl kullanılacağı gösterilmektedir.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 07/31/2019
+ms.date: 08/01/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: acfff6d409a56e7676c7d38296ecc2085fa131ea
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 3e5b6b482dfbd1ff06347883a93a561944200a9f
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672138"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733405"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Öğretici: ML.NET içinde ONNX kullanarak nesneleri Algıla
 
@@ -75,7 +75,7 @@ Open sinir Network Exchange (ONNX), AI modelleri için açık kaynak biçimidir.
 
 ![](./media/object-detection-onnx/onnx-frameworks.png)
 
-Önceden eğitilen küçük YOLOv2 modeli, katmanların serileştirilmiş bir gösterimi ve bu katmanların öğrenilen desenleri ile ONNX biçiminde depolanır. ML.net ' de, onnx ile birlikte çalışabilirlik, [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) ve [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet paketleriyle birlikte sağlanır. Paket [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) , bir görüntüyü alan ve bir model veya eğitim işlem hattına giriş olarak kullanılabilecek sayısal değerlere kodlayan bir dizi dönüştürme içerir. [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) Paket onnx çalışma zamanından yararlanır ve belirtilen girişe göre tahmine dayalı hale getirmek için bu modeli kullanır. 
+Önceden eğitilen küçük YOLOv2 modeli, katmanların serileştirilmiş bir gösterimi ve bu katmanların öğrenilen desenleri ile ONNX biçiminde depolanır. ML.net ' de, onnx ile birlikte çalışabilirlik, [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) ve [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet paketleriyle birlikte sağlanır. Paket [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) , bir görüntüyü alan ve bir tahmin veya eğitim işlem hattına giriş olarak kullanılabilecek sayısal değerlere kodlayan bir dizi dönüştürme içerir. [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) Paket onnx çalışma zamanından yararlanır ve belirtilen girişe göre tahmine dayalı hale getirmek için bu modeli kullanır. 
 
 ![](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
@@ -259,7 +259,7 @@ Model, her kılavuz `13 x 13` `32px x 32px`hücresinin bulunduğu bir görüntü
 - `y`sınırlama kutusu merkezinin ilişkilendirildiği kılavuz hücresine göre y konumu.
 - `w`sınırlayıcı kutunun genişliği.
 - `h`sınırlayıcı kutunun yüksekliği. 
-- `o`bir nesnenin sınırlayıcı kutusunda bulunduğu güven değeri, aynı zamanda Abjeclük puanı olarak da bilinir.
+- `o`bir nesnenin, sınırlayıcı kutusunda bulunduğu güven değeri, aynı zamanda objectlik puanı olarak da bilinir.
 - `p1-p20`model tarafından tahmin edilen 20 sınıfın her biri için sınıf olasılıkların.
 
 Toplamda, 5 sınırlayıcı kutulardan her birini tanımlayan 25 öğe, her kılavuz hücresinde bulunan 125 öğelerini yapar.

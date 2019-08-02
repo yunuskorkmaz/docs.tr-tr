@@ -2,12 +2,12 @@
 title: API 'Leri, null beklentilerini tanımlamak için özniteliklerle yükseltin
 description: Bu makalede, bağımsız değişkenlerin null durumunu ve API 'lerden dönüş değerlerini açıklayan açıklayıcı öznitelikler ekleme işlemleri ve teknikleri açıklanmaktadır
 ms.date: 07/31/2019
-ms.openlocfilehash: f8ff2063a3859954a5ccab006cd21c6a29dbc6b1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9a5eded385d5eac7a493a36876557cadf083afad
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710933"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733434"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Kitaplıkları, null yapılabilir başvuru türlerini kullanacak şekilde güncelleştirin ve çağrı yapılabilir kuralları arayanlara iletişim kurar.
 
@@ -89,7 +89,7 @@ Değişkenlerin null durumu hakkında ek bilgileri ifade etmek için çeşitli �
 - [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): Nullable dönüş değeri hiçbir şekilde null olmaz.
 - [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): Dönüş değeri bir koşula `out` uysa, null olamayan veya `ref` bağımsız değişken null olabilir.
 - [Notnullne zaman](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): Dönüş değeri `out` bir `ref` koşula uyan null yapılabilir veya bağımsız değişken null olamaz.
-- [Notnullifnotnull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): giriş dize bağımsız değişkeni null olmadığında bir dize dönüş değeri null değil.
+- [Notnullifnotnull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): Belirtilen parametrenin giriş bağımsız değişkeni null değilse, dönüş değeri null olamaz.
 
 Yukarıdaki açıklamalar, her bir özniteliğin yaptığı işe yönelik hızlı bir başvurudur. Aşağıdaki her bölümde davranışı ve anlamı daha kapsamlı bir şekilde açıklanmıştır.
 
@@ -187,7 +187,7 @@ Dönüş değerinin `T?`olduğunu belirtemezsiniz. Yöntemi, aranan `null` öğe
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
 ```
 
-Yukarıdaki kod, arayanlara sözleşmenin null yapılamayan bir tür gösterdiği anlamına gelir, ancak *dönüş değeri gerçekten* null olabilir.  API 'niz null yapılamayan bir tür olması gerektiği zaman, genellikle genel bir tür parametresi olması durumunda `null` özniteliğikullanın,ancakdöndürülecekörneklerolabilir.`MaybeNull`
+Yukarıdaki kod, arayanlara sözleşmenin null yapılamayan bir tür gösterdiği anlamına gelir, ancak dönüş değeri gerçekten null olabilir.  API 'niz null yapılamayan bir tür olması gerektiği zaman, genellikle genel bir tür parametresi olması durumunda `null` özniteliğikullanın,ancakdöndürülecekörneklerolabilir.`MaybeNull`
 
 Ayrıca, tür null yapılabilir bir tür olsa da bir `out` dönüş `ref` değeri veya veya bağımsız değişkenin null olmadığını belirtebilirsiniz. Bir dizinin birçok öğe tutabilecek kadar büyük olmasını sağlayan bir yöntemi düşünün. Giriş bağımsız değişkeninin kapasitesi yoksa, yordam yeni bir dizi ayırır ve var olan tüm öğeleri buna kopyalar. Giriş bağımsız değişkeni ise `null`, yordam yeni depolama alanı ayırır. Yeterli kapasite varsa, yordam hiçbir şey yapmaz:
 

@@ -1,14 +1,14 @@
 ---
 title: Dosyalardan ve diğer kaynaklardan veri yükleme
 description: Bu nasıl yapılır, ML.NET ' ye işleme ve eğitim için nasıl veri yükleneceğini gösterir. Veriler başlangıçta dosyalar veya veritabanları, JSON, XML veya bellek içi Koleksiyonlar gibi diğer veri kaynaklarında depolanır.
-ms.date: 07/31/2019
+ms.date: 08/01/2019
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: f1fc99eb07af98b97484ee74e900b81342990cdb
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: d5f3aab14a60a8c9860dc67f1cc98f3b1b3188ed
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710193"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733361"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Dosyalardan ve diğer kaynaklardan veri yükleme
 
@@ -55,7 +55,7 @@ Sütunları şu şekilde yükle:
 - Sınıfında ve `Size` `CurrentPrices` gibi ayrı sütunlar. `HousingData`
 - Sınıf`HousingData` gibi `HistoricalPrices` bir vektör biçiminde tek seferde birden çok sütun.
 
-Vektör özelliği varsa, [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) özniteliğini veri modelinizdeki özelliğe uygulayın. Vektördeki tüm öğelerin aynı türde olması gerektiğini unutmayın. Sütunların ayrılmış tutulması, özellik mühendisliğinin kolaylığını ve esnekliğini sağlar, ancak çok fazla sayıda sütun için, tek tek sütunlarda çalışan performans etkisine neden olur.
+Vektör özelliği varsa, [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) özniteliğini veri modelinizdeki özelliğe uygulayın. Vektördeki tüm öğelerin aynı türde olması gerektiğini unutmayın. Sütunların ayrılmış tutulması, özellik mühendisliğinin kolaylığını ve esnekliğini sağlar, ancak çok fazla sayıda sütun için, bireysel sütunlarda çalışan eğitim hızında bir etkiye neden olur.
 
 ML.NET, sütun adlarıyla çalışır. Bir sütunun adını özellik adı dışında bir şekilde değiştirmek istiyorsanız, [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) özniteliğini kullanın. Bellek içi nesneler oluştururken, hala özellik adını kullanarak nesneler oluşturursunuz. Ancak, veri işleme ve makine öğrenimi modelleri oluşturma için, ml.net geçersiz kılar ve özelliği [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) özniteliğinde belirtilen değerle başvurur.
 

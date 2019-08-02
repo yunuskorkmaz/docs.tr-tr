@@ -7,52 +7,52 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], about MenuStrip control
 - menus [Windows Forms], creating
 ms.assetid: f45516e5-bf01-4468-b851-d45f4c33c055
-ms.openlocfilehash: b72fcf75aeebc297d09cbaa9dbf00bb2370b1222
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 46a3a25415db77ee261f5fb1c3bf114b2275a2d4
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625760"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733452"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>MenuStrip Denetimine Genel Bakış (Windows Forms)
-Menüleri, ortak bir tema tarafından gruplandırılmış komutları tutarak kullanıcılarınıza işlevselliği kullanıma sunar.  
+Menüler, ortak bir temaya göre gruplanmış komutları tutarak kullanıcılarınıza işlevselliği sunar.  
   
- <xref:System.Windows.Forms.MenuStrip> Denetimi bu Visual Studio ve .NET Framework sürümü için yenidir. Denetim ile Microsoft Office içinde bulunanlar gibi menüleri kolayca oluşturabilirsiniz.  
+ <xref:System.Windows.Forms.MenuStrip> Denetim, .NET Framework sürüm 2,0 ' de tanıtılmıştı. <xref:System.Windows.Forms.MenuStrip> Denetimiyle, Microsoft Office bulunan gibi kolayca menüler oluşturabilirsiniz.  
   
- <xref:System.Windows.Forms.MenuStrip> Çok Belgeli Arabirim (MDI) ve menü birleştirme, araç ipuçları ve taşma denetimini destekler. Erişim tuşları, kısayol tuşları, onay işaretleri, görüntüleri ve ayırıcı çubukları ekleyerek, menüler okunabilirliğini ve kullanılabilirliğini geliştirebilirsiniz.  
+ <xref:System.Windows.Forms.MenuStrip> Denetim, çoklu belge arabirimi (MDI) ve menü birleştirme, araç ipuçları ve taşmayı destekler. Erişim tuşları, kısayol tuşları, onay işaretleri, görüntüler ve ayırıcı çubuklar ekleyerek menülerinizi kullanılabilirliğini ve okunabilirliğini geliştirebilirsiniz.  
   
- <xref:System.Windows.Forms.MenuStrip> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.MainMenu> denetler; ancak, <xref:System.Windows.Forms.MainMenu> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.  
+ Denetim yerini alır ve <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.MainMenu> denetime işlevsellik ekler; ancak, denetim geriye dönük uyumluluk için ve isterseniz daha sonra kullanılmak üzere tutulur. <xref:System.Windows.Forms.MenuStrip>  
   
-## <a name="ways-to-use-the-menustrip-control"></a>MenuStrip denetimi kullanmanın yolları  
- Kullanım <xref:System.Windows.Forms.MenuStrip> denetimi:  
+## <a name="ways-to-use-the-menustrip-control"></a>MenuStrip denetimini kullanmanın yolları  
+ Şunları yapmak için denetimi kullanın: <xref:System.Windows.Forms.MenuStrip>  
   
-- Özelleştirilmiş kolayca oluşturun, metin ve görüntü sıralama ve hizalama, sürükle ve bırak işlemleri, MDI, taşma ve menü komutları erişmenin alternatif modları gibi arabirimi ve düzen özelliklerini destekleyen yaygın olarak çalıştırılan menüleri gelişmiş kullanıcı.  
+- Metin ve görüntü sıralama ve hizalama, sürükle ve bırak işlemleri, MDI, taşma ve menü komutlarının diğer modları gibi gelişmiş kullanıcı arabirimi ve düzen özelliklerini destekleyen kolayca özelleştirilmiş, yaygın olarak kullanılan menüler oluşturun.  
   
-- Tipik bir görünümünü ve davranışını işletim sistemini destekler.  
+- İşletim sisteminin tipik görünümünü ve davranışını destekler.  
   
-- Diğer denetimlerin olaylarını işlemek aynı şekilde tüm kapsayıcılar ve içerilen öğelerin için tutarlı bir şekilde olayları işleyin.  
+- Olayları tüm kapsayıcılar ve içerilen öğeler için, diğer denetimler için de olayları idare ettiğiniz şekilde işleyin.  
   
- Aşağıdaki tablo bazı özellikle önemli özellikleri gösterir <xref:System.Windows.Forms.MenuStrip> ve ilişkilendirilmiş sınıfları.  
+ Aşağıdaki tabloda, <xref:System.Windows.Forms.MenuStrip> ve ilişkili sınıfların bazı özellikle önemli özellikleri gösterilmektedir.  
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
-|<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|Alır veya ayarlar <xref:System.Windows.Forms.ToolStripMenuItem> MDI alt formlarını listesini görüntülemek için kullanılır.|  
-|<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|Alır veya ayarlar alt menüler üst MDI uygulamaları menülerde nasıl birleştirilir.|  
-|<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A?displayProperty=nameWithType>|Alır veya MDI uygulamaları içindeki birleştirilmiş bir öğenin konumunu ayarlar.|  
-|<xref:System.Windows.Forms.Form.IsMdiContainer%2A?displayProperty=nameWithType>|Alır veya form MDI alt formlarını için bir kapsayıcı olup olmadığını belirten bir değer ayarlar.|  
-|<xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A>|Araç ipuçları için gösterilip gösterilmeyeceğini belirten bir değeri alır veya ayarlar <xref:System.Windows.Forms.MenuStrip>.|  
-|<xref:System.Windows.Forms.MenuStrip.CanOverflow%2A>|Belirten bir değeri alır veya ayarlar olmadığını <xref:System.Windows.Forms.MenuStrip> overflow işlevselliği destekler.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|Alır veya ayarlar ile ilişkili kısayol tuşlarını <xref:System.Windows.Forms.ToolStripMenuItem>.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|Alır veya ayarlar kısayol, anahtarları olup olmadığını belirten bir değer ile ilişkili <xref:System.Windows.Forms.ToolStripMenuItem> yanında görüntülenen <xref:System.Windows.Forms.ToolStripMenuItem>.|  
+|<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|MDI alt formlarının listesini <xref:System.Windows.Forms.ToolStripMenuItem> göstermek için kullanılan öğesini alır veya ayarlar.|  
+|<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|Alt menülerin MDI uygulamalarında üst menülerle nasıl birleştirildiğini alır veya ayarlar.|  
+|<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A?displayProperty=nameWithType>|MDI uygulamalarında bir menü içindeki birleştirilmiş öğenin konumunu alır veya ayarlar.|  
+|<xref:System.Windows.Forms.Form.IsMdiContainer%2A?displayProperty=nameWithType>|Formun MDI alt formları için bir kapsayıcı olup olmadığını gösteren bir değer alır veya ayarlar.|  
+|<xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A>|İçin araç ipuçlarının gösterilip gösterilmeyeceğini gösteren bir değer alır veya ayarlar <xref:System.Windows.Forms.MenuStrip>.|  
+|<xref:System.Windows.Forms.MenuStrip.CanOverflow%2A>|' Nin taşma işlevini <xref:System.Windows.Forms.MenuStrip> destekleyip desteklemediğini gösteren bir değer alır veya ayarlar.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|İle ilişkili kısayol tuşlarını alır veya ayarlar <xref:System.Windows.Forms.ToolStripMenuItem>.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|İle <xref:System.Windows.Forms.ToolStripMenuItem> ilişkili kısayol tuşlarının ' nin yanında <xref:System.Windows.Forms.ToolStripMenuItem>görüntülenip görüntülenmediğini gösteren bir değer alır veya ayarlar.|  
   
- Aşağıdaki tablo önemli gösterir <xref:System.Windows.Forms.MenuStrip> Yahoo! companion sınıfları.  
+ Aşağıdaki tabloda, önemli <xref:System.Windows.Forms.MenuStrip> yardımcı sınıflar gösterilmektedir.  
   
 |örneği|Açıklama|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|Görüntülenen bir seçilebilir seçeneğini temsil eder bir <xref:System.Windows.Forms.MenuStrip> veya <xref:System.Windows.Forms.ContextMenuStrip>.|  
-|<xref:System.Windows.Forms.ContextMenuStrip>|Bir kısayol menüsü temsil eder.|  
-|<xref:System.Windows.Forms.ToolStripDropDown>|Kullanıcı tıkladığında görüntülenen listeden tek bir öğe kullanıcıya veren bir denetimi temsil eder bir <xref:System.Windows.Forms.ToolStripDropDownButton> ya da daha üst düzey menü öğesi.|  
-|<xref:System.Windows.Forms.ToolStripDropDownItem>|Türetilen denetimler için temel işlevleri sağlar <xref:System.Windows.Forms.ToolStripItem> tıklandığında açılan öğeleri görüntüler.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|<xref:System.Windows.Forms.MenuStrip> Veya<xref:System.Windows.Forms.ContextMenuStrip>üzerinde görünen seçilebilir bir seçeneği temsil eder.|  
+|<xref:System.Windows.Forms.ContextMenuStrip>|Bir kısayol menüsünü temsil eder.|  
+|<xref:System.Windows.Forms.ToolStripDropDown>|Kullanıcının bir <xref:System.Windows.Forms.ToolStripDropDownButton> veya daha yüksek düzey menü öğesine tıkladığı zaman görüntülenen listeden tek bir öğe seçmesini sağlayan bir denetimi temsil eder.|  
+|<xref:System.Windows.Forms.ToolStripDropDownItem>|Tıklandığında <xref:System.Windows.Forms.ToolStripItem> , açılan öğeden türetilmiş denetimler için temel işlevleri sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

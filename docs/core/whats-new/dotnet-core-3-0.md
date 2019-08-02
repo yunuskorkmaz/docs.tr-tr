@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 07/25/2019
-ms.openlocfilehash: 5300ddd83330b9564e7154008c59737d0d642138
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626338"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733359"
 ---
 # <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3,0 'deki yenilikler (Önizleme 7)
 
@@ -399,7 +399,7 @@ Visual Studio Code tarafından oluşturulan [**Launch. JSON**](https://github.co
 
 ### <a name="jsondocument"></a>JsonDocument
 
-<xref:System.Text.Json.JsonDocument?displayProperty=nameWithType>, `Utf8JsonReader`üzerine kurulmuştur. , `JsonDocument` JSON verilerini ayrıştırabilme ve rasgele erişimi ve numaralandırmayı desteklemek için sorgulanabilen salt okunurdur belge nesne modeli (DOM) oluşturma olanağı sağlar. Verileri oluşturan JSON öğelerine, adlı <xref:System.Text.Json.JsonElement> `RootElement`bir özellik `JsonDocument` olarak kullanıma sunulan tür aracılığıyla erişilebilir. JSON metnini ortak .net türlerine dönüştürmek için API 'lerle birlikte JSON dizisini ve nesne numaralandırıcıları içerir.`JsonElement` Tipik bir JSON yükünü ayrıştırma ve ' ı kullanarak `JsonDocument` tüm üyelerine erişme, makul ölçüde boyutlandırılabilir (yani, < 1 MB) veriler için çok az ayırmayla 3x ' den daha hızlıdır.
+<xref:System.Text.Json.JsonDocument?displayProperty=nameWithType>, `Utf8JsonReader`üzerine kurulmuştur. , `JsonDocument` JSON verilerini ayrıştırabilme ve rasgele erişimi ve numaralandırmayı desteklemek için sorgulanabilen salt okunurdur belge nesne modeli (DOM) oluşturma olanağı sağlar. Verileri oluşturan JSON öğelerine, adlı <xref:System.Text.Json.JsonElement> `RootElement`bir özellik `JsonDocument` olarak kullanıma sunulan tür aracılığıyla erişilebilir. JSON metnini ortak .net türlerine dönüştürmek için API 'lerle birlikte JSON dizisini ve nesne numaralandırıcıları içerir.`JsonElement` Tipik bir JSON yükünü ayrıştırma ve ' ı kullanarak `JsonDocument` tüm üyelerine erişme, makul ölçüde boyutlandırılabilir (yani , < 1 MB) veriler için çok az ayırmayla 3x ' den daha hızlıdır.
 
 Başlangıç noktası olarak kullanılabilecek `JsonDocument` ve ' `JsonElement` nin örnek kullanımı aşağıda verilmiştir:
 
@@ -411,7 +411,7 @@ Başlangıç noktası olarak kullanılabilecek `JsonDocument` ve ' `JsonElement`
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
-<xref:System.Text.Json.Serialization.JsonSerializer?displayProperty=nameWithType>, ve ' nin <xref:System.Text.Json.Utf8JsonReader> üzerine kurulmuştur ve <xref:System.Text.Json.Utf8JsonWriter> JSON belgeleri ve parçaları ile çalışırken hızlı bir düşük bellek serileştirme seçeneği sağlar.
+<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType>, ve ' nin <xref:System.Text.Json.Utf8JsonReader> üzerine kurulmuştur ve <xref:System.Text.Json.Utf8JsonWriter> JSON belgeleri ve parçaları ile çalışırken hızlı bir düşük bellek serileştirme seçeneği sağlar.
 
 İnceleme: https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md bu makaleye yönelik bağlantı noktasına bir örnek için
 
