@@ -595,14 +595,16 @@
       items:
         - name: 'C# Tür sistemi'
           href: csharp/programming-guide/types/index.md
+        - name: Boş değer atanabilir başvuru türleri
+          href: csharp/nullable-references.md
+        - name: Null atanabilen API’leri öznitelikleri ve kısıtlamaları kullanarak açıklama
+          href: csharp/nullable-attributes.md
         - name: Ad Alanları
           href: csharp/programming-guide/namespaces/index.md
         - name: Temel Türler
           href: csharp/basic-types.md
         - name: Sınıflar
           href: csharp/programming-guide/classes-and-structs/classes.md
-        - name: Boş değer atanabilir başvuru türleri
-          href: csharp/nullable-references.md
         - name: Yapılar
           href: csharp/structs.md
         - name: Demetler
