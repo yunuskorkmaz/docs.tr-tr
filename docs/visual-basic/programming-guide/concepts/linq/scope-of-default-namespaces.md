@@ -1,27 +1,27 @@
 ---
-title: Visual Basic'de varsayılan ad alanlarının kapsamı
+title: Visual Basic varsayılan ad alanlarının kapsamı
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: e33505dd8e8ad94e3c758f15f245d0cbaf6987bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af868454c9d1dce7d8bf5a1902f64eff8db8780c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786808"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710351"
 ---
-# <a name="scope-of-default-namespaces-in-visual-basic"></a><span data-ttu-id="5e815-102">Visual Basic'de varsayılan ad alanlarının kapsamı</span><span class="sxs-lookup"><span data-stu-id="5e815-102">Scope of Default Namespaces in Visual Basic</span></span>
-<span data-ttu-id="5e815-103">XML ağacı içinde gösterilen varsayılan ad alanı, sorgular için kapsamda değildir.</span><span class="sxs-lookup"><span data-stu-id="5e815-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="5e815-104">Yine de belirtmesi gerekir, varsayılan bir ad alanı XML varsa, bir <xref:System.Xml.Linq.XNamespace> değişkeni, sorguda kullanılan bir tam adı yerel adı ile birleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="5e815-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  
+# <a name="scope-of-default-namespaces-in-visual-basic"></a><span data-ttu-id="e6b23-102">Visual Basic varsayılan ad alanlarının kapsamı</span><span class="sxs-lookup"><span data-stu-id="e6b23-102">Scope of Default Namespaces in Visual Basic</span></span>
+<span data-ttu-id="e6b23-103">XML ağacında temsil edilen varsayılan ad alanları sorgular kapsamında değildir.</span><span class="sxs-lookup"><span data-stu-id="e6b23-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="e6b23-104">Varsayılan bir ad alanında olan XML varsa, sorguda kullanılacak nitelikli bir ad oluşturmak için bir <xref:System.Xml.Linq.XNamespace> değişken bildirmeniz ve bunu yerel adla birleştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="e6b23-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  
   
- <span data-ttu-id="5e815-105">XML ağaçlarını sorgulama sırasında sık karşılaşılan sorunlar XML ağacı varsayılan ad alanı varsa, XML değil gibi davranarak bir ad alanında geliştirici bazen sorgu yazdığını biridir.</span><span class="sxs-lookup"><span data-stu-id="5e815-105">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
+ <span data-ttu-id="e6b23-105">XML ağaçlarını sorgularken en yaygın sorunlardan biri, XML ağacının varsayılan bir ad alanına sahip olması ve geliştiricinin bazen sorguyu bir ad alanında olmamasına rağmen yazar.</span><span class="sxs-lookup"><span data-stu-id="e6b23-105">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
   
- <span data-ttu-id="5e815-106">Bu konudaki örnekler ilk kümesi XML varsayılan ad alanı içinde yüklenir, ancak yanlış sorgulanır normal bir şekilde gösterir.</span><span class="sxs-lookup"><span data-stu-id="5e815-106">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, but is queried improperly.</span></span>  
+ <span data-ttu-id="e6b23-106">Bu konudaki ilk örnek kümesi, varsayılan bir ad alanındaki XML 'nin yüklendiği, ancak yanlış sorgulandığı tipik bir yöntemi gösterir.</span><span class="sxs-lookup"><span data-stu-id="e6b23-106">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, but is queried improperly.</span></span>  
   
- <span data-ttu-id="5e815-107">XML ad alanında sorgulayabilmesi ikinci örneklerde gerekli düzeltmeleri ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="5e815-107">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>  
+ <span data-ttu-id="e6b23-107">İkinci örnek kümesinde, bir ad alanında XML 'yi sorgulayabilmeniz için gerekli düzeltmeler gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="e6b23-107">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5e815-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="5e815-108">Example</span></span>  
- <span data-ttu-id="5e815-109">Bu örnek, bir ad alanında XML oluşturulmasını gösterir ve boş bir sonuç döndüren bir sorgu ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="5e815-109">This example shows the creation of XML in a namespace, and a query that returns an empty result set.</span></span>  
+## <a name="example"></a><span data-ttu-id="e6b23-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="e6b23-108">Example</span></span>  
+ <span data-ttu-id="e6b23-109">Bu örnek, bir ad alanında XML oluşturmayı ve boş bir sonuç kümesi döndüren bir sorguyu gösterir.</span><span class="sxs-lookup"><span data-stu-id="e6b23-109">This example shows the creation of XML in a namespace, and a query that returns an empty result set.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="5e815-110">Kod</span><span class="sxs-lookup"><span data-stu-id="5e815-110">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="e6b23-110">Kod</span><span class="sxs-lookup"><span data-stu-id="e6b23-110">Code</span></span>  
   
 ```vb  
 Module Module1  
@@ -47,20 +47,20 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="5e815-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5e815-111">Comments</span></span>  
- <span data-ttu-id="5e815-112">Bu örnek aşağıdaki sonucu üretir:</span><span class="sxs-lookup"><span data-stu-id="5e815-112">This example produces the following result:</span></span>  
+### <a name="comments"></a><span data-ttu-id="e6b23-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e6b23-111">Comments</span></span>  
+ <span data-ttu-id="e6b23-112">Bu örnek aşağıdaki sonucu üretir:</span><span class="sxs-lookup"><span data-stu-id="e6b23-112">This example produces the following result:</span></span>  
   
 ```  
 Result set follows:  
 End of result set  
 ```  
   
-## <a name="example"></a><span data-ttu-id="5e815-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="5e815-113">Example</span></span>  
- <span data-ttu-id="5e815-114">Bu örnek, bir ad alanı ve düzgün şekilde kodlanmış bir sorgu içinde XML oluşturulmasını gösterir.</span><span class="sxs-lookup"><span data-stu-id="5e815-114">This example shows the creation of XML in a namespace, and a query that is coded properly.</span></span>  
+## <a name="example"></a><span data-ttu-id="e6b23-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="e6b23-113">Example</span></span>  
+ <span data-ttu-id="e6b23-114">Bu örnek, bir ad alanında XML oluşturmayı ve düzgün kodlanmış bir sorguyu gösterir.</span><span class="sxs-lookup"><span data-stu-id="e6b23-114">This example shows the creation of XML in a namespace, and a query that is coded properly.</span></span>  
   
- <span data-ttu-id="5e815-115">Yukarıdaki yanlış kodlanmış örnek aksine, Visual Basic kullanırken doğru bildirmek ve bir genel varsayılan ad alanı başlatmak için yaklaşımdır.</span><span class="sxs-lookup"><span data-stu-id="5e815-115">In contrast to the incorrectly coded example above, the correct approach when using Visual Basic is to declare and initialize a global default namespace.</span></span> <span data-ttu-id="5e815-116">Bu, varsayılan ad alanındaki tüm XML özellikleri yerleştirir.</span><span class="sxs-lookup"><span data-stu-id="5e815-116">This places all XML properties in the default namespace.</span></span> <span data-ttu-id="5e815-117">Herhangi bir değişiklik örneği düzgün çalışması için gereklidir.</span><span class="sxs-lookup"><span data-stu-id="5e815-117">No other modifications are required to the example to make it work properly.</span></span>  
+ <span data-ttu-id="e6b23-115">Yukarıdaki yanlış kodlanmış örneğin aksine, Visual Basic kullanırken doğru yaklaşım genel bir varsayılan ad alanını bildirmek ve başlatmak olur.</span><span class="sxs-lookup"><span data-stu-id="e6b23-115">In contrast to the incorrectly coded example above, the correct approach when using Visual Basic is to declare and initialize a global default namespace.</span></span> <span data-ttu-id="e6b23-116">Bu, tüm XML özelliklerini varsayılan ad alanına koyar.</span><span class="sxs-lookup"><span data-stu-id="e6b23-116">This places all XML properties in the default namespace.</span></span> <span data-ttu-id="e6b23-117">Doğru çalışması için örnek için başka bir değişiklik yapmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="e6b23-117">No other modifications are required to the example to make it work properly.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="5e815-118">Kod</span><span class="sxs-lookup"><span data-stu-id="5e815-118">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="e6b23-118">Kod</span><span class="sxs-lookup"><span data-stu-id="e6b23-118">Code</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -88,8 +88,8 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="5e815-119">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5e815-119">Comments</span></span>  
- <span data-ttu-id="5e815-120">Bu örnek aşağıdaki sonucu üretir:</span><span class="sxs-lookup"><span data-stu-id="5e815-120">This example produces the following result:</span></span>  
+### <a name="comments"></a><span data-ttu-id="e6b23-119">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e6b23-119">Comments</span></span>  
+ <span data-ttu-id="e6b23-120">Bu örnek aşağıdaki sonucu üretir:</span><span class="sxs-lookup"><span data-stu-id="e6b23-120">This example produces the following result:</span></span>  
   
 ```  
 Result set follows:  
@@ -99,6 +99,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5e815-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5e815-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e6b23-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e6b23-121">See also</span></span>
 
-- [<span data-ttu-id="5e815-122">XML ad alanları (Visual Basic) ile çalışma</span><span class="sxs-lookup"><span data-stu-id="5e815-122">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [<span data-ttu-id="e6b23-122">Ad alanlarına genel bakış (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e6b23-122">Namespaces Overview (LINQ to XML) (Visual Basic)</span></span>](namespaces-overview-linq-to-xml.md)

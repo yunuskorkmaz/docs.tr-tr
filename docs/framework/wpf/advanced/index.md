@@ -9,27 +9,31 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942811"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710208"
 ---
-# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="ad19b-102">Gelişmiş (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="ad19b-102">Advanced (Windows Presentation Foundation)</span></span>
-<span data-ttu-id="ad19b-103">Bu bölümde WPF Gelişmiş alanlardan bazıları açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="ad19b-103">This section describes some of the advanced areas in WPF.</span></span>  
+# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="944c8-102">Gelişmiş (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="944c8-102">Advanced (Windows Presentation Foundation)</span></span>
+<span data-ttu-id="944c8-103">Bu bölümde WPF içindeki bazı gelişmiş alanlardan bazıları açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="944c8-103">This section describes some of the advanced areas in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ad19b-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="ad19b-104">In This Section</span></span>  
- [<span data-ttu-id="ad19b-105">WPF Mimarisi</span><span class="sxs-lookup"><span data-stu-id="ad19b-105">WPF Architecture</span></span>](wpf-architecture.md)  
- [<span data-ttu-id="ad19b-106">Temel Öğeler</span><span class="sxs-lookup"><span data-stu-id="ad19b-106">Base Elements</span></span>](base-elements.md)  
- [<span data-ttu-id="ad19b-107">Öğe Ağacı ve Serileştirme</span><span class="sxs-lookup"><span data-stu-id="ad19b-107">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
- [<span data-ttu-id="ad19b-108">Sürükleme ve Bırakma</span><span class="sxs-lookup"><span data-stu-id="ad19b-108">Drag and Drop</span></span>](drag-and-drop.md)  
- [<span data-ttu-id="ad19b-109">Belgeler</span><span class="sxs-lookup"><span data-stu-id="ad19b-109">Documents</span></span>](documents.md)  
- [<span data-ttu-id="ad19b-110">Genelleştirme ve Yerelleştirme</span><span class="sxs-lookup"><span data-stu-id="ad19b-110">Globalization and Localization</span></span>](globalization-and-localization.md)  
- [<span data-ttu-id="ad19b-111">Geçiş ve Birlikte Çalışabilirlik</span><span class="sxs-lookup"><span data-stu-id="ad19b-111">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
- [<span data-ttu-id="ad19b-112">Performans</span><span class="sxs-lookup"><span data-stu-id="ad19b-112">Performance</span></span>](performance.md)  
- [<span data-ttu-id="ad19b-113">İş Parçacığı Modeli</span><span class="sxs-lookup"><span data-stu-id="ad19b-113">Threading Model</span></span>](threading-model.md)  
- [<span data-ttu-id="ad19b-114">WPF Eklentilerine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ad19b-114">WPF Add-Ins Overview</span></span>](../app-development/wpf-add-ins-overview.md)  
- [<span data-ttu-id="ad19b-115">WPF yönetilmeyen API Başvurusu</span><span class="sxs-lookup"><span data-stu-id="ad19b-115">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  
-  
-## <a name="related-sections"></a><span data-ttu-id="ad19b-116">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="ad19b-116">Related Sections</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="944c8-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="944c8-104">In This Section</span></span>
+
+[<span data-ttu-id="944c8-105">WPF Mimarisi</span><span class="sxs-lookup"><span data-stu-id="944c8-105">WPF Architecture</span></span>](wpf-architecture.md)  
+[<span data-ttu-id="944c8-106">WPF'de XAML</span><span class="sxs-lookup"><span data-stu-id="944c8-106">XAML in WPF</span></span>](xaml-in-wpf.md)  
+[<span data-ttu-id="944c8-107">Temel öğe sınıfları</span><span class="sxs-lookup"><span data-stu-id="944c8-107">Base Element Classes</span></span>](base-elements.md)  
+[<span data-ttu-id="944c8-108">Öğe Ağacı ve Serileştirme</span><span class="sxs-lookup"><span data-stu-id="944c8-108">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+[<span data-ttu-id="944c8-109">WPF özellik sistemi</span><span class="sxs-lookup"><span data-stu-id="944c8-109">WPF Property System</span></span>](properties-wpf.md)  
+[<span data-ttu-id="944c8-110">WPF içindeki olaylar</span><span class="sxs-lookup"><span data-stu-id="944c8-110">Events in WPF</span></span>](events-wpf.md)  
+[<span data-ttu-id="944c8-111">Giriş</span><span class="sxs-lookup"><span data-stu-id="944c8-111">Input</span></span>](input-wpf.md)  
+[<span data-ttu-id="944c8-112">Sürükleme ve Bırakma</span><span class="sxs-lookup"><span data-stu-id="944c8-112">Drag and Drop</span></span>](drag-and-drop.md)  
+[<span data-ttu-id="944c8-113">Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="944c8-113">Resources</span></span>](resources-wpf.md)  
+[<span data-ttu-id="944c8-114">Belgeler</span><span class="sxs-lookup"><span data-stu-id="944c8-114">Documents</span></span>](documents.md)  
+[<span data-ttu-id="944c8-115">Genelleştirme ve Yerelleştirme</span><span class="sxs-lookup"><span data-stu-id="944c8-115">Globalization and Localization</span></span>](globalization-and-localization.md)  
+[<span data-ttu-id="944c8-116">Düzen</span><span class="sxs-lookup"><span data-stu-id="944c8-116">Layout</span></span>](layout.md)  
+[<span data-ttu-id="944c8-117">Geçiş ve Birlikte Çalışabilirlik</span><span class="sxs-lookup"><span data-stu-id="944c8-117">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
+[<span data-ttu-id="944c8-118">Performans</span><span class="sxs-lookup"><span data-stu-id="944c8-118">Performance</span></span>](performance.md)  
+[<span data-ttu-id="944c8-119">İş Parçacığı Modeli</span><span class="sxs-lookup"><span data-stu-id="944c8-119">Threading Model</span></span>](threading-model.md)  
+[<span data-ttu-id="944c8-120">Yönetilmeyen WPF API başvurusu</span><span class="sxs-lookup"><span data-stu-id="944c8-120">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  

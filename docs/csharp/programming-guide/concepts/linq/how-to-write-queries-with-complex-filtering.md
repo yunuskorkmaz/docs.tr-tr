@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: Karmaşık filtreleme ile sorgu yazma (C#)'
+title: 'Nasıl yapılır: Karmaşık filtrelemeye (C#) sahip sorguları yazma'
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 7a90a754036008463646321a3e9b9b7d83a3be33
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 08c1e124542e6d7e4c728102b2aa7fb4a804794c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484587"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710036"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-c"></a><span data-ttu-id="23821-102">Nasıl yapılır: Karmaşık filtreleme ile sorgu yazma (C#)</span><span class="sxs-lookup"><span data-stu-id="23821-102">How to: Write Queries with Complex Filtering (C#)</span></span>
-<span data-ttu-id="23821-103">Bazen karmaşık filtrelerle XML sorgularında LINQ yazmak istersiniz.</span><span class="sxs-lookup"><span data-stu-id="23821-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="23821-104">Örneğin, bir özel ad ve değer olan bir alt öğesi olan tüm öğeleri Bul gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="23821-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="23821-105">Bu konu, karmaşık filtreleme ile sorgu yazma örneği sağlar.</span><span class="sxs-lookup"><span data-stu-id="23821-105">This topic gives an example of writing a query with complex filtering.</span></span>  
+# <a name="how-to-write-queries-with-complex-filtering-c"></a><span data-ttu-id="d7a68-102">Nasıl yapılır: Karmaşık filtrelemeye (C#) sahip sorguları yazma</span><span class="sxs-lookup"><span data-stu-id="d7a68-102">How to: Write Queries with Complex Filtering (C#)</span></span>
+<span data-ttu-id="d7a68-103">Bazen karmaşık filtrelerle LINQ to XML sorguları yazmak isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d7a68-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="d7a68-104">Örneğin, belirli bir ada ve değere sahip bir alt öğesi olan tüm öğeleri bulmanız gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="d7a68-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="d7a68-105">Bu konu, karmaşık filtrelemeye sahip sorgu yazma örneği sağlar.</span><span class="sxs-lookup"><span data-stu-id="d7a68-105">This topic gives an example of writing a query with complex filtering.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="23821-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="23821-106">Example</span></span>  
- <span data-ttu-id="23821-107">Bu örnekte tüm bulmayı gösteren `PurchaseOrder` alt olan öğeler `Address` sahip öğe bir `Type` özniteliği "Gönderim" hem de bir alt gruba eşit `State` öğesi "NY için" eşit.</span><span class="sxs-lookup"><span data-stu-id="23821-107">This example shows how to find all `PurchaseOrder` elements that have a child `Address` element that has a `Type` attribute equal to "Shipping" and a child `State` element equal to "NY".</span></span> <span data-ttu-id="23821-108">İç içe bir sorgu kullanan `Where` yan tümcesi ve `Any` işleci döndürür `true` koleksiyonu herhangi bir öğe varsa.</span><span class="sxs-lookup"><span data-stu-id="23821-108">It uses a nested query in the `Where` clause, and the `Any` operator returns `true` if the collection has any elements in it.</span></span> <span data-ttu-id="23821-109">Metot tabanlı sorgu söz dizimi hakkında daha fazla bilgi için bkz: [sorgu sözdizimi ve yöntem sözdizimi LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).</span><span class="sxs-lookup"><span data-stu-id="23821-109">For information about using method-based query syntax, see [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="d7a68-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="d7a68-106">Example</span></span>  
+ <span data-ttu-id="d7a68-107">Bu `PurchaseOrder` örnek, `Address` `State` bir özniteliği "Shipping" ve alt öğesi "NY" değerine eşit olan bir alt öğesi olan tüm öğelerin nasıl bulunacağını gösterir. `Type`</span><span class="sxs-lookup"><span data-stu-id="d7a68-107">This example shows how to find all `PurchaseOrder` elements that have a child `Address` element that has a `Type` attribute equal to "Shipping" and a child `State` element equal to "NY".</span></span> <span data-ttu-id="d7a68-108">`Where` Yan tümcesinde iç içe geçmiş bir sorgu kullanır `Any` ve koleksiyonda herhangi bir öğe `true` varsa işleç döndürülür.</span><span class="sxs-lookup"><span data-stu-id="d7a68-108">It uses a nested query in the `Where` clause, and the `Any` operator returns `true` if the collection has any elements in it.</span></span> <span data-ttu-id="d7a68-109">Yöntem tabanlı sorgu söz dizimini kullanma hakkında daha fazla bilgi için bkz. [LINQ 'Te sorgu sözdizimi ve Yöntem sözdizimi](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).</span><span class="sxs-lookup"><span data-stu-id="d7a68-109">For information about using method-based query syntax, see [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).</span></span>  
   
- <span data-ttu-id="23821-110">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Birden fazla satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="23821-110">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="d7a68-110">Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Birden çok satın alma siparişi (](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)LINQ to XML).</span><span class="sxs-lookup"><span data-stu-id="d7a68-110">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="23821-111">Hakkında daha fazla bilgi için `Any` işleci bkz [Niceleyici işlemleri (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md).</span><span class="sxs-lookup"><span data-stu-id="23821-111">For more information about the `Any` operator, see [Quantifier Operations (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md).</span></span>  
+ <span data-ttu-id="d7a68-111">`Any` İşleci hakkında daha fazla bilgi için bkz. [nicelik belirteci işlemleriC#()](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md).</span><span class="sxs-lookup"><span data-stu-id="d7a68-111">For more information about the `Any` operator, see [Quantifier Operations (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrders.xml");  
@@ -35,16 +35,16 @@ foreach (XElement el in purchaseOrders)
     Console.WriteLine((string)el.Attribute("PurchaseOrderNumber"));  
 ```  
   
- <span data-ttu-id="23821-112">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="23821-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="d7a68-112">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="d7a68-112">This code produces the following output:</span></span>  
   
 ```  
 99505  
 ```  
   
-## <a name="example"></a><span data-ttu-id="23821-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="23821-113">Example</span></span>  
- <span data-ttu-id="23821-114">Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir.</span><span class="sxs-lookup"><span data-stu-id="23821-114">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="23821-115">Daha fazla bilgi için [(C#) XML ad alanları ile çalışma](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="23821-115">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="d7a68-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="d7a68-113">Example</span></span>  
+ <span data-ttu-id="d7a68-114">Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir.</span><span class="sxs-lookup"><span data-stu-id="d7a68-114">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="d7a68-115">Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="d7a68-115">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="23821-116">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Bir Namespace, birden fazla satın alma siparişi](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="23821-116">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="d7a68-116">Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Bir ad alanında](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)birden fazla satın alma siparişi.</span><span class="sxs-lookup"><span data-stu-id="d7a68-116">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrdersInNamespace.xml");  
@@ -63,15 +63,15 @@ foreach (XElement el in purchaseOrders)
     Console.WriteLine((string)el.Attribute(aw + "PurchaseOrderNumber"));  
 ```  
   
- <span data-ttu-id="23821-117">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="23821-117">This code produces the following output:</span></span>  
+ <span data-ttu-id="d7a68-117">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="d7a68-117">This code produces the following output:</span></span>  
   
 ```  
 99505  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="23821-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="23821-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d7a68-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d7a68-118">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [<span data-ttu-id="23821-119">Projeksiyon işlemleri (C#)</span><span class="sxs-lookup"><span data-stu-id="23821-119">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
-- [<span data-ttu-id="23821-120">Niceleyici işlemleri (C#)</span><span class="sxs-lookup"><span data-stu-id="23821-120">Quantifier Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)
+- [<span data-ttu-id="d7a68-119">Projeksiyon Işlemleri (C#)</span><span class="sxs-lookup"><span data-stu-id="d7a68-119">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+- [<span data-ttu-id="d7a68-120">Nicelik belirteci IşlemleriC#()</span><span class="sxs-lookup"><span data-stu-id="d7a68-120">Quantifier Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)

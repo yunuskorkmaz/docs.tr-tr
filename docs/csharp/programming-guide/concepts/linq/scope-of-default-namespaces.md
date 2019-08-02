@@ -1,27 +1,27 @@
 ---
-title: C# 1 varsayılan ad alanlarının kapsamı
+title: C# 1 ' de varsayılan ad alanlarının kapsamı
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 2eee1b0c79f585710962d8e84fe584bca6b8228b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 29d7da9638f1c551894937a179abfa923b538252
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483607"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709996"
 ---
-# <a name="scope-of-default-namespaces-in-c"></a><span data-ttu-id="28ea8-102">C dilinde varsayılan ad alanlarının kapsamı\#</span><span class="sxs-lookup"><span data-stu-id="28ea8-102">Scope of Default Namespaces in C\#</span></span>
-<span data-ttu-id="28ea8-103">XML ağacı içinde gösterilen varsayılan ad alanı, sorgular için kapsamda değildir.</span><span class="sxs-lookup"><span data-stu-id="28ea8-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="28ea8-104">Yine de belirtmesi gerekir, varsayılan bir ad alanı XML varsa, bir <xref:System.Xml.Linq.XNamespace> değişkeni, sorguda kullanılan bir tam adı yerel adı ile birleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="28ea8-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  
+# <a name="scope-of-default-namespaces-in-c"></a><span data-ttu-id="4d21f-102">C 'de varsayılan ad alanlarının kapsamı\#</span><span class="sxs-lookup"><span data-stu-id="4d21f-102">Scope of Default Namespaces in C\#</span></span>
+<span data-ttu-id="4d21f-103">XML ağacında temsil edilen varsayılan ad alanları sorgular kapsamında değildir.</span><span class="sxs-lookup"><span data-stu-id="4d21f-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="4d21f-104">Varsayılan bir ad alanında olan XML varsa, sorguda kullanılacak nitelikli bir ad oluşturmak için bir <xref:System.Xml.Linq.XNamespace> değişken bildirmeniz ve bunu yerel adla birleştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="4d21f-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  
   
- <span data-ttu-id="28ea8-105">XML ağaçlarını sorgulama sırasında sık karşılaşılan sorunlar XML ağacı varsayılan ad alanı varsa, XML değil gibi davranarak bir ad alanında geliştirici bazen sorgu yazdığını biridir.</span><span class="sxs-lookup"><span data-stu-id="28ea8-105">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
+ <span data-ttu-id="4d21f-105">XML ağaçlarını sorgularken en yaygın sorunlardan biri, XML ağacının varsayılan bir ad alanına sahip olması ve geliştiricinin bazen sorguyu bir ad alanında olmamasına rağmen yazar.</span><span class="sxs-lookup"><span data-stu-id="4d21f-105">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
   
- <span data-ttu-id="28ea8-106">Bu konudaki örnekler ilk kümesi XML varsayılan ad alanı içinde yüklenir, ancak yanlış sorgulanır normal bir şekilde gösterir.</span><span class="sxs-lookup"><span data-stu-id="28ea8-106">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, but is queried improperly.</span></span>  
+ <span data-ttu-id="4d21f-106">Bu konudaki ilk örnek kümesi, varsayılan bir ad alanındaki XML 'nin yüklendiği, ancak yanlış sorgulandığı tipik bir yöntemi gösterir.</span><span class="sxs-lookup"><span data-stu-id="4d21f-106">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, but is queried improperly.</span></span>  
   
- <span data-ttu-id="28ea8-107">XML ad alanında sorgulayabilmesi ikinci örneklerde gerekli düzeltmeleri ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="28ea8-107">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>  
+ <span data-ttu-id="4d21f-107">İkinci örnek kümesinde, bir ad alanında XML 'yi sorgulayabilmeniz için gerekli düzeltmeler gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="4d21f-107">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="28ea8-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="28ea8-108">Example</span></span>  
- <span data-ttu-id="28ea8-109">Bu örnek, bir ad alanında XML oluşturulmasını gösterir ve boş bir sonuç döndüren bir sorgu ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="28ea8-109">This example shows the creation of XML in a namespace, and a query that returns an empty result set.</span></span>  
+## <a name="example"></a><span data-ttu-id="4d21f-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="4d21f-108">Example</span></span>  
+ <span data-ttu-id="4d21f-109">Bu örnek, bir ad alanında XML oluşturmayı ve boş bir sonuç kümesi döndüren bir sorguyu gösterir.</span><span class="sxs-lookup"><span data-stu-id="4d21f-109">This example shows the creation of XML in a namespace, and a query that returns an empty result set.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="28ea8-110">Kod</span><span class="sxs-lookup"><span data-stu-id="28ea8-110">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="4d21f-110">Kod</span><span class="sxs-lookup"><span data-stu-id="4d21f-110">Code</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -42,20 +42,20 @@ foreach (XElement el in c1)
 Console.WriteLine("End of result set");  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="28ea8-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="28ea8-111">Comments</span></span>  
- <span data-ttu-id="28ea8-112">Bu örnek aşağıdaki sonucu üretir:</span><span class="sxs-lookup"><span data-stu-id="28ea8-112">This example produces the following result:</span></span>  
+### <a name="comments"></a><span data-ttu-id="4d21f-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4d21f-111">Comments</span></span>  
+ <span data-ttu-id="4d21f-112">Bu örnek aşağıdaki sonucu üretir:</span><span class="sxs-lookup"><span data-stu-id="4d21f-112">This example produces the following result:</span></span>  
   
 ```  
 Result set follows:  
 End of result set  
 ```  
   
-## <a name="example"></a><span data-ttu-id="28ea8-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="28ea8-113">Example</span></span>  
- <span data-ttu-id="28ea8-114">Bu örnek, bir ad alanı ve düzgün şekilde kodlanmış bir sorgu içinde XML oluşturulmasını gösterir.</span><span class="sxs-lookup"><span data-stu-id="28ea8-114">This example shows the creation of XML in a namespace, and a query that is coded properly.</span></span>  
+## <a name="example"></a><span data-ttu-id="4d21f-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="4d21f-113">Example</span></span>  
+ <span data-ttu-id="4d21f-114">Bu örnek, bir ad alanında XML oluşturmayı ve düzgün kodlanmış bir sorguyu gösterir.</span><span class="sxs-lookup"><span data-stu-id="4d21f-114">This example shows the creation of XML in a namespace, and a query that is coded properly.</span></span>  
   
- <span data-ttu-id="28ea8-115">Yukarıdaki yanlış kodlanmış örnek aksine, C# kullanırken doğru bildirmek ve başlatmak için yaklaşımdır bir <xref:System.Xml.Linq.XNamespace> nesnesi ve belirtirken kullanılacak <xref:System.Xml.Linq.XName> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="28ea8-115">In contrast to the incorrectly coded example above, the correct approach when using C# is to declare and initialize an <xref:System.Xml.Linq.XNamespace> object, and to use it when specifying <xref:System.Xml.Linq.XName> objects.</span></span> <span data-ttu-id="28ea8-116">Bu durumda, bağımsız değişkeni <xref:System.Xml.Linq.XContainer.Elements%2A> yöntemi bir <xref:System.Xml.Linq.XName> nesne.</span><span class="sxs-lookup"><span data-stu-id="28ea8-116">In this case, the argument to the <xref:System.Xml.Linq.XContainer.Elements%2A> method is an <xref:System.Xml.Linq.XName> object.</span></span>  
+ <span data-ttu-id="4d21f-115">Yukarıdaki yanlış kodlanmış örneğin aksine, kullanırken C# doğru yaklaşım bir <xref:System.Xml.Linq.XNamespace> nesneyi bildirmek ve başlatmak ve nesneleri belirtirken <xref:System.Xml.Linq.XName> kullanmak.</span><span class="sxs-lookup"><span data-stu-id="4d21f-115">In contrast to the incorrectly coded example above, the correct approach when using C# is to declare and initialize an <xref:System.Xml.Linq.XNamespace> object, and to use it when specifying <xref:System.Xml.Linq.XName> objects.</span></span> <span data-ttu-id="4d21f-116">Bu durumda, <xref:System.Xml.Linq.XContainer.Elements%2A> yöntemin bağımsız değişkeni bir <xref:System.Xml.Linq.XName> nesnedir.</span><span class="sxs-lookup"><span data-stu-id="4d21f-116">In this case, the argument to the <xref:System.Xml.Linq.XContainer.Elements%2A> method is an <xref:System.Xml.Linq.XName> object.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="28ea8-117">Kod</span><span class="sxs-lookup"><span data-stu-id="28ea8-117">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="4d21f-117">Kod</span><span class="sxs-lookup"><span data-stu-id="4d21f-117">Code</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -77,8 +77,8 @@ foreach (XElement el in c1)
 Console.WriteLine("End of result set");  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="28ea8-118">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="28ea8-118">Comments</span></span>  
- <span data-ttu-id="28ea8-119">Bu örnek aşağıdaki sonucu üretir:</span><span class="sxs-lookup"><span data-stu-id="28ea8-119">This example produces the following result:</span></span>  
+### <a name="comments"></a><span data-ttu-id="4d21f-118">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4d21f-118">Comments</span></span>  
+ <span data-ttu-id="4d21f-119">Bu örnek aşağıdaki sonucu üretir:</span><span class="sxs-lookup"><span data-stu-id="4d21f-119">This example produces the following result:</span></span>  
   
 ```  
 Result set follows:  
@@ -88,6 +88,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="28ea8-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="28ea8-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d21f-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4d21f-120">See also</span></span>
 
-- [<span data-ttu-id="28ea8-121">XML ad alanları (C#) ile çalışma</span><span class="sxs-lookup"><span data-stu-id="28ea8-121">Working with XML Namespaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)
+- [<span data-ttu-id="4d21f-121">Ad alanlarına genel bakış (LINQ to XMLC#) ()</span><span class="sxs-lookup"><span data-stu-id="4d21f-121">Namespaces Overview (LINQ to XML) (C#)</span></span>](namespaces-overview-linq-to-xml.md)

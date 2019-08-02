@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: İsteğe bağlı bir öğe (Visual Basic) üzerinde filtreleme'
+title: 'Nasıl yapılır: Isteğe bağlı bir öğe (Visual Basic) üzerinde filtrele'
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: f2a1c7d4091af80e79a6758bcede8f4ccc753f03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4de8c0b07eebc340a53785e6b932a66cb9d2fec9
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855393"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710414"
 ---
-# <a name="how-to-filter-on-an-optional-element-visual-basic"></a><span data-ttu-id="891a2-102">Nasıl yapılır: İsteğe bağlı bir öğe (Visual Basic) üzerinde filtreleme</span><span class="sxs-lookup"><span data-stu-id="891a2-102">How to: Filter on an Optional Element (Visual Basic)</span></span>
-<span data-ttu-id="891a2-103">Bazen, XML belgesinde varolduğundan emin olmadığınız halde bir öğe için filtrelemek istersiniz.</span><span class="sxs-lookup"><span data-stu-id="891a2-103">Sometimes you want to filter for an element even though you are not sure it exists in your XML document.</span></span> <span data-ttu-id="891a2-104">Arama, böylece belirli bir öğenin alt öğesi yoksa, bir null başvurusu özel durumu için filtreleyerek tetiklemez yürütülmelidir.</span><span class="sxs-lookup"><span data-stu-id="891a2-104">The search should be executed so that if the particular element does not have the child element, you do not trigger a null reference exception by filtering for it.</span></span> <span data-ttu-id="891a2-105">Aşağıdaki örnekte, `Child5` öğesi yok bir `Type` alt öğesi, ancak sorgu hala yürütür doğru.</span><span class="sxs-lookup"><span data-stu-id="891a2-105">In the following example, the `Child5` element does not have a `Type` child element, but the query still executes correctly.</span></span>  
+# <a name="how-to-filter-on-an-optional-element-visual-basic"></a><span data-ttu-id="96c96-102">Nasıl yapılır: Isteğe bağlı bir öğe (Visual Basic) üzerinde filtrele</span><span class="sxs-lookup"><span data-stu-id="96c96-102">How to: Filter on an Optional Element (Visual Basic)</span></span>
+<span data-ttu-id="96c96-103">Bazen, XML belgenizde bulunduğundan emin olmasanız da bir öğeye filtre uygulamak isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="96c96-103">Sometimes you want to filter for an element even though you are not sure it exists in your XML document.</span></span> <span data-ttu-id="96c96-104">Arama, belirli bir öğede alt öğe yoksa, filtre uygulayarak bir null başvuru özel durumu tetiklememesi için yürütülmelidir.</span><span class="sxs-lookup"><span data-stu-id="96c96-104">The search should be executed so that if the particular element does not have the child element, you do not trigger a null reference exception by filtering for it.</span></span> <span data-ttu-id="96c96-105">Aşağıdaki örnekte, `Child5` öğesinin bir `Type` alt öğesi yoktur, ancak sorgu yine de doğru yürütülür.</span><span class="sxs-lookup"><span data-stu-id="96c96-105">In the following example, the `Child5` element does not have a `Type` child element, but the query still executes correctly.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="891a2-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="891a2-106">Example</span></span>  
- <span data-ttu-id="891a2-107">Bu örnekte <xref:System.Xml.Linq.Extensions.Elements%2A> genişletme yöntemi.</span><span class="sxs-lookup"><span data-stu-id="891a2-107">This example uses the <xref:System.Xml.Linq.Extensions.Elements%2A> extension method.</span></span>  
+## <a name="example"></a><span data-ttu-id="96c96-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="96c96-106">Example</span></span>  
+ <span data-ttu-id="96c96-107">Bu örnek, <xref:System.Xml.Linq.Extensions.Elements%2A> genişletme yöntemini kullanır.</span><span class="sxs-lookup"><span data-stu-id="96c96-107">This example uses the <xref:System.Xml.Linq.Extensions.Elements%2A> extension method.</span></span>  
   
 ```vb  
 Dim root As XElement = _   
@@ -48,7 +48,7 @@ For Each str In cList
 Next  
 ```  
   
- <span data-ttu-id="891a2-108">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="891a2-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="96c96-108">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="96c96-108">This code produces the following output:</span></span>  
   
 ```  
 Child One Text  
@@ -56,8 +56,8 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="example"></a><span data-ttu-id="891a2-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="891a2-109">Example</span></span>  
- <span data-ttu-id="891a2-110">Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir.</span><span class="sxs-lookup"><span data-stu-id="891a2-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="891a2-111">Daha fazla bilgi için [(Visual Basic) XML ad alanları ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="891a2-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="96c96-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="96c96-109">Example</span></span>  
+ <span data-ttu-id="96c96-110">Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir.</span><span class="sxs-lookup"><span data-stu-id="96c96-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="96c96-111">Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="96c96-111">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -98,7 +98,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="891a2-112">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="891a2-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="96c96-112">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="96c96-112">This code produces the following output:</span></span>  
   
 ```  
 Child One Text  
@@ -106,14 +106,14 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="891a2-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="891a2-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96c96-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="96c96-113">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="891a2-114">Temel sorgular (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="891a2-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [<span data-ttu-id="891a2-115">XML Alt Axis Özelliği</span><span class="sxs-lookup"><span data-stu-id="891a2-115">XML Child Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
-- [<span data-ttu-id="891a2-116">XML Özniteliği Axis Özelliği</span><span class="sxs-lookup"><span data-stu-id="891a2-116">XML Attribute Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [<span data-ttu-id="891a2-117">XML Value Özelliği</span><span class="sxs-lookup"><span data-stu-id="891a2-117">XML Value Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
-- [<span data-ttu-id="891a2-118">Standart sorgu işleçlerine genel bakış (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="891a2-118">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="891a2-119">Projeksiyon işlemleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="891a2-119">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [<span data-ttu-id="96c96-114">Temel sorgular (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96c96-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="96c96-115">XML Alt Axis Özelliği</span><span class="sxs-lookup"><span data-stu-id="96c96-115">XML Child Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
+- [<span data-ttu-id="96c96-116">XML Özniteliği Axis Özelliği</span><span class="sxs-lookup"><span data-stu-id="96c96-116">XML Attribute Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+- [<span data-ttu-id="96c96-117">XML Value Özelliği</span><span class="sxs-lookup"><span data-stu-id="96c96-117">XML Value Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+- [<span data-ttu-id="96c96-118">Standart sorgu Işleçlerine genel bakış (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96c96-118">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="96c96-119">Projeksiyon Işlemleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96c96-119">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
