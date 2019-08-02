@@ -1,75 +1,79 @@
 ---
-title: 'Nasıl yapılır: Erişim üyeleri bir nesnenin (Visual Basic)'
+title: 'Nasıl yapılır: Bir nesnenin üyelerine erişim (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 46c5eb9bc79b3a408a5a4fc9f40fee7391937c58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 882046b829ade2da7c10b3db4c0d6c9ca9f3d579
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663595"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630836"
 ---
-# <a name="how-to-access-members-of-an-object-visual-basic"></a>Nasıl yapılır: Erişim üyeleri bir nesnenin (Visual Basic)
-Bir nesneye başvuruda bulunan bir nesne değişkeni varsa, genellikle o nesnenin yöntemler, özellikler, alanlar ve olaylar gibi üyeleri birlikte çalışmak istediğiniz. Örneğin, bir kez oluşturduğunuz yeni bir <xref:System.Windows.Forms.Form> nesne ayarlamak isteyebilirsiniz, <xref:System.Windows.Forms.Control.Text%2A> özelliği veya çağrı kendi <xref:System.Windows.Forms.Control.Focus%2A> yöntemi.  
-  
-## <a name="accessing-members"></a>Üyelere erişme  
- Bir nesnenin üyeleri, ona başvuran değişkeni aracılığıyla erişin.  
-  
-#### <a name="to-access-members-of-an-object"></a>Bir nesnenin üyelerine erişmek için  
-  
-- Üye erişimi işlecini kullanın (`.`) üye adı arasındaki nesne değişkeni adı.  
-  
-    ```  
-    currentText = newForm.Text  
-    ```  
-  
-     Üye [paylaşılan](../../../../visual-basic/language-reference/modifiers/shared.md), ona erişmek için bir değişken gerekmez.  
-  
-## <a name="accessing-members-of-an-object-of-known-type"></a>Bilinen türünde bir nesnenin üyelerine erişme  
- Derleme zamanında bir nesne türünü biliyorsanız, kullanabileceğiniz *erken bağlama* kendisine başvuran bir değişken için.  
-  
-#### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>Derleme zamanında tür öğrenmek bildiğiniz bir nesnenin üyelerine erişmek için  
-  
-1. Değişkenine atamak istediğiniz nesne türünü olmaya nesne değişkeni bildirme.  
-  
-    ```  
-    Dim extraForm As System.Windows.Forms.Form  
-    ```  
-  
-     İle `Option Strict On`, yalnızca atayabilirsiniz <xref:System.Windows.Forms.Form> nesneleri (veya bir türden nesneleri türetilen <xref:System.Windows.Forms.Form>) için `extraForm`. Bir sınıf veya yapı bir genişletme ile tanımlanan, `CType` dönüştürme <xref:System.Windows.Forms.Form>, ayrıca bu sınıf atayın veya için yapı `extraForm`.  
-  
-2. Üye erişimi işlecini kullanın (`.`) üye adı arasındaki nesne değişkeni adı.  
-  
-    ```  
-    extraForm.Show()  
-    ```  
-  
-     Tüm yöntemler ve özellikler için belirli erişebileceğiniz <xref:System.Windows.Forms.Form> ne olursa olsun, sınıf `Option Strict` ayardır.  
-  
-## <a name="accessing-members-of-an-object-of-unknown-type"></a>Bilinmeyen türdeki bir nesnenin üyelerine erişme  
- Derleme zamanında bir nesnenin türünü bilmiyorsanız kullanmalısınız *geç bağlama* kendisine başvuran herhangi bir değişken için.  
-  
-#### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>Kendisi için türü derleme zamanında bilmediğiniz bir nesnenin üyelerine erişmek için  
-  
-1. Olmaya nesne değişkeni bildirme [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md). (Bir değişken olarak bildirme `Object` olarak bildirme aynı <xref:System.Object?displayProperty=nameWithType>.)  
-  
-    ```  
-    Dim someControl As Object  
-    ```  
-  
-     İle `Option Strict On`, üzerinde tanımlanan üyeler erişebileceğiniz <xref:System.Object> sınıfı.  
-  
-2. Üye erişimi işlecini kullanın (`.`) üye adı arasındaki nesne değişkeni adı.  
-  
-    ```  
-    someControl.GetType()  
-    ```  
-  
-     Nesne değişkenine atayın herhangi bir nesnenin üyeleri erişebilmesi için ayarlamalısınız `Option Strict Off`. Bunu yaptığınızda, derleyici belirli bir üye değişkenine atayın nesnesi tarafından kullanıma sunulduğunu garanti edemez. Nesne girişiminde erişmek için üye sunmuyorsa bir <xref:System.MemberAccessException> özel durum oluşur.  
-  
+# <a name="how-to-access-members-of-an-object-visual-basic"></a>Nasıl yapılır: Bir nesnenin üyelerine erişim (Visual Basic)
+
+Bir nesneye başvuran bir nesne değişkeniniz varsa, genellikle bu nesnenin, yöntemleri, özellikleri, alanları ve olayları gibi üyeleriyle çalışmak istersiniz. Örneğin, yeni <xref:System.Windows.Forms.Form> bir nesne oluşturduktan sonra, <xref:System.Windows.Forms.Control.Text%2A> özelliğini ayarlamak veya <xref:System.Windows.Forms.Control.Focus%2A> metodunu çağırmak isteyebilirsiniz.
+
+## <a name="accessing-members"></a>Üyelere erişme
+
+Bir nesnenin üyelerine, ona başvuran değişken aracılığıyla erişirsiniz.
+
+#### <a name="to-access-members-of-an-object"></a>Bir nesnenin üyelerine erişmek için
+
+- Nesne değişkeni adı ve üye adı arasındaki`.`üye erişim işlecini () kullanın.
+
+    ```vb
+    currentText = newForm.Text
+    ```
+
+    Üye paylaşılmışsa, [](../../../../visual-basic/language-reference/modifiers/shared.md)ona erişmek için bir değişkene ihtiyacınız yoktur.
+
+## <a name="accessing-members-of-an-object-of-known-type"></a>Bilinen türdeki bir nesnenin üyelerine erişme
+
+Derleme zamanında bir nesnenin türünü biliyorsanız, ona başvuran bir değişken için *erken bağlamayı* kullanabilirsiniz.
+
+#### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>Derleme zamanında türünü bildiğiniz bir nesnenin üyelerine erişmek için
+
+1. Değişkene atamak istediğiniz nesnenin türünün nesne değişkenini bildirin.
+
+    ```vb
+    Dim extraForm As System.Windows.Forms.Form
+    ```
+
+    İle `Option Strict On`, yalnızca <xref:System.Windows.Forms.Form> nesneleri (veya öğesinden <xref:System.Windows.Forms.Form>türetilmiş bir `extraForm`türün nesnelerini) atayabilirsiniz. Üzerinde genişleyen `CType` `extraForm`dönüştürmeye sahip bir sınıf veya yapı tanımladıysanız ,busınıfaveyayapıyadeatayabilirsiniz.<xref:System.Windows.Forms.Form>
+
+2. Nesne değişkeni adı ve üye adı arasındaki`.`üye erişim işlecini () kullanın.
+
+    ```vb
+    extraForm.Show()
+    ```
+
+    Ayarın ne olduğuna bakılmaksızın <xref:System.Windows.Forms.Form> sınıfa özgü tüm yöntemlere ve özelliklere erişebilirsiniz. `Option Strict`
+
+## <a name="accessing-members-of-an-object-of-unknown-type"></a>Bilinmeyen türdeki bir nesnenin üyelerine erişme
+
+Derleme zamanında bir nesnenin türünü bilmiyor değilseniz, ona başvuran herhangi bir değişken için *geç bağlamayı* kullanmanız gerekir.
+
+#### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>Derleme zamanında türünü tanımadığınız bir nesnenin üyelerine erişmek için
+
+1. Nesne [veri türünde](../../../../visual-basic/language-reference/data-types/object-data-type.md)olacak nesne değişkenini bildirin. (Bir değişkeni `Object` olarak bildirmek ile aynı <xref:System.Object?displayProperty=nameWithType>şekilde bildirme.)
+
+    ```vb
+    Dim someControl As Object
+    ```
+
+    İle `Option Strict On`, yalnızca <xref:System.Object> sınıfında tanımlanmış üyelere erişebilirsiniz.
+
+2. Nesne değişkeni adı ve üye adı arasındaki`.`üye erişim işlecini () kullanın.
+
+    ```vb
+    someControl.GetType()
+    ```
+
+    Nesne değişkenine atadığınız herhangi bir nesnenin üyelerine erişebilmek için, öğesini ayarlamanız `Option Strict Off`gerekir. Bunu yaptığınızda derleyici, belirli bir üyenin değişkene atadığınız nesne tarafından açığa çıkarılabileceği garantisi vermez. Nesne, erişmeye çalıştığınız bir üyeyi kullanıma sunmadığından, bir <xref:System.MemberAccessException> özel durum oluşur.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Object>

@@ -1,117 +1,117 @@
 ---
 title: F# kullanarak Azure Blob depolama kullanmaya başlama
-description: Azure Blob Depolama ile bulutta yapılandırılmamış veri Store.
+description: Azure Blob depolama ile yapılandırılmamış verileri bulutta depolayın.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 3d020c2cd9a11db1cd4b7a60113e1be03655f763
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c8b42339ff1d76f262e956b5e34cc598e0fc855d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880043"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630516"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>F kullanarak Azure Blob depolamayı kullanmaya başlama\#
+# <a name="get-started-with-azure-blob-storage-using-f"></a>F kullanarak Azure Blob depolama ile çalışmaya başlama\#
 
-Azure Blob Depolama, yapılandırılmamış verileri nesne/BLOB olarak bulutta depolayan bir hizmettir. BLOB Depolama, herhangi bir türde metin veya belge, medya dosyası veya uygulama Yükleyici gibi ikili veri depolayabilir. BLOB storage ayrıca nesne depolama olarak adlandırılır.
+Azure Blob depolama, bulutta nesne/blob olarak yapılandırılmamış verileri depolayan bir hizmettir. BLOB depolama, bir belge, medya dosyası veya uygulama yükleyicisi gibi herhangi bir tür metin veya ikili veri saklayabilir. BLOB depolama alanı da nesne depolama olarak adlandırılır.
 
-Bu makalede, Blob depolamayı kullanarak ortak görevleri nasıl gerçekleştireceğinizi gösterir. Örnekleri kullanılarak yazılan F# .NET için Azure depolama istemci kitaplığı kullanarak. Kapsanan görevleri yüklemek, listelemek, indirmek ve blobları silme işlemini içerir.
+Bu makalede, blob depolamayı kullanarak genel görevlerin nasıl gerçekleştirileceği gösterilir. Örnekler, .NET için Azure F# Storage istemci kitaplığı kullanılarak yazılır. Kapsanan görevler, Blobları karşıya yükleme, listeleme, indirme ve silme işlemleri içerir.
 
-Blob depolama kavramsal bir genel bakış için bkz: [blob depolama için .NET Kılavuzu](/azure/storage/storage-dotnet-how-to-use-blobs).
+Blob depolamaya kavramsal bir genel bakış için bkz. [BLOB depolama için .net Kılavuzu](/azure/storage/storage-dotnet-how-to-use-blobs).
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturma](/azure/storage/storage-create-storage-account). Ayrıca bu hesap için depolama erişim anahtarınızı gerekir.
+Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturmanız](/azure/storage/storage-create-storage-account)gerekir. Bu hesap için depolama erişim anahtarınıza de ihtiyacınız vardır.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Oluşturma bir F# betik ve başlangıç F# etkileşimli
+## <a name="create-an-f-script-and-start-f-interactive"></a>F# Betik oluşturma ve etkileşimli başlatma F#
 
-Bu makaledeki örnekleri ya da kullanılabilir bir F# uygulama veya bir F# betiği. Oluşturmak için bir F# betik, bir dosya oluşturun `.fsx` uzantısı, örneğin `blobs.fsx`içinde F# geliştirme ortamı.
+Bu makaledeki örnekler, bir F# uygulama ya da bir F# komut dosyasında kullanılabilir. Bir F# betik oluşturmak için, örneğin `.fsx` `blobs.fsx`, F# geliştirme ortamınızda uzantılı bir dosya oluşturun.
 
-Ardından, bir [Paket Yöneticisi](package-management.md) gibi [Paket](https://fsprojects.github.io/Paket/) veya [NuGet](https://www.nuget.org/) yüklemek için `WindowsAzure.Storage` ve `Microsoft.WindowsAzure.ConfigurationManager` paketler ve başvuru `WindowsAzure.Storage.dll` ve `Microsoft.WindowsAzure.Configuration.dll` komut dosyası kullanarak bir `#r` yönergesi.
+Ardından, bir `WindowsAzure.Storage` `Microsoft.WindowsAzure.ConfigurationManager` `WindowsAzure.Storage.dll` [](https://fsprojects.github.io/Paket/) `Microsoft.WindowsAzure.Configuration.dll` [](https://www.nuget.org/) yönergesikullanarakvepaketlerinivebaşvurusunuyüklemekiçinpaketveyaNuGet`#r` gibi bir [Paket Yöneticisi](package-management.md) kullanın.
 
-### <a name="add-namespace-declarations"></a>Ad alanı bildirimleri ekleme
+### <a name="add-namespace-declarations"></a>Ad alanı bildirimleri ekle
 
-Aşağıdaki `open` üst tarafına deyimlerini `blobs.fsx` dosyası:
+Aşağıdaki `open` deyimlerini `blobs.fsx` dosyanın en üstüne ekleyin:
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L1-L5)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L1-L5)]
 
-### <a name="get-your-connection-string"></a>Bağlantı dizenizi alma
+### <a name="get-your-connection-string"></a>Bağlantı dizenizi alın
 
-Bu öğreticide bir Azure depolama bağlantı dizesi gerekir. Bağlantı dizeleri hakkında daha fazla bilgi için bkz. [depolama bağlantı dizelerini yapılandırma](/azure/storage/storage-configure-connection-string).
+Bu öğretici için bir Azure depolama bağlantı dizesine ihtiyacınız vardır. Bağlantı dizeleri hakkında daha fazla bilgi için bkz. [depolama bağlantı dizelerini yapılandırma](/azure/storage/storage-configure-connection-string).
 
-Öğretici için şunun gibi komut dosyanızdaki bağlantı dizenizi girin:
+Öğreticide, Bağlantı dizenizi aşağıdaki gibi bir betiğe girersiniz:
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L11-L11)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L11-L11)]
 
-Ancak, bu, **önerilmez** gerçek projeleri. Depolama hesabı anahtarınız depolama hesabınızın kök parolasına benzer. Depolama hesabı anahtarınızı korumak için her zaman özen gösterin. Diğer kullanıcılara dağıtmaktan, sabit kodlamaktan ve başkalarının erişebileceği düz metin dosyasına kaydetmekten kaçının. Tehlikeye girmiş olabilecek düşünüyorsanız Azure portalını kullanarak anahtarınızı yeniden oluşturabilirsiniz.
+Ancak, bu gerçek projeler için **önerilmez** . Depolama hesabı anahtarınız, depolama hesabınızın kök parolasıyla benzerdir. Depolama hesabı anahtarınızı korumak için her zaman özen gösterin. Diğer kullanıcılara dağıtmaktan, sabit kodlamaktan ve başkalarının erişebileceği düz metin dosyasına kaydetmekten kaçının. Güvenliğinin tehlikede olduğunu düşünüyorsanız, Azure portalını kullanarak anahtarınızı yeniden oluşturabilirsiniz.
 
-Gerçek uygulamalar, depolama bağlantı dizenizi korumak için en iyi yolu, içinde bir yapılandırma dosyasıdır. Bir yapılandırma dosyasından bağlantı dizesini getirmek için bunu yapabilirsiniz:
+Gerçek uygulamalar için, depolama Bağlantı dizenizi korumak için en iyi yol bir yapılandırma dosyasıdır. Bağlantı dizesini bir yapılandırma dosyasından getirmek için şunu yapabilirsiniz:
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L13-L15)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L13-L15)]
 
-Azure Yapılandırma Yöneticisi'ni kullanmak isteğe bağlıdır. .NET Framework'ün gibi bir API de kullanabilirsiniz `ConfigurationManager` türü.
+Azure Configuration Manager kullanmak isteğe bağlıdır. .NET Framework `ConfigurationManager` türü gibi bir API de kullanabilirsiniz.
 
 ### <a name="parse-the-connection-string"></a>Bağlantı dizesini ayrıştırma
 
-Bağlantı dizesini ayrıştırmak için kullanın:
+Bağlantı dizesini ayrıştırmak için şunu kullanın:
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L21-L22)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L21-L22)]
 
-Bu döndürür bir `CloudStorageAccount`.
+Bu, bir `CloudStorageAccount`döndürür.
 
-### <a name="create-some-local-dummy-data"></a>Yerel bazı örnek veri oluşturma
+### <a name="create-some-local-dummy-data"></a>Bazı yerel kukla veriler oluşturma
 
-Başlamadan önce bazı işlevsiz bir yerel veri betiğimizi dizininde oluşturun. Daha sonra bu verileri karşıya yükleyin.
+Başlamadan önce, betiğimizin dizininde bazı sözde yerel veriler oluşturun. Daha sonra bu verileri karşıya yüklersiniz.
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L28-L30)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L28-L30)]
 
-### <a name="create-the-blob-service-client"></a>Blob hizmeti istemcisi oluşturma
+### <a name="create-the-blob-service-client"></a>Blob hizmeti istemcisini oluşturma
 
-`CloudBlobClient` Türü kapsayıcıları ve Blob Depolama alanında depolanan blobları almanızı sağlar. Hizmet istemcisini oluşturma yöntemlerinden biri aşağıda verilmiştir:
+Tür `CloudBlobClient` , blob depolamada depolanan kapsayıcıları ve Blobları almanızı sağlar. Hizmet istemcisini oluşturmak için bir yol aşağıda verilmiştir:
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L36-L36)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L36-L36)]
 
-Şimdi, okuyan ve Blob depolamaya veri yazan kodu yazmaya hazırsınız.
+Artık BLOB depolama alanına veri okuyan ve veri yazan kodu yazmaya hazırsınız.
 
-## <a name="create-a-container"></a>Bir kapsayıcı oluşturma
+## <a name="create-a-container"></a>Kapsayıcı oluşturma
 
-Bu örnek, zaten yoksa, bir kapsayıcı oluşturma işlemi gösterilmektedir:
+Bu örnek, zaten yoksa kapsayıcının nasıl oluşturulacağını gösterir:
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L42-L46)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L42-L46)]
 
-Varsayılan olarak, yeni özel Bu kapsayıcıdan BLOB indirmek için depolama erişim anahtarınızı belirlemeniz gerektiği anlamına kapsayıcıdır. Kapsayıcı içindeki dosyaların herkese kullanılabilmesini istiyorsanız, kapsayıcı aşağıdaki kodu kullanarak genel olarak ayarlayabilirsiniz:
+Varsayılan olarak, yeni kapsayıcı özeldir ve bu kapsayıcıdan blob 'ları indirmek için depolama erişim anahtarınızı belirtmeniz gerekir. Kapsayıcıdaki dosyaları herkes için kullanılabilir hale getirmek istiyorsanız, kapsayıcıyı aşağıdaki kodu kullanarak genel olacak şekilde ayarlayabilirsiniz:
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L48-L49)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L48-L49)]
 
-Internet'teki herkes ortak bir kapsayıcıdaki blobları görebilir ancak değiştirdiğinizde ya da yalnızca uygun hesap erişim anahtarı veya paylaşılan erişim imzası varsa bunları silin.
+Internet 'teki herkes blob 'ları ortak bir kapsayıcıda görebilir, ancak yalnızca uygun hesap erişim anahtarı veya paylaşılan erişim imzanız varsa bunları değiştirebilir veya silebilirsiniz.
 
-## <a name="upload-a-blob-into-a-container"></a>Bir kapsayıcıya bir blob yükleme
+## <a name="upload-a-blob-into-a-container"></a>Bir blobu bir kapsayıcıya yükleme
 
-Azure Blob Depolama blok blobları ve sayfa bloblarını destekler. Çoğu durumda, bir blok blobu kullanmak için önerilen türdür.
+Azure Blob depolama, blok bloblarını ve sayfa bloblarını destekler. Çoğu durumda, Blok Blobu kullanılacak önerilen türdür.
 
-Bir dosyayı bir blok blobuna yüklemek için bir kapsayıcı başvurusu alın ve blok blob başvurusu almak için kullanın. Bir blob başvurusunu aldıktan sonra herhangi bir veri akışı için çağırarak yükleyebilirsiniz `UploadFromFile` yöntemi. Bu işlem, daha önce mevcut fırsatınız veya mevcut değilse üzerine blob oluşturur.
+Bir blok blobuna bir dosya yüklemek için bir kapsayıcı başvurusu alın ve bunu bir Blok Blobu başvurusu almak için kullanın. Blob başvurunuz olduktan sonra, `UploadFromFile` yöntemini çağırarak herhangi bir veri akışını bu akışa yükleyebilirsiniz. Bu işlem, daha önce yoksa blobu oluşturur veya varsa üzerine yazar.
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L55-L59)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L55-L59)]
 
-## <a name="list-the-blobs-in-a-container"></a>Bir kapsayıcıdaki blobları Listele
+## <a name="list-the-blobs-in-a-container"></a>Bir kapsayıcıdaki Blobları listeleme
 
-Bir kapsayıcıdaki blobları listelemek için ilk olarak bir kapsayıcı başvurusu alın. Daha sonra kapsayıcının kullanabilirsiniz `ListBlobs` blobları ve/veya dizinleri içine almak için yöntemi. Zengin özellik ve yöntem dönen erişmeye `IListBlobItem`, kendisine dönüştürmelisiniz bir `CloudBlockBlob`, `CloudPageBlob`, veya `CloudBlobDirectory` nesne. Tür bilinmiyorsa, yayınlayacağınızı belirlemek için bir tür denetimi kullanabilirsiniz. Aşağıdaki kod, almak ve her nesnenin URI çıkış gösterilmiştir `mydata` kapsayıcı:
+Bir kapsayıcıdaki Blobları listelemek için, önce bir kapsayıcı başvurusu alın. Daha sonra kapsayıcı ve/veya dizinlerini `ListBlobs` almak için kapsayıcının yöntemini kullanabilirsiniz. Döndürülen `IListBlobItem`zengin özellik kümesine ve yöntemlere erişmek için, bir `CloudBlockBlob`, `CloudPageBlob`veya `CloudBlobDirectory` nesnesine atamalısınız. Tür bilinmiyorsa, ne tür denetimi kullanacağınızı anlamak için bir tür denetimi kullanabilirsiniz. Aşağıdaki kod, `mydata` kapsayıcıdaki her bir öğenin URI 'sini alma ve çıkışın nasıl yapılacağını göstermektedir:
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L67-L80)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L67-L80)]
 
-Adı blobları adlarında yol bilgileriyle de kullanabilirsiniz. Bu, geleneksel bir dosya sisteminde olduğu gibi çapraz geçiş düzenleyebilir ve bir sanal dizin yapısı oluşturur. Dizin yapısı yalnızca sanaldır - kaynak yalnızca Blob Depolama alanında kullanılabilir kapsayıcılar ve bloblar kullanılabilir unutmayın. Ancak, depolama istemcisi kitaplığı sunan bir `CloudBlobDirectory` sanal dizine ait ve bu şekilde düzenlenen bloblarla çalışma sürecini basitleştirmek için nesne.
+Bloblarını adlarına yol bilgileriyle de girebilirsiniz. Bu, geleneksel bir dosya sisteminde olduğu gibi düzenleme ve geçiş yapabileceğiniz bir sanal dizin yapısı oluşturur. Dizin yapısının yalnızca sanal olduğunu unutmayın. blob depolamada kullanılabilen tek kaynak, kapsayıcılar ve bloblardır. Ancak, depolama istemci kitaplığı bir sanal dizine `CloudBlobDirectory` başvuracak bir nesne sunar ve bu şekilde düzenlenmiş bloblarla çalışma sürecini basitleştirir.
 
-Örneğin, aşağıdaki adlı bir kapsayıcı içinde blok blobları kümesine göz önünde bulundurun `photos`:
+Örneğin, aşağıdaki adlı `photos`kapsayıcıda bulunan blok Blobları kümesini göz önünde bulundurun:
 
-*photo1.jpg*\
-*2015/Architecture/Description.txt*\
-*2015/Architecture/photo3.jpg*\
-*2015/Architecture/photo4.jpg*\
-*2016/Architecture/photo5.jpg*\
-*2016/Architecture/photo6.jpg*\
-*2016/Architecture/Description.txt*\
-*2016/photo7.jpg*\
+*photo1. jpg*\
+*2015/mimari/Description. txt*\
+*2015/Architecture/photo3. jpg*\
+*2015/Architecture/photo4. jpg*\
+*2016/Architecture/photo5. jpg*\
+*2016/Architecture/photo6. jpg*\
+*2016/mimari/Description. txt*\
+*2016/photo7. jpg*\
 
-Çağırdığınızda `ListBlobs` (Yukarıdaki örnek) olduğu gibi bir kapsayıcı, hiyerarşik bir listeleme döndürülür. Her ikisi de içeriyorsa `CloudBlobDirectory` ve `CloudBlockBlob` sonuçta çıktı şuna benzer sonra dizinleri ve blobları kapsayıcıda sırasıyla temsil eden nesneler:
+Bir kapsayıcıda ( `ListBlobs` Yukarıdaki örnekte olduğu gibi) çağırdığınızda, hiyerarşik bir liste döndürülür. Hem hem de `CloudBlobDirectory` `CloudBlockBlob` nesneler içeriyorsa, kapsayıcıda dizin ve Blobları temsil eder, sonuçta elde edilen çıktı şuna benzer:
 
 ```console
 Directory: https://<accountname>.blob.core.windows.net/photos/2015/
@@ -119,11 +119,11 @@ Directory: https://<accountname>.blob.core.windows.net/photos/2016/
 Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/photo1.jpg
 ```
 
-İsteğe bağlı olarak ayarlayabileceğiniz `UseFlatBlobListing` parametresinin `ListBlobs` yönteme `true`. Bu durumda kapsayıcıdaki her blob olarak döndürülen bir `CloudBlockBlob` nesne. Çağrı `ListBlobs` döndürülecek bir düz liste aşağıdaki gibi görünür:
+İsteğe bağlı olarak, `UseFlatBlobListing` `ListBlobs` yönteminin parametresini olarak `true`ayarlayabilirsiniz. Bu durumda, kapsayıcıdaki her blob bir `CloudBlockBlob` nesne olarak döndürülür. Düz bir liste `ListBlobs` döndürmek için çağrısı şöyle görünür:
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L82-L89)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L82-L89)]
 
-ve kapsayıcınızı geçerli içeriğini bağlı olarak, sonuçlar şöyle görünür:
+kapsayıcının geçerli içeriğine bağlı olarak, sonuçlar şöyle görünür:
 
 ```console
 Block blob of length 4: https://<accountname>.blob.core.windows.net/photos/2015/architecture/description.txt
@@ -136,115 +136,115 @@ Block blob of length 399751: https://<accountname>.blob.core.windows.net/photos/
 Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/photo1.jpg
 ```
 
-## <a name="download-blobs"></a>Blobları indirin
+## <a name="download-blobs"></a>Blob 'ları indir
 
-Blobları indirmek için önce bir blob başvurusu alın ve sonra çağrı `DownloadToStream` yöntemi. Aşağıdaki örnekte `DownloadToStream` blob içeriklerini, ardından yerel bir dosyaya kalıcı bir akış nesnesine aktarmak için yöntemi.
+Blob 'ları indirmek için önce bir blob başvurusu alın ve sonra `DownloadToStream` yöntemi çağırın. Aşağıdaki örnek, blob içeriğini `DownloadToStream` bir Stream nesnesine aktarmak için, daha sonra yerel bir dosyada kalıcı hale getirebilmeniz için yöntemini kullanır.
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L95-L101)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L95-L101)]
 
-Ayrıca `DownloadToStream` bir metin dizesi olarak bir blobun içeriklerini indirmek için yöntemi.
+Bir Blobun içeriğini bir `DownloadToStream` metin dizesi olarak indirmek için yöntemini de kullanabilirsiniz.
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L103-L106)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L103-L106)]
 
-## <a name="delete-blobs"></a>Blobları Sil
+## <a name="delete-blobs"></a>Blob 'ları silme
 
-Bir blobu silmek için önce bir blob başvurusu alın ve sonra çağrı `Delete` yöntemini.
+Bir blobu silmek için önce bir blob başvurusu alın ve ardından üzerinde `Delete` yöntemi çağırın.
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L112-L116)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L112-L116)]
 
-## <a name="list-blobs-in-pages-asynchronously"></a>BLOB'ları sayfalarda zaman uyumsuz olarak listeleme
+## <a name="list-blobs-in-pages-asynchronously"></a>Sayfalardaki Blobları zaman uyumsuz olarak Listele
 
-Çok sayıda BLOB listeliyorsanız veya bir listeleme işlemi ile dönen sonuç sayısını denetlemek isterseniz sonuç sayfalarında blobları listeleyebilirsiniz. Bu örnek, böylece geniş bir sonuç kümesinin dönmesini beklerken yürütme engellenip engellenmediğini sayfalarda zaman uyumsuz olarak sonuçları döndürmek nasıl gösterir.
+Çok sayıda blob listelemeyi veya bir listeleme işleminde geri aldığınız sonuçların sayısını denetlemek istiyorsanız, blob 'ların sonuçları sayfalarında listeleyebilirsiniz. Bu örnek, büyük bir sonuç kümesi döndürmeyi beklerken yürütmenin engellenmemesi için sayfaların zaman uyumsuz olarak nasıl döndürülmeyeceğini gösterir.
 
-Bu örnek düz bir blob listesi gösterir, ancak ayarlayarak hiyerarşik bir listeleme gerçekleştirebilirsiniz `useFlatBlobListing` parametresinin `ListBlobsSegmentedAsync` yönteme `false`.
+Bu örnek, düz bir blob listesini gösterir, ancak `useFlatBlobListing` `ListBlobsSegmentedAsync` yönteminin parametresini olarak `false`ayarlayarak hiyerarşik bir liste da gerçekleştirebilirsiniz.
 
-Örnek zaman uyumsuz bir yöntem tanımlar kullanarak bir `async` blok. ``let!`` Anahtar sözcüğü listeleme görevi tamamlanana kadar örnek yöntemin yürütülmesini askıya alır.
+Örnek, `async` blok kullanarak bir zaman uyumsuz yöntemi tanımlar. ``let!`` Anahtar sözcüğü, listeleme görevi tamamlanana kadar örnek yöntemi yürütmeyi askıya alır.
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L122-L160)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L122-L160)]
 
-Artık bu zaman uyumsuz bir yordam gibi kullanabiliriz. İlk (Bu öğreticide daha önce oluşturulan yerel dosya kullanarak) işlevsiz bazı veriler yükleyin.
+Artık bu zaman uyumsuz yordamı aşağıdaki gibi kullanabiliriz. İlk olarak bazı kukla verileri karşıya yüklersiniz (Bu öğreticide daha önce oluşturulan yerel dosyayı kullanarak).
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L162-L166)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L162-L166)]
 
-Şimdi, rutinin çağırın. Kullandığınız `Async.RunSynchronously` zaman uyumsuz işlem yürütülmesini zorlamak için.
+Şimdi, yordamını çağırın. Zaman uyumsuz `Async.RunSynchronously` işlemin yürütülmesini zorlamak için kullanırsınız.
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L168-L168)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L168-L168)]
 
-## <a name="writing-to-an-append-blob"></a>Bir ek blobu yazma
+## <a name="writing-to-an-append-blob"></a>Ekleme blobuna yazma
 
-Bir ekleme blobu, günlüğe kaydetme gibi ekleme işlemleri için iyileştirilmiştir. Blok blobuna benzer bir ek blobu bloklardan oluşur ancak bir ek bloba yeni bir blok eklediğinizde her zaman blobun sonuna eklenir. Güncelleştiremezsiniz veya ek blobdaki mevcut bloğu silin. Bir blok blobu için olduğu gibi ek blobun blok kimliği gösterilmez.
+Append blobu, günlüğe kaydetme gibi ekleme işlemleri için iyileştirilmiştir. Bir blok blobu gibi, bir ekleme blobu bloklardan oluşur, ancak ekleme blobuna yeni bir blok eklediğinizde, her zaman blob 'un sonuna eklenir. Ekleme blobundan var olan bir bloğu güncelleştiremez veya silemezsiniz. Bir ekleme Blobun blok kimlikleri bir Blok Blobu için olduğu gibi gösterilmez.
 
-Her bir ek blobu bloğunda en çok 4 MB, farklı boyutlarda olabilir ve bir ek blobu en fazla 50.000 blok içerebilir. Bu nedenle bir ek blobunun en büyük boyutu 195 GB'tan biraz daha fazladır (4 MB X 50.000 blok) ' dir.
+Bir ekleme blobunun her bloğu, en fazla 4 MB olmak üzere farklı bir boyut olabilir ve bir ekleme blobu en fazla 50.000 blok içerebilir. Bu nedenle, bir ekleme Blobun en büyük boyutu 195 GB 'den (4 MB X 50.000 blok) biraz daha fazla.
 
-Aşağıdaki örnek, yeni bir ek blob oluşturur ve bazı veriler, bir basit günlüğe kaydetme işlemini benzeterek buna.
+Aşağıdaki örnek, yeni bir ekleme blobu oluşturur ve basit bir günlüğe kaydetme işleminin benzetimini yapar ve buna veri ekler.
 
-[!code-fsharp[BlobStorage](../../../samples/snippets/fsharp/azure/blob-storage.fsx#L174-L203)]
+[!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L174-L203)]
 
-Bkz: [anlama blok Blobları, sayfa Blobları ve ekleme Blobları](https://msdn.microsoft.com/library/azure/ee691964.aspx) üç tür BLOB arasındaki farklar hakkında daha fazla bilgi için.
+Üç tür blob arasındaki farklar hakkında daha fazla bilgi için bkz. [blok bloblarını, sayfa bloblarını ve ekleme Bloblarını anlama](https://msdn.microsoft.com/library/azure/ee691964.aspx) .
 
-## <a name="concurrent-access"></a>Eş zamanlı erişim
+## <a name="concurrent-access"></a>Eşzamanlı erişim
 
-Birden çok istemciden veya birden çok işlem örnekleri eş zamanlı erişim bir blob olarak desteklemek için kullanabileceğiniz **Etag'ler** veya **kiraları**.
+Birden fazla istemciden veya birden çok işlem örneğiyle bir Blobun eşzamanlı erişimini desteklemek için **ETags** veya **kiralamalar**kullanabilirsiniz.
 
-* **ETag** -blob veya kapsayıcı başka bir işlem tarafından değiştirilmiş algılamak için bir yol sağlar
+* **ETag** -Blobun veya kapsayıcının başka bir işlem tarafından değiştirildiğini algılamaya yönelik bir yol sağlar
 
-* **Kira** -özel ve yenilenebilir elde etmek, yazma veya silme bir süre için bir bloba erişimi için bir yol sağlar.
+* **Kira** -bir zaman dilimi için bir Blobun özel, yenilenebilir, yazma veya silme erişimi elde etmek için bir yol sağlar
 
-Daha fazla bilgi için [Microsoft Azure Depolama'da eşzamanlılığı yönetme](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/).
+Daha fazla bilgi için bkz. [Microsoft Azure depolama eşzamanlılık yönetimi](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/).
 
-## <a name="naming-containers"></a>Kapsayıcı adlandırma
+## <a name="naming-containers"></a>Kapsayıcıları adlandırma
 
-Her blob Azure depolamadaki bir kapsayıcıda yer almalıdır. Kapsayıcı, blob adının bir kısmını oluşturur. Örneğin, `mydata` Bu örnek blob Urı'lerinde kapsayıcısında adıdır:
+Azure Storage 'daki her blob bir kapsayıcıda yer almalıdır. Kapsayıcı, blob adının bir parçasını oluşturur. Örneğin, `mydata` Bu örnek blob URI 'lerinde kapsayıcının adıdır:
 
 - https://storagesample.blob.core.windows.net/mydata/blob1.txt
 - https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
 
-Bir kapsayıcı adı, geçerli bir DNS adı, aşağıdaki adlandırma kurallarına uygun olmalıdır:
+Bir kapsayıcı adı, aşağıdaki adlandırma kurallarına uyan geçerli bir DNS adı olmalıdır:
 
-1. Kapsayıcı adları bir harf veya sayı ile başlamalıdır ve yalnızca harf, rakam ve tire (-) karakteri içermelidir.
-1. Her tire (-) karakterinin hemen önünde ve bir harf veya rakam olmalıdır; kapsayıcı adlarında art arda tirelere izin verilmez.
-1. Kapsayıcı adındaki tüm harfler küçük olmalıdır.
+1. Kapsayıcı adları bir harf veya sayıyla başlamalıdır ve yalnızca harf, rakam ve tire (-) karakterini içerebilir.
+1. Her Dash (-) karakteri hemen önce ve ardından bir harf veya sayı gelmelidir; kapsayıcı adlarında ardışık kesik çizgilerden izin verilmez.
+1. Bir kapsayıcı adındaki tüm harflerin küçük harf olması gerekir.
 1. Kapsayıcı adları 3 ila 63 karakter uzunluğunda olmalıdır.
 
-Kapsayıcı adının her zaman küçük harfli olması gerektiğini unutmayın. Kapsayıcı adına bir büyük harf içerir ya da aksi takdirde kapsayıcı adlandırma kurallarını ihlal (Hatalı istek) 400 hatası alabilirsiniz.
+Kapsayıcının adının her zaman küçük harfli olması gerektiğini unutmayın. Bir kapsayıcı adına bir büyük harfli harf eklerseniz veya kapsayıcı adlandırma kurallarını ihlal ederseniz, bir 400 hatası (Hatalı Istek) alabilirsiniz.
 
-## <a name="managing-security-for-blobs"></a>Blobların güvenliğini sağlama
+## <a name="managing-security-for-blobs"></a>Blobların güvenliğini yönetme
 
-Varsayılan olarak, Azure depolama, veri erişimi hesap erişim anahtarlarını elinde olan bir hesap sahibi sınırlayarak güvende tutar. Depolama hesabınızda blob verileri paylaşmanız gerektiğinde bunu hesap erişim tuşlarınızı güvenliğini tehlikeye atmadan yapmak önemlidir. Ayrıca, aktarımda ve Azure Depolama'da güvenli olduğundan emin olmak için blob verilerini şifreleyebilirsiniz.
+Varsayılan olarak, Azure depolama, hesap erişim anahtarlarına sahip olan hesap sahibine erişimi sınırlandırarak verilerinizi güvende tutar. Depolama hesabınızda blob verilerini paylaşmanız gerektiğinde, hesap erişim anahtarlarınızın güvenliğine ödün vermeden bunu yapmak önemlidir. Ayrıca, Azure depolama 'da ve Azure Storage 'da güvenli olduğundan emin olmak için blob verilerini şifreleyebilirsiniz.
 
 ### <a name="controlling-access-to-blob-data"></a>Blob verilerine erişimi denetleme
 
-Varsayılan olarak, depolama hesabınızdaki blob verileri yalnızca depolama hesabı sahibi erişilebilir. Blob depolamaya yönelik isteklerine kimlik doğrulaması varsayılan olarak hesap erişim anahtarı gerektirir. Ancak, belirli blob verilerinin diğer kullanıcılar tarafından kullanılabilmesini sağlamak isteyebilirsiniz.
+Varsayılan olarak, Depolama hesabınızdaki blob verilerine yalnızca depolama hesabı sahibine erişilebilir. Blob depolamaya karşı istekleri doğrulamak, varsayılan olarak hesap erişim anahtarı gerektirir. Ancak, bazı blob verilerini diğer kullanıcılar için kullanılabilir hale getirmek isteyebilirsiniz.
 
-### <a name="encrypting-blob-data"></a>BLOB verilerini şifreleme
+### <a name="encrypting-blob-data"></a>Blob verilerini şifreleme
 
-Azure Storage hem istemci hem de sunucuda blob verilerin şifrelenmesini destekler.
+Azure depolama, blob verilerini hem istemcide hem de sunucuda şifrelemeyi destekler.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Blob storage'nın temellerini öğrendiğinize göre daha fazla bilgi için bu bağlantıları izleyin.
+BLOB depolama hakkında temel bilgileri öğrendiğinize göre, daha fazla bilgi edinmek için bu bağlantıları izleyin.
 
 ### <a name="tools"></a>Araçlar
 
-- [F#AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
-Bir F# Blob, tablo ve kuyruk Azure depolama varlıkları keşfedin ve bunları CRUD işlemleri kolayca uygulamak için kullanılan bir tür sağlayıcısı.
+- [F#Azurestooygettypeınfo sağlayıcısı](https://fsprojects.github.io/AzureStorageTypeProvider/)\
+Blob F# , tablo ve kuyruk Azure depolama varlıklarını araştırmak ve bunlara kolayca CRUD işlemleri uygulamak için kullanılabilen bir tür sağlayıcısı.
 
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
-Bir F# API, Microsoft Azure tablo depolama hizmetini kullanma
+- [FSharp. Azure. Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
+Microsoft Azure F# tablo depolama hizmeti kullanmak için bir API
 
-- [Microsoft Azure Depolama Gezgini (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
-Microsoft'un Windows, OS X ve Linux'ta Azure depolama verileriyle görsel olarak çalışmanızı sağlayan ücretsiz, tek başına uygulama.
+- [Microsoft Azure Depolama Gezgini (Mao)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
+Microsoft 'un Windows, OS X ve Linux üzerinde Azure Depolama verileriyle görsel olarak çalışmanızı sağlayan ücretsiz ve tek başına bir uygulama.
 
-### <a name="blob-storage-reference"></a>BLOB storage başvurusu
+### <a name="blob-storage-reference"></a>BLOB depolama başvurusu
 
-- [.NET için Azure depolama API'leri](/dotnet/api/overview/azure/storage)
-- [Azure depolama hizmetleri REST API Başvurusu](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
+- [.NET için Azure depolama API 'Leri](/dotnet/api/overview/azure/storage)
+- [Azure depolama hizmetleri REST API başvurusu](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
 
-### <a name="related-guides"></a>İlgili kılavuzları
+### <a name="related-guides"></a>İlgili kılavuzlar
 
-- [C# ' de Azure Blob Depolama kullanmaya başlama](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
-- [Windows üzerinde AzCopy komut satırı yardımcı programı ile veri aktarma](/azure/storage/common/storage-use-azcopy)
-- [Linux üzerinde AzCopy komut satırı yardımcı programı ile veri aktarma](/azure/storage/common/storage-use-azcopy-linux)
-- [Azure Storage bağlantı dizelerini yapılandırma](/azure/storage/common/storage-configure-connection-string)
+- [Azure Blob depolama ile çalışmaya başlamaC#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
+- [Windows 'da AzCopy komut satırı yardımcı programıyla veri aktarma](/azure/storage/common/storage-use-azcopy)
+- [Linux üzerinde AzCopy komut satırı yardımcı programıyla veri aktarma](/azure/storage/common/storage-use-azcopy-linux)
+- [Azure depolama bağlantı dizelerini yapılandırma](/azure/storage/common/storage-configure-connection-string)
 - [Azure depolama ekibi blogu](https://blogs.msdn.microsoft.com/windowsazurestorage/)
-- [Hızlı Başlangıç: NET'i kullanarak nesne depolamada blob oluşturma](/azure/storage/blobs/storage-quickstart-blobs-dotnet)
+- [Hızlı Başlangıç: .NET kullanarak nesne depolamada blob oluşturma](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

@@ -1,48 +1,49 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) değeri değişmeyen bir değişken oluşturma'
+title: 'Nasıl yapılır: Değerde değişmez bir değişken Oluştur (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 3a9fa93b69c9abb42b2dd7eae623048f3628999e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d201e95463dd0431825fee03ebfd340ac80cc552
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663567"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630889"
 ---
-# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Nasıl yapılır: (Visual Basic) değeri değişmeyen bir değişken oluşturma
-Bir değişkenin değerini değiştirmez kavramımız çelişkili görünebilir. Ancak bazı durumlarda bir sabit uygun olmadığı durumlarda ve sabit bir değere sahip bir değişken sağlamak kullanışlıdır. Böyle bir durumda olan bir üye değişkeni tanımlayabilirsiniz [salt okunur](../../../../visual-basic/language-reference/modifiers/readonly.md) anahtar sözcüğü.  
-  
- Kullanamazsınız [Const deyimi](../../../../visual-basic/language-reference/statements/const-statement.md) bildirmek ve aşağıdaki durumlarda bir sabit değer atamak için:  
-  
-- `Const` Deyimi kullanmak istediğiniz veri türünü kabul etmiyor  
-  
-- Derleme zamanında bir değer kattığını değil  
-  
-- Sabit değer derleme zamanında işlem belirleyemiyoruz  
-  
-### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Değeri değişmeyen bir değişken oluşturmak için  
-  
-1. Modül düzeyinde olan bir üye değişkeni bildirme [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)ve [salt okunur](../../../../visual-basic/language-reference/modifiers/readonly.md) anahtar sözcüğü.  
-  
-    ```  
-    Dim ReadOnly timeStarted  
-    ```  
-  
-     Belirtebileceğiniz `ReadOnly` yalnızca bir üye değişkeni üzerinde. Başka bir deyişle, her türlü yordam dışında Modül düzeyinde değişkeni tanımlamanız gerekir.  
-  
-2. Değerin tek bir deyimde derleme zamanında bilgi işlem, bir başlatma yan tümcesi içinde kullanın. `Dim` deyimi. İzleyin [olarak](../../../../visual-basic/language-reference/statements/as-clause.md) yan tümcesiyle birlikte bir eşittir işareti (`=`) ve ardından bir ifade. Derleyici, bu ifade bir sabit değere değerlendirebilirsiniz emin olun.  
-  
-    ```  
-    Dim ReadOnly timeStarted As Date = Now  
-    ```  
-  
-     Bir değer atamak için bir `ReadOnly` değişken yalnızca bir kez. Bunu yaptıktan sonra kod her zamankinden değerini değiştirebilirsiniz.  
-  
-     Değer derleme zamanında bilmiyorsanız veya tek bir deyimde derleme zamanında hesaplayamıyor, yine de uygulamayı çalışma zamanında bir oluşturucuda atayabilirsiniz. Bunu yapmak için size bildirmelidir `ReadOnly` sınıf veya yapı düzeyinde değişken. Bu sınıf veya yapı için oluşturucu, sabit değişkenin değerini hesaplamak ve oluşturucudan döndürmeden önce değişkene atayın.  
-  
+# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Nasıl yapılır: Değerde değişmez bir değişken Oluştur (Visual Basic)
+
+Değerini değiştirolmayan bir değişken kavramı, çelişkili gibi görünebilir. Ancak, bir sabit değer mümkün olmadığında ve sabit bir değere sahip bir değişken olması faydalı olduğunda durumlar vardır. Böyle bir durumda, [salt okunur](../../../../visual-basic/language-reference/modifiers/readonly.md) anahtar sözcüğüyle bir üye değişkeni tanımlayabilirsiniz.
+
+[Const ifadesini](../../../../visual-basic/language-reference/statements/const-statement.md) aşağıdaki koşullarda bir sabit değer bildirmek ve atamak için kullanamazsınız:
+
+- `Const` İfade, kullanmak istediğiniz veri türünü kabul etmiyor
+
+- Derleme zamanında değeri bilemezsiniz
+
+- Derleme zamanında sabit değeri hesaplayamıyor
+
+### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Değerde değişiklik olmayan bir değişken oluşturmak için
+
+1. Modül düzeyinde, [Dim ifadesiyle](../../../../visual-basic/language-reference/statements/dim-statement.md)bir üye değişkeni bildirin ve [salt okunur](../../../../visual-basic/language-reference/modifiers/readonly.md) anahtar sözcüğünü ekleyin.
+
+    ```vb
+    Dim ReadOnly timeStarted
+    ```
+
+    Yalnızca bir üye `ReadOnly` değişkeninde belirtebilirsiniz. Bu, herhangi bir yordamın dışında değişkeni modül düzeyinde tanımlamanız gereken anlamına gelir.
+
+2. Derleme zamanında değeri tek bir ifadede hesapladıysanız, `Dim` deyimindeki bir başlatma yan tümcesini kullanın. Eşittir işareti [](../../../../visual-basic/language-reference/statements/as-clause.md) (`=`) ve ardından bir ifade gelen as yan tümcesini izleyin. Derleyicinin bu ifadeyi sabit bir değere değerlendirebilmesi için emin olun.
+
+    ```vb
+    Dim ReadOnly timeStarted As Date = Now
+    ```
+
+    Bir `ReadOnly` değişkene yalnızca bir kez değer atayabilirsiniz. Bunu yaptığınızda, herhangi bir kod hiçbir zaman değerini değiştiremez.
+
+    Derleme zamanında değeri bilemezsiniz veya tek bir ifadede derleme zamanında hesapladıysanız, yine de bir oluşturucuda çalışma zamanında atayabilirsiniz. Bunu yapmak için `ReadOnly` değişkeni sınıf veya yapı düzeyinde bildirmeniz gerekir. Bu sınıf veya yapı için oluşturucuda, değişkenin sabit değerini hesaplayın ve oluşturucuyu döndürmeden önce değişkenine atayın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)

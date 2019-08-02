@@ -1,59 +1,59 @@
 ---
 title: Kod Tırnak İşaretleri
-description: Hakkında bilgi edinin F# kod tırnak işaretleri, oluşturmak ve bunlarla çalışmak sağlayan bir dil özelliği F# ifadeleri programlı bir şekilde kod.
+description: Programlama yoluyla F# kod ifadeleri oluşturmanıza ve bunlarla F# çalışmanıza olanak tanıyan bir dil özelliği olan kod teklifleri hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 30fd5b575fa59d78c3e70c1a94cd921a6a655ace
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: c6ec0078c685a6452f49edd289b01491dd62e3db
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402122"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630421"
 ---
 # <a name="code-quotations"></a>Kod Tırnak İşaretleri
 
 > [!NOTE]
-> MSDN için API başvuru bağlantısı sizi yönlendirir.  Docs.microsoft.com API başvuru tamamlanmadı.
+> API başvuru bağlantısı sizi MSDN 'ye götürür.  Docs.microsoft.com API başvurusu tamamlanmadı.
 
-Bu konu başlığı altında açıklanır *kod tırnak işaretleri*, oluşturmak ve bunlarla çalışmak sağlayan bir dil özelliği F# ifadeleri programlı bir şekilde kod. Bu özellik temsil eden bir soyut sözdizimi ağacını oluşturmanıza olanak sağlar. F# kod. Soyut sözdizimi ağacını geçiş ve uygulamanızın gereksinimlerine göre işlenir. Oluşturulacak ağaç gibi kullanabileceğiniz F# kod veya bazı başka bir dilde kod oluşturur.
+Bu konu, kod ifadelerini programlama yoluyla oluşturmanıza ve bunlarla F# çalışmanıza olanak tanıyan bir dil özelliği olan *kod tekliflerini*açıklar. Bu özellik, kodu temsil F# eden bir soyut sözdizimi ağacı oluşturmanıza olanak sağlar. Soyut sözdizimi ağacı, uygulamanızın gereksinimlerine göre çapraz ve işlenebilir. Örneğin, ağacı kod oluşturmak F# veya başka bir dilde kod oluşturmak için kullanabilirsiniz.
 
-## <a name="quoted-expressions"></a>Tırnak işaretli ifadeleri
+## <a name="quoted-expressions"></a>Tırnak işareti Ifadesi
 
-A *ifade alıntılanmış* olduğu bir F# ifade programınızın parçası derlenmedi şekilde ayrılmış, ancak bunun yerine temsil eden bir nesne derlenir, kodunuzda bir F# ifade. Tırnak içine alınmış bir ifade iki yoldan biriyle işaretleyebilirsiniz: türü bilgilerini ile veya olmadan türü bilgileri. Tür bilgilerini dahil etmek istiyorsanız, semboller kullanın `<@` ve `@>` tırnak içine alınmış deyim sınırlandırmak için. Tür bilgilerini gerekmiyorsa, semboller kullanın `<@@` ve `@@>`. Aşağıdaki kod, yazılan ve yazılmayan teklifleri gösterir.
+*Tırnak içine alınmış* bir ifade F# , kodunuzda, programınızın bir parçası olarak derlenmediği, ancak bunun yerine bir F# ifadeyi temsil eden bir nesneye derlenmiş şekilde sınırlanmış bir ifadedir. Tırnak içine alınmış bir ifadeyi iki şekilde işaretleyebilirsiniz: tür bilgisi veya tür bilgisi olmadan. Tür bilgilerini eklemek istiyorsanız, sembolleri `<@` kullanır ve `@>` tırnak içine alınmış ifadeyi sınırlandırın. Tür bilgilerine ihtiyacınız yoksa, ve `<@@` `@@>`simgelerini kullanırsınız. Aşağıdaki kod, yazılan ve türsüz teklifleri gösterir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet501.fs)]
 
-Tür bilgilerini eklemezseniz büyük ifade ağacının çapraz geçişi hızlıdır. Elde edilen türü belirlenmiş simgeleri ile alıntılanmış bir ifadenin `Expr<'T>`, tür parametresi tarafından belirlenen şekilde bir ifadenin türü olduğu F# derleyicinin tür çıkarımı algoritması. Kod tırnak işaretleri türü bilgisi olmadan kullandığınızda, genel olmayan tür tırnak işaretli ifadenin türü olan [Expr](https://msdn.microsoft.com/library/ed6a2caf-69d4-45c2-ab97-e9b3be9bce65). Çağırabilirsiniz [ham](https://msdn.microsoft.com/library/47fb94f1-e77f-4c68-aabc-2b0ba40d59c2) özelliği belirlenmiş `Expr` yazılmamış almak için sınıf `Expr` nesne.
+Tür bilgilerini eklemezseniz büyük bir ifade ağacına geçiş yapmak daha hızlıdır. Türü belirlenmiş simgelerle tırnak içine alınmış bir ifadenin sonuç türü, tür `Expr<'T>`parametresi F# derleyicinin tür çıkarımı algoritması tarafından belirlendiği şekilde ifadenin türüne sahip olur. Kod tekliflerini tür bilgisi olmadan kullandığınızda, tırnak işareti türü genel olmayan [ifadedir.](https://msdn.microsoft.com/library/ed6a2caf-69d4-45c2-ab97-e9b3be9bce65) Türsüz [](https://msdn.microsoft.com/library/47fb94f1-e77f-4c68-aabc-2b0ba40d59c2) `Expr` nesneyieldeetmekiçin,yazılansınıftahamözelliğini`Expr` çağırabilirsiniz.
 
-Çeşitli oluşturmanıza olanak tanıyan statik yöntemler vardır F# ifade nesneleri programlı olarak `Expr` kullanmadan sınıf ifadeleri tırnak işareti.
+Tırnak içine alınmış ifadeler kullanmadan F# `Expr` sınıfında program aracılığıyla ifade nesneleri oluşturmanıza imkan tanıyan çeşitli statik yöntemler vardır.
 
-Kod tırnak eksiksiz bir ifade içermelidir unutmayın. İçin bir `let` bağlama, örneğin, tanımı ilişkili adı ve bağlama kullanan bir ek bir ifade ihtiyacınız. Ayrıntılı sözdizimi bu izleyen bir ifadedir `in` anahtar sözcüğü. Üst düzey bir modülde modülü yalnızca sonraki ifade budur ancak bir teklifte kesinlikle gerekli olmadığı.
+Bir kod teklifinin bir bütün ifadeyi içermesi gerektiğini unutmayın. Örneğin, `let` bir bağlama için, hem ilişkili ad tanımının hem de bağlamayı kullanan ek bir ifadenin olması gerekir. Ayrıntılı söz diziminde, bu `in` anahtar sözcüğünü izleyen bir ifadedir. Modüldeki en üst düzey bu, modüldeki yalnızca bir sonraki ifadedir, ancak bir teklifte, açıkça gereklidir.
 
-Bu nedenle, aşağıdaki ifade geçerli değil.
+Bu nedenle, aşağıdaki ifade geçerli değildir.
 
 ```fsharp
 // Not valid:
 // <@ let f x = x + 1 @>
 ```
 
-Ancak, aşağıdaki ifadeler geçerlidir.
+Ancak aşağıdaki ifadeler geçerlidir.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
-Değerlendirilecek F# teklifleri kullanmalıdır [ F# tırnak değerlendirici](https://github.com/fsprojects/FSharp.Quotations.Evaluator). Değerlendirme ve yürütme için destek sağlar F# ifade nesneleri.
+Teklifleri değerlendirmek F# için, [ F# teklif değerlendirici](https://github.com/fsprojects/FSharp.Quotations.Evaluator)' ni kullanmanız gerekir. İfade nesnelerini değerlendirmek ve yürütmek F# için destek sağlar.
 
-## <a name="expr-type"></a>İfade türü
+## <a name="expr-type"></a>Expr türü
 
-Örneği `Expr` türü temsil eder bir F# ifade. Hem genel hem de genel olmayan `Expr` türleri belgelenir F# kitaplığı belgeleri. Daha fazla bilgi için [Microsoft.FSharp.Quotations Namespace](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.quotations-namespace-%5bfsharp%5d) ve [Quotations.Expr sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/quotations.expr-class-%5bfsharp%5d).
+`Expr` Türün bir örneği bir F# ifadeyi temsil eder. Hem genel hem de genel `Expr` olmayan türler F# kitaplık belgelerinde belgelenmiştir. Daha fazla bilgi için bkz. [Microsoft. FSharp. Quotations ad alanı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.quotations-namespace-%5bfsharp%5d) ve [Quotations. Expr sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/quotations.expr-class-%5bfsharp%5d).
 
-## <a name="splicing-operators"></a>İşleçler ekleniyor
+## <a name="splicing-operators"></a>Splicing Işleçleri
 
-Boşluklarına ayıran, sabit kod tırnak işaretleri ile programlama yoluyla veya başka bir kod tırnak oluşturulmuş ifadeler birleştirmenize olanak sağlar. `%` Ve `%%` işleçleri eklemeyi etkinleştir bir F# kod tırnak içine ifade nesnesi. Kullandığınız `%` işleci belirlenmiş ifade nesne türü belirtilmiş bir tırnak eklemek için; kullanmanıza `%%` yazılmamış bir tırnak yazılmamış ifade nesne eklemek için işleci. Her iki işleçleri birli önek işleçleridir. Bu nedenle, `expr` türünde yazılmamış bir ifadedir `Expr`, aşağıdaki kod geçerlidir.
+Splicing, sabit kod tekliflerini programlı bir şekilde veya başka bir kod teklifinden oluşturduğunuz ifadelerle birleştirmenizi sağlar. Ve `%` işleçleri`%%` , bir kod teklifine bir F# ifade nesnesi eklemenizi sağlar. Türü belirlenmiş bir `%` teklife yazılmış bir ifade nesnesi eklemek için işlecini kullanırsınız; türsüz bir ifade nesnesini `%%` türsüz bir teklife eklemek için işlecini kullanırsınız. Her iki işleç de birli önek işleçleridir. Bu nedenle `expr` , türünde `Expr`türsüz bir ifade varsa, aşağıdaki kod geçerli olur.
 
 ```fsharp
 <@@ 1 + %%expr @@>
 ```
 
-Ve `expr` türü belirlenmiş bir teklif `Expr<int>`, aşağıdaki kod geçerlidir.
+`expr` Türü`Expr<int>`belirlenmiş bir tırnak ise, aşağıdaki kod geçerli olur.
 
 ```fsharp
 <@ 1 + %expr @>
@@ -63,11 +63,11 @@ Ve `expr` türü belirlenmiş bir teklif `Expr<int>`, aşağıdaki kod geçerlid
 
 ### <a name="description"></a>Açıklama
 
-Aşağıdaki örnek kod teklifleri koymak için kullanımını gösterir F# kod bir ifade nesnesine ve ardından yazdırma F# ifadeyi temsil eden kod. Bir işlev `println` tanımlanan özyinelemeli işlev içeren `print` görüntüleyen bir F# ifade nesnesi (tür `Expr`) kolay bir biçimde. Etkin desenlerinde vardır [Microsoft.FSharp.Quotations.Patterns](https://msdn.microsoft.com/library/093944a9-c752-403a-8983-5fcd5dbf92a4) ve [Microsoft.FSharp.Quotations.DerivedPatterns](https://msdn.microsoft.com/library/d2434a6e-ae7b-4f3d-b567-c162938bc9cd) ifade nesnelerini çözümlemek için kullanılan modül. Bu örnek görünebilir olası desenleri içermeyen bir F# ifade. Herhangi bir joker karakter deseni eşleşme deseni tetikler tanınmayan (`_`) ve kullanılarak işlenir `ToString` yöntemi, üzerinde `Expr` yazın, eşleşme ifadeniz eklemek için etkin desen bildiğiniz sağlar.
+Aşağıdaki örnek, kod tekliflerinin bir ifade nesnesine kod koymak F# ve sonra ifadeyi temsil eden F# kodu yazdırmak için kullanımını gösterir. Bir işlev `println` , F# bir ifade nesnesini (türünde `Expr`) kolay bir biçimde görüntüleyen özyinelemeli bir işlev `print` içeren tanımlanır. [Microsoft. FSharp. Quotations. Patterns](https://msdn.microsoft.com/library/093944a9-c752-403a-8983-5fcd5dbf92a4) ve [Microsoft. FSharp. Quotations. DerivedPatterns](https://msdn.microsoft.com/library/d2434a6e-ae7b-4f3d-b567-c162938bc9cd) modüllerinde ifade nesnelerini çözümlemek için kullanılabilen çeşitli etkin desenler vardır. Bu örnek, bir F# ifadede görünebilen tüm olası desenleri içermez. Tüm tanınmayan desenler joker karakter düzeniyle (`_`) bir eşleşme tetikleyip, `Expr` türü `ToString` kullanılarak işlenir ve bu da tür üzerinde, eşleştirme ifadenizde eklemek üzere etkin olan kalıbı bilmenizi sağlar.
 
 ### <a name="code"></a>Kod
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet601.fs)]
 
 ### <a name="output"></a>Çıkış
 
@@ -81,15 +81,15 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 
 ### <a name="description"></a>Açıklama
 
-Üç Etkin desenler içinde kullanabilirsiniz [ExprShape Modülü](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) daha az etkin desen ile ifade ağaçları geçirilecek. Ağacı gezme istiyor ancak düğümlerinin çoğunda tüm bilgilere ihtiyacınız yoksa, bu Etkin desenler yararlı olabilir. Kullandığınızda, bu desenleri herhangi F# ifadeyle eşleşen aşağıdaki üç desenlerden birini: `ShapeVar` ifade bir değişken ise `ShapeLambda` ifade bir lambda ifadesi ise veya `ShapeCombination` ifade başka bir şey ise. Etkin desenler bir önceki kod örneğinde olduğu gibi kullanarak bir ifade ağacı gezme, tüm olası işlemek için çok sayıda diğer desenler kullanmak zorunda F# ifade türleri ve kodunuzu olacaktır daha karmaşık. Daha fazla bilgi için [ExprShape.ShapeVar&#124;ShapeLambda&#124;ShapeCombination etkin düzeni](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
+Ayrıca, daha az etkin desenle ifade ağaçlarına çapraz geçiş yapmak için [ExprShape modülünde](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) üç etkin deseni de kullanabilirsiniz. Bu etkin desenler, bir ağaca geçiş yapmak istediğinizde yararlı olabilir ancak düğümlerin çoğunda tüm bilgilere ihtiyacınız yoktur. Bu desenleri F# kullandığınızda, herhangi bir ifade aşağıdaki üç desenden biriyle eşleşir: `ShapeVar` ifade bir değişkense, `ShapeLambda` ifade bir lambda ifadesiyse veya `ShapeCombination` ifade başka bir şeydir. Önceki kod örneğinde olduğu gibi etkin desenleri kullanarak bir ifade ağacında çapraz geçiş yaparsanız, olası F# tüm ifade türlerini işlemek için çok daha fazla desen kullanmanız gerekir ve kodunuz daha karmaşık olacaktır. Daha fazla bilgi için bkz. [ExprShape. ShapeVar&#124;ShapeLambda&#124;shapebirleşimi etkin model](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
 
-Aşağıdaki kod örneği, daha karmaşık çapraz geçişleri için temel olarak kullanılabilir. Bu kod içinde bir ifade ağacı bir işlev çağrısı içeren bir ifade için oluşturulan `add`. [SpecificCall](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d) yapılan tüm çağrıların algılamak için kullanılan etkin desen `add` ifade ağacında. Çağrı bağımsız değişkenleri bu etkin desen atar `exprList` değeri. Bu durumda, var. yalnızca iki bunlar çekilen ve işlev yinelemeli olarak bağımsız değişkenler üzerinde çağrılır Sonuçları bir çağrı temsil eden bir kod tırnak içine eklenen `mul` splice işleci kullanarak (`%%`). `println` Önceki örnekten gelen işlevi sonuçları görüntülemek için kullanılır.
+Aşağıdaki kod örneği, daha karmaşık traversals için temel olarak kullanılabilir. Bu kodda, bir işlev çağrısını `add`içeren bir ifade için bir ifade ağacı oluşturulur. İfade ağacında yapılan `add` herhangi bir çağrıyı algılamak için [SpecificCall](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d) etkin deseninin kullanılması. Bu etkin model, çağrının `exprList` bağımsız değişkenlerini değerine atar. Bu durumda, yalnızca ikisi vardır, bu nedenle bunlar kullanıma alınır ve işlev bağımsız değişkenlerde yinelemeli olarak çağırılır. Sonuçlar, splice işleci ( `mul` `%%`) kullanılarak yapılan çağrıyı temsil eden bir kod teklifine eklenir. Önceki `println` örnekteki işlev, sonuçları göstermek için kullanılır.
 
-Etkin desen bir dala kodda değişiklik elde edilen ifade tek değişiklik, bu nedenle yalnızca aynı ifade ağacı oluşturur. `add` için `mul`.
+Diğer etkin model dallarındaki kod yalnızca aynı ifade ağacını yeniden oluşturur, bu nedenle sonuç ifadesindeki tek değişiklik, ' dan `add` `mul`' a değişir.
 
 ### <a name="code"></a>Kod
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet701.fs)]
 
 ### <a name="output"></a>Çıkış
 
