@@ -1,27 +1,27 @@
 ---
-title: Genel ad alanları (Visual Basic) (LINQ to XML) ile çalışma
+title: Genel ad alanları (Visual Basic) ile çalışma (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: d8e74e949815d36f06f522460cc31ca6c3ccabb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9aab6f7175c905fcb3e82829f131f52b3d9368ac
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908017"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710379"
 ---
-# <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Genel ad alanları (Visual Basic) (LINQ to XML) ile çalışma
-Visual Basic'de XML değişmez değerlerini anahtar özelliklerinden biridir özelliği XML ad alanlarını kullanarak bildirme `Imports` deyimi. Bu özelliği kullanarak, bir ön ekini kullanan bir XML ad alanı bildirebilir veya varsayılan XML ad alanı bildirebilirsiniz.  
+# <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Genel ad alanları (Visual Basic) ile çalışma (LINQ to XML)
+Visual Basic xml sabit değerlerinin temel özelliklerinden biri, `Imports` ifadesini kullanarak XML ad alanları bildirme yeteneğidir. Bu özelliği kullanarak, ön ek kullanan bir XML ad alanı bildirebilir veya varsayılan bir XML ad alanı bildirebilirsiniz.  
   
- Bu yetenek, iki durumlarda kullanışlıdır. İlk olarak, XML değişmez değerlerine bildirilen ad alanları katıştırılmış ifadeler taşınmaz. Genel ad alanlarını bildirme katıştırılmış ifadeler ad alanları ile kullanmak için yapmanız gereken iş miktarını azaltır. İkinci olarak, ad alanları XML özellikleri ile kullanmak için genel ad alanları belirtmesi gerekir.  
+ Bu özellik iki durumda yararlıdır. İlk olarak, XML değişmez değerlerinde belirtilen ad alanları, katıştırılmış ifadeler içine taşımaz. Genel ad alanlarını bildirmek, katıştırılmış ifadeleri ad alanlarıyla birlikte kullanmak için yapmanız gereken iş miktarını azaltır. İkincisi, XML özellikleriyle ad alanlarını kullanabilmeniz için genel ad alanlarını bildirmeniz gerekir.  
   
- Genel ad alanları proje düzeyinde bildirebilirsiniz. Proje düzeyi genel ad alanları geçersiz kılmalar Modül düzeyinde genel ad alanları da bildirebilirsiniz. Son olarak, genel ad alanları sabit değeri bir XML geçersiz kılabilirsiniz.  
+ Genel ad alanlarını proje düzeyinde bildirebilirsiniz. Genel ad alanlarını modül düzeyinde bildirebilirsiniz ve bu da proje düzeyi genel ad alanlarını geçersiz kılar. Son olarak, bir XML sabit değerinde genel ad alanlarını geçersiz kılabilirsiniz.  
   
- XML sabit değerleri veya genel olarak bildirilen ad alanlarında XML özellikleri kullandığınızda, Visual Studio'da üzerine gelerek genişletilmiş adını XML sabit değerleri veya özellikleri görebilirsiniz. Genişletilmiş adı bir araç ipucu olarak görürsünüz.  
+ Genel olarak tanımlanmış ad alanlarında bulunan XML değişmez değerlerini veya xml özelliklerini kullanırken, Visual Studio 'da üzerine giderek, XML değişmez değerlerinin veya özelliklerinin genişletilmiş adını görebilirsiniz. Genişletilmiş adı bir araç ipucunda görürsünüz.  
   
- Alabileceğiniz bir <xref:System.Xml.Linq.XNamespace> kullanarak bir genel ad karşılık gelen nesne `GetXmlNamespace` yöntemi.  
+ Yöntemini kullanarak genel bir <xref:System.Xml.Linq.XNamespace> ad alanına karşılık gelen bir nesnesi alabilirsiniz. `GetXmlNamespace`  
   
-## <a name="examples-of-global-namespaces"></a>Genel ad alanları örnekleri  
- Aşağıdaki örnek, kullanarak varsayılan genel bir ad bildirir `Imports` deyimi ve sonra başlatmak için kullandığı bir XML değişmez bir <xref:System.Xml.Linq.XElement> nesne bu ad alanındaki:  
+## <a name="examples-of-global-namespaces"></a>Genel ad alanı örnekleri  
+ Aşağıdaki örnek, bir varsayılan genel ad alanını `Imports` bildirimini kullanarak bildirir ve sonra bu ad alanındaki bir <xref:System.Xml.Linq.XElement> nesneyi başlatmak için bir XML değişmez değeri kullanır:  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -40,7 +40,7 @@ End Module
 <Root xmlns="http://www.adventure-works.com" />  
 ```  
   
- Aşağıdaki örnek bir genel ad alanı öneki ile bildirir ve ardından bir öğe başlatmak için bir XML değişmez değer kullanır:  
+ Aşağıdaki örnek bir ön eki olan genel bir ad alanı bildirir ve sonra bir öğeyi başlatmak için bir XML değişmez değeri kullanır:  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -59,8 +59,8 @@ End Module
 <aw:Root xmlns:aw="http://www.adventure-works.com" />  
 ```  
   
-## <a name="global-namespaces-and-embedded-expressions"></a>Genel ad alanları ve katıştırılmış ifadeler  
- XML değişmez değerlerine bildirilen ad alanları katıştırılmış ifadeler taşınmaz. Aşağıdaki örnek, bir varsayılan ad alanı bildirir. Katıştırılmış bir ifade kullanır `Child` öğesi.  
+## <a name="global-namespaces-and-embedded-expressions"></a>Genel ad alanları ve katıştırılmış Ifadeler  
+ XML değişmez değerlerinde belirtilen ad alanları, gömülü ifadeler içine taşımaz. Aşağıdaki örnek bir varsayılan ad alanı bildirir. Daha sonra `Child` öğesi için gömülü bir ifade kullanır.  
   
 ```vb  
 Dim root As XElement = _  
@@ -78,9 +78,9 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- Gördüğünüz gibi elde edilen XML varsayılan ad alanı bildirimini içerir. böylece `Child` hiçbir ad alanında bir öğedir.  
+ Gördüğünüz gibi, elde edilen XML, bir varsayılan ad alanı bildirimi içerir, böylece `Child` öğe ad alanı içermez.  
   
- Ad alanında bir katıştırılmış deyim şu şekilde yeniden bildirebilirsiniz:  
+ Ad alanını katıştırılmış ifadede aşağıdaki gibi yeniden bildirebilirsiniz:  
   
 ```vb  
 Dim root As XElement = _  
@@ -98,7 +98,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- Ancak, bu daha iyi bir yaklaşım genel varsayılan ad alanını kullanmak için daha kullanışsız olur. Genel varsayılan ad alanı ile ad alanlarını bildirme olmadan XML sabit değerleri kullanabilirsiniz. Elde edilen XML içinde genel olarak bildirilen varsayılan ad alanı olacaktır.  
+ Ancak bu, daha iyi bir yaklaşım olan genel varsayılan ad alanından kullanılmak üzere daha kısaberdır. Genel varsayılan ad alanı ile, XML değişmez değerlerini ad alanları bildirmeden kullanabilirsiniz. Elde edilen XML, genel olarak belirtilen varsayılan ad alanında olacaktır.  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -121,8 +121,8 @@ End Module
 </Root>  
 ```  
   
-## <a name="using-namespaces-with-xml-properties"></a>XML özellikleri ile ad alanlarını kullanma  
- XML özellikleri de doğru isim uzayında olacaktır, böylece bir ad alanındaki bir XML ağacı çalıştığınız ve XML özellikleri kullanırsanız, genel bir ad kullanmanız gerekir. Aşağıdaki örnek, bir XML ağacının ad bildirir. Ardından sayısı yazdırır `Child` öğeleri.  
+## <a name="using-namespaces-with-xml-properties"></a>XML özellikleriyle ad alanlarını kullanma  
+ Bir ad alanında olan bir XML ağacıyla çalışıyorsanız ve XML özelliklerini kullanıyorsanız, XML özelliklerinin de doğru ad alanında olması için genel bir ad alanı kullanmanız gerekir. Aşağıdaki örnek, bir ad alanında bir XML ağacını bildirir. Daha sonra `Child` öğe sayısını yazdırır.  
   
 ```vb  
 Dim root As XElement = _  
@@ -132,13 +132,13 @@ Dim root As XElement = _
 Console.WriteLine(root.<Child>.Count())  
 ```  
   
- Bu örnek olduğunu gösterir. hiçbir `Child` öğeleri. Bu, aşağıdaki çıktıyı üretir:  
+ Bu örnek, hiçbir `Child` öğe olmadığını gösterir. Aşağıdaki çıktıyı üretir:  
   
 ```  
 0  
 ```  
   
- Ardından ancak varsayılan genel ad alanı bildirirseniz, XML değişmez değer hem XML özelliği varsayılan genel ad alanında şunlardır:  
+ Ancak, varsayılan bir genel ad alanı bildirirseniz, hem XML değişmez değeri hem de XML özelliği varsayılan genel ad alanında bulunur:  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -154,13 +154,13 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek olduğunu belirten `Child` öğesi. Bu, aşağıdaki çıktıyı üretir:  
+ Bu örnek, bir `Child` öğe olduğunu gösterir. Aşağıdaki çıktıyı üretir:  
   
 ```  
 1  
 ```  
   
- Bir ön ekine sahip bir genel ad alanı olarak bildirirseniz, XML değişmez değerleri ve XML özellikleri için ön ek kullanabilirsiniz:  
+ Ön eki olan genel bir ad alanı bildirirseniz, öneki hem XML değişmez değerleri hem de XML özellikleri için kullanabilirsiniz:  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -176,8 +176,8 @@ Module Module1
 End Module  
 ```  
   
-## <a name="xnamespace-and-global-namespaces"></a>XNamespace ve genel ad alanları  
- Alabileceğiniz bir <xref:System.Xml.Linq.XNamespace> kullanarak nesne `GetXmlNamespace` yöntemi:  
+## <a name="xnamespace-and-global-namespaces"></a>XNamespace ve Global ad alanları  
+ Yöntemini kullanarak bir <xref:System.Xml.Linq.XNamespace> nesnesi edinebilirsiniz: `GetXmlNamespace`  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -199,4 +199,4 @@ http://www.adventure-works.com
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [Ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

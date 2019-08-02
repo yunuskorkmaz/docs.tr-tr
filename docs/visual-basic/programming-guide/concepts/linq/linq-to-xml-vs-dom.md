@@ -2,20 +2,20 @@
 title: LINQ to XML ile DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: 8a7d15a8eca8e7d9bcbba068305357ff766a9d9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ca04991fb012aa522e7c0e35eea08d790007f7a
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623075"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710366"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML ile DOM (Visual Basic)
-Bu bölümde arasındaki bazı temel farklar açıklanmaktadır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ve geçerli hakim XML programlama API, W3C belge nesne modeli (DOM).  
+Bu bölümde, geçerli önceden baskın XML [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] programlama API 'si, W3C belge nesne modeli (DOM) arasındaki bazı önemli farklılıklar açıklanmaktadır.  
   
-## <a name="new-ways-to-construct-xml-trees"></a>XML ağaçlarını oluşturmak için yeni yollar  
- W3C DOM, aşağıdan bir XML ağacı oluşturmak; diğer bir deyişle, bir belge oluşturun, öğeleri oluşturmak ve sonra belgeyi öğeleri ekleyin.  
+## <a name="new-ways-to-construct-xml-trees"></a>XML ağaçları oluşturmak için yeni yollar  
+ W3C DOM 'da, aşağıdan yukarıya bir XML ağacı oluşturursunuz; diğer bir deyişle, bir belge oluşturur, öğeler oluşturur ve sonra öğeleri belgeye eklersiniz.  
   
- DOM, Microsoft uygulamasını kullanarak bir XML ağacı oluşturmak için normal bir şekilde aşağıdaki gibi olur <xref:System.Xml.XmlDocument>:  
+ Örneğin, aşağıdaki, DOM <xref:System.Xml.XmlDocument>'ın Microsoft UYGULAMASıNı kullanarak bir XML ağacı oluşturmanın tipik bir yoludur:  
   
 ```vb  
 Dim doc As XmlDocument = New XmlDocument()  
@@ -51,9 +51,9 @@ doc.AppendChild(contacts)
 Console.WriteLine(doc.OuterXml)  
 ```  
   
- Kodlama bu stil, görsel olarak XML ağacının yapısı hakkında daha bilgi sağlamaz. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir XML ağacı oluşturmak için bu yaklaşımı destekler, ancak ayrıca alternatif bir yaklaşım destekler *işlevsel oluşturma*. İşlevsel oluşturma, Visual Basic'te, bir XML ağacı oluşturmak için XML sabit değerleri kullanır.  
+ Bu kodlama stili, XML ağacının yapısı hakkında görsel olarak çok fazla bilgi sağlamaz. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], bir XML ağacı oluşturmak için bu yaklaşımı destekler, ancak alternatif bir yaklaşım, *işlevsel oluşturma*da destekler. Visual Basic, işlevsel oluşturma bir XML ağacı oluşturmak için XML değişmez değerlerini kullanır.  
   
- İşte nasıl kullanarak aynı XML ağacı oluşturmak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] işlevsel oluşturma:  
+ İşlevsel oluşturma kullanarak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aynı xml ağacını nasıl oluşturabileceğiniz aşağıda açıklanmıştır:  
   
 ```vb  
 Dim contacts = _  
@@ -72,20 +72,20 @@ Dim contacts = _
     </Contacts>  
 ```  
   
- Girintileme kodu XML ağacı oluşturmak için temel alınan XML yapısını gösterdiğine dikkat edin.  
+ XML ağacını oluşturmak için kodun girintilendiği, temel alınan XML 'nin yapısını gösterir.  
   
- Daha fazla bilgi için [XML ağaçları oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
+ Daha fazla bilgi için bkz. [xml ağaçları oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
   
-## <a name="working-directly-with-xml-elements"></a>Doğrudan XML öğeleri ile çalışma  
- XML ile program, birincil odak noktası genellikle XML öğeleri ve belki de öznitelikleri olur. İçinde [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], doğrudan XML öğeleri ve öznitelikleri ile çalışabilirsiniz. Örneğin, aşağıdakileri yapabilirsiniz:  
+## <a name="working-directly-with-xml-elements"></a>Doğrudan XML öğeleriyle çalışma  
+ XML ile programlama yaptığınızda, birincil odağınızı genellikle XML öğelerinde ve belki de özniteliklerde bulabilirsiniz. İçinde [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], doğrudan XML öğeleri ve özniteliklerle çalışabilirsiniz. Örneğin, şunları yapabilirsiniz:  
   
-- XML öğeleri, bir belge nesnesi kullanmadan oluşturun. Bu XML ağaçlarını parçalarını ile çalışacak şekilde olduğunda programlama kolaylaştırır.  
+- Bir belge nesnesi kullanmadan XML öğeleri oluşturun. Bu, XML ağaçlarının parçaları ile çalışmanız gerektiğinde programlamayı basitleştirir.  
   
-- Yük `T:System.Xml.Linq.XElement` doğrudan XML dosyasından nesneleri.  
+- Nesneleri `T:System.Xml.Linq.XElement` doğrudan bir XML dosyasından yükleyin.  
   
-- Seri hale getirme `T:System.Xml.Linq.XElement` nesneleri bir dosyaya veya bir akış.  
+- Nesneleri `T:System.Xml.Linq.XElement` bir dosyaya veya akışa serileştirme.  
   
- W3C XML belgesi için XML ağacı mantıksal kapsayıcı olarak kullanılır DOM karşılaştırın. DOM'da, XML düğüm öğeleri ve öznitelikleri dahil olmak üzere, bir XML belgesi bağlamında oluşturulması gerekir. DOM'da bir name öğesi oluşturmak için kodun bir parçasını şu şekildedir:  
+ Bu, XML belgesinin XML ağacı için bir mantıksal kapsayıcı olarak kullanıldığı W3C DOM ile karşılaştırın. DOM 'da, öğeler ve öznitelikler dahil XML düğümlerinin bir XML belgesi bağlamında oluşturulması gerekir. DOM 'da bir ad öğesi oluşturmak için kodun bir parçası aşağıda verilmiştir:  
   
 ```vb  
 Dim doc As XmlDocument = New XmlDocument()  
@@ -94,41 +94,41 @@ name.InnerText = "Patrick Hines"
 doc.AppendChild(name)  
 ```  
   
- Bir öğe arasında birden çok belge kullanmak istiyorsanız, düğümleri belgeler arasında içeri aktarmanız gerekir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Bu katman, karmaşıklığı ortadan kaldırır.  
+ Birden çok belge genelinde bir öğe kullanmak istiyorsanız düğümleri belgeler arasında içeri aktarmanız gerekir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Bu karmaşıklık katmanını önler.  
   
- LINQ to XML kullanarak, kullandığınız <xref:System.Xml.Linq.XDocument> belgenin kök düzeyinde bir açıklama veya işleme yönergesi eklemek isterseniz sınıfı.  
+ LINQ to XML kullanırken, yalnızca belgenin kök düzeyinde <xref:System.Xml.Linq.XDocument> bir yorum veya işleme yönergesi eklemek istiyorsanız sınıfını kullanırsınız.  
   
-## <a name="simplified-handling-of-names-and-namespaces"></a>Basitleştirilmiş işleme adları ve ad alanları  
- Adları, ad alanları ve ad alanı öneklerini işleme genellikle karmaşık, bir XML programlama parçasıdır. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] adları ve ad alanları ile ad alanı öneklerini başa çıkma gereksinimi ortadan kaldırarak basitleştirir. Ad alanı ön ekleri denetlemek istiyorsanız, bunu yapabilirsiniz. Ancak, ad alanı öneklerini açıkça denetlemek karar verirseniz [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gereklidir veya yoksa varsayılan ad alanlarını kullanarak serileştirmek seri hale getirme sırasında ad alanı öneklerini atar. Varsayılan ad kullandıysanız, sonuçta elde edilen belgede hiçbir ad alanı öneklerini olacaktır. Daha fazla bilgi için [(Visual Basic) XML ad alanları ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+## <a name="simplified-handling-of-names-and-namespaces"></a>Adları ve ad alanlarını Basitleştirilmiş olarak Işleme  
+ Adları, ad alanlarını ve ad alanı öneklerini işleme genellikle XML programlamanın karmaşık bir parçasıdır. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]ad alanı önekleriyle uğraşmak için gereksinimi ortadan kaldırarak adları ve ad alanlarını basitleştirir. Ad alanı öneklerini denetlemek istiyorsanız, kullanabilirsiniz. Ancak ad alanı öneklerini açıkça denetistemediğinize karar verirseniz, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gerektiğinde serileştirme sırasında ad alanı öneklerini atar veya varsayılan ad alanları kullanılarak serileştirilir. Varsayılan ad alanları kullanılırsa, sonuçta elde edilen belgede ad alanı önekleri olmayacaktır. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Bu düğümün adını değiştirmenize izin vermez, DOM başka bir sorun var. Bunun yerine, yeni bir düğüm oluştur ve tüm alt düğümleri, kopyalama özgün düğüm kimliğini kaybetme gerekir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Ayarlanacak sağlayarak bu sorunu önler <xref:System.Xml.Linq.XName> düğümünde özelliği.  
+ DOM ile ilgili başka bir sorun da bir düğümün adını değiştirmenize izin vermez. Bunun yerine, yeni bir düğüm oluşturmanız ve tüm alt düğümleri buna kopyalamanız ve özgün düğüm kimliğini kaybetmemeniz gerekir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]bir düğümdeki <xref:System.Xml.Linq.XName> özelliği ayarlamanıza olanak tanıyarak bu sorunu önler.  
   
-## <a name="static-method-support-for-loading-xml"></a>XML yüklenirken statik yöntemi desteği  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML yerine örnek yöntemleri statik yöntemler kullanarak devredebilmenize olanak tanır. Bu, yükleme ve ayrıştırma kolaylaştırır. Daha fazla bilgi için [nasıl yapılır: XML dosyasından (Visual Basic) yükleme](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
+## <a name="static-method-support-for-loading-xml"></a>XML yükleme için statik yöntem desteği  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]örnek yöntemleri yerine statik yöntemler kullanarak XML yüklemenize imkan tanır. Bu, yükleme ve ayrıştırma işlemlerini basitleştirir. Daha fazla bilgi için [nasıl yapılır: Dosyadan XML yükleyin (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
   
-## <a name="removal-of-support-for-dtd-constructs"></a>DTD yapıları desteğinin kaldırılması  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Daha fazla XML varlıkları ve varlık başvuruları desteği kaldırarak programlama basitleştirir. Varlık Yönetimi karmaşıktır ve nadiren kullanılır. Destek kaldırma performansı artırır ve programlama arabirimi basitleştirir. Olduğunda bir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ağaç eklendiğinden, tüm DTD'nin varlıkları genişletilir.  
+## <a name="removal-of-support-for-dtd-constructs"></a>DTD yapıları için desteği kaldırma  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]varlıklar ve varlık başvuruları desteğini kaldırarak XML programlamayı daha da basitleştirir. Varlıkların yönetimi karmaşıktır ve nadiren kullanılır. Desteğinin kaldırılması performansı artırır ve programlama arabirimini basitleştirir. Bir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ağaç doldurulduğunda, tüm DTD varlıkları genişletilir.  
   
-## <a name="support-for-fragments"></a>Parçaları için destek  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] için eşdeğer sağlamaz `XmlDocumentFragment` sınıfı. Çoğu durumda, ancak `XmlDocumentFragment` kavram olarak yazılmış bir sorgu sonucunu tarafından işlenebilir <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XNode>, veya <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement>.  
+## <a name="support-for-fragments"></a>Parçalar için destek  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]`XmlDocumentFragment` sınıf için bir eşdeğer sağlamaz. Ancak `XmlDocumentFragment` pek çok durumda, kavram, veya <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XNode>' nin yazıldığı bir sorgunun sonucu tarafından işlenebilir. <xref:System.Xml.Linq.XElement>  
   
 ## <a name="support-for-xpathnavigator"></a>XPathNavigator desteği  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] için destek sağlar <xref:System.Xml.XPath.XPathNavigator> alanında uzantı yöntemlerini aracılığıyla <xref:System.Xml.XPath?displayProperty=nameWithType> ad alanı. Daha fazla bilgi için bkz. <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.XPath?displayProperty=nameWithType> ad alanındaki genişletme yöntemlerine yönelik <xref:System.Xml.XPath.XPathNavigator> destek sağlar. Daha fazla bilgi için bkz. <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
   
-## <a name="support-for-white-space-and-indentation"></a>Boşluk ve girinti desteği  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] daha basit, boşluk işleme yerli daha  
+## <a name="support-for-white-space-and-indentation"></a>Boşluk ve girintileme desteği  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]boşluğu DOM 'dan daha fazla işler.  
   
- Sık karşılaşılan bir senaryodur girintili XML oku, herhangi bir boşluk metin düğümleri (diğer bir deyişle, beyaz boşluk olmayan koruma) olmadan bir bellek içi XML ağacı oluşturmak, bazı XML işlemleri ve XML girintilemeli kaydedin sağlamaktır. Biçimlendirme ile XML serileştirme, yalnızca önemli boşluk XML ağacındaki korunur. Varsayılan davranışı budur [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+ Yaygın bir senaryo, girintili XML 'yi okumak, boşluk metin düğümleri olmadan bir bellek içi XML ağacı oluşturmaktır (diğer bir deyişle, beyaz alanı korumadan), XML üzerinde bazı işlemleri gerçekleştirir ve ardından XML 'i girintilemeli olarak kaydeder. XML 'yi biçimlendirme ile serileştirçalıştığınızda, XML ağacında yalnızca önemli boşluk korunur. Bu varsayılan davranıştır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
- Başka bir yaygın bir senaryo, okuma ve değiştirme kasıtlı olarak girintili zaten XML sağlamaktır. Bu girinti herhangi bir şekilde değiştirmek istemeyebilirsiniz. İçinde [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], yükleme veya XML Ayrıştırma beyaz alanı koruma ve XML serileştirme seçildiğinde biçimlendirmeyi devre dışı bırakma bunu yapabilirsiniz.  
+ Diğer bir yaygın senaryo, daha önce kasıtlı olarak girintili olan XML 'i okuyup değiştirmektir. Bu Girintiyi istediğiniz şekilde değiştirmek istemeyebilirsiniz. ' [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]De, XML 'i yüklediğinizde veya ayrıştırdığınızda ve biçimlendirmeyi devre dışı bıraktığınızda, bu alanı beyaz alanı koruyarak yapabilirsiniz.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] boşluk olarak depolayan bir <xref:System.Xml.Linq.XText> özelleştirilmiş yerine düğüm, <xref:System.Xml.XmlNodeType.Whitespace> DOM düğüm türü yapar.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], Dom gibi özelleştirilmiş <xref:System.Xml.Linq.XText> <xref:System.Xml.XmlNodeType.Whitespace> bir düğüm türüne sahip olmak yerine boşluğu düğüm olarak depolar.  
   
 ## <a name="support-for-annotations"></a>Ek açıklamalar için destek  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] öğeleri ek açıklamalarını genişletilebilir bir kümesini destekler. Bu şema bilgileri, bir kullanıcı Arabirimi için bağlı öğe olup olmadığını hakkında bilgi veya diğer tür uygulamaya özgü bilgileri gibi bir öğe hakkında diğer bilgileri izlemek için yararlıdır. Daha fazla bilgi için [LINQ to XML ek açıklamaları](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]öğeleri, genişletilebilir bir ek açıklama kümesini destekler. Bu, şema bilgileri, öğenin bir kullanıcı arabirimine bağlanıp bağlanmayacağı veya başka bir uygulamaya özgü bilgi türü gibi bir öğeyle ilgili çeşitli bilgileri izlemek için yararlıdır. Daha fazla bilgi için bkz. [LINQ to XML ek açıklamaları](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md).  
   
 ## <a name="support-for-schema-information"></a>Şema bilgileri için destek  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Uzantı yöntemleri aracılığıyla XSD doğrulaması için destek sağlar <xref:System.Xml.Schema?displayProperty=nameWithType> ad alanı. Bir XML ağacı bir XSD ile uyumlu olduğunu doğrulayabilirsiniz. XML ağacı sonrası schema doğrulama bilgi kümesi (PSVI) ile doldurabilirsiniz. Daha fazla bilgi için [nasıl yapılır: XSD kullanarak doğrulama](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) ve <xref:System.Xml.Schema.Extensions>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Schema?displayProperty=nameWithType> ad alanındaki genişletme yöntemleri aracılığıyla XSD doğrulaması için destek sağlar. Bir XML ağacının bir XSD ile uyumlu olduğunu doğrulayabilirsiniz. XML ağacını şema-doğrulama sonrası bilgi kümesi (PSVı) ile doldurabilirsiniz. Daha fazla bilgi için [nasıl yapılır: XSD](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) ve<xref:System.Xml.Schema.Extensions>kullanarak doğrulayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

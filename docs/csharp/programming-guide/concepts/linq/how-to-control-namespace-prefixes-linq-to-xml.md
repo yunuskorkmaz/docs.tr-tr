@@ -1,31 +1,31 @@
 ---
-title: 'Nasıl yapılır: Namespace ön eklerini denetleme (C#) (LINQ to XML)'
+title: 'Nasıl yapılır: Denetim ad alanı önekleriC#() (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: 37fb604a9b66f4da2b1722808b2c79f8fbf097bf
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5b836be46001b660547532311b1b507ff234975f
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485975"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710159"
 ---
-# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Nasıl yapılır: Namespace ön eklerini denetleme (C#) (LINQ to XML)
-Bu konuda bir XML ağacı serileştirilirken ad alanı öneklerini nasıl denetleyebileceğinizi açıklar.  
+# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Nasıl yapılır: Denetim ad alanı önekleriC#() (LINQ to XML)
+Bu konu, bir XML ağacını serileştirilirken ad alanı öneklerini nasıl denetleyebileceğinizi açıklar.  
   
- Çoğu durumda, ad alanı ön ekleri denetlemek gerekli değildir.  
+ Birçok durumda, ad alanı öneklerini denetlemek gerekli değildir.  
   
- Ancak, belirli bir XML programlama araçları, ad alanı öneklerini belirli denetim gerektirir. Örneğin, bir XSLT stil sayfası veya özel ad alanı öneklerini başvuran katıştırılmış XPath ifadeleri içeren bir XAML belgesi işliyor; Bu durumda, belge bu belirli ön ekler ile seri hale getirilmesi önemlidir.  
+ Ancak bazı XML programlama araçları, ad alanı önekleri için belirli bir denetim gerektirir. Örneğin, bir XSLT stil sayfasını veya belirli ad alanı öneklerine başvuran gömülü XPath ifadeleri içeren bir XAML belgesini düzenleme Bu durumda, belgenin bu özel öneklerle serileştirilmesi önemlidir.  
   
- Ad alanı ön ekleri denetlemek için en yaygın nedeni budur.  
+ Bu, ad alanı öneklerini denetlemenin en yaygın nedenidir.  
   
- Ad alanı ön ekleri denetlemek için başka bir yaygın nedeni, XML belgesi el ile düzenlemek için kullanıcıların istediğiniz ve kullanıcıdan için kullanışlı bir ad alanı öneklerini oluşturmak istediğiniz ' dir. Örneğin, bir XSD belgesi oluşturulurken. Şemaları için kuralları önerisi, ya da kullandığınız `xs` veya `xsd` Şema ad alanı ön eki olarak.  
+ Ad alanı öneklerini denetlemenin bir diğer yaygın nedeni, kullanıcıların XML belgesini el ile düzenlemesini ve kullanıcının yazması için uygun olan ad alanı önekleri oluşturmasını istemesidir. Örneğin, bir XSD belgesi oluşturuluyor olabilirsiniz. Şemaların kuralları, şema ad alanı için önek `xs` olarak `xsd` ya da ' i kullanmanızı önerir.  
   
- Ad alanı ön ekleri denetlemek için ad alanları belirtmesi öznitelikleri ekleyin. Belirli ön ekler ad alanları bildirirseniz [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ad alanı öneklerini serileştirilirken dikkate dener.  
+ Ad alanı öneklerini denetlemek için ad alanlarını bildiren öznitelikleri eklersiniz. Ad alanlarını belirli öneklerle bildirirseniz, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serileştirilirken ad alanı öneklerini kabul etmeye çalışır.  
   
- Bir ad alanı öneki bildiren bir öznitelik oluşturmak için öznitelik adı ad alanı olduğu bir öznitelik oluşturun. <xref:System.Xml.Linq.XNamespace.Xmlns%2A>, ve öznitelik adı ad alanı öneki. Öznitelik ad alanı URI değeridir.  
+ Önekiyle bir ad alanı bildiren bir öznitelik oluşturmak için, özniteliği adının ad alanının olduğu <xref:System.Xml.Linq.XNamespace.Xmlns%2A>ve özniteliğin adı ad alanı öneki olan bir öznitelik oluşturursunuz. Özniteliğin değeri, ad alanının URI 'sidir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek iki ad alanları bildirir. Belirtir `http://www.adventure-works.com` ad alanı öneki olan `aw`ve `www.fourthcoffee.com` ad alanı öneki olan `fc`.  
+ Bu örnek iki ad alanı bildirir. `http://www.adventure-works.com` Ad alanının `www.fourthcoffee.com` öneki olduğunu ve ad alanının öneki `fc`olduğunu belirtir. `aw`  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -56,4 +56,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML ad alanları (C#) ile çalışma](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)
+- [Ad alanlarına genel bakış (LINQ to XMLC#) ()](namespaces-overview-linq-to-xml.md)

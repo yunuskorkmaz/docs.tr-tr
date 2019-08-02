@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Değişiklik Namespace tüm XML ağacının (Visual Basic)'
+title: 'Nasıl yapılır: Tüm XML ağacının (Visual Basic) ad alanını değiştirme'
 ms.date: 07/20/2015
 ms.assetid: 1837324b-5cb5-4fa8-95b9-3071efa0f913
-ms.openlocfilehash: 5a5926583990e3abda49ceaee4786a2158275a3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c18974da3d60f0abf4df7193f52f24f43501260d
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855027"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710455"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>Nasıl yapılır: Değişiklik Namespace tüm XML ağacının (Visual Basic)
-Bazen, program aracılığıyla bir öğe veya öznitelik için ad alanı değiştirmek zorunda. LINQ to XML bu kolaylaştırır. <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> Özelliğini ayarlayabilirsiniz. <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> Özelliği ayarlanamaz, ancak öznitelikler kolayca kopyalayabilirsiniz bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>mevcut öznitelikleri kaldırın ve ardından yeni istenen ad alanı olan yeni özellikler ekleyin.  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>Nasıl yapılır: Tüm XML ağacının (Visual Basic) ad alanını değiştirme
+Bazen bir öğe veya öznitelik için ad alanını programlı olarak değiştirmeniz gerekebilir. LINQ to XML bu kadar kolay hale gelir. <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> Özelliği ayarlanabilir. Özelliği ayarlanamaz, ancak öznitelikleri bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>öğesine kolayca kopyalayabilir, var olan öznitelikleri kaldırabilir ve ardından yeni istenen ad alanındaki yeni öznitelikleri ekleyebilirsiniz. <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType>  
   
- Daha fazla bilgi için [(Visual Basic) XML ad alanları ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, iki XML ağaçlarını hiçbir ad alanında oluşturur. Ardından her ağaçları ad alanı değiştirir ve bunları tek bir ağacına birleştirir.  
+ Aşağıdaki kod, ad alanı olmadan iki XML ağacı oluşturur. Daha sonra ağaçların her birinin ad alanını değiştirir ve bunları tek bir ağaçta birleştirir.  
   
 ```vb  
 Dim tree1 As XElement = _  
@@ -78,4 +78,4 @@ Console.WriteLine(root)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [(LINQ to XML) XML ağaçlarını değiştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [XML ağaçlarını değiştirme (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Öğeleri sıralama (Visual Basic)'
+title: 'Nasıl yapılır: Öğeleri Sırala (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: b6f2e0056582e60066b2c0715a663022b72a6c9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f92d8ca36d1b322bb8d1538fd199e7256c982b85
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614394"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710479"
 ---
-# <a name="how-to-sort-elements-visual-basic"></a>Nasıl yapılır: Öğeleri sıralama (Visual Basic)
-Bu örnek, sonuçları sıralayan sorgu yazma işlemi gösterilmektedir.  
+# <a name="how-to-sort-elements-visual-basic"></a>Nasıl yapılır: Öğeleri Sırala (Visual Basic)
+Bu örnek, sonuçlarını sıralayan bir sorgunun nasıl yazılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Sayısal veriler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Sayısal veri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -40,9 +40,9 @@ Next
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir. Daha fazla bilgi için [(Visual Basic) XML ad alanları ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Bir Namespace alanında sayısal veriler](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Bir ad alanındaki](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)sayısal veri.  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  

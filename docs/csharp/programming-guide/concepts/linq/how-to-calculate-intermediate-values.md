@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Ara değerleri hesaplama (C#)'
+title: 'Nasıl yapılır: Ara değerleri hesapla (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: cf0300294944d251b739a15edc6ace777eab5bd8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 6fb04e1222563e557172edad7953c4646adafefd
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485932"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710169"
 ---
-# <a name="how-to-calculate-intermediate-values-c"></a>Nasıl yapılır: Ara değerleri hesaplama (C#)
-Bu örnek, sıralama, filtreleme ve seçme içinde kullanılan ara değerleri hesaplama gösterilmektedir.  
+# <a name="how-to-calculate-intermediate-values-c"></a>Nasıl yapılır: Ara değerleri hesapla (C#)
+Bu örnek, sıralama, filtreleme ve seçme için kullanılabilen ara değerlerin nasıl hesaplanacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Let` yan tümcesi.  
+ Aşağıdaki örnek `Let` yan tümcesini kullanır.  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Sayısal veriler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Sayısal veri (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -40,9 +40,9 @@ foreach (decimal ex in extensions)
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir. Daha fazla bilgi için [(C#) XML ad alanları ile çalışma](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Bir Namespace alanında sayısal veriler](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Bir ad alanındaki](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)sayısal veri.  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  

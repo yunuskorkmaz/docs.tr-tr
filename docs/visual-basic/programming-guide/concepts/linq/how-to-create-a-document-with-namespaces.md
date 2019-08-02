@@ -1,29 +1,29 @@
 ---
-title: 'Nasıl yapılır: Ad alanları (LINQ to XML) ile belge oluşturma (Visual Basic)'
+title: 'Nasıl yapılır: Ad alanları (LINQ to XML) ile bir belge oluşturma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-ms.openlocfilehash: b65d22451d900f7b20226f25b61bb235241dd84f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c61076da5616d98673c4b9258125e3ff0c8821aa
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855523"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710452"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Nasıl yapılır: Ad alanları (LINQ to XML) ile belge oluşturma (Visual Basic)
-Bu konuda, Visual Basic'de ad alanları ile belge oluşturma gösterilmektedir.  
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Nasıl yapılır: Ad alanları (LINQ to XML) ile bir belge oluşturma (Visual Basic)
+Bu konu başlığı altında, Visual Basic ad alanları içeren bir belgenin nasıl oluşturulacağı gösterilmektedir.  
   
- Visual Basic'de XML değişmez değerlerini kullanarak, kullanıcıların bir genel varsayılan XML ad alanı tanımlayabilirsiniz. Bu ad alanı, hem XML sabit değerleri ve XML özellikleri için varsayılan ad alanı. Varsayılan XML ad alanı, proje düzeyinde veya dosya düzeyinde tanımlanabilir. Dosya düzeyinde tanımlanmışsa, varsayılan ad alanı proje düzeyinde geçersiz kılar.  
+ Visual Basic XML değişmez değerleri kullanılırken, kullanıcılar bir genel varsayılan XML ad alanı tanımlayabilir. Bu ad alanı, XML değişmez değerleri ve XML özellikleri için varsayılan ad alanıdır. Varsayılan XML ad alanı, proje düzeyinde ya da dosya düzeyinde tanımlanabilir. Dosya düzeyinde tanımlıysa, proje düzeyinde varsayılan ad alanını geçersiz kılar.  
   
- Ayrıca, diğer ad alanları tanımlayın ve bu ad alanları için ad alanı öneklerini belirtin.  
+ Diğer ad alanlarını da tanımlayabilir ve bu ad alanları için ad alanı öneklerini belirtebilirsiniz.  
   
- Varsayılan ad alanları hem de ad alanı öneki kullanarak tanımladığınız `Imports` anahtar sözcüğü.  
+ `Imports` Anahtar sözcüğünü kullanarak, öneki ile hem varsayılan ad alanlarını hem de ad alanlarını tanımlarsınız.  
   
- Daha fazla bilgi için [Visual Basic'te XML değişmez değerlerine giriş](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
+ Daha fazla bilgi için bkz. [VISUAL BASIC XML değişmez değerlerine giriş](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
   
- Varsayılan XML ad alanı yalnızca öğeler ve öznitelikler için geçerli olduğunu unutmayın. Varsayılan ad alanı yok olarak her zaman öznitelikleridir. Ancak, bir ad alanında bir öznitelik koymak için bir ad alanı öneki kullanabilirsiniz.  
+ Varsayılan XML ad alanının yalnızca öğeler için geçerli olduğunu ve öznitelikler için geçerli olduğunu unutmayın. Öznitelikler varsayılan olarak her zaman ad alanı değildir. Ancak, bir ad alanına bir özniteliği yerleştirmek için bir ad alanı öneki kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir ad uzayını içeren bir belge oluşturulur.  
+ Bu örnek, bir ad alanı içeren bir belge oluşturur.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -47,7 +47,7 @@ End Module
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, biri varsayılan ad alanı iki ad alanları içeren bir belge oluşturulur.  
+ Bu örnekte, biri varsayılan ad alanı olan iki ad alanı içeren bir belge oluşturulur.  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -77,9 +77,9 @@ End Module
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, birden çok ad ad alanı öneklerini her ikisini birden içeren bir belge oluşturulur.  
+ Aşağıdaki örnek, ad alanı önekleri ile birlikte birden çok ad alanı içeren bir belge oluşturur.  
   
- Bir XML ağacı serileştirilirken [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] her öğe, ayrılmış ad alanı içinde olması gerektiği gibi ad alanı bildirimi yayar.  
+ Bir xml ağacını serileştirilirken, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] her bir öğenin belirlenen ad alanında olması için ad alanı bildirimlerini gerektiği gibi yayar.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -116,4 +116,4 @@ End Module
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [Ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

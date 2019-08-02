@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 743b9ec45c138053fcfcb5cbb1ea9c8490ba919e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 818d013356c3ca8151e9b5bb675bce4726759f6c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629913"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710341"
 ---
 # <a name="typography-in-wpf"></a>WPF'de Tipografi
 Bu konuda, uygulamasının [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]önemli tipografik özellikleri tanıtılmaktadır. Bu özellikler, metin işleme, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipografi desteği, gelişmiş uluslararası metin, gelişmiş yazı tipi desteği ve yeni metin uygulama programlama arabirimleri (API 'ler) için geliştirilmiş kalite ve performans içerir.  
@@ -73,7 +73,7 @@ ClearType y yönünde düzgünleştirme içeren metin
 ## <a name="new-text-application-programming-interfaces-apis"></a>Yeni metin uygulama programlama arabirimleri (API 'Ler)  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]geliştiricilerin uygulamalarına metin eklerken kullanacağı birkaç metin API 'si sağlar. Bu API 'Ler üç kategoride gruplandırılır:  
   
-- **Düzen ve Kullanıcı arabirimi**. İçin ortak metin denetimleri [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)].  
+- **Düzen ve Kullanıcı arabirimi**. Grafik Kullanıcı arabirimi (GUI) için ortak metin denetimleri.  
   
 - **Hafif metin çizme**. Doğrudan nesnelere metin çizmenizi sağlar.  
   

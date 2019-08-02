@@ -9,27 +9,31 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942811"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710208"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>Gelişmiş (Windows Presentation Foundation)
-Bu bölümde WPF Gelişmiş alanlardan bazıları açıklanmaktadır.  
+Bu bölümde WPF içindeki bazı gelişmiş alanlardan bazıları açıklanmaktadır.  
   
-## <a name="in-this-section"></a>Bu Bölümde  
- [WPF Mimarisi](wpf-architecture.md)  
- [Temel Öğeler](base-elements.md)  
- [Öğe Ağacı ve Serileştirme](element-tree-and-serialization.md)  
- [Sürükleme ve Bırakma](drag-and-drop.md)  
- [Belgeler](documents.md)  
- [Genelleştirme ve Yerelleştirme](globalization-and-localization.md)  
- [Geçiş ve Birlikte Çalışabilirlik](migration-and-interoperability.md)  
- [Performans](performance.md)  
- [İş Parçacığı Modeli](threading-model.md)  
- [WPF Eklentilerine Genel Bakış](../app-development/wpf-add-ins-overview.md)  
- [WPF yönetilmeyen API Başvurusu](wpf-unmanaged-api-reference.md)  
-  
-## <a name="related-sections"></a>İlgili Bölümler
+## <a name="in-this-section"></a>Bu Bölümde
+
+[WPF Mimarisi](wpf-architecture.md)  
+[WPF'de XAML](xaml-in-wpf.md)  
+[Temel öğe sınıfları](base-elements.md)  
+[Öğe Ağacı ve Serileştirme](element-tree-and-serialization.md)  
+[WPF özellik sistemi](properties-wpf.md)  
+[WPF içindeki olaylar](events-wpf.md)  
+[Giriş](input-wpf.md)  
+[Sürükleme ve Bırakma](drag-and-drop.md)  
+[Kaynaklar](resources-wpf.md)  
+[Belgeler](documents.md)  
+[Genelleştirme ve Yerelleştirme](globalization-and-localization.md)  
+[Düzen](layout.md)  
+[Geçiş ve Birlikte Çalışabilirlik](migration-and-interoperability.md)  
+[Performans](performance.md)  
+[İş Parçacığı Modeli](threading-model.md)  
+[Yönetilmeyen WPF API başvurusu](wpf-unmanaged-api-reference.md)  

@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: Tek bir alt öğe (LINQ to XML) alma (Visual Basic)'
+title: 'Nasıl yapılır: Tek bir alt öğe al (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0033e258-d9c4-4569-86f6-79b7c06d1204
-ms.openlocfilehash: e3b8c9d90f494330b30fe1b35a7fe64f882cae95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1b4e5e0a6668258cef7b474c416fc572bdf2625
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920204"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710509"
 ---
-# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-visual-basic"></a>Nasıl yapılır: Tek bir alt öğe (LINQ to XML) alma (Visual Basic)
-Bu konu nasıl tek bir alt öğe, alt öğenin adı verilir alınacağını açıklar. Adı alt öğesi ve bu ada sahip yalnızca bir öğe olduğunu bildiğinizde, bir koleksiyon yerine yalnızca bir öğe almak kullanışlı olabilir.  
+# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-visual-basic"></a>Nasıl yapılır: Tek bir alt öğe al (LINQ to XML) (Visual Basic)
+Bu konu, alt öğenin adı verildiğinde tek bir alt öğenin nasıl alınacağını açıklar. Alt öğenin adını bildiğiniz ve bu ada sahip yalnızca bir öğe olduğunda, bir koleksiyon yerine yalnızca bir öğe almak kullanışlı olabilir.  
   
- <xref:System.Xml.Linq.XContainer.Element%2A> Yöntemi döndürür ilk alt <xref:System.Xml.Linq.XElement> belirtilen <xref:System.Xml.Linq.XName>.  
+ Yöntemi, <xref:System.Xml.Linq.XElement> belirtilen<xref:System.Xml.Linq.XName>ilk alt öğesini döndürür. <xref:System.Xml.Linq.XContainer.Element%2A>  
   
- Tek bir alt öğe Visual Basic'te almak istiyorsanız, yaygın bir yaklaşım XML özelliğini kullanın ve ardından dizi dizin oluşturucu gösterimini kullanarak ilk öğeyi almak oluşturmaktır.  
+ Visual Basic tek bir alt öğe almak istiyorsanız, yaygın bir yaklaşım XML özelliğini kullanmak ve sonra dizi dizin oluşturucu gösterimini kullanarak ilk öğeyi alır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kullanımını gösterir <xref:System.Xml.Linq.XContainer.Element%2A> yöntemi. Bu örnek adlı XML ağacı alır `po` ve adlı ilk öğeyi bulan `Comment`.  
+ Aşağıdaki örnek <xref:System.Xml.Linq.XContainer.Element%2A> yönteminin kullanımını gösterir. Bu örnek adlı `po` xml ağacını alır ve adlı `Comment`ilk öğeyi bulur.  
   
- Visual Basic örneği, tek bir öğe almak için dizi dizin oluşturucu gösterimini kullanarak gösterir.  
+ Visual Basic örnek, tek bir öğeyi almak için dizi dizin oluşturucu gösterimini kullanmayı gösterir.  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Tipik satın alma siparişi (LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)).  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -36,9 +36,9 @@ Console.WriteLine(e)
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir ad alanındaki XML için aynı kodu gösterir. Daha fazla bilgi için [(Visual Basic) XML ad alanları ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Aşağıdaki örnek, bir ad alanında bulunan XML için aynı kodu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Bir Namespace, tipik satın alma siparişi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Bir ad alanında](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)tipik satın alma siparişi.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

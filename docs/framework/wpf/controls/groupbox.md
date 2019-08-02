@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF]
 ms.assetid: 1f4ed3d9-a171-4623-bc4f-3314e3576271
-ms.openlocfilehash: 6baee12c04e93a94736acacb1e4774b3cc20a3ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1808fefab2d15ce57da4b381f258dc8e5207e358
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008739"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709110"
 ---
 # <a name="groupbox"></a>GroupBox
-<xref:System.Windows.Controls.GroupBox> Denetimi bir <xref:System.Windows.Controls.HeaderedContentControl> için başlıklı bir kapsayıcı sağlayan [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] içeriği.  
+<xref:System.Windows.Controls.GroupBox> Denetim<xref:System.Windows.Controls.HeaderedContentControl> , grafik kullanıcı arabirimi (GUI) içeriği için başlıklı bir kapsayıcı sağlar.  
   
- Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.GroupBox> içeren bir <xref:System.Windows.Controls.TabControl> ve <xref:System.Windows.Controls.Button> içinde alınmış bir <xref:System.Windows.Controls.StackPanel>.  
+ Aşağıdaki çizimde, ' a <xref:System.Windows.Controls.GroupBox> sahip olan bir <xref:System.Windows.Controls.TabControl> ve içeren <xref:System.Windows.Controls.Button> bir, <xref:System.Windows.Controls.StackPanel>gösterilmektedir.  
   
- ![Bir groupbox gösteren ekran görüntüsü.](./media/groupbox/groupbox-tab-button-stackpanel.jpg)  
+ ![Bir grup listesini gösteren ekran görüntüsü.](./media/groupbox/groupbox-tab-button-stackpanel.jpg)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [GroupBox Şablonu Tanımlama](how-to-define-a-groupbox-template.md)  

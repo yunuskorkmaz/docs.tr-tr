@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 2667417c5d25821f2fed2101e1d485280e171eab
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6bea25fbd321eead9137caaeb212b76a9d528e88
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400654"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710391"
 ---
 # <a name="threading-model"></a>İş Parçacığı Modeli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], iş parçacığı zorluklarından geliştiricilerin kaydedileceği şekilde tasarlanmıştır. Sonuç olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geliştiricilerin çoğunluğu birden fazla iş parçacığı kullanan bir arabirim yazmak zorunda kalmaz. Çok iş parçacıklı programlar karmaşık olduğu ve hata ayıklamanın zor olduğu için, tek iş parçacıklı çözümler olduğunda bu, kaçınılmalıdır.  
@@ -56,7 +56,7 @@ ms.locfileid: "68400654"
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>Uzun süre çalışan bir hesaplama ile tek Iş parçacıklı bir uygulama  
- Çoğu [!INCLUDE[TLA#tla_gui#plural](../../../../includes/tlasharptla-guisharpplural-md.md)] zaman, kullanıcı etkileşimlerine yanıt olarak oluşturulan olayları beklerken sürenin büyük bir bölümünü bekliyor. Dikkatli bir programlamayla bu boşta kalma süresi, ' nin [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]yanıt hızını etkilemeden oluşturulabilir. İş parçacığı modeli, girişin [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığında meydana gelen bir işlemi kesmesine izin vermez. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bu, <xref:System.Windows.Threading.Dispatcher> bekleyen giriş olaylarını eski olmadan işlemek için düzenli aralıklarla geri döndiğinizden emin olmanız gerektiği anlamına gelir.  
+ Çoğu grafik kullanıcı arabirimi (Gua), kullanıcı etkileşimlerine yanıt olarak oluşturulan olayları beklerken zaman içindeki büyük bir bölümü harcamaktadır. Dikkatli bir programlamayla bu boşta kalma süresi, ' nin [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]yanıt hızını etkilemeden oluşturulabilir. İş parçacığı modeli, girişin [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığında meydana gelen bir işlemi kesmesine izin vermez. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bu, <xref:System.Windows.Threading.Dispatcher> bekleyen giriş olaylarını eski olmadan işlemek için düzenli aralıklarla geri döndiğinizden emin olmanız gerektiği anlamına gelir.  
   
  Aşağıdaki örnek göz önünde bulundurun:  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68400654"
   
 <a name="weather_sim"></a>   
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>Bir arka plan Iş parçacığı ile engelleyici Işlemi işleme  
- Grafik uygulamada engelleme işlemlerini işleme zor olabilir. Uygulama dondurmak için göründüğünden olay işleyicilerinden engelleme yöntemlerini çağırmak istemiyorum. Bu işlemleri işlemek için ayrı bir iş parçacığı kullanabiliriz, ancak işiniz bittiğinde [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığımızdan doğrudan [!INCLUDE[TLA2#tla_gui](../../../../includes/tla2sharptla-gui-md.md)] değiştiremedik için iş parçacığıyla eşitliyoruz. İş parçacığının içine <xref:System.Windows.Threading.Dispatcher.Invoke%2A> <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> <xref:System.Windows.Threading.Dispatcher> temsilciler eklemek için veya kullanabilirsiniz. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Sonuç olarak, bu Temsilciler öğeleri değiştirme [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] izniyle yürütülür.  
+ Grafik uygulamada engelleme işlemlerini işleme zor olabilir. Uygulama dondurmak için göründüğünden olay işleyicilerinden engelleme yöntemlerini çağırmak istemiyorum. Bu işlemleri işlemek için ayrı bir iş parçacığı kullanabiliriz, ancak işiniz bittiğinde [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığından doğrudan GUI 'yi değiştiremedik için iş parçacığıyla eşitliyoruz. İş parçacığının içine <xref:System.Windows.Threading.Dispatcher.Invoke%2A> <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> <xref:System.Windows.Threading.Dispatcher> temsilciler eklemek için veya kullanabilirsiniz. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Sonuç olarak, bu Temsilciler öğeleri değiştirme [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] izniyle yürütülür.  
   
  Bu örnekte, hava durumu tahminini alan bir uzak yordam çağrısını taklit ediyoruz. Bu çağrıyı yürütmek için ayrı bir çalışan iş parçacığı kullanıyoruz ve bitirtiğimiz sırada <xref:System.Windows.Threading.Dispatcher> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığında bir güncelleştirme yöntemi zamanladık.  
   

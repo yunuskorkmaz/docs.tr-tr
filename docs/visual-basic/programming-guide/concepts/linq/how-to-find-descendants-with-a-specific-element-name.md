@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Belirli bir öğe adına (Visual Basic) sahip alt öğeleri bulma'
+title: 'Nasıl yapılır: Belirli bir öğe adına sahip alt öğeleri bul (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: c7dadec961420988a7f4cc1d6be72d7cdba5c047
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0084f04db5af7b012748b66187e029c77d0cfce5
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780503"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710267"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Nasıl yapılır: Belirli bir öğe adına (Visual Basic) sahip alt öğeleri bulma
-Bazen belirli bir ada sahip tüm alt öğeleri bulmak istediğiniz. Tüm alt öğeleri arasında yineleme yapmak için kod yazabilirsiniz, ancak kullanmak daha kolaydır <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni.  
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Nasıl yapılır: Belirli bir öğe adına sahip alt öğeleri bul (Visual Basic)
+Bazen belirli bir ada sahip tüm alt öğeleri bulmak isteyebilirsiniz. Tüm alt öğeler boyunca yinelemek için kod yazabilirsiniz, ancak <xref:System.Xml.Linq.XContainer.Descendants%2A> eksenin kullanımı daha kolaydır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, öğeyi adına göre alt öğeleri bulmak gösterilmektedir.  
+ Aşağıdaki örnek, öğe adına göre alt öğelerin nasıl bulunacağını gösterir.  
   
 ```vb  
 Dim root As XElement = _  
@@ -54,7 +54,7 @@ Some text that is broken up into multiple segments.
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir. Daha fazla bilgi için [(Visual Basic) XML ad alanları ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  

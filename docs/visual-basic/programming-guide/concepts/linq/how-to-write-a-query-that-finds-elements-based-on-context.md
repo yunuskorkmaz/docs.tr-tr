@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) bağlama göre öğeleri bulan bir sorgu yazma'
+title: 'Nasıl yapılır: Bağlam temelinde öğeleri bulan bir sorgu yazın (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: 0981da1e35f2c0b6023c009d4f62c95a612d8971
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1743a0793a8b572cb212d45a31924fe8eb93bf45
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614889"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710412"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Nasıl yapılır: (Visual Basic) bağlama göre öğeleri bulan bir sorgu yazma
-Bazen, bağlama göre öğeleri seçen bir sorgu yazmak zorunda kalabilirsiniz. Bağlı olarak önceki veya Eşdüzey öğeleri aşağıdaki filtreleme isteyebilirsiniz. Temel alınarak alt veya üst öğeleri filtrelemek isteyebilirsiniz.  
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Nasıl yapılır: Bağlam temelinde öğeleri bulan bir sorgu yazın (Visual Basic)
+Bazen, bağlamlarına göre öğeleri seçen bir sorgu yazmanız gerekebilir. Önceki veya sonraki eşdüzey öğelere göre filtrelemek isteyebilirsiniz. Alt veya üst öğe öğelerine göre filtrelemek isteyebilirsiniz.  
   
- Bir sorgu yazma ve sorgu sonuçlarının kullanarak bunu yapabilirsiniz `where` yan tümcesi. İlk null karşı test etmeyi ve ardından değeri test varsa, sorgu yapılacağı daha kullanışlı bir `let` yan tümcesi ve ardından sonuçları `where` yan tümcesi.  
+ Bunu, `where` bir sorgu yazarak ve yan tümcesindeki sorgunun sonuçlarını kullanarak yapabilirsiniz. İlk olarak null ile test etmeniz ve sonra değeri test etmeniz gerekiyorsa, bir `let` yan tümce içinde sorgu yapmak daha uygundur ve sonra sonuçları `where` yan tümce içinde kullanın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte tüm seçer `p` tarafından hemen ardından öğeleri bir `ul` öğesi.  
+ Aşağıdaki örnek, hemen arkasından `p` bir `ul` öğesi olan tüm öğeleri seçer.  
   
 ```vb  
 Dim doc As XElement = _  
@@ -58,7 +58,7 @@ id = 6
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir. Daha fazla bilgi için [(Visual Basic) XML ad alanları ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  

@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Ad alanları ile belge oluşturma (C#) (LINQ to XML)'
+title: 'Nasıl yapılır: Ad alanları (C#) Ile bir belge oluşturma (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: c64d23e18091ca06a5f345fc603231f442ad849c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9b9e81a131d4e17ce2d87dd3f511ed66e370d884
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485872"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710002"
 ---
-# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Nasıl yapılır: Ad alanları ile belge oluşturma (C#) (LINQ to XML)
-Bu konuda, ad alanları ile belge oluşturma işlemini gösterir.  
+# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Nasıl yapılır: Ad alanları (C#) Ile bir belge oluşturma (LINQ to XML)
+Bu konu başlığı altında, ad alanları ile belgelerin nasıl oluşturulacağı gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Bir öğe veya bir ad alanında bir öznitelik oluşturmak için önce bildirmek ve başlatmak bir <xref:System.Xml.Linq.XNamespace> nesne. Bir dize olarak ifade edilen yerel ada sahip ad alanı birleştirmek için Toplama işleci aşırı yüklemesini kullanın.  
+ Bir ad alanında olan bir öğe veya öznitelik oluşturmak için, önce bir <xref:System.Xml.Linq.XNamespace> nesne bildirir ve başlatın. Daha sonra, ad alanını bir dize olarak ifade edilen yerel adla birleştirmek için ek işleç aşırı yüklemesi kullanabilirsiniz.  
   
- Aşağıdaki örnek, bir ad alanı ile bir belge oluşturulur. Varsayılan olarak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] varsayılan ad alanı bu belgeyle serileştirir.  
+ Aşağıdaki örnek, bir ad alanı olan bir belge oluşturur. Varsayılan olarak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bu belgeyi varsayılan bir ad alanıyla seri hale getirir.  
   
 ```csharp  
 // Create an XML tree in a namespace.  
@@ -35,7 +35,7 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir ad alanı ile bir belge oluşturulur. Ayrıca, ad alanı bir ad alanı öneki ile bildiren bir öznitelik oluşturur. Bir ad alanı öneki bildiren bir öznitelik oluşturmak için burada özniteliğinin adı ad alanı öneki ve bu ad bulunduğu bir öznitelik oluşturun. <xref:System.Xml.Linq.XNamespace.Xmlns%2A> ad alanı. Bu özniteliğin değeri ad alanı URI ' dir.  
+ Aşağıdaki örnek, bir ad alanı olan bir belge oluşturur. Ayrıca ad alanı öneki olan ad alanını bildiren bir öznitelik oluşturur. Önekiyle bir ad alanı bildiren bir öznitelik oluşturmak için, özniteliğin adının ad alanı öneki olduğu ve bu ad <xref:System.Xml.Linq.XNamespace.Xmlns%2A> ad alanında olduğu bir öznitelik oluşturursunuz. Bu özniteliğin değeri, ad alanının URI 'sidir.  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  
@@ -56,9 +56,9 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, iki ad alanları içeren bir belge oluşturulmasını gösterir. Varsayılan ad alanı biridir. Başka bir ad alanı öneki ' dir.  
+ Aşağıdaki örnek, iki ad alanı içeren bir belge oluşturmayı gösterir. Bunlardan biri varsayılan ad alanıdır. Diğeri öneki olan bir ad alanıdır.  
   
- Kök öğesinde ad alanı öznitelikleri dahil ederek, ad alanlarını serileştirilme şeklini böylece `http://www.adventure-works.com` varsayılan ad alanı ve `www.fourthcoffee.com` "fc" öneki ile seri hale. Varsayılan ad alanı bildiren bir öznitelik oluşturmak için adı "xmlns", ad alanı olmayan bir öznitelik oluşturun. Varsayılan ad alanı URI özniteliğinin değeridir.  
+ Ad alanı özniteliklerini kök öğesine ekleyerek, ad alanları varsayılan ad alanı olacak şekilde `http://www.adventure-works.com` serileştirilir ve `www.fourthcoffee.com` bir "FC" önekiyle serileştirilir. Varsayılan ad alanını bildiren bir öznitelik oluşturmak için, ad alanı olmadan "xmlns" adlı bir öznitelik oluşturursunuz. Özniteliğin değeri varsayılan ad alanı URI 'sidir.  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  
@@ -89,7 +89,7 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek iki ad ad alanı öneklerini her ikisini birden içeren bir belge oluşturulur.  
+ Aşağıdaki örnek, ad alanı önekleri ile iki ad alanı içeren bir belge oluşturur.  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -119,11 +119,11 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Örnek  
- Genişletilmiş adlarını bildirme ve oluşturma yerine kullanılacak aynı sonuca ulaşmak için başka bir yolu olan bir <xref:System.Xml.Linq.XNamespace> nesne.  
+ Aynı sonucu gerçekleştirmenin başka bir yolu da bir <xref:System.Xml.Linq.XNamespace> nesne bildirmek ve oluşturmak yerine genişletilmiş adlar kullanmaktır.  
   
- Bu yaklaşım, performansı etkilere sahiptir. Geçirdiğiniz bir dize, her zaman genişletilmiş bir adı içeren [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gerekir adı ayrıştırmak parçalara ayrılmış ad alanı bulmak ve parçalara ayrılmış adı bulun. Bu işlemin CPU saat sürer. Performans önemliyse bildirme ve kullanma isteyebileceğiniz bir <xref:System.Xml.Linq.XNamespace> açıkça nesne.  
+ Bu yaklaşımın performans etkileri vardır. Genişletilmiş bir adı [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]içeren bir dizeyi her geçirdiğinizde, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] adı ayrıştırmalıdır, atomlanmış ad alanını bulun ve atomlanmış adı bulun. Bu işlem CPU süresini alır. Performans önemliyse, açıkça bir <xref:System.Xml.Linq.XNamespace> nesne bildirmek ve kullanmak isteyebilirsiniz.  
   
- Performans önemli bir sorun olup olmadığını, [parçalara ayırma öncesi XName nesnelerin (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md) daha fazla bilgi için  
+ Performans önemli bir sorun ise, daha fazla bilgi için bkz. [XName nesnelerinin ön atomitei (C#LINQ to XML) ()](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md)  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  
@@ -144,4 +144,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML ad alanları (C#) ile çalışma](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)
+- [Ad alanlarına genel bakış (LINQ to XMLC#) ()](namespaces-overview-linq-to-xml.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Öğeleri sıralama (C#)'
+title: 'Nasıl yapılır: Öğeleri Sırala (C#)'
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: 0b338dc67bca38f471f37abf28149e5080a01987
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ac79690ce45f6875900418b39e0f5e86596dceff
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484902"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710050"
 ---
-# <a name="how-to-sort-elements-c"></a>Nasıl yapılır: Öğeleri sıralama (C#)
-Bu örnek, sonuçları sıralayan sorgu yazma işlemi gösterilmektedir.  
+# <a name="how-to-sort-elements-c"></a>Nasıl yapılır: Öğeleri Sırala (C#)
+Bu örnek, sonuçlarını sıralayan bir sorgunun nasıl yazılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Sayısal veriler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Sayısal veri (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -39,9 +39,9 @@ foreach (decimal el in prices)
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir. Daha fazla bilgi için [(C#) XML ad alanları ile çalışma](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Bir Namespace alanında sayısal veriler](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Bir ad alanındaki](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)sayısal veri.  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  

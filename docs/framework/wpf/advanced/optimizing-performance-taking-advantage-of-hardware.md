@@ -9,18 +9,18 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 7acf5a3f48ac4987037873c63111d988ec3a4979
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a47a4aae785d817904c30fe7c865a1c033eb3cca
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629654"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709219"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Performansı İyileştirme: Donanımdan Yararlanma
 İç mimarisi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , iki işleme işlem hattı, donanım ve yazılım içerir. Bu konuda, uygulamalarınızın performans iyileştirmeleri hakkında kararlar almanıza yardımcı olmak üzere bu işleme işlem hatları hakkında bilgi verilmektedir.  
   
 ## <a name="hardware-rendering-pipeline"></a>Donanım Işleme işlem hattı  
- Performansı belirlemede [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en önemli faktörlerden biri işleme bağlıdır — daha fazla piksel işlemek için, performans maliyeti artar. Ancak, üzerinde boşaltılabilecek [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]daha fazla işleme kazanılabilecek daha fazla performans avantajı vardır. Uygulama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] donanımı işleme işlem hattı, en az Microsoft DirectX 7,0 sürümünü destekleyen donanımda Microsoft DirectX özelliklerinden tam olarak yararlanır. Microsoft DirectX sürüm 7,0 ve PixelShader 2.0 + özelliklerini destekleyen donanımlar tarafından daha fazla iyileştirmeler kazanılabilir.  
+ Performansı belirlemede [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en önemli faktörlerden biri işleme bağlıdır — daha fazla piksel işlemek için, performans maliyeti artar. Ancak, grafik işleme birimi (GPU) üzerinde boşaltılabilecek daha fazla işleme elde edeceğiniz performans avantajları daha fazla olabilir. Uygulama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] donanımı işleme işlem hattı, en az Microsoft DirectX 7,0 sürümünü destekleyen donanımda Microsoft DirectX özelliklerinden tam olarak yararlanır. Microsoft DirectX sürüm 7,0 ve PixelShader 2.0 + özelliklerini destekleyen donanımlar tarafından daha fazla iyileştirmeler kazanılabilir.  
   
 ## <a name="software-rendering-pipeline"></a>Yazılım Işleme işlem hattı  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Yazılım işleme işlem hattı tamamen CPU bağlanmıştır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], iyileştirilmiş ve tam özellikli bir yazılım tarayıcısı uygulamak için CPU 'daki SSE ve SSE2 yönerge kümelerinden faydalanır. Yazılıma geri dönüş, uygulama işlevlerinin donanım işleme işlem hattı kullanılarak işlenemediğinde sorunsuz bir şekilde gerçekleştirilir.  

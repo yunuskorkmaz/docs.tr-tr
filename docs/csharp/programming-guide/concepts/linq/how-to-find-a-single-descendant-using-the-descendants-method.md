@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Descendants yöntemini kullanarak tek bir alt öğe bulma (C#)'
+title: 'Nasıl yapılır: Alt öğeler yöntemini (C#) kullanarak tek bir alt öğe bulma'
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: 1979814a2a1485938b584d7774b76a020c885f0c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 726c89b8fdd3df774de2d7ac9a824f2b3769d404
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486833"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709960"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Nasıl yapılır: Descendants yöntemini kullanarak tek bir alt öğe bulma (C#)
-Kullanabileceğiniz <xref:System.Xml.Linq.XContainer.Descendants%2A> adlı öğesi hızlı bir şekilde tek bir benzersiz bir şekilde bulmak için kod yazma eksen yöntemi. Belirli bir ada sahip belirli bir alt öğesi bulmak istediğinizde bu özellikle yararlı bir tekniktir. İstenen öğesine gitmek için kod yazabilirsiniz, ancak genellikle daha hızlı ve kolay kullanarak kod yazmak <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni.  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Nasıl yapılır: Alt öğeler yöntemini (C#) kullanarak tek bir alt öğe bulma
+Tek bir benzersiz şekilde <xref:System.Xml.Linq.XContainer.Descendants%2A> adlandırılmış öğe bulmak için bir kodu hızlı bir şekilde yazmak üzere eksen yöntemini kullanabilirsiniz. Bu teknik özellikle belirli bir ada sahip belirli bir alt öğe bulmak istediğinizde yararlıdır. İstenen öğeye gitmek için kodu yazabilirsiniz, ancak <xref:System.Xml.Linq.XContainer.Descendants%2A> eksen kullanılarak kodun yazılması genellikle daha hızlı ve kolaydır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte <xref:System.Linq.Enumerable.First%2A> standart sorgu işleci.  
+ Bu örnek, <xref:System.Linq.Enumerable.First%2A> standart sorgu işlecini kullanır.  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -43,7 +43,7 @@ GC3 Value
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir. Daha fazla bilgi için [(C#) XML ad alanları ile çalışma](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Parse(@"<aw:Root xmlns:aw='http://www.adventure-works.com'>  

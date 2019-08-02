@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: Birden çok anahtarda öğeleri sıralama (C#)'
+title: 'Nasıl yapılır: Birden çok anahtardaki öğeleri SıralaC#()'
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 5ea01055eae0c91fac274f8c38a1d8112c4aaa0a
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 2325417fa2ed8a6c3ca13504cada4d4e1a49be42
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690082"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709907"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a>Nasıl yapılır: Birden çok anahtarda öğeleri sıralama (C#)
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a>Nasıl yapılır: Birden çok anahtardaki öğeleri SıralaC#()
 
-Bu konuda, birden çok anahtarları sıralamak gösterilmektedir.
+Bu konu başlığı altında, birden çok anahtar üzerinde nasıl sıralama yapılacağı gösterilmektedir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, sonuçları ilk sevkiyat posta koduna göre ardından sipariş tarihe göre sıralanır.
+Bu örnekte, sonuçlar önce sevkiyat posta kodu tarafından, ardından sipariş tarihine göre sıralanır.
 
-Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).
+Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -65,9 +65,9 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, aynı sorgu için bir ad alanındaki XML gösterir. Daha fazla bilgi için [(C#) XML ad alanları ile çalışma](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).
+Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).
 
-Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler bir Namespace,](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).
+Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Bir ad alanındaki](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)müşteriler ve siparişler.
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");
