@@ -1,44 +1,44 @@
 ---
-title: C#Dil sürümü oluşturma - C# Kılavuzu
-description: Hakkında nasıl bilgi C# dil sürümü, projenizi temel alarak belirlenir ve farklı değerler, el ile şekilde ayarlayabilirsiniz.
+title: C#dil sürümü oluşturma C# -kılavuz
+description: C# Dil sürümünün projenize göre nasıl belirlendiği hakkında bilgi edinin ve bunu el ile ayarlayabileceğiniz farklı değerler.
 ms.date: 07/10/2019
-ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 744cec0aac21f743648cccbdc93cf2977c32d644
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236090"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796535"
 ---
-# <a name="c-language-versioning"></a>C#Dil sürümü oluşturma
+# <a name="c-language-versioning"></a>C#dil sürümü oluşturma
 
-C# Derleyici, proje hedef Framework'ü veya çerçeveleri göre varsayılan dil sürümü belirler. Bunun nedeni, C# dil türleri veya her bir .NET uygulamasında kullanılabilir olmayan bir çalışma zamanı bileşenlerini kullanan özellikler olabilir. Bu ayrıca, projenizin karşı yerleşik her hedef için en yüksek uyumlu dil sürümünü varsayılan olarak almasını sağlar.
+Derleyici C# , projenizin hedef çerçevesine veya çerçevelerine göre varsayılan dil sürümünü belirler. Bunun nedeni, C# dilin her .NET uygulamasında kullanılamayan türleri veya çalışma zamanı bileşenlerini kullanan özelliklere sahip olması olabilir. Bu Ayrıca, projenizin her türlü hedefi için varsayılan olarak en yüksek uyumlu dil sürümünü almanızı sağlar.
 
 ## <a name="defaults"></a>Varsayılanları
 
-Derleyici, bu kurallara dayalı bir varsayılan belirler:
+Derleyici, bu kurallara göre bir varsayılan değer belirler:
 
-|Hedef Çerçeve|sürüm|C#Dil sürümü varsayılan|
+|Hedef çerçeve|sürüm|C#dil sürümü varsayılanı|
 |----------------|-------|---------------------------|
-|.NET Core|3.x|C#8.0|
+|.NET Core|3.x|C#8,0|
 |.NET Core|2.x|C# 7.3|
 |.NET Standard|tüm|C# 7.3|
 |.NET Framework|tüm|C# 7.3|
 
-## <a name="default-for-previews"></a>Preview sürümleri için varsayılan
+## <a name="default-for-previews"></a>Önizlemeler için varsayılan
 
-Projenize karşılık gelen bir önizleme dil sürümü olan bir önizleme framework hedeflediğinde, kullanılan dil sürümü Önizleme dil sürümüdür. Bu, her türlü ortamda bu Önizleme ile projelerinizi etkilemeden yayımlanmış bir .NET Core sürümünü hedefleyen çalışacağı garanti en son özellikleri kullanabileceğiniz sağlar.
+Projeniz karşılık gelen önizleme dili sürümüne sahip bir önizleme çerçevesini hedefliyorsa, kullanılan dil sürümü önizleme dili sürümüdür. Bu, yayımlanmış bir .NET Core sürümünü hedefleyen projelerinizi etkilemeden, herhangi bir ortamda bu önizleme ile çalışmak için garanti edilen en son özellikleri kullanmanızı sağlar.
 
-## <a name="overriding-a-default"></a>Varsayılan bir geçersiz kılma
+## <a name="override-a-default"></a>Varsayılanı geçersiz kıl
 
-Belirtmeniz gerekiyorsa, C# sürüm açıkça çeşitli yollarla bunu yapabilirsiniz:
+C# Sürümünüzü açıkça belirtmeniz gerekiyorsa, bunu birkaç şekilde yapabilirsiniz:
 
-- El ile düzenlemeniz, [proje dosyası](#edit-the-project-file).
-- Dil sürümünü ayarlama [bir alt dizinde birden çok proje için](#configure-multiple-projects).
-- Yapılandırma [ `-langversion` derleyici seçeneği](compiler-options/langversion-compiler-option.md)
+- [Proje dosyanızı](#edit-the-project-file)el ile düzenleyin.
+- [Bir alt dizinde birden çok proje için](#configure-multiple-projects)dil sürümünü ayarlayın.
+- Derleyici seçeneğini [ `-langversion` yapılandırma](compiler-options/langversion-compiler-option.md)
 
-### <a name="edit-the-project-file"></a>Proje dosyası Düzenle
+### <a name="edit-the-project-file"></a>Proje dosyasını düzenleme
 
-Dil sürümü, proje dosyasında ayarlayabilirsiniz. Açıkça özelliklerin önizlemesini sağlamak erişim istediyseniz, örneğin, şunun gibi bir öğe ekleyebilirsiniz:
+Proje dosyanızdaki dil sürümünü ayarlayabilirsiniz. Örneğin, önizleme özelliklerine açıkça erişim istiyorsanız, şöyle bir öğe ekleyin:
 
 ```xml
 <PropertyGroup>
@@ -46,11 +46,11 @@ Dil sürümü, proje dosyasında ayarlayabilirsiniz. Açıkça özelliklerin ön
 </PropertyGroup>
 ```
 
-Değer `preview` kullanılabilir en son Önizleme kullanan C# derleyicinizin destekleyen dili.
+Değer `preview` , derleyicinizin desteklediği en son C# önizleme dili sürümünü kullanır.
 
 ### <a name="configure-multiple-projects"></a>Birden çok proje yapılandırma
 
-Oluşturabileceğiniz bir **Directory.Build.props** içeren dosya `<LangVersion>` birden çok dizini yapılandırma öğesi. Genellikle, çözüm dizininizde yaparsınız. Ekleyin bir **Directory.Build.props** çözüm dizininizde dosya:
+Birden çok dizini yapılandırmak için `<LangVersion>` öğesini içeren bir **Dizin. Build. props** dosyası oluşturabilirsiniz. Bunu genellikle çözüm dizininizde yapabilirsiniz. Aşağıdakileri çözüm dizininizde bir **Dizin. Build. props** dosyasına ekleyin:
 
 ```xml
 <Project>
@@ -60,25 +60,25 @@ Oluşturabileceğiniz bir **Directory.Build.props** içeren dosya `<LangVersion>
 </Project>
 ```
 
-Bu dosyayı içeren dizine her alt yapılarında Önizleme artık, kullanacak C# sürümü. Daha fazla bilgi için makaleye bakın [derlemenizi özelleştirme](/visualstudio/msbuild/customize-your-build).
+Şimdi, bu dosyayı içeren dizinin her alt dizinindeki derlemeler Önizleme C# sürümünü kullanacaktır. Daha fazla bilgi için, [yapınızı özelleştirme](/visualstudio/msbuild/customize-your-build)başlıklı makaleye bakın.
 
-## <a name="c-language-version-reference"></a>C#Dil sürümü başvurusu
+## <a name="c-language-version-reference"></a>C#dil sürümü başvurusu
 
-Aşağıdaki tablo geçerli tüm gösterir C# dil sürümleri. Eski ise, derleyici her değer mutlaka anlamayabilir. .NET Core 3.0 yüklerseniz, listelenen her şeye erişimi gerekir.
+Aşağıdaki tabloda tüm geçerli C# dil sürümleri gösterilmektedir. Daha eskiyse, derleyicisinin her değeri anlayamayabilir. .NET Core 3,0 ' i yüklerseniz, listelenen her şeye erişim sahibi olursunuz.
 
 |Değer|Açıklama|
 |------------|-------------|
-|önizleme|Derleyici, en son Önizleme sürümünden tüm geçerli dili söz dizimini kabul eder.|
-|latest|Bir derleyici sürümünden en son yayımlanan (alt sürümü dahil) derleyici sözdizimini kabul eder.|
-|latestMajor|Bir derleyici sürümünden en son yayımlanan önemli derleyici sözdizimini kabul eder.|
-|8.0|Dahil edilen sözdizimi derleyici kabul C# 8.0 veya daha düşük.|
-|7.3|Dahil edilen sözdizimi derleyici kabul C# 7.3 ya da daha düşük.|
-|7.2|Dahil edilen sözdizimi derleyici kabul C# 7.2 veya daha düşük.|
-|7.1|Dahil edilen sözdizimi derleyici kabul C# 7.1 veya daha düşük.|
-|7|Dahil edilen sözdizimi derleyici kabul C# 7.0 ya da daha düşük.|
-|6|Dahil edilen sözdizimi derleyici kabul C# 6.0 veya daha düşük.|
-|5|Dahil edilen sözdizimi derleyici kabul C# 5.0 veya daha düşük.|
-|4|Dahil edilen sözdizimi derleyici kabul C# 4.0 veya daha düşük.|
-|3|Dahil edilen sözdizimi derleyici kabul C# 3.0 veya daha düşük.|
-|ISO-2|Derleyici ISO/IEC 23270:2006 dahil edilen sözdizimi kabul eden C# (2.0) |
-|ISO-1|Derleyici ISO/IEC 23270:2003 dahil edilen sözdizimi kabul eden C# (1.0/1.2) |
+|önizleme|Derleyici, en son önizleme sürümündeki tüm geçerli dil sözdizimini kabul eder.|
+|latest|Derleyici derleyicinin en son yayınlanan sürümünden (ikincil sürüm dahil) söz dizimini kabul eder.|
+|Latestana|Derleyici derleyicinin en son yayınlanan ana sürümünden söz dizimini kabul eder.|
+|8.0|Derleyici yalnızca C# 8,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|7.3|Derleyici yalnızca C# 7,3 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|7.2|Derleyici yalnızca C# 7,2 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|7.1|Derleyici yalnızca C# 7,1 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|7|Derleyici yalnızca C# 7,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|6|Derleyici yalnızca C# 6,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|5|Derleyici yalnızca C# 5,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|4|Derleyici yalnızca C# 4,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|3|Derleyici yalnızca C# 3,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|ISO-2|Derleyici yalnızca ISO/ıEC 23270:2006 C# (2,0) içinde bulunan söz dizimini kabul eder |
+|ISO-1|Derleyici yalnızca ISO/ıEC 23270:2003 C# (1.0/1.2) içinde bulunan söz dizimini kabul eder |

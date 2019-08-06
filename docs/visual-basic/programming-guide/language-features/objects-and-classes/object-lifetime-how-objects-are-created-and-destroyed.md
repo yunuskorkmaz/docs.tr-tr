@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 5b092f50ddff5c432fbd6396b5fedafe7a6acba0
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 932f56a9a277360b11c551aaa1faf819f8e07fe6
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512836"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796679"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Nesne Ömrü: Nesneler oluşturma ve yok etme (Visual Basic)
 
@@ -41,7 +41,7 @@ Oluşturucular ve Yıkıcılar nesnelerin oluşturulmasını ve yok edilmesini d
 
 ### <a name="sub-new"></a>Yeni Sub
 
-Oluşturucu `Sub New` , bir sınıf oluşturulduğunda yalnızca bir kez çalıştırılabilir. Aynı sınıftan ya da türetilmiş bir sınıftan başka bir oluşturucunun kod ilk satırında dışında, açıkça çağrılamaz. Ayrıca, `Sub New` yöntemi içindeki kod her zaman bir sınıftaki diğer koddan önce çalışır. Bir sınıf için açıkça bir `Sub New` `Sub New` yordam tanımlamadıysanız, Visual Basic ve sonraki sürümler, çalışma zamanında örtük olarak bir Oluşturucu oluşturur.
+Oluşturucu `Sub New` , bir sınıf oluşturulduğunda yalnızca bir kez çalıştırılabilir. Aynı sınıftan ya da türetilmiş bir sınıftan başka bir oluşturucunun kod ilk satırında dışında, açıkça çağrılamaz. Ayrıca, `Sub New` yöntemi içindeki kod her zaman bir sınıftaki diğer koddan önce çalışır. Bir sınıf için açıkça `Sub New` bir `Sub New` yordam tanımlamadıysanız Visual Basic, çalışma zamanında örtük olarak bir Oluşturucu oluşturur.
 
 Bir sınıf için Oluşturucu oluşturmak için, sınıf tanımında herhangi bir yerde `Sub New` adlı bir yordam oluşturun. Parametreli bir Oluşturucu oluşturmak için, aşağıdaki kodda olduğu gibi, diğer herhangi bir yordam `Sub New` için bağımsız değişkenler belirttiğinizde olduğu gibi, bağımsız değişkenlerin adlarını ve veri türlerini belirtin:
 
@@ -64,7 +64,7 @@ Nesneleri serbest bırakmadan önce clr, bir `Finalize` `Sub Finalize` yordamı 
 
 `Finalize` Yıkıcı, yalnızca ait olduğu sınıftan veya türetilmiş sınıflardan çağrılabilen, korunan bir yöntemdir. Bir nesne yok `Finalize` edildiğinde sistem otomatik olarak çağrılır, bu nedenle türetilmiş sınıfın `Finalize` uygulamasının dışından açık `Finalize` bir şekilde çağırmamalıdır.
 
-Bir nesne hiçbir şey olarak ayarlandığında çalıştırılan bir şekilde, genellikle bir nesnenin kapsam kaybettiğinde ve Visual Basic `Finalize` yıkıcıyı çağırdığında bir gecikme vardır. `Class_Terminate` Visual Basic ve sonraki sürümler, kaynakları hemen serbest bırakmak için herhangi bir <xref:System.IDisposable.Dispose%2A>zamanda açıkça çağrılabilecek ikinci bir tür yıkıcı için izin verir.
+Bir nesne hiçbir şey olarak ayarlandığında çalıştırılan bir şekilde, genellikle bir nesnenin kapsam kaybettiğinde ve Visual Basic `Finalize` yıkıcıyı çağırdığında bir gecikme vardır. `Class_Terminate` Visual Basic .net, kaynakları hemen serbest bırakmak için herhangi bir <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>zamanda açıkça çağrılabilecek ikinci bir yıkıcı türü sağlar.
 
 > [!NOTE]
 > `Finalize` Yıkıcı, uygulama tarafından işlenemediği ve uygulamanın sonlandırılmasına neden olabileceği için özel durumlar oluşturmaz.

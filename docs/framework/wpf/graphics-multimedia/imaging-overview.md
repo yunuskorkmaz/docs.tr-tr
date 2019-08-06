@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: b6fb530bbc4132b09cc17ad692e6e9e23cd75598
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 9adceb78f53d9c855ec05859a0b3449a1623e62b
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671850"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796845"
 ---
 # <a name="imaging-overview"></a>Görüntülemeye Genel Bakış
 Bu konu, [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]öğesine bir giriş sağlar. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]geliştiricilerin resimleri görüntülemesine, dönüştürmelerine ve biçimlendirmeye olanak sağlar.  
@@ -165,7 +165,7 @@ Görüntü fırçaları şekilleri, denetimleri, metinleri ve daha fazlasını d
 ## <a name="image-metadata"></a>Görüntü meta verileri  
  Bazı görüntü dosyaları, dosyanın içeriğini veya özelliklerini açıklayan meta veriler içerir. Örneğin, çoğu dijital kamera, görüntüyü yakalamak için kullanılan kameranın marka ve modeliyle ilgili meta verileri içeren görüntüler oluşturur. Her görüntü biçimi meta verileri farklı işler [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] , ancak desteklenen her görüntü biçimi için meta verileri depolamak ve almak için Tekdüzen bir yöntem sağlar.  
   
- Meta verilere erişim, bir <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> <xref:System.Windows.Media.Imaging.BitmapSource> nesnenin özelliği aracılığıyla sağlanır. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>görüntünün içerdiği <xref:System.Windows.Media.Imaging.BitmapMetadata> tüm meta verileri içeren bir nesne döndürür. Bu veriler bir meta veri şemasında veya farklı şemalarla birlikte olabilir. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]Aşağıdaki görüntü meta veri şemalarını destekler: Takas edilebilir görüntü dosyası (Exif), metin (png metin verileri), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)] [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)], ve [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
+ Meta verilere erişim, bir <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> <xref:System.Windows.Media.Imaging.BitmapSource> nesnenin özelliği aracılığıyla sağlanır. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>görüntünün içerdiği <xref:System.Windows.Media.Imaging.BitmapMetadata> tüm meta verileri içeren bir nesne döndürür. Bu veriler bir meta veri şemasında veya farklı şemalarla birlikte olabilir. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]Aşağıdaki görüntü meta veri şemalarını destekler: Takas edilebilir görüntü dosyası (Exif), metin (png metin verileri), görüntü dosyası dizini (IFD), [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)]ve. [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]  
   
  Meta verileri <xref:System.Windows.Media.Imaging.BitmapMetadata> okuma işlemini basitleştirmek için, ve <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>gibi kolayca erişilebilen <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A> <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>çeşitli adlandırılmış özellikler sağlar. Bu adlandırılmış özelliklerin birçoğu, meta verileri yazmak için de kullanılabilir. Meta veri okuma için ek destek, meta veri sorgu okuyucusu tarafından sağlanır. Yöntemi <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> , *"/APP1/Exif/"* gibi bir dize sorgusu sağlayarak meta veri sorgu okuyucuyu almak için kullanılır. Aşağıdaki örnekte, <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> *"/Text/Description"* konumunda depolanan metni almak için kullanılır.  
   

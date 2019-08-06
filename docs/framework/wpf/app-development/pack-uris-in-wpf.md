@@ -9,186 +9,186 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 2a0fa9b67f4fa1f3b701cb64579727bedbf5028c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: f9ea4acfc7ba86d3424bb11af0de685651f99c61
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663783"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796747"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF İçinde URI'leri Paketleme
 
-Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] belirlemek ve aşağıdakiler dahil pek çok yolla dosyalarını yüklemek için kullanılır:
+Windows Presentation Foundation (WPF) ' [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] de, aşağıdaki gibi çeşitli yollarla dosya tanımlamak ve yüklemek için kullanılır:
 
-- Belirtme [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] göstermek için bir uygulama ilk kez başlatıldığında.
+- Uygulamanın ilk başladığı zaman göstermek içinöğesinibelirtme.[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]
 
-- Görüntüleri yükleniyor.
+- Görüntüler yükleniyor.
 
-- Sayfa Gezinme.
+- Sayfalara gitme.
 
 - Yürütülebilir olmayan veri dosyaları yükleniyor.
 
-Ayrıca, [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] belirlemek ve konumları, aşağıdakiler dahil çeşitli arasından dosyaları yüklemek için kullanılabilir:
+Ayrıca, [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] aşağıdakiler de dahil olmak üzere çeşitli konumlardan dosyaları tanımlamak ve yüklemek için de kullanılabilir:
 
 - Geçerli derleme.
 
 - Başvurulan bir derleme.
 
-- Bir derlemeye göreli bir konum.
+- Bir derlemeye göre bir konum.
 
-- Kaynak siteyi uygulamanın.
+- Uygulamanın kaynak sitesi.
 
-Belirlemekten ve bu konumlardan bu tür dosyaları yüklenirken tutarlı bir mekanizma sağlamanız [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] genişletilmesinde yararlanır *URI şeması paketleme*. Bu konuda düzenine genel bir bakış sağlar, paketi oluşturmak için nasıl ele alınmaktadır [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] mutlak veya göreli bir çeşitli senaryoları ele alınmaktadır [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] ve [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Paketi'ni kullanma göstermeden önce çözüm, [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] hem biçimlendirmeden ve kod.
+Bu konumlardan bu dosya türlerini tanımlamaya ve yüklemeye yönelik tutarlı bir mekanizma sağlamak için, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] *paket URI düzeninin*genişletilebilirliği kullanır. Bu konu, şemaya genel bir bakış sunar, çeşitli senaryolar [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] için paketin nasıl oluşturulacağını ele alır, her iki biçimlendirmeden da Pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 'in [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] nasıl [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] kullanılacağını göstermeden önce mutlak ve göreli ve çözünürlüğe sahiptir ve kod.
 
 <a name="The_Pack_URI_Scheme"></a>
 
-## <a name="the-pack-uri-scheme"></a>URI şeması paketleme
+## <a name="the-pack-uri-scheme"></a>Paket URI şeması
 
-Paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] şeması tarafından kullanılan [Open Packaging Conventions](https://go.microsoft.com/fwlink/?LinkID=71255) (OPC) belirtimi, düzenleme ve içeriği tanımlamak için bir modeli açıklanmaktadır. Bu model önemli öğelerin paketleri ve bölümleri olan burada bir *paket* bir mantıksal bir veya daha fazla mantıksal bir kapsayıcısıdır *bölümleri*. Aşağıdaki şekil bu kavramı gösterir.
+Paket [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] şeması, içeriği düzenlemek ve tanımlamak için bir model tanımlayan [Açık paketleme kuralları](https://go.microsoft.com/fwlink/?LinkID=71255) (OPC) belirtimi tarafından kullanılır. Bu modelin anahtar öğeleri, bir *paketin* bir veya daha fazla mantıksal *bölüm*için mantıksal bir kapsayıcı olduğu paket ve parçalardır. Aşağıdaki şekil bu kavramı gösterir.
 
-![Paket ve bölümleri diyagramı](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)
+![Paket ve parçalar diyagramı](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)
 
-Bölümleri tanımlamak için genişletilebilirliği, RFC 2396 OPC belirtimi yararlanır (Tekdüzen Kaynak Tanımlayıcıları (URI): Paketi tanımlamak için genel sözdizimi) [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] düzeni.
+Bileşenleri tanımlamak için OPC belirtimi, RFC 2396 ' in genişletilebilirliği kullanır (Tekdüzen Kaynak tanımlayıcıları (URI): Genel sözdizimi), paket [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] düzenini tanımlar.
 
-Tarafından belirtilen düzeni bir [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] ; kendi ön eke göre tanımlanan http, ftp ve dosya tanınmış örnekler verilmiştir. Paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] şema "paketi", şema olarak kullanır ve iki bileşenleri içerir: yetkilisi ve yolu. Aşağıdaki bir paketi biçimi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+Tarafından [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] belirtilen düzen ön eki tarafından tanımlanır; http, FTP ve File iyi bilinen örneklerdir. Paket [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] şeması, düzeni olarak "Pack" kullanır ve iki bileşen içerir: yetkili ve yol. Bir paketin [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]biçimi aşağıda verilmiştir.
 
-paketi: / /*yetkilisi*/*yolu*
+Pack://*yetkilisi*/*yolu*
 
-*Yetkilisi* bir bölümü tarafından bulunan bir paket türünü belirtir ancak *yolu* bir bölümü bir paket içindeki konumunu belirtir.
+*Yetkili* , bir bölümün içerdiği paketin türünü belirtir. *yol* , bir paket içindeki bir bölümün konumunu belirtir.
 
 Bu kavram aşağıdaki şekilde gösterilmiştir:
 
-![Paket, yetkili ve yolu arasındaki ilişki](./media/pack-uris-in-wpf/wpf-relationship-diagram.png)
+![Paket, yetkili ve yol arasındaki ilişki](./media/pack-uris-in-wpf/wpf-relationship-diagram.png)
 
-Paketler ve bölümleri, uygulamalar ve dosyalar burada bir uygulaması (paket) dahil olmak üzere bir veya daha fazla dosyaları (parça) içerebilir, benzer:
+Paketler ve parçalar, uygulamalar ve dosyalarla benzerdir; burada bir uygulama (paket) bir veya daha fazla dosya (parça) içerebilir:
 
-- Yerel bütünleştirilmiş kod içine derlenmiş kaynak dosyaları.
+- Yerel derlemeye derlenen kaynak dosyaları.
 
-- Başvurulan bir bütünleştirilmiş kod içine derlenmiş kaynak dosyaları.
+- Başvurulan bir derlemeye derlenen kaynak dosyaları.
 
-- Bir başvuru bütünleştirilmiş kod içine derlenmiş kaynak dosyaları.
+- Başvurulan bir derlemeye derlenen kaynak dosyaları.
 
 - İçerik dosyaları.
 
-- Kaynak dosyaları sitesi.
+- Kaynak dosyalarının sitesi.
 
-Bu tür dosyaları, erişmeye [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] iki yetkilileri destekler: uygulama: / / / ve siteoforigin: / / /. Uygulama: / / / yetkilisi kaynak ve içerik dosyaları dahil olmak üzere derleme zamanında bilinen uygulama veri dosyalarını tanımlar. Siteoforigin: / / / yetkilisi kaynak dosyaları sitesi tanımlar. Her yetki kapsamını aşağıdaki şekilde gösterilmiştir.
+Bu dosya [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] türlerine erişmek için iki kaynakçayı destekler: Application:///ve siteoforigin:///. Application:///yetkilisi, kaynak ve içerik dosyaları dahil olmak üzere derleme zamanında bilinen uygulama verileri dosyalarını tanımlar. Siteoforigin:///yetkilisi, kaynak dosyalarının sitesini tanımlar. Her bir yetkilinin kapsamı aşağıdaki şekilde gösterilmiştir.
 
-![Pack URI'si diyagramı](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)
+![Paket URI diyagramı](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)
 
 > [!NOTE]
-> Bir paketi yetkili bileşeni [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bir Embedded [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bir pakete işaret ve RFC 2396 uymalıdır. Ayrıca, "/" karakteri "," karakteri ile değiştirilmelidir ve ayrılmış karakterler gibi "%" ve "?" kaçış karakterleri eklenmelidir. OPC Ayrıntılar için bkz.
+> Bir [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] paketin yetkili bileşeni, bir pakete işaret eden [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] ve RFC 2396 ile uyumlu olması gereken bir katıştırılır. Ek olarak, "/" karakteri "," karakteriyle değiştirilmelidir ve "%" ve "?" gibi ayrılmış karakterlerle kaçışlı olmalıdır. Ayrıntılar için bkz. OPC.
 
-Aşağıdaki bölümlerde, paketi oluşturmak anlatan [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] kaynağı, içerik ve kaynak dosyaları sitesi tanımlamak için bu iki yetkilileri uygun yolları ile birlikte kullanarak.
+Aşağıdaki bölümlerde, bu iki yetkilinin kaynak [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , içerik ve kaynak dosyalarının sitesini tanımlamaya yönelik uygun yollarla birlikte nasıl kullanılacağı açıklanmaktadır.
 
 <a name="Resource_File_Pack_URIs___Local_Assembly"></a>
 
-## <a name="resource-file-pack-uris"></a>Kaynak dosya paketi URI'ler
+## <a name="resource-file-pack-uris"></a>Kaynak dosya paketi URI 'Leri
 
-Kaynak dosyaları olarak yapılandırılmış [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` öğeleri ve derlemeleri haline getirilebilen. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Paketi oluşumu destekler [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] yerel bütünleştirilmiş kod içine derlenmiş veya yerel bütünleştirilmiş koddan başvurulan bir derleme içinde derlenen kaynak dosyaları belirlemek için kullanılabilir.
+Kaynak dosyaları öğeler olarak [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` yapılandırılır ve derlemelere derlenir. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]yerel derlemeye derlenen ya da [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] yerel derlemeden başvurulan bir derlemeye derlenen kaynak dosyalarını tanımlamak için kullanılabilen paketin oluşturulmasını destekler.
 
 <a name="Local_Assembly_Resource_File"></a>
 
-### <a name="local-assembly-resource-file"></a>Yerel bütünleştirilmiş kod kaynak dosyası
+### <a name="local-assembly-resource-file"></a>Yerel derleme kaynak dosyası
 
-Paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] aşağıdaki yetkilisi ve yol için bir kaynak yerel bütünleştirilmiş kod içine derlenmiş olan dosya kullanır:
+Yerel derlemeye [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] derlenen bir kaynak dosyası paketi şu yetkiyi ve yolu kullanır:
 
-- **Yetkilisi**: uygulama: / / /.
+- **Yetkili**: Application:///.
 
-- **Yol**: Yerel derleme proje klasörü köküne yolunu da dahil olmak üzere kaynak dosyanın adı.
+- **Yol**: Kaynak dosyasının, yolu da dahil olmak üzere, yerel derleme proje klasörü köküne göreli adı.
 
-Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] derlemenin yerel proje klasörünün kök dizininde bulunan kaynak dosyası.
+Aşağıdaki örnek, yerel derlemenin proje [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] klasörünün kökünde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bulunan bir kaynak dosyası paketini gösterir.
 
 `pack://application:,,,/ResourceFile.xaml`
 
-Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kaynak dosyası, derlemenin yerel proje klasörünün bir alt klasörde yer alır.
+Aşağıdaki örnek, yerel derlemenin proje [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] klasörünün bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] alt klasöründe bulunan bir kaynak dosyası paketini gösterir.
 
 `pack://application:,,,/Subfolder/ResourceFile.xaml`
 
 <a name="Resource_File_Pack_URIs___Referenced_Assembly"></a>
 
-### <a name="referenced-assembly-resource-file"></a>Başvurulan bütünleştirilmiş kod kaynak dosyası
+### <a name="referenced-assembly-resource-file"></a>Başvurulan derleme kaynak dosyası
 
-Paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] aşağıdaki yetkilisi ve yol için bir kaynak bir başvurulan bütünleştirilmiş kod içine derlenmiş dosya kullanır:
+Başvurulan bir [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] derlemeye derlenen bir kaynak dosyası paketi şu yetkiyi ve yolu kullanır:
 
-- **Yetkilisi**: uygulama: / / /.
+- **Yetkili**: Application:///.
 
-- **Yol**: Başvurulan bir bütünleştirilmiş kod içine derlenmiş bir kaynak dosyasının adıdır. Yol aşağıdaki biçime uymalıdır:
+- **Yol**: Başvurulan bir derlemeye derlenen kaynak dosyasının adı. Yolun aşağıdaki biçime uyması gerekir:
 
-  *AssemblyShortName*{ *;Version*]{ *;PublicKey*];component/*Path*
+  *AssemblyShortName* { *; Sürüm*] { *; PublicKey*]; bileşen/*yol*
 
-  - **AssemblyShortName**: başvurulan derleme için kısa bir ad.
+  - **AssemblyShortName**: başvurulan derlemenin kısa adı.
 
-  - **; Sürüm** [isteğe bağlı]: kaynak dosyasını içeren başvurulan derlemenin sürümü. Bu kısa aynı ada sahip iki veya daha fazla başvurulan derlemeler yüklü olduğunda kullanılır.
+  - **; Sürüm** [isteğe bağlı]: kaynak dosyasını içeren başvurulan derlemenin sürümü. Bu, aynı kısa ada sahip iki veya daha fazla başvurulan derleme yüklendiğinde kullanılır.
 
-  - **; PublicKey** [isteğe bağlı]: başvurulan derlemeyi imzalamak için kullanılan ortak anahtar. Bu kısa aynı ada sahip iki veya daha fazla başvurulan derlemeler yüklü olduğunda kullanılır.
+  - **; PublicKey** [isteğe bağlı]: başvurulan derlemeyi imzalamak için kullanılan ortak anahtar. Bu, aynı kısa ada sahip iki veya daha fazla başvurulan derleme yüklendiğinde kullanılır.
 
-  - **; Bileşen**: başvurulan derleme yerel bütünleştirilmiş koddan başvurulur belirtir.
+  - **; bileşen**: başvurulan derlemenin yerel derlemeden başvurulduğunu belirtir.
 
-  - **/ Yol**: başvurulan derlemenin proje klasörünün göreli yolunu da dahil olmak üzere kaynak dosyasının adı.
+  - **/Path**: kaynak dosyasının, yolu da dahil olmak üzere, başvurulan derlemenin proje klasörünün köküne göre adı.
 
-Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] başvurulan derlemenin proje klasörünün kök dizininde bulunan kaynak dosyası.
+Aşağıdaki örnek, başvurulan derlemenin proje [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] klasörünün kökünde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bulunan bir kaynak dosyası paketini gösterir.
 
 `pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml`
 
-Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] başvurulan derlemenin proje klasörünün bir alt klasöründe bulunan kaynak dosyası.
+Aşağıdaki örnek, başvurulan derlemenin proje [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] klasörünün bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] alt klasöründe bulunan bir kaynak dosyası paketini gösterir.
 
 `pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml`
 
-Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] başvurulan, sürüme özgü bir derlemenin proje klasörünün kök klasöründe bulunan kaynak dosyası.
+Aşağıdaki örnek, başvurulan, sürüme [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] özgü derlemenin [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] proje klasörünün kök klasöründe bulunan bir kaynak dosyası paketini gösterir.
 
 `pack://application:,,,/ReferencedAssembly;v1.0.0.1;component/ResourceFile.xaml`
 
-Unutmayın paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] başvurulan bütünleştirilmiş kod kaynak dosyalar için söz dizimi, yalnızca uygulama ile kullanılabilir: / / / yetkilisi. Örneğin, aşağıdaki desteklenmeyen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+Başvurulan derleme kaynak dosyalarının [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] paket sözdiziminin yalnızca Application:///yetkilisi ile kullanılabileceğini unutmayın. Örneğin, aşağıdaki ' de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]desteklenmez.
 
 `pack://siteoforigin:,,,/SomeAssembly;component/ResourceFile.xaml`
 
 <a name="Content_File_Pack_URIs"></a>
 
-## <a name="content-file-pack-uris"></a>İçerik dosyası paketi URI'ler
+## <a name="content-file-pack-uris"></a>İçerik dosyası paketi URI 'Leri
 
-Paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bir içerik dosyası aşağıdaki yetkilisi ve yolu kullanır:
+Bir içerik [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dosyası paketi aşağıdaki yetkili ve yolu kullanır:
 
-- **Yetkilisi**: uygulama: / / /.
+- **Yetkili**: Application:///.
 
-- **Yol**: Dosya sistemi konumu uygulamanın ana yürütülebilir derlemenin göreli yolu da dahil olmak üzere içerik dosyasının adı.
+- **Yol**: Uygulamanın ana yürütülebilir dosyasının dosya sistemi konumuna göreli yolu da dahil olmak üzere içerik dosyasının adı.
 
-Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] çalıştırılabilir derlemesinin aynı klasörde bulunan içerik dosyası.
+Aşağıdaki örnek, çalıştırılabilir derleme ile [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] aynı klasörde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bulunan bir içerik dosyası paketini gösterir.
 
 `pack://application:,,,/ContentFile.xaml`
 
-Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] içerik dosyası, uygulamanın yürütülebilir derleme göreli bir alt klasör bulunur.
+Aşağıdaki örnek, uygulamanın yürütülebilir derlemesine [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] göre bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] alt klasörde bulunan bir içerik dosyası paketini gösterir.
 
 `pack://application:,,,/Subfolder/ContentFile.xaml`
 
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] İçerik dosyaları için erişilemeyeceğini. [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Düzeni yalnızca Gezinti destekler [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] kaynak sitede bulunan dosyalar.
+> HTML içerik dosyalarına gidilemez. [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Düzen yalnızca kaynak sitesinde bulunan HTML dosyalarına gezinmeyi destekler.
 
 <a name="The_siteoforigin_____Authority"></a>
 
-## <a name="site-of-origin-pack-uris"></a>Kaynak Paketi URI'lerin site
+## <a name="site-of-origin-pack-uris"></a>Kaynak Paketi URI 'Leri sitesi
 
-Paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] aşağıdaki yetkilisi ve yol bir kaynak sitesi için dosya kullanır:
+Kaynak dosyanın [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bir sitesi paketi aşağıdaki yetkili ve yolu kullanır:
 
-- **Yetkilisi**: siteoforigin: / / /.
+- **Yetkili**: siteoforigin:///.
 
-- **Yol**: Sitenin içinden çalıştırılabilir derlemesinin başlatıldı konumun göreli yolunu da dahil olmak üzere kaynak dosyasının adı.
+- **Yol**: Yürütülebilir dosyanın başlatıldığı konuma göre yolu da dahil olmak üzere, kaynak dosya sitesinin adı.
 
-Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] çalıştırılabilir derlemesinin başlatıldığı konumda depolanan kaynak dosyasının site.
+Aşağıdaki örnek, çalıştırılabilir derlemenin başlatıldığı [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] konumda depolanan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bir kaynak dosyası sitesinin paketini gösterir.
 
 `pack://siteoforigin:,,,/SiteOfOriginFile.xaml`
 
-Paketi aşağıdaki örnekte [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] site kaynak dosyası, uygulamanın yürütülebilir derleme başlatıldığı konumdur göreli alt klasöründe depolanır.
+Aşağıdaki örnek, uygulamanın yürütülebilir dosyasının [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] başlatıldığı konuma [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] göre alt klasörde depolanan bir kaynak dosyası sitesinin paketini gösterir.
 
 `pack://siteoforigin:,,,/Subfolder/SiteOfOriginFile.xaml`
 
 <a name="Page_Files"></a>
 
-## <a name="page-files"></a>Sayfa dosyası
+## <a name="page-files"></a>Sayfa dosyaları
 
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olarak yapılandırılmış olan dosyaları [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` öğeleri derlemelerine kaynak dosyaları aynı şekilde derlenir. Sonuç olarak, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` öğeleri paketi kullanarak belirlenebilir [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] kaynak dosyaları için.
+[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]öğeler olarak [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` yapılandırılan dosyalar, kaynak dosyalarla aynı şekilde derlemeler halinde derlenir. Sonuç olarak [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] , `Page` öğeler kaynak dosyaları paketi [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] kullanılarak tanımlanabilir.
 
-Tür [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yaygın olarak yapılandırılmış olan dosyaları [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` aşağıdaki kendi kök öğe olarak birine sahip öğeleri:
+Genellikle öğe olarak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]yapılandırılandosyatürleri kököğesiolarakaşağıdakilerdenbirinesahiptir`Page` :
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 
@@ -204,22 +204,22 @@ Tür [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yay
 
 <a name="Absolute_vs_Relative_Pack_URIs"></a>
 
-## <a name="absolute-vs-relative-pack-uris"></a>Mutlak vs. Paketi göreli URI'ler
+## <a name="absolute-vs-relative-pack-uris"></a>Mutlak vs. Göreli paket URI 'Leri
 
-Bir tam paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] şeması ve yetkilisi yolu içerir ve bu mutlak bir paketi varsayılır [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]. Bir basitleştirme geliştiricileri olarak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] öğeleri genellikle izin göreli paketi uygun özniteliklerle ayarlamanızı [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], yalnızca yolu içerir.
+Tam nitelikli paket [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , düzeni, yetkiyi ve yolu içerir ve mutlak bir paket [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]olarak kabul edilir. Geliştiriciler için bir basitleştirme olarak, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] öğeler genellikle yalnızca yolu içeren göreli bir paketle [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]birlikte uygun öznitelikleri ayarlamanıza olanak sağlar.
 
-Örneğin, aşağıdaki mutlak paketi düşünün [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] yerel bütünleştirilmiş kod kaynak dosyası için.
+Örneğin, yerel derlemedeki bir kaynak dosyası için [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] aşağıdaki mutlak paketi göz önünde bulundurun.
 
 `pack://application:,,,/ResourceFile.xaml`
 
-Göreli paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bu kaynağa başvuran dosya, aşağıdaki olur.
+Bu kaynak dosyasına [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] başvuran göreli paket aşağıdaki gibi olacaktır.
 
 `/ResourceFile.xaml`
 
 > [!NOTE]
-> Kaynak dosyaları sitesi olmadığından derlemeleri ile ilişkili, bunlar yalnızca mutlak paketiyle başvurulabilen [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)].
+> Kaynak dosyalarının sitesi Derlemelerle ilişkili olmadığından, yalnızca mutlak paketle [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]başvurulabilir.
 
-Varsayılan olarak, göreli bir paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] işaretleme veya başvuru içeren kod konumun göreli olarak kabul edilir. Önde gelen bir ters eğik çizgi kullanılır, ancak göreli paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] başvuru uygulama köküne göreli sonra kabul edilir. Örneğin, aşağıdaki proje yapısını göz önünde bulundurun.
+Varsayılan olarak, göreli bir paket [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , başvuruyu içeren biçimlendirmenin veya kodun konumuna göre değerlendirilir. Bununla birlikte, önde gelen ters eğik çizgi kullanılırsa, göreli paket [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] başvurusu uygulamanın köküne göre değerlendirilir. Örneğin, aşağıdaki proje yapısını göz önünde bulundurun.
 
 `App.xaml`
 
@@ -231,53 +231,53 @@ Varsayılan olarak, göreli bir paketi [!INCLUDE[TLA2#tla_uri](../../../../inclu
 
 `+ Page2.xaml`
 
-Page1.XAML içeriyorsa bir [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] başvuran *kök*\SubFolder\Page2.xaml, başvuru şu göreli paketi kullanabilirsiniz [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+Sayfa1. xaml [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] *kök*\SubFolder\Page2.xaml 'e başvuran bir içeriyorsa, başvuru aşağıdaki göreli paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]kullanabilir.
 
 `Page2.xaml`
 
-Page1.XAML içeriyorsa bir [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] başvuran *kök*\Page2.xaml, başvuru şu göreli paketi kullanabilirsiniz [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+Sayfa1. xaml [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] *kök*\ Page2.xaml 'e başvuran bir içeriyorsa, başvuru aşağıdaki göreli paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]kullanabilir.
 
 `/Page2.xaml`
 
 <a name="Pack_URI_Resolution"></a>
 
-## <a name="pack-uri-resolution"></a>Pack URI'si çözümleme
+## <a name="pack-uri-resolution"></a>Paket URI 'SI çözümlemesi
 
-Paketi biçimi [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] paketi mümkün kılar [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] dosyaları aynı aramak için farklı türleri için. Örneğin, aşağıdaki mutlak paketi düşünün [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+Paketin [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] biçimi, farklı dosya türleri için paketin [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] aynı görünmesine olanak tanır. Örneğin, aşağıdaki mutlak paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]göz önünde bulundurun.
 
 `pack://application:,,,/ResourceOrContentFile.xaml`
 
-Bu mutlak bir paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] yerel bütünleştirilmiş kod içinde bir kaynak dosyası veya bir içerik dosyası için başvuru yapabilir. Şu göreli için aynı geçerlidir [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+Bu mutlak paket [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , yerel derlemedeki veya bir içerik dosyasındaki bir kaynak dosyasına başvurabilir. Aynı, aşağıdaki göreli [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]için de geçerlidir.
 
 `/ResourceOrContentFile.xaml`
 
-Belirlemek için, dosya türü, bir paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] başvurduğu, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] çözümler [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] yerel derlemeleri ve aşağıdaki buluşsal yöntemlerini kullanarak içerik dosyaları kaynak dosyalar için:
+Bir paketin [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] başvurduğu dosya türünü tespit etmek için, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aşağıdaki buluşsal yöntemleri kullanarak yerel derlemelerde [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] ve içerik dosyalarında kaynak dosyaları için çözümler:
 
-1. Derleme meta verileri araştırma bir <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> paketi eşleşen öznitelik [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+1. <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> Paketle[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]eşleşen bir özniteliğin derleme meta verilerini araştırma.
 
-2. Varsa <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> özniteliği bulunduğunda, yolun paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bir içerik dosyasına başvuruyor.
+2. Öznitelik bulunursa, paketin [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] yolu bir içerik dosyasına başvurur. <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>
 
-3. Varsa <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> yerel bütünleştirilmiş kod içine derlenmiş kümesi kaynak dosyalarını araştırma, öznitelik bulunamadı.
+3. <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> Özniteliği bulunamazsa, yerel derlemeye derlenen küme kaynak dosyalarını araştırın.
 
-4. Paketi yol ile eşleşen bir kaynak dosya [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bulunduğunda, yolun paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bir kaynak dosyasına başvuruyor.
+4. Paketin [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] yoluyla eşleşen bir kaynak dosyası bulunursa, paketin [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] yolu bir kaynak dosyasına başvurur.
 
-5. Kaynak bulunamazsa, dahili olarak oluşturulan <xref:System.Uri> geçersiz.
+5. Kaynak bulunamazsa, dahili olarak oluşturulan <xref:System.Uri> geçersiz olur.
 
-[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Çözüm için geçerli değildir [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] şuna başvurun:
+[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]Aşağıdaki öğesine başvuran için [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] çözümleme uygulanmaz:
 
-- İçerik dosyaları başvurulan derlemelerde: Bu dosya türlerini tarafından desteklenmeyen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+- Başvurulan derlemelerdeki içerik dosyaları: Bu dosya türleri tarafından [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]desteklenmez.
 
-- Başvurulan bütünleştirilmiş kod içinde gömülü dosyalar: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] bunları tanımlayan adı başvurulan derlemenin içerirler benzersiz olduğu ve `;component` soneki.
+- Başvurulan derlemelerdeki gömülü dosyalar: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] bu değerler, başvurulan derlemenin `;component` ve sonekin her ikisi de dahil olduklarından benzersiz olduğunu belirler.
 
-- Kaynak dosyaları sitesi: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] bunları tanımlayan benzersiz olduğundan, çünkü bunlar yalnızca paketi tarafından tanımlanan dosyalar [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] siteoforigin içeren: / / / yetkilisi.
+- Kaynak dosyalarının sitesi: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] siteoforigin:///yetkilisini içeren paket [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] tarafından tanımlanabilecek tek dosya olduklarından bunların benzersiz olduğunu belirler.
 
-Paketi bir basitleştirme [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] çözüm için kaynak ve içerik dosyalarının konumlarını biraz bağımsız olarak kodu sağlar. Örneğin, bir içerik dosyası, paketi yeniden yerel bütünleştirilmiş kod kaynak dosyası varsa [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] paketi kullanan kodu gibi kaynak aynı şekilde kalır [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+Paket [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] çözümlemenin izin verdiği bir basitleştirme, kodun kaynak ve içerik dosyalarının konumlarından çok bağımsız olmasına yöneliktir. Örneğin, yerel derlemede bir içerik dosyası olarak yeniden yapılandırılmış bir kaynak dosyanız varsa, paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]kullanan kodla aynı şekilde kaynak paketi aynı kalır.
 
 <a name="Programming_with_Pack_URIs"></a>
 
-## <a name="programming-with-pack-uris"></a>Paketi bir URI'leri ile programlama
+## <a name="programming-with-pack-uris"></a>Paket URI 'Leri ile programlama
 
-Birçok [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sınıfları uygulama paketi ayarlanabilir özellikleri [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]de dahil olmak üzere:
+Birçok [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sınıf, paketiyle [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]birlikte ayarlanabilir özellikleri uygular, örneğin:
 
 - <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>
 
@@ -291,62 +291,62 @@ Birçok [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] s�
 
 - <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>
 
-Bu özellikleri biçimlendirme hem kod ayarlayabilirsiniz. Bu bölümde, her ikisi için de temel yapılarını gösterir ve daha sonra ortak senaryo örneklerini gösterir.
+Bu özellikler, hem biçimlendirmeden hem de koddan ayarlanabilir. Bu bölümde her ikisi için temel kurulumlarını ve ardından yaygın senaryolar örnekleri gösterilmektedir.
 
 <a name="Using_Pack_URIs_in_Markup"></a>
 
-### <a name="using-pack-uris-in-markup"></a>Paketi bir URI'leri biçimlendirme içinde kullanma
+### <a name="using-pack-uris-in-markup"></a>Biçimlendirmede paket URI 'Leri kullanma
 
-Bir paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] paketi ile bir öznitelik öğe ayarlayarak biçimlendirme içinde belirtilen [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]. Örneğin:
+Bir özniteliğin [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] öğesi paketle [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]ayarlanarak biçimlendirme içinde bir paket belirtilir. Örneğin:
 
 `<element attribute="pack://application:,,,/File.xaml" />`
 
-Tablo 1 gösterir çeşitli mutlak paketi [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , işaretlemede belirtebilirsiniz.
+Tablo 1, biçimlendirmede belirtebileceğiniz çeşitli mutlak [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] paketi gösterir.
 
-Tablo 1: Biçimlendirme içinde mutlak paketi URI'ler
+Tablo 1: Işaretlemede mutlak paket URI 'Leri
 
-|Dosya|Mutlak paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
+|Dosya|Mutlak paket[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
-|Kaynak dosyası - yerel derleme|`"pack://application:,,,/ResourceFile.xaml"`|
-|Alt - yerel bütünleştirilmiş kod kaynak dosyası|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|
-|Kaynak dosyası - başvurulan derleme|`"pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml"`|
-|Başvurulan derlemenin alt kaynak dosyası|`"pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|
-|Kaynak dosyasında tutulan başvurulan derleme|`"pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml"`|
+|Kaynak dosya-yerel derleme|`"pack://application:,,,/ResourceFile.xaml"`|
+|Alt klasör-yerel derlemede kaynak dosyası|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|
+|Kaynak dosyası ile başvurulan derleme|`"pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml"`|
+|Başvurulan derlemenin alt klasöründeki kaynak dosyası|`"pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|
+|Sürümlü başvurulan derlemede kaynak dosyası|`"pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml"`|
 |İçerik dosyası|`"pack://application:,,,/ContentFile.xaml"`|
-|İçerik dosyası alt|`"pack://application:,,,/Subfolder/ContentFile.xaml"`|
-|Site kaynak dosyası|`"pack://siteoforigin:,,,/SOOFile.xaml"`|
-|Kaynak dosya alt site|`"pack://siteoforigin:,,,/Subfolder/SOOFile.xaml"`|
+|Alt klasördeki içerik dosyası|`"pack://application:,,,/Subfolder/ContentFile.xaml"`|
+|Kaynak dosyanın sitesi|`"pack://siteoforigin:,,,/SOOFile.xaml"`|
+|Alt klasördeki kaynak dosyanın sitesi|`"pack://siteoforigin:,,,/Subfolder/SOOFile.xaml"`|
 
-Tablo 2'de çeşitli göreli paketi gösterilir [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , işaretlemede belirtebilirsiniz.
+Tablo 2 ' de, İşaretlemede [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] belirtebileceğiniz çeşitli göreli paket gösterilmektedir.
 
-Tablo 2: Biçimlendirme paketi göreli URI'ler
+Tablo 2: Işaretlemede göreli paket URI 'Leri
 
-|Dosya|Göreli paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
+|Dosya|Göreli paket[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
-|Yerel bütünleştirilmiş kod kaynak dosyası|`"/ResourceFile.xaml"`|
-|Alt klasör yerel bütünleştirilmiş kod kaynak dosyası|`"/Subfolder/ResourceFile.xaml"`|
-|Başvurulan bütünleştirilmiş kod kaynak dosyası|`"/ReferencedAssembly;component/ResourceFile.xaml"`|
-|Başvurulan derlemenin alt kaynak dosyası|`"/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|
+|Yerel derlemede kaynak dosyası|`"/ResourceFile.xaml"`|
+|Yerel derlemenin alt klasöründeki kaynak dosyası|`"/Subfolder/ResourceFile.xaml"`|
+|Başvurulan derlemedeki kaynak dosyası|`"/ReferencedAssembly;component/ResourceFile.xaml"`|
+|Başvurulan derlemenin alt klasöründeki kaynak dosyası|`"/ReferencedAssembly;component/Subfolder/ResourceFile.xaml"`|
 |İçerik dosyası|`"/ContentFile.xaml"`|
-|İçerik dosyası alt|`"/Subfolder/ContentFile.xaml"`|
+|Alt klasördeki içerik dosyası|`"/Subfolder/ContentFile.xaml"`|
 
 <a name="Using_Pack_URIs_in_Code"></a>
 
-### <a name="using-pack-uris-in-code"></a>Paketi bir URI'leri kodda kullanma
+### <a name="using-pack-uris-in-code"></a>Kodda paket URI 'Leri kullanma
 
-Bir paket belirtin [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] örnekleme tarafından kodda <xref:System.Uri> sınıfı ve paketi geçirme [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] oluşturucusuna bir parametre olarak. Bu, aşağıdaki örnekte gösterilmiştir.
+Sınıfı örnekleyerek ve [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] oluşturucuya bir parametre olarak geçirerek kodda bir paket belirtirsiniz. <xref:System.Uri> Bu, aşağıdaki örnekte gösterilmiştir.
 
 ```csharp
 Uri uri = new Uri("pack://application:,,,/File.xaml");
 ```
 
-Varsayılan olarak, <xref:System.Uri> sınıfı olarak değerlendirir, paketi [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] mutlak olacak şekilde. Sonuç olarak, bir özel durum örneği oluşturulur <xref:System.Uri> sınıfı göreli bir paketi ile oluşturulan [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].
+Varsayılan olarak, <xref:System.Uri> sınıfı paketi [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] mutlak kabul eder. Sonuç olarak, bir <xref:System.Uri> sınıf örneği bir göreli paketle [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]oluşturulduğunda bir özel durum tetiklenir.
 
 ```csharp
 Uri uri = new Uri("/File.xaml");
 ```
 
-Neyse ki, <xref:System.Uri.%23ctor%28System.String%2CSystem.UriKind%29> aşırı yükünü <xref:System.Uri> sınıf oluşturucusu türünde bir parametre kabul eden <xref:System.UriKind> belirtmek olanak tanımak için bir paket olup olmadığını [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] mutlak veya göreli.
+Neyse ki, <xref:System.Uri.%23ctor%28System.String%2CSystem.UriKind%29> <xref:System.Uri> sınıf oluşturucusunun aşırı yüklemesi, bir paketin [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] mutlak ya da <xref:System.UriKind> göreli olduğunu belirtmenize izin vermek için türünde bir parametre kabul eder.
 
 ```csharp
 // Absolute URI (default)
@@ -356,7 +356,7 @@ Uri relativeUri = new Uri("/File.xaml",
                         UriKind.Relative);
 ```
 
-Yalnızca belirtmelisiniz <xref:System.UriKind.Absolute> veya <xref:System.UriKind.Relative> olduğunuzda belirli, sağlanan paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] biri veya diğeri. Paketi türünü bilmiyorsanız [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] kullanılan, bir kullanıcı bir paketi girdiğinde gibi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] çalışma zamanında <xref:System.UriKind.RelativeOrAbsolute> yerine.
+Yalnızca <xref:System.UriKind.Absolute> [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] ya <xref:System.UriKind.Relative> da belirtilen paketin bir veya diğeri olduğunu belirtmeniz gerekir. Kullanıcı çalışma zamanında bir paket [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] girdiğinde olduğu gibi kullanılan paketin türünü bilmiyorsanız, bunun yerine kullanın <xref:System.UriKind.RelativeOrAbsolute> .
 
 ```csharp
 // Relative or Absolute URI provided by user via a text box
@@ -364,72 +364,72 @@ TextBox userProvidedUriTextBox = new TextBox();
 Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 ```
 
-Tablo 3'te gösterilir çeşitli göreli paketi [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] kullanarak kod içinde belirtebileceğiniz <xref:System.Uri?displayProperty=nameWithType>.
+Tablo 3 ' de kullanarak [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] <xref:System.Uri?displayProperty=nameWithType>kodda belirtebileceğiniz çeşitli göreli paket gösterilmektedir.
 
-Tablo 3: Kod paketi mutlak URI
+Tablo 3: Koddaki mutlak paket URI 'Leri
 
-|Dosya|Mutlak paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
+|Dosya|Mutlak paket[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
-|Kaynak dosyası - yerel derleme|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|
-|Alt - yerel bütünleştirilmiş kod kaynak dosyası|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
-|Kaynak dosyası - başvurulan derleme|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Absolute);`|
-|Başvurulan derlemenin alt kaynak dosyası|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
-|Kaynak dosyasında tutulan başvurulan derleme|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml", UriKind.Absolute);`|
+|Kaynak dosya-yerel derleme|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|
+|Alt klasör-yerel derlemede kaynak dosyası|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
+|Kaynak dosyası ile başvurulan derleme|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Absolute);`|
+|Başvurulan derlemenin alt klasöründeki kaynak dosyası|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
+|Sürümlü başvurulan derlemede kaynak dosyası|`Uri uri = new Uri("pack://application:,,,/ReferencedAssembly;v1.0.0.0;component/ResourceFile.xaml", UriKind.Absolute);`|
 |İçerik dosyası|`Uri uri = new Uri("pack://application:,,,/ContentFile.xaml", UriKind.Absolute);`|
-|İçerik dosyası alt|`Uri uri = new Uri("pack://application:,,,/Subfolder/ContentFile.xaml", UriKind.Absolute);`|
-|Site kaynak dosyası|`Uri uri = new Uri("pack://siteoforigin:,,,/SOOFile.xaml", UriKind.Absolute);`|
-|Kaynak dosya alt site|`Uri uri = new Uri("pack://siteoforigin:,,,/Subfolder/SOOFile.xaml", UriKind.Absolute);`|
+|Alt klasördeki içerik dosyası|`Uri uri = new Uri("pack://application:,,,/Subfolder/ContentFile.xaml", UriKind.Absolute);`|
+|Kaynak dosyanın sitesi|`Uri uri = new Uri("pack://siteoforigin:,,,/SOOFile.xaml", UriKind.Absolute);`|
+|Alt klasördeki kaynak dosyanın sitesi|`Uri uri = new Uri("pack://siteoforigin:,,,/Subfolder/SOOFile.xaml", UriKind.Absolute);`|
 
-Tablo 4 gösterir çeşitli göreli paketi [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] kod kullanarak belirtebileceğiniz <xref:System.Uri?displayProperty=nameWithType>.
+Tablo 4 ' te, kullanarak [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] <xref:System.Uri?displayProperty=nameWithType>kod içinde belirtebileceğiniz çeşitli göreli paket gösterilmektedir.
 
-Tablo 4: Kod paketi göreli URI'ler
+Tablo 4: Koddaki göreli paket URI 'Leri
 
-|Dosya|Göreli paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
+|Dosya|Göreli paket[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
-|Kaynak dosyası - yerel derleme|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|
-|Alt - yerel bütünleştirilmiş kod kaynak dosyası|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
-|Kaynak dosyası - başvurulan derleme|`Uri uri = new Uri("/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Relative);`|
-|Alt - başvurulan bütünleştirilmiş kod kaynak dosyası|`Uri uri = new Uri("/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
+|Kaynak dosya-yerel derleme|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|
+|Alt klasör-yerel derlemede kaynak dosyası|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
+|Kaynak dosyası ile başvurulan derleme|`Uri uri = new Uri("/ReferencedAssembly;component/ResourceFile.xaml", UriKind.Relative);`|
+|Alt klasör ile başvurulan derlemede kaynak dosyası|`Uri uri = new Uri("/ReferencedAssembly;component/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
 |İçerik dosyası|`Uri uri = new Uri("/ContentFile.xaml", UriKind.Relative);`|
-|İçerik dosyası alt|`Uri uri = new Uri("/Subfolder/ContentFile.xaml", UriKind.Relative);`|
+|Alt klasördeki içerik dosyası|`Uri uri = new Uri("/Subfolder/ContentFile.xaml", UriKind.Relative);`|
 
 <a name="Common_Pack_URI_Scenarios"></a>
 
-### <a name="common-pack-uri-scenarios"></a>Pack URI'si senaryoları
+### <a name="common-pack-uri-scenarios"></a>Ortak paket URI senaryoları
 
-Önceki bölümlerde ele alınan paketi oluşturmak nasıl [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] kaynağı, içerik ve kaynak dosyaları sitesi tanımlamak için. İçinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]bu yapılarını çeşitli şekillerde kullanılır ve aşağıdaki bölümler birkaç yaygın kullanımları kapsar.
+Yukarıdaki bölümlerde kaynak, içerik ve kaynak dosyalarının kaynağını [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] tanımlamak üzere paket oluşturma konusu ele alınmıştır. ' [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]De, bu kurulumlarını çeşitli yollarla kullanılır ve aşağıdaki bölümlerde birçok yaygın kullanımlar ele alınmaktadır.
 
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>
 
-#### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>Bir uygulama başlatıldığında göstermek için kullanıcı Arabirimi belirtme
+#### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>Uygulamanın başladığı zaman gösterilecek Kullanıcı arabirimini belirtme
 
-<xref:System.Windows.Application.StartupUri%2A> ilk belirtir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] olduğunda gösterilecek bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama başlatılır. Tek başına uygulamalar için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aşağıdaki örnekte gösterildiği gibi bir pencere olabilir.
+<xref:System.Windows.Application.StartupUri%2A>[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bir[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama başlatıldığında görüntülenecek olan ilkini belirtir. Tek başına uygulamalar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] için, aşağıdaki örnekte gösterildiği gibi bir pencere olabilir.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
-Tek başına uygulamalar ve [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] bir sayfa ilk kullanıcı Arabirimi, aşağıdaki örnekte gösterildiği gibi belirtebilirsiniz.
+Ayrıca, aşağıdaki [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] örnekte gösterildiği gibi, tek başına uygulamalar ve ilk kullanıcı arabirimi olarak bir sayfa da belirtebilir.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-Uygulama bir tek başına uygulamasıdır ve bir sayfa ile belirtilen <xref:System.Windows.Application.StartupUri%2A>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] açılır bir <xref:System.Windows.Navigation.NavigationWindow> sayfası barındırabilir. İçin [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], konak tarayıcıda sayfası gösterilir.
+Uygulama tek başına bir uygulama ve bir sayfa ile <xref:System.Windows.Application.StartupUri%2A>belirtilirse, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sayfayı barındırmak için bir <xref:System.Windows.Navigation.NavigationWindow> açar. İçin [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], sayfa konak tarayıcısında gösterilir.
 
 <a name="Navigating_to_a_Page"></a>
 
 #### <a name="navigating-to-a-page"></a>Bir sayfaya gitme
 
-Aşağıdaki örnek, bir sayfaya gitmek gösterilmektedir.
+Aşağıdaki örnek, bir sayfaya nasıl gidebileceğiniz gösterilmektedir.
 
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml1)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]
 
-Gezinme için çeşitli yollar hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], bkz: [gezintiye genel bakış](navigation-overview.md).
+İçinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]gezinmek için çeşitli yollar hakkında daha fazla bilgi için bkz. [gezintiye genel bakış](navigation-overview.md).
 
 <a name="Specifying_a_Window_Icon"></a>
 
-#### <a name="specifying-a-window-icon"></a>Pencere simgesini belirtme
+#### <a name="specifying-a-window-icon"></a>Pencere simgesi belirtme
 
-Aşağıdaki örnek, bir pencerenin simgesini belirtmek için bir URI kullanmayı gösterir.
+Aşağıdaki örnek, bir pencerenin simgesini belirtmek için bir URI 'yi nasıl kullanacağınızı gösterir.
 
 [!code-xaml[WindowIconSnippets#WindowIconSetXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]
 
@@ -437,9 +437,9 @@ Daha fazla bilgi için bkz. <xref:System.Windows.Window.Icon%2A>.
 
 <a name="Loading_Image__Audio__and_Video_Files"></a>
 
-#### <a name="loading-image-audio-and-video-files"></a>Görüntü, ses ve Video dosyaları yükleniyor
+#### <a name="loading-image-audio-and-video-files"></a>Görüntü, ses ve video dosyaları yükleniyor
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaların tümü algılanabilir ve paketi yüklü medya türleri, birçok farklı kullanmasını sağlayan [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]aşağıdaki örneklerde gösterildiği gibi.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]uygulamaların, aşağıdaki örneklerde gösterildiği gibi, hepsi tarafından [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]tanımlanabilecek ve yüklenebilecek çok çeşitli medya türlerini kullanmasına olanak sağlar.
 
 [!code-xaml[MediaPlayerVideoSample#VideoPackURIAtSOO](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]
 
@@ -447,17 +447,17 @@ Daha fazla bilgi için bkz. <xref:System.Windows.Window.Icon%2A>.
 
 [!code-xaml[ImageSample#ImagePackURIContent](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageSample/CS/HomePage.xaml#imagepackuricontent)]
 
-Medya içeriği ile çalışma hakkında daha fazla bilgi için bkz. [grafikler ve multimedya](../graphics-multimedia/index.md).
+Medya içeriğiyle çalışma hakkında daha fazla bilgi için bkz. [grafik ve multimedya](../graphics-multimedia/index.md).
 
 <a name="Loading_a_Resource_Dictionary_from_the_Site_of_Origin"></a>
 
-#### <a name="loading-a-resource-dictionary-from-the-site-of-origin"></a>Kaynak sitesinden bir kaynak sözlüğü yükleniyor
+#### <a name="loading-a-resource-dictionary-from-the-site-of-origin"></a>Kaynak sitesinden kaynak sözlüğü yükleme
 
-Kaynak sözlükleri (<xref:System.Windows.ResourceDictionary>) uygulama temaları desteklemek için kullanılabilir. Oluşturup temalarını yönetmek için bir yolu, bir uygulamanın kaynak sitede bulunan kaynak sözlükleri olarak birden çok tema oluşturmaktır. Bu, temalar eklenmesi ve güncelleştirilmiş yeniden derlemeden ve bir uygulama dağıtarak sağlar. Bu kaynak sözlükleri tanımlanabilir ve paketi kullanılarak yüklenen [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], aşağıdaki örnekte gösterilmiştir.
+Kaynak sözlükleri (<xref:System.Windows.ResourceDictionary>), uygulama temalarını desteklemek için kullanılabilir. Temaları oluşturmanın ve yönetmenin bir yolu, uygulamanın kaynak sitesinde bulunan kaynak sözlükleri olarak birden çok tema oluşturmaktır. Bu, bir uygulamayı yeniden derleme ve yeniden dağıtmaya gerek kalmadan temaların eklenmesini ve güncelleştirilmesini sağlar. Bu kaynak sözlükleri, aşağıdaki örnekte gösterilen Pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]kullanılarak tanımlanabilir ve yüklenebilir.
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
-Temalar da genel bir bakış için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], bkz: [stil ve şablon oluşturma](../controls/styling-and-templating.md).
+İçindeki [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]temalara genel bakış için bkz. [Stil oluşturma ve şablon](../controls/styling-and-templating.md)oluşturma.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,34 +1,34 @@
 ---
-title: 'Nasıl yapılır: -Sorguda lambda ifadeleri kullanma C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Sorgu C# programlama kılavuzunda lambda ifadeleri kullanma'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 18f8823327719a120888df580779125be5d07b2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad9feed7ea3d96267d632f4ca4bc992f2c8d335f
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710218"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796652"
 ---
-# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Nasıl yapılır: Bir sorguda lambda ifadeleri kullanma (C# Programlama Kılavuzu)
-Lambda ifadeleri doğrudan sorgu sözdizimini kullanmayın, ancak yöntem çağrılarında kullanın ve sorgu ifadeleri yöntem çağrılarını içerebilir. Aslında, bazı sorgu işlemlerinin yalnızca yöntem sözdizimi ifade edilebilir. Sorgu sözdizimi ve yöntem sözdizimi arasındaki fark hakkında daha fazla bilgi için bkz: [sorgu sözdizimi ve yöntem sözdizimi LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Nasıl yapılır: Bir sorguda lambda Ifadeleri kullanma (C# Programlama Kılavuzu)
+Lambda ifadelerini doğrudan sorgu sözdiziminde kullanamazsınız, ancak bunları yöntem çağrılarında kullanın ve sorgu ifadeleri Yöntem çağrıları içerebilir. Aslında, bazı sorgu işlemleri yalnızca yöntem sözdiziminde ifade edilebilir. Sorgu sözdizimi ve Yöntem sözdizimi arasındaki fark hakkında daha fazla bilgi için bkz. [LINQ 'Te sorgu sözdizimi ve Yöntem sözdizimi](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir lambda ifadesi bir metot tabanlı sorgu kullanarak gösterilmiştir <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> standart sorgu işleci. Unutmayın <xref:System.Linq.Enumerable.Where%2A> yöntemi bu örnekte temsilci türünün giriş parametresi vardır <xref:System.Func%601> ve bu temsilci, giriş olarak bir tamsayı olarak alır ve bir Boole değeri döndürür. Lambda ifadesi bu temsilciye dönüştürülebilir. Bu olsaydı bir [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] kullanılan sorgu <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType> yöntemi, parametre türü olacak bir `Expression<Func<int,bool>>` ancak lambda ifadesi tam olarak aynı görünür. İfade türü hakkında daha fazla bilgi için bkz. <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType>.  
+ Aşağıdaki örnek, bir lambda ifadesinin <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> standart sorgu işleci kullanılarak Yöntem tabanlı bir sorguda nasıl kullanılacağını göstermektedir. Bu örnekteki <xref:System.Linq.Enumerable.Where%2A> yöntemin temsilci türünde <xref:System.Func%602> bir giriş parametresi olduğuna ve bu temsilcinin girdi olarak bir tamsayı aldığını ve bir Boole değeri döndürdüğünden emin olduğunu unutmayın. Lambda ifadesi bu temsilciye dönüştürülebilir. Bu <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType> yöntemi kullanan bir [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] sorgu olsaydı, parametre türü bir `Expression<Func<int,bool>>` olur ancak lambda ifadesi tamamen aynı şekilde görünür. Ifade türü hakkında daha fazla bilgi için bkz <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType>.  
   
  [!code-csharp[csProgGuideLINQ#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#1)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir sorgu ifadesinde yöntem çağrısında bir lambda ifadesi kullanmayı gösterir. Lambda gereklidir çünkü <xref:System.Linq.Enumerable.Sum%2A> standart sorgu işleci sorgu söz dizimi kullanılarak çağrılamaz.  
+ Aşağıdaki örnek, bir sorgu ifadesinin Yöntem çağrısında bir lambda ifadesinin nasıl kullanılacağını göstermektedir. <xref:System.Linq.Enumerable.Sum%2A> Standart sorgu işleci sorgu sözdizimi kullanılarak çağrılamadığından lambda gereklidir.  
   
- Sorguyu ilk sınıfında tanımlandığı gibi öğrencilerin sınıf düzeylerine göre gruplar `GradeLevel` sabit listesi. Ardından her grubu için toplam puanları için her öğrencinin ekler. Bu iki gerektirir `Sum` operations. İç `Sum` toplam puanı, her Öğrenci ve dış hesaplar `Sum` çalışan bir tutar toplam grubundaki tüm Öğrenciler için.  
+ Sorgu ilk olarak öğrencileri, `GradeLevel` numaralandırmasında tanımlandığı şekilde kendi sınıf düzeylerine göre gruplandırır. Ardından her bir grup için her öğrenci için toplam puanları ekler. Bunun için iki `Sum` işlem gerekir. İç `Sum` , her öğrencinin toplam Puanını hesaplar ve dış `Sum` , gruptaki tüm öğrenciler için çalışan ve Birleşik bir toplam tutar.  
   
  [!code-csharp[csProgGuideLINQ#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#2)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu kodu çalıştırmak için kopyalayıp yönteme `StudentClass` içinde sağlanan [nasıl yapılır: Nesnelerin koleksiyonu sorgulama](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md) ve ondan çağrı `Main` yöntemi.  
+ Bu kodu çalıştırmak için, yöntemini `StudentClass` [kopyalayıp nasıl yapılır: Bir nesne](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md) koleksiyonunu sorgulayın ve `Main` yönteminden çağırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

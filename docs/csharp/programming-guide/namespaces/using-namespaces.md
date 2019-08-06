@@ -8,17 +8,19 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: bf194e207262ecea0511a0b67bbafeadd8d5d31d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 06ebb9edfaf4753b98c3305a90b52e93ee7b4486
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629497"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796640"
 ---
-# <a name="using-namespaces-c-programming-guide"></a>Ad Alanlarını Kullanma (C# Programlama Kılavuzu)
+# <a name="using-namespaces-c-programming-guide"></a>Ad alanlarını kullanmaC# (Programlama Kılavuzu)
+
 Ad alanları programlar içinde C# yoğun olarak iki şekilde kullanılır. İlk olarak, .NET Framework sınıfları, birçok sınıfını düzenlemek için ad alanlarını kullanır. İkinci olarak, kendi ad alanlarınızı bildirmek, sınıf ve yöntem adlarının kapsamını daha büyük programlama projelerinde denetlemenize yardımcı olabilir.  
   
-## <a name="accessing-namespaces"></a>Ad alanlarına erişme  
+## <a name="accessing-namespaces"></a>Ad alanlarına erişme
+
  Çoğu C# uygulama, `using` yönergelerin bir bölümüyle başlar. Bu bölüm, uygulamanın sıklıkla kullanacağı ad alanlarını listeler ve içinde yer alan bir yöntemin kullanıldığı her seferinde her defasında tam nitelikli bir ad belirtmekten tasarruf eder.  
   
  Örneğin, satırını dahil ederek:  
@@ -33,17 +35,20 @@ Ad alanları programlar içinde C# yoğun olarak iki şekilde kullanılır. İlk
   
  [!code-csharp[csProgGuide#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#30)]  
   
-## <a name="namespace-aliases"></a>Ad uzayı diğer adları  
- [Using yönergesi](../../../csharp/language-reference/keywords/using-directive.md) , bir [ad uzayı](../../../csharp/language-reference/keywords/namespace.md)için bir diğer ad oluşturmak için de kullanılabilir. Örneğin, iç içe geçmiş ad alanları içeren önceden yazılmış bir ad alanı kullanıyorsanız, aşağıdaki örnekte olduğu gibi, bir diğer ad bildirmek için bir diğer ad bildirmek isteyebilirsiniz:  
+## <a name="namespace-aliases"></a>Ad uzayı diğer adları
+
+ Bir ad alanı için bir diğer ad oluşturmak için [ `using` yönergesini](../../language-reference/keywords/using-directive.md) de kullanabilirsiniz. Diğer ad alanının üyelerine erişmek için [ad alanı diğer `::` adı niteleyicisi](../../language-reference/operators/namespace-alias-qualifier.md) kullanın. Aşağıdaki örnek, bir ad alanı diğer adının nasıl oluşturulduğunu ve kullanılacağını gösterir:
   
- [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
+[!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]
   
-## <a name="using-namespaces-to-control-scope"></a>Kapsamı denetlemek için ad alanlarını kullanma  
+## <a name="using-namespaces-to-control-scope"></a>Kapsamı denetlemek için ad alanlarını kullanma
+
  `namespace` Anahtar sözcüğü bir kapsamı bildirmek için kullanılır. Projenizin içinde kapsam oluşturma özelliği, kodun düzenlenmesine yardımcı olur ve küresel olarak benzersiz türler oluşturmanıza olanak sağlar. Aşağıdaki örnekte, başlıklı `SampleClass` bir sınıf, diğeri içinde iç içe iki ad alanında tanımlanır. [ `.` Üye erişim işleci](../../language-reference/operators/member-access-operators.md#member-access-operator-) , hangi yöntemin çağracağını ayırt etmek için kullanılır.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
-## <a name="fully-qualified-names"></a>Tam nitelikli adlar  
+## <a name="fully-qualified-names"></a>Tam nitelikli adlar
+
  Ad alanları ve türler, bir mantıksal hiyerarşiyi gösteren tam nitelikli adlarla tanımlanan benzersiz başlıklara sahiptir. Örneğin, ifade `A.B` , ad alanının veya `A` türün adı olduğunu ve `B` içinde iç içe geçmiş olduğunu gösterir.  
   
  Aşağıdaki örnekte, iç içe geçmiş sınıflar ve ad alanları vardır. Tam nitelikli ad her bir varlıktan sonra bir yorum olarak belirtilir.  
@@ -92,6 +97,6 @@ Ad alanları programlar içinde C# yoğun olarak iki şekilde kullanılır. İlk
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [Ad Alanları](../../../csharp/programming-guide/namespaces/index.md)
-- [. İşleç](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
-- [:: İşleç](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
+- [. işlecinde](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
+- [:: işleci](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
 - [extern diğer adı](../../../csharp/language-reference/keywords/extern-alias.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: f44bb1f010f154973fc6982882c9b5a09528da76
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b163981d3cf6d56ab953757931b0b386a47263ff
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629448"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796282"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Nasıl yapılır: Genel ad alanı diğer adını kullanınC# (Programlama Kılavuzu)
 Genel [ad](../../../csharp/language-reference/keywords/namespace.md) alanındaki bir üyeye erişme özelliği, üyenin aynı ada sahip başka bir varlık tarafından gizlenmesi durumunda faydalıdır.  
@@ -37,15 +37,6 @@ Genel [ad](../../../csharp/language-reference/keywords/namespace.md) alanındaki
   
  Kuşkusuz, adlı `System` kendi ad alanlarınızı oluşturmanız önerilmez ve bunun gerçekleştiği bir kodla karşılaşmanız düşüktür. Ancak, daha büyük projelerde ad alanı çoğaltmasının tek bir formda veya başka bir biçimde gerçekleşebileceğini çok gerçek bir olasılık. Bu durumlarda, genel ad alanı niteleyicisi, kök ad alanını belirleyebilmenizi güvence altına alabilir.  
   
-## <a name="example"></a>Örnek  
- Bu örnekte, ad alanı `System` sınıfı `TestClass` eklemek için kullanılır, bu nedenle, `global::System.Console` `System` ad alanı tarafından gizlenen `System.Console` sınıfa başvurmak için kullanılmalıdır. Ayrıca, diğer `colAlias` ad ad alanına `System.Collections`başvurmak için kullanılır; bu nedenle <xref:System.Collections.Hashtable?displayProperty=nameWithType> , öğesinin örneği ad alanı yerine bu diğer ad kullanılarak oluşturulmuştur.  
-  
- [!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]  
-  
-**A 1**
-**B 2**
-**C 3**
-
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)

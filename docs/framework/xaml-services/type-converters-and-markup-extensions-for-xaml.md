@@ -8,62 +8,62 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: 6d859f5f341eaf7c86573077ec56eab7b4cd7bb8
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: d31d970e8e95726aa789f853ac12c4830498a743
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722549"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796836"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları
-Tür dönüştürücülerinde ve İşaretleme uzantılarında Nesne grafiği bileşenleri oluşturmak için XAML türü sistemleri ve XAML yazarları kullanan iki tekniklerdir. Farklı bazı özellikleri paylaşır olsa da, tür dönüştürücüleri ve İşaretleme uzantılarında XAML düğümü akışı temsil edilir. Bu belgede kümesi, tür dönüştürücüleri, biçimlendirme uzantılarını ve benzer yapıları bazen topluca için değer dönüştürücüler adlandırılır.  
+Tür dönüştürücüler ve biçimlendirme uzantıları, XAML tür sistemleri ve XAML yazıcılarının nesne Graph bileşenleri oluşturmak için kullandığı iki tekniktir. Bazı özellikleri paylaşmakla birlikte, tür dönüştürücüler ve biçimlendirme uzantıları XAML düğüm akışında farklı şekilde temsil edilir. Bu belge kümesinde dönüştürücüler, biçimlendirme uzantıları ve benzer yapılar bazen değer dönüştürücüler olarak adlandırılır.  
   
 <a name="value_converters"></a>   
 ## <a name="value-converters"></a>Değer dönüştürücüler  
- XAML içinde değer dönüştürücüler çeşitli senaryolar için kullanılır. Aşağıdaki liste, XAML değer dönüştürücüler farklı türde gösterir:  
+ XAML 'de, değer dönüştürücüler çeşitli senaryolar için kullanılır. Aşağıdaki liste, XAML 'de farklı değer dönüştürücülerinin türlerini gösterir:  
   
-- Tür dönüştürücü  
+- Tür dönüştürücüsü  
   
-- İşaretleme uzantısı  
+- Biçimlendirme uzantısı  
   
 - Değer seri hale getirici  
   
-- İlgili sınıfı veya XAML metni sözdizimi mantığı sağlayan destek sınıfı  
+- XAML metin sözdizimi için mantık sağlayan ilgili sınıf veya destek sınıfı  
   
 <a name="type_converters"></a>   
-## <a name="type-converters"></a>Tür dönüştürücüleri  
- .NET Framework XAML hizmetlerinde tanımında tür dönüştürücüleri CLR'den türetilen sınıflardır <xref:System.ComponentModel.TypeConverter> sınıfı. <xref:System.ComponentModel.TypeConverter> Microsoft .NET Framework XAML yokken olan bir sınıftır. Windows özelliği ve metin tabanlı benzer düzenleme metaphors için desteklemek için asıl amacı olan [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] özellikleri. .NET Framework XAML sunulmasıyla kullanan <xref:System.ComponentModel.TypeConverter> metin sözdizimi (olarak bir öznitelik değeri ya da XAML değer düğümü bulundu) bir nesneye dönüştürmek için. <xref:System.ComponentModel.TypeConverter> Ayrıca bir nesne değeri metin sözdizimi için seri hale getirmek için kullanılabilir. <xref:System.ComponentModel.TypeConverter> Windows Presentation Foundation (WPF) ve Windows Communication Foundation (WCF) önceki çerçeveye özgü XAML uygulamalarında da kullanıldı. Hakkında daha fazla bilgi için <xref:System.ComponentModel.TypeConverter> XAML içinde bkz [genel XAML tür Dönüştürücülerine](type-converters-for-xaml-overview.md).  
+## <a name="type-converters"></a>Tür dönüştürücüler  
+ .NET Framework xaml Hizmetleri tanımında, tür dönüştürücüler clr <xref:System.ComponentModel.TypeConverter> sınıfından türetilen sınıflardır. <xref:System.ComponentModel.TypeConverter>, XAML 'den önce Microsoft .NET Framework içinde olan bir sınıftır. Özgün amacı, özellik pencerelerini ve IDE özellikleri için de benzer metin tabanlı düzenlemeler destekliyoruz. .NET Framework xaml 'ye giriş, bir metin <xref:System.ComponentModel.TypeConverter> söz dizimini (öznitelik değeri veya xaml değer düğümünde bulunduğu şekilde) bir nesneye dönüştürmek için kullanır. <xref:System.ComponentModel.TypeConverter>, bir nesne değerini metin sözdizimine seri hale getirmek için de kullanılabilir. <xref:System.ComponentModel.TypeConverter>Ayrıca, Windows Presentation Foundation (WPF) ve Windows Communication Foundation (WCF) içindeki önceki çerçeveye özgü XAML uygulamalarında da kullanılmıştı. Xaml <xref:System.ComponentModel.TypeConverter> 'de hakkında daha fazla bilgi için bkz. [XAML için tür dönüştürücüleri genel bakış](type-converters-for-xaml-overview.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>Biçimlendirme uzantıları  
- Türetilen sınıflar .NET Framework XAML hizmetlerinde uygulamasında biçimlendirme uzantılarıdır <xref:System.Windows.Markup.MarkupExtension> sınıfı. Biçimlendirme uzantıları, bu form XAML dili tarafından oluşturulan bir kavramdır. Bir işaretleme uzantısı gibi mantığını sağlamak için bir hizmet sınıfına çağıran bir Genişletilebilir kaçış dizisi olarak düşünebilirsiniz. Biçimlendirme açısından XAML işlemci Evrensel bir işaretleme uzantısı, bir metin dizesindeki bir açılış ayracı ({}) ile başlayan bir metin diziyle tanır.  
+ .NET Framework xaml Hizmetleri uygulamasında, biçimlendirme uzantıları <xref:System.Windows.Markup.MarkupExtension> sınıfından türetilen sınıflardır. Biçimlendirme uzantıları, bu formda XAML dili tarafından oluşturulan bir kavramdır. Bir biçimlendirme uzantısını, mantığını sağlamak için bir hizmet sınıfına çağıran bir Genişletilebilir kaçış sırası gibi düşünebilirsiniz. Biçimlendirme açısından XAML işlemcileri, bir metin dizesinde açma ayracı ({) ile başlayan bir metin dizisi ile biçimlendirme uzantısını evrensel olarak tanır.  
   
- Biçimlendirme uzantıları tür dönüştürücüleri farklı. Tür dönüştürücüleri genellikle türleri veya üyeleri ile ilişkilidir. Bir nesne grafiği oluşturma sırasında çağrılan veya bu varlıklarla ilişkili metin sözdiziminin bir seri hale getirme karşılaşır.  
+ Biçimlendirme uzantıları tür dönüştürücülerden farklıdır. Tür dönüştürücüler genellikle türler veya üyelerle ilişkilendirilir. Bir nesne grafiği oluşturma veya serileştirme, bu varlıklarla ilişkili bir metin söz dizimi ile karşılaştığında çağırılır.  
   
- Biçimlendirme uzantıları, tek bir destek hizmeti sınıf ile ilişkilendirilir, ancak herhangi bir üyenin değeri için uygulanabilir. (Ancak, kasıtlı olarak kullanımını belirli üyeleri veya hedef türleri, hizmet bağlamı kullanarak kısıtlamak için bir işaretleme uzantısı uygulayabilirsiniz.) Biçimlendirme uzantıları, bir tür dönüştürücüsü ilişkilendirme geçersiz kılabilirsiniz. Veya bir metin söz dizimi desteğimizi sonlandıracağımızı olmayan üyeler için bir öznitelik değeri belirtmek için kullanabilirsiniz.  
+ Biçimlendirme uzantıları tek bir destekleme hizmeti sınıfıyla ilişkilendirilir, ancak herhangi bir üye değeri için uygulanabilir. (Ancak, hizmet bağlamını kullanarak kullanımını belirli üyelere veya hedef türlerine kasıtlı olarak kısıtlamak için biçimlendirme uzantınızı uygulayabilirsiniz.) Biçimlendirme uzantıları, bir tür dönüştürücü ilişkilendirmesini geçersiz kılabilir. Alternatif olarak, bir metin sözdizimini desteklemeyen Üyeler için bir öznitelik değeri belirtmek üzere bunları kullanabilirsiniz.  
   
- XAML işaretleme uzantısı uygulama modeli hakkında daha fazla bilgi için bkz. [genel XAML işaretleme uzantılarına](markup-extensions-for-xaml-overview.md).  
+ XAML için biçimlendirme uzantısı uygulama düzeniyle ilgili daha fazla bilgi için bkz. [xaml Için biçimlendirme uzantıları genel bakış](markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> Ve <xref:System.Windows.Markup.ValueSerializer> türleridir hem de <xref:System.Windows.Markup> ad alanı ve de <xref:System.Xaml> ad alanı. Bu bu tür aksi dizeyi içeren CLR ad alanları doldurmak WPF veya Windows Forms teknolojiye özgü göstermez `Windows`. <xref:System.Windows.Markup.MarkupExtension> ve <xref:System.Windows.Markup.ValueSerializer> System.Xaml derlemede ve belirli framework bağımlılığı olmayan sahiptir. Bu türler, .NET Framework 3.0 için CLR ad alanında varolduğunu ve CLR ad alanı başvuruları varolan WPF projelerinde bozmayı önlemek için .NET Framework 4 içinde kalır. Daha fazla bilgi için [geçirilen türler wpf'den System.XAML'ye](types-migrated-from-wpf-to-system-xaml.md).  
+>  <xref:System.Windows.Markup.MarkupExtension> Ve <xref:System.Windows.Markup.ValueSerializer> türleri ad alanında değil <xref:System.Windows.Markup> ad alanında bulunur. <xref:System.Xaml> Bu, bu türlerin WPF veya Windows Forms teknolojilerine özgü olduğunu göstermez, aksi takdirde dize `Windows`içeren clr ad alanlarını dolduracaktır. <xref:System.Windows.Markup.MarkupExtension>System <xref:System.Windows.Markup.ValueSerializer> . xaml derlemesinde ve belirli bir çerçeve bağımlılığı yoktur. Bu türler .NET Framework 3,0 için CLR ad alanında vardı ve var olan WPF projelerindeki başvuruların oluşmasını önlemek için .NET Framework 4 ' teki CLR ad alanında kalır. Daha fazla bilgi için bkz. [WPF 'Den System. xaml 'e geçirilen türler](types-migrated-from-wpf-to-system-xaml.md).  
   
 <a name="value_serializers"></a>   
-## <a name="value-serializers"></a>Değer seri hale getiricileri genişletme  
- A <xref:System.Windows.Markup.ValueSerializer> nesneyi bir dizeye dönüştürmek için optimize edilmiş bir özel tür dönüştürücü. A <xref:System.Windows.Markup.ValueSerializer> XAML değil uygulayabilir için `ConvertFrom` hiç yöntemi. A <xref:System.Windows.Markup.ValueSerializer> uygulaması edinir Hizmetleri gibi bir şekilde bir <xref:System.ComponentModel.TypeConverter> uygulaması. Sanal yöntemleri bir giriş sağlaması `context` parametresi. `context` Parametre türüdür <xref:System.Windows.Markup.IValueSerializerContext>, işlevinden devralan <xref:System.IServiceProvider> arabirim ve sahip bir <xref:System.IServiceProvider.GetService%2A> yöntemi.  
+## <a name="value-serializers"></a>Değer serileştiricileri  
+ <xref:System.Windows.Markup.ValueSerializer> , Bir nesneyi dizeye dönüştürmek için optimize edilmiş özel bir tür dönüştürücütür. Bir <xref:System.Windows.Markup.ValueSerializer> XAML için bir, `ConvertFrom` metodu hiç uygulayamaz. Uygulama, Hizmetleri <xref:System.ComponentModel.TypeConverter> uygulama gibi bir şekilde edinir. <xref:System.Windows.Markup.ValueSerializer> Sanal yöntemler bir giriş `context` parametresi sağlar. Parametresi, arabiriminden devralan ve <xref:System.Windows.Markup.IValueSerializerContext> bir<xref:System.IServiceProvider.GetService%2A> yöntemine sahip olan türüdür. <xref:System.IServiceProvider> `context`  
   
- XAML tür sisteminde ve seri hale getirme için XAML düğümü çevrim işleme kullanan XAML yazıcı uygulamaları için bir tür veya üye ile ilişkili bir değer dönüştürücü kendi tarafından bildirilen <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> özelliği. Serileştirme gerçekleştiren XAML yazıcılar anlamı ise bir <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> ve <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> yok, yükleme yolu için tür dönüştürücüsü kullanılmalıdır ve değeri seri hale getirici kaydetme için kullanılması gereken yolu. Varsa <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> var ancak <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> olduğu `null`, tür dönüştürücüsünü kaydetme için de kullanılır yolu.  
+ Xaml tür sisteminde ve serileştirme için xaml düğüm döngüsü işleme kullanan XAML yazıcı uygulamalarında, bir tür veya üyeyle ilişkili bir değer Dönüştürücüsü kendi <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> özelliği tarafından raporlanır. Serileştirme gerçekleştiren xaml yazıcılarının anlamı, bir ve <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> varsa, tür dönüştürücüsünün yükleme yolu için kullanılması ve kayıt için seri hale getirici 'nin bir değer olarak kullanılması gerekir. Varsa, ancak <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> , tür dönüştürücüsü Kaydet yolu için de kullanılır. `null` <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType>  
   
 <a name="other_value_converters"></a>   
 ## <a name="other-value-converters"></a>Diğer değer dönüştürücüler  
- Bir değer dönüştürücü dışında bir tür dönüştürücüsü veya bir işaretleme uzantısı belirli desenlerle genişletilebilir. Ancak, bu özelleştirme .NET Framework XAML hizmetlerinde tarafından sağlanan XAML tür sistemi yeniden tanımlanması gerekir. Gösterimler ve raporlama sistemleri için tür dönüştürücüleri ve İşaretleme uzantıları değeri seri hale getiricileri genişletme, ancak özel formlar değeri dönüştürme için mevcut XAML tür sistemi vardır. Özel değer dönüştürücüler oluşturmak istediğiniz kullanırsanız <xref:System.Xaml.Schema.XamlValueConverter%601> türü.  
+ Bir değer Dönüştürücüsü, bir tür dönüştürücünün veya biçimlendirme uzantısının belirli desenlerinin ötesinde genişletilebilir. Ancak, bu özelleştirme XAML türü sisteminin .NET Framework XAML Hizmetleri tarafından sağlandığı şekilde yeniden tanımlanması de gerektirir. Var olan XAML tür sisteminde tür dönüştürücüler, biçimlendirme uzantıları ve değer serileştiricileri için temsiller ve raporlama sistemleri vardır, ancak özel değer dönüştürme biçimleri için kullanılamaz. Özel değer dönüştürücüler oluşturmak istiyorsanız, <xref:System.Xaml.Schema.XamlValueConverter%601> türü kullanın.  
   
 <a name="type_converters_and_markup_extensions_in_combination"></a>   
-## <a name="type-converters-and-markup-extensions-in-combination"></a>Tür dönüştürücülerinde ve İşaretleme uzantılarında birlikte  
- İşaretleme uzantıları ve tür dönüştürücüleri XAML farklı durumlarda kullanılır. Bağlam için işaretleme uzantısı kullanımları kullanılabilir olsa da, burada bir değerdir genellikle bir işaretleme uzantısı sağlar. özellikleri türü dönüştürme davranışını işaretleme uzantısı uygulamalarında işaretlenmemiştir. Diğer bir deyişle, bile bir işaretleme uzantısı bir metin dizesi olarak döndürür, `ProvideValue` çıkışı, belirli özellik ya da özellik değeri türü uygulanan olarak bu dize türü dönüştürme davranışını değil çağrılır. Genellikle, bir işaretleme uzantısı amacı bir dize işleme ve ilgili herhangi bir tür dönüştürücüsü olmadan bir nesne döndürür oluşturmaktır.  
+## <a name="type-converters-and-markup-extensions-in-combination"></a>Kombinasyonda tür dönüştürücüler ve biçimlendirme uzantıları  
+ Biçimlendirme uzantıları ve tür dönüştürücüler XAML 'deki farklı durumlar için kullanılır. Bağlam biçimlendirme uzantısı kullanımları için kullanılabilir olsa da, biçimlendirme uzantısının bir değer sağladığı özelliklerin dönüştürme davranışı genellikle biçimlendirme uzantısı uygulamalarında denetlenmez. Diğer bir deyişle, bir biçimlendirme uzantısı `ProvideValue` çıkış olarak bir metin dizesi döndürse bile, belirli bir özelliğe uygulanan veya özellik değeri türü çağrılmayan Bu dizeye dönüştürme davranışı yazın. Genellikle, bir biçimlendirme uzantısının amacı bir dizeyi işlemek ve herhangi bir tür dönüştürücüsü olmadan bir nesne döndürmek olur.  
   
 <a name="service_context_for_a_value_converter"></a>   
-## <a name="service-context-for-a-value-converter"></a>Hizmet bağlamı için bir değer dönüştürücü  
- Bir değer dönüştürücü uyguladığınızda, genellikle değer dönüştürücü uygulandığı bir bağlam erişimi gerekir. Bu bağlam, hizmet bağlamı bilinir. Hizmet bağlamı etkin XAML şema içeriği gibi bilgileri ekleyin, XAML şema içeriği ve XAML nesne yazıcısı sağlayan ve benzeri türü eşleme sistemine erişebilir. Bir değer dönüştürücü ve nasıl bir hizmet bağlamı sağlayabilir hizmetlere erişmek için kullanılabilir hizmet bağlamları hakkında daha fazla bilgi için bkz: [tür dönüştürücüleri ve İşaretleme uzantıları için hizmet bağlamı kullanılabilir](service-contexts-available-to-type-converters-and-markup-extensions.md).  
+## <a name="service-context-for-a-value-converter"></a>Değer Dönüştürücüsü için hizmet bağlamı  
+ Bir değer Dönüştürücüsü uyguladığınızda, genellikle değer dönüştürücünün uygulandığı bir içeriğe erişmeniz gerekir. Bu bağlam hizmet bağlamı olarak bilinir. Hizmet bağlamı, etkin XAML şeması bağlamı, XAML şema bağlamı ve XAML nesne yazıcısının sağladığı tür eşleme sistemine erişim vb. gibi bilgileri içerebilir. Bir değer Dönüştürücüsü için kullanılabilen hizmet bağlamları ve bir hizmet bağlamının sağlayabilecek hizmetlere erişme hakkında daha fazla bilgi için, bkz. [tür dönüştürücüler ve biçimlendirme uzantıları Için kullanılabilir hizmet bağlamları](service-contexts-available-to-type-converters-and-markup-extensions.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

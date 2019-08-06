@@ -42,7 +42,7 @@ Bir yineleyicinin bildirimi aşağıdaki gerekliliklerle uyuşmalıdır:
 
 - <xref:System.Collections.IEnumerable>Dönüş türü <xref:System.Collections.Generic.IEnumerable%601> ,,veya<xref:System.Collections.Generic.IEnumerator%601>olmalıdır. <xref:System.Collections.IEnumerator>
 
-- Bildirimin [](in-parameter-modifier.md) [ref](ref.md) veya [Out](out-parameter-modifier.md) parametreleri olamaz.
+- Bildirimin [parametreleri olamaz](in-parameter-modifier.md) [ref](ref.md) veya [Out](out-parameter-modifier.md) .
 
 Veya `yield` döndürenbir<xref:System.Collections.IEnumerable> Yineleyici türü .`object` <xref:System.Collections.IEnumerator>  Yineleyici veya <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.Generic.IEnumerator%601>döndürürse, deyimde deyim `yield return` türünden genel tür parametresine örtük bir dönüştürme olmalıdır.
 

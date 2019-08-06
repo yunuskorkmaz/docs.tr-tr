@@ -1,6 +1,6 @@
 ---
 title: Çöp toplamanın temelleri
-description: Çöp toplayıcı nasıl çalıştığını ve en iyi performans için nasıl yapılandırılabileceğini öğrenin.
+description: Çöp toplayıcısının nasıl çalıştığını ve en iyi performans için nasıl yapılandırılabileceğini öğrenin.
 ms.date: 03/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -13,68 +13,68 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 364ac31744d41d95ba20b598f8f137257ddbc608
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 64ffd57d8c0bce1d9f409adebd169b4fd3e17e06
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663650"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796851"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Çöp toplamanın temelleri
 
-<a name="top"></a> Ortak dil çalışma zamanı (CLR), çöp toplayıcı otomatik bellek yöneticisi görev yapar. Bunu, aşağıdaki avantajları sağlar:
+<a name="top"></a>Ortak dil çalışma zamanında (CLR), çöp toplayıcı otomatik bellek yöneticisi olarak görev yapar. Aşağıdaki avantajları sağlar:
 
-- Belleği boşaltmak zorunda kalmadan uygulamanızı geliştirmenizi sağlar.
+- Oluşturduğunuz nesneler için el ile bellek boşaltmaya gerek kalmadan uygulamanızı geliştirmenize olanak sağlar.
 
-- Yönetilen yığında nesneleri verimli şekilde ayırır.
+- Yönetilen yığında nesneleri verimli bir şekilde ayırır.
 
-- Artık kullanılmayan nesneleri geri kazanır, temizler ve belleği gelecekteki ayırmalar için kullanılabilir kalmasını sağlar. Oluşturucuları her veri alanını başlatmak zorunda değil yönetilen nesneleri otomatik olarak temiz içerik ile başlamak alın.
+- Artık kullanılmayan nesneleri geri kazanır, hafızasını temizler ve belleğin gelecekteki ayırmalarda kullanılabilmesini önler. Yönetilen nesneler, ile başlamak için otomatik olarak temiz içerik alır, bu nedenle oluşturucuların her veri alanını başlatması gerekmez.
 
-- Bir nesne başka bir nesnenin içeriğini kullanamazsınız sağlayarak bellek emniyet sağlar.
+- Bir nesnenin başka bir nesnenin içeriğini kullanabilmesi için bellek güvenliği sağlar.
 
- Bu konuda, çöp toplama işleminin temel kavramlar açıklanmaktadır.
+ Bu konuda çöp toplamanın temel kavramları açıklanmaktadır.
 
 <a name="fundamentals_of_memory"></a>
 
-## <a name="fundamentals-of-memory"></a>Bellek temelleri
+## <a name="fundamentals-of-memory"></a>Belleğin temelleri
 
-Aşağıdaki liste önemli CLR belleği kavramlarını özetlemektedir.
+Aşağıdaki listede, önemli CLR belleği kavramları özetlenmektedir.
 
-- Her işlem, kendi ayrı sanal adres alanı vardır. Aynı bilgisayardaki tüm işlemler aynı fiziksel belleği paylaşır ve varsa sayfa dosyasını paylaşır.
+- Her işlemin kendi kendine ayrı bir sanal adres alanı vardır. Aynı bilgisayardaki tüm işlemlerin aynı fiziksel belleği paylaştığı ve varsa sayfa dosyasını paylaştığı bir işlem.
 
-- Varsayılan olarak 32-bit bilgisayarlarda her işlem 2 GB kullanıcı modu sanal adres alanı vardır.
+- Varsayılan olarak, 32 bit bilgisayarlarda, her işlemin 2 GB 'lık bir Kullanıcı modu sanal adres alanı vardır.
 
-- Bir uygulama geliştiricisi olarak yalnızca sanal adres alanı ile çalışır ve hiçbir zaman fiziksel belleği doğrudan düzenlemezsiniz. Çöp toplayıcı ayırır ve sanal bellek yönetilen yığında sizin için serbest bırakır.
+- Bir uygulama geliştiricisi olarak yalnızca sanal adres alanı ile çalışır ve fiziksel belleği doğrudan hiçbir şekilde işlemeyin. Çöp toplayıcı, yönetilen yığında sizin için sanal belleği ayırır ve serbest bırakır.
 
-  Yerel kod yazıyorsanız, sanal adres alanı ile çalışmak için Win32 işlevlerini kullanın. Bu işlevler, ayırabilir ve sanal belleği sizin için yerel yığınlarda ücretsiz.
+  Yerel kod yazıyorsanız, sanal adres alanı ile çalışmak için Win32 işlevlerini kullanırsınız. Bu işlevler, yerel yığınlardaki sanal belleği ayırır ve boşaltır.
 
-- Sanal bellek, üç durumda olabilir:
+- Sanal bellek üç durumda olabilir:
 
-  - Ücretsiz. Bellek bloğunun hiçbir başvurusu bulunmamaktadır ve ayırma için kullanılabilir.
+  - Süz. Bellek bloğunun kendisine başvuru yoktur ve ayırma için kullanılabilir.
 
-  - Ayrılmış. Bellek bloğunu kullanabilirsiniz ve başka bir ayırma isteği için kullanılamaz. Ancak, kaydedilinceye kadar veri bu bellek bloğunda depolayamazsınız.
+  - Ayrılamadı. Bellek bloğu kullanım için kullanılabilir ve diğer herhangi bir ayırma isteği için kullanılamaz. Ancak, bu bellek bloğunda verileri kaydedilene kadar depoleyemez.
 
-  - Taahhüt. Bellek bloğu fiziksel depolama alanına atanır.
+  - Yazıldı. Bellek bloğu fiziksel depolamaya atanır.
 
-- Sanal adres alanı parçalanabilir. Olarak da bilinir adres alanında delik ücretsiz vardır Bunun anlamı engeller. Sanal bellek ayırma istendiğinde, sanal bellek yöneticisinin ayırma isteğini karşılamak için yeterince büyük tek bir serbest öbek bulması gerekir. 2 GB boş alan olsa bile, bir tek adres bloğu içinde tüm bu boş alan sürece 2 GB gerektiren ayırma başarısız olur.
+- Sanal adres alanı parçalanabilir. Bu, adres alanında delik olarak da bilinen boş blokların olduğu anlamına gelir. Sanal bellek ayırma istendiğinde, sanal bellek yöneticisinin, bu ayırma isteğini karşılamak için yeterince büyük olan tek bir ücretsiz blok bulması gerekir. 2 GB boş alan olsa bile, tüm bu boş alan tek bir adres bloğunda yer almadığı takdirde 2 GB gerektiren ayırma başarısız olur.
 
-- Ayrılacak sanal adres alanınız veya kullanılabilecek fiziksel alanınız dışında çalıştırırsanız, bellek yetersiz çalıştırabilirsiniz.
+- Ayrılacak sanal adres alanı tükenmeniz veya fiziksel alanın kaydedilmesi için bellek tükeniyor.
 
-Fiziksel bellek baskısı (diğer bir deyişle, fiziksel bellek talep) az olsa sayfa dosyanız kullanılır. Fiziksel bellek baskısının arttığı ilk kez işletim sistemi verilerin depolanacağı fiziksel bellekte yer açmak gerekir ve bu disk belleği dosyası fiziksel bellekte olan verilerin bazıları yedekler. Fiziksel bellek baskısının çok düşük olduğu durumlarda disk belleği karşılaşmak mümkündür veri kadar disk belleğine alınan değil, yeterli olur.
+Fiziksel bellek baskısı (yani fiziksel bellek talebi) düşük olsa bile sayfa dosyanız kullanılır. Fiziksel bellek basıncını ilk kez yüksek olduğunda, işletim sisteminin verileri depolamak için fiziksel bellekte yer yapması gerekir ve fiziksel bellekteki bazı verileri sayfa dosyasına yedekler. Bu veriler, gerekli olana kadar sayfalanmadığı için fiziksel bellek basıncının çok düşük olduğu durumlarda sayfalama ile karşılaşmak mümkündür.
 
 [Başa dön](#top)
 
 <a name="conditions_for_a_garbage_collection"></a>
 
-## <a name="conditions-for-a-garbage-collection"></a>Bir çöp toplama koşulları
+## <a name="conditions-for-a-garbage-collection"></a>Çöp toplama koşulları
 
-Çöp toplama, aşağıdaki koşullardan biri doğru olduğunda oluşur:
+Çöp toplama, aşağıdaki koşullardan biri doğru olduğunda gerçekleşir:
 
-- Sistem fiziksel belleği yetersizdir. Bu işletim sisteminden düşük bellek bildirimi ya da konak tarafından belirtilen bellek algılandı.
+- Sistemde fiziksel bellek yetersiz. Bu, ana bilgisayar tarafından belirtilen işletim sistemi ya da düşük bellekten düşük bellek bildirimi tarafından algılanır.
 
-- Yönetilen yığında ayrılmış nesneler tarafından kullanılan bellek kabul edilebilir bir eşik değerini geçiyor. İşlem çalışırken bu eşik sürekli olarak ayarlanır.
+- Yönetilen yığında ayrılmış nesneler tarafından kullanılan bellek, kabul edilebilir bir eşik geçirir. İşlem çalışırken bu eşik sürekli olarak ayarlanır.
 
-- <xref:System.GC.Collect%2A?displayProperty=nameWithType> Yöntemi çağrılır. Çöp toplayıcı sürekli çalıştığı için hemen hemen tüm durumlarda, bu yöntemi çağırmanız gerekmez. Bu yöntem öncelikle benzersiz durumlar ve sınamak için kullanılır.
+- <xref:System.GC.Collect%2A?displayProperty=nameWithType> Yöntemi çağrılır. Neredeyse tüm durumlarda, çöp toplayıcı sürekli çalıştığından bu yöntemi çağırmanız gerekmez. Bu yöntem öncelikle benzersiz durumlar ve test için kullanılır.
 
 [Başa dön](#top)
 
@@ -82,101 +82,101 @@ Fiziksel bellek baskısı (diğer bir deyişle, fiziksel bellek talep) az olsa s
 
 ## <a name="the-managed-heap"></a>Yönetilen yığın
 
-Çöp toplayıcı CLR tarafından başlatıldıktan sonra nesneleri depolamak ve yönetmek için bellek segmentini ayırır. Bu bellek işletim sisteminde yerel bir yığın yerine yönetilen yığında denir.
+Çöp toplayıcı CLR tarafından başlatıldıktan sonra, nesneleri depolamak ve yönetmek için bir bellek segmenti ayırır. Bu bellek, işletim sistemindeki yerel bir yığının aksine yönetilen yığın olarak adlandırılır.
 
-Yönetilen her işlem için bir yönetilen yığın yok. İşlemdeki tüm iş parçacıkları, aynı yığındaki nesneler için bellek ayrılamadı.
+Yönetilen her işlem için yönetilen bir yığın vardır. İşlemdeki tüm iş parçacıkları aynı yığında nesneler için bellek ayırır.
 
-Bellek ayırmak için atık toplayıcısı Win32 çağırır [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) işlevi ve segmentini ayırır yönetilen uygulamalar için aynı anda bellek. Çöp toplayıcı da parçaları gerektiği gibi ayırır ve Win32 çağırarak parçaları için işletim sisteminde (bunları tüm nesnelerden temizledikten sonra) sürümleri [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) işlevi.
+Bellek ayırmak için, çöp toplayıcı Win32 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) işlevini çağırır ve yönetilen uygulamalar için bir seferde bir bellek segmentini ayırır. Çöp toplayıcı aynı zamanda kesimleri gereken şekilde ayırır ve Win32 [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) işlevini çağırarak kesimleri işletim sistemine (herhangi bir nesne temizlenmeden sonra) yeniden yayınlar.
 
 > [!IMPORTANT]
-> Boyutu çöp toplayıcısının ayrılan parçaların uygulamaya özgü ve düzenli güncelleştirmeleri dahil olmak üzere dilediğiniz zaman değiştirilebilir. Uygulamanız hiçbir zaman hakkında varsayımlar veya belirli bir segment boyutuna göre değişir ve segment ayırma için kullanılabilir bellek miktarını yapılandırmak için denemeniz gerekir.
+> Çöp toplayıcı tarafından ayrılan parçaların boyutu uygulamaya özgüdür ve düzenli güncelleştirmeler de dahil olmak üzere herhangi bir zamanda değiştirilebilir. Uygulamanız, belirli bir kesim boyutuna ilişkin varsayımları asla belirtmemelidir veya buna bağlı olarak, kesim ayırmaları için kullanılabilir bellek miktarını yapılandırmayı denemelidir.
 
-Çöp toplayıcı yapmak için iş yığın üzerinde ayrılan daha az nesne. Nesneleri ayırdığınızda, yalnızca 15 bayt'a gereksinim duyduğunuzda, bir dizi 32 bayt ayırma gibi gereksinimlerinizi aşan yuvarlanmış değerler kullanmayın.
+Yığın üzerinde daha az nesne ayrılmışsa, çöp toplayıcının yapması gereken daha az iş vardır. Nesneleri ayırdığınızda, yalnızca 15 bayta ihtiyacınız olduğunda 32 baytlık bir dizi tahsis etme gibi gereksinimlerinizi aşan yuvarlanmış değerler kullanmayın.
 
-Bir atık toplama işlemi tetiklendiğinde, çöp toplayıcı, etkin olmayan nesnelerin kapladığı belleği geri kazanır. Geri kazanma işlemi Canlı nesneleri küçülterek birlikte taşınır ve ölü boşluk kaldırılır, böylece öbek küçültülür. Bu, birlikte ayrılan nesnelerin yerleşimlerinin korunması için yönetilen yığında birlikte kalmasını sağlar.
+Çöp toplama tetiklendiğinde çöp toplayıcı, ölü nesneler tarafından kullanılan belleği geri kazanır. Geri kazanma işlemi, canlı nesneleri bir araya gelecek şekilde sıkıştırır ve atılacak alan kaldırıldıktan sonra yığın daha küçük hale getirir. Bu, birlikte ayrılan nesnelerin, konumlarını korumak için yönetilen yığında birlikte kalmasını sağlar.
 
-Ne kadar zorlayıcı olduğunu (sıklığı ve süresi) çöp koleksiyonları sonucu ayırmaların hacminin ve yönetilen yığındaki kalan bellek miktarı ' dir.
+Çöp koleksiyonlarının sürekliliği (sıklığı ve süresi), ayırma hacminin ve yönetilen yığında kalan bellek miktarının sonucudur.
 
-Yığın, iki yığın birikmesi kabul edilebilir: [büyük nesne yığını](large-object-heap.md) ve küçük nesne yığını.
+Yığın iki sayfa@@ 'nin birikmesi olarak düşünülebilir: [büyük nesne yığını](large-object-heap.md) ve küçük nesne yığını.
 
-[Büyük nesne yığını](large-object-heap.md) 85.000 bayt çok geniş nesneleri içerir ve daha büyük. Büyük nesne yığını üzerindeki nesneler genellikle dizilerdir. Bir örnek nesne için çok büyük olmak nadir olarak rastlanıyor.
+[Büyük nesne yığını](large-object-heap.md) 85.000 bayt ve daha büyük olan çok büyük nesneler içerir. Büyük nesne yığınındaki nesneler genellikle dizilerdir. Örnek nesnesinin son derece büyük olması nadir bir durumdur.
 
 [Başa dön](#top)
 
 <a name="generations"></a>
 
-## <a name="generations"></a>Nesiller
+## <a name="generations"></a>İse
 
-Uzun süreli ve süreli nesneleri işleyebilmesi için yığın kuşaklar halinde düzenlenir. Çöp toplama, öncelikle genellikle yığın küçük bir bölümünü kaplayan kısa süreli nesneleri geri kazanma ile oluşur. Üç kuşak nesne yığını üzerindeki vardır:
+Yığın, uzun süreli ve kısa süreli nesneleri işleyebilmesi için nesiller halinde düzenlenir. Çöp toplama öncelikli olarak genellikle yığının yalnızca küçük bir kısmını kaplayan kısa süreli nesneler geri kazanma ile gerçekleşir. Yığında üç Neste nesne vardır:
 
-- **Nesil 0**. Bu yeni nesildir ve süreli nesnelerini içerir. Kısa süreli bir nesne örneği geçici bir değişkendir. Çöp toplama en çok sıklıkla bu nesilde oluşur.
+- **Nesil 0**. Bu, kardeşinizin nesli ve kısa süreli nesneler içerir. Kısa süreli bir nesne örneği, geçici bir değişkendir. Çöp toplama bu nesde en sık oluşur.
 
-  Yeni ayrılan nesneler yeni nesil nesneler oluşturmak ve büyük nesneler oldukları sürece dolaylı olarak kuşak 0 koleksiyonlarıdır bu durumda bunlar kuşak 2 koleksiyonundaki büyük nesne yığını üzerindeki gidin.
+  Yeni ayrılmış nesneler yeni nesil nesneler oluşturur ve büyük nesneler olmadıkları müddetçe örtük olarak nesil 0 koleksiyonlardır ve bu durumda 2. nesil bir koleksiyonda büyük nesne yığınında gider.
 
-  Çoğu nesneyi, nesil 0 çöp toplama için kazanılır ve gelecek oluşturmaya kadar varlığını sürdürmez.
+  Çoğu nesne, oluşturma 0 ' da çöp toplama için geri kazanılır ve bir sonraki nesle devam etmez.
 
-- **1. kuşak**. Bu nesil süreli nesneleri içerir ve süreli ve uzun süreli nesneler arasında bir tampon görevi görür.
+- **1. nesil**. Bu nesil, kısa süreli nesneler içerir ve kısa süreli nesneler ve uzun süreli nesneler arasında bir arabellek işlevi görür.
 
-- **2. nesil**. Bu, uzun süreli nesneler içerir. Uzun süreli bir nesne örneği, bir sunucu uygulamasında işlem süresi boyunca Canlı olan statik verileri içeren bir nesnedir.
+- **2. nesil**. Bu nesil uzun süreli nesneler içerir. Uzun süreli bir nesne örneği, işlem süresince canlı olan statik verileri içeren bir sunucu uygulamasındaki nesnedir.
 
-Çöp toplama işlemi, koşullar garantiledikçe belirli nesillerde oluşur. Nesil toplama, o nesildeki ve tüm genç nesillerdeki nesnelerin toplanması anlamına gelir. (Diğer bir deyişle yönetilen Yığındaki tüm nesneler) tüm nesillerdeki tüm nesneleri sahiplendiğinden bir nesil 2 çöp toplama, tam çöp toplama, ayrıca olarak bilinir.
+Atık koleksiyonlar belirli nesiller üzerinde koşullar garanti olarak oluşur. Oluşturma toplanması, bu kuşak ve tüm küçük nesiller içindeki nesnelerin toplanması anlamına gelir. 2\. nesil atık toplama, tüm nesiller içindeki tüm nesneleri geri kazanır (yani, yönetilen yığındaki tüm nesneler) olduğu için tam çöp toplama olarak da bilinir.
 
 ### <a name="survival-and-promotions"></a>Acil ihtiyaç ve promosyonlar
 
-Bir çöp toplama geri olmayan nesneler, survivor olarak bilinir ve sonraki nesle yükseltilir. Bir nesil 0 çöp toplamadan nesneler, kuşak 1 yükseltilir; kuşak 1 çöp toplamadan nesneler, kuşak 2 yükseltilir; ve 2. nesil çöp toplamadan nesneler, kuşak 2 kalır.
+Atık toplamada geri kazanımayan nesneler, acil sanal öğeler olarak bilinir ve bir sonraki nesil olarak yükseltilir. Nesil 0 atık toplamayı sürdüren nesneler 1. nesil olarak yükseltilir; 1. nesil atık toplamayı sürdüren nesneler 2. nesil olarak yükseltilir; ve 2. nesil bir atık toplamayı sürdüren nesneler 2. kuşak olarak kalır.
 
-Bu nedenle çöp toplayıcı algıladığında hayatta kalma oranı yüksek, bu ayırma eşiğini o nesle ilişkin sonraki toplamayı önemli bir geri Kazanılan bellek boyutunu alır. CLR sürekli olarak iki önceliği dengeler: uygulamanın uygulamanın çalışma çok büyük ve değil, çok fazla zaman alabileceğini çöp toplama izin kümesi Al.
+Çöp toplayıcı, bir kuşakma hızının yüksek olduğunu algıladığında, bu kuşak için ayırmaların eşiğini artırır, bu nedenle sonraki koleksiyon, geri kazanılan bellek miktarını önemli ölçüde alır. CLR sürekli olarak iki öncelik dengeler: uygulamanın çalışma kümesinin çok büyük sürmelerine izin vermez ve çöp toplamanın çok fazla zaman almasını gerektirmez.
 
-### <a name="ephemeral-generations-and-segments"></a>Kısa ömürlü nesiller ve Segmentler
+### <a name="ephemeral-generations-and-segments"></a>Kısa ömürlü Nesler ve segmentler
 
-0 ile 1 nesil nesneler kısa süreli olduğundan, bu nesiller kısa ömürlü nesiller olarak bilinir.
+Nesil 0 ve 1 ' deki nesneler kısa süreli olduğundan, bu nesiller, kısa ömürlü nesiller olarak bilinir.
 
-Kısa ömürlü nesiller kısa ömürlü segment olarak bilinen bellek segmentinde ayrılmalıdır. Çöp toplayıcısı tarafından alınan her yeni segment, yeni kısa ömürlü segment olur ve bir nesil 0 çöp toplamadan kurtulan nesneleri içerir. Eski kısa ömürlü segment yeni kuşak 2 segment olur.
+Kısa ömürlü nesiller, kısa ömürlü segment olarak bilinen bellek segmentinde ayrılmalıdır. Çöp toplayıcı tarafından alınan her yeni segment, yeni kısa ömürlü segment olur ve 0. nesil atık toplamayı izleyen nesneleri içerir. Eski kısa ömürlü segment, yeni nesil 2 segmentine dönüşür.
 
-Kısa ömürlü Segment boyutu, 32 veya 64-bit bir sistem olup olmadığını ve üzerinde çalıştığı atıktoplayıcı türüne bağlı olarak değişir. Varsayılan değerleri aşağıdaki tabloda gösterilmektedir.
+Kısa ömürlü segmentin boyutu sistemin 32 veya 64 bit olmasına ve çalıştırdığı çöp toplayıcı türüne bağlı olarak farklılık gösterir. Varsayılan değerler aşağıdaki tabloda gösterilmiştir.
 
 ||32 bit:|64 bit|
 |-|-------------|-------------|
-|GC iş istasyonu|16 MB|256 MB|
-|Server GC|64 MB|4 GB|
-|GC sunucusuyla > 4 mantıksal CPU|32 MB|2 GB|
-|Sunucu GC > 8 ile mantıksal CPU|16 MB|1 GB|
+|İş istasyonu GC|16 MB|256 MB|
+|Sunucu GC|64 MB|4 GB|
+|> 4 mantıksal CPU içeren sunucu GC|32 MB|2 GB|
+|> 8 mantıksal CPU 'Lar ile sunucu GC|16 MB|1 GB|
 
-Kısa ömürlü segment kuşak 2 nesneleri içerebilir. 2\. nesil nesneler birden çok çok Segment (işleminiz gerektirdiği ve belleğiniz izin verdiği gibi) kullanabilirsiniz.
+Kısa ömürlü segment 2. nesil nesneleri içerebilir. 2\. nesil nesneler birden çok segment kullanabilir (işleminiz için gereken ve belleğin izin verdiği kadar).
 
-Kısa ömürlü atık toplamanın boşaltılmış bellek miktarı kısa ömürlü Segment boyutuyla sınırlıdır. Serbest bellek miktarı ölü nesneleri tarafından kaplanan alanı orantılıdır.
+Kısa ömürlü atık toplamanın serbest bırakılan bellek miktarı, kısa ömürlü segmentin boyutuyla sınırlıdır. Serbest bırakılan bellek miktarı, ölü nesneler tarafından kullanılan alanla orantılıdır.
 
 [Başa dön](#top)
 
 <a name="what_happens_during_a_garbage_collection"></a>
 
-## <a name="what-happens-during-a-garbage-collection"></a>Bir çöp toplama sırasında ne olur?
+## <a name="what-happens-during-a-garbage-collection"></a>Çöp toplama sırasında ne olur?
 
-Bir çöp toplama aşağıdaki aşamaları içerir:
+Bir çöp toplama işlemi aşağıdaki aşamaları içerir:
 
-- Bulur ve tüm Canlı nesnelerin bir listesini oluşturan bir işaretleme aşaması.
+- Tüm canlı nesnelerin listesini bulan ve oluşturan bir işaretleme aşaması.
 
-- Sıkıştırılacak nesnelere başvuruları güncelleştiren bir yeniden konumlandırma aşaması.
+- Düzenlenecek nesneler için başvuruları güncelleştiren bir değiştirme aşaması.
 
-- Ölü nesneler tarafından kaplanan alanı geri kazanır ve canlı nesneleri sıkıştıran bir sıkıştırma aşaması. Sıkıştırma aşaması parçanın eski ucuna doğru bir çöp toplamadan kurtulan nesneleri taşır.
+- Yok sayılma nesnelerinin kapladığı alanı geri kazanır ve kalan nesneleri sıkıştırarak bir düzenleme aşaması. Sıkıştırma aşaması, bir atık toplamayı, segmentin eski ucuna doğru bir şekilde taşımış nesneleri hareket ettirir.
 
-  2\. nesil koleksiyonlar birden çok kesimi kaplayabileceğinden, 2. nesle yükseltilen nesneler daha eski bir kesime taşınabilir. Hem 1. nesil ve 2. nesil Dışarıda Kalanlar, 2. nesil için yükseltildiğinden farklı bir kesime taşınabilir.
+  2\. nesil koleksiyonlar birden çok parçayı kaplayabildiğinden, 2. nesil olarak yükseltilen nesneler eski bir kesime taşınabilir. 2\. nesil ve 2. nesil ve 2. nesil daha fazla VNet, 1. kuşak olarak yükseltildikleri için farklı bir kesime taşınabilir.
 
-  Büyük nesneleri kopyalama bir performans cezası uygular çünkü normalde, büyük nesne yığını sıkıştırılmamıştır. Ancak, .NET Framework 4.5.1 ile başlayarak, kullanabileceğiniz <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> üzerine büyük nesne yığınını sıkıştırmak için özellik.
+  Genellikle büyük nesne yığını düzenlenmez, çünkü büyük nesneleri kopyalamak bir performans cezası uygular. Ancak, .NET Framework 4.5.1 başlayarak, <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> özelliği, isteğe bağlı olarak büyük nesne yığınını sıkıştırmak için kullanabilirsiniz.
 
-Çöp toplayıcı nesnelerin Canlı olup olmadığını belirlemek için aşağıdaki bilgileri kullanır:
+Çöp toplayıcı, nesnelerin canlı olup olmadığını anlamak için aşağıdaki bilgileri kullanır:
 
-- **Yığın kökleri**. Just-ın-time (JIT) derleyici ve yığın yürüyüşçüsü tarafından sağlanan yığın değişkenleri. JIT iyileştirmelerini uzatın veya bölgeleri hangi yığın değişkenleri çöp Toplayıcıya raporlanır kısaltın unutmayın.
+- **Yığın kökleri**. Tam zamanında (JıT) derleyici ve yığın denetçisi tarafından sunulan yığın değişkenleri. JıT iyileştirmelerinin, yığın değişkenlerinin çöp toplayıcısına bildirildiği kod bölgelerini uzatabilir veya kısaltabileceğini unutmayın.
 
-- **Çöp toplama göstergelerinin**. Kullanıcı koduna veya ortak dil çalışma zamanı tarafından yönetilen nesneleri işaret ve, ayrılabilen işler.
+- **Çöp toplama tutamaçları**. Yönetilen nesneleri işaret eden ve Kullanıcı kodu veya ortak dil çalışma zamanı tarafından ayrılabilen işler.
 
-- **Statik veri**. Diğer nesnelere başvurma uygulama alanlarındaki statik nesneler. Her uygulama etki alanı, statik nesnelerini izler.
+- **Statik veriler**. Uygulama etki alanlarında diğer nesnelere başvurıbir statik nesneler. Her uygulama etki alanı, kendi statik nesnelerini izler.
 
-Bir çöp toplama işlemi başlamadan önce tüm yönetilen iş parçacıkları Çöp toplamayı tetikleyen iş parçacığı dışında askıya alınır.
+Çöp toplama başlamadan önce, çöp toplamayı tetikleyen iş parçacığı hariç tüm yönetilen iş parçacıkları askıya alınır.
 
-Aşağıdaki resimde bir atık toplama işlemini tetikleyen ve yakında askıya alınacak diğer iş parçacıklarını neden olan bir iş parçacığı gösterilmektedir.
+Aşağıdaki çizimde, çöp toplamayı tetikleyen ve diğer iş parçacıklarının askıya alınmasına neden olan bir iş parçacığı gösterilmektedir.
 
-![Bir iş parçacığı bir atık toplama işlemi tetiklendiğinde](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered") çöp toplama tetikleyen iş parçacığı
+![Bir iş parçacığı bir çöp toplama işlemi tetiklerse](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered") Çöp toplamayı tetikleyen iş parçacığı
 
 [Başa dön](#top)
 
@@ -184,85 +184,85 @@ Aşağıdaki resimde bir atık toplama işlemini tetikleyen ve yakında askıya 
 
 ## <a name="manipulating-unmanaged-resources"></a>Yönetilmeyen kaynakları düzenleme
 
-Yönetilen nesneleriniz yerel dosya tanıtıcıları kullanılarak yönetilmeyen nesneleri başvuru atık toplayıcı yalnızca yönetilen yığında bellek izlediğinden yönetilmeyen nesneleri açıkça boşaltılacak varsa.
+Yönetilen nesneleriniz, kendi yerel dosya tutamaçlarını kullanarak yönetilmeyen nesnelere başvuru yaptığından, atık toplayıcı yalnızca yönetilen yığında belleği izlediğinden, yönetilmeyen nesneleri açık bir şekilde serbest yapmanız gerekir.
 
-Yönetilen nesnenizin kullanıcıları, nesne tarafından kullanılan yerel kaynakları atmayabilir. Temizleme işlemini gerçekleştirmek için yönetilen nesnenizi sonlandırılabilir yapabilirsiniz. Sonlandırma, nesne artık kullanımda olmadığında yürüttüğünüz temizleme eylemlerinden oluşur. Yönetilen nesneniz sonlandığında, kendi Sonlandırıcı yönteminde belirtilen temizleme eylemlerini gerçekleştirir.
+Yönetilen nesnenizin kullanıcıları, nesne tarafından kullanılan yerel kaynakları yok edebilir. Temizleme işlemini gerçekleştirmek için, yönetilen nesnenizin sonlandırılabilir olmasını sağlayabilirsiniz. Sonlandırma, nesne artık kullanımda olmadığında yürütmeniz gereken Temizleme eylemlerinden oluşur. Yönetilen nesneniz, sonlandırıcı yönteminde belirtilen temizleme eylemlerini gerçekleştirir.
 
-Sonlandırılabilir bir nesnenin etkin olmadığı anlaşıldığında, nesnenin Sonlandırıcısı böylece temizleme eylemleri yürütülür, ancak nesnenin kendisi sonraki nesle yükseltilir sıraya konur. (Bu mutlaka bir sonraki atık koleksiyonuna değildir) bu nesil oluşan bir sonraki atık koleksiyonuna kadar beklemek zorunda bu nedenle nesnenin geri kazanılıp kazanılmadığını belirlemek için.
+Sonlandırılabilir bir nesnenin etkin olmadığı tespit edildiğinde, temizleme eylemlerinin yürütülmesi için Sonlandırıcı bir sıraya konur, ancak nesnenin kendisi bir sonraki oluşturmaya yükseltilir. Bu nedenle, nesnenin geri kazanılıp kazanılmadığını öğrenmek için bu kuşada gerçekleşen sonraki atık toplamaya (bir sonraki atık toplama olması gerekmez) kadar beklemeniz gerekir.
 
 [Başa dön](#top)
 
 <a name="workstation_and_server_garbage_collection"></a>
 
-## <a name="workstation-and-server-garbage-collection"></a>İş istasyonu ve sunucu çöp toplama
+## <a name="workstation-and-server-garbage-collection"></a>İş istasyonu ve sunucu atık toplama
 
-Çöp toplayıcı kendi kendini ayarlayabilir ve çok çeşitli senaryolarda çalışabilir. İş yükü özelliklerine dayanan çöp toplama türünü ayarlamak için yapılandırma dosyası ayarı kullanabilirsiniz. CLR çöp toplama aşağıdaki türlerini sağlar:
+Çöp toplayıcı kendi kendini ayarlamadır ve çok çeşitli senaryolarda çalışabilir. Bir yapılandırma dosyası ayarını, iş yükünün özelliklerine göre çöp toplamanın türünü ayarlamak için kullanabilirsiniz. CLR aşağıdaki çöp toplama türlerini sağlar:
 
-- Tüm istemci iş istasyonları ve tek başına çalışan bilgisayarlar için iş istasyonu çöp toplama. İçin varsayılan ayar budur [ \<gcServer > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) çalışma zamanı yapılandırma şemasında.
+- Tüm istemci iş istasyonları ve tek başına bilgisayarlar için olan iş istasyonu atık toplama. Bu, çalışma zamanı yapılandırma şemasında [ \<gcServer > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) için varsayılan ayardır.
 
-  İş istasyonu çöp toplama, eşzamanlı veya eşzamansız olabilir. Eş zamanlı çöp toplama, yönetilen iş parçacıklarının çöp toplama sırasında işlemleri devam etmek sağlar.
+  İş istasyonu atık toplama işlemi eşzamanlı olabilir veya eşzamanlı olmayan bir şekilde olabilir. Eşzamanlı atık toplama, yönetilen iş parçacıklarının bir çöp toplama sırasında işlemlere devam etmesine olanak sağlar.
 
-  .NET Framework 4 ile başlayarak, arka plan çöp toplama, eşzamanlı çöp toplama yerine geçer.
+  .NET Framework 4 ' ten başlayarak, arka plan atık toplama, eşzamanlı çöp toplama yerini alır.
 
-- Yüksek performans ve ölçeklenebilirlik gerektiren sunucu uygulamaları için tasarlanmış sunucu çöp toplama. Sunucu çöp toplama, eşzamansız ya da arka plan.
+- Yüksek aktarım hızı ve ölçeklenebilirlik gerektiren sunucu uygulamalarına yönelik olan sunucu çöp toplama. Sunucu atık toplama, eş zamanlı olmayan veya arka plan olabilir.
 
-Bir sunucuda atık toplama işini gerçekleştirmek adanmış iş parçacığı aşağıda gösterilmiştir.
+Aşağıdaki çizimde, bir sunucusunda çöp toplamayı gerçekleştiren adanmış iş parçacıkları gösterilmektedir.
 
-![Sunucu çöp toplama iş parçacıklarını](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server") sunucu çöp toplama
+![Sunucu atık toplama Iş parçacıkları](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server") Sunucu atık toplama
 
 ### <a name="configuring-garbage-collection"></a>Çöp toplamayı yapılandırma
 
-Kullanabileceğiniz [ \<gcServer > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) CLR'nin gerçekleştirmesini istediğiniz çöp toplama türünü belirtmek için çalışma zamanı yapılandırma şemasının. Bu öğenin `enabled` özniteliği `false` (varsayılan), CLR iş istasyonu atık toplama gerçekleştirir. Ayarladığınızda `enabled` özniteliğini `true`, CLR sunucu atık toplama gerçekleştirir.
+CLR 'nin gerçekleştirmesini istediğiniz çöp toplamanın türünü belirtmek için çalışma zamanı yapılandırma şemasının [ \<gcServer > öğesini](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) kullanabilirsiniz. Bu öğenin `enabled` özniteliği (varsayılan) olarak `false` ayarlandığında, CLR iş istasyonu atık toplama işlemini gerçekleştirir. `enabled` Özniteliğini olarak`true`ayarladığınızda, CLR sunucu çöp toplama işlemini gerçekleştirir.
 
-Eş zamanlı çöp toplama belirtilirse [ \<gcConcurrent > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) çalışma zamanı yapılandırma şemasının. Varsayılan ayar `enabled`. Bu ayar, her iki eşzamanlı denetler ve arka plan çöp toplama.
+Eşzamanlı atık toplama, çalışma zamanı yapılandırma şemasının [ \<gcConcurrent > öğesiyle](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) belirtildi. Varsayılan ayar `enabled`. Bu ayar hem eşzamanlı hem de arka plan çöp toplamayı denetler.
 
-Yönetilmeyen barındırma arabirimleri ile sunucu çöp toplama da belirtebilirsiniz. Uygulamanız bu ortamların biri içinde barındırılıyorsa ASP.NET ve SQL Server sunucu çöp toplama otomatik olarak etkinleştirdiğine dikkat edin.
+Ayrıca, yönetilmeyen barındırma arabirimleriyle sunucu çöp toplamayı belirtebilirsiniz. ASP.NET ve SQL Server, uygulamanız bu ortamların birinde barındırılıyorsa sunucu çöp toplamayı otomatik olarak etkinleştirdiğine unutmayın.
 
-### <a name="comparing-workstation-and-server-garbage-collection"></a>İş istasyonu ve sunucu Çöp toplamayı karşılaştırma
+### <a name="comparing-workstation-and-server-garbage-collection"></a>İş istasyonu ve sunucu çöp toplamayı karşılaştırma
 
-İş istasyonu çöp toplama iş parçacığı oluşturma ve performans değerlendirmeleri şunlardır:
+İş istasyonu çöp toplama işlemi için iş parçacığı ve performans değerlendirmeleri aşağıda verilmiştir:
 
-- Toplama, aynı öncelik düzeyinde kalır ve çöp toplama tetikleyen kullanıcı iş parçacığı üzerinde oluşur. Kullanıcı iş parçacıkları genellikle normal öncelikte çalıştığından (Bu, normal öncelikli iş parçacığında çalışır) çöp toplayıcısı CPU süresi için diğer iş parçacıkları ile rekabet etmelidir.
+- Koleksiyon, çöp toplamayı tetikleyen ve aynı önceliğe kalan Kullanıcı iş parçacığında oluşur. Kullanıcı iş parçacıkları genellikle normal öncelikte çalıştığı için çöp toplayıcı (normal bir öncelikli iş parçacığı üzerinde çalışır), CPU süresi için diğer iş parçacıklarıyla rekabet etmelidir.
 
   Yerel kod çalıştıran iş parçacıkları askıya alınmaz.
 
-- İş istasyonu çöp toplama bağımsız olarak, tek bir işlemci olan bir bilgisayarda her zaman kullanılır [ \<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) ayarı. Sunucu çöp toplama belirtirseniz, CLR eşzamanlılığın devre dışı olduğu iş istasyonu Çöp toplamayı kullanır.
+- İş istasyonu çöp toplama işlemi, [ \<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) ayarından bağımsız olarak yalnızca bir işlemciye sahip olan bir bilgisayarda kullanılır. Sunucu çöp toplamayı belirtirseniz, CLR eşzamanlılık devre dışı olan iş istasyonu çöp toplamayı kullanır.
 
-Sunucu çöp toplama iş parçacığı oluşturma ve performans hakkında önemli noktalar şunlardır:
+Aşağıda sunucu çöp toplama için iş parçacığı ve performans konuları verilmiştir:
 
-- Çalışan birden çok adanmış iş parçacığı üzerinde toplama oluşur `THREAD_PRIORITY_HIGHEST` öncelik düzeyi.
+- Koleksiyon, `THREAD_PRIORITY_HIGHEST` öncelik düzeyinde çalışan birden fazla adanmış iş parçacığında oluşur.
 
-- Bir yığın ve çöp toplama için adanmış bir iş parçacığı her CPU için sağlanır ve aynı anda yığınlar toplanır. Her bir yığın küçük nesne yığını ve bir büyük nesne yığını içerir ve tüm yığınlara kullanıcı kodu tarafından erişilebilir. Farklı yığınlardaki nesneler birbirlerine başvurabilir.
+- Her CPU için bir yığın ve bir ayrılmış iş parçacığı her CPU için sağlanır ve sayfa@@ 'ler aynı anda toplanır. Her yığın küçük bir nesne yığını ve büyük bir nesne yığını içerir ve tüm yığınlara Kullanıcı kodu tarafından erişilebilir. Farklı yığınlardaki nesneler birbirlerine başvurabilir.
 
-- Birden çok çöp toplama iş parçacığı birlikte çalıştığından, sunucu çöp toplama iş istasyonu çöp toplama aynı boyutu yığındaki daha hızlıdır.
+- Birden çok çöp toplama iş parçacığı birlikte çalıştığından, sunucu çöp toplama, aynı boyuttaki yığında iş istasyonu atık toplamadan daha hızlıdır.
 
-- Sunucu çöp toplama genellikle büyük boy segmentler içerir. Ancak, bu yalnızca bir Genelleştirme olduğunu unutmayın: kesim boyutunu uygulamaya özgü ve değişikliğe tabidir. Uygulamanızı ayarlarken çöp toplayıcısının ayrılan segmenti boyutu hakkında hiçbir varsayım olmanız gerekir.
+- Sunucu çöp toplama genellikle daha büyük boyut segmentlerine sahiptir. Bununla birlikte, bunun yalnızca bir Genelleştirme olduğunu unutmayın: segment boyutu uygulamaya özgüdür ve değişikliğe tabidir. Uygulamanızı ayarlamaya yönelik çöp toplayıcı tarafından ayrılan segmentlerin boyutu hakkında bir varsayımın olmaması gerekir.
 
-- Sunucu çöp toplama yoğun kaynak olabilir. Örneğin, 4 işlemci bulunan bir bilgisayarda çalışan 12 işlem varsa, olacaktır 48 adanmış çöp toplama iş parçacıklarını tüm sunucu çöp toplama kullanıyorsanız. Tüm işlemler çöp toplamaya başlarsa, yüksek bellek yükleme durumunda, çöp toplayıcının zamanlayacak 48 iş parçacığı olacaktır.
+- Sunucu atık toplama, kaynak kullanımı yoğun olabilir. Örneğin, 4 işlemcili bir bilgisayarda çalışan 12 işlem varsa, sunucu çöp toplama işlemi kullanılıyorsa 48 adanmış çöp toplama iş parçacığı olacaktır. Yüksek bellek yükleme durumunda, tüm süreçler çöp toplama işlemini başlatırsanız, çöp toplayıcının zamanlamaya göre 48 iş parçacığı olacaktır.
 
-Yüzlerce uygulama örneğini çalıştırıyorsanız, iş istasyonu çöp toplama, eşzamanlı çöp toplama devre dışı kullanarak göz önünde bulundurun. Bu daha az bağlam geçişiyle içinde performansın iyileşmesini sağlayabilecek neden olur.
+Bir uygulamanın yüzlerce örneğini çalıştırıyorsanız, eşzamanlı atık toplama devre dışı bırakılmış iş istasyonu çöp toplamayı kullanmayı düşünün. Bu, performansı iyileştirebilen daha az bağlam geçişe neden olur.
 
 [Başa dön](#top)
 
 <a name="concurrent_garbage_collection"></a>
 
-## <a name="concurrent-garbage-collection"></a>Eş zamanlı çöp toplama
+## <a name="concurrent-garbage-collection"></a>Eşzamanlı atık toplama
 
-İş istasyonu veya sunucu çöp toplama işleminde eş zamanlı çöp toplama, eşzamanlı atık toplama gerçekleştirir koleksiyon süresinin çoğu için adanmış bir iş parçacığı çalıştırmak iş parçacığı sağlayan etkinleştirebilirsiniz. Bu seçenek yalnızca çöp koleksiyonları kuşak 2 etkiler; çok hızlı için nesil 0 ve 1 her zaman eşzamanlı değildir.
+İş istasyonu veya sunucu çöp toplama bölümünde, iş parçacıklarının, koleksiyon süresince büyük bir süre için çöp toplamayı gerçekleştiren adanmış bir iş parçacığıyla eşzamanlı olarak çalışmasını sağlayan eşzamanlı atık toplamayı etkinleştirebilirsiniz. Bu seçenek, kuşak 2 ' de yalnızca çöp koleksiyonlarını etkiler; nesil 0 ve 1 her zaman eşzamanlı değildir çünkü çok hızlı tamamlanır.
 
-Eş zamanlı çöp toplama, daha hızlı yanıt verdiğini bir koleksiyon için duraklamaları en aza indirerek etkileşimli uygulamaların sağlar. Yönetilen iş parçacıklarının eş zamanlı çöp toplama iş parçacığı çalışırken çoğu zaman çalışmaya devam edebilirsiniz. Bir çöp toplama oluştuğu sırada bu kısa duraklamaları sonuçlanır.
+Eşzamanlı atık toplama, bir koleksiyon için duraklamaları en aza indirerek etkileşimli uygulamaların daha fazla yanıt vermesini sağlar. Yönetilen iş parçacıkları, eşzamanlı atık toplama iş parçacığı çalışırken çoğu zaman çalışmaya devam edebilir. Çöp toplama işlemi gerçekleşirken bu, daha kısa duraklamalar oluşur.
 
-Birçok işlem çalışırken performansı artırmak için eşzamanlı atık toplamayı devre dışı. Bunu ekleyerek yapabilirsiniz bir [ \<gcConcurrent > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) uygulamanın yapılandırma dosyası ve değerini ayarlama, `enabled` özniteliğini `"false"`.
+Birkaç işlem çalışırken performansı artırmak için, eşzamanlı atık toplamayı devre dışı bırakın. Bunu, uygulamanın yapılandırma dosyasına bir [ \<gcConcurrent > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) ekleyerek ve `enabled` özniteliğinin değerini olarak `"false"`ayarlayarak yapabilirsiniz.
 
-Eş zamanlı çöp toplama, adanmış bir iş parçacığı üzerinde gerçekleştirilir. Varsayılan olarak CLR, eşzamanlı çöp toplama etkin iş istasyonu çöp toplama çalışır. Bu, tek işlemci ve çok işlemcili bilgisayarlar için geçerlidir.
+Eş zamanlı çöp toplama, adanmış bir iş parçacığında gerçekleştirilir. Varsayılan olarak, CLR, eşzamanlı atık toplama özellikli iş istasyonu çöp toplamayı çalıştırır. Bu, tek işlemci ve çok işlemcili bilgisayarlar için geçerlidir.
 
-Eşzamanlı atık toplama başladığında kısa ömürlü segmenti kalan nesneler tarafından eş zamanlı çöp toplama sırasında yığındaki küçük nesneleri olanağınız sınırlı. Kesimin sonuna ulaştığınız anda, küçük nesne ayırma işlemleri yapması gereken yönetilen iş parçacıkları askıya alınırken eş zamanlı Çöp toplamayı beklemeniz gerekecektir.
+Eşzamanlı atık toplama sırasında yığın üzerinde küçük nesneler ayırma olanağınız, eşzamanlı bir atık toplama başladığında kısa ömürlü kesimde kalan nesnelerle sınırlıdır. Segmentin sonuna ulaştığınızda, küçük nesne ayırmaları yapmak için gereken yönetilen iş parçacıkları askıya alındığında eşzamanlı çöp toplama işleminin bitmesini beklemeniz gerekecektir.
 
-Eş zamanlı toplama sırasında nesneler ayırabildiğiniz için eş zamanlı çöp toplama (eşzamanlı olmayan çöp toplamaya kıyasla) biraz daha büyük bir çalışma kümesi vardır. Ancak ayırdığınız nesneler, çalışma kümenizin bir parçası haline gelir çünkü bu performansını etkileyebilir. Aslında, eş zamanlı çöp toplama CPU ve daha kısa duraklamalar için bellek arasında denge kurar.
+Eşzamanlı atık toplama işlemi, eşzamanlı toplama sırasında nesneleri ayırabilmeniz için biraz daha büyük bir çalışma kümesine (eşzamanlı olmayan Çöp toplamakla karşılaştırıldığında) sahiptir. Ancak, ayırdığı nesneler çalışma kümesinin bir parçası haline geldiği için bu, performansı etkileyebilir. Temelde, eşzamanlı atık toplama, daha kısa duraklamalar için bazı CPU ve bellek ile ilgili bir süre
 
-Aşağıdaki çizim, ayrı bir adanmış iş parçacığı üzerinde gerçekleştirilen eşzamanlı atık toplama gösterir.
+Aşağıdaki çizimde ayrı bir adanmış iş parçacığında gerçekleştirilen eşzamanlı çöp toplama gösterilmektedir.
 
-![Eş zamanlı çöp toplama iş parçacıklarını](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent") eş zamanlı çöp toplama
+![Eşzamanlı atık toplama Iş parçacıkları](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent") Eşzamanlı atık toplama
 
 [Başa dön](#top)
 
@@ -270,20 +270,20 @@ Aşağıdaki çizim, ayrı bir adanmış iş parçacığı üzerinde gerçekleş
 
 ## <a name="background-workstation-garbage-collection"></a>Arka plan iş istasyonu çöp toplama
 
-Arka plan çöp toplamada, kısa ömürlü nesiller (0 ve 1) 2. nesil koleksiyonu işlemi devam ederken gerektiği gibi toplanır. Arka plan çöp toplama için hiçbir ayar yoktur; eş zamanlı çöp toplama ile otomatik olarak etkinleştirilir. Arka plan çöp toplama, eşzamanlı çöp toplamanın yerini almıştır. Eş zamanlı çöp toplama ile arka plan çöp toplama adanmış bir iş parçacığı üzerinde gerçekleştirilir ve yalnızca 2. nesil koleksiyonlar için geçerlidir.
+Arka plan atık toplamada, 2. nesil toplama işlemi devam ederken, kısa ömürlü nesiller (0 ve 1) gerektiği şekilde toplanır. Arka plan atık toplama için bir ayar yoktur; eşzamanlı atık toplama ile otomatik olarak etkinleştirilir. Arka plan atık toplama, eşzamanlı atık toplama için bir değiştirme. Eşzamanlı atık toplama ile olduğu gibi, arka plan çöp toplama işlemi adanmış bir iş parçacığında gerçekleştirilir ve yalnızca 2. nesil koleksiyonlar için geçerlidir.
 
 > [!NOTE]
-> Arka plan çöp toplama, yalnızca .NET Framework 4 ve sonraki sürümlerinde kullanılabilir. .NET Framework 4'te yalnızca iş istasyonu çöp toplama için desteklenir. .NET Framework 4.5 ile başlayarak, arka plan çöp toplama hem iş istasyonu ve sunucu çöp toplama için kullanılabilir.
+> Arka plan atık toplama yalnızca .NET Framework 4 ve üzeri sürümlerde kullanılabilir. .NET Framework 4 ' te yalnızca iş istasyonu çöp toplama için desteklenir. .NET Framework 4,5 ' den başlayarak, arka plan atık toplama hem iş istasyonu hem de sunucu çöp toplama için kullanılabilir.
 
-Arka plan çöp toplama sırasında kısa ömürlü nesillerdeki bir koleksiyon, ön plan çöp toplama koleksiyonu olarak bilinir. Ön plan atık toplamaları olduğunda, tüm yönetilen iş parçacıkları askıya alınır.
+Arka plan atık toplama sırasında kısa ömürlü oluşumlara yönelik bir koleksiyon, ön plan atık toplama olarak bilinir. Ön plan atık koleksiyonları gerçekleştiğinde, tüm yönetilen iş parçacıkları askıya alınır.
 
-Arka plan atık toplama devam ederken ve nesil 0 yeterli nesne ayırmış olmanız, CLR oluşturma 0 veya oluşturma 1 ön plan atık toplama gerçekleştirir. Ön plan çöp toplama için bir istek olup olmadığını belirlemek için sık güvenli noktalarında adanmış arka plan çöp toplama iş parçacığı denetler. Varsa, ön plan çöp toplama gerçekleştirilmesi arka plan koleksiyonu kendisini askıya alır. Ön plan çöp toplama işlemi tamamlandıktan sonra adanmış arka plan çöp toplama iş parçacığı ve kullanıcı iş parçacıkları sürdürün.
+Arka plan atık toplama işlemi devam ederken ve nesil 0 ' da yeterli nesne ayırdığınızda CLR, 1. nesil bir ön plan atık toplama işlemi gerçekleştirir. Adanmış arka plan atık toplama iş parçacığı, ön plan atık toplama için bir istek olup olmadığını anlamak için sık kullanılan güvenli noktaları denetler. Varsa, ön plan atık toplama işleminin gerçekleşmesi için arka plan koleksiyonu kendisini askıya alır. Ön plan atık toplama işlemi tamamlandıktan sonra, adanmış arka plan atık toplama iş parçacığı ve Kullanıcı iş parçacıkları sürdürülür.
 
-Arka plan çöp toplama sırasında kısa ömürlü çöp toplamalar oluşabileceğinden arka plan çöp toplama, eşzamanlı çöp toplamadan kaynaklanan ayırma kısıtlamalarını kaldırır. Başka bir deyişle, arka plan atık toplama ölü nesneleri kısa ömürlü nesillerde kaldırabilir ve Öbek kuşaktaki 1 atık toplama sırasında gerekirse genişletebilirsiniz.
+Arka plan atık toplama sırasında kısa ömürlü çöp koleksiyonları gerçekleşebildiğinden arka plan atık toplama, eşzamanlı atık toplama tarafından uygulanan ayırma kısıtlamalarını ortadan kaldırır. Bu, arka plan atık toplamanın kısa ömürlü nesillerdeki ölü nesneleri kaldırabileceği ve 1. nesil atık toplama sırasında gerekirse yığını genişletebileceği anlamına gelir.
 
-Aşağıdaki resimde bir iş istasyonunda ayrı adanmış iş parçacığı üzerinde gerçekleştirilen arka plan atık toplama gösterilmektedir:
+Aşağıdaki çizimde, bir iş istasyonunda ayrı bir adanmış iş parçacığında gerçekleştirilen arka plan atık toplama işlemi gösterilmektedir:
 
-![Arka plan iş istasyonu çöp toplama gösteren diyagram.](./media/fundamentals/background-workstation-garbage-collection.png)
+![Arka plan iş istasyonu çöp toplamayı gösteren diyagram.](./media/fundamentals/background-workstation-garbage-collection.png)
 
 [Başa dön](#top)
 
@@ -291,11 +291,11 @@ Aşağıdaki resimde bir iş istasyonunda ayrı adanmış iş parçacığı üze
 
 ## <a name="background-server-garbage-collection"></a>Arka plan sunucusu çöp toplama
 
-.NET Framework 4.5 ile başlayarak, arka plan sunucusu çöp toplama için varsayılan sunucu çöp toplama moddur. Bu modu seçmek için ayarlanmış `enabled` özniteliği [ \<gcServer > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) için `true` çalışma zamanı yapılandırma şemasında. Bu modu işlevlerine benzer şekilde arka plan iş istasyonu çöp toplama, önceki bölümde açıklanan, ancak bazı farklar vardır. Arka plan iş istasyonu atık toplama arka plan sunucusu çöp toplama, genellikle bir adanmış iş parçacığı her mantıksal işlemci için birden çok iş parçacığı kullanan bir adanmış arka plan çöp toplama iş parçacığı kullanır. İş istasyonu arka plan çöp toplama iş parçacığının tersine, bu iş parçacıkları zamanaşımına uğramaz.
+.NET Framework 4,5 ile başlayarak, arka plan sunucusu çöp toplama sunucu çöp toplama için varsayılan moddur. Bu modu seçmek için, `enabled` [ \<gcServer > öğesinin](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) özniteliğini çalışma zamanı yapılandırma şemasında olarak `true` ayarlayın. Bu mod, önceki bölümde açıklanan arka plan iş istasyonu çöp toplamasına benzer şekilde çalışır, ancak birkaç farklılık vardır. Arka plan iş istasyonu çöp toplama, bir adanmış arka plan atık toplama iş parçacığı kullanır, ancak arka plan sunucusu çöp toplama, genellikle her mantıksal işlemci için ayrılmış bir iş parçacığı kullanır. İş istasyonu arka plan atık toplama iş parçacığından farklı olarak, bu iş parçacıkları zaman aşımına uğrar.
 
-Aşağıdaki resimde, bir sunucuda ayrı adanmış iş parçacığı üzerinde gerçekleştirilen arka plan atık toplama gösterilmektedir:
+Aşağıdaki çizimde, bir sunucudaki ayrı bir adanmış iş parçacığında gerçekleştirilen arka plan atık toplama işlemi gösterilmektedir:
 
-![Arka plan sunucusu çöp toplama gösteren diyagram.](./media/fundamentals/background-server-garbage-collection.png)
+![Arka plan sunucusu çöp toplamayı gösteren diyagram.](./media/fundamentals/background-server-garbage-collection.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

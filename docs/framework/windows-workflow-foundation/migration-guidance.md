@@ -2,58 +2,58 @@
 title: Geçiş Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 8bde0775c6e9d7f9522d903214d09e57fa9cbcbd
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 45f81b29f63701f690e396de2e9834f9933fd775
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959782"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796809"
 ---
 # <a name="migration-guidance"></a>Geçiş Kılavuzu
-İçinde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft ikinci ana sürüm Windows Workflow Foundation (WF) yayımladı. [!INCLUDE[wf1](../../../includes/wf1-md.md)] WinFX içinde yayımlanan (Bu System.Workflow.* ad alanlarında türleri dahil; artık WF3 adlandırılır) ve geliştirilmiş içinde [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 olduğunu da parçası [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ancak yeni bir iş akışı teknoloji vardır (System.Activities. türlerinde\* ad alanları; WF4 başvurulan). WF4 benimsemek ne zaman düşünürken öncelikle zamanlamasını denetlemek bilmek önemlidir.  
+[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]' De, Microsoft Windows Workflow Foundation (WF) uygulamasının ikinci ana sürümünü serbest bırakmadır. [!INCLUDE[wf1](../../../includes/wf1-md.md)], WinFX 'de yayımlanmıştır (System. Workflow.\* namespaces; WF3 olarak anılır) ve içinde [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]geliştirildi. WF3 ayrıca, öğesinin bir [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]parçasıdır, ancak yeni iş akışı teknolojisinin (System. Activities.\* namespaces; WF4 olarak adlandırılır) yanı sıra bu şekilde bulunur. WF4 ne zaman benimseneceği düşünürken, öncelikle zamanlamayı denetlemenizi öneririz.  
   
-- WF3 tam olarak desteklenen bir parçası olan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
+- WF3, [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]öğesinin tam olarak desteklenen bir parçasıdır.  
   
-- WF3 uygulamaları çalıştırıp [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] yapmadan ve tam olarak desteklenmeye devam edilir.  
+- WF3 uygulamaları değişiklik [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] yapılmadan çalışır ve tam olarak desteklenmeye devam eder.  
   
-- Yeni WF3 uygulamalar oluşturulabilir ve mevcut uygulamalarınızı Visual Studio 2012'de düzenlenebilir ve tam olarak desteklenir.  
+- Yeni WF3 uygulamaları oluşturulabilir ve var olan uygulamalarınız Visual Studio 2012 ' de düzenlenebilir ve tam olarak desteklenmektedir.  
   
- Bu nedenle, .NET Framework 4 benimsemeye karar kullanacağınıza karar WF4 için Taşı'den ayrılmış (System.Activities.*) WF3 gelen (System.Workflow.\*). Bu konuda WF4 WF3 ile çalışma hakkında bilgi sağlayan WF geçiş kılavuzuna bağlantılar sağlar.  
+ Bu nedenle, .NET Framework 4 ' ü benimsemeye yönelik karar, WF3 (System. Workflow.\*\*) öğesinden WF4 (System. Activities.) öğesine geçme kararına göre belirlenir. Bu konuda, WF3 ve WF4 ile çalışma hakkında bilgi sağlayan WF geçiş kılavuzunun bağlantıları sağlanmaktadır.  
   
-## <a name="wf-migration-whitepapers-and-cookbooks"></a>WF geçiş teknik incelemeler ve tarif kitapları  
- [WF geçişine genel bakış](https://go.microsoft.com/fwlink/?LinkId=153873) konu WF3 ve WF4 ve geçiş stratejileri arasındaki ilişkiyi geniş kapsamlı bir genel bakış sağlar. Yardımcısı konuları belirli konulara detayına gidin.  
+## <a name="wf-migration-whitepapers-and-cookbooks"></a>WF geçiş teknik Incelemeleri ve tanıtım Rehberleri  
+ [WF geçişine genel bakış](https://go.microsoft.com/fwlink/?LinkId=153873) konusu WF3 ve WF4 ile geçiş stratejileri arasındaki ilişkiye yönelik kapsamlı bir genel bakış sunar. Yardımcı konular belirli konularda detaya gitme.  
   
  [WF geçişine genel bakış](https://go.microsoft.com/fwlink/?LinkId=153873)  
- WF3 WF4 ve bir kullanıcı veya iş akışı teknoloji .NET 4'teki olası bir kullanıcı olarak sahip olduğunuz seçenekler arasındaki ilişkiyi açıklar.  
+ WF3 ve WF4 arasındaki ilişkiyi ve .NET 4 ' te bir kullanıcı veya iş akışı teknolojisinin potansiyel bir kullanıcısı olan seçenekleri açıklar.  
   
- [WF geçişi: WF3 geliştirme için en iyi uygulamalar](https://go.microsoft.com/fwlink/?LinkId=153852)  
- WF3 yapıtları WF4 için daha kolay geçirilebilecek şekilde tasarlamak nasıl ele alınmaktadır.  
+ [WF geçişi: WF3 geliştirmesi için en iyi uygulamalar](https://go.microsoft.com/fwlink/?LinkId=153852)  
+ WF4 'e daha kolay geçirilebilecek şekilde WF3 yapıtları nasıl tasarlayabileceğinizi açıklar.  
   
- [WF kılavuz: kuralları](https://go.microsoft.com/fwlink/?LinkId=153854)  
- Kuralları ile ilgili yatırım İleri Getir anlatılmaktadır [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] çözümler.  
+ [WF Kılavuzu: Kuralın](https://go.microsoft.com/fwlink/?LinkId=153854)  
+ Kuralların ilgili yatırımlarını [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] çözümlere nasıl getirebileceğinizi açıklar.  
   
- [WF kılavuz: Durum makinesi](https://go.microsoft.com/fwlink/?LinkId=153855)  
- Bir Durum makinesi Etkinlik olmaması durumunda modelleme WF4 denetim akışı açıklanır.  
+ [WF Kılavuzu: Durum makinesi](https://go.microsoft.com/fwlink/?LinkId=153855)  
+ Bir durum makinesi etkinliğinin yokluğu olarak WF4 denetim akışı modellemesini açıklar.  
   
- Bu kılavuz yalnızca .NET Framework 4'ü hedefleyen iş akışı projeleri için geçerli olduğunu unutmayın. Durum makine iş akışları .NET 4.0.1'in Platform güncelleştirme 1 sürümünde eklenmiştir ve .NET Framework 4. 5 ' bir parçası olarak dahil. .NET 4.0.1'in - 4.0.3 ve .NET Framework 4.5, durum makine iş akışları hakkında daha fazla bilgi için bkz. [4.0.1'in güncelleştirmek için Microsoft .NET Framework 4 özellikleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100)) ve [durum makine iş akışları](state-machine-workflows.md).  
+ Bu kılavuzun yalnızca .NET Framework 4 ' ü hedefleyen iş akışı projelerine uygulandığını unutmayın. Durum makinesi iş akışları, Platform Güncelleştirme 1 ' in sürümü ile .NET 4.0.1 'ye eklenmiştir ve .NET Framework 4,5 ' nin bir parçası olarak eklenmiştir. .NET 4.0.1-4.0.3 ve .NET Framework 4,5 ' deki durum makinesi iş akışları hakkında daha fazla bilgi için, bkz. [Update 4.0.1 for Microsoft .NET Framework 4 Özellikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100)) ve [durum makine iş akışları](state-machine-workflows.md).  
   
- [WF geçiş Kitapçığı: Özel etkinlikler](https://go.microsoft.com/fwlink/?LinkId=153856)  
- Örnekler ve yeniden tasarlanmasını WF4 WF3 özel etkinliklere yönelik yönergeler sağlar.  
+ [WF geçişi kılavuz kitabı: Özel etkinlikler](https://go.microsoft.com/fwlink/?LinkId=153856)  
+ WF4 üzerinde WF3 özel etkinliklerini yeniden tasarlamaya yönelik örnekler ve yönergeler sağlar.  
   
- [WF geçiş Kitapçığı: Gelişmiş özel etkinlikler](https://go.microsoft.com/fwlink/?LinkId=275560)  
- WF3 kuyrukları kullanan gelişmiş WF3 özel etkinlikler ve zamanlama çocuk etkinliklerinin WF4 özel etkinlikler olarak yeniden tasarlanmasını yönelik rehberlik sağlar.  
+ [WF geçişi kılavuz kitabı: Gelişmiş özel etkinlikler](https://go.microsoft.com/fwlink/?LinkId=275560)  
+ WF3 kuyruklarını kullanan ve alt etkinlikleri WF4 özel etkinlikler olarak zamanlayan gelişmiş WF3 özel etkinliklerini yeniden tasarlamaya yönelik rehberlik sağlar.  
   
- [WF geçiş Kitapçığı: İş akışları](https://go.microsoft.com/fwlink/?LinkId=153858)  
- Örnekler ve WF4 WF3 iş akışlarında yeniden tasarlanmasını için yönergeler sağlar.  
+ [WF geçişi kılavuz kitabı: Sürdürülen](https://go.microsoft.com/fwlink/?LinkId=153858)  
+ WF4 üzerinde WF3 iş akışlarını yeniden tasarlamaya yönelik örnekler ve yönergeler sağlar.  
   
- [WF geçiş Kitapçığı: İş akışı barındırma](https://go.microsoft.com/fwlink/?LinkId=275561)  
- WF3 barındırma kodu WF4 barındırma kodu olarak yeniden tasarlanmasını yönelik rehberlik sağlar. İş akışı barındırma WF3 ve WF4 arasında anahtar farklılıkları kapsar olmaktır.  
+ [WF geçişi kılavuz kitabı: İş akışı barındırma](https://go.microsoft.com/fwlink/?LinkId=275561)  
+ WF4 barındırma kodu olarak WF3 barındırma kodu yeniden tasarlanmasıyla ilgili rehberlik sağlar. Amaç, WF3 ve WF4 arasında iş akışı barındırma içindeki temel farklılıkları kapsamaktır.  
   
- [WF geçiş Kitapçığı: İş akışı izleme](https://go.microsoft.com/fwlink/?LinkId=275562)  
- WF3 izleme kod ve yapılandırma eşdeğer WF4 izleme kodu ve yapılandırması kullanarak yeniden tasarlanmasını yönelik rehberlik sağlar.  
+ [WF geçişi kılavuz kitabı: İş akışı Izleme](https://go.microsoft.com/fwlink/?LinkId=275562)  
+ Eşdeğer WF4 izleme kodu ve yapılandırması kullanılarak WF3 izleme kodu ve yapılandırmasını yeniden tasarlamaya yönelik rehberlik sağlar.  
   
- [WF kılavuz: İş akışı Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=275564)  
- (Genellikle iş akışı hizmetleri adlandırılır) Windows Communication Foundation (WCF) web hizmetlerini WF3 WF4, yaygın senaryoları için kullanıma hazır kullanılmak üzere oluşturulan uygulamayı iş akışlarını yeniden tasarlanmasını örnek yönelik adım adım yönergeler sağlar etkinlikler.  
+ [WF Kılavuzu: İş akışı hizmetleri](https://go.microsoft.com/fwlink/?LinkId=275564)  
+ WF3 ' de oluşturulan Windows Communication Foundation (WCF) Web Hizmetleri (yaygın olarak iş akışı hizmetleri olarak adlandırılır) uygulayan iş akışlarını yeniden tasarlamak için, kullanıma hazır olan yaygın senaryolar için örnek yönelimli adım adım yönergeler sağlar işlemleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: '?: işleci - C# başvurusu'
+title: '?: operator- C# Reference'
 ms.custom: seodec18
 ms.date: 11/20/2018
 f1_keywords:
@@ -10,89 +10,89 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 2717505a0a09b9ac1c6ad43153c52771c13f7b5c
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 923591634599a6bbac74d43b105f4e46b492fa1a
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025202"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796470"
 ---
-# <a name="-operator-c-reference"></a>?: işleci (C# Başvurusu)
+# <a name="-operator-c-reference"></a>?: işleç (C# başvuru)
 
-Koşullu işleç `?:`Üçlü koşullu işleç, yaygın olarak bilinen bir Boole ifadesini değerlendirir ve bir Boole ifadesi mi değerlendiren bağlı olarak iki ifadenin değerlendirme sonucu döndürür `true` veya `false`. İle başlayarak C# 7.2, [ref koşullu ifadesi](#conditional-ref-expression) başvuru iki ifadeden birini sonucunu döndürür.
+Genellikle Üçlü koşullu `?:`işleç olarak bilinen koşullu operatör, bir Boole ifadesi değerlendirir ve Boolean ifadesinin değerlendirilip `true` değerlendirilmediğine bağlı olarak iki ifadeden birini değerlendirme sonucunu döndürür. veya `false`. 7,2 ile C# başlayarak, [koşullu başvuru ifadesi](#conditional-ref-expression) iki ifadeden birinin sonucuna başvuruyu döndürür.
 
-Koşullu işlecin sözdizimi aşağıdaki gibidir:
+Koşullu işlecin sözdizimi şöyledir:
 
 ```csharp
 condition ? consequent : alternative
 ```
 
-`condition` İfade gerekir değerlendirmek için `true` veya `false`. Varsa `condition` değerlendiren `true`, `consequent` ifade değerlendirilir ve sonuç işleminin sonucu haline gelir. Varsa `condition` değerlendiren `false`, `alternative` ifade değerlendirilir ve sonuç işleminin sonucu haline gelir. Yalnızca `consequent` veya `alternative` değerlendirilir.
+`condition` İfade `true` veya olarak`false`değerlendirilmelidir. , `condition` Olarak `true`değerlendirilirse ,`consequent` ifade değerlendirilir ve sonucu işlemin sonucu olur. , `condition` Olarak `false`değerlendirilirse ,`alternative` ifade değerlendirilir ve sonucu işlemin sonucu olur. Yalnızca `consequent` veya`alternative` değerlendirilir.
 
-Türünü `consequent` ve `alternative` aynı veya orada bir türden diğerine örtülü bir dönüştürme diğerine olmalıdır olması gerekir.
+`consequent` Ve`alternative` türü aynı olmalıdır veya bir türden diğerine örtük bir dönüştürme olmalıdır.
 
-Koşullu işleç sağla ilişkilendirilebilir, diğer bir deyişle, bir ifade formu
+Koşullu operatör doğru ilişkilendirilebilir, diğer bir deyişle, formun bir ifadesi
 
 ```csharp
 a ? b : c ? d : e
 ```
 
-olarak değerlendirilir
+şöyle değerlendirilir
 
 ```csharp
 a ? b : (c ? d : e)
 ```
 
 > [!TIP]
-> Koşullu işleç nasıl değerlendirilir hatırlamak şu anımsatıcı cihazı kullanabilirsiniz:
+> Koşullu işlecin nasıl değerlendirildiğini anımsamak için aşağıdaki anımsatıcı cihazı kullanabilirsiniz:
 >
 > ```text
 > is this condition true ? yes : no
 > ```
 
-Aşağıdaki örnek, koşullu işlecinin kullanımını gösterir:
+Aşağıdaki örnek, koşullu işlecin kullanımını gösterir:
 
 [!code-csharp-interactive[non ref conditional](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalValue)]
 
-## <a name="conditional-ref-expression"></a>Ref koşullu ifadesi
+## <a name="conditional-ref-expression"></a>Koşullu başvuru ifadesi
 
-İle başlayarak C# 7.2, iki ifadeden birini sonucu başvuru döndürmek için koşullu ref ifadesini kullanabilirsiniz. Bu başvuru atayabilirsiniz bir [ref yerel](../keywords/ref.md#ref-locals) veya [salt okunur yerel başvuru](../keywords/ref.md#ref-readonly-locals) değişkeni veya olarak bir [başvuru dönüş değeri](../keywords/ref.md#reference-return-values) veya farklı bir [ `ref` yöntemi parametre](../keywords/ref.md#passing-an-argument-by-reference).
+7,2 ' C# den başlayarak, iki ifadeden birinin sonucuna başvuruyu döndürmek için koşullu başvuru ifadesini kullanabilirsiniz. Bu başvuruyu bir [ref yerel](../keywords/ref.md#ref-locals) veya [ref ReadOnly yerel](../keywords/ref.md#ref-readonly-locals) değişkenine atayabilir veya bir [Başvuru dönüş değeri](../keywords/ref.md#reference-return-values) ya da bir [ `ref` yöntem parametresi](../keywords/ref.md#passing-an-argument-by-reference)olarak kullanabilirsiniz.
 
-Ref koşullu ifadesi sözdizimi aşağıdaki gibidir:
+Koşullu başvuru ifadesi için sözdizimi aşağıdaki gibidir:
 
 ```csharp
 condition ? ref consequent : ref alternative
 ```
 
-Ref koşullu ifadesi iki ifadeden yalnızca biri özgün koşullu işleç gibi değerlendirilir: ya da `consequent` veya `alternative`.
+Özgün Koşul operatörü gibi, koşullu başvuru ifadesi iki ifadeden yalnızca birini değerlendirir: ya `consequent` `alternative`da.
 
-Ref koşullu ifadenin türü söz konusu olduğunda `consequent` ve `alternative` aynı olmalıdır.
+Koşullu başvuru ifadesi söz konusu olduğunda, `consequent` ve `alternative` türü aynı olmalıdır.
 
-Aşağıdaki örnek, ref koşullu ifadesi kullanımını göstermektedir:
+Aşağıdaki örnek, koşullu başvuru ifadesinin kullanımını gösterir:
 
 [!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
 
-Daha fazla bilgi için [özellik teklif Not](../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md).
+Daha fazla bilgi için bkz. [özellik teklifi Note](~/_csharplang/proposals/csharp-7.2/conditional-ref.md).
 
-## <a name="conditional-operator-and-an-ifelse-statement"></a>Koşullu işleç ve bir `if..else` deyimi
+## <a name="conditional-operator-and-an-ifelse-statement"></a>Koşullu işleç ve bir `if..else` ifade
 
-Üzerinde koşullu işlecinin kullanımı bir [if-else](../keywords/if-else.md) deyimi neden olabilir durumlarda daha kısa kodu koşullu olarak bir değeri hesaplamak gerektiğinde. Aşağıdaki örnek, negatif veya negatif olmayan tamsayı sınıflandırmak için iki yolunu gösterir:
+[İf-else](../keywords/if-else.md) ifadesinin üzerinde koşullu işlecin kullanılması, bir değeri hesaplamak için koşullu olarak bir değer hesaplamanız gerektiğinde daha kısa kod oluşmasına neden olacaktır. Aşağıdaki örnek, bir tamsayıyı negatif veya negatif olmayan olarak sınıflandırmanın iki yolunu göstermektedir:
 
 [!code-csharp[conditional and if-else](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#CompareWithIf)]
 
-## <a name="operator-overloadability"></a>İşleç overloadability
+## <a name="operator-overloadability"></a>Operatör overloadability
 
 Koşullu işleç aşırı yüklenemez.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [koşullu işleç](~/_csharplang/spec/expressions.md#conditional-operator) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [koşullu işleç](~/_csharplang/spec/expressions.md#conditional-operator) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvuru](../index.md)
+- [C#başvurunun](../index.md)
 - [C# işleçleri](index.md)
-- [if-else deyimi](../keywords/if-else.md)
-- [?. ve? [] işleçleri](member-access-operators.md#null-conditional-operators--and-)
-- [?? işleci](null-coalescing-operator.md)
+- [if-else beyanı](../keywords/if-else.md)
+- [?. ve ?[] işleçleri](member-access-operators.md#null-conditional-operators--and-)
+- [?? işlecinde](null-coalescing-operator.md)
 - [ref anahtar sözcüğü](../keywords/ref.md)

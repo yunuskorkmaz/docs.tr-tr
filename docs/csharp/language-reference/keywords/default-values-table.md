@@ -6,12 +6,12 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 23fba8269670156000cb68b3aa07ae7c770eada1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d9889ce389eed73a9af0a3f72dcca6ec476cae15
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627745"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796513"
 ---
 # <a name="default-values-table-c-reference"></a>Varsayılan değerler tablosu (C# başvuru)
 
@@ -28,13 +28,13 @@ Aşağıdaki tabloda, C# türlerin varsayılan değerleri gösterilmektedir:
 |[struct](struct.md)|Tüm değer türü alanları varsayılan değerlerine ve tüm başvuru türü alanlarına `null`ayarlanarak oluşturulan değer.|
 |Herhangi bir [Nullable değer türü](../../programming-guide/nullable-types/index.md)|<xref:System.Nullable%601.HasValue%2A> Özelliği ve özelliği<xref:System.Nullable%601.Value%2A> tanımsız olan bir örnek. `false` Bu varsayılan değer null yapılabilir değer türünün *null* değeri olarak da bilinir.|
 
-Aşağıdaki örnekte gösterildiği gibi, bir türün varsayılan değerini oluşturmak için [varsayılan değer ifadesini](../../programming-guide/statements-expressions-operators/default-value-expressions.md) kullanın:
+Aşağıdaki örnekte gösterildiği gibi, bir türün varsayılan değerini oluşturmak için [varsayılan işleci](../operators/default.md) kullanın:
 
 ```csharp
 int a = default(int);
 ```
 
-7,1 ' C# den başlayarak, bir değişkeni türünün varsayılan değeri ile başlatmak için [ `default` değişmez](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) değeri kullanabilirsiniz:
+7,1 ' C# den başlayarak, bir değişkeni türünün varsayılan değeri ile başlatmak için [ `default` değişmez](../operators/default.md#default-literal) değeri kullanabilirsiniz:
 
 ```csharp
 int a = default;
