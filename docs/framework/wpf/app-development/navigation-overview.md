@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: ee2f6050eeea6eec840156ed5dce9fb9b6172149
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
-ms.translationtype: HT
+ms.openlocfilehash: 145c4e33bd601fa61750df56b949bda5d43cc372
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796871"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818007"
 ---
 # <a name="navigation-overview"></a>Gezintiye Genel Bakış
 
@@ -38,7 +38,7 @@ Windows Presentation Foundation (WPF), iki tür uygulama için kullanılabilen t
 <xref:System.Windows.Controls.Page>,, ve Journal, tarafından [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]sunulan gezinti desteğinin çekirdeğini oluşturur. <xref:System.Windows.Documents.Hyperlink> <xref:System.Windows.Navigation.NavigationService> Bu genel bakış, gevşek [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyalar, HTML dosyaları ve nesneler için gezinti içeren gelişmiş gezinti desteğini kapsamadan önce bu özellikleri ayrıntılı olarak araştırır.
 
 > [!NOTE]
-> Bu konuda, "Browser" terimi, yalnızca şu anda ve Firefox içeren [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] uygulamaları barındırabilen tarayıcılara başvurur. Belirli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] özellikler yalnızca belirli bir tarayıcı tarafından desteklendiğinde, tarayıcı sürümüne başvurulur.
+> Bu konuda, "Browser" terimi, şu anda Microsoft Internet Explorer ve Firefox içeren [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları barındırabilen tarayıcılara başvurur. Belirli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] özellikler yalnızca belirli bir tarayıcı tarafından desteklendiğinde, tarayıcı sürümüne başvurulur.
 
 ## <a name="navigation-in-wpf-applications"></a>WPF uygulamalarında gezinme
 
@@ -180,7 +180,7 @@ Aşağıdaki şekilde ' a sahip [!INCLUDE[TLA2#tla_xbap](../../../../includes/tl
 
 ![Köprü Içeren sayfa](./media/navigation-overview/xbap-with-a-page-with-a-hyperlink.png "Bu, Köprüsü olan bir sayfa içeren BIR XBAP gösterir.")
 
-Bekleneceğiniz <xref:System.Windows.Documents.Hyperlink> gibi, öğesine tıkladığınızda [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] `NavigateUri` özniteliği tarafından tanımlanan öğesine <xref:System.Windows.Controls.Page> gitme izni verilir. Ayrıca, ' deki <xref:System.Windows.Controls.Page> [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]son sayfalar listesi için bir giriş ekler.[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Bu, aşağıdaki şekilde gösterilmiştir.
+Bekleneceğiniz <xref:System.Windows.Documents.Hyperlink> gibi, öğesine tıkladığınızda [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] `NavigateUri` özniteliği tarafından tanımlanan öğesine <xref:System.Windows.Controls.Page> gitme izni verilir. Ayrıca, Internet Explorer 'daki son sayfalar listesine bir <xref:System.Windows.Controls.Page> giriş ekler.[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Bu, aşağıdaki şekilde gösterilmiştir.
 
 ![Geri ve ileri düğmeleri](./media/navigation-overview/back-and-forward-navigation.png "Geri ve ileri düğmelerine gidin.")
 
@@ -367,16 +367,16 @@ Bir işleyiciyi bir <xref:System.Windows.Controls.Page>gezinti olayı ile kaydet
 
 #### <a name="navigating-the-journal-from-internet-explorer"></a>Internet Explorer 'da günlük gezinme
 
-Kavramsal olarak, günlük, **geri** ve **İleri** düğmeleriyle [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] aynı şekilde çalışır. Bunlar aşağıdaki şekilde gösterilmiştir.
+Kavramsal olarak, günlük, Internet Explorer 'daki **geri** ve **İleri** düğmeleriyle aynı şekilde çalışır. Bunlar aşağıdaki şekilde gösterilmiştir.
 
 ![Geri ve ileri düğmeleri](./media/navigation-overview/back-and-forward-navigation.png "Geri ve ileri düğmelerine gidin.")
 
-Tarafından [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] barındırılan[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] günlüğü uygulamasının gezintisinetümleştirir.[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] Bu [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] , kullanıcıların içindeki arka,ilerivesonsayfalardüğmelerinikullanaraksayfalardagezinmelerini[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]sağlar . Günlük, [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] veya Internet Explorer 8 [!INCLUDE[TLA2#tla_ie6](../../../../includes/tla2sharptla-ie6-md.md)] ile aynı şekilde tümleştirilmiştir. Bunun yerine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , ikame bir gezinti [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]oluşturur.
+Internet [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] Explorer tarafından barındırılan için, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] günlüğü Internet Explorer 'ın gezintisine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] tümleştirir. Bu, kullanıcıların Internet Explorer 'daki **geri**, [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] **İleri**ve **son sayfalar** düğmelerini kullanarak sayfalarda bir sayfada gezinmelerini sağlar.
 
 > [!IMPORTANT]
-> ' [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]De, bir Kullanıcı bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]veya ' a geri geçtiğinde, yalnızca canlı tutulmayan sayfalara ait günlük girişleri tutulur. Sayfaların canlı tutulması hakkında tartışma için, bu konunun ilerleyen kısımlarında [sayfa ömrü ve günlük](#PageLifetime) bölümüne bakın.
+> Internet Explorer 'da, bir Kullanıcı bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]veya ' a geri gittiğinde, yalnızca canlı tutulmayan sayfalara ait günlük girişleri tutulur. Sayfaların canlı tutulması hakkında tartışma için, bu konunun ilerleyen kısımlarında [sayfa ömrü ve günlük](#PageLifetime) bölümüne bakın.
 
-Varsayılan olarak, <xref:System.Windows.Controls.Page> [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] **en son sayfalar** listesinde görünen her bir metin için <xref:System.Windows.Controls.Page>' dır. Çoğu durumda bu, kullanıcıya özellikle anlamlı değildir. Neyse ki, aşağıdaki seçeneklerden birini kullanarak metni değiştirebilirsiniz:
+Varsayılan olarak, her biri <xref:System.Windows.Controls.Page> için [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Internet Explorer 'ın **son sayfalar** listesinde görünen metin için <xref:System.Windows.Controls.Page>. Çoğu durumda bu, kullanıcıya özellikle anlamlı değildir. Neyse ki, aşağıdaki seçeneklerden birini kullanarak metni değiştirebilirsiniz:
 
 1. İliştirilmiş `JournalEntry.Name` öznitelik değeri.
 
@@ -400,7 +400,7 @@ Aşağıdaki örnek, bir günlük `Page.Title` girişi için görüntülenen met
 
 #### <a name="navigating-the-journal-using-wpf"></a>WPF kullanarak günlükte gezinme
 
-Bir kullanıcı içinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]geri, **İleri**ve **son sayfaları** kullanarak günlükte gezinse de, hem bildirim temelli hem de tarafından sunulan programlama mekanizmalarını kullanarak günlükte gezinebilirsiniz. Bunun bir nedeni, sayfalarınızda özel gezinti [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] sağlamaktır.
+Bir Kullanıcı, Internet Explorer 'daki **geri**, **Ileri**ve **son sayfaları** kullanarak günlüğe gidebilse de, hem bildirim temelli hem de tarafından [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]sunulan programlama mekanizmalarını kullanarak günlükte gezinebilirsiniz. Bunun bir nedeni, sayfalarınızda özel gezinti [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] sağlamaktır.
 
 Tarafından <xref:System.Windows.Input.NavigationCommands>sunulan gezinti komutlarını kullanarak bildirimli olarak günlük gezintisi desteği ekleyebilirsiniz. Aşağıdaki örnek, `BrowseBack` gezinti komutunun nasıl kullanılacağını göstermektedir.
 
@@ -547,7 +547,7 @@ Tanımlama bilgilerinin desteklenme [!INCLUDE[TLA2#tla_wpf](../../../../includes
 
 - İçindeki [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tanımlama bilgisi desteği, desteklenen tüm tarayıcılarda aynıdır.
 
-- ' [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]De, özellikle birinci tarafa ve üçüncü tarafa [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]göre, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]tanımlama bilgileriyle ilgili P3P ilkesi tarafından kabul edilir.
+- Internet Explorer 'da, tanımlama bilgileriyle ilgili olan P3P ilkesi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], özellikle birinci taraf ve üçüncü tarafla [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]ilgili olarak kabul edilir.
 
 <a name="Structured_Navigation"></a>
 
@@ -606,7 +606,7 @@ Aşağıdaki şekilde sonuç gösterilmektedir.
 
 ![İletişim kutusu](./media/navigation-overview/navigation-window-as-dialog-box.png "İletişim kutusu olarak gezinti penceresi")
 
-Görebileceğiniz gibi, <xref:System.Windows.Navigation.NavigationWindow> kullanıcıların günlükte gezinmesini sağlayan ekran [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]stili **geri** ve **İleri** düğmelerini de görüntüleyebilirsiniz. Bu düğmeler, aşağıdaki şekilde gösterildiği gibi aynı kullanıcı deneyimini sağlar.
+Gördüğünüz gibi, <xref:System.Windows.Navigation.NavigationWindow> kullanıcıların günlükte gezinmesine izin veren Internet Explorer stili **geri** ve **İleri** düğmelerini görüntüler. Bu düğmeler, aşağıdaki şekilde gösterildiği gibi aynı kullanıcı deneyimini sağlar.
 
 ![NavigationWindow 'Daki geri ve ileri düğmeleri](./media/navigation-overview/back-and-forward-buttons-in-navigation-window.png "Gezinti penceresinde geri ve ileri düğmeleri")
 
@@ -646,7 +646,7 @@ Aşağıdaki şekilde kendi günlüğünü kullanan bir <xref:System.Windows.Con
 
 ![Kendi günlüğünü kullanan bir çerçeve](./media/navigation-overview/frame-uses-its-own-journal.png "Bu, kendi günlüğünü kullanan bir çerçeve içinde gezinmenin etkisini gösterir.")
 
-Günlük girişlerinin, tarafından [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Controls.Frame> [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]değil ' de gezinme tarafından gösterildiğine dikkat edin.
+Günlük girişlerinin, Internet Explorer yerine, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Controls.Frame>üzerinde gezinerek gösterildiğine dikkat edin.
 
 > [!NOTE]
 > <xref:System.Windows.Controls.Frame> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], Bir<xref:System.Windows.Controls.Frame> içinde barındırılan içeriğin parçasıysa kendi günlüğünü kullanır ve sonuç olarak <xref:System.Windows.Window>kendi gezinmesini görüntüler.
