@@ -17,8 +17,6 @@
           href: lambda-expressions.md
         - name: 'Nasıl yapılır: Sorguda lambda ifadeleri kullanma'
           href: how-to-use-lambda-expressions-in-a-query.md
-    - name: varsayılan değer ifadeleri
-      href: default-value-expressions.md
     - name: Eşitlik ve eşitlik karşılaştırmaları
       items:
         - name: Eşitlik karşılaştırmaları
