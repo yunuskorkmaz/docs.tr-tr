@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 13ad16ab768cdaee96cab29811e2ed058dee977a
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: bc5e2c88314c2f590aeddcfd37bd04c3a7400804
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512245"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796483"
 ---
 # <a name="c-operators-c-reference"></a>C#İşleçler (C# başvuru)
 
@@ -59,7 +59,7 @@ x – Array öğesi veya tür Dizin Oluşturucu erişimi. [&#91;&#93; ](member-a
 
 [unchecked](../keywords/unchecked.md) : tamsayı işlemleri için taşma denetimini devre dışı bırakır. Bu, varsayılan derleyici davranışıdır.
 
-[varsayılan (t)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) : T türünde varsayılan değeri üretir.
+[varsayılan (t)](default.md) : T türünde varsayılan değeri üretir.
 
 [NameOf](nameof.md) -bir değişkenin, türün veya üyenin basit (nitelenmemiş) adını sabit bir dize olarak alır.
 

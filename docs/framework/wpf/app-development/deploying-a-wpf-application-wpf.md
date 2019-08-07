@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 2d3a72dad6a4e139288bf3c1fa9f4cde5124586f
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 924553bf457a6668143785c78871ebac6e01efa4
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796771"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818033"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bir WPF Uygulamasını Dağıtma (WPF)
 Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıtılması gerekir. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].NET Framework birçok dağıtım teknolojilerini içerir. Bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamayı dağıtmak için kullanılan dağıtım teknolojisi, uygulama türüne bağlıdır. Bu konuda her dağıtım teknolojisine ve bunların her [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir uygulama türünün dağıtım gereksinimleriyle birlikte nasıl kullanıldığı hakkında kısa bir genel bakış sunulmaktadır.  
@@ -77,11 +77,11 @@ Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıt�
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
 ### <a name="deploying-markup-only-xaml-applications"></a>Yalnızca biçimlendirme XAML uygulamalarını dağıtma  
- Yalnızca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme sayfaları genellikle HTML sayfaları gibi Web sunucularına yayımlanır ve kullanılarak [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]görüntülenebilir. Yalnızca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme sayfaları, Internet bölgesi izin kümesi tarafından tanımlanan kısıtlamalarla kısmi güvenli güvenlik korumalı alanı içinde çalışır. Bu, HTML tabanlı Web uygulamalarına eşdeğer bir güvenlik korumalı alanı sağlar.  
+ Yalnızca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme sayfaları genellikle HTML sayfaları gibi Web sunucularına yayımlanır ve Internet Explorer kullanılarak görüntülenebilir. Yalnızca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme sayfaları, Internet bölgesi izin kümesi tarafından tanımlanan kısıtlamalarla kısmi güvenli güvenlik korumalı alanı içinde çalışır. Bu, HTML tabanlı Web uygulamalarına eşdeğer bir güvenlik korumalı alanı sağlar.  
   
  Uygulamalar için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] güvenlik hakkında daha fazla bilgi için bkz. [güvenlik](../security-wpf.md).  
   
- Yalnızca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme sayfaları, xcopy veya [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]kullanılarak yerel dosya sistemine yüklenebilir. Bu sayfalar, veya Windows Gezgini [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] kullanılarak görüntülenebilir.  
+ Yalnızca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme sayfaları, xcopy veya [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]kullanılarak yerel dosya sistemine yüklenebilir. Bu sayfalar, Internet Explorer veya Windows Gezgini kullanılarak görüntülenebilir.  
   
  XAML hakkında daha fazla bilgi için bkz. [xaml 'ye Genel Bakış (WPF)](../advanced/xaml-overview-wpf.md).  
   
@@ -98,7 +98,7 @@ Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıt�
 > [!NOTE]
 >  Dağıtım ve uygulama bildirimleri hakkında daha fazla bilgi için bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md).  
   
- Bu dosyalar yapılandırıldığında üretilir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] . Daha fazla bilgi için [nasıl yapılır: Yeni bir WPF tarayıcı uygulaması projesi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))oluşturun. Yalnızca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme sayfaları gibi, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] genellikle bir Web sunucusuna yayımlanır ve kullanılarak [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]görüntülenir.  
+ Bu dosyalar yapılandırıldığında üretilir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] . Daha fazla bilgi için [nasıl yapılır: Yeni bir WPF tarayıcı uygulaması projesi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))oluşturun. Yalnızca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme sayfaları gibi, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] genellikle bir Web sunucusuna yayımlanır ve Internet Explorer kullanılarak görüntülenir.  
   
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], herhangi bir dağıtım tekniği kullanılarak istemcilere dağıtılabilir. Ancak, aşağıdaki özellikleri sağladığından ClickOnce önerilir:  
   
@@ -112,13 +112,11 @@ Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıt�
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>.NET Framework2ü yükleme  
- Bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamayı çalıştırmak için Microsoft .NET Framework 'ün istemcide yüklü olması gerekir. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar görüntülenirken istemcilerin .NET Framework yüklenip yüklenmediğini otomatik olarak algılar. .NET Framework yüklü değilse, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] kullanıcılardan yüklemeyi ister.  
+ Bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamayı çalıştırmak için Microsoft .NET Framework 'ün istemcide yüklü olması gerekir. Internet Explorer, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar görüntülenirken istemcilerin .NET Framework yüklenip yüklenmediğini otomatik olarak algılar. .NET Framework yüklü değilse, Internet Explorer kullanıcılardan yüklemeyi ister.  
   
- .NET Framework yüklü olup olmadığını algılamak için, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] aşağıdaki uzantılara sahip içerik dosyaları için geri dönüş [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] işleyicisi olarak kaydedilmiş bir önyükleyici uygulaması içerir:. xaml,. XPS,. xbap ve. Application. Bu dosya türlerine gittiğinizde .NET Framework istemcide yüklü değilse, önyükleyici uygulamanın bu uygulamayı yükleme izni ister. İzin sağlanmazsa, ne .NET Framework ne de uygulama yüklenmez.  
+ .NET Framework yüklenip yüklenmediğini algılamak için, Internet Explorer aşağıdaki uzantılara sahip içerik dosyaları için geri dönüş [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] işleyicisi olarak kaydedilmiş bir önyükleyici uygulaması içerir:. xaml,. XPS,. xbap ve. Application. Bu dosya türlerine gittiğinizde .NET Framework istemcide yüklü değilse, önyükleyici uygulamanın bu uygulamayı yükleme izni ister. İzin sağlanmazsa, ne .NET Framework ne de uygulama yüklenmez.  
   
- İzin verildiğinde, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] Microsoft arka plan Akıllı Aktarım Hizmeti (BITS) kullanarak .NET Framework indirir ve yükler. .NET Framework başarıyla yüklendikten sonra, özgün olarak istenen dosya yeni bir tarayıcı penceresinde açılır.  
-  
- .NET Framework otomatik algılama [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)]ve [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] ' de yüklü olan [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] veya daha sonraki istemcilerde kullanılabilir.  
+ İzin verildiğinde, Internet Explorer Microsoft Arka Plan Akıllı Aktarım Hizmeti (BITS) kullanarak .NET Framework indirir ve yükler. .NET Framework başarıyla yüklendikten sonra, özgün olarak istenen dosya yeni bir tarayıcı penceresinde açılır.  
   
  Daha fazla bilgi için bkz. [.NET Framework ve uygulamaları dağıtma](../../deployment/index.md).  
   

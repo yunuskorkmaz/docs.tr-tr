@@ -24,18 +24,18 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 24b872fcf58db3ef0ef7d04165129804dc46d641
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
-ms.translationtype: MT
+ms.openlocfilehash: ee2f6050eeea6eec840156ed5dce9fb9b6172149
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364279"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796871"
 ---
 # <a name="navigation-overview"></a>Gezintiye Genel Bakış
 
 Windows Presentation Foundation (WPF), iki tür uygulama için kullanılabilen tarayıcı stili gezinmeyi destekler: tek başına uygulamalar ve [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Gezinti [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] için içerik paketlemek için <xref:System.Windows.Controls.Page> sınıfını sağlar. ' Yi kullanarak bir veya <xref:System.Windows.Controls.Page> kullanarak bir veya <xref:System.Windows.Navigation.NavigationService>programlı olarak bir ile diğerine gidebilirsiniz. <xref:System.Windows.Documents.Hyperlink> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], öğesinden gelen ve geri gitmek için kullanılan sayfaları hatırlamaları için günlüğü kullanır.
 
-<xref:System.Windows.Controls.Page>,, ve Journal, tarafından [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]sunulan gezinti desteğinin çekirdeğini oluşturur. <xref:System.Windows.Documents.Hyperlink> <xref:System.Windows.Navigation.NavigationService> Bu genel bakış, gevşek [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyalar, [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] dosyalar ve nesneler için gezinti içeren gelişmiş gezinti desteğini kullanmadan önce bu özellikleri ayrıntılı olarak ele alır.
+<xref:System.Windows.Controls.Page>,, ve Journal, tarafından [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]sunulan gezinti desteğinin çekirdeğini oluşturur. <xref:System.Windows.Documents.Hyperlink> <xref:System.Windows.Navigation.NavigationService> Bu genel bakış, gevşek [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyalar, HTML dosyaları ve nesneler için gezinti içeren gelişmiş gezinti desteğini kapsamadan önce bu özellikleri ayrıntılı olarak araştırır.
 
 > [!NOTE]
 > Bu konuda, "Browser" terimi, yalnızca şu anda ve Firefox içeren [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] uygulamaları barındırabilen tarayıcılara başvurur. Belirli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] özellikler yalnızca belirli bir tarayıcı tarafından desteklendiğinde, tarayıcı sürümüne başvurulur.
@@ -79,7 +79,7 @@ Bu bölümde, aşağıdaki gezinti yönleri açıklanmaktadır ve gösterilmekte
 
 ### <a name="implementing-a-page"></a>Sayfa uygulama
 
-İçinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].NET Framework nesneleri, özel nesneleri, numaralandırma değerlerini, kullanıcı denetimlerini, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyaları ve [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] dosyaları içeren çeşitli içerik türlerine gidebilirsiniz. Bununla birlikte, içerik paketlemeyi kullanmanın en yaygın ve uygun yolunun kullanarak <xref:System.Windows.Controls.Page>olduğunu fark edeceksiniz. Ayrıca, <xref:System.Windows.Controls.Page> görünüşlerinin geliştirilmesi ve geliştirmeyi basitleştirmek için gezintiye özgü özellikler uygular.
+İçinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].NET Framework nesneleri, özel nesneleri, numaralandırma değerlerini, kullanıcı denetimlerini, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyaları ve HTML dosyalarını içeren çeşitli içerik türlerine gidebilirsiniz. Bununla birlikte, içerik paketlemeyi kullanmanın en yaygın ve uygun yolunun kullanarak <xref:System.Windows.Controls.Page>olduğunu fark edeceksiniz. Ayrıca, <xref:System.Windows.Controls.Page> görünüşlerinin geliştirilmesi ve geliştirmeyi basitleştirmek için gezintiye özgü özellikler uygular.
 
 Kullanarak <xref:System.Windows.Controls.Page>, aşağıdaki gibi bir biçimlendirme kullanarak bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] içeriğe göre gezinebilir bir içerik sayfası uygulayabilirsiniz.
 
@@ -218,7 +218,7 @@ Aşağıda bir içerik parçasına gitmek için yapılandırılmış `Hyperlink`
 > Bu bölümde, ' de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]varsayılan parça gezintisi uygulamasının açıklanmaktadır. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Ayrıca, kısmen <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType> olayını işlemeyi gerektiren kendi parça gezinti düzeninizi uygulamanıza olanak tanır.
 
 > [!IMPORTANT]
-> Gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfalardaki parçalara gidebilirsiniz (kök öğe `Page` olarak yalnızca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme dosyaları), yalnızca sayfaların üzerinden [!INCLUDE[TLA2#tla_http](../../../../includes/tla2sharptla-http-md.md)]gözatılabilir durumunda olabilir.
+> Gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfalardaki parçalara gidebilirsiniz (kök öğe `Page` olarak yalnızca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme dosyaları), yalnızca sayfaların http aracılığıyla gözatılabilir olması durumunda olabilir.
 >
 > Ancak, gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bir sayfa kendi parçalara gidebilir.
 
@@ -371,7 +371,7 @@ Kavramsal olarak, günlük, **geri** ve **İleri** düğmeleriyle [!INCLUDE[TLA2
 
 ![Geri ve ileri düğmeleri](./media/navigation-overview/back-and-forward-navigation.png "Geri ve ileri düğmelerine gidin.")
 
-Tarafından [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] barındırılan[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] günlüğü uygulamasının gezintisinetümleştirir.[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] Bu [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] , kullanıcıların içindeki   arka,ilerivesonsayfalardüğmelerinikullanaraksayfalardagezinmelerini[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]sağlar  . Günlük, [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] veya Internet Explorer 8 [!INCLUDE[TLA2#tla_ie6](../../../../includes/tla2sharptla-ie6-md.md)] ile aynı şekilde tümleştirilmiştir. Bunun yerine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , ikame bir gezinti [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]oluşturur.
+Tarafından [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] barındırılan[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] günlüğü uygulamasının gezintisinetümleştirir.[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] Bu [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] , kullanıcıların içindeki arka,ilerivesonsayfalardüğmelerinikullanaraksayfalardagezinmelerini[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]sağlar . Günlük, [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] veya Internet Explorer 8 [!INCLUDE[TLA2#tla_ie6](../../../../includes/tla2sharptla-ie6-md.md)] ile aynı şekilde tümleştirilmiştir. Bunun yerine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , ikame bir gezinti [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]oluşturur.
 
 > [!IMPORTANT]
 > ' [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]De, bir Kullanıcı bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]veya ' a geri geçtiğinde, yalnızca canlı tutulmayan sayfalara ait günlük girişleri tutulur. Sayfaların canlı tutulması hakkında tartışma için, bu konunun ilerleyen kısımlarında [sayfa ömrü ve günlük](#PageLifetime) bölümüne bakın.
@@ -400,7 +400,7 @@ Aşağıdaki örnek, bir günlük `Page.Title` girişi için görüntülenen met
 
 #### <a name="navigating-the-journal-using-wpf"></a>WPF kullanarak günlükte gezinme
 
-Bir kullanıcı içinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]  [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]geri, **İleri**ve **son sayfaları** kullanarak günlükte gezinse de, hem bildirim temelli hem de tarafından sunulan programlama mekanizmalarını kullanarak günlükte gezinebilirsiniz. Bunun bir nedeni, sayfalarınızda özel gezinti [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] sağlamaktır.
+Bir kullanıcı içinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]geri, **İleri**ve **son sayfaları** kullanarak günlükte gezinse de, hem bildirim temelli hem de tarafından sunulan programlama mekanizmalarını kullanarak günlükte gezinebilirsiniz. Bunun bir nedeni, sayfalarınızda özel gezinti [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] sağlamaktır.
 
 Tarafından <xref:System.Windows.Input.NavigationCommands>sunulan gezinti komutlarını kullanarak bildirimli olarak günlük gezintisi desteği ekleyebilirsiniz. Aşağıdaki örnek, `BrowseBack` gezinti komutunun nasıl kullanılacağını göstermektedir.
 
@@ -539,7 +539,7 @@ Tanımlama bilgilerinin desteklenme [!INCLUDE[TLA2#tla_wpf](../../../../includes
 
 - [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]aynı etki alanından, tanımlama bilgilerini oluşturup paylaşabilir.
 
-- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]aynı etki alanındaki sayfalar, tanımlama bilgilerini oluşturup paylaşabilir. [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]
+- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]ve aynı etki alanındaki HTML sayfaları tanımlama bilgilerini oluşturup paylaşabilir.
 
 - Tanımlama bilgileri, ve [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfalar Web istekleri yaparken gönderilir.
 
@@ -683,7 +683,7 @@ Daha önce belirtildiği gibi, bir uygulama içinde birden çok günlük bulunab
 
 Bu konu başlığı altında <xref:System.Windows.Controls.Page> , ve [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] çeşitli gezinti yeteneklerini [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]göstermek için paketi kullanılmıştır. Ancak, <xref:System.Windows.Controls.Page> bir uygulamaya derlenen tek içerik türü değildir ve paket [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] içeriği belirlemenin tek yolu değildir.
 
-Bu bölümde gösterildiği gibi, gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyalar, [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] dosyalar ve nesneler 'e de gidebilirsiniz.
+Bu bölümde gösterildiği gibi, gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyalar, HTML dosyaları ve nesneler 'e de gidebilirsiniz.
 
 <a name="Navigating_to_Loose_XAML_Files"></a>
 
@@ -724,19 +724,19 @@ Gevşek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 
 
 ### <a name="navigating-to-html-files-by-using-frame"></a>Çerçeve kullanarak HTML dosyalarına gitme
 
-Tahmin edebileceğiniz gibi, ' ye [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]de gidebilirsiniz. Yalnızca http düzenini kullanan bir [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] sağlamanız gerekir. Örneğin, aşağıda [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bir [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] sayfaya giden bir <xref:System.Windows.Controls.Frame> sayfa görüntülenir.
+Tahmin edebileceğiniz gibi, HTML 'ye de gidebilirsiniz. Yalnızca http düzenini kullanan bir [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] sağlamanız gerekir. Örneğin, aşağıdaki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , bir HTML sayfasına <xref:System.Windows.Controls.Frame> giden bir gösterir.
 
 [!code-xaml[NavigationOverviewSnippets#FrameHtmlNavMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHTMLNavPage.xaml#framehtmlnavmarkup)]
 
-' A gitme özel izinler gerektirir.[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] Örneğin, Internet bölgesi kısmi güven güvenlik korumalı [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] alanı ' nda çalıştırılan bir bilgisayardan geziniyorsunuz. Daha fazla bilgi için bkz. [WPF Kısmi güven güvenliği](../wpf-partial-trust-security.md).
+HTML 'ye gitmek için özel izinler gerekir. Örneğin, Internet bölgesi kısmi güven güvenlik korumalı [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] alanı ' nda çalıştırılan bir bilgisayardan geziniyorsunuz. Daha fazla bilgi için bkz. [WPF Kısmi güven güvenliği](../wpf-partial-trust-security.md).
 
 <a name="Navigating_to_HTML_Files_Using_WebBrowser"></a>
 
 ### <a name="navigating-to-html-files-by-using-the-webbrowser-control"></a>WebBrowser denetimini kullanarak HTML dosyalarına gitme
 
-Denetim belge barındırma, gezinti ve betik/yönetilen kod birlikte çalışabilirliğini destekler [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]. <xref:System.Windows.Controls.WebBrowser> <xref:System.Windows.Controls.WebBrowser> Denetimle ilgili ayrıntılı bilgi için bkz <xref:System.Windows.Controls.WebBrowser>.
+<xref:System.Windows.Controls.WebBrowser> Denetim HTML belgesi barındırma, gezinti ve betik/yönetilen kod birlikte çalışabilirliği destekler. <xref:System.Windows.Controls.WebBrowser> Denetimle ilgili ayrıntılı bilgi için bkz <xref:System.Windows.Controls.WebBrowser>.
 
-Benzer <xref:System.Windows.Controls.Frame>şekilde [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] , kullanmaya<xref:System.Windows.Controls.WebBrowser> gitme özel izinler gerektirir. Örneğin, kısmi güven uygulamasından yalnızca [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] kaynak sitesinde bulunan ' a gidebilirsiniz. Daha fazla bilgi için bkz. [WPF Kısmi güven güvenliği](../wpf-partial-trust-security.md).
+Benzer <xref:System.Windows.Controls.Frame>şekilde, <xref:System.Windows.Controls.WebBrowser> HTML 'ye gidildiğinde özel izinler gerekir. Örneğin, kısmi güven uygulamasından yalnızca kaynak sitesinde bulunan HTML 'ye gidebilirsiniz. Daha fazla bilgi için bkz. [WPF Kısmi güven güvenliği](../wpf-partial-trust-security.md).
 
 <a name="Navigating_to_Objects"></a>
 

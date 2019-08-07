@@ -8,36 +8,36 @@ helpviewer_keywords:
 - history [WPF], navigating forward
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
-ms.openlocfilehash: 00a41fcf85583ec0d081a2fa099f3a77cfcd2900
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85d3562246170901d83d6314caec5747d52fb9a0
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625353"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817957"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Nasıl yapılır: Gezinme Geçmişinde İleriye veya Geriye Doğru Gitme
-Bu örnek girişleri gezinme geçmişinde ileriye veya geriye gitmek nasıl gösterir.  
+Bu örnek, gezinme geçmişinde girişlerin ileri veya geri nasıl gezindiğini gösterir.  
   
 ## <a name="example"></a>Örnek  
- Şu konakları içeriğinden çalışan kod gezinti geçmişinde bir zamanda bir girdi İleri veya geri gidebilirsiniz.  
+ Aşağıdaki konaklardaki içerikten çalıştırılan kod, tek seferde bir giriş olmak üzere gezinti geçmişi ile ileri veya geri gidebilir.  
   
-- <xref:System.Windows.Navigation.NavigationWindow> kullanma <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Navigation.NavigationWindow>kullanarak<xref:System.Windows.Navigation.NavigationService>  
   
-- <xref:System.Windows.Controls.Frame> kullanma <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Controls.Frame>kullanarak<xref:System.Windows.Navigation.NavigationService>  
   
-- [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
+- Internet Explorer  
   
- Bir girdi ileriye gidebilirsiniz önce ilk olduğunu girişleri İleri Gezinme geçmişi içinde inceleyerek işaretlemeniz gerekir **CanGoForward** özelliği. Bir girdi ileriye gezinmek için çağrı **GoForward** yöntemi. Bu, aşağıdaki örnekte gösterilmiştir:  
+ Bir giriş ileri gidebilmeniz için önce **CanGoForward** özelliğini inceleyerek ileri gezinme geçmişine giriş olup olmadığını kontrol etmeniz gerekir. Bir giriş ileri gitmek için **GoForward** yöntemini çağırın. Bu, aşağıdaki örnekte gösterilmiştir:  
   
  [!code-csharp[HOWTONavigationSnippets#NavigateForwardCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigateforwardcode)]
  [!code-vb[HOWTONavigationSnippets#NavigateForwardCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigateforwardcode)]  
   
- Gidebilirsiniz önce bir girdi geri, olduğunu girişleri geri Gezinme geçmişi içinde incelenerek ilk denetlemelisiniz **CanGoBack** özelliği. Bir girdiye geri gitmek için çağrı **GoBack** yöntemi. Bu, aşağıdaki örnekte gösterilmiştir:  
+ Bir giriş geri gidebilmeniz için önce **CanGoBack** özelliğini inceleyerek geri gezinti geçmişinde girişler olup olmadığını kontrol etmeniz gerekir. Bir giriş geri gitmek için **GoBack** metodunu çağırın. Bu, aşağıdaki örnekte gösterilmiştir:  
   
  [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
  [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
   
- **CanGoForward**, **GoForward**, **CanGoBack**, ve **GoBack** tarafından uygulanan <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, ve <xref:System.Windows.Navigation.NavigationService>.  
+ **CanGoForward**, **GoForward**, **CanGoBack**ve **GoBack** <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, ve <xref:System.Windows.Navigation.NavigationService>tarafından uygulanır.  
   
 > [!NOTE]
->  Eğer **GoForward**, ve İleri Gezinme geçmişi içinde hiç girdi yok veya çağırırsanız **GoBack**, ve geri Gezinme geçmişi içinde hiç girdi yok bir <xref:System.InvalidOperationException> oluşturulur.
+>  **GoForward**çağırır ve ileri gezinme geçmişinde hiç giriş yoksa veya **GoBack**'i çağırırsanız ve geri gezinme geçmişinde hiç giriş yoksa, bir <xref:System.InvalidOperationException> oluşturulur.

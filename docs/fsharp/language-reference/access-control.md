@@ -2,12 +2,12 @@
 title: Erişim Denetimi
 description: F# Programlama dilindeki türler, Yöntemler ve işlevler gibi programlama öğelerine erişimi nasıl denetleyeceğinizi öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: ed77a09cf87aabf9a4134276e89e84aa42abd3c3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 38f8f3fd4114c0428fbe8baca71594cd07740b2c
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629964"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817861"
 ---
 # <a name="access-control"></a>Erişim Denetimi
 
@@ -40,7 +40,7 @@ Erişim denetimi aşağıdaki kurallara tabidir:
 
 - Ayrılmış bir Union içindeki bireysel durumlar için erişilebilirlik, ayrılmış birleşimin erişilebilirliğine göre belirlenir. Diğer bir deyişle, belirli bir birleşim durumunun birleşimin kendisinden daha az erişilebilir olmaması gerekir.
 
-- Kayıt türündeki ayrı alanlar için erişilebilirlik, kaydın kendisi tarafından belirlenir. Diğer bir deyişle, belirli bir kayıt etiketi kaydın kendisinden daha az erişilebilir değildir.
+- Kayıt türündeki ayrı alanlar için erişilebilirlik, kaydın kendisinin erişilebilirliği tarafından belirlenir. Diğer bir deyişle, belirli bir kayıt etiketi kaydın kendisinden daha az erişilebilir değildir.
 
 ## <a name="example"></a>Örnek
 

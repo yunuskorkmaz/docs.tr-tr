@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 6bea25fbd321eead9137caaeb212b76a9d528e88
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: da9eaf127a4db02cddbb36e53a0d0ddb5b28b841
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710391"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818056"
 ---
 # <a name="threading-model"></a>İş Parçacığı Modeli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], iş parçacığı zorluklarından geliştiricilerin kaydedileceği şekilde tasarlanmıştır. Sonuç olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geliştiricilerin çoğunluğu birden fazla iş parçacığı kullanan bir arabirim yazmak zorunda kalmaz. Çok iş parçacıklı programlar karmaşık olduğu ve hata ayıklamanın zor olduğu için, tek iş parçacıklı çözümler olduğunda bu, kaçınılmalıdır.  
@@ -143,7 +143,7 @@ ms.locfileid: "68710391"
   
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]Gezgin bu biçimde çalışmaktadır. Her yeni Gezgin penceresi orijinal işleme aittir, ancak bağımsız bir iş parçacığının denetimi altında oluşturulur.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bir<xref:System.Windows.Controls.Frame> denetim kullanarak Web sayfalarını görüntüleriz. Kolayca basit [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] bir yedek oluşturabiliyoruz. Önemli bir özellik ile başlıyoruz: yeni bir Gezgin penceresi açma özelliği. Kullanıcı "yeni pencere" düğmesine tıkladığında, ayrı bir iş parçacığında penceremizin kopyasını başladık. Bu şekilde, Windows 'un birindeki uzun süreli veya engelleyici işlemler diğer tüm pencereleri kilitlemez.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bir<xref:System.Windows.Controls.Frame> denetim kullanarak Web sayfalarını görüntüleriz. Kolayca basit bir Internet Explorer yerine kolayca oluşturabiliyoruz. Önemli bir özellik ile başlıyoruz: yeni bir Gezgin penceresi açma özelliği. Kullanıcı "yeni pencere" düğmesine tıkladığında, ayrı bir iş parçacığında penceremizin kopyasını başladık. Bu şekilde, Windows 'un birindeki uzun süreli veya engelleyici işlemler diğer tüm pencereleri kilitlemez.  
   
  Gerçekte, Web tarayıcısı modelinin karmaşık iş parçacığı modeli vardır. Çoğu okuyucuları tanımak gerektiğinden, bunu seçtik.  
   

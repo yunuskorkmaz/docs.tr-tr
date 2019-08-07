@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: d8e26ff197e22ffa18b4acdd020b80879023c0f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364085"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818012"
 ---
 # <a name="application-management-overview"></a>Uygulama Yönetimine Genel Bakış
 Tüm uygulamalar, uygulama uygulaması ve yönetimi için geçerli olan ortak bir işlev kümesini paylaşma eğilimindedir. Bu konu, <xref:System.Windows.Application> uygulama oluşturma ve yönetme sınıfındaki işlevlere genel bir bakış sağlar.  
@@ -105,7 +105,7 @@ Tüm uygulamalar, uygulama uygulaması ve yönetimi için geçerli olan ortak bi
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Geçerli uygulama alınıyor  
- <xref:System.Windows.Application> Sınıfın işlevselliği bir uygulama genelinde paylaşıldığından, <xref:System.Windows.Application> sınıfının başına <xref:System.AppDomain>yalnızca bir örneği olabilir. Bunu <xref:System.Windows.Application> zorlamak için, sınıfı tek bir sınıf olarak uygulanır (bkz [ C#. ](https://go.microsoft.com/fwlink/?LinkId=100567)tek bir örneğini oluşturur) ve <xref:System.Windows.Application.Current%2A> özelliği ile `static` buna paylaşılan erişim sağlar.  
+ <xref:System.Windows.Application> Sınıfın işlevselliği bir uygulama genelinde paylaşıldığından, <xref:System.Windows.Application> sınıfının başına <xref:System.AppDomain>yalnızca bir örneği olabilir. Bunu zorlamak için, <xref:System.Windows.Application> sınıfı tek bir sınıf olarak uygulanır (bkz [ C# ](https://go.microsoft.com/fwlink/?LinkId=100567). tek bir örneğini oluşturur) ve <xref:System.Windows.Application.Current%2A> özelliği ile `static` buna paylaşılan erişim sağlar.  
   
  Aşağıdaki kod, geçerli <xref:System.Windows.Application> <xref:System.AppDomain>için nesnesine nasıl bir başvuru alınacağını göstermektedir.  
   
@@ -293,7 +293,7 @@ Tüm uygulamalar, uygulama uygulaması ve yönetimi için geçerli olan ortak bi
   
 - Bir XBAP üzerinden gezinilebilir.  
   
-- ' [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]De, XBAP barındıran sekme kapalı olduğunda.  
+- Internet Explorer 'da, XBAP 'yi barındıran sekme kapalı olduğunda.  
   
 - Tarayıcı kapatıldığında.  
   

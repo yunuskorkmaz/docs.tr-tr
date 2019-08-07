@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 42b1596082fe3e682a6fa806412ab5837b087bf9
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 65725851cb413e28ceff0d1c9c4b62b76c4fff18
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400718"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817888"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
-Windows Presentation Foundation (WPF) çeşitli güvenlik hizmetleri sağlarken, işletim sistemi, CLR ve [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]içeren temel platformun güvenlik özelliklerinden de yararlanır. Bu katmanlar, aşağıdaki şekilde [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] gösterildiği gibi, herhangi bir hata noktasını önlemeye yönelik güçlü, derinlemesine bir güvenlik modeli sağlamak için birleştirilir:  
+Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetleri sağladığından, işletim sistemini, CLR 'yi ve Internet Explorer 'ı içeren temel platformun güvenlik özelliklerinden de yararlanır. Bu katmanlar, aşağıdaki şekilde [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] gösterildiği gibi, herhangi bir hata noktasını önlemeye yönelik güçlü, derinlemesine bir güvenlik modeli sağlamak için birleştirilir:  
   
  ![WPF güvenlik modelini gösteren diyagram.](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
@@ -75,15 +75,8 @@ Windows Presentation Foundation (WPF) çeşitli güvenlik hizmetleri sağlarken,
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>Tarayıcıda barındırılan uygulamalar için sınırlı haklar süreci  
- Tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalar Internet bölgesi korumalı alanı içinde yürütülür. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]ile tümleştirme [!INCLUDE[TLA#tla_ie](../../../includes/tlasharptla-ie-md.md)] , bu korumayı ek destek ile genişletir.  
+ Tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalar Internet bölgesi korumalı alanı içinde yürütülür. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Microsoft Internet Explorer ile tümleştirme, bu korumayı ek destek ile genişletir.  
   
-#### <a name="internet-explorer-6-service-pack-2-and-internet-explorer-7-for-xp"></a>Internet Explorer 6 Service Pack 2 ve XP için Internet Explorer 7  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], daha fazla koruma [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] için işlem ayrıcalıklarını sınırlayarak işletim sistemi güvenliğini kullanır. Tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bir uygulama başlatılmadan önce, işletim sistemi işlem belirtecinden gereksiz ayrıcalıkları kaldıran bir konak işlemi oluşturur. Kaldırılan ayrıcalıkların bazı örnekleri, kullanıcının makinesini kapatma, sürücüleri yükleme ve makinedeki tüm dosyalara okuma erişimi olanakları içerir.  
-  
-#### <a name="internet-explorer-7-for-vista"></a>Vista için Internet Explorer 7  
- ' [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)]De [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , uygulamalar korumalı modda çalışır. Özellikle, [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] orta düzey bütünlük ile çalıştırın.  
-  
-#### <a name="defense-in-depth-layer"></a>Derinlemesine savunma katmanı  
  Internet [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] bölgesi izin kümesi tarafından genellikle korumalı olduğundan, bu ayrıcalıkların kaldırılması uyumluluk perspektifinden zarar [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] vermez. Bunun yerine, ek bir derinlemesine savunma katmanı oluşturulur; korumalı bir uygulama diğer katmanlardan yararlanabilebiliyor ve süreci hijak, işlem hala yalnızca sınırlı ayrıcalıklara sahip olur.  
   
  Bkz. [en az ayrıcalıklı kullanıcı hesabı kullanma](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29).  
@@ -166,9 +159,9 @@ Windows Presentation Foundation (WPF) çeşitli güvenlik hizmetleri sağlarken,
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- Bu **onay aslında,** XBAP 'nin Internet bölgesi izinleriyle [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sınırlandırılmalarını gerektiren sınırsız izinleri önler.  
+ Bu onay aslında, XBAP 'nin Internet bölgesi izinleriyle [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sınırlandırılmalarını gerektiren sınırsız izinleri önler.  
   
- Bir platform perspektifinden doğru onay [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] **kullanmaktan sorumludur** ; bir **onaylama** yanlış kullanımı, kötü amaçlı kodun ayrıcalıkların yükseltilmesini sağlar. Sonuç olarak, yalnızca gerektiğinde **onay çağrısı yapmak** ve korumalı alan kısıtlamalarının bozulmadan kalmasını sağlamak önemlidir. Örneğin, korumalı kodun rastgele dosyaları açmasına izin verilmez, ancak yazı tiplerini kullanmasına izin verilir. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]korumalı uygulamaların, **onayı**çağırarak yazı tipi işlevselliğini kullanmasına ve [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bu yazı tiplerini korumalı uygulama adına içerdiği bilinen dosyaları okumasına olanak sağlar.  
+ Bir platform perspektifinden doğru onay [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kullanmaktan sorumludur; bir **onaylama** yanlış kullanımı, kötü amaçlı kodun ayrıcalıkların yükseltilmesini sağlar. Sonuç olarak, yalnızca gerektiğinde onay çağrısı yapmak ve korumalı alan kısıtlamalarının bozulmadan kalmasını sağlamak önemlidir. Örneğin, korumalı kodun rastgele dosyaları açmasına izin verilmez, ancak yazı tiplerini kullanmasına izin verilir. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]korumalı uygulamaların, **onayı**çağırarak yazı tipi işlevselliğini kullanmasına ve [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bu yazı tiplerini korumalı uygulama adına içerdiği bilinen dosyaları okumasına olanak sağlar.  
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce dağıtımı  
@@ -186,9 +179,9 @@ Windows Presentation Foundation (WPF) çeşitli güvenlik hizmetleri sağlarken,
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer güvenliği  
- Güvenlik sorunlarının azalmasını ve güvenlik yapılandırmasını basitleştirmenin ötesinde [!INCLUDE[TLA#tla_ie6sp2](../../../includes/tlasharptla-ie6sp2-md.md)] , güvenlik geliştirmelerinden [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]kullanıcıları için güvenliği geliştiren çeşitli özellikler içerir. Bu özelliklerin bu özellikleri, kullanıcıların gözatma deneyimi üzerinde daha fazla denetime izin vermeyi dener.  
+ Güvenlik sorunlarını azaltmaya ve güvenlik yapılandırmasını basitleştirmeye karşı, Microsoft Internet Explorer 6 (SP2), kullanıcılarının [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]güvenliğini artıran güvenlik geliştirmelerinden oluşan çeşitli özellikler içerir. Bu özelliklerin bu özellikleri, kullanıcıların gözatma deneyimi üzerinde daha fazla denetime izin vermeyi dener.  
   
- [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]Öncesinde, kullanıcılar aşağıdakilerden birine tabi olabilir:  
+ IE6 SP2 'den önce, kullanıcılar aşağıdakilerden birine tabi olabilir:  
   
 - Rastgele açılan pencereler.  
   
@@ -198,13 +191,13 @@ Windows Presentation Foundation (WPF) çeşitli güvenlik hizmetleri sağlarken,
   
  Bazı durumlarda, güvenilir olmayan Web siteleri, Kullanıcı bunu iptal etmiş olsa bile yüklemeyi [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] yanıltma veya bir Microsoft ActiveX yükleme iletişim kutusunu yeniden göstererek kullanıcıları aldatmaya çalışır. Bu teknikleri kullanarak, casus yazılım uygulamalarının yüklenmesiyle sonuçlanan kötü kararlar almaya çok sayıda kullanıcı daha karmaşık bir şekilde ele alınmış olabilir.  
   
- [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)], Kullanıcı başlatma kavramını kapsayan bu tür sorunları hafifletmek için çeşitli özellikler içerir. [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]kullanıcının *başlatma*olarak bilinen bir eylemden önce bir bağlantı veya sayfa öğesine tıkladığını algılar ve bir sayfada komut dosyası tarafından bunun yerine benzer bir eylem olduğu gibi davranır. Örnek olarak, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] bir kullanıcının açılır pencere oluşturmadan önce bir düğmeye tıkladığını algılayan bir **açılır pencere engelleyicisi** içerir. Bu, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] kullanıcıların veya istemediği açılan pencereleri engelleyen zararsız açılır pencerelere izin vermesini sağlar. Engellenen açılır pencereler, kullanıcının engellemeyi el ile geçersiz kılmasını ve açılır pencereyi görüntülemesini sağlayan yeni **bilgi çubuğu**altında yakalanmalıdır.  
+ IE6 SP2, bu tür sorunları hafifletmek için Kullanıcı başlatma kavramını kapsayan çeşitli özellikler içerir. IE6 SP2, bir Kullanıcı *başlatma*olarak bilinen bir eylemden önce bir bağlantı veya sayfa öğesine tıkladığını algılar ve bir sayfada betik tarafından bunun yerine benzer bir eylem olduğu gibi davranır. Örnek olarak, ıE6 SP2 bir kullanıcının açılır pencere oluşturmadan önce bir düğmeye tıkladığını algılayan bir **açılır pencere engelleyicisi** içerir. Bu, ıE6 SP2'NIN çoğu zararsız açılır pencerelere izin vermesini sağlar, ancak kullanıcıların veya istediği açılan pencereleri önler. Engellenen açılır pencereler, kullanıcının engellemeyi el ile geçersiz kılmasını ve açılır pencereyi görüntülemesini sağlayan yeni **bilgi çubuğu**altında yakalanmalıdır.  
   
  Aynı Kullanıcı başlatma mantığı Ayrıca, güvenlik**kaydetme** komut istemlerini **Aç**/' a uygulanır. Daha önce yüklenmiş bir denetimden bir yükseltmeyi temsil etmediği takdirde, ActiveX yükleme iletişim kutuları her zaman bilgi çubuğu altına kaydedilir. Bu ölçümler kullanıcılara daha güvenli, daha denetimli bir kullanıcı deneyimi sağlamak için birleşerek, istenmeyen veya kötü amaçlı yazılım yüklemeleri için bunları tacler eden sitelere karşı koruma sağlar.  
   
- Bu özellikler ayrıca, uygulamaları indirip yüklemelerine [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] izin veren Web sitelerine gitmek için kullanan müşterileri de korur. Bunun nedeni, bunun nedeni [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] , kullanıcıların hangi teknolojide bu uygulamayı oluşturmak için kullanıldığının yanı sıra [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]kötü amaçlı veya bağımsız uygulamalar yükleyebilme olasılığını azaltan daha iyi bir kullanıcı deneyimi sunmasıdır. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], uygulamalarını Internet üzerinden indirmeyi kolaylaştırmak için ClickOnce kullanarak bu korumaların sonuna ekler. Internet bölgesi güvenlik korumalı alanı içinde yürütülebildiğinden,sorunsuzbirşekildebaşlatılabilir.[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] Öte yandan, tek başına [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalar yürütmek için tam güven gerektirir. Bu uygulamalar için, ClickOnce, uygulamanın ek güvenlik gereksinimlerinin kullanımını bildirmek üzere başlatma işlemi sırasında bir güvenlik iletişim kutusu görüntüler. Ancak, bu kullanıcı tarafından başlatılmış olması gerekir ve Kullanıcı tarafından başlatılan mantığa göre yönetilir ve iptal edilebilir.  
+ Bu özellikler, IE6 SP2 kullanan müşterileri, uygulamaların indirilmesine ve yüklenmesine [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] izin veren Web sitelerine gözatmaya da karşı korur. Bunun nedeni, bu, ıE6 SP2'NIN, bu sürümü oluşturmak [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]için kullanılan teknolojiden bağımsız olarak kötü amaçlı veya bağımsız uygulamalar yükleyebilme olasılığını azaltan daha iyi bir kullanıcı deneyimi sunmasıdır. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], uygulamalarını Internet üzerinden indirmeyi kolaylaştırmak için ClickOnce kullanarak bu korumaların sonuna ekler. Internet bölgesi güvenlik korumalı alanı içinde yürütülebildiğinden,sorunsuzbirşekildebaşlatılabilir.[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] Öte yandan, tek başına [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalar yürütmek için tam güven gerektirir. Bu uygulamalar için, ClickOnce, uygulamanın ek güvenlik gereksinimlerinin kullanımını bildirmek üzere başlatma işlemi sırasında bir güvenlik iletişim kutusu görüntüler. Ancak, bu kullanıcı tarafından başlatılmış olması gerekir ve Kullanıcı tarafından başlatılan mantığa göre yönetilir ve iptal edilebilir.  
   
- [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)]güvenliği için devam eden bir taahhütün bir parçası [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] olarak güvenlik yeteneklerini ekler ve genişletir.  
+ Internet Explorer 7, güvenlik çabalarının bir parçası olarak ıE6 SP2'NIN güvenlik yeteneklerini içerir ve genişletir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

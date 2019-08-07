@@ -1,26 +1,26 @@
 ---
-title: Charsets ve sıralama - .NET
-description: Farklı değerleri öğrenin CharSet .NET yerel kodu verilerinize nasıl sürekliliğe devreder değiştirebilirsiniz.
+title: Charsets ve Marshal-.NET
+description: Farklı karakter kümesi, .NET 'in verilerinizi yerel koda nasıl bir şekilde kullandığını nasıl değiştirebileceğinizi öğrenin.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: c50c58ad639b1efb29c13e5124fe3c32e8af96fc
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: cac71c5d09514dfe1244d16224944e05826edfa9
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063333"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817846"
 ---
-# <a name="charsets-and-marshaling"></a>Charsets ve hazırlama
+# <a name="charsets-and-marshaling"></a>Karakter kümesi ve hazırlama
 
-Yol `char` değerleri `string` nesneleri ve `System.Text.StringBuilder` nesneleri sıralanmış değerine bağlıdır `CharSet` P/Invoke ya da yapı üzerinde alan. Ayarlayabileceğiniz `CharSet` ayarlayarak P/Invoke'nın <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> P/Invoke bildirirken alan. Ayarlanacak `CharSet` bir yapısı için <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> , struct bildiriminde alan. Bu öznitelik alanları ayarlı değil, belirlemek için dil derleyicisi kadar olur `CharSet` kullanılacak. C#ve VB <xref:System.Runtime.InteropServices.CharSet.Ansi> varsayılan karakter kümesi.
+Değerlerin, `char` `string` nesnelerin `CharSet` ve `System.Text.StringBuilder` nesnelerin nasıl sıralandığına göre, P/Invoke veya Structure üzerindeki alanın değerine göre değişir. P/Invoke 'nizi `CharSet` bildirirken <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> alanı ayarlayarak p/Invoke kümesini ayarlayabilirsiniz. Bir yapıyı ayarlamak `CharSet` için yapı bildirimindeki <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> alanı ayarlayın. Bu öznitelik alanları ayarlanmamışsa, hangisinin `CharSet` kullanılacağını belirleyen dil derleyicisi vardır. C#ve vb varsayılan olarak <xref:System.Runtime.InteropServices.CharSet.Ansi> karakter kümesini kullanır.
 
-Aşağıdaki tablo her bir karakter kümesi arasındaki eşlemeyi gösterir ve bir karakter veya dize ile bu charset sıralandığı zaman nasıl gösterilir:
+Aşağıdaki tabloda, her karakter kümesi ile bir karakter veya dizenin bu karakter kümesi ile sıralandığınızda nasıl temsil edildiği gösterilmektedir:
 
-| `CharSet` Değer | Windows            | .NET core 2.2 ve daha önce on UNIX | .NET core 3.0 ve sonraki ve UNIX üzerinde Mono |
+| `CharSet`deeri | Windows            | UNIX üzerinde .NET Core 2,2 ve önceki sürümleri | .NET Core 3,0 ve üzeri ve mono on Unix |
 |-----------------|--------------------|-----------------------------------|------------------------------------------|
-| Ansi            | `char` (ANSI)      | `char` (UTF-8)                    | `char` (UTF-8)                           |
-| Unicode         | `wchar_t` (UTF-16) | `char16_t` (UTF-16)               | `char16_t` (UTF-16)                      |
-| Otomatik            | `wchar_t` (UTF-16) | `char16_t` (UTF-16)               | `char` (UTF-8)                           |
+| Ansi            | `char`(sistem varsayılan [Windows (ANSI) kod sayfası](/windows/win32/intl/code-pages))      | `char`(UTF-8)                    | `char`(UTF-8)                           |
+| Unicode         | `wchar_t`(UTF-16) | `char16_t`(UTF-16)               | `char16_t`(UTF-16)                      |
+| Otomatik            | `wchar_t`(UTF-16) | `char16_t`(UTF-16)               | `char`(UTF-8)                           |
 
-Hangi gösterimi, charset alınırken, yerel gösterimine bekliyor bildiğinizden emin olun.
+Yerel gösteriminizi, karakter kümesini seçerken beklediği gösterimi öğrendiğinizden emin olun.

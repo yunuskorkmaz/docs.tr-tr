@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 1149a70fc723a82144d13cbd079e3287b52ec4fb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 8fa9f2dd668efca6a3108973ff792cc17b37b410
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401475"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818046"
 ---
 # <a name="input-overview"></a>Girişe Genel Bakış
 <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Alt sistem, fare, klavye, dokunmatik ve ekran kalemi dahil olmak üzere çeşitli cihazlardan giriş almak için güçlü bir API sağlar. Bu konuda tarafından [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sunulan hizmetler açıklanmakta ve giriş sistemlerinin mimarisi açıklanmaktadır.
@@ -113,7 +113,7 @@ ms.locfileid: "68401475"
 ## <a name="text-input"></a>Metin Girişi
  Olay <xref:System.Windows.ContentElement.TextInput> , metin girişini cihazdan bağımsız şekilde dinlemenize olanak sağlar. Klavye, metin girişinin birincil yöntemidir, ancak konuşma, el yazısı ve diğer giriş cihazları da metin girişi oluşturabilir.
 
- Klavye girişi için, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] önce uygun <xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp> olayları gönderir. Bu olaylar işlenmezse ve anahtar metinsel ise (yön okları veya işlev anahtarları gibi bir denetim anahtarı yerine), bir <xref:System.Windows.ContentElement.TextInput> olay tetiklenir.  Birden çok tuş vuruşu metin girişi için tek bir karakter oluşturabileceği ve tek <xref:System.Windows.ContentElement.KeyDown> tuş <xref:System.Windows.ContentElement.TextInput> vuruşlarının birden çok karakter oluşturabileceği için, ve olayları arasında / <xref:System.Windows.ContentElement.KeyUp> her zaman bir tane basit eşleme yoktur Strings.  Bu özellikle, ilgili harflerden itibaren binlerce olası karakteri oluşturmak için kullanılan [!INCLUDE[TLA#tla_ime#plural](../../../../includes/tlasharptla-imesharpplural-md.md)] Çince, Japonca ve Korece gibi diller için geçerlidir.
+ Klavye girişi için, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] önce uygun <xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp> olayları gönderir. Bu olaylar işlenmezse ve anahtar metinsel ise (yön okları veya işlev anahtarları gibi bir denetim anahtarı yerine), bir <xref:System.Windows.ContentElement.TextInput> olay tetiklenir.  Birden çok tuş vuruşu metin girişi için tek bir karakter oluşturabileceği ve tek <xref:System.Windows.ContentElement.KeyDown> tuş <xref:System.Windows.ContentElement.TextInput> vuruşlarının birden çok karakter oluşturabileceği için, ve olayları arasında / <xref:System.Windows.ContentElement.KeyUp> her zaman bir tane basit eşleme yoktur Strings.  Bu özellikle, ilgili harflerden itibaren binlerce olası karakteri oluşturmak için giriş yöntemi düzenleyicileri (IME 'Ler) kullanan Çince, Japonca ve Korece gibi diller için geçerlidir.
 
  <xref:System.Windows.Input.KeyEventArgs.Key%2A> Bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olayıgönderdiğinde<xref:System.Windows.ContentElement.KeyUp> , <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> tuş vuruşları bir olayınparçasıhalinegelirse(örneğin,alt+Sbasılıysa),olarakayarlanır.<xref:System.Windows.ContentElement.TextInput> / <xref:System.Windows.ContentElement.KeyDown> Bu, bir <xref:System.Windows.ContentElement.KeyDown> olay işleyicisindeki kodun <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> olup olmadığını kontrol etmesine izin verir ve bulunursa, daha sonra oluşturulan <xref:System.Windows.ContentElement.TextInput> etkinliğin işleyicisi için işlemeyi bırakır. Bu durumlarda, <xref:System.Windows.Input.TextCompositionEventArgs> bağımsız değişkenin çeşitli özellikleri orijinal tuş vuruşlarını belirlemede kullanılabilir. Benzer şekilde, bir [!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)] <xref:System.Windows.Input.Key> etkin ise değerine <xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>sahiptir ve <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> özgün tuş vuruşunu veya tuş vuruşlarını verir.
 
