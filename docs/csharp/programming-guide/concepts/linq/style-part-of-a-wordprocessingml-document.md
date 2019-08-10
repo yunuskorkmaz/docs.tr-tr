@@ -1,29 +1,29 @@
 ---
-title: WordprocessingML Document1 stil kısmı
+title: WordprocessingML Belgesinin Stil Kısmı
 ms.date: 07/20/2015
 ms.assetid: 5458bccf-3898-4661-904b-7d280c9239a9
-ms.openlocfilehash: 5f4db2834aae01bf451d7430e923729a7d7069c4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 56726a7ea7594bfd1c68e5b1f8e45f585138eac6
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483432"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868635"
 ---
-# <a name="style-part-of-a-wordprocessingml-document"></a><span data-ttu-id="1286f-102">WordprocessingML Belgesinin Stil Kısmı</span><span class="sxs-lookup"><span data-stu-id="1286f-102">Style Part of a WordprocessingML Document</span></span>
-<span data-ttu-id="1286f-103">Bu konuda, Office Open XML WordprocessingML belgesinin stil kısmı örneği gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="1286f-103">This topic shows an example of the style part of the Office Open XML WordprocessingML document.</span></span>  
+# <a name="style-part-of-a-wordprocessingml-document"></a><span data-ttu-id="ad022-102">WordprocessingML Belgesinin Stil Kısmı</span><span class="sxs-lookup"><span data-stu-id="ad022-102">Style Part of a WordprocessingML Document</span></span>
+<span data-ttu-id="ad022-103">Bu konuda, Office Open XML WordprocessingML belgesinin stil bölümünün bir örneği gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="ad022-103">This topic shows an example of the style part of the Office Open XML WordprocessingML document.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1286f-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="1286f-104">Example</span></span>  
- <span data-ttu-id="1286f-105">Aşağıdaki örnek bir Office Open XML WordprocessingML belgesinin stil kısmı yapan XML'dir.</span><span class="sxs-lookup"><span data-stu-id="1286f-105">The following example is the XML that makes up the style part of an Office Open XML WordprocessingML document.</span></span>  
+## <a name="example"></a><span data-ttu-id="ad022-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="ad022-104">Example</span></span>  
+ <span data-ttu-id="ad022-105">Aşağıdaki örnek, bir Office Open XML WordprocessingML belgesinin stil parçasını oluşturan XML 'dir.</span><span class="sxs-lookup"><span data-stu-id="ad022-105">The following example is the XML that makes up the style part of an Office Open XML WordprocessingML document.</span></span>  
   
- <span data-ttu-id="1286f-106">Varsayılan paragraf stilini aşağıdaki açılış etiketinde sahip bir öğe vardır:</span><span class="sxs-lookup"><span data-stu-id="1286f-106">The default paragraph style has an element with the following opening tag:</span></span>  
+ <span data-ttu-id="ad022-106">Varsayılan paragraf stilinin aşağıdaki açılış etiketiyle bir öğesi vardır:</span><span class="sxs-lookup"><span data-stu-id="ad022-106">The default paragraph style has an element with the following opening tag:</span></span>  
   
 ```xml
 <w:style w:type="paragraph" w:default="1" w:styleId="Normal">  
 ```  
   
- <span data-ttu-id="1286f-107">Böylece sorgu varsayılan stil paragraf stilini varsayılan stili tanımlayıcısını bulmak için bir sorgu yazdığınızda bu bilgiye gerekir.</span><span class="sxs-lookup"><span data-stu-id="1286f-107">You need to know this information when you write the query to find the default style identifier, so that the query can identify the style of paragraphs that have the default style.</span></span>  
+ <span data-ttu-id="ad022-107">Varsayılan stil tanımlayıcısını bulmak için sorguyu yazarken bu bilgileri bilmeniz gerekir, böylece sorgu varsayılan stile sahip olan paragrafların stilini tanımlayabilir.</span><span class="sxs-lookup"><span data-stu-id="ad022-107">You need to know this information when you write the query to find the default style identifier, so that the query can identify the style of paragraphs that have the default style.</span></span>  
   
- <span data-ttu-id="1286f-108">Bu belgeleri için Microsoft Word oluşturur. tipik belgelerde karşılaştırıldığında çok basit olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="1286f-108">Note that these documents are very simple when compared to typical documents that Microsoft Word generates.</span></span> <span data-ttu-id="1286f-109">Çoğu durumda, Word, önemli miktarda ek bilgiler, ek biçimlendirme ve meta verileri kaydeder.</span><span class="sxs-lookup"><span data-stu-id="1286f-109">In many cases, Word saves a great deal of additional information, additional formatting and metadata.</span></span> <span data-ttu-id="1286f-110">Ayrıca, bu örnekte olduğu gibi kolay okunabilir olmasını satırları sözcük biçimlendirmez; Bunun yerine, XML, girinti kaydedilir.</span><span class="sxs-lookup"><span data-stu-id="1286f-110">Furthermore, Word does not format the lines to be easily readable as in this example; instead, the XML is saved without indentation.</span></span> <span data-ttu-id="1286f-111">Ancak, aynı temel XML şeklin tüm WordprocessingML belgelerinin paylaşır.</span><span class="sxs-lookup"><span data-stu-id="1286f-111">However, all WordprocessingML documents share the same basic XML shape.</span></span> <span data-ttu-id="1286f-112">Bu nedenle, bu öğreticide gösterilen sorguları daha karmaşık belgeleri ile çalışır.</span><span class="sxs-lookup"><span data-stu-id="1286f-112">Because of this, the queries presented in this tutorial will work with more complicated documents.</span></span>  
+ <span data-ttu-id="ad022-108">Bu belgelerin, Microsoft Word 'ün oluşturduğu tipik belgelerle karşılaştırıldığında çok basit olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="ad022-108">Note that these documents are very simple when compared to typical documents that Microsoft Word generates.</span></span> <span data-ttu-id="ad022-109">Birçok durumda, Word ek bilgiler, ek biçimlendirme ve meta veriler için harika bir işlem kaydeder.</span><span class="sxs-lookup"><span data-stu-id="ad022-109">In many cases, Word saves a great deal of additional information, additional formatting and metadata.</span></span> <span data-ttu-id="ad022-110">Ayrıca, Word bu örnekteki gibi kolayca okunabilecek satırları biçimlendirmez; Bunun yerine, XML girintileme olmadan kaydedilir.</span><span class="sxs-lookup"><span data-stu-id="ad022-110">Furthermore, Word does not format the lines to be easily readable as in this example; instead, the XML is saved without indentation.</span></span> <span data-ttu-id="ad022-111">Ancak, tüm WordprocessingML belgeleri aynı temel XML şeklini paylaşır.</span><span class="sxs-lookup"><span data-stu-id="ad022-111">However, all WordprocessingML documents share the same basic XML shape.</span></span> <span data-ttu-id="ad022-112">Bu nedenle, bu öğreticide sunulan sorgular daha karmaşık belgelerle birlikte çalışacaktır.</span><span class="sxs-lookup"><span data-stu-id="ad022-112">Because of this, the queries presented in this tutorial will work with more complicated documents.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

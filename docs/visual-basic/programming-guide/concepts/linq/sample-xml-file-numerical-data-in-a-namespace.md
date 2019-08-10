@@ -1,18 +1,18 @@
 ---
-title: 'Örnek XML Dosyası: Bir Namespace1 alanında sayısal veriler'
+title: 'Örnek XML Dosyası: Bir Ad Alanında Sayısal Veriler'
 ms.date: 07/20/2015
 ms.assetid: f01cc0a1-fb55-4b42-8380-16f4be47d6f4
-ms.openlocfilehash: 09954798615954d238273b3d4ed71b5ff475394f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a067afc6d59c76a50c7c9f91673bb631edd085b
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786977"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869092"
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="abb1c-102">Örnek XML Dosyası: Bir Ad Alanında Sayısal Veriler</span><span class="sxs-lookup"><span data-stu-id="abb1c-102">Sample XML File: Numerical Data in a Namespace</span></span>
-<span data-ttu-id="abb1c-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="abb1c-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="abb1c-104">Bu dosya, birleşimi, ortalama ve Gruplama için sayısal veriler içerir.</span><span class="sxs-lookup"><span data-stu-id="abb1c-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="abb1c-105">Bir ad alanında XML'dir.</span><span class="sxs-lookup"><span data-stu-id="abb1c-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="a8af1-102">Örnek XML Dosyası: Bir Ad Alanında Sayısal Veriler</span><span class="sxs-lookup"><span data-stu-id="a8af1-102">Sample XML File: Numerical Data in a Namespace</span></span>
+<span data-ttu-id="a8af1-103">Aşağıdaki XML dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgelerindeki çeşitli örneklerde kullanılır.</span><span class="sxs-lookup"><span data-stu-id="a8af1-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="a8af1-104">Bu dosya, toplam, ortalama ve gruplama için sayısal verileri içerir.</span><span class="sxs-lookup"><span data-stu-id="a8af1-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="a8af1-105">XML bir ad alanıdır.</span><span class="sxs-lookup"><span data-stu-id="a8af1-105">The XML is in a namespace.</span></span>  
   
-## <a name="data"></a><span data-ttu-id="abb1c-106">Veri</span><span class="sxs-lookup"><span data-stu-id="abb1c-106">Data</span></span>  
+## <a name="data"></a><span data-ttu-id="a8af1-106">Veri</span><span class="sxs-lookup"><span data-stu-id="a8af1-106">Data</span></span>  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  
@@ -55,6 +55,6 @@ ms.locfileid: "61786977"
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="abb1c-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="abb1c-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a8af1-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a8af1-107">See also</span></span>
 
-- [<span data-ttu-id="abb1c-108">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="abb1c-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="a8af1-108">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="a8af1-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
