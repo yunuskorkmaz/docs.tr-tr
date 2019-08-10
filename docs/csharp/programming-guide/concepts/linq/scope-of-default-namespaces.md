@@ -1,13 +1,13 @@
 ---
-title: C# 1 ' de varsayılan ad alanlarının kapsamı
+title: C# Dilinde Varsayılan Ad Alanlarının Kapsamı
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 29d7da9638f1c551894937a179abfa923b538252
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 0c5f5cccda6ba6a75a8631ed095921b90b02916b
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709996"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868868"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>C 'de varsayılan ad alanlarının kapsamı\#
 XML ağacında temsil edilen varsayılan ad alanları sorgular kapsamında değildir. Varsayılan bir ad alanında olan XML varsa, sorguda kullanılacak nitelikli bir ad oluşturmak için bir <xref:System.Xml.Linq.XNamespace> değişken bildirmeniz ve bunu yerel adla birleştirmeniz gerekir.  

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 8fa9f2dd668efca6a3108973ff792cc17b37b410
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 5eaf83f259abe4ee574dfd4d2269dfa1e9373c94
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818046"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869068"
 ---
 # <a name="input-overview"></a>Girişe Genel Bakış
 <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Alt sistem, fare, klavye, dokunmatik ve ekran kalemi dahil olmak üzere çeşitli cihazlardan giriş almak için güçlü bir API sağlar. Bu konuda tarafından [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sunulan hizmetler açıklanmakta ve giriş sistemlerinin mimarisi açıklanmaktadır.
@@ -115,7 +115,7 @@ ms.locfileid: "68818046"
 
  Klavye girişi için, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] önce uygun <xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp> olayları gönderir. Bu olaylar işlenmezse ve anahtar metinsel ise (yön okları veya işlev anahtarları gibi bir denetim anahtarı yerine), bir <xref:System.Windows.ContentElement.TextInput> olay tetiklenir.  Birden çok tuş vuruşu metin girişi için tek bir karakter oluşturabileceği ve tek <xref:System.Windows.ContentElement.KeyDown> tuş <xref:System.Windows.ContentElement.TextInput> vuruşlarının birden çok karakter oluşturabileceği için, ve olayları arasında / <xref:System.Windows.ContentElement.KeyUp> her zaman bir tane basit eşleme yoktur Strings.  Bu özellikle, ilgili harflerden itibaren binlerce olası karakteri oluşturmak için giriş yöntemi düzenleyicileri (IME 'Ler) kullanan Çince, Japonca ve Korece gibi diller için geçerlidir.
 
- <xref:System.Windows.Input.KeyEventArgs.Key%2A> Bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olayıgönderdiğinde<xref:System.Windows.ContentElement.KeyUp> , <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> tuş vuruşları bir olayınparçasıhalinegelirse(örneğin,alt+Sbasılıysa),olarakayarlanır.<xref:System.Windows.ContentElement.TextInput> / <xref:System.Windows.ContentElement.KeyDown> Bu, bir <xref:System.Windows.ContentElement.KeyDown> olay işleyicisindeki kodun <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> olup olmadığını kontrol etmesine izin verir ve bulunursa, daha sonra oluşturulan <xref:System.Windows.ContentElement.TextInput> etkinliğin işleyicisi için işlemeyi bırakır. Bu durumlarda, <xref:System.Windows.Input.TextCompositionEventArgs> bağımsız değişkenin çeşitli özellikleri orijinal tuş vuruşlarını belirlemede kullanılabilir. Benzer şekilde, bir [!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)] <xref:System.Windows.Input.Key> etkin ise değerine <xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>sahiptir ve <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> özgün tuş vuruşunu veya tuş vuruşlarını verir.
+ <xref:System.Windows.Input.KeyEventArgs.Key%2A> Bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olayıgönderdiğinde<xref:System.Windows.ContentElement.KeyUp> , <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> tuş vuruşları bir olayınparçasıhalinegelirse(örneğin,alt+Sbasılıysa),olarakayarlanır.<xref:System.Windows.ContentElement.TextInput> / <xref:System.Windows.ContentElement.KeyDown> Bu, bir <xref:System.Windows.ContentElement.KeyDown> olay işleyicisindeki kodun <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> olup olmadığını kontrol etmesine izin verir ve bulunursa, daha sonra oluşturulan <xref:System.Windows.ContentElement.TextInput> etkinliğin işleyicisi için işlemeyi bırakır. Bu durumlarda, <xref:System.Windows.Input.TextCompositionEventArgs> bağımsız değişkenin çeşitli özellikleri orijinal tuş vuruşlarını belirlemede kullanılabilir. Benzer şekilde, bir IME etkinse, <xref:System.Windows.Input.Key> <xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>değerine sahiptir ve <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> özgün tuş vuruşunu veya tuş vuruşlarını verir.
 
  Aşağıdaki örnek, <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı için bir işleyici ve <xref:System.Windows.UIElement.KeyDown> olay için bir işleyici tanımlar.
 

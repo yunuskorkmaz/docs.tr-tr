@@ -1,13 +1,13 @@
 ---
-title: Contract1
+title: Sözleşme
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 10789f9a2940c239ae20c8fd1e9d48bca0e820ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4a21e95a6f1f1860ed36c968d17bb8ac8465dce
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963702"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868439"
 ---
 # <a name="contract"></a>Sözleşme
 Sözleşme  
@@ -30,79 +30,79 @@ class Contract
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- Sözleşme sınıfı herhangi bir yöntemi tanımlamaz.  
+ Anlaşma sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
  Sözleşme sınıfı aşağıdaki özelliklere sahiptir:  
   
-### <a name="appdomainid"></a>AppDomainId  
- Veri türü: SINT32  
+### <a name="appdomainid"></a>AppDomainID  
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: Salt okunurdur  
   
- Sözleşme barındıran appdomain kimliği.  
+ Sözleşmeyi barındıran AppDomain 'in AppDomain kimliği.  
   
 ### <a name="behaviors"></a>Davranışlar  
- Veri türü: Davranış dizi  
+ Veri türü: Davranış dizisi  
   
- Erişim türü: salt okunur  
+ Erişim türü: Salt okunurdur  
   
- Bu sözleşme ile ilişkili davranışlar.  
+ Bu sözleşmeyle ilişkilendirilen davranışlar.  
   
 ### <a name="name"></a>Ad  
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: Salt okunurdur  
   
- WSDL sözleşmede adı.  
+ WSDL 'deki sözleşmenin adı.  
   
 ### <a name="namespace"></a>Ad Alanı  
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: Salt okunurdur  
   
- Ad alanı `portType` WSDL öğesinde.  
+ WSDL içindeki `portType` öğenin ad alanı.  
   
 ### <a name="operations"></a>İşlemler  
  Veri türü: İşlem dizisi  
   
- Erişim türü: salt okunur  
+ Erişim türü: Salt okunurdur  
   
- Operace tohoto kontraktu.  
+ Bu sözleşmenin işlemleri.  
   
 ### <a name="processid"></a>İşlem kimliği  
- Veri türü: SINT32  
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: Salt okunurdur  
   
- İşlem anlaşması barındıran işlem kimliği.  
+ Sözleşmeyi barındıran işlemin işlem kimliği.  
   
 ### <a name="ref"></a>ref  
  Veri türü: Sözleşme  
   
- Erişim türü: salt okunur  
+ Erişim türü: Salt okunurdur  
   
- Sözleşme çift yönlü sözleşme olduğunda geri çağırma türü.  
+ Anlaşma bir çift yönlü sözleşme olduğunda geri çağırma türü.  
   
-### <a name="sessionmode"></a>Sessionmode'u  
+### <a name="sessionmode"></a>SessionMode  
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: Salt okunurdur  
   
- Sözleşme kanal oturumları kullanmak için bu Sözleşmesi ile ilişkili bağlama gerekli olup olmadığını gösterir.  
+ Sözleşmenin Bu sözleşmeyle ilişkili bağlamanın kanal oturumlarını kullanmasını gerektirip gerektirmediğini belirtir.  
   
 ### <a name="type"></a>Tür  
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: Salt okunurdur  
   
- Sözleşme türü.  
+ Sözleşmenin türü.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

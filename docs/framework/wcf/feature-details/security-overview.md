@@ -1,45 +1,45 @@
 ---
-title: Güvenlik Overview1
+title: Güvenliğe genel bakış-WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 5e2b81a3ca7ab2c266218c3e32d22e0ebf67bf6a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f1c0fba82761d42324eb53655b36ef7a3570d5b3
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586776"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868905"
 ---
-# <a name="security-overview"></a>Güvenlik Genel Bakış
-Windows Communication Foundation (WCF) bir SOAP ileti tabanlı dağıtılmış programlama platformudur ve istemciler ve hizmetler arasında iletileri güvenli hale getirme verileri korumak için gereklidir. WCF güvenlik altyapınız hem SOAP iletilerini tanınan güvenlik standartlarını temel güvenli ileti değişimi için verimli ve birlikte çalışabilen bir platform sağlar.  
+# <a name="windows-communication-foundation-security-overview"></a>Windows Communication Foundation güvenliğe genel bakış
+Windows Communication Foundation (WCF), bir SOAP ileti tabanlı dağıtılmış programlama platformudur ve istemciler ve hizmetler arasındaki iletilerin güvenliğini korumak için gereklidir. WCF, hem mevcut güvenlik altyapısına hem de SOAP iletileri için tanınan güvenlik standartlarına dayalı olarak güvenli iletiler değiş tokuş eden, çok yönlü ve birlikte çalışabilen bir platform sağlar.  
   
 > [!NOTE]
->  WCF güvenlik kapsamlı bir kılavuz için bkz: [WCF Güvenlik Kılavuzu](https://go.microsoft.com/fwlink/?LinkID=158912).  
+>  WCF güvenliğine yönelik kapsamlı bir kılavuz için bkz. [WCF güvenlik kılavuzu](https://go.microsoft.com/fwlink/?LinkID=158912).  
   
- Oluşturduysanız, güvenli ve dağıtılmış uygulamalar HTTPS, Windows gibi mevcut teknolojileri ile ilgili bilgi sahibi olduğunuz WCF kullanan kavramları, güvenlik veya kullanıcı adları ve parolalar, kullanıcıların kimliklerini doğrulamak için tümleşik. WCF yalnızca var olan güvenlik altyapıları ile tümleştirilir, ancak güvenli SOAP iletileri kullanarak dağıtılmış güvenlik yalnızca Windows etki alanları da genişletir. WCF güvenlik mekanizmalar uygulaması SOAP protokolü mevcut protokolleri ek olarak kullanmanın ana avantajı ile göz önünde bulundurun. Örneğin, bir istemci veya kullanıcı adı ve parola veya X.509 sertifikaları gibi bir hizmet tanımlayan kimlik bilgileri birlikte çalışabilen SOAP XML tabanlı profilleri sahip. Bu profilleri kullanarak iletileri güvenli bir şekilde XML dijital imzalar ve XML şifreleme gibi açık belirtimleri avantajlarından yararlanarak değiştirilir. Belirtimleri listesi için bkz. [Web Hizmetleri protokolleri desteklenen System-Provided birlikte kullanılabilirlik bağlamaları ile](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
+ WCF, kullanıcıların kimliğini doğrulamak için HTTPS, Windows tümleşik güvenliği veya Kullanıcı adları ve parolalar gibi mevcut teknolojiler ile güvenli, dağıtılmış uygulamalar oluşturduysanız tanıdık kavramları kullanır. WCF yalnızca mevcut güvenlik altyapılarından tümleştirilemez, ancak güvenli SOAP iletileri kullanarak yalnızca Windows etki alanlarının ötesinde dağıtılmış güvenliği de genişletir. Var olan protokollerin yanı sıra protokol olarak SOAP kullanmanın önemli avantajlarından yararlanarak mevcut güvenlik mekanizmalarının bir uygulamasını WCF olarak değerlendirin. Örneğin, Kullanıcı adı ve parola veya X. 509.440 sertifikaları gibi bir istemciyi veya hizmeti tanımlayan kimlik bilgileri, birlikte çalışabilen XML tabanlı SOAP profillerine sahiptir. Bu profiller kullanılarak iletiler, XML dijital imzaları ve XML şifrelemesi gibi açık belirtimlerden yararlanarak güvenli bir şekilde değiştirilir. Belirtimlerin listesi için, bkz. [sistem tarafından sunulan birlikte çalışabilirlik bağlamaları tarafından desteklenen Web Hizmetleri protokolleri](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
   
- Başka bir paralel güvenli, dağıtılmış uygulamaları etkinleştiren Windows platformunda Bileşen Nesne Modeli (COM) olur. COM bileşenleri arasında güvenlik bağlamı ile geçirilebilir bir kapsamlı bir güvenlik mekanizması vardır; Bu mekanizma, kimlik doğrulaması bütünlüğü ve gizliliği zorlar. Ancak COM platformlar arası, WCF gibi Mesajlaşma güvenli etkinleştirmez. WCF kullanarak, hizmetler ve istemcileri Internet üzerinden Windows etki alanlarından yayılan oluşturabilirsiniz. WCF birlikte çalışabilen iletileri dinamik derleme için gerekli olan yardımcı olmak ve iş temelli Hizmetleri Güvenlik bilgilerinizin kalacağından.  
+ Diğer bir paralel, Windows platformunda güvenli, dağıtılmış uygulamalar sağlayan bileşen nesne modeli (COM) ' dir. COM, güvenlik bağlamının bileşenler arasında akışını yapabildiği kapsamlı bir güvenlik mekanizmasına sahiptir; Bu mekanizma bütünlük, gizlilik ve kimlik doğrulamayı zorlar. Ancak COM platformlar arası, WCF gibi güvenli mesajlaşma 'yı etkinleştirmez. WCF kullanarak, Internet üzerinden Windows etki alanlarından yayılan hizmetler ve istemciler oluşturabilirsiniz. Birlikte çalışabilen WCF iletileri, bilgilerinizin güvenliğine güvenmenizi sağlamanıza yardımcı olan dinamik ve iş odaklı hizmetler oluşturmak için gereklidir.  
   
 ## <a name="windows-communication-foundation-security-benefits"></a>Windows Communication Foundation güvenlik avantajları  
- WCF SOAP iletileri göre dağıtılmış bir programlama platformudur. WCF kullanarak, hem hizmet hem de oluşturma ve diğer hizmetler ve istemcileri, sınırsız sayıda gelen iletileri işleme hizmeti istemcileri olarak uygulamalar bu işlev oluşturabilirsiniz. Böyle bir dağıtılmış uygulamada iletileri düğümden düğüme, Internet üzerinde bir güvenlik duvarı aracılığıyla ve çok sayıda SOAP aracıları üzerinden akabilir. Bu ileti güvenlik tehditlerini çeşitli tanıtır. Aşağıdaki örnekler, WCF güvenlik varlıklar arasında mesaj alışverişleri sırasında azaltmaya yardımcı olabilecek bazı yaygın tehditleri gösterir:  
+ WCF, SOAP iletilerini temel alan dağıtılmış bir programlama platformudur. WCF kullanarak her iki hizmet ve hizmet istemcisi olarak işlev gösteren uygulamalar oluşturabilir, sınırsız sayıda diğer hizmet ve istemciden ileti oluşturup bunları silebilirsiniz. Bu tür dağıtılmış bir uygulamada, iletiler düğümden düğüme, güvenlik duvarları, Internet üzerinden ve çok sayıda SOAP aracı üzerinden akabilir. Bu, çeşitli ileti güvenliği tehditleri sunar. Aşağıdaki örneklerde, varlıklar arasında ileti alışverişi yaparken WCF güvenliğinin azaltılmasına yardımcı olabilecek bazı genel tehditler gösterilmektedir:  
   
-- Gözlem hassas bilgileri almak için ağ trafiği. Örneğin, bir çevrimiçi bankacılık senaryoda bir istemci para aktarımı bir hesaptan diğerine ister. Kötü niyetli bir kullanıcı iletisi durdurur ve, parola ve hesap numarası sahip daha sonra para aktarımını güvenliği aşılmış hesabından gerçekleştirir.  
+- Hassas bilgileri almak için ağ trafiğinin gözlemi. Örneğin, bir çevrimiçi bankacılık senaryosunda istemci, fonların bir hesaptan diğerine aktarılmasını ister. Kötü niyetli bir kullanıcı iletiyi keser ve hesap numarasına ve parolaya sahip olacak şekilde, daha sonra güvenliği aşılmış hesaptan fon aktarımı gerçekleştirir.  
   
-- Hizmetler olmadan istemcinin tanıma gibi davranan düzenleyen varlıklar. Bu senaryoda, kötü niyetli bir kullanıcı (sahte) çevrimiçi bir hizmet olarak çalışır ve hassas bilgileri almak için istemci iletileri durdurur. Ardından sahte çalınan veri güvenliği aşılmış hesaptan para aktarımı için kullanır. Bu saldırı da bilinen bir *avı kurbanı*.  
+- İstemci farkında olmadan hizmet olarak davranan standart dışı varlıklar. Bu senaryoda, kötü niyetli bir Kullanıcı (Standart dışı) bir çevrimiçi hizmet olarak çalışır ve hassas bilgileri almak için istemciden iletileri keser. Ardından, yanlış çalışan hesaptan fonları aktarmak için çalınmış verileri kullanır. Bu saldırıya bir *sızdırma saldırısı*da denir.  
   
-- Birçok özelliğe iletileri hedeflenen arayan değerinden farklı bir sonuç elde edilir. Örneğin, bir havale yapıldığı hesap numarası değiştirme için bir dolandırıcı hesabı gitmek fon sağlar.  
+- Çağıranın hedefinden farklı bir sonuç elde etmek için iletilerin değişikliği. Örneğin, bir depozito 'nin yaptığı hesap numarasını değiştirmek fonların bir standart dışı hesaba gitmesini sağlar.  
   
-- Korsanın olumsuzlukları sıkıntı korsanın aynı satınalma siparişi yeniden yürütür. Örneğin, bir çevrimiçi kitaplığı siparişler yüzlerce alıp bunları sıralı olmayan bir müşteri için books gönderir.  
+- Bilgisayar korsanının aynı satın alma siparişini yeniden oynadığı korsan yeniden oynatılır. Örneğin, çevrimiçi bir kitaplığı yüzlerce sipariş alır ve kitapları, siparişi olmayan bir müşteriye gönderir.  
   
-- Bir istemcinin kimliğini doğrulamak için bir hizmet yükleyememesine. Bu durumda, hizmet uygun kişi işlem gerçekleştirilen sağlanması olamaz.  
+- İstemcinin kimliğini doğrulamak için bir hizmetin olmaması. Bu durumda, hizmet uygun kişinin işlemi gerçekleştirmesinden emin olamaz.  
   
- Özet olarak, aşağıdaki Güvenceleri aktarım güvenliği sağlar:  
+ Özet olarak, aktarım güvenliği aşağıdaki hedefleri sağlar:  
   
-- Hizmet uç noktası (yanıtlayan) kimlik doğrulaması.  
+- Hizmet uç noktası (yanıtlayanın) kimlik doğrulaması.  
   
-- İstemci (Başlatıcı) asıl kimlik doğrulaması.  
+- İstemci sorumlusu (Başlatıcı) kimlik doğrulaması.  
   
 - İleti bütünlüğü.  
   
@@ -47,55 +47,55 @@ Windows Communication Foundation (WCF) bir SOAP ileti tabanlı dağıtılmış p
   
 - Yeniden yürütme algılaması.  
   
-### <a name="integration-with-existing-security-infrastructures"></a>Mevcut güvenlik altyapıları ile tümleştirme  
- Genellikle, Web hizmeti dağıtımları yerinde, örneğin, Güvenli Yuva Katmanı (SSL) veya Kerberos protokolü mevcut güvenlik çözümleri sahiptir. Bazı zaten dağıtılmış olan bir güvenlik altyapısı Active Directory kullanarak Windows etki alanı gibi yararlanın. Genellikle, değerlendirme ve yeni olanlara benimseme bu mevcut teknolojileri ile tümleştirme gereklidir.  
+### <a name="integration-with-existing-security-infrastructures"></a>Mevcut güvenlik altyapılarından tümleştirme  
+ Genellikle, Web hizmeti dağıtımları için mevcut güvenlik çözümleri (örneğin, Güvenli Yuva Katmanı (SSL) veya Kerberos protokolü) vardır. Windows etki alanları gibi Active Directory kullanarak daha önce dağıtılmış bir güvenlik altyapısından yararlanın. Bu, genellikle yeni olanları değerlendirirken ve benimseirken bu mevcut teknolojilerle tümleştirilecek.  
   
- WCF güvenlik mevcut aktarım güvenliği modelleriyle tümleştirilebiliyor ve SOAP ileti güvenliği dayalı yeni Aktarım güvenlik modelleri için var olan altyapıdan yararlanıyor.  
+ WCF güvenliği, mevcut aktarım güvenliği modelleriyle tümleştirilir ve SOAP iletisi güvenliğine göre daha yeni aktarım güvenlik modelleri için mevcut altyapıdan yararlanabilir.  
   
-### <a name="integration-with-existing-authentication-models"></a>Mevcut kimlik doğrulaması modelleri ile tümleştirme  
- Tüm iletişimi güvenlik modelinin önemli bir parçası tanımlamak ve iletişim varlıklarda kimlik doğrulaması özelliği ' dir. Bu varlıkların iletişim ile iletişim kuran eşleri doğrulatmak için "sayısal kimlikleri" veya kimlik bilgilerini kullanın. Dağıtılmış iletişim platformları gelişerek gibi çeşitli kimlik bilgilerinin ve ilgili güvenlik modelleri uygulanmıştır. Örneğin, Internet'te, bir kullanıcı adı ve parola, kullanıcıları tanımlamak için kullanımı yaygındır. İntranet üzerindeki kullanıcı ve hizmet kimlik doğrulaması yedeklemek için bir Kerberos etki alanı denetleyicisi kullanımı yaygın hale gelmektedir. Belirli senaryolarda gibi iki iş ortakları arasında sertifikaları iş ortakları karşılıklı kimlik doğrulaması için kullanılabilir.  
+### <a name="integration-with-existing-authentication-models"></a>Mevcut kimlik doğrulama modelleriyle tümleştirme  
+ İletişim güvenlik modelinin önemli bir bölümü, iletişimdeki varlıkları tanımlamak ve kimliklerini doğrulamak için kullanılır. İletişim içindeki bu varlıklar, iletişim meslektaşlarıyla kimlik doğrulaması yapmak için "Dijital kimlikler" veya kimlik bilgileri kullanır. Dağıtılmış iletişim platformları geliştirilmesinin yanı sıra çeşitli kimlik bilgileri kimlik doğrulaması ve ilgili güvenlik modelleri uygulanmıştır. Örneğin, Internet 'te kullanıcıları tanımlamak için Kullanıcı adı ve parola kullanımı yaygındır. İntranette, Kullanıcı ve hizmet kimlik doğrulamasını yedeklemek için bir Kerberos etki alanı denetleyicisinin kullanılması yaygın hale geliyor. İki iş ortağı gibi bazı senaryolarda, sertifikalar, iş ortaklarının birbirini karşılıklı olarak doğrulanması için kullanılabilir.  
   
- Bu nedenle, burada aynı hizmet dış iş ortakları için de dahili kurumsal müşterilere veya Internet müşterilere açık olabileceği, dünyasında Web Hizmetleri bu mevcut güvenlik ile tümleştirme için olan altyapının sağlanması önemlidir kimlik doğrulaması modelleri. WCF güvenlik kimlik bilgisi türlerinin (kimlik doğrulaması modelleri) dahil olmak üzere çok çeşitli destekler:  
+ Bu nedenle, Web Hizmetleri dünyasında aynı hizmetin dahili kurumsal müşterilere ve dış iş ortaklarına veya Internet müşterilerine sunulabileceği durumlarda, altyapının bu mevcut güvenlikle tümleştirme sağlaması önemlidir kimlik doğrulama modelleri. WCF güvenliği, aşağıdakiler dahil olmak üzere çok çeşitli kimlik bilgisi türlerini (kimlik doğrulama modelleri) destekler:  
   
-- Arayan anonim.  
+- Anonim arayan.  
   
-- Kullanıcı adının istemci kimlik bilgileri.  
+- Kullanıcı adı istemci kimlik bilgileri.  
   
 - Sertifika istemci kimlik bilgileri.  
   
-- Windows (Kerberos protokolü ve NT LanMan [NTLM]).  
+- Windows (hem Kerberos protokolü hem de NT LanMan [NTLM]).  
   
 ### <a name="standards-and-interoperability"></a>Standartlar ve birlikte çalışabilirlik  
- Var olan büyük dağıtımları ile bir dünyada, homojenlik ilkesinden nadir olarak rastlanıyor. Farklı satıcıların teklif teknolojileri ile çalışmak dağıtılmış bilgi işlem/iletişimleri platformları gerekir. Benzer şekilde, güvenlik de birlikte çalışabilir olmalıdır.  
+ Mevcut büyük dağıtımlara sahip bir dünyada, hogenelik nadir bir durumdur. Dağıtılmış bilgi işlem/iletişim platformları, farklı satıcıların sunduğu teknolojiyle birlikte çalışmalıdır. Benzer şekilde, güvenliğin de birlikte kullanılabilmelidir.  
   
- Birlikte çalışabilen güvenlik sistemleri etkinleştirmek için şirket Web Hizmetleri sektörün etkin standartları çeşitli oluşturdunuz. Özellikle güvenlik ile ilgili birkaç önemli standartları önerilen: WS-güvenlik: SOAP ileti güvenliği (OASIS standartları gövdesi kabul edilir ve daha önce WS-güvenlik bilinen), WS-Trust, WS-SecureConversation ve WS-SecurityPolicy.  
+ Birlikte çalışabilen güvenlik sistemlerini etkinleştirmek için, Web hizmetleri sektöründe etkin olan şirketler çeşitli standartlar yazdı. Güvenlikle ilgili olarak, bazı önemli standartlar önerilmiştir: WS-güvenlik: SOAP Iletisi güvenliği (OASSıS standartları gövdesi tarafından kabul edilir ve eski adıyla WS-Security), WS-Trust, WS-SecureConversation ve WS-SecurityPolicy.  
   
- WCF çok çeşitli birlikte çalışabilirlik senaryolarında destekler. <xref:System.ServiceModel.BasicHttpBinding> Sınıfı, temel güvenlik profili (BSP) adresindeki hedeflediği ve <xref:System.ServiceModel.WSHttpBinding> sınıfı, WS-güvenlik 1.1 ve WS-SecureConversation gibi en son güvenlik standartları hedeflenmiştir. WCF güvenlik, bu standartlara uygun olarak çalışmak ve işletim sistemleri ve Microsoft Windows dışındaki platformları üzerinde barındırılan Web Hizmetleri ile tümleştirin.  
+ WCF, çok sayıda birlikte çalışabilirlik senaryosunu destekler. Sınıfı temel güvenlik profiline (BSP) yöneliktir <xref:System.ServiceModel.WSHttpBinding> ve sınıfı WS-Security 1,1 ve ws-SecureConversation gibi en son güvenlik standartlarına yöneliktir. <xref:System.ServiceModel.BasicHttpBinding> WCF güvenliği, bu standartlara uygun olarak, Microsoft Windows dışındaki işletim sistemlerinde ve platformlarda barındırılan Web Hizmetleri ile birlikte çalışabilir ve tümleştirilebilir.  
   
-## <a name="wcf-security-functional-areas"></a>WCF güvenlik işlevsel alanları  
- WCF güvenlik üç işlevsel alanlara bölünmüş: güvenlik, erişim denetimi ve denetim aktarın. Aşağıdaki bölümlerde, kısa bir süre bu alanlar tartışın ve daha fazla bilgi için bağlantılar sağlar.  
+## <a name="wcf-security-functional-areas"></a>WCF güvenlik Işlevsel bölgeleri  
+ WCF güvenliği üç işlevsel alana ayrılmıştır: aktarım güvenliği, erişim denetimi ve denetim. Aşağıdaki bölümler, bu bölümleri kısaca ele alır ve daha fazla bilgi için bağlantılar sağlar.  
   
-### <a name="transfer-security"></a>Aktarım güvenliği  
- Aktarım güvenliği üç önemli güvenlik işlevleri kapsar: kimlik doğrulaması bütünlüğü ve gizliliği. *Bütünlük* bir ileti ile oynanmış olup olmadığını algılamak için olanağıdır. *Gizlilik* bir ileti hedeflenen alıcı; dışındaki hiç kimse tarafından okunamaz tutmak yeteneği bu şifreleme sağlanır. *Kimlik doğrulaması* talep kimliğini doğrulamak için olanağıdır. Birlikte, bu üç işlev iletileri güvenli bir noktadan başka birine ulaşmasını sağlamak için yardımcı olur.  
+### <a name="transfer-security"></a>Güvenlik aktarma  
+ Aktarım güvenliği üç önemli güvenlik işlevini kapsar: bütünlük, gizlilik ve kimlik doğrulama. *Bütünlük* , bir iletinin değiştirilip değiştirilmediğini tespit etme olanağıdır. *Gizlilik* , bir iletiyi amaçlanan alıcı dışında bir kişi tarafından okunamaz halde tutma olanağıdır; Bu, şifreleme üzerinden sağlanır. *Kimlik doğrulama* , istenen bir kimliği doğrulama yeteneğidir. Bu üç işlev birlikte, iletilerin bir noktadan diğerine güvenli bir şekilde ulaşmasını sağlamaya yardımcı olur.  
   
-#### <a name="transport-and-message-security-modes"></a>Taşıma ve ileti güvenlik modu  
- WCF'de aktarım güvenliği uygulamak için kullanılan iki ana mekanizma: *aktarım* güvenlik modu ve *ileti* güvenlik modu.  
+#### <a name="transport-and-message-security-modes"></a>Aktarım ve Ileti güvenliği modları  
+ WCF 'de aktarım güvenliği uygulamak için iki ana mekanizma kullanılır: *Aktarım* güvenliği modu ve *ileti* güvenlik modu.  
   
-- *Transport güvenlik modunu* HTTPS gibi bir aktarım düzeyi protokolü, aktarım güvenliği sağlamak için kullanır. Aktarım modu, yaygın olarak benimsenen, birçok platformda bulunur ve hesaplama açısından daha az karmaşık olan avantajına sahiptir. Bununla birlikte, yalnızca, noktadan noktaya gelen iletileri güvenli hale getirme dezavantajı vardır.  
+- Aktarım *güvenliği modu* , aktarım güvenliğini sağlamak için https gibi bir aktarım düzeyi protokolü kullanır. Aktarım modu, çok sayıda platformda sunulan ve daha az hesaplama avantajına sahiptir. Ancak, iletilerin yalnızca noktadan noktaya güvenli hale getirilmesi olumsuz bir dezavantajı vardır.  
   
-- *İleti güvenlik modunu*, diğer yandan, WS-güvenlik kullanır (ve diğer özellikleri) aktarım güvenliği uygulamak için. İleti güvenliği SOAP iletileri doğrudan uygulanır ve uygulama verilerini birlikte SOAP Zarf içinde yer alan çünkü Aktarım Protokolü bağımsız, daha genişletilebilir ve kalmasını sağlama uçtan uca güvenlik olan avantajı vardır. (Noktadan noktaya karşı); SOAP iletilerini XML yapısı ile dağıtılacak olduğundan transport güvenlik modunu birkaç kez daha yavaş olan olumsuz var.  
+- Diğer yandan *ileti güvenliği modu*, aktarım güvenliği uygulamak için WS-Security (ve diğer belirtimleri) kullanır. İleti güvenliği doğrudan SOAP iletilerine uygulandığından ve SOAP zarfların içinde, uygulama verileriyle birlikte bulunduğundan, Aktarım Protokolü 'nün bağımsız, daha genişletilebilir ve uçtan uca güvenlik sağlama avantajına sahiptir. (noktadan noktaya karşılık); SOAP iletilerinin XML doğası ile uğraşmak gerektiğinden, aktarım güvenliği modundan birkaç kat daha yavaştır.  
   
- Bu farklılıklar hakkında daha fazla bilgi için bkz. [Hizmetleri güvenli hale getirme ve istemciler](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
+ Bu farklılıklar hakkında daha fazla bilgi için bkz. [Hizmetleri ve Istemcileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   
- Üçüncü bir güvenlik modu, önceki her iki mod kullanır ve her ikisi de avantajları getirir. Bu modu olarak adlandırılır `TransportWithMessageCredential`. Bu modda, ileti güvenliği istemcinin kimliğini doğrulamak için kullanılır ve aktarım güvenliği, ileti gizliliği ve bütünlüğü sağlamak ve sunucunun kimliğini doğrulamak için kullanılır. Bu, sayesinde `TransportWithMessageCredential` güvenlik modu neredeyse transport güvenlik modunu olabildiğince hızlı ve istemci ile ileti güvenliği aynı şekilde kimlik doğrulaması genişletilebilirlik sağlar. Ancak, ileti güvenlik modunu, tam uçtan uca güvenlik sağlamaz.  
+ Üçüncü bir güvenlik modu, önceki modlarını kullanır ve her ikisinin de avantajını getirir. Bu mod çağrılır `TransportWithMessageCredential`. Bu modda, istemci kimliğini doğrulamak için ileti güvenliği kullanılır ve sunucunun kimliğini doğrulamak ve ileti gizliliği ve bütünlüğü sağlamak için aktarım güvenliği kullanılır. Bu şekilde, `TransportWithMessageCredential` güvenlik modu, aktarım güvenliği modu kadar hızlı bir şekilde ve istemci kimlik doğrulaması genişletilebilirliği ile ileti güvenliği gibi aynı şekilde sağlanır. Ancak, ileti güvenliği modunun aksine, uçtan uca tam güvenlik sağlamaz.  
   
 ### <a name="access-control"></a>Erişim Denetimi  
- *Erişim denetimi* de yetkilendirme denir. *Yetkilendirme* farklı kullanıcıların verileri görüntülemek için farklı ayrıcalıklara sahip olanak tanır. Örneğin, bir şirketin İnsan Kaynakları dosyaları çalışanların hassas verileri içerdiğinden, yalnızca Yöneticiler çalışan verilerini görüntülemek için izin verilir. Ayrıca, yöneticileri doğrudan raporlarının yalnızca verileri görüntüleyebilirsiniz. Bu durumda, erişim denetimi hem ' % s'rolü ("Yönetici"), hem de belirli bir kimlik (başka bir yöneticinin çalışan kayıtları bakarak bir yöneticiye önlemek için) Yöneticisi'ni temel alır.  
+ *Erişim denetimi* de yetkilendirme olarak bilinir. *Yetkilendirme* , farklı kullanıcıların verileri görüntülemek için farklı ayrıcalıklara sahip olmasına izin verir. Örneğin, bir şirketin insan kaynakları dosyaları gizli çalışan verileri içerdiğinden, yalnızca yöneticilerin çalışan verilerini görüntülemesine izin verilir. Ayrıca, Yöneticiler yalnızca kendi raporlarının verilerini görüntüleyebilir. Bu durumda, erişim denetimi hem role ("Manager") hem de yöneticinin özel kimliğini (bir yöneticinin başka bir yöneticinin çalışan kayıtlarına bakmasını engellemek için) temel alır.  
   
- WCF'de, ortak dil çalışma zamanı (CLR) ile tümleştirme yoluyla erişim denetimi özellikleri sağlanır <xref:System.Security.Permissions.PrincipalPermissionAttribute> ve bir dizi olarak bilinen bir API aracılığıyla *kimlik modeli*. Erişim denetimi ve beyana dayalı yetkilendirme hakkında daha fazla ayrıntı için bkz: [genişletme güvenlik](../../../../docs/framework/wcf/extending/extending-security.md).  
+ WCF 'de, erişim denetimi özellikleri, ortak dil çalışma zamanı (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> ile tümleştirme yoluyla ve *kimlik modeli*olarak bilinen bir API kümesi aracılığıyla sağlanır. Erişim denetimi ve talep tabanlı yetkilendirme hakkında daha fazla bilgi için bkz. [güvenliği genişletme](../../../../docs/framework/wcf/extending/extending-security.md).  
   
 ### <a name="auditing"></a>Denetim  
- *Denetim* Windows olay günlüğüne güvenlik olayları günlüğe kaydetme işlemi. Kimlik doğrulama hataları (veya başarılar) gibi güvenlikle ilgili olayları oturum açabilirsiniz. Daha fazla bilgi için [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Programlama için bilgi [nasıl yapılır: Güvenlik olaylarını denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ *Denetim* , güvenlik olaylarının Windows olay günlüğüne kaydedilmesini sağlar. Kimlik doğrulama arızaları (veya başarıları) gibi güvenlikle ilgili olayları günlüğe kaydedebilirsiniz. Daha fazla bilgi için bkz. [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Programlama ayrıntıları için bkz [. nasıl yapılır: Güvenlik olaylarını](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)denetleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -113,4 +113,4 @@ Windows Communication Foundation (WCF) bir SOAP ileti tabanlı dağıtılmış p
 - [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Güvenliği Genişletme](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

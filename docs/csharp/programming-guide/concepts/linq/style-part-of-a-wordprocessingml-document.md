@@ -1,29 +1,29 @@
 ---
-title: WordprocessingML Document1 stil kısmı
+title: WordprocessingML Belgesinin Stil Kısmı
 ms.date: 07/20/2015
 ms.assetid: 5458bccf-3898-4661-904b-7d280c9239a9
-ms.openlocfilehash: 5f4db2834aae01bf451d7430e923729a7d7069c4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 56726a7ea7594bfd1c68e5b1f8e45f585138eac6
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483432"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868635"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>WordprocessingML Belgesinin Stil Kısmı
-Bu konuda, Office Open XML WordprocessingML belgesinin stil kısmı örneği gösterilmektedir.  
+Bu konuda, Office Open XML WordprocessingML belgesinin stil bölümünün bir örneği gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir Office Open XML WordprocessingML belgesinin stil kısmı yapan XML'dir.  
+ Aşağıdaki örnek, bir Office Open XML WordprocessingML belgesinin stil parçasını oluşturan XML 'dir.  
   
- Varsayılan paragraf stilini aşağıdaki açılış etiketinde sahip bir öğe vardır:  
+ Varsayılan paragraf stilinin aşağıdaki açılış etiketiyle bir öğesi vardır:  
   
 ```xml
 <w:style w:type="paragraph" w:default="1" w:styleId="Normal">  
 ```  
   
- Böylece sorgu varsayılan stil paragraf stilini varsayılan stili tanımlayıcısını bulmak için bir sorgu yazdığınızda bu bilgiye gerekir.  
+ Varsayılan stil tanımlayıcısını bulmak için sorguyu yazarken bu bilgileri bilmeniz gerekir, böylece sorgu varsayılan stile sahip olan paragrafların stilini tanımlayabilir.  
   
- Bu belgeleri için Microsoft Word oluşturur. tipik belgelerde karşılaştırıldığında çok basit olduğunu unutmayın. Çoğu durumda, Word, önemli miktarda ek bilgiler, ek biçimlendirme ve meta verileri kaydeder. Ayrıca, bu örnekte olduğu gibi kolay okunabilir olmasını satırları sözcük biçimlendirmez; Bunun yerine, XML, girinti kaydedilir. Ancak, aynı temel XML şeklin tüm WordprocessingML belgelerinin paylaşır. Bu nedenle, bu öğreticide gösterilen sorguları daha karmaşık belgeleri ile çalışır.  
+ Bu belgelerin, Microsoft Word 'ün oluşturduğu tipik belgelerle karşılaştırıldığında çok basit olduğunu unutmayın. Birçok durumda, Word ek bilgiler, ek biçimlendirme ve meta veriler için harika bir işlem kaydeder. Ayrıca, Word bu örnekteki gibi kolayca okunabilecek satırları biçimlendirmez; Bunun yerine, XML girintileme olmadan kaydedilir. Ancak, tüm WordprocessingML belgeleri aynı temel XML şeklini paylaşır. Bu nedenle, bu öğreticide sunulan sorgular daha karmaşık belgelerle birlikte çalışacaktır.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

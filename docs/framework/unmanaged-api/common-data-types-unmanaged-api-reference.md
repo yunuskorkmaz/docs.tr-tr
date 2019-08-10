@@ -4,40 +4,42 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aab6dad369b751b1d6a61214569cbb7d79b0e11d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b56840ce68caa3eed50773668c64e2622a646ddf
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651642"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892087"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Ortak Veri Türleri (Yönetilmeyen API Başvurusu)
-Bu konu yönetilmeyen API'ları tarafından kullanılan .NET Framework için C/C++ tarafından tanımlanan basit veri türleri listeler `typedef` deyimleri. Bu veri türleri, genellikle C/C++ ilkel veri türleri diğer adlarıdır. Genellikle, bu veri türlerinin donuk değerlerdir; Böylece diğer işlevleri veya yöntemleri yapmadan geçirilebilir diğer bir deyişle, bunlar belirli bir işlevi veya yöntemi tarafından döndürülür.  
+Bu konu, C/C++ `typedef` deyimleri tarafından tanımlanan .NET Framework için yönetilmeyen API 'ler tarafından kullanılan basit veri türlerini listeler. Bu veri türleri genellikle C/C++ ilkel veri türleri için diğer adlardır. Genellikle, bu veri türlerinin değerleri opaktır; diğer bir deyişle, bunlar belirli bir işlev veya yöntem tarafından, değişiklik yapılmadan diğer işlevlere veya yöntemlere geçirilebilmeleri için döndürülür.  
   
-|Veri türü|Tanım|İçinde tanımlanan|Açıklama|  
+|Veri türü|Tanım|Tanımlı|Açıklama|  
 |---------------|----------------|----------------|-----------------|  
-|AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|Uygulama etki alanı tanımlayıcısı.|  
-|AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|Bir derlemenin tanımlayıcı.|  
-|Sınıf kimliği|`typedef UINT_PTR ClassID;`|corprof.h|Yönetilen bir sınıf tanımlayıcısı.|  
-|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata.h|Bir 64-bit bellek adresi.|
-|CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|Kullanılabilir değil|Bir 64-bit bellek adresi.|
-|CONNID|`typedef DWORD CONNID;`|cordebug.h, mscoree.h|Microsoft SQL Server örneğine bağlı bir iş parçacığı için bağlantı kimliği.|  
-|Contextıd|`typedef UINT_PTR ContextID;`|corprof.h|Belirli bir yönetilen iş parçacığı ile ilişkili Bağlam tanıtıcısı.|  
-|COR_PRF_ELT_INFO|`typedef UINT_PTR COR_PRF_ELT_INFO;`|corprof.h|Belirli bir yığın çerçevesini ilgili bilgileri temsil eder bir donuk tanıtıcısı.|  
-|COR_PRF_FRAME_INFO|`typedef UINT_PTR COR_PRF_FRAME_INFO;`|corprof.h|Bir opak, işaret ettiği bir yığın çerçevesine işleyin. Başarılı geri sırasında geçerli değil.|  
-|CORDB_ADDRESS|`typedef ULONG64 CORDB_ADDRESS;`|cordebug.h|Bir bellek adresi.|  
-|CORDB_CONTINUE_STATUS|`typedef DWORD CORDB_CONTINUE_STATUS;`|cordebug.h|Devamlılık durumu.|  
-|CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|Bir CPU kayıt değeri.|
-|FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|Bir işlev veya yöntem tanımlayıcısı.|  
-|GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|Bir çöp toplama işleci.|  
-|mdMethodDef|`typedef mdToken mdMethodDef;`|cordebug.h|Bir yöntemin tanımı belirteci.|
-|mdToken|`typedef UINT32 mdToken;`|corprof.h|Meta veri belirteci (meta veri tablosunda bir satıra).|  
-|Modül kimliği|`typedef UINT_PTR ModuleID;`|corprof.h|Bir derleme modülü tanımlayıcısı.|  
-|Nesne Kimliği|`typedef UINT_PTR ObjectID;`|corprof.h|Bir nesne tanımlayıcısı.|  
-|ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|Yönetilen bir işlem tanımlayıcısı.|  
-|ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|Jıtted işlevi tanımlayıcısı.|  
-|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|Tanımlayıcısını bir [Iclrtask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) örneği.|  
-|ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|Yönetilen iş parçacığı tanıtıcısı.|  
+|AppDomainID|`typedef UINT_PTR AppDomainID;`|CorProf. h|Bir uygulama etki alanının tanımlayıcısı.|  
+|AssemblyId|`typedef UINT_PTR AssemblyID;`|CorProf. h|Bir derlemenin tanımlayıcısı.|  
+|ClassID|`typedef UINT_PTR ClassID;`|CorProf. h|Yönetilen bir sınıfın tanımlayıcısı.|  
+|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|ClrData. h|64 bitlik bir bellek adresi.|
+|CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|Kullanılamıyor|64 bitlik bir bellek adresi.|
+|CONNID|`typedef DWORD CONNID;`|CorDebug. h, mscoree. h|Bir Microsoft SQL Server örneğine bağlı bir iş parçacığının bağlantı tanımlayıcısı.|  
+|ContextId|`typedef UINT_PTR ContextID;`|CorProf. h|Belirli bir yönetilen iş parçacığıyla ilişkili bağlamın tanımlayıcısı.|  
+|COR_PRF_ELT_INFO|`typedef UINT_PTR COR_PRF_ELT_INFO;`|CorProf. h|Belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden donuk bir tanıtıcı.|  
+|COR_PRF_FRAME_INFO|`typedef UINT_PTR COR_PRF_FRAME_INFO;`|CorProf. h|Yığın çerçevesini işaret eden donuk bir tanıtıcı. Yalnızca geçirildiği geri arama sırasında geçerlidir.|  
+|CORDB_ADDRESS|`typedef ULONG64 CORDB_ADDRESS;`|CorDebug. h|Bellekteki bir adres.|  
+|CORDB_CONTINUE_STATUS|`typedef DWORD CORDB_CONTINUE_STATUS;`|CorDebug. h|Devamlılık durumu.|  
+|CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|CorDebug. h|Bir CPU kayıt değeri.|
+|FunctionID|`typedef UINT_PTR FunctionID;`|CorProf. h|Bir işlevin veya metodun tanımlayıcısı.|  
+|Gchandlet kimliği|`typedef UINT_PTR GCHandleID;`|CorProf. h|Çöp toplama tutamacı.|  
+|mdMethodDef|`typedef mdToken mdMethodDef;`|CorDebug. h|Yöntem tanımı belirteci.|
+|mdToken|`typedef UINT32 mdToken;`|CorProf. h|Meta veri belirteci (meta veri tablosundaki bir satır).|  
+|Modül kimliği|`typedef UINT_PTR ModuleID;`|CorProf. h|Bütünleştirilmiş kod modülünün tanımlayıcısı.|  
+|Uzantının|`typedef UINT_PTR ObjectID;`|CorProf. h|Bir nesnenin tanımlayıcısı.|  
+|PCCOR_SIGNATURE|`typedef SIZE_T PCCOR_SIGNATURE;`|CorDebug. h|Üye veya meta veri imzası işaretçisi.|
+|ProcessID|`typedef UINT_PTR ProcessID;`|CorProf. h|Yönetilen bir işlemin tanımlayıcısı.|  
+|ReJitId|`typedef UINT_PTR ReJITID;`|CorProf. h|Bir jderlenen işlevinin tanımlayıcısı.|  
+|SIZE_T|`typedef ULONG_PTR SIZE_T;`|CorSym. h|64 bitlik bir bellek adresine yönelik bir işaretçi.|
+|TASKID|`typedef UINT64 TASKID;`|CorDebug. h, mscoree. h|[ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) örneğinin tanımlayıcısı.|  
+|ThreadID|`typedef UINT_PTR ThreadID;`|CorProf. h|Yönetilen bir iş parçacığının tanımlayıcısı.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

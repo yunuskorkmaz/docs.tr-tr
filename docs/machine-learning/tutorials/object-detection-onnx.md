@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/01/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3e5b6b482dfbd1ff06347883a93a561944200a9f
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733405"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868720"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Öğretici: ML.NET içinde ONNX kullanarak nesneleri Algıla
 
@@ -344,7 +344,6 @@ Artık boyut ve sınırlama kutuları için sınıflar oluşturuldığına göre
     - `CELL_HEIGHT`, görüntü kılavuzundaki bir hücrenin yüksekliğidir.
     - `channelStride`Kılavuzdaki geçerli hücrenin başlangıç konumudur.
 
-
     Model bir görüntüye puan aldığında, `416px x 416px`girişi `13 x 13`boyutunun bir hücre kılavuzuna böler. Her hücre içerir `32px x 32px`. Her hücrede, 5 Özellik (x, y, Width, Height, güvenirlik) içeren 5 sınırlayıcı kutu vardır. Ayrıca, her sınırlayıcı kutu, bu örnekte 20 olan her bir sınıf olasılığını içerir. Bu nedenle, her hücre 125 bilgi parçasını içerir (5 özellik + 20 sınıf olasılıkların). 
 
 Tüm 5 sınırlayıcı kutular için aşağıdan `channelStride` bir çıpası listesi oluşturun:
@@ -654,7 +653,6 @@ Bunun altında, görüntüdeki sınırlayıcı `DrawBoundingBox` kutuları çizm
 Son olarak, `LogDetectedObjects` yöntemiyle bazı günlük Logic ekleyin.
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
-
 
 Try-catch ifadesinden sonra, işlemin çalıştığını göstermek için ek mantık ekleyin.
 

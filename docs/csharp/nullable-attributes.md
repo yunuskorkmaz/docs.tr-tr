@@ -2,12 +2,12 @@
 title: API 'Leri, null beklentilerini tanımlamak için özniteliklerle yükseltin
 description: Bu makalede, bağımsız değişkenlerin null durumunu ve API 'lerden dönüş değerlerini açıklayan açıklayıcı öznitelikler ekleme işlemleri ve teknikleri açıklanmaktadır
 ms.date: 07/31/2019
-ms.openlocfilehash: 9a5eded385d5eac7a493a36876557cadf083afad
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: eebd3d190b8c93833de6e1c1f1594c1c1f56e14e
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733434"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868886"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Kitaplıkları, null yapılabilir başvuru türlerini kullanacak şekilde güncelleştirin ve çağrı yapılabilir kuralları arayanlara iletişim kurar.
 
@@ -67,7 +67,6 @@ Null yapılabilir başvuru türlerini etkinleştirmeden önce, değişkenler *nu
 Büyük olasılıkla başka bir uyarı kaynağı, değer başlatılmamış olduğunda değerler döndürür.
 
 Derleyici uyarılarını adresleyen ilk adım, parametre ve dönüş türleri `?` üzerinde ek açıklamaların kullanılması ve bağımsız değişkenlerin veya dönüş değerlerinin null olabileceğini göstermek için kullanılır. Başvuru değişkenleri null olmamalı, özgün bildirim doğru olur. Bunu yaparken hedefiniz yalnızca uyarıları düzeltemedi. Daha önemli hedef, derleyicinin olası null değerler için amacınızı anlaması sağlamaktır. Uyarıları incelerken, kitaplığınız için bir sonraki önemli kararına ulaşabilirsiniz. Tasarım amacınızı daha net bir şekilde iletmek için API imzalarını değiştirmeyi düşünmek istiyor musunuz? Daha önce incelenen `TryGetMessage` Yöntem için daha iyi bir API imzası şu olabilir:
-
 
 ```csharp
 string? TryGetMessage(string key);

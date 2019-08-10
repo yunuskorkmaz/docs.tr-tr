@@ -1,18 +1,18 @@
 ---
-title: 'Örnek XML Dosyası: Test yapılandırmasına bir Namespace1'
+title: 'Örnek XML Dosyası: Bir Ad Alanında Test Yapılandırması'
 ms.date: 07/20/2015
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
-ms.openlocfilehash: 38f7da203ee32bd921e680742e91abde91d8aa08
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9c444bb3870ac358c2fba187c82cdc5ce5b7a3bd
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487252"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868731"
 ---
 # <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Örnek XML Dosyası: Bir Ad Alanında Test Yapılandırması
-Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu bir test yapılandırma dosyasıdır. Bir ad alanında XML'dir.  
+Aşağıdaki XML dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgelerindeki çeşitli örneklerde kullanılır. Bu bir test yapılandırma dosyasıdır. XML bir ad alanıdır.  
   
-## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
+## <a name="testconfiginnamespacexml"></a>Testconfigınnamespace. xml  
   
 ```xml  
 <?xml version="1.0"?>  

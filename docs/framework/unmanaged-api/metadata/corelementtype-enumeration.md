@@ -1,5 +1,5 @@
 ---
-title: CorElementType Sabit Listesi1
+title: CorElementType Numaralandırması
 ms.date: 03/30/2017
 api_name:
 - CorElementType
@@ -16,16 +16,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d47e250a35640d15bd494d99442271a070a1dd0a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6057bd48ff4fe3f852f82de2bab972d95fef138c
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781910"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868563"
 ---
-# <a name="corelementtype-enumeration1"></a>CorElementType Sabit Listesi1
+# <a name="corelementtype-enumeration"></a>CorElementType Numaralandırması
 
-Ortak dil çalışma zamanı belirtir <xref:System.Type>, bir tür değiştiricisi ya da bir türü bir meta veri türü imzada hakkında bilgiler.
+Ortak dil çalışma zamanını <xref:System.Type>, tür değiştiricisini veya meta veri türü imzasında bir tür hakkındaki bilgileri belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -83,70 +83,70 @@ typedef enum CorElementType {
 |------------|-----------------|
 |`ELEMENT_TYPE_END`|Dahili olarak kullanılır.|
 |`ELEMENT_TYPE_VOID`|Void türü.|
-|`ELEMENT_TYPE_BOOLEAN`|Bir Boolean türü|
+|`ELEMENT_TYPE_BOOLEAN`|Boole türü|
 |`ELEMENT_TYPE_CHAR`|Bir karakter türü.|
-|`ELEMENT_TYPE_I1`|İmzalı bir 1 baytlık tamsayı.|
+|`ELEMENT_TYPE_I1`|İşaretli bir 1 baytlık tamsayı.|
 |`ELEMENT_TYPE_U1`|İşaretsiz bir 1 baytlık tamsayı.|
-|`ELEMENT_TYPE_I2`|İmzalı bir 2-bayt tamsayı.|
-|`ELEMENT_TYPE_U2`|İmzalanmamış 2-bayt tamsayı.|
-|`ELEMENT_TYPE_I4`|İmzalı bir 4 baytlık tamsayı.|
-|`ELEMENT_TYPE_U4`|İşaretsiz bir 4 baytlık tamsayı.|
-|`ELEMENT_TYPE_I8`|İşaretli 8-bayt tamsayı.|
-|`ELEMENT_TYPE_U8`|İmzalanmamış 8-bayt tamsayı.|
-|`ELEMENT_TYPE_R4`|4-bayt kayan nokta.|
-|`ELEMENT_TYPE_R8`|Bir 8-bayt kayan nokta.|
-|`ELEMENT_TYPE_STRING`|System.String türü.|
+|`ELEMENT_TYPE_I2`|İşaretli bir 2 baytlık tamsayı.|
+|`ELEMENT_TYPE_U2`|İşaretsiz bir 2 baytlık tamsayı.|
+|`ELEMENT_TYPE_I4`|İşaretli 4 baytlık tamsayı.|
+|`ELEMENT_TYPE_U4`|İşaretsiz 4 baytlık tamsayı.|
+|`ELEMENT_TYPE_I8`|İşaretli 8 baytlık tamsayı.|
+|`ELEMENT_TYPE_U8`|İşaretsiz 8 baytlık tamsayı.|
+|`ELEMENT_TYPE_R4`|4 baytlık kayan nokta.|
+|`ELEMENT_TYPE_R8`|8 baytlık kayan nokta.|
+|`ELEMENT_TYPE_STRING`|Bir System. String türü.|
 |`ELEMENT_TYPE_PTR`|Bir işaretçi türü değiştiricisi.|
 |`ELEMENT_TYPE_BYREF`|Bir başvuru türü değiştiricisi.|
-|`ELEMENT_TYPE_VALUETYPE`|Değer tür değiştiricisi.|
+|`ELEMENT_TYPE_VALUETYPE`|Değer türü değiştiricisi.|
 |`ELEMENT_TYPE_CLASS`|Bir sınıf türü değiştiricisi.|
-|`ELEMENT_TYPE_VAR`|Bir sınıf değişken tür değiştiricisi.|
-|`ELEMENT_TYPE_ARRAY`|Çok boyutlu dizi tür değiştiricisi.|
-|`ELEMENT_TYPE_GENERICINST`|Genel türler için tür değiştiricisi.|
-|`ELEMENT_TYPE_TYPEDBYREF`|Belirlenmiş bir başvuru.|
-|`ELEMENT_TYPE_I`|Yerel bir tamsayı boyutu.|
-|`ELEMENT_TYPE_U`|Yerel bir işaretsiz tamsayı boyutu.|
-|`ELEMENT_TYPE_FNPTR`|Bir işlev işaretçisi.|
-|`ELEMENT_TYPE_OBJECT`|System.Object türü.|
-|`ELEMENT_TYPE_SZARRAY`|Tek boyutlu, sıfır alt sınırı dizi tür değiştiricisi.|
-|`ELEMENT_TYPE_MVAR`|Bir yöntem değişken tür değiştiricisi.|
-|`ELEMENT_TYPE_CMOD_REQD`|C dili değiştiricisi gereklidir.|
-|`ELEMENT_TYPE_CMOD_OPT`|Bir C dili isteğe bağlı bir değiştirici.|
+|`ELEMENT_TYPE_VAR`|Sınıf değişkeni tür değiştiricisi.|
+|`ELEMENT_TYPE_ARRAY`|Çok boyutlu dizi türü değiştiricisi.|
+|`ELEMENT_TYPE_GENERICINST`|Genel türler için tür değiştirici.|
+|`ELEMENT_TYPE_TYPEDBYREF`|Türü belirtilmiş bir başvuru.|
+|`ELEMENT_TYPE_I`|Yerel tamsayının boyutu.|
+|`ELEMENT_TYPE_U`|İşaretsiz yerel tamsayının boyutu.|
+|`ELEMENT_TYPE_FNPTR`|İşleve yönelik bir işaretçi.|
+|`ELEMENT_TYPE_OBJECT`|Bir System. Object türü.|
+|`ELEMENT_TYPE_SZARRAY`|Tek boyutlu, sıfır alt sınır dizisi türü değiştiricisi.|
+|`ELEMENT_TYPE_MVAR`|Yöntem değişken türü değiştiricisi.|
+|`ELEMENT_TYPE_CMOD_REQD`|C dili için gerekli değiştirici.|
+|`ELEMENT_TYPE_CMOD_OPT`|C dili isteğe bağlı değiştirici.|
 |`ELEMENT_TYPE_INTERNAL`|Dahili olarak kullanılır.|
 |`ELEMENT_TYPE_MAX`|Geçersiz bir tür.|
 |`ELEMENT_TYPE_MODIFIER`|Dahili olarak kullanılır.|
-|`ELEMENT_TYPE_SENTINEL`|Değişken bir dizi parametre listesi için bir sentinel olan bir tür değiştiricisi.|
+|`ELEMENT_TYPE_SENTINEL`|Değişken parametre sayısının bir listesi için Sentinel olan bir tür değiştiricisi.|
 |`ELEMENT_TYPE_PINNED`|Dahili olarak kullanılır.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Tür değiştiricileri daha karmaşık türleri temsil eden temelini oluşturur. A `CorElementType` tür değiştiricisi değeri, türü imzada hemen takip eden değerine uygulanır. Aşağıdaki değeri `CorElementType` tür değiştiricisi değeri olabilir bir `CorElementType` basit tür değeri, bir metaveri belirteci veya aşağıdaki tabloda belirtildiği gibi başka bir değer.
+Tür değiştiricileri, daha karmaşık türleri temsil etme temelini oluşturur. Tür `CorElementType` imzasında hemen takip eden değere bir tür değiştirici değeri uygulanır. `CorElementType` Tür değiştirici değerini izleyen değer, aşağıdaki tabloda belirtildiği gibi basit `CorElementType` bir tür değeri, meta veri belirteci veya başka bir değer olabilir.
 
 > [!NOTE]
-> Tüm sayılar (*numarası*, *bağımsız değişken sayısı*, *meta veri belirteci*, *derece*, *sayısı*ve *bağlı*) sıkıştırılmış tamsayı olarak depolanır. Bkz: [standart ECMA-335 - ortak dil altyapısı (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) ECMA Web sitesinde Ayrıntılar için.
+> Tüm sayılar (*sayı*, *bağımsız değişken sayısı*, *meta veri belirteci*, *derece*, *sayı*ve *bağlantılı*) sıkıştırılmış tamsayılar olarak depolanır. Ayrıntılar için bkz. ECMA Web sitesinde [standart ECMA-335-ortak dil altyapısı (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) .
 
 |Tür değiştiricisi|Biçimi|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<bir `CorElementType` değer >|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<bir `CorElementType` değer >|
-|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<bir `mdTypeDef` meta veri belirteci >|
-|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<bir `mdTypeDef` meta veri belirteci >|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<sayı >|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<bir `CorElementType` değer > \<derece > \<count1 > \<bound1 >... \<countN > \<boundN >|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<bir `mdTypeDef` meta veri belirteci > \<bağımsız değişken sayısı > \<arg1 >... \<argN >|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<çağırma kuralı dahil olmak üzere işlev için tam imza >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<bir `CorElementType` değer >|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<sayı >|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<bir `mdTypeRef` veya `mdTypeDef` meta veri belirteci >|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<bir `mdTypeRef` veya `mdTypeDef` meta veri belirteci >|
+|`ELEMENT_TYPE_PTR`|Değer ELEMENT_TYPE_PTR \<> `CorElementType`|
+|`ELEMENT_TYPE_BYREF`|Değer ELEMENT_TYPE_BYREF \<> `CorElementType`|
+|`ELEMENT_TYPE_VALUETYPE`|Element_type_valuetype \< bir`mdTypeDef` meta veri belirteci >|
+|`ELEMENT_TYPE_CLASS`|Element_type_class \< bir`mdTypeDef` meta veri belirteci >|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<numarası >|
+|`ELEMENT_TYPE_ARRAY`|Element_type_array \<count1 `CorElementType` > \< \<bound1 > > >birdeğer\< countn > \<boundn> \<|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \< \< \<bir `mdTypeDef` meta veri belirteci > bağımsız değişken sayısı > arg1 >... \<argN >|
+|`ELEMENT_TYPE_FNPTR`|Element_type_fnptr \<çağırma kuralı da dahil olmak üzere işlev için tamamlanmış imza >|
+|`ELEMENT_TYPE_SZARRAY`|Değer element_type_szarray \<> `CorElementType`|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<numarası >|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<a `mdTypeRef` veya`mdTypeDef` meta veri belirteci >|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<a `mdTypeRef` veya`mdTypeDef` meta veri belirteci >|
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
-**Üst bilgi:** CorHdr.h
+**Üst bilgi** CorHdr. h
 
-**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

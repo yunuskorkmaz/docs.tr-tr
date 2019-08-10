@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 27f47d74a6e0775588e40760fe54c281a7f5e233
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 1e77c994062c7ac9ee009bc0e12d39e530e8af80
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363792"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868846"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Temsilcileri Kullanma (C# Programlama Kılavuzu)
 [Temsilci](../../../csharp/language-reference/keywords/delegate.md) , bir yöntemi güvenli bir şekilde kapsülleyen, C ve C++içindeki işlev işaretçisine benzer bir türdür. C işlev işaretçilerinden farklı olarak, temsilciler nesne odaklı, tür kullanımı güvenli ve güvenli. Temsilcinin türü, temsilcinin adı tarafından tanımlanır. Aşağıdaki örnek, bağımsız değişken olarak bir `Del` [dize](../../../csharp/language-reference/keywords/string.md) alan ve [void](../../../csharp/language-reference/keywords/void.md)döndüren bir yöntemi kapsülleyen adlı bir temsilci bildirir:  
@@ -49,7 +49,7 @@ ms.locfileid: "68363792"
   
  [!code-csharp[csProgGuideDelegates#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#27)]  
   
- Bu noktada `allMethodsDelegate` ,, ve, çağırma listesinde üç yöntem bulunur`Method1` `Method2`—, ve `DelegateMethod`. Özgün üç temsilci, `d1` `d2`, ve `d3`, değişmeden kalır. `allMethodsDelegate` Çağrıldığında, üç yöntemin tümü sırasıyla çağrılır. Temsilci başvuru parametreleri kullanıyorsa, başvuru her üç yöntemin her birine sırayla geçirilir ve bir yönteme göre yapılan değişiklikler sonraki yönteme göre görünür. Metotlardan herhangi biri, yöntemi içinde yakalanmayan bir özel durum oluşturduğunda, bu özel durum temsilci çağıranına geçirilir ve çağrı listesinde sonraki Yöntemler çağrılmaz. Temsilcinin dönüş değeri ve/veya out parametreleri varsa, çağrılan son yöntemin dönüş değerini ve parametrelerini döndürür. Çağırma listesinden bir yöntemi kaldırmak için, azaltma veya azaltma atama işlecini ('-' veya '-= ') kullanın. Örneğin:  
+ Bu noktada `allMethodsDelegate` ,, ve, çağırma listesinde üç yöntem bulunur`Method1` `Method2`—, ve `DelegateMethod`. Özgün üç temsilci, `d1` `d2`, ve `d3`, değişmeden kalır. `allMethodsDelegate` Çağrıldığında, üç yöntemin tümü sırasıyla çağrılır. Temsilci başvuru parametreleri kullanıyorsa, başvuru her üç yöntemin her birine sırayla geçirilir ve bir yönteme göre yapılan değişiklikler sonraki yönteme göre görünür. Metotlardan herhangi biri, yöntemi içinde yakalanmayan bir özel durum oluşturduğunda, bu özel durum temsilci çağıranına geçirilir ve çağrı listesinde sonraki Yöntemler çağrılmaz. Temsilcinin dönüş değeri ve/veya out parametreleri varsa, çağrılan son yöntemin dönüş değerini ve parametrelerini döndürür. Çağırma listesinden bir yöntemi kaldırmak için [çıkarma veya çıkarma atama işleçlerini](../../language-reference/operators/subtraction-operator.md) (`-` veya `-=`) kullanın. Örneğin:  
   
  [!code-csharp[csProgGuideDelegates#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#28)]  
   
