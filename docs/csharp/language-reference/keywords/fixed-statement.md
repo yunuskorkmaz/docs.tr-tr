@@ -16,7 +16,7 @@ ms.locfileid: "68433747"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed Deyimi (C# Başvurusu)
 
-`fixed` İfade, çöp toplayıcısının taşınabilir bir değişkenin yerini değiştirmesini engeller. Deyime yalnızca güvenli olmayan bir bağlamda izin verilir. [](unsafe.md) `fixed` [Sabit boyutlu arabellekler](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)oluşturmak için `fixed` anahtar sözcüğünü de kullanabilirsiniz.
+`fixed` İfade, çöp toplayıcısının taşınabilir bir değişkenin yerini değiştirmesini engeller. Deyime yalnızca güvenli olmayan bir bağlamda izin verilir. [emniyetsiz](unsafe.md) `fixed` [Sabit boyutlu arabellekler](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)oluşturmak için `fixed` anahtar sözcüğünü de kullanabilirsiniz.
 
 `fixed` İfade, yönetilen bir değişkene bir işaretçi ayarlar ve deyimin yürütülmesi sırasında bu değişkene "PIN" koyar. Taşınabilir olarak yönetilen değişkenlere yönelik işaretçiler yalnızca bir `fixed` bağlamda yararlıdır. `fixed` Bağlam olmadan çöp toplama, değişkenleri tahmin edilmemiş şekilde yeniden konumlandırmaya yönelik olabilir. C# Derleyici yalnızca bir `fixed` ifadede yönetilen değişkene bir işaretçi atamanızı sağlar.
 
