@@ -17,19 +17,19 @@ ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc8395492992c22da3c635f0de010516127f9be4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "61793009"
 ---
-# <a name="specifying-fully-qualified-type-names"></a>Tam olarak nitelenmiş tür adlarını belirtme
+# <a name="specifying-fully-qualified-type-names"></a>Tam nitelikli tür adlarını belirtme
 
-Çeşitli yansıma işlemleri için geçerli bir giriş için tür adları belirtmeniz gerekir. Bir derleme adı belirtimi, bir ad alanı belirtimine ve bir tür adı tam olarak nitelenmiş tür adını içerir. Tür adı belirtimleri kullanılan yöntemleri tarafından gibi <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>, ve <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.
+Çeşitli yansıma işlemlerine geçerli giriş sağlamak için tür adları belirtmeniz gerekir. Tam nitelikli tür adı, bir derleme adı belirtimi, bir ad alanı belirtimi ve bir tür adından oluşur. Tür <xref:System.Type.GetType%2A?displayProperty=nameWithType>adı belirtimleri <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> ,<xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>, ve<xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>gibi yöntemler tarafından kullanılır.
 
-## <a name="grammar-for-type-names"></a>Tür adları için dil bilgisi
+## <a name="grammar-for-type-names"></a>Tür adları için dilbilgisi
 
- Dilbilgisi biçimsel dillerin sözdizimi tanımlar. Aşağıdaki tabloda, geçerli bir giriş anlamayı açıklayan sözcük temelli kurallar listelenmektedir. Tüm büyük harfleri terminaller (daha fazla reducible olmayan bu öğeleri) gösterilmektedir. Terminal olmayanları (daha fazla reducible bu öğeleri) karışık veya tek tırnak içine alınmış dizeler gösterilir, ancak tek tırnak (') sözdizimi bir parçası değil. Dikey çizgi karakterinden (&#124;) alt olan kuralları gösterir.
+ Dilbilgisi, biçimsel dillerin sözdizimini tanımlar. Aşağıdaki tabloda, geçerli bir girişin nasıl tanınacağını betimleyen sözlü kurallar listelenmektedir. Terminaller (daha fazla indirgenmiş olmayan öğeler) tüm büyük harflerle gösterilir. Nonterminaller (daha fazla indirgenmiş olan bu öğeler), karışık büyük/küçük ve listedir tırnak içinde gösterilir, ancak tek tırnak (') sözdiziminin kendisinin bir parçası değildir. Kanal karakteri (&#124;), alt kuralların bulunduğu kuralları gösterir.
 
 <!-- markdownlint-disable MD010 -->
 ```antlr
@@ -114,57 +114,57 @@ AssemblyProperty
 ```
 <!-- markdownlint-enable MD010 -->
 
-## <a name="specifying-special-characters"></a>Özel karakter belirtme
+## <a name="specifying-special-characters"></a>Özel karakterler belirtme
 
-Bir tür adı bir dil kuralları tarafından belirlenen geçerli bir ad tanımlayıcısıdır.
+Tür adında, tanımlayıcı, bir dilin kuralları tarafından belirlenen geçerli bir addır.
 
-Ters eğik çizgi kullanın (\\) olarak TANIMLAYICI bir parçası olarak kullanıldığında aşağıdaki belirteçler ayırmak için bir kaçış karakteri.
+Tanımlayıcının bir parçası olarak\\kullanıldığında aşağıdaki belirteçleri ayırmak için bir kaçış karakteri olarak ters eğik çizgi () kullanın.
 
 |Belirteç|Açıklama|
 |-----------|-------------|
-|\\,|Derleme ayırıcı.|
-|\\+|İç içe geçmiş tür ayırıcı.|
+|\\,|Derleme ayırıcısı.|
+|\\+|İç içe tür ayırıcısı.|
 |\\&|Başvuru türü.|
 |\\*|İşaretçi türü.|
 |\\[|Dizi boyut sınırlayıcısı.|
 |\\]|Dizi boyut sınırlayıcısı.|
-|\\.|Yalnızca nokta bir dizi belirtiminde kullanılıyorsa bir süre önce ters eğik çizgi kullanın. Ters eğik çizgi NamespaceSpec dönemlerde almaz.|
-|\\\|Değişmez değer dize olarak gerektiğinde ters eğik çizgi.|
+|\\.|Yalnızca nokta bir dizi belirtiminde kullanılıyorsa, bir dönemden önce ters eğik çizgiyi kullanın. NamespaceSpec içindeki dönemler ters eğik çizgi almaz.|
+|\\\|Dize sabit değeri olarak gerektiğinde ters eğik çizgi.|
 
-Alanları AssemblyNameSpec dışındaki tüm TypeSpec'te bileşenlerinde ilgili olduğunu unutmayın. AssemblyNameSpec ',' ayırıcısından önceki boşluklar ilgilidir, ancak ',' ayırıcısından sonraki boşluklar yok sayılır.
+AssemblyNameSpec hariç tüm TypeSpec bileşenlerinde, boşluklar ilgili olduğunu unutmayın. AssemblyNameSpec içinde, ', ' ayırıcısından önceki boşluklar ilgilidir, ancak ', ' ayırıcısından sonra boşluklar yok sayılır.
 
-Yansıma sınıfları, gibi <xref:System.Type.FullName%2A?displayProperty=nameWithType>, böylece bir çağrıda döndürülen adını kullanılabilir karıştırılmış adını döndürmek <xref:System.Type.GetType%2A>, olarak `MyType.GetType(myType.FullName)`.
+Gibi yansıma sınıfları <xref:System.Type.FullName%2A?displayProperty=nameWithType>, döndürülen adın ' de `MyType.GetType(myType.FullName)`olduğu gibi bir çağrısında kullanılabilmesi için <xref:System.Type.GetType%2A>karıştırılmış adı döndürür.
 
-Örneğin, bir tür için tam ad olabilir `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly`.
+Örneğin, bir türün `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly`tam nitelikli adı olabilir.
 
-Ad alanı varsa `Ozzy.Out+Back`, ardından artı işaretine bir ters eğik çizgi gelmelidir. Aksi takdirde, ayrıştırıcının, iç içe geçmiş bir ayırıcı olarak yorumlar. Yansıma Bu dize olarak yayar `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly`.
+Ad alanı olsaydı `Ozzy.Out+Back`, artı işaretinin önünde ters eğik çizgi gelmelidir. Aksi takdirde, ayrıştırıcı bunu iç içe ayırıcı olarak yorumlar. Yansıma bu dizeyi olarak `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly`yayar.
 
-## <a name="specifying-assembly-names"></a>Derleme adları belirtme
+## <a name="specifying-assembly-names"></a>Derleme adlarını belirtme
 
-Bir derleme adı belirtimi gereken en düşük bilgileri metinsel (TANIMLAYICI) derlemenin adıdır. Aşağıdaki tabloda açıklandığı gibi özellik/değer çiftlerinin virgülle ayrılmış bir listesini, TANIMLAYICI takip edebilirsiniz. TANIMLAYICI adlandırma dosya adlandırma kuralları izlemelidir. TANIMLAYICI büyük/küçük harf duyarlıdır.
+Bir derleme adı belirtiminde gereken en düşük bilgiler, derlemenin metinsel adıdır (tanımlayıcı). Aşağıdaki tabloda açıklandığı gibi, TANıMLAYıCıYı, bir özellik/değer çiftleri için virgülle ayrılmış bir liste ile takip edebilirsiniz. TANıMLAYıCı adlandırması dosya adlandırmayla ilgili kurallara uymalıdır. TANıMLAYıCı büyük/küçük harfe duyarsızdır.
 
 |Özellik adı|Açıklama|İzin verilen değerler|
 |-------------------|-----------------|----------------------|
-|**Sürüm**|Derleme sürüm numarası|*Major.Minor.Build.Revision*burada *ana*, *küçük*, *derleme*, ve *düzeltme* 0 arasındaki tam sayılardır ve 65535 (dahil).|
-|**PublicKey**|Tam ortak anahtarı|Onaltılık biçimde tam ortak anahtar dizesi. Bir null başvurusu belirtin (**hiçbir şey** Visual Basic'te) özel bir derleme açıkça belirtmek için.|
-|**PublicKeyToken**|Ortak anahtar belirteci (8 baytlık tam ortak anahtar karması)|Onaltılık biçiminde ortak anahtar belirteci dizesi. Bir null başvurusu belirtin (**hiçbir şey** Visual Basic'te) özel bir derleme açıkça belirtmek için.|
-|**Kültür**|Derleme kültürü|RFC 1766 biçimi veya "belirsiz" dilden bağımsız (nonsatellite) derlemeler için derleme kültür.|
-|**Özel**|Özel ikili büyük nesne (BLOB). Bu şu anda yalnızca tarafından oluşturulan bütünleştirilmiş kodlarında kullanılır [Native Image Generator (Ngen)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|Yerel Görüntü Oluşturucu aracı tarafından derleme önbelleğine yüklenen derleme bir doğal görüntü ve bu nedenle yerel görüntü önbelleğine yüklenecek olduğunu bildirmek için kullanılan özel bir dize. Zap dize olarak da adlandırılır.|
+|**Sürüm**|Derleme sürüm numarası|*Birincil. Minor. Build. Revision*, burada *büyük*, *küçük*, *derleme*ve *Düzeltme* , 0 ile 65535 dahil olmak üzere tamsayılar.|
+|**PublicKey**|Tam ortak anahtar|Onaltılık biçimdeki tam ortak anahtarın dize değeri. Özel bir derlemeyi açıkça belirtmek için bir null başvurusu (Visual Basic**hiçbir şey** ) belirtin.|
+|**PublicKeyToken**|Ortak anahtar belirteci (tam ortak anahtarın 8 baytlık karması)|Onaltılık biçimdeki ortak anahtar belirtecinin dize değeri. Özel bir derlemeyi açıkça belirtmek için bir null başvurusu (Visual Basic**hiçbir şey** ) belirtin.|
+|**Ayarı**|Derleme kültürü|RFC-1766 biçiminde derlemenin kültürü veya dilden bağımsız (uydu olmayan) derlemeler için "nötr".|
+|**Özel**|Özel ikili büyük nesne (BLOB). Bu, şu anda yalnızca [Yerel Görüntü Oluşturucu (NGen)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)tarafından oluşturulan derlemelerde kullanılmaktadır.|Yerel Görüntü Oluşturucu aracı tarafından, yüklenen derlemenin yerel görüntü olduğunu ve bu nedenle yerel görüntü önbelleğine yükleneceğini bildiren derleme önbelleğine bildirmek için kullanılan özel dize. Ayrıca, Zap dizesi olarak da bilinir.|
 
-Aşağıdaki örnekte gösterildiği bir **AssemblyName** varsayılan kültür ile yalnızca adlandırılmış bir derleme için.
+Aşağıdaki örnek, varsayılan kültür ile basitçe adlandırılmış bir derleme için bir **AssemblyName** gösterir.
 
 ```csharp
 com.microsoft.crypto, Culture=""
 ```
 
-Aşağıdaki örnek, "en" kültürüyle kesin adlandırılmış bir bütünleştirilmiş kod için tam olarak belirtilen bir başvuru gösterir.
+Aşağıdaki örnek, "en" kültürü ile kesin adlandırılmış derleme için tam olarak belirtilen başvuruyu gösterir.
 
 ```csharp
 com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
     Version=1.0.0.0
 ```
 
-Aşağıdaki her bir kısmen belirtilen örnekler **AssemblyName**, hangi memnun güçlü veya yalnızca adlandırılmış bir bütünleştirilmiş kod tarafından.
+Aşağıdaki örneklerde her biri, kesin olarak belirtilen bir **AssemblyName**gösterir, bu, güçlü veya basitçe adlandırılmış bir derleme tarafından karşılanır.
 
 ```csharp
 com.microsoft.crypto
@@ -172,14 +172,14 @@ com.microsoft.crypto, Culture=""
 com.microsoft.crypto, Culture=en
 ```
 
-Aşağıdaki her bir kısmen belirtilen örnekler **AssemblyName**, hangi gerekir memnun tarafından yalnızca adlandırılmış bir derleme.
+Aşağıdaki örneklerde, tek bir adlandırılmış derleme tarafından karşılanması gereken kısmen belirtilen **AssemblyName**gösterilmektedir.
 
 ```csharp
 com.microsoft.crypto, Culture="", PublicKeyToken=null
 com.microsoft.crypto, Culture=en, PublicKeyToken=null
 ```
 
-Aşağıdaki her bir kısmen belirtilen örnekler **AssemblyName**, hangi gerekir memnun kesin adlandırılmış bir derleme tarafından.
+Aşağıdaki örneklerde her biri, kesin olarak adlandırılmış bir derleme tarafından karşılanması gereken kısmen belirtilen bir **AssemblyName**gösterir.
 
 ```csharp
 com.microsoft.crypto, Culture="", PublicKeyToken=a5d015c7d5a0b012
@@ -189,32 +189,32 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 
 ## <a name="specifying-generic-types"></a>Genel türleri belirtme
 
-SimpleTypeSpec\`SAYIYI temsil eden bir açık genel tür ile 1'den *n* genel tür parametreleri. Örneğin, başvuru açık genel tür listesini almak için\<T > ya da kapalı genel tür listesi\<dizesi >, kullanın ``Type.GetType("System.Collections.Generic.List`1")`` genel tür sözlük için bir başvuru almak için\<TKey, TValue >, kullanın ``Type.GetType("System.Collections.Generic.Dictionary`2")``.
+SimpleTypeSpec\`numarası, 1 ile *n* genel tür parametrelerinden oluşan açık bir genel türü temsil eder. Örneğin, açık genel tür listesi\<T > veya kapalı genel tür listesi\<dize > başvuru almak için, genel tür sözlüğü\<TKey ``Type.GetType("System.Collections.Generic.List`1")`` , TValue > ``Type.GetType("System.Collections.Generic.Dictionary`2")``başvurusunu almak için kullanın.
 
 ## <a name="specifying-pointers"></a>İşaretçileri belirtme
 
-SimpleTypeSpec * bir yönetilmeyen işaretçi temsil eder. Örneğin, MyType tür işaretçisi almak için kullanın `Type.GetType("MyType*")`. MyType tür işaretçisi için bir işaretçi almak için kullanın `Type.GetType("MyType**")`.
+SimpleTypeSpec *, yönetilmeyen bir işaretçiyi temsil eder. Örneğin, MyType türünde bir işaretçi almak için kullanın `Type.GetType("MyType*")`. MyType türünde bir işaretçiye işaretçi almak için kullanın `Type.GetType("MyType**")`.
 
 ## <a name="specifying-references"></a>Başvuruları belirtme
 
-SimpleTypeSpec & bir yönetilen işaretçi veya başvuru temsil eder. Örneğin, MyType yazmanız için bir başvuru almak için kullanın `Type.GetType("MyType &")`. İşaretçilerin, başvuru bir düzey sınırlı olduğunu unutmayın.
+SimpleTypeSpec &, yönetilen bir işaretçiyi veya başvuruyu temsil eder. Örneğin, MyType türü için bir başvuru almak için kullanın `Type.GetType("MyType &")`. İşaretçilerin aksine, başvuruların bir düzey ile sınırlı olduğunu unutmayın.
 
-## <a name="specifying-arrays"></a>Diziler belirtme
+## <a name="specifying-arrays"></a>Dizileri belirtme
 
-BNF dilbilgisi ReflectionEmitDimension eksik tür tanımlarını kullanarak yalnızca geçerli <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>. Eksik tür tanımları <xref:System.Reflection.Emit.TypeBuilder> kullanılarak oluşturulan nesneleri <xref:System.Reflection.Emit?displayProperty=nameWithType> ancak üretileceği <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> çağrılmadıysa. ReflectionDimension, yani tamamlanmış olan herhangi bir tür tanımı, yüklenmiş olan bir tür almak için kullanılabilir.
+BNF dilbilgisinde, ReflectionEmitDimension yalnızca kullanılarak <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>alınan eksik tür tanımları için geçerlidir. Tamamlanmamış tür tanımları <xref:System.Reflection.Emit.TypeBuilder> kullanılarak <xref:System.Reflection.Emit?displayProperty=nameWithType> oluşturulan, ancak üzerinde <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> olmayan nesneler. ReflectionDimension, tamamlanmış olan ve yüklenmiş bir tür tanımını almak için kullanılabilir.
 
-Diziler, dizi boyut sayısını belirterek yansıma erişilir:
+Dizilere dizi derecesi belirtilerek bir şekilde erişilir:
 
-- `Type.GetType("MyArray[]")` bir tek boyutlu dizi alt sınırı 0 ile alır.
+- `Type.GetType("MyArray[]")`0 alt sınırı olan tek boyutlu bir diziyi alır.
 
-- `Type.GetType("MyArray[*]")` Bilinmeyen alt sınır olan bir tek boyutlu dizi alır.
-- `Type.GetType("MyArray[][]")` iki boyutlu bir dizinin dizisini alır.
+- `Type.GetType("MyArray[*]")`bilinmeyen alt sınır içeren tek boyutlu bir dizi alır.
+- `Type.GetType("MyArray[][]")`iki boyutlu bir dizinin dizisini alır.
 
-- `Type.GetType("MyArray[*,*]")` ve `Type.GetType("MyArray[,]")` dikdörtgen iki boyutlu bir dizi ile Bilinmeyen alt sınırını alır.
+- `Type.GetType("MyArray[*,*]")`ve `Type.GetType("MyArray[,]")` bilinmeyen alt sınırlara sahip dikdörtgen iki boyutlu bir dizi alır.
 
-Bir çalışma zamanı açısından bakıldığında, dikkat `MyArray[] != MyArray[*]`, ancak çok boyutlu diziler için iki gösterimler eşdeğerdir. Diğer bir deyişle, `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` değerlendiren **true**.
+Bir çalışma zamanı noktasından, ancak çok boyutlu diziler `MyArray[] != MyArray[*]`için iki gösterimin eşdeğer olduğunu unutmayın. Yani, `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` **true**olarak değerlendirilir.
 
-İçin **ModuleBuilder.GetType**, `MyArray[0..5]` bir tek boyutlu dizi boyutu 6, daha düşük ile bağlı 0 gösterir. `MyArray[4…]` bir tek boyutlu dizi boyutu bilinmeyen ve alt sınırı 4 gösterir.
+**ModuleBuilder. GetType**için, `MyArray[0..5]` 6 boyutunda bir tek boyutlu diziyi, alt sınır 0 ' ı gösterir. `MyArray[4…]`Bilinmeyen boyut ve alt sınır 4 ' ün tek boyutlu dizisini gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

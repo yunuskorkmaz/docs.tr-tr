@@ -16,89 +16,89 @@ ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "64634565"
 ---
 # <a name="composite-formatting"></a>Bileşik Biçimlendirme
 
-.NET bileşik biçimlendirme özelliği, nesneleri ve bir bileşik biçimlendirme dizesi listesini girdi olarak alır. Bir bileşik biçimlendirme dizesi, sabit metinle karışık bir şekilde listedeki nesnelere karşılık gelen, biçim öğeleri adı verilen dizinli yer tutuculardan oluşur. Biçimlendirme işlemi sonuç olarak, orijinal sabit metin ve listedeki nesnelerin dize temsillerinin karışımından oluşan bir dize oluşturur.  
+.NET Composite biçimlendirme özelliği, giriş olarak bir nesne listesi ve bileşik biçim dizesi alır. Bir bileşik biçimlendirme dizesi, sabit metinle karışık bir şekilde listedeki nesnelere karşılık gelen, biçim öğeleri adı verilen dizinli yer tutuculardan oluşur. Biçimlendirme işlemi sonuç olarak, orijinal sabit metin ve listedeki nesnelerin dize temsillerinin karışımından oluşan bir dize oluşturur.  
   
 > [!IMPORTANT]
-> Kullanabileceğiniz bileşik biçim dizeleri kullanmak yerine, *ilişkilendirilmiş dizeler* kullandığınız dil ve dil sürümü bunları destekliyorsa. İlişkilendirilmiş dize içeren bir dizedir *ilişkilendirilmiş ifade*. Her ilişkilendirilmiş ifade ifadenin değerinin ile çözümlendi ve dize atandığında sonuç dizesinde dahil. Daha fazla bilgi için [dize ilişkilendirme (C# başvuru)](../../csharp/language-reference/tokens/interpolated.md) ve [Ara değerli dizeler (Visual Basic Başvurusu)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+> Kullandığınız dil ve dil sürümü bunları destekliyorsa, bileşik biçim dizeleri kullanmak yerine, *enterpolasyonlu dizeler* kullanabilirsiniz. İlişkilendirilmiş dize içeren bir dizedir *ilişkilendirilmiş ifade*. Her ilişkilendirilmiş ifade ifadenin değerinin ile çözümlendi ve dize atandığında sonuç dizesinde dahil. Daha fazla bilgi için bkz. [dize ilişkilendirmeC# (başvuru)](../../csharp/language-reference/tokens/interpolated.md) ve [enterpolasyonlu dizeler (Visual Basic Başvurusu)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
 
 Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından desteklenir:  
   
-- <xref:System.String.Format%2A?displayProperty=nameWithType>, biçimlendirilmiş Sonuç dizesini döndürür.  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>, ancak biçimlendirilen bir sonuç dizesi döndürür.  
   
-- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, ekler için biçimlendirilmiş Sonuç dizesini bir <xref:System.Text.StringBuilder> nesne.   
-- Bazı aşırı yüklemeleri <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> yöntemi konsola biçimlendirilmiş Sonuç dizesini görüntüler.  
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, bir <xref:System.Text.StringBuilder> nesnesine biçimlendirilen bir sonuç dizesi ekler.   
+- Konsola biçimlendirilen bir sonuç <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> dizesi görüntüleyen metodun bazı aşırı yüklemeleri.  
   
-- Bazı aşırı yüklemeleri <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> biçimlendirilmiş Sonuç dizesini bir akış veya dosyaya yazmak yöntemi. Türetilmiş sınıflar <xref:System.IO.TextWriter>, gibi <xref:System.IO.StreamWriter> ve <xref:System.Web.UI.HtmlTextWriter>, ayrıca bu işlevleri paylaşırlar.  
+- Bir akışa veya dosyaya <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> biçimlendirilen sonuç dizesini yazan, metodun bazı aşırı yüklemeleri. <xref:System.IO.StreamWriter> <xref:System.IO.TextWriter> Ve<xref:System.Web.UI.HtmlTextWriter>gibi sınıfından türetilmiş sınıflar da bu işlevi paylaşır.  
   
-- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, izleme dinleyicilerine biçimlendirilmiş bir ileti çıkarır.  
+- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, dinleyicileri izlemek için biçimlendirilen bir ileti çıkışı verir.  
   
-- <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, Ve <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> iletileri izleme dinleyicilerine biçimlendirilmiş yöntemleri.  
+- , Ve <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>' i <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> izlemek için biçimlendirilen iletileri çıktısını veren, ve yöntemleri. <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>  
   
-- <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> İzleme dinleyicilerine bilgi yöntemi yazan yöntemi.  
+- Trace dinleyicilerine bir bilgilendirme yöntemi yazan yöntemi.<xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>  
   
 ## <a name="composite-format-string"></a>Bileşik Biçim Dizesi  
  Bileşik biçimlendirme özelliğini destekleyen metotlarda bir bileşik biçimlendirme dizesi ve nesne listesi bağımsız değişkenler olarak kullanılır. Bir bileşik biçimlendirme dizesi sıfır veya daha fazla sabit metin bölümüyle karışık olarak bir veya daha fazla biçim öğesinden oluşur. Sabit metin seçtiğiniz herhangi bir dizedir, ve her biçim öğesi listedeki bir nesneye veya kutulu yapıya karşılık gelir. Bileşik biçimlendirme özelliği, her biçim öğesinin yerine listede karşılık gelen nesnenin dize temsili yerleştirilmiş bir şekilde yeni bir sonuç dizesi döndürür.  
   
- Aşağıdakileri göz önünde bulundurun <xref:System.String.Format%2A> kod parçası.  
+ Aşağıdaki <xref:System.String.Format%2A> kod parçasını göz önünde bulundurun.  
   
  [!code-csharp[Formatting.Composite#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#1)]
  [!code-vb[Formatting.Composite#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#1)]  
   
- Sabit metin "`Name =` "ve"`, hours =` ". Biçim öğesi olan "`{0}`", dizini olan nesneye karşılık gelen 0 `name`, ve "`{1:hh}`", dizini olan nesneye karşılık gelen 1 `DateTime.Now`.  
+ Sabit metin "`Name =` " ve "`, hours =` ". Biçim öğeleri`{0}`, dizini 0 olan, nesnesine `name`karşılık gelen "" ve dizini 1 olan, nesnesine `DateTime.Now`karşılık gelen`{1:hh}`"" olan "" dir.  
   
 ## <a name="format-item-syntax"></a>Biçim Öğesi Sözdizimi  
  Her biçim öğesi aşağıdaki biçimi alır ve aşağıdaki bileşenlerden oluşur:  
   
- `{` *index*[`,`*alignment*][`:`*formatString*]`}`  
+ `{`*Dizin* [`,`*Hizalama*] [`:`*FormatString*]`}`  
   
  Eşleşen ayraçlar ("{" ve "}") gereklidir.  
   
 ### <a name="index-component"></a>Dizin Bileşeni  
- Zorunlu *dizin* ayrıca bir parametre tanımlayıcı da denen bileşenidir Nesne listesinde karşılık gelen bir öğeyi tanımlayan 0 ile başlayan bir sayıdır. Yani, parametre tanımlayıcısı 0 olan biçim öğesi listedeki ilk nesneyi biçimlendirir, parametre tanımlayıcısı 1 olan biçim öğesi listedeki ikinci nesneyi biçimlendirir ve bu şekilde devam eder. Aşağıdaki örnek 10'dan az asal sayıları temsil etmek için sıfır üç sanal makine aracılığıyla numaralı dört parametre belirticileri, içerir:  
+ Parametre tanımlayıcısı olarak da bilinen zorunlu *Dizin* bileşeni, nesne listesinde karşılık gelen bir öğeyi tanımlayan 0 ' dan başlayan bir sayıdır. Yani, parametre tanımlayıcısı 0 olan biçim öğesi listedeki ilk nesneyi biçimlendirir, parametre tanımlayıcısı 1 olan biçim öğesi listedeki ikinci nesneyi biçimlendirir ve bu şekilde devam eder. Aşağıdaki örnek, 10 ' dan küçük olan asal sayıları temsil etmek için, sıfır ile numaralandırılmış dört parametre belirticilerini içerir:  
   
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Birden çok biçim öğesi, aynı parametre tanımlayıcısını belirterek nesne listesindeki aynı öğeye başvurabilir. Örneğin, bir bileşik biçimlendirme dizesi belirterek aynı sayısal değeri onaltılık, bilimsel ve sayı biçiminde biçimlendirebilirsiniz: "0 x{0:X} {0:E} {0:N}" aşağıdaki örnekte gösterildiği gibi.  
+ Birden çok biçim öğesi, aynı parametre tanımlayıcısını belirterek nesne listesindeki aynı öğeye başvurabilir. Örneğin, bir bileşik biçim dizesi belirterek onaltılık, bilimsel ve sayı biçimindeki aynı sayısal değeri biçimlendirebilirsiniz: Aşağıdaki örnekte{0:X} gösterildiği gibi "0x {0:E} {0:N}".  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
   
- Her biçim öğesi listedeki herhangi bir nesneye başvurabilir. Örneğin, üç nesne varsa, ikinci, biçimlendirme ve üçüncü nesneyi bir bileşik biçimlendirme dizesi belirterek: "{1} {0} {2}". Bir biçimlendirme nesnesi tarafından başvurulmayan nesneler yok sayılır. A <xref:System.FormatException> çalışma zamanında bir parametre tanımlayıcısı nesne listesinin sınırları dışında bir öğe belirlerse oluşturulur.  
+ Her biçim öğesi listedeki herhangi bir nesneye başvurabilir. Örneğin, üç nesne varsa, şu şekilde bir bileşik biçim dizesi belirterek ikinci, birinci ve üçüncü nesneyi biçimlendirebilirsiniz: "{1} {0} {2}". Bir biçimlendirme nesnesi tarafından başvurulmayan nesneler yok sayılır. Bir <xref:System.FormatException> parametre belirleyicisi nesne listesi sınırları dışında bir öğe atılırsa, çalışma zamanında bir oluşturulur.  
   
 ### <a name="alignment-component"></a>Hizalama Bileşeni  
- İsteğe bağlı *hizalama* bileşendir tercih edilen biçimlendirilmiş alan genişliğini belirten bir işaretli tamsayı. Varsa değerini *hizalama* biçimlendirilmiş dizenin uzunluğu'dan küçük *hizalama* yok sayılır ve alan genişliği olarak biçimlendirilen dizenin uzunluğu kullanılır. Alandaki biçimlendirilmiş veri hakkı varsa hizalanır *hizalama* pozitif ve sola hizalanmış *hizalama* negatiftir. Eğer iç boşluk gerekliyse, boşluk kullanılır. Virgül gereklidir *hizalama* belirtilir.  
+ İsteğe bağlı *Hizalama* bileşeni, tercih edilen biçimli alan genişliğini gösteren işaretli bir tamsayıdır. *Hizalama* değeri biçimlendirilen dizenin uzunluğundan küçükse, *Hizalama* yok sayılır ve biçimlendirilen dizenin uzunluğu alan genişliği olarak kullanılır. *Hizalama* pozitif ise ve *Hizalama* negatifse sola hizalı ise, alandaki biçimlendirilen veriler sağa hizalanır. Eğer iç boşluk gerekliyse, boşluk kullanılır. *Hizalama* belirtilmişse virgül gereklidir.  
   
- Aşağıdaki örnek, bir iki haftalık süre içinde çalıştıkları saat dizilerinin, bir çalışan adlarını içeren ve diğer içeren tanımlar. Bileşik biçimlendirme dizesi sol-20 karakter alan adlarında ve sağ-saatlerini 5 karakterli alanında hizalar. "N1" standart biçim dizesi kesirli bir basamak ile saatleri biçimlendirmek için de kullanıldığını unutmayın.  
+ Aşağıdaki örnek, biri çalışanların adlarını ve diğeri iki haftalık bir dönemde çalıştıkları saatleri içeren iki diziyi tanımlar. Bileşik biçim dizesi, adları 20 karakterlik bir alana sola hizalar ve saatlerini 5 karakterli bir alanda sağa hizalar. "N1" standart biçim dizesinin aynı zamanda bir kesirli basamaklı saatleri biçimlendirmek için de kullanıldığını unutmayın.  
   
  [!code-csharp[Formatting.Composite#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/alignment1.cs#8)]
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Biçim Dizesi Bileşeni  
- İsteğe bağlı *formatString* bileşenidir, biçimlendirilen nesnenin türü için uygun olan bir biçim dizesi. Bir standart veya özel sayısal biçim dizesi karşılık gelen nesne bir sayısal değer ise bir standart veya özel tarih ve saat biçim dizesini karşılık gelen nesne belirtin bir <xref:System.DateTime> nesnesi veya bir [sabit listesi biçimlendirme dizesi](../../../docs/standard/base-types/enumeration-format-strings.md)karşılık gelen nesne bir sabit listesi değeri ise. Varsa *formatString* belirtilmezse, sayı, tarih ve saat veya numaralandırma türü için genel ("G") Biçim belirleyicisi kullanılır. İki nokta üst üste gereklidir *formatString* belirtilir.  
+ İsteğe bağlı *FormatString* bileşeni, biçimlendirilen nesne türüne uygun bir biçim dizesidir. Karşılık gelen nesne bir sayısal değer ise standart veya özel bir sayısal biçim dizesi, karşılık gelen nesne bir <xref:System.DateTime> nesneeyse standart veya özel tarih ve saat biçimi dizesi ya da karşılık gelen [](../../../docs/standard/base-types/enumeration-format-strings.md) nesne bir sabit listesi değeridir. *FormatString* belirtilmemişse, bir sayısal, tarih ve saat veya numaralandırma türü için genel ("G") Biçim belirleyicisi kullanılır. *FormatString* belirtilmişse, iki nokta üst üste gereklidir.  
   
- Aşağıdaki tablo, .NET Framework içinde bulunan, önceden tanımlanmış bir biçimlendirme dizesi kümesini destekleyen türleri ve kategorileri listeler, ve desteklenen biçimlendirme dizelerini listeleyen konulara bağlantılar sağlar. Dize biçimlendirmenin, tüm varolan türler için yeni biçimlendirme dizeleri tanımlanabilmesini mümkün kılmanın yanı sıra uygulamada tanımlanmış bir tür tarafından desteklenen bir biçimlendirme dizesi kümesinin tanımlanabilmesine olanak veren genişletilebilir bir mekanizma olduğuna dikkat edin. Daha fazla bilgi için <xref:System.IFormattable> ve <xref:System.ICustomFormatter> arabirimi konuları.  
+ Aşağıdaki tablo, .NET Framework içinde bulunan, önceden tanımlanmış bir biçimlendirme dizesi kümesini destekleyen türleri ve kategorileri listeler, ve desteklenen biçimlendirme dizelerini listeleyen konulara bağlantılar sağlar. Dize biçimlendirmenin, tüm varolan türler için yeni biçimlendirme dizeleri tanımlanabilmesini mümkün kılmanın yanı sıra uygulamada tanımlanmış bir tür tarafından desteklenen bir biçimlendirme dizesi kümesinin tanımlanabilmesine olanak veren genişletilebilir bir mekanizma olduğuna dikkat edin. Daha fazla bilgi için bkz <xref:System.IFormattable> . ve <xref:System.ICustomFormatter> arabirimi konuları.  
   
-|Tür veya tür kategorisi|Bkz. |  
+|Tür veya tür kategorisi|Bkz.|  
 |---------------------------|---------|  
 |Tarih ve saat türleri (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Numaralandırma türleri (öğesinden türetilen tüm türler <xref:System.Enum?displayProperty=nameWithType>)|[Sabit Listesi Biçim Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|Sayısal türler (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|Sabit listesi türleri (türetilen <xref:System.Enum?displayProperty=nameWithType>tüm türler)|[Sabit Listesi Biçim Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|Sayısal türler (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal> ,<xref:System.UInt32>, ,<xref:System.Int16>, ,<xref:System.SByte>,, ,<xref:System.UInt16>, )<xref:System.UInt64> <xref:System.Int32> <xref:System.Double> <xref:System.Int64> <xref:System.Single>|[Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[Standart TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Özel TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
 ### <a name="escaping-braces"></a>Çıkış Yapan Ayraçlar  
  Açma ve kapatma ayraçları bir biçim öğesinin başlangıcı ve bitişi olarak yorumlanır. Sonuç olarak, sabit bir açılış veya kapanış ayracını görüntülemek için bir kaçış dizisi kullanmanız gerekir. Bir açılış ayracı ("{") görüntülemek için sabit metinde iki açılış ayracı ("{{"), veya bir kapanış ayracı ("}") görüntülemek için sabit metinde iki kapanış ayracı ("}}") belirtin. Bir biçim öğesindeki ayraçlar, karşılaşıldıkları sırada sıralı olarak yorumlanır. İç içe ayraçları yorumlama desteklenmez.  
   
- Kaçırılan ayraçların yorumlanma şekli beklenmeyen sonuçlara neden olabilir. Örneğin, biçim öğesini göz önünde bulundurun "{{{0:D}}}", bir açılış ayracı görüntülemek için hedeflenen, sayısal bir değer olarak biçimlendirilmiş bir ondalık sayı ve bir kapanış ayracı. Ancak, biçim öğesi aslında şu şekilde yorumlanır:  
+ Kaçırılan ayraçların yorumlanma şekli beklenmeyen sonuçlara neden olabilir. Örneğin, bir açılış ayracı, ondalık sayı olarak biçimlendirilen{0:D}sayısal bir değer ve bir kapanış ayracı görüntülemesi amaçlanan "{{}}" biçim öğesini göz önünde bulundurun. Ancak, biçim öğesi aslında şu şekilde yorumlanır:  
   
 1. İlk iki açılış ayracı ("{{") kaçırılır ve bir açılış ayracı olur.  
   
@@ -116,35 +116,35 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>İşlem Sırası  
- Bileşik biçimlendirme yöntemi çağrısı içeriyorsa, bir <xref:System.IFormatProvider> bağımsız değişken değeri değil `null`, çalışma zamanı çağrıları kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> istemek için yöntemi bir <xref:System.ICustomFormatter> uygulaması. Yöntem dönüş mümkün ise bir <xref:System.ICustomFormatter> uygulama, süresi boyunca bileşik biçimlendirme yöntemi çağrısı, önbelleğe alınır.
+ Bileşik biçimlendirme yöntemine yapılan <xref:System.IFormatProvider> çağrı, değeri olmayan `null`bir bağımsız değişken içeriyorsa <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> , çalışma zamanı bir <xref:System.ICustomFormatter> uygulama istemek için yöntemini çağırır. Yöntem bir <xref:System.ICustomFormatter> uygulama döndürebiliyor ise, bileşik biçimlendirme yöntemi çağrısının süresi boyunca önbelleğe alınır.
   
- Parametre listesinde bir biçim öğesine karşılık gelen her değer şu şekilde bir dizeye dönüştürülür:  
+ Bir biçim öğesine karşılık gelen parametre listesindeki her bir değer, aşağıdaki gibi bir dizeye dönüştürülür:  
   
 1. Biçimlendirilecek değer ise `null`, boş bir dize <xref:System.String.Empty?displayProperty=nameWithType> döndürülür.  
   
-2. Varsa bir <xref:System.ICustomFormatter> kullanılamıyorsa çalışma zamanı çağrıları kendi <xref:System.ICustomFormatter.Format%2A> yöntemi. Öğenin yöntemi geçirir *formatString* biri varsa, değer veya `null` , değilse ile birlikte <xref:System.IFormatProvider> uygulaması. Çağrı <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> yöntemi döndürür `null`, yürütme devam eder, sonraki adıma; Aksi takdirde, sonucunu <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> çağrı döndürülür.
+2. Bir <xref:System.ICustomFormatter> uygulama kullanılabiliyorsa, çalışma zamanı <xref:System.ICustomFormatter.Format%2A> yöntemini çağırır. Yöntemi, varsa veya `null` <xref:System.IFormatProvider> uygulama ile birlikte, varsa, biçim öğesinin *FormatString* değerini geçirir. <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> Yöntem çağrısı döndürürse `null`, yürütme sonraki adıma geçer; Aksi takdirde <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> , çağrının sonucu döndürülür.
   
-3. Değer uyguluyorsa <xref:System.IFormattable> arabirimi, arabirimin <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> yöntemi çağrılır. Yönteme *formatString* değeri biçim öğesinde varsa veya `null` değilse. <xref:System.IFormatProvider> Bağımsız değişkeni aşağıdaki şekilde belirlenir:  
+3. Değer, <xref:System.IFormattable> arabirimini uyguluyorsa, <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> arabirimin yöntemi çağırılır. Yöntemi, biçim öğesinde varsa veya `null` yoksa, FormatString değeri geçirilir. <xref:System.IFormatProvider> Bağımsız değişkeni şöyle belirlenir:  
   
-    - Bir bileşik biçimlendirme yöntemi ile bir null olmayan bir sayı değeri <xref:System.IFormatProvider> bağımsız değişken çağrılırsa, çalışma zamanı bir <xref:System.Globalization.NumberFormatInfo> nesnesinin kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. Bağımsız değişkenin değerini ise tane sağlanamazsa, `null`, veya bileşik biçimlendirme yöntemi yoksa bir <xref:System.IFormatProvider> parametresi <xref:System.Globalization.NumberFormatInfo> nesnesi geçerli iş parçacığı kültürü kullanılır.  
+    - Sayısal bir değer için, null <xref:System.IFormatProvider> olmayan bir bağımsız değişkeni olan bir bileşik biçimlendirme yöntemi çağrılırsa, çalışma zamanı <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yönteminden bir <xref:System.Globalization.NumberFormatInfo> nesne ister. Bir tane sağlayamazsa, bağımsız değişkenin değeri ise `null`veya bileşik biçimlendirme yönteminin bir <xref:System.IFormatProvider> parametresi <xref:System.Globalization.NumberFormatInfo> yoksa, geçerli iş parçacığı kültürü için nesnesi kullanılır.  
   
-    - Bir tarih ve saat değeri, bir bileşik biçimlendirme yöntemi ile null olmayan bir <xref:System.IFormatProvider> bağımsız değişken çağrılırsa, çalışma zamanı bir <xref:System.Globalization.DateTimeFormatInfo> nesnesinin kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. Bağımsız değişkenin değerini ise tane sağlanamazsa, `null`, veya bileşik biçimlendirme yöntemi yoksa bir <xref:System.IFormatProvider> parametresi <xref:System.Globalization.DateTimeFormatInfo> nesnesi geçerli iş parçacığı kültürü kullanılır.  
+    - Bir tarih ve saat değeri için, null <xref:System.IFormatProvider> olmayan bir bağımsız değişkeni olan bir bileşik biçimlendirme yöntemi çağrılırsa, çalışma zamanı kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yönteminden bir <xref:System.Globalization.DateTimeFormatInfo> nesne ister. Bir tane sağlayamazsa, bağımsız değişkenin değeri ise `null`veya bileşik biçimlendirme yönteminin bir <xref:System.IFormatProvider> parametresi <xref:System.Globalization.DateTimeFormatInfo> yoksa, geçerli iş parçacığı kültürü için nesnesi kullanılır.  
   
-    - Diğer tür nesneler için bir bileşik biçimlendirme yöntemi ile aranan bir <xref:System.IFormatProvider> bağımsız değişken değeri doğrudan geçirilir <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulaması. Aksi takdirde, `null` geçirilir <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulaması.  
+    - Diğer türlerdeki nesneler için, bir bileşik biçimlendirme yöntemi bir <xref:System.IFormatProvider> bağımsız değişkenle çağrılırsa, değeri doğrudan <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulamaya geçirilir. Aksi takdirde `null` , <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulamaya geçirilir.  
   
-4. Türün parametresiz `ToString` yöntemini geçersiz kılan <xref:System.Object.ToString?displayProperty=nameWithType> veya temel sınıfının davranışını devralan, çağrılır. Bu durumda, belirtilen biçim dizesi tarafından *formatString* bileşen biçim öğesinde varsa, göz ardı edilir.  
+4. Türün parametresiz `ToString` yöntemi, temel sınıfının davranışını geçersiz kılan <xref:System.Object.ToString?displayProperty=nameWithType> veya devralan, çağrılır. Bu durumda, biçim öğesinde *FormatString* bileşeni tarafından belirtilen biçim dizesi varsa, yok sayılır.  
   
  Üstteki adımlar gerçekleştirildikten sonra hizalama uygulanır.  
   
 ## <a name="code-examples"></a>Kod Örnekleri  
- Aşağıdaki örnek, gösterir ve başka bir nesnenin kullanılarak oluşturulmuş bir bileşik biçimlendirme kullanılarak oluşturulan iki dizeyi `ToString` yöntemi. İki biçimlendirme türü de eşdeğer sonuçlar üretir.  
+ Aşağıdaki örnekte, bileşik biçimlendirme kullanılarak oluşturulan bir dize ve bir nesnenin `ToString` yöntemi kullanılarak oluşturulan bir dize gösterilmektedir. İki biçimlendirme türü de eşdeğer sonuçlar üretir.  
   
  [!code-csharp[Formatting.Composite#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#3)]
  [!code-vb[Formatting.Composite#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#3)]  
   
- Geçerli günün Mayıs ayında bir Perşembe olduğunu varsayarsak, yukarıdaki örnekte her iki dize değeri `Thursday May` ABD İngilizce kültürüne.  
+ Geçerli günün Mayıs değerindeki bir Perşembe olduğunu varsayarsak, yukarıdaki örnekteki `Thursday May` her iki dizenin de değeri ABD 'de İngilizce kültür.  
   
- <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> aynı işlevselliği sunar <xref:System.String.Format%2A?displayProperty=nameWithType>. İki yöntem arasındaki tek fark <xref:System.String.Format%2A?displayProperty=nameWithType> sonucunu bir dize olarak döndürür ancak <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> yazma ile ilişkili çıkış akışına sonucu <xref:System.Console> nesne. Aşağıdaki örnekte <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> değerini biçimlendirmek için yöntemi `MyInt` bir para birimi değeri.  
+ <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>ile <xref:System.String.Format%2A?displayProperty=nameWithType>aynı işlevselliği sunar. İki yöntem <xref:System.String.Format%2A?displayProperty=nameWithType> arasındaki tek fark, sonucu bir dize olarak döndürirken <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> sonucu <xref:System.Console> nesneyle ilişkili çıkış akışına yazar. Aşağıdaki örnek, `MyInt` değerini bir <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> para birimi değerine biçimlendirmek için yöntemini kullanır.  
   
  [!code-csharp[Formatting.Composite#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#4)]
  [!code-vb[Formatting.Composite#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#4)]  
@@ -154,7 +154,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
  [!code-csharp[Formatting.Composite#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#5)]
  [!code-vb[Formatting.Composite#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#5)]  
   
- Aşağıdaki örnek biçimlendirmede hizalama kullanımını gösterir. Biçimlendirilen bağımsız değişkenler dikey çubuk karakterleri yerleştirilir (&#124;) sonuçta elde edilen hizalamayı vurgulamak için.  
+ Aşağıdaki örnek biçimlendirmede hizalama kullanımını gösterir. Biçimlendirilen bağımsız değişkenler, ortaya çıkan hizalamayı vurgulamak için dikey çubuk karakterleri&#124;() arasına yerleştirilir.  
   
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
