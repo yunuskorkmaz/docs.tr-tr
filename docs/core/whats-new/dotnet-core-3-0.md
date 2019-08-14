@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 07/25/2019
-ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 477aecec4381f26e505e88f7df38f68a85e8f70d
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733359"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012836"
 ---
 # <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3,0 'deki yenilikler (Önizleme 7)
 
@@ -159,7 +159,7 @@ Il bağlayıcı aracı hakkında daha fazla bilgi için [belgelere](https://aka.
 
 [Katmanlı derleme](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC), .NET Core 3,0 ile varsayılan olarak açık olur. Bu özellik, çalışma zamanının daha iyi performans almak için tam zamanında (JıT) derleyicisini daha kolay bir şekilde kullanmasına olanak sağlar.
 
-TC 'nin başlıca avantajı, kod üretmek için daha yavaş olan ve daha hızlı bir şekilde kod üretmek için daha hızlı bir şekilde Yöntemler (yeniden) etkinleştirmektir. Bu, bir uygulamanın, düzenli durum aracılığıyla başlangıçtan itibaren çeşitli yürütme aşamalarından geçerek performansını artırmaya yardımcı olur. Bu, her yöntemin tek bir şekilde (yüksek kaliteli katmanla aynı) derlenmesi ve bu durum, başlangıç performansı üzerinden kararlı bir duruma yol gösteren TC olmayan yaklaşımla karşıtdır.
+TC 'nin başlıca avantajı, daha düşük kaliteli, ancak daha hızlı bir katman veya daha yüksek kaliteli, ancak daha yavaş bir katman ile yöntemleri etkinleştirmektir (yeniden). Bu, bir uygulamanın, düzenli durum aracılığıyla başlangıçtan itibaren çeşitli yürütme aşamalarından geçerek performansını artırmaya yardımcı olur. Bu, her yöntemin tek bir şekilde (yüksek kaliteli katmanla aynı) derlenmesi ve bu durum, başlangıç performansı üzerinden kararlı bir duruma yol gösteren TC olmayan yaklaşımla karşıtdır.
 
 Hızlı JıT 'i etkinleştirmek için (Katman 0 ile derlenen kod), proje dosyanızda bu ayarı kullanın:
 
@@ -305,7 +305,7 @@ Sabit<xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType> listes
 
 Yüksek DPı modları hakkında daha fazla bilgi için bkz. [Windows 'Da yüksek DPI Masaüstü uygulama geliştirme](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).
 
-### <a name="ranges-and-indices"></a>Aralıklar ve dizinler
+## <a name="ranges-and-indices"></a>Aralıklar ve dizinler
 
 Yeni <xref:System.Index?displayProperty=nameWithType> tür dizin oluşturmak için kullanılabilir. Başlangıçtan itibaren bir veya sonuna kadar `int` olan önek `^` işleci (C#) ile bir tane oluşturabilirsiniz:
 
@@ -324,7 +324,7 @@ var slice = a[i1..i2]; // { 3, 4, 5 }
 
 Daha fazla bilgi için [aralıklar ve dizinler öğreticisine](../../csharp/tutorials/ranges-indexes.md)bakın.
 
-### <a name="async-streams"></a>Zaman uyumsuz akışlar
+## <a name="async-streams"></a>Zaman uyumsuz akışlar
 
 Türü yeni bir zaman uyumsuz <xref:System.Collections.Generic.IEnumerable%601>sürümüdür. <xref:System.Collections.Generic.IAsyncEnumerable%601> `yield return` Dil `await foreach` ,öğelerinitüketmekveöğelerioluşturmakiçinbunlarıkullanmakiçinkullanabilirsiniz.`IAsyncEnumerable<T>`
 
@@ -372,7 +372,7 @@ Bir tamsayı değeri alan `x * pow(2, n)` IEEEişleminekarşılıkgelir,etkinola
 `log2` IEEE işlemine karşılık gelen 2 tabanında logaritmasını döndürür. Yuvarlama hatasını en aza indirir.
 
 * <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-`fma` IEEE işlemine karşılık gelen bir fkullandınız çarpma eklemesi gerçekleştirir. Yani, tek bir işlem olarak,yuvarlamahatasınıenazaindirerek.`(x * y) + z` Örnek `FusedMultiplyAdd(1e308, 2.0, -1e308)` , döndürür `1e308`. Normal `(1e308 * 2.0) - 1e308` dönüşler `double.PositiveInfinity`.
+`fma` IEEE işlemine karşılık gelen bir fkullandınız çarpma eklemesi gerçekleştirir. Yani, tek bir işlem `(x * y) + z` olarak yapılır, böylece yuvarlama hatasını en aza indirir. Örnek `FusedMultiplyAdd(1e308, 2.0, -1e308)` , döndürür `1e308`. Normal `(1e308 * 2.0) - 1e308` dönüşler `double.PositiveInfinity`.
 
 * <xref:System.Math.CopySign(System.Double,System.Double)>\
 IEEE işlemine karşılık gelir, `x`, `y`ancak işaretini döndürür. `copySign`
@@ -403,17 +403,15 @@ Visual Studio Code tarafından oluşturulan [**Launch. JSON**](https://github.co
 
 Başlangıç noktası olarak kullanılabilecek `JsonDocument` ve ' `JsonElement` nin örnek kullanımı aşağıda verilmiştir:
 
-İşte Visual Studio Code tarafından C# oluşturulan [Launch. JSON](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) dosyası aracılığıyla okuma için 8,0 bir örnek:
-
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJson)]
+
+İşte Visual Studio Code tarafından C# oluşturulan [Launch. JSON](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) dosyası aracılığıyla okuma için 8,0 bir örnek:
 
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJsonCall)]
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
-<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType>, ve ' nin <xref:System.Text.Json.Utf8JsonReader> üzerine kurulmuştur ve <xref:System.Text.Json.Utf8JsonWriter> JSON belgeleri ve parçaları ile çalışırken hızlı bir düşük bellek serileştirme seçeneği sağlar.
-
-İnceleme: https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md bu makaleye yönelik bağlantı noktasına bir örnek için
+<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType>, ve ' nin <xref:System.Text.Json.Utf8JsonReader> üzerine kurulmuştur ve <xref:System.Text.Json.Utf8JsonWriter> JSON belgeleri ve parçaları ile çalışırken hızlı, düşük bellek serileştirme seçeneği sağlar.
 
 JSON için bir nesneyi serileştirmede bir örnek aşağıda verilmiştir:
 

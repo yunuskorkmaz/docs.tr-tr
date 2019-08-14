@@ -1,56 +1,59 @@
 ---
-title: 'Nasıl yapılır: Yeni bir tür (LINQ to XML) proje (C#)'
+title: 'Nasıl yapılır: Yeni bir tür projesi (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: 70053a2457005f6751075b33e8e49851d7127446
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2bb521d1445dcecdad8b9c7b28bed90e1e38c8e8
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486589"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012922"
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Nasıl yapılır: Yeni bir tür (LINQ to XML) proje (C#)
-Bu bölümdeki diğer örnekler, sonuç olarak döndüren sorgular gösterilmesini <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> , `string`, ve <xref:System.Collections.Generic.IEnumerable%601> , `int`. Bunlar ortak sonuç türleri, ancak her senaryo için uygun değildir. Çoğu durumda sorgularınızın döndürülecek isteyeceksiniz bir <xref:System.Collections.Generic.IEnumerable%601> başka bir tür.  
+# <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Nasıl yapılır: Yeni bir tür projesi (LINQ to XML) (C#)
+
+Bu bölümdeki diğer örneklerde <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.Generic.IEnumerable%601> `string` ,,<xref:System.Collections.Generic.IEnumerable%601> ve ' den itibaren sonuç`int`döndürensorgulargösterilmiştir. <xref:System.Xml.Linq.XElement> Bunlar yaygın sonuç türleridir, ancak her senaryo için uygun değildir. Çoğu durumda, sorgularınızın başka bir <xref:System.Collections.Generic.IEnumerable%601> türden birini döndürmesini isteyeceksiniz.
+
+## <a name="example"></a>Örnek
+
+Bu örnek, `select` yan tümcesindeki nesnelerin örneğini oluşturmayı gösterir. Kod ilk olarak bir Oluşturucu içeren yeni bir sınıf tanımlar ve ardından `select` deyimi, ifadenin yeni bir sınıf örneği olacak şekilde değiştirir.
+
+Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Tipik satın alma siparişi (LINQ to XML](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md)).
+
+```csharp
+class NameQty 
+{
+    public string name;
+    public int qty;
+    public NameQty(string n, int q)
+    {
+        name = n;
+        qty = q; 
+    }
+};
+
+class Program {
+    public static void Main() 
+    {
+        XElement po = XElement.Load("PurchaseOrder.xml");
   
-## <a name="example"></a>Örnek  
- Bu örnek nesneleri oluşturmak nasıl gösterir `select` yan tümcesi. Kod öncelikle bir oluşturucuya sahip yeni bir sınıf tanımlar ve sonra değiştirir `select` deyimi deyim yeni sınıfının yeni bir örneğini olmasını sağlayın.  
+        IEnumerable<NameQty> nqList =
+            from n in po.Descendants("Item")
+            select new NameQty(
+                    (string)n.Element("ProductName"),
+                    (int)n.Element("Quantity")
+                );
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Tipik satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
-  
-```csharp  
-class NameQty {  
-    public string name;  
-    public int qty;  
-    public NameQty(string n, int q)  
-    {  
-        name = n;  
-        qty = q;  
-    }  
-};  
-  
-class Program {  
-    public static void Main() {  
-        XElement po = XElement.Load("PurchaseOrder.xml");  
-  
-        IEnumerable<NameQty> nqList =  
-            from n in po.Descendants("Item")  
-            select new NameQty(  
-                    (string)n.Element("ProductName"),  
-                    (int)n.Element("Quantity")  
-                );  
-  
-        foreach (NameQty n in nqList)  
-            Console.WriteLine(n.name + ":" + n.qty);  
-    }  
-}  
-```  
-  
- Bu örnekte `M:System.Xml.Linq.XElement.Element` konu başlığı altında tanıtılan yöntemi [nasıl yapılır: Tek bir alt öğe (LINQ to XML) alma (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md). Tarafından döndürülen öğe değerlerini almak için atamalar da kullandığı `M:System.Xml.Linq.XElement.Element` yöntemi.  
-  
- Bu örnek aşağıdaki çıktıyı üretir:  
-  
-```  
-Lawnmower:1  
-Baby Monitor:2  
-```  
-  
+        foreach (NameQty n in nqList)
+            Console.WriteLine(n.name + ":" + n.qty);
+    }
+}
+```
+
+Bu örnekte, konusunda <xref:System.Xml.Linq.XContainer.Element%2A> açıklanan yöntemi [kullanılmıştır: Tek bir alt öğe al (LINQ to XML) (C#)](how-to-retrieve-a-single-child-element-linq-to-xml.md). Ayrıca, <xref:System.Xml.Linq.XContainer.Element%2A> yöntemi tarafından döndürülen öğelerin değerlerini almak için yayınları kullanır.  
+
+Bu örnek aşağıdaki çıktıyı üretir:
+
+```console
+Lawnmower:1
+Baby Monitor:2
+```

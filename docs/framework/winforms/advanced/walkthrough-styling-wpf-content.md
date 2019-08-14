@@ -6,69 +6,69 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: b689bb7299d541708db7ae786bff62a1007608e5
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 32ca9658ddf4ab6e8690f29797b7ac7b09df2ca7
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557885"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012954"
 ---
-# <a name="walkthrough-style-wpf-content"></a>İzlenecek yol: WPF içeriği için stil
+# <a name="walkthrough-style-wpf-content"></a>İzlenecek yol: Biçim WPF içeriği
 
-Bu izlenecek yol, bir Windows Form üzerinde barındırılan bir Windows Presentation Foundation (WPF) denetimine stil uygulamak nasıl gösterir.
+Bu izlenecek yol, bir Windows formunda barındırılan bir Windows Presentation Foundation (WPF) denetimine nasıl stil uygulanacağını gösterir.
 
- Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:
+ Bu kılavuzda, aşağıdaki görevleri gerçekleştirirsiniz:
 
 - Projeyi oluşturun.
 
-- WPF denetim türü oluşturun.
+- WPF denetim türünü oluşturun.
 
-- Bir stil uygulamak için WPF control.a
+- WPF denetimine bir stil uygulayın.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
+Bu yönergeyi tamamlamak için Visual Studio gerekir.
 
 ## <a name="create-the-project"></a>Projeyi oluşturma
 
-Visual Studio'yu açın ve Visual Basic veya Visual içinde yeni bir Windows Forms uygulaması projesi oluşturma C# adlı `StylingWpfContent`.
+Visual Studio 'Yu açın ve Visual Basic veya görsel C# adlı `StylingWpfContent`yeni bir Windows Forms uygulama projesi oluşturun.
 
 > [!NOTE]
-> WPF içeriği barındırma, yalnızca C# ve Visual Basic projelerinde desteklenir.
+> WPF içeriği barındırırken yalnızca C# ve Visual Basic projeleri desteklenir.
 
-## <a name="create-the-wpf-control-types"></a>WPF denetim türleri oluşturma
+## <a name="create-the-wpf-control-types"></a>WPF denetim türlerini oluşturma
 
-WPF denetim türü projeye ekledikten sonra içinde barındırabilirsiniz bir <xref:System.Windows.Forms.Integration.ElementHost> denetimi.
+Projeye bir WPF denetim türü ekledikten sonra, bunu bir <xref:System.Windows.Forms.Integration.ElementHost> denetimde barındırabilirsiniz.
 
-1. Yeni bir WPF ekleme <xref:System.Windows.Controls.UserControl> çözüme bir proje. Denetim türü için varsayılan adı kullanacak `UserControl1.xaml`. Daha fazla bilgi için [izlenecek yol: Yeni bir WPF içeriği Windows formlarında tasarım zamanında oluşturma](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
+1. Çözüme yeni bir WPF <xref:System.Windows.Controls.UserControl> projesi ekleyin. Denetim türü için varsayılan adı kullanın, `UserControl1.xaml`. Daha fazla bilgi için bkz [. İzlenecek yol: Tasarım zamanında](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)Windows Forms yeni WPF içeriği oluşturuluyor.
 
-2. Tasarım görünümünde emin `UserControl1` seçilir. Daha fazla bilgi için [nasıl yapılır: Seçin ve tasarım yüzeyine öğeleri Taşı](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).
+2. Tasarım görünümü ' de, ' `UserControl1` nin seçili olduğundan emin olun. Daha fazla bilgi için [nasıl yapılır: Tasarım Yüzeyi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))öğeleri seçin ve taşıyın.
 
-3. İçinde **özellikleri** penceresinde değerini ayarlayın <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerine `200`.
+3. **Özellikler** penceresinde, <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerinin değerini olarak `200`ayarlayın.
 
-4. Ekleme bir <xref:System.Windows.Controls.Button?displayProperty=nameWithType> denetimini <xref:System.Windows.Controls.UserControl> ve değerini ayarlama <xref:System.Windows.Controls.ContentControl.Content%2A> özelliğini **iptal**.
+4. Öğesine bir <xref:System.Windows.Controls.Button?displayProperty=nameWithType> denetim ekleyin <xref:System.Windows.Controls.ContentControl.Content%2A>ve özelliğin değerini iptal olarak ayarlayın. <xref:System.Windows.Controls.UserControl>
 
-5. İkinci bir ekleme <xref:System.Windows.Controls.Button?displayProperty=nameWithType> denetimini <xref:System.Windows.Controls.UserControl> ve değerini ayarlama <xref:System.Windows.Controls.ContentControl.Content%2A> özelliğini **Tamam**.
+5. Öğesine ikinci <xref:System.Windows.Controls.Button?displayProperty=nameWithType> bir denetim ekleyin <xref:System.Windows.Controls.ContentControl.Content%2A>ve özelliğinin değerini Tamam olarak ayarlayın <xref:System.Windows.Controls.UserControl> .
 
 6. Projeyi oluşturun.
 
-## <a name="apply-a-style-to-a-wpf-control"></a>WPF denetime stil uygulama
+## <a name="apply-a-style-to-a-wpf-control"></a>WPF denetimine stil uygulama
 
-Farklı görünümünü ve davranışını değiştirmek için bir WPF denetimi stil uygulayabilirsiniz.
+Görünümünü ve davranışını değiştirmek için WPF denetimine farklı stil uygulayabilirsiniz.
 
-1. Açık `Form1` Windows Forms Tasarımcısı'nda.
+1. Windows Form Tasarımcısı `Form1` açın.
 
-1. İçinde **araç kutusu**, çift `UserControl1` bir örneğini oluşturmak için `UserControl1` form üzerinde.
+1. **Araç kutusunda**, form `UserControl1` üzerinde bir örnek `UserControl1` oluşturmak için çift tıklayın.
 
-     Örneği `UserControl1` yeni bir barındırılan <xref:System.Windows.Forms.Integration.ElementHost> adlı Denetim `elementHost1`.
+     Bir örneği `UserControl1` adlı <xref:System.Windows.Forms.Integration.ElementHost> Yeni`elementHost1`bir denetimde barındırılır.
 
-1. Akıllı etiket panelinde `elementHost1`, tıklayın **barındırılan içerik Düzenle** aşağı açılan listeden.
+1. İçin `elementHost1`akıllı etiket panelinde, açılan listeden **barındırılan içeriği Düzenle** ' ye tıklayın.
 
-     `UserControl1` açılır [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
+     `UserControl1`içinde [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]açılır.
 
-1. XAML Görünümü'nde, aşağıdaki XAML sonra Ekle `<UserControl>` etiketiyle.
+1. Xaml görünümünde, `<UserControl>` açılış etiketinden sonra aşağıdaki xaml 'yi ekleyin.
 
-     Bu XAML gradyan karşıt gradyan kenarlıklı oluşturur. Denetim tıklandığında gradyanlar basılan düğme görünümünü oluşturmak için değiştirilir. Daha fazla bilgi için [stil ve şablon oluşturma](../../wpf/controls/styling-and-templating.md).
+     Bu XAML, çakışan gradyan kenarlığı olan bir gradyan oluşturur. Denetime tıklandığında degradeler, basılan düğme görünümü oluşturacak şekilde değiştirilir. Daha fazla bilgi için bkz. [Stil oluşturma ve şablon](../../wpf/controls/styling-and-templating.md)oluşturma.
 
    ```xaml
    <UserControl.Resources>
@@ -118,13 +118,13 @@ Farklı görünümünü ve davranışını değiştirmek için bir WPF denetimi 
    </UserControl.Resources>
    ```
 
-1. Uygulama `SimpleButton` aşağıdaki XAML içinde ekleyerek iptal düğmesi için önceki adımda tanımlanan stil `<Button>` İptal düğmesinin etiketi.
+1. Aşağıdaki XAML 'yi İptal düğmesinin `<Button>` etiketine ekleyerek, önceki adımda tanımlanan stili`SimpleButton` iptal düğmesine uygulayın.
 
    ```xaml
    Style="{StaticResource SimpleButton}
    ```
 
-   Düğme bildirimi, aşağıdaki XAML benzeyecektir:
+   Düğme bildirimidir aşağıdaki XAML 'ye benzeyecektir:
 
    ```xaml
    <Button Height="23" Margin="41,52,98,0" Name="button1" VerticalAlignment="Top"
@@ -133,13 +133,13 @@ Farklı görünümünü ve davranışını değiştirmek için bir WPF denetimi 
 
 1. Projeyi oluşturun.
 
-1. Açık `Form1` Windows Forms Tasarımcısı'nda.
+1. Windows Form Tasarımcısı `Form1` açın.
 
-1. Düğme denetimine yeni stil uygulanır.
+1. Yeni stil düğme denetimine uygulanır.
 
-1. Gelen **hata ayıklama** menüsünde **hata ayıklamayı Başlat** uygulamayı çalıştırın.
+1. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat** ' ı seçerek uygulamayı çalıştırın.
 
-1. Tamam ve İptal düğmeleri tıklatabilir ve farkları görüntüleyin.
+1. Tamam ve Iptal düğmelerini tıklatın ve farkları görüntüleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

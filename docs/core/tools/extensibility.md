@@ -3,12 +3,12 @@ title: .NET Core CLI genişletilebilirlik modeli
 description: Komut satırı arabirimi (CLı) araçlarını nasıl genişletebileceğinizi öğrenin.
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 784eb50dfdbc0f88050a9f727ddbf53db34d3209
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 400d47f9d5bca53a23d09eb4eb94519f9824b473
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331011"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012982"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI araçları genişletilebilirlik modeli
 
@@ -44,7 +44,7 @@ Bu araçların kullanılması için, kullanmak istediğiniz her `<DotNetCliToolR
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Yürütülmesi için projenin yapı çıkışını yüklemesi gereken araçlar için, genellikle proje dosyasındaki normal bağımlılıklar altında listelenen başka bir bağımlılık vardır. CLı, yapı altyapısı olarak MSBuild kullandığından, bu aracın bu bölümlerinin özel MSBuild [hedefleri](/visualstudio/msbuild/msbuild-targets) ve [görevleri](/visualstudio/msbuild/msbuild-tasks)olarak yazılması önerilir, çünkü bu, genel derleme sürecinde bir bölüm alabilir. Ayrıca, çıkış dosyalarının konumu, oluşturulmakta olan geçerli yapılandırma vb. gibi, yapı aracılığıyla üretilmiş tüm ve tüm verileri kolayca alabilirler. Tüm bu bilgiler, herhangi bir hedeften okunabilecek bir MSBuild özellikleri kümesi haline gelir. Bu belgede daha sonra NuGet kullanarak özel bir hedef ekleme hakkında bilgi alabilirsiniz.
+Yürütülmesi için projenin yapı çıkışını yüklemesi gereken araçlar için, genellikle proje dosyasındaki normal bağımlılıklar altında listelenen başka bir bağımlılık vardır. CLı, yapı altyapısı olarak MSBuild kullandığından, bu aracın bu bölümlerinin özel MSBuild [hedefleri](/visualstudio/msbuild/msbuild-targets) ve [görevleri](/visualstudio/msbuild/msbuild-tasks)olarak yazılması önerilir, çünkü bu, genel derleme sürecinde bir bölüm alabilir. Ayrıca, çıkış dosyalarının konumu, oluşturulmakta olan geçerli yapılandırma vb. gibi, yapı aracılığıyla üretilen tüm ve tüm verileri kolayca alabilirler. Tüm bu bilgiler, herhangi bir hedeften okunabilecek bir MSBuild özellikleri kümesi haline gelir. Bu belgede daha sonra NuGet kullanarak özel bir hedef ekleme hakkında bilgi alabilirsiniz.
 
 Basit bir projeye basit bir araç öncesi araç ekleme örneğini incelim. Belirtilen API için NuGet paketlerinde `dotnet-api-search` arama yapmanıza olanak sağlayan adlı örnek bir komut verildiğinde, bu aracı kullanan bir konsol uygulamasının proje dosyası aşağıda verilmiştir:
 
@@ -79,7 +79,8 @@ Bu tür araçların, kendisini kullanan projenin bağımlılık grafiğinden tam
 Aynı depoda [kullanılan araçların uygulanmasını](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) da görebilirsiniz.
 
 ## <a name="custom-targets"></a>Özel hedefler
-NuGet [özel MSBuild hedeflerini ve props dosyalarını paketleme](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)özelliğine sahiptir. MSBuild 'i kullanmak için .NET Core CLI araçları taşınmasıyla aynı genişletilebilirlik mekanizması artık .NET Core projeleri için geçerlidir. Yapı işlemini genişletmek istediğinizde veya oluşturulan dosyalar gibi yapı işlemindeki yapıtlardan herhangi birine erişmek istediğinizde veya yapının çağrıldığı yapılandırmayı incelemek istediğinizde, bu tür bir genişletilebilirlik kullanın benzerlerini.
+
+NuGet [özel MSBuild hedeflerini ve props dosyalarını paketleme](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)özelliğine sahiptir. MSBuild 'i kullanmak için .NET Core CLI araçları taşınmasıyla aynı genişletilebilirlik mekanizması artık .NET Core projeleri için geçerlidir. Yapı işlemini genişletmek istediğinizde veya oluşturulan dosyalar gibi yapı işlemindeki yapıtlardan herhangi birine erişmek istediğinizde veya yapının çağrıldığı yapılandırmayı incelemek istediğinizde, bu tür bir genişletilebilirlik kullanın vb.
 
 Aşağıdaki örnekte, `csproj` sözdizimini kullanarak hedefin proje dosyasını görebilirsiniz. Bu, [`dotnet pack`](dotnet-pack.md) komuta ne paketlenecek, hedef dosyaların yanı sıra derlemeleri paketin içindeki *Yapı* klasörüne yerleştirmekten size bildirir. `Label` `<ItemGroup>` Özelliği olarak`dotnet pack instructions`ayarlanmış olan öğeye ve bunun altında tanımlanan hedefe dikkat edin.
 
