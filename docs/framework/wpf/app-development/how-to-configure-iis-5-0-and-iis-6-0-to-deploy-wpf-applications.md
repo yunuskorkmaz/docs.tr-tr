@@ -13,57 +13,57 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: 6fa00c4ced8c05d056703560e5740689c6dcfe39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1e58aef6d02b6cf05a126b6afd25ab2a6004002
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981461"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972287"
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Nasıl yapılır: WPF Uygulamalarını Dağıtmak için IIS 5.0 ve IIS 6.0'ı Yapılandırma
 
-Dağıtabileceğiniz bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygun ile yapılandırılmış olduğu sürece uygulama çoğu Web sunucularından [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] türleri. Varsayılan olarak, [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] ile yapılandırılmıştır [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] türleri, ancak [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] ve [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] değil.
+Bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamayı, uygun çok amaçlı Internet posta uzantıları (MIME) türleriyle yapılandırıldığı sürece çoğu Web sunucusundan dağıtabilirsiniz. Varsayılan olarak, [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] bu MIME türleriyle yapılandırılır, [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] ancak [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] değildir.
 
-Bu konu nasıl yapılandırılacağını açıklar [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] ve [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] dağıtmak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.
+Bu konuda, uygulamaların nasıl yapılandırılacağı [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] ve [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] dağıtılacağı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] açıklanmaktadır.
 
 > [!NOTE]
-> Denetleyebilirsiniz *UserAgent* bir sistemi .NET Framework'ün yüklü olup olmadığını belirlemek için kayıt defterinde dize. Ayrıntılar ve inceleyen bir betik *UserAgent* .NET Framework sistem üzerinde yüklü olup olmadığını belirlemek için bkz: dize [algılamak yüklü olup olmadığı .NET Framework 3.0](how-to-detect-whether-the-net-framework-3-0-is-installed.md).
+> Bir sistemin .NET Framework yüklü olup olmadığını anlamak için kayıt defterindeki *UserAgent* dizesini kontrol edebilirsiniz. .NET Framework bir sistemde yüklü olup olmadığını belirlemek üzere *UserAgent* dizesini inceleyen Ayrıntılar ve bir betik için, bkz. [.NET Framework 3,0 'Nin yüklü olup olmadığını algılama](how-to-detect-whether-the-net-framework-3-0-is-installed.md).
 
 <a name="content_expiration"></a>
 
-## <a name="adjust-the-content-expiration-setting"></a>İçerik sona erme ayarını yapma
+## <a name="adjust-the-content-expiration-setting"></a>Içerik süre sonu ayarını ayarla
 
-1 dakika içerik sona erme ayarını değiştirmeniz gerekir. Aşağıdaki yordamı ile bunun nasıl yapılacağını açıklar [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)].
+İçerik süre sonu ayarını 1 dakika olarak ayarlamanız gerekir. Aşağıdaki yordamda bunun [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]nasıl yapılacağı özetlenmektedir.
 
-1. Tıklayın **Başlat** menüsünde **Yönetimsel Araçlar**, tıklatıp **Internet Information Services (IIS) Yöneticisi'ni**. Bu uygulama "% SystemRoot%\system32\inetsrv\iis.msc" ile komut satırından da başlatabilirsiniz.
+1. **Başlat** menüsüne tıklayın, **Yönetim Araçları**' nın üzerine gelın ve **Internet Information Services (IIS) Yöneticisi**' ne tıklayın. Bu uygulamayı komut satırından "%SystemRoot%\system32\inetsrv\iis.msc" ile de başlatabilirsiniz.
 
-2. Genişletin [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)] bulana kadar ağaç **varsayılan Web sitesi** düğümü.
+2. **Varsayılan Web sitesi** düğümünü bulana kadar ağacıgenişletin.[!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]
 
-3. Sağ **varsayılan Web sitesi** seçip **özellikleri** bağlam menüsünden.
+3. **Varsayılan Web sitesi** ' ne sağ tıklayın ve bağlam menüsünden **Özellikler** ' i seçin.
 
-4. Seçin **HTTP üstbilgileri** sekmesi ve "İçerik sona erme tarihini etkinleştir"'a tıklayın.
+4. **Http üstbilgileri** sekmesini seçin ve "Içerik süre sonunu etkinleştir" e tıklayın.
 
-5. 1 dakika sonra süresi dolacak şekilde içeriği ayarlayın.
+5. İçeriği 1 dakika sonra dolacak şekilde ayarlayın.
 
 <a name="register_mime_types"></a>
 
-## <a name="register-mime-types-and-file-extensions"></a>Kayıt MIME türleri ve dosya uzantıları
+## <a name="register-mime-types-and-file-extensions"></a>MIME türlerini ve dosya uzantılarını Kaydet
 
-Birkaç kaydetmelisiniz [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] türleri ve dosya uzantıları böylece İstemci sisteminde tarayıcı doğru işleyici yükleyebilir. Aşağıdaki türleri eklemeniz gerekir:
+İstemci sistemindeki tarayıcının doğru işleyiciyi yükleyebilmesi için birkaç MIME türünü ve dosya uzantısını kaydetmeniz gerekir. Aşağıdaki türleri eklemeniz gerekir:
 
 |Dahili numara|MIME türü|
 |---------------|---------------|
-|.manifest|Uygulama/bildirimi|
-|.xaml|Uygulama/xaml + xml şeklindedir|
-|.Application|Application/x-ms-uygulama|
-|.xbap|Application/x-ms-xbap|
-|.deploy|Uygulama/octet-akış|
-|.XPS|Uygulama/vnd.ms-xpsdocument|
+|. manifest|uygulama/bildirim|
+|. xaml|uygulama/xaml + xml|
+|. Application|uygulama/x-MS-uygulama|
+|. xbap|uygulama/x-MS-XBAP|
+|. deploy|Uygulama/sekizli-akış|
+|. XPS|application/vnd. MS-XpsDocument|
 
 > [!NOTE]
-> Kaydedilecek gerekmez [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] türleri veya istemci sistemlerine dosya uzantıları. Microsoft .NET Framework'ı yüklediğinizde otomatik olarak kaydedilir.
+> İstemci sistemlerine MIME türlerini veya dosya uzantılarını kaydetmeniz gerekmez. Microsoft .NET Framework 'Ü yüklediğinizde otomatik olarak kaydedilir.
 
-Aşağıdaki Microsoft Visual Basic Scripting Edition (VBScript) örnek otomatik olarak gerekli ekler [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] türlerine [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]. Betiği kullanmak için kodu sunucunuzda .vbs dosyasına kopyalayın. Ardından, dosyayı komut satırından çalıştırma ya da dosyasına çift betiği çalıştırmak [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].
+Aşağıdaki Microsoft Visual Basic Scripting Edition (VBScript) örneği, gerekli MIME türlerini otomatik olarak öğesine [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]ekler. Betiği kullanmak için, kodu sunucunuzdaki bir. vbs dosyasına kopyalayın. Ardından, komut satırından dosyasını çalıştırarak veya içindeki [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)]dosyasına çift tıklayarak betiği çalıştırın.
 
 ```vb
 ' This script adds the necessary Windows Presentation Foundation MIME types
@@ -126,9 +126,9 @@ End Sub
 ```
 
 > [!NOTE]
-> Bu betik, birden çok kez çalıştıran birden çok oluşturur [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] eşleme girişi [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] veya [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metatabanı.
+> Bu betiği birden çok kez çalıştırmak, [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] veya [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metatabanında birden çok MIME eşleme girişi oluşturur.
 
-Bu betiği çalıştırdıktan sonra ek göremeyebilirsiniz [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] gelen türleri [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] veya [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] [!INCLUDE[TLA#tla_mmc](../../../../includes/tlasharptla-mmc-md.md)]. Ancak, bunlar [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] türleri eklenmiştir [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] veya [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metatabanı. Aşağıdaki betiği tüm görüntüler [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] türlerini [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] veya [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metatabanı.
+Bu betiği çalıştırdıktan sonra, [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] veya [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] [!INCLUDE[TLA#tla_mmc](../../../../includes/tlasharptla-mmc-md.md)]' den ek MIME türleri göremeyebilirsiniz. Ancak, bu MIME türleri [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] veya [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metatabanına eklenmiştir. Aşağıdaki betik, [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] veya [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] metatabanındaki tüm MIME türlerini görüntüler.
 
 ```vb
 ' This script lists the MIME types for an IIS Server.
@@ -147,7 +147,7 @@ For Each mimeMap In allMimeMaps
 Next
 ```
 
-Betik olarak Kaydet bir `.vbs` dosya (örneğin, `DiscoverIISMimeTypes.vbs`) ve aşağıdaki komutu kullanarak komut isteminden çalıştırın:
+Betiği bir `.vbs` dosya olarak kaydedin (örneğin, `DiscoverIISMimeTypes.vbs`) ve aşağıdaki komutu kullanarak komut isteminden çalıştırın:
 
 ```console
 cscript DiscoverIISMimeTypes.vbs

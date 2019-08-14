@@ -1,6 +1,6 @@
 ---
-title: Üye erişim işleçleri - C# başvurusu
-description: Hakkında bilgi edinin C# tür üyelerine erişmek için kullanabileceğiniz işleçler.
+title: Üye erişim işleçleri- C# başvuru
+description: Tür üyelerine C# erişmek için kullanabileceğiniz işleçler hakkında bilgi edinin.
 ms.date: 05/09/2019
 author: pkulikov
 f1_keywords:
@@ -25,105 +25,105 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 4f1d79497f255f52a87dce44f1b5b8709adfada7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: c40fab6dd480f31e53d2ce2487149c02b463bd87
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401482"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971219"
 ---
-# <a name="member-access-operators-c-reference"></a>Üye erişim işleçleri (C# Başvurusu)
+# <a name="member-access-operators-c-reference"></a>Üye erişim işleçleri (C# başvuru)
 
-Bir tür üyesi erişirken aşağıdaki işleçleri kullanabilirsiniz:
+Bir tür üyesine eriştiğinizde aşağıdaki işleçleri kullanabilirsiniz:
 
-- [`.` (üye erişimi) ](#member-access-operator-): bir ad alanı veya tür üyesi erişmek için
-- [`[]` (diziyi öğe veya dizin oluşturucu erişimi) ](#indexer-operator-): bir dizi öğesine ya da türü bir dizin oluşturucu erişmek için
-- [`?.` ve `?[]` (null koşullu işleçleri)](#null-conditional-operators--and-): yalnızca bir işlenen null olmayan ise bir üyesi veya öğenin erişim işlemi gerçekleştirmek için
-- [`()` (çağırma) ](#invocation-operator-): erişilen bir yöntemi çağırabilir veya bir temsilci çağırmak için
+- (üye erişimi): bir ad alanının veya türün üyesine erişmek için [ `.` ](#member-access-operator-)
+- [(dizi öğesi veya Dizin Oluşturucu erişimi): bir dizi öğesine veya bir tür dizin oluşturucusuna erişmek için `[]` ](#indexer-operator-)
+- [ve (nullkoşulluişleçler):yalnızcabirişlenennulldeğilseüyeveyaöğeerişimişlemigerçekleştirmek`?[]`için `?.` ](#null-conditional-operators--and-)
+- (çağırma): erişilen bir yöntemi çağırmak veya bir temsilciyi çağırmak için [ `()` ](#invocation-operator-)
 
-## <a name="member-access-operator-"></a>Üye erişimi işleci.
+## <a name="member-access-operator-"></a>Üye erişim işleci.
 
-Kullandığınız `.` aşağıdaki örneklerde gösterildiği gibi bir ad alanı veya tür, üye erişim belirteci:
+Aşağıdaki örneklerde gösterildiği `.` gibi, belirteci, bir ad uzayı veya bir tür üyesine erişmek için kullanabilirsiniz:
 
-- Kullanım `.` iç içe geçmiş ad alanı içinde bir ad alanı, aşağıdaki örnek olarak erişmek için bir [ `using` yönergesi](../keywords/using-directive.md) gösterir:
+- Aşağıdaki `.` [bir yönerge`using` ](../keywords/using-directive.md) örneğinde gösterildiği gibi, bir ad alanı içinde iç içe geçmiş bir ad alanına erişmek için kullanın:
 
   [!code-csharp[nested namespaces](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NestedNamespace)]
 
-- Kullanım `.` forma bir *tam adı* aşağıdaki kodun gösterdiği gibi bir ad alanı içinde bir tür erişmek için:
+- Aşağıdaki `.` kodun gösterdiği gibi, bir ad alanı içindeki bir türe erişmek üzere *nitelenmiş bir ad* oluşturmak için kullanın:
 
   [!code-csharp[qualified name](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#QualifiedName)]
 
-  Kullanan bir [ `using` yönergesi](../keywords/using-directive.md) nitelenmiş adlar kullanımı isteğe bağlı yapmak için.
+  Nitelenmiş adların kullanımını isteğe bağlı yapmak için bir [ `using` yönergesi](../keywords/using-directive.md) kullanın.
 
-- Kullanım `.` erişimi [üyelerini türü](../../programming-guide/classes-and-structs/index.md#members), statik ve statik olmayan, aşağıdaki kodun gösterdiği olarak:
+- Aşağıdaki `.` kodda gösterildiği gibi, [tür üyelerine](../../programming-guide/classes-and-structs/index.md#members), statik ve statik olmayan erişim için kullanın:
 
   [!code-csharp-interactive[type members](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#TypeMemberAccess)]
 
-Ayrıca `.` erişmek için bir [genişletme yöntemi](../../programming-guide/classes-and-structs/extension-methods.md).
+Ayrıca, bir `.` [genişletme yöntemine](../../programming-guide/classes-and-structs/extension-methods.md)erişmek için kullanabilirsiniz.
 
-## <a name="indexer-operator-"></a>Dizin Oluşturucu [] işleci
+## <a name="indexer-operator-"></a>Indexer işleci []
 
-Köşeli ayraçlar `[]`, genellikle dizi, dizin oluşturucu veya işaretçiyi öğe erişimi için kullanılır.
+Köşeli parantezler `[]`, genellikle Array, Indexer veya pointer öğesi erişimi için kullanılır.
 
 ### <a name="array-access"></a>Dizi erişimi
 
-Aşağıdaki örnekte, dizi öğelerinin nasıl erişileceğini gösteren:
+Aşağıdaki örnek, dizi öğelerine nasıl erişileceğini göstermektedir:
 
 [!code-csharp-interactive[array access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Arrays)]
 
-Bir dizi dizini karşılık gelen boyutuna bir dizinin sınırları dışında ise bir <xref:System.IndexOutOfRangeException> oluşturulur.
+Bir dizi dizini, bir dizi karşılık gelen boyutun sınırları dışındaysa, bir <xref:System.IndexOutOfRangeException> oluşturulur.
 
-Yukarıdaki örnekte gösterildiği gibi bir dizi türü bildirin veya bir dizi örneği de köşeli ayraç kullanabilirsiniz.
+Yukarıdaki örnekte gösterildiği gibi, bir dizi türü bildirdiğinizde veya bir dizi örneği örneklediğinizde köşeli parantezleri de kullanabilirsiniz.
 
 Diziler hakkında daha fazla bilgi için bkz. [diziler](../../programming-guide/arrays/index.md).
 
-### <a name="indexer-access"></a>Dizinleyici erişimi
+### <a name="indexer-access"></a>Dizin Oluşturucu erişimi
 
-Aşağıdaki örnek, .NET kullanır <xref:System.Collections.Generic.Dictionary%602> dizinleyici erişimi göstermek için türü:
+Aşağıdaki örnek, Dizin Oluşturucu <xref:System.Collections.Generic.Dictionary%602> erişimini göstermek için .NET türünü kullanır:
 
 [!code-csharp-interactive[indexer access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
 
-Dizin oluşturucular dizi dizini oluşturma olarak benzer şekilde, kullanıcı tanımlı bir tür dizin örneğini olanak tanır. Dizin oluşturucu bağımsız değişken tamsayı olması gerekir, dizi dizinleri, herhangi bir türde olması bildirilir.
+Dizin oluşturucular, Kullanıcı tanımlı bir türün örneklerinin, dizi dizini oluşturma gibi benzer şekilde dizinlemesini sağlar. Tamsayı olması gereken dizi dizinlerinin aksine, Dizin Oluşturucu bağımsız değişkenleri herhangi bir türde olacak şekilde bildirilmelidir.
 
-Dizin oluşturucular hakkında daha fazla bilgi için bkz: [dizin oluşturucular](../../programming-guide/indexers/index.md).
+Dizin oluşturucular hakkında daha fazla bilgi için bkz. [Dizin oluşturucular](../../programming-guide/indexers/index.md).
 
-### <a name="other-usages-of-"></a>[] İfadesinin diğer kullanımları
+### <a name="other-usages-of-"></a>[] Diğer kullanımları
 
-İşaretçi öğe erişimi hakkında daha fazla bilgi için bkz [işaretçi öğesine erişme [] işleci](pointer-related-operators.md#pointer-element-access-operator-) bölümünü [işaretçi işleçleri ilgili](pointer-related-operators.md) makalesi.
+İşaretçi öğesi erişimi hakkında daha fazla bilgi için, [işaretçi ilgili işleçler](pointer-related-operators.md) makalesinin [işaretçi öğesi erişim işleci []](pointer-related-operators.md#pointer-element-access-operator-) bölümüne bakın.
 
-Köşeli ayraçlar belirtmek için de [öznitelikleri](../../programming-guide/concepts/attributes/index.md):
+Ayrıca, [öznitelikleri](../../programming-guide/concepts/attributes/index.md)belirtmek için köşeli parantezleri de kullanabilirsiniz:
 
 ```csharp
 [System.Diagnostics.Conditional("DEBUG")]
 void TraceMethod() {}
 ```
 
-## <a name="null-conditional-operators--and-"></a>Null koşullu işleçleri? ve? []
+## <a name="null-conditional-operators--and-"></a>Null koşullu işleçler?. '? []
 
-Kullanılabilir C# 6 ve üzeri, bir null koşullu işleci bir üye erişimi geçerlidir `?.`, ya da öğe erişimi, `?[]`, işlem için yalnızca işlenen null olmayan olarak değerlendirilirse, işleneni. İşlenen değerlendirilirse `null`, işlecin sonucu olan `null`. Null koşullu üye erişimi işleci `?.` olarak da bilinen Elvis işlecidir.
+C# 6 ve sonraki sürümlerde kullanılabilir, null koşullu bir operatör, yalnızca o işlenen null olmayan `?.`bir değer olarak değerlendiriliyorsa `?[]`, bir üye erişimi, veya öğe erişimi, öğesini işleneninde uygular. İşlenen olarak `null`değerlendirilirse, işleci uygulamanın sonucu olur `null`. Null koşullu üye erişim işleci `?.` ELVIS işleci olarak da bilinir.
 
-Null koşullu işleçleri short-circuiting. Diğer bir deyişle, işlemler zinciri tek bir işlemde koşullu üyesi veya bir öğenin erişim verir `null`, rest zincirinin yürütülmez. Aşağıdaki örnekte, `B` uygulanamıyorsa değerlendirilmez `A` değerlendiren `null` ve `C` uygulanamıyorsa değerlendirilmez `A` veya `B` değerlendiren `null`:
+Null koşullu işleçler kısa devre dışı. Diğer bir deyişle, bir koşullu üye veya öğe erişim işlemleri zincirindeki bir işlem dönerse `null`, zincir geri kalanı yürütülmez. `B` Aşağıdaki örnekte, `A` olarak `null` değerlendirilirse ve`C`değerlendirmesi `A` durumundahesaplanmaz:`null` `B`
 
 ```csharp
 A?.B?.Do(C);
 A?.B?[C];
 ```
 
-Aşağıdaki örnek, kullanımını gösterir. `?.` ve `?[]` işleçleri:
+Aşağıdaki örnek, `?.` ve `?[]` işleçlerinin kullanımını gösterir:
 
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
-Yukarıdaki örnekte ayrıca kullanımını gösterir [null birleşim işleci](null-coalescing-operator.md). Null koşullu işleminin sonucu olması durumunda değerlendirmek için alternatif bir ifade sağlamak için null birleşim işleci kullanabilir `null`.
+Yukarıdaki örnek, [null birleşim işlecinin](null-coalescing-operator.md)kullanımını da gösterir. Null-koşullu işlemin `null`sonucu olarak değerlendirmek için alternatif bir ifade sağlamak üzere null birleşim işlecini kullanabilirsiniz.
 
-### <a name="thread-safe-delegate-invocation"></a>İş parçacığı açısından güvenli temsilci çağrısı
+### <a name="thread-safe-delegate-invocation"></a>İş parçacığı açısından güvenli temsilci çağırma
 
-Kullanım `?.` işleci, null olmayan bir temsilci olup olmadığını kontrol edin ve bir iş parçacığı açısından güvenli şekilde çağırmak için (örneğin, [bir olayı](../../../standard/events/how-to-raise-and-consume-events.md)) aşağıdaki kodda gösterildiği gibi:
+Bir temsilcinin null olup olmadığını denetlemek ve iş parçacığı güvenli bir şekilde (örneğin, [bir olay](../../../standard/events/how-to-raise-and-consume-events.md)yükselttiğinizde) aşağıdaki kodun gösterdiği gibi, bir temsilciyi çağırmak için işlecinikullanın:`?.`
 
 ```csharp
 PropertyChanged?.Invoke(…)
 ```
 
-Kod içinde kullanacağınız aşağıdaki koda denk olduğuna C# 5 veya daha önceki:
+Bu kod, C# 5 veya daha önceki sürümlerde kullanacağınız aşağıdaki koda eşdeğerdir:
 
 ```csharp
 var handler = this.PropertyChanged;
@@ -133,37 +133,38 @@ if (handler != null)
 }
 ```
 
-## <a name="invocation-operator-"></a>Çağırma işleci (.)
+## <a name="invocation-operator-"></a>Çağırma işleci ()
 
-Parantez kullanın `()`çağırmak için bir [yöntemi](../../programming-guide/classes-and-structs/methods.md) veya çağırma bir [temsilci](../../programming-guide/delegates/index.md).
+Bir [yöntemi](../../programming-guide/classes-and-structs/methods.md) çağırmak `()`veya bir [temsilciyi](../../programming-guide/delegates/index.md)çağırmak için parantezleri kullanın.
 
-Aşağıdaki örnek, olan veya olmayan bağımsız değişkenler, bir yöntem çağrısı ve temsilci çağırma gösterilmektedir:
+Aşağıdaki örnek, bağımsız değişkenler içeren veya olmayan bir yöntemin nasıl çağrılacağını gösterir ve bir temsilciyi çağırır:
 
 [!code-csharp-interactive[invocation with ()](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
 
-Çağırdığınızda parantez de kullanmak bir [Oluşturucusu](../../programming-guide/classes-and-structs/constructors.md) ile [ `new` ](new-operator.md) işleci.
+[`new`](new-operator.md) İşleci ile bir [Oluşturucu](../../programming-guide/classes-and-structs/constructors.md) çağırdığınızda parantezleri de kullanabilirsiniz.
 
-### <a name="other-usages-of-"></a>()'nin diğer kullanımları
+### <a name="other-usages-of-"></a>() Diğer kullanımları
 
-Ayrıca bir ifade işlemlerinde değerlendirilecek sırayı belirtmek için parantez kullanın. Daha fazla bilgi için [ayraç ekleme](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) bölümünü [işleçleri](../../programming-guide/statements-expressions-operators/operators.md) makalesi. İşleçler, öncelik düzeyine göre sıralı listesi için bkz. [ C# işleçleri](index.md).
+Ayrıca, bir ifadede işlemlerin değerlendirileceği sırayı belirtmek için parantezleri de kullanabilirsiniz. Daha fazla bilgi için [işleçler](../../programming-guide/statements-expressions-operators/operators.md) makalesinin [parantezler ekleme](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) bölümüne bakın. Öncelik düzeyine göre sıralanan işleçlerin listesi için bkz [ C# . işleçler](index.md).
 
-[Cast ifadeleri](type-testing-and-conversion-operators.md#cast-operator-), açık tür dönüştürmeleri gerçekleştirmek, aynı zamanda parantez kullanın.
+Açık tür dönüştürmeleri gerçekleştiren [atama ifadeleri](type-testing-and-conversion-operators.md#cast-operator-), parantez de kullanır.
 
-## <a name="operator-overloadability"></a>İşleç overloadability
+## <a name="operator-overloadability"></a>Operatör overloadability
 
-`.` Ve `()` işleçleri aşırı yüklenemez. `[]` İşleci aşırı yüklenebilir olmayan bir işleç ayrıca değerlendirilir. Kullanım [dizin oluşturucular](../../programming-guide/indexers/index.md) için kullanıcı tanımlı türler ile dizin oluşturmayı destekler.
+`.` Ve`()` işleçleri aşırı yüklenemez. İşleci `[]` , aşırı yüklenebilir olmayan bir işleç olarak kabul edilir. Kullanıcı tanımlı türlerle Dizin oluşturmayı desteklemek için [Dizin oluşturucular](../../programming-guide/indexers/index.md) kullanın.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için aşağıdaki bölümlere bakın [ C# dil belirtimi](~/_csharplang/spec/introduction.md):
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
 
 - [Üye erişimi](~/_csharplang/spec/expressions.md#member-access)
 - [Öğe erişimi](~/_csharplang/spec/expressions.md#element-access)
-- [Null koşullu işleci](~/_csharplang/spec/expressions.md#null-conditional-operator)
-- [Çağrı ifadeleri](~/_csharplang/spec/expressions.md#invocation-expressions)
+- [Null-koşullu işleç](~/_csharplang/spec/expressions.md#null-conditional-operator)
+- [Çağırma ifadeleri](~/_csharplang/spec/expressions.md#invocation-expressions)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvuru](../index.md)
+- [C#başvurunun](../index.md)
 - [C# işleçleri](index.md)
 - [?? (null birleşim işleci)](null-coalescing-operator.md)
+- [:: işleci](namespace-alias-qualifier.md)

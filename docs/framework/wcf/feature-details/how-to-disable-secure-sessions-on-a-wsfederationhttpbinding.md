@@ -8,40 +8,42 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
-ms.openlocfilehash: 73a51bd477a434b48f91406d08762fe886676b90
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 810c5b127a34fb0a35e8fd2d83ff59e00aca0ba1
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626872"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972044"
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Nasıl yapılır: WSFederationHttpBinding Gücenli Oturumlarını Devre Dışı Bırakma
-Bazı hizmetler, Federasyon kimlik bilgisi iste ancak güvenli oturumlar desteklemiyor. Bu durumda, güvenli oturum özelliği devre dışı bırakmalısınız. Farklı <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding> sınıfı güvenli oturumlarını devre dışı bırakmak için bir yol sağlamaz hizmeti ile iletişim kurarken. Bunun yerine, özel bağlama güvenli oturum ayarları ile bir önyükleme yerini alan oluşturmalısınız.  
-  
- Bu konuda bulunan bağlama öğeleri değiştirmek gösterilmiştir bir <xref:System.ServiceModel.WSFederationHttpBinding> özel bağlamayı oluşturmak için. Sonuç aynıdır <xref:System.ServiceModel.WSFederationHttpBinding> dışında güvenli oturumlar kullanmaz.  
-  
-### <a name="to-create-a-custom-federated-binding-without-secure-session"></a>Özel bir oluşturmak için bağlama güvenli oturum olmadan Federasyon  
-  
-1. Bir örneğini oluşturmak <xref:System.ServiceModel.WSFederationHttpBinding> sınıfı kod içinde kesin ya da bir yapılandırma dosyasından yükleniyor.  
-  
-2. Kopya <xref:System.ServiceModel.WSFederationHttpBinding> içine bir <xref:System.ServiceModel.Channels.CustomBinding>.  
-  
-3. Bulma <xref:System.ServiceModel.Channels.SecurityBindingElement> içinde <xref:System.ServiceModel.Channels.CustomBinding>.  
-  
-4. Bulma <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> içinde <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
-  
-5. Orijinalin yerine geçecek <xref:System.ServiceModel.Channels.SecurityBindingElement> önyükleme güvenliği bağlama öğeyi <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir özel federe bağlama güvenli oturum olmadan oluşturur.  
-  
- [!code-csharp[c_CustomFederationBinding#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customfederationbinding/cs/c_customfederationbinding.cs#0)]
- [!code-vb[c_CustomFederationBinding#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customfederationbinding/vb/c_customfederationbinding.vb#0)]  
-  
-## <a name="compiling-the-code"></a>Kod Derleniyor  
-  
-- Kod örneği derlemek için System.ServiceModel.dll derlemesine başvuran bir proje oluşturun.  
-  
+
+Bazı hizmetler federe kimlik bilgileri gerektirebilir, ancak güvenli oturumları desteklemez. Bu durumda, güvenli oturum özelliğini devre dışı bırakmanız gerekir. 'Denfarklıolarak,sınıfıbirhizmetleiletişimkurarkengüvenlioturumlarıdevredışıbırakmakiçinbiryolsağlamaz.<xref:System.ServiceModel.WSHttpBinding> <xref:System.ServiceModel.WSFederationHttpBinding> Bunun yerine, güvenli oturum ayarlarını bir önyükleme ile değiştiren özel bir bağlama oluşturmanız gerekir.
+
+Bu konu başlığı altında, bir <xref:System.ServiceModel.WSFederationHttpBinding> özel bağlama oluşturmak için içindeki bağlama öğelerinin nasıl değiştirileceği gösterilmektedir. Sonuç, güvenli oturumlar kullanmamasının <xref:System.ServiceModel.WSFederationHttpBinding> dışında, ile aynıdır.
+
+## <a name="to-create-a-custom-federated-binding-without-secure-session"></a>Güvenli oturum olmadan özel bir Federasyon bağlaması oluşturmak için
+
+1. Kod içinde imperatively veya yapılandırma <xref:System.ServiceModel.WSFederationHttpBinding> dosyasından bir tane yükleyerek sınıfın bir örneğini oluşturun.
+
+2. <xref:System.ServiceModel.WSFederationHttpBinding> ' A<xref:System.ServiceModel.Channels.CustomBinding>kopyalayın.
+
+3. <xref:System.ServiceModel.Channels.SecurityBindingElement> İçinde<xref:System.ServiceModel.Channels.CustomBinding>öğesini bulun.
+
+4. <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> İçinde<xref:System.ServiceModel.Channels.SecurityBindingElement>öğesini bulun.
+
+5. Orijinali <xref:System.ServiceModel.Channels.SecurityBindingElement> , önyükleme güvenliği bağlama öğesiyle <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>değiştirin.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki örnek, güvenli oturum olmadan özel bir Federasyon bağlaması oluşturur.
+
+[!code-csharp[c_CustomFederationBinding#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customfederationbinding/cs/c_customfederationbinding.cs#0)]
+[!code-vb[c_CustomFederationBinding#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customfederationbinding/vb/c_customfederationbinding.vb#0)]
+
+## <a name="compiling-the-code"></a>Kod Derleniyor
+
+- Kod örneğini derlemek için, System. ServiceModel. dll derlemesine başvuran bir proje oluşturun.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bağlamalar ve Güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

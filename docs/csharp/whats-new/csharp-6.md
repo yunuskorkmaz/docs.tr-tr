@@ -1,31 +1,31 @@
 ---
-title: C# 6 - C# Kılavuzu yenilikler nelerdir?
-description: C# sürüm 6'daki yeni özelliklerin öğrenin
+title: C# 6 C# kılavuzundaki yenilikler
+description: Sürüm 6 ' daki C# yeni özellikleri öğrenin
 ms.date: 12/12/2018
-ms.openlocfilehash: 49247109bd1acbf697f5700b5cfe9a2b85393b2c
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: da40b4c9d4af0094fdd907c542e971ba55086e0f
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68235713"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971380"
 ---
-# <a name="whats-new-in-c-6"></a>C# 6 yenilikleri
+# <a name="whats-new-in-c-6"></a>6 ' daki C# yenilikler
 
-C# 6.0 sürüm, geliştiriciler için üretkenliği artıran birçok özellik içeriyor. Bu özellikler genel etkisini de daha okunabilir daha kısa kod yazma ' dir. Birçok ortak uygulamalar için daha az seremoni söz dizimi içeriyor. Tasarım hedefi ile daha az seremoni görmek daha kolaydır. Bu özellikler de öğrenin ve daha üretken ve daha okunabilir bir kod yazma. Daha özellikleri dil yapıları üzerinde odaklanabilirsiniz.
+Uygulamasının C# 6,0 sürümü, geliştiricilerin üretkenliğini artıran birçok özellik içeriyordu. Bu özelliklerin genel etkisi, daha okunaklı olan daha kısa kodlar yazmanızı de ister. Söz dizimi birçok yaygın uygulama için daha az sertifika içerir. Tasarım amacını daha az seremle görmek daha kolaydır. Bu özellikleri iyi öğrenin ve daha üretken olacak daha fazla kod yazmanız ve daha fazla okunabilir kod yazmanız gerekir. Özelliklerden daha fazlasını, dilin yapılarından daha fazla odaklanabilirsiniz.
 
-Bu makalenin geri kalanında her bir özellik keşfetmek için bir bağlantı ile bu özelliklerin her biri bir bakış sağlar. Özellikleri da keşfedebilirsiniz bir [üzerinde etkileşimli incelenmesi C# 6](../tutorials/exploration/csharp-6.yml) öğreticiler bölümünde.
+Bu makalenin geri kalanında, her bir özelliği keşfetmeye yönelik bir bağlantı ile bu özelliklerin her biri için bir genel bakış sunulmaktadır. Ayrıca öğreticiler bölümünde [6 ' da etkileşimli bir araştırmayla ilgili C# ](../tutorials/exploration/csharp-6.yml) özellikleri inceleyebilirsiniz.
 
-## <a name="read-only-auto-properties"></a>Salt okunur otomatik özellikleri
+## <a name="read-only-auto-properties"></a>Salt okunurdur otomatik Özellikler
 
-*Salt okunur otomatik özelliklerde* değişmez türleri oluşturmak için daha kısa bir söz dizimi sağlar. Otomatik özelliği yalnızca bir alma erişimcisi ile bildirdiğiniz:
+*Salt okuma otomatik özellikleri* , sabit türler oluşturmak için daha kısa bir sözdizimi sağlar. Auto özelliğini yalnızca bir get erişimcisi ile bildirirsiniz:
 
 [!code-csharp[ReadOnlyAutoProperty](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoProperty)]
 
-`FirstName` Ve `LastName` özellikleri yalnızca Oluşturucu gövdesinde ayarlanabilir:
+`FirstName` Ve`LastName` özellikleri yalnızca aynı sınıfın oluşturucusunun gövdesinde ayarlanabilir:
 
 [!code-csharp[ReadOnlyAutoPropertyConstructor](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoPropertyConstructor)]
 
-Ayarlanmaya çalışılırken `LastName` içinde başka bir yöntem oluşturur bir `CS0200` derleme hatası:
+Başka bir yöntemde `LastName` ayarlamaya çalışmak, `CS0200` derleme hatası oluşturur:
 
 ```csharp
 public class Student
@@ -40,158 +40,158 @@ public class Student
 }
 ```
 
-Bu özellik sabit türleri oluşturmak için true dil desteği sağlar ve daha net ve uygun otomatik-özellik söz dizimini kullanır.
+Bu özellik, sabit türler oluşturmak için gerçek dil desteğini sunar ve daha kısa ve uygun otomatik özellik sözdizimini kullanır.
 
-Bu sözdizimi, erişilebilir bir yöntemi kaldırmaz ekleme, eğer ise bir [ikili uyumlu değişiklik](version-update-considerations.md#binary-compatible-changes).
+Bu söz dizimini eklemek erişilebilir bir yöntemi kaldırmazsa, [ikili uyumlu bir değişiklik](version-update-considerations.md#binary-compatible-changes)olur.
 
 ## <a name="auto-property-initializers"></a>Otomatik-özellik başlatıcıları
 
-*Otomatik-özellik başlatıcıları* başlangıç değeri otomatik özellik için özellik bildiriminde bir parçası olarak bildirmenize.
+*Otomatik Özellik başlatıcıları* , otomatik özellik için ilk değeri özellik bildiriminin bir parçası olarak bildirmenize olanak tanır.
 
 [!code-csharp[Initialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#Initialization)]
 
-`Grades` Üyesi olduğu bildirilir başlatılır. Bu, tam bir kez başlatma gerçekleştirmek kolaylaştırır. Başlatma ile ortak arabirim için depolama ayırmayı excel'dir kolaylaştırarak özellik bildiriminde bir parçasıdır `Student` nesneleri.
+Üye `Grades` , bildirildiği yerde başlatılır. Bu, başlatmayı tam olarak bir kez gerçekleştirmeyi kolaylaştırır. Başlatma, özellik bildiriminin bir parçasıdır ve bu, depolama ayırmasının nesneler için `Student` ortak arabirimle daha kolay olmasını sağlar.
 
-## <a name="expression-bodied-function-members"></a>İfade gövdeli işlev üyeleri
+## <a name="expression-bodied-function-members"></a>İfade-Bodied işlev üyeleri
 
-Yazdığınız birçok tek ifadeleri olabilecek tek deyimler üyeleridir. Bunun yerine bir ifade gövdeli üye yazın. Bu yöntemler ve salt okunur özellikler için çalışır. Örneğin, bir geçersiz kılma `ToString()` genellikle iyi bir adaydır:
+Yazdığınız birçok üye tek deyimler olabilecek tek ifadelerdir. Bunun yerine Expression-Bodied üyesi yazın. Yöntemler ve salt okunurdur özellikleri için geçerlidir. Örneğin, bir geçersiz kılma `ToString()` genellikle harika bir adaydır:
 
 [!code-csharp[ToStringExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#ToStringExpressionMember)]
 
-Salt okunur özellikler için de bu söz dizimini kullanabilirsiniz:
+Bu sözdizimini salt okuma özellikleri için de kullanabilirsiniz:
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-Varolan bir üye ifadesi bodied üyesine değiştirme bir [ikili uyumlu değişiklik](version-update-considerations.md#binary-compatible-changes).
+Varolan bir üyenin bir ifade ile değiştirilmesi, [ikili uyumlu bir değişiklik](version-update-considerations.md#binary-compatible-changes)olur.
 
-## <a name="using-static"></a>' Using static
+## <a name="using-static"></a>statik kullanma
 
-*'Using static* geliştirme, tek bir sınıfın statik yöntemleri içeri aktarmanıza olanak sağlar. Kullanmakta olduğunuz sınıfı belirtin:
+*Statik geliştirme kullanımı* , tek bir sınıfın statik yöntemlerini içeri aktarmanızı sağlar. Kullanmakta olduğunuz sınıfı belirtirsiniz:
 
 [!code-csharp[UsingStaticMath](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStaticMath)]
 
-<xref:System.Math> Herhangi bir örnek yöntem içermiyor. Ayrıca `using static` bir sınıfın statik yöntemleri statik bir sınıf için içeri aktarma ve örnek yöntemler. En kullanışlı örneklerden biridir <xref:System.String>:
+<xref:System.Math> Herhangi bir örnek yöntemi içermez. Statik ve örnek yöntemlerine `using static` sahip bir sınıf için sınıf ' statik yöntemleri içeri aktarmak için de kullanabilirsiniz. En yararlı örneklerden <xref:System.String>biri şunlardır:
 
 [!code-csharp[UsingStatic](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStatic)]
 
 > [!NOTE]
-> Tam nitelikli sınıf adınız kullanmalısınız `System.String` statik olarak using deyimi.  Kullanamazsınız `string` anahtar sözcüğü yerine.
+> Statik bir using ifadesinde tam sınıf adını `System.String` kullanmanız gerekir.  Bunun yerine `string` anahtar sözcüğünü kullanamazsınız.
 
-İçeri aktarılan olduğunda bir `static using` deyimi, genişletme yöntemleri olan uzantı metodu çağırma söz dizimi kullanılarak çağrıldığında yalnızca kapsam. Bir statik yöntem olarak çağrıldığında kapsamında değildir. Bu, LINQ sorgularında sık sık görürsünüz. İçeri aktararak LINQ desen aktarabilirsiniz <xref:System.Linq.Enumerable>, veya <xref:System.Linq.Queryable>.
+Bir `static using` deyimden içeri aktarıldığında, genişletme yöntemleri yalnızca uzantı yöntemi çağırma sözdizimi kullanılarak çağrıldığında kapsamdadır. Statik bir yöntem olarak çağrıldığında kapsamda değildir. Bunu genellikle LINQ sorgularında görürsünüz. <xref:System.Linq.Enumerable> Ya<xref:System.Linq.Queryable>da içeri aktararak LINQ deseninin içeri aktarabilirsiniz.
 
 [!code-csharp[UsingStaticLinq](../../../samples/snippets/csharp/new-in-6/newcode.cs#usingStaticLinq)]
 
-Genellikle uzantı metodu çağırma ifadeleri kullanarak genişletme yöntemlerini çağırırsınız. Sınıf adı çağırdığınız bunları nadir durumlarda ekleme söz dizimi çözümler belirsizlik statik yöntem çağrısı.
+Uzantı yöntemlerini, genellikle uzantı yöntemi çağırma ifadelerini kullanarak çağırabilirsiniz. Statik yöntem çağrısı sözdizimini kullanarak çağırdığınız nadir bir durumda sınıf adı ekleme belirsizlik çözümleniyor.
 
-`static using` Yönergesi, tüm iç içe geçmiş türler de alır. Nitelik olmadan tüm iç içe geçmiş türler başvurabilirsiniz.
+Yönerge `static using` , iç içe geçmiş türleri de içeri aktarır. Herhangi bir iç içe geçmiş türe, nitelik olmadan başvurabilirsiniz.
 
-## <a name="null-conditional-operators"></a>Null koşullu işleçleri
+## <a name="null-conditional-operators"></a>Null-koşullu işleçler
 
-*Null koşullu işleci* null denetimleri çok daha kolay ve akıcı hale getirir. Üye erişimi yerine `.` ile `?.`:
+*Null koşullu işleç* , null denetimleri çok daha kolay ve akıcı hale getirir. Üye erişimini `.` bununla `?.`değiştirin:
 
 [!code-csharp[NullConditional](../../../samples/snippets/csharp/new-in-6/program.cs#NullConditional)]
 
-Yukarıdaki örnekte, değişken `first` atanan `null` kişi nesnesi varsa `null`. Aksi takdirde, değeri atanır `FirstName` özelliği. En önemlisi de `?.` Bu kod satırı oluşturmadığını anlamına gelir bir `NullReferenceException` varsa `person` değişkendir `null`. Bunun yerine, short-circuits ve döndürür `null`. Null koşullu bir işleç dizi ya da dizin oluşturucu erişimi için de kullanabilirsiniz. Değiştirin `[]` ile `?[]` Dizin ifadesi içinde.
+Önceki örnekte, değişken `first` , kişi nesnesi `null`ise atanır `null` . Aksi takdirde, `FirstName` özelliğin değeri atanır. En önemlisi, `?.` Bu kod satırının `person` , değişkeni ise, `null`bir `NullReferenceException` olarak yaramayacağı anlamına gelir. Bunun yerine, kısa devreler ve döndürür `null`. Dizi veya Dizin Oluşturucu erişimi için null koşullu bir işleç de kullanabilirsiniz. Dizin `[]` ifadesinde `?[]` ile değiştirin.
 
-Aşağıdaki ifade döndürür bir `string`değerini bakılmaksızın `person`. Bu yapı ile kullandığınız *null birleşim* varsayılan atamak için işleç değerleri özelliklerinden olduğunda `null`. Ne zaman ifade short-circuits, `null` tam ifadeyle eşleşecek döndürülen değerin türü.
+Aşağıdaki ifade, `person`değerinden bağımsız `string`olarak bir döndürür. Bu yapıyı genellikle, `null`özelliklerden biri olduğunda varsayılan değerleri atamak için *null birleşim* işleciyle kullanırsınız. Kısa devre `null` ifadesi olduğunda döndürülen değer tam ifadeyle eşleşecek şekilde yazılır.
 
 [!code-csharp[NullCoalescing](../../../samples/snippets/csharp/new-in-6/program.cs#NullCoalescing)]
 
-Ayrıca `?.` koşullu olarak yöntemlerini çağırmak için. Temsilciler (veya olay işleyicileri) güvenli bir şekilde çağrılacak üye işlevleri null koşullu işleci ile en yaygın kullanımı olan olabilecek `null`.  Temsilcinin ararız `Invoke` yöntemi kullanarak `?.` üye erişim işleci. Bir örnekte gördüğünüz [temsilci desenleri](../delegates-patterns.md#handling-null-delegates) makalesi.
+Yöntemleri koşullu olarak çağırmak `?.` için de kullanabilirsiniz. Null koşullu işleçle üye işlevlerinin en yaygın kullanımı, güvenli temsilcileri (veya olay işleyicilerini) `null`güvenle çağırmadır.  Üyeye erişmek için `?.` işlecini kullanarak temsilcinin `Invoke` yöntemini çağıracaksınız. [Temsilci desenleri](../delegates-patterns.md#handling-null-delegates) makalesinde bir örnek görebilirsiniz.
 
-Kurallarına `?.` işleci olun işlecinin sol tarafı yalnızca bir kez değerlendirilir. Bu olay işleyicilerini kullanarak aşağıdaki örnekte de dahil olmak üzere birçok deyimleri sağlar:
+`?.` İşlecinin kuralları, işlecin sol tarafının yalnızca bir kez değerlendirildiğinden emin olur. Olay işleyicilerini kullanarak aşağıdaki örnek dahil olmak üzere birçok deyim sunar:
 
 ```csharp
 // preferred in C# 6:
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-Sol tarafta yalnızca bir kez değerlendirilir sağlamak da sol tarafındaki yöntem çağrıları dahil olmak üzere herhangi bir ifade kullanmanıza olanak sağlar `?.`
+Sol tarafının yalnızca bir kez değerlendirilmesinin yanı sıra, yöntemin sol tarafındaki Yöntem çağrıları dahil herhangi bir ifadeyi kullanmanıza de olanak sağlar.`?.`
 
 ## <a name="string-interpolation"></a>Dize ilişkilendirme
 
-İle C# 6, yeni [dize ilişkilendirme](../language-reference/tokens/interpolated.md) özellik ifadeleri bir dizeye katıştırmak olanak sağlar. Yalnızca dize ile yazdığınızdan `$`ve ifadeler arasında `{` ve `}` sıra sayıları yerine:
+6 C# ile yeni [dize ilişkilendirme](../language-reference/tokens/interpolated.md) özelliği bir dizeye ifade eklemenizi sağlar. Dizeyi yalnızca ile `$`önyüz ve sıra sayıları yerine ve `{` `}` arasında ifadeleri kullanın:
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-Bu örnek için yedek ifadeleri özelliklerini kullanır. Herhangi bir ifade kullanabilirsiniz. Örneğin, bir öğrencinin sınıf noktası ortalama ilişkilendirme bir parçası olarak işlem:
+Bu örnek, değiştirilen ifadeler için özellikleri kullanır. Herhangi bir ifadeyi kullanabilirsiniz. Örneğin, ilişkilendirme 'nin bir parçası olarak bir öğrencinin sınıf noktası ortalamasını hesaplamanız gerekir:
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
-Önceki kod satırının değeri biçimlendirir `Grades.Average()` iki ondalık kayan noktalı bir sayı olarak.
+Yukarıdaki kod satırı, değeri `Grades.Average()` iki ondalık basamakla kayan noktalı sayı olarak biçimlendirir.
 
-Genellikle, belirli bir kültür kullanılarak üretilen dize biçimlendirmeniz gerekebilir. Bir dize ilişkilendirme tarafından üretilen nesne için örtük olarak dönüştürülebilir olgu kullandığınız <xref:System.FormattableString?displayProperty=nameWithType>. <xref:System.FormattableString> Örneği bileşik biçimlendirme dizesi ve dizeleri için dönüştürme önce ifadeleri değerlendirme sonuçlarını içerir. Kullanım <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> kültür biçimlendirme dizesi bir zaman belirtmek için yöntemi. Aşağıdaki örnek, Almanca (de-DE) kültürü kullanarak bir dize oluşturur. (Varsayılan olarak, Alman kullanılan kültür ',' karakteri ondalık ayırıcısı için kullanır ve '.' karakteri olarak binlik ayırıcı.)
+Genellikle, belirli bir kültür kullanılarak üretilen dizeyi biçimlendirmeniz gerekebilir. Dize ilişkilendirme tarafından üretilen nesnenin örtük olarak öğesine <xref:System.FormattableString?displayProperty=nameWithType>dönüştürülebileceği olguyu kullanırsınız. <xref:System.FormattableString> Örnek, bileşik biçim dizesini ve ifadeleri dizelere dönüştürmeden önce değerlendirme sonuçlarını içerir. Bir dizeyi biçimlendirirken kültürü belirtmek için yönteminikullanın.<xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> Aşağıdaki örnek, Almanya (de-DE) kültürünü kullanarak bir dize üretir. (Varsayılan olarak, Almanya kültürü ondalık ayırıcı için ', ' karakterini ve binlik ayırıcı olarak '. ' karakterini kullanır.)
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-Dize ilişkilendirme ile çalışmaya başlamak için bkz. [dize ilişkilendirme, C# ](../tutorials/exploration/interpolated-strings.yml) etkileşimli öğreticisini [dize ilişkilendirme](../language-reference/tokens/interpolated.md) makalenin ve [dize ilişkilendirme C# ](../tutorials/string-interpolation.md) öğretici.
+Dize ilişkilendirmeyi kullanmaya başlamak için etkileşimli öğreticide [dize ilişkilendirme C# ](../tutorials/exploration/interpolated-strings.yml) , [dize ilişkilendirme](../language-reference/tokens/interpolated.md) makalesi ve öğreticideki [dize ilişkilendirme C# ](../tutorials/string-interpolation.md) bölümüne bakın.
 
 ## <a name="exception-filters"></a>Özel durum filtreleri
 
-*Özel durum filtreleri* belirli bir catch yan tümcesinin ne zaman uygulanacağını belirleme yan tümceleri olan. Bir özel durum filtresi için kullanılan ifade olmaması halinde `true`, catch yan tümcesi, bir özel normal işleme gerçekleştirir. İfade değerlendirme sonucu `false`, ardından `catch` yan tümcesi atlandı. Bir kullanım olup olmadığını belirlemek için bir özel durum hakkında bilgileri incelemek için bir `catch` yan tümcesi, özel durumu işleyebilir:
+*Özel durum filtreleri* , belirli bir catch yan tümcesinin ne zaman uygulanacağını tespit eden yan tümcelerdir. Özel durum filtresi için kullanılan ifade olarak `true`değerlendirilirse, catch yan tümcesi bir özel durum üzerinde normal işlemesini gerçekleştirir. İfade olarak `false`değerlendirilirse, `catch` yan tümce atlanır. Bir kullanım, bir `catch` yan tümcenin özel durumu işleyebilmesine izin vermek için bir özel durumla ilgili bilgileri incelemektir:
 
 [!code-csharp[ExceptionFilter](../../../samples/snippets/csharp/new-in-6/NetworkClient.cs#ExceptionFilter)]
 
-## <a name="the-nameof-expression"></a>`nameof` İfadesi
+## <a name="the-nameof-expression"></a>`nameof` İfade
 
-[Nameof](../language-reference/operators/nameof.md) bir sembol adı için ifadeyi hesaplar. Her bir değişken, bir özellik veya üye alan adını ihtiyaç duyduğunuzda çalışma araçları almak için harika bir yoludur. En yaygın birini kullanan için `nameof` bir özel durum nedeniyle bir sembol adını sağlar:
+[NameOf](../language-reference/operators/nameof.md) ifadesinin bir sembolün adı olarak değerlendirilir. Bir değişken, özellik veya üye alanı için her ihtiyaç duyduğunuzda, araçların çalışmasını sağlamak için harika bir yoldur. İçin `nameof` en yaygın kullanımlardır bir özel duruma neden olan bir simgenin adını sağlamaktır:
 
 [!code-csharp[nameof](../../../samples/snippets/csharp/new-in-6/NewCode.cs#UsingStaticString)]
 
-Başka bir uygulama XAML tabanlı uygulamalar ile kullanılır `INotifyPropertyChanged` arabirimi:
+Başka bir kullanım, `INotifyPropertyChanged` arabirimini uygulayan XAML tabanlı uygulamalardır:
 
 [!code-csharp[nameofNotify](../../../samples/snippets/csharp/new-in-6/viewmodel.cs#nameofNotify)]
 
-## <a name="await-in-catch-and-finally-blocks"></a>Await catch ve Finally bloklarında
+## <a name="await-in-catch-and-finally-blocks"></a>Catch ve finally bloklarında await
 
-C# 5 vardı yerleştirdiğiniz etrafında bazı sınırlamaları `await` ifadeler. İle C# 6, hemen kullanabileceğiniz `await` içinde `catch` veya `finally` ifadeler. Bu, genellikle günlük kaydı senaryoları ile kullanılır:
+C#5 ' te ifadeler yerleştirebileceğiniz `await` yerde çeşitli sınırlamalar vardı. 6 C# ile artık `await` `catch` veya ifadelerindekullanabilirsiniz.`finally` Bu, genellikle günlük senaryolarıyla kullanılır:
 
 [!code-csharp[AwaitFinally](../../../samples/snippets/csharp/new-in-6/NetworkClient.cs#AwaitFinally)]
 
-Uygulama ayrıntılarını ekleme `await` içinde destek `catch` ve `finally` yan tümceleri, davranışı davranış eş zamanlı kod için tutarlı olduğundan emin olun. Ne zaman yürütülen kod içinde bir `catch` veya `finally` yan tümcesi oluşturmaz, yürütme için uygun görünüyor `catch` yan tümcesinde sonraki çevreleyen bloğu. Geçerli bir özel durum varsa, bu özel durum kaybolur. Beklenen ifadelerinde ile aynı olur `catch` ve `finally` yan tümceleri: uygun bir `catch` , aranır ve varsa, geçerli özel durumun kaybolur.  
+`finally` İçinde `await` destekeklemek`catch` için uygulama ayrıntıları ve yan tümceleri, davranışın zaman uyumlu kod davranışıyla tutarlı olmasını sağlamaktır. `catch` `catch` Or yantümcesindeyürütülenkodoluşturduğunda,yürütmesonrakiçevresindekibloktauygunbiryantümcearar.`finally` Geçerli bir özel durum varsa, bu özel durum kaybedilir. Aynı durum, `catch` ve `finally` yan tümcelerinde beklenen ifadelerle aynıdır: için uygun `catch` bir aranır ve varsa geçerli özel durum kaybolur.  
 
 > [!NOTE]
-> Bu, davranıştır yazmak için önerilir nedeni `catch` ve `finally` yan tümceleri dikkatli bir şekilde, yeni özel durumlar önlemek için.
+> Bu davranış `catch` `finally` , yeni özel durumlar oluşturmamaya özen gösterin.
 
-## <a name="initialize-associative-collections-using-indexers"></a>İlişkili koleksiyonlar dizin oluşturucuları kullanarak başlatma
+## <a name="initialize-associative-collections-using-indexers"></a>Dizin oluşturucular kullanarak ilişkilendirilebilir koleksiyonları başlatma
 
-*Dizin başlatıcılar* koleksiyon başlatıcıları dizin kullanımı ile daha tutarlı hale getirmek iki özelliklerinden biridir. Önceki sürümlerinde C#, kullanabileceğinizi *koleksiyon başlatıcıları* dizisi stili koleksiyonlarıyla da dahil olmak üzere, <xref:System.Collections.Generic.Dictionary%602>, ile küme ayraçları anahtarı geçici bir çözüm ekleme ve değer çiftlerini:
+*Dizin başlatıcıları* , koleksiyon başlatıcılarının Dizin kullanımıyla daha tutarlı olmasını sağlayan iki özellikten biridir. ' In C#önceki sürümlerinde, anahtar ve değer çiftleri etrafında küme ayraçları ekleyerek sıra stili <xref:System.Collections.Generic.Dictionary%602>koleksiyonlarıyla *koleksiyon başlatıcıları* kullanabilirsiniz:
 
 [!code-csharp[ListInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#CollectionInitializer)]
 
-Bunları ile kullanabileceğiniz <xref:System.Collections.Generic.Dictionary%602> koleksiyonlar ve diğer türleri nerede erişilebilir `Add` yöntemi, birden fazla bağımsız değişken kabul eder. Yeni söz dizimini kullanarak koleksiyona bir dizin atama destekler:
+Bunları, erişilebilir `Add` yöntemin birden <xref:System.Collections.Generic.Dictionary%602> fazla bağımsız değişken kabul ettiği koleksiyonlar ve diğer türlerle birlikte kullanabilirsiniz. Yeni sözdizimi, koleksiyona bir dizin kullanılarak atamayı destekler:
 
 [!code-csharp[DictionaryInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#DictionaryInitializer)]
 
-Bu özellik, ilişkili kapsayıcılar dizisi kapsayıcıları çeşitli sürümleri için yerinde çürütülen için benzer bir sözdizimi kullanılarak başlatılabilir anlamına gelir.
+Bu özellik, çeşitli sürümlere yönelik dizi kapsayıcılarına benzer bir sözdizimi kullanılarak ilişkilendirilebilir kapsayıcıların başlatılabileceği anlamına gelir.
 
-## <a name="extension-add-methods-in-collection-initializers"></a>Uzantı `Add` koleksiyon başlatıcıları yöntemleri
+## <a name="extension-add-methods-in-collection-initializers"></a>Koleksiyon `Add` başlatıcılarında uzantı yöntemleri
 
-Toplama başlatma kolaylaştırır başka bir özellik kullanma yeteneğini olduğu bir *genişletme yöntemi* için `Add` yöntemi. Bu özellik, Visual Basic ile eşlik için eklendi. Anlamsal olarak yeni öğeler eklemek için farklı bir ada sahip bir yöntemi olan bir özel koleksiyon sınıfı varsa, en yararlı bir özelliktir.
+Koleksiyon başlatmayı daha kolay hale getiren başka bir özellik, `Add` yöntemi için bir *genişletme yöntemi* kullanma olanağıdır. Bu özellik Visual Basic eşlik için eklendi. Özelliği, en çok, anlamsal olarak yeni öğeler eklemek için farklı bir ada sahip bir yöntemi olan bir özel koleksiyon sınıfınız olduğunda yararlıdır.
 
-## <a name="improved-overload-resolution"></a>Geliştirilmiş aşırı yükleme çözünürlüğü
+## <a name="improved-overload-resolution"></a>Geliştirilmiş aşırı yükleme çözümlemesi
 
-Son bu özellik, büyük olasılıkla fark olmaz biridir. C# derleyicisinin önceki sürümünü içeren lambda ifadeleri belirsiz bazı yöntem çağrıları bulunduğu yapıları vardı. Bu yöntem göz önünde bulundurun:
+Bu son özellik, büyük olasılıkla fark edilmeyecek bir özelliktir. C# Derleyicinin önceki sürümünde lambda ifadeleri içeren bazı Yöntem çağrıları bulunursa oluşturulan yapılar vardı. Şu yöntemi göz önünde bulundurun:
 
 [!code-csharp[AsyncMethod](../../../samples/snippets/csharp/new-in-6/overloads.cs#AsyncMethod)]
 
-Önceki sürümlerde, C#, yöntem grubu söz dizimini kullanarak bu yöntemini çağırmak başarısız olur:
+Önceki sürümlerinde C#, Yöntem grubu sözdizimini kullanarak bu yöntemi çağırmak başarısız olur:
 
 [!code-csharp[MethodGroup](../../../samples/snippets/csharp/new-in-6/overloads.cs#MethodGroup)]
 
-Önceki derleyici doğru arasında ayrım uygulanamadı `Task.Run(Action)` ve `Task.Run(Func<Task>())`. Önceki sürümlerinde, bir lambda ifadesi bağımsız değişken olarak kullanması gerekir:
+Önceki derleyici ve `Task.Run(Action)` `Task.Run(Func<Task>())`arasında doğru şekilde ayırt edilemedi. Önceki sürümlerde bağımsız değişken olarak bir lambda ifadesi kullanmanız gerekir:
 
 [!code-csharp[Lambda](../../../samples/snippets/csharp/new-in-6/overloads.cs#Lambda)]
 
-C# 6 derleyici doğru belirleyen `Task.Run(Func<Task>())` daha iyi bir seçimdir.
+6 C# derleyicisi, daha iyi bir `Task.Run(Func<Task>())` seçim olduğunu doğru şekilde belirler.
 
 ### <a name="deterministic-compiler-output"></a>Belirleyici derleyici çıkışı
 
-`-deterministic` Bayt için aynı çıkış derlemesi için aynı kaynak dosyaları art arda gelen derlemesi üretmek için derleyici seçeneği bildirir.
+`-deterministic` Seçeneği derleyiciye aynı kaynak dosyaların birbirini izleyen derlemeler için bayt için aynı çıkış derlemesi oluşturmasını söyler.
 
-Varsayılan olarak, her derleme her derleme üzerinde benzersiz bir çıktı üretir. Derleyici bir zaman damgası ekler ve rastgele sayı bir GUID oluşturulur. İçin-derlemeler arasında tutarlılık sağlamak için çıkış bayt karşılaştırmak istiyorsanız bu seçeneği kullanın.
+Varsayılan olarak, her derleme her derlemede benzersiz çıktı üretir. Derleyici, bir zaman damgası ve rastgele sayıdan oluşturulan bir GUID ekler. Bu seçeneği, derlemeler genelinde tutarlılığı sağlamak üzere bayt için bayt çıkışı karşılaştırmak istiyorsanız kullanın.
 
-Daha fazla bilgi için [-belirleyici derleyici seçeneği](../language-reference/compiler-options/deterministic-compiler-option.md) makalesi.
+Daha fazla bilgi için, bkz. [belirleyici derleyici seçeneği](../language-reference/compiler-options/deterministic-compiler-option.md) makalesi.

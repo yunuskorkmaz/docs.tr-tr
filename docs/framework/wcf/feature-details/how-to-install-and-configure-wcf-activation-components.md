@@ -4,102 +4,103 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 1141bd8344887990ddd8646eba9d25c5d9a4287d
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: aed6cb71ac3ccd7af5423cdb8ccc43133bbe5337
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487056"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972037"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma
-Bu konuda Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) ' için gereken adımları açıklar [!INCLUDE[wv](../../../../includes/wv-md.md)] Windows Communication Foundation (WCF) barındırmak için HTTP üzerinden iletişim kurmazlar Hizmetleri protokolleri ağ. Aşağıdaki bölümlerde, bu yapılandırmanın adımları özetlemektedir:  
-  
-- Yükleme (veya yüklenmesini onaylayın) WCF etkinleştirme bileşenlerini.  
-  
-- WAS olmayan HTTP protokolü destekleyecek şekilde yapılandırın. Aşağıdaki yordam yapılandırır [!INCLUDE[wv](../../../../includes/wv-md.md)] TCP Etkinleştirmesi için.  
-  
- Yükleme ve yapılandırma WAS gördükten sonra [nasıl yapılır: Was'ta WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) yordamları WAS kullanan bir HTTP olmayan uç noktasını kullanıma sunan bir WCF hizmeti oluşturma.  
-  
-### <a name="to-install-the-wcf-non-http-activation-components"></a>WCF HTTP olmayan etkinleştirme bileşenlerini yükleme  
-  
-1. Tıklayın **Başlat** düğmesine ve ardından **Denetim Masası**.  
-  
-2. Tıklayın **programlar**ve ardından **programlar ve Özellikler**.  
-  
-3. Üzerinde **görevleri** menüsünde tıklatın **kapatma Windows özelliklerini aç veya Kapat**.  
-  
-4. WinFX düğümünü bulun ve genişletin.  
-  
-5. Seçin **WCF Http olmayan etkinleştirme bileşenlerini** kutusuna ve bu ayarı kaydedin.  
-  
-### <a name="to-configure-the-was-to-support-tcp-activation"></a>WAS TCP etkinleştirilmesini destekleyecek şekilde yapılandırmak için  
-  
-1. NET.TCP etkinleştirmeyi desteklemek için varsayılan Web sitesi ilk net.tcp bağlantı noktasına bağlı olmalıdır. IIS 7.0 Yönetim araç takımıyla yüklü Appcmd.exe kullanarak bunu yapabilirsiniz. Bir yönetici düzeyinde komut istemi penceresinde aşağıdaki komutu çalıştırın.  
-  
-    ```  
-    %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
-    ```  
-  
+
+Bu konuda, http ağ protokolleri üzerinden iletişim kurmayan Windows Communication Foundation (WCF) hizmetlerini barındırmak [!INCLUDE[wv](../../../../includes/wv-md.md)] için Windows işlem etkinleştirme hizmeti 'ni (was olarak da bilinir) ayarlamak için gereken adımlar açıklanmaktadır. Aşağıdaki bölümlerde bu yapılandırma için adımlar ana hatlarıyla verilmiştir:
+
+- WCF etkinleştirme bileşenlerini yükleme (veya yüklemesini onaylama).
+
+- ' İ HTTP olmayan bir protokolü destekleyecek şekilde yapılandırın. Aşağıdaki yordam TCP Etkinleştirmesi [!INCLUDE[wv](../../../../includes/wv-md.md)] için yapılandırır.
+
+WAS yükledikten ve yapılandırdıktan sonra bkz [. nasıl yapılır: ' De bir WCF hizmeti barındırın, was kullanan HTTP olmayan bir uç noktasını kullanıma sunan bir WCF hizmeti oluşturma yordamlarına was idi](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) .
+
+## <a name="to-install-the-wcf-non-http-activation-components"></a>WCF HTTP olmayan etkinleştirme bileşenlerini yüklemek için
+
+1. **Başlat** düğmesine tıklayın ve ardından **Denetim Masası**' na tıklayın.
+
+2. **Programlar**' a ve ardından **Programlar ve Özellikler**' e tıklayın.
+
+3. **Görevler** menüsünde, **Windows özelliklerini aç veya kapat**' a tıklayın.
+
+4. WinFX düğümünü bulun, seçin ve genişletin.
+
+5. **WCF HTTP olmayan etkinleştirme bileşenleri** kutusunu seçin ve ayarı kaydedin.
+
+## <a name="to-configure-the-was-to-support-tcp-activation"></a>Yapılandırmasını TCP etkinleştirmesini destekleyecek şekilde yapılandırmak için
+
+1. Net. TCP etkinleştirmesini desteklemek için, önce varsayılan Web sitesinin bir net. TCP bağlantı noktasına bağlanması gerekir. Bunu, IIS 7,0 yönetim araç takımı ile yüklenen appcmd. exe ' yi kullanarak yapabilirsiniz. Yönetici düzeyinde bir komut Istemi penceresinde aşağıdaki komutu çalıştırın.
+
+    ```
+    %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']
+    ```
+
     > [!NOTE]
-    >  Tek metin satırı komutudur. Bu komut, varsayılan Web sitesine herhangi bir ana bilgisayar adı ile 808 numaralı TCP bağlantı noktasını dinleyen bir net.tcp site bağlaması ekler.  
-  
-2. Bir sitedeki tüm uygulamaları genel net.tcp bağlama paylaşsa da her uygulama net.tcp destek ayrı ayrı etkinleştirebilirsiniz. Uygulama için NET.TCP etkinleştirmek için bir yönetici düzeyinde komut isteminden aşağıdaki komutu çalıştırın.  
-  
-    ```  
-    %windir%\system32\inetsrv\appcmd.exe set app   
-    "Default Web Site/<WCF Application>" /enabledProtocols:http,net.tcp  
-    ```  
-  
+    > Bu komut, tek satırlık bir metin. Bu komut, TCP bağlantı noktası 808 ' de dinleme yapan varsayılan Web sitesine bir net. TCP site bağlaması ekleyerek herhangi bir ana bilgisayar adı ekler.
+
+2. Bir sitedeki tüm uygulamalar ortak bir net. TCP bağlamasını paylaşır, ancak her uygulama net. TCP desteğini tek tek etkinleştirebilir. Uygulama için net. TCP 'yi etkinleştirmek üzere yönetici düzeyinde bir komut isteminden aşağıdaki komutu çalıştırın.
+
+    ```
+    %windir%\system32\inetsrv\appcmd.exe set app
+    "Default Web Site/<WCF Application>" /enabledProtocols:http,net.tcp
+    ```
+
     > [!NOTE]
-    >  Tek metin satırı komutudur. Bu komut etkinleştirir /\<*WCF uygulaması*> her ikisi de kullanılarak erişilecektir uygulama `http://localhost/<WCF Application>` ve `net.tcp://localhost/<WCF Application>`.
-  
-     Eklediğiniz net.tcp site bağlaması için bu örnek kaldırın.  
-  
-     Bir kolaylık olarak örnek dizinde yer RemoveNetTcpSiteBinding.cmd adlı bir toplu iş dosyasında aşağıdaki iki adımı uygulanır.  
-  
-    1. NET.TCP, bir yönetici düzeyinde komut istemi penceresinde aşağıdaki komutu çalıştırarak etkin protokoller listesinden kaldırın.  
-  
-        ```  
-        %windir%\system32\inetsrv\appcmd.exe set app   
-        "Default Web Site/servicemodelsamples<WCF Application>" " /enabledProtocols:http  
-        ```  
-  
+    > Bu komut, tek satırlık bir metin. Bu\<komut/*WCF uygulama*> uygulamasına hem hem `http://localhost/<WCF Application>` `net.tcp://localhost/<WCF Application>`de kullanılarak erişilmesini sağlar.
+
+     Bu örnek için eklemiş olduğunuz net. TCP site bağlamasını kaldırın.
+
+     Kolaylık olması halinde, örnek dizinde bulunan RemoveNetTcpSiteBinding. cmd adlı bir toplu iş dosyasında aşağıdaki iki adım uygulanır.
+
+    1. Yönetici düzeyinde bir komut Istemi penceresinde aşağıdaki komutu çalıştırarak, etkin protokoller listesinden net. TCP ' i kaldırın.
+
+        ```
+        %windir%\system32\inetsrv\appcmd.exe set app
+        "Default Web Site/servicemodelsamples<WCF Application>" " /enabledProtocols:http
+        ```
+
         > [!NOTE]
-        >  Tek metin satırı komutudur.  
-  
-    2. Net.tcp site bağlaması, yükseltilmiş bir komut istemi penceresinde aşağıdaki komutu çalıştırarak kaldırın:  
-  
-        ```  
-        %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
-        --bindings.[protocol='net.tcp',bindingInformation='808:*']  
-        ```  
-  
+        > Bu komut, tek satırlık bir metin.
+
+    2. Yükseltilmiş bir komut Istemi penceresinde aşağıdaki komutu çalıştırarak net. TCP site bağlamasını kaldırın:
+
+        ```
+        %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
+        --bindings.[protocol='net.tcp',bindingInformation='808:*']
+        ```
+
         > [!NOTE]
-        >  Tek metin satırı komutudur.  
-  
-### <a name="to-remove-nettcp-from-the-list-of-enabled-protocols"></a>NET.TCP etkin protokoller listesinden kaldırmak için  
-  
-1. NET.TCP etkin protokoller listesinden kaldırmak için bir yönetici düzeyinde komut istemi penceresinde aşağıdaki komutu çalıştırın.  
-  
-    ```  
-    %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples<WCF Application>" " /enabledProtocols:http  
-    ```  
-  
+        > Bu komut, tek satırlık bir metin.
+
+## <a name="to-remove-nettcp-from-the-list-of-enabled-protocols"></a>Etkin protokoller listesinden net. TCP 'yi kaldırmak için
+
+1. Etkin protokoller listesinden net. TCP ' yi kaldırmak için, yönetici düzeyinde bir komut Istemi penceresinde aşağıdaki komutu çalıştırın.
+
+    ```
+    %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples<WCF Application>" " /enabledProtocols:http
+    ```
+
     > [!NOTE]
-    >  Tek metin satırı komutudur.  
-  
-### <a name="to-remove-the-nettcp-site-binding"></a>Net.tcp site bağlaması kaldırmak için  
-  
-1. Bağlama net.tcp siteyi kaldırmak için bir yönetici düzeyinde komut istemi penceresinde aşağıdaki komutu çalıştırın.  
-  
-    ```  
-    %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
-    -bindings.[protocol='net.tcp',bindingInformation='808:*']  
-    ```  
-  
+    > Bu komut, tek satırlık bir metin.
+
+## <a name="to-remove-the-nettcp-site-binding"></a>Net. TCP site bağlamasını kaldırmak için
+
+1. Net. TCP site bağlamasını kaldırmak için aşağıdaki komutu yönetici düzeyinde bir komut Istemi penceresinde çalıştırın.
+
+    ```
+    %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
+    -bindings.[protocol='net.tcp',bindingInformation='808:*']
+    ```
+
     > [!NOTE]
-    >  Tek metin satırı komutudur.  
-  
+    > Bu komut, tek satırlık bir metin.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [TCP Etkinleştirme](../../../../docs/framework/wcf/samples/tcp-activation.md)

@@ -9,114 +9,117 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: 5a4550e4c914dcdbc9908e766c67a2efa53e6e9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6bd81bd24d28f0a9e318d60a3b7fb4aa059f9a49
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928901"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971987"
 ---
 # <a name="how-to-set-the-security-mode"></a>Nasıl yapılır: Güvenlik Modunu Ayarlama
-Windows Communication Foundation (WCF) güvenlik üzerinde en önceden tanımlanmış bağlamaları bulunan üç yaygın güvenlik modu vardır: aktarım iletisi ve "ileti kimlik bilgileri ile aktarma." İki ek modları için iki bağlamaları belirli: "yalnızca Aktarım-credential" modu sonucuna <xref:System.ServiceModel.BasicHttpBinding>ve bulunan "Hem" modu <xref:System.ServiceModel.NetMsmqBinding>. Ancak, bu konuda üç yaygın güvenlik modlarını yoğunlaşır: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, ve <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
-  
- Önceden tanımlanmış her bağlama tüm bu modlardan desteklediğini unutmayın. Bu konuda moduyla ayarlar <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding> sınıfları ve programlı ve yapılandırma yoluyla modunu ayarlama işlemi gösterilmektedir.  
-  
- Daha fazla bilgi için bkz, WCF güvenlik bkz [güvenliğine genel bakış](../../../docs/framework/wcf/feature-details/security-overview.md), [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md), ve [Hizmetleri güvenli hale getirme ve istemciler](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Aktarım modu ve ileti hakkında daha fazla bilgi için bkz. [aktarım güvenliği](../../../docs/framework/wcf/feature-details/transport-security.md) ve [ileti güvenliği](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
-  
-### <a name="to-set-the-security-mode-in-code"></a>Kod içinde güvenlik modunu ayarlama  
-  
-1. Kullanmakta olduğunuz bağlama sınıfının bir örneğini oluşturun. Önceden tanımlanmış bağlamaları bir listesi için bkz. [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md). Bu örnek, bir örneğini oluşturur. <xref:System.ServiceModel.WSHttpBinding> sınıfı.  
-  
-2. Ayarlama `Mode` özelliği tarafından döndürülen nesne `Security` özelliği.  
-  
+
+Windows Communication Foundation (WCF) güvenliği, en önceden tanımlı bağlamalarda bulunan üç ortak güvenlik moduna sahiptir: Transport, Message ve "ileti kimlik bilgileri ile taşıma." İki bağlama özgü iki ek mod vardır: üzerinde <xref:System.ServiceModel.BasicHttpBinding>bulunan "Transport-Credential Only" modu ve <xref:System.ServiceModel.NetMsmqBinding>üzerinde bulunan "both" modu. Ancak, bu konu üç ortak güvenlik modu üzerinde yoğunlaşır: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>ve <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.
+
+Önceden tanımlanmış her bağlamanın bu modların tümünü desteklediğini unutmayın. Bu konu, <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding> sınıfları ile modunu ayarlar ve modu hem programlı olarak hem de yapılandırma aracılığıyla ayarlamayı gösterir.
+
+Daha fazla bilgi için bkz. WCF güvenliği, [güvenlik genel bakış](../../../docs/framework/wcf/feature-details/security-overview.md), [hizmetleri güvenli hale](../../../docs/framework/wcf/securing-services.md)getirme ve [Hizmetleri ve istemcileri güvenli hale getirme](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Aktarım modu ve ileti hakkında daha fazla bilgi için bkz. [Aktarım güvenliği](../../../docs/framework/wcf/feature-details/transport-security.md) ve [ileti güvenliği](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).
+
+## <a name="to-set-the-security-mode-in-code"></a>Koddaki güvenlik modunu ayarlamak için
+
+1. Kullandığınız bağlama sınıfının bir örneğini oluşturun. Önceden tanımlanmış bağlamaların listesi için bkz. [sistem tarafından sunulan bağlamalar](../../../docs/framework/wcf/system-provided-bindings.md). Bu örnek, <xref:System.ServiceModel.WSHttpBinding> sınıfının bir örneğini oluşturur.
+
+2. Özelliği tarafından döndürülen nesnesinin `Mode` `Security` özelliğini ayarlayın.
+
      [!code-csharp[c_SettingSecurityMode#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#1)]
-     [!code-vb[c_SettingSecurityMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#1)]  
-  
-     Alternatif olarak, aşağıdaki kodda gösterildiği gibi modu iletisine ayarlayın.  
-  
+     [!code-vb[c_SettingSecurityMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#1)]
+
+     Alternatif olarak, aşağıdaki kodda gösterildiği gibi modunu ileti olarak ayarlayın.
+
      [!code-csharp[c_SettingSecurityMode#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#2)]
-     [!code-vb[c_SettingSecurityMode#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#2)]  
-  
-     Veya aşağıdaki kodda gösterildiği gibi ileti kimlik bilgileri ile aktarma için moduna ayarlayın.  
-  
+     [!code-vb[c_SettingSecurityMode#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#2)]
+
+     Ya da aşağıdaki kodda gösterildiği gibi modu ileti kimlik bilgileriyle taşıma olarak ayarlayın.
+
      [!code-csharp[c_SettingSecurityMode#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#3)]
-     [!code-vb[c_SettingSecurityMode#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#3)]  
-  
-3. Bağlama oluşturucusunun içinde aşağıdaki kodda gösterildiği gibi modunu ayarlayabilirsiniz.  
-  
+     [!code-vb[c_SettingSecurityMode#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#3)]
+
+3. Ayrıca, aşağıdaki kodda gösterildiği gibi, bağlama oluşturucusunda modu da ayarlayabilirsiniz.
+
      [!code-csharp[c_SettingSecurityMode#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#4)]
-     [!code-vb[c_SettingSecurityMode#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#4)]  
-  
-## <a name="setting-the-clientcredentialtype-property"></a>ClientCredentialType özelliğini ayarlama  
- Üç değerden birini modunu ayarlama belirler nasıl ayarlanacağını `ClientCredentialType` özelliği. Örnek olarak, <xref:System.ServiceModel.WSHttpBinding> modu ayarını sınıfı `Transport` ayarlamalısınız anlamına gelir <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> özelliği <xref:System.ServiceModel.HttpTransportSecurity> sınıfı uygun değeri.  
-  
-#### <a name="to-set-the-clientcredentialtype-property-for-transport-mode"></a>Aktarım modu için ClientCredentialType özelliğini ayarlamak için  
-  
-1. Bağlama örneği oluşturun.  
-  
-2. Ayarlama `Mode` özelliğini `Transport`.  
-  
-3. Ayarlama `ClientCredential` özelliğini uygun bir değer. Aşağıdaki kod özelliği ayarlar `Windows`.  
-  
+     [!code-vb[c_SettingSecurityMode#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#4)]
+
+## <a name="setting-the-clientcredentialtype-property"></a>ClientCredentialType özelliği ayarlanıyor
+
+Modunun üç değerden birine ayarlanması, `ClientCredentialType` özelliği nasıl ayarlayabileceğinizi belirler. Örneğin, <xref:System.ServiceModel.WSHttpBinding> sınıfını kullanarak modunu olarak `Transport` ayarlamak, <xref:System.ServiceModel.HttpTransportSecurity> sınıfının <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> özelliğini uygun bir değere ayarlamanız gerekir.
+
+### <a name="to-set-the-clientcredentialtype-property-for-transport-mode"></a>Taşıma modu için ClientCredentialType özelliğini ayarlamak için
+
+1. Bağlamanın bir örneğini oluşturun.
+
+2. Ayarlama `Mode` özelliğini `Transport`.
+
+3. `ClientCredential` Özelliği uygun bir değere ayarlayın. Aşağıdaki kod özelliği olarak `Windows`ayarlar.
+
      [!code-csharp[c_SettingSecurityMode#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#5)]
-     [!code-vb[c_SettingSecurityMode#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#5)]  
-  
-#### <a name="to-set-the-clientcredentialtype-property-for-message-mode"></a>İleti modu ClientCredentialType özelliğini ayarlamak için  
-  
-1. Bağlama örneği oluşturun.  
-  
-2. Ayarlama `Mode` özelliğini `Message`.  
-  
-3. Ayarlama `ClientCredential` özelliğini uygun bir değer. Aşağıdaki kod özelliği ayarlar `Certificate`.  
-  
+     [!code-vb[c_SettingSecurityMode#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#5)]
+
+### <a name="to-set-the-clientcredentialtype-property-for-message-mode"></a>Ileti modu için ClientCredentialType özelliğini ayarlamak için
+
+1. Bağlamanın bir örneğini oluşturun.
+
+2. Ayarlama `Mode` özelliğini `Message`.
+
+3. `ClientCredential` Özelliği uygun bir değere ayarlayın. Aşağıdaki kod özelliği olarak `Certificate`ayarlar.
+
      [!code-csharp[c_SettingSecurityMode#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#6)]
-     [!code-vb[c_SettingSecurityMode#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#6)]  
-  
-#### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>Yapılandırma modu ve ClientCredentialType özelliği ayarlamak için  
-  
-1. Uygun bağlama öğeye ekleme [ \<bağlamaları >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) yapılandırma dosyasının öğesi. Aşağıdaki örnek ekler bir [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) öğesi.  
-  
-2. Ekleme bir `<binding>` öğesi ve kümesi kendi `name` özniteliği için uygun bir değer.  
-  
-3. Ekleme bir `<security>` öğesi ve kümesi `mode` özniteliğini `Message`, `Transport`, veya `TransportWithMessageCredential`.  
-  
-4. Modu ayarlanırsa `Transport`, ekleme bir `<transport>` öğesi ve kümesi `clientCredential` özniteliği için uygun bir değer.  
-  
-     Aşağıdaki örnekte modu ayarlar "`Transport"`ve ardından ayarlar `clientCredentialType` özniteliği `<transport>` öğesine"`Windows"`.  
-  
-    ```xml  
-    <wsHttpBinding>  
-    <binding name="TransportSecurity">  
-        <security mode="Transport" >  
-           <transport clientCredentialType = "Windows" />  
-        </security>  
-    </binding>  
-    </wsHttpBinding >  
-    ```  
-  
-     Alternatif olarak, kümesinin `security mode` için "`Message"`ve ardından bir `<"message">` öğesi. Bu örnekte ayarlar `clientCredentialType` için "`Certificate"`.  
-  
-    ```xml  
-    <wsHttpBinding>  
-    <binding name="MessageSecurity">  
-        <security mode="Message" >  
-           <message clientCredentialType = "Certificate" />  
-        </security>  
-    </binding>  
-    </wsHttpBinding >  
-    ```  
-  
-     Kullanarak <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> değeri özel bir durumdur ve aşağıda açıklanmıştır.  
-  
-### <a name="using-transportwithmessagecredential"></a>TransportWithMessageCredential kullanma  
- Güvenlik modunu ayarlama zaman `TransportWithMessageCredential`, aktarım düzeyi güvenlik sağlayan gerçek mekanizması taşıma belirler. Örneğin, HTTP protokolü, HTTP (HTTPS) üzerinden Güvenli Yuva Katmanı (SSL) kullanır. Bu nedenle, ayarı `ClientCredentialType` herhangi bir aktarım güvenliği nesnenin özellik (gibi <xref:System.ServiceModel.HttpTransportSecurity>) göz ardı edilir.  Diğer bir deyişle, yalnızca ayarlayabilirsiniz `ClientCredentialType` ileti güvenlik nesnesi (için `WSHttpBinding` bağlamayı <xref:System.ServiceModel.NonDualMessageSecurityOverHttp> nesne).  
-  
- Daha fazla bilgi için [nasıl yapılır: Kullanım taşıma Güveniği ve ileti kimlik bilgilerini](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
-  
+     [!code-vb[c_SettingSecurityMode#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#6)]
+
+### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>Yapılandırmada Mode ve ClientCredentialType özelliğini ayarlamak için
+
+1. Yapılandırma dosyasının [ \<Bindings >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) öğesine uygun bir bağlama öğesi ekleyin. Aşağıdaki örnek bir [ \<WSHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) öğesi ekler.
+
+2. Bir `<binding>` öğesi ekleyin ve `name` özniteliğini uygun bir değere ayarlayın.
+
+3. `<security>` Bir öğesi ekleyin ve `mode` özniteliği `Message`, `Transport`veya olarakayarlayın.`TransportWithMessageCredential`
+
+4. Mod olarak `Transport`ayarlandıysa, bir `<transport>` öğesi ekleyin ve `clientCredential` özniteliği uygun bir değere ayarlayın.
+
+     Aşağıdaki örnek,`Transport"`modunu "olarak ayarlar ve sonra `<transport>` öğesinin `clientCredentialType` özniteliğini"`Windows"`olarak ayarlar.
+
+    ```xml
+    <wsHttpBinding>
+    <binding name="TransportSecurity">
+        <security mode="Transport" >
+           <transport clientCredentialType = "Windows" />
+        </security>
+    </binding>
+    </wsHttpBinding >
+    ```
+
+     Alternatif olarak, `security mode` `<"message">` öğesini ve ardından`Message"`öğesini olarak ayarlayın. Bu örnek, `clientCredentialType` "`Certificate"`olarak ayarlar.
+
+    ```xml
+    <wsHttpBinding>
+    <binding name="MessageSecurity">
+        <security mode="Message" >
+           <message clientCredentialType = "Certificate" />
+        </security>
+    </binding>
+    </wsHttpBinding >
+    ```
+
+     <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> Değeri kullanmak özel bir durumdur ve aşağıda açıklanmıştır.
+
+### <a name="using-transportwithmessagecredential"></a>TransportWithMessageCredential kullanma
+
+Güvenlik modu olarak `TransportWithMessageCredential`ayarlandığında, taşıma, aktarım düzeyi güvenliği sağlayan gerçek mekanizmayı belirler. Örneğin, HTTP Protokolü HTTP (HTTPS) üzerinden Güvenli Yuva Katmanı (SSL) kullanır. Bu nedenle, herhangi `ClientCredentialType` bir aktarım güvenliği nesnesinin ( <xref:System.ServiceModel.HttpTransportSecurity>gibi) özelliğinin ayarlanması yok sayılır.  Diğer `ClientCredentialType` bir deyişle, yalnızca ileti güvenliği nesnesinin ( `WSHttpBinding` bağlama, <xref:System.ServiceModel.NonDualMessageSecurityOverHttp> nesne) kümesini ayarlayabilirsiniz.
+
+Daha fazla bilgi için [nasıl yapılır: Taşıma güvenliği ve Ileti kimlik bilgilerini](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)kullanın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Nasıl yapılır: Kullanım taşıma Güveniği ve ileti kimlik bilgileri](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [Nasıl yapılır: SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Nasıl yapılır: Taşıma güvenliği ve Ileti kimlik bilgilerini kullanma](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
 - [Aktarım Güvenliği](../../../docs/framework/wcf/feature-details/transport-security.md)
 - [İleti Güvenliği](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [Güvenliğe Genel Bakış](../../../docs/framework/wcf/feature-details/security-overview.md)

@@ -3,12 +3,12 @@ title: 'Nasıl yapılır: Forms Tabanlı Kimlik Doğrulaması Kullanarak Talep K
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
-ms.openlocfilehash: ecaf1de0b806d5568d81fac2ddb2b39b697135ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75db96a621d7863ef445efb24814111b34da6960
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792756"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971843"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Nasıl yapılır: Forms Tabanlı Kimlik Doğrulaması Kullanarak Talep Kullanan ASP.NET Uygulaması Derleme
 
@@ -16,11 +16,11 @@ ms.locfileid: "61792756"
 
 - Microsoft® Windows® Identity Foundation (WIF)
 
-- ASP.NET® Web formları
+- ASP.NET® Web Forms
 
 ## <a name="summary"></a>Özet
 
-Bu nasıl yapılır, Forms kimlik doğrulaması kullanan basit bir talep kullanan ASP.NET Web Forms uygulaması oluşturmak için adım adım ayrıntılı yordamları sağlar. Ayrıca, bir kullanıcı, Forms kimlik doğrulaması ile oturum açtığında beyanların sunulduğunu doğrulamak için uygulamayı test etme için yönergeler sağlar.
+Bu nasıl yapılır, Forms kimlik doğrulaması kullanan basit bir talep kullanan ASP.NET Web Forms uygulaması oluşturmaya yönelik ayrıntılı adım adım yordamlar sağlar. Ayrıca, bir kullanıcı form kimlik doğrulamasıyla oturum açtığında taleplerin sunulduğunu doğrulamak için uygulamanın nasıl test alınacağını belirten yönergeler de sağlar.
 
 ## <a name="contents"></a>İçindekiler
 
@@ -30,51 +30,51 @@ Bu nasıl yapılır, Forms kimlik doğrulaması kullanan basit bir talep kullana
 
 - Adımların Özeti
 
-- 1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma
+- 1\. adım – basit bir ASP.NET Web Forms uygulaması oluşturma
 
-- 2. adım: ASP.NET Web Forms uygulaması için form kimlik doğrulaması kullanarak talep yapılandırma
+- 2\. adım – Forms kimlik doğrulamasını kullanarak talepler için ASP.NET Web Forms uygulamasını yapılandırma
 
-- 3. Adım – Çözümünüzü Test Etme
+- 3\. Adım – Çözümünüzü Test Etme
 
 ## <a name="objectives"></a>Amaçlar
 
-- Bir ASP.NET Web Forms uygulaması için form kimlik doğrulaması kullanarak talep yapılandırma
+- Forms kimlik doğrulaması kullanarak talepler için bir ASP.NET Web Forms uygulaması yapılandırma
 
-- Düzgün çalışıp çalışmadığını görmek için ASP.NET Web Forms uygulamayı test etme
+- Düzgün çalışıp çalışmadığını görmek için ASP.NET Web Forms uygulamasını test etme
 
 ## <a name="overview"></a>Genel Bakış
 
-WIF ve kendi beyana dayalı yetkilendirme, .NET 4.5 içinde Framework ayrılmaz bir parçası dahil edilmiştir. Daha önce bir ASP.NET kullanıcı gelen talepleri istediyseniz, WIF yüklemek için gerekli ve ardından atama asıl nesneleri gibi arabirimleri `Thread.CurrentPrincipal` veya `HttpContext.Current.User`. Artık, talep nesneleri otomatik olarak bu sorumlusu tarafından sunulur.
+.NET 4,5 ' de, WıF ve talep tabanlı yetkilendirme, Framework 'ün ayrılmaz bir parçası olarak eklenmiştir. Daha önce, bir ASP.net kullanıcısının taleplerini istediyseniz, WIF 'yi yüklemeli ve ardından arabirimleri veya `Thread.CurrentPrincipal` `HttpContext.Current.User`gibi Principal nesnelerine atamalısınız. Artık talepler, bu Principal nesneleri tarafından otomatik olarak sunulur.
 
-Forms tarafından otomatik olarak kimliği doğrulanmış tüm kullanıcılar kendileriyle ilişkili talep olduğundan form kimlik doğrulaması .NET 4.5 WIF'ın eklenmesi benefited. Bu nasıl yapılır gösterildiği gibi bu talepler form kimlik doğrulaması kullanan bir ASP.NET uygulamasında hemen kullanmaya başlayabilirsiniz.
+Forms kimlik doğrulaması, form tarafından kimliği doğrulanan tüm kullanıcılar otomatik olarak bunlarla ilişkili talepler içerdiğinden, .NET 4,5 ' a dahil benefited. Bu talepleri, nasıl gösterildiği gibi, Forms kimlik doğrulaması kullanan bir ASP.NET uygulamasında hemen kullanmaya başlayabilirsiniz.
 
 ## <a name="summary-of-steps"></a>Adımların Özeti
 
-- 1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma
+- 1\. adım – basit bir ASP.NET Web Forms uygulaması oluşturma
 
-- 2. adım: ASP.NET Web Forms uygulaması için form kimlik doğrulaması kullanarak talep yapılandırma
+- 2\. adım – Forms kimlik doğrulamasını kullanarak talepler için ASP.NET Web Forms uygulamasını yapılandırma
 
-- 3. Adım – Çözümünüzü Test Etme
+- 3\. Adım – Çözümünüzü Test Etme
 
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>1\. adım – basit bir ASP.NET Web Forms uygulaması oluşturma
 
 Bu adımda, yeni bir ASP.NET Web Forms uygulaması oluşturacaksınız.
 
-#### <a name="to-create-a-simple-aspnet-application"></a>Basit bir ASP.NET uygulaması oluşturmak için
+### <a name="to-create-a-simple-aspnet-application"></a>Basit bir ASP.NET uygulaması oluşturmak için
 
-1. Visual Studio'yu başlatın ve tıklayın **dosya**, **yeni**, ardından **proje**.
+1. Visual Studio 'Yu başlatın ve **Dosya**, **Yeni**ve ardından **Proje**' ye tıklayın.
 
-2. İçinde **yeni proje** penceresinde tıklayın **ASP.NET Web Forms uygulaması**.
+2. **Yeni proje** penceresinde, **ASP.NET Web Forms uygulama**' ya tıklayın.
 
-3. İçinde **adı**, girin `TestApp` basın **Tamam**.
+3. **Ad**alanına girin `TestApp` ve **Tamam**' a basın.
 
-## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>2. adım: ASP.NET Web Forms uygulaması için form kimlik doğrulaması kullanarak talep yapılandırma
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>2\. adım – Forms kimlik doğrulamasını kullanarak talepler için ASP.NET Web Forms uygulamasını yapılandırma
 
-Bu adımda, bir yapılandırma girişi için ekler *Web.config* yapılandırma dosyası ve düzenleme *Default.aspx* dosyayı görüntülemek için bir hesap için bilgileri talep.
+Bu adımda, *Web. config* yapılandırma dosyasına bir yapılandırma girişi ekleyecek ve bir hesabın talep bilgilerini görüntülemesi için *default. aspx* dosyasını düzenleyecaksınız.
 
-#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Form kimlik doğrulaması kullanarak talep için ASP.NET uygulamanızı yapılandırmak için
+### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Forms kimlik doğrulamasını kullanarak talepler için ASP.NET uygulamasını yapılandırmak için
 
-1. İçinde *Default.aspx* dosya, var olan bir biçimlendirme aşağıdakiyle değiştirin:
+1. *Default. aspx* dosyasında, varolan biçimlendirmeyi aşağıdaki kodla değiştirin:
 
     ```aspx
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TestApp._Default" %>
@@ -93,9 +93,9 @@ Bu adımda, bir yapılandırma girişi için ekler *Web.config* yapılandırma d
     </asp:Content>
     ```
 
-    Bu adım için bir GridView denetimi ekler, *Default.aspx* talepleri ile doldurulacak sayfa Forms kimlik doğrulamasını alınır.
+    Bu adım, *varsayılan. aspx* sayfanıza, Forms kimlik doğrulamasından alınan taleplerle doldurulacak bir GridView denetimi ekler.
 
-2. Kaydet *Default.aspx* dosya sonra adlı arka plan kod dosyasını açabilir *Default.aspx.cs*. Varolan kodu aşağıdakiyle değiştirin:
+2. *Default. aspx* dosyasını kaydedin, sonra *default.aspx.cs*adlı arka plan kod dosyasını açın. Mevcut kodu şu kodla değiştirin:
 
     ```csharp
     using System;
@@ -120,16 +120,16 @@ Bu adımda, bir yapılandırma girişi için ekler *Web.config* yapılandırma d
     }
     ```
 
-    Yukarıdaki kod, form kimlik doğrulaması tarafından tanımlanan kullanıcılar dahil olmak üzere, kimliği doğrulanmış bir kullanıcı hakkında talepleri görüntüler.
+    Yukarıdaki kod, Forms kimlik doğrulaması tarafından tanımlanan kullanıcılar da dahil olmak üzere kimliği doğrulanmış bir kullanıcı hakkında talepler görüntüler.
 
-## <a name="step-3--test-your-solution"></a>3. Adım – Çözümünüzü Test Etme
+## <a name="step-3--test-your-solution"></a>3\. Adım – Çözümünüzü Test Etme
 
-Bu adımda ASP.NET Web Forms uygulamanızı test edin ve bir kullanıcı, Forms kimlik doğrulaması ile oturum açtığında beyanların sunulduğunu doğrulayın.
+Bu adımda, ASP.NET Web Forms uygulamanızı test edecek ve Kullanıcı form kimlik doğrulamasıyla oturum açtığında taleplerin sunulduğunu doğrulayacaksınız.
 
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Form kimlik doğrulaması kullanarak talep için ASP.NET Web Forms uygulamanızı test etmek için
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Forms kimlik doğrulaması kullanarak ASP.NET Web Forms uygulamanızı talepler için test etme
 
-1. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın. İle sunulan *Default.aspx*, sahip olduğu **kaydetme** ve **oturum** üst bağlantılar sayfasının sağ. Tıklayın **kaydetme**.
+1. Uygulamayı derlemek ve çalıştırmak için **F5** tuşuna basın. Sayfanın sağ üst kısmındaki, **kayıt** ve **oturum açma** bağlantılarına sahip *default. aspx*ile sunulmalısınız. **Kaydol**' a tıklayın.
 
-2. Üzerinde **kaydetme** sayfasında bir kullanıcı hesabı oluşturun ve ardından **kaydetme**. Hesabınız, form kimlik doğrulaması kullanılarak oluşturulur ve size otomatik olarak oturum açacaksınız.
+2. **Kaydet** sayfasında, bir kullanıcı hesabı oluşturun ve ardından **Kaydet**' e tıklayın. Hesabınız, form kimlik doğrulaması kullanılarak oluşturulur ve oturumunuz otomatik olarak açılır.
 
-3. Giriş sayfasına yönlendirildiniz sonra bir tablo altındaki görmelisiniz **bilgisayarınızı talep** içeren başlık **veren**, **OriginalIssuer**, **Türü**, **değer**, ve **ValueType** talep, hesabınız hakkında bilgiler.
+3. Giriş sayfasına yönlendirildikten sonra, **talep** başlığının altında yer alan **veren**, **OriginalIssuer**, **Type**, **Value**ve **ValueType** talep bilgilerini içeren bir tablo görmeniz gerekir. hesabı.

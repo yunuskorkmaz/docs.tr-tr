@@ -14,97 +14,100 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 47002ffaee33be66e2cc99ac1a01896d4656885c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 45df54b3a590078eff6ddc1197db5b0124663cf5
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591816"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971912"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Nasıl yapılır: DHTML Koduyla İstemci Uygulaması Kodu Arasında İki Yönlü İletişim Gerçekleştirme
-Kullanabileceğiniz <xref:System.Windows.Forms.WebBrowser> denetimi mevcut dinamik HTML (DHTML) Web uygulama kodu Windows Forms istemci uygulamalarınıza ekleyin. Bu, önemli geliştirme süresini DHTML tabanlı denetimler oluşturma yatırım yapmış ve mevcut kodu yeniden yazmak zorunda kalmadan Windows formlarının zengin kullanıcı arabirimi özelliklerinden yararlanan istediğinizde kullanışlıdır.  
-  
- <xref:System.Windows.Forms.WebBrowser> Denetimi Web sayfasına komut dosyası kodunuzda, istemci uygulaması kodu arasında iki yönlü iletişim uygulamanıza olanak tanır <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> ve <xref:System.Windows.Forms.WebBrowser.Document%2A> özellikleri. Buna ek olarak, yapılandırabileceğiniz <xref:System.Windows.Forms.WebBrowser> Web denetimleri, diğer denetimleri, uygulamanın formunuzda, DHTML geliştirdikleri gizleme ile sorunsuz bir şekilde blend göstermelerini sağlayın. Sorunsuz bir şekilde denetimleri karıştırmak için görsel stil ve arka plan rengi formun kalanını eşleşen ve kullanmak görüntülenen sayfa biçimlendirme <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>, <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A>, ve <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> standart tarayıcı özellikleri devre dışı bırakmak için özellikleri.  
-  
-### <a name="to-embed-dhtml-in-your-windows-forms-application"></a>Windows Forms uygulaması'nda DHTML eklemek için  
-  
-1. Ayarlama <xref:System.Windows.Forms.WebBrowser> denetimin <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> özelliğini `false` önlemek için <xref:System.Windows.Forms.WebBrowser> sürüklediğinizde bırakılan dosyaları açma denetimi.  
-  
+
+Bu denetimi, <xref:System.Windows.Forms.WebBrowser> Windows Forms istemci uygulamalarınıza var olan dinamik HTML (DHTML) Web uygulaması kodu eklemek için kullanabilirsiniz. Bu, DHTML tabanlı denetimler oluşturma konusunda önemli bir geliştirme süresi yatırdığınızda ve mevcut kodu yeniden yazmak zorunda kalmadan Windows Forms zengin Kullanıcı arabirimi özellikleri avantajlarından yararlanmak istediğinizde yararlıdır.
+
+Denetim, <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> ve<xref:System.Windows.Forms.WebBrowser.Document%2A> özellikleri aracılığıyla istemci uygulama kodunuz ile Web sayfanızın betik oluşturma kodu arasında iki yönlü iletişim uygulamanıza olanak sağlar. <xref:System.Windows.Forms.WebBrowser> Ayrıca, <xref:System.Windows.Forms.WebBrowser> denetimi, Web denetimlerinizin uygulama formunuzdaki diğer denetimlerle sorunsuz bir şekilde karışmasını sağlayacak şekilde, DHTML uygulamasını gizleyerek yapılandırabilirsiniz. Denetimleri sorunsuzca karıştırmak için, sayfanın arka plan rengi ve görsel stilinin formun geri kalanıyla eşleşmesi için görüntülenen sayfayı biçimlendirin ve standart tarayıcı özelliklerini devre dışı bırakmak için <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>, <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A>ve <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> özelliklerini kullanın.
+
+## <a name="to-embed-dhtml-in-your-windows-forms-application"></a>Windows Forms uygulamanıza DHTML eklemek için
+
+1. Denetimin üzerinde bırakılan dosyaları <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> açmasını engellemek `false` için denetiminözelliğiniolarakayarlayın.<xref:System.Windows.Forms.WebBrowser> <xref:System.Windows.Forms.WebBrowser>
+
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#1)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#1)]  
-  
-2. Denetimin ayarlamak <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> özelliğini `false` önlemek için <xref:System.Windows.Forms.WebBrowser> denetiminin kullanıcı tıkladığında, kısayol menüsünü görüntüleme.  
-  
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#1)]
+
+2. Kullanıcı sağ tıkladığında <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> <xref:System.Windows.Forms.WebBrowser> denetimin kısayol menüsünü `false` görüntülemesini engellemek için denetimin özelliğini olarak ayarlayın.
+
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#2)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#2)]  
-  
-3. Denetimin ayarlamak <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> özelliğini `false` önlemek için <xref:System.Windows.Forms.WebBrowser> kısayol tuşları için yanıt denetimi.  
-  
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#2)]
+
+3. Denetimin kısayol tuşlarına yanıt <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> vermesini engellemek `false` için denetimin özelliğini olarak ayarlayın. <xref:System.Windows.Forms.WebBrowser>
+
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#3)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#3)]  
-  
-4. Ayarlama <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> formun Oluşturucusu bir özellik veya <xref:System.Windows.Forms.Form.Load> olay işleyicisi.  
-  
-     Aşağıdaki kod, betik oluşturma nesne için form sınıfı kullanır.  
-  
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#3)]
+
+4. Formun oluşturucusunda veya bir <xref:System.Windows.Forms.Form.Load> olay işleyicisinde özelliğiayarlayın.<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A>
+
+     Aşağıdaki kod, komut dosyası nesnesi için form sınıfının kendisini kullanır.
+
     > [!NOTE]
-    >  Bileşen Nesne Modeli (COM) komut dosyası nesnesi erişebilir olması gerekir. Formunuza COM görünür hale getirmek için ekleme <xref:System.Runtime.InteropServices.ComVisibleAttribute> form sınıfı özniteliği.  
-  
+    >  Bileşen nesne modeli (COM), betik nesnesine erişebilmelidir. Formunuzu com 'a görünür hale getirmek için <xref:System.Runtime.InteropServices.ComVisibleAttribute> özniteliğini form sınıfınıza ekleyin.
+
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#4)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#4)]  
-  
-5. Genel Özellikler veya yöntemler, uygulama kodunuzda betik kodunuzun kullanacağı uygulayın.  
-  
-     Örneğin, betik oluşturma nesne için form sınıfı kullanırsanız, form sınıfa aşağıdaki kodu ekleyin.  
-  
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#4)]
+
+5. Betik kodunuzun kullanacağı uygulama kodunuzda ortak özellikleri veya yöntemleri uygulayın.
+
+     Örneğin, betik nesnesi için form sınıfını kullanırsanız, form Sınıfınıza aşağıdaki kodu ekleyin.
+
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#5)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#5)]  
-  
-6. Kullanım `window.external` genel özellikleri ve yöntemleri belirtilen nesnenin erişmek için komut dosyası kodunuzda bir nesne.  
-  
-     Aşağıdaki HTML kod bir düğmeyi tıklatın betik oluşturma nesne üzerinde bir yöntemi çağırmak nasıl gösterir. Bu kodu denetimin kullanarak yükleyen bir HTML belgesi gövde öğesinin içine kopyalayın <xref:System.Windows.Forms.WebBrowser.Navigate%2A> yöntemi veya denetimin atadığınız <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> özelliği.  
-  
-    ```  
-    <button onclick="window.external.Test('called from script code')">  
-        call client code from script code  
-    </button>  
-    ```  
-  
-7. Betik kodunuzu uygulama kodunuzun kullanacağı işlevleri uygulayın.  
-  
-     Aşağıdaki HTML BETİK öğesi, bir örnek işlevi sağlar. Bu kodu denetimin kullanarak yükleyen bir HTML belgesi baş öğesinin içine kopyalayın <xref:System.Windows.Forms.WebBrowser.Navigate%2A> yöntemi veya denetimin atadığınız <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> özelliği.  
-  
-    ```  
-    <script>  
-    function test(message) {   
-        alert(message);   
-    }  
-    </script>  
-    ```  
-  
-8. Kullanım <xref:System.Windows.Forms.WebBrowser.Document%2A> betik kodu istemci uygulama kodunuz içinden erişmek için özelliği.  
-  
-     Örneğin, aşağıdaki kod bir düğme ekleyin <xref:System.Windows.Forms.Control.Click> olay işleyicisi.  
-  
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#5)]
+
+6. Belirtilen nesnenin ortak özelliklerine ve yöntemlerine erişmek için komut dosyası kodunuzda nesnesinikullanın.`window.external`
+
+     Aşağıdaki HTML kodu, bir düğme tıklaağından betik nesnesi üzerinde bir yöntemin nasıl çağrılacağını gösterir. Bu kodu, denetimin <xref:System.Windows.Forms.WebBrowser.Navigate%2A> yöntemini kullanarak yüklediğiniz veya <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> denetimin özelliğine atadığınız bir HTML belgesinin Body öğesine kopyalayın.
+
+    ```html
+    <button onclick="window.external.Test('called from script code')">
+        call client code from script code
+    </button>
+    ```
+
+7. Betik kodunuzda, uygulama kodunuzun kullanacağı işlevleri uygulayın.
+
+     Aşağıdaki HTML BETIĞI öğesi örnek bir işlev sağlar. Bu kodu, denetimin <xref:System.Windows.Forms.WebBrowser.Navigate%2A> yöntemini kullanarak yüklediğiniz veya <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> denetimin özelliğine atadığınız bir HTML belgesinin baş öğesine kopyalayın.
+
+    ```html
+    <script>
+    function test(message) {
+        alert(message);
+    }
+    </script>
+    ```
+
+8. İstemci uygulama kodunuzda betik koduna erişmek için özelliğinikullanın.<xref:System.Windows.Forms.WebBrowser.Document%2A>
+
+     Örneğin, bir düğme <xref:System.Windows.Forms.Control.Click> olay işleyicisine aşağıdaki kodu ekleyin.
+
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#8)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#8)]  
-  
-9. Hata ayıklama, DHTML işiniz bittiğinde, denetimin ayarlamak <xref:System.Windows.Forms.WebBrowser.ScriptErrorsSuppressed%2A> özelliğini `true` önlemek için <xref:System.Windows.Forms.WebBrowser> betik kodu sorunlar için hata iletileri görüntülenmesini denetim.  
-  
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#8)]
+
+9. DHTML kodunuzda hata ayıklamayı tamamladıktan sonra, <xref:System.Windows.Forms.WebBrowser.ScriptErrorsSuppressed%2A> <xref:System.Windows.Forms.WebBrowser> denetimin komut dosyası kodu sorunları için hata `true` iletilerini görüntülemesini engellemek için denetimin özelliğini olarak ayarlayın.
+
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#9)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#9)]  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bu özellik anlamak için kullanabileceğiniz bir uygulama sağlar. HTML kod yüklendiği <xref:System.Windows.Forms.WebBrowser> aracılığıyla kontrol <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> özelliği yerine ayrı bir HTML dosyasından yükleniyor.  
-  
- [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#0)]
- [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#0)]  
-  
-## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu kod gerektirir:  
-  
-- Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.  
-  
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#9)]
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki kod örneği, bu özelliği anlamak için kullanabileceğiniz bir tanıtım uygulaması sağlar. HTML kodu, ayrı bir HTML dosyasından <xref:System.Windows.Forms.WebBrowser> yüklenmesi yerine <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> özelliği aracılığıyla denetime yüklenir.
+
+[!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#0)]
+[!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#0)]
+
+## <a name="compiling-the-code"></a>Kod Derleniyor
+
+Bu kod şunları gerektirir:
+
+- System ve System. Windows. Forms derlemelerine başvurular.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.WebBrowser>

@@ -2,97 +2,98 @@
 title: 'Nasıl yapılır: Çift Yönlü Federe Bağlama Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 4331d2bc-5455-492a-9189-634a82597726
-ms.openlocfilehash: 510faa0b1d791b1d164c55e9fa32daafa559d56c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 71c970fa45d7d4ccd55fceddb2360d0aa0a768f8
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696216"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972055"
 ---
 # <a name="how-to-create-a-duplex-federated-binding"></a>Nasıl yapılır: Çift Yönlü Federe Bağlama Oluşturma
-<xref:System.ServiceModel.WSFederationHttpBinding> yalnızca veri birimi ve istek/yanıt iletisi exchange sözleşmeleri destekler. Çift yönlü ileti exchange anlaşması kullanmak için özel bir bağlama oluşturmanız gerekir. Aşağıdaki yordamlar yapılandırmasında, HTTP ve TCP taşımalar için ileti modu güvenliği ve karma mod güvenliği için TCP taşıması kullanarak bunun nasıl yapılacağını gösterir. Tüm 3 bağlamaları gösteren örnek kodlara, bu konunun sonunda ' dir.  
-  
- Ayrıca, kod içinde bağlama oluşturabilirsiniz. Oluşturmak için bağlama öğeleri yığın açıklaması için bkz. [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
-  
-### <a name="to-create-a-duplex-federated-custom-binding-with-http"></a>HTTP ile özel çift yönlü federe bağlama oluşturma  
-  
-1. İçinde [ \<bağlamaları >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) yapılandırma dosyası düğümü oluşturmak bir [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) öğesi.  
-  
-2. İçinde [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) öğesi oluşturmak bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğeyle `name` özniteliğini `FederationDuplexHttpMessageSecurityBinding`.  
-  
-3. İçinde [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesi oluşturmak bir [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğeyle `authenticationMode` özniteliğini `SecureConversation`.  
-  
-4. İçinde [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğesi oluşturmak bir [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) öğeyle `authenticationMode` özniteliğini `IssuedTokenForCertificate` veya `IssuedTokenForSslNegotiated`.  
-  
-5. Aşağıdaki [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğesi boş bir oluşturma [ \<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) öğesi.  
-  
-6. Aşağıdaki [ \<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) öğesi boş bir oluşturma [ \<oneWay >](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) öğesi.  
-  
-7. Aşağıdaki [ \<oneWay >](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) öğesi boş bir oluşturma [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md) öğesi.  
-  
-### <a name="to-create-a-duplex-federated-custom-binding-with-tcp-message-security-mode"></a>TCP ileti güvenlik modunu ile özel çift yönlü federe bağlama oluşturma  
-  
-1. İçinde [ \<bağlamaları >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) yapılandırma dosyası düğümü oluşturmak bir [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) öğesi.   
-  
-2. İçinde [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) öğesi oluşturmak bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğeyle `name` özniteliğini `FederationDuplexTcpMessageSecurityBinding`.  
-  
-3. İçinde [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesi oluşturmak bir [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğeyle `authenticationMode` özniteliğini `SecureConversation`.  
-  
-4. İçinde [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğesi oluşturmak bir [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) öğeyle `authenticationMode` özniteliğini `IssuedTokenForCertificate` veya `IssuedTokenForSslNegotiated`.  
-  
-5. Aşağıdaki [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğesi boş bir oluşturma [ \<Connectionpoolsettings >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) öğesi.  
-  
-### <a name="to-create-a-duplex-federated-custom-binding-with-tcp-mixed-security-mode"></a>Bir çift yönlü oluşturmak için özel bir bağlama TCP karma güvenlik modu ile Federasyon  
-  
-1. İçinde [ \<bağlamaları >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) yapılandırma dosyası düğümü oluşturmak bir [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) öğesi.   
-  
-2. İçinde [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) öğesi oluşturmak bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğeyle `name` özniteliğini `FederationDuplexTcpTransportSecurityWithMessageCredentialBinding`.  
-  
-3. İçinde [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesi oluşturmak bir [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğeyle `authenticationMode` özniteliğini `SecureConversation`.  
-  
-4. İçinde [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğesi oluşturmak bir [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) öğeyle `authenticationMode` özniteliğini `IssuedTokenForCertificate` veya `IssuedTokenForSslNegotiated`.  
-  
-5. Aşağıdaki [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğesi boş bir oluşturma [ \<sslStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md) öğesi.  
-  
-6. Aşağıdaki [ \<sslStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md) öğesi boş bir oluşturma [ \<Connectionpoolsettings >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) öğesi.  
-  
-## <a name="code-sample"></a>Kod örneği  
-  
-#### <a name="sample-with-3-bindings"></a>Örnek 3 bağlamaları ile  
-  
-1. Yapılandırma dosyanıza aşağıdaki kodu ekleyin.  
-  
-## <a name="example"></a>Örnek  
-  
-```xml  
-<bindings>  
-   <customBinding>  
-      <binding name="FederationDuplexHttpMessageSecurityBinding">  
-<!-- duplex contract requires secure conversation with require cancellation = true -->  
-          <security authenticationMode="SecureConversation">  
-              <secureConversationBootstrap authenticationMode="IssuedTokenForSslNegotiated" />  
-          </security>  
-          <compositeDuplex />  
-          <oneWay />  
-          <httpTransport />  
-       </binding>  
-<!-- duplex over https is not supported -->  
-       <binding name="FederationDuplexTcpMessageSecurityBinding">  
-<!-- duplex contract requires secure conversation with require cancellation = true -->  
-          <security authenticationMode="SecureConversation">  
-              <secureConversationBootstrap authenticationMode="IssuedTokenForSslNegotiated" />  
-          </security>  
-          <tcpTransport />  
-       </binding>              
-       <binding name="FederationDuplexTcpTransportSecurityWithMessageCredentialsBinding">  
-<!-- duplex contract requires secure conversation with require cancellation = true -->  
-          <security authenticationMode="SecureConversation">  
-              <secureConversationBootstrap authenticationMode="IssuedTokenOverTransport" />  
-          </security>  
-<!-- requireClientCertificate = true or <windowsStreamSecurity /> can be used, but does not make sense for most scenarios -->  
-          <sslStreamSecurity />  
-          <tcpTransport />  
-       </binding>              
-    </customBinding>  
-</bindings>  
+
+<xref:System.ServiceModel.WSFederationHttpBinding>yalnızca veri birimini ve istek/yanıt iletisi değişimi sözleşmelerini destekler. Çift yönlü ileti değişimi sözleşmesini kullanmak için özel bir bağlama oluşturmanız gerekir. Aşağıdaki yordamlarda bunun nasıl yapılacağı, HTTP ve TCP aktarımları için Ileti modu güvenliğinin kullanılması ve TCP aktarımı için karışık mod güvenliği kullanılması gösterilmektedir. Tüm 3 bağlamaları gösteren örnek kod bu konunun sonunda yer almaktadır.
+
+Ayrıca, koddaki bağlamayı da oluşturabilirsiniz. Oluşturulacak bağlama öğeleri yığınının bir açıklaması için bkz [. nasıl yapılır: SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)kullanarak özel bir bağlama oluşturun.
+
+## <a name="to-create-a-duplex-federated-custom-binding-with-http"></a>HTTP ile çift yönlü federe özel bağlama oluşturmak için
+
+1. Yapılandırma dosyasının [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) bağlamalar > düğümünde bir CustomBinding > öğesi oluşturun. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+
+2. CustomBinding > öğesinin içinde, `name` özniteliği olarak ayarlanmış`FederationDuplexHttpMessageSecurityBinding`bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesi oluşturun. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+
+3. Bağlama > öğesinin içinde, `authenticationMode` özniteliği olarak ayarlanmış`SecureConversation`bir [ \<güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğesi oluşturun. [ \<](../../../../docs/framework/misc/binding.md)
+
+4. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) `authenticationMode` `IssuedTokenForCertificate` [ Güvenlik>öğesiiçinde,veyaolarakayarlananözniteliğiilebirsecurebir\<Bootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğesioluşturun`IssuedTokenForSslNegotiated`.
+
+5. Güvenlik > öğesini izleyerek boş [ \<bir CompositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) öğesi oluşturun. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)
+
+6. CompositeDuplex > öğeden sonra boş [ \<bir oneWay >](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) öğesi oluşturun. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)
+
+7. OneWay > öğesini izleyerek boş [ \<bir HttpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md) öğesi oluşturun. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)
+
+## <a name="to-create-a-duplex-federated-custom-binding-with-tcp-message-security-mode"></a>Çift yönlü federe özel bağlamayı TCP ileti güvenliği moduyla oluşturmak için
+
+1. Yapılandırma dosyasının [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) bağlamalar > düğümünde bir CustomBinding > öğesi oluşturun. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+
+2. CustomBinding > öğesinin içinde, `name` özniteliği olarak ayarlanmış`FederationDuplexTcpMessageSecurityBinding`bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesi oluşturun. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+
+3. Bağlama > öğesinin içinde, `authenticationMode` özniteliği olarak ayarlanmış`SecureConversation`bir [ \<güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğesi oluşturun. [ \<](../../../../docs/framework/misc/binding.md)
+
+4. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) `authenticationMode` `IssuedTokenForCertificate` [ Güvenlik>öğesiiçinde,veyaolarakayarlananözniteliğiilebirsecurebir\<Bootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğesioluşturun`IssuedTokenForSslNegotiated`.
+
+5. Güvenlik > öğesini izleyerek boş [ \<bir TcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) öğesi oluşturun. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)
+
+## <a name="to-create-a-duplex-federated-custom-binding-with-tcp-mixed-security-mode"></a>TCP karma güvenlik modu ile çift yönlü federe özel bağlama oluşturmak için
+
+1. Yapılandırma dosyasının [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) bağlamalar > düğümünde bir CustomBinding > öğesi oluşturun. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+
+2. CustomBinding > öğesinin içinde, `name` özniteliği olarak ayarlanmış`FederationDuplexTcpTransportSecurityWithMessageCredentialBinding`bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesi oluşturun. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+
+3. Bağlama > öğesinin içinde, `authenticationMode` özniteliği olarak ayarlanmış`SecureConversation`bir [ \<güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğesi oluşturun. [ \<](../../../../docs/framework/misc/binding.md)
+
+4. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) `authenticationMode` `IssuedTokenForCertificate` [ Güvenlik>öğesiiçinde,veyaolarakayarlananözniteliğiilebirsecurebir\<Bootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğesioluşturun`IssuedTokenForSslNegotiated`.
+
+5. Güvenlik > öğesini izleyerek boş [ \<bir sslStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md) öğesi oluşturun. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)
+
+6. SslStreamSecurity > öğesini izleyerek boş [ \<bir TcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) öğesi oluşturun. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)
+
+## <a name="code-sample"></a>Kod örneği
+
+### <a name="sample-with-3-bindings"></a>3 bağlamalarla örnek
+
+1. Yapılandırma dosyanıza aşağıdaki kodu ekleyin.
+
+## <a name="example"></a>Örnek
+
+```xml
+<bindings>
+   <customBinding>
+      <binding name="FederationDuplexHttpMessageSecurityBinding">
+<!-- duplex contract requires secure conversation with require cancellation = true -->
+          <security authenticationMode="SecureConversation">
+              <secureConversationBootstrap authenticationMode="IssuedTokenForSslNegotiated" />
+          </security>
+          <compositeDuplex />
+          <oneWay />
+          <httpTransport />
+       </binding>
+<!-- duplex over https is not supported -->
+       <binding name="FederationDuplexTcpMessageSecurityBinding">
+<!-- duplex contract requires secure conversation with require cancellation = true -->
+          <security authenticationMode="SecureConversation">
+              <secureConversationBootstrap authenticationMode="IssuedTokenForSslNegotiated" />
+          </security>
+          <tcpTransport />
+       </binding>
+       <binding name="FederationDuplexTcpTransportSecurityWithMessageCredentialsBinding">
+<!-- duplex contract requires secure conversation with require cancellation = true -->
+          <security authenticationMode="SecureConversation">
+              <secureConversationBootstrap authenticationMode="IssuedTokenOverTransport" />
+          </security>
+<!-- requireClientCertificate = true or <windowsStreamSecurity /> can be used, but does not make sense for most scenarios -->
+          <sslStreamSecurity />
+          <tcpTransport />
+       </binding>
+    </customBinding>
+</bindings>
 ```

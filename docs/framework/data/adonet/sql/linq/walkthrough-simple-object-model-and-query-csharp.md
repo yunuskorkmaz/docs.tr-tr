@@ -2,158 +2,168 @@
 title: 'İzlenecek yol: Basit Nesne Modeli ve Sorgu (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 62d28d61b3df0cfd792cedc87daf91526b162818
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 43092eb7490d5629f1ababac1d8f8b3aff94299b
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742617"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971862"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>İzlenecek yol: Basit Nesne Modeli ve Sorgu (C#)
-Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en düşük karmaşıklık bir senaryodur. Örnek Northwind veritabanındaki Müşteriler tablosunu modeller bir varlık sınıfı oluşturur. Ardından, Londra'da buluna listesi müşteriler için basit bir sorgu oluşturur.  
-  
- Bu izlenecek yol, kod odaklı yardımcı olmak için tasarım gereği Göster [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kavramları. Normal şekilde açıklamak gerekirse, Nesne İlişkisel Tasarımcısı, nesne modeli oluşturmak için kullanırsınız.  
-  
- [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
-  
- Bu izlenecek yol, Visual kullanılarak yazılmış olduğundan C# geliştirme ayarları.  
-  
-## <a name="prerequisites"></a>Önkoşullar  
-  
-- Bu izlenecek yol, dosyaları tutmak için ayrılmış bir klasör ("c:\linqtest5") kullanır. İzlenecek yol başlamadan önce bu klasörü oluşturun.  
-  
-- Bu izlenecek yol, Northwind örnek veritabanıyla kurulan gerektirir. Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Yükleme sitesinden indirebilirsiniz. Yönergeler için [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Veritabanı indirdikten sonra dosyayı c:\linqtest5 klasöre kopyalayın.  
-  
-## <a name="overview"></a>Genel Bakış  
- Bu kılavuz altı ana görevden oluşur:  
-  
-- Oluşturma bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio'daki çözüm.  
-  
-- Bir sınıf, bir veritabanı tablosuna eşleme.  
-  
-- Veritabanı sütunlarını gösteren sınıf özelliklerini belirleme.  
-  
-- Northwind veritabanına bir bağlantı belirtme.  
-  
-- Veritabanına karşı çalıştırmak için basit bir sorgu oluşturma.  
-  
-- Sorguyu yürüten ve sonuçları gözleme.  
-  
-## <a name="creating-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturma  
- Bu ilk görevde oluşturduğunuz derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proje.  
-  
-#### <a name="to-create-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturmak için  
-  
-1. Visual Studio'da **dosya** menüsünde **yeni**ve ardından **proje**.  
-  
-2. İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusu, tıklayın **Visual C#** .  
-  
-3. İçinde **şablonları** bölmesinde tıklayın **konsol uygulaması**.  
-  
-4. İçinde **adı** kutusuna **LinqConsoleApp**.  
-  
-5. İçinde **konumu** kutusunda, proje dosyalarını depolamak istediğiniz doğrulayın.  
-  
-6. **Tamam**'ı tıklatın.  
-  
-## <a name="adding-linq-references-and-directives"></a>LINQ başvuruları ve yönergeleri ekleme  
- Bu izlenecek yol, projenizdeki varsayılan olarak yüklü olmayabilir derlemeleri kullanır. System.Data.Linq projenize bir başvuru olarak listeleniyorsa değil (genişletin **başvuruları** düğümünde **Çözüm Gezgini**), bunu, aşağıdaki adımlarda açıklandığı gibi ekleyin.  
-  
-#### <a name="to-add-systemdatalinq"></a>System.Data.Linq eklemek için  
-  
-1. İçinde **Çözüm Gezgini**, sağ **başvuruları**ve ardından **Başvuru Ekle**.  
-  
-2. İçinde **Başvuru Ekle** iletişim kutusu, tıklayın **.NET**System.Data.Linq derleme tıklayın ve ardından **Tamam**.  
-  
-     Derleme, projeye eklenir.  
-  
-3. Üstüne aşağıdaki yönergeleri ekleme **Program.cs**:  
-  
-     [!code-csharp[DLinqWalk1CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#1)]  
-  
-## <a name="mapping-a-class-to-a-database-table"></a>Bir sınıf için bir veritabanı tablosu eşleme  
- Bu adımda, bir sınıf oluşturun ve bir veritabanı tablosuna eşleyin. Bu tür bir sınıf olarak adlandırılır bir *varlık sınıfı*. Eşleme yalnızca ekleyerek gerçekleştirilir Not <xref:System.Data.Linq.Mapping.TableAttribute> özniteliği. <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> Özelliği veritabanında tablo adını belirtir.  
-  
-#### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>Bir varlık sınıfı oluşturun ve bir veritabanı tablosuna eşlemek için  
-  
-- Hemen Yukarıdaki program.cs'ye aşağıdaki kodu yapıştırın veya yazın `Program` sınıf bildiriminin:  
-  
-     [!code-csharp[DLinqWalk1CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#2)]  
-  
-## <a name="designating-properties-on-the-class-to-represent-database-columns"></a>Veritabanı sütunlarını gösteren sınıf özelliklerini belirleme  
- Bu adımda, çeşitli görevleri gerçekleştirirsiniz.  
-  
-- Kullandığınız <xref:System.Data.Linq.Mapping.ColumnAttribute> belirtmek için özniteliği `CustomerID` ve `City` sınıf özellikleri varlığı temsil eden bir veritabanı tablosundaki sütun olarak.  
-  
-- Belirlediğiniz `CustomerID` veritabanı birincil anahtar sütunu temsil eden olarak özelliği.  
-  
-- Belirlediğiniz `_CustomerID` ve `_City` özel depolama alanları. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sonra depolayabilir ve iş mantığı içerebilecek ortak erişimciler kullanmak yerine doğrudan değerleri alabilirsiniz.  
-  
-#### <a name="to-represent-characteristics-of-two-database-columns"></a>İki veritabanı sütun özellikleri temsil etmek için  
-  
-- İçin küme ayraçlarının içindeki Program.cs'ye aşağıdaki kodu yapıştırın veya yazın `Customer` sınıfı.  
-  
-     [!code-csharp[DLinqWalk1CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#3)]  
-  
-## <a name="specifying-the-connection-to-the-northwind-database"></a>Northwind veritabanına bir bağlantı belirtme  
- Bu adımda kullandığınız bir <xref:System.Data.Linq.DataContext> , kod tabanlı veri yapıları ve veritabanı arasında bir bağlantı kurmak için nesne. <xref:System.Data.Linq.DataContext> Ana kanal üzerinden veritabanından nesneleri almak ve değişiklikleri gönderme.  
-  
- Ayrıca bildirdiğiniz bir `Table<Customer>` veritabanındaki Müşteriler tablosunu karşı sorgularınız için mantıksal, belirlenmiş tablosu olarak görev yapacak. Oluşturacak ve sonraki adımlarda aşağıdaki sorguları yürütün.  
-  
-#### <a name="to-specify-the-database-connection"></a>Veritabanı bağlantısını belirtmek için  
-  
-- İçine aşağıdaki kodu yazın veya yapıştırın `Main` yöntemi.  
-  
-     Unutmayın `northwnd.mdf` linqtest5 klasörü içinde dosya varsayılır. Daha fazla bilgi için bu kılavuzda daha önce açıklanan Önkoşullar bölümüne bakın.  
-  
-     [!code-csharp[DLinqWalk1CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#4)]  
-  
-## <a name="creating-a-simple-query"></a>Basit bir sorgu oluşturma  
- Bu adımda, veritabanı Müşteriler tablosundaki hangi müşteriler Londra'da bulmak için bir sorgu oluşturun. Bu adımda sorgu kod yalnızca sorgu açıklar. Bunu yürütmez. Bu yaklaşım olarak da bilinen *ertelenmiş yürütme*. Daha fazla bilgi için [(C#) LINQ sorgularına giriş](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
-  
- Ayrıca SQL göstermek için bir günlük çıktı üretebilir komutlarının olacak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] oluşturur. Bu günlük özelliğini (kullanan <xref:System.Data.Linq.DataContext.Log%2A>) hata ayıklama ve doğru bir şekilde veritabanına gönderilen komutları sorgunuzu temsil belirlemede yararlıdır.  
-  
-#### <a name="to-create-a-simple-query"></a>Basit bir sorgu oluşturmak için  
-  
-- İçine aşağıdaki kodu yazın veya yapıştırın `Main` sonrasına `Table<Customer>` bildirimi.  
-  
-     [!code-csharp[DLinqWalk1ACS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#5)]  
-  
-## <a name="executing-the-query"></a>Sorgu yürütülüyor  
- Bu adımda, aslında sorguyu yürütün. Sonuçları gerekli olana kadar önceki adımlarda oluşturulan sorgu ifadeleri değerlendirilmez. Başladığınızda `foreach` yineleme, veritabanında bir SQL komutu yürütülür ve nesneleri gerçekleştirilmiş.  
-  
-#### <a name="to-execute-the-query"></a>Sorguyu yürütmek için  
-  
-1. Sonuna aşağıdaki kodu yapıştırın veya yazın `Main` yöntemi (sonra sorgu açıklama).  
-  
-     [!code-csharp[DLinqWalk1ACS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#6)]  
-  
-2. Uygulamada hata ayıklamak için F5 tuşuna basın.  
-  
+
+Bu izlenecek yol, en az karmaşıklıklarla temel [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uçtan uca bir senaryo sağlar. Örnek Northwind veritabanındaki Customers tablosunu modelleyen bir varlık sınıfı oluşturacaksınız. Ardından, Londra 'da bulunan müşterileri listelemek için basit bir sorgu oluşturacaksınız.
+
+Bu izlenecek yol, kavramları göstermeye [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yardımcı olmak için tasarıma göre kod odaklı bir yönergedir. Normalde konuşarak, nesne modelinizi oluşturmak için Nesne İlişkisel Tasarımcısı kullanırsınız.
+
+[!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]
+
+Bu izlenecek yol, Visual C# Development ayarları kullanılarak yazılmıştır.
+
+## <a name="prerequisites"></a>Önkoşullar
+
+- Bu izlenecek yol, dosyaları tutmak için adanmış bir klasör ("c:\linqtest5") kullanır. Yönergeye başlamadan önce bu klasörü oluşturun.
+
+- Bu izlenecek yol, Northwind örnek veritabanı gerektirir. Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Download sitesinden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Veritabanını indirdikten sonra, dosyayı c:\linqtest5 klasörüne kopyalayın.
+
+## <a name="overview"></a>Genel Bakış
+
+Bu izlenecek yol altı ana görevden oluşur:
+
+- Visual Studio 'da çözüm oluşturma. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]
+
+- Bir sınıfı bir veritabanı tablosuna eşleme.
+
+- Veritabanı sütunlarını temsil etmek için sınıfında Özellikler belirleme.
+
+- Northwind veritabanı bağlantısı belirtiliyor.
+
+- Veritabanına karşı çalıştırmak için basit bir sorgu oluşturma.
+
+- Sorgu Yürütülüyor ve sonuçları gözlemleme.
+
+## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL çözümü oluşturma
+
+Bu ilk görevde, bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proje derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü oluşturursunuz.
+
+### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL çözümü oluşturmak için
+
+1. Visual Studio **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
+
+2. **Yeni proje** Iletişim kutusunun **Proje türleri** bölmesinde, **C#görsel**' e tıklayın.
+
+3. **Şablonlar** bölmesinde **konsol uygulaması**' na tıklayın.
+
+4. **Ad** kutusuna **LinqConsoleApp**yazın.
+
+5. **Konum** kutusunda, proje dosyalarınızı nerede depolamak istediğinizi doğrulayın.
+
+6.           **Tamam**'ı tıklatın.
+
+## <a name="adding-linq-references-and-directives"></a>LINQ başvuruları ve yönergeleri ekleme
+
+Bu izlenecek yol, projenize varsayılan olarak yüklenmemiş olabilecek derlemeleri kullanır. System. Data. LINQ, projenizde bir başvuru olarak listelenmiyorsa ( **Çözüm Gezgini** **Başvurular** düğümünü genişletin), aşağıdaki adımlarda açıklandığı gibi ekleyin.
+
+### <a name="to-add-systemdatalinq"></a>System. Data. LINQ eklemek için
+
+1. **Çözüm Gezgini**' de, **Başvurular**' a sağ tıklayın ve ardından **Başvuru Ekle**' ye tıklayın.
+
+2. **Başvuru Ekle** iletişim kutusunda, **.net**' e tıklayın, System. Data. LINQ derlemesine tıklayın ve ardından **Tamam**' a tıklayın.
+
+     Derleme projeye eklenir.
+
+3. Aşağıdaki yönergeleri **program.cs**üst kısmına ekleyin:
+
+     [!code-csharp[DLinqWalk1CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#1)]
+
+## <a name="mapping-a-class-to-a-database-table"></a>Bir sınıfı bir veritabanı tablosuna eşleme
+
+Bu adımda, bir sınıf oluşturur ve bunu bir veritabanı tablosuyla eşleyin. Böyle bir sınıf bir *varlık sınıfı*olarak adlandırılır. Eşlemenin yalnızca <xref:System.Data.Linq.Mapping.TableAttribute> özniteliği eklenerek gerçekleştirildiğine unutmayın. <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> Özelliği, veritabanında tablonun adını belirtir.
+
+### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>Bir varlık sınıfı oluşturmak ve veritabanını bir veritabanı tablosuyla eşlemek için
+
+- Aşağıdaki kodu, `Program` sınıf bildiriminin hemen üstüne program.cs içine yazın veya yapıştırın:
+
+     [!code-csharp[DLinqWalk1CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#2)]
+
+## <a name="designating-properties-on-the-class-to-represent-database-columns"></a>Sınıf üzerinde veritabanı sütunlarını temsil etmek için özellikler belirleme
+
+Bu adımda, birkaç görevi gerçekleştirirsiniz.
+
+- <xref:System.Data.Linq.Mapping.ColumnAttribute> Özniteliği, veritabanı tablosundaki sütunları temsil eden `City` varlık sınıfını belirlemek `CustomerID` için kullanın.
+
+- Özelliği, `CustomerID` veritabanında bir birincil anahtar sütununu temsil edecek şekilde belirlersiniz.
+
+- Özel depolama `_CustomerID` alanı `_City` için ve alanlarını belirlersiniz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]daha sonra, iş mantığını içerebilen ortak erişimcileri kullanmak yerine doğrudan değerleri saklayabilir ve alabilir.
+
+### <a name="to-represent-characteristics-of-two-database-columns"></a>İki veritabanı sütununun özelliklerini temsil etmek için
+
+- Aşağıdaki kodu, `Customer` sınıfının küme ayraçları içine yazın veya program.cs içine yapıştırın.
+
+     [!code-csharp[DLinqWalk1CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#3)]
+
+## <a name="specifying-the-connection-to-the-northwind-database"></a>Northwind veritabanı bağlantısını belirtme
+
+Bu adımda, kod tabanlı veri <xref:System.Data.Linq.DataContext> yapılarınız ve veritabanının kendisi arasında bağlantı kurmak için bir nesnesi kullanılır. , <xref:System.Data.Linq.DataContext> Veritabanından nesneleri alıp değişiklikleri gönderdiğiniz ana kanaldır.
+
+Ayrıca, veritabanınızdaki müşteriler `Table<Customer>` tablosuna karşı sorgularınız için mantıksal, türü belirlenmiş tablo olarak davranacak bir de bildirir. Daha sonraki adımlarda bu sorguları oluşturup yürüteceksiniz.
+
+### <a name="to-specify-the-database-connection"></a>Veritabanı bağlantısını belirtmek için
+
+- `Main` Yöntemine aşağıdaki kodu yazın veya yapıştırın.
+
+     `northwnd.mdf` Dosyanın linqtest5 klasöründe olduğunu unutmayın. Daha fazla bilgi için bu kılavuzda daha önce bahsedilen Önkoşullar bölümüne bakın.
+
+     [!code-csharp[DLinqWalk1CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#4)]
+
+## <a name="creating-a-simple-query"></a>Basit sorgu oluşturma
+
+Bu adımda, veritabanı müşterileri tablosundaki hangi müşterilerin Londra 'da bulunacağını bulmak için bir sorgu oluşturursunuz. Bu adımdaki sorgu kodu yalnızca sorguyu açıklar. Bunu yürütmez. Bu yaklaşım *ertelenmiş yürütme*olarak bilinir. Daha fazla bilgi için bkz. [LINQ Sorgularına Giriş (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
+
+Ayrıca, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] üreten SQL komutlarını göstermek için bir günlük çıktısı oluşturacaksınız. Bu günlüğe kaydetme özelliğinin (kullandığı <xref:System.Data.Linq.DataContext.Log%2A>) hata ayıklama işlemi sırasında ve veritabanına gönderilen komutların sorgunuzu doğru şekilde temsil ettiğini belirlemek için yararlıdır.
+
+### <a name="to-create-a-simple-query"></a>Basit bir sorgu oluşturmak için
+
+- Aşağıdaki kodu `Main` , `Table<Customer>` bildiriminden sonraki yönteme yazın veya yapıştırın.
+
+     [!code-csharp[DLinqWalk1ACS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#5)]
+
+## <a name="executing-the-query"></a>Sorgu Yürütülüyor
+
+Bu adımda, aslında sorguyu yürütütemezsiniz. Önceki adımlarda oluşturduğunuz sorgu ifadeleri, sonuçlar gerekene kadar değerlendirilmez. `foreach` Yinelemeye başladığınızda, veritabanına karşı bir SQL komutu yürütülür ve nesneler gerçekleştirilmiş olur.
+
+### <a name="to-execute-the-query"></a>Sorguyu yürütmek için
+
+1. `Main` Yönteminin sonuna (sorgu açıkladıktan sonra) aşağıdaki kodu yazın veya yapıştırın.
+
+     [!code-csharp[DLinqWalk1ACS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#6)]
+
+2. Uygulamada hata ayıklamak için F5 tuşuna basın.
+
     > [!NOTE]
-    >  Uygulamanızı bir çalışma zamanı hatası oluşturur, sorun giderme bölümüne bakın. [izlenecek yollarla öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
-  
-     Sorgu sonuçları konsol penceresinde aşağıdaki gibi görünmelidir:  
-  
-     `ID=AROUT, City=London`  
-  
-     `ID=BSBEV, City=London`  
-  
-     `ID=CONSH, City=London`  
-  
-     `ID=EASTC, City=London`  
-  
-     `ID=NORTS, City=London`  
-  
-     `ID=SEVES, City=London`  
-  
-3. Konsol penceresinde uygulamayı kapatmak için Enter tuşuna basın.  
-  
-## <a name="next-steps"></a>Sonraki Adımlar  
- [İzlenecek yol: Sorgulama arasında ilişkiler (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) konu, bu gözden geçirme sona ereceği devam eder. Sorgu arasında ilişkiler yönerge gösterir nasıl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tablolarda, benzer şekilde sorgulayabilirsiniz *birleştirmeler* ilişkisel bir veritabanındaki.  
-  
- Sorgu arasında ilişkiler Kılavuzu uygulamak istiyorsanız, önkoşul olan çözüm geçirmesini tamamladınız, gözden geçirme için kaydettiğinizden emin olun.  
-  
+    >  Uygulamanız bir çalışma zamanı hatası oluşturursa, [Izlenecek yollara göre öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)konusunun sorun giderme bölümüne bakın.
+
+     Konsol penceresinde sorgu sonuçları aşağıdaki gibi görünmelidir:
+
+     `ID=AROUT, City=London`
+
+     `ID=BSBEV, City=London`
+
+     `ID=CONSH, City=London`
+
+     `ID=EASTC, City=London`
+
+     `ID=NORTS, City=London`
+
+     `ID=SEVES, City=London`
+
+3. Uygulamayı kapatmak için konsol penceresinde ENTER tuşuna basın.
+
+## <a name="next-steps"></a>Sonraki Adımlar
+
+[İzlenecek yol: İlişkiler genelinde sorgulama (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) konusu Bu izlenecek yolun sona erdiği yerde devam eder. İlişkiler Kılavuzu 'ndaki sorgu, ilişkisel bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veritabanındaki *birleştirmelere* benzer şekilde tablolar arasında nasıl sorgu yapılacağını gösterir.
+
+Sorgu Ilişkileri genelinde sorgu yapmak istiyorsanız, bir önkoşul olan, az önce tamamladığınız izlenecek yol için çözümü kaydettiğinizden emin olun.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İzlenecek Yollarla Öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

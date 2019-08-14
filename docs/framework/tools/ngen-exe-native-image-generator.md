@@ -20,18 +20,21 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: fb7758a3e59806b246a98c343d78500263433efc
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832819"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971472"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 
 Yerel Görüntü Oluşturucusu (Ngen.exe), yönetilen uygulamaların performansını artıran bir araçtır. Ngen.exe, işlemciye özel derlenmiş makine kodu içeren dosyalar olan yerel görüntüler oluşturur ve bunları yerel bilgisayarın yerel görüntü önbelleğine yükler. Çalışma zamanı orijinal derlemeyi derlemek için anlık (JIT) derleyiciyi kullanmak yerine önbellekteki yerel görüntüleri kullanabilir.
 
-Ngen.exe'ye .NET Framework 4 içinde yapılan değişiklikler:
+> [!NOTE]
+> Ngen. exe yalnızca .NET Framework hedefleyen derlemeler için yerel görüntüleri derler. .NET Core için eşdeğer yerel görüntü Oluşturucu, [çapraz genel](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md)' tir. 
+
+.NET Framework 4 ' te Ngen. exe ' ye yapılan değişiklikler:
 
 - Ngen.exe artık derlemeleri tam güven ile derler ve kod erişimi güvenliği (CAS) ilkesi artık değerlendirilmez.
 
@@ -43,42 +46,42 @@ Ngen.exe'ye .NET Framework 2.0 içinde yapılan değişiklikler:
 
 - Yerel görüntüler artık uygulama etki alanları arasında paylaşılabilir.
 
-- Yeni bir eylem `update`, kılınan görüntüleri yeniden oluşturur.
+- Yeni bir eylem `update`, geçersiz kılınan görüntüleri yeniden oluşturur.
 
 - Eylemler, görüntüleri oluşturmak ve yüklemek için bilgisayardaki boşta kalma süresini kullanan bir servis tarafından ertelenebilir.
 
 - Görüntü geçersiz kılmanın bazı nedenleri kaldırıldı.
 
-Windows 8'de bkz [Native Image Task](#native-image-task).
+Windows 8 ' de, [yerel görüntü görevi](#native-image-task)' ne bakın.
 
-Ngen.exe ve yerel görüntü hizmetini kullanma hakkında ek bilgi için bkz: [Native Image Service](#native-image-service).
+Ngen. exe ve yerel görüntü hizmetini kullanma hakkında daha fazla bilgi için bkz. [Native Image Service](#native-image-service).
 
 > [!NOTE]
-> 1.0 ve 1.1 .NET Framework sürümleri için Ngen.exe sözdizimi bulunabilir [Native Image Generator (Ngen.exe) Legacy Syntax](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100)).
+> .NET Framework 1,0 ve 1,1 sürümleri için Ngen. exe sözdizimi [Yerel Görüntü Oluşturucu (Ngen. exe) eski sözdiziminde](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100))bulunabilir.
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için Visual Studio (veya Windows 7'de Visual Studio komut istemi) için geliştirici Komut İstemi'ni kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
 Komut satırına şunu yazın:
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```console
 ngen action [options]
 ```
 
-```
+```console
 ngen /? | /help
 ```
 
 ## <a name="actions"></a>Eylemler
 
-Aşağıdaki tabloda her söz dizimi görülmektedir `action`. Ayrı bölümlerini açıklamaları için bir `action`, bkz: [bağımsız değişkenleri](#ArgumentTable), [öncelik düzeyleri](#PriorityTable), [senaryoları](#ScenarioTable), ve [Config](#ConfigTable)tablolar. [Seçenekleri](#OptionTable) tablo açıklar `options` ve Yardım anahtarlarını.
+Aşağıdaki tabloda, her `action`birinin sözdizimi gösterilmektedir. Tek tek `action`bölümlerinin açıklamaları için bkz. [bağımsız değişkenler](#ArgumentTable), [Öncelik düzeyleri](#PriorityTable), [senaryolar](#ScenarioTable)ve [yapılandırma](#ConfigTable) tabloları. [Seçenekler](#OptionTable) tablosu `options` ve yardım anahtarlarını açıklar.
 
 |Eylem|Açıklama|
 |------------|-----------------|
-|`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Bir derleme ve bağımlılıkları için yerel görüntüler oluştur ve görüntüleri yerel görüntü önbelleğine yükle.<br /><br /> Varsa `/queue` belirtilirse, eylem yerel görüntü hizmetinde sıraya alınır. Varsayılan öncelik 3'tür. Bkz: [öncelik düzeyleri](#PriorityTable) tablo.|
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Bir derleme ve bağımlılıklarının yerel görüntülerini yerel görüntü önbelleğinden sil.<br /><br /> Tek bir görüntüyü ve bağımlılıklarını kaldırmak için, görüntüyü yüklemek için kullanılan aynı komut satırı bağımsız değişkenlerini kullanın. **Not:**  .NET Framework 4, eylem başlangıç `uninstall` * artık desteklenmiyor.|
-|`update` [`/queue`]|Geçersiz olan yerel görüntüleri güncelleştir.<br /><br /> Varsa `/queue` belirtilirse, güncelleştirmeler yerel görüntü hizmetinde sıraya alınır. Güncelleştirmeler her zaman 3 önceliğindedir ve bilgisayar boşta olduğunda çalışır.|
+|`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Bir derleme ve bağımlılıkları için yerel görüntüler oluştur ve görüntüleri yerel görüntü önbelleğine yükle.<br /><br /> `/queue` Belirtilmişse, eylem yerel görüntü hizmeti için sıraya alınır. Varsayılan öncelik 3'tür. [Öncelik düzeyleri](#PriorityTable) tablosuna bakın.|
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Bir derleme ve bağımlılıklarının yerel görüntülerini yerel görüntü önbelleğinden sil.<br /><br /> Tek bir görüntüyü ve bağımlılıklarını kaldırmak için, görüntüyü yüklemek için kullanılan aynı komut satırı bağımsız değişkenlerini kullanın. **Not:**  .NET Framework 4 ' te başlayarak, eylem `uninstall` * artık desteklenmez.|
+|`update` [`/queue`]|Geçersiz olan yerel görüntüleri güncelleştir.<br /><br /> `/queue` Belirtilmişse, güncelleştirmeler yerel görüntü hizmeti için sıraya alınır. Güncelleştirmeler her zaman 3 önceliğindedir ve bilgisayar boşta olduğunda çalışır.|
 |`display` [`assemblyName` &#124; `assemblyPath`]|Bir derleme ve bağımlılıkları için yerel görüntülerin durumunu görüntüle.<br /><br /> Eğer bağımsız değişken sağlanmazsa, yerel görüntü önbelleğindeki her şey görüntülenir.|
 |`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -veya-<br /><br /> `eqi` [1&#124;2&#124;3]|Sıraya alınan derleme işlerini yürüt.<br /><br /> Eğer bir öncelik belirtilirse, ona eşit veya daha büyük önceliğe sahip derleme işleri yürütülür. Eğer öncelik belirtilmezse, sıraya alınan tüm derleme işleri yürütülür.|
 |`queue` {`pause` &#124; `continue` &#124; `status`}|Yerel görüntü hizmetini duraklat, duraklatılan hizmetin devam etmesine izin ver veya hizmetin durumunu sorgula.|
@@ -89,18 +92,18 @@ Aşağıdaki tabloda her söz dizimi görülmektedir `action`. Ayrı bölümleri
 
 |Bağımsız Değişken|Açıklama|
 |--------------|-----------------|
-|`assemblyName`|Derlemenin tam görünen adı. Örneğin: `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"` **Not:**  Gibi bir kısmi derleme adı sağlayabilirsiniz `myAssembly`, için `display` ve `uninstall` eylemler. <br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|
+|`assemblyName`|Derlemenin tam görünen adı. Örneğin: `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Not:**  Ve`display` `myAssembly` eylemleriiçingibikısmibir`uninstall` derleme adı sağlayabilirsiniz. <br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|
 |`assemblyPath`|Derlemenin açık yolu. Tam veya göreli bir yol belirtebilirsiniz.<br /><br /> Eğer bir yol belirtmeden dosya adı belirtilseniz, derleme geçerli dizinde bulunmalıdır.<br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|
 
 <a name="PriorityTable"></a>
 
 ## <a name="priority-levels"></a>Öncelik Düzeyleri
 
-|Öncelik|Açıklama|
+|Priority|Açıklama|
 |--------------|-----------------|
 |`1`|Yerel görüntüler, boşta kalma süresi beklenmeden hemen oluşturulur ve yüklenir.|
 |`2`|Yerel görüntüler boşta kalma süresi beklenmeden, ancak tüm 1 öncelikli eylemler (ve bağımlılıkları) tamamlandıktan sonra yüklenir.|
-|`3`|Yerel görüntüler, yerel görüntü hizmeti bilgisayarın boşta olduğunu algıladığında yüklenir. Bkz: [yerel görüntü hizmeti](#native-image-service).|
+|`3`|Yerel görüntüler, yerel görüntü hizmeti bilgisayarın boşta olduğunu algıladığında yüklenir. Bkz. [yerel görüntü hizmeti](#native-image-service).|
 
 <a name="ScenarioTable"></a>
 
@@ -118,7 +121,7 @@ Aşağıdaki tabloda her söz dizimi görülmektedir `action`. Ayrı bölümleri
 
 |Yapılandırma|Açıklama|
 |-------------------|-----------------|
-|`/ExeConfig:``exePath`|Belirtilen çalıştırılabilir derlemesinin yapılandırmasını kullan.<br /><br /> Ngen.exe, bağımlılıklara bağlarken yükleyici ile aynı kararları almalıdır. Paylaşılan bir bileşen çalışma zamanında yüklendiğinde kullanarak <xref:System.Reflection.Assembly.Load%2A> yöntemi, uygulamanın yapılandırma dosyası paylaşılan bileşen için yüklenen bağımlılıkları belirler — örneğin, yüklenen bir bağımlılığın sürümü. `/ExeConfig` Anahtar üzerinde bağımlılıkları yüklenemeyen çalışma zamanında Ngen.exe rehberlik sağlar.|
+|`/ExeConfig:``exePath`|Belirtilen çalıştırılabilir derlemesinin yapılandırmasını kullan.<br /><br /> Ngen.exe, bağımlılıklara bağlarken yükleyici ile aynı kararları almalıdır. Çalışma zamanında paylaşılan bir bileşen yüklendiğinde, <xref:System.Reflection.Assembly.Load%2A> yöntemi kullanılarak, uygulamanın yapılandırma dosyası paylaşılan bileşen için yüklenen bağımlılıkları belirler — örneğin, yüklenen bir bağımlılığın sürümü. Anahtar `/ExeConfig` , çalışma zamanında hangi bağımlılıkların yüklenebileceğine ilişkin Ngen. exe kılavuzu sağlar.|
 |`/AppBase:``directoryPath`|Bağımlılıkları bulurken, uygulama tabanı olarak belirtilen dizini kullan.|
 
 <a name="OptionTable"></a>
@@ -129,7 +132,7 @@ Aşağıdaki tabloda her söz dizimi görülmektedir `action`. Ayrı bölümleri
 |------------|-----------------|
 |`/nologo`|Microsoft başlangıç başlığını bastır.|
 |`/silent`|Başarı iletilerinin görüntülenmesini bastır.|
-|`/verbose`|Hata ayıklama için ayrıntılı bilgi görüntüle. **Not:**  İşletim sistemi sınırlamaları nedeniyle, bu seçenek Windows 98 ve Windows Millennium Edition üzerinde çok fazla ek bilgi görüntülemez.|
+|`/verbose`|Hata ayıklama için ayrıntılı bilgi görüntüle. **Not:**  İşletim sistemi sınırlamaları nedeniyle, bu seçenek Windows 98 ve Windows Millennium Edition hakkında daha fazla bilgi göstermez.|
 |`/help`, `/?`|Geçerli yayın için komut sözdizimi ve seçenekleri görüntüle.|
 
 ## <a name="remarks"></a>Açıklamalar
@@ -137,24 +140,24 @@ Aşağıdaki tabloda her söz dizimi görülmektedir `action`. Ayrı bölümleri
 Ngen.exe'yi çalıştırabilmek için yönetici ayrıcalıklarınızın olması gerekir.
 
 > [!CAUTION]
-> Ngen.exe'yi tam güvenilir olmayan derlemeler üzerinde çalıştırmayın. .NET Framework 4 ile başlayarak, Ngen.exe derlemeleri tam güven ile derler ve kod erişimi güvenliği (CAS) ilkesi artık değerlendirilmez.
+> Ngen.exe'yi tam güvenilir olmayan derlemeler üzerinde çalıştırmayın. .NET Framework 4 ' te başlayarak, Ngen. exe derlemeleri tam güvenle derler ve kod erişim güvenliği (CAS) ilkesi artık değerlendirilmez.
 
-.NET Framework 4 ile başlayarak, Ngen.exe ile oluşturulan yerel görüntüler artık kısmi güvende çalışan uygulamaların içine yüklenemez. Bunun yerine anlık (JIT) derleyici çağrılır.
+.NET Framework 4 ' te başlayarak, Ngen. exe ile oluşturulan yerel görüntüler artık kısmi güvende çalışan uygulamalara yüklenemez. Bunun yerine anlık (JIT) derleyici çağrılır.
 
-Ngen.exe belirtilen derleme için yerel görüntüler oluşturur `assemblyname` bağımsız değişkeni `install` eylem ve tüm bağımlılıkları. Bağlılıklar derleme bildirisindeki referanslar ile belirlenir. Yansıma, örneğin çağırarak kullanarak uygulamayı yüklediğinde, içinde bir bağımlılığı ayrı olarak yüklemeniz gereken tek senaryo olduğundan <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi.
+Ngen. exe, `assemblyname` `install` eylem ve tüm bağımlılıkları için bağımsız değişken tarafından belirtilen derleme için yerel görüntüler oluşturur. Bağlılıklar derleme bildirisindeki referanslar ile belirlenir. Bir bağımlılığı ayrı olarak yüklemeniz gereken tek senaryo, uygulamanın, örneğin <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metodunu çağırarak, yansıma kullanarak yüklediğinde.
 
 > [!IMPORTANT]
-> Kullanmayın <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> yöntemi ile yerel görüntüler. Bu metotla yüklenen bir görüntü, yürütme bağlamındaki diğer derlemeler tarafından kullanılamaz.
+> <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> Yöntemini yerel görüntülerle kullanmayın. Bu metotla yüklenen bir görüntü, yürütme bağlamındaki diğer derlemeler tarafından kullanılamaz.
 
-Ngen.exe bağımlılıklar için bir sayaç tutar. Örneğin, varsayalım `MyAssembly.exe` ve `YourAssembly.exe` hem de yerel görüntü önbelleğine yüklendiğini ve her ikisi de başvurmuş `OurDependency.dll`. Varsa `MyAssembly.exe` kaldırılır, `OurDependency.dll` kaldırılmamış. Yalnızca ne zaman kaldırıldı `YourAssembly.exe` de kaldırıldığında kaldırılır.
+Ngen.exe bağımlılıklar için bir sayaç tutar. Örneğin, hem yerel `MyAssembly.exe` görüntü `YourAssembly.exe` önbelleğinde hem de ' nin her ikisinin `OurDependency.dll`de ' de yüklü olduğunu varsayalım. `MyAssembly.exe` Kaldırılırsa ,`OurDependency.dll` kaldırılmaz. Yalnızca Ayrıca kaldırıldığında kaldırılır `YourAssembly.exe` .
 
 Eğer genel derleme önbelleğindeki bir derleme için doğal görüntü üretiyorsanız, onun görünür ismini belirtiniz. Bkz. <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>.
 
 Ngen.exe'nin ürettiği doğal görüntüler uygulama alanı içerisinde paylaşılabilir. Bu, Ngen.exe'yi derlemelerin uygulama etki alanları arasında paylaşılması gerektiği senaryolarda kullanabileceğiniz anlamına gelir. Alan bağımsızlığını belirtmek için:
 
-- Uygulama <xref:System.LoaderOptimizationAttribute> uygulamanıza.
+- <xref:System.LoaderOptimizationAttribute> Özniteliği uygulamanıza uygulayın.
 
-- Ayarlama <xref:System.AppDomainSetup.LoaderOptimization%2A?displayProperty=nameWithType> yeni bir uygulama etki alanı kurulum bilgilerini oluşturduğunuzda özelliği.
+- Yeni bir uygulama etki alanı için kurulum bilgilerini oluştururken özelliğiayarlayın.<xref:System.AppDomainSetup.LoaderOptimization%2A?displayProperty=nameWithType>
 
 Birden çok uygulama alanına aynı derleme yüklediğiniz zaman mutlaka alan-bağımsız kod kullanın. Eğer bir doğal görüntü paylaşılmış alana yüklendikten sonra paylaşılmamış alana yüklenirse, görüntü kullanılamaz.
 
@@ -165,49 +168,49 @@ Bu açıklamalar bölümünde:
 
 - [Farklı senaryolar için görüntü oluşturma](#Scenarios)
 
-- [Ne zaman yerel görüntü kullanılacağını belirleme](#WhenToUse)
+- [Yerel görüntülerin ne zaman kullanılacağını belirleme](#WhenToUse)
 
-  - [Bellek kullanımı İyileştirildi](#Memory)
+  - [İyileştirilmiş bellek kullanımı](#Memory)
 
   - [Daha hızlı uygulama başlatma](#Startup)
 
-  - [Kullanım değerlendirmelerine özeti](#UsageSummary)
+  - [Kullanım konularının Özeti](#UsageSummary)
 
 - [Derleme temel adreslerinin önemi](#BaseAddresses)
 
-- [Sıkı bağlama](#HardBinding)
+- [Sabit bağlama](#HardBinding)
 
-  - [Bir bağımlılık için bağlama tavsiyesi belirtmek](#DependencyHint)
+  - [Bağımlılık için bağlama ipucu belirtme](#DependencyHint)
 
-  - [Bir derleme için varsayılan bağlama tavsiyesi belirtmek](#AssemblyHint)
+  - [Derleme için varsayılan bağlama ipucu belirtme](#AssemblyHint)
 
-- [Ertelenen işlem](#Deferred)
+- [Ertelenmiş işleme](#Deferred)
 
-- [Yerel görüntüler ve JIT derlemesi](#JITCompilation)
+- [Yerel görüntüler ve JıT derlemesi](#JITCompilation)
 
   - [Geçersiz görüntüler](#InvalidImages)
 
 - [Sorun giderme](#Troubleshooting)
 
-  - [Derleme bağlaması Günlük Görüntüleyici](#Fusion)
+  - [Bütünleştirilmiş kod bağlama günlük Görüntüleyici](#Fusion)
 
   - [Jıtcompilationstart yönetilen hata ayıklama Yardımcısı](#MDA)
 
-  - [Yerel görüntü oluşturma dışında seçim yapma](#OptOut)
+  - [Yerel görüntü oluşturmayı geri alma](#OptOut)
 
 <a name="Scenarios"></a>
 
 ## <a name="generating-images-for-----different-scenarios"></a>Farklı senaryolar için görüntü oluşturma
 
-Bir derleme için yerel bir görüntü oluşturduktan sonra çalışma zamanı otomatik olarak bulun ve bu derlemeyi her çalıştırdığı zaman bu doğal görüntüyü kullanmak çalışır. Kullanım senaryolarına göre, birden fazla görüntüler oluşturulabilir.
+Bir derleme için yerel görüntü oluşturduktan sonra, çalışma zamanı derlemeyi her çalıştırdığında otomatik olarak bu yerel görüntüyü bulmayı ve kullanmayı dener. Kullanım senaryolarına göre, birden fazla görüntüler oluşturulabilir.
 
-Bir derlemeyi hata ayıklama veya profil oluşturma senaryosunda çalıştırırsanız, örneğin, çalışma zamanı ile oluşturulan yerel bir görüntü arar `/Debug` veya `/Profile` seçenekleri. Eğer eşleşen bir doğal görüntü bulamazsa, çalışma zamanı standart JIT derlemesine geri döner. Doğal görüntüleri ayıklamanın tek yolu, bir doğal görüntü ile oluşturmaktır `/Debug` seçeneği.
+Örneğin, bir derlemeyi hata ayıklama veya profil oluşturma senaryosunda çalıştırırsanız, çalışma zamanı `/Debug` veya `/Profile` seçenekleriyle oluşturulan yerel bir görüntüyü arar. Eğer eşleşen bir doğal görüntü bulamazsa, çalışma zamanı standart JIT derlemesine geri döner. Yerel görüntülerde hata ayıklamanın tek yolu, `/Debug` seçeneğiyle yerel bir görüntü oluşturmaktır.
 
-`uninstall` Eylemi de senaryoları destekler, dolayısıyla tüm senaryoları veya yalnızca seçili senaryoları kaldırabilirsiniz.
+`uninstall` Eylem ayrıca senaryoları tanır, bu sayede tüm senaryoları veya yalnızca seçili senaryoları kaldırabilirsiniz.
 
 <a name="WhenToUse"></a>
 
-## <a name="determining-when-to-use-native-images"></a>Ne zaman yerel görüntü kullanılacağını belirleme
+## <a name="determining-when-to-use-native-images"></a>Yerel görüntülerin ne zaman kullanılacağını belirleme
 
 Yerel görüntüler iki alanda performans iyileştirmesi sağlayabilir: daha iyi bellek kullanımı ve daha az başlangıç zamanı.
 
@@ -216,7 +219,7 @@ Yerel görüntüler iki alanda performans iyileştirmesi sağlayabilir: daha iyi
 
 <a name="Memory"></a>
 
-### <a name="improved-memory-use"></a>Bellek kullanımı İyileştirildi
+### <a name="improved-memory-use"></a>İyileştirilmiş bellek kullanımı
 
 Yerel görüntüler kod işlemler arasında paylaşıldığında bellek kullanımını önemli ölçüde iyileştirebilirler. Yerel görüntüler Windows PE dosyalarıdır, yani bir .dll dosyasının tek kopyası birden çok işlem tarafından paylaşılabilir; buna karşılık, JIT derleyicisi tarafından üretilen yerel kod özel bellekte tutulur ve paylaşılamaz.
 
@@ -233,11 +236,11 @@ Derlemeleri Ngen.exe ile ön derlemek bazı uygulamalar için başlangıç süre
 Sabit bağlama başlatma süresini etkileyebilir, çünkü ana uygulama derlemesine sabit bağlı olan tüm resimler aynı anda yüklenmelidirler.
 
 > [!NOTE]
-> Yükleyici, genel derleme önbelleğinde etkili bir şekilde ortadan olmayan tanımlayıcı adlı derlemeler ek doğrulama gerçekleştirdiğinden önce .NET Framework 3.5 Service Pack 1, paylaşılan, tanımlayıcı adlı bileşenleri genel bütünleştirilmiş kod önbelleğinde koymanız gerekir Yerel görüntüler kullanmanın sağladığı başlangıç zamanını tüm geliştirme. .NET Framework 3.5 SP1'de tanıtılan iyileştirmeler ek doğrulamayı kaldırır.
+> .NET Framework 3,5 hizmet paketi 1 ' den önce, yükleyici, genel derleme önbelleğinde olmayan, güçlü adlandırılmış derlemelerde ek doğrulama gerçekleştirdiğinden, paylaşılan ve tanımlayıcı adlandırılmış bileşenleri genel derleme önbelleğine yerleştirmeniz gerekir. Yerel görüntüler kullanılarak elde edilen başlatma sırasında tüm geliştirme. .NET Framework 3,5 SP1'DE tanıtılan iyileştirmeler, ek doğrulamayı kaldırdı.
 
 <a name="UsageSummary"></a>
 
-### <a name="summary-of-usage-considerations"></a>Kullanım değerlendirmelerine özeti
+### <a name="summary-of-usage-considerations"></a>Kullanım konularının Özeti
 
 Aşağıdaki genel önemli noktalar ve uygulama önemli noktaları uygulamanız için yerel görüntüleri değerlendirmek üzere çaba harcayıp harcamamaya karar vermenize yardımcı olabilir:
 
@@ -287,22 +290,22 @@ Bir yerel görüntünün tercih edilen temel adresini görüntülemek için dump
 
 <a name="HardBinding"></a>
 
-## <a name="hard-binding"></a>Sıkı bağlama
+## <a name="hard-binding"></a>Sabit bağlama
 
 Sıkı bağlama doğal görüntüler için birim zamanda yapılan işi artırır ve çalışma seti alanını azaltır. Sıkı bağlamanın dezavantajı, bir derleme yüklendiğinde o derlemeye sıkı bağlı olan tüm görüntülerin de yüklenmesinin gerekmesidir. Bu büyük bir uygulama için başlatma zamanını önemli derecede artırabilir.
 
 Sıkı bağlama, uygulamanızın performansının kritik olduğu senaryolarda yüklenen bağımlılıklar için uygundur. Herhangi bir doğal görüntü kullanımında, sıkı bağlanmanın uygulamanızın performansını arttırıp arttırmadığını öğrenmenin tek yolu dikkatli(hassas) performans ölçümleridir.
 
-<xref:System.Runtime.CompilerServices.DependencyAttribute> Ve <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> öznitelikleri Ngen.exe'ye sıkı bağlama ipuçları sağlamanıza izin verin.
+Ve <xref:System.Runtime.CompilerServices.DependencyAttribute> öznitelikleri <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> , Ngen. exe ' ye sabit bağlama ipuçları sağlamanıza olanak tanır.
 
 > [!NOTE]
 > Bu değerler Ngen.exe'ye teknik/tavsiyelerdir, komutlar değillerdir. Bunları kullanmak sıkı bağlamayı garanti etmez. Bu değerlerin anlamları ileri yayınlarda değişebilir.
 
 <a name="DependencyHint"></a>
 
-### <a name="specifying-a-binding-hint-for-a-dependency"></a>Bir bağımlılık için bağlama tavsiyesi belirtmek
+### <a name="specifying-a-binding-hint-for-a-dependency"></a>Bağımlılık için bağlama ipucu belirtme
 
-Uygulama <xref:System.Runtime.CompilerServices.DependencyAttribute> belirtilen bağımlılık yüklenecek olasılığını belirtmek için bir derleme. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> sıkı bağlamanın uygun olduğunu gösterir <xref:System.Runtime.CompilerServices.LoadHint.Default> varsayılan bağımlılık için kullanılmasını gösteren ve <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> sıkı bağlamanın uygun olmadığını gösterir.
+<xref:System.Runtime.CompilerServices.DependencyAttribute> Belirtilen bağımlılığın yükleneolasılığını belirtmek için bir derlemeye uygulayın. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType>Sabit bağlamanın uygun olduğunu gösterir, <xref:System.Runtime.CompilerServices.LoadHint.Default> bağımlılığın varsayılan olarak kullanılması gerektiğini belirtir ve <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> sabit bağlamanın uygun olmadığını gösterir.
 
 Aşağıdaki kod, iki bağlılığı olan bir derlemenin özniteliklerini gösterir. İlk bağımlılık (Assembly1) sıkı bağlama için uygun bir adaydır ve ikinci bağımlılık (Assembly2) değildir.
 
@@ -328,24 +331,24 @@ Derleme ismi dosya ismi uzantısını içermez. Görünür isim kullanılabilir.
 
 <a name="AssemblyHint"></a>
 
-### <a name="specifying-a-default-binding-hint-for-an-assembly"></a>Bir derleme için varsayılan bağlama tavsiyesi belirtmek
+### <a name="specifying-a-default-binding-hint-for-an-assembly"></a>Derleme için varsayılan bağlama ipucu belirtme
 
-Varsayılan bağlama ipuçları, yalnızca onlara bağlılığı olan herhangi bir uygulama tarafından anında ve sıkça kullanılacak olan derlemeler için gereklidir. Uygulama <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> ile <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> gibi derlemelerde sıkı bağlamanın kullanılması gerektiğini belirtmek için.
+Varsayılan bağlama ipuçları, yalnızca onlara bağlılığı olan herhangi bir uygulama tarafından anında ve sıkça kullanılacak olan derlemeler için gereklidir. Sabit bağlamanın kullanılması <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> gerektiğini belirtmek için ileilgilibütünleştirilmişkodlarauygulayın.<xref:System.Runtime.CompilerServices.DefaultDependencyAttribute>
 
 > [!NOTE]
-> Geçerli bir sebep olmadığı <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> dışında herhangi bir değere sahip bir öznitelik uygulamak için bu kategoriye giren değil .dll derlemelere <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> özniteliği hiç uygulama değil aynı etkiye sahiptir.
+> Bu kategoriye uymayan. dll Derlemeleriyle ilgili hiçbir neden <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> yoktur, çünkü özniteliği dışında herhangi bir değere <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> sahip olan özniteliği özniteliği uygulamakla aynı etkiye sahiptir.
 
-Microsoft'un kullandığı <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> sıkı bağlamanın derlemeler .NET Framework içerisindeki mscorlib.dll gibi çok az sayıda için varsayılan değer olduğunu belirtmek için.
+Microsoft, <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> .NET Framework (mscorlib. dll gibi) çok az sayıda derleme için varsayılan değer olan sabit bağlamayı belirtmek için öğesini kullanır.
 
 <a name="Deferred"></a>
 
-## <a name="deferred-processing"></a>Ertelenen işlem
+## <a name="deferred-processing"></a>Ertelenmiş işleme
 
-Çok büyük bir uygulama için yerel görüntü oluşturmak uzun bir süre alabilir. Benzer şekilde, paylaşılan bir bileşene veya bilgisayar seçeneklerine yapılan değişiklikler pek çok yerel görüntünün güncellenmesini gerektirebilir. `install` Ve `update` eylemlerinde bir `/queue` yerel görüntü hizmeti tarafından Ertelenen yürütme için işlemi kuyruklar seçeneği. Ayrıca, Ngen.exe sahip `queue` ve `executeQueuedItems` hizmet üzerinde bir miktar denetim sağlayan eylemler. Daha fazla bilgi için [Native Image Service](#native-image-service).
+Çok büyük bir uygulama için yerel görüntü oluşturmak uzun bir süre alabilir. Benzer şekilde, paylaşılan bir bileşene veya bilgisayar seçeneklerine yapılan değişiklikler pek çok yerel görüntünün güncellenmesini gerektirebilir. `/queue` Ve `install` eylemleri,yerelgörüntühizmetitarafındanertelenmişyürütmeişleminisırayaalanbirseçeneğesahiptir.`update` Ayrıca, Ngen. exe ' ye `queue` sahiptir `executeQueuedItems` ve hizmet üzerinde bazı denetimler sağlayan eylemlerdir. Daha fazla bilgi için bkz. [yerel görüntü hizmeti](#native-image-service).
 
 <a name="JITCompilation"></a>
 
-## <a name="native-images-and-jit-compilation"></a>Yerel görüntüler ve JIT derlemesi
+## <a name="native-images-and-jit-compilation"></a>Yerel görüntüler ve JıT derlemesi
 
 Eğer Ngen.exe assembly içerisinde oluşturamayacağı herhangi bir metotla karşılaşırsa, onları doğal görüntü (özgün görüntü) içerisine dahil etmez. Çalışma zamanı bu derlemeyi çalıştırdığı zaman, doğal görüntünün içerisine dahil edilmeyen metotlar için JIT derleme işlemine döner
 
@@ -359,7 +362,7 @@ Ngen.exe'yi bir derlemenin yerel görüntüsünü oluşturmak için kullandığ�
 
 - .NET Framework sürümü.
 
-- Windows 9 x ailesinden Windows NT ailesine değişiklikse işletim sistemi, sürümü.
+- Değişiklik, Windows 9x ailesinden Windows NT ailesine ise işletim sisteminin sürümü.
 
 - Derlemenin tam kimliği (yeniden derleme kimliği değiştirir).
 
@@ -371,11 +374,11 @@ Ngen.exe bir doğal görüntü oluşturduğu zaman bu bilgiyi kaydeder. Bir derl
 
 - .NET Framework sürümü.
 
-     Eğer .NET framework'e güncelleme uygularsanız, Ngen.exe kullanarak oluşturduğunuz bütün imajlar geçersiz sayılır. Bu nedenle, .NET Framework'ün tüm güncelleştirmeleri yürütme `Ngen Update` tüm yerel görüntüleri yeniden oluşturulduğunu garantilemek için komutu. .NET framework kuracağı .Net framework kütüphaneleri için yeni görüntüleri otomatik olarak oluşturur.
+     Eğer .NET framework'e güncelleme uygularsanız, Ngen.exe kullanarak oluşturduğunuz bütün imajlar geçersiz sayılır. Bu nedenle, tüm yerel görüntülerin yeniden üretildiğinden emin olmak `Ngen Update` için .NET Framework tüm güncelleştirmeleri komutu yürütür. .NET framework kuracağı .Net framework kütüphaneleri için yeni görüntüleri otomatik olarak oluşturur.
 
-- Windows 9 x ailesinden Windows NT ailesine değişiklikse işletim sistemi, sürümü.
+- Değişiklik, Windows 9x ailesinden Windows NT ailesine ise işletim sisteminin sürümü.
 
-     Örneğin, bir bilgisayarda çalışan işletim sistemi sürümünü Windows 98'den Windows XP'ye değişirse, yerel görüntü önbelleğinde depolanan tüm özgün görüntüler geçersiz olur. İşletim sistemi Windows 2000'den Windows XP'ye değişirse, ancak görüntüleri geçersiz kılınır değil.
+     Örneğin, bir bilgisayarda çalışan işletim sisteminin sürümü Windows 98 ' den Windows XP 'ye değişirse, yerel görüntü önbelleğinde depolanan tüm yerel görüntüler geçersiz olur. Ancak, işletim sistemi Windows 2000 ' den Windows XP 'ye değişirse, görüntüler geçersiz kılınmaz.
 
 - Derlemenin kesin kimliği.
 
@@ -383,93 +386,93 @@ Ngen.exe bir doğal görüntü oluşturduğu zaman bu bilgiyi kaydeder. Bir derl
 
 - Derlemenin referans ettiği bütün derlemelerin tam kimliği.
 
-     Eğer yönetilmiş bir derlemeyi güncellerseniz, o derlemeye direk ya da dolaylı yoldan bağlı olan bütün doğal görüntüler geçersiz olur ve yeniden oluşturulması gerekir. Bu hem normal tercihleri/ayarları hem de sıkı-bağlama bağlılıklarını içerir. Bir uygulama güncellemesi uygulanırsa olduğunda, yükleme programının yürütülecek bir `Ngen Update` bütün bağlı doğal görüntülerin yeniden oluşturulduğunu garantilemek için komutu.
+     Eğer yönetilmiş bir derlemeyi güncellerseniz, o derlemeye direk ya da dolaylı yoldan bağlı olan bütün doğal görüntüler geçersiz olur ve yeniden oluşturulması gerekir. Bu hem normal tercihleri/ayarları hem de sıkı-bağlama bağlılıklarını içerir. Her bir yazılım güncelleştirmesi uygulandığında, yükleme programının tüm bağımlı yerel görüntülerin yeniden `Ngen Update` oluşturulmasını sağlamak için bir komut yürütmesi gerekir.
 
 - Güvenlik etkenleri.
 
      Önceden yetkilendirilmiş bir derlemenin izinlerini kısıtlamak için makina güvenlik politikasında değişiklik yapmak, o derleme için önceden derlenmiş olan doğal imajın geçersiz olmasına sebep olabilir
 
-     Ortak dil çalışma zamanı kod erişim güvenliğini nasıl yönettiği ve izinleri nasıl kullandığı hakkında ayrıntılı bilgi için bkz: [kod erişim güvenliği](../../../docs/framework/misc/code-access-security.md).
+     Ortak dil çalışma zamanının kod erişim güvenliğini nasıl yönettiği ve izinlerin nasıl kullanılacağı hakkında ayrıntılı bilgi için bkz. [kod erişim güvenliği](../../../docs/framework/misc/code-access-security.md).
 
 <a name="Troubleshooting"></a>
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-Aşağıdaki sorun giderme konularına hangi yerel görüntüler kullanılır ve uygulamanız tarafından kullanılamaz görmenize olanak veren, JIT derleyicisi, bir yöntem derlemeye başlar ve yerel görüntü derlemesi dışında nasıl gösterir belirlemek üzere belirlenen yöntemleri.
+Aşağıdaki sorun giderme konuları, hangi yerel görüntülerin kullanıldığını ve uygulamanız tarafından kullanılamayacağını görmenizi, JıT derleyicisinin bir yöntemi derlemeye başladığı zaman belirlenmesini ve belirtilen yerel görüntü derlemesini nasıl devre dışı yapılacağını belirlemenizi sağlar Yöntem.
 
 <a name="Fusion"></a>
 
 ### <a name="assembly-binding-log-viewer"></a>Derleme Bağlaması Günlük Görüntüleyici
 
-Yerel görüntüler, uygulamanız tarafından kullanıldığını onaylamak için kullanabileceğiniz [Fuslogvw.exe (Derleme bağlaması Günlük Görüntüleyici)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md). Seçin **yerel görüntüleri** içinde **günlük kategorileri** bağlaması Günlük Görüntüleyici penceresinde kutusu. Fuslogvw.exe bir doğal imajın neden reddedildiği hakkında bilgi sağlar.
+Yerel görüntülerin uygulamanız tarafından kullanıldığını onaylamak için, [Fuslogvw. exe (bütünleştirilmiş kod bağlama günlük Görüntüleyici)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)kullanabilirsiniz. Bağlama günlüğü Görüntüleyicisi penceresindeki **günlük kategorileri** kutusunda **Yerel görüntüler** ' i seçin. Fuslogvw.exe bir doğal imajın neden reddedildiği hakkında bilgi sağlar.
 
 <a name="MDA"></a>
 
 ### <a name="the-jitcompilationstart-managed-debugging-assistant"></a>Jıtcompilationstart yönetilen hata ayıklama Yardımcısı
 
-Kullanabileceğiniz [Jıtcompilationstart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md) yönetilen hata ayıklama Yardımcısı (MDA) JIT Derleyici bir işlevi derlemeye ne başladığında belirlemek için.
+JıT derleyicisinin bir işlevi derlemeye ne zaman başlayacağını anlamak için, [Jıtcompilationstart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md) Managed hata ayıklama Yardımcısı 'Nı (MDA) kullanabilirsiniz.
 
 <a name="OptOut"></a>
 
-### <a name="opting-out-of-native-image-generation"></a>Yerel görüntü oluşturma dışında seçim yapma
+### <a name="opting-out-of-native-image-generation"></a>Yerel görüntü oluşturmayı geri alma
 
-Bazı durumlarda, NGen.exe yerel görüntü için belirli bir yöntemi veya yöntem JIT olarak tercih edebilirsiniz, yerine yerel bir görüntü için derlenmiş zorluk oluşturma olabilir. Bu durumda, kullanabileceğiniz `System.Runtime.BypassNGenAttribute` NGen.exe bir doğal görüntü belirli bir yöntem için oluşturmasını önlemek için özniteliği. Öznitelik kod doğal görüntünün içerisine dahil etmek istemediğiniz her yöntem için ayrı ayrı uygulanması gerekir. NGen.exe, öznitelik tanır ve yerel görüntü karşılık gelen yöntemi için kod oluşturmaz.
+Bazı durumlarda, NGen. exe belirli bir yöntem için yerel görüntü üretmekte zorluk gösterebilir veya metodun yerel bir görüntüye derlenmek yerine JıT derlenmesini tercih edebilirsiniz. Bu durumda, Ngen. exe ' nin `System.Runtime.BypassNGenAttribute` belirli bir yöntem için yerel görüntü oluşturmasını engellemek için özniteliğini kullanabilirsiniz. Özniteliği, kodu yerel görüntüye eklemek istemediğiniz her bir yönteme ayrı ayrı uygulanmalıdır. NGen. exe, özniteliğini tanır ve ilgili yöntem için yerel görüntüde kod oluşturmaz.
 
-Ancak, unutmayın, `BypassNGenAttribute` .NET Framework sınıf kitaplığındaki bir tür olarak tanımlı değil. Öznitelik, kodunuzu kullanmak için önce bunu şu şekilde tanımlamanız gerekir:
+Ancak `BypassNGenAttribute` , .NET Framework sınıf kitaplığındaki bir tür olarak tanımlanmayan Not. Kodunuzda özniteliği tüketmek için, önce bunu aşağıdaki gibi tanımlamanız gerekir:
 
 [!code-csharp[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#1)]
 [!code-vb[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#1)]
 
-Ardından, öznitelik bir yöntem başına temelinde uygulayabilirsiniz. Aşağıdaki örnek, bir yerel görüntü üretmemelidir Native Image Generator talimatı verir `ExampleClass.ToJITCompile` yöntemi.
+Sonra özniteliği yöntem başına temelinde uygulayabilirsiniz. Aşağıdaki örnek, yerel görüntü oluşturucuya `ExampleClass.ToJITCompile` yöntemi için yerel görüntü oluşturmaması gerektiğini söyler.
 
 [!code-csharp[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#2)]
 [!code-vb[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#2)]
 
 ## <a name="examples"></a>Örnekler
 
-Aşağıdaki komutu bir yerel görüntü oluşturur `ClientApp.exe`geçerli dizinde bulunan ve görüntünün yerel görüntü önbelleğine yükler. Derleme için bir yapılandırma dosyası varsa, onu Ngen.exe kullanır. Ayrıca, herhangi bir .dll dosyası için özgün görüntüler oluşturulur `ClientApp.exe` başvuruları.
+Aşağıdaki komut, geçerli dizinde bulunan için `ClientApp.exe`yerel bir görüntü oluşturur ve görüntüyü yerel görüntü önbelleğine yüklenir. Derleme için bir yapılandırma dosyası varsa, onu Ngen.exe kullanır. Bunlara ek olarak, başvuruda bulunan `ClientApp.exe` tüm. dll dosyaları için yerel görüntüler oluşturulur.
 
-```
+```console
 ngen install ClientApp.exe
 ```
 
 Ngen.exe ile yüklenmiş bir resim, bir kök olarak da adlandırılır. Kök, bir uygulama veya paylaşılan bir bileşen olabilir.
 
-Aşağıdaki komutu bir yerel görüntü oluşturur `MyAssembly.exe` belirtilen yola sahip.
+Aşağıdaki komut, belirtilen yol ile için `MyAssembly.exe` yerel bir görüntü oluşturur.
 
-```
+```console
 ngen install c:\myfiles\MyAssembly.exe
 ```
 
-Derlemeler ve bağımlılıklarını belirlerken Ngen.exe ortak dil çalışma zamanı tarafından kullanılan aynı algılama mantığını kullanır. Varsayılan olarak, dizin içeren `ClientApp.exe` uygulama temel dizini olarak kullanılır ve bütün derleme yoklamaları dizinde başlar. Kullanarak bu davranışı geçersiz kılabilirsiniz `/AppBase` seçeneği.
+Derlemeler ve bağımlılıklarını belirlerken Ngen.exe ortak dil çalışma zamanı tarafından kullanılan aynı algılama mantığını kullanır. Varsayılan olarak, içeren `ClientApp.exe` Dizin, uygulama temel dizini olarak kullanılır ve tüm derleme yoklama bu dizinde başlar. `/AppBase` Seçeneğini kullanarak bu davranışı geçersiz kılabilirsiniz.
 
 > [!NOTE]
 > Bu, uygulama temel dizininin geçerli dizin olarak ayarlandığı .NET Framework 1.0 ve 1.1 sürümlerindeki Ngen.exe davranışından farklıdır.
 
-Bir derlemeyi kullanarak bir .dll dosyası yüklenirse, örneğin bir başvuru olmadan bağımlılığa sahip olabilir <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi. Şekildeki bir .dll dosyası için bir yerel görüntü uygulama derlemesindeki yapılandırma bilgilerini kullanarak oluşturabileceğiniz `/ExeConfig` seçeneği. Aşağıdaki komutu bir yerel görüntü oluşturur `MyLib.dll,` yapılandırma bilgisini kullanarak `MyApp.exe`.
+Bir derlemeye başvuru olmadan bağımlılık olabilir, örneğin, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemini kullanarak bir. dll dosyası yüklerse. Bu tür bir. dll dosyası için, `/ExeConfig` seçeneğiyle birlikte uygulama derlemesi için yapılandırma bilgilerini kullanarak yerel bir görüntü oluşturabilirsiniz. Aşağıdaki komut, ' den `MyLib.dll,` `MyApp.exe`yapılandırma bilgilerini kullanmak için yerel bir görüntü oluşturur.
 
-```
+```console
 ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
 Uygulamayı kaldırdığınızda, bu şekilde yüklenen derlemeler kaldırılmaz.
 
-Bir bağımlılık kaldırmak için yüklemek için kullanılan aynı komut satırı seçeneklerini kullanın. Aşağıdaki komutu kaldırır `MyLib.dll` önceki örnekte.
+Bir bağımlılık kaldırmak için yüklemek için kullanılan aynı komut satırı seçeneklerini kullanın. Aşağıdaki komut, `MyLib.dll` önceki örnekteki öğesini kaldırır.
 
-```
+```console
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
 Genel bütünleştirilmiş kod önbelleğindeki bir derleme için yerel görüntü oluşturmak için, derlemenin görünen adını kullanın. Örneğin:
 
-```
+```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL"
 ```
 
 NGen.exe yüklediğiniz her senaryo için ayrı bir görüntü kümesi oluşturur. Örneğin, aşağıdaki komutlar normal işlemler için tamamen yerel görüntü kümesi, hata ayıklama için farklı bir küme ve belirleme için üçüncüyü yükler:
 
-```
+```console
 ngen install MyApp.exe
 ngen install MyApp.exe /debug
 ngen install MyApp.exe /profile
@@ -479,43 +482,43 @@ ngen install MyApp.exe /profile
 
 Yerel görüntüler önbelleğe yüklendikten sonra, Ngen.exe kullanılarak görüntülenebilirler. Aşağıdaki komut yerel görüntü belleğindeki tüm yerel görüntüleri görüntüler.
 
-```
+```console
 ngen display
 ```
 
-`display` Eylem tüm kök derlemeleri listeler ilk olarak, ardından da bilgisayardaki tüm yerel görüntüleri listesi tarafından.
+`display` Eylem önce tüm kök derlemeleri, ardından bilgisayardaki tüm yerel görüntülerin listesini listeler.
 
-Yalnızca bir derlemenin bilgilerini görüntülemek için o derlemenin basit adını kullanın. Aşağıdaki komut, kısmi adıyla eşleşen bir yerel görüntü belleğindeki tüm yerel görüntüleri görüntüler `MyAssembly`, bağımlılıklarını ve üzerinde bir bağımlılığa sahip olan tüm kökleri `MyAssembly`:
+Yalnızca bir derlemenin bilgilerini görüntülemek için o derlemenin basit adını kullanın. Aşağıdaki komut, yerel görüntü önbelleğindeki tüm yerel görüntüleri, kısmen adı `MyAssembly`, bağımlılıklarıyla ve `MyAssembly`bağımlılığı olan tüm köklerle eşleşen bir şekilde görüntüler:
 
-```
+```console
 ngen display MyAssembly
 ```
 
-Bir paylaşılan bileşen derlemesine hangi köklerin bağımlı olduğunu bilmek etkisini ölçmek için kullanışlıdır bir `update` paylaşılan bileşen yükseltildikten sonraki eylem.
+Paylaşılan bileşen derlemesine hangi köklerin bağımlı olduğunu bilmek, paylaşılan bileşen yükseltildikten sonra bir `update` eylemin etkisinin ölçmek içinde yararlı olur.
 
 Eğer bir derlemenin dosya uzantısını belirtirseniz, ya yolu belirtmeniz ya da Ngen.exe'yi derlemeyi içeren dizinden yürütmeniz gerekir:
 
-```
+```console
 ngen display c:\myApps\MyAssembly.exe
 ```
 
-Aşağıdaki komut yerel görüntü önbelleğinde ada sahip tüm yerel görüntüleri görüntüler `MyAssembly` ve sürüm 1.0.0.0.
+Aşağıdaki komut yerel görüntü önbelleğindeki tüm yerel görüntüleri, ad `MyAssembly` ve sürüm 1.0.0.0 ile görüntüler.
 
-```
+```console
 ngen display "myAssembly, version=1.0.0.0"
 ```
 
 ### <a name="updating-images"></a>Görüntüleri Güncelleştirme
 
-Görüntüler genellikle paylaşılan bir bileşen yükseltildikten sonra güncelleştirilir. Değişen veya bağımlılıkları değişen tüm yerel görüntüleri güncelleştirmek için `update` eylemini bağımsız değişken olmadan.
+Görüntüler genellikle paylaşılan bir bileşen yükseltildikten sonra güncelleştirilir. Değiştirilen veya bağımlılıkları değişmiş olan tüm yerel görüntüleri güncelleştirmek için, bu `update` eylemi bağımsız değişken olmadan kullanın.
 
-```
+```console
 ngen update
 ```
 
-Tüm görüntüleri güncelleştirmek uzun süren bir işlem olabilir. Yürütme için güncelleştirmeleri kullanarak yerel görüntü hizmeti tarafından sıraya alabilirsiniz `/queue` seçeneği. Daha fazla bilgi için `/queue` seçeneği ve yükleme öncelikleri bkz [Native Image Service](#native-image-service).
+Tüm görüntüleri güncelleştirmek uzun süren bir işlem olabilir. `/queue` Seçeneğini kullanarak, yerel görüntü hizmeti tarafından yürütme için güncelleştirmeleri sıraya alabilirsiniz. `/queue` Seçenek ve yükleme öncelikleri hakkında daha fazla bilgi için bkz. [Native Image Service](#native-image-service).
 
-```
+```console
 ngen update /queue
 ```
 
@@ -523,116 +526,116 @@ ngen update /queue
 
 Ngen.exe bağımlılıkların bir listesini tutar, yani paylaşılan bileşenler yalnızca onlara bağlı olan tüm derlemeler kaldırıldığında kaldırılır. Ek olarak kök olarak yüklenmiş ortak bileşenler silinmez.
 
-Aşağıdaki komut kök için tüm senaryoları kaldırır `ClientApp.exe`:
+Aşağıdaki komut, kök `ClientApp.exe`için tüm senaryoları kaldırır:
 
-```
+```console
 ngen uninstall ClientApp
 ```
 
-`uninstall` Eylemi belirli senaryoları kaldırmak için kullanılabilir. Aşağıdaki komutu için tüm hata ayıklama senaryolarını kaldırır `ClientApp.exe`:
+Eylem `uninstall` , belirli senaryoları kaldırmak için kullanılabilir. Aşağıdaki komut, için `ClientApp.exe`tüm hata ayıklama senaryolarını kaldırır:
 
-```
+```console
 ngen uninstall ClientApp /debug
 ```
 
 > [!NOTE]
-> Kaldırma `/debug` senaryoları hem de içeren bir senaryoyu kaldırmaz `/profile` ve `/debug.`
+> Senaryoları `/debug` kaldırmak, hem `/profile` hem de içeren bir senaryoyu kaldırmaz`/debug.`
 
-Aşağıdaki komut belirli bir sürümü için tüm senaryoları kaldırır `ClientApp.exe`:
+Aşağıdaki komut belirli bir sürümü `ClientApp.exe`için tüm senaryoları kaldırır:
 
-```
+```console
 ngen uninstall "ClientApp, Version=1.0.0.0"
 ```
 
-Tüm senaryolar için aşağıdaki komutları kaldırma `"ClientApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL",` veya yalnızca o derleme için hata ayıklama senaryosunu:
+Aşağıdaki komutlar, bu derleme için tüm `"ClientApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL",` senaryoları veya yalnızca hata ayıklama senaryosunu kaldırır:
 
-```
+```console
 ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL"
 ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL" /debug
 ```
 
-Olduğu gibi `install` eylemi, bir uzantı sağlamak ya Ngen.exe'nin derlemeyi içeren veya bir tam yol belirtilmesini dizinden yürütülmesini gerektirir.
+`install` Eylemde olduğu gibi, bir uzantı sağlamak, derlemeyi içeren dizinden Ngen. exe ' nin yürütülmesini ya da tam bir yol belirtmeyi gerektirir.
 
 Yerel görüntü hizmetiyle ilgili örnekler için bkz. [Native Image Service](#native-image-service).
 
 ## <a name="native-image-task"></a>Yerel Görüntü Görevi
 
-Yerel görüntü görevi oluşturur ve yerel görüntüler tutar Windows bir görevdir. Yerel görüntü görevi oluşturur ve yerel görüntüleri için desteklenen senaryolar için bir otomatik olarak geri kazanır. Ayrıca, kullanmak yükleyicileri sağlar [Ngen.exe (yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) oluşturup ertelenmiş aynı anda yerel görüntüleri güncelleştir.
+Yerel görüntü görevi, yerel görüntüler üreten ve tutan bir Windows görevidir. Yerel görüntü görevi, desteklenen senaryolar için otomatik olarak yerel görüntüler oluşturur ve geri kazanır. Ayrıca, yükleyicilerin [Ngen. exe (yerel görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) kullanarak yerel görüntüleri ertelenmiş bir sürede oluşturmasını ve güncelleştirmesini de sağlar.
 
-Yerel görüntü görevi her CPU için mimarisini hedefleyen uygulamalar için derleme izin vermek için bilgisayarda her mimari desteklenen sonra kayıtlı:
+Yerel görüntü görevi, her bir mimariyi hedefleyen uygulamalar için derlemeye izin vermek üzere bir bilgisayarda desteklenen her CPU mimarisi için bir kez kaydedilir:
 
 |Görev adı|32 bit bilgisayar|64 bit bilgisayar|
 |---------------|----------------------|----------------------|
-|NET Framework NGEN v4.0.30319|Evet|Evet|
-|NET Framework NGEN v4.0.30319 64|Hayır|Evet|
+|NET Framework NGEN v 4.0.30319|Evet|Evet|
+|NET Framework NGEN v 4.0.30319 64|Hayır|Evet|
 
-Yerel görüntü Görevi çalıştırırken Windows 8 veya daha sonra .NET Framework 4.5 ve sonraki sürümlerinde kullanılabilir. Önceki Windows sürümlerinde .NET Framework kullanan [Native Image Service](#native-image-service).
+Yerel görüntü görevi, Windows 8 veya sonraki sürümlerde çalışırken .NET Framework 4,5 ve sonraki sürümlerinde kullanılabilir. Windows 'un önceki sürümlerinde, .NET Framework [yerel görüntü hizmetini](#native-image-service)kullanır.
 
 ### <a name="task-lifetime"></a>Görev ömrü
 
-Genel olarak, Windows Görev Zamanlayıcısı'nı bilgisayar boşta olduğunda her gece yerel görüntü görevi başlatır. Görev uygulama yükleyicileri, tüm ertelenmiş yerel görüntü güncelleştirme istekleri ve herhangi bir otomatik görüntü oluşturma tarafından sıraya alınan tüm ertelenmiş çalışmadır denetler. Görev, bekleyen iş öğeleri tamamlandıktan ve kapanır. Bilgisayar, Görev yürütülürken boşta kaldıktan durduğunda, görev durdurur.
+Genellikle, Windows Görev Zamanlayıcı bilgisayar boştayken her gece yerel görüntü görevini başlatır. Görev, uygulama yükleyicileri tarafından kuyruğa alınan ertelenmiş işleri, ertelenmiş yerel görüntü güncelleştirme isteklerini ve herhangi bir otomatik görüntü oluşturmayı denetler. Görev, bekleyen iş öğelerini tamamlar ve sonra kapatır. Görev çalışırken bilgisayar boşta çalışmayı durduktan sonra görev durmaktadır.
 
-Yerel görüntü görevi Ngen.exe'ye el ile yapılan çağrıları veya Görev Zamanlayıcı kullanıcı Arabirimi aracılığıyla el ile de başlatabilirsiniz. Görev bu yöntemlerden birini başlatılırsa, bilgisayar artık boştayken çalışmaya devam edecek. NGen.exe kullanarak el ile oluşturulmuş görüntüleri uygulama yükleyicileri için tahmin edilebilir davranış sağlamak önceliklendirilir.
+Yerel görüntü görevini Görev Zamanlayıcı kullanıcı arabiriminden el ile veya NGen. exe ' ye elle yapılan çağrılar aracılığıyla da başlatabilirsiniz. Görev bu yöntemlerden birini kullanarak başlatılırsa, bilgisayar artık boşta olmadığında çalışmaya devam eder. NGen. exe kullanılarak elle oluşturulan görüntüler, uygulama yükleyicilerine yönelik öngörülebilir davranışı etkinleştirmek için önceliklendirilir.
 
 ## <a name="native-image-service"></a>Yerel Görüntü Hizmeti
 
-Yerel görüntü hizmeti oluşturur ve yerel görüntüler tutan bir Windows hizmetidir. Yerel görüntü hizmetini yükleme ve bilgisayar boşta olduğunda dönemlere yerel görüntülerin güncelleştirmesi erteleme Geliştirici sağlar.
+Yerel görüntü hizmeti, yerel görüntüleri üreten ve tutan bir Windows hizmetidir. Yerel görüntü hizmeti, geliştiricinin yerel görüntülerin yükleme ve güncelleştirme işlemini bilgisayar boştayken dönemlere erteetmesine olanak tanır.
 
-Normalde, yerel görüntü hizmeti, bir uygulama veya güncelleştirme için yükleme programını (Yükleyici) tarafından başlatılır. Öncelik 3 eylemler için bilgisayardaki boşta kalma süresi boyunca hizmeti yürütür. Hizmet durumunu kaydeder ve birden çok yeniden başlatma gerekiyorsa devam etmeden özelliğine sahiptir. Birden çok görüntü derlemeleri sıraya alınmış.
+Normal olarak, yerel görüntü hizmeti bir uygulama veya güncelleştirme için yükleme programı (Yükleyici) tarafından başlatılır. Öncelik 3 işlemleri için, hizmet bilgisayarda boşta kalma süresi boyunca yürütülür. Hizmet, durumunu kaydeder ve gerekirse birden çok yeniden başlatma işlemi için devam etme yeteneğine sahiptir. Birden çok görüntü derlemesi kuyruğa alınabilir.
 
-Hizmet ayrıca el ile Ngen.exe komut ile etkileşime girer. El ile komutları arka plan etkinliği daha önceliklidir.
+Hizmet el ile Ngen. exe komutuyla da etkileşime girer. El ile gerçekleştirilen komutların arka plan etkinliğine göre önceliği vardır.
 
 > [!NOTE]
-> Windows Vista'da, yerel görüntü hizmetinde görüntülenen "Microsoft.NET Framework NGEN sürüm 2.0.50727_X86" veya "Microsoft.NET Framework NGEN sürüm 2.0.50727_x64" addır. Tüm önceki sürümlerinde Microsoft Windows, adı ".NET çalışma zamanı en iyi duruma getirme hizmeti sürüm 2.0.50727_X86" veya ".NET çalışma zamanı en iyi duruma getirme hizmeti sürüm 2.0.50727_x64" şeklindedir.
+> Windows Vista 'da, yerel görüntü hizmeti için görünen ad "Microsoft.NET Framework NGEN v 2.0.50727 _X86" veya "Microsoft.NET Framework NGEN v 2.0.50727 _X64" olur. Microsoft Windows 'un önceki tüm sürümlerinde, ad ".NET Runtime Optimization Service v 2.0.50727 _X86" veya ".NET Runtime Optimization Service v 2.0.50727 _X64" olur.
 
-### <a name="launching-deferred-operations"></a>Ertelenmiş işlem başlatma
+### <a name="launching-deferred-operations"></a>Ertelenmiş Işlemler başlatılıyor
 
-Bir yükleme veya yükseltme başlamadan önce hizmetin duraklatılması önerilir. Bu yükleyici dosyalarını kopyalama veya genel derleme önbelleğinde derlemeleri yerleştirme sırasında hizmet yürütmez sağlar. Ngen.exe komut satırını hizmet duraklatır:
+Yükleme veya yükseltmeye başlamadan önce, hizmeti duraklatma önerilir. Bu, yükleyici dosyaları kopyalarken veya derlemeleri genel bütünleştirilmiş kod önbelleğine yerleştirirken hizmetin yürütülmemesini sağlar. Aşağıdaki Ngen. exe komut satırı Hizmeti duraklatır:
 
-```
+```console
 ngen queue pause
 ```
 
-Tüm ertelenmiş işlemler kuyruğa atılmış hizmeti sürdürmek aşağıdaki komutu sağlar:
+Tüm ertelenmiş işlemler sıraya alınmışsa aşağıdaki komut hizmetin sürdürülmesine izin verir:
 
-```
+```console
 ngen queue continue
 ```
 
-Yerel görüntü oluşturma yeni bir uygulama yüklerken veya paylaşılan bir bileşen güncelleştirirken ertelemek için kullanmak `/queue` seçeneğini `install` veya `update` eylemler. Aşağıdaki Ngen.exe komut satırları, paylaşılan bir bileşen için yerel bir görüntü yükleyin ve etkilenmiş tüm kökleri güncelleştirmesi gerçekleştirin:
+Yeni bir uygulama yüklerken veya paylaşılan bir bileşeni güncelleştirirken yerel görüntü üretimini ertelemek için `/queue` seçeneğini `install` veya `update` eylemleriyle birlikte kullanın. Aşağıdaki Ngen. exe komut satırları paylaşılan bir bileşen için yerel bir görüntü yükler ve etkilenen tüm köklerin güncelleştirilmesini gerçekleştirir:
 
-```
+```console
 ngen install MyComponent /queue
 ngen update /queue
 ```
 
-`update` Eylemi yeniden oluşturur kılınan, tüm yerel görüntüleri yalnızca kullananlar `MyComponent`.
+Eylem, yalnızca kullananlarla `MyComponent`değil, geçersiz kılınan tüm yerel görüntüleri yeniden oluşturur. `update`
 
-Uygulamanız birçok kökleri oluşuyorsa, ertelenmiş işlemler önceliğini kontrol edebilirsiniz. Aşağıdaki komutları üç kökleri yüklenmesini kuyruğa alın. `Assembly1` boşta kalma süresi beklenmeden önce yüklenir. `Assembly2` boşta kalma süresi için ancak tüm 1 öncelikli Eylemler tamamladıktan sonra beklenmeden de yüklenir. `Assembly3` hizmeti bilgisayarın boşta olduğunu algıladığında yüklenir.
+Uygulamanız birçok kökten oluşuyorsa, ertelenmiş eylemlerin önceliğini kontrol edebilirsiniz. Aşağıdaki komutlar, üç kök yüklemeyi sıraya alma. `Assembly1`, boşta kalma süresi beklememeden önce yüklenir. `Assembly2`, boşta kalma süresi beklememeden da yüklenir, ancak tüm öncelik 1 eylemleri tamamlandıktan sonra. `Assembly3`, hizmet bilgisayarın boşta olduğunu algıladığında yüklenir.
 
-```
+```console
 ngen install Assembly1 /queue:1
 ngen install Assembly2 /queue:2
 ngen install Assembly3 /queue:3
 ```
 
-Kuyruğa Alınan eylemleri kullanarak zaman uyumlu olarak gerçekleşmesi için zorlayabilirsiniz `executeQueuedItems` eylem. İsteğe bağlı öncelik sağlarsanız, bu eylem, eşit veya daha düşük önceliğe sahip kuyruğa alınan eylemleri etkiler. Varsayılan öncelik aşağıdaki Ngen.exe komut tüm kuyruğa alınan eylemleri hemen işler ve bitene kadar döndürmeyen 3, olduğundan:
+`executeQueuedItems` Eylemi kullanarak sıraya alınan eylemleri zaman uyumlu olarak gerçekleşecek şekilde zorlayabilirsiniz. İsteğe bağlı öncelik sağlarsanız, bu eylem yalnızca eşit veya daha düşük önceliğe sahip olan sıraya alınmış eylemleri etkiler. Varsayılan öncelik 3 ' dir, bu nedenle aşağıdaki Ngen. exe komutu sıraya alınan tüm eylemleri hemen işler ve tamamlanana kadar döndürmez:
 
-```
+```console
 ngen executeQueuedItems
 ```
 
-Zaman uyumlu komutları tarafından Ngen.exe yürütüldüğü, yerel görüntü hizmeti kullanmayın. Ngen.exe yerel görüntü hizmeti çalışırken kullanarak eylemleri yürütebilir.
+Zaman uyumlu komutlar Ngen. exe tarafından yürütülür ve yerel görüntü hizmetini kullanmaz. Yerel görüntü hizmeti çalışırken Ngen. exe ' yi kullanarak eylemleri çalıştırabilirsiniz.
 
-### <a name="service-shutdown"></a>Hizmet kapanması
+### <a name="service-shutdown"></a>Hizmet kapatılıyor
 
-İçeren bir Ngen.exe komut yürütülmesi tarafından başlatılan sonra `/queue` seçeneği, hizmetin arka planda çalışır tüm eylemleri tamamlanana kadar. Birden çok yeniden başlatma gerekirse sürdürebilmek hizmet durumunu kaydeder. Hizmet olduğunu algıladığında kuyruğa başka eylem yok, böylece bir bilgisayar önyüklendiğinde sonraki sefer yeniden başlatmaz durumunu sıfırlar ve ardından kendini kapatır.
+`/queue` Seçeneğini içeren bir Ngen. exe komutunun yürütülmesi tarafından başlatıldıktan sonra, hizmet tüm eylemler tamamlanana kadar arka planda çalışır. Hizmet, gerektiğinde birden çok yeniden başlatma işleminin devam edebilmesi için durumunu kaydeder. Hizmet sıraya alınmış daha fazla eylem olmadığını algıladığında, bilgisayarın bir sonraki önyüklenilişinde yeniden başlatmaması için durumunu sıfırlar ve sonra kendisini kapatır.
 
-### <a name="service-interaction-with-clients"></a>İstemcilerin hizmet etkileşim
+### <a name="service-interaction-with-clients"></a>Istemcilerle hizmet etkileşimi
 
-.NET Framework sürüm 2. 0'da, yerel görüntü hizmeti ilgili tek etkileşim komut satırı Ngen.exe aracıdır. Komut satırı aracı kuyruğu eylemlerini yükleme betikleri yerel görüntü hizmeti ve hizmetiyle etkileşim kurmak için kullanın.
+.NET Framework sürüm 2,0 ' de, yerel görüntü hizmeti ile tek etkileşim, Ngen. exe komut satırı aracıdır. Yerel görüntü hizmeti için eylemleri sıraya almak ve hizmetle etkileşimde bulunmak için yükleme betiklerinde komut satırı aracını kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

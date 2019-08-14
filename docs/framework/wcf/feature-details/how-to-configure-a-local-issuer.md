@@ -8,74 +8,76 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 98d4c01bf2b84a6379eca5d0e1d5dbee68dc7cdd
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0028a0522447588ee0fb183b5b2f93d334a7b2b2
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487145"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972076"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Nasıl yapılır: Yerel Yayımlayan Yapılandırma
-Bu konuda verilen belirteçleri yerel yayımlayan kullanmak için bir istemciyi nasıl yapılandıracağınız açıklanmaktadır.  
-  
- Genellikle, bir istemci bir Federasyon Hizmeti ile iletişim kurduğunda, hizmet istemci belirteci vermek için beklenen belirteç hizmeti, federe hizmete kendi kimliğini doğrulamak için kullanacağı güvenlik adresini belirtir. Belirli durumlarda istemci kullanmak için yapılandırılabilir bir *yerel yayımlayan*.  
-  
- Windows Communication Foundation (WCF) kullanan yerel yayımlayan bir federe bağlama veren adresini olduğu durumlarda `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` veya `null`. Bu gibi durumlarda, yapılandırmanız gereken <xref:System.ServiceModel.Description.ClientCredentials> adresiyle yerel dağıtımcının ve bağlama bu veren ile iletişim kurmak için kullanılacak.  
-  
+
+Bu konu, bir istemcinin verilen belirteçler için yerel bir veren kullanmak üzere nasıl yapılandırılacağını açıklamaktadır.
+
+Genellikle, bir istemci federe bir hizmetle iletişim kurduğunda, hizmet istemcinin federasyon hizmetinde kimliğini doğrulamak için kullanacağı belirteci vermesi beklenen güvenlik belirteci hizmetinin adresini belirtir. Belirli durumlarda, istemci *yerel bir veren*kullanmak üzere yapılandırılmış olabilir.
+
+Windows Communication Foundation (WCF), Federasyon bağlamasının veren adresinin veya `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` `null`olduğu durumlarda yerel bir veren kullanır. Bu gibi durumlarda, <xref:System.ServiceModel.Description.ClientCredentials> öğesini yerel veren adresiyle ve bu veren ile iletişim kurmak için kullanılacak bağlama ile yapılandırmanız gerekir.
+
 > [!NOTE]
->  Varsa <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> özelliği `ClientCredentials` sınıf ayarlanmış `true`yerel yayımlayan adresi belirtilmedi ve veren adresi tarafından belirtilen [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) veya diğer Federe bağlama `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, veya `null`, Windows CardSpace veren kullanılır.  
-  
-### <a name="to-configure-the-local-issuer-in-code"></a>Kodu yerel yayımlayan yapılandırma  
-  
-1. Türünde bir değişken oluşturma <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
-  
-2. Öğesinden döndürülen örneği için değişkeni ayarlayın <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> özelliği `ClientCredentials` sınıfı. Bu örnek tarafından döndürülen <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> özelliği istemcinin (devralınan <xref:System.ServiceModel.ClientBase%601>) veya <xref:System.ServiceModel.ChannelFactory.Credentials%2A> özelliği <xref:System.ServiceModel.ChannelFactory>:  
-  
+> Sınıfının özelliği olarak ayarlandıysa`true`, yerel bir veren adresi belirtilmez ve [ \<WSFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) veya diğer Federasyon bağlamasıyla belirtilen veren adresi <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> `ClientCredentials` `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self` ,`http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, veya ise `null`, Windows CardSpace veren kullanılır.
+
+## <a name="to-configure-the-local-issuer-in-code"></a>Kod içinde yerel sertifikayı yapılandırmak için
+
+1. Türünde değişken oluşturma<xref:System.ServiceModel.Security.IssuedTokenClientCredential>
+
+2. Değişkenini <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> `ClientCredentials` sınıfının özelliğinden döndürülen örneğe ayarlayın. <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Bu örnek, istemcisinin özelliği (öğesinden <xref:System.ServiceModel.ClientBase%601>devralınmış) <xref:System.ServiceModel.ChannelFactory>veya <xref:System.ServiceModel.ChannelFactory.Credentials%2A> özelliği tarafından döndürülür:
+
      [!code-csharp[c_CreateSTS#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#9)]
-     [!code-vb[c_CreateSTS#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#9)]  
-  
-3. Ayarlama <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> özelliğine yeni bir örneğini <xref:System.ServiceModel.EndpointAddress>, oluşturucusuna bağımsız değişken olarak yerel dağıtımcının adresine sahip.  
-  
+     [!code-vb[c_CreateSTS#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#9)]
+
+3. Özelliğini, yerel veren 'in adresiyle <xref:System.ServiceModel.EndpointAddress>, oluşturucunun bir bağımsız değişkeni olarak yeni bir örneğine ayarlayın. <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>
+
      [!code-csharp[c_CreateSTS#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#10)]
-     [!code-vb[c_CreateSTS#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#10)]  
-  
-     Alternatif olarak, yeni bir oluşturma <xref:System.Uri> oluşturucusuna bağımsız değişken olarak örneği.  
-  
+     [!code-vb[c_CreateSTS#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#10)]
+
+     Alternatif olarak, Oluşturucu için <xref:System.Uri> bağımsız değişken olarak yeni bir örnek oluşturun.
+
      [!code-csharp[c_CreateSTS#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#11)]
-     [!code-vb[c_CreateSTS#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#11)]  
-  
-     `addressHeaders` Parametresi, bir dizi <xref:System.ServiceModel.Channels.AddressHeader> gösterildiği gibi örnekler.  
-  
+     [!code-vb[c_CreateSTS#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#11)]
+
+     Parametresi, gösterildiği gibi bir <xref:System.ServiceModel.Channels.AddressHeader> örnek dizisidir. `addressHeaders`
+
      [!code-csharp[c_CreateSTS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#12)]
-     [!code-vb[c_CreateSTS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#12)]  
-  
-4. Kullanarak yerel sertifika verenin bağlamasını ayarlamak <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> özelliği.  
-  
+     [!code-vb[c_CreateSTS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#12)]
+
+4. <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> Özelliğini kullanarak yerel veren için bağlamayı ayarlayın.
+
      [!code-csharp[c_CreateSTS#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#13)]
-     [!code-vb[c_CreateSTS#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#13)]  
-  
-5. İsteğe bağlı. Tarafından döndürülen bir koleksiyonda gibi davranışları ekleyerek yapılandırılmış uç nokta davranışları için yerel dağıtımcının ekleme <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> özelliği.  
-  
+     [!code-vb[c_CreateSTS#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#13)]
+
+5. İsteğe bağlı. <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> Özelliği tarafından döndürülen koleksiyona böyle davranışlar ekleyerek yerel veren için yapılandırılmış uç nokta davranışları ekleyin.
+
      [!code-csharp[c_CreateSTS#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#14)]
-     [!code-vb[c_CreateSTS#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#14)]  
-  
-### <a name="to-configure-the-local-issuer-in-configuration"></a>Yerel yayımlayan yapılandırma yapılandırmak için  
-  
-1. Oluşturma bir [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) öğesi alt öğesi olarak [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) kendisi bir alt öğesi olan öğeyi [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) öğesinde bir uç nokta davranışı.  
-  
-2. Ayarlama `address` belirteci isteklerini kabul edecek yerel dağıtımcının adresine özniteliği.  
-  
-3. Ayarlama `binding` ve `bindingConfiguration` öznitelikleri değerlerine başvuran yerel veren uç noktası ile iletişim kurarken kullanması için uygun bağlama.  
-  
-4. İsteğe bağlı. Ayarlama [ \<kimlik >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) öğesi alt öğesi olarak <`localIssuer`> öğesi ve yerel dağıtımcının için kimlik bilgilerini belirtin.  
-  
-5. İsteğe bağlı. Ayarlama [ \<üstbilgiler >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) öğesi alt öğesi olarak <`localIssuer`> öğesi ve yerel dağıtımcının doğru bir şekilde çözmek için gerekli ek üstbilgi belirtin.  
-  
-## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Belirli bir bağlama için bir veren adresi ve bağlama belirtilirse, yerel sertifika verenin bu bağlamayı kullanan uç noktaları için kullanılmaz unutmayın. Böyle bir bağlamanın kullanmayın veya veren adresi böylece bunlar bağlama değiştirme her zaman yerel dağıtımcının kullanmayı düşündüğünüz istemcileri sağlamak `null`.  
-  
+     [!code-vb[c_CreateSTS#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#14)]
+
+## <a name="to-configure-the-local-issuer-in-configuration"></a>Yapılandırmada yerel sertifikayı yapılandırmak için
+
+1. Bir uç nokta [davranışında \<ClientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) öğesinin bir alt öğesi olan [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) öğesinin bir alt öğesi olarak bir [ \<LocalIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) öğesi oluşturun.
+
+2. Özniteliği, `address` belirteç isteklerini kabul edecek yerel veren adresi olarak ayarlayın.
+
+3. `binding` Ve`bindingConfiguration` özniteliklerini, yerel veren uç noktasıyla iletişim kurarken kullanılacak uygun bağlamaya başvuran değerlere ayarlayın.
+
+4. İsteğe bağlı. Identity > öğesini <`localIssuer`> öğesinin bir alt öğesi olarak ayarlayın ve yerel veren için kimlik bilgilerini belirtin. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+
+5. İsteğe bağlı. `localIssuer` [Üst > bilgileri < > öğesinin bir alt öğesi olarak ayarlayın ve yerel sertifikayı vereni doğru bir şekilde ele almak için gereken ek üstbilgileri belirtin. \<](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)
+
+## <a name="net-framework-security"></a>.NET Framework Güvenliği
+
+Belirli bir bağlama için bir veren adresi ve bağlama belirtilirse, bu bağlamayı kullanan uç noktalar için yerel veren kullanılmaz. Her zaman yerel vereni kullanması beklenen istemciler böyle bir bağlamayı kullanmamalıdır veya veren adresinin olması `null`için bağlamayı değiştirdiklerinden emin olmalıdır.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Nasıl yapılır: Federe istemci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Nasıl yapılır: Federasyon Hizmeti kimlik bilgilerini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Nasıl yapılır: Federe Istemci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

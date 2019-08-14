@@ -1,5 +1,5 @@
 ---
-title: = > işleci - C# başvurusu
+title: = > operator- C# Reference
 ms.custom: seodec18
 ms.date: 01/22/2019
 f1_keywords:
@@ -8,52 +8,52 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: a7fea9810cb02269278638ec71cd106463b029e9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 3b3a5c2e96e92271da66cbd8f1039a9ec97544fa
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025021"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971226"
 ---
-# <a name="-operator-c-reference"></a>= > işleci (C# Başvurusu)
+# <a name="-operator-c-reference"></a>= > işleci (C# başvuru)
 
-`=>` Belirteç iki biçimde desteklenir: lambda işlecini ve üyenin adını ve bir deyim gövdesi tanımına üye uygulamasında bir ayırıcı olarak.
+`=>` Belirteç iki biçimde desteklenir: lambda işleci, bir üye adı ayırıcı olarak ve bir ifade gövdesi tanımında üye uygulama.
 
 ## <a name="lambda-operator"></a>Lambda işleci
 
-İçinde [lambda ifadeleri](../../programming-guide/statements-expressions-operators/lambda-expressions.md), lambda işlecini `=>` işlecin sağ tarafındaki lambda gövdesinden sol tarafında giriş değişkenleri ayırır.
+[Lambda ifadelerinde](../../programming-guide/statements-expressions-operators/lambda-expressions.md)lambda işleci `=>` , sol taraftaki giriş değişkenlerini sağ taraftaki lambda gövdesinden ayırır.
 
-Aşağıdaki örnekte [LINQ](../../programming-guide/concepts/linq/index.md) özelliği ile yöntem sözdizimi lambda ifadeleri kullanımını göstermek için:
+Aşağıdaki örnek, lambda ifadelerinin kullanımını göstermek için yöntem sözdizimi ile [LINQ](../../programming-guide/concepts/linq/index.md) özelliğini kullanır:
 
 [!code-csharp-interactive[infer types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
 
-Lambda ifadeleri girdi değişkenleri, derleme zamanında kesin türlü yapılır. Derleyici giriş değişkenleri tür çıkarımını, gibi önceki örnekte, tür bildirimleri çıkarabilirsiniz. Girdi değişkeni türünü belirtmek gerekiyorsa, aşağıdaki örnekte gösterildiği gibi her bir değişken için yapmanız gerekir:
+Lambda ifadelerinin giriş değişkenleri, derleme zamanında kesin olarak yazılır. Derleyici, giriş değişkenlerinin türlerini, önceki örnekte olduğu gibi çıkarsancan tür bildirimlerini atlayabilirsiniz. Giriş değişkenlerinin türünü belirtmeniz gerekiyorsa, aşağıdaki örnekte gösterildiği gibi her bir değişken için bunu yapmanız gerekir:
 
 [!code-csharp-interactive[specify types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
 
-Aşağıdaki örnek nasıl tanımlanacağını girdi değişkenleri olmadan bir lambda ifadesi gösterir:
+Aşağıdaki örnek, giriş değişkenleri olmadan bir lambda ifadesinin nasıl tanımlanacağını göstermektedir:
 
 [!code-csharp-interactive[without input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
 
-Daha fazla bilgi için [Lambda ifadeleri](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
+Daha fazla bilgi için bkz. [lambda ifadeleri](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
 
 ## <a name="expression-body-definition"></a>İfade gövdesi tanımı
 
-Bir ifade gövdesi tanımına genel sözdizimi aşağıdaki gibidir:
+Bir ifade gövdesi tanımında aşağıdaki genel sözdizimi vardır:
 
 ```csharp
 member => expression;
 ```
 
-Burada *ifade* geçerli bir ifadedir. Unutmayın *ifade* olabilir bir *deyim ifadesi* üyenin dönüş türü ise yalnızca `void`, veya üye bir oluşturucu, bir sonlandırıcı ya da bir özellik ise `set` erişimcisi.
+Burada `expression` geçerli bir ifadedir. Dönüş türü `expression` üyenin dönüş türüne örtük olarak dönüştürülebilir olmalıdır. Üyenin `void` dönüş türü ise veya üye bir Oluşturucu, Sonlandırıcı veya özellik `set` erişimcisi `expression` ise [*deyim ifadesi*](~/_csharplang/spec/statements.md#expression-statements)olmalıdır; daha sonra herhangi bir türde olabilir.
 
-Aşağıdaki örnek bir ifade gövdesi tanımını gösterir bir `Person.ToString` yöntemi:
+Aşağıdaki örnek bir `Person.ToString` Yöntem için bir ifade gövdesi tanımı gösterir:
 
 ```csharp
 public override string ToString() => $"{fname} {lname}".Trim();
 ```
 
-Aşağıdaki yöntem tanımının bir toplu sürümdür:
+Bu, aşağıdaki yöntem tanımının bir toplu sürümüdür:
 
 ```csharp
 public override string ToString()
@@ -62,21 +62,21 @@ public override string ToString()
 }
 ```
 
-İfade gövdesi tanımlarında yöntemleri ve özellikleri salt okunur başlayarak desteklenir C# 6. Oluşturucular, bir Sonlandırıcı, özellik erişimcileri ve dizin oluşturucular için ifade gövdesi tanımları sürümünden itibaren desteklenir C# 7.0.
+Yöntemler ve salt okunurdur özellikleri için ifade gövdesi tanımları C# 6 ' dan başlayarak desteklenir. Oluşturucular, sonlandırıcılar, özellik erişimcileri ve Dizin oluşturucular için ifade gövdesi tanımları 7,0 ile C# başlayarak desteklenir.
 
-Daha fazla bilgi için [ifade gövdeli üyeler](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
+Daha fazla bilgi için bkz. [Expression-Bodied Üyeler](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
 
-## <a name="operator-overloadability"></a>İşleç overloadability
+## <a name="operator-overloadability"></a>Operatör overloadability
 
-`=>` İşleci aşırı yüklenemez.
+`=>` İşleç aşırı yüklenemez.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [anonim işlev ifadeleri](~/_csharplang/spec/expressions.md#anonymous-function-expressions) bölümünü [ C# dil belirtimi](../language-specification/index.md).
+Daha fazla bilgi için, [ C# dil belirtiminin](../language-specification/index.md) [anonim işlev ifadeleri](~/_csharplang/spec/expressions.md#anonymous-function-expressions) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvuru](../index.md)
+- [C#başvurunun](../index.md)
 - [C# işleçleri](index.md)
 - [Lambda ifadeleri](../../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [İfade gövdeli üyeler](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)
