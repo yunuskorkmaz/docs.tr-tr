@@ -6,12 +6,12 @@ title: .NET Belgeleri
 description: C#, Visual Basic ve F# kullanarak herhangi bir platformda çeşitli uygulamalar oluşturmak için .NET kullanmayı öğrenin. API başvurusuna, örnek koda, öğreticilere ve daha fazlasına göz atın.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 7cf46b0c4d88b7657a5c82c7aa0ae30655c9d5ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a6f6bc91a3055ffd0efe9f6b89ba0499921ed1d4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589994"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972382"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -77,10 +77,10 @@ ms.locfileid: "65589994"
         <h1>.NET Belgeleri</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Belgeler</a>
+                <a data-default="true" href="#docs">Docs</a>
                 <ul id="docs">
                     <li>
-                        <a href="#getstarted">Başlarken</a>
+                        <a href="#getstarted">Kullanmaya Başlama</a>
                         <ul id="getstarted" class="cardsF">
                             <li>
                                 <div class="cardSize">
@@ -309,7 +309,7 @@ ms.locfileid: "65589994"
                                 </a>
                             </li>
                             <li>
-                                <a href="/aspnet/overview">
+                                <a href="/aspnet/core/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -319,8 +319,8 @@ ms.locfileid: "65589994"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>ASP.NET nedir?</h3>
-                                                    <p>ASP.NET web uygulamaları oluşturmayı öğrenin.</p>
+                                                    <h3>ASP.NET Core nedir?</h3>
+                                                    <p>ASP.NET Core web uygulamaları oluşturmayı öğrenin.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -682,7 +682,7 @@ ms.locfileid: "65589994"
                         </ul>
                     </li>
                     <li>
-                        <a href="#ml-ai">Makine Öğrenimi ve AI</a>
+                        <a href="#ml-ai">Makine Öğrenmesi ve AI</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
                                 <a href="/dotnet/machine-learning">

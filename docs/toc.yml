@@ -267,6 +267,14 @@
           href: core/docker/build-container.md
         - name: Visual Studio’da Kapsayıcı Araçları
           href: /visualstudio/containers/overview
+    - name: Tanılama araçları
+      items:
+        - name: Genel Bakış
+          href: core/diagnostics/index.md
+        - name: Yönetilen hata ayıklayıcıları
+          href: core/diagnostics/managed-debuggers.md
+        - name: Günlüğe kaydetme ve izleme
+          href: core/diagnostics/logging-tracing.md
     - name: Birim Testi
       href: core/testing/index.md
       items:

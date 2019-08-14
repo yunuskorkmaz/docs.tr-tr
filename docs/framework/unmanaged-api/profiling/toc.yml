@@ -444,6 +444,37 @@
               href: icorprofilerinfo7-getinmemorysymbolslength-method.md
             - name: ReadInMemorySymbols
               href: icorprofilerinfo7-readinmemorysymbols.md
+        - name: ICorProfilerInfo8 Arabirimi
+          href: icorprofilerinfo8-interface.md
+          items:
+            - name: GetDynamicFunctionInfo Metodu
+              href: icorprofilerinfo8-getdynamicfunctioninfo-method.md
+            - name: GetFunctionFromIP3 Metodu
+              href: icorprofilerinfo8-getfunctionfromip3-method.md
+            - name: IsFunctionDynamic Metodu
+              href: icorprofilerinfo8-isfunctiondynamic-method.md
+        - name: ICorProfilerInfo9 Arabirimi
+          href: icorprofilerinfo9-interface.md
+          items:
+            - name: GetCodeInfo4 Metodu
+              href: icorprofilerinfo9-getcodeinfo4-method.md
+            - name: GetILToNativeMapping3 Metodu
+              href: icorprofilerinfo9-getiltonativemapping3-method.md
+            - name: GetNativeCodeStartAddresses Metodu
+              href: icorprofilerinfo9-getnativecodestartaddresses-method.md
+        - name: ICorProfilerInfo10 Arabirimi
+          href: icorprofilerinfo10-interface.md
+          items:
+            - name: EnumerateObjectReferences Metodu
+              href: icorprofilerinfo10-enumerateobjectreferences-method.md
+            - name: IsFrozenObject Metodu
+            - name: GetLOHObjectSizeThreshold Metodu
+              href: icorprofilerinfo10-isfrozenobject-method.md
+            - name: RequestReJITWithInliners Metodu
+              href: icorprofilerinfo10-suspendruntime-method.md
+            - name: ResumeRuntime Metodu
+            - name: SuspendRuntime Metodu
+              href: icorprofilerinfo10-resumeruntime-method.md
         - name: ICorProfilerModuleEnum Arabirimi
           href: icorprofilermoduleenum-interface.md
           items:
@@ -548,6 +579,8 @@
           href: cor-prf-module-flags-enumeration.md
         - name: COR_PRF_MONITOR Numaralandırması
           href: cor-prf-monitor-enumeration.md
+        - name: COR_PRF_REJIT_FLAGS Sabit Listesi
+          href: cor-prf-rejit-flags-enumeration.md
         - name: COR_PRF_RUNTIME_TYPE Numaralandırması
           href: cor-prf-runtime-type-enumeration.md
         - name: COR_PRF_SNAPSHOT_INFO Numaralandırması
