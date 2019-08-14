@@ -2,355 +2,357 @@
 title: 'Özel İleti Kodlayıcısı: Sıkıştırma Kodlayıcısı'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 32ca96987a86c04c227f8bb0d680f647898dfccf
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 84afb060e98a5936b24c5446ff543fd627864102
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348436"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971994"
 ---
-# <a name="custom-message-encoder-compression-encoder"></a><span data-ttu-id="78106-102">Özel İleti Kodlayıcısı: Sıkıştırma Kodlayıcısı</span><span class="sxs-lookup"><span data-stu-id="78106-102">Custom Message Encoder: Compression Encoder</span></span>
-<span data-ttu-id="78106-103">Bu örnek, Windows Communication Foundation (WCF) platformunu kullanarak özel bir kodlayıcı uygulamak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="78106-103">This sample demonstrates how to implement a custom encoder using the Windows Communication Foundation (WCF) platform.</span></span>  
-  
+# <a name="custom-message-encoder-compression-encoder"></a><span data-ttu-id="f6e18-102">Özel İleti Kodlayıcısı: Sıkıştırma Kodlayıcısı</span><span class="sxs-lookup"><span data-stu-id="f6e18-102">Custom Message Encoder: Compression Encoder</span></span>
+
+<span data-ttu-id="f6e18-103">Bu örnek, Windows Communication Foundation (WCF) platformunu kullanarak nasıl özel bir kodlayıcı uygulanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-103">This sample demonstrates how to implement a custom encoder using the Windows Communication Foundation (WCF) platform.</span></span>
+
 > [!IMPORTANT]
->  <span data-ttu-id="78106-104">Örnekler, makinenizde zaten yüklü.</span><span class="sxs-lookup"><span data-stu-id="78106-104">The samples may already be installed on your machine.</span></span> <span data-ttu-id="78106-105">Devam etmeden önce şu (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="78106-105">Check for the following (default) directory before continuing.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  <span data-ttu-id="78106-106">Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="78106-106">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="78106-107">Bu örnek, şu dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="78106-107">This sample is located in the following directory.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
-  
-## <a name="sample-details"></a><span data-ttu-id="78106-108">Örnek Ayrıntıları</span><span class="sxs-lookup"><span data-stu-id="78106-108">Sample Details</span></span>  
- <span data-ttu-id="78106-109">Bu örnek, bir istemci konsol program (.exe), şirket içinde barındırılan hizmeti bir konsol programı (.exe) ve sıkıştırma ileti Kodlayıcı kitaplığı (.dll) oluşur.</span><span class="sxs-lookup"><span data-stu-id="78106-109">This sample consists of a client console program (.exe), a self-hosted service console program (.exe) and a compression message encoder library (.dll).</span></span> <span data-ttu-id="78106-110">Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.</span><span class="sxs-lookup"><span data-stu-id="78106-110">The service implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="78106-111">Anlaşma tarafından tanımlanan `ISampleServer` temel dize işlemleri Yankı sunan arabirimi (`Echo` ve `BigEcho`).</span><span class="sxs-lookup"><span data-stu-id="78106-111">The contract is defined by the `ISampleServer` interface, which exposes basic string echoing operations (`Echo` and `BigEcho`).</span></span> <span data-ttu-id="78106-112">İstemcinin istemciye ileti tekrarlayarak belirli bir işlemi ve hizmet yanıt zaman uyumlu istekleri yapar.</span><span class="sxs-lookup"><span data-stu-id="78106-112">The client makes synchronous requests to a given operation and the service replies by repeating the message back to the client.</span></span> <span data-ttu-id="78106-113">Hizmet ve istemci etkinliği konsol pencerelerinde görünür olur.</span><span class="sxs-lookup"><span data-stu-id="78106-113">Client and service activity is visible in the console windows.</span></span> <span data-ttu-id="78106-114">Bu örnek amacı, özel bir kodlayıcı yazma ve bir iletinin hat üzerinde sıkıştırma etkisini gösteren göstermektir.</span><span class="sxs-lookup"><span data-stu-id="78106-114">The intent of this sample is to show how to write a custom encoder and demonstrate the impact of compression of a message on the wire.</span></span> <span data-ttu-id="78106-115">İleti boyutu, işlem süresi veya her ikisi de hesaplamak için sıkıştırma ileti Kodlayıcı için izleme ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="78106-115">You can add instrumentation to the compression message encoder to calculate message size, processing time, or both.</span></span>  
-  
+> <span data-ttu-id="f6e18-104">Örnekler makinenizde zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-104">The samples may already be installed on your machine.</span></span> <span data-ttu-id="f6e18-105">Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.</span><span class="sxs-lookup"><span data-stu-id="f6e18-105">Check for the following (default) directory before continuing.</span></span>
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> <span data-ttu-id="f6e18-106">Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin.</span><span class="sxs-lookup"><span data-stu-id="f6e18-106">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="f6e18-107">Bu örnek, aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="f6e18-107">This sample is located in the following directory.</span></span>
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`
+
+## <a name="sample-details"></a><span data-ttu-id="f6e18-108">Örnek Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="f6e18-108">Sample Details</span></span>
+
+<span data-ttu-id="f6e18-109">Bu örnek, bir istemci konsolu programından (. exe), şirket içinde barındırılan bir hizmet konsolu programından (. exe) ve bir sıkıştırma ileti Kodlayıcısı kitaplığından (. dll) oluşur.</span><span class="sxs-lookup"><span data-stu-id="f6e18-109">This sample consists of a client console program (.exe), a self-hosted service console program (.exe) and a compression message encoder library (.dll).</span></span> <span data-ttu-id="f6e18-110">Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular.</span><span class="sxs-lookup"><span data-stu-id="f6e18-110">The service implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="f6e18-111">Sözleşme, temel dize yankılanma `ISampleServer` işlemlerini (`Echo` ve `BigEcho`) kullanıma sunan arabirim tarafından tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="f6e18-111">The contract is defined by the `ISampleServer` interface, which exposes basic string echoing operations (`Echo` and `BigEcho`).</span></span> <span data-ttu-id="f6e18-112">İstemci, iletiyi istemciye geri tekrarlayarak, belirli bir işleme ve hizmet yanıtlarını zaman uyumlu istekler yapar.</span><span class="sxs-lookup"><span data-stu-id="f6e18-112">The client makes synchronous requests to a given operation and the service replies by repeating the message back to the client.</span></span> <span data-ttu-id="f6e18-113">İstemci ve hizmet etkinliği konsol penceresinde görünür.</span><span class="sxs-lookup"><span data-stu-id="f6e18-113">Client and service activity is visible in the console windows.</span></span> <span data-ttu-id="f6e18-114">Bu örneğin amacı, bir özel kodlayıcının nasıl yazılacağını ve bir iletinin kabloda sıkıştırılma etkisini gösterir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-114">The intent of this sample is to show how to write a custom encoder and demonstrate the impact of compression of a message on the wire.</span></span> <span data-ttu-id="f6e18-115">İleti boyutunu, işlem süresini veya her ikisini de hesaplamak için, sıkıştırma iletisi kodlayıcıya izleme ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f6e18-115">You can add instrumentation to the compression message encoder to calculate message size, processing time, or both.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="78106-116">Sunucu (GZip veya Deflate gibi bir algoritma ile oluşturulan) sıkıştırılmış bir yanıt gönderiyorsa .NET Framework 4'te bir WCF istemcisini otomatik sıkıştırma etkinleştirildi.</span><span class="sxs-lookup"><span data-stu-id="78106-116">In the .NET Framework 4, automatic decompression has been enabled on a WCF client if the server is sending a compressed response (created with an algorithm such as GZip or Deflate).</span></span> <span data-ttu-id="78106-117">Internet Information Server (IIS) Web barındırılan hizmeti, IIS, sıkıştırılmış bir yanıt göndermek hizmet için yapılandırılabilir.</span><span class="sxs-lookup"><span data-stu-id="78106-117">If the service is Web-hosted in Internet Information Server (IIS), then IIS can be configured for the service to send a compressed response.</span></span> <span data-ttu-id="78106-118">Bu örnek, sıkıştırma ve açma hem istemci hem de hizmet yapma gereksinimi varsa veya şirket içinde barındırılan hizmet ise kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="78106-118">This sample can be used if the requirement is to do compression and decompression on both the client and the service or if the service is self-hosted.</span></span>  
-  
- <span data-ttu-id="78106-119">Örnek oluşturma ve bir WCF uygulamaya özel ileti Kodlayıcı tümleştirme gösterir.</span><span class="sxs-lookup"><span data-stu-id="78106-119">The sample demonstrates how to build and integrate a custom message encoder into a WCF application.</span></span> <span data-ttu-id="78106-120">' % S'kitaplığı GZipEncoder.dll hem istemci hem de hizmet ile dağıtılır.</span><span class="sxs-lookup"><span data-stu-id="78106-120">The library GZipEncoder.dll is deployed with both the client and the service.</span></span> <span data-ttu-id="78106-121">Bu örnek, ayrıca ileti sıkıştırma etkisini gösterir.</span><span class="sxs-lookup"><span data-stu-id="78106-121">This sample also demonstrates the impact of compressing messages.</span></span> <span data-ttu-id="78106-122">GZipEncoder.dll kodda şunlar gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="78106-122">The code in GZipEncoder.dll demonstrates the following:</span></span>  
-  
-- <span data-ttu-id="78106-123">Özel bir kodlayıcı ve Kodlayıcı fabrikası oluşturma.</span><span class="sxs-lookup"><span data-stu-id="78106-123">Building a custom encoder and encoder factory.</span></span>  
-  
-- <span data-ttu-id="78106-124">Bir bağlama öğesi için özel bir kodlayıcı geliştirme.</span><span class="sxs-lookup"><span data-stu-id="78106-124">Developing a binding element for a custom encoder.</span></span>  
-  
-- <span data-ttu-id="78106-125">Özel bağlama yapılandırma özel bağlama öğeleri tümleştirmek için kullanma.</span><span class="sxs-lookup"><span data-stu-id="78106-125">Using the custom binding configuration for integrating custom binding elements.</span></span>  
-  
-- <span data-ttu-id="78106-126">Özel bağlama öğesinin dosya yapılandırması izin vermek için özel yapılandırma işleyicisi geliştirme.</span><span class="sxs-lookup"><span data-stu-id="78106-126">Developing a custom configuration handler to allow file configuration of a custom binding element.</span></span>  
-  
- <span data-ttu-id="78106-127">Daha önce belirtildiği gibi özel bir kodlayıcı uygulanan birden fazla katman vardır.</span><span class="sxs-lookup"><span data-stu-id="78106-127">As indicated previously, there are several layers that are implemented in a custom encoder.</span></span> <span data-ttu-id="78106-128">Her biri bu Katmanlar arasındaki ilişkiyi daha iyi anlamak için aşağıdaki listede hizmet başlatma için basitleştirilmiş bir olaylar dizisi şöyledir:</span><span class="sxs-lookup"><span data-stu-id="78106-128">To better illustrate the relationship between each of these layers, a simplified order of events for service start-up is in the following list:</span></span>  
-  
-1. <span data-ttu-id="78106-129">Sunucuyu başlatır.</span><span class="sxs-lookup"><span data-stu-id="78106-129">The server starts.</span></span>  
-  
-2. <span data-ttu-id="78106-130">Yapılandırma bilgilerini okuyun.</span><span class="sxs-lookup"><span data-stu-id="78106-130">The configuration information is read.</span></span>  
-  
-    1. <span data-ttu-id="78106-131">Özel yapılandırma işleyicisi hizmeti yapılandırmasını kaydeder.</span><span class="sxs-lookup"><span data-stu-id="78106-131">The service configuration registers the custom configuration handler.</span></span>  
-  
-    2. <span data-ttu-id="78106-132">Hizmet ana bilgisayarı oluşturulur ve açılır.</span><span class="sxs-lookup"><span data-stu-id="78106-132">The service host is created and opened.</span></span>  
-  
-    3. <span data-ttu-id="78106-133">Özel yapılandırma öğesi oluşturur ve özel bağlama öğesini döndürür.</span><span class="sxs-lookup"><span data-stu-id="78106-133">The custom configuration element creates and returns the custom binding element.</span></span>  
-  
-    4. <span data-ttu-id="78106-134">Özel bağlama öğesi oluşturur ve bir ileti Kodlayıcı üreteci döndürür.</span><span class="sxs-lookup"><span data-stu-id="78106-134">The custom binding element creates and returns a message encoder factory.</span></span>  
-  
-3. <span data-ttu-id="78106-135">Bir ileti alındı.</span><span class="sxs-lookup"><span data-stu-id="78106-135">A message is received.</span></span>  
-  
-4. <span data-ttu-id="78106-136">İleti Kodlayıcı fabrikası iletiyi okumak ve yanıt yazmak için bir ileti Kodlayıcı döndürür.</span><span class="sxs-lookup"><span data-stu-id="78106-136">The message encoder factory returns a message encoder for reading in the message and writing out the response.</span></span>  
-  
-5. <span data-ttu-id="78106-137">Kodlayıcı katmanı, bir sınıf üreteci uygulanır.</span><span class="sxs-lookup"><span data-stu-id="78106-137">The encoder layer is implemented as a class factory.</span></span> <span data-ttu-id="78106-138">Yalnızca Kodlayıcı sınıf üreteci için özel bir kodlayıcı herkese açık şekilde sunulmalıdır.</span><span class="sxs-lookup"><span data-stu-id="78106-138">Only the encoder class factory must be publicly exposed for the custom encoder.</span></span> <span data-ttu-id="78106-139">Fabrika nesnesine bağlama öğesi tarafından döndürülen zaman <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory%601> nesnesi oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="78106-139">The factory object is returned by the binding element when the <xref:System.ServiceModel.ServiceHost> or <xref:System.ServiceModel.ChannelFactory%601> object is created.</span></span> <span data-ttu-id="78106-140">İleti Kodlayıcı arabelleğe alınan veya akış modunda çalışır.</span><span class="sxs-lookup"><span data-stu-id="78106-140">Message encoders can operate in a buffered or streaming mode.</span></span> <span data-ttu-id="78106-141">Bu örnek, hem arabellekli modu hem de akış modunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="78106-141">This sample demonstrates both buffered mode and streaming mode.</span></span>  
-  
- <span data-ttu-id="78106-142">Her modu için yok yayarsa `ReadMessage` ve `WriteMessage` yöntemi soyut `MessageEncoder` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="78106-142">For each mode there is an accompanying `ReadMessage` and `WriteMessage` method on the abstract `MessageEncoder` class.</span></span> <span data-ttu-id="78106-143">Kodlama iş çoğunu, bu yöntemler de gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="78106-143">A majority of the encoding work takes place in these methods.</span></span> <span data-ttu-id="78106-144">Örnek, var olan metin ve ikili ileti kodlayıcılar sarmalar.</span><span class="sxs-lookup"><span data-stu-id="78106-144">The sample wraps the existing text and binary message encoders.</span></span> <span data-ttu-id="78106-145">Bu örnek okuma ve yazma iletileri kablo temsilinin iç kodlayıcıya temsilci ve sıkıştırmayı veya sonuçları sıkıştırmasını sıkıştırma Kodlayıcısı olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="78106-145">This allows the sample to delegate the reading and writing of the wire representation of messages to the inner encoder and allows the compression encoder to compress or decompress the results.</span></span> <span data-ttu-id="78106-146">İleti kodlama için herhangi bir işlem hattı olduğundan, birden çok kodlayıcılar WCF'de kullanmak için tek model budur.</span><span class="sxs-lookup"><span data-stu-id="78106-146">Because there is no pipeline for message encoding, this is the only model for using multiple encoders in WCF.</span></span> <span data-ttu-id="78106-147">İleti sıkıştırması açılmış sonra elde edilen ileti işlemek kanal yığın yığında geçirilir.</span><span class="sxs-lookup"><span data-stu-id="78106-147">Once the message has been decompressed, the resulting message is passed up the stack for the channel stack to handle.</span></span> <span data-ttu-id="78106-148">Sıkıştırma sırasında elde edilen sıkıştırılmış iletisi doğrudan sağlanan akışına yazılır.</span><span class="sxs-lookup"><span data-stu-id="78106-148">During compression, the resulting compressed message is written directly to the stream provided.</span></span>  
-  
- <span data-ttu-id="78106-149">Bu örnek yardımcı yöntemler kullanır (`CompressBuffer` ve `DecompressBuffer`) kullanılacak akış arabellekleri dönüştürme gerçekleştirmek için `GZipStream` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="78106-149">This sample uses helper methods (`CompressBuffer` and `DecompressBuffer`) to perform conversion from buffers to streams to use the `GZipStream` class.</span></span>  
-  
- <span data-ttu-id="78106-150">Arabelleğe alınan `ReadMessage` ve `WriteMessage` sınıflarının kullanımını `BufferManager` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="78106-150">The buffered `ReadMessage` and `WriteMessage` classes make use of the `BufferManager` class.</span></span> <span data-ttu-id="78106-151">Kodlayıcı yalnızca Kodlayıcı factory erişilebilir.</span><span class="sxs-lookup"><span data-stu-id="78106-151">The encoder is accessible only through the encoder factory.</span></span> <span data-ttu-id="78106-152">Özet `MessageEncoderFactory` SAX adlı bir özellik `Encoder` geçerli Kodlayıcı ve adlı bir yöntem erişmek için `CreateSessionEncoder` oturumları destekleyen bir kodlayıcı oluşturma için.</span><span class="sxs-lookup"><span data-stu-id="78106-152">The abstract `MessageEncoderFactory` class provides a property named `Encoder` for accessing the current encoder and a method named `CreateSessionEncoder` for creating an encoder that supports sessions.</span></span> <span data-ttu-id="78106-153">Böyle bir kodlayıcı, burada kanal oturumları destekler, sıralanır ve güvenilir bir senaryoda kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="78106-153">Such an encoder can be used in the scenario where the channel supports sessions, is ordered and is reliable.</span></span> <span data-ttu-id="78106-154">Bu senaryo için kablo yazılan verilerin her bir oturumda iyileştirme sağlar.</span><span class="sxs-lookup"><span data-stu-id="78106-154">This scenario allows for optimization in each session of the data written to the wire.</span></span> <span data-ttu-id="78106-155">Bu istenmiyorsa, temel yöntemi aşırı.</span><span class="sxs-lookup"><span data-stu-id="78106-155">If this is not desired, the base method should not be overloaded.</span></span> <span data-ttu-id="78106-156">`Encoder` Özelliği, oturum olmayan Kodlayıcı ve varsayılan uygulamasını erişmek için bir mekanizma sağlar `CreateSessionEncoder` yöntemi özelliğinin değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="78106-156">The `Encoder` property provides a mechanism for accessing the session-less encoder and the default implementation of the `CreateSessionEncoder` method returns the value of the property.</span></span> <span data-ttu-id="78106-157">Örnek sıkıştırma sağlamak için var olan bir kodlayıcı sarmalar çünkü `MessageEncoderFactory` uygulama kabul eden bir `MessageEncoderFactory` , iç Kodlayıcı üretecini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="78106-157">Because the sample wraps an existing encoder to provide compression, the `MessageEncoderFactory` implementation accepts a `MessageEncoderFactory` that represents the inner encoder factory.</span></span>  
-  
- <span data-ttu-id="78106-158">Kodlayıcı ve Kodlayıcı Fabrika tanımlanan, bir WCF istemcisi ve hizmet ile kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="78106-158">Now that the encoder and encoder factory are defined, they can be used with a WCF client and service.</span></span> <span data-ttu-id="78106-159">Ancak, bu kodlayıcılar kanal yığına eklenmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="78106-159">However, these encoders must be added to the channel stack.</span></span> <span data-ttu-id="78106-160">Sınıfları türetebilirsiniz <xref:System.ServiceModel.ServiceHost> ve <xref:System.ServiceModel.ChannelFactory%601> sınıfları ve geçersiz kılma `OnInitialize` bu Kodlayıcı Fabrika el ile eklemek için yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="78106-160">You can derive classes from the <xref:System.ServiceModel.ServiceHost> and <xref:System.ServiceModel.ChannelFactory%601> classes and override the `OnInitialize` methods to add this encoder factory manually.</span></span> <span data-ttu-id="78106-161">Kodlayıcı factory üzerinden özel bağlama öğesinin üzerinden kullanıma sunabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="78106-161">You can also expose the encoder factory through a custom binding element.</span></span>  
-  
- <span data-ttu-id="78106-162">Yeni bir özel bağlama öğesi oluşturmak için öğesinden bir sınıf türetin <xref:System.ServiceModel.Channels.BindingElement> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="78106-162">To create a new custom binding element, derive a class from the <xref:System.ServiceModel.Channels.BindingElement> class.</span></span> <span data-ttu-id="78106-163">Ancak, birden fazla bağlama öğeleri vardır.</span><span class="sxs-lookup"><span data-stu-id="78106-163">There are, however, several types of binding elements.</span></span> <span data-ttu-id="78106-164">Özel bağlama öğesi bir ileti kodlama bağlama öğesi değerlendirilmiştir emin olmak için aynı zamanda uygulamanız gereken <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="78106-164">To ensure that the custom binding element is recognized as a message encoding binding element, you also must implement the <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.</span></span> <span data-ttu-id="78106-165"><xref:System.ServiceModel.Channels.MessageEncodingBindingElement> Yeni bir ileti Kodlayıcı fabrikası oluşturmak için bir yöntem sunar (`CreateMessageEncoderFactory`), eşleşen ileti Kodlayıcı üretecin bir örneğini döndürmek için uygulanır.</span><span class="sxs-lookup"><span data-stu-id="78106-165">The <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> exposes a method for creating a new message encoder factory (`CreateMessageEncoderFactory`), which is implemented to return an instance of the matching message encoder factory.</span></span> <span data-ttu-id="78106-166">Ayrıca, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> adresleme sürümü belirtmek üzere bir özelliğe sahiptir.</span><span class="sxs-lookup"><span data-stu-id="78106-166">Additionally, the <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> has a property to indicate the addressing version.</span></span> <span data-ttu-id="78106-167">Bu örnek mevcut kodlayıcılarda sarmalar olduğundan, örnek uygulama ayrıca bağlama öğelerinin var olan Kodlayıcı sarmalar ve oluşturucusuna bir parametre olarak bağlama öğesi bir iç Kodlayıcı alır ve özelliği aracılığıyla kullanıma sunduğu.</span><span class="sxs-lookup"><span data-stu-id="78106-167">Because this sample wraps the existing encoders, the sample implementation also wraps the existing encoder binding elements and takes an inner encoder binding element as a parameter to the constructor and exposes it through a property.</span></span> <span data-ttu-id="78106-168">Aşağıdaki örnek kod uygulamasını gösterir `GZipMessageEncodingBindingElement` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="78106-168">The following sample code shows the implementation of the `GZipMessageEncodingBindingElement` class.</span></span>  
-  
-```  
-public sealed class GZipMessageEncodingBindingElement   
-                        : MessageEncodingBindingElement //BindingElement  
-                        , IPolicyExportExtension  
-{  
-  
-    //We use an inner binding element to store information   
-    //required for the inner encoder.  
-    MessageEncodingBindingElement innerBindingElement;  
-  
-        //By default, use the default text encoder as the inner encoder.  
-        public GZipMessageEncodingBindingElement()  
-            : this(new TextMessageEncodingBindingElement()) { }  
-  
-    public GZipMessageEncodingBindingElement(MessageEncodingBindingElement messageEncoderBindingElement)  
-    {  
-        this.innerBindingElement = messageEncoderBindingElement;  
-    }  
-  
-    public MessageEncodingBindingElement InnerMessageEncodingBindingElement  
-    {  
-        get { return innerBindingElement; }  
-        set { innerBindingElement = value; }  
-    }  
-  
-    //Main entry point into the encoder binding element.   
-    // Called by WCF to get the factory that creates the  
-    //message encoder.  
-    public override MessageEncoderFactory CreateMessageEncoderFactory()  
-    {  
-        return new   
-GZipMessageEncoderFactory(innerBindingElement.CreateMessageEncoderFactory());  
-    }  
-  
-    public override MessageVersion MessageVersion  
-    {  
-        get { return innerBindingElement.MessageVersion; }  
-        set { innerBindingElement.MessageVersion = value; }  
-    }  
-  
-    public override BindingElement Clone()  
-    {  
-        return new   
-        GZipMessageEncodingBindingElement(this.innerBindingElement);  
-    }  
-  
-    public override T GetProperty<T>(BindingContext context)  
-    {  
-        if (typeof(T) == typeof(XmlDictionaryReaderQuotas))  
-        {  
-            return innerBindingElement.GetProperty<T>(context);  
-        }  
-        else   
-        {  
-            return base.GetProperty<T>(context);  
-        }  
-    }  
-  
-    public override IChannelFactory<TChannel> BuildChannelFactory<TChannel>(BindingContext context)  
-    {  
-        if (context == null)  
-            throw new ArgumentNullException("context");  
-  
-        context.BindingParameters.Add(this);  
-        return context.BuildInnerChannelFactory<TChannel>();  
-    }  
-  
-    public override IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext context)  
-    {  
-        if (context == null)  
-            throw new ArgumentNullException("context");  
-  
-        context.BindingParameters.Add(this);  
-        return context.BuildInnerChannelListener<TChannel>();  
-    }  
-  
-    public override bool CanBuildChannelListener<TChannel>(BindingContext context)  
-    {  
-        if (context == null)  
-            throw new ArgumentNullException("context");  
-  
-        context.BindingParameters.Add(this);  
-        return context.CanBuildInnerChannelListener<TChannel>();  
-    }  
-  
-    void IPolicyExportExtension.ExportPolicy(MetadataExporter exporter, PolicyConversionContext policyContext)  
-    {  
-        if (policyContext == null)  
-        {  
-            throw new ArgumentNullException("policyContext");  
-        }  
-       XmlDocument document = new XmlDocument();  
-       policyContext.GetBindingAssertions().Add(document.CreateElement(  
-            GZipMessageEncodingPolicyConstants.GZipEncodingPrefix,  
-            GZipMessageEncodingPolicyConstants.GZipEncodingName,  
-            GZipMessageEncodingPolicyConstants.GZipEncodingNamespace));  
-    }  
-}  
-```  
-  
- <span data-ttu-id="78106-169">Unutmayın `GZipMessageEncodingBindingElement` sınıfının Implements `IPolicyExportExtension` interface böylece bu bağlama öğesi meta verileri, bir ilke olarak aşağıdaki örnekte gösterildiği gibi dışarı aktarılabilir.</span><span class="sxs-lookup"><span data-stu-id="78106-169">Note that `GZipMessageEncodingBindingElement` class implements the `IPolicyExportExtension` interface, so that this binding element can be exported as a policy in metadata, as shown in the following example.</span></span>  
-  
-```xml  
-<wsp:Policy wsu:Id="BufferedHttpSampleServer_ISampleServer_policy">  
-    <wsp:ExactlyOne>  
-      <wsp:All>  
-        <gzip:text xmlns:gzip=  
-        "http://schemas.microsoft.com/ws/06/2004/mspolicy/netgzip1" />   
-       <wsaw:UsingAddressing />   
-     </wsp:All>  
-   </wsp:ExactlyOne>  
-</wsp:Policy>  
-```  
-  
- <span data-ttu-id="78106-170">`GZipMessageEncodingBindingElementImporter` Sınıfının Implements `IPolicyImportExtension` arabirimi bu sınıf, ilke için alır `GZipMessageEncodingBindingElement`.</span><span class="sxs-lookup"><span data-stu-id="78106-170">The `GZipMessageEncodingBindingElementImporter` class implements the `IPolicyImportExtension` interface, this class imports policy for `GZipMessageEncodingBindingElement`.</span></span> <span data-ttu-id="78106-171">İlkeleri yapılandırma dosyasına işlemek için içeri aktarmak için svcutil.exe aracını kullanılabilir `GZipMessageEncodingBindingElement`, aşağıdakiler için Svcutil.exe.config eklenmelidir.</span><span class="sxs-lookup"><span data-stu-id="78106-171">Svcutil.exe tool can be used to import policies to the configuration file, to handle `GZipMessageEncodingBindingElement`, the following should be added to Svcutil.exe.config.</span></span>  
-  
-```xml  
-<configuration>  
-  <system.serviceModel>  
-    <extensions>  
-      <bindingElementExtensions>  
-        <add name="gzipMessageEncoding"   
-          type=  
-            "Microsoft.ServiceModel.Samples.GZipMessageEncodingElement, GZipEncoder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />  
-      </bindingElementExtensions>  
-    </extensions>  
-    <client>  
-      <metadata>  
-        <policyImporters>  
-          <remove type=  
-"System.ServiceModel.Channels.MessageEncodingBindingElementImporter, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
-          <extension type=  
-"Microsoft.ServiceModel.Samples.GZipMessageEncodingBindingElementImporter, GZipEncoder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />  
-        </policyImporters>  
-      </metadata>  
-    </client>  
-  </system.serviceModel>  
-</configuration>  
-```  
-  
- <span data-ttu-id="78106-172">Yoktur, sıkıştırma Kodlayıcısı için eşleşen bir bağlama öğesi, program aracılığıyla hizmet veya istemci yeni bir özel bağlama nesnesi oluşturma ve aşağıdaki örnek kodda gösterildiği gibi özel bir bağlama öğesi, ekleyerek bağlanabilir.</span><span class="sxs-lookup"><span data-stu-id="78106-172">Now that there is a matching binding element for the compression encoder, it can be programmatically hooked into the service or client by constructing a new custom binding object and adding the custom binding element to it, as shown in the following sample code.</span></span>  
-  
-```  
-ICollection<BindingElement> bindingElements = new List<BindingElement>();  
-HttpTransportBindingElement httpBindingElement = new HttpTransportBindingElement();  
-GZipMessageEncodingBindingElement compBindingElement = new GZipMessageEncodingBindingElement ();  
-bindingElements.Add(compBindingElement);  
-bindingElements.Add(httpBindingElement);  
-CustomBinding binding = new CustomBinding(bindingElements);  
-binding.Name = "SampleBinding";  
-binding.Namespace = "http://tempuri.org/bindings";  
-```  
-  
- <span data-ttu-id="78106-173">Bu kullanıcı senaryolarının çoğunluğu için yeterli olabilir, ancak dosya yapılandırmasını destekleyen bir hizmet Web barındırılan olması durumunda kritik öneme sahiptir.</span><span class="sxs-lookup"><span data-stu-id="78106-173">While this may be sufficient for the majority of user scenarios, supporting a file configuration is critical if a service is to be Web-hosted.</span></span> <span data-ttu-id="78106-174">Web barındırma senaryosunda desteklemek için bir dosyada yapılandırılabilir olması bir özel bağlama öğeye izin vermek için özel yapılandırma işleyicisi geliştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="78106-174">To support the Web-hosted scenario, you must develop a custom configuration handler to allow a custom binding element to be configurable in a file.</span></span>  
-  
- <span data-ttu-id="78106-175">Yapılandırma sistemi üzerine bağlama öğesi için bir yapılandırma işleyicisi oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="78106-175">You can build a configuration handler for the binding element on top of the configuration system.</span></span> <span data-ttu-id="78106-176">Bağlama öğesi yapılandırması işleyicisi öğesinden türetilmelidir <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="78106-176">The configuration handler for the binding element must derive from the <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> class.</span></span> <span data-ttu-id="78106-177"><xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> Bağlama öğesi bu bölüm için oluşturulacak tür yapılandırma sistemi bildirir.</span><span class="sxs-lookup"><span data-stu-id="78106-177">The <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> informs the configuration system of the type of binding element to create for this section.</span></span> <span data-ttu-id="78106-178">Tüm yönlerini `BindingElement` , olabilir set ortaya özellikleri olarak <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> türetilmiş sınıf.</span><span class="sxs-lookup"><span data-stu-id="78106-178">All aspects of the `BindingElement` that can be set should be exposed as properties in the <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> derived class.</span></span> <span data-ttu-id="78106-179"><xref:System.Configuration.ConfigurationPropertyAttribute> Öznitelikleri eksikse, varsayılan değerleri ayarlama ve yapılandırma öğesi özniteliklerini özelliklere eşleme de yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="78106-179">The <xref:System.Configuration.ConfigurationPropertyAttribute> assists in mapping the configuration element attributes to the properties and setting default values if attributes are missing.</span></span> <span data-ttu-id="78106-180">Yapılandırma değerleri yüklenir ve özelliklerine uygulanan sonra <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> yöntemi çağrıldığında, hangi özellikler bir bağlama öğesi somut bir örneğine dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="78106-180">After the values from configuration are loaded and applied to the properties, the <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> method is called, which converts the properties into a concrete instance of a binding element.</span></span> <span data-ttu-id="78106-181"><xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> Özelliklerini dönüştürmek için kullanılan yöntemi <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> türetilmiş sınıf üzerinde yeni oluşturulan bağlama öğesi ayarlamak için değerler.</span><span class="sxs-lookup"><span data-stu-id="78106-181">The <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> method is used to convert the properties on the <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> derived class into the values to be set on the newly created binding element.</span></span>  
-  
- <span data-ttu-id="78106-182">Aşağıdaki örnek kod uygulamasını gösterir `GZipMessageEncodingElement`.</span><span class="sxs-lookup"><span data-stu-id="78106-182">The following sample code shows the implementation of the `GZipMessageEncodingElement`.</span></span>  
-  
-```  
-public class GZipMessageEncodingElement : BindingElementExtensionElement  
-{  
-    public GZipMessageEncodingElement()  
-    {  
-    }  
-  
-//Called by the WCF to discover the type of binding element this   
-//config section enables  
-    public override Type BindingElementType  
-    {  
-        get { return typeof(GZipMessageEncodingBindingElement); }  
-    }  
-  
-    //The only property we need to configure for our binding element is   
-    //the type of inner encoder to use. Here, we support text and  
-    //binary.  
-    [ConfigurationProperty("innerMessageEncoding",   
-                         DefaultValue = "textMessageEncoding")]  
-    public string InnerMessageEncoding  
-    {  
-        get { return (string)base["innerMessageEncoding"]; }  
-        set { base["innerMessageEncoding"] = value; }  
-    }  
-  
-    //Called by the WCF to apply the configuration settings (the   
-    //property above) to the binding element  
-    public override void ApplyConfiguration(BindingElement bindingElement)  
-    {  
-        GZipMessageEncodingBindingElement binding =   
-                (GZipMessageEncodingBindingElement)bindingElement;  
-        PropertyInformationCollection propertyInfo =   
-                    this.ElementInformation.Properties;  
-        if (propertyInfo["innerMessageEncoding"].ValueOrigin !=   
-                                     PropertyValueOrigin.Default)  
-        {  
-            switch (this.InnerMessageEncoding)  
-            {  
-                case "textMessageEncoding":  
-                    binding.InnerMessageEncodingBindingElement =   
-                      new TextMessageEncodingBindingElement();  
-                    break;  
-                case "binaryMessageEncoding":  
-                    binding.InnerMessageEncodingBindingElement =   
-                         new BinaryMessageEncodingBindingElement();  
-                    break;  
-            }  
-        }  
-    }  
-  
-    //Called by the WCF to create the binding element  
-    protected override BindingElement CreateBindingElement()  
-    {  
-        GZipMessageEncodingBindingElement bindingElement =   
-                new GZipMessageEncodingBindingElement();  
-        this.ApplyConfiguration(bindingElement);  
-        return bindingElement;  
-    }  
-}   
-```  
-  
- <span data-ttu-id="78106-183">Bu yapılandırma işleyicisi, hizmet veya istemci için App.config veya Web.config aşağıdaki gösterimi eşler.</span><span class="sxs-lookup"><span data-stu-id="78106-183">This configuration handler maps to the following representation in the App.config or Web.config for the service or client.</span></span>  
-  
-```xml  
-<gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />  
-```  
-  
- <span data-ttu-id="78106-184">Bu yapılandırma işleyicisi kullanmak için onu içinde kaydedilmelidir [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) aşağıdaki örnek yapılandırmada gösterildiği öğesi.</span><span class="sxs-lookup"><span data-stu-id="78106-184">To use this configuration handler, it must be registered within the [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) element, as shown in the following sample configuration.</span></span>  
-  
-```xml  
-<extensions>  
-    <bindingElementExtensions>  
-       <add   
-           name="gzipMessageEncoding"   
-           type=  
-           "Microsoft.ServiceModel.Samples.GZipMessageEncodingElement,  
-           GZipEncoder, Version=1.0.0.0, Culture=neutral,   
-           PublicKeyToken=null" />  
-      </bindingElementExtensions>  
-</extensions>  
-```  
-  
- <span data-ttu-id="78106-185">Sunucu çalıştırdığınızda, işlem isteklerini ve yanıtlarını konsol penceresinde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="78106-185">When you run the server, the operation requests and responses are displayed in the console window.</span></span> <span data-ttu-id="78106-186">Pencerenin sunucuyu kapatmak için ENTER tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="78106-186">Press ENTER in the window to shut down the server.</span></span>  
-  
-```  
-Press Enter key to Exit.  
-  
-        Server Echo(string input) called:  
-        Client message: Simple hello  
-  
-        Server BigEcho(string[] input) called:  
-        64 client messages  
-```  
-  
- <span data-ttu-id="78106-187">İşlem istekleri ve yanıtları, istemci çalıştırdığınızda, konsol penceresinde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="78106-187">When you run the client, the operation requests and responses are displayed in the console window.</span></span> <span data-ttu-id="78106-188">İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="78106-188">Press ENTER in the client window to shut down the client.</span></span>  
-  
-```  
-Calling Echo(string):  
-Server responds: Simple hello Simple hello  
-  
-Calling BigEcho(string[]):  
-Server responds: Hello 0  
-  
-Press <ENTER> to terminate client.  
-```  
-  
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="78106-189">Ayarlamak için derleme ve örneği çalıştırma</span><span class="sxs-lookup"><span data-stu-id="78106-189">To set up, build, and run the sample</span></span>  
-  
-1. <span data-ttu-id="78106-190">ASP.NET 4. 0 aşağıdaki komutu kullanarak yükleyin:</span><span class="sxs-lookup"><span data-stu-id="78106-190">Install ASP.NET 4.0 using the following command:</span></span>  
-  
-    ```  
-    %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
-    ```  
-  
-2. <span data-ttu-id="78106-191">Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="78106-191">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
-  
-3. <span data-ttu-id="78106-192">Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="78106-192">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
-  
-4. <span data-ttu-id="78106-193">Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="78106-193">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
-  
+> <span data-ttu-id="f6e18-116">.NET Framework 4 ' te, sunucu sıkıştırılmış bir yanıt gönderiyorsa (GZip veya söndür gibi bir algoritmayla oluşturulmuş) WCF istemcisinde otomatik açma özelliği etkinleştirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-116">In the .NET Framework 4, automatic decompression has been enabled on a WCF client if the server is sending a compressed response (created with an algorithm such as GZip or Deflate).</span></span> <span data-ttu-id="f6e18-117">Hizmet, Internet Information Server 'da (IIS) Web 'de barındırılıyorsa, hizmetin sıkıştırılmış bir yanıt gönderebilmesi için IIS yapılandırılabilir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-117">If the service is Web-hosted in Internet Information Server (IIS), then IIS can be configured for the service to send a compressed response.</span></span> <span data-ttu-id="f6e18-118">Bu örnek, gereksinim hem istemcide hem de hizmette sıkıştırma yapmak ve sıkıştırmayı açmak ya da hizmetin şirket içinde barındırılması durumunda kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-118">This sample can be used if the requirement is to do compression and decompression on both the client and the service or if the service is self-hosted.</span></span>
+
+<span data-ttu-id="f6e18-119">Örnek, bir WCF uygulamasında özel bir ileti Kodlayıcısı oluşturmayı ve tümleştirmeyi gösterir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-119">The sample demonstrates how to build and integrate a custom message encoder into a WCF application.</span></span> <span data-ttu-id="f6e18-120">GZipEncoder. dll kitaplığı hem istemci hem de hizmetle birlikte dağıtılır.</span><span class="sxs-lookup"><span data-stu-id="f6e18-120">The library GZipEncoder.dll is deployed with both the client and the service.</span></span> <span data-ttu-id="f6e18-121">Bu örnek ayrıca iletileri sıkıştırma etkisini de gösterir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-121">This sample also demonstrates the impact of compressing messages.</span></span> <span data-ttu-id="f6e18-122">GZipEncoder. dll içindeki kod şunları gösterir:</span><span class="sxs-lookup"><span data-stu-id="f6e18-122">The code in GZipEncoder.dll demonstrates the following:</span></span>
+
+- <span data-ttu-id="f6e18-123">Özel kodlayıcı ve kodlayıcı fabrikası oluşturma.</span><span class="sxs-lookup"><span data-stu-id="f6e18-123">Building a custom encoder and encoder factory.</span></span>
+
+- <span data-ttu-id="f6e18-124">Özel bir kodlayıcı için bağlama öğesi geliştirme.</span><span class="sxs-lookup"><span data-stu-id="f6e18-124">Developing a binding element for a custom encoder.</span></span>
+
+- <span data-ttu-id="f6e18-125">Özel bağlama öğelerini tümleştirmek için özel bağlama yapılandırması kullanma.</span><span class="sxs-lookup"><span data-stu-id="f6e18-125">Using the custom binding configuration for integrating custom binding elements.</span></span>
+
+- <span data-ttu-id="f6e18-126">Özel bir bağlama öğesinin dosya yapılandırmasına izin vermek için özel bir yapılandırma işleyicisi geliştirme.</span><span class="sxs-lookup"><span data-stu-id="f6e18-126">Developing a custom configuration handler to allow file configuration of a custom binding element.</span></span>
+
+<span data-ttu-id="f6e18-127">Daha önce belirtildiği gibi, özel bir kodlayıcıda uygulanan birkaç katman vardır.</span><span class="sxs-lookup"><span data-stu-id="f6e18-127">As indicated previously, there are several layers that are implemented in a custom encoder.</span></span> <span data-ttu-id="f6e18-128">Bu katmanların her biri arasındaki ilişkiyi daha iyi göstermek için, hizmet başlatma için daha basit bir olay sırası aşağıdaki listede verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="f6e18-128">To better illustrate the relationship between each of these layers, a simplified order of events for service start-up is in the following list:</span></span>
+
+1. <span data-ttu-id="f6e18-129">Sunucu başlatılır.</span><span class="sxs-lookup"><span data-stu-id="f6e18-129">The server starts.</span></span>
+
+2. <span data-ttu-id="f6e18-130">Yapılandırma bilgileri okundu.</span><span class="sxs-lookup"><span data-stu-id="f6e18-130">The configuration information is read.</span></span>
+
+    1. <span data-ttu-id="f6e18-131">Hizmet yapılandırması özel yapılandırma işleyicisini kaydeder.</span><span class="sxs-lookup"><span data-stu-id="f6e18-131">The service configuration registers the custom configuration handler.</span></span>
+
+    2. <span data-ttu-id="f6e18-132">Hizmet ana bilgisayarı oluşturulup açılır.</span><span class="sxs-lookup"><span data-stu-id="f6e18-132">The service host is created and opened.</span></span>
+
+    3. <span data-ttu-id="f6e18-133">Özel yapılandırma öğesi, özel bağlama öğesini oluşturur ve döndürür.</span><span class="sxs-lookup"><span data-stu-id="f6e18-133">The custom configuration element creates and returns the custom binding element.</span></span>
+
+    4. <span data-ttu-id="f6e18-134">Özel bağlama öğesi bir ileti Kodlayıcısı fabrikası oluşturur ve döndürür.</span><span class="sxs-lookup"><span data-stu-id="f6e18-134">The custom binding element creates and returns a message encoder factory.</span></span>
+
+3. <span data-ttu-id="f6e18-135">İleti alındı.</span><span class="sxs-lookup"><span data-stu-id="f6e18-135">A message is received.</span></span>
+
+4. <span data-ttu-id="f6e18-136">İleti Kodlayıcısı fabrikası iletiyi okumak ve yanıtı yazmak için bir ileti Kodlayıcısı döndürür.</span><span class="sxs-lookup"><span data-stu-id="f6e18-136">The message encoder factory returns a message encoder for reading in the message and writing out the response.</span></span>
+
+5. <span data-ttu-id="f6e18-137">Kodlayıcı katmanı bir sınıf fabrikası olarak uygulanır.</span><span class="sxs-lookup"><span data-stu-id="f6e18-137">The encoder layer is implemented as a class factory.</span></span> <span data-ttu-id="f6e18-138">Özel Kodlayıcı için yalnızca kodlayıcı sınıf fabrikası genel kullanıma açık olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="f6e18-138">Only the encoder class factory must be publicly exposed for the custom encoder.</span></span> <span data-ttu-id="f6e18-139">Factory nesnesi, <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory%601> nesnesi oluşturulduğunda Binding öğesi tarafından döndürülür.</span><span class="sxs-lookup"><span data-stu-id="f6e18-139">The factory object is returned by the binding element when the <xref:System.ServiceModel.ServiceHost> or <xref:System.ServiceModel.ChannelFactory%601> object is created.</span></span> <span data-ttu-id="f6e18-140">İleti kodlayıcıları, ara belleğe alınmış veya akış modunda çalışabilir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-140">Message encoders can operate in a buffered or streaming mode.</span></span> <span data-ttu-id="f6e18-141">Bu örnek, hem arabellekli modu hem de akış modunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-141">This sample demonstrates both buffered mode and streaming mode.</span></span>
+
+<span data-ttu-id="f6e18-142">Her mod için soyut `ReadMessage` `MessageEncoder` sınıfta bir eşlik eden `WriteMessage` ve yöntemi vardır.</span><span class="sxs-lookup"><span data-stu-id="f6e18-142">For each mode there is an accompanying `ReadMessage` and `WriteMessage` method on the abstract `MessageEncoder` class.</span></span> <span data-ttu-id="f6e18-143">Bu yöntemlerde kodlama işinin çoğu gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-143">A majority of the encoding work takes place in these methods.</span></span> <span data-ttu-id="f6e18-144">Örnek, varolan metni ve ikili ileti kodlayıcıları ' nı sarmalar.</span><span class="sxs-lookup"><span data-stu-id="f6e18-144">The sample wraps the existing text and binary message encoders.</span></span> <span data-ttu-id="f6e18-145">Bu, örneğin, iletilerin tel gösterimini okuma ve yazma yetkisini iç kodlayıcıya devredebilir ve sıkıştırma kodlayıcının sonuçları sıkıştırmak veya sıkıştırmasını açmasına olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="f6e18-145">This allows the sample to delegate the reading and writing of the wire representation of messages to the inner encoder and allows the compression encoder to compress or decompress the results.</span></span> <span data-ttu-id="f6e18-146">İleti kodlama için bir işlem hattı olmadığından, bu, WCF 'de birden çok kodlayıcıda kullanılmasına yönelik tek modeldir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-146">Because there is no pipeline for message encoding, this is the only model for using multiple encoders in WCF.</span></span> <span data-ttu-id="f6e18-147">İleti açıldıktan sonra, ortaya çıkan ileti, işlemek için kanal yığınının yığınını iletilir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-147">Once the message has been decompressed, the resulting message is passed up the stack for the channel stack to handle.</span></span> <span data-ttu-id="f6e18-148">Sıkıştırma sırasında, elde edilen sıkıştırılmış ileti doğrudan verilen akışa yazılır.</span><span class="sxs-lookup"><span data-stu-id="f6e18-148">During compression, the resulting compressed message is written directly to the stream provided.</span></span>
+
+<span data-ttu-id="f6e18-149">Bu örnek,`CompressBuffer` `DecompressBuffer` sınıfınıkullanmaküzerearabelleklerdenakışlaradönüştürmegerçekleştirmekiçinyardımcıyöntemleri(`GZipStream` ve) kullanır.</span><span class="sxs-lookup"><span data-stu-id="f6e18-149">This sample uses helper methods (`CompressBuffer` and `DecompressBuffer`) to perform conversion from buffers to streams to use the `GZipStream` class.</span></span>
+
+<span data-ttu-id="f6e18-150">Arabelleğe alınmış `ReadMessage` ve `WriteMessage` sınıflarsınıfınıkullanır.`BufferManager`</span><span class="sxs-lookup"><span data-stu-id="f6e18-150">The buffered `ReadMessage` and `WriteMessage` classes make use of the `BufferManager` class.</span></span> <span data-ttu-id="f6e18-151">Kodlayıcı yalnızca kodlayıcı fabrikası aracılığıyla erişilebilir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-151">The encoder is accessible only through the encoder factory.</span></span> <span data-ttu-id="f6e18-152">Soyut `MessageEncoderFactory` sınıf, geçerli kodlayıcıya ve `Encoder` oturumları destekleyen bir kodlayıcı oluşturmak için adlı `CreateSessionEncoder` bir yönteme erişim için adlı bir özellik sağlar.</span><span class="sxs-lookup"><span data-stu-id="f6e18-152">The abstract `MessageEncoderFactory` class provides a property named `Encoder` for accessing the current encoder and a method named `CreateSessionEncoder` for creating an encoder that supports sessions.</span></span> <span data-ttu-id="f6e18-153">Bu tür bir kodlayıcı, kanalın oturumları desteklediği, sıralandığı ve güvenilir olduğu senaryolarda kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-153">Such an encoder can be used in the scenario where the channel supports sessions, is ordered and is reliable.</span></span> <span data-ttu-id="f6e18-154">Bu senaryo, hatta yazılı verilerin her oturumunda iyileştirmeye olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="f6e18-154">This scenario allows for optimization in each session of the data written to the wire.</span></span> <span data-ttu-id="f6e18-155">Bu istenmiyorsa, temel yöntemin aşırı yüklenmiş olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-155">If this is not desired, the base method should not be overloaded.</span></span> <span data-ttu-id="f6e18-156">Özelliği, oturum-daha az kodlayıcıya erişim mekanizması sağlar ve `CreateSessionEncoder` yöntemin varsayılan uygulanması özelliğin değerini döndürür. `Encoder`</span><span class="sxs-lookup"><span data-stu-id="f6e18-156">The `Encoder` property provides a mechanism for accessing the session-less encoder and the default implementation of the `CreateSessionEncoder` method returns the value of the property.</span></span> <span data-ttu-id="f6e18-157">Örnek, sıkıştırma sağlamak için mevcut bir Kodlayıcısı sarmaladığı için, `MessageEncoderFactory` uygulama iç Kodlayıcı `MessageEncoderFactory` fabrikasını temsil eden bir öğesini kabul eder.</span><span class="sxs-lookup"><span data-stu-id="f6e18-157">Because the sample wraps an existing encoder to provide compression, the `MessageEncoderFactory` implementation accepts a `MessageEncoderFactory` that represents the inner encoder factory.</span></span>
+
+<span data-ttu-id="f6e18-158">Kodlayıcı ve kodlayıcı fabrikası tanımlandığına göre, bunlar bir WCF istemcisi ve hizmeti ile birlikte kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-158">Now that the encoder and encoder factory are defined, they can be used with a WCF client and service.</span></span> <span data-ttu-id="f6e18-159">Ancak, bu kodlayıcılara kanal yığınına eklenmeleri gerekir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-159">However, these encoders must be added to the channel stack.</span></span> <span data-ttu-id="f6e18-160"><xref:System.ServiceModel.ServiceHost> `OnInitialize` Ve sınıflarındansınıflarıtüretebilirsinizvebukodlayıcıfabrikasınıelileeklemekiçinyöntemlerigeçersizkılabilirsiniz.<xref:System.ServiceModel.ChannelFactory%601></span><span class="sxs-lookup"><span data-stu-id="f6e18-160">You can derive classes from the <xref:System.ServiceModel.ServiceHost> and <xref:System.ServiceModel.ChannelFactory%601> classes and override the `OnInitialize` methods to add this encoder factory manually.</span></span> <span data-ttu-id="f6e18-161">Ayrıca, özel bağlama öğesi aracılığıyla Kodlayıcı fabrikasını kullanıma sunabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f6e18-161">You can also expose the encoder factory through a custom binding element.</span></span>
+
+<span data-ttu-id="f6e18-162">Yeni bir özel bağlama öğesi oluşturmak için <xref:System.ServiceModel.Channels.BindingElement> sınıfından bir sınıf türetebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f6e18-162">To create a new custom binding element, derive a class from the <xref:System.ServiceModel.Channels.BindingElement> class.</span></span> <span data-ttu-id="f6e18-163">Ancak birkaç tür bağlama öğesi vardır.</span><span class="sxs-lookup"><span data-stu-id="f6e18-163">There are, however, several types of binding elements.</span></span> <span data-ttu-id="f6e18-164">Özel bağlama öğesinin bir ileti kodlama bağlama öğesi olarak tanındığından emin olmak için, öğesini de uygulamanız <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>gerekir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-164">To ensure that the custom binding element is recognized as a message encoding binding element, you also must implement the <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.</span></span> <span data-ttu-id="f6e18-165">, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> Eşleşen ileti Kodlayıcısı fabrikasının bir örneğini döndürmek için uygulanan yeni`CreateMessageEncoderFactory`bir ileti Kodlayıcısı Fabrikası () oluşturmak için bir yöntem sunar.</span><span class="sxs-lookup"><span data-stu-id="f6e18-165">The <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> exposes a method for creating a new message encoder factory (`CreateMessageEncoderFactory`), which is implemented to return an instance of the matching message encoder factory.</span></span> <span data-ttu-id="f6e18-166">Ek olarak, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> , adresleme sürümünü belirten bir özelliğine sahiptir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-166">Additionally, the <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> has a property to indicate the addressing version.</span></span> <span data-ttu-id="f6e18-167">Bu örnek varolan kodlayıcıları sarmaladığı için, örnek uygulama aynı zamanda var olan Kodlayıcı bağlama öğelerini sarmalanmış ve bir iç Kodlayıcı bağlama öğesini bir parametre olarak oluşturucuya alır ve bunu bir özellik aracılığıyla gösterir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-167">Because this sample wraps the existing encoders, the sample implementation also wraps the existing encoder binding elements and takes an inner encoder binding element as a parameter to the constructor and exposes it through a property.</span></span> <span data-ttu-id="f6e18-168">Aşağıdaki örnek kod, `GZipMessageEncodingBindingElement` sınıfının uygulamasını gösterir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-168">The following sample code shows the implementation of the `GZipMessageEncodingBindingElement` class.</span></span>
+
+```csharp
+public sealed class GZipMessageEncodingBindingElement
+                        : MessageEncodingBindingElement //BindingElement
+                        , IPolicyExportExtension
+{
+
+    //We use an inner binding element to store information
+    //required for the inner encoder.
+    MessageEncodingBindingElement innerBindingElement;
+
+        //By default, use the default text encoder as the inner encoder.
+        public GZipMessageEncodingBindingElement()
+            : this(new TextMessageEncodingBindingElement()) { }
+
+    public GZipMessageEncodingBindingElement(MessageEncodingBindingElement messageEncoderBindingElement)
+    {
+        this.innerBindingElement = messageEncoderBindingElement;
+    }
+
+    public MessageEncodingBindingElement InnerMessageEncodingBindingElement
+    {
+        get { return innerBindingElement; }
+        set { innerBindingElement = value; }
+    }
+
+    //Main entry point into the encoder binding element.
+    // Called by WCF to get the factory that creates the
+    //message encoder.
+    public override MessageEncoderFactory CreateMessageEncoderFactory()
+    {
+        return new
+GZipMessageEncoderFactory(innerBindingElement.CreateMessageEncoderFactory());
+    }
+
+    public override MessageVersion MessageVersion
+    {
+        get { return innerBindingElement.MessageVersion; }
+        set { innerBindingElement.MessageVersion = value; }
+    }
+
+    public override BindingElement Clone()
+    {
+        return new
+        GZipMessageEncodingBindingElement(this.innerBindingElement);
+    }
+
+    public override T GetProperty<T>(BindingContext context)
+    {
+        if (typeof(T) == typeof(XmlDictionaryReaderQuotas))
+        {
+            return innerBindingElement.GetProperty<T>(context);
+        }
+        else
+        {
+            return base.GetProperty<T>(context);
+        }
+    }
+
+    public override IChannelFactory<TChannel> BuildChannelFactory<TChannel>(BindingContext context)
+    {
+        if (context == null)
+            throw new ArgumentNullException("context");
+
+        context.BindingParameters.Add(this);
+        return context.BuildInnerChannelFactory<TChannel>();
+    }
+
+    public override IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext context)
+    {
+        if (context == null)
+            throw new ArgumentNullException("context");
+
+        context.BindingParameters.Add(this);
+        return context.BuildInnerChannelListener<TChannel>();
+    }
+
+    public override bool CanBuildChannelListener<TChannel>(BindingContext context)
+    {
+        if (context == null)
+            throw new ArgumentNullException("context");
+
+        context.BindingParameters.Add(this);
+        return context.CanBuildInnerChannelListener<TChannel>();
+    }
+
+    void IPolicyExportExtension.ExportPolicy(MetadataExporter exporter, PolicyConversionContext policyContext)
+    {
+        if (policyContext == null)
+        {
+            throw new ArgumentNullException("policyContext");
+        }
+       XmlDocument document = new XmlDocument();
+       policyContext.GetBindingAssertions().Add(document.CreateElement(
+            GZipMessageEncodingPolicyConstants.GZipEncodingPrefix,
+            GZipMessageEncodingPolicyConstants.GZipEncodingName,
+            GZipMessageEncodingPolicyConstants.GZipEncodingNamespace));
+    }
+}
+```
+
+<span data-ttu-id="f6e18-169">Bu bağlama öğesinin, aşağıdaki `IPolicyExportExtension` örnekte gösterildiği gibi, meta verilerde bir ilke olarak verilebilmesi için, sınıfınarabiriminiuyguladığınıunutmayın.`GZipMessageEncodingBindingElement`</span><span class="sxs-lookup"><span data-stu-id="f6e18-169">Note that `GZipMessageEncodingBindingElement` class implements the `IPolicyExportExtension` interface, so that this binding element can be exported as a policy in metadata, as shown in the following example.</span></span>
+
+```xml
+<wsp:Policy wsu:Id="BufferedHttpSampleServer_ISampleServer_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <gzip:text xmlns:gzip=
+        "http://schemas.microsoft.com/ws/06/2004/mspolicy/netgzip1" />
+       <wsaw:UsingAddressing />
+     </wsp:All>
+   </wsp:ExactlyOne>
+</wsp:Policy>
+```
+
+<span data-ttu-id="f6e18-170">Sınıfı arabirimini uygular, bu sınıf için `GZipMessageEncodingBindingElement`ilkeyi içeri aktarır. `IPolicyImportExtension` `GZipMessageEncodingBindingElementImporter`</span><span class="sxs-lookup"><span data-stu-id="f6e18-170">The `GZipMessageEncodingBindingElementImporter` class implements the `IPolicyImportExtension` interface, this class imports policy for `GZipMessageEncodingBindingElement`.</span></span> <span data-ttu-id="f6e18-171">Svcutil. exe aracı, ilkeleri yapılandırma dosyasına aktarmak için kullanılabilir, işlemek `GZipMessageEncodingBindingElement`için aşağıdaki, Svcutil. exe. config dosyasına eklenmelidir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-171">Svcutil.exe tool can be used to import policies to the configuration file, to handle `GZipMessageEncodingBindingElement`, the following should be added to Svcutil.exe.config.</span></span>
+
+```xml
+<configuration>
+  <system.serviceModel>
+    <extensions>
+      <bindingElementExtensions>
+        <add name="gzipMessageEncoding"
+          type=
+            "Microsoft.ServiceModel.Samples.GZipMessageEncodingElement, GZipEncoder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+      </bindingElementExtensions>
+    </extensions>
+    <client>
+      <metadata>
+        <policyImporters>
+          <remove type=
+"System.ServiceModel.Channels.MessageEncodingBindingElementImporter, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+          <extension type=
+"Microsoft.ServiceModel.Samples.GZipMessageEncodingBindingElementImporter, GZipEncoder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        </policyImporters>
+      </metadata>
+    </client>
+  </system.serviceModel>
+</configuration>
+```
+
+<span data-ttu-id="f6e18-172">Artık, Sıkıştırma Kodlayıcısı için eşleşen bir bağlama öğesi olduğuna göre, aşağıdaki örnek kodda gösterildiği gibi yeni bir özel bağlama nesnesi oluşturup buna özel bağlama öğesini ekleyerek hizmet veya istemciye program aracılığıyla bağlanabilir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-172">Now that there is a matching binding element for the compression encoder, it can be programmatically hooked into the service or client by constructing a new custom binding object and adding the custom binding element to it, as shown in the following sample code.</span></span>
+
+```csharp
+ICollection<BindingElement> bindingElements = new List<BindingElement>();
+HttpTransportBindingElement httpBindingElement = new HttpTransportBindingElement();
+GZipMessageEncodingBindingElement compBindingElement = new GZipMessageEncodingBindingElement ();
+bindingElements.Add(compBindingElement);
+bindingElements.Add(httpBindingElement);
+CustomBinding binding = new CustomBinding(bindingElements);
+binding.Name = "SampleBinding";
+binding.Namespace = "http://tempuri.org/bindings";
+```
+
+<span data-ttu-id="f6e18-173">Bu, Kullanıcı senaryolarının çoğunluğu için yeterli olabileceğinden, bir hizmetin Web 'de barındırılması durumunda dosya yapılandırmasını desteklemek kritik öneme sahiptir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-173">While this may be sufficient for the majority of user scenarios, supporting a file configuration is critical if a service is to be Web-hosted.</span></span> <span data-ttu-id="f6e18-174">Web 'de barındırılan senaryoyu desteklemek için, bir özel bağlama öğesinin bir dosyada yapılandırılabilir olmasını sağlamak üzere özel bir yapılandırma işleyicisi geliştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-174">To support the Web-hosted scenario, you must develop a custom configuration handler to allow a custom binding element to be configurable in a file.</span></span>
+
+<span data-ttu-id="f6e18-175">Yapılandırma sisteminin en üstünde bağlama öğesi için bir yapılandırma işleyicisi oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f6e18-175">You can build a configuration handler for the binding element on top of the configuration system.</span></span> <span data-ttu-id="f6e18-176">Binding öğesi için yapılandırma işleyicisi <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> sınıfından türetilmelidir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-176">The configuration handler for the binding element must derive from the <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> class.</span></span> <span data-ttu-id="f6e18-177">, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> Bu bölüm için oluşturulacak bağlama öğesi türünün yapılandırma sistemine bildirir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-177">The <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> informs the configuration system of the type of binding element to create for this section.</span></span> <span data-ttu-id="f6e18-178">Öğesinin `BindingElement` ayarlanbileceği tüm yönleri <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> türetilmiş sınıfta özellikler olarak kullanıma sunulmalıdır.</span><span class="sxs-lookup"><span data-stu-id="f6e18-178">All aspects of the `BindingElement` that can be set should be exposed as properties in the <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> derived class.</span></span> <span data-ttu-id="f6e18-179">Yapılandırma öğesi özniteliklerinin özelliklerle eşlenmesiyle ve özniteliklerin eksik olması halinde varsayılan değerlerin ayarlanmasına yardımcıolur.<xref:System.Configuration.ConfigurationPropertyAttribute></span><span class="sxs-lookup"><span data-stu-id="f6e18-179">The <xref:System.Configuration.ConfigurationPropertyAttribute> assists in mapping the configuration element attributes to the properties and setting default values if attributes are missing.</span></span> <span data-ttu-id="f6e18-180">Yapılandırma değerleri yüklenip özelliklerine uygulandıktan sonra, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> özelliği bir bağlama öğesinin somut örneğine dönüştüren yöntemi çağırılır.</span><span class="sxs-lookup"><span data-stu-id="f6e18-180">After the values from configuration are loaded and applied to the properties, the <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> method is called, which converts the properties into a concrete instance of a binding element.</span></span> <span data-ttu-id="f6e18-181">Yöntemi, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> türetilmiş sınıftaki özellikleri yeni oluşturulan bağlama öğesinde ayarlanacak değerlere dönüştürmek için kullanılır. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="f6e18-181">The <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> method is used to convert the properties on the <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> derived class into the values to be set on the newly created binding element.</span></span>
+
+<span data-ttu-id="f6e18-182">Aşağıdaki örnek kod, uygulamasının uygulamasını `GZipMessageEncodingElement`gösterir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-182">The following sample code shows the implementation of the `GZipMessageEncodingElement`.</span></span>
+
+```csharp
+public class GZipMessageEncodingElement : BindingElementExtensionElement
+{
+    public GZipMessageEncodingElement()
+    {
+    }
+
+//Called by the WCF to discover the type of binding element this
+//config section enables
+    public override Type BindingElementType
+    {
+        get { return typeof(GZipMessageEncodingBindingElement); }
+    }
+
+    //The only property we need to configure for our binding element is
+    //the type of inner encoder to use. Here, we support text and
+    //binary.
+    [ConfigurationProperty("innerMessageEncoding",
+                         DefaultValue = "textMessageEncoding")]
+    public string InnerMessageEncoding
+    {
+        get { return (string)base["innerMessageEncoding"]; }
+        set { base["innerMessageEncoding"] = value; }
+    }
+
+    //Called by the WCF to apply the configuration settings (the
+    //property above) to the binding element
+    public override void ApplyConfiguration(BindingElement bindingElement)
+    {
+        GZipMessageEncodingBindingElement binding =
+                (GZipMessageEncodingBindingElement)bindingElement;
+        PropertyInformationCollection propertyInfo =
+                    this.ElementInformation.Properties;
+        if (propertyInfo["innerMessageEncoding"].ValueOrigin !=
+                                     PropertyValueOrigin.Default)
+        {
+            switch (this.InnerMessageEncoding)
+            {
+                case "textMessageEncoding":
+                    binding.InnerMessageEncodingBindingElement =
+                      new TextMessageEncodingBindingElement();
+                    break;
+                case "binaryMessageEncoding":
+                    binding.InnerMessageEncodingBindingElement =
+                         new BinaryMessageEncodingBindingElement();
+                    break;
+            }
+        }
+    }
+
+    //Called by the WCF to create the binding element
+    protected override BindingElement CreateBindingElement()
+    {
+        GZipMessageEncodingBindingElement bindingElement =
+                new GZipMessageEncodingBindingElement();
+        this.ApplyConfiguration(bindingElement);
+        return bindingElement;
+    }
+}
+```
+
+<span data-ttu-id="f6e18-183">Bu yapılandırma işleyicisi, hizmet veya istemcinin App. config veya Web. config dosyasında aşağıdaki gösterimiyle eşleşir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-183">This configuration handler maps to the following representation in the App.config or Web.config for the service or client.</span></span>
+
+```xml
+<gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />
+```
+
+<span data-ttu-id="f6e18-184">Bu yapılandırma işleyicisini kullanmak için, aşağıdaki örnek yapılandırmada gösterildiği gibi [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) öğesi içinde kayıtlı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="f6e18-184">To use this configuration handler, it must be registered within the [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) element, as shown in the following sample configuration.</span></span>
+
+```xml
+<extensions>
+    <bindingElementExtensions>
+       <add
+           name="gzipMessageEncoding"
+           type=
+           "Microsoft.ServiceModel.Samples.GZipMessageEncodingElement,
+           GZipEncoder, Version=1.0.0.0, Culture=neutral,
+           PublicKeyToken=null" />
+      </bindingElementExtensions>
+</extensions>
+```
+
+<span data-ttu-id="f6e18-185">Sunucuyu çalıştırdığınızda, işlem istekleri ve yanıtları konsol penceresinde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-185">When you run the server, the operation requests and responses are displayed in the console window.</span></span> <span data-ttu-id="f6e18-186">Sunucuyu kapatmak için pencerede ENTER tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="f6e18-186">Press ENTER in the window to shut down the server.</span></span>
+
+```
+Press Enter key to Exit.
+
+        Server Echo(string input) called:
+        Client message: Simple hello
+
+        Server BigEcho(string[] input) called:
+        64 client messages
+```
+
+<span data-ttu-id="f6e18-187">İstemcisini çalıştırdığınızda, işlem istekleri ve yanıtları konsol penceresinde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-187">When you run the client, the operation requests and responses are displayed in the console window.</span></span> <span data-ttu-id="f6e18-188">İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="f6e18-188">Press ENTER in the client window to shut down the client.</span></span>
+
+```
+Calling Echo(string):
+Server responds: Simple hello Simple hello
+
+Calling BigEcho(string[]):
+Server responds: Hello 0
+
+Press <ENTER> to terminate client.
+```
+
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="f6e18-189">Örneği ayarlamak, derlemek ve çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="f6e18-189">To set up, build, and run the sample</span></span>
+
+1. <span data-ttu-id="f6e18-190">Aşağıdaki komutu kullanarak ASP.NET 4,0 'yi yükler:</span><span class="sxs-lookup"><span data-stu-id="f6e18-190">Install ASP.NET 4.0 using the following command:</span></span>
+
+    ```
+    %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
+    ```
+
+2. <span data-ttu-id="f6e18-191">[Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="f6e18-191">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>
+
+3. <span data-ttu-id="f6e18-192">Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="f6e18-192">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>
+
+4. <span data-ttu-id="f6e18-193">Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="f6e18-193">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>
+
 > [!IMPORTANT]
->  <span data-ttu-id="78106-194">Örnekler, makinenizde zaten yüklü.</span><span class="sxs-lookup"><span data-stu-id="78106-194">The samples may already be installed on your machine.</span></span> <span data-ttu-id="78106-195">Devam etmeden önce şu (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="78106-195">Check for the following (default) directory before continuing.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  <span data-ttu-id="78106-196">Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="78106-196">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="78106-197">Bu örnek, şu dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="78106-197">This sample is located in the following directory.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
+> <span data-ttu-id="f6e18-194">Örnekler makinenizde zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="f6e18-194">The samples may already be installed on your machine.</span></span> <span data-ttu-id="f6e18-195">Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.</span><span class="sxs-lookup"><span data-stu-id="f6e18-195">Check for the following (default) directory before continuing.</span></span>
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> <span data-ttu-id="f6e18-196">Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin.</span><span class="sxs-lookup"><span data-stu-id="f6e18-196">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="f6e18-197">Bu örnek, aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="f6e18-197">This sample is located in the following directory.</span></span>
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`

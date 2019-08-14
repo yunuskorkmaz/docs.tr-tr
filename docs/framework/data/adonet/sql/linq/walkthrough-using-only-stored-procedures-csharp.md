@@ -2,192 +2,202 @@
 title: 'İzlenecek yol: Yalnızca Saklı Yordamları Kullanma (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: f16cbdc1d22e7ec08237c0f13db9499ee2f9194f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 69419dd5bb49c2e47315d0079df3a7b575ad9afd
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742563"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971772"
 ---
-# <a name="walkthrough-using-only-stored-procedures-c"></a><span data-ttu-id="49390-102">İzlenecek yol: Yalnızca Saklı Yordamları Kullanma (C#)</span><span class="sxs-lookup"><span data-stu-id="49390-102">Walkthrough: Using Only Stored Procedures (C#)</span></span>
-<span data-ttu-id="49390-103">Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yürüterek verilerine erişmek için senaryo, depolanan yordamlar yalnızca.</span><span class="sxs-lookup"><span data-stu-id="49390-103">This walkthrough provides a basic end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario for accessing data by executing stored procedures only.</span></span> <span data-ttu-id="49390-104">Bu yaklaşım, genellikle veri deposu nasıl erişilir sınırlamak için Veritabanı yöneticileri tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="49390-104">This approach is often used by database administrators to limit how the datastore is accessed.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="49390-105">Saklı yordamları kullanabilirsiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] özellikle de varsayılan davranışı geçersiz kılmak için uygulamaları `Create`, `Update`, ve `Delete` işlemler.</span><span class="sxs-lookup"><span data-stu-id="49390-105">You can also use stored procedures in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications to override default behavior, especially for `Create`, `Update`, and `Delete` processes.</span></span> <span data-ttu-id="49390-106">Daha fazla bilgi için [özelleştirme ekleme, güncelleştirme ve silme işlemleri](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span><span class="sxs-lookup"><span data-stu-id="49390-106">For more information, see [Customizing Insert, Update, and Delete Operations](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span></span>  
-  
- <span data-ttu-id="49390-107">Bu izlenecek yolda amacı doğrultusunda, Northwind örnek veritabanındaki saklı yordamlar için eşlenen iki yöntemi kullanır: CustOrdersDetail ve CustOrderHist.</span><span class="sxs-lookup"><span data-stu-id="49390-107">For purposes of this walkthrough, you will use two methods that have been mapped to stored procedures in the Northwind sample database: CustOrdersDetail and CustOrderHist.</span></span> <span data-ttu-id="49390-108">Eşleme oluşturmak için SqlMetal komut satırı aracını çalıştırdığınızda oluşur bir C# dosya.</span><span class="sxs-lookup"><span data-stu-id="49390-108">The mapping occurs when you run the SqlMetal command-line tool to generate a C# file.</span></span> <span data-ttu-id="49390-109">Daha fazla bilgi için bu kılavuzda daha sonra Önkoşullar bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="49390-109">For more information, see the Prerequisites section later in this walkthrough.</span></span>  
-  
- <span data-ttu-id="49390-110">Bu izlenecek yol, Nesne İlişkisel Tasarımcısı bağımlı kalmayacak.</span><span class="sxs-lookup"><span data-stu-id="49390-110">This walkthrough does not rely on the Object Relational Designer.</span></span> <span data-ttu-id="49390-111">Visual Studio kullanan geliştiricilerin, O/R Tasarımcısı saklı yordam işlevselliği uygulamak için de kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="49390-111">Developers using Visual Studio can also use the O/R Designer to implement stored procedure functionality.</span></span> <span data-ttu-id="49390-112">Bkz: [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span><span class="sxs-lookup"><span data-stu-id="49390-112">See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
-  
- [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
-  
- <span data-ttu-id="49390-113">Bu izlenecek yol, Visual kullanılarak yazılmış olduğundan C# geliştirme ayarları.</span><span class="sxs-lookup"><span data-stu-id="49390-113">This walkthrough was written by using Visual C# Development Settings.</span></span>  
-  
-## <a name="prerequisites"></a><span data-ttu-id="49390-114">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="49390-114">Prerequisites</span></span>  
- <span data-ttu-id="49390-115">Bu izlenecek yol aşağıdakileri gerektirir:</span><span class="sxs-lookup"><span data-stu-id="49390-115">This walkthrough requires the following:</span></span>  
-  
-- <span data-ttu-id="49390-116">Bu izlenecek yol, dosyaları tutmak için ayrılmış bir klasör ("c:\linqtest7") kullanır.</span><span class="sxs-lookup"><span data-stu-id="49390-116">This walkthrough uses a dedicated folder ("c:\linqtest7") to hold files.</span></span> <span data-ttu-id="49390-117">İzlenecek yol başlamadan önce bu klasörü oluşturun.</span><span class="sxs-lookup"><span data-stu-id="49390-117">Create this folder before you begin the walkthrough.</span></span>  
-  
-- <span data-ttu-id="49390-118">Northwind örnek veritabanı.</span><span class="sxs-lookup"><span data-stu-id="49390-118">The Northwind sample database.</span></span>  
-  
-     <span data-ttu-id="49390-119">Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Yükleme sitesinden indirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="49390-119">If you do not have this database on your development computer, you can download it from the Microsoft download site.</span></span> <span data-ttu-id="49390-120">Yönergeler için [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span><span class="sxs-lookup"><span data-stu-id="49390-120">For instructions, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span> <span data-ttu-id="49390-121">Veritabanı indirdikten sonra northwnd.mdf dosya c:\linqtest7 klasöre kopyalayın.</span><span class="sxs-lookup"><span data-stu-id="49390-121">After you have downloaded the database, copy the northwnd.mdf file to the c:\linqtest7 folder.</span></span>  
-  
-- <span data-ttu-id="49390-122">A C# Northwind veritabanından oluşturulan kod dosyası.</span><span class="sxs-lookup"><span data-stu-id="49390-122">A C# code file generated from the Northwind database.</span></span>  
-  
-     <span data-ttu-id="49390-123">Bu izlenecek yol, şu komut satırıyla SqlMetal Aracı'nı kullanarak yazılmıştır:</span><span class="sxs-lookup"><span data-stu-id="49390-123">This walkthrough was written by using the SqlMetal tool with the following command line:</span></span>  
-  
-     <span data-ttu-id="49390-124">**sqlmetal /code:"c:\linqtest7\northwind.cs" /language:csharp "c:\linqtest7\northwnd.mdf" /sprocs /functions / pluralize**</span><span class="sxs-lookup"><span data-stu-id="49390-124">**sqlmetal /code:"c:\linqtest7\northwind.cs" /language:csharp "c:\linqtest7\northwnd.mdf" /sprocs /functions /pluralize**</span></span>  
-  
-     <span data-ttu-id="49390-125">Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="49390-125">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
-  
-## <a name="overview"></a><span data-ttu-id="49390-126">Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="49390-126">Overview</span></span>  
- <span data-ttu-id="49390-127">Bu kılavuz altı ana görevden oluşur:</span><span class="sxs-lookup"><span data-stu-id="49390-127">This walkthrough consists of six main tasks:</span></span>  
-  
-- <span data-ttu-id="49390-128">Ayarlama [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio'daki çözüm.</span><span class="sxs-lookup"><span data-stu-id="49390-128">Setting up the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution in Visual Studio.</span></span>  
-  
-- <span data-ttu-id="49390-129">System.Data.Linq derleme projeye ekleniyor.</span><span class="sxs-lookup"><span data-stu-id="49390-129">Adding the System.Data.Linq assembly to the project.</span></span>  
-  
-- <span data-ttu-id="49390-130">Veritabanı kod dosyası projeye ekleniyor.</span><span class="sxs-lookup"><span data-stu-id="49390-130">Adding the database code file to the project.</span></span>  
-  
-- <span data-ttu-id="49390-131">Veritabanıyla bağlantı oluşturma.</span><span class="sxs-lookup"><span data-stu-id="49390-131">Creating a connection with the database.</span></span>  
-  
-- <span data-ttu-id="49390-132">Kullanıcı arabirimi ayarlama.</span><span class="sxs-lookup"><span data-stu-id="49390-132">Setting up the user interface.</span></span>  
-  
-- <span data-ttu-id="49390-133">Çalıştıran ve uygulamayı test etme.</span><span class="sxs-lookup"><span data-stu-id="49390-133">Running and testing the application.</span></span>  
-  
-## <a name="creating-a-linq-to-sql-solution"></a><span data-ttu-id="49390-134">Bir LINQ to SQL çözümü oluşturma</span><span class="sxs-lookup"><span data-stu-id="49390-134">Creating a LINQ to SQL Solution</span></span>  
- <span data-ttu-id="49390-135">Bu ilk görevde oluşturduğunuz derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proje.</span><span class="sxs-lookup"><span data-stu-id="49390-135">In this first task, you create a Visual Studio solution that contains the necessary references to build and run a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project.</span></span>  
-  
-#### <a name="to-create-a-linq-to-sql-solution"></a><span data-ttu-id="49390-136">Bir LINQ to SQL çözümü oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="49390-136">To create a LINQ to SQL solution</span></span>  
-  
-1. <span data-ttu-id="49390-137">Visual Studio'da **dosya** menüsünde **yeni**ve ardından **proje**.</span><span class="sxs-lookup"><span data-stu-id="49390-137">On the Visual Studio **File** menu, point to **New**, and then click **Project**.</span></span>  
-  
-2. <span data-ttu-id="49390-138">İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusu, tıklayın **Visual C#** .</span><span class="sxs-lookup"><span data-stu-id="49390-138">In the **Project types** pane in the **New Project** dialog box, click **Visual C#**.</span></span>  
-  
-3. <span data-ttu-id="49390-139">İçinde **şablonları** bölmesinde tıklayın **Windows Forms uygulaması**.</span><span class="sxs-lookup"><span data-stu-id="49390-139">In the **Templates** pane, click **Windows Forms Application**.</span></span>  
-  
-4. <span data-ttu-id="49390-140">İçinde **adı** kutusuna **SprocOnlyApp**.</span><span class="sxs-lookup"><span data-stu-id="49390-140">In the **Name** box, type **SprocOnlyApp**.</span></span>  
-  
-5. <span data-ttu-id="49390-141">İçinde **konumu** kutusunda, proje dosyalarını depolamak istediğiniz doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="49390-141">In the **Location** box, verify where you want to store your project files.</span></span>  
-  
-6. <span data-ttu-id="49390-142">**Tamam**'ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="49390-142">Click **OK**.</span></span>  
-  
-     <span data-ttu-id="49390-143">Windows Forms Tasarımcısı'nı açar.</span><span class="sxs-lookup"><span data-stu-id="49390-143">The Windows Forms Designer opens.</span></span>  
-  
-## <a name="adding-the-linq-to-sql-assembly-reference"></a><span data-ttu-id="49390-144">LINQ SQL bütünleştirilmiş kod başvurusu ekleme</span><span class="sxs-lookup"><span data-stu-id="49390-144">Adding the LINQ to SQL Assembly Reference</span></span>  
- <span data-ttu-id="49390-145">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Derleme standart Windows Forms uygulaması şablonu dahil değildir.</span><span class="sxs-lookup"><span data-stu-id="49390-145">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] assembly is not included in the standard Windows Forms Application template.</span></span> <span data-ttu-id="49390-146">Aşağıdaki adımlarda açıklandığı gibi derleme kendiniz eklemeniz gerekir:</span><span class="sxs-lookup"><span data-stu-id="49390-146">You will have to add the assembly yourself, as explained in the following steps:</span></span>  
-  
-#### <a name="to-add-systemdatalinqdll"></a><span data-ttu-id="49390-147">System.Data.Linq.dll eklemek için</span><span class="sxs-lookup"><span data-stu-id="49390-147">To add System.Data.Linq.dll</span></span>  
-  
-1. <span data-ttu-id="49390-148">İçinde **Çözüm Gezgini**, sağ **başvuruları**ve ardından **Başvuru Ekle**.</span><span class="sxs-lookup"><span data-stu-id="49390-148">In **Solution Explorer**, right-click **References**, and then click **Add Reference**.</span></span>  
-  
-2. <span data-ttu-id="49390-149">İçinde **Başvuru Ekle** iletişim kutusu, tıklayın **.NET**System.Data.Linq derleme tıklayın ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="49390-149">In the **Add Reference** dialog box, click **.NET**, click the System.Data.Linq assembly, and then click **OK**.</span></span>  
-  
-     <span data-ttu-id="49390-150">Derleme, projeye eklenir.</span><span class="sxs-lookup"><span data-stu-id="49390-150">The assembly is added to the project.</span></span>  
-  
-## <a name="adding-the-northwind-code-file-to-the-project"></a><span data-ttu-id="49390-151">Northwind kod dosyası projeye ekleniyor</span><span class="sxs-lookup"><span data-stu-id="49390-151">Adding the Northwind Code File to the Project</span></span>  
- <span data-ttu-id="49390-152">Bu adım Northwind örnek veritabanındaki bir kod dosyası oluşturmak için SqlMetal Aracı'nı kullandığınızı varsayar.</span><span class="sxs-lookup"><span data-stu-id="49390-152">This step assumes that you have used the SqlMetal tool to generate a code file from the Northwind sample database.</span></span> <span data-ttu-id="49390-153">Daha fazla bilgi için bu kılavuzda daha önce açıklanan Önkoşullar bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="49390-153">For more information, see the Prerequisites section earlier in this walkthrough.</span></span>  
-  
-#### <a name="to-add-the-northwind-code-file-to-the-project"></a><span data-ttu-id="49390-154">Northwind kod dosyası projeye eklemek için</span><span class="sxs-lookup"><span data-stu-id="49390-154">To add the northwind code file to the project</span></span>  
-  
-1. <span data-ttu-id="49390-155">Üzerinde **proje** menüsünde tıklatın **varolan öğeyi Ekle**.</span><span class="sxs-lookup"><span data-stu-id="49390-155">On the **Project** menu, click **Add Existing Item**.</span></span>  
-  
-2. <span data-ttu-id="49390-156">İçinde **varolan öğeyi Ekle** iletişim kutusu için c:\linqtest7\northwind.cs taşıyın ve ardından **Ekle**.</span><span class="sxs-lookup"><span data-stu-id="49390-156">In the **Add Existing Item** dialog box, move to c:\linqtest7\northwind.cs, and then click **Add**.</span></span>  
-  
-     <span data-ttu-id="49390-157">Northwind.cs dosya projeye eklenir.</span><span class="sxs-lookup"><span data-stu-id="49390-157">The northwind.cs file is added to the project.</span></span>  
-  
-## <a name="creating-a-database-connection"></a><span data-ttu-id="49390-158">Veritabanı bağlantısı oluşturma</span><span class="sxs-lookup"><span data-stu-id="49390-158">Creating a Database Connection</span></span>  
- <span data-ttu-id="49390-159">Bu adımda, Northwind örnek veritabanına bir bağlantı tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="49390-159">In this step, you define the connection to the Northwind sample database.</span></span> <span data-ttu-id="49390-160">Bu izlenecek yolu olarak "c:\linqtest7\northwnd.mdf" kullanır.</span><span class="sxs-lookup"><span data-stu-id="49390-160">This walkthrough uses "c:\linqtest7\northwnd.mdf" as the path.</span></span>  
-  
-#### <a name="to-create-the-database-connection"></a><span data-ttu-id="49390-161">Veritabanı bağlantısı oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="49390-161">To create the database connection</span></span>  
-  
-1. <span data-ttu-id="49390-162">İçinde **Çözüm Gezgini**, sağ **Form1.cs**ve ardından **kodu görüntüle**.</span><span class="sxs-lookup"><span data-stu-id="49390-162">In **Solution Explorer**, right-click **Form1.cs**, and then click **View Code**.</span></span>  
-  
-2. <span data-ttu-id="49390-163">Aşağıdaki kodu yazın `Form1` sınıfı:</span><span class="sxs-lookup"><span data-stu-id="49390-163">Type the following code into the `Form1` class:</span></span>  
-  
-     [!code-csharp[DLinqWalk4CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#1)]  
-  
-## <a name="setting-up-the-user-interface"></a><span data-ttu-id="49390-164">Kullanıcı arabirimi ayarlama</span><span class="sxs-lookup"><span data-stu-id="49390-164">Setting up the User Interface</span></span>  
- <span data-ttu-id="49390-165">Bu görevde, böylece kullanıcılar, veritabanındaki verilere erişmek için saklı yordamlar yürütebilir bir arabirimi oluşturan ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="49390-165">In this task you set up an interface so that users can execute stored procedures to access data in the database.</span></span> <span data-ttu-id="49390-166">Bu adım adım kılavuza geliştirmekte olduğunuz uygulamalar, yalnızca katıştırılmış uygulama içinde saklı yordamları kullanarak veritabanındaki verileri kullanıcılar erişebilir.</span><span class="sxs-lookup"><span data-stu-id="49390-166">In the applications that you are developing with this walkthrough, users can access data in the database only by using the stored procedures embedded in the application.</span></span>  
-  
-#### <a name="to-set-up-the-user-interface"></a><span data-ttu-id="49390-167">Kullanıcı arabirimi oluşturan ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="49390-167">To set up the user interface</span></span>  
-  
-1. <span data-ttu-id="49390-168">İade için Windows Forms Tasarımcısı (**Form1.cs[Design]** ).</span><span class="sxs-lookup"><span data-stu-id="49390-168">Return to the Windows Forms Designer (**Form1.cs[Design]**).</span></span>  
-  
-2. <span data-ttu-id="49390-169">Üzerinde **görünümü** menüsünde tıklatın **araç kutusu**.</span><span class="sxs-lookup"><span data-stu-id="49390-169">On the **View** menu, click **Toolbox**.</span></span>  
-  
-     <span data-ttu-id="49390-170">Araç kutusu açılır.</span><span class="sxs-lookup"><span data-stu-id="49390-170">The toolbox opens.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="49390-171">Tıklayın **AutoHide** Raptiye kalan gerçekleştirirken araç kutusu açık tutmak için bu bölümdeki adımlar.</span><span class="sxs-lookup"><span data-stu-id="49390-171">Click the **AutoHide** pushpin to keep the toolbox open while you perform the remaining steps in this section.</span></span>  
-  
-3. <span data-ttu-id="49390-172">Sürükleyin iki düğme, iki metin kutuları ve iki etiket araç kutusundan **Form1**.</span><span class="sxs-lookup"><span data-stu-id="49390-172">Drag two buttons, two text boxes, and two labels from the toolbox onto **Form1**.</span></span>  
-  
-     <span data-ttu-id="49390-173">Eşlik eden resimde olduğu gibi denetimleri düzenleyin.</span><span class="sxs-lookup"><span data-stu-id="49390-173">Arrange the controls as in the accompanying illustration.</span></span> <span data-ttu-id="49390-174">Genişletin **Form1** denetimleri bir kolayca uyacak şekilde.</span><span class="sxs-lookup"><span data-stu-id="49390-174">Expand **Form1** so that the controls fit easily.</span></span>  
-  
-4. <span data-ttu-id="49390-175">Sağ **label1**ve ardından **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="49390-175">Right-click **label1**, and then click **Properties**.</span></span>  
-  
-5. <span data-ttu-id="49390-176">Değişiklik **metin** özelliğinden **label1** için **OrderID girin:** .</span><span class="sxs-lookup"><span data-stu-id="49390-176">Change the **Text** property from **label1** to **Enter OrderID:**.</span></span>  
-  
-6. <span data-ttu-id="49390-177">Aynı şekilde **etiket 2**, değiştirme **metin** özelliğinden **etiket 2** için **CustomerID girin:** .</span><span class="sxs-lookup"><span data-stu-id="49390-177">In the same way for **label2**, change the **Text** property from **label2** to **Enter CustomerID:**.</span></span>  
-  
-7. <span data-ttu-id="49390-178">Aynı şekilde değiştirme **metin** özelliği **button1** için **sipariş ayrıntıları**.</span><span class="sxs-lookup"><span data-stu-id="49390-178">In the same way, change the **Text** property for **button1** to **Order Details**.</span></span>  
-  
-8. <span data-ttu-id="49390-179">Değişiklik **metin** özelliği **button2** için **siparişi geçmişi**.</span><span class="sxs-lookup"><span data-stu-id="49390-179">Change the **Text** property for **button2** to **Order History**.</span></span>  
-  
-     <span data-ttu-id="49390-180">Tüm metni görünür olması düğme denetimleri genişletebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="49390-180">Widen the button controls so that all the text is visible.</span></span>  
-  
-#### <a name="to-handle-button-clicks"></a><span data-ttu-id="49390-181">Düğme tıklamaları işlemek için</span><span class="sxs-lookup"><span data-stu-id="49390-181">To handle button clicks</span></span>  
-  
-1. <span data-ttu-id="49390-182">Çift **sipariş ayrıntıları** üzerinde **Form1** button1 olay işleyicisine kod Düzenleyicisi'nde açın.</span><span class="sxs-lookup"><span data-stu-id="49390-182">Double-click **Order Details** on **Form1** to open the button1 event handler in the code editor.</span></span>  
-  
-2. <span data-ttu-id="49390-183">Aşağıdaki kodu yazın `button1` işleyicisi:</span><span class="sxs-lookup"><span data-stu-id="49390-183">Type the following code into the `button1` handler:</span></span>  
-  
-     [!code-csharp[DLinqWalk4CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#2)]  
-  
-3. <span data-ttu-id="49390-184">Şimdi çift **button2** üzerinde **Form1** açmak için `button2` işleyicisi</span><span class="sxs-lookup"><span data-stu-id="49390-184">Now double-click **button2** on **Form1** to open the `button2` handler</span></span>  
-  
-4. <span data-ttu-id="49390-185">Aşağıdaki kodu yazın `button2` işleyicisi:</span><span class="sxs-lookup"><span data-stu-id="49390-185">Type the following code into the `button2` handler:</span></span>  
-  
-     [!code-csharp[DLinqWalk4CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#3)]  
-  
-## <a name="testing-the-application"></a><span data-ttu-id="49390-186">Uygulamayı Test Etme</span><span class="sxs-lookup"><span data-stu-id="49390-186">Testing the Application</span></span>  
- <span data-ttu-id="49390-187">Artık uygulamanızı test etmek için zamanı geldi.</span><span class="sxs-lookup"><span data-stu-id="49390-187">Now it is time to test your application.</span></span> <span data-ttu-id="49390-188">Veri deposu ile ilgili iki saklı yordam hangi eylemleri için sınırlı olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="49390-188">Note that your contact with the datastore is limited to whatever actions the two stored procedures can take.</span></span> <span data-ttu-id="49390-189">Bu, girdiğiniz tüm OrderID için dahil edilen ürünleri döndürmek için veya bir geçmiş girdiğiniz CustomerID sipariş edilen ürünleri döndürmek için eylemlerdir.</span><span class="sxs-lookup"><span data-stu-id="49390-189">Those actions are to return the products included for any orderID you enter, or to return a history of products ordered for any CustomerID you enter.</span></span>  
-  
-#### <a name="to-test-the-application"></a><span data-ttu-id="49390-190">Uygulamayı test etmek için</span><span class="sxs-lookup"><span data-stu-id="49390-190">To test the application</span></span>  
-  
-1. <span data-ttu-id="49390-191">Hata ayıklamayı başlatmak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="49390-191">Press F5 to start debugging.</span></span>  
-  
-     <span data-ttu-id="49390-192">Form1 görünür.</span><span class="sxs-lookup"><span data-stu-id="49390-192">Form1 appears.</span></span>  
-  
-2. <span data-ttu-id="49390-193">İçinde **girin OrderID** kutusuna `10249`ve ardından **sipariş ayrıntıları**.</span><span class="sxs-lookup"><span data-stu-id="49390-193">In the **Enter OrderID** box, type `10249`, and then click **Order Details**.</span></span>  
-  
-     <span data-ttu-id="49390-194">Bir ileti kutusu 10249 siparişteki ürünleri listeler.</span><span class="sxs-lookup"><span data-stu-id="49390-194">A message box lists the products included in order 10249.</span></span>  
-  
-     <span data-ttu-id="49390-195">Tıklayın **Tamam** ileti kutusunu kapatın.</span><span class="sxs-lookup"><span data-stu-id="49390-195">Click **OK** to close the message box.</span></span>  
-  
-3. <span data-ttu-id="49390-196">İçinde **girin CustomerID** kutusuna `ALFKI`ve ardından **siparişi geçmişi**.</span><span class="sxs-lookup"><span data-stu-id="49390-196">In the **Enter CustomerID** box, type `ALFKI`, and then click **Order History**.</span></span>  
-  
-     <span data-ttu-id="49390-197">ALFKI müşteri siparişi geçmişi listeleyen bir ileti kutusu görünür.</span><span class="sxs-lookup"><span data-stu-id="49390-197">A message box appears that lists the order history for customer ALFKI.</span></span>  
-  
-     <span data-ttu-id="49390-198">Tıklayın **Tamam** ileti kutusunu kapatın.</span><span class="sxs-lookup"><span data-stu-id="49390-198">Click **OK** to close the message box.</span></span>  
-  
-4. <span data-ttu-id="49390-199">İçinde **girin OrderID** kutusuna `123`ve ardından **sipariş ayrıntıları**.</span><span class="sxs-lookup"><span data-stu-id="49390-199">In the **Enter OrderID** box, type `123`, and then click **Order Details**.</span></span>  
-  
-     <span data-ttu-id="49390-200">"Sonuç yok." görüntüleyen bir ileti kutusu görünür</span><span class="sxs-lookup"><span data-stu-id="49390-200">A message box appears that displays "No results."</span></span>  
-  
-     <span data-ttu-id="49390-201">Tıklayın **Tamam** ileti kutusunu kapatın.</span><span class="sxs-lookup"><span data-stu-id="49390-201">Click **OK** to close the message box.</span></span>  
-  
-5. <span data-ttu-id="49390-202">Üzerinde **hata ayıklama** menüsünü tıklatın **hata ayıklamayı durdurmak**.</span><span class="sxs-lookup"><span data-stu-id="49390-202">On the **Debug** menu, click **Stop debugging**.</span></span>  
-  
-     <span data-ttu-id="49390-203">Hata ayıklama oturumunu kapatır.</span><span class="sxs-lookup"><span data-stu-id="49390-203">The debug session closes.</span></span>  
-  
-6. <span data-ttu-id="49390-204">Denemeler tamamladınız, tıklayabilirsiniz **Projeyi Kapat** üzerinde **dosya** menüsünde ve istendiğinde projenizi kaydedin.</span><span class="sxs-lookup"><span data-stu-id="49390-204">If you have finished experimenting, you can click **Close Project** on the **File** menu, and save your project when you are prompted.</span></span>  
-  
-## <a name="next-steps"></a><span data-ttu-id="49390-205">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="49390-205">Next Steps</span></span>  
- <span data-ttu-id="49390-206">Bu proje, bazı değişiklikler yaparak geliştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="49390-206">You can enhance this project by making some changes.</span></span> <span data-ttu-id="49390-207">Örneğin, bir liste kutusunda mevcut saklı yordamları listeler ve yürütmek için hangi yordamların seçmesine sahip.</span><span class="sxs-lookup"><span data-stu-id="49390-207">For example, you could list available stored procedures in a list box and have the user select which procedures to execute.</span></span> <span data-ttu-id="49390-208">Ayrıca, raporları bir metin dosyasına çıkışı akış.</span><span class="sxs-lookup"><span data-stu-id="49390-208">You could also stream the output of the reports to a text file.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="49390-209">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="49390-209">See also</span></span>
+# <a name="walkthrough-using-only-stored-procedures-c"></a><span data-ttu-id="7e3d3-102">İzlenecek yol: Yalnızca Saklı Yordamları Kullanma (C#)</span><span class="sxs-lookup"><span data-stu-id="7e3d3-102">Walkthrough: Using Only Stored Procedures (C#)</span></span>
 
-- [<span data-ttu-id="49390-210">İzlenecek Yollarla Öğrenme</span><span class="sxs-lookup"><span data-stu-id="49390-210">Learning by Walkthroughs</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
-- [<span data-ttu-id="49390-211">Saklı Yordamlar</span><span class="sxs-lookup"><span data-stu-id="49390-211">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+<span data-ttu-id="7e3d3-103">Bu izlenecek yol, yalnızca saklı yordamları yürüterek verilere erişmek [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] için temel uçtan uca bir senaryo sağlar.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-103">This walkthrough provides a basic end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario for accessing data by executing stored procedures only.</span></span> <span data-ttu-id="7e3d3-104">Bu yaklaşım genellikle veritabanı yöneticileri tarafından veri deposuna nasıl erişildiğini sınırlamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-104">This approach is often used by database administrators to limit how the datastore is accessed.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="7e3d3-105">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Uygulamalarda saklı yordamları, özellikle, `Update`ve `Delete` işlemleri için `Create`varsayılan davranışı geçersiz kılmak için de kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-105">You can also use stored procedures in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications to override default behavior, especially for `Create`, `Update`, and `Delete` processes.</span></span> <span data-ttu-id="7e3d3-106">Daha fazla bilgi için bkz. [Insert, Update ve DELETE Işlemlerini özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span><span class="sxs-lookup"><span data-stu-id="7e3d3-106">For more information, see [Customizing Insert, Update, and Delete Operations](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span></span>
+
+<span data-ttu-id="7e3d3-107">Bu izlenecek yolun amaçları doğrultusunda, Northwind örnek veritabanındaki Saklı yordamlarla eşleştirilmiş iki yöntem kullanacaksınız: CustOrdersDetail ve CustOrderHist.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-107">For purposes of this walkthrough, you will use two methods that have been mapped to stored procedures in the Northwind sample database: CustOrdersDetail and CustOrderHist.</span></span> <span data-ttu-id="7e3d3-108">Eşleme, bir C# dosya oluşturmak Için SQLMetal komut satırı aracını çalıştırdığınızda oluşur.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-108">The mapping occurs when you run the SqlMetal command-line tool to generate a C# file.</span></span> <span data-ttu-id="7e3d3-109">Daha fazla bilgi için bu izlenecek yolun ilerleyen kısımlarında yer aldığı Önkoşullar bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-109">For more information, see the Prerequisites section later in this walkthrough.</span></span>
+
+<span data-ttu-id="7e3d3-110">Bu izlenecek yol, Nesne İlişkisel Tasarımcısı bağlı değildir.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-110">This walkthrough does not rely on the Object Relational Designer.</span></span> <span data-ttu-id="7e3d3-111">Visual Studio kullanan geliştiriciler, saklı yordam işlevselliğini uygulamak için O/R tasarımcısını da kullanabilir.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-111">Developers using Visual Studio can also use the O/R Designer to implement stored procedure functionality.</span></span> <span data-ttu-id="7e3d3-112">Bkz. [Visual Studio 'da LINQ to SQL araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span><span class="sxs-lookup"><span data-stu-id="7e3d3-112">See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>
+
+[!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]
+
+<span data-ttu-id="7e3d3-113">Bu izlenecek yol, Visual C# Development ayarları kullanılarak yazılmıştır.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-113">This walkthrough was written by using Visual C# Development Settings.</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="7e3d3-114">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="7e3d3-114">Prerequisites</span></span>
+
+<span data-ttu-id="7e3d3-115">Bu izlenecek yol aşağıdakileri gerektirir:</span><span class="sxs-lookup"><span data-stu-id="7e3d3-115">This walkthrough requires the following:</span></span>
+
+- <span data-ttu-id="7e3d3-116">Bu izlenecek yol, dosyaları tutmak için adanmış bir klasör ("c:\linqtest7") kullanır.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-116">This walkthrough uses a dedicated folder ("c:\linqtest7") to hold files.</span></span> <span data-ttu-id="7e3d3-117">Yönergeye başlamadan önce bu klasörü oluşturun.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-117">Create this folder before you begin the walkthrough.</span></span>
+
+- <span data-ttu-id="7e3d3-118">Northwind örnek veritabanı.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-118">The Northwind sample database.</span></span>
+
+     <span data-ttu-id="7e3d3-119">Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Download sitesinden indirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-119">If you do not have this database on your development computer, you can download it from the Microsoft download site.</span></span> <span data-ttu-id="7e3d3-120">Yönergeler için bkz. [örnek veritabanlarını indirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span><span class="sxs-lookup"><span data-stu-id="7e3d3-120">For instructions, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span> <span data-ttu-id="7e3d3-121">Veritabanını indirdikten sonra, Kuzey WND. mdf dosyasını c:\linqtest7 klasörüne kopyalayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-121">After you have downloaded the database, copy the northwnd.mdf file to the c:\linqtest7 folder.</span></span>
+
+- <span data-ttu-id="7e3d3-122">Northwind C# veritabanından oluşturulan bir kod dosyası.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-122">A C# code file generated from the Northwind database.</span></span>
+
+     <span data-ttu-id="7e3d3-123">Bu izlenecek yol, aşağıdaki komut satırı ile SqlMetal Aracı kullanılarak yazılmıştır:</span><span class="sxs-lookup"><span data-stu-id="7e3d3-123">This walkthrough was written by using the SqlMetal tool with the following command line:</span></span>
+
+     <span data-ttu-id="7e3d3-124">**SqlMetal/Code: "c:\linqtest7\northwind.cs"/Language: CSharp "c:\linqtest7\kuzey WND.mdf"/sprocs/Functions/plurleştir**</span><span class="sxs-lookup"><span data-stu-id="7e3d3-124">**sqlmetal /code:"c:\linqtest7\northwind.cs" /language:csharp "c:\linqtest7\northwnd.mdf" /sprocs /functions /pluralize**</span></span>
+
+     <span data-ttu-id="7e3d3-125">Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="7e3d3-125">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>
+
+## <a name="overview"></a><span data-ttu-id="7e3d3-126">Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7e3d3-126">Overview</span></span>
+
+<span data-ttu-id="7e3d3-127">Bu izlenecek yol altı ana görevden oluşur:</span><span class="sxs-lookup"><span data-stu-id="7e3d3-127">This walkthrough consists of six main tasks:</span></span>
+
+- <span data-ttu-id="7e3d3-128">Visual Studio 'da çözümü kurma. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e3d3-128">Setting up the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution in Visual Studio.</span></span>
+
+- <span data-ttu-id="7e3d3-129">System. Data. LINQ bütünleştirilmiş kodu projeye ekleniyor.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-129">Adding the System.Data.Linq assembly to the project.</span></span>
+
+- <span data-ttu-id="7e3d3-130">Veritabanı kod dosyası projeye ekleniyor.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-130">Adding the database code file to the project.</span></span>
+
+- <span data-ttu-id="7e3d3-131">Veritabanıyla bağlantı oluşturuluyor.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-131">Creating a connection with the database.</span></span>
+
+- <span data-ttu-id="7e3d3-132">Kullanıcı arabirimini ayarlama.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-132">Setting up the user interface.</span></span>
+
+- <span data-ttu-id="7e3d3-133">Uygulamayı çalıştırma ve test etme.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-133">Running and testing the application.</span></span>
+
+## <a name="creating-a-linq-to-sql-solution"></a><span data-ttu-id="7e3d3-134">LINQ to SQL çözümü oluşturma</span><span class="sxs-lookup"><span data-stu-id="7e3d3-134">Creating a LINQ to SQL Solution</span></span>
+
+<span data-ttu-id="7e3d3-135">Bu ilk görevde, bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proje derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü oluşturursunuz.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-135">In this first task, you create a Visual Studio solution that contains the necessary references to build and run a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project.</span></span>
+
+### <a name="to-create-a-linq-to-sql-solution"></a><span data-ttu-id="7e3d3-136">LINQ to SQL çözümü oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="7e3d3-136">To create a LINQ to SQL solution</span></span>
+
+1. <span data-ttu-id="7e3d3-137">Visual Studio **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-137">On the Visual Studio **File** menu, point to **New**, and then click **Project**.</span></span>
+
+2. <span data-ttu-id="7e3d3-138">**Yeni proje** Iletişim kutusundaki **Proje türleri** bölmesinde, **C#görsel**' e tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-138">In the **Project types** pane in the **New Project** dialog box, click **Visual C#**.</span></span>
+
+3. <span data-ttu-id="7e3d3-139">**Şablonlar** bölmesinde **Windows Forms uygulama**' ya tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-139">In the **Templates** pane, click **Windows Forms Application**.</span></span>
+
+4. <span data-ttu-id="7e3d3-140">**Ad** kutusuna **SprocOnlyApp**yazın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-140">In the **Name** box, type **SprocOnlyApp**.</span></span>
+
+5. <span data-ttu-id="7e3d3-141">**Konum** kutusunda, proje dosyalarınızı nerede depolamak istediğinizi doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-141">In the **Location** box, verify where you want to store your project files.</span></span>
+
+6. <span data-ttu-id="7e3d3-142">          **Tamam**'ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-142">Click **OK**.</span></span>
+
+     <span data-ttu-id="7e3d3-143">Windows Form Tasarımcısı açılır.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-143">The Windows Forms Designer opens.</span></span>
+
+## <a name="adding-the-linq-to-sql-assembly-reference"></a><span data-ttu-id="7e3d3-144">LINQ to SQL bütünleştirilmiş kod başvurusu ekleniyor</span><span class="sxs-lookup"><span data-stu-id="7e3d3-144">Adding the LINQ to SQL Assembly Reference</span></span>
+
+<span data-ttu-id="7e3d3-145">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Derleme, standart Windows Forms uygulama şablonuna dahil değildir.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-145">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] assembly is not included in the standard Windows Forms Application template.</span></span> <span data-ttu-id="7e3d3-146">Aşağıdaki adımlarda açıklandığı gibi derlemeyi kendiniz eklemeniz gerekir:</span><span class="sxs-lookup"><span data-stu-id="7e3d3-146">You will have to add the assembly yourself, as explained in the following steps:</span></span>
+
+### <a name="to-add-systemdatalinqdll"></a><span data-ttu-id="7e3d3-147">System. Data. LINQ. dll eklemek için</span><span class="sxs-lookup"><span data-stu-id="7e3d3-147">To add System.Data.Linq.dll</span></span>
+
+1. <span data-ttu-id="7e3d3-148">**Çözüm Gezgini**' de, **Başvurular**' a sağ tıklayın ve ardından **Başvuru Ekle**' ye tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-148">In **Solution Explorer**, right-click **References**, and then click **Add Reference**.</span></span>
+
+2. <span data-ttu-id="7e3d3-149">**Başvuru Ekle** iletişim kutusunda, **.net**' e tıklayın, System. Data. LINQ derlemesine tıklayın ve ardından **Tamam**' a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-149">In the **Add Reference** dialog box, click **.NET**, click the System.Data.Linq assembly, and then click **OK**.</span></span>
+
+     <span data-ttu-id="7e3d3-150">Derleme projeye eklenir.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-150">The assembly is added to the project.</span></span>
+
+## <a name="adding-the-northwind-code-file-to-the-project"></a><span data-ttu-id="7e3d3-151">Northwind kod dosyasını projeye ekleme</span><span class="sxs-lookup"><span data-stu-id="7e3d3-151">Adding the Northwind Code File to the Project</span></span>
+
+<span data-ttu-id="7e3d3-152">Bu adımda, Northwind örnek veritabanından bir kod dosyası oluşturmak için SqlMetal aracını kullandığınız varsayılır.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-152">This step assumes that you have used the SqlMetal tool to generate a code file from the Northwind sample database.</span></span> <span data-ttu-id="7e3d3-153">Daha fazla bilgi için bu kılavuzda daha önce bahsedilen Önkoşullar bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-153">For more information, see the Prerequisites section earlier in this walkthrough.</span></span>
+
+### <a name="to-add-the-northwind-code-file-to-the-project"></a><span data-ttu-id="7e3d3-154">Projeye Northwind kod dosyasını eklemek için</span><span class="sxs-lookup"><span data-stu-id="7e3d3-154">To add the northwind code file to the project</span></span>
+
+1. <span data-ttu-id="7e3d3-155">**Proje** menüsünde, **Varolan öğe Ekle**' ye tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-155">On the **Project** menu, click **Add Existing Item**.</span></span>
+
+2. <span data-ttu-id="7e3d3-156">**Varolan öğe Ekle** iletişim kutusunda c:\linqtest7\northwind.cs dizinine gidin ve **Ekle**' ye tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-156">In the **Add Existing Item** dialog box, move to c:\linqtest7\northwind.cs, and then click **Add**.</span></span>
+
+     <span data-ttu-id="7e3d3-157">Northwind.cs dosyası projeye eklenir.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-157">The northwind.cs file is added to the project.</span></span>
+
+## <a name="creating-a-database-connection"></a><span data-ttu-id="7e3d3-158">Veritabanı bağlantısı oluşturma</span><span class="sxs-lookup"><span data-stu-id="7e3d3-158">Creating a Database Connection</span></span>
+
+<span data-ttu-id="7e3d3-159">Bu adımda, Northwind örnek veritabanına olan bağlantıyı tanımlarsınız.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-159">In this step, you define the connection to the Northwind sample database.</span></span> <span data-ttu-id="7e3d3-160">Bu izlenecek yol, yol olarak "c:\linqtest7\kuzeydoğu WND.exe" kullanır.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-160">This walkthrough uses "c:\linqtest7\northwnd.mdf" as the path.</span></span>
+
+### <a name="to-create-the-database-connection"></a><span data-ttu-id="7e3d3-161">Veritabanı bağlantısını oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="7e3d3-161">To create the database connection</span></span>
+
+1. <span data-ttu-id="7e3d3-162">**Çözüm Gezgini**' de, **Form1.cs**' a sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-162">In **Solution Explorer**, right-click **Form1.cs**, and then click **View Code**.</span></span>
+
+2. <span data-ttu-id="7e3d3-163">`Form1` Sınıfına aşağıdaki kodu yazın:</span><span class="sxs-lookup"><span data-stu-id="7e3d3-163">Type the following code into the `Form1` class:</span></span>
+
+     [!code-csharp[DLinqWalk4CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#1)]
+
+## <a name="setting-up-the-user-interface"></a><span data-ttu-id="7e3d3-164">Kullanıcı arabirimini ayarlama</span><span class="sxs-lookup"><span data-stu-id="7e3d3-164">Setting up the User Interface</span></span>
+
+<span data-ttu-id="7e3d3-165">Bu görevde, kullanıcıların veritabanındaki verilere erişmek için saklı yordamları yürütebilmesi için bir arayüz ayarlarsınız.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-165">In this task you set up an interface so that users can execute stored procedures to access data in the database.</span></span> <span data-ttu-id="7e3d3-166">Bu kılavuzlarla geliştirdiğiniz uygulamalarda, kullanıcılar veritabanındaki verilere yalnızca uygulamada gömülü saklı yordamları kullanarak erişebilirler.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-166">In the applications that you are developing with this walkthrough, users can access data in the database only by using the stored procedures embedded in the application.</span></span>
+
+### <a name="to-set-up-the-user-interface"></a><span data-ttu-id="7e3d3-167">Kullanıcı arabirimini ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="7e3d3-167">To set up the user interface</span></span>
+
+1. <span data-ttu-id="7e3d3-168">Windows Form Tasarımcısı dön (**Form1. cs [Design]** ).</span><span class="sxs-lookup"><span data-stu-id="7e3d3-168">Return to the Windows Forms Designer (**Form1.cs[Design]**).</span></span>
+
+2. <span data-ttu-id="7e3d3-169">**Görünüm** menüsünde **araç kutusu**' na tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-169">On the **View** menu, click **Toolbox**.</span></span>
+
+     <span data-ttu-id="7e3d3-170">Araç kutusu açılır.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-170">The toolbox opens.</span></span>
+
+    > [!NOTE]
+    > <span data-ttu-id="7e3d3-171">Bu bölümde kalan adımları gerçekleştirirken araç kutusunu açık tutmak için otomatik **gizleme** raptiye ' ye tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-171">Click the **AutoHide** pushpin to keep the toolbox open while you perform the remaining steps in this section.</span></span>
+
+3. <span data-ttu-id="7e3d3-172">İki düğme, iki metin kutusu ve iki etiketi araç kutusundan **Form1**üzerine sürükleyin.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-172">Drag two buttons, two text boxes, and two labels from the toolbox onto **Form1**.</span></span>
+
+     <span data-ttu-id="7e3d3-173">Denetimleri, eşlik eden çizimde olduğu gibi düzenleyin.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-173">Arrange the controls as in the accompanying illustration.</span></span> <span data-ttu-id="7e3d3-174">Denetimlerin kolayca sığması için **Form1** ' i genişletin.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-174">Expand **Form1** so that the controls fit easily.</span></span>
+
+4. <span data-ttu-id="7e3d3-175">**Label1**öğesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-175">Right-click **label1**, and then click **Properties**.</span></span>
+
+5. <span data-ttu-id="7e3d3-176">**Text** özelliğini **Label1** olarak değiştirin, **OrderID: yazın**.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-176">Change the **Text** property from **label1** to **Enter OrderID:**.</span></span>
+
+6. <span data-ttu-id="7e3d3-177">**Etiket 2**için aynı şekilde, **Etiket 2** ' deki **Text** özelliğini CustomerID olarak değiştirin **:** .</span><span class="sxs-lookup"><span data-stu-id="7e3d3-177">In the same way for **label2**, change the **Text** property from **label2** to **Enter CustomerID:**.</span></span>
+
+7. <span data-ttu-id="7e3d3-178">Aynı şekilde, **button1** için **metin** özelliğini **sipariş ayrıntıları**olarak değiştirin.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-178">In the same way, change the **Text** property for **button1** to **Order Details**.</span></span>
+
+8. <span data-ttu-id="7e3d3-179">**Button2** için **metin** özelliğini **sıra geçmişiyle**değiştirin.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-179">Change the **Text** property for **button2** to **Order History**.</span></span>
+
+     <span data-ttu-id="7e3d3-180">Düğme denetimlerini tüm metinlerin görünür olması için genişletebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-180">Widen the button controls so that all the text is visible.</span></span>
+
+### <a name="to-handle-button-clicks"></a><span data-ttu-id="7e3d3-181">Düğme tıklamalarını işlemek için</span><span class="sxs-lookup"><span data-stu-id="7e3d3-181">To handle button clicks</span></span>
+
+1. <span data-ttu-id="7e3d3-182">Kod düzenleyicisinde button1 olay işleyicisini açmak için **Form1** üzerindeki **Order details** öğesine çift tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-182">Double-click **Order Details** on **Form1** to open the button1 event handler in the code editor.</span></span>
+
+2. <span data-ttu-id="7e3d3-183">`button1` İşleyiciye aşağıdaki kodu yazın:</span><span class="sxs-lookup"><span data-stu-id="7e3d3-183">Type the following code into the `button1` handler:</span></span>
+
+     [!code-csharp[DLinqWalk4CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#2)]
+
+3. <span data-ttu-id="7e3d3-184">Şimdi `button2` işleyiciyi açmak için **Form1** üzerinde **button2** 'e çift tıklayın</span><span class="sxs-lookup"><span data-stu-id="7e3d3-184">Now double-click **button2** on **Form1** to open the `button2` handler</span></span>
+
+4. <span data-ttu-id="7e3d3-185">`button2` İşleyiciye aşağıdaki kodu yazın:</span><span class="sxs-lookup"><span data-stu-id="7e3d3-185">Type the following code into the `button2` handler:</span></span>
+
+     [!code-csharp[DLinqWalk4CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#3)]
+
+## <a name="testing-the-application"></a><span data-ttu-id="7e3d3-186">Uygulamayı Test Etme</span><span class="sxs-lookup"><span data-stu-id="7e3d3-186">Testing the Application</span></span>
+
+<span data-ttu-id="7e3d3-187">Artık uygulamanızı test etmek zaman alabilir.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-187">Now it is time to test your application.</span></span> <span data-ttu-id="7e3d3-188">Veri deposu ile kişinizin, iki saklı yordamın gerçekleştirebileceği eylemlerle sınırlı olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-188">Note that your contact with the datastore is limited to whatever actions the two stored procedures can take.</span></span> <span data-ttu-id="7e3d3-189">Bu eylemler, girdiğiniz herhangi bir OrderID 'ye dahil edilen ürünleri döndürmek veya girdiğiniz her bir müşteri için sipariş edilen ürünlerin geçmişini döndürmemelidir.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-189">Those actions are to return the products included for any orderID you enter, or to return a history of products ordered for any CustomerID you enter.</span></span>
+
+### <a name="to-test-the-application"></a><span data-ttu-id="7e3d3-190">Uygulamayı test etmek için</span><span class="sxs-lookup"><span data-stu-id="7e3d3-190">To test the application</span></span>
+
+1. <span data-ttu-id="7e3d3-191">Hata ayıklamayı başlatmak için F5 'e basın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-191">Press F5 to start debugging.</span></span>
+
+     <span data-ttu-id="7e3d3-192">Form1 görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-192">Form1 appears.</span></span>
+
+2. <span data-ttu-id="7e3d3-193">**OrderID girin** kutusuna yazın `10249`ve ardından **sipariş ayrıntıları**' na tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-193">In the **Enter OrderID** box, type `10249`, and then click **Order Details**.</span></span>
+
+     <span data-ttu-id="7e3d3-194">Sipariş 10249 ' de yer alan ürünler bir ileti kutusunda listelenir.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-194">A message box lists the products included in order 10249.</span></span>
+
+     <span data-ttu-id="7e3d3-195">İleti kutusunu kapatmak için **Tamam** ' ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-195">Click **OK** to close the message box.</span></span>
+
+3. <span data-ttu-id="7e3d3-196">**CustomerID girin** kutusuna yazın `ALFKI`ve ardından **Sipariş geçmişi**' ne tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-196">In the **Enter CustomerID** box, type `ALFKI`, and then click **Order History**.</span></span>
+
+     <span data-ttu-id="7e3d3-197">Müşteri ALFKI için sipariş geçmişini listeleyen bir ileti kutusu görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-197">A message box appears that lists the order history for customer ALFKI.</span></span>
+
+     <span data-ttu-id="7e3d3-198">İleti kutusunu kapatmak için **Tamam** ' ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-198">Click **OK** to close the message box.</span></span>
+
+4. <span data-ttu-id="7e3d3-199">**OrderID girin** kutusuna yazın `123`ve ardından **sipariş ayrıntıları**' na tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-199">In the **Enter OrderID** box, type `123`, and then click **Order Details**.</span></span>
+
+     <span data-ttu-id="7e3d3-200">"Sonuç yok" iletisini görüntüleyen bir ileti kutusu görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-200">A message box appears that displays "No results."</span></span>
+
+     <span data-ttu-id="7e3d3-201">İleti kutusunu kapatmak için **Tamam** ' ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-201">Click **OK** to close the message box.</span></span>
+
+5. <span data-ttu-id="7e3d3-202">**Hata Ayıkla** menüsünde, **hata ayıklamayı Durdur**' u tıklatın.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-202">On the **Debug** menu, click **Stop debugging**.</span></span>
+
+     <span data-ttu-id="7e3d3-203">Hata ayıklama oturumu kapanır.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-203">The debug session closes.</span></span>
+
+6. <span data-ttu-id="7e3d3-204">Deneme işleminizi tamamladıysanız **Dosya** menüsünde **Projeyi Kapat** ' a tıklayabilir ve istendiğinde projenizi kaydedebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-204">If you have finished experimenting, you can click **Close Project** on the **File** menu, and save your project when you are prompted.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="7e3d3-205">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="7e3d3-205">Next Steps</span></span>
+
+<span data-ttu-id="7e3d3-206">Bu projeyi, bazı değişiklikler yaparak geliştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-206">You can enhance this project by making some changes.</span></span> <span data-ttu-id="7e3d3-207">Örneğin, kullanılabilir saklı yordamları bir liste kutusunda listeleyebilir ve kullanıcının hangi yordamları yürütebileceği seçmesini sağlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-207">For example, you could list available stored procedures in a list box and have the user select which procedures to execute.</span></span> <span data-ttu-id="7e3d3-208">Ayrıca raporların çıkışını bir metin dosyasına akışla aktarabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-208">You could also stream the output of the reports to a text file.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="7e3d3-209">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7e3d3-209">See also</span></span>
+
+- [<span data-ttu-id="7e3d3-210">İzlenecek Yollarla Öğrenme</span><span class="sxs-lookup"><span data-stu-id="7e3d3-210">Learning by Walkthroughs</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [<span data-ttu-id="7e3d3-211">Saklı Yordamlar</span><span class="sxs-lookup"><span data-stu-id="7e3d3-211">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
