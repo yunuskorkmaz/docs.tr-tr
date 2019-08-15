@@ -1,9 +1,7 @@
 - name: Ad Alanları
   href: index.md
   items:
-    - name: Ad Alanlarını Kullanma
+    - name: Ad alanlarını kullanma
       href: using-namespaces.md
-    - name: 'Nasıl yapılır: Genel Ad Alanı Diğer Adlarını Kullanma'
-      href: how-to-use-the-global-namespace-alias.md
-    - name: 'Nasıl yapılır: Ad Alanımı Kullanma'
+    - name: 'Nasıl yapılır: Ad Alanımı kullanma'
       href: how-to-use-the-my-namespace.md
