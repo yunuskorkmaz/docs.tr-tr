@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: cab39cdb13b92c0bfcb697de4bb8c05feae4c146
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 5bcd2ccd99940a3ce22f0894a1706eccf8627158
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972403"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545217"
 ---
-# <a name="fonts-wpf"></a><span data-ttu-id="06799-102">Yazı Tipleri (WPF)</span><span class="sxs-lookup"><span data-stu-id="06799-102">Fonts (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="06799-103">yazı tipleri kullanılarak [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] zengin metin sunumu desteğini içerir.</span><span class="sxs-lookup"><span data-stu-id="06799-103">includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="06799-104">Windows SDK bir örnek [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi paketi vardır.</span><span class="sxs-lookup"><span data-stu-id="06799-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the Windows SDK.</span></span>  
+# <a name="fonts-wpf"></a><span data-ttu-id="1b908-102">Yazı Tipleri (WPF)</span><span class="sxs-lookup"><span data-stu-id="1b908-102">Fonts (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="1b908-103">OpenType yazı tipleri kullanılarak zengin metin sunumu için destek içerir.</span><span class="sxs-lookup"><span data-stu-id="1b908-103">includes support for rich presentation of text using OpenType fonts.</span></span> <span data-ttu-id="1b908-104">Windows SDK, OpenType yazı tiplerinin örnek bir paketini içerir.</span><span class="sxs-lookup"><span data-stu-id="1b908-104">A sample pack of OpenType fonts is included with the Windows SDK.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="06799-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="06799-105">In This Section</span></span>  
- [<span data-ttu-id="06799-106">OpenType Yazı Tipi Özellikleri</span><span class="sxs-lookup"><span data-stu-id="06799-106">OpenType Font Features</span></span>](opentype-font-features.md)  
- [<span data-ttu-id="06799-107">Uygulamalarla Yazı Tiplerini Paketleme</span><span class="sxs-lookup"><span data-stu-id="06799-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
- [<span data-ttu-id="06799-108">Örnek OpenType Yazı Tipi Paketi</span><span class="sxs-lookup"><span data-stu-id="06799-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
- [<span data-ttu-id="06799-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="06799-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1b908-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="1b908-105">In This Section</span></span>  
+ [<span data-ttu-id="1b908-106">OpenType Yazı Tipi Özellikleri</span><span class="sxs-lookup"><span data-stu-id="1b908-106">OpenType Font Features</span></span>](opentype-font-features.md)  
+ [<span data-ttu-id="1b908-107">Uygulamalarla Yazı Tiplerini Paketleme</span><span class="sxs-lookup"><span data-stu-id="1b908-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
+ [<span data-ttu-id="1b908-108">Örnek OpenType Yazı Tipi Paketi</span><span class="sxs-lookup"><span data-stu-id="1b908-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
+ [<span data-ttu-id="1b908-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="1b908-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="06799-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="06799-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1b908-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1b908-110">See also</span></span>
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [<span data-ttu-id="06799-111">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="06799-111">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="06799-112">WPF'de Tipografi</span><span class="sxs-lookup"><span data-stu-id="06799-112">Typography in WPF</span></span>](typography-in-wpf.md)
+- [<span data-ttu-id="1b908-111">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="1b908-111">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="1b908-112">WPF'de Tipografi</span><span class="sxs-lookup"><span data-stu-id="1b908-112">Typography in WPF</span></span>](typography-in-wpf.md)
