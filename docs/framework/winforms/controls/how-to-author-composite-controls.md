@@ -7,83 +7,82 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 8bb630d3fb7e064935440439f2f07816e87c77dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b0ee8efa62175e2ced2a810ca6dd76e8adc103b
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010962"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039890"
 ---
 # <a name="how-to-author-composite-controls"></a>Nasıl yapılır: Bileşik Denetimler Yazma
-Bileşik denetimler, birçok bakımdan çalıştırılacağı. Bir Windows masaüstü uygulaması projesi bir parçası olarak bunları yazar ve bunları yalnızca projedeki formlarında kullanabilirsiniz. Veya bunları Windows Denetim Kitaplığı projesinde yazar, projenin bir derlemeye derlemek ve diğer projelerde denetimleri kullanın. Bile, bunları devralır ve bunları hızlı bir şekilde özel amaçlarla özelleştirmek için görsel devralma kullanın.  
-  
+
+Bileşik denetimler birçok şekilde çalıştırılabilir. Bunları bir Windows masaüstü uygulaması projesinin parçası olarak yazabilir ve yalnızca projedeki formlarda kullanabilirsiniz. Ya da bunları bir Windows denetim kitaplığı projesinde yazabilir, projeyi bir derlemede derleyebilir ve diğer projelerdeki denetimleri kullanabilirsiniz. Hatta onlardan devralabilir ve Görsel devralmayı kullanarak özel amaçlar için bunları hızlıca özelleştirebilirsiniz.
+
 > [!NOTE]
->  Web formlarında kullanmak üzere bileşik denetim yazma istiyorsanız [özel ASP.NET sunucu denetimleri geliştirme](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
->   
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-author-a-composite-control"></a>Bileşik denetim yazma  
-  
-1. Yeni bir **Windows uygulama** adlı proje `DemoControlHost`.  
-  
-2. Üzerinde **proje** menüsünü tıklatın **kullanıcı denetimi Ekle**.  
-  
-3. İçinde **Yeni Öğe Ekle** iletişim kutusu, sınıf dosyası (.vb veya .cs dosyası) bileşik denetime sahip olmasını istediğiniz adı verin.  
-  
-4. Seçin **Ekle** bileşik denetim için sınıf dosyası oluşturmak için.  
-  
-5. Ekleme denetimlerini **araç kutusu** bileşik denetim yüzeyine bırakın.  
-  
-6. Olay yordamlar, bileşik denetim veya onun bağlı denetimler tarafından başlatılan olayları işlemek için kod yerleştirin.  
-  
-7. Bileşik denetim için tasarımcı kapatın ve sorulduğunda dosyayı kaydedin.  
-  
-8. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.  
-  
-     Sırada görünmesini özel denetimler için projenin derlenmesi **araç kutusu**.  
-  
-9. Kullanım **DemoControlHost** sekmesinde **araç kutusu** denetiminize örneklerini eklemek için `Form1`.  
-  
-### <a name="to-author-a-control-class-library"></a>Bir denetim sınıf kitaplığı oluşturmak için  
-  
-1. Yeni bir **Windows Denetim Kitaplığı** proje.  
-  
-     Varsayılan olarak, projeyi bileşik denetim içerir.  
-  
-2. Denetimleri ve yukarıdaki yordamda anlatıldığı gibi kodu ekleyin.  
-  
-3. İstemediğiniz değiştirmek ve ayarlamak için sınıflar devralan bir denetim seçin **değiştiriciler** bu denetimin özellik **özel**.  
-  
-4. DLL oluşturun.  
-  
-### <a name="to-inherit-from-a-composite-control-in-a-control-class-library"></a>Bileşik Denetim denetim Sınıf Kitaplığı'nda devralınacak  
-  
-1. Üzerinde **dosya** menüsünde **Ekle** seçip **yeni proje** yeni bir **Windows uygulama** çözüme bir proje.  
-  
-2. İçinde **Çözüm Gezgini**, sağ **başvuruları** yeni klasör projesini ve ardından **Başvuru Ekle** açmak için **Add Reference**iletişim kutusu.  
-  
-3. Seçin **projeleri** sekmesini ve Denetim Kitaplığı projenize çift tıklayın.  
-  
-4. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.  
-  
-5. İçinde **Çözüm Gezgini**, Denetim Kitaplığı projenize sağ tıklayıp **Yeni Öğe Ekle** kısayol menüsünden.  
-  
-6. Seçin **devralınan kullanıcı denetimi** şablondan **Yeni Öğe Ekle** iletişim kutusu.  
-  
-7. İçinde **devralma Seçici** iletişim kutusunda, istediğiniz devralınacak denetimi çift tıklayın.  
-  
-     Yeni bir denetim projenize eklenir.  
-  
-8. Yeni denetim için görsel tasarımcı açın ve ek bağlı denetimler ekleme.  
-  
-     Bileşik Denetim DLL dosyanız içinde öğesinden devralınan bağlı denetimler görebilir ve denetimlerin özelliklerini değiştirebilir, **değiştiriciler** özelliği **genel**. Denetimin özelliklerini değiştiremezsiniz, **değiştiriciler** özelliği **özel**.  
-  
+> Web Forms üzerinde kullanmak için bir bileşik denetim yazmak istiyorsanız bkz. [özel ASP.NET Server denetimleri geliştirme](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).
+
+## <a name="to-author-a-composite-control"></a>Bileşik denetim yazmak için
+
+1. Visual Studio 'da adlı `DemoControlHost`yeni bir **Windows uygulaması** projesi oluşturun.
+
+2. **Proje** menüsünde **Kullanıcı denetimi Ekle**' ye tıklayın.
+
+3. **Yeni öğe Ekle** iletişim kutusunda, bileşik denetimin sahip olmasını istediğiniz adı sınıf dosyasına (. vb veya. cs dosyası) verin.
+
+4. Bileşik denetimin sınıf dosyasını oluşturmak için **Ekle** düğmesini seçin.
+
+5. **Araç kutusundan** bileşik denetim yüzeyine denetimler ekleyin.
+
+6. Bileşik denetim veya bileşen denetimleri tarafından oluşturulan olayları işlemek için olay yordamlarına kod koyun.
+
+7. Bileşik denetim için tasarımcıyı kapatın ve istendiğinde dosyayı kaydedin.
+
+8. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
+
+     Özel denetimlerin **araç kutusunda**görünmesi için projenin oluşturulması gerekir.
+
+9. Denetiminizin örneklerini öğesine `Form1`eklemek Için **araç kutusunun** **DemoControlHost** sekmesini kullanın.
+
+## <a name="to-author-a-control-class-library"></a>Bir denetim sınıfı kitaplığı yazmak için
+
+1. Yeni bir **Windows Denetim Kitaplığı** projesi açın.
+
+     Varsayılan olarak, proje bir bileşik denetim içerir.
+
+2. Yukarıdaki yordamda açıklandığı gibi denetimleri ve kodu ekleyin.
+
+3. Sınıfların değiştirilmesini istemediğiniz bir denetim seçin ve bu denetimin **değiştiriciler** özelliğini **özel**olarak ayarlayın.
+
+4. DLL 'yi oluşturun.
+
+## <a name="to-inherit-from-a-composite-control-in-a-control-class-library"></a>Bir denetim sınıfı kitaplığındaki bileşik denetimden devralması için
+
+1. Çözüme yeni bir **Windows uygulaması** projesi eklemek için **Dosya** menüsünde, **Ekle** ' ye gelin ve **Yeni proje** ' yi seçin.
+
+2. **Çözüm Gezgini**' de, yeni proje için **Başvurular** klasörüne sağ tıklayın ve başvuru Ekle Iletişim kutusunu açmak için **Başvuru Ekle** ' yi seçin.
+
+3. **Projeler** sekmesini seçin ve denetim kitaplığı projenize çift tıklayın.
+
+4. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
+
+5. **Çözüm Gezgini**, denetim kitaplığı projenize sağ tıklayıp kısayol menüsünden **Yeni öğe Ekle** ' yi seçin.
+
+6. **Yeni öğe Ekle** Iletişim kutusundan **devralınan Kullanıcı denetimi** şablonunu seçin.
+
+7. **Devralma Seçicisi** iletişim kutusunda, devralmak istediğiniz denetime çift tıklayın.
+
+     Projenize yeni bir denetim eklenir.
+
+8. Yeni denetim için görsel tasarımcıyı açın ve ek bileşen denetimleri ekleyin.
+
+     DLL 'inizdeki bileşik denetimden devralınan yapısal denetimleri görebilir ve **değiştiriciler** özelliği **ortak**olan denetimlerin özelliklerini değiştirebilirsiniz. **Değiştiriciler** özelliği **özel**olan denetimin özelliklerini değiştiremezsiniz.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İzlenecek yol: Visual Basic ile bileşik denetim yazma](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [İzlenecek yol: Visual C# ile bileşik denetim yazma](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [İzlenecek yol: Visual Basic ile Windows Forms Denetimi'nden devralma](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [İzlenecek yol: Visual C# ile Windows Forms Denetimi'nden devralma](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [İzlenecek yol: Visual ile bileşik denetim yazmaC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [İzlenecek yol: Visual Basic ile Windows Forms denetiminden devralma](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [İzlenecek yol: Görsel ile Windows Forms denetiminden devralmaC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [Denetim Türü Önerileri](control-type-recommendations.md)
 - [Nasıl yapılır: Windows Forms için yazar denetimleri](how-to-author-controls-for-windows-forms.md)
 - [Özel Denetim Çeşitleri](varieties-of-custom-controls.md)
