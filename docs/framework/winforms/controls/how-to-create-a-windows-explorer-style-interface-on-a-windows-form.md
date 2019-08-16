@@ -6,53 +6,50 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: 578fdf8e24803db0e0d80ff22aa5cebebbc2663e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db2c5431dfb0156c1508a18ef13d2af80eb4981b
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615994"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039530"
 ---
-# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a><span data-ttu-id="e8f64-102">Nasıl yapılır: Bir Windows Formunda Windows Gezgini Stilinde bir Arabirim Oluşturma</span><span class="sxs-lookup"><span data-stu-id="e8f64-102">How to: Create a Windows Explorer–Style Interface on a Windows Form</span></span>
-<span data-ttu-id="e8f64-103">Windows Gezgini bir ortak kullanıcı arabirimi uygulamalar için kendi hazır bilgisi nedeniyle seçimdir.</span><span class="sxs-lookup"><span data-stu-id="e8f64-103">Windows Explorer is a common user-interface choice for applications because of its ready familiarity.</span></span>  
-  
- <span data-ttu-id="e8f64-104">Esas olarak, Windows Gezgini, bir <xref:System.Windows.Forms.TreeView> denetimi ve bir <xref:System.Windows.Forms.ListView> ayrı Panel denetimi.</span><span class="sxs-lookup"><span data-stu-id="e8f64-104">Windows Explorer is, essentially, a <xref:System.Windows.Forms.TreeView> control and a <xref:System.Windows.Forms.ListView> control on separate panels.</span></span> <span data-ttu-id="e8f64-105">Paneller yeniden boyutlandırılabilir bir ayırıcı tarafından yapılır.</span><span class="sxs-lookup"><span data-stu-id="e8f64-105">The panels are made resizable by a splitter.</span></span> <span data-ttu-id="e8f64-106">Bu düzenleme denetimleri görüntüleme ve gözatma bilgilerinin oldukça etkilidir.</span><span class="sxs-lookup"><span data-stu-id="e8f64-106">This arrangement of controls is very effective for displaying and browsing information.</span></span>  
-  
- <span data-ttu-id="e8f64-107">Aşağıdaki adımlarda, bir Windows Gezgini benzeri form denetimleri düzenlemek gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="e8f64-107">The following steps show how to arrange controls in a Windows Explorer-like form.</span></span> <span data-ttu-id="e8f64-108">Windows Gezgini uygulama dosyasına göz atma işlevini ekleme gösterme.</span><span class="sxs-lookup"><span data-stu-id="e8f64-108">They do not show how to add the file-browsing functionality of the Windows Explorer application.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="e8f64-109">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="e8f64-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="e8f64-110">Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="e8f64-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="e8f64-111">Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="e8f64-111">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
-  
-### <a name="to-create-a-windows-explorer-style-windows-form"></a><span data-ttu-id="e8f64-112">Bir Windows Gezgini stilinde Windows Form oluşturma</span><span class="sxs-lookup"><span data-stu-id="e8f64-112">To create a Windows Explorer-style Windows Form</span></span>  
-  
-1. <span data-ttu-id="e8f64-113">Yeni bir Windows uygulaması projesi oluşturun (**dosya** > **yeni** > **proje** > **Visual C#** veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms uygulamalarındaki**).</span><span class="sxs-lookup"><span data-stu-id="e8f64-113">Create a new Windows Application project (**File** > **New** > **Project** > **Visual C#** or **Visual Basic** > **Classic Desktop** > **Windows Forms Application**).</span></span>  
-  
-2. <span data-ttu-id="e8f64-114">Gelen **araç kutusu**:</span><span class="sxs-lookup"><span data-stu-id="e8f64-114">From the **Toolbox**:</span></span>  
-  
-    1. <span data-ttu-id="e8f64-115">Sürükleme bir <xref:System.Windows.Forms.SplitContainer> denetimi formunuza sürükleyin.</span><span class="sxs-lookup"><span data-stu-id="e8f64-115">Drag a <xref:System.Windows.Forms.SplitContainer> control onto your form.</span></span>  
-  
-    2. <span data-ttu-id="e8f64-116">Sürükleme bir <xref:System.Windows.Forms.TreeView> içine denetim **SplitterPanel1** (panelini <xref:System.Windows.Forms.SplitContainer> işaretlenen denetim **Panel1**).</span><span class="sxs-lookup"><span data-stu-id="e8f64-116">Drag a <xref:System.Windows.Forms.TreeView> control into **SplitterPanel1** (the panel of the <xref:System.Windows.Forms.SplitContainer> control marked **Panel1**).</span></span>  
-  
-    3. <span data-ttu-id="e8f64-117">Sürükleme bir <xref:System.Windows.Forms.ListView> içine denetim **SplitterPanel2** (panelini <xref:System.Windows.Forms.SplitContainer> işaretlenen denetim **Panel2**).</span><span class="sxs-lookup"><span data-stu-id="e8f64-117">Drag a <xref:System.Windows.Forms.ListView> control into **SplitterPanel2** (the panel of the <xref:System.Windows.Forms.SplitContainer> control marked **Panel2**).</span></span>  
-  
-3. <span data-ttu-id="e8f64-118">Her üç denetim CTRL tuşuna basarak ve bunları sırayla tıklayarak seçin.</span><span class="sxs-lookup"><span data-stu-id="e8f64-118">Select all three controls by pressing the CTRL key and clicking them in turn.</span></span> <span data-ttu-id="e8f64-119">Seçtiğinizde, <xref:System.Windows.Forms.SplitContainer> denetlemek, paneller yerine ayırıcıyı tıklayın.</span><span class="sxs-lookup"><span data-stu-id="e8f64-119">When you select the <xref:System.Windows.Forms.SplitContainer> control, click the splitter bar, rather than the panels.</span></span>  
-  
+# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a><span data-ttu-id="40340-102">Nasıl yapılır: Bir Windows Formunda Windows Gezgini Stilinde bir Arabirim Oluşturma</span><span class="sxs-lookup"><span data-stu-id="40340-102">How to: Create a Windows Explorer–Style Interface on a Windows Form</span></span>
+<span data-ttu-id="40340-103">Windows Gezgini, uygulama için önceden kullanılan bir kullanıcı arabirimi seçiminden kaynaklanır.</span><span class="sxs-lookup"><span data-stu-id="40340-103">Windows Explorer is a common user-interface choice for applications because of its ready familiarity.</span></span>
+
+ <span data-ttu-id="40340-104">Windows Gezgini, temelde bir <xref:System.Windows.Forms.TreeView> denetim <xref:System.Windows.Forms.ListView> ve ayrı panellerde bir denetimdir.</span><span class="sxs-lookup"><span data-stu-id="40340-104">Windows Explorer is, essentially, a <xref:System.Windows.Forms.TreeView> control and a <xref:System.Windows.Forms.ListView> control on separate panels.</span></span> <span data-ttu-id="40340-105">Panolar bir Splitter tarafından yeniden boyutlandırılabilir hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="40340-105">The panels are made resizable by a splitter.</span></span> <span data-ttu-id="40340-106">Denetimlerin bu düzenlemesi, bilgileri görüntülemek ve göz atmak için çok etkilidir.</span><span class="sxs-lookup"><span data-stu-id="40340-106">This arrangement of controls is very effective for displaying and browsing information.</span></span>
+
+ <span data-ttu-id="40340-107">Aşağıdaki adımlarda, Windows Gezgini benzeri bir biçimde denetimlerin nasıl düzenlendiğini gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="40340-107">The following steps show how to arrange controls in a Windows Explorer-like form.</span></span> <span data-ttu-id="40340-108">Windows Gezgini uygulamasının dosya tarama işlevinin nasıl ekleneceğini göstermez.</span><span class="sxs-lookup"><span data-stu-id="40340-108">They do not show how to add the file-browsing functionality of the Windows Explorer application.</span></span>
+
+## <a name="to-create-a-windows-explorer-style-windows-form"></a><span data-ttu-id="40340-109">Windows Gezgini stili bir Windows formu oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="40340-109">To create a Windows Explorer-style Windows Form</span></span>
+
+1. <span data-ttu-id="40340-110">Yeni bir Windows uygulaması projesi oluşturma (**Dosya** > **Yeni** > **Proje** > **görseli C#**  veya **Visual Basic** > **Klasik** Masaüstü >  **Windows Forms uygulama**).</span><span class="sxs-lookup"><span data-stu-id="40340-110">Create a new Windows Application project (**File** > **New** > **Project** > **Visual C#** or **Visual Basic** > **Classic Desktop** > **Windows Forms Application**).</span></span>
+
+2. <span data-ttu-id="40340-111">**Araç kutusundan**:</span><span class="sxs-lookup"><span data-stu-id="40340-111">From the **Toolbox**:</span></span>
+
+    1. <span data-ttu-id="40340-112">Formunuza bir <xref:System.Windows.Forms.SplitContainer> denetim sürükleyin.</span><span class="sxs-lookup"><span data-stu-id="40340-112">Drag a <xref:System.Windows.Forms.SplitContainer> control onto your form.</span></span>
+
+    2. <span data-ttu-id="40340-113">Bir <xref:System.Windows.Forms.TreeView> denetimi **SplitterPanel1** öğesine sürükleyin ( <xref:System.Windows.Forms.SplitContainer> **Panel1**olarak işaretlenen denetimin bölmesi).</span><span class="sxs-lookup"><span data-stu-id="40340-113">Drag a <xref:System.Windows.Forms.TreeView> control into **SplitterPanel1** (the panel of the <xref:System.Windows.Forms.SplitContainer> control marked **Panel1**).</span></span>
+
+    3. <span data-ttu-id="40340-114">Bir <xref:System.Windows.Forms.ListView> denetimi **SplitterPanel2** öğesine sürükleyin ( <xref:System.Windows.Forms.SplitContainer> **Panel2**olarak işaretlenen denetimin bölmesi).</span><span class="sxs-lookup"><span data-stu-id="40340-114">Drag a <xref:System.Windows.Forms.ListView> control into **SplitterPanel2** (the panel of the <xref:System.Windows.Forms.SplitContainer> control marked **Panel2**).</span></span>
+
+3. <span data-ttu-id="40340-115">CTRL tuşuna basarak ve sırasıyla tıklayarak tüm üç denetimi seçin.</span><span class="sxs-lookup"><span data-stu-id="40340-115">Select all three controls by pressing the CTRL key and clicking them in turn.</span></span> <span data-ttu-id="40340-116"><xref:System.Windows.Forms.SplitContainer> Denetimi seçtiğinizde, panolar yerine Bölümlendirici çubuğuna tıklayın.</span><span class="sxs-lookup"><span data-stu-id="40340-116">When you select the <xref:System.Windows.Forms.SplitContainer> control, click the splitter bar, rather than the panels.</span></span>
+
     > [!NOTE]
-    >  <span data-ttu-id="e8f64-120">Kullanmayın **Tümünü Seç** komutunu **Düzenle** menüsü.</span><span class="sxs-lookup"><span data-stu-id="e8f64-120">Do not use the **Select All** command on the **Edit** menu.</span></span> <span data-ttu-id="e8f64-121">Bunu yaparsanız, sonraki adımda gerekli özellik görüntülenmez **özellikleri** penceresi.</span><span class="sxs-lookup"><span data-stu-id="e8f64-121">If you do so, the property needed in the next step will not appear in the **Properties** window.</span></span>  
-  
-4. <span data-ttu-id="e8f64-122">İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.</span><span class="sxs-lookup"><span data-stu-id="e8f64-122">In the **Properties** window, set the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span>  
-  
-5. <span data-ttu-id="e8f64-123">Uygulamayı çalıştırmak için F5'e basın.</span><span class="sxs-lookup"><span data-stu-id="e8f64-123">Press F5 to run the application.</span></span>  
-  
-     <span data-ttu-id="e8f64-124">Form, Windows Gezgini için benzer bir iki bölümden kullanıcı arabirimi görüntüler.</span><span class="sxs-lookup"><span data-stu-id="e8f64-124">The form displays a two-part user interface, similar to that of the Windows Explorer.</span></span>  
-  
+    >  <span data-ttu-id="40340-117">**Düzenleme** menüsünde **Tümünü Seç** komutunu kullanmayın.</span><span class="sxs-lookup"><span data-stu-id="40340-117">Do not use the **Select All** command on the **Edit** menu.</span></span> <span data-ttu-id="40340-118">Bunu yaparsanız, sonraki adımda gerekli olan özellik **Özellikler** penceresinde görünmez.</span><span class="sxs-lookup"><span data-stu-id="40340-118">If you do so, the property needed in the next step will not appear in the **Properties** window.</span></span>
+
+4. <span data-ttu-id="40340-119">**Özellikler** penceresinde, <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğini olarak <xref:System.Windows.Forms.DockStyle.Fill>ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="40340-119">In the **Properties** window, set the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span>
+
+5. <span data-ttu-id="40340-120">Uygulamayı çalıştırmak için F5'e basın.</span><span class="sxs-lookup"><span data-stu-id="40340-120">Press F5 to run the application.</span></span>
+
+     <span data-ttu-id="40340-121">Form, Windows Gezgini ' ne benzer şekilde iki bölümden oluşan bir kullanıcı arabirimi görüntüler.</span><span class="sxs-lookup"><span data-stu-id="40340-121">The form displays a two-part user interface, similar to that of the Windows Explorer.</span></span>
+
     > [!NOTE]
-    >  <span data-ttu-id="e8f64-125">Bölümlendirici sürüklediğinizde, paneller kendilerini yeniden boyutlandırın.</span><span class="sxs-lookup"><span data-stu-id="e8f64-125">When you drag the splitter, the panels resize themselves.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="e8f64-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e8f64-126">See also</span></span>
+    >  <span data-ttu-id="40340-122">Bölümlendirici sürüklediğiniz zaman, panolar kendilerini yeniden boyutlandırır.</span><span class="sxs-lookup"><span data-stu-id="40340-122">When you drag the splitter, the panels resize themselves.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="40340-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="40340-123">See also</span></span>
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [<span data-ttu-id="e8f64-127">Nasıl yapılır: Windows Forms ile çok bölmeli kullanıcı arabirimi oluşturma</span><span class="sxs-lookup"><span data-stu-id="e8f64-127">How to: Create a Multipane User Interface with Windows Forms</span></span>](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [<span data-ttu-id="e8f64-128">Nasıl yapılır: Yeniden boyutlandırma ve konumlama davranışını bölünmüş pencerede tanımlama</span><span class="sxs-lookup"><span data-stu-id="e8f64-128">How to: Define Resize and Positioning Behavior in a Split Window</span></span>](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
-- [<span data-ttu-id="e8f64-129">Nasıl yapılır: Pencereyi yatay bölme</span><span class="sxs-lookup"><span data-stu-id="e8f64-129">How to: Split a Window Horizontally</span></span>](how-to-split-a-window-horizontally.md)
-- [<span data-ttu-id="e8f64-130">SplitContainer Denetimi</span><span class="sxs-lookup"><span data-stu-id="e8f64-130">SplitContainer Control</span></span>](splitcontainer-control-windows-forms.md)
+- [<span data-ttu-id="40340-124">Nasıl yapılır: Windows Forms ile çok Bölbir Kullanıcı arabirimi oluşturma</span><span class="sxs-lookup"><span data-stu-id="40340-124">How to: Create a Multipane User Interface with Windows Forms</span></span>](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [<span data-ttu-id="40340-125">Nasıl yapılır: Bölünmüş pencerede yeniden boyutlandırma ve konumlandırma davranışını tanımlama</span><span class="sxs-lookup"><span data-stu-id="40340-125">How to: Define Resize and Positioning Behavior in a Split Window</span></span>](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [<span data-ttu-id="40340-126">Nasıl yapılır: Pencereyi yatay bölme</span><span class="sxs-lookup"><span data-stu-id="40340-126">How to: Split a Window Horizontally</span></span>](how-to-split-a-window-horizontally.md)
+- [<span data-ttu-id="40340-127">SplitContainer Denetimi</span><span class="sxs-lookup"><span data-stu-id="40340-127">SplitContainer Control</span></span>](splitcontainer-control-windows-forms.md)

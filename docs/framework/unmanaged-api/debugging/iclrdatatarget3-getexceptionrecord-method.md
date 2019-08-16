@@ -14,17 +14,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7966cfb6e775bee567221eef2a5d99b90399f322
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b667ac16a4bbe6bdab1814b66fb1121b34b2d945
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697920"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039578"
 ---
-# <a name="iclrdatatarget3getexceptionrecord-method"></a><span data-ttu-id="0aa17-102">ICLRDataTarget3::GetExceptionRecord Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0aa17-102">ICLRDataTarget3::GetExceptionRecord Method</span></span>
-<span data-ttu-id="0aa17-103">Hedef işlemle ilişkilendirilmiş özel durum kaydını almak için ortak dil çalışma zamanı (CLR) veri erişim hizmetleri tarafından çağrılır.</span><span class="sxs-lookup"><span data-stu-id="0aa17-103">Called by the common language runtime (CLR) data access services to retrieve the exception record associated with the target process.</span></span> <span data-ttu-id="0aa17-104">Örneğin, bir döküm hedef için bu aracılığıyla geçirilen özel durum kaydını eşdeğer olacaktır `ExceptionParam` bağımsız değişkeni [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) işlev kitaplığında Windows hata ayıklama yardımcı (DbgHelp).</span><span class="sxs-lookup"><span data-stu-id="0aa17-104">For example, for a dump target, this would be equivalent to the exception record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
+# <a name="iclrdatatarget3getexceptionrecord-method"></a><span data-ttu-id="9989f-102">ICLRDataTarget3::GetExceptionRecord Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9989f-102">ICLRDataTarget3::GetExceptionRecord Method</span></span>
+<span data-ttu-id="9989f-103">Hedef işlemle ilişkilendirilmiş özel durum kaydını almak için ortak dil çalışma zamanı (CLR) veri erişim hizmetleri tarafından çağrılır.</span><span class="sxs-lookup"><span data-stu-id="9989f-103">Called by the common language runtime (CLR) data access services to retrieve the exception record associated with the target process.</span></span> <span data-ttu-id="9989f-104">Örneğin, bir döküm hedefi için, bu, Windows hata ayıklama Yardım Kitaplığı 'ndaki (dbghelp) `ExceptionParam` [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) işlevine bağımsız değişken aracılığıyla geçirilen özel durum kaydıyla eşdeğerdir.</span><span class="sxs-lookup"><span data-stu-id="9989f-104">For example, for a dump target, this would be equivalent to the exception record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0aa17-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0aa17-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9989f-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9989f-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetExceptionRecord(  
@@ -34,41 +34,41 @@ HRESULT GetExceptionRecord(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0aa17-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0aa17-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9989f-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9989f-106">Parameters</span></span>  
  `bufferSize`  
- <span data-ttu-id="0aa17-107">[in] Giriş arabelleği bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="0aa17-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="0aa17-108">Bu eşit olmalı `sizeof(` [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`.</span><span class="sxs-lookup"><span data-stu-id="0aa17-108">This must be equal to `sizeof(`[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`.</span></span>  
+ <span data-ttu-id="9989f-107">'ndaki Giriş arabelleğinin bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="9989f-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="9989f-108">Bu, `sizeof(` [](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception)MINIDUMP_EXCEPTION`)`değerine eşit olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="9989f-108">This must be equal to `sizeof(`[MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception)`)`.</span></span>  
   
  `bufferUsed`  
- <span data-ttu-id="0aa17-109">[out] Bir işaretçi bir `ULONG32` gerçekte arabelleğe yazılan bayt sayısı alan türü.</span><span class="sxs-lookup"><span data-stu-id="0aa17-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
+ <span data-ttu-id="9989f-109">dışı Gerçekte arabelleğe yazılan bayt `ULONG32` sayısını alan türe yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="9989f-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
   
  `buffer`  
- <span data-ttu-id="0aa17-110">[out] Özel durum kaydını bir kopyasını alır bir ara belleğe yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0aa17-110">[out] A pointer to a memory buffer that receives a copy of the exception record.</span></span> <span data-ttu-id="0aa17-111">Özel durum kaydını olarak döndürülen bir [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) türü.</span><span class="sxs-lookup"><span data-stu-id="0aa17-111">The exception record is returned as a [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) type.</span></span>  
+ <span data-ttu-id="9989f-110">dışı Özel durum kaydının bir kopyasını alan bir bellek arabelleği işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="9989f-110">[out] A pointer to a memory buffer that receives a copy of the exception record.</span></span> <span data-ttu-id="9989f-111">Özel durum kaydı bir [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) türü olarak döndürülür.</span><span class="sxs-lookup"><span data-stu-id="9989f-111">The exception record is returned as a [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0aa17-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="0aa17-112">Return Value</span></span>  
- <span data-ttu-id="0aa17-113">Dönüş değeri `S_OK` başarı veya hata üzerinde `HRESULT` kodu.</span><span class="sxs-lookup"><span data-stu-id="0aa17-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="0aa17-114">`HRESULT` Kodları içerebilir ancak şu şekilde sınırlı değildir:</span><span class="sxs-lookup"><span data-stu-id="0aa17-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9989f-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="9989f-112">Return Value</span></span>  
+ <span data-ttu-id="9989f-113">Dönüş değeri `S_OK` başarılı veya hata durumunda hata `HRESULT` kodu.</span><span class="sxs-lookup"><span data-stu-id="9989f-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="9989f-114">`HRESULT` Kodlar şunlar olabilir ancak bunlarla sınırlı değildir:</span><span class="sxs-lookup"><span data-stu-id="9989f-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
   
-|<span data-ttu-id="0aa17-115">Dönüş kodu</span><span class="sxs-lookup"><span data-stu-id="0aa17-115">Return code</span></span>|<span data-ttu-id="0aa17-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0aa17-116">Description</span></span>|  
+|<span data-ttu-id="9989f-115">Dönüş kodu</span><span class="sxs-lookup"><span data-stu-id="9989f-115">Return code</span></span>|<span data-ttu-id="9989f-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9989f-116">Description</span></span>|  
 |-----------------|-----------------|  
-|`S_OK`|<span data-ttu-id="0aa17-117">Yöntem başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="0aa17-117">Method succeeded.</span></span> <span data-ttu-id="0aa17-118">Çıkış arabelleği için özel durum kaydını kopyalandı.</span><span class="sxs-lookup"><span data-stu-id="0aa17-118">The exception record has been copied to the output buffer.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="0aa17-119">Hedefle ilişkili hiçbir özel durum kaydıdır.</span><span class="sxs-lookup"><span data-stu-id="0aa17-119">No exception record is associated with the target.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="0aa17-120">Giriş arabelleği boyutu eşit değil `sizeof(MINIDUMP_EXCEPTION)`.</span><span class="sxs-lookup"><span data-stu-id="0aa17-120">The input buffer size is not equal to `sizeof(MINIDUMP_EXCEPTION)`.</span></span>|  
+|`S_OK`|<span data-ttu-id="9989f-117">Yöntem başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="9989f-117">Method succeeded.</span></span> <span data-ttu-id="9989f-118">Özel durum kaydı çıkış arabelleğine kopyalanmış.</span><span class="sxs-lookup"><span data-stu-id="9989f-118">The exception record has been copied to the output buffer.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="9989f-119">Hedefle ilişkili özel durum kaydı yok.</span><span class="sxs-lookup"><span data-stu-id="9989f-119">No exception record is associated with the target.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="9989f-120">Giriş arabelleği boyutu değerine eşit `sizeof(MINIDUMP_EXCEPTION)`değil.</span><span class="sxs-lookup"><span data-stu-id="9989f-120">The input buffer size is not equal to `sizeof(MINIDUMP_EXCEPTION)`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0aa17-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0aa17-121">Remarks</span></span>  
- <span data-ttu-id="0aa17-122">[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) dbghelp.h ve Windows SDK'sındaki imagehlp.h tanımlanmış bir yapı olduğunu.</span><span class="sxs-lookup"><span data-stu-id="0aa17-122">[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) is a structure defined in dbghelp.h and imagehlp.h in the Windows SDK.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9989f-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9989f-121">Remarks</span></span>  
+ <span data-ttu-id="9989f-122">[MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) , Windows SDK dbghelp. h ve Imagehlp. h içinde tanımlanan bir yapıdır.</span><span class="sxs-lookup"><span data-stu-id="9989f-122">[MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) is a structure defined in dbghelp.h and imagehlp.h in the Windows SDK.</span></span>  
   
- <span data-ttu-id="0aa17-123">Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="0aa17-123">This method is implemented by the writer of the debugging application.</span></span>  
+ <span data-ttu-id="9989f-123">Bu yöntem, hata ayıklama uygulamasının yazarı tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="9989f-123">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0aa17-124">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0aa17-124">Requirements</span></span>  
- <span data-ttu-id="0aa17-125">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0aa17-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9989f-124">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9989f-124">Requirements</span></span>  
+ <span data-ttu-id="9989f-125">**Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9989f-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0aa17-126">**Üst bilgi:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="0aa17-126">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="9989f-126">**Üst bilgi** ClrData. IDL, ClrData. h</span><span class="sxs-lookup"><span data-stu-id="9989f-126">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="0aa17-127">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0aa17-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9989f-127">**Kitaplığı** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="9989f-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0aa17-128">**.NET framework sürümleri:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span><span class="sxs-lookup"><span data-stu-id="0aa17-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span></span>  
+ <span data-ttu-id="9989f-128">**.NET Framework sürümleri:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span><span class="sxs-lookup"><span data-stu-id="9989f-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0aa17-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0aa17-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9989f-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9989f-129">See also</span></span>
 
-- [<span data-ttu-id="0aa17-130">ICLRDataTarget3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0aa17-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
-- [<span data-ttu-id="0aa17-131">GetExceptionContextRecord Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0aa17-131">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
-- [<span data-ttu-id="0aa17-132">GetExceptionThreadID Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0aa17-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
+- [<span data-ttu-id="9989f-130">ICLRDataTarget3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9989f-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
+- [<span data-ttu-id="9989f-131">GetExceptionContextRecord Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9989f-131">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
+- [<span data-ttu-id="9989f-132">GetExceptionThreadID Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9989f-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)

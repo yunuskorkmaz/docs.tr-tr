@@ -8,140 +8,137 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: dc9abbf520d3af79a2c64884adcdfa2f1066ce1b
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: df88f9ae0b32ecd3b79686f3271e09b92ad7d4fd
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557990"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040187"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a><span data-ttu-id="b0585-102">İzlenecek yol: Visual C ile Windows Forms Denetimi'nden devralma\#</span><span class="sxs-lookup"><span data-stu-id="b0585-102">Walkthrough: Inheriting from a Windows Forms Control with Visual C\#</span></span>
-<span data-ttu-id="b0585-103">Görsel C#, güçlü özel denetimler aracılığıyla oluşturabilirsiniz *devralma*.</span><span class="sxs-lookup"><span data-stu-id="b0585-103">With Visual C#, you can create powerful custom controls through *inheritance*.</span></span> <span data-ttu-id="b0585-104">Devralma üzerinden tüm standart Windows Forms denetimleri devralınan işlevlerini korur, ancak özel işlevler de dahil denetimleri oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b0585-104">Through inheritance you are able to create controls that retain all of the inherent functionality of standard Windows Forms controls but also incorporate custom functionality.</span></span> <span data-ttu-id="b0585-105">Bu izlenecek yolda, adlı basit bir devralınan denetim oluşturacaksınız `ValueButton`.</span><span class="sxs-lookup"><span data-stu-id="b0585-105">In this walkthrough, you will create a simple inherited control called `ValueButton`.</span></span> <span data-ttu-id="b0585-106">Bu düğme, standart Windows Forms işlevselliği devralır <xref:System.Windows.Forms.Button> denetlemek ve adlı bir özel özellik açığa çıkarır `ButtonValue`.</span><span class="sxs-lookup"><span data-stu-id="b0585-106">This button will inherit functionality from the standard Windows Forms <xref:System.Windows.Forms.Button> control, and will expose a custom property called `ButtonValue`.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="b0585-107">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="b0585-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="b0585-108">Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="b0585-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="b0585-109">Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="b0585-109">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
-  
-## <a name="creating-the-project"></a><span data-ttu-id="b0585-110">Projeyi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b0585-110">Creating the Project</span></span>  
- <span data-ttu-id="b0585-111">Yeni bir proje oluşturduğunuzda, kök ad alanı, derleme adı ve proje adını ayarlayın ve varsayılan bileşeni doğru ad alanı içinde olmasını sağlamak için adını belirtin.</span><span class="sxs-lookup"><span data-stu-id="b0585-111">When you create a new project, you specify its name in order to set the root namespace, assembly name, and project name, and to ensure that the default component will be in the correct namespace.</span></span>  
-  
-#### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a><span data-ttu-id="b0585-112">ValueButtonLib denetim kitaplığı ve ValueButton denetimi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="b0585-112">To create the ValueButtonLib control library and the ValueButton control</span></span>  
-  
-1. <span data-ttu-id="b0585-113">Üzerinde **dosya** menüsünde **yeni** ve ardından **proje** açmak için **yeni proje** iletişim kutusu.</span><span class="sxs-lookup"><span data-stu-id="b0585-113">On the **File** menu, point to **New** and then click **Project** to open the **New Project** dialog box.</span></span>  
-  
-2. <span data-ttu-id="b0585-114">Seçin **Windows Forms Denetim Kitaplığı** proje şablonu Visual C# projeleri ve türü listesinden `ValueButtonLib` içinde **adı** kutusu.</span><span class="sxs-lookup"><span data-stu-id="b0585-114">Select the **Windows Forms Control Library** project template from the list of Visual C# Projects, and type `ValueButtonLib` in the **Name** box.</span></span>  
-  
-     <span data-ttu-id="b0585-115">Proje adı `ValueButtonLib`, aynı zamanda kök ad alanı için varsayılan olarak atanır.</span><span class="sxs-lookup"><span data-stu-id="b0585-115">The project name, `ValueButtonLib`, is also assigned to the root namespace by default.</span></span> <span data-ttu-id="b0585-116">Kök ad alanı, bileşenleri derleme içindeki adlarını nitelemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="b0585-116">The root namespace is used to qualify the names of components in the assembly.</span></span> <span data-ttu-id="b0585-117">Örneğin, iki derleme adlı bileşenleri sağlarsanız `ValueButton`, belirtebilirsiniz, `ValueButton` bileşenini kullanarak `ValueButtonLib.ValueButton`.</span><span class="sxs-lookup"><span data-stu-id="b0585-117">For example, if two assemblies provide components named `ValueButton`, you can specify your `ValueButton` component using `ValueButtonLib.ValueButton`.</span></span> <span data-ttu-id="b0585-118">Daha fazla bilgi için [ad alanları](../../../csharp/programming-guide/namespaces/index.md).</span><span class="sxs-lookup"><span data-stu-id="b0585-118">For more information, see [Namespaces](../../../csharp/programming-guide/namespaces/index.md).</span></span>  
-  
-3. <span data-ttu-id="b0585-119">İçinde **Çözüm Gezgini**, sağ **UserControl1.cs**, ardından **Yeniden Adlandır** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="b0585-119">In **Solution Explorer**, right-click **UserControl1.cs**, then choose **Rename** from the shortcut menu.</span></span> <span data-ttu-id="b0585-120">İçin dosya adını değiştirerek `ValueButton.cs`.</span><span class="sxs-lookup"><span data-stu-id="b0585-120">Change the file name to `ValueButton.cs`.</span></span> <span data-ttu-id="b0585-121">Tıklayın **Evet** düğmesini yaptığınız kod öğesi için tüm başvuruları yeniden adlandırmak isteyip istemediğiniz sorulduğunda '`UserControl1`'.</span><span class="sxs-lookup"><span data-stu-id="b0585-121">Click the **Yes** button when you are asked if you want to rename all references to the code element '`UserControl1`'.</span></span>  
-  
-4. <span data-ttu-id="b0585-122">İçinde **Çözüm Gezgini**, sağ **ValueButton.cs** seçip **kodu görüntüle**.</span><span class="sxs-lookup"><span data-stu-id="b0585-122">In **Solution Explorer**, right-click **ValueButton.cs** and select **View Code**.</span></span>  
-  
-5. <span data-ttu-id="b0585-123">Bulun `class` deyim satırı `public partial class ValueButton`, bu denetim devraldığı türünü değiştirip <xref:System.Windows.Forms.UserControl> için <xref:System.Windows.Forms.Button>.</span><span class="sxs-lookup"><span data-stu-id="b0585-123">Locate the `class` statement line, `public partial class ValueButton`, and change the type from which this control inherits from <xref:System.Windows.Forms.UserControl> to <xref:System.Windows.Forms.Button>.</span></span> <span data-ttu-id="b0585-124">Böylece tüm işlevlerini devralmak devralınan denetim <xref:System.Windows.Forms.Button> denetimi.</span><span class="sxs-lookup"><span data-stu-id="b0585-124">This allows your inherited control to inherit all the functionality of the <xref:System.Windows.Forms.Button> control.</span></span>  
-  
-6. <span data-ttu-id="b0585-125">İçinde **Çözüm Gezgini**açın **ValueButton.cs** kod tasarımcı tarafından oluşturulan dosya görüntülenecek düğümü **ValueButton.Designer.cs**.</span><span class="sxs-lookup"><span data-stu-id="b0585-125">In **Solution Explorer**, open the **ValueButton.cs** node to display the designer-generated code file, **ValueButton.Designer.cs**.</span></span> <span data-ttu-id="b0585-126">Bu dosyayı açmak **Kod Düzenleyicisi**.</span><span class="sxs-lookup"><span data-stu-id="b0585-126">Open this file in the **Code Editor**.</span></span>  
-  
-7. <span data-ttu-id="b0585-127">Bulun `InitializeComponent` yöntemi ekleme ve kaldırma atar satırı <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="b0585-127">Locate the `InitializeComponent` method and remove the line that assigns the <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> property.</span></span> <span data-ttu-id="b0585-128">Bu özellik yok <xref:System.Windows.Forms.Button> denetimi.</span><span class="sxs-lookup"><span data-stu-id="b0585-128">This property does not exist in the <xref:System.Windows.Forms.Button> control.</span></span>  
-  
-8. <span data-ttu-id="b0585-129">Gelen **dosya** menüsünde seçin **Tümünü Kaydet** projeyi kaydetmek için.</span><span class="sxs-lookup"><span data-stu-id="b0585-129">From the **File** menu, choose **Save All** to save the project.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="b0585-130">Bir görsel tasarımcı artık kullanılamıyor.</span><span class="sxs-lookup"><span data-stu-id="b0585-130">A visual designer is no longer available.</span></span> <span data-ttu-id="b0585-131">Çünkü <xref:System.Windows.Forms.Button> netimi kendi boyama, Tasarımcı içinde görünümünü değiştirilemedi.</span><span class="sxs-lookup"><span data-stu-id="b0585-131">Because the <xref:System.Windows.Forms.Button> control does its own painting, you are unable to modify its appearance in the designer.</span></span> <span data-ttu-id="b0585-132">Görsel gösterimine tam olarak aynı sınıfından devralan sınıf olacaktır (diğer bir deyişle, <xref:System.Windows.Forms.Button>) kodda değiştirilmediği sürece.</span><span class="sxs-lookup"><span data-stu-id="b0585-132">Its visual representation will be exactly the same as that of the class it inherits from (that is, <xref:System.Windows.Forms.Button>) unless modified in the code.</span></span> <span data-ttu-id="b0585-133">Tasarım yüzeyine UI öğesi içermeyen olan bileşenleri eklemeye devam edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b0585-133">You can still add components, which have no UI elements, to the design surface.</span></span>  
-  
-## <a name="adding-a-property-to-your-inherited-control"></a><span data-ttu-id="b0585-134">Devralınan denetiminize özellik ekleme</span><span class="sxs-lookup"><span data-stu-id="b0585-134">Adding a Property to Your Inherited Control</span></span>  
- <span data-ttu-id="b0585-135">Bir olası devralınan Windows Forms denetimlerinin Görünüm ve yapısını standart Windows Forms denetimleri aynıdır, ancak özel özellikler kullanıma denetimleri oluşturulmasını kullanılır.</span><span class="sxs-lookup"><span data-stu-id="b0585-135">One possible use of inherited Windows Forms controls is the creation of controls that are identical in look and feel of standard Windows Forms controls, but expose custom properties.</span></span> <span data-ttu-id="b0585-136">Bu bölümde, adlı bir özellik ekleyeceksiniz `ButtonValue` denetiminiz için.</span><span class="sxs-lookup"><span data-stu-id="b0585-136">In this section, you will add a property called `ButtonValue` to your control.</span></span>  
-  
-#### <a name="to-add-the-value-property"></a><span data-ttu-id="b0585-137">Value özelliği eklemek için</span><span class="sxs-lookup"><span data-stu-id="b0585-137">To add the Value property</span></span>  
-  
-1. <span data-ttu-id="b0585-138">İçinde **Çözüm Gezgini**, sağ **ValueButton.cs**ve ardından **kodu görüntüle** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="b0585-138">In **Solution Explorer**, right-click **ValueButton.cs**, and then click **View Code** from the shortcut menu.</span></span>  
-  
-2. <span data-ttu-id="b0585-139">Bulun `class` deyimi.</span><span class="sxs-lookup"><span data-stu-id="b0585-139">Locate the `class` statement.</span></span> <span data-ttu-id="b0585-140">Hemen sonra `{`, aşağıdaki kodu yazın:</span><span class="sxs-lookup"><span data-stu-id="b0585-140">Immediately after the `{`, type the following code:</span></span>  
-  
-    ```csharp  
-    // Creates the private variable that will store the value of your   
-    // property.  
-    private int varValue;  
-    // Declares the property.  
-    public int ButtonValue  
-    {  
-       // Sets the method for retrieving the value of your property.  
-       get  
-       {  
-          return varValue;  
-       }  
-       // Sets the method for setting the value of your property.  
-       set  
-       {  
-          varValue = value;  
-       }  
-    }  
-    ```  
-  
-     <span data-ttu-id="b0585-141">Bu kod yöntemleri olarak ayarlar `ButtonValue` özelliği depolanır ve alınır.</span><span class="sxs-lookup"><span data-stu-id="b0585-141">This code sets the methods by which the `ButtonValue` property is stored and retrieved.</span></span> <span data-ttu-id="b0585-142">`get` Deyimi ayarlar özel bir değişkende depolanan değere döndürülen değer `varValue`ve `set` deyimi kullanarak özel bir değişken değerini ayarlar `value` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="b0585-142">The `get` statement sets the value returned to the value that is stored in the private variable `varValue`, and the `set` statement sets the value of the private variable by use of the `value` keyword.</span></span>  
-  
-3. <span data-ttu-id="b0585-143">Gelen **dosya** menüsünde seçin **Tümünü Kaydet** projeyi kaydetmek için.</span><span class="sxs-lookup"><span data-stu-id="b0585-143">From the **File** menu, choose **Save All** to save the project.</span></span>  
-  
-## <a name="testing-your-control"></a><span data-ttu-id="b0585-144">Denetiminiz test etme</span><span class="sxs-lookup"><span data-stu-id="b0585-144">Testing Your Control</span></span>  
- <span data-ttu-id="b0585-145">Denetimler, tek başına projeleri değildir; Bunlar, bir kapsayıcıda barındırılan gerekir.</span><span class="sxs-lookup"><span data-stu-id="b0585-145">Controls are not stand-alone projects; they must be hosted in a container.</span></span> <span data-ttu-id="b0585-146">Denetiminiz test etmek için bir test projesi için bunu çalıştırmak için sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="b0585-146">In order to test your control, you must provide a test project for it to run in.</span></span> <span data-ttu-id="b0585-147">Ayrıca, Denetim test projesi için erişilebilir (derleme) oluşturarak yapmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="b0585-147">You must also make your control accessible to the test project by building (compiling) it.</span></span> <span data-ttu-id="b0585-148">Bu bölümde, denetiminizi oluşturup bir Windows formunda test.</span><span class="sxs-lookup"><span data-stu-id="b0585-148">In this section, you will build your control and test it in a Windows Form.</span></span>  
-  
-#### <a name="to-build-your-control"></a><span data-ttu-id="b0585-149">Denetim oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="b0585-149">To build your control</span></span>  
-  
-1. <span data-ttu-id="b0585-150">Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.</span><span class="sxs-lookup"><span data-stu-id="b0585-150">On the **Build** menu, click **Build Solution**.</span></span>  
-  
-     <span data-ttu-id="b0585-151">Derleme, derleyici hata veya uyarılar ile başarılı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="b0585-151">The build should be successful with no compiler errors or warnings.</span></span>  
-  
-#### <a name="to-create-a-test-project"></a><span data-ttu-id="b0585-152">Bir test projesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="b0585-152">To create a test project</span></span>  
-  
-1. <span data-ttu-id="b0585-153">Üzerinde **dosya** menüsünde **Ekle** ve ardından **yeni proje** açmak için **Yeni Proje Ekle** iletişim kutusu.</span><span class="sxs-lookup"><span data-stu-id="b0585-153">On the **File** menu, point to **Add** and then click **New Project** to open the **Add New Project** dialog box.</span></span>  
-  
-2. <span data-ttu-id="b0585-154">Seçin **Windows** düğümü, beneath **Visual C#** düğüm seçeneğine tıklayıp **Windows Forms uygulaması**.</span><span class="sxs-lookup"><span data-stu-id="b0585-154">Select the **Windows** node, beneath the **Visual C#** node, and click **Windows Forms Application**.</span></span>  
-  
-3. <span data-ttu-id="b0585-155">İçinde **adı** kutusuna `Test`.</span><span class="sxs-lookup"><span data-stu-id="b0585-155">In the **Name** box, type `Test`.</span></span>  
-  
-4. <span data-ttu-id="b0585-156">İçinde **Çözüm Gezgini**, sağ **başvuruları** ardından düğümü test projeniz için **Başvuru Ekle** görüntülemek için kısayol menüsünden  **Başvuru ekleme** iletişim kutusu.</span><span class="sxs-lookup"><span data-stu-id="b0585-156">In **Solution Explorer**, right-click the **References** node for your test project, then select **Add Reference** from the shortcut menu to display the **Add Reference** dialog box.</span></span>  
-  
-5. <span data-ttu-id="b0585-157">Etiketli sekmesini **projeleri**.</span><span class="sxs-lookup"><span data-stu-id="b0585-157">Click the tab labeled **Projects**.</span></span> <span data-ttu-id="b0585-158">`ValueButtonLib` Projesi altında listelenir **proje adı**.</span><span class="sxs-lookup"><span data-stu-id="b0585-158">Your `ValueButtonLib` project will be listed under **Project Name**.</span></span> <span data-ttu-id="b0585-159">Projeyi test projesinin başvuru eklemek için çift tıklayın.</span><span class="sxs-lookup"><span data-stu-id="b0585-159">Double-click the project to add the reference to the test project.</span></span>  
-  
-6. <span data-ttu-id="b0585-160">İçinde **Çözüm Gezgini** sağ **Test** seçip **yapı**.</span><span class="sxs-lookup"><span data-stu-id="b0585-160">In **Solution Explorer,** right-click **Test** and select **Build**.</span></span>  
-  
-#### <a name="to-add-your-control-to-the-form"></a><span data-ttu-id="b0585-161">Forma denetim ekleme</span><span class="sxs-lookup"><span data-stu-id="b0585-161">To add your control to the form</span></span>  
-  
-1. <span data-ttu-id="b0585-162">İçinde **Çözüm Gezgini**, sağ **Form1.cs** ve **Görünüm Tasarımcısı** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="b0585-162">In **Solution Explorer**, right-click **Form1.cs** and choose **View Designer** from the shortcut menu.</span></span>  
-  
-2. <span data-ttu-id="b0585-163">İçinde **araç kutusu**, tıklayın **ValueButtonLib bileşenleri**.</span><span class="sxs-lookup"><span data-stu-id="b0585-163">In the **Toolbox**, click **ValueButtonLib Components**.</span></span> <span data-ttu-id="b0585-164">Çift **ValueButton**.</span><span class="sxs-lookup"><span data-stu-id="b0585-164">Double-click **ValueButton**.</span></span>  
-  
-     <span data-ttu-id="b0585-165">A **ValueButton** formda görünür.</span><span class="sxs-lookup"><span data-stu-id="b0585-165">A **ValueButton** appears on the form.</span></span>  
-  
-3. <span data-ttu-id="b0585-166">Sağ **ValueButton** seçip **özellikleri** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="b0585-166">Right-click the **ValueButton** and select **Properties** from the shortcut menu.</span></span>  
-  
-4. <span data-ttu-id="b0585-167">İçinde **özellikleri** penceresinde, bu denetimin özelliklerini inceleyin.</span><span class="sxs-lookup"><span data-stu-id="b0585-167">In the **Properties** window, examine the properties of this control.</span></span> <span data-ttu-id="b0585-168">Ek bir özellik olduğundan dışında standart bir düğme tarafından kullanıma sunulan özellikleri aynı olduklarını unutmayın `ButtonValue`.</span><span class="sxs-lookup"><span data-stu-id="b0585-168">Note that they are identical to the properties exposed by a standard button, except that there is an additional property, `ButtonValue`.</span></span>  
-  
-5. <span data-ttu-id="b0585-169">Ayarlama `ButtonValue` özelliğini `5`.</span><span class="sxs-lookup"><span data-stu-id="b0585-169">Set the `ButtonValue` property to `5`.</span></span>  
-  
-6. <span data-ttu-id="b0585-170">İçinde **tüm Windows Formları** sekmesinde **araç kutusu**, çift **etiket** eklemek için bir <xref:System.Windows.Forms.Label> form denetimi.</span><span class="sxs-lookup"><span data-stu-id="b0585-170">In the **All Windows Forms** tab of the **Toolbox**, double-click **Label** to add a <xref:System.Windows.Forms.Label> control to your form.</span></span>  
-  
-7. <span data-ttu-id="b0585-171">Etiket biçiminin merkezine taşımanızı.</span><span class="sxs-lookup"><span data-stu-id="b0585-171">Relocate the label to the center of the form.</span></span>  
-  
-8. <span data-ttu-id="b0585-172">Çift `valueButton1`.</span><span class="sxs-lookup"><span data-stu-id="b0585-172">Double-click `valueButton1`.</span></span>  
-  
-     <span data-ttu-id="b0585-173">**Kod Düzenleyicisi** açılır `valueButton1_Click` olay.</span><span class="sxs-lookup"><span data-stu-id="b0585-173">The **Code Editor** opens to the `valueButton1_Click` event.</span></span>  
-  
-9. <span data-ttu-id="b0585-174">Aşağıdaki kod satırını ekleyin.</span><span class="sxs-lookup"><span data-stu-id="b0585-174">Insert the following line of code.</span></span>  
-  
-    ```csharp  
-    label1.Text = valueButton1.ButtonValue.ToString();  
-    ```  
-  
-10. <span data-ttu-id="b0585-175">İçinde **Çözüm Gezgini**, sağ **Test**ve **başlangıç projesi olarak ayarla** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="b0585-175">In **Solution Explorer**, right-click **Test**, and choose **Set as Startup Project** from the shortcut menu.</span></span>  
-  
-11. <span data-ttu-id="b0585-176">Gelen **hata ayıklama** menüsünde **hata ayıklamayı Başlat**.</span><span class="sxs-lookup"><span data-stu-id="b0585-176">From the **Debug** menu, select **Start Debugging**.</span></span>  
-  
-     <span data-ttu-id="b0585-177">`Form1` görünür.</span><span class="sxs-lookup"><span data-stu-id="b0585-177">`Form1` appears.</span></span>  
-  
-12. <span data-ttu-id="b0585-178">Tıklatın `valueButton1`.</span><span class="sxs-lookup"><span data-stu-id="b0585-178">Click `valueButton1`.</span></span>  
-  
-     <span data-ttu-id="b0585-179">'5' sayısal görüntülenen `label1`elde, `ButtonValue` devralınan denetim özelliği için geçirilmiş `label1` aracılığıyla `valueButton1_Click` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="b0585-179">The numeral '5' is displayed in `label1`, demonstrating that the `ButtonValue` property of your inherited control has been passed to `label1` through the `valueButton1_Click` method.</span></span> <span data-ttu-id="b0585-180">Bu nedenle, `ValueButton` denetimi, standart Windows Forms düğmesini tüm işlevlerini devralır, ancak ek, özel bir özellik sunar.</span><span class="sxs-lookup"><span data-stu-id="b0585-180">Thus your `ValueButton` control inherits all the functionality of the standard Windows Forms button, but exposes an additional, custom property.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="b0585-181">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b0585-181">See also</span></span>
+# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a><span data-ttu-id="7a331-102">İzlenecek yol: Visual C ile Windows Forms denetiminden devralma\#</span><span class="sxs-lookup"><span data-stu-id="7a331-102">Walkthrough: Inheriting from a Windows Forms Control with Visual C\#</span></span>
+<span data-ttu-id="7a331-103">Visual C#ile *Devralma*aracılığıyla güçlü özel denetimler oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7a331-103">With Visual C#, you can create powerful custom controls through *inheritance*.</span></span> <span data-ttu-id="7a331-104">Devralma aracılığıyla standart Windows Forms denetimlerinin tüm devralınan işlevlerini koruyan ancak özel işlevleri de birleştiren denetimler oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7a331-104">Through inheritance you are able to create controls that retain all of the inherent functionality of standard Windows Forms controls but also incorporate custom functionality.</span></span> <span data-ttu-id="7a331-105">Bu kılavuzda, adlı `ValueButton`basit bir devralınmış denetim oluşturacaksınız.</span><span class="sxs-lookup"><span data-stu-id="7a331-105">In this walkthrough, you will create a simple inherited control called `ValueButton`.</span></span> <span data-ttu-id="7a331-106">Bu düğme standart Windows Forms <xref:System.Windows.Forms.Button> denetiminden işlevselliği devralacak ve adlı `ButtonValue`özel bir özelliği kullanıma sunacaktır.</span><span class="sxs-lookup"><span data-stu-id="7a331-106">This button will inherit functionality from the standard Windows Forms <xref:System.Windows.Forms.Button> control, and will expose a custom property called `ButtonValue`.</span></span>
 
-- [<span data-ttu-id="b0585-182">Nasıl yapılır: Bir denetimi görüntüleme araç kutusu öğelerini Seç iletişim kutusu</span><span class="sxs-lookup"><span data-stu-id="b0585-182">How to: Display a Control in the Choose Toolbox Items Dialog Box</span></span>](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [<span data-ttu-id="b0585-183">İzlenecek yol: Visual C# ile bileşik denetim yazma</span><span class="sxs-lookup"><span data-stu-id="b0585-183">Walkthrough: Authoring a Composite Control with Visual C#</span></span>](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+## <a name="creating-the-project"></a><span data-ttu-id="7a331-107">Projeyi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="7a331-107">Creating the Project</span></span>
+ <span data-ttu-id="7a331-108">Yeni bir proje oluşturduğunuzda, kök ad alanı, derleme adı ve proje adını ayarlamak ve varsayılan bileşenin doğru ad alanında yer aldığından emin olmak için adını belirtin.</span><span class="sxs-lookup"><span data-stu-id="7a331-108">When you create a new project, you specify its name in order to set the root namespace, assembly name, and project name, and to ensure that the default component will be in the correct namespace.</span></span>
+
+### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a><span data-ttu-id="7a331-109">ValueButtonLib denetim kitaplığını ve ValueButton denetimini oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="7a331-109">To create the ValueButtonLib control library and the ValueButton control</span></span>
+
+1. <span data-ttu-id="7a331-110">**Dosya** menüsünde, **Yeni** ' nin üzerine gelin ve ardından **Proje** ' ye tıklayarak **Yeni proje** iletişim kutusunu açın.</span><span class="sxs-lookup"><span data-stu-id="7a331-110">On the **File** menu, point to **New** and then click **Project** to open the **New Project** dialog box.</span></span>
+
+2. <span data-ttu-id="7a331-111">Görsel C# proje listesinden **Windows Forms denetim kitaplığı** proje şablonunu seçin ve ad kutusuna yazın. `ValueButtonLib`</span><span class="sxs-lookup"><span data-stu-id="7a331-111">Select the **Windows Forms Control Library** project template from the list of Visual C# Projects, and type `ValueButtonLib` in the **Name** box.</span></span>
+
+     <span data-ttu-id="7a331-112">Proje adı `ValueButtonLib`, varsayılan olarak kök ad alanına da atanır.</span><span class="sxs-lookup"><span data-stu-id="7a331-112">The project name, `ValueButtonLib`, is also assigned to the root namespace by default.</span></span> <span data-ttu-id="7a331-113">Kök ad alanı, derlemedeki bileşenlerin adlarını nitelemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="7a331-113">The root namespace is used to qualify the names of components in the assembly.</span></span> <span data-ttu-id="7a331-114">Örneğin, iki derleme adlı `ValueButton`bileşenler içeriyorsa, `ValueButton` bileşenini kullanarak `ValueButtonLib.ValueButton`belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7a331-114">For example, if two assemblies provide components named `ValueButton`, you can specify your `ValueButton` component using `ValueButtonLib.ValueButton`.</span></span> <span data-ttu-id="7a331-115">Daha fazla bilgi için bkz. [ad alanları](../../../csharp/programming-guide/namespaces/index.md).</span><span class="sxs-lookup"><span data-stu-id="7a331-115">For more information, see [Namespaces](../../../csharp/programming-guide/namespaces/index.md).</span></span>
+
+3. <span data-ttu-id="7a331-116">**Çözüm Gezgini**' de, **UserControl1.cs**' a sağ tıklayıp kısayol menüsünden **Yeniden Adlandır** ' ı seçin.</span><span class="sxs-lookup"><span data-stu-id="7a331-116">In **Solution Explorer**, right-click **UserControl1.cs**, then choose **Rename** from the shortcut menu.</span></span> <span data-ttu-id="7a331-117">Dosya adını olarak `ValueButton.cs`değiştirin.</span><span class="sxs-lookup"><span data-stu-id="7a331-117">Change the file name to `ValueButton.cs`.</span></span> <span data-ttu-id="7a331-118">'`UserControl1`' Kod öğesine yapılan tüm başvuruları yeniden adlandırmak Isteyip istemediğiniz sorulduğunda **Evet** düğmesine tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7a331-118">Click the **Yes** button when you are asked if you want to rename all references to the code element '`UserControl1`'.</span></span>
+
+4. <span data-ttu-id="7a331-119">**Çözüm Gezgini**' de, **ValueButton.cs** ' a sağ tıklayın ve **kodu görüntüle**' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="7a331-119">In **Solution Explorer**, right-click **ValueButton.cs** and select **View Code**.</span></span>
+
+5. <span data-ttu-id="7a331-120">Bildiri satırını bulun ve bu denetimin devraldığı <xref:System.Windows.Forms.UserControl> türü olarak <xref:System.Windows.Forms.Button>değiştirin. `public partial class ValueButton` `class`</span><span class="sxs-lookup"><span data-stu-id="7a331-120">Locate the `class` statement line, `public partial class ValueButton`, and change the type from which this control inherits from <xref:System.Windows.Forms.UserControl> to <xref:System.Windows.Forms.Button>.</span></span> <span data-ttu-id="7a331-121">Bu, <xref:System.Windows.Forms.Button> devralınan denetiminizin tüm denetim işlevlerini devralmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="7a331-121">This allows your inherited control to inherit all the functionality of the <xref:System.Windows.Forms.Button> control.</span></span>
+
+6. <span data-ttu-id="7a331-122">**Çözüm Gezgini**, tasarımcı tarafından oluşturulan kod dosyasını göstermek için **ValueButton.cs** düğümünü açın, **ValueButton.Designer.cs**.</span><span class="sxs-lookup"><span data-stu-id="7a331-122">In **Solution Explorer**, open the **ValueButton.cs** node to display the designer-generated code file, **ValueButton.Designer.cs**.</span></span> <span data-ttu-id="7a331-123">Bu dosyayı **kod düzenleyicisinde**açın.</span><span class="sxs-lookup"><span data-stu-id="7a331-123">Open this file in the **Code Editor**.</span></span>
+
+7. <span data-ttu-id="7a331-124">Yöntemini bulun ve <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> özelliği atayan çizgiyi kaldırın. `InitializeComponent`</span><span class="sxs-lookup"><span data-stu-id="7a331-124">Locate the `InitializeComponent` method and remove the line that assigns the <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> property.</span></span> <span data-ttu-id="7a331-125">Bu özellik <xref:System.Windows.Forms.Button> denetimde yok.</span><span class="sxs-lookup"><span data-stu-id="7a331-125">This property does not exist in the <xref:System.Windows.Forms.Button> control.</span></span>
+
+8. <span data-ttu-id="7a331-126">Projeyi kaydetmek için **Dosya** menüsünden **Tümünü Kaydet** ' i seçin.</span><span class="sxs-lookup"><span data-stu-id="7a331-126">From the **File** menu, choose **Save All** to save the project.</span></span>
+
+    > [!NOTE]
+    >  <span data-ttu-id="7a331-127">Görsel tasarımcı artık kullanılamıyor.</span><span class="sxs-lookup"><span data-stu-id="7a331-127">A visual designer is no longer available.</span></span> <span data-ttu-id="7a331-128"><xref:System.Windows.Forms.Button> Denetim kendi boyadığı için tasarımcıda görünümünü değiştiremedik.</span><span class="sxs-lookup"><span data-stu-id="7a331-128">Because the <xref:System.Windows.Forms.Button> control does its own painting, you are unable to modify its appearance in the designer.</span></span> <span data-ttu-id="7a331-129">Görsel temsili, kodda değiştirilmediği sürece (yani, <xref:System.Windows.Forms.Button>) devraldığı sınıftan tamamen aynı olacaktır.</span><span class="sxs-lookup"><span data-stu-id="7a331-129">Its visual representation will be exactly the same as that of the class it inherits from (that is, <xref:System.Windows.Forms.Button>) unless modified in the code.</span></span> <span data-ttu-id="7a331-130">Tasarım yüzeyine, UI öğesi içermeyen bileşenler ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7a331-130">You can still add components, which have no UI elements, to the design surface.</span></span>
+
+## <a name="adding-a-property-to-your-inherited-control"></a><span data-ttu-id="7a331-131">Devralınan Denetiecekseniz özellik ekleme</span><span class="sxs-lookup"><span data-stu-id="7a331-131">Adding a Property to Your Inherited Control</span></span>
+ <span data-ttu-id="7a331-132">Devralınan Windows Forms denetimlerinin olası bir kullanımı, standart Windows Forms denetimlerinin görünümü ve hisde aynı olan, ancak özel özellikler sunan denetimlerin oluşturulması.</span><span class="sxs-lookup"><span data-stu-id="7a331-132">One possible use of inherited Windows Forms controls is the creation of controls that are identical in look and feel of standard Windows Forms controls, but expose custom properties.</span></span> <span data-ttu-id="7a331-133">Bu bölümde, denetimi adlı `ButtonValue` bir özellik ekleyeceksiniz.</span><span class="sxs-lookup"><span data-stu-id="7a331-133">In this section, you will add a property called `ButtonValue` to your control.</span></span>
+
+### <a name="to-add-the-value-property"></a><span data-ttu-id="7a331-134">Değer özelliğini eklemek için</span><span class="sxs-lookup"><span data-stu-id="7a331-134">To add the Value property</span></span>
+
+1. <span data-ttu-id="7a331-135">**Çözüm Gezgini**' de, **ValueButton.cs**' a sağ tıklayın ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7a331-135">In **Solution Explorer**, right-click **ValueButton.cs**, and then click **View Code** from the shortcut menu.</span></span>
+
+2. <span data-ttu-id="7a331-136">`class` İfadesini bulun.</span><span class="sxs-lookup"><span data-stu-id="7a331-136">Locate the `class` statement.</span></span> <span data-ttu-id="7a331-137">Hemen sonra `{`, aşağıdaki kodu yazın:</span><span class="sxs-lookup"><span data-stu-id="7a331-137">Immediately after the `{`, type the following code:</span></span>
+
+    ```csharp
+    // Creates the private variable that will store the value of your
+    // property.
+    private int varValue;
+    // Declares the property.
+    public int ButtonValue
+    {
+       // Sets the method for retrieving the value of your property.
+       get
+       {
+          return varValue;
+       }
+       // Sets the method for setting the value of your property.
+       set
+       {
+          varValue = value;
+       }
+    }
+    ```
+
+     <span data-ttu-id="7a331-138">Bu kod, `ButtonValue` özelliğin depolanacağı ve alındığı yöntemleri ayarlar.</span><span class="sxs-lookup"><span data-stu-id="7a331-138">This code sets the methods by which the `ButtonValue` property is stored and retrieved.</span></span> <span data-ttu-id="7a331-139">İfade, döndürülen değeri özel değişkende `varValue`depolanan değere ayarlar ve `set` ifade ise `value` anahtar sözcüğünün kullanımıyla özel değişkenin değerini ayarlar. `get`</span><span class="sxs-lookup"><span data-stu-id="7a331-139">The `get` statement sets the value returned to the value that is stored in the private variable `varValue`, and the `set` statement sets the value of the private variable by use of the `value` keyword.</span></span>
+
+3. <span data-ttu-id="7a331-140">Projeyi kaydetmek için **Dosya** menüsünden **Tümünü Kaydet** ' i seçin.</span><span class="sxs-lookup"><span data-stu-id="7a331-140">From the **File** menu, choose **Save All** to save the project.</span></span>
+
+## <a name="testing-your-control"></a><span data-ttu-id="7a331-141">Denetiminizi test etme</span><span class="sxs-lookup"><span data-stu-id="7a331-141">Testing Your Control</span></span>
+ <span data-ttu-id="7a331-142">Denetimler tek başına projeler değildir; Bunlar bir kapsayıcıda barındırılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="7a331-142">Controls are not stand-alone projects; they must be hosted in a container.</span></span> <span data-ttu-id="7a331-143">Denetiminizi test etmek için, içinde çalışması için bir test projesi sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="7a331-143">In order to test your control, you must provide a test project for it to run in.</span></span> <span data-ttu-id="7a331-144">Ayrıca, denetimi (derleyerek) oluşturarak denetiminizi test projesi için de erişilebilir yapmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="7a331-144">You must also make your control accessible to the test project by building (compiling) it.</span></span> <span data-ttu-id="7a331-145">Bu bölümde, denetiminizi oluşturacak ve bir Windows formunda test edersiniz.</span><span class="sxs-lookup"><span data-stu-id="7a331-145">In this section, you will build your control and test it in a Windows Form.</span></span>
+
+### <a name="to-build-your-control"></a><span data-ttu-id="7a331-146">Denetiminizi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="7a331-146">To build your control</span></span>
+
+1. <span data-ttu-id="7a331-147">Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.</span><span class="sxs-lookup"><span data-stu-id="7a331-147">On the **Build** menu, click **Build Solution**.</span></span>
+
+     <span data-ttu-id="7a331-148">Derleme, derleyici hataları veya uyarıları olmadan başarılı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="7a331-148">The build should be successful with no compiler errors or warnings.</span></span>
+
+### <a name="to-create-a-test-project"></a><span data-ttu-id="7a331-149">Bir test projesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="7a331-149">To create a test project</span></span>
+
+1. <span data-ttu-id="7a331-150">**Dosya** menüsünde, **Ekle** ' nin üzerine gelin ve yeni proje ' ye tıklayarak yeni proje **Ekle** iletişim kutusunu açın.</span><span class="sxs-lookup"><span data-stu-id="7a331-150">On the **File** menu, point to **Add** and then click **New Project** to open the **Add New Project** dialog box.</span></span>
+
+2. <span data-ttu-id="7a331-151">**Görsel C#**  düğümün altında **Windows** düğümünü seçin ve **Windows Forms uygulama**' ya tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7a331-151">Select the **Windows** node, beneath the **Visual C#** node, and click **Windows Forms Application**.</span></span>
+
+3. <span data-ttu-id="7a331-152">**Ad** kutusuna yazın `Test`.</span><span class="sxs-lookup"><span data-stu-id="7a331-152">In the **Name** box, type `Test`.</span></span>
+
+4. <span data-ttu-id="7a331-153">**Çözüm Gezgini**, test projeniz için **Başvurular** düğümüne sağ tıklayın ve ardından kısayol menüsünden **Başvuru Ekle** ' yi seçerek **Başvuru Ekle** iletişim kutusunu görüntüleyin.</span><span class="sxs-lookup"><span data-stu-id="7a331-153">In **Solution Explorer**, right-click the **References** node for your test project, then select **Add Reference** from the shortcut menu to display the **Add Reference** dialog box.</span></span>
+
+5. <span data-ttu-id="7a331-154">Etiketli **Projeler**sekmesine tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7a331-154">Click the tab labeled **Projects**.</span></span> <span data-ttu-id="7a331-155">Projeniz proje adı altında listelenir. `ValueButtonLib`</span><span class="sxs-lookup"><span data-stu-id="7a331-155">Your `ValueButtonLib` project will be listed under **Project Name**.</span></span> <span data-ttu-id="7a331-156">Başvuruyu test projesine eklemek için projeye çift tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7a331-156">Double-click the project to add the reference to the test project.</span></span>
+
+6. <span data-ttu-id="7a331-157">**Çözüm Gezgini** ' de **Test** ' e sağ tıklayın ve **Oluştur**' u seçin.</span><span class="sxs-lookup"><span data-stu-id="7a331-157">In **Solution Explorer,** right-click **Test** and select **Build**.</span></span>
+
+### <a name="to-add-your-control-to-the-form"></a><span data-ttu-id="7a331-158">Formunuza denetim eklemek için</span><span class="sxs-lookup"><span data-stu-id="7a331-158">To add your control to the form</span></span>
+
+1. <span data-ttu-id="7a331-159">**Çözüm Gezgini**' de, **Form1.cs** ' ye sağ tıklayıp kısayol menüsünden **tasarımcıyı görüntüle** ' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="7a331-159">In **Solution Explorer**, right-click **Form1.cs** and choose **View Designer** from the shortcut menu.</span></span>
+
+2. <span data-ttu-id="7a331-160">**Araç kutusunda** **ValueButtonLib bileşenleri**' ne tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7a331-160">In the **Toolbox**, click **ValueButtonLib Components**.</span></span> <span data-ttu-id="7a331-161">**ValueButton**öğesine çift tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7a331-161">Double-click **ValueButton**.</span></span>
+
+     <span data-ttu-id="7a331-162">Formda bir **ValueButton** görünür.</span><span class="sxs-lookup"><span data-stu-id="7a331-162">A **ValueButton** appears on the form.</span></span>
+
+3. <span data-ttu-id="7a331-163">**ValueButton** öğesine sağ tıklayın ve kısayol menüsünden **Özellikler** ' i seçin.</span><span class="sxs-lookup"><span data-stu-id="7a331-163">Right-click the **ValueButton** and select **Properties** from the shortcut menu.</span></span>
+
+4. <span data-ttu-id="7a331-164">**Özellikler** penceresinde, bu denetimin özelliklerini inceleyin.</span><span class="sxs-lookup"><span data-stu-id="7a331-164">In the **Properties** window, examine the properties of this control.</span></span> <span data-ttu-id="7a331-165">Bunlar, ek bir özellik `ButtonValue`olması dışında, standart bir düğme tarafından sunulan özelliklerle özdeş olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="7a331-165">Note that they are identical to the properties exposed by a standard button, except that there is an additional property, `ButtonValue`.</span></span>
+
+5. <span data-ttu-id="7a331-166">Ayarlama `ButtonValue` özelliğini `5`.</span><span class="sxs-lookup"><span data-stu-id="7a331-166">Set the `ButtonValue` property to `5`.</span></span>
+
+6. <span data-ttu-id="7a331-167">Formunuza bir<xref:System.Windows.Forms.Label> denetim eklemek için **araç kutusunun** **tüm Windows Forms** sekmesinde etiket ' e çift tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7a331-167">In the **All Windows Forms** tab of the **Toolbox**, double-click **Label** to add a <xref:System.Windows.Forms.Label> control to your form.</span></span>
+
+7. <span data-ttu-id="7a331-168">Etiketi formun merkezine yeniden yerleştir.</span><span class="sxs-lookup"><span data-stu-id="7a331-168">Relocate the label to the center of the form.</span></span>
+
+8. <span data-ttu-id="7a331-169">Çift tıklayın `valueButton1`.</span><span class="sxs-lookup"><span data-stu-id="7a331-169">Double-click `valueButton1`.</span></span>
+
+     <span data-ttu-id="7a331-170">**Kod Düzenleyicisi** `valueButton1_Click` olay olarak açılır.</span><span class="sxs-lookup"><span data-stu-id="7a331-170">The **Code Editor** opens to the `valueButton1_Click` event.</span></span>
+
+9. <span data-ttu-id="7a331-171">Aşağıdaki kod satırını ekleyin.</span><span class="sxs-lookup"><span data-stu-id="7a331-171">Insert the following line of code.</span></span>
+
+    ```csharp
+    label1.Text = valueButton1.ButtonValue.ToString();
+    ```
+
+10. <span data-ttu-id="7a331-172">**Çözüm Gezgini**' de **Test**' e sağ tıklayın ve kısayol menüsünde **Başlangıç projesi olarak ayarla** ' yı seçin.</span><span class="sxs-lookup"><span data-stu-id="7a331-172">In **Solution Explorer**, right-click **Test**, and choose **Set as Startup Project** from the shortcut menu.</span></span>
+
+11. <span data-ttu-id="7a331-173">**Hata Ayıkla** menüsünden **hata ayıklamayı Başlat**' ı seçin.</span><span class="sxs-lookup"><span data-stu-id="7a331-173">From the **Debug** menu, select **Start Debugging**.</span></span>
+
+     <span data-ttu-id="7a331-174">`Form1`görüneceği.</span><span class="sxs-lookup"><span data-stu-id="7a331-174">`Form1` appears.</span></span>
+
+12. <span data-ttu-id="7a331-175">Tıklatın `valueButton1`.</span><span class="sxs-lookup"><span data-stu-id="7a331-175">Click `valueButton1`.</span></span>
+
+     <span data-ttu-id="7a331-176">' 5 ' rakamı `label1`, devralınan `label1` denetiminizin `ButtonValue` özelliğinin `valueButton1_Click` yöntemi aracılığıyla geçirildiğini gösteren içinde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="7a331-176">The numeral '5' is displayed in `label1`, demonstrating that the `ButtonValue` property of your inherited control has been passed to `label1` through the `valueButton1_Click` method.</span></span> <span data-ttu-id="7a331-177">`ValueButton` Böylece denetiminiz standart Windows Forms düğmesinin tüm işlevlerini devralır, ancak ek, özel bir özellik sunar.</span><span class="sxs-lookup"><span data-stu-id="7a331-177">Thus your `ValueButton` control inherits all the functionality of the standard Windows Forms button, but exposes an additional, custom property.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="7a331-178">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7a331-178">See also</span></span>
+
+- [<span data-ttu-id="7a331-179">Nasıl yapılır: Araç kutusu öğelerini Seç Iletişim kutusunda bir denetim görüntüle</span><span class="sxs-lookup"><span data-stu-id="7a331-179">How to: Display a Control in the Choose Toolbox Items Dialog Box</span></span>](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [<span data-ttu-id="7a331-180">İzlenecek yol: Visual ile bileşik denetim yazmaC#</span><span class="sxs-lookup"><span data-stu-id="7a331-180">Walkthrough: Authoring a Composite Control with Visual C#</span></span>](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
