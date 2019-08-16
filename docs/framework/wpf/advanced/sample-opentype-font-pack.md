@@ -6,50 +6,50 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: 96a0a5feaf14a7f040402681e90fba8f9766324b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2b3dc3b95cf81a60494f7a02488067717938e97
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053476"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545232"
 ---
 # <a name="sample-opentype-font-pack"></a>Örnek OpenType Yazı Tipi Paketi
-Bu konu, örneğine genel bakış sağlar. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] ile dağıtılan yazı tipleri [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Genişletilmiş örnek yazı tipi desteği [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tarafından kullanılabilen özellikler [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
+Bu konu, [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]Ile dağıtılan örnek OpenType yazı tiplerine genel bir bakış sağlar. Örnek yazı tipleri, uygulamalar tarafından [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kullanılabilen genişletilmiş OpenType özelliklerini destekler.  
 
 <a name="overview"></a>   
-## <a name="fonts-in-the-opentype-font-pack"></a>OpenType yazı tipi paketi yazı tipleri  
- [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] Örnek takımına [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] oluştururken kullanabileceğiniz yazı tipleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Örnek yazı tiplerinin lisans Ascender Corporation'ın altında sağlanır. Bu yazı tipleri yalnızca özelliklerinin bir alt kümesi tarafından tanımlanan toplam uygulama [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] biçimi. Aşağıdaki tabloda örnek adlarını listeler [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi.  
+## <a name="fonts-in-the-opentype-font-pack"></a>OpenType yazı tipi paketindeki yazı tipleri  
+ , [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] Uygulamalar oluşturmak [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] için kullanabileceğiniz örnek bir OpenType yazı tipi kümesi sağlar. Örnek yazı tipleri, Ascender Corporation lisansı altında sağlanır. Bu yazı tipleri, OpenType biçimi tarafından tanımlanan toplam özelliklerin yalnızca bir alt kümesini uygular. Aşağıdaki tabloda örnek OpenType yazı tiplerinin adları listelenmektedir.  
   
 |**Ad**|**Dosya**|  
 |--------------|--------------|  
 |Kootenay|Kooten.ttf|  
-|Lindsey|Linds.ttf|  
+|Juniors|Linds.ttf|  
 |Miramonte|Miramo.ttf|  
-|Miramonte kalın|Miramob.ttf|  
+|Miramonte Bold|Miramob.ttf|  
 |Pericles|Peric.ttf|  
-|Pericles açık|Pericl.ttf|  
+|Pericles ışığı|Pericl.ttf|  
 |Pescadero|Pesca.ttf|  
-|Pescadero kalın|Pescab.ttf|  
+|Pescadero Bold|Pescab.ttf|  
   
- Aşağıdaki çizimde örnek [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı aramak gibi.  
+ Aşağıdaki çizimde örnek OpenType yazı tiplerinin nasıl görüneceği gösterilmektedir.  
   
- ![Örnek yazı tipi paketi yazı tipi adları listesi](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
+ ![Örnek yazı tipi paketindeki yazı tipi adlarının listesi](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
   
- Örnek yazı tiplerinin lisans Ascender Corporation'ın altında sağlanır. Ascender gelişmiş yazı tipi ürünlerinin bir sağlayıcıdır. Örnek yazı tiplerinin genişletilmiş veya özel sürümlerinin lisansı için bkz: [Ascender Corporation'ın Web sitesi](https://go.microsoft.com/fwlink/?LinkId=182627).  
+ Örnek yazı tipleri, Ascender Corporation lisansı altında sağlanır. Ascender, gelişmiş yazı tipi ürünlerinin bir sağlayıcısıdır. Örnek yazı tiplerinin genişletilmiş veya özel sürümlerini lisanslamak için, bkz. [Ascender Corporation 'ın Web sitesi](https://go.microsoft.com/fwlink/?LinkId=182627).  
   
 > [!NOTE]
->  Bir geliştirici olarak içinde bir uygulamaya ekleme ya da aksi takdirde yeniden dağıtmak istediğiniz yazı tipi için gerekli lisans haklarına sahip olmak sizin sorumluluğunuzdur.  
+>  Geliştirici olarak, bir uygulama içine eklediğiniz veya başka bir şekilde yeniden dağıtırabilmeniz gereken herhangi bir yazı tipi için gerekli lisans haklarına sahip olduğunuzdan emin olmak sizin sorumluluğunuzdadır.  
   
 <a name="installing_the_fonts"></a>   
-## <a name="installing-the-fonts"></a>Yazı tipleri yükleme  
- Örnek yükleme seçeneğiniz [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] varsayılan yazı tipi [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] yazı tipleri dizini **\WINDOWS\Fonts**. Yazı tiplerini yüklemek için yazı tiplerini Denetim Masası'nı kullanın. Bu yazı tipleri bilgisayarınızda eklendiğinde varsayılan başvuran tüm uygulamalar için erişilebilir olduklarını [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] yazı tipi. Katlama-yazı tipi dosyaya tıklayarak, temsili bir karakter kümesi içinde birden çok yazı tipi boyutlarını görüntüleyebilirsiniz. Aşağıdaki ekran görüntüsünde Linds.ttf Lindsey yazı tipi dosyası gösterir.  
+## <a name="installing-the-fonts"></a>Yazı tiplerini yükleme  
+ Örnek OpenType yazı tiplerini, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] **\Windows\Fonts**dizinine varsayılan Fonts dizinine yükleme seçeneğiniz vardır. Yazı tiplerini yüklemek için yazı tipleri denetim masasını kullanın. Bu yazı tipleri bilgisayarınızda olduktan sonra, varsayılan [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] yazı tiplerine başvuran tüm uygulamalar tarafından erişilebilir. Yazı tipi dosyasına çift tıklayarak çeşitli yazı tipi boyutlarında temsili bir karakter kümesi görüntüleyebilirsiniz. Aşağıdaki ekran görüntüsünde Lindsey yazı tipi dosyası, Linds. ttf gösterilmektedir.  
   
- ![Lindsey yazı tipi &#40;OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
-Lindsey yazı tipi görüntüleme  
+ ![Lindsey yazı &#40;tipi&#41; OpenType](./media/typographyinwpf-04.png "TypographyInWPF_04")  
+Lindsey yazı tipini görüntüleme  
   
 <a name="using_the_fonts"></a>   
 ## <a name="using-the-fonts"></a>Yazı tiplerini kullanma  
- Uygulamanızda yazı tipleri kullanabileceğiniz iki yolu vardır. Proje derleme içinde kaynak olarak gömülü içerik öğeleri olarak uygulamanıza yazı tipleri ekleyebilirsiniz. Alternatif olarak, yazı tiplerini uygulamanıza uygulamanın derleme dosyaları içinde gömülü proje kaynak öğeler olarak ekleyebilirsiniz. Daha fazla bilgi için [uygulamalarla yazı tiplerini paketleme](packaging-fonts-with-applications.md).  
+ Uygulamanızda yazı tiplerini kullanmanın iki yolu vardır. Uygulamanıza, derleme içinde kaynak olarak gömülü olmayan proje içerik öğeleri olarak yazı tipi ekleyebilirsiniz. Alternatif olarak, uygulamanıza, uygulamanın derleme dosyaları içine katıştırılmış proje kaynak öğeleri olarak yazı tipleri ekleyebilirsiniz. Daha fazla bilgi için bkz. [uygulamaları Ile paketleme yazı tipleri](packaging-fonts-with-applications.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

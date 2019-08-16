@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 5f3560c899373b9835e2ead79590cf73777b2375
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 7c83cfa22770695861b07e3bff29a38fcd125dd2
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972416"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545239"
 ---
 # <a name="typography-in-wpf"></a>WPF'de Tipografi
-Bu konuda, uygulamasının [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]önemli tipografik özellikleri tanıtılmaktadır. Bu özellikler, metin işleme, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipografi desteği, gelişmiş uluslararası metin, gelişmiş yazı tipi desteği ve yeni metin uygulama programlama arabirimleri (API 'ler) için geliştirilmiş kalite ve performans içerir.  
+Bu konuda, uygulamasının [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]önemli tipografik özellikleri tanıtılmaktadır. Bu özellikler, metin işleme, OpenType tipografi desteği, gelişmiş uluslararası metin, gelişmiş yazı tipi desteği ve yeni metin uygulama programlama arabirimleri (API 'Ler) için geliştirilmiş kalite ve performans içerir.  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Metnin geliştirilmiş kalitesi ve performansı  
@@ -29,9 +29,9 @@ ClearType y yönünde düzgünleştirme içeren metin
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>Zengin tipografi  
- Yazı tipi biçimi, [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] yazı tipi biçiminin bir uzantısıdır. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Yazı tipi biçimi, ve Adobe tarafından [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] ortaklaşa geliştirilmiştir ve zengin bir gelişmiş tipografik özellikler sunar. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Nesnesi, [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] yazı tiplerinin stil alternatifleri ve süslemeler gibi gelişmiş özelliklerinin çoğunu gösterir. <xref:System.Windows.Documents.Typography> Windows SDK, Pericles ve Pescadero fontları gibi zengin özelliklerle tasarlanan bir örnek [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] yazı tipi kümesi sağlar. Daha fazla bilgi için bkz. [örnek OpenType yazı tipi paketi](sample-opentype-font-pack.md).  
+ OpenType yazı tipi biçimi, [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] yazı tipi biçiminin bir uzantısıdır. OpenType yazı tipi biçimi, ve Adobe tarafından [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] ortaklaşa geliştirilmiştir ve zengin bir gelişmiş tipografik özellikler sunar. <xref:System.Windows.Documents.Typography> Nesnesi, OpenType yazı tiplerinin stil alternatifleri ve süslemeler gibi gelişmiş özelliklerinin çoğunu gösterir. Windows SDK, Pericles ve Pescadero fontları gibi zengin özelliklerle tasarlanan örnek bir OpenType yazı tipi kümesi sağlar. Daha fazla bilgi için bkz. [örnek OpenType yazı tipi paketi](sample-opentype-font-pack.md).  
   
- Pericles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] yazı tipi, standart glif kümesine stil alternatifleri sağlayan ek glifler içerir. Aşağıdaki metin, biçimsel alternatif glifleri görüntüler.  
+ Pericles OpenType yazı tipi, standart glif kümesine stil alternatifleri sağlayan ek glifler içerir. Aşağıdaki metin, biçimsel alternatif glifleri görüntüler.  
   
  ![OpenType biçimsel alternatif glifleri kullanan metin](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "OpenType biçimsel alternatif glifleri kullanan metin")  
   
@@ -39,7 +39,7 @@ ClearType y yönünde düzgünleştirme içeren metin
   
  ![OpenType standart ve dalgalı glifleri kullanan metin](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "OpenType standart ve dalgalı glifleri kullanan metin")  
   
- Özellikler hakkında [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] daha fazla bilgi için bkz. [OpenType yazı tipi özellikleri](opentype-font-features.md).  
+ OpenType özellikleri hakkında daha fazla bilgi için bkz. [OpenType yazı tipi özellikleri](opentype-font-features.md).  
   
 <a name="Enhanced_International_Text_Support"></a>   
 ## <a name="enhanced-international-text-support"></a>Gelişmiş uluslararası metin desteği  

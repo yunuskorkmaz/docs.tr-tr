@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 58dc070e1642773f39f9ab2a9037ca60175b27cf
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401274"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545263"
 ---
 # <a name="panels-overview"></a>Panellere Genel Bakış
 <xref:System.Windows.Controls.Panel>öğeler öğelerin işlenmesini denetleyen bileşenlerdir: boyut ve boyutlar, bunların konumları ve alt içeriklerinin yerleşimi. , [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Bir dizi önceden tanımlanmış <xref:System.Windows.Controls.Panel> öğe ve özel <xref:System.Windows.Controls.Panel> öğe oluşturma özelliğini sağlar.  
@@ -118,7 +118,7 @@ ms.locfileid: "68401274"
 ### <a name="dockpanel"></a>DockPanel  
  Öğesi <xref:System.Windows.Controls.DockPanel> , bir kapsayıcının <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> kenarları üzerinde içerik konumlandırmak için alt içerik öğelerinde ayarlanan ekli özelliği kullanır. <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> Veya olarak<xref:System.Windows.Controls.Dock.Bottom>ayarlandığında, alt öğeleri birbirlerinin üzerinde veya altında konumlandırır. <xref:System.Windows.Controls.Dock.Top> <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> Veya olarak<xref:System.Windows.Controls.Dock.Right>ayarlandığında, alt öğeleri diğerinin sol veya sağ tarafında konumlandırır. <xref:System.Windows.Controls.Dock.Left> Özelliği, son öğesinin bir <xref:System.Windows.Controls.DockPanel>alt öğesi olarak eklenen konumunu belirler. <xref:System.Windows.Controls.DockPanel.LastChildFill%2A>  
   
- Düğme kümesi gibi <xref:System.Windows.Controls.DockPanel> ilgili denetimlerin grubunu konumlandırmak için öğesini kullanabilirsiniz. Alternatif olarak, ' de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [!INCLUDE[TLA#tla_outlook](../../../../includes/tlasharptla-outlook-md.md)]bulunan ile benzer bir "paned" oluşturmak için kullanabilirsiniz.  
+ Düğme kümesi gibi <xref:System.Windows.Controls.DockPanel> ilgili denetimlerin grubunu konumlandırmak için öğesini kullanabilirsiniz. Alternatif olarak, Microsoft Outlook 'ta bulunanlara benzer bir "paned [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" oluşturmak için bunu kullanabilirsiniz.  
   
 #### <a name="sizing-to-content"></a>Içeriğe boyutlandırma  
  Ve özellikleri belirtilmemişse ,<xref:System.Windows.Controls.DockPanel> içeriğine göre boyutlar. <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.Height%2A> Boyut, alt öğelerinin boyutuna uyum sağlayacak şekilde artırabilir veya azalabilir. Ancak, bu özellikler belirtildiğinde ve sonraki belirtilen alt öğe için artık yer kalmadığında, <xref:System.Windows.Controls.DockPanel> bu alt öğeyi veya sonraki alt öğeleri görüntülemez ve sonraki alt öğeleri ölçmez.  

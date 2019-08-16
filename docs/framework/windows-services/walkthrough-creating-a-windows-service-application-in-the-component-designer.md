@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: fda64cd15e15fb437db415b8a8083829c2d773cb
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039859"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545313"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Öğretici: Windows hizmet uygulaması oluşturma
 
@@ -538,7 +538,7 @@ Artık Windows hizmeti uygulamasına ihtiyacınız yoksa, bunu kaldırabilirsini
 
 Hizmeti oluşturduğumuz artık şunları yapabilirsiniz:
 
-- Başkalarının Windows hizmetinizi yüklemek için kullanması için tek başına bir kurulum programı oluşturun. [Wix araç takımını](http://wixtoolset.org/) kullanarak bir Windows hizmeti için yükleyici oluşturun. Diğer fikirler için bkz. [Yükleyici paketi oluşturma](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
+- Başkalarının Windows hizmetinizi yüklemek için kullanması için tek başına bir kurulum programı oluşturun. [Wix araç takımını](https://wixtoolset.org/) kullanarak bir Windows hizmeti için yükleyici oluşturun. Diğer fikirler için bkz. [Yükleyici paketi oluşturma](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
 - Yüklemiş olduğunuz hizmete komutlar göndermenizi sağlayan bileşenigezin.<xref:System.ServiceProcess.ServiceController>
 

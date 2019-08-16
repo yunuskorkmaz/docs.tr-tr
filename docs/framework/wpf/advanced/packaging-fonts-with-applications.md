@@ -10,30 +10,30 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: d5101d19cd250d96ba183fa14bd9db6692f05484
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b5ad2280c832b62e043a1f65f082d5475697c38c
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611859"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545358"
 ---
 # <a name="packaging-fonts-with-applications"></a>Uygulamalarla Yazı Tiplerini Paketleme
-Bu konuda paket yazı tipleri ile nasıl genel bir bakış sağlar, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama.  
+Bu konu, yazı tiplerinin [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamanıza nasıl paketlenecek hakkında genel bakış sağlar.  
   
 > [!NOTE]
->  Çoğu yazılım türleri gibi yazı tipi dosyalarını lisanslı satılan yerine. Yazı tipleri yöneten lisansları satıcı satıcı ancak genel olarak yazı tiplerini dahil olmak üzere çoğu lisansları farklılık [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] uygulamalarla sağlar ve [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], yazı tiplerini uygulamalar içinde gömülü veya aksi izin verme yeniden dağıtılabilir. İçinde bir uygulama veya başka türlü redıstrıbute ekleme herhangi bir yazı tipi için gerekli lisans haklarına sahip olmak sizin sorumluluğunuzdadır olduğundan bu nedenle, bir geliştirici olarak.  
+>  Çoğu yazılım türünde olduğu gibi, satılan değil, yazı tipi dosyaları lisanslanır. Yazı tiplerinin kullanımını yöneten lisanslar satıcıdan satıcıya farklılık gösterir, ancak çoğu lisans, yazı tiplerinin [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]uygulamalar ile birlikte bulunmasına izin dahil olmak üzere genel olarak lisanslarda, yazı tiplerinin uygulamalar içine katıştırılması veya aksi takdirde başvuru. Bu nedenle, bir geliştirici olarak, bir uygulama içine eklediğiniz veya başka bir şekilde yeniden dağıtırabilmeniz gereken herhangi bir yazı tipi için gerekli lisans haklarına sahip olduğunuzdan emin olmak sizin sorumluluğunuzdadır.  
 
 <a name="introduction_to_packaging_fonts"></a>   
-## <a name="introduction-to-packaging-fonts"></a>Giriş yazı tiplerini paketleme  
- İçinde kaynaklar olarak yazı tiplerini kolayca paketleyebilir, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik tabanlı uygulamaları kullanıcı arabirimi metinlerini ve diğer türde metin görüntüler. Yazı tiplerinin ayrı veya eklenen uygulamanın derleme dosyaları içinde olabilir. Ayrıca, uygulamanızın başvurabileceği bir yalnızca kaynak yazı tipi kitaplığı oluşturabilirsiniz.  
+## <a name="introduction-to-packaging-fonts"></a>Paketleme yazı tiplerine giriş  
+ Kullanıcı arabirimi metnini ve diğer metin tabanlı içerik türlerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görüntüleyecek şekilde, yazı tiplerini uygulamalarınızdaki kaynaklar olarak kolayca paketleyebilirsiniz. Yazı tipleri, uygulamanın derleme dosyalarından ayrı veya katıştırılmış olabilir. Ayrıca, uygulamanızın başvurbileceği yalnızca kaynak yazı tipi kitaplığı da oluşturabilirsiniz.  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] ve [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] yazı tiplerinin bir tür bayrak, yazı tipi katıştırma lisans hakları yazı tipini gösteren fsType içerir. Ancak, yalnızca bir belge – içinde depolanan katıştırılmış yazı tiplerini başvurduğu bu tür bir uygulamada katıştırılmış yazı tipi başvurmuyor. Bir yazı tipi için haklar oluşturarak yazı tipi alabilirsiniz bir <xref:System.Windows.Media.GlyphTypeface> nesne ve bunlara başvurma kendi <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> özelliği. "İşletim sistemi/2 ve Windows ölçümlerini" bölümüne bakın [OpenType Belirtimi](https://www.microsoft.com/typography/otspec/os2.htm) fsType bayrağı hakkında daha fazla bilgi için.  
+ OpenType ve [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] yazı tipleri, yazı tipi için, yazı tipi ekleme lisanslama haklarını gösteren bir tür bayrağı içerir fsType. Ancak, bu tür bayrağı yalnızca bir belgede depolanan katıştırılmış yazı tiplerine başvurur. bir uygulamaya katıştırılmış olan yazı tiplerine başvurmaz. Bir <xref:System.Windows.Media.GlyphTypeface> nesne oluşturarak ve <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> özelliğine başvurarak bir yazı tipi için yazı tipi ekleme haklarını alabilirsiniz. FsType bayrağı hakkında daha fazla bilgi için [OpenType belirtiminin](https://www.microsoft.com/typography/otspec/os2.htm) "OS/2 ve Windows ölçümleri" bölümüne bakın.  
   
- [Microsoft Typography](https://docs.microsoft.com/typography/) Web sitesi belirli yazı tipleriyle veya özel bir çalışma için yazı tipi sağlayıcısı bulun yardımcı olabilecek ilgili bilgiler içerir.  
+ [Microsoft Tipografi](https://docs.microsoft.com/typography/) Web sitesi, belirli bir yazı tipi satıcısının yerini bulmanıza veya özel iş için bir yazı tipi satıcısı bulmanıza yardımcı olabilecek iletişim bilgilerini içerir.  
   
 <a name="adding_fonts_as_content_items"></a>   
-## <a name="adding-fonts-as-content-items"></a>İçerik öğeleri olarak yazı tipi ekleme  
- Yazı tiplerini uygulamanıza uygulamanın derleme dosyalarından ayrı proje içerik öğeler olarak ekleyebilirsiniz. Bu içerik öğeleri bir derleme içindeki kaynakları olarak gömülü olmayan anlamına gelir. Aşağıdaki proje dosyası örneği içerik öğelerinin nasıl tanımlanacağını gösterir.  
+## <a name="adding-fonts-as-content-items"></a>Yazı tiplerini Içerik öğeleri olarak ekleme  
+ Uygulamanıza, uygulamanın derleme dosyalarından ayrı proje içerik öğeleri olarak yazı tipi ekleyebilirsiniz. Bu, içerik öğelerinin bir bütünleştirilmiş kod içinde kaynak olarak katıştırılmayacağı anlamına gelir. Aşağıdaki proje dosyası örneği, içerik öğelerinin nasıl tanımlanacağını gösterir.  
   
 ```xml  
 <Project DefaultTargets="Build"  
@@ -47,7 +47,7 @@ Bu konuda paket yazı tipleri ile nasıl genel bir bakış sağlar, [!INCLUDE[TL
 </Project>  
 ```  
   
- Uygulama çalışma zamanında yazı tiplerinin kullanmasını sağlamak için yazı tiplerini uygulamanın dağıtım dizinine erişilebilir olması gerekir. `<CopyToOutputDirectory>` Uygulamanın proje dosyasında öğe yazı tiplerinin uygulama dağıtım dizinine derleme işlemi sırasında otomatik olarak kopyalanıp olanak tanır. Aşağıdaki proje dosyası örneği, yazı tiplerini dağıtım dizinine kopyalanacak gösterilmektedir.  
+ Uygulamanın çalışma zamanında yazı tiplerini kullanabilmesi için, yazı tiplerinin uygulamanın dağıtım dizininde erişilebilir olması gerekir. Uygulamanın proje dosyasındaki öğesi, derleme işlemi sırasında yazı tiplerini uygulama dağıtım dizinine otomatik olarak kopyalamanızı sağlar. `<CopyToOutputDirectory>` Aşağıdaki proje dosyası örneği, yazı tiplerinin dağıtım dizinine nasıl kopyalanacağını gösterir.  
   
 ```xml  
 <ItemGroup>  
@@ -60,13 +60,13 @@ Bu konuda paket yazı tipleri ile nasıl genel bir bakış sağlar, [!INCLUDE[TL
 </ItemGroup>  
 ```  
   
- Aşağıdaki kod örneği, uygulamanın yazı tipi içerik öğesi olarak başvurmak gösterilmektedir: başvurulan içerik öğesi, uygulamanın bütünleştirilmiş kod dosyaları ile aynı dizinde olmalıdır.  
+ Aşağıdaki kod örneği, uygulamanın yazı tipine içerik öğesi olarak nasıl başvurulacağını gösterir — başvurulan içerik öğesi, uygulamanın derleme dosyalarıyla aynı dizinde olmalıdır.  
   
  [!code-xaml[FontSnippets#FontPackageSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet8)]  
   
 <a name="adding_fonts_as_resource_items"></a>   
-## <a name="adding-fonts-as-resource-items"></a>Kaynak öğeleri olarak yazı tipi ekleme  
- Yazı tiplerini uygulamanıza uygulamanın derleme dosyaları içinde gömülü proje kaynak öğeler olarak ekleyebilirsiniz. Kaynaklar için ayrı bir alt dizin kullanarak uygulamanın proje dosyalarını düzenlemenize yardımcı olur. Aşağıdaki proje dosyası örneği ayrı bir alt dizinde kaynak öğeleri olarak yazı tiplerini tanımlamak nasıl gösterir.  
+## <a name="adding-fonts-as-resource-items"></a>Yazı tiplerini kaynak öğe olarak ekleme  
+ Uygulamanıza, uygulamanın derleme dosyaları içine katıştırılmış proje kaynak öğeleri olarak yazı tipi ekleyebilirsiniz. Kaynaklar için ayrı bir alt dizin kullanılması, uygulamanın proje dosyalarını düzenlemenize yardımcı olur. Aşağıdaki proje dosyası örneği, yazı tiplerinin ayrı bir alt dizinde kaynak öğe olarak nasıl tanımlanacağını gösterir.  
   
 ```xml  
 <Project DefaultTargets="Build"  
@@ -81,25 +81,25 @@ Bu konuda paket yazı tipleri ile nasıl genel bir bakış sağlar, [!INCLUDE[TL
 ```  
   
 > [!NOTE]
->  Yazı tipleri kaynak olarak uygulamanıza eklediğinizde, ayarladığınızdan emin olun `<Resource>` öğesi değil `<EmbeddedResource>` uygulamanızın proje dosyasında öğesi. `<EmbeddedResource>` Öğe oluşturma eylemi için desteklenmiyor.  
+>  Uygulamanıza kaynak olarak yazı tipi eklediğinizde, uygulamanızın proje dosyasındaki öğesini `<Resource>` `<EmbeddedResource>` değil, öğesini ayarladığınızdan emin olun. Derleme `<EmbeddedResource>` eyleminin öğesi desteklenmiyor.  
   
- Aşağıdaki biçimlendirme örneği, uygulamanın yazı tipi kaynaklara başvuran gösterilmektedir.  
+ Aşağıdaki biçimlendirme örneği, uygulamanın yazı tipi kaynaklarına nasıl başvurulacağını gösterir.  
   
  [!code-xaml[FontSnippets#FontPackageSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
   
-### <a name="referencing-font-resource-items-from-code"></a>Yazı tipi kaynak öğelerini koddan başvurma  
- Yazı tipi kaynak öğelerini koddan başvurmak için iki parçalı yazı tipi kaynak başvuru sağlamanız gerekir: temel [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]; ve yazı tipi konumu başvurusu. Bu değerler için parametre olarak kullanılan <xref:System.Windows.Media.FontFamily.%23ctor%2A> yöntemi. Aşağıdaki kod örneği başvuru adlı proje alt yazı tipi kaynaklarında uygulamanın nasıl gösterir `resources`.  
+### <a name="referencing-font-resource-items-from-code"></a>Koddan yazı tipi kaynak öğelerine başvurma  
+ Koddan yazı tipi kaynak öğelerine başvurmak için, iki bölümlü bir yazı tipi kaynak başvurusu sağlamanız gerekir: Taban [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]ve yazı tipi konumu başvurusu. Bu değerler, <xref:System.Windows.Media.FontFamily.%23ctor%2A> yöntemi için parametreler olarak kullanılır. Aşağıdaki kod örneği, adlı `resources`proje alt dizinindeki uygulamanın yazı tipi kaynaklarına nasıl başvurulacağını gösterir.  
   
  [!code-csharp[FontSnippets#FontPackageSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
  [!code-vb[FontSnippets#FontPackageSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
   
- Temel [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] yazı tipi kaynak yer aldığı uygulama alt içerebilir. Bu durumda, yazı tipi konumu başvurusu bir dizin belirtmek ihtiyaç duymaz ancak içermesi gerekir "`./`", yazı tipi kaynak gösteren temel tarafından belirtilen ile aynı dizinde olduğu [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]. Yazı tipi kaynak öğesi başvuru alternatif bir yolu aşağıdaki kod örneği gösterir; önceki örnek kod eşdeğerdir.  
+ Temel [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] , yazı tipi kaynağının bulunduğu uygulama alt dizinini içerebilir. Bu durumda, yazı tipi konumu başvurusunun bir dizin belirtmesi gerekmez, ancak yazı tipi kaynağının temel`./` [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]tarafından belirtilen dizinde olduğunu belirten önünde bir "" içermesi gerekir. Aşağıdaki kod örneği, yazı tipi kaynak öğesine başvurmak için alternatif bir yol gösterir; önceki kod örneğine eşdeğerdir.  
   
  [!code-csharp[FontSnippets#FontPackageSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet5)]
  [!code-vb[FontSnippets#FontPackageSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet5)]  
   
-### <a name="referencing-fonts-from-the-same-application-subdirectory"></a>Aynı uygulama alt dizinden başvuru yazı tipleri  
- Her iki uygulama içerik ve kaynak dosyaları aynı kullanıcı tarafından tanımlanan alt uygulama projenizin içinde yerleştirebilirsiniz. İçerik sayfası ve yazı tipi kaynakları aynı alt dizinde tanımlanan aşağıdaki proje dosyası örneği gösterir.  
+### <a name="referencing-fonts-from-the-same-application-subdirectory"></a>Aynı uygulama alt dizininden yazı tiplerine başvurma  
+ Hem uygulama içeriğini hem de kaynak dosyalarını uygulama projenizin Kullanıcı tanımlı aynı alt dizinine yerleştirebilirsiniz. Aşağıdaki proje dosyası örneği, aynı alt dizinde tanımlanan bir içerik sayfası ve yazı tipi kaynaklarını gösterir.  
   
 ```xml  
 <ItemGroup>  
@@ -111,27 +111,27 @@ Bu konuda paket yazı tipleri ile nasıl genel bir bakış sağlar, [!INCLUDE[TL
 </ItemGroup>  
 ```  
   
- Uygulama içeriği ve yazı tipi aynı alt dizinde olduğundan, yazı tipi başvuru uygulama içeriğine göre yapılır. Aşağıdaki örnekler, yazı tipi uygulama ile aynı dizinde olduğunda uygulamanın yazı tipi kaynağa başvuran gösterilmektedir.  
+ Uygulama içeriği ve yazı tipi aynı alt dizinde olduğundan, yazı tipi başvurusu uygulama içeriğine göre değişir. Aşağıdaki örneklerde, yazı tipi uygulamayla aynı dizinde olduğunda uygulamanın yazı tipi kaynağına nasıl başvurulacağını gösterilmektedir.  
   
  [!code-xaml[FontSnippets#FontPackageSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/pages/HomePage.xaml#fontpackagesnippet3)]  
   
  [!code-csharp[FontSnippets#FontPackageSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/pages/HomePage.xaml.cs#fontpackagesnippet4)]
  [!code-vb[FontSnippets#FontPackageSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/pages/homepage.xaml.vb#fontpackagesnippet4)]  
   
-### <a name="enumerating-fonts-in-an-application"></a>Bir uygulamada yazı tiplerini numaralandırma  
- Uygulamanızdaki kaynak öğeleri olarak yazı tiplerini numaralandırma için ya da kullanın <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> veya <xref:System.Windows.Media.Fonts.GetTypefaces%2A> yöntemi. Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> koleksiyonunu döndürülecek yöntemi <xref:System.Windows.Media.FontFamily> uygulama yazı tipi konumdan nesneleri. Bu durumda, uygulamanın "Kaynaklar" adlı bir alt dizin içeriyor.  
+### <a name="enumerating-fonts-in-an-application"></a>Bir uygulamadaki yazı tiplerini numaralandırma  
+ Yazı tiplerini uygulamanızdaki kaynak öğeleri olarak numaralandırmak için <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> ya <xref:System.Windows.Media.Fonts.GetTypefaces%2A> da yöntemini kullanın. Aşağıdaki örnek, uygulama yazı tipi konumundan <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> <xref:System.Windows.Media.FontFamily> nesne koleksiyonunu döndürmek için yönteminin nasıl kullanılacağını gösterir. Bu durumda, uygulama "resources" adlı bir alt dizin içerir.  
   
  [!code-csharp[FontSnippets#FontsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet3)]
  [!code-vb[FontSnippets#FontsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet3)]  
   
- Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Fonts.GetTypefaces%2A> koleksiyonunu döndürülecek yöntemi <xref:System.Windows.Media.Typeface> uygulama yazı tipi konumdan nesneleri. Bu durumda, uygulamanın "Kaynaklar" adlı bir alt dizin içeriyor.  
+ Aşağıdaki örnek, uygulama yazı tipi konumundan <xref:System.Windows.Media.Fonts.GetTypefaces%2A> <xref:System.Windows.Media.Typeface> nesne koleksiyonunu döndürmek için yönteminin nasıl kullanılacağını gösterir. Bu durumda, uygulama "resources" adlı bir alt dizin içerir.  
   
  [!code-csharp[FontSnippets#FontsSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet7)]
  [!code-vb[FontSnippets#FontsSnippet7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet7)]  
   
 <a name="creating_a_font_resource_library"></a>   
-## <a name="creating-a-font-resource-library"></a>Bir yazı tipi kaynak kitaplığı oluşturma  
- Yalnızca yazı tiplerini içeren yalnızca kaynak kitaplığı oluşturabilirsiniz — kod kitaplığı projesi bu tür bir parçasıdır. Yalnızca kaynak kitaplığı oluşturmak, bunları kullanan uygulama kodu kaynaklardan ayırma için yaygın bir tekniktir. Bu, birden çok uygulama projeleriyle dahil edilecek kitaplık derlemesine de sağlar. Aşağıdaki proje dosyası örneği yalnızca kaynak kitaplık projesi anahtar kısımlarını gösterir.  
+## <a name="creating-a-font-resource-library"></a>Yazı tipi kaynak kitaplığı oluşturma  
+ Yalnızca yazı tiplerini içeren yalnızca kaynak kitaplığı oluşturabilirsiniz — kod, bu tür kitaplık projesi parçası değildir. Yalnızca kaynak kitaplığı oluşturma, kaynakları kullanan uygulama kodundan ayrılmış kaynaklar için ortak bir tekniktir. Bu Ayrıca, kitaplık derlemesinin birden çok uygulama projesine dahil edilmesini sağlar. Aşağıdaki proje dosyası örneği, kaynak kitaplığı projesinin önemli kısımlarını gösterir.  
   
 ```xml  
 <PropertyGroup>  
@@ -146,35 +146,35 @@ Bu konuda paket yazı tipleri ile nasıl genel bir bakış sağlar, [!INCLUDE[TL
 </ItemGroup  
 ```  
   
-### <a name="referencing-a-font-in-a-resource-library"></a>Bir yazı tipi Kaynak Kitaplığı'nda başvurma  
- Uygulamanızdan bir yazı tipi Kaynak Kitaplığı'nda başvurmak için kitaplık derlemenin adı ile yazı tipi başvurusu eklemeniz gerekir. Bu durumda, yazı tipi kaynak derleme "FontLibrary" dir. Başvuru bütünleştirilmiş kod içinde derleme adını ayırmak için bir ';' karakterini kullanın. Başvuru yazı tipi adı olarak "Component" anahtar sözcüğünü ekleme tam yazı tipi kitaplık kaynağına başvuru tamamlar. Aşağıdaki kod örneği, bir yazı tipi kaynak kitaplığı derlemede başvuru gösterilmektedir.  
+### <a name="referencing-a-font-in-a-resource-library"></a>Kaynak kitaplığındaki bir yazı tipine başvurma  
+ Uygulamanızdan bir kaynak kitaplığındaki bir yazı tipine başvurmak için, yazı tipi başvurusunu kitaplık derlemesinin adı ile önekle uygulamanız gerekir. Bu durumda, yazı tipi kaynak derlemesi "FontLibrary" dir. Derleme adını derleme içindeki başvurudan ayırmak için '; ' karakterini kullanın. "Component" anahtar sözcüğünü ve ardından yazı tipi adının başvurusunu eklemek, yazı tipi kitaplığının kaynağına tam başvuruyu tamamlar. Aşağıdaki kod örneği, bir kaynak kitaplığı derlemesinde bir yazı tipine nasıl başvurulacağını gösterir.  
   
  [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
->  Bu SDK örnek kümesini içeren [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] ile kullanabileceğiniz yazı tipleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar. Yazı tiplerinin yalnızca kaynak kitaplığında tanımlanır. Daha fazla bilgi için [örnek OpenType yazı tipi paketi](sample-opentype-font-pack.md).  
+>  Bu SDK, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalarla kullanabileceğiniz örnek bir OpenType yazı tipi kümesi içerir. Yazı tipleri yalnızca kaynak kitaplığında tanımlanmıştır. Daha fazla bilgi için bkz. [örnek OpenType yazı tipi paketi](sample-opentype-font-pack.md).  
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>Yazı tipi kullanımı sınırlamaları  
- Aşağıdaki listede, paketleme ve yazı tiplerinin kullanımı bazı sınırlamaları açıklanmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar:  
+ Aşağıdaki listede, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalarda yazı tiplerinin paketlenmesi ve kullanımıyla ilgili çeşitli sınırlamalar açıklanmaktadır:  
   
-- **Yazı tipi katıştırma izin bitleri:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları denetlemez veya izin bitlerini herhangi bir yazı tipi zorla. Bkz: [Introduction_to_Packing yazı tipleri](#introduction_to_packaging_fonts) bölümünde daha fazla bilgi için.  
+- **Yazı tipi katıştırma izin bitleri:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar herhangi bir yazı tipi ekleme izni bitini denetlemez veya zorlamaz. Daha fazla bilgi için [Introduction_to_Packing Fonts](#introduction_to_packaging_fonts) bölümüne bakın.  
   
-- **Site kaynak yazı tipi:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaların http veya ftp yazı tipi başvuru izin vermiyor [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
+- **Kaynak yazı tiplerinin sitesi:** uygulamalar, http veya FTP [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]'ye bir yazı tipi başvurusuna izin vermez. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
-- **Paketi kullanarak bir mutlak URI: gösterimi:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar oluşturmanızı verme bir <xref:System.Windows.Media.FontFamily> program aracılığıyla kullanarak nesne "paketi:" mutlak bir parçası olarak [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] bir yazı tipi başvuru. Örneğin, `"pack://application:,,,/resources/#Pericles Light"` geçersiz yazı tipi başvurudur.  
+- **Paketi kullanan mutlak URI: Gösterim:** uygulamalar, bir yazı tipine mutlak [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] başvurunun bir <xref:System.Windows.Media.FontFamily> parçası olarak "Pack:" kullanarak bir nesne oluşturmanıza izin vermez. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Örneğin, `"pack://application:,,,/resources/#Pericles Light"` geçersiz bir yazı tipi başvurusudur.  
   
-- **Otomatik yazı tipi ekleme:** Tasarım sırasında uygulama kullanımını yazı tipleri aramak ve yazı tipleri uygulamanın kaynakları otomatik olarak ekleme desteği yoktur.  
+- **Otomatik yazı tipi ekleme:** Tasarım zamanı sırasında uygulamanın yazı tipi kullanımını arama ve yazı tiplerini uygulamanın kaynaklarına otomatik olarak katıştırma desteği yoktur.  
   
-- **Yazı tipi alt kümeleri:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları sabit olmayan belgeler için yazı tipi alt kümeleri oluşturmayı desteklemez.  
+- **Yazı tipi alt kümeleri:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar, sabit olmayan belgeler için yazı tipi alt kümelerinin oluşturulmasını desteklemez.  
   
-- Durumlarda hatalı bir başvuru olduğunda, uygulama yeniden kullanılabilir bir yazı tipi kullanarak döner.  
+- Yanlış bir başvuru olduğu durumlarda, uygulama kullanılabilir bir yazı tipi kullanmaya geri döner.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
-- [Microsoft tipografi: Bağlantılar, haber ve kişiler](https://docs.microsoft.com/typography/)
-- [OpenType Belirtimi](https://www.microsoft.com/typography/otspec/)
+- [Microsoft Tipografi: Bağlantılar, Haberler ve kişiler](https://docs.microsoft.com/typography/)
+- [OpenType belirtimi](https://www.microsoft.com/typography/otspec/)
 - [OpenType Yazı Tipi Özellikleri](opentype-font-features.md)
 - [Örnek OpenType Yazı Tipi Paketi](sample-opentype-font-pack.md)

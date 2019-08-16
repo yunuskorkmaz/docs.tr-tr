@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 4f8fd92105bd5ae09e0c1daa2e0db48b74cde77c
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: be82b64581ee178b463950d4b8cdae1f98949161
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672037"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545308"
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış
 Microsoft .NET Framework ile, Windows Presentation Foundation (WPF) kullanan uygulama geliştiricilerinin zengin yeni bir yazdırma ve yazdırma sistemi yönetim API 'Leri kümesi vardır. İle [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], bu yazdırma sistemi geliştirmelerinden bazıları, yönetilmeyen kod kullanan uygulamalar ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] geliştiriciler oluşturan geliştiriciler tarafından da kullanılabilir. Bu yeni işlevin çekirdeği, yeni [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosya biçimi [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ve yazdırma yoludur.  
@@ -29,7 +29,7 @@ Microsoft .NET Framework ile, Windows Presentation Foundation (WPF) kullanan uyg
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>XPS hakkında  
- XPS elektronik belge biçimidir, bir biriktirme dosyası biçimi ve sayfa açıklaması dilidir. Platformlar arası belgeler oluşturmak için, [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)]ve diğer sektör standartlarını kullanan açık bir belge biçimidir. XPS dijital belge oluşturma, paylaşılan, yazdırılma, görüntülenen ve arşivlenen işlemleri basitleştirir. XPS hakkında daha fazla bilgi için bkz. [XPS belgeleri](/windows/desktop/printdocs/documents).  
+ XPS elektronik belge biçimidir, bir biriktirme dosyası biçimi ve sayfa açıklaması dilidir. Bu, platformlar arası belgeler oluşturmak için açık [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]paketleme kuralları (OPC) ve diğer sektör standartlarını kullanan bir açık belge biçimidir. XPS dijital belge oluşturma, paylaşılan, yazdırılma, görüntülenen ve arşivlenen işlemleri basitleştirir. XPS hakkında daha fazla bilgi için bkz. [XPS belgeleri](/windows/desktop/printdocs/documents).  
   
  Kullanarak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] XPS tabanlı içeriklerin yazdırılması için çeşitli teknikler, programlı bir şekilde [XPS dosyaları yazdırma](how-to-programmatically-print-xps-files.md)bölümünde gösterilmiştir. Bu konuda yer alan içeriğin gözden geçirilmesi sırasında bu örneklere başvurmak yararlı olabilir. (Yönetilmeyen kod geliştiricileri [MXDC_ESCAPE işlevi](/windows/desktop/printdocs/mxdc-escape)için belgeler görmelidir. Windows Forms geliştiricilerin, tam <xref:System.Drawing.Printing> [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolunu desteklemeyen, ancak karma GDI 'dan XPS 'ye yazdırma yolunu desteklediği ad alanındaki API 'yi kullanması gerekir. Aşağıdaki **yazdırma yolu mimarisini** inceleyin.)  
   
