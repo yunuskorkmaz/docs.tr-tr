@@ -5,47 +5,44 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: ac5fbf33564ed2dd1a030132a35b36164f777519
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbf82f1481ee9779cec5cfbf3fb057b7ea399a1c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638573"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039900"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Nasıl yapılır: Windows Forms'a Denetimleri Kilitleme
-Windows uygulamanızın kullanıcı arabirimini (UI) tasarlarken, böylece istemeden taşıdığınızda veya diğer özellikleri ayarlarken yeniden boyutlandırabilir, doğru konumlandırılır sonra denetimleri kilitleyebilirsiniz.  
-  
- Ayrıca, kilitlemek ve tüm form üzerinde denetimleri pek çok denetimi olan formlarda yardımcı olan tek bir seferde kilidini veya tek denetimleri kilidini açabilirsiniz. Tüm denetimleri form üzerinde istediğiniz yere yerleştirdikten sonra bunları hatalı hareketini önlemek için tüm kilitleme.  
-  
-> [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-lock-a-control"></a>Bir denetim kilitlemek için  
-  
-1. İçinde **özellikleri** penceresinde tıklayın **kilitli** özelliğini tıklatın ve `true`. (Adına çift özellik ayarı değiştirir.)  
-  
-     Alternatif olarak, denetime sağ tıklayın ve seçin **kilit denetimleri**.  
-  
+Windows uygulamanızın kullanıcı arabirimini (UI) tasarladığınızda, denetimleri doğru konumlandırıldıktan sonra kilitleyebilir, böylece diğer özellikleri ayarlarken farkında olmadan taşıyamazsınız veya yeniden boyutlandıramazsınız.
+
+ Ayrıca, formdaki tüm denetimleri tek seferde kilitleyebilir ve kilidini açabilir, bu da birçok denetim içeren formlar için faydalıdır veya ayrı denetimlerin kilidini açabilirsiniz. Form üzerinde istediğiniz yere tüm denetimleri yerleştirdikten sonra, hatalı hareketi engellemek için bunları bir yerde kilitleyin.
+
+## <a name="to-lock-a-control"></a>Bir denetimi kilitlemek için
+
+1. **Özellikler** penceresinde, **kilitli** özelliğine tıklayın ve öğesini seçin `true`. (Adı çift tıklatmak Özellik ayarında geçiş yapar.)
+
+     Alternatif olarak, denetimi sağ tıklatın ve **denetimleri kilitle**' yi seçin.
+
     > [!NOTE]
-    >  Denetimleri kilitleme, bunları tasarım yüzeyine bir yeni boyut veya konum sürüklenen öğesinden engeller. Ancak, yine de denetimleri yoluyla konumunu ve boyutunu değiştirebilirsiniz **özellikleri** penceresi veya kod.  
-  
-### <a name="to-lock-all-the-controls-on-a-form"></a>Bir formda tüm denetimler kilitlemek için  
-  
-1. Gelen **biçimi** menüsünde seçin **kilit denetimleri**.  
-  
+    >  Denetimleri kilitlemek, bunların tasarım yüzeyinde yeni bir boyuta veya konuma sürüklemesini önler. Ancak, denetimlerin boyutunu veya konumunu **Özellikler** penceresi veya kod içinde de değiştirebilirsiniz.
+
+## <a name="to-lock-all-the-controls-on-a-form"></a>Form üzerindeki tüm denetimleri kilitlemek için
+
+1. **Biçim** menüsünde, **denetimleri kilitle**' yi seçin.
+
     > [!NOTE]
-    >  Bir form denetim olduğundan bu komut formun boyutunu da kilitler.  
-  
-### <a name="to-unlock-all-locked-controls-on-a-form"></a>Formdaki denetimler kilitli tümünün kilidini aç  
-  
-1. Gelen **biçimi** menüsünde seçin **kilit denetimleri**.  
-  
-     Formdaki tüm daha önce kilitli denetimleri sunulmuştur kilidi.  
-  
-### <a name="to-unlock-locked-controls-individually"></a>Tek tek denetimler kilitli kilidini aç  
-  
-1. İçinde **özellikleri** penceresinde tıklayın **kilitli** özelliğini tıklatın ve `false`. (Adına çift özellik ayarı değiştirir.)  
-  
+    >  Form bir denetim olduğundan, bu komut formun boyutunu da kilitler.
+
+## <a name="to-unlock-all-locked-controls-on-a-form"></a>Form üzerindeki tüm kilitli denetimlerin kilidini açmak için
+
+1. **Biçim** menüsünde, **denetimleri kilitle**' yi seçin.
+
+     Formdaki daha önce kilitlenen tüm denetimlerin kilidi açıldı.
+
+## <a name="to-unlock-locked-controls-individually"></a>Kilitli denetimlerin kilidini ayrı olarak açmak için
+
+1. **Özellikler** penceresinde, **kilitli** özelliğine tıklayın ve öğesini seçin `false`. (Adı çift tıklatmak Özellik ayarında geçiş yapar.)
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows Forms Denetimleri](index.md)

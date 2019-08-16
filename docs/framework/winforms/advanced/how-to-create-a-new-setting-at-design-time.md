@@ -5,32 +5,37 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: e371c60e3fb674e4243cec008e1098172725d4cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35a7cd8cc1daaf76a25977751ddc9ec0709e5947
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937728"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037901"
 ---
-# <a name="how-to-create-a-new-setting-at-design-time"></a>Nasıl yapılır: Tasarım Zamanında Yeni Ayar Oluşturma
-Ayarlar Tasarımcısı'nı kullanarak, tasarım zamanında yeni ayar oluşturabilirsiniz. Ayarlar Tasarımcısı yeni ayarları oluşturmak ve bu ayarları özelliklerini belirtmek izin veren bir kılavuz stili arabirimidir. Ad, değer, türü ve yeni ayarlarınız için kapsam belirtmeniz gerekir. Bir ayar oluşturulduktan sonra kod içinde erişilebilir.  
-  
-### <a name="to-create-a-new-setting-at-design-time-in-c"></a>C'de tasarım zamanında yeni ayar oluşturma\#
-  
-1. İçinde **Çözüm Gezgini**, genişletme **özellikleri** projenizin düğümü.  
-  
-2. Yeni bir ayar eklemek istediğiniz .settings dosyasını çift tıklatın. Settings.settings bu dosya için varsayılan addır.  
-  
-3. Ayarlar Tasarımcısı'nda, adını, değeri, türü ve ayarınız için kapsamı ayarlayın. Her satırın tek bir ayar temsil eder.  
-  
-### <a name="to-create-a-new-setting-at-design-time-in-visual-basic"></a>Visual Basic'te tasarım zamanında yeni ayar oluşturma  
-  
-1. İçinde **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve seçin **özellikleri**.  
-  
-2. İçinde **özellikleri** sayfasında **ayarları** sekmesi.  
-  
-3. Ayarlar Tasarımcısı'nda, adını, değeri, türü ve ayarınız için kapsamı ayarlayın. Her satırın tek bir ayar temsil eder.  
-  
+# <a name="how-to-create-a-new-setting-at-design-time"></a>Nasıl yapılır: Tasarım zamanında yeni bir ayar oluşturun
+
+Tasarım zamanında, Visual Studio 'daki ayarlar tasarımcısını kullanarak yeni bir ayar oluşturabilirsiniz. Ayarlar Tasarımcısı, yeni ayarlar oluşturmanıza ve bu ayarlar için özellikleri belirtmenize olanak tanıyan bir kılavuz stili arabirimdir. Yeni ayarlarınız için ad, değer, tür ve kapsam belirtmeniz gerekir. Bir ayar oluşturulduktan sonra koddan erişilebilir.
+
+## <a name="create-a-new-setting-at-design-time-in-c"></a>C 'de tasarım zamanında yeni bir ayar oluşturun\#
+
+1. Visual Studio'yu açın.
+
+2. **Çözüm Gezgini**, projenizin **Özellikler** düğümünü genişletin.
+
+3. Yeni bir ayar eklemek istediğiniz. Settings dosyasına çift tıklayın. Bu dosya için varsayılan ad Settings. Settings ' dir.
+
+4. Ayarlar tasarımcısında, ayarınız için **adı**, **değeri**, **türü**ve **kapsamı** ayarlayın. Her satır tek bir ayarı temsil eder.
+
+## <a name="create-a-new-setting-at-design-time-in-visual-basic"></a>Tasarım zamanında Visual Basic yeni bir ayar oluşturun
+
+1. Visual Studio'yu açın.
+
+2. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Özellikler**' i seçin.
+
+3. **Özellikler** sayfasında, **Ayarlar** sekmesini seçin.
+
+4. Ayarlar tasarımcısında, ayarınız için **adı**, **değeri**, **türü**ve **kapsamı** ayarlayın. Her satır tek bir ayarı temsil eder.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Uygulama Ayarları ve Kullanıcı Ayarlarını Kullanma](using-application-settings-and-user-settings.md)

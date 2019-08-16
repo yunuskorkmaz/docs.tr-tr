@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 06ebb9edfaf4753b98c3305a90b52e93ee7b4486
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 32e36a3ebc0de3e5f4a850e0af0261c1e7fd5a07
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796640"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039467"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Ad alanlarını kullanmaC# (Programlama Kılavuzu)
 
@@ -69,7 +69,7 @@ Ad alanları programlar içinde C# yoğun olarak iki şekilde kullanılır. İlk
   
  [!code-csharp[csProgGuideNamespaces#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#10)]  
   
- Genel olarak, bir `::` ad alanı diğer adına başvurmak için `global::` veya genel ad alanına başvurmak ve `.` türleri veya üyeleri nitelemek için kullanın.  
+ Genel olarak, ad alanı diğer adına başvurmak için ad [alanı diğer `::` ](../../language-reference/operators/namespace-alias-qualifier.md) adı niteleyicisi `global::` kullanın veya genel ad alanına başvurmak `.` ve türleri veya üyeleri nitelemek için kullanın.  
   
  Ad alanı yerine bir türe başvuran `::` diğer adla birlikte kullanılması hatadır. Örneğin:  
   
@@ -90,9 +90,7 @@ Ad alanları programlar içinde C# yoğun olarak iki şekilde kullanılır. İlk
  [!code-csharp[csProgGuideNamespaces#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#15)]  
   
  Bu işe yarar, ancak adlandırılmış `Alias` bir tür daha sonra tanıtılmışsa, `Alias.` bunun yerine bu türe bağlanır. Kullanmak `Alias::Exception` `Alias` , bir ad alanı diğer adı olarak değerlendirilip bir tür için hatalı alınmamasını sağlar.  
-  
- Bkz. nasıl yapılır: [ Diğer`global` ad hakkında daha fazla](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) bilgi için genel ad alanı diğer adını kullanın.  
-  
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)

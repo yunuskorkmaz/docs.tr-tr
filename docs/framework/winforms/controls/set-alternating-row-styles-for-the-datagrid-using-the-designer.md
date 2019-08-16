@@ -8,36 +8,34 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: fea160e62939a27521592201cd47615975b7733f
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 1be746d4cce36344e034692a0e2e8e6a9e9320d5
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959404"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040435"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimi İçin Alternatif Satır Stillerini Ayarlama
 
-Tablosal veri sık sık değişen satırları farklı arka plan renkleri sahip olduğu bir defter benzeri biçiminde sunulur. Bu biçim, özellikle fazla sayıda sütun sahip geniş tabloların ile her bir satırdaki hücreleri olduğunu bildirir kullanıcıların kolaylaştırır.
+Tablo verileri genellikle farklı satırlarda arka plan rengine sahip olan bir defter benzeri biçimde sunulur. Bu biçim, özellikle çok sayıda sütunu olan geniş tablolar ile, kullanıcıların her satırda hangi hücrelerin olduğunu söylemesini kolaylaştırır.
 
-İle <xref:System.Windows.Forms.DataGridView> denetimi için alternatif satırlar tam stil bilgilerini belirtebilirsiniz. Stil özellikleri gibi ön plan rengini ve yazı tipi, arka plan rengi yanı sıra, değişen satırları ayırt etmek için kullanabilirsiniz. Daha fazla bilgi için [Windows Forms DataGridView denetimindeki hücre stilleri](cell-styles-in-the-windows-forms-datagridview-control.md).
+<xref:System.Windows.Forms.DataGridView> Denetimiyle, alternatif satırlar için tüm stil bilgilerini belirtebilirsiniz. Alternatif satırları ayırt etmek için arka plan rengine ek olarak, ön plan rengi ve yazı tipi gibi stil özellikleri kullanabilirsiniz. Daha fazla bilgi için [Windows Forms DataGridView Denetimindeki Hücre stilleri](cell-styles-in-the-windows-forms-datagridview-control.md)bölümüne bakın.
 
-Aşağıdaki yordam gerektirir bir **Windows uygulama** proje içeren bir form içeren bir <xref:System.Windows.Forms.DataGridView> denetimi. Bu tür bir proje ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir Windows Forms uygulaması projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project) ve [nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md).
+Aşağıdaki yordam, bir <xref:System.Windows.Forms.DataGridView> denetim içeren bir form ile **Windows uygulama** projesi gerektirir. Böyle bir projeyi ayarlama hakkında daha fazla bilgi için bkz [. nasıl yapılır: Windows Forms bir uygulama projesi](/visualstudio/ide/step-1-create-a-windows-forms-application-project) oluşturun ve [şunları yapın: Windows Forms](how-to-add-controls-to-windows-forms.md)denetimleri ekleyin.
 
-> [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-### <a name="define-styles-for-alternating-rows"></a>Alternatif satırlar için stil tanımlayın
+### <a name="define-styles-for-alternating-rows"></a>Değişen satırlar için stiller tanımlayın
 
-1. Seçin <xref:System.Windows.Forms.DataGridView> Denetim Tasarımcısı'nda.
+1. <xref:System.Windows.Forms.DataGridView> Tasarımcıda denetimi seçin.
 
-2. İçinde **özellikleri** penceresinde üç nokta düğmesini (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/visual-studio-ellipsis-button.png)) yanındaki <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> özelliği.
+2. **Özellikler** penceresinde,![ özelliğin<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> yanındaki üç nokta düğmesini (Visual Studio](./media/visual-studio-ellipsis-button.png)Özellikler penceresi) (...) tıklayın.
 
-3. İçinde **CellStyle Oluşturucu** iletişim kutusunda, stil özelliklerini ayarlayarak tanımlama ve kullanma **Önizleme** bölmesinde seçimlerinizi onaylayın. Belirttiğiniz stilleri ile ikinci bir başlangıç denetim, görüntülenen her bir satır için kullanılır.
+3. **CellStyle Builder** iletişim kutusunda, özellikleri ayarlayarak stili tanımlayın ve Seçimlerinizi onaylamak için **Önizleme** bölmesini kullanın. Belirttiğiniz stiller, ikinci bir ile başlayan denetimde görüntülenen her bir satır için kullanılır.
 
-4. Kalan satırlar için stillerini tanımlamak için yineleyin adım 2 ve 3 kullanarak <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> özelliği.
+4. Kalan satırların stillerini tanımlamak için <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> özelliği kullanarak 2. ve 3. adımları yineleyin.
 
     > [!NOTE]
-    > Hücreleri birden çok özelliklerinden devralınan stilleri kullanarak görüntülenir. Stil devralımı hakkında daha fazla bilgi için bkz: [Windows Forms DataGridView denetimindeki hücre stilleri](cell-styles-in-the-windows-forms-datagridview-control.md).
+    > Hücreler, birden çok özelliklerden devralınan stiller kullanılarak görüntülenir. Stil devralma hakkında daha fazla bilgi için bkz. [Windows Forms DataGridView Denetimindeki Hücre stilleri](cell-styles-in-the-windows-forms-datagridview-control.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -45,5 +43,5 @@ Aşağıdaki yordam gerektirir bir **Windows uygulama** proje içeren bir form i
 - [Windows Forms DataGridView Denetimindeki Hücre Stilleri](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetimindeki Temel Biçim ve Stiller](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetimi ile Tasarımcı Kullanımı](using-the-designer-with-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Bir Windows Forms uygulaması projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md)
+- [Nasıl yapılır: Windows Forms uygulama projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Nasıl yapılır: Windows Forms denetim ekleme](how-to-add-controls-to-windows-forms.md)

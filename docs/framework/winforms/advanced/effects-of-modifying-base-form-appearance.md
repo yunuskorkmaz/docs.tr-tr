@@ -8,25 +8,23 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: 6c87b3d29a1c55b2a7517da78a1951d94676dd68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5239017eb63ca6360ae8811a76497256fafbd1b1
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756825"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040144"
 ---
-# <a name="effects-of-modifying-a-base-forms-appearance"></a>Taban Formun Görünüşünü Değiştirmenin Etkileri
-Uygulama geliştirme sırasında genellikle diğer forms projesinde (veya diğer projelerde) devraldığını taban formun görünüşünü değiştirmeniz gerekebilir.  
-  
- Taban formun görünüşünü için tasarım zamanında değiştirir (ayar ve özellikleri ekleme ve denetimleri çıkarılmasının olması) temel formu içeren bir proje derlenirken devralınan formlar üzerinde yansıtılır. Yalnızca temel forma değişiklikleri kaydetmek yeterli değil. Bir proje oluşturmak için Seç **derleme** gelen **derleme** menüsü.  
-  
-> [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
- Çalışma zamanında temel formda yapılan değişiklikleri zaten örneği devralınan formlar üzerinde hiçbir etkisi vardır.  
-  
+# <a name="effects-of-modifying-a-base-forms-appearance"></a>Temel formun görünümünü değiştirmenin etkileri
+
+Uygulama geliştirme sırasında, genellikle projedeki diğer formların (veya diğer projelerdeki) Devralındığı temel formun görünümünü değiştirmeniz gerekebilir.
+
+Tasarım zamanında, temel formun görünümünde yapılan değişiklikler (Özellikler ayarı veya denetimlerin eklenmesi ve çıkarılması), temel formu içeren proje yapılandırıldığında devralınan formlarda yansıtılır. Değişiklikleri yalnızca temel formda kaydetmeniz yeterli değildir. Bir proje oluşturmak için, **Yapı** menüsünden **Oluştur** ' u seçin.
+
+Çalışma zamanında temel formda yapılan değişikliklerin önceden oluşturulan devralınmış formlarda hiçbir etkisi yoktur.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [base](~/docs/csharp/language-reference/keywords/base.md)
-- [Nasıl yapılır: Windows Form devralma](how-to-inherit-windows-forms.md)
+- [Nasıl yapılır: Windows Forms devralma](how-to-inherit-windows-forms.md)
 - [Windows Forms Görsel Devralma](windows-forms-visual-inheritance.md)

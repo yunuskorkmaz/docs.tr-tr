@@ -10,15 +10,15 @@ api_type:
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de55594db68e084009a095a083e065fbd0b8f0df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1cfc2f5cde22bf63275dd4bdc65857ac1d51b3fe
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741333"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038426"
 ---
-# <a name="axlgetissuerpublickeyhash-function"></a>\_AxlGetIssuerPublicKeyHash işlevi
-Belirtilen sertifika imzalamak için kullanılan özel anahtarıyla ilişkilendirilmiş ortak anahtar SHA-1 karmasını alır.  
+# <a name="_axlgetissuerpublickeyhash-function"></a>\_Axlgetıserpublickeyhash Işlevi
+Belirtilen sertifikayı imzalamak için kullanılan özel anahtarla ilişkili ortak anahtarın SHA-1 karmasını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,13 +31,13 @@ HRESULT _AxlGetIssuerPublicKeyHash (
   
 ## <a name="parameters"></a>Parametreler  
  `pChainContext`  
- [in] CSP ortak anahtar blob'u. Bkz: [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) yapısı.  
+ 'ndaki CSP ortak anahtar blobu. Bkz. [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) yapısı.  
   
  `ppwszPublicKeyHash`  
- [out] WCHAR işaretçisi * onaltılık kodlanmış ortak anahtar belirteci almak için.  
+ dışı Onaltılık kodlanmış ortak anahtar belirtecini almak için bir WCHAR * işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` işlev başarılı olursa; Aksi takdirde `S_FALSE`.  
+ `S_OK`işlev başarılı olursa; Aksi `S_FALSE`takdirde.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

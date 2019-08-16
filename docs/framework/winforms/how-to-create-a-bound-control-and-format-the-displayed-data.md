@@ -6,54 +6,52 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: d81995840aa4df4610d5b6e880b9cdbbc717f2e5
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 052e619acb23fb2e25f42daf7b4eaaacb0688f31
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690391"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039433"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Nasıl yapılır: Bağlantılı Denetim Oluşturma ve Görüntülenen Verileri Biçimlendirme
 
-Windows Forms veri bağlama ile kullanarak bir veri bağlı denetim içinde görüntülenen verileri biçimlendirebilirsiniz **biçimlendirme ve Gelişmiş bağlama** iletişim kutusu.
+Windows Forms veri bağlama ile, **biçimlendirme ve Gelişmiş bağlama** iletişim kutusunu kullanarak veriye dayalı bir denetimde görünen verileri biçimlendirebilirsiniz.
 
-> [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-### <a name="to-bind-a-control-and-format-the-displayed-data"></a>Bir denetimi bağlama ve görüntülenen verileri biçimlendirme
+### <a name="to-bind-a-control-and-format-the-displayed-data"></a>Bir denetimi bağlamak ve görüntülenecek verileri biçimlendirmek için
 
 1. Bir veri kaynağına bağlanın.
 
-     Daha fazla bilgi için [bir veri kaynağına bağlanma](../data/adonet/connecting-to-a-data-source.md).
+     Daha fazla bilgi için bkz. [veri kaynağına bağlanma](../data/adonet/connecting-to-a-data-source.md).
 
-2. Form denetimi seçin ve ardından Özellikler penceresini açın.
+2. Formunda, denetimi seçin ve sonra Özellikler penceresi açın.
 
-3. Genişletin **(DataBindings)** özelliği ve ardından **(Gelişmiş)** kutusunda, üç nokta düğmesini (![Visual Studio'nun Özellikler penceresinde üç nokta düğmesini (…).](./media/how-to-create-a-bound-control-and-format-the-displayed-data/visual-studio-ellipsis-button.png)) Görüntülenecek **biçimlendirme ve Gelişmiş bağlama** iletişim kutusunda, bu denetimin özelliklerini tam bir listesi bulunur.
+3. **(DataBindings)** özelliğini genişletin ve sonra **(Gelişmiş)** kutusunda![üç nokta düğmesini (Visual Studio 'nun Özellikler penceresi üç nokta düğmesini (...) tıklatarak](./media/how-to-create-a-bound-control-and-format-the-displayed-data/visual-studio-ellipsis-button.png) **biçimlendirmeyi ve Gelişmiş ' i görüntüleyin.** Bu denetim için özelliklerin tamamen bir listesini içeren bağlama iletişim kutusu.
 
-4. Bağlama ve ardından istediğiniz özelliği seçin **bağlama** oku.
+4. Bağlamak istediğiniz özelliği seçin ve sonra **bağlama** okuna tıklayın.
 
      Kullanılabilir veri kaynaklarının bir listesi görüntülenir.
 
-5. İstediğiniz tek veri öğesi bulana kadar bağlamak istediğiniz veri kaynağını genişletin.
+5. İstediğiniz tek veri öğesini buluncaya kadar bağlamak istediğiniz veri kaynağını genişletin.
 
-     Örneğin, bir veri kümesi tablodaki bir sütun değerine bağlanıyorsanız, veri kümesinin adını genişletin ve ardından sütun adlarını görüntülemek için tablo adını genişletin.
+     Örneğin, bir veri kümesinin tablosundaki bir sütun değerine bağlıyorsanız, veri kümesinin adını genişletin ve ardından sütun adlarını göstermek için tablo adını genişletin.
 
-6. Bağlanılacak bir öğe adına tıklayın.
+6. Bağlanacak öğenin adına tıklayın.
 
-7. İçinde **türünü biçimlendirme** kutusunda, denetimde görüntülenen verilere uygulamak istediğiniz biçime tıklayın.
+7. **Biçim türü** kutusunda, denetimde görüntülenecek verilere uygulamak istediğiniz biçime tıklayın.
 
-     Her durumda, veri kaynağı içeriyorsa denetimde görüntülenen değeri belirtebilirsiniz <xref:System.DBNull>. Aksi takdirde, Seçenekler, seçtiğiniz biçim türüne bağlı olarak biraz değişir. Biçimlendirme türleri ve seçenekleri aşağıdaki tabloda gösterilmektedir.
+     Her durumda, veri kaynağı içeriyorsa <xref:System.DBNull>denetimde gösterilecek değeri belirtebilirsiniz. Aksi takdirde, Seçenekler, seçtiğiniz biçim türüne bağlı olarak biraz farklılık gösterir. Aşağıdaki tabloda biçim türleri ve seçenekleri gösterilmektedir.
 
     |Biçim türü|Biçimlendirme seçeneği|
     |-----------------|-----------------------|
     |Biçimlendirme yok|Seçenek yok.|
-    |Numeric|Ondalık basamak sayısını kullanarak belirtin **ondalık** yukarı-aşağı denetimi.|
-    |Para Birimi|Ondalık basamak sayısını kullanarak belirtin **ondalık** yukarı-aşağı denetimi.|
-    |Tarih saat|Nasıl tarih ve saat öğelerden birini seçerek görüntüleneceğini seçin **türü** seçim kutusu.|
-    |Bilimsel|Ondalık basamak sayısını kullanarak belirtin **ondalık** yukarı-aşağı denetimi.|
-    |Özel|Kullanarak bir özel biçim dizesi belirtin.<br /><br /> Daha fazla bilgi için [biçimlendirme türleri](../../standard/base-types/formatting-types.md). **Not:**  Özel biçim dizeleri başarıyla ilişkili denetim ve veri kaynağı arasında gidiş dönüş garanti edilmez. Bunun yerine işlemek <xref:System.Windows.Forms.Binding.Parse> veya <xref:System.Windows.Forms.Binding.Format> bağlama için olay ve olay işleme kodda özel biçimlendirme uygulayın.|
+    |Numeric|Ondalık basamak sayısını artırma-azaltma denetimini kullanarak belirtin.|
+    |Para Birimi|Ondalık basamak sayısını artırma-azaltma denetimini kullanarak belirtin.|
+    |Tarih saat|**Tür** seçim kutusundaki öğelerden birini seçerek tarih ve saatin nasıl görüntüleneceğini seçin.|
+    |Bilimsel|Ondalık basamak sayısını artırma-azaltma denetimini kullanarak belirtin.|
+    |Özel|Kullanarak bir özel biçim dizesi belirtin.<br /><br /> Daha fazla bilgi için bkz. [biçimlendirme türleri](../../standard/base-types/formatting-types.md). **Not:**  Özel biçim dizelerinin, veri kaynağı ve bağlantılı denetim arasında başarılı bir şekilde gidiş dönüş garantisi yoktur. Bunun yerine bağlama <xref:System.Windows.Forms.Binding.Parse> için <xref:System.Windows.Forms.Binding.Format> veya olayını işleyin ve olay işleme kodunda özel biçimlendirme uygulayın.|
 
-8. Tıklayın **Tamam** kapatmak için **biçimlendirme ve Gelişmiş bağlama** iletişim kutusu ve Özellikler penceresinin başı.
+8. **Biçimlendirme ve Gelişmiş bağlama** iletişim kutusunu kapatmak ve Özellikler penceresi geri dönmek için **Tamam** ' ı tıklatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

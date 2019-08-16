@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 07/25/2019
-ms.openlocfilehash: 477aecec4381f26e505e88f7df38f68a85e8f70d
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: f1fce2899e9e11b1007d6c270180b27a29eaa167
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012836"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039443"
 ---
 # <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3,0 'deki yenilikler (Önizleme 7)
 
@@ -291,7 +291,7 @@ Visual Studio 2019 ' de bulunan [Windows uygulama paketleme projesi](https://doc
 <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
 ```
 
-## <a name="winforms-highdpi"></a>WinForms HighDPI
+## <a name="winforms-high-dpi"></a>WinForms yüksek DPı
 
 .NET Core Windows Forms uygulamaları, ile <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType>yüksek DPI modunu ayarlayabilir. Bu `SetHighDpiMode` Yöntem, daha önce `Application.Run`veya P/Invoke gibi `App.Manifest` diğer yollarla ayarlanmadığı takdirde, karşılık gelen yüksek DPI modunu ayarlar.
 

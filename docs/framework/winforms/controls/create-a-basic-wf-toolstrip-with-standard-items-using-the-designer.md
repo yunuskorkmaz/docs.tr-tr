@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Tasarımcı kullanarak standart öğelerle temel bir Windows Formları ToolStrip oluşturma'
+title: 'Nasıl yapılır: Tasarımcı kullanarak standart öğelerle temel bir Windows Forms ToolStrip oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating
@@ -7,27 +7,24 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: df6fe22eef338732c14d6f1ff56f25e6d1aa8a2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b205aee6df537fdeafd14a98869fb23ce972011
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011458"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039967"
 ---
-# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Nasıl yapılır: Tasarımcı kullanarak standart öğelerle temel bir Windows Formları ToolStrip oluşturma
-Aşağıdaki yordam nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Forms.ToolStrip> ve yedi ekleyin <xref:System.Windows.Forms.ToolStripButton> tipik görevleri temsil eden denetimleri.  
-  
-> [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-add-standard-items-in-the-designer"></a>Tasarımcıda standart öğeler eklemek için  
-  
-1. oluşturma bir <xref:System.Windows.Forms.ToolStrip> denetimi.  
-  
-2. Sağ üst köşesindeki <xref:System.Windows.Forms.ToolStrip>, görüntülenecek akıllı görev oku **ToolStrip görevleri** bölmesi.  
-  
-3. İçinde **ToolStrip görevleri** bölmesinde seçin **standart öğeleri Ekle**.  
-  
+# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Nasıl yapılır: Tasarımcı kullanarak standart öğelerle temel bir Windows Forms ToolStrip oluşturma
+Aşağıdaki yordamda, oluşturma <xref:System.Windows.Forms.ToolStrip> ve tipik görevleri temsil eden yedi <xref:System.Windows.Forms.ToolStripButton> denetim ekleme işlemlerinin nasıl yapılacağı gösterilmiştir.
+
+## <a name="to-add-standard-items-in-the-designer"></a>Tasarımcıya standart öğeler eklemek için
+
+1. Bir <xref:System.Windows.Forms.ToolStrip> denetim oluşturun.
+
+2. Sağ üst köşesinde <xref:System.Windows.Forms.ToolStrip>, **araç şeridi görevleri** bölmesini göstermek için akıllı görev okuna tıklayın.
+
+3. **ToolStrip görevleri** bölmesinde **Standart öğe Ekle**' yi seçin.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.ToolStrip>

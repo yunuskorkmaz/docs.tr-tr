@@ -11,160 +11,156 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: a5e2a8b0bf982ff112d7930e331456fa69485dfc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6fd504269ae9afbfd02b58276582a644674e1e0f
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665900"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040314"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>İzlenecek yol: Görsel Devralmayı Gösterme
-Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetimler eklemek için sağlar. Bu izlenecek yolda temel bir form oluşturun ve bir sınıf kitaplığı derleyin. Bu sınıf kitaplığı, başka bir projeye içeri aktarmak ve temel formundan devralan yeni bir form oluşturun. Bu kılavuz boyunca, öğreneceksiniz nasıl yapılır:  
-  
-- Taban form içeren bir sınıf kitaplığı projesi oluşturun.  
-  
-- Bir düğme türetilmiş sınıflar temel formun özelliklerini değiştirebilirsiniz ekleyin.  
-  
-- Taban formun devralanlar tarafından değiştirilemez bir düğme ekleyin.  
-  
-- Devralınan form içeren bir proje oluşturma `BaseForm`.  
-  
- Sonuç olarak, bu izlenecek yol, devralınmış bir form üzerinde özel ve korumalı denetimler arasındaki farkı gösterilecektir.  
-  
-> [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
+
+Görsel devralma, temel formdaki denetimleri görmenizi ve yeni denetimler eklemenizi sağlar. Bu kılavuzda, bir temel form oluşturacak ve onu bir sınıf kitaplığında derleyecaksınız. Bu sınıf kitaplığını başka bir projeye aktarır ve temel formdan devralan yeni bir form oluşturacaksınız. Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
+
+- Temel form içeren bir sınıf kitaplığı projesi oluşturun.
+
+- Temel formun türetilmiş sınıflarının değiştirebileceği özelliklere sahip bir düğme ekleyin.
+
+- Temel formun ınherıtors tarafından değiştirilemeyen bir düğme ekleyin.
+
+- Öğesinden `BaseForm`devralan bir form içeren bir proje oluşturun.
+
+Sonuç olarak, Bu anlatım devralınan bir formdaki özel ve korunan denetimler arasındaki farkı gösterir.
+
 > [!CAUTION]
->  Tüm denetimleri, temel bir formdan görsel devralmayı destekler. Bu kılavuzda açıklanan senaryo aşağıdaki denetimleri desteklemez:  
->   
->  <xref:System.Windows.Forms.WebBrowser>  
->   
->  <xref:System.Windows.Forms.ToolStrip>  
->   
->  <xref:System.Windows.Forms.ToolStripPanel>  
->   
->  <xref:System.Windows.Forms.TableLayoutPanel>  
->   
->  <xref:System.Windows.Forms.FlowLayoutPanel>  
->   
->  <xref:System.Windows.Forms.DataGridView>  
->   
->  Bu devralınan form denetimlerinde her zaman kullandığınız değiştiriciler bağımsız olarak salt okunurdur (`private`, `protected`, veya `public`).  
-  
-## <a name="scenario-steps"></a>Senaryo adımları  
- İlk adım, bir taban formunu oluşturmaktır.  
-  
-#### <a name="to-create-a-class-library-project-containing-a-base-form"></a>Taban form içeren bir sınıf kitaplığı projesi oluşturmak için  
-  
-1. Gelen **dosya** menüsünde seçin **yeni**, ardından **proje** açmak için **yeni proje** iletişim kutusu.  
-  
-2. Adlı bir Windows Forms uygulaması oluşturma `BaseFormLibrary`.  
-  
-3. Standart bir Windows Forms uygulaması yerine bir sınıf kitaplığı oluşturmak için **Çözüm Gezgini**, sağ **BaseFormLibrary** proje düğümünü ve ardından **özellikleri**.  
-  
-4. Proje özelliklerini değiştirmek **çıkış türü** gelen **Windows uygulama** için **sınıf kitaplığı**.  
-  
-5. Gelen **dosya** menüsünde seçin **Tümünü Kaydet** dosya ve proje varsayılan konuma kaydedin.  
-  
- Sonraki iki yordam temel forma düğme ekleyin. Görsel devralma göstermek için düğmeler farklı erişim düzeyleri ayarlayarak erişmenizi kendi `Modifiers` özellikleri.  
-  
-#### <a name="to-add-a-button-that-inheritors-of-the-base-form-can-modify"></a>Taban formun devralanlar değiştirebileceğiniz bir düğme eklemek için  
-  
-1. Açık **Form1** Tasarımcısı'nda.  
-  
-2. Üzerinde **tüm Windows Formları** sekmesinde **araç kutusu**, çift **düğmesi** forma bir düğme eklemek için. Fare getirin ve düğmeyi yeniden boyutlandırmak için kullanın.  
-  
-3. Özellikler penceresinde düğmenin aşağıdaki özellikleri ayarlayın:  
-  
-    - Ayarlama **metin** özelliğini **Say Hello**.  
-  
-    - Ayarlama **(ad)** özelliğini **btnProtected**.  
-  
-    - Ayarlama **değiştiriciler** özelliğini **korumalı**. Bu devralınan formlar için mümkün kılar **Form1** özelliklerini değiştirmek için **btnProtected**.  
-  
-4. Çift **Say Hello** için bir olay işleyicisi eklemek için Ekle düğmesine **tıklayın** olay.  
-  
-5. Olay işleyicisine aşağıdaki kod satırını ekleyin:  
-  
-    ```vb  
-    MessageBox.Show("Hello, World!")  
-    ```  
-  
-    ```csharp  
-    MessageBox.Show("Hello, World!");  
-    ```  
-  
-#### <a name="to-add-a-button-that-cannot-be-modified-by-inheritors-of-the-base-form"></a>Taban formun devralanlar tarafından değiştirilemez bir düğme eklemek için  
-  
-1. Tıklayarak Tasarım görünümüne geç **Form1.vb [Design], Form1.cs [Design] veya [Design] Form1.jsl** Kod Düzenleyicisi'ni yukarıda veya F7'ye basarak sekmesi.  
-  
-2. İkinci bir düğme ekleyin ve özelliklerini aşağıdaki gibi ayarlayın:  
-  
-    - Ayarlama **metin** özelliğini **Say güle güle**.  
-  
-    - Ayarlama **(ad)** özelliğini **btnPrivate**.  
-  
-    - Ayarlama **değiştiriciler** özelliğini **özel**. Bu, devralınan formlar olanaksız kılar **Form1** özelliklerini değiştirmek için **btnPrivate**.  
-  
-3. Çift **Say güle güle** için bir olay işleyicisi eklemek için Ekle düğmesine **tıklayın** olay. Aşağıdaki kod satırını olay yordamda yerleştirin:  
-  
-    ```vb  
-    MessageBox.Show("Goodbye!")  
-    ```  
-  
-    ```csharp  
-    MessageBox.Show("Goodbye!");  
-    ```  
-  
-4. Gelen **derleme** menüsünde seçin **derleme BaseForm Kitaplığı** sınıf kitaplığı oluşturmak için.  
-  
-     Kitaplığı oluşturulduktan sonra yeni oluşturduğunuz formundan devralan yeni bir proje oluşturabilirsiniz.  
-  
-#### <a name="to-create-a-project-containing-a-form-that-inherits-from-the-base-form"></a>Taban form devralan bir formu içeren bir proje oluşturmak için  
-  
-1. Gelen **dosya** menüsünde seçin **Ekle** ardından **yeni proje** açmak için **Yeni Proje Ekle** iletişim kutusu.  
-  
-2. Adlı bir Windows Forms uygulaması oluşturma `InheritanceTest`.  
-  
-#### <a name="to-add-an-inherited-form"></a>Devralınmış bir form eklemek için  
-  
-1. İçinde **Çözüm Gezgini**, sağ **InheritanceTest** proje, select **Ekle**ve ardından **yeni öğe**.  
-  
-2. İçinde **Yeni Öğe Ekle** iletişim kutusunda **Windows Forms** kategorisi (kategori listesi varsa) ve ardından **devralınan Form** şablonu.  
-  
-3. Varsayılan adı bırakın `Form2` ve ardından **Ekle**.  
-  
-4. İçinde **devralma Seçici** iletişim kutusunda **Form1** gelen **BaseFormLibrary** devralır ve form olarak proje **Tamam** .  
-  
-     Bu, bir formda oluşturur **InheritanceTest** biçiminde türetildiği proje **BaseFormLibrary**.  
-  
-5. Devralınan form açın (**Form2**) zaten açık değilse, çift tıklayarak tasarımcıda.  
-  
-     Tasarımcıda devralınan düğmeleri sahip bir simge (![Visual Basic kalıtımı simgesinin görüntüsü.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)), devralınan belirten kendi üst köşedeki.  
-  
-6. Seçin **Say Hello** düğmesine tıklayın ve yeniden boyutlandırma tutamaçları gözlemleyin. Bu düğme korunduğu devralanlar taşıyabilir, yeniden boyutlandırabilir, kendi başlığını değiştirme ve diğer değişiklikleri yapın.  
-  
-7. Özel seçin **Say güle güle** düğmesi ve yeniden boyutlandırma tutamaçları yok dikkat edin. Buna ek olarak **özellikleri** penceresinde bu düğmenin özelliklerini gri bunlar değiştirilemez belirtmek için.  
-  
-8. Visual C# kullanıyorsanız:  
-  
-    1. İçinde **Çözüm Gezgini**, sağ **Form1** içinde **InheritanceTest** proje ve ardından **Sil**. Görüntülenen ileti kutusunda **Tamam** silme işlemini onaylamak için.  
-  
-    2. Program.cs dosyasını açın ve satırını `Application.Run(new Form1());` için `Application.Run(new Form2());`.  
-  
-9. İçinde **Çözüm Gezgini**, sağ **InheritanceTest** seçin ve proje **başlangıç projesi olarak ayarla**.  
-  
-10. İçinde **Çözüm Gezgini**, sağ **InheritanceTest** seçin ve proje **özellikleri**.  
-  
-11. İçinde **InheritanceTest** özellik sayfalarını **Başlangıç nesnesi** devralınan form olması (**Form2**).  
-  
-12. Uygulamayı çalıştırmak ve devralınan form davranışını gözlemlemek için F5 tuşuna basın.  
-  
-## <a name="next-steps"></a>Sonraki Adımlar  
- Kullanıcı denetimleri için devralma kadar aynı şekilde çalışır. Yeni bir sınıf kitaplığı projesi açın ve bir kullanıcı denetimi ekleyin. Bağlı denetimler üzerindeki yerleştirin ve projeyi derleyin. Başka bir yeni sınıf kitaplığı projesi açın ve derlenmiş sınıf kitaplığına bir başvuru ekleyin. Ayrıca, devralınan bir denetim ekleyerek deneyin (aracılığıyla **yeni öğe ekleme** iletişim kutusu) projeye ve kullanarak **devralma Seçici**. Bir kullanıcı denetimi eklemek ve değiştirmek `Inherits` (`:` Visual C#) deyimi. Daha fazla bilgi için [nasıl yapılır: Windows Form devralma](how-to-inherit-windows-forms.md).  
-  
+> Tüm denetimler temel formdan Görsel devralmayı desteklemez. Aşağıdaki denetimler bu kılavuzda açıklanan senaryoyu desteklemez:
+>
+>  <xref:System.Windows.Forms.WebBrowser>
+>
+>  <xref:System.Windows.Forms.ToolStrip>
+>
+>  <xref:System.Windows.Forms.ToolStripPanel>
+>
+>  <xref:System.Windows.Forms.TableLayoutPanel>
+>
+>  <xref:System.Windows.Forms.FlowLayoutPanel>
+>
+>  <xref:System.Windows.Forms.DataGridView>
+>
+>  Devralınan form içindeki bu denetimler her zaman, kullandığınız değiştiricilere (`private`, `protected`, veya `public`) bakılmaksızın salt okunurdur.
+
+## <a name="create-a-class-library-project-containing-a-base-form"></a>Temel form içeren bir sınıf kitaplığı projesi oluşturma
+
+1. Visual Studio 'da, **Dosya** menüsünden **Yeni** > **Proje** ' yi seçerek **Yeni proje** iletişim kutusunu açın.
+
+2. Adlı `BaseFormLibrary`bir Windows Forms uygulaması oluşturun.
+
+3. Standart bir Windows Forms uygulaması yerine bir sınıf kitaplığı oluşturmak için, **Çözüm Gezgini**, **BaseFormLibrary** proje düğümüne sağ tıklayın ve ardından **Özellikler**' i seçin.
+
+4. Projenin özelliklerinde, **çıkış türünü** **Windows uygulamasından** **sınıf kitaplığı**olarak değiştirin.
+
+5. **Dosya** menüsünde **Tümünü Kaydet** ' i seçerek projeyi ve dosyaları varsayılan konuma kaydedin.
+
+ Sonraki iki yordam, temel forma düğme ekler. Görsel devralmayı göstermek için, `Modifiers` özelliklerini ayarlayarak düğmelere farklı erişim düzeyleri verirsiniz.
+
+## <a name="add-a-button-that-inheritors-of-the-base-form-can-modify"></a>Temel formun devralanıların değiştirebileceği bir düğme Ekle
+
+1. Tasarımcıda **Form1** ' i açın.
+
+2. Forma düğme eklemek için **araç kutusunun** **tüm Windows Forms** sekmesinde **düğme** ' ye çift tıklayın. Düğmeyi konumlandırmak ve yeniden boyutlandırmak için fareyi kullanın.
+
+3. Özellikler penceresi, düğmenin aşağıdaki özelliklerini ayarlayın:
+
+    - **Text** özelliğini **Hello**olarak ayarlayın.
+
+    - **(Name)** özelliğini **btnProtected**olarak ayarlayın.
+
+    - **Değiştiriciler** özelliğini **korumalı**olarak ayarlayın. Bu, **Form1** 'ten kalıtımla alan formların **btnProtected**'nin özelliklerini değiştirmesine olanak tanır.
+
+4. Tıklama olayına bir olay işleyicisi eklemek için, **Merhaba** **'** a çift tıklayın.
+
+5. Aşağıdaki kod satırını olay işleyicisine ekleyin:
+
+    ```vb
+    MessageBox.Show("Hello, World!")
+    ```
+
+    ```csharp
+    MessageBox.Show("Hello, World!");
+    ```
+
+## <a name="add-a-button-that-cannot-be-modified-by-inheritors-of-the-base-form"></a>Temel formun ınherıtors tarafından değiştirilemeyen bir düğme ekleyin
+
+1. Kod düzenleyicisinin üzerindeki **Form1. vb [Design], Form1.cs [Design] veya Form1. jsl [Design** ] sekmesine tıklayarak ya da F7 tuşuna basarak Tasarım görünümüne geçiş yapın.
+
+2. İkinci bir düğme ekleyin ve özelliklerini aşağıdaki gibi ayarlayın:
+
+    - **Metin** özelliğini, **güle söylemek**için ayarlayın.
+
+    - **(Ad)** özelliğini **btnPrivate**olarak ayarlayın.
+
+    - **Değiştiriciler** özelliğini **özel**olarak ayarlayın. Bu, **Form1** 'ten kalıtımla alan formların **btnPrivate**özelliklerinin değiştirilmesini olanaksız hale getirir.
+
+3. **Tıklama** olayına bir olay işleyicisi eklemek için **söyleyin** düğmesine çift tıklayın. Aşağıdaki kod satırını olay yordamına yerleştirin:
+
+    ```vb
+    MessageBox.Show("Goodbye!")
+    ```
+
+    ```csharp
+    MessageBox.Show("Goodbye!");
+    ```
+
+4. Sınıf kitaplığını derlemek için **Build (oluştur** ) menüsünde **BaseForm kitaplığı** ' nı seçin.
+
+     Kitaplık derlendikten sonra, yeni oluşturduğunuz formdan devralan yeni bir proje oluşturabilirsiniz.
+
+## <a name="create-a-project-containing-a-form-that-inherits-from-the-base-form"></a>Temel formdan devralan form içeren bir proje oluşturma
+
+1. **Yeni Proje Ekle** iletişim kutusunu açmak için **Dosya** menüsünden **Ekle** ve **Yeni proje** ' yi seçin.
+
+2. Adlı `InheritanceTest`bir Windows Forms uygulaması oluşturun.
+
+## <a name="add-an-inherited-form"></a>Devralınan form ekleme
+
+1. **Çözüm Gezgini**, **InheritanceTest** projesine sağ tıklayın, **Ekle**' yi seçin ve ardından **Yeni öğe**' yi seçin.
+
+2. **Yeni öğe Ekle** iletişim kutusunda **Windows Forms** kategorisini seçin (kategori listeniz varsa) ve ardından **devralınan form** şablonunu seçin.
+
+3. Varsayılan adını `Form2` bırakın ve **Ekle**' ye tıklayın.
+
+4. **Devralma Seçicisi** iletişim kutusunda, **BaseFormLibrary** projesinden öğesinden devralınacak form olarak **Form1** ' i seçin ve **Tamam**' a tıklayın.
+
+     Bu, **BaseFormLibrary**biçimindeki formdan türetilen **InheritanceTest** projesinde bir form oluşturur.
+
+5. Zaten açık değilse, tasarımcıda devralınan formu (**Form2**) çift tıklayarak açın.
+
+     Tasarımcıda, devralınan düğmelerin bir sembolü vardır (![Visual Basic devralma sembolünün ekran görüntüsü.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) üst köşede devralındığını gösterir.
+
+6. **Merhaba deyin** düğmesini seçin ve yeniden boyutlandırma tutamaçlarını gözlemleyin. Bu düğme korunduğundan, devracılar onu taşıyabilir, yeniden boyutlandırabilir, resim yazısını değiştirebilir ve başka değişiklikler yapabilir.
+
+7. Özel **söyleyin** düğmesini seçin ve yeniden boyutlandırma tutamaçları olmadığına dikkat edin. Ayrıca, **Özellikler** penceresinde bu düğmenin özellikleri, değiştirilmeyeceğini belirtmek için gridir.
+
+8. Görsel C#kullanıyorsanız:
+
+    1. **Çözüm Gezgini**, **InheritanceTest** projesinde **Form1** öğesine sağ tıklayın ve ardından **Sil**' i seçin. Görüntülenen ileti kutusunda, silme işlemini onaylamak için **Tamam** ' ı tıklatın.
+
+    2. Program.cs dosyasını açın ve satırı `Application.Run(new Form1());` olarak `Application.Run(new Form2());`değiştirin.
+
+9. **Çözüm Gezgini**, **InheritanceTest** projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
+
+10. **Çözüm Gezgini**, **InheritanceTest** projesine sağ tıklayın ve **Özellikler**' i seçin.
+
+11. **InheritanceTest** özelliği sayfalarında, **Başlangıç nesnesini** devralınan form (**Form2**) olarak ayarlayın.
+
+12. **F5** tuşuna basarak uygulamayı çalıştırın ve devralınan formun davranışını gözlemleyin.
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+Kullanıcı denetimleri için devralma de aynı şekilde çalışmaktadır. Yeni bir sınıf kitaplığı projesi açın ve bir kullanıcı denetimi ekleyin. Bileşen denetimlerini üzerine yerleştirin ve projeyi derleyin. Başka bir yeni sınıf kitaplığı projesi açın ve derlenen sınıf kitaplığına bir başvuru ekleyin. Ayrıca, projeye devralınan bir denetim eklemeyi ( **yeni öğeler Ekle** iletişim kutusu aracılığıyla) ve **Devralma seçicisini**kullanmayı deneyin. Bir kullanıcı denetimi ekleyin ve `Inherits` (`:` görsel C#olarak) ekstresini değiştirin. Daha fazla bilgi için [nasıl yapılır: Windows Forms](how-to-inherit-windows-forms.md)devralma.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Windows Form devralma](how-to-inherit-windows-forms.md)
+- [Nasıl yapılır: Windows Forms devralma](how-to-inherit-windows-forms.md)
 - [Windows Forms Görsel Devralma](windows-forms-visual-inheritance.md)
 - [Windows Forms](../index.md)

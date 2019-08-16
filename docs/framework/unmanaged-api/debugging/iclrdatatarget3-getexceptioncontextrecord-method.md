@@ -14,15 +14,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b43ab8cdeff3866bb51e8634f367cf86ee483d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07065b15f449c2bcb84df7bbdcce65d61de007ee
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698024"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038342"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>ICLRDataTarget3::GetExceptionContextRecord Metodu
-Hedef işlemle ilişkilendirilmiş bağlam kaydını almak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır. Örneğin, bir döküm hedef için bu aracılığıyla iletilen bağlam kaydı eşdeğer olacaktır `ExceptionParam` bağımsız değişkeni [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) işlev kitaplığında Windows hata ayıklama yardımcı (DbgHelp).  
+Hedef işlemle ilişkili bağlam kaydını almak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağırılır. Örneğin, bir döküm hedefi için, bu, Windows hata ayıklama Yardım Kitaplığı 'ndaki (dbghelp) `ExceptionParam` [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) işlevine bağımsız değişken aracılığıyla geçirilen bağlam kaydıyla eşdeğerdir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,36 +36,36 @@ HRESULT GetExceptionContextRecord(
   
 ## <a name="parameters"></a>Parametreler  
  `bufferSize`  
- [in] Giriş arabelleği bayt cinsinden boyutu. Bu bağlam kaydı tutabilecek kadar büyük olmalıdır.  
+ 'ndaki Giriş arabelleğinin bayt cinsinden boyutu. Bu, bağlam kaydına uyum sağlayacak kadar büyük olmalıdır.  
   
  `bufferUsed`  
- [out] Bir işaretçi bir `ULONG32` gerçekte arabelleğe yazılan bayt sayısı alan türü.  
+ dışı Gerçekte arabelleğe yazılan bayt `ULONG32` sayısını alan türe yönelik bir işaretçi.  
   
  `buffer`  
- [out] Bağlam kaydını bir kopyasını alır bir ara belleğe yönelik işaretçi. Özel durum kaydını olarak döndürülen bir [bağlam](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) türü.  
+ dışı Bağlam kaydının bir kopyasını alan bir bellek arabelleği işaretçisi. Özel durum kaydı, [bağlam](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) türü olarak döndürülür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Dönüş değeri `S_OK` başarı veya hata üzerinde `HRESULT` kodu. `HRESULT` Kodları içerebilir ancak şu şekilde sınırlı değildir:  
+ Dönüş değeri `S_OK` başarılı veya hata durumunda hata `HRESULT` kodu. `HRESULT` Kodlar şunlar olabilir ancak bunlarla sınırlı değildir:  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
-|`S_OK`|Yöntem başarılı oldu. Bağlam kaydı için çıkış arabelleği kopyalandı.|  
-|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|Hedefle ilişkili hiçbir bağlam kaydıdır.|  
-|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|Giriş arabelleği boyutu, bağlam kaydı tutabilecek kadar büyük değil.|  
+|`S_OK`|Yöntem başarılı oldu. Bağlam kaydı çıkış arabelleğine kopyalanmış.|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|Hedefle ilişkili bağlam kaydı yok.|  
+|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|Giriş arabelleği boyutu, bağlam kaydına uyum sağlayacak kadar büyük değil.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [BAĞLAM](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) olan Windows SDK'sı tarafından sağlanan üstbilgileri içinde tanımlanan bir platforma özgü yapısı.  
+ [Bağlam](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) , Windows SDK tarafından belirtilen üst bilgilerde tanımlanan platforma özgü bir yapıdır.  
   
- Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.  
+ Bu yöntem, hata ayıklama uygulamasının yazarı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** ClrData.idl, ClrData.h  
+ **Üst bilgi** ClrData. IDL, ClrData. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

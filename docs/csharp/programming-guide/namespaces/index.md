@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 79b7057b1f6a9cdba2215124160b28efb9a1c0be
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cf5a7f239cf7d3cd3a6e39f31d16adb830646afc
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629527"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039487"
 ---
 # <a name="namespaces-c-programming-guide"></a>Ad Alanları (C# Programlama Kılavuzu)
 
@@ -42,15 +42,14 @@ Ad alanları aşağıdaki özelliklere sahiptir:
 - `using` Yönergesi, her sınıf için ad alanının adını belirtmek için gereksinimi obviates.  
 - Ad alanı "root" ad alanıdır: `global::System` her zaman .net <xref:System> ad alanına başvurur. `global`  
 
-## <a name="c-language-specification"></a>C# Dil Belirtimi
+## <a name="c-language-specification"></a>C# dili belirtimi
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [ad alanları](~/_csharplang/spec/namespaces.md) bölümüne bakın.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
 - [Ad Alanlarını Kullanma](using-namespaces.md)
-- [Nasıl yapılır: Genel ad alanı diğer adını kullan](how-to-use-the-global-namespace-alias.md)
 - [Nasıl yapılır: My Namespace 'i kullanma](how-to-use-the-my-namespace.md)
 - [Tanımlayıcı adları](../inside-a-program/identifier-names.md)
 - [using Yönergesi](../../language-reference/keywords/using-directive.md)

@@ -2,45 +2,48 @@
 title: WCF Geliştirme Araçlarını Kullanma
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: 1ffa3be4a6b8976ab978ea995e8b2c1faaacf0ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef20d13ade41992e6babc0ebb3a985aabb686ed3
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051721"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040417"
 ---
 # <a name="using-the-wcf-development-tools"></a>WCF Geliştirme Araçlarını Kullanma
-Bu bölümde, WCFservice geliştirmenize yardımcı olabilecek Visual Studio geliştirme araçları açıklanmaktadır.  
+Bu bölümde, WCFservice 'nizi geliştirirken size yardımcı olabilecek Visual Studio geliştirme araçları açıklanmaktadır.  
   
- Visual Studio şablonları, kendi hizmetinizi hızla oluşturmak için bir temel kullanın. sonra hizmeti test etmek ve hata ayıklama için WCF hizmet otomatik konağı ve WCF Test İstemcisi'nı kullanın. Bu araçlar birlikte hızlı ve sorunsuz hata ayıklama ve test döngüsünü sağlamak ve bir barındırma modeli için erken bir aşamada işleme gerek kullanımını.  
+ Kendi hizmetinizi hızlı bir şekilde oluşturmak için Visual Studio şablonlarını temel olarak kullanabilir, sonra da hizmetinize hata ayıklamak ve test etmek için WCF hizmeti otomatik ana bilgisayarı ve WCF test Istemcisi kullanabilirsiniz. Bu araçlar birlikte hızlı ve sorunsuz bir hata ayıklama ve test çevrimi sağlar ve bir barındırma modeline erken bir aşamada yürütülmesi gereksinimini ortadan kaldırın.  
+ 
+ > [!NOTE]
+ > Visual Studio 2017 ' den itibaren, WCF geliştirme araçları varsayılan olarak yüklenmez. Bu özellikleri kullanabilmeniz için, Visual Studio yükleyicisinde Windows Communication Foundation bileşeninin seçili olduğundan emin olmanız gerekir.
   
-## <a name="the-wcf-developer-tools"></a>WCF geliştirici araçları  
+## <a name="the-wcf-developer-tools"></a>WCF Geliştirici Araçları  
  [WCF Visual Studio Şablonları](../../../docs/framework/wcf/wcf-vs-templates.md)  
   
- WCF hizmetleri ve kapsayıcı uygulamaları hızlıca oluşturmak için Visual Studio'da önceden tanımlanmış Visual Studio'nun proje ve öğe şablonlarını kullanabilirsiniz.  
+ Visual Studio 'da önceden tanımlanmış Visual Studio projesi ve öğe şablonlarını kullanarak WCF Hizmetleri ve çevreleyen uygulamalar oluşturabilirsiniz.  
   
  [WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
   
- WCF hizmet otomatik ana bilgisayarı (WcfSvcHost.exe), Visual Studio hata ayıklayıcıyı otomatik olarak ana bilgisayar ve uyguladıysanız bir hizmeti test etmek için (F5) başlatmak sağlar. Sonra hizmeti bulun ve olası hataları düzeltmek için WCF Test İstemcisi (wcfTestClient.exe) veya kendi istemci kullanarak test edebilirsiniz.  
+ WCF hizmeti otomatik ana makinesi (WcfSvcHost. exe), uyguladık bir hizmeti otomatik olarak barındırmak ve test etmek için Visual Studio hata ayıklayıcısını (F5) başlatmanıza olanak tanır. Ardından, olası hataları bulmak ve onarmak için WCF test Istemcisi (wcfTestClient. exe) veya kendi istemcinizi kullanarak hizmeti test edebilirsiniz.  
   
  [WCF Test İstemcisi (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)  
   
- WCF Test İstemcisi (WcfTestClient.exe) giriş parametreleri rastgele türler, hizmet ve hizmet yanıtı geri gönderir görünümü girdi gönderme olanak tanıyan bir GUI aracıdır. Bu test WCF hizmet otomatik konağı ile birleştirildiğinde deneyimi sorunsuz bir hizmet sağlar.  
+ WCF test Istemcisi (WcfTestClient. exe), rastgele türlerin parametrelerini girmenize, bu girişi hizmete göndermenize ve hizmetin geri gönderdiği yanıtı görüntülemenize olanak tanıyan bir GUI aracıdır. WCF hizmeti otomatik ana bilgisayarı ile birleştirildiğinde sorunsuz bir hizmet testi deneyimi sağlar.  
   
  [XML'den Veri Türü Sınıfları Oluşturma](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
   
- XML verileri Pano'ya depolanan bir kod sayfasına yapıştırılabilir. Verilerde tanımlanan sınıflar için kod türleri dönüştürülür.  
+ Panoda depolanan XML verileri, bir kod sayfasına yapıştırılabilir. Verilerde tanımlanan sınıflar kod türlerine dönüştürülür.  
   
-## <a name="using-the-tools-without-administrator-privilege"></a>Yönetici ayrıcalığı olmayan araçları kullanarak  
- WCF hizmetleri geliştirmek yönetici ayrıcalığı olmayan kullanıcıların etkinleştirmek için bir ACL (erişim denetim listesi) için ad alanı oluşturulan "http://+:8731/Design_Time_Addresses" Visual Studio yüklemesi sırasında. ACL makinede oturum açan tüm etkileşimli kullanıcılar içerir (UI) için ayarlanır. Yöneticiler ekleyin veya bu ACL'SİNDEN kaldırmasına veya ek bağlantı noktalarını açın. Bu ACL, varsayılan yapılandırmasında veri alıp göndermek WCF veya WF şablonları sağlar. Ayrıca, kullanıcıların yönetici ayrıcalıkları vermeden WCF hizmet otomatik ana bilgisayarı (wcfSvcHost.exe) kullanmasını sağlar.  
+## <a name="using-the-tools-without-administrator-privilege"></a>Araçları yönetici olmadan kullanma ayrıcalığı  
+ Yönetici ayrıcalıkları olmayan kullanıcıların WCF Hizmetleri geliştirmesine olanak tanımak için, Visual Studio yüklemesi sırasında "http://+:8731/Design_Time_Addresses" ad alanı için bir ACL (Access Control listesi) oluşturulur. ACL, makinede oturum açmış tüm etkileşimli kullanıcıları içeren (UI) olarak ayarlanır. Yöneticiler bu ACL 'ye kullanıcı ekleyebilir veya kaldırabilir veya ek bağlantı noktaları açabilir. Bu ACL, WCF veya WF şablonlarının varsayılan yapılandırmasında veri göndermesini ve almasını sağlar. Ayrıca, kullanıcıların, yönetici ayrıcalıkları vermeden WCF hizmeti otomatik ana bilgisayarını (wcfSvcHost. exe) kullanmasına de olanak sağlar.  
   
- İçinde Netsh.exe aracını kullanarak erişimi değiştirebilirsiniz [!INCLUDE[wv](../../../includes/wv-md.md)] yükseltilmiş yönetici hesabı altında. Netsh.exe kullanmaya bir örnek verilmiştir.  
+ Erişimi, yükseltilmiş yönetici hesabı altında bulunan [!INCLUDE[wv](../../../includes/wv-md.md)] Netsh. exe aracını kullanarak değiştirebilirsiniz. Netsh. exe ' nin kullanılmasına bir örnek aşağıda verilmiştir.  
   
 ```  
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   
- Netsh.exe hakkında daha fazla bilgi için bkz: [Netsh.exe aracı ve komut satırı anahtarları nasıl kullanılacağını](https://go.microsoft.com/fwlink/?LinkId=97877).  
+ Netsh. exe hakkında daha fazla bilgi için bkz. [netsh. exe aracını ve komut satırı anahtarlarını kullanma](https://go.microsoft.com/fwlink/?LinkId=97877).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,45 +6,43 @@ helpviewer_keywords:
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 9249eef281237f61d103a7c865042aafe537dea5
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: b63bcd9e5e357db350cc2987e09af84eb58bdcff
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960224"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039408"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ListView Denetimindeki Öğeleri Gruplandırma
 
-Gruplandırma özelliğini de <xref:System.Windows.Forms.ListView> gruplarında öğe ilgili kümeleri görüntülemek, denetim olanağı sağlar. Bu grupları ekranda grup başlıklarını içeren yatay grup üstbilgileri tarafından ayrılır. Kullanabileceğiniz <xref:System.Windows.Forms.ListView> öğeleri alfabetik olarak tarih veya diğer bir mantıksal gruplama gruplandırarak büyük listeler daha kolay gezinme olmak için grupları. Aşağıdaki görüntüde, bazı gruplandırılmış öğeler gösterilmektedir:
+<xref:System.Windows.Forms.ListView> Denetimin gruplandırma özelliği, gruplar içindeki ilgili öğe kümelerini görüntülemenizi sağlar. Bu gruplar, grup başlıklarını içeren yatay grup üst bilgilerine göre ekranda ayrılır. Öğeleri alfabetik olarak <xref:System.Windows.Forms.ListView> , tarihe göre veya diğer mantıksal gruplandırmalara göre gruplandırarak büyük listeleri daha kolay gezinmek için grupları kullanabilirsiniz. Aşağıdaki görüntüde bazı gruplanmış öğeler gösterilmektedir:
 
-![Sayı tek ve çift gruplar halinde ayrılmış.](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)
+![Tek ve hatta gruplara ayrılmış sayılar.](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)
 
-Aşağıdaki yordam gerektirir bir **Windows uygulama** proje içeren bir form içeren bir <xref:System.Windows.Forms.ListView> denetimi. Bu tür bir proje ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir Windows Forms uygulaması projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project) ve [nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md).
+Aşağıdaki yordam, bir <xref:System.Windows.Forms.ListView> denetim içeren bir form ile **Windows uygulama** projesi gerektirir. Böyle bir projeyi ayarlama hakkında daha fazla bilgi için bkz [. nasıl yapılır: Windows Forms bir uygulama projesi](/visualstudio/ide/step-1-create-a-windows-forms-application-project) oluşturun ve [şunları yapın: Windows Forms](how-to-add-controls-to-windows-forms.md)denetimleri ekleyin.
 
-Gruplandırma etkinleştirmek için önce bir veya daha fazla oluşturmalısınız <xref:System.Windows.Forms.ListViewGroup> Tasarımcısı'nda veya programlama yoluyla nesneleri. Bir grubu oluşturulduktan sonra öğeleri atayabilirsiniz.
+Gruplamayı etkinleştirmek için önce tasarımcıda veya program aracılığıyla bir veya daha <xref:System.Windows.Forms.ListViewGroup> fazla nesne oluşturmanız gerekir. Bir grup tanımlandıktan sonra, ona öğe atayabilirsiniz.
 
 > [!NOTE]
-> <xref:System.Windows.Forms.ListView> gruplar yalnızca [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] uygulamanızı çağırdığında <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi. Önceki işletim sistemlerinde herhangi bir kod gruplarına ilgili hiçbir etkisi yoktur ve grupları görüntülenmez. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>.
->
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> <xref:System.Windows.Forms.ListView>gruplar yalnızca [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] uygulamanız <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi çağırdığında kullanılabilir. Önceki işletim sistemlerinde, gruplarla ilgili herhangi bir kodun etkisi yoktur ve gruplar görünmez. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>.
 
-### <a name="to-add-or-remove-groups-in-the-designer"></a>Ekleme veya tasarımcıda grupları kaldırma
+## <a name="to-add-or-remove-groups-in-the-designer"></a>Tasarımcıda grup eklemek veya kaldırmak için
 
-1. İçinde **özellikleri** penceresinde tıklayın **üç nokta** (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/visual-studio-ellipsis-button.png)) düğmesinin yanındaki <xref:System.Windows.Forms.ListView.Groups%2A> özelliği .
+1. **Özellikler** penceresinde,![ özelliğin<xref:System.Windows.Forms.ListView.Groups%2A> yanındaki Visual Studio](./media/visual-studio-ellipsis-button.png)'nun Özellikler penceresi (...) üç nokta (...) düğmesine tıklayın.
 
-     **ListViewGroup Koleksiyonu Düzenleyicisi** görünür.
+     **ListViewGroup koleksiyonu Düzenleyicisi** görünür.
 
-2. Bir grup eklemek için tıklatın **Ekle** düğmesi. Ardından, yeni grup özellikleri gibi ayarlayabilirsiniz <xref:System.Windows.Forms.ListViewGroup.Header%2A> ve <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A> özellikleri. Bir grubu kaldırmak için onu seçin ve **Kaldır** düğmesi.
+2. Bir grup eklemek için **Ekle** düğmesine tıklayın. Daha sonra, <xref:System.Windows.Forms.ListViewGroup.Header%2A> ve <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A> özellikleri gibi yeni grubun özelliklerini ayarlayabilirsiniz. Bir grubu kaldırmak için, seçin ve **Kaldır** düğmesine tıklayın.
 
-### <a name="to-assign-items-to-groups-in-the-designer"></a>Öğeleri Tasarımcısı'nda gruplara atamak için
+## <a name="to-assign-items-to-groups-in-the-designer"></a>Tasarımcı 'daki gruplara öğe atamak için
 
-1. İçinde **özellikleri** penceresinde tıklayın **üç nokta** (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/visual-studio-ellipsis-button.png)) düğmesinin yanındaki <xref:System.Windows.Forms.ListView.Items%2A> özelliği .
+1. **Özellikler** penceresinde,![ özelliğin<xref:System.Windows.Forms.ListView.Items%2A> yanındaki Visual Studio](./media/visual-studio-ellipsis-button.png)'nun Özellikler penceresi (...) üç nokta (...) düğmesine tıklayın.
 
-     **ListViewItem Koleksiyonu Düzenleyicisi** görünür.
+     **ListViewItem koleksiyonu Düzenleyicisi** görünür.
 
-2. Yeni bir öğe eklemek için tıklatın **Ekle** düğmesi. Yeni öğenin özelliklerini aşağıdaki gibi ayarlayabilirsiniz <xref:System.Windows.Forms.ListViewItem.Text%2A> ve <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> özellikleri.
+2. Yeni bir öğe eklemek için **Ekle** düğmesine tıklayın. Ardından, <xref:System.Windows.Forms.ListViewItem.Text%2A> ve <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> özellikleri gibi yeni öğenin özelliklerini ayarlayabilirsiniz.
 
-3. Seçin <xref:System.Windows.Forms.ListViewItem.Group%2A> özelliği ve aşağı açılan listeden bir grubu seçin.
+3. <xref:System.Windows.Forms.ListViewItem.Group%2A> Özelliği seçin ve açılan listeden bir grup seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -53,4 +51,4 @@ Gruplandırma etkinleştirmek için önce bir veya daha fazla oluşturmalısın�
 - <xref:System.Windows.Forms.ListViewGroup>
 - [ListView Denetimi](listview-control-windows-forms.md)
 - [ListView Denetimine Genel Bakış](listview-control-overview-windows-forms.md)
-- [Nasıl yapılır: Windows Forms ListView denetimi ile öğe ekleyip](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms ListView denetimiyle öğe ekleme ve kaldırma](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

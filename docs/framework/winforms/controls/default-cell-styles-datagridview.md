@@ -7,58 +7,56 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 54ed74c7738b6b7eb2844dfb1e2c865dbed7208e
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 53faf31c8dd3be1606c491e95594c4aae5aedf98
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959437"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039666"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimi İçin Varsayılan Hücre Stilleri ve Veri Biçimleri Ayarlama
 
-<xref:System.Windows.Forms.DataGridView> Varsayılan hücre stilleri belirtmek ve veri biçimleri eksiksiz bir denetim için belirli sütunları için satır ve sütun üstbilgilerinin ve alternatif bir kayıt defteri etkisi oluşturmak için satırlar için hücre denetimi sağlar. Tüm denetim için ayarlanmış varsayılan stillerini stilleri değişen satırları ve sütunları için varsayılan tarafından geçersiz kılınır. Ayrıca, tek tek satırların ve hücrelerin kodunu kümesindeki stilleri varsayılan stillerini geçersiz kılar.
+<xref:System.Windows.Forms.DataGridView> Denetim, tüm denetim için varsayılan hücre stillerini ve hücre veri biçimlerini, belirli sütunlarda, satır ve sütun üstbilgilerini ve farklı satırların bir muhasebe etkisi oluşturmasını sağlar. Tüm denetim için ayarlanan varsayılan stiller, sütunlar ve alternatif satırlar için ayarlanan varsayılan stiller tarafından geçersiz kılınır. Ayrıca, ayrı satırlar ve hücreler için kodda ayarladığınız stiller varsayılan stilleri geçersiz kılar.
 
-Hücre stilleri hakkında daha fazla bilgi için bkz: [Windows Forms DataGridView denetimindeki hücre stilleri](cell-styles-in-the-windows-forms-datagridview-control.md). Alternatif satırlar için stil ayarlamak için bkz [nasıl yapılır: Windows Forms DataGridView Tasarımcısı'nı kullanarak denetimi için alternatif satır stillerini ayarlama](set-alternating-row-styles-for-the-datagrid-using-the-designer.md).
+Hücre stilleri hakkında daha fazla bilgi için [Windows Forms DataGridView Denetimindeki Hücre stilleri](cell-styles-in-the-windows-forms-datagridview-control.md)bölümüne bakın. Alternatif satırlara yönelik stiller ayarlamak için bkz [. nasıl yapılır: Tasarımcıyı](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)kullanarak Windows Forms DataGridView denetimi Için alternatif satır stillerini ayarlayın.
 
-Stilleri kullanarak da ayarlayabilirsiniz <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> denetimine eklenecek olan tüm satırları etkilemek için özellik. Satır şablonunu hakkında daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms DataGridView denetimindeki satırları özelleştirmek için satır şablonunu kullanma](use-the-row-template-to-customize-rows-in-the-datagrid.md).
+Ayrıca, denetime eklenecek tüm satırları etkilemek <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> için özelliğini kullanarak stilleri ayarlayabilirsiniz. Satır şablonu hakkında daha fazla bilgi için bkz [. nasıl yapılır: Windows Forms DataGridView Denetimindeki](use-the-row-template-to-customize-rows-in-the-datagrid.md)satırları özelleştirmek için satır şablonunu kullanın.
 
-Aşağıdaki yordamlar gerektiren bir **Windows uygulama** proje içeren bir form ile bir <xref:System.Windows.Forms.DataGridView> denetimi. Bu tür bir proje ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir Windows Forms uygulaması projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project) ve [nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md).
+Aşağıdaki yordamlarda bir <xref:System.Windows.Forms.DataGridView> denetim içeren bir form ile **Windows uygulama** projesi gerekir. Böyle bir projeyi ayarlama hakkında daha fazla bilgi için bkz [. nasıl yapılır: Windows Forms bir uygulama projesi](/visualstudio/ide/step-1-create-a-windows-forms-application-project) oluşturun ve [şunları yapın: Windows Forms](how-to-add-controls-to-windows-forms.md)denetimleri ekleyin.
 
-> [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>Denetimdeki tüm hücreler için varsayılan stillerini ayarlamak için
+### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>Denetimdeki tüm hücreler için varsayılan stilleri ayarlamak için
 
-1. Seçin <xref:System.Windows.Forms.DataGridView> Denetim Tasarımcısı'nda.
+1. <xref:System.Windows.Forms.DataGridView> Tasarımcıda denetimi seçin.
 
-2. İçinde **özellikleri** penceresinde üç nokta düğmesini (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/visual-studio-ellipsis-button.png)) yanındaki <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, veya <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> özellik. **CellStyle Oluşturucu** iletişim kutusu görüntülenir.
+2. **Özellikler** penceresinde![,, veya <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>özelliğininyanındaki](./media/visual-studio-ellipsis-button.png) <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>üç nokta düğmesini (Visual Studio Özellikler penceresi) (...) tıklayın. <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> **CellStyle Builder** iletişim kutusu görüntülenir.
 
-3. Stil kullanarak özelliklerini ayarlayarak tanımlamak **Önizleme** bölmesinde seçimlerinizi onaylayın.
+3. Seçimlerinizi onaylamak için **Önizleme** bölmesini kullanarak özellikleri ayarlayarak stili tanımlayın.
 
 > [!NOTE]
-> Görsel stiller etkinleştirilirse, satır ve sütun üst bilgilerinin (dışında <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) otomatik olarak geçerli tema tarafından stillere geçersiz kılma <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> ve <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> özellik değerleri.
+> Görsel stiller etkinleştirilmişse, satır ve sütun başlıkları (hariç <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) otomatik olarak geçerli Tema tarafından stillendirilmiş <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> ve <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> özellik değerlerini geçersiz kılar.
 >
-> Seçilen birden fazla hücre stilleri ayarlayabilirsiniz <xref:System.Windows.Forms.DataGridView> değiştirmek istediğiniz hücreyi stil özelliği için aynı değerlere sahiptirler ancak Tasarımcı kullanılarak denetler. Bu özellik için bir hücre stilleri farklıysa **özellikleri** windows **CellStyle Oluşturucu** iletişim kutusu boş olacaktır.
+> Tasarımcıyı kullanarak seçilen <xref:System.Windows.Forms.DataGridView> birden fazla denetim için hücre stilleri ayarlayabilirsiniz, ancak yalnızca değiştirmek istediğiniz hücre stili özelliği için özdeş değerler varsa. Bu özellik için herhangi bir hücre stili farklıysa, **CellStyle Builder** Iletişim kutusunun **Özellikler** penceresi boş olur.
 
-### <a name="to-set-default-styles-for-cells-in-individual-columns"></a>Tek tek sütunlardaki varsayılan hücre stillerini ayarlama
+### <a name="to-set-default-styles-for-cells-in-individual-columns"></a>Tek sütunlardaki hücrelerin varsayılan stillerini ayarlamak için
 
-1. Sağ <xref:System.Windows.Forms.DataGridView> seçin ve Denetim Tasarımcısı'nda **sütunları Düzenle**.
+1. Tasarımcıda <xref:System.Windows.Forms.DataGridView> denetime sağ tıklayın ve **Sütunları Düzenle**' yi seçin.
 
-2. Bir sütun seçin **seçili sütun** listesi.
+2. **Seçili sütunlar** listesinden bir sütun seçin.
 
-3. İçinde **sütun özellikleri** kılavuz, üç nokta düğmesini (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/visual-studio-ellipsis-button.png)) yanındaki <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> özelliği. **CellStyle Oluşturucu** iletişim kutusu görüntülenir.
+3. **Sütun özellikleri** kılavuzunda,![ <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> özelliğin yanındaki üç nokta düğmesini (Visual Studio](./media/visual-studio-ellipsis-button.png)'nun Özellikler penceresi) üç nokta düğmesine (...) tıklayın. **CellStyle Builder** iletişim kutusu görüntülenir.
 
-4. Stil kullanarak özelliklerini ayarlayarak tanımlamak **Önizleme** bölmesinde seçimlerinizi onaylayın.
+4. Seçimlerinizi onaylamak için **Önizleme** bölmesini kullanarak özellikleri ayarlayarak stili tanımlayın.
 
-### <a name="to-format-data-in-cells"></a>Hücrelerine veri biçimlendirmek için
+### <a name="to-format-data-in-cells"></a>Hücrelerdeki verileri biçimlendirmek için
 
-1. Görüntülemek için aşağıdaki yordamlardan birini kullanın bir **CellStyle Oluşturucu** iletişim kutusu için varsayılan hücre stili özellik ilgili.
+1. Bir varsayılan hücre stili özelliğiyle ilgili bir **CellStyle Builder** iletişim kutusu göstermek için Yukarıdaki yordamlardan birini kullanın.
 
-2. İçinde **CellStyle Oluşturucu** iletişim kutusunda, üç nokta düğmesini (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/visual-studio-ellipsis-button.png)) yanındaki <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> özelliği. **Biçim dizesi** iletişim kutusu görüntülenir.
+2. **CellStyle Builder** iletişim kutusunda,![ <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> özelliğin yanındaki üç nokta düğmesini (Visual Studio](./media/visual-studio-ellipsis-button.png)'nun Özellikler penceresi) tıklatın. **Biçim dizesi** iletişim kutusu görüntülenir.
 
-3. Biçim türü seçin ve ardından ayrıntılar (sayısı gibi görüntülenecek ondalık basamak), türün Değiştir kullanarak **örnek** kutusunu seçimlerinizi onaylayın.
+3. Bir biçim türü seçin, sonra, Seçimlerinizi onaylamak için **örnek** kutusunu kullanarak türün ayrıntılarını (örneğin, görüntülenecek ondalık basamak sayısı) değiştirin.
 
-4. Bağlıyorsanız <xref:System.Windows.Forms.DataGridView> null değerler içeremez, doldurmak büyük olasılıkla bir veri kaynağına denetim **Null değer** metin kutusu. Hücre değerini bir null başvuruya eşit olduğunda bu değeri görüntülenir (`Nothing` Visual Basic) veya <xref:System.DBNull.Value?displayProperty=nameWithType>.
+4. <xref:System.Windows.Forms.DataGridView> Denetimi null değerleri içermesi muhtemel bir veri kaynağına bağlıyorsanız **null değer** metin kutusunu girin. Bu değer, hücre değeri null başvuruya eşitse görüntülenir (`Nothing` Visual Basic) veya. <xref:System.DBNull.Value?displayProperty=nameWithType>
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -69,6 +67,6 @@ Aşağıdaki yordamlar gerektiren bir **Windows uygulama** proje içeren bir for
 - <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>
 - [Windows Forms DataGridView Denetimindeki Hücre Stilleri](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView Tasarımcısı'nı kullanarak denetimi için alternatif satır stillerini ayarlama](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
-- [Nasıl yapılır: Bir Windows Forms uygulaması projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md)
+- [Nasıl yapılır: Tasarımcıyı kullanarak Windows Forms DataGridView denetimi için alternatif satır stillerini ayarlama](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
+- [Nasıl yapılır: Windows Forms uygulama projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Nasıl yapılır: Windows Forms denetim ekleme](how-to-add-controls-to-windows-forms.md)

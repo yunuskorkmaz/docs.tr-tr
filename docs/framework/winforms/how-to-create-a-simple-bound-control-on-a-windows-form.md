@@ -5,46 +5,43 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 5c92b7bfd5026b0569397dc05cca216fbdab0753
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: ed1d0e423a3cdf77a242ec3214720f1466f65897
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689309"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039502"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Nasıl yapılır: Windows Forms’ta Basit Bağlantılı Denetim Oluşturma
 
-İle *basit bağlama*, tek bir veri öğesi, bir veri kümesi tablodaki bir sütun değeri gibi bir denetimi görüntüleme. Basit bir denetimin herhangi bir özelliği bir veri değerine bağlamak.
+*Basit bağlama*sayesinde, bir denetim içinde bir veri kümesi tablosundan sütun değeri gibi tek bir veri öğesi görüntüleyebilirsiniz. Bir denetimin herhangi bir özelliğini bir veri değerine basit bir şekilde bağlayabilirsiniz.
 
-> [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).
+### <a name="to-simple-bind-a-control"></a>Bir denetimi basit bağlamak için
 
-### <a name="to-simple-bind-a-control"></a>Basit-bağlama bir denetim için
+1. Bir veri kaynağına bağlanın. Daha fazla bilgi için bkz. [veri kaynağına bağlanma](../data/adonet/connecting-to-a-data-source.md).
 
-1. Bir veri kaynağına bağlanın. Daha fazla bilgi için [bir veri kaynağına bağlanma](../data/adonet/connecting-to-a-data-source.md).
+2. Formunda, denetimi seçin ve **Özellikler** penceresini görüntüleyin.
 
-2. Form denetimi seçin ve görüntüleme **özellikleri** penceresi.
+3. **(DataBindings)** özelliğini genişletin.
 
-3. Genişletin **(DataBindings)** özelliği.
+     En sık ciltleyen Özellikler **(DataBindings)** özelliğinin altında görüntülenir. Örneğin, çoğu denetimin **metin** özelliği en sık bağlanır.
 
-     Çoğunlukla ilişkili özellikleri altında görüntülenen **(DataBindings)** özelliği. Örneğin, çoğu denetim, **metin** özelliği sık bağlı.
+4. Bağlamak istediğiniz özellik, yaygın olarak bağlanan özelliklerden biri değilse, **(Gelişmiş)** kutusunda![](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png) **bulunan üç nokta düğmesine (Visual Studio Özellikler penceresi) (...) tıklayın. Biçimlendirme ve Gelişmiş bağlama** iletişim kutusu, bu denetimin özelliklerinin tamamı listesi.
 
-4. İstediğiniz özelliğin bağlama yaygın olarak bağlı özelliklerden biri değil, tıklayın **üç nokta** düğmesine (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)) içinde **( Gelişmiş)** görüntülemek için kutusu **biçimlendirme ve Gelişmiş bağlama** bu denetim için özelliklerin tam bir liste ile iletişim kutusu.
-
-5. Altındaki aşağı açılan oka tıklayın ve bağlamak istediğiniz özelliği seçin **bağlama**.
+5. Bağlamak istediğiniz özelliği seçin ve **bağlama**bölümündeki aşağı açılan oka tıklayın.
 
      Kullanılabilir veri kaynaklarının bir listesi görüntülenir.
 
-6. İstediğiniz tek veri öğesi bulana kadar bağlamak istediğiniz veri kaynağını genişletin. Örneğin, bir veri kümesi tablodaki bir sütun değerine bağlanıyorsanız, veri kümesinin adını genişletin ve ardından sütun adlarını görüntülemek için tablo adını genişletin.
+6. İstediğiniz tek veri öğesini buluncaya kadar bağlamak istediğiniz veri kaynağını genişletin. Örneğin, bir veri kümesinin tablosundaki bir sütun değerine bağlıyorsanız, veri kümesinin adını genişletin ve ardından sütun adlarını göstermek için tablo adını genişletin.
 
-7. Bağlanılacak bir öğe adına tıklayın.
+7. Bağlanacak öğenin adına tıklayın.
 
-8. Üzerinde çalıştığınız varsa **biçimlendirme ve Gelişmiş bağlama** iletişim kutusu, tıklayın **Tamam** dönmek için **özellikleri** penceresi.
+8. **Biçimlendirme ve Gelişmiş bağlama** iletişim kutusunda çalışıyorsanız, **Özellikler** penceresine dönmek için **Tamam** ' ı tıklatın.
 
-9. Denetimin ek özellikleri bağlamak istiyorsanız, 3 ila 7. adımları tekrarlayın.
+9. Denetimin ek özelliklerini bağlamak istiyorsanız 3 ile 7 arasındaki adımları yineleyin.
 
     > [!NOTE]
-    > Basit veriye bağlı denetimler yalnızca bir tek veri öğesi göstermek için bir Windows formunda basit bağlantılı denetim ile gezinti mantığı içeren çok normaldir.
+    > Basit-bağlantılı denetimler yalnızca tek bir veri öğesi gösterebildiğinden, basit bağlantılı denetimlerle bir Windows formuna gezinme mantığını eklemek çok normaldir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

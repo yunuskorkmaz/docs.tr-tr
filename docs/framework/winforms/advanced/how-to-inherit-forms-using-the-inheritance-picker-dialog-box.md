@@ -6,56 +6,55 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9382f1bf890fb5a886cf547d9b1e9b3031c12eb6
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723137"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040001"
 ---
-# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Nasıl yapılır: Devralma Seçici İletişim Kutusunu Kullanarak Form Devralma
-Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici** iletişim kutusu. Bununla, diğer çözümlere önceden oluşturduğunuz kodu veya kullanıcı arabirimi (UI) avantajlarından yararlanabilirsiniz.  
-  
+# <a name="how-to-inherit-forms-using-the-inheritance-picker"></a>Nasıl yapılır: Devralma seçiciyi kullanarak formları devral
+
+Bir formu veya diğer nesneyi devralmanın en kolay yolu **Devralma Seçici** iletişim kutusunu kullanmaktır. Bununla birlikte, diğer çözümlerde zaten oluşturduğunuz koddan veya kullanıcı arabiriminden (UI) yararlanabilirsiniz.
+
 > [!NOTE]
->  Bir form devralma için **devralma Seçici** iletişim kutusunda, bu formu içeren proje gerekir oluşturulan bir yürütülebilir dosya veya DLL. Projeyi oluşturmak için Seç **Çözümü Derle** gelen **derleme** menüsü.  
->   
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>Devralma Seçici'yi kullanarak varolan bir formdan devralınan bir Windows formu oluşturma  
-  
-1. Gelen **proje** menüsünde seçin **Windows formu eklemek**.  
-  
-     **Yeni Öğe Ekle** iletişim kutusu açılır.  
-  
-2. Arama **devralınan Form** searchbox ya tıklayarak şablonu **Windows Forms** kategorisini seçin ve içinde ad **adı** kutusu. Tıklayın **Ekle** devam etmek için düğmesine.  
-  
-     **Devralma Seçici** iletişim kutusu açılır. Geçerli proje forms içeriyorsa, bunlar görüntülenir **devralma Seçici** iletişim kutusu.  
-  
-3. Bir formdan başka bir derlemede devralmak için tıklatın **Gözat** düğmesi.  
-  
-4. İçinde **devralınacak bir bileşen içeren bir dosya seçin** iletişim kutusunda, istediğiniz modülü ve formu içeren projeye gidin.  
-  
-5. Onu seçin ve .exe veya .dll dosyası adına **açık** düğmesi.  
-  
-     Bu size döndürür **devralma Seçici** iletişim kutusu, burada bileşen artık listelenir, yanı sıra, bulunduğu proje.  
-  
-6. Bileşeni seçin.  
-  
-     İçinde **Çözüm Gezgini**, bileşen projenize eklenir. Bir kullanıcı Arabirimi varsa, devralınmış bir form parçası olan denetimler bir simge ile işaretlenir (![ekran görüntüsü Visual Basic kalıtımı sembol.](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif)) ve seçili olduğunda, denetimin sahip güvenlik düzeyini gösteren bir kenarlığa sahip üst formu. Aşağıdaki tabloda farklı güvenlik düzeylerine karşılık gelen davranışlar listelenmektedir.  
-  
-    |Denetim için güvenlik düzeyi|Kullanılabilir etkileşiminin Tasarımcısı ve form devralınmış Kod Düzenleyicisi|  
-    |-------------------------------|--------------------------------------------------------------------------------|  
-    |Ortak|Boyutlandırma tutamaçları ile standart kenarlık: denetim boyutlandırıldığından ve taşındı. Denetim, dahili olarak onu bildiren sınıfın ve harici olarak diğer sınıflar tarafından erişilebilir.|  
-    |Korumalı|Boyutlandırma tutamaçları ile standart kenarlık: denetim boyutlandırıldığından ve taşındı. Dahili olarak onu bildiren sınıfın ve üst sınıfından devralır, ancak dış sınıfları tarafından erişilemez herhangi bir sınıf tarafından erişilebilir.|  
-    |İç (korumalı Visual Basic'te Friend) korumalı|Boyutlandırma tutamaçları ile standart kenarlık: denetim boyutlandırıldığından ve taşındı. Dahili olarak onu bildiren sınıfın, üst sınıfından devralan herhangi bir sınıf ve onu içeren derlemenin genel diğer üyeleri tarafından erişilebilir.|  
-    |İç (Visual Basic'te Friend)|Standart Özellikler görünür formunda gösterilen hiçbir boyutlandırma tutamaçlarını kenarlıklı **özellikleri** penceresi. Ancak, tüm yönlerini denetimi salt okunur kabul edilir. Taşıyamaz veya denetimin boyutunu veya özelliklerini değiştirin. Denetim bir grup kutusu gibi diğer denetim kapsayıcısı ise yeni denetimler eklenemez ve bu denetimleri ortak bile mevcut denetimleri kaldırılamaz. Denetim, yalnızca derlemenin içerdiği diğer üyeleri tarafından erişilebilir.|  
-    |Özel|Standart Özellikler görünür formunda gösterilen hiçbir boyutlandırma tutamaçlarını kenarlıklı **özellikleri** penceresi. Ancak, tüm yönlerini denetimi salt okunur kabul edilir. Taşıyamaz veya denetimin boyutunu veya özelliklerini değiştirin. Denetim bir grup kutusu gibi diğer denetim kapsayıcısı ise yeni denetimler eklenemez ve bu denetimleri ortak bile mevcut denetimleri kaldırılamaz. Denetim yalnızca bunu bildiren bir sınıf tarafından erişilebilir.|  
-  
-     Taban formun görünüşünü değiştirme hakkında daha fazla bilgi için bkz: [taban formun görünüşünü değiştirmenin etkileri](effects-of-modifying-base-form-appearance.md).  
-  
+> **Devralma Seçicisi** iletişim kutusuyla bir formdan devralmak için, bu formu içeren proje yürütülebilir bir dosyaya veya dll 'ye derlenmiş olmalıdır. Projeyi derlemek için **derleme** menüsünden **çözüm oluştur** ' u seçin.
+
+## <a name="create-a-windows-form-by-using-the-inheritance-picker"></a>Devralma seçiciyi kullanarak bir Windows formu oluşturma
+
+1. Visual Studio 'da, **Proje** menüsünden **Windows formu Ekle**' yi seçin.
+
+   **Yeni Öğe Ekle** iletişim kutusu açılır.
+
+2. **Devralınan form** şablonunda, searchbox ' dan veya **Windows Forms** kategorisine tıklayarak bu öğeyi seçip **ad** kutusunda adlandırın. Devam etmek için **Ekle** düğmesine tıklayın.
+
+   **Devralma Seçicisi** iletişim kutusu açılır. Geçerli proje zaten formlar içeriyorsa **Devralma Seçicisi** iletişim kutusunda görüntülenir.
+
+3. Başka bir derlemedeki formdan devralması için, **Gözden** geçirme düğmesine tıklayın.
+
+4. İçinden **devralacak bir bileşen içeren bir dosya seçin** iletişim kutusunda, istediğiniz formu veya modülü içeren projeye gidin.
+
+5. Seçmek için. exe veya. dll dosyasının adına tıklayın ve **Aç** düğmesine tıklayın.
+
+   Bu, sizi, bileşenin bulunduğu projenin yanı da listede yer alan **Devralma Seçici** iletişim kutusuna geri döndürür.
+
+6. Bileşeni seçin.
+
+   **Çözüm Gezgini**, bileşen projenize eklenir. Bir kullanıcı arabirimi varsa, devralınan formun parçası olan denetimler bir karakter (![Visual Basic devralma sembolünün ekran görüntüsü) ile işaretlenir ve seçildiğinde, denetimin üzerinde bulunduğu güvenlik düzeyini belirten bir kenarlığı vardır.](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif) üst sınıflı form. Farklı güvenlik düzeylerine karşılık gelen davranışlar aşağıdaki tabloda listelenmiştir.
+
+    |Denetim güvenlik düzeyi|Devralınan formla tasarımcı ve kod Düzenleyicisi aracılığıyla kullanılabilir etkileşim|
+    |-------------------------------|--------------------------------------------------------------------------------|
+    |Ortak|Boyutlandırma tutamaçlarıyla standart kenarlık: denetim boyutlandırılabilir ve taşınabilir. Denetime onu bildiren ve diğer sınıflar tarafından harici olarak erişilebilir.|
+    |Korumalı|Boyutlandırma tutamaçlarıyla standart kenarlık: denetim boyutlandırılabilir ve taşınabilir. Kendisini bildiren sınıf tarafından ve üst sınıftan devralan herhangi bir sınıf tarafından dahili olarak erişilebilir, ancak harici sınıflar tarafından erişilemez.|
+    |Korumalı Iç (Visual Basic korunan arkadaş)|Boyutlandırma tutamaçlarıyla standart kenarlık: denetim boyutlandırılabilir ve taşınabilir. Kendisini bildiren sınıf tarafından, üst sınıftan devralan herhangi bir sınıf tarafından ve onu içeren derlemenin diğer üyeleri tarafından dahili olarak erişilebilir.|
+    |İç (Visual Basic arkadaş)|Formda gösterilen, Özellikler penceresinde görünen özellikler, boyutlandırma tutamacı olmayan standart kenarlık. Ancak, denetimin tüm yönleri salt okunurdur. Denetimi taşıyamaz veya boyutlandıramaz ya da özelliklerini değiştiremezsiniz. Denetim, bir grup kutusu gibi diğer denetimlerin bir kapsayıcısıdır, yeni denetimler eklenemez ve bu denetimler ortak olsa bile var olan denetimler kaldırılamaz. Denetime yalnızca kendisini içeren derlemenin diğer üyeleri erişebilir.|
+    |Özel|Formda gösterilen, Özellikler penceresinde görünen özellikler, boyutlandırma tutamacı olmayan standart kenarlık. Ancak, denetimin tüm yönleri salt okunurdur. Denetimi taşıyamaz veya boyutlandıramaz ya da özelliklerini değiştiremezsiniz. Denetim, bir grup kutusu gibi diğer denetimlerin bir kapsayıcısıdır, yeni denetimler eklenemez ve bu denetimler ortak olsa bile var olan denetimler kaldırılamaz. Denetime yalnızca onu bildiren sınıf erişebilir.|
+
+     Temel formun görünümünü değiştirme hakkında daha fazla bilgi için, bkz. [temel formun görünümünü değiştirme etkileri](effects-of-modifying-base-form-appearance.md).
+
     > [!NOTE]
-    >  Standart denetimler ve Windows Forms bileşenleri ile devralınan denetimler ve bileşenler birleştirdiğinizde çakışmaları z-sıralamasıyla ile karşılaşabilirsiniz. Z-tıklayarak yapılır sırasını değiştirerek bunu düzeltebilirsiniz **biçimi** işaret menüsünde **sipariş**ve ardından **öne** veya  **Arkaya Gönder**. Denetimleri z düzeni hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms'da nesneleri katmanlara](../controls/how-to-layer-objects-on-windows-forms.md).  
-  
+    > Devralınan denetimleri ve bileşenleri, Windows Forms üzerinde standart denetimlerle ve bileşenlerle birleştirdiğinizde, z Sıralamalı çakışmalardan karşılaşabilirsiniz. Bu işlemi, **Biçim** menüsüne tıklayıp **sırasıyla sıra**' ya ve ardından **öne getir** veya **geri gönder**' e tıklayarak yapılacak z düzeninde değişiklik yaparak düzeltebilirsiniz. Denetimlerin z sıralaması hakkında daha fazla bilgi için bkz [. nasıl yapılır: Windows Forms](../controls/how-to-layer-objects-on-windows-forms.md)katman nesneleri.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Inherits Deyimi](~/docs/visual-basic/language-reference/statements/inherits-statement.md)

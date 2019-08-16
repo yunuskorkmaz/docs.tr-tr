@@ -5,46 +5,46 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: 69a5caef8bab45503b9f34422de8c2ba2e7f01ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a4e477ce1c171b514482623595b2c5565564a2cb
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960907"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040468"
 ---
 # <a name="application-settings-for-custom-controls"></a>Özel Denetimler için Uygulama Ayarları
-Özel denetimlerinizi denetimleri üçüncü taraf uygulamalarda barındırıldığında uygulama ayarlarını kalıcı yapma olanağı vermek için belirli görevleri tamamlamanız gerekir.  
-  
- Uygulama ayarları özelliğiyle ilgili belgelerin çoğu, bir tek başına uygulama oluşturma varsayım altında yazılır. Uygulamalarında diğer geliştiriciler barındıracak bir denetim oluşturma, ancak denetim ayarlarını kalıcı hale getirmek için bazı ek adımlar uygulamanız gerekiyorsa, doğru.  
-  
-## <a name="application-settings-and-custom-controls"></a>Uygulama ayarları ve özel denetimler  
- Denetiminiz düzgün ayarlarını kalıcı hale getirmek, bu işlem ayarları sarmalayıcı sınıfından türetilen kendi özel uygulamalar oluşturarak yalıtmanız gerekir <xref:System.Configuration.ApplicationSettingsBase>. Ayrıca, ana denetim sınıf uygulamalıdır <xref:System.Configuration.IPersistComponentSettings>. Çeşitli özelliklerin yanı sıra, iki yöntem arabirimi içeren <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> ve <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>. Kullanarak bir formu, denetimi eklerseniz **Windows Form Tasarımcısı** Visual Studio'da, Windows Forms çağıracak <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> otomatik olarak ne zaman denetimi başlatılır; çağırmalısınız <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> kendiniz `Dispose` Denetiminizin yöntemi.  
-  
- Ayrıca, aşağıdaki gibi Visual Studio tasarım zamanı ortamlarda düzgün çalışması özel denetimler için uygulama ayarları için sırayla uygulamalıdır:  
-  
-1. Bir özel uygulama ayarları sınıf alan bir Oluşturucu ile bir <xref:System.ComponentModel.IComponent> tek bir parametre olarak. Bu sınıfı kaydedin ve tüm uygulama ayarlarınızı yüklemek için kullanın. Bu sınıfın yeni bir örneğini oluşturduğunuzda, oluşturucu kullanılarak özel denetiminizi geçirin.  
-  
-2. Denetim oluşturulan ve bir form üzerinde olduğu gibi formun yerleştirilir. sonra bu özel ayarları sınıfı oluşturma <xref:System.Windows.Forms.Form.Load> olay işleyicisi.  
-  
- Özel ayarlar sınıfı oluşturma ile ilgili yönergeler için bkz: [nasıl yapılır: Uygulama ayarları oluşturma](how-to-create-application-settings.md).  
-  
-## <a name="settings-keys-and-shared-settings"></a>Ayarları anahtarları ve paylaşılan ayarları  
- Bazı denetimler, birden çok kez aynı form içinde kullanılabilir. Çoğu zaman, kullanıcıların kendi tek tek ayarların kalıcı olması için bu denetimleri isteyeceksiniz. İle <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> özelliği <xref:System.Configuration.IPersistComponentSettings>, bir form denetiminde birden fazla sürümünü ayırt etmek için görevi gören benzersiz bir dize sağlayabilirsiniz.  
-  
- Uygulamak için en basit yolu <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> kullanmaktır <xref:System.Windows.Forms.Control.Name%2A> özelliği için denetimin <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>. Yük ya da denetim ayarlarını Kaydet değerini geçirmelidir <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> oturum <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> özelliği <xref:System.Configuration.ApplicationSettingsBase> sınıfı. Uygulama ayarları, XML'e kullanıcı ayarlarını kalıcı olduğunda bu benzersiz anahtar kullanır. Aşağıdaki örnekte gösterildiği nasıl kod bir `<userSettings>` bölümü adlı bir özel denetim örneği için görünebileceğini `CustomControl1` için bir ayar kaydeder, `Text` özelliği.  
-  
-```xml  
-<userSettings>  
-    <CustomControl1>  
-        <setting name="Text" serializedAs="string">  
-            <value>Hello, World</value>  
-        </setting>  
-    </CustomControl1>  
-</userSettings>  
-```  
-  
- Tüm örnekleri için bir değer belirtmediğiniz bir denetimin <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> aynı ayarları paylaşır.  
-  
+Özel denetimlerinizi, denetimler üçüncü taraf uygulamalarda barındırıldığı zaman uygulama ayarlarını kalıcı hale getirmek için bazı görevleri tamamlamalısınız.
+
+ Uygulama ayarları özelliği hakkındaki belgelerin çoğu, tek başına bir uygulama oluşturduğunuz varsayımına göre yazılmıştır. Ancak, diğer geliştiricilerin uygulamalarında barındırmasını sağlayan bir denetim oluşturuyorsanız, denetiminizin ayarlarını düzgün bir şekilde kalıcı hale getirmek için birkaç ek adım uygulamanız gerekir.
+
+## <a name="application-settings-and-custom-controls"></a>Uygulama ayarları ve özel denetimler
+ Denetiminizin ayarlarını düzgün bir şekilde kalıcı hale getirmek için, ' den <xref:System.Configuration.ApplicationSettingsBase>türetilmiş kendi adanmış uygulama ayarları sarmalayıcı sınıfını oluşturarak işlemi kapsületmelidir. Ayrıca, ana denetim sınıfının uygulaması <xref:System.Configuration.IPersistComponentSettings>gerekir. Arabirim birçok özellik <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> ve <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>iki yöntem içerir. Denetiminizi, Visual Studio 'daki **Windows Form Tasarımcısı** kullanarak bir forma eklerseniz, Denetim başlatıldığında Windows Forms <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> otomatik olarak çağrılır; denetim `Dispose` yöntemi içinde kendi kendinize çağrı <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> yapmanız gerekir.
+
+ Ayrıca, Özel denetimlerin uygulama ayarlarının Visual Studio gibi tasarım zamanı ortamlarında düzgün şekilde çalışması için aşağıdakileri uygulamalısınız:
+
+1. Tek bir parametre <xref:System.ComponentModel.IComponent> olarak alan Oluşturucu içeren özel bir uygulama ayarları sınıfı. Tüm uygulama ayarlarınızı kaydetmek ve yüklemek için bu sınıfı kullanın. Bu sınıfın yeni bir örneğini oluşturduğunuzda, oluşturucuyu kullanarak özel denetiminizi geçirin.
+
+2. Denetim oluşturulduktan ve formun <xref:System.Windows.Forms.Form.Load> olay işleyicisindeki gibi bir forma yerleştirildiğinde, bu özel ayarlar sınıfını oluşturun.
+
+ Özel ayarlar sınıfı oluşturma yönergeleri için bkz [. nasıl yapılır: Uygulama ayarları](how-to-create-application-settings.md)oluşturun.
+
+## <a name="settings-keys-and-shared-settings"></a>Ayarlar anahtarlar ve paylaşılan ayarlar
+ Bazı denetimler aynı form içinde birden çok kez kullanılabilir. Çoğu zaman bu denetimlerin kendi bireysel ayarlarını kalıcı hale getirmek isteyeceksiniz. <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> Özelliğiile,birformüzerindebirdenetiminbirdençoksürümünüayırtetmekiçindavranan<xref:System.Configuration.IPersistComponentSettings>benzersiz bir dize sağlayabilirsiniz.
+
+ Uygulamamanın <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> en kolay yolu, <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>için denetiminin <xref:System.Windows.Forms.Control.Name%2A> özelliğini kullanmaktır. Denetimin ayarlarını yüklediğinizde veya kaydettiğinizde, öğesinin <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> değerini <xref:System.Configuration.ApplicationSettingsBase> sınıfının özelliğine geçirirsiniz. Uygulama ayarları, kullanıcının ayarlarının XML olarak devam ettiği durumlarda bu benzersiz anahtarı kullanır. Aşağıdaki kod örneği, bir `<userSettings>` bölümün, `Text` özelliği için bir ayar kaydeden adlı `CustomControl1` bir özel denetimin örneğini nasıl arayacağı gösterilmektedir.
+
+```xml
+<userSettings>
+    <CustomControl1>
+        <setting name="Text" serializedAs="string">
+            <value>Hello, World</value>
+        </setting>
+    </CustomControl1>
+</userSettings>
+```
+
+ Bir denetimin değer <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> sağlamamayan tüm örnekleri aynı ayarları paylaşır.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Configuration.ApplicationSettingsBase>

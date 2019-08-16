@@ -10,15 +10,15 @@ api_type:
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf7e997282351cc10dd6da1fc405366ea67c7307
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8736da6c8db876b3dadb3b906a586633be176cf6
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741100"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038318"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense İşlevi
-Authenticode XrML lisans geçerliliğini doğrular.  
+Authenticode XrML lisansının geçerliliğini doğrular.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,12 +33,12 @@ HRESULT CertVerifyAuthenticodeLicense (
   
 ## <a name="parameters"></a>Parametreler  
  `pLicenseBlob`  
- [in] Doğrulanacak Authenticode XrML lisans.  
+ 'ndaki Doğrulanacak olan Authenticode XrML lisansı.  
   
- Bkz: [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) yapısı.  
+ Bkz. [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) yapısı.  
   
  `dwFlags`  
- [in] İsteğe bağlı. Aşağıdaki değerleri birleşimi:  
+ 'ndaki Seçim. Aşağıdaki değerlerden oluşan bir bileşim:  
   
 - AXL_REVOCATION_NO_CHECK  
   
@@ -53,17 +53,17 @@ HRESULT CertVerifyAuthenticodeLicense (
 - AXL_TRUST_MICROSOFT_ROOT_ONLY  
   
  `pSignerInfo`  
- [out] İmzalayanın bilgilerini almak için. Lisans değildi açtıysanız `dwError` TRUST_E_NOSIGNATURE için ayarlanır. Bunu kullanarak kaynakları serbest bırakacak arayanın sorumluluğundadır [Certfreeauthenticodesignerınfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md) işlevinden sonra kullanın.  
+ dışı İmzalayan bilgilerini almak için. Lisans imzalanmadıysa, `dwError` TRUST_E_NOSIGNATURE olarak ayarlanır. Bu, kullandıktan sonra [CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md) işlevini kullanarak kaynakların serbest bir şekilde kullanıma yönelik sorumluluğundadır.  
   
- Bkz: [axl_authentıcode_sıgner_ınfo yapısı](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md).  
+ Bkz. [AXL_AUTHENTICODE_SIGNER_INFO yapısı](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md).  
   
  `pTimestamperInfo`  
- [out] Varsa zaman stamper'ın bilgi almak için. Lisans zaman damgalı değilse `dwError` TRUST_E_NOSIGNATURE için ayarlanır. Bunu kullanarak kaynakları serbest bırakacak arayanın sorumluluğundadır [Certfreeauthenticodetimestamperınfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md) işlevinden sonra kullanın.  
+ dışı Varsa, zaman Stamper 'ın bilgilerini almak için. Lisans zaman damgalı değilse, `dwError` TRUST_E_NOSIGNATURE olarak ayarlanır. Bu, kullandıktan sonra [CertFreeAuthenticodeTimestamperInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md) işlevini kullanarak kaynakların serbest bir şekilde kullanıma yönelik sorumluluğundadır.  
   
- Bkz: [axl_authentıcode_tımestamper_ınfo yapısı](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md).  
+ Bkz. [AXL_AUTHENTICODE_TIMESTAMPER_INFO yapısı](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Döndürür `S_OK` başarılı olursa. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı `S_OK` olursa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

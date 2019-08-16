@@ -10,31 +10,28 @@ helpviewer_keywords:
 - rows [Windows Forms], spanning
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-ms.openlocfilehash: 02db78b07930676235e55e535fb24f6ff618d823
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a215b2b4e05bab5c81d2779d4b67d5b9d57b6ba5
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012977"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039696"
 ---
 # <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>Nasıl yapılır: Bir TableLayoutPanel Denetimindeki Satırları ve Sütunları Yayma
-Denetimlerini bir <xref:System.Windows.Forms.TableLayoutPanel> denetim bitişik satır ve sütunları yayılabilir.  
-  
-> [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-span-columns-and-rows"></a>Satırları ve sütunları yaymasına izin  
-  
-1. Sürükleme bir <xref:System.Windows.Forms.TableLayoutPanel> denetimi **araç kutusu** formunuza.  
-  
-2. Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** sol üst hücresine <xref:System.Windows.Forms.TableLayoutPanel> denetimi.  
-  
-3. Ayarlama <xref:System.Windows.Forms.Button> denetimin **ColumnSpan** özelliğini **2**. Unutmayın <xref:System.Windows.Forms.Button> denetim birinci ve ikinci sütunların yayılır.  
-  
-4. Ayarlama <xref:System.Windows.Forms.Button> denetimin **RowSpan** özelliğini **2**. Unutmayın <xref:System.Windows.Forms.Button> denetimi kapsayan ilk ve ikinci satırlar.  
-  
-5. Ayarlama <xref:System.Windows.Forms.Button> denetimin **ColumnSpan** özelliğini **1**. Unutmayın <xref:System.Windows.Forms.Button> denetimi ilk sütuna taşır ve ilk ve ikinci satırlar yayılır.  
-  
+Bir <xref:System.Windows.Forms.TableLayoutPanel> denetimdeki denetimler bitişik satır ve sütunlara yayılabilir.
+
+## <a name="to-span-columns-and-rows"></a>Sütunları ve satırları yayma
+
+1. <xref:System.Windows.Forms.TableLayoutPanel> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin.
+
+2. <xref:System.Windows.Forms.Button> **Araç kutusundan** denetimin<xref:System.Windows.Forms.TableLayoutPanel> sol üst hücresine bir denetim sürükleyin.
+
+3. Denetimin ColumnSpan özelliğini **2**olarak ayarlayın. <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.Button> Denetimin birinci ve ikinci sütunları yaydığına unutmayın.
+
+4. Denetimin RowSpan özelliğini **2**olarak ayarlayın. <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.Button> Denetimin birinci ve ikinci satırları yaydığına unutmayın.
+
+5. Denetimin ColumnSpan özelliğini **1**olarak ayarlayın. <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.Button> Denetimin ilk sütuna taşındığını ve birinci ve ikinci satırlara yayıldığına unutmayın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [TableLayoutPanel Denetimi](tablelayoutpanel-control-windows-forms.md)

@@ -2,7 +2,8 @@
 title: 'Nasıl yapılır: Her Windows Formunu Kendi İş Parçacığında Görüntüleyerek COM Birlikte Çalışmasını Destekleme'
 ms.date: 03/30/2017
 dev_langs:
-- vb
+- CSharp
+- VB
 helpviewer_keywords:
 - COM interop [Windows Forms], Windows Forms
 - COM [Windows Forms]
@@ -10,45 +11,47 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: f158cf71f69ed3221dcaf7d3abbe495cf818638b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 90bbd7df45424f8513598e9d7439d8ae6bf6f52c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593194"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040305"
 ---
-# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Nasıl yapılır: Her Windows Formunu Kendi İş Parçacığında Görüntüleyerek COM Birlikte Çalışmasını Destekleme
-Kullanarak oluşturabileceğiniz bir .NET Framework ileti döngüsü üzerinde formunu görüntüleyerek COM birlikte çalışabilirlik sorunları çözebilirsiniz <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> yöntemi.  
-  
- Bir COM istemci uygulamasından doğru şekilde bir Windows Form çalışmasını sağlamak için form üzerinde bir Windows Forms ileti döngüsü çalıştırmanız gerekir. Bunu yapmak için aşağıdaki yaklaşımlardan birini kullanın:  
-  
-- Kullanım <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> Windows formu görüntülemek için yöntemi. Daha fazla bilgi için [nasıl yapılır: ShowDialog yöntemi ile bir Windows formunu görüntüleyerek COM birlikte çalışmasını destekleme](com-interop-by-displaying-a-windows-form-shadow.md).  
-  
-- Her Windows formunu ayrı bir iş parçacığı üzerinde görüntüleyin.  
-  
- Visual Studio'da bu özellik için kapsamlı desteği yoktur.  
-  
- Ayrıca bkz: [izlenecek yol: Her Windows formunu kendi iş parçacığında görüntüleyerek COM birlikte çalışmasını destekleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100)).  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bir ayrı iş parçacığı ve çağrı formu görüntülemek gösterilmiştir <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> o iş parçacığı üzerinde bir Windows Forms ileti pompası başlatmak için yöntemi. Bu yaklaşımı kullanmak için form yönetilmeyen bir uygulamadan gelen çağrıları kullanarak sıralamanız gerekir <xref:System.Windows.Forms.Control.Invoke%2A> yöntemi.  
-  
- Bu yaklaşım, formu her örneği, kendi ileti döngüsü kullanarak kendi iş parçacığında çalıştıran gerektirir. Çalışan iş parçacığı birden fazla ileti döngüsü sahip olamaz. Bu nedenle, istemci uygulamanın ileti döngüsü değiştiremezsiniz. Ancak, kendi ileti döngüsü kullanan yeni bir iş parçacığı için .NET Framework bileşenini değiştirebilirsiniz.  
-  
- [!code-vb[System.Windows.Forms.ComInterop#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/COMForm.vb#1)]  
-  
- [!code-vb[System.Windows.Forms.ComInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/FormManager.vb#10)]  
-  
- [!code-vb[System.Windows.Forms.ComInterop#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/Form1.vb#100)]  
-  
-## <a name="compiling-the-code"></a>Kod Derleniyor  
-  
-- Derleme `COMForm`, `Form1`, ve `FormManager` tür bir derleme olarak adlandırılan `COMWinform.dll`. COM birlikte çalışma bütünleştirilmiş kod içinde açıklanan yöntemlerden birini kullanarak kayıt [COM için derlemeyi paketleme](../../interop/packaging-an-assembly-for-com.md). Artık, derleme ve yönetilmeyen uygulamalarda karşılık gelen tür kitaplığını (.tlb) dosyasını da kullanabilirsiniz. Örneğin, bir Visual Basic 6.0 yürütülebilir projeyi başvuru olarak tür kitaplığını kullanabilirsiniz.  
-  
+# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Nasıl yapılır: Her Windows formunu kendi iş parçacığında görüntüleyerek COM birlikte çalışmasını destekleme
+
+Formunuzu, <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> yöntemini kullanarak oluşturabileceğiniz bir .NET Framework ileti döngüsünde görüntüleyerek com birlikte çalışabilirlik sorunlarını çözebilirsiniz.
+
+Bir Windows formunun bir COM istemci uygulamasından düzgün çalışmasını sağlamak için, formu bir Windows Forms ileti döngüsünde çalıştırmanız gerekir. Bunu yapmak için aşağıdaki yaklaşımlardan birini kullanın:
+
+- Windows formunu göstermek için yönteminikullanın.<xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> Daha fazla bilgi için [nasıl yapılır: ShowDialog yöntemi](com-interop-by-displaying-a-windows-form-shadow.md)Ile bir WINDOWS formunu görüntüleyerek com birlikte çalışabilirliğine destek.
+
+- Her Windows formunu ayrı bir iş parçacığında görüntüleyin.
+
+Visual Studio 'da bu özellik için kapsamlı destek vardır.
+
+Ayrıca bkz [. İzlenecek yol: Her bir Windows formunu kendi Iş parçacığında](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100))görüntüleyerek com birlikte çalışmasını destekleme.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki kod örneği, formun ayrı bir iş parçacığında nasıl görüntüleneceğini ve bu iş parçacığında bir Windows Forms <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> ileti göndericisi başlatmak için yöntemini çağırmayı gösterir. Bu yaklaşımı kullanmak için, <xref:System.Windows.Forms.Control.Invoke%2A> yöntemini kullanarak yönetilmeyen uygulamadan forma yapılan tüm çağrıları sıramalısınız.
+
+Bu yaklaşım, bir formun her örneğinin kendi iş parçacığında kendi ileti döngüsü kullanılarak çalışmasını gerektirir. İş parçacığı başına birden fazla ileti döngüsü çalıştırıyor olabilirsiniz. Bu nedenle, istemci uygulamanın ileti döngüsünü değiştiremezsiniz. Ancak, .NET Framework bileşenini kendi ileti döngüsünü kullanan yeni bir iş parçacığını başlatacak şekilde değiştirebilirsiniz.
+
+[!code-vb[System.Windows.Forms.ComInterop#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/COMForm.vb#1)]
+
+[!code-vb[System.Windows.Forms.ComInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/FormManager.vb#10)]
+
+[!code-vb[System.Windows.Forms.ComInterop#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/Form1.vb#100)]
+
+## <a name="compile-the-code"></a>Kod derleme
+
+, Ve türlerini adlı bir`COMWinform.dll`derlemedederleyin. `FormManager` `Form1` `COMForm` Com [Için derleme paketleme](../../interop/packaging-an-assembly-for-com.md)bölümünde açıklanan yöntemlerden bırını kullanarak com birlikte çalışması için derlemeyi kaydettirin. Artık derlemeyi ve buna karşılık gelen tür kitaplığı (. tlb) dosyasını yönetilmeyen uygulamalarda kullanabilirsiniz. Örneğin, tür kitaplığını Visual Basic 6,0 yürütülebilir bir projede başvuru olarak kullanabilirsiniz.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET Framework Bileşenlerini COM'da Gösterme](../../interop/exposing-dotnet-components-to-com.md)
 - [COM için Bütünleştirilmiş Kod Paketleme](../../interop/packaging-an-assembly-for-com.md)
 - [Bütünleştirilmiş Kodları COM ile Kaydetme](../../interop/registering-assemblies-with-com.md)
-- [Nasıl yapılır: ShowDialog yöntemi ile bir Windows formunu görüntüleyerek COM birlikte çalışma desteği](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Nasıl yapılır: ShowDialog yöntemi ile bir Windows formunu görüntüleyerek COM birlikte çalışmasını destekleme](com-interop-by-displaying-a-windows-form-shadow.md)
 - [Windows Forms ve Yönetilmeyen Uygulamalara Genel Bakış](windows-forms-and-unmanaged-applications-overview.md)

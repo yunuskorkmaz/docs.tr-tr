@@ -5,18 +5,18 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: f6c1580d3f596c638969e668a87ee70d75e6d9bf
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 8100add17b61424624f27de705728935f3a1160b
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626394"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038033"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest ve C# .NET Core ile birim testi
 
 Bu öğreticide, birim testi kavramlarını öğrenmek için bir örnek çözüm oluşturma adım adım yönergeler sunarak etkileşimli bir deneyim sağlanır. Önceden oluşturulmuş bir çözüm kullanarak öğreticiyi izlemeyi tercih ediyorsanız, başlamadan önce [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/) . İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-### <a name="create-the-source-project"></a>Kaynak projeyi oluşturma
+## <a name="create-the-source-project"></a>Kaynak projeyi oluşturma
 
 Bir kabuk penceresi açın. Çözümü tutmak için- *Testing-testusing* adlı bir dizin oluşturun. Bu yeni dizin içinde, sınıf [`dotnet new sln`](../tools/dotnet-new.md) kitaplığı ve test projesi için yeni bir çözüm dosyası oluşturmak üzere öğesini çalıştırın. Ardından, bir *Primeservice* dizini oluşturun. Aşağıdaki ana hat, şu ana kadar dizin ve dosya yapısını gösterir:
 
@@ -26,7 +26,7 @@ Bir kabuk penceresi açın. Çözümü tutmak için- *Testing-testusing* adlı b
     /PrimeService
 ```
 
-Kaynak projeyi oluşturmak için *primeservice* 'i geçerli [`dotnet new classlib`](../tools/dotnet-new.md) Dizin yapın ve çalıştırın. *Class1.cs* *olarak yeniden*adlandırın. `PrimeService` Sınıfın başarısız bir uygulamasını oluşturursunuz:
+Kaynak projeyi oluşturmak için *primeservice* 'i geçerli [`dotnet new classlib`](../tools/dotnet-new.md) Dizin yapın ve çalıştırın. *Class1.cs* olarak yenidenadlandırın. `PrimeService` Sınıfın başarısız bir uygulamasını oluşturursunuz:
 
 ```csharp
 using System;
@@ -45,7 +45,7 @@ namespace Prime.Services
 
 Dizini *Unit-Testing-MSTest* dizinine doğru değiştirin. Çözüme [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) Sınıf Kitaplığı projesini eklemek için ' i çalıştırın. 
 
-### <a name="create-the-test-project"></a>Test projesi oluşturma
+## <a name="create-the-test-project"></a>Test projesi oluşturma
 
 Ardından, *Primeservice. Tests* dizinini oluşturun. Aşağıdaki ana hat dizin yapısını gösterir:
 

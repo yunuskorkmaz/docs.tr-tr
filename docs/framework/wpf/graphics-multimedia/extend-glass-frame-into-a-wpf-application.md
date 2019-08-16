@@ -10,27 +10,27 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 11c872767b5e3595da1fb4982d3b12e0fc77db98
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: f8d50cb4d0112232f86579542650418a1906bda2
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238596"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039840"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Cam Çerçeveyi WPF Uygulamasında Genişletme
 
-Bu konu nasıl genişleteceğinizi gösterir [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] cam çerçeveyi bir Windows Presentation Foundation (WPF) uygulamasının istemci alanına.
+Bu konu başlığı altında, [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] cam çerçevesinin bir Windows Presentation Foundation (WPF) uygulamasının istemci alanına nasıl genişletileceği gösterilmektedir.
 
 > [!NOTE]
-> Bu örnek yalnızca çalışır bir [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] etkin cam ile Masaüstü Pencere Yöneticisi'ni (DWM) çalıştıran makine. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] Home Basic sürümü saydam cam etkisi desteklemez. Genellikle diğer sürümleri üzerinde saydam cam etkisi ile işlenen alanları [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] donuk işlenir.
+> Bu örnek, yalnızca cam özellikli Masaüstü Pencere Yöneticisi [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] (dwm) çalıştıran bir makinede çalışır. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]Home Basic sürümü saydam cam efektini desteklemez. Genellikle diğer sürümlerinde [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] saydam cam etkisi ile işlenen alanlar donuk işlenir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki görüntüde, adres çubuğuna, Internet Explorer'a 7 genişletilmiş cam çerçeveyi gösterilmektedir:
+Aşağıdaki görüntüde, Internet Explorer 7 ' nin adres çubuğuna genişletilmiş cam çerçeve gösterilmektedir:
 
-![Cam çerçeveyi IE7 adres çubuğuna genişletilmiş gösteren ekran görüntüsü.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
+![IE7 çerçeve adres çubuğunun arkasındaki cam çerçeveyi gösteren ekran görüntüsü.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Üzerinde cam çerçeveyi genişletmek için bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulaması yönetilmeyen API erişimi gereklidir. Aşağıdaki kod örneği, istemci alanına çerçeveyi genişletmek için gereken iki API için Platform Çağırma (PInvoke) desteklemez. Bu API'nin her adlı bir sınıf içinde bildirildiğinde **NonClientRegionAPI**.
+Bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamadaki cam çerçeveyi genişletmek için yönetilmeyen API 'ye erişim gerekir. Aşağıdaki kod örneği, çerçeveyi istemci alanına genişletmek için gereken iki API için bir platform çağırma (PInvoke) sağlar. Bu API 'nin her biri **Clientregionapı**adlı bir sınıfta bildirilmiştir.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -62,11 +62,11 @@ Public Shared Function DwmExtendFrameIntoClientArea(ByVal hwnd As IntPtr, ByRef 
 End Function
 ```
 
-[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) çerçevenin istemci alanına genişleten DWM işlevdir. İki parametre alır; bir pencere tutucu ve [kenar BOŞLUKLARI](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) yapısı. [Kenar BOŞLUKLARI](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) DWM çerçevenin istemci alanına ne kadar çok genişletilmiş söylemek için kullanılır.
+[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) , çerçeveyi istemci alanına GENIŞLETEN bir DWM işlevidir. İki parametre alır; pencere tutamacı ve [kenar boşluğu](/windows/win32/api/uxtheme/ns-uxtheme-margins) yapısı. [Kenar boşlukları](/windows/win32/api/uxtheme/ns-uxtheme-margins) , bu karenin ne kadar ekstra çerçeveye istemci alanına genişletilmesi gerektiğini bildirmek için kullanılır.
 
 ## <a name="example"></a>Örnek
 
-Kullanılacak [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) işlevi, bir pencere tutucu gerekir elde edilebilir. İçinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], pencere işleyicisi örneğinden alınabilen <xref:System.Windows.Interop.HwndSource.Handle%2A> özelliği bir <xref:System.Windows.Interop.HwndSource>. Aşağıdaki örnekte, çerçevenin istemci alanını genişletilir <xref:System.Windows.FrameworkElement.Loaded> penceresinin olay.
+[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) işlevini kullanmak için bir pencere tanıtıcısının alınması gerekir. ' [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]De, pencere tutamacı öğesinin <xref:System.Windows.Interop.HwndSource.Handle%2A> <xref:System.Windows.Interop.HwndSource>özelliğinden elde edilebilir. Aşağıdaki örnekte, çerçeve pencerenin <xref:System.Windows.FrameworkElement.Loaded> olayında istemci alanına genişletilir.
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -111,7 +111,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, çerçevenin istemci alanını genişletilir basit bir pencere gösterir. İki içeren üst kenarlık genişletilen çerçeve <xref:System.Windows.Controls.TextBox> nesneleri.
+Aşağıdaki örnek, çerçevenin istemci alanına genişletilme basit bir pencere gösterir. Çerçeve, iki <xref:System.Windows.Controls.TextBox> nesneyi içeren üst kenarlığın arkasında genişletilir.
 
 ```xaml
 <Window x:Class="SDKSample.Window1"
@@ -145,12 +145,12 @@ Aşağıdaki örnek, çerçevenin istemci alanını genişletilir basit bir penc
 </Window>
 ```
 
-Aşağıdaki görüntüde gösterilmiştir uygulamasına genişletilmiş cam çerçeveyi bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama:
+Aşağıdaki görüntüde, bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaya genişletilmiş cam çerçeve gösterilmektedir:
 
-![Cam çerçeveyi WPF uygulamasında genişletilmiş gösteren ekran görüntüsü.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
+![WPF uygulamasına genişletilmiş bir cam çerçeveyi gösteren ekran görüntüsü.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Masaüstü Pencere Yöneticisi'ne genel bakış](/windows/desktop/dwm/dwm-overview)
-- [Masaüstü Pencere Yöneticisi Bulanıklaştırma genel bakış](/windows/desktop/dwm/blur-ovw)
+- [Masaüstü Pencere Yöneticisi genel bakış](/windows/desktop/dwm/dwm-overview)
+- [Masaüstü Pencere Yöneticisi bulanıklaştırma genel bakış](/windows/desktop/dwm/blur-ovw)
 - [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)

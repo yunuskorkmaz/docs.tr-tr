@@ -7,29 +7,26 @@ helpviewer_keywords:
 - columns [Windows Forms], reordering
 - data [Windows Forms], displaying
 ms.assetid: d82bd69c-6799-4439-a32c-91139c5901d1
-ms.openlocfilehash: 4ccd9d0be702289386b6b817da781e255787fffe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3864ce70f058259b597df904311bd4a48218b151
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614780"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040341"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimindeki Sütun Yeniden Sıralamayı Etkinleştirme
-Windows Forms'ta görüntülenen verileri görüntülerken <xref:System.Windows.Forms.DataGridView> denetimi, kullanıcılar bazen belirli sütunlardaki değerleri karşılaştırmak istediğinizde. Özellikle de kullanıcıların İleri ve geri yatay, ilgilendiğiniz tüm sütunları görmek için kaydırma gerekir, bu yaygın denetiminde sütunları ayrılırsa kullanışsız olabilir. Sütunları yeniden sıralamak, kullanıcılarınızın etkinleştirerek sütun değerleri daha kolay karşılaştırma görevini yapabilirsiniz. Sütun yeniden sıralamayı etkinleştirdiğinizde, kullanıcıların bir sütun fare ile sütun üst bilgisini sürükleyerek yeni bir konuma taşıyabilirsiniz.  
-  
- Aşağıdaki yordam gerektirir bir **Windows uygulama** proje içeren bir form içeren bir <xref:System.Windows.Forms.DataGridView> denetimi. Bu tür bir proje ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir Windows Forms uygulaması projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project) ve [nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md).  
-  
-> [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-enable-column-reordering"></a>Sütun yeniden sıralamayı etkinleştirmek için  
-  
-- Akıllı etiket karakterini tıklayın (![akıllı etiket karakterini](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) sağ üst köşesindeki <xref:System.Windows.Forms.DataGridView> denetlemek ve ardından **sütun yeniden sıralamayı etkinleştirme**.  
-  
+Windows Forms <xref:System.Windows.Forms.DataGridView> denetimde görüntülenen veriler görüntülenirken, kullanıcılar bazen belirli sütunlardaki değerleri karşılaştırmak istiyor. Sütunları denetimde yaygın olarak ayrılırsa, özellikle ilgilendikleri tüm sütunları görmek için kullanıcıların otomatik olarak geri ve ileri kaydırılabilmesi durumunda bu durum kullanışlı olabilir. Kullanıcılarınızın sütunları yeniden sıralamak için sütun değerlerini karşılaştırma görevinin daha kolay olmasını sağlayabilirsiniz. Sütun yeniden sıralamayı etkinleştirdiğinizde, kullanıcılar sütun başlığını fareyle sürükleyerek bir sütunu yeni bir konuma taşıyabilir.
+
+ Aşağıdaki yordam, bir <xref:System.Windows.Forms.DataGridView> denetim içeren bir form ile **Windows uygulama** projesi gerektirir. Böyle bir projeyi ayarlama hakkında daha fazla bilgi için bkz [. nasıl yapılır: Windows Forms bir uygulama projesi](/visualstudio/ide/step-1-create-a-windows-forms-application-project) oluşturun ve [şunları yapın: Windows Forms](how-to-add-controls-to-windows-forms.md)denetimleri ekleyin.
+
+## <a name="to-enable-column-reordering"></a>Sütun yeniden sıralamayı etkinleştirmek için
+
+- <xref:System.Windows.Forms.DataGridView> Denetimin sağ üst köşesindeki akıllı etiket kabartmasını (![akıllı etiket karakteri](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) tıklatın ve ardından **sütun yeniden sıralamayı etkinleştir**' i seçin.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>
-- [Nasıl yapılır: Tasarımcı kullanarak Windows Forms DataGridView denetiminde sütunları dondurma](freeze-columns-in-the-datagrid-using-the-designer.md)
-- [Nasıl yapılır: Bir Windows Forms uygulaması projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md)
+- [Nasıl yapılır: Tasarımcıyı kullanarak Windows Forms DataGridView Denetimindeki sütunları dondurma](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [Nasıl yapılır: Windows Forms uygulama projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Nasıl yapılır: Windows Forms denetim ekleme](how-to-add-controls-to-windows-forms.md)

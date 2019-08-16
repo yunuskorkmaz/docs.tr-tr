@@ -1,6 +1,6 @@
 ---
-title: Get işlevi (yönetilmeyen API Başvurusu)
-description: Get işlevi, belirtilen özellik değerini alır.
+title: GET işlevi (yönetilmeyen API Başvurusu)
+description: GET işlevi belirtilen özellik değerini alır.
 ms.date: 11/06/2017
 api_name:
 - Get
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1f838c26d45c0f3cfbd50ac0ce02d234b82ddae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 265d3edbd3175eebcf6fd35be24f5b66144c960f
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746665"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037947"
 ---
 # <a name="get-function"></a>Get işlevi
 
-Varsa belirtilen özelliğin değerini alır.
+Varsa belirtilen özellik değerini alır.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -46,59 +46,59 @@ HRESULT Get (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`\
-[in] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`\
-[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
+'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `wszName`\
-[in] Özelliğin adı.
+'ndaki Özelliğin adı.
 
 `lFlags`\
-[in] Ayrılmış. Bu parametre 0 olmalıdır.
+'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
 
 `pVal`\
-[out] İşlev başarıyla döndürürse, değerini içeren `wszName` özelliği. `pval` Bağımsız değişkeni doğru tür ve niteleyici değeri atanır.
+dışı İşlev başarıyla döndürürse, `wszName` özelliğinin değerini içerir. `pval` Bağımsız değişkenine, niteleyicisi için doğru tür ve değer atanır.
 
 `pvtType`\
-[out] İşlev başarıyla döndürürse, içeren bir [CIM türü sabiti](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) özellik türü gösterir. Değeri de olabilir `null`. 
+dışı İşlev başarıyla döndürürse, özellik türünü gösteren bir [CIM türü sabiti](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) içerir. Değeri de olabilir `null`. 
 
 `plFlavor`\
-[out] İşlev başarıyla döndürürse, özellik kaynağı hakkındaki bilgileri alır. Değeri olabilir `null`, veya tanımlanan WBEM_FLAVOR_TYPE sabitlerden biri *WbemCli.h* üst bilgi dosyası: 
+dışı İşlev başarıyla döndürürse, özelliğin kaynağı hakkında bilgi alır. Bunun değeri `null`, *wbemcli. h* üstbilgi dosyasında tanımlanan aşağıdaki WBEM_FLAVOR_TYPE sabitlerinden biri olabilir: 
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Standart sistem özelliği özelliğidir. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Bir sınıf için: Özellik üst sınıftan devralındı. <br> Bir örneği için: Özellik üst sınıftan devralındı sırada örneği tarafından değiştirilmedi.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Bir sınıf için: Özelliği, türetilmiş bir sınıfa aittir. <br> Bir örneği için: Özellik örneği ile değiştirilir; diğer bir deyişle, bir değer sağlanmamış veya niteleyicisi eklenemez veya değiştirilemez. |
+| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Özelliği, standart bir sistem özelliğidir. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Bir sınıf için: Özelliği üst sınıftan devralınır. <br> Bir örnek için: Üst sınıftan Devralındığı sürece özelliği, örnek tarafından değiştirilmez.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Bir sınıf için: Özelliği türetilmiş sınıfa aittir. <br> Bir örnek için: Özelliği örnek tarafından değiştirilir; diğer bir deyişle, bir değer sağlanmış veya bir niteleyici eklenmiş ya da değiştirilmiş. |
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir veya daha fazla parametre geçerli değil. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen özellik bulunamadı. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev bir çağrı sarılır [IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) yöntemi.
+Bu işlev, [IWbemClassObject:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) yöntemine bir çağrı kaydırır.
 
-`Get` İşlev Ayrıca Sistem özellikleri döndürür.
+`Get` İşlev sistem özelliklerini de döndürebilir.
 
-`pVal` Bağımsız değişkeni doğru tür ve değer niteleyicisi ve COM atandığı [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) işlevi
+Bağımsız değişkenine, niteleyicinin ve com [variantinit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) işlevinin doğru türü ve değeri atanır `pVal`
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
- **Üst bilgi:** WMINet_Utils.idl
+ **Üst bilgi** WMINet_Utils. IDL
 
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

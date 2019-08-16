@@ -7,39 +7,36 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
-ms.openlocfilehash: 71ada3235343aa7e014e12ebf5b367ec744b00d3
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: ef3a963b5621f0b972b02a007681f600fbdb1050
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959665"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040071"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms TreeView Denetimi ile Düğüm Ekleme ve Kaldırma
 
-Windows Forms çünkü <xref:System.Windows.Forms.TreeView> denetimi dikkat kendi üst düğümlerinin nedir için ödeme gerekir düğüm eklerken bu düğümleri hiyerarşik bir biçimde görüntüler.
+Windows Forms <xref:System.Windows.Forms.TreeView> denetimi düğümleri hiyerarşik bir şekilde görüntülediğinden, bir düğüm eklenirken, üst düğümünün ne olduğuna dikkat etmeniz gerekir.
 
-Aşağıdaki yordam gerektirir bir **Windows uygulama** proje içeren bir form içeren bir <xref:System.Windows.Forms.TreeView> denetimi. Bu tür bir proje ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir Windows Forms uygulaması projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project) ve [nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md).
+Aşağıdaki yordam, bir <xref:System.Windows.Forms.TreeView> denetim içeren bir form ile **Windows uygulama** projesi gerektirir. Böyle bir projeyi ayarlama hakkında daha fazla bilgi için bkz [. nasıl yapılır: Windows Forms bir uygulama projesi](/visualstudio/ide/step-1-create-a-windows-forms-application-project) oluşturun ve [şunları yapın: Windows Forms](how-to-add-controls-to-windows-forms.md)denetimleri ekleyin.
 
-> [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).
+### <a name="to-add-or-remove-nodes-in-the-designer"></a>Tasarımcıya düğüm eklemek veya kaldırmak için
 
-### <a name="to-add-or-remove-nodes-in-the-designer"></a>Ekleme veya düğümleri kaldırma Tasarımcısı'nda
+1. <xref:System.Windows.Forms.TreeView> Denetimi seçin.
 
-1. Seçin <xref:System.Windows.Forms.TreeView> denetimi.
+2. **Özellikler** penceresinde,![ özelliğin<xref:System.Windows.Forms.TreeView.Nodes%2A> yanındaki Visual Studio](./media/visual-studio-ellipsis-button.png)'nun Özellikler penceresi (...) üç nokta (...) düğmesine tıklayın.
 
-2. İçinde **özellikleri** penceresinde tıklayın **üç nokta** (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/visual-studio-ellipsis-button.png)) düğmesinin yanındaki <xref:System.Windows.Forms.TreeView.Nodes%2A> özelliği .
+     **TreeNode Düzenleyicisi** görünür.
 
-     **Editor objektu TreeNode** görünür.
+3. Düğüm eklemek için bir kök düğümün mevcut olması gerekir; birisi yoksa, önce **kök Ekle** düğmesine tıklayarak bir kök eklemeniz gerekir. Ardından, kökü veya diğer düğümleri seçerek ve **alt Ekle** düğmesine tıklayarak alt düğümler ekleyebilirsiniz.
 
-3. Düğümler eklemek için bir kök düğümü olmalıdır; bir mevcut değilse, öncelikle bir kök tıklayarak eklemelisiniz **ekleme kök** düğmesi. Kök veya başka bir düğüme seçtikten sonra alt düğümleri ekleyebilirsiniz **alt öğe Ekle** düğmesi.
-
-4. Düğümleri silmek için silin ve ardından için düğümü seçin **Sil** düğmesi.
+4. Düğümleri silmek için, silinecek düğümü seçin ve **Sil** düğmesine tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [TreeView Denetimi](treeview-control-windows-forms.md)
 - [TreeView Denetimine Genel Bakış](treeview-control-overview-windows-forms.md)
 - [Nasıl yapılır: Windows Forms TreeView denetimi için simgeler ayarlama](how-to-set-icons-for-the-windows-forms-treeview-control.md)
-- [Nasıl yapılır: Bir Windows Forms TreeView denetiminin tüm düğümlerinde yineleme](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [Nasıl yapılır: Hangi TreeView düğümüne tıklandığını belirleme](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [Nasıl yapılır: Bir TreeView veya ListView denetimi (Windows Forms) özel bilgi ekleme](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Nasıl yapılır: Windows Forms TreeView denetiminin tüm düğümlerinde yineleme](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [Nasıl yapılır: Hangi TreeView Düğümüne Tıklandığını Belirleme](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [Nasıl yapılır: Bir TreeView veya ListView denetimine özel bilgi ekleme (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

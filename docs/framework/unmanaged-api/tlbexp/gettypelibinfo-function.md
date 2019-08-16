@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 916d62a2b79a44d92611e735c6f9bbb3e01970e2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7da0986269189ba5c2dfa0f10d509bf51deb446d
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782737"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040203"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo İşlevi
-Belirtilen tür kitaplığı hakkında bilgi inceleyerek döndürür, [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) yapısı.  
+[Tlibattr](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr) yapısını inceleyerek belirtilen tür kitaplığıyla ilgili bilgileri döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,38 +41,38 @@ HRESULT GetTypeLibInfo(
   
 ## <a name="parameters"></a>Parametreler  
  `szFile`  
- [in] Tür kitaplığı dosyasının adı.  
+ 'ndaki Tür kitaplığının dosya adı.  
   
  `pTypeLibID`  
- [out] Tür kitaplığının GUID.  
+ dışı Tür kitaplığının GUID 'SI.  
   
  `pTypeLibLCID`  
- [out] Tür kitaplığının yerelleştirme kimliği.  
+ dışı Tür kitaplığının yerelleştirme KIMLIĞI.  
   
  `pTypeLibPlatform`  
- [out] A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) tür kitaplığı için hedef işletim sistemini tanımlayan bir bayrak. Genel değerler şunlardır: SYS_WIN32 ve SYS_WIN64.  
+ dışı Tür kitaplığı için hedef işletim sistemini tanımlayan bir [Syskind](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) bayrağı. Ortak değerler SYS_WIN32 ve SYS_WIN64.  
   
  `pTypeLibMajorVer`  
- [out] Tür kitaplığı sürüm sayısı. Örneğin, sürüm için *x.y*, ana sürüm numarası *x*.  
+ dışı Tür kitaplığının ana sürüm numarası. Örneğin, *x. y*sürümü için ana sürüm numarası *x*olur.  
   
  `pTypeLibMinorVer`  
- [out] Tür kitaplığının ikincil sürüm numarası. Örneğin, sürüm için *x.y*, ikincil sürüm numarası *y*.  
+ dışı Tür kitaplığının ikincil sürüm numarası. Örneğin, *x. y*sürümü için, ikincil sürüm numarası *y*' dir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetTypeLibInfo` İşlevi çağrıldığında [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md). Bu araç, bir ortak dil çalışma zamanı (CLR) derlemedeki türleri açıklayan bir tür kitaplığı üretir.  
+ İşlevi Tlbexp [. exe (tür kitaplığı verme programı)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)tarafından çağrılır. `GetTypeLibInfo` Bu araç, ortak dil çalışma zamanı (CLR) derlemesindeki türleri açıklayan bir tür kitaplığı oluşturur.  
   
- Herhangi bir parametre null ise, işlev döndürür bir `HRESULT` , `E_POINTER`. Aksi halde `S_OK`.  
+ Herhangi bir parametre null ise, işlev ' ı döndürür `HRESULT`. `E_POINTER` Aksi takdirde, döndürür `S_OK`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** TlbRef.h  
+ **Üst bilgi** TlbRef. h  
   
- **Kitaplığı:** TlbRef.lib  
+ **Kitaplığı** TlbRef. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Tlbexp Yardımcı İşlevleri](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
-- [LoadTypeLibEx işlevi](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [LoadTypeLibEx Işlevi](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

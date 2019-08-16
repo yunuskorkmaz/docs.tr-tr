@@ -8,50 +8,48 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: ed479c04db094b5fc0c42bfecbfe5a7753c16358
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: e5069dd46a31a65f65a17d750b685d82762e3d11
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960188"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038202"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak bir ToolBar Denetimine Düğme Ekleme
 
 > [!NOTE]
-> <xref:System.Windows.Forms.ToolStrip> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.ToolBar> denetler; ancak, <xref:System.Windows.Forms.ToolBar> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.
+> Denetim yerini alır ve <xref:System.Windows.Forms.ToolBar> <xref:System.Windows.Forms.ToolBar> denetime işlevsellik ekler; ancak, isterseniz denetim hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.ToolStrip>
 
-En önemli parçalarından biri <xref:System.Windows.Forms.ToolBar> ona eklediğiniz düğmeler denetimidir. Bunlar, menü komutlarını kolay erişim sağlamak için kullanılabilir veya alternatif olarak, bunlar başka bir alanda komutları menüsü yapısı içinde kullanılabilir değil, kullanıcılarınıza göstermek için uygulamanızın kullanıcı arabiriminin yerleştirilebilir.
+<xref:System.Windows.Forms.ToolBar> Denetimin integral bir bölümü, ona eklediğiniz düğmelerdir. Bunlar menü komutlarına kolay erişim sağlamak için kullanılabilir veya alternatif olarak, menü yapısında kullanılamayan kullanıcılarınıza komutları göstermek için uygulamanızın kullanıcı arabiriminin başka bir alanına yerleştirilebilecek.
 
-Aşağıdaki yordam gerektirir bir **Windows uygulama** proje içeren bir form içeren bir <xref:System.Windows.Forms.ToolBar> denetimi. Bu tür bir proje ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir Windows Forms uygulaması projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project) ve [nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md).
+Aşağıdaki yordam, bir <xref:System.Windows.Forms.ToolBar> denetim içeren bir form ile **Windows uygulama** projesi gerektirir. Böyle bir projeyi ayarlama hakkında daha fazla bilgi için bkz [. nasıl yapılır: Windows Forms bir uygulama projesi](/visualstudio/ide/step-1-create-a-windows-forms-application-project) oluşturun ve [şunları yapın: Windows Forms](how-to-add-controls-to-windows-forms.md)denetimleri ekleyin.
 
-> [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 ### <a name="to-add-buttons-at-design-time"></a>Tasarım zamanında düğme eklemek için
 
-1. Seçin <xref:System.Windows.Forms.ToolBar> denetimi.
+1. <xref:System.Windows.Forms.ToolBar> Denetimi seçin.
 
-2. İçinde **özellikleri** penceresinde tıklayın <xref:System.Windows.Forms.ToolBar.Buttons%2A> özelliğini seçin ve **üç nokta** (![Visual Studio'nun Özellikler penceresinde üç nokta düğmesini (…).](./media/visual-studio-ellipsis-button.png)) açmak için düğmeyi **ToolBarButton Koleksiyonu Düzenleyicisi**.
+2. **Özellikler** penceresinde, <xref:System.Windows.Forms.ToolBar.Buttons%2A> özelliği tıklatıp seçin ve sonra da Visual Studio 'nun Özellikler penceresi üç nokta (![...) düğmesini tıklatın.](./media/visual-studio-ellipsis-button.png)ToolBarButton 'ı açmak için  **Koleksiyon Düzenleyicisi**.
 
-3. Kullanım **Ekle** ve **Kaldır** düğmeleri ekleme ve kaldırma düğmelerden <xref:System.Windows.Forms.ToolBar> denetimi.
+3. Denetime düğme eklemek ve kaldırmak için Ekle ve **Kaldır** düğmelerini kullanın. <xref:System.Windows.Forms.ToolBar>
 
-4. Configure the properties of düğmelerin **özellikleri** Düzenleyicisinin sağ taraftaki bölmede görüntülenen penceresi. Aşağıdaki tabloda, dikkate alınması gereken bazı önemli özellikleri gösterir.
+4. Düzenleyicinin sağ tarafındaki bölmede görüntülenen **Özellikler** penceresinde tek düğmelerin özelliklerini yapılandırın. Aşağıdaki tabloda dikkate alınması gereken bazı önemli özellikler gösterilmektedir.
 
     |Özellik|Açıklama|
     |--------------|-----------------|
-    |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|Menü açılan araç çubuğu düğmesini görüntülenecek ayarlar. Araç çubuğu düğmesinin <xref:System.Windows.Forms.ToolBarButton.Style%2A> özelliği ayarlanmalıdır <xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>. Bu özellik bir örneğini alır <xref:System.Windows.Forms.ContextMenu> sınıfı başvuru olarak.|
-    |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|Geçiş stili araç çubuğu düğmesi kısmen gönderildiğinde olup olmadığını belirler. Araç çubuğu düğmesinin <xref:System.Windows.Forms.ToolBarButton.Style%2A> özelliği ayarlanmalıdır <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>.|
-    |<xref:System.Windows.Forms.ToolBarButton.Pushed%2A>|Geçiş stili araç çubuğu düğmesi şu anda zorlanan durumda olup olmadığını belirler. Araç çubuğu düğmesinin <xref:System.Windows.Forms.ToolBarButton.Style%2A> özelliği ayarlanmalıdır <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton> veya <xref:System.Windows.Forms.ToolBarButtonStyle.PushButton>.|
-    |<xref:System.Windows.Forms.ToolBarButton.Style%2A>|Araç çubuğu düğmesini stilini ayarlar. Değerlerde biri olmalıdır <xref:System.Windows.Forms.ToolBarButtonStyle> sabit listesi.|
-    |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|Düğme tarafından görüntülenen metin dizesi.|
-    |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|Düğmenin araç ipucu olarak görünen metin.|
+    |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|Açılan araç çubuğu düğmesinde görüntülenecek menüyü ayarlar. Araç çubuğu düğmesinin <xref:System.Windows.Forms.ToolBarButton.Style%2A> özelliği olarak <xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>ayarlanmalıdır. Bu özellik, <xref:System.Windows.Forms.ContextMenu> bir başvuru olarak sınıfının bir örneğini alır.|
+    |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|Bir değiştirme stili araç çubuğu düğmesinin kısmen gönderilip atılmayacağını ayarlar. Araç çubuğu düğmesinin <xref:System.Windows.Forms.ToolBarButton.Style%2A> özelliği olarak <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>ayarlanmalıdır.|
+    |<xref:System.Windows.Forms.ToolBarButton.Pushed%2A>|Geçiş stili bir araç çubuğu düğmesinin Şu anda basılmış durumunda olup olmadığını ayarlar. Araç çubuğu düğmesinin <xref:System.Windows.Forms.ToolBarButton.Style%2A> özelliği veya <xref:System.Windows.Forms.ToolBarButtonStyle.PushButton>olarak <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton> ayarlanmalıdır.|
+    |<xref:System.Windows.Forms.ToolBarButton.Style%2A>|Araç çubuğu düğmesinin stilini ayarlar. <xref:System.Windows.Forms.ToolBarButtonStyle> Numaralandırmadaki değerlerden biri olmalıdır.|
+    |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|Düğme tarafından görünen metin dizesi.|
+    |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|Düğme için araç Ipucu olarak görünen metin.|
 
-5. Tıklayın **Tamam** iletişim kutusunu kapatmak ve belirttiğiniz paneller oluşturun.
+5. İletişim kutusunu kapatmak ve belirlediğiniz bölmeleri oluşturmak için **Tamam** ' a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Nasıl yapılır: ToolBar düğmesi için simge tanımlama](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Nasıl yapılır: Araç çubuğu düğmeleri için menü olaylarını tetikleme](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Nasıl yapılır: Bir araç çubuğu düğmesi için simge tanımlama](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Nasıl yapılır: Araç çubuğu düğmeleri için tetikleyici menü olayları](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar Denetimine Genel Bakış](toolbar-control-overview-windows-forms.md)
 - [ToolBar Denetimi](toolbar-control-windows-forms.md)

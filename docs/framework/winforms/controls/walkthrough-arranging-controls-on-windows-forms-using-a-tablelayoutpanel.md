@@ -6,201 +6,199 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: cbd0eb3dfc8f4494bf9a8e96ff7c472622f135d8
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 7566f19282ffd5a3cac86693a64899f25ce37b9f
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960334"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040286"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme
 
-Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içeriği boyutu değiştikçe uygun şekilde düzenler bir düzene sahip bir form gerektirir. Ne zaman dinamik bir düzen gerekir ve işlemek istemediğiniz <xref:System.Windows.Forms.Control.Layout> açıkça kodunuzda olayları, Düzen panelini kullanma göz önünde bulundurun.
+Bazı uygulamalar, form yeniden boyutlandırıldığı veya içeriklerin boyutu değiştikçe kendisini uygun şekilde değiştiren düzen içeren bir form gerektirir. Dinamik bir düzene ihtiyacınız olduğunda ve kodunuzda açıkça olayları işlemek <xref:System.Windows.Forms.Control.Layout> istemiyorsanız, bir Düzen paneli kullanmayı düşünün.
 
-<xref:System.Windows.Forms.FlowLayoutPanel> Denetimi ve <xref:System.Windows.Forms.TableLayoutPanel> denetimi, form üzerinde denetimleri düzenlemek için sezgisel yolu sağlayın. Her ikisini birden içerdiği alt denetimler göreli konumlarını denetlemek için otomatik, yapılandırılabilir bir yeteneği sağlar ve yeniden boyutlandırma ve alt denetimler üst formun boyutları yeniden konumlandırmak için hem de çalışma zamanında dinamik düzen özelliklerini size değiştirin. Düzen bölmeleri, gelişmiş kullanıcı arabirimleri gerçekleştirme etkinleştirmek için Düzen panelleri içinde yuvalanabilir.
+<xref:System.Windows.Forms.FlowLayoutPanel> Denetim<xref:System.Windows.Forms.TableLayoutPanel> ve denetim, formunuzdaki denetimleri düzenlemek için sezgisel yollar sağlar. Her ikisi de içindeki alt denetimlerin göreli konumlarını denetlemek için otomatik, yapılandırılabilir bir özellik sağlar ve her ikisi de çalışma zamanında dinamik düzen özellikleri sunduklarında, ana formun boyutları olarak alt denetimleri yeniden boyutlandırabilir ve yeniden konumlandırabilirsiniz değişebilir. Düzen bölmeleri, gelişmiş kullanıcı arabirimlerinin yerine geçme özelliğini etkinleştirmek için Düzen panelleri içinde iç içe olabilir.
 
-<xref:System.Windows.Forms.FlowLayoutPanel> İçeriğini belirli bir akış yönünü ayarlar: yatay veya dikey. İçeriği sonraki bir satır veya sonraki bir sütun sarmalanabilir. Alternatif olarak, içeriğinin yerine kırpılmış DC'de sona erdi. Daha fazla bilgi için [izlenecek yol: FlowLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).
+, <xref:System.Windows.Forms.FlowLayoutPanel> İçeriğini belirli bir akış yönünde düzenler: yatay veya dikey. İçeriği bir satırdan sonrakine veya bir sütundan sonrakine kaydırılmış olabilir. Alternatif olarak, içeriği sarmalanabilir yerine kırpılabilir. Daha fazla bilgi için bkz [. İzlenecek yol: FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)kullanarak Windows Forms denetimlerini düzenleme.
 
-<xref:System.Windows.Forms.TableLayoutPanel> İçeriğinin HTML benzer işlevsellik sağlayan bir kılavuzda düzenler \<Tablo > öğesi. <xref:System.Windows.Forms.TableLayoutPanel> Denetimi denetimleri tam olarak her denetim konumunu belirtmek gerek kalmadan bir kılavuz düzeni yerleştirmenize olanak sağlar. Satırları ve sütunları hücrelerinden düzenlenir ve bu farklı boyutlarda olabilir. Hücreler, satırlar ve sütunlar arasında birleştirilebilir. Hücre bir form içeren ve diğer birçok bakımdan kapsayıcı olarak davranır her şeyi içerebilir.
+, <xref:System.Windows.Forms.TableLayoutPanel> HTML\<Tablo > öğesine benzer işlevler sağlayan bir kılavuzda içeriğini düzenler. Denetim <xref:System.Windows.Forms.TableLayoutPanel> , denetimleri her bir denetimin konumunu tam olarak belirtmenize gerek kalmadan kılavuz düzenine yerleştirmenize olanak sağlar. Hücreleri satırlar ve sütunlar halinde düzenlenir ve bunlar farklı boyutlarda olabilir. Hücreler, satırlar ve sütunlar arasında birleştirilebilir. Hücreler, bir form içerebilen ve kapsayıcı olarak birçok yönden davranan her şeyi içerebilir.
 
-<xref:System.Windows.Forms.TableLayoutPanel> Denetimi ayrıca bir orantılı yeniden boyutlandırma özelliği sağlar çalışma zamanında, formunuzu yeniden boyutlandırıldığından düzeninizi sorunsuz bir şekilde değiştirebilirsiniz. Böylece <xref:System.Windows.Forms.TableLayoutPanel> denetimi de uygun veri girişi formlar ve yerelleştirilmiş uygulamalar gibi amaçlarla. Daha fazla bilgi için [izlenecek yol: Veri girişi için yeniden boyutlandırılabilir Windows formu oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100)) ve [izlenecek yol: Yerelleştirilebilir Windows formu oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100)).
+Denetim <xref:System.Windows.Forms.TableLayoutPanel> , çalışma zamanında orantılı bir yeniden boyutlandırma özelliği de sağlar, böylece formunuz yeniden boyutlandırıldığından düzen sorunsuzca değişebilir. Bu, <xref:System.Windows.Forms.TableLayoutPanel> denetimi veri girişi formları ve yerelleştirilmiş uygulamalar gibi amaçlar için uygun hale getirir. Daha fazla bilgi için bkz [. İzlenecek yol: Veri girişi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100)) ve İzlenecek yol için yeniden [boyutlandırılabilir bir Windows formu oluşturma: Yerelleştirilebilir Windows formu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))oluşturma.
 
-Genel olarak, kullanmamalısınız bir <xref:System.Windows.Forms.TableLayoutPanel> tüm düzen için bir kapsayıcı denetimi. Kullanım <xref:System.Windows.Forms.TableLayoutPanel> düzenini bölümlerini orantılı yeniden boyutlandırma özellikler sağlamak için kontrol eder.
+Genel olarak, tüm düzen için kapsayıcı olarak <xref:System.Windows.Forms.TableLayoutPanel> bir denetim kullanmamalısınız. Düzenin <xref:System.Windows.Forms.TableLayoutPanel> bölümlerine orantılı yeniden boyutlandırma özellikleri sağlamak için denetimleri kullanın.
 
-Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
+Bu izlenecek yolda gösterilen görevler şunlardır:
 
-- Bir Windows Forms projesi oluşturma
+- Windows Forms projesi oluşturma
 
-- Satırlar ve sütunlar denetimleri düzenleme
+- Satırlarda ve sütunlarda denetimleri düzenleme
 
-- Ayar satır ve sütun özellikleri
+- Satır ve sütun özelliklerini ayarlama
 
-- Kapsayıcı satırlar ve sütunlar bir denetimi ile
+- Satırları ve sütunları bir denetimle yayma
 
-- Taşan otomatik işleme
+- Taşmaları otomatik Işleme
 
-- Araç kutusunda çift tıklayarak denetimler ekleme
+- Araç kutusunda çift tıklayarak denetim ekleme
 
-- Anahattı çizerek bir denetim ekleme
+- Ana hattını çizerek bir denetim ekleme
 
-- Mevcut denetimleri farklı bir üst öğeye yeniden atama
+- Varolan denetimleri farklı bir üst öğeye yeniden atama
 
-İşlemi tamamladığınızda, bu önemli bir düzen özellikleri tarafından oynadığı rol, bir anlayışa sahip olacaksınız.
+İşiniz bittiğinde, bu önemli düzen özellikleri tarafından yürütülen rolü anlayacaksınız.
 
-> [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 ## <a name="creating-the-project"></a>Projeyi Oluşturma
 
-İlk adım projeyi oluşturmak ve formu ayarlamaktır.
+İlk adım projeyi oluşturmak ve formu kurmak olur.
 
 #### <a name="to-create-the-project"></a>Proje oluşturmak için
 
-1. "TableLayoutPanelExample" adlı bir Windows uygulaması projesi oluşturun. Daha fazla bilgi için [nasıl yapılır: Bir Windows Forms uygulaması projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project) .
+1. "TableLayoutPanelExample" adlı bir Windows uygulaması projesi oluşturun. Daha fazla bilgi için [nasıl yapılır: Windows Forms bir uygulama projesi](/visualstudio/ide/step-1-create-a-windows-forms-application-project) oluşturun.
 
-2. Formda seçin **Windows** **Form Tasarımcısı**.
+2. **Windows** **form tasarımcısında**formu seçin.
 
-## <a name="arranging-controls-in-rows-and-columns"></a>Satırlar ve sütunlar denetimleri düzenleme
+## <a name="arranging-controls-in-rows-and-columns"></a>Satırlarda ve sütunlarda denetimleri düzenleme
 
-<xref:System.Windows.Forms.TableLayoutPanel> Denetim kolayca denetimleri satırlar ve sütunlar halinde düzenleme olanak tanır.
+Denetim <xref:System.Windows.Forms.TableLayoutPanel> , denetimleri satırlar ve sütunlar halinde kolayca düzenlemenizi sağlar.
 
-#### <a name="to-arrange-controls-in-rows-and-columns-using-a-tablelayoutpanel"></a>Satırları ve sütunları TableLayoutPanel kullanarak denetimleri düzenlemek için
+#### <a name="to-arrange-controls-in-rows-and-columns-using-a-tablelayoutpanel"></a>TableLayoutPanel kullanarak satırlarda ve sütunlarda denetimleri düzenlemek için
 
-1. Sürükleme bir <xref:System.Windows.Forms.TableLayoutPanel> denetimi **araç kutusu** formunuza. Varsayılan olarak, Not <xref:System.Windows.Forms.TableLayoutPanel> dört denetime sahiptir.
+1. <xref:System.Windows.Forms.TableLayoutPanel> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin. Varsayılan olarak, <xref:System.Windows.Forms.TableLayoutPanel> denetimin dört hücresi olduğunu unutmayın.
 
-2. Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** içine <xref:System.Windows.Forms.TableLayoutPanel> denetlemek ve hücrelerden biri bırakın. Unutmayın <xref:System.Windows.Forms.Button> denetim seçili hücrede oluşturulur.
+2. **Araç kutusundan** denetimin içine <xref:System.Windows.Forms.Button> birdenetimsürükleyinvehücrelerdenbirinebırakın.<xref:System.Windows.Forms.TableLayoutPanel> <xref:System.Windows.Forms.Button> Denetimin seçtiğiniz hücre içinde oluşturulduğunu unutmayın.
 
-3. Daha fazla üç sürükleyin <xref:System.Windows.Forms.Button> denetimler **araç kutusu** içine <xref:System.Windows.Forms.TableLayoutPanel> her hücre bir düğme içeren denetim.
+3. **Araç kutusundan** <xref:System.Windows.Forms.Button> üçdenetimidahasürükleyin,böyleceherhücredebirdüğmebulunur.<xref:System.Windows.Forms.TableLayoutPanel>
 
-4. İki sütun arasında dikey boyutlandırma tutamacı alın ve sola taşı. Unutmayın <xref:System.Windows.Forms.Button> ilk sütunda denetimleri sırasında boyutu daha küçük bir genişliğe yeniden boyutlandırılır <xref:System.Windows.Forms.Button> ikinci sütunda denetimlerinde değişmez.
+4. İki sütun arasında dikey boyutlandırma tutamacını alın ve sola taşıyın. İlk sütundaki <xref:System.Windows.Forms.Button> denetimlerin daha küçük bir genişliğe yeniden boyutlandırıldığını, ikinci sütundaki <xref:System.Windows.Forms.Button> denetimlerin boyutunun değişmeden olduğunu unutmayın.
 
-5. İki sütun arasında dikey boyutlandırma tutamacı yakalayın ve sağa taşıyın. Unutmayın <xref:System.Windows.Forms.Button> denetimleri ilk sütunda, özgün boyutuna döndürmek while <xref:System.Windows.Forms.Button> ikinci sütunda denetimlerinde sağa taşındı.
+5. İki sütun arasında dikey boyutlandırma tutamacını alın ve sağa taşıyın. İlk sütundaki <xref:System.Windows.Forms.Button> denetimlerin özgün boyutlarına dönüşdiğine, ikinci sütundaki denetimlerin sağa taşınacağını unutmayın. <xref:System.Windows.Forms.Button>
 
-6. Artırma ve azaltma denetimleri panelinde etkisini görmek için yatay boyutlandırma tutamacı hareket ettirin.
+6. Paneldeki denetimlerde etkiyi görmek için yatay boyutlandırma tutamacını yukarı ve aşağı taşıyın.
 
-## <a name="positioning-controls-within-cells-using-docking-and-anchoring"></a>Sabitleme ve yerleştirme kullanarak hücreleri içinde denetimleri konumlandırma
+## <a name="positioning-controls-within-cells-using-docking-and-anchoring"></a>Yerleştirme ve sabitleme kullanarak hücrelerde denetimleri konumlandırma
 
-Alt öğe denetimlerini anchoring davranışını bir <xref:System.Windows.Forms.TableLayoutPanel> diğer kapsayıcı denetimlerinde davranışından farklıdır. Alt denetimler yerleştirme davranışını, diğer kapsayıcı denetimleri ile aynıdır.
+İçindeki alt denetimlerin sabitleme davranışı, diğer kapsayıcı denetimlerindeki <xref:System.Windows.Forms.TableLayoutPanel> davranıştan farklıdır. Alt denetimlerin yerleştirme davranışı, diğer kapsayıcı denetimleriyle aynıdır.
 
-#### <a name="positioning-controls-within-cells"></a>Hücrelerde denetimleri konumlandırma
+#### <a name="positioning-controls-within-cells"></a>Hücrelerin içindeki denetimleri konumlandırma
 
-1. İlk seçin <xref:System.Windows.Forms.Button> denetimi. Değerini değiştirebilir, <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>. Unutmayın <xref:System.Windows.Forms.Button> hücresini doldurmak için denetimi genişletir.
+1. İlk <xref:System.Windows.Forms.Button> denetimi seçin. <xref:System.Windows.Forms.Control.Dock%2A> Özelliğinin değerini olarak <xref:System.Windows.Forms.DockStyle.Fill>değiştirin. <xref:System.Windows.Forms.Button> Denetimin hücresini dolduracak şekilde genişlediğine unutmayın.
 
-2. Diğer birini <xref:System.Windows.Forms.Button> kontrol eder. Değerini değiştirebilir, <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini <xref:System.Windows.Forms.AnchorStyles.Right>. Böylece, sağ kenarlık hücrenin sağ kenarının, taşınır unutmayın. Kenarlıklar arasındaki uzaklığı toplamıdır <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Margin%2A> özelliği ve bölmenin <xref:System.Windows.Forms.Control.Padding%2A> özelliği.
+2. Diğer <xref:System.Windows.Forms.Button> denetimlerden birini seçin. <xref:System.Windows.Forms.Control.Anchor%2A> Özelliğinin değerini olarak <xref:System.Windows.Forms.AnchorStyles.Right>değiştirin. Sağ kenarlığının hücrenin sağ kenarlığının yakınında olması için taşındığını unutmayın. Kenarlıklar arasındaki mesafe, <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.Control.Margin%2A> denetimin <xref:System.Windows.Forms.Control.Padding%2A> özelliğinin ve panelin özelliğinin toplamıdır.
 
-3. Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini <xref:System.Windows.Forms.AnchorStyles.Right> ve <xref:System.Windows.Forms.AnchorStyles.Left>. Denetim ile hücrenin genişliğine boyutlandırılır Not <xref:System.Windows.Forms.Control.Margin%2A> ve <xref:System.Windows.Forms.Control.Padding%2A> dikkate değer.
+3. <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.AnchorStyles.Right> Denetimin özelliğinin değerini ve<xref:System.Windows.Forms.AnchorStyles.Left>olarak değiştirin. <xref:System.Windows.Forms.Control.Anchor%2A> Denetim, <xref:System.Windows.Forms.Control.Margin%2A> ve <xref:System.Windows.Forms.Control.Padding%2A> değerlerini hesaba götürülüyse, hücrenin genişliğine göre boyutlandırıldığını unutmayın.
 
-4. 2 ve 3 ile <xref:System.Windows.Forms.AnchorStyles.Top> ve <xref:System.Windows.Forms.AnchorStyles.Bottom> stilleri.
+4. 2 ve 3 <xref:System.Windows.Forms.AnchorStyles.Top> . adımları ve <xref:System.Windows.Forms.AnchorStyles.Bottom> stilleriyle tekrarlayın.
 
-## <a name="setting-row-and-column-properties"></a>Ayar satır ve sütun özellikleri
+## <a name="setting-row-and-column-properties"></a>Satır ve sütun özelliklerini ayarlama
 
-Satırları ve sütunları özelliklerini kullanarak ayarlayabilirsiniz <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> ve <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> koleksiyonları.
+<xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> Ve<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> koleksiyonlarını kullanarak satırların ve sütunların ayrı özelliklerini ayarlayabilirsiniz.
 
 #### <a name="to-set-row-and-column-properties"></a>Satır ve sütun özelliklerini ayarlamak için
 
-1. Seçin <xref:System.Windows.Forms.TableLayoutPanel> denetim **Windows Form Tasarımcısı**.
+1. **Windows Form Tasarımcısı**denetimi seçin <xref:System.Windows.Forms.TableLayoutPanel> .
 
-2. İçinde **özellikleri** açık pencerelerin <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> üç nokta simgesine tıklayarak, koleksiyon (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/visual-studio-ellipsis-button.png)) düğmesinin yanındaki  **Sütunları** girişi.
+2. **Özellikler** penceresinde, **sütunlar** girişinin yanındaki üç <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> nokta (Visual Studio](./media/visual-studio-ellipsis-button.png)Özellikler penceresi)![düğmesine tıklayarak koleksiyonu açın (...).
 
-3. İlk sütunu seçin ve değeri değiştirin, <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> özelliğini <xref:System.Windows.Forms.SizeType.AutoSize>. Tıklayın **Tamam** değişikliği kabul etmek için. İlk sütun genişliğini uyacak şekilde azalır Not <xref:System.Windows.Forms.Button> denetimi. Ayrıca, bir sütunun genişliğini yeniden boyutlandırılabilir olmadığını unutmayın.
+3. İlk sütunu seçin ve <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> özelliğinin değerini olarak <xref:System.Windows.Forms.SizeType.AutoSize>değiştirin. Değişikliği kabul etmek için **Tamam** ' ı tıklatın. İlk sütunun genişliğinin <xref:System.Windows.Forms.Button> denetime sığacak şekilde azaltıldığına unutmayın. Ayrıca, sütunun genişliğinin yeniden boyutlandırılabilir olduğunu unutmayın.
 
-4. İçinde **özellikleri** penceresini açık <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> koleksiyonu ve ilk sütunu seçin. Değerini değiştirebilir, <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> özelliğini <xref:System.Windows.Forms.SizeType.Percent>. Tıklayın **Tamam** değişikliği kabul etmek için. Yeniden boyutlandırma <xref:System.Windows.Forms.TableLayoutPanel> denetlemek için daha büyük bir genişlik ve ilk sütun genişliğini genişletir olduğunu unutmayın. Yeniden boyutlandırma <xref:System.Windows.Forms.TableLayoutPanel> denetim daha küçük bir genişliğe ve düğmelerin ilk sütunundaki hücrenin sığdırmak için boyutlandırılır not edin. Ayrıca, bir sütunun genişliğini yeniden boyutlandırılabilir olduğunu unutmayın.
+4. **Özellikler** penceresinde, <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> koleksiyonu açın ve ilk sütunu seçin. <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> Özelliğinin değerini olarak <xref:System.Windows.Forms.SizeType.Percent>değiştirin. Değişikliği kabul etmek için **Tamam** ' ı tıklatın. <xref:System.Windows.Forms.TableLayoutPanel> Denetimi daha büyük bir genişliğe göre yeniden boyutlandırın ve ilk sütunun genişliğinin genişlediğine unutmayın. <xref:System.Windows.Forms.TableLayoutPanel> Denetimi daha küçük bir genişliğe göre yeniden boyutlandırın ve ilk sütundaki düğmelerin hücreye sığacak şekilde boyutlandırıldığını unutmayın. Ayrıca, sütunun genişliğinin yeniden boyutlandırılabilir olduğunu unutmayın.
 
-5. İçinde **özellikleri** penceresini açık <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> toplama ve listelenen tüm sütunları seçin. Değerini her <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> özelliğini <xref:System.Windows.Forms.SizeType.Percent>. Tıklayın **Tamam** değişikliği kabul etmek için. Yineleme ile <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> koleksiyonu.
+5. **Özellikler** penceresinde, <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> koleksiyonu açın ve listelenen tüm sütunları seçin. Her <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> özelliğinin değerini olarak <xref:System.Windows.Forms.SizeType.Percent>ayarlayın. Değişikliği kabul etmek için **Tamam** ' ı tıklatın. <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> Koleksiyonla tekrarlayın.
 
-6. Yeniden boyutlandırma tutamaçları köşe birini alın ve genişliğini ve yüksekliğini yeniden boyutlandırma <xref:System.Windows.Forms.TableLayoutPanel> denetimi. Satırları ve sütunları olarak yeniden boyutlandırılıyor Not <xref:System.Windows.Forms.TableLayoutPanel> denetimin boyutunu değişiklikler. Ayrıca satırları ve sütunları yeniden boyutlandırılabilir yatay ve dikey tutamaçlarını olduğunu unutmayın.
+6. Köşe yeniden boyutlandırma tutamaçlarından birini alın ve <xref:System.Windows.Forms.TableLayoutPanel> denetimin genişliğini ve yüksekliğini yeniden boyutlandırın. <xref:System.Windows.Forms.TableLayoutPanel> Denetim boyutu değiştiğinde satırların ve sütunların yeniden boyutlandırıldığını unutmayın. Ayrıca, satır ve sütunların yatay ve dikey boyutlandırma tutamaçlarıyla yeniden boyutlandırılabilir olduğunu unutmayın.
 
-## <a name="spanning-rows-and-columns-with-a-control"></a>Kapsayıcı satırlar ve sütunlar bir denetimi ile
+## <a name="spanning-rows-and-columns-with-a-control"></a>Satırları ve sütunları bir denetimle yayma
 
-<xref:System.Windows.Forms.TableLayoutPanel> Denetimi tasarım zamanında denetimler için çeşitli yeni özellikler ekler. Bu özelliklerin iki `RowSpan` ve `ColumnSpan`. Bu özellikler, bir denetim yayılma birden fazla bir satır veya sütun yapmak için kullanabilirsiniz.
+Denetim <xref:System.Windows.Forms.TableLayoutPanel> , tasarım zamanında denetimlere birkaç yeni özellik ekler. Bu özelliklerden ikisi de ve `RowSpan` ' `ColumnSpan`dir. Bu özellikleri, bir denetimi birden fazla satır veya sütuna yaymak için kullanabilirsiniz.
 
-#### <a name="to-span-rows-and-columns-with-a-control"></a>Satırları ve sütunları denetimiyle yaymasına izin
+#### <a name="to-span-rows-and-columns-with-a-control"></a>Satırları ve sütunları bir denetimle yayma
 
-1. Seçin <xref:System.Windows.Forms.Button> ilk satır ve ilk sütun denetimi.
+1. İlk satırdaki ve ilk sütundaki denetimiseçin.<xref:System.Windows.Forms.Button>
 
-2. İçinde **özellikleri** windows değerini değiştirin `ColumnSpan` özelliğini **2**. Unutmayın <xref:System.Windows.Forms.Button> ilk sütunu ve ikinci sütun denetimi doldurur. Bu değişikliğe uyum sağlamak için fazladan bir satır eklendi daha da unutmayın.
+2. **Özellikler** penceresinde, `ColumnSpan` özelliğinin değerini **2**olarak değiştirin. <xref:System.Windows.Forms.Button> Denetimin ilk sütunu ve ikinci sütunu doldurduğunu unutmayın. Ayrıca, bu değişikliğe uyum sağlamak için ek bir satır eklendiğini de göz önünde bulabilirsiniz.
 
-3. Yineleme 2. adım için `RowSpan` özelliği.
+3. `RowSpan` Özelliği için 2. adımı tekrarlayın.
 
-## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>Araç kutusunda çift tıklayarak denetimler ekleme
+## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>Araç kutusunda çift tıklayarak denetim ekleme
 
-Doldurabilirsiniz, <xref:System.Windows.Forms.TableLayoutPanel> denetimlerinde çift tıklayarak denetim **araç kutusu**.
+**Araç kutusundaki**denetimleri çift <xref:System.Windows.Forms.TableLayoutPanel> tıklatarak denetiminizi doldurabilirsiniz.
 
-#### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>Araç kutusunda çift tıklayarak denetim eklemek için
+#### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>Araç kutusuna çift tıklayarak denetim eklemek için
 
-1. Sürükleme bir <xref:System.Windows.Forms.TableLayoutPanel> denetimi **araç kutusu** formunuza.
+1. <xref:System.Windows.Forms.TableLayoutPanel> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin.
 
-2. Çift <xref:System.Windows.Forms.Button> denetim simgesini **araç kutusu**. Yeni bir düğme denetimi görünür Not <xref:System.Windows.Forms.TableLayoutPanel> denetimin ilk hücrenin.
+2. <xref:System.Windows.Forms.Button> **Araç kutusundaki**denetim simgesine çift tıklayın. <xref:System.Windows.Forms.TableLayoutPanel> Denetimin ilk hücresinde yeni bir düğme denetimi göründüğünü unutmayın.
 
-3. Daha fazla denetimlerinde çift **araç kutusu**. Yeni denetimler sırayla da göründüğünü fark <xref:System.Windows.Forms.TableLayoutPanel> denetimin boş hücreler. Ayrıca <xref:System.Windows.Forms.TableLayoutPanel> açık hücre mevcutsa, yeni denetimler uyum sağlamak için denetimi genişletir.
+3. **Araç kutusunda**birden fazla denetim ' e çift tıklayın. Yeni denetimlerin, <xref:System.Windows.Forms.TableLayoutPanel> denetimin kullanılmayan hücrelerinde çok büyük bir şekilde göründüğünü unutmayın. Ayrıca, <xref:System.Windows.Forms.TableLayoutPanel> kullanılabilir açık hücre yoksa denetimin yeni denetimlere uyum sağlayacak şekilde genişlediğine de unutmayın.
 
-## <a name="automatic-handling-of-overflows"></a>Taşan otomatik işleme
+## <a name="automatic-handling-of-overflows"></a>Taşmaları otomatik Işleme
 
-Ne zaman, ekleme denetimlere <xref:System.Windows.Forms.TableLayoutPanel> denetimi dışında boş hücre, yeni denetimler için çalışabilir. <xref:System.Windows.Forms.TableLayoutPanel> Denetim işleme bu durumu otomatik olarak hücre sayısını artırarak.
+<xref:System.Windows.Forms.TableLayoutPanel> Denetime denetim eklerken, yeni Denetimleriniz için boş hücreler tükenmeyebilir. <xref:System.Windows.Forms.TableLayoutPanel> Denetim, hücre sayısını artırarak bu durumu otomatik olarak işler.
 
-#### <a name="to-observe-automatic-handling-of-overflows"></a>Taşan otomatik işlenmesini gözlemleyin
+#### <a name="to-observe-automatic-handling-of-overflows"></a>Taşın otomatik işlemesini gözlemlemek için
 
-1. Hala boş hücrelere varsa <xref:System.Windows.Forms.TableLayoutPanel> denetlemek, yeni eklemeden devam <xref:System.Windows.Forms.Button> kadar denetimleri <xref:System.Windows.Forms.TableLayoutPanel> denetim dolu.
+1. <xref:System.Windows.Forms.TableLayoutPanel> Denetimde hala boş hücreler varsa, <xref:System.Windows.Forms.TableLayoutPanel> denetim tamamlanana kadar yeni <xref:System.Windows.Forms.Button> denetimler eklemeye devam edin.
 
-2. Bir kez <xref:System.Windows.Forms.TableLayoutPanel> kontrolü tam, çift <xref:System.Windows.Forms.Button> simgesini **araç kutusu** diğerine eklemek için <xref:System.Windows.Forms.Button> denetimi. Unutmayın <xref:System.Windows.Forms.TableLayoutPanel> yeni denetim uyum sağlamak için yeni bir hücre denetimi oluşturur. Birkaç daha fazla denetim ekleme ve yeniden boyutlandırma davranışını gözlemleyin.
+2. Denetim dolduğunda <xref:System.Windows.Forms.Button> , başka bir <xref:System.Windows.Forms.Button> denetim eklemek için **araç kutusundaki** simgeye çift tıklayın. <xref:System.Windows.Forms.TableLayoutPanel> <xref:System.Windows.Forms.TableLayoutPanel> Denetimin yeni denetim için yeni hücreler oluşturduğunu unutmayın. Birkaç denetim ekleyin ve yeniden boyutlandırma davranışını gözlemleyin.
 
-3. Değiştirin <xref:System.Windows.Forms.TableLayoutPanel> denetimin <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> özelliğini <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize>. Çift <xref:System.Windows.Forms.Button> simgesini **araç kutusu** eklemek için <xref:System.Windows.Forms.Button> kadar denetler <xref:System.Windows.Forms.TableLayoutPanel> denetim dolu. Çift <xref:System.Windows.Forms.Button> simgesini **araç kutusu** yeniden. Not hata iletisi alırsınız **Windows Form Tasarımcısı** size bildiren ek satırları ve sütunları oluşturulamaz.
+3. <xref:System.Windows.Forms.TableLayoutPanel> Denetimin özelliğinin değerini olarak<xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize>değiştirin. <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> Denetim tam olana kadar <xref:System.Windows.Forms.Button> denetimler <xref:System.Windows.Forms.Button> eklemek için araç kutusundaki simgeye çift tıklayın. <xref:System.Windows.Forms.TableLayoutPanel> <xref:System.Windows.Forms.Button> **Araç kutusundaki** simgeye tekrar çift tıklayın. Ek satır ve sütun oluşturulamadığını bildiren **Windows Form Tasarımcısı** bir hata mesajı almayacağınızı unutmayın.
 
-## <a name="inserting-a-control-by-drawing-its-outline"></a>Anahattı çizerek bir denetim ekleme
+## <a name="inserting-a-control-by-drawing-its-outline"></a>Ana hattını çizerek bir denetim ekleme
 
-Bir denetime eklemek bir <xref:System.Windows.Forms.TableLayoutPanel> denetlemek ve bir hücrede anahattı çizerek boyutunu belirtin.
+Bir denetime denetim <xref:System.Windows.Forms.TableLayoutPanel> ekleyebilir ve kendi anahattını bir hücreye çizerek boyutunu belirtebilirsiniz.
 
-#### <a name="to-insert-a-control-by-drawing-its-outline"></a>Anahattı çizerek bir denetim eklemek için
+#### <a name="to-insert-a-control-by-drawing-its-outline"></a>Ana hattını çizerek bir denetim eklemek için
 
-1. Sürükleme bir <xref:System.Windows.Forms.TableLayoutPanel> denetimi **araç kutusu** formunuza.
+1. <xref:System.Windows.Forms.TableLayoutPanel> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin.
 
-2. İçinde **araç kutusu**, tıklayın <xref:System.Windows.Forms.Button> denetim simgesi. Form üzerine sürükleyin değil.
+2. **Araç kutusunda** <xref:System.Windows.Forms.Button> denetim simgesine tıklayın. Bunu form üzerine sürüklemeyin.
 
-3. Fare işaretçisi taşıyabiliyor <xref:System.Windows.Forms.TableLayoutPanel> denetimi. Bir artı işareti ile işaretçi Not <xref:System.Windows.Forms.Button> bağlı denetim simgesi.
+3. Fare işaretçisini <xref:System.Windows.Forms.TableLayoutPanel> denetimin üzerine taşıyın. İşaretçinin, <xref:System.Windows.Forms.Button> denetim simgesinin eklendiği çapraz artı işaretine değişdiğine unutmayın.
 
-4. ' A tıklayın ve fare düğmesini basılı tutun.
+4. Fare düğmesine tıklayın ve basılı tutun.
 
-5. Fare işaretçisi ana hat çizmek için sürükleyin <xref:System.Windows.Forms.Button> denetimi. Boyutu ile memnun kaldığınızda, fare düğmesini bırakın. Unutmayın <xref:System.Windows.Forms.Button> denetimi içinde u çizdiğini denetimin ana hat hücre içinde oluşturulur.
+5. <xref:System.Windows.Forms.Button> Denetimin anahattını çizmek için fare işaretçisini sürükleyin. Boyutla memnun olduğunuzda fare düğmesini bırakın. <xref:System.Windows.Forms.Button> Denetimin, denetimin anahattını çizdiğiniz hücrede oluşturulduğunu unutmayın.
 
-## <a name="multiple-controls-within-cells-are-not-permitted"></a>Birden çok denetim hücreleri içinde izin verilmez
+## <a name="multiple-controls-within-cells-are-not-permitted"></a>Hücreler Içindeki birden çok denetime Izin verilmiyor
 
-<xref:System.Windows.Forms.TableLayoutPanel> Denetim hücre başına yalnızca bir alt denetimin içerebilir.
+Denetim <xref:System.Windows.Forms.TableLayoutPanel> , her hücre için yalnızca bir alt denetim içerebilir.
 
-#### <a name="to-demonstrate-that-multiple-controls-within-cells-are-not-permitted"></a>Hücreleri içinde birden çok denetim verilmeyen göstermek için
+#### <a name="to-demonstrate-that-multiple-controls-within-cells-are-not-permitted"></a>Hücreler içinde birden çok denetime izin verilmediğini göstermek için
 
-- Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** içine <xref:System.Windows.Forms.TableLayoutPanel> denetlemek ve dolu hücrelerden biri bırakın. Unutmayın <xref:System.Windows.Forms.TableLayoutPanel> denetimi izin vermemektedir bırakmak <xref:System.Windows.Forms.Button> dolu hücresine denetimi.
+- **Araç kutusundan** denetimin içine <xref:System.Windows.Forms.Button> birdenetimsürükleyinvebulunanhücrelerdenbirinebırakın.<xref:System.Windows.Forms.TableLayoutPanel> Denetimin, denetimi, bulunan <xref:System.Windows.Forms.Button> hücreye bırakmayı izin vermediğini unutmayın. <xref:System.Windows.Forms.TableLayoutPanel>
 
 ## <a name="swapping-controls"></a>Denetimleri değiştirme
 
-<xref:System.Windows.Forms.TableLayoutPanel> Denetimi iki farklı hücresini kaplayan denetimleri takas etmenizi sağlar.
+<xref:System.Windows.Forms.TableLayoutPanel> Denetim, iki farklı hücreyi kaplayan denetimleri takas etmenizi sağlar.
 
 #### <a name="to-swap-controls"></a>Denetimleri değiştirmek için
 
-- Sürükleyin <xref:System.Windows.Forms.Button> bir dolu hücre ve başka bir dolu hücre üzerine içine bırak denetimleri. İki denetimi bir hücreden diğer taşınan olduğunu unutmayın.
+- <xref:System.Windows.Forms.Button> Denetimlerin bulunan bir hücreden birini sürükleyin ve başka bir dolu hücreye bırakın. İki denetimin bir hücreden diğerine taşındığını unutmayın.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-Düzen bölmeleri ve denetimleri kullanarak karmaşık Düzen elde edebilirsiniz. Daha fazla araştırma için öneriler şunlardır:
+Düzen panellerinin ve denetimlerin birleşimini kullanarak karmaşık bir düzen elde edebilirsiniz. Daha fazla araştırma için öneriler şunlardır:
 
-- Aşağıdakilerden birini yeniden boyutlandırmaya çalışın <xref:System.Windows.Forms.Button> büyük boyut ve düzenini üzerindeki etkisini Not denetimleri.
+- <xref:System.Windows.Forms.Button> Denetimlerden birini daha büyük bir boyuta yeniden boyutlandırmayı deneyin ve düzen üzerindeki etkiyi aklınızda yapın.
 
-- Birden çok denetimlere seçimi yapıştırın <xref:System.Windows.Forms.TableLayoutPanel> denetlemek ve denetimlerin nasıl eklenir not edin.
+- <xref:System.Windows.Forms.TableLayoutPanel> Denetime birden fazla denetim seçimi yapıştırın ve denetimlerin nasıl eklendiğini notın.
 
-- Düzen bölmelerini diğer düzen bölmeleri içerebilir. Bırakma ile deneme bir <xref:System.Windows.Forms.TableLayoutPanel> denetime varolan bir denetimi.
+- Düzen panelleri, diğer düzen panellerini içerebilir. Varolan denetime bir <xref:System.Windows.Forms.TableLayoutPanel> denetim bırakmayı deneyin.
 
-- Dock <xref:System.Windows.Forms.TableLayoutPanel> üst form denetimi. Formu yeniden boyutlandırmak ve düzeni üzerindeki etkisini dikkat edin.
+- <xref:System.Windows.Forms.TableLayoutPanel> Denetimi üst forma yerleştirin. Formu yeniden boyutlandırın ve düzen üzerindeki etkiyi aklınızda yapın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [İzlenecek yol: FlowLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Microsoft Windows kullanıcı deneyimi, kullanıcı arabirimi geliştiricileri ve tasarımcıları için resmi yönergeleri. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [İzlenecek yol: FlowLayoutPanel kullanarak Windows Forms denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [İzlenecek yol: Anlık görüntü çizgilerini kullanarak Windows Forms denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Microsoft Windows Kullanıcı deneyimi, Kullanıcı arabirimi geliştiricileri ve tasarımcıları için resmi yönergeler. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
 - [İzlenecek yol: Veri girişi için yeniden boyutlandırılabilir Windows formu oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
 - [İzlenecek yol: Yerelleştirilebilir Windows formu oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
 - [TableLayoutPanel Denetimi için En İyi Yöntemler](best-practices-for-the-tablelayoutpanel-control.md)
 - [AutoSize Özelliğine Genel Bakış](autosize-property-overview.md)
-- [Nasıl yapılır: Windows Forms'da denetimleri yerleştirme](how-to-dock-controls-on-windows-forms.md)
-- [Nasıl yapılır: Windows Forms'da denetimleri](how-to-anchor-controls-on-windows-forms.md)
-- [İzlenecek yol: Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile düzenleme](windows-forms-controls-padding-autosize.md)
+- [Nasıl yapılır: Windows Forms denetimleri yerleştirme](how-to-dock-controls-on-windows-forms.md)
+- [Nasıl yapılır: Windows Forms üzerinde geçiş denetimleri](how-to-anchor-controls-on-windows-forms.md)
+- [İzlenecek yol: Doldurma, kenar boşlukları ve AutoSize özelliği ile Windows Forms denetimleri yerleştirme](windows-forms-controls-padding-autosize.md)

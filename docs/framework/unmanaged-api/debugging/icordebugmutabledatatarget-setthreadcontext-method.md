@@ -1,18 +1,18 @@
 ---
-title: ICorDebugMutableDataTarget::SetThreadContext yöntemi
+title: 'Icordebugmutabledatatarget:: SetThreadContext yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6629af393eeadb68292f8f2360ecb60c09a0cd03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21a24b3ae3563db09f1f7e9229f388abf8de654c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764619"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038307"
 ---
-# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>ICorDebugMutableDataTarget::SetThreadContext yöntemi
-Bir iş parçacığı bağlamı (yazmaç değerlerini) ayarlar.  
+# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>Icordebugmutabledatatarget:: SetThreadContext yöntemi
+Bir iş parçacığının bağlamını (kayıt değerlerini) ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -24,25 +24,25 @@ HRESULT SetThreadContext(
   
 ## <a name="parameters"></a>Parametreler  
  `dwThreadID`  
- [in] İşletim sistemi tarafından tanımlanan iş parçacığı tanımlayıcısı.  
+ 'ndaki İşletim sistemi tanımlı iş parçacığı tanımlayıcısı.  
   
  `contextSize`  
- [in] Boyutu `pContext` arabelleğe yazılacak.  
+ 'ndaki Yazılacak `pContext` arabelleğin boyutu.  
   
  `pContext`  
- [in] Yazılacak bayt için bir işaretçi.  
+ 'ndaki Yazılacak baytların işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SetThreadContext` Yöntemi güncelleştirmeleri işletim sistemi tarafından tanımlanan tarafından belirtilen iş parçacığı için geçerli bağlam `dwThreadID` bağımsız değişken. Bağlam kaydı biçimi tarafından belirtilen platform tarafından belirlenir [Icordebugdatatarget::getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) yöntemi. Windows üzerinde bu, bir [bağlam](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) yapısı.  
+ Yöntemi, işletim sistemi tarafından tanımlanan `dwThreadID` bağımsız değişken tarafından belirtilen iş parçacığının geçerli bağlamını güncelleştirir. `SetThreadContext` Bağlam kaydının biçimi [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) yöntemi tarafından belirtilen platforma göre belirlenir. Windows 'ta bu bir [bağlam](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) yapısıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

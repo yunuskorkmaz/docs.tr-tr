@@ -12,46 +12,43 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 6000adeffcc991557e046461f93fec24e1262f54
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80973e16445079876e01c89f20b5ecbdca602eb8
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651680"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039719"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Nasıl yapılır: Windows Forms’da Nesneleri Katmanlara Ayırma
-Karmaşık kullanıcı arabirimi oluşturmak veya birden çok belge arabirimi (MDI) formla çalışmak, genellikle denetimleri hem daha karmaşık kullanıcı arabirimleri (UI) oluşturmak için alt formları katman isteyeceksiniz. Taşıma ve denetimleri ve windows Grup bağlamında izlemek için z düzenini yönetmek. *Z düzenini* formun z ekseni (ayrıntılı) boyunca bir form üzerinde denetimleri visual katmanlarını olduğu. Pencerenin üst kısmında z düzenini, diğer tüm windows ile çakışıyor. Diğer tüm windows pencerenin alt kısmındaki z düzenini çakışıyor.  
-  
+Karmaşık bir kullanıcı arabirimi oluşturduğunuzda veya birden çok belge arabirimi (MDI) formuyla çalışıyorsanız, genellikle daha karmaşık kullanıcı arabirimleri (UI) oluşturmak için hem denetimleri hem de alt formları katman halinde katman yapmak isteyeceksiniz. Bir grup bağlamı içinde denetimleri ve pencereleri taşımak ve izlemek için z sırasını değiştirebilirsiniz. *Z düzeni* , formun Z ekseni (derinlik) üzerinde bir formdaki denetimlerin görsel katmandır. Z düzeninin en üstündeki pencere diğer tüm pencereler ile çakışıyor. Diğer tüm pencereler, z düzeninin alt kısmındaki pencereyle çakışıyor.
+
+## <a name="to-layer-controls-at-design-time"></a>Tasarım zamanında katman denetimlerine
+
+1. Katman yapmak istediğiniz bir denetim seçin.
+
+2. **Biçim** menüsünde, **Düzen**' in üzerine gelin ve ardından **öne getir** veya **geri gönder**' e tıklayın.
+
+## <a name="to-layer-controls-programmatically"></a>Denetimleri programlı olarak katman halinde
+
+- Denetimlerin z düzenini <xref:System.Windows.Forms.Control.SendToBack%2A> değiştirmek için veyöntemlerinikullanın.<xref:System.Windows.Forms.Control.BringToFront%2A>
+
+     Örneğin, bir <xref:System.Windows.Forms.TextBox> `txtFirstName`denetim başka bir denetimin altında ise ve en üstte olmasını istiyorsanız aşağıdaki kodu kullanın:
+
+    ```vb
+    txtFirstName.BringToFront()
+    ```
+
+    ```csharp
+    txtFirstName.BringToFront();
+    ```
+
+    ```cpp
+    txtFirstName->BringToFront();
+    ```
+
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-layer-controls-at-design-time"></a>Tasarım zamanında katman denetimleri  
-  
-1. Katman istediğiniz denetimi seçin.  
-  
-2. Üzerinde **biçimi** menüsünde **sipariş**ve ardından **öne** veya **geri gönderme**.  
-  
-### <a name="to-layer-controls-programmatically"></a>Katman için programlı denetimler  
-  
-- Kullanım <xref:System.Windows.Forms.Control.BringToFront%2A> ve <xref:System.Windows.Forms.Control.SendToBack%2A> denetimlerinin z düzenini yönetmek için yöntemleri.  
-  
-     Örneğin, bir <xref:System.Windows.Forms.TextBox> denetimi `txtFirstName`, olan altındaki başka bir denetim istiyorsanız üstte olması aşağıdaki kodu kullanın:  
-  
-    ```vb  
-    txtFirstName.BringToFront()  
-    ```  
-  
-    ```csharp  
-    txtFirstName.BringToFront();  
-    ```  
-  
-    ```cpp  
-    txtFirstName->BringToFront();  
-    ```  
-  
-> [!NOTE]
->  Windows Forms destekler *denetim kapsama*. Denetim kapsamı içeren bir dizi gibi bir dizi içeren bir denetimi içindeki denetimler yerleştirme <xref:System.Windows.Forms.RadioButton> içinde denetleyen bir <xref:System.Windows.Forms.GroupBox> denetimi. Ardından, içeren denetimi içindeki denetimler katmanlayabilirsiniz. Grup kutusu taşıma, bunlar içinde yer aldığından, denetimleri de taşır.  
-  
+>  Windows Forms *Denetim kapsamayı*destekler. Denetim kapsama, bir <xref:System.Windows.Forms.RadioButton> <xref:System.Windows.Forms.GroupBox> denetim içindeki denetim sayısı gibi, kapsayan bir denetim içinde çok sayıda denetim yerleştirmeyi içerir. Daha sonra, içeren denetim içindeki denetimleri katmandan yönetebilirsiniz. Grup kutusunun taşınması, içinde olduklarından, denetimleri de taşır.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows Forms Denetimleri](index.md)
