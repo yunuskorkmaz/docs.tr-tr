@@ -7,34 +7,34 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: c76f80273d37f838ca52efd3b8f8c028b76a4d30
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 49f4b5b4b3634df5e648b5208448d644168e9d19
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832678"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566729"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Algoritma Adlarını Şifreleme Sınıflarıyla Eşleştirme
-Bir geliştirici Windows Yazılım Geliştirme Seti (SDK) kullanarak şifreleme nesnesi oluşturabilirsiniz dört yolu vardır:  
+Bir geliştiricinin Windows SDK kullanarak bir şifreleme nesnesi oluştur, dört yolu vardır:  
   
-- Kullanarak bir nesne oluşturma **yeni** işleci.  
+- **New** işlecini kullanarak bir nesne oluşturun.  
   
-- Belirli bir şifreleme algoritması çağırarak uygulayan bir nesne oluşturma **Oluştur** bu algoritmayı için soyut sınıf yöntemi.  
+- Bu algoritmanın soyut sınıfında **Create** yöntemini çağırarak belirli bir şifreleme algoritmasını uygulayan bir nesne oluşturun.  
   
-- Belirli bir şifreleme algoritması çağırarak uygulayan bir nesne oluşturma <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemi.  
+- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> Yöntemini çağırarak belirli bir şifreleme algoritmasını uygulayan bir nesne oluşturun.  
   
-- Bir sınıf (örneğin, bir simetrik blok şifreleme) şifreleme algoritmalarının çağırarak uygulayan bir nesne oluşturma **Oluştur** algoritma türü için soyut sınıf yöntemini (gibi <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
+- Bir şifreleme algoritmaları sınıfı (simetrik blok şifresi gibi) uygulayan bir nesne oluşturun (örneğin, <xref:System.Security.Cryptography.SymmetricAlgorithm>) bu tür algoritma Için soyut sınıfta **Create** yöntemini çağırarak.  
   
- Örneğin, bir geliştirici bayt kümesinin SHA1 karması hesaplanamadı istediğini varsayalım. <xref:System.Security.Cryptography> Ad alanı, SHA1 algoritması, tamamen yönetilen bir uygulama ve CryptoAPI sarmalayan bir iki uygulamaları içerir. Belirli bir SHA1 uygulama oluşturmak Geliştirici seçebilirsiniz (gibi <xref:System.Security.Cryptography.SHA1Managed>) çağırarak **yeni** işleci. Ortak dil çalışma zamanını SHA1 karma algoritması sınıfın uyguladığı sürece hangi sınıfın önemli değildir, ancak geliştirici nesneyi çağırarak oluşturabilirsiniz <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> yöntemi. Bu yöntemin çağırdığı **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")** , SHA1 karma algoritması uygulaması döndürmelidir.  
+ Örneğin, bir geliştiricinin bir bayt kümesinin SHA1 karmasını hesaplamak istediğini varsayalım. <xref:System.Security.Cryptography> Ad alanı, tek bir yönetilen uygulama ve CryptoAPI 'yi sarmalayan bir SHA1 algoritmasının iki uygulamasını içerir. Geliştirici, <xref:System.Security.Cryptography.SHA1Managed> **Yeni** işleci çağırarak belirli bir SHA1 uygulamasının (örneğin,) örneğini oluşturmaya seçim yapabilir. Ancak, sınıf, SHA1 karma algoritmasını uyguladığı sürece ortak dil çalışma zamanının hangi sınıftan yüklendiğine bakılmaksızın, Geliştirici <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> yöntemini çağırarak bir nesne oluşturabilir. Bu yöntem, SHA1 karma algoritmasının bir uygulamasını döndürmesi gereken **System. Security. Cryptography. CryptoConfig. CreateFromName ("System. Security. Cryptography. SHA1")** öğesini çağırır.  
   
- Geliştirici de çağırabilirsiniz **System.Security.Cryptography.CryptoConfig.CreateFromName("SHA1")** varsayılan olarak, .NET Framework'teki sevk algoritmalar için kısa adları şifreleme yapılandırma içerdiğinden,.  
+ Geliştirici, varsayılan olarak, .NET Framework gelen algoritmaların kısa adlarını içerdiğinden, **sistem. Security. Cryptography. CryptoConfig. CreateFromName ("SHA1")** öğesini de çağırabilir.  
   
- Karma algoritmayı kullanılan önemli değildir, geliştirici çağırabilirsiniz <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> yöntemi karma bir dönüştürme uygulayan bir nesne döndürür.  
+ Hangi karma algoritmanın kullanıldığına bakılmaksızın geliştirici, karma dönüşüm uygulayan bir nesne döndüren <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> yöntemini çağırabilir.  
   
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>Yapılandırma dosyalarında algoritma adlarını eşleme  
- Varsayılan olarak, çalışma zamanı döndüren bir <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> tüm dört senaryo için nesne. Ancak, bir makine yöneticisinin en son iki senaryoda yöntemleri dönüş nesne türünü değiştirebilirsiniz. Bunu yapmak için makine yapılandırma dosyasındaki (Machine.config) kullanmak istediğiniz sınıf için kolay algoritma adı eşlemeniz gerekir.  
+ Varsayılan olarak, çalışma zamanı dört senaryo <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> için bir nesne döndürür. Ancak, bir makine Yöneticisi son iki senaryodaki yöntemlerin döndürdüğü nesne türünü değiştirebilir. Bunu yapmak için, bir kolay algoritma adını makine yapılandırma dosyasında (Machine. config) kullanmak istediğiniz sınıfa eşlemeniz gerekir.  
   
- Aşağıdaki örnek, çalışma zamanı yapılandırma işlemi gösterilmektedir böylece **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")** , ve  **System.Security.Cryptography.HashAlgorithm.Create** dönüş bir `MySHA1HashClass` nesne.  
+ Aşağıdaki örnek, **System. Security. Cryptography. SHA1. Create**, **System. Security. CryptoConfig. CreateFromName ("SHA1")** ve **System. Security. Cryptography. HashAlgorithm. Create için çalışma zamanının nasıl yapılandırılacağını gösterir.**  bir`MySHA1HashClass` nesne döndürür.  
   
 ```xml  
 <configuration>  
@@ -58,14 +58,14 @@ Bir geliştirici Windows Yazılım Geliştirme Seti (SDK) kullanarak şifreleme 
 </configuration>  
 ```  
   
- Öznitelik adı belirtebilirsiniz [< cryptoClass\> öğesi](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) (önceki örnekte, öznitelik adları `MySHA1Hash`). Öznitelik değeri  **\<cryptoClass >** öğesi olan sınıfı bulmak için ortak dil çalışma zamanı kullanan bir dize. Belirtilen gereksinimleri karşılayan herhangi bir dize kullanabileceğiniz [belirtme tam olarak nitelenmiş tür adlarını](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).  
+ [< CryptoClass\> öğesinde](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) özniteliğin adını belirtebilirsiniz (önceki örnek, özniteliğini `MySHA1Hash`adlandırır). CryptoClass > öğesindeki özniteliğin  **\<** değeri, ortak dil çalışma zamanının sınıfı bulmak için kullandığı bir dizedir. [Tam nitelikli tür adlarını belirtirken](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)belirtilen gereksinimleri karşılayan herhangi bir dizeyi kullanabilirsiniz.  
   
- Birçok algoritma adlarını aynı sınıfa eşleyebilirsiniz. [ \<NameEntry > öğesi](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) bir sınıf için bir kolay algoritma adını eşleştirir. **Adı** özniteliği ararken kullanılan bir dize olabilir **System.Security.Cryptography.CryptoConfig.CreateFromName** yöntemi veya birsoyutşifrelemesınıfınınadı<xref:System.Security.Cryptography> ad alanı. Değerini **sınıfı** adı özniteliği bir özniteliktir  **\<cryptoClass >** öğesi.  
+ Birçok algoritma adı aynı sınıfa eşleyebilir. NameEntry > öğesi bir sınıfı bir kolay algoritma adıyla eşleştirir. [ \<](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) **Name** özniteliği, **System. Security. Cryptography. CryptoConfig. CreateFromName** yöntemi veya <xref:System.Security.Cryptography> ad alanındaki bir soyut şifreleme sınıfının adı çağrılırken kullanılan bir dize olabilir. **Sınıf** özniteliğinin değeri,  **\<CryptoClass >** öğesindeki özniteliğin adıdır.  
   
 > [!NOTE]
->  Çağırarak bir SHA1 algoritması alabilirsiniz <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> veya **Security.CryptoConfig.CreateFromName("SHA1")** yöntemi. Her yöntem, yalnızca SHA1 algoritması uygulayan bir nesne döndürür güvence altına alır. Aynı sınıfa yapılandırma dosyasındaki her bir algoritma kolay adı eşleme gerekmez.  
+>  <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> Veya **Security. CryptoConfig. CreateFromName ("SHA1")** yöntemini çağırarak bir SHA1 algoritması edinebilirsiniz. Her yöntem yalnızca SHA1 algoritmasını uygulayan bir nesne döndüren garantisi verir. Bir algoritmaların kolay adlarını yapılandırma dosyasındaki aynı sınıfa eşlemek zorunda değilsiniz.  
   
- Varsayılan adları ve eşlemek için sınıflar listesi için bkz. <xref:System.Security.Cryptography.CryptoConfig>.  
+ Varsayılan adların ve eşlendikleri sınıfların listesi için bkz <xref:System.Security.Cryptography.CryptoConfig>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

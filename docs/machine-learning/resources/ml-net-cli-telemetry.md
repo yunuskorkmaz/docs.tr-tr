@@ -4,12 +4,12 @@ description: Analiz için kullanım bilgilerini toplayan, hangi verilerin toplan
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: eab1e37d7d0d47251c4f92422730b105cf2db265
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: b9f6ccf7ff76f0cf4ce806f39909b7607a20b9f6
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433787"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567497"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLı tarafından telemetri toplama
 
@@ -21,7 +21,7 @@ ms.locfileid: "68433787"
 
 Ürün ekibi bu öngörüleri öğrenirken, herkesin bu verileri göndermek istediğini da biliyoruz. [Telemetriyi devre dışı bırakmayı öğrenin.](#opt-out-of-data-collection)
 
-## <a name="scope"></a>`Scope`
+## <a name="scope"></a>Kapsam
 
 `mlnet` Komut ml.net CLI 'yi başlatır, ancak komut telemetri toplamaz.
 
@@ -36,7 +36,7 @@ Telemetri`mlnet auto-train`, gıbı bir [ml.net CLI komutu](../reference/ml-net-
 
 ML.NET CLı telemetri özelliği varsayılan olarak etkindir.
 
-`DOTNET_CLI_TELEMETRY_OPTOUT` Ortam değişkenini `1` veya`true`olarak ayarlayarak telemetri özelliğini geri çevirin. Bu ortam değişkeni, .NET CLı aracı için global olarak geçerlidir.
+`MLDOTNET_CLI_TELEMETRY_OPTOUT` Ortam değişkenini `1` veya`true`olarak ayarlayarak telemetri özelliğini geri çevirin. Bu ortam değişkeni, .NET CLı aracı için global olarak geçerlidir.
 
 ## <a name="data-points-collected"></a>Toplanan veri noktaları
 
@@ -57,7 +57,7 @@ Bu özellik aşağıdaki verileri toplar:
 Veriler, [azure Application Insights](https://azure.microsoft.com/services/application-insights/) teknolojisi kullanılarak Microsoft sunucularına güvenli bir şekilde gönderilir, kısıtlı erişim altında tutulur ve güvenli [Azure depolama](https://azure.microsoft.com/services/storage/) sistemlerinden katı güvenlik denetimleri altında kullanılır.
 
 ### <a name="data-points-not-collected"></a>Veri noktaları toplanmadı
-Telemetri *özelliği toplanmaz* :
+Telemetri özelliği toplanmaz :
 - Kullanıcı adları gibi kişisel veriler
 - veri kümesi dosya adları
 - veri kümesi dosyalarından veriler

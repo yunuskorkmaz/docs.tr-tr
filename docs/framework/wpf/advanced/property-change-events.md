@@ -13,18 +13,18 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: f8d0d5e65101ffda0edaaeabdea2870287ba0f1f
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 06056b492439531aa60becbb7bca250a439bfb68
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400846"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567429"
 ---
 # <a name="property-change-events"></a>Özellik Değiştirme Olayları
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]bir özelliğin değerindeki bir değişikliğe yanıt olarak oluşturulan birkaç olayı tanımlar. Genellikle özelliği bir bağımlılık özelliğidir. Olay bazen yönlendirilmiş bir olaydır ve bazen standart ortak dil çalışma zamanı (CLR) olayıdır. Olay tanımı, senaryoya bağlı olarak değişir, çünkü bazı özellik değişiklikleri bir öğe ağacı aracılığıyla daha uygun olduğundan, diğer özellik değişiklikleri genellikle özelliğin değiştiği nesnenin kaygısından kaynaklanır.  
   
 ## <a name="identifying-a-property-change-event"></a>Özellik değişiklik olayını tanımlama  
- Bir özellik değişikliğini rapor eden tüm olaylar, bir imza deseninin ya da bir adlandırma deseninin virtuale tarafından açıkça bir özellik değiştirildi olayı olarak tanımlanır. Genellikle, [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] belgelerde olay açıklaması, olayın doğrudan bir özellik değeri değişikliğine bağlı olup olmadığını gösterir ve özellik ile olay arasında çapraz başvurular sağlar.  
+ Bir özellik değişikliğini rapor eden tüm olaylar, bir imza deseninin ya da bir adlandırma deseninin virtuale tarafından açıkça bir özellik değiştirildi olayı olarak tanımlanır. Genellikle, SDK belgelerindeki etkinliğin açıklaması, olayın doğrudan bir özellik değeri değişikliğine bağlı olup olmadığını ve özellik ile olay arasında çapraz başvurular sağladığını gösterir.  
   
 ### <a name="routedpropertychanged-events"></a>Kabatedpropertychanged olayları  
  Belirli olaylar, özellik değişiklik olayları için açıkça kullanılan bir olay veri türü ve temsilcisini kullanır. Olay veri türü <xref:System.Windows.RoutedPropertyChangedEventArgs%601>, ve <xref:System.Windows.RoutedPropertyChangedEventHandler%601>temsilcisidir. Olay verileri ve temsilcisinin her ikisi de, işleyiciyi tanımlarken değişen özelliğin gerçek türünü belirtmek için kullanılan genel bir tür parametresine sahiptir. Olay verileri iki özellik <xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A> içerir ve <xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>her ikisi de olay verilerinde tür bağımsız değişkeni olarak geçirilir.  

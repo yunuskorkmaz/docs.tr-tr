@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 47cba2344071ecf9b85f4b0235e02ea88deb6498
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 3fb5d1107a2dacdc4dfd2210322c312becdfd90b
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710231"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566951"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Otomatik Test İçin UI Otomasyonunu Kullanma
 > [!NOTE]
@@ -103,7 +103,7 @@ ms.locfileid: "68710231"
 ## <a name="related-tools-and-technologies"></a>İlgili araçlar ve teknolojiler  
  İle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]otomatikleştirilmiş sınamayı destekleyen birçok ilgili araç ve teknoloji vardır.  
   
-- İnceleme. exe, hem sağlayıcı hem de istemci geliştirme ve hata ayıklama için bilgi toplamak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] üzere kullanılabilecek bir grafik kullanıcı arabirimi (GUI) uygulamasıdır. İnceleme. exe ' [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]ye eklenmiştir.  
+- İnceleme. exe, hem sağlayıcı hem de istemci geliştirme ve hata ayıklama için bilgi toplamak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] üzere kullanılabilecek bir grafik kullanıcı arabirimi (GUI) uygulamasıdır. İnceleme. exe Windows SDK eklenmiştir.  
   
 - MSAABridge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Etkin Erişilebilirlik istemcilerine bilgi gösterir. Etkin Erişilebilirlik 'e köprülemenin [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] birincil hedefi var olan Etkin Erişilebilirlik istemcilerine, uygulanmış [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]olan herhangi bir çerçeve ile etkileşim kurma olanağı sağlamaktır.  
   

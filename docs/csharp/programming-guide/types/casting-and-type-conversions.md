@@ -1,5 +1,5 @@
 ---
-title: Atama ve tür dönüştürmeleri - C# Programlama Kılavuzu
+title: Atama ve tür dönüşümleri- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,56 +10,56 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: e46083a9b8261cf8635d07e3b16f9c291bcc69a4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ec18f9afed04882f26b5d2f34f64c25be042ed5
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743805"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566870"
 ---
-# <a name="casting-and-type-conversions-c-programming-guide"></a>Atama ve tür dönüştürmeleri (C# Programlama Kılavuzu)
+# <a name="casting-and-type-conversions-c-programming-guide"></a>Atama ve tür dönüşümleri (C# Programlama Kılavuzu)
 
-Bir değişken bildirildikten sonra C# türü statik belirlenmiştir derleme zamanında olduğundan, yeniden bildirilen veya bu tür değişkenin türüne örtük olarak dönüştürülebilir olmadığı sürece başka bir türde bir değer atanır. Örneğin, `string` için örtük olarak dönüştürülemez `int`. Bu nedenle, sonra bildirdiğiniz `i` olarak bir `int`, ", aşağıdaki kodun gösterdiği gibi Hello" dizesi atanamaz:
+C# , Derleme zamanında statik olarak yazıldığı için, bir değişken oluşturulduktan sonra yeniden bildirilemez veya tür değişken türüne örtük olarak dönüştürülemediği takdirde başka bir türde bir değer atanamaz. Örneğin `string` , örtülü olarak öğesine `int`dönüştürülemez. Bu nedenle, bir `i` `int`olarak bildirdikten sonra, aşağıdaki kodda gösterildiği gibi, "Merhaba" dizesini buna atayamazsınız.
   
 ```csharp  
 int i;  
 i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
 ```  
   
- Ancak, bazen bir değişken veya yöntem türünden parametreye başka bir değeri kopyalama gerekebilir. Örneğin, bir yöntem parametresi olarak yazıldığında geçirmek için gereken tamsayı değişkenini olabilir `double`. Veya bir sınıf değişkeni bir arabirim türü bir değişkene atayın gerekebilir. Bu tür işlemler adlı *tür dönüştürmeleri*. C# ' ta, aşağıdaki tür dönüştürmeleri gerçekleştirebilirsiniz:  
+ Ancak bazen bir değeri başka bir türün değişken veya yöntem parametresine kopyalamanız gerekebilir. Örneğin, parametresi olarak `double`yazılmış bir yönteme geçirmeniz gereken bir tamsayı değişkenine sahip olabilirsiniz. Ya da bir arabirim türü değişkenine bir sınıf değişkeni atamanız gerekebilir. Bu tür işlemlere *tür dönüştürmeleri*denir. ' C#De, aşağıdaki tür dönüştürmeleri gerçekleştirebilirsiniz:  
   
-- **Örtük dönüştürmeleri**: Hiçbir özel sözdizimi, dönüştürme tür bakımından güvenli olduğundan ve hiçbir veri kaybı olmayacağını gereklidir. Daha küçük Dönüştürmelere daha büyük bir tam sayı türleri için ve temel sınıf için türetilmiş sınıflardan dönüştürmeler verilebilir.  
+- **Örtük dönüştürmeler**: Dönüştürme türü güvenli olduğundan ve hiçbir veri kaybolacağı için özel bir sözdizimi gerekmez. Örnekler, daha küçük integral türlerine ve türetilmiş sınıflardan taban sınıflara Dönüştürmelere dönüşümler içerir.  
   
-- **Açık dönüştürmeler (yayınları)** : Açık dönüştürmeler bir atama işleci gerektirir. Atama, bilgi dönüştürme sırasında kaybedilen veya diğer nedenlerle dönüştürme başarılı olmayabilir gereklidir.  Daha az duyarlılık ya da daha küçük bir aralığı olan bir türü sayısal dönüştürme ve türetilmiş bir sınıf bir taban sınıfı örneğini dönüştürme Bunun tipik örneklerindendir.  
+- **Açık dönüştürmeler (yayınlar)** : Açık dönüşümler bir atama işleci gerektirir. Dönüştürme işlemi, dönüştürmede bilgiler kaybediliyorsa veya dönüştürme işleminin diğer nedenlerle başarısız olabileceği durumlarda gereklidir.  Tipik örneklerde, daha az duyarlık veya daha küçük bir aralığa sahip olan bir türe sayısal dönüştürme ve bir temel sınıf örneğinin türetilmiş bir sınıfa dönüştürülmesi sayılabilir.  
   
-- **Kullanıcı tanımlı dönüşümler**: Bir türetilmiş sınıf – temel sınıf ilişkisi olmayan özel türler arasında açık ve örtük dönüştürme etkinleştirmek için tanımlayabileceğiniz özel yöntemler kullanıcı tanımlı dönüştürmeler gerçekleştirilir. Daha fazla bilgi için [kullanıcı tanımlı dönüştürme işleçleri](../../../csharp/language-reference/operators/user-defined-conversion-operators.md).  
+- **Kullanıcı tanımlı dönüştürmeler**: Kullanıcı tanımlı dönüştürmeler, temel sınıf ile türetilmiş sınıf ilişkisine sahip olmayan özel türler arasında açık ve örtük dönüştürmeleri etkinleştirmek için tanımlayabileceğiniz özel yöntemler tarafından gerçekleştirilir. Daha fazla bilgi için bkz. [Kullanıcı tanımlı dönüştürme işleçleri](../../../csharp/language-reference/operators/user-defined-conversion-operators.md).  
   
-- **Yardımcı sınıfları dönüştürmeler**: Tam sayılar gibi uyumlu olmayan türleri arasında dönüştürme yapma ve <xref:System.DateTime?displayProperty=nameWithType> nesneleri veya onaltılık dizeler ve bayt dizileri kullanabilirsiniz <xref:System.BitConverter?displayProperty=nameWithType> sınıfı <xref:System.Convert?displayProperty=nameWithType> sınıfı ve `Parse` gibi yerleşik sayısal yöntemlerinin türleri <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Daha fazla bilgi için [nasıl yapılır: Byte dizisini int'e dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [nasıl yapılır: Bir dizeyi sayıya dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md), ve [nasıl yapılır: Onaltılık dizeler ve sayısal türler arasında dönüştürme](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
+- **Yardımcı sınıflarla dönüşümler**: Tamsayılar ve <xref:System.DateTime?displayProperty=nameWithType> nesneler ya da onaltılı dizeler ve bayt dizileri gibi uyumlu olmayan türler arasında dönüştürme yapmak için, <xref:System.BitConverter?displayProperty=nameWithType> sınıfı, <xref:System.Convert?displayProperty=nameWithType> sınıfı ve `Parse` yerleşik sayısal türlerin yöntemlerini (örneğin,) kullanabilirsiniz. <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Daha fazla bilgi için [nasıl yapılır: Bir Byte dizisini int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)'e dönüştürme, [nasıl yapılır: Bir dizeyi sayıya](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)dönüştürün ve [şunları yapın: Onaltılık dizeler ve sayısal türler](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)arasında dönüştürme.  
   
-## <a name="implicit-conversions"></a>Örtük dönüşümler
+## <a name="implicit-conversions"></a>Örtük dönüştürmeler
 
- Depolanacak değer kısaltılır veya yuvarlanır olmadan değişkene uygun olduğunda yerleşik sayısal türler için örtük bir dönüştürme yapılabilir. Tam sayı türleri için bu aralığın hedef türü için uygun bir alt kümesi kaynak türü aralığı anlamına gelir. Örneğin, bir değişken türü [uzun](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) (64-bit tamsayı) depolayabileceğiniz değerine herhangi bir [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) (32-bit tamsayı) depolayabilir. Aşağıdaki örnekte, derleyici değeri örtük olarak dönüştürür `num` türüne sağ taraftaki `long` giderek önce `bigNum`.  
+ Yerleşik sayısal türler için, saklanacak değer kesilmeden veya yuvarlanmadan değişkene sığmayacak olan örtük bir dönüştürme yapılabilir. İntegral türleri için bu, kaynak türü aralığının hedef tür için uygun bir alt küme olduğu anlamına gelir. Örneğin, [Long](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) (64-bit tamsayı) türünde bir değişken, bir [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) (32 bit tamsayı) depolayabileceği herhangi bir değeri depolayabilirler. Aşağıdaki örnekte, derleyici öğesine `num` `bigNum`atamadan önce değeri örtük olarak bir türe `long` dönüştürür.  
   
  [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
- Tüm örtük sayısal dönüşümler tam bir listesi için bkz. [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
+ Tüm örtük sayısal dönüştürmelerin tüm listesi için bkz. [örtük sayısal dönüştürmeler tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
- Başvuru türleri için örtük bir dönüştürme her zaman bir sınıftan herhangi biri, doğrudan veya dolaylı temel sınıfların veya arabirimleri bulunmaktadır. Hiçbir özel sözdizimi, türetilmiş bir sınıf her zaman temel sınıfın tüm üyeleri içerdiği için gereklidir.  
+ Başvuru türleri için, örtük bir dönüştürme her zaman bir sınıftan doğrudan veya dolaylı temel sınıflarından veya arabirimlerinden herhangi birine bulunur. Türetilmiş bir sınıf her zaman bir temel sınıfın tüm üyelerini içerdiğinden özel bir sözdizimi gerekli değildir.  
   
 ```csharp
 Derived d = new Derived();  
 Base b = d; // Always OK.  
 ```  
   
-## <a name="explicit-conversions"></a>Açık dönüştürmeler
+## <a name="explicit-conversions"></a>Açık dönüşümler
 
- Dönüştürme bilgileri kaybetme riski yapılamazsa, ancak derleyici çağrılır açık bir dönüştürme gerçekleştirmek gerektirir bir *atama*. Bir yayın derleyici, dönüştürme yapmak istediğiniz ve veri kaybı oluşabilir haberdar olduğunuzu açıkça bildiren bir yoludur. Bir dönüştürme gerçekleştirmek için değişkeni ve değer dönüştürülecek önünde parantez içinde için atama türünü belirtin. Aşağıdaki program yayınları bir [çift](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md) için bir [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md). Program yayın olmadan derlemeyecektir.  
+ Ancak, bilgileri kaybetme riski olmadan bir dönüştürme gerçekleştirilemez, derleyici bir dönüştürme olarak adlandırılan açık bir dönüştürme gerçekleştirmenizi gerektirir. Bir atama, dönüştürmeyi yapmayı düşündüğünüz ve veri kaybını fark ettiğini farkında olabileceğiniz derleyicisini açıkça bildiren bir yoldur. Bir tür dönüştürme gerçekleştirmek için, dönüştürülecek değeri veya değişkeni önünde parantez içinde içine, dönüştürmekte olduğunuz türü belirtin. Aşağıdaki program bir Double öğesine bir [Double](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md) yayınlar [](../../../csharp/language-reference/builtin-types/integral-numeric-types.md). Program, atama olmadan derlenmeyecektir.  
   
  [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   
- İzin verilen açık sayısal dönüşümler listesi için bkz. [Explicit Numeric Conversions Table](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).  
+ İzin verilen açık sayısal dönüşümler listesi için bkz. [Açık Sayısal Dönüşümler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).  
   
- Başvuru türleri için açık bir tür dönüştürme temel türünden türetilmiş bir tür dönüştürmek istiyorsanız gereklidir:  
+ Başvuru türleri için bir temel türden türetilmiş bir türe dönüştürmeniz gerekiyorsa açık bir atama gerekir:  
   
 ```csharp  
 // Create a new derived type.  
@@ -75,25 +75,25 @@ Animal a = g;
 Giraffe g2 = (Giraffe) a;  
 ```  
   
- Başvuru türleri arasındaki bir tür dönüştürme işlemi, temel alınan nesnenin çalışma zamanı türünü değiştirmez. yalnızca bu nesneye bir başvuru olarak kullanılan değerin türünü değiştirir. Daha fazla bilgi için [çok biçimlilik](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
+ Başvuru türleri arasındaki bir atama işlemi, temel alınan nesnenin çalışma zamanı türünü değiştirmez; yalnızca bu nesneye başvuru olarak kullanılan değerin türünü değiştirir. Daha fazla bilgi için bkz. çok [biçimlilik](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
-## <a name="type-conversion-exceptions-at-run-time"></a>Tür dönüştürme özel durumlar çalışma zamanında
+## <a name="type-conversion-exceptions-at-run-time"></a>Çalışma zamanında dönüştürme özel durumlarını yazın
 
- Bazı başvuru türü dönüşümleri, derleyici bir tür dönüştürme geçerli olup olmayacağını belirlenemiyor. Çalışma zamanında başarısız için doğru derleyen bir dönüştürme işlemi mümkündür. Aşağıdaki örnekte gösterildiği gibi çalışma zamanında başarısız neden olacak bir tür cast bir <xref:System.InvalidCastException> oluşturulması için.  
+ Bazı başvuru türü dönüştürmelerinde, derleyici bir dönüştürmenin geçerli olup olmayacağını belirleyemez. Çalışma zamanında düzgün şekilde derlenen bir atama işlemi mümkündür. Aşağıdaki örnekte gösterildiği gibi, çalışma zamanında başarısız olan bir tür dönüştürme bir <xref:System.InvalidCastException> oluşturulmasına neden olur.  
   
  [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
- C#sağlar [olduğu](../../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) işleci, bir atama gerçekleştirmeden önce uyumluluğu test etmek sağlamak için. Daha fazla bilgi için [nasıl yapılır: güvenli bir şekilde desen eşleştirme ve olarak kullanarak AS ve is işleçlerini](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
+ C#, gerçekten bir dönüştürme yapmadan önce uyumluluğu test etmeniz için [,](../../language-reference/operators/type-testing-and-cast.md#is-operator) . işlecini sağlar. Daha fazla bilgi için bkz. [nasıl yapılır: model eşleştirme ve as ve işleç işleçlerini kullanarak güvenle atama](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [dönüştürmeler](~/_csharplang/spec/conversions.md) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [dönüşümler](~/_csharplang/spec/conversions.md) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [Türler](../../../csharp/programming-guide/types/index.md)
-- [() arama işleci](../../../csharp/language-reference/operators/type-testing-and-conversion-operators.md#cast-operator-)
+- [() Cast işleci](../../../csharp/language-reference/operators/type-testing-and-cast.md#cast-operator-)
 - [Kullanıcı tanımlı dönüştürme işleçleri](../../../csharp/language-reference/operators/user-defined-conversion-operators.md)
-- [Genelleşmiş tür dönüştürme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
-- [Nasıl yapılır: Bir dizeyi sayıya dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
+- [Genelleştirilmiş tür dönüştürmesi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
+- [Nasıl yapılır: Bir dizeyi sayıya Dönüştür](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

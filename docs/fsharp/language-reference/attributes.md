@@ -2,12 +2,12 @@
 title: Öznitelikler
 description: Özniteliklerin bir F# programlama yapısına nasıl uygulanacağını nasıl etkinleştirebileceğinizi öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3f3c3469192c09aa51f31ef3f00aca0196e3c382
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c9691a13ff1e9e892e93a967136a99849da25f1f
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630083"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567505"
 ---
 # <a name="attributes"></a>Öznitelikler
 
@@ -70,35 +70,34 @@ Genellikle öznitelik hedefini açıkça belirtmeniz gerekmese de, bir özniteli
   </tr>
   <tr>
     <td>derleme</td>
-    <td><pre lang="fsharp"><code>[&lt;assembly: AssemblyVersionAttribute("1.0.0.0")&gt;]<code></pre></td> 
+    <td><pre lang="fsharp"><code>[&lt;assembly: AssemblyVersionAttribute("1.0.0.0")&gt;]</code></pre></td> 
   </tr>
   <tr>
     <td>return</td>
-    <td><pre lang="fsharp"><code>let function1 x : [&lt;return: Obsolete&gt;] int = x + 1<code></pre></td> 
+    <td><pre lang="fsharp"><code>let function1 x : [&lt;return: Obsolete&gt;] int = x + 1</code></pre></td> 
   </tr>
   <tr>
     <td>alan</td>
-    <td><pre lang="fsharp"><code>[&lt;field: DefaultValue&gt;] val mutable x: int<code></pre></td> 
+    <td><pre lang="fsharp"><code>[&lt;field: DefaultValue&gt;] val mutable x: int</code></pre></td> 
   </tr>
   <tr>
     <td>özellik</td>
-    <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x<code></pre></td> 
+    <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x</code></pre></td> 
   </tr>
   <tr>
     <td>larına</td>
-    <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10<code></pre></td> 
+    <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td> 
   </tr>
   <tr>
     <td>türü</td>
     <td>
         <pre lang="fsharp"><code>
-        [&lt;type: StructLayout(Sequential)&gt;] 
-        type MyStruct = 
-        struct 
-        x : byte
-        y : int
-        end
-        <code></pre>
+[&lt;type: StructLayout(Sequential)&gt;] 
+type MyStruct = 
+struct 
+x : byte
+y : int
+end</code></pre>
     </td>
   </tr>
 </table>

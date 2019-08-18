@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 683d0a28fa151cf2116b4125dfb7a604605c7c4a
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: b68148b08cf6b5f980bc09e497e845558ae882fb
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972237"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567534"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF Kısmi Güven Güvenliği
 <a name="introduction"></a>Genel olarak, kötü amaçlı hasar engellemek için Internet uygulamalarının kritik sistem kaynaklarına doğrudan erişimi olması kısıtlanmalıdır. Varsayılan olarak, HTML ve istemci tarafı komut dosyası dilleri kritik sistem kaynaklarına erişemez. Windows Presentation Foundation (WPF) tarayıcıda barındırılan uygulamalar tarayıcıdan başlatılabildiğinden, benzer bir kısıtlama kümesine uymalıdır. Bu kısıtlamaları [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] zorlamak için hem kod erişim güvenliği (CAS) hem de ClickOnce kullanır (bkz. [WPF Güvenlik Stratejisi-Platform güvenliği](wpf-security-strategy-platform-security.md)). Varsayılan olarak, tarayıcıda barındırılan uygulamalar Internet, yerel intranet veya yerel bilgisayar tarafından başlatıldıklarından bağımsız olarak Internet bölgesi CA 'ları izin kümesi ister. Tüm izin kümesinden daha az bir şekilde çalışan uygulamalar kısmi güvenle çalışıyor olarak kabul edilir.  
@@ -50,7 +50,7 @@ ms.locfileid: "68972237"
 |Düzenleme|Yazım denetimi<br /><br /> RichTextBox<br /><br /> Düz metin ve mürekkep panosu desteği<br /><br /> Kullanıcı tarafından başlatılan yapıştırma<br /><br /> Seçili Içerik kopyalanıyor|  
 |Denetimler|Genel denetimler|  
   
- Bu tablo, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] yüksek düzeydeki özellikleri içerir. Daha ayrıntılı bilgi için, Windows yazılım geliştirme seti (SDK), içindeki [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]her üye için gereken izinleri belgeler. Ayrıca, aşağıdaki özellikler, kısmi güven yürütme ile ilgili özel konular da dahil olmak üzere daha ayrıntılı bilgiler sunar.  
+ Bu tablo, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] yüksek düzeydeki özellikleri içerir. Daha ayrıntılı bilgi için Windows SDK, içindeki [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]her üye için gereken izinleri belgeler. Ayrıca, aşağıdaki özellikler, kısmi güven yürütme ile ilgili özel konular da dahil olmak üzere daha ayrıntılı bilgiler sunar.  
   
 - [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](bkz. [xaml 'ye Genel Bakış (WPF)](./advanced/xaml-overview-wpf.md)).  
   

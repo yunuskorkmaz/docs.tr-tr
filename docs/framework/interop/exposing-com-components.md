@@ -8,40 +8,40 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4472adf2c309803d4d5ac57f3522cc260782d85
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 230853abf73a368bfcd8b88375c216fdadfc7d46
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833667"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567265"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>COM Bileşenlerini .NET Framework'te Gösterme
-Bu bölüm, yönetilen kod için varolan bir COM bileşeni kullanıma sunmak için gereken işlem özetler. COM sunucuları, sıkı bir şekilde yazma hakkında ayrıntılar .NET Framework ile tümleştirmek için bkz: [birlikte çalışma için tasarım konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).
+Bu bölümde, mevcut bir COM bileşenini yönetilen koda göstermek için gereken işlem özetlenmektedir. .NET Framework ile sıkı bir şekilde tümleştirilen COM sunucularının yazılmasına ilişkin ayrıntılar için bkz. [Interoperation Için tasarım konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).
   
- Mevcut COM değerli kaynakları yönetilen kodda orta katman iş uygulamaları veya yalıtılmış işlevi olarak bileşenlerdir. İdeal bir bileşeni olan birincil birlikte çalışma derlemesi ve sıkı bir şekilde COM tarafından uygulanan programlama standartlarına uyar  
+ Mevcut COM bileşenleri, yönetilen kodda orta katman iş uygulamaları veya yalıtılmış işlevler olarak değerli kaynaklardır. İdeal bir bileşen bir birincil birlikte çalışma derlemesine sahiptir ve COM tarafından uygulanan programlama standartlarına sıkı bir şekilde uyumlu değildir.  
   
-#### <a name="to-expose-com-components-to-the-net-framework"></a>COM bileşenlerini .NET Framework'te göstermek için  
+#### <a name="to-expose-com-components-to-the-net-framework"></a>COM bileşenlerini .NET Framework kullanıma sunmak için  
   
-1. [Bir tür kitaplığını derleme olarak içeri](importing-a-type-library-as-an-assembly.md).  
+1. [Bir tür kitaplığını derleme olarak Içeri aktarın](importing-a-type-library-as-an-assembly.md).  
   
-     Ortak dil çalışma zamanı, COM türleri dahil olmak üzere tüm türleri için meta verileri gerektirir. COM türleri olarak meta veriler içe içeren bir derlemenin almak için birkaç yolu vardır.  
+     Ortak dil çalışma zamanı, COM türleri dahil olmak üzere tüm türler için meta veriler gerektirir. Meta veri olarak içeri aktarılan COM türlerini içeren bir derlemeyi almanın birkaç yolu vardır.  
   
-2. [Yönetilen kodda COM türlerini kullanma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).  
+2. [Yönetilen KODDA com türlerini kullanın](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).  
   
-     COM türlerini inceleyin, örnekleri etkinleştirmek ve herhangi bir yönetilen türü için yaptığınız gibi COM nesnesinin yöntemlerini çağırır.  
+     Com türlerini inceleyebilir, örnekleri etkinleştirebilir ve COM nesnesi üzerinde yöntemleri herhangi bir yönetilen tür için yaptığınız şekilde çağırabilirsiniz.  
   
-3. [Birlikte çalışma projesi derleme](compiling-an-interop-project.md).  
+3. [Birlikte çalışabilirlik projesi derleyin](compiling-an-interop-project.md).  
   
-     Windows Yazılım Geliştirme Seti (SDK), birçok dilde uyumlu olan ortak dil belirtimi (Visual Basic dahil olmak üzere CLS), derleyiciler sağlar. C#, ve C++.  
+     Windows SDK, Visual Basic, C#ve C++dahil olmak üzere ortak dil belirtimi (CLS) ile uyumlu birkaç dil için derleyiciler sağlar.  
   
-4. [Birlikte çalışma uygulamasını dağıtma](deploying-an-interop-application.md).  
+4. [Birlikte çalışabilirlik uygulaması dağıtın](deploying-an-interop-application.md).  
   
-     Birlikte çalışma uygulamaları olarak dağıtılan en iyi [tanımlayıcı adlı](../app-domains/strong-named-assemblies.md), genel derleme önbelleğinde derlemeleri imzalanmış.  
+     Birlikte çalışma uygulamaları, genel derleme önbelleğinde [tanımlayıcı adlı](../app-domains/strong-named-assemblies.md), imzalanmış derlemeler olarak en iyi şekilde dağıtılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yönetilmeyen Kod ile Birlikte Çalışma](index.md)
-- [Birlikte çalışma için tasarım konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
+- [Birlikte çalışabilirlik için tasarım konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
 - [COM Birlikte Çalışma Örneği: .NET İstemcisi ve COM Sunucusu](com-interop-sample-net-client-and-com-server.md)
 - [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](../../standard/language-independence-and-language-independent-components.md)
 - [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../tools/gacutil-exe-gac-tool.md)

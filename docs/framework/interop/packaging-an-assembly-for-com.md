@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ca87d688d6802df967ea81b8297b099350f1c86
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 11777f21d34da8b529352122bbf185f1938d3eb5
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629329"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567236"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>COM için bir .NET Framework derlemesi paketleme
 
@@ -49,7 +49,7 @@ COM geliştiricileri, uygulamasında dahil etmek üzere plantıkları yönetilen
 
 - Tür kitaplığı ekleme
 
-  Çoğu tür bir COM uygulaması tarafından tüketilirken bir tür kitaplığı gerektirir. Bir tür kitaplığı oluşturabilir veya COM geliştiricilerinin bu görevi gerçekleştirmesini sağlayabilirsiniz. Windows yazılım geliştirme seti (SDK), bir tür kitaplığı oluşturmak için aşağıdaki seçenekleri sağlar:
+  Çoğu tür bir COM uygulaması tarafından tüketilirken bir tür kitaplığı gerektirir. Bir tür kitaplığı oluşturabilir veya COM geliştiricilerinin bu görevi gerçekleştirmesini sağlayabilirsiniz. Windows SDK, bir tür kitaplığı oluşturmak için aşağıdaki seçenekleri sağlar:
 
   - [Tür kitaplığı verme programı](#cpconpackagingassemblyforcomanchor1)
 

@@ -9,26 +9,26 @@ helpviewer_keywords:
 - .NET Framework application configuration, cryptography
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
-ms.openlocfilehash: 23bf831a4374add55258f5fb41c17a5d4a8f14c3
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 77f26405792ac782f2a04e174e8165a09b7f22f6
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832808"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567338"
 ---
 # <a name="configuring-cryptography-classes"></a>Şifreleme Sınıflarını Yapılandırma
-Varsayılan şifreleme algoritmaları ve .NET Framework ve uygun şekilde yazılmış uygulamalar kullanan algoritması uygulamalarını yapılandırmak bilgisayarda yöneticiler Windows Yazılım Geliştirme Seti (SDK) sağlar.  Örneğin, kendi uygulama şifreleme algoritması olan Kuruluş sevk edilen varsayılan uygulama yerine bu uygulamayı Windows SDK'da yapabilirsiniz. Şifreleme kullanan yönetilen uygulamaları açıkça belirli bir uygulamaya bağlamak her zaman seçebilmenize rağmen bunlar şifreleme nesneleri şifreleme yapılandırma sistemini kullanarak oluşturmanız önerilir.  
+Windows SDK, bilgisayar yöneticilerinin .NET Framework ve uygun şekilde yazılmış uygulamaların kullandığı varsayılan şifreleme algoritmalarını ve algoritma uygulamalarını yapılandırmalarına olanak tanır.  Örneğin, bir şifreleme algoritması uygulamasına sahip bir kuruluş, bu uygulamayı Windows SDK sevk edilen uygulama yerine varsayılan olarak yapabilir. Şifreleme kullanan yönetilen uygulamalar her zaman belirli bir uygulamaya açıkça bağlamayı seçebilse de, şifre yapılandırma sistemini kullanarak şifreleme nesneleri oluşturması önerilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Algoritma Adlarını Şifreleme Sınıflarıyla Eşleme](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  
- Bir algoritma adının bir şifreleme sınıfına harita açıklar.  
+ Bir algoritma adının bir şifreleme sınıfına nasıl eşleneceğini açıklar.  
   
  [Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleme](../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)  
- Bir şifreleme algoritması için nesne tanımlayıcısı harita açıklar.  
+ Bir nesne tanımlayıcısının bir şifreleme algoritmasına nasıl eşleneceğini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)  
- Windows SDK'sı tarafından sağlanan şifreleme hizmetlerine genel bakış sağlar.  
+ Windows SDK tarafından sağlanan şifreleme hizmetlerine genel bir bakış sağlar.  
   
  [Şifreleme Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- Şifreleme algoritmalarını uygulayan sınıflar için kolay algoritma adlarını eşleyen öğeleri açıklar.
+ Kolay algoritma adlarını şifreleme algoritmaları uygulayan sınıflarla eşleyen öğeleri açıklar.

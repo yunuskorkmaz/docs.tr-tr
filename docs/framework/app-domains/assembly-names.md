@@ -7,59 +7,59 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36993a13ed085f59fd6002f33e7884bdb1b5db8d
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 499a64362f7a23f0c4c595469fceaa1612bf44dd
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832885"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567351"
 ---
 # <a name="assembly-names"></a>Derleme Adları
-Bir derlemenin adı meta verilerinde depolanır ve önemli bir derlemenin kapsamına etkileyebilir ve bir uygulama tarafından kullanılıyor sahiptir. Tanımlayıcı adlı bir derleme, derlemenin adı, kültür, ortak anahtarı ve sürüm numarasını içeren tam bir adı vardır. Görünen ad ve yüklenen derlemeler için kullanılarak elde edilebilir gibi bu sık adlandırılır <xref:System.Reflection.Assembly.FullName%2A> özelliği.  
+Bir derlemenin adı meta verilerde depolanır ve derlemenin kapsamı üzerinde önemli bir etkiye sahiptir ve bir uygulama tarafından kullanılır. Tanımlayıcı adlı bir derlemenin, derlemenin adını, kültürünü, ortak anahtarını ve sürüm numarasını içeren tam nitelikli bir adı vardır. Bu, genellikle görünen ad olarak adlandırılır ve yüklenen derlemeler için <xref:System.Reflection.Assembly.FullName%2A> özelliği kullanılarak elde edilebilir.  
   
- Çalışma zamanı, derlemeyi ve aynı ada sahip diğer derlemelerden ayırt etmek için bu bilgileri kullanır. Örneğin, bir tanımlayıcı adlı bütünleştirilmiş kod adında `myTypes` şu tam ada sahip olabilir:  
+ Çalışma zamanı, derlemeyi bulmak ve aynı ada sahip diğer derlemelerden ayırt etmek için bu bilgileri kullanır. Örneğin, bilinen `myTypes` bir tanımlayıcı adlı derleme aşağıdaki tam ada sahip olabilir:  
   
 ```  
 myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, ProcessorArchitecture=msil  
 ```  
   
 > [!NOTE]
->  İşlemci mimarisi derleme kimliğini .NET Framework sürüm 2.0, işlemciye özel derlemelerin sürümleri izin vermek için eklenir. Yalnızca İşlemci mimarisi tarafından örneğin 32-bit ve 64 bit işlemciye özgü sürümlerini kimliği farklı bir derleme sürümlerini yeniden oluşturabilirsiniz. İşlemci mimarisi için tanımlayıcı adlar gerekli değildir. Daha fazla bilgi için bkz. <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>.  
+>  İşlemci mimarisi, derlemelerin işlemciye özgü sürümlerine izin vermek için .NET Framework sürüm 2,0 ' deki derleme kimliğine eklenir. Kimliği yalnızca işlemci mimarisine göre farklılık gösteren bir derlemenin sürümlerini oluşturabilirsiniz, örneğin, 32 bit ve 64 bit işlemciye özgü sürümler. Güçlü adlar için işlemci mimarisi gerekli değildir. Daha fazla bilgi için bkz. <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>.  
   
- Bu örnekte, tam adı olduğunu gösterir `myTypes` derleme tanımlayıcı bir ada sahip bir ortak anahtar belirteci sahip, ABD İngilizcesi için kültür değeri varsa ve 1.0.1234.0 sürüm numarası. Just-in-time (JIT) olacağı anlamına gelir "msil" işlemci mimarisini olduğu-32-bit kod veya işletim sistemi ve işlemci bağlı olarak, 64 bit kod derlenir.  
+ Bu örnekte, tam nitelikli ad, `myTypes` derlemenin ortak anahtar belirtecine sahip bir tanımlayıcı adı olduğunu, ABD İngilizcesi için kültür değerine sahip olduğunu ve 1.0.1234.0 sürüm numarasına sahip olduğunu gösterir. İşlemci mimarisi "MSIL" olduğundan, bu, işletim sistemine ve işlemciye bağlı olarak 32 bitlik koda veya 64 bit koda derlenmiş.  
   
- Bir bütünleştirilmiş kodundaki türler isteyen kod tam derleme adını kullanmanız gerekir. Bu, tam bağlama olarak adlandırılır. .NET Framework'teki derlemeler başvururken belirtir. yalnızca bir derleme adı, kısmi bağlamasına izin verilmez.  
+ Bir derlemede tür isteyen kodun tam bir derleme adı kullanması gerekir. Bu, tam olarak nitelenmiş bağlama olarak adlandırılır. Yalnızca bir derleme adı belirten kısmi bağlamaya, .NET Framework Derlemeleriyle başvurulması durumunda izin verilmez.  
   
- .NET Framework yapan derlemelerin tüm derleme başvurularını da bütünleştirilmiş kodun tam adı içermelidir. Örneğin, sürüm 1.0 için System.Data .NET Framework derlemesine başvurmak için aşağıdakileri içerir:  
+ .NET Framework oluşturan derlemelere yapılan tüm derleme başvuruları, derlemenin tam nitelikli adını da içermelidir. Örneğin, sisteme başvurmak için 1,0 sürümü için veri .NET Framework derlemesi şunları içerir:  
   
 ```  
 System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089  
 ```  
   
- Sürümü, .NET Framework sürüm 1.0 ile birlikte gelen tüm .NET Framework derlemeleri sürüm numarasını karşılık geldiğini unutmayın. .NET Framework derlemeleri, kültür değeri her zaman nötr ve ortak anahtar yukarıdaki örnekte gösterildiği gibi aynıdır.  
+ Sürümün, .NET Framework sürüm 1,0 ile birlikte gelen tüm .NET Framework derlemelerinin sürüm numarasına karşılık geldiğini unutmayın. .NET Framework derlemeleri için kültür değeri her zaman tarafsız olur ve ortak anahtar Yukarıdaki örnekte gösterilen şekilde aynıdır.  
   
- Örneğin, bir bütünleştirilmiş kod başvurusu İzleme dinleyicisi Kur için bir yapılandırma dosyası eklemek için .NET Framework derleme sisteminin tam adı şunlardır:  
+ Örneğin, bir izleme dinleyicisi ayarlamak için bir yapılandırma dosyasına bir derleme başvurusu eklemek için, sistem .NET Framework derlemesinin tam nitelikli adını dahil edersiniz:  
   
 ```xml  
 <add name="myListener" type="System.Diagnostics.TextWriterTraceListener, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" initializeData="c:\myListener.log" />  
 ```  
   
 > [!NOTE]
->  Çalışma zamanı derleme adları büyük küçük harf duyarsız bir bütünleştirilmiş kod bağlama sırasında işler, ancak her durumda, bir derleme adı kullanılır korur. Çeşitli araçlar Windows Yazılım Geliştirme Seti (SDK) derleme adları büyük/küçük harfe olarak işleyin. Bunlar büyük/küçük harfe gibi davranarak en iyi sonuçlar için derleme adları yönetin.  
+>  Çalışma zamanı derleme adlarını bir derlemeye bağlarken büyük/küçük harfe duyarsız olarak değerlendirir, ancak bir derleme adında hangi durumun kullanıldığını korur. Windows SDK çeşitli araçlar, derleme adlarını büyük/küçük harfe duyarlı olarak işler. En iyi sonuçlar için, derleme adlarını büyük küçük harfe duyarlı olsalar gibi yönetin.  
   
-## <a name="naming-application-components"></a>Uygulama bileşenleri adlandırma  
- Çalışma zamanı dosya adı bir derlemenin kimliğinin belirlerken dikkate almaz. Derleme adı, sürüm, kültür ve tanımlayıcı ad oluşur, derleme kimliği için çalışma zamanı açık olması gerekir.  
+## <a name="naming-application-components"></a>Uygulama bileşenlerini adlandırma  
+ Çalışma zamanı, bir derlemenin kimliğini belirlerken dosya adını dikkate almaz. Derleme adı, sürüm, kültür ve tanımlayıcı adından oluşan derleme kimliğinin çalışma zamanına açık olması gerekir.  
   
- Örneğin, da myAssembly.dll adlı bir derlemeye başvuran myAssembly.exe adlı bir derleme varsa, myAssembly.exe yürütüyorsa bağlama doğru bir şekilde gerçekleşir. Ancak, myAssembly.exe yöntemi kullanarak başka bir uygulama yürütüyorsa <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>, çalışma zamanı bağlama "myAssembly." myAssembly.exe istediğinde, "myAssembly" zaten yüklü olduğunu belirler. Bu durumda da myAssembly.dll hiçbir zaman yüklenir. İstenen türü myAssembly.exe içermediğinden bir <xref:System.TypeLoadException> gerçekleşir.  
+ Örneğin, MyAssembly. dll adlı bir derlemeye başvuran myAssembly. exe adlı bir derlemeniz varsa, myAssembly. exe dosyasını çalıştırırsanız bağlama doğru gerçekleşir. Ancak, başka bir uygulama metodunu <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>kullanarak MyAssembly. exe ' yi çalıştırırsa, MyAssembly. exe "myAssembly" öğesine bağlamayı istediğinde, çalışma zamanı "myAssembly" öğesinin zaten yüklü olduğunu belirler. Bu durumda, myAssembly. dll hiçbir şekilde yüklenmez. MyAssembly. exe istenen türü içermediğinden, bir <xref:System.TypeLoadException> meydana gelir.  
   
- Bu sorunu önlemek için uygulamanızı oluşturan derlemeleri değil aynı derleme adına sahip veya farklı dizinlerde aynı ada sahip derlemeler yerleştirin emin olun.  
+ Bu sorunu önlemek için, uygulamanızı oluşturan derlemelerin aynı derleme adına sahip olmadığından ve farklı dizinlerde aynı ada sahip derlemeler içerdiğinden emin olun.  
   
 > [!NOTE]
->  Bir katı adlı derlemeyi genel derleme önbelleğine yerleştirirseniz, derlemenin dosya adı (örneğin .exe veya .dll dosya adı uzantısı dahil değil) derleme adı eşleşmelidir. Örneğin, bir derlemenin dosya adı da myAssembly.dll ise, myAssembly derleme adı olmalıdır. Özel derlemeler yalnızca kök uygulama dizininde dağıtılan dosya adından farklı bir derleme adı olabilir.  
+>  Tanımlayıcı adlı bir derlemeyi genel derleme önbelleğine yerleştirirseniz, derlemenin dosya adı derleme adıyla eşleşmelidir (. exe veya. dll gibi dosya adı uzantısını dahil değildir). Örneğin, bir derlemenin dosya adı myAssembly. dll ise, derleme adı myAssembly olmalıdır. Yalnızca kök uygulama dizininde dağıtılan özel derlemeler, dosya adından farklı bir derleme adına sahip olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Bir derlemenin tam olarak nitelenmiş adını belirleme](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
+- [Nasıl yapılır: Bir derlemenin tam nitelikli adını belirleme](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
 - [Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)
 - [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)
 - [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)

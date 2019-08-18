@@ -9,48 +9,48 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e544976b0b801b08af238b2aeb36b5611154379
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 314a94be140b392964951299fba2fed4ac7e6e68
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832906"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566795"
 ---
 # <a name="creating-assemblies"></a>Derlemeler Oluşturma
 
-Visual Studio veya derleyiciler ve ayrıca Windows Yazılım Geliştirme Seti (SDK) tarafından sağlanan araçları gibi bir IDE kullanarak tek dosya veya çok dosyalı derlemeler oluşturabilirsiniz. Basit, basit bir ada sahip ve tek bir uygulama etki alanına yüklü olduğu tek bir dosyaya derlemesidir. Bu derleme, uygulama dizininin dışındaki diğer derlemeler tarafından başvurulamaz ve sürüm denetimi yapmak değil. Derlemenin oluşan uygulamayı kaldırmak için basitçe bulunduğu dizini silin. Birçok geliştirici için bu özelliklere sahip bir derleme bir uygulamayı dağıtmak için gereken şey.
+Visual Studio gibi bir IDE veya Windows SDK tarafından sunulan derleyiciler ve araçlar aracılığıyla tek dosyalı veya çok dosyalı derlemeler oluşturabilirsiniz. En basit derleme basit bir ada sahip tek bir dosyadır ve tek bir uygulama etki alanına yüklenir. Bu derlemeye, uygulama dizini dışındaki diğer derlemeler tarafından başvurulamaz ve sürüm denetimi çalışmıyor. Derlemeden oluşan uygulamayı kaldırmak için, bulunduğu dizini silmeniz yeterlidir. Birçok geliştirici için, bu özelliklere sahip bir derleme, bir uygulamanın dağıtılması için gerekli olan bir derlemedir.
 
-Birkaç kod modülleri ve kaynak dosyalarını, bir çoklu dosya derlemesi oluşturabilirsiniz. Birden çok uygulama tarafından paylaşılabilen bir derlemeyi de oluşturabilirsiniz. Paylaşılan bir derleme tanımlayıcı bir ada sahip olmalıdır ve genel derleme önbelleğinde dağıtılabilir.
+Çeşitli kod modüllerinden ve kaynak dosyalarından çok dosyalı bir derleme oluşturabilirsiniz. Ayrıca, birden çok uygulama tarafından paylaşılabilen bir derleme da oluşturabilirsiniz. Paylaşılan bir derlemenin tanımlayıcı adı olması ve genel derleme önbelleğinde dağıtılması gerekir.
 
-Derlemeler, aşağıdaki etkenlere bağlı olarak içine kod modülleri ve kaynakları gruplama birkaç seçeneğiniz vardır:
+Aşağıdaki faktörlere bağlı olarak kod modüllerini ve kaynakları derlemeler halinde gruplandırırken çeşitli seçenekleriniz vardır:
 
 - Sürüm Oluşturma
 
-     Grup modüller aynı sürüm bilgisini içermelidir.
+     Aynı sürüm bilgisine sahip olması gereken grup modülleri.
 
 - Dağıtım
 
-     Grup kod modülleri ve modelinizin dağıtımı destekleyen kaynaklar.
+     Dağıtım modelinizi destekleyen grup kodu modülleri ve kaynakları.
 
-- Yeniden kullanma
+- Pencereleri
 
-     Bunlar mantıksal olarak birlikte bazı amaç için kullanılabiliyorsa modülleri gruplandırın. Örneğin, aynı derlemede türlerin ve sınıfların program bakımı için kullanılmayan oluşan bir derleme içine yerleştirilebilir. Ayrıca, birden çok uygulama ile paylaşmak için istediğinize türleri bir derlemeye gruplandırılmasını ve derlemeyi bir güçlü ad ile imzalanması gerekir.
+     Bir amaç için mantıksal olarak birlikte kullanılabilen modülleri gruplandırın. Örneğin, program bakımı için seyrek kullanılan türler ve sınıflardan oluşan bir derleme aynı derlemeye yerleştirilebilir. Ayrıca, birden çok uygulamayla paylaşmayı planladığınız türler bir derlemede gruplandırılmalıdır ve derleme tanımlayıcı bir adla imzalanmalıdır.
 
 - Güvenlik
 
-     Aynı güvenlik izinleri gerektiren türler içeren Grup modüller.
+     Aynı güvenlik izinleri gerektiren türleri içeren modülleri gruplandırın.
 
-- Kapsam belirleme
+- Kapsamlar
 
-     Görünürlüğü aynı derlemeye sınırlandırılmalıdır türleri içeren Grup modüllerinin.
+     Görünürlüğü aynı derleme ile kısıtlanması gereken türler içeren modülleri gruplandırın.
 
-Özel durumlar, ortak dil çalışma zamanı derlemeleri yönetilmeyen COM uygulamalarına yaparken yapılmalıdır. Yönetilmeyen kod ile çalışma hakkında daha fazla bilgi için bkz. [.NET Framework bileşenlerini COM'da gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md).
+Yönetilmeyen COM uygulamaları için ortak dil çalışma zamanı derlemeleri kullanılabilir hale geldiğinde özel hususlar yapılmalıdır. Yönetilmeyen kodla çalışma hakkında daha fazla bilgi için bkz. [com 'da .NET Framework bileşenleri gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Bütünleştirilmiş Kod Sürümü Oluşturma](../../../docs/framework/app-domains/assembly-versioning.md)
-- [Nasıl yapılır: Tek Dosyalı bütünleştirilmiş kod derleme](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)
-- [Nasıl yapılır: Bir çoklu dosya derlemesi oluşturun](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Nasıl yapılır: Tek dosya derlemesi oluşturma](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)
+- [Nasıl yapılır: Çoklu dosya derlemesi oluşturma](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Çok Dosyalı Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/multifile-assemblies.md)

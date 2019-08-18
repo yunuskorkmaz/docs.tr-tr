@@ -8,62 +8,62 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b093f9bb633578cc0051cfca7b1362f8bf097d7
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 67b9b48587802b43e90a7f35ab8cbb3b2ee025b0
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662441"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567255"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Nasıl yapılır: Tlbimp.exe Kullanarak Birincil Birlikte Çalışma Derlemeleri Oluşturma
 
-Birincil birlikte çalışma derlemesi oluşturmak için iki yolunuz vardır:
+Birincil birlikte çalışma derlemesi oluşturmak için iki yol vardır:
 
-- Kullanarak [tür kitaplığı alma programı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) Windows Yazılım Geliştirme Seti (SDK) tarafından sağlanan.
+- Windows SDK tarafından sunulan [tür kitaplığı alma programı (Tlbimp. exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) kullanma.
 
-  Birincil birlikte çalışma derlemeleri oluşturmak için en kolay yolu [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Tlbimp.exe aşağıdaki güvenlik önlemleri sağlar:
+  Birincil birlikte çalışma derlemelerini oluşturmanın en kolay yolu [Tlbimp. exe ' yi (tür kitaplığı alma)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)kullanmaktır. Tlbimp. exe aşağıdaki korumaları sağlar:
 
-  - Tüm iç içe geçmiş tür kitaplığı başvurularını için yeni birlikte çalışma derlemeleri oluşturmadan önce diğer kayıtlı birincil birlikte çalışma derlemelerini denetler.
+  - Tüm iç içe geçmiş tür kitaplığı başvuruları için yeni birlikte çalışma derlemeleri oluşturmadan önce diğer kayıtlı birincil birlikte çalışma derlemelerini denetler.
 
-  - Kapsayıcı ya da birincil birlikte çalışma derlemesini bir katı ad vermek için dosya adı belirtmezseniz, birincil birlikte çalışma derlemesi yaymak başarısız olur.
+  - Birincil birlikte çalışma derlemesine tanımlayıcı bir ad vermek için kapsayıcı veya dosya adı belirtmezseniz, birincil birlikte çalışma derlemesini yayma başarısız olur.
 
-  - Bağımlı derlemelerin başvurularını atlarsanız, birincil birlikte çalışma derlemesi yaymak başarısız olur.
+  - Bağımlı derlemelere yönelik başvuruları atlarsanız, birincil birlikte çalışma derlemesi yayılamıyor.
 
-  - Birincil birlikte çalışma derlemelerini olmayan bağımlı derlemelerin başvurularını eklerseniz, birincil birlikte çalışma derlemesi yaymak başarısız olur.
+  - Birincil birlikte çalışma derlemeleri olmayan bağımlı derlemelere başvurular eklerseniz, birincil birlikte çalışma derlemesi yayılamıyor.
 
-- Kaynak kodunda el ile oluşturma gibi ortak dil belirtimi (CLS) ile uyumlu bir dil kullanarak birincil birlikte çalışma derlemelerini C#. Bu yaklaşım, bir tür kitaplığı kullanılamadığında yararlıdır.
+- Ortak dil belirtimi (CLS) ile uyumlu bir dil kullanarak kaynak kodunda el ile birincil birlikte çalışma derlemeleri oluşturma (örneğin,) C#. Bu yaklaşım, bir tür kitaplığı kullanılamadığında yararlıdır.
 
-Derlemeyi tanımlayıcı bir adla imzalamak için bir şifreleme anahtarı çiftiniz olması gerekir. Ayrıntılar için bkz [bir anahtar çifti oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).
+Derlemeyi güçlü bir adla imzalamak için bir şifreleme anahtarı çiftiniz olması gerekir. Ayrıntılar için bkz. [anahtar çifti oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).
 
-### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>Tlbimp.exe kullanarak birincil birlikte çalışma derlemesi oluşturmak için
+### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>Tlbimp. exe kullanarak birincil birlikte çalışma derlemesi oluşturmak için
 
 1. Komut isteminde, şunları yazın:
 
-    **Tlbimp** *tlbfile* **/birincil/keyfile:** *filename* **/out:** *assemblyname*
+    **Tlbimp** *tlbdosya* **/Primary/keyfile:** *dosya adı* **/Out:** *AssemblyName*
 
-    Bu komutta *tlbfile* COM tür kitaplığı içeren bir dosya *filename* kapsayıcısı veya anahtar çiftini içeren dosyanın adı ve *assemblyname* olduğu tanımlayıcı ad ile işaretlenecek derlemenin adı.
+    Bu komutta, *tlbdosya* com tür kitaplığını içeren dosyadır, *filename* anahtar çiftini içeren kapsayıcının veya dosyanın adı ve *AssemblyName* ise tanımlayıcı bir adla imzalanacak derlemenin adıdır.
 
-Birincil birlikte çalışma derlemeleri, yalnızca diğer birincil birlikte çalışma derlemelerini başvurabilirsiniz. Derlemenizi üçüncü taraf COM tür kitaplığından türleri başvuruyorsa, birincil birlikte çalışma bütünleştirilmiş kodunuzda oluşturmadan önce bir birincil birlikte çalışma derlemesi yayımcıdan edinmeniz gerekir. Yayımcı ise başvuru birincil birlikte çalışma bütünleştirilmiş kodu oluşturuluyor önce birincil birlikte çalışma derlemesi bağımlı tür kitaplığı için oluşturmanız gerekir.
+Birincil birlikte çalışma derlemeleri yalnızca diğer birincil birlikte çalışma derlemelerine başvurabilir. Derlemeniz bir üçüncü taraf COM tür kitaplığından türlere başvuruyorsa, birincil birlikte çalışma derlemenizi oluşturabilmeniz için önce yayımcıdan bir birincil birlikte çalışma derlemesi edinmeniz gerekir. Yayımcı kullanıyorsanız, başvuran birincil birlikte çalışma derlemesini oluşturmadan önce bağımlı tür kitaplığı için bir birincil birlikte çalışma derlemesi oluşturmanız gerekir.
 
-Bağımlı bir birincil birlikte çalışma derlemesi, özgün tür kitaplığına farklı bir sürüm numarası geçerli dizinde yüklendiğinde bulunabilirlik değil. Windows kayıt defterinde bağımlı birincil birlikte çalışma derlemesi veya kullanın **/reference** Tlbimp.exe bağımlı DLL bulur emin olmak için seçeneği.
+Özgün tür kitaplığından farklı bir sürüm numarasına sahip bağımlı bir birincil birlikte çalışma derlemesi, geçerli dizine yüklendiğinde keşfedilemez. Tlbimp. exe ' nın bağımlı DLL 'yi bulmasını sağlamak için, bağımlı birincil birlikte çalışma derlemesini Windows kayıt defterine kaydetmeniz veya **/Reference** seçeneğini kullanmanız gerekir.
 
-Ayrıca, birden çok tür kitaplığı sürümünü sarabilirsiniz. Yönergeler için [nasıl yapılır: Birden çok tür kitaplığı sürümünü sarmalama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100)).
+Ayrıca, bir tür kitaplığının birden çok sürümünü de kaydırabilirsiniz. Yönergeler için bkz [. nasıl yapılır: Tür kitaplıklarının](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100))birden çok sürümünü sarın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, COM tür kitaplığı içeri aktarır `LibUtil.tlb` ve derlemeyi imzalar `LibUtil.dll` anahtar dosyasını kullanarak bir katı adla `CompanyA.snk`. Bu örnek varsayılan ad üretir belirli ad alanı adı gt;(yok) `LibUtil`.
+Aşağıdaki örnek, com tür kitaplığını `LibUtil.tlb` içeri aktarır ve anahtar dosyasını `CompanyA.snk`kullanarak `LibUtil.dll` derlemeyi tanımlayıcı bir adla imzalar. Bu örnek, belirli bir ad alanı adını atlayarak varsayılan ad alanını `LibUtil`üretir.
 
 ```
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /out:LibUtil.dll
 ```
 
-Daha açıklayıcı bir ad için (kullanarak *SatıcıAdı*. *LibraryName* kılavuz adlandırma), aşağıdaki örnekte varsayılan derleme dosya adı ve ad alanı adını geçersiz kılar.
+Daha açıklayıcı bir ad ( *VendorName*kullanarak). *LibraryName* adlandırma Kılavuzu) aşağıdaki örnek, varsayılan derleme dosya adı ve ad alanı adını geçersiz kılar.
 
 ```
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /out:CompanyA.LibUtil.dll
 ```
 
-Aşağıdaki örnek alır `MyLib.tlb`, hangi başvurular `CompanyA.LibUtil.dll`, ve derlemeyi imzalar `CompanyB.MyLib.dll` anahtar dosyasını kullanarak bir katı adla `CompanyB.snk`. Ad alanı `CompanyB.MyLib`, varsayılan ad alanı adını geçersiz kılar.
+Aşağıdaki örnek içeri aktarır `MyLib.tlb` `CompanyA.LibUtil.dll`ve anahtar dosyasını `CompanyB.snk`kullanarak derlemeyi `CompanyB.MyLib.dll` tanımlayıcı bir adla imzalar. Ad alanı `CompanyB.MyLib`, varsayılan ad alanı adını geçersiz kılar.
 
 ```
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll
@@ -71,4 +71,4 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Birincil birlikte çalışma derlemelerini kaydetme](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+- [Nasıl yapılır: Birincil birlikte çalışma derlemelerini Kaydet](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)

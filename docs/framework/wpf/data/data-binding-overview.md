@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: e1fbb46c76fbc729818b6ff24b55c0d18f6b05df
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 44a35131273c6f191ab5da5bc1639d97bd961ff1
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400705"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567520"
 ---
 # <a name="data-binding-overview"></a>Veri Bağlamaya Genel Bakış
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]veri bağlama, uygulamaların sunmak ve verilerle etkileşim kurmak için basit ve tutarlı bir yol sağlar. Öğeler, ortak dil çalışma zamanı (CLR) nesneleri ve [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]içindeki çeşitli veri kaynaklarından verilere bağlanabilir. <xref:System.Windows.Controls.ContentControl>ve gibi gibi, <xref:System.Windows.Controls.ItemsControl> <xref:System.Windows.Controls.ListBox>tekveri öğelerinin veya veri öğelerinin koleksiyonlarının esnek stillendirilmesini sağlayan yerleşik işlevlere sahiptir.<xref:System.Windows.Controls.ListView> <xref:System.Windows.Controls.Button> Sıralama, filtre ve grup görünümleri verilerin üzerine oluşturulabilir.  
@@ -70,7 +70,7 @@ ms.locfileid: "68400705"
   
 - Şekilde belirtilmese de, bağlama kaynak nesnesinin özel bir CLR nesnesi olmasına sınırlı olmadığından not edilmelidir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]veri bağlama, verileri CLR nesneleri biçiminde destekler ve [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Bazı örnekler sağlamak için bağlama kaynağınız bir, herhangi bir <xref:System.Windows.UIElement>liste nesnesi, ADO.NET veri veya Web hizmetleriyle ilişkili bir CLR nesnesi ya da [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] verilerinizi içeren bir XmlNode olabilir. Daha fazla bilgi için bkz. [bağlama kaynaklarına genel bakış](binding-sources-overview.md).  
   
- Diğer [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] konuları okuduğunuzdan, bir bağlama oluştururken *bağlama hedefini bir* bağlama kaynağına bağladığınızda dikkat etmeniz önemlidir. Örneğin [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] , bir <xref:System.Windows.Controls.ListBox> veri bağlama kullanarak bazı temel verileri görüntülüyorsanız <xref:System.Windows.Controls.ListBox> , verilerinizi bu verilere bağladıysanız [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] .  
+ Diğer SDK konularını okurken, bir bağlama oluştururken bağlama hedefini bir bağlama kaynağına bağladığınızda dikkat etmeniz önemlidir. Örneğin [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] , bir <xref:System.Windows.Controls.ListBox> veri bağlama kullanarak bazı temel verileri görüntülüyorsanız <xref:System.Windows.Controls.ListBox> , verilerinizi bu verilere bağladıysanız [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] .  
   
  Bir bağlama oluşturmak için <xref:System.Windows.Data.Binding> nesnesini kullanın. Bu konunun geri kalanında, ile ilişkili kavramların birçoğu ve <xref:System.Windows.Data.Binding> nesnenin bazı özellikleri ve kullanımları ele alınmaktadır.  
   
@@ -346,7 +346,7 @@ ms.locfileid: "68400705"
   
  [!code-xaml[DataBindingLab#AuctionItemDataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#auctionitemdatatemplate)]  
   
- Bu iki <xref:System.Windows.DataTemplate>öğesinin kullanımıyla birlikte, sonuçta elde edilen kullanıcı arabirimi, [veri bağlama nedir?](#what_is_data_binding) bölümünde gösterilen şeydir. Bu ekran görüntüsünden görebileceğiniz gibi, denetimlerinizde veri yerleştirmenize izin vermenin yanı sıra verileriniz için etkileyici görseller tanımlamanızı <xref:System.Windows.DataTemplate>da sağlar. Örneğin, yukarıda <xref:System.Windows.DataTrigger>' de, *özelleştirilmiş özellikler* içeren <xref:System.Windows.DataTemplate> *AuctionItem*s 'in, turuncu bir kenarlık ve yıldız  ile görüntülenebilmesi için, yukarıda ' de kullanılır.  
+ Bu iki <xref:System.Windows.DataTemplate>öğesinin kullanımıyla birlikte, sonuçta elde edilen kullanıcı arabirimi, [veri bağlama nedir?](#what_is_data_binding) bölümünde gösterilen şeydir. Bu ekran görüntüsünden görebileceğiniz gibi, denetimlerinizde veri yerleştirmenize izin vermenin yanı sıra verileriniz için etkileyici görseller tanımlamanızı <xref:System.Windows.DataTemplate>da sağlar. Örneğin, yukarıda <xref:System.Windows.DataTrigger>' de, *özelleştirilmiş özellikler* içeren <xref:System.Windows.DataTemplate> *AuctionItem*s 'in, turuncu bir kenarlık ve yıldız ile görüntülenebilmesi için, yukarıda ' de kullanılır.  
   
  Veri şablonları hakkında daha fazla bilgi için bkz. [veri şablonu oluşturmaya genel bakış](data-templating-overview.md).  
   

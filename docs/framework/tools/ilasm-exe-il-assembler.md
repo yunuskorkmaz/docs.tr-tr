@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 36de7dd2d97eb532717d52bd3903d3e5acd19d2d
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833896"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567059"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL Derleyici)
 
-IL Derleyicisi ara dil'den (IL) taşınabilir çalıştırılabilir bir (PE) dosya oluşturur. (IL hakkında daha fazla bilgi için bkz. [Managed Execution Process](../../../docs/standard/managed-execution-process.md).) IL ve gereken meta veriyi içeren elde edilen çalıştırılabilir dosyayı çalıştırarak IL'in beklendiği gibi çalışıp çalışmadığını belirleyebilirsiniz.
+IL Derleyicisi ara dil'den (IL) taşınabilir çalıştırılabilir bir (PE) dosya oluşturur. (Il hakkında daha fazla bilgi için bkz. [yönetilen yürütme işlemi](../../../docs/standard/managed-execution-process.md).) IL ve gereken meta veriyi içeren elde edilen çalıştırılabilir dosyayı çalıştırarak IL'in beklendiği gibi çalışıp çalışmadığını belirleyebilirsiniz.
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için Visual Studio (veya Windows 7'de Visual Studio komut istemi) için geliştirici Komut İstemi'ni kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
 Komut satırına şunu yazın:
 
@@ -38,77 +38,77 @@ ilasm [options] filename [[options]filename...]
 
 | Bağımsız Değişken | Açıklama |
 | -------- | ----------- |
-|`filename`|.il kaynak dosyasının adı. Bu dosya meta veri bildirim yönergeleri ve simgesel IL yönergelerinden oluşur. Birden çok kaynak dosya bağımsız değişkeni ile tek bir PE dosyası oluşturmak için sağlanan *Ilasm.exe*. **Not:** .il kaynak dosyasındaki son kod satırının bir boşluk karakteri veya satır sonu karakteri olduğundan emin olun.|
+|`filename`|.il kaynak dosyasının adı. Bu dosya meta veri bildirim yönergeleri ve simgesel IL yönergelerinden oluşur. *Ilasm. exe*ile tek bir PE dosyası oluşturmak için birden çok kaynak dosya bağımsız değişkeni sağlanabilir. **Not:** .il kaynak dosyasındaki son kod satırının bir boşluk karakteri veya satır sonu karakteri olduğundan emin olun.|
 
 | Seçenek | Açıklama |
 | ------ | ----------- |
-|**/32bitpreferred**|32 bit tercih edilen bir görüntü (PE32) oluşturur.|
-|**/ alignment:** `integer`|Filealignment değerini tarafından belirtilen değere ayarlar `integer` NT isteğe bağlı üst bilgisindeki. Eğer .alignment IL yönergesi dosyada belirtiliyorsa, bu seçenek onu geçersiz kılar.|
-|**/ appcontaıner**|Üreten bir *.dll* veya *.exe* çıktı olarak Windows uygulama kapsayıcısında çalışan dosya.|
-|**/ARM**|Hedef işlemci olarak Gelişmiş RISC Makinesi (ARM) belirtir.<br /><br /> Eğer görüntü bit genişliği belirtilmezse, varsayılan değer **/32bitpreferred**.|
-|**/ Base:** `integer`|ImageBase tarafından belirtilen değere ayarlar `integer` NT isteğe bağlı üst bilgisindeki. Eğer .imagebase IL yönergesi dosyada belirtiliyorsa, bu seçenek onu geçersiz kılar.|
-|**/Clock**|Belirtilen .il kaynak dosyası için aşağıdaki derleme sürelerini milisaniye cinsinden ölçer ve raporlar:<br /><br /> **Toplam çalışma**: İzleyen tüm belirli görevleri gerçekleştirirken geçen toplam süre.<br /><br /> **Başlangıç**: Yükleme ve dosya açma.<br /><br /> **MD yayma**: Meta veriyi yaymak.<br /><br /> **Ref Def çözümleme**: Başvuruları dosyadaki tanımlara çözümlemek.<br /><br /> **CEE dosya oluşturma**: Bellekte dosya görüntüsünü oluşturuluyor.<br /><br /> **PE dosyası yazma**: Görüntüyü bir PE dosyasına yazmak.|
-|**/ debug**[:**IMPL**&#124;**OPT**]|Hata ayıklama bilgisi içerir (yerel değişken ve bağımsız değişken adları ve satır numaraları). Bir PDB dosyası oluşturur.<br /><br /> **/ debug** ek değer olmadan JIT iyileştirmesini devre dışı bırakır ve PDB dosyasındaki dizi noktalarını kullanır.<br /><br /> **IMPL** JIT iyileştirmesini devre dışı bırakır ve örtülü dizi noktalarını kullanır.<br /><br /> **OPT** JIT iyileştirmesini etkinleştirir ve örtülü dizi noktalarını kullanır.|
-|**/ dll**|Üreten bir *.dll* çıktı olarak bir dosya.|
-|**ENC:** `file`|Belirtilen kaynak dosyasından Düzenle ve Devam Et deltaları oluşturur.<br /><br /> Bu bağımsız değişken yalnızca akademik amaçlıdır ve ticari kullanım için desteklenmez.|
-|**/ exe**|Çıktı olarak bir yürütülebilir dosya oluşturur. Bu varsayılandır.|
-|**/ Flags:** `integer`|Bilgisindeki ımageflags değerini tarafından belirtilen değere ayarlar `integer` ortak dil çalışma zamanı üst bilgisindeki. Eğer .corflags IL yönergesi dosyada belirtiliyorsa, bu seçenek onu geçersiz kılar. CorHdr.h, comımage_flags bölümüne için geçerli değerlerin bir listesi için bkz. *tamsayı*.|
-|**/fold**|Eşdeğer metot gövdelerini tek bir gövde olarak katlar.|
-|/**highentropyva**|Yüksek entropili adres alanı düzenini (ASLR) destekleyen bir çıktı çalıştırılabilir dosyası oluşturur. (İçin varsayılan **/appcontaıner**.)|
-|**/ include:** `includePath`|İle eklenen dosyaların aranacağı bir yol ayarlar `#include`.|
-|**/itanium**|Hedef işlemci olarak Intel Itanium belirtir.<br /><br /> Eğer görüntü bit genişliği belirtilmezse, varsayılan değer **/pe64**.|
-|**/Key:** `keyFile`|Derleme `filename` bulunan özel anahtarı kullanarak güçlü bir imzayla `keyFile`.|
-|**/Key:**  @`keySource`|Derleme `filename` , özel anahtarı kullanarak güçlü bir imza ile üretilen `keySource`.|
-|**/ listeleme**|Standart çıktıda bir listeleme dosyası oluşturur. Eğer bu seçeneği koymazsanız, listeleme dosyası oluşturulmaz.<br /><br /> Bu parametre .NET Framework 2.0 ve sonrasında desteklenmez.|
+|**/32bittercihli**|32 bit tercih edilen bir görüntü (PE32) oluşturur.|
+|**/hizalaması:** `integer`|NT isteğe bağlı üstbilgisinde dosya hizalamasını belirtilen `integer` değere ayarlar. Eğer .alignment IL yönergesi dosyada belirtiliyorsa, bu seçenek onu geçersiz kılar.|
+|**/APPCONTAINER**|Çıkış olarak Windows Uygulama kapsayıcısında çalışan bir *. dll* veya *. exe* dosyası üretir.|
+|**/ARM**|Hedef işlemci olarak Gelişmiş RISC Makinesi (ARM) belirtir.<br /><br /> Hiçbir görüntü bit durumu belirtilmemişse, varsayılan olarak **/32bittercih**edilir.|
+|**/Base:** `integer`|ImageBase 'i NT isteğe bağlı üst bilgisinde `integer` belirtilen değere ayarlar. Eğer .imagebase IL yönergesi dosyada belirtiliyorsa, bu seçenek onu geçersiz kılar.|
+|**/Saat**|Belirtilen .il kaynak dosyası için aşağıdaki derleme sürelerini milisaniye cinsinden ölçer ve raporlar:<br /><br /> **Toplam çalıştırma**: İzleyen tüm belirli işlemleri gerçekleştirirken harcanan toplam süre.<br /><br /> **Başlangıç**: Dosya yükleniyor ve açılıyor.<br /><br /> **Md yayma**: Meta veriler yayıcı.<br /><br /> **Ref-def çözümleme**: Dosyadaki tanımlara yapılan başvurular çözümleniyor.<br /><br /> **Cee dosyası oluşturma**: Bellek içinde dosya görüntüsü oluşturuluyor.<br /><br /> **PE dosyasını yazma**: Görüntü bir PE dosyasına yazılıyor.|
+|**/Debug** [:**Impl**&#124;**opt**]|Hata ayıklama bilgisi içerir (yerel değişken ve bağımsız değişken adları ve satır numaraları). Bir PDB dosyası oluşturur.<br /><br /> ek değer içermeyen **/Debug** JIT iyileştirmesini devre dışı bırakır ve pdb dosyasından sıra noktalarını kullanır.<br /><br /> **IMPL** JIT iyileştirmesini devre dışı bırakır ve örtük sıra noktaları kullanır.<br /><br /> **Opt** için JIT İyileştirmesi etkinleştirilir ve örtülü sıra noktalarını kullanır.|
+|**/dll**|Çıktı olarak bir *. dll* dosyası üretir.|
+|**/enc:** `file`|Belirtilen kaynak dosyasından Düzenle ve Devam Et deltaları oluşturur.<br /><br /> Bu bağımsız değişken yalnızca akademik amaçlıdır ve ticari kullanım için desteklenmez.|
+|**/exe**|Çıktı olarak bir yürütülebilir dosya oluşturur. Bu varsayılandır.|
+|**/Flags:** `integer`|ImageFlags öğesini ortak dil çalışma zamanı üst `integer` bilgisinde belirtilen değere ayarlar. Eğer .corflags IL yönergesi dosyada belirtiliyorsa, bu seçenek onu geçersiz kılar. *Tamsayı*için geçerli değerler listesi için bkz. CorHdr. h, COMIMAGE_FLAGS.|
+|**/Katlama**|Eşdeğer metot gövdelerini tek bir gövde olarak katlar.|
+|/**highentropyva**|Yüksek entropili adres alanı düzenini (ASLR) destekleyen bir çıktı çalıştırılabilir dosyası oluşturur. ( **/APPCONTAINER**için varsayılan.)|
+|**/include:** `includePath`|İçinde yer alan `#include`dosyaları aramak için bir yol belirler.|
+|**/Itanium**|Hedef işlemci olarak Intel Itanium belirtir.<br /><br /> Hiçbir görüntü bit durumu belirtilmemişse, varsayılan değer **/pe64**' dir.|
+|**/Key:** `keyFile`|, `filename` İçinde`keyFile`bulunan özel anahtarı kullanarak güçlü bir imzayla derlenir.|
+|**/Key** @`keySource`|`filename` Öğesinde`keySource`oluşturulan özel anahtarı kullanarak güçlü bir imzayla derlenir.|
+|**/listeleme**|Standart çıktıda bir listeleme dosyası oluşturur. Eğer bu seçeneği koymazsanız, listeleme dosyası oluşturulmaz.<br /><br /> Bu parametre .NET Framework 2.0 ve sonrasında desteklenmez.|
 |**/MDV:** `versionString`|Meta veri sürümü dizesini ayarlar.|
-|**/msv:** `major`.`minor`|Meta veri akış sürümünü ayarlar burada `major` ve `minor` tamsayılardır.|
-|**/noautoinherit**|Devre dışı bırakır öğesinden varsayılan devralmayı <xref:System.Object> temel sınıfa belirtildiğinde.|
+|**/MSV:** `major`.`minor`|Meta veri akışı sürümünü, burada `major` ve `minor` tamsayılar olarak ayarlar.|
+|**/nooto Inherit**|Hiçbir temel sınıf belirtilmediğinde <xref:System.Object> varsayılan devralmayı devre dışı bırakır.|
 |**/nocorstub**|CORExeMain taslağının oluşturulmasını bastırır.|
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|
-|**/ Output:** `file.ext`|Çıktı dosyası adını ve uzantısını belirtir. Varsayılan olarak, çıktı dosyası adı ilk kaynak dosyasının adıyla aynıdır. Varsayılan uzantı *.exe*. Belirtirseniz **/dll** seçeneği, varsayılan uzantısıdır *.dll*. **Not:** Belirtme **/output**: lt;1}MyFile.dll **/dll** seçeneği. Siz belirtmezseniz **/dll**, sonuç adlı yürütülebilir bir dosya olacaktır *myfile.dll*.|
-|**/optimize**|Uzun yönergeleri kısa olarak iyileştirir. Örneğin, `br` için `br.s`.|
-|**/pe64**|64 bitlik bir görüntü oluşturur (PE32+).<br /><br /> Hiçbir hedef işlemci belirtilmezse, varsayılan değer `/itanium`.|
-|**/ pdb**|Hata ayıklama bilgisi izlemeyi etkinleştirmeden bir PDB dosyası oluşturur.|
+|**/output:** `file.ext`|Çıktı dosyası adını ve uzantısını belirtir. Varsayılan olarak, çıktı dosyası adı ilk kaynak dosyasının adıyla aynıdır. Varsayılan uzantı *. exe*' dir. **/DLL** seçeneğini belirtirseniz, varsayılan uzantı *. dll*' dir. **Not:** **/Output**: dosyam. dll belirtildiğinde **/DLL** seçeneği ayarlanmadı. **/DLL**belirtmezseniz, sonuç *Dosyam. dll*adlı yürütülebilir bir dosya olur.|
+|**/optimize**|Uzun yönergeleri kısa olarak iyileştirir. Örneğin, `br`. `br.s`|
+|**/pe64**|64 bitlik bir görüntü oluşturur (PE32+).<br /><br /> Hedef işlemci belirtilmemişse, varsayılan olur `/itanium`.|
+|**/pdb**|Hata ayıklama bilgisi izlemeyi etkinleştirmeden bir PDB dosyası oluşturur.|
 |**/quiet**|Sessiz modu belirtir; hiçbir derleme ilerlemesini bildirmez.|
-|**/ Resource:** `file.res`|Belirtilen kaynak dosyayı içeren \*sonuç olarak .res biçimi *.exe* veya *.dll* dosya. Yalnızca tek bir .res dosyası belirtilebilir **/Resource** seçeneği.|
-|**ssver:** `int`.`int`|NT isteğe bağlı üst bilgisinde alt sistem sürümünü ayarlar. İçin **/appcontaıner** ve **/arm** 6.02 en düşük sürüm numarasıdır.|
-|**/Stack:** `stackSize`|İçin NT isteğe bağlı üst bilgisindeki SizeOfStackReserve değerini ayarlar `stackSize`.|
-|**/stripreloc**|Temel yeniden konumlandırmanın gerekmediğini belirtir.|
-|**/ Subsystem:** `integer`|Alt sistemi tarafından belirtilen değere ayarlar `integer` NT isteğe bağlı üst bilgisindeki. Eğer .subsystem IL yönergesi dosyada belirtiliyorsa, bu komut onu geçersiz kılar. Bkz. Winnt.h, IMAGE_SUBSYSTEM için geçerli değerlerin bir listesi için `integer`.|
-|**/x64**|Hedef işlemci olarak bir 64 bitlik AMD işlemci belirtir.<br /><br /> Eğer görüntü bit genişliği belirtilmezse, varsayılan değer **/pe64**.|
+|**/Kaynak:** `file.res`|Elde edilen \* *. exe* veya *. dll* dosyasında belirtilen kaynak dosyasını. res biçiminde içerir. **/Resource** seçeneğiyle yalnızca bir. res dosyası belirtilebilir.|
+|**/ssver:** `int`.`int`|NT isteğe bağlı üst bilgisinde alt sistem sürümünü ayarlar. **/APPCONTAINER** ve **/ARM** için en düşük sürüm numarası 6,02 ' dir.|
+|**/Stack:** `stackSize`|NT Isteğe bağlı üst bilgisindeki SizeOfStackReserve değerini olarak `stackSize`ayarlar.|
+|**/çabapreloc**|Temel yeniden konumlandırmanın gerekmediğini belirtir.|
+|**/Subsystem:** `integer`|Alt sistemi, NT isteğe bağlı üst `integer` bilgisinde tarafından belirtilen değere ayarlar. Eğer .subsystem IL yönergesi dosyada belirtiliyorsa, bu komut onu geçersiz kılar. İçin `integer`geçerli değerler listesi için bkz. Winnt. h, IMAGE_SUBSYSTEM.|
+|**/x64**|Hedef işlemci olarak bir 64 bitlik AMD işlemci belirtir.<br /><br /> Hiçbir görüntü bit durumu belirtilmemişse, varsayılan değer **/pe64**' dir.|
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|
 
 > [!NOTE]
-> Tüm seçenekler için *Ilasm.exe* büyük/küçük harfe ve ilk üç harfinden tanınır. Örneğin, **/lis** eşdeğerdir **/listing** ve **/res**: myresfile.res eşdeğerdir **/Resource**: myresfile.res eşdeğerdir. Bağımsız değişkenler belirten seçenekler, seçenek ve bağımsız değişken arasında ayıraç olarak ya iki nokta üst üste (:) ya da eşittir işaretini (=) kabul eder. Örneğin, **/output**:*file.ext* eşdeğerdir **/output**=*file.ext*.
+> *Ilasm. exe* ' nin tüm seçenekleri büyük/küçük harfe duyarlıdır ve ilk üç harf tarafından tanınır. Örneğin, **/Lis** ,/listeleme ve **/res**: myresfile. res ile eşdeğerdir. res, **/Resource**: myresfile. res ile eşdeğerdir. Bağımsız değişkenler belirten seçenekler, seçenek ve bağımsız değişken arasında ayıraç olarak ya iki nokta üst üste (:) ya da eşittir işaretini (=) kabul eder. Örneğin, **/output**:*File. ext* , **/output**=*File. ext*ile eşdeğerdir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-IL Derleyicisi araç satıcılarına IL oluşturucuları tasarlamaları ve uygulamaları için yardımcı olur. Kullanarak *Ilasm.exe*, araç ve derleyici geliştiriciler odaklanmasına IL ve meta verileri nesil IL PE dosyası biçiminde yayma ile ilgili olmadan.
+IL Derleyicisi araç satıcılarına IL oluşturucuları tasarlamaları ve uygulamaları için yardımcı olur. *Ilasm. exe*, araç ve derleyici GELIŞTIRICILERI, PE dosya biçiminde Il yayılmasından ENDIŞE duymadan Il ve meta veri oluşturmaya odaklanabilir.
 
-Benzer şekilde gibi çalışma zamanını hedefleyen diğer derleyiciler C# ve Visual Basic *Ilasm.exe* Ara nesne dosyaları oluşturmaz ve bir PE dosyası oluşturmak için bağlama aşaması gerektirmez.
+C# Ve Visual Basic gibi çalışma zamanını hedefleyen diğer derleyicilere benzer şekilde, *Ilasm. exe* ara nesne dosyaları oluşturmaz ve bir PE dosyası oluşturmak için bağlama aşaması gerektirmez.
 
-IL Derleyicisi, çalışma zamanını hedef alan programlama dillerinin tüm varolan meta veri ve IL özelliklerini ifade edebilir. Böylece, IL yeterince ifade edilmesine bu programlama dillerinden birine yazılır ve ile derlenmiş yönetilen kod *Ilasm.exe*.
+IL Derleyicisi, çalışma zamanını hedef alan programlama dillerinin tüm varolan meta veri ve IL özelliklerini ifade edebilir. Bu, bu programlama dillerinin herhangi birinde yazılan yönetilen kodun Il derleyiciden yeterince ifade edilmesi ve *Ilasm. exe*ile derlenmesi için izin verir.
 
 > [!NOTE]
 > Eğer .il kaynak dosyasının son kod satırında bir boşluk veya satır sonu karakteri yoksa derleme başarısız olabilir.
 
-Kullanabileceğiniz *Ilasm.exe* yardımcı aracı ile birlikte [ *Ildasm.exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). *Ildasm.exe* alır, IL kodunu içeren ve bir metin dosyası olarak uygun oluşturan bir PE dosyası için giriş *Ilasm.exe*. Bu örneğin, tüm çalışma zamanı meta veri özniteliklerini desteklemeyen bir programlama dilinde kod derlerken kullanışlıdır. Kodu derledikten ve çıktıyı çalıştıran sonra *Ildasm.exe*, eksik öznitelikler eklemek için elle düzenlenerek elde edilen IL metin dosyası olabilir. Ardından bu metin dosyasını çalıştırarak *Ilasm.exe* son bir yürütülebilir dosya.
+*Ilasm. exe* ' yi yardımcı aracı olan [*ıldadsm. exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)ile birlikte kullanabilirsiniz. *Ildadsm. exe* IL kodu IÇEREN bir PE dosyası alır ve *Ilasm. exe*' ye giriş olarak uygun bir metin dosyası oluşturur. Bu örneğin, tüm çalışma zamanı meta veri özniteliklerini desteklemeyen bir programlama dilinde kod derlerken kullanışlıdır. Kodu derleyip ve çıkış *ıldadsm. exe*aracılığıyla çalıştırdıktan sonra, elde edilen Il metin dosyası, eksik öznitelikleri eklemek için el ile düzenlenebilir. Ardından, son yürütülebilir bir dosya oluşturmak için bu metin dosyasını *Ilasm. exe* aracılığıyla çalıştırabilirsiniz.
 
 Bu tekniği kullanarak ayrı derleyiciler tarafından üretilen çeşitli PE dosyalarından tek bir PE dosyası oluşturabilirsiniz.
 
 > [!NOTE]
 > Şu anda, bu tekniği gömülü yerel kod içeren (örneğin, Visual C++ tarafından üretilen PE dosyaları) PE dosyaları ile kullanamazsınız.
 
-Bunu yapmak için kullanımını birleştirilmiş *Ildasm.exe* ve *Ilasm.exe* varsayılan olarak, mümkün olduğunca doğru olarak derleyici kısa yazdığınız IL kaynaklarınızda uzun olanlarla kodlamalarınızı değil (veya başka bir derleyici tarafından yayınlanan). Kullanım **/ optimize** seçeneği kısa kodlamaları mümkün olduğu yerde değiştirin.
+*Ildadsm. exe* ve *Ilasm. exe* ' nin bu birleştirilmiş kullanımını mümkün olduğunca doğru hale getirmek için, varsayılan olarak Assembler, Il kaynaklarınıza yazmış olabileceğiniz (veya başka bir derleyici tarafından yayılan) uzun sürelerle ilgili kısa kodlamalar yerine getirir. Mümkün olan yerlerde kısa kodlamaları yerine koymak için **/optimize** et seçeneğini kullanın.
 
 > [!NOTE]
-> *Ildasm.exe* yalnızca diskteki dosyalar üzerinde çalışır. Genel bütünleştirilmiş kod önbelleğine yüklü olan dosyalar üzerinde çalışmaz.
+> *Ildadsm. exe* yalnızca diskteki dosyalar üzerinde çalışır. Genel bütünleştirilmiş kod önbelleğine yüklü olan dosyalar üzerinde çalışmaz.
 
-IL grameri daha fazla bilgi için Windows Yazılım Geliştirme Seti (SDK) içindeki asmparse.grammar dosyasına bakın.
+Il 'nin dilbilgisini hakkında daha fazla bilgi için, Windows SDK The asmpari. Grammar dosyasına bakın.
 
 ## <a name="version-information"></a>Sürüm Bilgileri
 
-.NET Framework 4.5 ile başlayarak, aşağıdakine benzer kod kullanarak bir arabirim uygulamasına özel öznitelik ekleyebilirsiniz:
+4,5 .NET Framework başlayarak, aşağıdakine benzer bir kod kullanarak bir arabirim uygulamasına özel bir öznitelik ekleyebilirsiniz:
 
 ```
 .class interface public abstract auto ansi IMyInterface
@@ -128,7 +128,7 @@ IL grameri daha fazla bilgi için Windows Yazılım Geliştirme Seti (SDK) için
       …
 ```
 
-.NET Framework 4.5 ile başlayarak, bir rastgele sıralama BLOB'u (ikili büyük nesne) ham ikili temsilini kullanarak aşağıdaki kodda gösterildiği gibi belirtebilirsiniz:
+4,5 .NET Framework başlayarak, aşağıdaki kodda gösterildiği gibi, ham ikili gösterimini kullanarak rastgele bir sıralama Blobu (ikili büyük nesne) belirtebilirsiniz:
 
 ```
 .method public hidebysig abstract virtual
@@ -137,29 +137,29 @@ IL grameri daha fazla bilgi için Windows Yazılım Geliştirme Seti (SDK) için
         Test(object A_1) cil managed
 ```
 
-IL grameri daha fazla bilgi için Windows Yazılım Geliştirme Seti (SDK) içindeki asmparse.grammar dosyasına bakın.
+Il 'nin dilbilgisini hakkında daha fazla bilgi için, Windows SDK The asmpari. Grammar dosyasına bakın.
 
 ## <a name="examples"></a>Örnekler
 
-Aşağıdaki komutu IL dosyasını derler *myTestFile.il* ve yürütülebilir dosya üreten *myTestFile.exe*.
+Aşağıdaki komut, *MYTESTFILE.Il* Il dosyasını ayrıştırır ve *myTestFile. exe*yürütülebilir dosyasını oluşturur.
 
 ```console
 ilasm myTestFile
 ```
 
-Aşağıdaki komutu IL dosyasını derler *myTestFile.il* ve üretir *.dll* dosya *myTestFile.dll*.
+Aşağıdaki komut, *MYTESTFILE.Il* Il dosyasını ayrıştırır ve *myTestFile. dll* *. dll* dosyasını oluşturur.
 
 ```console
 ilasm myTestFile /dll
 ```
 
-Aşağıdaki komutu IL dosyasını derler *myTestFile.il* ve üretir *.dll* dosya *myNewTestFile.dll*.
+Aşağıdaki komut, *MYTESTFILE.Il* Il dosyasını ayrıştırır ve *. dll* dosyasını *mynewtestfile. dll*olarak oluşturur.
 
 ```console
 ilasm myTestFile /dll /output:myNewTestFile.dll
 ```
 
-Aşağıdaki kod örneği, "Hello World!" görüntüleyen son derece basit bir uygulama gösterilmektedir. konsola. Bu kodu derlemek ve ardından [ *Ildasm.exe* ](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) aracı bir IL dosyası oluşturabilirsiniz.
+Aşağıdaki kod örneğinde, "Merhaba Dünya!" görüntüleyen son derece basit bir uygulama gösterilmektedir konsoluna gidin. Bu kodu derleyebilir ve ardından [*ıldadsm. exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) aracını kullanarak bir Il dosyası oluşturabilirsiniz.
 
 ```csharp
 using System;
@@ -173,7 +173,7 @@ public class Hello
 }
 ```
 
-Aşağıdaki IL kod örneği önceki C# kod örneğine karşılık gelir. Bu kod, IL derleyicisi Aracı'nı kullanarak bir derlemenin içine derleyebilirsiniz. Hem IL ve C# kod örnekleri, "Hello World!" görüntüle konsola.
+Aşağıdaki IL kod örneği önceki C# kod örneğine karşılık gelir. Bu kodu Il assembler aracını kullanarak bir derlemede derleyebilirsiniz. Hem Il hem C# de kod örnekleri "Merhaba Dünya!" görüntüler konsoluna gidin.
 
 ```
 // Metadata version: v2.0.50215
@@ -230,6 +230,6 @@ Aşağıdaki IL kod örneği önceki C# kod örneğine karşılık gelir. Bu kod
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](../../../docs/framework/tools/index.md)
-- [*Ildasm.exe* (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [*Ildadsm. exe* (Il ayırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
 - [Yönetilen Yürütme İşlemi](../../../docs/standard/managed-execution-process.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
