@@ -6,59 +6,56 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: f8c268c816975fa9b00725d317365c147312b950
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 180fafa9ace5927fd84ec5dc0a1b2a342f771efd
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593452"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040026"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimlerini BindingSource Bileşeni ile Bağlama
-Formunuza denetimler eklenir ve uygulamanız için kullanıcı arabirimi belirlenen sonra çalışma zamanında, kullanıcılar alter ve uygulamayla ilgili verileri kaydetme böylece bir veri kaynağına denetimlerin bağlayabilirsiniz.  
-  
- Windows Forms'ta bir denetim veya denetimlerin bir dizisini bağlama en kolay gerçekleştirilir kullanarak <xref:System.Windows.Forms.BindingSource> denetimi form üzerinde denetimleri ve veri kaynağı arasında bir köprü olarak.  
-  
- Formdaki denetimlerin bir veya daha fazla veriye bağlı olabilir; Aşağıdaki yordamda bir <xref:System.Windows.Forms.TextBox> denetim bir veri kaynağına bağlı.  
-  
- Yordamı tamamlamak için bir veritabanından alınan veri kaynağına bağlayacaksınız varsayılır. Diğer veri depolarından veri kaynakları oluşturma hakkında daha fazla bilgi için bkz. [yeni veri kaynağı ekleme](/visualstudio/data-tools/add-new-data-sources).  
-  
-> [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-bind-a-control-at-design-time"></a>Tasarım zamanında bir denetimi bağlamak için  
-  
-1. Sürükleme bir <xref:System.Windows.Forms.TextBox> denetim formu açın.  
-  
-2. İçinde **özellikleri** penceresi:  
-  
-    1. Genişletin **(DataBindings)** düğümü.  
-  
-    2. Yanındaki oka tıklayın <xref:System.Windows.Forms.TextBox.Text%2A> özelliği.  
-  
-         **DataSource** UI türü Düzenleyici açar.  
-  
-         Bir veri kaynağı, daha önce proje veya form için yapılandırıldı, görünür.  
-  
-3. Tıklayın **proje veri kaynağı Ekle** verilere bağlanmak ve bir veri kaynağı oluşturun.  
-  
-4. Üzerinde **veri kaynağı Yapılandırma Sihirbazı** Karşılama sayfasında, tıklayın **sonraki**.  
-  
-5. Üzerinde **bir veri kaynağı türü seçin** sayfasında **veritabanı**.  
-  
-6. Üzerinde **veri bağlantınızı seçin** sayfasında, kullanılabilir bağlantılar listesinden bir veri bağlantısı seçin. İstenen veri bağlantınızı seçin kullanılabilir değilse **yeni bağlantı** yeni bir veri bağlantısı oluşturmak için.  
-  
-7. Seçin **Evet, bağlantıyı Kaydet** bağlantı dizesini uygulama yapılandırma dosyasına kaydetmek için.  
-  
-8. Uygulamanıza getirmek için veritabanı nesneleri seçin. Bu durumda, istediğiniz bir tabloda bir alan seçin <xref:System.Windows.Forms.TextBox> görüntülenecek.  
-  
-9. İsterseniz varsayılan veri kümesi adı değiştirin.  
-  
-10. **Son**'a tıklayın.  
-  
-11. İçinde **özellikleri** penceresinde yanındaki oka tıklayın <xref:System.Windows.Forms.TextBox.Text%2A> yeniden özelliği. İçinde **DataSource** UI türü Düzenleyici bağlamak için alan adı seçin <xref:System.Windows.Forms.TextBox> için.  
-  
-     **DataSource** UI türü Düzenleyici kapanır ve veri kümesi <xref:System.Windows.Forms.BindingSource> ve tablo bağdaştırıcısı belirli veri bağlantısı formunuza eklenir.  
-  
+Formunuza denetimler ekledikten ve uygulamanız için Kullanıcı arabirimini belirledikten sonra, denetimleri bir veri kaynağına bağlayabilirsiniz, böylece çalışma zamanında kullanıcılar uygulamayla ilgili verileri değiştirebilir ve kaydedebilir.
+
+ Windows Forms denetimleri veya denetim dizilerini, form ve veri kaynağı denetimleri arasında köprü olarak kullanarak <xref:System.Windows.Forms.BindingSource> kolayca gerçekleştirilebilir.
+
+ Form üzerindeki bir veya daha fazla denetim verilere bağlanabilir; Aşağıdaki yordamda bir <xref:System.Windows.Forms.TextBox> denetim bir veri kaynağına bağlanır.
+
+ Yordamı gerçekleştirmek için bir veritabanından türetilmiş bir veri kaynağına bağlayacağınız varsayılır. Diğer veri mağazalarından veri kaynakları oluşturma hakkında daha fazla bilgi için bkz. [Yeni veri kaynakları ekleme](/visualstudio/data-tools/add-new-data-sources).
+
+## <a name="to-bind-a-control-at-design-time"></a>Tasarım zamanında bir denetimi bağlamak için
+
+1. Formun üzerine <xref:System.Windows.Forms.TextBox> bir denetim sürükleyin.
+
+2. **Özellikler** penceresinde:
+
+    1. **(DataBindings)** düğümünü genişletin.
+
+    2. <xref:System.Windows.Forms.TextBox.Text%2A> Özelliğin yanındaki oka tıklayın.
+
+         **DataSource** Kullanıcı arabirimi tür Düzenleyicisi açılır.
+
+         Bir veri kaynağı daha önce proje veya form için yapılandırıldıysa, görüntülenir.
+
+3. Verilere bağlanmak ve bir veri kaynağı oluşturmak için **proje veri kaynağı Ekle** ' ye tıklayın.
+
+4. **Veri kaynağı Yapılandırma Sihirbazı** 'na hoş geldiniz sayfasında **İleri**' ye tıklayın.
+
+5. **Veri kaynağı türü seç** sayfasında, **veritabanı**' nı seçin.
+
+6. **Veri bağlantınızı seçin** sayfasında, kullanılabilir bağlantılar listesinden bir veri bağlantısı seçin. İstediğiniz veri bağlantınız yoksa yeni bir veri bağlantısı oluşturmak için **Yeni bağlantı** ' yı seçin.
+
+7. **Evet ' i seçin,** bağlantı dizesini uygulama yapılandırma dosyasına kaydetmek için bağlantıyı kaydedin.
+
+8. Uygulamanıza getirmek istediğiniz veritabanı nesnelerini seçin. Bu durumda, <xref:System.Windows.Forms.TextBox> bir tablodaki görüntülenmesini istediğiniz alanı seçin.
+
+9. İsterseniz varsayılan veri kümesi adını değiştirin.
+
+10.           **Son**'a tıklayın.
+
+11. **Özellikler** penceresinde, <xref:System.Windows.Forms.TextBox.Text%2A> özelliğin yanındaki oka tekrar tıklayın. **DataSource** Kullanıcı arabirimi türü düzenleyicisinde, bağlanacak <xref:System.Windows.Forms.TextBox> alanın adını seçin.
+
+     **DataSource** Kullanıcı arabirimi tür Düzenleyicisi kapanır ve veri kümesi <xref:System.Windows.Forms.BindingSource> ve bu veri bağlantısına özgü tablo bağdaştırıcısı formunuza eklenir.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.BindingSource>

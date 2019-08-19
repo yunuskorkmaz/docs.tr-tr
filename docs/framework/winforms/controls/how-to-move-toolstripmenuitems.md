@@ -11,65 +11,62 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-ms.openlocfilehash: 2203511e91254c270c59b5d298dd87a5b3737109
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: adf25973fde790937461007bd0106cca02dd83be
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913633"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039803"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>Nasıl yapılır: ToolStripMenuItems Öğelerini Taşıma
-Tasarım zamanında, tüm üst düzey menüler ve menü öğeleri, farklı bir konuma taşıyabilirsiniz <xref:System.Windows.Forms.MenuStrip>. Ayrıca, tek tek menü öğeleri üst düzey menüler arasında Taşı veya menü öğeleri içindeki konumunu değiştirebilirsiniz.  
-  
-> [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a>Üst düzey menü ve menü öğelerinden, üst düzey başka bir konuma taşımak için  
-  
-1. ' A tıklayın ve taşımak istediğiniz menüsünde sol fare düğmesini basılı tutun.  
-  
-2. Ekleme noktasını amaçlanan yeni konum önce üst düzey menü sürükleyin ve sol fare düğmesini bırakın.  
-  
-     Seçili menü ekleme noktasını sağa taşır.  
-  
-### <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a>Üst düzey menü ve menü öğelerinden bir açılan konuma taşımak için  
-  
-1. Taşıma ve CTRL + X tuşlarına basın veya menü sağ tıklayıp istediğiniz menü sol **Kes** kısayol menüsünden.  
-  
-2. Hedef üst düzey menüsündeki menü öğesi üzerinde istenen yeni konumu sol ve CTRL + V tuşlarına basın veya menü öğesi üzerinde istenen konuma sağ tıklayıp **Yapıştır** kısayol menüsünden.  
-  
-     Kesme menü, seçili menü öğesini sonra eklenir.  
-  
-### <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a>Bir menü öğesi içinde öğeler Koleksiyonu Düzenleyicisi'ni kullanarak bir menüyü taşımak için  
-  
-1. Taşımak istediğiniz menü öğesini içeren menü sağ tıklayın.  
-  
-2. Kısayol menüsünden **Düzenle DropDownItems**.  
-  
-3. İçinde **öğeler Koleksiyonu Düzenleyicisi**, taşımak istediğiniz menü öğesini tıklatın.  
-  
-4. Menü öğesinin menü içinde taşımak için yukarı ve aşağı ok tuşlarını tıklayın.  
-  
-5. **Tamam**'ı tıklatın.  
-  
-### <a name="to-move-a-menu-item-within-a-menu-using-the-keyboard"></a>Bir menü öğesi içindeki klavyeyi kullanarak taşımak için  
-  
-1. ALT tuşunu basılı yeniden açın.  
-  
-2. Tıklayın ve taşımak istediğiniz menü öğesini sol fare düğmesini basılı tutun.  
-  
-3. Menü öğesi yeni konuma sürükleyin ve sol fare düğmesini bırakın.  
-  
-### <a name="to-move-a-menu-item-to-another-menu"></a>Bir menü öğesi için başka bir menüyü taşımak için  
-  
-1. Taşıma ve CTRL + X tuşlarına basın veya menü öğesini sağ tıklatın ve seçin için istediğiniz menü öğesini sol **Kes** kısayol menüsünden.  
-  
-2. Kesme menü öğesini içeren menüsünü tıklatın.  
-  
-3. Önce hedeflenen yeni konum menü öğesini tıklatın ve CTRL + V tuşlarına basın veya hedeflenen yeni konum ve select önce bir menü öğesini sağ **Yapıştır** kısayol menüsünden.  
-  
-     Kesme menü öğesi, seçili bir menü öğesi sonra eklenir.  
-  
+Tasarım zamanında, en üst düzey menülerin ve menü öğelerinin tamamını üzerinde <xref:System.Windows.Forms.MenuStrip>farklı bir yere taşıyabilirsiniz. Ayrıca, ayrı menü öğelerini üst düzey menüler arasında taşıyabilir veya menüdeki menü öğelerinin konumunu değiştirebilirsiniz.
+
+## <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a>Üst düzey menüyü ve menü öğelerini başka bir üst düzey konuma taşımak için
+
+1. Taşımak istediğiniz menüdeki sol fare düğmesine tıklayın ve basılı tutun.
+
+2. Ekleme noktasını amaçlanan yeni konumdan önce olan en üst düzey menüye sürükleyin ve sol fare düğmesini bırakın.
+
+     Seçilen menü, ekleme noktasının sağına gider.
+
+## <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a>Üst düzey menüyü ve menü öğelerini açılan bir konuma taşımak için
+
+1. Taşımak istediğiniz menüye sol tıklayın ve CTRL + X tuşlarına basın ya da menüye sağ tıklayıp kısayol menüsünden **Kes** ' i seçin.
+
+2. Hedef üst düzey menüsünde, hedeflenen yeni konumun üzerindeki menü öğesine sağ tıklayın ve CTRL + V tuşlarına basın veya hedeflenen yeni konumun üzerindeki menü öğesine sağ tıklayıp kısayol menüsünden **Yapıştır** ' ı seçin.
+
+     Kestiğiniz menü, seçilen menü öğesinden sonra eklenir.
+
+## <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a>Öğeler koleksiyonu düzenleyicisini kullanarak bir menü öğesini bir menü içinde taşımak için
+
+1. Taşımak istediğiniz menü öğesini içeren menüyü sağ tıklayın.
+
+2. Kısayol menüsünde **DropDownItems Düzenle**' yi seçin.
+
+3. **Öğe koleksiyonu düzenleyicisinde**, taşımak istediğiniz menü öğesine sol tıklayın.
+
+4. Menüdeki menü öğesini taşımak için yukarı ve aşağı ok tuşlarına basın.
+
+5.           **Tamam**'ı tıklatın.
+
+## <a name="to-move-a-menu-item-within-a-menu-using-the-keyboard"></a>Bir menü öğesini klavyeyi kullanarak bir menü içinde taşımak için
+
+1. ALT tuşuna basın ve basılı tutun.
+
+2. Taşımak istediğiniz menü öğesindeki sol fare düğmesine tıklayın ve basılı tutun.
+
+3. Menü öğesini yeni konuma sürükleyin ve sol fare düğmesini bırakın.
+
+## <a name="to-move-a-menu-item-to-another-menu"></a>Bir menü öğesini başka bir menüye taşımak için
+
+1. Taşımak istediğiniz menü öğesini sol tıklatın ve CTRL + X tuşlarına basın veya menü öğesine sağ tıklayıp kısayol menüsünden **Kes** ' i seçin.
+
+2. Kestiğiniz menü öğesini içerecek menüye sol tıklayın.
+
+3. Hedeflenen yeni konumdan önceki menü öğesine sağ tıklayın ve CTRL + V tuşlarına basın veya amaçlanan yeni konumdan önce gelen menü öğesine sağ tıklayıp kısayol menüsünden **Yapıştır** ' ı seçin.
+
+     Kestiğiniz menü öğesi seçili menü öğesinden sonra eklenir.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.MenuStrip>
