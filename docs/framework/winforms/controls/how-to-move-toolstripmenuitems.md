@@ -11,67 +11,64 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-ms.openlocfilehash: 2203511e91254c270c59b5d298dd87a5b3737109
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: adf25973fde790937461007bd0106cca02dd83be
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913633"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039803"
 ---
-# <a name="how-to-move-toolstripmenuitems"></a><span data-ttu-id="7ec1c-102">Nasıl yapılır: ToolStripMenuItems Öğelerini Taşıma</span><span class="sxs-lookup"><span data-stu-id="7ec1c-102">How to: Move ToolStripMenuItems</span></span>
-<span data-ttu-id="7ec1c-103">Tasarım zamanında, tüm üst düzey menüler ve menü öğeleri, farklı bir konuma taşıyabilirsiniz <xref:System.Windows.Forms.MenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-103">At design time, you can move entire top-level menus and their menu items to a different place on the <xref:System.Windows.Forms.MenuStrip>.</span></span> <span data-ttu-id="7ec1c-104">Ayrıca, tek tek menü öğeleri üst düzey menüler arasında Taşı veya menü öğeleri içindeki konumunu değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-104">You can also move individual menu items between top-level menus or change the position of menu items within a menu.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="7ec1c-105">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="7ec1c-106">Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="7ec1c-107">Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="7ec1c-107">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
-  
-### <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a><span data-ttu-id="7ec1c-108">Üst düzey menü ve menü öğelerinden, üst düzey başka bir konuma taşımak için</span><span class="sxs-lookup"><span data-stu-id="7ec1c-108">To move a top-level menu and its menu items to another top-level location</span></span>  
-  
-1. <span data-ttu-id="7ec1c-109">' A tıklayın ve taşımak istediğiniz menüsünde sol fare düğmesini basılı tutun.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-109">Click and hold down the left mouse button on the menu that you want to move.</span></span>  
-  
-2. <span data-ttu-id="7ec1c-110">Ekleme noktasını amaçlanan yeni konum önce üst düzey menü sürükleyin ve sol fare düğmesini bırakın.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-110">Drag the insertion point to the top-level menu that is before the intended new location and release the left mouse button.</span></span>  
-  
-     <span data-ttu-id="7ec1c-111">Seçili menü ekleme noktasını sağa taşır.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-111">The selected menu moves to the right of the insertion point.</span></span>  
-  
-### <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a><span data-ttu-id="7ec1c-112">Üst düzey menü ve menü öğelerinden bir açılan konuma taşımak için</span><span class="sxs-lookup"><span data-stu-id="7ec1c-112">To move a top-level menu and its menu items to a drop-down location</span></span>  
-  
-1. <span data-ttu-id="7ec1c-113">Taşıma ve CTRL + X tuşlarına basın veya menü sağ tıklayıp istediğiniz menü sol **Kes** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-113">Left-click the menu that you want to move and press CTRL+X, or right-click the menu and select **Cut** from the shortcut menu.</span></span>  
-  
-2. <span data-ttu-id="7ec1c-114">Hedef üst düzey menüsündeki menü öğesi üzerinde istenen yeni konumu sol ve CTRL + V tuşlarına basın veya menü öğesi üzerinde istenen konuma sağ tıklayıp **Yapıştır** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-114">In the destination top-level menu, left-click the menu item above the intended new location and press CTRL+V, or right-click the menu item above the intended new location and select **Paste** from the shortcut menu.</span></span>  
-  
-     <span data-ttu-id="7ec1c-115">Kesme menü, seçili menü öğesini sonra eklenir.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-115">The menu that you cut is inserted after the selected menu item.</span></span>  
-  
-### <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a><span data-ttu-id="7ec1c-116">Bir menü öğesi içinde öğeler Koleksiyonu Düzenleyicisi'ni kullanarak bir menüyü taşımak için</span><span class="sxs-lookup"><span data-stu-id="7ec1c-116">To move a menu item within a menu using the Items Collection Editor</span></span>  
-  
-1. <span data-ttu-id="7ec1c-117">Taşımak istediğiniz menü öğesini içeren menü sağ tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-117">Right-click the menu that contains the menu item you want to move.</span></span>  
-  
-2. <span data-ttu-id="7ec1c-118">Kısayol menüsünden **Düzenle DropDownItems**.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-118">From the shortcut menu, choose **Edit DropDownItems**.</span></span>  
-  
-3. <span data-ttu-id="7ec1c-119">İçinde **öğeler Koleksiyonu Düzenleyicisi**, taşımak istediğiniz menü öğesini tıklatın.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-119">In the **Items Collection Editor**, left-click the menu item you want to move.</span></span>  
-  
-4. <span data-ttu-id="7ec1c-120">Menü öğesinin menü içinde taşımak için yukarı ve aşağı ok tuşlarını tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-120">Click the UP and DOWN ARROW keys to move the menu item within the menu.</span></span>  
-  
-5. <span data-ttu-id="7ec1c-121">**Tamam**'ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-121">Click **OK**.</span></span>  
-  
-### <a name="to-move-a-menu-item-within-a-menu-using-the-keyboard"></a><span data-ttu-id="7ec1c-122">Bir menü öğesi içindeki klavyeyi kullanarak taşımak için</span><span class="sxs-lookup"><span data-stu-id="7ec1c-122">To move a menu item within a menu using the keyboard</span></span>  
-  
-1. <span data-ttu-id="7ec1c-123">ALT tuşunu basılı yeniden açın.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-123">Press and hold down the ALT key.</span></span>  
-  
-2. <span data-ttu-id="7ec1c-124">Tıklayın ve taşımak istediğiniz menü öğesini sol fare düğmesini basılı tutun.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-124">Click and hold the left mouse button on the menu item that you want to move.</span></span>  
-  
-3. <span data-ttu-id="7ec1c-125">Menü öğesi yeni konuma sürükleyin ve sol fare düğmesini bırakın.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-125">Drag the menu item to the new location and release the left mouse button.</span></span>  
-  
-### <a name="to-move-a-menu-item-to-another-menu"></a><span data-ttu-id="7ec1c-126">Bir menü öğesi için başka bir menüyü taşımak için</span><span class="sxs-lookup"><span data-stu-id="7ec1c-126">To move a menu item to another menu</span></span>  
-  
-1. <span data-ttu-id="7ec1c-127">Taşıma ve CTRL + X tuşlarına basın veya menü öğesini sağ tıklatın ve seçin için istediğiniz menü öğesini sol **Kes** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-127">Left-click the menu item that you want to move and press CTRL+X, or right-click the menu item and choose **Cut** from the shortcut menu.</span></span>  
-  
-2. <span data-ttu-id="7ec1c-128">Kesme menü öğesini içeren menüsünü tıklatın.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-128">Left-click the menu that will contain the menu item that you cut.</span></span>  
-  
-3. <span data-ttu-id="7ec1c-129">Önce hedeflenen yeni konum menü öğesini tıklatın ve CTRL + V tuşlarına basın veya hedeflenen yeni konum ve select önce bir menü öğesini sağ **Yapıştır** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-129">Left-click the menu item that is before the intended new location and press CTRL+V, or right-click the menu item that is before the intended new location and select **Paste** from the shortcut menu.</span></span>  
-  
-     <span data-ttu-id="7ec1c-130">Kesme menü öğesi, seçili bir menü öğesi sonra eklenir.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-130">The menu item that you cut is inserted after the selected menu item.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="7ec1c-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7ec1c-131">See also</span></span>
+# <a name="how-to-move-toolstripmenuitems"></a><span data-ttu-id="7dd8f-102">Nasıl yapılır: ToolStripMenuItems Öğelerini Taşıma</span><span class="sxs-lookup"><span data-stu-id="7dd8f-102">How to: Move ToolStripMenuItems</span></span>
+<span data-ttu-id="7dd8f-103">Tasarım zamanında, en üst düzey menülerin ve menü öğelerinin tamamını üzerinde <xref:System.Windows.Forms.MenuStrip>farklı bir yere taşıyabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-103">At design time, you can move entire top-level menus and their menu items to a different place on the <xref:System.Windows.Forms.MenuStrip>.</span></span> <span data-ttu-id="7dd8f-104">Ayrıca, ayrı menü öğelerini üst düzey menüler arasında taşıyabilir veya menüdeki menü öğelerinin konumunu değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-104">You can also move individual menu items between top-level menus or change the position of menu items within a menu.</span></span>
+
+## <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a><span data-ttu-id="7dd8f-105">Üst düzey menüyü ve menü öğelerini başka bir üst düzey konuma taşımak için</span><span class="sxs-lookup"><span data-stu-id="7dd8f-105">To move a top-level menu and its menu items to another top-level location</span></span>
+
+1. <span data-ttu-id="7dd8f-106">Taşımak istediğiniz menüdeki sol fare düğmesine tıklayın ve basılı tutun.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-106">Click and hold down the left mouse button on the menu that you want to move.</span></span>
+
+2. <span data-ttu-id="7dd8f-107">Ekleme noktasını amaçlanan yeni konumdan önce olan en üst düzey menüye sürükleyin ve sol fare düğmesini bırakın.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-107">Drag the insertion point to the top-level menu that is before the intended new location and release the left mouse button.</span></span>
+
+     <span data-ttu-id="7dd8f-108">Seçilen menü, ekleme noktasının sağına gider.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-108">The selected menu moves to the right of the insertion point.</span></span>
+
+## <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a><span data-ttu-id="7dd8f-109">Üst düzey menüyü ve menü öğelerini açılan bir konuma taşımak için</span><span class="sxs-lookup"><span data-stu-id="7dd8f-109">To move a top-level menu and its menu items to a drop-down location</span></span>
+
+1. <span data-ttu-id="7dd8f-110">Taşımak istediğiniz menüye sol tıklayın ve CTRL + X tuşlarına basın ya da menüye sağ tıklayıp kısayol menüsünden **Kes** ' i seçin.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-110">Left-click the menu that you want to move and press CTRL+X, or right-click the menu and select **Cut** from the shortcut menu.</span></span>
+
+2. <span data-ttu-id="7dd8f-111">Hedef üst düzey menüsünde, hedeflenen yeni konumun üzerindeki menü öğesine sağ tıklayın ve CTRL + V tuşlarına basın veya hedeflenen yeni konumun üzerindeki menü öğesine sağ tıklayıp kısayol menüsünden **Yapıştır** ' ı seçin.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-111">In the destination top-level menu, left-click the menu item above the intended new location and press CTRL+V, or right-click the menu item above the intended new location and select **Paste** from the shortcut menu.</span></span>
+
+     <span data-ttu-id="7dd8f-112">Kestiğiniz menü, seçilen menü öğesinden sonra eklenir.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-112">The menu that you cut is inserted after the selected menu item.</span></span>
+
+## <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a><span data-ttu-id="7dd8f-113">Öğeler koleksiyonu düzenleyicisini kullanarak bir menü öğesini bir menü içinde taşımak için</span><span class="sxs-lookup"><span data-stu-id="7dd8f-113">To move a menu item within a menu using the Items Collection Editor</span></span>
+
+1. <span data-ttu-id="7dd8f-114">Taşımak istediğiniz menü öğesini içeren menüyü sağ tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-114">Right-click the menu that contains the menu item you want to move.</span></span>
+
+2. <span data-ttu-id="7dd8f-115">Kısayol menüsünde **DropDownItems Düzenle**' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-115">From the shortcut menu, choose **Edit DropDownItems**.</span></span>
+
+3. <span data-ttu-id="7dd8f-116">**Öğe koleksiyonu düzenleyicisinde**, taşımak istediğiniz menü öğesine sol tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-116">In the **Items Collection Editor**, left-click the menu item you want to move.</span></span>
+
+4. <span data-ttu-id="7dd8f-117">Menüdeki menü öğesini taşımak için yukarı ve aşağı ok tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-117">Click the UP and DOWN ARROW keys to move the menu item within the menu.</span></span>
+
+5. <span data-ttu-id="7dd8f-118">          **Tamam**'ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-118">Click **OK**.</span></span>
+
+## <a name="to-move-a-menu-item-within-a-menu-using-the-keyboard"></a><span data-ttu-id="7dd8f-119">Bir menü öğesini klavyeyi kullanarak bir menü içinde taşımak için</span><span class="sxs-lookup"><span data-stu-id="7dd8f-119">To move a menu item within a menu using the keyboard</span></span>
+
+1. <span data-ttu-id="7dd8f-120">ALT tuşuna basın ve basılı tutun.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-120">Press and hold down the ALT key.</span></span>
+
+2. <span data-ttu-id="7dd8f-121">Taşımak istediğiniz menü öğesindeki sol fare düğmesine tıklayın ve basılı tutun.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-121">Click and hold the left mouse button on the menu item that you want to move.</span></span>
+
+3. <span data-ttu-id="7dd8f-122">Menü öğesini yeni konuma sürükleyin ve sol fare düğmesini bırakın.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-122">Drag the menu item to the new location and release the left mouse button.</span></span>
+
+## <a name="to-move-a-menu-item-to-another-menu"></a><span data-ttu-id="7dd8f-123">Bir menü öğesini başka bir menüye taşımak için</span><span class="sxs-lookup"><span data-stu-id="7dd8f-123">To move a menu item to another menu</span></span>
+
+1. <span data-ttu-id="7dd8f-124">Taşımak istediğiniz menü öğesini sol tıklatın ve CTRL + X tuşlarına basın veya menü öğesine sağ tıklayıp kısayol menüsünden **Kes** ' i seçin.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-124">Left-click the menu item that you want to move and press CTRL+X, or right-click the menu item and choose **Cut** from the shortcut menu.</span></span>
+
+2. <span data-ttu-id="7dd8f-125">Kestiğiniz menü öğesini içerecek menüye sol tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-125">Left-click the menu that will contain the menu item that you cut.</span></span>
+
+3. <span data-ttu-id="7dd8f-126">Hedeflenen yeni konumdan önceki menü öğesine sağ tıklayın ve CTRL + V tuşlarına basın veya amaçlanan yeni konumdan önce gelen menü öğesine sağ tıklayıp kısayol menüsünden **Yapıştır** ' ı seçin.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-126">Left-click the menu item that is before the intended new location and press CTRL+V, or right-click the menu item that is before the intended new location and select **Paste** from the shortcut menu.</span></span>
+
+     <span data-ttu-id="7dd8f-127">Kestiğiniz menü öğesi seçili menü öğesinden sonra eklenir.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-127">The menu item that you cut is inserted after the selected menu item.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="7dd8f-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7dd8f-128">See also</span></span>
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [<span data-ttu-id="7ec1c-132">MenuStrip Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7ec1c-132">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="7dd8f-129">MenuStrip Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7dd8f-129">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)
