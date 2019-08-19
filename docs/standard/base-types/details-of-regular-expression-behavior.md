@@ -11,147 +11,147 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd0611cc8a6d257192b389b023c4dcda8f1b7ec3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb43554d53051ce02a296f225c68c74352add5ed
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634417"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567475"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Normal İfade Davranışının Ayrıntıları
-.NET Framework normal ifade altyapısı, Perl, Python, Emacs ve Ukazovat tarafından kullanılan gibi geleneksel bir belirleyici olmayan sonlu Otomasyon (NFA) altyapısı içeren bir geri izlemenin normal ifade Eşleştiricisi ' dir. Bu ondan daha hızlı, ancak daha sınırlı, saf normal ifade belirleyici sonlu Otomasyon (DFA) alt awk, egrep veya lex bulunanlar gibi ayırır. Bu ayrıca, standart, ancak daha yavaş ayıran POSIX NFAs. Aşağıdaki bölümde üç normal ifade altyapısı ve geleneksel bir NFA Altyapısı'nı kullanarak .NET Framework normal ifadelerinde neden uygulanan açıklanmaktadır.  
+.NET Framework normal ifade altyapısı, Perl, Python, Emacs ve Tcl tarafından kullanılan gibi geleneksel bir belirleyici olmayan sonlu bir Automaton (NFA) altyapısını içeren bir geri izleme normal ifade eşleştirici. Bu, onu daha hızlı bir şekilde ayırır, ancak awk, egrep veya Lex içinde bulunanlar gibi daha sınırlı, saf normal ifade belirleyici bir otomasyon (DFA) altyapılarından ayırt edilmesini sağlar. Bu Ayrıca, bunu standartlaştırılmış, ancak daha yavaş, POSIX NFAs olarak da ayırır. Aşağıdaki bölümde, normal ifade altyapısının üç türü açıklanmakta ve .NET Framework normal ifadelerin geleneksel bir NFA altyapısı kullanılarak nasıl uygulandığı açıklanmaktadır.  
   
-## <a name="benefits-of-the-nfa-engine"></a>NFA Altyapısı'nın avantajları  
- DFA altyapıları desen eşleştirme işlemi yapmak, bunların işleme sırası giriş dizesi ile yönetilir. Altyapı, Giriş dizesinin başında başlar ve sırayla sonraki karakteri normal ifade deseni ile eşleşip eşleşmediğini belirlemek için devam eder. Bunlar, mümkün olan en uzun dize eşleşmesi garanti edebilir. Bunlar hiçbir zaman aynı karakterle iki kez test etmek için geri izlemenin DFA altyapıları desteklemez. Ancak, DFA altyapısı yalnızca sınırlı bir durum içerdiği için bir desen ile geribaşvurular eşleşemez ve açık bir genişletme oluşturmak değildir çünkü alt ifadeler yakalayamaz.  
+## <a name="benefits-of-the-nfa-engine"></a>NFA altyapısının avantajları  
+ DFA motorları, düzen eşleştirmeyi gerçekleştirirken, işlem sırası giriş dizesi tarafından çalıştırılır. Motor, giriş dizesinin başlangıcında başlar ve sonraki karakterin normal ifade düzeniyle eşleşip eşleşmediğini tespit etmek için ardışık olarak devam eder. Mümkün olan en uzun dizeyi eşleştirmeye garanti edebilirler. Aynı karakteri iki kez test etmeyeceğinden, DFA motorları geri izlemeyi desteklemez. Ancak, bir DFA altyapısı yalnızca sonlu durum içerdiğinden, geri başvuruları olan bir Düzenle eşleşmez ve açık bir genişletme oluşturmadığından, alt ifadeleri yakalamaz.  
   
- Desen eşleştirme, geleneksel NFA altyapıları gerçekleştirdiğinizde DFA altyapıları, işleme sırası tarafından normal ifade deseni yönlendirilir. Belirli bir dil öğesi işler gibi doyumsuz eşleşme altyapısı kullanır; büyük olasılıkla mümkün olduğunca diğer bir deyişle, Giriş dizesinin kadar eşleşir. Ancak, bir alt ifade eşleştirildikten sonra da durumunu kaydeder. Bir eşleşme sonunda başarısız olursa altyapısı bir eşleşme deneyebilmek kaydedilmiş bir duruma geri dönebilirsiniz. Normal ifadede sonraki dil öğelerini de eşleşen bir başarılı alt ifade bir eşleşme bırakıp, bu işlem olarak bilinir *geri izlemenin*. Tüm olası genişletmeleri normal bir ifadenin belirli bir sırayla test ve ilk eşleşme kabul etmek için geri izleme NFA altyapıları kullanın. Geleneksel bir NFA altyapısı belirli bir normal ifade başarılı bir eşleşme genişletilmesi oluşturur çünkü alt eşleşme ve eşleşen geribaşvurular yakalayabilirsiniz. Geleneksel bir NFA provided olduğundan, farklı yollar duruma geldiğinde, ancak bunu aynı duruma birden çok kez ziyaret edebilirsiniz. Sonuç olarak, katlanarak yavaş en kötü durumda çalıştırabilirsiniz. Geleneksel bir NFA altyapısı ilk kabul ettiğinden bulduğu eşleşen, keşfedilmemiş (muhtemelen uzun) eşleşmeleri da bırakabilirsiniz.  
+ DFA altyapılarından farklı olarak, Geleneksel NFA motorları düzen eşleştirmeyi gerçekleştirirken, işlem sırası normal ifade düzeniyle çalıştırılır. Belirli bir dil öğesini işlerken, altyapı doyumsuz eşleştirmeyi kullanır; diğer bir deyişle, giriş dizesinin büyük olasılıkla mümkün olduğunca fazla eşleşir. Ancak, bir alt ifadeyi başarıyla eşleştirdikten sonra da durumunu kaydeder. Bir eşleşme yine başarısız olursa, altyapı daha fazla eşleşme deneyebilmesi için kaydedilmiş bir duruma dönebilir. Bu işlem, normal ifadede daha sonraki dil öğelerinin *geri izleme*olarak bilinmesinin ardından, başarılı bir alt ifadenin eşleşmesi için eşleşir. NFA motorları, belirli bir sırada normal bir ifadenin tüm olası genişletmeleri test etmek için geri izlemeyi kullanır ve ilk eşleşmeyi kabul eder. Geleneksel bir NFA altyapısı başarılı bir eşleşme için normal ifadenin belirli bir genişletmesinin oluşturulduğundan, alt ifade eşleşmelerini ve eşleşen geri başvuruları yakalayabilir. Bununla birlikte, geleneksel bir NFA geri izlemeleriyle, farklı yollar üzerinde duruma alınırsa aynı durumu birden çok kez ziyaret edebilir. Sonuç olarak, en kötü durumda büyük olasılıkla çok daha yavaş çalışabilir. Geleneksel bir NFA motoru bulduğu ilk eşleşmeyi kabul ettiğinden, diğer (muhtemelen uzun) bulunamadan eşleşme de olabilir.  
   
- Bunlar en uzun eşleşme olası bulduğunuz garanti kadar geri izleme yapmaya devam etmek dışında POSIX NFA geleneksel NFA altyapıları gibi motorlardır. Sonuç olarak, geleneksel bir NFA altyapısı daha yavaş POSIX NFA altyapısıdır ve POSIX NFA altyapısı kullandığınızda, geri izlemenin arama sırasını değiştirerek daha uzun bir üzerinden daha kısa bir eşleşme favor olamaz.  
+ POSIX NSK motorları Geleneksel NFA altyapılarına benzer, ancak mümkün olan en uzun eşleşmeyi buldıklarından emin olacakları sürece geri izlemeye devam ederler. Sonuç olarak, bir POSIX NFA motoru geleneksel bir NFA altyapısından daha yavaştır ve bir POSIX NFA altyapısı kullandığınızda, geri izleme aramasının sırasını değiştirerek daha kısa bir eşleşmeyi daha uzun bir süre boyunca tercih edilemez.  
   
- Bunlar DFA ya da POSIX NFA altyapıları eşleşen dize üzerinde daha fazla denetim sağlar çünkü geleneksel NFA altyapıları programcılar tarafından stadyumlarda. En kötü durumda, bunlar yavaş çalıştırabilirsiniz ancak bunları belirsizlikleri azaltma ve geri izlemeyi sınırlama desenleri kullanarak doğrusal veya polinom sürede bulmaya faaliyetidir. Güç ve esneklik, çoğu durumda sundukları için performans NFA altyapıları ticari olsa da başka bir deyişle, kabul edilebilir performans için iyi bir normal ifade iyi-yazılan ve hangi durumlarda önler geri izleme performansı katlanarak düşürür.  
+ Geleneksel nfa motorları, programcılar tarafından daha fazla denetim sağladığından, DFA veya POSIX NSK altyapılarından daha fazla denetim sunduklarında, bu programcılar tarafından sık sık kırmız En kötü durumda, yavaş çalışabilse de, belirsizlikleri azaltan ve geri izlemeyi sınırlayan desenler kullanarak bunları doğrusal veya polinom zaman içinde bulmak için onları eğilede yapabilirsiniz. Diğer bir deyişle, NFA motorları güç ve esneklik için performans sunar, ancak çoğu durumda düzenli bir ifade iyi yazılmışsa ve geri izlemenin performansı katlanarak düşürür.  
   
 > [!NOTE]
->  Aşırı geri izleme ve normal bir ifade çalışıyorlardı yolları tarafından etrafında çalışma nedeniyle performans cezası hakkında daha fazla bilgi için bkz. [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
+>  Aşırı geri izleme ve bir normal ifadeyi geçici olarak çözmek için kullanmanın bir performans cezası hakkında daha fazla bilgi için bkz. [geri izleme](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
   
-## <a name="net-framework-engine-capabilities"></a>.NET framework altyapısı özellikleri  
- Geleneksel bir NFA altyapısının avantajlarından yararlanmak için .NET Framework normal ifade altyapısı geri izlemenin altyapısı faaliyetidir programcıların etkinleştirmek için yapıları eksiksiz bir kümesini içerir. Bu yapılar, belirli genişletmeleri diğer tanınacağını ya da eşleşme daha hızlı bulmak için kullanılabilir.  
+## <a name="net-framework-engine-capabilities"></a>.NET Framework motoru özellikleri  
+ Geleneksel bir NFA altyapısının avantajlarından yararlanmak için, .NET Framework normal ifade altyapısı, programcıların geri izleme altyapısını ele geçirmesine olanak sağlayan bir yapı kümesi içerir. Bu yapılar, eşleşmeleri daha hızlı bulmak veya diğerleri üzerinde belirli genişleimler sağlamak için kullanılabilir.  
   
- .NET Framework normal ifade Altyapısı'nın diğer özellikleri şunlardır:  
+ .NET Framework normal ifade altyapısının diğer özellikleri şunlardır:  
   
-- Yavaş miktar belirleyiciler: `??`, `*?`, `+?`, `{` *n*`,`*m*`}?`. Bu yapılar, ilk tekrarına en az sayıda aramak için geri izlemenin altyapısı söyleyin. Buna karşılık, yinelemeleri sayısı eşleştirilecek normal doyumsuz miktar belirleyiciler deneyin. Aşağıdaki örnek, ikisi arasındaki farkı gösterir. Bir sayı ile biten bir cümle normal bir ifadeyle eşleşiyor ve yakalama grubu bu sayıyı ayıklamak için tasarlanmıştır. Normal ifade `.+(\d+)\.` doyumsuz miktar Belirleyicisini içerse `.+`, yalnızca son basamak sayısının yakalamak normal ifade altyapısı neden olur. Buna karşılık, normal ifade `.+?(\d+)\.` yavaş miktar Belirleyicisini içerse `.+?`, normal ifade altyapısı tüm sayıyı yakalamak neden olur.  
+- Yavaş nicelik belirteçleri: `??`, `*?`, `+?`, `{`ne`,`.`}?` Bu yapılar geri izleme altyapısından önce en az sayıda tekrarın aramasını söyler. Buna karşılık, sıradan doyumsuz nicelik belirteçleri öncelikle en fazla tekrarlık sayısını eşleştirmeye çalışır. Aşağıdaki örnek, iki arasındaki farkı gösterir. Normal ifade, bir sayıyla biten bir cümle ile eşleşir ve yakalama grubu bu sayıyı çıkarmaya yöneliktir. Normal ifade `.+(\d+)\.` , normal ifade altyapısının yalnızca sayının en `.+`son basamağını yakalamasına neden olan doyumsuz nicelik sayısını içerir. Buna karşılık, normal ifade `.+?(\d+)\.` , normal ifade altyapısının tüm sayıyı yakalamasına neden olan yavaş nicelik `.+?`sayısını içerir.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
   
-     Bu normal ifade doyumsuz ve yavaş sürümleri aşağıdaki tabloda gösterildiği gibi tanımlanır.'  
+     Bu normal ifadenin doyumsuz ve geç sürümleri, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır:
   
     |Desen|Açıklama|  
     |-------------|-----------------|  
-    |`.+` (doyumsuz niceleyici)|Herhangi bir karakterle en az bir oluşumunu eşleştirin. Bu normal ifade altyapısının tüm dizeyi eşleştir neden olur ve ardından olarak geri izleme yapmaya geri kalanında deseni eşleştirmek gerekli.|  
-    |`.+?` (yavaş belirleyici birlikte)|Herhangi bir karakterle en az bir oluşumunu eşleştirin, ancak en az bir eşleşen.|  
-    |`(\d+)`|En az bir sayısal karakterle Eşleştir ve ilk yakalama gruba atayın.|  
-    |`\.`|Bir noktayı eşleştirin.|  
+    |`.+`(Greedy nicelik belirteci)|Herhangi bir karakterin en az bir oluşumunu eşleştirin. Bu, normal ifade altyapısının tüm dizeyi eşleştirmesine ve ardından düzenin geri kalanını eşleştirmek için gerektiğinde geri izlemesine neden olur.|  
+    |`.+?`(yavaş nicelik belirteci)|Herhangi bir karakterin en az bir oluşumunu eşleştirin, ancak mümkün olduğunca az eşleşir.|  
+    |`(\d+)`|En az bir sayısal karakteri eşleştirin ve ilk yakalama grubuna atayın.|  
+    |`\.`|Bir noktayla eşleştirin.|  
   
-     Yavaş miktar belirleyiciler hakkında daha fazla bilgi için bkz: [miktar belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+     Yavaş nicelik belirteçleri hakkında daha fazla bilgi için bkz. [nicelik belirteçleri](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
-- Pozitif ileriye yönelik: `(?=` *subexpression*`)`. Bu özellik, bir alt ifade eşleştirildikten sonra metin aynı nokta dönmek geri izlemenin altyapısı sağlar. Aynı konumdan başlayan birden çok desen doğrulayarak boyunda metinde arama için kullanışlıdır. Ayrıca, eşleşen metnin alt dizeyi dahil etmeden bir alt dizeyi eşleştir sonunda bulunduğunu doğrulamak altyapı sağlar. Aşağıdaki örnek, noktalama simgeleri tarafından izlenmeyen bir cümle sözcüklerini ayıklamak için pozitif bir ileriye yönelik onay kullanır.  
+- Pozitif ileri yönlü `(?=`: alt *ifade*`)`. Bu özellik geri izleme altyapısının alt ifadeyi eşleştirdikten sonra metinde aynı noktaya dönmesini sağlar. Aynı konumdan başlayan birden çok deseni doğrulayarak metnin tamamında arama yapmak yararlı olur. Ayrıca, altyapının alt dizeyi eşleşen metne dahil etmeden, eşleşmenin sonunda var olduğunu doğrulamasına izin verir. Aşağıdaki örnek, noktalama sembolleri tarafından izlenen bir tümcedeki sözcüklerin ayıklanmasına yönelik pozitif ileri yönlü kullanır.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead1.cs#2)]
      [!code-vb[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead1.vb#2)]  
   
-     Normal ifade `\b[A-Z]+\b(?=\P{P})` aşağıdaki tabloda gösterildiği gibi tanımlanmaktadır.  
+     Normal ifade `\b[A-Z]+\b(?=\P{P})` aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
     |Desen|Açıklama|  
     |-------------|-----------------|  
     |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
-    |`[A-Z]+`|Alfabetik karakterleri bir veya daha fazla kez eşleştirin. Çünkü <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> yöntemi çağrıldığında <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> seçeneği, karşılaştırma duyarsızdır.|  
+    |`[A-Z]+`|Herhangi bir alfabetik karakterle bir veya daha fazla kez eşleştirin. <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> Yöntemi <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> seçeneğiyle çağrıldığı için karşılaştırma büyük/küçük harfe duyarlıdır.|  
     |`\b`|Eşlemeyi bir sözcük sınırında sonlandır.|  
-    |`(?=\P{P})`|Sonraki karakterin bir noktalama işareti olup olmadığını belirlemek için önceden arayın. Yüklü değilse, eşleşme başarılı olur.|  
+    |`(?=\P{P})`|Sonraki karakterin bir noktalama işareti olup olmadığını anlamak için öne bakın. Aksi takdirde, eşleşme başarılı olur.|  
   
-     Pozitif ileriye yönelik onaylar hakkında daha fazla bilgi için bkz: [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+     Olumlu ileri yönlü onaylar hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
-- Negatif ileriye yönelik: `(?!` *subexpression*`)`. Bu özellik yalnızca eşleştirmek bir alt ifade başarısız olursa bir ifadeyle eşleşen özelliği ekler. Genellikle bir ifade dahil edilmesi gereken durumlar için daha ortadan bir çalışması için bir ifade sağlamak daha basit olduğu için bu özellikle güçlü bir arama kesilmeyeceğini budur. Örneğin, bir ifade "non" ile başlamayan sözcükleri yazın zordur. Aşağıdaki örnek, negatif ileriye yönelik dışlamak için kullanır.  
+- Negatif ilerleme: `(?!`alt *ifade*`)`. Bu özellik, yalnızca bir alt ifade eşleşmediğinde bir ifadeyle eşleşme özelliği ekler. Bu, genellikle bir aramayı ayıklama açısından güçlü bir durumdur çünkü dahil olması gereken durumlar için bir ifadeden daha kolay bir ifade sağlanması gerekir. Örneğin, "olmayan" ile başlamayan sözcükler için bir ifade yazmak zordur. Aşağıdaki örnek, hariç tutmak için negatif ilerleme kullanır.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]  
   
-     Normal ifade deseni `\b(?!non)\w+\b` aşağıdaki tabloda gösterildiği gibi tanımlanmaktadır.  
+     Normal ifade deseninin `\b(?!non)\w+\b` , aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
     |Desen|Açıklama|  
     |-------------|-----------------|  
     |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
-    |`(?!non)`|Şimdi geçerli dize emin olmak için "non" ile başlamıyor arayın. Aksi halde eşleştirme başarısız olur.|  
+    |`(?!non)`|Geçerli dizenin "olmayan" ile başlamadığından emin olmak için öne bakın. Varsa, eşleşme başarısız olur.|  
     |`(\w+)`|Bir veya daha fazla sözcük karakteri eşleştir.|  
     |`\b`|Eşlemeyi bir sözcük sınırında sonlandır.|  
   
-     Negatif ileriye yönelik onaylar hakkında daha fazla bilgi için bkz: [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+     Olumsuz ileri onaylar hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
-- Koşullu değerlendirme: `(?(` *ifade*`)`*Evet*`|`*hiçbir* `)` ve `(?(` *adı*`)`*Evet*`|`*hiçbir*`)`burada *ifade* eşleştirmek için bir alt ifade *adı* bir yakalama grubunun adıdır *Evet* eşleşiyorsa dizedir *ifade* eşleştirilir veya *adı* geçerlidir, boş olmayan yakalanan grubu ve *hiçbir* eşleşiyorsa için alt ifade *ifade* eşlenemiyor veya *adı* geçerli, boş olmayan bir yakalanan grubu değil. Bu özellik, bir önceki alt ifade eşleşme sonucunu veya sıfır genişlikli onaylama sonucuna bağlı olarak birden fazla alternatif deseni kullanılarak aramak altyapı sağlar. Bu, eşleşen bir önceki alt ifade olup eşleştirildi dayalı bir alt ifade veren yeniden başvuru, daha güçlü bir form sağlar. Normal ifade aşağıdaki örnekte, hem genel hem de iç kullanıma yöneliktir paragraflar eşleşir. Yalnızca dahili kullanım için paragraflar ile başlayan bir `<PRIVATE>` etiketi. Normal ifade deseni `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` koşullu değerlendirme genel kullanıma yönelik ve yakalama grupları ayırmak iç kullanım için hedeflenen paragraflar içeriğini atamak için kullanır. Ardından paragraflarda farklı şekilde işlenebilir.  
+- Koşullu değerlendirme: `(?(` *ifade*`)`*Evet*Hayır ve ad Evet Hayır`|``)` `(?(``)` `|``)`burada *ifade* eşleşmek üzere bir alt ifade, *ad* bir yakalama grubunun adıdır,, *ifade* eşleşirse veya *ad* geçerli, boş bir yakalanamayan grup ise, eşleşen dize ve *Hayır* *ifadesi* eşleşmezse veya *ad* geçerli, boş olmayan bir yakalanan grup değilse, eşleştirilecek alt ifade yoktur. Bu özellik, bir önceki alt ifadenin veya sıfır genişlikli bir onaylama sonucuna bağlı olarak, altyapının birden fazla alternatif model kullanarak arama yapmasına olanak sağlar. Bu, örneğin, önceki alt ifadenin eşleştirildiği bir alt ifadeyi eşleştirmesine izin veren daha güçlü bir geri başvuru biçimi sağlar. Aşağıdaki örnekteki normal ifade, hem genel hem de iç kullanım için tasarlanan paragraflarla eşleşir. Yalnızca iç kullanım için tasarlanan paragraflar bir `<PRIVATE>` etiketle başlar. Normal ifade deseninin `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` , yakalama gruplarını ayırmak için genel ve iç kullanım için tasarlanan paragrafların içeriğini atamak üzere koşullu değerlendirme kullanılır. Bu paragraflar daha sonra farklı işlenebilirler.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/conditional1.cs#4)]
      [!code-vb[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/conditional1.vb#4)]  
   
-     Normal ifade deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
+     Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
     |Desen|Açıklama|  
     |-------------|-----------------|  
-    |`^`|Bir satırın başında eşleşmeye başla.|  
-    |`(?<Pvt>\<PRIVATE\>\s)?`|Eşleşen dizeyi sıfır veya bir oluşumunu `<PRIVATE>` sonrasında bir boşluk karakteri. Eşleşme adlandırılmış bir tutma grubu atamak `Pvt`.|  
-    |`(?(Pvt)((\w+\p{P}?\s)+)`|Varsa `Pvt` yakalama grubu varsa, bir boşluk karakteriyle ardından sıfır veya bir noktalama ayırıcısı tarafından izlenen bir veya daha fazla sözcük karakteri bir veya daha fazla oluşumunu eşleyin. Alt dizenin ilk yakalama gruba atayın.|  
-    |<code>&#124;((\w+\p{P}?\s)+))<code>|Varsa `Pvt` yakalama grubu mevcut değilse, bir veya daha fazla örneğini bir veya daha fazla sözcük karakterini arkasından bir boşluk karakteriyle ardından sıfır veya bir noktalama ayırıcı. Alt dizeyi, üçüncü yakalama gruba atayın.|  
-    |`\r?$`|Bir satırın sonuna veya dizesinin sonuyla eşleş.|  
+    |`^`|Bir satırın başlangıcında eşleşmeyi başlatın.|  
+    |`(?<Pvt>\<PRIVATE\>\s)?`|Dizenin `<PRIVATE>` sıfır veya bir oluşumunu, ardından bir boşluk karakteri ile eşleştirin. Eşleşmeyi adlı `Pvt`bir yakalama grubuyla atayın.|  
+    |`(?(Pvt)((\w+\p{P}?\s)+)`|`Pvt` Yakalama grubu varsa, bir veya daha fazla sözcük karakterinin ardından sıfır veya bir noktalama ayırıcısından sonra bir boşluk karakteri gelen bir veya daha fazla tekrarı eşleştirin. Alt dizeyi ilk yakalama grubuna atayın.|  
+    |<code>&#124;((\w+\p{P}?\s)+))<code>|`Pvt` Yakalama grubu yoksa, bir veya daha fazla sözcük karakterinin ardından sıfır veya bir noktalama işareti ve ardından bir boşluk karakteri gelen bir veya daha fazla tekrarı eşleştirin. Alt dizeyi üçüncü yakalama grubuna atayın.|  
+    |`\r?$`|Satırın sonunu veya dizenin sonunu eşleştirin.|  
   
-     Koşullu değerlendirme hakkında daha fazla bilgi için bkz: [değişim yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md).  
+     Koşullu değerlendirme hakkında daha fazla bilgi için bkz. [değişim yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md).  
   
-- Grup tanımlarını Dengeleme: `(?<` *name1*`-`*name2* `>` *subexpression*`)`. Bu özellik, parantez veya açma ve kapatma köşeli ayraçlar gibi iç içe geçmiş yapılar izlemek normal ifade altyapısı sağlar. Bir örnek için bkz. [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+- Dengeleme grubu tanımları: `(?<` *name1*`-`*AD2* `>` alt *ifadesi*.`)` Bu özellik, normal ifade altyapısının parantez ya da açılış ve kapanış ayraçları gibi iç içe yapıları izlemesini sağlar. Bir örnek için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
-- Geri dönüşlü olmayan alt ifadeler (doyumsuz yararlanılmaktadır olarak da bilinir): `(?>` *subexpression*`)`. Bu özellik, ifade, içeren ifade bağımsız çalışıyormuş gibi bir alt ifade yalnızca bu alt ifade için bulunan ilk eşleşme eşleştiğini güvence altına almak geri izlemenin altyapısı sağlar. Tento konstruktor je kullanmazsanız, geri izlemenin aramalarından daha büyük bir ifadenin bir alt ifade davranışını değiştirebilirsiniz. Örneğin, normal ifade `(a+)\w` eşleşiyorsa "bir veya daha fazla a" karakteri, "a" karakteri sırasını izler ve bir dizi "a" karakteri ilk yakalama grubu için ancak atayan bir sözcük karakteriyle yanı sıra son karakter Giriş dizesi, ayrıca bir "a", BT olan tarafından eşleştirilen `\w` dil öğesi ve yakalanan gruba dahil değildir.  
+- Geri izleme olmayan alt ifadeler (doyumsuz alt ifadeleri olarak da bilinir): `(?>`alt *ifade*`)`. Bu özellik geri izleme altyapısının, ifadenin kendisini içeren ifadeden bağımsız olarak çalışıyor gibi, alt ifadenin yalnızca ilk eşleştirmelerle eşleştiğini garanti etmesine olanak tanır. Bu yapıyı kullanmazsanız, daha büyük ifadeden geri alma aramaları alt ifadenin davranışını değiştirebilir. Örneğin, normal ifade `(a+)\w` bir veya daha fazla "a" karakteriyle eşleşir ve "a" karakterlerinden sonraki bir sözcük karakteri ile birlikte ilk yakalama grubuna "a" karakteri dizisini atar, ancak son karakter Giriş dizesinin da bir "a" olması, `\w` dil öğesiyle eşleştirildiği ve yakalanan gruba dahil değildir.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]  
   
-     Normal ifade `((?>a+))\w` Bu davranış engeller. Çünkü tüm ardışık "a" karakteri geri izleme olmadan eşleştirilir, ilk yakalama grubu tüm ardışık içerir "a" karakteri. "A" karakteri olarak "a" dışında en az bir karakter daha sonrasında eşleşme başarısız olur.  
+     Normal ifade `((?>a+))\w` bu davranışı engeller. Birbirini izleyen tüm "a" karakterleri geri izleme olmadan eşleştirildiği için ilk yakalama grubu tüm ardışık "a" karakterlerini içerir. "A" karakterlerinin ardından "a" dışında en az bir karakter daha olmazsa, eşleşme başarısız olur.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking1.cs#8)]
      [!code-vb[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking1.vb#8)]  
   
-     Geri dönüşlü olmayan alt ifadeler hakkında daha fazla bilgi için bkz: [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+     Geri alma olmayan alt ifadeler hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
-- Sağ eşleştirme sağlanarak belirtilen sola <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> seçeneğini bir <xref:System.Text.RegularExpressions.Regex> sınıfı oluşturucusunun veya statik eşleme yönteminin örneği. Bu özellik, sağdan sola yerine soldan sağa veya sola yerine deseninin sağ kısmındaki bir eşleşmeye başla daha verimli olduğu durumlarda ararken kullanışlıdır. Aşağıdaki örnekte gösterildiği gibi sağdan sola eşleştirme kullanılarak doyumsuz miktar belirleyiciler davranışını değiştirebilirsiniz. Örneğin, bir sayı ile biten bir cümle için iki arama yapar. Doyumsuz niceleyici kullanan soldan sağa arama `+` tüm altı basamaklı sağdan sola Aramayla eşleşen ise tümcedeki altı basamaklı biriyle eşleşir. Normal ifade deseni bir açıklaması için bu bölümün önceki kısımlarında yavaş miktar belirleyiciler gösteren örneğe bakın.  
+- <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> Bir<xref:System.Text.RegularExpressions.Regex> sınıf oluşturucusuna veya statik örnek eşleştirme yöntemine seçenek sağlanarak belirtilen sağdan sola eşleme. Bu özellik soldan sağa yerine sağdan sola doğru arama yaparken veya sol yerine modelin sağ bölümünde bir eşleştirmeye başlamak daha verimli olduğu durumlarda faydalıdır. Aşağıdaki örnekte gösterildiği gibi, sağdan sola eşleşme kullanımı, doyumsuz nicelik belirteçleri davranışını değiştirebilir. Örnek, bir sayıyla biten bir cümle için iki arama yapar. Doyumsuz nicelik `+` sayısını kullanan soldan sağa arama, tümcedeki altı basamaktan biriyle eşleşir, ancak sağdan sola arama altı basamakla eşleşir. Normal ifade deseninin bir açıklaması için, bu bölümün önceki kısımlarında yer alan yavaş nicelik belirteçleri gösteren örneğe bakın.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/rtl1.cs#6)]
      [!code-vb[Conceptual.RegularExpressions.Design#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/rtl1.vb#6)]  
   
-     Sağdan sola eşleştirme hakkında daha fazla bilgi için bkz. [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
+     Sağdan sola eşleştirme hakkında daha fazla bilgi için bkz. [normal Ifade seçenekleri](../../../docs/standard/base-types/regular-expression-options.md).  
   
-- Pozitif ve negatif geriye yönelik: `(?<=` *subexpression* `)` pozitif geriye yönelik için ve `(?<!` *subexpression* `)` negatif geriye yönelik için. Bu özellik, bu konunun önceki kısımlarında açıklanan ileriye yönelik benzer. Normal ifadeler, normal ifade motoru soldan sağa tam eşleşen izin verdiğinden, Kısıtlanmamış geriye ilerleme izin verir. Pozitif ve negatif geriye yönelik iç içe geçmiş alt ifade bir dış ifade bir alt kümesi olduğunda, iç içe geçmiş miktar belirleyiciler önlemek için de kullanılabilir. Normal ifadeler gibi iç içe geçmiş miktar belirleyiciler ile genellikle kötü bir performans sunar. Örneğin, aşağıdaki örnekte, bir dize başlar ve alfasayısal bir karakter ile sona eriyor ve herhangi bir karakter dizesindeki bir daha büyük bir alt kümesine olduğunu doğrular. Bu e-posta adreslerini doğrulamak için kullanılan normal ifadeyi bir bölümünü oluşturur; Daha fazla bilgi için [nasıl yapılır: Dizelerin geçerli e-posta biçiminde olduğunu doğrulama](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+- Pozitif ve negatif geriye yönelik: `(?<=`pozitif geriye yönelik alt *ifade* `)` ve `(?<!`negatif geri gerin alt *ifadesi* `)` . Bu özellik, bu konuda daha önce bahsedilen ileri yönlü olarak benzerdir. Normal ifade altyapısı tam sağdan sola eşleştirmeye izin verdiğinden, normal ifadeler sınırsız lookbehinds izin verir. İç içe geçmiş alt ifade bir dış ifadenin üst kümesi olduğunda, nicelik sayısını aşmamak için pozitif ve negatif geriye yönelik Ayrıca kullanılabilir. İç içe geçmiş nicelik belirteçleri olan normal ifadeler genellikle düşük performans sunar. Örneğin, aşağıdaki örnek bir dizenin bir alfasayısal karakterle başladığını ve bittiğini doğrular ve dizedeki diğer tüm karakterler daha büyük bir alt kümeyle biridir. E-posta adreslerini doğrulamak için kullanılan normal ifadenin bir bölümünü oluşturur; daha fazla bilgi için bkz [. nasıl yapılır: Dizelerin geçerli e-posta biçiminde](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)olduğunu doğrulayın.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
   
-     Normal ifade `^[A-Z0-9]([-!#$%&'.*+/=?^` {}| ~ \w])* (? < = [A-Z0-9]) $' aşağıdaki tabloda gösterildiği gibi tanımlanmaktadır.  
+     Normal ifade ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
     |Desen|Açıklama|  
     |-------------|-----------------|  
-    |`^`|Dizesinin başında eşleşmeye başla.|  
-    |`[A-Z0-9]`|Sayısal veya alfasayısal bir karakterle eşleş. (Karşılaştırma büyük küçük harfe duyarlıdır.)|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Match zero or more occurrences of any word character, or any of the following characters:  -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124;, or ~.|  
-    |`(?<=[A-Z0-9])`|Arkasında sayısal veya alfasayısal olmalıdır bir önceki karaktere bakın. (Karşılaştırma büyük küçük harfe duyarlıdır.)|  
-    |`$`|Dizenin sonunda eşleştirmeyi sonlandır.|  
+    |`^`|Dizenin başlangıcında eşleşmeyi başlatın.|  
+    |`[A-Z0-9]`|Herhangi bir sayısal veya alfasayısal karakter eşleştirin. (Karşılaştırma büyük/küçük harfe duyarlıdır.)|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|Herhangi bir kelime karakterinin sıfır veya daha fazla tekrarı veya şu karakterlerden herhangi birini eşleştirin:-,!, #, $,%, &, ',., \*, +,/, =,?, ^, \`, {,}, &#124;, veya ~.|  
+    |`(?<=[A-Z0-9])`|Sayısal veya alfasayısal olması gereken önceki karakterin arkasına bakın. (Karşılaştırma büyük/küçük harfe duyarlıdır.)|  
+    |`$`|Dizenin sonundaki eşleşmeyi sonlandırın.|  
   
-     Pozitif ve negatif geriye yönelik hakkında daha fazla bilgi için bkz: [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+     Olumlu ve olumsuz geriye yönelik daha fazla bilgi için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Geri Dönüş](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Alternatif bulmaya dallar geri izlemenin nasıl normal ifade hakkında bilgi sağlar.|  
-|[Derleme ve Yeniden Kullanma](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Derleme ve performansı artırmak için normal ifadeler yeniden kullanma hakkında bilgi sağlar.|  
-|[İş Parçacığı Güvenliği](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|Normal ifade iş parçacığı güvenliği hakkında bilgi sağlar ve normal ifade nesnelere erişimi olduğunda eşitlenmesi gerektiğini açıklar.|  
-|[.NET framework normal ifadeleri](../../../docs/standard/base-types/regular-expressions.md)|Programlama dili en boy normal ifadelerin genel bir bakış sağlar.|  
-|[Normal İfade Nesne Modeli](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Bilgi ve normal ifade sınıflarının nasıl kullanılacağını gösteren kod örnekleri sağlar.|  
-|[Normal İfade Örnekleri](../../../docs/standard/base-types/regular-expression-examples.md)|Normal ifadeler ortak uygulamalarda kullanımını gösteren kod örnekleri içerir.|  
-|[Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Karakter, işleç ve normal ifadeler tanımlamak için kullanabileceğiniz yapılar kümesi hakkında bilgi sağlar.|  
+|[Geri Dönüş](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Normal ifade izleme dallarının alternatif eşleşmelerin nasıl bulunacağını gösteren bilgiler sağlar.|  
+|[Derleme ve Yeniden Kullanma](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Performansı artırmak için normal ifadeleri derleme ve yeniden kullanma hakkında bilgi sağlar.|  
+|[İş Parçacığı Güvenliği](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|Normal ifade iş parçacığı güvenliği hakkında bilgi sağlar ve normal ifade nesnelerine erişimi ne zaman eşitlemeniz gerektiğini açıklar.|  
+|[Normal Ifadeleri .NET Framework](../../../docs/standard/base-types/regular-expressions.md)|Normal ifadelerin programlama diline ilişkin bir genel bakış sağlar.|  
+|[Normal İfade Nesne Modeli](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Normal ifade sınıflarının nasıl kullanılacağını gösteren bilgi ve kod örnekleri sağlar.|  
+|[Normal İfade Örnekleri](../../../docs/standard/base-types/regular-expression-examples.md)|Ortak uygulamalarda normal ifadelerin kullanımını gösteren kod örnekleri içerir.|  
+|[Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Normal ifadeleri tanımlamak için kullanabileceğiniz karakter, işleç ve yapılar kümesi hakkında bilgi sağlar.|  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>
