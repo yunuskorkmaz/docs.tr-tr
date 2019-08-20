@@ -9,33 +9,33 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: b2e91b868c35773033418c796b7c43b08e87a28b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 822ca8feafe48402f8217c10ef37fcdb1576c27a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675877"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587755"
 ---
-# <a name="remarks-c-programming-guide"></a><span data-ttu-id="b3d2c-102">\<REMARKS > (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="b3d2c-102">\<remarks> (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="b3d2c-103">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b3d2c-103">Syntax</span></span>  
+# <a name="remarks-c-programming-guide"></a><span data-ttu-id="dc4a8-102">\<açıklamalar > (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="dc4a8-102">\<remarks> (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="dc4a8-103">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dc4a8-103">Syntax</span></span>  
   
 ```xml  
 <remarks>description</remarks>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b3d2c-104">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b3d2c-104">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dc4a8-104">Parametreler</span><span class="sxs-lookup"><span data-stu-id="dc4a8-104">Parameters</span></span>  
  `Description`  
- <span data-ttu-id="b3d2c-105">Üye açıklaması.</span><span class="sxs-lookup"><span data-stu-id="b3d2c-105">A description of the member.</span></span>  
+ <span data-ttu-id="dc4a8-105">Üyenin açıklaması.</span><span class="sxs-lookup"><span data-stu-id="dc4a8-105">A description of the member.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b3d2c-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b3d2c-106">Remarks</span></span>  
- <span data-ttu-id="b3d2c-107">\<Remarks > etiketi, bir tür hakkında bilgi eklemek için kullanılır, ek bilgiler ile belirtilen [ \<Özet >](../../../csharp/programming-guide/xmldoc/summary.md).</span><span class="sxs-lookup"><span data-stu-id="b3d2c-107">The \<remarks> tag is used to add information about a type, supplementing the information specified with [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md).</span></span> <span data-ttu-id="b3d2c-108">Bu bilgiler Nesne Tarayıcısı penceresinde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="b3d2c-108">This information is displayed in the Object Browser window.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dc4a8-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="dc4a8-106">Remarks</span></span>  
+ <span data-ttu-id="dc4a8-107">Açıklamalar > etiketi, [ \<Özet >](./summary.md)ile belirtilen bilgileri kullanarak bir tür hakkında bilgi eklemek için kullanılır. \<</span><span class="sxs-lookup"><span data-stu-id="dc4a8-107">The \<remarks> tag is used to add information about a type, supplementing the information specified with [\<summary>](./summary.md).</span></span> <span data-ttu-id="dc4a8-108">Bu bilgiler Nesne Tarayıcısı penceresinde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="dc4a8-108">This information is displayed in the Object Browser window.</span></span>  
   
- <span data-ttu-id="b3d2c-109">Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.</span><span class="sxs-lookup"><span data-stu-id="b3d2c-109">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="dc4a8-109">Belge açıklamalarını bir dosyaya işlemek için [/doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.</span><span class="sxs-lookup"><span data-stu-id="dc4a8-109">Compile with [/doc](../../language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b3d2c-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="b3d2c-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="dc4a8-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="dc4a8-110">Example</span></span>  
  [!code-csharp[csProgGuideDocComments#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#9)]  
   
-## <a name="see-also"></a><span data-ttu-id="b3d2c-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b3d2c-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dc4a8-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dc4a8-111">See also</span></span>
 
-- [<span data-ttu-id="b3d2c-112">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="b3d2c-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="b3d2c-113">Belge Açıklamaları için Önerilen Etiketler</span><span class="sxs-lookup"><span data-stu-id="b3d2c-113">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="dc4a8-112">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="dc4a8-112">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="dc4a8-113">Belge Açıklamaları için Önerilen Etiketler</span><span class="sxs-lookup"><span data-stu-id="dc4a8-113">Recommended Tags for Documentation Comments</span></span>](./recommended-tags-for-documentation-comments.md)

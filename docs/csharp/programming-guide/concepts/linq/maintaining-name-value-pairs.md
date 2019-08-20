@@ -1,40 +1,40 @@
 ---
-title: Ad-değer çiftleri (C#) sağlama
+title: Ad-değer çiftlerini koruma (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
-ms.openlocfilehash: 06fe6932b6eb0ff470367ccf6471da6937ec7746
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9c42a154a4c3ed1463e428faab4c7d33197ef4a5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484276"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591704"
 ---
-# <a name="maintaining-namevalue-pairs-c"></a><span data-ttu-id="1fac5-102">Ad/değer çiftleri Bakımı (C#)</span><span class="sxs-lookup"><span data-stu-id="1fac5-102">Maintaining Name/Value Pairs (C#)</span></span>
-<span data-ttu-id="1fac5-103">Çoğu uygulama iyi ad/değer çiftleri tutulur bilgileri korumak sahip.</span><span class="sxs-lookup"><span data-stu-id="1fac5-103">Many applications have to maintain information that is best kept as name/value pairs.</span></span> <span data-ttu-id="1fac5-104">Bu bilgiler, yapılandırma bilgileri veya genel ayarlar olabilir.</span><span class="sxs-lookup"><span data-stu-id="1fac5-104">This information might be configuration information or global settings.</span></span> [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="1fac5-105">ad/değer çiftleri kümesini tutmak kolaylaştıran bazı yöntemler içerir.</span><span class="sxs-lookup"><span data-stu-id="1fac5-105">contains some methods that make it easy to keep a set of name/value pairs.</span></span> <span data-ttu-id="1fac5-106">Öğeleri bilgilerin öznitelikleri veya bir alt kümesi olarak ya da koruyabilir.</span><span class="sxs-lookup"><span data-stu-id="1fac5-106">You can either keep the information as attributes or as a set of child elements.</span></span>  
+# <a name="maintaining-namevalue-pairs-c"></a><span data-ttu-id="dbdf1-102">Ad/değer çiftlerini koruma (C#)</span><span class="sxs-lookup"><span data-stu-id="dbdf1-102">Maintaining Name/Value Pairs (C#)</span></span>
+<span data-ttu-id="dbdf1-103">Birçok uygulamanın ad/değer çiftleri olarak en iyi şekilde tutulan bilgileri tutması gerekir.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-103">Many applications have to maintain information that is best kept as name/value pairs.</span></span> <span data-ttu-id="dbdf1-104">Bu bilgiler yapılandırma bilgileri veya genel ayarlar olabilir.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-104">This information might be configuration information or global settings.</span></span> [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="dbdf1-105">bir ad/değer çiftleri kümesini saklamayı kolaylaştıran bazı yöntemler içerir.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-105">contains some methods that make it easy to keep a set of name/value pairs.</span></span> <span data-ttu-id="dbdf1-106">Bilgileri öznitelik olarak veya bir alt öğe kümesi olarak tutabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-106">You can either keep the information as attributes or as a set of child elements.</span></span>  
   
- <span data-ttu-id="1fac5-107">Öznitelikleri veya alt öğeleri olarak bilgi tutma arasında bir fark öznitelikleri bir öğe için belirli bir ada sahip yalnızca bir özniteliği olabilir kısıtlaması olmasıdır.</span><span class="sxs-lookup"><span data-stu-id="1fac5-107">One difference between keeping the information as attributes or as child elements is that attributes have the constraint that there can be only one attribute with a particular name for an element.</span></span> <span data-ttu-id="1fac5-108">Alt öğeler bu sınırlama geçerli değildir.</span><span class="sxs-lookup"><span data-stu-id="1fac5-108">This limitation does not apply to child elements.</span></span>  
+ <span data-ttu-id="dbdf1-107">Bilgileri öznitelik veya alt öğe olarak tutma arasındaki tek fark, özniteliklerin bir öğe için yalnızca belirli bir ada sahip tek bir öznitelik olabilecek kısıtlamaya sahip olduğu kısıtlamadır.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-107">One difference between keeping the information as attributes or as child elements is that attributes have the constraint that there can be only one attribute with a particular name for an element.</span></span> <span data-ttu-id="dbdf1-108">Bu sınırlama alt öğeler için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-108">This limitation does not apply to child elements.</span></span>  
   
-## <a name="setattributevalue-and-setelementvalue"></a><span data-ttu-id="1fac5-109">SetAttributeValue ve SetElementValue</span><span class="sxs-lookup"><span data-stu-id="1fac5-109">SetAttributeValue and SetElementValue</span></span>  
- <span data-ttu-id="1fac5-110">Tutma kolaylaştıran iki yöntem adı/değer çiftleri olan <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> ve <xref:System.Xml.Linq.XElement.SetElementValue%2A>.</span><span class="sxs-lookup"><span data-stu-id="1fac5-110">The two methods that facilitate keeping name/value pairs are <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> and <xref:System.Xml.Linq.XElement.SetElementValue%2A>.</span></span> <span data-ttu-id="1fac5-111">Bu iki yöntem, benzer semantiğe sahip.</span><span class="sxs-lookup"><span data-stu-id="1fac5-111">These two methods have similar semantics.</span></span>  
+## <a name="setattributevalue-and-setelementvalue"></a><span data-ttu-id="dbdf1-109">SetAttributeValue ve SetElementValue</span><span class="sxs-lookup"><span data-stu-id="dbdf1-109">SetAttributeValue and SetElementValue</span></span>  
+ <span data-ttu-id="dbdf1-110">Ad/değer çiftlerini tutmaya yardımcı olan iki yöntem ve ' <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> <xref:System.Xml.Linq.XElement.SetElementValue%2A>dir.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-110">The two methods that facilitate keeping name/value pairs are <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> and <xref:System.Xml.Linq.XElement.SetElementValue%2A>.</span></span> <span data-ttu-id="dbdf1-111">Bu iki yöntem benzer anlamlara sahiptir.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-111">These two methods have similar semantics.</span></span>  
   
- <span data-ttu-id="1fac5-112"><xref:System.Xml.Linq.XElement.SetAttributeValue%2A> ekleme, değiştirme veya bir öğenin öznitelikleri kaldırın.</span><span class="sxs-lookup"><span data-stu-id="1fac5-112"><xref:System.Xml.Linq.XElement.SetAttributeValue%2A> can add, modify, or remove attributes of an element.</span></span>  
+ <span data-ttu-id="dbdf1-112"><xref:System.Xml.Linq.XElement.SetAttributeValue%2A>bir öğenin özniteliklerini ekleyebilir, değiştirebilir veya kaldırabilir.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-112"><xref:System.Xml.Linq.XElement.SetAttributeValue%2A> can add, modify, or remove attributes of an element.</span></span>  
   
-- <span data-ttu-id="1fac5-113">Eğer <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> yöntemi var olmayan bir öznitelik bir adla yeni bir öznitelik oluşturur ve belirtilen öğeyi ekler.</span><span class="sxs-lookup"><span data-stu-id="1fac5-113">If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an attribute that does not exist, the method creates a new attribute and adds it to the specified element.</span></span>  
+- <span data-ttu-id="dbdf1-113">Varolmayan bir özniteliğin <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> adıyla çağırırsanız, yöntemi yeni bir öznitelik oluşturur ve belirtilen öğeye ekler.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-113">If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an attribute that does not exist, the method creates a new attribute and adds it to the specified element.</span></span>  
   
-- <span data-ttu-id="1fac5-114">Eğer <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> varolan bir özniteliği olan bir ada sahip ve belirtilen bazı içerik, öznitelik içeriğini belirtilen içerik ile değiştirilir.</span><span class="sxs-lookup"><span data-stu-id="1fac5-114">If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an existing attribute and with some specified content, the contents of the attribute are replaced with the specified content.</span></span>  
+- <span data-ttu-id="dbdf1-114">Var olan bir <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> özniteliğin adı ile ve belirtilen içeriklerde bir çağrı yaparsanız, özniteliğin içeriği belirtilen içerikle değiştirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-114">If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an existing attribute and with some specified content, the contents of the attribute are replaced with the specified content.</span></span>  
   
-- <span data-ttu-id="1fac5-115">Çağırırsanız <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> varolan bir ad özniteliği ve belirtmek için içeriği null öznitelik üst öğesinden da kaldırılır.</span><span class="sxs-lookup"><span data-stu-id="1fac5-115">If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an existing attribute, and specify null for the content, the attribute is removed from its parent.</span></span>  
+- <span data-ttu-id="dbdf1-115">Varolan bir özniteliğin <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> adıyla çağrı yaparsanız ve içerik için null belirtirseniz, öznitelik üst öğesinden kaldırılır.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-115">If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an existing attribute, and specify null for the content, the attribute is removed from its parent.</span></span>  
   
- <span data-ttu-id="1fac5-116"><xref:System.Xml.Linq.XElement.SetElementValue%2A> ekleme, değiştirme veya bir öğenin alt öğeleri kaldırın.</span><span class="sxs-lookup"><span data-stu-id="1fac5-116"><xref:System.Xml.Linq.XElement.SetElementValue%2A> can add, modify, or remove child elements of an element.</span></span>  
+ <span data-ttu-id="dbdf1-116"><xref:System.Xml.Linq.XElement.SetElementValue%2A>bir öğenin alt öğelerini ekleyebilir, değiştirebilir veya kaldırabilir.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-116"><xref:System.Xml.Linq.XElement.SetElementValue%2A> can add, modify, or remove child elements of an element.</span></span>  
   
-- <span data-ttu-id="1fac5-117">Eğer <xref:System.Xml.Linq.XElement.SetElementValue%2A> yöntemi bir alt öğenin var olmayan bir adla yeni bir öğe oluşturur ve belirtilen öğeyi ekler.</span><span class="sxs-lookup"><span data-stu-id="1fac5-117">If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of a child element that does not exist, the method creates a new element and adds it to the specified element.</span></span>  
+- <span data-ttu-id="dbdf1-117">Var olmayan bir <xref:System.Xml.Linq.XElement.SetElementValue%2A> alt öğe adı ile çağırırsanız, yöntemi yeni bir öğesi oluşturur ve belirtilen öğeye ekler.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-117">If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of a child element that does not exist, the method creates a new element and adds it to the specified element.</span></span>  
   
-- <span data-ttu-id="1fac5-118">Eğer <xref:System.Xml.Linq.XElement.SetElementValue%2A> var olan bir öğenin bir ada sahip ve belirtilen bazı içerik, öğenin içeriğini belirtilen içerik ile değiştirilir.</span><span class="sxs-lookup"><span data-stu-id="1fac5-118">If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of an existing element and with some specified content, the contents of the element are replaced with the specified content.</span></span>  
+- <span data-ttu-id="dbdf1-118">Var olan bir <xref:System.Xml.Linq.XElement.SetElementValue%2A> öğenin adı ile ve belirtilen içeriklerle çağırırsanız, öğenin içeriği belirtilen içerikle değiştirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-118">If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of an existing element and with some specified content, the contents of the element are replaced with the specified content.</span></span>  
   
-- <span data-ttu-id="1fac5-119">Eğer <xref:System.Xml.Linq.XElement.SetElementValue%2A> var olan bir öğe adı ve içerik için null belirtin, üst öğesinden öğe kaldırılır.</span><span class="sxs-lookup"><span data-stu-id="1fac5-119">If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of an existing element, and specify null for the content, the element is removed from its parent.</span></span>  
+- <span data-ttu-id="dbdf1-119">Varsa, varolan <xref:System.Xml.Linq.XElement.SetElementValue%2A> bir öğenin adıyla çağrı yaparsanız ve içerik için null belirtirseniz, öğe üst öğesinden kaldırılır.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-119">If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of an existing element, and specify null for the content, the element is removed from its parent.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1fac5-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="1fac5-120">Example</span></span>  
- <span data-ttu-id="1fac5-121">Aşağıdaki örnek, özniteliklere bir öğe oluşturur.</span><span class="sxs-lookup"><span data-stu-id="1fac5-121">The following example creates an element with no attributes.</span></span> <span data-ttu-id="1fac5-122">Ardından kullanır <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> oluşturmak ve ad/değer çiftlerinin listesini güncelleştirmek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="1fac5-122">It then uses the <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> method to create and maintain a list of name/value pairs.</span></span>  
+## <a name="example"></a><span data-ttu-id="dbdf1-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="dbdf1-120">Example</span></span>  
+ <span data-ttu-id="dbdf1-121">Aşağıdaki örnek, öznitelikleri olmayan bir öğesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-121">The following example creates an element with no attributes.</span></span> <span data-ttu-id="dbdf1-122">Daha sonra bir ad <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> /değer çiftleri listesi oluşturmak ve korumak için yöntemini kullanır.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-122">It then uses the <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> method to create and maintain a list of name/value pairs.</span></span>  
   
 ```csharp  
 // Create an element with no content.  
@@ -57,7 +57,7 @@ root.SetAttributeValue("DefaultColor", null);
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="1fac5-123">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="1fac5-123">This example produces the following output:</span></span>  
+ <span data-ttu-id="dbdf1-123">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="dbdf1-123">This example produces the following output:</span></span>  
   
 ```xml  
 <Root Top="22" Left="20" Bottom="122" Right="300" DefaultColor="Color.Red" />  
@@ -65,8 +65,8 @@ Console.WriteLine(root);
 <Root Top="10" Left="20" Bottom="122" Right="300" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="1fac5-124">Örnek</span><span class="sxs-lookup"><span data-stu-id="1fac5-124">Example</span></span>  
- <span data-ttu-id="1fac5-125">Aşağıdaki örnek, bir öğe ile hiçbir alt öğeleri oluşturur.</span><span class="sxs-lookup"><span data-stu-id="1fac5-125">The following example creates an element with no child elements.</span></span> <span data-ttu-id="1fac5-126">Ardından kullanır <xref:System.Xml.Linq.XElement.SetElementValue%2A> oluşturmak ve ad/değer çiftlerinin listesini güncelleştirmek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="1fac5-126">It then uses the <xref:System.Xml.Linq.XElement.SetElementValue%2A> method to create and maintain a list of name/value pairs.</span></span>  
+## <a name="example"></a><span data-ttu-id="dbdf1-124">Örnek</span><span class="sxs-lookup"><span data-stu-id="dbdf1-124">Example</span></span>  
+ <span data-ttu-id="dbdf1-125">Aşağıdaki örnek, alt öğeleri olmayan bir öğe oluşturur.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-125">The following example creates an element with no child elements.</span></span> <span data-ttu-id="dbdf1-126">Daha sonra bir ad <xref:System.Xml.Linq.XElement.SetElementValue%2A> /değer çiftleri listesi oluşturmak ve korumak için yöntemini kullanır.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-126">It then uses the <xref:System.Xml.Linq.XElement.SetElementValue%2A> method to create and maintain a list of name/value pairs.</span></span>  
   
 ```csharp  
 // Create an element with no content.  
@@ -91,7 +91,7 @@ root.SetElementValue("DefaultColor", null);
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="1fac5-127">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="1fac5-127">This example produces the following output:</span></span>  
+ <span data-ttu-id="dbdf1-127">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="dbdf1-127">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -118,8 +118,8 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1fac5-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1fac5-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dbdf1-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dbdf1-128">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>
 - <xref:System.Xml.Linq.XElement.SetElementValue%2A>
-- [<span data-ttu-id="1fac5-129">(LINQ to XML) XML ağaçlarını değiştirme (C#)</span><span class="sxs-lookup"><span data-stu-id="1fac5-129">Modifying XML Trees (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)
+- [<span data-ttu-id="dbdf1-129">XML ağaçlarını değiştirme (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="dbdf1-129">Modifying XML Trees (LINQ to XML) (C#)</span></span>](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)

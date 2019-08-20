@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: -XML belgeleri özelliklerini kullanma C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: XML belgeleri özelliklerini kullanma- C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 047207e495f542108d6f41247b25009d9c9bb909
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 259f0d5e7e1a67a273bccc7847c38a4d694c69ba
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634793"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588098"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a><span data-ttu-id="45333-102">Nasıl yapılır: XML belgeleri özelliklerini kullanma</span><span class="sxs-lookup"><span data-stu-id="45333-102">How to: Use the XML documentation features</span></span>
+# <a name="how-to-use-the-xml-documentation-features"></a><span data-ttu-id="fb5c3-102">Nasıl yapılır: XML belgesi özelliklerini kullanma</span><span class="sxs-lookup"><span data-stu-id="fb5c3-102">How to: Use the XML documentation features</span></span>
 
-<span data-ttu-id="45333-103">Aşağıdaki örnek, belgelenmiş bir türü temel bir bakış sağlar.</span><span class="sxs-lookup"><span data-stu-id="45333-103">The following sample provides a basic overview of a type that has been documented.</span></span>
+<span data-ttu-id="fb5c3-103">Aşağıdaki örnek, belgelenen bir türe temel bir genel bakış sağlar.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-103">The following sample provides a basic overview of a type that has been documented.</span></span>
 
-## <a name="example"></a><span data-ttu-id="45333-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="45333-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="fb5c3-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="fb5c3-104">Example</span></span>
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-<span data-ttu-id="45333-105">Örneğin, aşağıdaki içeriğe sahip bir .xml dosyası oluşturur:</span><span class="sxs-lookup"><span data-stu-id="45333-105">The example generates an .xml file with the following contents:</span></span>
+<span data-ttu-id="fb5c3-105">Örnek, aşağıdaki içeriklerle bir. xml dosyası oluşturur:</span><span class="sxs-lookup"><span data-stu-id="fb5c3-105">The example generates an .xml file with the following contents:</span></span>
 
 ```xml
 <?xml version="1.0"?>
@@ -107,33 +107,33 @@ ms.locfileid: "65634793"
 </doc>
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="45333-106">Kod derleme</span><span class="sxs-lookup"><span data-stu-id="45333-106">Compiling the code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="fb5c3-106">Kodu derleme</span><span class="sxs-lookup"><span data-stu-id="fb5c3-106">Compiling the code</span></span>
 
-<span data-ttu-id="45333-107">Örneği derlemek için aşağıdaki komutu yazın:</span><span class="sxs-lookup"><span data-stu-id="45333-107">To compile the example, type the following command line:</span></span>
+<span data-ttu-id="fb5c3-107">Örneği derlemek için aşağıdaki komut satırını yazın:</span><span class="sxs-lookup"><span data-stu-id="fb5c3-107">To compile the example, type the following command line:</span></span>
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-<span data-ttu-id="45333-108">Bu komut XML dosyasını oluşturur *XMLsample.xml*, tarayıcınızda veya türü komutunu kullanarak görüntüleyebileceğiniz.</span><span class="sxs-lookup"><span data-stu-id="45333-108">This command creates the XML file *XMLsample.xml*, which you can view in your browser or by using the TYPE command.</span></span>
+<span data-ttu-id="fb5c3-108">Bu komut, tarayıcınızda görüntüleyebileceğiniz veya TYPE komutunu kullanarak *XMLsample. XML*XML dosyasını oluşturur.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-108">This command creates the XML file *XMLsample.xml*, which you can view in your browser or by using the TYPE command.</span></span>
 
-## <a name="robust-programming"></a><span data-ttu-id="45333-109">Güçlü programlama</span><span class="sxs-lookup"><span data-stu-id="45333-109">Robust programming</span></span>
+## <a name="robust-programming"></a><span data-ttu-id="fb5c3-109">Güçlü programlama</span><span class="sxs-lookup"><span data-stu-id="fb5c3-109">Robust programming</span></span>
 
-<span data-ttu-id="45333-110">XML belgeleri başlar: / / / ile.</span><span class="sxs-lookup"><span data-stu-id="45333-110">XML documentation starts with ///.</span></span> <span data-ttu-id="45333-111">Yeni bir proje oluşturduğunuzda, sihirbaz sizin için bazı başlangıç / / / satırları yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="45333-111">When you create a new project, the wizards put some starter /// lines in for you.</span></span> <span data-ttu-id="45333-112">Bu açıklamalar işlenmesini bazı kısıtlamalar mevcuttur:</span><span class="sxs-lookup"><span data-stu-id="45333-112">The processing of these comments has some restrictions:</span></span>
+<span data-ttu-id="fb5c3-110">XML belgeleri///ile başlar.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-110">XML documentation starts with ///.</span></span> <span data-ttu-id="fb5c3-111">Yeni bir proje oluşturduğunuzda, sihirbazlar sizin için bazı başlangıç//satır satırları koyar.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-111">When you create a new project, the wizards put some starter /// lines in for you.</span></span> <span data-ttu-id="fb5c3-112">Bu yorumların işlenmesinde bazı kısıtlamalar vardır:</span><span class="sxs-lookup"><span data-stu-id="fb5c3-112">The processing of these comments has some restrictions:</span></span>
 
-- <span data-ttu-id="45333-113">Belgeler doğru biçimlendirilmiş XML.</span><span class="sxs-lookup"><span data-stu-id="45333-113">The documentation must be well-formed XML.</span></span> <span data-ttu-id="45333-114">Doğru biçimlendirilmiş XML değil, bir uyarı oluşturulur ve soubor dokumentace bir hatayla karşılaşıldı bildiren bir açıklama içerir.</span><span class="sxs-lookup"><span data-stu-id="45333-114">If the XML is not well-formed, a warning is generated and the documentation file will contain a comment that says that an error was encountered.</span></span>
+- <span data-ttu-id="fb5c3-113">Belgeler düzgün biçimlendirilmiş XML olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-113">The documentation must be well-formed XML.</span></span> <span data-ttu-id="fb5c3-114">XML doğru biçimlendirilmediyse bir uyarı oluşturulur ve belge dosyası bir hata ile karşılaşıldığını bildiren bir açıklama içerir.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-114">If the XML is not well-formed, a warning is generated and the documentation file will contain a comment that says that an error was encountered.</span></span>
 
-- <span data-ttu-id="45333-115">Geliştiriciler kendi kümesi etiketleri oluşturmak ücretsizdir.</span><span class="sxs-lookup"><span data-stu-id="45333-115">Developers are free to create their own set of tags.</span></span> <span data-ttu-id="45333-116">Önerilen bir dizi etiketi yoktur (bkz [etiketleri belge açıklamaları için önerilen](recommended-tags-for-documentation-comments.md)).</span><span class="sxs-lookup"><span data-stu-id="45333-116">There is a recommended set of tags (see [Recommended tags for documentation comments](recommended-tags-for-documentation-comments.md)).</span></span> <span data-ttu-id="45333-117">Önerilen etiketler bazıları, özel anlamları vardır:</span><span class="sxs-lookup"><span data-stu-id="45333-117">Some of the recommended tags have special meanings:</span></span>
+- <span data-ttu-id="fb5c3-115">Geliştiriciler kendi etiket kümesini oluşturmak ücretsizdir.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-115">Developers are free to create their own set of tags.</span></span> <span data-ttu-id="fb5c3-116">Önerilen bir etiket kümesi vardır ( [belge açıklamaları Için önerilen etiketlere](recommended-tags-for-documentation-comments.md)bakın).</span><span class="sxs-lookup"><span data-stu-id="fb5c3-116">There is a recommended set of tags (see [Recommended tags for documentation comments](recommended-tags-for-documentation-comments.md)).</span></span> <span data-ttu-id="fb5c3-117">Önerilen etiketlerden bazılarının özel anlamları vardır:</span><span class="sxs-lookup"><span data-stu-id="fb5c3-117">Some of the recommended tags have special meanings:</span></span>
 
-  - <span data-ttu-id="45333-118">\<Param > etiketi, parametreler tanımlamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="45333-118">The \<param> tag is used to describe parameters.</span></span> <span data-ttu-id="45333-119">Kullandıysanız, derleyici parametresi var olduğundan ve tüm parametreleri belgelerinde açıklanan doğrular.</span><span class="sxs-lookup"><span data-stu-id="45333-119">If used, the compiler verifies that the parameter exists and that all parameters are described in the documentation.</span></span> <span data-ttu-id="45333-120">Doğrulama başarısızsa, derleyici bir uyarı verir.</span><span class="sxs-lookup"><span data-stu-id="45333-120">If the verification failed, the compiler issues a warning.</span></span>
+  - <span data-ttu-id="fb5c3-118">\<Param > etiketi parametreleri anlatmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-118">The \<param> tag is used to describe parameters.</span></span> <span data-ttu-id="fb5c3-119">Kullanıldıysa, derleyici parametrenin var olduğunu ve tüm parametrelerin belgelerde açıklandığını doğrular.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-119">If used, the compiler verifies that the parameter exists and that all parameters are described in the documentation.</span></span> <span data-ttu-id="fb5c3-120">Doğrulama başarısız olursa, derleyici bir uyarı verir.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-120">If the verification failed, the compiler issues a warning.</span></span>
 
-  - <span data-ttu-id="45333-121">`cref` Öznitelik, bir kod öğesi başvuru sağlamak için herhangi bir etiket eklenebilir.</span><span class="sxs-lookup"><span data-stu-id="45333-121">The `cref` attribute can be attached to any tag to provide a reference to a code element.</span></span> <span data-ttu-id="45333-122">Derleyici, bu kod öğesi var olduğunu doğrular.</span><span class="sxs-lookup"><span data-stu-id="45333-122">The compiler verifies that this code element exists.</span></span> <span data-ttu-id="45333-123">Doğrulama başarısızsa, derleyici bir uyarı verir.</span><span class="sxs-lookup"><span data-stu-id="45333-123">If the verification failed, the compiler issues a warning.</span></span> <span data-ttu-id="45333-124">Tüm derleyici uyar `using` içinde tanımlanan bir tür için göründüğünde deyimleri `cref` özniteliği.</span><span class="sxs-lookup"><span data-stu-id="45333-124">The compiler respects any `using` statements when it looks for a type described in the `cref` attribute.</span></span>
+  - <span data-ttu-id="fb5c3-121">`cref` Özniteliği bir kod öğesine başvuru sağlamak için herhangi bir etikete iliştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-121">The `cref` attribute can be attached to any tag to provide a reference to a code element.</span></span> <span data-ttu-id="fb5c3-122">Derleyici bu kod öğesinin varolduğunu doğrular.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-122">The compiler verifies that this code element exists.</span></span> <span data-ttu-id="fb5c3-123">Doğrulama başarısız olursa, derleyici bir uyarı verir.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-123">If the verification failed, the compiler issues a warning.</span></span> <span data-ttu-id="fb5c3-124">Derleyici, `cref` özniteliğinde açıklanan `using` bir türü ararken tüm deyimlere uyar.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-124">The compiler respects any `using` statements when it looks for a type described in the `cref` attribute.</span></span>
 
-  - <span data-ttu-id="45333-125">\<Özet > etiketi IntelliSense Visual Studio içindeki bir tür veya üyeyle ilgili ek bilgileri görüntülemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="45333-125">The \<summary> tag is used by IntelliSense inside Visual Studio to display additional information about a type or member.</span></span>
+  - <span data-ttu-id="fb5c3-125">Özet \<> etiketi, Visual Studio içinde IntelliSense tarafından bir tür veya üyeyle ilgili ek bilgileri göstermek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-125">The \<summary> tag is used by IntelliSense inside Visual Studio to display additional information about a type or member.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="45333-126">XML dosyası, tür ve üyeler hakkında tam bilgi sağlamaz (örneğin, bunu herhangi bir tür bilgilerini içermiyor).</span><span class="sxs-lookup"><span data-stu-id="45333-126">The XML file does not provide full information about the type and members (for example, it does not contain any type information).</span></span> <span data-ttu-id="45333-127">Bir tür veya üyeyle ilgili eksiksiz bilgi almak için soubor dokumentace gerçek türe veya üyeye yansıma ile birlikte kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="45333-127">To get full information about a type or member, the documentation file must be used together with reflection on the actual type or member.</span></span>
+    > <span data-ttu-id="fb5c3-126">XML dosyası, tür ve Üyeler hakkında tam bilgi sağlamaz (örneğin, herhangi bir tür bilgisi içermez).</span><span class="sxs-lookup"><span data-stu-id="fb5c3-126">The XML file does not provide full information about the type and members (for example, it does not contain any type information).</span></span> <span data-ttu-id="fb5c3-127">Bir tür veya üye hakkında tam bilgi almak için, belge dosyasının gerçek tür veya üye üzerinde yansıma ile birlikte kullanılması gerekir.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-127">To get full information about a type or member, the documentation file must be used together with reflection on the actual type or member.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="45333-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="45333-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb5c3-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fb5c3-128">See also</span></span>
 
-- [<span data-ttu-id="45333-129">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="45333-129">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="45333-130">/ doc (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="45333-130">/doc (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [<span data-ttu-id="45333-131">XML Belge Açıklamaları</span><span class="sxs-lookup"><span data-stu-id="45333-131">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/index.md)
+- [<span data-ttu-id="fb5c3-129">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="fb5c3-129">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="fb5c3-130">/Doc (C# derleyici seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="fb5c3-130">/doc (C# Compiler Options)</span></span>](../../language-reference/compiler-options/doc-compiler-option.md)
+- [<span data-ttu-id="fb5c3-131">XML Belge Açıklamaları</span><span class="sxs-lookup"><span data-stu-id="fb5c3-131">XML Documentation Comments</span></span>](./index.md)

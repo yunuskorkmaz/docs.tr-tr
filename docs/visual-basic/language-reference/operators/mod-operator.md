@@ -12,40 +12,40 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: f1334ff7aa07f49139bfe684746ae9cc3cf8087c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c801facd95d93652414409549bb5ff2fa633748b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663164"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611530"
 ---
-# <a name="mod-operator-visual-basic"></a><span data-ttu-id="cf4ae-102">Mod işleci (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cf4ae-102">Mod operator (Visual Basic)</span></span>
-<span data-ttu-id="cf4ae-103">İki sayıyı böler ve yalnızca kalanı döndürür.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-103">Divides two numbers and returns only the remainder.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="cf4ae-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cf4ae-104">Syntax</span></span>  
-  
-```  
-number1 Mod number2  
-```  
-  
-## <a name="parts"></a><span data-ttu-id="cf4ae-105">Bölümler</span><span class="sxs-lookup"><span data-stu-id="cf4ae-105">Parts</span></span>  
- `number1`  
- <span data-ttu-id="cf4ae-106">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-106">Required.</span></span> <span data-ttu-id="cf4ae-107">Herhangi bir sayısal ifade.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-107">Any numeric expression.</span></span>  
-  
- `number2`  
- <span data-ttu-id="cf4ae-108">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-108">Required.</span></span> <span data-ttu-id="cf4ae-109">Herhangi bir sayısal ifade.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-109">Any numeric expression.</span></span>  
-  
-## <a name="supported-types"></a><span data-ttu-id="cf4ae-110">Desteklenen türler</span><span class="sxs-lookup"><span data-stu-id="cf4ae-110">Supported types</span></span>  
- <span data-ttu-id="cf4ae-111">Tüm sayısal türler.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-111">All numeric types.</span></span> <span data-ttu-id="cf4ae-112">Bu imzalanmamış ve kayan nokta türlerini içerir ve `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-112">This includes the unsigned and floating-point types and `Decimal`.</span></span>  
-  
-## <a name="result"></a><span data-ttu-id="cf4ae-113">Sonuç</span><span class="sxs-lookup"><span data-stu-id="cf4ae-113">Result</span></span>
+# <a name="mod-operator-visual-basic"></a><span data-ttu-id="f5b93-102">Mod işleci (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5b93-102">Mod operator (Visual Basic)</span></span>
+<span data-ttu-id="f5b93-103">İki sayıyı böler ve yalnızca kalanı döndürür.</span><span class="sxs-lookup"><span data-stu-id="f5b93-103">Divides two numbers and returns only the remainder.</span></span>
 
-<span data-ttu-id="cf4ae-114">Sonra kalan sonucudur `number1` bölünür `number2`.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-114">The result is the remainder after `number1` is divided by `number2`.</span></span> <span data-ttu-id="cf4ae-115">Örneğin, ifade `14 Mod 4` 2 olarak değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-115">For example, the expression `14 Mod 4` evaluates to 2.</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f5b93-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f5b93-104">Syntax</span></span>
+
+```vb
+result = number1 Mod number2
+```
+  
+## <a name="parts"></a><span data-ttu-id="f5b93-105">Bölümler</span><span class="sxs-lookup"><span data-stu-id="f5b93-105">Parts</span></span>  
+ <span data-ttu-id="f5b93-106">`result`Gerekli.</span><span class="sxs-lookup"><span data-stu-id="f5b93-106">`result` Required.</span></span> <span data-ttu-id="f5b93-107">Herhangi bir sayısal değişken veya özellik.</span><span class="sxs-lookup"><span data-stu-id="f5b93-107">Any numeric variable or property.</span></span>
+
+ <span data-ttu-id="f5b93-108">`number1`Gerekli.</span><span class="sxs-lookup"><span data-stu-id="f5b93-108">`number1` Required.</span></span> <span data-ttu-id="f5b93-109">Herhangi bir sayısal ifade.</span><span class="sxs-lookup"><span data-stu-id="f5b93-109">Any numeric expression.</span></span>
+
+ <span data-ttu-id="f5b93-110">`number2`Gerekli.</span><span class="sxs-lookup"><span data-stu-id="f5b93-110">`number2` Required.</span></span> <span data-ttu-id="f5b93-111">Herhangi bir sayısal ifade.</span><span class="sxs-lookup"><span data-stu-id="f5b93-111">Any numeric expression.</span></span>
+
+## <a name="supported-types"></a><span data-ttu-id="f5b93-112">Desteklenen türler</span><span class="sxs-lookup"><span data-stu-id="f5b93-112">Supported types</span></span>
+ <span data-ttu-id="f5b93-113">Tüm sayısal türler.</span><span class="sxs-lookup"><span data-stu-id="f5b93-113">All numeric types.</span></span> <span data-ttu-id="f5b93-114">Bu, imzasız ve kayan nokta türlerini `Decimal`içerir.</span><span class="sxs-lookup"><span data-stu-id="f5b93-114">This includes the unsigned and floating-point types and `Decimal`.</span></span>
+
+## <a name="result"></a><span data-ttu-id="f5b93-115">Sonuç</span><span class="sxs-lookup"><span data-stu-id="f5b93-115">Result</span></span>
+
+<span data-ttu-id="f5b93-116">Sonuç, öğesinden `number2`bölündükten sonra `number1` kalanı.</span><span class="sxs-lookup"><span data-stu-id="f5b93-116">The result is the remainder after `number1` is divided by `number2`.</span></span> <span data-ttu-id="f5b93-117">Örneğin, ifade `14 Mod 4` 2 olarak değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="f5b93-117">For example, the expression `14 Mod 4` evaluates to 2.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="cf4ae-116">Arasında bir fark *kalan* ve *modulus* negatif sayılar için farklı sonuçlarla Matematikte.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-116">There is a difference between *remainder* and *modulus* in mathematics, with different results for negative numbers.</span></span> <span data-ttu-id="cf4ae-117">`Mod` İşleci Visual Basic'te .NET Framework `op_Modulus` işleci ve arka plandaki [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL yönergesinin tüm kalan işlemi gerçekleştirin.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-117">The `Mod` operator in Visual Basic, the .NET Framework `op_Modulus` operator, and the underlying [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL instruction all perform a remainder operation.</span></span>
+> <span data-ttu-id="f5b93-118">Olumsuz ve mod arasında negatif sayıların farklı sonuçlarıyla birlikte *kalan* ve *mod* arasında bir farklılık vardır.</span><span class="sxs-lookup"><span data-stu-id="f5b93-118">There is a difference between *remainder* and *modulus* in mathematics, with different results for negative numbers.</span></span> <span data-ttu-id="f5b93-119">Visual Basic işleci, .NET Framework `op_Modulus` işleci ve temeldeki REM Il yönergesinin hepsi bir geri kalan işlem gerçekleştirir. [](<xref:System.Reflection.Emit.OpCodes.Rem>) `Mod`</span><span class="sxs-lookup"><span data-stu-id="f5b93-119">The `Mod` operator in Visual Basic, the .NET Framework `op_Modulus` operator, and the underlying [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL instruction all perform a remainder operation.</span></span>
 
-<span data-ttu-id="cf4ae-118">Sonucu bir `Mod` işlemi korur bölünen sayının işaretini `number1`, ve pozitif veya negatif olabilir.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-118">The result of a `Mod` operation retains the sign of the dividend, `number1`, and so it may be positive or negative.</span></span> <span data-ttu-id="cf4ae-119">Her zaman aralığında sonucudur (-`number2`, `number2`), özel.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-119">The result is always in the range (-`number2`, `number2`), exclusive.</span></span> <span data-ttu-id="cf4ae-120">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="cf4ae-120">For example:</span></span>
+<span data-ttu-id="f5b93-120">Bir `Mod` işlemin sonucu, `number1`bölünün işaretini korur, ve bu nedenle pozitif veya negatif olabilir.</span><span class="sxs-lookup"><span data-stu-id="f5b93-120">The result of a `Mod` operation retains the sign of the dividend, `number1`, and so it may be positive or negative.</span></span> <span data-ttu-id="f5b93-121">Sonuç her zaman (-`number2`, `number2`), hariç değişir.</span><span class="sxs-lookup"><span data-stu-id="f5b93-121">The result is always in the range (-`number2`, `number2`), exclusive.</span></span> <span data-ttu-id="f5b93-122">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="f5b93-122">For example:</span></span>
 
 ```vb
 Public Module Example
@@ -63,50 +63,52 @@ End Module
 '      -8 Mod -3 = -2
 ```
 
-## <a name="remarks"></a><span data-ttu-id="cf4ae-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="cf4ae-121">Remarks</span></span>  
- <span data-ttu-id="cf4ae-122">Ya da `number1` veya `number2` bir kayan nokta kayan nokta bölme kalanını döndürülen değerdir.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-122">If either `number1` or `number2` is a floating-point value, the floating-point remainder of the division is returned.</span></span> <span data-ttu-id="cf4ae-123">Sonuç veri türü, veri türlerini bölme kaynaklanan tüm olası değerlerini tutabilecek en küçük veri türüdür `number1` ve `number2`.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-123">The data type of the result is the smallest data type that can hold all possible values that result from division with the data types of `number1` and `number2`.</span></span>  
-  
- <span data-ttu-id="cf4ae-124">Varsa `number1` veya `number2` değerlendiren [hiçbir şey](../../../visual-basic/language-reference/nothing.md), sıfır olarak kabul edilir.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-124">If `number1` or `number2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.</span></span>  
-  
- <span data-ttu-id="cf4ae-125">İlgili işleçler şunlardır:</span><span class="sxs-lookup"><span data-stu-id="cf4ae-125">Related operators include the following:</span></span>  
-  
-- <span data-ttu-id="cf4ae-126">[\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) bölme işleminin tamsayı bölümünü döndürür.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-126">The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient of a division.</span></span> <span data-ttu-id="cf4ae-127">Örneğin, ifade `14 \ 4` 3 olarak değerlendirir.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-127">For example, the expression `14 \ 4` evaluates to 3.</span></span>  
-  
-- <span data-ttu-id="cf4ae-128">[/ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) bir kayan noktalı sayı olarak kalan dahil olmak üzere tam kalanını döndürür.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-128">The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) returns the full quotient, including the remainder, as a floating-point number.</span></span> <span data-ttu-id="cf4ae-129">Örneğin, ifade `14 / 4` 3.5 için değerlendirir.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-129">For example, the expression `14 / 4` evaluates to 3.5.</span></span>  
-  
-## <a name="attempted-division-by-zero"></a><span data-ttu-id="cf4ae-130">Denenen sıfıra bölme</span><span class="sxs-lookup"><span data-stu-id="cf4ae-130">Attempted division by zero</span></span>  
- <span data-ttu-id="cf4ae-131">Varsa `number2` sıfır olarak davranışını değerlendirilen `Mod` işleci, işlenen veri türüne bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-131">If `number2` evaluates to zero, the behavior of the `Mod` operator depends on the data type of the operands.</span></span> <span data-ttu-id="cf4ae-132">Bir tamsayı bölme oluşturur bir <xref:System.DivideByZeroException> özel durum.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-132">An integral division throws a <xref:System.DivideByZeroException> exception.</span></span> <span data-ttu-id="cf4ae-133">Kayan nokta bölme döndürür <xref:System.Double.NaN>.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-133">A floating-point division returns <xref:System.Double.NaN>.</span></span>  
-  
-## <a name="equivalent-formula"></a><span data-ttu-id="cf4ae-134">Eşdeğer formülü</span><span class="sxs-lookup"><span data-stu-id="cf4ae-134">Equivalent formula</span></span>  
- <span data-ttu-id="cf4ae-135">İfade `a Mod b` şu formüllerden birini eşdeğerdir:</span><span class="sxs-lookup"><span data-stu-id="cf4ae-135">The expression `a Mod b` is equivalent to either of the following formulas:</span></span>  
-  
- `a - (b * (a \ b))`  
-  
- `a - (b * Fix(a / b))`  
-  
-## <a name="floating-point-imprecision"></a><span data-ttu-id="cf4ae-136">Kayan nokta kesinlik eksikliği</span><span class="sxs-lookup"><span data-stu-id="cf4ae-136">Floating-point imprecision</span></span>  
- <span data-ttu-id="cf4ae-137">Kayan noktalı sayı ile çalıştığınızda, bunlar her zaman kesin bir ondalık gösterim bellekte olmadığını unutmayın.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-137">When you work with floating-point numbers, remember that they do not always have a precise decimal representation in memory.</span></span> <span data-ttu-id="cf4ae-138">Bu değer karşılaştırması gibi bazı işlemleri öğesinden beklenmeyen sonuçlara açabilir ve `Mod` işleci.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-138">This can lead to unexpected results from certain operations, such as value comparison and the `Mod` operator.</span></span> <span data-ttu-id="cf4ae-139">Daha fazla bilgi için [veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span><span class="sxs-lookup"><span data-stu-id="cf4ae-139">For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span></span>  
-  
-## <a name="overloading"></a><span data-ttu-id="cf4ae-140">Aşırı Yükleme</span><span class="sxs-lookup"><span data-stu-id="cf4ae-140">Overloading</span></span>  
- <span data-ttu-id="cf4ae-141">`Mod` İşleci olabilir *aşırı*, yani bir sınıf veya yapı davranışını tanımlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-141">The `Mod` operator can be *overloaded*, which means that a class or structure can redefine its behavior.</span></span> <span data-ttu-id="cf4ae-142">Kodunuzu geçerliyse `Mod` bir sınıf veya yapı gibi bir aşırı yüklemeyi içeren bir örneği için yeniden tanımlanan davranışını anladığınızdan emin olun.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-142">If your code applies `Mod` to an instance of a class or structure that includes such an overload, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="cf4ae-143">Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="cf4ae-143">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="cf4ae-144">Örnek</span><span class="sxs-lookup"><span data-stu-id="cf4ae-144">Example</span></span>  
- <span data-ttu-id="cf4ae-145">Aşağıdaki örnekte `Mod` işleci iki sayı bölme ve yalnızca kalanı döndürür.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-145">The following example uses the `Mod` operator to divide two numbers and return only the remainder.</span></span> <span data-ttu-id="cf4ae-146">Ya da bir kayan noktalı sayı olan, kalan temsil eden bir kayan noktalı sayı sonucudur.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-146">If either number is a floating-point number, the result is a floating-point number that represents the remainder.</span></span>  
-  
- [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]  
-  
-## <a name="example"></a><span data-ttu-id="cf4ae-147">Örnek</span><span class="sxs-lookup"><span data-stu-id="cf4ae-147">Example</span></span>  
- <span data-ttu-id="cf4ae-148">Aşağıdaki örnek, kayan nokta işlenenler kesinlik eksikliği olası gösterir.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-148">The following example demonstrates the potential imprecision of floating-point operands.</span></span> <span data-ttu-id="cf4ae-149">İlk ifade, işlenenin olduğu `Double`, ve 0.2 sonsuz yinelenen bir ikili Kesir 0.20000000000000001 depolanan değerine sahip.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-149">In the first statement, the operands are `Double`, and 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001.</span></span> <span data-ttu-id="cf4ae-150">İkinci ifadede, değişmez değer türü karakteri `D` iki işlenen de zorlar `Decimal`, ve 0.2 kesin bir gösterimi.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-150">In the second statement, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation.</span></span>  
-  
- [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]  
-  
-## <a name="see-also"></a><span data-ttu-id="cf4ae-151">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cf4ae-151">See also</span></span>
+## <a name="remarks"></a><span data-ttu-id="f5b93-123">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f5b93-123">Remarks</span></span>
+ <span data-ttu-id="f5b93-124">`number1` Ya`number2` da bir kayan nokta değeri ise, bölmenin kayan nokta geri kalanı döndürülür.</span><span class="sxs-lookup"><span data-stu-id="f5b93-124">If either `number1` or `number2` is a floating-point value, the floating-point remainder of the division is returned.</span></span> <span data-ttu-id="f5b93-125">Sonucun veri türü, `number1` ve `number2`veri türleri ile bölme işleminden kaynaklanan tüm olası değerleri tutabilecek en küçük veri türüdür.</span><span class="sxs-lookup"><span data-stu-id="f5b93-125">The data type of the result is the smallest data type that can hold all possible values that result from division with the data types of `number1` and `number2`.</span></span>
+
+ <span data-ttu-id="f5b93-126">Ya da hiçbir şey değerlendirilirse, sıfır olarak değerlendirilir. [](../../../visual-basic/language-reference/nothing.md) `number1` `number2`</span><span class="sxs-lookup"><span data-stu-id="f5b93-126">If `number1` or `number2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.</span></span>
+
+ <span data-ttu-id="f5b93-127">İlgili işleçler şunları içerir:</span><span class="sxs-lookup"><span data-stu-id="f5b93-127">Related operators include the following:</span></span>
+
+- <span data-ttu-id="f5b93-128">[\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) bir bölmenin tamsayı bölümünü döndürür.</span><span class="sxs-lookup"><span data-stu-id="f5b93-128">The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient of a division.</span></span> <span data-ttu-id="f5b93-129">Örneğin, ifade `14 \ 4` 3 olarak değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="f5b93-129">For example, the expression `14 \ 4` evaluates to 3.</span></span>
+
+- <span data-ttu-id="f5b93-130">[/İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) , kayan noktalı bir sayı olarak kalanı dahil olmak üzere tam bölümü döndürür.</span><span class="sxs-lookup"><span data-stu-id="f5b93-130">The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) returns the full quotient, including the remainder, as a floating-point number.</span></span> <span data-ttu-id="f5b93-131">Örneğin, ifade `14 / 4` 3,5 olarak değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="f5b93-131">For example, the expression `14 / 4` evaluates to 3.5.</span></span>
+
+## <a name="attempted-division-by-zero"></a><span data-ttu-id="f5b93-132">Sıfıra bölme denendi</span><span class="sxs-lookup"><span data-stu-id="f5b93-132">Attempted division by zero</span></span>
+ <span data-ttu-id="f5b93-133">Sıfır olarak `Mod` değerlendirilirse, işlecin davranışı işlenenlerinin veri türüne bağlıdır: `number2`</span><span class="sxs-lookup"><span data-stu-id="f5b93-133">If `number2` evaluates to zero, the behavior of the `Mod` operator depends on the data type of the operands:</span></span>
+ - <span data-ttu-id="f5b93-134">Derleme zamanında belirlenemiyorsa integral <xref:System.DivideByZeroException> bölüm bir `number2` özel durum oluşturur ve derleme zamanında sıfır olarak değerlendirilirse bir `number2` derleme zamanı hatası `BC30542    Division by zero occurred while evaluating this expression` oluşturur.</span><span class="sxs-lookup"><span data-stu-id="f5b93-134">An integral division throws a <xref:System.DivideByZeroException> exception if `number2` cannot be determined in compile-time and generates a compile-time error `BC30542    Division by zero occurred while evaluating this expression` if `number2` is evaluated to zero at compile-time.</span></span>
+ - <span data-ttu-id="f5b93-135">Kayan nokta bölmesi döndürülür <xref:System.Double.NaN?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f5b93-135">A floating-point division returns <xref:System.Double.NaN?displayProperty=nameWithType>.</span></span>
+
+## <a name="equivalent-formula"></a><span data-ttu-id="f5b93-136">Denk formül</span><span class="sxs-lookup"><span data-stu-id="f5b93-136">Equivalent formula</span></span>
+ <span data-ttu-id="f5b93-137">İfade `a Mod b` aşağıdaki formüllerden birine eşdeğerdir:</span><span class="sxs-lookup"><span data-stu-id="f5b93-137">The expression `a Mod b` is equivalent to either of the following formulas:</span></span>
+
+ `a - (b * (a \ b))`
+
+ `a - (b * Fix(a / b))`
+
+## <a name="floating-point-imprecision"></a><span data-ttu-id="f5b93-138">Kayan nokta noktasında kesinlik eksikliği</span><span class="sxs-lookup"><span data-stu-id="f5b93-138">Floating-point imprecision</span></span>
+ <span data-ttu-id="f5b93-139">Kayan noktalı sayılarla çalışırken her zaman bellekte kesin bir ondalık gösterimine sahip olmadıkları unutulmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="f5b93-139">When you work with floating-point numbers, remember that they do not always have a precise decimal representation in memory.</span></span> <span data-ttu-id="f5b93-140">Bu, değer karşılaştırması ve `Mod` işleç gibi belirli işlemlerden beklenmeyen sonuçlara neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="f5b93-140">This can lead to unexpected results from certain operations, such as value comparison and the `Mod` operator.</span></span> <span data-ttu-id="f5b93-141">Daha fazla bilgi için bkz. [sorun giderme veri türleri](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span><span class="sxs-lookup"><span data-stu-id="f5b93-141">For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span></span>
+
+## <a name="overloading"></a><span data-ttu-id="f5b93-142">Aşırı Yükleme</span><span class="sxs-lookup"><span data-stu-id="f5b93-142">Overloading</span></span>
+ <span data-ttu-id="f5b93-143">İşleç aşırı yüklenebilir, yani bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. `Mod`</span><span class="sxs-lookup"><span data-stu-id="f5b93-143">The `Mod` operator can be *overloaded*, which means that a class or structure can redefine its behavior.</span></span> <span data-ttu-id="f5b93-144">Kodunuz, bu tür `Mod` bir aşırı yükleme içeren bir sınıf veya yapının örneği için geçerliyse, yeniden tanımlanmış davranışını anladığınızdan emin olun.</span><span class="sxs-lookup"><span data-stu-id="f5b93-144">If your code applies `Mod` to an instance of a class or structure that includes such an overload, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="f5b93-145">Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="f5b93-145">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>
+
+## <a name="example"></a><span data-ttu-id="f5b93-146">Örnek</span><span class="sxs-lookup"><span data-stu-id="f5b93-146">Example</span></span>
+ <span data-ttu-id="f5b93-147">Aşağıdaki örnek, iki sayıyı `Mod` bölmek ve yalnızca geri kalanı döndürmek için işlecini kullanır.</span><span class="sxs-lookup"><span data-stu-id="f5b93-147">The following example uses the `Mod` operator to divide two numbers and return only the remainder.</span></span> <span data-ttu-id="f5b93-148">Her iki sayı de bir kayan noktalı sayı ise sonuç, kalanı temsil eden bir kayan noktalı sayıdır.</span><span class="sxs-lookup"><span data-stu-id="f5b93-148">If either number is a floating-point number, the result is a floating-point number that represents the remainder.</span></span>
+
+ [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]
+
+## <a name="example"></a><span data-ttu-id="f5b93-149">Örnek</span><span class="sxs-lookup"><span data-stu-id="f5b93-149">Example</span></span>
+ <span data-ttu-id="f5b93-150">Aşağıdaki örnek, kayan nokta işlenenlerinin olası noktasında kesinlik eksikliği gösterir.</span><span class="sxs-lookup"><span data-stu-id="f5b93-150">The following example demonstrates the potential imprecision of floating-point operands.</span></span> <span data-ttu-id="f5b93-151">İlk ifadede işlenen `Double`ve 0,2, saklı bir değeri 0.20000000000000001 olan sonsuz bir yinelenen ikili kesirdir.</span><span class="sxs-lookup"><span data-stu-id="f5b93-151">In the first statement, the operands are `Double`, and 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001.</span></span> <span data-ttu-id="f5b93-152">İkinci ifadede, değişmez değer türü karakteri `D` her iki işleneni olarak `Decimal`zorlar ve 0,2 kesin bir gösterimine sahiptir.</span><span class="sxs-lookup"><span data-stu-id="f5b93-152">In the second statement, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation.</span></span>
+
+ [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]
+
+## <a name="see-also"></a><span data-ttu-id="f5b93-153">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f5b93-153">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Fix%2A>
-- [<span data-ttu-id="cf4ae-152">Aritmetik İşleçler</span><span class="sxs-lookup"><span data-stu-id="cf4ae-152">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [<span data-ttu-id="cf4ae-153">Visual Basic'de İşleç önceliği</span><span class="sxs-lookup"><span data-stu-id="cf4ae-153">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="cf4ae-154">İşlevselliğe Göre Listelenmiş İşleçler</span><span class="sxs-lookup"><span data-stu-id="cf4ae-154">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="cf4ae-155">Veri Türü Sorunlarını Giderme</span><span class="sxs-lookup"><span data-stu-id="cf4ae-155">Troubleshooting Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [<span data-ttu-id="cf4ae-156">Visual Basic'de aritmetik işleçler</span><span class="sxs-lookup"><span data-stu-id="cf4ae-156">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [<span data-ttu-id="cf4ae-157">\ İşleci (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cf4ae-157">\ Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [<span data-ttu-id="f5b93-154">Aritmetik İşleçler</span><span class="sxs-lookup"><span data-stu-id="f5b93-154">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [<span data-ttu-id="f5b93-155">Visual Basic operatör önceliği</span><span class="sxs-lookup"><span data-stu-id="f5b93-155">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="f5b93-156">İşlevselliğe Göre Listelenmiş İşleçler</span><span class="sxs-lookup"><span data-stu-id="f5b93-156">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="f5b93-157">Veri Türü Sorunlarını Giderme</span><span class="sxs-lookup"><span data-stu-id="f5b93-157">Troubleshooting Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [<span data-ttu-id="f5b93-158">Visual Basic aritmetik Işleçler</span><span class="sxs-lookup"><span data-stu-id="f5b93-158">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [<span data-ttu-id="f5b93-159">\ İşleci (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5b93-159">\ Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/integer-division-operator.md)

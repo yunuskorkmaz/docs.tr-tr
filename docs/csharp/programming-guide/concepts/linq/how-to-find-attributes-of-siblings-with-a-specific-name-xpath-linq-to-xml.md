@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl yapılır: (XPath-LINQ to XML) belirli bir ada sahip eşdüzeylerin özniteliklerini bulma (C#)'
+title: 'Nasıl yapılır: Belirli bir ada sahip eşdüzey öğelerinin özniteliklerini bul (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: 0c62ecb7660a012af556515ba5e7de330d5ab5e7
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 78795f164490dddd6bdc8dae04961c028228ab0c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486799"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593521"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a><span data-ttu-id="a4a95-102">Nasıl yapılır: (XPath-LINQ to XML) belirli bir ada sahip eşdüzeylerin özniteliklerini bulma (C#)</span><span class="sxs-lookup"><span data-stu-id="a4a95-102">How to: Find Attributes of Siblings with a Specific Name (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="a4a95-103">Bu konuda, eşdüzey bağlam düğümünün tüm öznitelikleri bulmak amacıyla gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="a4a95-103">This topic shows how to find all attributes of the siblings of the context node.</span></span> <span data-ttu-id="a4a95-104">Yalnızca belirli bir ada sahip öznitelik koleksiyonu döndürülür.</span><span class="sxs-lookup"><span data-stu-id="a4a95-104">Only attributes with a specific name are returned in the collection.</span></span>  
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a><span data-ttu-id="4d4d9-102">Nasıl yapılır: Belirli bir ada sahip eşdüzey öğelerinin özniteliklerini bul (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="4d4d9-102">How to: Find Attributes of Siblings with a Specific Name (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="4d4d9-103">Bu konu, bağlam düğümünün eşdüzey öğelerinin tüm özniteliklerinin nasıl bulunacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="4d4d9-103">This topic shows how to find all attributes of the siblings of the context node.</span></span> <span data-ttu-id="4d4d9-104">Koleksiyonda yalnızca belirli bir ada sahip öznitelikler döndürülür.</span><span class="sxs-lookup"><span data-stu-id="4d4d9-104">Only attributes with a specific name are returned in the collection.</span></span>  
   
- <span data-ttu-id="a4a95-105">XPath ifadesidir:</span><span class="sxs-lookup"><span data-stu-id="a4a95-105">The XPath expression is:</span></span>  
+ <span data-ttu-id="4d4d9-105">XPath ifadesi:</span><span class="sxs-lookup"><span data-stu-id="4d4d9-105">The XPath expression is:</span></span>  
   
  `../Book/@id`  
   
-## <a name="example"></a><span data-ttu-id="a4a95-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="a4a95-106">Example</span></span>  
- <span data-ttu-id="a4a95-107">Bu örnekte ilk bulur bir `Book` öğesi ve bulduğu tüm Eşdüzey öğeleri adlı `Book`ve ardından tüm öznitelikleri adlı bulur `id`.</span><span class="sxs-lookup"><span data-stu-id="a4a95-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`, and then finds all attributes named `id`.</span></span> <span data-ttu-id="a4a95-108">Bir öznitelik koleksiyonu sonucudur.</span><span class="sxs-lookup"><span data-stu-id="a4a95-108">The result is a collection of attributes.</span></span>  
+## <a name="example"></a><span data-ttu-id="4d4d9-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="4d4d9-106">Example</span></span>  
+ <span data-ttu-id="4d4d9-107">Bu örnek önce bir `Book` öğesi bulur, sonra adlı `Book`tüm eşdüzey öğeleri bulur ve sonra adlı `id`tüm öznitelikleri bulur.</span><span class="sxs-lookup"><span data-stu-id="4d4d9-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`, and then finds all attributes named `id`.</span></span> <span data-ttu-id="4d4d9-108">Sonuç, özniteliklerin koleksiyonudur.</span><span class="sxs-lookup"><span data-stu-id="4d4d9-108">The result is a collection of attributes.</span></span>  
   
- <span data-ttu-id="a4a95-109">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Kitaplar (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="a4a95-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="4d4d9-109">Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Kitaplar (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="4d4d9-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -47,7 +47,7 @@ foreach (XAttribute el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="a4a95-110">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="a4a95-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="4d4d9-110">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="4d4d9-110">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  

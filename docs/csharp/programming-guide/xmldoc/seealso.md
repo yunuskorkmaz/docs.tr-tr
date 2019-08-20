@@ -13,35 +13,35 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: cccb338d2dbed7889512428a53804324795c66bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ddaa7efec2b4bf5ffa53971aa6f380a1be9bad8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708060"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587663"
 ---
-# <a name="seealso-c-programming-guide"></a><span data-ttu-id="9712c-102">\<SeeAlso > (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="9712c-102">\<seealso> (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="9712c-103">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9712c-103">Syntax</span></span>  
+# <a name="seealso-c-programming-guide"></a><span data-ttu-id="00fe0-102">\<SeeAlso > (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="00fe0-102">\<seealso> (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="00fe0-103">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="00fe0-103">Syntax</span></span>  
   
 ```xml  
 <seealso cref="member"/>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9712c-104">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9712c-104">Parameters</span></span>  
- <span data-ttu-id="9712c-105">cref = " `member`"</span><span class="sxs-lookup"><span data-stu-id="9712c-105">cref = " `member`"</span></span>  
- <span data-ttu-id="9712c-106">Bir üye veya geçerli derleme ortamdan çağrılacak kullanılabilir alan başvuru.</span><span class="sxs-lookup"><span data-stu-id="9712c-106">A reference to a member or field that is available to be called from the current compilation environment.</span></span> <span data-ttu-id="9712c-107">Derleyici belirli kod öğesi var. başarılı olup olmadığını denetler ve `member` çıktı XML öğesi adı.`member`</span><span class="sxs-lookup"><span data-stu-id="9712c-107">The compiler checks that the given code element exists and passes `member` to the element name in the output XML.`member`</span></span> <span data-ttu-id="9712c-108">çift tırnak içinde yer almalıdır ("").</span><span class="sxs-lookup"><span data-stu-id="9712c-108">must appear within double quotation marks (" ").</span></span>  
+## <a name="parameters"></a><span data-ttu-id="00fe0-104">Parametreler</span><span class="sxs-lookup"><span data-stu-id="00fe0-104">Parameters</span></span>  
+ <span data-ttu-id="00fe0-105">cref = " `member`"</span><span class="sxs-lookup"><span data-stu-id="00fe0-105">cref = " `member`"</span></span>  
+ <span data-ttu-id="00fe0-106">Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru.</span><span class="sxs-lookup"><span data-stu-id="00fe0-106">A reference to a member or field that is available to be called from the current compilation environment.</span></span> <span data-ttu-id="00fe0-107">Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında `member` öğe adına geçirir.`member`</span><span class="sxs-lookup"><span data-stu-id="00fe0-107">The compiler checks that the given code element exists and passes `member` to the element name in the output XML.`member`</span></span> <span data-ttu-id="00fe0-108">Çift tırnak işaretleri ("") içinde yer almalıdır.</span><span class="sxs-lookup"><span data-stu-id="00fe0-108">must appear within double quotation marks (" ").</span></span>  
   
- <span data-ttu-id="9712c-109">Genel tür cref başvuru oluşturma hakkında daha fazla bilgi için bkz: [ \<bakın >](../../../csharp/programming-guide/xmldoc/see.md).</span><span class="sxs-lookup"><span data-stu-id="9712c-109">For information on how to create a cref reference to a generic type, see [\<see>](../../../csharp/programming-guide/xmldoc/see.md).</span></span>  
+ <span data-ttu-id="00fe0-109">Genel bir türe [ \<](./see.md)cref başvurusu oluşturma hakkında daha fazla bilgi için bkz. >.</span><span class="sxs-lookup"><span data-stu-id="00fe0-109">For information on how to create a cref reference to a generic type, see [\<see>](./see.md).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9712c-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9712c-110">Remarks</span></span>  
- <span data-ttu-id="9712c-111">\<Seealso > etiketi, bir Ayrıca bkz. bölümünde görüntülenmesini isteyebilirsiniz metin belirtmenize olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="9712c-111">The \<seealso> tag lets you specify the text that you might want to appear in a See Also section.</span></span> <span data-ttu-id="9712c-112">Kullanım [ \<bakın >](../../../csharp/programming-guide/xmldoc/see.md) bağlantı metninde belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="9712c-112">Use [\<see>](../../../csharp/programming-guide/xmldoc/see.md) to specify a link from within text.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="00fe0-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="00fe0-110">Remarks</span></span>  
+ <span data-ttu-id="00fe0-111">\<SeeAlso > etiketi de Ayrıca bkz. bölümünde görünmesini isteyebileceğiniz metni belirtmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="00fe0-111">The \<seealso> tag lets you specify the text that you might want to appear in a See Also section.</span></span> <span data-ttu-id="00fe0-112">Metnin içinden bir bağlantı belirtmek için [ \<> göster](./see.md) ' i kullanın.</span><span class="sxs-lookup"><span data-stu-id="00fe0-112">Use [\<see>](./see.md) to specify a link from within text.</span></span>  
   
- <span data-ttu-id="9712c-113">Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.</span><span class="sxs-lookup"><span data-stu-id="9712c-113">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="00fe0-113">Belge açıklamalarını bir dosyaya işlemek için [/doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.</span><span class="sxs-lookup"><span data-stu-id="00fe0-113">Compile with [/doc](../../language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9712c-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="9712c-114">Example</span></span>  
- <span data-ttu-id="9712c-115">Bkz: [ \<Özet >](../../../csharp/programming-guide/xmldoc/summary.md) kullanma örneği için \<seealso >.</span><span class="sxs-lookup"><span data-stu-id="9712c-115">See [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) for an example of using \<seealso>.</span></span>  
+## <a name="example"></a><span data-ttu-id="00fe0-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="00fe0-114">Example</span></span>  
+ <span data-ttu-id="00fe0-115">Bkz. SeeAlso > kullanımı \<örneği için bkz [ \<. Summary >](./summary.md) .</span><span class="sxs-lookup"><span data-stu-id="00fe0-115">See [\<summary>](./summary.md) for an example of using \<seealso>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9712c-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9712c-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="00fe0-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="00fe0-116">See also</span></span>
 
-- [<span data-ttu-id="9712c-117">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="9712c-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="9712c-118">Belge Açıklamaları için Önerilen Etiketler</span><span class="sxs-lookup"><span data-stu-id="9712c-118">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="00fe0-117">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="00fe0-117">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="00fe0-118">Belge Açıklamaları için Önerilen Etiketler</span><span class="sxs-lookup"><span data-stu-id="00fe0-118">Recommended Tags for Documentation Comments</span></span>](./recommended-tags-for-documentation-comments.md)

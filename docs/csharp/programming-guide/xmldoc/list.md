@@ -13,15 +13,15 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: 9ac1d749d18a9d02ce28f8cf600495f345ec0e89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aadb24c43d49acb3e71490efd156b14d9fc5f133
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708047"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587978"
 ---
-# <a name="list-c-programming-guide"></a><span data-ttu-id="3c225-102">\<Liste > (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="3c225-102">\<list> (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="3c225-103">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3c225-103">Syntax</span></span>  
+# <a name="list-c-programming-guide"></a><span data-ttu-id="b0f9b-102">\<Liste > (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="b0f9b-102">\<list> (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="b0f9b-103">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b0f9b-103">Syntax</span></span>  
   
 ```xml  
 <list type="bullet" | "number" | "table">  
@@ -36,26 +36,26 @@ ms.locfileid: "61708047"
 </list>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3c225-104">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3c225-104">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b0f9b-104">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b0f9b-104">Parameters</span></span>  
  `term`  
- <span data-ttu-id="3c225-105">İçinde tanımlanan tanımlamak için bir terim `description`.</span><span class="sxs-lookup"><span data-stu-id="3c225-105">A term to define, which will be defined in `description`.</span></span>  
+ <span data-ttu-id="b0f9b-105">' De `description`tanımlanacak bir terim.</span><span class="sxs-lookup"><span data-stu-id="b0f9b-105">A term to define, which will be defined in `description`.</span></span>  
   
  `description`  
- <span data-ttu-id="3c225-106">Bir ya da öğe bir madde işareti veya numaralı liste tanımını bir `term`.</span><span class="sxs-lookup"><span data-stu-id="3c225-106">Either an item in a bullet or numbered list or the definition of a `term`.</span></span>  
+ <span data-ttu-id="b0f9b-106">Bir madde işareti veya numaralandırılmış listedeki bir öğe ya da bir `term`tanımı.</span><span class="sxs-lookup"><span data-stu-id="b0f9b-106">Either an item in a bullet or numbered list or the definition of a `term`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3c225-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3c225-107">Remarks</span></span>  
- <span data-ttu-id="3c225-108">\<Listheader > blok satırında bir tablo veya tanım listesi tanımlamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="3c225-108">The \<listheader> block is used to define the heading row of either a table or definition list.</span></span> <span data-ttu-id="3c225-109">Bir tablo tanımlarken, yalnızca bir giriş başlığı hükmün sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="3c225-109">When defining a table, you only need to supply an entry for term in the heading.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b0f9b-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b0f9b-107">Remarks</span></span>  
+ <span data-ttu-id="b0f9b-108">\<Listheader > bloğu, bir tablo ya da tanım listesinin başlık satırını tanımlamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="b0f9b-108">The \<listheader> block is used to define the heading row of either a table or definition list.</span></span> <span data-ttu-id="b0f9b-109">Bir tablo tanımlarken, yalnızca başlıktaki terim için bir giriş sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="b0f9b-109">When defining a table, you only need to supply an entry for term in the heading.</span></span>  
   
- <span data-ttu-id="3c225-110">Listedeki her bir öğe ile belirtilen bir \<öğesi > bloğu.</span><span class="sxs-lookup"><span data-stu-id="3c225-110">Each item in the list is specified with an \<item> block.</span></span> <span data-ttu-id="3c225-111">Tanım listesi oluştururken, her ikisi de belirtmeniz gerekir `term` ve `description`.</span><span class="sxs-lookup"><span data-stu-id="3c225-111">When creating a definition list, you will need to specify both `term` and `description`.</span></span> <span data-ttu-id="3c225-112">Ancak, bir tablo, madde işaretli liste veya numaralı liste için bir giriş sağlamanız yeterlidir `description`.</span><span class="sxs-lookup"><span data-stu-id="3c225-112">However, for a table, bulleted list, or numbered list, you only need to supply an entry for `description`.</span></span>  
+ <span data-ttu-id="b0f9b-110">Listedeki her öğe bir \<öğe > bloğuyla belirtilir.</span><span class="sxs-lookup"><span data-stu-id="b0f9b-110">Each item in the list is specified with an \<item> block.</span></span> <span data-ttu-id="b0f9b-111">Bir tanım listesi oluştururken, hem hem `term` `description`de belirtmeniz gerekecektir.</span><span class="sxs-lookup"><span data-stu-id="b0f9b-111">When creating a definition list, you will need to specify both `term` and `description`.</span></span> <span data-ttu-id="b0f9b-112">Ancak, bir tablo, madde işaretli liste veya numaralandırılmış liste için yalnızca bir giriş `description`sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="b0f9b-112">However, for a table, bulleted list, or numbered list, you only need to supply an entry for `description`.</span></span>  
   
- <span data-ttu-id="3c225-113">Bir listeyi veya tabloyu kadar olabilir \<öğesi > gerektiğinde engeller.</span><span class="sxs-lookup"><span data-stu-id="3c225-113">A list or table can have as many \<item> blocks as needed.</span></span>  
+ <span data-ttu-id="b0f9b-113">Bir liste veya tablo, gereken sayıda \<öğe > bloğuyla bulunabilir.</span><span class="sxs-lookup"><span data-stu-id="b0f9b-113">A list or table can have as many \<item> blocks as needed.</span></span>  
   
- <span data-ttu-id="3c225-114">Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.</span><span class="sxs-lookup"><span data-stu-id="3c225-114">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="b0f9b-114">Belge açıklamalarını bir dosyaya işlemek için [/doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.</span><span class="sxs-lookup"><span data-stu-id="b0f9b-114">Compile with [/doc](../../language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3c225-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="3c225-115">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b0f9b-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="b0f9b-115">Example</span></span>  
  [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]  
   
-## <a name="see-also"></a><span data-ttu-id="3c225-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3c225-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0f9b-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b0f9b-116">See also</span></span>
 
-- [<span data-ttu-id="3c225-117">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="3c225-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="3c225-118">Belge Açıklamaları için Önerilen Etiketler</span><span class="sxs-lookup"><span data-stu-id="3c225-118">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="b0f9b-117">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="b0f9b-117">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="b0f9b-118">Belge Açıklamaları için Önerilen Etiketler</span><span class="sxs-lookup"><span data-stu-id="b0f9b-118">Recommended Tags for Documentation Comments</span></span>](./recommended-tags-for-documentation-comments.md)
