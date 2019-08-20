@@ -1,46 +1,46 @@
 ---
-title: Visual Studio'da (C#) ifade ağaçlarında hata ayıklama
+title: Visual Studio 'da Ifade ağaçlarında hata ayıklamaC#()
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 93b1b660181cd81c31055f5d30d43e535171bb55
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 19d00aaa99c7ef08e291337f38bf74a3beac12b0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195979"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595229"
 ---
-# <a name="debugging-expression-trees-in-visual-studio-c"></a>Visual Studio'da (C#) ifade ağaçlarında hata ayıklama
-Uygulamalarınızın hata ayıklaması yaparken, yapısı ve içeriği ifade ağaçları analiz edebilirsiniz. İfade ağaç yapısı hızlı bir genel bakış edinmek için kullanabileceğiniz `DebugView` ifade ağaçları temsil eden özellik [özel bir söz dizimi kullanılarak](debugview-syntax.md). (Unutmayın `DebugView` yalnızca hata ayıklama modunda kullanılabilir.)  
+# <a name="debugging-expression-trees-in-visual-studio-c"></a>Visual Studio 'da Ifade ağaçlarında hata ayıklamaC#()
+Uygulamalarınızda hata ayıklarken ifade ağaçlarının yapısını ve içeriğini çözümleyebilirsiniz. İfade ağacı yapısına hızlı bir genel bakış almak için, [özel bir sözdizimi kullanarak](debugview-syntax.md)ifade `DebugView` ağaçlarını temsil eden özelliğini kullanabilirsiniz. `DebugView` (Yalnızca hata ayıklama modunda kullanılabilir.)  
 
-![DebugView Visual Studio hata ayıklayıcısı içinde ifade ağacı](media/debugging-expression-trees-in-visual-studio/debugview.png)
+![Visual Studio hata ayıklayıcı içindeki ifade ağacının DebugView 'ı](media/debugging-expression-trees-in-visual-studio/debugview.png)
 
-Bu yana `DebugView` bir dize ise kullanabilirsiniz [yerleşik metin Görselleştiriciye](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer) seçerek birden çok satırda, görüntülemek için **metin görselleştiricisi** Büyüteç simgesinin yanındaki gelen `DebugView` Etiket.
+Bir dize `DebugView`olduğundan, etiketin yanındaki büyüteç simgesinden **metin görselleştiricisi** ' i seçerek birden çok satırda görüntülemek için [yerleşik metin Görselleştirici](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer) ' u kullanabilirsiniz. `DebugView`
 
- ![Metin Görselleştirici 'DebugView' sonuçlarına uygulandı](media/debugging-expression-trees-in-visual-studio/string_visualizer.png)
+ ![' DebugView ' sonuçlarına uygulanan metin görselleştiricisi](media/debugging-expression-trees-in-visual-studio/string_visualizer.png)
 
-Alternatif olarak, yükleyip kullanabilir [özel Görselleştirici](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data) için ifade ağaçları gibi:
+Alternatif olarak, şu gibi bir ifade ağaçları için [özel Görselleştirici](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data) yükleyebilir ve kullanabilirsiniz:
 
-* [Okunabilir ifadeleri](https://github.com/agileobjects/ReadableExpressions) ([MIT lisansı](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md), kullanılabilir [Visual Studio Market](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers)), işler ifade ağacı C# kod:
+* [Okunabilir ifadeler](https://github.com/agileobjects/ReadableExpressions) ([](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md) [Visual Studio Market](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers)), ifade ağacını kod olarak C# işler:
 
-  ![Okunabilir ifadeleri görselleştiricisi](media/debugging-expression-trees-in-visual-studio/readable_expressions_visualizer.png)
+  ![Okunabilir Ifadeler görselleştiricisi](media/debugging-expression-trees-in-visual-studio/readable_expressions_visualizer.png)
 
-* [İfade ağacı Görselleştiricisini](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([MIT lisansı](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)), ifade ağacı, özelliklerini, grafik bir görünümünü sağlar ve ilgili nesneleri:
+* [Ifade ağacı görselleştiricisi](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([MIT Lisansı](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)), ifade ağacının, özelliklerinin ve ilgili nesnelerin grafik görünümünü sağlar:
 
-  ![ExpressionToString Görselleştirici](media/debugging-expression-trees-in-visual-studio/expression_to_string_visualizer.png)
+  ![ExpressionToString görselleştiricisi](media/debugging-expression-trees-in-visual-studio/expression_to_string_visualizer.png)
 
-### <a name="to-open-a-visualizer-for-an-expression-tree"></a>İfade ağacı bir görselleştiriciyi açmak için  
+### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Bir ifade ağacı için Görselleştirici açmak için  
   
-1. İfade ağacında yanında Büyüteç simgesine tıklayarak **DataTips**, **Watch** penceresinde **Otolar** penceresinde veya **Yereller** penceresi.  
+1. **DataTips**, bir **Gözcü** penceresinde, **oto** penceresinde veya **Locals** penceresinde ifade ağacının yanında görünen büyüteç simgesine tıklayın.  
   
-     Kullanılabilir görselleştiriciler listesi görüntülenir.: 
+     Kullanılabilir görselleştiricilerin listesi görüntülenir.: 
 
-      ![Visual Studio'dan açılış görselleştiriciler](media/debugging-expression-trees-in-visual-studio/expression_tree_visualizers.png)
+      ![Visual Studio 'dan Görselleştiriciler açılıyor](media/debugging-expression-trees-in-visual-studio/expression_tree_visualizers.png)
 
-2. Kullanmak istediğiniz Görselleştirici'a tıklayın.  
+2. Kullanmak istediğiniz Görselleştirici tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İfade ağaçları (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [İfade ağaçları (C#)](./index.md)
 - [Visual Studio’da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio)
 - [Özel Görselleştirici Oluşturma](/visualstudio/debugger/create-custom-visualizers-of-data)
-- [`DebugView` Söz dizimi](debugview-syntax.md)
+- [`DebugView`sözdizimi](debugview-syntax.md)

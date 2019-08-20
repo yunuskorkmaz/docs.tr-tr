@@ -1,65 +1,65 @@
 ---
-title: Yöntemleri - C# Programlama Kılavuzu
+title: Yöntemler- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: b97ce10cfb2e35beecf2c96acbac9c4ac8462c1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7255d4a2c57ea9e0469174cfe139a4ab54d62372
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646192"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596401"
 ---
 # <a name="methods-c-programming-guide"></a>Yöntemler (C# Programlama Kılavuzu)
-Bir dizi deyim içeren kod bloğu bir yöntemdir. Bir program yöntemini çağırarak ve tüm gerekli metot bağımsız değişkenleri belirtme yürütülecek deyimler neden olur. C# içinde yürütülen her yönerge bir yöntem bağlamında gerçekleştirilir. Main yöntemi her C# uygulaması için giriş noktasıdır ve programı başlatıldığında ortak dil çalışma zamanı tarafından (CLR) çağrılır.  
+Yöntemi, bir dizi deyim içeren bir kod bloğudur. Program, metodu çağırarak ve gerekli Yöntem bağımsız değişkenlerini belirterek deyimlerin yürütülmesine neden olur. ' C#De, her yürütülen yönerge bir yöntem bağlamında gerçekleştirilir. Main yöntemi her C# uygulamanın giriş noktasıdır ve program başlatıldığında ortak dil çalışma zamanı (CLR) tarafından çağrılır.  
   
 > [!NOTE]
->  Bu konuda, adlandırılmış yöntemler anlatılmaktadır. Anonim işlevler hakkında daha fazla bilgi için bkz: [anonim işlevler](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
+>  Bu konuda adlandırılmış yöntemler ele alınmaktadır. Anonim işlevler hakkında daha fazla bilgi için bkz. [Anonim işlevler](../statements-expressions-operators/anonymous-functions.md).  
   
-## <a name="method-signatures"></a>Yöntem imzaları  
- Yöntem içinde bildirilen bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapı](../../../csharp/language-reference/keywords/struct.md) erişim düzeyi gibi belirterek `public` veya `private`, gibi isteğe bağlı değiştiricilere `abstract` veya `sealed`, dönüş değeri, yöntem ve herhangi bir yöntem parametre adı. Bu bölümleri metodun imzası birleştirilir.  
+## <a name="method-signatures"></a>Yöntem Imzaları  
+ Yöntemler veya, dönüş değeri, yöntemin [](../../language-reference/keywords/struct.md) adı ve herhangi bir yöntem parametresi gibi erişim `public` düzeyi `private`belirtilerek, `abstract` veya gibi isteğe bağlı `sealed`değiştiriciler belirtilerek bir [sınıf](../../language-reference/keywords/class.md) veya yapı içinde bildirilmiştir. . Bu parçalar, yönteminin imzasıdır.  
   
 > [!NOTE]
->  Bir yöntemin dönüş türü yöntemi aşırı yükleme amaçları için yöntem imzasının bir parçası değil. Ancak, bir temsilci ve işaret yöntemi arasındaki uyumluluk belirlerken metodun imzası bir parçası olur.  
+>  Bir yöntemin dönüş türü, yöntem aşırı yüklemesi amaçları için yöntemin imzasının bir parçası değildir. Ancak, bir temsilci ve işaret ettiği yöntem arasındaki uyumluluğun belirlenmesi sırasında yönteminin imzasının bir parçasıdır.  
   
- Yöntem parametreleri ayraç içine alınır ve virgülle ayrılır. Boş ayraçlar yöntemi hiçbir parametre gerektirmiyor gösterir. Bu sınıf, dört yöntemler içerir:  
+ Yöntem parametreleri parantez içine alınır ve virgülle ayrılır. Boş parantezler, yöntemin hiçbir parametre gerektirmediğini belirtir. Bu sınıf dört yöntem içerir:  
   
  [!code-csharp[csProgGuideObjects#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#40)]  
   
-## <a name="method-access"></a>Metot erişimini  
- Bir nesne üzerinde bir yöntemi çağırmak için bir alan erişme gibi olur. Nesne adından sonra bir nokta, adı yöntemi ve parantez ekleyin. Bağımsız değişkenler, parantez içinde listelenir ve virgülle ayrılır. Yöntemlerinin `Motorcycle` sınıfı bu nedenle aşağıdaki örnekte olduğu gibi çağrılabilir:  
+## <a name="method-access"></a>Yöntem erişimi  
+ Bir nesne üzerinde bir yöntemi çağırmak, bir alana erişme gibidir. Nesne adından sonra bir nokta, yöntemin adı ve parantez ekleyin. Bağımsız değişkenler parantez içinde listelenir ve virgülle ayrılır. Bu nedenle, `Motorcycle` sınıfının yöntemleri aşağıdaki örnekte olduğu gibi çağrılabilir:  
   
  [!code-csharp[csProgGuideObjects#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#41)]  
   
-## <a name="method-parameters-vs-arguments"></a>Yöntem parametreleri vs. Arguments  
- Yöntem tanımını adlarını ve türlerini, gerekli olan herhangi bir parametre belirtir. Kod çağrıları metodu çağrılırken, her parametresi için bağımsız değişken olarak adlandırılan somut değerleri sağlar. Bağımsız değişken parametre türü ile uyumlu olması gerekir ancak çağıran kod içinde kullanılan bir bağımsız değişken adı (varsa) aynı adlı bir parametre olarak yönteminde tanımlanmış olması gerekmez. Örneğin:  
+## <a name="method-parameters-vs-arguments"></a>Yöntem parametreleri ile Arguments  
+ Yöntem tanımı, gerekli parametrelerin adlarını ve türlerini belirtir. Kodu çağırırken yöntemi çağırdığında, her parametre için bağımsız değişkenler olarak adlandırılan somut değerler sağlar. Bağımsız değişkenlerin parametre türüyle uyumlu olması gerekir, ancak çağıran kodda kullanılan bağımsız değişken adı (varsa) yöntemde tanımlanan parametre ile aynı olmak zorunda değildir. Örneğin:  
   
  [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]  
   
-## <a name="passing-by-reference-vs-passing-by-value"></a>Başvuru vs geçirerek. Değere göre geçirme  
- Varsayılan olarak, bir değer türü bir yönteme geçildiğinde bir kopyasını nesne yerine geçirilir. Bu nedenle, değişiklikleri bağımsız değişkene, çağırma yöntemi özgün kopyası üzerinde etkisi yoktur. Ref anahtar sözcüğü kullanılarak başvuruya göre bir değer türü geçirebilirsiniz. Daha fazla bilgi için [değer türü parametrelerini geçirme](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md). Yerleşik türlerin listesi için bkz. [değer türleri tablosu](../../../csharp/language-reference/keywords/value-types-table.md).  
+## <a name="passing-by-reference-vs-passing-by-value"></a>Başvuruya göre geçirme ile Değere göre geçirme  
+ Varsayılan olarak, bir değer türü bir yönteme geçirildiğinde nesnenin kendisi yerine bir kopya geçirilir. Bu nedenle, bağımsız değişkende yapılan değişikliklerin, çağırma yönteminde orijinal kopya üzerinde hiçbir etkisi yoktur. Ref anahtar sözcüğünü kullanarak bir değer türü başvuruya göre geçirebilirsiniz. Daha fazla bilgi için bkz. [değer türü parametrelerini geçirme](./passing-value-type-parameters.md). Yerleşik değer türlerinin bir listesi için bkz. [değer türleri tablosu](../../language-reference/keywords/value-types-table.md).  
   
- Nesnesine bir başvuru, başvuru türünde bir nesne bir yönteme geçildiğinde geçirilir. Diğer bir deyişle, yöntem, nesnenin kendisini değil, ancak nesnenin konumu gösteren bir bağımsız değişken alır. Bu başvuruyu kullanarak bir nesnenin üyesi değiştirirseniz, nesne değişkeni değer olarak bile değişiklik çağırma yöntemi bağımsız değişken yansıtılır.  
+ Başvuru türündeki bir nesne yöntemine geçirildiğinde, nesnesine bir başvuru geçirilir. Diğer bir deyişle, yöntem nesnenin kendisini değil, nesnenin konumunu gösteren bir bağımsız değişken alır. Bu başvuruyu kullanarak nesnesinin bir üyesini değiştirirseniz, nesneyi değere göre iletseniz bile, değişiklik çağırma yöntemindeki bağımsız değişkende yansıtılır.  
   
- Bir başvuru türü kullanarak oluşturduğunuz `class` anahtar sözcüğü, aşağıdaki örnekte gösterildiği gibi.  
+ Aşağıdaki örnekte gösterildiği gibi `class` anahtar sözcüğünü kullanarak bir başvuru türü oluşturursunuz.  
   
  [!code-csharp[csProgGuideObjects#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#42)]  
   
- Şimdi, bu tür bir yönteme temel alan bir nesne geçirirseniz, nesnesine bir başvuru geçirilir. Aşağıdaki örnek, türü bir nesne geçirir `SampleRefType` yöntemine `ModifyObject`.  
+ Artık, bu türü temel alan bir nesneyi bir yönteme geçirirseniz, nesnesine bir başvuru geçirilir. Aşağıdaki örnek, türünde `SampleRefType` bir nesnesini yöntemine `ModifyObject`geçirir.  
   
  [!code-csharp[csProgGuideObjects#75](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#75)]  
   
- Bu bağımsız değişken değerine göre bir yönteme geçirir, örnek önceki örnekteki gibi temelde aynı şeyi yapar. Ancak, bir başvuru türü kullanıldığından sonucu farklıdır. İçinde yapılan değişikliği `ModifyObject` için `value` parametre alanını `obj`, ayrıca değiştirir `value` bağımsız değişken alan `rt`, `TestRefType` yöntemi. `TestRefType` Yöntemi 33 çıkış olarak görüntüler.  
+ Örnek temelde bir yönteme değere göre bir bağımsız değişken geçirdiğinden önceki örnekle aynı şeyi yapar. Ancak, bir başvuru türü kullanıldığından, sonuç farklıdır. Parametresinin `ModifyObject` `value` alanıüzerindeyapılan`value` değişiklik `rt`, yöntemi`TestRefType` içindeki bağımsız değişkenin alanını da değiştirir. `obj` `TestRefType` Yöntemi çıkış olarak 33 görüntüler.  
   
- Başvuru türleri başvuruya göre ve değere göre geçirilecek hakkında daha fazla bilgi için bkz. [başvuru türü parametreleri geçirme](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md) ve [başvuru türleri](../../../csharp/language-reference/keywords/reference-types.md).  
+ Başvuru türlerini başvuruya ve değere göre geçirme hakkında daha fazla bilgi için bkz. [başvuru türü parametrelerini](./passing-reference-type-parameters.md) ve [başvuru türlerini](../../language-reference/keywords/reference-types.md)geçirme.  
   
 ## <a name="return-values"></a>Dönüş Değerleri  
-Yöntemler, çağırana bir değer döndürebilir. Dönüş türü, yöntem adından önce listelenen bir tür değil `void`, yöntem kullanarak değer döndürebilir `return` anahtar sözcüğü. With deyimi `return` dönüş türüyle eşleşen bir değere göre anahtar sözcüğünü yöntemi çağırana değeri döndürür. 
+Yöntemler çağırana bir değer döndürebilir. Dönüş türü, yöntem adından önce listelenen tür değilse `void`, yöntemi `return` anahtar sözcüğünü kullanarak değeri döndürebilir. Dönüş türüyle eşleşen bir `return` değer gelen anahtar sözcüğünü içeren bir ifade, bu değeri çağıran metoda döndürür. 
 
-Değeri, çağırana değeri veya C# 7.0 ile başlayan tarafından döndürülebilir [başvuruya göre](ref-returns.md). Değerleri çağırana döndürülen başvuruya göre `ref` anahtar sözcüğü Yöntem imzasında kullanılan ve her takip eden `return` anahtar sözcüğü. Örneğin, aşağıdaki yöntemi imza ve dönüş deyimi belirtmek yöntem bir değişken adları döndürür `estDistance` çağırana başvuruya göre.
+Değer, çağırarak değere göre veya 7,0 ile C# başlayarak [başvuruya göre](ref-returns.md)döndürülebilir. `ref` Anahtar sözcüğü Yöntem imzasında kullanılıyorsa ve her `return` bir anahtar sözcüğü izliyorsa, değerler, çağıran başvuruya göre döndürülür. Örneğin, aşağıdaki yöntem imzası ve Return deyimleri, yöntemin çağırana başvuruya göre değişken adlarını `estDistance` döndürdüğünü gösterir.
 
 ```csharp
 public ref double GetEstimatedDistance()
@@ -68,25 +68,25 @@ public ref double GetEstimatedDistance()
 }
 ```
 
-`return` Anahtar sözcüğü de yöntemin yürütülmesini durdurur. Dönüş türü ise `void`, `return` deyimi bir değer olmadan, yöntemin yürütülmesini durdurmak yine de kullanışlıdır. Olmadan `return` anahtar sözcüğü, yöntem durdurur kod bloğunun sonuna ulaştığında yürütülüyor. Yöntemleriyle void olmayan dönüş türü kullanmak için gerekli `return` bir değer döndürmek için anahtar sözcüğü. Örneğin, bu iki yöntem kullanmak `return` anahtar sözcüğü, tamsayı döndüren için:  
+`return` Anahtar sözcüğü, yönteminin yürütülmesini de sonlandırır. Dönüş türü ise `void`, değeri olmayan bir `return` ifade, metodun yürütülmesini durdurmak için hala yararlıdır. `return` Anahtar sözcüğü olmadan Yöntem, kod bloğunun sonuna ulaştığında yürütmeyi durdurur. Bir değer döndürmek için `return` anahtar sözcüğünü kullanmak için void olmayan bir dönüş türüne sahip metotlar gereklidir. Örneğin, bu iki yöntem tamsayılar döndürmek için `return` anahtar sözcüğünü kullanır:  
   
  [!code-csharp[csProgGuideObjects#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#44)]  
   
- Yöntemi tarafından döndürülen bir değer kullanmak için yöntemi çağrılırken, aynı türde bir değer yeterli yöntemi çağrının kendisini her yerde kullanabilirsiniz. Ayrıca, dönüş değeri bir değişkene atayabilirsiniz. Örneğin, aşağıdaki iki kod örnekleri ve aynı hedefe ulaşmak:  
+ Bir yöntemden döndürülen bir değer kullanmak için, çağırma yöntemi yöntemi tek bir değer olan her yerde, aynı türde bir değer yeterli olacak şekilde kullanabilir. Dönüş değerini bir değişkene de atayabilirsiniz. Örneğin, aşağıdaki iki kod örneği aynı hedefi yerine getirmektedir:  
   
  [!code-csharp[csProgGuideObjects#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#45)]  
   
  [!code-csharp[csProgGuideObjects#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#46)]  
   
- Yerel değişken, bu durumda, kullanarak `result`depolamak için bir değer isteğe bağlıdır. Yöntemin tüm kapsam için bağımsız değişkenin özgün değeri depolamak gerekiyorsa gerekli olabilir veya kodun okunabilirliğini yardımcı olabilir.  
+ Bu durumda `result`, bir değeri depolamak için yerel bir değişken kullanmak isteğe bağlıdır. Kodun okunabilirliğini yardımcı olabilir veya metodun tüm kapsamı için bağımsız değişkenin özgün değerini depolamanız gerekirse gerekli olabilir.  
 
-Bir yönteme başvuru tarafından döndürülen bir değer kullanmak için size bildirmelidir bir [ref yerel](ref-returns.md#ref-locals) değeri değiştirmek istiyorsanız, değişken. Örneğin, varsa `Planet.GetEstimatedDistance` yöntemi döndürür bir <xref:System.Double> değere Başvuruya göre bunu aşağıdaki gibi kod ile bir ref yerel değişken tanımlayabilirsiniz:
+Bir yöntemden başvuruya göre döndürülen bir değeri kullanmak için, değerini değiştirmek istiyorsanız bir [ref yerel](ref-returns.md#ref-locals) değişkeni bildirmeniz gerekir. Örneğin, `Planet.GetEstimatedDistance` yöntemi başvuruya göre bir <xref:System.Double> değer döndürürse, bunu aşağıdaki gibi kodla bir ref yerel değişkeni olarak tanımlayabilirsiniz:
 
 ```csharp
 ref int distance = plant 
 ```
 
-Çok boyutlu bir dizi döndüren bir yöntemi, `M`, dizinin değiştiren içeriği çağıran işlevin diziye aktarılırsa gerekli olmadığı `M`.  Sonuçta elde edilen diziden döndürebilir `M` iyi stil veya değerler, ancak işlev akışını C# değere göre tüm başvuru türleri geçirir ve bir dizi başvuru değeri dizi işaretçisi olduğundan gerekli değildir. Yönteminde `M`, aşağıdaki örnekte gösterildiği gibi dizi için bir başvuruya sahip herhangi bir kod tarafından takip edilebilir olmasını dizinin içeriğini herhangi bir değişiklik olan.  
+Arama işlevi diziyi içine `M` `M`geçirse, dizinin içeriğini değiştiren bir yöntemden çok boyutlu bir dizi döndürülüyor.  Elde edilen diziyi, iyi stil veya `M` işlevsel akış için ' den döndürebilirsiniz, ancak bu gerekli değildir çünkü C# tüm başvuru türlerini değere göre geçirir ve dizi başvurusunun değeri dizi işaretçisidir. Yönteminde `M`, dizideki içeriklerinde yapılan tüm değişiklikler, aşağıdaki örnekte gösterildiği gibi diziye başvuran herhangi bir kod tarafından Observable ' tır.  
   
 ```csharp  
 static void Main(string[] args)
@@ -108,30 +108,30 @@ public static void FillMatrix(int[,] matrix)
 }
 ```  
   
- Daha fazla bilgi için [dönüş](../../../csharp/language-reference/keywords/return.md).  
+ Daha fazla bilgi için bkz. [Return](../../language-reference/keywords/return.md).  
   
 ## <a name="async-methods"></a>Zaman uyumsuz yöntemler  
- Zaman uyumsuz özelliğini kullanarak, açık geri çağırmaları kullanarak veya kodunuzun birden çok yöntemlerde veya lambda ifadelerinde el ile bölme olmadan zaman uyumsuz yöntemler çağırabilirsiniz. 
+ Async özelliğini kullanarak, açık geri çağırmaları kullanmadan zaman uyumsuz yöntemleri çağırabilir veya kodunuzu birden çok yöntemde veya Lambda ifadelerinde el ile böedebilirsiniz. 
   
- Bir yöntem ile işaretlerseniz [zaman uyumsuz](../../../csharp/language-reference/keywords/async.md) kullanabileceğiniz değiştiricisi [await](../../../csharp/language-reference/keywords/await.md) yönteminde işleci. Denetim, zaman uyumsuz yöntemdeki bir await ifadesine ulaştığında, Denetim çağırana döner ve awaited görevi tamamlanıncaya kadar yöntemin ediyor askıya alındı. Görev tamamlandığında, yürütme yönteminde devam edebilir.  
+ [Zaman uyumsuz](../../language-reference/keywords/async.md) değiştiriciyle bir yöntemi işaretlerseniz, yönteminde [await](../../language-reference/keywords/await.md) işlecini kullanabilirsiniz. Denetim zaman uyumsuz yöntemde bir await ifadesine ulaştığında denetim çağırana döner ve beklenen görev tamamlanana kadar yöntemdeki ilerleme durumu askıya alınır. Görev tamamlandığında, yürütme yöntemi içinde çalışmaya çalışabilir.  
   
 > [!NOTE]
->  Henüz tamamlanmadı ilk beklenen nesne karşılaşır veya zaman uyumsuz yöntemin sonuna alır, zaman uyumsuz yöntemini çağırana döner hangisi önce gerçekleşirse.  
+>  Zaman uyumsuz bir yöntem, henüz tamamlanmamış olan ilk beklemiş nesneyle karşılaştığında çağırana döner veya zaman uyumsuz yöntemin sonuna kadar, hangisi önce gerçekleşiyorsa.  
   
- Bir zaman uyumsuz yöntem dönüş türüne sahip olabilir <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, veya void. Dönüş türü void dönüş türü void gerekli olduğu olay işleyicilerini tanımlamak için öncelikle kullanılır. Void döndüren bir zaman uyumsuz yöntem beklenemez ve void döndüren bir yöntemi çağıran kişi, yöntemin oluşturduğu özel durumları yakalayamaz.  
+ Zaman uyumsuz bir yöntem <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, veya void dönüş türüne sahip olabilir. Void dönüş türü birincil olarak, bir void dönüş türünün gerekli olduğu olay işleyicilerini tanımlamak için kullanılır. Void döndüren zaman uyumsuz bir yöntem beklenemez ve void döndüren bir yöntemi çağıran yöntemin aldığı özel durumları yakalayamaz.  
   
- Aşağıdaki örnekte, `DelayAsync` dönüş türüne sahip bir zaman uyumsuz yöntem <xref:System.Threading.Tasks.Task%601>. `DelayAsync` sahip bir `return` deyimi bir tamsayı döndürür. Bu nedenle yöntemi bildirimini `DelayAsync` dönüş türüne sahip olmalıdır `Task<int>`. Dönüş türü olduğundan `Task<int>`, değerlendirmesi `await` ifadesinde `DoSomethingAsync` aşağıdaki deyimi gösterildiği gibi bir tamsayı üretir: `int result = await delayTask`.  
+ Aşağıdaki örnekte, `DelayAsync` dönüş <xref:System.Threading.Tasks.Task%601>türüne sahip bir zaman uyumsuz yöntem. `DelayAsync`, bir `return` tamsayı döndüren bir ifadeye sahiptir. Bu nedenle, öğesinin `DelayAsync` yöntem bildirimi bir dönüş `Task<int>`türüne sahip olmalıdır. Dönüş türü olduğu için, `Task<int>`içindeki `await` `DoSomethingAsync` ifadesinin değerlendirmesi aşağıdaki deyim tarafından gösterildiği gibi bir tamsayı oluşturur: `int result = await delayTask`.  
   
- `startButton_Click` Yöntemi, bir zaman uyumsuz yöntemin dönüş türü void olan bir örnek verilmiştir. Çünkü `DoSomethingAsync` bir zaman uyumsuz yöntem çağrısı için görev `DoSomethingAsync` , aşağıdaki deyimi gösterildiği gibi beklenmesini gerekir: `await DoSomethingAsync();`. `startButton_Click` Yöntemi ile tanımlanmalıdır `async` değiştirici yöntemi sahip olduğu bir `await` ifade.  
+ `startButton_Click` Yöntemi, void dönüş türüne sahip bir zaman uyumsuz metoda bir örnektir. Zaman `DoSomethingAsync` uyumsuz bir yöntem olduğundan, `DoSomethingAsync` çağrının görevi beklenmelidir, çünkü aşağıdaki deyimde gösterildiği gibi: `await DoSomethingAsync();`. Metodun `startButton_Click` `async` bir ifadesi`await` olduğundan, metodun değiştirici ile tanımlanması gerekir.  
   
  [!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]  
   
- Herhangi bir zaman uyumsuz yöntem bildiremezsiniz [ref](../../../csharp/language-reference/keywords/ref.md) veya [kullanıma](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametreleri, ancak bu tür parametreleri olan yöntemleri çağırabilir.  
+ Zaman uyumsuz bir yöntem herhangi bir [ref](../../language-reference/keywords/ref.md) veya [Out](../../language-reference/keywords/out-parameter-modifier.md) parametresi bildiremez, ancak bu parametrelere sahip yöntemleri çağırabilir.  
   
- Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. [Asynchronous Programming with async ve await](../../../csharp/programming-guide/concepts/async/index.md), [zaman uyumsuz programlarda akış kontrolü](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md), ve [Async Return Types](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
+ Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama](../concepts/async/index.md), [zaman uyumsuz programlarda denetim akışı](../concepts/async/control-flow-in-async-programs.md)ve [zaman uyumsuz dönüş türleri](../concepts/async/async-return-types.md).  
   
 ## <a name="expression-body-definitions"></a>İfade gövdesi tanımları  
- Yalnızca hemen bir ifade sonucunu döndürür veya Yöntemin gövdesi tek bir deyimde olan yöntem tanımlarını yaygındır.  Kullanarak bu yöntemleri tanımlamak için bir söz dizimi kısayolu yok `=>`:  
+ Yalnızca bir ifadenin sonucuyla hemen dönen veya yöntemin gövdesi olarak tek bir deyimi olan yöntem tanımlarının olması yaygındır.  Kullanarak `=>`bu tür yöntemleri tanımlamaya yönelik bir sözdizimi kısayolu vardır:  
   
 ```csharp  
 public Point Move(int dx, int dy) => new Point(x + dx, y + dy);   
@@ -142,30 +142,30 @@ public string Name => First + " " + Last;
 public Customer this[long id] => store.LookupCustomer(id);  
 ```  
   
- Yöntem döndürüyorsa `void` veya Yöntemin gövdesi bir deyim ifadesi (aynı lambdalar gibi) olmalıdır. bir zaman uyumsuz yöntem.  Özellikler ve dizin oluşturucular için bunlar salt okunur olmalıdır ve kullanmadığınız `get` erişimci anahtar sözcüğü.  
+ Yöntemi bir zaman uyumsuz `void` yöntem döndürürse veya ise, yöntemin gövdesi bir deyim ifadesi olmalıdır (Lambdalar ile aynı).  Özellikler ve Dizin oluşturucular için, bunların salt okunmaları ve `get` erişimci anahtar sözcüğünü kullanmanız gerekir.  
   
 ## <a name="iterators"></a>Yineleyiciler  
- Bir yineleyici listesini veya bir dizi gibi bir koleksiyon üzerinde özel yineleme gerçekleştirir. Yineleyici [yield return](../../../csharp/language-reference/keywords/yield.md) her öğeyi bir defada döndürmek için deyimi. Olduğunda bir [yield return](../../../csharp/language-reference/keywords/yield.md) deyimine ulaşıldığında, kodun geçerli konumu anımsanacak. Yürütme, yineleyici sonraki sefer çağrıldığında bu konumdan yeniden başlatılır.  
+ Yineleyici, bir koleksiyon üzerinde liste veya dizi gibi özel bir yineleme gerçekleştirir. Bir yineleyici, her öğeyi birer birer döndürmek için [yield return](../../language-reference/keywords/yield.md) ifadesini kullanır. Bir [yield return](../../language-reference/keywords/yield.md) ifadesine ulaşıldığında, koddaki geçerli konum hatırlanır. Yineleyici bir sonraki sefer çağrıldığında, yürütme o konumdan yeniden başlatılır.  
   
- Bir yineleyici kullanarak istemci koddan çağırmak bir [foreach](../../../csharp/language-reference/keywords/foreach-in.md) deyimi.  
+ Bir [foreach](../../language-reference/keywords/foreach-in.md) ifadesi kullanarak istemci kodundan bir yineleyici çağırın.  
   
- Dönüş türü bir yineleyicinin olabilir <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, veya <xref:System.Collections.Generic.IEnumerator%601>.  
+ Yineleyicinin <xref:System.Collections.IEnumerable>dönüş türü <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.IEnumerator>,,, veya <xref:System.Collections.Generic.IEnumerator%601>olabilir.  
   
- Daha fazla bilgi için [yineleyiciler](../../../csharp/programming-guide/concepts/iterators.md).  
+ Daha fazla bilgi için bkz. [yineleyiciler](../concepts/iterators.md).  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [C# Programlama Kılavuzu](../index.md)
 - [Sınıflar ve Yapılar](index.md)
 - [Erişim Değiştiricileri](access-modifiers.md)
 - [Statik Sınıflar ve Statik Sınıf Üyeleri](static-classes-and-static-class-members.md)
 - [Devralma](inheritance.md)
 - [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](abstract-and-sealed-classes-and-class-members.md)
-- [params](../../../csharp/language-reference/keywords/params.md)
-- [return](../../../csharp/language-reference/keywords/return.md)
-- [out](../../../csharp/language-reference/keywords/out.md)
-- [ref](../../../csharp/language-reference/keywords/ref.md)
+- [params](../../language-reference/keywords/params.md)
+- [return](../../language-reference/keywords/return.md)
+- [out](../../language-reference/keywords/out.md)
+- [ref](../../language-reference/keywords/ref.md)
 - [Parametreleri Geçirme](passing-parameters.md)

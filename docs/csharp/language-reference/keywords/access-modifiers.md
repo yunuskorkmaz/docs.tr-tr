@@ -1,52 +1,52 @@
 ---
-title: Erişim değiştiricileri - C# başvurusu
+title: Erişim değiştiricileri- C# başvuru
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: 587f1b03292db643d721e599ea93c39ba188117d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5568d79c4a13b7b0db5a46bb4ebb2168ea66a2c9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593002"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606100"
 ---
 # <a name="access-modifiers-c-reference"></a>Erişim Değiştiricileri (C# Başvurusu)
-Erişim değiştiricileri öğesinin bildirilen erişilebilirliği üyesi veya bir tür belirtmek için kullanılan anahtar sözcüklerdir. Bu bölümde, dört erişim değiştiricilerini tanıtır:  
+Erişim değiştiriciler, bir üyenin veya bir türün belirtilen erişilebilirliğini belirtmek için kullanılan anahtar kelimelerdir. Bu bölüm dört erişim değiştiricilerini tanıtır:  
   
 - `public`
 - `protected`
 - `internal`
 - `private`
   
- Erişim değiştiricilerini kullanarak aşağıdaki altı erişilebilirlik düzeyleri belirtilebilir:  
+ Aşağıdaki altı erişilebilirlik düzeyi erişim değiştiricilerini kullanarak belirtilebilir:  
   
-- [`public`](public.md): Erişim sınırlı değildir.  
+- [`public`](public.md): Erişim kısıtlı değil.  
   
-- [`protected`](protected.md): Erişim içeren sınıfı veya içeren sınıfından türetilen türler sınırlıdır.  
+- [`protected`](protected.md): Erişim, kapsayan sınıftan türetilmiş kapsayan sınıf veya türlerle sınırlıdır.  
   
-- [`internal`](internal.md): Geçerli derleme için erişim sınırlıdır.  
+- [`internal`](internal.md): Erişim, geçerli derleme ile sınırlıdır.  
   
-- [`protected internal`](protected-internal.md): Geçerli derleme veya içeren sınıfından türetilen türler için erişim sınırlıdır.  
+- [`protected internal`](protected-internal.md): Erişim, geçerli derleme veya kapsayan sınıftan türetilmiş türlerle sınırlıdır.  
   
-- [`private`](private.md): Erişimi, kapsadığı tür için sınırlıdır.  
+- [`private`](private.md): Erişim, kapsayan tür ile sınırlıdır.  
 
-- [`private protected`](private-protected.md): Erişim içeren sınıfı veya geçerli derlemedeki içeren sınıfından türetilen türler sınırlıdır.  
+- [`private protected`](private-protected.md): Erişim, geçerli derleme içindeki içeren sınıftan türetilmiş kapsayan sınıf veya türlerle sınırlıdır.  
   
- Bu bölümde Ayrıca aşağıdakileri sağlar:  
+ Bu bölüm ayrıca şunları da tanıtır:  
   
-- [Erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md): Altı düzeyde erişilebilirlik bildirmek için dört erişim değiştiricilerini kullanarak.  
+- [Erişilebilirlik düzeyleri](./accessibility-levels.md): Altı erişilebilirlik düzeyi tanımlamak için dört erişim değiştiricilerini kullanma.  
   
-- [Erişilebilirlik etki alanı](../../../csharp/language-reference/keywords/accessibility-domain.md): Burada, program bölümlerde üyesi başvurulabilir belirtir.  
+- [Erişilebilirlik etki alanı](./accessibility-domain.md): Program bölümlerinde, bir üyeye başvurulabileceği yeri belirtir.  
   
-- [Erişilebilirlik düzeylerinin kullanılmasındaki kısıtlamalar](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): Erişilebilirlik düzeylerinin kullanılmasındaki kısıtlamalar özetini bildirilir.  
+- [Erişilebilirlik düzeylerini kullanma kısıtlamaları](./restrictions-on-using-accessibility-levels.md): Tanımlanan erişilebilirlik düzeylerini kullanma kısıtlamalarının Özeti.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
-- [Erişim Değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [Erişim Anahtar Sözcükleri](../../../csharp/language-reference/keywords/access-keywords.md)
-- [Değiştiriciler](../../../csharp/language-reference/keywords/modifiers.md)
+- [C#Başvurunun](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Anahtar Sözcükleri](./index.md)
+- [Erişim Değiştiricileri](../../programming-guide/classes-and-structs/access-modifiers.md)
+- [Erişim Anahtar Sözcükleri](./access-keywords.md)
+- [Değiştiriciler](./modifiers.md)

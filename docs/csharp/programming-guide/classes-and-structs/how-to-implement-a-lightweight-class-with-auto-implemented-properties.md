@@ -1,31 +1,31 @@
 ---
-title: 'Nasıl yapılır: Otomatik uygulanan özelliklerle - hafif bir sınıf uygulama C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Otomatik uygulanan özelliklerle hafif bir sınıf uygulama- C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: f9884f353e58ff6119e3bc3b95aa55f0f60d0ad5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 4cbed8145487325d8b06882bbab843321a49d0d3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398491"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596910"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Nasıl yapılır: Otomatik uygulanan özelliklerle hafif bir sınıf uygulama (C# Programlama Kılavuzu)
 
-Bu örnekte, yalnızca otomatik uygulanan özellikler kümesi yalıtılacak veren sabit hafif bir sınıf oluşturma işlemi gösterilmektedir. Başvuru türü anlamları kullandığınızda gerekir bu tür bir yapı yerine bir yapı kullanın.
+Bu örnek, yalnızca bir otomatik uygulanan özellikler kümesini kapsüllemek için hizmet veren sabit bir basit sınıfın nasıl oluşturulacağını gösterir. Başvuru türü semantiğini kullanmanız gerektiğinde, yapı yerine bu tür yapıyı kullanın.
 
-Sabit bir özelliğin iki şekilde yapabilirsiniz:
-- Bildirebilirsiniz [ayarlamak](../../../csharp/language-reference/keywords/set.md) olmasını erişimci [özel](../../../csharp/language-reference/keywords/private.md).  Özelliği yalnızca bir tür içinde ayarlanabilir, ancak tüketicilere sabittir.
+Değişmez bir özelliği iki şekilde yapabilirsiniz:
+- [Set](../../language-reference/keywords/set.md) erişimcisinin [Private](../../language-reference/keywords/private.md)olarak bildirilmesini sağlayabilirsiniz.  Özelliği yalnızca tür içinde ayarlanabilir, ancak tüketicilere sabittir.
 
-  Özel bir bildirdiğinizde `set` erişimci özelliğini başlatmak için bir nesne Başlatıcı kullanamazsınız. Bir oluşturucu ya da bir Üreteç yöntemi kullanmanız gerekir.
-- Yalnızca bildirebilirsiniz [alma](../../../csharp/language-reference/keywords/get.md) özellik türün oluşturucusundaki her yerde dışında sabit getiren erişimcisi.
+  Özel `set` bir erişimci bildirdiğinizde, özelliği başlatmak için bir nesne Başlatıcısı kullanamazsınız. Bir Oluşturucu veya Factory yöntemi kullanmanız gerekir.
+- Yalnızca [Get](../../language-reference/keywords/get.md) erişimcisini bildirebilirsiniz. Bu, özelliği türün Oluşturucusu dışında her yerde sabit hale getirir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, otomatik uygulanan özellikleri olan sabit bir sınıf uygulamak için iki yolunu gösterir. Her iki yöntemle özel özelliklerle birini bildirir `set` ve özelliklere sahip bir `get` yalnızca.  Birinci sınıf kullandığı bir oluşturucu özelliklerini ve ikinci sınıfı yalnızca başlatmak için bir oluşturucuyu çağırır bir statik fabrika yöntemi kullanır.
+Aşağıdaki örnek, otomatik uygulanan özellikleri olan sabit bir sınıfı uygulamak için iki yol göstermektedir. Her bir şekilde, bir özel `set` ve özelliklerden `get` biri olan özelliklerden birini bildirir.  İlk sınıf yalnızca özellikleri başlatmak için bir Oluşturucu kullanır ve ikinci sınıf Oluşturucu çağıran bir statik fabrika yöntemi kullanır.
 
 ```csharp
 // This class is immutable. After an object is created,
@@ -116,10 +116,10 @@ public class Program
 */
 ```
 
-Derleyici, her bir otomatik uygulanan özellik için yedekleme alanları oluşturur. Alanlar doğrudan kaynak koddan erişilebilir değildir.
+Derleyici, otomatik uygulanan her özellik için yedekleme alanları oluşturur. Alanlara doğrudan kaynak kodundan erişilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [Nesne ve Koleksiyon Başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Özellikler](./properties.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [Nesne ve Koleksiyon Başlatıcıları](./object-and-collection-initializers.md)

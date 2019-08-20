@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Son olarak - kullanarak temizleme kodu yürütme C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Son C# programlama kılavuzunu kullanarak temizlik kodu yürütme'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,33 +7,33 @@ helpviewer_keywords:
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 0ec661e5fb0e13eaf8c3c8e4a7b274ab58853f58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e6adbb864b0450cdd1dbfcc56abdbad2034c5c7a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61681058"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590252"
 ---
-# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Nasıl yapılır: Finally anahtar sözcüğünü kullanarak temizleme kodu yürütme (C# Programlama Kılavuzu)
-Amacı, bir `finally` deyimdir bile bir özel durum nesneleri, genellikle dış kaynakları tutan nesnelerin gerekli temizleme hemen olmasını sağlamak için. Bu tür temizleme örneği çağırır <xref:System.IO.Stream.Close%2A> üzerinde bir <xref:System.IO.FileStream> nesne gibi ortak dil çalışma zamanı tarafından toplanan çöp olmasını beklemek yerine hemen kullandıktan sonra:  
+# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Nasıl yapılır: Son kullanılan temizleme kodunu yürütme (C# Programlama Kılavuzu)
+Bir `finally` deyimin amacı, genellikle özel bir durum oluşsa bile, genellikle dış kaynakları tutan nesneler olan nesnelerin gerekli temizleme işleminin hemen gerçekleşmemesini sağlamaktır. Bu tür temizliğin bir örneği, <xref:System.IO.Stream.Close%2A> nesnenin ortak <xref:System.IO.FileStream> dil çalışma zamanı tarafından çöp toplanmasını beklemek yerine, aşağıdaki gibi, hemen sonrasında çağrılır:  
   
  [!code-csharp[csProgGuideExceptions#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#16)]  
   
 ## <a name="example"></a>Örnek  
- Önceki kodun içine açmak için bir `try-catch-finally` deyimi, temizleme kodunu ayrılmış çalışan koddan gibi.  
+ Önceki kodu bir `try-catch-finally` ifadeye dönüştürmek için, temizleme kodu, çalışma kodundan aşağıdaki gibi ayrılır.  
   
  [!code-csharp[csProgGuideExceptions#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#17)]  
   
- Dilediğiniz zaman içinde bir özel durum gerçekleşebileceği için `try` önce block `OpenWrite()` çağrısı, veya `OpenWrite()` çağrının kendisini işlemi başarısız olabilir, biz kapatmak denediğinizde dosyayı açık olduğunu garanti edilmez. `finally` Blok emin olmak için bir denetim ekler <xref:System.IO.FileStream> nesne `null` çağırmadan önce <xref:System.IO.Stream.Close%2A> yöntemi. Olmadan `null` denetleyin, `finally` blok throw kendi <xref:System.NullReferenceException>, ancak özel durumları atma `finally` mümkünse blokları kaçınılmalıdır.  
+ Bir özel durum, `try` `OpenWrite()` çağrıdan önce blok içinde herhangi bir zamanda olabileceği veya `OpenWrite()` çağrının kendisi başarısız olabileceği için, kapatmayı denediğinde dosyanın açık olduğu garanti edilmez. Blok, <xref:System.IO.Stream.Close%2A> yöntemi çağırmadan önce <xref:System.IO.FileStream> nesnenin olmadığından `null` emin olmak için bir denetim ekler. `finally` Denetim olmadan, <xref:System.NullReferenceException>blok kendi kendine oluşturabilir, ancak mümkünse özel durumların `finally` atma işlemi mümkünse kaçınılmalıdır. `finally` `null`  
   
- Veritabanı bağlantısı kapatıldığından kuşkulanılıyor için başka bir iyi aday olan bir `finally` blok. Veritabanı sunucusu için izin verilen bağlantı sayısını bazen sınırlı olduğundan, veritabanı bağlantıları mümkün olan en kısa sürede kapatmalısınız. Bağlantınızı kapatmadan önce bir özel durum oluşturulursa, başka bir durum budur kullanıldığında `finally` blok çöp toplama için bekleyen daha iyidir.  
+ Veritabanı bağlantısı, bir `finally` blokta kapanmakta olan başka bir adaydır. Bir veritabanı sunucusuyla izin verilen bağlantı sayısı bazen sınırlı olduğundan, veritabanı bağlantılarını mümkün olduğunca hızlı bir şekilde kapatmanız gerekir. Bağlantınızı kapatabilmeniz için önce bir özel durum oluşursa, bu, `finally` bloğu kullanmanın çöp toplama beklerken daha iyi bir durumdur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Özel Durumlar ve Özel Durum İşleme](../../../csharp/programming-guide/exceptions/index.md)
-- [Özel Durum İşleme](../../../csharp/programming-guide/exceptions/exception-handling.md)
-- [using Deyimi](../../../csharp/language-reference/keywords/using-statement.md)
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
-- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Özel Durumlar ve Özel Durum İşleme](./index.md)
+- [Özel Durum İşleme](./exception-handling.md)
+- [using Deyimi](../../language-reference/keywords/using-statement.md)
+- [try-catch](../../language-reference/keywords/try-catch.md)
+- [try-finally](../../language-reference/keywords/try-finally.md)
+- [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)

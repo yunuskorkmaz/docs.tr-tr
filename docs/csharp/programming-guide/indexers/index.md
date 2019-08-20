@@ -1,5 +1,5 @@
 ---
-title: Dizin oluşturucular - C# Programlama Kılavuzu
+title: Dizin oluşturucular C# -Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
@@ -8,67 +8,67 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 43cc051eda8c3458d3dc5c529b52104bcd9b807a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 130cc68906be433afc906cfb22759f4ae3dba447
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596117"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589452"
 ---
 # <a name="indexers-c-programming-guide"></a>Dizin Oluşturucular (C# Programlama Kılavuzu)
 
-Dizin oluşturucular bir sınıf veya yapı dizileri gibi yeni dizine örneklerini sağlar. Dizinli değerin ayarlanması veya açıkça bir tür veya örnek üye belirtilmeden alınır. Dizin oluşturucular benzer [özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md) dışında kendi erişimcileri parametre alır.  
+Dizin oluşturucular, bir sınıf veya yapının örneklerinin, tıpkı diziler gibi dizine eklenmesine izin verir. Dizinli değer, açıkça bir tür veya örnek üyesi belirtilmeden ayarlanabilir veya alınabilir. Dizin oluşturucular, erişimcilerinin parametre kazanması dışında [özelliklere](../classes-and-structs/properties.md) benzer.  
  
- Aşağıdaki örnek, basit ile genel bir sınıf tanımlar [alma](../../../csharp/language-reference/keywords/get.md) ve [ayarlamak](../../../csharp/language-reference/keywords/set.md) atamak ve değerleri almak için erişimci metotlarını. `Program` Sınıfı, dizeleri depolamak için bu sınıfın bir örneğini oluşturur.  
+ Aşağıdaki örnek, değer atamak ve almak için basit [Get](../../language-reference/keywords/get.md) ve [set](../../language-reference/keywords/set.md) erişimcisi yöntemleriyle genel bir sınıf tanımlar. `Program` Sınıfı dizeleri depolamak için bu sınıfın bir örneğini oluşturur.  
   
  [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
 > [!NOTE]
->  Daha fazla örnek için bkz. [ilgili bölümler](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections).  
+>  Daha fazla örnek için bkz. [Ilgili bölümler](./index.md#BKMK_RelatedSections).  
   
 ## <a name="expression-body-definitions"></a>İfade gövdesi tanımları  
  
-Bir oluşturucunun get veya set erişimcisi döndürür veya bir değer ayarlar tek bir deyimde oluşmalıdır için yaygın bir durumdur. İfade gövdeli üyeler bu senaryoyu desteklemek için basitleştirilmiş bir sözdizimi sağlar. C# 6 ile başlayarak, aşağıdaki örnekte gösterildiği gibi bir ifade gövdeli üyesi olarak bir salt okunur dizin oluşturucu uygulanabilir.
+Bir dizin oluşturucunun Get veya set erişimcisinin bir değer döndüren ya da ayarlayan tek bir deyimden oluşması yaygındır. İfade-Bodied Üyeler, bu senaryoyu desteklemek için basitleştirilmiş bir sözdizimi sağlar. C# 6 ' dan itibaren, aşağıdaki örnekte gösterildiği gibi, salt okunurdur bir Dizin Oluşturucu, bir ifade Bodied üyesi olarak uygulanabilir.
 
 [!code-csharp[indexers#2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
 
-Unutmayın `=>` ifade gövdesi ve `get` anahtar sözcüğü kullanılmaz. 
+İfade gövdesini `get` tanıtır ve anahtar sözcüğünün kullanılmadığını unutmayın. `=>` 
 
-C# 7.0, hem get ile başlayan ve set erişimcisi olabilir uygulanan bir ifade gövdeli üyeler. Bu durumda, her ikisi de `get` ve `set` anahtar sözcükleri kullanılmalıdır. Örneğin:
+7,0 ile C# başlayarak, hem Get hem de set erişimcisi, ifade Bodied Üyeler olarak uygulanan bir uygulanmış olabilir. Bu durumda, hem hem `get` de `set` anahtar sözcüklerin kullanılması gerekir. Örneğin:
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
 ## <a name="indexers-overview"></a>Dizin Oluşturuculara Genel Bakış  
   
-- Dizin oluşturucular nesneleri dizilere benzer şekilde dizinlenmesini sağlar.  
+- Dizin oluşturucular, nesnelerin dizilere benzer bir şekilde dizine alınmasını sağlar.  
   
-- A `get` erişimcisinin bir değer döndürür. A `set` erişimcisinin bir değer atar.  
+- `get` Erişimci bir değer döndürür. `set` Erişimci bir değer atar.  
   
-- [Bu](../../../csharp/language-reference/keywords/this.md) anahtar sözcüğü, dizin oluşturucuyu tanımlamak için kullanılır.  
+- [Bu](../../language-reference/keywords/this.md) anahtar sözcük, Dizin oluşturucuyu tanımlamak için kullanılır.  
   
-- [Değer](../../../csharp/language-reference/keywords/value.md) tarafından atanan değerin tanımlamak için kullanılan anahtar sözcüğü `set` dizin oluşturucu.  
+- [Value](../../language-reference/keywords/value.md) anahtar sözcüğü, `set` Dizin Oluşturucu tarafından atanan değeri tanımlamak için kullanılır.  
   
-- Dizin oluşturucular bir tamsayı değeri tarafından dizine gerekmez; size özel arama mekanizması tanımlama bağlıdır.  
+- Dizin oluşturucuların bir tamsayı değeri ile dizinlenmesini gerekmez; Bu, belirli bir arama mekanizmasını nasıl tanımlayacaksınız.  
   
 - Dizin oluşturucular aşırı yüklenebilir.  
   
-- Dizin oluşturucular birden fazla biçimsel parametre, örneğin, iki boyutlu bir dizi erişirken olabilir.  
+- Dizin oluşturucular birden fazla biçimsel parametreye sahip olabilir, örneğin iki boyutlu bir diziye erişirken.  
   
-## <a name="BKMK_RelatedSections"></a> İlgili bölümler  
+## <a name="BKMK_RelatedSections"></a>İlgili bölümler  
   
-- [Dizin Oluşturucular Kullanma](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [Dizin Oluşturucular Kullanma](./using-indexers.md)  
   
-- [Arabirimlerdeki Dizin Oluşturucular](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [Arabirimlerdeki Dizin Oluşturucular](./indexers-in-interfaces.md)  
   
-- [Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma](./comparison-between-properties-and-indexers.md)  
   
-- [Erişimci Erişilebilirliğini Kısıtlama](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Erişimci Erişilebilirliğini Kısıtlama](../classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 
-Daha fazla bilgi için [dizin oluşturucular](~/_csharplang/spec/classes.md#indexers) içinde [ C# dil belirtimi](../../language-reference/language-specification/index.md). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için bkz. [ C# dil belirtiminde](../../language-reference/language-specification/index.md) [Dizin oluşturucular](~/_csharplang/spec/classes.md#indexers) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Özellikler](../classes-and-structs/properties.md)

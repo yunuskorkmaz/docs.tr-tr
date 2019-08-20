@@ -1,41 +1,41 @@
 ---
-title: Ertelenmiş yürütme ve geç değerlendirme LINQ to XML (C#)
+title: LINQ to XML (C#) Içinde ertelenmiş yürütme ve geç değerlendirme
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: 1f68a6c7de943d4a38ad0e5777298368e1c4e554
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9cf28afb5b7b8b3047c8b1b21915ffe7409eb25e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487555"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594559"
 ---
-# <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Ertelenmiş yürütme ve geç değerlendirme LINQ to XML (C#)
-Sorgu ve eksen işlemleri genellikle ertelenmiş yürütme kullanmak için uygulanır. Bu konuda, ertelenmiş yürütme ve bazı uygulama konuları avantajları ve gereksinimleri açıklanmaktadır.  
+# <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>LINQ to XML (C#) Içinde ertelenmiş yürütme ve geç değerlendirme
+Sorgu ve eksen işlemleri genellikle ertelenmiş yürütmeyi kullanacak şekilde uygulanır. Bu konu, ertelenmiş yürütmenin gereksinimlerini ve avantajlarını ve bazı uygulama konularını açıklamaktadır.  
   
 ## <a name="deferred-execution"></a>Ertelenmiş Yürütme  
- Bir ifadenin değerlendirmesine kadar Gecikmeli yürütme anlamına gelir ertelenmiş kendi *gerçekleşen* değeri gerçekten gereklidir. İçeren bir dizi zincirleme sorguları veya işlemeleri programlarda özellikle büyük veri koleksiyonları yönlendirme olduğunda ertelenmiş yürütme performansı büyük ölçüde artırabilir. En iyi durumda, yalnızca tek bir yineleme kaynak koleksiyonu aracılığıyla ertelenmiş yürütme sağlar.  
+ Ertelenmiş yürütme, istenen değer gerçekten gerekli olana kadar bir ifadenin değerlendirmesinin gecikildiği anlamına gelir. Ertelenmiş yürütme, özellikle de bir dizi zincirleme sorgu veya işleme içeren programlarda büyük veri koleksiyonlarını işlemek gerektiğinde performansı önemli ölçüde iyileştirebilir. En iyi durumda ertelenmiş yürütme, kaynak koleksiyon aracılığıyla yalnızca tek bir yinelemeyi mümkün bir şekilde sunar.  
   
- LINQ teknolojileri kapsamlı ertelenmiş yürütme iki çekirdek üyelerinde kullanabilmesine <xref:System.Linq?displayProperty=nameWithType> sınıflarını ve çeşitli LINQ ad alanında uzantı yöntemlerini gibi <xref:System.Xml.Linq.Extensions?displayProperty=nameWithType>.  
+ LINQ teknolojileri, hem çekirdek <xref:System.Linq?displayProperty=nameWithType> sınıfların üyelerinde hem de gibi çeşitli LINQ ad alanlarında uzantı yöntemlerinde ertelenmiş yürütmenin yoğun bir şekilde <xref:System.Xml.Linq.Extensions?displayProperty=nameWithType>kullanılmasını kolaylaştırır.  
   
- Ertelenmiş yürütme, C# dil tarafından doğrudan içerisinde desteklendiği [yield](../../../../csharp/language-reference/keywords/yield.md) anahtar sözcüğü (biçiminde `yield-return` deyimi) yineleyici bloğu içinde kullanıldığında. Böyle bir yineleyici türü koleksiyonu döndürmelidir <xref:System.Collections.IEnumerator> veya <xref:System.Collections.Generic.IEnumerator%601> (veya türetilmiş bir tür).  
+ Ertelenmiş yürütme, bir yineleyici bloğunda kullanılan C# [yield](../../../language-reference/keywords/yield.md) anahtar sözcüğü ( `yield-return` deyimin biçiminde) tarafından doğrudan dilde desteklenir. Bu tür bir yineleyici, <xref:System.Collections.IEnumerator> ya da <xref:System.Collections.Generic.IEnumerator%601> (ya da türetilmiş bir tür) bir koleksiyon döndürmelidir.  
   
-## <a name="eager-vs-lazy-evaluation"></a>İstekli vs. Geç değerlendirme  
- Ertelenmiş yürütme uygulayan bir Metoda yazdığınızda, ayrıca uygulanmayacağını geç değerlendirme veya istekli değerlendirme kullanarak yöntemini karar vermeniz gerekir.  
+## <a name="eager-vs-lazy-evaluation"></a>Eager ile Geç değerlendirme  
+ Ertelenmiş yürütmeyi uygulayan bir yöntem yazdığınızda, yavaş değerlendirme veya Eager değerlendirmesi kullanarak yöntemi uygulayıp uygulamamaya de karar vermeniz gerekir.  
   
-- İçinde *geç değerlendirme*, tek bir kaynak koleksiyonu öğesinin yineleyici yapılan her çağrı sırasında işlenir. Yineleyiciler uygulanan normal şekilde budur.  
+- *Yavaş değerlendirmede*, her Yineleyici çağrısı sırasında kaynak koleksiyonun tek bir öğesi işlenir. Yineleyicilerin uygulanma tipik yoludur.  
   
-- İçinde *istekli değerlendirme*, yineleyici yapılan ilk çağrı işlenmekte olan tüm koleksiyonda neden olur. Kaynak koleksiyonu geçici bir kopyası gerekli olabilir. Örneğin, <xref:System.Linq.Enumerable.OrderBy%2A> ilk öğeyi döndürür önce tüm koleksiyon sıralama yöntemi vardır.  
+- *Eager değerlendirmesi*sırasında, Yineleyici için ilk çağrı, tüm koleksiyonun işlenmesine neden olur. Kaynak koleksiyonun geçici bir kopyası da gerekebilir. Örneğin, <xref:System.Linq.Enumerable.OrderBy%2A> yöntemi ilk öğeyi döndürmadan önce tüm koleksiyonu sıralamak zorunda olur.  
   
- Geç değerlendirme genellikle daha iyi performans verir, çünkü ek yükü işleme koleksiyon Değerlendirme boyunca eşit olarak dağıtır ve geçici veri kullanımını en aza indirir. Elbette, bazı işlemler için Ara sonuçlar gerçekleştirmek üzere daha diğer seçeneği yoktur.  
+ Yavaş değerlendirme genellikle koleksiyonun değerlendirmesi boyunca ek yük işlemeyi eşit bir şekilde dağıttığı ve geçici verilerin kullanımını en aza indirecek için daha iyi performans verir. Tabii ki, bazı işlemler için, ara sonuçları gerçekleştirme dışında başka bir seçenek yoktur.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Bu öğreticide bir sonraki konu ertelenmiş yürütme gösterilmektedir:  
+ Bu öğreticideki sonraki konu, ertelenmiş yürütmeyi gösterir:  
   
-- [Ertelenmiş yürütme örneği (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [Ertelenmiş yürütme örneği (C#)](./deferred-execution-example.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: Sorguları birbirine zincirleme (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
-- [Kavramlar ve terimler (işlevsel dönüşüm) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
-- [Toplama işlemleri (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)
-- [yield](../../../../csharp/language-reference/keywords/yield.md)
+- [Öğretici: Sorguları birlikte zincirleme (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Kavramlar ve terminoloji (Işlevsel dönüşüm) (C#)](./concepts-and-terminology-functional-transformation.md)
+- [Toplama Işlemleri (C#)](./aggregation-operations.md)
+- [yield](../../../language-reference/keywords/yield.md)

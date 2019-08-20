@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: (XPath-LINQ to XML) bir alt öğe bulma (C#)'
+title: 'Nasıl yapılır: Bir alt öğe bulun (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
-ms.openlocfilehash: 4a6d18c86416f7c54df554bc2f518994446a2a84
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 315cf782aa886bba484eb1fb06a4c4dbcf3cb4df
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485732"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593713"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>Nasıl yapılır: (XPath-LINQ to XML) bir alt öğe bulma (C#)
-Bu konu XPath alt öğe eksene karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> yöntemi.  
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>Nasıl yapılır: Bir alt öğe bulun (XPath-LINQ to XML) (C#)
+Bu konu, XPath alt öğe eksenini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> yöntemiyle karşılaştırır.  
   
  XPath ifadesi `DeliveryNotes`.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte alt öğesi bulur `DeliveryNotes`.  
+ Bu örnek, alt öğesini `DeliveryNotes`bulur.  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Birden fazla satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Birden çok satın alma siparişi (](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)LINQ to XML).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  

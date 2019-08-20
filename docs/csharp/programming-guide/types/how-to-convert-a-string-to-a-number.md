@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir dizeyi sayıya - dönüştürme C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Bir dizeyi sayı C# programlama kılavuzuna dönüştürme'
 ms.custom: seodec18
 ms.date: 02/11/2019
 helpviewer_keywords:
@@ -8,36 +8,36 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: ef219f2b98e37b8a62d3ee7b88dbc5374d87fca5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 8b2e6fdc6248ca65213ea83942d792f983bd3b3b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423541"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588385"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Nasıl yapılır: Bir dizeyi sayıya dönüştürme (C# Programlama Kılavuzu)
 
-Dönüştürebilir bir [dize](../../../csharp/language-reference/keywords/string.md) çağırarak bir sayı `Parse` veya `TryParse` çeşitli sayısal türlerde yöntemi bulunamadı (`int`, `long`, `double`, vs.), veya içinde yöntemlerikullanarak<xref:System.Convert?displayProperty=nameWithType>sınıfı.  
+Çeşitli sayısal türlerde ( `TryParse` `Parse` ,`int` <xref:System.Convert?displayProperty=nameWithType> [](../../language-reference/keywords/string.md) ,`long`vb.) bulunan veya yöntemini çağırarak veya sınıfındaki yöntemleri kullanarak bir dizeyi sayıya dönüştürebilirsiniz. `double`  
   
- Bir dize varsa, biraz daha verimli ve doğrudan çağırmak onu bir `TryParse` yöntemi (örneğin, [ `int.TryParse("11", out number)` ](xref:System.Int32.TryParse%2A)) veya `Parse` yöntemi (örneğin, [ `var number = int.Parse("11")` ](xref:System.Int32.Parse%2A)).  Kullanarak bir <xref:System.Convert> yöntemi uygulamak, genel nesneler için daha faydalı <xref:System.IConvertible>.  
+ Bir `TryParse` dizeniz varsa, bir yöntemi ( [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)Örneğin,) veya `Parse` yöntemi (örneğin, [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)) çağırmak biraz daha etkilidir ve kolaydır.  Yöntemi kullanmak, uygulayan <xref:System.IConvertible>genel nesneler için daha yararlıdır. <xref:System.Convert>  
   
- Kullanabileceğiniz `Parse` veya `TryParse` beklediğiniz gibi dize içeren sayısal türün yöntemleri <xref:System.Int32?displayProperty=nameWithType> türü.  <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> Yöntemi kullanan <xref:System.Int32.Parse%2A> dahili olarak.  `Parse` Yöntemi dönüştürülmüş sayıyı döndürür; `TryParse` yöntemi döndürür bir <xref:System.Boolean> dönüştürme başarılı oldu ve dönüştürülen numarasını getirir olup olmadığını gösteren değer bir [ `out` parametre](../../../csharp/language-reference/keywords/out.md). Dize geçerli bir biçimde değilse `Parse` bir özel durum oluşturur `TryParse` döndürür [false](../../../csharp/language-reference/keywords/false-literal.md). Çağrılırken bir `Parse` yöntemi, her zaman kullanmanız gerektiğini özel durum işleme yakalamak için bir <xref:System.FormatException> ayrıştırma işleminin başarısız olması durumunda olmasıdır.  
+ Ya da <xref:System.Int32?displayProperty=nameWithType> türü `Parse` gibi `TryParse` , dizeyi içeren sayısal tür üzerinde veya yöntemlerini kullanabilirsiniz.  Yöntemi dahili olarak <xref:System.Int32.Parse%2A>kullanır. <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>  Yöntemi, dönüştürülmüş sayıyı döndürür `TryParse` ; Yöntem dönüştürmenin başarılı olup olmadığını <xref:System.Boolean> belirten bir değer döndürür ve bir [ `out` parametrede](../../language-reference/keywords/out.md)dönüştürülmüş sayıyı döndürür. `Parse` Dize geçerli bir biçimde değilse, `Parse` bir özel durum oluşturur, ancak [](../../language-reference/keywords/false-literal.md) `TryParse` false döndürür. Bir `Parse` yöntemi çağırırken, ayrıştırma işleminin başarısız olduğu olayda bir <xref:System.FormatException> yakalamak için özel durum işlemeyi her zaman kullanmanız gerekir.  
   
-## <a name="calling-the-parse-and-tryparse-methods"></a>Ayrıştırma ve TryParse metotları çağırma
+## <a name="calling-the-parse-and-tryparse-methods"></a>Parse ve Trypari yöntemlerini çağırma
 
-`Parse` Ve `TryParse` yöntemleri başında ve sonunda dize, beyaz boşluğu yoksay, ancak tüm diğer karakterler uygun sayısal türle form karakter olmalıdır (`int`, `long`, `ulong`, `float`, `decimal`vb..).  Sayı dizedeki herhangi bir boşluğu bir hataya neden olur.  Örneğin, kullanabileceğiniz `decimal.TryParse` "10", "10.3" veya "10", ancak ayrıştırmak için bu yöntem "10 X", 10 ayrıştırmak için kullanamazsınız "1 0 (embedded alanı unutmayın)", "10. 3 (embedded alanı unutmayın)", "10e1" (`float.TryParse` burada) ve benzeri. Ayrıca, bir dize değeri `null` veya <xref:System.String.Empty?displayProperty=nameWithType> başarıyla ayrıştırmak başarısız olur. Çağırarak ayrıştırmak çalışmadan önce bir null veya boş dize denetleyebilirsiniz <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> yöntemi. 
+`ulong` `long``int`Ve yöntemleri, dizenin başındaki ve sonundaki boşluğu yoksayar, ancak diğer tüm karakterler uygun sayısal türü (,,, `TryParse` `Parse` `float` ,`decimal`vb.).  Dizeyi oluşturan dize içindeki tüm boşluklar hataya neden olur.  Örneğin, "10", `decimal.TryParse` "10,3" veya "10" öğesini ayrıştırmak için kullanabilirsiniz, ancak bu yöntemi "10X", "1 0" (katıştırılmış alanı), "10 .3" (katıştırılmış alanı notta), "10E1" (`float.TryParse` burada çalışmalar), vb. ayrıştırarak kullanamazsınız. Buna ek olarak, değeri `null` <xref:System.String.Empty?displayProperty=nameWithType> başarıyla ayrıştırılamaz bir dize olur. Metodu çağırarak, <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> ayrıştırmaya çalışmadan önce null veya boş bir dize kontrol edebilirsiniz. 
 
-Aşağıdaki örnek, başarılı ve başarısız çağrıları gösterir `Parse` ve `TryParse`.  
+Aşağıdaki örnek, ve `Parse` `TryParse`için başarılı ve başarısız çağrıları gösterir.  
   
 [!code-csharp[Parse and TryParse](~/samples/snippets/csharp/programming-guide/string-to-number/parse-tryparse/program.cs)]  
 
-Aşağıdaki örnek bir baştaki sayısal karakterleri (onaltılık karakter de dahil olmak üzere) ve sonunda sayısal olmayan karakterler içerecek şekilde beklenen bir dizesini ayrıştırmak için bir yaklaşımı gösterir. Geçerli karakterler bir dize başından çağırmadan önce yeni bir dize atar <xref:System.Int32.TryParse%2A> yöntemi. Ayrıştırılacak dize az sayıda karakter içerdiğinden, örnek çağırır <xref:System.String.Concat%2A?displayProperty=nameWithType> geçerli karakterler için yeni bir dize atamak için yöntemi. Daha büyük bir dizeyi <xref:System.Text.StringBuilder> sınıfı yerine kullanılabilir. 
+Aşağıdaki örnekte, baştaki sayısal karakterler (onaltılık karakterler dahil) ve sondaki sayısal olmayan karakterler içermesi beklenen bir dizeyi ayrıştırmak için bir yaklaşım gösterilmektedir. <xref:System.Int32.TryParse%2A> Metodu çağırmadan önce bir dizenin başından yeni bir dizeye geçerli karakterler atar. Ayrıştırılacak dizeler az sayıda karakter içerdiğinden, örnek yeni bir dizeye geçerli karakterler atamak için <xref:System.String.Concat%2A?displayProperty=nameWithType> yöntemini çağırır. Daha büyük bir dize <xref:System.Text.StringBuilder> için bunun yerine sınıfı kullanılabilir. 
   
 [!code-csharp[Removing invalid characters](~/samples/snippets/csharp/programming-guide/string-to-number/parse-tryparse2/program.cs)]  
 
-## <a name="calling-the-convert-methods"></a>Dönüştürme yöntemleri çağırma
+## <a name="calling-the-convert-methods"></a>Convert yöntemlerini çağırma
 
-Aşağıdaki tabloda yöntemlerden bazıları listelenmiştir <xref:System.Convert> bir dizeyi sayıya dönüştürmek için kullanabileceğiniz sınıfı.  
+Aşağıdaki tabloda, <xref:System.Convert> bir dizeyi bir sayıya dönüştürmek için kullanabileceğiniz sınıfından bazı yöntemler listelenmiştir.  
   
 |Sayısal Tür|Yöntem|  
 |------------------|------------|  
@@ -51,12 +51,12 @@ Aşağıdaki tabloda yöntemlerden bazıları listelenmiştir <xref:System.Conve
 |`uint`|<xref:System.Convert.ToUInt32%28System.String%29>|  
 |`ulong`|<xref:System.Convert.ToUInt64%28System.String%29>|  
   
- Aşağıdaki örnek çağrıları <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> yöntemi Giriş bir dizeye dönüştürmek için bir [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md). Bu yöntem tarafından oluşturması muhtemel en yaygın iki özel örnek yakalar <xref:System.FormatException> ve <xref:System.OverflowException>. Sonuçta elde edilen sayı aşmadan 'er artırılabilir, <xref:System.Int32.MaxValue?displayProperty=nameWithType>, örnek program sonuca 1 ekler ve çıktıyı görüntüler.  
+ Aşağıdaki örnek, bir girdi <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> dizesini [int](../../language-reference/builtin-types/integral-numeric-types.md)'e dönüştürmek için yöntemini çağırır. Örnek, bu yöntem <xref:System.FormatException> ve <xref:System.OverflowException>tarafından oluşturulabilecek en yaygın iki özel durumu yakalar. Elde edilen sayı aşılmadan <xref:System.Int32.MaxValue?displayProperty=nameWithType>arttırılabiliyorsa örnek, sonuca 1 ekler ve çıktıyı görüntüler.  
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Türler](../../../csharp/programming-guide/types/index.md)
-- [Nasıl yapılır: Bir dizenin sayısal bir değeri temsil edip etmediğini belirleme](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
-- [.NET framework 4 biçimlendirme yardımcı programı](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+- [Türler](./index.md)
+- [Nasıl yapılır: Bir dizenin sayısal bir değeri temsil edip etmediğini belirleme](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [.NET Framework 4 biçimlendirme yardımcı programı](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

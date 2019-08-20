@@ -1,37 +1,37 @@
 ---
-title: 'Nasıl yapılır: Dosya işlemleri için - ilerleme durumu iletişim kutusu sağlar C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Dosya Işlemleri için Ilerleme durumu Iletişim kutusu sağlama- C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: 882e4ea71331fe0513f3be71c371bbc0f714b44f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 028e779f3cd8a17f162a79791b0c84abae14cf44
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61975214"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590054"
 ---
-# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Nasıl yapılır: Dosya işlemleri için ilerleme durumu iletişim kutusu sağlama (C# Programlama Kılavuzu)
-Kullanırsanız Windows'da dosya işlemlerinin Windows içinde ilerleme durumunu gösteren standart iletişim kutusunu sağlayabilirsiniz <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> yönteminde <xref:Microsoft.VisualBasic?displayProperty=nameWithType> ad alanı.  
+# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Nasıl yapılır: Dosya Işlemleri için Ilerleme durumu Iletişim kutusu sağlama (C# Programlama Kılavuzu)
+<xref:Microsoft.VisualBasic?displayProperty=nameWithType> Ad alanında <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> yöntemini kullanırsanız, Windows 'daki dosya işlemlerinde ilerleme durumunu gösteren bir standart iletişim kutusu sağlayabilirsiniz.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-add-a-reference-in-visual-studio"></a>Visual Studio'da bir başvuru eklemek için  
+### <a name="to-add-a-reference-in-visual-studio"></a>Visual Studio 'da bir başvuru eklemek için  
   
-1. Menü çubuğunda, **proje**, **Başvuru Ekle**.  
+1. Menü çubuğunda **Proje**, **Başvuru Ekle**' yi seçin.  
   
      **Başvuru Yöneticisi** iletişim kutusu görüntülenir.  
   
-2. İçinde **derlemeleri** alanında seçin **Framework** tercih değildir.  
+2. **Derlemeler** alanında, zaten seçili değilse **Framework** ' ü seçin.  
   
-3. Adları listesinde seçin **Microsoft.VisualBasic** onay kutusunu işaretleyin ve ardından **Tamam** iletişim kutusunu kapatmak için düğme.  
+3. Ad listesinde, **Microsoft. VisualBasic** onay kutusunu seçin ve ardından iletişim kutusunu kapatmak için **Tamam** düğmesini seçin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kodu belirtilen dizine kopyalar, `sourcePath` dizini, `destinationPath` belirtir. Bu kod Ayrıca işlem tamamlanmadan önce zaman kalan tahmini süreyi gösteren standart iletişim kutusunu sağlar.  
+ Aşağıdaki kod, `sourcePath` belirten dizinini belirten `destinationPath` dizine kopyalar. Bu kod ayrıca, işlem tamamlanmadan önce kalan tahmini süreyi gösteren standart bir iletişim kutusu sağlar.  
   
  [!code-csharp[csFilesandFolders#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#11)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dosya sistemi ve kayıt defteri (C# programlama Kılavuzu)](../../../csharp/programming-guide/file-system/index.md)
+- [Dosya sistemi ve kayıt defteri (C# Programlama Kılavuzu)](./index.md)

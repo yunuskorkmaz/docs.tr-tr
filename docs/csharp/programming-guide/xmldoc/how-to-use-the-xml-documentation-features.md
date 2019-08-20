@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: -XML belgeleri özelliklerini kullanma C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: XML belgeleri özelliklerini kullanma- C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 047207e495f542108d6f41247b25009d9c9bb909
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 259f0d5e7e1a67a273bccc7847c38a4d694c69ba
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634793"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588098"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a>Nasıl yapılır: XML belgeleri özelliklerini kullanma
+# <a name="how-to-use-the-xml-documentation-features"></a>Nasıl yapılır: XML belgesi özelliklerini kullanma
 
-Aşağıdaki örnek, belgelenmiş bir türü temel bir bakış sağlar.
+Aşağıdaki örnek, belgelenen bir türe temel bir genel bakış sağlar.
 
 ## <a name="example"></a>Örnek
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-Örneğin, aşağıdaki içeriğe sahip bir .xml dosyası oluşturur:
+Örnek, aşağıdaki içeriklerle bir. xml dosyası oluşturur:
 
 ```xml
 <?xml version="1.0"?>
@@ -107,33 +107,33 @@ Aşağıdaki örnek, belgelenmiş bir türü temel bir bakış sağlar.
 </doc>
 ```
 
-## <a name="compiling-the-code"></a>Kod derleme
+## <a name="compiling-the-code"></a>Kodu derleme
 
-Örneği derlemek için aşağıdaki komutu yazın:
+Örneği derlemek için aşağıdaki komut satırını yazın:
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-Bu komut XML dosyasını oluşturur *XMLsample.xml*, tarayıcınızda veya türü komutunu kullanarak görüntüleyebileceğiniz.
+Bu komut, tarayıcınızda görüntüleyebileceğiniz veya TYPE komutunu kullanarak *XMLsample. XML*XML dosyasını oluşturur.
 
 ## <a name="robust-programming"></a>Güçlü programlama
 
-XML belgeleri başlar: / / / ile. Yeni bir proje oluşturduğunuzda, sihirbaz sizin için bazı başlangıç / / / satırları yerleştirin. Bu açıklamalar işlenmesini bazı kısıtlamalar mevcuttur:
+XML belgeleri///ile başlar. Yeni bir proje oluşturduğunuzda, sihirbazlar sizin için bazı başlangıç//satır satırları koyar. Bu yorumların işlenmesinde bazı kısıtlamalar vardır:
 
-- Belgeler doğru biçimlendirilmiş XML. Doğru biçimlendirilmiş XML değil, bir uyarı oluşturulur ve soubor dokumentace bir hatayla karşılaşıldı bildiren bir açıklama içerir.
+- Belgeler düzgün biçimlendirilmiş XML olmalıdır. XML doğru biçimlendirilmediyse bir uyarı oluşturulur ve belge dosyası bir hata ile karşılaşıldığını bildiren bir açıklama içerir.
 
-- Geliştiriciler kendi kümesi etiketleri oluşturmak ücretsizdir. Önerilen bir dizi etiketi yoktur (bkz [etiketleri belge açıklamaları için önerilen](recommended-tags-for-documentation-comments.md)). Önerilen etiketler bazıları, özel anlamları vardır:
+- Geliştiriciler kendi etiket kümesini oluşturmak ücretsizdir. Önerilen bir etiket kümesi vardır ( [belge açıklamaları Için önerilen etiketlere](recommended-tags-for-documentation-comments.md)bakın). Önerilen etiketlerden bazılarının özel anlamları vardır:
 
-  - \<Param > etiketi, parametreler tanımlamak için kullanılır. Kullandıysanız, derleyici parametresi var olduğundan ve tüm parametreleri belgelerinde açıklanan doğrular. Doğrulama başarısızsa, derleyici bir uyarı verir.
+  - \<Param > etiketi parametreleri anlatmak için kullanılır. Kullanıldıysa, derleyici parametrenin var olduğunu ve tüm parametrelerin belgelerde açıklandığını doğrular. Doğrulama başarısız olursa, derleyici bir uyarı verir.
 
-  - `cref` Öznitelik, bir kod öğesi başvuru sağlamak için herhangi bir etiket eklenebilir. Derleyici, bu kod öğesi var olduğunu doğrular. Doğrulama başarısızsa, derleyici bir uyarı verir. Tüm derleyici uyar `using` içinde tanımlanan bir tür için göründüğünde deyimleri `cref` özniteliği.
+  - `cref` Özniteliği bir kod öğesine başvuru sağlamak için herhangi bir etikete iliştirilebilir. Derleyici bu kod öğesinin varolduğunu doğrular. Doğrulama başarısız olursa, derleyici bir uyarı verir. Derleyici, `cref` özniteliğinde açıklanan `using` bir türü ararken tüm deyimlere uyar.
 
-  - \<Özet > etiketi IntelliSense Visual Studio içindeki bir tür veya üyeyle ilgili ek bilgileri görüntülemek için kullanılır.
+  - Özet \<> etiketi, Visual Studio içinde IntelliSense tarafından bir tür veya üyeyle ilgili ek bilgileri göstermek için kullanılır.
 
     > [!NOTE]
-    > XML dosyası, tür ve üyeler hakkında tam bilgi sağlamaz (örneğin, bunu herhangi bir tür bilgilerini içermiyor). Bir tür veya üyeyle ilgili eksiksiz bilgi almak için soubor dokumentace gerçek türe veya üyeye yansıma ile birlikte kullanılmalıdır.
+    > XML dosyası, tür ve Üyeler hakkında tam bilgi sağlamaz (örneğin, herhangi bir tür bilgisi içermez). Bir tür veya üye hakkında tam bilgi almak için, belge dosyasının gerçek tür veya üye üzerinde yansıma ile birlikte kullanılması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [/ doc (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/index.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [/Doc (C# derleyici seçenekleri)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [XML Belge Açıklamaları](./index.md)

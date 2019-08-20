@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 777eb3be5cbefe0a136bf49f826ad67685a8456d
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 523045e990532f1475e1c4816c98d1af76daa92b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401083"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590404"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Nasıl yapılır: Olaylara abone olma ve aboneliği kaldırma (C# Programlama Kılavuzu)
 Bu olay ortaya çıktığında çağrılan özel kod yazmak istediğinizde, başka bir sınıf tarafından yayımlanan bir olaya abone olursunuz. Örneğin, Kullanıcı düğmeye tıkladığında uygulamanızı yararlı hale getirmek için `click` bir düğmenin olayına abone olabilirsiniz.  
@@ -25,7 +25,7 @@ Bu olay ortaya çıktığında çağrılan özel kod yazmak istediğinizde, baş
   
 3. Oluşturmak istediğiniz olaya çift tıklayın, örneğin `Load` olay.  
   
-     Visual C# , boş bir olay işleyici yöntemi oluşturur ve bunu kodunuza ekler. Alternatif olarak, **Kod görünümünde kodu** el ile de ekleyebilirsiniz. Örneğin, aşağıdaki kod satırları, `Form` sınıf `Load` olayı harekete geçirirse çağrılacak bir olay işleyicisi yöntemi bildirir.  
+     Visual C# , boş bir olay işleyici yöntemi oluşturur ve bunu kodunuza ekler. Alternatif olarak, kod görünümünde kodu el ile de ekleyebilirsiniz. Örneğin, aşağıdaki kod satırları, `Form` sınıf `Load` olayı harekete geçirirse çağrılacak bir olay işleyicisi yöntemi bildirir.  
   
      [!code-csharp[csProgGuideEvents#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#11)]  
   
@@ -83,7 +83,7 @@ Bu olay ortaya çıktığında çağrılan özel kod yazmak istediğinizde, baş
     };  
     ```  
   
-     Abone olmak için anonim bir işlev kullandıysanız, bir olaydan kolayca abonelik yapamayacağını fark etmeniz önemlidir. Bu senaryoda aboneliğinizi kaldırmak için, olaya abone olduğunuz koda geri dönmek, anonim yöntemi bir temsilci değişkeninde depolamak ve ardından temsilciyi olaya eklemek gereklidir. Genel olarak, kodunuzda daha sonraki bir noktada olay aboneliğinizi kaldırmak zorunda olmanız durumunda olaylara abone olmak için anonim işlevler kullanmayın. Anonim işlevler hakkında daha fazla bilgi için bkz. [Anonim işlevler](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
+     Abone olmak için anonim bir işlev kullandıysanız, bir olaydan kolayca abonelik yapamayacağını fark etmeniz önemlidir. Bu senaryoda aboneliğinizi kaldırmak için, olaya abone olduğunuz koda geri dönmek, anonim yöntemi bir temsilci değişkeninde depolamak ve ardından temsilciyi olaya eklemek gereklidir. Genel olarak, kodunuzda daha sonraki bir noktada olay aboneliğinizi kaldırmak zorunda olmanız durumunda olaylara abone olmak için anonim işlevler kullanmayın. Anonim işlevler hakkında daha fazla bilgi için bkz. [Anonim işlevler](../statements-expressions-operators/anonymous-functions.md).  
   
 ## <a name="unsubscribing"></a>Aboneliği kaldırılıyor  
  Olay işleyicinizin olay ortaya çıktığında çağrılmasını engellemek için, olaydan aboneliği kaldırın. Kaynak sızıntılarını engellemek için, bir abone nesnesini atmadan önce etkinliklerden aboneliğinizi iptal etmelisiniz. Bir olaydan abonelik aboneliğini kaldırana kadar, yayımlama nesnesindeki olayı oluşturan çok noktaya yayın temsilcisi, abonenin olay işleyicisini kapsülleyen temsilciye bir başvuruya sahiptir. Yayımlama nesnesi bu başvuruyu taşıdığı sürece çöp toplama işlemi abone nesneniz silinmez.  
@@ -100,8 +100,8 @@ Bu olay ortaya çıktığında çağrılan özel kod yazmak istediğinizde, baş
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Olaylar](../../../csharp/programming-guide/events/index.md)
-- [event](../../../csharp/language-reference/keywords/event.md)
-- [Nasıl yapılır: .NET Framework yönergeleriyle uyumlu olayları yayımlama](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [Olaylar](./index.md)
+- [event](../../language-reference/keywords/event.md)
+- [Nasıl yapılır: .NET Framework yönergeleriyle uyumlu olayları yayımlama](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [-ve-= işleçleri](../../language-reference/operators/subtraction-operator.md)
 - [+ ve + = işleçleri](../../language-reference/operators/addition-operator.md)

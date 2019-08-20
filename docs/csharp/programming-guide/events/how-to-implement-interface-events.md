@@ -1,24 +1,24 @@
 ---
-title: 'Nasıl yapılır: -Arabirim olaylarını uygulama C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Arabirim olaylarını uygulama- C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: dfd0602ef92f9b0f84a8e1434ef834a328d60f03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 574ea9927a22c24c356d84652fd29692c519247b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710907"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590510"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Nasıl yapılır: Arabirim olaylarını uygulama (C# Programlama Kılavuzu)
-Bir [arabirimi](../../../csharp/language-reference/keywords/interface.md) bildirebilirsiniz bir [olay](../../../csharp/language-reference/keywords/event.md). Aşağıdaki örnek, bir sınıf içinde arabirim olaylarını uygulama gösterilmiştir. Herhangi bir arabirim yöntemi veya özelliği uygularken temelde aynı kurallardır.  
+Bir [arabirim](../../language-reference/keywords/interface.md) , bir [olayı](../../language-reference/keywords/event.md)bildirebilir. Aşağıdaki örnek, bir sınıfında arabirim olaylarının nasıl uygulanacağını gösterir. Temel olarak kurallar, herhangi bir arabirim yöntemi veya özelliği uygularken olduğu gibidir.  
   
-## <a name="to-implement-interface-events-in-a-class"></a>Bir sınıf içinde arabirim olaylarını uygulama  
+## <a name="to-implement-interface-events-in-a-class"></a>Arabirim olaylarını bir sınıfta uygulamak için  
   
-Sınıf içinde olay bildirmek ve ardından uygun alanları çağırır.  
+Sınıfınıza olayı bildirin ve uygun alanlarda çağırın.  
   
 ```csharp
 namespace ImplementInterfaceEvents  
@@ -52,16 +52,16 @@ namespace ImplementInterfaceEvents
 ```  
   
 ## <a name="example"></a>Örnek  
-Aşağıdaki örnek, sınıfınıza iki veya daha fazla arabirimlerinden devralır ve her bir arabirime sahip aynı ada sahip bir olay daha az yaygın durum nasıl ele alınacağını gösterir. Bu durumda, olayları en az biri için açık arabirim uygulaması sağlamalısınız. Bir olayın açık arabirim uygulaması yazdığınızda, ayrıca yazmalısınız `add` ve `remove` olay erişimcileri. Normalde bu derleyici tarafından sağlanır, ancak bu durumda derleyici bunları sağlayamaz.  
+Aşağıdaki örnek, sınıfınızın iki veya daha fazla arabirimden devraldığı daha az yaygın olan durumun nasıl işleneceğini ve her arabirimin aynı ada sahip bir olaya sahip olduğunu gösterir. Bu durumda, en az bir olay için açık bir arabirim uygulamasını sağlamalısınız. Bir olay için açık arabirim uygulama yazdığınızda, `add` ve `remove` olay erişimcilerini de yazmanız gerekir. Bunlar normalde derleyici tarafından sağlanır, ancak bu durumda derleyici bunları sağlayamaz.  
   
-Kendi erişimcileri sağlayarak, iki olay sınıfınızın aynı olay tarafından ya da farklı olaylar tarafından temsil edilen belirtebilirsiniz. Örneğin, farklı zamanlarda arabirimi belirtimlerine göre olaylar harekete Geçirilmemesi gereken, ayrı bir uygulama ile Sınıfınız içinde her olay ilişkilendirebilirsiniz. Aşağıdaki örnekte, aboneleri hangi belirleme `OnDraw` olay alacağı şekli başvuru ya da atayarak bir `IShape` veya bir `IDrawingObject`.  
+Kendi erişimclerinizi sunarak, iki olayın sınıfınıza aynı olay ile mi yoksa farklı olaylara göre mi temsil edileceğini belirtebilirsiniz. Örneğin, olayların arabirim belirtimlerine göre farklı zamanlarda oluşturulması gerekiyorsa, her bir olayı sınıfınıza ayrı bir uygulamayla ilişkilendirebilirsiniz. Aşağıdaki örnekte, aboneler bir `OnDraw` `IShape` veya bir veya bir `IDrawingObject`öğesine şekil başvurusunu kaldırarak hangi olayın alacağını tespit eder.  
   
  [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Olaylar](../../../csharp/programming-guide/events/index.md)
-- [Temsilciler](../../../csharp/programming-guide/delegates/index.md)
-- [Belirtik Arabirim Kullanma](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)
-- [Nasıl yapılır: Türetilmiş sınıflarda temel sınıf olayları Yükselt](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Olaylar](./index.md)
+- [Temsilciler](../delegates/index.md)
+- [Belirtik Arabirim Kullanma](../interfaces/explicit-interface-implementation.md)
+- [Nasıl yapılır: Türetilmiş sınıflarda temel sınıf olayları oluştur](./how-to-raise-base-class-events-in-derived-classes.md)

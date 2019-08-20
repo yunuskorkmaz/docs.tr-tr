@@ -1,5 +1,5 @@
 ---
-title: Dosya sistemi ve kayıt defteri - C# Programlama Kılavuzu
+title: Dosya sistemi ve kayıt defteri- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,37 +7,37 @@ helpviewer_keywords:
 - registry [C#]
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
-ms.openlocfilehash: 64c852e6fcc034cb56651ffc2d22fa5323bbb54f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef6c1da09ea0435643caba0f5e2819c064f8db01
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680070"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589916"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>Dosya Sistemi ve Kayıt Defteri (C# Programlama Kılavuzu)
-Aşağıdaki konular, C# ve .NET Framework dosyaları, klasörleri ve kayıt defteri çeşitli temel işlemleri gerçekleştirmek için nasıl kullanılacağını gösterir.  
+Aşağıdaki konularda, dosyalar, klasörler ve C# kayıt defteri üzerinde çeşitli temel işlemleri gerçekleştirmek için ve .NET Framework nasıl kullanılacağı gösterilmektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |**Başlık**|**Açıklama**|  
 |---------------|---------------------|  
-|[Nasıl yapılır: Bir dizin ağacı ile yineleme](../../../csharp/programming-guide/file-system/how-to-iterate-through-a-directory-tree.md)|El ile bir dizin ağacı ile yineleme işlemi gösterilmektedir.|  
-|[Nasıl yapılır: Dosyalar, klasörler ve sürücüler hakkında bilgi edinin](../../../csharp/programming-guide/file-system/how-to-get-information-about-files-folders-and-drives.md)|Dosyalar, klasörler ve sürücüler hakkında bilgi oluşturma sürelerini ve boyutu gibi alma işlemi gösterilmektedir.|  
-|[Nasıl yapılır: Bir dosya veya klasör oluşturma](../../../csharp/programming-guide/file-system/how-to-create-a-file-or-folder.md)|Yeni dosya veya klasör oluşturma işlemi gösterilmektedir.|  
-|[Nasıl yapılır: Kopyalama, silme ve taşıma dosya ve klasörleri (C# Programlama Kılavuzu)](../../../csharp/programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md)|Kopyalama, silme ve dosya ve klasörleri taşıma işlemi gösterilmektedir.|  
-|[Nasıl yapılır: Dosya işlemleri için ilerleme durumu iletişim kutusu sağlama](../../../csharp/programming-guide/file-system/how-to-provide-a-progress-dialog-box-for-file-operations.md)|Belirli dosya işlemleri için standart bir Windows ilerleme durumu iletişim kutusu görüntüleme işlemini göstermektedir.|  
-|[Nasıl yapılır: Bir metin dosyasına yazma](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md)|Bir metin dosyasına yazma işlemi gösterilmektedir.|  
-|[Nasıl yapılır: Bir metin dosyasından okuma](../../../csharp/programming-guide/file-system/how-to-read-from-a-text-file.md)|Bir metin dosyasından okuma işlemini gösterir.|  
-|[Nasıl yapılır: Bir kerede bir metin dosyası bir satırı okuyun](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md)|Metin dosyası bir satırından teker teker alma işlemi gösterilmektedir.|  
-|[Nasıl yapılır: Kayıt defterinde anahtar oluşturma](../../../csharp/programming-guide/file-system/how-to-create-a-key-in-the-registry.md)|Sistem kayıt defterine bir anahtar yazma işlemi gösterilmektedir.|  
+|[Nasıl yapılır: Dizin ağacı aracılığıyla yineleme](./how-to-iterate-through-a-directory-tree.md)|Bir dizin ağacında el ile nasıl yineleyemezsiniz gösterir.|  
+|[Nasıl yapılır: Dosyalar, klasörler ve sürücüler hakkında bilgi alın](./how-to-get-information-about-files-folders-and-drives.md)|Dosyalar, klasörler ve sürücüler hakkında oluşturma süreleri ve boyutu gibi bilgilerin nasıl alınacağını gösterir.|  
+|[Nasıl yapılır: Dosya veya klasör oluşturma](./how-to-create-a-file-or-folder.md)|Yeni bir dosya veya klasör oluşturmayı gösterir.|  
+|[Nasıl yapılır: Dosyaları ve klasörleri kopyalama, silme ve taşıma (C# Programlama Kılavuzu)](./how-to-copy-delete-and-move-files-and-folders.md)|Dosya ve klasörlerin nasıl kopyalanacağını, silineceğini ve taşınacağını gösterir.|  
+|[Nasıl yapılır: Dosya Işlemleri için Ilerleme durumu Iletişim kutusu sağlama](./how-to-provide-a-progress-dialog-box-for-file-operations.md)|Belirli dosya işlemleri için standart bir Windows ilerleme durumu iletişim kutusunun nasıl görüntüleneceğini gösterir.|  
+|[Nasıl yapılır: Bir metin dosyasına yaz](./how-to-write-to-a-text-file.md)|Bir metin dosyasına nasıl yazılacağını gösterir.|  
+|[Nasıl yapılır: Bir metin dosyasından okuma](./how-to-read-from-a-text-file.md)|Bir metin dosyasından nasıl okunacağını gösterir.|  
+|[Nasıl yapılır: Bir metin dosyasını tek seferde bir satır okuyun](./how-to-read-a-text-file-one-line-at-a-time.md)|Tek seferde bir dosyadan bir satırdan nasıl metin alınacağını gösterir.|  
+|[Nasıl yapılır: Kayıt defterinde anahtar oluşturma](./how-to-create-a-key-in-the-registry.md)|Sistem kayıt defterine bir anahtarın nasıl yazılacağını gösterir.|  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Dosya ve Akış G/Ç'si](../../../standard/io/index.md)  
   
- [Nasıl yapılır: Kopyalama, silme ve taşıma dosya ve klasörleri (C# Programlama Kılavuzu)](../../../csharp/programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md)  
+ [Nasıl yapılır: Dosyaları ve klasörleri kopyalama, silme ve taşıma (C# Programlama Kılavuzu)](./how-to-copy-delete-and-move-files-and-folders.md)  
   
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../index.md)  
   
- [Dosyalar, klasörler ve sürücüler](../../../csharp/programming-guide/file-system/index.md)  
+ [Dosyalar, klasörler ve sürücüler](./index.md)  
   
  <xref:System.IO?displayProperty=nameWithType>

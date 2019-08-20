@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: Bir öğenin yüzeysel değerini alma (C#)'
+title: 'Nasıl yapılır: Bir öğenin (C#) Yüzeysel değerini alma'
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 570f9837d04352fb291f0b79f85fb9d7f68ff09d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2b37cc19e2ec5149589131497b36ad381900336b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485042"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592504"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Nasıl yapılır: Bir öğenin yüzeysel değerini alma (C#)
-Bu konuda, bir öğenin yüzeysel değerini alma gösterilmektedir. Basit yalnızca belirli öğenin değeri tek bir dize olarak birleştirilmiş tüm alt öğe değerlerini içeren ayrıntılı değer aksine değerdir.  
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Nasıl yapılır: Bir öğenin (C#) Yüzeysel değerini alma
+Bu konu, bir öğenin yüzeysel değerinin nasıl alınacağını gösterir. Yüzeysel değer, tek bir dizeye birleştirilmiş tüm alt öğelerin değerlerini içeren derin değeri aksine, yalnızca belirli bir öğenin değeridir.  
   
- Ya da bir çevrim kullanarak bir öğe değeri aldığınızda veya <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliği, derin değeri alın. Yüzeysel değerini almak için kullanabileceğiniz `ShallowValue` genişletme yöntemi, aşağıdaki örnekte gösterildiği gibi. Yüzeysel değerini alma içeriklerine göre öğeleri seçmek istediğinizde yararlıdır.  
+ Ya da <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliğini kullanarak bir öğe değeri aldığınızda, derin değeri alırsınız. Yüzeysel değeri almak için, aşağıdaki örnekte gösterildiği gibi `ShallowValue` genişletme yöntemini kullanabilirsiniz. Yüzeysel değer alma, içeriğine göre öğeleri seçmek istediğinizde faydalıdır.  
   
- Aşağıdaki örnek, bir öğenin yüzeysel değerini alır. bir genişletme yöntemi bildirir. Ardından, hesaplanan değeri içeren tüm öğeleri listelemek için genişletme yöntemi bir sorguda kullanır.  
+ Aşağıdaki örnek, bir öğenin yüzeysel değerini alan bir genişletme yöntemi bildirir. Daha sonra, hesaplanmış bir değer içeren tüm öğeleri listelemek için bir sorgudaki genişletme yöntemini kullanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki metin dosyası Report.xml, bu örnekte kaynağıdır.  
+ Aşağıdaki metin dosyası, Report. xml, bu örneğin kaynağıdır.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -81,4 +81,4 @@ Column  Name="Name"         =Customer.Name
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML eksenleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)
+- [LINQ to XML eksenleri (C#)](./linq-to-xml-axes-overview.md)

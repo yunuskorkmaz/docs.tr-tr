@@ -1,31 +1,31 @@
 ---
-title: Değişken genel arabirimler oluşturma (C#)
+title: Değişken genel arabirimler (C#) oluşturma
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: ad82ba27a98d27a18d9cff1e65ab929cd9d711a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ba72f28cd2ddd800f169387cc2c742159d4cb1b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668581"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595312"
 ---
-# <a name="creating-variant-generic-interfaces-c"></a>Değişken genel arabirimler oluşturma (C#)
+# <a name="creating-variant-generic-interfaces-c"></a>Değişken genel arabirimler (C#) oluşturma
 
-Genel Tür parametrelerine birlikte değişken olarak arabirimleri bildirebilir veya değişken karşıtı. *Kovaryans* dönüş türleri genel tür parametreleri tarafından tanımlanan değerinden daha fazla türetilmiş arabirim yöntemleri sağlar. *Kontravaryans* genel parametreler tarafından belirtilenden daha az türetilmiş bağımsız değişken türleri arabirim yöntemleri sağlar. Birlikte değişken olan genel bir arabirim veya değişken karşıtı genel tür parametreleri çağrılır *değişken*.
+Arabirimlerdeki genel tür parametrelerini birlikte değişken veya değişken karşıtı olarak bildirebilirsiniz. *Kovaryans* , Arabirim yöntemlerinin genel tür parametreleri tarafından tanımlananla daha fazla türetilmiş dönüş türüne sahip olmasına izin verir. *Değişken varyans* , Arabirim yöntemlerinin genel parametreler tarafından belirtilenden daha az türetilmiş bağımsız değişken türlerine sahip olmasına olanak sağlar. Değişkenle birlikte değişken veya değişken karşıtı genel tür parametrelerine sahip genel bir arabirim *değişken*olarak adlandırılır.
 
 > [!NOTE]
-> .NET framework 4, çeşitli genel arabirimlerin mevcut sapma desteği sunmuştur. .NET Framework'teki değişken arabirimler listesi için bkz. [Variance in Generic Interfaces (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+> .NET Framework 4, mevcut birçok genel arabirim için varyans desteği getirmiştir. .NET Framework değişken arabirimlerinin listesi için bkz. [Genel Arabirimlerde VaryansC#()](./variance-in-generic-interfaces.md).
 
-## <a name="declaring-variant-generic-interfaces"></a>Bildirim değişken genel arabirimler
+## <a name="declaring-variant-generic-interfaces"></a>VARIANT genel arabirimlerini bildirme
 
-Değişken genel arabirimler kullanarak bildirebilirsiniz `in` ve `out` genel tür parametreleri için anahtar sözcükler.
+Genel tür parametreleri için `in` ve `out` anahtar sözcüklerini kullanarak VARIANT genel arabirimleri bildirebilirsiniz.
 
 > [!IMPORTANT]
-> `ref`, `in`, ve `out` C# parametrelerinde değişken olamaz. Değer türleri varyansı da desteklemez.
+> `ref`, `in`ve `out` içindeki C# parametreleri varyant olamaz. Değer türleri de varyansı desteklemez.
 
-Genel tür parametresi birlikte değişken kullanarak bildirebilirsiniz `out` anahtar sözcüğü. Birlikte değişen türde aşağıdaki koşulları karşılaması gerekir:
+`out` Anahtar sözcüğünü kullanarak genel tür parametresi ortak değişkeni bildirebilirsiniz. Covaryant türü şu koşulları karşılamalıdır:
 
-- Türü yalnızca bir dönüş türü arabirim yöntemleri olarak kullanılan ve yöntem bağımsız bir türü olarak kullanılmaz. Bu, aşağıdaki örnekte gösterilmiştir türü `R` birlikte değişken olarak bildirilir.
+- Tür, yalnızca Arabirim yöntemlerinin dönüş türü olarak kullanılır ve Yöntem bağımsız değişkenlerinin türü olarak kullanılmaz. Bu, türünün `R` birlikte değişken olarak bildirildiği aşağıdaki örnekte gösterilmiştir.
 
     ```csharp
     interface ICovariant<out R>
@@ -37,7 +37,7 @@ Genel tür parametresi birlikte değişken kullanarak bildirebilirsiniz `out` an
     }
     ```
 
-    Bu kuralın tek istisnası yoktur. Bir yöntem parametresi olarak bir değişken karşıtı Genel temsilci varsa, türü için temsilci genel tür parametre olarak kullanabilirsiniz. Bu tür tarafından gösterilmiştir `R` aşağıdaki örnekte. Daha fazla bilgi için [Temsilcilerde varyans (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) ve [işlev ve eylem genel temsilcileri (C#) kullanarak varyansını](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+    Bu kural için bir özel durum var. Bir yöntem parametresi olarak bir değişken karşıtı genel temsilciniz varsa, türü temsilci için genel bir tür parametresi olarak kullanabilirsiniz. Bu, aşağıdaki örnekteki tür `R` tarafından gösterilmiştir. Daha fazla bilgi için bkz. [temsilcilerin içindeki varyansC#()](./variance-in-delegates.md) ve [Func ve ACTION Genel Temsilciler (C#) için varyans kullanma](./using-variance-for-func-and-action-generic-delegates.md).
 
     ```csharp
     interface ICovariant<out R>
@@ -46,7 +46,7 @@ Genel tür parametresi birlikte değişken kullanarak bildirebilirsiniz `out` an
     }
     ```
 
-- Türü genel kısıtlama olarak arabirim yöntemleri için kullanılmaz. Bu, aşağıdaki kodda gösterilmiştir.
+- Tür, arabirim yöntemleri için genel bir kısıtlama olarak kullanılmaz. Bu, aşağıdaki kodda gösterilmiştir.
 
     ```csharp
     interface ICovariant<out R>
@@ -58,7 +58,7 @@ Genel tür parametresi birlikte değişken kullanarak bildirebilirsiniz `out` an
     }
     ```
 
-Bir genel tür parametresi değişken karşıtı kullanarak bildirebilirsiniz `in` anahtar sözcüğü. Değişken karşıtı türü arabirim yöntemleri dönüş türü olarak değil de yalnızca bir tür yöntem bağımsız olarak kullanılabilir. Değişken karşıtı türü genel kısıtlamalar için de kullanılabilir. Aşağıdaki kod, bir değişken karşıtı arabirimi bildirme ve bir genel kısıtlama yöntemlerinden biri için kullanma gösterilmektedir.
+`in` Anahtar sözcüğünü kullanarak genel tür parametresi değişken karşıtı bildirebilirsiniz. Değişken karşıtı türü, Arabirim yöntemlerinin dönüş türü olarak değil, yalnızca Yöntem bağımsız değişkenlerinin türü olarak kullanılabilir. Değişken karşıtı türü, genel kısıtlamalar için de kullanılabilir. Aşağıdaki kod, bir değişken karşıtı arabirimin nasıl bildirilemeyeceğini ve yöntemlerinden biri için genel bir kısıtlama nasıl kullanıldığını gösterir.
 
 ```csharp
 interface IContravariant<in A>
@@ -70,7 +70,7 @@ interface IContravariant<in A>
 }
 ```
 
-Ayrıca aşağıdaki kod örneğinde gösterildiği gibi aynı arabirimi, ancak farklı türde parametreler için hem Kovaryans ve kontravaryans desteklemek mümkündür.
+Ayrıca, aşağıdaki kod örneğinde gösterildiği gibi farklı tür parametreleri için aynı arabirimdeki kovaryansı ve değişken varyansı desteklemek de mümkündür.
 
 ```csharp
 interface IVariant<out R, in A>
@@ -81,9 +81,9 @@ interface IVariant<out R, in A>
 }
 ```
 
-## <a name="implementing-variant-generic-interfaces"></a>Değişken genel arabirimler uygulama
+## <a name="implementing-variant-generic-interfaces"></a>VARIANT genel arabirimlerini uygulama
 
-Değişken genel arabirimler sınıflarda sabit arabirimler için kullanılan aynı sözdizimini kullanarak uygulayın. Aşağıdaki kod örneği, birlikte değişken arabirimi genel bir sınıf uygulamak gösterilmektedir.
+Sabit arabirimler için kullanılan söz dizimini kullanarak sınıflarda VARIANT genel arabirimler uygulayabilirsiniz. Aşağıdaki kod örneği, bir genel sınıfta birlikte değişken arabiriminin nasıl uygulanacağını gösterir.
 
 ```csharp
 interface ICovariant<out R>
@@ -100,7 +100,7 @@ class SampleImplementation<R> : ICovariant<R>
 }
 ```
 
-Sabit değişken arabirimleri uygulayan sınıflar. Örneğin, aşağıdaki kodu düşünün.
+Varyant arabirimlerini uygulayan sınıflar sabit. Örneğin, aşağıdaki kodu göz önünde bulundurun.
 
 ```csharp
 // The interface is covariant.
@@ -114,9 +114,9 @@ SampleImplementation<Button> button = new SampleImplementation<Button>();
 // SampleImplementation<Object> obj = button;
 ```
 
-## <a name="extending-variant-generic-interfaces"></a>Genişletme değişken genel arabirimler
+## <a name="extending-variant-generic-interfaces"></a>VARIANT genel arabirimlerini genişletme
 
-Bir değişken genel arabirim genişlettiğinizde kullanmak zorunda `in` ve `out` açıkça türetilmiş bir arabirim varyansı destekleyip desteklemediğini belirlemek için anahtar sözcükler. Derleyici, varyans Genişletilmekte olan arabiriminden Infer değil. Örneğin, aşağıdaki arabirimlerinden göz önünde bulundurun.
+Bir varyant genel arabirimini genişlettiğinizde, türetilmiş arabirimin varyansı destekleyip desteklemediğini açıkça belirtmek `in` için `out` ve anahtar sözcüklerini kullanmanız gerekir. Derleyici, genişletilmekte olan arabirimden varyansı çıkarmıyor. Örneğin, aşağıdaki arabirimleri göz önünde bulundurun.
 
 ```csharp
 interface ICovariant<out T> { }
@@ -124,9 +124,9 @@ interface IInvariant<T> : ICovariant<T> { }
 interface IExtCovariant<out T> : ICovariant<T> { }
 ```
 
-İçinde `IInvariant<T>` arabirim, genel tür parametresi `T` değişmezdir, ise içinde `IExtCovariant<out T>` hem arabirimleri aynı arabirimi genişletmek rağmen tür parametresi değişkendir. Aynı kural, değişken karşıtı genel tür parametreleri için uygulanır.
+Arabirimde, genel tür parametresi `T` değişmez, `IExtCovariant<out T>` ancak her iki arabirim de aynı arabirimi genişletse de, tür parametresinde birlikte değişken olur. `IInvariant<T>` Aynı kural, değişken karşıtı genel tür parametrelerine uygulanır.
 
-Burada, genel tür parametresi her iki arabirimini genişletir bir arabirim oluşturabilirsiniz `T` birlikte değişkendir ve genel tür parametresi, genişletme, değişken karşıtı olduğu arabirimi arabirim `T` değişmezdir. Bu aşağıdaki kod örneğinde gösterilmiştir.
+Hem genel tür parametresinin `T` birlikte değişken olduğu arabirimi hem de genişletme arabiriminde genel tür parametresi `T` sabit ise değişken karşıtı olan arabirimi genişleten bir arabirim oluşturabilirsiniz. Bu, aşağıdaki kod örneğinde gösterilmiştir.
 
 ```csharp
 interface ICovariant<out T> { }
@@ -134,7 +134,7 @@ interface IContravariant<in T> { }
 interface IInvariant<T> : ICovariant<T>, IContravariant<T> { }
 ```
 
-Ancak, genel tür parametresi, `T` olan tek bir arabirimde bildirilen değişken, değişken karşıtı bildirip genişletme arabiriminde veya tam tersi. Bu aşağıdaki kod örneğinde gösterilmiştir.
+Ancak, bir genel tür parametresi `T` bir arabirimde birlikte değişken olarak bildirilirse, genişletme arabiriminde bu değişken karşıtı olarak bildiremezsiniz veya tam tersi de geçerlidir. Bu, aşağıdaki kod örneğinde gösterilmiştir.
 
 ```csharp
 interface ICovariant<out T> { }
@@ -142,11 +142,11 @@ interface ICovariant<out T> { }
 // interface ICoContraVariant<in T> : ICovariant<T> { }
 ```
 
-### <a name="avoiding-ambiguity"></a>Belirsizlik kaçınma
+### <a name="avoiding-ambiguity"></a>Belirsizlik önleme
 
-Değişken genel arabirimler uyguladığınızda, varyans bazen için karışıklığa neden olabilir. Bu kaçınılmalıdır.
+VARIANT genel arabirimleri uyguladığınızda, fark bazen belirsizliğe neden olabilir. Bunun kaçınılması gerekir.
 
-Örneğin, bir sınıf içinde farklı bir genel tür parametreleri ile aynı değişken genel arabirim açıkça uygularsanız, belirsizlik oluşturabilirsiniz. Derleyici bu durumda bir hata oluşturmaz, ancak çalışma zamanında hangi arabirim uygulaması seçilir belirtilmedi. Bu küçük hatalar, kodunuzda neden olabilir. Aşağıdaki kod örneği göz önünde bulundurun.
+Örneğin, tek bir sınıfta farklı genel tür parametreleriyle aynı Varyant genel arabirimini açıkça uygularsanız, belirsizlik oluşturabilir. Derleyici bu durumda bir hata oluşturmaz, ancak çalışma zamanında hangi arabirim uygulamasının seçilme belirtilecektir. Bu, kodunuzda hafif hatalara neden olabilir. Aşağıdaki kod örneğini göz önünde bulundurun.
 
 ```csharp
 // Simple class hierarchy.
@@ -188,9 +188,9 @@ class Program
 }
 ```
 
-Bu örnekte, belirtilmeyen nasıl `pets.GetEnumerator` ücretlerinin arasında `Cat` ve `Dog`. Kodunuzda bu sorunlara neden olabilir.
+Bu örnekte, `pets.GetEnumerator` yönteminin ve `Dog`arasında `Cat` nasıl seçtiği belirtilmemiş. Bu, kodunuzda sorun oluşmasına neden olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Variance in Generic Interfaces (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [İşlev ve eylem genel temsilcileri (C#) için varyans kullanma](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Genel Arabirimlerde Varyans (C#)](./variance-in-generic-interfaces.md)
+- [Func ve eylem genel temsilcileri için varyans kullanma (C#)](./using-variance-for-func-and-action-generic-delegates.md)

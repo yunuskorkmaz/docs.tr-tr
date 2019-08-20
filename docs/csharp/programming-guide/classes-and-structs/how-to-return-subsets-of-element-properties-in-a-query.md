@@ -1,42 +1,42 @@
 ---
-title: 'Nasıl yapılır: İçinde sorgu - öğe özelliklerinin alt kümelerini döndürme C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Sorgu C# programlama kılavuzundaki öğe özelliklerinin alt kümelerini döndürme'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: acff804d87d67bf8758b97ad04805359bb3f2e32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9238e2e312021958ad62eeba89fe8b72c113e0d7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586071"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596840"
 ---
-# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Nasıl yapılır: Bir sorguda öğe özelliklerinin alt kümelerini döndürür (C# Programlama Kılavuzu)
-Bu koşulların her ikisinin de geçerli olduğunda anonim bir tür bir sorgu ifadesinde kullanın:  
+# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Nasıl yapılır: Sorguda öğe özelliklerinin alt kümelerini döndürme (C# Programlama Kılavuzu)
+Bu koşulların her ikisi de geçerli olduğunda bir sorgu ifadesinde anonim bir tür kullanın:  
   
-- Yalnızca bazı özelliklerin her kaynak öğesinin dönmek istiyorsunuz.  
+- Her bir kaynak öğenin özelliklerinden yalnızca bazılarını döndürmek istiyorsunuz.  
   
-- Sorgunun yürütüldüğü yöntemi kapsamı dışında sorgu sonucunu depolamak gerekmez.  
+- Sorgu sonuçlarını sorgunun yürütüldüğü yöntemin kapsamı dışında saklamak zorunda değilsiniz.  
   
- Yalnızca bir özellik veya alan her bir kaynak öğeden iade etmek istediğiniz sonra yalnızca nokta işlecinde kullanabilirsiniz `select` yan tümcesi. Örneğin, yalnızca döndürülecek `ID` her `student`, yazma `select` yan tümcesi aşağıdaki gibi:  
+ Her kaynak öğesinden yalnızca bir özellik veya alan döndürmek istiyorsanız, `select` yan tümcesindeki nokta işlecini kullanabilirsiniz. Örneğin, yalnızca `ID` her `student`birini döndürmek için `select` yan tümcesini aşağıdaki gibi yazın:  
   
 ```  
 select student.ID;  
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, yalnızca belirtilen koşulu karşılayan her kaynak öğesi özelliklerinin bir alt döndürmek için anonim bir tür kullanmayı gösterir.  
+ Aşağıdaki örnek, belirtilen koşulla eşleşen her bir kaynak öğenin özelliklerinin yalnızca bir alt kümesini döndürmek için anonim bir türün nasıl kullanılacağını gösterir.  
   
  [!code-csharp[csProgGuideLINQ#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#31)]  
   
- Hiç adları belirtildiyse anonim tür özellikleri için kaynak öğenin adlarını kullandığına dikkat edin. Anonim tür özellikleri için yeni adlar vermek için yazma `select` deyimi aşağıdaki gibi:  
+ Anonim türün, hiçbir ad belirtilmemişse, özellikleri için kaynak öğenin adlarını kullandığını unutmayın. Anonim türdeki özelliklere yeni adlar vermek için, aşağıdaki gibi bir `select` ifade yazın:  
   
 ```  
 select new { First = student.FirstName, Last = student.LastName };  
 ```  
   
- Önceki örnekte, bunu denerseniz sonra `Console.WriteLine` deyimi de değiştirmesi gerekir:  
+ Önceki örnekte `Console.WriteLine` bunu denerseniz deyimin de değiştirilmesi gerekir:  
   
 ```csharp  
 Console.WriteLine(student.First + " " + student.Last);  
@@ -44,10 +44,10 @@ Console.WriteLine(student.First + " " + student.Last);
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
-Bu kodu çalıştırmak için kopyalayıp sınıfına bir C# konsol uygulaması ile bir `using` System.Linq yönergesi.
+Bu kodu çalıştırmak için, bir C# `using` System. LINQ yönergesi ile sınıfı kopyalayıp bir konsol uygulamasına yapıştırın.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Anonim Tipler](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-- [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Anonim Tipler](./anonymous-types.md)
+- [LINQ sorgu Ifadeleri](../linq-query-expressions/index.md)

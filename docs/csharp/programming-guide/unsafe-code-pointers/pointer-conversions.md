@@ -1,39 +1,39 @@
 ---
-title: İşaretçi dönüşümleri - C# Programlama Kılavuzu
+title: İşaretçi dönüştürmeleri- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 3cef2f2d2af2d285504daea14aa57c55b9e9a21b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 81b2110e6a571e174693fd272d1c6b4bf44dbae3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833469"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588223"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>İşaretçi Dönüşümleri (C# Programlama Kılavuzu)
-Aşağıdaki tablo, önceden tanımlanmış örtük işaretçi dönüşümleri gösterir. Örtük dönüştürmeleri yöntemi çağırma ve atama deyimleri dahil olmak üzere birçok durumda oluşabilir.  
+Aşağıdaki tabloda önceden tanımlanmış örtük işaretçi dönüşümleri gösterilmektedir. Örtük dönüştürmeler, yöntem çağırma ve atama deyimleri dahil olmak üzere birçok durumda gerçekleşebilir.  
   
 ## <a name="implicit-pointer-conversions"></a>Örtük işaretçi dönüşümleri  
   
 |Başlangıç|Bitiş|  
 |----------|--------|  
-|Herhangi bir işaretçi türü|void *|  
+|Herhangi bir işaretçi türü|Kağıt|  
 |null|Herhangi bir işaretçi türü|  
   
- Açık işaretçi dönüştürme dönüştürmeler, var olan herhangi bir örtük dönüştürmeyi atama ifadesini kullanarak gerçekleştirmek için kullanılır. Aşağıdaki tabloda, bu dönüştürmeleri gösterilmektedir.  
+ Açık işaretçi dönüştürmesi, bir atama ifadesi kullanarak örtük dönüştürme olmayan dönüştürmeler gerçekleştirmek için kullanılır. Aşağıdaki tabloda bu dönüşümler gösterilmektedir.  
   
 ## <a name="explicit-pointer-conversions"></a>Açık işaretçi dönüşümleri  
   
 |Başlangıç|Bitiş|  
 |----------|--------|  
-|Herhangi bir işaretçi türü|Herhangi bir işaretçi türü|  
-|sbyte, byte, kısa, ushort, int, uint, long veya ulong|Herhangi bir işaretçi türü|  
-|Herhangi bir işaretçi türü|sbyte, byte, kısa, ushort, int, uint, long veya ulong|  
+|Herhangi bir işaretçi türü|Diğer herhangi bir işaretçi türü|  
+|SByte, Byte, Short, ushort, int, uint, Long veya ulong|Herhangi bir işaretçi türü|  
+|Herhangi bir işaretçi türü|SByte, Byte, Short, ushort, int, uint, Long veya ulong|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, bir işaretçi `int` işaretçisine dönüştürülür `byte`. İşaretçiyi en düşük adresli baytına değişkenin işaret dikkat edin. Ne zaman sırayla artırmanız boyutu en fazla sonuç `int` (4 bayt), kalan baytlar değişkenin görüntüleyebilirsiniz.  
+ Aşağıdaki örnekte, için bir işaretçisi `int` `byte`işaretçisine dönüştürülür. İşaretçinin, değişkenin en düşük adresli baytını işaret ettiğini unutmayın. Sonucu büyük ölçüde arttırdığınızda `int` (4 bayt), değişkenin kalan baytlarını görüntüleyebilirsiniz.  
   
  [!code-csharp[csProgGuidePointers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers2.cs#3)]  
   
@@ -41,9 +41,9 @@ Aşağıdaki tablo, önceden tanımlanmış örtük işaretçi dönüşümleri g
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [İşaretçi türleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
-- [Türler](../../../csharp/language-reference/keywords/types.md)
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)
-- [fixed Deyimi](../../../csharp/language-reference/keywords/fixed-statement.md)
-- [stackalloc](../../../csharp/language-reference/operators/stackalloc.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [İşaretçi türleri](./pointer-types.md)
+- [Türler](../../language-reference/keywords/types.md)
+- [unsafe](../../language-reference/keywords/unsafe.md)
+- [fixed Deyimi](../../language-reference/keywords/fixed-statement.md)
+- [stackalloc](../../language-reference/operators/stackalloc.md)

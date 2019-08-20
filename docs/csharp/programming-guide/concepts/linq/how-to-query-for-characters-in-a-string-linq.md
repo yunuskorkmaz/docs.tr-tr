@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: (LINQ) bir dizedeki karakterleri sorgulama (C#)'
+title: 'Nasıl yapılır: Dizedeki karakterleri sorgulama (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: b31dfb4c9fb7f7efc439a1703f13aafca3053e6a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1212ebcf264aab756eca1acb81ae617c2218a065
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584447"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592883"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Nasıl yapılır: (LINQ) bir dizedeki karakterleri sorgulama (C#)
-Çünkü <xref:System.String> sınıfın uyguladığı genel <xref:System.Collections.Generic.IEnumerable%601> arabirimi, bir karakter dizisi herhangi bir dize sorgulanabilir. Ancak, bu yaygın bir LINQ kullanımı değildir. İşlem eşleştirme karmaşık deseni için kullanmak <xref:System.Text.RegularExpressions.Regex> sınıfı.  
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Nasıl yapılır: Dizedeki karakterleri sorgulama (LINQ) (C#)
+<xref:System.String> Sınıfı genel<xref:System.Collections.Generic.IEnumerable%601> arabirimi uyguladığından, herhangi bir dize bir karakter dizisi olarak sorgulanabilir. Ancak bu, LINQ 'in yaygın bir kullanımı değildir. Karmaşık kalıp eşleştirme işlemleri için <xref:System.Text.RegularExpressions.Regex> sınıfını kullanın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir dize içerdiği sayısal basamak sayısını belirlemek için sorgular. "İlk kez yürütüldükten sonra sorguyu yeniden," unutmayın. Herhangi bir gerçek sonuç sorgunun kendisi depolamaz mümkün olmasıdır.  
+ Aşağıdaki örnek, içerdiği sayısal basamak sayısını belirlemede bir dizeyi sorgular. Sorgunun ilk kez yürütüldükten sonra "yeniden kullanılır" olduğunu unutmayın. Sorgunun kendisi gerçek sonuçları depolamadığından bu mümkündür.  
   
 ```csharp  
 class QueryAString  
@@ -55,9 +55,9 @@ class QueryAString
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Oluşturma bir C# konsol uygulama projesi ile `using` System.Linq ve System.IO ad alanları için yönergeleri.  
+ System. C# LINQ ve System.IO ad alanları `using` için yönergeler içeren bir konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [Nasıl yapılır: Normal ifadelerle LINQ sorgularını birleştirme (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+- [LINQ ve dizeler (C#)](./linq-and-strings.md)
+- [Nasıl yapılır: LINQ sorgularını normal Ifadelerle birleştirme (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)

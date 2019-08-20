@@ -1,97 +1,97 @@
 ---
-title: Deyimleri - C# Programlama Kılavuzu
+title: Deyimler- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 78d40aa2069e56357f55f39c3b7479ee46d0342c
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 4c3421f7165a0b1a3d1c3678fe28334fd8632472
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422822"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588617"
 ---
 # <a name="statements-c-programming-guide"></a>Deyimler (C# Programlama Kılavuzu)
-Bir programı alan eylemleri deyimlerinde ifade edilir. Ortak Eylemler değişkenleri bildirme, değerler atama, koleksiyonlar üzerinden döngü oluşturma ve bir ya da başka bir verili bir koşula bağlı kod bloğu için dallanma metotları çağırma içerir. Deyimleri bir programda yürütüldüğü sırada, denetim akışı veya, yürütmenin akışını çağrılır. Denetim akışı nasıl program çalışma zamanında aldığı giriş tepki verdiğini bağlı olarak bir program çalıştırıldığında her zaman değişiklik gösterebilir.  
+Bir programın aldığı eylemler deyimler bölümünde ifade edilir. Yaygın eylemler, belirli bir koşula bağlı olarak değişkenleri bildirme, değer atama, yöntemleri çağırma, koleksiyonlar aracılığıyla döngü oluşturma ve bir veya başka bir kod bloğuna dallandırma içerir. Bir programda deyimlerin yürütülme sırası, denetim akışı veya yürütme akışı olarak adlandırılır. Programın çalışma zamanında aldığı girişe nasıl davrandığına bağlı olarak, denetim akışı, programın her çalıştırılışında farklılık gösterebilir.  
   
- Bir ifade, tek satırlık bir noktalı virgülle biter kod ya da tek satırlı ifadeleri bir blok içinde bir dizi oluşabilir. Bir deyim bloğunu içine {} köşeli ayraçlar ve iç içe geçmiş blok içerebilir. Aşağıdaki kod, iki örnek tek satır deyimlerinin yanı sıra, çok satırlı deyim bloğunu gösterir:  
+ Bir deyim, noktalı virgül veya bir blokta bir dizi tek satırlık deyimlerle biten tek satırlık koddan oluşabilir. Bir ifade bloğu {} köşeli ayraç içine alınır ve iç içe bloklar içerebilir. Aşağıdaki kod, tek satırlık deyimlerin iki örneğini ve çok satırlı bir deyim bloğunu göstermektedir:  
   
  [!code-csharp[csProgGuideStatements#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#1)]  
   
-## <a name="types-of-statements"></a>Tür ifadeleri  
- Aşağıdaki tablo, C# ve daha fazla bilgi içeren konulara bağlantılar ile bunların ilişkili anahtar sözcükleri deyimlerinde çeşitli türlerde listeler:  
+## <a name="types-of-statements"></a>Deyim türleri  
+ Aşağıdaki tabloda, içindeki C# çeşitli deyim türleri ve ilgili anahtar kelimeleri, daha fazla bilgi içeren konuların bağlantılarıyla listelenmektedir:  
   
-|Kategori|C# anahtar sözcükleri / notları|  
+|Kategori|C#anahtar sözcükler/notlar|  
 |--------------|---------------------------|  
-|[Bildirim deyimleri](#declaration-statements)|Yeni bir değişken veya sabit bir bildirim deyiminin tanıtır. Bir değişken bildirimi, isteğe bağlı olarak bir değişkene bir değer atayabilirsiniz. Sabit bir bildirimde atama gereklidir.|  
-|[İfade deyimleri](expressions.md)|Bir değeri hesaplayabilir ifade deyimleri, bir değişken değeri depolamanız gerekir. Daha fazla bilgi için [ifade deyimleri](#expression-statements).|  
-|Seçim deyimleri|Seçim deyimleri kod, bir veya daha fazla belirli koşullara bağlı olarak farklı bölümlerini dala olanak sağlar. Daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> [varsa](../../../csharp/language-reference/keywords/if-else.md), [başka](../../../csharp/language-reference/keywords/if-else.md), [geçiş](../../../csharp/language-reference/keywords/switch.md), [çalışması](../../../csharp/language-reference/keywords/switch.md)|  
-|Yineleme deyimleri|Yineleme deyimleri diziler gibi koleksiyonlar üzerinden döngü etkinleştirmeniz veya belirtilen bir koşul yerine getirilene kadar deyimleri aynı kümesini tekrar tekrar gerçekleştirin. Daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> [yapmak](../../../csharp/language-reference/keywords/do.md), [için](../../../csharp/language-reference/keywords/for.md), [foreach](../../../csharp/language-reference/keywords/foreach-in.md), [içinde](../../../csharp/language-reference/keywords/foreach-in.md), [sırada](../../../csharp/language-reference/keywords/while.md)|  
-|Atlama deyimleri|Deyimleri Aktarım Denetimi başka bir bölüme atlayın. Daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> [Kesme](../../../csharp/language-reference/keywords/break.md), [devam](../../../csharp/language-reference/keywords/continue.md), [varsayılan](../../../csharp/language-reference/keywords/switch.md), [goto](../../../csharp/language-reference/keywords/goto.md), [dönüş](../../../csharp/language-reference/keywords/return.md), [yield](../../../csharp/language-reference/keywords/yield.md)|  
-|Özel durum işleme deyimleri|Özel durum işleme deyimleri düzgün bir şekilde çalışma zamanında gerçekleşen özel durumları kurtarmanıza olanak tanır. Daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> [throw](../../../csharp/language-reference/keywords/throw.md), [try-catch](../../../csharp/language-reference/keywords/try-catch.md), [try-finally](../../../csharp/language-reference/keywords/try-finally.md), [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)|  
-|[Checked ve unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)|İşaretli ve işaretsiz ifadeler sayısal işlemleri sonucu sonuç değerini tutmak için çok küçük bir değişkende depolanan bir taşma zaman neden izin verilip verilmeyeceğini belirtmenizi sağlar. Daha fazla bilgi için [kullanıma](../../../csharp/language-reference/keywords/checked.md) ve [denetlenmeyen](../../../csharp/language-reference/keywords/unchecked.md).|  
-|`await` Deyimi|Bir yöntem ile işaretlerseniz [zaman uyumsuz](../../../csharp/language-reference/keywords/async.md) kullanabileceğiniz değiştiricisi [await](../../../csharp/language-reference/keywords/await.md) yönteminde işleci. Ulaştığında denetlemek bir `await` zaman uyumsuz yöntemin ifadesinde, Denetim çağırana döner ve awaited görevi tamamlanıncaya kadar yöntemin ediyor askıya alındı. Görev tamamlandığında, yürütme yönteminde devam edebilir.<br /><br /> Basit bir örnek için bkz. "Zaman uyumsuz yöntemler" bölümünü [yöntemleri](../../../csharp/programming-guide/classes-and-structs/methods.md). Daha fazla bilgi için [Asynchronous Programming with async ve await](../../../csharp/programming-guide/concepts/async/index.md).|  
-|`yield return` Deyimi|Bir yineleyici listesini veya bir dizi gibi bir koleksiyon üzerinde özel yineleme gerçekleştirir. Yineleyici [yield return](../../../csharp/language-reference/keywords/yield.md) her öğeyi bir defada döndürmek için deyimi. Olduğunda bir `yield return` deyimine ulaşıldığında, kodun geçerli konumu anımsanacak. Yürütme, yineleyici sonraki sefer çağrıldığında bu konumdan yeniden başlatılır.<br /><br /> Daha fazla bilgi için [yineleyiciler](../../../csharp/programming-guide/concepts/iterators.md).|  
-|`fixed` Deyimi|Fixed deyimi, çöp toplayıcı taşınabilir bir değişken yerini değiştirme alanından engeller. Daha fazla bilgi için [sabit](../../../csharp/language-reference/keywords/fixed-statement.md).|  
-|`lock` Deyimi|Lock deyimi, bir kerede yalnızca bir iş parçacığına kod bloklarını erişimi sınırlamak sağlar. Daha fazla bilgi için [kilit](../../../csharp/language-reference/keywords/lock-statement.md).|  
-|Etiketli deyimler|Bir deyimi bir etiket verin ve ardından [goto](../../../csharp/language-reference/keywords/goto.md) etiketli deyime atlamak için anahtar sözcüğü. (Aşağıdaki satırı örneğe bakın.)|  
-|[Boş deyim](#the-empty-statement)|Boş deyim tek noktalı virgül içerir. Bu, hiçbir şey yapmaz ve burada bir deyim gereklidir ancak herhangi bir işlem yapılması gerekiyor yerde kullanılabilir.|  
+|[Bildirim deyimleri](#declaration-statements)|Bir bildirim bildirimi yeni bir değişken veya sabit tanıtır. Değişken bildirimi, isteğe bağlı olarak değişkenine bir değer atayabilir. Sabit bildiriminde atama gereklidir.|  
+|[İfade deyimleri](expressions.md)|Bir değeri hesaplayan ifade deyimleri değeri bir değişkende depoalmalıdır. Daha fazla bilgi için bkz. [Expression deyimleri](#expression-statements).|  
+|Seçim deyimleri|Seçim deyimleri, belirtilen bir veya daha fazla koşula bağlı olarak farklı kod bölümlerine dallandırmayı sağlar. Daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> [Eğer](../../language-reference/keywords/if-else.md), [Else](../../language-reference/keywords/if-else.md), [anahtar](../../language-reference/keywords/switch.md), [büyük/küçük harf](../../language-reference/keywords/switch.md)|  
+|Yineleme deyimleri|Yineleme deyimleri, diziler gibi koleksiyonlar aracılığıyla döngü gerçekleştirmenizi veya belirli bir koşul karşılanana kadar aynı deyim kümesini sürekli olarak gerçekleştirmenizi sağlar. Daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> [Do](../../language-reference/keywords/do.md), [for](../../language-reference/keywords/for.md), [foreach](../../language-reference/keywords/foreach-in.md), [in](../../language-reference/keywords/foreach-in.md), [](../../language-reference/keywords/while.md) ,,|  
+|Atlama deyimleri|Atdeyimlerini, kodun başka bir bölümüne aktarma denetimi. Daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> [Kes](../../language-reference/keywords/break.md), [devam](../../language-reference/keywords/continue.md), [varsayılan](../../language-reference/keywords/switch.md), [goto](../../language-reference/keywords/goto.md), [Return](../../language-reference/keywords/return.md), [yield](../../language-reference/keywords/yield.md)|  
+|Özel durum işleme deyimleri|Özel durum işleme deyimleri, çalışma zamanında oluşan olağanüstü koşullardan sorunsuz bir şekilde kurtarmanızı sağlar. Daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> [throw](../../language-reference/keywords/throw.md), [try-catch](../../language-reference/keywords/try-catch.md), [try-finally](../../language-reference/keywords/try-finally.md), [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)|  
+|[Checked ve unchecked](../../language-reference/keywords/checked-and-unchecked.md)|Checked ve unchecked deyimleri, sonuçta elde edilen değeri tutmak için çok küçük bir değişkende depolandığında sayısal işlemlere taşma olmasına izin verilip verilmeyeceğini belirtmenizi sağlar. Daha fazla bilgi için bkz. [Checked](../../language-reference/keywords/checked.md) ve [unchecked](../../language-reference/keywords/unchecked.md).|  
+|`await` İfade|[Zaman uyumsuz](../../language-reference/keywords/async.md) değiştiriciyle bir yöntemi işaretlerseniz, yönteminde [await](../../language-reference/keywords/await.md) işlecini kullanabilirsiniz. Denetim zaman uyumsuz yöntemde `await` bir ifadeye ulaştığında denetim çağırana döner ve beklenen görev tamamlanana kadar yöntem içindeki ilerleme durumu askıya alınır. Görev tamamlandığında, yürütme yöntemi içinde çalışmaya çalışabilir.<br /><br /> Basit bir örnek için, [yöntemlerin](../classes-and-structs/methods.md)"zaman uyumsuz metotlar" bölümüne bakın. Daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama](../concepts/async/index.md).|  
+|`yield return` İfade|Yineleyici, bir koleksiyon üzerinde liste veya dizi gibi özel bir yineleme gerçekleştirir. Bir yineleyici, her öğeyi birer birer döndürmek için [yield return](../../language-reference/keywords/yield.md) ifadesini kullanır. Bir `yield return` ifadeye ulaşıldığında, koddaki geçerli konum hatırlanır. Yineleyici bir sonraki sefer çağrıldığında, yürütme o konumdan yeniden başlatılır.<br /><br /> Daha fazla bilgi için bkz. [yineleyiciler](../concepts/iterators.md).|  
+|`fixed` İfade|Fixed deyimleri, çöp toplayıcısının taşınabilir bir değişkenin yerini değiştirmesini engeller. Daha fazla bilgi için bkz. [düzeltildi](../../language-reference/keywords/fixed-statement.md).|  
+|`lock` İfade|Lock deyimleri tek seferde yalnızca bir iş parçacığına kod bloklarına erişimi sınırlamanıza olanak sağlar. Daha fazla bilgi için bkz. [Lock](../../language-reference/keywords/lock-statement.md).|  
+|Etiketli deyimler|Bir deyime bir etiket verebilir ve sonra etiketli ifadeye geçmek için [goto](../../language-reference/keywords/goto.md) anahtar sözcüğünü kullanabilirsiniz. (Aşağıdaki satırdaki örneğe bakın.)|  
+|[Boş ifade](#the-empty-statement)|Boş ifade tek bir noktalı virgülden oluşur. Hiçbir şey yapmaz ve bir deyimin gerekli olduğu, ancak herhangi bir eylemin gerçekleştirilmesi gereken yerlerde kullanılabilir.|  
   
 ## <a name="declaration-statements"></a>Bildirim deyimleri
 
-Aşağıdaki kod ilk ataması olmadan ve değişken bildirimleri ve sabit bir bildirimde ile gerekli başlatma örneklerini gösterir.
+Aşağıdaki kod, bir başlangıç ataması ve, gerekli başlatmaya sahip sabit bir bildirime sahip ve olmayan değişken bildirimlerinin örneklerini gösterir.
 
  [!code-csharp[csProgGuideStatements#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#23)]
 
 ## <a name="expression-statements"></a>İfade deyimleri
 
-Aşağıdaki kod, ifade deyimleri, atama, atama ve yöntem çağrısının ile nesne oluşturma da dahil olmak üzere örneklerini gösterir.
+Aşağıdaki kod, atama, atamayla nesne oluşturma ve yöntem çağırma dahil olmak üzere ifade deyimlerinin örneklerini gösterir.
 
  [!code-csharp[csProgGuideStatements#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#24)]
 
-## <a name="the-empty-statement"></a>Boş deyim
+## <a name="the-empty-statement"></a>Boş ifade
 
-Aşağıdaki örnekler, iki kullanım için boş bir deyimi göstermektedir:
+Aşağıdaki örneklerde boş bir deyimin iki kullanımı gösterilmektedir:
 
  [!code-csharp[csProgGuideStatements#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#25)]
 
-## <a name="embedded-statements"></a>Katıştırılmış ifadeler
+## <a name="embedded-statements"></a>Gömülü deyimler
 
- Dahil olmak üzere, bazı deyimleri [yapmak](../../../csharp/language-reference/keywords/do.md), [sırada](../../../csharp/language-reference/keywords/while.md), [için](../../../csharp/language-reference/keywords/for.md), ve [foreach](../../../csharp/language-reference/keywords/foreach-in.md), bunları izleyen bir katıştırılmış deyim her zaman vardır. Bu katıştırılmış deyimi tek bir deyim ya da birden çok deyim tarafından alınmış olabilir {} bir deyim bloğunu ayraç. Katıştırılmış deyimler bile tek satır içine {} köşeli ayraçlar, aşağıdaki örnekte gösterildiği gibi:  
+ [Do](../../language-reference/keywords/do.md), [while](../../language-reference/keywords/while.md), [for](../../language-reference/keywords/for.md)ve [foreach](../../language-reference/keywords/foreach-in.md)dahil bazı deyimler, her zaman bunları izleyen bir katıştırılmış ifadeye sahiptir. Bu katıştırılmış deyim tek bir deyim veya deyim bloğunda {} köşeli ayraç içine alınmış birden çok deyim olabilir. Hatta, tek satırlı katıştırılmış deyimler, aşağıdaki örnekte gösterildiği {} gibi köşeli ayraç içine alınabilir:  
   
  [!code-csharp[csProgGuideStatements#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#26)]  
   
- İçinde içine alınmamış bir katıştırılmış deyim {} ayraçlar bir bildirim deyiminin veya etiketlenmiş deyim olamaz. Bu, aşağıdaki örnekte gösterilmiştir:  
+ {} Köşeli ayraçlar içine alınmış gömülü bir ifade, bir bildirim bildirimi veya etiketli bir ifade olamaz. Bu, aşağıdaki örnekte gösterilmiştir:  
   
  [!code-csharp[csProgGuideStatements#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#27)]  
   
- Hatayı düzeltmek için bir blok içinde gömülü deyim koyun:  
+ Hatayı onarmak için katıştırılmış ifadeyi bir bloğa yerleştirin:  
   
  [!code-csharp[csProgGuideStatements#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#28)]  
   
-## <a name="nested-statement-blocks"></a>İç içe geçmiş deyim blokları  
- Aşağıdaki kodda gösterildiği gibi deyim blokları yuvalanabilir:  
+## <a name="nested-statement-blocks"></a>İç içe geçmiş Ifade blokları  
+ Aşağıdaki kodda gösterildiği gibi, ekstre blokları iç içe olabilir:  
   
  [!code-csharp[csProgGuideStatements#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#29)]  
   
-## <a name="unreachable-statements"></a>Erişilemeyen deyimleri  
- Derleyici denetim akışını belirli bir ifadenin tüm koşullar altında hiçbir zaman ulaşabilir belirlerse, bu CS0162, uyarı aşağıdaki örnekte gösterildiği gibi üretecektir:  
+## <a name="unreachable-statements"></a>Erişilemeyen deyimler  
+ Derleyici, denetim akışının herhangi bir koşullarda belirli bir deyime hiçbir şekilde ulaşamayacağını belirlerse, aşağıdaki örnekte gösterildiği gibi, uyarı CS0162 oluşturacaktır:  
   
  [!code-csharp[csProgGuideStatements#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#22)]  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
   
-- [Deyim Anahtar Sözcükleri](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [Deyim Anahtar Sözcükleri](../../language-reference/keywords/statement-keywords.md)  
   
-- [İfadeler](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
+- [İfadeler](./expressions.md)  
   
-- [İşleçler](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [İşleçler](./operators.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [C# Programlama Kılavuzu](../index.md)

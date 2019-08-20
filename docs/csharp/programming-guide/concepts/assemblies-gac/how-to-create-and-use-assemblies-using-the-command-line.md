@@ -2,23 +2,23 @@
 title: 'Nasıl yapılır: Komut satırını kullanarak derlemeler oluşturma ve kullanma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 12d23816b740816bd357c3c2ac57583f31bf3cb3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0a8db22a05d834d15f6e6b7f049f59f86bc1fe1d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586028"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595972"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Nasıl yapılır: Komut satırını kullanarak derlemeler oluşturma ve kullanma (C#)
-Bir derleme veya dinamik bağlantı kitaplığı (DLL), programınız için çalışma zamanında bağlıdır. Oluşturma ve bir DLL kullanarak göstermek için aşağıdaki senaryoyu göz önünde bulundurun:  
+Bir derleme veya dinamik bağlantı kitaplığı (DLL), çalışma zamanında programınıza bağlanır. Bir DLL oluşturmayı ve kullanmayı göstermek için aşağıdaki senaryoyu göz önünde bulundurun:  
   
-- `MathLibrary.DLL`: Çalışma zamanında çağrılabilir yöntemleri içeren kitaplık dosyası. Bu örnekte, iki yöntem, DLL içeren `Add` ve `Multiply`.  
+- `MathLibrary.DLL`: Çalışma zamanında çağrılacak yöntemleri içeren kitaplık dosyası. Bu örnekte, DLL iki yöntem `Add` içerir ve. `Multiply`  
   
-- `Add`: Yöntemi içeren kaynak dosyayı `Add`. Parametrelerini toplamını döndürür. Sınıf `AddClass` yöntemi içeren `Add` ad alanının bir üyesidir `UtilityMethods`.  
+- `Add`: Yöntemini `Add`içeren kaynak dosya. Parametrelerinin toplamını döndürür. `UtilityMethods`Yöntemi `AddClass` içeren`Add` sınıf, ad alanının bir üyesidir.  
   
-- `Mult`: Yöntemi içeren kaynak kodu `Multiply`. Parametrelerini çarpımını döndürür. Sınıf `MultiplyClass` yöntemi içeren `Multiply` ayrıca ad alanının bir üyesidir `UtilityMethods`.  
+- `Mult`: Yöntemini `Multiply`içeren kaynak kodu. Kendi parametrelerinin çarpımını döndürür. `UtilityMethods`Yöntemi `MultiplyClass` içeren`Multiply` sınıf ayrıca ad alanının bir üyesidir.  
   
-- `TestCode`: İçeren dosyayı `Main` yöntemi. Yöntemleri, toplam ve çalışma zamanı bağımsız değişken ürününü hesaplar için DLL dosyası içinde kullanır.  
+- `TestCode`: `Main` Yöntemini içeren dosya. Çalışma zamanı bağımsız değişkenlerinin toplamını ve çarpımını hesaplamak için DLL dosyasındaki yöntemleri kullanır.  
   
 ## <a name="example"></a>Örnek  
   
@@ -84,27 +84,27 @@ class TestCode
 */  
 ```  
   
- Bu dosyayı içeren DLL yöntemleri kullanan algoritma `Add` ve `Multiply`. Girilen komut satırından bağımsız değişkenlerini ayrıştırma ile başlayan `num1` ve `num2`. Kullanarak toplamı hesaplar `Add` metodunda `AddClass` sınıfını ve ürünü kullanarak `Multiply` metodunda `MultiplyClass` sınıfı.  
+ Bu dosya, dll yöntemlerini ve `Add` `Multiply`' ı kullanan algoritmayı içerir. Komut satırından `num1` girilen bağımsız değişkenlerin ayrıştırılmasından başlar ve `num2`. Daha sonra, `Add` sınıfındaki yöntemini kullanarak ve `AddClass` `Multiply` `MultiplyClass` sınıfındaki yöntemi kullanarak toplamı hesaplar.  
   
- Dikkat `using` dosyasının başında yönergesi DLL yöntemleri gibi derleme zamanında başvurmak için nitelenmemiş sınıf adları kullanmanıza olanak sağlar:  
+ Dosyanın başındaki yönerge, derleme zamanında DLL yöntemlerine başvurmak için, nitelenmemiş sınıf adlarını şu şekilde kullanmanıza olanak sağlar: `using`  
   
 ```csharp  
 MultiplyClass.Multiply(num1, num2);  
 ```  
   
- Aksi takdirde, tam olarak nitelenmiş adlar kullanacak şekilde gerekir:  
+ Aksi takdirde, aşağıdaki gibi tam nitelikli adları kullanmanız gerekir:  
   
 ```csharp  
 UtilityMethods.MultiplyClass.Multiply(num1, num2);  
 ```  
   
 ## <a name="execution"></a>Yürütme  
- Programı çalıştırmak için iki sayı, aşağıdaki gibi yazın, bir EXE dosyasının adını girin:  
+ Programı çalıştırmak için, EXE dosyasının adını ve ardından iki sayıyı aşağıdaki şekilde girin:  
   
  `TestCode 1234 5678`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
+- [C# Programlama Kılavuzu](../../index.md)
 - [.NET’te bütünleştirilmiş kodlar](../../../../standard/assembly/index.md)
 - [DLL İşlevleri için bir Sınıf Oluşturma](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

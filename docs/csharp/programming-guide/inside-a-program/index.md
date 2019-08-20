@@ -5,16 +5,16 @@ helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: 7a18285e6eec8f4e71c1b0e8cb3a0ebdc4203939
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a180dc30c7fab11e5b939682244dbb90eb7615eb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635253"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589259"
 ---
 # <a name="inside-a-c-program"></a>C# programı içinde
 
-Bu bölüm C# programının genel yapısı ele alır ve standart "Hello, World!" içerir örnek.
+Bölüm bir C# programın genel yapısını açıklar ve "Hello, World!" standardını içerir örneğinde.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
@@ -28,11 +28,11 @@ Bu bölüm C# programının genel yapısı ele alır ve standart "Hello, World!"
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-- [C# kullanmaya Başlarken](../../getting-started/index.md)
+- [Kullanmaya başlamaC#](../../getting-started/index.md)
 
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Programlama Kılavuzu](../index.md)
 
-- [C# başvurusu](../../language-reference/index.md)
+- [C#Başvurunun](../../language-reference/index.md)
 
 - [Örnekler ve öğreticiler](../../../samples-and-tutorials/index.md)
 
@@ -42,4 +42,4 @@ Bu bölüm C# programının genel yapısı ele alır ve standart "Hello, World!"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Programlama Kılavuzu](../index.md)

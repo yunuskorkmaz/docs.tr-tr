@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: f09f93f27aa4f50cfb7e09b9d6d4f98f22e1ac9a
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 4f0277ef5883a238cf2579d2d9ea956bc06061e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433564"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589865"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Tür Parametrelerindeki Kısıtlamalar (C# Programlama Kılavuzu)
 
@@ -113,7 +113,7 @@ Aşağıdaki örnekte gösterildiği gibi, bir sabit listesi oluşturmak ve değ
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Collections.Generic>
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/index.md)
-- [Genel Sınıflar](../../../csharp/programming-guide/generics/generic-classes.md)
-- [new Kısıtlaması](../../../csharp/language-reference/keywords/new-constraint.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Genel Türlere Giriş](./index.md)
+- [Genel Sınıflar](./generic-classes.md)
+- [new Kısıtlaması](../../language-reference/keywords/new-constraint.md)

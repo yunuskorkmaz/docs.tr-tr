@@ -1,5 +1,5 @@
 ---
-title: Al - C# başvurusu
+title: C# başvuru al
 ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
@@ -8,26 +8,26 @@ f1_keywords:
 helpviewer_keywords:
 - get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
-ms.openlocfilehash: 280b818534238207f901e1dcd125e03f5ce1d1fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 783814a575e95fc9deb5c9cdef235a5636f5f529
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661600"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602138"
 ---
 # <a name="get-c-reference"></a>get (C# Başvurusu)
 
-`get` Tanımlayan anahtar sözcüğü bir *erişimci* yönteminde bir özellik veya dizin özelliği veya dizin oluşturucu öğenin döndürür. Daha fazla bilgi için [özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md), [Implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) ve [dizin oluşturucular](../../../csharp/programming-guide/indexers/index.md).  
+Anahtar sözcüğü, özellik değeri veya Indexer öğesi döndüren bir özellikte veya dizin oluşturucuda bir erişimci yöntemi tanımlar. `get` Daha fazla bilgi için bkz. [Özellikler](../../programming-guide/classes-and-structs/properties.md), [Otomatik uygulanan özellikler](../../programming-guide/classes-and-structs/auto-implemented-properties.md) ve [Dizin oluşturucular](../../programming-guide/indexers/index.md).  
   
-Aşağıdaki örnek, her ikisi de tanımlar bir `get` ve `set` adlı bir özellik erişimcisi `Seconds`. Adlı bir özel alan kullanan `_seconds` özellik değeri yedeklenir.  
+Aşağıdaki örnek adlı `get` `set` birözellik`Seconds`için hem hem de erişimcisini tanımlar. Özellik değerini geri yüklemek için adlı `_seconds` bir özel alan kullanır.  
  
  [!code-csharp[get#1](../../../../samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]  
   
-Genellikle, `get` erişimci, önceki örnekte olduğu gibi bir değer döndüren tek bir sistem oluşur. C# 7.0 ile başlayarak, uygulayabileceğiniz `get` bir ifade gövdeli üyesi erişimcisi. Aşağıdaki örnek her ikisini birden uygular `get` ve `set` ifade gövdeli üyeler olarak erişimcisi.
+Genellikle, `get` erişimci, önceki örnekte olduğu gibi bir değer döndüren tek bir deyimden oluşur. 7,0 ' C# den başlayarak, `get` erişimciyi bir ifade olarak uygulayabilirsiniz. Aşağıdaki örnek, `get` `set` hem hem de erişimcisini ifade-Bodied Üyeler olarak uygular.
 
  [!code-csharp[get#3](../../../../samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]   
  
-Basit durumlarda için bir özelliğin `get` ve `set` erişimcileri ayarlama veya özel destek alanı bir değer alınırken daha başka bir işlem gerçekleştirme, otomatik uygulanan özellikler için C# Derleyici desteği yararlanabilir. Aşağıdaki örnek uygulayan `Hours` otomatik uygulanan bir özellik olarak. 
+Bir özelliğin `get` ve `set` erişimcilerinin özel bir destek alanındaki bir değeri ayarlamaktan veya almadan başka bir işlem gerçekleştirdiği basit durumlarda, C# derleyicinin otomatik olarak uygulanmış olan desteğiyle faydalanabilirsiniz özelliklerinin. Aşağıdaki örnek `Hours` otomatik uygulanan bir özellik olarak uygulanır. 
   
  [!code-csharp[get#2](../../../../samples/snippets/csharp/language-reference/keywords/get/get-2.cs)]  
   
@@ -37,7 +37,7 @@ Basit durumlarda için bir özelliğin `get` ve `set` erişimcileri ayarlama vey
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
-- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [C#Başvurunun](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Anahtar Sözcükleri](./index.md)
+- [Özellikler](../../programming-guide/classes-and-structs/properties.md)

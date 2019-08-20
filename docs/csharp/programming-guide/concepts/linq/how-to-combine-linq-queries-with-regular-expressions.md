@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: Normal ifadelerle LINQ sorgularını birleştirme (C#)'
+title: 'Nasıl yapılır: LINQ sorgularını normal Ifadelerle birleştirme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: 21c05b0134fda5011ecaf14f296e5a5172cf3bf5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7e3540dfe6d93f5262790bce615cc7fe3f1fbb93
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585905"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594048"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Nasıl yapılır: Normal ifadelerle LINQ sorgularını birleştirme (C#)
-Bu örnek nasıl kullanılacağını gösterir <xref:System.Text.RegularExpressions.Regex> daha karmaşık metin dizelerini eşleştirme için normal bir ifade oluşturmak için sınıf. LINQ Sorgu tam olarak normal ifade ile arama ve sonuçlar şekil için istediğiniz dosyaları filtre kolaylaştırır.  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Nasıl yapılır: LINQ sorgularını normal Ifadelerle birleştirme (C#)
+Bu örnek, <xref:System.Text.RegularExpressions.Regex> metin dizelerinde daha karmaşık eşleştirme için bir normal ifade oluşturmak üzere sınıfının nasıl kullanılacağını gösterir. LINQ sorgusu, normal ifadeyle arama yapmak istediğiniz dosyaları tam olarak filtrelemenizi ve sonuçları şekillendirmenizi kolaylaştırır.  
   
 ## <a name="example"></a>Örnek  
   
@@ -93,12 +93,12 @@ class QueryWithRegEx
 }  
 ```  
   
- Ayrıca Sorgulayabileceğiniz Not <xref:System.Text.RegularExpressions.MatchCollection> tarafından döndürülen nesne gibi bir `RegEx` arama. Bu örnekte, sonuçları yalnızca her bir eşleşme değeri oluşturulur. Ancak, aynı zamanda filtreleme, sıralama ve gruplandırma bu koleksiyon üzerinde her türlü gerçekleştirmek için LINQ kullanılacak mümkündür. Çünkü <xref:System.Text.RegularExpressions.MatchCollection> genel olmayan <xref:System.Collections.IEnumerable> koleksiyonuna sahip sorgudaki Aralık değişkeninin türünü açıkça durumuna.  
+ <xref:System.Text.RegularExpressions.MatchCollection> Bir`RegEx` arama tarafından döndürülen nesneyi de sorgulayabileceğinizi unutmayın. Bu örnekte, sonuçlarda yalnızca her bir eşleşmenin değeri üretilir. Ancak, bu koleksiyonda tüm filtreleme, sıralama ve gruplama türlerini gerçekleştirmek için LINQ kullanmak da mümkündür. <xref:System.Text.RegularExpressions.MatchCollection> Genel<xref:System.Collections.IEnumerable> olmayan bir koleksiyon olduğundan, sorgudaki aralık değişkeninin türünü açıkça belirtmelisiniz.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Oluşturma bir C# konsol uygulama projesi ile `using` System.Linq ve System.IO ad alanları için yönergeleri.  
+ System. C# LINQ ve System.IO ad `using` alanları için yönergeler içeren bir konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ ve dizeler (C#)](./linq-and-strings.md)
+- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)

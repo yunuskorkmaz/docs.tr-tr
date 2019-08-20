@@ -1,30 +1,30 @@
 ---
-title: Projeksiyon işlemleri (C#)
+title: Projeksiyon Işlemleri (C#)
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: 74792c1a58aa17c65f3a153216d50c672e0b6cf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b34f3e578e746d75bdad7baaf731d743830713c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61681760"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591566"
 ---
-# <a name="projection-operations-c"></a>Projeksiyon işlemleri (C#)
-Projeksiyon bir nesne, genellikle daha sonra kullanılacak olan bu özelliklerini içeren yeni bir biçime dönüştürme işlemini ifade eder. Yansıtma kullanarak her nesneden yerleşik yeni bir türünü oluşturabilirsiniz. Proje bir özelliği ve bir matematiksel işlev üzerinde gerçekleştirin. Ayrıca, değişiklik yapmadan özgün nesneye yansıtabilirsiniz.  
+# <a name="projection-operations-c"></a>Projeksiyon Işlemleri (C#)
+Projeksiyon, bir nesneyi genellikle daha sonra kullanılacak olan özelliklerden oluşan yeni bir forma dönüştürme işlemine başvurur. Projeksiyonu kullanarak her nesneden oluşturulan yeni bir tür oluşturabilirsiniz. Bir özelliği proje üzerinde bir matematik işlevi de gerçekleştirebilirsiniz. Özgün nesneyi değiştirmeden de proje oluşturabilirsiniz.  
   
- Projeksiyon gerçekleştiren standart sorgu işleci yöntemleri aşağıdaki bölümünde listelenir.  
+ Yansıtmayı gerçekleştiren standart sorgu işleci yöntemleri aşağıdaki bölümde listelenmiştir.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem adı|Açıklama|C# sorgu ifade sözdizimi|Daha fazla bilgi|  
+|Yöntem adı|Açıklama|C#Sorgu Ifadesi söz dizimi|Daha fazla bilgi|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Seçim|Bir dönüştürme işlevine dayalı projeler değerleri.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
-|SelectMany|Projeleri dizileri değeri bir dönüştürme işlevi üzerinde temel alır ve ardından bunları bir dizi düzleştirir.|Birden çok kullanın `from` yan tümceleri|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
+|Seçim|Bir dönüşüm işlevine dayalı projeler değerleri.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
+|SelectMany|Bir dönüşüm işlevine dayalı ve sonra bunları tek bir sırayla düzleştirir.|Birden çok `from` yan tümce kullanma|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-examples"></a>Sorgu ifadesi söz dizimi örnekleri  
+## <a name="query-expression-syntax-examples"></a>Sorgu Ifadesi söz dizimi örnekleri  
   
 ### <a name="select"></a>Seçim  
- Aşağıdaki örnekte `select` dizelerinin listesini her bir dizenin ilk harfinden projeye yan tümcesi.  
+ Aşağıdaki örnek, `select` bir dize listesindeki her bir dizeden ilk harfi proje için yan tümcesini kullanır.  
   
 ```csharp  
 List<string> words = new List<string>() { "an", "apple", "a", "day" };  
@@ -45,7 +45,7 @@ foreach (string s in query)
 ```  
   
 ### <a name="selectmany"></a>SelectMany  
- Aşağıdaki örnek, birden çok kullanır `from` her bir sözcüğü her bir dizenin bir dize listesi içinde proje için yan tümcesi.  
+ Aşağıdaki örnek, her bir `from` sözcüğü bir dize listesindeki her bir dizeden proje için birden çok yan tümce kullanır.  
   
 ```csharp  
 List<string> phrases = new List<string>() { "an apple a day", "the quick brown fox" };  
@@ -70,21 +70,21 @@ foreach (string s in query)
 */  
 ```  
   
-## <a name="select-versus-selectmany"></a>SelectMany karşı seçin  
- Hem iş `Select()` ve `SelectMany()` bir sonuç değeri (veya değerler) oluşturmak için kaynak değerlerinden olduğu. `Select()` Her kaynak değeri için bir sonuç değerini veriyor. Genel sonuç, bu nedenle kaynak koleksiyonu aynı sayıda öğe içeren bir koleksiyon olur. Buna karşılık, `SelectMany()` her bir kaynak değerden birleştirilmiş alt koleksiyonlar içeren tek bir genel sonucu üretir. Bağımsız değişken olarak geçirilen dönüştürme işlevi `SelectMany()` numaralandırılabilir dizisi için her kaynak değeri değerlerinin döndürmelidir. Bu numaralandırılabilir dizileri tarafından bitiştirilir `SelectMany()` büyük bir dizi oluşturmak için.  
+## <a name="select-versus-selectmany"></a>Select SelectMany  
+ Her ikisinin de `Select()` `SelectMany()` işi, kaynak değerlerinden bir sonuç değeri (veya değerler) üretmeniz. `Select()`Her kaynak değer için bir sonuç değeri üretir. Bu nedenle, genel sonuç, kaynak koleksiyonuyla aynı sayıda öğeye sahip olan bir koleksiyondur. Buna karşılık, `SelectMany()` her kaynak değerden birleştirilmiş alt koleksiyonlar içeren tek bir genel sonuç üretir. Bağımsız değişken `SelectMany()` olarak geçirilen dönüştürme işlevinin her kaynak değer için sıralanabilir bir değer dizisi döndürmesi gerekir. Bu sıralanabilir sıralar daha sonra bir büyük `SelectMany()` sıra oluşturmak için ile birleştirilir.  
   
- Aşağıdaki iki çizimler eylemleri, bu iki yöntem arasındaki kavramsal farkı göstermektedir. Her durumda, seçici (dönüştürme) işlevinin her kaynak değerinden satmanın dizisi seçer varsayılır.  
+ Aşağıdaki iki çizimde, bu iki yöntemin eylemleri arasındaki kavramsal fark gösterilmektedir. Her durumda, seçici (dönüşüm) işlevinin her kaynak değerden çiçekler dizisini seçtiği varsayılır.  
   
- Bu çizimde gösterilmektedir nasıl `Select()` kaynak koleksiyonu aynı sayıda öğe içeren bir koleksiyon döndürür.  
+ Bu çizimde, kaynak `Select()` koleksiyonuyla aynı sayıda öğeye sahip bir koleksiyonun nasıl döndürdüğü gösterilmektedir.  
   
  ![Seçme eylemini gösteren grafik&#40;&#41;](./media/projection-operations/select-action-graphic.png)  
   
- Bu çizimde gösterilmektedir nasıl `SelectMany()` her ara diziden her değeri içeren bir sonuç değeri diziler Ara dizisine art arda ekler.  
+ Bu çizimde, dizi `SelectMany()` dizilerinin her bir ara dizideki her bir değeri içeren bir son sonuç değerine nasıl sıralanacağı gösterilmektedir.  
   
- ![SelectMany eylemini gösteren grafik&#40;&#41;.](./media/projection-operations/select-many-action-graphic.png )  
+ ![SelectMany&#40;&#41;eylemini gösteren grafik.](./media/projection-operations/select-many-action-graphic.png )  
   
 ### <a name="code-example"></a>Kod Örneği  
- Aşağıdaki örnek davranışını karşılaştırır `Select()` ve `SelectMany()`. Bu kod, kaynak koleksiyonda çiçek adları her iki listesinden ilk iki öğeyi alarak çiçek "demeti" oluşturur. Bu örnekte, "değer tek" Bu dönüştürme işlevi <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> kullanır, kendisi değerler koleksiyonu. Bu ek gerektirir `foreach` döngü, her alt dizideki her bir dizenin numaralandırmak için.  
+ Aşağıdaki örnek, `Select()` ve `SelectMany()`davranışlarını karşılaştırır. Kod, kaynak koleksiyondaki her bir çiçek adı listesinden ilk iki öğeyi alarak çiçekler ' ın bir "Buquet" oluşturur. Bu örnekte, Transform işlevinin <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> kullandığı "tek değer" değeri bir değer koleksiyonudur. Bu, her bir `foreach` alt dizideki her bir dizeyi numaralandırmak için ek döngü gerektirir.  
   
 ```csharp  
 class Bouquet  
@@ -162,7 +162,7 @@ static void SelectVsSelectMany()
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq>
-- [Standart sorgu işleçlerine genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [select yan tümcesi](../../../../csharp/language-reference/keywords/select-clause.md)
-- [Nasıl yapılır: (LINQ) birden fazla kaynaktan nesne koleksiyonları doldurma (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
-- [Nasıl yapılır: Gruplar (LINQ) kullanarak bir dosyayı birden çok dosyaya bölme (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Standart sorgu Işleçlerine genelC#bakış ()](./standard-query-operators-overview.md)
+- [select yan tümcesi](../../../language-reference/keywords/select-clause.md)
+- [Nasıl yapılır: Birden çok kaynaktan nesne koleksiyonları doldurma (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Nasıl yapılır: Grupları (LINQ) kullanarak bir dosyayı çok sayıda dosyaya bölme (LINQC#) ()](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

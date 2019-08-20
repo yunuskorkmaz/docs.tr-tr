@@ -13,12 +13,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: cccb338d2dbed7889512428a53804324795c66bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ddaa7efec2b4bf5ffa53971aa6f380a1be9bad8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708060"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587663"
 ---
 # <a name="seealso-c-programming-guide"></a>\<SeeAlso > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -29,19 +29,19 @@ ms.locfileid: "61708060"
   
 ## <a name="parameters"></a>Parametreler  
  cref = " `member`"  
- Bir üye veya geçerli derleme ortamdan çağrılacak kullanılabilir alan başvuru. Derleyici belirli kod öğesi var. başarılı olup olmadığını denetler ve `member` çıktı XML öğesi adı.`member` çift tırnak içinde yer almalıdır ("").  
+ Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında `member` öğe adına geçirir.`member` Çift tırnak işaretleri ("") içinde yer almalıdır.  
   
- Genel tür cref başvuru oluşturma hakkında daha fazla bilgi için bkz: [ \<bakın >](../../../csharp/programming-guide/xmldoc/see.md).  
+ Genel bir türe [ \<](./see.md)cref başvurusu oluşturma hakkında daha fazla bilgi için bkz. >.  
   
 ## <a name="remarks"></a>Açıklamalar  
- \<Seealso > etiketi, bir Ayrıca bkz. bölümünde görüntülenmesini isteyebilirsiniz metin belirtmenize olanak sağlar. Kullanım [ \<bakın >](../../../csharp/programming-guide/xmldoc/see.md) bağlantı metninde belirtmek için.  
+ \<SeeAlso > etiketi de Ayrıca bkz. bölümünde görünmesini isteyebileceğiniz metni belirtmenize olanak tanır. Metnin içinden bir bağlantı belirtmek için [ \<> göster](./see.md) ' i kullanın.  
   
- Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.  
+ Belge açıklamalarını bir dosyaya işlemek için [/doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bkz: [ \<Özet >](../../../csharp/programming-guide/xmldoc/summary.md) kullanma örneği için \<seealso >.  
+ Bkz. SeeAlso > kullanımı \<örneği için bkz [ \<. Summary >](./summary.md) .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Belge Açıklamaları için Önerilen Etiketler](./recommended-tags-for-documentation-comments.md)

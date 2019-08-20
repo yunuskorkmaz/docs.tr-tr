@@ -1,5 +1,5 @@
 ---
-title: checked anahtar sözcüğü - C# başvurusu
+title: Checked anahtar sözcüğü C# -başvurusu
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,32 +8,32 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: 5ce9291fd047dfa9c69048887ccbd878819f2de8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69bd8cc95012533a6be279b04dc883a56f6f78ea
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662018"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605918"
 ---
 # <a name="checked-c-reference"></a>checked (C# Başvurusu)
 
-`checked` Anahtar sözcüğü, Tamsayı türünde aritmetik işlemler ve dönüştürmeler için denetleme taşma açıkça etkinleştirmek için kullanılır.
+Anahtar `checked` sözcüğü, tam sayı türü aritmetik işlemler ve dönüştürmeler için taşma denetimini açık bir şekilde etkinleştirmek üzere kullanılır.
 
-Hedef türün aralığı dışında bir değer ifade oluşturursa, varsayılan olarak, yalnızca sabit değerleri içeren ifade bir derleyici hatasına neden olur. İfade, bir veya daha fazla sabit olmayan değerler içeriyorsa, derleyici taşma algılamaz. Atanan ifade değerlendirme `i2` aşağıdaki örnekte, bir derleyici hatasına neden olmaz.
+Varsayılan olarak, ifade hedef türü aralığının dışında bir değer üretirse yalnızca sabit değerler içeren bir ifade bir derleyici hatasına neden olur. İfade bir veya daha fazla sabit olmayan değer içeriyorsa, derleyici taşmayı algılamaz. Aşağıdaki örnekte öğesine `i2` atanan ifadenin değerlendirilmesi, bir derleyici hatasına neden olmaz.
 
 [!code-csharp[csrefKeywordsChecked#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#3)]
 
-Varsayılan olarak, bu sabit ifadeler taşma için çalışma zamanında ya da denetlenmez ve taşma özel geçirmeyin. Önceki örnekte, iki pozitif tam sayının toplamını-2,147,483,639 görüntüler.
+Varsayılan olarak, bu sabit olmayan ifadeler çalışma zamanında taşma için denetlenmez ve taşma özel durumları oluşturmaz. Önceki örnekte iki pozitif tamsayının toplamı olarak-2.147.483.639 görüntülenir.
 
-Taşma denetimi etkinleştirilebilir derleyici seçenekleri, ortamı yapılandırması veya kullanımı `checked` anahtar sözcüğü. Aşağıdaki örnek nasıl kullanılacağını gösteren bir `checked` ifade veya `checked` çalışma zamanında önceki toplamı tarafından üretilen taşma algılamak için blok. Örneklerin her ikisi de bir taşma özel durumu oluşturun.
+Taşma denetimi derleyici seçenekleri, ortam yapılandırması veya `checked` anahtar sözcüğünün kullanımı ile etkinleştirilebilir. Aşağıdaki örneklerde, çalışma zamanında önceki Sum tarafından `checked` üretilen taşmayı `checked` algılamak için bir ifadenin veya bloğun nasıl kullanılacağı gösterilmektedir. Her iki örnek de bir taşma özel durumu yükseltir.
 
 [!code-csharp[csrefKeywordsChecked#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#4)]
 
-[Denetlenmeyen](../../../csharp/language-reference/keywords/unchecked.md) anahtar sözcüğü, taşma denetimi önlemek için kullanılabilir.
+[İşaretlenmemiş](./unchecked.md) anahtar sözcük, taşma denetimini engellemek için kullanılabilir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnek nasıl kullanılacağını gösterir `checked` taşma çalışma zamanında denetimini etkinleştirmek için.
+Bu örnek, çalışma zamanında taşma `checked` denetimini etkinleştirmek için nasıl kullanılacağını gösterir.
 
 [!code-csharp[csrefKeywordsChecked#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#1)]
 
@@ -43,8 +43,8 @@ Bu örnek nasıl kullanılacağını gösterir `checked` taşma çalışma zaman
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
-- [İşaretli ve İşaretsiz](../../../csharp/language-reference/keywords/checked-and-unchecked.md)
-- [unchecked](../../../csharp/language-reference/keywords/unchecked.md)
+- [C#Başvurunun](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Anahtar Sözcükleri](./index.md)
+- [İşaretli ve İşaretsiz](./checked-and-unchecked.md)
+- [unchecked](./unchecked.md)

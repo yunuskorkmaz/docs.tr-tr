@@ -6,70 +6,70 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 77ecab9738afd7ff5cfd4f8ef0cd0e49a302eb27
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 0c666d62c21d3e4f7b1041c1d5360ac43d2cf03f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025406"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587063"
 ---
 # <a name="c-walkthroughs"></a>C# İzlenecek Yolları
-İzlenecek yollar, bunları ürün veya belirli bir özellik alanı hakkında öğrenmeye başlayın için iyi bir yer sağlar ortak senaryolar için adım adım yönergeler sağlar.  
+İzlenecek yollar, yaygın senaryolar için adım adım yönergeler sunarak ürün veya belirli bir özellik alanı hakkında öğrenmeye başlamak için iyi bir yer sunar.  
   
- Bu bölüm C# programlama izlenecek yollar için bağlantılar içerir.  
+ Bu bölüm, C# programlama talimatlara bağlantılar içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
- [Zaman uyumsuz kullanarak Web'e erişme ve Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- Zaman uyumsuz bir çözüm kullanarak oluşturma işlemi gösterilmektedir [zaman uyumsuz](../csharp/language-reference/keywords/async.md) ve [await](../csharp/language-reference/keywords/await.md).  
+ [Async ve await kullanarak Web 'e erişme](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [Async](./language-reference/keywords/async.md) ve [await](./language-reference/keywords/await.md)kullanarak zaman uyumsuz bir çözümün nasıl oluşturulacağını gösterir.  
   
- [C# veya Visual Basic'te Windows çalışma zamanı bileşeni oluşturma ve JavaScript'ten çağırma](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Bir Windows çalışma zamanı türü oluşturmak, bir Windows çalışma zamanı bileşeni paketini ve ardından bileşeninden çağrısı gösterilmiştir bir [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] JavaScript kullanarak Windows için yerleşik uygulama.  
+ [Veya Visual Basic içinde C# Windows çalışma zamanı bileşeni oluşturma ve JavaScript 'ten çağırma](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
+ Bir Windows çalışma zamanı türünün nasıl oluşturulacağını, bir Windows çalışma zamanı bileşende nasıl paketleyip, sonra JavaScript kullanarak Windows için oluşturulan bir [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] uygulamadan bileşen çağırılacağını gösterir.  
   
- [Office programlama (C# ve Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
- C# ve Visual Basic kullanarak bir Excel çalışma kitabı ve bir Word belgesi oluşturma işlemi gösterilmektedir.  
+ [Office Programlama (C# ve Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
+ Ve Visual Basic kullanarak C# bir Excel çalışma kitabı ve Word belgesi oluşturmayı gösterir.  
   
- [Dinamik nesneler (C# ve Visual Basic) oluşturma ve kullanma](../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
- Dinamik olarak bir metin dosyasının içeriğini gösteren özel bir nesne oluşturma ve kullandığı bir projenin nasıl oluşturulacağını gösterir `IronPython` kitaplığı.  
+ [Dinamik nesneler oluşturma ve kullanma (C# ve Visual Basic)](./programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
+ Bir metin dosyasının içeriğini dinamik olarak sunan ve `IronPython` kitaplığı kullanan bir projenin nasıl oluşturulduğu özel bir nesnenin nasıl oluşturulacağını gösterir.  
    
- [Visual C# ile bileşik denetim yazma](../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- Basit bir bileşik denetim oluşturma ve aktarma yoluyla işlevselliğini genişletme gösterir.  
+ [Visual ile bileşik denetim yazmaC#](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ Basit bir bileşik denetim oluşturmayı ve kendi işlevlerini devralma yoluyla genişletmeyi gösterir.  
   
- [Visual Studio tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
- Özel denetim için özel bir tasarımcı oluşturma işlemini göstermektedir.  
+ [Visual Studio tasarım zamanı özelliklerinden faydalanan bir Windows Forms denetimi oluşturma](../framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+ Özel bir denetim için özel tasarımcı oluşturmayı gösterir.  
   
- [Visual C# ile Windows Forms Denetimi'nden devralma](../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
- Devralınan basit düğme denetimi oluşturmayı gösterir. Bu düğme, standart Windows Forms düğmesini işlevselliği devralır ve özel bir üye oluşturur.  
+ [Görsel ile Windows Forms denetiminden devralmaC#](../framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ Basit bir devralınmış düğme denetimi oluşturmayı gösterir. Bu düğme, standart Windows Forms düğmesinden işlevselliği devralır ve özel bir üye kullanıma sunar.  
   
- [Hata ayıklama özel Windows Forms denetimleri tasarım zamanında](../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
- Hata ayıklama özel denetiminizi tasarım zamanı davranışını açıklar.
+ [Tasarım zamanında özel Windows Forms Denetimlerinde hata ayıklama](../framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ Özel denetiminizin tasarım zamanı davranışının nasıl ayıklanacağını açıklar.
 
- [Üzerinde Windows Forms denetimleri etiketleri akıllı kullanarak ortak görevleri gerçekleştirme](../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
- Ekleme veya bir sekme üzerindeki kaldırma gibi sık gerçekleştirilen görevlerin bazılarını gösterir bir `TabControl`, kendi üst denetim yerleştirme ve yönünü değiştirme bir `SplitContainer` denetimi.  
+ [Windows Forms Denetimlerinde akıllı etiketleri kullanarak ortak görevleri gerçekleştirme](../framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+ Bir `TabControl`sekme ekleme veya kaldırma, üst öğesine bir denetim yerleştirme ve bir `SplitContainer` denetimin yönünü değiştirme gibi yaygın olarak gerçekleştirilen görevlerden bazılarını gösterir.  
   
- [C# (LINQ) sorgu yazma](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Yazmak için kullanılan C# dili özelliklerini gösterir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadelerinde.  
+ [Sorgu yazma C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ Sorgu ifadeleri C# yazmak [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] için kullanılan dil özelliklerini gösterir.  
   
- [Verileri (C#) (LINQ to SQL) düzenleme](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
- Açıklayan bir [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] senaryo ekleme, değiştirme ve bir veritabanındaki verileri siliniyor.  
+ [Verileri düzenleme (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
+ Veritabanına veri ekleme, değiştirme ve silme senaryosunuaçıklar.[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]  
   
- [Basit Nesne modeli ve sorgu (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)  
- Bir varlık sınıfı ve varlık sınıfı için basit bir sorgu oluşturma işlemini gösterir.  
+ [Basit nesne modeli ve sorgu (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)  
+ Varlık sınıfını filtrelemek için bir varlık sınıfı ve basit sorgu oluşturmayı gösterir.  
   
- [Yalnızca saklı yordamları (C#) (LINQ to SQL) kullanma](../framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
- Saklı yordamlar yalnızca yürüterek verilere erişmek için LINQ to SQL kullanma işlemini gösterir.  
+ [Yalnızca saklı yordamları kullanma (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
+ Yalnızca saklı yordamları yürüterek verilere erişmek için LINQ to SQL nasıl kullanacağınızı gösterir.  
   
- [İlişkileri (C#) (LINQ to SQL) üzerinden sorgulama](../framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)  
- Kullanımını gösteren [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] ilişkilendirmeleri bir veritabanındaki yabancı anahtar ilişkileri göstermek için.  
+ [Ilişkiler genelinde sorgulama (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)  
+ Bir veritabanındaki yabancı anahtar [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] ilişkilerini temsil etmek için ilişkilerin kullanımını gösterir.  
 
- [C# ile Görselleştirici yazma](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
- C# kullanarak basit Görselleştirici yazma işlemi gösterilmektedir.  
+ [Görselleştiricisi yazmaC#](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
+ Kullanılarak C#basit Görselleştirici nasıl yazılacağını gösterir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Dağıtım örnekleri ve izlenecek yollar](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
- Dağıtım senaryoları için adım adım örnekler sağlar.  
+ [Dağıtım örnekleri ve Izlenecek yollar](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
+ Yaygın dağıtım senaryolarına ilişkin adım adım örnekler sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../csharp/programming-guide/index.md)
+- [C# Programlama Kılavuzu](./programming-guide/index.md)
 - [Visual Studio Örnekleri](/visualstudio/ide/visual-studio-samples)

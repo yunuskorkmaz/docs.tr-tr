@@ -2,12 +2,12 @@
 title: LINQ to XML ile DOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 65dff4dc1c2faa1cd17e640d0c1a0e1d2a514fbe
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 68d380873e71d767ddd60f8f9d0f4b82846d1371
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710012"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591769"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML ile DOM (C#)
 Bu bölümde, geçerli önceden baskın XML [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] programlama API 'si, W3C belge nesne modeli (DOM) arasındaki bazı önemli farklılıklar açıklanmaktadır.  
@@ -75,7 +75,7 @@ XElement contacts =
   
  XML ağacını oluşturmak için kodun girintilendiği, temel alınan XML 'nin yapısını gösterir.  
   
- Daha fazla bilgi için bkz. [xml ağaçları oluşturmaC#()](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md).  
+ Daha fazla bilgi için bkz. [xml ağaçları oluşturmaC#()](./linq-to-xml-overview.md).  
   
 ## <a name="working-directly-with-xml-elements"></a>Doğrudan XML öğeleriyle çalışma  
  XML ile programlama yaptığınızda, birincil odağınızı genellikle XML öğelerinde ve belki de özniteliklerde bulabilirsiniz. İçinde [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], doğrudan XML öğeleri ve özniteliklerle çalışabilirsiniz. Örneğin, şunları yapabilirsiniz:  
@@ -105,7 +105,7 @@ doc.AppendChild(name);
  DOM ile ilgili başka bir sorun da bir düğümün adını değiştirmenize izin vermez. Bunun yerine, yeni bir düğüm oluşturmanız ve tüm alt düğümleri buna kopyalamanız ve özgün düğüm kimliğini kaybetmemeniz gerekir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]bir düğümdeki <xref:System.Xml.Linq.XName> özelliği ayarlamanıza olanak tanıyarak bu sorunu önler.  
   
 ## <a name="static-method-support-for-loading-xml"></a>XML yükleme için statik yöntem desteği  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]örnek yöntemleri yerine statik yöntemler kullanarak XML yüklemenize imkan tanır. Bu, yükleme ve ayrıştırma işlemlerini basitleştirir. Daha fazla bilgi için [nasıl yapılır: Bir dosyadan (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)XML yükleyin.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]örnek yöntemleri yerine statik yöntemler kullanarak XML yüklemenize imkan tanır. Bu, yükleme ve ayrıştırma işlemlerini basitleştirir. Daha fazla bilgi için [nasıl yapılır: Bir dosyadan (C#)](./how-to-load-xml-from-a-file.md)XML yükleyin.  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>DTD yapıları için desteği kaldırma  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]varlıklar ve varlık başvuruları desteğini kaldırarak XML programlamayı daha da basitleştirir. Varlıkların yönetimi karmaşıktır ve nadiren kullanılır. Desteğinin kaldırılması performansı artırır ve programlama arabirimini basitleştirir. Bir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ağaç doldurulduğunda, tüm DTD varlıkları genişletilir.  
@@ -126,11 +126,11 @@ doc.AppendChild(name);
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], Dom gibi özelleştirilmiş <xref:System.Xml.Linq.XText> <xref:System.Xml.XmlNodeType.Whitespace> bir düğüm türüne sahip olmak yerine boşluğu düğüm olarak depolar.  
   
 ## <a name="support-for-annotations"></a>Ek açıklamalar için destek  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]öğeleri, genişletilebilir bir ek açıklama kümesini destekler. Bu, şema bilgileri, öğenin bir kullanıcı arabirimine bağlanıp bağlanmayacağı veya başka bir uygulamaya özgü bilgi türü gibi bir öğeyle ilgili çeşitli bilgileri izlemek için yararlıdır. Daha fazla bilgi için bkz. [LINQ to XML ek açıklamaları](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-annotations.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]öğeleri, genişletilebilir bir ek açıklama kümesini destekler. Bu, şema bilgileri, öğenin bir kullanıcı arabirimine bağlanıp bağlanmayacağı veya başka bir uygulamaya özgü bilgi türü gibi bir öğeyle ilgili çeşitli bilgileri izlemek için yararlıdır. Daha fazla bilgi için bkz. [LINQ to XML ek açıklamaları](./linq-to-xml-annotations.md).  
   
 ## <a name="support-for-schema-information"></a>Şema bilgileri için destek  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Schema?displayProperty=nameWithType> ad alanındaki genişletme yöntemleri aracılığıyla XSD doğrulaması için destek sağlar. Bir XML ağacının bir XSD ile uyumlu olduğunu doğrulayabilirsiniz. XML ağacını şema-doğrulama sonrası bilgi kümesi (PSVı) ile doldurabilirsiniz. Daha fazla bilgi için [nasıl yapılır: XSD](../../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) ve<xref:System.Xml.Schema.Extensions>kullanarak doğrulayın.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Schema?displayProperty=nameWithType> ad alanındaki genişletme yöntemleri aracılığıyla XSD doğrulaması için destek sağlar. Bir XML ağacının bir XSD ile uyumlu olduğunu doğrulayabilirsiniz. XML ağacını şema-doğrulama sonrası bilgi kümesi (PSVı) ile doldurabilirsiniz. Daha fazla bilgi için [nasıl yapılır: XSD](./how-to-validate-using-xsd-linq-to-xml.md) ve<xref:System.Xml.Schema.Extensions>kullanarak doğrulayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başlarken (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [Başlarken (LINQ to XML)](./linq-to-xml-overview.md)

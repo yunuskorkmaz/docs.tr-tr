@@ -1,18 +1,18 @@
 ---
-title: Kovaryans ve kontravaryans (C#)
+title: Kovaryans ve değişken varyans (C#)
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: bfd78b1a32b9d4fe11b1dce129c24ceb5aca6754
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d5a1de1825e585512f694a0cd72cee9b37cda36
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668568"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595280"
 ---
-# <a name="covariance-and-contravariance-c"></a>Kovaryans ve kontravaryans (C#)
-İçinde C#, Kovaryans ve kontravaryans, genel tür bağımsız değişkenleri dizi türleri ve temsilci türleri için örtük bir başvuru dönüştürmesi etkinleştirin. Kovaryans atama uyumluluğu korur ve kontravaryans tersine çevirir.  
+# <a name="covariance-and-contravariance-c"></a>Kovaryans ve değişken varyans (C#)
+' C#De, Kovaryans ve değişken varyans dizi türleri, temsilci türleri ve genel tür bağımsız değişkenleri için örtük başvuru dönüştürmeyi etkinleştirir. Kovaryans, atama uyumluluğunu korur ve değişken varyans onu tersine çevirir.  
   
- Aşağıdaki kod, atama uyumluluğu, Kovaryans ve kontravaryans arasındaki farkı gösterir.  
+ Aşağıdaki kod, atama uyumluluğu, Kovaryans ve değişken varyans arasındaki farkı gösterir.  
   
 ```csharp  
 // Assignment compatibility.   
@@ -37,7 +37,7 @@ Action<object> actObject = SetObject;
 Action<string> actString = actObject;  
 ```  
   
- Kovaryans diziler için daha az türetilmiş bir tür dizisini daha türetilmiş bir türde dizi örtük olarak dönüştürülmesine olanak tanır. Ancak bu işlem tür bakımından güvenli, aşağıdaki kod örneğinde gösterildiği gibi değil.  
+ Diziler için Kovaryans, daha önce türetilmiş bir türün dizisinin daha az türetilmiş bir tür dizisine örtük olarak dönüştürülmesini sağlar. Ancak, aşağıdaki kod örneğinde gösterildiği gibi bu işlem tür kullanımı güvenli değildir.  
   
 ```csharp  
 object[] array = new String[10];  
@@ -45,9 +45,9 @@ object[] array = new String[10];
 // array[0] = 10;  
 ```  
   
- Kovaryans ve kontravaryans destek yöntemi gruplar için temsilci türleriyle yöntem imzalarının eşleştirilmesi için sağlar. Bu sizin için temsilciler sadece imzaları, aynı zamanda türleri (kovaryans) ya da daha fazla türetilmiş döndüren yöntemler eşleşen yöntemleri atamak için temsilci türü tarafından belirtilenden daha az türetilmiş türler (kontravaryans) sahip parametreleri kabul eder. Daha fazla bilgi için [Temsilcilerde varyans (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) ve [Temsilcilerde varyans kullanma (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).  
+ Yöntem grupları için Kovaryans ve değişken varyans desteği, temsilci türleriyle eşleşen Yöntem imzalarına izin verir. Bu, yalnızca eşleşen imzalara sahip yöntemlerin değil, aynı zamanda daha fazla türetilmiş tür (Kovaryans) döndüren veya temsilci türü tarafından belirtilenden daha az türetilmiş türler (değişken varyans) döndüren parametreleri kabul eden yöntemlere atama yapmanızı sağlar. Daha fazla bilgi için bkz. [Temsilcilerde varyansC#()](./variance-in-delegates.md) ve [Temsilciler (C#) içinde varyans kullanımı](./using-variance-in-delegates.md).  
   
- Kovaryans ve kontravaryans yöntemi grupları için destek, aşağıdaki kod örneği gösterilmektedir.  
+ Aşağıdaki kod örneği, yöntem grupları için Kovaryans ve değişken varyans desteğini gösterir.  
   
 ```csharp  
 static object GetObject() { return null; }  
@@ -68,24 +68,24 @@ static void Test()
 }  
 ```  
   
- .NET Framework 4 veya daha yeni C# içinde genel arabirimlerde ve temsilcilerde Kovaryans ve kontravaryans destekler ve genel tür parametrelerinin örtük dönüştürmelerine izin verir. Daha fazla bilgi için [Variance in Generic Interfaces (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) ve [Temsilcilerde varyans (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
+ .NET Framework 4 veya sonraki C# sürümlerde Genel arabirimlerde ve temsilcilerde kovaryans ve değişken varyans desteklenir ve genel tür parametrelerinin örtük dönüştürülmesine izin verir. Daha fazla bilgi için bkz. [Genel Arabirimlerde Varyans (C#)](./variance-in-generic-interfaces.md) ve [Temsilcilerde varyans (C#)](./variance-in-delegates.md).  
   
- Aşağıdaki kod örneği, genel arabirimler için örtük bir başvuru dönüştürmesi gösterir.  
+ Aşağıdaki kod örneğinde genel arabirimler için örtük başvuru dönüştürmesi gösterilmektedir.  
   
 ```csharp  
 IEnumerable<String> strings = new List<String>();  
 IEnumerable<Object> objects = strings;  
 ```  
   
- Bir genel arabirim veya temsilci çağrılır *değişken* genel parametrelerinin birlikte değişken olarak bildirilmemişse veya değişken karşıtı. C#kendi değişken arabirimlerde ve temsilcilerde oluşturmanıza olanak sağlar. Daha fazla bilgi için [değişken genel arabirimler oluşturma (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md) ve [Temsilcilerde varyans (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
+ Genel bir arabirim veya temsilci, genel parametreleri birlikte değişken veya değişken karşıtı olarak bildirilirse *değişken* olarak adlandırılır. C#kendi değişken arabirimlerinizi ve temsilcilerinizi oluşturmanızı sağlar. Daha fazla bilgi için bkz. [TemsilcilerC#](./variance-in-delegates.md)() içinde [VARIANT genelC#arabirimleri ()](./creating-variant-generic-interfaces.md) ve varyansı oluşturma.  
   
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Variance in Generic Interfaces (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Kovaryans ve kontravaryans in generic Interfaces açıklar ve .NET Framework'teki değişken genel arabirimler bir listesini sağlar.|  
-|[Değişken genel arabirimler oluşturma (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)|Özel değişken arabirimler oluşturma işlemi gösterilmektedir.|  
-|[Genel koleksiyonlar için (C#) arabirimlerde varyans kullanma](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)|Nasıl Kovaryans ve kontravaryans desteklemek gösterir <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.IComparable%601> arabirimleri, kodu yeniden kullanmanıza yardımcı olabilir.|  
-|[Temsilcilerde varyans (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)|Kovaryans ve kontravaryans, genel ve genel olmayan temsilcileri açıklar ve .NET Framework'teki genel değişken temsilciler bir listesini sağlar.|  
-|[Temsilcilerde varyans (C#) kullanma](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)|Temsilci türleriyle yöntem imzalarının eşleştirmek için genel olmayan temsilcilerde Kovaryans ve kontravaryans destek kullanma işlemi gösterilmektedir.|  
-|[İşlev ve eylem genel temsilcileri (C#) için varyans kullanma](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)|Nasıl Kovaryans ve kontravaryans desteklemek gösterir `Func` ve `Action` Temsilciler, kodu yeniden kullanmanıza yardımcı olabilir.|
+|[Genel Arabirimlerde Varyans (C#)](./variance-in-generic-interfaces.md)|Genel arabirimlerde Kovaryans ve değişken varyansı açıklar ve .NET Framework değişken genel arabirimlerin bir listesini sağlar.|  
+|[Değişken genel arabirimler (C#) oluşturma](./creating-variant-generic-interfaces.md)|Özel değişken arabirimlerinin nasıl oluşturulacağını gösterir.|  
+|[Genel Koleksiyonlar için Arabirimlerde Varyans kullanma (C#)](./using-variance-in-interfaces-for-generic-collections.md)|<xref:System.Collections.Generic.IEnumerable%601> Ve<xref:System.IComparable%601> arabirimlerinde Kovaryans ve değişken varyans desteğinin kodu yeniden kullanmanıza nasıl yardımcı olduğunu gösterir.|  
+|[Temsilcilerde varyans (C#)](./variance-in-delegates.md)|Genel ve genel olmayan temsilcilerde kovaryans ve değişken varyansı açıklar ve .NET Framework değişken genel temsilcilerin bir listesini sağlar.|  
+|[Temsilcilerde (C#) varyans kullanma](./using-variance-in-delegates.md)|Temsilci türleriyle Yöntem imzalarını eşleştirmek için genel olmayan temsilcilerde kovaryans ve değişken varyans desteğinin nasıl kullanılacağını gösterir.|  
+|[Func ve eylem genel temsilcileri için varyans kullanma (C#)](./using-variance-for-func-and-action-generic-delegates.md)|`Func` Ve`Action` temsilcilerde kovaryans ve değişken varyans desteğinin kodu yeniden kullanmanıza nasıl yardımcı olduğunu gösterir.|

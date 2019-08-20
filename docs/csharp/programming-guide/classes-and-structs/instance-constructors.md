@@ -1,68 +1,68 @@
 ---
-title: Örnek oluşturucuları - C# Programlama Kılavuzu
+title: Örnek oluşturucular- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: a5ed331c6b2960a56d7ab0d7812cb3a687ccfdd5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: c7bb9d43991ca45e878dd8ac2a17f3996cb8f436
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423755"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596466"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Örnek Oluşturucuları (C# Programlama Kılavuzu)
 
-Örnek oluşturucuları oluşturup kullandığınızda tüm örnek üye değişkenlerini başlatmak için kullanılan [yeni](../../../csharp/language-reference/operators/new-operator.md) ifade bir nesne oluşturmak için bir [sınıfı](../../../csharp/language-reference/keywords/class.md). Başlatmak için bir [statik](../../../csharp/language-reference/keywords/static.md) sınıf veya bir statik olmayan sınıf içinde statik değişkenler bir statik oluşturucusunu tanımlama. Daha fazla bilgi için [statik oluşturucular](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
+Örnek oluşturucular, bir [sınıfın](../../language-reference/keywords/class.md)nesnesini oluşturmak için [Yeni](../../language-reference/operators/new-operator.md) ifadeyi kullandığınızda herhangi bir örnek üye değişkeni oluşturmak ve başlatmak için kullanılır. Statik bir sınıf [](../../language-reference/keywords/static.md) veya statik değişkenleri statik olmayan bir sınıfta başlatmak için statik bir Oluşturucu tanımlarsınız. Daha fazla bilgi için bkz. [statik oluşturucular](./static-constructors.md).  
   
- Aşağıdaki örnek, bir örnek oluşturucusunda gösterir:  
+ Aşağıdaki örnek bir örnek Oluşturucu göstermektedir:  
   
  [!code-csharp[csProgGuideObjects#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#5)]  
   
 > [!NOTE]
->  Anlaşılsın diye, bu sınıf, ortak alanları içerir. Bir programda herhangi bir yerde herhangi bir yöntemi Kısıtlanmamış ve doğrulanmamış bir nesnenin iç çalışmalarına değineceğiz erişimi verdiğinden, ortak alanları kullanımını önerilen bir programlama uygulama değil. Veri üyeleri, genellikle özel olmalıdır ve yalnızca sınıfı yöntemleri ve özellikleri erişilmelidir.  
+>  Açıklık için, bu sınıf ortak alanlar içerir. Ortak alanların kullanımı önerilen bir programlama uygulaması değildir çünkü bir programda herhangi bir yerde herhangi bir yerdeki herhangi bir yönteme izin verir ve bir nesnenin iç işleyişi için doğrulanmamış erişimdir. Veri üyeleri genellikle özel olmalıdır ve yalnızca sınıf yöntemleri ve özellikleri aracılığıyla erişilmelidir.  
   
- Bir nesne dayalı olduğunda, bu örneği Oluşturucu çağrılır `Coords` sınıf oluşturulur. Hiçbir bağımsız değişkeni alır, bu bir adlı gibi bir oluşturucu bir *parametresiz oluşturucu*. Ancak, genellikle ek oluşturucular sağlamak için yararlı olur. Örneğin, bir oluşturucuya ekleyebiliriz `Coords` veri üyeleri için başlangıç değerlerini belirtmek sağlıyor sınıfı:  
+ Bu örnek Oluşturucu, `Coords` sınıfı temel alan bir nesne oluşturulduğunda çağrılır. Böyle bir bağımsız değişken alan bir Oluşturucu gibi bir oluşturucuya *parametresiz Oluşturucu*denir. Ancak, genellikle ek oluşturucular sağlamak yararlı olur. Örneğin, `Coords` sınıfa veri üyeleri için başlangıç değerlerini belirtmemizi sağlayan bir Oluşturucu ekleyebiliriz:  
   
  [!code-csharp[csProgGuideObjects#76](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#76)]  
   
- Böylece `Coords` varsayılan veya özel ilk değerleri ile oluşturulan nesnelere şöyle:  
+ Bu, `Coords` nesnelerin varsayılan veya belirli başlangıç değerleriyle oluşturulmasına izin verir, örneğin:  
   
  [!code-csharp[csProgGuideObjects#77](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#77)]  
   
- Bir sınıf bir oluşturucu yoksa, parametresiz bir oluşturucu otomatik olarak oluşturulur ve varsayılan değerler nesne alanları başlatmak için kullanılır. Örneğin, bir [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 0 olarak başlatılır. Varsayılan değerleri hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](../../../csharp/language-reference/keywords/default-values-table.md). Bu nedenle, çünkü `Coords` sınıf parametresiz oluşturucu tüm veri üyeleri sıfırdan başlatır, sınıf şeklini değiştirmeden tamamen kaldırılabilir. Birden çok oluşturucuları kullanarak tam bir örnek daha sonra bu konudaki örnek 1'de sağlanan ve otomatik olarak oluşturulan bir oluşturucu örneği örnek 2'de sağlanır.  
+ Bir sınıfın Oluşturucusu yoksa, parametresiz bir Oluşturucu otomatik olarak oluşturulur ve nesne alanlarını başlatmak için varsayılan değerler kullanılır. Örneğin, bir [int](../../language-reference/builtin-types/integral-numeric-types.md) 0 olarak başlatılır. Varsayılan değerler hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](../../language-reference/keywords/default-values-table.md). Bu nedenle, `Coords` parametresiz bir Oluşturucu tüm veri üyelerini sıfıra başlattığında, sınıfın çalışma biçimini değiştirmeden tamamen kaldırılabilir. Bu konunun ilerleyen kısımlarında örnek 1 ' de birden çok Oluşturucu kullanan bir örnek verilmiştir ve örnek 2 ' de otomatik olarak oluşturulan bir oluşturucuya örnek verilmiştir.  
   
- Örnek oluşturucuları, temel sınıfların örnek oluşturucuları çağırmak için de kullanılabilir. Sınıf oluşturucu başlatıcı aracılığıyla temel sınıfın Oluşturucusu gibi çağırabilirsiniz:  
+ Örnek oluşturucular, temel sınıfların örnek oluşturucularını çağırmak için de kullanılabilir. Sınıf oluşturucusu, aşağıdaki gibi, başlatıcı aracılığıyla temel sınıfın oluşturucusunu çağırabilir:  
   
  [!code-csharp[csProgGuideObjects#78](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#78)]  
   
- Bu örnekte, `Circle` sınıfı tarafından sağlanan oluşturucusu için RADIUS ve yüksekliğini temsil eden değerleri geçirir `Shape` içinden `Circle` türetilir. Kullanarak bir tam örnek `Shape` ve `Circle` bu konudaki örnek 3 olarak görünür.  
+ Bu örnekte, `Circle` sınıfı, RADIUS ve yüksekliği temsil eden değerleri, öğesinden `Circle` türetilmiş tarafından `Shape` sunulan oluşturucuya geçirir. `Shape` Ve`Circle` bu konuda örnek 3 olarak görünen bir örnek.  
   
 ## <a name="example-1"></a>Örnek 1  
- Aşağıdaki örnek, iki sınıf oluşturucuları, bir bağımsız değişkenler olmadan ve iki bağımsız değişkeni ile tek bir sınıfı gösterir.  
+ Aşağıdaki örnek, bağımsız değişkenler olmadan biri ve iki bağımsız değişken içeren iki sınıf oluşturucusuna sahip bir sınıfı gösterir.  
   
  [!code-csharp[csProgGuideObjects#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#4)]  
   
 ## <a name="example-2"></a>Örnek 2  
- Bu örnekte, sınıf `Person` durumda, parametresiz bir oluşturucu otomatik olarak sağlanır ve alanları varsayılan değerlerine başlatılan hiçbir oluşturucu yok.  
+ Bu örnekte, sınıfın `Person` herhangi bir Oluşturucusu yoktur, bu durumda parametresiz bir Oluşturucu otomatik olarak sağlanır ve alanlar varsayılan değerlerine başlatılır.  
   
  [!code-csharp[csProgGuideObjects#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#8)]  
   
- Dikkat varsayılan değerini `age` olduğu `0` ve varsayılan değerini `name` olduğu `null`. Varsayılan değerleri hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](../../../csharp/language-reference/keywords/default-values-table.md).  
+ `age` Varsayılan değerinin `0` vevarsayılan`null`değerinin olduğunu unutmayın. `name` Varsayılan değerler hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](../../language-reference/keywords/default-values-table.md).  
   
 ## <a name="example-3"></a>Örnek 3  
- Aşağıdaki örnek, temel sınıf Başlatıcı kullanmayı gösterir. `Circle` Genel sınıfından türetilmiş sınıf `Shape`ve `Cylinder` sınıfı türetilen `Circle` sınıfı. Her bir türetilmiş sınıf oluşturucu, temel sınıf Başlatıcısı kullanıyor.  
+ Aşağıdaki örnek, temel sınıf başlatıcısının kullanımını gösterir. Sınıfı genel sınıftan `Shape`türetilir ve `Cylinder` sınıfı `Circle` sınıfından türetilir. `Circle` Türetilmiş her sınıftaki Oluşturucu kendi temel sınıf başlatıcısını kullanıyor.  
   
  [!code-csharp[csProgGuideObjects#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#9)]  
   
- Temel sınıf oluşturucuları Çağırma ile ilgili daha fazla örnek için bkz: [sanal](../../../csharp/language-reference/keywords/virtual.md), [geçersiz kılma](../../../csharp/language-reference/keywords/override.md), ve [temel](../../../csharp/language-reference/keywords/base.md).  
+ Temel sınıf oluşturucularını çağırma hakkında daha fazla örnek için bkz. [sanal](../../language-reference/keywords/virtual.md), [geçersiz kılma](../../language-reference/keywords/override.md)ve [temel](../../language-reference/keywords/base.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)
-- [Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)
-- [static](../../../csharp/language-reference/keywords/static.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Sınıflar ve Yapılar](./index.md)
+- [Oluşturucular](./constructors.md)
+- [Sonlandırıcılar](./destructors.md)
+- [static](../../language-reference/keywords/static.md)

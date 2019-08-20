@@ -1,23 +1,23 @@
 ---
-title: Parçalara ayırma öncesi XName nesneleri (LINQ to XML) (C#)
+title: XName nesnelerinin (LINQ to XML) (C#) ön atomonu
 ms.date: 07/20/2015
 ms.assetid: e84fbbe7-f072-4771-bfbb-059d18e1ad15
-ms.openlocfilehash: f67a4da56a2bbcde538f0559ec6ee70a0037de2f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2fd754a352bd2988e52ec9c67a9915a8e587b107
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484070"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591499"
 ---
-# <a name="pre-atomization-of-xname-objects-linq-to-xml-c"></a>Parçalara ayırma öncesi XName nesneleri (LINQ to XML) (C#)
-LINQ to XML performansını artırmak için bir yolu önceden küçük parçalara etmektir <xref:System.Xml.Linq.XName> nesneleri. Parçalara ayırma öncesi anlamına gelir, bir dizeye atadığınız bir <xref:System.Xml.Linq.XName> oluşturucuları kullanarak XML ağacı oluşturmadan önce nesne <xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XAttribute> sınıfları. Ardından, oluşturucuya bir dizeyi geçirmek yerine, kullandığınız dizesine örtük dönüştürme <xref:System.Xml.Linq.XName>, başlatılmış geçirdiğiniz <xref:System.Xml.Linq.XName> nesne.  
+# <a name="pre-atomization-of-xname-objects-linq-to-xml-c"></a>XName nesnelerinin (LINQ to XML) (C#) ön atomonu
+LINQ to XML performansını artırmanın bir yolu, önceden ayrılamaz <xref:System.Xml.Linq.XName> nesneleri kullanmaktır. Ön cekleştirme, <xref:System.Xml.Linq.XName> <xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XAttribute> sınıflarının oluşturucularını kullanarak xml ağacını oluşturmadan önce bir nesneye bir dize atadığınız anlamına gelir. Ardından, dizeden öğesine <xref:System.Xml.Linq.XName>örtük dönüştürmeyi kullanan oluşturucuya bir dize geçirmek yerine, başlatılan <xref:System.Xml.Linq.XName> nesneyi geçirirsiniz.  
   
- Bu, belirli adları yinelenen büyük bir XML ağacı oluştururken performansı artırır. Bunu yapmak için bildirmek ve başlatmak <xref:System.Xml.Linq.XName> XML ağacı oluşturmak ve ardından kullanmadan önce nesneleri <xref:System.Xml.Linq.XName> öğe ve öznitelik adları için dizeleri belirtmek yerine, nesneleri. Çok sayıda öğe (veya öznitelikleri) oluşturuyorsanız bu teknik, aynı ada sahip önemli ölçüde performans kazanımı sağlayabilir.  
+ Bu, belirli adların tekrarlandığı büyük bir XML ağacı oluşturduğunuzda performansı geliştirir. Bunu yapmak için, xml ağacını oluşturmadan önce <xref:System.Xml.Linq.XName> nesneleri bildirir ve başlatır ve sonra öğe ve öznitelik adları için dizeleri <xref:System.Xml.Linq.XName> belirtmek yerine nesneleri kullanın. Aynı ada sahip çok sayıda öğe (veya öznitelik) oluşturuyorsanız bu teknik önemli performans artışı elde edebilir.  
   
- Parçalara ayırma öncesi kendi senaryonuza kullanılması gerektiği, karar vermek için test etmeniz gerekir.  
+ Kullanmanız gerekip gerekmediğini belirlemek için senaryolarınız ile önceden atomleştirme testi yapmanız gerekir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte bu gösterir.  
+ Aşağıdaki örnek bunu gösterir.  
   
 ```csharp  
 XName Root = "Root";  
@@ -49,7 +49,7 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
- Aşağıdaki örnek, XML belgesi bir ad alanında olduğu aynı tekniği gösterir:  
+ Aşağıdaki örnek, XML belgesinin bir ad alanında bulunduğu tekniği gösterir:  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -83,7 +83,7 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
- Aşağıdaki örnek, ne, büyük olasılıkla gerçek dünyada karşınıza çıkacak için daha benzer. Bu örnekte, öğenin içeriğini bir sorgu tarafından sağlanır:  
+ Aşağıdaki örnek, gerçek dünyada büyük olasılıkla karşılaşacağınız şekilde daha benzerdir. Bu örnekte, öğesinin içeriği bir sorgu tarafından sağlanır:  
   
 ```csharp  
 XName Root = "Root";  
@@ -102,7 +102,7 @@ DateTime t2 = DateTime.Now;
 Console.WriteLine("Time to construct:{0}", t2 - t1);  
 ```  
   
- Önceki örnekte, adları değil önceden parçalara ayrılmış aşağıdaki örnek, daha iyi gerçekleştirir:  
+ Önceki örnek, şu örnekteki adların ön cede olmadığı bir daha iyi şekilde çalışır:  
   
 ```csharp  
 DateTime t1 = DateTime.Now;  
@@ -119,4 +119,4 @@ Console.WriteLine("Time to construct:{0}", t2 - t1);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Parçalara ayrılmış XName ve XNamespace nesneleri (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)
+- [Atomlanmış XName ve XNamespace nesneleri (LINQ to XML) (C#)](./atomized-xname-and-xnamespace-objects-linq-to-xml.md)

@@ -1,57 +1,57 @@
 ---
-title: Alanları - C# Programlama Kılavuzu
+title: Alanlar- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 3cc04d9a0504e7cd79703b97441caa5ac84eda94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 722e028311530336749d259207c681ac3f9a0f34
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646494"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597062"
 ---
 # <a name="fields-c-programming-guide"></a>Alanlar (C# Programlama Kılavuzu)
-A *alan* doğrudan içinde bildirilmiş herhangi bir türde bir değişken bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapı](../../../csharp/language-reference/keywords/struct.md). Alanlar *üyeleri* içeren kendi türü.  
+*Alan* , bir [sınıf](../../language-reference/keywords/class.md) veya [Yapı](../../language-reference/keywords/struct.md)içinde doğrudan tanımlanmış herhangi bir türdeki değişkendir. Alanlar, kapsayan türlerinin *üyeleridir* .  
   
- Bir sınıf veya yapı örnek alanları veya static alanlar ya da her ikisini de olabilir. Örnek alanları, bir türün bir örneğini özgüdür. Bir ' % s'sınıfı T, bir örnek alanıyla F ile varsa, T türünde iki nesne oluşturabilir ve diğer nesne değeri etkilemeden her nesne içinde F değerini değiştirin. Aksine, statik alan sınıfına ait ve bu sınıfın tüm örnekleri arasında paylaşılır. Örneğinden alan eriştiklerinde görünüşte hemen B ve C örneklerine olması bir yapılan değişiklikler.  
+ Bir sınıf veya yapının örnek alanları veya statik alanları ya da her ikisi birden olabilir. Örnek alanları, bir türün örneğine özeldir. Örnek alanı F olan bir sınıf T 'si varsa, T türünde iki nesne oluşturabilir ve diğer nesnedeki değeri etkilemeden her bir nesnede F değerini değiştirebilirsiniz. Buna karşılık, statik bir alan sınıfa aittir ve bu sınıfın tüm örnekleri arasında paylaşılır. A örneğinden yapılan değişiklikler, alana erişim altına alıyorsa B ve C örneklerine hemen görünür.  
   
- Genellikle, alanları, özel veya korumalı erişilebilirliğine sahip değişkenleri kullanmanız gerekir. Sınıfınız için istemci kodu gösteren veri aracılığıyla sağlanmalıdır [yöntemleri](../../../csharp/programming-guide/classes-and-structs/methods.md), [özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md) ve [dizin oluşturucular](../../../csharp/programming-guide/indexers/index.md). Dolaylı erişim iç alanları için bu yapıları kullanarak geçersiz girdi değerleri karşı önleyebilirsiniz. Ortak bir özellik tarafından kullanıma sunulan veri depolayan bir özel alan adı verilen bir *yedekleme deposu* veya *destek alanı*.  
+ Genellikle, yalnızca özel veya korumalı erişilebilirliği olan değişkenler için alanları kullanmanız gerekir. Sınıfınızın istemci koduna sunduğu veriler [Yöntemler](./methods.md), [Özellikler](./properties.md) ve [Dizin oluşturucular](../indexers/index.md)aracılığıyla sağlanmalıdır. İç alanlara dolaylı erişim için bu yapıları kullanarak, geçersiz giriş değerlerine karşı koruma sağlayabilirsiniz. Ortak bir özellik tarafından açığa çıkarılan verileri depolayan özel bir alan, *yedekleme deposu* veya *yedekleme alanı*olarak adlandırılır.  
   
- Alanlar, genellikle birden fazla sınıf yönteme erişilebilir olması gerekir ve tek bir yöntem ömrünü daha uzun süreyle depolanması gereken verileri depolar. Örneğin, bir takvim tarihi temsil eden bir sınıf üç tamsayı alanları olabilir: bir ay, gün için diğeri için yıl. Tek bir yöntem kapsamı dışında kullanılmayan değişkenler olarak bildirilmelidir *yerel değişkenler* yöntemi içinde kendisi gövde.  
+ Alanlar genellikle birden fazla sınıf yöntemine erişilebilir olması gereken verileri depolar ve tek bir yöntemin yaşam süresinden daha uzun bir süre içinde depolanmalıdır. Örneğin, bir takvim tarihini temsil eden bir sınıf üç tamsayı alanına sahip olabilir: biri ayda, biri gün için ve diğeri yıl için. Tek bir yöntemin kapsamı dışında kullanılmayan değişkenler, Yöntem gövdesinin içinde *yerel değişkenler* olarak bildirilmelidir.  
   
- Alanlar sınıf bloğunda alanının adından önce gelen alanın türünü ardından alanın erişim düzeyini belirterek bildirilir. Örneğin:  
+ Alanlar, alanın erişim düzeyini, ardından alanın türü ve ardından alanın adı tarafından belirtilen sınıf bloğunda belirtilir. Örneğin:  
   
  [!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]  
   
- Bir nesne bir alana erişmek için ardından alanın adı olarak nesne adından sonra bir nokta ekleyin `objectname.fieldname`. Örneğin:  
+ Bir nesne içindeki bir alana erişmek için, nesne adından sonra, ' de `objectname.fieldname`olduğu gibi alanın adı ile bir nokta ekleyin. Örneğin:  
   
  [!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]  
   
- Bir alan, alanın bildirildiğinde atama işlecini kullanarak bir başlangıç değeri verilebilir. Otomatik olarak atamak için `day` alanı `"Monday"`, örneğin, bildirirsiniz `day` aşağıdaki örnekteki gibi:  
+ Alan bildirildiği zaman atama işleci kullanılarak bir alana ilk değer verilebilir. Alanı için otomatik olarak atamak `day` için,örneğin,aşağıdakiörnekteolduğugibibildiriminiyapmanızgerekir:`"Monday"` `day`  
   
  [!code-csharp[csProgGuideObjects#63](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#63)]  
   
- Alanlar, nesne örneği için oluşturucu hemen çağrılmadan önce başlatılır. Oluşturucu bir alanın değerini atarsa, alanın bildirim sırasında belirtilen herhangi bir değer üzerine yazar. Daha fazla bilgi için [oluşturucuları kullanarak](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).  
+ Alanlar, nesne örneği Oluşturucusu çağrılmadan hemen önce başlatılır. Oluşturucu bir alanın değerini atadığında, alan bildirimi sırasında verilen değerin üzerine yazar. Daha fazla bilgi için bkz. [oluşturucular kullanma](./using-constructors.md).  
   
 > [!NOTE]
->  Bir alan başlatıcısı, diğer örnek alanları için başvuruda bulunamaz.  
+>  Alan başlatıcısı diğer örnek alanlarına başvuramaz.  
   
- Alanları olarak işaretlenebilir [genel](../../../csharp/language-reference/keywords/public.md), [özel](../../../csharp/language-reference/keywords/private.md), [korumalı](../../../csharp/language-reference/keywords/protected.md), [iç](../../../csharp/language-reference/keywords/internal.md), [iç korumalı](../../../csharp/language-reference/keywords/protected-internal.md) veya [korunan özel](../../../csharp/language-reference/keywords/private-protected.md). Bu erişim değiştiricileri kullanıcıları sınıfının alanların nasıl erişebileceğiniz tanımlayın. Daha fazla bilgi için [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Alanlar [ortak](../../language-reference/keywords/public.md), [özel](../../language-reference/keywords/private.md), [korunan](../../language-reference/keywords/protected.md), [dahili](../../language-reference/keywords/internal.md), [korunan iç](../../language-reference/keywords/protected-internal.md) veya [özel korumalı](../../language-reference/keywords/private-protected.md)olarak işaretlenebilir. Bu erişim değiştiricileri, sınıfın kullanıcılarının alanlara nasıl erişebileceğini tanımlar. Daha fazla bilgi için bkz. [erişim değiştiricileri](./access-modifiers.md).  
   
- Bir alan isteğe bağlı olarak bildirilebilir [statik](../../../csharp/language-reference/keywords/static.md). Sınıfının bir örneğini bulunuyor olsa bile bu alanın kullanılabilir için herhangi bir zamanda yapar. Daha fazla bilgi için [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ Bir alan, isteğe bağlı olarak [statik](../../language-reference/keywords/static.md)olarak bildirilemez. Bu, sınıfın bir örneği mevcut olmasa bile, alanı her zaman çağıranlar için kullanılabilir hale getirir. Daha fazla bilgi için bkz. [statik sınıflar ve statik sınıf üyeleri](./static-classes-and-static-class-members.md).  
   
- Bir alan bildirilebilir [salt okunur](../../../csharp/language-reference/keywords/readonly.md). Salt okunur bir alan bir oluşturucu veya başlatma sırasında bir değer yalnızca atanabilir. A `static readonly` C# derleyicisi için statik bir salt okunur alanının değeri yalnızca çalışma zamanında derleme zamanında erişimi yok dışında alan bir sabite çok benzer. Daha fazla bilgi için [sabitleri](../../../csharp/programming-guide/classes-and-structs/constants.md).  
+ Bir alan [ReadOnly](../../language-reference/keywords/readonly.md)olarak bildirilemez. Salt okunurdur bir alana yalnızca başlatma sırasında veya oluşturucuda bir değer atanabilir. Bir `static readonly` alan, C# derleyicinin derleme zamanında statik bir salt okuma alanının değerine erişiminin olmaması dışında, yalnızca çalışma zamanında bir sabit değere benzer. Daha fazla bilgi için bkz. [sabitler](./constants.md).  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Oluşturucuları Kullanma](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
-- [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [Erişim Değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Sınıflar ve Yapılar](./index.md)
+- [Oluşturucuları Kullanma](./using-constructors.md)
+- [Devralma](./inheritance.md)
+- [Erişim Değiştiricileri](./access-modifiers.md)
+- [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](./abstract-and-sealed-classes-and-class-members.md)

@@ -1,52 +1,52 @@
 ---
-title: Genel arabirimler - C# Programlama Kılavuzu
+title: Genel arabirimler- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: 7fc79874c8e1ff24c38d288d3f6708e2851419e3
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: fb2c570b251979adb76ad2af1a3b6f54b75a15ff
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423480"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589719"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Genel Arabirimler (C# Programlama Kılavuzu)
-Genellikle, genel amaçlı koleksiyon sınıfları, veya bir koleksiyondaki öğeleri temsil eden genel sınıfları arabirimler tanımlamak yararlıdır. Genel sınıflar için tercih genel arabirimler gibi kullanmaktır <xref:System.IComparable%601> yerine <xref:System.IComparable>, değer türleri kutulama ve kutudan çıkarma işlemleri önlemek için. .NET Framework sınıf kitaplığı ile koleksiyon sınıflarını kullanmak için çeşitli genel arabirimlerin tanımlar <xref:System.Collections.Generic> ad alanı.  
+Genel koleksiyon sınıfları için ya da koleksiyondaki öğeleri temsil eden genel sınıflar için arabirim tanımlamak genellikle yararlıdır. Genel sınıfların tercihi, değer türlerinde kutulamayı ve kutudan çıkarma işlemlerini önlemek <xref:System.IComparable%601> için <xref:System.IComparable>yerine gibi genel arabirimleri kullanmaktır. .NET Framework sınıf kitaplığı, <xref:System.Collections.Generic> ad alanındaki koleksiyon sınıflarıyla kullanılmak üzere birkaç genel arabirimi tanımlar.  
   
- Bir arabirim bir tür parametresi kısıtlaması olarak belirtildiğinde yalnızca arabirim türleri kullanılabilir. Aşağıdaki kod örnekte gösterildiği bir `SortedList<T>` türetilen sınıf `GenericList<T>` sınıfı. Daha fazla bilgi için [genel türlere giriş](../../../csharp/programming-guide/generics/index.md). `SortedList<T>` kısıtlama ekler `where T : IComparable<T>`. Böylece `BubbleSort` yönteminde `SortedList<T>` genel kullanılacak <xref:System.IComparable%601.CompareTo%2A> liste öğelerini yöntemi. Bu örnekte, liste öğelerini basit bir sınıfı olan `Person`, uygulayan `IComparable<Person>`.  
+ Bir arabirim bir tür parametresinde kısıtlama olarak belirtildiğinde, yalnızca arabirimini uygulayan türler kullanılabilir. Aşağıdaki kod örneğinde `GenericList<T>` sınıfından türetilen bir `SortedList<T>` sınıf gösterilmektedir. Daha fazla bilgi için bkz. [Genel türlere giriş](./index.md). `SortedList<T>`kısıtlamayı `where T : IComparable<T>`ekler. Bu, `BubbleSort` içindeki `SortedList<T>` yönteminin List öğelerinde genel <xref:System.IComparable%601.CompareTo%2A> yöntemini kullanmasına olanak sağlar. Bu örnekte, liste öğeleri, uygulayan `Person` `IComparable<Person>`basit bir sınıftır.  
   
  [!code-csharp[csProgGuideGenerics#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics2.cs#29)]  
   
- Birden çok arabirim olarak tek bir tür kısıtlamaları şu şekilde belirlenebilir:  
+ Birden çok arabirim, tek bir tür üzerinde kısıtlamalar olarak belirtilebilir ve aşağıdaki gibi:  
   
  [!code-csharp[csProgGuideGenerics#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#30)]  
   
- Bir arabirim gibi birden fazla tür parametresi tanımlayabilirsiniz:  
+ Bir arabirim, aşağıdaki gibi birden fazla tür parametresi tanımlayabilir:  
   
  [!code-csharp[csProgGuideGenerics#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#31)]  
   
- Sınıflar için geçerli olan kurallar devralma ayrıca arayüzlere uygulanır:  
+ Sınıflar için uygulanan devralma kuralları arabirimler için de geçerlidir:  
   
  [!code-csharp[csProgGuideGenerics#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#32)]  
   
- Dönüş değeri olarak yalnızca kendi tür parametresi kullandığı anlamına gelir değişken karşıtı genel arabirim ise genel arabirimler genel olmayan Ara birimden devralınabilir. .NET Framework sınıf kitaplığındaki <xref:System.Collections.Generic.IEnumerable%601> devraldığı <xref:System.Collections.IEnumerable> çünkü <xref:System.Collections.Generic.IEnumerable%601> yalnızca kullanır `T` dönüş değerini <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> ve <xref:System.Collections.Generic.IEnumerator%601.Current%2A> özellik Alıcısı.  
+ Genel arabirim değişken karşıtı ise genel arabirimler, genel olmayan arabirimlerden devralınabilir, bu da yalnızca kendi tür parametresini dönüş değeri olarak kullanır. <xref:System.Collections.Generic.IEnumerable%601> .NET Framework sınıf kitaplığında öğesinden <xref:System.Collections.IEnumerable> devralır çünkü <xref:System.Collections.Generic.IEnumerable%601> yalnızca öğesinin `T` <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> dönüş değerinde ve <xref:System.Collections.Generic.IEnumerator%601.Current%2A> özellik alıcısı içinde kullanılır.  
   
- Somut sınıflar gibi kapalı oluşturulmuş arabirimler uygulayabilirsiniz:  
+ Somut sınıflar, aşağıdaki gibi kapalı oluşturulmuş arabirimler uygulayabilir:  
   
  [!code-csharp[csProgGuideGenerics#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#33)]  
   
- Arabirim tarafından şu şekilde gerekli tüm bağımsız değişkenler sınıfı parametre listesi sağlayan sürece genel sınıflar genel arabirimler veya kapalı bir oluşturulmuş arabirimler uygulayabilirsiniz:  
+ Genel sınıflar, sınıf parametresi listesi arabirimin gerektirdiği tüm bağımsız değişkenleri aşağıdaki şekilde sağladığı sürece genel arabirimleri veya kapalı oluşturulmuş arabirimleri uygulayabilir:  
   
  [!code-csharp[csProgGuideGenerics#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#34)]  
   
- Yöntem aşırı yükü denetleyen kuralları Genel sınıflar, yapılar genel veya genel arabirimler içinde yöntemleri için aynıdır. Daha fazla bilgi için [genel yöntemler](../../../csharp/programming-guide/generics/generic-methods.md).  
+ Yöntem aşırı yüklemesini denetleyen kurallar, genel sınıflar, genel yapılar veya genel arabirimler içindeki yöntemler için aynıdır. Daha fazla bilgi için bkz. [Genel yöntemler](./generic-methods.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/index.md)
-- [interface](../../../csharp/language-reference/keywords/interface.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Genel Türlere Giriş](./index.md)
+- [interface](../../language-reference/keywords/interface.md)
 - [Genel Türler](~/docs/standard/generics/index.md)

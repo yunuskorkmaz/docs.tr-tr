@@ -1,5 +1,5 @@
 ---
-title: Kısmi sınıflar ve yöntemler - C# Programlama Kılavuzu
+title: Kısmi sınıflar ve yöntemler- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,115 +7,115 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 0a0cf7c3b6024f75196abed5fdb7d18a058c58db
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 53c3ac6e4fa6313488c47d851e0897bd512521b7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398378"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596282"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Kısmi Sınıflar ve Yöntemler (C# Programlama Kılavuzu)
 
-Tanımı bölmek mümkündür bir [sınıfı](../../../csharp/language-reference/keywords/class.md), [yapı](../../../csharp/language-reference/keywords/struct.md)e [arabirimi](../../../csharp/language-reference/keywords/interface.md) ya da iki veya daha fazla kaynak dosyalar üzerinde bir yöntem. Her kaynak dosyası türü veya yönteminde tanımının bir bölümünü içerir ve uygulama derlendiğinde tüm parçaları bir araya getirilir.
+Bir [sınıfın](../../language-reference/keywords/class.md)tanımını, bir [yapıyı](../../language-reference/keywords/struct.md), [arabirimi](../../language-reference/keywords/interface.md) veya bir yöntemi iki veya daha fazla kaynak dosya üzerinde ayırmak mümkündür. Her kaynak dosya, tür veya yöntem tanımının bir bölümünü içerir ve uygulama derlendiğinde tüm parçalar birleştirilir.
 
 ## <a name="partial-classes"></a>Kısmi sınıflar
 
-Bir sınıf tanımı bölmeyi tercih edilir, birkaç durum vardır:
+Bir sınıf tanımını bölmek istenen birkaç durum vardır:
 
-- Büyük projeler üzerinde çalışırken, bir sınıf ayrı dosyalar yayılmasını üzerinde aynı anda çalışmak birden çok programcıları sağlar.
+- Büyük projeler üzerinde çalışırken, bir sınıfın ayrı dosyalar üzerinde yayılması, birden fazla programcıların aynı anda üzerinde çalışmasını sağlar.
 
-- Otomatik olarak oluşturulan kaynak ile çalışırken kod sınıfa kaynak dosyası yeniden oluşturmak zorunda kalmadan eklenebilir. Visual Studio, Windows Forms, Web hizmeti sarmalayıcı kodu ve benzeri oluşturduğunda, bu yaklaşımı kullanır. Bu sınıflar, Visual Studio tarafından oluşturulan dosya değiştirmek zorunda kalmadan kullanan kodu oluşturabilirsiniz.
+- Otomatik olarak oluşturulan kaynakla çalışırken, kaynak dosyayı yeniden oluşturmak zorunda kalmadan kod sınıfa eklenebilir. Visual Studio, Windows Forms, Web hizmeti sarmalayıcı kodu vb. oluşturduğunda bu yaklaşımı kullanır. Visual Studio tarafından oluşturulan dosyayı değiştirmek zorunda kalmadan, bu sınıfları kullanan kod oluşturabilirsiniz.
 
-- Bir sınıf tanımı bölmek için kullanın [kısmi](../../../csharp/language-reference/keywords/partial-type.md) burada gösterildiği gibi anahtar sözcüğü değiştiricisi:
+- Bir sınıf tanımını ayırmak için, burada gösterildiği gibi [kısmi](../../language-reference/keywords/partial-type.md) anahtar sözcük değiştiricisini kullanın:
 
   [!code-csharp[csProgGuideObjects#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#26)]
 
-`partial` Anahtar sözcüğü, sınıf, yapı, diğer bölümlerini gösterir veya arabirimi ad alanı içinde tanımlanabilir. Tüm parçaları kullanmalısınız `partial` anahtar sözcüğü. Tüm parçaları kullanılabilir son türü oluşturmak için zaman derleyin. Tüm parçaları gibi aynı erişilebilirliği olmalıdır `public`, `private`ve benzeri.
+`partial` Anahtar sözcüğü, sınıf, yapı veya arabirimin diğer bölümlerinin ad alanında tanımlanamayacağını gösterir. Tüm parçalar `partial` anahtar kelimesini kullanmalıdır. Son türü oluşturmak için tüm parçalar derleme zamanında kullanılabilir olmalıdır. Tüm parçalar, ve gibi aynı erişilebilirliği `public` `private`içermelidir.
 
-Herhangi bir bölümü soyut olarak bildirilirse, tüm türü soyut olarak değerlendirilir. Tüm tür korumalı olarak kabul edilip sonra herhangi bir bölümü sealed bildirilmişse. Herhangi bir bölümü bir taban türü bildirirse, tüm tür o sınıf devralır.
+Herhangi bir bölüm soyut olarak bildirilirse, tüm tür soyut olarak değerlendirilir. Herhangi bir bölüm Sealed olarak bildirilirse, tüm tür Sealed olarak değerlendirilir. Herhangi bir parça bir temel tür bildiriyorsa, tüm tür o sınıfı devralır.
 
-Bir taban sınıfı belirtin tüm bölümleri kabul etmeniz gerekir, ancak bir temel sınıf atlayın parçaları temel tür hala devralır. Son türü kısmi bildirimleri listelenen tüm arabirimlerini uygular ve bölümleri farklı temel arabirimleri belirtebilirsiniz. Herhangi bir sınıf, yapı veya arabirim üyeleri bir kısmi tanımda'olarak bildirilen tüm diğer bölümleri için kullanılabilir. Tüm parçaları birleşimi derleme zamanında son türüdür.
+Bir temel sınıf belirten tüm parçalar kabul etmelidir, ancak temel bir sınıfı atlayan parçalar hala temel türü miras alır. Parçalar farklı temel arabirimler belirtebilir ve son tür tüm kısmi bildirimlerin listelebileceği tüm arabirimleri uygular. Kısmi bir tanımda belirtilen herhangi bir sınıf, yapı veya arabirim üyesi diğer tüm parçalar için kullanılabilir. Son tür derleme zamanında tüm parçaların birleşimidir.
 
 > [!NOTE]
-> `partial` Değiştiricisi, temsilci veya sabit listesi bildirimlerinde kullanılabilir değil.
+> Değiştirici `partial` , temsilci veya numaralandırma bildirimlerinde kullanılamıyor.
 
-Aşağıdaki örnek, içinde iç içe türü kısmi olmasa bile, iç içe geçmiş türler kendisini kısmi, olabileceğini gösterir.
+Aşağıdaki örnek iç içe geçmiş türlerin kısmen, iç içe yerleştirilmiş olması durumunda bile kısmi bir tür olduğunu gösterir.
 
 [!code-csharp[csProgGuideObjects#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#25)]
 
-Derleme zamanında öznitelikleri kısmi türü tanımları birleştirilir. Örneğin, aşağıdaki bildirimleri dikkate alın:
+Derleme zamanında, kısmi tür tanımlarının öznitelikleri birleştirilir. Örneğin, aşağıdaki bildirimleri göz önünde bulundurun:
 
 [!code-csharp[csProgGuideObjects#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#23)]
 
-Bunlar, aşağıdaki bildirimi eşdeğerdir:
+Bunlar aşağıdaki bildirimlerle eşdeğerdir:
 
 [!code-csharp[csProgGuideObjects#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#24)]
 
-Aşağıdaki tüm kısmi türü tanımları birleştirilir:
+Aşağıdakiler tüm kısmi tür tanımlarından birleştirilir:
 
 - XML açıklamaları
 
 - arabirimler
 
-- genel tür parametre öznitelikleri
+- Genel tür parametre öznitelikleri
 
 - class öznitelikleri
 
 - üyeler
 
-Örneğin, aşağıdaki bildirimleri dikkate alın:
+Örneğin, aşağıdaki bildirimleri göz önünde bulundurun:
 
 [!code-csharp[csProgGuideObjects#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#21)]
 
-Bunlar, aşağıdaki bildirimi eşdeğerdir:
+Bunlar aşağıdaki bildirimlerle eşdeğerdir:
 
 [!code-csharp[csProgGuideObjects#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#22)]
 
 ### <a name="restrictions"></a>Kısıtlamalar
 
-Kısmi sınıf tanımları ile çalışırken yordamları izlemek için çeşitli kurallar şunlardır:
+Kısmi sınıf tanımlarına çalışırken izlenecek birkaç kural vardır:
 
-- Bölümleri aynı türde olacak şekilde tasarlanmış tüm kısmi tür tanımları ile değiştirilmelidir `partial`. Örneğin, aşağıdaki sınıf bildirimleri hata oluşturur:
+- Aynı türdeki parçalar olması amaçlanan tüm kısmi tür tanımlarının ile `partial`değiştirilmesi gerekir. Örneğin, aşağıdaki sınıf bildirimleri bir hata oluşturur:
 
   [!code-csharp[csProgGuideObjects#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#20)]
 
-- `partial` Değiştiricisi hemen önce anahtar sözcükler yalnızca görüntülenebilir `class`, `struct`, veya `interface`.
+- Değiştirici yalnızca, veya `class` `struct` anahtarsözcüklerinden`interface`hemen önce görünebilir. `partial`
 
-- Aşağıdaki örnekte gösterildiği gibi iç içe geçmiş kısmi türler kısmi türü tanımlarında izin verilir:
+- İç içe geçmiş kısmi türlere, aşağıdaki örnekte gösterildiği gibi kısmi tür tanımlarında izin verilir:
 
   [!code-csharp[csProgGuideObjects#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#19)]
 
-- Tüm kısmi tür tanımlarını bölümleri aynı türde olacak şekilde tasarlanmış, aynı derleme ve aynı modülde (.exe veya .dll dosyası) tanımlanmış olması gerekir. Kısmi tanımlar, birden çok modül yayılamaz.
+- Aynı türde parçalar olması gereken tüm kısmi tür tanımlarının aynı derlemede ve aynı modülde (. exe veya. dll dosyası) tanımlanması gerekir. Kısmi tanımlar birden çok modüle yayılamaz.
 
-- Tüm kısmi tür tanımları, genel tür parametreleri ve sınıf adı eşleşmelidir. Genel türler, kısmi olabilir. Her bir kısmi bildirimi aynı sırada aynı parametre adları kullanmanız gerekir.
+- Sınıf adı ve genel tür parametreleri tüm kısmi tür tanımlarında eşleşmelidir. Genel türler kısmi olabilir. Her kısmi bildirimin aynı parametre adlarını aynı sırada kullanması gerekir.
 
-- Aşağıdaki anahtar sözcükler kısmi tür tanımında isteğe bağlıdır, ancak bir kısmi tür tanımı varsa, aynı türde başka bir kısmi tanımında belirtilen anahtar sözcüklerle çakışmamalıdır:
+- Kısmi tür tanımında aşağıdaki anahtar sözcükler isteğe bağlıdır, ancak bir kısmi tür tanımında varsa, aynı türde başka bir kısmi tanımda belirtilen anahtar sözcüklerle çakışamaz:
 
-  - [public](../../../csharp/language-reference/keywords/public.md)
+  - [public](../../language-reference/keywords/public.md)
 
-  - [private](../../../csharp/language-reference/keywords/private.md)
+  - [private](../../language-reference/keywords/private.md)
 
-  - [protected](../../../csharp/language-reference/keywords/protected.md)
+  - [protected](../../language-reference/keywords/protected.md)
 
-  - [internal](../../../csharp/language-reference/keywords/internal.md)
+  - [internal](../../language-reference/keywords/internal.md)
 
-  - [abstract](../../../csharp/language-reference/keywords/abstract.md)
+  - [abstract](../../language-reference/keywords/abstract.md)
 
-  - [sealed](../../../csharp/language-reference/keywords/sealed.md)
+  - [sealed](../../language-reference/keywords/sealed.md)
 
   - taban sınıfı
 
-  - [Yeni](../../../csharp/language-reference/keywords/new-modifier.md) değiştirici (iç içe geçmiş parça)
+  - [Yeni](../../language-reference/keywords/new-modifier.md) değiştirici (iç içe yerleştirilmiş parçalar)
 
-  - Genel sınırlamalar
+  - genel kısıtlamalar
 
-Daha fazla bilgi için [tür parametrelerindeki kısıtlamalar](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).
+Daha fazla bilgi için bkz. [tür parametrelerindeki kısıtlamalar](../generics/constraints-on-type-parameters.md).
 
 ## <a name="example-1"></a>Örnek 1
 
 ### <a name="description"></a>Açıklama
 
-Aşağıdaki örnek, alanları ve sınıf oluşturucusunun `Coords`, bir kısmi sınıf tanımı ve üye bildirilir `PrintCoords`, başka bir kısmi sınıf tanımında bildirilir.
+Aşağıdaki örnekte, sınıfının `Coords`alanları ve Oluşturucusu, bir kısmi sınıf tanımında ve `PrintCoords`üyesi başka bir kısmi sınıf tanımında bildirilmiştir.
 
 ### <a name="code"></a>Kod
 
@@ -125,7 +125,7 @@ Aşağıdaki örnek, alanları ve sınıf oluşturucusunun `Coords`, bir kısmi 
 
 ### <a name="description"></a>Açıklama
 
-Aşağıdaki örnek, ayrıca kısmi yapılar ve arabirimler geliştirebilirsiniz olduğunu gösterir.
+Aşağıdaki örnek ayrıca kısmi yapılar ve arabirimler geliştirebileceğinizi gösterir.
 
 ### <a name="code"></a>Kod
 
@@ -133,13 +133,13 @@ Aşağıdaki örnek, ayrıca kısmi yapılar ve arabirimler geliştirebilirsiniz
 
 ## <a name="partial-methods"></a>Kısmi Yöntemler
 
-Kısmi bir yöntemin kısmi bir sınıf veya yapı içerebilir. Bir sınıfın parçası yöntem imzası içerir. İsteğe bağlı bir uygulama aynı bölüm veya başka bir parçası tanımlanabilir. Uygulama sağlanmazsa, derleme zamanında yöntemi ve yöntemine yönelik tüm çağrılar kaldırılır.
+Kısmi bir sınıf veya yapı, kısmi bir yöntem içerebilir. Sınıfın bir kısmı metodun imzasını içerir. İsteğe bağlı bir uygulama aynı bölümde veya başka bir bölümde tanımlanabilir. Uygulama sağlanmazsa, yöntemi ve yöntemine yapılan tüm çağrılar derleme sırasında kaldırılır.
 
-Kısmi yöntemler, bir olay için benzer bir yöntemi tanımlamak bir parçası olan bir sınıf uygulayan etkinleştirin. Uygulayan bir sınıfın parçası, yöntemi veya uygulamamaya karar verebilirsiniz. Yöntem uygulanmadı sonra derleyici yöntemi kaldırır imzası ve yöntemine yapılan tüm çağrıları. Değerlendirme çağrılarındaki bağımsız değişkenler, ortaya çıkabilecek tüm sonuçları dahil olmak üzere, yöntem çağrıları çalışma zamanında bir etkisi yoktur. Bu nedenle, uygulama sağlanmazsa olsa bile kısmi sınıftaki herhangi bir kod serbestçe kısmi bir yöntemi kullanabilirsiniz. Yöntemi çağrılır ancak uygulanmadı hiçbir derleme zamanı veya çalışma zamanı hataları neden olur.
+Kısmi Yöntemler, bir olaya benzer bir yöntemi tanımlamak için bir sınıfın bir parçasının Uygulayıcısı sağlar. Sınıfının diğer bölümünün uygulayıcısı, yöntemi uygulayıp uygulamamaya karar verebilir. Yöntem uygulanmadığından, derleyici yöntem imzasını ve yönteme yapılan tüm çağrıları kaldırır. Çağrılardaki bağımsız değişkenlerin değerlendirmesinden kaynaklanan sonuçlar da dahil olmak üzere yöntemine yapılan çağrılar, çalışma zamanında hiçbir etkiye sahip değildir. Bu nedenle, kısmi sınıftaki herhangi bir kod, uygulama sağlanmasa bile, kısmi bir yöntemi serbestçe kullanabilir. Yöntem çağrılırsa ancak uygulanmadığında, derleme zamanı veya çalışma zamanı hataları ortaya alınmaz.
 
-Kısmi yöntemler bir şekilde oluşturulan kod özelleştirmek için özellikle yararlıdır. İçin bir yöntem adı sağlarlar ve böylece kod oluşturulan ayrılması için imza yöntemi çağırabilirsiniz ancak geliştirici yöntemi uygulamak karar verebilirsiniz. Çok parçalı sınıflar gibi bir kod Oluşturucu tarafından oluşturulan kodu ve çalışma zamanı maliyetleri birlikte çalışmak için bir insan geliştirici tarafından oluşturulan kodu kısmi yöntemler etkinleştirin.
+Kısmi Yöntemler özellikle oluşturulan kodu özelleştirmenin bir yolu olarak faydalıdır. Bir yöntem adının ve imzasının ayrılmaya izin verir, böylece oluşturulan kod yöntemi çağırabilir, ancak geliştirici yöntemin uygulanıp uygulamamaya karar verebilir. Kısmi sınıflara çok benzeyen kısmi Yöntemler, bir kod üreticisi tarafından oluşturulan kodu ve bir insan geliştiricisi tarafından oluşturulan kodu, çalışma zamanı maliyetleri olmadan birlikte çalışmak üzere etkinleştirir.
 
-Kısmi yöntem bildiriminde iki bölümden oluşur: tanımı ve uygulaması. Bunlar ayrı bölümlerini kısmi bir sınıf ya da aynı bölümü olabilir. Hiçbir uygulama bildirimi yok sonra derleyici, hemen her iki tanımlama iyileştirir ve yöntemine yönelik tüm çağrılar bildirimi.
+Kısmi yöntem bildirimi iki bölümden oluşur: tanım ve uygulama. Bunlar kısmi bir sınıfın ayrı bölümlerinde veya aynı bölümde olabilir. Uygulama bildirimi yoksa, derleyici hem tanımlama bildirimini hem de yönteme yapılan tüm çağrıları en iyi duruma getirir.
 
 ```csharp
 // Definition in file1.cs
@@ -152,28 +152,28 @@ partial void onNameChanged()
 }
 ```
 
-- Kısmi yöntem bildiriminin bağlamsal anahtar sözcüğüyle başlamalı [kısmi](../../../csharp/language-reference/keywords/partial-type.md) ve yöntem döndürmelidir [void](../../../csharp/language-reference/keywords/void.md).
+- Kısmi yöntem bildirimleri, bağlamsal anahtar sözcüğüyle [kısmen](../../language-reference/keywords/partial-type.md) başlamalı ve yöntemin [void](../../language-reference/keywords/void.md)döndürmesi gerekir.
 
-- Kısmi yöntemler olabilir [içinde](../../../csharp/language-reference/keywords/in-parameter-modifier.md) veya [ref](../../../csharp/language-reference/keywords/ref.md) ama [kullanıma](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametreleri.
+- Kısmi yöntemlerin [içinde](../../language-reference/keywords/in-parameter-modifier.md) veya [ref](../../language-reference/keywords/ref.md) , ancak [Out](../../language-reference/keywords/out-parameter-modifier.md) parametreleri olabilir.
 
-- Kısmi yöntemler dolaylı olarak olan [özel](../../../csharp/language-reference/keywords/private.md), ve bu nedenle olamaz [sanal](../../../csharp/language-reference/keywords/virtual.md).
+- Kısmi Yöntemler örtük olarak [özeldir](../../language-reference/keywords/private.md)ve bu nedenle [sanal](../../language-reference/keywords/virtual.md)olamaz.
 
-- Kısmi yöntemler olamaz [extern](../../../csharp/language-reference/keywords/extern.md), Varlık gövdesi bunlar tanımlama uygulama mı olduğunu belirler.
+- Gövde varlığı, tanımlama veya uygulama yapılıp yapılmayacağını belirlerse, kısmi Yöntemler [extern](../../language-reference/keywords/extern.md)olamaz.
 
-- Kısmi yöntemler olabilir [statik](../../../csharp/language-reference/keywords/static.md) ve [güvenli](../../../csharp/language-reference/keywords/unsafe.md) değiştiriciler.
+- Kısmi yöntemlerin [statik](../../language-reference/keywords/static.md) ve [güvenli olmayan](../../language-reference/keywords/unsafe.md) değiştiriciler olabilir.
 
-- Kısmi yöntemler, genel olabilir. Kısıtlamaları tanımlayan kısmi yöntem bildiriminde yerleştirilir ve isteğe bağlı olarak uygulayan bir yinelenebilir. Parametre adları parametre ve türü tanımlayan bir olduğu gibi uygulama bildiriminde aynı olması gerekmez.
+- Kısmi yöntemler genel olabilir. Kısıtlamalar, tanımlayıcı kısmi Yöntem bildirimine konur ve isteğe bağlı olarak uygulama bir tane üzerinde yinelenebilir. Parametre ve tür parametre adları, uygulama bildiriminde, tanımlanmasıyla aynı olmak zorunda değildir.
 
-- Yapabileceğiniz bir [temsilci](../../../csharp/language-reference/keywords/delegate.md) tanımlanan ve uygulanan kısmi bir yöntem, ancak yalnızca tanımlı bir kısmi yöntem değil.
+- Tanımlanmış ve uygulanmış, ancak yalnızca tanımlanmış kısmi bir yönteme değil kısmi bir yönteme [temsilci](../../language-reference/keywords/delegate.md) oluşturabilirsiniz.
 
 ## <a name="c-language-specification"></a>C# Dil Belirtimi
 
-Daha fazla bilgi için [kısmi türlerinden](~/_csharplang/spec/classes.md#partial-types) içinde [ C# dil belirtimi](../../language-reference/language-specification/index.md). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için bkz. [ C# dil belirtiminde](../../language-reference/language-specification/index.md) [kısmi türler](~/_csharplang/spec/classes.md#partial-types) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)
-- [Yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md)
-- [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)
-- [partial (Tür)](../../../csharp/language-reference/keywords/partial-type.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Sınıflar](./classes.md)
+- [Yapılar](./structs.md)
+- [Arabirimler](../interfaces/index.md)
+- [partial (Tür)](../../language-reference/keywords/partial-type.md)

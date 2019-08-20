@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Birden çok anahtardaki öğeleri SıralaC#()'
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 2325417fa2ed8a6c3ca13504cada4d4e1a49be42
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4029e88ced11cdc2e95fdfd212fecb3e3b194436
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709907"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592448"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-c"></a>Nasıl yapılır: Birden çok anahtardaki öğeleri SıralaC#()
 
@@ -17,7 +17,7 @@ Bu konu başlığı altında, birden çok anahtar üzerinde nasıl sıralama yap
 
 Bu örnekte, sonuçlar önce sevkiyat posta kodu tarafından, ardından sipariş tarihine göre sıralanır.
 
-Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).
+Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -67,7 +67,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 
 Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (C#LINQ to XML) ()](namespaces-overview-linq-to-xml.md).
 
-Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Bir ad alanındaki](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)müşteriler ve siparişler.
+Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Bir ad alanındaki](./sample-xml-file-customers-and-orders-in-a-namespace.md)müşteriler ve siparişler.
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");

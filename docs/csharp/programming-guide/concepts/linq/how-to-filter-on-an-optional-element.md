@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Isteğe bağlı bir öğe (C#) üzerinde filtrele'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 9b2ee9bf0cbed5504b96937fb37cf98728a15335
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 403c331787df7eb538302df2ecc332a663e68d71
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710125"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593802"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>Nasıl yapılır: Isteğe bağlı bir öğe (C#) üzerinde filtrele
 Bazen, XML belgenizde bulunduğundan emin olmasanız da bir öğeye filtre uygulamak isteyebilirsiniz. Arama, belirli bir öğede alt öğe yoksa, filtre uygulayarak bir null başvuru özel durumu tetiklememesi için yürütülmelidir. Aşağıdaki örnekte, `Child5` öğesinin bir `Type` alt öğesi yoktur, ancak sorgu yine de doğru yürütülür.  
@@ -100,5 +100,5 @@ Child Four Text
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [Standart sorgu Işleçlerine genelC#bakış ()](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Projeksiyon Işlemleri (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+- [Standart sorgu Işleçlerine genelC#bakış ()](./standard-query-operators-overview.md)
+- [Projeksiyon Işlemleri (C#)](./projection-operations.md)

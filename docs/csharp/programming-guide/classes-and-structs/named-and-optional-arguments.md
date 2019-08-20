@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 74cfc6a425e82014bbcf5093f52f476ff09db130
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: b43c692c8fd54ef1cbfac334b4986d8332462848
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796563"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596483"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler (C# Programlama Kılavuzu)
 C#4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. *Adlandırılmış bağımsız değişkenler* , bağımsız değişkenini parametrenin adıyla ilişkilendirerek parametre listesindeki konumuyla değil, belirli bir parametre için bir bağımsız değişken belirtmenizi sağlar. *Isteğe bağlı bağımsız değişkenler* bazı parametrelerin bağımsız değişkenlerini atlamanızı sağlar. Her iki yöntem de Yöntemler, Dizin oluşturucular, oluşturucular ve temsilcilerle birlikte kullanılabilir.  
@@ -70,9 +70,9 @@ C#4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. *
   
 - sabit bir ifade;  
   
-- formun `new ValType()`bir ifadesi, burada `ValType` [enum](../../../csharp/language-reference/keywords/enum.md) veya [struct](../../../csharp/programming-guide/classes-and-structs/structs.md)gibi bir değer türüdür;  
+- formun `new ValType()`bir ifadesi, burada `ValType` [enum](../../language-reference/keywords/enum.md) veya [struct](./structs.md)gibi bir değer türüdür;  
   
-- bir değer türü `ValType` olan [varsayılan form (ValType)](../../../csharp/language-reference/operators/default.md)ifadesi.  
+- bir değer türü `ValType` olan [varsayılan form (ValType)](../../language-reference/operators/default.md)ifadesi.  
   
  İsteğe bağlı parametreler, gerekli parametrelerden sonra parametre listesinin sonunda tanımlanmıştır. Çağıran isteğe bağlı parametrelerin her biri için bir bağımsız değişken sağlıyorsa, önceki tüm isteğe bağlı parametrelerin bağımsız değişkenlerini sağlamalıdır. Bağımsız değişken listesindeki virgülle ayrılmış boşluklar desteklenmez. Örneğin, aşağıdaki kodda, örnek yöntemi `ExampleMethod` bir gerekli ve iki isteğe bağlı parametre ile tanımlanmıştır.  
   
@@ -113,7 +113,7 @@ C#4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. *
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- Daha fazla bilgi ve örnek için bkz [. nasıl yapılır: Office Programlamada](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) adlandırılmış ve isteğe bağlı bağımsız değişkenleri ve [nasıl yapılacağını kullanın: Visual C# özelliklerini](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)kullanarak Office birlikte çalışma nesnelerine erişin.  
+ Daha fazla bilgi ve örnek için bkz [. nasıl yapılır: Office Programlamada](./how-to-use-named-and-optional-arguments-in-office-programming.md) adlandırılmış ve isteğe bağlı bağımsız değişkenleri ve [nasıl yapılacağını kullanın: Visual C# özelliklerini](../interop/how-to-access-office-onterop-objects.md)kullanarak Office birlikte çalışma nesnelerine erişin.  
   
 ## <a name="overload-resolution"></a>Aşırı Yükleme Çözümü  
  Adlandırılmış ve isteğe bağlı bağımsız değişkenlerin kullanılması, aşırı yükleme çözünürlüğünü aşağıdaki yollarla etkiler:  
@@ -129,7 +129,7 @@ C#4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. *
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Office Programlamada adlandırılmış ve Isteğe bağlı bağımsız değişkenleri kullanma](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [Oluşturucuları Kullanma](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
-- [Dizin Oluşturucular Kullanma](../../../csharp/programming-guide/indexers/using-indexers.md)
+- [Nasıl yapılır: Office Programlamada adlandırılmış ve Isteğe bağlı bağımsız değişkenleri kullanma](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Tür dinamiği kullanma](../types/using-type-dynamic.md)
+- [Oluşturucuları Kullanma](./using-constructors.md)
+- [Dizin Oluşturucular Kullanma](../indexers/using-indexers.md)

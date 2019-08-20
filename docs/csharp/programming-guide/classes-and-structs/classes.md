@@ -1,5 +1,5 @@
 ---
-title: Sınıfları - C# Programlama Kılavuzu
+title: Sınıflar- C# Programlama Kılavuzu
 ms.custom: seodec18
 description: Sınıf türleri ve bunların nasıl oluşturulacağı hakkında bilgi edinin
 ms.date: 08/21/2018
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: ad19099242a3bedbb7283219dfd7733db13231ec
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 193446ff98edce3b7c078c6eeba07cf9acdadaf0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398585"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597180"
 ---
 # <a name="classes-c-programming-guide"></a>Sınıflar (C# Programlama Kılavuzu)
 
 ## <a name="reference-types"></a>Başvuru türleri  
-Olarak tanımlanan bir tür bir [sınıfı](../../../csharp/language-reference/keywords/class.md) olduğu bir *başvuru türüne*. Bir değişken bildirdiğinizde başvuru türü, çalışma zamanında değişken değeri içeren [null](../../../csharp/language-reference/keywords/null.md) açıkça kullanarak sınıfının bir örneğini oluşturana kadar [yeni](../../../csharp/language-reference/operators/new-operator.md) işleci veya bir nesne atama bir başka bir yerde, aşağıdaki örnekte gösterildiği gibi oluşturulmuş olabilir uyumlu türü:
+[Sınıf](../../language-reference/keywords/class.md) olarak tanımlanan bir tür, *başvuru türüdür*. Çalışma zamanında, bir başvuru türünde bir değişken bildirdiğinizde, [New](../../language-reference/operators/new-operator.md) işlecini kullanarak sınıfın bir örneğini açıkça oluşturana veya onu oluşturulmuş bir uyumlu türdeki nesne atayan sürece değişken [null](../../language-reference/keywords/null.md) değerini içerir diğer bir yerde, aşağıdaki örnekte gösterildiği gibi:
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -27,11 +27,11 @@ MyClass mc = new MyClass();
 MyClass mc2 = mc;
 ```
 
-Nesne oluşturulduğunda, yeterli bellek, belirli bir nesnesi için yönetilen yığında ayrılır ve değişken yalnızca söz konusu nesnenin konumuna yönelik bir başvuru tutar. Yönetilen yığındaki türler ayrıldıkları zaman hem olarak da bilinen CLR'nin otomatik bellek yönetimi işlevinin tarafından talep edilen zaman ek yükü gerektirir *çöp toplama*. Ancak, çöp toplama yüksek oranda iyileştirilmiştir ve çoğu senaryoda, bir performans sorununa neden olmaz. Çöp toplama hakkında daha fazla bilgi için bkz: [otomatik bellek yönetimi ve çöp toplama](../../../standard/garbage-collection/gc.md).  
+Nesne oluşturulduğunda, söz konusu nesne için yönetilen yığında yeterli bellek ayrılır ve değişken yalnızca belirtilen nesnenin konumuna bir başvuru içerir. Yönetilen yığında bulunan türler, her ikisi de ayrıldıklarında ve *çöp toplama*olarak bilinen clr 'nin otomatik bellek yönetimi işlevselliği tarafından geri kazanıyorsa ek yük gerektirir. Ancak çöp toplama da yüksek oranda iyileştirilmiştir ve çoğu senaryoda bir performans sorunu oluşturmaz. Çöp toplama hakkında daha fazla bilgi için bkz. [Otomatik bellek yönetimi ve çöp toplama](../../../standard/garbage-collection/gc.md).  
   
 ## <a name="declaring-classes"></a>Sınıfları Bildirme
 
- Sınıfları kullanarak bildirilir [sınıfı](../../../csharp/language-reference/keywords/class.md) benzersiz bir tanımlayıcı aşağıdaki örnekte gösterildiği gibi anahtar sözcüğünü:
+ Sınıflar, aşağıdaki örnekte gösterildiği gibi, [Class](../../language-reference/keywords/class.md) anahtar sözcüğü ve ardından benzersiz bir tanımlayıcı kullanılarak bildirilenler:
 
  ```csharp
 //[access modifier] - [class] - [identifier]
@@ -41,38 +41,38 @@ Nesne oluşturulduğunda, yeterli bellek, belirli bir nesnesi için yönetilen y
  }
 ```
 
- `class` Anahtar sözcüğü erişim düzeyi tarafından öncesinde. Çünkü [genel](../../language-reference/keywords/public.md) kullanılan herkes bu sınıfın örnekleri, bu durumda, oluşturabilirsiniz. Sınıf adını izleyen `class` anahtar sözcüğü. Sınıfın adı geçerli C# olmalıdır [tanımlayıcı adı](../inside-a-program/identifier-names.md). Tanımı geri kalanında sınıfı, davranış ve veri tanımlandığı gövdesidir. Alanlar, özellikler, yöntemler ve olaylar sınıfta topluca denir *sınıf üyeleri*.  
+ `class` Anahtar sözcüğü öncesinde erişim düzeyidir. Bu durumda [genel](../../language-reference/keywords/public.md) kullanıldığından, herkes bu sınıfın örneklerini oluşturabilir. Sınıfın adı `class` anahtar sözcüğünü izler. Sınıfın adı geçerli C# bir [tanımlayıcı adı](../inside-a-program/identifier-names.md)olmalıdır. Tanımın geri kalanı, davranışın ve verilerin tanımlandığı sınıf gövdesidir. Bir sınıftaki alanlar, özellikler, Yöntemler ve olaylar topluca *sınıf üyeleri*olarak adlandırılır.  
   
-## <a name="creating-objects"></a>Nesneleri oluşturma
+## <a name="creating-objects"></a>Nesneler oluşturma
 
-Bazen kavramlarının birbirinin yerine kullanıldığı olsa da, bir sınıf ve nesne farklı noktalardır. Bir nesne türüyle bir sınıf tanımlar, ancak bir nesne değil. Bir nesne sınıfına göre somut bir varlık ve bazen bir sınıfın bir örneği da adlandırılır.  
+Bazen birbirinin yerine kullanıldıkları halde bir sınıf ve bir nesne farklı şeylerdir. Bir sınıf nesne türünü tanımlar, ancak nesnenin kendisi değildir. Bir nesne, bir sınıfı temel alan somut bir varlıktır ve bazen bir sınıfın örneği olarak adlandırılır.  
   
- Nesneleri kullanarak oluşturulabilir [yeni](../../language-reference/operators/new-operator.md) anahtar sözcüğü bir nesne, temel sınıfın adını ardından şöyle:  
+ Nesneler [Yeni](../../language-reference/operators/new-operator.md) anahtar sözcüğü kullanılarak, ardından nesnenin temel aldığı sınıfın adı tarafından oluşturulabilir ve şöyle olur:  
 
  ```csharp
  Customer object1 = new Customer();
  ```
 
- Bir sınıfın bir örneği oluşturulduğunda nesnesine bir başvuru programcıya geçirilir. Önceki örnekte, `object1` temel alan bir nesneye bir başvurudur `Customer`. Bu başvuru yeni bir nesneye başvuruyor, ancak nesne verisi içermiyor. Aslında, bir nesne başvurusu bir nesne oluşturulmadan oluşturabilirsiniz:  
+ Bir sınıfın bir örneği oluşturulduğunda, nesnesine bir başvuru, programcıya geri geçirilir. Önceki örnekte, `object1` temel alan `Customer`bir nesnesine başvurudur. Bu başvuru yeni nesneye başvurur ancak nesne verilerinin kendisini içermez. Aslında, herhangi bir nesne oluşturmadan bir nesne başvurusu oluşturabilirsiniz:  
  
 ```csharp
  Customer object2;
 ```
  
- Bunun gibi bir nesne gibi bir başvuru erişmeye çalışıyor, çalışma zamanında başarısız olacağı için bir nesneye başvuran olmayan nesne başvuruları oluşturmak önerilmemektedir. Ancak, bir nesneye yeni bir nesne oluşturarak veya atayarak bu gibi varolan bir nesneye başvurmak için böyle bir başvuruyu yapılabilir:  
+ Bir nesneye başvurmayan bu gibi nesne başvuruları oluşturmanızı önermeyiz, çünkü bu başvuru, bu tür bir başvuruya erişim denemesi çalışma zamanında başarısız olur. Ancak, bu tür bir başvuru, yeni bir nesne oluşturarak ya da bunun gibi var olan bir nesneye atanarak bir nesneye başvurmak için kullanılabilir:  
 
  ```csharp
  Customer object3 = new Customer();
  Customer object4 = object3;
 ```
   
- Bu kod, iki nesne başvuru oluşturur hem de aynı nesneye başvurur. Bu nedenle, nesne aracılığıyla yapılan değişiklikleri `object3` sonraki kullanımları içinde yansıtılır `object4`. Sınıflara göre nesneleri başvuruya göre adlandırılır çünkü sınıflar başvuru türleri olarak bilinir.  
+ Bu kod, her ikisi de aynı nesneye başvuran iki nesne başvurusu oluşturur. Bu nedenle, nesne üzerinde yapılan `object3` tüm değişiklikler sonraki `object4`kullanımlarda yansıtılır. Sınıfları temel alan nesneler başvuruya göre başvurulduğu için sınıflar başvuru türleri olarak bilinir.  
   
 ## <a name="class-inheritance"></a>Sınıf devralma  
 
-Sınıfları tam destek *devralma*, nesne yönelimli programlama temel bir özelliğidir. Bir sınıf oluşturduğunuz zaman, herhangi bir arabirim veya tanımlanmamış sınıfı devralabilirsiniz [korumalı](../../../csharp/language-reference/keywords/sealed.md), ve diğer sınıflar, sizin sınıfınızdan miras ve sınıf sanal yöntemleri geçersiz kılın.
+Sınıflar, nesne odaklı programlamanın temel bir özelliği olan *devralmayı*tamamen destekler. Bir sınıf oluşturduğunuzda, [korumalı](../../language-reference/keywords/sealed.md)olarak tanımlanmayan diğer bir arabirim veya sınıftan kalıtımla alabilir ve diğer sınıflar sınıfınızdan devralınabilir ve sınıf sanal yöntemlerini geçersiz kılabilir.
 
-Devralma kullanılarak gerçekleştirilir bir *türetme*, yani bir sınıf kullanılarak bildirilen bir *temel sınıfı* aldığı verilerini ve davranışlarını devralır. Bir temel sınıf, bir iki nokta üst üste ve bunun gibi türetilmiş sınıf adını izleyen temel sınıfın adını ekleyerek belirtilir:  
+Devralma bir *türetme*kullanılarak gerçekleştirilir. Bu, bir sınıfın veri ve davranış devraldığı *temel sınıf* kullanılarak bildirildiği anlamına gelir. Bir temel sınıf, bir iki nokta üst üste eklenerek ve türetilmiş sınıf adından sonra temel sınıfın adı aşağıdaki gibi olarak belirtilir:  
 
  ```csharp
  public class Manager : Employee
@@ -82,17 +82,17 @@ Devralma kullanılarak gerçekleştirilir bir *türetme*, yani bir sınıf kulla
  }
  ```
 
-Bir sınıf bir taban sınıfı bildirir, temel sınıf oluşturucuları dışındaki tüm üyelerini devralır. Daha fazla bilgi için [devralma](inheritance.md).
+Bir sınıf bir temel sınıf bildiriyorsa, oluşturucular hariç, taban sınıfın tüm üyelerini devralır. Daha fazla bilgi için bkz. [Devralma](inheritance.md).
   
-C++ programında farklı olarak, C# ' ta bir sınıf yalnızca doğrudan bir taban sınıftan devralabilir. Ancak, bir temel sınıf kendisi başka bir sınıftan devralabilir olduğundan, bir sınıf dolaylı olarak birden çok taban sınıfı devralabilir. Ayrıca, bir sınıf doğrudan birden fazla arabirim uygulayabilir. Daha fazla bilgi için [arabirimleri](../interfaces/index.md).  
+Aksine C++, içindeki C# bir sınıf yalnızca bir temel sınıftan doğrudan devralınabilir. Ancak, bir temel sınıfın kendisi başka bir sınıftan devraldığı için, bir sınıf dolaylı olarak birden fazla temel sınıfı devralınabilir. Ayrıca, bir sınıf doğrudan birden fazla arabirim uygulayabilir. Daha fazla bilgi için bkz. [arabirimler](../interfaces/index.md).  
   
-Bir sınıf bildirilebilir [soyut](../../language-reference/keywords/abstract.md). Bir Özet sınıf, bir imza tanımı ancak hiçbir uygulama soyut yöntemler içerir. Soyut sınıflar oluşturulamaz. Soyut yöntemlerini uygulayan türetilmiş sınıfları yalnızca kullanılabilir. Bunun aksine, bir [korumalı](../../language-reference/keywords/sealed.md) sınıfı diğer sınıfların türetmeniz izin vermez. Daha fazla bilgi için [soyut ve korumalı sınıflar ve sınıf üyeleri](abstract-and-sealed-classes-and-class-members.md).  
+Bir sınıf, [soyut](../../language-reference/keywords/abstract.md)olarak bildirilemez. Soyut bir sınıf imza tanımına sahip ancak uygulamaya sahip olmayan soyut yöntemler içerir. Soyut sınıfların örneği oluşturulamıyor. Yalnızca soyut yöntemleri uygulayan türetilmiş sınıflar aracılığıyla kullanılabilir. Buna karşılık, [korumalı](../../language-reference/keywords/sealed.md) bir sınıf diğer sınıfların bundan türemesine izin vermez. Daha fazla bilgi için bkz. [soyut ve korumalı sınıflar ve sınıf üyeleri](abstract-and-sealed-classes-and-class-members.md).  
   
-Sınıf tanımları farklı kaynak dosyaları arasında bölünebilir. Daha fazla bilgi için [kısmi sınıflar ve yöntemler](partial-classes-and-methods.md).  
+Sınıf tanımları, farklı kaynak dosyalar arasında bölünebilir. Daha fazla bilgi için bkz. [kısmi sınıflar ve Yöntemler](partial-classes-and-methods.md).  
   
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, içeren genel bir sınıf tanımlar. bir [otomatik uygulanan özellik](auto-implemented-properties.md), bir yöntem ve oluşturucu olarak adlandırılan özel bir yöntem. Daha fazla bilgi için [özellikleri](properties.md), [yöntemleri](methods.md), ve [oluşturucular](constructors.md) konuları. Sınıf örnekleri, ile örneği oluşturulur `new` anahtar sözcüğü.  
+Aşağıdaki örnek, bir [Otomatik uygulanan özellik](auto-implemented-properties.md), bir yöntem ve Oluşturucu olarak adlandırılan özel bir yöntem içeren bir ortak sınıf tanımlar. Daha fazla bilgi için bkz. [Özellikler](properties.md), [Yöntemler](methods.md)ve [oluşturucular](constructors.md) konuları. Daha sonra sınıfının örnekleri `new` anahtar sözcüğüyle oluşturulur.  
   
 [!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
   

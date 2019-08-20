@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Bir nesne grafiği yansıtma (C#)'
+title: 'Nasıl yapılır: Nesne grafiğini (C#) proje'
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: 759db3800b02ee3f6e263b4d43374a9160703b2f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: dcfdd8cba95d729a1f9bda3adb4b5fd8690b724a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486569"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592995"
 ---
-# <a name="how-to-project-an-object-graph-c"></a>Nasıl yapılır: Bir nesne grafiği yansıtma (C#)
-Bu konuda, proje veya doldurmak, bir nesne grafiğinin XML gösterilmektedir.  
+# <a name="how-to-project-an-object-graph-c"></a>Nasıl yapılır: Nesne grafiğini (C#) proje
+Bu konu, XML 'deki bir nesne grafiğinin nasıl proje veya doldurma yapılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kodu içeren bir nesne grafiğinin doldurur `Address`, `PurchaseOrder`, ve `PurchaseOrderItem` gelen sınıflar [örnek XML dosyası: Tipik satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML belgesi.  
+ Aşağıdaki kod, bir `Address`nesne grafiğini [örnek XML dosyasındaki, `PurchaseOrder`, ve `PurchaseOrderItem` sınıflarıyla doldurur: Tipik satın alma siparişi (LINQ to XML](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) ) XML belgesi.  
   
 ```csharp  
 class Address  
@@ -214,9 +214,9 @@ class Program {
 }  
 ```  
   
- Bu örnekte, sonucunu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu olarak döndürülen bir <xref:System.Collections.Generic.IEnumerable%601> , `PurchaseOrderItem`. Öğeleri `PurchaseOrder` sınıfı, tür <xref:System.Collections.Generic.IEnumerable%601> , `PurchaseOrderItem`. Kod <xref:System.Linq.Enumerable.ToList%2A> genişletme yöntemi oluşturmak için bir <xref:System.Collections.Generic.List%601> sorgunun sonuçlarının bir koleksiyondan.  
+ Bu örnekte, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgunun sonucu ' a döndürülür <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`. `PurchaseOrder` Sınıfındaki <xref:System.Collections.Generic.IEnumerable%601> öğeler`PurchaseOrderItem`türündedir. Kod, sorgu sonuçlarından <xref:System.Linq.Enumerable.ToList%2A> bir <xref:System.Collections.Generic.List%601> koleksiyon oluşturmak için genişletme yöntemini kullanır.  
   
- Bu örnek aşağıdaki çıktıyı üretir:  
+ Örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 PurchaseOrderNumber: 99503  

@@ -2,15 +2,15 @@
 title: Özel öznitelikler (C#) oluşturma
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 0277a88b7e5beda511f6490261a7009adcfed4ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0f25adf0d562b659edaa8f36e72332fd0c1ee7e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668711"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595411"
 ---
 # <a name="creating-custom-attributes-c"></a>Özel öznitelikler (C#) oluşturma
-Bir öznitelik sınıfı doğrudan veya dolaylı olarak türetildiği bir sınıf tanımlayarak kendi özel öznitelikler oluşturabilir <xref:System.Attribute>, hızlı ve kolay meta veri özniteliği tanımlarını tanımlayan hale getirir. Etiket türlerine türü yazan Programcı adıyla istediğinizi varsayalım. Özel bir tanımlayabilir `Author` öznitelik sınıfı:  
+Doğrudan veya dolaylı <xref:System.Attribute>olarak sınıfından türetilmiş bir sınıf olan öznitelik sınıfını tanımlayarak kendi özel öznitelerinizi oluşturabilirsiniz. Bu, meta verilerde hızlı ve kolay bir şekilde öznitelik tanımları tanımlamayı sağlar. Türleri, türünü yazan programcının adıyla etiketlemek istediğinizi varsayalım. Özel `Author` bir öznitelik sınıfı tanımlayabilirsiniz:  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.Class |  
@@ -29,9 +29,9 @@ public class Author : System.Attribute
 }  
 ```  
   
- Özniteliğin adı, sınıf adıdır `Author`. Öğesinden türetilen `System.Attribute`, bir özel öznitelik sınıfı olduğu için. Özel özniteliğin konumsal parametreler oluşturucunun parametrelerdir. Bu örnekte, `name` konumsal bir parametredir. Parametreleri, tüm genel okuma-yazma alanlar ve Özellikler adlandırılır. Bu durumda, `version` tek parametre olarak adlandırılır. Kullanımına dikkat edin `AttributeUsage` yapmak için özniteliği `Author` özniteliği yalnızca sınıf geçerli ve `struct` bildirimleri.  
+ Sınıf adı özniteliğin adıdır, `Author`. Öğesinden `System.Attribute`türetilir, bu nedenle özel bir öznitelik sınıfıdır. Oluşturucunun parametreleri özel özniteliğin konumsal parametreleridir. Bu örnekte, `name` bir Konumsal parametredir. Tüm genel okuma/yazma alanları veya özellikleri parametreler olarak adlandırılır. Bu durumda, `version` tek adlandırılmış parametredir. Özniteliği yalnızca sınıf ve `AttributeUsage` `struct` bildirimlerde geçerli `Author` hale getirmek için özniteliğinin kullanımını unutmayın.  
   
- Bu yeni bir öznitelik şu şekilde kullanabilirsiniz:  
+ Bu yeni özniteliği şu şekilde kullanabilirsiniz:  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
@@ -41,7 +41,7 @@ class SampleClass
 }  
 ```  
   
- `AttributeUsage` adlandırılmış bir parametreye sahip `AllowMultiple`, özel bir öznitelik tek kullanımlık veya multiuse yapabileceğiniz ile. Aşağıdaki kod örneğinde multiuse özniteliği oluşturulur.  
+ `AttributeUsage`, özel bir özniteliği tek `AllowMultiple`kullanımı veya çok kullanımı yapabileceğiniz adlandırılmış bir parametreye sahiptir. Aşağıdaki kod örneğinde, Multiuse özniteliği oluşturulur.  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.Class |  
@@ -51,7 +51,7 @@ class SampleClass
 public class Author : System.Attribute  
 ```  
   
- Aşağıdaki kod örneğinde aynı türde birden çok öznitelik bir sınıfa uygulanır.  
+ Aşağıdaki kod örneğinde, aynı türde birden çok öznitelik bir sınıfa uygulanır.  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
@@ -66,9 +66,9 @@ class SampleClass
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Reflection>
-- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
+- [C# Programlama Kılavuzu](../../index.md)
 - [Özel Öznitelikler Yazma](../../../../standard/attributes/writing-custom-attributes.md)
-- [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [Öznitelikler (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [Yansıma (C#) kullanarak özniteliklere erişme](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-- [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)
+- [Yansıma (C#)](../reflection.md)
+- [Öznitelikler (C#)](./index.md)
+- [Yansıma (C#) kullanarak özniteliklere erişme](./accessing-attributes-by-using-reflection.md)
+- [AttributeUsage (C#)](./attributeusage.md)

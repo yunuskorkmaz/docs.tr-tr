@@ -1,28 +1,28 @@
 ---
-title: 'Nasıl yapılır: (LINQ) birden fazla kaynaktan nesne koleksiyonları doldurma (C#)'
+title: 'Nasıl yapılır: Birden çok kaynaktan nesne koleksiyonları doldurma (LINQ) (C#)'
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c00257db7f3c06cab55cd48f7472f07dd7b2a664
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584398"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593058"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Nasıl yapılır: (LINQ) birden fazla kaynaktan nesne koleksiyonları doldurma (C#)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Nasıl yapılır: Birden çok kaynaktan nesne koleksiyonları doldurma (LINQ) (C#)
 
-Bu örnek, yeni türleri dizisine farklı kaynaklardan verileri birleştirme gösterilmektedir.
+Bu örnekte, farklı kaynaklardaki verilerin yeni türler dizisine nasıl birleştiriyapılacağı gösterilmektedir.
 
 > [!NOTE]
-> Bellek içi verileri veya veri, dosya sisteminde hala bir veritabanındaki verilerle katılın çalışmayın. Böyle etki alanları arası birleştirmeler farklı şekilde, birleştirme işlemleri veritabanı sorguları ve diğer kaynağı türleri için tanımlanabilir nedeniyle tanımlanmamış sonuçlara yol açabilir. Buna ek olarak, veritabanındaki veri miktarı yeterince büyük olduğunda bu tür bir işlem bellek yetersiz özel durum neden olabilecek bir riski yoktur. Bellek içi veriler bir veritabanından veri katılmak için ilk çağrı `ToList` veya `ToArray` veritabanında sorgu ve ardından birleştirme döndürülen koleksiyon üzerinde gerçekleştirin.
+> Dosya sistemindeki bellek içi verileri veya verileri, hala veritabanında bulunan verilerle birleştirmeyi denemeyin. Bu tür etki alanları arası birleştirmeler, birleştirme işlemlerinin veritabanı sorguları ve diğer kaynak türleri için tanımlanabileceğinden farklı yollarla tanımsız sonuçlar verebilir. Ayrıca, veritabanındaki veri miktarı yeterince büyükse, bu tür bir işlemin bellek dışı bir özel duruma neden olabileceği bir risk vardır. Verileri bir veritabanından bellek içi verilere katmak için, önce veritabanı sorgusuna çağrı `ToList` `ToArray` yapın ve ardından döndürülen koleksiyonda JOIN işlemini gerçekleştirin.
 
 ## <a name="to-create-the-data-file"></a>Veri dosyası oluşturmak için
 
-Bölümünde anlatıldığı gibi names.csv ve scores.csv dosyaları proje klasörünüze kopyalayın [nasıl yapılır: Dosyalardan içerik (LINQ) katılın (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+Names. csv ve puanlarını. csv dosyalarını proje klasörünüze kopyalayın, örneğin [: Benzer olmayan dosyalardaki (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)içerik birleştirin.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, adlandırılmış tür işlemi gösterilir `Student` birleştirilen verilerin elektronik tablo verilerini .csv biçiminde benzetimini dizeleri iki bellek içi koleksiyonlardan depolamak için. Dizenin ilk koleksiyon kimlikleri ve Öğrenci adlarını ve ikinci koleksiyon Öğrenci Kimliği (ilk sütunda) ve dört sınavı puanları temsil eder. Kimlik, yabancı anahtar olarak kullanılır.
+Aşağıdaki örnek,. csv biçiminde elektronik tablo verilerinin benzetimini `Student` yapan iki bellekteki iki bellek koleksiyonundan birleştirilmiş verileri depolamak için adlandırılmış bir türün nasıl kullanılacağını gösterir. İlk dize koleksiyonu, öğrenci adlarını ve kimliklerini temsil eder ve ikinci koleksiyon öğrenci KIMLIĞINI (ilk sütunda) ve dört sınav puanlarını temsil eder. KIMLIK yabancı anahtar olarak kullanılır.
 
 ```csharp
 using System;
@@ -107,9 +107,9 @@ class PopulateCollection
  */
 ```
 
-İçinde [seçin](../../../../csharp/language-reference/keywords/select-clause.md) yan tümcesi, bir nesne Başlatıcı her yeni örneği oluşturmak için kullanılan `Student` iki kaynaklardan gelen verileri kullanarak nesne.
+[Select](../../../language-reference/keywords/select-clause.md) yan tümcesinde bir nesne Başlatıcısı, iki kaynaktaki verileri kullanarak her yeni `Student` nesnenin örneğini oluşturmak için kullanılır.
 
-Bir sorgunun sonuçlarını depolamak yoksa, anonim türleri adlandırılmış türler daha kullanışlı olabilir. Sorgu sonuçları sorgunun yürütüldüğü yöntemi dışında geçirirseniz, adlandırılmış türler gereklidir. Aşağıdaki örnek önceki örnekle aynı görevi yürütür, ancak anonim türler yerine adlandırılmış türlerini kullanır:
+Bir sorgunun sonuçlarını depolamanız gerekmiyorsa, anonim türler adlandırılmış türlerden daha kullanışlı olabilir. Sorgu sonuçlarını sorgunun yürütüldüğü yöntemin dışına geçirirseniz adlandırılmış türler gereklidir. Aşağıdaki örnek, önceki örnekle aynı görevi yürütür, ancak adlandırılmış türler yerine anonim türler kullanır:
 
 ```csharp
 // Merge the data sources by using an anonymous type.
@@ -141,6 +141,6 @@ foreach (var student in queryNamesScores2)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [Nesne ve Koleksiyon Başlatıcıları](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [Anonim Tipler](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [LINQ ve dizeler (C#)](./linq-and-strings.md)
+- [Nesne ve Koleksiyon Başlatıcıları](../../classes-and-structs/object-and-collection-initializers.md)
+- [Anonim Tipler](../../classes-and-structs/anonymous-types.md)

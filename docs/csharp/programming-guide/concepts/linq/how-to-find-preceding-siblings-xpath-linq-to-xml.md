@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: Önceki eşdüzey (XPath-LINQ to XML) bulun (C#)'
+title: 'Nasıl yapılır: Önceki eşdüzey öğeleri bul (XPath-LINQ to XML)C#()'
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: 42663e1c90f7a7a829e858cfc8e20cdcb2ad2d36
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d47a2d72efd8891108999d5576da52eb2b6285b1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485458"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593427"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Nasıl yapılır: Önceki eşdüzey (XPath-LINQ to XML) bulun (C#)
-Bu konu XPath karşılaştırır `preceding-sibling` eksene [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] alt <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> ekseni.  
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Nasıl yapılır: Önceki eşdüzey öğeleri bul (XPath-LINQ to XML)C#()
+Bu konu, XPath `preceding-sibling` eksenini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] alt <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> ekseniyle karşılaştırır.  
   
- XPath ifadesidir:  
+ XPath ifadesi:  
   
  `preceding-sibling::*`  
   
- Unutmayın ikisi için de sonuçları <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> ve <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> belge sıradadır.  
+ Hem hem de <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> sonuçlarının belge sırasıyla olduğunu unutmayın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bulur `FullAddress` öğesini ve ardından önceki öğeleri kullanarak alır `preceding-sibling` ekseni.  
+ Aşağıdaki örnek `FullAddress` öğesini bulur ve sonra `preceding-sibling` ekseni kullanarak önceki öğeleri alır.  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  

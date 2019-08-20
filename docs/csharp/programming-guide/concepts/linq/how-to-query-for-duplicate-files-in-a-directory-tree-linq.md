@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: (LINQ) bir dizin ağacında yineleyen dosyalar için sorgu (C#)'
+title: 'Nasıl yapılır: Bir dizin ağacında (LINQ) (C#) yinelenen dosyalar için sorgu'
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: a4d7ece3c69db294437ac0ca41ed5b1a3307e524
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f9d045aa2e9cc11fdb4de202d03f76f85bac6500
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584345"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592868"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Nasıl yapılır: (LINQ) bir dizin ağacında yineleyen dosyalar için sorgu (C#)
-Bazen aynı ada sahip dosyaları birden fazla klasöründe bulunabilir. Örneğin, Visual Studio yükleme klasörü altında çeşitli klasörleri readme.htm dosyasına sahip. Bu örnekte, böyle yinelenen dosya adları belirtilen kök klasörü altında sorgulamak gösterilmektedir. İkinci örnek boyutu için dosyaları sorgulama işlemini gösterir ve ayrıca oluşturma kez Eşleştir.  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Nasıl yapılır: Bir dizin ağacında (LINQ) (C#) yinelenen dosyalar için sorgu
+Bazen aynı ada sahip dosyalar birden fazla klasörde bulunabilir. Örneğin, Visual Studio yükleme klasörü altında, birkaç klasör Readme. htm dosyasına sahiptir. Bu örnek, belirtilen bir kök klasör altında bu tür yinelenen dosya adlarının nasıl sorgulanalınacağını gösterir. İkinci örnek boyut ve oluşturma süreleri de eşleşen dosyaların nasıl sorgulanalınacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -167,12 +167,12 @@ class QueryDuplicateFileNames
 }  
 ```  
   
- İlk sorgu, bir eşleşme belirlemek için basit bir anahtarı kullanır; Bu, aynı ada sahip olan ancak içerikleri farklı olabilir. dosyaları bulur. İkinci sorgu, üç özelliklerini karşı eşleşecek şekilde bir bileşik anahtarı kullanır. <xref:System.IO.FileInfo> nesne. Bu sorgu ortamınızdakilerle benzer veya aynı içerik ve aynı ada sahip dosyaları bulmak çok daha yüksektir.  
+ İlk sorgu, bir eşleşmeyi tespit etmek için basit bir anahtar kullanır; Bu, aynı ada sahip ancak içeriği farklı olabilecek olan dosyaları bulur. İkinci sorgu, <xref:System.IO.FileInfo> nesnenin üç özellikleriyle eşleşmesi için bir bileşik anahtar kullanır. Bu sorgu, aynı ada ve benzer veya özdeş içeriğe sahip dosyaları bulmak çok daha olasıdır.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Oluşturma bir C# konsol uygulama projesi ile `using` System.Linq ve System.IO ad alanları için yönergeleri.  
+ System. C# LINQ ve System.IO ad alanları `using` için yönergeler içeren bir konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)

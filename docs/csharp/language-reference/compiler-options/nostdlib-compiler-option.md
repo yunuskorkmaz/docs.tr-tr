@@ -1,5 +1,5 @@
 ---
-title: -nostdlib (C# Derleyici Seçenekleri)
+title: -nostdlib (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /nostdlib
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: cf87d8d2ac4531142288a8637f7fbeb9139382ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 486539d7abdc3e65847a0bc0e228b1b20a2b2c37
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662653"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602693"
 ---
-# <a name="-nostdlib-c-compiler-options"></a>-nostdlib (C# Derleyici Seçenekleri)
+# <a name="-nostdlib-c-compiler-options"></a>-nostdlib (C# derleyici seçenekleri)
 
-**-nostdlib** tüm sistem ad alanını tanımlayan mscorlib.dll alma engeller.
+**-nostdlib** , tüm sistem ad alanını tanımlayan mscorlib. dll ' nin içe aktarımını engeller.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -27,27 +27,27 @@ ms.locfileid: "61662653"
 
 ## <a name="remarks"></a>Açıklamalar
 
-Tanımlayın veya kendi sistem ad alanı ve nesneler oluşturmak istiyorsanız bu seçeneği kullanın.
+Kendi sistem ad alanınızı ve nesnelerinizi tanımlamak veya oluşturmak istiyorsanız bu seçeneği kullanın.
 
-Siz belirtmezseniz **- nostdlib**, mscorlib.dll programınız alınır (belirtmekle aynı **- nostdlib-**). Belirtme **- nostdlib** belirtmekle aynı **- nostdlib +**.
+**-Nostdlib**belirtmezseniz, mscorlib. dll programınıza içeri aktarılır ( **-nostdlib-** belirtilerek aynı). **-Nostdlib** belirtildiğinde **-nostdlib +** belirtilerek aynıdır.
 
-### <a name="to-set-this-compiler-option-in-visual-studio"></a>Bu derleyici seçeneğini Visual Studio'da ayarlamak için
+### <a name="to-set-this-compiler-option-in-visual-studio"></a>Visual Studio 'da Bu derleyici seçeneğini ayarlamak için
 
 > [!NOTE]
-> Visual Studio 2015 (ve önceki sürümleri) aşağıdaki yönergeleri uygulamak yalnızca. **Mscorlib.dll dosyasına başvurma** yapı özelliği, Visual Studio 2017'de yok.
+> Aşağıdaki yönergeler yalnızca Visual Studio 2015 (ve önceki sürümler) için geçerlidir. Visual Studio 2017 ' de **mscorlib. dll** derlemesi oluşturma özelliği yok.
 
-1. Açık **özellikleri** proje sayfası.
+1. Projenin **Özellikler** sayfasını açın.
 
-2. Tıklayın **derleme** Özellikler sayfası.
+2. **Yapı** özellikleri sayfasına tıklayın.
 
-3. Tıklayın **Gelişmiş** düğmesi.
+3. **Gelişmiş** düğmesine tıklayın.
 
-4. Değiştirme **mscorlib.dll dosyasına başvurma** özelliği.
+4. **Mscorlib. dll ' nin başvurmayın** özelliğini değiştirin.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Bu derleyici seçeneğini program üzerinden ayarlamak için
 
-Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>.
+Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
+- [C# Derleyici Seçenekleri](./index.md)

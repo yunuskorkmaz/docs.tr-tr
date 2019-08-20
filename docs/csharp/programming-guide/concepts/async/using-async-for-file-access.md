@@ -2,12 +2,12 @@
 title: Dosya erişimi için Async Kullanma (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 6ca47157575ef4569a43f334dae4f99a1986a7ce
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: e6b0370049d9b9315de6a72d0e84c080aac12481
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330941"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595538"
 ---
 # <a name="using-async-for-file-access-c"></a>Dosya erişimi için Async Kullanma (C#)
 Dosyalara erişmek için zaman uyumsuz özelliği kullanabilirsiniz. Async özelliğini kullanarak, geri çağırmaları kullanmadan veya kodunuzu birden çok yöntemde veya Lambda ifadelerinde bölmeden zaman uyumsuz yöntemlere çağrı yapabilirsiniz. Zaman uyumlu kodu zaman uyumsuz yapmak için, zaman uyumlu bir yöntem yerine zaman uyumsuz bir yöntem çağırır ve koda birkaç anahtar sözcük eklemeniz yeterlidir.  
@@ -75,10 +75,10 @@ Task theTask = sourceStream.WriteAsync(encodedText, 0, encodedText.Length);
 await theTask;  
 ```  
   
- İlk ifade bir görev döndürür ve dosya işlemenin başlatılmasına neden olur. Await ile ikinci ifade, yönteminin hemen çıkmasına ve farklı bir görev döndürmesine neden olur. Dosya işleme daha sonra tamamlandığında, yürütme, await ' ı izleyen ifadeye geri döner. Daha fazla bilgi için bkz. [zaman uyumsuz programlarda denetim akışıC#()](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ İlk ifade bir görev döndürür ve dosya işlemenin başlatılmasına neden olur. Await ile ikinci ifade, yönteminin hemen çıkmasına ve farklı bir görev döndürmesine neden olur. Dosya işleme daha sonra tamamlandığında, yürütme, await ' ı izleyen ifadeye geri döner. Daha fazla bilgi için bkz. [zaman uyumsuz programlarda denetim akışıC#()](./control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Metin okuma  
- Aşağıdaki örnek bir dosyadaki metni okur. Metin, arabelleğe alınmış ve bu durumda bir <xref:System.Text.StringBuilder>öğesine yerleştirildi. Önceki örnekte aksine, await 'ın değerlendirmesi bir değer oluşturur. Yöntemibir<xref:System.Threading.Tasks.Task>`numRead` >döndürür`Int32` , bu nedenle await 'ın değerlendirmesi işlem tamamlandıktan sonra bir değer () oluşturur. \< <xref:System.IO.Stream.ReadAsync%2A> <xref:System.Int32> Daha fazla bilgi için bkz. [Async Return TypesC#()](../../../../csharp/programming-guide/concepts/async/async-return-types.md).  
+ Aşağıdaki örnek bir dosyadaki metni okur. Metin, arabelleğe alınmış ve bu durumda bir <xref:System.Text.StringBuilder>öğesine yerleştirildi. Önceki örnekte aksine, await 'ın değerlendirmesi bir değer oluşturur. Yöntemibir<xref:System.Threading.Tasks.Task>`numRead` >döndürür`Int32` , bu nedenle await 'ın değerlendirmesi işlem tamamlandıktan sonra bir değer () oluşturur. \< <xref:System.IO.Stream.ReadAsync%2A> <xref:System.Int32> Daha fazla bilgi için bkz. [Async Return TypesC#()](./async-return-types.md).  
   
 ```csharp  
 public async Task ProcessReadAsync()  
@@ -172,10 +172,10 @@ public async Task ProcessWriteMultAsync()
 }  
 ```  
   
- <xref:System.IO.Stream.WriteAsync%2A> <xref:System.Threading.CancellationToken>Ve yöntemlerinikullanırken,işlemorta-akışişleminiiptaletmekiçinkullanabileceğinizbirbelirtebilirsiniz.<xref:System.IO.Stream.ReadAsync%2A> Daha fazla bilgi için bkz. [yönetilen iş parçacıklarında](../../../../standard/threading/cancellation-in-managed-threads.md) [zaman uyumsuzC#uygulamanızı () ve iptali hassas ayarlama](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) .  
+ <xref:System.IO.Stream.WriteAsync%2A> <xref:System.Threading.CancellationToken>Ve yöntemlerinikullanırken,işlemorta-akışişleminiiptaletmekiçinkullanabileceğinizbirbelirtebilirsiniz.<xref:System.IO.Stream.ReadAsync%2A> Daha fazla bilgi için bkz. [yönetilen iş parçacıklarında](../../../../standard/threading/cancellation-in-managed-threads.md) [zaman uyumsuzC#uygulamanızı () ve iptali hassas ayarlama](./fine-tuning-your-async-application.md) .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Async ve await (C#) ile zaman uyumsuz programlama](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Zaman uyumsuz dönüş türleriC#()](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [Zaman uyumsuz programlarda denetim akışı (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [Async ve await (C#) ile zaman uyumsuz programlama](./index.md)
+- [Zaman uyumsuz dönüş türleriC#()](./async-return-types.md)
+- [Zaman uyumsuz programlarda denetim akışı (C#)](./control-flow-in-async-programs.md)

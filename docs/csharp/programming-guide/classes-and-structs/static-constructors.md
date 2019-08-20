@@ -6,15 +6,15 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: f8924f5a1e93a616b114506f383242fd2fde615c
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 6d1a39008ebb965649104c2e74241780731911bb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433568"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596036"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Statik Oluşturucular (C# Programlama Kılavuzu)
-Statik bir Oluşturucu, herhangi bir [statik](../../../csharp/language-reference/keywords/static.md) veriyi başlatmak veya yalnızca bir kez gerçekleştirilmesi gereken belirli bir eylemi gerçekleştirmek için kullanılır. İlk örnek oluşturulmadan veya herhangi bir statik üyeye başvurulmadan önce bu otomatik olarak çağrılır.  
+Statik bir Oluşturucu, herhangi bir [statik](../../language-reference/keywords/static.md) veriyi başlatmak veya yalnızca bir kez gerçekleştirilmesi gereken belirli bir eylemi gerçekleştirmek için kullanılır. İlk örnek oluşturulmadan veya herhangi bir statik üyeye başvurulmadan önce bu otomatik olarak çağrılır.  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
  
@@ -31,9 +31,9 @@ Statik oluşturucular aşağıdaki özelliklere sahiptir:
 
 - Programda statik Oluşturucu yürütüldüğünde kullanıcının denetimi yoktur.
   
-- Statik bir Oluşturucu, ilk örnek oluşturulmadan veya herhangi bir statik üyeye başvurulmadan önce [sınıfı](../../../csharp/language-reference/keywords/class.md) başlatmak için otomatik olarak çağrılır. Bir statik oluşturucu, örnek oluşturucudan önce çalışacaktır. Bir olaya atanan statik bir yöntem çağrıldığında ya da bir temsilci atandığında, bir türün statik oluşturucusunun çağrıldığını unutmayın. Statik alan değişkeni başlatıcıları statik oluşturucunun sınıfında mevcutsa, statik oluşturucunun yürütülmesinden hemen önce sınıf bildiriminde göründükleri metin sırasına göre yürütülür.
+- Statik bir Oluşturucu, ilk örnek oluşturulmadan veya herhangi bir statik üyeye başvurulmadan önce [sınıfı](../../language-reference/keywords/class.md) başlatmak için otomatik olarak çağrılır. Bir statik oluşturucu, örnek oluşturucudan önce çalışacaktır. Bir olaya atanan statik bir yöntem çağrıldığında ya da bir temsilci atandığında, bir türün statik oluşturucusunun çağrıldığını unutmayın. Statik alan değişkeni başlatıcıları statik oluşturucunun sınıfında mevcutsa, statik oluşturucunun yürütülmesinden hemen önce sınıf bildiriminde göründükleri metin sırasına göre yürütülür.
 
-- Statik alanları başlatmak için statik bir Oluşturucu sağlamazsanız, [varsayılan değerler tablosunda](../../../csharp/language-reference/keywords/default-values-table.md)listelendiği gibi tüm statik alanlar varsayılan değerlerine başlatılır. 
+- Statik alanları başlatmak için statik bir Oluşturucu sağlamazsanız, [varsayılan değerler tablosunda](../../language-reference/keywords/default-values-table.md)listelendiği gibi tüm statik alanlar varsayılan değerlerine başlatılır. 
   
 - Statik bir Oluşturucu bir özel durum oluşturursa, çalışma zamanı ikinci bir kez çağrılmaz ve programınızın çalıştığı uygulama etki alanının ömrü boyunca tür başlatılmamış olarak kalır. En yaygın olarak, <xref:System.TypeInitializationException> statik bir Oluşturucu bir tür örneklememediğinde veya statik oluşturucu içinde oluşan işlenmeyen bir özel durum için bir özel durum oluşturulur. Kaynak kodunda açıkça tanımlanmayan örtük statik oluşturucular için, sorun giderme ara dil (IL) kodunu denetlemesini gerektirebilir.
 
@@ -61,10 +61,10 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)
-- [Statik Sınıflar ve Statik Sınıf Üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
-- [Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Sınıflar ve Yapılar](./index.md)
+- [Oluşturucular](./constructors.md)
+- [Statik Sınıflar ve Statik Sınıf Üyeleri](./static-classes-and-static-class-members.md)
+- [Sonlandırıcılar](./destructors.md)
 - [Oluşturucu tasarım yönergeleri](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
 - [Güvenlik Uyarısı-CA2121: Statik oluşturucular özel olmalıdır](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)

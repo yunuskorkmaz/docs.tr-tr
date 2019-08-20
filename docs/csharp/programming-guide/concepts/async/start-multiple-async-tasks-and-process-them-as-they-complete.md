@@ -1,93 +1,93 @@
 ---
-title: Zaman uyumsuz görevleri tamamlandıkça işleme
+title: Zaman uyumsuz görevleri tamamlarlar işleme
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 562da04b48af6f6cbaaca8ea8eccf062b470696e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 35b4e42d7da5b8bc9069083ffc47d990bcb637a8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600276"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595587"
 ---
-# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Birden çok zaman uyumsuz görev başlatma ve bunlar (C#) tamamlandıkça işleme
+# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Birden çok zaman uyumsuz görev başlatın ve bunları tamamlarsa (C#) işleyin
 
-Kullanarak <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, birden çok görev aynı anda başlatmak ve bunların yerine gibi bunlar başlatıldığında sırayla işlenecekleri birer birer işlem.
+Kullanarak <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, aynı anda birden çok görev başlatabilir ve bunları, başlatıldıkları sırada işlemek yerine, bir kez işlem tamamlanır.
 
-Aşağıdaki örnek, bir görev koleksiyonu oluşturmak için bir sorgu kullanır. Her görev, belirtilen bir Web sitesinin içeriklerini karşıdan yükler. Her yinelemede while döngüsü, bekletilen çağrısı `WhenAny` görev, kendi indirmesi biten koleksiyonundaki görevleri döndürür. Bu görev koleksiyondan kaldırılır ve işlenir. Döngü koleksiyonda artık başka görev kalmayana kadar yinelenir.
+Aşağıdaki örnek, bir görev koleksiyonu oluşturmak için bir sorgu kullanır. Her görev belirtilen bir Web sitesinin içeriğini indirir. Bir while döngüsünün her yinelemesinde, `WhenAny` geri beklenmiş bir çağrı, önce indirmeyi izleyen görevler koleksiyonundaki görevi döndürür. Bu görev koleksiyondan kaldırılır ve işlenir. Döngü, koleksiyon daha fazla görev içerene kadar yinelenir.
 
 > [!NOTE]
-> Yeni bilgisayarınızda yüklü veya örnekleri çalıştırmak için (2012 veya sonrası) Visual Studio ve .NET Framework 4.5 yüklü olmalıdır.
+> Örnekleri çalıştırmak için, bilgisayarınızda Visual Studio (2012 veya üzeri) ve .NET Framework 4,5 ya da daha yeni bir sürümü yüklü olmalıdır.
 
-## <a name="download-an-example-solution"></a>Bir örnek çözümü indirin
+## <a name="download-an-example-solution"></a>Örnek çözüm indirin
 
-Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uyumsuz örneği: Uygulamanıza ince](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve sonra aşağıdaki adımları izleyin.
+Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten indirebilirsiniz: Uygulamanızı](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) hassas ayarlamalar yapın ve ardından aşağıdaki adımları izleyin.
 
 > [!TIP]
-> Projeyi indirmek istemiyorsanız, bunun yerine bu konunun sonunda MainWindow.xaml.cs dosyasını gözden geçirebilirsiniz.
+> Projeyi indirmek istemiyorsanız, bunun yerine bu konunun sonundaki MainWindow.xaml.cs dosyasını gözden geçirebilirsiniz.
 
-1. Yüklediğiniz .zip dosyasından dosyaları ayıklayın ve sonra Visual Studio'yu başlatın.
+1. İndirdiğiniz dosyaları. zip dosyasından ayıklayın ve ardından Visual Studio 'Yu başlatın.
 
-2. Menü çubuğunda, **dosya** > **açık** > **proje/çözüm**.
+2. Menü çubuğunda **Dosya** > **Aç** > **Proje/çözüm**' ı seçin.
 
-3. İçinde **Proje Aç** iletişim kutusunda, indirdiğiniz örnek kodu barındıran klasörü açın ve ardından AsyncFineTuningCS için çözüm (.sln) dosyasını açın.
+3. **Proje Aç** iletişim kutusunda, indirdiğiniz örnek kodu tutan klasörü açın ve ardından AsyncFineTuningCS için çözüm (. sln) dosyasını açın.
 
-4. İçinde **Çözüm Gezgini**, kısayol menüsünü açın **ProcessTasksAsTheyFinish** proje ve ardından **başlangıç projesi olarak ayarla**.
+4. **Çözüm Gezgini**' de, **Processtasksastheyıfinish** projesinin kısayol menüsünü açın ve ardından **Başlangıç projesi olarak ayarla**' yı seçin.
 
-5. Seçin **F5** programı çalıştırmak için anahtar (veya basın **Ctrl**+**F5** anahtarları, hata ayıklama olmadan programı çalıştırmak için).
+5. Programı çalıştırmak için **F5** tuşunu seçin (veya, programı hata ayıklamadan çalıştırmak için **CTRL**+**F5** tuşlarına basın).
 
-6. Proje, indirilen uzunlukların her zaman aynı sırada görüntülenmediğini doğrulamak için birkaç kez çalıştırın.
+6. İndirilen uzunluklarının her zaman aynı sırada görünmediğini doğrulamak için projeyi birkaç kez çalıştırın.
 
 ## <a name="create-the-program-yourself"></a>Programı kendiniz oluşturun
 
-Bu örnek içinde geliştirilen koda eklenir [sonra bir tamamlandı (C#) kalan zaman uyumsuz görevleri iptal](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md), ve aynı kullanıcı arabirimini kullanır.
+Bu örnek, [bir tane tamamlandıktan sonra kalan zaman uyumsuz görevleri iptal etmeC#](./cancel-remaining-async-tasks-after-one-is-complete.md)bölümünde geliştirilen koda ekler () ve aynı kullanıcı arabirimini kullanır.
 
-Kendiniz adım adım örnek oluşturmak için aşağıdaki yönergeleri izleyin [örneği indirme](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example) bölümünde, ancak ayarlanmış **CancelAfterOneTask** başlangıç projesi olarak. Bu konudaki değişiklikleri ekleyin `AccessTheWebAsync` projedeki yöntemi. Değişiklikler, yıldız işareti ile işaretlenir.
+Örneği kendiniz oluşturmak için, örnek ' i [karşıdan yükleme](./cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example) bölümündeki yönergeleri izleyin, ancak başlangıç projesi olarak, bir **erteleme görevi** ayarlayın. Bu konudaki `AccessTheWebAsync` değişiklikleri bu projedeki yöntemine ekleyin. Değişiklikler yıldız işaretiyle işaretlenir.
 
-**CancelAfterOneTask** proje zaten bir sorgu içerir, çalıştırıldığında bir görev koleksiyonu oluşturur. Her çağrı `ProcessURLAsync` döndürür aşağıdaki kodda bir <xref:System.Threading.Tasks.Task%601>burada `TResult` bir tamsayıdır:
+Bu **görev** projesi, yürütüldüğünde bir görev koleksiyonu oluşturduğunda zaten bir sorgu içeriyor. Aşağıdaki kodda öğesine `ProcessURLAsync` yapılan her çağrı, `TResult` bir tam <xref:System.Threading.Tasks.Task%601>sayı olan bir döndürür:
 
 ```csharp
 IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessURL(url, client, ct);
 ```
 
-Proje MainWindow.xaml.cs dosyasında aşağıdaki değişiklikleri `AccessTheWebAsync` yöntemi.
+Projenin MainWindow.xaml.cs dosyasında, `AccessTheWebAsync` yönteminde aşağıdaki değişiklikleri yapın.
 
-- Uygulayarak sorguyu yürütün <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> yerine <xref:System.Linq.Enumerable.ToArray%2A>.
+- Yerine uygulayarak <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> sorguyu yürütün. <xref:System.Linq.Enumerable.ToArray%2A>
 
     ```csharp
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
     ```
 
-- Ekleme bir `while` döngü koleksiyondaki her görev için aşağıdaki adımları gerçekleştirir:
+- Koleksiyondaki her `while` görev için aşağıdaki adımları gerçekleştiren bir döngü ekleyin:
 
-    1. Bir çağrı bekler `WhenAny` karşıdan yüklemesini tamamlamak için koleksiyondaki ilk görevi tanımlamak için.
+    1. Bu, indirme işleminin sona `WhenAny` ermesi için koleksiyondaki ilk görevi tanımlamak üzere öğesine bir çağrıyı bekler.
 
         ```csharp
         Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);
         ```
 
-    2. Bu görev koleksiyondan kaldırır.
+    2. Bu görevi koleksiyondan kaldırır.
 
         ```csharp
         downloadTasks.Remove(firstFinishedTask);
         ```
 
-    3. Bekler `firstFinishedTask`, bir çağrı tarafından döndürülen `ProcessURLAsync`. `firstFinishedTask` Değişken bir <xref:System.Threading.Tasks.Task%601> burada `TReturn` bir tamsayıdır. Görev zaten tamamlandıysa, ancak karşıdan yüklenen Web sitesi uzunluğunu aşağıdaki örnekte gösterildiği gibi almak için bekler.
+    3. `firstFinishedTask` Bir`ProcessURLAsync`çağrısıyla döndürülen await. Değişkeni bir <xref:System.Threading.Tasks.Task%601> WHERE`TReturn`tamsayıdır. `firstFinishedTask` Görev zaten tamamlanmış, ancak aşağıdaki örnekte gösterildiği gibi, indirilen Web sitesinin uzunluğunu almak için bu işlemi beklediniz.
 
         ```csharp
         int length = await firstFinishedTask;
         resultsTextBox.Text += $"\r\nLength of the download:  {length}";
         ```
 
-İndirilen uzunlukların her zaman aynı sırada görüntülenmediğini doğrulamak için birkaç kez programı'nı çalıştırın.
+İndirilen uzunluklarının her zaman aynı sırada görünmediğini doğrulamak için programı birkaç kez çalıştırın.
 
 > [!CAUTION]
-> Kullanabileceğiniz `WhenAny` az sayıda görev içeren sorunlar çözmek için örnekte açıklandığı bir döngüde. Ancak, diğer yaklaşımlar çok sayıda işlemek için görevler varsa daha verimlidir. Daha fazla bilgi ve örnekler için bkz. [görevleri tamamlandıkça işleme](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete/).
+> Az sayıda görevle `WhenAny` ilgili sorunları gidermek için örnekte açıklandığı gibi bir döngüde kullanabilirsiniz. Ancak, işlemek için çok sayıda göreviniz varsa diğer yaklaşımlar daha etkilidir. Daha fazla bilgi ve örnek için bkz. [görevleri tamamladıklarında işleme](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete/).
 
-## <a name="complete-example"></a>Tam örnek
+## <a name="complete-example"></a>Örnek Tamam
 
-Aşağıdaki kod örneği için MainWindow.xaml.cs dosyasının tam metindir. Yıldız işaretleri, bu örnek için eklenen öğeleri işaretler. Ayrıca, bir başvuru için eklemeniz gereken Not <xref:System.Net.Http>.
+Aşağıdaki kod, örnek için MainWindow.xaml.cs dosyasının tüm metinkodudur. Yıldız işaretleri bu örnek için eklenen öğeleri işaretler. Ayrıca, için <xref:System.Net.Http>bir başvuru eklemeniz gerektiğini unutmayın.
 
-Projeden indirebileceğiniz [zaman uyumsuz örneği: Uygulamanızı ince ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+Projeyi [zaman uyumsuz örnekten indirebilirsiniz: Uygulamanızı](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)hassas bir şekilde ayarlama.
 
 ```csharp
 using System;
@@ -228,6 +228,6 @@ namespace ProcessTasksAsTheyFinish
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [(C#) Async uygulamanızda hassas ayar yapma](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Zaman uyumsuz örneği: Uygulamanızda hassas ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Zaman uyumsuz uygulamanızda ince ayar yapma (C#)](./fine-tuning-your-async-application.md)
+- [Async ve await (C#) ile zaman uyumsuz programlama](./index.md)
+- [Zaman uyumsuz örnek: Uygulamanızda ince ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

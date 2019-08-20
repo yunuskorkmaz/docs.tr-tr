@@ -9,14 +9,14 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: b2e91b868c35773033418c796b7c43b08e87a28b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 822ca8feafe48402f8217c10ef37fcdb1576c27a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675877"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587755"
 ---
-# <a name="remarks-c-programming-guide"></a>\<REMARKS > (C# Programlama Kılavuzu)
+# <a name="remarks-c-programming-guide"></a>\<açıklamalar > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -25,17 +25,17 @@ ms.locfileid: "61675877"
   
 ## <a name="parameters"></a>Parametreler  
  `Description`  
- Üye açıklaması.  
+ Üyenin açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- \<Remarks > etiketi, bir tür hakkında bilgi eklemek için kullanılır, ek bilgiler ile belirtilen [ \<Özet >](../../../csharp/programming-guide/xmldoc/summary.md). Bu bilgiler Nesne Tarayıcısı penceresinde görüntülenir.  
+ Açıklamalar > etiketi, [ \<Özet >](./summary.md)ile belirtilen bilgileri kullanarak bir tür hakkında bilgi eklemek için kullanılır. \< Bu bilgiler Nesne Tarayıcısı penceresinde görüntülenir.  
   
- Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.  
+ Belge açıklamalarını bir dosyaya işlemek için [/doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideDocComments#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#9)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Belge Açıklamaları için Önerilen Etiketler](./recommended-tags-for-documentation-comments.md)

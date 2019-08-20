@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: Belirtilen öznitelik veya ada sahip dosyaları sorgulama (C#)'
+title: 'Nasıl yapılır: Belirtilen bir özniteliğe veya ada (C#) sahip dosyaları sorgula'
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: 94642ff500cb065ffcb28d6099c3f9f50d43d124
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c1ecaad7e4fb4538331ba8f8076c9795acc52877
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584327"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592904"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Nasıl yapılır: Belirtilen öznitelik veya ada sahip dosyaları sorgulama (C#)
-Bu örnek nasıl (örneğin, ".txt") belirtilen dosya adı uzantısına sahip tüm dosyaları bulmak belirtilen dizin ağacında gösterir. Ayrıca oluşturma saatini temel alan ağacında ya da yeni veya eski dosyayı iade işlemini de gösterir.  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Nasıl yapılır: Belirtilen bir özniteliğe veya ada (C#) sahip dosyaları sorgula
+Bu örnek, belirtilen bir dizin ağacında belirtilen dosya adı uzantısına (örneğin ". txt") sahip tüm dosyaların nasıl bulunacağını gösterir. Ayrıca, oluşturma zamanına göre ağaçta en yeni veya en eski dosyanın nasıl dönegösterdiğini gösterir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -64,9 +64,9 @@ class FindFileByExtension
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
-  Oluşturma bir C# konsol uygulama projesi ile `using` System.Linq ve System.IO ad alanları için yönergeleri.
+  System. C# LINQ ve System.IO ad alanları `using` için yönergeler içeren bir konsol uygulaması projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Objects'in (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)

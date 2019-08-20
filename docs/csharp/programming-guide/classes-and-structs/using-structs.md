@@ -5,29 +5,29 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 5577a5042ba77e133e3c6ee7760f7c3a4cce0537
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 4cfb3b184491e42194204899e26d7f1966a68427
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796590"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595994"
 ---
 # <a name="using-structs-c-programming-guide"></a>Yapıları Kullanma (C# Programlama Kılavuzu)
-`struct` Türü `Point`, ve`Rectangle`gibi hafif nesneleri temsil etmek için uygundur. `Color` Bir noktayı [Otomatik uygulanmış özelliklerle](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)bir [sınıf](../../../csharp/language-reference/keywords/class.md) olarak temsil etmek uygun olsa da, bazı senaryolarda bir [Yapı](../../../csharp/language-reference/keywords/struct.md) daha verimli olabilir. Örneğin, 1000 `Point` nesnelerinin bir dizisini bildirirseniz, her bir nesneye başvurmak için ek bellek ayırabilirsiniz; bu durumda, bir yapı daha pahalı olacaktır. .NET Framework adlı <xref:System.Drawing.Point>bir nesne içerdiğinden, bu örnekteki yapı bunun yerine "CoOrds" olarak adlandırılmıştır.  
+`struct` Türü `Point`, ve`Rectangle`gibi hafif nesneleri temsil etmek için uygundur. `Color` Bir noktayı [Otomatik uygulanmış özelliklerle](./auto-implemented-properties.md)bir [sınıf](../../language-reference/keywords/class.md) olarak temsil etmek uygun olsa da, bazı senaryolarda bir [Yapı](../../language-reference/keywords/struct.md) daha verimli olabilir. Örneğin, 1000 `Point` nesnelerinin bir dizisini bildirirseniz, her bir nesneye başvurmak için ek bellek ayırabilirsiniz; bu durumda, bir yapı daha pahalı olacaktır. .NET Framework adlı <xref:System.Drawing.Point>bir nesne içerdiğinden, bu örnekteki yapı bunun yerine "CoOrds" olarak adlandırılmıştır.  
   
  [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
   
- Bir struct için varsayılan (parametresiz) bir Oluşturucu tanımlamak hatadır. Bir yapı gövdesinde örnek alanı başlatmak da bir hatadır. Yalnızca parametreli bir oluşturucuyu, örtük, parametresiz oluşturucuyu, [nesne başlatıcısını](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)kullanarak veya yapı oluşturulduktan sonra üyelere ayrı ayrı erişerek, dışarıdan erişilebilen yapı üyelerini başlatabilirsiniz. Herhangi bir özel veya başka şekilde erişilemeyen üye, oluşturucuların yalnızca kullanımını gerektirir.
+ Bir struct için varsayılan (parametresiz) bir Oluşturucu tanımlamak hatadır. Bir yapı gövdesinde örnek alanı başlatmak da bir hatadır. Yalnızca parametreli bir oluşturucuyu, örtük, parametresiz oluşturucuyu, [nesne başlatıcısını](./object-and-collection-initializers.md)kullanarak veya yapı oluşturulduktan sonra üyelere ayrı ayrı erişerek, dışarıdan erişilebilen yapı üyelerini başlatabilirsiniz. Herhangi bir özel veya başka şekilde erişilemeyen üye, oluşturucuların yalnızca kullanımını gerektirir.
   
- [New](../../../csharp/language-reference/operators/new-operator.md) işlecini kullanarak bir struct nesnesi oluşturduğunuzda, oluşturulur ve uygun Oluşturucu [oluşturucunun imzasına](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax)göre çağırılır. Sınıfların aksine, yapılar `new` işleci kullanılmadan oluşturulabilir. Böyle bir durumda, bir Oluşturucu çağrısı yoktur ve bu da ayırmayı daha verimli hale getirir. Ancak alanlar atanmamış olarak kalır ve tüm alanlar başlatılana kadar nesne kullanılamaz. Bu, özellikler aracılığıyla değerleri almak veya ayarlamak için bir değer içerir.
+ [New](../../language-reference/operators/new-operator.md) işlecini kullanarak bir struct nesnesi oluşturduğunuzda, oluşturulur ve uygun Oluşturucu [oluşturucunun imzasına](./constructors.md#constructor-syntax)göre çağırılır. Sınıfların aksine, yapılar `new` işleci kullanılmadan oluşturulabilir. Böyle bir durumda, bir Oluşturucu çağrısı yoktur ve bu da ayırmayı daha verimli hale getirir. Ancak alanlar atanmamış olarak kalır ve tüm alanlar başlatılana kadar nesne kullanılamaz. Bu, özellikler aracılığıyla değerleri almak veya ayarlamak için bir değer içerir.
 
- Parametresiz oluşturucuyu kullanarak bir struct nesnesi örneği oluşturursanız, tüm Üyeler [varsayılan değerlerine](../../../csharp/language-reference/keywords/default-values-table.md)göre atanır.
+ Parametresiz oluşturucuyu kullanarak bir struct nesnesi örneği oluşturursanız, tüm Üyeler [varsayılan değerlerine](../../language-reference/keywords/default-values-table.md)göre atanır.
   
  Bir yapı için parametrelere sahip bir Oluşturucu yazarken, tüm üyeleri açık olarak başlatmalısınız; Aksi takdirde bir veya daha fazla üye atanmamış olarak kalır ve yapı birimi CS0171, derleyici hatası üretirken kullanılamaz.  
   
  Sınıflar için olduğu gibi yapılar için devralma yoktur. Yapı, başka bir struct veya sınıftan devralınabilir ve bir sınıfın temeli olamaz. Ancak yapılar, temel sınıftan <xref:System.Object>devralınır. Bir struct, arabirimler uygulayabilir ve tam olarak sınıfların yaptığı şekilde yapılır.  
   
- Anahtar sözcüğünü `struct`kullanarak bir sınıfı bildiremezsiniz. İçinde C#, sınıflar ve yapılar anlamsal olarak farklıdır. Yapı bir değer türüdür, ancak bir sınıf bir başvuru türüdür. Daha fazla bilgi için bkz. [değer türleri](../../../csharp/language-reference/keywords/value-types.md).  
+ Anahtar sözcüğünü `struct`kullanarak bir sınıfı bildiremezsiniz. İçinde C#, sınıflar ve yapılar anlamsal olarak farklıdır. Yapı bir değer türüdür, ancak bir sınıf bir başvuru türüdür. Daha fazla bilgi için bkz. [değer türleri](../../language-reference/keywords/value-types.md).  
   
  Başvuru türü semantiklerine ihtiyacınız yoksa, bunun yerine bir yapı olarak bildirirseniz küçük bir sınıf sistem tarafından daha verimli bir şekilde işlenebilir.  
   
@@ -53,6 +53,6 @@ ms.locfileid: "68796590"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Sınıflar ve Yapılar](./index.md)
+- [Yapılar](./structs.md)

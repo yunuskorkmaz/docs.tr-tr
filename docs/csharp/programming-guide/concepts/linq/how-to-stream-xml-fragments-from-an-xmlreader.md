@@ -1,29 +1,29 @@
 ---
-title: "Nasıl yapılır: Stream xmlreader'dan XML parçalarının (C#)"
+title: 'Nasıl yapılır: XmlReader (C#) öğesinden XML parçaları akışı'
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: 6937a7160c83def3238c8d2fe3e2b83c996396fd
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c27c2165af95b8b781564e14efc0668f596e3057
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484911"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592401"
 ---
-# <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Nasıl yapılır: Stream xmlreader'dan XML parçalarının (C#)
-Büyük XML dosyalarını işlemek varsa, tüm XML ağacının belleğe yüklemek için uygun olmayabilir. Bu konuda gösterir kullanarak parçalarının akışını yapma hakkında bir <xref:System.Xml.XmlReader>.  
+# <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Nasıl yapılır: XmlReader (C#) öğesinden XML parçaları akışı
+Büyük XML dosyalarını işlemek zorunda olduğunuzda, tüm XML ağacının belleğe yüklenmesi mümkün olmayabilir. Bu konuda, kullanarak <xref:System.Xml.XmlReader>parçaların nasıl akışının yapılacağı gösterilmektedir.  
   
- Kullanmak için en etkili yollarından biri bir <xref:System.Xml.XmlReader> okunacak <xref:System.Xml.Linq.XElement> nesneleri, kendi özel eksen yöntem yazmaktır. Eksen yöntemi genellikle bir koleksiyonu gibi döndürür <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement>, bu konudaki örnekte gösterildiği gibi. Özel eksen yöntemi çağırarak XML parçası oluşturduktan sonra <xref:System.Xml.Linq.XNode.ReadFrom%2A> yöntemini kullanarak koleksiyon döndürmek `yield return`. Bu özel eksen yönteminize ertelenmiş yürütme semantiği sağlar.  
+ Nesneleri okumak <xref:System.Xml.XmlReader> <xref:System.Xml.Linq.XElement> için kullanmanın en etkili yöntemlerinden biri kendi özel eksen yönteminizi yazmaktır. Bir Axis yöntemi <xref:System.Xml.Linq.XElement>, bu konudaki örnekte gösterildiği gibi <xref:System.Collections.Generic.IEnumerable%601> genellikle gibi bir koleksiyon döndürür. Özel eksen yönteminde, <xref:System.Xml.Linq.XNode.ReadFrom%2A> yöntemini çağırarak XML parçasını oluşturduktan sonra, kullanarak `yield return`koleksiyonu döndürün. Bu, özel eksen yönteminiz için ertelenmiş yürütme semantiğini sağlar.  
   
- XML ağacından oluşturduğunuzda bir <xref:System.Xml.XmlReader> nesnesi <xref:System.Xml.XmlReader> bir öğede konumlandırılmalıdır. <xref:System.Xml.Linq.XNode.ReadFrom%2A> Öğenin kapatma etiketi okudu kadar yöntemi döndürmez.  
+ <xref:System.Xml.XmlReader> Nesnesinden bir XML ağacı oluşturduğunuzda, öğesinin bir öğe üzerinde konumlandırılmış olmasıgerekir.<xref:System.Xml.XmlReader> <xref:System.Xml.Linq.XNode.ReadFrom%2A> Yöntemi, öğenin kapanış etiketini okuuncaya kadar döndürmez.  
   
- Kısmi bir ağaç oluşturmak istiyorsanız, oluşturabileceğiniz bir <xref:System.Xml.XmlReader>, dönüştürmek istediğiniz düğüme okuyucu getirin bir <xref:System.Xml.Linq.XElement> ağaç ve oluşturup <xref:System.Xml.Linq.XElement> nesne.  
+ Kısmi bir ağaç oluşturmak isterseniz, bir <xref:System.Xml.XmlReader> <xref:System.Xml.Linq.XElement> ağaca dönüştürmek istediğiniz düğümde okuyucuyu konumlandırabilirsiniz ve sonra <xref:System.Xml.Linq.XElement> nesneyi oluşturabilirsiniz. Bu, bir ağacı oluşturabilir.  
   
- Konu [nasıl yapılır: Stream üst bilgilere erişimle XML parçalarının (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) bilgileri ve daha karmaşık bir belge akışı konusunda bir örnek içerir.  
+ Bu konuda [nasıl yapılır: Üst bilgi bilgilerine (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) erişimi olan akış XML parçaları, daha karmaşık bir belgenin nasıl akışla ilgili bilgi ve bir örnek içerir.  
   
- Konu [nasıl yapılır: Akış dönüştürme, büyük XML belgelerinin gerçekleştirin (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) küçük bellek ayak izini sürdürürken son derece büyük XML belgelerini dönüştürmek için LINQ to XML kullanarak bir örnek içerir.  
+ Bu konuda [nasıl yapılır: Büyük XML belgelerinin (C#)](./how-to-perform-streaming-transform-of-large-xml-documents.md) akış dönüşümünü gerçekleştirme, küçük bir bellek parmak düzeyini koruyarak son derece büyük XML belgelerini dönüştürmek için LINQ to XML kullanma örneği içerir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek bir özel eksen yöntemi oluşturur. Kullanarak sorgulayabilirsiniz bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu. Özel eksen yöntemi `StreamRootChildDoc`, özellikle yinelenen olan bir belgeyi okumak için tasarlanmış bir yöntem `Child` öğesi.  
+ Bu örnek bir özel eksen yöntemi oluşturur. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Sorgu kullanarak sorgulama yapabilirsiniz. Özel eksen yöntemi `StreamRootChildDoc`, bir yinelenen `Child` öğesi olan bir belgeyi okumak için özel olarak tasarlanan bir yöntemdir.  
   
 ```csharp  
 static IEnumerable<XElement> StreamRootChildDoc(StringReader stringReader)  
@@ -80,5 +80,5 @@ bbb
 ccc  
 ```  
   
- Bu örnekte, kaynak belge çok küçüktür. Ancak, milyonlarca olsa bile `Child` öğeleri, bu örnekte küçük bellek Ayak izi yine de sahip.  
+ Bu örnekte, kaynak belge çok küçüktür. Ancak milyonlarca `Child` öğe olsa bile, bu örnekte küçük bir bellek ayak izine sahip olmaya devam edersiniz.  
   

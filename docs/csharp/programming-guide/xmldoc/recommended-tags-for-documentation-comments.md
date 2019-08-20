@@ -1,42 +1,42 @@
 ---
-title: Belge açıklamaları için - önerilen etiketler C# Programlama Kılavuzu
+title: Belge açıklamaları için önerilen Etiketler- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: 07594d70b92e2075c3d5aba605eab23d766faed6
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 4506402c85096ae0ae11b28ad03646c7fa215e5a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052743"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587819"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Belge Açıklamaları için Önerilen Etiketler (C# Programlama Kılavuzu)
-C# Derleyici, kodunuzda belge açıklamaları işler ve bunları adı belirttiğiniz bir dosyasında XML olarak biçimlendirir **/doc** komut satırı seçeneği. Son belgeleri derleyici tarafından üretilen dosyaya dayalı oluşturmak için özel bir araç oluşturabilir, veya gibi bir araç kullanın [DocFX](https://dotnet.github.io/docfx/) veya [Sandcastle](https://github.com/EWSoftware/SHFB).  
+C# Derleyici kodunuzda belge açıklamalarını işler ve adı **/doc** komut satırı SEÇENEĞINDE belirttiğiniz bir dosyada xml olarak biçimlendirir. Derleyici tarafından oluşturulan dosyayı temel alan son belgeleri oluşturmak için özel bir araç oluşturabilir veya [Docfx](https://dotnet.github.io/docfx/) veya [sandrole](https://github.com/EWSoftware/SHFB)gibi bir araç kullanabilirsiniz.  
   
- Etiketler, kod yapıları türleri gibi işlenir ve tür üyelerini.  
+ Etiketler, türler ve tür üyeleri gibi kod yapıları üzerinde işlenir.  
   
 > [!NOTE]
->  Belge açıklamaları için bir ad alanı uygulanamaz.  
+>  Belge açıklamaları bir ad alanına uygulanamaz.  
   
- Derleyici, geçerli bir XML değil herhangi bir etiket işleyecektir. Aşağıdaki kullanıcı belgeleri, genel olarak kullanılan işlevler sunar.  
+ Derleyici geçerli XML olan herhangi bir etiketi işleyecek. Aşağıdaki Etiketler kullanıcı belgelerinde genel olarak kullanılan işlevleri sağlar.  
   
 ## <a name="tags"></a>Etiketler  
   
 ||||  
 |---|---|---|  
-|[\<c >](../../../csharp/programming-guide/xmldoc/code-inline.md)|[\<para >](../../../csharp/programming-guide/xmldoc/para.md)|[\<bkz: >](../../../csharp/programming-guide/xmldoc/see.md)*|  
-|[\<kod >](../../../csharp/programming-guide/xmldoc/code.md)|[\<param >](../../../csharp/programming-guide/xmldoc/param.md)*|[\<SeeAlso >](../../../csharp/programming-guide/xmldoc/seealso.md)*|  
-|[\<Örnek >](../../../csharp/programming-guide/xmldoc/example.md)|[\<paramref >](../../../csharp/programming-guide/xmldoc/paramref.md)|[\<summary>](../../../csharp/programming-guide/xmldoc/summary.md)|  
-|[\<Özel Durum >](../../../csharp/programming-guide/xmldoc/exception.md)*|[\<izni >](../../../csharp/programming-guide/xmldoc/permission.md)*|[\<typeparam >](../../../csharp/programming-guide/xmldoc/typeparam.md)*|  
-|[\<Ekle >](../../../csharp/programming-guide/xmldoc/include.md)*|[\<REMARKS >](../../../csharp/programming-guide/xmldoc/remarks.md)|[\<typeparamref >](../../../csharp/programming-guide/xmldoc/typeparamref.md)|  
-|[\<listesi >](../../../csharp/programming-guide/xmldoc/list.md)|[\<returns>](../../../csharp/programming-guide/xmldoc/returns.md)|[\<value>](../../../csharp/programming-guide/xmldoc/value.md)|  
+|[\<c >](./code-inline.md)|[\<Para >](./para.md)|[\<bkz. >](./see.md)*|  
+|[\<kod >](./code.md)|[\<param >](./param.md)*|[\<SeeAlso >](./seealso.md)*|  
+|[\<örnek >](./example.md)|[\<paramref >](./paramref.md)|[\<summary>](./summary.md)|  
+|[\<özel durum >](./exception.md)*|[\<izin >](./permission.md)*|[\<typeparam >](./typeparam.md)*|  
+|[\<> dahil et](./include.md)*|[\<açıklamalar >](./remarks.md)|[\<typeparamref >](./typeparamref.md)|  
+|[\<Liste >](./list.md)|[\<returns>](./returns.md)|[\<value>](./value.md)|  
   
- (* derleyici sözdizimini doğrular gösterir.)  
+ (* derleyicinin söz dizimini doğruladığını gösterir.)  
   
- Açılı belgeleri açıklama metninde görünmesini istiyorsanız ait HTML kodlamasını kullanın `<` ve `>` olduğu `&lt;` ve `&gt;` sırasıyla. Bu kodlama, aşağıdaki örnekte gösterilmiştir:
+ Bir belge açıklamasının metninde Açılı ayraçların görünmesini istiyorsanız `<` , ve `&gt;` sırasıyla ve `>` olan `&lt;` HTML kodlamasını kullanın. Bu kodlama aşağıdaki örnekte gösterilmiştir:
   
 ```csharp  
 /// <summary>
@@ -46,6 +46,6 @@ C# Derleyici, kodunuzda belge açıklamaları işler ve bunları adı belirttiğ
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [/ doc (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/index.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [/Doc (C# derleyici seçenekleri)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [XML Belge Açıklamaları](./index.md)

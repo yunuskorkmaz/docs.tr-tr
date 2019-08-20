@@ -2,34 +2,34 @@
 title: Yansıma (C#) kullanarak özniteliklere erişme
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: f7c7b89be13022471f4e17bcb6ed9a90bcbc1c54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 990b6487e50bfb2d123c3871e5f85da063711d9e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668646"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595498"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>Yansıma (C#) kullanarak özniteliklere erişme
-Özel öznitelikler tanımlamak ve bunları kaynak kodunuzu getirin olgu üzerinde çalışan ve bu bilgileri alınırken bir şekilde olmadan küçük değer olacaktır. Yansıma kullanarak özel öznitelik tanımlandı bilgi alabilirsiniz. Anahtar yöntemi `GetCustomAttributes`, kaynak kod özniteliklerini çalışma zamanı eşdeğerleri olan nesneler dizisi döndürür. Bu yöntem, birden fazla aşırı yüklenmiş sürümleri vardır. Daha fazla bilgi için bkz. <xref:System.Attribute>.  
+Özel öznitelikleri tanımlayabilir ve bunları kaynak kodunuza yerleştirebilirsiniz. Bu bilgiler, bu bilgileri alma ve üzerinde işlem yapmaya gerek kalmadan çok az değer elde edebilir. Yansıma kullanarak özel özniteliklerle tanımlanan bilgileri alabilirsiniz. Anahtar yöntemi, kaynak `GetCustomAttributes`kodu özniteliklerinin çalışma zamanı eşdeğerleri olan bir nesne dizisi döndüren ' dir. Bu yöntemin birkaç aşırı yüklü sürümü vardır. Daha fazla bilgi için bkz. <xref:System.Attribute>.  
   
- Bir öznitelik belirtimi gibi:  
+ Şöyle bir öznitelik belirtimi:  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
 class SampleClass  
 ```  
   
- Bunun için kavramsal olarak eşdeğerdir:  
+ kavramsal olarak eşdeğerdir:  
   
 ```csharp  
 Author anonymousAuthorObject = new Author("P. Ackerman");  
 anonymousAuthorObject.version = 1.1;  
 ```  
   
- Ancak, kod kadar yürütülmez `SampleClass` öznitelikleri için sorgulanır. Çağırma `GetCustomAttributes` üzerinde `SampleClass` neden olan bir `Author` nesne oluşturulur ve yukarıdaki gibi başlatıldı. Sınıfın diğer öznitelikleri varsa, diğer öznitelik nesneleri benzer şekilde oluşturulur. `GetCustomAttributes` ardından döndürür `Author` ve diğer öznitelik nesneleri bir dizideki nesne. Bu dizi yineleme hangi özniteliklerin her dizi öğesi türüne bağlı olarak uygulanan belirlemek ve öznitelik nesnelerden bilgiler ayıklayın.  
+ Ancak, kod öznitelikleri için sorgulanana kadar `SampleClass` yürütülmez. `Author` ' `GetCustomAttributes` Inçağrılması,birnesneninyukarıyaoluşturulmasınıvebaşlatılmasınısağlar.`SampleClass` Sınıfın başka öznitelikleri varsa, diğer öznitelik nesneleri benzer şekilde oluşturulur. `GetCustomAttributes`sonra `Author` nesneyi ve dizideki diğer öznitelik nesnelerini döndürür. Daha sonra bu dizinin üzerinde yineleyebilir, her bir dizi öğesinin türüne göre hangi özniteliklerin uygulandığını belirleyebilir ve öznitelik nesnelerinden bilgi ayıklayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Tam bir örnek aşağıda verilmiştir. Özel bir öznitelik tanımlı, birden fazla varlıklarına uygulanan ve yansıma alınır.  
+ Aşağıda bir örnek verilmiştir. Özel bir öznitelik tanımlanır, birkaç varlığa uygulanır ve yansıma aracılığıyla alınır.  
   
 ```csharp  
 // Multiuse attribute.  
@@ -117,8 +117,8 @@ class TestAuthorAttribute
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
+- [C# Programlama Kılavuzu](../../index.md)
 - [Özniteliklerde Depolanan Bilgileri Alma](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
-- [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [Öznitelikler (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [Özel öznitelikler (C#) oluşturma](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [Yansıma (C#)](../reflection.md)
+- [Öznitelikler (C#)](./index.md)
+- [Özel öznitelikler (C#) oluşturma](./creating-custom-attributes.md)

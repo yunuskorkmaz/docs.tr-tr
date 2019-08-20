@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: ebaa5c2f3a2e1770a50a401fb6771d8c5ad3ba63
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972224"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611479"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML Tarayıcı Uygulamalarına Genel Bakış
 <a name="introduction"></a>
@@ -52,7 +52,7 @@ ms.locfileid: "68972224"
 |Uygulama bildirimi (. manifest)|Bu, uygulamayla ilişkili meta verileri içerir ve bir. manifest uzantısına sahiptir.|  
 |Dağıtım bildirimi (. XBAP)|Bu dosya, ClickOnce 'ın uygulamayı dağıtmak için kullandığı ve. xbap uzantısına sahip olan bilgileri içerir.|  
   
- XBAP 'yi bir Web sunucusuna (örneğin [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] , veya sonraki sürümlere) dağıtırsınız. .NET Framework Web sunucusuna yüklemek zorunda değilsiniz, ancak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] çok amaçlı Internet posta uzantıları (MIME) türlerini ve dosya adı uzantılarını kaydetmeniz gerekir. Daha fazla bilgi için bkz. [WPF uygulamalarını dağıtmak IÇIN ııs 5,0 ve ııs 6,0 yapılandırma](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ XBAP 'yi bir Web sunucusuna (örneğin, Microsoft Internet Information Services (IIS) 5,0 veya sonraki sürümlere dağıtabilirsiniz. .NET Framework Web sunucusuna yüklemek zorunda değilsiniz, ancak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] çok amaçlı Internet posta uzantıları (MIME) türlerini ve dosya adı uzantılarını kaydetmeniz gerekir. Daha fazla bilgi için bkz. [WPF uygulamalarını dağıtmak IÇIN ııs 5,0 ve ııs 6,0 yapılandırma](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
   
  XBAP 'yi dağıtıma hazırlamak için. exe ve ilişkili bildirimleri Web sunucusuna kopyalayın. . Xbap uzantısına sahip olan dosya olan dağıtım bildirimini açmak için köprü içeren bir HTML sayfası oluşturun. Kullanıcı. xbap dosyasının bağlantısına tıkladığında, ClickOnce otomatik olarak uygulamayı indirme ve başlatma mekanizması işler. Aşağıdaki örnek kod, bir XBAP 'ye işaret eden bir köprü içeren bir HTML sayfasını gösterir.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68972224"
   
 7. **Güvenlik**altındaki **Ayarlar** listesinde, **etkin Içeriğin bilgisayarımdaki dosyalarda çalıştırılmasına izin ver** onay kutusunu işaretleyin.  
   
-8.           **Tamam**'ı tıklatın.  
+8. **Tamam**'ı tıklatın.  
   
      Internet Explorer 'ı yeniden başlattıktan sonra değişiklikler geçerli olur.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: -Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenler kullanan C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Office programlama- C# programlama kılavuzunda adlandırılmış ve Isteğe bağlı bağımsız değişkenleri kullanma'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: a8b09061157c45b865613c31ae1425e5820687f4
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 708ed7582c353160ce15c5b5429951e12a0a3fed
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170392"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596662"
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Nasıl yapılır: Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma (C# Programlama Kılavuzu)
-Adlandırılmış bağımsız değişkenler ve sunulan isteğe bağlı bağımsız değişkenlere C# 4, kolaylık, esneklik ve içinde okunabilirliği geliştirmek C# programlama. Ayrıca, bu özellikler, Microsoft Office Otomasyon API'leri gibi COM arabirimlerine erişim büyük ölçüde kolaylaştırır.  
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Nasıl yapılır: Office Programlamada adlandırılmış ve Isteğe bağlı bağımsız değişkenleri kullanmaC# (Programlama Kılavuzu)
+Adlandırılmış bağımsız değişkenler ve isteğe bağlı bağımsız değişkenler C# , 4 ' te tanıtılan ve C# programlamada kolaylık, esneklik ve okunabilirliği geliştirir. Ayrıca, bu özellikler Microsoft Office Automation API 'Leri gibi COM arabirimlerine erişimi büyük ölçüde kolaylaştırır.  
   
- Aşağıdaki örnekte, yöntem [ConvertToTable](<xref:Microsoft.Office.Interop.Word.Range.ConvertToTable%2A>) on altı gibi sütun ve biçimlendirme, satır sayısını sınırlayan bir tablonun özellikleri temsil eden parametreleri, yazı tiplerini ve renkleri vardır. Çoğu zaman hepsi için belirli değerler belirtmek istemiyorsanız çünkü tüm on altı, isteğe bağlı parametrelerdir. Ancak, adlandırılmış ve isteğe bağlı bağımsız değişkenler bir değer veya bir yer tutucu değerini her parametre için sağlanan gerekir. Adlandırılmış ve isteğe bağlı bağımsız değişkenleri ile projeniz için gerekli olan parametreleri için değerler belirtin.  
+ Aşağıdaki örnekte, [ConvertToTable](<xref:Microsoft.Office.Interop.Word.Range.ConvertToTable%2A>) yönteminin sütun ve satır sayısı, biçimlendirme, kenarlık, yazı tipi ve renkler gibi bir tablonun özelliklerini temsil eden on altı parametresi vardır. Tüm on altı parametresi isteğe bağlıdır, çünkü çoğu zaman belirli değerleri belirtmek istemezsiniz. Ancak, adlandırılmış ve isteğe bağlı bağımsız değişkenler olmadan her bir parametre için bir değer veya yer tutucu değeri sağlanmalıdır. Adlandırılmış ve isteğe bağlı bağımsız değişkenlerle, yalnızca projeniz için gerekli olan parametrelerin değerlerini belirtirsiniz.  
   
- Bu yordamları tamamlamak için Microsoft Office Word bilgisayarınızda yüklü olması gerekir.  
+ Bu yordamları gerçekleştirmek için bilgisayarınızda Microsoft Office Word yüklü olmalıdır.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -27,77 +27,77 @@ Adlandırılmış bağımsız değişkenler ve sunulan isteğe bağlı bağıms�
   
 1. Visual Studio’yu çalıştırın.  
   
-2. Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**.  
+2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.  
   
-3. İçinde **şablon kategorileri** bölmesini genişletin **Visual C#** ve ardından **Windows**.  
+3. **Şablonlar kategorileri** bölmesinde, **görsel C#** ' i genişletin ve ardından **Windows**' a tıklayın.  
   
-4. Üst konum **şablonları** emin olmak için bölmesinde **.NET Framework 4** görünür **hedef Framework'ü** kutusu.  
+4. **.NET Framework 4** ' ün **hedef çerçeve** kutusunda göründüğünden emin olmak için **Şablonlar** bölmesinin üst kısmına bakın.  
   
-5. İçinde **şablonları** bölmesinde tıklayın **konsol uygulaması**.  
+5. **Şablonlar** bölmesinde **konsol uygulaması**' na tıklayın.  
   
-6. Projeniz için bir ad yazın **adı** alan.  
+6. **Ad** alanına projeniz için bir ad yazın.  
   
 7. **Tamam**'ı tıklatın.  
   
-     Yeni Proje görünür **Çözüm Gezgini**.  
+     Yeni proje **Çözüm Gezgini**görüntülenir.  
   
 ### <a name="to-add-a-reference"></a>Başvuru eklemek için  
   
-1. İçinde **Çözüm Gezgini**, projenizin adına sağ tıklayın ve ardından **Başvuru Ekle**. **Başvuru Ekle** iletişim kutusu görüntülenir.  
+1. **Çözüm Gezgini**, projenizin adına sağ tıklayın ve ardından **Başvuru Ekle**' ye tıklayın. **Başvuru Ekle** iletişim kutusu görüntülenir.  
   
-2. Üzerinde **.NET** sayfasında **Microsoft.Office.Interop.Word** içinde **bileşen adı** listesi.  
+2. **.Net** sayfasında, **bileşen adı** listesinde **Microsoft. Office. Interop. Word** öğesini seçin.  
   
 3. **Tamam**'ı tıklatın.  
   
-### <a name="to-add-necessary-using-directives"></a>Eklemek için gerekli yönergeleri kullanma  
+### <a name="to-add-necessary-using-directives"></a>Gerekli yönergeleri kullanarak ekleme  
   
-1. İçinde **Çözüm Gezgini**, sağ **Program.cs** dosya ve ardından **kodu görüntüle**.  
+1. **Çözüm Gezgini**, **program.cs** dosyasına sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.  
   
-2. Aşağıdaki `using` kod dosyasının en üstüne yönergeleri.  
+2. Aşağıdaki `using` yönergeleri kod dosyasının en üstüne ekleyin.  
   
      [!code-csharp[csProgGuideNamedAndOptional#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#4)]  
   
-### <a name="to-display-text-in-a-word-document"></a>Word belgesinde metni görüntülemek için  
+### <a name="to-display-text-in-a-word-document"></a>Bir Word belgesinde metin göstermek için  
   
-1. İçinde `Program` sınıfı Program.cs içinde bir Word uygulaması ve bir Word belgesi oluşturmak için aşağıdaki yöntemi ekleyin. [Ekle](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) yöntemi dört isteğe bağlı parametreye sahiptir. Bu örnek, varsayılan değerleri kullanır. Bu nedenle, arama deyiminde hiçbir bağımsız değişken gereklidir.  
+1. Program.cs içindeki `Program` sınıfında, bir Word uygulaması ve Word belgesi oluşturmak için aşağıdaki yöntemi ekleyin. [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) yönteminde dört isteğe bağlı parametre vardır. Bu örnek, varsayılan değerlerini kullanır. Bu nedenle, çağırma ifadesinde herhangi bir bağımsız değişken gerekmez.  
   
      [!code-csharp[csProgGuideNamedAndOptional#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#6)]  
   
-2. Aşağıdaki kod, belgede metin görüntüleneceği yeri ve görüntülenecek metni tanımlamak için yöntem sonuna ekleyin.  
+2. Belgedeki metnin nerede görüntüleneceğini ve hangi metnin görüntüleneceğini tanımlamak için yönteminin sonuna aşağıdaki kodu ekleyin.  
   
      [!code-csharp[csProgGuideNamedAndOptional#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#7)]  
   
 ### <a name="to-run-the-application"></a>Uygulamayı çalıştırmak için  
   
-1. Aşağıdaki deyim, ana ekleyin.  
+1. Aşağıdaki ifadeyi Main öğesine ekleyin.  
   
      [!code-csharp[csProgGuideNamedAndOptional#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#8)]  
   
-2. Projeyi çalıştırmak için CTRL + F5 tuşlarına basın. Belirtilen metni içeren bir Word belgesi görünür.  
+2. Projeyi çalıştırmak için CTRL + F5 tuşlarına basın. Belirtilen metni içeren bir Word belgesi görüntülenir.  
   
-### <a name="to-change-the-text-to-a-table"></a>Metin bir tabloya dönüştürmek için  
+### <a name="to-change-the-text-to-a-table"></a>Metni bir tabloya dönüştürmek için  
   
-1. Kullanım `ConvertToTable` bir tabloda metin kapsamak için yöntemi. Yöntemi, on altı isteğe bağlı parametre yok. IntelliSense aşağıdaki çizimde gösterildiği gibi isteğe bağlı parametreler köşeli parantez içine alır.  
+1. Metni bir tabloya kapsamak için yönteminikullanın.`ConvertToTable` Yönteminde on altı isteğe bağlı parametre vardır. IntelliSense, aşağıdaki çizimde gösterildiği gibi isteğe bağlı parametreleri köşeli ayraç içine alır.  
   
-     ![ConvertToTable yönteminin listesi](./media/how-to-use-named-and-optional-arguments-in-office-programming/convert-table-parameters.png)  
+     ![ConvertToTable yöntemi için parametrelerin listesi](./media/how-to-use-named-and-optional-arguments-in-office-programming/convert-table-parameters.png)  
   
-     Adlandırılmış ve isteğe bağlı bağımsız değişkenler yalnızca değiştirmek istediğiniz parametreleri için değerleri belirtmenize olanak verir. Yönteminin sonuna aşağıdaki kodu ekleyin `DisplayInWord` basit bir tablo oluşturun. Metinde virgüller de dize bağımsız değişkeni belirtir `range` tablo hücrelerini ayırın.  
+     Adlandırılmış ve isteğe bağlı bağımsız değişkenler yalnızca değiştirmek istediğiniz parametrelerin değerlerini belirtmenizi sağlar. Basit bir tablo oluşturmak için yönteminin `DisplayInWord` sonuna aşağıdaki kodu ekleyin. Bağımsız değişkeni, metin dizesindeki virgüllerin tablonun hücrelerini ayrı olarak `range` belirtir.  
   
      [!code-csharp[csProgGuideNamedAndOptional#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#9)]  
   
-     C#, çağrısı'nın önceki sürümlerinde `ConvertToTable` aşağıdaki kodda gösterildiği gibi her parametre için bir başvuru bağımsız değişkeni gerektirir.  
+     ' Nin C#önceki sürümlerinde, çağrısı `ConvertToTable` aşağıdaki kodda gösterildiği gibi her parametre için bir başvuru bağımsız değişkeni gerektirir.  
   
      [!code-csharp[csProgGuideNamedAndOptional#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#14)]  
   
 2. Projeyi çalıştırmak için CTRL + F5 tuşlarına basın.  
   
-### <a name="to-experiment-with-other-parameters"></a>Diğer parametreler ile denemek için  
+### <a name="to-experiment-with-other-parameters"></a>Diğer parametrelerle denemek için  
   
-1. Bir sütun ve üç satır sahip olacak şekilde değiştirmek için son satırında değiştirin `DisplayInWord` CTRL + F5'e yazın ve aşağıdaki deyimi.  
+1. Tabloyu tek bir sütuna ve üç satıra sahip olacak şekilde değiştirmek için, içindeki `DisplayInWord` son satırı aşağıdaki deyimle değiştirin ve ardından CTRL + F5 yazın.  
   
      [!code-csharp[csProgGuideNamedAndOptional#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#10)]  
   
-2. Tablo için önceden tanımlanmış bir biçimi belirtmek için son satırında değiştirin `DisplayInWord` CTRL + F5'e yazın ve aşağıdaki deyimi. Biçim herhangi biri olabilir [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>) sabitler.  
+2. Tablo için önceden tanımlanmış bir biçim belirtmek üzere, içindeki `DisplayInWord` son satırı aşağıdaki deyimle değiştirin ve ardından CTRL + F5 yazın. Biçim, [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>) sabitlerinden herhangi biri olabilir.  
   
      [!code-csharp[csProgGuideNamedAndOptional#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#11)]  
   
@@ -108,4 +108,4 @@ Adlandırılmış bağımsız değişkenler ve sunulan isteğe bağlı bağıms�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+- [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](./named-and-optional-arguments.md)

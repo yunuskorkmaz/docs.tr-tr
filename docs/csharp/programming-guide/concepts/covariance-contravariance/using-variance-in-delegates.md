@@ -1,21 +1,21 @@
 ---
-title: Temsilcilerde varyans (C#) kullanma
+title: Temsilcilerde (C#) varyans kullanma
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 44a6153a9a1c0aa0aebb18710ea9e770fd4e57fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00e11d4ce755c8c75b73023fec14d95ebc96b4fe
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668971"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595268"
 ---
-# <a name="using-variance-in-delegates-c"></a>Temsilcilerde varyans (C#) kullanma
-Bir temsilci için bir yöntem atadığınızda *Kovaryans* ve *kontravaryans* yöntem imzasını bir temsilci türüyle eşleştirmek için esneklik sağlar. Kovaryans Temsilcide tanımlanan daha fazla türetilmiş dönüş türüne sahip bir yöntem sağlar. Kontravaryans, temsilci türü olanlardan daha az türetilmiş parametre türleri olan bir yönteme izin verir.  
+# <a name="using-variance-in-delegates-c"></a>Temsilcilerde (C#) varyans kullanma
+Bir temsilciye bir yöntem atadığınızda, *Kovaryans* ve *değişken varyans* , bir temsilci türünü Yöntem imzasıyla eşleştirmek için esneklik sağlar. Kovaryans, bir metodun, temsilde tanımlı olandan daha fazla türetilmiş dönüş türüne sahip olmasını sağlar. Değişken Varyans, temsilci türünden daha az türetilmiş parametre türlerine sahip bir yönteme izin verir.  
   
-## <a name="example-1-covariance"></a>Örnek 1: Kovaryans  
+## <a name="example-1-covariance"></a>Örnek 1: Ko  
   
 ### <a name="description"></a>Açıklama  
- Bu örnekte, temsilci imzasında dönüş türünden türetilmiş dönüş türlerine sahip yöntemler ile temsilciler'ın nasıl kullanılabileceğini gösterir. Tarafından döndürülen veri türünü `DogsHandler` türünde `Dogs`, öğesinden türetildiğini `Mammals` Temsilcide tanımlanan tür.  
+ Bu örnek, temsilci imzasında dönüş türünden türetilmiş dönüş türleri olan yöntemlerle temsilcilerin nasıl kullanılabileceğini gösterir. Tarafından `DogsHandler` döndürülen veri `Dogs` türü`Mammals` , temsilde tanımlanan türden türetilen türüdür.  
   
 ### <a name="code"></a>Kod  
   
@@ -51,7 +51,7 @@ class Program
 ## <a name="example-2-contravariance"></a>Örnek 2: Kontravaryans  
   
 ### <a name="description"></a>Açıklama  
- Bu örnek, bir türün temsilci imzası parametre türü temel tür parametreleri olan yöntemler ile temsilciler nasıl kullanılabileceğini gösterir. Kontravaryans ile ayrı işleyicileri yerine bir olay işleyicisi kullanabilirsiniz. Kabul eden bir olay işleyicisi oluşturma gibi bir `EventArgs` giriş parametresi ve kullanılmakta olan bir `Button.MouseClick` gönderen olay bir `MouseEventArgs` türü bir parametre olarak ve ile bir `TextBox.KeyDown` gönderen olay bir `KeyEventArgs` parametresi.  
+ Bu örnek, temsilci imza parametre türünün temel türü olan bir türün parametrelerine sahip yöntemlerle nasıl kullanılabileceğinizi gösterir. Değişken varyans ile ayrı işleyiciler yerine bir olay işleyicisi kullanabilirsiniz. Örneğin `EventArgs` , bir giriş parametresini kabul eden bir olay işleyicisi oluşturabilir ve bu `MouseEventArgs` `Button.MouseClick` parametreyi parametre `TextBox.KeyDown` olarak bir türü `KeyEventArgs` ve parametre gönderen bir olayla birlikte kullanabilirsiniz.  
   
 ### <a name="code"></a>Kod  
   
@@ -79,5 +79,5 @@ public Form1()
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temsilcilerde varyans (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [İşlev ve eylem genel temsilcileri (C#) için varyans kullanma](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Temsilcilerde varyans (C#)](./variance-in-delegates.md)
+- [Func ve eylem genel temsilcileri için varyans kullanma (C#)](./using-variance-for-func-and-action-generic-delegates.md)

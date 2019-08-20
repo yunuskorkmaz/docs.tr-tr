@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Ad alanları (C#) Ile bir belge oluşturma (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 9b9e81a131d4e17ce2d87dd3f511ed66e370d884
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 180dc5138f8f21b3e52e4a8b3cee4748cafdd0f5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710002"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593887"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Nasıl yapılır: Ad alanları (C#) Ile bir belge oluşturma (LINQ to XML)
 Bu konu başlığı altında, ad alanları ile belgelerin nasıl oluşturulacağı gösterilmektedir.  
@@ -123,7 +123,7 @@ Console.WriteLine(root);
   
  Bu yaklaşımın performans etkileri vardır. Genişletilmiş bir adı [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]içeren bir dizeyi her geçirdiğinizde, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] adı ayrıştırmalıdır, atomlanmış ad alanını bulun ve atomlanmış adı bulun. Bu işlem CPU süresini alır. Performans önemliyse, açıkça bir <xref:System.Xml.Linq.XNamespace> nesne bildirmek ve kullanmak isteyebilirsiniz.  
   
- Performans önemli bir sorun ise, daha fazla bilgi için bkz. [XName nesnelerinin ön atomitei (C#LINQ to XML) ()](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md)  
+ Performans önemli bir sorun ise, daha fazla bilgi için bkz. [XName nesnelerinin ön atomitei (C#LINQ to XML) ()](./pre-atomization-of-xname-objects-linq-to-xml.md)  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  

@@ -1,36 +1,36 @@
 ---
-title: Programlama Kavramları (C#)
+title: Programlama kavramları (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: bfe4046d6d54693867ebe5d8529a4744b9e69c3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7668ca6bba0b938e569886cfa9f1985eaa48c5d0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702470"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594988"
 ---
-# <a name="programming-concepts-c"></a>Programlama Kavramları (C#)
-Bu bölümde, C# dilinde programlama kavramları açıklanmıştır.  
+# <a name="programming-concepts-c"></a>Programlama kavramları (C#)
+Bu bölümde, C# dildeki programlama kavramları açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)|Derlemeler oluşturma ve kullanma işlemini açıklamaktadır.|  
-|[Zaman uyumsuz programlama ile async ve await (C#)](../../../csharp/programming-guide/concepts/async/index.md)|Zaman uyumsuz çözümleri kullanarak yazma açıklar [zaman uyumsuz](../../../csharp/language-reference/keywords/async.md) ve [await](../../../csharp/language-reference/keywords/await.md) C# anahtar sözcükleri. Bir kılavuz içerir.|  
-|[Öznitelikler (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)|Öğe türleri, alanları, yöntemleri ve özellikleri gibi öznitelikleri kullanarak programlama hakkında ek bilgi sağlamak nasıl ele alınmaktadır.|  
-|[Arayan bilgileri (C#)](../../../csharp/programming-guide/concepts/caller-information.md)|Bir yöntemin arayanı hakkında bilgi edinmek nasıl açıklar. Bu bilgiler, dosya yolu ve kaynak kodunun satır numarasını ve arayanın üye adı içerir.|  
-|[Koleksiyonlar (C#)](../../../csharp/programming-guide/concepts/collections.md)|.NET Framework tarafından sağlanan koleksiyon türlerinin bazılarını açıklar. Basit koleksiyonların ve anahtar/değer çiftleri nasıl yapılacağı açıklanır.|  
-|[Kovaryans ve kontravaryans (C#)](../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)|Arabirimlerde ve temsilcilerde genel tür parametrelerinin örtük dönüştürme etkinleştirme işlemi gösterilmektedir.|  
-|[İfade ağaçları (C#)](../../../csharp/programming-guide/concepts/expression-trees/index.md)|Yürütülebilir kodun dinamik değişikliğini etkinleştirmek için ifade ağaçları nasıl kullanabileceğinizi açıklar.|  
-|[Yineleyiciler (C#)](../../../csharp/programming-guide/concepts/iterators.md)|Koleksiyonların üzerinden geçip tek öğeleri bir defada döndürmek için kullanılan yineleyicileri açıklar.|  
-|[Dil ile tümleşik sorgu (LINQ) (C#)](../../../csharp/programming-guide/concepts/linq/index.md)|C# dili sözdizimi ve ilişkisel veritabanlarını, XML belgeleri, veri kümelerini ve bellek içi koleksiyonları sorgulamak için modeli güçlü sorgu yeteneklerini açıklar.|  
-|[Nesne odaklı programlama (C#)](../../../csharp/programming-guide/concepts/object-oriented-programming.md)|Kapsülleme, devralma ve çok biçimlilik dahil olmak üzere ortak nesne yönelimli kavramları açıklar.|  
-|[Yansıma (C#)](../../../csharp/programming-guide/concepts/reflection.md)|Yansıma dinamik olarak bir türün bir örneğini oluşturma, bağlama türü var olan bir nesneye veya türü mevcut bir nesneden elde ve kendi yöntemlerini çağırmak veya kendi alanlarına ve özelliklerine erişmek için nasıl kullanılacağını açıklar.|  
-|[Seri hale getirme (C#)](../../../csharp/programming-guide/concepts/serialization/index.md)|İkili, XML, temel kavramları açıklar ve SOAP serileştirme.|  
+|[.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)|Derlemelerin nasıl oluşturulduğunu ve kullanıldığını açıklar.|  
+|[Async ve await (C#) ile zaman uyumsuz programlama](./async/index.md)|İçinde C# [Async](../../language-reference/keywords/async.md) ve [await](../../language-reference/keywords/await.md) anahtar sözcüklerini kullanarak zaman uyumsuz çözümlerin nasıl yazılacağını açıklar. Bir anlatım içerir.|  
+|[Öznitelikler (C#)](./attributes/index.md)|Öznitelikleri kullanarak türler, alanlar, Yöntemler ve özellikler gibi programlama öğeleriyle ilgili ek bilgiler sağlamayı açıklar.|  
+|[Arayan bilgileri (C#)](./caller-information.md)|Bir yöntemin çağıranı hakkında nasıl bilgi elde edileceğini açıklar. Bu bilgiler, kaynak kodun dosya yolunu ve satır numarasını ve arayanın üye adını içerir.|  
+|[Koleksiyonlar (C#)](./collections.md)|.NET Framework tarafından sunulan bazı koleksiyon türlerini açıklar. Basit koleksiyonların ve anahtar/değer çiftlerinin koleksiyonlarının nasıl kullanılacağını gösterir.|  
+|[Kovaryans ve değişken varyans (C#)](./covariance-contravariance/index.md)|Arabirimlerde ve temsilcilerde genel tür parametrelerinin örtük dönüştürmesinin nasıl etkinleştirileceğini gösterir.|  
+|[İfade ağaçları (C#)](./expression-trees/index.md)|Yürütülebilir kodun dinamik olarak değiştirilmesini etkinleştirmek için nasıl ifade ağaçları kullanabileceğinizi açıklar.|  
+|[Yineleyiciler (C#)](./iterators.md)|Koleksiyonlar arasında ilerlemek ve tek seferde bir öğe döndürmek için kullanılan yineleyiciler açıklanmaktadır.|  
+|[Dil ile tümleşik sorgu (LINQ) (C#)](./linq/index.md)|Dil sözdiziminde C#güçlü sorgu özelliklerini ve ilişkisel VERITABANLARıNı, XML belgelerini, veri kümelerini ve bellek içi koleksiyonları sorgulamak için modeli açıklar.|  
+|[Nesne odaklı programlama (C#)](./object-oriented-programming.md)|Kapsülleme, devralma ve çok biçimlilik dahil olmak üzere, nesne odaklı ortak kavramları açıklar.|  
+|[Yansıma (C#)](./reflection.md)|Bir türün örneğini dinamik olarak oluşturmak, türü var olan bir nesneye bağlamak veya var olan bir nesneden türü almak ve onun yöntemlerini çağırmak ya da kendi alanlarına ve özelliklerine erişmek için yansıma kullanımını açıklar.|  
+|[Serileştirme (C#)](./serialization/index.md)|İkili, XML ve SOAP serileştirmesi içinde temel kavramları açıklar.|  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
   
 |||  
 |---|---|  
-|[Performans İpuçları](../../../../docs/framework/performance/performance-tips.md) | Uygulamanızın performansını artırmanıza yardımcı olabilecek birtakım temel kuralları açıklar.|
+|[Performans İpuçları](../../../framework/performance/performance-tips.md) | Uygulamanızın performansını artırmanıza yardımcı olabilecek çeşitli temel kuralları açıklar.|

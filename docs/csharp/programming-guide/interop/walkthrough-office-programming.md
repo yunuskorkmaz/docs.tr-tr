@@ -9,203 +9,203 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: a9b7a32cc3eb9d65b7c4a8e241eedca14cbf11bb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 8ed6e759f682f0db76938661fdcf668bec1eef1c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398149"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588976"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office Programlama (C# ve Visual Basic)
 
-Visual Studio, C# ve Visual Basic, Microsoft Office programlama artıran özellikleri sunar. Yararlı C# özellikleri adlandırılmış ve isteğe bağlı bağımsız değişkenler içerir ve dönüş türü değerlerinin `dynamic`. COM programlama, atlayabilirsiniz `ref` Dizinli Özellikler anahtar sözcüğü ve kazanç erişim. Visual Basic'de özellikler, lambda ifadeleri ve koleksiyon başlatıcıları deyimlerinde otomatik uygulanan özellikler içerir.
+Visual Studio, C# ve Visual Basic Microsoft Office programlamayı geliştiren özellikler sunar. Yardımcı C# özellikler, adlandırılmış ve isteğe bağlı bağımsız değişkenleri ve türünün `dynamic`dönüş değerlerini içerir. COM programlamasında, `ref` anahtar sözcüğünü atlayabilir ve dizinli özelliklere erişim elde edebilirsiniz. Visual Basic Özellikler otomatik olarak uygulanan özellikler, Lambda ifadelerinde deyimler ve koleksiyon başlatıcıları içerir.
 
-Birincil birlikte çalışma derlemeleri (PIA) kullanıcının bilgisayarına dağıtmadan COM bileşenleri ile etkileşim derlemelerin dağıtımı verir tür bilgilerin ekleme her iki dil etkinleştirin. Daha fazla bilgi için [izlenecek yol: Yönetilen derlemeler türler katıştırma](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).
+Her iki dil de, birincil birlikte çalışma derlemelerini (PIA 'lar) kullanıcının bilgisayarına dağıtmaksızın COM bileşenleriyle etkileşen derlemelerin dağıtımına izin veren tür bilgilerinin gömülmesini sağlar. Daha fazla bilgi için bkz [. İzlenecek yol: Yönetilen derlemelerden](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)türler ekleme.
 
-Bu izlenecek yol bu özellikleri Office programlama bağlamında gösterir, ancak bu özelliklerin birçoğu ayrıca genel programlama yararlı olur. Bu izlenecek yolda, bir Excel çalışma kitabı oluşturmak için Excel eklentisi uygulama kullanın. Ardından, çalışma kitabının bağlantısını içeren bir Word belgesi oluşturun. Son olarak, etkinleştirme ve devre dışı PIA bağımlılık bakın.
+Bu izlenecek yol, Office programlama bağlamında bu özellikleri gösterir, ancak bu özelliklerin birçoğu genel programlamada de yararlıdır. İzlenecek yolda, Excel çalışma kitabı oluşturmak için bir Excel eklenti uygulaması kullanırsınız. Sonra, çalışma kitabının bağlantısını içeren bir Word belgesi oluşturursunuz. Son olarak, PIA bağımlılığını etkinleştirmeyi ve devre dışı bırakmayı görürsünüz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Word'ün yüklü olması gerekir.
+Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Microsoft Office Word yüklü olmalıdır.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-### <a name="to-set-up-an-excel-add-in-application"></a>Excel eklentisi uygulama ayarlamak için
+### <a name="to-set-up-an-excel-add-in-application"></a>Excel eklenti uygulaması ayarlamak için
 
 1. Visual Studio’yu çalıştırın.
 
-2. Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**.
+2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 
-3. İçinde **yüklü şablonlar** bölmesini genişletin **Visual Basic** veya **Visual C#** , genişletin **Office**ve sürüm yılını'ye tıklayın Office Ürün.
+3. **Yüklü şablonlar** bölmesinde, **Visual Basic** veya **Visual C#** ' i genişletin, **Office**' i genişletin ve ardından Office ürününün sürüm yılına tıklayın.
 
-4. İçinde **şablonları** bölmesinde tıklayın **Excel \<sürüm > eklenti**.
+4. **Şablonlar** bölmesinde, **Excel \<sürüm > eklentisi**' ne tıklayın.
 
-5. Konum üst kısmında **şablonları** emin olmak için bölmesinde **.NET Framework 4**, veya sonraki bir sürümünü görünür **hedef Framework'ü** kutusu.
+5. **.NET Framework 4**veya sonraki bir sürümün **hedef Framework** kutusunda göründüğünden emin olmak için **Şablonlar** bölmesinin en üstüne bakın.
 
-6. Projeniz için bir ad yazın **adı** kutusunda istiyorsanız.
+6. İsterseniz, **ad** kutusuna projeniz için bir ad yazın.
 
 7. **Tamam**'ı tıklatın.
 
-8. Yeni Proje görünür **Çözüm Gezgini**.
+8. Yeni proje **Çözüm Gezgini**görüntülenir.
 
-### <a name="to-add-references"></a>Başvuruları eklemek için
+### <a name="to-add-references"></a>Başvuru eklemek için
 
-1. İçinde **Çözüm Gezgini**, projenizin adına sağ tıklayın ve ardından **Başvuru Ekle**. **Başvuru Ekle** iletişim kutusu görüntülenir.
+1. **Çözüm Gezgini**, projenizin adına sağ tıklayın ve ardından **Başvuru Ekle**' ye tıklayın. **Başvuru Ekle** iletişim kutusu görüntülenir.
 
-2. Üzerinde **derlemeleri** sekmesinde **Microsoft.Office.Interop.Excel**, sürüm `<version>.0.0.0` (Office Ürün sürüm numaraları için bir anahtar için [Microsoft Versions](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), **bileşen adı** listelemek ve anahtar ve seçin ve CTRL tuşunu basılı tutun **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Derlemeleri görmüyorsanız, yüklü ve görüntülenen olun gerekebilir (bkz [nasıl yapılır: Office birincil birlikte çalışma derlemelerini yükleme](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).
+2. **Derlemeler** sekmesinde, **Microsoft. Office. Interop. Excel**, sürüm `<version>.0.0.0` (Office ürün sürüm numaralarına bir anahtar için, bkz. [Microsoft sürümleri](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), **bileşen adı** listesinde, ve ardından CTRL tuşunu basılı tutun ve **Microsoft. Office. Interop. Word**, öğesini `version <version>.0.0.0`seçin. Derlemeleri görmüyorsanız, bunların yüklendiğinden ve görüntülendiklerinden emin olmanız gerekebilir (bkz [. nasıl yapılır: Office birincil birlikte çalışma derlemelerini](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)yükler).
 
 3. **Tamam**'ı tıklatın.
 
-### <a name="to-add-necessary-imports-statements-or-using-directives"></a>Gerekli içeri aktarmaları deyimleri eklemeye veya using yönergeleri
+### <a name="to-add-necessary-imports-statements-or-using-directives"></a>Gerekli Içeri aktarmalar deyimlerini eklemek veya yönergeleri kullanmak için
 
-1. İçinde **Çözüm Gezgini**, sağ **ThisAddIn.vb** veya **ThisAddIn.cs** dosya ve ardından **Kodu Görüntüle**.
+1. **Çözüm Gezgini**, **ThisAddIn. vb** veya **ThisAddIn.cs** dosyasına sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
-2. Aşağıdaki `Imports` deyimleri (Visual Basic) veya `using` zaten yoksa, kod dosyasının en üstüne yönergeleri (C#).
+2. Zaten mevcut değilse `Imports` , kod dosyasının en üstüne `using` aşağıdaki deyimleriC#(Visual Basic) veya yönergeleri () ekleyin.
 
      [!code-csharp[csOfficeWalkthrough#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#1)]
 
      [!code-vb[csOfficeWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#1)]
 
-### <a name="to-create-a-list-of-bank-accounts"></a>Banka hesabı listesini oluşturmak için
+### <a name="to-create-a-list-of-bank-accounts"></a>Banka hesaplarının bir listesini oluşturmak için
 
-1. İçinde **Çözüm Gezgini**, projenizin adına sağ tıklayın, **Ekle**ve ardından **sınıfı**. C# kullanıyorsanız Visual Basic veya Account.cs kullanıyorsanız Account.vb sınıfı adı. **Ekle**'yi tıklatın.
+1. **Çözüm Gezgini**, projenizin adına sağ tıklayın, **Ekle**' ye ve ardından **sınıf**' a tıklayın. Kullanıyorsanız, Visual Basic veya Account.cs kullanıyorsanız,. vb sınıfını adlandırın C#. **Ekle**'yi tıklatın.
 
-2. Tanımını değiştirin `Account` aşağıdaki kodla sınıfı. Sınıf tanımları kullanın *otomatik uygulanan Özellikler*. Daha fazla bilgi için [Implemented Properties](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).
+2. `Account` Sınıfının tanımını aşağıdaki kodla değiştirin. Sınıf tanımları *Otomatik uygulanan özellikleri*kullanır. Daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).
 
      [!code-csharp[csOfficeWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/account.cs#2)]
 
      [!code-vb[csOfficeWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/account.vb#2)]
 
-3. Oluşturmak için bir `bankAccounts` iki hesap içeren liste için aşağıdaki kodu ekleyin `ThisAddIn_Startup` yönteminde *ThisAddIn.vb* veya *ThisAddIn.cs*. Liste bildirimlerini *koleksiyon başlatıcıları*. Daha fazla bilgi için [koleksiyon başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
+3. İki hesap içeren `bankAccounts` bir liste oluşturmak için, *ThisAddIn. vb* veya `ThisAddIn_Startup` *ThisAddIn.cs*içindeki yöntemine aşağıdaki kodu ekleyin. Liste bildirimleri *koleksiyon başlatıcıları*kullanır. Daha fazla bilgi için bkz. [koleksiyon başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
 
      [!code-csharp[csOfficeWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#3)]
 
      [!code-vb[csOfficeWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#3)]
 
-### <a name="to-export-data-to-excel"></a>Verileri Excel'e aktarmak için
+### <a name="to-export-data-to-excel"></a>Excel 'e veri aktarmak için
 
-1. Aynı dosyada, aşağıdaki yöntemi ekleyin `ThisAddIn` sınıfı. Yöntemi, bir Excel çalışma kitabı oluşturun ayarlar ve için verileri dışarı aktarır.
+1. Aynı dosyada, `ThisAddIn` sınıfına aşağıdaki yöntemi ekleyin. Yöntemi bir Excel çalışma kitabı ayarlar ve verileri buna dışa aktarır.
 
      [!code-csharp[csOfficeWalkthrough#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#4)]
 
      [!code-vb[csOfficeWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#4)]
 
-     Bu yöntemi, iki yeni C# özellikleri kullanılır. Bu özelliklerin her ikisi de Visual Basic'te zaten mevcut.
+     Bu yöntemde C# iki yeni özellik kullanılır. Bu özelliklerin her ikisi de Visual Basic zaten var.
 
-    - Yöntemi [Ekle](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) sahip bir *isteğe bağlı parametre* belirli bir şablon belirtmek için. İsteğe bağlı parametreler, yeni C# 4, parametrenin varsayılan değeri kullanmak istiyorsanız, bu parametreye yönelik bağımsız değişkeni atlamak etkinleştirin. Önceki örnekte hiçbir bağımsız değişken gönderildiği `Add` varsayılan şablonu kullanır ve yeni bir çalışma kitabı oluşturur. C# ' ın önceki sürümlerinde eşdeğer deyimi bir yer tutucu bağımsız değişken gerektiriyor: `excelApp.Workbooks.Add(Type.Missing)`.
+    - [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) yöntemi belirli bir şablonu belirtmek için *isteğe bağlı bir parametreye* sahiptir. 4 ' te C# yeni olan isteğe bağlı parametreler, parametrenin varsayılan değerini kullanmak istiyorsanız bu parametreye ilişkin bağımsız değişkeni atlamanızı sağlar. Önceki örnekte hiçbir bağımsız değişken gönderilmediğinden, `Add` varsayılan şablonu kullanır ve yeni bir çalışma kitabı oluşturur. Önceki sürümlerindeki eşdeğer ifade, bir yer C# tutucu bağımsız değişkeni gerektirir: `excelApp.Workbooks.Add(Type.Missing)`.
 
-         Daha fazla bilgi için [adlandırılmış ve isteğe bağlı bağımsız değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).
+         Daha fazla bilgi için bkz. [adlandırılmış ve Isteğe bağlı bağımsız değişkenler](../classes-and-structs/named-and-optional-arguments.md).
 
-    - `Range` Ve `Offset` özelliklerini [aralığı](<xref:Microsoft.Office.Interop.Excel.Range>) nesne kullanım *özellikleri dizine* özelliği. Bu özellik, aşağıdaki tipik C# sözdizimi ile bu özellikler COM türünden kullanmasını sağlar. Dizinli Özellikler de etkinleştirmeniz kullanmanızı `Value` özelliği `Range` kullanma gereksinimini ortadan kaldırır, nesne `Value2` özelliği. `Value` Özelliği tarihine, ancak dizin isteğe bağlıdır. İsteğe bağlı bağımsız değişkenler ve dizinli özellikler aşağıdaki örnekte birlikte çalışır.
+    - Range nesnesinin `Offset` ve özellikleri *dizinli Özellikler* özelliğini kullanır. [](<xref:Microsoft.Office.Interop.Excel.Range>) `Range` Bu özellik, aşağıdaki tipik C# sözdizimini kullanarak bu özellikleri com türlerinden kullanmanıza olanak sağlar. Dizinli Özellikler Ayrıca, `Value` `Value2` özelliğini kullanma gereksinimini ortadan kaldırarak `Range` nesnenin özelliğini kullanmanıza olanak sağlar. `Value` Özelliğin dizini oluşturulmuş, ancak dizin isteğe bağlıdır. İsteğe bağlı bağımsız değişkenler ve dizinli özellikler, aşağıdaki örnekte birlikte çalışır.
 
          [!code-csharp[csOfficeWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#5)]
 
-         Dilin önceki sürümlerinde aşağıdaki özel sözdizimini gereklidir.
+         Dilin önceki sürümlerinde aşağıdaki özel sözdizimi gereklidir.
 
          [!code-csharp[csOfficeWalkthrough#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#6)]
 
-         Dizinli Özellikler kendi oluşturulamıyor. Özelliği, yalnızca mevcut Dizinlenmiş özelliklerin tüketimini destekler.
+         Kendinizinkini dizinli Özellikler oluşturamazsınız. Özelliği yalnızca var olan dizinli özelliklerin kullanımını destekler.
 
-         Daha fazla bilgi için [nasıl yapılır: Özellikleri COM birlikte çalışma programlamada dizin oluşturulmuş kullanma](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md).
+         Daha fazla bilgi için [nasıl yapılır: COM birlikte çalışma programlamada](./how-to-use-indexed-properties-in-com-interop-rogramming.md)dizinli özellikleri kullanın.
 
-2. Sonuna aşağıdaki kodu ekleyin `DisplayInExcel` İçeriği sığdırmak için sütun genişliklerini ayarlamak için.
+2. Sütunun genişliğini içeriğe sığacak şekilde ayarlamak `DisplayInExcel` için aşağıdaki kodu sonuna ekleyin.
 
      [!code-csharp[csOfficeWalkthrough#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#7)]
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     C# başka bir özellik bu eklemeleri gösterir: değerlendirmesini `Object` döndürülen Office gibi COM konaklarından türü yokmuş gibi [dinamik](../../../csharp/language-reference/keywords/dynamic.md). Bu otomatik olarak gerçekleşir, **birlikte çalışma türlerini katıştır** varsayılan değerine ayarlanır `True`, ya da eşdeğer, ne zaman derlemesi tarafından başvurulan [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği. Tür `dynamic` geç bağlama, zaten Visual Basic'te kullanılabilir izin verir ve gerekli açık atama önler C# 3.0 ve eski sürümlerine dili.
+     Bu eklemeler, ' deki başka C#bir özelliği `Object` gösterir. Örneğin, [dinamik tür Dynamic](../../language-reference/keywords/dynamic.md)gibi com konaklarından döndürülen değerleri kabul ediyor. Bu otomatik olarak, **ekleme birlikte çalışma türleri** varsayılan değerine `True`ayarlandığında, ya da derlemeye [/Link](../../language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği tarafından başvuruluyorsa, equivalently. Tür `dynamic` , geç bağlamaya izin verir, Visual Basic ' de zaten kullanılabilir ve C# 3,0 ve önceki dil sürümlerinde gereken açık dönüştürmeyi önler.
 
-     Örneğin, `excelApp.Columns[1]` döndürür bir `Object`, ve `AutoFit` bir Excel [aralığı](<xref:Microsoft.Office.Interop.Excel.Range>) yöntemi. Olmadan `dynamic`, tarafından döndürülen nesne dönüştürmelisiniz `excelApp.Columns[1]` örneği olarak `Range` çağırmadan önce yöntemi `AutoFit`.
+     Örneğin `excelApp.Columns[1]` , bir `Object`, ve `AutoFit` bir Excel [Range](<xref:Microsoft.Office.Interop.Excel.Range>) yöntemi döndürür. Olmadan `dynamic`, yöntemi `Range` `excelApp.Columns[1]` çağrılmadanöncebirörneğiolarak`AutoFit`döndürülen nesneyi atamalısınız.
 
      [!code-csharp[csOfficeWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#8)]
 
-     Birlikte çalışma türlerini katıştırma hakkında daha fazla bilgi için yordam "PIA başvurusu bulmak için" ve "PIA bağımlılık geri yüklemek için" bölümüne bakın. Hakkında daha fazla bilgi için `dynamic`, bkz: [dinamik](../../../csharp/language-reference/keywords/dynamic.md) veya [türünü kullanarak dinamik](../../../csharp/programming-guide/types/using-type-dynamic.md).
+     Birlikte çalışma türlerini katıştırma hakkında daha fazla bilgi için, bu konunun devamındaki "PIA başvurusunu bulmak Için" ve "PIA bağımlılığını geri yüklemek için" yordamlarına bakın. Hakkında `dynamic`daha fazla bilgi için bkz [](../../language-reference/keywords/dynamic.md) . dinamik veya [tür dinamik kullanımı](../types/using-type-dynamic.md).
 
-### <a name="to-invoke-displayinexcel"></a>DisplayInExcel çağırmak için
+### <a name="to-invoke-displayinexcel"></a>DisplayInExcel 'i çağırmak için
 
-1. Sonuna aşağıdaki kodu ekleyin `ThisAddIn_StartUp` yöntemi. Çağrı `DisplayInExcel` iki bağımsız değişken içeriyor. İlk bağımsız değişken işlenecek hesaplarının listesi adıdır. İkinci bağımsız değişkeni nasıl işlenecek verileri olduğunu tanımlayan bir çok satırlı lambda ifadesidir. `ID` Ve `balance` her hesap için değerleri, bitişik hücrelerde görüntülenir ve Bakiye küçükse sıfır satır kırmızı renkte görüntülenir. Daha fazla bilgi için [Lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+1. `ThisAddIn_StartUp` Yönteminin sonuna aşağıdaki kodu ekleyin. Çağrısı iki bağımsız `DisplayInExcel` değişken içerir. İlk bağımsız değişken işlenecek hesapların listesinin adıdır. İkinci bağımsız değişken, verilerin nasıl işleneceğini tanımlayan çok satırlı bir lambda ifadesidir. Her bir `balance` hesabın vedeğerleribitişikhücrelerdegörüntülenirvebakiyesıfırdanküçüksesatırkırmızırenktegörüntülenir.`ID` Daha fazla bilgi için bkz. [lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
      [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
      [!code-vb[csOfficeWalkthrough#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#9)]
 
-2. Programı çalıştırmak için F5 tuşuna basın. Hesaplarından veri içeren bir Excel çalışma sayfası görünür.
+2. Programı çalıştırmak için F5 'e basın. Hesaplardan verileri içeren bir Excel çalışma sayfası görüntülenir.
 
-### <a name="to-add-a-word-document"></a>Bir Word belgesi eklemek için
+### <a name="to-add-a-word-document"></a>Word belgesi eklemek için
 
-1. Sonuna aşağıdaki kodu ekleyin `ThisAddIn_StartUp` Excel çalışma kitabının bağlantısını içeren bir Word belgesi oluşturmak için yöntemi.
+1. Excel çalışma kitabının bağlantısını içeren bir Word belgesi oluşturmak `ThisAddIn_StartUp` için yönteminin sonuna aşağıdaki kodu ekleyin.
 
      [!code-csharp[csOfficeWalkthrough#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#10)]
 
      [!code-vb[csOfficeWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#10)]
 
-     Bu kod, C# ' deki yeni özelliklerin bazılarını gösterir: atlamak için özelliği `ref` anahtar sözcüğü COM programlama, adlandırılmış bağımsız değişkenler ve isteğe bağlı bağımsız değişkenler. Bu özellikler, Visual Basic'te zaten mevcut. [Denetlemeye](<xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>) yöntemi yedi parametresi, isteğe bağlı başvuru parametreleri tanımlanan tüm vardır. Adlandırılmış ve isteğe bağlı bağımsız değişkenler adıyla erişmek ve bu parametreleri yalnızca bağımsız değişken göndermemeniz için istediğiniz parametreleri belirtmek etkinleştirin. Bu örnekte, bağımsız değişkenleri Panosu'ndaki çalışma kitabı bağlantısını oluşturulması gerektiğini belirtmek için gönderilen (parametre `Link`) ve bağlantı Word belgesinde bir simge olarak görüntülenecek olan (parametre `DisplayAsIcon`). Visual C# ayrıca sayesinde atlamak `ref` bu bağımsız değişkenler için anahtar sözcüğü.
+     Bu kod, içindeki C#yeni özelliklerden birkaçını gösterir: com programlamasında `ref` anahtar sözcüğü atlama özelliği, adlandırılmış bağımsız değişkenler ve isteğe bağlı bağımsız değişkenler. Bu özellikler Visual Basic zaten var. [PasteSpecial](<xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>) yönteminde yedi parametre bulunur ve bunların tümü isteğe bağlı başvuru parametresi olarak tanımlanır. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, ad ile erişmek istediğiniz parametreleri tanımlamanızı ve yalnızca bu parametrelere bağımsız değişkenler göndermenizi sağlar. Bu örnekte, panodaki çalışma kitabına bir bağlantının oluşturulması (parametre `Link`) ve bağlantının Word belgesinde bir simge (parametre `DisplayAsIcon`) olarak görüntülenmesi gerektiğini göstermek için bağımsız değişkenler gönderilir. Görsel C# Ayrıca bu bağımsız değişkenlerin `ref` anahtar sözcüğünü atlamanızı sağlar.
 
 ### <a name="to-run-the-application"></a>Uygulamayı çalıştırmak için
 
-1. Uygulamayı çalıştırmak için F5'e basın. Excel başlar ve iki hesap bilgileri içeren bir tablo görüntüler `bankAccounts`. Daha sonra Excel tablosuna bir bağlantı içeren bir Word belgesi görüntülenir.
+1. Uygulamayı çalıştırmak için F5'e basın. Excel başlatılır ve içindeki `bankAccounts`iki hesaptan bilgileri içeren bir tablo görüntüler. Daha sonra Excel tablosuna bir bağlantı içeren bir Word belgesi görüntülenir.
 
 ### <a name="to-clean-up-the-completed-project"></a>Tamamlanmış projeyi temizlemek için
 
-1. Visual Studio'da **çözümü Temizle** üzerinde **derleme** menüsü. Aksi halde, eklentinin her saat Excel bilgisayarınızda açın çalışacaktır.
+1. Visual Studio 'da **Yapı** menüsünde **Çözümü Temizle** ' ye tıklayın. Aksi takdirde, eklenti, bilgisayarınızda Excel 'i her açışınızda çalışacaktır.
 
-### <a name="to-find-the-pia-reference"></a>PIA başvurusu bulunamıyor
+### <a name="to-find-the-pia-reference"></a>PIA başvurusunu bulmak için
 
-1. Uygulamayı yeniden çalıştırın, ancak tıklamayın **çözümü Temizle**.
+1. Uygulamayı yeniden çalıştırın, ancak **Çözümü Temizle**' yi tıklamayın.
 
-2. Seçin **Başlat**. Bulun **Microsoft Visual Studio \<sürüm >** ve bir geliştirici komut istemi açın.
+2. **Başlat**' ı seçin. **MicrosoftVisualStudio\<sürüm >** bulun ve bir geliştirici komut istemi açın.
 
-3. Tür `ildasm` içinde için geliştirici komut istemi penceresi Visual Studio ve ENTER tuşuna basın. IL DASM penceresi görüntülenir.
+3. Visual `ildasm` Studio için geliştirici komut istemi yazın ve ardından ENTER tuşuna basın. Il DADSM penceresi görüntülenir.
 
-4. Üzerinde **dosya** IL DASM penceresinde, seçim menüsünde **dosya** > **açık**. Çift **Visual Studio \<sürüm >** ve çift tıklatarak **projeleri**. Projeniz için klasörü açın ve bin/Debug klasöründe arayın *projenizin adına*.dll. Çift *projenizin adına*.dll. Yeni bir pencere diğer modül ve derlemelerdeki başvuruları ek olarak, projenizin öznitelikleri görüntüler. Bu ad alanları Not `Microsoft.Office.Interop.Excel` ve `Microsoft.Office.Interop.Word` derlemeye dahil edilir. Visual Studio'da varsayılan olarak, derleyici, derlemeye başvurulan bir PIA ihtiyacınız türlerini alır.
+4. Il dadsm penceresindeki **Dosya** menüsünde **Dosya** > **Aç**' ı seçin. **Visual Studio \<sürüm >** ' ne çift tıklayın ve ardından **Projeler**' e çift tıklayın. Projeniz için klasörü açın ve *Proje adı*. dll 'niz için bin/Debug klasörüne bakın. *Proje adı*. dll ' ye çift tıklayın. Yeni bir pencere, diğer modüller ve derlemelere başvurulara ek olarak projenizin özniteliklerini görüntüler. Ad alanlarının `Microsoft.Office.Interop.Excel` ve `Microsoft.Office.Interop.Word` derlemeye dahil edildiğini unutmayın. Visual Studio 'da varsayılan olarak, derleyici başvurulan bir PIA 'ten sizin için gerekli olan türleri derlemenizin içine aktarır.
 
-     Daha fazla bilgi için [nasıl yapılır: Bütünleştirilmiş kod içeriklerini görüntüleme](../../../framework/app-domains/how-to-view-assembly-contents.md).
+     Daha fazla bilgi için [nasıl yapılır: Derleme Içeriğini](../../../framework/app-domains/how-to-view-assembly-contents.md)görüntüleyin.
 
-5. Çift **bildirim** simgesi. Proje tarafından başvurulan öğeleri içeren bir derleme listesi içeren bir pencere görüntülenir. `Microsoft.Office.Interop.Excel` ve `Microsoft.Office.Interop.Word` listede yer almaz. PIA başvuruları projenize derlemenizi alınan türleri olmadığı için gereklidir. Bu dağıtımı kolaylaştırır. PIA'ların kullanıcının bilgisayarında mevcut olması gerekmez ve uygulamanın bir PIA'yı belirli bir sürümünü dağıtımı gerektirmediğinden şartıyla tüm sürümlerinde gerekli API'leri mevcut uygulamaları birden çok sürümü Office ile çalışmak için tasarlanabilir .
+5. **Bildirim** simgesine çift tıklayın. Proje tarafından başvurulan öğeleri içeren derlemelerin listesini içeren bir pencere görüntülenir. `Microsoft.Office.Interop.Excel`ve `Microsoft.Office.Interop.Word` listeye dahil değildir. Projenizin gerektirdiği türler derlemenizin içine aktarıldığından, bir PIA başvuruları gerekli değildir. Bu, dağıtımı kolaylaştırır. PIA 'Lerin kullanıcının bilgisayarında mevcut olması gerekmez ve bir uygulama bir PIA 'ın belirli bir sürümünün dağıtımını gerektirmediğinden, uygulamalar, gerekli API 'Lerin tüm sürümlerde bulunması şartıyla, Office 'in birden çok sürümü ile çalışacak şekilde tasarlanabilir. .
 
-     PIA'ların dağıtımı artık gerekli olmadığından, Office, önceki sürümleri dahil olmak üzere birden çok sürümü ile çalışır, Gelişmiş senaryolarda bir uygulama oluşturabilirsiniz. Ancak, yalnızca kodunuzu çalıştığınız Office sürümü bulunmayan tüm API'leri kullanmıyorsa bu çalışır. Her zaman belirli bir API'yi Office önceki sürümleriyle birlikte çalışmaya neden önerilmez bir önceki sürümünde ve kullanılabilir olup açık değildir.
+     PIA dağıtımı artık gerekli olmadığından, önceki sürümler dahil olmak üzere birden fazla Office sürümüyle birlikte çalışarak Gelişmiş senaryolarda bir uygulama oluşturabilirsiniz. Ancak, bu yalnızca kodunuz, çalıştığınız Office sürümünde kullanılamayan API 'Leri kullanmıyorsa çalışır. Belirli bir API 'nin önceki bir sürümde kullanılabilir olup olmadığını her zaman temizlemez ve bu nedenle Office 'in önceki sürümleriyle çalışma için önerilmez.
 
     > [!NOTE]
-    > Office PIA'ların Office 2003 önce yayımlamadı. Bu nedenle, Office 2002 veya önceki sürümleri için birlikte çalışma derlemesi oluşturmak için tek bir COM başvurusu içeri aktararak yoludur.
+    > Office, Office 2003 öncesi PIA 'Ları yayımlamadı. Bu nedenle, Office 2002 veya önceki sürümleri için birlikte çalışma derlemesi oluşturmanın tek yolu COM başvurusunu içeri aktarmadır.
 
 6. Bildirim penceresini ve derleme penceresini kapatın.
 
-### <a name="to-restore-the-pia-dependency"></a>PIA bağımlılık geri yüklemek için
+### <a name="to-restore-the-pia-dependency"></a>PIA bağımlılığını geri yüklemek için
 
-1. İçinde **Çözüm Gezgini**, tıklayın **tüm dosyaları göster** düğmesi. Genişletin **başvuruları** klasörü ve select **Microsoft.Office.Interop.Excel**. Görüntülenecek F4 tuşuna **özellikleri** penceresi.
+1. **Çözüm Gezgini**, **tüm dosyaları göster** düğmesine tıklayın. **Başvurular** klasörünü genişletin ve **Microsoft. Office. Interop. Excel**' i seçin. **Özellikler** penceresini göstermek için F4 tuşuna basın.
 
-2. İçinde **özellikleri** penceresinde değişiklik **birlikte çalışma türlerini katıştır** özelliğinden **True** için **False**.
+2. **Özellikler** penceresinde, **birlikte çalışma türlerini katıştır** özelliğini **true** değerinden **false**değerine değiştirin.
 
-3. 1\. ve 2 için bu yordamdaki adımları yineleyin `Microsoft.Office.Interop.Word`.
+3. İçin `Microsoft.Office.Interop.Word`bu yordamda 1 ve 2. adımları tekrarlayın.
 
-4. C# dilinde iki çağrıları açıklama `Autofit` sonunda `DisplayInExcel` yöntemi.
+4. İçinde C#, `Autofit` `DisplayInExcel` yönteminin sonundaki iki çağrısı için açıklama ekleyin.
 
-5. Projeyi yine de düzgün şekilde çalıştığını doğrulamak için F5 tuşuna basın.
+5. Projenin hala doğru şekilde çalıştığını doğrulamak için F5 tuşuna basın.
 
-6. Derleme penceresini açmak için önceki yordamdan 1-3 adımları yineleyin. Dikkat `Microsoft.Office.Interop.Word` ve `Microsoft.Office.Interop.Excel` gömülü bütünleştirilmiş kodlar listesinde artık düzeninizin.
+6. Önceki yordamdan derleme penceresini açmak için 1-3 arasındaki adımları yineleyin. `Microsoft.Office.Interop.Word` Bunun,gömülüderlemelerlistesinde`Microsoft.Office.Interop.Excel` artık olmadığına dikkat edin.
 
-7. Çift **bildirim** simgesi ve listesini kaydırın başvurulan derlemeler. Her ikisi de `Microsoft.Office.Interop.Word` ve `Microsoft.Office.Interop.Excel` listede yer almaktadır. Uygulama Excel ve Word PIA'ların başvurduğundan ve **birlikte çalışma türlerini katıştır** özelliği **False**, iki derleme, son kullanıcının bilgisayarda var olmalıdır.
+7. **Bildirim** simgesine çift tıklayın ve başvurulan derlemeler listesinde gezinin. Her ikisi de `Microsoft.Office.Interop.Word` listede bulunur.`Microsoft.Office.Interop.Excel` Uygulama Excel ve Word PIAlerine başvurduğundan ve **birlikte çalışma türlerini katıştır** özelliği **false**olarak ayarlandığından, her iki derlemenin de son kullanıcının bilgisayarında bulunması gerekir.
 
-8. Visual Studio'da **çözümü Temizle** üzerinde **derleme** tamamlanmış projeyi temizlemek için menü.
+8. Visual Studio 'da, tamamlanmış projeyi temizlemek için **derleme** menüsündeki **Çözümü Temizle** ' ye tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Otomatik uygulanan özellikler (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [Otomatik uygulanan özellikler (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
+- [Otomatik uygulanan Özellikler (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [Otomatik uygulanan Özellikler (C#)](../classes-and-structs/auto-implemented-properties.md)
 - [Öğe Başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [Nesne ve Koleksiyon Başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Nesne ve Koleksiyon Başlatıcıları](../classes-and-structs/object-and-collection-initializers.md)
 - [İsteğe Bağlı Parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
 - [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
-- [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+- [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../classes-and-structs/named-and-optional-arguments.md)
 - [Erken ve Geç Bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [Lambda ifadeleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Lambda Expressions (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [Nasıl yapılır: COM birlikte çalışma programlamada dizin oluşturulmuş özellikleri kullanma](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
-- [İzlenecek yol: Visual Studio'da Microsoft Office derlemelerinden tür bilgilerini katıştırma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [İzlenecek yol: Yönetilen derlemelerden türler katıştırma](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [İzlenecek yol: Excel için ilk VSTO eklentinizi oluşturma](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
+- [dynamic](../../language-reference/keywords/dynamic.md)
+- [Tür dinamiği kullanma](../types/using-type-dynamic.md)
+- [Lambda Ifadeleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Lambda Ifadeleri (C#)](../statements-expressions-operators/lambda-expressions.md)
+- [Nasıl yapılır: COM birlikte çalışma programlamada dizinli özellikleri kullanma](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [İzlenecek yol: Visual Studio 'da Microsoft Office Derlemelerinden tür bilgilerini katıştırma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
+- [İzlenecek yol: Yönetilen derlemelerden tür ekleme](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [İzlenecek yol: Excel için Ilk VSTO eklentisini oluşturma](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Birlikte çalışabilirlik](../../../csharp/programming-guide/interop/index.md)
+- [Birlikte çalışabilirlik](./index.md)

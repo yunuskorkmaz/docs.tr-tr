@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl yapılır: Filtreleme (XPath-LINQ to XML) öznitelik (C#)'
+title: 'Nasıl yapılır: Bir özniteliğe Filtre Uygula (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: 927dd781a16aa745b88de3c446682590bd601597
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 96c6d26c035d70fb50e0b5dc022bd28fd0242edd
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485760"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593819"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Nasıl yapılır: Filtreleme (XPath-LINQ to XML) öznitelik (C#)
-Bu konu, belirtilen ada sahip ve belirtilen değere sahip bir öznitelik ile alt öğeleri almak nasıl gösterir.  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Nasıl yapılır: Bir özniteliğe Filtre Uygula (XPath-LINQ to XML) (C#)
+Bu konu, belirtilen bir ada sahip ve belirtilen değere sahip bir öznitelik ile alt öğelerin nasıl alınacağını gösterir.  
   
- XPath ifadesidir:  
+ XPath ifadesi:  
   
  `.//Address[@Type='Shipping']`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, tüm alt öğeleri adıyla öğeleri bulur. `Address`ile bir `Type` "Gönderim" değerine sahip öznitelik.  
+ Bu örnek `Address`, adı olan tüm alt öğeleri ve "Shipping" değeri olan `Type` bir özniteliği bulur.  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Birden fazla satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Birden çok satın alma siparişi (](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)LINQ to XML).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
