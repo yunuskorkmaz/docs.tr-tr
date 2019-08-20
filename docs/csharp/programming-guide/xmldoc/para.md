@@ -9,33 +9,33 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: 0891ce06b1d24b8b5841ed6c0b1e43d1d2e3fbc7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9584d6c7fec064e2234df9db7e21a38806e8992
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708229"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587950"
 ---
-# <a name="para-c-programming-guide"></a><span data-ttu-id="5e949-102">\<para > (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="5e949-102">\<para> (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="5e949-103">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5e949-103">Syntax</span></span>  
+# <a name="para-c-programming-guide"></a><span data-ttu-id="eabdf-102">\<Para > (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="eabdf-102">\<para> (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="eabdf-103">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="eabdf-103">Syntax</span></span>  
   
 ```xml  
 <para>content</para>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5e949-104">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5e949-104">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eabdf-104">Parametreler</span><span class="sxs-lookup"><span data-stu-id="eabdf-104">Parameters</span></span>  
  `content`  
- <span data-ttu-id="5e949-105">Paragraf metni.</span><span class="sxs-lookup"><span data-stu-id="5e949-105">The text of the paragraph.</span></span>  
+ <span data-ttu-id="eabdf-105">Paragrafın metni.</span><span class="sxs-lookup"><span data-stu-id="eabdf-105">The text of the paragraph.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5e949-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5e949-106">Remarks</span></span>  
- <span data-ttu-id="5e949-107">\<Para > gibi olan bir etiketi içinde kullanmak için etiket [ \<Özet >](../../../csharp/programming-guide/xmldoc/summary.md), [ \<remarks >](../../../csharp/programming-guide/xmldoc/remarks.md), veya [ \<döndürür >](../../../csharp/programming-guide/xmldoc/returns.md)ve metnin yapısını eklemenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="5e949-107">The \<para> tag is for use inside a tag, such as [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md), [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md), or [\<returns>](../../../csharp/programming-guide/xmldoc/returns.md), and lets you add structure to the text.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="eabdf-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="eabdf-106">Remarks</span></span>  
+ <span data-ttu-id="eabdf-107">Para > etiketi, [ \<Özet >](./summary.md), [ \<açıklamalar >](./remarks.md)ya [ \<da > döndüren](./returns.md)ve metne yapı eklemenize olanak sağlayan bir etiket içinde kullanım içindir. \<</span><span class="sxs-lookup"><span data-stu-id="eabdf-107">The \<para> tag is for use inside a tag, such as [\<summary>](./summary.md), [\<remarks>](./remarks.md), or [\<returns>](./returns.md), and lets you add structure to the text.</span></span>  
   
- <span data-ttu-id="5e949-108">Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.</span><span class="sxs-lookup"><span data-stu-id="5e949-108">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="eabdf-108">Belge açıklamalarını bir dosyaya işlemek için [/doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.</span><span class="sxs-lookup"><span data-stu-id="eabdf-108">Compile with [/doc](../../language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5e949-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="5e949-109">Example</span></span>  
- <span data-ttu-id="5e949-110">Bkz: [ \<Özet >](../../../csharp/programming-guide/xmldoc/summary.md) kullanma örneği için \<para >.</span><span class="sxs-lookup"><span data-stu-id="5e949-110">See [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) for an example of using \<para>.</span></span>  
+## <a name="example"></a><span data-ttu-id="eabdf-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="eabdf-109">Example</span></span>  
+ <span data-ttu-id="eabdf-110">Para > kullanma\<örneği için bkz [ \<. Özet >](./summary.md) .</span><span class="sxs-lookup"><span data-stu-id="eabdf-110">See [\<summary>](./summary.md) for an example of using \<para>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5e949-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5e949-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eabdf-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="eabdf-111">See also</span></span>
 
-- [<span data-ttu-id="5e949-112">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="5e949-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="5e949-113">Belge Açıklamaları için Önerilen Etiketler</span><span class="sxs-lookup"><span data-stu-id="5e949-113">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="eabdf-112">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="eabdf-112">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="eabdf-113">Belge Açıklamaları için Önerilen Etiketler</span><span class="sxs-lookup"><span data-stu-id="eabdf-113">Recommended Tags for Documentation Comments</span></span>](./recommended-tags-for-documentation-comments.md)

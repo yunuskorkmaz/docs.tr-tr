@@ -1,5 +1,5 @@
 ---
-title: soyut - C# başvurusu
+title: Soyut- C# başvuru
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,84 +8,84 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 3a4d29ae4814ccceb7b405d9c1749150059a24a0
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 547ecd9ff823f61bf3995c02959235b65a4a3979
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859584"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606151"
 ---
-# <a name="abstract-c-reference"></a><span data-ttu-id="4f8aa-102">abstract (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="4f8aa-102">abstract (C# Reference)</span></span>
-<span data-ttu-id="4f8aa-103">`abstract` Değiştiricisi değiştirilmekte olan bir şey yok veya eksik bir uygulama olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-103">The `abstract` modifier indicates that the thing being modified has a missing or incomplete implementation.</span></span> <span data-ttu-id="4f8aa-104">Soyut değiştiricisi sınıflar, yöntemler, özellikler, dizin oluşturucular ve olaylar ile kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-104">The abstract modifier can be used with classes, methods, properties, indexers, and events.</span></span> <span data-ttu-id="4f8aa-105">Kullanım `abstract` değiştiricisi bir sınıf yalnızca, kendi örneği değil, diğer sınıfların temel sınıf olarak düşünüldüğünü göstermek için bir sınıf bildiriminde.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-105">Use the `abstract` modifier in a class declaration to indicate that a class is intended only to be a base class of other classes, not instantiated on its own.</span></span> <span data-ttu-id="4f8aa-106">Üyeleri, soyut soyut sınıftan türetilen soyut olmayan sınıflar tarafından uygulanması gereken olarak işaretlendi.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-106">Members marked as abstract must be implemented by non-abstract classes that derive from the abstract class.</span></span>
+# <a name="abstract-c-reference"></a><span data-ttu-id="7b081-102">abstract (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="7b081-102">abstract (C# Reference)</span></span>
+<span data-ttu-id="7b081-103">`abstract` Değiştirici, değiştirilmekte olan bir uygulamanın eksik veya tamamlanmamış bir uygulamasına sahip olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="7b081-103">The `abstract` modifier indicates that the thing being modified has a missing or incomplete implementation.</span></span> <span data-ttu-id="7b081-104">Soyut değiştirici sınıflar, Yöntemler, özellikler, Dizin oluşturucular ve olaylar ile kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="7b081-104">The abstract modifier can be used with classes, methods, properties, indexers, and events.</span></span> <span data-ttu-id="7b081-105">Bir sınıfın yalnızca diğer sınıfların temel sınıfı olduğunu göstermek için bir sınıf bildiriminde değiştiricisinikullanın,kendikendineörneğideğildir.`abstract`</span><span class="sxs-lookup"><span data-stu-id="7b081-105">Use the `abstract` modifier in a class declaration to indicate that a class is intended only to be a base class of other classes, not instantiated on its own.</span></span> <span data-ttu-id="7b081-106">Soyut olarak işaretlenen Üyeler soyut sınıftan türetilen soyut olmayan sınıflar tarafından uygulanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="7b081-106">Members marked as abstract must be implemented by non-abstract classes that derive from the abstract class.</span></span>
   
-## <a name="example"></a><span data-ttu-id="4f8aa-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="4f8aa-107">Example</span></span>  
- <span data-ttu-id="4f8aa-108">Bu örnekte, sınıf `Square` uygulaması sağlamalısınız `GetArea` öğesinden türetildiği için `Shape`:</span><span class="sxs-lookup"><span data-stu-id="4f8aa-108">In this example, the class `Square` must provide an implementation of `GetArea` because it derives from `Shape`:</span></span>  
+## <a name="example"></a><span data-ttu-id="7b081-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="7b081-107">Example</span></span>  
+ <span data-ttu-id="7b081-108">Bu örnekte, sınıfının `Square` türettiği `Shape`için bir `GetArea` uygulamasını sağlaması gerekir:</span><span class="sxs-lookup"><span data-stu-id="7b081-108">In this example, the class `Square` must provide an implementation of `GetArea` because it derives from `Shape`:</span></span>  
   
  [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
   
- <span data-ttu-id="4f8aa-109">Soyut sınıflar, aşağıdaki özelliklere sahiptir:</span><span class="sxs-lookup"><span data-stu-id="4f8aa-109">Abstract classes have the following features:</span></span>  
+ <span data-ttu-id="7b081-109">Soyut sınıflar aşağıdaki özelliklere sahiptir:</span><span class="sxs-lookup"><span data-stu-id="7b081-109">Abstract classes have the following features:</span></span>  
   
-- <span data-ttu-id="4f8aa-110">Bir soyut sınıfı oluşturulamıyor.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-110">An abstract class cannot be instantiated.</span></span>  
+- <span data-ttu-id="7b081-110">Soyut bir sınıf örneği oluşturulamıyor.</span><span class="sxs-lookup"><span data-stu-id="7b081-110">An abstract class cannot be instantiated.</span></span>  
   
-- <span data-ttu-id="4f8aa-111">Bir Özet sınıf, soyut yöntemler ve erişimcileri içerebilir.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-111">An abstract class may contain abstract methods and accessors.</span></span>  
+- <span data-ttu-id="7b081-111">Soyut bir sınıf, Soyut yöntemler ve erişimciler içerebilir.</span><span class="sxs-lookup"><span data-stu-id="7b081-111">An abstract class may contain abstract methods and accessors.</span></span>  
   
-- <span data-ttu-id="4f8aa-112">Bir Özet sınıf değiştirmek mümkün değildir [korumalı](../../../csharp/language-reference/keywords/sealed.md) değiştiricisi çünkü iki değiştirici karşı anlamları vardır.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-112">It is not possible to modify an abstract class with the [sealed](../../../csharp/language-reference/keywords/sealed.md) modifier because the two modifiers have opposite meanings.</span></span> <span data-ttu-id="4f8aa-113">`sealed` Değiştiricisi devralınan öğesinden bir sınıf engeller ve `abstract` değiştiricisi bir sınıf devralma gerektirir.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-113">The `sealed` modifier prevents a class from being inherited and the `abstract` modifier requires a class to be inherited.</span></span>  
+- <span data-ttu-id="7b081-112">İki değiştiricinin ters anlamları olduğundan, soyut değiştirici içeren bir [](./sealed.md) soyut sınıfı değiştirmek mümkün değildir.</span><span class="sxs-lookup"><span data-stu-id="7b081-112">It is not possible to modify an abstract class with the [sealed](./sealed.md) modifier because the two modifiers have opposite meanings.</span></span> <span data-ttu-id="7b081-113">Değiştirici bir sınıfın devralınmasını engeller `abstract` ve değiştirici bir sınıfın devralınmasını gerektirir. `sealed`</span><span class="sxs-lookup"><span data-stu-id="7b081-113">The `sealed` modifier prevents a class from being inherited and the `abstract` modifier requires a class to be inherited.</span></span>  
   
-- <span data-ttu-id="4f8aa-114">Soyut bir sınıftan bir Özet olmayan sınıftan devralınan tüm soyut yöntemler ve erişimcileri gerçek uygulamaları içermesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-114">A non-abstract class derived from an abstract class must include actual implementations of all inherited abstract methods and accessors.</span></span>  
+- <span data-ttu-id="7b081-114">Soyut bir sınıftan türetilmiş soyut olmayan bir sınıf, devralınan tüm soyut yöntemlerin ve erişimcilerinin gerçek uygulamalarını içermelidir.</span><span class="sxs-lookup"><span data-stu-id="7b081-114">A non-abstract class derived from an abstract class must include actual implementations of all inherited abstract methods and accessors.</span></span>  
   
- <span data-ttu-id="4f8aa-115">Kullanım `abstract` yöntemi veya özelliği uygulaması içermiyor belirtmek için bir yöntem veya özellik bildiriminde değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-115">Use the `abstract` modifier in a method or property declaration to indicate that the method or property does not contain implementation.</span></span>  
+ <span data-ttu-id="7b081-115">Yöntemin veya özelliğin uygulama içermediğini belirtmek için yöntem veya özellik bildiriminde değiştiricikullanın.`abstract`</span><span class="sxs-lookup"><span data-stu-id="7b081-115">Use the `abstract` modifier in a method or property declaration to indicate that the method or property does not contain implementation.</span></span>  
   
- <span data-ttu-id="4f8aa-116">Soyut yöntemler aşağıdaki özelliklere sahiptir:</span><span class="sxs-lookup"><span data-stu-id="4f8aa-116">Abstract methods have the following features:</span></span>  
+ <span data-ttu-id="7b081-116">Soyut yöntemler aşağıdaki özelliklere sahiptir:</span><span class="sxs-lookup"><span data-stu-id="7b081-116">Abstract methods have the following features:</span></span>  
   
-- <span data-ttu-id="4f8aa-117">Soyut Metoda örtük olarak sanal bir yöntemdir.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-117">An abstract method is implicitly a virtual method.</span></span>  
+- <span data-ttu-id="7b081-117">Soyut bir yöntem örtük olarak sanal bir yöntemdir.</span><span class="sxs-lookup"><span data-stu-id="7b081-117">An abstract method is implicitly a virtual method.</span></span>  
   
-- <span data-ttu-id="4f8aa-118">Soyut yöntem bildirimleri yalnızca soyut sınıfları izin verilir.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-118">Abstract method declarations are only permitted in abstract classes.</span></span>  
+- <span data-ttu-id="7b081-118">Soyut yöntem bildirimlerine yalnızca soyut sınıflarda izin verilir.</span><span class="sxs-lookup"><span data-stu-id="7b081-118">Abstract method declarations are only permitted in abstract classes.</span></span>  
   
-- <span data-ttu-id="4f8aa-119">Bir soyut yöntem bildiriminde gerçek uygulaması sağladığından, herhangi bir yöntem gövdesi yoktur; yöntem bildiriminde yalnızca noktalı virgül ile sona erer ve imza izleyen hiçbir küme ayracı ({}) vardır.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-119">Because an abstract method declaration provides no actual implementation, there is no method body; the method declaration simply ends with a semicolon and there are no curly braces ({ }) following the signature.</span></span> <span data-ttu-id="4f8aa-120">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="4f8aa-120">For example:</span></span>  
+- <span data-ttu-id="7b081-119">Soyut bir yöntem bildirimi gerçek uygulama sunmadığından, hiçbir Yöntem gövdesi yoktur; Yöntem bildirimi yalnızca noktalı virgül ile sona erer ve imzadan sonra küme ayracı ({}) yoktur.</span><span class="sxs-lookup"><span data-stu-id="7b081-119">Because an abstract method declaration provides no actual implementation, there is no method body; the method declaration simply ends with a semicolon and there are no curly braces ({ }) following the signature.</span></span> <span data-ttu-id="7b081-120">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="7b081-120">For example:</span></span>  
   
     ```csharp  
     public abstract void MyMethod();  
     ```  
   
-     <span data-ttu-id="4f8aa-121">Uygulama yöntemi tarafından sağlanan [geçersiz kılma](../../../csharp/language-reference/keywords/override.md), soyut olmayan sınıf üyesi olduğu.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-121">The implementation is provided by a method [override](../../../csharp/language-reference/keywords/override.md), which is a member of a non-abstract class.</span></span>  
+     <span data-ttu-id="7b081-121">Uygulama, soyut olmayan bir sınıfın üyesi olan bir yöntem [geçersiz kılma](./override.md)tarafından sağlanır.</span><span class="sxs-lookup"><span data-stu-id="7b081-121">The implementation is provided by a method [override](./override.md), which is a member of a non-abstract class.</span></span>  
   
-- <span data-ttu-id="4f8aa-122">Kullanılacak bir hata olduğunu [statik](../../../csharp/language-reference/keywords/static.md) veya [sanal](../../../csharp/language-reference/keywords/virtual.md) soyut yöntem bildiriminde değiştiriciler.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-122">It is an error to use the [static](../../../csharp/language-reference/keywords/static.md) or [virtual](../../../csharp/language-reference/keywords/virtual.md) modifiers in an abstract method declaration.</span></span>  
+- <span data-ttu-id="7b081-122">Soyut bir yöntem bildiriminde [statik](./static.md) veya [sanal](./virtual.md) değiştiricilerin kullanılması hatadır.</span><span class="sxs-lookup"><span data-stu-id="7b081-122">It is an error to use the [static](./static.md) or [virtual](./virtual.md) modifiers in an abstract method declaration.</span></span>  
   
- <span data-ttu-id="4f8aa-123">Soyut özellikler, bildirim ve çağırma söz dizimi farklılıkları dışında soyut yöntemler gibi davranır.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-123">Abstract properties behave like abstract methods, except for the differences in declaration and invocation syntax.</span></span>  
+ <span data-ttu-id="7b081-123">Özet özellikler, bildirim ve çağırma söz dizimi farklılıkları dışında soyut yöntemler gibi davranır.</span><span class="sxs-lookup"><span data-stu-id="7b081-123">Abstract properties behave like abstract methods, except for the differences in declaration and invocation syntax.</span></span>  
   
-- <span data-ttu-id="4f8aa-124">Kullanılacak bir hata olduğunu `abstract` değiştirici statik bir özellik.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-124">It is an error to use the `abstract` modifier on a static property.</span></span>  
+- <span data-ttu-id="7b081-124">`abstract` Değiştirici statik bir özellik üzerinde kullanılması hatadır.</span><span class="sxs-lookup"><span data-stu-id="7b081-124">It is an error to use the `abstract` modifier on a static property.</span></span>  
   
-- <span data-ttu-id="4f8aa-125">Devralınan soyut bir özelliğin kullanan bir özellik bildirimi dahil olmak üzere türetilen bir sınıfta kılınabilir [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-125">An abstract inherited property can be overridden in a derived class by including a property declaration that uses the [override](../../../csharp/language-reference/keywords/override.md) modifier.</span></span>  
+- <span data-ttu-id="7b081-125">Bir soyut devralınmış özellik, [geçersiz kılma](./override.md) değiştiricisini kullanan bir özellik bildirimi eklenerek, türetilmiş bir sınıfta geçersiz kılınabilir.</span><span class="sxs-lookup"><span data-stu-id="7b081-125">An abstract inherited property can be overridden in a derived class by including a property declaration that uses the [override](./override.md) modifier.</span></span>  
   
- <span data-ttu-id="4f8aa-126">Soyut sınıflar hakkında daha fazla bilgi için bkz: [soyut ve korumalı sınıflar ve sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="4f8aa-126">For more information about abstract classes, see [Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
+ <span data-ttu-id="7b081-126">Soyut sınıflar hakkında daha fazla bilgi için bkz. [soyut ve korumalı sınıflar ve sınıf üyeleri](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="7b081-126">For more information about abstract classes, see [Abstract and Sealed Classes and Class Members](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
   
- <span data-ttu-id="4f8aa-127">Bir soyut sınıf uygulama için tüm arabirim üyeleri sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-127">An abstract class must provide implementation for all interface members.</span></span>  
+ <span data-ttu-id="7b081-127">Soyut bir sınıf tüm arabirim üyeleri için uygulama sağlamalıdır.</span><span class="sxs-lookup"><span data-stu-id="7b081-127">An abstract class must provide implementation for all interface members.</span></span>  
   
- <span data-ttu-id="4f8aa-128">Bir arabirimi uygulayan bir Özet sınıf, arabirim yöntemleri soyut yöntemler üzerine eşleyebilir.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-128">An abstract class that implements an interface might map the interface methods onto abstract methods.</span></span> <span data-ttu-id="4f8aa-129">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="4f8aa-129">For example:</span></span>  
+ <span data-ttu-id="7b081-128">Arabirim uygulayan bir soyut sınıf, arabirim yöntemlerini soyut yöntemlerle eşleyebilir.</span><span class="sxs-lookup"><span data-stu-id="7b081-128">An abstract class that implements an interface might map the interface methods onto abstract methods.</span></span> <span data-ttu-id="7b081-129">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="7b081-129">For example:</span></span>  
   
 [!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   
-## <a name="example"></a><span data-ttu-id="4f8aa-130">Örnek</span><span class="sxs-lookup"><span data-stu-id="4f8aa-130">Example</span></span>  
- <span data-ttu-id="4f8aa-131">Bu örnekte, sınıf `DerivedClass` soyut bir sınıftan türetilen `BaseClass`.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-131">In this example, the class `DerivedClass` is derived from an abstract class `BaseClass`.</span></span> <span data-ttu-id="4f8aa-132">Soyut bir yöntemi soyut sınıfını içeren `AbstractMethod`ve iki soyut Özellikler `X` ve `Y`.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-132">The abstract class contains an abstract method, `AbstractMethod`, and two abstract properties, `X` and `Y`.</span></span>  
+## <a name="example"></a><span data-ttu-id="7b081-130">Örnek</span><span class="sxs-lookup"><span data-stu-id="7b081-130">Example</span></span>  
+ <span data-ttu-id="7b081-131">Bu örnekte, sınıfı `DerivedClass` soyut bir sınıftan `BaseClass`türetilir.</span><span class="sxs-lookup"><span data-stu-id="7b081-131">In this example, the class `DerivedClass` is derived from an abstract class `BaseClass`.</span></span> <span data-ttu-id="7b081-132">Soyut sınıf soyut bir yöntem, `AbstractMethod`ve iki soyut `X` özellik içerir ve `Y`.</span><span class="sxs-lookup"><span data-stu-id="7b081-132">The abstract class contains an abstract method, `AbstractMethod`, and two abstract properties, `X` and `Y`.</span></span>  
   
 [!code-csharp[csrefKeywordsModifiers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#3)]
   
- <span data-ttu-id="4f8aa-133">Önceki örnekte, böyle bir deyimi kullanarak soyut sınıfın örneği çalışırsanız:</span><span class="sxs-lookup"><span data-stu-id="4f8aa-133">In the preceding example, if you attempt to instantiate the abstract class by using a statement like this:</span></span>  
+ <span data-ttu-id="7b081-133">Yukarıdaki örnekte, aşağıdaki gibi bir ifade kullanarak soyut sınıfı örneğini oluşturmaya çalışırsanız:</span><span class="sxs-lookup"><span data-stu-id="7b081-133">In the preceding example, if you attempt to instantiate the abstract class by using a statement like this:</span></span>  
   
 ```csharp
 BaseClass bc = new BaseClass();   // Error  
 ```  
   
-<span data-ttu-id="4f8aa-134">Derleyici 'BaseClass' soyut sınıfının bir örneğini oluşturamazsınız belirten bir hata alırsınız.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-134">You will get an error saying that the compiler cannot create an instance of the abstract class 'BaseClass'.</span></span>  
+<span data-ttu-id="7b081-134">Derleyicinin ' BaseClass ' soyut sınıfının bir örneğini oluşturkullanılamadığını belirten bir hata alırsınız.</span><span class="sxs-lookup"><span data-stu-id="7b081-134">You will get an error saying that the compiler cannot create an instance of the abstract class 'BaseClass'.</span></span>  
   
-## <a name="c-language-specification"></a><span data-ttu-id="4f8aa-135">C# Dil Belirtimi</span><span class="sxs-lookup"><span data-stu-id="4f8aa-135">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="7b081-135">C# Dil Belirtimi</span><span class="sxs-lookup"><span data-stu-id="7b081-135">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="4f8aa-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4f8aa-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7b081-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7b081-136">See also</span></span>
 
-- [<span data-ttu-id="4f8aa-137">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="4f8aa-137">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="4f8aa-138">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="4f8aa-138">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="4f8aa-139">Değiştiriciler</span><span class="sxs-lookup"><span data-stu-id="4f8aa-139">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)
-- [<span data-ttu-id="4f8aa-140">virtual</span><span class="sxs-lookup"><span data-stu-id="4f8aa-140">virtual</span></span>](../../../csharp/language-reference/keywords/virtual.md)
-- [<span data-ttu-id="4f8aa-141">override</span><span class="sxs-lookup"><span data-stu-id="4f8aa-141">override</span></span>](../../../csharp/language-reference/keywords/override.md)
-- [<span data-ttu-id="4f8aa-142">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="4f8aa-142">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="7b081-137">C#Başvurunun</span><span class="sxs-lookup"><span data-stu-id="7b081-137">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="7b081-138">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="7b081-138">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="7b081-139">Değiştiriciler</span><span class="sxs-lookup"><span data-stu-id="7b081-139">Modifiers</span></span>](./modifiers.md)
+- [<span data-ttu-id="7b081-140">virtual</span><span class="sxs-lookup"><span data-stu-id="7b081-140">virtual</span></span>](./virtual.md)
+- [<span data-ttu-id="7b081-141">override</span><span class="sxs-lookup"><span data-stu-id="7b081-141">override</span></span>](./override.md)
+- [<span data-ttu-id="7b081-142">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="7b081-142">C# Keywords</span></span>](./index.md)

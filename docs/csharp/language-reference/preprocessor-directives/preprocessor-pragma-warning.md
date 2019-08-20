@@ -1,5 +1,5 @@
 ---
-title: '#pragma Uyarısı - C# başvurusu'
+title: '#pragma uyarı- C# başvuru'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,33 +7,33 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 0145df533572ff9d5004a653bb232a7ff60af5f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e34df66add032ad6324ac59a34f93b213d39ab48
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61660001"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608551"
 ---
-# <a name="pragma-warning-c-reference"></a><span data-ttu-id="93a00-102">#pragma uyarısı (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="93a00-102">#pragma warning (C# Reference)</span></span>
-<span data-ttu-id="93a00-103">`#pragma warning` etkinleştirebilir veya belirli uyarıları devre dışı bırak.</span><span class="sxs-lookup"><span data-stu-id="93a00-103">`#pragma warning` can enable or disable certain warnings.</span></span>  
+# <a name="pragma-warning-c-reference"></a><span data-ttu-id="6ece0-102">#pragma uyarısı (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="6ece0-102">#pragma warning (C# Reference)</span></span>
+<span data-ttu-id="6ece0-103">`#pragma warning`Belirli uyarıları etkinleştirebilir veya devre dışı bırakabilir.</span><span class="sxs-lookup"><span data-stu-id="6ece0-103">`#pragma warning` can enable or disable certain warnings.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93a00-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="93a00-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6ece0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6ece0-104">Syntax</span></span>  
   
 ```csharp
 #pragma warning disable warning-list  
 #pragma warning restore warning-list  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="93a00-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="93a00-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6ece0-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6ece0-105">Parameters</span></span>  
  `warning-list`  
- <span data-ttu-id="93a00-106">Uyarı numaralarını virgülle ayrılmış listesi.</span><span class="sxs-lookup"><span data-stu-id="93a00-106">A comma-separated list of warning numbers.</span></span> <span data-ttu-id="93a00-107">"CS" ön eki isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="93a00-107">The "CS" prefix is optional.</span></span>  
+ <span data-ttu-id="6ece0-106">Uyarı numaralarının virgülle ayrılmış bir listesi.</span><span class="sxs-lookup"><span data-stu-id="6ece0-106">A comma-separated list of warning numbers.</span></span> <span data-ttu-id="6ece0-107">"CS" ön eki isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="6ece0-107">The "CS" prefix is optional.</span></span>  
   
- <span data-ttu-id="93a00-108">Hiçbir uyarı numaralarını belirtildiğinde `disable` tüm uyarıları devre dışı bırakır ve `restore` tüm uyarıları etkinleştirir.</span><span class="sxs-lookup"><span data-stu-id="93a00-108">When no warning numbers are specified, `disable` disables all warnings and `restore` enables all warnings.</span></span>  
+ <span data-ttu-id="6ece0-108">Hiçbir uyarı numarası belirtilmediğinde, `disable` tüm uyarıları devre dışı bırakır ve `restore` tüm uyarıları etkinleştirilir.</span><span class="sxs-lookup"><span data-stu-id="6ece0-108">When no warning numbers are specified, `disable` disables all warnings and `restore` enables all warnings.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="93a00-109">Visual Studio'da uyarı numaralarını bulmak için projenizi derleyin ve uyarısı sayıları bulun **çıkış** penceresi.</span><span class="sxs-lookup"><span data-stu-id="93a00-109">To find warning numbers in Visual Studio, build your project and then look for the warning numbers in the **Output** window.</span></span>  
+>  <span data-ttu-id="6ece0-109">Visual Studio 'da uyarı numaralarını bulmak için projenizi derleyin ve ardından **Çıkış** penceresinde uyarı numaralarını arayın.</span><span class="sxs-lookup"><span data-stu-id="6ece0-109">To find warning numbers in Visual Studio, build your project and then look for the warning numbers in the **Output** window.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="93a00-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="93a00-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="6ece0-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="6ece0-110">Example</span></span>  
   
 ```csharp
 // pragma_warning.cs  
@@ -59,9 +59,9 @@ public class D
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="93a00-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="93a00-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6ece0-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6ece0-111">See also</span></span>
 
-- [<span data-ttu-id="93a00-112">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="93a00-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="93a00-113">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="93a00-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="93a00-114">C# Ön İşlemci Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="93a00-114">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
-- [<span data-ttu-id="93a00-115">C# Derleyici Hataları</span><span class="sxs-lookup"><span data-stu-id="93a00-115">C# Compiler Errors</span></span>](../../../csharp/language-reference/compiler-messages/index.md)
+- [<span data-ttu-id="6ece0-112">C#Başvurunun</span><span class="sxs-lookup"><span data-stu-id="6ece0-112">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="6ece0-113">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="6ece0-113">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="6ece0-114">C# Ön İşlemci Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="6ece0-114">C# Preprocessor Directives</span></span>](./index.md)
+- [<span data-ttu-id="6ece0-115">C# Derleyici Hataları</span><span class="sxs-lookup"><span data-stu-id="6ece0-115">C# Compiler Errors</span></span>](../compiler-messages/index.md)

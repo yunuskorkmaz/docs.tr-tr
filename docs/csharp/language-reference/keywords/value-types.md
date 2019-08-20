@@ -9,104 +9,104 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 72771ee494b6be7142ce3f9bec43dcb8aa8a8401
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 2bbbac098096b46c659c4efde2d1c998c8e2d9ae
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363077"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608384"
 ---
-# <a name="value-types-c-reference"></a><span data-ttu-id="1ae3f-102">Değer türleri (C# başvuru)</span><span class="sxs-lookup"><span data-stu-id="1ae3f-102">Value types (C# Reference)</span></span>
+# <a name="value-types-c-reference"></a><span data-ttu-id="7cd3b-102">Değer türleri (C# başvuru)</span><span class="sxs-lookup"><span data-stu-id="7cd3b-102">Value types (C# Reference)</span></span>
 
-<span data-ttu-id="1ae3f-103">İki tür değer türü vardır:</span><span class="sxs-lookup"><span data-stu-id="1ae3f-103">There are two kinds of value types:</span></span>
+<span data-ttu-id="7cd3b-103">İki tür değer türü vardır:</span><span class="sxs-lookup"><span data-stu-id="7cd3b-103">There are two kinds of value types:</span></span>
 
-- [<span data-ttu-id="1ae3f-104">Yapılar</span><span class="sxs-lookup"><span data-stu-id="1ae3f-104">Structs</span></span>](struct.md)
+- [<span data-ttu-id="7cd3b-104">Yapılar</span><span class="sxs-lookup"><span data-stu-id="7cd3b-104">Structs</span></span>](struct.md)
 
-- [<span data-ttu-id="1ae3f-105">Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="1ae3f-105">Enumerations</span></span>](enum.md)
+- [<span data-ttu-id="7cd3b-105">Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="7cd3b-105">Enumerations</span></span>](enum.md)
 
-## <a name="main-features-of-value-types"></a><span data-ttu-id="1ae3f-106">Değer türlerinin ana özellikleri</span><span class="sxs-lookup"><span data-stu-id="1ae3f-106">Main features of value types</span></span>
+## <a name="main-features-of-value-types"></a><span data-ttu-id="7cd3b-106">Değer türlerinin ana özellikleri</span><span class="sxs-lookup"><span data-stu-id="7cd3b-106">Main features of value types</span></span>
 
-<span data-ttu-id="1ae3f-107">Değer türünde bir değişken, türün bir değerini içerir.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-107">A variable of a value type contains a value of the type.</span></span> <span data-ttu-id="1ae3f-108">Örneğin, `int` türünün bir değişkeni değeri `42`içerebilir.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-108">For example, a variable of the `int` type might contain the value `42`.</span></span> <span data-ttu-id="1ae3f-109">Bu, bir nesne olarak da bilinen tür örneğine başvuru içeren bir başvuru türü değişkeninden farklıdır.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-109">This differs from a variable of a reference type, which contains a reference to an instance of the type, also known as an object.</span></span> <span data-ttu-id="1ae3f-110">Değer türünde bir değişkene yeni bir değer atadığınızda, bu değer kopyalanır.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-110">When you assign a new value to a variable of a value type, that value is copied.</span></span> <span data-ttu-id="1ae3f-111">Başvuru türündeki bir değişkene yeni bir değer atadığınızda, başvuru nesnenin kendisi değil, kopyalanır.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-111">When you assign a new value to a variable of a reference type, the reference is copied, not the object itself.</span></span>
+<span data-ttu-id="7cd3b-107">Değer türünde bir değişken, türün bir değerini içerir.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-107">A variable of a value type contains a value of the type.</span></span> <span data-ttu-id="7cd3b-108">Örneğin, `int` türünün bir değişkeni değeri `42`içerebilir.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-108">For example, a variable of the `int` type might contain the value `42`.</span></span> <span data-ttu-id="7cd3b-109">Bu, bir nesne olarak da bilinen tür örneğine başvuru içeren bir başvuru türü değişkeninden farklıdır.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-109">This differs from a variable of a reference type, which contains a reference to an instance of the type, also known as an object.</span></span> <span data-ttu-id="7cd3b-110">Değer türünde bir değişkene yeni bir değer atadığınızda, bu değer kopyalanır.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-110">When you assign a new value to a variable of a value type, that value is copied.</span></span> <span data-ttu-id="7cd3b-111">Başvuru türündeki bir değişkene yeni bir değer atadığınızda, başvuru nesnenin kendisi değil, kopyalanır.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-111">When you assign a new value to a variable of a reference type, the reference is copied, not the object itself.</span></span>
 
-<span data-ttu-id="1ae3f-112">Tüm değer türleri, <xref:System.ValueType?displayProperty=nameWithType>öğesinden örtük olarak türetilir.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-112">All value types are derived implicitly from the <xref:System.ValueType?displayProperty=nameWithType>.</span></span>
+<span data-ttu-id="7cd3b-112">Tüm değer türleri, <xref:System.ValueType?displayProperty=nameWithType>öğesinden örtük olarak türetilir.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-112">All value types are derived implicitly from the <xref:System.ValueType?displayProperty=nameWithType>.</span></span>
 
-<span data-ttu-id="1ae3f-113">Başvuru türlerinden farklı olarak, bir değer türünden yeni bir tür türemezsiniz.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-113">Unlike with reference types, you cannot derive a new type from a value type.</span></span> <span data-ttu-id="1ae3f-114">Ancak, başvuru türleri gibi yapılar, arabirimler uygulayabilir.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-114">However, like reference types, structs can implement interfaces.</span></span>
+<span data-ttu-id="7cd3b-113">Başvuru türlerinden farklı olarak, bir değer türünden yeni bir tür türemezsiniz.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-113">Unlike with reference types, you cannot derive a new type from a value type.</span></span> <span data-ttu-id="7cd3b-114">Ancak, başvuru türleri gibi yapılar, arabirimler uygulayabilir.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-114">However, like reference types, structs can implement interfaces.</span></span>
 
-<span data-ttu-id="1ae3f-115">Değer türü değişkenleri varsayılan `null` olarak olamaz.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-115">Value type variables cannot be `null` by default.</span></span> <span data-ttu-id="1ae3f-116">Ancak, karşılık gelen [null yapılabilir türlerin](../../../csharp/programming-guide/nullable-types/index.md) değişkenleri olabilir `null`.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-116">However, variables of the corresponding [nullable types](../../../csharp/programming-guide/nullable-types/index.md) can be `null`.</span></span>
+<span data-ttu-id="7cd3b-115">Değer türü değişkenleri varsayılan `null` olarak olamaz.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-115">Value type variables cannot be `null` by default.</span></span> <span data-ttu-id="7cd3b-116">Ancak, karşılık gelen [null yapılabilir türlerin](../../programming-guide/nullable-types/index.md) değişkenleri olabilir `null`.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-116">However, variables of the corresponding [nullable types](../../programming-guide/nullable-types/index.md) can be `null`.</span></span>
 
-<span data-ttu-id="1ae3f-117">Her değer türünün, bu türün varsayılan değerini Başlatan örtük parametresiz bir Oluşturucusu vardır.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-117">Each value type has an implicit parameterless constructor that initializes the default value of that type.</span></span> <span data-ttu-id="1ae3f-118">Değer türlerinin varsayılan değerleri hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="1ae3f-118">For information about default values of value types, see [Default values table](default-values-table.md).</span></span>
+<span data-ttu-id="7cd3b-117">Her değer türünün, bu türün varsayılan değerini Başlatan örtük parametresiz bir Oluşturucusu vardır.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-117">Each value type has an implicit parameterless constructor that initializes the default value of that type.</span></span> <span data-ttu-id="7cd3b-118">Değer türlerinin varsayılan değerleri hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="7cd3b-118">For information about default values of value types, see [Default values table](default-values-table.md).</span></span>
 
-## <a name="simple-types"></a><span data-ttu-id="1ae3f-119">Basit türler</span><span class="sxs-lookup"><span data-stu-id="1ae3f-119">Simple types</span></span>
+## <a name="simple-types"></a><span data-ttu-id="7cd3b-119">Basit türler</span><span class="sxs-lookup"><span data-stu-id="7cd3b-119">Simple types</span></span>
 
-<span data-ttu-id="1ae3f-120">*Basit türler* tarafından C# sunulan önceden tanımlanmış bir yapı türleri kümesidir ve aşağıdaki türleri içerir:</span><span class="sxs-lookup"><span data-stu-id="1ae3f-120">The *simple types* are a set of predefined struct types provided by C# and comprise the following types:</span></span>
+<span data-ttu-id="7cd3b-120">*Basit türler* tarafından C# sunulan önceden tanımlanmış bir yapı türleri kümesidir ve aşağıdaki türleri içerir:</span><span class="sxs-lookup"><span data-stu-id="7cd3b-120">The *simple types* are a set of predefined struct types provided by C# and comprise the following types:</span></span>
 
-- <span data-ttu-id="1ae3f-121">[Integral türleri](../builtin-types/integral-numeric-types.md): tamsayı sayısal türleri ve [char](char.md) türü</span><span class="sxs-lookup"><span data-stu-id="1ae3f-121">[Integral types](../builtin-types/integral-numeric-types.md): integer numeric types and the [char](char.md) type</span></span>
-- [<span data-ttu-id="1ae3f-122">Kayan nokta türleri</span><span class="sxs-lookup"><span data-stu-id="1ae3f-122">Floating-point types</span></span>](../builtin-types/floating-point-numeric-types.md)
-- [<span data-ttu-id="1ae3f-123">bool</span><span class="sxs-lookup"><span data-stu-id="1ae3f-123">bool</span></span>](bool.md)
+- <span data-ttu-id="7cd3b-121">[Integral türleri](../builtin-types/integral-numeric-types.md): tamsayı sayısal türleri ve [char](char.md) türü</span><span class="sxs-lookup"><span data-stu-id="7cd3b-121">[Integral types](../builtin-types/integral-numeric-types.md): integer numeric types and the [char](char.md) type</span></span>
+- [<span data-ttu-id="7cd3b-122">Kayan nokta türleri</span><span class="sxs-lookup"><span data-stu-id="7cd3b-122">Floating-point types</span></span>](../builtin-types/floating-point-numeric-types.md)
+- [<span data-ttu-id="7cd3b-123">bool</span><span class="sxs-lookup"><span data-stu-id="7cd3b-123">bool</span></span>](bool.md)
 
-<span data-ttu-id="1ae3f-124">Basit türler anahtar sözcükler aracılığıyla tanımlanır, ancak bu anahtar sözcükler yalnızca <xref:System> ad alanındaki önceden tanımlanmış yapı türleri için diğer adlardır.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-124">The simple types are identified through keywords, but these keywords are simply aliases for predefined struct types in the <xref:System> namespace.</span></span> <span data-ttu-id="1ae3f-125">Örneğin, [int](../builtin-types/integral-numeric-types.md) diğer bir addır <xref:System.Int32?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-125">For example, [int](../builtin-types/integral-numeric-types.md) is an alias of <xref:System.Int32?displayProperty=nameWithType>.</span></span> <span data-ttu-id="1ae3f-126">Diğer adların tam listesi için bkz. [Yerleşik türler tablosu](built-in-types-table.md).</span><span class="sxs-lookup"><span data-stu-id="1ae3f-126">For a complete list of aliases, see [Built-in types table](built-in-types-table.md).</span></span>
+<span data-ttu-id="7cd3b-124">Basit türler anahtar sözcükler aracılığıyla tanımlanır, ancak bu anahtar sözcükler yalnızca <xref:System> ad alanındaki önceden tanımlanmış yapı türleri için diğer adlardır.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-124">The simple types are identified through keywords, but these keywords are simply aliases for predefined struct types in the <xref:System> namespace.</span></span> <span data-ttu-id="7cd3b-125">Örneğin, [int](../builtin-types/integral-numeric-types.md) diğer bir addır <xref:System.Int32?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-125">For example, [int](../builtin-types/integral-numeric-types.md) is an alias of <xref:System.Int32?displayProperty=nameWithType>.</span></span> <span data-ttu-id="7cd3b-126">Diğer adların tam listesi için bkz. [Yerleşik türler tablosu](built-in-types-table.md).</span><span class="sxs-lookup"><span data-stu-id="7cd3b-126">For a complete list of aliases, see [Built-in types table](built-in-types-table.md).</span></span>
 
-<span data-ttu-id="1ae3f-127">Basit türler, bazı ek işlemlere izin veren diğer yapı türlerinden farklıdır:</span><span class="sxs-lookup"><span data-stu-id="1ae3f-127">The simple types differ from other struct types in that they permit certain additional operations:</span></span>
+<span data-ttu-id="7cd3b-127">Basit türler, bazı ek işlemlere izin veren diğer yapı türlerinden farklıdır:</span><span class="sxs-lookup"><span data-stu-id="7cd3b-127">The simple types differ from other struct types in that they permit certain additional operations:</span></span>
 
-- <span data-ttu-id="1ae3f-128">Basit türler, değişmez değerler kullanılarak başlatılabilir.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-128">Simple types can be initialized by using literals.</span></span> <span data-ttu-id="1ae3f-129">Örneğin, `'A'` türünün `char` bir sabit değeri ve `2001` türünün `int`bir sabit değeri.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-129">For example, `'A'` is a literal of the type `char` and `2001` is a literal of the type `int`.</span></span>
+- <span data-ttu-id="7cd3b-128">Basit türler, değişmez değerler kullanılarak başlatılabilir.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-128">Simple types can be initialized by using literals.</span></span> <span data-ttu-id="7cd3b-129">Örneğin, `'A'` türünün `char` bir sabit değeri ve `2001` türünün `int`bir sabit değeri.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-129">For example, `'A'` is a literal of the type `char` and `2001` is a literal of the type `int`.</span></span>
 
-- <span data-ttu-id="1ae3f-130">[Const](const.md) anahtar sözcüğüyle basit türlerin sabitlerini bildirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-130">You can declare constants of the simple types with the [const](const.md) keyword.</span></span> <span data-ttu-id="1ae3f-131">Diğer yapı türlerinin sabitlerinin olması mümkün değildir.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-131">It's not possible to have constants of other struct types.</span></span>
+- <span data-ttu-id="7cd3b-130">[Const](const.md) anahtar sözcüğüyle basit türlerin sabitlerini bildirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-130">You can declare constants of the simple types with the [const](const.md) keyword.</span></span> <span data-ttu-id="7cd3b-131">Diğer yapı türlerinin sabitlerinin olması mümkün değildir.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-131">It's not possible to have constants of other struct types.</span></span>
 
-- <span data-ttu-id="1ae3f-132">İşlenenleri hepsi basit tür sabitleri olan sabit ifadeler, derleme zamanında değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-132">Constant expressions, whose operands are all simple type constants, are evaluated at compile time.</span></span>
+- <span data-ttu-id="7cd3b-132">İşlenenleri hepsi basit tür sabitleri olan sabit ifadeler, derleme zamanında değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-132">Constant expressions, whose operands are all simple type constants, are evaluated at compile time.</span></span>
 
-<span data-ttu-id="1ae3f-133">Daha fazla bilgi için, [ C# dil belirtiminin](../language-specification/index.md) [basit türler](~/_csharplang/spec/types.md#simple-types) bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-133">For more information, see the [Simple types](~/_csharplang/spec/types.md#simple-types) section of the [C# language specification](../language-specification/index.md).</span></span>
+<span data-ttu-id="7cd3b-133">Daha fazla bilgi için, [ C# dil belirtiminin](../language-specification/index.md) [basit türler](~/_csharplang/spec/types.md#simple-types) bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-133">For more information, see the [Simple types](~/_csharplang/spec/types.md#simple-types) section of the [C# language specification](../language-specification/index.md).</span></span>
 
-## <a name="initializing-value-types"></a><span data-ttu-id="1ae3f-134">Değer türlerini başlatma</span><span class="sxs-lookup"><span data-stu-id="1ae3f-134">Initializing value types</span></span>
+## <a name="initializing-value-types"></a><span data-ttu-id="7cd3b-134">Değer türlerini başlatma</span><span class="sxs-lookup"><span data-stu-id="7cd3b-134">Initializing value types</span></span>
 
-<span data-ttu-id="1ae3f-135">Yerel değişkenlerin kullanılmadan C# önce başlatılması gerekir.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-135">Local variables in C# must be initialized before they are used.</span></span> <span data-ttu-id="1ae3f-136">Örneğin, aşağıdaki örnekte olduğu gibi, başlatma olmadan yerel bir değişken bildirebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="1ae3f-136">For example, you might declare a local variable without initialization as in the following example:</span></span>
+<span data-ttu-id="7cd3b-135">Yerel değişkenlerin kullanılmadan C# önce başlatılması gerekir.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-135">Local variables in C# must be initialized before they are used.</span></span> <span data-ttu-id="7cd3b-136">Örneğin, aşağıdaki örnekte olduğu gibi, başlatma olmadan yerel bir değişken bildirebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="7cd3b-136">For example, you might declare a local variable without initialization as in the following example:</span></span>
 
 ```csharp
 int myInt;
 ```
 
-<span data-ttu-id="1ae3f-137">Bunu, başlamadan önce kullanamazsınız.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-137">You cannot use it before you initialize it.</span></span> <span data-ttu-id="1ae3f-138">Aşağıdaki ifadeyi kullanarak başlatabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="1ae3f-138">You can initialize it using the following statement:</span></span>
+<span data-ttu-id="7cd3b-137">Bunu, başlamadan önce kullanamazsınız.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-137">You cannot use it before you initialize it.</span></span> <span data-ttu-id="7cd3b-138">Aşağıdaki ifadeyi kullanarak başlatabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="7cd3b-138">You can initialize it using the following statement:</span></span>
 
 ```csharp
 myInt = new int();  // Invoke parameterless constructor for int type.
 ```
 
-<span data-ttu-id="1ae3f-139">Bu ifade aşağıdaki ifadeye eşdeğerdir:</span><span class="sxs-lookup"><span data-stu-id="1ae3f-139">This statement is equivalent to the following statement:</span></span>
+<span data-ttu-id="7cd3b-139">Bu ifade aşağıdaki ifadeye eşdeğerdir:</span><span class="sxs-lookup"><span data-stu-id="7cd3b-139">This statement is equivalent to the following statement:</span></span>
 
 ```csharp
 myInt = 0;         // Assign an initial value, 0 in this example.
 ```
 
-<span data-ttu-id="1ae3f-140">Tabii ki, bildirimi ve başlatmayı aşağıdaki örneklerle aynı bildirimde bulabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="1ae3f-140">You can, of course, have the declaration and the initialization in the same statement as in the following examples:</span></span>
+<span data-ttu-id="7cd3b-140">Tabii ki, bildirimi ve başlatmayı aşağıdaki örneklerle aynı bildirimde bulabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="7cd3b-140">You can, of course, have the declaration and the initialization in the same statement as in the following examples:</span></span>
 
 ```csharp
 int myInt = new int();
 ```
 
-<span data-ttu-id="1ae3f-141">veya</span><span class="sxs-lookup"><span data-stu-id="1ae3f-141">–or–</span></span>
+<span data-ttu-id="7cd3b-141">veya</span><span class="sxs-lookup"><span data-stu-id="7cd3b-141">–or–</span></span>
 
 ```csharp
 int myInt = 0;
 ```
 
-<span data-ttu-id="1ae3f-142">[New](../operators/new-operator.md) işlecini kullanmak, belirli türde parametresiz oluşturucuyu çağırır ve varsayılan değeri değişkenine atar.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-142">Using the [new](../operators/new-operator.md) operator calls the parameterless constructor of the specific type and assigns the default value to the variable.</span></span> <span data-ttu-id="1ae3f-143">Önceki örnekte, parametresiz Oluşturucu değerine `0` `myInt`atanır.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-143">In the preceding example, the parameterless constructor assigned the value `0` to `myInt`.</span></span> <span data-ttu-id="1ae3f-144">Parametresiz oluşturucular çağırarak atanan değerler hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="1ae3f-144">For more information about values assigned by calling parameterless constructors, see [Default values table](default-values-table.md).</span></span>
+<span data-ttu-id="7cd3b-142">[New](../operators/new-operator.md) işlecini kullanmak, belirli türde parametresiz oluşturucuyu çağırır ve varsayılan değeri değişkenine atar.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-142">Using the [new](../operators/new-operator.md) operator calls the parameterless constructor of the specific type and assigns the default value to the variable.</span></span> <span data-ttu-id="7cd3b-143">Önceki örnekte, parametresiz Oluşturucu değerine `0` `myInt`atanır.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-143">In the preceding example, the parameterless constructor assigned the value `0` to `myInt`.</span></span> <span data-ttu-id="7cd3b-144">Parametresiz oluşturucular çağırarak atanan değerler hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="7cd3b-144">For more information about values assigned by calling parameterless constructors, see [Default values table](default-values-table.md).</span></span>
 
-<span data-ttu-id="1ae3f-145">Kullanıcı tanımlı türlerle, parametresiz oluşturucuyu çağırmak için [Yeni](../operators/new-operator.md) ' yi kullanın.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-145">With user-defined types, use [new](../operators/new-operator.md) to invoke the parameterless constructor.</span></span> <span data-ttu-id="1ae3f-146">Örneğin, aşağıdaki ifade `Point` yapının parametresiz oluşturucusunu çağırır:</span><span class="sxs-lookup"><span data-stu-id="1ae3f-146">For example, the following statement invokes the parameterless constructor of the `Point` struct:</span></span>
+<span data-ttu-id="7cd3b-145">Kullanıcı tanımlı türlerle, parametresiz oluşturucuyu çağırmak için [Yeni](../operators/new-operator.md) ' yi kullanın.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-145">With user-defined types, use [new](../operators/new-operator.md) to invoke the parameterless constructor.</span></span> <span data-ttu-id="7cd3b-146">Örneğin, aşağıdaki ifade `Point` yapının parametresiz oluşturucusunu çağırır:</span><span class="sxs-lookup"><span data-stu-id="7cd3b-146">For example, the following statement invokes the parameterless constructor of the `Point` struct:</span></span>
 
 ```csharp
 var p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
-<span data-ttu-id="1ae3f-147">Bu çağrıdan sonra yapının kesin olarak atanması kabul edilir; diğer bir deyişle, tüm üyeleri varsayılan değerlerine başlatılır.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-147">After this call, the struct is considered to be definitely assigned; that is, all its members are initialized to their default values.</span></span>
+<span data-ttu-id="7cd3b-147">Bu çağrıdan sonra yapının kesin olarak atanması kabul edilir; diğer bir deyişle, tüm üyeleri varsayılan değerlerine başlatılır.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-147">After this call, the struct is considered to be definitely assigned; that is, all its members are initialized to their default values.</span></span>
 
-<span data-ttu-id="1ae3f-148">`new` İşleci hakkında daha fazla bilgi için bkz. [Yeni](../operators/new-operator.md).</span><span class="sxs-lookup"><span data-stu-id="1ae3f-148">For more information about the `new` operator, see [new](../operators/new-operator.md).</span></span>
+<span data-ttu-id="7cd3b-148">`new` İşleci hakkında daha fazla bilgi için bkz. [Yeni](../operators/new-operator.md).</span><span class="sxs-lookup"><span data-stu-id="7cd3b-148">For more information about the `new` operator, see [new](../operators/new-operator.md).</span></span>
 
-<span data-ttu-id="1ae3f-149">Sayısal türlerin çıkışını biçimlendirme hakkında daha fazla bilgi için bkz. [sayısal sonuçlar tablosunu biçimlendirme](formatting-numeric-results-table.md).</span><span class="sxs-lookup"><span data-stu-id="1ae3f-149">For information about formatting the output of numeric types, see [Formatting numeric results table](formatting-numeric-results-table.md).</span></span>
+<span data-ttu-id="7cd3b-149">Sayısal türlerin çıkışını biçimlendirme hakkında daha fazla bilgi için bkz. [sayısal sonuçlar tablosunu biçimlendirme](formatting-numeric-results-table.md).</span><span class="sxs-lookup"><span data-stu-id="7cd3b-149">For information about formatting the output of numeric types, see [Formatting numeric results table](formatting-numeric-results-table.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="1ae3f-150">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1ae3f-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7cd3b-150">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7cd3b-150">See also</span></span>
 
-- [<span data-ttu-id="1ae3f-151">C#Başvurunun</span><span class="sxs-lookup"><span data-stu-id="1ae3f-151">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="1ae3f-152">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="1ae3f-152">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="1ae3f-153">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="1ae3f-153">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="1ae3f-154">Türler</span><span class="sxs-lookup"><span data-stu-id="1ae3f-154">Types</span></span>](types.md)
-- [<span data-ttu-id="1ae3f-155">Başvuru Türleri</span><span class="sxs-lookup"><span data-stu-id="1ae3f-155">Reference Types</span></span>](reference-types.md)
-- [<span data-ttu-id="1ae3f-156">Null yapılabilir türler</span><span class="sxs-lookup"><span data-stu-id="1ae3f-156">Nullable types</span></span>](../../programming-guide/nullable-types/index.md)
+- [<span data-ttu-id="7cd3b-151">C#Başvurunun</span><span class="sxs-lookup"><span data-stu-id="7cd3b-151">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="7cd3b-152">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="7cd3b-152">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="7cd3b-153">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="7cd3b-153">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="7cd3b-154">Türler</span><span class="sxs-lookup"><span data-stu-id="7cd3b-154">Types</span></span>](types.md)
+- [<span data-ttu-id="7cd3b-155">Başvuru Türleri</span><span class="sxs-lookup"><span data-stu-id="7cd3b-155">Reference Types</span></span>](reference-types.md)
+- [<span data-ttu-id="7cd3b-156">Null yapılabilir türler</span><span class="sxs-lookup"><span data-stu-id="7cd3b-156">Nullable types</span></span>](../../programming-guide/nullable-types/index.md)
