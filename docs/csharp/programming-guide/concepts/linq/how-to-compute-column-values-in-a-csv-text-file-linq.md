@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Bir CSV metin dosyasındaki (LINQ) (C#) sütun değerlerini hesaplama'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 0bc212ab40bccf5612ef6dea85608c439d2105f4
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 08b4f936532b3ba3744ec31dc691b166e7ba7109
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012938"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594016"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Nasıl yapılır: Bir CSV metin dosyasındaki (LINQ) (C#) sütun değerlerini hesaplama
 Bu örnek, bir. csv dosyasının sütunlarında Sum, Average, min ve Max gibi toplam hesaplamaların nasıl gerçekleştirileceğini gösterir. Burada gösterilen örnek ilkeler diğer yapılandırılmış metin türlerine uygulanabilir.  
@@ -163,5 +163,5 @@ class SumColumns
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ ve dizeler (C#)](./linq-and-strings.md)
+- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)
