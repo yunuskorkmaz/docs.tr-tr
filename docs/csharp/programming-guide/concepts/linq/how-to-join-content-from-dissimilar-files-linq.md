@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Dosyalardan içerik (LINQ) katılın (C#)'
+title: 'Nasıl yapılır: Benzer olmayan dosyalardaki (LINQ) (C#) içerik birleştirin'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 14f9c9917aedbc0beeeddae789b835613d1badc8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585757"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593164"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="13de3-102">Nasıl yapılır: Dosyalardan içerik (LINQ) katılın (C#)</span><span class="sxs-lookup"><span data-stu-id="13de3-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="c9c01-102">Nasıl yapılır: Benzer olmayan dosyalardaki (LINQ) (C#) içerik birleştirin</span><span class="sxs-lookup"><span data-stu-id="c9c01-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
 
-<span data-ttu-id="13de3-103">Bu örnek, eşleşen bir anahtar olarak kullanılan genel bir değer paylaşan iki virgülle ayrılmış dosyalardan alınan veriler nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="13de3-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="13de3-104">Bu teknik, iki elektronik alınan verileri birleştirmek varsa veya bir elektronik tablo ve dosya yeni bir dosyaya başka bir biçime sahip yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="13de3-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="13de3-105">Örnek yapılandırılmış metin herhangi bir türden ile çalışacak şekilde değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="13de3-105">You can modify the example to work with any kind of structured text.</span></span>  
+<span data-ttu-id="c9c01-103">Bu örnek, eşleşen anahtar olarak kullanılan ortak bir değeri paylaşan, virgülle ayrılmış iki dosyadan verilerin nasıl birleştirileceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="c9c01-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="c9c01-104">Bu teknik, iki elektronik tablodan veya bir elektronik tabloda ve başka bir biçime sahip bir dosyadan yeni bir dosyaya veri birleştirmek istiyorsanız yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="c9c01-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="c9c01-105">Örneği herhangi bir tür yapılandırılmış metinle çalışacak şekilde değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c9c01-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-## <a name="to-create-the-data-files"></a><span data-ttu-id="13de3-106">Veri dosyaları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="13de3-106">To create the data files</span></span>
+## <a name="to-create-the-data-files"></a><span data-ttu-id="c9c01-106">Veri dosyalarını oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="c9c01-106">To create the data files</span></span>
   
-1. <span data-ttu-id="13de3-107">Aşağıdaki satırları adlı bir dosyaya kopyalayın *scores.csv* ve proje klasörünüze kaydedin.</span><span class="sxs-lookup"><span data-stu-id="13de3-107">Copy the following lines into a file that is named *scores.csv* and save it to your project folder.</span></span> <span data-ttu-id="13de3-108">Dosya, elektronik tablo verilerini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="13de3-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="13de3-109">Öğrenci Kimliği sütun 1 ve 2'den 5 test puanlarını sütunlardır.</span><span class="sxs-lookup"><span data-stu-id="13de3-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
+1. <span data-ttu-id="c9c01-107">Aşağıdaki satırları *puanlarını. csv* adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin.</span><span class="sxs-lookup"><span data-stu-id="c9c01-107">Copy the following lines into a file that is named *scores.csv* and save it to your project folder.</span></span> <span data-ttu-id="c9c01-108">Dosya, elektronik tablo verilerini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c9c01-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="c9c01-109">1\. sütun, öğrencinin KIMLIĞIDIR ve 2 ile 5 arasındaki sütunlar test puanlarıdır.</span><span class="sxs-lookup"><span data-stu-id="c9c01-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ ms.locfileid: "65585757"
     122, 94, 92, 91, 91  
     ```  
   
-2. <span data-ttu-id="13de3-110">Aşağıdaki satırları adlı bir dosyaya kopyalayın *names.csv* ve proje klasörünüze kaydedin.</span><span class="sxs-lookup"><span data-stu-id="13de3-110">Copy the following lines into a file that is named *names.csv* and save it to your project folder.</span></span> <span data-ttu-id="13de3-111">Öğrenci Soyadı, ad ve Öğrenci Kimliği içeren bir elektronik tablo dosyasını temsil eder</span><span class="sxs-lookup"><span data-stu-id="13de3-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
+2. <span data-ttu-id="c9c01-110">Aşağıdaki satırları *Names. csv* adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin.</span><span class="sxs-lookup"><span data-stu-id="c9c01-110">Copy the following lines into a file that is named *names.csv* and save it to your project folder.</span></span> <span data-ttu-id="c9c01-111">Dosya, öğrencinin Soyadı, adı ve öğrenci KIMLIĞINI içeren bir elektronik tabloyu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c9c01-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -49,7 +49,7 @@ ms.locfileid: "65585757"
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a><span data-ttu-id="13de3-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="13de3-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c9c01-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="c9c01-112">Example</span></span>  
 
 ```csharp
 using System;
@@ -124,7 +124,7 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="see-also"></a><span data-ttu-id="13de3-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="13de3-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9c01-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c9c01-113">See also</span></span>
 
-- [<span data-ttu-id="13de3-114">LINQ ve dizeler (C#)</span><span class="sxs-lookup"><span data-stu-id="13de3-114">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="13de3-115">LINQ ve dosya dizinleri (C#)</span><span class="sxs-lookup"><span data-stu-id="13de3-115">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="c9c01-114">LINQ ve dizeler (C#)</span><span class="sxs-lookup"><span data-stu-id="c9c01-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="c9c01-115">LINQ ve dosya dizinleri (C#)</span><span class="sxs-lookup"><span data-stu-id="c9c01-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
