@@ -1,5 +1,5 @@
 ---
-title: '#else - C# başvurusu'
+title: '#Else- C# başvuru'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - '#else directive [C#]'
 ms.assetid: 6a347322-cfa2-4a86-98f8-ddfa2cb7d4db
-ms.openlocfilehash: 67d3e6b8fc136e16fb0e307a9f8ceca494169bfc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6a514f71b3526b2ffe347cdd971b81907fb0aad
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689001"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605724"
 ---
 # <a name="else-c-reference"></a>#else (C# Başvurusu)
-`#else` bir bileşik koşullu yönergesi oluşturmanıza olanak tanır şekilde, önceki ifadeler hiçbiri [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) veya (isteğe bağlı) [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) yönergeleri değerlendirmek için `true`, derleyicinin tüm değerlendirecek arasında kod `#else` ve sonraki `#endif`.  
+`#else`, yukarıdaki [#if](./preprocessor-if.md) veya (isteğe bağlı) [#elif](./preprocessor-elif.md) yönergelerinden hiçbiri olarak `true`değerlendiriyorsa, derleyicinin tüm kodu ve arasındaki `#else` daha `#endif`sonra.  
   
 ## <a name="remarks"></a>Açıklamalar  
- [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) sonraki ön işlemci yönergesinden sonra olmalıdır `#else`. Bkz: [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) nasıl kullanılacağına ilişkin bir örnek `#else`.  
+ [#endif](./preprocessor-endif.md) sonraki ön işlemci yönergesi `#else`olmalıdır. Öğesinin [](./preprocessor-if.md) nasıl kullanılacağına `#else`ilişkin bir örnek için bkz. #if.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [C# Ön İşlemci Yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [C#Başvurunun](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Ön İşlemci Yönergeleri](./index.md)

@@ -1,5 +1,5 @@
 ---
-title: bağlamsal anahtar sözcük - C# başvurusu
+title: Bağlamsal anahtar sözcüğe göre C# -başvuru
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,23 +8,23 @@ f1_keywords:
 helpviewer_keywords:
 - by keyword [C#]
 ms.assetid: efe6f0e3-be40-4df2-a144-c7db968ae052
-ms.openlocfilehash: d8632c9fd722a7e9864628013e87b24d7e6633c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23daf2aaf5d9456c76c5b2ac889243b1ed31b077
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661977"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602217"
 ---
 # <a name="by-c-reference"></a>by (C# Başvurusu)
 
-`by` Bağlamsal anahtar sözcüğü kullanılır `group` yan tümcesi bir sorgu ifadesinde, döndürülen öğeleri nasıl gruplandırılmalıdır belirtmek için. Daha fazla bilgi için [group yan tümcesi](../../../csharp/language-reference/keywords/group-clause.md).
+Bağlamsal anahtar sözcüğü, döndürülen öğelerin nasıl `group` gruplanacağını belirtmek için bir sorgu ifadesinin yan tümcesinde kullanılır. `by` Daha fazla bilgi için bkz. [Group yan tümcesi](./group-clause.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek kullanımını gösterir `by` içindeki bağlamsal anahtar sözcüğü bir `group` Öğrenciler her öğrencinin son adının ilk harfi göre gruplandırılmış olduğunu belirtmek için yan tümcesi.
+Aşağıdaki örnek, öğrencilerin her öğrencinin son adının `by` ilk harfine göre gruplanıp gruplandırılmadığını belirtmek için bir `group` yan tümce içinde bağlamsal anahtar sözcüğünün kullanımını gösterir.
 
 [!code-csharp[csrefKeywordsContextual#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#10)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [LINQ sorgu Ifadeleri](../../programming-guide/linq-query-expressions/index.md)

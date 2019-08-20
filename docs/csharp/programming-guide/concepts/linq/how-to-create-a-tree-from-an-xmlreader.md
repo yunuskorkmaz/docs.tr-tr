@@ -1,21 +1,21 @@
 ---
-title: "Nasıl yapılır: Xmlreader'dan ağaç oluşturma (C#)"
+title: 'Nasıl yapılır: XmlReader (C#) öğesinden ağaç oluşturma'
 ms.date: 07/20/2015
 ms.assetid: 60951c9c-7087-406c-b5bb-c60e58609b21
-ms.openlocfilehash: fb65c7b74bf3bd006fd4f545e4587efe9a392131
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f632bbdad7d52ea37e2587516792dfd13178d702
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702158"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593881"
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>Nasıl yapılır: Xmlreader'dan ağaç oluşturma (C#)
-Bu konuda, doğrudan bir XML ağacı oluşturma işlemi gösterilmektedir bir <xref:System.Xml.XmlReader>. Oluşturmak için bir <xref:System.Xml.Linq.XElement> gelen bir <xref:System.Xml.XmlReader>, siz de getirmelisiniz <xref:System.Xml.XmlReader> bir öğe düğümü üzerinde. <xref:System.Xml.XmlReader> Açıklamaları atlar ve işleme talimatları, ancak <xref:System.Xml.XmlReader> konumlandırılmış bir metin düğümü üzerinde bir hata oluşturulur. Bu tür hataları önlemek için her zaman konumlandırma <xref:System.Xml.XmlReader> XML ağacından oluşturmadan önce bir öğede <xref:System.Xml.XmlReader>.  
+# <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>Nasıl yapılır: XmlReader (C#) öğesinden ağaç oluşturma
+Bu konu başlığında doğrudan bir <xref:System.Xml.XmlReader>xml ağacının nasıl oluşturulacağı gösterilmektedir. Bir <xref:System.Xml.Linq.XElement> <xref:System.Xml.XmlReader> öğesinden oluşturmak için, öğesini bir öğe düğümüne konumlandırmalısınız. <xref:System.Xml.XmlReader> Açıklamaları ve işleme talimatlarını atlar, ancak <xref:System.Xml.XmlReader> bir metin düğümüne yerleştirilse bir hata oluşur. <xref:System.Xml.XmlReader> Bu tür hatalardan kaçınmak için, <xref:System.Xml.XmlReader> <xref:System.Xml.XmlReader>öğesinden bir XML ağacı oluşturmadan önce her zaman öğesini bir öğesine konumlandırın.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Kitaplar (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Kitaplar (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
   
- Aşağıdaki kod oluşturur bir `T:System.Xml.XmlReader` nesnesi ve ilk öğe düğümü bulana kadar okuma düğümleri. Ardından yükler <xref:System.Xml.Linq.XElement> nesne.  
+ Aşağıdaki kod bir `T:System.Xml.XmlReader` nesnesi oluşturur ve ardından ilk öğe düğümünü bulana kadar düğümleri okur. Daha sonra <xref:System.Xml.Linq.XElement> nesneyi yükler.  
   
 ```csharp  
 XmlReader r = XmlReader.Create("books.xml");  
@@ -53,4 +53,4 @@ Console.WriteLine(e);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Ayrıştırma (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+- [XML (C#) ayrıştırılıyor](./parsing-xml.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: 0e6408f1f45bb5f1406b4b1a7f6fe2cf543109e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a509c002bb6a55b4751712925ae7cc613911af2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675981"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587625"
 ---
 # <a name="summary-c-programming-guide"></a>\<Özet > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -25,19 +25,19 @@ ms.locfileid: "61675981"
   
 ## <a name="parameters"></a>Parametreler  
  `description`  
- Nesne bir özeti.  
+ Nesnenin Özeti.  
   
 ## <a name="remarks"></a>Açıklamalar  
- \<Özet > etiketi, bir tür veya tür üye tanımlamak için kullanılmalıdır. Kullanım [ \<remarks >](../../../csharp/programming-guide/xmldoc/remarks.md) ek bilgiler bir tür tanımı eklemek için. Kullanım [cref özniteliği](../../../csharp/programming-guide/xmldoc/cref-attribute.md) belgeleri araçları gibi etkinleştirmek üzere [DocFX](https://dotnet.github.io/docfx/) ve [Sandcastle](https://github.com/EWSoftware/SHFB) iç kod öğeleri için belge sayfalarına köprüler oluşturmak için.  
+ \<Özet > etiketi bir tür veya tür üyesini tanımlamakta kullanılmalıdır. Bir tür açıklamasına ek bilgi eklemek için [ \<> açıklamaları](./remarks.md) kullanın. Kod öğeleri için belge sayfalarına iç köprüler oluşturmak üzere [Docfx](https://dotnet.github.io/docfx/) ve [sandrole](https://github.com/EWSoftware/SHFB) gibi belge araçlarını etkinleştirmek için [cref özniteliğini](./cref-attribute.md) kullanın.  
   
- Metni \<Özet > etiketi yalnızca kaynak ıntellisense'te tür hakkında bilgilerin ve bir nesne tarayıcı penceresinde de görüntülenir.  
+ \<Özet > etiketinin metni, IntelliSense 'deki türle ilgili tek bilgi kaynağıdır ve ayrıca nesne tarayıcısı penceresinde de görüntülenir.  
   
- Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için. Son belgeleri derleyici tarafından üretilen dosyaya dayalı oluşturmak için özel bir araç oluşturabilir, veya gibi bir araç kullanın [DocFX](https://dotnet.github.io/docfx/) veya [Sandcastle](https://github.com/EWSoftware/SHFB).  
+ Belge açıklamalarını bir dosyaya işlemek için [/doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin. Derleyici tarafından oluşturulan dosyayı temel alan son belgeleri oluşturmak için özel bir araç oluşturabilir veya [Docfx](https://dotnet.github.io/docfx/) veya [sandrole](https://github.com/EWSoftware/SHFB)gibi bir araç kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideDocComments#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#12)]  
   
- Önceki örnekte, aşağıdaki XML dosyası oluşturur.  
+ Önceki örnek aşağıdaki XML dosyasını üretir.  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -63,11 +63,11 @@ ms.locfileid: "61675981"
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl yapılacağını gösteren bir `cref` genel bir tür referansı.  
+ Aşağıdaki örnek, genel bir türe nasıl `cref` başvuru yapılacağını gösterir.  
   
  [!code-csharp[csProgGuideDocComments#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#11)]  
   
- Önceki örnekte, aşağıdaki XML dosyası oluşturur.  
+ Önceki örnek aşağıdaki XML dosyasını üretir.  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -95,5 +95,5 @@ ms.locfileid: "61675981"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Belge Açıklamaları için Önerilen Etiketler](./recommended-tags-for-documentation-comments.md)

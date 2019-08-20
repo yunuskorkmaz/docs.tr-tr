@@ -1,5 +1,5 @@
 ---
-title: -(C# Derleyici Seçenekleri) en iyi duruma getirme
+title: -optimize (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /optimize
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: 25a9ee1b27836dfb00dcbc72712ed068639fa2fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bec99ca582070a99fd8b734ef8a7b9e71d945488
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662588"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606604"
 ---
-# <a name="-optimize-c-compiler-options"></a>-(C# Derleyici Seçenekleri) en iyi duruma getirme
-**-En iyi duruma getirme** seçeneğini etkinleştirir veya çıkış dosyanızı daha küçük, daha hızlı ve daha verimli yapmak için derleyici tarafından gerçekleştirilen iyileştirmeleri devre dışı bırakır.  
+# <a name="-optimize-c-compiler-options"></a>-optimize (C# derleyici seçenekleri)
+**-Optimize** seçeneği, çıkış dosyanızı daha küçük, daha hızlı ve daha verimli hale getirmek için derleyici tarafından gerçekleştirilen iyileştirmeleri sağlar veya devre dışı bırakır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,28 +29,28 @@ ms.locfileid: "61662588"
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- **-en iyi duruma getirme** zamanında kodu en iyi duruma getirmek için ortak dil çalışma zamanı da bildirir.  
+ **-optimize** , ortak dil çalışma zamanına kodu çalışma zamanında iyileştirmek için de bildirir.  
   
- Varsayılan olarak, en iyi duruma getirme devre dışıdır. Belirtin **-en iyi duruma getirme +** iyileştirmeleri etkinleştirmek için.  
+ Varsayılan olarak, iyileştirmeler devre dışıdır. İyileştirmeleri etkinleştirmek için **-optimize +** belirtin.  
   
- Bir derleme tarafından kullanılacak bir modül oluşturulurken, aynı kullanın **-en iyi duruma getirme** derleme olarak ayarlar.  
+ Bir derleme tarafından kullanılacak bir modül oluştururken, derlemeden **en iyileştirme** ayarlarını kullanın.  
   
- **-o** öğesinin kısa biçimidir **-en iyi duruma getirme**.  
+ **-o** , **en iyileştirme**için kısa bir formdur.  
   
- Birleştirmek mümkündür **-en iyi duruma getirme** ve [-hata ayıklama](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) seçenekleri.  
+ **-Optimize** ve [-Debug](./debug-compiler-option.md) seçeneklerini birleştirmek mümkündür.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1. Projenin açın **özellikleri** sayfası.  
+1. Projenin **Özellikler** sayfasını açın.  
   
-2. Tıklayın **derleme** özellik sayfası.  
+2. **Yapı** özelliği sayfasına tıklayın.  
   
-3. Değiştirme **kodu İyileştir** özelliği.  
+3. **Optimizasyon kodu** özelliğini değiştirin.  
   
- Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.  
+ Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.  
   
 ## <a name="example"></a>Örnek  
- Derleme `t2.cs` ve derleyici iyileştirmelerini etkinleştir:  
+ Derleyici `t2.cs` iyileştirmelerini derleyin ve etkinleştirin:  
   
 ```console  
 csc t2.cs -optimize  
@@ -58,5 +58,5 @@ csc t2.cs -optimize
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
+- [C# Derleyici Seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

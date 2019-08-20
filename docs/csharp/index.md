@@ -1,6 +1,6 @@
 ---
 title: C# Kılavuzu
-description: Yeni bir geliştiricinin veya konusunda deneyimli bir uzman olmanızdan nasıl C# Kılavuzu, C# ile ilgili kapsamlı bilgi kazanmanıza yardımcı olabileceğini öğrenin.
+description: Yeni bir geliştirici C# veya deneyimli bir uzman olsun, kılavuzun hakkında C#kapsamlı bilgi edinmenize nasıl yardımcı olabileceğini öğrenin.
 ms.date: 01/30/2018
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 helpviewer_keywords:
@@ -8,61 +8,61 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e820a4d08e938aaf21e4f57db63e6b4f1b5225a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744259"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608286"
 ---
 # <a name="c-guide"></a>C# Kılavuzu
 
-C# Kılavuzu, C# dili hakkında daha fazla kaynak sağlar. Bu site çok sayıda farklı İzleyici vardır. Deneyiminizi programlama veya C# dili ve .NET ile bağlı olarak, bu kılavuzun farklı bölümlerde keşfetmek isteyebilirsiniz.
+C# Kılavuz, C# dil hakkında birçok kaynak sağlar. Bu sitenin birçok farklı izleyicileri vardır. Programlama deneyiminize veya C# dille ve .net 'e bağlı olarak, bu kılavuzun farklı bölümlerini araştırmak isteyebilirsiniz.
 
-* Yeni geliştiriciler için:
-  * İle başlayan [giriş C# öğreticiler](tutorials/intro-to-csharp/index.md). Bu öğreticileri keşfedin izin C# dil tarayıcınızda etkileşimli olarak. Buradan, diğer geçebilirsiniz [öğreticiler](tutorials/index.md). Bu öğreticiler C# programları sıfırdan oluşturma işlemini gösterir. Program oluşturma işlemi adım adım öğreticileri sağlar. Dil kavramları ve nasıl oluşturacağınızı göstermek C# kendi programları. İlk genel bakış bilgileri okunurken tercih ediyorsanız [turu C# dilinin](tour-of-csharp/index.md). Bu, C# dil kavramlarını açıklar. Bu okuduktan sonra dilinin temel bilgilere sahipsiniz ve öğreticileri denemeye hazır veya bir şey kendi uzantınızı oluşturun.
+* Yepyeni geliştiriciler için:
+  * Öğreticilere giriş ile başlayın. [ C# ](tutorials/intro-to-csharp/index.md) Bu öğreticiler, C# tarayıcınızda etkileşimli olarak dili araştırmanıza olanak sağlar. Buradan, diğer [öğreticilere](tutorials/index.md)geçebilirsiniz. Bu öğreticiler, sıfırdan programlar oluşturmayı C# gösterir. Öğreticiler, programlar oluşturmak için adım adım bir işlem sağlar. Bunlar, dil kavramlarını ve kendi kendinize nasıl program C# deryükleneceğini gösterir. Önce genel bakış bilgilerini okumayı tercih ediyorsanız, [ C# dilin turunu](tour-of-csharp/index.md)deneyin. Bu, C# dilin kavramlarını açıklar. Bunu okuduktan sonra, dilin temel olarak anlaşılmasına ve öğreticilere denemeye veya kendi kendinize bir şeyler oluşturmaya başlamaya hazırlanmış olursunuz.
 
-* C# yeni geliştiriciler için:
-  * Önce geliştirme yaptığınızdan, ancak C# konusunda yeniyseniz, okuma [turu C# dilinin](tour-of-csharp/index.md). Temel söz dizimi ve yapısı dil kapsar ve dil turu Karşıtlık C# için kullandığınız diğer dillerle birlikte kullanabilirsiniz. De göz atabilirsiniz [öğreticiler](tutorials/index.md) temel C# programları denemek için.
+* Yeni geliştiriciler için C#:
+  * Daha önce geliştirme yaptıysanız ancak yeni bir sürümüne sahip olduğunuzda C#, [ C# dilin turu](tour-of-csharp/index.md)'nu okuyun. Bu, dilin temel sözdizimini ve yapısını kapsamakta ve kullandığınız diğer dillere karşılık C# olarak dil turunuzu kullanabilirsiniz. Ayrıca, temel C# programları denemek için [öğreticilere](tutorials/index.md) de gidebilirsiniz.
 
-* C# geliştiricileri:
-  * C# önce kullandıysanız dilin en yeni sürümünde nedir okuyarak başlamanız gerekir. Kullanıma [C# ' de yenilikler](whats-new/index.md) geçerli sürümündeki yeni özellikler için.
+* Deneyimli C# geliştiriciler:
+  * Daha önce kullandıysanız C# , dilin en son sürümünün ne olduğunu okuyarak başlamanız gerekir. Geçerli sürümdeki yeni özellikler için [' C# deki yenilikleri](whats-new/index.md) inceleyin.
 
-## <a name="how-the-c-guide-is-organized"></a>C# Kılavuzu nasıl düzenlenir
+## <a name="how-the-c-guide-is-organized"></a>C# Kılavuzun nasıl düzenlendiği
 
-C# Kılavuzu'nda birkaç bölümü vardır. Bunları sırayla okuyabilir veya doğrudan ne ilginizi çeken için en hızlı. Bazı bölümlerin, yoğun dil odaklanıyoruz. Diğerleri, C# ve .NET Framework kullanarak oluşturabileceğiniz program türlerini birkaçını gösteren uçtan uca senaryolar sağlar.
+C# Kılavuzda birkaç bölüm vardır. Bunları sırasıyla okuyabilir veya en fazla ilgilendiğiniz ilgi alanına doğrudan atlayabilirsiniz. Bazı bölümler büyük ölçüde dile odaklanır. Bazıları ve .NET Framework kullanarak C# oluşturabileceğiniz Birçok program türünü gösteren uçtan uca senaryolar sağlar.
 
 * [Başlarken](getting-started/index.md)
-  * Bu bölüm, bir C# geliştirme ortamı tercih edilen platformda yüklemek gerekenler kapsar. Bu bölümde farklı başlıklara, desteklenen farklı ortamlarda ilk C# programınızı oluşturma işlemleri açıklanmaktadır.
+  * Bu bölümde, tercih ettiğiniz platforma bir C# geliştirme ortamı için yüklemeniz gerekenleri ele alınmaktadır. Bu bölümde bulunan farklı konular, ilk C# programınızı desteklenen farklı ortamlarda oluşturmayı açıklamaktadır.
 
-* [Giriş C# öğreticiler](tutorials/intro-to-csharp/index.md)
-  * Giriş C# öğreticiler sunan etkileşimli öğreticileri keşfedin ve öğrenin almadığınızdan geliştiricilerin C# okuma-Eval-Print Loop (REPL) arabirimini kullanarak tarayıcının dili. Etkileşimli dersleri tamamladıktan sonra aynı dersleri makinenizde uygulayan tarafından kodlama becerilerinizi geliştirebilir.
+* [C# Öğreticilere giriş](tutorials/intro-to-csharp/index.md)
+  * C# Öğreticilere giriş, yepyeni geliştiriciler Için bir okuma-değerlendirme-yazdırma döngüsü (REPL C# ) arabirimi kullanarak tarayıcıda dili keşfetmeye ve öğrenmesine yönelik etkileşimli öğreticiler sunmaktadır. Etkileşimli dersleri tamamladıktan sonra, makinenizde aynı dersleri gerçekleştirerek kodlama becerilerinizi geliştirebilirsiniz.
 
 * [Öğreticiler](tutorials/index.md)
-  * Bu bölümde, uçtan uca senaryo açıklamaları ve kod dahil olmak üzere çeşitli sağlar. Bunu neden belirli deyimleri hangi C# özelliklerini en iyi farklı durumları ve ortak görevleri için başvuru uygulamaları iş tercih edilen, gösterilir. Kod görerek en iyisi öğrenmek, bu bölümde başlatın. Ayrıca, tüm kodu indirin ve kendi ortamında denemeler yapın.
+  * Bu bölüm, açıklamalar ve kod dahil olmak üzere çeşitli uçtan uca senaryolar sağlar. Belirli bir amaoms 'nin tercih edildiğini, farklı durumlarda C# hangi özelliklerin en iyi şekilde çalıştığını ve ortak görevler için başvuru uygulamalarına neden olduğunu gösterir. Kodu görerek en iyi şekilde karşılaşırsanız, bu bölümden başlayın. Ayrıca, tüm kod ve denemeyi kendi ortamınızda indirebilirsiniz.
 
 * [C# Turu](tour-of-csharp/index.md)
-  * Bu bölümde, dil için genel bir bakış sağlar. C# programları ve dil özellikleri oluşturan öğeleri kapsar. Bu, C# sözdizimi öğeleri ve tartışmalar büyük C# dil konuları küçük örneklerini gösterir.
+  * Bu bölümde dile genel bakış sunulmaktadır. C# Programları oluşturan öğeleri ve dilin yeteneklerini ele alır. Tüm sözdizimi öğelerinin C# ve ana C# dil konularının tartışmalarında küçük örnekler gösterir.
 
 * [C# Yenilikleri](whats-new/index.md)
-  * En son dil sürümlerinde eklenen yeni özellikler ve C# dilinin geçmişi genel bakışlar sağlar.
+  * En son dil yayınlarına ve C# dilin geçmişine eklenen yeni özellikler hakkında genel bakış sağlar.
 
 <!--
 * [.NET Compiler Platform SDK](roslyn-sdk/index.md)
   * The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end-to-end scenarios, and links to other libraries with more examples using these APIs.
 -->
 
-* [C# Programlama Kılavuzu](../csharp/programming-guide/index.md)
+* [C# Programlama Kılavuzu](./programming-guide/index.md)
   * C# dil yapılarının kullanımı hakkında bilgi ve uygulamalı örnekler sağlar.
 
-* [İzlenecek Yollar](../csharp/walkthroughs.md)
+* [İzlenecek Yollar](./walkthroughs.md)
   * C# kullanan programlama yollarına ve her izlenecek yola ilişkin kısa bir açıklamaya bağlantılar sağlar.
 
 * [Dil Başvurusu](language-reference/index.md)
-  * Bu bölüm C# dili hakkında başvuru bilgileri içerir. Bu yazıda sözdizimi ve semantiği C# anlamanıza yardımcı olur. Ayrıca, türleri, işleçler, öznitelikler, önişlemci yönergeleri, derleyici anahtarları, derleyici hataları ve derleyici uyarıları hakkında başvuru bilgileri içerir.
+  * Bu bölüm, C# dildeki başvuru malzemesini içerir. Bu malzeme, ' nin C#söz dizimini ve semantiğini anlamanıza yardımcı olur. Ayrıca türler, işleçler, öznitelikler, Önişlemci yönergeleri, derleyici anahtarları, derleyici hataları ve derleyici uyarıları üzerine başvuru malzemeleri de içerir.
 
-* [C# dil belirtimi](../csharp/language-reference/language-specification/index.md)
-  * C# dil belirtimi en son sürümlerine bağlar.
+* [C#Dil belirtimi](./language-reference/language-specification/index.md)
+  * C# Dil belirtiminin en son sürümlerine bağlantı sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

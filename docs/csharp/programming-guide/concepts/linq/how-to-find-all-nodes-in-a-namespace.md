@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Bir Namespace tüm düğümleri bulma (C#)'
+title: 'Nasıl yapılır: Bir ad alanındaki tüm düğümleri bul (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: d94a6c517a76e8ed91f20a17e798ad3806a34a70
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 512ca398831541c30a6c0c1e305c5c6269c13ddb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486821"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593645"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Nasıl yapılır: Bir Namespace tüm düğümleri bulma (C#)
-Her bir öğe veya öznitelik, belirli bir ad alanındaki tüm düğümleri bulmak için ad alanı filtreleyebilirsiniz.  
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Nasıl yapılır: Bir ad alanındaki tüm düğümleri bul (C#)
+Söz konusu ad alanındaki tüm düğümleri bulmak için her öğe veya özniteliğin ad alanı üzerinde filtre uygulayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir XML ağacı ile iki ad alanı oluşturur. Ağacı ile yineleme ve tüm öğeleri ve öznitelikleri o ad alanlarından birinde adlarını yazdırır.  
+ Aşağıdaki örnek iki ad alanı olan bir XML ağacı oluşturur. Daha sonra ağaç üzerinde dolaşır ve bu ad alanlarından birindeki tüm öğelerin ve özniteliklerin adlarını yazdırır.  
   
 ```csharp  
 string markup = @"<aw:Root xmlns:aw='http://www.adventure-works.com' xmlns:fc='www.fourthcoffee.com'>  
@@ -44,9 +44,9 @@ Nodes in the http://www.adventure-works.com namespace
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sorgu tarafından erişilen XML dosyasını iki farklı ad alanlarında, satın alma siparişleri içerir. Sorgu yalnızca öğeleri ad alanlarından birinde yeni bir ağaç oluşturur.  
+ Aşağıdaki sorgu tarafından erişilen XML dosyası, satın alma emirlerini iki farklı ad alanında içerir. Sorgu, yalnızca ad alanlarından birindeki öğeleri içeren yeni bir ağaç oluşturur.  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Birleştirilmiş satın alma siparişleri](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Birleştirilmiş satın alma](./sample-xml-file-consolidated-purchase-orders.md)siparişleri.  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  

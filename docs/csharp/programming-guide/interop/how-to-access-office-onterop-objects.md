@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Visual kullanarak Office birlikte çalışma nesnelerine erişim C# özellikleri - C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Visual C# özelliklerini kullanarak Office birlikte çalışma nesnelerine erişin- C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 765a150953075cf9afb2dd3bde7a66cfe3ff6eb5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 19fff39969933baa2510458400cabf9646e0c48d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398148"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589130"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Nasıl yapılır: Visual kullanarak Office birlikte çalışma nesnelerine erişim C# özellikleri (C# Programlama Kılavuzu)
+# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Nasıl yapılır: Visual C# özelliklerini kullanarak Office birlikte çalışma nesnelerine erişin (C# Programlama Kılavuzu)
 
-Visual C# Office API'si nesnelere erişimi kolaylaştıran bir özelliğe sahiptir. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, yeni özellikler olarak adlandırılan yeni türü `dynamic`ve değer parametreleri değilmiş gibi COM yöntemleri parametrelere başvuru bağımsız değişkenleri geçirmek olanağı.
+Görselde C# Office API nesnelerine erişimi basitleştiren özellikler vardır. Yeni özellikler adlandırılmış ve isteğe bağlı bağımsız değişkenler, yeni bir tür adı `dynamic`ve com yöntemlerindeki başvuru parametrelerine bağımsız değişkenleri değer parametreleri gibi geçirme özelliği içerir.
 
-Bu konuda yeni özellikler oluşturur ve bir Microsoft Office Excel çalışma sayfası görüntüleyen kod yazmak için kullanın. Ardından Excel çalışma sayfasına bağlantılı bir simge içeren bir Office Word belgesi eklemek için kod yazacaksınız.
+Bu konu başlığında, Microsoft Office bir Excel çalışma sayfası oluşturan ve görüntüleyen kod yazmak için yeni özellikleri kullanacaksınız. Daha sonra, Excel çalışma sayfasına bağlı bir simge içeren bir Office Word belgesi eklemek için kod yazacaksınız.
 
-Bu izlenecek yolu tamamlamak için Microsoft Office Excel 2007 ve Microsoft Office Word 2007 veya sonraki sürümlerinde, bilgisayarınızda yüklü olması gerekir.
+Bu yönergeyi tamamlamak için, bilgisayarınızda yüklü Microsoft Office Excel 2007 ve Microsoft Office Word 2007 veya sonraki sürümlerin olması gerekir.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
@@ -31,152 +31,152 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel 2007 ve Microsoft Offi
 
 1. Visual Studio’yu çalıştırın.
 
-2. Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**. **Yeni Proje** iletişim kutusu görünür.
+2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın. **Yeni Proje** iletişim kutusu görünür.
 
-3. İçinde **yüklü şablonlar** bölmesini genişletin **Visual C#** ve ardından **Windows**.
+3. **Yüklü şablonlar** bölmesinde, **görsel C#** ' i genişletin ve ardından **Windows**' a tıklayın.
 
-4. Konum üst kısmında **yeni proje** emin olmak için iletişim kutusu **.NET Framework 4** (veya üzeri bir sürüm) hedef çerçeve olarak seçildiğinden.
+4. **.NET Framework 4** ' ün (veya sonraki bir sürüm) hedef çerçeve olarak seçildiğinden emin olmak Için **Yeni proje** iletişim kutusunun üst kısmına bakın.
 
-5. İçinde **şablonları** bölmesinde tıklayın **konsol uygulaması**.
+5. **Şablonlar** bölmesinde **konsol uygulaması**' na tıklayın.
 
-6. Projeniz için bir ad yazın **adı** alan.
+6. **Ad** alanına projeniz için bir ad yazın.
 
 7. **Tamam**'ı tıklatın.
 
-     Yeni Proje görünür **Çözüm Gezgini**.
+     Yeni proje **Çözüm Gezgini**görüntülenir.
 
-## <a name="to-add-references"></a>Başvuruları eklemek için
+## <a name="to-add-references"></a>Başvuru eklemek için
 
-1. İçinde **Çözüm Gezgini**, projenizin adına sağ tıklayın ve ardından **Başvuru Ekle**. **Başvuru Ekle** iletişim kutusu görüntülenir.
+1. **Çözüm Gezgini**, projenizin adına sağ tıklayın ve ardından **Başvuru Ekle**' ye tıklayın. **Başvuru Ekle** iletişim kutusu görüntülenir.
 
-2. Üzerinde **derlemeleri** sayfasında **Microsoft.Office.Interop.Word** içinde **bileşen adı** listelemek ve anahtar ve seçin ve CTRL tuşunu basılı tutun  **Microsoft.Office.Interop.Excel**.  Derlemeleri görmüyorsanız, yüklü ve görüntülenen olun gerekebilir (bkz [nasıl yapılır: Office birincil birlikte çalışma derlemelerini yükleme](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))
+2. **Derlemeler** sayfasında, **bileşen adı** listesinde **Microsoft. Office. Interop. Word** ' ü seçin ve ardından CTRL tuşunu basılı tutarak **Microsoft. Office. Interop. Excel**' i seçin.  Derlemeleri görmüyorsanız, bunların yüklendiğinden ve görüntülendiklerinden emin olmanız gerekebilir (bkz [. nasıl yapılır: Office birincil birlikte çalışma derlemelerini](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)yükler)
 
 3. **Tamam**'ı tıklatın.
 
-## <a name="to-add-necessary-using-directives"></a>Eklemek için gerekli yönergeleri kullanma
+## <a name="to-add-necessary-using-directives"></a>Gerekli yönergeleri kullanarak ekleme
 
-1. İçinde **Çözüm Gezgini**, sağ **Program.cs** dosya ve ardından **kodu görüntüle**.
+1. **Çözüm Gezgini**, **program.cs** dosyasına sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
-2. Aşağıdaki `using` kod dosyasının en üstüne yönergeleri.
+2. Aşağıdaki `using` yönergeleri kod dosyasının en üstüne ekleyin.
 
      [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]
 
-## <a name="to-create-a-list-of-bank-accounts"></a>Banka hesabı listesini oluşturmak için
+## <a name="to-create-a-list-of-bank-accounts"></a>Banka hesaplarının bir listesini oluşturmak için
 
-1. Aşağıdaki sınıf tanımının içine yapıştırın **Program.cs**altında `Program` sınıfı.
+1. Aşağıdaki sınıf tanımını `Program` sınıfının altına **program.cs**yapıştırın.
 
      [!code-csharp[csProgGuideOfficeHowTo#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#2)]
 
-2. Aşağıdaki kodu ekleyin `Main` yöntemi oluşturmak için bir `bankAccounts` iki hesap içeren liste.
+2. İki hesap içeren bir `Main` `bankAccounts` liste oluşturmak için yöntemine aşağıdaki kodu ekleyin.
 
      [!code-csharp[csProgGuideOfficeHowTo#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#3)]
 
-## <a name="to-declare-a-method-that-exports-account-information-to-excel"></a>Hesap bilgileri Excel'e dışarı aktaran bir yöntemi bildirmek için
+## <a name="to-declare-a-method-that-exports-account-information-to-excel"></a>Excel 'e hesap bilgilerini veren bir yöntem bildirmek için
 
-1. Aşağıdaki yöntemi ekleyin `Program` bir Excel çalışma ayarlamak için sınıf.
+1. Bir Excel çalışma sayfası ayarlamak için `Program` aşağıdaki yöntemi sınıfına ekleyin.
 
-     Yöntemi <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> belirli bir şablon belirtmek için isteğe bağlı parametresi vardır. İsteğe bağlı parametreler, yeni C# 4, parametrenin varsayılan değeri kullanmak istiyorsanız, bu parametreye yönelik bağımsız değişkeni atlamak etkinleştirin. Aşağıdaki kodda, hiçbir bağımsız değişken gönderildiği `Add` varsayılan şablonu kullanır ve yeni bir çalışma kitabı oluşturur. C# ' ın önceki sürümlerinde eşdeğer deyimi bir yer tutucu bağımsız değişken gerektiriyor: `ExcelApp.Workbooks.Add(Type.Missing)`.
+     Yöntemin <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> belirli bir şablonu belirtmek için isteğe bağlı bir parametresi vardır. 4 ' te C# yeni olan isteğe bağlı parametreler, parametrenin varsayılan değerini kullanmak istiyorsanız bu parametreye ilişkin bağımsız değişkeni atlamanızı sağlar. Aşağıdaki kodda bir bağımsız değişken gönderilmediğinden, `Add` varsayılan şablonu kullanır ve yeni bir çalışma kitabı oluşturur. Önceki sürümlerindeki eşdeğer ifade, bir yer C# tutucu bağımsız değişkeni gerektirir: `ExcelApp.Workbooks.Add(Type.Missing)`.
 
      [!code-csharp[csProgGuideOfficeHowTo#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#4)]
 
-2. Sonuna aşağıdaki kodu ekleyin `DisplayInExcel`. Kodu çalışma sayfasının ilk satırın ilk iki sütuna değerler ekler.
+2. Aşağıdaki kodu sonuna `DisplayInExcel`ekleyin. Kod, çalışma sayfasının ilk satırının ilk iki sütununa değer ekler.
 
      [!code-csharp[csProgGuideOfficeHowTo#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#5)]
 
-3. Sonuna aşağıdaki kodu ekleyin `DisplayInExcel`. `foreach` Döngü, listesinde art arda gelen satır çalışma sayfasının ilk iki sütuna bilgi hesaplarının koyar.
+3. Aşağıdaki kodu sonuna `DisplayInExcel`ekleyin. `foreach` Döngü, hesap listesindeki bilgileri, çalışma sayfasının Art arda gelen satırlarının ilk iki sütununa yerleştirir.
 
      [!code-csharp[csProgGuideOfficeHowTo#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#7)]
 
-4. Sonuna aşağıdaki kodu ekleyin `DisplayInExcel` İçeriği sığdırmak için sütun genişliklerini ayarlamak için.
+4. Sütunun genişliğini içeriğe sığacak şekilde ayarlamak `DisplayInExcel` için aşağıdaki kodu sonuna ekleyin.
 
      [!code-csharp[csProgGuideOfficeHowTo#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#13)]
 
-     C# ' ın önceki sürümlerinde çünkü bu açık atama için bu işlemler gerektiren `ExcelApp.Columns[1]` döndürür bir `Object`, ve `AutoFit` bir Excel <xref:Microsoft.Office.Interop.Excel.Range> yöntemi. Aşağıdaki satırları atama gösterir.
+     Önceki sürümleri bu C# işlemler için açık atama gerektirir, çünkü `ExcelApp.Columns[1]` bir `Object`, ve `AutoFit` bir Excel <xref:Microsoft.Office.Interop.Excel.Range> yöntemidir. Aşağıdaki satırlarda atama gösterilmektedir.
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C#4 ve üzeri sürümler dönüştürür döndürülen `Object` için `dynamic` derleme tarafından otomatik olarak başvurulan [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği veya eşdeğer, varsa Excel **birlikteçalışmatürlerinikatıştır** özelliği ayarlanmışsa true. Bu özellik için varsayılan değer doğrudur.
+     C#4 ve sonraki sürümlerde, derleme [/Link](../../language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği `Object` tarafından `dynamic` başvuruluyorsa veya equivalently, Excel **birlikte çalışma türleri** özelliği true olarak ayarlandıysa, geri döndürülen öğesini otomatik olarak dönüştürür. True, bu özellik için varsayılan değerdir.
 
 ## <a name="to-run-the-project"></a>Projeyi çalıştırmak için
 
-1. Aşağıdaki satırı sona Ekle `Main`.
+1. Aşağıdaki satırı sonuna `Main`ekleyin.
 
      [!code-csharp[csProgGuideOfficeHowTo#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#8)]
 
 2. CTRL + F5 tuşlarına basın.
 
-     İki hesap verileri içeren bir Excel çalışma sayfası görüntülenir.
+     İki hesaptan gelen verileri içeren bir Excel çalışma sayfası görüntülenir.
 
-## <a name="to-add-a-word-document"></a>Bir Word belgesi eklemek için
+## <a name="to-add-a-word-document"></a>Word belgesi eklemek için
 
-1. Ek şekillerde göstermek için C# 4 ve üzeri sürümler Office programlama geliştirir, aşağıdaki kod bir Word uygulama açılır ve bağlanan Excel çalışma sayfasına bir simge oluşturur.
+1. C# 4 ve sonraki sürümlerin, Office programlama 'yi geliştiren ek yollarını göstermek için aşağıdaki kod bir Word uygulaması açar ve Excel çalışma sayfasına bağlanan bir simge oluşturur.
 
-     Yapıştırma yöntemi `CreateIconInWordDoc`, daha sonra bu adımda, sağlanan içine `Program` sınıfı. `CreateIconInWordDoc` adlandırılmış ve isteğe bağlı bağımsız değişkenler için yöntem çağrılarının karmaşıklığını azaltmak için kullandığı <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> ve <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Eklenen diğer iki yeni özellikleri bu çağrılar dahil edilip derecelendirilir C# sahip bir COM yöntemlere yapılan çağrılar basitleştiren 4 başvuru parametreleri. İlk olarak, değer parametreleri değilmiş gibi bağımsız değişken başvuru parametreleri gönderebilirsiniz. Diğer bir deyişle, her başvuru parametresi için bir değişken oluşturmadan değerleri doğrudan gönderebilirsiniz. Derleyici, bağımsız değişken değerlerini tutmak için geçici değişken oluşturur ve çağrısından döndüğünüzde değişkenleri atar. İkinci olarak, atlayabilirsiniz `ref` anahtar sözcüğü bağımsız değişken listesinde.
+     Daha sonra `CreateIconInWordDoc`Bu adımda `Program` sunulan yöntemi sınıfına yapıştırın. `CreateIconInWordDoc`, ve <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>için metot çağrılarının karmaşıklığını azaltmak için adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanır. Bu çağrılar, başvuru parametrelerine sahip COM yöntemlerine yapılan C# çağrıları kolaylaştıran 4 ' te tanıtılan iki yeni özelliği dahil ediyor. İlk olarak, başvuru parametrelerine bağımsız değişkenleri değer parametreleriniz gibi gönderebilirsiniz. Diğer bir deyişle, her başvuru parametresi için bir değişken oluşturmadan doğrudan değerleri gönderebilirsiniz. Derleyici bağımsız değişken değerlerini tutacak geçici değişkenler oluşturur ve çağrıdan geri döndüğünüzde değişkenleri atar. İkinci olarak, bağımsız değişken listesindeki `ref` anahtar sözcüğü atlayabilirsiniz.
 
-     `Add` Yöntemi her biri, isteğe bağlı, dört başvuru parametresi vardır. İçinde C# 4.0 ve üzeri sürümleri çıkarabilirsiniz tüm parametreler için bağımsız değişkenler, varsayılan değerleri kullanmak istiyorsanız. İçinde C# 3.0 ve daha önceki sürümleri, her parametre için bir bağımsız değişkeni sağlanmalı ve parametreleri başvuru parametreleri olduğundan, bağımsız değişken bir değişken olmalıdır.
+     `Add` Yönteminin tümü isteğe bağlı dört başvuru parametresi vardır. C# 4,0 ve sonraki sürümlerde, varsayılan değerlerini kullanmak istiyorsanız parametrelerin herhangi biri veya tümü için bağımsız değişkenleri atlayabilirsiniz. C# 3,0 ve önceki sürümlerde, her bir parametre için bir bağımsız değişken sağlanmalı ve parametreler başvuru parametreleri olduğundan bağımsız değişken bir değişken olmalıdır.
 
-     `PasteSpecial` Yöntemi Pano içeriğini ekler. Yöntemi, tümü isteğe bağlı olan yedi başvuru parametresi vardır. Aşağıdaki kod iki tanesi bağımsız değişkenleri belirtir: `Link`, Pano içeriğini kaynağını bir bağlantı oluşturmak için ve `DisplayAsIcon`, bağlantı, simge olarak görüntüler. İçinde C# 4.0 ve üzeri sürümler için bu iki adlandırılmış bağımsız değişkenler kullanın ve diğerlerini atlayın. Bu başvuru parametreleri olsa da, kullanın gerekmez `ref` anahtar sözcüğü veya değişkenlerinin bağımsız değişken olarak gönderin. Değerleri doğrudan gönderebilirsiniz. İçinde C# 3.0 ve daha önceki sürümleri, her başvuru parametresi için bir değişken bağımsız değişkeni belirtmeniz gerekir.
+     `PasteSpecial` Yöntemi panonun içeriğini ekler. Yönteminde, hepsi isteğe bağlı yedi başvuru parametresi vardır. Aşağıdaki kod, bu iki öğenin bağımsız değişkenlerini belirtir: `Link`, pano içeriklerinin kaynağına bir bağlantı oluşturmak ve `DisplayAsIcon`bağlantıyı bir simge olarak göstermek için. C# 4,0 ve sonraki sürümlerde, bu ikisi için adlandırılmış bağımsız değişkenleri kullanabilir ve diğerlerini atlayabilirsiniz. Bunların başvuru parametreleri olmasına karşın, `ref` anahtar sözcüğünü kullanmanız veya bağımsız değişken olarak gönderilmek üzere değişkenler oluşturmanız gerekmez. Değerleri doğrudan gönderebilirsiniz. C# 3,0 ve önceki sürümlerde, her başvuru parametresi için bir değişken bağımsız değişkeni sağlamanız gerekir.
 
      [!code-csharp[csProgGuideOfficeHowTo#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#9)]
 
-     İçinde C# dili, aşağıdaki 3.0 ve eski sürümlerine daha karmaşık kod gereklidir.
+     Dilin C# 3,0 ve önceki sürümlerinde, aşağıdaki daha karmaşık kod gereklidir.
 
      [!code-csharp[csProgGuideOfficeHowTo#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#10)]
 
-2. Sonunda aşağıdaki ifadeyi ekleyin `Main`.
+2. Aşağıdaki ifadesini sonuna `Main`ekleyin.
 
      [!code-csharp[csProgGuideOfficeHowTo#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#11)]
 
-3. Sonunda aşağıdaki ifadeyi ekleyin `DisplayInExcel`. `Copy` Yöntemi çalışma panoya ekler.
+3. Aşağıdaki ifadesini sonuna `DisplayInExcel`ekleyin. `Copy` Yöntemi, çalışma sayfasını panoya ekler.
 
      [!code-csharp[csProgGuideOfficeHowTo#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#12)]
 
 4. CTRL + F5 tuşlarına basın.
 
-     Bir simge içeren bir Word belgesi görüntülenir. Çalışma sayfasında öne getirmek için simgesine çift tıklayın.
+     Bir simge içeren bir Word belgesi görüntülenir. Çalışma sayfasını ön plana getirmek için simgeye çift tıklayın.
 
 ## <a name="to-set-the-embed-interop-types-property"></a>Birlikte çalışma türlerini katıştır özelliğini ayarlamak için
 
-1. Ek geliştirmeler, çalışma zamanında birincil birlikte çalışma derlemesi (PIA) gerektirmeyen bir COM tür çağırdığınızda mümkündür. PIA'ların sonuçları bağımlılığı sürüm bağımsızlığı ve daha kolay dağıtım kaldırılıyor. PIA'ların programlamadan avantajları hakkında daha fazla bilgi için bkz. [izlenecek yol: Yönetilen derlemeler türler katıştırma](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).
+1. Çalışma zamanında birincil birlikte çalışma derlemesi (PIA) gerektirmeyen bir COM türünü çağırdığınızda ek geliştirmeler yapılabilir. PIA 'ların bağımlılığını kaldırmak sürüm bağımsızlık ve daha kolay dağıtıma neden olur. PIA olmadan programlamanın avantajları hakkında daha fazla bilgi için bkz [. İzlenecek yol: Yönetilen derlemelerden](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)türler ekleme.
 
-     Ayrıca, gerekli ve COM yöntemleri tarafından döndürülen türleri türü kullanarak temsil edilebildiğinden programlama daha kolay `dynamic` yerine `Object`. Türü değişkenler `dynamic` açık atama ihtiyacını ortadan kaldırır çalışma zamanı kadar değerlendirilmez. Daha fazla bilgi için [türünü kullanarak dinamik](../../../csharp/programming-guide/types/using-type-dynamic.md).
+     Ayrıca, gerekli ve com yöntemleri tarafından döndürülen türler `dynamic` `Object`yerine türü kullanılarak gösterilebildiğinden programlama daha kolay olur. Türü `dynamic` olan değişkenler çalışma zamanına kadar değerlendirilmez ve bu da açık atama gereksinimini ortadan kaldırır. Daha fazla bilgi için bkz. [dinamik tür kullanımı](../types/using-type-dynamic.md).
 
-     İçinde C# türü ekleme 4, PIA'ların yerine bilgilerdir varsayılan davranışı. Açık atama gerekli olmadığı için bu varsayılan nedeniyle birkaç önceki örneklerin basitleştirilmiştir. Örneğin, bildirimi `worksheet` içinde `DisplayInExcel` olarak yazılan `Excel._Worksheet workSheet = excelApp.ActiveSheet` yerine `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Çağrıları `AutoFit` çünkü aynı yöntemi de açık atama olmadan varsayılan gerektirecek `ExcelApp.Columns[1]` döndürür bir `Object`, ve `AutoFit` bir Excel yöntemidir. Aşağıdaki kod, atama gösterir.
+     4 C# ' te, PIA kullanımı yerine tür bilgilerini katıştırma varsayılan davranıştır. Bu varsayılan nedenle, açık atama gerekli olmadığından önceki örneklerden bazıları basitleştirilmiştir. Örneğin, `worksheet` içindeki `DisplayInExcel` bildirimi yerine `Excel._Worksheet workSheet = excelApp.ActiveSheet` olarak`Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`yazılır. Aynı yöntemde yapılan `AutoFit` çağrılar, varsayılan değer olmadan açık atama gerektirir, çünkü `ExcelApp.Columns[1]` bir `Object`, döndürür ve `AutoFit` bir Excel yöntemidir. Aşağıdaki kod, atama gösterir.
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-2. Varsayılan değiştirme ve tür bilgilerini katıştırma yerine PIA'ların kullanmak için genişletme **başvuruları** düğümünde **Çözüm Gezgini** seçip **Microsoft.Office.Interop.Excel** veya **Microsoft.Office.Interop.Word**.
+2. Tür bilgilerini gömmek yerine varsayılan değer değiştirmek ve PIA 'leri kullanmak için, **Çözüm Gezgini** ' deki **Başvurular** düğümünü genişletin ve ardından **Microsoft. Office. Interop. Excel** veya **Microsoft. Office. Interop. Word**öğesini seçin.
 
-3. Göremiyorsanız **özellikleri** penceresinde, tuşuna **F4**.
+3. **Özellikler** penceresini göremiyorsanız **F4**tuşuna basın.
 
-4. Bulma **birlikte çalışma türlerini katıştır** özellikler listesinde değerine değiştirip **False**. Eşdeğer, kullanarak derleyebilirsiniz [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) derleyici seçeneği yerine [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) bir komut isteminde.
+4. Özellik listesine **birlikte çalışma türlerini katıştır** ' ı bulun ve değerini **false**olarak değiştirin. Equivalently, bir komut isteminde [/Link](../../language-reference/compiler-options/link-compiler-option.md) yerine [/Reference](../../language-reference/compiler-options/reference-compiler-option.md) derleyici seçeneğini kullanarak derleyebilirsiniz.
 
-## <a name="to-add-additional-formatting-to-the-table"></a>Ek tablosuna biçimlendirmeyi eklemek için
+## <a name="to-add-additional-formatting-to-the-table"></a>Tabloya ek biçimlendirme eklemek için
 
-1. İki çağrıları değiştirin `AutoFit` içinde `DisplayInExcel` aşağıdaki deyimi.
+1. `AutoFit` İçindeki`DisplayInExcel` iki çağrısı aşağıdaki ifadesiyle değiştirin.
 
      [!code-csharp[csProgGuideOfficeHowTo#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#15)]
 
-     <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> Yöntemi her biri, isteğe bağlı, yedi değer parametresi vardır. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, none, bazı veya tüm kullanımları için bağımsız değişkenleri sağlayın sağlar. Önceki tabloda parametreleri yalnızca biri için bir bağımsız değişken sağlanan `Format`. Çünkü `Format` ilk parametre parametre listesinde parametre adı sağlamanız gerekmez. Ancak, deyim parametre adı, aşağıdaki kodda gösterildiği gibi dahil olup olmadığını anlamak daha kolay olabilir.
+     <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> Yöntemi, hepsi isteğe bağlı yedi değer parametresine sahiptir. Adlandırılmış ve isteğe bağlı bağımsız değişkenler hiçbiri, bazıları veya tümü için bağımsız değişkenler sağlamanıza olanak tanır. Önceki ifadede, parametrelerden `Format`yalnızca biri için bir bağımsız değişken sağlanır. , `Format` Parametre listesindeki ilk parametre olduğundan, parametre adını belirtmeniz gerekmez. Ancak, aşağıdaki kodda gösterildiği gibi, deyimin parametre adının dahil edilip edilmediğini anlamak daha kolay olabilir.
 
      [!code-csharp[csProgGuideOfficeHowTo#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#16)]
 
-2. Sonuçları görmek için CTRL + F5 tuşlarına basın. Diğer biçimlere listelenen <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat> sabit listesi.
+2. Sonucu görmek için CTRL + F5 tuşlarına basın. Diğer biçimler, <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat> numaralandırmada listelenmiştir.
 
-3. 1\. adım gerekli bağımsız değişkenler gösteren aşağıdaki kod ile deyiminde karşılaştırma C# 3.0 ve daha önceki sürümleri.
+3. Adım 1 ' deki ifadesini, C# 3,0 ve önceki sürümlerde gerekli olan bağımsız değişkenleri gösteren aşağıdaki kodla karşılaştırın.
 
      [!code-csharp[csProgGuideOfficeHowTo#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#17)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod, tam bir örnek gösterir.
+Aşağıdaki kod, tüm örneği göstermektedir.
 
 [!code-csharp[csProgGuideOfficeHowTo#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/walkthrough.cs#18)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [Nasıl yapılır: Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [dynamic](../../language-reference/keywords/dynamic.md)
+- [Tür dinamiği kullanma](../types/using-type-dynamic.md)
+- [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../classes-and-structs/named-and-optional-arguments.md)
+- [Nasıl yapılır: Office Programlamada adlandırılmış ve Isteğe bağlı bağımsız değişkenleri kullanma](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 07/25/2019
-ms.openlocfilehash: f1fce2899e9e11b1007d6c270180b27a29eaa167
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 10e5dfdc873f8dcf9fec0da5f7f3561337033f40
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039443"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604251"
 ---
 # <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3,0 'deki yenilikler (Önizleme 7)
 
@@ -502,9 +502,11 @@ Dışarı aktarma yöntemleri DER kodlu ikili veriler oluşturur ve içeri aktar
 
 ## <a name="serialport-for-linux"></a>Linux için SerialPort
 
-.NET Core 3,0, <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> Linux üzerinde desteklenir.
+.NET Core 3,0, Linux üzerinde için <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> temel desteği sağlar.
 
 Daha önce, .NET Core yalnızca Windows `SerialPort` 'da kullanımı desteklenir.
+
+Linux 'ta seri bağlantı noktası için sınırlı destek hakkında daha fazla bilgi için bkz. [GitHub sorun #33146](https://github.com/dotnet/corefx/issues/33146).
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Docker ve cgroup bellek sınırları
 

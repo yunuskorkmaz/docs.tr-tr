@@ -1,5 +1,5 @@
 ---
-title: -noconfig (C# Derleyici Seçenekleri)
+title: -noconfig (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /noconfig
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - -noconfig compiler option [C#]
 - noconfig compiler option [C#]
 ms.assetid: cd26967e-e494-4c8c-b5c9-af13b2f78b2e
-ms.openlocfilehash: 8d28ef1334df847865721783fa98aaa9d8c576be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d6d0c52be2306292224d7831f8818c6f865f2f4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662692"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602745"
 ---
-# <a name="-noconfig-c-compiler-options"></a>-noconfig (C# Derleyici Seçenekleri)
-**- Noconfig** seçeneği bulunan ve aynı dizinden csc.exe dosyası olarak yüklenen csc.rsp dosyasını derlemek değil derleyicinin söyler.  
+# <a name="-noconfig-c-compiler-options"></a>-noconfig (C# derleyici seçenekleri)
+**-Noconfig** seçeneği, derleyicinin ' de bulunan ve CSC. exe dosyası ile aynı dizinden yüklenen csc. rsp dosyası ile derlenmeyeceğini söyler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,17 +26,17 @@ ms.locfileid: "61662692"
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Csc.rsp dosyasını .NET Framework ile birlikte gelen tüm derlemelere başvurur. Visual Studio .NET geliştirme ortamını içeren gerçek başvuruları proje türüne bağlıdır.  
+ Csc. rsp dosyası .NET Framework ile gönderilen tüm derlemelere başvurur. Visual Studio .NET geliştirme ortamının içerdiği gerçek başvurular proje türüne bağlıdır.  
   
- Csc.rsp dosyasını değiştirebilir ve her derleme komut satırından csc.exe dahil edilmesi gereken ek derleyici seçeneklerini belirtin (dışında **- noconfig** seçeneği).  
+ Csc. rsp dosyasını değiştirebilir ve CSC. exe ile komut satırından her derlemeye dahil edilecek ek derleyici seçeneklerini belirtebilirsiniz ( **-noconfig** seçeneği hariç).  
   
- Derleyici geçirilecek seçeneklerini işler **csc** son komutu. Bu nedenle, komut satırında herhangi bir seçenek csc.rsp dosyasını aynı seçeneğinin ayarını geçersiz kılar.  
+ Derleyici, son olarak **CSC** komutuna geçirilen seçenekleri işler. Bu nedenle, komut satırındaki herhangi bir seçenek CSC. rsp dosyasında aynı seçeneğin ayarını geçersiz kılar.  
   
- Derleyicinin arayın ve csc.rsp dosyasındaki ayarları kullanın, belirtmek istemiyorsanız **- noconfig**.  
+ Derleyicinin Csc. rsp dosyasındaki ayarları bulup kullanmasını istemiyorsanız **-noconfig**' i belirtin.  
   
- Bu derleyici seçeneğini Visual Studio'da kullanılamıyor ve program aracılığıyla değiştirilemez.  
+ Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
+- [C# Derleyici Seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

@@ -1,6 +1,6 @@
 ---
-title: Çalışmaya başlama - C# Kılavuzu
-description: Hızlı tanıtım C# kavramlarını öğrenin ve .NET Core uygulamaları yazmaya olanak tanıyan kısa ve basit eğitimler bulun.
+title: Kullanmaya başlayın- C# kılavuz
+description: Tanıtım C# kavramlarını hızlıca öğrenmenizi ve .NET Core uygulamaları yazmanızı sağlayan kısa, basit öğreticiler bulun.
 helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
@@ -8,50 +8,50 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 0c97a5b843d27258f58d654d35420a262d5b741a
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ba5d2a9fb74b877c9b847343a9012ccb9624335e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062963"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604227"
 ---
 # <a name="get-started-with-c"></a>C ile çalışmaya başlama\#
 
-Bu bölümde kısa, hızlı bir şekilde olanak tanıyan basit öğreticiler C# ve .NET Core kullanarak uygulama oluşturun. Visual Studio 2017 ve Visual Studio Code için başlangıç konuları var. hazırlanıyoruz. Bu makaleler, bazı bir programlama deneyimi varsayılır. Programlama konusunda yeniyseniz, deneyin bizim [giriş C# ](../tutorials/intro-to-csharp/index.md) etkileşimli öğreticiler.
+Bu bölümde, ve .NET Core kullanarak C# hızlı bir şekilde uygulama oluşturmanıza olanak sağlayan kısa ve basit öğreticiler sağlanmaktadır. Visual Studio 2017 ve Visual Studio Code için Başlarken konuları vardır. Bu makalelerde bazı programlama deneyimleri varsayılmaktadır. Programlama için yeni bir deneyimize tıkladığınızda etkileşimli öğreticilere [giriş C# ](../tutorials/intro-to-csharp/index.md) ' i deneyin.
 
-Aşağıdaki konular da mevcuttur:
+Aşağıdaki konular kullanılabilir:
 
-* [C# dili ve .NET Framework Giriş](introduction-to-the-csharp-language-and-the-net-framework.md)
+* [C# Dile ve .NET Framework giriş](introduction-to-the-csharp-language-and-the-net-framework.md)
 
-     C# dili ve .NET genel bir bakış sağlar.
+     C# Dile ve .net 'e genel bakış sunar.
 
 * [Visual Studio 2017’de .NET Core ile bir C# Merhaba Dünya uygulaması derleme](../../core/tutorials/with-visual-studio.md)
 
-   Visual Studio 2017, Visual Studio'nun en son sürümü, kodu, derleme, çalıştırma, hata ayıklama, profil ve Windows için bir tümleşik geliştirme ortamından uygulamalarınızı yayımlamanızı sağlar.
+   Visual Studio 'nun en son sürümü olan Visual Studio 2017, uygulamalarınızı Windows için tümleşik bir geliştirme ortamından kodlamanıza, derlemenize, çalıştırmanıza, hata ayıklamanıza, profilinize ve yayımlamanıza olanak sağlar.
 
-   Konu oluşturma ve basit bir Hello World uygulaması çalıştırın ve ardından biraz daha etkileşimli bir Hello World uygulaması çalıştırmak için değiştirme sağlar. Oluşturma ve uygulamanızı çalıştıran bitirdiğinizde, da bilgi edinebilirsiniz nasıl [ayıklama](../../core/tutorials/debugging-with-visual-studio.md) ve nasıl [yayımlamadan](../../core/tutorials/publishing-with-visual-studio.md) böylece .NET Core tarafından desteklenen tüm platformlarda çalıştırılabilir.
+   Bu konu, basit bir Merhaba Dünya uygulaması oluşturup çalıştırmanıza ve sonra biraz daha etkileşimli Merhaba Dünya uygulaması çalıştıracak şekilde değiştirmenize olanak sağlar. Uygulamanızı oluşturmayı ve çalıştırmayı tamamladıktan sonra, nasıl [hata ayıklaması](../../core/tutorials/debugging-with-visual-studio.md) yapacağınızı ve .NET Core tarafından desteklenen herhangi bir platformda çalıştırılabilmesi için [](../../core/tutorials/publishing-with-visual-studio.md) nasıl yayımlayacağınızı öğrenebilirsiniz.
 
 * [Visual Studio 2017’de C# ve .NET Core ile bir sınıf kitaplığı derleme](../../core/tutorials/library-with-visual-studio.md)
 
-   Bir sınıf kitaplığı türleri ve başka bir uygulamadan çağrılabilir tür üyeleri tanımlamanıza olanak sağlar. Bu konuda bir dizeyi büyük harfli bir karakterle başlayıp başlamayacağını belirleyen tek bir yöntemi olan bir sınıf kitaplığı oluşturmanıza olanak sağlar. Kitaplığı oluşturmaya bitirdiğinizde, geliştirebilirsiniz bir [birim testi](../../core/tutorials/testing-library-with-visual-studio.md) beklendiği gibi çalıştığından ve ardından, kullanılabilir hale getirmek emin olmak için [tüketicilerimizin kullanmak istediği uygulamaları](../../core/tutorials/consuming-library-with-visual-studio.md).
+   Bir sınıf kitaplığı, başka bir uygulamadan çağrılabilen türleri ve tür üyelerini tanımlamanıza olanak sağlar. Bu konu, bir dizenin büyük harfli bir karakterle başlayıp başlamadığını belirleyen tek bir yöntemle bir sınıf kitaplığı oluşturmanıza olanak sağlar. Kitaplığı oluşturmayı tamamladıktan sonra, beklendiği gibi çalıştığından emin olmak için bir [birim testi](../../core/tutorials/testing-library-with-visual-studio.md) geliştirebilir ve bunu [kullanmak istediğiniz uygulamalar](../../core/tutorials/consuming-library-with-visual-studio.md)için kullanılabilir hale getirebilirsiniz.
 
 * [C# ve Visual Studio Code kullanmaya başlama](../../core/tutorials/with-visual-studio-code.md)
 
-   Visual Studio Code, derleme ve modern web ve bulut uygulamalarında hata ayıklama için en iyi duruma getirilmiş bir ücretsiz bir kod düzenleyicisidir. IntelliSense'i destekler ve Linux, macOS ve Windows için kullanılabilir.
+   Visual Studio Code, Modern Web ve bulut uygulamaları oluşturmak ve bu uygulamalarda hata ayıklamak için iyileştirilmiş, ücretsiz bir kod düzenleyicisidir. IntelliSense 'i destekler ve Linux, macOS ve Windows için kullanılabilir.
 
-   Bu konu oluşturma ve Visual Studio Code ve .NET Core ile basit bir Hello World uygulaması çalıştırma gösterilmektedir.
+   Bu konuda, Visual Studio Code ve .NET Core ile basit bir Merhaba Dünya uygulamasının nasıl oluşturulacağı ve çalıştırılacağı gösterilmektedir.
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-* [C# Programlama Kılavuzu](../../csharp/programming-guide/index.md)
+* [C# Programlama Kılavuzu](../programming-guide/index.md)
 
-    C# programlama kavramları hakkında bilgi sağlar ve C# ' de çeşitli görevler gerçekleştirmeyi açıklar.
+    Programlama kavramları hakkında C# bilgi sağlar ve içinde C#çeşitli görevlerin nasıl gerçekleştirileceğini açıklar.
 
-* [C# başvurusu](../../csharp/language-reference/index.md)
+* [C#Başvurunun](../language-reference/index.md)
 
-    C# anahtar sözcükleri, işleçler, önişlemci yönergeleri, derleyici seçenekleri ve derleyici hataları ve Uyarıları hakkında ayrıntılı başvuru bilgileri sağlar.
+    Anahtar sözcükler, işleçler, C# Önişlemci yönergeleri, derleyici seçenekleri ve derleyici hataları ve uyarıları hakkında ayrıntılı başvuru bilgileri sağlar.
 
-* [İzlenecek Yollar](../../csharp/walkthroughs.md)
+* [İzlenecek Yollar](../walkthroughs.md)
 
     C# kullanan programlama yollarına ve her izlenecek yola ilişkin kısa bir açıklamaya bağlantılar sağlar.
 

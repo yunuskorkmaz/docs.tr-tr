@@ -1,46 +1,46 @@
 ---
 title: LINQ ile Çalışma
-description: Bu öğreticide LINQ ile dizileri oluşturmak, yöntemleri kullanmak için LINQ sorguları yazma ve eager ve geç değerlendirme arasında ayrım öğretir.
+description: Bu öğreticide LINQ, LINQ sorgularında kullanılmak üzere yazma yöntemleriyle diziler oluşturma ve Eager ile yavaş değerlendirme arasında ayrım yapma öğretilir.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 3cbafbb6aeed3abdd6d83ead613b29de738d5604
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609302"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587186"
 ---
 # <a name="working-with-linq"></a>LINQ ile Çalışma
 
 ## <a name="introduction"></a>Giriş
 
-Bu öğretici, .NET core'da özelliklerini öğretir ve C# dili. Şunları öğreneceksiniz:
+Bu öğretici, .NET Core ve C# dil özelliklerini size öğretir. Şunları öğreneceksiniz:
 
-- LINQ ile dizileri oluşturma adımları.
-- Nasıl kolayca kullanılabilecek yöntemleri LINQ sorguları yazma.
-- İstekli ve geç değerlendirme arasında ayrım yapma.
+- LINQ ile diziler oluşturma.
+- LINQ sorgularında kolayca kullanılabilecek yöntemler yazma.
+- Eager ve geç değerlendirme arasında ayrım yapma.
 
-Tüm magician temel becerilerini birini gösteren bir uygulama oluşturarak bu tekniklerini öğreneceksiniz: [faro shuffle](https://en.wikipedia.org/wiki/Faro_shuffle). Kısaca, faro shuffle burada yarıya birden tam olarak bir kart Destesi bölün ve ardından her yarım özgün Destesi yeniden oluşturmak için her bir karttaki shuffle karışır bir tekniktir.
+Herhangi bir Magician temel becerilerinden birini gösteren bir uygulama oluşturarak bu teknikleri öğrenirsiniz: [Faro karışık](https://en.wikipedia.org/wiki/Faro_shuffle). Kısaca, bir kağıt destesi yarısını tamamen yarıya böldüğünüz bir tekniktir, sonra da orijinal destesi yeniden derlemek için her bir yarısını her bir karmadan karıştırın.
 
-Magicians, her kart sonra her shuffle bilinen bir konumda olan ve yinelenen bir desen sırasıdır olduğundan bu tekniği kullanın.
+Magicians bu tekniği, her kart her karıştırmadan sonra bilinen bir konumda olduğundan ve sipariş yinelenen bir düzen olduğundan kullanın.
 
-Amaçlarınız doğrultusunda, bu veri dizisi düzenleme ışık hearted göz olur. Oluşturacağınız uygulama Kart destesi oluşturmak ve ardından her zaman sırası yazma seçeneği, bir dizi gerçekleştirin. Ayrıca, özgün sırasını güncelleştirilmiş siparişe karşılaştıracağız.
+Amacınıza uygun olarak, veri dizilerini işlemek için bir hafif göz atın. Oluşturacağınız uygulama bir kart destesi oluşturacak ve sonra her seferinde sırayı yazarak bir dizi karışık olarak bir sıra gerçekleştirecek. Ayrıca, güncelleştirilmiş siparişi orijinal siparişle karşılaştırırsınız.
 
-Bu öğreticide, birden fazla adım vardır. Her adımdan sonra uygulamayı çalıştırmak ve ilerleme durumuna bakın. Ayrıca bkz [tamamlanan örnek](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) dotnet/samples GitHub deposunda. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu öğreticide birden çok adım vardır. Her adımdan sonra, uygulamayı çalıştırabilir ve ilerleme durumunu görebilirsiniz. Ayrıca, DotNet/Samples GitHub deposunda [Tamamlanan örneği](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) görebilirsiniz. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-.NET core çalıştırmak için makinenizi ayarlamak gerekir. Yükleme yönergelerini bulabilirsiniz [.NET Core](https://www.microsoft.com/net/core) sayfası. Bu uygulama, Windows, Ubuntu Linux, OS X veya Docker kapsayıcısı çalıştırabilirsiniz. Sık kullandığınız Kod Düzenleyicisi'ni yüklemeniz gerekir. Aşağıdaki tanımlamalar [Visual Studio Code](https://code.visualstudio.com/) açık kaynaklı, çapraz platform Düzenleyicisi olduğu. Ancak, rahat sevdiğiniz araçları kullanabilirsiniz.
+.NET Core 'u çalıştırmak için makinenizi ayarlamanız gerekir. Yükleme yönergelerini [.NET Core](https://www.microsoft.com/net/core) sayfasında bulabilirsiniz. Bu uygulamayı Windows, Ubuntu Linux, OS X veya bir Docker kapsayıcısında çalıştırabilirsiniz. En sevdiğiniz kod düzenleyicinizi yüklemeniz gerekir. Aşağıdaki açıklamalar açık kaynaklı, platformlar arası düzenleyici olan [Visual Studio Code](https://code.visualstudio.com/) kullanır. Bununla birlikte, rahat olan her türlü aracı kullanabilirsiniz.
 
-## <a name="create-the-application"></a>Uygulama oluşturma
+## <a name="create-the-application"></a>Uygulamayı oluşturma
 
-İlk adım, yeni bir uygulama oluşturmaktır. Bir komut istemi açın ve uygulamanız için yeni bir dizin oluşturun. Bu, geçerli bir dizin oluşturun. Komut türü `dotnet new console` komut isteminde. Bu, temel bir "Hello World" uygulaması için başlangıç dosyaları oluşturur.
+İlk adım yeni bir uygulama oluşturmaktır. Bir komut istemi açın ve uygulamanız için yeni bir dizin oluşturun. Geçerli dizini oluşturun. `dotnet new console` Komutu komut istemine yazın. Bu, temel bir "Merhaba Dünya" uygulaması için başlangıç dosyalarını oluşturur.
 
-C# daha önce kullanmadıysanız [Bu öğreticide](console-teleprompter.md) bir C# programı yapısını açıklar. Okuma ve LINQ hakkında daha fazla bilgi edinmek için buraya dönün.
+Daha önce hiç kullanmadıysanız C# , [Bu öğretici](console-teleprompter.md) bir C# programın yapısını açıklar. Bunu okuyabilir ve sonra LINQ hakkında daha fazla bilgi edinmek için buraya dönebilirsiniz.
 
 ## <a name="creating-the-data-set"></a>Veri kümesi oluşturma
 
-Başlamadan önce aşağıdaki satırları başında olduğundan emin olun `Program.cs` tarafından oluşturulan dosya `dotnet new console`:
+Başlamadan önce, aşağıdaki satırların tarafından `Program.cs` `dotnet new console`oluşturulan dosyanın en üstünde olduğundan emin olun:
 
 ```csharp
 // Program.cs
@@ -49,9 +49,9 @@ using System.Collections.Generic;
 using System.Linq;
 ```
 
-Bu üç satır varsa (`using` deyimleri) olmayan dosyasının en üstüne programımız derlenmez.
+Bu üç çizgi (`using` deyimler) dosyanın en üstünde değilse, programımız derlenmeyecektir.
 
-Tüm ihtiyacınız olacak başvuruları sahip olduğunuza göre bir deste nelerden göz önünde bulundurun. Genellikle, bir deste oyun dört cins varsa ve her seri On üç değerleri. Normalde, oluşturmayı düşünebilirsiniz bir `Card` uygulamalarımızın sağ kapalı sınıf ve koleksiyonu doldurma `Card` el ile nesneleri. LINQ ile ilgilenen bir deste oluştururken, her zamanki gibi daha kısa olabilir. Oluşturmak yerine bir `Card` sınıfı iki diziyi cins ve sıralamalar, sırasıyla göstermek için oluşturabilir. Gerçekten basit bir çift oluşturacaksınız [ *yineleyici yöntemleri* ](../iterators.md#enumeration-sources-with-iterator-methods) cins olarak ve derecelerini oluşturacağını <xref:System.Collections.Generic.IEnumerable%601>s dize:
+İhtiyacınız olan tüm başvurulara sahip olduğunuza göre, kart destesi ne olduğunu göz önünde bulundurun. Yaygın olarak, kart oynamaya yönelik bir deste dört cins içerir ve her cinsten on yedi değer vardır. Normalde, bir sınıfı doğrudan bir `Card` sınıf oluşturmayı ve bir `Card` nesne koleksiyonunu el ile doldurmayı düşünebilirsiniz. LINQ ile, kart destesi oluşturma konusunda olağan yollardan daha kısa bir işlem yapabilirsiniz. `Card` Sınıf oluşturmak yerine, sırasıyla cins ve dereceleri temsil eden iki sıra oluşturabilirsiniz. Dizeleri ve <xref:System.Collections.Generic.IEnumerable%601>bu nesnelerin her birini oluşturacak olan bir çok basit [*Yineleyici yöntemleri*](../iterators.md#enumeration-sources-with-iterator-methods) oluşturacaksınız:
 
 ```csharp
 // Program.cs
@@ -83,9 +83,9 @@ static IEnumerable<string> Ranks()
 }
 ```
 
-Bunlar altındaki yerleştirmek `Main` yönteminde, `Program.cs` dosya. Bu iki yöntem her iki yazılımınız `yield return` çalıştırılmakta olan bir dizi oluşturmak için söz dizimi. Derleyici uygulayan bir nesne oluşturur <xref:System.Collections.Generic.IEnumerable%601> ve bunların istendiği gibi dize sırası üretir.
+Bunları `Main` `Program.cs` dosyanıza bu yöntemin altına yerleştirin. Bu iki yöntem her ikisi de `yield return` çalıştıkları sırada bir sıra oluşturmak için söz dizimini kullanır. Derleyici, istenen bir nesne oluşturur <xref:System.Collections.Generic.IEnumerable%601> ve bu sırada dizelerin dizisini oluşturur.
 
-Şimdi bu yineleyici yöntemlerin deste oluşturmak için kullanın. LINQ sorgusu olarak ekleyeceğiniz bizim `Main` yöntemi. İncelememiz şu şekildedir:
+Şimdi, kart destesi oluşturmak için bu yineleyici yöntemleri kullanın. LINQ sorgusunu kendi yönteemiz `Main` olacak şekilde yerleştirebilirsiniz. İşte buna bir göz atın:
 
 ```csharp
 // Program.cs
@@ -103,23 +103,23 @@ static void Main(string[] args)
 }
 ```
 
-Birden çok `from` yan tümceleri üreten bir <xref:System.Linq.Enumerable.SelectMany%2A>, ilk dizideki her öğe ikinci dizideki her öğe birleşiminden tek bir dizisi oluşturulur. Sıralama amaçlarımız doğrultusunda büyük/küçük harf önemlidir. İlk kaynak sırası (cins) içindeki ilk öğeye (sıralamalara sahip) ikinci dizideki her öğe ile birleştirilir. Bu ilk uyacak tüm On üç kartları oluşturur. Bu işlem, (cins) ilk dizideki her öğe tekrarlanır. Bitiş değerleri tarafından izlenen cins göre sıralanmış bir deste sonucudur.
+Birden çok `from` yan tümce, <xref:System.Linq.Enumerable.SelectMany%2A>ikinci dizideki her öğe ile ilk dizideki her öğeyi birleştiren tek bir sıra oluşturan bir oluşturur. Sıra, amacınız açısından önemlidir. İlk kaynak dizideki (cins) ilk öğe, ikinci dizideki her öğe (Rütler) ile birleştirilir. Bu, birinci cins 'in tüm üçüncü dört kartını üretir. Bu işlem, ilk dizideki (cins) her öğe ile yinelenir. Nihai sonuç, cinsler tarafından, ardından değerler tarafından sıralanan kartların bir destesi.
 
-Bunun yerine, yukarıda kullanılan sorgu söz dizimi LINQ yazılacak seçin veya yöntemi söz dizimini kullanın, akılda tutulması gereken önemli olduğu, söz dizimi bir biçimden diğerine diğerine gitmek her zaman mümkündür. Sorgu söz dizimi içinde yazılan yukarıdaki sorguda yöntem sözdizimi yazılabilir:
+Yukarıda kullanılan sorgu söz diziminde LINQ 'nizi yazmayı veya bunun yerine Yöntem sözdizimini kullanmayı tercih etmeksizin, bir sözdizimi formundan diğerine gitmeniz her zaman mümkündür. Sorgu sözdiziminde yazılan yukarıdaki sorgu yöntem sözdiziminde şöyle yazılabilir:
 
 ```csharp
 var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit = suit, Rank = rank }));
 ```
 
-Derleyici, eşdeğer yöntemi çağrısı sözdizimine sorgu sözdizimi kullanılarak yazılsa LINQ deyimleriyle çevirir. Bu nedenle, söz dizimi seçiminizden bağımsız olarak sorgu iki sürümü aynı sonucu üretir. Hangi söz dizimi durumunuza en iyi şekilde çalışır seçin: zorluk yöntemi söz dizimi ile bazı üyeler sahip olduğu bir takımda çalışıyorsanız, sorgu söz dizimi kullanarak tercih ettiğiniz örneği için deneyin.
+Derleyici, sorgu söz dizimi ile yazılan LINQ deyimlerini eşdeğer Yöntem çağrısı sözdizimine dönüştürür. Bu nedenle, söz dizimi seçiminizden bağımsız olarak, sorgunun iki sürümü aynı sonucu üretir. Hangi sözdiziminin durumunuz için en iyi şekilde çalıştığını seçin: Örneğin, bir ekip içinde çalışıyorsanız, bazı üyelerin Yöntem sözdizimi konusunda zorluk yaşıyorsanız, sorgu söz dizimini kullanmayı tercih edin.
 
-Devam edip bu noktada derlediğiniz örneği çalıştırın. Tüm 52 kartları deste içinde görüntüler. Gözlemlemek için hata ayıklayıcı altında bu örneği çalıştırmak çok yararlı bulabilirsiniz nasıl `Suits()` ve `Ranks()` bir yöntem yürütülemez. Yalnızca gerektiği gibi her bir dizideki her bir dizenin oluşturulan açıkça görebilirsiniz.
+Devam edin ve bu noktada derlediğiniz örneği çalıştırın. Bu, destedeki tüm 52 kartları görüntüler. `Suits()` Ve`Ranks()` yöntemlerinin nasıl yürütüleceğini gözlemlemek için bu örneği bir hata ayıklayıcı altında çalıştırmanın çok yararlı olduğunu fark edebilirsiniz. Her bir dizinin her bir dizesinin yalnızca gerektiğinde oluşturulduğunu açıkça görebilirsiniz.
 
-![52 kartları yazma uygulamayı gösteren bir konsol penceresi.](./media/working-with-linq/console-52-card-application.png)
+![52 kart yazan uygulamayı gösteren bir konsol penceresi.](./media/working-with-linq/console-52-card-application.png)
 
-## <a name="manipulating-the-order"></a>Sipariş işleme
+## <a name="manipulating-the-order"></a>Siparişi düzenleme
 
-Ardından, nasıl kullanıp kartları Karıştırılmasına gideceğinizi odaklanın. İlk adımda herhangi bir iyi shuffle Destesi iki bölme sağlamaktır. <xref:System.Linq.Enumerable.Take%2A> Ve <xref:System.Linq.Enumerable.Skip%2A> LINQ API'leri parçası olan yöntemler sizin için bu özelliği sağlar. Bunları altındaki yerleştirmek `foreach` döngü:
+Ardından, destedeki kartları nasıl karıştığınıza odaklanın. Her iyi karışmaya yönelik ilk adım, desteyi ikiye bölmenizde yarar vardır. LINQ API <xref:System.Linq.Enumerable.Skip%2A> 'lerinin parçası olan veyöntemleri,buözelliğisiziniçinsağlar.<xref:System.Linq.Enumerable.Take%2A> Bunları `foreach` döngünün altına yerleştirin:
 
 ```csharp
 // Program.cs
@@ -140,11 +140,11 @@ public static void Main(string[] args)
 }
 ```
 
-Ancak, kendi yazmak zorunda standart kitaplıkta avantajlarından yararlanmak için karışık yöntemi yoktur. Bu işlem her bir parçasının adımlarda açıklanacaktır böylece LINQ tabanlı programlar ile kullanacağınız çeşitli teknikler, oluşturduğunuz shuffle yöntemi gösterir.
+Ancak, standart kitaplıkta avantajlarından yararlanmak için bir karıştırma yöntemi yoktur, bu nedenle kendi kodunuzu yazmanız gerekir. Oluşturmakta olduğunuz karıştırma yöntemi, LINQ tabanlı programlarla birlikte kullanacağınız birkaç tekniği gösterir. bu nedenle, bu işlemin her bir bölümü adımlarda açıklanacaktır.
 
-Nasıl etkileşim için bazı işlevler eklemek amacıyla <xref:System.Collections.Generic.IEnumerable%601> LINQ sorguları döneceğiz, bazı özel tür adı verilen yöntemler yazmak ihtiyacınız olacak [genişletme yöntemleri](../../csharp/programming-guide/classes-and-structs/extension-methods.md). Kısaca, özel amaçlı bir genişletme yöntemi olduğunu *statik yöntem* ekleyen yeni işlevler için zaten varolan bir tür işlevselliği için eklemek istediğiniz özgün türünü değiştirmek zorunda kalmadan.
+İle nasıl etkileşim kurabileceğine ilişkin <xref:System.Collections.Generic.IEnumerable%601> bazı işlevler eklemek için LINQ sorgularından geri dönebilirsiniz, [Uzantı yöntemleri](../programming-guide/classes-and-structs/extension-methods.md)adlı bazı özel tür yöntemler yazmanız gerekir. Kısaca, bir genişletme yöntemi, işlevselliği eklemek istediğiniz orijinal türü değiştirmek zorunda kalmadan, zaten var olan bir türe yeni işlevsellik ekleyen özel amaçlı *statik bir yöntemdir* .
 
-Yeni bir ekleyerek yeni bir giriş, genişletme yöntemleri sağlar *statik* programınız için sınıf dosyası adında `Extensions.cs`ve ardından ilk bulunan uzantı yöntemine oluşturmaya başlayın:
+Adlı`Extensions.cs`programınıza yeni bir *statik* sınıf dosyası ekleyerek ve sonra ilk uzantı yöntemini oluşturmaya başlamak için uzantı yöntemlerinizi yeni bir giriş yapın:
 
 ```csharp
 // Extensions.cs
@@ -164,23 +164,23 @@ namespace LinqFaroShuffle
 }
 ```
 
-Yöntem imzası bir süre için özel olarak parametreleri bakın:
+Yöntem imzasına bir süre için bakın, özellikle Parametreler:
 
 ```csharp
 public static IEnumerable<T> InterleaveSequenceWith<T> (this IEnumerable<T> first, IEnumerable<T> second)
 ```
 
-Ek gördüğünüz `this` yöntemin ilk bağımsız değişkeni değiştiricisi. İşlevmiş gibi bir üye yöntemi ilk bağımsız değişken türünü yöntem çağrısı anlamına gelir. Ayrıca bu yöntem bildiriminde girdi ve çıktı türleri nerede standart bir deyim izleyen `IEnumerable<T>`. Uygulama zincirlenmesine izin LINQ yöntemleri sağlayan daha karmaşık sorgular birlikte gerçekleştirilecek.
+Metodun ilk bağımsız değişkenine `this` değiştiricinin eklenmesini görebilirsiniz. Bu, yöntemi ilk bağımsız değişkenin türünün bir Member yöntemi gibi çağırmış olmanız anlamına gelir. Bu yöntem bildirimi Ayrıca, giriş ve çıkış türlerinin `IEnumerable<T>`bulunduğu standart bir IOM 'yi izler. Bu uygulama, LINQ yöntemlerinin daha karmaşık sorgular gerçekleştirmek için birlikte zincirde olmasını sağlar.
 
-Doğal olarak, yarıları Destesi bölme olduğundan, bu yarıları birbirine birleştirmek gerekir. Kodda, numaralandırma aracılığıyla edinilen sıralarının her ikisi de başka bir deyişle <xref:System.Linq.Enumerable.Take%2A> ve <xref:System.Linq.Enumerable.Skip%2A> aynı anda *`interleaving`* öğeleri ve oluşturma bir sıralı:, şimdi karışık deste. Bir LINQ yazma iki sıralarıyla birlikte çalışarak yöntemi anladığınızdan gerektirir. nasıl <xref:System.Collections.Generic.IEnumerable%601> çalışır.
+Doğal olarak, desteyi halele böldüğünüz için bu kilitlenenlere birlikte katılmanız gerekir. Kod içinde bu, hem bir kez, <xref:System.Linq.Enumerable.Take%2A> *`interleaving`* hem de tek bir sıra oluşturduğunuz her iki diziyi <xref:System.Linq.Enumerable.Skip%2A> de numaralandırdığınız anlamına gelir: şimdi karışık kart destesi. İki sıra ile çalışacak bir LINQ yöntemi yazmak için nasıl <xref:System.Collections.Generic.IEnumerable%601> çalıştığını anlamanız gerekir.
 
-<xref:System.Collections.Generic.IEnumerable%601> Arabirimi bir yöntemi vardır: <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>. Tarafından döndürülen nesne <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> sonraki öğeyi ve dizideki geçerli öğe alır. bir özellik taşımak için bir yöntemi vardır. Bu iki üyeler toplamasını ve öğeleri döndürmek için kullanır. Bu ayırma yöntemi, bir yineleyici yöntemini olacak bir koleksiyon oluşturma ve koleksiyon döndürmek yerine kullanacaksınız böylece `yield return` yukarıda gösterilen sözdizimi.
+Arabirimin bir yöntemi vardır: <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>. <xref:System.Collections.Generic.IEnumerable%601> Tarafından <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> döndürülen nesne bir sonraki öğeye ve dizideki geçerli öğeyi alan bir özelliğe sahip bir yönteme sahip. Bu iki üyeyi, koleksiyonu numaralandırmak ve öğeleri döndürmek için kullanacaksınız. Bu ayırma yöntemi bir yineleyici yöntemi olacak, bu nedenle bir koleksiyon oluşturmak ve koleksiyonu döndürmek yerine yukarıda gösterilen `yield return` söz dizimini kullanacaksınız.
 
-Bu yöntemin uygulanmasını şu şekildedir:
+Bu yöntemin uygulanması aşağıda verilmiştir:
 
 [!CODE-csharp[InterleaveSequenceWith](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
 
-Bu yöntem, yazdığınız, dönün `Main` yöntemi ve karışık bir kez Destesi:
+Bu yöntemi yazdıktan sonra, `Main` yönteme dönün ve destesi bir kez karışın:
 
 ```csharp
 // Program.cs
@@ -208,15 +208,15 @@ public static void Main(string[] args)
 
 ## <a name="comparisons"></a>Karşılaştırma
 
-Kaç seçeneği Destesi ayarlamak için gereken kendi özgün siparişe yedekleme? Öğrenmek için iki diziyi eşit olup olmadığını belirleyen bir yöntem yazmaktır gerekir. Bu yöntem sonra seçimdeki Destesi bir döngüde arkanıza Destesi geri sırayla olduğunda kontrol edin kodu gerekir.
+Destesi orijinal sıralarına geri ayarlamak için kaç tane karışık? Bunu öğrenmek için, iki sıranın eşit olup olmadığını belirleyen bir yöntem yazmanız gerekir. Bu yöntemi aldıktan sonra, destesi bir döngüyle karışık olarak sunan kodu yerleştirmeniz ve destenin sırasıyla ne zaman geri olduğunu kontrol etmeniz gerekir.
 
-İki sıranın eşit olup olmadığını belirlemek için bir yöntem yazma basit olması gerekir. Destesi karıştırmak için yazdığınız yöntemine benzer bir yapıdır. Yalnızca bu zaman yerine `yield return`ing her öğe eşleşen her dizi öğelerini karşılaştıracağız. Her bir öğe eşleşmiyorsa dizinin tamamıyla, numaralandırılmış olduğunda, dizileri aynıdır:
+İki sıranın eşit olup olmadığını anlamak için bir yöntem yazmak basit olmalıdır. Bu, destesi karıştırmak için yazdığınız yöntemin benzer bir yapısıdır. Her öğe yerine `yield return`yalnızca bu kez her bir sıranın eşleşen öğelerini karşılaştırırsınız. Tüm sıra numaralandırılmışsa, her öğe eşleşiyorsa, sıralar aynıdır:
 
 [!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
-Bu ikinci bir LINQ deyim gösterir: terminal yöntemleri. Bunlar bir dizisi giriş olarak (veya bu durumda, iki sıranın) alır ve tek bir sayı değerini döndürür. Terminal yöntemlerini kullanırken her zaman en son oldukları yöntemi bir LINQ yöntemleri zincirindeki sorgu, bu nedenle "terminal" adı.
+Bu, ikinci bir LINQ deyimidir: Terminal yöntemlerini gösterir. Bunlar girdi olarak bir sıra alır (veya bu durumda iki dizi) ve tek bir skaler değer döndürür. Terminal yöntemleri kullanılırken, her zaman bir LINQ sorgusunun Yöntem zincirindeki son yöntem ve bu nedenle "Terminal" adı verilir.
 
-Destesi özgün sırayla olduğunda belirlemek için kullandığınızda, bu eylem görebilirsiniz. Bir döngü içinde karışık kod ve sıra özgün sırayla uygulayarak olduğunda Dur `SequenceEquals()` yöntemi. Bir dizi yerine tek bir değer döndürdüğünden, her zaman son yöntemi herhangi bir sorgu olacaktır görebilirsiniz:
+Bu işlemi, deste 'nın orijinal düzeninde ne zaman geri yükleneceğini tespit etmek için kullandığınızda görebilirsiniz. Karışık kodu bir döngü içine koyun ve `SequenceEquals()` yöntemi uygulayarak sıra özgün sırasına geri döndüğünüzde durur. Bir dizi yerine tek bir değer döndürdüğünden, her sorguda her zaman son yöntem olacağını görebilirsiniz:
 
 ```csharp
 // Program.cs
@@ -246,37 +246,37 @@ static void Main(string[] args)
 }
 ```
 
-Şu ana kadar var ve Destesi her çalmayı nasıl yeniden düzenler, Not kodu çalıştırın. 8 seçeneği sonra (yineleme do-while döngüsü), Destesi olduğu içinde ilk başlangıç LINQ Sorgu oluşturduğunuz sırada ilk yapılandırmasına döndürür.
+Şimdiye kadar aldığınız kodu çalıştırın ve her bir karıştırmadan destesi nasıl yeniden bir şekilde yeniden düzenler. 8 karışık (do-while döngüsünün yinelemesi) sonrasında, deste başlangıç LINQ sorgusundan ilk kez oluşturduğunuz sırada bulunduğu özgün yapılandırmaya geri döner.
 
-## <a name="optimizations"></a>En iyi duruma getirme
+## <a name="optimizations"></a>İyileştirmeleri
 
-Yapılandırdığınıza kadar örnek yürüten bir *shuffle kullanıma*, burada üst ve alt kartları her çalıştırma aynı kalır. Bir değişiklik bakalım: kullanacağız bir *karışık olarak* bunun yerine, burada tüm 52 kartları değiştirmek konumu. İçinde bir karışık için ilk kart böylece alt yarısında Destesi Interleave Destesi ilk kartta olur. Üst kısmında son kartın altındaki kartı haline gelir anlamına gelir. Bu, tek satırlık bir kod için basit bir değişikliktir. Geçerli shuffle sorgu konumlarını geçerek güncelleştirme <xref:System.Linq.Enumerable.Take%2A> ve <xref:System.Linq.Enumerable.Skip%2A>. Bu Destesi üst ve alt yarısının sırasını değiştirir:
+Şimdiye kadar derlediğiniz örnek, üst ve alt kartların her çalıştırmada aynı kalacağı *karışık*bir şekilde yürütülür. Tek bir değişiklik yapabiliriz: bunun yerine, tüm 52 kartlar konum değiştiren bir *karışık olarak* kullanacağız. Bir karışık olarak, alt yarısı ilk kartın destedeki ilk kart haline gelmesi için destesi bir kez ayırmada kullanırsınız. Bu, üstteki yarısında son kartın alt kart haline geldiği anlamına gelir. Bu, tekil kod satırında basit bir değişiklik. <xref:System.Linq.Enumerable.Take%2A> Ve<xref:System.Linq.Enumerable.Skip%2A>konumlarını değiştirerek geçerli karıştırma sorgusunu güncelleştirin. Bu, deste 'nın üst ve alt kilitlenme sırasını değiştirir:
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 ```
 
-Programı yeniden çalıştırın ve kendisini yeniden sıralamak Destesi için 52 yinelemeler alan görürsünüz. Bazı önemli performans performansındaki düşüşleri program çalışmaya devam ettikçe fark etmeye başlayacaksınız.
+Programı yeniden çalıştırın ve deste 'nın kendisini yeniden sıralamak için 52 yineleme aldığını görürsünüz. Program çalışmaya devam ettiğinden bazı önemli performans düşüşlerinden de karşılaşırsınız.
 
-Bunun nedeni vardır. Bu performans bırakma başlıca nedenlerinden üstesinden: verimsiz kullanılmasına [ *geç değerlendirme*](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Bunun birçok nedeni vardır. Bu performans durmasının önemli nedenlerine bir tane ekleyebilirsiniz: verimsiz [*yavaş değerlendirme*](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)kullanımı.
 
-Kısaca, geç değerlendirme değeri gerekli olana kadar bir deyimi değerlendirmesi gerçekleştirilmez belirtir. LINQ sorguları gevşek değerlendirilen ifadeleri ' dir. Öğeleri yalnızca istendiğinde dizileri oluşturulur. Genellikle, önemli bir avantajı LINQ olmasıdır. Ancak, bu programı gibi bir kullanımda bu yürütme zamanı içinde hızlı büyümesine neden olur.
+Kısaca, yavaş değerlendirme bir deyimin değerlendirmesinin değeri gerekli olana kadar gerçekleştirilmediğini belirtir. LINQ sorguları, geç değerlendirilen ifadelerdir. Sıralar yalnızca öğeler istendiğinde oluşturulur. Genellikle bu, LINQ 'ın önemli bir avantajıdır. Bununla birlikte, bu program gibi bir kullanımda, yürütme zamanında üstel büyümeye neden olur.
 
-Biz bir LINQ Sorgu kullanarak özgün Destesi oluşturulan unutmayın. Her shuffle önceki Destesi üzerinde üç LINQ sorguları uygulayarak oluşturulur. Tüm bu gevşek gerçekleştirilir. Bu, ayrıca bunların sırası istenen olarak yeniden her zaman gerçekleştirilir anlamına gelir. 52nd yinelemeye alma süresi, orijinal Destesi çoğu, birçok kez yeniden. Bu davranış göstermek için bir günlük yazalım. Ardından, bu çözeceksiniz.
+Bir LINQ sorgusu kullanarak özgün destesi oluşturduğumuz unutulmamalıdır. Her karıştırma, önceki destede üç LINQ sorgusu gerçekleştirerek oluşturulur. Bunların tümü geç gerçekleştirilir. Bu Ayrıca, sıranın her istenilişinde yeniden gerçekleştirdikleri anlamına gelir. 5 TB yinelemesine alışışınızda, ilk desteyi pek çok kez yeniden oluşturuluyor olursunuz. Bu davranışı göstermek için bir günlük yazalım. Ardından, onu düzeltireceksiniz.
 
-İçinde `Extensions.cs` dosya yazın ya da aşağıdaki yöntemi kopyalayın. Bu genişletme yöntemi adlı yeni bir dosya oluşturur `debug.log` kayıtları ve proje dizini içinde hangi sorgu şu anda günlük dosyasına yapılıyor. Sorgu çalıştırılmış işaretlemek için herhangi bir sorgu için bir genişletme yöntemi bu eklenmesi.
+`Extensions.cs` Dosyanıza aşağıdaki yöntemi yazın veya kopyalayın. Bu genişletme yöntemi, proje dizininiz içinde adlı `debug.log` yeni bir dosya oluşturur ve o anda günlük dosyasına hangi sorgunun yürütülebileceğini kaydeder. Bu genişletme yöntemi sorgunun yürütüldüğünü işaretlemek için herhangi bir sorguya eklenebilir.
 
 [!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
-Bir kırmızı dalgalı altında görürsünüz `File`, yani yok. Derleyicinin ne bilmez olduğundan bu, derlenemeyecektir `File` olduğu. Bu sorunu çözmek için aşağıdaki satır kodun ilk satırı altında eklediğinizden emin olun `Extensions.cs`:
+Altında `File`kırmızı renkli bir çizgi görürsünüz, bunun anlamı yoktur. Derleyici ne `File` olduğunu bilmediğinden derlenmez. Bu sorunu çözmek için, aşağıdaki ilk satırın `Extensions.cs`altına aşağıdaki kod satırını eklediğinizden emin olun:
 
 ```csharp
 using System.IO;
 ```
 
-Bu sorunu çözecektir ve kırmızı hata kaybolur.
+Bu, sorunu çözmeli ve kırmızı hata kaybolur.
 
-Ardından, her bir günlük iletisine Sorgu tanımını izleme:
+Ardından, her bir sorgunun tanımını bir günlük iletisiyle işaretleyin:
 
 ```csharp
 // Program.cs
@@ -324,32 +324,32 @@ public static void Main(string[] args)
 }
 ```
 
-Bir sorguyu her eriştiğinde oturum yok dikkat edin. Özgün sorgu oluşturduğunuzda oturumunuzu açın. Program hala çalıştırmak uzun zaman alır, ancak artık neden görebilirsiniz. İçinde karışık açıktır, geçiş için geri dışı karışık günlüğü'yle çalıştıran sabırdan çalıştırırsanız. Geç değerlendirme etkileri yine de görürsünüz. Tek bir çalıştırmada tüm değeri ve takım oluşturma dahil, 2592 sorgularını yürütür.
+Her sorguya eriştiğinizde günlüğe kayıt yapmayın. Yalnızca özgün sorguyu oluşturduğunuzda günlüğe kaydedilir. Programın çalıştırılması uzun sürer, ancak artık neden de görebilirsiniz. Oturum açma özelliği etkinken karışık olarak çalışan haya 'nın dışında çalıştırırsanız, arka arkaya geri dönün. Hala yavaş değerlendirme etkileri görürsünüz. Tek bir çalıştırmasında, tüm değer ve cins üretimi dahil 2592 sorgu yürütür.
 
-Yaptığınız yürütme sayısını azaltmak için kodu buraya performansını artırabilir. Yapabilirsiniz basit bir düzeltme olmaktır *önbellek* deste oluşturan özgün LINQ sorgusunun sonuçları. Şu anda, sorguları yeniden ve her zaman do yürütüyorsunuz-döngü yineleme gerçekleştirirken deste yeniden oluşturmak ve her seferinde reshuffling. Deste önbelleğe almak için LINQ yöntemleri yararlanabilir <xref:System.Linq.Enumerable.ToArray%2A> ve <xref:System.Linq.Enumerable.ToList%2A>; sorgular ekleme, sizin bir uyarıyla bunları aynı eylemleri gerçekleştirmeniz, ancak bunlar bir dizideki veya listesi, hangi yöntemine bağlı olarak sonuçları artık depolayacağınızı çağırmak seçin. Append LINQ yöntemi <xref:System.Linq.Enumerable.ToArray%2A> hem sorgular, hem de yeniden programını çalıştırın:
+Yaptığınız yürütmelerin sayısını azaltmak için kodun performansını buradan geliştirebilirsiniz. Yapabilmeniz gereken basit bir çözüm, kart destesi oluşturan orijinal LINQ sorgusunun sonuçlarını *önbelleğe* almak için kullanılır. Şu anda sorguları yeniden yürütüyorsunuz ve do-while döngüsü bir yinelemeden sonra yeniden oluşturuyor, kartlar ve reshuffling her seferinde yeniden oluşturacağız. Kart desteğinizi önbelleğe almak için, LINQ yöntemlerinden <xref:System.Linq.Enumerable.ToArray%2A> yararlanabilir ve <xref:System.Linq.Enumerable.ToList%2A>bunları sorgulara eklediğinizde, bunları söyledikleri eylemleri gerçekleştirir, ancak artık sonuçları hangi yönteme bağlı olarak bir dizide veya listede depolayacağız. öğesini çağırmayı tercih edersiniz. Her iki sorguya de <xref:System.Linq.Enumerable.ToArray%2A> LINQ metodunu ekleyin ve programı yeniden çalıştırın:
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
-Out shuffle aşağı 30 sorguları sunulmuştur. İçinde karışık ile yeniden çalıştırın ve benzer geliştirmeleri göreceksiniz: artık 162 sorguları yürütür.
+Şimdi, karışık karıştırma 30 sorguya kadar. Karıştırma ile birlikte yeniden çalıştırın ve benzer iyileştirmeler görürsünüz: şimdi 162 sorguları yürütür.
 
-Bu örnek olduğunu lütfen unutmayın. **tasarlanmış** geç değerlendirme neden olduğu performans zorluklarla kullanım örneklerini vurgulamaya. Burada geç değerlendirme kod performansını etkileyebilir görmek önemli olsa da, tüm sorguları eagerly çalışması gerektiğini anlamak aynı derecede önemlidir. Performans, isabet kullanmadan tabi <xref:System.Linq.Enumerable.ToArray%2A> önceki düzenlemeyi her yeni deste yerleşimini inşa edildiğinden olduğu. Geç değerlendirme kullanılması anlamına gelir her yeni Destesi yapılandırma bile yerleşik kod yürütülürken özgün Destesi oluşturulan `startingDeck`. Bu, çok miktarda ek iş neden olur.
+Lütfen bu örneğin, yavaş değerlendirmenin performans sorunlarına neden olabileceği kullanım durumlarını vurgulamak için **tasarlandığını** unutmayın. Yavaş değerlendirmenin kod performansını etkileyebileceğini görmek önemli olsa da, tüm sorguların bir şekilde çalışması gerektiğini anlamak önemlidir. Kullanmadan önce yaptığınız <xref:System.Linq.Enumerable.ToArray%2A> performans isabeti, kart destesi için her yeni düzenlemenin önceki düzenlemeden oluşturulanlarıdır. Yavaş değerlendirme kullanmak, her yeni deste yapılandırmasının orijinal deste tarafından oluşturulduğu, hatta oluşturan `startingDeck`kodu yürütmesi anlamına gelir. Bu, büyük miktarda ekstra iş oluşmasına neden olur.
 
-Uygulamada, bazı algoritmalar istekli değerlendirme kullanılarak ve diğerleri de geç değerlendirme kullanarak çalıştırın. Veri kaynağı bir veritabanı altyapısı gibi ayrı bir işlem olduğunda günlük kullanım için geç değerlendirme genellikle daha iyi bir seçimdir. Veritabanları için yalnızca bir gidiş dönüş için veritabanı işlemi daha sonra tekrar kodunuzun kalanını yürütmek daha karmaşık sorgular geç değerlendirme sağlar. LINQ yavaş veya istekli değerlendirme kullanır, böylece işlemlerinizi ölçün ve hangi tür değerlendirme en iyi performansı sağlar çekmek üzere seçtiğiniz esnektir.
+Uygulamada, bazı algoritmalar Eager değerlendirmesi kullanılarak iyi çalışır ve diğerleri, yavaş değerlendirme kullanarak iyi çalışır. Günlük kullanım için, veri kaynağı bir veritabanı altyapısı gibi ayrı bir işlem olduğunda, yavaş değerlendirme genellikle daha iyi bir seçenektir. Veritabanları için, yavaş değerlendirme, daha karmaşık sorguların veritabanı işlemine yalnızca bir gidiş dönüş ve kodunuzun geri kalanına geri dönmesi için izin verir. Bu, yavaş veya Eager değerlendirmesi kullanmayı tercih etmeksizin, süreçlerinizi ölçmenize ve hangi tür değerlendirme türünün size en iyi performansı sunmasına bakılmaksızın LINQ esnektir.
 
 ## <a name="conclusion"></a>Sonuç
 
-Bu projede kapsamına:
-- anlamlı bir dizisi veri toplama LINQ sorguları kullanma
-- LINQ sorguları için kendi özel işlevsellik eklemek için uzantı metotları yazma
-- hız düşürülmüş alanlar burada gibi performans sorunlarını bizim LINQ sorguları karşılaşabileceğiniz bizim kod bulma
-- LINQ sorguları ve etkileri ilgili yavaş ve istekli değerlendirme sorgu performansı üzerindeki sahip olabilir
+Bu projede şunları kapsamış olursunuz:
+- verileri anlamlı bir sırayla toplamak için LINQ sorguları kullanma
+- LINQ Sorgularına kendi özel işlevselümüzü eklemek için uzantı yöntemleri yazma
+- LINQ sorgularımızın, düşürülmüş hız gibi performans sorunları üzerinde çalıştığı, kodumuza ait yerleri bulma
+- ' deki geç ve Eager değerlendirmesi, LINQ sorguları ve sorgu performansı üzerinde olabilecek etkileri
 
-LINQ yanı sıra, biraz teknik magicians kullanımı için kart püf noktaları hakkında bilgi edindiniz. Her kart deste içinde geçtiği kontrol edebildiğiniz magicians Faro shuffle kullanın. Artık bildiğinize göre diğer herkes için spoil yok!
+LINQ 'ten itibaren, kart püf noktaları için bir teknik Magicians kullanımı hakkında biraz bilgi edindiniz. Magicians, her kartın destede nereye taşındığını denetleyebildiğinden Faro karıştırmasını kullanın. Artık bilineceğimize göre, diğer herkese açık yapmayın!
 
-LINQ hakkında daha fazla bilgi için bkz:
+LINQ hakkında daha fazla bilgi için bkz.
 - [Dil ile Tümleşik Sorgu (LINQ)](../programming-guide/concepts/linq/index.md)
   - [LINQ'e Giriş](../programming-guide/concepts/linq/index.md)
-  - [Temel LINQ Sorgu işlemleri (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-  - [LINQ ile veri dönüştürmeler (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-  - [Sorgu sözdizimi ve yöntem sözdizimi LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+  - [Temel LINQ sorgu Işlemleri (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+  - [LINQ (C#) Ile veri dönüştürmeleri](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+  - [LINQ (C#) Içinde sorgu sözdizimi ve Yöntem sözdizimi](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
   - [LINQ'i Destekleyen C# Özellikleri](../programming-guide/concepts/linq/features-that-support-linq.md)

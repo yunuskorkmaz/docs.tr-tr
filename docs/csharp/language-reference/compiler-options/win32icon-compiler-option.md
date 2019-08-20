@@ -1,5 +1,5 @@
 ---
-title: -win32icon (C# Derleyici Seçenekleri)
+title: -win32icon (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /win32icon
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: 7bc7da8121ec1190908d9b94fc7c987f9888c020
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3df92d8d0b0135eac1a055afafffa0015fecc2b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662250"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606280"
 ---
-# <a name="-win32icon-c-compiler-options"></a>-win32icon (C# Derleyici Seçenekleri)
-**-Win32icon** seçeneği çıktı dosyasına dosya Gezgini'nde istenen görünümü verir çıkış dosyasına bir .ico simge dosyası ekler.  
+# <a name="-win32icon-c-compiler-options"></a>-win32icon (C# derleyici seçenekleri)
+**-Win32icon** seçeneği çıkış dosyasına bir. ico dosyası ekler ve bu, çıktı dosyasına dosya Gezgini 'nde istenen görünümü verir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,25 +26,25 @@ ms.locfileid: "61662250"
   
 ## <a name="arguments"></a>Arguments  
  `filename`  
- Çıkış dosyanızı eklemek istediğiniz .ico dosyası.  
+ Çıkış dosyanıza eklemek istediğiniz. ico dosyası.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir .ico simge dosyası ile oluşturulan [kaynak derleyici](/windows/desktop/menurc/resource-compiler). Kaynak derleyicisi, bir Visual C++ programını derlerken çağrılır; .rc dosyasından bir .ico simge dosyası oluşturulur.  
+ [Kaynak derleyicisi](/windows/desktop/menurc/resource-compiler)ile bir. ico dosyası oluşturulabilir. Visual C++ program derlerken kaynak derleyicisi çağrılır; . ico dosyası. rc dosyasından oluşturulur.  
   
- Bkz: [- linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (için başvuru) veya [-kaynak](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (eklemek için) bir .NET Framework kaynak dosyası. Bkz: [-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) bir .res dosyası içeri aktarmak için.  
+ Bir .NET Framework kaynak dosyası için bkz. [-linkresource](./linkresource-compiler-option.md) (başvuruya) veya [-Resource](./resource-compiler-option.md) (iliştirilecek). . Res dosyasını içeri aktarmak için bkz. [-win32res](./win32res-compiler-option.md) .  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1. Projenin açın **özellikleri** sayfaları.  
+1. Projenin **Özellikler** sayfalarını açın.  
   
-2. Tıklayın **uygulama** özellik sayfası.  
+2. **Uygulama** Özellik sayfasına tıklayın.  
   
-3. Değiştirme **uygulama simgesi** özelliği.  
+3. **Uygulama simgesi** özelliğini değiştirin.  
   
- Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>.  
+ Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>.  
   
 ## <a name="example"></a>Örnek  
- Derleme `in.cs` ve bir .ico simge dosyası ekleme `rf.ico` üretmek için `in.exe`:  
+ `rf.ico` Üretmek `in.cs` için`in.exe`bir. ico dosyası derleyin ve ekleyin:  
   
 ```console  
 csc -win32icon:rf.ico in.cs  
@@ -52,5 +52,5 @@ csc -win32icon:rf.ico in.cs
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
+- [C# Derleyici Seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir yapı geçirme ile bir sınıf geçirme arasındaki farkı bilme bir yönteme - başvuru C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Bir struct geçirme ve bir yöntem C# programlama kılavuzuna sınıf başvurusu geçirme arasındaki farkı öğrenin'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,28 +7,28 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: 9664a3e5b5a68ae44bb129c9c550011683c81f16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 889e1f5719e094d02f0cc27256e1c430ffce0b8e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646364"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596791"
 ---
-# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Nasıl yapılır: Yapı geçirme ile Metoda sınıf başvurusu geçirme arasındaki farkı bilme (C# Programlama Kılavuzu)
-Aşağıdaki örnek nasıl geçirme gösterir bir [yapı](../../../csharp/language-reference/keywords/struct.md) bir yönteme geçirme'dan farklı bir [sınıfı](../../../csharp/language-reference/keywords/class.md) örneğinin bir yönteme. Örnekte, iki bağımsız değişkenler (yapı ve sınıf örneği) değere göre geçirilir ve her iki yöntem bağımsız değişkeninin bir alanın değerini değiştirin. Yapı başarılı olduğunda ne iletilen bir sınıfın örneğini geçirdiğinizde ne geçirilen gelen değiştiğinden ancak sonuçları iki yöntemden biriyle aynı değildir.  
+# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Nasıl yapılır: Bir struct geçirme ve bir yönteme sınıf başvurusu geçirme arasındaki farkı öğrenin (C# Programlama Kılavuzu)
+Aşağıdaki örnek bir [yapının](../../language-reference/keywords/struct.md) bir yönteme nasıl geçtiğini gösterir bir yönteme nasıl bir [sınıf](../../language-reference/keywords/class.md) örneği geçirmekten farklıdır. Örnekte, bağımsız değişkenlerin (struct ve sınıf örneği) her ikisi de değere göre geçirilir ve her iki yöntem de bağımsız değişkenin bir alanının değerini değiştirir. Ancak, bir yapı geçirdiğinizde geçirilen özellikler, bir sınıfın örneğini geçirdiğinizde geçirilen verilerden farklı olduğundan, iki yöntemin sonuçları aynı değildir.  
   
- Bir yapı olduğundan bir [değer türü](../../../csharp/language-reference/keywords/value-types.md)olduğunda, [yapı değişkeni değer olarak](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md) bir yöntem için yöntemi alır ve yapı bağımsız değişkeni bir kopyası üzerinde çalışır. Yöntem erişim özgün struct çağırma yöntemi yok ve bu nedenle herhangi bir şekilde değiştiremezsiniz. Yöntemi yalnızca kopya değiştirebilirsiniz.  
+ Bir struct bir [değer türü](../../language-reference/keywords/value-types.md)olduğundan, bir yapıya [değere göre](./passing-value-type-parameters.md) bir yönteme geçirdiğinizde, yöntemi struct bağımsız değişkeninin bir kopyası üzerinde alır ve çalışır. Yöntemi çağıran yöntemde orijinal yapıya erişemez ve bu nedenle herhangi bir şekilde değiştirilemez. Yöntemi yalnızca kopyayı değiştirebilir.  
   
- Bir sınıf örneği bir [başvuru türüne](../../../csharp/language-reference/keywords/reference-types.md), değer türü değil. Zaman [bir başvuru türü değere göre geçirilir](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md) bir yönteme yöntemi bir sınıf örneği başvuru kopyasını alır. Diğer bir deyişle, yöntem, adresi örneğin bir kopya örneğin bir kopyasını alır. Bir adresi yöntemi çağrılırken, sınıf örneği olduğundan, çağrılan yöntem parametresinde adresi kopyasına sahip ve her iki adres aynı nesneye başvurur. Parametresi yalnızca bir kopya adres içerdiğinden, çağrılan yöntem yöntemi çağrılırken, sınıf örneğinin adresi değiştiremezsiniz. Ancak, çağrılan yöntem adresi hem özgün hem de kopya başvuru sınıf üyelerine erişmek için kullanabilirsiniz. Çağrılan yöntemi bir sınıf üyesinin değişirse, özgün sınıf örneği çağıran yöntem de değişir.  
+ Bir sınıf örneği, bir değer türü değil [başvuru türüdür](../../language-reference/keywords/reference-types.md). Bir [başvuru türü değere göre](./passing-reference-type-parameters.md) bir yönteme geçirildiğinde, yöntemi sınıf örneğine başvurunun bir kopyasını alır. Diğer bir deyişle, yöntemi örneğinin bir kopyasını değil, örneğin adresinin bir kopyasını alır. Çağıran yöntemdeki sınıf örneği bir adrese sahiptir, çağrılan yöntemdeki parametresi adresin bir kopyasına sahiptir ve her iki adres de aynı nesneye başvurur. Parametresi yalnızca adresin bir kopyasını içerdiğinden, çağrılan yöntem çağıran yöntemde sınıf örneğinin adresini değiştiremiyor. Ancak çağrılan yöntem, hem özgün adresin hem de kopyalama başvurusunun sınıf üyelerine erişmek için adresini kullanabilir. Çağrılan yöntem bir sınıf üyesini değiştirirse, çağıran yöntemdeki özgün sınıf örneği de değişir.  
   
- Aşağıdaki örnek çıktı, fark gösterilmiştir. Değerini `willIChange` alanı sınıf örneğinin yöntemine çağrı tarafından değiştirildiğinde `ClassTaker` sınıf örneğinin belirtilen alanı bulmak için parametreyi yöntemi adresini kullandığı için. `willIChange` Yöntemi çağrılırken yapıda alanına, yöntemine çağrı değiştirilmemiş `StructTaker` bağımsız değişkenin değerini struct'ın kendisi adresini değil bir kopyasını bir kopya olduğundan. `StructTaker` kopyalama ve kopyalama kayboluyor ne zaman değişiklikleri çağrısı `StructTaker` tamamlandı.  
+ Aşağıdaki örnek çıktıda fark gösterilmektedir. Sınıf örneği `willIChange` alanının değeri, metodu, sınıf örneğinin belirtilen alanını bulmak için parametresindeki adresi kullandığından `ClassTaker` yöntemi çağrısıyla değiştirilir. Bağımsız değişkenin değeri, kendi adresinin bir kopyası değil, yapısının bir kopyası olduğundan, çağırma yöntemindeki `StructTaker` yapının alanı,yöntemiçağrısıyladeğiştirilmez.`willIChange` `StructTaker`kopyayı değiştirir ve çağrısı `StructTaker` tamamlandığında kopya kaybedilir.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideObjects#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#32)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)
-- [Yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md)
-- [Parametreleri Geçirme](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Sınıflar](./classes.md)
+- [Yapılar](./structs.md)
+- [Parametreleri Geçirme](./passing-parameters.md)

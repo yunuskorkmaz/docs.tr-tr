@@ -1,5 +1,5 @@
 ---
-title: '#pragma sağlama - C# başvurusu'
+title: '#pragma sağlama toplamı C# -başvuru'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 36e5602f0a0b872a4aa6cdac64b49b1d1c708795
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 4103b6262fc5085c1204f423a36c9c5c2053b497
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877521"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605656"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma sağlama toplamı (C# Başvurusu)
-ASP.NET sayfaları hatalarını ayıklamaya yardımcı olmak kaynak dosyalar için sağlama toplamları oluşturur.  
+ASP.NET sayfalarında hata ayıklamaya yardımcı olmak için kaynak dosyaları için sağlama toplamı üretir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -25,22 +25,22 @@ ASP.NET sayfaları hatalarını ayıklamaya yardımcı olmak kaynak dosyalar iç
   
 ## <a name="parameters"></a>Parametreler  
  `"filename"`  
- İzleme gerektiren değişiklikleri veya güncelleştirmeleri için dosyanın adı.  
+ Değişiklik veya güncelleştirme için izlemeyi gerektiren dosyanın adı.  
   
  `"{guid}"`  
- Genel benzersiz tanıtıcısı (GUID) karma algoritması için.  
+ Karma algoritma için genel benzersiz tanımlayıcı (GUID).  
   
  `"checksum_bytes"`  
- Sağlama toplamı baytını temsil eden bir onaltılık basamak dizisi. Onaltı basamaklı bir çift sayı olmalıdır. Bir derleme zamanı uyarı ve yönerge basamak sonuçları tek sayıda göz ardı edilir.  
+ Sağlama toplamı baytlarını temsil eden onaltılık basamakların dizesi. Çift sayıda onaltılık basamak olmalıdır. Tek sayıda basamak derleme zamanı uyarısına neden olur ve yönerge yok sayılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Visual Studio hata ayıklayıcı her zaman doğru kaynak bulduğu emin olmak için bir sağlama toplamı kullanır. Derleyici, bir kaynak dosyası için sağlama toplamını hesaplar ve ardından program veritabanı (PDB) dosyası çıktıyı yayar. Hata ayıklayıcı, PDB sonra kaynak dosyasını hesaplar sağlama toplamı karşılaştırma için kullanır.  
+ Visual Studio hata ayıklayıcı, her zaman doğru kaynağı bulmasını sağlamak için bir sağlama toplamı kullanır. Derleyici, kaynak dosya için sağlama toplamını hesaplar ve sonra çıktıyı program veritabanı (PDB) dosyasına yayar. Hata ayıklayıcı daha sonra kaynak dosya için hesapladığı sağlama toplamıyla karşılaştırmak için PDB 'yi kullanır.  
   
- Bu çözüm, .aspx dosyası yerine üretilen kaynak dosyası için hesaplanan sağlama toplamı olduğu için ASP.NET projeleri için çalışmaz. Bu sorunu gidermek için `#pragma checksum` ASP.NET sayfaları için sağlama toplamı desteği sağlar.  
+ Hesaplanan sağlama toplamı,. aspx dosyası yerine oluşturulan kaynak dosya için olduğundan, bu çözüm ASP.NET projelerinde çalışmaz. Bu sorunu `#pragma checksum` gidermek için ASP.NET sayfaları için sağlama toplamı desteği sağlar.  
   
- Görselde bir ASP.NET projesi oluşturduğunuzda, C#, üretilen kaynak dosyası içinden kaynak oluşturulduğunda .aspx dosyası, bir sağlama toplamı içeriyor. Derleyici, daha sonra bu bilgileri PDB dosyasına yazar.  
+ Görselde C#bir ASP.NET projesi oluşturduğunuzda oluşturulan kaynak dosya, kaynağın oluşturulduğu. aspx dosyası için bir sağlama toplamı içerir. Derleyici daha sonra bu bilgileri PDB dosyasına yazar.  
   
- Derleyici Hayır karşılaşırsa `#pragma checksum` dosyasındaki yönergesi, sağlama toplamını hesaplar ve değeri PDB dosyasına yazar.  
+ Derleyici dosyada hiçbir `#pragma checksum` yönergeyle karşılaşırsa, sağlama toplamını hesaplar ve değeri pdb dosyasına yazar.  
   
 ## <a name="example"></a>Örnek  
   
@@ -56,6 +56,6 @@ class TestClass
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [C# Ön İşlemci Yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [C#Başvurunun](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Ön İşlemci Yönergeleri](./index.md)

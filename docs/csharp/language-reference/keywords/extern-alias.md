@@ -9,18 +9,18 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: cfb662203216aa6ca208ceec20d55164c65163dc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 749386f08cb6ab6ab79896aca3c1eb1e98ca5472
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626652"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602185"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (C# Başvurusu)
 Aynı tam tür adlarına sahip derlemelerin iki sürümüne başvurmanız gerekebilir. Örneğin, bir derlemenin iki veya daha fazla sürümünü aynı uygulamada kullanmanız gerekebilir. Bir dış derleme diğer adı kullanarak, her derlemeden ad alanları, diğer ad tarafından adlandırılan ve aynı dosyada kullanılmasına olanak sağlayan kök düzeyi ad alanları içinde sarmalanabilir.  
   
 > [!NOTE]
->  [Extern](../../../csharp/language-reference/keywords/extern.md) anahtar sözcüğü, yönetilmeyen kodda yazılmış bir yöntemi bildiren bir yöntem değiştiricisi olarak da kullanılır.  
+>  [Extern](./extern.md) anahtar sözcüğü, yönetilmeyen kodda yazılmış bir yöntemi bildiren bir yöntem değiştiricisi olarak da kullanılır.  
   
  Aynı tam tür adlarıyla iki derlemeye başvurmak için, bir diğer ad aşağıdaki gibi bir komut isteminde belirtilmelidir:  
   
@@ -43,8 +43,8 @@ Aynı tam tür adlarına sahip derlemelerin iki sürümüne başvurmanız gereke
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#Başvurunun](../../../csharp/language-reference/index.md)
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
-- [:: İşleç](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
-- [/Reference (C# derleyici seçenekleri)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
+- [C#Başvurunun](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Anahtar Sözcükleri](./index.md)
+- [:: İşleç](../operators/namespace-alias-qualifier.md)
+- [/Reference (C# derleyici seçenekleri)](../compiler-options/reference-compiler-option.md)

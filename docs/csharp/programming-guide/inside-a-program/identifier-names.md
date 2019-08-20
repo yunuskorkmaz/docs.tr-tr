@@ -1,32 +1,32 @@
 ---
 title: Tanımlayıcı adları
-description: C# programlama dilinin geçerli tanımlayıcı adları kurallarını öğrenin.
+description: C# Programlama dilinde geçerli tanımlayıcı adları için kuralları öğrenin.
 ms.date: 08/21/2018
-ms.openlocfilehash: 2147b3846d4ba6d5471b81448489c6d716e3cd61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8a27ddae0437ed037b59f76d60dc7e420ddc2eb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680499"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589345"
 ---
 # <a name="identifier-names"></a>Tanımlayıcı adları
 
-Bir **tanımlayıcı** atama türü (sınıf, arabirim, yapı, temsilci veya enum), üye, değişken veya ad alanı adı. Geçerli tanımlayıcıları şu kurallara uymalıdır:
+**Tanımlayıcı** , bir türe atadığınız addır (sınıf, arabirim, yapı, temsilci veya Enum), üye, değişken veya ad alanı. Geçerli tanımlayıcılar şu kurallara uymalıdır:
 
-- Tanımlayıcılar, bir harf ile başlamalı veya `_`.
-- Tanımlayıcılar, Unicode harf karakterler, ondalık basamak karakteri, Unicode karakter bağlanma, Unicode karakter birleştirme veya Unicode karakter biçimlendirme içerebilir. Unicode kategorileri hakkında daha fazla bilgi için bkz. [Unicode kategorisi veritabanı](https://www.unicode.org/reports/tr44/).
-C# anahtar sözcüklerini kullanarak eşleşen tanımlayıcıları bildirebilirsiniz `@` tanımlayıcısını öneke. `@` Tanımlayıcı adı bir parçası değil. Örneğin, `@if` bildirir adlandırılmış bir tanımlayıcı `if`. Bunlar [verbatim tanımlayıcıları](../../language-reference/tokens/verbatim.md) öncelikli olarak birlikte çalışabilirlik için diğer dillerde bildirilen tanımlayıcılarına sahip olan.
+- Tanımlayıcılar bir harfle başlamalı veya `_`.
+- Tanımlayıcılar Unicode harf karakterleri, ondalık basamak karakterleri, Unicode bağlantı karakterleri, Unicode birleştiren karakterler veya Unicode biçimlendirme karakterlerini içerebilir. Unicode kategorileri hakkında daha fazla bilgi için bkz. [Unicode kategori veritabanı](https://www.unicode.org/reports/tr44/).
+Tanımlayıcıda `@` öneki kullanarak, anahtar C# sözcüklerle eşleşen tanımlayıcılar bildirebilirsiniz. `@` Tanımlayıcı adının bir parçası değil. Örneğin, `@if` adlı `if`bir tanımlayıcı bildirir. Bu tam [tanımlayıcılar](../../language-reference/tokens/verbatim.md) öncelikle diğer dillerde belirtilen tanımlayıcılarla birlikte çalışabilirlik içindir.
 
-Geçerli tanımlayıcıları eksiksiz bir açıklaması için bkz. [tanımlayıcıları C# dil belirtimi konudaki](../../../../_csharplang/spec/lexical-structure.md#identifiers).
+Geçerli tanımlayıcıların tamamen tanımı için, [ C# dil belirtiminde tanımlayıcılar konusuna](../../../../_csharplang/spec/lexical-structure.md#identifiers)bakın.
 
 ## <a name="naming-conventions"></a>Adlandırma kuralları
 
-Kurallarının yanı sıra, kullanılabilen birkaç tanımlayıcısının [adlandırma kuralları](../../../standard/design-guidelines/naming-guidelines.md) .NET API'lerini kullanılır. Kural gereği, C# programları kullanım `PascalCase` tür adları ad alanları ve tüm genel üyeler için. Ayrıca, aşağıdaki kurallar ortaktır:
+Kuralların yanı sıra, .NET API 'Lerinde kullanılan bir dizi tanımlayıcı [adlandırma kuralı](../../../standard/design-guidelines/naming-guidelines.md) vardır. Kural gereği, C# programlar tür `PascalCase` adları, ad alanları ve tüm genel Üyeler için kullanır. Ayrıca, aşağıdaki kurallar ortaktır:
 
-- Büyük harfle adları başlangıç arabirim `I`.
-- Öznitelik türlerini uç sözcüğünün `Attribute`.
-- Numaralandırma türleri için bayrakları olmayan bayrakları için tekil bir isim ve çoğul bir isim kullanın.
-- Tanımlayıcılar, bu iki ardışık içermemelidir `_` karakter. Bu adlar, derleyicinin ürettiği tanımlayıcıları için ayrılmıştır.
+- Arabirim adları sermaye `I`ile başlar.
+- Öznitelik türleri kelimeyle `Attribute`biter.
+- Sabit listesi türleri, bayraklar için tekil bir ad ve bayraklar için bir çoğul ad kullanır.
+- Tanımlayıcılar iki ardışık `_` karakter içermemelidir. Bu adlar derleyicinin ürettiği tanımlayıcılar için ayrılmıştır.
 
 ## <a name="c-language-specification"></a>C# Dil Belirtimi
 
@@ -35,8 +35,8 @@ Kurallarının yanı sıra, kullanılabilen birkaç tanımlayıcısının [adlan
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [C# Programı İçinde](../inside-a-program/index.md)
-- [C# başvurusu](../../language-reference/index.md)
+- [C# Programı İçinde](./index.md)
+- [C#Başvurunun](../../language-reference/index.md)
 - [Sınıflar](../classes-and-structs/classes.md)
 - [Yapılar](../classes-and-structs/structs.md)
 - [Ad Alanları](../namespaces/index.md)

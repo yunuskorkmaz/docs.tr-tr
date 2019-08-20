@@ -1,5 +1,5 @@
 ---
-title: Hello World--İlk programınız - C# Programlama Kılavuzu
+title: Merhaba Dünya--ilk program C# programlama kılavuzunuz
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 62aaf8785b0dfb646ea804dab6918940f1e33346
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9a50de0bb583a1dfccfa609be1cca732868505ba
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635297"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589380"
 ---
-# <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World--İlk programınız (C# Programlama Kılavuzu)
+# <a name="hello-world----your-first-program-c-programming-guide"></a>Merhaba Dünya--ilk programınız (C# Programlama Kılavuzu)
 
-Aşağıdaki yordam geleneksel "Hello World!"'ın bir C# sürümünü oluşturur. Program. Program dizesini görüntüler. `Hello World!`
+Aşağıdaki yordam geleneksel bir C# "Merhaba Dünya!" sürümü oluşturuyor programda. Program dizeyi görüntüler`Hello World!`
 
-Tanıtım kavramlarına daha fazla örnek için bkz: [Visual C# ve Visual Basic ile çalışmaya başlama](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).
+Tanıtım kavramlarıyla ilgili daha fazla örnek için bkz. [Visual C# ve Visual Basic kullanmaya](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)başlama.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
@@ -32,47 +32,47 @@ Tanıtım kavramlarına daha fazla örnek için bkz: [Visual C# ve Visual Basic 
 
      **Yeni proje** iletişim kutusu açılır.
 
-3. Genişletin **yüklü**, genişletme **şablonları**, genişletme **Visual C#** ve ardından **konsol uygulaması**.
+3. **Yüklü**' i genişletin, **Şablonlar**' ı genişletin, **C#görsel**' i genişletin ve **konsol uygulaması**' nı
 
-4. İçinde **adı** kutusuna projeniz için bir ad belirtin ve ardından **Tamam** düğmesi.
+4. **Ad** kutusunda, projeniz için bir ad belirtin ve sonra **Tamam** düğmesini seçin.
 
-     Yeni Proje görünür **Çözüm Gezgini**.
+     Yeni proje **Çözüm Gezgini**görüntülenir.
 
-5. Program.cs içinde açık değilse **Kod Düzenleyicisi**, kısayol menüsünü açın **Program.cs** içinde **Çözüm Gezgini**ve ardından **Kodu Görüntüle**.
+5. **Kod Düzenleyicisi**'nde program.cs açık değilse, **Çözüm Gezgini**için kısayol menüsünü açın ve sonra **kodu görüntüle**' yi seçin.
 
 6. Program.cs içeriğini aşağıdaki kodla değiştirin.
 
      [!code-csharp[csProgGuide#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#21)]
 
-7. Projeyi çalıştırmak için F5 tuşuna basın. Bir çizgi içeren bir komut istemi penceresi görünür `Hello World!`
+7. Projeyi çalıştırmak için F5 tuşunu seçin. Satırı içeren bir komut Istemi penceresi görünür`Hello World!`
 
-Ardından, bu programın önemli bölümleri incelenir.
+Daha sonra, bu programın önemli bölümleri incelenir.
 
 ## <a name="comments"></a>Açıklamalar
 
-İlk satır bir açıklama içerir. Karakterleri `//` satırın geri kalanını açıklamaya Dönüştür.
+İlk satır bir açıklama içerir. Karakterler `//` satırın geri kalanını açıklamaya dönüştürür.
 
  [!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
 
-Metin bloğu arasında kapsayan tarafından da yorum yapabilecek `/*` ve `*/` karakter. Bu, aşağıdaki örnekte gösterilir.
+Ayrıca, bir metin bloğunu, `/*` ve `*/` karakterleri arasına ekleyerek açıklama ekleyebilirsiniz. Bu, aşağıdaki örnekte gösterilir.
 
  [!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
 
 ## <a name="main-method"></a>Main yöntemi
 
-Bir C# konsol uygulaması içermelidir bir `Main` yöntemi, Denetim'ın başlar ve biter. `Main` Yöntemdir nesneleri oluşturduğunuz ve diğer bir yöntem yürütülemez.
+C# Konsol uygulaması, denetimin başladığı ve `Main` bittiği bir yöntemi içermelidir. `Main` Yöntemi nesne oluşturduğunuz ve diğer yöntemleri yürütebileceğiniz yerdir.
 
-`Main` Yöntemi bir [statik](../../../csharp/language-reference/keywords/static.md) bir sınıf ya da yapının içinde bulunan yöntemi. Önceki "Hello World!" Örneğin, adında bir sınıf içinde bulunduğu `Hello`. Bildirebilirsiniz `Main` aşağıdaki yollardan biriyle yöntemi:
+Yöntemi, bir sınıf veya yapı içinde bulunan statik bir yöntemdir. [](../../language-reference/keywords/static.md) `Main` Önceki "Merhaba Dünya!" örnek, adlı `Hello`bir sınıfta bulunur. `Main` Yöntemi aşağıdaki yöntemlerden biriyle bildirebilirsiniz:
 
-- Geri dönebilirsiniz `void`.
+- Bu, döndürebilir `void`.
 
      [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
-- Bu, ayrıca bir tamsayı döndürebilir.
+- Ayrıca, bir tamsayı döndürebilir.
 
      [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-- Dönüş türleri her ikisiyle bağımsız değişken alabilir.
+- Dönüş türlerinden biri ile bağımsız değişken alabilir.
 
      [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
@@ -80,64 +80,64 @@ Bir C# konsol uygulaması içermelidir bir `Main` yöntemi, Denetim'ın başlar 
 
      [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
-Parametresi `Main` yöntemi `args`, olan bir `string` program başlatmak için kullanılan komut satırı bağımsız değişkenleri içeren bir dizi. Farklı C++'da dizi yürütülebilir (exe) dosyanın adını içermez.
+Yönteminin parametresi, programı çağırmak için kullanılan komut satırı `string` bağımsız değişkenlerini içeren bir dizidir. `args` `Main` Öğesinden farklı C++olarak, dizi yürütülebilir (exe) dosyanın adını içermez.
 
-Komut satırı bağımsız değişkenlerinin nasıl kullanılacağı hakkında daha fazla bilgi için bkz: örneklerde [ana() ve komut satırı bağımsız değişkenleri](../../../csharp/programming-guide/main-and-command-args/index.md) ve [nasıl yapılır: Komut satırını kullanarak derlemeler oluşturma ve kullanma](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).
+Komut satırı bağımsız değişkenlerinin nasıl kullanılacağı hakkında daha fazla bilgi için, [ana () ve komut satırı bağımsız değişkenlerinde](../main-and-command-args/index.md) örneklere ve [nasıl yapılacağını görün: Komut satırını](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)kullanarak derlemeleri oluşturun ve kullanın.
 
-Çağrı <xref:System.Console.ReadKey%2A> sonunda `Main` yöntemi kapatılmasını programınızı F5 tuşuna basarak hata ayıklama modunda çalıştırdığınızda, çıktıyı okuma şansı bulamadan konsol penceresinde engeller.
+`Main` Yönteminin sonunda öğesine yapılan <xref:System.Console.ReadKey%2A> çağrı, F5 tuşuna basarak, programınızı hata ayıklama modunda çalıştırdığınızda çıktıyı okuma şansınız olmadan önce konsol penceresinin bitmesini önler.
 
-## <a name="input-and-output"></a>Giriş ve çıkış
+## <a name="input-and-output"></a>Girdi ve çıktı
 
-C# programları genellikle .NET Framework'ün çalışma zamanı kitaplığı tarafından sağlanan giriş/çıkış hizmetlerini kullanır. Deyim `System.Console.WriteLine("Hello World!");` kullanan <xref:System.Console.WriteLine%2A> yöntemi. Bu çıkış yöntemlerinden biridir <xref:System.Console> Çalışma Zamanı Kitaplığı'nda sınıfı. Yeni bir satır tarafından izlenen standart çıktı akışında kendi dize parametresini görüntüler. Diğer <xref:System.Console> yöntemleri farklı giriş ve çıkış işlemleri için kullanılabilir. Eklerseniz `using System;` yönerge programın başında, doğrudan kullanabilirsiniz <xref:System> sınıflarını ve yöntemlerini tamamen nitelendirmeden. Örneğin, çağırabilirsiniz `Console.WriteLine` yerine `System.Console.WriteLine`:
+C#programlar genellikle .NET Framework çalışma zamanı kitaplığı tarafından sunulan giriş/çıkış hizmetlerini kullanır. İfade `System.Console.WriteLine("Hello World!");` yöntemini<xref:System.Console.WriteLine%2A> kullanır. Bu, çalışma zamanı kitaplığındaki <xref:System.Console> sınıfının çıkış yöntemlerinden biridir. Dize parametresini standart çıkış akışında ve ardından yeni bir satırla görüntüler. Farklı <xref:System.Console> giriş ve çıkış işlemleri için diğer yöntemler kullanılabilir. Programın başına `using System;` yönergesini eklerseniz, <xref:System> sınıfları ve yöntemleri tamamen nitelemeden doğrudan kullanabilirsiniz. Örneğin, `Console.WriteLine` `System.Console.WriteLine`yerine şunu çağırabilirsiniz:
 
  [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 
  [!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
 
-Giriş/Çıkış yöntemleri hakkında daha fazla bilgi için bkz. <xref:System.IO>.
+Giriş/çıkış yöntemleri hakkında daha fazla bilgi için bkz <xref:System.IO>.
 
-## <a name="command-line-compilation-and-execution"></a>Komut satırı derlemesi ve yürütme
+## <a name="command-line-compilation-and-execution"></a>Komut satırı derleme ve yürütme
 
-"Hello World!" derlemesi Visual Studio tümleşik geliştirme ortamı (IDE yerine) komut satırını kullanarak program'ı tıklatın.
+"Merhaba Dünya!" öğesini derleyebilirsiniz Visual Studio tümleşik geliştirme ortamı (IDE) yerine komut satırını kullanarak program.
 
 ### <a name="to-compile-and-run-from-a-command-prompt"></a>Derlemek ve bir komut satırından çalıştırmak için
 
-1. Önceki yordamdaki kodu herhangi bir metin düzenleyiciye yapıştırın ve dosyayı bir metin dosyası olarak kaydedin. Dosyayı `Hello.cs` olarak adlandırın. C# kaynak kodu dosyaları uzantısını kullanır `.cs`.
+1. Önceki yordamdan kodu herhangi bir metin düzenleyicisine yapıştırın ve sonra dosyayı bir metin dosyası olarak kaydedin. Dosyayı `Hello.cs` olarak adlandırın. C#kaynak kodu dosyaları uzantısını `.cs`kullanır.
 
 2. Bir komut istemi penceresi açmak için aşağıdaki adımlardan birini gerçekleştirin:
 
-    - Windows 10 üzerinde **Başlat** menüsünde `Developer Command Prompt`, seçin ve ardından dokunun **VS 2017 için geliştirici komut istemi**.
+    - Windows 10 ' da, **Başlat** menüsünde, için `Developer Command Prompt`arama yapın ve sonra **vs 2017 için geliştirici komut istemi**' yi seçin.
 
-         Bir geliştirici komut istemi penceresi görüntülenir.
+         Geliştirici Komut İstemi bir pencere görüntülenir.
 
-    - Windows 7'de açın **Başlat** menüsünde, geçerli Visual Studio sürümü için klasörünü genişletin, kısayol menüsünü açın **Visual Studio Araçları**ve ardından **Geliştirici komut istemi VS 2017 için**.
+    - Windows 7 ' de, **Başlat** menüsünü açın, Visual Studio 'nun geçerli sürümüne ait klasörü genişletin, **Visual Studio Araçları**için KıSAYOL menüsünü açın ve **vs 2017 için geliştirici komut istemi**öğesini seçin.
 
-         Bir geliştirici komut istemi penceresi görüntülenir.
+         Geliştirici Komut İstemi bir pencere görüntülenir.
 
-    - Standart bir komut istemi penceresinden komut satırı yapılarını etkinleştirin.
+    - Komut satırı derlemelerini standart bir komut Istemi penceresinden etkinleştirin.
 
-         Bkz: [nasıl yapılır: Visual Studio komut satırı için ortam değişkenlerini ayarlama](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
+         Bkz [. nasıl yapılır: Visual Studio komut satırı](../../language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)için ortam değişkenlerini ayarlayın.
 
-3. Komut İstemi penceresinde içeren klasöre gidin, `Hello.cs` dosya.
+3. Komut istemi penceresinde, `Hello.cs` dosyanızı içeren klasöre gidin.
 
-4. Derlemek için aşağıdaki komutu girin `Hello.cs`.
+4. Derlemek `Hello.cs`için aşağıdaki komutu girin.
 
      `csc Hello.cs`
 
-     Programınızı adında bir yürütülebilir dosya hiç derleme hatası varsa `Hello.exe` oluşturulur.
+     Programınızın derleme hatası yoksa, adında `Hello.exe` bir yürütülebilir dosya oluşturulur.
 
-5. Komut İstemi penceresinde, programı çalıştırmak için aşağıdaki komutu girin:
+5. Komut istemi penceresinde, programı çalıştırmak için aşağıdaki komutu girin:
 
      `Hello`
 
- C# derleyicisi ve seçenekleri hakkında daha fazla bilgi için bkz: [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md).
+ C# Derleyici ve seçenekleri hakkında daha fazla bilgi için bkz [ C# . derleyici seçenekleri](../../language-reference/compiler-options/index.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [C# Programı İçinde](../../../csharp/programming-guide/inside-a-program/index.md)
-- [Dizeler](../../../csharp/programming-guide/strings/index.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [C# Programı İçinde](./index.md)
+- [Dizeler](../strings/index.md)
 - [Örnekler ve öğreticiler](../../../samples-and-tutorials/index.md)
-- [C# başvurusu](../../../csharp/language-reference/index.md)
-- [Ana() ve Komut Satırı Bağımsız Değişkenleri](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [C#Başvurunun](../../language-reference/index.md)
+- [Ana() ve Komut Satırı Bağımsız Değişkenleri](../main-and-command-args/index.md)
 - [Visual C# ve Visual Basic'e Başlarken](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

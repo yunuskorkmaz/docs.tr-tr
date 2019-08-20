@@ -1,53 +1,53 @@
 ---
-title: Genel türler ve yansıma - C# Programlama Kılavuzu
+title: Genel türler ve yansıma C# -Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 84583f96ab8493ff05a4e80dcc843eff1cc7a5ef
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 41948b7db7c816fd06efb35d156398527fbf72ae
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347580"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589619"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Genel Türler ve Yansıma (C# Programlama Kılavuzu)
-Ortak dil çalışma zamanı (CLR) çalışma zamanında genel tür bilgilere erişimi olduğundan, genel olmayan türleri olduğu gibi genel türler hakkında bilgi edinmek için yansıma kullanabilirsiniz. Daha fazla bilgi için [çalışma zamanı'nda genel türler](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
+Ortak dil çalışma zamanı (CLR) çalışma zamanında genel tür bilgilerine erişime sahip olduğu için, genel türler hakkında genel türler hakkında bilgi edinmek için yansımayı genel olmayan türler ile aynı şekilde elde edebilirsiniz. Daha fazla bilgi için bkz. [çalışma zamanındaki genel türler](./generics-in-the-run-time.md).  
   
- .NET Framework 2.0 sürümünde, birkaç yeni üyeler için eklenen <xref:System.Type> genel türler için çalışma zamanı bilgilerini etkinleştirmek için sınıf. Bu sınıflarda bu yöntemlerini ve özelliklerini kullanma hakkında daha fazla bilgi için belgelere bakın. <xref:System.Reflection.Emit> Ad alanı, genel türler destekleyen yeni üyeleri de içerir. Bkz: [nasıl yapılır: Yansıma ile genel tür tanımlama yayma](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
+ .NET Framework 2,0 ' de, genel türler için çalışma zamanı bilgilerini etkinleştirmek <xref:System.Type> üzere sınıfa birkaç yeni üye eklenir. Bu yöntemlerin ve özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bu sınıfların belgelerine bakın. Ad <xref:System.Reflection.Emit> alanı Ayrıca, genel türleri destekleyen yeni üyeler içerir. Bkz [. nasıl yapılır: Yansıma yayma](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)Ile genel bir tür tanımlayın.  
   
- Genel yansımada kullanılan terimlere ilişkin sabit koşulların listesi için bkz. <xref:System.Type.IsGenericType%2A> özelliği açıklamalar.  
+ Genel yansıma ' de kullanılan koşullara yönelik sabit koşulların bir listesi için, bkz <xref:System.Type.IsGenericType%2A> . Özellik açıklamaları.  
   
-|System.Type üye adı|Açıklama|  
+|System. Type üye adı|Açıklama|  
 |-----------------------------|-----------------|  
 |<xref:System.Type.IsGenericType%2A>|Bir tür genel ise true döndürür.|  
-|<xref:System.Type.GetGenericArguments%2A>|Bir dizi döndürür `Type` tür bağımsız değişkenlerini temsil eden nesneleri, genel tür tanımı parametreleri oluşturulmuş bir türü veya tür için sağlanan.|  
-|<xref:System.Type.GetGenericTypeDefinition%2A>|Geçerli oluşturulan tür temel genel tür tanımını döndürür.|  
-|<xref:System.Type.GetGenericParameterConstraints%2A>|Bir dizi döndürür `Type` tür parametresinin geçerli genel kısıtlamalar temsil eden nesneleri.|  
-|<xref:System.Type.ContainsGenericParameters%2A>|Türü veya herhangi bir kapsayan tür veya yöntemin kendisi için değil özel türleri sağlanmadı tür parametreleri içeriyorsa true döndürür.|  
-|<xref:System.Type.GenericParameterAttributes%2A>|Bir birleşimi alır `GenericParameterAttributes` geçerli genel özel kısıtlamaları tanımlayan bayraklar parametresi yazın.|  
-|<xref:System.Type.GenericParameterPosition%2A>|İçin bir `Type` bir tür parametresini temsil nesneyi tür parametresi genel tür tanımı veya tür parametresi bildirimi genel yöntem tanımının türü parametre listesini konumunu alır.|  
-|<xref:System.Type.IsGenericParameter%2A>|Belirten bir değer alır olup olmadığını geçerli `Type` genel bir tür veya yöntem tanımının bir tür parametresini temsil eder.|  
-|<xref:System.Type.IsGenericTypeDefinition%2A>|Belirten bir değer alır olup olmadığını geçerli <xref:System.Type> içinden diğer oluşturulan genel türler bir genel tür tanımını temsil eder. Genel tür tanımı türü temsil ediyorsa true döndürür.|  
-|<xref:System.Type.DeclaringMethod%2A>|Geçerli genel tanımlanan genel yöntemin tür parametresi veya tür parametresi, genel bir yöntem tarafından tanımlanmamış yoksa null değerini döndürür.|  
-|<xref:System.Type.MakeGenericType%2A>|Geçerli genel tür tanımının türleri tür parametreleri için bir dizi öğelerinin yerini alır ve döndürür bir <xref:System.Type> oluşturulan türü ortaya çıkan temsil eden nesne.|  
+|<xref:System.Type.GetGenericArguments%2A>|Oluşturulmuş bir tür için `Type` sağlanan tür bağımsız değişkenlerini veya bir genel tür tanımının tür parametrelerini temsil eden nesne dizisini döndürür.|  
+|<xref:System.Type.GetGenericTypeDefinition%2A>|Geçerli oluşturulmuş tür için temel alınan genel tür tanımını döndürür.|  
+|<xref:System.Type.GetGenericParameterConstraints%2A>|Geçerli genel tür parametresindeki `Type` kısıtlamaları temsil eden nesne dizisini döndürür.|  
+|<xref:System.Type.ContainsGenericParameters%2A>|Türü veya kapsayan türleri ya da metotlarından herhangi biri, belirli türler sağlanmadığından tür parametreleri içeriyorsa true değerini döndürür.|  
+|<xref:System.Type.GenericParameterAttributes%2A>|Geçerli genel tür parametresinin `GenericParameterAttributes` özel kısıtlamalarını tanımlayan bayrakların bir birleşimini alır.|  
+|<xref:System.Type.GenericParameterPosition%2A>|Bir tür `Type` parametresini temsil eden bir nesne için, tür parametresinin konumunu, genel tür tanımının tür parametresi listesinde veya tür parametresini tanımlayan genel yöntem tanımının türü olarak alır.|  
+|<xref:System.Type.IsGenericParameter%2A>|Geçerli `Type` öğesinin bir genel tür veya yöntem tanımının tür parametresini temsil ettiğini gösteren bir değer alır.|  
+|<xref:System.Type.IsGenericTypeDefinition%2A>|Geçerli <xref:System.Type> öğesinin, diğer genel türlerin üzerinde oluşturulabilecek genel bir tür tanımını temsil edip etmediğini belirten bir değer alır. Tür genel bir türün tanımını temsil ediyorsa, true döndürür.|  
+|<xref:System.Type.DeclaringMethod%2A>|Geçerli genel tür parametresini tanımlayan genel yöntemi veya tür parametresi genel bir yöntem tarafından tanımlanmamışsa null değerini döndürür.|  
+|<xref:System.Type.MakeGenericType%2A>|Geçerli genel tür tanımının tür parametreleri için bir tür dizisinin öğelerini değiştirir ve elde edilen oluşturulan türü temsil eden bir <xref:System.Type> nesne döndürür.|  
   
- Ayrıca, üyeleri <xref:System.Reflection.MethodInfo> sınıfını genel metotlar için çalışma zamanı bilgilerini etkinleştirin. Bkz: <xref:System.Reflection.MethodBase.IsGenericMethod%2A> özelliği açıklamalar genel yöntemlerin yansıtmak için kullanılan terimler ilişkin sabit koşulların listesi.  
+ Ayrıca, <xref:System.Reflection.MethodInfo> sınıfının üyeleri, genel metotlar için çalışma zamanı bilgilerini etkinleştirir. Genel yöntemleri yansıtmak için kullanılan koşullara yönelik sabit koşulların bir listesi için bkz. Özellikaçıklamaları.<xref:System.Reflection.MethodBase.IsGenericMethod%2A>  
   
-|System.Reflection.MemberInfo üye adı|Açıklama|  
+|System. Reflection. MemberInfo üye adı|Açıklama|  
 |----------------------------------------------|-----------------|  
-|<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Genel bir yöntemi ise true döndürür.|  
-|<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Tür bağımsız değişkenlerini oluşturulmuş bir genel yöntem veya bir genel yöntem tanımının Tür parametreleri temsil eden tür nesneleri dizisi döndürür.|  
-|<xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A>|Geçerli yapılandırılmış yöntemi için temel alınan genel yöntem tanımını döndürür.|  
-|<xref:System.Reflection.MethodBase.ContainsGenericParameters%2A>|Yöntem veya kapsayan türlerinden birinin kendisi için değil özel türleri sağlanmadı herhangi bir tür parametreleri içeriyorsa true döndürür.|  
-|<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|Gerekirse true döndürür geçerli <xref:System.Reflection.MethodInfo> genel yöntem tanımını temsil eder.|  
-|<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Geçerli genel yöntem tanımının türleri tür parametreleri için bir dizi öğelerinin yerini alır ve döndürür bir <xref:System.Reflection.MethodInfo> oluşturulmuş yöntemi ortaya çıkan temsil eden nesne.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Bir yöntem genel ise, true döndürür.|  
+|<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Oluşturulmuş bir genel metodun tür bağımsız değişkenlerini veya bir genel yöntem tanımının tür parametrelerini temsil eden nesne türünde bir dizi döndürür.|  
+|<xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A>|Geçerli oluşturulan yöntem için temeldeki genel yöntem tanımını döndürür.|  
+|<xref:System.Reflection.MethodBase.ContainsGenericParameters%2A>|Yöntem veya kapsayan türlerinden herhangi biri, belirli türler sağlanmadığından herhangi bir tür parametresi içeriyorsa true değerini döndürür.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|Geçerli <xref:System.Reflection.MethodInfo> bir genel yöntemin tanımını temsil ediyorsa, true döndürür.|  
+|<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Geçerli genel yöntem tanımının tür parametreleri için bir tür dizisinin öğelerini değiştirir ve elde edilen oluşturulmuş yöntemi temsil eden bir <xref:System.Reflection.MethodInfo> nesne döndürür.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Genel Türler](../../../csharp/programming-guide/generics/index.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Genel Türler](./index.md)
 - [Yansıma ve Genel Türler](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
 - [Genel Türler](~/docs/standard/generics/index.md)

@@ -1,22 +1,22 @@
 ---
-title: 'Nasıl yapılır: İmzasız arkadaş derlemeleri oluşturma (C#)'
+title: 'Nasıl yapılır: Imzasız arkadaş derlemeleri oluşturma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 6bc2d807b3d1cf6c82a9ba6303139b9758581f35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5dadd725234048c4b6a4f9a0fa9b38dbf92671aa
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703263"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595916"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Nasıl yapılır: İmzasız arkadaş derlemeleri oluşturma (C#)
-Bu örnek, işaretsiz derlemeleri ile arkadaş derlemeleri kullanmayı gösterir.  
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Nasıl yapılır: Imzasız arkadaş derlemeleri oluşturma (C#)
+Bu örnekte, friend derlemelerinin imzasız Derlemelerle nasıl kullanılacağı gösterilmektedir.  
   
-### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Bir derleme ve arkadaş derleme oluşturmak için  
+### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Derleme ve arkadaş derleme oluşturmak için  
   
 1. Bir komut istemi açın.  
   
-2. Adlı bir C# dosyası oluşturma `friend_unsigned_A.` , aşağıdaki kodu içerir. Kod <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> friend_unsigned_B arkadaş derleme olarak bildirmek için özniteliği.  
+2. Aşağıdaki kodu C# içeren adlı `friend_unsigned_A.` bir dosya oluşturun. Kod, friend_unsigned_B bir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Friend derlemesi olarak bildirmek için özniteliğini kullanır.  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,13 +46,13 @@ Bu örnek, işaretsiz derlemeleri ile arkadaş derlemeleri kullanmayı gösterir
     }  
     ```  
   
-3. Derleme ve aşağıdaki komutu kullanarak friend_unsigned_A imzalayın.  
+3. Aşağıdaki komutu kullanarak friend_unsigned_A derleyin ve imzalayın.  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
     ```  
   
-4. Adlı bir C# dosyası oluşturma `friend_unsigned_B` , aşağıdaki kodu içerir. Friend_unsigned_A friend_unsigned_B arkadaş derleme olarak belirttiğinden friend_unsigned_B kodda erişip `internal` türleri ve üyeleri friend_unsigned_A.  
+4. Aşağıdaki kodu C# içeren adlı `friend_unsigned_B` bir dosya oluşturun. Friend_unsigned_A, bir Friend derlemesi olarak friend_unsigned_B belirttiğinden, friend_unsigned_B içindeki kod friend_unsigned_A 'deki türlere `internal` ve üyelere erişebilir.  
   
     ```csharp  
     // friend_unsigned_B.cs  
@@ -81,19 +81,19 @@ Bu örnek, işaretsiz derlemeleri ile arkadaş derlemeleri kullanmayı gösterir
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
     ```  
   
-     Geçirilen friend derleme adı derleyici tarafından oluşturulan bütünleştirilmiş kodun adı eşleşmelidir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği. Çıktı derlemesine (.exe veya .dll) adını kullanarak açıkça belirtmeniz gerekir `/out` derleyici seçeneği. Daha fazla bilgi için [/out (C# Derleyici Seçenekleri)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
+     Derleyici tarafından oluşturulan derlemenin adı, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğe geçirilen arkadaş derleme adıyla eşleşmelidir. `/out` Derleyici seçeneğini kullanarak çıkış derlemesinin adını (. exe veya. dll) açıkça belirtmeniz gerekir. Daha fazla bilgi için bkz. [/OutC# (derleyici seçenekleri)](../../../language-reference/compiler-options/out-compiler-option.md).  
   
-6. Friend_unsigned_B.exe dosyasını çalıştırın.  
+6. Friend_unsigned_B. exe dosyasını çalıştırın.  
   
-     Program iki dizeyi yazdırır: "Class1.Test" ve "Class2.Test".  
+     Program iki dize yazdırır: "Class1. test" ve "Class2. test".  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Arasındaki benzerlikler vardır <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği ve <xref:System.Security.Permissions.StrongNameIdentityPermission> sınıfı. Ana fark <xref:System.Security.Permissions.StrongNameIdentityPermission> ise kod, belirli bir bölümünü çalıştırmak için güvenlik izinleri talep <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği denetimleri görünürlüğünü `internal` türler ve üyeler.  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Özniteliği<xref:System.Security.Permissions.StrongNameIdentityPermission> ve sınıfı arasında benzerlikler vardır. Temel fark <xref:System.Security.Permissions.StrongNameIdentityPermission> , kodun belirli bir bölümünü çalıştırmak için güvenlik izinleri talep edebilir, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> ancak `internal` öznitelik türlerin ve üyelerin görünürlüğünü denetler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET’te bütünleştirilmiş kodlar](../../../../standard/assembly/index.md)
 - [Arkadaş Bütünleştirilmiş Kodları](../../../../standard/assembly/friend-assemblies.md)
-- [Nasıl yapılır: İmzalı arkadaş derlemeleri oluşturma (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
+- [Nasıl yapılır: Imzalı arkadaş derlemeleri oluşturma (C#)](./how-to-create-signed-friend-assemblies.md)
+- [C# Programlama Kılavuzu](../../index.md)

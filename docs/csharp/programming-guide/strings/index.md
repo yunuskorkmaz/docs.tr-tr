@@ -6,27 +6,27 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 1b80082d10ad9ee760a184f496793ad5c69202da
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "67802309"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588484"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Dize, değeri Text olan türünde <xref:System.String> bir nesnedir. Dahili olarak, metin sıralı bir salt okunabilir <xref:System.Char> nesne koleksiyonu olarak depolanır. C# Dizenin sonunda null sonlandırma karakteri yoktur; Bu nedenle C# , bir dize herhangi bir sayıda katıştırılmış null karakteri (' \ 0 ') içerebilir. Bir dizenin `Char` özelliği, Unicode karakter sayısını değil, içerdiği nesne sayısını temsil eder. <xref:System.String.Length%2A> Bir dizedeki tek tek Unicode kod noktalarına erişmek için <xref:System.Globalization.StringInfo> nesnesini kullanın.  
   
 ## <a name="string-vs-systemstring"></a>dize ile System. String  
- ' C#De, `string` anahtar sözcüğü için <xref:System.String>bir diğer addır. Bu nedenle `String` , `string` ve eşdeğerdir ve tercih ettiğiniz adlandırma kuralını kullanabilirsiniz. `String` Sınıfı dizeleri güvenli bir şekilde oluşturmak, işlemek ve karşılaştırmak için birçok yöntem sağlar. Ayrıca, C# dil, yaygın dize işlemlerini basitleştirmek için bazı işleçleri aşırı yükler. Anahtar sözcüğü hakkında daha fazla bilgi için bkz. [String](../../../csharp/language-reference/keywords/string.md). Türü ve yöntemleri hakkında daha fazla bilgi için bkz <xref:System.String>.  
+ ' C#De, `string` anahtar sözcüğü için <xref:System.String>bir diğer addır. Bu nedenle `String` , `string` ve eşdeğerdir ve tercih ettiğiniz adlandırma kuralını kullanabilirsiniz. `String` Sınıfı dizeleri güvenli bir şekilde oluşturmak, işlemek ve karşılaştırmak için birçok yöntem sağlar. Ayrıca, C# dil, yaygın dize işlemlerini basitleştirmek için bazı işleçleri aşırı yükler. Anahtar sözcüğü hakkında daha fazla bilgi için bkz. [String](../../language-reference/keywords/string.md). Türü ve yöntemleri hakkında daha fazla bilgi için bkz <xref:System.String>.  
   
 ## <a name="declaring-and-initializing-strings"></a>Dizeleri bildirme ve başlatma  
  Aşağıdaki örnekte gösterildiği gibi çeşitli yollarla dizeler bildirebilir ve başlatabilirsiniz:  
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- Dizenin bir karakter dizisiyle başlatılması dışında bir dize nesnesi oluşturmak için [New](../../../csharp/language-reference/operators/new-operator.md) işlecini kullanmayacağınızı unutmayın.  
+ Dizenin bir karakter dizisiyle başlatılması dışında bir dize nesnesi oluşturmak için [New](../../language-reference/operators/new-operator.md) işlecini kullanmayacağınızı unutmayın.  
   
- Dizesi sıfır uzunluklu olan yeni <xref:System.String.Empty> <xref:System.String> bir nesne oluşturmak için sabit değere sahip bir dize başlatın. Sıfır uzunluklu bir dizenin dize sabit temsili "" dir. Dizeleri <xref:System.String.Empty> [null](../../../csharp/language-reference/keywords/null.md)yerine değeri ile başlatarak, <xref:System.NullReferenceException> oluşma olasılığını azaltabilirsiniz. Bir dizenin değerini <xref:System.String.IsNullOrEmpty%28System.String%29> erişmeyi denemeden önce doğrulamak için statik yöntemi kullanın.  
+ Dizesi sıfır uzunluklu olan yeni <xref:System.String.Empty> <xref:System.String> bir nesne oluşturmak için sabit değere sahip bir dize başlatın. Sıfır uzunluklu bir dizenin dize sabit temsili "" dir. Dizeleri <xref:System.String.Empty> [null](../../language-reference/keywords/null.md)yerine değeri ile başlatarak, <xref:System.NullReferenceException> oluşma olasılığını azaltabilirsiniz. Bir dizenin değerini <xref:System.String.IsNullOrEmpty%28System.String%29> erişmeyi denemeden önce doğrulamak için statik yöntemi kullanın.  
   
 ## <a name="immutability-of-string-objects"></a>Dize nesnelerinin kullanılabilirliği  
  Dize nesneleri *sabittir*: oluşturulduktan sonra değiştirilemez. Bir dizeyi değiştirmek <xref:System.String> için görünen C# tüm yöntemler ve işleçler, sonuçları yeni bir dize nesnesi olarak döndürür. Aşağıdaki örnekte, içeriği `s1` ve `s2` tek bir dize oluşturacak şekilde bitiştirildiği zaman, iki özgün dize değiştirilmemiş olur. İşleci `+=` , Birleşik içerikleri içeren yeni bir dize oluşturur. Bu yeni nesne değişkenine `s1`atanır ve kendisine `s1` atanmış olan özgün nesne, başka hiçbir değişken buna başvuru içermediğinden çöp toplama için serbest bırakılır.  
@@ -125,7 +125,7 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Dizeler, uzantı yöntemleri ve LINQ  
- Türü uyguladığından <xref:System.Collections.Generic.IEnumerable%601>, dizelerde <xref:System.Linq.Enumerable> sınıfında tanımlanan genişletme yöntemlerini kullanabilirsiniz. <xref:System.String> Görsel dağınıklığı önlemek için, bu yöntemler <xref:System.String> tür için IntelliSense 'den dışlanır, ancak yine de kullanılabilir. Ayrıca, dizeler üzerinde [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadeleri de kullanabilirsiniz. Daha fazla bilgi için bkz. [LINQ ve dizeler](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  
+ Türü uyguladığından <xref:System.Collections.Generic.IEnumerable%601>, dizelerde <xref:System.Linq.Enumerable> sınıfında tanımlanan genişletme yöntemlerini kullanabilirsiniz. <xref:System.String> Görsel dağınıklığı önlemek için, bu yöntemler <xref:System.String> tür için IntelliSense 'den dışlanır, ancak yine de kullanılabilir. Ayrıca, dizeler üzerinde [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadeleri de kullanabilirsiniz. Daha fazla bilgi için bkz. [LINQ ve dizeler](../concepts/linq/linq-and-strings.md).  
   
 ## <a name="related-topics"></a>İlgili Konular  
   
@@ -136,12 +136,12 @@ string s = String.Empty;
 |[Nasıl yapılır: Birden çok dizeyi birleştirme](../../how-to/concatenate-multiple-strings.md)|Birden çok dizeyi tek tek birleştirmek için çeşitli yollar gösterir.|
 |[Nasıl yapılır: String. Split kullanarak dizeleri ayrıştırma](../../how-to/parse-strings-using-split.md)|Dizeleri ayrıştırmak için `String.Split` yönteminin nasıl kullanılacağını gösteren kod örnekleri içerir.|  
 |[Nasıl yapılır: Dizeleri ara](../../how-to/search-strings.md)|Dizelerde belirli metin veya desenler için aramanın nasıl kullanılacağını açıklar.|  
-|[Nasıl yapılır: Bir dizenin sayısal bir değeri temsil edip etmediğini belirleme](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Geçerli bir sayısal değer olup olmadığını görmek için bir dizeyi güvenli bir şekilde ayrıştırmayı gösterir.|  
+|[Nasıl yapılır: Bir dizenin sayısal bir değeri temsil edip etmediğini belirleme](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Geçerli bir sayısal değer olup olmadığını görmek için bir dizeyi güvenli bir şekilde ayrıştırmayı gösterir.|  
 |[Dize ilişkilendirme](../../language-reference/tokens/interpolated.md)|Dizeleri biçimlendirmek için uygun bir sözdizimi sağlayan dize ilişkilendirme özelliğini açıklar.|
-|[Temel Dize İşlemleri](../../../../docs/standard/base-types/basic-string-operations.md)|Temel dize işlemleri gerçekleştirmek için ve <xref:System.String?displayProperty=nameWithType> <xref:System.Text.StringBuilder?displayProperty=nameWithType> yöntemlerini kullanan konulara bağlantılar sağlar.|  
+|[Temel Dize İşlemleri](../../../standard/base-types/basic-string-operations.md)|Temel dize işlemleri gerçekleştirmek için ve <xref:System.String?displayProperty=nameWithType> <xref:System.Text.StringBuilder?displayProperty=nameWithType> yöntemlerini kullanan konulara bağlantılar sağlar.|  
 |[Dizeleri Ayrıştırma](../../../standard/base-types/parsing-strings.md)|.NET temel türlerinin dize temsillerini karşılık gelen türlerin örneklerine nasıl dönüştüreceğiniz açıklanmıştır.|  
 |[.NET 'teki tarih ve saat dizelerini ayrıştırma](../../../standard/base-types/parsing-datetime.md)|"01/24/2008" gibi bir dizenin bir <xref:System.DateTime?displayProperty=nameWithType> nesneye nasıl dönüştürüleceğini gösterir.|  
-|[Dizeleri Karşılaştırma](../../../../docs/standard/base-types/comparing.md)|Dizelerin nasıl karşılaştırılacağı hakkında bilgiler içerir ve C# ve Visual Basic örnekler sağlar.|  
+|[Dizeleri Karşılaştırma](../../../standard/base-types/comparing.md)|Dizelerin nasıl karşılaştırılacağı hakkında bilgiler içerir ve C# ve Visual Basic örnekler sağlar.|  
 |[StringBuilder Sınıfını Kullanma](../../../standard/base-types/stringbuilder.md)|<xref:System.Text.StringBuilder> Sınıfını kullanarak dinamik dize nesnelerinin nasıl oluşturulduğunu ve değiştirileceğini açıklar.|  
-|[LINQ ve Dizeler](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|LINQ sorguları kullanılarak çeşitli dize işlemlerinin nasıl gerçekleştirileceği hakkında bilgi sağlar.|  
-|[C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)|İçinde C#programlama yapılarını açıklayan konuların bağlantılarını sağlar.|  
+|[LINQ ve Dizeler](../concepts/linq/linq-and-strings.md)|LINQ sorguları kullanılarak çeşitli dize işlemlerinin nasıl gerçekleştirileceği hakkında bilgi sağlar.|  
+|[C# Programlama Kılavuzu](../index.md)|İçinde C#programlama yapılarını açıklayan konuların bağlantılarını sağlar.|  

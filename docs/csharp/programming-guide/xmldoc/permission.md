@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: ea0b8c37f6ef803fd36592376a7a8c0c334f719c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9eb50394f01072a194d3f746577707f89ba65dd
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675870"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587888"
 ---
-# <a name="permission-c-programming-guide"></a>\<izni > (C# Programlama Kılavuzu)
+# <a name="permission-c-programming-guide"></a>\<izin > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -25,22 +25,22 @@ ms.locfileid: "61675870"
   
 ## <a name="parameters"></a>Parametreler  
  cref = " `member`"  
- Bir üye veya geçerli derleme ortamdan çağrılacak kullanılabilir alan başvuru. Derleyici belirli kod öğesi var. çevirir olup olmadığını denetler ve `member` kurallı öğesi adı ' % s'çıkış XML dosyası. *üye* çift tırnak içinde yer almalıdır ("").  
+ Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında `member` kurallı öğe adına çevirir. *üye* çift tırnak işareti ("") içinde yer almalıdır.  
   
- Genel tür cref başvuru oluşturma hakkında daha fazla bilgi için bkz: [ \<bakın >](../../../csharp/programming-guide/xmldoc/see.md).  
+ Genel bir türe [ \<](./see.md)cref başvurusu oluşturma hakkında daha fazla bilgi için bkz. >.  
   
  `description`  
- Üye erişimi açıklaması.  
+ Üyeye erişim açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- \<İzni > etiketi üyenin erişim belge olanak tanır. <xref:System.Security.PermissionSet> Sınıf üyesi erişimi belirtmenize olanak sağlar.  
+ \<İzin > etiketi bir üyenin erişimini belgelemenizi sağlar. Sınıfı <xref:System.Security.PermissionSet> , bir üyeye erişim belirtmenize olanak sağlar.  
   
- Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.  
+ Belge açıklamalarını bir dosyaya işlemek için [/doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideDocComments#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#8)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Belge Açıklamaları için Önerilen Etiketler](./recommended-tags-for-documentation-comments.md)

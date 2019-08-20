@@ -1,77 +1,77 @@
 ---
-title: Kavramlar ve terimler (işlevsel dönüşüm) (C#)
+title: Kavramlar ve terminoloji (Işlevsel dönüşüm) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: 878ecdbbc4155ca5ca145480ae610701eed9a0c8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf340b960a6770f972f545b23bd857afd4cb9ede
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597820"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594589"
 ---
-# <a name="concepts-and-terminology-functional-transformation-c"></a>Kavramlar ve terimler (işlevsel dönüşüm) (C#)
-Bu konu, saf işlevsel dönüşümlere terimleri ve kavramları tanıtır. Veri dönüştürme işlevsel dönüşüm yaklaşım genellikle programa daha ifadesel ve daha kolay hata ayıklaması ve bakımı daha geleneksel, zorunlu programlama daha hızlı kod üretir.  
+# <a name="concepts-and-terminology-functional-transformation-c"></a>Kavramlar ve terminoloji (Işlevsel dönüşüm) (C#)
+Bu konu, saf işlevsel dönüştürmelerin kavramlarını ve terminolojisini tanıtır. Veri dönüştürme yaklaşımı, genellikle programa, daha ayrıntılı bir şekilde daha hızlı ve hata ayıklama ve daha geleneksel, kesinlik temelli programlama açısından daha kolay olan kodu verir.  
   
- Bu bölümdeki konularda, tam olarak işlevsel programlama açıklamak üzere amaçlanmamıştır unutmayın. Bunun yerine, bu konularda bazı XML bir şekle Dönüştür daha kolay hale getirmek işlevsel programlama özelliklerini tanımlayın.  
+ Bu bölümdeki konuların işlevsel programlamayı tam olarak açıklamak için düşünülmediğini unutmayın. Bunun yerine, bu konular XML 'i bir şekilden diğerine dönüştürmeyi kolaylaştıran bazı işlevsel programlama özelliklerini belirler.  
   
-## <a name="what-is-pure-functional-transformation"></a>Saf işlevsel dönüşüm nedir?  
- İçinde *saf işlevsel dönüşüm*, çağrılan işlevler bir dizi *saf işlevler*, yapılandırılmış verileri özgün biçimlerinde bir dizi başka bir biçime dönüştürmek nasıl tanımlayın. "Saf" sözcüğü işlevleri gösterir *birleştirilebilir*, olmalarını gerektirir:  
+## <a name="what-is-pure-functional-transformation"></a>Saf Işlevsel dönüştürme nedir?  
+ *Saf işlevsel dönüşümde*, *saf işlevler*olarak adlandırılan bir işlevler kümesi, bir dizi yapısal veriyi özgün formdan başka bir biçime dönüştürmeyi tanımlar. "Saf" sözcüğü, işlevlerin birleştirilebilen şekilde olduğunubelirtir ve şunları gerektirir:  
   
-- *Müstakil*, böylece bunlar kullanılabilir serbestçe sıralı ve entanglement veya programın geri kalanını ile bağımlılıkları olmadan düzenlenmeyecek. Saf dönüştürmeleri hakkında bilgi sahibi ya da kendi ortamlarında üzerinde etkisi vardır. Diğer bir deyişle, dönüşümünde işlevleri yok *yan etkileri*.  
+- *Kendi kendine dahil*olmak üzere, bağımsız olarak sıralanmış ve daha sonra programın geri kalanı olmadan bir arada ve yeniden düzenlenecek şekilde yeniden düzenlenebilir. Saf dönüşümler, ortamları hakkında bilgi sahibi değildir veya etkilemez. Diğer bir deyişle, dönüşümde kullanılan işlevlerin *yan etkileri*yoktur.  
   
-- *Durum bilgisi olmayan*, böylece aynı işlev veya belirli işlevler kümesi aynı giriş yürütülen her zaman aynı çıktısında neden olur. Saf dönüşümleri önceki kullanımları bellek var.  
+- *Durum bilgisiz*, aynı veya aynı girişte aynı işlevin veya belirli bir işlev kümesinin yürütülmesi her zaman aynı çıkışa neden olur. Saf dönüşümlerinin önceki kullanımları belleği yoktur.  
   
 > [!IMPORTANT]
->  Bu öğreticinin geri kalanını içinde "saf işlev" terimi, genel anlamda programlama bir yaklaşım ve belirli bir dil özelliği belirtmek için kullanılır.  
+>  Bu öğreticinin geri kalanında, "saf işlev" terimi, belirli bir dil özelliği değil, programlama yaklaşımını göstermek için genel anlamda kullanılır.  
 >   
->  Saf işlevler C# yöntemler olarak uygulanması gerektiğini unutmayın.  
+>  Saf işlevlerin ' de C#Yöntem olarak uygulanması gerektiğini unutmayın.  
 >   
->  Ayrıca, saf işlevleri saf sanal C++ yöntemleri ile farklıdır. İkincisi, içerilen sınıf soyuttur ve herhangi bir yöntem gövdesi verilmesi gerektiğini gösterir.  
+>  Ayrıca, saf işlevleri içinde C++saf sanal yöntemlerle karıştırmayın. İkincisi, kapsayan sınıfın soyut olduğunu ve hiçbir Yöntem gövdesinin sağlanmadığını gösterir.  
   
-### <a name="functional-programming"></a>İşlevsel programlama  
- *İşlevsel programlama* saf işlevsel dönüşüm doğrudan destekleyen programlama bir yaklaşımdır.  
+### <a name="functional-programming"></a>Fonksiyonel programlama  
+ *Fonksiyonel programlama* , saf işlevsel dönüştürmeyi doğrudan destekleyen bir programlama yaklaşımıdır.  
   
- Tarihsel olarak, ML, düzeni, Haskell, genel amaçlı işlevsel programlama dilleri ve F#, öncelikle, akademik topluluk olmuştur. Her zaman saf işlevsel dönüşümlere C# dilinde yazmayı mümkün olsa da, zorluk Bunun yapılması, bu nedenle, çoğu programcıları için çekici bir seçenek yapılmadı. Lambda ifadeleri ve tür çıkarımı işlevsel programlama çok daha kolay ve daha üretken hale gibi en son sürümlerinde C#, ancak yeni dil oluşturur.  
+ Geçmişte, genel amaçlı işlevsel programlama dilleri, örneğin, ML, düzen, Haskell ve F#, birincil olarak akademik topluluk ile ilgilenmiştir. Üzerinde C#saf işlevsel dönüşümler yazmak her zaman mümkün olsa da, bunu yapmanın zorluğunu çoğu programcıya etkileyici bir seçenek yapmamıştır. Ancak, ' nin C#son sürümlerinde, lambda ifadeleri ve tür çıkarımı gibi yeni dil yapıları BT programlamanın çok daha kolay ve daha üretken olmasını sağlar.  
   
- İşlevsel programlama hakkında daha fazla bilgi için bkz. [işlevsel Programlama vs. Kesin programlama karşılaştırması (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md).  
+ Fonksiyonel programlama hakkında daha fazla bilgi için bkz [. fonksiyonel programlama vs. Kesinlik temelli programlamaC#(](./functional-programming-vs-imperative-programming.md)).  
   
-#### <a name="domain-specific-fp-languages"></a>FP etki alanına özgü diller  
- Genel fonksiyonel programlama dillerinin geniş uyarlanmıştır değil olsa da, özel etki alanına özgü fonksiyonel programlama dillerinin daha iyi başarı kalmışlardır. Örneğin, geçişli stil sayfaları (CSS), birçok Web sayfası Görünüm ve yapısını belirlemek için kullanılır ve Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) stil sayfaları, XML veri işleme yaygın olarak kullanılır. XSLT hakkında daha fazla bilgi için bkz: [XSLT dönüşümleri](../../../../standard/data/xml/xslt-transformations.md).  
+#### <a name="domain-specific-fp-languages"></a>Etki alanına özgü FP dilleri  
+ Genel fonksiyonel programlama dilleri çok daha fazla benimsemese de, etki alanına özgü belirli işlevsel programlama dillerinin başarısı daha iyidir. Örneğin, birçok Web sayfasının görünümünü ve kullanımını belirlemede Geçişli Stil Sayfaları (CSS) kullanılır ve Genişletilebilir Stil sayfası dil dönüşümleri (XSLT) stil sayfaları, XML veri işleme açısından kapsamlı olarak kullanılır. XSLT hakkında daha fazla bilgi için bkz. [XSLT dönüştürmeleri](../../../../standard/data/xml/xslt-transformations.md).  
   
 ## <a name="terminology"></a>Terminoloji  
- Aşağıdaki tabloda bazı terimler için işlevsel dönüşümlere ilgili tanımlar.  
+ Aşağıdaki tabloda, işlevsel dönüşümlerle ilgili bazı terimler tanımlanmaktadır.  
   
- daha yüksek sıralı (ilk sınıf) işlevi  
- Programlı bir nesnesi olarak davranılıp bir işlev. Örneğin, yüksek sıralı işlev geçirilen veya diğer işlevlerden döndürülebilir. C'de, #c, temsilciler ve lambda ifadeleri daha yüksek sıralı işlevlerini destekleyen dili özelliği şunlardır. Yüksek sıralı işlev yazmak için temsilciler almak için bir veya daha fazla bağımsız değişken bildirme ve genellikle lambda ifadeleri çağırırken kullanırsınız. Standart sorgu işleçlerinin çoğu, daha yüksek sıralı işlevlerdir.  
+ daha yüksek sıralı (birinci sınıf) işlev  
+ Programlı bir nesne olarak değerlendirilenebilir bir işlev. Örneğin, daha yüksek sıralı bir işlev başka işlevlere geçirilebilir veya bu işlevlerden döndürülebilir. C # c 'de temsilciler ve lambda ifadeleri, daha yüksek sıralı işlevleri destekleyen dil özelliklerdir. Daha yüksek sıralı bir işlev yazmak için temsilcileri almak üzere bir veya daha fazla bağımsız değişken bildirir ve genellikle bunu çağırırken Lambda ifadelerini kullanırsınız. Standart sorgu işleçlerinin birçoğu daha yüksek sıralı işlevlerdir.  
   
- Daha fazla bilgi için [standart sorgu işleçlerine genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Daha fazla bilgi için bkz. [Standart sorgu IşleçlerineC#genel bakış ()](./standard-query-operators-overview.md).  
   
  Lambda ifadesi  
- Bir temsilci türünün beklendiği her yerde kullanılabilir esas olarak, bir satır içi anonim işlev. Bu basitleştirilmiş bir tanımı lambda ifadeleri, ancak bu öğreticinin amaçları doğrultusunda yeterli.  
+ Temelde, bir temsilci türünün beklendiği her yerde kullanılabilecek bir satır içi anonim işlev. Bu, lambda ifadelerinin basitleştirilmiş bir tanımıdır, ancak Bu öğreticinin amaçları doğrultusunda yeterlidir.  
   
- Hakkında daha fazla bilgi için bkz: [Lambda ifadeleri](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ Hakkında daha fazla bilgi için bkz. [lambda ifadeleri](../../statements-expressions-operators/lambda-expressions.md).  
   
-  koleksiyonu  
- Veri, genellikle bir Tekdüzen türü yapılandırılmış bir dizi. LINQ ile uyumlu olacak şekilde bir koleksiyon uygulamalıdır <xref:System.Collections.IEnumerable> arabirimi veya <xref:System.Linq.IQueryable> arabirimi (veya genel karşılıkları <xref:System.Collections.Generic.IEnumerator%601> veya <xref:System.Linq.IQueryable%601>).  
+ koleksiyonu  
+ Genellikle tek biçimli bir tür için yapılandırılmış bir veri kümesi. LINQ ile uyumlu olmak için bir <xref:System.Collections.IEnumerable> koleksiyonun arabirimini <xref:System.Linq.IQueryable> veya arabirimini (ya da <xref:System.Linq.IQueryable%601>kendi genel karşılıklarından <xref:System.Collections.Generic.IEnumerator%601> birini veya) uygulaması gerekir.  
   
- Tanımlama grubu (anonim türler)  
- Matematiksel bir kavram, bir tanımlama grubu sınırlı nesneleri belirli bir türdeki her dizisidir. Bir tanımlama grubu olarak da bilinen sıralı bir listesidir. Anonim türler bir adsız sınıf türü bildirimi etkinleştiren bir dil uygulama bu kavram ve aynı anda örneği için bu türde bir nesne var.  
+ tanımlama grubu (anonim türler)  
+ Bir matematiksel kavram olan tanımlama grubu, belirli bir türün her biri için sınırlı bir nesne dizisidir. Bir tanımlama grubu sıralı liste olarak da bilinir. Anonim türler, bu kavramın bir dil uygulamasıdır. Bu, adlandırılmamış bir sınıf türünün bildirilmesini ve bu türden bir nesnenin aynı anda oluşturulmasını sağlar.  
   
- Daha fazla bilgi için [anonim türler](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ Daha fazla bilgi için bkz. [anonim türler](../../classes-and-structs/anonymous-types.md).  
   
- tür çıkarımı (örtülü yazma)  
- Bir açık tür bildirimi olmadığında bir değişkenin türünü belirlemek için bir derleyici yeteneğidir.  
+ Tür çıkarımı (örtük yazma)  
+ Bir derleyicinin açık tür bildirimi yokluğunda bir değişkenin türünü belirleme özelliği.  
   
- Daha fazla bilgi için [örtük olarak yazılan yerel değişkenler](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+ Daha fazla bilgi için bkz. [örtülü olarak yazılan yerel değişkenler](../../classes-and-structs/implicitly-typed-local-variables.md).  
   
- Ertelenmiş yürütme ve geç değerlendirme  
- Çözümlenen değerine kadar bir ifadenin değerlendirmesine geciktirme gerçekten gerekli değildir. Ertelenmiş yürütme koleksiyonlarında desteklenir.  
+ ertelenmiş yürütme ve geç değerlendirme  
+ Çözümlenmiş değeri gerçekten gerekli olana kadar bir ifadenin değerlendirilme ertelenmesi. Ertelenmiş yürütme, koleksiyonlarda desteklenir.  
   
- Daha fazla bilgi için [(C#) LINQ sorgularına giriş](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) ve [ertelenmiş yürütme ve geç değerlendirme LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+ Daha fazla bilgi için bkz. [LINQ Sorgularına Giriş (C#)](./introduction-to-linq-queries.md) ve [LINQ to XML (C#) içinde ertelenmiş yürütme ve geç değerlendirme](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
- Kod örnekleri bu bölümü boyunca bu dil özellikleri kullanılır.  
+ Bu dil özellikleri, bu bölümün tamamında kod örneklerinde kullanılacaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Giriş saf işlevsel dönüşümlere (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [İşlevsel Programlama ve Kesin programlama karşılaştırması (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Saf Işlevsel Dönüştürmelere giriş (C#)](./introduction-to-pure-functional-transformations.md)
+- [İşlevsel Programlama ve Kesinlik temelli programlamaC#()](./functional-programming-vs-imperative-programming.md)

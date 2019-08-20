@@ -1,55 +1,55 @@
 ---
-title: -Çalışma zamanındaki genel türler C# Programlama Kılavuzu
+title: Çalışma zamanı- C# programlama kılavuzundaki genel türler
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: c739ae9b9804ffcb27d6bdc969bf7b5c0fe90512
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: e011375ed069a48f80364e529e80397f5f0495a3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423331"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589613"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Çalışma Zamanındaki Genel Türler (C# Programlama Kılavuzu)
-Microsoft Ara diline (MSIL) bir genel tür veya yöntem derlendiğinde, Tür parametrelerine sahip olarak tanımlayan meta verileri içerir. MSIL için genel bir tür kullanılıyor farkı sağlanan tür parametresi bir değer olup temel türü veya başvuru türü.  
+Genel bir tür veya yöntem Microsoft ara dil (MSIL) içinde derlendiğinde, türü parametre varmış gibi tanımlayan meta veriler içerir. Genel bir tür için MSIL, sağlanan tür parametresinin bir değer türü veya başvuru türü olup olmadığına göre farklılık gösterir.  
   
- Genel tür parametre olarak bir değer türü ile ilk oluşturulduğunda, çalışma zamanı özel bir genel tür sağlanan parametre veya parametreler MSIL uygun konumlarda yerine oluşturur. Özel genel türleri parametre olarak kullanılan her bir benzersiz değer türü için bir kez oluşturulur.  
+ Bir genel tür öncelikle parametre olarak bir değer türü ile oluşturulduğunda, çalışma zamanı, MSIL 'de uygun konumlarda bulunan sağlanan parametre veya parametrelerle birlikte özel genel bir tür oluşturur. Özel genel türler parametre olarak kullanılan her benzersiz değer türü için bir kez oluşturulur.  
   
- Örneğin, program kodunuza tamsayılar oluşturulmuş bir yığın bildirilen varsayalım:  
+ Örneğin, program kodunuzun tamsayılar tarafından oluşturulan bir yığın olduğunu varsayalım:  
   
  [!code-csharp[csProgGuideGenerics#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#42)]  
   
- Bu noktada, çalışma zamanının bir sürümünü oluşturduğu <xref:System.Collections.Generic.Stack%601> uygun şekilde kendi parametresi yerine koyulan tamsayı sahip sınıf. Artık, çalışma zamanı yeniden oluşturulan program kodunuza tam bir yığın kullandığında, özelleştirilmiş <xref:System.Collections.Generic.Stack%601> sınıfı. Aşağıdaki örnekte, tam bir yığın iki örneği oluşturulur ve tek bir örneğini paylaştıkları `Stack<int>` kod:  
+ Bu noktada çalışma zamanı, <xref:System.Collections.Generic.Stack%601> sınıfının parametresi için uygun tamsayının bulunduğu özelleşmiş bir sürümünü oluşturur. Artık, program kodunuz bir tamsayılar yığını kullandığında, çalışma zamanı oluşturulan özelleştirilmiş <xref:System.Collections.Generic.Stack%601> sınıfı yeniden kullanır. Aşağıdaki örnekte, bir tamsayı yığınının iki örneği oluşturulur ve `Stack<int>` kodun tek bir örneğini paylaşır:  
   
  [!code-csharp[csProgGuideGenerics#43](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#43)]  
   
- Ancak, varsayalım, başka bir <xref:System.Collections.Generic.Stack%601> gibi farklı bir değer türü ile sınıfı bir `long` veya parametre olarak bir kullanıcı tarafından tanımlanan yapı, kod içindeki diğer noktada oluşturulur. Sonuç olarak, başka bir sürümü değiştirir ve genel tür çalışma zamanının oluşturduğu bir `long` MSIL uygun konumlarda. Her özel bir genel sınıfın yerel olarak değer türü olduğundan dönüştürmeleri artık gerekli değil.  
+ Ancak, farklı bir değer <xref:System.Collections.Generic.Stack%601> türüne sahip başka bir sınıfın veya parametresi olarak bir `long` Kullanıcı tanımlı yapı, kodunuzun başka bir noktada oluşturulduğunu varsayın. Sonuç olarak, çalışma zamanı genel türün başka bir sürümünü oluşturur ve MSIL 'de uygun konumlarda `long` bir koyar. Her bir özel genel sınıf yerel olarak değer türünü içerdiğinden dönüşümler artık gerekli değildir.  
   
- Genel türler, başvuru türleri için biraz farklı şekilde çalışır. Genel bir tür herhangi bir başvuru türü ile oluşturulmuş olan ilk kez çalışma zamanı nesne başvuruları parametrelere MSIL yerine özel bir genel tür oluşturur. Ardından, parametre olarak bir başvuru türü ile oluşturulan bir tür örneği her zaman, bu türü ne olursa olsun, çalışma zamanı özel sürümü daha önce oluşturulan genel tür kullanır. Tüm başvuruları aynı boyutta olduğundan, bu mümkündür.  
+ Genel türler, başvuru türleri için biraz farklı şekilde çalışır. Genel bir tür herhangi bir başvuru türüyle oluşturulduğunda, çalışma zamanı MSIL içindeki parametrelerin yerine nesne başvuruları olan bir özel genel tür oluşturur. Ardından, türü ne olursa olsun, parametre olarak bir başvuru türü ile oluşturulmuş bir tür her başlatıldığında, çalışma zamanı, genel türün önceden oluşturulmuş özelleştirilmiş sürümünü yeniden kullanır. Tüm başvurular aynı boyutta olduğundan bu mümkündür.  
   
- Örneğin, iki başvuru türleri olan varsayalım. bir `Customer` sınıfı ve bir `Order` sınıfı ve ayrıca yığınını oluşturduğunuz düşünün `Customer` türleri:  
+ Örneğin, bir `Customer` sınıf `Order` ve sınıf olmak üzere iki başvuru türüne sahip olduğunuzu ve ayrıca bir `Customer` tür yığını oluşturduğunuzu varsayalım:  
   
  [!code-csharp[csProgGuideGenerics#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#47)]  
   
  [!code-csharp[csProgGuideGenerics#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#44)]  
   
- Bu noktada, çalışma zamanının bir sürümünü oluşturduğu <xref:System.Collections.Generic.Stack%601> daha sonra veri depolamak yerine doldurulur nesne başvurularını depolayan sınıf. Sonraki kod satırına adlı başka bir başvuru türü bir yığın oluşturur varsayalım `Order`:  
+ Bu noktada, çalışma zamanı, verilerin depolanması yerine daha sonra doldurulacak <xref:System.Collections.Generic.Stack%601> nesne başvurularını depolayan sınıfın özelleşmiş bir sürümünü oluşturur. Bir sonraki kod satırının adında `Order`başka bir başvuru türünün yığınını oluşturduğunu varsayalım:  
   
  [!code-csharp[csProgGuideGenerics#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#45)]  
   
- Farklı değer türleri ile başka bir özelleştirilmiş sürümü <xref:System.Collections.Generic.Stack%601> için sınıf oluşturulmaz `Order` türü. Bunun yerine, özel sürümü örneğini <xref:System.Collections.Generic.Stack%601> sınıf oluşturulur ve `orders` değişkeni, buna başvuruda bulunma ayarlanır. Yığını oluşturmak için kod satırının sonra karşılaştı varsayalım bir `Customer` türü:  
+ Değer türlerinden farklı olarak, <xref:System.Collections.Generic.Stack%601> sınıfın başka bir özelleştirilmiş sürümü `Order` tür için oluşturulmaz. Bunun yerine, <xref:System.Collections.Generic.Stack%601> sınıfının özelleşmiş sürümünün bir örneği oluşturulur `orders` ve değişken buna başvuracak şekilde ayarlanır. Daha sonra bir `Customer` tür yığını oluşturmak için bir kod satırıyla karşılaşdığınızı varsayalım:  
   
  [!code-csharp[csProgGuideGenerics#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#46)]  
   
- Önceki kullanımı ile <xref:System.Collections.Generic.Stack%601> sınıfı kullanılarak oluşturulan `Order` türü, özelleştirilmiş başka bir örneğinin <xref:System.Collections.Generic.Stack%601> sınıf oluşturulur. Burada yer alan işaretçileri belleği boyutunu başvurmak için ayarlanan bir `Customer` türü. Başvuru türleri sayısı çok programdan programa farklılık gösterebileceğinden, C# uygulaması genel türler için başvuru türlerinin genel sınıflar için derleyici tarafından oluşturulan özel sınıfları sayısını azaltarak kod miktarını önemli ölçüde azaltır.  
+ Türü kullanılarak oluşturulan <xref:System.Collections.Generic.Stack%601> sınıfının önceki kullanımıyla birlikte, özel <xref:System.Collections.Generic.Stack%601> sınıfın başka bir örneği oluşturulur. `Order` İçinde bulunan işaretçiler, bir `Customer` tür boyutunun bellek alanına başvuracak şekilde ayarlanır. Başvuru türlerinin sayısı program 'dan programa kadar farklılık gösterebildiğinden, genel türlerin C# uygulanması derleyici tarafından oluşturulan özelleştirilmiş sınıfların sayısını büyük ölçüde azaltır, bu da genel başvuru sınıfları için türü.  
   
- Ayrıca, bir değer türü veya başvuru türü parametresini kullanarak genel bir C# sınıf örneği oluşturulduğunda, yansıma çalışma zamanında sorgulayabilir ve gerçek türü hem kendi tür parametresi saptanabilen.  
+ Üstelik, bir genel C# sınıf bir değer türü veya başvuru türü parametresi kullanılarak örneği oluşturulduğunda, yansıma çalışma zamanında ve hem gerçek türü hem de onun tür parametresi bunun olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Collections.Generic>
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/index.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Genel Türlere Giriş](./index.md)
 - [Genel Türler](~/docs/standard/generics/index.md)

@@ -1,40 +1,40 @@
 ---
-title: Nesne ve koleksiyon başlatıcıları - C# Programlama Kılavuzu
+title: Nesne ve koleksiyon başlatıcıları- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 12/19/2018
 helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: bd49834c45f6e07a99be5a1f4293e938eed2cc77
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: f6977fa6c5a8909d6108a5ccfc140b89a4fdd5a4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267727"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596570"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Nesne ve Koleksiyon Başlatıcıları (C# Programlama Kılavuzu)
 
-C#bir nesnede veya koleksiyonda örneklemek ve tek bir deyimde üye atamalar gerçekleştirmek olanak sağlar.
+C#bir nesne veya koleksiyon örneklemenizi ve tek bir ifadede üye atamaları gerçekleştirmenizi sağlar.
 
 ## <a name="object-initializers"></a>Nesne başlatıcıları
 
-Nesne başlatıcıları, oluşturma zamanında ardından atama deyimleri satırları gelecek şekilde bir oluşturucu çağırmak zorunda kalmadan, bir nesnenin istediğiniz erişilebilir alanlarına veya özelliklerine değerler atamanıza olanak tanır. Nesne başlatıcı sözdizimi, bir oluşturucu için bağımsız değişkenler belirtmenize veya bağımsız değişkenleri (ve parantez sözdizimini) atmanıza olanak tanır.  Aşağıdaki örnek, adlandırılmış bir türü ile bir nesne Başlatıcı kullanma işlemi gösterilmektedir `Cat` ve parametresiz bir oluşturucu çağırmak. Otomatik uygulanan özelliklerin kullanımına dikkat edin `Cat` sınıfı. Daha fazla bilgi için [Implemented Properties](auto-implemented-properties.md).  
+Nesne başlatıcıları, oluşturma zamanında ardından atama deyimleri satırları gelecek şekilde bir oluşturucu çağırmak zorunda kalmadan, bir nesnenin istediğiniz erişilebilir alanlarına veya özelliklerine değerler atamanıza olanak tanır. Nesne başlatıcı sözdizimi, bir oluşturucu için bağımsız değişkenler belirtmenize veya bağımsız değişkenleri (ve parantez sözdizimini) atmanıza olanak tanır.  Aşağıdaki örnek, `Cat` bir nesne başlatıcısının adlandırılmış bir tür ile nasıl kullanılacağını ve parametresiz oluşturucunun nasıl çağırılacağını gösterir. `Cat` Sınıfında otomatik uygulanan özelliklerin kullanımını göz önünde edin. Daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](auto-implemented-properties.md).  
   
 [!code-csharp[ObjectInitializer1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#CatDeclaration)]  
 [!code-csharp[ObjectInitializer1a](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ObjectPropertyInitialization)]  
  
-Nesne Başlatıcı sözdizimi örneği oluşturmanıza olanak sağlar ve sonra kendi atanan özelliklere sahip yeni oluşturulan nesne değişkeni ataması atar.
+Nesne başlatıcıları sözdizimi, bir örnek oluşturmanıza olanak sağlar ve sonra, atanan özelliklerine sahip yeni oluşturulan nesneyi atamadaki değişkene atar.
 
-İle başlayarak C# 6, nesne başlatıcıları, Dizinleyicileri, alanlar ve Özellikler atama ek olarak ayarlayabilirsiniz. Bu temel göz önünde bulundurun `Matrix` sınıfı:
+C# 6 ' dan itibaren, nesne başlatıcıları alanları ve özellikleri atamaya ek olarak Dizin oluşturucular ayarlayabilir. Bu temel `Matrix` sınıfı göz önünde bulundurun:
 
 [!code-csharp[ObjectInitializer2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#MatrixDeclaration)]  
 
-Aşağıdaki kod ile kimlik matrisi başlatabilir:
+Kimlik matrisini aşağıdaki kodla başlatabilirsiniz:
 
 [!code-csharp[ObjectInitializer2a](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#MatrixInitialization)]  
 
-Erişilebilir bir Ayarlayıcısı içeren tüm erişilebilir bir dizin oluşturucu bağımsız değişkenlerinin türlerine ve sayı bağımsız olarak nesne Başlatıcı ifadelerinde biri olarak kullanılabilir. Dizin bağımsız değişkenler atamanın sol tarafındaki form ve ifadesinin sağ tarafı değerdir.  Örneğin, tüm geçerli ise bunlar `IndexersExample` uygun dizin oluşturucular sahiptir:
+Erişilebilir bir ayarlayıcı içeren erişilebilir Dizin Oluşturucu, bağımsız değişkenlerin sayısı veya türleri ne olursa olsun, nesne başlatıcısındaki ifadelerden biri olarak kullanılabilir. Dizin bağımsız değişkenleri atamanın sol tarafını oluşturur ve değer ifadenin sağ tarafındadır.  Örneğin, uygun dizin oluşturucular varsa `IndexersExample` bunların hepsi geçerlidir:
 
 ```csharp
 var thing = new IndexersExample {
@@ -47,7 +47,7 @@ var thing = new IndexersExample {
 }
 ```
 
-Derlemek, yukarıdaki kod için `IndexersExample` türü aşağıdaki üyeleri olması gerekir:
+Önceki kodun derlenmesi için, `IndexersExample` türün aşağıdaki üyelere sahip olması gerekir:
 
 ```csharp
 public string name;
@@ -58,23 +58,23 @@ public string this[char c, int i] {  set { ... }; }
 
 ## <a name="object-initializers-with-anonymous-types"></a>Anonim türlerde Nesne Başlatıcıları
 
-Nesne başlatıcıları her bağlamda kullanılabilir olsa da, bunlar özellikle kullanışlı [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadelerinde. Sorgu ifadeleri, sık sık kullanırlar [anonim türler](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md), hangi yalnızca başlatılabilir bir nesne Başlatıcı kullanarak aşağıdaki bildirimde gösterildiği gibi.  
+Nesne başlatıcıları herhangi bir bağlamda kullanılabilse de, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadelerinde özellikle faydalıdır. Sorgu ifadeleri, aşağıdaki bildirimde gösterildiği gibi, yalnızca bir nesne Başlatıcısı kullanılarak başlatılan [anonim türler](./anonymous-types.md)için sık kullanılan kullanımı kolaylaştırır.  
 
 ```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  
 ```
 
-Anonim türler etkinleştirme `select` yan tümcesinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu deyimi orijinal sıranın nesnelerini değeri ve şekli orijinalden farklı olabilir nesneleri dönüştürün. Bir sıradaki her bir nesneden elde edilen bilgilerin yalnızca bir kısmını depolamak isterseniz, bu kullanışlıdır. Aşağıdaki örnekte, varsayımında bir ürün nesnesinin (`p`) birçok alan ve yöntem içerir ve, yalnızca sırası oluşturmakla ilgili bilgi sahibi olduğunuz ürün adını ve birim fiyatı içerir.  
+Anonim türler, bir `select` sorgu ifadesindeki yan [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] tümcesini, değer ve şekli orijinalden farklı olabilecek nesneler içine dönüştürmek için bir sorgu ifadesinde etkinleştirir. Bir sıradaki her bir nesneden elde edilen bilgilerin yalnızca bir kısmını depolamak isterseniz, bu kullanışlıdır. Aşağıdaki örnekte, bir ürün nesnesinin (`p`) birçok alanı ve yöntemi içerdiğini ve yalnızca ürün adını ve birim fiyatını içeren bir nesne dizisi oluşturmak istediğinizi varsayalım.  
   
 [!code-csharp[ObjectInitializer3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#AnonymousUse)]  
 
-Bu sorgu yürütüldüğünde `productInfos` değişkeni erişilebilen bir nesne sırası içerecektir bir `foreach` Bu örnekte gösterildiği gibi deyimi:  
+Bu sorgu yürütüldüğünde, `productInfos` değişken, bu örnekte gösterildiği gibi bir `foreach` bildirimde erişilebilen nesne dizisine sahip olur:  
 
 ```csharp
 foreach(var p in productInfos){...}  
 ```
 
-Yeni anonim türdeki her bir nesnenin orijinal nesnedeki özelliklerle veya alanlarla aynı adları alan iki genel özelliği vardır. Ayrıca, anonim bir tür oluştururken bir alanı yeniden adlandırabilirsiniz; Aşağıdaki örnek yeniden adlandırır `UnitPrice` alanı `Price`.  
+Yeni anonim türdeki her nesnenin, özgün nesnedeki özellikler veya alanlarla aynı adları alan iki ortak özelliği vardır. Ayrıca, anonim bir tür oluştururken bir alanı yeniden adlandırabilirsiniz; Aşağıdaki örnek, `UnitPrice` alanını olarak `Price`yeniden adlandırır.  
 
 ```csharp
 select new {p.ProductName, Price = p.UnitPrice};  
@@ -82,32 +82,32 @@ select new {p.ProductName, Price = p.UnitPrice};
 
 ## <a name="collection-initializers"></a>Koleksiyon başlatıcıları
 
-Koleksiyon başlatıcıları bir belirtmenize olanak tanır veya daha fazla öğe başlatıcıları bir koleksiyon başlattığınızda uygulayan türü <xref:System.Collections.IEnumerable> ve `Add` uygun imzalı bir örnek yöntemi veya bir genişletme yöntemi olarak. Öğe başlatıcıları basit bir değer, bir ifade veya bir nesne Başlatıcı olabilir. Koleksiyon Başlatıcısı kullanarak, birden çok çağrı belirtmeniz gerekmez; Derleyici çağrıları otomatik olarak ekler.  
+Koleksiyon Başlatıcıları bir veya daha fazla öğe başlatıcısını, bir örnek yöntemi veya bir genişletme yöntemi olarak <xref:System.Collections.IEnumerable> uygun imzaya `Add` sahip ve uygulayan bir koleksiyon türü başlattığınızda belirtmenize olanak tanır. Öğe başlatıcıları basit bir değer, bir ifade veya nesne Başlatıcısı olabilir. Bir koleksiyon başlatıcısı kullanarak birden çok çağrı belirtmeniz gerekmez; Derleyici çağrıları otomatik olarak ekler.  
   
-Aşağıdaki örnek, iki basit koleksiyon başlatıcısını gösterir:  
+Aşağıdaki örnekte iki basit koleksiyon başlatıcıları gösterilmektedir:  
 
 ```csharp
 List<int> digits = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };  
 List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };  
 ```
 
-Aşağıdaki koleksiyon Başlatıcısı nesnelerini başlatmak için nesne başlatıcıları kullanır `Cat` önceki bir örnekte tanımlanan sınıfı. Nesne başlatıcıların tek tek küme ayraçları içine alındığına ve virgüllerle ayrıldığına dikkat edin.  
+Aşağıdaki koleksiyon başlatıcısı, önceki örnekte tanımlanan `Cat` sınıfın nesnelerini başlatmak için nesne başlatıcıları kullanır. Nesne başlatıcıların tek tek küme ayraçları içine alındığına ve virgüllerle ayrıldığına dikkat edin.  
   
 [!code-csharp[ListInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitializer)]  
   
-Belirtebileceğiniz [null](../../language-reference/keywords/null.md) bir koleksiyon başlatıcısında bir öğe olarak varsa koleksiyonun `Add` yöntemi sağlar.  
+Koleksiyonun`Add` yöntemi izin veriyorsa, koleksiyon başlatıcısında bir öğe olarak [null](../../language-reference/keywords/null.md) belirtebilirsiniz.  
   
 [!code-csharp[ListInitializerNull](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitialerWithNull)]  
   
- Dizinli öğeleri koleksiyonu destekleyen okuma / yazma dizin belirtebilirsiniz.
+ Koleksiyon okuma/yazma dizinlemeyi destekliyorsa, dizinli öğeleri belirtebilirsiniz.
   
 [!code-csharp[DictionaryInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryIndexerInitializer)]  
 
-Önceki örnekte çağıran kodu üretir <xref:System.Collections.Generic.Dictionary%602.Item(%600)> değerleri ayarlamak için. İle başlayarak C# 6 başlatır sözlükleri ve diğer ilişkisel kapsayıcılar aşağıdaki söz dizimini kullanarak. Dizin Oluşturucu sözdizimi yerine parantez ve bir atama ile birden çok değer içeren bir nesne kullandığına dikkat edin:
+Yukarıdaki örnek, <xref:System.Collections.Generic.Dictionary%602.Item(%600)> değerlerini ayarlamak için öğesini çağıran kodu oluşturur. C# 6 ' dan başlayarak, aşağıdaki sözdizimini kullanarak sözlükleri ve diğer İlişkilendirilebilir kapsayıcıları başlatabilirsiniz. Dizin Oluşturucu sözdizimi yerine parantez ve atama ile birden çok değerli bir nesne kullandığını fark edin:
 
 [!code-csharp[DictionaryAddInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryAddInitializer)]  
 
-Bu Başlatıcı örnek <xref:System.Collections.Generic.Dictionary%602.Add(%600,%601)> sözlüğe üç öğe eklemek için. İlişkili koleksiyonlar başlatmak için bu iki farklı şekilde derleyici oluşturur yöntem çağrıları nedeniyle biraz farklı davranışa sahip. Her iki çeşitleri çalışmak `Dictionary` sınıfı. Diğer türleri yalnızca bir diğer bağlı veya kendi genel API'sini destekleyebilir.
+Bu başlatıcı örneği, <xref:System.Collections.Generic.Dictionary%602.Add(%600,%601)> sözlüğe üç öğe eklemek için çağırır. İlişkilendirilebilir koleksiyonları başlatmanın bu iki farklı yolu, derleyicinin oluşturduğu Yöntem çağrıları nedeniyle biraz farklı davranışa sahiptir. Her iki çeşit de `Dictionary` sınıfla çalışır. Diğer türler, genel API 'lerine göre yalnızca bir veya diğerini destekleyebilir.
 
 ## <a name="examples"></a>Örnekler
 
@@ -115,16 +115,16 @@ Aşağıdaki örnek, nesne ve koleksiyon başlatıcıları kavramlarını birle�
 
 [!code-csharp[InitializerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullExample)]  
 
-Uygulayan bir nesne aşağıdaki örnekte <xref:System.Collections.IEnumerable> ve içeren bir `Add` yöntemi ile birden çok parametre listedeki bir öğe başına imzasıiçinkarşılıkgelenbirdençoköğeiçerenbirkoleksiyonBaşlatıcısıkullanır,`Add`yöntemi.
+Aşağıdaki örnek, uygulayan <xref:System.Collections.IEnumerable> ve birden çok parametreli bir `Add` yöntemi içeren bir nesnesi gösterir, bu, `Add`biröğeiçinbiröğebaşınabirdençoköğeiçerenbirkoleksiyonbaşlatıcısıkullanıryöntemi.
 
 [!code-csharp[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullListExample)]  
 
-`Add` yöntemleri kullanabilir `params` anahtar sözcüğü bir değişken sayıda bağımsız değişken, aşağıdaki örnekte gösterildiği gibi gerçekleştirilecek. Bu örnekte ayrıca dizinleri kullanarak bir koleksiyonu başlatmak için bir dizin oluşturucu özel uygulanışı gösterilmektedir.
+`Add`Yöntemler `params` anahtar sözcüğünü, aşağıdaki örnekte gösterildiği gibi değişken sayıda bağımsız değişken almak için kullanabilir. Bu örnek ayrıca dizin kullanarak bir koleksiyonu başlatmak için bir dizin oluşturucunun özel uygulamasını gösterir.
 
 [!code-csharp[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [LINQ Sorgu ifadeleri](../linq-query-expressions/index.md)
+- [LINQ sorgu Ifadeleri](../linq-query-expressions/index.md)
 - [Anonim Tipler](anonymous-types.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir metin dosyasından - okuma C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Metin dosyasından okuma- C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,39 +10,39 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 236e730eaae0bc73c715e9b1c2c71d6c870d78e3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c424f7884dd7242152bda1b16943f6489194299f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608530"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589990"
 ---
-# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Nasıl yapılır: Bir metin dosyasından okuma (C# Programlama Kılavuzu)
-Bu örnek statik yöntemleri kullanarak bir metin dosyasının içeriğini okur <xref:System.IO.File.ReadAllText%2A> ve <xref:System.IO.File.ReadAllLines%2A> gelen <xref:System.IO.File?displayProperty=nameWithType> sınıfı.  
+# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Nasıl yapılır: Metin dosyasından okuma (C# Programlama Kılavuzu)
+Bu örnek, statik yöntemleri <xref:System.IO.File.ReadAllText%2A> ve <xref:System.IO.File.ReadAllLines%2A> <xref:System.IO.File?displayProperty=nameWithType> sınıfından kullanarak bir metin dosyasının içeriğini okur.  
   
- Kullanan bir örnek için <xref:System.IO.StreamReader>, bkz: [nasıl yapılır: Bir metin dosyası bir satırı okumak](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
+ Tarafından kullanılan <xref:System.IO.StreamReader>bir örnek için bkz [. nasıl yapılır: Bir metin dosyasını tek seferde bir satır okur](./how-to-read-a-text-file-one-line-at-a-time.md).  
   
 > [!NOTE]
->  Bu örnekte kullanılan dosyaları konusunda oluşturulan [nasıl yapılır: Bir metin dosyasına yazma](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).  
+>  Bu örnekte [kullanılan dosyalar, konusunda nasıl yapılır: Bir metin dosyasına](./how-to-write-to-a-text-file.md)yazın.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csFilesandFolders#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#4)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Kodu kopyalayın ve C# konsol uygulamasına yapıştırın.  
+ Kodu kopyalayın ve bir C# konsol uygulamasına yapıştırın.  
   
- Metin dosyalarından kullanmıyorsanız [nasıl yapılır: Bir metin dosyasına yazma](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md), bağımsız değişkeni Değiştir `ReadAllText` ve `ReadAllLines` bilgisayarınızda uygun yolu ve dosya adı ile.  
+ Metin dosyalarını [şu şekilde kullanarak kullanmıyorsanız: Bir metin dosyasına](./how-to-write-to-a-text-file.md)yazın, `ReadAllText` bağımsız değişkenini `ReadAllLines` bilgisayarınızdaki uygun yol ve dosya adıyla değiştirin.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Dosya yok veya belirtilen konumda yok. Yol ve dosya adının yazımını denetleyin.  
+- Dosya yok veya belirtilen konumda yok. Dosya adının yolunu ve yazımını denetleyin.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Dosyanın içeriğini belirlemek için bir dosya adına güvenmeyin. Örneğin, dosyayı `myFile.cs` bir C# kaynak dosyası olmayabilir.  
+ Dosyanın içeriğini belirlemekte bir dosyanın adına güvenmeyin. Örneğin, dosya `myFile.cs` bir C# kaynak dosyası olmayabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Dosya sistemi ve kayıt defteri (C# programlama Kılavuzu)](../../../csharp/programming-guide/file-system/index.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Dosya sistemi ve kayıt defteri (C# Programlama Kılavuzu)](./index.md)

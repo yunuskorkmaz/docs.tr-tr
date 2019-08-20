@@ -1,5 +1,5 @@
 ---
-title: Özellikler - C# Programlama Kılavuzu
+title: Özellikler- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
@@ -8,76 +8,76 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dec4d4239fd1a953da6e64a1e1aff9593e2863e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583055"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596146"
 ---
 # <a name="properties-c-programming-guide"></a>Özellikler (C# Programlama Kılavuzu)
 
-Bir özelliği okuma, yazma veya özel bir alanın değerini hesaplamak için esnek bir mekanizma sağlayan bir üyesidir. Bunlar genel veri üyeleri, ancak bunlar gerçekten özel yöntemler olarak adlandırılan yokmuş gibi özellikleri kullanılabilir *erişimcileri*. Bu, verileri kolayca erişilmesini sağlar ve yine de güvenlik ve esneklik yöntemlerin yardımcı olur.  
+Bir özellik, özel bir alanın değerini okumak, yazmak veya hesaplamak için esnek bir mekanizma sağlayan bir üyesidir. Özellikler, ortak veri üyeleri gibi kullanılabilir, ancak aslında *erişimciler*olarak adlandırılan özel yöntemlerdir. Bu, verilere kolayca erişilmesine olanak sağlar ve yöntemlerin güvenliğini ve esnekliğini yükseltmeye devam eder.  
 
 ## <a name="properties-overview"></a>Özelliklere genel bakış  
   
-- Özellikleri alma ve uygulama ya da doğrulama kodu gizleyerek değerleri ayarlama, genel bir şekilde kullanıma sunmak bir sınıf sağlar.  
+- Özellikler, uygulama veya doğrulama kodunu gizlerken, değerleri almak ve ayarlamak için bir sınıfın ortak bir yöntemini kullanıma sunar.  
   
-- A [alma](../../../csharp/language-reference/keywords/get.md) özellik erişimcisi özellik değeri döndürmek için kullanılır ve [ayarlamak](../../../csharp/language-reference/keywords/set.md) özellik erişimcisi yeni bir değer atamak için kullanılır. Bunlar farklı erişim düzeylerine sahip olabilir. Daha fazla bilgi için [erişimci erişilebilirliğini kısıtlama](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
+- [Get](../../language-reference/keywords/get.md) Property erişimcisi, özellik değerini döndürmek için kullanılır ve yeni bir değer atamak için bir [set](../../language-reference/keywords/set.md) özellik erişimcisi kullanılır. Bu erişimciler farklı erişim düzeylerine sahip olabilir. Daha fazla bilgi için bkz. [erişimci erişilebilirliğini kısıtlama](./restricting-accessor-accessibility.md).  
   
-- [Değer](../../../csharp/language-reference/keywords/value.md) tarafından atanan değerin tanımlamak için kullanılan anahtar sözcüğü `set` erişimcisi.  
-- Özellikleri olabilir *okuma-yazma* (her ikisi de sahip bir `get` ve `set` erişimci), *salt okunur* (sahip oldukları bir `get` erişimci ancak Hayır `set` erişimci), veya *salt yazılır* (sahip oldukları bir `set` erişimci, ancak Hayır `get` erişimci). Salt yazılır özellikler nadirdir ve hassas verilere erişimi kısıtlamak için en yaygın olarak kullanılır.
+- [Value](../../language-reference/keywords/value.md) anahtar sözcüğü, `set` erişimci tarafından atanan değeri tanımlamak için kullanılır.  
+- Özellikler *okuma-yazma* (hem a `get` hem `set` de erişimciye sahiptir), *salt okunurdur* (bir `get` erişimcisi vardır ancak `set` erişimci yoktur) ya da salt *yazılır* ( `set` erişimci, ancak erişimci `get` yok). Salt yazılır özellikler nadir ve hassas verilere erişimi kısıtlamak için en yaygın olarak kullanılır.
 
-- İfade gövdesi tanımları veya olarak özel erişimci kod gerektiren basit özellikleri uygulanabilir [otomatik uygulanan Özellikler](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).
+- Özel erişimci kodu gerektirmeyen basit özellikler, ifade gövde tanımları ya da [Otomatik uygulanan özellikler](./auto-implemented-properties.md)olarak uygulanabilir.
  
-## <a name="properties-with-backing-fields"></a>Destek alanları ile özellikleri
+## <a name="properties-with-backing-fields"></a>Yedekleme alanları olan özellikler
 
-Uygulayan bir özellik için bir temel düzeni, özel destek alanı ayarlama ve özellik değerini almak için kullanmayı içerir. `get` Erişimcisi özel alanın değerini döndürür ve `set` erişimcisi özel alanın bir değer atamadan önce birkaç veri doğrulaması gerçekleştirebilir. Döndürülen depolanmış veya yüklenmeden önce her iki erişimcisi ayrıca veriler üzerinde bazı dönüştürme veya hesaplama gerçekleştirebilir.
+Özelliği uygulamak için bir temel model, özellik değerini ayarlamak ve almak için özel bir yedekleme alanı kullanmayı içerir. Erişimci özel alanın değerini döndürür `set` ve özel alana bir değer atamadan önce erişimci bazı veri doğrulaması gerçekleştirebilir. `get` Her iki erişimci de verilerin depolanmadan veya döndürülmeden önce veri üzerinde bazı dönüştürme veya hesaplama işlemleri yapabilir.
 
-Aşağıdaki örnek, bu düzen gösterilmiştir. Bu örnekte, `TimePeriod` sınıfı, bir zaman aralığını temsil eder. Sınıfı zaman aralığını saniye cinsinden adlı özel bir alanda dahili olarak depolayan `_seconds`. Adlı bir okuma-yazma özelliği `Hours` saat cinsinden zaman aralığı belirtmesine olanak tanır. Hem `get` ve `set` erişimcileri saat ve saniye arasında gerekli dönüşüm gerçekleştirin. Ayrıca, `set` erişimci verileri doğrular ve oluşturur bir <xref:System.ArgumentOutOfRangeException> varsa saat sayısı geçersiz. 
+Aşağıdaki örnekte bu desenler gösterilmektedir. Bu örnekte, `TimePeriod` sınıfı bir zaman aralığını temsil eder. Dahili olarak, sınıfı, zaman aralığını saniye cinsinden adlı `_seconds`özel bir alana depolar. Adlı `Hours` bir okuma-yazma özelliği, müşterinin saat cinsinden zaman aralığını belirtmesini sağlar. `get` Hem`set` hem de erişimcileri, saat ve saniyeler arasında gerekli dönüşümü gerçekleştirir. Ayrıca, `set` erişimci verileri doğrular ve saat sayısı geçersizse bir <xref:System.ArgumentOutOfRangeException> oluşturur. 
    
  [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   
 ## <a name="expression-body-definitions"></a>İfade gövdesi tanımları  
 
- Özellik erişimcileri, genellikle yalnızca atamak veya bir ifadenin sonucu tek satır bilgilerinin oluşur. İfade gövdeli üyeler bu özellikleri uygulayabilir. İfade gövdesi tanımları oluşur `=>` simgesiyle atayın veya özelliğin almak için ifadeye göre.
+ Özellik erişimcileri genellikle yalnızca bir ifadenin sonucunu atayan veya döndüren tek satırlık deyimlerden oluşur. Bu özellikleri ifade Bodied Üyeler olarak uygulayabilirsiniz. İfade gövdesi tanımları, `=>` sembolün önüne atanacak veya özelliğe alma ifadesi tarafından izlenen ifadeden oluşur.
 
- C# 6 ile başlayarak, salt okunur özellikler uygulayabilirsiniz `get` bir ifade gövdeli üyesi erişimcisi. Bu durumda, hiçbiri `get` erişimci anahtar sözcüğü ya da `return` anahtar sözcüğü kullanılır. Aşağıdaki örnek salt okunur uygulayan `Name` özelliği bir ifade gövdeli üyesi olarak.
+ C# 6 ' dan itibaren, salt okuma özellikleri `get` erişimciyi ifade olarak uygulayabilir. Bu durumda, `get` erişimci anahtar kelimesi `return` ne de anahtar sözcük kullanılmaz. Aşağıdaki örnek, salt okunurdur `Name` özelliği bir ifade-Bodied üyesi olarak uygular.
 
  [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
- C# 7.0 ile başlayarak hem `get` ve `set` erişimci ifade gövdeli üyeler uygulanabilir. Bu durumda, `get` ve `set` anahtar sözcükleri mevcut olmalıdır. Aşağıdaki örnek, her iki erişimcisi için ifade gövdesi tanımları kullanımını gösterir. Unutmayın `return` anahtar sözcüğü ile kullanılmaz `get` erişimcisi.
+ 7,0 ile C# başlayarak, hem hem `get` de `set` erişimcisi ifade Bodied Üyeler olarak uygulanabilir. Bu durumda, `get` ve `set` anahtar sözcüklerin mevcut olması gerekir. Aşağıdaki örnek her iki erişimci için ifade gövde tanımlarının kullanımını gösterir. `return` Anahtar sözcüğünün`get` erişimciyle kullanılmadığını unutmayın.
  
   [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 
 ## <a name="auto-implemented-properties"></a>Otomatik uygulanan özellikler
 
-Bazı durumlarda, özellik `get` ve `set` erişimciler yalnızca bir değer atayın veya ilave bir mantık dahil olmak üzere yedekleme alanından bir değer almak. Otomatik uygulanan özellikler kullanarak, yedekleme alanını şeffaf bir şekilde sağlar C# derleyicisini yaparken kodunuzu basitleştirebilirsiniz. 
+Bazı durumlarda, özellik `get` ve `set` erişimciler, ek bir mantık dahil etmeden bir destek alanından bir değer atar veya bir değer alır. Otomatik uygulanan özellikleri kullanarak, C# derleyicinin sizin için bir yedekleme alanı sunarak kodunuzu saydam bir şekilde sağlamasına gerek kalmadan kodunuzu basitleştirebilirsiniz. 
 
-Bir özellik hem de varsa bir `get` ve `set` erişimci gerekir hem de otomatik olarak uygulanan. Otomatik uygulanan bir özellik kullanarak tanımladığınız `get` ve `set` herhangi bir uygulama sağlamadan anahtar sözcükleri. Aşağıdaki örnek dışında Öncekine yineler `Name` ve `Price` otomatik uygulanan özellikler. Bu örnek ayrıca parametreli bir kurucu kaldırır Not böylece `SaleItem` nesneleri parametresiz bir oluşturucu çağrısı ile artık başlatılır ve bir [nesne Başlatıcı](object-and-collection-initializers.md).
+Bir özelliğin hem a `get` `set` hem de erişimcisi varsa, her ikisinin de otomatik olarak uygulanması gerekir. Herhangi bir uygulama sağlamadan `get` ve `set` anahtar sözcüklerini kullanarak otomatik uygulanan bir özellik tanımlarsınız. Aşağıdaki örnek, `Name` ve `Price` ' nin otomatik olarak uygulanan özellikler olması dışında, önceki birini yinelenir. Ayrıca, `SaleItem` nesnelerin parametresiz oluşturucuya ve bir [nesne başlatıcısına](object-and-collection-initializers.md)çağrısıyla başlatılmış olması için parametreli oluşturucuyu de kaldırdığına unutmayın.
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>İlgili bölümler  
   
-- [Özellikleri Kullanma](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Özellikleri Kullanma](./using-properties.md)  
   
-- [Arabirim Özellikleri](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Arabirim Özellikleri](./interface-properties.md)  
   
-- [Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma](../indexers/comparison-between-properties-and-indexers.md)  
   
-- [Erişimci Erişilebilirliğini Kısıtlama](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Erişimci Erişilebilirliğini Kısıtlama](./restricting-accessor-accessibility.md)  
   
-- [Otomatik Uygulanan Özellikler](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Otomatik Uygulanan Özellikler](./auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 
-Daha fazla bilgi için [özellikleri](~/_csharplang/spec/classes.md#properties) içinde [ C# dil belirtimi](../../language-reference/language-specification/index.md). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için bkz. [ C# dil belirtiminde](../../language-reference/language-specification/index.md) [Özellikler](~/_csharplang/spec/classes.md#properties) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Özellikleri Kullanma](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
-- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)
-- [get anahtar sözcüğü](../../../csharp/language-reference/keywords/get.md)
-- [Set anahtar sözcüğü](../../../csharp/language-reference/keywords/set.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Özellikleri Kullanma](./using-properties.md)
+- [Dizin Oluşturucular](../indexers/index.md)
+- [anahtar sözcüğü al](../../language-reference/keywords/get.md)
+- [anahtar sözcük ayarla](../../language-reference/keywords/set.md)

@@ -1,52 +1,52 @@
 ---
-title: Zaman uyumsuz bir görev veya görevleri (C#) listesini iptal etme
+title: Zaman uyumsuz bir görevi veya görev listesini iptal etme (C#)
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 05ddb2c76a16ed4f79d795510434aa3abb5615d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 93526f772f79e993767fd8f29087b6caf4e29468
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583366"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595724"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Zaman uyumsuz bir görev veya görevleri (C#) listesini iptal etme
+# <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Zaman uyumsuz bir görevi veya görev listesini iptal etme (C#)
 
-Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek için kullanabileceğiniz bir düğme ayarlayabilirsiniz. Bu konudaki örnekleri izleyerek, Web sitelerinin bir listesiyle ya da bir Web sitesinin içeriklerini indiren bir uygulama için bir iptal düğmesi ekleyebilirsiniz.
+Bir zaman uyumsuz uygulamayı, bitmesini beklemek istemiyorsanız iptal etmek için kullanabileceğiniz bir düğme ayarlayabilirsiniz. Bu konudaki örnekleri izleyerek, bir Web sitesinin veya Web sitesi listesinin içeriğini yükleyen bir uygulamaya iptal düğmesi ekleyebilirsiniz.
 
-Kullanıcı arabirimini örneklerde, [Fine-Tuning Async uygulamanızda (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) açıklar.
+Örnekler, [zaman uyumsuz uygulamanızı (C#) ayrıntılı olarak ayarlamaya](./fine-tuning-your-async-application.md) yönelik kullanıcı arabirimini kullanır.
 
 > [!NOTE]
-> Yeni bilgisayarınızda yüklü veya örnekleri çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 yüklü olmalıdır.
+> Örnekleri çalıştırmak için, bilgisayarınızda Visual Studio 2012 veya daha yeni bir sürümü ve .NET Framework 4,5 ya da daha yeni bir sürümü yüklü olmalıdır.
 
 ## <a name="cancel-a-task"></a>Bir görevi iptal etme
 
-İlk örnek ilişkilendirir **iptal** tek bir yükleme göreviyle düğmesi. Uygulama içeriği karşıdan yüklerken düğmeyi seçerseniz, karşıdan yükleme iptal edildi.
+İlk örnek, **iptal** düğmesini tek bir indirme göreviyle ilişkilendirir. Uygulama içerik indirirken düğmeyi seçerseniz, indirme iptal edilir.
 
-### <a name="download-the-example"></a>Örneği indirme
+### <a name="download-the-example"></a>Örneği indirin
 
-Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uyumsuz örneği: Uygulamanıza ince](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve sonra aşağıdaki adımları izleyin.
+Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten indirebilirsiniz: Uygulamanızı](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) hassas ayarlamalar yapın ve ardından aşağıdaki adımları izleyin.
 
-1. İndirdiğiniz dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.
+1. İndirdiğiniz dosyayı sıkıştırmasını açın ve ardından Visual Studio 'Yu başlatın.
 
-2. Menü çubuğunda, **dosya** > **açık** > **proje/çözüm**.
+2. Menü çubuğunda **Dosya** > **Aç** > **Proje/çözüm**' ı seçin.
 
-3. İçinde **Proje Aç** iletişim kutusunda, açtığınız örnek kodu barındıran klasörü açın ve ardından AsyncFineTuningCS için çözüm (.sln) dosyasını açın.
+3. **Proje Aç** iletişim kutusunda, açtığınız örnek kodu tutan klasörü açın ve ardından AsyncFineTuningCS için çözüm (. sln) dosyasını açın.
 
-4. İçinde **Çözüm Gezgini**, kısayol menüsünü açın **CancelATask** proje ve ardından **başlangıç projesi olarak ayarla**.
+4. **Çözüm Gezgini**' de,,,, Iptal eden **görev** projesi için kısayol menüsünü açın ve ardından **Başlangıç projesi olarak ayarla**' yı seçin.
 
-5. Seçin **F5** projeyi çalıştırmak için anahtar (veya basın **Ctrl**+**F5** projeyi hata ayıklama olmadan çalıştırmak için).
+5. Projeyi çalıştırmak için **F5** tuşuna basın (veya, projeyi hata ayıklamadan çalıştırmak için **CTRL**+**F5** tuşlarına basın).
 
 > [!TIP]
-> Projeyi indirmek istemiyorsanız, bu konunun sonunda MainWindow.xaml.cs dosyalarını gözden geçirebilirsiniz.
+> Projeyi indirmek istemiyorsanız, bu konunun sonundaki MainWindow.xaml.cs dosyalarını gözden geçirebilirsiniz.
 
-### <a name="build-the-example"></a>Örnek oluşturma
- Aşağıdaki değişiklikleri ekleyin bir **iptal** bir Web sitesi yükleyen bir uygulamaya düğmesi. İndirme veya örnek oluşturmak istemiyorsanız, bu konunun sonundaki "Tam örnekler" bölümünde yer alan son ürünü gözden geçirebilirsiniz. Yıldız işaretleri, koddaki değişiklikleri işaretler.
+### <a name="build-the-example"></a>Örneği oluşturun
+ Aşağıdaki değişiklikler bir Web sitesini indiren uygulamaya bir **iptal** düğmesi ekler. Örneği indirmek veya derlemek istemiyorsanız, bu konunun sonundaki "tüm örnekler" bölümünde son ürünü gözden geçirebilirsiniz. Yıldız işaretleri koddaki değişiklikleri işaretler.
 
- Örneği oluşturmak için kendinize, adım adım "Örneği indirme" bölümündeki yönergeleri izleyin, ancak seçin **başlangıç projesi** olarak **başlangıç projesi** yerine **CancelATask** .
+ Örneği kendiniz oluşturmak için, "örneği Indirme" bölümündeki yönergeleri izleyin, ancak **Başlangıç projesi** olarak, 1. aşama yerine **startercode** ' u seçin.
 
- Ardından bu projenin MainWindow.xaml.cs dosyasına aşağıdaki değişiklikleri ekleyin.
+ Ardından, bu projenin MainWindow.xaml.cs dosyasına aşağıdaki değişiklikleri ekleyin.
 
-1. Bildirme bir `CancellationTokenSource` değişken `cts`, kendisine erişen tüm yöntemler için kapsam dahilinde olan.
+1. Kendisine erişen `CancellationTokenSource` tüm yöntemler `cts`için kapsam içinde olan bir değişken bildirin.
 
     ```csharp
     public partial class MainWindow : Window
@@ -55,7 +55,7 @@ Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uy
         CancellationTokenSource cts;
     ```
 
-2. İçin aşağıdaki olay işleyicisini ekleyelim **iptal** düğmesi. Olay işleyicisi kullanır <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> yöntemi bildirmek için `cts` kullanıcı iptal isteğinde bulunduğunda.
+2. **İptal** düğmesi için aşağıdaki olay işleyicisini ekleyin. Olay işleyicisi, Kullanıcı iptali <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> istediğinde bildirimde `cts` bulunan yöntemini kullanır.
 
     ```csharp
     // ***Add an event handler for the Cancel button.
@@ -68,16 +68,16 @@ Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uy
     }
     ```
 
-3. Aşağıdaki değişiklikler olay işleyicisi yapma **Başlat** düğme `startButton_Click`.
+3. **Başlat** düğmesi `startButton_Click`için olay işleyicisinde aşağıdaki değişiklikleri yapın.
 
-    - Örneği `CancellationTokenSource`, `cts`.
+    - `CancellationTokenSource` ,`cts`İçin örneğini oluşturun.
 
         ```csharp
         // ***Instantiate the CancellationTokenSource.
         cts = new CancellationTokenSource();
         ```
 
-    - Çağrısında `AccessTheWebAsync`, belirtilen bir Web sitesinin içeriklerini karşıdan yükler, gönderme <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> özelliği `cts` bağımsız değişken olarak. `Token` Özelliği, iptal istenirse iletiyi yayar. Kullanıcı karşıdan yükleme işlemini iptal etmeyi seçerse ileti görüntüleyen bir catch bloğu ekleyin. Aşağıdaki kod değişiklikleri gösterir.
+    - Belirtilen bir Web sitesinin `AccessTheWebAsync`içeriğini yükleyen çağrısında, <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> özelliğini `cts` bağımsız değişken olarak gönderin. Özelliği `Token` , iptal isteniyorsa iletiyi yayar. Kullanıcı indirme işlemini iptal etmeyi seçerse bir ileti görüntüleyen bir catch bloğu ekleyin. Aşağıdaki kod değişiklikleri gösterir.
 
         ```csharp
         try
@@ -97,9 +97,9 @@ Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uy
         }
         ```
 
-4. İçinde `AccessTheWebAsync`, kullanın <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> aşırı yükünü `GetAsync` yönteminde <xref:System.Net.Http.HttpClient> bir Web sitesinin içeriklerini karşıdan yüklemek için türü. Geçirmek `ct`, <xref:System.Threading.CancellationToken> parametresinin `AccessTheWebAsync`, ikinci bağımsız değişken. Kullanıcı seçerse belirteç iletiyi taşır **iptal** düğmesi.
+4. İçinde `AccessTheWebAsync`, bir Web <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> sitesinin içeriğini indirmek `GetAsync` için <xref:System.Net.Http.HttpClient> türünde yönteminin aşırı yüklemesini kullanın. İkinci bağımsız değişken olarak `ct`, `AccessTheWebAsync`parametresini geçirin. <xref:System.Threading.CancellationToken> Kullanıcı **iptal** düğmesini seçerse, belirteç iletiyi taşır.
 
-     Aşağıdaki kod değişiklikleri göstermektedir `AccessTheWebAsync`.
+     Aşağıdaki kod, içindeki `AccessTheWebAsync`değişiklikleri gösterir.
 
     ```csharp
     // ***Provide a parameter for the CancellationToken.
@@ -124,14 +124,14 @@ Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uy
     }
     ```
 
-5. Programı iptal etmezseniz, aşağıdaki çıktıyı üretir.
+5. Programı iptal ederseniz, aşağıdaki çıktıyı üretir.
 
     ```text
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-     Seçerseniz **iptal** düğmesi önce program içeriği karşıdan, program şu çıktıyı üretir.
+     Program içeriği indirmeyi bitirmeden **iptal** düğmesini seçerseniz, program aşağıdaki çıktıyı üretir.
 
     ```text
     Ready to download.
@@ -140,31 +140,31 @@ Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uy
 
 ## <a name="cancel-a-list-of-tasks"></a>Görev listesini iptal etme
 
-Aynı ilişkilendirerek birçok görevi iptal etmek için önceki örneği genişletebilirsiniz `CancellationTokenSource` her görev örneği. Seçerseniz **iptal** düğmesi, henüz tamamlanmamış tüm görevleri iptal.
+Aynı `CancellationTokenSource` örneği her görevle ilişkilendirerek, daha fazla görevi iptal etmek için önceki örneği genişletebilirsiniz. **İptal** düğmesini seçerseniz, henüz tamamlanmamış tüm görevleri iptal edersiniz.
 
-### <a name="download-the-example"></a>Örneği indirme
+### <a name="download-the-example"></a>Örneği indirin
 
-Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uyumsuz örneği: Uygulamanıza ince](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve sonra aşağıdaki adımları izleyin.
+Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten indirebilirsiniz: Uygulamanızı](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) hassas ayarlamalar yapın ve ardından aşağıdaki adımları izleyin.
 
-1. İndirdiğiniz dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.
+1. İndirdiğiniz dosyayı sıkıştırmasını açın ve ardından Visual Studio 'Yu başlatın.
 
-2. Menü çubuğunda, **dosya** > **açık** > **proje/çözüm**.
+2. Menü çubuğunda **Dosya** > **Aç** > **Proje/çözüm**' ı seçin.
 
-3. İçinde **Proje Aç** iletişim kutusunda, açtığınız örnek kodu barındıran klasörü açın ve ardından AsyncFineTuningCS için çözüm (.sln) dosyasını açın.
+3. **Proje Aç** iletişim kutusunda, açtığınız örnek kodu tutan klasörü açın ve ardından AsyncFineTuningCS için çözüm (. sln) dosyasını açın.
 
-4. İçinde **Çözüm Gezgini**, kısayol menüsünü açın **CancelAListOfTasks** proje ve ardından **başlangıç projesi olarak ayarla**.
+4. **Çözüm Gezgini**' de,,,,,, ,, iptal eden bir proje projesi için kısayol menüsünü açın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
-5. Seçin **F5** projeyi çalıştırmak için anahtar.
+5. Projeyi çalıştırmak için **F5** tuşunu seçin.
 
-     Seçin **Ctrl**+**F5** projeyi hata ayıklama olmadan çalıştırmak için anahtarları.
+     Projeyi hata ayıklamadan çalıştırmak için **CTRL**+**F5** tuşlarını seçin.
 
-Projeyi indirmek istemiyorsanız, bu konunun sonunda MainWindow.xaml.cs dosyalarını gözden geçirebilirsiniz.
+Projeyi indirmek istemiyorsanız, bu konunun sonundaki MainWindow.xaml.cs dosyalarını gözden geçirebilirsiniz.
 
-### <a name="build-the-example"></a>Örnek oluşturma
+### <a name="build-the-example"></a>Örneği oluşturun
 
-Örneği genişletmek için kendiniz adım adım "Örneği indirme" bölümündeki yönergeleri izleyin, ancak seçin **CancelATask** olarak **başlangıç projesi**. Aşağıdaki değişiklikleri bu projeye ekleyin. Yıldız işaretleri, programdaki değişiklikleri işaretler.
+Örneği kendiniz genişletmek için, "örneği Indirme" bölümündeki yönergeleri izleyin, ancak **Başlangıç projesi**olarak iptal eden ' i seçin. Aşağıdaki değişiklikleri bu projeye ekleyin. Yıldız işaretleri programdaki değişiklikleri işaretler.
 
-1. Web adresleri listesi oluşturmak için bir yöntem ekleyin.
+1. Web adreslerinin bir listesini oluşturmak için bir yöntem ekleyin.
 
     ```csharp
     // ***Add a method that creates a list of web addresses.
@@ -184,14 +184,14 @@ Projeyi indirmek istemiyorsanız, bu konunun sonunda MainWindow.xaml.cs dosyalar
     }
     ```
 
-2. Yöntem çağrısı `AccessTheWebAsync`.
+2. İçindeki `AccessTheWebAsync`yöntemi çağırın.
 
     ```csharp
     // ***Call SetUpURLList to make a list of web addresses.
     List<string> urlList = SetUpURLList();
     ```
 
-3. İçine şu döngüyü ekleyin `AccessTheWebAsync` listesindeki her bir web adresini işlemek için.
+3. Listesindeki her bir Web adresini `AccessTheWebAsync` işlemek için aşağıdaki döngüsünü ekleyin.
 
     ```csharp
     // ***Add a loop to process the list of web addresses.
@@ -210,19 +210,19 @@ Projeyi indirmek istemiyorsanız, bu konunun sonunda MainWindow.xaml.cs dosyalar
     }
     ```
 
-4. Çünkü `AccessTheWebAsync` görüntüler uzunlukları, yöntemin herhangi bir şey getirmesi gerekmez. Return ifadesini kaldırın ve yöntemin dönüş türünü değiştirmek <xref:System.Threading.Tasks.Task> yerine <xref:System.Threading.Tasks.Task%601>.
+4. , `AccessTheWebAsync` Uzunlukları gösterdiği için yöntemin herhangi bir şey döndürmesi gerekmez. Return ifadesini kaldırın ve yöntemin dönüş türünü <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601>yerine olarak değiştirin.
 
     ```csharp
     async Task AccessTheWebAsync(CancellationToken ct)
     ```
 
-     İçinden yöntemi çağırın `startButton_Click` ifade yerine bir deyim kullanarak.
+     Bir ifadesi yerine deyimi `startButton_Click` kullanarak yöntemini çağırın.
 
     ```csharp
     await AccessTheWebAsync(cts.Token);
     ```
 
-5. Programı iptal etmezseniz, aşağıdaki çıktıyı üretir.
+5. Programı iptal ederseniz, aşağıdaki çıktıyı üretir.
 
     ```text
     Length of the downloaded string: 35939.
@@ -242,7 +242,7 @@ Projeyi indirmek istemiyorsanız, bu konunun sonunda MainWindow.xaml.cs dosyalar
     Downloads complete.
     ```
 
-     Seçerseniz **iptal** indirmeleri tam düğmesini, çıktı iptalden önce tamamlanan karşıdan yüklemelerin uzunluklarını içerir.
+     İndirmeler tamamlanmadan önce **iptal** düğmesini seçerseniz, çıkış, iptalden önce tamamlanan indirmelerin uzunluklarını içerir.
 
     ```text
     Length of the downloaded string: 35939.
@@ -254,15 +254,15 @@ Projeyi indirmek istemiyorsanız, bu konunun sonunda MainWindow.xaml.cs dosyalar
     Downloads canceled.
     ```
 
-## <a name="complete-examples"></a>Tam örnekler
+## <a name="complete-examples"></a>Tüm örnekler
 
-Aşağıdaki bölümlerde her önceki örnek kodunu içerir. İçin bir başvuru eklemeniz gerektiğini unutmayın <xref:System.Net.Http>.
+Aşağıdaki bölümler, önceki örneklerin her birine ilişkin kodu içerir. İçin <xref:System.Net.Http>bir başvuru eklemeniz gerektiğini unutmayın.
 
-İçinden projeleri karşıdan yükleyebileceğiniz [zaman uyumsuz örneği: Uygulamanızı ince ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+Projeleri [zaman uyumsuz örnekten indirebilirsiniz: Uygulamanızı](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)hassas bir şekilde ayarlama.
 
-### <a name="example---cancel-a-task"></a>Örnek - bir görev iptal
+### <a name="example---cancel-a-task"></a>Örnek-bir görevi Iptal etme
 
-Aşağıdaki kod, tek bir görevi iptal eden örnek için tam MainWindow.xaml.cs dosyasıdır.
+Aşağıdaki kod, tek bir görevi iptal eden örnek için tüm MainWindow.xaml.cs dosyasıdır.
 
 ```csharp
 using System;
@@ -371,9 +371,9 @@ namespace CancelATask
 }
 ```
 
-### <a name="example---cancel-a-list-of-tasks"></a>Örnek - görev listesini iptal etme
+### <a name="example---cancel-a-list-of-tasks"></a>Örnek-görev listesini Iptal etme
 
-Aşağıdaki kod, bir Görevler listesini iptal eden örnek için tam MainWindow.xaml.cs dosyasıdır.
+Aşağıdaki kod, bir görev listesini iptal eden örnek için tüm MainWindow.xaml.cs dosyasıdır.
 
 ```csharp
 using System;
@@ -521,6 +521,6 @@ namespace CancelAListOfTasks
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [(C#) Async uygulamanızda hassas ayar yapma](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Zaman uyumsuz örneği: Uygulamanızda hassas ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async ve await (C#) ile zaman uyumsuz programlama](./index.md)
+- [Zaman uyumsuz uygulamanızda ince ayar yapma (C#)](./fine-tuning-your-async-application.md)
+- [Zaman uyumsuz örnek: Uygulamanızda ince ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

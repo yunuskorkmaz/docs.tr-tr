@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b4a08a9866bbc8816b57c95bdb22766bd1b07fdc
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331707"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611450"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Model Oluşturucu ile gerileme kullanarak fiyatları tahmin etme
 
@@ -112,7 +112,7 @@ Eğitim tamamlandıktan sonra değerlendir adımına gidin.
 
 ## <a name="evaluate-the-model"></a>Modeli değerlendirme
 
-Eğitim adımının sonucu, en iyi performansa sahip bir model olacaktır. Model Oluşturucu aracının değerlendir adımında, çıkış bölümü en iyi *model girişinde en* iyi işlem modeli tarafından kullanılan algoritmayı *(RKARE)* içerir. Ayrıca, ilk beş modeli ve bunların ölçümlerini içeren bir Özet tablosu.
+Eğitim adımının sonucu, en iyi performansa sahip bir model olacaktır. Model Oluşturucu aracının değerlendir adımında, çıkış bölümü en iyi model girişinde en iyi işlem modeli tarafından kullanılan algoritmayı *(RKARE)* içerir. Ayrıca, ilk beş modeli ve bunların ölçümlerini içeren bir Özet tablosu.
 
 Doğruluk ölçümlerinizi tatmin ediyorsanız, model doğruluğunu denemeye yönelik bazı kolay yollar, modelin eğilmesi veya daha fazla veri kullanmak için zaman miktarını artırmaktır. Aksi takdirde, kod adımına gidin.
 
@@ -202,7 +202,6 @@ Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 Bu öğreticide bahsedilen konular hakkında daha fazla bilgi edinmek için aşağıdaki kaynakları ziyaret edin:
 
 - [Model Oluşturucu senaryoları](../automate-training-with-model-builder.md#scenarios)
-- [Model Oluşturucu veri biçimleri](../automate-training-with-model-builder.md#data-formats)
 - [Regresyon](../resources/glossary.md#regression)
 - [Regresyon modeli ölçümleri](../resources/metrics.md#metrics-for-regression)
 - [NYC TLC TAXI seyahat veri kümesi](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)

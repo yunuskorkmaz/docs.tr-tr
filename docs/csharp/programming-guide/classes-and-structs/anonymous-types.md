@@ -1,25 +1,25 @@
 ---
-title: Anonim türler - C# Programlama Kılavuzu
+title: Anonim türler- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 7d8bdc5ceef5d82e4bc7e13ee932985cae6c2c10
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 93f02b8a0f828be89c6a1b7bfcdc6ba2a2a93e81
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398552"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597185"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Anonim Türler (C# Programlama Kılavuzu)
 
-Anonim türleri açıkça bir tür ilk tanımlamak zorunda kalmadan tek bir nesnede salt okunur özellikler kümesi kapsüllemek için kullanışlı bir yol sağlar. Tür adı derleyici tarafından oluşturulan ve kaynak kod düzeyinde kullanılabilir değildir. Her bir özellik türü, derleyici tarafından algılanır.  
+Anonim türler, salt bir türü açıkça tanımlamak zorunda kalmadan tek bir nesne içinde salt okunurdur bir özellik kümesini kapsüllemek için kullanışlı bir yol sağlar. Tür adı derleyici tarafından oluşturulur ve kaynak kodu düzeyinde kullanılabilir değildir. Her özelliğin türü derleyici tarafından algılanır.  
   
- Kullanarak anonim tür oluşturma [yeni](../../../csharp/language-reference/operators/new-operator.md) işleci birlikte bir nesne Başlatıcı. Nesne başlatıcıları hakkında daha fazla bilgi için bkz: [nesne ve koleksiyon başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ [Yeni](../../language-reference/operators/new-operator.md) işleci bir nesne başlatıcısıyla birlikte kullanarak anonim türler oluşturursunuz. Nesne başlatıcıları hakkında daha fazla bilgi için bkz. [nesne ve koleksiyon başlatıcıları](./object-and-collection-initializers.md).  
   
- Aşağıdaki örnekte adlı iki özellik ile başlatılan bir anonim tür `Amount` ve `Message`.  
+ Aşağıdaki örnek, ve `Amount` `Message`adlı iki özellik ile başlatılan anonim bir türü gösterir.  
   
 ```csharp  
 var v = new { Amount = 108, Message = "Hello" };  
@@ -29,36 +29,36 @@ var v = new { Amount = 108, Message = "Hello" };
 Console.WriteLine(v.Amount + v.Message);  
 ```  
   
- Anonim türler genellikle kullanıldığı [seçin](../../../csharp/language-reference/keywords/select-clause.md) kaynak dizisindeki her bir nesneden bir özellik alt kümesi döndürmek için bir sorgu ifadesinin yan tümcesi. Sorgular hakkında daha fazla bilgi için bkz. [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md).  
+ Anonim türler genellikle bir sorgu ifadesinin [Select](../../language-reference/keywords/select-clause.md) yan tümcesinde, kaynak dizisindeki her bir nesneden özelliklerin bir alt kümesini döndürmek için kullanılır. Sorgular hakkında daha fazla bilgi için bkz. [LINQ sorgu ifadeleri](../linq-query-expressions/index.md).  
   
- Anonim türler bir veya daha fazla genel salt okunur özellikler içerir. Yöntemleri ya da olaylar gibi sınıf üyelerini diğer hiçbir tür geçerli değil. Bir özellik başlatmak için kullanılan bir ifade olamaz `null`, anonim bir işlev veya bir işaretçi türü.  
+ Anonim türler bir veya daha fazla genel salt okunurdur özelliği içerir. Yöntemler veya olaylar gibi başka tür sınıf üyeleri geçerli değildir. Bir özelliği başlatmak için kullanılan ifade `null`, anonim bir işlev veya bir işaretçi türü olamaz.  
   
- Başka bir tür özellikleri içeren bir anonim tür başlatmak için en yaygın senaryodur bakın. Aşağıdaki örnekte, bir sınıf adlı bulunduğunu varsayar `Product`. Sınıf `Product` içerir `Color` ve `Price` ilginizi olmayan diğer özellikleri birlikte özellikleri. Değişken `products` koleksiyonudur `Product` nesneleri. Anonim tür bildirimi ile başlayan `new` anahtar sözcüğü. Yalnızca iki özelliklerinden kullanan yeni bir türü bildirimini başlatır `Product`. Bu, daha küçük bir sorguda döndürülecek veri miktarı neden olur.  
+ En yaygın senaryo, başka bir türden özelliklerle adsız bir tür başlatmalıdır. Aşağıdaki örnekte, adlı `Product`bir sınıfın var olduğunu varsayalım. İle `Product` ilgilenmediğiniz `Price` diğer özelliklerle birlikte sınıf dahil `Color` ve özellikleri. Değişken `products` bir `Product` nesne koleksiyonudur. Anonim tür bildirimi `new` anahtar sözcüğüyle başlar. Bildirimi, öğesinden `Product`yalnızca iki özellik kullanan yeni bir tür başlatır. Bu, sorguda daha az miktarda veri döndürülmesine neden olur.  
   
- Anonim türdeki üye adları belirtmezseniz, derleyici bunları başlatmak için kullanılan özellik adıyla aynı anonim türdeki üyeleri sağlar. Önceki örnekte gösterilen şekilde bir ifadeyle başlatılan bir özellik için bir ad sağlamanız gerekir. Aşağıdaki örnekte, anonim tür özelliklerini adlarıdır `Color` ve `Price`.  
+ Anonim türde üye adları belirtmezseniz, derleyici anonim tür üyelerine onları başlatmak için kullanılan özellik ile aynı adı verir. Önceki örnekte gösterildiği gibi, ifadesiyle başlatılan bir özellik için bir ad sağlamalısınız. Aşağıdaki örnekte, anonim türün özelliklerinin adları ve `Color` `Price`' dir.  
   
  [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
- Bir değişkeni başlatmak için anonim bir tür kullandığınızda, genellikle, değişken türü örtük olarak belirlenmiş yerel değişken olarak kullanarak bildirdiğiniz [var](../../../csharp/language-reference/keywords/var.md). Yalnızca derleyicinin erişim anonim tür temel adına sahip olduğundan Değişken bildiriminde tür adı belirtilemez. Hakkında daha fazla bilgi için `var`, bkz: [örtük olarak yazılan yerel değişkenler](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+ Genellikle, bir değişkeni başlatmak için anonim bir tür kullandığınızda değişkeni, değişken kullanarak örtük olarak yazılmış bir yerel değişken olarak bildirirsiniz. [](../../language-reference/keywords/var.md) Tür adı değişken bildiriminde belirtilemiyor, çünkü yalnızca derleyicinin adsız türdeki temel alınan ada erişimi vardır. Hakkında `var`daha fazla bilgi için bkz. [örtülü olarak yazılan yerel değişkenler](./implicitly-typed-local-variables.md).  
   
- Aşağıdaki örnekte gösterildiği gibi bir türü örtük olarak belirlenmiş yerel değişken ve örtük olarak belirlenmiş dizi birleştirerek anonim olarak belirlenmiş öğeleri dizisi oluşturabilirsiniz.  
+ Aşağıdaki örnekte gösterildiği gibi örtük olarak yazılmış bir yerel değişkeni ve örtük olarak yazılmış bir diziyi birleştirerek anonim olarak belirlenmiş öğelerin bir dizisini oluşturabilirsiniz.  
   
 ```csharp  
 var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", diam = 1 }};  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Anonim türler [sınıfı](../../../csharp/language-reference/keywords/class.md) doğrudan öğesinden türetilen türler [nesne](../../../csharp/language-reference/keywords/object.md), ve dışında herhangi bir türe yayımlanamıyorsa [nesne](../../../csharp/language-reference/keywords/object.md). Derleyici, uygulamanıza erişemez ancak her anonim bir tür için bir ad sağlar. Ortak dil çalışma zamanı açısından bakıldığında, anonim bir tür başka bir başvuru türünden farklı değildir.  
+ Anonim türler [nesnesinden](../../language-reference/keywords/object.md)doğrudan türeten ve [nesne](../../language-reference/keywords/object.md)dışında herhangi bir türe atanamaz olan [sınıf](../../language-reference/keywords/class.md) türleridir. Derleyici her adsız tür için bir ad sağlar, ancak uygulamanız buna erişemez. Ortak dil çalışma zamanının perspektifinden, anonim bir tür diğer herhangi bir başvuru türünden farklı değildir.  
   
- İki veya daha fazla anonim nesne başlatıcıları bir derleme, aynı sırayla ve aynı adlarını ve türlerini sahip özellikler bir dizi belirtirseniz, derleyicinin nesneleri aynı türde bir örnek değerlendirir. Aynı derleyici tarafından oluşturulan tür bilgilerini paylaşırlar.  
+ Bir derlemede iki veya daha fazla anonim nesne başlatıcıları aynı sırada olan ve aynı ada ve türe sahip bir özellikler sırası belirtse, derleyici nesneleri aynı türdeki örnekler olarak değerlendirir. Derleyici tarafından oluşturulan tür bilgilerini paylaşır.  
   
- Bir alan, özellik, bir olay veya anonim bir tür olarak bir yöntemin dönüş türünü bildiremezsiniz. Benzer şekilde, bir yöntemi, özelliği, oluşturucuya veya anonim bir tür olarak dizin oluşturucu bir biçimsel parametresi bildiremez. Anonim bir tür veya anonim türler bir yöntemi için bağımsız değişken olarak içeren bir koleksiyona geçmek için parametre türü nesnesi olarak bildirebilirsiniz. Ancak, bunun yapılması, güçlü yazım amacını boşa çıkarır. Sorgu sonuçlarını depolamak veya bunları yöntemi sınırının dışına geçirmek yerine anonim bir tür bir sıradan adlandırılmış yapı ya da sınıf kullanmayı düşünün.  
+ Bir alanı, özelliği, olayı veya bir yöntemin dönüş türünü anonim bir türe sahip olarak bildiremezsiniz. Benzer şekilde, bir yöntem, özellik, Oluşturucu veya dizin oluşturucunun yapısal bir parametresini anonim bir türe sahip olacak şekilde bildiremezsiniz. Anonim bir tür veya anonim türler içeren bir koleksiyonu, bir yönteme bağımsız değişken olarak geçirmek için, parametreyi tür nesnesi olarak bildirebilirsiniz. Ancak, bu işlem güçlü yazma amacını artırıyor. Sorgu sonuçlarını depolamanız veya yöntem sınırının dışında geçirmeniz gerekiyorsa, anonim bir tür yerine sıradan adlandırılmış bir yapı veya sınıf kullanmayı düşünün.  
   
- Çünkü <xref:System.Object.Equals%2A> ve <xref:System.Object.GetHashCode%2A> yöntemlerin anonim türleri açısından tanımlandığı `Equals` ve `GetHashCode` iki örneği aynı anonim tür özellikleri yöntemlerdir tüm özellikleri eşitse eşit.  
+ Anonim türlerdeki <xref:System.Object.Equals%2A> ve <xref:System.Object.GetHashCode%2A> yöntemleri özelliklerinin `Equals` ve `GetHashCode` yöntemlerinin bakımından tanımlandığından, aynı anonim türdeki iki örnek yalnızca tüm özellikleri eşitse eşittir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Nesne ve Koleksiyon Başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [C#'de LINQ Kullanmaya Başlama](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Nesne ve Koleksiyon Başlatıcıları](./object-and-collection-initializers.md)
+- [C#'de LINQ Kullanmaya Başlama](../concepts/linq/getting-started-with-linq.md)
+- [LINQ sorgu Ifadeleri](../linq-query-expressions/index.md)

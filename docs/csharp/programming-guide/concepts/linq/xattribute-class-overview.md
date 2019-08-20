@@ -1,31 +1,31 @@
 ---
-title: XAttribute sınıfına genel bakış (C#)
+title: XAttribute sınıfına genel bakışC#()
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: 0440e8271edcf54d00a56e2987235afd260f9156
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 79ef00aa79be0c743423cfba1a911b238ff9a7ca
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483188"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590919"
 ---
-# <a name="xattribute-class-overview-c"></a>XAttribute sınıfına genel bakış (C#)
-Öznitelikleri bir öğe ile ilişkili ad/değer çiftleridir. <xref:System.Xml.Linq.XAttribute> Sınıfı için XML özniteliklerini temsil eder.  
+# <a name="xattribute-class-overview-c"></a>XAttribute sınıfına genel bakışC#()
+Öznitelikler, bir öğesiyle ilişkili ad/değer çiftleridir. <xref:System.Xml.Linq.XAttribute> Sınıfı XML özniteliklerini temsil eder.  
   
 ## <a name="overview"></a>Genel Bakış  
- Öznitelikleri ile çalışma [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] öğeleri ile çalışmaya benzer. Oluşturucuları benzerdir. Bunları koleksiyonlarını almak için kullandığınız yöntemleri benzerdir. A [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] özniteliklerin bir koleksiyonu için sorgu ifadesi çok benzer görünür bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadesi öğelerinin koleksiyonu.  
+ İçindeki [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] özniteliklerle çalışma, öğelerle çalışmaya benzerdir. Oluşturucular benzerdir. Bunların koleksiyonlarını almak için kullandığınız yöntemler benzerdir. Öznitelik koleksiyonu için bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguifadesibiröğekoleksiyonuiçinsorguifadesineçokbenzerşekildegörünür.[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]  
   
- Öznitelikleri bir öğe için eklenen sırasını korunur. Öznitelikleri yineleme yaptığınızda, diğer bir deyişle, bunları eklendikleri sırayla görürsünüz.  
+ Öznitelikleri bir öğeye eklenme sırası korunur. Diğer bir deyişle, özniteliklerde yineleme yaparken, bunları eklendiği sırayla görürsünüz.  
   
 ## <a name="the-xattribute-constructor"></a>XAttribute Oluşturucusu  
- Aşağıdaki oluşturucusuna <xref:System.Xml.Linq.XAttribute> sınıfı, en sık kullanacağınız bir:  
+ <xref:System.Xml.Linq.XAttribute> Sınıfının aşağıdaki Oluşturucusu, en yaygın olarak kullanabileceğiniz bir sınıftır:  
   
 |Oluşturucu|Açıklama|  
 |-----------------|-----------------|  
-|`XAttribute(XName name, object content)`|Oluşturur bir <xref:System.Xml.Linq.XAttribute> nesne. `name` Bağımsız değişkeni belirtir; öznitelik adı `content` öznitelik içeriğini belirtir.|  
+|`XAttribute(XName name, object content)`|Oluşturur bir <xref:System.Xml.Linq.XAttribute> nesne. `name` Bağımsız değişken özniteliğin adını belirtir; `content` özniteliğin içeriğini belirtir.|  
   
-### <a name="creating-an-element-with-an-attribute"></a>Bir öznitelik bir öğe oluşturma  
- Aşağıdaki kod, bir öznitelik içeren bir öğeyi oluşturma görevinin gösterir:  
+### <a name="creating-an-element-with-an-attribute"></a>Özniteliği olan bir öğe oluşturma  
+ Aşağıdaki kod, bir özniteliği içeren bir öğe oluşturma ortak görevini gösterir:  
   
 ```csharp  
 XElement phone = new XElement("Phone",  
@@ -40,8 +40,8 @@ Console.WriteLine(phone);
 <Phone Type="Home">555-555-5555</Phone>  
 ```  
   
-### <a name="functional-construction-of-attributes"></a>İşlev öznitelikleri yapımı  
- Oluşturulabilir <xref:System.Xml.Linq.XAttribute> nesneler satır içi oluşumu ile <xref:System.Xml.Linq.XElement> gibi nesneler:  
+### <a name="functional-construction-of-attributes"></a>Özniteliklerin işlevsel olarak oluşturulması  
+ Nesneleri oluşturmak <xref:System.Xml.Linq.XAttribute> için <xref:System.Xml.Linq.XElement> aşağıdaki gibi nesneleri satır içinde oluşturabilirsiniz:  
   
 ```csharp  
 XElement c = new XElement("Customers",  
@@ -74,11 +74,11 @@ Console.WriteLine(c);
 </Customers>  
 ```  
   
-### <a name="attributes-are-not-nodes"></a>Öznitelik düğümleri olmayan  
- Öznitelikler ve öğeler arasında bazı farklar vardır. <xref:System.Xml.Linq.XAttribute> nesneler XML Ağaçtaki düğümler değildir. Bunlar bir XML öğesi ile ilişkili ad/değer çiftleridir. Belge nesne modeli (DOM) aksine bu daha yakından XML yapısını yansıtır. Ancak <xref:System.Xml.Linq.XAttribute> nesneleri gerçekten düğümleri ile çalışma XML ağacında olmayan <xref:System.Xml.Linq.XAttribute> nesneler ile çalışma için çok benzer <xref:System.Xml.Linq.XElement> nesneleri.  
+### <a name="attributes-are-not-nodes"></a>Öznitelikler düğüm değil  
+ Öznitelikler ve öğeler arasında bazı farklılıklar vardır. <xref:System.Xml.Linq.XAttribute>nesneler XML ağacındaki düğümler değildir. Bunlar bir XML öğesiyle ilişkili ad/değer çiftleridir. Belge Nesne Modeli (DOM) aksine bu, XML yapısını daha yakından yansıtır. Nesneler <xref:System.Xml.Linq.XAttribute> gerçekte XML ağacında düğümler olmasa da nesnelerle <xref:System.Xml.Linq.XAttribute> çalışma, <xref:System.Xml.Linq.XElement> nesnelerle çalışmaya çok benzer.  
   
- Bu ayrım, yalnızca XML ağaçları düğüm düzeyinde çalışan kod yazma geliştiriciler öncelikle önemlidir. Bu ayrım ile ilgili birçok geliştiricinin olmayacaktır.  
+ Bu ayrım, birincil olarak yalnızca düğüm düzeyindeki XML ağaçları ile çalışan kod yazan geliştiriciler için önemlidir. Birçok geliştirici bu ayrım ile ilgilenmeyecektir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML programlamaya genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [LINQ to XML programlamaya genel bakışC#()](./linq-to-xml-overview.md)

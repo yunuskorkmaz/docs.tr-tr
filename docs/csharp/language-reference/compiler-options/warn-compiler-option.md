@@ -1,5 +1,5 @@
 ---
-title: -warn (C# Derleyici Seçenekleri)
+title: -warn (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /warn
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 17dd992edbec5ce444b53ed42b2b486282618672
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b05e944a37e16fc1fcc422271be00c09a271a33
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662315"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602398"
 ---
-# <a name="-warn-c-compiler-options"></a>-warn (C# Derleyici Seçenekleri)
-**-Warn** seçeneği, derleyicinin görüntülenecek uyarı düzeyini belirtir.  
+# <a name="-warn-c-compiler-options"></a>-warn (C# derleyici seçenekleri)
+**-Warn** seçeneği derleyicinin görüntüleyeceği uyarı düzeyini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -30,35 +30,35 @@ ms.locfileid: "61662315"
   
 ## <a name="arguments"></a>Arguments  
  `option`  
- Derleme için görüntülenmesini istediğiniz uyarı düzeyi: Daha düşük bir sayı yalnızca yüksek önem düzeyindeki uyarılar Göster; daha yüksek numaralar daha fazla uyarıyı gösterir. Geçerli değerler 0-4:  
+ Derleme için görüntülenmesini istediğiniz uyarı düzeyi: Daha düşük sayılar yalnızca yüksek önem derecesine sahip uyarıları gösterir; daha yüksek numaralar daha fazla uyarı gösterir. Geçerli değerler 0-4 ' dir:  
   
 |Uyarı düzeyi|Açıklama|  
 |-------------------|-------------|  
-|0|Tüm uyarı iletilerini arabellek devre dışı bırakır.|  
-|1.|Önemli uyarı iletileri görüntülenir.|  
-|2|1. düzey uyarıları ve bazı, görüntüler, sınıf üyeleri gizleme hakkında uyarılar gibi daha az öneme sahip uyarılar.|  
-|3|Düzey 2 uyarıları görüntüler belirli, uyarılar için her zaman değerlendirin ifadeler hakkında gibi daha az öneme sahip uyarılar ayrıca `true` veya `false`.|  
-|4 (varsayılan)|Tüm görüntüler, 3 uyarıları ve bilgilendirici uyarılar düzey.|  
+|0|Tüm uyarı iletilerinin emisyonunu kapatır.|  
+|1\.|Ciddi uyarı iletileri görüntüler.|  
+|2|Düzey 1 uyarılarını ve sınıf üyelerini gizleme hakkında uyarılar gibi bazı, daha az önemli uyarıları görüntüler.|  
+|3|Düzey 2 uyarılarını ve her zaman veya `true` `false`olarak değerlendirme yapan ifadeler hakkında uyarılar gibi bazı, daha az önemli uyarıları görüntüler.|  
+|4 (varsayılan)|Tüm düzey 3 uyarılarını ve bilgilendirici uyarıları görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir hata veya uyarı hakkında bilgi almak için Yardım dizini hata kodunu bakabilirsiniz. Bir hata veya uyarı hakkında bilgi almak diğer yolları için bkz. [C# derleyici hataları](../../../csharp/language-reference/compiler-messages/index.md).  
+ Bir hata veya uyarı hakkında bilgi almak için yardım dizinindeki hata kodunu arayabilirsiniz. Bir hata veya uyarı hakkında bilgi almanın diğer yolları için bkz [ C# . derleyici hataları](../compiler-messages/index.md).  
   
- Kullanım [- warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) tüm uyarıları hata olarak değerlendirilecek. Kullanım [- nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) belirli uyarıları devre dışı.  
+ Tüm uyarıları hata olarak değerlendirmek için [-warnaserror](./warnaserror-compiler-option.md) kullanın. Belirli uyarıları devre dışı bırakmak için [-nowarn](./nowarn-compiler-option.md) kullanın.  
   
- **-w** öğesinin kısa biçimidir **-warn**.  
+ **-w** , **-Warn**kısa biçimidir.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1. Projenin açın **özellikleri** sayfası.  
+1. Projenin **Özellikler** sayfasını açın.  
   
-2. Tıklayın **derleme** özellik sayfası.  
+2. **Yapı** özelliği sayfasına tıklayın.  
   
-3. Değiştirme **uyarı düzeyi** özelliği.  
+3. **Uyarı düzeyi** özelliğini değiştirin.  
   
- Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.  
+ Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.  
   
 ## <a name="example"></a>Örnek  
- Derleme `in.cs` ve derleyicinin yalnızca 1. düzey uyarıları göster:  
+ Derleyin `in.cs` ve derleyicinin yalnızca düzey 1 uyarılarını görüntülemesini sağlayabilirsiniz:  
   
 ```console  
 csc -warn:1 in.cs  
@@ -66,5 +66,5 @@ csc -warn:1 in.cs
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
+- [C# Derleyici Seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

@@ -2,24 +2,24 @@
 title: C# Dilinde XML Ağaçları Oluşturma (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 37970b58519f5ff28165b45ebc729cc0a7f447d3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a77171ebbc07e54f6988fb97aff197b4c6d31721
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487513"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594625"
 ---
-# <a name="creating-xml-trees-in-c-linq-to-xml"></a>C# (LINQ to XML) XML ağaçları oluşturma
-Bu bölümde, C# dilinde XML ağaçları oluşturma hakkında bilgi sağlar.  
+# <a name="creating-xml-trees-in-c-linq-to-xml"></a>İçinde C# xml ağaçları oluşturma (LINQ to XML)
+Bu bölüm içinde C#xml ağaçları oluşturma hakkında bilgi sağlar.  
   
- LINQ sorguları sonuçları içerik için kullanma hakkında bilgi için bir <xref:System.Xml.Linq.XElement>, bkz: [işlevsel oluşturma (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ LINQ sorgularının sonuçlarını bir <xref:System.Xml.Linq.XElement>için içerik olarak kullanma hakkında daha fazla bilgi için bkz. [işlevsel oluşturma (LINQ to XML) (C#)](./functional-construction-linq-to-xml.md).  
   
 ## <a name="constructing-elements"></a>Öğeleri oluşturma
- İmzalarını <xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XAttribute> oluşturucular içeriği öğe veya öznitelik oluşturucusu için bağımsız değişken olarak geçirmenize olanak tanır. Değişken sayıda bağımsız değişken bir oluşturucular yararlandığı için herhangi bir sayıda alt öğeleri geçirebilirsiniz. Elbette, bu alt öğelerin her biri kendi alt öğelerini içerebilir. Herhangi bir öğe için herhangi bir sayıda öznitelikler ekleyebilirsiniz.  
+ <xref:System.Xml.Linq.XElement> Ve<xref:System.Xml.Linq.XAttribute> oluşturucuların imzaları, öğe veya özniteliğin içeriğini oluşturucuya bağımsız değişken olarak geçirmenize olanak sağlar. Oluşturuculardan biri değişken sayıda bağımsız değişken kullandığından, herhangi bir sayıda alt öğe geçirebilirsiniz. Kuşkusuz, bu alt öğelerin her biri kendi alt öğelerini içerebilir. Herhangi bir öğe için istediğiniz sayıda öznitelik ekleyebilirsiniz.  
   
- Eklerken <xref:System.Xml.Linq.XNode> (dahil olmak üzere <xref:System.Xml.Linq.XElement>) veya <xref:System.Xml.Linq.XAttribute> nesneler, yeni içerik üstü yoksa, nesneleri yalnızca bağlı XML ağacına. Yeni içerik zaten üst öğe ve başka bir XML ağacının bir parçası ise, yeni içerik kopyalanmış olan ve yeni kopyalanan içeriği XML ağacına eklenir. Bu konu Son örnekte bu gösterir.  
+ (Dahil <xref:System.Xml.Linq.XNode> <xref:System.Xml.Linq.XElement>) veya<xref:System.Xml.Linq.XAttribute> nesneleri eklerken, yeni içeriğin üst öğesi yoksa, nesneler yalnızca XML ağacına eklenir. Yeni içerik zaten üst öğe ise ve başka bir XML ağacının parçasıysa, yeni içerik kopyalanır ve yeni kopyalanan içerik XML ağacına eklenir. Bu konudaki son örnekte bu gösterilmektedir.  
   
- Oluşturmak için bir `contacts` <xref:System.Xml.Linq.XElement>, aşağıdaki kodu kullanabilirsiniz:  
+ `contacts` Oluşturmak<xref:System.Xml.Linq.XElement>için aşağıdaki kodu kullanabilirsiniz:  
   
 ```csharp  
 XElement contacts =  
@@ -37,33 +37,33 @@ XElement contacts =
     );  
 ```  
   
- Düzgün bir şekilde oluşturmak için kod girintili varsa <xref:System.Xml.Linq.XElement> nesneleri temel alınan XML yapısını çok benzeyen.  
+ Doğru şekilde girintilense, nesneleri oluşturmak <xref:System.Xml.Linq.XElement> için kullanılan kod, temel alınan XML yapısına benzer.  
   
-## <a name="xelement-constructors"></a>XElement oluşturucular  
- <xref:System.Xml.Linq.XElement> Sınıfı için işlevsel oluşturma şu oluşturuculardan kullanır. Diğer bazı oluşturucular için olduğunu unutmayın <xref:System.Xml.Linq.XElement>, ancak bunlar listelenmediğinden burada işlevsel oluşturma için kullanılmaz.  
+## <a name="xelement-constructors"></a>XElement oluşturucuları  
+ <xref:System.Xml.Linq.XElement> Sınıfı, işlevsel oluşturma için aşağıdaki oluşturucuları kullanır. İçin <xref:System.Xml.Linq.XElement>başka bazı oluşturucular olduğunu, ancak işlevsel oluşturma için kullanıldıklarından, burada listelenmediğini unutmayın.  
   
 |Oluşturucu|Açıklama|  
 |-----------------|-----------------|  
-|`XElement(XName name, object content)`|Oluşturur bir <xref:System.Xml.Linq.XElement>. `name` Parametresi belirtir; öğe adı `content` öğenin içeriğini belirtir.|  
-|`XElement(XName name)`|Oluşturur bir <xref:System.Xml.Linq.XElement> ile kendi <xref:System.Xml.Linq.XName> belirtilen adla başlatıldı.|  
-|`XElement(XName name, params object[] content)`|Oluşturur bir <xref:System.Xml.Linq.XElement> ile kendi <xref:System.Xml.Linq.XName> belirtilen adla başlatıldı. Parametre listesi içeriğinden özniteliklerini ve/veya alt öğeleri oluşturulur.|  
+|`XElement(XName name, object content)`|<xref:System.Xml.Linq.XElement>Oluşturur. `name` Parametresi, öğesinin adını belirtir; `content` öğenin içeriğini belirtir.|  
+|`XElement(XName name)`|Başlatıldıktan sonra <xref:System.Xml.Linq.XElement> belirtilen ada sahip bir oluşturur. <xref:System.Xml.Linq.XName>|  
+|`XElement(XName name, params object[] content)`|Başlatıldıktan sonra <xref:System.Xml.Linq.XElement> belirtilen ada sahip bir oluşturur. <xref:System.Xml.Linq.XName> Öznitelikler ve/veya alt öğeleri parametre listesinin içeriğinden oluşturulur.|  
   
- `content` Parametre son derece esnektir. Tür geçerli bir alt nesneyi destekleyen bir <xref:System.Xml.Linq.XElement>. Bu parametreye geçirilen nesneleri farklı türleri için aşağıdaki kurallar geçerlidir:  
+ `content` Parametresi son derece esnektir. Geçerli bir <xref:System.Xml.Linq.XElement>alt öğesi olan herhangi bir nesne türünü destekler. Bu parametreye geçirilen farklı nesne türleri için aşağıdaki kurallar geçerlidir:  
   
-- Bir dizeyi metin içeriği olarak eklenir.  
+- Metin içeriği olarak bir dize eklenir.  
   
-- Bir <xref:System.Xml.Linq.XElement> bir alt öğesi eklenir.  
+- Bir <xref:System.Xml.Linq.XElement> alt öğesi olarak eklenir.  
   
 - Bir <xref:System.Xml.Linq.XAttribute> öznitelik olarak eklenir.  
   
-- Bir <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment>, veya <xref:System.Xml.Linq.XText> alt içerik eklenir.  
+- <xref:System.Xml.Linq.XProcessingInstruction>, Veyaalt<xref:System.Xml.Linq.XText>içerikolarakeklenir. <xref:System.Xml.Linq.XComment>  
   
-- Bir <xref:System.Collections.IEnumerable> numaralandırılmış alan şeklinde ve bu kuralların sonuçları için özyinelemeli olarak uygulanır.  
+- Bir <xref:System.Collections.IEnumerable> numaralandırılır ve bu kurallar sonuçlara özyinelemeli olarak uygulanır.  
   
-- Başka herhangi bir tür için kendi `ToString` yöntemi çağrılır ve sonuç metin içeriği eklenir.  
+- Diğer herhangi bir tür için, `ToString` metodu çağrılır ve sonuç metin içeriği olarak eklenir.  
   
-### <a name="creating-an-xelement-with-content"></a>Bir XElement ile içerik oluşturma  
- Oluşturabileceğiniz bir <xref:System.Xml.Linq.XElement> içeren tek bir yöntem çağrısı ile basit içerik. Bunu yapmak için ikinci parametre olarak, içeriği aşağıdaki gibi belirtin:  
+### <a name="creating-an-xelement-with-content"></a>İçerikle XElement oluşturma  
+ Tek bir yöntem çağrısıyla <xref:System.Xml.Linq.XElement> basit içerik içeren bir oluşturabilirsiniz. Bunu yapmak için, içeriği ikinci parametre olarak aşağıdaki gibi belirtin:  
   
 ```csharp  
 XElement n = new XElement("Customer", "Adventure Works");  
@@ -76,7 +76,7 @@ Console.WriteLine(n);
 <Customer>Adventure Works</Customer>  
 ```  
   
- Nesnesinin her türlü içeriği olarak geçirebilirsiniz. Örneğin, aşağıdaki kod bir değişken içeren bir öğe oluşturur nokta içerik olarak sayısı:  
+ Herhangi bir nesne türünü içerik olarak geçirebilirsiniz. Örneğin, aşağıdaki kod, içerik olarak kayan noktalı sayı içeren bir öğe oluşturur:  
   
 ```csharp  
 XElement n = new XElement("Cost", 324.50);  
@@ -89,10 +89,10 @@ Console.WriteLine(n);
 <Cost>324.5</Cost>  
 ```  
   
- Kayan nokta numarası Kutulu ve oluşturucuya geçirilen. Paketlenmiş sayıyı bir dizeye dönüştürülür ve öğenin içeriğini kullanılan.  
+ Kayan nokta numarası paketlenmelidir ve oluşturucuya geçirilir. Kutulanmış sayı bir dizeye dönüştürülür ve öğesinin içeriği olarak kullanılır.  
   
-### <a name="creating-an-xelement-with-a-child-element"></a>Bir XElement olan bir alt öğesi oluşturma  
- Örneği geçirirseniz <xref:System.Xml.Linq.XElement> sınıfı Oluşturucu içerik bağımsız değişkeni için olan bir alt öğesi bir öğe oluşturur:  
+### <a name="creating-an-xelement-with-a-child-element"></a>Alt öğesiyle XElement oluşturma  
+ İçerik bağımsız değişkeni için <xref:System.Xml.Linq.XElement> sınıfının bir örneğini geçirirseniz, Oluşturucu bir alt öğesi olan bir öğesi oluşturur:  
   
 ```csharp  
 XElement shippingUnit = new XElement("ShippingUnit",  
@@ -109,8 +109,8 @@ Console.WriteLine(shippingUnit);
 </ShippingUnit>  
 ```  
   
-### <a name="creating-an-xelement-with-multiple-child-elements"></a>Bir XElement ile birden çok alt öğeleri oluşturma  
- Bir süre içinde geçirdiğiniz <xref:System.Xml.Linq.XElement> içerik için nesneleri. Her biri <xref:System.Xml.Linq.XElement> nesneleri bir alt öğesi eklenmiştir.  
+### <a name="creating-an-xelement-with-multiple-child-elements"></a>Birden çok alt öğe içeren bir XElement oluşturma  
+ İçerik için bir dizi <xref:System.Xml.Linq.XElement> nesne geçirebilirsiniz. <xref:System.Xml.Linq.XElement> Nesnelerin her biri bir alt öğe olarak dahil edilir.  
   
 ```csharp  
 XElement address = new XElement("Address",  
@@ -133,7 +133,7 @@ Console.WriteLine(address);
 </Address>  
 ```  
   
- Yukarıdaki örnekte genişleterek tüm XML ağacının, şu şekilde oluşturabilirsiniz:  
+ Yukarıdaki örneği genişleterek, bir XML ağacının tamamını aşağıdaki gibi oluşturabilirsiniz:  
   
 ```csharp  
 XElement contacts =  
@@ -169,8 +169,8 @@ Console.WriteLine(contacts);
 </Contacts>  
 ```  
 
-### <a name="creating-an-xelement-with-an-xattribute"></a>Bir XElement bir XAttribute ile oluşturma
- Örneği geçirirseniz <xref:System.Xml.Linq.XAttribute> sınıfı Oluşturucu içerik bağımsız değişkeni bir öznitelik bir öğe oluşturur:
+### <a name="creating-an-xelement-with-an-xattribute"></a>XAttribute ile XElement oluşturma
+ İçerik bağımsız değişkeni için <xref:System.Xml.Linq.XAttribute> sınıfının bir örneğini geçirirseniz, Oluşturucu bir özniteliği olan bir öğesi oluşturur:
 
 ```csharp  
 XElement phone = new XElement("Phone",  
@@ -186,7 +186,7 @@ Console.WriteLine(phone);
 ```   
 
 ### <a name="creating-an-empty-element"></a>Boş bir öğe oluşturma  
- Boş bir oluşturmak için <xref:System.Xml.Linq.XElement>, oluşturucuya herhangi bir içerik geçirmeyin. Aşağıdaki örnek, boş bir öğe oluşturur:  
+ Boş <xref:System.Xml.Linq.XElement>bir oluşturmak için, oluşturucuya herhangi bir içerik geçirmeyin. Aşağıdaki örnek boş bir öğe oluşturur:  
   
 ```csharp  
 XElement n = new XElement("Customer");  
@@ -199,10 +199,10 @@ Console.WriteLine(n);
 <Customer />  
 ```  
   
-### <a name="attaching-vs-cloning"></a>Ekleme ve kopyalama  
- Eklerken daha önce de belirtildiği <xref:System.Xml.Linq.XNode> (dahil olmak üzere <xref:System.Xml.Linq.XElement>) veya <xref:System.Xml.Linq.XAttribute> nesneler, yeni içerik üstü yoksa, nesneleri yalnızca bağlı XML ağacına. Yeni içerik zaten üst öğe ve başka bir XML ağacının bir parçası ise, yeni içerik kopyalanmış olan ve yeni kopyalanan içeriği XML ağacına eklenir.  
+### <a name="attaching-vs-cloning"></a>Ekleme ile kopyalama  
+ Daha önce belirtildiği gibi, ( <xref:System.Xml.Linq.XNode> dahil) <xref:System.Xml.Linq.XElement>veya <xref:System.Xml.Linq.XAttribute> nesneleri eklerken (dahil), yeni içeriğin üst öğesi yoksa, nesneler yalnızca XML ağacına eklenir. Yeni içerik zaten üst öğe ise ve başka bir XML ağacının parçasıysa, yeni içerik kopyalanır ve yeni kopyalanan içerik XML ağacına eklenir.  
 
-Aşağıdaki örnek, bir ağaca üst öğeye sahip bir öğe eklediğinizde ve bir ağaca hiçbir üst öğesi ile bir öğe eklediğinizde davranış gösterir.
+Aşağıdaki örnek, bir ağaca bir üst öğeye sahip bir öğe eklediğinizde ve bir ağaca üst öğesi olmayan bir öğe eklediğinizde davranışını gösterir.
 
 ```csharp  
 // Create a tree with a child element.  
@@ -236,4 +236,4 @@ Console.WriteLine("Child2 was {0}",
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML ağaçları oluşturma (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [XML ağaçları oluşturma (C#)](./linq-to-xml-overview.md)

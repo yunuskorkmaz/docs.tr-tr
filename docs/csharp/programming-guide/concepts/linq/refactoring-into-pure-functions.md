@@ -1,36 +1,36 @@
 ---
-title: Saf işlevler halinde (C#) yeniden düzenleme
+title: Saf IŞLEVLERE yeniden düzenleme (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 0ddf3eb937f0ff9ee6b0ce289d73be7640499ba4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d6e8657da0f7db06d2fdbe1231bdc48e1aa0f954
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483981"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591343"
 ---
-# <a name="refactoring-into-pure-functions-c"></a>Saf işlevler halinde (C#) yeniden düzenleme
+# <a name="refactoring-into-pure-functions-c"></a>Saf IŞLEVLERE yeniden düzenleme (C#)
 
-Saf işlevsel dönüşümlere önemli bir yönüdür saf işlevler kullanarak kodunuzu yeniden değiştirmenin nasıl öğrenmeye devam ettiği.  
+Saf işlevsel dönüştürmelerin önemli bir yönü, saf işlevleri kullanarak kodu yeniden düzenleme hakkında bilgi ediniyor.  
   
 > [!NOTE]
->  Saf işlevler kullanan programlar yeniden düzenleyin, işlevsel programlama, ortak terminoloji olur. Visual Basic ve C++ dillerinde, kendi dillerde işlevleri kullanarak bu hizalar. Ancak, C# dilinde işlevler yöntemi çağrılır. Bu tartışma amacı doğrultusunda, saf işlev C# dilinde bir yöntem olarak uygulanır.  
+>  İşlevsel programlamada ortak terminoloji, programları saf işlevleri kullanarak yeniden düzenleme biçimleridir. Visual Basic ve C++' de, bu, ilgili dillerdeki işlevlerin kullanımıyla hizalanır. Ancak, içindeki C#işlevleri yöntemler olarak adlandırılır. Bu tartışmanın amaçları doğrultusunda, saf bir işlev ' de C#bir yöntem olarak uygulanır.  
   
- Bu bölümde daha önce belirtildiği gibi saf işlev iki yararlı özelliklere sahiptir:  
+ Daha önce bu bölümde belirtildiği gibi, saf bir işlev iki yararlı özelliğe sahiptir:  
   
-- Bu, yan etkileri vardır. İşlevi, tüm değişkenler veya işlev dışında herhangi bir türde verileri değiştirmez.  
+- Yan etkileri yoktur. İşlev herhangi bir değişken veya işlev dışındaki herhangi bir türdeki veriyi değiştirmez.  
   
-- Tutarlı olur. Aynı giriş veri kümesi düşünüldüğünde, bu her zaman aynı çıkış değeri döndürür.  
+- Tutarlıdır. Aynı giriş verisi kümesi verildiğinde, her zaman aynı çıkış değerini döndürür.  
   
- Yollarından fonksiyonel programlama için geçiş, gereksiz yan etkileri ve dış bağımlılıkları ortadan kaldırmak için mevcut kodu yeniden düzenleyin sağlamaktır. Bu şekilde, varolan kod sürümlerini saf işlev oluşturabilirsiniz.  
+ İşlevsel programlamaya geçiş yapmanın bir yolu, gereksiz yan etkileri ve dış bağımlılıkları ortadan kaldırmak için mevcut kodu yeniden düzenleme yöntemidir. Bu şekilde, var olan kodun saf işlev sürümlerini oluşturabilirsiniz.  
   
- Bu konuda ele alınmıştır saf işlev ne olduğunu ve ne değildir. [Öğreticisi: WordprocessingML belgesindeki içeriği düzenleme (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) öğretici WordprocessingML belgesinin işlemek nasıl gösterir ve nasıl saf işlev kullanarak yeniden düzenleme için iki örnek verilmiştir.  
+ Bu konuda, saf bir işlevin ne olduğu ve ne olmadığı açıklanmaktadır. [Öğretici: WordprocessingML belgesi (C#)](./shape-of-wordprocessingml-documents.md) öğreticisindeki içeriği işlemek bir WordprocessingML belgesinin nasıl düzenleneceğini gösterir ve saf bir işlev kullanarak yeniden düzenleme ile iki örnek içerir.  
   
-## <a name="eliminating-side-effects-and-external-dependencies"></a>Yan etkiler ve dış bağımlılıkları ortadan kaldırır.  
- Aşağıdaki örnekler, iki saf olmayan işlevler ve saf işlev karşılaştırın.  
+## <a name="eliminating-side-effects-and-external-dependencies"></a>Yan etkileri ve dış bağımlılıkları ortadan kaldırma  
+ Aşağıdaki örneklerde, saf olmayan iki işlev ve bir saf işlev kontrast vardır.  
   
-### <a name="non-pure-function-that-changes-a-class-member"></a>Sınıf üyesi değişiklikleri saf olmayan işlevi  
- Aşağıdaki kodda, `HyphenatedConcat` işlevi değil, saf işlev değiştirdiği çünkü `aMember` sınıftaki veri üyesi:  
+### <a name="non-pure-function-that-changes-a-class-member"></a>Bir sınıf üyesini değiştiren saf olmayan Işlev  
+ Aşağıdaki kodda, `HyphenatedConcat` işlev saf bir işlev değildir, çünkü sınıfındaki `aMember` veri üyesini değiştirir:  
   
 ```csharp  
 public class Program  
@@ -56,10 +56,10 @@ public class Program
 StringOne-StringTwo  
 ```  
   
- Bu verilerin değiştirilmesi olup ilgisiz olduğuna dikkat edin `public` veya `private` erişim ya da bir `static` veya bir örnek üyesi. Saf işlev, işlev dışındaki tüm verileri değiştirmez.  
+ Değiştirilen `public` `static` verilerin veya bir üye ya da bir örnek üyesi olup olmadığı konusunda ilgisiz olduğunu unutmayın. `private` Saf bir işlev, işlevin dışındaki herhangi bir veriyi değiştirmez.  
   
-### <a name="non-pure-function-that-changes-an-argument"></a>Bağımsız değişken değişiklikleri saf olmayan işlevi  
- Kendi parametre içeriğini değiştirir ayrıca, aynı işlevi aşağıdaki sürümü saf olmadığından `sb`.  
+### <a name="non-pure-function-that-changes-an-argument"></a>Bir bağımsız değişkeni değiştiren saf olmayan Işlev  
+ Ayrıca, parametresinin `sb`içeriğini değiştirdiği için aynı işlevin aşağıdaki sürümü saf değildir.  
   
 ```csharp  
 public class Program  
@@ -78,13 +78,13 @@ public class Program
 }  
 ```  
   
- Çünkü programın bu sürümünü aynı ilk sürümde çıktı üretir `HyphenatedConcat` işlevi, birinci parametresinin değerini (durum) çağırarak değişti <xref:System.Text.StringBuilder.Append%2A> üye işlevi. Bu değişikliği rağmen bu durumu kendi lehine oluştuğunu unutmayın, `HyphenatedConcat` çağrı değerli parametre geçirme kullanır.  
+ Programın bu sürümü ilk sürümle aynı çıktıyı üretir, çünkü `HyphenatedConcat` işlev <xref:System.Text.StringBuilder.Append%2A> üye işlevini çağırarak ilk parametresinin değerini (durum) değiştirdi. Bu değişiklik, bu olguyu, çağrı- `HyphenatedConcat` değer parametresini kullanan bir olgusuna rağmen oluştuğunu unutmayın.  
   
 > [!IMPORTANT]
->  Değere göre bir parametre geçirirseniz başvuru türleri için geçirilen bir nesneye başvuru bir kopyasını sonuçlanır. (Yeni bir nesneye başvuru değişkenini atanıncaya kadar) Bu hala özgün başvuru aynı örnek verileri ile ilişkili bir kopyasıdır. Başvuru ile çağrı parametreyi değiştirmek bir işlev için mutlaka gerekli değildir.  
+>  Başvuru türleri için bir parametreyi değere göre geçirirseniz, başvurunun geçirildiği bir nesnenin kopyasına neden olur. Bu kopya, özgün başvurusuyla aynı örnek verileriyle ilişkili olmaya devam eder (başvuru değişkeni yeni bir nesneye atanana kadar). Bir parametreyi değiştirmek için bir işlev için başvuruya göre arama gerekli değildir.  
   
-### <a name="pure-function"></a>Saf işlev  
-Bu program'ın sonraki sürümü nasıl uygulayacağınızı gösteren `HyphenatedConcat` işlevi saf işlev.  
+### <a name="pure-function"></a>Saf Işlev  
+Programın bu sonraki sürümü, `HyphenatedConcat` işlevinin saf işlev olarak nasıl uygulanacağını gösterir.  
   
 ```csharp  
 class Program  
@@ -103,16 +103,16 @@ class Program
 }  
 ```  
   
- Bu sürümü çıktı satırını yeniden üretir: `StringOne-StringTwo`. Birleştirilmiş değer korumak için bu Ara değişkende depolandığını unutmayın `s2`.  
+ Yine, bu sürüm aynı çıkış satırını üretir: `StringOne-StringTwo`. Birleştirilmiş değeri bekletmek için, ara değişkende `s2`depolandığını unutmayın.  
   
- Yerel olarak Hanuka işlevleri yazmak için kullanışlı bir yaklaşım olan (diğer bir deyişle, bunlar bildirme ve yerel değişkenleri değiştirin), ancak genel olarak saf. Bu tür işlevleri birçok arzu composability özelliklere sahip, ancak bazı basit döngüyü aynı şeyi yaptığınız zaman, özyineleme kullanmak zorunda gibi daha karışık işlevsel programlama deyimlerini, kaçının.  
+ Çok yararlı olabilecek bir yaklaşım, yerel olarak etkileyici olan işlevleri yazmak (yani yerel değişkenleri bildirdikleri ve değiştirdiklerinde), ancak Global olarak saf bir yaklaşımdır. Bu gibi işlevler, istenen ek özelliklerin çoğuna sahiptir, ancak basit bir döngü aynı şeyi gerçekleştirirken özyineleme kullanmak zorunda kalmadan, daha fazla çalışan işlevsel programlama deyimidir.  
   
-## <a name="standard-query-operators"></a>Standart sorgu işleçleri  
- Standart sorgu işleçlerinin önemli bir özelliği, saf işlevler uygulanan ' dir.  
+## <a name="standard-query-operators"></a>Standart sorgu Işleçleri  
+ Standart sorgu işleçlerinin önemli bir özelliği, saf işlevler olarak uygulanırlar.  
   
- Daha fazla bilgi için [standart sorgu işleçlerine genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Daha fazla bilgi için bkz. [Standart sorgu IşleçlerineC#genel bakış ()](./standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Giriş saf işlevsel dönüşümlere (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [İşlevsel Programlama ve Kesin programlama karşılaştırması (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Saf Işlevsel Dönüştürmelere giriş (C#)](./introduction-to-pure-functional-transformations.md)
+- [İşlevsel Programlama ve Kesinlik temelli programlamaC#()](./functional-programming-vs-imperative-programming.md)

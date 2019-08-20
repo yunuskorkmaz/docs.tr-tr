@@ -1,5 +1,5 @@
 ---
-title: Numaralandırma türleri - C# Programlama Kılavuzu
+title: Sabit listesi türleri C# -Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 09/10/2017
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: 669357bbd6527324bbedbcf1f537bf570c63ce5b
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fea12a32d39f98ddc575e2d538e7501d2ff49768
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423661"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590551"
 ---
-# <a name="enumeration-types-c-programming-guide"></a>Numaralandırma türleri (C# programlama Kılavuzu)
+# <a name="enumeration-types-c-programming-guide"></a>Sabit listesi türleriC# (Programlama Kılavuzu)
 
-(Ayrıca bir numaralandırma veya bir sabit listesi adlı) bir numaralandırma türü bir değişkene atanabilir adlandırılmış integral sabitleri tanımlamak için etkili bir yol sağlar. Örneğin, değeri haftanın bir gününü temsil edecek bir değişkeni tanımlamak sahip olduğunuzu varsaymaktadır. Bu değişken her zamankinden depolayacak yalnızca yedi anlamlı değerleri vardır. Bu değerleri tanımlamak için kullanılarak bildirilen bir numaralandırma türü kullanabilirsiniz [enum](../../csharp/language-reference/keywords/enum.md) anahtar sözcüğü.
+Bir sabit listesi türü (numaralandırma veya sabit listesi olarak da adlandırılır), bir değişkene atanabilecek adlandırılmış integral sabitleri kümesini tanımlamak için etkili bir yol sağlar. Örneğin, değeri haftanın gününü temsil edecek bir değişken tanımlamanız gerektiğini varsayın. Bu değişkenin her zaman depolayabileceği yedi anlamlı değer vardır. Bu değerleri tanımlamak için, [enum](../language-reference/keywords/enum.md) anahtar sözcüğü kullanılarak bildirilebilecek bir numaralandırma türü kullanabilirsiniz.
 
 [!code-csharp[csProgGuideEnums#1](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#1)]
 
-Varsayılan olarak temel alınan her öğenin sabit listesi türünde [int](../../csharp/language-reference/builtin-types/integral-numeric-types.md). Önceki örnekte gösterilen şekilde bir virgül kullanarak başka bir integral sayısal tür belirtebilirsiniz. Olası türlerinin tam listesi için bkz. [enum (C# Başvurusu)](../../csharp/language-reference/keywords/enum.md).
+Varsayılan olarak, numaralandırıcıdaki her öğenin temel alınan türü [int](../language-reference/builtin-types/integral-numeric-types.md)'tir. Önceki örnekte gösterildiği gibi, iki nokta üst üste kullanarak başka bir integral sayısal türü belirtebilirsiniz. Olası türlerin tam listesi için bkz. [enum (C# başvuru)](../language-reference/keywords/enum.md).
 
-Temel alınan sayısal değerler, aşağıdaki örnekte gösterildiği gibi temel türdeki tür atama doğrulayabilirsiniz.
+Aşağıdaki örnekte gösterildiği gibi temel alınan türe atama yaparak temeldeki sayısal değerleri doğrulayabilirsiniz.
 
 ```csharp
 Day today = Day.Monday;
@@ -39,57 +39,57 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 // Dec is month number #11.
 ```
 
-Bir sabit listesi yerine bir sayısal tür kullanmanın avantajları şunlardır:
+Sayısal bir tür yerine bir sabit listesi kullanmanın avantajları aşağıda verilmiştir:
 
-- Açıkça için istemci kodu hangi değişken için geçerli değerler belirtin.
+- Değişken için hangi değerlerin geçerli olduğunu açıkça istemci kodu için belirtirsiniz.
 
-- Visual Studio IntelliSense tanımlanan değerleri listeler.
+- Visual Studio 'da, IntelliSense tanımlı değerleri listeler.
 
-Numaralandırıcı listesinde öğelerin değerlerini belirtmediğinizde değerleri otomatik olarak 1 artar. Önceki örnekte, `Day.Sunday` 0 değerine sahiptir `Day.Monday` 1 ve benzeri değerine sahiptir. Yeni bir oluşturduğunuzda `Day` nesnesi, varsayılan değerine sahip olacak `Day.Sunday` , açıkça bu değeri atamazsanız (0). Enum oluşturduğunuzda en mantıklı varsayılan değer seçin ve sıfır değerini verin. Oluşturulduğunda kullanıcılara açıkça bir değer atanmaz ise, varsayılan değere sahip tüm sabit listelerini neden.
+Numaralandırıcı listesindeki öğeler için değer belirtmeyin, değerler otomatik olarak 1 ' den artırılır. Önceki örnekte, `Day.Sunday` 0 değerine sahiptir, `Day.Monday` değeri 1 ' dir ve bu şekilde devam eder. Yeni `Day` bir nesne oluşturduğunuzda, bir değeri açıkça atamadıysanız, varsayılan `Day.Sunday` değeri (0) olur. Bir sabit listesi oluşturduğunuzda, en mantıksal varsayılan değeri seçin ve sıfıra bir değer verin. Bu, tüm Numaralandırmaların, oluşturulduklarında açıkça bir değer atamadığı takdirde, bu varsayılan değere sahip olmasına neden olur.
 
-Değişken `meetingDay` türünde `Day`, sonra da (açık bir yayın olmadan) yalnızca uygulamayı tanımlanan değerlerden birini atayabilirsiniz `Day`. Ve toplantı gün değişirse, yeni bir değer atayabilirsiniz `Day` için `meetingDay`:
+Değişken `meetingDay` `Day`türünde `Day`ise (açık bir atama olmadan), yalnızca tarafından tanımlanan değerlerden birini atayabilirsiniz. Toplantı günü değişirse, öğesinden `Day` öğesine `meetingDay`yeni bir değer atayabilirsiniz:
 
 [!code-csharp[csProgGuideEnums#4](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#4)]
 
 > [!NOTE]
-> Rasgele tamsayı değerdeki atamak mümkün mü `meetingDay`. Örneğin, bu kod satırı hata üretmez: `meetingDay = (Day) 42`. Enum değişkeni yalnızca tanımlanan enum değerlerinden biri tutar, örtük beklentisi olduğundan ancak, bunu kullanmayın. Rastgele bir değeri bir sabit listesi türünde bir değişken için bir yüksek riskli hatalara tanıtmak için atamaktır.
+> Herhangi bir rastgele tamsayı değeri `meetingDay`atamak mümkündür. Örneğin, bu kod satırı bir hata oluşturmaz: `meetingDay = (Day) 42`. Ancak, örtük beklentide bir numaralandırma değişkeninin yalnızca enum tarafından tanımlanan değerlerden birini tutacağından bunu yapmanız gerekmez. Sabit listesi türünde bir değişkene rastgele bir değer atamak için, hatalara yönelik yüksek riskli bir hata ortaya çıkaracak.
 
-Numaralandırıcı listesindeki bir numaralandırma türü öğeler için herhangi bir değer atayın ve hesaplanan değerler de kullanabilirsiniz:
+Bir numaralandırma türünün Numaralandırıcı listesindeki öğelere herhangi bir değer atayabilir ve hesaplanan değerleri de kullanabilirsiniz:
 
 [!code-csharp[csProgGuideEnums#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#3)]
 
 ## <a name="enumeration-types-as-bit-flags"></a>Bit bayrakları olarak numaralandırma türleri
 
-Bir numaralandırma türü bit bayrakları tanımlamak için herhangi bir birleşimini Numaralandırıcı listesinde tanımlanan değerleri depolamak için numaralandırma türünün bir örneği sağlayan kullanabilirsiniz. (Kuşkusuz, bazı birleşimleri anlamlı veya izin verilen program kodunuzda olmayabilir.)
+Bir numaralandırma türü örneğini, Numaralandırıcı listesinde tanımlanan değerlerin herhangi bir birleşimini depolamak üzere bir numaralandırma türü örneği sağlayan bit bayraklarını tanımlamak için kullanabilirsiniz. (Tabii ki, bazı birleşimler program kodunuzda anlamlı veya izin verilebilir olmayabilir.)
 
-Uygulayarak bir bit bayrakları sabit listesi oluşturma <xref:System.FlagsAttribute?displayProperty=nameWithType> özniteliği ve değerleri uygun şekilde tanımlama böylece `AND`, `OR`, `NOT` ve `XOR` bunlar üzerinde bit düzeyinde işlemler gerçekleştirilebilir. Bit bayrakları enum'da "hiçbir bayrakları ayarlanmış." anlamına gelen sıfır değerine sahip adlandırılmış bir sabit Ekle "Hiçbir bayrakları ayarlanmış" gelmez, bayrak sıfır değeri vermeyin.
+<xref:System.FlagsAttribute?displayProperty=nameWithType> Özniteliği uygulayarak ve değerlerini uygun şekilde tanımlayarak bir bit bayrakları numaralandırması oluşturursunuz; bu `AND`sayede, `OR` `NOT` ve `XOR` bit düzeyinde işlemler gerçekleştirilebilir. Bir bit bayrakları numaralandırmasında, "hiçbir bayrak ayarlanmadı" anlamına gelen değeri sıfır olan adlandırılmış sabiti ekleyin. "Bayrak ayarlanmamışsa" bir değere sıfır değeri vermeyin.
 
-Aşağıdaki örnekte, başka bir sürümü `Day` adlı sabit listesi `Days`, tanımlanır. `Days` sahip `Flags` özniteliği ve her bir değeri 2'in sonraki büyük güç atanır. Bu sayede oluşturmak bir `Days` değişken değeri `Days.Tuesday | Days.Thursday`.
+Aşağıdaki örnekte, `Day` sabit listesinin adında `Days`başka bir sürümü tanımlanmıştır. `Days``Flags` özniteliğine sahiptir ve her değere 2 ' nin sonraki daha yüksek gücüne atanır. Bu, `Days` `Days.Tuesday | Days.Thursday`değeri olan bir değişken oluşturmanıza olanak sağlar.
 
 [!code-csharp[csProgGuideEnums#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#2)]
 
-Bir numaralandırma üzerinde bir bayrak belirlemek için mü kullanmak `OR` aşağıdaki örnekte gösterildiği bir işleç:
+Bir numaralandırıcıda bayrak ayarlamak için aşağıdaki örnekte gösterildiği gibi `OR` bit düzeyinde işlecini kullanın:
 
 [!code-csharp[csProgGuideEnums#6](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#6)]
 
-Belirli bir bayrağı ayarlanmış olup olmadığını belirlemek için bir mü kullanmak `AND` işlemi, aşağıdaki örnekte gösterildiği gibi:
+Belirli bir bayrağın ayarlanmış olup olmadığını anlamak için aşağıdaki örnekte gösterildiği gibi `AND` bit düzeyinde bir işlem kullanın:
 
 [!code-csharp[csProgGuideEnums#7](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#7)]
 
-Numaralandırma türleri ile tanımladığınızda göz önüne alınması gerekenler hakkında daha fazla bilgi için <xref:System.FlagsAttribute?displayProperty=nameWithType> özniteliği için bkz: <xref:System.Enum?displayProperty=nameWithType>.
+<xref:System.FlagsAttribute?displayProperty=nameWithType> Özniteliği ile numaralandırma türlerini tanımlarken göz önünde bulundurmanız gerekenler hakkında daha fazla bilgi için, bkz <xref:System.Enum?displayProperty=nameWithType>.
 
-## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>Keşfedin ve sabit listesi değerlerinin işlemek için System.Enum yöntemlerini kullanma
+## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>Enum değerlerini bulma ve işlemek için System. Enum yöntemlerini kullanma
 
-Tüm numaralandırmalar örnekleridir <xref:System.Enum?displayProperty=nameWithType> türü. Yeni sınıflardan türetilemez <xref:System.Enum?displayProperty=nameWithType>, ancak enum örneği değerleri hakkında bilgi bulmak ve yöntemlerini kullanabilirsiniz.
+Tüm numaralandırmalar <xref:System.Enum?displayProperty=nameWithType> türün örnekleridir. Yeni sınıfları öğesinden <xref:System.Enum?displayProperty=nameWithType>türetemezsiniz, ancak kendi yöntemlerini kullanarak bir numaralandırma örneğindeki değerleri hakkında bilgi bulabilir ve bunları değiştirebilirsiniz.
 
 [!code-csharp[csProgGuideEnums#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#5)]
 
 Daha fazla bilgi için bkz. <xref:System.Enum?displayProperty=nameWithType>.
 
-Bir genişletme yöntemi kullanarak, bir numaralandırma için yeni bir yöntem de oluşturabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Numaralandırma için yeni bir yöntem oluşturma](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
+Ayrıca, bir uzantı yöntemi kullanarak bir numaralandırma için yeni bir yöntem oluşturabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Bir numaralandırma](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)Için yeni bir yöntem oluşturun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Enum?displayProperty=nameWithType>
-- [C# Programlama Kılavuzu](../../csharp/programming-guide/index.md)
-- [enum](../../csharp/language-reference/keywords/enum.md)
+- [C# Programlama Kılavuzu](./index.md)
+- [enum](../language-reference/keywords/enum.md)

@@ -1,5 +1,5 @@
 ---
-title: Kutulama ve kutudan çıkarma - C# Programlama Kılavuzu
+title: Kutulama ve kutudan çıkarma C# -Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,83 +10,83 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 811123ac195bbc92d9e690dcd828535daa246460
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 849983bb9cce6c9e0f41247a898747300fd29435
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878936"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588529"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Kutulama ve Kutudan Çıkarma (C# Programlama Kılavuzu)
-Kutulama dönüştürme işlemi olan bir [değer türü](../../../csharp/language-reference/keywords/value-types.md) türüne `object` ya da bu değer türü tarafından uygulanan herhangi bir arabirim türüne. CLR bir değer türünü kutu zaman içindeki değeri sarar. bir <xref:System.Object?displayProperty=nameWithType> örneği ve Yönetilen öbekte depolar. Kutudan çıkarma, değer türünü nesneden çıkarır. Örtük kutulama; kutudan çıkarma açıktır. Kutulama ve kutudan çıkarma kavramı, C# birleştirilmiş görünümünü herhangi bir türde bir değer bir nesne işlenebilir tür sistemi vurgular.  
+Kutulama, bir [değer türünü](../../language-reference/keywords/value-types.md) türüne `object` veya bu değer türü tarafından uygulanan herhangi bir arabirim türüne dönüştürme işlemidir. CLR bir değer türüne sahip olduğunda, değeri bir <xref:System.Object?displayProperty=nameWithType> örnek içinde sarmalar ve yönetilen yığında depolar. Kutudan çıkarma, nesneden değer türünü ayıklar. Paketleme örtük; kutudan çıkarma açıktır. Kutulama ve kutudan çıkarma kavramı, herhangi bir türdeki C# değerin bir nesne olarak değerlendiribileceği tür sisteminin Birleşik görünümünü içermez.  
   
- Aşağıdaki örnekte, tam sayı değişkeni `i` olduğu *Kutulu* ve nesneye atanmış `o`.  
+ Aşağıdaki örnekte, tamsayı değişkeni `i` paketlenmelidir ve nesnesine `o`atanır.  
   
  [!code-csharp[csProgGuideTypes#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#14)]  
   
- Nesne `o` ardından kullanılabilir kutudan çıkarılır ve tamsayı değişkenine atanır `i`:  
+ Nesne `o` daha sonra kutulanabilir ve tamsayı değişkenine `i`atanabilir:  
   
  [!code-csharp[csProgGuideTypes#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#15)]  
   
- Aşağıdaki örnekler, nasıl kutulama C# dilinde kullanıldığını gösterir.  
+ Aşağıdaki örnekler, kutulamayı ' de C#nasıl kullanıldığını gösterir.  
   
  [!code-csharp[csProgGuideTypes#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#47)]  
   
 ## <a name="performance"></a>Performans  
- Basit atamalara ilişkin, kutulama ve kutudan çıkarma hesaplama açısından pahalı işlemlerdir. Bir değer türü kutulandığında, yeni bir nesne ayrılan ve oluşturulan gerekir. Daha düşük bir düzeyde olmak kaydıyla kutudan çıkarmak için gereken dönüştürme de hesaplama açısından pahalıdır. Daha fazla bilgi için [performans](../../../../docs/framework/performance/performance-tips.md).  
+ Basit atamalara göre, kutulama ve kutudan çıkarma, pahalı maliyetli işlemlerdir. Bir değer türü paketlenayarlandığında, yeni bir nesne ayrılmalıdır ve oluşturulmalıdır. Daha düşük bir dereceye kadar, kutudan çıkarma için gereken atama da pahalı bir hesaplama olur. Daha fazla bilgi için bkz. [performans](../../../framework/performance/performance-tips.md).  
   
 ## <a name="boxing"></a>Kutulama  
- Kutulama, değer türleri içinde atık olarak toplanmış yığınla depolamak için kullanılır. Örtük kutulama olduğu bir [değer türü](../../../csharp/language-reference/keywords/value-types.md) türüne `object` ya da bu değer türü tarafından uygulanan herhangi bir arabirim türüne. Bir değer türü kutulama, yığındaki bir nesne örneği ayırır ve değeri yeni nesneye kopyalar.  
+ Paketleme, değer türlerini atık toplanmış yığında depolamak için kullanılır. Kutulama, bir [değer türünün](../../language-reference/keywords/value-types.md) türüne `object` veya bu değer türü tarafından uygulanan herhangi bir arabirim türüne örtük olarak dönüştürülmedir. Değer türünü kutulama yığında bir nesne örneği ayırır ve değeri yeni nesneye kopyalar.  
   
- Aşağıdaki değer türündeki değişken bildirimini göz önünde bulundurun:  
+ Bir değer türü değişkeninin aşağıdaki bildirimini göz önünde bulundurun:  
   
  [!code-csharp[csProgGuideTypes#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#17)]  
   
- Aşağıdaki deyim örtük olarak kutulama işlemini değişkeni geçerlidir `i`:  
+ Aşağıdaki ifade, değişkende `i`kutulama işlemini örtülü olarak uygular:  
   
  [!code-csharp[csProgGuideTypes#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#18)]  
   
- Bu ifade sonucu, bir nesne başvurusu oluşturur `o`, stack türünde bir değer başvuran `int`, yığında. Bu değer değişkenine atanan değer türü değerinin bir kopyasıdır `i`. İki değişken arasındaki farkı `i` ve `o`, paketleme dönüştürmesi, aşağıdaki görüntüde gösterilmiştir:  
+ Bu deyimin sonucu, yığında, yığında tür `o` `int`değerine başvuran bir nesne başvurusu oluşturuyor. Bu değer, değişkene `i`atanan değer türü değerinin bir kopyasıdır. İki değişken `i` arasındaki fark, ve `o`aşağıdaki kutulama dönüştürme görüntüsünde gösterilmektedir:  
   
- ![İ o arasındaki farkı gösteren grafik değişkenleri.](./media/boxing-and-unboxing/boxing-operation-i-o-variables.gif)    
+ ![İ ve o değişkenleri arasındaki farkı gösteren grafik.](./media/boxing-and-unboxing/boxing-operation-i-o-variables.gif)    
   
- Aşağıdaki örnekte olduğu gibi açıkça kutulama gerçekleştirmek mümkündür, ancak açık kutulama hiçbir zaman gerekli değildir:  
+ Kutulamayı aşağıdaki örnekte olduğu gibi açıkça gerçekleştirmek de mümkündür, ancak açık kutulama hiçbir şekilde gerekli değildir:  
   
  [!code-csharp[csProgGuideTypes#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#19)]  
   
 ## <a name="description"></a>Açıklama  
- Bu örnek, bir tam sayı değişkeni dönüştürür `i` nesneye `o` kutulama kullanarak. Ardından, değişkeninde depolanan değer `i` değiştirilirse `123` için `456`. Örnek, baştaki değer türünün ve kutulanmış nesnenin ayrı bellek konumları kullandığını ve bu nedenle farklı değerler depoluyor olabileceğini göstermektedir.  
+ Bu örnek, kutulama kullanarak bir `i` tamsayı değişkenini nesnesine `o` dönüştürür. Ardından, değişkeninde `i` depolanan değer ' `456`dan `123` ' a değiştirilir. Örnek, özgün değer türü ve kutulanmış nesnenin ayrı bellek konumları kullandığı ve bu nedenle farklı değerleri depolayabileceği gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideTypes#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#16)]  
   
-## <a name="unboxing"></a>Kutudan çıkarma  
- Kutudan çıkarma bir dönüştürmedir türünden `object` için bir [değer türü](../../../csharp/language-reference/keywords/value-types.md) veya bir arabirim türünden arabirimi uygulayan bir değer türü. Bir kutudan çıkarma işlemi şunlardan oluşur:  
+## <a name="unboxing"></a>Çıkarma  
+ Kutudan çıkarma, türden `object` bir [değer türüne](../../language-reference/keywords/value-types.md) veya arabirim türünden arabirimi uygulayan bir değer türüne açık bir dönüşümtür. Kutudan çıkarma işlemi aşağıdakilerden oluşur:  
   
-- Verilen değer türünün kutulanmış bir değer olduğundan emin olmak için nesne örneğini denetleme.  
+- Verilen değer türünün paketlenmiş bir değeri olduğundan emin olmak için nesne örneği denetleniyor.  
   
-- Değerin örnekten değer türü değişkenine kopyalanması.  
+- Değer, örnekten değer türü değişkenine kopyalanıyor.  
   
- Aşağıdaki deyimleri, kutulama ve kutudan çıkarma işlemlerini göstermektedir:  
+ Aşağıdaki deyimler, kutulama ve kutudan çıkarma işlemlerini gösterir:  
   
  [!code-csharp[csProgGuideTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#21)]  
   
- Aşağıdaki şekil önceki deyimlerin sonucunu göstermektedir: 
+ Aşağıdaki şekilde, önceki ifadelerin sonucu gösterilmektedir: 
   
- ![Bir paketi açma dönüştürmesi gösteren grafik.](./media/boxing-and-unboxing/unboxing-conversion-operation.gif)
+ ![Kutudan çıkarma dönüşümünü gösteren grafik.](./media/boxing-and-unboxing/unboxing-conversion-operation.gif)
   
- Çalışma zamanında başarılı olması için değer türlerinin kaydıyla kutudan çıkarmak için kutulanarak öğe kutulama, değer türünün bir örneği tarafından daha önce oluşturulmuş bir nesneye bir başvuru olmalıdır. Açmaya `null` neden olan bir <xref:System.NullReferenceException>. Türüne neden uyumsuz bir değere bir başvuru açmaya bir <xref:System.InvalidCastException>.  
+ Değer türlerinin serbest bırakılmasının çalışma zamanında başarılı olması için, kutudan çıkarılmış olan öğe, bu değer türünün bir örneğini kutulama tarafından daha önce oluşturulmuş bir nesneye başvuru olmalıdır. Bir kaldırma `null` girişimi bir <xref:System.NullReferenceException>olur. Uyumsuz bir değer türüne başvurunun kaldırılması denenmeye neden olur <xref:System.InvalidCastException>.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, geçersiz bir kutulama bir kullanım durumu ve ortaya çıkan gösterir `InvalidCastException`. Kullanarak `try` ve `catch`, hata oluştuğunda bir hata iletisi görüntülenir.  
+ Aşağıdaki örnek, geçersiz kutudan çıkarma ve sonuç olarak ortaya çıkan `InvalidCastException`bir durumu gösterir. `try` Ve`catch`kullanarak, hata oluştuğunda bir hata mesajı görüntülenir.  
   
  [!code-csharp[csProgGuideTypes#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#20)]  
   
- Bu programın çıktısı şudur:  
+ Bu program çıkışlar:  
   
  `Specified cast is not valid. Error: Incorrect unboxing.`  
   
- Deyimi değiştirirseniz:  
+ İfadesini değiştirirseniz:  
   
 ```csharp
 int j = (short) o;  
@@ -98,7 +98,7 @@ int j = (short) o;
 int j = (int) o;  
 ```  
   
- dönüştürme yapılır ve şu çıktıyı alırsınız:  
+ dönüştürme gerçekleştirilecek ve şu çıktıyı alacaksınız:  
   
  `Unboxing OK.`  
   
@@ -108,10 +108,10 @@ int j = (int) o;
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için:  
   
-- [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Başvuru Türleri](../../language-reference/keywords/reference-types.md)  
   
-- [Değer Türleri](../../../csharp/language-reference/keywords/value-types.md)  
+- [Değer Türleri](../../language-reference/keywords/value-types.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [C# Programlama Kılavuzu](../index.md)

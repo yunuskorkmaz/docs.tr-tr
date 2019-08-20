@@ -1,6 +1,6 @@
 ---
-title: Aritmetik işleçler - C# başvurusu
-description: Hakkında bilgi edinin C# sayısal türlerle çarpma, bölme, kalan, toplama ve çıkarma işlemleri gerçekleştiren işleçleri.
+title: Aritmetik işleçler- C# başvuru
+description: Sayısal türlerle C# çarpma, bölme, geri kalan, toplama ve çıkarma işlemleri gerçekleştiren işleçler hakkında bilgi edinin.
 ms.date: 03/27/2019
 author: pkulikov
 f1_keywords:
@@ -27,145 +27,145 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 02b27270c93550278308900382ae05091edb2543
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661542"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608373"
 ---
-# <a name="arithmetic-operators-c-reference"></a>Aritmetik işleçler (C# Başvurusu)
+# <a name="arithmetic-operators-c-reference"></a>Aritmetik işleçler (C# başvuru)
 
-Aşağıdaki işleçleri ile sayısal türleri aritmetik işlemleri gerçekleştirin:
+Aşağıdaki işleçler sayısal türlerle aritmetik işlemler gerçekleştirir:
 
-- Birli [ `++` (artırma)](#increment-operator-), [ `--` (azaltma)](#decrement-operator---), [ `+` (artı)](#unary-plus-and-minus-operators), ve [ `-` (eksi)](#unary-plus-and-minus-operators) işleçleri
-- İkili [ `*` (çarpma)](#multiplication-operator-), [ `/` (bölme)](#division-operator-), [ `%` (kalanını)](#remainder-operator-), [ `+` () ek olarak)](#addition-operator-), ve [ `-` (çıkarma)](#subtraction-operator--) işleçleri
+- [ Birli`++` (artış)](#increment-operator-), [ `--` (azaltma)](#decrement-operator---), [ `+` (artı)](#unary-plus-and-minus-operators)ve [ `-` (eksi)](#unary-plus-and-minus-operators) işleçler
+- [ İkili`*` (çarpma)](#multiplication-operator-), [ `/` ](#division-operator-) [ (bölme`%` ), (geri kalan)](#remainder-operator-), [ (toplama)ve(çıkarma)işleçleri`+` ](#addition-operator-) [ `-` ](#subtraction-operator--)
 
-Tüm bu işleçleri destekler [integral](../builtin-types/integral-numeric-types.md) ve [kayan nokta](../builtin-types/floating-point-numeric-types.md) sayısal türler.
+Bu işleçler tüm [integral](../builtin-types/integral-numeric-types.md) ve [kayan nokta](../builtin-types/floating-point-numeric-types.md) sayısal türlerini destekler.
 
-## <a name="increment-operator-"></a>Artış işleci ++
+## <a name="increment-operator-"></a>Artış işleci + +
 
-Tekli artırma işleci `++` işleneniyle 1 artar. İşlenen, bir değişken olmalıdır bir [özelliği](../../programming-guide/classes-and-structs/properties.md) erişim veya [dizin oluşturucu](../../../csharp/programming-guide/indexers/index.md) erişim.
+Birli artış işleci `++` , işleneni 1 artırır. İşlenen bir değişken, [özellik](../../programming-guide/classes-and-structs/properties.md) erişimi veya [Dizin Oluşturucu](../../programming-guide/indexers/index.md) erişimi olmalıdır.
 
-Artırım işleci iki biçimde desteklenir: sonek artırma işlecini `x++`ve önek artırma işleci `++x`.
+Artırma işleci iki biçimde desteklenir: Sonek artışı işleci, `x++`ve önek artışı işleci,. `++x`
 
 ### <a name="postfix-increment-operator"></a>Sonek artırma işleci
 
-Sonucu `x++` değeri `x` *önce* aşağıdaki örnekte gösterildiği gibi işlem:
+Sonucu `x++` , aşağıdaki örnekte gösterildiği gibi, `x` işlemden *önceki* değeridir:
 
 [!code-csharp-interactive[postfix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixIncrement)]
 
-### <a name="prefix-increment-operator"></a>Önek artırma işleci
+### <a name="prefix-increment-operator"></a>Ön ek artırma işleci
 
-Sonucu `++x` değeri `x` *sonra* aşağıdaki örnekte gösterildiği gibi işlem:
+Sonucu `++x` , aşağıdaki örnekte gösterildiği gibi, `x` işlemden *sonraki* değerdir:
 
 [!code-csharp-interactive[prefix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixIncrement)]
 
 ## <a name="decrement-operator---"></a>Azaltma işleci--
 
-Birli azaltma işleci `--` azaltır işleneniyle 1. İşlenen, bir değişken olmalıdır bir [özelliği](../../programming-guide/classes-and-structs/properties.md) erişim veya [dizin oluşturucu](../../../csharp/programming-guide/indexers/index.md) erişim.
+Birli azaltma işleci `--` , işleneninin 1 değerini azaltır. İşlenen bir değişken, [özellik](../../programming-guide/classes-and-structs/properties.md) erişimi veya [Dizin Oluşturucu](../../programming-guide/indexers/index.md) erişimi olmalıdır.
 
-Azaltma işleci iki biçimde desteklenir: sonek azaltma işlecinin `x--`ve önek azaltma işleci `--x`.
+Azaltma işleci iki formda desteklenir: sonek azaltma işleci, `x--`ve önek azaltma işleci,. `--x`
 
 ### <a name="postfix-decrement-operator"></a>Sonek azaltma işleci
 
-Sonucu `x--` değeri `x` *önce* aşağıdaki örnekte gösterildiği gibi işlem:
+Sonucu `x--` , aşağıdaki örnekte gösterildiği gibi, `x` işlemden *önceki* değeridir:
 
 [!code-csharp-interactive[postfix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixDecrement)]
 
 ### <a name="prefix-decrement-operator"></a>Önek azaltma işleci
 
-Sonucu `--x` değeri `x` *sonra* aşağıdaki örnekte gösterildiği gibi işlem:
+Sonucu `--x` , aşağıdaki örnekte gösterildiği gibi, `x` işlemden *sonraki* değerdir:
 
 [!code-csharp-interactive[prefix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixDecrement)]
 
 ## <a name="unary-plus-and-minus-operators"></a>Birli artı ve eksi işleçleri
 
-Birli `+` işleci, işlenenin değerini döndürür. Birli `-` işleci, işlenenin sayısal olumsuzlama hesaplar.
+Birli `+` işleç, işleneninin değerini döndürür. Birli `-` işleç, işleneninin sayısal olumsuzunu hesaplar.
 
 [!code-csharp-interactive[unary plus and minus](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
-Birli `-` işleci desteklemez [ulong](../builtin-types/integral-numeric-types.md) türü.
+Birli `-` işleç [ulong](../builtin-types/integral-numeric-types.md) türünü desteklemiyor.
 
 ## <a name="multiplication-operator-"></a>Çarpma işleci *
 
-Çarpma işleci `*` işlenenleri çarpımını hesaplar:
+Çarpma işleci `*` , işlenenlerinin çarpımını hesaplar:
 
 [!code-csharp-interactive[multiplication operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Multiplication)]
 
-Birli `*` işleci [işaretçi yöneltme işleci](pointer-related-operators.md#pointer-indirection-operator-).
+Birli `*` işleç, [işaretçi yöneltme işleçtir](pointer-related-operators.md#pointer-indirection-operator-).
 
-## <a name="division-operator-"></a>Bölme işleci /
+## <a name="division-operator-"></a>Bölme işleci/
 
-Bölme işleci `/` sol işleneniyle sağ işleneni olarak böler.
+Bölme işleci `/` , sol işlenenini sağ işleneniyle böler.
 
 ### <a name="integer-division"></a>Tamsayı bölme
 
-Tamsayı türleri sonucunu işlenenleri için `/` işleci bir tamsayı türüdür ve sayının yuvarlanmış sıfır iki işlenenden eşittir:
+Tamsayı türlerinin işlenenleri için, `/` işlecin sonucu bir tamsayı türüdür ve iki işlenenlerin sıfıra yuvarlayarak sonuna eşittir:
 
 [!code-csharp-interactive[integer division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerDivision)]
 
-İki işlenenden bölümü bir kayan noktalı sayı olarak almak için kullanın `float`, `double`, veya `decimal` türü:
+İki işlenenin bir kayan noktalı sayı olarak bölümünü almak için, veya `float` `decimal` türünü kullanın `double`:
 
 [!code-csharp-interactive[integer as floating-point division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerAsFloatingPointDivision)]
 
 ### <a name="floating-point-division"></a>Kayan nokta bölme
 
-İçin `float`, `double`, ve `decimal` türleri, sonucunu `/` işleci, iki işlenenden bölümü:
+,, Ve `/` türleri için işlecinin sonucu iki işlenenin bir bölümü olur: `decimal` `double` `float`
 
 [!code-csharp-interactive[floating-point division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointDivision)]
 
-İşlenenler ise `decimal`, başka bir işleç ne olabilir `float` ya da `double`, çünkü ne `float` ya da `double` örtük olarak dönüştürülebilir `decimal`. Açıkça dönüştürmelisiniz `float` veya `double` işleneni `decimal` türü. Sayısal türler arasında örtük dönüştürme hakkında daha fazla bilgi için bkz: [örtük sayısal dönüşümler tablosu](../keywords/implicit-numeric-conversions-table.md).
+`decimal`İşlenenlerden biri ise başka bir işlenen `float` `double` `float` ne de, ne de örtük olarak dönüştürülememiş `decimal`olabilir. `double` Ya `float` da`double` işleneni açıkça`decimal` türüne dönüştürmeniz gerekir. Sayısal türler arasındaki örtük dönüştürmeler hakkında daha fazla bilgi için bkz. [örtük sayısal dönüştürmeler tablosu](../keywords/implicit-numeric-conversions-table.md).
 
-## <a name="remainder-operator-"></a>Kalan işleci %
+## <a name="remainder-operator-"></a>Kalan işleç yüzdesi
 
-Kalan işleci `%` sol işleneniyle sağ işleneni tarafından bölme işleminden kalanı hesaplar.
+Kalan işleç `%` , sol işlenenin sağ işleneniyle bölündükten sonra kalanı hesaplar.
 
-### <a name="integer-remainder"></a>Tamsayı kalan
+### <a name="integer-remainder"></a>Tamsayı geri kalanı
   
-Tamsayı türleri sonucunu işlenenleri için `a % b` değeri tarafından üretilen `a - (a / b) * b`. Sıfır olmayan kalan'in sol işlenenin aşağıdaki örnekte gösterildiği gibi aynıdır:
+Tamsayı türlerinin işlenenleri için, sonucu `a % b` tarafından `a - (a / b) * b`üretilen değerdir. Sıfır olmayan geri kalanın işareti, aşağıdaki örnekte gösterildiği gibi, sol taraftaki işleneniyle aynıdır:
 
 [!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
 
-Kullanım <xref:System.Math.DivRem%2A?displayProperty=nameWithType> tamsayı bölme hem kalan sonuçları hesaplamak için yöntemi.
+Hem tamsayı bölme hem de kalan sonuçları hesaplamak için yönteminikullanın.<xref:System.Math.DivRem%2A?displayProperty=nameWithType>
 
-### <a name="floating-point-remainder"></a>Kayan nokta kalanını
+### <a name="floating-point-remainder"></a>Kayan nokta kalanı
 
-İçin `float` ve `double` işlenenler, sonucunu `x % y` sınırlı için `x` ve `y` değer `z` gibi
+`float` Ve işlenenleriiçin`x` , sonsuz değeri`y` için Sonuçolarak`z` `x % y` `double`
 
-- İşaretini `z`, sıfır olmayan, işaretini aynı `x`.
-- mutlak değerini `z` değeri tarafından üretilen `|x| - n * |y|` burada `n` küçük veya eşit en büyük olası tamsayı `|x| / |y|` ve `|x|` ve `|y|` mutlak değerleri `x` ve `y`sırasıyla.
+- Sıfır olmayan, işareti, `x`işaretiyle aynıdır. `z`
+- `z` Öğesinin mutlak değeri, `|x| / |y|` `|x|` `|y|` tarafından `|x| - n * |y|` üretilen en büyük olası tamsayı, ve ' nin `x` mutlak değerlerinin `n` ve `y`sırasıyla.
 
 > [!NOTE]
-> Kalanı hesaplama, bu yöntem, tamsayı işlenenler için kullanılan benzer, ancak IEEE 754 farklıdır. IEEE 754 ile uyumlu işlemini ihtiyacınız varsa, <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> yöntemi.
+> Bu geri kalanı hesaplama yöntemi, tamsayı işlenenleri için kullanılan, ancak IEEE 754 ' den farklıdır. IEEE 754 ile uyumlu kalan işleme ihtiyacınız varsa, <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> yöntemini kullanın.
 
-Davranışı hakkında bilgi için `%` sonlu olmayan işlenenler işleç bkz [kalan işleci](~/_csharplang/spec/expressions.md#remainder-operator) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
+`%` İşlecin sonlu olmayan işlenenlerle davranışı hakkında daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [geri kalan işleci](~/_csharplang/spec/expressions.md#remainder-operator) bölümüne bakın.
 
-İçin `decimal` işlenenler, kalan işleci `%` eşdeğerdir [kalan işleci](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>) , <xref:System.Decimal?displayProperty=nameWithType> türü.
+İşlenenler için, `%` kalan işleç <xref:System.Decimal?displayProperty=nameWithType> türün [geri kalan işlecine](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>) eşdeğerdir. `decimal`
 
-Aşağıdaki örnek, kayan nokta işlenenler ile kalan işleci davranışını gösterir:
+Aşağıdaki örnek, kayan nokta işlenenleri geri kalan işlecinin davranışını gösterir:
 
 [!code-csharp-interactive[floating-point remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointRemainder)]
 
 ## <a name="addition-operator-"></a>Toplama işleci +
 
-Toplama işleci `+` işlenenleri toplamını hesaplar:
+Toplama işleci `+` , işlenenlerinin toplamını hesaplar:
 
 [!code-csharp-interactive[addition operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Addition)]
 
-Ayrıca `+` dize birleştirme ve temsilci birleşimi için işleç. Daha fazla bilgi için [ `+` ve `+=` işleçleri](addition-operator.md) makalesi.
+Ayrıca, `+` dize birleştirme ve temsilci birleşimi için işlecini de kullanabilirsiniz. Daha fazla bilgi için, [ `+` ve `+=` işleçleri](addition-operator.md) makalesine bakın.
 
 ## <a name="subtraction-operator--"></a>Çıkarma işleci-
 
-Çıkarma işleci `-` sağ, sol işleneniyle işlenenden çıkarır:
+Çıkarma işleci `-` , sağ işlenenini sol tarafından çıkartır:
 
 [!code-csharp-interactive[subtraction operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
 
-Ayrıca `-` temsilci kaldırma işleci. Daha fazla bilgi için [ `-` işleci](subtraction-operator.md) makalesi.
+Ayrıca, `-` temsilci kaldırma için işlecini de kullanabilirsiniz. Daha fazla bilgi için bkz [ `-` . operatör](subtraction-operator.md) makalesi.
 
 ## <a name="compound-assignment"></a>Bileşik atama
 
-İkili işleç için `op`, formun bir bileşik atama ifadesi
+Bir ikili işleci `op`için, formun bileşik atama ifadesi
 
 ```csharp
 x op= y
@@ -177,94 +177,94 @@ eşdeğerdir
 x = x op y
 ```
 
-dışında `x` yalnızca bir kez değerlendirilir.
+`x` hariç yalnızca bir kez değerlendirilir.
 
-Aşağıdaki örnek, aritmetik işleçlere sahip bileşik atama kullanımını göstermektedir:
+Aşağıdaki örnek, aritmetik bir atama kullanımını Aritmetik işleçlerle gösterir:
 
 [!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
-Nedeniyle [sayısal promosyonlar](~/_csharplang/spec/expressions.md#numeric-promotions), sonucunu `op` işlemi olabilir değil türe örtük olarak dönüştürülebilir `T` , `x`. Böyle bir durumda ise `op` önceden tanımlanmış bir işleç ve işlemin sonucu türüne açıkça dönüştürülebilir ise `T` , `x`, formun bir bileşik atama ifadesi `x op= y` eşdeğerdir `x = (T)(x op y)`, dışında `x` yalnızca bir kez değerlendirilir. Aşağıdaki örnek, bu davranış gösterir:
+[Sayısal yükseltmeler](~/_csharplang/spec/expressions.md#numeric-promotions)nedeniyle, `op` işlemin sonucu örtük olarak türüne `T` `x`dönüştürülebilir olmayabilir. `op` Böyle bir durumda, önceden tanımlanmış bir işleçse ve işlemin sonucu `x`türüne `T` açıkça dönüştürülebilir ise, şöyle bir bileşik atama ifadesi `x op= y` değerine `x = (T)(x op y)`eşdeğerdir, ancak `x` yalnızca bir kez değerlendirilir. Aşağıdaki örnekte bu davranış gösterilmektedir:
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-Ayrıca `+=` ve `-=` abone ve aboneliği iptal edin işleçleri [olayları](../keywords/event.md). Daha fazla bilgi için [nasıl yapılır: abone olma ve aboneliği olaylardan](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+Ayrıca, `+=` olaylarına abone olmak `-=` ve [olayları](../keywords/event.md)kaldırmak için ve işleçlerini da kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: olaylara abone olma ve aboneliği kaldırma](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
-## <a name="operator-precedence-and-associativity"></a>İşleç önceliği ve ilişkiselliği
+## <a name="operator-precedence-and-associativity"></a>İşleç önceliği ve ilişkilendirilebilirlik
 
-Aşağıdaki liste, en yüksek öncelikten en düşük başlangıç aritmetik işleçler sıralar:
+Aşağıdaki liste, en yüksek öncelikten en düşüğe başlayarak aritmetik işleçleri sıralar:
 
 - Sonek artırma `x++` ve azaltma `x--` işleçleri
-- Önek artırma `++x` ve azaltma `--x` ve birli `+` ve `-` işleçleri
-- Çarpma `*`, `/`, ve `%` işleçleri
-- Eklenebilir `+` ve `-` işleçleri
+- Ön ek `++x` artırma ve `--x` azaltma ve `+` birli `-` ve işleçler
+- Çoğultıcı `*`, `/`, ve `%` işleçler
+- Eklenebilir `+` ve `-` işleçler
 
-İkili aritmetik işleçler ilişkilendirilebilir. Diğer bir deyişle, aynı öncelik düzeyine sahip işleçler, soldan sağa doğru değerlendirilir.
+İkili aritmetik işleçler sola ilişkilendirilebilir. Diğer bir deyişle, aynı öncelik düzeyine sahip işleçler soldan sağa değerlendirilir.
 
-Parantez kullanın `()`, İşleç önceliği ve ilişkilendirilebilirlik tarafından dayatılan Değerlendirme sırasını değiştirmek için.
+İşleç önceliği ve `()`ilişkilendirilebilirliği tarafından uygulanan değerlendirmenin sırasını değiştirmek için parantezleri kullanın.
 
 [!code-csharp-interactive[precedence and associativity](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
 
-Tam listesi için C# işleçler, öncelik düzeyine göre sıralanmış bkz [ C# işleçleri](index.md).
+Öncelik düzeyine göre sıralanan C# işleçlerin tüm listesi için bkz [ C# . işleçler](index.md).
 
-## <a name="arithmetic-overflow-and-division-by-zero"></a>Aritmetik Taşma ve sıfıra bölme
+## <a name="arithmetic-overflow-and-division-by-zero"></a>Aritmetik taşma ve sıfıra bölme
 
-Aritmetik işlemin sonucu dahil olan sayısal türde olası sınırlı değerler aralığı dışında olduğunda davranışı bir aritmetik işlecinin işlenenleri türüne bağlıdır.
+Bir aritmetik işlemin sonucu, ilgili sayısal türün olası sonlu değerler aralığının dışında olduğunda, bir aritmetik işlecin davranışı işlenenlerinin türüne bağlıdır.
 
-### <a name="integer-arithmetic-overflow"></a>Tamsayı aritmetik taşma
+### <a name="integer-arithmetic-overflow"></a>Tamsayı aritmetik taşması
 
-Sıfır ile tamsayı bölme her zaman oluşturur bir <xref:System.DivideByZeroException>.
+Sıfıra göre tam sayı bölümü her zaman <xref:System.DivideByZeroException>bir oluşturur.
 
-Olabilen tamsayı aritmetik taşma durumunda, bağlam, denetimi taşma [işaretli veya işaretsiz](../keywords/checked-and-unchecked.md), sonuçta elde edilen davranışı denetler:
+Tamsayı aritmetik taşması olması durumunda, [denetlenen veya işaretlenmemiş](../keywords/checked-and-unchecked.md)bir taşma Denetim bağlamı ortaya çıkan davranışı denetler:
 
-- Sabit bir ifadede taşma meydana gelirse denetlenen bir bağlamda, bir derleme zamanı hatası oluşur. Aksi durumda, çalışma zamanında işlemi gerçekleştirilirken bir <xref:System.OverflowException> oluşturulur.
-- İşaretlenmemiş bir bağlamda sonucu hedef türüne uygun olmayan herhangi bir yüksek düzeyli BITS atarak kesilir.
+- Denetlenen bir bağlamda, sabit bir ifadede taşma gerçekleşirse, derleme zamanı hatası oluşur. Aksi takdirde, işlem çalışma zamanında gerçekleştirildiğinde bir <xref:System.OverflowException> oluşturulur.
+- İşaretlenmemiş bir bağlamda, sonuç, hedef türüne sığmayan yüksek sıralı bitleri atarak kesilir.
 
-İle birlikte [checked ve unchecked](../keywords/checked-and-unchecked.md) kullanabileceğiniz deyimleri `checked` ve `unchecked` işleçler bağlam bir ifade değerlendirme, taşma denetimini için:
+[Checked ve unchecked](../keywords/checked-and-unchecked.md) deyimlerinin yanı sıra, bir ifadenin değerlendirildiği taşma denetimi `checked` bağlamını `unchecked` denetlemek için ve işleçlerini kullanabilirsiniz:
 
 [!code-csharp-interactive[checked and unchecked](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CheckedUnchecked)]
 
-Varsayılan olarak, aritmetik işlemler oluşan bir *denetlenmeyen* bağlamı.
+Varsayılan olarak, aritmetik işlemler *işaretlenmemiş* bir bağlamda oluşur.
 
-### <a name="floating-point-arithmetic-overflow"></a>Kayan nokta aritmetik taşma
+### <a name="floating-point-arithmetic-overflow"></a>Kayan nokta aritmetik taşması
 
-Aritmetik işlemler `float` ve `double` türleri hiçbir zaman bir özel durum oluşturur. Bu türleri aritmetik işlemler sonucu sonsuzluk ve sayı değil temsil eden özel değerlerden biri olabilir:
+`float` Ve`double` türleri ile aritmetik işlemler hiçbir şekilde özel durum oluşturmaz. Bu türlere sahip aritmetik işlemlerin sonucu, sonsuz ve bir sayı olmayan özel değerlerden biri olabilir:
 
 [!code-csharp-interactive[double non-finite values](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointOverflow)]
 
-İşlenen için `decimal` türü, aritmetik taşma her zaman oluşturur bir <xref:System.OverflowException> ve sıfır ile bölme her zaman oluşturur bir <xref:System.DivideByZeroException>.
+`decimal` Türün işlenenleri için, aritmetik taşma her zaman sıfır tarafından bir <xref:System.OverflowException> ve bölme her zaman bir <xref:System.DivideByZeroException>oluşturur.
 
 ## <a name="round-off-errors"></a>Yuvarlama hataları
 
-Gerçek sayıları ve kayan nokta aritmetiği kayan nokta temsili genel sınırlamaları nedeniyle, kayan nokta türleriyle hesaplamalarda yuvarlama hataları oluşabilir. Diğer bir deyişle, bir ifadenin üretilen sonucu beklenen matematik sonuç farklı olabilir. Aşağıdaki örnek, bu gibi durumlarda gösterir:
+Gerçek sayıların ve kayan nokta aritmetiğinin kayan nokta gösteriminin genel sınırlamaları nedeniyle, kayan nokta türlerindeki hesaplamalarda yuvarlama hataları oluşabilir. Diğer bir deyişle, bir ifadenin üretilen sonucu beklenen matematik sonucundan farklı olur. Aşağıdaki örnekte bu gibi birkaç durum gösterilmektedir:
 
 [!code-csharp-interactive[round-off errors](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#RoundOffErrors)]
 
-Açıklamalar, daha fazla bilgi için bkz. [System.Double](/dotnet/api/system.double#remarks), [System.Single](/dotnet/api/system.single#remarks), veya [System.Decimal](/dotnet/api/system.decimal#remarks) başvuru sayfalarına.
+Daha fazla bilgi için bkz. [System. Double](/dotnet/api/system.double#remarks), [System. Single](/dotnet/api/system.single#remarks)veya [System. Decimal](/dotnet/api/system.decimal#remarks) başvuru sayfalarındaki açıklamalar.
 
-## <a name="operator-overloadability"></a>İşleç overloadability
+## <a name="operator-overloadability"></a>Operatör overloadability
 
-Kullanıcı tanımlı bir tür için [aşırı](operator-overloading.md) birli (`++`, `--`, `+`, ve `-`) ve ikili (`*`, `/`, `%`, `+`ve `-`) Aritmetik işleçler. İkili İşleç aşırı yüklendiğinde, karşılık gelen bileşik atama işleci de örtülü olarak aşırı yüklenmiş. Kullanıcı tanımlı bir türe açıkça bir bileşik atama işleci aşırı yüklenemez.
+Kullanıcı tanımlı bir tür birli ( [](operator-overloading.md) `++` `-`, `--` `+`,, ve) ve ikili (`*`, `/` `%` `+`,, ve `-`) aritmetiğini aşırı yükleyebilir işletmenlerinin. İkili işleç aşırı yüklendiğinde, karşılık gelen bileşik atama işleci de örtük olarak aşırı yüklenmiştir. Kullanıcı tanımlı bir tür, bileşik atama işlecini açıkça aşırı yükleyemez.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için aşağıdaki bölümlere bakın [ C# dil belirtimi](~/_csharplang/spec/introduction.md):
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
 
 - [Sonek artırma ve azaltma işleçleri](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators)
-- [Önek artırma ve azaltma işleçleri](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators)
-- [Birli artı işleci](~/_csharplang/spec/expressions.md#unary-plus-operator)
+- [Ön ek artırma ve azaltma işleçleri](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators)
+- [Birli Plus işleci](~/_csharplang/spec/expressions.md#unary-plus-operator)
 - [Birli eksi işleci](~/_csharplang/spec/expressions.md#unary-minus-operator)
 - [Çarpma işleci](~/_csharplang/spec/expressions.md#multiplication-operator)
 - [Bölme işleci](~/_csharplang/spec/expressions.md#division-operator)
-- [Kalan işleci](~/_csharplang/spec/expressions.md#remainder-operator)
+- [Kalan işleç](~/_csharplang/spec/expressions.md#remainder-operator)
 - [Toplama işleci](~/_csharplang/spec/expressions.md#addition-operator)
 - [Çıkarma işleci](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [Bileşik atama](~/_csharplang/spec/expressions.md#compound-assignment)
 - [Checked ve unchecked işleçleri](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
-- [Sayısal promosyonlar](~/_csharplang/spec/expressions.md#numeric-promotions)
+- [Sayısal yükseltmeler](~/_csharplang/spec/expressions.md#numeric-promotions)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvuru](../index.md)
+- [C#başvurunun](../index.md)
 - [C# işleçleri](index.md)
 - <xref:System.Math?displayProperty=nameWithType>
 - <xref:System.MathF?displayProperty=nameWithType>
