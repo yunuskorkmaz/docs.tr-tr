@@ -1,5 +1,5 @@
 ---
-title: -fullpaths (C# Derleyici Seçenekleri)
+title: -fullpaths (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /fullpaths
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full paths [C#]
 - -fullpaths compiler option [C#]
 ms.assetid: d2a5f857-cbb2-430b-879c-d648aaf0b8c4
-ms.openlocfilehash: 160938e631d9f9e49d53bbec8806c7a134864701
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3bb4027f1c479bbaedda889d72712acb587b5713
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662887"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606862"
 ---
-# <a name="-fullpaths-c-compiler-options"></a>-fullpaths (C# Derleyici Seçenekleri)
-**- Fullpaths** seçeneği neden olan derleyiciye derleme hataları ve Uyarıları listelerken dosyanın tam yolunu belirtin.  
+# <a name="-fullpaths-c-compiler-options"></a>-fullpaths (C# derleyici seçenekleri)
+**-Fullpaths** seçeneği derleyicinin derleme hatalarını ve uyarılarını listelerken dosyanın tam yolunu belirtmesini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,10 +27,10 @@ ms.locfileid: "61662887"
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan olarak, hataları ve Uyarıları derlemeden kaynaklanan bir hata bulunduğu dosyasının adını belirtin. **- Fullpaths** seçeneği dosyasının tam yolunu belirtmek derleyicinin neden olur.  
+ Varsayılan olarak, derlemeden kaynaklanan hatalar ve uyarılar, bir hatanın bulunduğu dosyanın adını belirtir. **-Fullpaths** seçeneği derleyicinin dosyanın tam yolunu belirtmesini sağlar.  
   
- Bu derleyici seçeneğini Visual Studio'da kullanılamıyor ve program aracılığıyla değiştirilemez.  
+ Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
+- [C# Derleyici Seçenekleri](./index.md)

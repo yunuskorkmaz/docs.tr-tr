@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl yapılır: Stream üst bilgilere erişimle XML parçalarının (C#)'
+title: 'Nasıl yapılır: Üst bilgi bilgilerine erişimi olan XML parçaları akışı (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
-ms.openlocfilehash: 4ecf20134c0d5897418c7667908f80511a962871
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d40fa5b7ae60836c0fd947d36f88765eafc60334
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484845"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592341"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Nasıl yapılır: Stream üst bilgilere erişimle XML parçalarının (C#)
-Bazen büyük XML dosyaları okur ve bellek Ayak izi uygulamanın öngörülebilir böylece uygulamanız yazma gerekir. İle büyük bir XML dosyasını bir XML ağacı doldurma çalışırsanız, bellek kullanım için dosya boyutu orantılı — diğer bir deyişle, aşırı. Bu nedenle, bir akış teknik yerine kullanmanız gerekir.  
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Nasıl yapılır: Üst bilgi bilgilerine erişimi olan XML parçaları akışı (C#)
+Bazen rastgele büyük XML dosyalarını okumanız ve uygulamanın bellek parmak izin tahmin edilebilir olması için uygulamanızı yazmanız gerekir. Bir XML ağacını büyük bir XML dosyası ile doldurmayı denerseniz, bellek kullanımınız dosyanın boyutuyla orantılıdır; yani çok fazla. Bu nedenle, bunun yerine bir akış tekniği kullanmanız gerekir.  
   
- Bir seçenektir kullanarak uygulamanızı yazmak için <xref:System.Xml.XmlReader>. Ancak, kullanmak isteyebilirsiniz [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] XML ağacı sorgulanamıyor. Bu durumda, kendi özel eksen yöntemi yazabilirsiniz. Daha fazla bilgi için [nasıl yapılır: LINQ to XML eksen yöntemi yazma (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Bir seçenek, kullanarak <xref:System.Xml.XmlReader>uygulamanızı yazmaktır. Ancak, xml ağacını sorgulamak için kullanmak [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] isteyebilirsiniz. Bu durumda, kendi özel eksen yönteminizi yazabilirsiniz. Daha fazla bilgi için [nasıl yapılır: LINQ to XML Axis yöntemi (C#)](./how-to-write-a-linq-to-xml-axis-method.md)yazın.  
   
- Kendi eksen yöntemi yazma için kullanan küçük bir yöntem yazmaktır. <xref:System.Xml.XmlReader> , olduğu ilgilenen düğümlerinden biri ulaşana dek düğümleri okumak için. Daha sonra yöntemi çağırır <xref:System.Xml.Linq.XNode.ReadFrom%2A>, hangi okur <xref:System.Xml.XmlReader> ve bir XML parçası başlatır. Ardından her parçayı aracılığıyla ortaya çıkarır `yield return` özel eksen yönteminizi numaralandırma yöntemi. Ardından, özel eksen yöntemi LINQ sorguları da yazabilirsiniz.  
+ Kendi eksen yönteminizi yazmak için, ilgilendiğiniz düğümlerin birine ulaşana kadar düğümleri okumak <xref:System.Xml.XmlReader> için kullanan küçük bir yöntem yazarsınız. Yöntemi, <xref:System.Xml.Linq.XNode.ReadFrom%2A> <xref:System.Xml.XmlReader> öğesinden okuyan ve bir XML parçasını örnekleyen öğesini çağırır. Ardından, her parçayı aracılığıyla `yield return` özel eksen yönteminizi numaralandırma yöntemine verir. Daha sonra özel eksen yönteinizde LINQ sorguları yazabilirsiniz.  
   
- Akış teknikleri, burada yalnızca bir kez kaynak belge işlemek gereken ve belge sırada öğeleri işleyebilir durumlarda en iyi şekilde uygulanır. Belirli standart sorgu işleçleri gibi <xref:System.Linq.Enumerable.OrderBy%2A>kaynağına yineleme, tüm verileri Topla, sıralanmasını ve son sıradaki ilk öğeyi yield. İlk öğeyi oluşturan önce kaynağına gerçekleştiren bir sorgu işlecini kullanmak, bir küçük bellek Ayak izi korumaz unutmayın.  
+ Akış teknikleri en iyi şekilde, kaynak belgeyi yalnızca bir kez işleyebilmeniz ve öğeleri belge düzeninde işleyebilirsiniz. Gibi belirli standart sorgu işleçleri <xref:System.Linq.Enumerable.OrderBy%2A>, kaynaklarını yineleyebilir, tüm verileri toplar, sıralar ve son olarak dizideki ilk öğeyi verir. İlk öğeyi bırakmadan önce kaynağını üreten bir sorgu işleci kullanırsanız, küçük bir bellek parmak izini saklayacağınızı unutmayın.  
   
 ## <a name="example"></a>Örnek  
- Bazı durumlarda biraz daha fazla ilgi çekici sorun alır. Aşağıdaki XML belgesindeki özel eksen yönteminizi tüketicisinin her öğenin ait olduğu müşterinin adını bilmek de vardır.  
+ Bazen sorun biraz daha ilginç olur. Aşağıdaki XML belgesinde, özel eksen yönteminizin tüketicisi, her öğenin ait olduğu müşterinin adını da bilmelidir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -66,11 +66,11 @@ Bazen büyük XML dosyaları okur ve bellek Ayak izi uygulamanın öngörülebil
 </Root>  
 ```  
   
- Bu örnek alan için bu üst bilgi bilgileri izlemek, üst bilgi bilgileri kaydedin ve ardından üst bilgi bilgileri hem numaralandırma ayrıntı içeren küçük bir XML ağacı oluşturmak için bir yaklaşımdır. Eksen yöntemi, ardından bu yeni, küçük XML ağacı verir. Sorgu, daha sonra ayrıntılı bilgilerin yanı sıra, üst bilgi bilgileri erişimi vardır.  
+ Bu örnekte geçen yaklaşım ayrıca, bu üstbilgi bilgilerini izlemek, üst bilgi bilgilerini kaydetmek ve ardından hem başlık bilgilerini hem de numaralandırdığınız ayrıntıyı içeren küçük bir XML ağacı oluşturmanızı kullanmaktır. Ardından Axis yöntemi bu yeni, küçük XML ağacını verir. Sorgu daha sonra başlık bilgilerine ve ayrıntı bilgilerine erişimi de vardır.  
   
- Bu yaklaşım, küçük bellek Ayak izi sahiptir. Her ayrıntı XML parçası veriyor gibi başvuru için önceki parça tutulur ve çöp toplama için kullanılabilir. Bu teknik yığın üzerinde çok kısa süreli nesneleri oluşturur unutmayın.  
+ Bu yaklaşımın küçük bir bellek ayak izi vardır. Her ayrıntı XML parçası, bir önceki parçaya hiçbir başvuru tutulmazsa ve çöp toplama için kullanılabilir. Bu tekniğin yığın üzerinde birçok kısa süreli nesne oluşturduğunu unutmayın.  
   
- Aşağıdaki örnek, uygulamak ve URI tarafından belirtilen dosyaya XML parçalarının akışını bir özel eksen yöntemi kullanmak gösterilmektedir. Bu özel eksen özellikle sahip bir belge beklediği gibi yazılır `Customer`, `Name`, ve `Item` öğeleri ve bu öğeleri olduğu gibi yukarıdaki düzenlenmesini, `Source.xml` belge. Bu basitleştirilmiş bir uygulamasıdır. Geçersiz bir belge ayrıştırmak için daha sağlam bir uygulama hazır.  
+ Aşağıdaki örnek, URI tarafından belirtilen dosyadan XML parçalarını akıyan bir özel eksen yönteminin nasıl uygulanacağını ve kullanılacağını gösterir. Bu özel eksen `Customer`özellikle, `Name`, ve `Item` öğelerinin bulunduğu bir belgeyi beklediğinden ve bu öğelerin Yukarıdaki `Source.xml` belgede olarak düzenlenebilmesini sağlayacak şekilde yazılmıştır. Bu bir uyarlaması uygulamasıdır. Daha sağlam bir uygulama, geçersiz bir belgeyi ayrıştırmaya hazırlanmalıdır.  
   
 ```csharp  
 static IEnumerable<XElement> StreamCustomerItem(string uri)  

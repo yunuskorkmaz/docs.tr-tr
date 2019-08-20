@@ -2,32 +2,32 @@
 title: 'Nasıl yapılır: Bir dosyanın derleme olup olmadığını belirleme (C#)'
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: e8026ab5fa44b7601e54b5e76ebf9eb434596a07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 803159eed25a7785b1a2b4433e6950fa65e0a734
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61702899"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595866"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Nasıl yapılır: Bir dosyanın derleme olup olmadığını belirleme (C#)
-Yönetilen ve bir derleme girişi meta verilerini içeren ve yalnızca, bir dosyanın derleme olup. Derlemeler ve meta veriler hakkında daha fazla bilgi için Ek Yardım konusuna [derleme bildirimi](../../../../../docs/framework/app-domains/assembly-manifest.md).  
+Bir dosya, yalnızca yönetilmiyorsa ve meta verilerinde bir derleme girişi içeriyorsa bir derlemedir. Derlemeler ve meta veriler hakkında daha fazla bilgi için bkz. [derleme bildirimi](../../../../framework/app-domains/assembly-manifest.md).  
   
-### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>El ile bir dosyanın derleme olup olmadığını belirleme  
+### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Bir dosyanın derleme olup olmadığını el ile belirleme  
   
-1. Başlangıç [Ildasm.exe (IL ayrıştırıcı)](../../../../framework/tools/ildasm-exe-il-disassembler.md).  
+1. [Ildadsm. exe ' yi (IL Disassembler)](../../../../framework/tools/ildasm-exe-il-disassembler.md)başlatın.  
   
-2. Test etmek istediğiniz dosya yükleyin.  
+2. Test etmek istediğiniz dosyayı yükleyin.  
   
-3. Varsa **ILDASM** raporlar dosya taşınabilir çalıştırılabilir (PE) dosyası değil ve ardından bir derleme değil. Daha fazla bilgi için Ek Yardım konusuna [nasıl yapılır: Bütünleştirilmiş kod içeriklerini görüntüleme](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
+3. **Ildadsm** , dosyanın taşınabilir bir ÇALıŞTıRıLABILIR (PE) dosyası olmadığını bildirirse, bir derleme değildir. Daha fazla bilgi için bkz [. nasıl yapılır: Derleme Içeriğini](../../../../framework/app-domains/how-to-view-assembly-contents.md)görüntüleyin.  
   
-### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Program aracılığıyla bir dosyanın derleme olup olmadığını belirleme  
+### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Bir dosyanın derleme olup olmadığını programlı olarak belirleme  
   
-1. Çağrı <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> test dosyasının adını ve tam dosya yolunu geçirerek yöntemi.  
+1. Test ettiğiniz dosyanın tam dosya yolunu ve adını geçirerek yönteminiçağırın.<xref:System.Reflection.AssemblyName.GetAssemblyName%2A>  
   
-2. Varsa bir <xref:System.BadImageFormatException> özel durum oluştu, dosyanın bir derleme değil.  
+2. Bir <xref:System.BadImageFormatException> özel durum oluşturulursa, dosya bir derleme değildir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir DLL derleme olup olmadığını görmek için sınar.  
+ Bu örnek, bir derleme olup olmadığını görmek için bir DLL 'yi sınar.  
   
 ```csharp
 class TestAssembly  
@@ -64,10 +64,10 @@ class TestAssembly
 */  
 ```  
   
- <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> Yöntemi test dosyasını yükler ve bilgileri okunduktan sonra bırakır.  
+ <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> Yöntemi, test dosyasını yükler ve ardından bilgiler okunduktan sonra serbest bırakır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Reflection.AssemblyName>
-- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
+- [C# Programlama Kılavuzu](../../index.md)
 - [.NET’te bütünleştirilmiş kodlar](../../../../standard/assembly/index.md)

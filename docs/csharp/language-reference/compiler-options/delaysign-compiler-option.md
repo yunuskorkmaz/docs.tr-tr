@@ -1,5 +1,5 @@
 ---
-title: -delaysıgn (C# Derleyici Seçenekleri)
+title: -delaysign (C# derleyici seçenekleri)
 ms.date: 05/15/2018
 f1_keywords:
 - /delaysign
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 1d49733531507fc80165e034fde1969305cfd2e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae309a8de6c4691f0009e5beb8ac2adc8772805b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662952"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69603030"
 ---
-# <a name="-delaysign-c-compiler-options"></a>-delaysıgn (C# Derleyici Seçenekleri)
+# <a name="-delaysign-c-compiler-options"></a>-delaysign (C# derleyici seçenekleri)
 
-Bu seçenek, bir dijital imza daha sonra eklenebilir böylece çıkış dosyasına yer ayırmak derleyicinin neden olur.
+Bu seçenek derleyicinin çıkış dosyasında alan ayırmasını sağlayarak bir dijital imzanın daha sonra eklenebilmesini sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -29,29 +29,29 @@ Bu seçenek, bir dijital imza daha sonra eklenebilir böylece çıkış dosyası
 
 `+` &#124; `-`
 
-Kullanım **- delaysign-** tam imzalı bir derleme istiyorsanız. Kullanım **- delaysign +** yalnızca derleme içinde ortak anahtar yerleştirmek istiyorsanız. Varsayılan değer **- delaysign-**.
+Tam olarak imzalanan bir derlemeyi istiyorsanız **-delaysign-** kullanın. Yalnızca ortak anahtarı derlemeye yerleştirmek istiyorsanız **-delaysign +** kullanın. Varsayılan değer **-delaysign-** .
 
 ## <a name="remarks"></a>Açıklamalar
 
-**- Delaysıgn** seçeneği ile birlikte kullanılmadığı sürece hiçbir etkiye sahiptir [- keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) veya [- keycontaıner](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).
+\- [Keyfile](./keyfile-compiler-option.md) veya [-keycontainer](./keycontainer-compiler-option.md)ile kullanılmamışsa **-delaysign** seçeneğinin hiçbir etkisi yoktur.
 
-**- Delaysıgn** ve **- publicsign** seçenekleri karşılıklı olarak birbirini dışlar.
+**-Delaysign** ve **-publicsign** seçenekleri birbirini dışlıyor.
 
-Tam imzalı bir derleme istediğinizde; derleyici bildirimi (derleme meta verileri) içeren ve karmayı özel anahtarla imzalar dosyayı karma hale getirir. Bu işlem, bir dijital imza bildirimi içeren dosyada depolanan oluşturur. Bir derlemeyi gecikmeli imzalanmış olduğunda, derleyici işlem değil ve daha sonra imzanın eklenmesi için dosyada depolamak imzaya ancak ayırır.
+Tam olarak imzalanan bir derleme istediğinizde, derleyici bildirimi içeren dosyayı (derleme meta verileri) karma hale getirir ve bu karmayı özel anahtarla imzalar. Bu işlem, bildirimi içeren dosyada depolanan bir dijital imza oluşturur. Bir derlemenin gecikmesi gecikmeli kaydolduğunda, derleyici imzayı hesaplamaz ve depolamaz, ancak imzanın daha sonra eklenebilmesi için dosyada alanı ayırır.
 
-Örneğin, kullanarak **- delaysign +** derlemeyi genel önbellek üzerine koymasına olanak sağlar. Test edildikten sonra tam olarak derlemeyi kullanarak bir derlemede özel anahtarı yerleştirerek kaydolabilirsiniz [Assembly Linker](../../../framework/tools/al-exe-assembly-linker.md) yardımcı programı.
+Örneğin, **-delaysign +** kullanılması, bir sınayıcı 'ın derlemeyi genel önbellekte almasına izin verir. Test ettikten sonra, derleme [bağlayıcı](../../../framework/tools/al-exe-assembly-linker.md) yardımcı programını kullanarak özel anahtarı derlemeye yerleştirerek derlemeyi tamamen imzalayabilirsiniz.
 
-Daha fazla bilgi için [bkz](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) ve [derlemeyi imzalamayı geciktirme](../../../framework/app-domains/delay-sign-assembly.md).
+Daha fazla bilgi için bkz. [güçlü adlandırılmış derlemeler oluşturma ve kullanma](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) ve [bir derlemeyi imzalamayı geciktirme](../../../framework/app-domains/delay-sign-assembly.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için
 
-1. Açık **özellikleri** proje sayfası.
-1. Değiştirme **gecikme yalnızca oturum** özelliği.
+1. Projenin **Özellikler** sayfasını açın.
+1. **Yalnızca gecikmeli imzala** özelliğini değiştirin.
 
-Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.
+Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# -publicsign option](publicsign-compiler-option.md)
+- [C#-publicsign seçeneği](publicsign-compiler-option.md)
 - [C# Derleyici Seçenekleri](index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

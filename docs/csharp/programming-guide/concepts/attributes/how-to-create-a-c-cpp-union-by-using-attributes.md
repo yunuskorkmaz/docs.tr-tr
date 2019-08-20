@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Öznitelikleri kullanarak C / C++ birleşimi oluşturma (C#)'
+title: 'Nasıl yapılır: Öznitelikleri (C#) kullanarakC++ C birleşimi oluşturma'
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: a8b902536cd09ac732bf2144536605a66b5bbc56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fdadc9505b93f40c66001ac36345efada2edd270
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703068"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595365"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Nasıl yapılır: Öznitelikleri kullanarak C/C++ birleşimi oluşturma (C#)
-Öznitelikleri kullanarak yapı birimleri bellekte nasıl düzenlenmiştir özelleştirebilirsiniz. Örneğin, olarak C/C++'ta bir birleşim kullanarak Bilineni oluşturabilirsiniz `StructLayout(LayoutKind.Explicit)` ve `FieldOffset` öznitelikleri.  
+# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Nasıl yapılır: Öznitelikleri kullanarak C/C++ Union oluşturma (C#)
+Öznitelikleri kullanarak yapıların bellekte nasıl düzenlendiğini özelleştirebilirsiniz. Örneğin,C++ `StructLayout(LayoutKind.Explicit)` ve `FieldOffset` özniteliklerini kullanarak C/içinde birleşim olarak bilinen öğeleri oluşturabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Bu kesimdeki kod, tüm alanları `TestUnion` bellekte aynı konuma başlangıç.  
+ Bu kod kesiminde, tüm alanları `TestUnion` bellekte aynı konumda başlar.  
   
 ```csharp  
 // Add a using directive for System.Runtime.InteropServices.  
@@ -36,7 +36,7 @@ ms.locfileid: "61703068"
 ```  
   
 ## <a name="example"></a>Örnek  
- Başka bir örnek farklı alanları başlangıcında konumları açıkça ayarlandığı verilmiştir.  
+ Aşağıda, alanların farklı bir açık küme konumlarında başlayacağı başka bir örnek verilmiştir.  
   
 ```csharp  
 // Add a using directive for System.Runtime.InteropServices.  
@@ -64,15 +64,15 @@ ms.locfileid: "61703068"
        }  
 ```  
   
- İki tamsayı alanları `i1` ve `i2`, aynı bellek konumları olarak paylaşma `lg`. Platform çağırma kullanırken, bu tür bir yapı yerleşimi üzerinde denetim yararlı olur.  
+ İki tamsayı alanı `i1` ve `i2`aynı bellek konumlarını `lg`ile paylaşır. Yapı düzeni üzerinde bu denetim sıralaması, platform çağırma kullanılırken kullanışlıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)
-- [Öznitelikler](../../../../../docs/standard/attributes/index.md)
-- [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [Öznitelikler (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [Özel öznitelikler (C#) oluşturma](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [Yansıma (C#) kullanarak özniteliklere erişme](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [C# Programlama Kılavuzu](../../index.md)
+- [Öznitelikler](../../../../standard/attributes/index.md)
+- [Yansıma (C#)](../reflection.md)
+- [Öznitelikler (C#)](./index.md)
+- [Özel öznitelikler (C#) oluşturma](./creating-custom-attributes.md)
+- [Yansıma (C#) kullanarak özniteliklere erişme](./accessing-attributes-by-using-reflection.md)

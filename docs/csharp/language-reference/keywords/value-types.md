@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 72771ee494b6be7142ce3f9bec43dcb8aa8a8401
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 2bbbac098096b46c659c4efde2d1c998c8e2d9ae
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363077"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608384"
 ---
 # <a name="value-types-c-reference"></a>Değer türleri (C# başvuru)
 
@@ -32,7 +32,7 @@ Tüm değer türleri, <xref:System.ValueType?displayProperty=nameWithType>öğes
 
 Başvuru türlerinden farklı olarak, bir değer türünden yeni bir tür türemezsiniz. Ancak, başvuru türleri gibi yapılar, arabirimler uygulayabilir.
 
-Değer türü değişkenleri varsayılan `null` olarak olamaz. Ancak, karşılık gelen [null yapılabilir türlerin](../../../csharp/programming-guide/nullable-types/index.md) değişkenleri olabilir `null`.
+Değer türü değişkenleri varsayılan `null` olarak olamaz. Ancak, karşılık gelen [null yapılabilir türlerin](../../programming-guide/nullable-types/index.md) değişkenleri olabilir `null`.
 
 Her değer türünün, bu türün varsayılan değerini Başlatan örtük parametresiz bir Oluşturucusu vardır. Değer türlerinin varsayılan değerleri hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](default-values-table.md).
 

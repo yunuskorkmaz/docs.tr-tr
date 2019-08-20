@@ -1,27 +1,27 @@
 ---
-title: WordprocessingML belgesinin Styles3 ile
+title: Styles3 ile WordprocessingML belgesi
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 4f465294ad299e83156ca458f28717c3abae741f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8f335303f2e288103520d0bedf81e295ab56efef
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483146"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590874"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>Stillerle WordprocessingML Belgesi
-Daha karmaşık WordprocessingML belgelerinin stilleri ile biçimlendirilmiş paragrafları vardır.  
+Daha karmaşık WordprocessingML belgelerinin stillerle biçimlendirilen paragrafları vardır.  
   
- WordprocessingML belgelerinin düzenini ilgili birkaç Not yararlı olur. WordprocessingML belgelerinin paketlerinde depolanır. Paketleriniz varsa birden fazla bölümü (bölümden paketleri bağlamında kullanıldığında açık bir anlamı; bir paket oluşturmak üzere birlikte sıkıştırılmış dosyalar esas olarak, bazı bölümleri). Bir belge stilleri ile biçimlendirilmiş paragrafları içeriyorsa, stil uygulanmış olan paragraf içeren bir belge bölümü olacaktır. Belgeye göre adlandırılır stilleri içeren bir stil bölümü olacaktır.  
+ WordprocessingML belgelerinin organizasyonel ile ilgili birkaç not yararlı olur. WordprocessingML belgeleri paketlere depolanır. Paketler birden çok parçaya sahiptir (parçalar, paketler bağlamında kullanıldığında belirgin bir anlama sahiptir; temelde, parçalar bir paketi oluşturacak şekilde daraltılmış dosyalardır). Bir belge stillerle biçimlendirilen paragraflar içeriyorsa, bu stillerin uygulanmış olduğu paragrafları içeren bir belge bölümü olur. Ayrıca, belge tarafından başvurulan stilleri içeren bir stil bölümü de olacaktır.  
   
- Paketleri erişirken, rastgele bir yol kullanmak yerine parçaları arasındaki ilişkileri aracılığıyla yapmanız önemlidir. Bu sorunu, içerik düzenleme kapsamı dışındadır WordprocessingML belgesinin öğreticide olmakla birlikte, bu öğreticide bulunan örnek programların doğru yaklaşımı gösterir.  
+ Paketlere erişirken, bu işlemi, rastgele bir yol kullanmak yerine parçalar arasındaki ilişkilerle yapmanız önemlidir. Bu sorun, WordprocessingML belge öğreticisindeki Içerik Işleme kapsamının ötesinde, ancak bu öğreticide yer alan örnek programlar doğru yaklaşımı gösterir.  
   
 ## <a name="a-document-that-uses-styles"></a>Stilleri kullanan bir belge  
- WordML örnek içinde sunulan [şekli, WordprocessingML belgelerinin (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) çok basit bir konudur. Aşağıdaki belge daha karmaşık bir işlemdir: Stilleri ile biçimlendirilmiş paragrafları var. Bir Office Open XML belgesi yapan bir XML olup çalıştırmak için en kolay yolu [örnek bu çıkışları Office Open XML belge kısımları (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
+ [WordprocessingML belgeleriC#() konusunun şeklinde](./shape-of-wordprocessingml-documents.md) sunulan WordML örneği çok basit bir işlemdir. Aşağıdaki belge daha karmaşıktır: Stillerle biçimlendirilen paragraflar içerir. Bir Office Open XML belgesi oluşturan XML 'yi görmenin en kolay yolu, [Office Open XML belge bölümlerinin (C#) çıkışı olan örneği](./example-that-outputs-office-open-xml-document-parts.md)çalıştırmanız.  
   
- Aşağıdaki belgede, ilk paragrafa stilde `Heading1`. Varsayılan Stil paragraflar vardır. Ayrıca birkaç stil paragraf vardır `Code`. Bu göreli karmaşıklığı nedeniyle, LINQ to XML ile ayrıştırmak için daha çok ilginizi çeken bir belge budur.  
+ Aşağıdaki belgede, ilk paragraf stile `Heading1`sahiptir. Varsayılan stili olan bir dizi paragraf vardır. Ayrıca, stili `Code`olan bir dizi paragraf de vardır. Bu göreli karmaşıklık nedeniyle, LINQ to XML ayrıştırılmaya yönelik daha ilgi çekici bir belgedir.  
   
- Varsayılan olmayan stilde bu paragraflarda paragraf öğeleri adlı bir alt öğesi olan `w:pPr`, sırayla olan bir alt öğesi `w:pStyle`. Bu öğeye bir öznitelik sahip `w:val`, stil adı içerir. Paragraf varsayılan stilde, paragraf öğesini yok demektir bir `w:p.Pr` alt öğesi.  
+ Varsayılan olmayan stillerdeki bu paragraflarda, paragraf öğelerinin adlı `w:pPr`bir alt öğesi vardır ve bu, sırasıyla bir alt öğesi `w:pStyle`vardır. Bu öğenin, stil adını içeren `w:val`bir özniteliği vardır. Paragrafta varsayılan stil varsa, paragraf öğesinin bir `w:p.Pr` alt öğesi olmadığı anlamına gelir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

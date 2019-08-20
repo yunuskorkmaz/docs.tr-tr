@@ -1,5 +1,5 @@
 ---
-title: -win32manifest (C# Derleyici Seçenekleri)
+title: -win32manifest (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /win32manifest
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-ms.openlocfilehash: 4cdab8c818cf3278c829e2486e89be32bb4ba277
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5fc8a89faaa7fac3413000afdf94b6a96b23ab6d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593039"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606266"
 ---
-# <a name="-win32manifest-c-compiler-options"></a>-win32manifest (C# Derleyici Seçenekleri)
-Kullanım **-win32manifest** projenin taşınabilir yürütülebilir (PE) dosya gömülü olması için bir kullanıcı tanımlı uygulama soubor manifestu Win32 için seçeneği.  
+# <a name="-win32manifest-c-compiler-options"></a>-win32manifest (C# derleyici seçenekleri)
+Bir projenin Taşınabilir çalıştırılabilir (PE) dosyasına gömülecek Kullanıcı tanımlı bir Win32 uygulama bildirim dosyası belirtmek için **-win32manifest** seçeneğini kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,31 +26,31 @@ Kullanım **-win32manifest** projenin taşınabilir yürütülebilir (PE) dosya 
   
 ## <a name="arguments"></a>Arguments  
  `filename`  
- Özel bildirim dosyasının konumunu ve adını.  
+ Özel bildirim dosyasının adı ve konumu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan olarak, Visual C# derleyicisi "asInvoker" istenen yürütme düzeyini belirten bir uygulama bildirimi katıştırır. Bildirim, yürütülebilir dosya oluşturulduğuna göre genellikle bin\Debug veya bin\Release klasörü, Visual Studio kullandığınızda aynı klasörde oluşturulur. Örneğin "highestAvailable" veya "requireAdministrator" istenen yürütme düzeyini belirtmek özel bir bildirim sağlamak istiyorsanız, dosya adını belirtmek için bu seçeneği kullanın.  
+ Varsayılan olarak, görsel C# derleyici Istenen "asInvoker" yürütme düzeyini belirten bir uygulama bildirimi katıştırır. Bu, bildirimi, yürütülebilir dosyanın oluşturulduğu klasörde, genellikle Visual Studio kullandığınızda bin\Debug veya bin\Release klasöründe oluşturur. Örneğin, istenen "highestAvailable" veya "requireAdministrator" yürütme düzeyini belirtmek için özel bir bildirim sağlamak istiyorsanız, dosyanın adını belirtmek için bu seçeneği kullanın.  
   
 > [!NOTE]
->  Bu seçenek ve [-win32res (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) seçeneği karşılıklı olarak birbirini dışlar. Aynı komut satırında iki seçenek de kullanmayı denerseniz bir derleme hatası alırsınız.  
+>  Bu seçenek ve [-win32res (C# derleyici seçenekleri)](./win32res-compiler-option.md) seçeneği birbirini dışlıyor. Her iki seçeneği de aynı komut satırında kullanmayı denerseniz, bir derleme hatası alırsınız.  
   
- Hiçbir uygulama bildirimini olan bir uygulama, istenen yürütme düzeyini dosya/kayıt defteri sanallaştırma Windows kullanıcı hesabı denetimi özelliği altında tabi belirtir. Daha fazla bilgi için [kullanıcı hesabı denetimi](/windows/access-protection/user-account-control/user-account-control-overview).  
+ İstenen bir yürütme düzeyini belirten uygulama bildirimi olmayan bir uygulama, Windows 'daki Kullanıcı hesabı denetimi özelliği altında dosya/kayıt defteri sanallaştırmaya tabidir. Daha fazla bilgi için bkz. [Kullanıcı hesabı denetimi](/windows/access-protection/user-account-control/user-account-control-overview).  
   
- Bu koşullardan biri doğru ise, uygulama sanallaştırma tabi olacaktır:  
+ Uygulamanız, bu koşullardan biri doğru olduğunda sanallaştırmaya tabi olacaktır:  
   
-- Kullandığınız **-nowin32manifest** seçeneğini sağlamaz daha yeni bir derleme adımı veya bir Windows kaynağı (.res) dosyasının bir parçası olarak bir bildirim kullanarak **-win32res** seçeneği.  
+- **-Nowin32manifest** seçeneğini kullanın ve **-win32res** seçeneğini kullanarak sonraki bir derleme adımında veya Windows kaynak (. res) dosyasının bir parçası olarak bir bildirim sağlamaz.  
   
-- İstenen yürütme düzeyini belirtmeyen bir özel bildirim sağlar.  
+- İstenen yürütme düzeyini belirtmeyen özel bir bildirim sağlarsınız.  
   
- Visual Studio varsayılan .manifest dosyasını oluşturur ve hata ayıklama ve yayın dizinleri yürütülebilir dosyanın yanında depolar. Herhangi bir metin düzenleyicisinde oluşturma ve sonra dosyayı projeye ekleyerek, özel bir bildirim ekleyebilirsiniz. Alternatif olarak, sağ **proje** simgesini **Çözüm Gezgini**, tıklayın **Yeni Öğe Ekle**ve ardından **uygulama bildirim dosyası**. Yeni veya var olan bildirim dosyası ekledikten sonra görüneceği **bildirim** açılan liste. Daha fazla bilgi için [uygulama sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  
+ Visual Studio varsayılan bir. manifest dosyası oluşturur ve yürütülebilir dosyanın yanı sıra hata ayıklama ve sürüm dizinlerinde depolar. Herhangi bir metin düzenleyicisinde bir tane oluşturarak ve sonra dosyayı projeye ekleyerek özel bir bildirim ekleyebilirsiniz. Alternatif olarak, **Çözüm Gezgini**' de **Proje** simgesine sağ tıklayıp **Yeni öğe Ekle**' ye ve ardından **uygulama bildirim dosyası**' na tıklayabilirsiniz. Yeni veya mevcut bildirim dosyanızı ekledikten sonra, **bildirim** açılan listesinde görünür. Daha fazla bilgi için bkz. [uygulama sayfası, proje TasarımcısıC#()](/visualstudio/ide/reference/application-page-project-designer-csharp).  
   
- Kullanarak bir Win32 kaynak dosyası bir parçası olarak veya özel bir derleme sonrası adımı olarak uygulama bildirimine sağlayabilirsiniz [-nowin32manifest (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md) seçeneği. Uygulamanızın Windows Vista dosya veya kayıt defteri sanallaştırma tabi olmasını istiyorsanız, aynı bu seçeneği kullanın. Bu, derleyicinin oluşturmasını ve taşınabilir yürütülebilir (PE) dosyasında bir varsayılan bildirim gömülüyor engeller.  
+ Uygulama bildirimini özel derleme sonrası bir adım olarak veya bir Win32 kaynak dosyasının parçası olarak [-nowin32manifest (C# derleyici seçenekleri)](./nowin32manifest-compiler-option.md) seçeneğini kullanarak sağlayabilirsiniz. Uygulamanızın Windows Vista 'da dosya veya kayıt defteri sanallaştırmaya tabi olmasını istiyorsanız bu seçeneği kullanın. Bu, derleyicinin Taşınabilir çalıştırılabilir (PE) dosyasında varsayılan bir bildirim oluşturmasını ve katıştırmasını engeller.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, Visual C# derleyicisinin bir PE ekler, varsayılan bildirimi gösterir.  
+ Aşağıdaki örnek, Visual C# DERLEYICISININ bir PE 'ye eklediği varsayılan bildirimi gösterir.  
   
 > [!NOTE]
->  Derleyicinin, xml verilerinin standart uygulama adı "MyApplication.app şeklinde" ekler. Windows Server 2003 Service Pack 3'üzerinde çalıştırılacak uygulamaları etkinleştirmek için geçici bir çözüm budur.  
+>  Derleyici, XML 'e "MyApplication. app" standart bir uygulama adı ekler. Bu, uygulamaların Windows Server 2003 Service Pack 3 üzerinde çalışmasını sağlamak için geçici bir çözümdür.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -68,6 +68,6 @@ Kullanım **-win32manifest** projenin taşınabilir yürütülebilir (PE) dosya 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
-- [-nowin32manifest (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)
+- [C# Derleyici Seçenekleri](./index.md)
+- [-nowin32manifest (C# derleyici seçenekleri)](./nowin32manifest-compiler-option.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

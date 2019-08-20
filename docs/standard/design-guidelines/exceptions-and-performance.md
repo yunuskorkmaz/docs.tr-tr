@@ -10,68 +10,72 @@ helpviewer_keywords:
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
 author: KrzysztofCwalina
-ms.openlocfilehash: f9fe3045d8bd8b4d625c5cd49bc18574ebb740de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 967692092186b81802a7ab635ea8fe4dbacd49ed
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026438"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611509"
 ---
 # <a name="exceptions-and-performance"></a>Özel Durumlar ve Performans
-Özel durumlar için ilgili bir sık karşılaşılan özel durumlar için düzenli olarak başarısız kodu kullandıysanız, uygulama performansını kabul edilemez olduğunu konusudur. Bu geçerli bir konudur. Üye bir özel durum oluşturduğunda, kendi performans kat daha yavaş olabilir. Ancak, hata kodlarını kullanarak izin vermeyin. özel durum yönergeleri kesinlikle bağlılığı sırasında iyi performans elde etmek mümkündür. Bu bölümde açıklanan iki deseni, bunu yapmak için yöntemler önerir.  
-  
- **X DO NOT** özel durumlar performansı olumsuz etkileyebilir sorunları nedeniyle hata kodları kullanın.  
-  
- Performansı artırmak için test edici Doer desen veya deneyin-Parse sonraki iki bölümde açıklanan düzeni kullanmak da mümkündür.  
-  
-## <a name="tester-doer-pattern"></a>Test edici Doer düzeni  
- Bazen bir özel durum atma üye performansını üye ikiye bölerek geliştirilebilir. Bakalım <xref:System.Collections.Generic.ICollection%601.Add%2A> yöntemi <xref:System.Collections.Generic.ICollection%601> arabirimi.  
-  
-```  
-ICollection<int> numbers = ...   
-numbers.Add(1);  
-```  
-  
- Yöntem `Add` koleksiyonu salt okunur ise oluşturur. Bu yöntem çağrısında burada sık sık başarısız beklenmektedir senaryolarda bir performans sorunu olabilir. Sorunu azaltmak için yollarla değer eklemek denemeden önce koleksiyona yazılabilir olup olmadığını sınamak için biridir.  
-  
-```  
-ICollection<int> numbers = ...   
-...  
-if(!numbers.IsReadOnly){  
-    numbers.Add(1);  
-}  
-```  
-  
- Bizim örneğimizde, özellik koşulunu test etmek için kullanılan bir üye `IsReadOnly`, test edici adlandırılır. Olası oluşturma bir işlemi gerçekleştirmek için kullanılan bir üye `Add` yöntemi örneğimizde doer adlandırılır.  
-  
- **✓ CONSIDER** Tester Doer düzeni özel durumlar oluşturma üyeleri için özel durumlar ortak senaryolar performans sorunlarını önlemek için ilgili.  
-  
-## <a name="try-parse-pattern"></a>Try-ayrıştırma desenindeki  
- Son derece performans açısından duyarlı API'leri için önceki bölümde açıklanan test edici Doer düzeni daha daha hızlı bir desen kullanılması gerekir. Desen, bir üye semantiği parçası case iyi tanımlanmış bir test yapmak için üye adı ayarlamak için çağırır. Örneğin, <xref:System.DateTime> tanımlayan bir <xref:System.DateTime.Parse%2A> yöntemi bir dizeyi ayrıştırma başarısız olursa, bir özel durum oluşturur. Ayrıca, karşılık gelen tanımlar <xref:System.DateTime.TryParse%2A> ayrıştırmak için çalışır yöntemi ancak false döndürürse ayrıştırma başarısız ve başarılı ayrıştırma kullanarak bir sonuç döndürür bir `out` parametresi.  
-  
-```  
-public struct DateTime {  
-    public static DateTime Parse(string dateTime){   
-        ...   
-    }  
-    public static bool TryParse(string dateTime, out DateTime result){  
-        ...  
-    }  
-}  
-```  
-  
- Bu model kullanılırken, try işlevi katı koşullarını tanımlamak önemlidir. Üye, iyi tanımlanmış try dışındaki herhangi bir nedenle başarısız olursa, üye karşılık gelen bir özel durum throw gerekir.  
-  
- **✓ CONSIDER** deneyin ayrıştırma düzeni özel durumlar oluşturma üyeleri için özel durumlar ortak senaryolar performans sorunlarını önlemek için ilgili.  
-  
- **✓ DO** bu düzeni uygulama yöntemleri için "Deneme" ve Boolean dönüş türü önekini kullanın.  
-  
- **✓ DO** deneyin ayrıştırma desenini kullanarak her üyesi için bir özel durum atma üye sağlayın.  
-  
- *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
-  
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
-  
+Özel durumlarla ilgili yaygın bir sorun, düzenli olarak başarısız olan kod için özel durumlar kullanılıyorsa, uygulamanın performansının kabul edilemez olacağı bir konudur. Bu, geçerli bir konudur. Bir üye özel durum oluşturduğunda, performansı daha yavaş olabilir. Ancak, hata kodlarının kullanılmasına izin vermeyen özel durum yönergelerine tam olarak uyurken iyi bir performans elde etmek mümkündür. Bu bölümde açıklanan iki desen bunu yapmak için yollar önerir.
+
+ **X DO NOT** özel durumlar performansı olumsuz etkileyebilir sorunları nedeniyle hata kodları kullanın.
+
+ Performansı artırmak için, sonraki iki bölümde açıklanan sınayıcı-doer deseninin veya TRY-Parse deseninin kullanılması mümkündür.
+
+## <a name="tester-doer-pattern"></a>Sınayıcı-doer stili
+ Bazen özel durum atma üyesinin performansı, üyenin iki içine bölünerek artırılabilir. <xref:System.Collections.Generic.ICollection%601> Arabirimin <xref:System.Collections.Generic.ICollection%601.Add%2A> yöntemine bakalım.
+
+```csharp
+ICollection<int> numbers = ...
+numbers.Add(1);
+```
+
+ Koleksiyon salt `Add` okunurdur, yöntemi atar. Bu, yöntem çağrısının genellikle başarısız olması beklenen senaryolarda bir performans sorunu olabilir. Sorunu hafifletmenin yöntemlerinden biri, bir değer eklemeye çalışmadan önce koleksiyonun yazılabilir olup olmadığını test eteklemektir.
+
+```csharp
+ICollection<int> numbers = ...
+...
+if (!numbers.IsReadOnly)
+{
+    numbers.Add(1);
+}
+```
+
+ Örneğimizde `IsReadOnly`bir koşulu test etmek için kullanılan üye, sınayıcı olarak adlandırılır. Olası bir atma işlemini `Add` gerçekleştirmek için kullanılan üye, örneğimizdeki yöntemi, doer olarak adlandırılır.
+
+ **✓ CONSIDER** Tester Doer düzeni özel durumlar oluşturma üyeleri için özel durumlar ortak senaryolar performans sorunlarını önlemek için ilgili.
+
+## <a name="try-parse-pattern"></a>TRY-Parse kriteri
+ Son derece performansa duyarlı API 'Ler için, önceki bölümde açıklanan sınayıcı-doer deseninin daha da hızlı bir şekilde kullanılması gerekir. Model, üye semantiğinin bir parçası olarak iyi tanımlanmış bir test çalışması yapmak için üye adını ayarlamayı çağırır. Örneğin, <xref:System.DateTime> bir dizeyi ayrıştırma <xref:System.DateTime.Parse%2A> başarısız olursa özel durum oluşturan bir yöntemi tanımlar. Ayrıca, ayrıştırmaya deneyen <xref:System.DateTime.TryParse%2A> karşılık gelen bir yöntemi tanımlar, ancak ayrıştırma başarısız olursa false döndürür ve bir `out` parametre kullanarak başarılı bir ayrıştırma sonucunu döndürür.
+
+```csharp
+public struct DateTime
+{
+    public static DateTime Parse(string dateTime)
+    {
+        ...
+    }
+    public static bool TryParse(string dateTime, out DateTime result)
+    {
+        ...
+    }
+}
+```
+
+ Bu model kullanılırken, TRY işlevlerini katı koşullarda tanımlamak önemlidir. Üye, iyi tanımlanmış deneme dışında herhangi bir nedenle başarısız olursa, üye yine de karşılık gelen bir özel durum oluşturması gerekir.
+
+ **✓ CONSIDER** deneyin ayrıştırma düzeni özel durumlar oluşturma üyeleri için özel durumlar ortak senaryolar performans sorunlarını önlemek için ilgili.
+
+ **✓ DO** bu düzeni uygulama yöntemleri için "Deneme" ve Boolean dönüş türü önekini kullanın.
+
+ **✓ DO** deneyin ayrıştırma desenini kullanarak her üyesi için bir özel durum atma üye sağlayın.
+
+ *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
+
+ *, Framework tasarım yönergelerinden [Pearson Eğitim, Inc. izni ile yeniden yazdırılıyor: Microsoft Windows geliştirme serisi 'nin bir parçası olarak, bezysztof](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Cwalina ve atacan abkms, Ekim 22, 2008 ile Addison-Wesley Professional ile yeniden kullanılabilir .NET kitaplıkları için kurallar, ıoms ve desenler.*
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

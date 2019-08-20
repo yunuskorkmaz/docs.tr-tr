@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Bir XML ağacını XmlWriter (LINQ to XML) ile doldurun (C#)'
+title: 'Nasıl yapılır: Bir XmlWriter ile bir XML ağacını doldurma (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: cd5674d1-5c54-4efc-ba68-e23b2875295f
-ms.openlocfilehash: 6e121b246729b2b671d0d07dfed6a31602bfe565
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 88b088ddad54d1fef67cb4c86f8df4eee7bf3662
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485223"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593111"
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>Nasıl yapılır: Bir XML ağacını XmlWriter (LINQ to XML) ile doldurun (C#)
-Bir XML ağacı doldurma yollarından biri kullanmaktır <xref:System.Xml.Linq.XContainer.CreateWriter%2A> oluşturmak için bir <xref:System.Xml.XmlWriter>ve ardından yazma <xref:System.Xml.XmlWriter>. XML ağacı yazılan tüm düğümleri doldurulur <xref:System.Xml.XmlWriter>.  
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>Nasıl yapılır: Bir XmlWriter ile bir XML ağacını doldurma (LINQ to XML) (C#)
+Bir xml ağacını doldurmanın bir yolu <xref:System.Xml.Linq.XContainer.CreateWriter%2A> <xref:System.Xml.XmlWriter>, oluşturmak <xref:System.Xml.XmlWriter>ve sonra öğesine yazmak için kullanmaktır. XML ağacı, <xref:System.Xml.XmlWriter>üzerine yazılan tüm düğümlerle doldurulur.  
   
- Kullandığınızda bu yöntem genellikle kullanırsınız [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] yazılacak bekliyor başka bir sınıf ile bir <xref:System.Xml.XmlWriter>, gibi <xref:System.Xml.Xsl.XslCompiledTransform>.  
+ Bu yöntemi genellikle, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.XmlWriter>gibi bir öğesine yazmayı bekleyen başka bir sınıf ile kullandığınızda kullanırsınız. <xref:System.Xml.Xsl.XslCompiledTransform>  
   
 ## <a name="example"></a>Örnek  
- Olası kullanım için <xref:System.Xml.Linq.XContainer.CreateWriter%2A> XSLT dönüştürmesi çağrılırken oluşan. Bu örnek, bir XML ağacı oluşturur, oluşturur bir <xref:System.Xml.XmlReader> XML ağacından yeni bir belge oluşturur ve ardından oluşturan bir <xref:System.Xml.XmlWriter> yeni belgesine yazılacak. Ardından tümleştirilmesidir XSLT dönüşümü, çağıran <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter>. Dönüştürme başarıyla tamamlandıktan sonra yeni bir XML ağacı dönüşümü sonuçları ile doldurulur.  
+ İçin <xref:System.Xml.Linq.XContainer.CreateWriter%2A> olası bir kullanım XSLT dönüşümünü çağırırken olur. Bu örnek bir XML ağacı oluşturur, XML ağacından <xref:System.Xml.XmlReader> bir oluşturur, yeni bir belge oluşturur ve yeni belgeye yazmak için bir <xref:System.Xml.XmlWriter> oluşturur. Ardından, <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter>geçirerek XSLT dönüşümünü çağırır. Dönüştürme başarıyla tamamlandıktan sonra, yeni XML ağacı dönüştürmenin sonuçlarıyla doldurulur.  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -67,4 +67,4 @@ Console.WriteLine(newTree);
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A>
 - <xref:System.Xml.XmlWriter>
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [XML ağaçları oluşturma (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [XML ağaçları oluşturma (C#)](./linq-to-xml-overview.md)

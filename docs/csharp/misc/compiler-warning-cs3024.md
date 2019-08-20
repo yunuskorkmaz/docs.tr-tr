@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - CS3024
 ms.assetid: fef9db31-9a7f-42d5-ad37-3e7faf661f95
-ms.openlocfilehash: 7515fdd7bc8f57890e3f1aac6303ed4607cc2249
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6147fc1aafc06d7c844cfc39eafebbd737d89610
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61688260"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69601965"
 ---
 # <a name="compiler-warning-cs3024"></a>Derleyici Uyarısı CS3024
-'Type' kısıtlama türü CLS uyumlu değil.  
+' Type ' kısıtlama türü CLS uyumlu değil.  
   
- Derleyici, CLS uyumlu olmayan bir türün genel tür kısıtlaması olarak kullanmak, genel sınıfınıza kullanmak için bazı dillerde yazılmış kod imkansız hale getirebilecek olduğundan bu uyarı verir.  
+ Bu uyarı, CLS uyumlu olmayan bir türün genel bir tür kısıtlaması olarak kullanılması, bazı dillerde yazılan kodun genel sınıfınızı kullanmasını olanaksız hale getirecek olduğundan bu uyarıyı yayınlar.  
   
-### <a name="to-eliminate-this-warning"></a>Bu uyarıyı ortadan kaldırmak için  
+### <a name="to-eliminate-this-warning"></a>Bu uyarıyı kaldırmak için  
   
-1. CLS uyumlu bir tür için tür kısıtlaması kullanın.  
+1. Tür kısıtlaması için CLS uyumlu bir tür kullanın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, çeşitli konumlarda CS3024 oluşturur:  
+ Aşağıdaki örnek çeşitli konumlarda CS3024 oluşturur:  
   
 ```csharp  
 // cs3024.cs  
@@ -57,4 +57,4 @@ public class Test
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tür Parametrelerindeki Kısıtlamalar](../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+- [Tür Parametrelerindeki Kısıtlamalar](../programming-guide/generics/constraints-on-type-parameters.md)

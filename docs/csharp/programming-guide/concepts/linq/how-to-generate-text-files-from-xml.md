@@ -1,21 +1,21 @@
 ---
-title: "Nasıl yapılır: XML'den metin dosyaları oluştur (C#)"
+title: "Nasıl yapılır: XML 'den metin dosyaları oluştur (C#)"
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 2890128e4dacbac5279b928d9b9bcc097cbe669a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 51828c11b54f99131b89e0a30979f3f3acdb12ae
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667944"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593350"
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a>Nasıl yapılır: XML'den metin dosyaları oluştur (C#)
-Bu örnek, bir XML dosyasından bir virgülle ayrılmış değerler (CSV) dosyası oluşturmak nasıl gösterir.  
+# <a name="how-to-generate-text-files-from-xml-c"></a>Nasıl yapılır: XML 'den metin dosyaları oluştur (C#)
+Bu örnek, bir XML dosyasından bir virgülle ayrılmış değerler (CSV) dosyasının nasıl oluşturulacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- C# sürümü, bu örnek yöntemi sözdizimini kullanır ve `Aggregate` XML belgesinden tek bir ifade bir CSV dosyası oluşturmak için işleç. Daha fazla bilgi için [sorgu sözdizimi ve yöntem sözdizimi LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+ Bu C# örneğin sürümü, tek bir ifadede bir XML belgesinden `Aggregate` CSV dosyası oluşturmak için yöntem sözdizimini ve işlecini kullanır. Daha fazla bilgi için bkz. [LINQ 'Te sorgu sözdizimi ve Yöntem sözdizimi](./query-syntax-and-method-syntax-in-linq.md).  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -55,4 +55,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Projeksiyonlar ve Dönüşümler (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projeksiyonlar ve dönüşümler (LINQ to XMLC#) ()](./projections-and-transformations-linq-to-xml.md)

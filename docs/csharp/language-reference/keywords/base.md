@@ -1,7 +1,7 @@
 ---
-title: Base anahtar sözcüğü - C# başvurusu
+title: Base anahtar sözcüğü C# -başvurusu
 ms.custom: seodec18
-description: C# türetilmiş bir sınıf içinden temel sınıfın üyelerine erişmek için kullanılan temel anahtar sözcüğü hakkında bilgi edinin.
+description: İçindeki C#türetilmiş bir sınıftan temel sınıfın üyelerine erişmek için kullanılan temel anahtar sözcüğü hakkında bilgi edinin.
 ms.date: 07/20/2015
 f1_keywords:
 - base
@@ -10,38 +10,38 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: 2ef0d07aed595fa630459171482e0b0849aed877
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: b882a8d1e5979ac184d184be379dd76f7bf3600f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401591"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602262"
 ---
 # <a name="base-c-reference"></a>base (C# Başvurusu)
 
-`base` Anahtar sözcüğü, türetilmiş bir sınıf içinden temel sınıfın üyelerine erişmek için kullanılır:
+`base` Anahtar sözcüğü türetilmiş bir sınıf içinden temel sınıfın üyelerine erişmek için kullanılır:
 
-- Başka bir yöntem tarafından geçersiz kılınan taban sınıfta bir yöntem çağrısı.
+- Temel sınıfta, başka bir yöntem tarafından geçersiz kılınan bir yöntemi çağırın.
 
-- Hangi temel sınıf oluşturucusu, türetilmiş sınıf örnekleri oluşturulurken çağrılması gerektiğini belirtin.
+- Türetilmiş sınıfın örneklerini oluştururken hangi temel sınıf oluşturucunun çağrılması gerektiğini belirtin.
 
-Bir temel sınıf erişim, yalnızca bir oluşturucu, bir örnek yöntemi veya bir örnek özellik erişimcisi izin verilir.
+Temel sınıf erişimine yalnızca bir oluşturucuda, örnek yönteminde veya örnek özellik erişimcisinde izin verilir.
 
-Kullanılacak bir hata olduğunu `base` anahtar sözcüğü statik bir yöntem içinde.
+`base` Anahtar sözcüğünün statik bir yöntem içinden kullanılması hatadır.
 
-Erişilen temel sınıf, sınıf bildiriminde belirtilenden temel sınıftır. Örneğin, belirttiğiniz `class ClassB : ClassA`, Türetilme üyelerinin Türetilme temel sınıfını ne olursa olsun, Sınıfb'den erişilir.
+Erişilen temel sınıf, sınıf bildiriminde belirtilen temel sınıftır. Örneğin, öğesini belirtirseniz `class ClassB : ClassA`, ClassA 'nın temel sınıfından bağımsız olarak SınıfB ' den erişim altına alınır.
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, iki temel sınıfı, `Person`hem de türetilmiş sınıf `Employee`, adında bir yöntemi olan `Getinfo`. Kullanarak `base` anahtar sözcüğü, mümkündür çağrılacak `Getinfo` içinden temel sınıf yöntemini türetilmiş sınıf.
+Bu örnekte, hem taban sınıfının `Person`hem de türetilmiş `Employee`sınıfın adında `Getinfo`bir yöntemi vardır. `base` Anahtar sözcüğünü kullanarak, türetilmiş sınıfın içindeki `Getinfo` yöntemi temel sınıfta çağırmak mümkündür.
 
 [!code-csharp[csrefKeywordsAccess#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#1)]
 
-Diğer örnekler için [yeni](new-modifier.md), [sanal](virtual.md), ve [geçersiz kılma](override.md).
+Daha fazla örnek için bkz. [New](new-modifier.md), [Virtual](virtual.md)ve [override](override.md).
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, türetilen bir sınıfın örneklerini oluştururken adlı temel sınıf oluşturucusu belirtmek gösterilmektedir.
+Bu örnek, türetilmiş bir sınıfın örneklerini oluştururken çağrılan temel sınıf oluşturucunun nasıl ekleneceğini gösterir.
 
 [!code-csharp[csrefKeywordsAccess#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#2)]
 
@@ -51,7 +51,7 @@ Bu örnek, türetilen bir sınıfın örneklerini oluştururken adlı temel sın
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
-- [this](../../../csharp/language-reference/keywords/this.md)
+- [C#Başvurunun](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Anahtar Sözcükleri](./index.md)
+- [this](./this.md)

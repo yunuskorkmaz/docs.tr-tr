@@ -1,5 +1,5 @@
 ---
-title: Özellikler - kullanarak C# Programlama Kılavuzu
+title: Özellikleri kullanma- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,102 +7,102 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 6a929957a0bb512ae4af503ad4b80c9d081764dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ff43fa1d3019af5cd08f86704a05531120201d17
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582971"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596024"
 ---
 # <a name="using-properties-c-programming-guide"></a>Özellikleri Kullanma (C# Programlama Kılavuzu)
-Özellikler, alanlar ve yöntemler hem yönlerini birleştirin. Bir alan için bir özelliği bir nesnenin kullanıcıya görünen özelliğine erişmek, aynı sözdizimini gerektirir. Temsil eden bir veya iki kod blokları için uygulayan bir sınıfın özelliğidir bir [alma](../../../csharp/language-reference/keywords/get.md) erişimci veya [ayarlamak](../../../csharp/language-reference/keywords/set.md) erişimcisi. Kod bloğu için `get` erişimci özelliği okunduğunda yürütülür; kod engellemek için `set` erişimci özelliği yeni bir değer atandığında yürütülür. Bir özellik olmadan bir `set` erişimci salt okunur kabul edilir. Bir özellik olmadan bir `get` salt yazılır erişimci kabul edilir. Her iki erişimcisi olan okuma-yazma özelliğidir.  
+Özellikler her iki alanın ve yöntemin yönlerini birleştirir. Bir nesnenin kullanıcısına, bir özellik bir alan gibi görünür, özelliğe erişim de aynı sözdizimini gerektirir. Bir sınıfın uygulayıcısı için bir özellik bir veya iki kod blobunun yanı sıra bir [Get](../../language-reference/keywords/get.md) erişimcisini ve/veya [set](../../language-reference/keywords/set.md) erişimcisini temsil eder. `get` Erişimci için kod bloğu, özellik okuma sırasında yürütülür. `set` erişimci için kod bloğu, özelliğe yeni bir değer atandığında yürütülür. `set` Erişimcisi olmayan bir özellik salt okunurdur. `get` Erişimcisi olmayan bir özellik salt yazılır olarak değerlendirilir. Her iki erişimciyi sahip bir özellik okuma-yazma ' dır.  
   
- Alanları özellikleri değişkenleri olarak sınıflandırılan değil. Bu nedenle, bir özellik olarak geçirilemez bir [ref](../../../csharp/language-reference/keywords/ref.md) veya [kullanıma](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametresi.  
+ Alanların aksine, özellikler değişken olarak sınıflandırılmaz. Bu nedenle, bir özelliği [ref](../../language-reference/keywords/ref.md) veya [Out](../../language-reference/keywords/out-parameter-modifier.md) parametresi olarak geçiremezsiniz.  
   
- Özellikleri, pek çok kullanımı vardır: bir değişiklik; izin vermeden önce verileri doğrulayabilirsiniz şeffaf bir şekilde burada verileri gerçekte bir veritabanı gibi diğer bazı kaynak alınır bir sınıf verilerini açığa çıkarabilir; Olay bildirmek veya diğer alanları değerinin değiştirilmesi gibi veri değiştirildiğinde, bunlar bir eylem sürebilir.  
+ Özelliklerin birçok kullanımı vardır: bir değişikliğe izin vermeden önce verileri doğrulayabilir; verilerin aslında bir veritabanı gibi başka bir kaynaktan alındığı bir sınıf üzerinde saydam bir şekilde veri sunabilir; bir olayı oluşturma veya diğer alanların değerini değiştirme gibi veriler değiştirildiğinde bir eylem gerçekleştirebilir.  
   
- Özellikler alanı erişim düzeyini belirterek sınıfı blokta bildirilen, özelliğin türü tarafından izlenen, özellik adından önce gelen ve bildiren bir kod bloğu tarafından izlenen bir `get`-erişimci veya `set` erişimcisi. Örneğin:  
+ Özellikler, alanın erişim düzeyini, sonra özelliğin türünü ve sonra özelliğin adını ve ardından bir `get`-erişimci ve/ `set` veya erişimci bildiren bir kod bloğunu belirterek sınıf bloğunda bildirilir. Örneğin:  
   
  [!code-csharp[csProgGuideProperties#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#7)]  
   
- Bu örnekte, `Month` bir özellik olarak, bu nedenle bildirildiği `set` erişimcisi emin olun `Month` değeri 1 ile 12 arasında ayarlanır. `Month` Özelliği, gerçek değer izlemek için özel bir alan kullanır. Bir özelliğin veri gerçek konumunu genellikle özelliğin "yedekleme deposu." adlandırılır Özel alanları bir yedekleme deposu kullanmak özellikler yaygındır. Alan, yalnızca özelliği çağırarak değiştirilebilir emin olmak için özel olarak işaretlenir. Genel ve özel erişim kısıtlamaları hakkında daha fazla bilgi için bkz. [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Bu örnekte, `Month` erişimcinin `Month` değerin 1 ile 12 arasında ayarlandığından emin `set` olması için bir özellik olarak bildirilmiştir. Özelliği `Month` , gerçek değeri izlemek için bir özel alan kullanır. Özelliğin verilerinin gerçek konumu genellikle özelliğin "yedekleme deposu" olarak adlandırılır. Özelliklerin özel alanları bir yedekleme deposu olarak kullanması yaygındır. Bu alan, yalnızca özelliği çağırarak değiştirilebilmesi için özel olarak işaretlenir. Ortak ve özel erişim kısıtlamaları hakkında daha fazla bilgi için bkz. [erişim değiştiricileri](./access-modifiers.md).  
   
- Otomatik uygulanan özellikler basit özellik bildirimleri için Basitleştirilmiş söz dizimi sağlar. Daha fazla bilgi için [Implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
+ Otomatik uygulanan özellikler basit özellik bildirimleri için Basitleştirilmiş söz dizimi sağlar. Daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](./auto-implemented-properties.md).  
   
 ## <a name="the-get-accessor"></a>Get erişimcisi  
- Gövdesi `get` erişimci, bir yöntemin benzer. Bu özellik türünde bir değer döndürmesi gerekir. Yürütülmesini `get` alanın değerini okumak için erişimci eşdeğerdir. Örneğin, ne zaman, döndürüyor özel değişkeninden `get` erişimcisi ve en iyi duruma getirme etkinleştirildiğini, çağrı `get` yöntem çağrısının zahmetine olduğundan erişimci yöntemi derleyici tarafından satır içine alınmış. Ancak, bir sanal `get` derleyici derleme zamanında hangi yöntemin gerçekten çağrılabilir çalışma zamanında bilmediğinden erişimci yöntemi satır içine alınmış olamaz. Aşağıda bir `get` özel bir alanın değerini döndüren bir erişimci `name`:  
+ `get` Erişimcinin gövdesi bir yönteme benzer. Özellik türünün bir değerini döndürmesi gerekir. `get` Erişimcinin yürütülmesi alanın değerini okumayla eşdeğerdir. Örneğin, `get` erişimcisinden özel değişkeni döndürmekte ve iyileştirmeler etkinleştirildiğinde, `get` erişimci metoduna yapılan çağrı derleyici tarafından satır içine alınır ve bu nedenle Yöntem çağrısı yoktur. Ancak, derleyici derleme `get` zamanında hangi yöntemin çalışma zamanında çağrıldığı hakkında bilgi içermediği için bir sanal erişimci yöntemi satır içine alınamaz. Aşağıda özel bir alanın `get` `name`değerini döndüren bir erişimci verilmiştir:  
   
  [!code-csharp[csProgGuideProperties#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#8)]  
   
- Size özelliği dışında atama hedefi olarak başvurduğunuzda `get` erişimci özelliğin değerini okumak için çağrılır. Örneğin:  
+ Özelliğe başvurduğunuzda, bir atamanın `get` hedefi dışında, özelliğin değerini okumak için erişimci çağrılır. Örneğin:  
   
  [!code-csharp[csProgGuideProperties#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#9)]  
   
- `get` Erişimci bitmelidir bir [dönüş](../../../csharp/language-reference/keywords/return.md) veya [throw](../../../csharp/language-reference/keywords/throw.md) deyimi ve denetimi devre dışı erişimcisinin gövdesi Akış olamaz.  
+ Erişimci bir return veya [throw](../../language-reference/keywords/throw.md) ifadesinde bitmelidir ve denetim erişimci gövdesini kapatamıyor olmalıdır. [](../../language-reference/keywords/return.md) `get`  
   
- Kullanarak bir nesnenin durumunu değiştirmek için hatalı bir programlama stili, `get` erişimcisi. Örneğin, aşağıdaki erişimci yan etkisi, her nesnenin durumunu değiştirme üretir, `number` alan erişildiğinde.  
+ `get` Erişimciyi kullanarak nesnenin durumunu değiştirmek için hatalı bir programlama stilidir. Örneğin, aşağıdaki erişimci `number` alana her erişildiğinde nesnenin durumunu değiştirmenin yan etkisini üretir.  
   
  [!code-csharp[csProgGuideProperties#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#10)]  
   
- `get` Erişimci alan değeri döndürür veya bu işlem ve döndürün için kullanılabilir. Örneğin:  
+ Erişimci `get` , alan değerini döndürmek veya hesaplamak ve döndürmek için kullanılabilir. Örneğin:  
   
  [!code-csharp[csProgGuideProperties#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#11)]  
   
- Bir değere atamazsanız kesimdeki önceki kod, `Name` özelliği, a. değeri döndürecektir  
+ Önceki kod segmentinde, `Name` özelliğe bir değer atamadıysanız, değerini döndürür.  
   
-## <a name="the-set-accessor"></a>Ayarlama erişimcisi  
- `set` Erişimcisi, dönüş türü olan bir yöntem benzer [void](../../../csharp/language-reference/keywords/void.md). Adlı bir örtük parametreyi kullanan `value`, türü özelliği türüdür. Aşağıdaki örnekte, bir `set` erişimci eklenir `Name` özelliği:  
+## <a name="the-set-accessor"></a>Set erişimcisi  
+ Erişimci `set` , dönüş türü [void](../../language-reference/keywords/void.md)olan bir yönteme benzer. Türü özelliğin türü olan adlı `value`örtük bir parametre kullanır. Aşağıdaki örnekte, `set` `Name` özelliğine bir erişimci eklenmiştir:  
   
  [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]  
   
- Özellik için bir değer atadığınızda `set` erişimci, yeni değer sağlayan bir bağımsız değişkeni kullanılarak çağrılır. Örneğin:  
+ Özelliğe bir değer atadığınızda, `set` erişimci yeni değer sağlayan bir bağımsız değişken kullanılarak çağrılır. Örneğin:  
   
  [!code-csharp[csProgGuideProperties#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#13)]  
   
- Örtük parametre adı kullanmak için bir hata olduğunu `value`, bir yerel değişken bildiriminde'için bir `set` erişimcisi.  
+ `value` Bir`set` erişimcinin yerel değişken bildirimi için örtük parametre adını kullanmak hatadır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Özellikler olarak işaretlenebilir `public`, `private`, `protected`, `internal`, `protected internal` veya `private protected`. Bu erişim değiştiricileri kullanıcılar sınıf özelliği nasıl erişebileceğiniz tanımlayın. `get` Ve `set` erişimcileri aynı özelliği için farklı erişim değiştiricilere sahip olabilir. Örneğin, `get` olabilir `public` salt okunur dışından erişim türü izin vermek ve `set` olabilir `private` veya `protected`. Daha fazla bilgi için [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ `public`Özellikler ,`internal`,, veya`private protected`olarakişaretlenebilir. `private` `protected` `protected internal` Bu erişim değiştiricileri, sınıfın kullanıcılarının özelliğe nasıl erişekullanabileceğinizi tanımlar. Aynı özelliğe `set` yönelik veerişimcilerifarklıerişimdeğiştiricilerinesahipolabilir.`get` Örneğin `get` `set` `private` `protected`, türü dışından salt okuma erişimine izin vermek olabilir ve ya da olabilir. `public` Daha fazla bilgi için bkz. [erişim değiştiricileri](./access-modifiers.md).  
   
- Bir özellik kullanarak statik bir özellik olarak bildirilmelidir `static` anahtar sözcüğü. Sınıfının bir örneğini bulunuyor olsa bile bu özellik kullanılabilir için herhangi bir zamanda yapar. Daha fazla bilgi için [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ Özelliği `static` anahtar sözcüğü kullanılarak statik bir özellik olarak bildirilemez. Bu özellik, sınıfın bir örneği mevcut olmasa bile, özelliği herhangi bir zamanda çağıranlar için kullanılabilir hale getirir. Daha fazla bilgi için bkz. [statik sınıflar ve statik sınıf üyeleri](./static-classes-and-static-class-members.md).  
   
- Bir özellik kullanarak sanal bir özellik olarak işaretlenebilir [sanal](../../../csharp/language-reference/keywords/virtual.md) anahtar sözcüğü. Bu kullanarak özellik davranışı geçersiz kılmak türetilmiş sınıfları sağlar [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) anahtar sözcüğü. Bu seçenekler hakkında daha fazla bilgi için bkz. [devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
+ Bir özellik [sanal](../../language-reference/keywords/virtual.md) anahtar sözcüğü kullanılarak sanal bir özellik olarak işaretlenebilir. Bu, türetilmiş sınıfların [geçersiz kılma](../../language-reference/keywords/override.md) anahtar sözcüğünü kullanarak özellik davranışını geçersiz kılmasını sağlar. Bu seçenekler hakkında daha fazla bilgi için bkz. [Devralma](./inheritance.md).  
   
- Sanal bir özelliği geçersiz kılmak için bir özelliği de olabilir [korumalı](../../../csharp/language-reference/keywords/sealed.md), türetilmiş sınıflar için artık sanal olduğunu belirtin. Son olarak, bir özellik bildirilebilir [soyut](../../../csharp/language-reference/keywords/abstract.md). Bu sınıfta hiç uygulama yok ve türetilen sınıflar, kendi uygulama yazmanız gereken anlamına gelir. Bu seçenekler hakkında daha fazla bilgi için bkz. [soyut ve korumalı sınıflar ve sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Sanal bir özelliği geçersiz kılan bir özellik de [mühürlenebilir](../../language-reference/keywords/sealed.md), bu da türetilmiş sınıflar için artık sanal değildir. Son olarak, bir özellik [soyut](../../language-reference/keywords/abstract.md)olarak bildirilemez. Bu, sınıfta bir uygulama olmadığı ve türetilen sınıfların kendi uygulamasını yazması gerektiği anlamına gelir. Bu seçenekler hakkında daha fazla bilgi için bkz. [soyut ve korumalı sınıflar ve sınıf üyeleri](./abstract-and-sealed-classes-and-class-members.md).  
   
 > [!NOTE]
->  Kullanılacak bir hata olduğunu bir [sanal](../../../csharp/language-reference/keywords/virtual.md), [soyut](../../../csharp/language-reference/keywords/abstract.md), veya [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) değiştiricisi bir erişimci bir [statik](../../../csharp/language-reference/keywords/static.md) özelliği.  
+>  [Statik](../../language-reference/keywords/static.md) bir özelliğin erişimcisi üzerinde [sanal](../../language-reference/keywords/virtual.md), [Özet](../../language-reference/keywords/abstract.md)veya [geçersiz kılma](../../language-reference/keywords/override.md) değiştiricisi kullanmak hatadır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, örnek, statik ve salt okunur özelliklerini gösterir. Bunu klavyeden artışlarla çalışan adını kabul eder `NumberOfEmployees` 1 ve görüntüler çalışan adı ve numarası.  
+ Bu örnek örnek, statik ve salt okunurdur özelliklerini gösterir. Klavye üzerinden çalışanın adını kabul eder, 1 artırır `NumberOfEmployees` ve çalışan adını ve numarasını görüntüler.  
   
  [!code-csharp[csProgGuideProperties#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#2)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, türetilmiş sınıf içinde aynı ada sahip başka bir özellik tarafından gizlenen bir taban sınıftaki bir özelliğe erişmek nasıl gösterir.  
+ Bu örnek, türetilmiş bir sınıfta aynı ada sahip başka bir özellik tarafından gizlenen bir temel sınıftaki bir özelliğe nasıl erişebileceğinizi gösterir.  
   
  [!code-csharp[csProgGuideProperties#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#3)]  
   
- Önceki örnekte önemli noktalar şunlardır:  
+ Aşağıda, önceki örnekteki önemli noktaları verilmiştir:  
   
-- Özellik `Name` türetilen sınıfta özelliğini gizler `Name` temel sınıf. Böyle bir durumda `new` değiştiricisi, türetilmiş sınıf içinde özellik bildirimi kullanılır:  
+- Türetilmiş sınıftaki `Name` özelliği, temel sınıftaki özelliği `Name` gizler. Böyle bir durumda, `new` değiştirici türetilmiş sınıftaki özelliğin bildiriminde kullanılır:  
   
      [!code-csharp[csProgGuideProperties#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#4)]  
   
-- Cast `(Employee)` temel sınıfta gizli özelliğine erişmek için kullanılır:  
+- Atama `(Employee)` , temel sınıftaki gizli özelliğe erişmek için kullanılır:  
   
      [!code-csharp[csProgGuideProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#5)]  
   
-     Gizleme üyeleri hakkında daha fazla bilgi için bkz. [new değiştiricisi](../../../csharp/language-reference/keywords/new-modifier.md).  
+     Üyeleri gizleme hakkında daha fazla bilgi için bkz. [Yeni değiştirici](../../language-reference/keywords/new-modifier.md).  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, iki sınıf `Cube` ve `Square`, soyut bir sınıf uygulama `Shape`ve onun soyut geçersiz kılma `Area` özelliği. Kullanımına dikkat edin [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) değiştiricisi özellikleri. Program yan girdi olarak kabul eder ve kare ve küp alanlarını hesaplar. Ayrıca, alan bir giriş olarak kabul eder ve kare ve küp için karşılık gelen yan hesaplar.  
+ Bu örnekte `Cube` , iki sınıf, ve `Square`soyut bir sınıfı `Shape`uygular ve soyut `Area` özelliğini geçersiz kılar. Özelliklerde geçersiz kılma değiştiricisinin kullanımını göz önünde [kılarsınız](../../language-reference/keywords/override.md) . Program, yüzü bir giriş olarak kabul eder ve kare ve küpün alanını hesaplar. Ayrıca, alanı bir girdi olarak kabul eder ve kare ve küp için ilgili tarafı hesaplar.  
   
  [!code-csharp[csProgGuideProperties#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#6)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [Arabirim Özellikleri](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)
-- [Otomatik Uygulanan Özellikler](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Özellikler](./properties.md)
+- [Arabirim Özellikleri](./interface-properties.md)
+- [Otomatik Uygulanan Özellikler](./auto-implemented-properties.md)

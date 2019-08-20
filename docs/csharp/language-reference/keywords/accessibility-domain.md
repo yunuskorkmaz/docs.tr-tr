@@ -1,24 +1,24 @@
 ---
-title: Erişilebilirlik etki alanı - C# başvurusu
+title: Erişilebilirlik etki alanı C# başvurusu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-ms.openlocfilehash: 529d256a553c4000c77bcd5096db1a4d943874ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 814aa8d3965674abe8bdb60b738cbeff93701ceb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662185"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606130"
 ---
 # <a name="accessibility-domain-c-reference"></a>Erişilebilirlik Etki Alanı (C# Başvurusu)
-Hangi program bölümlerde üyesi başvurulabilir üyesi erişilebilirlik etki alanını belirtir. Başka bir türde üye içe yerleştirilmişse, onun erişilebilirlik etki alanı tarafından belirlenir [erişilebilirlik düzeyi](../../../csharp/language-reference/keywords/accessibility-levels.md) üyesi ve hemen içeren türün erişilebilirlik etki alanı.  
+Üyenin erişilebilirlik etki alanı bir üyenin hangi program bölümlerine başvurduğunu belirtir. Üye başka bir tür içinde iç içe ise, erişilebilirlik etki alanı hem üyenin [Erişilebilirlik düzeyine](./accessibility-levels.md) hem de hemen kapsayan türdeki erişilebilirlik etki alanına göre belirlenir.  
   
- Üst düzey tür erişilebilirlik etki alanı en az içinde bildirildiği proje öğesinin program metnidir. Diğer bir deyişle, etki alanı, tüm bu projenin kaynak dosyaları içerir. İç içe türün erişilebilirlik etki alanı en az tür içinde bildirildiği program metnidir. Diğer bir deyişle, tüm iç içe geçmiş türler içeren tür gövdesi etki alanıdır. İç içe türün erişilebilirlik etki alanı hiçbir zaman, kapsayan türdeki aşıyor. Bu kavramlar, aşağıdaki örnekte gösterilmiştir.  
+ Üst düzey bir türün erişilebilirlik etki alanı, en azından içinde bildirildiği projenin program metni. Diğer bir deyişle, etki alanı bu projenin tüm kaynak dosyalarını içerir. İç içe bir türün erişilebilirlik etki alanı, bildirildiği türün en az program metniyle. Diğer bir deyişle, etki alanı tüm iç içe geçmiş türleri içeren tür gövdesidir. İç içe bir türün erişilebilirlik etki alanı, kendisini kapsayan türden hiçbir şekilde aşamaz. Bu kavramlar aşağıdaki örnekte gösterilmiştir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir üst düzey tür içerir `T1`ve iç içe iki sınıf `M1` ve `M2`. Sınıflar, farklı bildirilen erişilebilirlikleri alanlar içerir. İçinde `Main` yöntemi, bir açıklama her üyesinin erişilebilirlik etki alanı belirtmek için her deyim izler. Erişilemeyen üyeler başvurmak için deneyin deyimleri satırlarıdır dikkat edin. Erişilemez bir üye başvurarak kaynaklanan derleyici hataları görmek istiyorsanız, bir kerede bir yorum kaldırın.  
+ Bu örnek, en üst düzey bir tür, `T1`ve iki iç içe geçmiş `M1` sınıf `M2`içerir. Sınıflar, farklı tanımlanmış erişilebilir alanlara sahip alanlar içerir. `Main` Yönteminde, her üyenin erişilebilirlik etki alanını göstermek için her deyimin bir açıklaması. Erişilemeyen üyelere başvuruda bulunan deyimlerin açıklama olarak oluşturulduğuna dikkat edin. Erişilemeyen bir üyeye başvuruda bulunarak oluşan derleyici hatalarını görmek isterseniz, açıklamaları tek seferde kaldırın.  
   
 [!code-csharp[csrefKeywordsModifiers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#4)]
   
@@ -27,14 +27,14 @@ Hangi program bölümlerde üyesi başvurulabilir üyesi erişilebilirlik etki a
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
-- [Erişim Değiştiricileri](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [Erişilebilirlik Düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [Erişilebilirlik Düzeylerinin Kullanılmasındaki Kısıtlamalar](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
-- [Erişim Değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [private](../../../csharp/language-reference/keywords/private.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
-- [internal](../../../csharp/language-reference/keywords/internal.md)
+- [C#Başvurunun](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Anahtar Sözcükleri](./index.md)
+- [Erişim Değiştiricileri](./access-modifiers.md)
+- [Erişilebilirlik Düzeyleri](./accessibility-levels.md)
+- [Erişilebilirlik Düzeylerinin Kullanılmasındaki Kısıtlamalar](./restrictions-on-using-accessibility-levels.md)
+- [Erişim Değiştiricileri](../../programming-guide/classes-and-structs/access-modifiers.md)
+- [public](./public.md)
+- [private](./private.md)
+- [protected](./protected.md)
+- [internal](./internal.md)

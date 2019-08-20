@@ -1,5 +1,5 @@
 ---
-title: -tanımlama (C# Derleyici Seçenekleri)
+title: -define (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /define
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 46ceca3a84e8ffbe6d07886c1b93d062f3ccd2d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d56907493ed24e2ea9fa6568af7441fc81ba1a78
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662965"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606952"
 ---
-# <a name="-define-c-compiler-options"></a>-tanımlama (C# Derleyici Seçenekleri)
-**-Tanımlama** seçeneği tanımlar `name` programınızı tüm kaynak kodu sembol dosyaları olarak.  
+# <a name="-define-c-compiler-options"></a>-define (C# derleyici seçenekleri)
+**-Define** seçeneği, programınızın `name` tüm kaynak kodu dosyalarında sembol olarak tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,33 +29,33 @@ ms.locfileid: "61662965"
   
 ## <a name="arguments"></a>Arguments  
  `name`, `name2`  
- Tanımlamak istediğiniz bir veya daha fazla sembol adı.  
+ Tanımlamak istediğiniz bir veya daha fazla sembolün adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- **-Tanımlama** seçeneğini kullanmakla aynı etkiye sahip bir [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) önişlemci yönergesi dışında derleyici seçeneği etkin projedeki tüm dosyalar içindir. Bir sembol kadar kaynak dosyada kalacağı bir [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) yönergesi kaynak dosyadaki tanımı kaldırır. Kullandığınızda, define seçeneği, bir `#undef` yönergesi tek bir dosyada proje diğer kaynak kodu dosyaları üzerinde hiçbir etkisi.  
+ **-Define** seçeneği, derleme seçeneğinin projedeki tüm dosyalar için geçerli olması dışında, [#define](../preprocessor-directives/preprocessor-define.md) Önişlemci yönergesinin kullanılmasıyla aynı etkiye sahiptir. Kaynak dosyadaki bir [#undef](../preprocessor-directives/preprocessor-undef.md) yönergesi tanımı kaldırana kadar bir sembol kaynak dosyasında tanımlı kalır. -Define seçeneğini kullandığınızda, bir dosyadaki bir `#undef` yönergenin projedeki diğer kaynak kodu dosyaları üzerinde hiçbir etkisi olmaz.  
   
- Bu seçenekle tarafından oluşturulan simgeleri kullanabilirsiniz [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md), ve [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) kaynak dosyaları koşullu olarak derleyebilirsiniz.  
+ Kaynak dosyaları koşullu olarak derlemek için bu seçenek tarafından oluşturulan sembolleri [#if](../preprocessor-directives/preprocessor-if.md), [#else](../preprocessor-directives/preprocessor-else.md), [#elif](../preprocessor-directives/preprocessor-elif.md)ve [#endif](../preprocessor-directives/preprocessor-endif.md) kullanabilirsiniz.  
   
- **-d** öğesinin kısa biçimidir **-tanımlama**.  
+ **-d** , **-define**öğesinin kısa biçimidir.  
   
- Birden çok sembolleriyle tanımlayabilirsiniz **-tanımlama** sembol adını ayırmak için noktalı virgül veya virgülle kullanarak. Örneğin:  
+ Sembol adlarını ayırmak için noktalı virgül veya virgül kullanarak, **-define** ile birden çok sembol tanımlayabilirsiniz. Örneğin:  
   
 ```console  
 -define:DEBUG;TUESDAY  
 ```  
   
- C# derleyicisi kendisine hiçbir sembol veya kaynak kodunuzda kullanabileceğiniz makroları tanımlar; Tüm sembol tanımlarını, kullanıcı tarafından tanımlanmış olması gerekir.  
+ Derleyici C# , kaynak kodunuzda kullanabileceğiniz hiçbir sembol veya makroyu tanımlar; Tüm sembol tanımlarının Kullanıcı tanımlı olması gerekir.  
   
 > [!NOTE]
->  C# `#define` C++ gibi dillerde olduğu gibi bir değer verilmesi bir simge izin vermiyor. Örneğin, `#define` bir makro veya bir sabit tanımlamak için kullanılamaz. Bir sabit tanımlamak ihtiyacınız varsa, bir `enum` değişkeni. C++ tarzı makro oluşturmak istiyorsanız, genel türler gibi Alternatiflere göz önünde bulundurun. Makrolar hataya yatkın olduğundan, C# kullanımları izin vermiyor ancak daha güvenli alternatifler sağlar.  
+>  C# ,`#define` Bir simgeye, gibi dillerde bir değer verilmesini izin vermez C++. Örneğin, `#define` bir makro oluşturmak veya bir sabit tanımlamak için kullanılamaz. Bir sabit tanımlamanız gerekiyorsa, bir `enum` değişken kullanın. Bir C++ stil makrosu oluşturmak isterseniz, genel türler gibi alternatifleri göz önünde bulundurun. Makrolar önemli bir hataya açık olmadığından, kullanmalarına izin vermez C# , ancak daha güvenli alternatifler sağlar.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1. Projenin açın **özellikleri** sayfası.  
+1. Projenin **Özellikler** sayfasını açın.  
   
-2. Üzerinde **derleme** tanımlanması için Sembol yazın **koşullu derleme simgeleri** kutusu. Örneğin, aşağıdaki kod örneği kullanıyorsanız, yalnızca tür `xx` metin kutusuna.  
+2. **Derleme** sekmesinde, **koşullu derleme sembolleri** kutusunda tanımlanacak simgeyi yazın. Örneğin, aşağıdaki kod örneğini kullanıyorsanız, metin kutusuna yazmanız `xx` yeterlidir.  
   
- Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.  
+ Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.  
   
 ## <a name="example"></a>Örnek  
   
@@ -80,5 +80,5 @@ public class Test
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
+- [C# Derleyici Seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

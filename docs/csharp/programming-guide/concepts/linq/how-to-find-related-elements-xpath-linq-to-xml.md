@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: (XPath-LINQ to XML) ilgili öğeleri bulma (C#)'
+title: 'Nasıl yapılır: Ilgili öğeleri bul (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: a4260012899527662638a037fa4616a7a0d6f875
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 63ecdc2bf3c3415c7355b1ac06c710d21accefec
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486745"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593400"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Nasıl yapılır: (XPath-LINQ to XML) ilgili öğeleri bulma (C#)
-Bu konu, başka bir öğenin değeri tarafından başvurulan öznitelik seçerek bir öğenin nasıl gösterir.  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Nasıl yapılır: Ilgili öğeleri bul (XPath-LINQ to XML) (C#)
+Bu konu başlığı altında, başka bir öğenin değeri tarafından başvurulan bir özniteliği seçme öğesinin nasıl alınacağı gösterilmektedir.  
   
- XPath ifadesidir:  
+ XPath ifadesi:  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek 12 bulur `Order` öğesini ve sonra müşteri sipariş bulur.  
+ Bu örnek 12 `Order` . öğesini bulur ve ardından o sipariş için müşteriyi bulur.  
   
- . NET'te listeye dizin 'zero' bağlı olduğunu unutmayın. Bir XPath kuralının koşulu düğümler koleksiyonuna dizin '' temel biridir. Bu örnekte, bu fark yansıtır.  
+ .NET 'teki bir listede dizin oluşturmanın ' sıfır ' tabanlı olduğunu unutmayın. XPath koşulunda bir düğümler koleksiyonuna dizin oluşturma işlemi ' One ' tabanlıdır. Bu örnek, bu farkı yansıtır.  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  

@@ -7,84 +7,84 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 1e7b19999ab8536e9a1b05c1ad5d548c8da2cbd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37eedc6d41867a6d5e6a49b8df5040c657bb2689
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662731"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602756"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Alfabetik Listelenmiş C# Derleyici Seçenekleri
 
-Aşağıdaki derleyici seçeneklerinin alfabetik olarak sıralanır. Kategorisel liste için bkz: [C# derleyici seçenekleri kategoriye göre listelenmiş](listed-by-category.md).
+Aşağıdaki derleyici seçenekleri alfabetik olarak sıralanır. Kategorik bir liste için, bkz [ C# . kategoriye göre listelenen derleyici seçenekleri](listed-by-category.md).
 
 |Seçenek|Amaç|
 |------------|-------------|
-|[@](response-file-compiler-option.md)|Daha fazla seçenek için bir yanıt dosyasını okur.|
-|[-?](help-compiler-option.md)|Stdout kullanım iletisini görüntüler.|
-|-additionalfile|Doğrudan kod üretimini etkilemez, ancak bir hata veya uyarı üretmek için çözümleyiciler tarafından kullanılabilir ek dosya adları.|
-|[-addmodule](addmodule-compiler-option.md)|Belirtilen modülleri bu derlemeye bağlar.|
-|-Çözümleyicisi|Bu derleme Çözümleyicileri çalıştırın (kısa form: - a)|
-|[-appconfig](appconfig-compiler-option.md)|Derleme bağlama zamanında app.config konumunu belirtir.|
+|[@](response-file-compiler-option.md)|Daha fazla seçenek için bir yanıt dosyası okur.|
+|[-?](help-compiler-option.md)|Stdout için bir kullanım iletisi görüntüler.|
+|-additionalfile|Kod oluşturmayı doğrudan etkilemeyen, ancak hata veya uyarı üretmek için çözümleyiciler tarafından kullanılabilen ek dosyaları adlandırır.|
+|[-addmodule](addmodule-compiler-option.md)|Belirtilen modülleri bu derlemeye bağlar|
+|-çözümleyici|Bu derlemeden çözümleyiciler çalıştırın (kısa biçim:-a)|
+|[-appconfig](appconfig-compiler-option.md)|Derleme bağlama zamanında app. config dosyasının konumunu belirtir.|
 |[-baseaddress](baseaddress-compiler-option.md)|Oluşturulacak kitaplığın temel adresini belirtir.|
-|[-bugreport](bugreport-compiler-option.md)|'Hata raporu' dosyası oluşturur. -Errorreport ile kullanılıyorsa, bu dosyayı herhangi bir kilitlenme bilgi ile birlikte gönderilir: komut istemi veya - errorreport: gönderin.|
-|[-checked](checked-compiler-option.md)|Taşma denetimleri oluşturmak derleyicinin neden olur.|
-|-checksumalgorithm:\<algoritma >|PDB içinde depolanan kaynak dosya sağlama toplamı hesaplama algoritmasını belirtir.  Desteklenen değerler şunlardır: SHA1 (varsayılan) veya SHA256.<br>Microsoft, çakışma sorunları nedeniyle SHA1, SHA256 önerir. |
+|[-bugreport](bugreport-compiler-option.md)|' Hata raporu ' dosyası oluşturur. Bu dosya,-errorreport: Prompt veya-errorreport: Send ile kullanılırsa tüm kilitlenme bilgileriyle birlikte gönderilir.|
+|[-checked](checked-compiler-option.md)|Derleyicinin taşma denetimleri oluşturmasına neden olur.|
+|-checksumalgorithm:\<alg >|PDB 'de depolanan kaynak dosyası sağlama toplamını hesaplamak için algoritmayı belirtir.  Desteklenen değerler şunlardır: SHA1 (varsayılan) veya SHA256.<br>SHA1 ile ilgili çakışma sorunları nedeniyle Microsoft SHA256 önerir. |
 |[-codepage](codepage-compiler-option.md)|Kaynak dosyalar açılırken kullanılacak kod sayfasını belirtir.|
-|[-debug](debug-compiler-option.md)|Hata ayıklama bilgilerini gösterir.|
+|[-debug](debug-compiler-option.md)|Hata ayıklama bilgilerini yayar.|
 |[-define](define-compiler-option.md)|Koşullu derleme sembollerini tanımlar.|
-|[-delaysign](delaysign-compiler-option.md)|Gecikmeli imzalar derlemenin tanımlayıcı ad anahtarının yalnızca ortak bölümünü kullanarak.|
-|[-deterministic](deterministic-compiler-option.md)|İkili içeriği girişleri özdeş ise derlemeler arasında aynıdır derleme çıktısını almak derleyicinin neden olur.|
-|[-doc](doc-compiler-option.md)|Oluşturmak için bir XML belgesi dosyasını belirtir.|
-|-ekleme|Tüm kaynak dosyaları PDB'de ekleyin.|
-|-ekleme:\<dosya listesi >|Belirli dosyaları PDB'de ekleyin.|
-|-errorendlocation|Çıkış satırı ve sütunu her hatanın bitiş konumunun.|
-|-errorlog:\<file>|Tüm derleyici ve Çözümleyicisi tanılama günlük dosyayı belirtin.|
-|[-errorreport](errorreport-compiler-option.md)|Derleyici iç hatalarının nasıl işleneceğini belirtir: istemi, Gönder veya yok. Varsayılan, Yok'tur.|
+|[-delaysign](delaysign-compiler-option.md)|Derlemeyi yalnızca tanımlayıcı ad anahtarının ortak kısmını kullanarak imzalar.|
+|[-deterministic](deterministic-compiler-option.md)|Girişlerin özdeş olması halinde, derleyicinin ikili içerik özdeş olan bir derlemeyi çıkış yapmasına neden olur.|
+|[-doc](doc-compiler-option.md)|Oluşturulacak XML belge dosyasını belirtir.|
+|-katıştır|Tüm kaynak dosyalarını PDB 'ye ekleyin.|
+|-Embed:\<dosya listesi >|PDB 'ye belirli dosyaları ekleyin.|
+|-errorendlocation|Her hatanın bitiş konumunun çıkış satırı ve sütunu.|
+|-hata günlüğü\<: Dosya >|Tüm derleyici ve çözümleyici tanılamayı günlüğe kaydetmek için bir dosya belirtin.|
+|[-errorreport](errorreport-compiler-option.md)|İç derleyici hatalarının nasıl işleneceğini belirtir: Prompt, Send veya None. Varsayılan değer None ' dır.|
 |[-filealign](filealign-compiler-option.md)|Çıkış dosyası bölümleri için kullanılan hizalamayı belirtir.|
-|[-fullpaths](fullpaths-compiler-option.md)|Derleyicinin tam olarak nitelenmiş yollar oluşturmasını neden olur.|
-|[-Yardım](help-compiler-option.md)|Stdout kullanım iletisini görüntüler.|
-|[-highentropyva](highentropyva-compiler-option.md)|Bu yüksek entropi aslr desteği belirtir.|
-|-artan|[Eski] Artımlı derlemeyi etkinleştirir.|
-|[-keycontainer](keycontainer-compiler-option.md)|Tanımlayıcı ad anahtar kapsayıcısı belirtir.|
-|[-keyfile](keyfile-compiler-option.md)|Tanımlayıcı ad anahtar dosyası belirtir.|
-|[-langversion:\<dize >](langversion-compiler-option.md)|Dil sürümünü belirtin: Varsayılan, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 veya en son |
-|[-lib](lib-compiler-option.md)|Başvurular için aranacağı ek dizinleri belirtir.|
-|[-link](link-compiler-option.md)|COM tür bilgilerini belirtilen derlemeleri projeye kullanılabilir hale getirir.|
+|[-fullpaths](fullpaths-compiler-option.md)|Derleyicinin tam olarak nitelenmiş yollar oluşturmasına neden olur.|
+|[-yardım](help-compiler-option.md)|Stdout için bir kullanım iletisi görüntüler.|
+|[-highentropyva](highentropyva-compiler-option.md)|Yüksek entropi ASLR desteklendiğini belirtir.|
+|-artımlı|Artımlı derlemeyi [eski] izin vermez.|
+|[-keycontainer](keycontainer-compiler-option.md)|Bir tanımlayıcı ad anahtar kapsayıcısı belirtir.|
+|[-keyfile](keyfile-compiler-option.md)|Tanımlayıcı ad anahtar dosyasını belirtir.|
+|[-langversion:\<dize >](langversion-compiler-option.md)|Dil sürümünü belirtin: Varsayılan, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7,1, 7,2, 7,3 veya en son |
+|[-lib](lib-compiler-option.md)|Başvuruların aranacağı ek dizinleri belirtir.|
+|[-link](link-compiler-option.md)|Belirtilen derlemelerdeki COM türü bilgilerini proje için kullanılabilir hale getirir.|
 |[-linkresource](linkresource-compiler-option.md)|Belirtilen kaynağı bu derlemeye bağlar.|
-|[-main](main-compiler-option.md)|Giriş noktasını içeren türü belirtir (diğer tüm olası girdi noktalarını yok sayar).|
-|[-moduleassemblyname](moduleassemblyname-compiler-option.md)|Genel olmayan türler .netmodule erişebilmeniz için bir derleme belirtir.|
-|-modulename:\<dize >|Kaynak modülünün adını belirtin|
-|[-noconfig](noconfig-compiler-option.md)|Derleyiciye otomatik olmayan CSC içerir. RSP dosyası.|
+|[-main](main-compiler-option.md)|Giriş noktasını içeren türü belirtir (diğer tüm olası giriş noktalarını yoksayın).|
+|[-moduleassemblyname](moduleassemblyname-compiler-option.md)|Genel olmayan türleri bir. netmodule 'nin erişebileceği bir derlemeyi belirtir.|
+|-ModuleName:\<String >|Kaynak modülünün adını belirtin|
+|[-noconfig](noconfig-compiler-option.md)|Derleyiciye CSC 'yi otomatik olarak eklemesi talimatını verir. RSP dosyası.|
 |[-nologo](nologo-compiler-option.md)|Derleyici telif hakkı iletisini bastırır.|
-|[-nostdlib](nostdlib-compiler-option.md)|Derleyicinin başvuru standart kitaplığa (mscorlib.dll) için sağlar.|
+|[-nostdlib](nostdlib-compiler-option.md)|Derleyiciye standart kitaplığa (mscorlib. dll) Başvurmamasını söyler.|
 |[-nowarn](nowarn-compiler-option.md)|Belirli uyarı iletilerini devre dışı bırakır|
-|[-nowin32manifest](nowin32manifest-compiler-option.md)|Bir uygulama bildirimi yürütülebilir dosyasına katıştırma değil derleyicinin sağlar.|
-|[-optimize](optimize-compiler-option.md)|İyileştirmeleri etkinleştirir/devre dışı bırakır.|
-|[-out](out-compiler-option.md)|Çıkış dosyası adını belirtir (varsayılan: ana sınıfı içeren dosyanın veya ilk dosyanın temel adı).|
-|-Paralel [+&#124;-]|Eş zamanlı derleme (+) kullanılıp kullanılmayacağını belirtir.|
-|[-pathmap](pathmap-compiler-option.md)|Kaynak yol adları çıkış için bir eşleme derleyici tarafından belirtir.|
-|[-pdb](pdb-compiler-option.md)|.Pdb dosyasının konumunu ve dosya adını belirtir.|
-|[-platform](platform-compiler-option.md)|Hangi platformların bu kod üzerinde çalıştırılabilir sınırları: x86, Itanium, x 64, anycpu veya anycpu32bitpreferred. Anycpu varsayılandır.|
+|[-nowin32manifest](nowin32manifest-compiler-option.md)|Derleyicinin yürütülebilir dosyaya bir uygulama bildirimi katıştırmamasını sağlar.|
+|[-optimize](optimize-compiler-option.md)|İyileştirmeleri etkinleştirilir/devre dışı bırakır.|
+|[-out](out-compiler-option.md)|Çıkış dosyası adını belirtir (varsayılan: Ana sınıf veya ilk dosya ile dosyanın temel adı).|
+|-Parallel [+&#124;-]|Eşzamanlı yapı (+) kullanılıp kullanılmayacağını belirtir.|
+|[-pathmap](pathmap-compiler-option.md)|Derleyici tarafından çıkış kaynak yolu adları için bir eşleme belirtir.|
+|[-pdb](pdb-compiler-option.md)|Dosya adını ve. pdb dosyasının konumunu belirtir.|
+|[-platform](platform-compiler-option.md)|Bu kodun çalıştırılabileceği platformları sınırlar: x86, Itanium, x64, anycpu veya anycpu32bitpreferred. Varsayılan değer anycpu ' dır.|
 |[-preferreduilang](preferreduilang-compiler-option.md)|Derleyici çıktısı için kullanılacak dili belirtir.|
-|[-publicsign](publicsign-compiler-option.md)|Bir ortak anahtar derleme imzalamadan geçerlidir ancak derleme imzalanması belirten derlemede biti ayarlanmış.|
-|[-recurse](recurse-compiler-option.md)|Geçerli dizin ve joker karakteri belirtimlerine göre alt dizinlerdeki tüm dosyaları içerir.|
+|[-publicsign](publicsign-compiler-option.md)|Derlemeyi imzalamadan ortak anahtar uygulayın, ancak derlemenin imzalandığını belirten derlemede bit ayarlayın.|
+|[-recurse](recurse-compiler-option.md)|Joker karakter belirtimlerine göre geçerli dizindeki ve alt dizinlerdeki tüm dosyaları içerir.|
 |[-reference](reference-compiler-option.md)|Belirtilen derleme dosyalarından meta verilere başvurur.|
-|[-refout](refout-compiler-option.md)|Birincil derlemesi ek olarak bir başvuru bütünleştirilmiş kodu oluşturur.|
-|[-refonly](refonly-compiler-option.md)|Birincil bir derleme yerine bir başvuru bütünleştirilmiş kodu oluşturur.|
-|-reportanalyzer|Yürütme süresi gibi ek Çözümleyicisi bilgileri rapor.|
-|[-resource](resource-compiler-option.md)|Belirtilen kaynak katıştırır.|
-|-Kural kümesi:\<dosyası >|Belirli tanılama devre dışı bırakan bir kural kümesi dosyası belirtin.|
+|[-refout](refout-compiler-option.md)|Birincil derlemeye ek olarak bir başvuru bütünleştirilmiş kodu oluşturun.|
+|[-refonly](refonly-compiler-option.md)|Birincil derleme yerine bir başvuru bütünleştirilmiş kodu oluşturun.|
+|-reportanalyzer|Yürütme süresi gibi ek çözümleyici bilgilerini bildirin.|
+|[-resource](resource-compiler-option.md)|Belirtilen kaynağı katıştırır.|
+|-RuleSet:\<Dosya >|Belirli tanılamayı devre dışı bırakan bir RuleSet dosyası belirtin.|
 |[-subsystemversion](subsystemversion-compiler-option.md)|Yürütülebilir dosyanın kullanabileceği alt sistemin en düşük sürümünü belirtir.|
-|[-target](target-compiler-option.md)|Dört seçenekten birini kullanarak çıkış dosyasının biçimini belirtir: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: library](target-library-compiler-option.md), [-hedef: Modül](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md), [-target: winmdobj](target-winmdobj-compiler-option.md).|
-|[-unsafe](unsafe-compiler-option.md)|Sağlar [güvenli](../../../csharp/language-reference/keywords/unsafe.md) kod.|
-|[-utf8output](utf8output-compiler-option.md)|Çıkışları derleyici iletilerini UTF-8 kodlaması.|
-|-Sürüm|Derleyicinin sürüm numarası ve çıkış görüntüler.|
-|[-warn](warn-compiler-option.md)|Uyarı düzeyi (0-4) ayarlar.|
-|[-warnaserror](warnaserror-compiler-option.md)|Belirli uyarıları hata olarak bildirir.|
-|[-win32icon](win32icon-compiler-option.md)|Bu simge, çıkış için kullanır.|
-|[-win32manifest](win32manifest-compiler-option.md)|Özel bir win32 bildirim dosyasını belirtir.|
-|[-win32res](win32res-compiler-option.md)|Win32 kaynak dosyası (.res) belirtir.|
+|[-target](target-compiler-option.md)|Dört seçenekten birini kullanarak çıkış dosyasının biçimini belirtir: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: Library](target-library-compiler-option.md), [-target: Module](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md), [-target: winmdobj](target-winmdobj-compiler-option.md).|
+|[-unsafe](unsafe-compiler-option.md)|[Güvenli olmayan](../keywords/unsafe.md) koda izin verir.|
+|[-utf8output](utf8output-compiler-option.md)|Derleyici iletilerini UTF-8 kodlamasında çıkarır.|
+|-sürüm|Derleyici sürüm numarasını ve çıkışı görüntüleyin.|
+|[-warn](warn-compiler-option.md)|Uyarı düzeyini (0-4) ayarlar.|
+|[-warnaserror](warnaserror-compiler-option.md)|Belirli uyarıları hata olarak raporlar.|
+|[-win32icon](win32icon-compiler-option.md)|Çıkış için bu simgeyi kullanır.|
+|[-win32manifest](win32manifest-compiler-option.md)|Özel bir Win32 bildirim dosyası belirtir.|
+|[-win32res](win32res-compiler-option.md)|Win32 kaynak dosyasını (. res) belirtir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: -utf8output (C# Derleyici Seçenekleri)
+title: -utf8output (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /utf8output
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - /utf8output compiler option [C#]
 - -utf8output compiler option [C#]
 ms.assetid: 27ff7381-c281-45d7-b2eb-1ad644b1354e
-ms.openlocfilehash: 9dd67d3ea14b02ae9638f3b13d6bca0a84e4b71b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abed8247569cd5885e6241be141271bf75bfa2be
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662302"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606307"
 ---
-# <a name="-utf8output-c-compiler-options"></a>-utf8output (C# Derleyici Seçenekleri)
-**-Utf8output** seçeneği derleyici UTF-8 kodlaması kullanarak çıkışı görüntüler.  
+# <a name="-utf8output-c-compiler-options"></a>-utf8output (C# derleyici seçenekleri)
+**-Utf8output** seçeneği, DERLEYICI çıkışını utf-8 kodlaması kullanarak görüntüler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -25,10 +25,10 @@ ms.locfileid: "61662302"
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bazı uluslararası yapılandırmalarında, derleyici çıkışını konsolunda doğru şekilde görüntülenemiyor. Bu yapılandırmada kullanmak **-utf8output** ve derleyici çıkışı bir dosyaya yönlendirin.  
+ Bazı uluslararası yapılandırmalarda, Derleyici çıktısı konsolunda doğru şekilde görüntülenemez. Bu yapılandırmalarda **-utf8output** ve derleyici çıkışını bir dosyaya yeniden yönlendir ' i kullanın.  
   
- Bu derleyici seçeneğini Visual Studio'da kullanılamıyor ve program aracılığıyla değiştirilemez.  
+ Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
+- [C# Derleyici Seçenekleri](./index.md)

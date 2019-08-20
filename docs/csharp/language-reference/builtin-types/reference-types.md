@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: fcfe2dafe588dce57628bff63e3519f70d7a7725
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: a5a32fa0a98cda37d7f599b20ef2b507cadd730c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566262"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604204"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Yerleşik başvuru türleri (C# başvuru)
 
@@ -172,7 +172,7 @@ Aşağıdaki örnek, çeşitli `dynamic` bildirimlerde kullanır. `Main` Yöntem
 
 - [C#Başvurunun](../index.md)
 - [C# Anahtar Sözcükleri](../keywords/index.md)
-- [Olaylar](../../../csharp/programming-guide/events/index.md)
+- [Olaylar](../../programming-guide/events/index.md)
 - [Tür dinamiği kullanma](../../programming-guide/types/using-type-dynamic.md)
 - [Dizeleri Kullanmak için En İyi Uygulamalar](../../../standard/base-types/best-practices-strings.md)
 - [Temel Dize İşlemleri](../../../standard/base-types/basic-string-operations.md)

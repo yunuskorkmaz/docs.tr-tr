@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: 0891ce06b1d24b8b5841ed6c0b1e43d1d2e3fbc7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9584d6c7fec064e2234df9db7e21a38806e8992
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61708229"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587950"
 ---
-# <a name="para-c-programming-guide"></a>\<para > (C# Programlama Kılavuzu)
+# <a name="para-c-programming-guide"></a>\<Para > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -25,17 +25,17 @@ ms.locfileid: "61708229"
   
 ## <a name="parameters"></a>Parametreler  
  `content`  
- Paragraf metni.  
+ Paragrafın metni.  
   
 ## <a name="remarks"></a>Açıklamalar  
- \<Para > gibi olan bir etiketi içinde kullanmak için etiket [ \<Özet >](../../../csharp/programming-guide/xmldoc/summary.md), [ \<remarks >](../../../csharp/programming-guide/xmldoc/remarks.md), veya [ \<döndürür >](../../../csharp/programming-guide/xmldoc/returns.md)ve metnin yapısını eklemenizi sağlar.  
+ Para > etiketi, [ \<Özet >](./summary.md), [ \<açıklamalar >](./remarks.md)ya [ \<da > döndüren](./returns.md)ve metne yapı eklemenize olanak sağlayan bir etiket içinde kullanım içindir. \<  
   
- Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.  
+ Belge açıklamalarını bir dosyaya işlemek için [/doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bkz: [ \<Özet >](../../../csharp/programming-guide/xmldoc/summary.md) kullanma örneği için \<para >.  
+ Para > kullanma\<örneği için bkz [ \<. Özet >](./summary.md) .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Belge Açıklamaları için Önerilen Etiketler](./recommended-tags-for-documentation-comments.md)

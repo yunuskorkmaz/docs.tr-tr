@@ -1,41 +1,41 @@
 ---
-title: Arabirim Özellikleri - C# Programlama Kılavuzu
+title: Arabirim özellikleri- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: c02e4f62aabb17213ce172e7e3a773e86d1e9908
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cdd425970442e284d6fd6488bbb13394c12e939a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646169"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596443"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Arabirim Özellikleri (C# Programlama Kılavuzu)
-Özellikleri bildirilebilir bir [arabirimi](../../../csharp/language-reference/keywords/interface.md). Bir arabirim özellik erişimcisi örneği verilmiştir:  
+Özellikler, bir [arabirimde](../../language-reference/keywords/interface.md)bildirilemez. Aşağıda bir arabirim özelliği erişimcisi örneği verilmiştir:  
   
  [!code-csharp[csProgGuideProperties#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#14)]  
   
- Gövde arabirim özelliği erişimcisine sahip değil. Bu nedenle, amacı, erişimci özelliği salt okunur, salt okunur veya sadece yazılabilir olup olmadığını belirtmektir.  
+ Bir arabirim özelliğinin erişimcisinin gövdesi yok. Bu nedenle, erişimcilerinin amacı, özelliğin okuma-yazma, salt okunurdur veya salt yazılır olduğunu belirtsağlamaktır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, arabirim `IEmployee` bir okuma-yazma özelliğine sahip `Name`ve salt okunur bir özellik `Counter`. Sınıf `Employee` uygulayan `IEmployee` arabirim ve bu iki özellik kullanır. Programın adını yeni bir çalışan ve çalışanların geçerli sayısını okur ve çalışan adını ve hesaplanan çalışan sayısını görüntüler.  
+ Bu örnekte, arabirimin `IEmployee` okuma-yazma `Name`özelliği, ve `Counter`salt okunurdur özelliği vardır. Sınıfı `Employee` arabirimini`IEmployee` uygular ve bu iki özelliği kullanır. Program yeni bir çalışanın adını ve geçerli çalışan sayısını okur ve çalışan adını ve hesaplanan çalışan numarasını görüntüler.  
   
- Üyesi bildirildiği arabirimde başvuran özelliği tam adını kullanabilirsiniz. Örneğin:  
-  
- [!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]  
-  
- Bu adlandırılır [açık arabirim uygulaması](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md). Örneğin, sınıf `Employee` iki arabirim uygulama `ICitizen` ve `IEmployee` ve her iki arabirimde `Name` özelliği açık arabirim üyesi uygulaması gerekli olacak. Diğer bir deyişle, aşağıdaki özellik bildirimi:  
+ Özelliğin, üyenin bildirildiği arabirime başvuruda bulunduğu tam nitelikli adını kullanabilirsiniz. Örneğin:  
   
  [!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]  
   
- uygulayan `Name` özelliği `IEmployee` arabirimi, aşağıdaki bildirim yandan:  
+ Buna [Açık arabirim uygulama](../interfaces/explicit-interface-implementation.md)adı verilir. `Employee` Örneğin, sınıfı `Name` iki `ICitizen` arabirim uygusa ve her iki arabirimde özelliği varsa, açık arabirim üye uygulaması gerekli olacaktır. `IEmployee` Diğer bir deyişle, aşağıdaki özellik bildirimi:  
+  
+ [!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]  
+  
+ Aşağıdaki bildirim sırasında, `IEmployee` özelliğiarayüzdeuygular:`Name`  
   
  [!code-csharp[csProgGuideProperties#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#17)]  
   
- uygulayan `Name` özelliği `ICitizen` arabirimi.  
+ `Name` arabirimindeki özelliği`ICitizen` arabirimini uygular.  
   
  [!code-csharp[csProgGuideProperties#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#15)]  
   
@@ -53,9 +53,9 @@ ms.locfileid: "61646169"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [Özellikleri Kullanma](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
-- [Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)
-- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)
-- [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Özellikler](./properties.md)
+- [Özellikleri Kullanma](./using-properties.md)
+- [Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma](../indexers/comparison-between-properties-and-indexers.md)
+- [Dizin Oluşturucular](../indexers/index.md)
+- [Arabirimler](../interfaces/index.md)

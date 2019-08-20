@@ -1,5 +1,5 @@
 ---
-title: '@ - C# Başvurusu'
+title: '@- C# Reference'
 ms.custom: seodec18
 ms.date: 02/09/2017
 f1_keywords:
@@ -11,35 +11,35 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2302c2602411455c0f3f0371579fc9be200004d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2290c87f7d4d2ba8da122d4f5ddb9ea423852ec
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61659936"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608726"
 ---
-# <a name="-c-reference"></a>(, C# Başvurusu)
+# <a name="-c-reference"></a>@ (C# Başvuru)
 
-`@` Özel karakter bir tam tanımlayıcı işlevi görür. Aşağıdaki şekillerde kullanılabilir:
+Özel `@` karakter, tam tanımlayıcı işlevi görür. Aşağıdaki yollarla kullanılabilir:
 
-1. Tanımlayıcı olarak kullanılacak C# anahtar sözcükleri etkinleştirmek için. `@` Karakter derleyici C# anahtar sözcüğü yerine bir tanımlayıcı olarak yorumlamak için bir kod öğesi ekler. Aşağıdaki örnekte `@` adlı bir tanımlayıcının tanımlamak için karakter `for` de kullanan bir `for` döngü.
+1. Anahtar kelimeleri C# tanımlayıcı olarak kullanılacak şekilde etkinleştirmek için. Karakter, derleyicinin bir C# anahtar sözcük yerine bir tanımlayıcı olarak yorumlanacağı bir kod öğesi ön ekine sahiptir. `@` Aşağıdaki örnek, bir `@` `for` döngüsünde kullandığı adlı `for` bir tanımlayıcıyı tanımlamak için karakterini kullanır.
 
    [!code-csharp[verbatim1](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#1)]
 
-1. Bir dize sabit değeri verbatim yorumlanacağını olduğunu belirtmek için. `@` Karakterin bu örneğinde tanımlayan bir *verbatim dize sabit değeri*. Basit çıkış sıraları (gibi `"\\"` için ters eğik çizgi), onaltılık kaçış dizilerine (gibi `"\x0041"` bir büyük harf a) ve Unicode kaçış dizileri (gibi `"\u0041"` bir büyük harf a) genel anlamıyla yorumlanması. Yalnızca bir teklif kaçış dizisi (`""`) yorumlanmaması tam anlamıyla; bu tek tırnak işareti üretir. Ayrıca, durumunda bir verbatim [ilişkilendirilmiş bir dizedir](interpolated.md) küme ayracı kaçış dizilerine (`{{` ve `}}`) değil olarak yorumlanır tek küme ayracı karakterleri tam anlamıyla; ürettikleri. Aşağıdaki örnek, bir normal bir dize sabit değeri ve diğer verbatim dize değişmez değeri kullanarak iki aynı dosya yolları tanımlar. Bu, aynen dize değişmez değerleri daha yaygın kullanımlarından biridir.
+1. Dize sabit değerinin tam olarak yorumlandığını göstermek için. Bu `@` örnekteki karakter, tam bir *dize sabit değeri*tanımlar. Basit kaçış dizileri ( `"\\"` ters eğik çizgi gibi), onaltılık kaçış dizileri ( `"\x0041"` büyük a için gibi) ve Unicode kaçış dizileri (örn. bir büyük harf a `"\u0041"` ), tam olarak yorumlanır. Yalnızca bir Quote kaçış sırası (`""`), tam olarak yorumlanmaz; tek tırnak işareti üretir. Bunlara ek olarak, tam olarak bulunan bir [dize](interpolated.md) ayracı kaçış dizileri (`{{` ve `}}`), tam olarak yorumlanmaz; tek küme ayracı karakterleri üretir. Aşağıdaki örnek, biri normal dize değişmez değeri ve diğeri de tam olarak bir dize sabiti kullanarak iki özdeş dosya yolunu tanımlar. Bu, tam dize değişmez değerlerinin yaygın kullanımlarındaki bir biridir.
 
    [!code-csharp[verbatim2](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#2)]
 
-   Aşağıdaki örnek, normal bir dize sabit değeri ve aynı karakter dizileri içeren sabit bir verbatim dizesi tanımlama etkisini gösterir.
+   Aşağıdaki örnek, bir normal dize sabit değeri ve özdeş karakter dizileri içeren tam bir dize sabiti tanımlamanın etkisini gösterir.
 
    [!code-csharp[verbatim3](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#3)]
 
-1. Ad çakışması örneklerini öznitelikleri arasında ayrım yapmak derleyici etkinleştirmek için. Türetilen bir sınıf bir özniteliktir <xref:System.Attribute>. Tür adı genellikle soneki içerir **özniteliği**, ancak derleyici, bu kural uygulamaz. Öznitelik başvurulabilir tam tür adıyla ya da kod (örneğin, `[InfoAttribute]` ya da kısaltılmış adını (örneğin, `[Info]`). İki kısalttık, ancak bir adlandırma çakışması öznitelik türü adları aynıdır ve bir tür adını içeren meydana gelir **özniteliği** soneki ancak diğer desteklemez. Örneğin, aşağıdaki kod derleyici belirlenemiyor çünkü derleme başarısız olup olmadığını `Info` veya `InfoAttribute` özniteliği uygulandığı `Example` sınıfı. Bkz: [CS1614](../compiler-messages/cs1614.md) daha fazla bilgi için.
+1. Derleyicinin, bir adlandırma çakışması durumunda öznitelikleri birbirinden ayırt etmek üzere etkinleştirmek için. Öznitelik, öğesinden <xref:System.Attribute>türetilen bir sınıftır. Tür adı genellikle sonek **özniteliğini**içerir, ancak derleyici bu kuralı zorlamaz. Daha sonra özniteliğe, tam tür adı (örneğin, `[InfoAttribute]` veya kısaltılmış adı) ile (örneğin, `[Info]`) başvuruda bulunabilir. Ancak, iki kısaltılmış öznitelik türü adı özdeş ise ve bir tür adı **öznitelik** sonekini içeriyorsa ancak diğeri yoksa, bir adlandırma çakışması oluşur. Örneğin, derleyici `Info` veya `InfoAttribute` `Example` özniteliğinin sınıfa uygulanıp uygulanmadığını belirleyemediği için aşağıdaki kod derlenemiyor. Daha fazla bilgi için bkz. [CS1614](../compiler-messages/cs1614.md) .
 
    [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim2.cs#1)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [C# Özel Karakterleri](../../../csharp/language-reference/tokens/index.md)
+- [C#Başvurunun](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Özel Karakterleri](./index.md)

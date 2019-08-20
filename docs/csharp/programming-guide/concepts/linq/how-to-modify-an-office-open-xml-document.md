@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: Bir Office Open XML belgesi değiştirme (C#)'
+title: 'Nasıl yapılır: Office Open XML belgesini değiştirme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 3a6edd31ff2a22e32c979e1a6a548b212406cbf5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ac46dc1b0051613457b7306a9fe0e8d419afe35f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486655"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593139"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-c"></a>Nasıl yapılır: Bir Office Open XML belgesi değiştirme (C#)
-Bu konuda kaydeder Office Open XML belge açılır ve değiştirdiği bir örnek sunulmaktadır.  
+# <a name="how-to-modify-an-office-open-xml-document-c"></a>Nasıl yapılır: Office Open XML belgesini değiştirme (C#)
+Bu konu, bir Office Open XML belgesi açan, değiştiren ve kaydeden bir örnek gösterir.  
   
- Office Open XML hakkında daha fazla bilgi için bkz. [açık XML SDK](https://github.com/OfficeDev/Open-XML-SDK) ve [www.ericwhite.com](http://ericwhite.com/).  
+ Office Open XML hakkında daha fazla bilgi için bkz. [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) ve [www.ericwhite.com](http://ericwhite.com/).  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, belgede ilk paragraf öğesini bulur. Paragrafın metni alır ve sonra da tüm metin siler paragrafta çalışır. Büyük harfe dönüştürülmüş ilk paragrafa metin içeren yeni metin çalıştırma oluşturur. Open XML pakete değiştirilmiş XML seri hale getirir ve bunu kapatır.  
+ Bu örnek belgedeki ilk paragraf öğesini bulur. Paragraftan metni alır ve ardından paragraftaki tüm metin çalıştırmalarını siler. Büyük harfe dönüştürülmüş ilk paragraf metniyle oluşan yeni bir metin çalıştırması oluşturur. Daha sonra değiştirilmiş XML 'i Open XML paketine serileştirir ve kapatır.  
   
- Bu örnekte WindowsBase derlemede bulunan sınıfları kullanır. Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
+ Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanındaki türleri kullanır.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -139,9 +139,9 @@ class Program
 }  
 ```  
   
- Açarsanız `SampleDoc.docx` bu programını çalıştırdıktan sonra bu program belgedeki ilk paragrafa büyük harfe dönüştürülmüş görebilirsiniz.  
+ Bu programı çalıştırdıktan `SampleDoc.docx` sonra açarsanız, bu programın belgedeki ilk paragrafı büyük harflere dönüştürdüğünü görebilirsiniz.  
   
- Açıklanan örnek Open XML belge çalıştırdığınızda [kaynak Office Open XML belgesi (C#) oluşturma](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), bu örnek aşağıdaki çıktıyı üretir:  
+ [Kaynak Office Open XML belgesi (C#) oluşturma](./creating-the-source-office-open-xml-document.md)bölümünde açıklanan örnek Open XML belgesiyle birlikte çalıştırıldığında, bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  

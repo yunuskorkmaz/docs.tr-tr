@@ -1,5 +1,5 @@
 ---
-title: Özel karakterler - C# başvurusu
+title: Özel karakterler- C# başvuru
 ms.custom: seodec18
 ms.date: 02/14/2017
 f1_keywords:
@@ -13,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 4c5c0539-2e37-40b7-91ce-75af5aabd3f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7231b43551e0b0ad0a9f32e1938106895d687818
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5093969744b5c1d240cb3c18141917906babef57
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61688923"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608721"
 ---
 # <a name="c-special-characters"></a>C# Özel Karakterleri
 
-Özel karakterler, bunlar tanımlandıkları için program öğesi (bir sabit dizesi, tanımlayıcı veya bir öznitelik adı) değiştirme önceden tanımlanmış ve bağlamsal karakterleridir. C# şu özel karakterleri destekler: 
+Özel karakterler önceden tanımlanmıştır, bir program öğesini (değişmez dize, bir tanımlayıcı veya bir öznitelik adı), bunlara göre değişiklik gösteren bağlamsal karakterlerdir. C#Aşağıdaki özel karakterleri destekler: 
 
-- [@](../../../csharp/language-reference/tokens/verbatim.md), tam tanımlayıcı karakter. 
+- [@](./verbatim.md), tam tanımlayıcı karakteri. 
 
-- [$](../../../csharp/language-reference/tokens/interpolated.md), ilişkilendirilmiş dize karakter.
+- [$](./interpolated.md), enterpolasyonlu dize karakteri.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+- [C#Başvurunun](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)

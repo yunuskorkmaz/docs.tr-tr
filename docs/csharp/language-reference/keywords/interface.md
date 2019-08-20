@@ -1,5 +1,5 @@
 ---
-title: Interface - C# başvurusu
+title: arabirim- C# başvuru
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: ce3cb95617c87d1bf66879f4a2432b4de4ac40f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 058d6b96e96a3237ebac2ca079807fd154715d68
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61661431"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608651"
 ---
 # <a name="interface-c-reference"></a>interface (C# Başvurusu)
 
-Bir arabirim yalnızca ait imzaları içerir [yöntemleri](../../programming-guide/classes-and-structs/methods.md), [özellikleri](../../programming-guide/classes-and-structs/properties.md), [olayları](../../programming-guide/events/index.md) veya [dizin oluşturucular](../../programming-guide/indexers/index.md). Ara birimi uygulayan bir sınıfın veya yapının, ara birim tanımında belirtilen ara birim üyelerini uygulaması gerekir. Aşağıdaki örnekte `ImplementationClass` sınıfının, parametresi olmayan ve `SampleMethod`'i döndüren `void` adlı bir yöntemi uygulaması gerekir.
+Arabirim yalnızca [yöntemlerin](../../programming-guide/classes-and-structs/methods.md), [özelliklerin](../../programming-guide/classes-and-structs/properties.md), [olayların](../../programming-guide/events/index.md) veya [Dizin oluşturucuların](../../programming-guide/indexers/index.md)imzalarını içerir. Ara birimi uygulayan bir sınıfın veya yapının, ara birim tanımında belirtilen ara birim üyelerini uygulaması gerekir. Aşağıdaki örnekte `ImplementationClass` sınıfının, parametresi olmayan ve `SampleMethod`'i döndüren `void` adlı bir yöntemi uygulaması gerekir.
 
-Daha fazla bilgi ve örnekler için bkz. [arabirimleri](../../programming-guide/interfaces/index.md).
+Daha fazla bilgi ve örnek için bkz. [arabirimler](../../programming-guide/interfaces/index.md).
 
 ## <a name="example"></a>Örnek
 
@@ -40,7 +40,7 @@ Bir temel tür listesi temel bir sınıfı ve ara birimleri içerdiğinde, temel
 
 Bir ara birimi uygulayan bir sınıf, o ara birimin üyelerini açıkça uygulayabilir. Açıkça uygulanan bir üyeye, bir sınıfın örneği üzerinden erişilemez, yalnızca ara birimin bir örneği üzerinden erişilebilir.
 
-Daha fazla ayrıntı ve kod örnekleri açık arabirim uygulaması üzerinde görmek [açık arabirim uygulaması](../../programming-guide/interfaces/explicit-interface-implementation.md).
+Açık arabirim uygulamasındaki diğer ayrıntılar ve kod örnekleri için bkz. [Açık arabirim uygulama](../../programming-guide/interfaces/explicit-interface-implementation.md).
 
 ## <a name="example"></a>Örnek
 
@@ -54,7 +54,7 @@ Aşağıdaki örnek, ara birim uygulamasını gösterir. Bu örnekte, ara birim 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [Başvuru Türleri](reference-types.md)

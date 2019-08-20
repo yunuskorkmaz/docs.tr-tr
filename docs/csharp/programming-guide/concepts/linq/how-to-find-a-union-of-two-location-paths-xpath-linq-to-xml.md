@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: (XPath-LINQ to XML) iki konum yolunun birleşimini bulma (C#)'
+title: 'Nasıl yapılır: Iki konum yolunun birleşimini bulma (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
-ms.openlocfilehash: e00c606460159d05f1d3fcaddb1ac5f7b2ec86fa
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9fc88a8784958294ba6077893a5d54110de335a0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485612"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593748"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>Nasıl yapılır: (XPath-LINQ to XML) iki konum yolunun birleşimini bulma (C#)
-XPath birleşim iki XPath Konum yolları sonuçlarını bulmanıza olanak tanır.  
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>Nasıl yapılır: Iki konum yolunun birleşimini bulma (XPath-LINQ to XML) (C#)
+XPath, iki XPath konum yolunun sonuçlarının birleşimini bulmanızı sağlar.  
   
- XPath ifadesidir:  
+ XPath ifadesi:  
   
  `//Category|//Price`  
   
- Kullanarak aynı sonucu elde edebileceğiniz <xref:System.Linq.Enumerable.Concat%2A> standart sorgu işleci.  
+ <xref:System.Linq.Enumerable.Concat%2A> Standart sorgu işlecini kullanarak aynı sonuçları elde edebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte tüm bulur `Category` öğeleri ve tüm `Price` öğeleri ve bunları tek bir koleksiyon birleştirir. Unutmayın [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu çağrıları <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> sonuçları sıralamak için. Belge düzeninde XPath ifade değerlendirme sonuçlarını da var.  
+ Bu örnek tüm `Category` öğeleri ve tüm `Price` öğeleri bulur ve bunları tek bir koleksiyona ekler. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Sorgunun sonuçları sıralamak için çağrı <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> yaptığı unutulmamalıdır. XPath ifadesi değerlendirmesi sonuçları da belge sırasıyla bulunur.  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Sayısal veriler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Sayısal veri (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XDocument data = XDocument.Load("Data.xml");  

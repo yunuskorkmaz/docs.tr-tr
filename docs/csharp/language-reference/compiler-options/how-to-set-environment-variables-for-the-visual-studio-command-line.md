@@ -15,36 +15,36 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 9eea7f76d386816aad060e9b99cea6b906a09ab9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b26f6b80488ad4043054cd23f0f351773e8d6d1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662848"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602862"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Nasıl yapılır: Visual Studio Komut Satırı için Ortam Değişkenlerini Ayarlama
 
-VsDevCmd.bat dosya komut satırı derlemeleri etkinleştirmek için uygun ortam değişkenlerini ayarlar.
+VsDevCmd. bat dosyası, komut satırı yapılarını etkinleştirmek için uygun ortam değişkenlerini ayarlar.
 
 > [!NOTE]
-> Visual Studio 2017 ile sunulan yeni bir dosya VsDevCmd.bat dosyasıdır. Visual Studio 2015 ve önceki sürümleri VSVARS32.bat aynı amaçla kullanılan. Bu dosya, \Program Files\Microsoft Visual Studio depolanmış\\*sürüm*\Common7\Tools veya Program dosyaları (x86) \Microsoft Visual Studio\\*sürüm*\Common7\Tools.
+> VsDevCmd. bat dosyası, Visual Studio 2017 ile sunulan yeni bir dosyadır. Visual Studio 2015 ve önceki sürümleri, VSVARS32. bat ' i aynı amaçla kullandı. Bu dosya \Program Files\Microsoft\\Visual Studio*Version*\Common7\Tools veya Program Files (x86) \Microsoft Visual Studio\\*Version*\Common7\Tools. içinde depolandı
 
-Visual Studio'nun geçerli sürümü Visual Studio'nun önceki bir sürümü olan bir bilgisayarda yüklü ise, VsDevCmd.bat ve VSVARS32 çalıştırmamanız gerekir. Aynı komut istemi penceresinde farklı sürümlerine ait BAT. Bunun yerine, kendi penceresinde her sürüm için komutu çalıştırmanız gerekir.
+Visual Studio 'nun geçerli sürümü, Visual Studio 'nun önceki bir sürümüne de sahip olan bir bilgisayarda yüklüyse, VsDevCmd. bat ve VSVARS32 kullanmamalısınız. Aynı komut Istemi penceresindeki farklı sürümlerden BAT. Bunun yerine, her sürüm için komutunu kendi penceresinde çalıştırmalısınız.
 
-### <a name="to-run-vsdevcmdbat"></a>VsDevCmd.BAT çalıştırmak için
+### <a name="to-run-vsdevcmdbat"></a>VsDevCmd. BAT dosyasını çalıştırmak için
 
-1. Gelen **Başlat** menüsünde, açık **VS 2017 için geliştirici komut istemi**.  İçinde **Visual Studio 2017** klasör.
+1. **Başlangıç** menüsünde **VS 2017 için geliştirici komut istemi**açın.  **Visual Studio 2017** klasöründedir.
 
-2. Değiştirme \Program Visual Studio'ya\\*sürüm*\\*sunan*\Common7\Tools veya \Program dosyaları (x86) \Microsoft Visual Studio\\ *Sürüm*\\*sunan*yüklemenizin \Common7\Tools alt dizinine geçin.  (*Sürüm* olduğu *2017* geçerli sürümü için. *Teklif* biri *Kurumsal*, *Professional* veya *topluluk*.)
+2. \Program Files\Microsoft Visual\\Studio*Sürüm*\\*teklifi*\Common7\Tools veya \Program Files (x86) \Microsoft Visual\\Studio*Sürüm*\\teklifini değiştirinYüklemenizin \Common7\Tools alt dizini.  (*Sürüm* , geçerli sürüm için *2017* . *Teklif* , *Enterprise*, *Professional* veya *Community*'den biridir.)
 
-3. Yazarak VsDevCmd.bat çalıştırın **VsDevCmd**.
+3. Vsdevcmd. bat dosyasını **vsdevcmd**yazarak çalıştırın.
 
     > [!CAUTION]
-    > VsDevCmd.bat bilgisayardan diğerine farklılık gösterebilir. Eksik veya bozuk VsDevCmd.bat dosya başka bir bilgisayardan bir VsDevCmd.bat ile değiştirmeyin. Bunun yerine, eksik dosyayı yerine koymak için kurulumu yeniden çalıştırın.
+    > VsDevCmd. bat bilgisayardan bilgisayara farklılık gösterebilir. Eksik veya hasarlı bir VsDevCmd. bat dosyasını başka bir bilgisayardan VsDevCmd. bat ile değiştirmeyin. Bunun yerine, eksik dosyayı yerine koymak için kurulumu yeniden çalıştırın.
 
-### <a name="available-options-for-vsdevcmdbat"></a>VsDevCmd.BAT için kullanılabilir seçenekleri
+### <a name="available-options-for-vsdevcmdbat"></a>VsDevCmd. BAT için kullanılabilir seçenekler
 
-VsDevCmd.BAT için kullanılabilir seçenekleri görmek için komutu çalıştırmak `-help` seçeneği:
+Vsdevcmd. bat için kullanılabilir seçenekleri görmek için komutunu `-help` seçeneğiyle çalıştırın:
 
 ```console
 VsDevCmd.bat -help
@@ -52,4 +52,4 @@ VsDevCmd.bat -help
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [csc.exe Kullanarak Komut Satırı Derleme](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [csc.exe Kullanarak Komut Satırı Derleme](./command-line-building-with-csc-exe.md)

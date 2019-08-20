@@ -1,5 +1,5 @@
 ---
-title: Ana() ve komut satırı bağımsız değişkenleri - C# Programlama Kılavuzu
+title: Main () ve komut satırı bağımsız değişkenleri- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 08/02/2017
 f1_keywords:
@@ -13,30 +13,30 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: f1cbbc6081c0e2f3e29d49f413e00c7346ea7e60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db4464cdd3d98103bbc61b824081b59cb1e01cb9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61678848"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588911"
 ---
-# <a name="main-and-command-line-arguments-c-programming-guide"></a>Ana() ve komut satırı bağımsız değişkenleri (C# programlama Kılavuzu)
+# <a name="main-and-command-line-arguments-c-programming-guide"></a>Main () ve komut satırı bağımsız değişkenleri (C# Programlama Kılavuzu)
 
-`Main` Bir C# uygulaması giriş noktası bir yöntemdir. (Kitaplıkları ve Hizmetleri gerektirmez bir `Main` yöntemi olarak bir giriş noktası.) Uygulama başlatıldığında `Main` çağrılan ilk yöntem yöntemidir.
+Yöntemi, bir C# uygulamanın giriş noktasıdır. `Main` (Kitaplıklar ve hizmetler bir giriş noktası olarak `Main` bir yöntem gerektirmez.) Uygulama başlatıldığında, `Main` yöntemi çağrılan ilk yöntemdir.
 
- Yalnızca bir C# programında bir giriş noktası olabilir. Birden fazla sınıf varsa bir `Main` yöntemi programınızla birlikte derleme gerekir **/main** belirtmek için derleyici seçeneği `Main` giriş noktası olarak kullanmak için yöntemi. Daha fazla bilgi için [/Main (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/main-compiler-option.md).
+ Bir C# programda yalnızca bir giriş noktası olabilir. `Main` Yöntemine sahip birden fazla sınıfınız varsa, giriş noktası olarak hangi `Main` yöntemin kullanılacağını belirtmek için programınızı **/Main** derleyici seçeneğiyle derlemeniz gerekir. Daha fazla bilgi için bkz. [/MainC# (derleyici seçenekleri)](../../language-reference/compiler-options/main-compiler-option.md).
 
  [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
 
 ## <a name="overview"></a>Genel Bakış
 
-- `Main` Yöntemdir giriş noktası yürütülebilir bir program; Burada, program denetimi başlar ve biter.
-- `Main` bir sınıf veya yapı içinde bildirilir. `Main` olmalıdır [statik](../../../csharp/language-reference/keywords/static.md) ve olmaması [genel](../../../csharp/language-reference/keywords/public.md). (Önceki örnekte, varsayılan erişim aldığı [özel](../../../csharp/language-reference/keywords/private.md).) Kapsayan sınıfın veya yapının statik olması gerekli değildir.
-- `Main` yalnızca birine sahip olabilir bir `void`, `int`, ya da C# 7.1 ile başlangıç `Task`, veya `Task<int>` dönüş türü.
-- Ve yalnızca, `Main` döndürür bir `Task` veya `Task<int>`, bildirimi `Main` içerebilir [ `async` ](../../language-reference/keywords/async.md) değiştiricisi. Bu özellikle hariç Not bir `async void Main` yöntemi.
-- `Main` Yöntemi ile veya olmadan bildirilebilir bir `string[]` komut satırı bağımsız değişkenleri içeren bir parametre. Visual Studio, Windows uygulamaları oluşturmak için kullanılırken, parametresi el ile ekleyin Aksi takdirde kullanmak <xref:System.Environment> komut satırı bağımsız değişkenlerini almak için sınıf. Parametre sıfır dizinli komut satırı bağımsız değişkenleri okunur. C ve C++'ın aksine, programın adı, ilk komut satırı bağımsız değişkeni işlenmez.
+- `Main` Yöntemi, çalıştırılabilir programın giriş noktasıdır; program denetiminin başladığı ve bittiği yerdir.
+- `Main`bir sınıf veya yapı içinde bildirilmiştir. `Main`[statik](../../language-reference/keywords/static.md) olmalı ve [genel](../../language-reference/keywords/public.md)olmamalıdır. (Önceki örnekte, [Private](../../language-reference/keywords/private.md)'ın varsayılan erişimini alır.) Kapsayan sınıf veya yapının statik olması gerekmez.
+- `Main``int` C# yada`Task`, 7,1, veyadönüştüründenbaşlayarak,yadaolabilir.`Task<int>` `void`
+- `Main` Ve yalnızca [`async`](../../language-reference/keywords/async.md) bir `Task` veya döndürürse`Task<int>`, bildirimi `Main` , değiştiricisini içerebilir. Bunun özellikle bir `async void Main` yöntemi dışladığı unutulmamalıdır.
+- Yöntemi komut satırı bağımsız değişkenleri içeren bir `string[]` parametre ile veya olmadan bildirilemez. `Main` Windows uygulamaları oluşturmak için Visual Studio kullanırken, parametresini el ile ekleyebilir veya komut satırı bağımsız değişkenlerini almak için <xref:System.Environment> sınıfını kullanabilirsiniz. Parametreler, sıfır dizinli komut satırı bağımsız değişkenleri olarak okunurdur. C ve C++' nin aksine, programın adı ilk komut satırı bağımsız değişkeni olarak değerlendirilmez.
 
-Ek `async` ve `Task`, `Task<int>` dönüş türleri, konsol uygulamaları başlatmak gerektiğinde program kodu basitleştirir ve `await` zaman uyumsuz işlemler `Main`.
+Ve `async` '`Task` `await` `Main`nin eklenmesi, konsol uygulamalarının ' de başlaması ve zaman uyumsuz işlemler gerektiğinde program kodunu basitleştirir. `Task<int>`
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -44,7 +44,7 @@ Ek `async` ve `Task`, `Task<int>` dönüş türleri, konsol uygulamaları başla
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [csc.exe Kullanarak Komut Satırı Derleme](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)
-- [C# Programı İçinde](../../../csharp/programming-guide/inside-a-program/index.md)
+- [csc.exe Kullanarak Komut Satırı Derleme](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Yöntemler](../classes-and-structs/methods.md)
+- [C# Programı İçinde](../inside-a-program/index.md)

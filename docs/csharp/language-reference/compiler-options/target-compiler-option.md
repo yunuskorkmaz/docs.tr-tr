@@ -1,5 +1,5 @@
 ---
-title: -target (C# Derleyici Seçenekleri)
+title: -target (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /target
@@ -9,45 +9,45 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: f29b656a3db08d35692e375fe2175ff75e510941
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0630639433aed4c8dfddbf0144e9802ed3f4ee73
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61662432"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606442"
 ---
-# <a name="-target-c-compiler-options"></a>-target (C# Derleyici Seçenekleri)
-**-Hedef** derleyici seçeneği dört biçimlerden birinde belirtilebilir:  
+# <a name="-target-c-compiler-options"></a>-target (C# derleyici seçenekleri)
+**-Target** derleyici seçeneği dört formdan birinde belirtilebilir:  
   
- [-target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
- Bir .exe dosyası oluşturmak için [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] uygulamalar.  
+ [-target:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
+ Uygulamalar için [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] bir. exe dosyası oluşturmak için.  
   
- [-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md)  
- Bir .exe dosyası oluşturmak için.  
+ [-target:exe](./target-exe-compiler-option.md)  
+ Bir. exe dosyası oluşturmak için.  
   
- [-target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md)  
- Bir kod kitaplığı oluşturmak için.  
+ [-target:library](./target-library-compiler-option.md)  
+ Bir kod kitaplığı oluşturun.  
   
- [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)  
- Bir modül oluşturmak için  
+ [-target:module](./target-module-compiler-option.md)  
+ Bir modül oluşturmak için.  
   
- [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)  
+ [-target:winexe](./target-winexe-compiler-option.md)  
  Bir Windows programı oluşturmak için.  
   
- [-target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
- Bir ara .winmdobj dosyası oluşturmak için.  
+ [-target:winmdobj](./target-winmdobj-compiler-option.md)  
+ Ara. winmdobj dosyası oluşturmak için.  
   
- Siz belirtmediğiniz sürece **-target: module**, **-hedef** bir .NET Framework derleme bildirimi bir çıkış dosyası yerleştirilmesine neden olur. Daha fazla bilgi için [ortak dil çalışma zamanı derlemeleri](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) ve [ortak öznitelikleri](../../programming-guide/concepts/attributes/common-attributes.md).  
+ **-Target: Module**belirtmediğiniz takdirde **-target** bir .NET Framework derleme bildiriminin bir çıkış dosyasına yerleştirilmesine neden olur. Daha fazla bilgi için bkz. [ortak dil çalışma zamanı](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) ve [ortak özniteliklerdeki](../../programming-guide/concepts/attributes/common-attributes.md)derlemeler.  
   
- .Exe çıkış dosyası yoksa derleme bildirimi ilk .exe çıkış dosyası derleme veya ilk DLL yerleştirilir. Örneğin, aşağıdaki komut satırında bildirim yerleştirileceği `1.exe`:  
+ Derleme bildirimi, derleme içindeki ilk. exe çıkış dosyasına veya. exe çıkış dosyası yoksa ilk DLL 'de yerleştirilir. Örneğin, aşağıdaki komut satırında bildirim yerleştirilecek `1.exe`:  
   
 ```console  
 csc -out:1.exe t1.cs -out:2.netmodule t2.cs  
 ```  
   
- Derleyici, derleme başına yalnızca bir derleme bildirimi oluşturur. Bir derlemede tüm dosyaları hakkında bilgi, derleme bildirimine yerleştirilir. Tüm dosyaları ile oluşturulanlar dışındaki çıktı **-target: module** bir derleme bildirimi içerebilir. Komut satırında birden çok çıkış dosyaları üreten, tek bir derleme bildirimi oluşturulabilir ve komut satırında belirtilen ilk çıktı dosyası içine gitmeniz gerekir. Hangi ilk çıktı dosyası ne olursa olsun (**-target: exe**, **-target: winexe**, **-target: library** veya **-target: module**), diğer aynı derlemede üretilen Çıkış dosyalarını modülleri olmalıdır (**-target: module**).  
+ Derleyici, derleme başına yalnızca bir derleme bildirimi oluşturur. Bir derlemedeki tüm dosyalar hakkındaki bilgiler, derleme bildirimine yerleştirilir. **-Target: Module** ile oluşturulanlar hariç tüm çıkış dosyaları bir derleme bildirimi içerebilir. Komut satırında birden çok çıkış dosyası üretilirken, yalnızca bir derleme bildirimi oluşturulabilir ve komut satırında belirtilen ilk çıkış dosyasına gitmelidir. İlk çıkış dosyasının ne olduğuna bakılmaksızın ( **-target: exe**, **-target: winexe**, **-target: Library** veya **-target: Module**), aynı derlemede üretilen diğer çıkış dosyaları modüller olmalıdır ( **-target: Module**).  
   
- Bir derlemeyi oluşturursanız, kodunuzun bir kısmını veya tamamını CLS ile uyumlu olduğunu gösterebilir <xref:System.CLSCompliantAttribute> özniteliği.  
+ Bir derleme oluşturursanız, kodunuzun tümünün veya bir kısmının <xref:System.CLSCompliantAttribute> öznitelik ile CLS uyumlu olduğunu belirtebilirsiniz.  
   
 ```csharp  
 // target_clscompliant.cs  
@@ -60,10 +60,10 @@ public class TestClass
 }  
 ```  
   
- Bu derleyici seçeneğini programlama yoluyla ayarlama hakkında daha fazla bilgi için bkz. <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için <xref:VSLangProj80.ProjectProperties3.OutputType%2A>bkz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
+- [C# Derleyici Seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
-- [-subsystemversion (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
+- [-subsystemversion (C# derleyici seçenekleri)](./subsystemversion-compiler-option.md)

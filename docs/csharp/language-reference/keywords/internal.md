@@ -1,5 +1,5 @@
 ---
-title: iç - C# başvurusu
+title: iç C# başvuru
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 9cfbea03a305dd17c07f549901bc91be0e05b792
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 7d97b7b05645b02a31af848c97758c7a1f6423b9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661176"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602076"
 ---
 # <a name="internal-c-reference"></a>internal (C# Başvurusu)
-`internal` Anahtar sözcüğü bir [erişim değiştiricisi](../../../csharp/language-reference/keywords/access-modifiers.md) türler ve tür üyeleri için. 
+Anahtar `internal` sözcüğü, türler ve tür üyeleri için bir [erişim değiştiricisidir](./access-modifiers.md) . 
   
- > Bu sayfa kapsayan `internal` erişim. `internal` Anahtar sözcüğü, ayrıca parçası [ `protected internal` ](./protected-internal.md) erişim değiştiricisi.
+ > Bu sayfa erişimi `internal` içerir. Anahtar sözcüğü ayrıca [`protected internal`](./protected-internal.md) erişim değiştiricisinin bir parçasıdır. `internal`
   
-İç türleri veya üyeleri yalnızca bu örnekte olduğu gibi aynı derleme dosyalarında erişilebilir:  
+İç türlere veya üyelere, bu örnekte olduğu gibi, yalnızca aynı derlemede bulunan dosyalar içinde erişilebilir:  
   
 ```csharp  
 public class BaseClass   
@@ -30,16 +30,16 @@ public class BaseClass
 }  
 ```  
 
- Bir karşılaştırması `internal` diğer erişim değiştiricileri ile bkz [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md) ve [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Diğer erişim değiştiricilerine `internal` kıyasla, bkz. [Erişilebilirlik düzeyleri](./accessibility-levels.md) ve [erişim değiştiricileri](../../programming-guide/classes-and-structs/access-modifiers.md).  
   
- Derlemeler hakkında daha fazla bilgi için bkz. [.NET derlemeleri](../../../standard/assembly/index.md).  
+ Derlemeler hakkında daha fazla bilgi için bkz. [.net 'Teki derlemeler](../../../standard/assembly/index.md).  
   
- Bir grup için uygulama kodunun kalanı görmeden özel bir şekilde işbirliği bileşenlerinin sağladığından bir ortak iç erişim bileşeni tabanlı geliştirme kullanılır. Örneğin, grafik kullanıcı arabirimleri oluşturmaya yönelik bir çerçeve sağlayabilir `Control` ve `Form` iç erişimle üyeleri kullanarak iş Birliği sınıfları. Bu üyeleri iç olduğundan, framework kullanan kodu sunulmaz.  
+ İç erişimin yaygın olarak kullanılması bileşen tabanlı geliştirmede olduğundan, bir grup bileşenin, uygulama kodunun geri kalanında gösterilmeksizin özel bir biçimde birlikte çalışabilmesine olanak sağlar. Örneğin, grafik kullanıcı arabirimleri oluşturmaya yönelik bir çerçeve, iç erişimi `Control` olan `Form` üyeleri kullanarak birlikte çalışan sınıflar sağlayabilir ve sınıflardır. Bu Üyeler iç olduğundan, Framework kullanan koda gösterilmez.  
   
- Bu bir tür veya üye, içinde tanımlandı derleme dışından iç erişimle başvurmak için bir hatadır.  
+ Bir tür ya da bir üyeye, tanımlandıkları derlemenin dışında iç erişimle başvurulmaları hatadır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek iki dosyayı içeren `Assembly1.cs` ve `Assembly1_a.cs`. İlk dosya içeren bir iç temel sınıf `BaseClass`. İkinci örneğini oluşturma girişiminde dosyasında `BaseClass` hataya neden olur.  
+ Bu örnek, ve `Assembly1.cs` `Assembly1_a.cs`olmak üzere iki dosya içerir. İlk dosya, `BaseClass`bir iç temel sınıf içerir. İkinci dosyada, örnek oluşturma `BaseClass` girişimi bir hata oluşturur.  
   
 ```csharp  
 // Assembly1.cs  
@@ -63,7 +63,7 @@ class TestAccess
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, örnek 1 kullanılan de indirdiğiniz dosyaları kullanarak ve erişilebilirlik düzeyini değiştirme `BaseClass` için `public`. Ayrıca üyenin erişilebilirlik düzeyi değiştirme `intM` için `internal`. Bu durumda, sınıfın örneğini oluşturabilir, ancak iç üyeye erişemez.  
+ Bu örnekte, örnek 1 ' de kullandığınız dosyaları kullanın ve erişilebilirlik düzeyini `BaseClass` olarak `public`değiştirin. Ayrıca üyenin `intM` `internal`erişilebilirlik düzeyini de değiştirin. Bu durumda, sınıfının örneğini oluşturabilirsiniz, ancak iç üyeye erişemezsiniz.  
   
 ```csharp  
 // Assembly2.cs  
@@ -89,16 +89,16 @@ public class TestAccess
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 
-Daha fazla bilgi için [erişilebilirlik bildirilen](~/_csharplang/spec/basic-concepts.md#declared-accessibility) içinde [ C# dil belirtimi](../language-specification/index.md). Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için bkz. [ C# dil belirtiminde](../language-specification/index.md) [Erişilebilirlik bildirimi](~/_csharplang/spec/basic-concepts.md#declared-accessibility) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
-- [Erişim Değiştiricileri](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [Erişilebilirlik Düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [Değiştiriciler](../../../csharp/language-reference/keywords/modifiers.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [private](../../../csharp/language-reference/keywords/private.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
+- [C#Başvurunun](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Anahtar Sözcükleri](./index.md)
+- [Erişim Değiştiricileri](./access-modifiers.md)
+- [Erişilebilirlik Düzeyleri](./accessibility-levels.md)
+- [Değiştiriciler](./modifiers.md)
+- [public](./public.md)
+- [private](./private.md)
+- [protected](./protected.md)

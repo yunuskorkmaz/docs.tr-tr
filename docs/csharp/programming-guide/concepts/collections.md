@@ -2,27 +2,27 @@
 title: Koleksiyonlar (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: a256b2f23bca973d1ed489724bf4d34ab35449f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 712ae4c9b4cf577ab728e4b78582445070e08049
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668594"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595287"
 ---
 # <a name="collections-c"></a>Koleksiyonlar (C#)
 
-Birçok uygulama için ilgili nesnelerin gruplarını oluşturmak ve yönetmek istersiniz. Grup nesnelerini iki yolu vardır: nesne dizileri oluşturarak ve veya nesne koleksiyonu oluşturarak.
+Birçok uygulama için ilgili nesne grupları oluşturmak ve yönetmek istersiniz. Nesneleri gruplandırmanın iki yolu vardır: nesne dizileri oluşturarak ve nesne koleksiyonları oluşturarak.
 
-Dizileri oluşturmak ve nesneleri türü kesin olarak belirtilmiş sabit sayıdaki ile çalışmak için ekseriyetle faydalıdır. Diziler hakkında daha fazla bilgi için bkz: [diziler](../../../csharp/programming-guide/arrays/index.md).
+Diziler, kesin olarak belirlenmiş sabit sayıda nesne oluşturmak ve bunlarla çalışmak için en yararlı seçenektir. Diziler hakkında daha fazla bilgi için bkz. [diziler](../arrays/index.md).
 
-Koleksiyonlar nesne grupları ile çalışmak için daha esnek bir yol sağlar. Dizilerden farklı olarak çalıştığınız nesne büyütme ve uygulamanın ihtiyacına göre dinamik olarak Daralt. Bazı koleksiyonlar için koleksiyona eklediğiniz ve böylece anahtarını kullanarak hızlı bir şekilde nesnesi alabilirsiniz herhangi bir nesneye bir anahtar atayabilirsiniz.
+Koleksiyonlar, nesne gruplarıyla çalışmak için daha esnek bir yol sağlar. Dizilerden farklı olarak, çalıştığınız nesne grubu, uygulama değişikliğinin ihtiyaçlarına göre dinamik olarak büyüyebilir ve küçülebilir. Bazı koleksiyonlar için, anahtarı kullanarak nesneyi hızlı bir şekilde alabilmeniz için koleksiyona yerleştirdiğiniz herhangi bir nesneye bir anahtar atayabilirsiniz.
 
-Bir koleksiyon bir sınıfı olduğundan bu koleksiyona öğeleri eklemeden önce sınıfının bir örneğini bildirmeniz gerekir.
+Koleksiyon bir sınıftır, bu nedenle bu koleksiyona öğe ekleyebilmeniz için önce sınıfın bir örneğini bildirmeniz gerekir.
 
-Koleksiyonunuz tek bir veri türünde öğeler içeriyorsa, sınıflarda birini kullanabilirsiniz <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanı. Genel koleksiyon tür güvenliği sağlar, böylece başka bir veri türü eklenebilir. Bir genel koleksiyondan öğe aldığınızda veri türünü belirlemeniz veya dönüştürmeniz gerekmez.
+Koleksiyonunuz yalnızca bir veri türünün öğelerini içeriyorsa, <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanındaki sınıflardan birini kullanabilirsiniz. Genel bir koleksiyon, tür güvenliğini, başka bir veri türü eklenememesi için uygular. Genel koleksiyondan bir öğe aldığınızda, veri türünü belirlememek veya dönüştürmek zorunda değilsiniz.
 
 > [!NOTE]
-> Bu konudaki örnekler için dahil [kullanarak](../../../csharp/language-reference/keywords/using-directive.md) yönergeleri `System.Collections.Generic` ve `System.Linq` ad alanları.
+> Bu konudaki örnekler için `System.Collections.Generic` ve `System.Linq` ad alanları için [using](../../language-reference/keywords/using-directive.md) yönergelerini içerir.
 
  **Bu konudaki**
 
@@ -30,19 +30,19 @@ Koleksiyonunuz tek bir veri türünde öğeler içeriyorsa, sınıflarda birini 
 
 - [Koleksiyon türleri](#BKMK_KindsOfCollections)
 
-  - [System.Collections.Generic sınıfları](#BKMK_Generic)
+  - [System. Collections. Generic sınıfları](#BKMK_Generic)
 
-  - [System.Collections.Concurrent sınıfları](#BKMK_Concurrent)
+  - [System. Collections. eşzamanlı sınıflar](#BKMK_Concurrent)
 
-  - [System.Collections sınıfları](#BKMK_Collections)
+  - [System. Collections sınıfları](#BKMK_Collections)
 
-- [Anahtar/değer çiftleri topluluğu uygulama](#BKMK_KeyValuePairs)
+- [Anahtar/değer çiftleri koleksiyonu uygulama](#BKMK_KeyValuePairs)
 
 - [Koleksiyona erişmek için LINQ kullanma](#BKMK_LINQ)
 
-- [Koleksiyonda sıralama](#BKMK_Sorting)
+- [Bir koleksiyonu sıralama](#BKMK_Sorting)
 
-- [Özel koleksiyonu tanımlama](#BKMK_CustomCollection)
+- [Özel bir koleksiyon tanımlama](#BKMK_CustomCollection)
 
 - [Yineleyiciler](#BKMK_Iterators)
 
@@ -50,9 +50,9 @@ Koleksiyonunuz tek bir veri türünde öğeler içeriyorsa, sınıflarda birini 
 
 ## <a name="using-a-simple-collection"></a>Basit bir koleksiyon kullanma
 
-Bu bölümdeki örneklerde genel kullanın <xref:System.Collections.Generic.List%601> sınıfını, bir türü kesin belirlenmiş nesneler listesiyle çalışmanıza olanak sağlar.
+Bu bölümdeki örneklerde, türü kesin belirlenmiş bir <xref:System.Collections.Generic.List%601> nesne listesiyle çalışmanıza olanak sağlayan genel sınıfı kullanılır.
 
-Aşağıdaki örnek bir dize listesi oluşturur ve ardından kullanarak dizeler arasında dolaşır bir [foreach](../../../csharp/language-reference/keywords/foreach-in.md) deyimi.
+Aşağıdaki örnek, bir dizi dizenin bir listesini oluşturur ve sonra, bir [foreach](../../language-reference/keywords/foreach-in.md) ifadesi kullanarak dizeler arasında yinelenir.
 
 ```csharp
 // Create a list of strings.
@@ -70,9 +70,9 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-Bir koleksiyonun içeriği önceden biliniyorsa, kullanabileceğiniz bir *koleksiyon Başlatıcısı* koleksiyonu başlatmak için. Daha fazla bilgi için [nesne ve koleksiyon başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).
+Bir koleksiyonun içeriği önceden biliniyorsa, koleksiyonu başlatmak için bir *koleksiyon başlatıcısı* kullanabilirsiniz. Daha fazla bilgi için bkz. [nesne ve koleksiyon başlatıcıları](../classes-and-structs/object-and-collection-initializers.md).
 
-Koleksiyona öğeleri eklemek için bir koleksiyon Başlatıcısı kullanılması dışında aşağıdaki örnek önceki örnekle aynıdır.
+Aşağıdaki örnek, koleksiyona öğe eklemek için bir koleksiyon başlatıcısı kullanılması dışında, önceki örnekle aynıdır.
 
 ```csharp
 // Create a list of strings by using a
@@ -87,9 +87,9 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-Kullanabileceğiniz bir [için](../../../csharp/language-reference/keywords/for.md) deyimi yerine bir `foreach` deyimi bir koleksiyon içinde yineleme için. Bu, bir koleksiyon öğelerine dizin konumundan erişerek gerçekleştirirsiniz. Öğelerin dizini 0'da başlar ve öğe sayısı eksi 1'de sona erer.
+Bir koleksiyon aracılığıyla yinelemek için bir [for](../../language-reference/keywords/for.md) ifadesinin yerine `foreach` bir for ifadesini kullanabilirsiniz. Bunu, koleksiyon öğelerine dizin konumuna erişerek gerçekleştirirsiniz. Öğelerin dizini 0 ' dan başlar ve öğe sayısı eksi 1 ' den sona erer.
 
-Aşağıdaki örneği kullanarak bir koleksiyonun öğeleri yinelenir `for` yerine `foreach`.
+Aşağıdaki örnek `for` `foreach`yerine kullanarak bir koleksiyonun öğeleri boyunca yinelenir.
 
 ```csharp
 // Create a list of strings by using a
@@ -103,7 +103,7 @@ for (var index = 0; index < salmons.Count; index++)
 // Output: chinook coho pink sockeye
 ```
 
-Aşağıdaki örnek, bir öğe kaldırmak için nesneyi belirterek koleksiyondan kaldırır.
+Aşağıdaki örnek, kaldırılacak nesneyi belirterek koleksiyondan bir öğeyi kaldırır.
 
 ```csharp
 // Create a list of strings by using a
@@ -122,7 +122,7 @@ foreach (var salmon in salmons)
 // Output: chinook pink sockeye
 ```
 
-Aşağıdaki örnek bir genel listeden öğeleri kaldırır. Yerine bir `foreach` deyimi, bir [için](../../../csharp/language-reference/keywords/for.md) azalan sırada yenileyen deyimi kullanılır. Bunun nedeni, <xref:System.Collections.Generic.List%601.RemoveAt%2A> yöntemi bir alt dizin değerine sahip olacak şekilde kaldırılmış bir öğeden sonra öğe neden olur.
+Aşağıdaki örnek, genel bir listeden öğeleri kaldırır. Bir `foreach` ifade yerine, azalan düzende yinelenen bir [for](../../language-reference/keywords/for.md) deyimleri kullanılır. Bunun nedeni, <xref:System.Collections.Generic.List%601.RemoveAt%2A> yöntemin kaldırılan bir öğeden sonra öğelerin daha düşük bir dizin değerine sahip olmasına neden olur.
 
 ```csharp
 var numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -146,7 +146,7 @@ numbers.ForEach(
 // Output: 0 2 4 6 8
 ```
 
-İçindeki öğe türleri için <xref:System.Collections.Generic.List%601>, ayrıca kendi sınıfınızı tanımlayabilirsiniz. Aşağıdaki örnekte, `Galaxy` tarafından kullanılan sınıfı <xref:System.Collections.Generic.List%601> kodda tanımlanır.
+İçindeki <xref:System.Collections.Generic.List%601>öğe türleri için kendi sınıfınızı de tanımlayabilirsiniz. Aşağıdaki örnekte `Galaxy` , <xref:System.Collections.Generic.List%601> tarafından kullanılan sınıfı kodda tanımlanmıştır.
 
 ```csharp
 private static void IterateThroughList()
@@ -182,70 +182,70 @@ public class Galaxy
 
 ## <a name="kinds-of-collections"></a>Koleksiyon türleri
 
-Ortak koleksiyonların çoğu .NET Framework tarafından sağlanır. Her koleksiyon türü belirli bir amaç için tasarlanmıştır.
+Birçok ortak koleksiyon .NET Framework tarafından sağlanır. Her koleksiyon türü belirli bir amaç için tasarlanmıştır.
 
-Bazı ortak koleksiyon sınıfları, bu bölümde açıklanan:
+Ortak koleksiyon sınıflarından bazıları bu bölümde açıklanmıştır:
 
-- <xref:System.Collections.Generic> Sınıfları
+- <xref:System.Collections.Generic> sınıflar
 
-- <xref:System.Collections.Concurrent> Sınıfları
+- <xref:System.Collections.Concurrent> sınıflar
 
-- <xref:System.Collections> Sınıfları
+- <xref:System.Collections> sınıflar
 
 <a name="BKMK_Generic"></a>
 
-### <a name="systemcollectionsgeneric-classes"></a>System.Collections.Generic sınıfları
+### <a name="systemcollectionsgeneric-classes"></a>System. Collections. Generic sınıfları
 
-Genel koleksiyon sınıfları birini kullanarak oluşturabileceğiniz <xref:System.Collections.Generic> ad alanı. Genel koleksiyon, koleksiyondaki her öğe aynı veri türüne sahip olduğunda yararlıdır. Yalnızca istenen veri sağlayarak güçlü yazmayı genel koleksiyon sağlar eklenecek türü.
+<xref:System.Collections.Generic> Ad alanındaki sınıflardan birini kullanarak genel bir koleksiyon oluşturabilirsiniz. Genel bir koleksiyon, koleksiyondaki her öğe aynı veri türüne sahip olduğunda faydalıdır. Genel bir koleksiyon, yalnızca istenen veri türünün eklenmesine izin vererek güçlü yazma uygular.
 
-Aşağıdaki tabloda sık kullanılan sınıflarından bazılarını listeler <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanı:
+Aşağıdaki tabloda, <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanının sık kullanılan sınıflarının bazıları listelenmektedir:
 
 |örneği|Açıklama|
 |---|---|
-|<xref:System.Collections.Generic.Dictionary%602>|Anahtara göre düzenlenen anahtar/değer çifti koleksiyonunu temsil eder.|
-|<xref:System.Collections.Generic.List%601>|Dizin tarafından erişilebilecek nesnelerin bir listesini temsil eder. Arama, sıralama ve listelerini değiştirmek için yöntemler sağlar.|
-|<xref:System.Collections.Generic.Queue%601>|İlk giren ilk çıkar (FIFO) nesne koleksiyonunu temsil eder.|
-|<xref:System.Collections.Generic.SortedList%602>|Anahtarıyla ilişkili göre sıralanan anahtar/değer çiftlerinin koleksiyonunu temsil eder <xref:System.Collections.Generic.IComparer%601> uygulaması.|
-|<xref:System.Collections.Generic.Stack%601>|Son giren ilk çıkar (LIFO) nesne koleksiyonunu temsil eder.|
+|<xref:System.Collections.Generic.Dictionary%602>|Anahtara göre düzenlenen anahtar/değer çiftleri koleksiyonunu temsil eder.|
+|<xref:System.Collections.Generic.List%601>|Dizin tarafından erişilebilen nesnelerin listesini temsil eder. Listeleri aramak, sıralamak ve değiştirmek için yöntemler sağlar.|
+|<xref:System.Collections.Generic.Queue%601>|Nesnelerin ilk, ilk çıkar (FıFO) koleksiyonunu temsil eder.|
+|<xref:System.Collections.Generic.SortedList%602>|İlişkili <xref:System.Collections.Generic.IComparer%601> uygulamaya göre anahtara göre sıralanan anahtar/değer çiftleri koleksiyonunu temsil eder.|
+|<xref:System.Collections.Generic.Stack%601>|Nesnelerin son, ilk çıkar (LıFO) koleksiyonunu temsil eder.|
 
-Ek bilgi için bkz: [yaygın olarak kullanılan koleksiyon türleri](../../../standard/collections/commonly-used-collection-types.md), [koleksiyon sınıfı seçme](../../../standard/collections/selecting-a-collection-class.md), ve <xref:System.Collections.Generic>.
+Daha fazla bilgi için bkz. [yaygın olarak kullanılan koleksiyon türleri](../../../standard/collections/commonly-used-collection-types.md), [koleksiyon sınıfı seçme](../../../standard/collections/selecting-a-collection-class.md)ve <xref:System.Collections.Generic>.
 
 <a name="BKMK_Concurrent"></a>
 
-### <a name="systemcollectionsconcurrent-classes"></a>System.Collections.Concurrent sınıfları
+### <a name="systemcollectionsconcurrent-classes"></a>System. Collections. eşzamanlı sınıflar
 
-.NET Framework 4 veya daha yeni sürümü, koleksiyonlar <xref:System.Collections.Concurrent> ad alanı, koleksiyon öğelerine birden fazla iş parçacığından erişmek için verimli bir iş parçacığı açısından güvenli işlemler sağlar.
+.NET Framework 4 veya daha yeni bir sürümde, <xref:System.Collections.Concurrent> ad alanındaki koleksiyonlar, koleksiyon öğelerine birden çok iş parçacığından erişmek için verimli iş parçacığı güvenli işlemleri sağlar.
 
-Sınıflarda <xref:System.Collections.Concurrent> ad alanı, karşılık gelen türler yerine kullanılmalıdır <xref:System.Collections.Generic?displayProperty=nameWithType> ve <xref:System.Collections?displayProperty=nameWithType> birden çok iş parçacığı koleksiyon eriştiği her seferde ad alanları. Daha fazla bilgi için [iş parçacığı güvenli koleksiyonları](../../../standard/collections/thread-safe/index.md) ve <xref:System.Collections.Concurrent>.
+Birden çok iş parçacığının <xref:System.Collections.Concurrent> koleksiyona aynı anda eriştiği her seferinde <xref:System.Collections.Generic?displayProperty=nameWithType> ve <xref:System.Collections?displayProperty=nameWithType> ad alanındaki ilgili türler yerine ad alanındaki sınıflar kullanılmalıdır. Daha fazla bilgi için bkz. [Iş parçacığı güvenli koleksiyonlar](../../../standard/collections/thread-safe/index.md) ve <xref:System.Collections.Concurrent>.
 
-Eklenen bazı sınıflar <xref:System.Collections.Concurrent> ad <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, ve <xref:System.Collections.Concurrent.ConcurrentStack%601>.
+<xref:System.Collections.Concurrent> Ad alanına dahil edilen bazı sınıflar, <xref:System.Collections.Concurrent.BlockingCollection%601> <xref:System.Collections.Concurrent.ConcurrentDictionary%602> <xref:System.Collections.Concurrent.ConcurrentQueue%601>, ve <xref:System.Collections.Concurrent.ConcurrentStack%601>' dir.
 
 <a name="BKMK_Collections"></a>
 
-### <a name="systemcollections-classes"></a>System.Collections sınıfları
+### <a name="systemcollections-classes"></a>System. Collections sınıfları
 
-Sınıflarda <xref:System.Collections?displayProperty=nameWithType> özellikle yazılmış nesneler, ancak nesne türü ad alanı öğeleri saklamayın `Object`.
+<xref:System.Collections?displayProperty=nameWithType> Ad alanındaki sınıflar öğeleri özel olarak yazılmış nesneler olarak depolamaz, ancak türünden `Object`nesneler olarak depolamaz.
 
-Mümkün olduğunda genel koleksiyonları kullanması gereken <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanı veya <xref:System.Collections.Concurrent> ad alanındaki eski türlerde yerine `System.Collections` ad alanı.
+Mümkün olduğunda, ad alanındaki eski türler <xref:System.Collections.Generic?displayProperty=nameWithType> `System.Collections` yerine ad alanı <xref:System.Collections.Concurrent> veya ad alanı içinde genel koleksiyonları kullanmanız gerekir.
 
-Aşağıdaki tabloda sık kullanılan sınıflarından bazılarını listeler `System.Collections` ad alanı:
+Aşağıdaki tabloda, `System.Collections` ad alanında sık kullanılan sınıfların bazıları listelenmektedir:
 
 |örneği|Açıklama|
 |---|---|
-|<xref:System.Collections.ArrayList>|Bir dizi boyutu olarak dinamik olarak artırılan nesne dizilerini temsil gereklidir.|
-|<xref:System.Collections.Hashtable>|Anahtarın karma koduna göre düzenlenen anahtar/değer çifti koleksiyonunu temsil eder.|
-|<xref:System.Collections.Queue>|İlk giren ilk çıkar (FIFO) nesne koleksiyonunu temsil eder.|
-|<xref:System.Collections.Stack>|Son giren ilk çıkar (LIFO) nesne koleksiyonunu temsil eder.|
+|<xref:System.Collections.ArrayList>|Boyutu dinamik olarak gerektiği şekilde arttığı bir nesne dizisini temsil eder.|
+|<xref:System.Collections.Hashtable>|Anahtarın karma koduna göre düzenlenmiş anahtar/değer çiftleri koleksiyonunu temsil eder.|
+|<xref:System.Collections.Queue>|Nesnelerin ilk, ilk çıkar (FıFO) koleksiyonunu temsil eder.|
+|<xref:System.Collections.Stack>|Nesnelerin son, ilk çıkar (LıFO) koleksiyonunu temsil eder.|
 
-<xref:System.Collections.Specialized> Ad alanı yalnızca dize koleksiyonları ve bağlantılı liste ve melez sözlükler gibi özelleştirilmiş ve türü kesin belirlenmiş koleksiyon sınıfları sağlar.
+<xref:System.Collections.Specialized> Ad alanı, yalnızca dize toplamaları ve bağlantılı liste ve karma sözlük gibi özelleştirilmiş ve kesin tür belirtilmiş koleksiyon sınıfları sağlar.
 
 <a name="BKMK_KeyValuePairs"></a>
 
-## <a name="implementing-a-collection-of-keyvalue-pairs"></a>Anahtar/değer çiftleri topluluğu uygulama
+## <a name="implementing-a-collection-of-keyvalue-pairs"></a>Anahtar/değer çiftleri koleksiyonu uygulama
 
-<xref:System.Collections.Generic.Dictionary%602> Genel koleksiyonu her öğenin anahtarını kullanarak bir koleksiyondaki öğelere erişmenize olanak sağlar. Her ek sözlük için bir değer ve ilişkili anahtarını oluşur. Bir değeri anahtarını kullanarak almak oldukça hızlıdır `Dictionary` sınıfı bir karma tablo olarak uygulanır.
+Genel <xref:System.Collections.Generic.Dictionary%602> koleksiyon, her bir öğenin anahtarını kullanarak bir koleksiyondaki öğelere erişmenizi sağlar. Sözlüğe eklenen her ekleme bir değerden ve ilişkili anahtarından oluşur. `Dictionary` Sınıfı bir karma tablo olarak uygulandığından, anahtarını kullanarak bir değerin alınması hızlıdır.
 
-Aşağıdaki örnek, oluşturur bir `Dictionary` koleksiyonu ve kullanarak sözlük yinelenir. bir `foreach` deyimi.
+Aşağıdaki örnek bir `Dictionary` koleksiyon oluşturur ve bir `foreach` ifade kullanarak sözlükten yinelenir.
 
 ```csharp
 private static void IterateThruDictionary()
@@ -294,7 +294,7 @@ public class Element
 }
 ```
 
-Bunun yerine bir koleksiyon Başlatıcısı oluşturmak için kullanılacak `Dictionary` koleksiyonu değiştirebilirsiniz `BuildDictionary` ve `AddToDictionary` yöntemlerini aşağıdaki yöntemle.
+Koleksiyonu oluşturmak için bir koleksiyon başlatıcısı kullanmak yerine, `AddToDictionary` veyöntemleriniaşağıdakiyöntemledeğiştirebilirsiniz.`BuildDictionary` `Dictionary`
 
 ```csharp
 private static Dictionary<string, Element> BuildDictionary2()
@@ -313,7 +313,7 @@ private static Dictionary<string, Element> BuildDictionary2()
 }
 ```
 
-Aşağıdaki örnekte <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> yöntemi ve <xref:System.Collections.Generic.Dictionary%602.Item%2A> özelliği `Dictionary` öğeyi anahtara göre hızlı bir şekilde bulmak için. `Item` Özelliği bir öğeye erişmenize olanak tanır `elements` kullanarak koleksiyon `elements[symbol]` C#.
+Aşağıdaki örnek, bir öğeyi <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> anahtara göre hızlı <xref:System.Collections.Generic.Dictionary%602.Item%2A> bir şekilde `Dictionary` bulmak için yöntemini ve özelliğini kullanır. Özelliği, `elements`içindeöğesini C#kullanarak koleksiyondaki bir öğeye erişmenizi sağlar. `Item` `elements[symbol]`
 
 ```csharp
 private static void FindInDictionary(string symbol)
@@ -332,7 +332,7 @@ private static void FindInDictionary(string symbol)
 }
 ```
 
-Aşağıdaki örnek, bunun yerine kullanır <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> yöntemi anahtara göre hızlı bir şekilde öğeyi bulun.
+Aşağıdaki örnek bunun yerine, bir <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> öğeyi anahtara göre hızlı bir şekilde bulmak için yöntemini kullanır.
 
 ```csharp
 private static void FindInDictionary2(string symbol)
@@ -351,9 +351,9 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>Koleksiyona erişmek için LINQ kullanma
 
-LINQ (dil ile tümleşik sorgu) koleksiyonlara erişmek için kullanılabilir. LINQ sorguları filtreleme, sıralama ve Gruplama yetenekler sağlar. Daha fazla bilgi için [C# üzerinde LINQ ile çalışmaya başlama](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md).
+LINQ (dil ile tümleşik sorgu), koleksiyonlara erişmek için kullanılabilir. LINQ sorguları filtreleme, sıralama ve gruplama özellikleri sağlar. Daha fazla bilgi için bkz. [ C#LINQ ile çalışmaya ](./linq/getting-started-with-linq.md)başlama.
 
-Aşağıdaki örnek, bir genel LINQ sorgusu çalıştırır `List`. LINQ sorgusu sonuçları içeren farklı bir koleksiyon döndürür.
+Aşağıdaki örnek, genel `List`olarak bir LINQ sorgusu çalıştırır. LINQ sorgusu, sonuçları içeren farklı bir koleksiyon döndürür.
 
 ```csharp
 private static void ShowLINQ()
@@ -398,13 +398,13 @@ public class Element
 
 <a name="BKMK_Sorting"></a>
 
-## <a name="sorting-a-collection"></a>Koleksiyonda sıralama
+## <a name="sorting-a-collection"></a>Bir koleksiyonu sıralama
 
-Aşağıdaki örnek bir koleksiyonu sıralamak için bir yordam gösterir. Örnek örneklerini sıralar `Car` depolanan sınıfı bir <xref:System.Collections.Generic.List%601>. `Car` Sınıfının Implements <xref:System.IComparable%601> gerektiren arabirimi <xref:System.IComparable%601.CompareTo%2A> yönteminin uygulanmasını.
+Aşağıdaki örnek bir koleksiyonu sıralamak için bir yordam gösterir. Örnek, `Car` <xref:System.Collections.Generic.List%601>içinde depolanan sınıfının örneklerini sıralar. Sınıfı, <xref:System.IComparable%601.CompareTo%2A> yönteminin uygulanması <xref:System.IComparable%601> için arabirimini uygular. `Car`
 
-Her çağrı <xref:System.IComparable%601.CompareTo%2A> yöntemi sıralama için kullanılan tek bir karşılaştırma yapar. Kullanıcı tarafından yazılan kodu `CompareTo` geçerli nesnenin başka bir nesneyle her karşılaştırılışında bir değer döndürür. Döndürülen değer daha az nesne geçerli nesneye sıfırdan küçük nesnesine, geçerli nesne diğer nesneden büyükse sıfır ve sıfır büyüktür eşit olmaları durumunda. Bu, kodda büyüktür, küçüktür ölçütleri tanımlayın ve eşit sağlar.
+Yöntemine yapılan her çağrı <xref:System.IComparable%601.CompareTo%2A> , sıralama için kullanılan tek bir karşılaştırma yapar. `CompareTo` Yöntemdeki Kullanıcı tarafından yazılan kod, geçerli nesnenin her bir karşılaştırması için başka bir nesneyle ilgili bir değer döndürür. Geçerli nesne diğer nesneden daha küçükse döndürülen değer sıfırdan küçük, geçerli nesne diğer nesneden büyükse sıfırdan büyük ve eşitse sıfır. Bu, büyük, küçüktür ve eşittir ölçütlerine göre kod içinde tanımlamanızı sağlar.
 
-İçinde `ListCars` yöntemi `cars.Sort()` deyimi listeyi sıralar. Bu çağrıyı <xref:System.Collections.Generic.List%601.Sort%2A> yöntemi <xref:System.Collections.Generic.List%601> neden `CompareTo` otomatik olarak çağrılmasına yöntemi `Car` nesneler `List`.
+`ListCars` Yönteminde`cars.Sort()` , ifade listeyi sıralar. <xref:System.Collections.Generic.List%601.Sort%2A> `CompareTo` Öğesininyöntemine`Car` yapılan bu çağrı, yönteminin içindeki `List`nesneler için otomatik olarak çağrılmasına neden olur. <xref:System.Collections.Generic.List%601>
 
 ```csharp
 private static void ListCars()
@@ -478,15 +478,15 @@ public class Car : IComparable<Car>
 
 <a name="BKMK_CustomCollection"></a>
 
-## <a name="defining-a-custom-collection"></a>Özel koleksiyonu tanımlama
+## <a name="defining-a-custom-collection"></a>Özel bir koleksiyon tanımlama
 
-Uygulayarak bir koleksiyon tanımlayabilirsiniz <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Collections.IEnumerable> arabirimi.
+<xref:System.Collections.Generic.IEnumerable%601> Veya<xref:System.Collections.IEnumerable> arabirimini uygulayarak bir koleksiyon tanımlayabilirsiniz.
 
-Bir özel koleksiyon tanımlayabilirsiniz, bunun yerine açıklanan .NET Framework içinde yer koleksiyonların kullanılması daha iyi [tür, koleksiyonları](#BKMK_KindsOfCollections) bu konuda daha önce.
+Özel bir koleksiyon tanımlamanızı mümkün olsa da, bu konunun önceki kısımlarında yer alan [koleksiyonlar türlerinde](#BKMK_KindsOfCollections) açıklanan .NET Framework dahil edilen koleksiyonları kullanmak genellikle daha iyidir.
 
-Aşağıdaki örnekte adlı bir özel koleksiyon tanımlar `AllColors`. Bu sınıfın uyguladığı <xref:System.Collections.IEnumerable> gerektiren arabirimi <xref:System.Collections.IEnumerable.GetEnumerator%2A> yönteminin uygulanmasını.
+Aşağıdaki örnek adlı `AllColors`özel bir koleksiyon sınıfını tanımlar. Bu sınıf, <xref:System.Collections.IEnumerable.GetEnumerator%2A> yönteminin <xref:System.Collections.IEnumerable> uygulanması için arabirimini uygular.
 
-`GetEnumerator` Yöntemi kendinin bir örneğini döndürür `ColorEnumerator` sınıfı. `ColorEnumerator` uygulayan <xref:System.Collections.IEnumerator> gerektiren arabirimi <xref:System.Collections.IEnumerator.Current%2A> özelliği <xref:System.Collections.IEnumerator.MoveNext%2A> yöntemi ve <xref:System.Collections.IEnumerator.Reset%2A> yönteminin uygulanmasını.
+Yöntemi `GetEnumerator` , `ColorEnumerator` sınıfının bir örneğini döndürür. `ColorEnumerator`<xref:System.Collections.IEnumerator.Current%2A>özelliği, yöntemive<xref:System.Collections.IEnumerator.Reset%2A> yönteminin uygulanması için arabiriminiuygular.<xref:System.Collections.IEnumerator> <xref:System.Collections.IEnumerator.MoveNext%2A>
 
 ```csharp
 private static void ListColors()
@@ -563,13 +563,13 @@ public class Color
 
 ## <a name="iterators"></a>Yineleyiciler
 
-Bir *yineleyici* bir koleksiyon üzerinde özel yineleme yapmak için kullanılır. Bir yineleyiciyi bir yöntem olabilir veya bir `get` erişimcisi. Yineleyici bir [yield return](../../../csharp/language-reference/keywords/yield.md) deyimini her öğesini birer birer koleksiyonunun bir döndürür.
+Bir *Yineleyici* , bir koleksiyon üzerinde özel bir yineleme gerçekleştirmek için kullanılır. Yineleyici bir yöntem veya `get` erişimci olabilir. Bir yineleyici, tek seferde koleksiyonun her bir öğesini döndürmek için bir [yield return](../../language-reference/keywords/yield.md) ifadesini kullanır.
 
-Kullanarak bir yineleyici çağırabilirsiniz bir [foreach](../../../csharp/language-reference/keywords/foreach-in.md) deyimi. Her bir yinelemesini `foreach` döngü yineleyiciyi çağırır. Olduğunda bir `yield return` yineleyicisi deyimine ulaşıldığında, bir ifade döndürülür ve kodun geçerli konumu korunur. Yürütme, yineleyicinin bir sonraki açışınızda bu konumdan başlatılır.
+Bir [foreach](../../language-reference/keywords/foreach-in.md) ifadesi kullanarak bir yineleyici çağırın. `foreach` Döngünün her yinelemesi yineleyiciyi çağırır. Yineleyiciden bir `yield return` ifadeye ulaşıldığında, bir ifade döndürülür ve koddaki geçerli konum korunur. Bu konumdan, yineleyici bir sonraki sefer çağrıldığında yürütme yeniden başlatılır.
 
-Daha fazla bilgi için [yineleyiciler (C#)](../../../csharp/programming-guide/concepts/iterators.md).
+Daha fazla bilgi için bkz. [yineleyicilerC#()](./iterators.md).
 
-Aşağıdaki örnek yineleyici yöntemini kullanır. Yineleyici yöntem, bir `yield return` içindeki bir [için](../../../csharp/language-reference/keywords/for.md) döngü. İçinde `ListEvenNumbers` yöntemi, her bir yinelemesini `foreach` diğerine geçer yineleyici yöntem için bir çağrı oluşturur ve deyim gövdesi `yield return` deyimi.
+Aşağıdaki örnek bir yineleyici yöntemi kullanır. Yineleyici yöntemi `yield return` için bir [for](../../language-reference/keywords/for.md) döngüsü içinde olan bir ifade vardır. Yönteminde, `foreach` ifade gövdesinin her yinelemesi, bir sonraki `yield return` ifadeye devam eden Yineleyici yöntemine bir çağrı oluşturur. `ListEvenNumbers`
 
 ```csharp
 private static void ListEvenNumbers()
@@ -598,10 +598,10 @@ private static IEnumerable<int> EvenSequence(
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nesne ve Koleksiyon Başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [Programlama Kavramları (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [Nesne ve Koleksiyon Başlatıcıları](../classes-and-structs/object-and-collection-initializers.md)
+- [Programlama kavramları (C#)](./index.md)
 - [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [LINQ to Objects'in (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (C#)](./linq/linq-to-objects.md)
 - [Paralel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [Koleksiyonlar ve Veri Yapıları](../../../standard/collections/index.md)
 - [Koleksiyon Sınıfı Seçme](../../../standard/collections/selecting-a-collection-class.md)

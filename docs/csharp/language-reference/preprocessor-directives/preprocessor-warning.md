@@ -1,5 +1,5 @@
 ---
-title: '#Uyarı - C# başvurusu'
+title: '#Uyarı- C# başvuru'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-ms.openlocfilehash: 55768a354b2841021607ed40b4ef87b9767edcad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d09cd95ef4d53e3f11d9feb9675ebba22d6f857
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61659962"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608518"
 ---
 # <a name="warning-c-reference"></a>#warning (C# Başvurusu)
-`#warning` oluşturmanıza olanak sağlar. bir [CS1030](../../misc/cs1030.md) kodunuzda belirli bir konumdan bir derleyici uyarısı düzeyi. Örneğin:  
+`#warning`kodunuzda belirli bir konumdan bir [CS1030](../../misc/cs1030.md) düzeyinde bir derleyici uyarısı oluşturmanıza olanak sağlar. Örneğin:  
   
 ```csharp
 #warning Deprecated code in this method.  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar
- Yaygın `#warning` bir koşullu yönergesiyse. Kullanıcı tanımlı bir hata ile oluşturmak mümkündür [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md).  
+ Öğesinin `#warning` yaygın kullanımı koşullu bir yönergedir. [#Error](./preprocessor-error.md)ile Kullanıcı tanımlı bir hata oluşturmak da mümkündür.  
   
 ## <a name="example"></a>Örnek  
 
@@ -43,6 +43,6 @@ class MainClass
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [C# Ön İşlemci Yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [C#Başvurunun](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Ön İşlemci Yönergeleri](./index.md)

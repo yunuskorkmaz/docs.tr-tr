@@ -1,5 +1,5 @@
 ---
-title: olayı - C# başvurusu
+title: olay C# başvurusu
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,48 +10,48 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 9575d6e998ff709b06f1da21abd17a3629c17029
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 4149663422908069b5b65ed3c32ccc6dbdfd7729
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251034"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605806"
 ---
 # <a name="event-c-reference"></a>event (C# Başvurusu)
-`event` Anahtar sözcüğü, bir yayımcı sınıf içinde bir olay bildirmek için kullanılır.  
+`event` Anahtar sözcüğü bir yayımcı sınıfında bir olay bildirmek için kullanılır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kullanan bir olay tetikleyebilir ve gösterilmektedir <xref:System.EventHandler> temel temsilci türüne olarak. Ayrıca genel kullanmayı gösteren tam kod örneği için <xref:System.EventHandler%601> temsilci türü ve bir olaya abone ve bir olay işleyicisi yöntemi oluşturmak için bkz [nasıl yapılır: .NET Framework yönergeleriyle uyumlu olayları yayımlama](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
+ Aşağıdaki örnek, temel alınan temsilci türü olarak kullanan <xref:System.EventHandler> bir olayın nasıl bildirilemeyeceğini ve tetiklemeyeceğini gösterir. Ayrıca, genel <xref:System.EventHandler%601> temsilci türünü kullanmayı ve bir olaya abone olmayı ve olay işleyicisi yöntemi oluşturmayı gösteren tüm kod örneği için bkz [. nasıl yapılır: .NET Framework yönergelerine](../../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)uygun olan olayları yayımlayın.  
   
  [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
   
- Yalnızca gelen sınıfın veya yapının içinde çağrılabilir çok noktaya yayın temsilci özel bir tür (yayımcı sınıfı) burada bildirildikleri olaylardır. Diğer sınıflar veya yapılar olaya abone, yayımcı sınıfı olay çektiğinde kendi olay işleyicisi yöntemleri çağrılmaz. Daha fazla bilgi ve kod örnekleri için bkz. [olayları](../../../csharp/programming-guide/events/index.md) ve [Temsilciler](../../../csharp/programming-guide/delegates/index.md).  
+ Olaylar, yalnızca bildirildiği sınıf veya yapı içinden çağrılabilir olan özel bir çok noktaya yayın temsilcisi türüdür (yayımcı sınıfı). Diğer sınıflar veya yapılar olaya abone olursa, yayımcı sınıfı olayı harekete geçirirse olay işleyicisi yöntemleri çağırılır. Daha fazla bilgi ve kod örnekleri için bkz. [Olaylar](../../programming-guide/events/index.md) ve [Temsilciler](../../programming-guide/delegates/index.md).  
   
- Olaylar olarak işaretlenebilir [genel](../../../csharp/language-reference/keywords/public.md), [özel](../../../csharp/language-reference/keywords/private.md), [korumalı](../../../csharp/language-reference/keywords/protected.md), [iç](../../../csharp/language-reference/keywords/internal.md), [iç korumalı](../../../csharp/language-reference/keywords/protected-internal.md) veya [korunan özel](../../../csharp/language-reference/keywords/private-protected.md). Bu erişim değiştiriciler olay sınıfının kullanıcıları nasıl erişebileceğiniz tanımlar. Daha fazla bilgi için [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Olaylar [ortak](./public.md), [özel](./private.md), [korunan](./protected.md), [dahili](./internal.md), [korunan iç](./protected-internal.md) veya [özel korumalı](./private-protected.md)olarak işaretlenebilir. Bu erişim değiştiricileri, sınıfın kullanıcılarının olaya nasıl erişekullanabileceğinizi tanımlar. Daha fazla bilgi için bkz. [erişim değiştiricileri](../../programming-guide/classes-and-structs/access-modifiers.md).  
   
-## <a name="keywords-and-events"></a>Anahtar sözcükleri ve olaylar  
- Aşağıdaki anahtar sözcükler, olaylar için geçerlidir.  
+## <a name="keywords-and-events"></a>Anahtar sözcükler ve olaylar  
+ Aşağıdaki anahtar sözcükler olaylar için geçerlidir.  
   
 |Anahtar sözcüğü|Açıklama|Daha fazla bilgi için|  
 |-------------|-----------------|--------------------------|  
-|[static](../../../csharp/language-reference/keywords/static.md)|Sınıfının bir örneğini bulunuyor olsa bile olay kullanılabilir için herhangi bir zamanda yapar.|[Statik Sınıflar ve Statik Sınıf Üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
-|[virtual](../../../csharp/language-reference/keywords/virtual.md)|Kullanarak olay davranışı geçersiz kılmak türetilmiş sınıfları sağlar [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) anahtar sözcüğü.|[Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)|  
-|[sealed](../../../csharp/language-reference/keywords/sealed.md)|Türetilen sınıflar için artık sanal olduğunu belirtir.||  
-|[abstract](../../../csharp/language-reference/keywords/abstract.md)|Derleyici değil oluşturacak `add` ve `remove` olay erişimcisi blokları ve bu nedenle türetilmiş sınıfların kendi uygulama sağlamalıdır.||  
+|[static](./static.md)|Sınıfın bir örneği mevcut olmasa bile, olayı her zaman çağıranlar için kullanılabilir hale getirir.|[Statik Sınıflar ve Statik Sınıf Üyeleri](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
+|[virtual](./virtual.md)|Türetilmiş sınıfların, [override](./override.md) anahtar sözcüğünü kullanarak olay davranışını geçersiz kılmasına izin verir.|[Devralma](../../programming-guide/classes-and-structs/inheritance.md)|  
+|[sealed](./sealed.md)|Türetilmiş sınıflar için artık sanal olmadığını belirtir.||  
+|[abstract](./abstract.md)|Derleyici `add` ve`remove` olay erişimcisi blokları oluşturmaz ve bu nedenle türetilen sınıfların kendi uygulamasını sağlaması gerekir.||  
   
- Bir olay kullanarak statik bir olay olarak bildirilebilir [statik](../../../csharp/language-reference/keywords/static.md) anahtar sözcüğü. Sınıfının bir örneğini bulunuyor olsa bile bu olay kullanılabilir için herhangi bir zamanda yapar. Daha fazla bilgi için [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ [Static](./static.md) anahtar sözcüğü kullanılarak bir olay statik olay olarak bildirilemez. Bu, sınıfın bir örneği mevcut olmasa bile herhangi bir zamanda olayı çağıranlar için kullanılabilir hale getirir. Daha fazla bilgi için bkz. [statik sınıflar ve statik sınıf üyeleri](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
- Bir olay kullanarak sanal bir olay olarak işaretlenebilir [sanal](../../../csharp/language-reference/keywords/virtual.md) anahtar sözcüğü. Bu kullanarak olay davranışı geçersiz kılmak türetilmiş sınıfları sağlar [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) anahtar sözcüğü. Daha fazla bilgi için [devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md). Sanal bir etkinlik geçersiz kılmayı bir olay da olabilir [korumalı](../../../csharp/language-reference/keywords/sealed.md), türetilmiş sınıflar için artık sanal olduğunu belirtir. Son olarak, bir olay bildirilebilir [soyut](../../../csharp/language-reference/keywords/abstract.md), derleyici değil oluşturacağı anlamına `add` ve `remove` olay erişimcisi engeller. Bu nedenle türetilmiş sınıf kendi uygulaması sağlamanız gerekir.  
+ Bir olay [sanal](./virtual.md) anahtar sözcüğü kullanılarak sanal bir olay olarak işaretlenebilir. Bu, türetilmiş sınıfların [override](./override.md) anahtar sözcüğünü kullanarak olay davranışını geçersiz kılmasını sağlar. Daha fazla bilgi için bkz. [Devralma](../../programming-guide/classes-and-structs/inheritance.md). Sanal bir olayı geçersiz kılan bir olay, türetilmiş sınıflar için artık sanal olmadığını belirten [mühürlü](./sealed.md)da olabilir. Son olarak, bir olay [soyut](./abstract.md)olarak bildirilmelidir, bu da derleyicinin `add` ve `remove` olay erişimcisi bloklarını üretmeyeceği anlamına gelir. Bu nedenle türetilen sınıfların kendi uygulamasını sağlaması gerekir.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
-- [add](../../../csharp/language-reference/keywords/add.md)
-- [remove](../../../csharp/language-reference/keywords/remove.md)
-- [Değiştiriciler](../../../csharp/language-reference/keywords/modifiers.md)
-- [Nasıl yapılır: Temsilcileri (çok noktaya yayın temsilcileri) birleştirme](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+- [C#Başvurunun](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Anahtar Sözcükleri](./index.md)
+- [add](./add.md)
+- [remove](./remove.md)
+- [Değiştiriciler](./modifiers.md)
+- [Nasıl yapılır: Temsilcileri birleştirme (çok noktaya yayın temsilcileri)](../../programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

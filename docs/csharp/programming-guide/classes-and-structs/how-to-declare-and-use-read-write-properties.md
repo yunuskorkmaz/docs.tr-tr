@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Okuma yazma özellikleri - bildirme ve kullanma C# Programlama Kılavuzu'
+title: 'Nasıl yapılır: Okuma yazma özelliklerini bildirme ve kullanma- C# Programlama Kılavuzu'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,54 +9,54 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: b4dc9364e64f7ebfd495671b852b98d8f56c80b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 010c3d4c1ae976091b5382f00a982400746f6436
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646468"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596935"
 ---
-# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Nasıl yapılır: Okuma yazma özellikleri bildirme ve kullanma (C# Programlama Kılavuzu)
-Özellikler, ortak veri üyeleri olmadan bir nesnenin verilere korumasız, denetlenmeyen ve doğrulanmamış erişimle gelen riskleri kolaylık sağlar. Bu aracılığıyla gerçekleştirilir *erişimcileri*: atayın ve temel alınan veri üyesinden değerleri almak özel yöntemler. [Ayarlamak](../../../csharp/language-reference/keywords/set.md) erişimci veri üyeleri atanmasına olanak sağlar ve [alma](../../../csharp/language-reference/keywords/get.md) erişimci veri üyesi değerler alır.  
+# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Nasıl yapılır: Okuma yazma özelliklerini bildirme ve kullanma (C# Programlama Kılavuzu)
+Özellikler, bir nesnenin verilerine korumasız, denetlenmeyen ve doğrulanmamış erişimle gelen riskler olmadan ortak veri üyelerinin rahatlığını sağlar. Bu, *erişimciler*aracılığıyla gerçekleştirilir: temel alınan veri üyesine değerler atayan ve alan özel yöntemler. [Set](../../language-reference/keywords/set.md) erişimcisi veri üyelerinin atanmasını sağlar ve [Get](../../language-reference/keywords/get.md) erişimcisi veri üyesi değerlerini alır.  
   
- Bu örnek, gösterir bir `Person` sınıfı iki özelliğe sahiptir: `Name` (dize) ve `Age` (int). Her iki özellik sağlayan `get` ve `set` kabul edilir şekilde erişimcileri okuma/yazma özellikleri.  
+ Bu örnek, iki `Person` özelliği olan bir sınıfı gösterir: `Name` (dize) ve `Age` (int). Her iki özellik `get` de `set` ve erişimcileri sağlar, bu nedenle okuma/yazma özellikleri olarak değerlendirilir.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideObjects#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#33)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Önceki örnekte, `Name` ve `Age` özellikleri [genel](../../../csharp/language-reference/keywords/public.md) ve her ikisi de dahil bir `get` ve `set` erişimcisi. Bu, herhangi bir nesne okuma ve yazma bu özellikleri sağlar. Bu bazen ancak erişimcileri biri hariç tutmak için önerilir. Atlama `set` erişimci salt okunur özelliği gibi yapar:  
+ Önceki örnekte `Name` `Age` , ve özellikleri [geneldir](../../language-reference/keywords/public.md) ve hem hem de `get` `set` erişimcisi içerir. Bu, herhangi bir nesnenin bu özellikleri okumasına ve yazmasına izin verir. Ancak erişimcilerinin birini dışlamak bazen tercih edilir. `set` Erişimci atlanırsa, örneğin, özelliği salt okunurdur:  
   
  [!code-csharp[csProgGuideObjects#87](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#87)]  
   
- Alternatif olarak, bir erişimci genel olarak kullanıma sunar ancak diğer özel veya korumalı hale getirin. Daha fazla bilgi için [asimetrik erişimci erişilebilirliği](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
+ Alternatif olarak, bir erişimciye genel kullanıma sunabilirsiniz, ancak diğerini özel veya korumalı hale getirebilirsiniz. Daha fazla bilgi için bkz. [asimetrik erişimci erişilebilirliği](./restricting-accessor-accessibility.md).  
   
- Bildirilen özellikler sonra sınıfın alanları değilmiş gibi bunlar kullanılabilir. Bu hem alma hem de aşağıdaki deyimleri olduğu gibi bir özelliğin değerini ayarlamak çok doğal bir sözdizimi sağlar:  
+ Özellikler doğrulandıktan sonra, sınıfının alanları gibi kullanılabilirler. Bu, aşağıdaki deyimlerde olduğu gibi bir özelliğin değerini alırken ve ayarlarken çok doğal bir sözdizimi sağlar:  
   
  [!code-csharp[csProgGuideObjects#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#35)]  
   
- Bir özelliğin unutmayın `set` yöntemi özel bir `value` değişkeni kullanılabilir. Bu değişken, kullanıcının belirttiğiniz, örneğin değeri içerir:  
+ Bir özellik `set` yönteminde özel `value` bir değişken bulunduğunu unutmayın. Bu değişken, kullanıcının belirttiği değeri içerir, örneğin:  
   
  [!code-csharp[csProgGuideObjects#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#36)]  
   
- Artan temiz söz dizimi fark `Age` özelliği bir `Person` nesnesi:  
+ `Age` Bir`Person` nesne üzerindeki özelliği arttırmadan ilgili Temizleme sözdizimine dikkat edin:  
   
  [!code-csharp[csProgGuideObjects#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#37)]  
   
- Ayrı varsa `set` ve `get` yöntemler, Özellikler modellemek için kullanılmış, eşdeğer kod şu şekilde görünebilir:  
+ Özellikleri modellemek `set` için `get` ayrı ve Yöntemler kullanılmışsa, eşdeğer kod şöyle görünebilir:  
   
 ```csharp  
 person.SetAge(person.GetAge() + 1);   
 ```  
   
- `ToString` Bu örnekte yöntemi geçersiz kılmışsa:  
+ `ToString` Yöntemi bu örnekte geçersiz kılınır:  
   
  [!code-csharp[csProgGuideObjects#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#38)]  
   
- Dikkat `ToString` programda açıkça kullanılmaz. Varsayılan olarak tarafından çağrılan `WriteLine` çağırır.  
+ `ToString` Programda açıkça kullanılmadığına dikkat edin. `WriteLine` Çağrılar tarafından varsayılan olarak çağrılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [C# Programlama Kılavuzu](../index.md)
+- [Özellikler](./properties.md)
+- [Sınıflar ve Yapılar](./index.md)
