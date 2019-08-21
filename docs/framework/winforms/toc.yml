@@ -35,8 +35,6 @@
           items:
             - name: 'Nasıl yapılır: Bir Windows Forms Uygulamasında Yazı Tipi Şeması Değişikliklerine Yanıt Verme'
               href: how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md
-            - name: Visual Studio'da DPI Tanımayı Devre Dışı Bırakma
-              href: disable-dpi-awareness-visual-studio.md
         - name: Windows Forms'ta Yüksek DPI Desteği
           href: high-dpi-support-in-windows-forms.md
     - name: Windows Formlarının Görünüşünü Değiştirme
