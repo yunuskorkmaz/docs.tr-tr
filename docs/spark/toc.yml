@@ -15,6 +15,10 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Databricks’e dağıtma
       href: tutorials/databricks-deployment.md
+- name: Nasıl yapılır kılavuzları
+  items:
+    - name: Uygulamanızda hata ayıklama
+      href: how-to-guides/debug.md
 - name: Başvuru
   items:
     - name: API Başvurusu
