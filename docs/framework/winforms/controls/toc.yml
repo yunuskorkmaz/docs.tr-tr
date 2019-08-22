@@ -47,22 +47,17 @@
           href: how-to-add-activex-controls-to-windows-forms.md
         - name: Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular
           href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
-    - name: Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma
-      href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
+    - name: Etiket denetimleri ve kısayollar sağlama
       items:
-        - name: 'Nasıl yapılır: Windows Forms Denetimleri için Erişim Tuşları Oluşturma'
+        - name: Genel Bakış
+          href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
+        - name: Denetimler için erişim anahtarları oluşturma
           href: how-to-create-access-keys-for-windows-forms-controls.md
-        - name: 'Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimleri için Erişim Tuşları Oluşturma'
-          href: how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md
-        - name: 'Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Metni Ayarlama'
+        - name: Denetim tarafından görüntülenen metni ayarlama
           href: how-to-set-the-text-displayed-by-a-windows-forms-control.md
-        - name: 'Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimi Tarafından Görüntülenen Metni Ayarlama'
-          href: how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md
-        - name: 'Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Resmi Ayarlama'
+        - name: Denetim tarafından görüntülenen görüntüyü ayarlama
           href: how-to-set-the-image-displayed-by-a-windows-forms-control.md
-        - name: 'Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimi Tarafından Görüntülenen Resmi Ayarlama'
-          href: how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md
-        - name: Bir Windows Formundaki Denetimler için Erişilebilirlik Bilgileri Sağlama
+        - name: Denetimler için erişilebilirlik bilgileri sağlama
           href: providing-accessibility-information-for-controls-on-a-windows-form.md
     - name: Windows Forms'ta Kullanılacak Denetimler
       href: controls-to-use-on-windows-forms.md
