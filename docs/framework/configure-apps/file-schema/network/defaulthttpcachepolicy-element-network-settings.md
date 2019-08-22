@@ -8,22 +8,22 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 20d9b92ca2bbffd6b98b8641e5cef5e567cb84cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1dd31884a072d16ed004c0b49be61e8cee399787
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705135"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664145"
 ---
-# <a name="defaulthttpcachepolicy-element-network-settings"></a><span data-ttu-id="bc892-102">\<defaultHttpCachePolicy > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="bc892-102">\<defaultHttpCachePolicy> Element (Network Settings)</span></span>
-<span data-ttu-id="bc892-103">HTTP önbelleğe alma etkindir ve önbelleğe alma ilkesi varsayılan tanımlar olup olmadığını açıklar.</span><span class="sxs-lookup"><span data-stu-id="bc892-103">Describes whether HTTP caching is active and describes the default caching policy.</span></span>  
+# <a name="defaulthttpcachepolicy-element-network-settings"></a><span data-ttu-id="4e2e3-102">\<defaultHttpCachePolicy > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="4e2e3-102">\<defaultHttpCachePolicy> Element (Network Settings)</span></span>
+<span data-ttu-id="4e2e3-103">HTTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe alma ilkesini açıklar.</span><span class="sxs-lookup"><span data-stu-id="4e2e3-103">Describes whether HTTP caching is active and describes the default caching policy.</span></span>  
   
- <span data-ttu-id="bc892-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="bc892-104">\<configuration></span></span>  
-<span data-ttu-id="bc892-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="bc892-105">\<system.net></span></span>  
-<span data-ttu-id="bc892-106">\<requestCaching ></span><span class="sxs-lookup"><span data-stu-id="bc892-106">\<requestCaching></span></span>  
-<span data-ttu-id="bc892-107">\<defaultHttpCachePolicy ></span><span class="sxs-lookup"><span data-stu-id="bc892-107">\<defaultHttpCachePolicy></span></span>  
+ <span data-ttu-id="4e2e3-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="4e2e3-104">\<configuration></span></span>  
+<span data-ttu-id="4e2e3-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="4e2e3-105">\<system.net></span></span>  
+<span data-ttu-id="4e2e3-106">\<requestCaching ></span><span class="sxs-lookup"><span data-stu-id="4e2e3-106">\<requestCaching></span></span>  
+<span data-ttu-id="4e2e3-107">\<defaultHttpCachePolicy ></span><span class="sxs-lookup"><span data-stu-id="4e2e3-107">\<defaultHttpCachePolicy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bc892-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bc892-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4e2e3-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4e2e3-108">Syntax</span></span>  
   
 ```xml  
 <defaultHttpCachePolicy  
@@ -34,37 +34,37 @@ ms.locfileid: "61705135"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="bc892-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="bc892-109">Attributes and Elements</span></span>  
- <span data-ttu-id="bc892-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="bc892-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4e2e3-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="4e2e3-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="4e2e3-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="4e2e3-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="bc892-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="bc892-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="4e2e3-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="4e2e3-111">Attributes</span></span>  
   
-|<span data-ttu-id="bc892-112">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="bc892-112">Attribute</span></span>|<span data-ttu-id="bc892-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="bc892-113">Description</span></span>|  
+|<span data-ttu-id="4e2e3-112">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="4e2e3-112">Attribute</span></span>|<span data-ttu-id="4e2e3-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4e2e3-113">Description</span></span>|  
 |---------------|-----------------|  
-|`maximumAge`|<span data-ttu-id="bc892-114">Önbelleğe alınmış nesnenin süresi dolmuş olarak işaretlenmeden önce maksimum zaman aralığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="bc892-114">Specifies the maximum time interval before a cached object is marked as expired.</span></span>|  
-|`maximumStale`|<span data-ttu-id="bc892-115">Önbelleğe alınmış nesnenin süresi dolmuş olarak işaretlenmeden önce hesaplanan güncellik süresini geçen en uzun süreyi belirtir.</span><span class="sxs-lookup"><span data-stu-id="bc892-115">Specifies the maximum time past the computed freshness time before a cached object is marked as expired.</span></span>|  
-|`minimumFresh`|<span data-ttu-id="bc892-116">Yeni olarak değerlendirilmesi önbelleğe alınmış bir nesne için minimum süre belirtir.</span><span class="sxs-lookup"><span data-stu-id="bc892-116">Specifies the minimum time for a cached object to be considered fresh.</span></span>|  
-|`policyLevel`|<span data-ttu-id="bc892-117">Önbellek ilkesi otomatik olup veya önbellek olup atlanır belirtir.</span><span class="sxs-lookup"><span data-stu-id="bc892-117">Specifies whether the caching policy is automatic, or whether the cache is bypassed.</span></span> <span data-ttu-id="bc892-118">Varsayılan değer `BypassCache` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="bc892-118">The default value is `BypassCache`.</span></span>|  
+|`maximumAge`|<span data-ttu-id="4e2e3-114">Önbelleğe alınan bir nesnenin süresi dolmadan önce geçen maksimum zaman aralığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="4e2e3-114">Specifies the maximum time interval before a cached object is marked as expired.</span></span>|  
+|`maximumStale`|<span data-ttu-id="4e2e3-115">Önbelleğe alınmış bir nesne, süresi dolmadan önce, hesaplanan yeniliği geçen en uzun süreyi belirtir.</span><span class="sxs-lookup"><span data-stu-id="4e2e3-115">Specifies the maximum time past the computed freshness time before a cached object is marked as expired.</span></span>|  
+|`minimumFresh`|<span data-ttu-id="4e2e3-116">Önbelleğe alınmış bir nesnenin yeni olarak kabul edileceği en kısa süreyi belirtir.</span><span class="sxs-lookup"><span data-stu-id="4e2e3-116">Specifies the minimum time for a cached object to be considered fresh.</span></span>|  
+|`policyLevel`|<span data-ttu-id="4e2e3-117">Önbelleğe alma ilkesinin otomatik olup olmadığını veya önbelleğin atlanıp atlanmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="4e2e3-117">Specifies whether the caching policy is automatic, or whether the cache is bypassed.</span></span> <span data-ttu-id="4e2e3-118">Varsayılan değer `BypassCache` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="4e2e3-118">The default value is `BypassCache`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="bc892-119">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="bc892-119">Child Elements</span></span>  
- <span data-ttu-id="bc892-120">Yok.</span><span class="sxs-lookup"><span data-stu-id="bc892-120">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="4e2e3-119">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="4e2e3-119">Child Elements</span></span>  
+ <span data-ttu-id="4e2e3-120">Yok.</span><span class="sxs-lookup"><span data-stu-id="4e2e3-120">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="bc892-121">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="bc892-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="4e2e3-121">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="4e2e3-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="bc892-122">Öğe</span><span class="sxs-lookup"><span data-stu-id="bc892-122">Element</span></span>|<span data-ttu-id="bc892-123">Açıklama</span><span class="sxs-lookup"><span data-stu-id="bc892-123">Description</span></span>|  
+|<span data-ttu-id="4e2e3-122">Öğe</span><span class="sxs-lookup"><span data-stu-id="4e2e3-122">Element</span></span>|<span data-ttu-id="4e2e3-123">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4e2e3-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="bc892-124">requestCaching</span><span class="sxs-lookup"><span data-stu-id="bc892-124">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="bc892-125">Ağ istekleri için önbelleğe alma mekanizması denetler.</span><span class="sxs-lookup"><span data-stu-id="bc892-125">Controls the caching mechanism for network requests.</span></span>|  
+|[<span data-ttu-id="4e2e3-124">requestCaching</span><span class="sxs-lookup"><span data-stu-id="4e2e3-124">requestCaching</span></span>](requestcaching-element-network-settings.md)|<span data-ttu-id="4e2e3-125">Ağ istekleri için önbelleğe alma mekanizmasını denetler.</span><span class="sxs-lookup"><span data-stu-id="4e2e3-125">Controls the caching mechanism for network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bc892-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bc892-126">Remarks</span></span>  
- <span data-ttu-id="bc892-127">Değeri `policyLevel` özniteliği, ya da `BypassCache` veya `Default`.</span><span class="sxs-lookup"><span data-stu-id="bc892-127">The value for the `policyLevel` attribute is either `BypassCache` or `Default`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4e2e3-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4e2e3-126">Remarks</span></span>  
+ <span data-ttu-id="4e2e3-127">`policyLevel` Özniteliği için olan değer ya `Default`da `BypassCache` olur.</span><span class="sxs-lookup"><span data-stu-id="4e2e3-127">The value for the `policyLevel` attribute is either `BypassCache` or `Default`.</span></span>  
   
- <span data-ttu-id="bc892-128">Değerleri `maximumAge`, `maximumStale`, ve `minimumFresh` öğeleri olan bir ya da açık bir zaman aralığı bir biçimi ile *d*. *hh*:*mm*:*ss* (gün, saat, dakika ve saniye) veya sabitler `minValue` veya `maxValue`uygun şekilde.</span><span class="sxs-lookup"><span data-stu-id="bc892-128">Values for the `maximumAge`, `maximumStale`, and `minimumFresh` elements are either an explicit time interval with a format of *d*.*hh*:*mm*:*ss* (days, hours, minutes, and seconds), or the constants `minValue` or `maxValue`, as appropriate.</span></span>  
+ <span data-ttu-id="4e2e3-128">,, Ve öğelerinindeğerleri`minimumFresh` d biçimindeki açık bir zaman aralığıdır. `maximumAge` `maximumStale` *SS*:*dd*:*SS* (gün, saat, dakika, saniye) veya sabitler `minValue` ya `maxValue`da uygun şekilde.</span><span class="sxs-lookup"><span data-stu-id="4e2e3-128">Values for the `maximumAge`, `maximumStale`, and `minimumFresh` elements are either an explicit time interval with a format of *d*.*hh*:*mm*:*ss* (days, hours, minutes, and seconds), or the constants `minValue` or `maxValue`, as appropriate.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="bc892-129">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="bc892-129">Configuration Files</span></span>  
- <span data-ttu-id="bc892-130">Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="bc892-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="4e2e3-129">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="4e2e3-129">Configuration Files</span></span>  
+ <span data-ttu-id="4e2e3-130">Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="4e2e3-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bc892-131">Örnek</span><span class="sxs-lookup"><span data-stu-id="bc892-131">Example</span></span>  
- <span data-ttu-id="bc892-132">Aşağıdaki örnek, en düşük yeni birer birer en uzun geçerlilik süresi iki gün ve dört saatlik süre üst sınırını eski altı saat belirtin gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="bc892-132">The following example shows how to specify a minimum fresh time of six hours, a maximum age time of two days, and a maximum stale time of four hours.</span></span>  
+## <a name="example"></a><span data-ttu-id="4e2e3-131">Örnek</span><span class="sxs-lookup"><span data-stu-id="4e2e3-131">Example</span></span>  
+ <span data-ttu-id="4e2e3-132">Aşağıdaki örnek, en az altı saat, iki güne ait maksimum yaş süresi ve dört saatlik en fazla eski süreyi belirtmek için nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="4e2e3-132">The following example shows how to specify a minimum fresh time of six hours, a maximum age time of two days, and a maximum stale time of four hours.</span></span>  
   
 ```xml  
 <configuration>  
@@ -80,9 +80,9 @@ ms.locfileid: "61705135"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bc892-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bc892-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4e2e3-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4e2e3-133">See also</span></span>
 
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>
-- [<span data-ttu-id="bc892-134">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="bc892-134">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="4e2e3-134">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="4e2e3-134">Network Settings Schema</span></span>](index.md)

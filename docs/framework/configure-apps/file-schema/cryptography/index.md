@@ -10,46 +10,46 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-ms.openlocfilehash: 00b04cc2175f4bb4cc0b74602cd3c26f4a4e342f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2aa56f8b2a92f906293adfae9d23ed8959336fb
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705213"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664290"
 ---
-# <a name="cryptography-settings-schema"></a><span data-ttu-id="fd236-102">Şifreleme Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="fd236-102">Cryptography Settings Schema</span></span>
-<span data-ttu-id="fd236-103">Şifreleme Ayarları Şeması kolay algoritma adlarını şifreleme algoritmalarını uygulayan sınıflar için eşleme belirten öğeleri içerir.</span><span class="sxs-lookup"><span data-stu-id="fd236-103">The cryptography settings schema contains elements that specify how to map friendly algorithm names to classes that implement cryptography algorithms.</span></span>  
+# <a name="cryptography-settings-schema"></a><span data-ttu-id="cbaa0-102">Şifreleme Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="cbaa0-102">Cryptography Settings Schema</span></span>
+<span data-ttu-id="cbaa0-103">Şifreleme ayarları şeması, kolay algoritma adlarının şifreleme algoritmaları uygulayan sınıflara nasıl eşlendiğini belirten öğeleri içerir.</span><span class="sxs-lookup"><span data-stu-id="cbaa0-103">The cryptography settings schema contains elements that specify how to map friendly algorithm names to classes that implement cryptography algorithms.</span></span>  
   
- [<span data-ttu-id="fd236-104">**\<Yapılandırma >**</span><span class="sxs-lookup"><span data-stu-id="fd236-104">**\<configuration>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [<span data-ttu-id="cbaa0-104"> **\<Yapılandırma >** </span><span class="sxs-lookup"><span data-stu-id="cbaa0-104">**\<configuration>**</span></span>](../configuration-element.md)  
   
- [<span data-ttu-id="fd236-105">**\<mscorlib>**</span><span class="sxs-lookup"><span data-stu-id="fd236-105">**\<mscorlib>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/mscorlib-element-for-cryptography-settings.md)  
+ [<span data-ttu-id="cbaa0-105"> **\<mscorlib >** </span><span class="sxs-lookup"><span data-stu-id="cbaa0-105">**\<mscorlib>**</span></span>](mscorlib-element-for-cryptography-settings.md)  
   
- [<span data-ttu-id="fd236-106">**\<cryptographySettings >**</span><span class="sxs-lookup"><span data-stu-id="fd236-106">**\<cryptographySettings>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)  
+ [<span data-ttu-id="cbaa0-106"> **\<Cryptographyısettings >** </span><span class="sxs-lookup"><span data-stu-id="cbaa0-106">**\<cryptographySettings>**</span></span>](cryptographysettings-element.md)  
   
- [<span data-ttu-id="fd236-107">**\<cryptoNameMapping >**</span><span class="sxs-lookup"><span data-stu-id="fd236-107">**\<cryptoNameMapping>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)  
+ [<span data-ttu-id="cbaa0-107"> **\<cryptoNameMapping >** </span><span class="sxs-lookup"><span data-stu-id="cbaa0-107">**\<cryptoNameMapping>**</span></span>](cryptonamemapping-element.md)  
   
- [<span data-ttu-id="fd236-108">**\<cryptoClasses >**</span><span class="sxs-lookup"><span data-stu-id="fd236-108">**\<cryptoClasses>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclasses-element.md)  
+ [<span data-ttu-id="cbaa0-108"> **\<cryptoClasses >** </span><span class="sxs-lookup"><span data-stu-id="cbaa0-108">**\<cryptoClasses>**</span></span>](cryptoclasses-element.md)  
   
- [<span data-ttu-id="fd236-109">**\<cryptoClass >**</span><span class="sxs-lookup"><span data-stu-id="fd236-109">**\<cryptoClass>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)  
+ [<span data-ttu-id="cbaa0-109"> **\<cryptoClass >** </span><span class="sxs-lookup"><span data-stu-id="cbaa0-109">**\<cryptoClass>**</span></span>](cryptoclass-element.md)  
   
- [<span data-ttu-id="fd236-110">**\<nameEntry >**</span><span class="sxs-lookup"><span data-stu-id="fd236-110">**\<nameEntry>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)  
+ [<span data-ttu-id="cbaa0-110"> **\<nameEntry >** </span><span class="sxs-lookup"><span data-stu-id="cbaa0-110">**\<nameEntry>**</span></span>](nameentry-element.md)  
   
- [<span data-ttu-id="fd236-111">**\<oidMap>**</span><span class="sxs-lookup"><span data-stu-id="fd236-111">**\<oidMap>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)  
+ [<span data-ttu-id="cbaa0-111"> **\<Oıdmap >** </span><span class="sxs-lookup"><span data-stu-id="cbaa0-111">**\<oidMap>**</span></span>](oidmap-element.md)  
   
- [<span data-ttu-id="fd236-112">**\<oidEntry >**</span><span class="sxs-lookup"><span data-stu-id="fd236-112">**\<oidEntry>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)  
+ [<span data-ttu-id="cbaa0-112"> **\<Oıdentry >** </span><span class="sxs-lookup"><span data-stu-id="cbaa0-112">**\<oidEntry>**</span></span>](oidentry-element.md)  
   
-|<span data-ttu-id="fd236-113">Öğe</span><span class="sxs-lookup"><span data-stu-id="fd236-113">Element</span></span>|<span data-ttu-id="fd236-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="fd236-114">Description</span></span>|  
+|<span data-ttu-id="cbaa0-113">Öğe</span><span class="sxs-lookup"><span data-stu-id="cbaa0-113">Element</span></span>|<span data-ttu-id="cbaa0-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cbaa0-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fd236-115">**\<cryptoClasses**></span><span class="sxs-lookup"><span data-stu-id="fd236-115">**\<cryptoClasses**></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclasses-element.md)|<span data-ttu-id="fd236-116">Bir eşleme için bir kolay ad şifreleme sınıflarını listesini içeren  **\<nameEntry >** öğesi.</span><span class="sxs-lookup"><span data-stu-id="fd236-116">Contains a list of cryptography classes that have a mapping to a friendly name in the **\<nameEntry>** element.</span></span>|  
-|[<span data-ttu-id="fd236-117">**\<cryptoClass**></span><span class="sxs-lookup"><span data-stu-id="fd236-117">**\<cryptoClass**></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|<span data-ttu-id="fd236-118">İçin bir kolay ad eşlemesi var. bir şifreleme sınıfına içeren  **\<nameEntry >** öğesi.</span><span class="sxs-lookup"><span data-stu-id="fd236-118">Contains a cryptography class that has a mapping to a friendly name in the **\<nameEntry>** element.</span></span>|  
-|[<span data-ttu-id="fd236-119">**\<cryptographySettings**></span><span class="sxs-lookup"><span data-stu-id="fd236-119">**\<cryptographySettings**></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)|<span data-ttu-id="fd236-120">Şifreleme ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="fd236-120">Contains cryptography settings.</span></span>|  
-|[<span data-ttu-id="fd236-121">**\<cryptoNameMapping**></span><span class="sxs-lookup"><span data-stu-id="fd236-121">**\<cryptoNameMapping**></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|<span data-ttu-id="fd236-122">Sınıf için kolay adlar eşlemeleri içerir.</span><span class="sxs-lookup"><span data-stu-id="fd236-122">Contains mappings of classes to friendly names.</span></span>|  
-|[<span data-ttu-id="fd236-123">**\<mscorlib >** öğesi için şifreleme ayarları</span><span class="sxs-lookup"><span data-stu-id="fd236-123">**\<mscorlib>** element for cryptography settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/mscorlib-element-for-cryptography-settings.md)|<span data-ttu-id="fd236-124">İçeren  **\<cryptographySettings >** öğesi.</span><span class="sxs-lookup"><span data-stu-id="fd236-124">Contains the **\<cryptographySettings>** element.</span></span>|  
-|[<span data-ttu-id="fd236-125">**\<nameEntry >**</span><span class="sxs-lookup"><span data-stu-id="fd236-125">**\<nameEntry>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)|<span data-ttu-id="fd236-126">Çok sayıda kolay adlara sahip bir sınıf sağlar ve kolay algoritma adı için bir sınıf adı eşler.</span><span class="sxs-lookup"><span data-stu-id="fd236-126">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>|  
-|[<span data-ttu-id="fd236-127">**\<oidEntry >**</span><span class="sxs-lookup"><span data-stu-id="fd236-127">**\<oidEntry>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|<span data-ttu-id="fd236-128">ASN.1 nesne tanımlayıcısı (OID) için bir kolay ad eşler.</span><span class="sxs-lookup"><span data-stu-id="fd236-128">Maps an ASN.1 object identifier (OID) to a friendly name.</span></span>|  
-|[<span data-ttu-id="fd236-129">**\<oidMap>**</span><span class="sxs-lookup"><span data-stu-id="fd236-129">**\<oidMap>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|<span data-ttu-id="fd236-130">ASN.1 OID eşlemeleri için sınıflar içerir.</span><span class="sxs-lookup"><span data-stu-id="fd236-130">Contains ASN.1 OID mappings to classes.</span></span>|  
+|[<span data-ttu-id="cbaa0-115"> **\<cryptoClasses**></span><span class="sxs-lookup"><span data-stu-id="cbaa0-115">**\<cryptoClasses**></span></span>](cryptoclasses-element.md)|<span data-ttu-id="cbaa0-116">NameEntry > öğesinde kolay bir ada  **\<** eşleme olan şifreleme sınıflarının bir listesini içerir.</span><span class="sxs-lookup"><span data-stu-id="cbaa0-116">Contains a list of cryptography classes that have a mapping to a friendly name in the **\<nameEntry>** element.</span></span>|  
+|[<span data-ttu-id="cbaa0-117"> **\<cryptoClass**></span><span class="sxs-lookup"><span data-stu-id="cbaa0-117">**\<cryptoClass**></span></span>](cryptoclass-element.md)|<span data-ttu-id="cbaa0-118">NameEntry > öğesinde kolay bir ad  **\<** ile eşleşen bir şifreleme sınıfı içerir.</span><span class="sxs-lookup"><span data-stu-id="cbaa0-118">Contains a cryptography class that has a mapping to a friendly name in the **\<nameEntry>** element.</span></span>|  
+|[<span data-ttu-id="cbaa0-119"> **\<Cryptographrivsettings**></span><span class="sxs-lookup"><span data-stu-id="cbaa0-119">**\<cryptographySettings**></span></span>](cryptographysettings-element.md)|<span data-ttu-id="cbaa0-120">Şifreleme ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="cbaa0-120">Contains cryptography settings.</span></span>|  
+|[<span data-ttu-id="cbaa0-121"> **\<cryptoNameMapping**></span><span class="sxs-lookup"><span data-stu-id="cbaa0-121">**\<cryptoNameMapping**></span></span>](cryptonamemapping-element.md)|<span data-ttu-id="cbaa0-122">Kolay adlarla sınıfların eşlemelerini içerir.</span><span class="sxs-lookup"><span data-stu-id="cbaa0-122">Contains mappings of classes to friendly names.</span></span>|  
+|[<span data-ttu-id="cbaa0-123">şifreleme ayarları için mscorlib > öğesi  **\<** </span><span class="sxs-lookup"><span data-stu-id="cbaa0-123">**\<mscorlib>** element for cryptography settings</span></span>](mscorlib-element-for-cryptography-settings.md)|<span data-ttu-id="cbaa0-124">Cryptographrivsettings > öğesini içerir.  **\<**</span><span class="sxs-lookup"><span data-stu-id="cbaa0-124">Contains the **\<cryptographySettings>** element.</span></span>|  
+|[<span data-ttu-id="cbaa0-125"> **\<nameEntry >** </span><span class="sxs-lookup"><span data-stu-id="cbaa0-125">**\<nameEntry>**</span></span>](nameentry-element.md)|<span data-ttu-id="cbaa0-126">Bir sınıf adını kolay bir algoritma adıyla eşleştirir, bu da bir sınıfın birçok kolay adına sahip olmasına olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="cbaa0-126">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>|  
+|[<span data-ttu-id="cbaa0-127"> **\<Oıdentry >** </span><span class="sxs-lookup"><span data-stu-id="cbaa0-127">**\<oidEntry>**</span></span>](oidentry-element.md)|<span data-ttu-id="cbaa0-128">Bir ASN. 1 nesne tanımlayıcısını (OID) kolay bir ada eşler.</span><span class="sxs-lookup"><span data-stu-id="cbaa0-128">Maps an ASN.1 object identifier (OID) to a friendly name.</span></span>|  
+|[<span data-ttu-id="cbaa0-129"> **\<Oıdmap >** </span><span class="sxs-lookup"><span data-stu-id="cbaa0-129">**\<oidMap>**</span></span>](oidmap-element.md)|<span data-ttu-id="cbaa0-130">Sınıflara ASN. 1 OID eşlemelerini içerir.</span><span class="sxs-lookup"><span data-stu-id="cbaa0-130">Contains ASN.1 OID mappings to classes.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="fd236-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fd236-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cbaa0-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cbaa0-131">See also</span></span>
 
-- [<span data-ttu-id="fd236-132">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="fd236-132">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="fd236-133">Şifreleme Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="fd236-133">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="cbaa0-132">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="cbaa0-132">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="cbaa0-133">Şifreleme Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="cbaa0-133">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)

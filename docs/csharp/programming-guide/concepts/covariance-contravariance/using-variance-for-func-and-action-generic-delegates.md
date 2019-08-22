@@ -2,20 +2,20 @@
 title: Func ve eylem genel temsilcileri için varyans kullanma (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: 2e2c5c80c54ff6788653f63a5bda85598e73824c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bbfc41fb8ab3e7d800f1eb03098e02056e694872
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595244"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659916"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-c"></a><span data-ttu-id="6a3f4-102">Func ve eylem genel temsilcileri için varyans kullanma (C#)</span><span class="sxs-lookup"><span data-stu-id="6a3f4-102">Using Variance for Func and Action Generic Delegates (C#)</span></span>
-<span data-ttu-id="6a3f4-103">Bu örnekler, `Func` ve ' de yöntemlerin yeniden kullanımını etkinleştirmek ve kodunuzda daha `Action` fazla esneklik sağlamak için ve genel temsilcilerde kovaryans ve değişken varyans kullanımını gösterir.</span><span class="sxs-lookup"><span data-stu-id="6a3f4-103">These examples demonstrate how to use covariance and contravariance in the `Func` and `Action` generic delegates to enable reuse of methods and provide more flexibility in your code.</span></span>  
+# <a name="using-variance-for-func-and-action-generic-delegates-c"></a><span data-ttu-id="0901a-102">Func ve eylem genel temsilcileri için varyans kullanma (C#)</span><span class="sxs-lookup"><span data-stu-id="0901a-102">Using Variance for Func and Action Generic Delegates (C#)</span></span>
+<span data-ttu-id="0901a-103">Bu örnekler, `Func` ve ' de yöntemlerin yeniden kullanımını etkinleştirmek ve kodunuzda daha `Action` fazla esneklik sağlamak için ve genel temsilcilerde kovaryans ve değişken varyans kullanımını gösterir.</span><span class="sxs-lookup"><span data-stu-id="0901a-103">These examples demonstrate how to use covariance and contravariance in the `Func` and `Action` generic delegates to enable reuse of methods and provide more flexibility in your code.</span></span>  
   
- <span data-ttu-id="6a3f4-104">Kovaryans ve değişken varyans hakkında daha fazla bilgi için bkz. [temsilcilerin varyansı (C#)](./variance-in-delegates.md).</span><span class="sxs-lookup"><span data-stu-id="6a3f4-104">For more information about covariance and contravariance, see [Variance in Delegates (C#)](./variance-in-delegates.md).</span></span>  
+ <span data-ttu-id="0901a-104">Kovaryans ve değişken varyans hakkında daha fazla bilgi için bkz. [temsilcilerin varyansı (C#)](./variance-in-delegates.md).</span><span class="sxs-lookup"><span data-stu-id="0901a-104">For more information about covariance and contravariance, see [Variance in Delegates (C#)](./variance-in-delegates.md).</span></span>  
   
-## <a name="using-delegates-with-covariant-type-parameters"></a><span data-ttu-id="6a3f4-105">Birlikte değişken tür parametrelerine sahip temsilciler kullanma</span><span class="sxs-lookup"><span data-stu-id="6a3f4-105">Using Delegates with Covariant Type Parameters</span></span>  
- <span data-ttu-id="6a3f4-106">Aşağıdaki örnekte, genel `Func` temsilcilerde kovaryans desteğinin avantajları gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="6a3f4-106">The following example illustrates the benefits of covariance support in the generic `Func` delegates.</span></span> <span data-ttu-id="6a3f4-107">Yöntemi, `String` türünün bir parametresini alır ve `Employee` türünün bir nesnesini döndürür. `FindByTitle`</span><span class="sxs-lookup"><span data-stu-id="6a3f4-107">The `FindByTitle` method takes a parameter of the `String` type and returns an object of the `Employee` type.</span></span> <span data-ttu-id="6a3f4-108">Ancak, devraldığından `Func<String, Person>` `Employee` `Person`bu yöntemi temsilciye atayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6a3f4-108">However, you can assign this method to the `Func<String, Person>` delegate because `Employee` inherits `Person`.</span></span>  
+## <a name="using-delegates-with-covariant-type-parameters"></a><span data-ttu-id="0901a-105">Birlikte değişken tür parametrelerine sahip temsilciler kullanma</span><span class="sxs-lookup"><span data-stu-id="0901a-105">Using Delegates with Covariant Type Parameters</span></span>  
+ <span data-ttu-id="0901a-106">Aşağıdaki örnekte, genel `Func` temsilcilerde kovaryans desteğinin avantajları gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="0901a-106">The following example illustrates the benefits of covariance support in the generic `Func` delegates.</span></span> <span data-ttu-id="0901a-107">Yöntemi, `String` türünün bir parametresini alır ve `Employee` türünün bir nesnesini döndürür. `FindByTitle`</span><span class="sxs-lookup"><span data-stu-id="0901a-107">The `FindByTitle` method takes a parameter of the `String` type and returns an object of the `Employee` type.</span></span> <span data-ttu-id="0901a-108">Ancak, devraldığından `Func<String, Person>` `Employee` `Person`bu yöntemi temsilciye atayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0901a-108">However, you can assign this method to the `Func<String, Person>` delegate because `Employee` inherits `Person`.</span></span>  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -48,8 +48,8 @@ class Program
 }  
 ```  
   
-## <a name="using-delegates-with-contravariant-type-parameters"></a><span data-ttu-id="6a3f4-109">Değişken karşıtı tür parametreleriyle temsilciler kullanma</span><span class="sxs-lookup"><span data-stu-id="6a3f4-109">Using Delegates with Contravariant Type Parameters</span></span>  
- <span data-ttu-id="6a3f4-110">Aşağıdaki örnekte, genel `Action` Temsilcilerde değişken varyans desteğinin avantajları gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="6a3f4-110">The following example illustrates the benefits of contravariance support in the generic `Action` delegates.</span></span> <span data-ttu-id="6a3f4-111">Yöntemi, `Person` türünün bir parametresini alır. `AddToContacts`</span><span class="sxs-lookup"><span data-stu-id="6a3f4-111">The `AddToContacts` method takes a parameter of the `Person` type.</span></span> <span data-ttu-id="6a3f4-112">Ancak, devraldığından `Action<Employee>` `Employee` `Person`bu yöntemi temsilciye atayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6a3f4-112">However, you can assign this method to the `Action<Employee>` delegate because `Employee` inherits `Person`.</span></span>  
+## <a name="using-delegates-with-contravariant-type-parameters"></a><span data-ttu-id="0901a-109">Değişken karşıtı tür parametreleriyle temsilciler kullanma</span><span class="sxs-lookup"><span data-stu-id="0901a-109">Using Delegates with Contravariant Type Parameters</span></span>  
+ <span data-ttu-id="0901a-110">Aşağıdaki örnekte, genel `Action` Temsilcilerde değişken varyans desteğinin avantajları gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="0901a-110">The following example illustrates the benefits of contravariance support in the generic `Action` delegates.</span></span> <span data-ttu-id="0901a-111">Yöntemi, `Person` türünün bir parametresini alır. `AddToContacts`</span><span class="sxs-lookup"><span data-stu-id="0901a-111">The `AddToContacts` method takes a parameter of the `Person` type.</span></span> <span data-ttu-id="0901a-112">Ancak, devraldığından `Action<Employee>` `Employee` `Person`bu yöntemi temsilciye atayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0901a-112">However, you can assign this method to the `Action<Employee>` delegate because `Employee` inherits `Person`.</span></span>  
   
 ```csharp  
 public class Person { }  
@@ -81,7 +81,7 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6a3f4-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6a3f4-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0901a-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0901a-113">See also</span></span>
 
-- [<span data-ttu-id="6a3f4-114">Kovaryans ve değişken varyans (C#)</span><span class="sxs-lookup"><span data-stu-id="6a3f4-114">Covariance and Contravariance (C#)</span></span>](./index.md)
-- [<span data-ttu-id="6a3f4-115">Genel Türler</span><span class="sxs-lookup"><span data-stu-id="6a3f4-115">Generics</span></span>](~/docs/standard/generics/index.md)
+- [<span data-ttu-id="0901a-114">Kovaryans ve değişken varyans (C#)</span><span class="sxs-lookup"><span data-stu-id="0901a-114">Covariance and Contravariance (C#)</span></span>](./index.md)
+- [<span data-ttu-id="0901a-115">Genel Türler</span><span class="sxs-lookup"><span data-stu-id="0901a-115">Generics</span></span>](../../../../standard/generics/index.md)

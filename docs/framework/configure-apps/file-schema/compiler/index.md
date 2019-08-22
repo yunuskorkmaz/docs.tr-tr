@@ -11,34 +11,34 @@ helpviewer_keywords:
 - language providers, settings schema
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-ms.openlocfilehash: fe08ac5dc0600e0861bb349ce99875af8658eb4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4900c391ae94447cdf4be331a27f6f3398e9129a
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675279"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659713"
 ---
-# <a name="compiler-and-language-provider-settings-schema"></a><span data-ttu-id="05dbb-102">Derleyici ve Dil Sağlayıcısı Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="05dbb-102">Compiler and Language Provider Settings Schema</span></span>
-<span data-ttu-id="05dbb-103">Compiler configuration öğeleri kullanılabilir dil sağlayıcıları için derleyici ve dil sağlayıcısı ayarları belirtin.</span><span class="sxs-lookup"><span data-stu-id="05dbb-103">Compiler and language provider settings specify compiler configuration elements for available language providers.</span></span> <span data-ttu-id="05dbb-104">Her derleyici yapılandırma öğesi kodu belirtir. sağlayıcı türü adı, derleyici parametreler, desteklenen dil adları ve dosya uzantıları desteklenir.</span><span class="sxs-lookup"><span data-stu-id="05dbb-104">Each compiler configuration element specifies the code provider type name, compiler parameters, supported language names, and supported file extensions.</span></span>  
+# <a name="compiler-and-language-provider-settings-schema"></a><span data-ttu-id="e02d5-102">Derleyici ve Dil Sağlayıcısı Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="e02d5-102">Compiler and Language Provider Settings Schema</span></span>
+<span data-ttu-id="e02d5-103">Derleyici ve dil sağlayıcısı ayarları, kullanılabilir dil sağlayıcıları için derleyici yapılandırma öğelerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="e02d5-103">Compiler and language provider settings specify compiler configuration elements for available language providers.</span></span> <span data-ttu-id="e02d5-104">Her derleyici yapılandırma öğesi kod sağlayıcısı türü adını, derleyici parametrelerini, desteklenen dil adlarını ve desteklenen dosya uzantılarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="e02d5-104">Each compiler configuration element specifies the code provider type name, compiler parameters, supported language names, and supported file extensions.</span></span>  
   
- <span data-ttu-id="05dbb-105">.NET Framework ilk derleyici ayarları makine yapılandırma dosyasındaki (Machine.config) tanımlar.</span><span class="sxs-lookup"><span data-stu-id="05dbb-105">The .NET Framework defines the initial compiler settings in the machine configuration file (Machine.config).</span></span> <span data-ttu-id="05dbb-106">Geliştiriciler ve derleyici satıcıları ekleyebilirsiniz yapılandırma ayarları için yeni bir <xref:System.CodeDom.Compiler.CodeDomProvider> uygulaması.</span><span class="sxs-lookup"><span data-stu-id="05dbb-106">Developers and compiler vendors can add configuration settings for a new <xref:System.CodeDom.Compiler.CodeDomProvider> implementation.</span></span> <span data-ttu-id="05dbb-107">Kullanım <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> dil sağlayıcısı ve derleyici yapılandırma ayarlarını bir bilgisayardaki program aracılığıyla listeleme yöntemi.</span><span class="sxs-lookup"><span data-stu-id="05dbb-107">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate language provider and compiler configuration settings on a computer.</span></span>  
+ <span data-ttu-id="e02d5-105">.NET Framework, makine yapılandırma dosyasındaki (Machine. config) ilk derleyici ayarlarını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="e02d5-105">The .NET Framework defines the initial compiler settings in the machine configuration file (Machine.config).</span></span> <span data-ttu-id="e02d5-106">Geliştiriciler ve derleyici satıcıları, yeni <xref:System.CodeDom.Compiler.CodeDomProvider> bir uygulama için yapılandırma ayarları ekleyebilir.</span><span class="sxs-lookup"><span data-stu-id="e02d5-106">Developers and compiler vendors can add configuration settings for a new <xref:System.CodeDom.Compiler.CodeDomProvider> implementation.</span></span> <span data-ttu-id="e02d5-107">Bir bilgisayardaki dil sağlayıcısını ve derleyici yapılandırma ayarlarını programlı bir şekilde numaralandırmak için yönteminikullanın.<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="e02d5-107">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate language provider and compiler configuration settings on a computer.</span></span>  
   
- [<span data-ttu-id="05dbb-108">\<Yapılandırma > öğesi</span><span class="sxs-lookup"><span data-stu-id="05dbb-108">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [<span data-ttu-id="e02d5-108">\<Yapılandırma > öğesi</span><span class="sxs-lookup"><span data-stu-id="e02d5-108">\<configuration> Element</span></span>](../configuration-element.md)  
   
- [<span data-ttu-id="05dbb-109">\<System.codeDom ></span><span class="sxs-lookup"><span data-stu-id="05dbb-109">\<system.codedom></span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)  
+ [<span data-ttu-id="e02d5-109">\<System. CodeDom ></span><span class="sxs-lookup"><span data-stu-id="e02d5-109">\<system.codedom></span></span>](system-codedom-element.md)  
   
- [<span data-ttu-id="05dbb-110">\<System.codeDom ></span><span class="sxs-lookup"><span data-stu-id="05dbb-110">\<compilers></span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
+ [<span data-ttu-id="e02d5-110">\<derleyiciler ></span><span class="sxs-lookup"><span data-stu-id="e02d5-110">\<compilers></span></span>](compilers-element.md)  
   
- [<span data-ttu-id="05dbb-111">\<Derleyici ></span><span class="sxs-lookup"><span data-stu-id="05dbb-111">\<compiler></span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)  
+ [<span data-ttu-id="e02d5-111">\<Derleyici ></span><span class="sxs-lookup"><span data-stu-id="e02d5-111">\<compiler></span></span>](compiler-element.md)  
   
-|<span data-ttu-id="05dbb-112">Öğe</span><span class="sxs-lookup"><span data-stu-id="05dbb-112">Element</span></span>|<span data-ttu-id="05dbb-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="05dbb-113">Description</span></span>|  
+|<span data-ttu-id="e02d5-112">Öğe</span><span class="sxs-lookup"><span data-stu-id="e02d5-112">Element</span></span>|<span data-ttu-id="e02d5-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e02d5-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="05dbb-114">\<System.codeDom ></span><span class="sxs-lookup"><span data-stu-id="05dbb-114">\<system.codedom></span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|<span data-ttu-id="05dbb-115">Kullanılabilir dil sağlayıcıları için derleyici yapılandırma ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="05dbb-115">Specifies compiler configuration settings for available language providers.</span></span>|  
-|[<span data-ttu-id="05dbb-116">\<System.codeDom ></span><span class="sxs-lookup"><span data-stu-id="05dbb-116">\<compilers></span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|<span data-ttu-id="05dbb-117">Compiler configuration öğeleri için kapsayıcı; sıfır veya daha fazlasını içeren [ \<derleyici >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) öğeleri.</span><span class="sxs-lookup"><span data-stu-id="05dbb-117">Container for compiler configuration elements; contains zero or more [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elements.</span></span>|  
-|[<span data-ttu-id="05dbb-118">\<Derleyici ></span><span class="sxs-lookup"><span data-stu-id="05dbb-118">\<compiler></span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|<span data-ttu-id="05dbb-119">Compiler configuration öznitelikleri için dil sağlayıcısı belirtir.</span><span class="sxs-lookup"><span data-stu-id="05dbb-119">Specifies the compiler configuration attributes for a language provider.</span></span>|  
+|[<span data-ttu-id="e02d5-114">\<System. CodeDom ></span><span class="sxs-lookup"><span data-stu-id="e02d5-114">\<system.codedom></span></span>](system-codedom-element.md)|<span data-ttu-id="e02d5-115">Kullanılabilir dil sağlayıcılarının derleyici yapılandırma ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="e02d5-115">Specifies compiler configuration settings for available language providers.</span></span>|  
+|[<span data-ttu-id="e02d5-116">\<derleyiciler ></span><span class="sxs-lookup"><span data-stu-id="e02d5-116">\<compilers></span></span>](compilers-element.md)|<span data-ttu-id="e02d5-117">Derleyici yapılandırma öğeleri için kapsayıcı; sıfır veya daha fazla [ \<derleyici >](compiler-element.md) öğesi içerir.</span><span class="sxs-lookup"><span data-stu-id="e02d5-117">Container for compiler configuration elements; contains zero or more [\<compiler>](compiler-element.md) elements.</span></span>|  
+|[<span data-ttu-id="e02d5-118">\<Derleyici ></span><span class="sxs-lookup"><span data-stu-id="e02d5-118">\<compiler></span></span>](compiler-element.md)|<span data-ttu-id="e02d5-119">Bir dil sağlayıcısı için derleyici yapılandırma özniteliklerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="e02d5-119">Specifies the compiler configuration attributes for a language provider.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="05dbb-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="05dbb-120">Example</span></span>  
- <span data-ttu-id="05dbb-121">Aşağıdaki örnek, tipik bir derleyici yapılandırma öğesi gösterir.</span><span class="sxs-lookup"><span data-stu-id="05dbb-121">The following example illustrates a typical compiler configuration element.</span></span>  
+## <a name="example"></a><span data-ttu-id="e02d5-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="e02d5-120">Example</span></span>  
+ <span data-ttu-id="e02d5-121">Aşağıdaki örnek tipik bir derleyici yapılandırma öğesini göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="e02d5-121">The following example illustrates a typical compiler configuration element.</span></span>  
   
 ```xml  
 <configuration>  
@@ -56,9 +56,9 @@ ms.locfileid: "61675279"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="05dbb-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="05dbb-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e02d5-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e02d5-122">See also</span></span>
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [<span data-ttu-id="05dbb-123">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="05dbb-123">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="05dbb-124">\<Derleyici > öğesi</span><span class="sxs-lookup"><span data-stu-id="05dbb-124">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [<span data-ttu-id="e02d5-123">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="e02d5-123">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="e02d5-124">\<Derleyici > öğesi</span><span class="sxs-lookup"><span data-stu-id="e02d5-124">\<compiler> Element</span></span>](compiler-element.md)
