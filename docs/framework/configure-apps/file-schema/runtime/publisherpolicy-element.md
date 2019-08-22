@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29932eb27bcd13876ea6982982e67341edb8e0de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c8f8744d3ef1ca30eb05a4c8c3290d8a514714b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674083"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663509"
 ---
 # <a name="publisherpolicy-element"></a>\<publisherPolicy > öğesi
-Çalışma zamanı Yayımcı ilkesi uygulanıp uygulanmayacağını belirtir.  
+Çalışma zamanının yayımcı ilkesi uygulanıp uygulanmadığını belirtir.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -41,14 +41,14 @@ ms.locfileid: "61674083"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`apply`|Yayımcı ilkesi uygulanıp uygulanmayacağını belirtir.|  
+|`apply`|Yayımcı ilkesinin uygulanıp uygulanmayacağını belirtir.|  
   
-## <a name="apply-attribute"></a>bir öznitelik uygulama  
+## <a name="apply-attribute"></a>Özniteliği Uygula  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`yes`|Yayımcı ilke uygulanır. Varsayılan ayar budur.|  
-|`no`|Yayımcı ilkesi uygulanmaz.|  
+|`yes`|Yayımcı ilkesini uygular. Varsayılan ayar budur.|  
+|`no`|Yayımcı ilkesi uygulamaz.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -61,14 +61,14 @@ ms.locfileid: "61674083"
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir bileşen Satıcı bir derlemenin yeni bir sürümü yayımlandığında yeni sürümü artık eski sürümü kullanan uygulamaları kullanmak için satıcı Yayımcı ilkesi içerebilir. Belirli bir derleme için yayımcı ilkesi uygulanıp uygulanmayacağını belirtmek için put  **\<publisherPolicy >** öğesinde  **\<dependentAssembly >** öğesi.  
+ Bir bileşen satıcısı bir derlemenin yeni bir sürümünü yayımlarsa, satıcı bir yayımcı ilkesi içerebilir, bu nedenle eski sürümü kullanan uygulamalar artık yeni sürümü kullanır. Belirli bir derleme için yayımcı ilkesinin uygulanıp uygulanmayacağını belirtmek için,  **\<publisherPolicy >** öğesini  **\<dependentAssembly >** öğesine koyun.  
   
- Varsayılan ayarı **uygulamak** özniteliği **Evet**. Ayarlama **uygulamak** özniteliğini **hiçbir** önceki tüm geçersiz kılmaları **Evet** bir derleme için ayarlar.  
+ **Apply** özniteliği için varsayılan ayar **Evet**' tir. **Apply** özniteliğini **Hayır** olarak ayarlamak, bir derleme için önceki tüm **Evet** ayarlarını geçersiz kılar.  
   
- Yayımcı ilkesi kullanarak açıkça yoksaymak bir uygulama için gerekli izni [ \<publisherPolicy uygulama = "Hayır" / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) öğesi uygulama yapılandırma dosyasında. İzin ayarlanarak verilir <xref:System.Security.Permissions.SecurityPermissionFlag> üzerinde bayrak <xref:System.Security.Permissions.SecurityPermission>. Daha fazla bilgi için [bütünleştirilmiş kod bağlama yönlendirmesi güvenlik izni](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
+ Uygulamanın, uygulama yapılandırma dosyasında [ \<publisherPolicy apply = "No"/>](publisherpolicy-element.md) öğesini kullanarak yayımcı ilkesini açıkça yoksayması için izin gerekir. ' De <xref:System.Security.Permissions.SecurityPermissionFlag> bayrak ayarlanarak izin verilir. <xref:System.Security.Permissions.SecurityPermission> Daha fazla bilgi için bkz. [derleme bağlama yeniden yönlendirme güvenlik izni](../../assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek derleme için yayımcı ilkesini devre dışı bırakır `myAssembly`.  
+ Aşağıdaki örnek, derleme `myAssembly`için yayımcı ilkesini devre dışı bırakır.  
   
 ```xml  
 <configuration>  
@@ -87,7 +87,7 @@ ms.locfileid: "61674083"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../redirect-assembly-versions.md)

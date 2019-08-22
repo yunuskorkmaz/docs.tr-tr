@@ -12,34 +12,34 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-ms.openlocfilehash: 71d945e6046a8648a812de939f197429bc695808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f5d762a2b688bebcb7c027be6c639b6d64c069d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674538"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664116"
 ---
 # <a name="network-settings-schema"></a>Ağ Ayarları Şeması
-Ağ ayarları, .NET Framework Internet'e nasıl bağlandığını belirtin. Aşağıdaki tabloda her bir alt yapılandırma öğesinin altında işlevi açıklanmaktadır [ \<system.Net > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md).  
+Ağ ayarları .NET Framework Internet 'e nasıl bağlandığını belirtir. Aşağıdaki tabloda, [ \<sistem .net > öğesi (ağ ayarları)](system-net-element-network-settings.md)altındaki her bir alt yapılandırma öğesinin işlevi açıklanmaktadır.  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<authenticationModules > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Internet isteklerini kimliğini doğrulamak için kullanılan modülleri belirtir.|  
-|[\<connectionManagement > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Bağlantılar Internet ana bilgisayarları için en yüksek sayısını belirtir.|  
-|[\<defaultProxy > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|İnternet'e HTTP istekleri için kullanılan proxy sunucusunu belirtir.|  
-|[\<mailSettings > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Posta gönderme seçeneklerini ayarlarını içerir.|  
-|[\<requestCaching > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Ağ istekleri için önbelleğe alma mekanizması denetler.|  
-|[\<webRequestModules > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Internet konaklarından bilgi istemek için kullanılan modülleri belirtir.|  
+|[\<authenticationModules > öğesi (ağ ayarları)](authenticationmodules-element-network-settings.md)|Internet isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.|  
+|[\<connectionManagement > öğesi (ağ ayarları)](connectionmanagement-element-network-settings.md)|Internet ana bilgisayarlarına en fazla bağlantı sayısını belirtir.|  
+|[\<defaultProxy > öğesi (ağ ayarları)](defaultproxy-element-network-settings.md)|Internet 'e HTTP istekleri için kullanılan proxy sunucusunu belirtir.|  
+|[\<mailSettings > öğesi (ağ ayarları)](mailsettings-element-network-settings.md)|Posta gönderme seçeneklerinin ayarlarını içerir.|  
+|[\<requestCaching > öğesi (ağ ayarları)](requestcaching-element-network-settings.md)|Ağ istekleri için önbelleğe alma mekanizmasını denetler.|  
+|[\<webRequestModules > öğesi (ağ ayarları)](webrequestmodules-element-network-settings.md)|Internet konaklarından bilgi istemek için kullanılan modülleri belirtir.|  
   
- .NET Framework web adresleri Tekdüzen Kaynak Tanımlayıcıları (URI'lar) kullanılarak ifade nasıl işlediğini URI ayarlarını belirtin. Aşağıdaki tabloda her bir alt yapılandırma öğesinin altında işlevi açıklanmaktadır [ \<URI > öğesi (Uri ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md).  
+ URI ayarları .NET Framework, Tekdüzen Kaynak tanımlayıcıları (URI) kullanarak ifade edilen Web adreslerini nasıl işleyeceğini belirtir. Aşağıdaki tabloda, [ \<Uri > öğesi (URI ayarları)](uri-element-uri-settings.md)altındaki her bir alt yapılandırma öğesinin işlevi açıklanmaktadır.  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<IDN > öğesi (Uri ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|Etki alanı adları için Uluslararası yapılan etki alanı adı (IDN) ayrıştırma uygulanıp uygulanmadığını belirtir.|  
-|[\<iriParsing > öğesi (Uri ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma için uygulanmış olup olmadığını belirten bir <xref:System.Uri> ve IRI ayrıştırma kurallarını uygulanıp.|  
-|[\<schemeSettings > öğesi (Uri ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Belirtir nasıl bir <xref:System.Uri> belirli düzenleri için ayrıştırılacak.|  
+|[\<IDN > öğesi (Uri Ayarları)](idn-element-uri-settings.md)|Uluslararası etki alanı adı (ıDN) ayrıştırma 'nın etki alanı adlarına uygulandığını belirtir.|  
+|[\<ıriayrıştırma > öğesi (URI ayarları)](iriparsing-element-uri-settings.md)|Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma 'nin bir <xref:System.Uri> öğesine uygulanıp uygulanmadığını ve IRI ayrıştırma kurallarının uygulanıp uygulanamayacağını belirtir.|  
+|[\<> düzeni öğesi (URI ayarları)](schemesettings-element-uri-settings.md)|Belirli düzenler için <xref:System.Uri> nasıl ayrıştırılacaksınız belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İnternet Uygulamalarını Yapılandırma](../../../../../docs/framework/network-programming/configuring-internet-applications.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [İnternet Uygulamalarını Yapılandırma](../../../network-programming/configuring-internet-applications.md)
+- [Yapılandırma Dosyası Şeması](../index.md)

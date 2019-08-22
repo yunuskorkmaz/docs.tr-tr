@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbb977e05fa54b726b0cd584d287dc00c8ced995
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 91a97807d45d3cafdac0c0608dc9590533b185dc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423249"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663440"
 ---
-# <a name="systemruntimecaching-element-cache-settings"></a>\<System.Runtime.Caching > öğesi (önbellek ayarları)
+# <a name="systemruntimecaching-element-cache-settings"></a>\<System. Runtime. Caching > öğesi (önbellek ayarları)
 
-Bellekteki varsayılan yapılandırmasını sağlar <xref:System.Runtime.Caching.ObjectCache> uygulaması aracılığıyla `memoryCache` yapılandırma dosyasında giriş.  
+Yapılandırma dosyasındaki <xref:System.Runtime.Caching.ObjectCache> `memoryCache` giriş aracılığıyla varsayılan bellek içi uygulama için yapılandırma sağlar.  
   
  \<Yapılandırma >  
-\<System.Runtime.Caching >  
+\<System. Runtime. Caching >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,26 +42,26 @@ Bellekteki varsayılan yapılandırmasını sağlar <xref:System.Runtime.Caching
 
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<memoryCache>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|Temel alan bir önbellek yapılandırmak için kullanılan bir öğe tanımlar <xref:System.Runtime.Caching.MemoryCache> sınıfı.|  
+|[\<memoryCache >](memorycache-element-cache-settings.md)|<xref:System.Runtime.Caching.MemoryCache> Sınıfına dayalı bir önbelleği yapılandırmak için kullanılan bir öğesi tanımlar.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Yapılandırma >](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Her yapılandırma dosyasında ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğesini belirtir.|  
+|[\<Yapılandırma >](../configuration-element.md)|Ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan her yapılandırma dosyasında kök öğesini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu ad alanındaki sınıflar üzerinde ASP.NET, ancak bir bağımlılık benzer önbelleğe alma özelliklerini kullanabilmeniz için bir yol sağlar `System.Web` derleme. Daha fazla bilgi için [.NET Framework uygulamalarında önbelleğe alma](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).  
+Bu ad alanındaki sınıflar, ASP.net ' deki, ancak `System.Web` derlemeye bağımlılık olmadan önbelleğe alma olanaklarını kullanmanın bir yolunu sunar. Daha fazla bilgi için bkz. [.NET Framework uygulamalarında önbelleğe alma](../../../performance/caching-in-net-framework-applications.md).  
   
 > [!NOTE]
->  Çıktı işlevleri ve türleri önbelleğe alma <xref:System.Runtime.Caching> ad alanı .NET Framework 4'te yenidir.  
+>  Çıktı önbelleği işlevselliği ve <xref:System.Runtime.Caching> ad alanındaki türler .NET Framework 4 ' te yenidir.  
   
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, temel alan bir önbellek yapılandırma işlemi gösterilmektedir <xref:System.Runtime.Caching.MemoryCache> sınıfı. Örneğin, bir örneğini yapılandırma işlemi gösterilmektedir `namedCaches` önbellek girişi. Önbellek adı ayarlayarak varsayılan önbellek girişi adına ayarlanır `name` "Varsayılan" özniteliği.  
+Aşağıdaki örnek, <xref:System.Runtime.Caching.MemoryCache> sınıfına dayalı bir önbelleğin nasıl yapılandırılacağını gösterir. Örnek, bellek önbelleği için `namedCaches` girdinin bir örneğinin nasıl yapılandırılacağını gösterir. Önbellek adı `name` özniteliği "varsayılan" olarak ayarlanarak varsayılan önbellek girişi adına ayarlanır.  
   
-`cacheMemoryLimitMegabytes` Özniteliği ve `physicalMemoryPercentage` öznitelik sıfır olarak ayarlanır. Bu öznitelik sıfır olarak ayarlandığında <xref:System.Runtime.Caching.MemoryCache> otomatik boyutlandırma buluşsal yöntemler, varsayılan olarak kullanılır. Önbellek uygulaması, iki dakikada mutlak ve yüzde tabanlı bellek sınırlarını karşı geçerli bellek yükü karşılaştırmanız gerekir.  
+`cacheMemoryLimitMegabytes` Özniteliği`physicalMemoryPercentage` ve özniteliği sıfır olarak ayarlanır. Bu özniteliklerin sıfıra ayarlanması, <xref:System.Runtime.Caching.MemoryCache> otomatik boyutlandırma buluşsal yöntemleri varsayılan olarak kullanıldığı anlamına gelir. Önbellek uygulamasının her iki dakikada bir, geçerli bellek yükünü mutlak ve yüzde tabanlı bellek sınırlarına göre karşılaştırması gerekir.  
   
 ```xml  
 <configuration>  

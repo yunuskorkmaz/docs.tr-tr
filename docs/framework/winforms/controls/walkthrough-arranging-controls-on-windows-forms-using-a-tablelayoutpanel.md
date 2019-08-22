@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 7566f19282ffd5a3cac86693a64899f25ce37b9f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 289a8427540c713758c3f155e72efffe9f3c85bc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040286"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666802"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme
 
@@ -46,7 +46,6 @@ Bu izlenecek yolda gösterilen görevler şunlardır:
 - Varolan denetimleri farklı bir üst öğeye yeniden atama
 
 İşiniz bittiğinde, bu önemli düzen özellikleri tarafından yürütülen rolü anlayacaksınız.
-
 
 ## <a name="creating-the-project"></a>Projeyi Oluşturma
 

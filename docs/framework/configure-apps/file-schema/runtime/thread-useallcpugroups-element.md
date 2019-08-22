@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9758e009e012c8af5f5f7bd19dcd21f34b8c7d96
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: e9ee6bdb7094ea2bc9e283e331c0f6ad9b68e4f9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689742"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663419"
 ---
-# <a name="threaduseallcpugroups-element"></a>\<Thread_UseAllCpuGroups > öğesi
+# <a name="thread_useallcpugroups-element"></a>\<Thread_UseAllCpuGroups > öğesi
 
-Çalışma zamanının yönetilen iş parçacıklarını tüm CPU grupları arasında dağıtmadığını belirtir.
+Çalışma zamanının yönetilen iş parçacıklarını tüm CPU grupları arasında dağıtıp dağıtmadığını belirtir.
 
 \<Yapılandırma > \
 \<çalışma zamanı > \
-\<Thread_UseAllCpuGroups>
+\<Thread_UseAllCpuGroups >
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,14 +34,14 @@ ms.locfileid: "66689742"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanının yönetilen iş parçacıklarını tüm CPU grupları arasında dağıtmadığını belirtir.|
+|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanının yönetilen iş parçacıklarını tüm CPU grupları arasında dağıtıp dağıtmadığını belirtir.|
 
 ## <a name="enabled-attribute"></a>etkin Öznitelik
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`false`|Çalışma zamanının yönetilen iş parçacıkları arasında birden fazla CPU grubu dağıtmaz. Bu varsayılandır.|
-|`true`|Bilgisayarda birden fazla CPU grubu varsa çalışma zamanı yönetilen iş parçacıklarını birden çok CPU grupları arasında dağıtır ve [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) öğe etkin.|
+|`false`|Çalışma zamanı, yönetilen iş parçacıklarını birden çok CPU grubu arasında dağıtmaz. Bu varsayılandır.|
+|`true`|Bilgisayarın birden çok CPU grubu varsa ve [ \<GCCpuGroup >](gccpugroup-element.md) öğesi etkinse, çalışma zamanı yönetilen iş parçacıklarını birden çok CPU grubuna dağıtır.|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -56,11 +56,11 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir bilgisayara birden fazla CPU grubu varsa, bu öğenin etkinleştirilmesi, çalışma zamanının yönetilen iş parçacıklarını tüm CPU grupları arasında dağıtmak neden olur. Bu özelliği kullanmak için ayrıca etkinleştirmelisiniz [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) öğesi, çöp toplama için tüm CPU grupları genişletir ve tüm çekirdek oluştururken ve Yığınlar Dengeleme dikkate alır. Etkinleştirme [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) öğesi gerektiriyor etkinleştirme [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) öğesi. Bu öğeler etkinleştirilmezse, etkinleştirme `<Thread_UseAllCpuGroups>` öğesi hiçbir etkiye sahiptir.
+Bir bilgisayarda birden çok CPU grubu olduğunda, bu öğenin etkinleştirilmesi çalışma zamanının yönetilen iş parçacıklarını tüm CPU grupları arasında dağıtmasını sağlar. Bu özelliği kullanmak için, atık toplamayı tüm CPU gruplarına genişleten ve Heap 'ler oluştururken ve dengeleyerek tüm çekirdekleri hesaba götüren [ \<GCCpuGroup >](gccpugroup-element.md) öğesini de etkinleştirmeniz gerekir. GCCpuGroup > öğesinin etkinleştirilmesi, [gcServer > öğesinin etkinleştirilmesini gerektirir. \<](gcserver-element.md) [ \<](gccpugroup-element.md) Bu öğeler etkinleştirilmemişse, `<Thread_UseAllCpuGroups>` öğesinin etkinleştirilmesi etkisizdir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, birden çok CPU için desteğini nasıl etkinleştireceğinizi gösterir.
+Aşağıdaki örnekte, birden çok CPU grubu için desteğin nasıl etkinleştirileceği gösterilmektedir.
 
 ```xml
 <configuration>
@@ -74,6 +74,6 @@ Aşağıdaki örnek, birden çok CPU için desteğini nasıl etkinleştireceğin
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<GCCpuGroup > öğesi](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
+- [\<GCCpuGroup > öğesi](gccpugroup-element.md)

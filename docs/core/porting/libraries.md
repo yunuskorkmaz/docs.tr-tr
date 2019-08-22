@@ -1,136 +1,136 @@
 ---
-title: .NET Core için bağlantı kitaplıkları
-description: Kitaplık .NET Framework projelerinden .NET Core için bağlantı noktası hakkında bilgi edinin.
+title: .NET Core 'a bağlantı noktası kitaplıkları
+description: .NET Framework kitaplığı projelerinin nasıl .NET Core 'a bağlantı sağladığını öğrenin.
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663160"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660706"
 ---
-# <a name="port-net-framework-libraries-to-net-core"></a>.NET Framework kitaplıkları .NET Core için bağlantı noktası
+# <a name="port-net-framework-libraries-to-net-core"></a>.NET Core 'a bağlantı noktası .NET Framework kitaplıkları
 
-Platformlar arası çalıştırmak ve daha geniş kitlelere ulaşın, onu kullanan uygulamaları için .NET Core, .NET Framework kitaplığı kod bağlantı noktası hakkında bilgi edinin.
+Çoklu platform çalıştırmak ve bunu kullanan uygulamaların erişimini genişletmek için .NET Framework kitaplığı kodunun .NET Core 'a nasıl yapılacağını öğrenin.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu makalede, varsayılır:
+Bu makalede şunları kabul edersiniz:
 
-- Visual Studio 2017 veya sonraki bir sürümü kullanıyor olabilirsiniz.
-  - .NET core, Visual Studio'nun önceki sürümlerinde desteklenmez.
-- Anlamak [taşıma işlemi önerilen](index.md).
-- Herhangi bir sorun giderilmiştir [üçüncü taraf bağımlılıklarının](third-party-deps.md).
+- , Visual Studio 2017 veya üstünü kullanıyor.
+  - .NET Core, Visual Studio 'nun önceki sürümlerinde desteklenmez
+- [Önerilen taşıma sürecini](index.md)anlayın.
+- [Üçüncü taraf bağımlılıklarla](third-party-deps.md)ilgili sorunları çözmüştür.
 
-Ayrıca şu konu başlıklarının içeriğini tanıdık olmanız gerekir:
+Ayrıca, aşağıdaki konuların içeriğini tanımanız gerekir:
 
-[.NET standard](../../standard/net-standard.md)\
-Bu konuda, tüm .NET uygulamalarında kullanılabilir olacak şekilde tasarlanmıştır .NET API'lerinin resmi belirtimi açıklanmaktadır.
+[.NET Standard](../../standard/net-standard.md)\
+Bu konuda, tüm .NET uygulamalarında kullanılabilmesi amaçlanan .NET API 'lerinin biçimsel belirtimi açıklanmaktadır.
 
-[Paketler, meta paketler ve çerçeveler](~/docs/core/packages.md)   
-Bu makalede, .NET Core nasıl tanımlar ve paketleri kullanır ve birden çok .NET uygulamalarında çalıştırılan kod nasıl destek paketlerinin açıklanmaktadır.
+[Paketler, Metapackages ve çerçeveler](../packages.md)   
+Bu makalede, .NET Core 'un paketleri nasıl tanımladığı ve kullandığı ve paketlerin birden çok .NET uygulamasında çalışan kodun nasıl desteklediği açıklanır.
 
-[Platformlar arası araçlarla kitaplıkları ile geliştirme](~/docs/core/tutorials/libraries.md)   
-Bu konuda, platformlar arası CLI araçları ile .NET kitaplıkları yazma açıklanmaktadır.
+[Platformlar arası araçlarla kitaplıklar geliştirme](../tutorials/libraries.md)   
+Bu konuda, platformlar arası CLı araçları kullanılarak .NET için kitaplıkların nasıl yazılacağı açıklanmaktadır.
 
-[Eklemeler *csproj* .NET Core için biçim](~/docs/core/tools/csproj.md)   
-Bu makalede proje dosyasına taşımak için bir parçası olarak eklenmiş olan değişiklikler özetlenmektedir *csproj* ve MSBuild.
+[.NET Core için *csproj* biçimine eklemeler](../tools/csproj.md)   
+Bu makalede, *csproj* ve MSBuild 'e taşıma kapsamında proje dosyasına eklenen değişiklikler özetlenmektedir.
 
-[.NET Core'a taşıma -, üçüncü taraf bağımlılıklarını çözümleme](~/docs/core/porting/third-party-deps.md)   
-Bu konu, taşınabilirlik ve üçüncü taraf bağımlılıklarının üzerinde .NET Core NuGet paket bağımlılık çalıştırmaz ne yapılacağını açıklar.
+[.NET Core 'a taşıma-üçüncü taraf taraflarınızın bağımlılıklarını çözümleme](third-party-deps.md)   
+Bu konuda, üçüncü taraf bağımlılıkların taşınabilirliği ve bir NuGet paket bağımlılığı .NET Core üzerinde çalıştırılmazsa ne yapmalı anlatılmaktadır.
 
-## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>.NET Framework kodunuzu .NET Framework 4.7.2 yeniden hedefleme
+## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>.NET Framework kodunuzun .NET Framework 4.7.2 için yeniden hedefleniyor
 
-Kodunuzu .NET Framework'ün 4.7.2 hedefleyen değil, .NET Framework 4.7.2 yeniden hedefle önerilir. Bu, burada bu .NET Standard mevcut API'lere desteklemiyor durumlar için en son API alternatifleri kullanılabilirliğini sağlar.
+Kodunuz .NET Framework 4.7.2 hedeflenmemişse, .NET Framework 4.7.2 ' ye yeniden hedeflemeniz önerilir. Bu, .NET Standard var olan API 'Leri desteklemediği durumlarda en son API alternatiflerine yönelik kullanılabilirliği sağlar.
 
-Her Visual Studio'da projeniz için istediğiniz bağlantı noktası, aşağıdakileri yapın:
+Visual Studio 'da, bağlantı noktası yapmak istediğiniz her bir proje için aşağıdakileri yapın:
 
-1. Sağ tıklatın ve proje **özellikleri**.
-1. İçinde **hedef Framework'ü** açılır menüsünde, select **.NET Framework 4.7.2**.
-1. Projelerinizi derleyin.
+1. Projeye sağ tıklayın ve **Özellikler**' i seçin.
+1. **Hedef çerçeve** açılan menüsünde **.NET Framework 4.7.2**' ı seçin.
+1. Projelerinizi yeniden derleyin.
 
-Projelerinizi artık .NET Framework'ü 4.7.2 hedefleyen olduğundan, kod taşımak için .NET Framework'ün bu sürümü, temel olarak kullanın.
+Projeleriniz .NET Framework 4.7.2 ' i hedeflemesini sağladığından, kodu taşıma için temel olarak bu .NET Framework sürümünü kullanın.
 
-## <a name="determining-the-portability-of-your-code"></a>Kodun taşınabilirliğini belirleme
+## <a name="determining-the-portability-of-your-code"></a>Kodunuzun taşınabilirliği belirleniyor
 
-Sonraki adım, API taşınabilirlik Çözümleyicisi çözümleme için taşınabilirlik rapor oluşturmak için (ApiPort) çalıştırmaktır.
+Sonraki adım, analiz için bir taşınabilirlik raporu oluşturmak üzere API taşınabilirlik Çözümleyicisi 'ni (ApiPort) çalıştırmak içindir.
 
-Anladığınızdan emin olun [API Portability Analyzer (ApiPort)](../../standard/analyzers/portability-analyzer.md) ve .NET Core'u hedefleyen taşınabilirlik raporlar oluşturma. Bu büyük olasılıkla bunu nasıl kişisel beğeni ve gereksinimlerinize göre değişir. Aşağıda birkaç farklı yaklaşım ' dir. Kodunuzu nasıl yapılandırıldığını bağlı olarak bu yaklaşımların adımları karıştırma kendinizi bulabilirsiniz.
+[API taşınabilirlik Çözümleyicisi 'ni (ApiPort)](../../standard/analyzers/portability-analyzer.md) ve .NET Core hedeflemek için taşınabilirlik raporları oluşturmayı anladığınızdan emin olun. Bunun nasıl yapılacağı, gereksinimlerinize ve kişisel tastes 'ye göre farklılık gösterir. Birkaç farklı yaklaşım aşağıda verilmiştir. Kodunuzun nasıl yapılandırıldığına bağlı olarak bu yaklaşımlardan oluşan adımları kendiniz bulabilirsiniz.
 
-### <a name="dealing-primarily-with-the-compiler"></a>Derleyici öncelikle uğraşmanızı
+### <a name="dealing-primarily-with-the-compiler"></a>Derleyici ile birincil olarak ilgilenme
 
-Bu yaklaşım, küçük projeleri veya birçok .NET Framework API'ları kullanmayın projeler için en iyi olabilir. Bu yaklaşım, basit bir işlemdir:
+Bu yaklaşım, çok sayıda .NET Framework API kullanmayan küçük projeler veya projeler için en iyi yöntem olabilir. Yaklaşım basittir:
 
-1. İsteğe bağlı olarak, ApiPort projeniz üzerinde çalıştırın. ApiPort çalıştırırsanız, rapor adresine ihtiyacınız olacak konuları hakkında bilgi edinin.
-1. Kodunuzun tamamını üzerinden yeni bir .NET Core projesi kopyalayın.
-1. Projeyi tam olarak derler kadar taşınabilirlik rapora (oluşturduysanız) başvuru yapılırken derleyici hataları çözün.
+1. İsteğe bağlı olarak, projenizde ApiPort ' ı çalıştırın. ApiPort çalıştırırsanız, adresetmeniz gereken sorunlar hakkında rapordan bilgi kazanın.
+1. Tüm kodunuzu yeni bir .NET Core projesine kopyalayın.
+1. Taşınabilirlik raporuna (oluşturulduysa) başvururken, proje tamamen derlenene kadar derleyici hatalarını çözün.
 
-Bu yaklaşım yapılandırılmamış olsa da, kod odaklı bir yaklaşım, genellikle sorunları hızlı bir şekilde çözmek için müşteri adayları ve daha küçük projeler veya kitaplıkları için en iyi yaklaşım olabilir. Yalnızca veri modelleri içeren bir proje, bu yaklaşım için ideal bir aday olabilir.
+Bu yaklaşım yapılandırılmamış olsa da, kod odaklı yaklaşım genellikle sorunların hızla çözümlenmesine yol açar ve daha küçük projeler veya kitaplıklar için en iyi yaklaşım olabilir. Yalnızca veri modellerini içeren bir proje, bu yaklaşım için ideal bir aday olabilir.
 
-### <a name="staying-on-the-net-framework-until-portability-issues-are-resolved"></a>.NET Framework üzerinde taşınabilirlik sorunlarını giderilmeden sağlama
+### <a name="staying-on-the-net-framework-until-portability-issues-are-resolved"></a>Taşınabilirlik sorunları çözülene kadar .NET Framework kalana
 
-İşlem süresince derleyen bir kod isterseniz bu yaklaşım, en iyi olabilir. Bu yaklaşım şu şekildedir:
+Bu yaklaşım, tüm işlem sırasında derlenen kodu bulundurmayı tercih ediyorsanız en iyi yöntem olabilir. Yaklaşım aşağıdaki gibidir:
 
-1. ApiPort bir proje üzerinde çalıştırın.
-1. Taşınabilir farklı API'lerini kullanarak sorunları giderin.
-1. Burada doğrudan bir alternatif kullanmalarını engelledi alanları not alın.
-1. Her yeni bir .NET Core projesine üzerinden kopyalanacak hazır başarılara kadar taşıma tüm projeler için önceki adımları yineleyin.
-1. Yeni bir .NET Core projesine kodu kopyalayın.
-1. Burada, doğrudan bir alternatif yok not ettiğiniz herhangi bir sorun çalışır.
+1. Bir projede ApiPort çalıştırın.
+1. Taşınabilir farklı API 'Ler kullanarak sorunları çözün.
+1. Doğrudan alternatif kullanmak zorunda olmadığınız tüm alanlara göz atın.
+1. Her biri yeni bir .NET Core projesine kopyalanmak üzere hazırlanana kadar, bağlantı noktası oluşturduğunuz tüm projeler için önceki adımları tekrarlayın.
+1. Kodu yeni bir .NET Core projesine kopyalayın.
+1. Doğrudan bir alternatif mevcut olmadığını not ettiğiniz tüm sorunları giderin.
 
-Dikkatli bu yaklaşım yalnızca derleyici hataları çalışma daha fazla yapılandırılmış, ancak yine de oldukça kod odaklıdır ve derleme kodunu her zaman sahip avantajına sahiptir. Başka bir API aracılığıyla ele uygulanamadı belirli çözümlenebileceği şekilde önemli ölçüde farklılık gösterir. Daha kapsamlı bir geliştirme gerektiğini fark edebilirsiniz belirli sonraki yaklaşım ele alınmıştır projeleri planlayın.
+Bu dikkatli yaklaşım, derleyici hatalarından yalnızca çalışmaya kıyasla daha fazla yapılandırılmıştır, ancak yine de kod odaklı olduğundan, her zaman derlenen koda sahip olma avantajına sahiptir. Yalnızca başka bir API kullanılarak giderilemedik bazı sorunları çözmenize yönelik Yöntem büyük ölçüde farklılık gösterir. Belirli projeler için bir sonraki yaklaşım kapsamında daha kapsamlı bir plan geliştirmeniz gerektiğini fark edebilirsiniz.
 
 ### <a name="developing-a-comprehensive-plan-of-attack"></a>Kapsamlı bir saldırı planı geliştirme
 
-Bu yaklaşım burada kodu yeniden yapılandırma ya da tamamen kodunun belirli alanları yeniden yazma .NET Core desteği gerekli olabilir daha büyük ve daha karmaşık projeler için en iyi olabilir. Bu yaklaşım şu şekildedir:
+Bu yaklaşım, .NET Core 'u desteklemek için kodun yeniden yapılandırılması veya belirli kod alanlarının tamamen yeniden oluşturulması gereken daha büyük ve daha karmaşık projeler için en iyi yöntem olabilir. Yaklaşım aşağıdaki gibidir:
 
-1. ApiPort bir proje üzerinde çalıştırın.
-1. Her bir taşınabilir olmayan türü kullanıldığı ve genel taşınabilirlik nasıl etkilediğini anlayın.
-   - Bu tür yapısını anlayın. Bunlar sık sayıda küçük ancak kullanılan misiniz? Bunlar sık sayısı büyük ancak kullanılan misiniz? Kullanımları yoğunlaşmıştır veya, tüm kodunuzda dağıldığında?
-   - Kod taşınabilir değildir ve böylece ile daha etkili bir şekilde giderebilirsiniz yalıtmak kolay mı?
-   - Kodunuzu yeniden düzenleyin gerekiyor mu?
-   - Taşınabilir olmayan bu türleri için aynı görevi başarmak alternatif API'leri var? Kullanıyorsanız, örneğin <xref:System.Net.WebClient> sınıfı olabilir kullanabilmek için <xref:System.Net.Http.HttpClient> bunun yerine sınıf.
-   - Mongodb'nin olmasa bile bir görevi gerçekleştirmek için kullanılabilecek farklı taşınabilir API'ler var mı? Kullanıyorsanız, örneğin <xref:System.Xml.Schema.XmlSchema> için XML Ayrıştırma ancak XML gerektirmeyen şema bulma kullanabilir <xref:System.Xml.Linq> API'ler ve kendiniz bir API'sinden aksine ayrıştırma uygulayın.
-1. Bağlantı noktasına zor olan derlemeler varsa, bunları .NET Framework üzerinde şimdilik bırakarak değer mi? Dikkat etmeniz gerekenler şunlardır:
-   - Bazı işlevler, kitaplığınızda çok yoğun olarak .NET Framework veya özel Windows işlevini kullandığından, .NET Core ile uyumsuz olabilir. Kaynak özellikleri bağlantı noktası kullanılabilir olana kadar şimdilik bu işlevselliği geride ve bir .NET Core sürümünün kitaplığınızın geçici olarak daha az özellik ile serbest bırakma etkiliyorsa mi?
-   - Bir yeniden düzenleme yardımcı olur musunuz?
-1. Kendi kullanılamayan bir .NET Framework API uygulaması yazmak makul mi?
-   Kopyalama, değiştirme ve koddan kullanarak düşünebilirsiniz [.NET Framework başvuru kaynağı](https://github.com/Microsoft/referencesource). Başvuru kaynak kodu altında lisanslanmıştır [MIT lisansı](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt), kaynağı için kendi kodunuzu temeli olarak kullanmak için önemli özgürlüğüne sahipsiniz. Yalnızca Microsoft kodunuzda düzgün özniteliği emin olun.
-1. Bu işlem, farklı projeler için gerektiği şekilde yineleyin.
+1. Bir projede ApiPort çalıştırın.
+1. Her taşınabilir olmayan türün kullanıldığını ve bunun genel taşınabilirliği nasıl etkilediğini anlayın.
+   - Bu türlerin yapısını anlayın. Bu sayı çok küçük ancak sık kullanılıyor mu? Bu sayı çok büyük ancak seyrek kullanılıyor mu? Kullanımları üzerinde mi var, ister kodunuzun genelinde yayılıyor?
+   - Taşınabilir olmayan kodları daha verimli bir şekilde ilgilenebilmeniz için kolayca yalıtmak ister misiniz?
+   - Kodunuzu yeniden düzenlemeniz gerekiyor mu?
+   - Taşınabilir olmayan türler için aynı görevi gerçekleştiren alternatif API 'Ler var mı? Örneğin, <xref:System.Net.WebClient> sınıfını kullanıyorsanız, bunun yerine <xref:System.Net.Http.HttpClient> sınıfını kullanabilirsiniz.
+   - Bir görevi gerçekleştirmek için kullanılabilecek farklı taşınabilir API 'Ler var, bu da bir iade değişikliği olmasa bile Örneğin <xref:System.Xml.Schema.XmlSchema> , XML 'yi ayrıştırmak ancak XML şema keşfi gerekmiyorsa, API 'leri kullanabilir <xref:System.Xml.Linq> ve bir API 'ye güvenmek yerine kendiniz ayrıştırma uygulayabilirsiniz.
+1. Bağlantı noktası zorlaştırılması gereken derlemeleriniz varsa .NET Framework şu an için de bu şekilde ayrılsın mı? Göz önünde bulundurmanız gereken bazı noktalar şunlardır:
+   - Kitaplığınızda .NET Core ile uyumlu olmayan bazı işlevlere sahip olabilirsiniz çünkü .NET Framework veya Windows 'a özgü işlevselliği çok fazla yoğun bir şekilde kullanır. Bu işlevi şimdilik geride bırakmak ve bir .NET Core sürümünü, kaynakların bağlantı noktası için kullanılabilir olana kadar geçici olarak daha az özelliklerle kitaplığınızdan serbest bırakmak için geçerlidir.
+   - Yeniden düzenleme yardım ister misiniz?
+1. Kullanılamayan .NET Framework API 'niz için kendi uygulamanızı yazmak mantıklı mi?
+   [.NET Framework başvuru kaynağından](https://github.com/Microsoft/referencesource)kodu kopyalamayı, değiştirmeyi ve kullanmayı düşünebilirsiniz. Başvuru kaynak kodu, [MIT Lisansı](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt)kapsamında lisanslanır, bu nedenle kaynağı kendi kodunuz için temel olarak kullanmak için önemli bir özgürlük vardır. Yalnızca kodunuzda Microsoft 'un düzgün şekilde öznitelediğinizden emin olun.
+1. Bu işlemi, farklı projeler için gerektiği şekilde tekrarlayın.
  
-Analiz aşaması, kod temelinizde boyutuna bağlı olarak biraz zaman alabilir. Genellikle bir plan geliştirmek için gereken değişiklikleri ve kapsamı kaydeder kapsamlı olarak anlamak için bu onay aşamasında zaman harcadığı zaman uzun vadede, özellikle karmaşık bir kod temeli varsa.
+Analiz aşaması, kod tabanınızın boyutuna bağlı olarak biraz zaman alabilir. Bu aşamada, gereken değişikliklerin kapsamını ayrıntılı olarak anlamak ve bir plan geliştirmek için zaman harcamanız, özellikle karmaşık bir kod tabanınız varsa, genellikle uzun çalıştırmaya zaman kazandırır.
 
-Planınızın önemli bir değişiklik yapmadan aşağıdakilerle ilgili olabilir, .NET Framework 4.7.2, bu önceki yaklaşımın daha fazla yapılandırılmış bir sürüm değişikliği yapma hedefleyen hala çalışırken kod tabanı. Nasıl, planınızın çalıştırma hakkında gidin, kod temeli üzerinde bağlıdır.
+Planınız, .NET Framework 4.7.2 ' i hedeflerken, bu, önceki yaklaşımın daha yapılandırılmış bir sürümünü yaparak kod tabanınızda önemli değişiklikler yapmayı gerektirebilir. Planınızı yürütme hakkında nasıl gittiğiniz, kod tabanınıza bağımlıdır.
 
-### <a name="mixing-approaches"></a>Yaklaşım karıştırma
+### <a name="mixing-approaches"></a>Yaklaşımları karıştırma
 
-Proje başına temelinde yukarıdaki yaklaşımları karıştırmak olasıdır. Ne de ve kod temeliniz için anlamlı yapmanız gerekir.
+Yukarıdaki yaklaşımlardan proje başına temelinde karıştıracaksınız. Sizin ve kod tabanınız için en mantıklı şeyi yapmanız gerekir.
 
-## <a name="porting-your-tests"></a>Testlerinizi taşıma
+## <a name="porting-your-tests"></a>Testlerinizin taşıma
 
-.NET Core için bağlantı noktası olarak kodunuzu test etmek için kodunuzu unity'nin zaman her şeyin çalıştığından emin olmak için en iyi yolu var. Bunu yapmak için derlemeler ve testler için .NET Core çalıştıran bir test çerçevesi kullanmak gerekir. Şu anda üç seçeneğiniz vardır:
+Kodunuzu yazarken her şeyin çalıştığından emin olmanın en iyi yolu, .NET Core 'a bağlantı noktası oluştururken kodunuzun test sağlamaktır. Bunu yapmak için .NET Core için test oluşturup çalıştıran bir test çerçevesi kullanmanız gerekir. Şu anda üç seçeneğiniz vardır:
 
 - [xUnit](https://xunit.github.io/)
   * [Başlarken](https://xunit.github.io/docs/getting-started-dotnet-core.html)
-  * [MSTest projesi için xUnit dönüştürmek için aracı](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
+  * [MSTest projesini xUnit 'e dönüştüren araç](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
   * [Başlarken](https://github.com/nunit/docs/wiki/Installation)
-  * [NUnit için mstest'i geçirme hakkında Blog Gönderisi](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
-- [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
+  * [MSTest 'ten NUnit 'e geçiş hakkında blog gönderisi](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
+- ['I](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
 ## <a name="recommended-approach-to-porting"></a>Taşıma için önerilen yaklaşım
 
-Sonuç olarak, taşıma çaba yoğun olarak .NET Framework kodunuzu nasıl yapılandırıldığına bağlıdır. Kodunuzu bağlantı noktası için iyi bir başlangıç yoludur *temel* kodunuzun temel bileşenleri kitaplığınızın. Bu, veri modelleri veya bazı diğer temel sınıflar ve diğer her şey doğrudan veya dolaylı olarak kullanan yöntemleri olabilir.
+Son olarak, taşıma çabası .NET Framework kodunuzun nasıl yapılandırıldığına bağlıdır. Kodunuzun bağlantı noktasının temel bileşenleri olan, kitaplığınızın *temelini* oluşturmaya yönelik iyi bir yoldur. Bu, başka her şeyin doğrudan veya dolaylı olarak kullandığı veri modelleri veya diğer temel sınıflar ve yöntemler olabilir.
 
-1. Bağlantı noktası şu anda taşıma kitaplığınızın katman testleri test projesi.
-1. Kitaplığınızı tabanı yeni bir .NET Core projesine kopyalayın ve .NET standart, desteklemek istediğiniz sürümü seçin.
-1. Derleme kodu almak için gerekli değişiklikleri yapın. Bu çoğunu eklemek için NuGet Paket bağımlılıklarını gerektirebilir, *csproj* dosya.
-1. Testleri çalıştırmak ve gerekli ayarlamaları yapın.
-1. Sonraki katmanı kod bağlantı noktası, çekme ve önceki adımları yineleyin.
+1. Şu anda taşıma yaptığınız kitaplığınızın katmanını sınayan test projesi bağlantı noktası.
+1. Kitaplığınızın temelini yeni bir .NET Core projesine kopyalayın ve desteklemek istediğiniz .NET Standard sürümünü seçin.
+1. Derlenecek kodu almak için gereken değişiklikleri yapın. Bunun büyük bölümü, *csproj* dosyanıza NuGet paketi bağımlılıkları eklenmesini gerektirebilir.
+1. Testleri çalıştırın ve gerekli ayarlamaları yapın.
+1. Üzerinde bağlantı noktası için sonraki kod katmanını seçin ve önceki adımları tekrarlayın.
 
-Kitaplığınızın temel ile başlayın ve temel dışa taşıma ve her katman gerektiği gibi test, bağlantı noktası oluşturma sorunları aynı anda bir kod katmanı için yalıtılmış olduğu sistematik bir işlem olur.
+Kitaplığınızın temelini başlatıp her bir katmanı gerektiği gibi test ederseniz, taşıma işlemi, sorunların tek seferde bir kod katmanına yalıtılabileceği sistematik bir işlemdir.
 
 >[!div class="step-by-step"]
 >[Next](project-structure.md)

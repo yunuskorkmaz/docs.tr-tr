@@ -1,24 +1,26 @@
 ---
-ms.openlocfilehash: 0c8a16936173b1e599d018d81432ca6b73c08e53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 246dbeed69fbd54c2c52bce2414363ddc9c62204
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607355"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658446"
 ---
 # <a name="net-docs"></a>.NET belgeleri
 
-Bu depo, .NET için kavramsal belgelerde içerir. [.NET belgeleri site](https://docs.microsoft.com/dotnet) Bunun yanı sıra birden çok deposu oluşturulur:
+Bu depo, .NET kavramsal belgelerini içerir. [.Net belgeleri sitesi](https://docs.microsoft.com/dotnet) buna ek olarak birden çok depodan oluşturulmuştur:
 
 - [Kod örnekleri ve kod parçacıkları](https://github.com/dotnet/samples)
 - [API başvurusu](https://github.com/dotnet/dotnet-api-docs)
-- [.NET derleyici Platformu SDK başvurusu](https://github.com/dotnet/roslyn-api-docs)
+- [.NET Compiler Platform SDK başvurusu](https://github.com/dotnet/roslyn-api-docs)
 
-Sorunlar ve bu depolar üçü için görevleri buraya izlenir. Büyük bir topluluk bu kaynaklara sahibiz. Sorunlara zamanında yanıt vermek için en iyi çalışmalarımız vermiyoruz. Daha fazla sınıflandırma ve sorunları çözmek için sunduğumuz yordamlar hakkında bizim [ilke sorunları](issues-policy.md) konu.
+Tüm sorunlar ve görevler, API başvuru deposu burada izlenir. Bu kaynakları kullanan büyük bir topluluğumuz var. Sorunları zamanında yanıtlamak için en iyi çabamız yaptık. Sorunlarımız hakkında daha fazla bilgi edinmek için [sorun ilkesi ilkenizde](issues-policy.md) sorunları sınıflandırma ve çözümleme konusunda daha fazla bilgi edinebilirsiniz.
 
-Biz, geliştirmek ve .NET belgeleri tamamlamak yardımcı olmak için katkılar Hoş Geldiniz. Katkıda bulunmak için bkz: [projeleri .NET topluluğa katkıda bulunanlar için](https://github.com/dotnet/docs/projects/35) fikirleri. [Katkıda bulunan Kılavuzu](CONTRIBUTING.md) yordamlarını kullanırız yönergeler içerir. Kontrol [sorunlar listesinde](https://github.com/dotnet/docs/issues) ilginizi çeken bir görev.
+.NET belgelerini iyileştirmemize ve tamammamıza yardımcı olacak katkılarla katılıyoruz. Katkıda bulunmak için, fikirler için [.net Community katkı sağlayanlar projelerine](https://github.com/dotnet/docs/projects/35) bakın. [Katkıda bulunan kılavuzda](CONTRIBUTING.md) , kullandığımız yordamlarla ilgili yönergeler bulunur. Veya ilgilendiğiniz görevler için [sorunlar listesini](https://github.com/dotnet/docs/issues) kontrol edin. 
 
-Biz, tahmin [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) ve [Unity](https://docs.unity3d.com/Manual/index.html) kullanın Bu belgeleri kazandırır.
+[Kod galerisindeki](https://code.msdn.microsoft.com) .NET Framework hedefleyen mevcut kodu, [örnek deponuzda](https://github.com/dotnet/samples) depolanan ve [Samples tarayıcısından](https://docs.microsoft.com/samples/browse)yüklenebilen .NET Core uygulamalarına geçirmeye yardımcı olmaya çalışıyorsanız, bkz. [Kod Galerisi geçiş](https://github.com/dotnet/docs/projects/88) projesi. 
 
-Bu proje topluluğumuza beklenen davranışını açıklamak için katkıda bulunan Covenant tarafından tanımlanan şartları BENİMSEDİ.
-Daha fazla bilgi için [.NET Foundation Kullanım Şartları](https://dotnetfoundation.org/code-of-conduct).
+[Xamarin](https://docs.microsoft.com/xamarin), [mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) ve [Unity](https://docs.unity3d.com/Manual/index.html) 'nin bu belgeleri de kullanacağı tahmin ederiz.
+
+Bu proje, topluluğumuza beklenen davranışı açıklığa kavuşturmak için katkıda bulunan Covenant tarafından tanımlanan kullanım kodunu benimsemiştir.
+Daha fazla bilgi için bkz. [.net Foundation kullanım kuralları](https://dotnetfoundation.org/code-of-conduct).

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: d6e31d55ab271376501064c3aa9a9ce38c14063d
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039730"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666169"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGrid Denetimini Biçimlendirme
 
@@ -34,7 +34,6 @@ Bir <xref:System.Windows.Forms.DataGrid> denetimin çeşitli bölümlerine farkl
 Bir veri kılavuzunu biçimlendirirken ilk adım olarak, <xref:System.Windows.Forms.DataGrid> kendi özelliklerini ayarlayabilirsiniz. Bu renk ve biçim seçimleri, daha sonra görünen veri tablolarına ve sütunlara göre değişiklik yapabileceğiniz bir temel oluşturur.
 
 Aşağıdaki yordam, bir <xref:System.Windows.Forms.DataGrid> denetim içeren bir form ile **Windows uygulama** projesi gerektirir. Böyle bir projeyi ayarlama hakkında daha fazla bilgi için bkz [. nasıl yapılır: Windows Forms bir uygulama projesi](/visualstudio/ide/step-1-create-a-windows-forms-application-project) oluşturun ve [şunları yapın: Windows Forms](how-to-add-controls-to-windows-forms.md)denetimleri ekleyin. Visual Studio 2005 ' de, <xref:System.Windows.Forms.DataGrid> denetim **araç kutusunda** varsayılan olarak değildir. Daha fazla bilgi için [nasıl yapılır: Araç kutusuna](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))öğe ekleyin.
-
 
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>DataGrid denetimi için varsayılan bir stil oluşturmak için
 

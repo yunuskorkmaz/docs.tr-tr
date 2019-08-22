@@ -5,20 +5,20 @@ helpviewer_keywords:
 - <clear> element for <namedCaches>
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
-ms.openlocfilehash: e563f8f27538e70ba90465fc28d300754509f7a4
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: a90970e468359714bbbb858f3f300c26b5757a4d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423316"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658856"
 ---
-# <a name="clear-element-for-namedcaches"></a>\<Temizle > öğesi için \<namedCaches >
-Tüm temizler `namedCache` girişleri `namedCaches` koleksiyonu için bir önbellek.  
+# <a name="clear-element-for-namedcaches"></a>\<namedönbellekler için \<> öğesini Temizle >
+Bir bellek `namedCache` önbelleği için `namedCaches` koleksiyondaki tüm girişleri temizler.  
   
- \<System.Runtime.Caching >  
-\<memoryCache>  
-\<namedCaches>  
-\<Ekle >  
+ \<System. Runtime. Caching >  
+\<memoryCache >  
+\<Namedönbellekler >  
+\<> Ekle  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,11 +45,11 @@ Tüm temizler `namedCache` girişleri `namedCaches` koleksiyonu için bir önbel
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Yapılandırma ayarları için adlandırılmış bir koleksiyonunu içeren <xref:System.Runtime.Caching.MemoryCache> örnekleri.|  
+|[\<Namedönbellekler >](namedcaches-element-cache-settings.md)|Adlandırılmış <xref:System.Runtime.Caching.MemoryCache> örnekler için yapılandırma ayarlarının bir koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `clear` Öğesi tümünü temizler `namedCache` girişleri adlandırılmış önbelleği koleksiyondaki bir önbellek. Kullanabileceğiniz `clear` kullanmadan önce öğesi `add` vardır başka hiçbir emin olmak için yeni bir adlandırılmış önbellek girdisi eklemek için öğesi adlı önbellekler koleksiyondaki.  
+ Öğesi `clear` , bir bellek `namedCache` önbelleği için adlandırılmış önbellek koleksiyonundaki tüm girişleri temizler. Koleksiyonda başka bir adlandırılmış `clear` önbellek bulunmadığından emin olmak için `add` , öğesini kullanarak yeni bir adlandırılmış önbellek girişi ekleyebilmeniz için öğesini kullanabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<namedCaches > öğesi (önbellek ayarları)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<Namedönbellekler > öğesi (önbellek ayarları)](namedcaches-element-cache-settings.md)

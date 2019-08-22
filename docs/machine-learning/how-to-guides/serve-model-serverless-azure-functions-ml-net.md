@@ -1,72 +1,72 @@
 ---
 title: Modeli Azure İşlevleri’ne dağıtma
-description: ML.NET yaklaşım analizi makine öğrenme modelinin tahmin için Azure işlevleri'ni kullanarak internet üzerinden hizmet
-ms.date: 06/11/2019
+description: Azure Işlevleri 'ni kullanarak Internet üzerinden tahmin için ML.NET yaklaşım analizi makine öğrenimi modelini sunar
+ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 7df7a6f9fcc5a4702171e1aac4b6b67e0c343748
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 96b62017994da5b7b209c441b3e7fb760cad5201
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025984"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666677"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Modeli Azure İşlevleri’ne dağıtma
 
-HTTP üzerinden Azure işlevleri ile sunucusuz ortam öğrenme modeli tahminler elde etmek için önceden eğitilmiş bir ML.NET makine dağıtmayı öğrenin.
+Azure Işlevleri sunucusuz bir ortam aracılığıyla HTTP üzerinden tahmin için önceden eğitilen ML.NET makine öğrenimi modelini dağıtmayı öğrenin.
 
 > [!NOTE]
-> `PredictionEnginePool` Hizmet uzantısı, şu anda Önizleme aşamasındadır.
+> `PredictionEnginePool`Hizmet Uzantısı Şu anda önizleme aşamasındadır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- [Visual Studio 2017 15.6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) "Azure geliştirme yüklü" ve ".NET Core çoklu platform geliştirme" iş yükü.
-- NuGet paketi sürüm 1.0.28+ Microsoft.NET.Sdk.Functions.
-- [Azure işlevleri araçları](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
+- ".NET Core platformlar arası geliştirme" iş yükü ve "Azure geliştirme" yüklü olan [Visual Studio 2017 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) .
+- Microsoft. NET. SDK. Functions NuGet paketi sürüm 1.0.28 +.
+- [Azure Işlevleri araçları](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
-- Önceden eğitilmiş model. Kullanım [ML.NET yaklaşım analizi Öğreticisi](../tutorials/sentiment-analysis.md) kendi modelinizi oluşturun veya bunu indirmek üzere [önceden eğitilmiş yaklaşım analizi, machine learning modeli](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
+- Önceden eğitilen model. Kendi modelinizi derlemek için [ML.NET yaklaşım Analizi öğreticisini](../tutorials/sentiment-analysis.md) kullanın veya bu [önceden eğitilen yaklaşım Analizi Machine Learning modelini](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip) indirin
 
-## <a name="create-azure-functions-project"></a>Azure işlevleri projesi oluşturma
+## <a name="create-azure-functions-project"></a>Azure Işlevleri projesi oluştur
 
-1. Visual Studio 2017'yi açın. Seçin **dosya** > **yeni** > **proje** menü çubuğundan. İçinde **yeni proje** iletişim kutusunda **Visual C#**  düğümünü ve ardından **bulut** düğümü. Ardından **Azure işlevleri** proje şablonu. İçinde **adı** metin kutusuna "SentimentAnalysisFunctionsApp" yazın ve ardından **Tamam** düğmesi.
-1. İçinde **yeni proje** iletişim kutusunda, proje seçeneklerinde Yukarıdaki açılan listeyi açın ve seçin **Azure işlevler v2 (.NET Core)** . Ardından, **Http tetikleyicisi** proje ve ardından **Tamam** düğmesi.
-1. Adlı bir dizin oluşturmak *MLModels* modelinizi kaydetmek için projenizde:
+1. Visual Studio 2017'yi açın. Menü çubuğundan **Dosya** > **Yeni** > **Proje** ' yi seçin. **Yeni proje** iletişim kutusunda, **Visual C#**  düğümünü ve ardından **bulut** düğümünü seçin. Ardından **Azure işlevleri** proje şablonunu seçin. **Ad** metin kutusuna "SentimentAnalysisFunctionsApp" yazın ve **Tamam** düğmesini seçin.
+1. **Yeni proje** iletişim kutusunda, proje seçeneklerinin üzerindeki açılan menüyü açın ve **Azure işlevleri v2 (.NET Core)** seçeneğini belirleyin. Ardından, **http tetikleyicisi** projesini seçin ve **Tamam** düğmesini seçin.
+1. Modelinize kaydetmek için projenizde *Mlmodeller* adlı bir dizin oluşturun:
 
-    İçinde **Çözüm Gezgini**, projenize sağ tıklayıp **Ekle** > **yeni klasör**. "MLModels" yazın ve Enter tuşuna basın.
+    **Çözüm Gezgini**, projenize sağ tıklayın ve**Yeni klasör** **Ekle** > ' yi seçin. "Mlmodeller" yazın ve ENTER tuşuna basın.
 
-1. Yükleme **Microsoft.ML NuGet paketini**:
+1. **Microsoft.ml NuGet paketini**yükler:
 
-    Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin, Gözat sekmesini seçin, arama **Microsoft.ML**, bu paket listesinde seçip **yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz.
+    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, araştır sekmesini seçin, **Microsoft.ml**için arama yapın, listeden bu paketi seçin ve sonra da **Install** düğmesini seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin.
 
-1. Yükleme **Microsoft.Azure.Functions.Extensions NuGet paketini**:
+1. **Microsoft. Azure. Functions. Extensions NuGet paketini**yükler:
 
-    Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin, Gözat sekmesini seçin, arama **Microsoft.Azure.Functions.Extensions**, bu paket listesinde seçip **yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz.
+    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, gözden geçirme sekmesini seçin, **Microsoft. Azure. Functions. Extensions**araması yapın, listeden bu paketi seçin ve sonra da **Install** düğmesini seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin.
 
-1. Yükleme **Microsoft.Extensions.ML NuGet paketini**:
+1. **Microsoft.Extensions.ml NuGet paketini**yükler:
 
-    Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin, Gözat sekmesini seçin, arama **Microsoft.Extensions.ML**, bu paket listesinde seçip **yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz.
+    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, araştır sekmesini seçin, **Microsoft.Extensions.ml**için arama yapın, listeden bu paketi seçin ve sonra da **Install** düğmesini seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin.
 
-1. Güncelleştirme **Microsoft.NET.Sdk.Functions NuGet paketini** 1.0.28 sürümü için:
+1. **Microsoft. net. SDK. Functions NuGet paketini** 1.0.28 + sürümüne güncelleştirin:
 
-    Çözüm Gezgini'nde seçin ve proje üzerinde sağ **NuGet paketlerini Yönet**. Paket kaynağı olarak "nuget.org" seçin, yüklü sekmesini seçin, arama **Microsoft.NET.Sdk.Functions**, bu paket listesinde, select 1.0.28 veya sonraki sürümü açılır listeden seçip **güncelleştirme**  düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz.
+    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, yüklü sekmesini seçin, **Microsoft. net. SDK. Functions**araması yapın, listeden bu paketi seçin, sürüm açılan menüsünde 1.0.28 veya üzeri ' i seçin ve **Güncelleştir** düğmesini seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin.
 
-## <a name="add-pre-trained-model-to-project"></a>Önceden eğitilmiş model projeye Ekle
+## <a name="add-pre-trained-model-to-project"></a>Projeye önceden eğitilen Model Ekle
 
-1. Önceden oluşturulmuş modelinizi kopyalama *MLModels* klasör.
-1. Çözüm Gezgini'nde, önceden oluşturulmuş model dosyasını sağ tıklatın ve seçin **özellikleri**. Altında **Gelişmiş**, değiştirin **çıkış dizinine Kopyala** için **yeniyse Kopyala**.
+1. Önceden oluşturulmuş modelinizi *Mlmodeller* klasörüne kopyalayın.
+1. Çözüm Gezgini, önceden oluşturulmuş model dosyanıza sağ tıklayıp **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala**olarak değiştirin.
 
-## <a name="create-azure-function-to-analyze-sentiment"></a>Yaklaşımı analiz etmek için Azure işlevi oluşturma
+## <a name="create-azure-function-to-analyze-sentiment"></a>Yaklaşımı çözümlemek için Azure Işlevi oluşturma
 
-Yaklaşım tahmin etmek için bir sınıf oluşturun. Yeni bir sınıf, projenize ekleyin:
+Yaklaşımı tahmin etmek için bir sınıf oluşturun. Projenize yeni bir sınıf ekleyin:
 
-1. İçinde **Çözüm Gezgini**projeye sağ tıklayın ve ardından **Ekle** > **yeni öğe**.
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından**Yeni öğe** **Ekle** > ' yi seçin.
 
-1. İçinde **Yeni Öğe Ekle** iletişim kutusunda **Azure işlevi** değiştirip **adı** alanı *AnalyzeSentiment.cs*. Ardından, **Ekle** düğmesi.
+1. **Yeni öğe Ekle** Iletişim kutusunda **Azure işlevi** ' ni seçin ve **ad** alanını *AnalyzeSentiment.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 
-1. İçinde **yeni Azure işlevi** iletişim kutusunda **Http tetikleyicisi**. Ardından, **Tamam** düğmesi.
+1. **Yeni Azure işlevi** Iletişim kutusunda **http tetikleyicisi**' ni seçin. Ardından **Tamam** düğmesini seçin.
 
-    *AnalyzeSentiment.cs* dosyası Kod Düzenleyicisi'nde açılır. Aşağıdaki `using` üstüne deyimi *AnalyzeSentiment.cs*:
+    *AnalyzeSentiment.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki `using` ifadeyi *AnalyzeSentiment.cs*öğesinin en üstüne ekleyin:
 
     ```csharp
     using System;
@@ -82,7 +82,7 @@ Yaklaşım tahmin etmek için bir sınıf oluşturun. Yeni bir sınıf, projeniz
     using SentimentAnalysisFunctionsApp.DataModels;
     ```
 
-    Varsayılan olarak, `AnalyzeSentiment` sınıfı `static`. Kaldırdığınızdan emin olun `static` sınıf tanımından anahtar sözcüğü.
+    Varsayılan olarak, `AnalyzeSentiment` `static`sınıfı. `static` Anahtar sözcüğünü sınıf tanımından kaldırdığınızdan emin olun.
 
     ```csharp
     public class AnalyzeSentiment
@@ -93,19 +93,19 @@ Yaklaşım tahmin etmek için bir sınıf oluşturun. Yeni bir sınıf, projeniz
 
 ## <a name="create-data-models"></a>Veri modelleri oluşturma
 
-Girdi verilerini ve tahminler elde etmek için bazı sınıflar oluşturmanız gerekir. Yeni bir sınıf, projenize ekleyin:
+Giriş verileriniz ve tahminlerinizi için bazı sınıflar oluşturmanız gerekir. Projenize yeni bir sınıf ekleyin:
 
-1. Adlı bir dizin oluşturmak *DataModels* projenizde veri Modellerinizi kaydetmek için: Çözüm Gezgini'nde seçin ve proje üzerinde sağ **Ekle > Yeni klasör**. "DataModels" yazın ve Enter tuşuna basın.
-2. Çözüm Gezgini'nde sağ *DataModels* dizin ve ardından **Ekle > Yeni öğe**.
-3. İçinde **Yeni Öğe Ekle** iletişim kutusunda **sınıfı** değiştirip **adı** alanı *SentimentData.cs*. Ardından, **Ekle** düğmesi. 
+1. Veri modellerinizi kaydetmek için projenizde *Datamodeller* adlı bir dizin oluşturun: Çözüm Gezgini, projenize sağ tıklayın ve **> yeni klasör ekle**' yi seçin. "Datamodeller" yazın ve ENTER tuşuna basın.
+2. Çözüm Gezgini, *veri modelleri* dizinine sağ tıklayın ve sonra **> yeni öğe Ekle**' yi seçin.
+3. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *SentimentData.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin. 
 
-    *SentimentData.cs* dosyası Kod Düzenleyicisi'nde açılır. Aşağıdaki using deyimini üstüne *SentimentData.cs*:
+    *SentimentData.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *SentimentData.cs*öğesinin en üstüne ekleyin:
 
     ```csharp
     using Microsoft.ML.Data;
     ```
 
-    Varolan sınıf tanımına kaldırmak ve aşağıdaki kodu ekleyin *SentimentData.cs* dosyası:
+    Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu *SentimentData.cs* dosyasına ekleyin:
     
     ```csharp
     public class SentimentData
@@ -119,14 +119,14 @@ Girdi verilerini ve tahminler elde etmek için bazı sınıflar oluşturmanız g
     }
     ```
 
-4. Çözüm Gezgini'nde sağ *DataModels* dizin ve ardından **Ekle > Yeni öğe**.
-5. İçinde **Yeni Öğe Ekle** iletişim kutusunda **sınıfı** değiştirip **adı** alanı *SentimentPrediction.cs*. Ardından, **Ekle** düğmesi. *SentimentPrediction.cs* dosyası Kod Düzenleyicisi'nde açılır. Aşağıdaki using deyimini üstüne *SentimentPrediction.cs*:
+4. Çözüm Gezgini, *veri modelleri* dizinine sağ tıklayın ve sonra **> yeni öğe Ekle**' yi seçin.
+5. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *SentimentPrediction.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin. *SentimentPrediction.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *SentimentPrediction.cs*öğesinin en üstüne ekleyin:
 
     ```csharp
     using Microsoft.ML.Data;
     ```
 
-    Varolan sınıf tanımına kaldırmak ve aşağıdaki kodu ekleyin *SentimentPrediction.cs* dosyası:
+    Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu *SentimentPrediction.cs* dosyasına ekleyin:
 
     ```csharp
     public class SentimentPrediction : SentimentData
@@ -141,36 +141,35 @@ Girdi verilerini ve tahminler elde etmek için bazı sınıflar oluşturmanız g
     }
     ```
 
-    `SentimentPrediction` devralınan `SentimentData` özgün verilere erişim sağlayan `SentimentText` özelliğinin yanı sıra model tarafından oluşturulan çıktı.
+    `SentimentPrediction``SentimentData` ,`SentimentText` özelliğindeki özgün verilere ve model tarafından oluşturulan çıktıya erişim sağlayan öğesinden devralır.
 
-## <a name="register-predictionenginepool-service"></a>PredictionEnginePool hizmeti kaydedin
+## <a name="register-predictionenginepool-service"></a>PredictionEnginePool hizmetini Kaydet
 
-Tek bir tahminde bulunmak için kullanmak [ `PredictionEngine` ](xref:Microsoft.ML.PredictionEngine%602). Kullanmak için [ `PredictionEngine` ](xref:Microsoft.ML.PredictionEngine%602) gerektiğinde uygulamanızı oluşturmanız gerekir. Bu durumda, dikkate alınması gereken bir en iyi bağımlılık ekleme yöntemidir.
+Tek bir tahmin yapmak için kullanın [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Uygulamanızda kullanabilmeniz [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) için, gerektiğinde oluşturmanız gerekir. Bu durumda, dikkate alınması gereken en iyi yöntem bağımlılık ekleme yöntemidir.
 
-Hakkında bilgi edinmek istiyorsanız aşağıdaki bağlantıda daha fazla bilgi sağlar. [bağımlılık ekleme](https://en.wikipedia.org/wiki/Dependency_injection).
+Aşağıdaki bağlantı, [bağımlılık ekleme](https://en.wikipedia.org/wiki/Dependency_injection)hakkında bilgi edinmek istiyorsanız daha fazla bilgi sağlar.
 
-1. İçinde **Çözüm Gezgini**projeye sağ tıklayın ve ardından **Ekle** > **yeni öğe**.
-1. İçinde **Yeni Öğe Ekle** iletişim kutusunda **sınıfı** değiştirip **adı** alanı *Startup.cs*. Ardından, **Ekle** düğmesi. 
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından**Yeni öğe** **Ekle** > ' yi seçin.
+1. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *Startup.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin. 
 
-    *Startup.cs* dosyası Kod Düzenleyicisi'nde açılır. Aşağıdaki using deyimini üstüne *Startup.cs*:
+    *Startup.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *Startup.cs*öğesinin en üstüne ekleyin:
 
     ```csharp
-    using Microsoft.Azure.WebJobs;
-    using Microsoft.Azure.WebJobs.Hosting;
+    using Microsoft.Azure.Functions.Extensions.DependencyInjection;
     using Microsoft.Extensions.ML;
     using SentimentAnalysisFunctionsApp;
     using SentimentAnalysisFunctionsApp.DataModels;
     ```
 
-    Kullanarak aşağıdaki var olan kod kaldırma deyimleri ve aşağıdaki kodu ekleyin *Startup.cs* dosyası:
+    Using deyimlerinin altındaki mevcut kodu kaldırın ve *Startup.cs* dosyasına aşağıdaki kodu ekleyin:
 
     ```csharp
-    [assembly: WebJobsStartup(typeof(Startup))]
+    [assembly: FunctionsStartup(typeof(Startup))]
     namespace SentimentAnalysisFunctionsApp
     {
-        class Startup : IWebJobsStartup
+        public class Startup : FunctionsStartup
         {
-            public void Configure(IWebJobsBuilder builder)
+            public override void Configure(IFunctionsHostBuilder builder)
             {
                 builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
                     .FromFile("MLModels/sentiment_model.zip");
@@ -179,14 +178,14 @@ Hakkında bilgi edinmek istiyorsanız aşağıdaki bağlantıda daha fazla bilgi
     }
     ```
 
-Yüksek düzeyde, bu kod nesneleri ve otomatik yerine el ile yapmanıza gerek kalmadan uygulama tarafından istendiğinde hizmetlerini başlatır.
+Yüksek düzeyde bu kod, uygulama tarafından el ile yapmak yerine nesneleri ve hizmetleri otomatik olarak başlatır.
 
 > [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) iş parçacığı açısından güvenli değildir. Performansı artırmak ve iş parçacığı güvenliği için kullanmak `PredictionEnginePool` oluşturan hizmeti bir [ `ObjectPool` ](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) , `PredictionEngine` nesneleri uygulama kullanımı. 
+> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Gelişmiş performans ve iş parçacığı güvenliği için, uygulama `PredictionEnginePool` kullanımı için `PredictionEngine` bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) nesne oluşturan hizmetini kullanın. 
 
-## <a name="load-the-model-into-the-function"></a>İşleve model yüklenemiyor
+## <a name="load-the-model-into-the-function"></a>Modeli işleve yükleme
 
-Aşağıdaki kodu ekleyin *AnalyzeSentiment* sınıfı:
+Aşağıdaki kodu, *çözümleyiciler* sınıfının içine ekleyin:
 
 ```csharp
 private readonly PredictionEnginePool<SentimentData, SentimentPrediction> _predictionEnginePool;
@@ -198,11 +197,11 @@ public AnalyzeSentiment(PredictionEnginePool<SentimentData, SentimentPrediction>
 }
 ```
 
-Bu kod atar `PredictionEnginePool` bağımlılık ekleme erişmenizi işlevin oluşturucusuna geçirerek.
+Bu kod, `PredictionEnginePool` bağımlılığı ekleme yoluyla aldığınız işlevin oluşturucusuna geçirerek öğesine atar.
 
-## <a name="use-the-model-to-make-predictions"></a>Tahminler elde etmeye modelini kullanın
+## <a name="use-the-model-to-make-predictions"></a>Tahminleri yapmak için modeli kullanın
 
-Mevcut uygulanması yerine *çalıştırmak* yönteminde *AnalyzeSentiment* sınıfı aşağıdaki kod ile:
+*Çözümleyiciler* sınıfında bulunan *Run* yönteminin mevcut uygulamasını aşağıdaki kodla değiştirin:
 
 ```csharp
 [FunctionName("AnalyzeSentiment")]
@@ -227,26 +226,26 @@ ILogger log)
 }
 ```
 
-Zaman `Run` yöntemini yürütür, HTTP isteği gelen verileri seri durumdan ve için girdi olarak kullanılan `PredictionEnginePool`. `Predict` Yöntemi tahmin oluşturmak ve bir sonuç kullanıcıya sonra çağrılır. 
+Yöntem yürütüldüğünde, http isteğinden gelen veriler seri durumdan çıkarılmış olur ve `PredictionEnginePool`için giriş olarak kullanılır. `Run` Daha `Predict` sonra yöntemi bir tahmin oluşturmak ve sonucu kullanıcıya döndürmek için çağrılır. 
 
 ## <a name="test-locally"></a>Yerel olarak test etme
 
-Her şeyi ayarlanır, bu uygulamayı test etmek için zaman değil:
+Her şey ayarlandığına göre, uygulamayı test etmek zaman alabilir:
 
 1. Uygulamayı çalıştırma
-1. PowerShell'i açın ve kodu girin bağlantı noktası, bağlantı noktası olduğu istemine uygulamanız çalışıyor. Genellikle 7071 bağlantı noktasıdır.
+1. PowerShell 'i açın ve kodu, uygulamanızın üzerinde çalıştığı bağlantı noktası olan bağlantı noktasının bulunduğu istemine girin. Genellikle bağlantı noktası 7071 ' dir.
 
     ```powershell
     Invoke-RestMethod "http://localhost:<PORT>/api/AnalyzeSentiment" -Method Post -Body (@{SentimentText="This is a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
     ```
 
-    Başarılı olursa çıktı aşağıdaki metne benzer görünmelidir:
+    Başarılı olursa, çıkış aşağıdaki metne benzer görünmelidir:
     
     ```powershell
     Negative
     ```
 
-Tebrikler! Ayrıca, bir Azure işlevi kullanarak internet üzerinden tahminlerde bulunmak üzere modelinizi başarıyla hizmet vermektedir.
+Tebrikler! Azure Işlevi kullanarak, internet üzerinden tahmine dayalı hale getirmek için modelinizi başarıyla sundu.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 

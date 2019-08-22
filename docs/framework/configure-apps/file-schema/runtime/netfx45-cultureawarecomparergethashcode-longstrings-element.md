@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23917977add2343732957eaa8dad5d2176315acf
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: bd59d1bcc489f248cbeb397afffb638071df17b6
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689868"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663595"
 ---
-# <a name="netfx45cultureawarecomparergethashcodelongstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings > öğesi
+# <a name="netfx45_cultureawarecomparergethashcode_longstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings > öğesi
 
-Çalışma zamanı için karma kodları hesaplamak üzere sabit miktarda bellek kullanıp kullanmayacağını belirtir <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> yöntemi.
+Çalışma zamanının, <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> yöntemin karma kodlarını hesaplamak için sabit miktarda bellek kullanıp kullanmadığını belirtir.
 
 \<Yapılandırma > \
 \<çalışma zamanı > \
@@ -44,8 +44,8 @@ ms.locfileid: "66689868"
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|0|Ortak dil çalışma zamanı değişken miktarda bellek ayırır <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> karma kodları hesaplamak üzere yöntemi. Bu varsayılandır.|
-|1.|Ortak dil çalışma zamanı sabit miktarda bellek ayırır <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> karma kodları hesaplamak üzere yöntemi.|
+|0|Ortak dil çalışma zamanı, karma kodları hesaplamak için <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> yöntemi için değişken miktarda bellek ayırır. Bu varsayılandır.|
+|1\.|Ortak dil çalışma zamanı, karma kodları hesaplamak için <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> yöntemi için sabit miktarda bellek ayırır.|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -60,13 +60,13 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Varsayılan olarak, ortak dil çalışma zamanı değişken miktarda bellek ayırır. <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> yöntemi ve bir <xref:System.ArgumentException> yöntem çok büyük dizelerin karma kodunu (birkaç milyon karakterden uzun) hesaplamayı denediğinde oluşturulur. Bu öğe bir uygulama yapılandırma dosyası ve ayarı ekleyerek, `enabled` özniteliğini "1", şu belirtebilirsiniz <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> yöntemi, karma kodları hesaplama için sabit miktarda bellek ayıran başka bir algoritma kullanın.
+Varsayılan olarak, ortak dil çalışma zamanı <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> yöntemi için değişken miktarda bellek ayırır <xref:System.ArgumentException> ve yöntemi çok büyük dizelerin karma kodunu (birkaç milyon karakter uzunluğunda) hesaplamaya çalıştığında oluşturulabilir. Bu öğeyi bir uygulama yapılandırma dosyasına ekleyerek ve `enabled` özniteliğini "1" olarak ayarlayarak, <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> yöntemin karma kodların hesaplaması için sabit miktarda bellek ayıran alternatif bir algoritma kullanmasını belirtebilirsiniz.
 
 > [!IMPORTANT]
-> `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` Öğesi kullanılmaz [!INCLUDE[win8](../../../../../includes/win8-md.md)] ve sonraki sürümler.
+> `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` Öğesi [!INCLUDE[win8](../../../../../includes/win8-md.md)] ve sonraki sürümlerinde kullanılmaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)

@@ -2,20 +2,20 @@
 title: schemeSettings için <remove> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-ms.openlocfilehash: f29ee86deaa150324b40f4fac12ead152553e50d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a891eb8a2fd2d66b6435e2ae774ecd4a157c0f9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674447"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659227"
 ---
-# <a name="remove-element-for-schemesettings-uri-settings"></a>\<kaldırma > öğesi (Uri ayarları) schemeSettings için
-Düzen adı için bir düzen ayarı kaldırır.  
+# <a name="remove-element-for-schemesettings-uri-settings"></a>\<ıviewmesettings için > öğesini kaldır (URI ayarları)
+Düzen adı için bir düzen ayarını kaldırır.  
   
  \<Yapılandırma >  
-\<URI >  
-\<schemeSettings >  
-\<kaldırma >  
+\<Uri >  
+\<> düzeni  
+\<> Kaldır  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,7 +32,7 @@ Düzen adı için bir düzen ayarı kaldırır.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|name|Bu ayarın geçerli olduğu için Düzen adı. Desteklenen değerler şunlardır: adı yalnızca "http" ve name = "https".|  
+|name|Bu ayarın geçerli olduğu Düzen adı. Yalnızca Name = "http" ve Name = "https" değerleri desteklenir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -41,28 +41,28 @@ Düzen adı için bir düzen ayarı kaldırır.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<schemeSettings > öğesi (Uri ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Belirtir nasıl bir <xref:System.Uri> belirli düzenleri için ayrıştırılacak.|  
+|[\<> düzeni öğesi (URI ayarları)](schemesettings-element-uri-settings.md)|Belirli düzenler için <xref:System.Uri> nasıl ayrıştırılacaksınız belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan olarak, <xref:System.Uri?displayProperty=nameWithType> sınıfı Geri Al çıkışları yüzde yolu sınırlayıcı yolu sıkıştırma yürütmeden önce kodlanmış. Bu, aşağıdaki gibi saldırılarına karşı bir güvenlik mekanizması olarak uygulanmıştır:  
+ Varsayılan olarak, <xref:System.Uri?displayProperty=nameWithType> sınıfı yol sıkıştırmayı yürütmeden önce, yüzde olarak kodlanmış yol sınırlayıcılarını kaldırır. Bu, aşağıdaki gibi saldırılara karşı bir güvenlik mekanizması olarak uygulanmıştır:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Bu URI iletilir aşağı modülleri yüzde işlenmemesinin karakterlerin doğru kodlanmış, sunucu tarafından çalıştırılan aşağıdaki komutu neden:  
+ Bu URI, yüzde kodlamalı karakterleri doğru şekilde işlemeyen modüllere geçiriliyorsa, aşağıdaki komut sunucu tarafından yürütülebilmesiyle sonuçlanabilir:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Bu nedenle, <xref:System.Uri?displayProperty=nameWithType> sınıf ilk geri al çıkışları yol ayırıcıları ve yol sıkıştırma uygular. Yukarıda kötü amaçlı URL'sini geçirme sonucunu <xref:System.Uri?displayProperty=nameWithType> sınıf oluşturucu sonuçları aşağıdaki URI:  
+ Bu nedenle, sınıf <xref:System.Uri?displayProperty=nameWithType> ilk olarak yol sınırlayıcılarını iptal eder ve yol sıkıştırması uygular. Yukarıdaki kötü amaçlı URL 'yi sınıf oluşturucusuna geçirmenin sonucu <xref:System.Uri?displayProperty=nameWithType> aşağıdaki URI ile sonuçlanır:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Bu varsayılan davranışı değil, için belirli bir düzeni schemeSettings yapılandırma seçeneğini kullanarak kaldırın kaçış yüzde kodlanmış yolu sınırlayıcılar için değiştirilebilir.  
+ Bu varsayılan davranış, belirli bir düzen için ıgmesettings yapılandırma seçeneği kullanılarak yüzde olmayan kodlanmış yol sınırlayıcılarını kaçırılmamış şekilde değiştirilebilir.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek tarafından kullanılan bir yapılandırma gösterir <xref:System.Uri> http düzeni düzeni ayarlarını silen sınıfı.  
+ Aşağıdaki örnek, http şeması için tüm düzen ayarlarını <xref:System.Uri> kaldıran sınıf tarafından kullanılan bir yapılandırmayı gösterir.  
   
 ```xml  
 <configuration>  
@@ -82,4 +82,4 @@ Düzen adı için bir düzen ayarı kaldırır.
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

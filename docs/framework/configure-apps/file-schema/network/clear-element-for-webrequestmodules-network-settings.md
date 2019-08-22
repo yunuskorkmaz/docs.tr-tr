@@ -10,20 +10,20 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 5dea238629b282776cb45f7b388e655fa557d084
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e175c70bd4932d6a8f9428e8cd9159a47df52558
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674603"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659431"
 ---
-# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<Temizle > webRequestModules (ağ ayarları) için
-Tüm kayıtlı Web isteği modül uygulamadan kaldırır.  
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<webRequestModules için > öğesini temizle (ağ ayarları)
+Tüm kayıtlı Web isteği modüllerini uygulamadan kaldırır.  
   
  \<Yapılandırma >  
 \<system.net>  
 \<webRequestModules >  
-\<Temizleme >  
+\<> Temizle  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,16 +44,16 @@ Tüm kayıtlı Web isteği modül uygulamadan kaldırır.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Ağ konaklarından bilgi istemek için modüller belirtir.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Ağ konaklarından bilgi istemek için kullanılacak modülleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `clear` Öğeyi yapılandırma dosyası veya yapılandırma hiyerarşideki daha yüksek bir düzeyde daha önce tanımlanan tüm kayıtlı Web isteği modüllerini kaldırır.  
+ Öğesi `clear` , daha önce yapılandırma dosyasında veya yapılandırma hiyerarşisinde daha yüksek bir düzeyde tanımlanmış olan tüm kayıtlı Web isteği modüllerini kaldırır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, tüm Web isteği modülleri temizler ve ardından bir Web isteği modülü için HTTP kaydeder.  
+ Aşağıdaki örnek, tüm Web isteği modüllerini temizler ve ardından HTTP için bir Web isteği modülü kaydeder.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ Tüm kayıtlı Web isteği modül uygulamadan kaldırır.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.WebRequest>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

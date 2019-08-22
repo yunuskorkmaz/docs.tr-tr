@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a77c2567401fd80e355bb7fcee17b6684653ebe
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674381"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659039"
 ---
 # <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > öğesi (ağ ayarları)
-Web proxy'leri bulmak için kullanılan komut dosyası özelliklerini yapılandırır.  
+Web proxy 'lerini keşfetme için kullanılan betiğin özelliklerini yapılandırır.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -38,7 +38,7 @@ Web proxy'leri bulmak için kullanılan komut dosyası özelliklerini yapıland�
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`downloadTimeout`|Saat, dakika ve saniye betiği indirmek için en uzun süreyi belirtir. Bir dakika varsayılan değerdir.|  
+|`downloadTimeout`|Betiği saat, dakika ve saniye cinsinden indirmek için en uzun süreyi belirtir. Varsayılan değer bir dakikadır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -47,13 +47,13 @@ Web proxy'leri bulmak için kullanılan komut dosyası özelliklerini yapıland�
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
+|[Ayarlar](settings-element-network-settings.md)|<xref:System.Net> Ad alanı için temel ağ seçeneklerini yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

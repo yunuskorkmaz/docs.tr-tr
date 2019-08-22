@@ -7,38 +7,39 @@ helpviewer_keywords:
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-ms.openlocfilehash: 0f3367deaaec04744a3f812d7f2d08047d7eb588
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: dfe5244e0c5b61fdf6d940dd16d8c280f013b12c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211381"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666176"
 ---
-# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>Nasıl yapılır: Tasarım Zamanında bir ElementHost Denetimini Kopyalayıp Yapıştırma
+# <a name="how-to-copy-and-paste-an-elementhost-control"></a>Nasıl yapılır: ElementHost denetimini kopyalayıp yapıştırma
 
-Bu yordam, Visual Studio'da bir Windows formunda bir Windows Presentation Foundation (WPF) denetimi kopyalamak nasıl gösterir.
+Bu yordamda, Visual Studio 'da bir Windows formunda Windows Presentation Foundation (WPF) denetiminin nasıl kopyalanacağı gösterilmektedir.
 
-## <a name="copy-and-paste-an-elementhost-control-at-design-time"></a>Tasarım zamanında bir ElementHost denetimini yapıştırın
+1. Visual Studio 'da Windows Forms projesine yeni bir WPF <xref:System.Windows.Controls.UserControl> ekleyin. Denetim türü için varsayılan adı kullanın, `UserControl1.xaml`. Daha fazla bilgi için bkz [. İzlenecek yol: Tasarım zamanında](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)Windows Forms yeni WPF içeriği oluşturuluyor.
 
-1. Yeni bir WPF ekleme <xref:System.Windows.Controls.UserControl> Windows Forms projenize. Denetim türü için varsayılan adı kullanacak `UserControl1.xaml`. Daha fazla bilgi için [izlenecek yol: Yeni bir WPF içeriği Windows formlarında tasarım zamanında oluşturma](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
+2. **Özellikler** penceresinde <xref:System.Windows.FrameworkElement.Width%2A> , ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerinin `UserControl1` değerini **200**olarak ayarlayın.
 
-2. İçinde **özellikleri** penceresinde değerini ayarlayın <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerini `UserControl1` için `200`.
-
-3. Değerini <xref:System.Windows.Controls.Control.Background%2A> özelliğini `Blue`.
+3. <xref:System.Windows.Controls.Control.Background%2A> Özelliğin değerini **mavi**olarak ayarlayın.
 
 4. Projeyi oluşturun.
 
-5. Açık `Form1` Windows Forms Tasarımcısı'nda.
+5. Windows Form Tasarımcısı `Form1` açın.
 
-6. Gelen **araç kutusu**, örneği sürükleyin `UserControl1` forma.
+6. **Araç kutusundan**form `UserControl1` üzerine bir örneğini sürükleyin.
 
-   Örneği `UserControl1` yeni bir barındırılan <xref:System.Windows.Forms.Integration.ElementHost> adlı Denetim `elementHost1`.
+   Bir örneği `UserControl1` adlı <xref:System.Windows.Forms.Integration.ElementHost> Yeni`elementHost1`bir denetimde barındırılır.
 
-7. İle `elementHost1` seçili panoya kopyalamak için CTRL + C tuşlarına basın.
+7. Seçili olarak, panoya kopyalamak için **CTRL**+C tuşlarına basın. `elementHost1`
 
-8. Kopyalanan denetimi forma yapıştırmak için CTRL + V tuşlarına basın.
+8. Form üzerine kopyalanmış denetimi yapıştırmak için **CTRL**+**V** tuşlarına basın.
 
-   Yeni bir <xref:System.Windows.Forms.Integration.ElementHost> adlı Denetim `elementHost2` form üzerinde oluşturulur.
+   Formunda adlı <xref:System.Windows.Forms.Integration.ElementHost> `elementHost2` yeni bir denetim oluşturulur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

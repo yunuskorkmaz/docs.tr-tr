@@ -1,55 +1,55 @@
 ---
-title: Visual Studio 2017 ile .NET Core Merhaba Dünya uygulamanızı yayımlama
-description: Yayımlama, .NET Core uygulamanızı çalıştırmak için gereken dosyaları kümesini oluşturur.
+title: .NET Core Merhaba Dünya uygulamanızı Visual Studio 2017 ile yayımlama
+description: Yayımlama, .NET Core uygulamanızı çalıştırmak için gereken dosya kümesini oluşturur.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/05/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 0322d44ca37ab8e7faa3188887069c2e04ec755b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8c37f47cc8dfb999f2371773a50c2dd91e074a5
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664719"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660482"
 ---
-# <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>Visual Studio 2017 ile .NET Core Merhaba Dünya uygulamanızı yayımlama
+# <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>.NET Core Merhaba Dünya uygulamanızı Visual Studio 2017 ile yayımlama
 
-İçinde [Visual Studio 2017'de .NET Core ile bir C# Merhaba Dünya uygulaması derleme](with-visual-studio.md) veya [Visual Studio 2017'de .NET Core ile bir Visual Basic Merhaba Dünya uygulaması derleme](vb-with-visual-studio.md), bir Hello World konsol uygulamanızı oluşturdunuz . İçinde [Visual Studio 2017 ile C# Merhaba Dünya uygulamanızın hatalarını](debugging-with-visual-studio.md), Visual Studio hata ayıklayıcısını kullanarak test. Artık beklendiği gibi çalıştığından emin olduğunuza göre diğer kullanıcıların çalıştırabilmek yayımlayabilirsiniz. Uygulamanızı çalıştırmak için gereken dosyaları kümesini yayımlama oluşturur ve bir hedef makineye kopyalayarak dosyaları dağıtabilirsiniz.
+Visual [studio 2017 C# ' de .net Core ile Merhaba Dünya bir uygulama oluşturun](with-visual-studio.md) veya [Visual Studio 2017 ' de .NET Core ile Visual Basic Merhaba Dünya uygulaması oluşturun](vb-with-visual-studio.md)Merhaba Dünya konsol uygulaması oluşturacaksınız. [Visual studio 2017 C# Ile Merhaba Dünya uygulamanızda hata ayıklayın](debugging-with-visual-studio.md), Visual Studio hata ayıklayıcısını kullanarak test edersiniz. Artık beklendiği gibi çalıştığından emin olduğunuza göre, diğer kullanıcıların çalıştırabilmesi için onu yayımlayabilirsiniz. Yayımlama, uygulamanızı çalıştırmak için gereken dosya kümesini oluşturur ve dosyaları bir hedef makineye kopyalayarak dağıtabilirsiniz.
 
-Yayımlama ve uygulamanızı çalıştırmak için: 
+Uygulamanızı yayımlamak ve çalıştırmak için: 
 
-1. Visual Studio, uygulamanızın sürümünü oluşturuyor emin olun. Gerekirse araç çubuğundaki derleme yapılandırma ayarını değiştirme **hata ayıklama** için **yayın**.
+1. Visual Studio 'nun uygulamanızın yayın sürümünü oluşturmakta olduğundan emin olun. Gerekirse, araç çubuğundaki derleme yapılandırma ayarını **Hata Ayıkla** 'dan **Release**olarak değiştirin.
 
-   ![Visual Studio araç çubuğunda seçilen yayın derlemesi](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
+   ![Yayın derlemesi seçiliyken Visual Studio araç çubuğu](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
-1. Sağ **HelloWorld** seçin ve proje (HelloWorld çözümü değil) **Yayımla** menüsünde. Belirleyebilirsiniz **yayımlama HelloWorld** ana Visual Studio'dan **derleme** menüsü.
+1. **HelloWorld** projesine (HelloWorld çözümüne değil) sağ tıklayın ve menüden **Yayımla** ' yı seçin. Ana Visual Studio **Build** menüsünden **HelloWorld Yayımla** ' yı da seçebilirsiniz.
 
    ![Visual Studio Yayımla bağlam menüsü](media/publishing-with-visual-studio/publish-context-menu.png)
 
-   ![Visual Studio yayımlama penceresi](media/publishing-with-visual-studio/publish-settings-window.png)
+   ![Visual Studio Yayımla penceresi](media/publishing-with-visual-studio/publish-settings-window.png)
 
-1. Bir konsol penceresi açın. Örneğin **aramak için buraya yazın** metin kutusunda Windows görev çubuğunda, girin `Command Prompt` (veya `cmd` kısaca) ve seçerek bir konsol penceresi açıyor **komut istemi** Masaüstü uygulama veya arama sonuçlarında seçtiyseniz Enter tuşuna basın.
+1. Bir konsol penceresi açın. Örneğin, burada, Windows görev çubuğundaki metin kutusuna **aramak için yazın** , (veya `cmd` kısaca `Command Prompt` ) girin ve **komut istemi** masaüstü uygulamasını seçerek veya ' de seçili ise ENTER tuşuna basarak bir konsol penceresi açın. Arama sonuçları.
 
-1. Yayımlanan uygulamayı gidin `bin\release\PublishOutput` uygulamanızın proje dizininin alt. Aşağıdaki şekilde gösterildiği gibi yayımlanmış çıktısı aşağıdaki dört dosyaları içerir:
+1. Uygulamanızın proje dizininin `bin\release\PublishOutput` alt dizininde yayınlanan uygulamaya gidin. Aşağıdaki şekilde gösterildiği gibi, yayımlanan çıktı aşağıdaki dört dosyayı içerir:
 
-      * *HelloWorld.deps.json*
+      * *HelloWorld. Deps. JSON*
 
-         Uygulamanın çalışma zamanı bağımlılıkları dosyası. .NET Core bileşenlerinin tanımlar ve kitaplıkları (uygulamanızı içeren bir dinamik bağlantı kitaplığı dahil), uygulamanızı çalıştırmak gerekli. Daha fazla bilgi için [çalışma zamanı yapılandırma dosyalarını](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+         Uygulamanın çalışma zamanı bağımlılıkları dosyası. Uygulamanızı çalıştırmak için gerekli olan .NET Core bileşenlerini ve kitaplıklarını (uygulamanızı içeren dinamik bağlantı kitaplığı dahil) tanımlar. Daha fazla bilgi için bkz. [çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
  
-      * *HelloWorld.dll*
+      * *HelloWorld. dll*
 
-         Uygulamanızı içeren dosya. Girerek yürütülebilecek bir dinamik bağlantı kitaplığı, `dotnet HelloWorld.dll` konsol penceresinde komutu. 
+         Uygulamanızı içeren dosya. Bir konsol penceresinde `dotnet HelloWorld.dll` komut girilerek yürütülebilecek bir dinamik bağlantı kitaplığıdır. 
 
-      * *HelloWorld.pdb* (dağıtım için isteğe bağlı)
+      * *HelloWorld. pdb* (dağıtım için isteğe bağlı)
 
-         Hata ayıklama sembollerini içeren dosya. Uygulamanızın yayımlanmış sürümünün hata ayıklama yapmanız durumunda, kaydetmeniz gerekir ancak bu dosya, uygulamanızın yanı sıra dağıtmak için gerekli değildir.
+         Hata ayıklama sembolleri içeren bir dosya. Bu dosyayı uygulamanızla birlikte dağıtmanız gerekmez, ancak uygulamanızın yayımlanan sürümünde hata ayıklaması yapmanız gereken bir olaya kaydetmeniz gerekir.
 
-      * *HelloWorld.runtimeconfig.json*
+      * *HelloWorld. runtimeconfig. JSON*
 
-         Uygulamanın çalışma zamanı yapılandırma dosyası. Bu, uygulamanızı çalıştırmak için oluşturulmuş bir .NET Core sürümünü tanımlar. Daha fazla bilgi için [çalışma zamanı yapılandırma dosyalarını](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).  
+         Uygulamanın çalışma zamanı yapılandırma dosyası. Uygulamanızın üzerinde çalışmak üzere oluşturulduğu .NET Core sürümünü tanımlar. Daha fazla bilgi için bkz. [çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).  
 
    ![Yayımlanan dosyaları gösteren konsol penceresi](media/publishing-with-visual-studio/published-files-output.png)
 
-Yayımlama işlemi dağıtım türünde yayımlanan uygulama için sistemde yüklü .NET Core ile .NET Core tarafından desteklenen herhangi bir platformda çalıştıracağınız bir framework bağımlı dağıtımı oluşturur. Kullanıcılar, uygulamanızı yayımlayarak çalıştırabilirsiniz `dotnet HelloWorld.dll` bir konsol penceresi komutu.
+Yayımlama işlemi, yayımlanan uygulamanın .NET Core tarafından sistemde yüklü olan herhangi bir platformda çalışacağı bir dağıtım türü olan çerçeveye bağlı bir dağıtım oluşturur. Kullanıcılar, `dotnet HelloWorld.dll` bir konsol penceresinden komutu yayımlayarak uygulamanızı çalıştırabilir.
 
-.NET Core uygulamaları dağıtma ve yayımlama hakkında daha fazla bilgi için bkz. [.NET Core uygulaması dağıtımını](../../core/deploying/index.md).
+.NET Core uygulamalarını yayımlama ve dağıtma hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).

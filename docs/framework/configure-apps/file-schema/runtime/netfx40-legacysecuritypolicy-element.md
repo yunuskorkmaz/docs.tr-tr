@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5bfa5449ece1b24d4f47fe3e77e36b26bbe430c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 881862b6b81ace1c1923b2a22d2fbe54d939d84e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689838"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663564"
 ---
-# <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > öğesi
+# <a name="netfx40_legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > öğesi
 
-Çalışma zamanının eski kod erişimi güvenliği (CAS) ilkesi kullanıp kullanmayacağını belirtir.
+Çalışma zamanının eski kod erişim güvenliği (CAS) ilkesi kullanıp kullanmadığını belirtir.
 
 \<Yapılandırma > \
 \<çalışma zamanı > \
@@ -37,14 +37,14 @@ ms.locfileid: "66689838"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanının eski CAS İlkesi kullanıp kullanmayacağını belirtir.|
+|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanının eski CAS ilkesini kullanıp kullanmadığını belirtir.|
 
 ## <a name="enabled-attribute"></a>etkin Öznitelik
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`false`|Çalışma zamanı, eski CAS ilkesini kullanmaz. Bu varsayılandır.|
-|`true`|Çalışma zamanı, eski CAS İlkesi kullanır.|
+|`false`|Çalışma zamanı eski CAS ilkesini kullanmaz. Bu varsayılandır.|
+|`true`|Çalışma zamanı eski CAS ilkesini kullanır.|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -59,20 +59,20 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-.NET Framework sürüm 3.5 ve önceki sürümlerinde, CAS ilkesini her zaman etkilidir. CAS ilkesini .NET Framework 4'te etkinleştirilmesi gerekir.
+.NET Framework sürüm 3,5 ve önceki sürümlerde CAS ilkesi her zaman etkindir. .NET Framework 4 ' te CAS ilkesinin etkinleştirilmiş olması gerekir.
 
-CAS ilkesini sürümüne özeldir. .NET Framework 4'te .NET Framework'ün önceki sürümlerinde bulunmayan özel CA ilkeleri belirtilmesi gerekir.
+CAS ilkesi sürüme özgüdür. .NET Framework önceki sürümlerinde bulunan özel CA ilkelerinin .NET Framework 4 ' te önceden belirtilmesi gerekir.
 
-Uygulama `<NetFx40_LegacySecurityPolicy>` öğesi bir .NET Framework 4 derlemesine etkilemez [güvenliği saydam kod](../../../../../docs/framework/misc/security-transparent-code.md); saydamlık kuralları hala geçerlidir.
+Öğesini bir .NET Framework 4 derlemesine uygulamak, [güvenlik açısından saydam kodu](../../../misc/security-transparent-code.md)etkilemez; saydamlık kuralları yine de geçerlidir. `<NetFx40_LegacySecurityPolicy>`
 
 > [!IMPORTANT]
-> Uygulama `<NetFx40_LegacySecurityPolicy>` öğesi tarafından oluşturulan yerel görüntü derlemeleri için önemli performans yaptırımlarla sonuçlanabilir [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) yüklenmeyen içinde [Genel Derleme Önbelleği ](../../../../../docs/framework/app-domains/gac.md). Öznitelik uygulandığında yerel görüntü derlemeleri yüklemek için yükleyememesine çalışma zamanı tarafından performans düşüşüne neden olur, kendi olan kaynaklanan yüklenen olarak tam zamanında derlemeleri.
+> Öğesi uygulandığında `<NetFx40_LegacySecurityPolicy>` , [genel derleme önbelleğinde](../../../app-domains/gac.md)yüklü olmayan [Yerel Görüntü Oluşturucu (Ngen. exe)](../../../tools/ngen-exe-native-image-generator.md) tarafından oluşturulan yerel görüntü derlemeleri için önemli performans cezaları oluşabilir. Performans düşüşü, çalışma zamanının öznitelik uygulandığında derlemeleri yerel görüntü olarak yüklemesi nedeniyle oluşur ve bu, tam zamanında derlemeler olarak yüklenmekte olur.
 
 > [!NOTE]
-> Visual Studio projeniz için proje Ayarları'nda .NET Framework 4'ten önceki hedef .NET Framework sürümü belirtirseniz, bu sürüm için belirtilen tüm özel CA ilkeler de dahil olmak üzere CAS ilkesini etkinleştirilecektir. Ancak, yeni bir .NET Framework 4 türleri ve üyeleri kullanmanız mümkün olmayacaktır. .NET Framework'ün önceki bir sürümünü kullanarak da belirtebilirsiniz [ \<supportedRuntime > öğesi](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) başlangıç ayarlarını şemasında, [uygulama yapılandırma dosyası](../../../../../docs/framework/configure-apps/index.md).
+> Visual Studio projeniz için proje ayarları içindeki .NET Framework 4 ' ten daha eski bir hedef .NET Framework sürümünü belirtirseniz, bu sürüm için belirttiğiniz özel CAS ilkeleri de dahil olmak üzere CAS ilkesi etkinleştirilir. Ancak, yeni .NET Framework 4 türlerini ve üyelerini kullanamazsınız. Ayrıca, [uygulama yapılandırma dosyanızdaki](../../index.md)başlangıç ayarları şemasında [ \<supportedRuntime > öğesini](../startup/supportedruntime-element.md) kullanarak .NET Framework önceki bir sürümünü de belirtebilirsiniz.
 
 > [!NOTE]
-> Yapılandırma dosyası sözdizimi, büyük/küçük harf duyarlıdır. Söz dizimi ve örnek bölümlerinde sağlanan sözdizimini kullanmanız gerekir.
+> Yapılandırma dosyası söz dizimi büyük/küçük harfe duyarlıdır. Söz dizimini sözdizimi ve örnek bölümlerinde belirtilen şekilde kullanmanız gerekir.
 
 ## <a name="configuration-file"></a>Yapılandırma Dosyası
 
@@ -80,7 +80,7 @@ Bu öğe yalnızca uygulama yapılandırma dosyasında kullanılabilir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir uygulama için eski CAS ilkesini etkinleştirmek üzere gösterilmektedir.
+Aşağıdaki örnekte, bir uygulama için eski CAS ilkesinin nasıl etkinleştirileceği gösterilmektedir.
 
 ```xml
 <configuration>
@@ -92,5 +92,5 @@ Aşağıdaki örnek, bir uygulama için eski CAS ilkesini etkinleştirmek üzere
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)

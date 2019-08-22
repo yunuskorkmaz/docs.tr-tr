@@ -2,18 +2,18 @@
 title: İzlenecek yollar ve teknik başlangıca genel bakış
 description: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin | İzlenecek yollar ve teknik Başlarken Genel Bakış
 ms.date: 04/28/2018
-ms.openlocfilehash: 81f7d9fbf596a23b83e2dc9251788b33a8817e16
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676885"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660891"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>İzlenecek yollar ve teknik başlangıca genel bakış
 
 Bu e-kitabın boyutunu sınırlamak için, ek teknik belgeler ve bir GitHub deposunda sunulan tam izlenecek yollar. Bu bölümde açıklanan çevrimiçi izlenecek yollar serisi, Windows kapsayıcılarına dayalı birden çok ortamın adım adım kurulumunu ve Azure 'a dağıtımını ele almaktadır.
 
-Aşağıdaki bölümlerde her bir izlenecek yolun ne olduğu, amaçları ve üst düzey Vizyonumuz açıklanmakta ve dahil olan görevlerin bir diyagramı sağlanmıştır. İzlenecek yolları, ' de *bulunan uygulama GitHub* deposu wiki <https://github.com/dotnet-architecture/eShopModernizing/wiki>' de yer alır.
+Aşağıdaki bölümlerde her bir izlenecek yolun ne olduğu, amaçları ve üst düzey Vizyonumuz açıklanmakta ve dahil olan görevlerin bir diyagramı sağlanmıştır. İzlenecek yolları, ' de bulunan uygulama GitHub deposu wiki <https://github.com/dotnet-architecture/eShopModernizing/wiki>' de yer alır.
 
 ## <a name="technical-walkthrough-list"></a>Teknik izlenecek yol listesi
 
@@ -308,4 +308,4 @@ GitHub wiki üzerinde bu içeriği daha ayrıntılı bir şekilde gezin:<https:/
 
 > [!div class="step-by-step"]
 > [Önceki](modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)İleri
-> [](conclusions.md)
+> [](conclusions.md) <!-- Next Chapter -->

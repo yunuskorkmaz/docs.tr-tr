@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: 7a03729f075645a230c660ff4c6469e0f5f3a51e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbe46e0b36d247005f933c82ee83687886b283d1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674785"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659649"
 ---
 # <a name="cryptoclasses-element"></a>\<cryptoClasses > öğesi
-Bir eşleme için bir kolay ad şifreleme sınıflarını listesini içeren [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) öğesi.  
+NameEntry > öğesinde kolay bir ada [ \<](nameentry-element.md) eşleme olan şifreleme sınıflarının bir listesini içerir.  
   
  \<Yapılandırma >  
 \<mscorlib >  
-\<cryptographySettings >  
+\<Cryptographyısettings >  
 \<cryptoNameMapping >  
 \<cryptoClasses >  
   
@@ -41,7 +41,7 @@ Bir eşleme için bir kolay ad şifreleme sınıflarını listesini içeren [ \<
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|İçin bir kolay ad eşlemesi var. bir şifreleme sınıfına içeren  **\<nameEntry >** öğesi.|  
+|[\<cryptoClass >](cryptoclass-element.md)|NameEntry > öğesinde kolay bir ad  **\<** ile eşleşen bir şifreleme sınıfı içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -49,11 +49,11 @@ Bir eşleme için bir kolay ad şifreleme sınıflarını listesini içeren [ \<
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
 |`cryptographySettings`|Şifreleme ayarlarını içerir.|  
-|`cryptoNameMapping`|Sınıf için kolay adlar eşlemeleri içerir.|  
-|`mscorlib`|İçeren `cryptographySettings` öğesi.|  
+|`cryptoNameMapping`|Kolay adlarla sınıfların eşlemelerini içerir.|  
+|`mscorlib`|`cryptographySettings` Öğesini içerir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanıldığını gösterir  **\<cryptoClass >** bir şifreleme sınıfına başvurmak için ve çalışma zamanı yapılandırma öğesi. Ardından "RSA" dize iletebileceğiniz <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemini <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> döndürülecek yöntemi bir `MyCryptoRSAClass` nesne.  
+ Aşağıdaki örnek, bir şifreleme sınıfına başvurmak ve çalışma zamanını yapılandırmak için  **\<CryptoClass >** öğesinin nasıl kullanılacağını gösterir. Daha sonra "RSA" <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> dizesini yöntemine geçirebilir ve <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodunu kullanarak bir `MyCryptoRSAClass` nesne döndürebilirsiniz.  
   
 ```xml  
 <configuration>  
@@ -79,8 +79,8 @@ Bir eşleme için bir kolay ad şifreleme sınıflarını listesini içeren [ \<
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Security.Cryptography>
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
+- [Şifreleme Ayarları Şeması](index.md)
 - [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
-- [Şifreleme Sınıflarını Yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [System. Security. Cryptography. CryptoConfig. CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
+- [Şifreleme Sınıflarını Yapılandırma](../../configure-cryptography-classes.md)

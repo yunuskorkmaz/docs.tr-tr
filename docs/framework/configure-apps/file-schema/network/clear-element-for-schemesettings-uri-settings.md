@@ -2,20 +2,20 @@
 title: schemeSettings için <clear> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-ms.openlocfilehash: 132506dc15335b738fcdb026f4d31429bc45a228
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 51c669aff767948523172aa075677ad3fb6478a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674694"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664176"
 ---
-# <a name="clear-element-for-schemesettings-uri-settings"></a>\<Temizle > öğesi (Uri ayarları) schemeSettings için
-Tüm mevcut düzeni ayarlarını temizler.  
+# <a name="clear-element-for-schemesettings-uri-settings"></a>\<ıviewmesettings için > öğesini temizle (URI ayarları)
+Varolan tüm düzen ayarlarını temizler.  
   
  \<Yapılandırma >  
-\<URI >  
-\<schemeSettings >  
-\<Temizleme >  
+\<Uri >  
+\<> düzeni  
+\<> Temizle  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,28 +36,28 @@ Tüm mevcut düzeni ayarlarını temizler.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<schemeSettings > öğesi (Uri ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Belirtir nasıl bir <xref:System.Uri> belirli düzenleri için ayrıştırılacak.|  
+|[\<> düzeni öğesi (URI ayarları)](schemesettings-element-uri-settings.md)|Belirli düzenler için <xref:System.Uri> nasıl ayrıştırılacaksınız belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan olarak, <xref:System.Uri?displayProperty=nameWithType> sınıfı Geri Al çıkışları yüzde yolu sınırlayıcı yolu sıkıştırma yürütmeden önce kodlanmış. Bu, aşağıdaki gibi saldırılarına karşı bir güvenlik mekanizması olarak uygulanmıştır:  
+ Varsayılan olarak, <xref:System.Uri?displayProperty=nameWithType> sınıfı yol sıkıştırmayı yürütmeden önce, yüzde olarak kodlanmış yol sınırlayıcılarını kaldırır. Bu, aşağıdaki gibi saldırılara karşı bir güvenlik mekanizması olarak uygulanmıştır:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Bu URI iletilir aşağı modülleri yüzde işlenmemesinin karakterlerin doğru kodlanmış, sunucu tarafından çalıştırılan aşağıdaki komutu neden:  
+ Bu URI, yüzde kodlamalı karakterleri doğru şekilde işlemeyen modüllere geçiriliyorsa, aşağıdaki komut sunucu tarafından yürütülebilmesiyle sonuçlanabilir:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Bu nedenle, <xref:System.Uri?displayProperty=nameWithType> sınıf ilk geri al çıkışları yol ayırıcıları ve yol sıkıştırma uygular. Yukarıda kötü amaçlı URL'sini geçirme sonucunu <xref:System.Uri?displayProperty=nameWithType> sınıf oluşturucu sonuçları aşağıdaki URI:  
+ Bu nedenle, sınıf <xref:System.Uri?displayProperty=nameWithType> ilk olarak yol sınırlayıcılarını iptal eder ve yol sıkıştırması uygular. Yukarıdaki kötü amaçlı URL 'yi sınıf oluşturucusuna geçirmenin sonucu <xref:System.Uri?displayProperty=nameWithType> aşağıdaki URI ile sonuçlanır:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Bu varsayılan davranışı değil, için belirli bir düzeni schemeSettings yapılandırma seçeneğini kullanarak kaldırın kaçış yüzde kodlanmış yolu sınırlayıcılar için değiştirilebilir.  
+ Bu varsayılan davranış, belirli bir düzen için ıgmesettings yapılandırma seçeneği kullanılarak yüzde olmayan kodlanmış yol sınırlayıcılarını kaçırılmamış şekilde değiştirilebilir.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek tarafından kullanılan bir yapılandırma gösterir <xref:System.Uri> sınıfı, tüm düzeni ayarlarını temizler ve ardından http düzeni için yol yüzde olarak kodlanmış sınırlayıcılar kaçış değil desteği ekler.  
+ Aşağıdaki örnek, tüm düzen ayarlarını temizleyen <xref:System.Uri> sınıf tarafından kullanılan bir yapılandırmayı gösterir ve ardından http şeması için tam olmayan yüzde kodlamalı yol sınırlayıcıları için destek ekler.  
   
 ```xml  
 <configuration>  
@@ -78,4 +78,4 @@ Tüm mevcut düzeni ayarlarını temizler.
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

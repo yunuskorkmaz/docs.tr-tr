@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 904c8e23f7a09a975a6f3b9322ed6bc4148d9ba4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd8790efa14018817c9e51e688b17c22d31d482f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674674"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659578"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<Ekle > bypasslist (ağ ayarları) için
-Bir IP adresi veya DNS adı için proxy atlama listesi ekler.  
+# <a name="add-element-for-bypasslist-network-settings"></a>\<BypassList için > öğesi Ekle (ağ ayarları)
+Proxy atlama listesine bir IP adresi veya DNS adı ekler.  
   
  \<Yapılandırma >  
 \<system.net>  
 \<defaultProxy >  
-\<bypasslist>  
-\<Ekle >  
+\<BypassList >  
+\<> Ekle  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,7 +41,7 @@ Bir IP adresi veya DNS adı için proxy atlama listesi ekler.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|**Adresi**|Bir IP adresi veya DNS adını tanımlayan bir normal ifade.|  
+|**adrestir**|IP adresini veya DNS adını tanımlayan bir normal ifade.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -50,22 +50,22 @@ Bir IP adresi veya DNS adı için proxy atlama listesi ekler.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Bir proxy sunucu kullanmaması adresleri açıklayan normal bir ifade kümesi sağlar.|  
+|[BypassList](bypasslist-element-network-settings.md)|Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `add` IP adresleri veya DNS sunucu adları için proxy sunucusunu atla adreslerinin listesini açıklayan normal ifadeler öğe ekler.  
+ Öğesi `add` , IP adreslerini veya DNS sunucu adlarını bir proxy sunucusunu atlayan adresler listesine açıklayan normal ifadeler ekler.  
   
- Değerini `address` öznitelik, bir dizi IP adresi veya ana bilgisayar adları açıklayan bir normal ifade olmalıdır.  
+ `address` Özniteliğin değeri bir IP adresi veya ana bilgisayar adı kümesini açıklayan bir normal ifade olmalıdır.  
   
- Bu öğe için normal bir ifade belirtirken dikkatli olmanız gerekir. Normal ifade "[a-z] +\\.contoso\\.com" eşleşme barındıran tüm contoso.com etki alanı, ancak bunu ayrıca contoso.com.cpandl.com etki alanındaki herhangi bir ana bilgisayara eşleşen. Contoso.com etki alanındaki bir konak eşleştirmek için bir yer işareti ("$") kullanın: "[a-z] +\\.contoso\\.com$".  
+ Bu öğe için bir normal ifade belirtirken dikkatli olmanız gerekir. "[A-z] +\\. contoso\\. com" normal ifadesi, contoso.com etki alanındaki herhangi bir konakla eşleşir, ancak aynı zamanda contoso.com.cpandl.com etki alanındaki herhangi bir konakla eşleşir. Yalnızca contoso.com etki alanındaki bir konağı eşleştirmek için bir tutturucu ("$"): "[a-z] +\\. contoso\\. com $" kullanın.  
   
- Normal ifadeler hakkında daha fazla bilgi için bkz. [.NET framework normal ifadelerinde](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Normal ifadeler hakkında daha fazla bilgi için bkz. [Normal ifadeleri .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek iki adres atlama listesine ekler. İlk contoso.com etki alanındaki tüm sunucular için proxy atlar; İkinci proxy 192.168 tüm sunucularıyla başlar, IP adresi için atlar.  
+ Aşağıdaki örnek atlama listesine iki adres ekler. İlki, contoso.com etki alanındaki tüm sunucular için proxy 'yi atlar; İkincisi, IP adresi 192,168 ile başlayan tüm sunucular için proxy 'yi atlar.  
   
 ```xml  
 <configuration>  
@@ -83,4 +83,4 @@ Bir IP adresi veya DNS adı için proxy atlama listesi ekler.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

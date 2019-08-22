@@ -2,12 +2,12 @@
 title: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin (2. sürüm)
 description: Bu e-defterle, mevcut uygulamaları Azure bulutuna ve kapsayıcılara kaldırıp modernleştirin ve bunlarla aynı şekilde geçiş yapmayı öğrenin.
 ms.date: 04/28/2018
-ms.openlocfilehash: 4e632fcfbb8904a9def3fdad992286055c5df4f0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ab2b58441af7aed6a8cd868751339b555a345565
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68677077"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660852"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin (2. sürüm)
 
@@ -201,4 +201,4 @@ Bu örnek uygulamalar, modernlanmış kod ile ikinci bir sürüme sahiptir ve bu
 Bu kılavuz, mevcut .NET Web uygulamalarını geliştirme ve Moderasyonu için seçeneklerinizi anlamanıza yardımcı olmak üzere yazılmıştır. Kılavuz ve ilgili örnek uygulamalar gelişiyor. Geri bildiriminiz bizim için çok önemlidir! Bu kılavuzun nasıl daha yararlı olabileceği hakkında açıklamalarınız varsa, lütfen ' e [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)gönderin.
 
 >[!div class="step-by-step"]
->[Next](lift-and-shift-existing-apps-azure-iaas.md)
+>[Next](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->

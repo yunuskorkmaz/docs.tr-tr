@@ -2,12 +2,12 @@
 title: Temsilcilerde varyans (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 80062f755a6159c48ff595556db99b0ac067533a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0a77c4abe8f2540e4b3b33d2cf99a20c3c2fa942
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595179"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659934"
 ---
 # <a name="variance-in-delegates-c"></a>Temsilcilerde varyans (C#)
 .NET Framework 3,5, içindeki C#tüm Temsilcilerde temsilci türleriyle eşleşen yöntem imzaları için varyans desteği getirmiştir. Bu, yalnızca eşleşen imzalara sahip yöntemlerin değil, aynı zamanda daha fazla türetilmiş tür (Kovaryans) döndüren veya temsilci türü tarafından belirtilenden daha az türetilmiş türler (değişken varyans) döndüren parametreleri kabul eden yöntemlere atayabileceğiniz anlamına gelir. . Bu hem genel hem de genel olmayan temsilcileri içerir.  
@@ -198,6 +198,6 @@ public static void Test()
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genel Türler](~/docs/standard/generics/index.md)
+- [Genel Türler](../../../../standard/generics/index.md)
 - [Func ve eylem genel temsilcileri için varyans kullanma (C#)](./using-variance-for-func-and-action-generic-delegates.md)
 - [Nasıl yapılır: Temsilcileri birleştirme (çok noktaya yayın temsilcileri)](../../delegates/how-to-combine-delegates-multicast-delegates.md)

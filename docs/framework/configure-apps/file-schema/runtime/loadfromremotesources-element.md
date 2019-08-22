@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7568129f30267b212737ec8aa688cf882e19bbff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8e8663bf9d119007eb7d3771d16d55b1aa54856
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704602"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663601"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > öğesi
-Uzak kaynaklardan yüklenen derlemeler .NET Framework 4 ve daha sonra tam güven izni olup olmadığını belirtir.
+.NET Framework 4 ve üzeri sürümlerde uzak kaynaklardan yüklenen derlemelerin tam güven verilip verilmeyeceğini belirtir.
   
 > [!NOTE]
->  Bu makalede, bir hata iletisi Visual Studio projesi hata listesi veya bir yapı hatası nedeniyle yönlendirildiniz olup [nasıl yapılır: Visual Studio'da bir bütünleştirilmiş kod Web'den kullanmak](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
+>  Visual Studio proje hata listesindeki bir hata iletisi veya bir derleme hatası nedeniyle bu makaleye yönlendirilmiş olmanız durumunda bkz [. nasıl yapılır: Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))'da Web 'Den bir bütünleştirilmiş kod kullanın.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -38,14 +38,14 @@ Uzak kaynaklardan yüklenen derlemeler .NET Framework 4 ve daha sonra tam güven
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> Bir uzak kaynaktan yüklenen bir derlemeyi tam güven izni olup olmadığını belirtir.|  
+|`enabled`|Gerekli öznitelik.<br /><br /> Uzak bir kaynaktan yüklenen bir derlemeye tam güven verilip verilmeyeceğini belirtir.|  
   
-## <a name="enabled-attribute"></a>Etkin öznitelik  
+## <a name="enabled-attribute"></a>enabled özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|Tam güven uzak kaynaklardan gelen uygulamalara vermeyin. Bu varsayılandır.|  
-|`true`|Tam güven uzak kaynaklardan gelen uygulamalara verin.|  
+|`false`|Uzak kaynaklardaki uygulamalara tam güven vermeyin. Bu varsayılandır.|  
+|`true`|Uzak kaynaklardaki uygulamalara tam güven verme.|  
   
 ### <a name="child-elements"></a>Alt öğeleri  
  Yok.  
@@ -59,9 +59,9 @@ Uzak kaynaklardan yüklenen derlemeler .NET Framework 4 ve daha sonra tam güven
   
 ## <a name="remarks"></a>Açıklamalar
 
-Uzak bir konumdan bir derlemeyi yüklemek, .NET Framework 3.5 ve önceki sürümlerinde derleme içindeki kod kısmi güven, yüklendiği bölgesine bağlıdır bir izin kümesi ile çalışır. Örneğin, bir Web sitesinden bir derlemeyi yüklemek, bu Internet bölgesine yüklendi ve Internet izni verildi. Diğer bir deyişle, bir Internet korumalı alan içinde yürütülür.
+.NET Framework 3,5 ve önceki sürümlerde, uzak bir konumdan bir derlemeyi yüklerseniz, derlemedeki kod, yüklendiği bölgeye bağlı bir izin kümesiyle kısmi güvende çalışır. Örneğin, bir Web sitesinden derleme yüklerseniz Internet bölgesine yüklenir ve Internet izin kümesi verilir. Diğer bir deyişle, bir Internet korumalı alanında yürütülür.
 
-.NET Framework 4 ile başlayarak, kod erişimi güvenliği (CAS) ilkesi devre dışı bırakıldı ve derlemeleri tam güven yüklenir. Normalde, bu tam güven ile yüklenen derlemeler vermek <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> önceden korumalı olan yöntem. Bunu önlemek için bir uzak kaynaktan yüklü bütünleştirilmiş kodu çalıştırma olanağı varsayılan olarak devre dışıdır. Varsayılan olarak uzak bir derlemeyi yüklemeye çalışırsanız, bir <xref:System.IO.FileLoadException> ile aşağıdaki durum gibi bir özel durum iletisi:
+Kod erişim güvenliği (CAS) ilkesi, .NET Framework 4 ile başlayarak devre dışıdır ve derlemeler tam güvende yüklenir. Normalde, bu, daha önce korumalı olan <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> yöntemle yüklenen derlemelere tam güven verir. Bunu engellemek için, uzak bir kaynaktan yüklenen derlemelerde kod çalıştırma özelliği varsayılan olarak devre dışıdır. Varsayılan olarak, uzak bir derlemeyi yüklemeye çalışırsanız, aşağıdakine benzer bir <xref:System.IO.FileLoadException> özel durum iletisi ile oluşturulur:
 
 ```text
 System.IO.FileNotFoundException: Could not load file or assembly 'file:assem.dll' or one of its dependencies. Operation is not supported. 
@@ -72,40 +72,40 @@ to be sandboxed in previous versions of the .NET Framework. This release of the 
 so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. 
 ```
 
-Derlemeyi yüklemek ve kendi kod yürütmek için aşağıdakilerden birini yapmanız gerekir:
+Derlemeyi yüklemek ve kodunu yürütmek için şunlardan birini yapmanız gerekir:
 
-- Açıkça bir korumalı alan için derleme oluşturma (bkz [nasıl yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
+- Derleme için açık bir korumalı alan oluşturun (bkz [. nasıl yapılır: Bir korumalı alana](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)kısmen güvenilen kod çalıştırın).
 
-- Derlemenin kod tam güvende çalıştırma. Yapılandırarak bunu `<loadFromRemoteSources>` öğesi. .NET Framework'ün önceki sürümlerindeki kısmi güvende çalışan derlemeler artık .NET Framework 4 ve sonraki sürümlerde tam güven içinde çalıştığını belirtmenize olanak tanır.
+- Derlemenin kodunu tam güvende çalıştırın. Bunu, `<loadFromRemoteSources>` öğesini yapılandırarak yapabilirsiniz. .NET Framework önceki sürümlerinde bulunan kısmi güvende çalışan derlemelerin artık .NET Framework 4 ve sonraki sürümlerde tam güvende çalıştığını belirtmenize olanak tanır.
 
 > [!IMPORTANT]
-> Bütünleştirilmiş kod tam güvende çalıştırılmayacaksa, bu yapılandırma öğesi ayarlamayın. Bunun yerine, bir korumalı alan oluşturma <xref:System.AppDomain> hangi derlemesi yüklenemiyor.
+> Derlemenin tam güvende çalıştırılmamalıdır, bu yapılandırma öğesini ayarlamayın. Bunun yerine, derlemenin yükleneceği <xref:System.AppDomain> bir korumalı alan oluşturun.
 
-`enabled` Özniteliğini `<loadFromRemoteSources>` öğedir etkili yalnızca zaman kod erişimi güvenliği (CAS) devre dışı bırakılır. Varsayılan olarak, .NET Framework 4 ve sonraki sürümlerinde, CAS ilkesini devre dışıdır. Ayarlarsanız `enabled` için `true`, uzak derlemeleri tam güven izni.
+Öğesi için özniteliği yalnızca kod erişim güvenliği (CAS) devre dışı bırakıldığında etkilidir. `enabled` `<loadFromRemoteSources>` Varsayılan olarak, CA ilkesi .NET Framework 4 ve sonraki sürümlerde devre dışıdır. `enabled` Olarak`true`ayarlarsanız, uzak derlemelere tam güven verilir.
 
-Varsa `enabled` ayarlı değil `true`, <xref:System.IO.FileLoadException> aşağıdaki durumlardan herhangi biri altında oluşturulur:
+, Olarak `true`ayarlanmamışsa, aşağıdaki koşullardan biri <xref:System.IO.FileLoadException> altında bir oluşturulur: `enabled`
 
-- Geçerli etki alanı korumalı alana alma davranışını, .NET Framework 3.5, davranışı farklıdır. Bu, CAS ilkesini devre dışı bırakılması ve korumalı olmaması için geçerli etki alanı gerektirir.
+- Geçerli etki alanının korumalı alana alma davranışı, .NET Framework 3,5 ' deki davranışından farklıdır. Bu, CAS ilkesinin devre dışı bırakılması ve geçerli etki alanının korumalı olmaması gerekir.
 
-- Yüklenen derleme gelen değil `MyComputer` bölge.
+- Yüklenen derleme `MyComputer` bölgeden değil.
 
-Ayarı `<loadFromRemoteSources>` öğesine `true` öğesinden oluşturulan bu özel durumu önler. Ortak dil çalışma zamanı için korumalı alan yüklenen derlemeler için güvenlik bağlı değil, belirtmenizi sağlar ve bunlar içinde yürütülen olmasına izin, tam güven.
+Öğesi için `<loadFromRemoteSources>` `true` ayarı, bu özel durumun oluşturulmasını engeller. Ortak dil çalışma zamanına bağlı olarak, güvenlik için yüklenmiş derlemeleri korumalı hale getirmenizi ve tam güvende yürütülmesine izin verilip verilmeyeceğini belirtmenizi sağlar.
 
 ## <a name="notes"></a>Notlar
 
-- .NET Framework 4.5 ve sonraki sürümlerinde, yerel ağ paylaşımlarında derlemeleri tam güven varsayılan olarak çalıştırın; etkinleştirme gerekmez `<loadFromRemoteSources>` öğesi.
+- .NET Framework 4,5 ve sonraki sürümlerinde, yerel ağ paylaşımlarında derlemeler varsayılan olarak tam güvende çalışır; `<loadFromRemoteSources>` öğesini etkinleştirmeniz gerekmez.
 
-- Bir uygulamanın Web'den kopyalandı, yerel bilgisayarda bulunsa bile, Windows tarafından bir web uygulaması olacak şekilde işaretlenir. Dosya özelliklerini değiştirerek bu ataması değiştirebilir veya kullanabileceğiniz `<loadFromRemoteSources>` öğesi derlemeyi vermek için tam güven. Alternatif olarak, kullandığınız <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> yöntemi işletim sistemi Web'den yüklenmiş olan olarak işaretlenmiş bir yerel derlemesi yüklenemiyor.
+- Bir uygulama Web 'den kopyalanmışsa, bu, yerel bilgisayarda bulunsa bile, Windows tarafından bir Web uygulaması olarak işaretlenir. Dosya özelliklerini değiştirerek bu belirtimi değiştirebilir veya derlemeye tam güven sağlamak için `<loadFromRemoteSources>` öğesini kullanabilirsiniz. Alternatif olarak, işletim sisteminin Web 'den yüklenmiş olarak işaretlediğini belirten yerel bir derlemeyi yüklemek için <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> yöntemini kullanabilirsiniz.
 
-- Alabilirsiniz bir <xref:System.IO.FileLoadException> bir Windows Virtual PC uygulama içinde çalışan bir uygulamada. Bağlantılı klasörlerden barındıran bilgisayarda bir dosya yüklemeye çalıştığınızda bu durum oluşabilir. Ayrıca üzerinden bağlı bir klasörden bir dosya yüklemeye çalıştığınızda oluşabilir [Uzak Masaüstü Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=182775) (Terminal Hizmetleri). Özel durumdan kaçınmak için ayarlanmış `enabled` için `true`.
+- Bir Windows sanal bilgisayar uygulamasında çalışan bir uygulama içindealabilirsiniz.<xref:System.IO.FileLoadException> Bu, barındırma bilgisayarındaki bağlantılı klasörlerden bir dosya yüklemeye çalıştığınızda meydana gelebilir. Ayrıca, [Uzak Masaüstü Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=182775) (Terminal Hizmetleri) üzerinden bağlanmış bir klasörden dosya yüklemeye çalıştığınızda da oluşabilir. Özel durumdan kaçınmak için, olarak `enabled` `true`ayarlayın.
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında genellikle kullanılır, ancak diğer yapılandırma dosyalarını bağlam bağlı olarak kullanılabilir. Daha fazla bilgi için bkz [daha fazla örtük kullanır, CAS ilkesini: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839) .NET güvenliği blogundaki.  
+Bu öğe genellikle uygulama yapılandırma dosyasında kullanılır, ancak bağlama göre diğer yapılandırma dosyalarında kullanılabilir. Daha fazla bilgi için, .NET güvenlik bloguna [AIT CA 'Ların daha örtük kullanımları: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839) makalesine bakın.  
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, uzak kaynaklardan yüklenen derlemeleri tam güven vermek gösterilmektedir.
+Aşağıdaki örnek, uzak kaynaklardan yüklenen derlemelere nasıl tam güven verildiğini gösterir.
 
 ```xml
 <configuration>  
@@ -117,8 +117,8 @@ Aşağıdaki örnek, uzak kaynaklardan yüklenen derlemeleri tam güven vermek g
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CAS ilkesini daha örtük kullanır: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
-- [Nasıl yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [CAS Ilkesinin daha örtük kullanımları: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
+- [Nasıl yapılır: Bir korumalı alanda kısmen güvenilen kod Çalıştır](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

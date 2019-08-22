@@ -8,15 +8,15 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: febea73ddbc45276f97835eb4af7ee0d0d68dda5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 449146612938700f59f5e2ec761526d1dc66a3fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674343"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663951"
 ---
-# <a name="systemnet-element-network-settings"></a>\<system.Net > öğesi (ağ ayarları)
-.NET Framework ağa nasıl bağlandığını belirten ayarları içerir.  
+# <a name="systemnet-element-network-settings"></a>\<System .net > öğesi (ağ ayarları)
+.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -38,25 +38,25 @@ ms.locfileid: "61674343"
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Internet isteklerini kimliğini doğrulamak için kullanılan modülleri belirtir.|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Bağlantılar Internet barındırmak için en yüksek sayısını belirtir.|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.|  
-|[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Basit Posta Aktarım Protokolü (SMTP) posta gönderme seçeneklerini yapılandırır.|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Ağ istekleri için önbelleğe alma mekanizması denetler.|  
-|[Ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Sınıflar için temel ağ seçeneklerini yapılandırır <xref:System.Net> ve ilgili alt ad alanları.|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Internet konaklarından bilgi istemek için modüller belirtir.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Internet isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Bir Internet ana bilgisayarına en fazla bağlantı sayısını belirtir.|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.|  
+|[mailSettings](mailsettings-element-network-settings.md)|Basit Posta Aktarım Protokolü (SMTP) posta gönderme seçeneklerini yapılandırır.|  
+|[requestCaching](requestcaching-element-network-settings.md)|Ağ istekleri için önbelleğe alma mekanizmasını denetler.|  
+|[Ayarlar](settings-element-network-settings.md)|<xref:System.Net> Ve ilişkili alt ad alanlarındaki sınıflar için temel ağ seçeneklerini yapılandırır.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Internet konaklarından bilgi istemek için kullanılacak modülleri belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[Yapılandırma](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Tüm ad alanları için ayarları içerir.|  
+|[yapılandırmada](../configuration-element.md)|Tüm ad alanları için ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [ \<System.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) öğe içeren sınıflar için ayarları <xref:System.Net> ve ilgili alt ad alanları. Kimlik doğrulama modülleri, bağlantı yönetimi, posta ayarları, Ara sunucu ve Internet isteği modüller bilgi Internet konakları için ayarları yapılandırın.  
+ <xref:System.Net> [ System.net>öğesiveilgilialtad\<](system-net-element-network-settings.md) alanlarındaki sınıfların ayarlarını içerir. Ayarlar, Internet konaklarından bilgi almak için kimlik doğrulama modüllerini, bağlantı yönetimini, posta ayarlarını, proxy sunucusunu ve Internet istek modüllerini yapılandırır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek tarafından kullanılan tipik yapılandırma gösterilmektedir <xref:System.Net> sınıfları.  
+ Aşağıdaki örnekte, sınıfları tarafından <xref:System.Net> kullanılan tipik bir yapılandırma gösterilmektedir.  
   
 ```xml  
 <configuration>  
@@ -94,4 +94,4 @@ ms.locfileid: "61674343"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

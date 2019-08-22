@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1251f286a4e6168ef1d18b05288e0c5f353ad828
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 197ab9dbc1ec85bf8961f60bb26496eab788e63f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689876"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663697"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup > öğesi
 
-Çöp toplama, birden fazla CPU grubu destekleyip desteklemediğini belirtir.
+Çöp toplamanın birden çok CPU grubunu destekleyip desteklemediğini belirtir.
 
 \<Yapılandırma > \
 \<çalışma zamanı > \
@@ -37,14 +37,14 @@ ms.locfileid: "66689876"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`enabled`|Gerekli öznitelik.<br /><br /> Çöp toplama, birden fazla CPU grubu destekleyip desteklemediğini belirtir.|
+|`enabled`|Gerekli öznitelik.<br /><br /> Çöp toplamanın birden çok CPU grubunu destekleyip desteklemediğini belirtir.|
 
 ## <a name="enabled-attribute"></a>etkin Öznitelik
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`false`|Çöp toplama, birden fazla CPU grubu desteklemiyor. Bu varsayılandır.|
-|`true`|Sunucu çöp toplama etkin olduğunda çöp toplama, birden fazla CPU grubu destekler.|
+|`false`|Çöp toplama birden çok CPU grubunu desteklemiyor. Bu varsayılandır.|
+|`true`|Çöp toplama, sunucu çöp toplama etkinse birden çok CPU grubunu destekler.|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -59,14 +59,14 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Ne zaman bir bilgisayarda birden fazla CPU grubu ve sunucu çöp toplama etkin (bkz [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) öğe), bu öğenin etkinleştirilmesi, çöp toplama, tüm CPU grupları arasında genişletir ve tüm çekirdek içine alır hesabı oluştururken ve Yığınlar Dengeleme.
+Bir bilgisayarda birden çok CPU grubu olduğunda ve sunucu çöp toplama özelliği etkin olduğunda (bkz. [ \<gcServer >](gcserver-element.md) öğesi), bu öğenin tüm CPU gruplarında çöp toplamayı genişlettiği ve ve oluştururken tüm çekirdekleri hesaba ayırır Heap 'ler dengeleniyor.
 
 > [!NOTE]
-> Bu öğe yalnızca çöp toplama iş parçacığı için geçerlidir. Kullanıcı iş parçacıklarını tüm CPU grupları arasında dağıtmak çalışma zamanını etkinleştirmek üzere, ayrıca etkinleştirmelisiniz [ \<Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) öğesi.
+> Bu öğe yalnızca çöp toplama iş parçacıkları için geçerlidir. Çalışma zamanının tüm CPU gruplarında Kullanıcı iş parçacıklarını dağıtmasını sağlamak için, [ \<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) öğesini de etkinleştirmeniz gerekir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, çöp toplama için birden fazla CPU grubu etkinleştirmek gösterilmektedir.
+Aşağıdaki örnekte, birden çok CPU grubu için çöp toplamanın nasıl etkinleştirileceği gösterilmektedir.
 
 ```xml
 <configuration>
@@ -79,7 +79,7 @@ Aşağıdaki örnek, çöp toplama için birden fazla CPU grubu etkinleştirmek 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Eş zamanlı çöp toplama devre dışı bırakmak için](gcconcurrent-element.md#to-disable-background-garbage-collection)
-- [İş istasyonu ve sunucu çöp toplama](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
+- [Eşzamanlı atık toplamayı devre dışı bırakmak için](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [İş istasyonu ve sunucu atık toplama](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19cd74f0e2550ec91cb56e70cf34a03bd84fc60e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5b535ba67ab05dabd7e0a23e79692bbf69e25b55
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487743"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663916"
 ---
 # <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > öğesi
-Varsayılan uygulama etki alanı için uygulama etki alanı yöneticisi olarak görev yapan türünü belirtir.  
+Varsayılan uygulama etki alanı için uygulama etki alanı yöneticisi olarak hizmet veren türü belirtir.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -35,7 +35,7 @@ Varsayılan uygulama etki alanı için uygulama etki alanı yöneticisi olarak g
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`value`|Gerekli öznitelik. İşlem varsayılan uygulama etki alanı için uygulama etki alanı yöneticisi olarak görev yapan ad alanı dahil türünün adını belirtir.|  
+|`value`|Gerekli öznitelik. İşlemdeki varsayılan uygulama etki alanı için uygulama etki alanı yöneticisi görevi gören ad alanı da dahil olmak üzere türün adını belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -48,20 +48,20 @@ Varsayılan uygulama etki alanı için uygulama etki alanı yöneticisi olarak g
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Uygulama etki alanı yöneticisi türünü belirtmek için bu iki öğe belirtmeniz gerekir ve [ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md) öğesi. Diğer, bu öğelerden herhangi birini belirtilmezse, yoksayılır.  
+ Uygulama etki alanı yöneticisinin türünü belirtmek için hem bu öğeyi [ \<hem de AppDomainManagerAssembly >](appdomainmanagerassembly-element.md) öğesini belirtmeniz gerekir. Bu öğelerden biri belirtilmediyse, diğeri yok sayılır.  
   
- Varsayılan uygulama etki alanına yüklendiğinde <xref:System.TypeLoadException> belirtilen türü tarafından belirtilen derlemede mevcut değilse oluşturulur [ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md) öğesi; ve için işlem başarısız başlatın.  
+ Varsayılan uygulama etki alanı yüklendiğinde, <xref:System.TypeLoadException> belirtilen tür [ \<AppDomainManagerAssembly >](appdomainmanagerassembly-element.md) öğesi tarafından belirtilen derlemede yoksa ve işlem başlatılamazsa oluşturulur.  
   
- Varsayılan uygulama etki alanı için uygulama etki alanı yöneticisi türü belirttiğinizde, uygulama etki alanı yöneticisi türü oluşturulan varsayılan uygulama etki alanından diğer uygulama etki alanları devralır. Kullanım <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> ve <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> özellikler farklı uygulama etki alanı yöneticisi türü için yeni bir uygulama etki alanı belirtin.  
+ Varsayılan uygulama etki alanı için uygulama etki alanı yöneticisi türünü belirttiğinizde, varsayılan uygulama etki alanından oluşturulan diğer uygulama etki alanları, uygulama etki alanı yöneticisi türünü alırlar. Yeni bir uygulama <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> etki alanı için farklı bir uygulama etki alanı yöneticisi türü belirtmek için veözelliklerinikullanın.<xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>  
   
- Uygulama etki alanı yöneticisi türünü belirtme, uygulama tam güven gerektirir. (Örneğin, masaüstünde çalışan bir uygulama tam güven yok.) Uygulama tam güven yoksa bir <xref:System.TypeLoadException> oluşturulur.  
+ Uygulama etki alanı yöneticisi türü belirtildiğinde uygulamanın tam güven olması gerekir. (Örneğin, masaüstünde çalışan bir uygulamanın tam güveni vardır.) Uygulamanın tam güveni yoksa, bir <xref:System.TypeLoadException> oluşturulur.  
   
- Tür ve ad alanı için kullanılan aynı biçimdir <xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliği.  
+ Türünün ve ad alanının biçimi, <xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliği için kullanılan biçim.  
   
- Bu yapılandırma öğesi, yalnızca .NET Framework 4'teki kullanılabilir ve üzerinde desteklenir.  
+ Bu yapılandırma öğesi yalnızca .NET Framework 4 ve üzeri sürümlerde kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, uygulama etki alanı yöneticisi varsayılan uygulama etki alanı için bir işlem olduğunu belirtmek gösterilmektedir `MyMgr` yazın `AdMgrExample` derleme.  
+ Aşağıdaki örnek, bir işlemin varsayılan uygulama etki alanı için uygulama etki alanı yöneticisinin `MyMgr` `AdMgrExample` derlemedeki tür olduğunu gösterir.  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ Varsayılan uygulama etki alanı için uygulama etki alanı yöneticisi olarak g
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<appDomainManagerAssembly > öğesi](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [SetAppDomainManagerType Yöntemi](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)
+- [\<appDomainManagerAssembly > öğesi](appdomainmanagerassembly-element.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
+- [SetAppDomainManagerType Yöntemi](../../../unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

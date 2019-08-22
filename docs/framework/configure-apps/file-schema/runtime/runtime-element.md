@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-ms.openlocfilehash: ea9dfd00590aff9c1a882480c76ef5c9f6afc6ec
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 3cf99a4dcf64b82846729d8663e398385b7a1086
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689752"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663460"
 ---
 # <a name="runtime-element"></a>\<çalışma zamanı > öğesi
 
@@ -32,7 +32,7 @@ Uygulamaları yapılandırmak için ortak dil çalışma zamanı tarafından kul
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler
 
-Alt öğeler ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
+Aşağıdaki bölümlerde alt öğeler ve üst öğeler açıklanır.
 
 ### <a name="attributes"></a>Öznitelikler
 
@@ -42,44 +42,44 @@ Yok.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<Alwaysflowımpersonationpolicy >](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)|Windows kimlik her zaman arasında nasıl kimliğe bürünme gerçekleştirilip gerçekleştirilmediğine bakılmaksızın zaman uyumsuz noktalar, akışları olduğunu belirtir.|
-|[\<AppContextSwitchOverrides >](../../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)|Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.AppContext> yeni işlevselliği için bir geri çevirme mekanizma sağlar sınıfını.|
-|[\<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)|Varsayılan uygulama etki alanı işlemde uygulama etki alanı yöneticisi sağlayan derlemeyi belirtir.|
-|[\<appDomainManagerType >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)|Varsayılan uygulama etki alanı için uygulama etki alanı yöneticisi olarak görev yapan türünü belirtir.|
-|[\<appDomainResourceMonitoring >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)|Ömür işlemin işlemdeki tüm uygulama etki alanlarında istatistikleri toplamak için çalışma zamanı bildirir.|
-|[\<assemblyBinding >](../../../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)|Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bilgi içerir.|
-|[\<bypassTrustedAppStrongNames>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|Güvenilir derlemeler için tanımlayıcı ad doğrulaması atlanmasına olup olmadığını belirtir.|
-|[\<CompatSortNLSVersion >](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Çalışma zamanı dize karşılaştırmaları yaparken eski sıralama davranışını kullanmalısınız belirtir.|
-|[\<developmentMode >](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|Çalışma zamanı derlemeleri DEVPATH ortam değişkeni tarafından belirtilen dizinleri arar olup olmadığını belirtir.|
-|[\<disableCachingBindingFailures >](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Bağlama hataları .NET Framework sürüm 2. 0'de varsayılan davranışı olan önbelleğe almayı devre dışı bırakılıp bırakılmadığını belirtir.|
-|[\<disableCommitThreadStack>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|Bir iş parçacığı başlatıldığında iş parçacığı yığınının tamamının taahhüt olup olmadığını belirtir.|
-|[\<disableFusionUpdatesFromADManager >](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|Uygulama etki alanı için yapılandırma ayarlarını geçersiz kılmak çalışma zamanı ana bilgisayarı izin vermek için varsayılan davranışı devre dışı bırakılıp bırakılmadığını belirtir.|
-|[\<EnableAmPmParseAdjustment>](../../../../../docs/framework/configure-apps/file-schema/runtime/enableampmparseadjustment-element.md)|Tarih ve saat yöntemleri ayrıştırma ayarlanmış bir kural kümesi yalnızca bir gün, ay, saat ve AM/PM göstergesi içeren tarih dizeleri ayrıştırılacak kullanıp kullanmadığını belirler.|
-|[\<Enforcefıpspolicy >](../../../../../docs/framework/configure-apps/file-schema/runtime/enforcefipspolicy-element.md)|Şifreleme algoritmaları Federal Bilgi işleme standartları (FIPS ile) uyması gereken bir bilgisayar yapılandırma gereksinimini zorlanıp zorlanmayacağını belirtir.|
-|[\<etwEnable >](../../../../../docs/framework/configure-apps/file-schema/runtime/etwenable-element.md)|Olay İzleme (ETW) Windows için ortak dil çalışma zamanı olayları için etkinleştirilip etkinleştirilmeyeceğini belirtir.|
-|[\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)|PerfCounter.dll CategoryOptions kayıt defteri ayarı bir .NET Framework sürüm 1.1 uygulamasında kategoriye özgü paylaşılan bellek ya da genel bellek performans sayacı verilerini yüklemek karar vermek için kullanıp kullanmayacağını belirtir.|
-|[\<gcAllowVeryLargeObjects >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)|64-bit platformlarda toplam boyutu 2 gigabayttan (GB) büyük olan dizileri etkinleştirir.|
-|[\<gcConcurrent >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)|Ortak dil çalışma zamanının atık toplama eşzamanlı olarak çalışıp çalışmayacağını belirtir.|
-|[\<GCCpuGroup>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)|Çöp toplama, birden fazla CPU grubu destekleyip desteklemediğini belirtir.|
-|[\<gcServer>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)|Ortak dil çalışma zamanı sunucu çöp toplama çalışıp çalışmayacağını belirtir.|
-|[\<generatePublisherEvidence >](../../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)|Çalışma zamanı kod erişim güvenliği (CAS) Yayımcı ilkesi kullanıp kullanmayacağını belirtir.|
-|[\<legacyCorruptedStateExceptionsPolicy >](../../../../../docs/framework/configure-apps/file-schema/runtime/legacycorruptedstateexceptionspolicy-element.md)|Erişim ihlalleri ve diğer bozuk durum özel durumları yakalamak yönetilen kod çalışma zamanı izin verip vermediğini belirtir.|
-|[\<Legacyımpersonationpolicy >](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)|Windows kimliği, geçerli iş parçacığı üzerindeki yürütme içeriği için akış ayarlarından bağımsız olarak zaman uyumsuz noktalar arasında geçmeyen belirtir.|
-|[\<loadfromRemoteSources >](../../../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)|Uzak kaynaktan derlemeleri tam güven yüklü olup olmadığını belirtir.|
-|[\<NetFx40_LegacySecurityPolicy >](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)|Çalışma zamanının eski kod erişimi güvenliği (CAS) ilkesi kullanıp kullanmayacağını belirtir.|
-|[\<NetFx40_PInvokeStackResilience>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md)|Olup çalışma zamanı düzeltmeleri yanlış platform çağırma bildirimler arasında yavaş geçişler, çalışma zamanında otomatik olarak yönetilen ve yönetilmeyen kod belirtir.|
-|[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings >](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Çalışma zamanı için karma kodları hesaplamak üzere sabit miktarda bellek kullanıp kullanmayacağını belirtir <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> yöntemi.|
-|[\<PreferComInsteadOfRemoting >](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|Çalışma zamanı uygulama etki alanı sınırları uzaktan iletişim yerine COM birlikte çalışma kullanacağını belirtir.|
-|[\<relativeBindForResources >](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|Araştırma için uydu derlemelerini en iyi duruma getirir.|
-|[\<shadowCopyVerifyByTimeStamp >](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|Gölge kopyalama .NET Framework 4'te sunulan varsayılan başlangıç davranışını kullanıp kullanmayacağını belirtir ve .NET Framework'ün önceki sürümlerinde başlangıç davranışını geri döner.|
-|[\<supportPortability >](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|Bir uygulama derlemeleri uygulama taşınabilirliği amacıyla eşdeğer kabul eder varsayılan davranışı devre dışı bırakarak aynı derlemenin iki farklı uygulamalarında .NET Framework'ün başvurabileceğini belirtir.|
-|[\<System.Runtime.Caching >](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Varsayılan bellek içi nesne önbelleği için yapılandırma bilgileri sağlar.|
-|[\<Thread_UseAllCpuGroups>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)|Çalışma zamanının yönetilen iş parçacıklarını tüm CPU grupları arasında dağıtmadığını belirtir.|
-|[\<ThrowUnobservedTaskExceptions >](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)|Çalışan bir işleme, işlenmemiş bir görev özel durumlarını sonlandırma olup olmadığını belirtir.|
-|[\<TimeSpan_LegacyFormatMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/timespan-legacyformatmode-element.md)|Çalışma zamanı için eski biçimlendirme kullanıp kullanmayacağını belirtir <xref:System.TimeSpan> değerleri.|
-|[\<useLegacyJit >](../../../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)|Ortak dil çalışma zamanı için tam zamanında derleme eski 64 bit JIT Derleyici kullanıp kullanmadığını belirler.|
-|[\<UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)|Çalışma zamanı için dizelerin karma kodlarını hesaplayıp belirtir bir her uygulama etki alanı.|
-|[\<Usesmallınternalthreadstacks >](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|İstekleri, belirli iş parçacıklarını oluşturduğunda, çalışma zamanı açık yığın boyutlarını kullanmak yerine varsayılan yığın boyutu dahili olarak kullanır.|
+|[\<alwaysFlowImpersonationPolicy >](alwaysflowimpersonationpolicy-element.md)|Kimliğe bürünme işlemi ne olursa olsun, Windows kimliğinin her zaman zaman uyumsuz noktalarda akacağını belirtir.|
+|[\<AppContextSwitchOverrides >](appcontextswitchoverrides-element.md)|Yeni işlevlere yönelik bir geri alma mekanizması sağlamak <xref:System.AppContext> için sınıfı tarafından kullanılan bir veya daha fazla anahtarı tanımlar.|
+|[\<appDomainManagerAssembly >](appdomainmanagerassembly-element.md)|İşlemdeki varsayılan uygulama etki alanı için uygulama etki alanı yöneticisini sağlayan derlemeyi belirtir.|
+|[\<appDomainManagerType >](appdomainmanagertype-element.md)|Varsayılan uygulama etki alanı için uygulama etki alanı yöneticisi olarak hizmet veren türü belirtir.|
+|[\<appDomainResourceMonitoring >](appdomainresourcemonitoring-element.md)|Çalışma zamanına, işlemin ömrü boyunca işlemdeki tüm uygulama etki alanlarında istatistikler toplamasını söyler.|
+|[\<assemblyBinding >](assemblybinding-element-for-runtime.md)|Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bilgi içerir.|
+|[\<bypassTrustedAppStrongNames >](bypasstrustedappstrongnames-element.md)|Güvenilen derlemeler için tanımlayıcı ad doğrulamasının atlanıp atlanmayacağını belirtir.|
+|[\<CompatSortNLSVersion >](compatsortnlsversion-element.md)|Çalışma zamanının, dize karşılaştırmaları gerçekleştirirken eski sıralama davranışını kullanması gerektiğini belirtir.|
+|[\<developmentMode >](developmentmode-element.md)|Çalışma zamanının DEVPATH ortam değişkeni tarafından belirtilen dizinlerde derlemeleri arayıp aramayacağını belirtir.|
+|[\<Disablecachingbindinghatalarıyla >](disablecachingbindingfailures-element.md)|.NET Framework sürüm 2,0 ' de varsayılan davranış olan bağlama hatalarının önbelleğe alınmasının devre dışı bırakılıp bırakılmadığını belirtir.|
+|[\<disableCommitThreadStack>](disablecommitthreadstack-element.md)|Bir iş parçacığı başlatıldığında tam iş parçacığı yığınının uygulanıp uygulanmadığını belirtir.|
+|[\<disableFusionUpdatesFromADManager >](disablefusionupdatesfromadmanager-element.md)|Çalışma zamanı konağının bir uygulama etki alanı için yapılandırma ayarlarını geçersiz kılmasına izin vermek üzere varsayılan davranışın devre dışı bırakılıp bırakılmadığını belirtir.|
+|[\<EnableAmPmParseAdjustment>](enableampmparseadjustment-element.md)|Tarih ve saat ayrıştırma yöntemlerinin, yalnızca bir gün, ay, saat ve i/PM göstergesini içeren Tarih dizelerini ayrıştırmak için ayarlanmış bir kural kümesi kullanıp kullanmadığını belirler.|
+|[\<enforceFIPSPolicy >](enforcefipspolicy-element.md)|Şifreleme algoritmalarının Federal bilgi Işleme standartları (FIPS) ile uyumlu olması gereken bir bilgisayar yapılandırma gereksinimini zorlayamayacağını belirtir.|
+|[\<etwEnable >](etwenable-element.md)|Ortak dil çalışma zamanı olayları için Windows için olay izlemenin (ETW) etkinleştirilip etkinleştirilmeyeceğini belirtir.|
+|[\<forcePerformanceCounterUniqueSharedMemoryReads >](forceperformancecounteruniquesharedmemoryreads-element.md)|PerfCounter. dll ' nin, performans sayacı verilerinin kategoriye özgü paylaşılan bellekten veya genel bellekten yüklenip yüklenmeyeceğini belirleme .NET Framework sürüm 1,1 uygulamasında CategoryOptions kayıt defteri ayarını kullanıp kullanmadığını belirtir.|
+|[\<gcAllowVeryLargeObjects >](gcallowverylargeobjects-element.md)|64-bit platformlarda toplam boyutu 2 gigabayttan (GB) büyük olan dizileri etkinleştirir.|
+|[\<gcConcurrent >](gcconcurrent-element.md)|Ortak dil çalışma zamanının çöp toplamayı eşzamanlı olarak çalıştırmasını belirtir.|
+|[\<GCCpuGroup>](gccpugroup-element.md)|Çöp toplamanın birden çok CPU grubunu destekleyip desteklemediğini belirtir.|
+|[\<gcServer >](gcserver-element.md)|Ortak dil çalışma zamanının sunucu çöp toplamayı çalıştırmasını belirtir.|
+|[\<generatePublisherEvidence >](generatepublisherevidence-element.md)|Çalışma zamanının kod erişim güvenliği (CAS) Yayımcı ilkesini kullanıp kullanmadığını belirtir.|
+|[\<Legacybozulmuş Tedstateexceptionspolicy >](legacycorruptedstateexceptionspolicy-element.md)|Çalışma zamanının yönetilen kodun erişim ihlallerini ve diğer bozuk durum özel durumlarını yakalayıp belirlemesine izin verip içermediğini belirtir.|
+|[\<Legacyımpersonationpolicy >](legacyimpersonationpolicy-element.md)|Geçerli iş parçacığında yürütme bağlamı için akış ayarlarından bağımsız olarak, Windows kimliğinin zaman uyumsuz noktalarda akış yapmaz.|
+|[\<loadfromRemoteSources >](loadfromremotesources-element.md)|Uzak kaynaklardaki derlemelerin tam güven olarak yüklenip yüklenmediğini belirtir.|
+|[\<NetFx40_LegacySecurityPolicy >](netfx40-legacysecuritypolicy-element.md)|Çalışma zamanının eski kod erişim güvenliği (CAS) ilkesi kullanıp kullanmadığını belirtir.|
+|[\<NetFx40_PInvokeStackResilience >](netfx40-pinvokestackresilience-element.md)|Çalışma zamanının, yönetilen ve yönetilmeyen kod arasındaki yavaş geçişlerin maliyetinde, çalışma zamanında hatalı platform çağırma bildirimlerini otomatik olarak düzeltilmediğini belirtir.|
+|[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings >](netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Çalışma zamanının, <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> yöntemin karma kodlarını hesaplamak için sabit miktarda bellek kullanıp kullanmadığını belirtir.|
+|[\<Tercihe bağlı Adofremoting >](prefercominsteadofmanagedremoting-element.md)|Çalışma zamanının, uygulama etki alanı sınırları arasında uzaktan iletişim yerine COM birlikte çalışabilirliğine sahip olacağını belirtir.|
+|[\<relativeBindForResources >](relativebindforresources-element.md)|Uydu derlemeleri için araştırmayı iyileştirir.|
+|[\<shadowCopyVerifyByTimeStamp >](shadowcopyverifybytimestamp-element.md)|Gölge kopyalamanın .NET Framework 4 ' te tanıtılan varsayılan başlangıç davranışını kullanıp kullanmadığını veya .NET Framework önceki sürümlerinin başlangıç davranışına geri dönmeyeceğini belirtir.|
+|[\<Destek taşınabilirliği >](supportportability-element.md)|Bir uygulamanın, uygulama taşınabilirlik amaçları doğrultusunda derlemeleri eşdeğer olarak ele alan varsayılan davranışı devre dışı bırakarak, .NET Framework iki farklı uygulamasındaki aynı derlemeye başvurabildiklerini belirtir.|
+|[\<System. Runtime. Caching >](system-runtime-caching-element-cache-settings.md)|Varsayılan bellek içi nesne önbelleğinde yapılandırma bilgileri sağlar.|
+|[\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)|Çalışma zamanının yönetilen iş parçacıklarını tüm CPU grupları arasında dağıtıp dağıtmadığını belirtir.|
+|[\<ThrowUnobservedTaskExceptions >](throwunobservedtaskexceptions-element.md)|İşlenmemiş görev özel durumlarının çalışan bir işlemi sonlandırmayı gerekip gerekmediğini belirtir.|
+|[\<TimeSpan_LegacyFormatMode >](timespan-legacyformatmode-element.md)|Çalışma zamanının değerler için <xref:System.TimeSpan> eski biçimlendirmeyi kullanıp kullanmadığını belirtir.|
+|[\<useLegacyJit >](uselegacyjit-element.md)|Ortak dil çalışma zamanının, Just-In-Time derlemesi için eski 64-bit JıT derleyicisini kullanıp kullanmadığını belirler.|
+|[\<UseRandomizedStringHashAlgorithm >](userandomizedstringhashalgorithm-element.md)|Çalışma zamanının, her uygulama etki alanı temelinde dizeler için karma kodları hesaplayıp hesaplamadığını belirtir.|
+|[\<Usesmallınternalthreadyığınları >](usesmallinternalthreadstacks-element.md)|Çalışma zamanının, varsayılan yığın boyutu yerine dahili olarak kullandığı belirli iş parçacıklarını oluştururken açık yığın boyutlarını kullanmasını ister.|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
@@ -89,11 +89,11 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Alt öğeleri [ \<çalışma zamanı >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) yapılandırma dosyasının bir uygulamanın nasıl yürüteceğini yapılandırmak için ortak dil çalışma zamanı tarafından kullanılır. Örneğin, [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) iş istasyonu çöp toplama veya sunucu çöp toplama, çöp toplayıcı kullanıp kullanmadığını belirler [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) ortak dil çalışma zamanı için bir uygulama başına veya bir uygulama başına etki alanı temelinde, dize karma kodlarını hesaplayıp belirler ve `AppContextSwitchOverrides` öğesi kitaplığı kullanıcıları sağlar. kabul et veya değiştirilen işlevler kitaplığı tarafından sağlanan dışında iyileştirilmiş için.
+Bir yapılandırma dosyasının [ \<Runtime >](runtime-element.md) bölümündeki alt öğeler, bir uygulamanın nasıl yürütüldüğünü yapılandırmak için ortak dil çalışma zamanı tarafından kullanılır. Örneğin, [ \<gcServer >](gcserver-element.md) öğesi çöp toplayıcının iş istasyonu atık toplama veya sunucu [ \<](userandomizedstringhashalgorithm-element.md) çöp toplama, UseRandomizedStringHashAlgorithm > öğesi kullanıp kullanmadığını belirler ortak dil çalışma zamanının, bir uygulama başına ya da uygulama başına etki alanı temelinde dize için karma kodlarını hesaplayıp hesaplamadığını ve `AppContextSwitchOverrides` bu öğe, kitaplık kullanıcılarının bir kitaplık tarafından sunulan değiştirilen işlevselliği kabul etmesine veya devre dışı bırakmanıza olanak tanır.
 
-Öğeleri [ \<çalışma zamanı >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) bölümü salt okunur otomatik olarak uygulama başlangıcında ortak dil çalışma zamanı tarafından. Varsayılan olmayan uygulama etki alanı için yapılandırma dosyası adının sağlanarak de tanımlayabilirsiniz <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> özelliği; uygulama etki alanı zaman yüklenir ayarlarına otomatik olarak okunur. Şimdiye kadar doğrudan ayarları okumak için bir gereksinim nadiren de olsa olmalıdır [ \<çalışma zamanı >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) bölümüne uygulamanızın yapılandırma dosyasında.
+Çalışma zamanı > bölümündeki öğeler [ \<](runtime-element.md) , uygulama başlangıcında ortak dil çalışma zamanı tarafından otomatik olarak okunurdur. Ayrıca, varsayılan olmayan bir uygulama etki alanı için yapılandırma dosyasını <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> özelliği adına sağlayarak tanımlayabilirsiniz; uygulama etki alanı yüklendiğinde ayarları otomatik olarak okunabilir. Mümkünse, uygulamanızın yapılandırma dosyasındaki [ \<çalışma zamanı >](runtime-element.md) bölümünde ayarları doğrudan okumanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)

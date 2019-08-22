@@ -13,17 +13,16 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 540226dbbada0373854144ac874d2164208ad943
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d80f8e3bc729689b274af520bc37fda8417b0407
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039920"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658577"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>İzlenecek yol: Tasarımcıyı Kullanarak ListView ve TreeView Denetimleri ile Gezgin Stilinde bir Arabirim Oluşturma
 
 Visual Studio 'nun avantajlarından biri, profesyonel görünümlü Windows Forms uygulamalarını kısa sürede oluşturma olanağıdır. Yaygın bir senaryo, <xref:System.Windows.Forms.ListView> ve <xref:System.Windows.Forms.TreeView> Windows işletim sistemlerinin Windows Gezgini özelliğine benzeyen denetimlerle bir kullanıcı arabirimi (UI) oluşturur. Windows Gezgini, bir kullanıcının bilgisayarındaki dosya ve klasörlerin hiyerarşik yapısını görüntüler.
-
 
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>ListView ve TreeView denetimi içeren formu oluşturmak için
 
@@ -35,7 +34,7 @@ Visual Studio 'nun avantajlarından biri, profesyonel görünümlü Windows Form
 
     2. Şablon listesinde **Windows Forms uygulama**' yı seçin.
 
-3.           **Tamam**'ı tıklatın. Yeni bir Windows Forms projesi oluşturulur.
+3. **Tamam**'ı tıklatın. Yeni bir Windows Forms projesi oluşturulur.
 
 4. Forma bir <xref:System.Windows.Forms.SplitContainer> denetim ekleyin ve <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğini olarak <xref:System.Windows.Forms.DockStyle.Fill>ayarlayın.
 

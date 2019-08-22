@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c7a558af17493c955b4f148d0abf7f42c9dd6f8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a71c2b87d0bcb488e4e8fa4de928a103a8e9dabd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629425"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663536"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<Prefercomınsteadofmanagedremoting > öğesi
 Çalışma zamanının, uygulama etki alanı sınırları genelinde tüm çağrılar için uzaktan iletişim yerine COM birlikte çalışabilme kullanıp kullanmayacağını belirtir.  
@@ -56,9 +56,9 @@ ms.locfileid: "68629425"
 ## <a name="remarks"></a>Açıklamalar  
  `enabled` Özniteliğini öğesine`true`ayarladığınızda, çalışma zamanı aşağıdaki gibi davranır:  
   
-- Bir [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) ARABIRIMI bir com arabirimi aracılığıyla etki alanına girdiğinde, çalışma zamanı [ımanagementpackbir](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) arabirim Için [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) ' i çağırmaz. Bunun yerine, nesne etrafında bir [çalışma zamanı çağrılabilir sarmalayıcı](../../../../../docs/standard/native-interop/runtime-callable-wrapper.md) (RCW) oluşturur.  
+- Bir [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) ARABIRIMI bir com arabirimi aracılığıyla etki alanına girdiğinde, çalışma zamanı [ımanagementpackbir](../../../unmanaged-api/hosting/imanagedobject-interface.md) arabirim Için [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) ' i çağırmaz. Bunun yerine, nesne etrafında bir [çalışma zamanı çağrılabilir sarmalayıcı](../../../../../docs/standard/native-interop/runtime-callable-wrapper.md) (RCW) oluşturur.  
   
-- Çalışma zamanı, bu etki alanında oluşturulan herhangi `QueryInterface` bir [com çağrılabilir sarmalayıcı](../../../../../docs/standard/native-interop/com-callable-wrapper.md) (CCW) için bir [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) arabirimi çağrısı aldığında E_NOINTERFACE döndürür.  
+- Çalışma zamanı, bu etki alanında oluşturulan herhangi `QueryInterface` bir [com çağrılabilir sarmalayıcı](../../../../../docs/standard/native-interop/com-callable-wrapper.md) (CCW) için bir [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) arabirimi çağrısı aldığında E_NOINTERFACE döndürür.  
   
  Bu iki davranış, uygulama etki alanı sınırları genelinde yönetilen nesneler arasındaki tüm COM arabirimleri arasında tüm çağrıların, uzaktan iletişim yerine COM ve COM birlikte çalışabilirliği kullanmasını sağlamaktır.  
   
@@ -75,5 +75,5 @@ ms.locfileid: "68629425"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)

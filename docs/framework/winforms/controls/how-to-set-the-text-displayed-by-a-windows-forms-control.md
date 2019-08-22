@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Metni Ayarlama'
-ms.date: 03/30/2017
+ms.date: 08/20/2019
 dev_langs:
 - csharp
 - vb
@@ -21,58 +21,69 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 59570af89e6236e3c13866d45dc5361d52b84274
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 887aa5ec9b97770903cd87459d6df5adc3f7ddf0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013094"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666148"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Metni Ayarlama
-Windows Forms denetimleri, genellikle denetimin birincil işleve ilgili bazı metin görüntüler. Örneğin, bir <xref:System.Windows.Forms.Button> denetimi genellikle düğmesine tıklandığında hangi eylemin gerçekleştirileceğini belirten bir başlık görüntüler. Tüm denetimler için ayarlayabilir veya dönüş metni kullanarak <xref:System.Windows.Forms.Control.Text%2A> özelliği. Yazı tipi kullanarak değiştirebileceğiniz <xref:System.Windows.Forms.Control.Font%2A> özelliği. Tasarımcı kullanarak metin de ayarlayabilirsiniz.  Ayrıca bkz: [nasıl yapılır: Windows Forms Tasarımcısı'nı kullanarak denetimleri için erişim tuşları oluşturma](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [nasıl yapılır: Tarafından görüntülenen metni ayarlama bir Windows Forms Tasarımcısı'nı kullanarak denetimi](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [nasıl yapılır: Tarafından görüntülenen resmi ayarlama bir Windows Forms Tasarımcısı'nı kullanarak denetimi](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
-  
-### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>Program aracılığıyla bir denetimi tarafından görüntülenen metni ayarlama  
-  
-1. Ayarlama <xref:System.Windows.Forms.Control.Text%2A> bir dize özelliği.  
-  
-     Bir altı çizili erişim anahtarı oluşturmak için içeren bir ampersan (&) erişim anahtarı olacak harfi önce.  
-  
-2. Ayarlama <xref:System.Windows.Forms.Control.Font%2A> türünde bir nesne özelliğini <xref:System.Drawing.Font>.  
-  
-    ```vb  
-    Button1.Text = "Click here to save changes"  
-    Button1.Font = New Font("Arial", 10, FontStyle.Bold, GraphicsUnit.Point)  
-    ```  
-  
-    ```csharp  
-    button1.Text = "Click here to save changes";  
-    button1.Font = new Font("Arial", 10, FontStyle.Bold,  
-       GraphicsUnit.Point);  
-    ```  
-  
-    ```cpp  
-    button1->Text = "Click here to save changes";  
-    button1->Font = new System::Drawing::Font("Arial",  
-       10, FontStyle::Bold, GraphicsUnit::Point);  
-    ```  
-  
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Nasıl yapılır: Windows Forms denetimi tarafından görünen metni ayarlama
+
+Windows Forms denetimleri genellikle denetimin birincil işleviyle ilgili bazı metinleri görüntüler. Örneğin, bir <xref:System.Windows.Forms.Button> denetim genellikle düğme tıklandığında gerçekleştirilecek eylemi belirten bir başlık görüntüler. Tüm denetimler için, <xref:System.Windows.Forms.Control.Text%2A> özelliğini kullanarak metni ayarlayabilir veya döndürebilirsiniz. <xref:System.Windows.Forms.Control.Font%2A> Özelliğini kullanarak yazı tipini değiştirebilirsiniz.
+
+Ayrıca, [tasarımcıyı](#designer)kullanarak metni de ayarlayabilirsiniz.
+
+## <a name="programmatic"></a>Programatik
+
+1. <xref:System.Windows.Forms.Control.Text%2A> Özelliği bir dizeye ayarlayın.
+
+   Altı çizili erişim anahtarı oluşturmak için, erişim tuşu olacak harften önce bir ve işareti (&) içerir.
+
+2. <xref:System.Windows.Forms.Control.Font%2A> Özelliğini türünde<xref:System.Drawing.Font>bir nesne olarak ayarlayın.
+
+    ```vb
+    Button1.Text = "Click here to save changes"
+    Button1.Font = New Font("Arial", 10, FontStyle.Bold, GraphicsUnit.Point)
+    ```
+
+    ```csharp
+    button1.Text = "Click here to save changes";
+    button1.Font = new Font("Arial", 10, FontStyle.Bold, GraphicsUnit.Point);
+    ```
+
+    ```cpp
+    button1->Text = "Click here to save changes";
+    button1->Font = new System::Drawing::Font("Arial", 10, FontStyle::Bold, GraphicsUnit::Point);
+    ```
+
     > [!NOTE]
-    >  Bir kaçış karakteri, bir özel karakter normalde bunları farklı menü öğeleri gibi yorumlar kullanıcı arabirimi öğelerini görüntülemek için kullanabilirsiniz. Örneğin, menü öğesinin metin okumak için aşağıdaki kod satırını ayarlar "& şimdi bir şey için tamamen farklı":  
-  
-    ```vb  
-    MPMenuItem.Text = "&& Now For Something Completely Different"  
-    ```  
-  
-    ```csharp  
-    mpMenuItem.Text = "&& Now For Something Completely Different";  
-    ```  
-  
-    ```cpp  
-    mpMenuItem->Text = "&& Now For Something Completely Different";  
-    ```  
-  
+    > Bir kaçış karakteri kullanarak, normalde bunları farklı şekilde yorumlayacak Kullanıcı arabirimi öğelerinde menü öğeleri gibi özel bir karakter görüntüleyebilirsiniz. Örneğin, aşağıdaki kod satırı menü öğesinin metnini "tamamen farklı bir şey Için şimdi & okunacak şekilde ayarlar.
+
+    ```vb
+    MPMenuItem.Text = "&& Now For Something Completely Different"
+    ```
+
+    ```csharp
+    mpMenuItem.Text = "&& Now For Something Completely Different";
+    ```
+
+    ```cpp
+    mpMenuItem->Text = "&& Now For Something Completely Different";
+    ```
+
+## <a name="designer"></a>Tasarımcı
+
+1. Visual Studio 'daki **Özellikler** penceresinde, denetimin **Text** özelliğini uygun bir dize olarak ayarlayın.
+
+   Altı çizili kısayol tuşu oluşturmak için, kısayol tuşu olacak harften önce bir ve işareti (&) içerir.
+
+2. **Özellikler** penceresinde,![ **yazı tipi** özelliğinin yanındaki üç nokta düğmesini (Visual Studio](./media/visual-studio-ellipsis-button.png)Özellikler penceresi) seçin.
+
+   Standart yazı tipi iletişim kutusunda yazı tipi, yazı tipi stili, boyut, efekt (üstü çizili veya altı çizili) ve istediğiniz betiği seçin.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
 - [Nasıl yapılır: Windows Forms denetimleri için erişim tuşları oluşturma](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Nasıl yapılır: Windows Forms düğme tıklamalarına yanıt verme](how-to-respond-to-windows-forms-button-clicks.md)
+- [Nasıl yapılır: Windows Forms Düğme Tıklamalarına Yanıt verme](how-to-respond-to-windows-forms-button-clicks.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: af290e4b9258a08425a15e297ff538502edea916
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a3d0b182acad2351ed095934ca97c6194d344fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674434"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659128"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching > öğesi (ağ ayarları)
-Ağ istekleri için önbelleğe alma mekanizması denetler.  
+Ağ istekleri için önbelleğe alma mekanizmasını denetler.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -42,39 +42,39 @@ Ağ istekleri için önbelleğe alma mekanizması denetler.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`isPrivateCache`|Önbellek bilgilerinin farklı kullanıcılar arasında yalıtım sağlayıp sağlamadığını belirtir. Varsayılan değer `true` şeklindedir. Bu değer olmalıdır `false` orta katman uygulamaları için.|  
-|`disableAllCaching`|Önbelleğe alma için tüm Web yanıtları devre dışı bırakıldı ve programlı olarak geçersiz kılınamaz belirtir.|  
-|`defaultPolicyLevel`|Değerlerin birini <xref:System.Net.Cache.RequestCacheLevel> sabit listesi. Varsayılan değer `BypassCache` şeklindedir.|  
-|`unspecifiedMaximumAge`|Sonra içeriğin süresi dolmuş olarak işaretlenmiş varsayılan süreyi belirtir.|  
+|`isPrivateCache`|Önbelleğin, farklı kullanıcıların bilgileri arasında yalıtım verip içermediğini belirtir. Varsayılan değer `true` şeklindedir. Bu değer, orta `false` katman uygulamalar için olmalıdır.|  
+|`disableAllCaching`|Tüm Web yanıtları için önbelleğe almanın devre dışı bırakıldığını belirtir ve program aracılığıyla geçersiz kılınamaz.|  
+|`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel> Numaralandırmadaki değerlerden biri. Varsayılan değer `BypassCache` şeklindedir.|  
+|`unspecifiedMaximumAge`|İçeriğin süresi dolduğunda, varsayılan süreyi belirtir.|  
   
 ## <a name="policylevel-attribute"></a>policyLevel özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`Default`|Önbelleğe alınmış kaynak sona erme, değiştirilmesi ve içerik uzunluğu öznitelikleri mevcut olduğundan yeni bir kaynaktır ve içerik uzunluğu doğru döndürür.|  
-|`BypassCache`|Kaynak sunucudan döndürür.|  
-|`CacheOnly`|İçerik uzunluğu varsa ve giriş boyutu eşleşen önbelleğe alınmış kaynak döndürür.|  
-|`CacheIfAvailable`|İçerik uzunluğu sağlanır ve giriş boyutu eşleşiyorsa, önbelleğe alınmış kaynak döndürür; Aksi takdirde, kaynak sunucudan indirilir ve çağırana döndürülür.|  
-|`Revalidate`|Önbelleğe alınmış kaynak zaman damgası önbelleğe alınmış kaynak sunucusunda kaynak zaman damgası ile aynı olduğunda döndürür; Aksi takdirde, kaynak sunucudan önbelleğinde depolanan indirilir ve çağırana döndürülür.|  
-|`Reload`|Kaynak sunucudan indirir, önbellekte depolar ve kaynak çağırana döner.|  
-|`NoCacheNoStore`|Önbelleğe alınan bir kaynağın varolup olmadığını silinir. Kaynak sunucudan indirilir ve çağırana döndürülür.|  
-|`Revalidate`|Bir istek, zaman damgası zaman damgasını kaynak sunucudaki aynı olduğunda, kaynağın önbelleğe alınmış kopyasını kullanarak karşılayan; Aksi takdirde, kaynak sunucudan arayana sunulan yüklenir ve önbellekte depolanır,|  
+|`Default`|Kaynak yeni ise, içerik uzunluğu doğru, süre sonu, değişiklik ve içerik uzunluğu öznitelikleri varsa önbelleğe alınmış kaynağı döndürür.|  
+|`BypassCache`|Sunucudan kaynağı döndürür.|  
+|`CacheOnly`|İçerik uzunluğu varsa ve giriş boyutuyla eşleşiyorsa, önbelleğe alınmış kaynağı döndürür.|  
+|`CacheIfAvailable`|İçerik uzunluğu sağlanmışsa ve giriş boyutuyla eşleşiyorsa, önbelleğe alınmış kaynağı döndürür; Aksi takdirde, kaynak sunucudan indirilir ve çağırana döndürülür.|  
+|`Revalidate`|Önbelleğe alınan kaynağın zaman damgası sunucudaki kaynağın zaman damgasıyla aynıysa, önbelleğe alınmış kaynağı döndürür; Aksi takdirde, kaynak sunucudan yüklenir, önbellekte depolanır ve çağırana döndürülür.|  
+|`Reload`|Kaynağı sunucudan indirir, önbellekte depolar ve kaynak arayana döndürür.|  
+|`NoCacheNoStore`|Önbelleğe alınmış bir kaynak varsa, silinir. Kaynak sunucudan indirilir ve çağırana döndürülür.|  
+|`Revalidate`|Zaman damgası sunucudaki kaynağın zaman damgasıyla aynıysa, kaynağın önbelleğe alınmış kopyasını kullanarak bir isteği karşılar; Aksi takdirde, kaynak, çağırana sunulan sunucudan indirilir ve önbellekte depolanır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|İsteğe bağlı öğe.<br /><br /> HTTP önbelleğe alma etkindir ve önbelleğe alma ilkesi varsayılan tanımlar olup olmadığını açıklar.|  
-|[\<defaultFtpCachePolicy > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|İsteğe bağlı öğe.<br /><br /> FTP önbelleğe alma etkindir ve önbelleğe alma ilkesi varsayılan tanımlar olup olmadığını açıklar.|  
+|[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|İsteğe bağlı öğe.<br /><br /> HTTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe alma ilkesini açıklar.|  
+|[\<defaultFtpCachePolicy > öğesi (ağ ayarları)](defaultftpcachepolicy-element-network-settings.md)|İsteğe bağlı öğe.<br /><br /> FTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe alma ilkesini açıklar.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlandığını belirten ayarları içerir.|  
+|[system.net](system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, tüm önbelleğe alma işlemlerini devre dışı bırakmak gösterilmektedir.  
+ Aşağıdaki örnek, tüm önbelleğe almanın nasıl devre dışı bırakılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -89,4 +89,4 @@ Ağ istekleri için önbelleğe alma mekanizması denetler.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

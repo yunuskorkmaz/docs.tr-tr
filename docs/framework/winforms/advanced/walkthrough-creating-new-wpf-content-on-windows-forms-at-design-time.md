@@ -8,30 +8,23 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: 889e81053d4e2264755468446a4e1681216ae22e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: e3fb6e42270cc0a530646b656470ec99fcfc7f1f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040372"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666240"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: Tasarım zamanında Windows Forms yeni WPF içeriği oluşturma
 
 Bu makalede, Windows Forms tabanlı uygulamalarınızda kullanılmak üzere bir Windows Presentation Foundation (WPF) denetimi oluşturma konusu gösterilmektedir.
 
-Bu kılavuzda, aşağıdaki görevleri gerçekleştirirsiniz:
-
-- Projeyi oluşturun.
-
-- Yeni bir WPF denetimi oluşturun.
-
-- Yeni WPF denetimini bir Windows form 'a ekleyin. WPF denetimi bir <xref:System.Windows.Forms.Integration.ElementHost> denetimde barındırılır.
-
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
-
-- Visual Studio
+Bu yönergeyi tamamlamak için Visual Studio gerekir.
 
 ## <a name="create-the-project"></a>Projeyi oluşturma
 
@@ -51,17 +44,17 @@ Yeni bir WPF denetimi oluşturmak için:
 
 1. **Çözüm Gezgini**, çözüme yeni bir **WPF Kullanıcı denetimi kitaplığı (.NET Framework)** projesi ekleyin. Denetim kitaplığı için varsayılan adı kullanın, `WpfControlLibrary1`. Varsayılan denetim adı `UserControl1.xaml`.
 
-     Yeni denetimin eklenmesi aşağıdaki etkilere sahiptir:
+   Yeni denetimin eklenmesi aşağıdaki etkilere sahiptir:
 
-    - Dosya UserControl1. xaml eklendi.
+   - Dosya UserControl1. xaml eklendi.
 
-    - Ya UserControl1.xaml.cs veya UserControl1. xaml. vb dosyası eklendi. Bu dosya olay işleyicileri ve diğer uygulama için arka plan kodu içerir.
+   - UserControl1.xaml.cs (veya UserControl1. xaml. vb) dosyası eklendi. Bu dosya olay işleyicileri ve diğer uygulama için arka plan kodu içerir.
 
-    - WPF derlemelerinin başvuruları eklendi.
+   - WPF derlemelerinin başvuruları eklendi.
 
-    - Dosya UserControl1. xaml içinde [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]açılır.
+   - Dosya UserControl1. xaml, Visual Studio için WPF Tasarımcısı 'nda açılır.
 
-2. Tasarım görünümü ' de, ' `UserControl1` nin seçili olduğundan emin olun. Daha fazla bilgi için [nasıl yapılır: Tasarım Yüzeyi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))öğeleri seçin ve taşıyın.
+2. Tasarım görünümü ' de, ' `UserControl1` nin seçili olduğundan emin olun.
 
 3. **Özellikler** penceresinde, <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerinin değerini **200**olarak ayarlayın.
 
@@ -69,8 +62,8 @@ Yeni bir WPF denetimi oluşturmak için:
 
 5. **Özellikler** penceresinde, <xref:System.Windows.Controls.TextBox.Text%2A> özelliğin değerini **barındırılan içerik**olarak ayarlayın.
 
-    > [!NOTE]
-    > Genel olarak, daha karmaşık WPF içeriğini barındırmalısınız. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> Denetim burada yalnızca tanım amacıyla kullanılır.
+   > [!NOTE]
+   > Genel olarak, daha karmaşık WPF içeriğini barındırmalısınız. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> Denetim burada yalnızca tanım amacıyla kullanılır.
 
 6. Projeyi oluşturun.
 

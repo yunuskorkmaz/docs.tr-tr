@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5df7ab070cc0a40f4e2f3d0545c5bc40ccb07f4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 61b4076a72dbc17ffc800a1a8d37a22d1435e02b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378032"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663676"
 ---
 # <a name="gcserver-element"></a>\<gcServer > öğesi
-Ortak dil çalışma zamanı sunucu çöp toplama çalışıp çalışmayacağını belirtir.  
+Ortak dil çalışma zamanının sunucu çöp toplamayı çalıştırmasını belirtir.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -38,14 +38,14 @@ Ortak dil çalışma zamanı sunucu çöp toplama çalışıp çalışmayacağı
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanı sunucu çöp toplama çalışıp çalışmayacağını belirtir.|  
+|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanının sunucu çöp toplamayı çalıştırmasını belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|Sunucu çöp toplama çalışmaz. Bu varsayılandır.|  
-|`true`|Sunucu Çöp toplamayı çalıştırır.|  
+|`false`|Sunucu çöp toplamayı çalıştırmaz. Bu varsayılandır.|  
+|`true`|Sunucu çöp toplamayı çalıştırır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -58,17 +58,17 @@ Ortak dil çalışma zamanı sunucu çöp toplama çalışıp çalışmayacağı
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ortak dil çalışma zamanı (CLR) iki çöp toplama türlerini destekler: tüm sistemlerinde kullanılabilir olan iş istasyonu çöp toplama ve çok işlemcili sistemlerde kullanılabilir sunucu çöp toplama. Kullandığınız `<gcServer>` CLR çöp toplama türünü denetlemek için öğesi gerçekleştirir. Kullanım <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> sunucu çöp toplama etkin olup olmadığını belirlemek için özellik.  
+ Ortak dil çalışma zamanı (CLR) iki tür çöp toplamayı destekler: tüm sistemlerde kullanılabilen iş istasyonu çöp toplama ve çok işlemcili sistemlerde bulunan sunucu çöp toplama. CLR 'nin gerçekleştirdiği `<gcServer>` çöp toplamanın türünü denetlemek için öğesini kullanırsınız. Sunucu çöp toplamanın etkinleştirilip etkinleştirilmediğini anlamak için özelliğinikullanın.<xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
   
- Tek işlemcili bilgisayarlar için varsayılan iş istasyonu çöp toplama en hızlı seçenek olmalıdır. İş istasyonu veya sunucu iki işlemcili bilgisayarlar için kullanılabilir. Sunucu çöp toplama en hızlı seçenek ikiden fazla işlemci olmalıdır.  
+ Tek işlemcili bilgisayarlar için varsayılan iş istasyonu atık toplama en hızlı seçenek olmalıdır. İki işlemcili bilgisayarlar için iş istasyonu veya sunucu kullanılabilir. Sunucu çöp toplama, ikiden fazla işlemci için en hızlı seçenek olmalıdır.  
   
- Bu öğe yalnızca uygulama yapılandırma dosyasında kullanılabilir; makine yapılandırma dosyasındaki ise göz ardı edilir.  
+ Bu öğe yalnızca uygulama yapılandırma dosyasında kullanılabilir; makine yapılandırma dosyasında ise yok sayılır.  
   
 > [!NOTE]
->  Sunucu çöp toplama etkinleştirildiğinde eş zamanlı çöp toplama .NET Framework 4 ve önceki sürümlerle kullanılabilir değil. .NET Framework 4.5 ile başlayarak, sunucu çöp toplama eşzamanlı. Eşzamanlı olmayan çöp toplama koleksiyonu kullanmak için ayarlanmış `<gcServer>` öğesine `true` ve [ \<gcConcurrent > öğesi](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) için `false`.  
+>  .NET Framework 4 ve önceki sürümlerde, sunucu çöp toplama etkinleştirildiğinde eşzamanlı çöp toplama kullanılamaz. 4,5 .NET Framework başlayarak, sunucu çöp toplama işlemi eşzamanlı olur. Eş zamanlı olmayan sunucu çöp toplamayı kullanmak `<gcServer>` için, `true` öğesini ve [ \<gcConcurrent > öğesi](gcconcurrent-element.md) olarak `false`ayarlayın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, sunucu Çöp toplamayı etkinleştirir.  
+ Aşağıdaki örnek, sunucu çöp toplamayı mümkün bir şekilde sunar.  
   
 ```xml  
 <configuration>  
@@ -81,6 +81,6 @@ Ortak dil çalışma zamanı sunucu çöp toplama çalışıp çalışmayacağı
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Eş zamanlı çöp toplama devre dışı bırakmak için](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
+- [Eşzamanlı atık toplamayı devre dışı bırakmak için](gcconcurrent-element.md#to-disable-background-garbage-collection)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f89f0558c11e229fef2ca3cd619e3c033f12c858
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a52dd671f1fbf6fda5bdc92c0935784181eb4b03
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754667"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663834"
 ---
-# <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait > öğesi
+# <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait > öğesi
 
-Döndürme-waıtıng contended olduğunda önemli bir bölümü için devre dışı bırakılıp bırakılmayacağını belirtir.  
+Contentıon 'ın, önemli bir bölüm için bekleme için beklenip devre dışı bırakılacağını belirtir.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -36,14 +36,14 @@ Döndürme-waıtıng contended olduğunda önemli bir bölümü için devre dı�
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**Etkin**|Döndürme-contended kritik bölümlere bekleniyor devre dışı bırakılıp bırakılmadığını belirtir.|  
+|**etkinletir**|Devam edildiğinde kritik bölümlerin dönmesi için bekleme devre dışı bırakılıp bırakılmadığını belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|1.|Kritik bir bölüm alınamıyor, döndürme bekleyen devre dışı bırakın.|  
-|0|Kritik bir bölüm alınamıyor, döndürme bekleyen devre dışı bırakmayın. Varsayılan değer budur.|  
+|1\.|Beklemeyi devre dışı bırak-kritik bir bölüm alınamadığından bekleniyor.|  
+|0|Beklemeyi devre dışı bırakma-kritik bir bölüm alınamadığından bekleniyor. Varsayılan değer budur.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -57,7 +57,7 @@ Döndürme-waıtıng contended olduğunda önemli bir bölümü için devre dı�
   
 ## <a name="example"></a>Örnek  
 
-Döndürme bekleme contended olduğunda önemli bölümleri aşağıdaki örnek devre dışı bırakır.  
+Aşağıdaki örnek, contenbitirildiği zaman, kritik bölümlerde beklemeyi devre dışı bırakır.  
   
 ```xml  
 <configuration>  
@@ -69,5 +69,5 @@ Döndürme bekleme contended olduğunda önemli bölümleri aşağıdaki örnek 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)

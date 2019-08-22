@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 1b5f7406f995a86f0a192dbf3249c067dff570ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac9405fdc6123a5a1352de06f94fefb6d7d4014b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674408"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659115"
 ---
 # <a name="smtp-element-network-settings"></a>\<SMTP > öğesi (ağ ayarları)
-Teslim biçimini, teslim yöntemini yapılandırır ve Kimden e-postaları gönderme için adresi.  
+Teslim biçimini, teslim yöntemini ve e-posta gönderme adresini yapılandırır.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -42,22 +42,22 @@ Teslim biçimini, teslim yöntemini yapılandırır ve Kimden e-postaları gönd
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`deliveryFormat`|Giden e-postalar için teslim etme biçimini belirtir. Kabul edilebilir değerler şunlardır: SevenBit ve uluslararası ' dir.|  
-|`deliveryMethod`|E-postalar için teslim etme yöntemini belirtir. Ağ, Pickupdirectoryfromıis ve SpecifiedPickupDirectory bunun kabul edilebilir değerlerdir.|  
-|`from`|Belirtir giden e-postalar için adresinden.|  
+|`deliveryFormat`|Giden e-postalar için teslim biçimini belirtir. Kabul edilebilir değerler, yedi bit ve uluslararası.|  
+|`deliveryMethod`|E-postalar için teslim yöntemini belirtir. Kabul edilebilir değerler Network, Pickupdirectoryfromısıs ve Belirtilmedipickupdirectory 'Dir.|  
+|`from`|Giden e-postalar için kimden adresini belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|Bir Basit Posta Aktarım Protokolü (SMTP) sunucusu için yerel dizini yapılandırır.|  
-|`network`|Dış SMTP sunucusu ağ seçeneklerini yapılandırır.|  
+|`specifiedPickupDirectory`|, Bir Basit Posta Aktarım Protokolü (SMTP) sunucusu için yerel dizini yapılandırır.|  
+|`network`|Dış SMTP sunucusu için ağ seçeneklerini yapılandırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[\<mailSettings > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Posta gönderme seçeneklerini yapılandırır.|  
+|[\<mailSettings > öğesi (ağ ayarları)](mailsettings-element-network-settings.md)|Posta gönderme seçeneklerini yapılandırır.|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, varsayılan ağ kimlik bilgilerini kullanarak e-posta göndermek için uygun SMTP parametrelerini belirtir.  
@@ -84,4 +84,4 @@ Teslim biçimini, teslim yöntemini yapılandırır ve Kimden e-postaları gönd
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpDeliveryFormat>
 - <xref:System.Net.Mail.SmtpDeliveryMethod>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

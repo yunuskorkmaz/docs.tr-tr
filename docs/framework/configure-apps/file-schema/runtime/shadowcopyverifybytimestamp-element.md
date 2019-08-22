@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4187d266d82783ebb72073c1da92faff95352884
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 6f3ea57364832553d16c7e34fc887b1c9f821602
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489385"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663444"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp > öğesi
-Gölge kopyalama .NET Framework 4'te sunulan varsayılan başlangıç davranışını kullanıp kullanmayacağını belirtir ve .NET Framework'ün önceki sürümlerinde başlangıç davranışını geri döner.  
+Gölge kopyalamanın .NET Framework 4 ' te tanıtılan varsayılan başlangıç davranışını kullanıp kullanmadığını veya .NET Framework önceki sürümlerinin başlangıç davranışına geri dönmeyeceğini belirtir.  
   
  \<Yapılandırma > öğesi  
 \<çalışma zamanı > öğesi  
@@ -34,14 +34,14 @@ Gölge kopyalama .NET Framework 4'te sunulan varsayılan başlangıç davranış
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Etkin|Gerekli öznitelik.<br /><br /> Gölge kopyalama kullanan bir uygulama etki alanları önce gölge kopyalama bütünleştirilmiş kod derleme güncelleştirilip güncelleştirilmediğini belirlemek için başlatma sırasında derleme zaman damgaları karşılaştırma olup olmadığını belirtir.|  
+|etkinletir|Gerekli öznitelik.<br /><br /> Derlemeyi gölge kopyalamadan önce bir derlemenin güncelleştirilip güncelleştirilmediğini anlamak için, gölge kopyalamayı kullanan uygulama etki alanlarının derleme zaman damgalarını karşılaştırın.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|true|Başlangıçta, yalnızca son gölge kopya dizine kopyalanan bu yana güncelleştirilen derlemeleri kopyalar. Bu, .NET Framework 4 için varsayılan değerdir.|  
-|false|.NET Framework'ün önceki sürümlerini başlangıç davranışını, başlangıçta tüm dosyaları kopyalamak için olduğu döner.|  
+|true|Başlangıçta, yalnızca gölge kopya dizinine son kopyalandıklarından bu yana güncelleştirilmiş derlemeleri kopyalar. .NET Framework 4 için varsayılan değer budur.|  
+|false|Başlangıçtaki tüm dosyaları kopyalamak için .NET Framework önceki sürümlerinin başlangıç davranışına geri döner.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -54,10 +54,10 @@ Gölge kopyalama .NET Framework 4'te sunulan varsayılan başlangıç davranış
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework 4 ile başlayarak, yalnızca kendi zaman damgaları gölge kopya dizine son kopyalanan olduğundan bunlar değişmiş gösteriyorsa gölge derlemelerdir. Bu bölümünde anlatıldığı gibi gölge kopyalama, kullanma, birçok uygulama için başlangıç sürelerini iyileştirir [Shadow Copying Assemblies](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md). Yüksek yüzdesi ve derleme güncelleştirme sıklığına sahip uygulamalar, bu değişiklik davranış avantajlı olmayabilir. Bu durumda, bu öğe, .NET Framework'ün önceki sürümlerini davranışı geri yüklemek için kullanabilirsiniz.  
+ .NET Framework 4 ' te başlayarak, derlemeler yalnızca, zaman damgaları, gölge kopya dizinine en son kopyalandıklarından bu yana değiştirildikleri belirtilmişse gölge olarak kopyalanır. Bu, gölge kopyalama [derlemeler](../../../app-domains/shadow-copy-assemblies.md)' de açıklandığı gibi, gölge kopyalamayı kullanan birçok uygulama için başlangıç zamanlarını geliştirir. Yüksek oranda yüzdesi ve derleme güncelleştirmelerinin sıklığı olan uygulamalar bu değişiklikten daha fazla avantaj sağlayabilir. Bu durumda, .NET Framework önceki sürümlerinin davranışını geri yüklemek için bu öğeyi kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, .NET Framework 4'te kopyalama gölge varsayılan başlangıç davranışını devre dışı bırakın ve .NET Framework'ün önceki sürümlerini başlangıç davranışını geri gösterilmektedir.  
+ Aşağıdaki örnek, .NET Framework 4 ' te gölge kopyalamanın varsayılan başlatma davranışının nasıl devre dışı bırakılacağını ve .NET Framework önceki sürümlerinin başlangıç davranışına geri dönmeyi gösterir.  
   
 ```xml  
 <configuration>  
@@ -69,6 +69,6 @@ Gölge kopyalama .NET Framework 4'te sunulan varsayılan başlangıç davranış
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Gölge Kopyalama Bütünleştirilmiş Kodları](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
+- [Gölge Kopyalama Bütünleştirilmiş Kodları](../../../app-domains/shadow-copy-assemblies.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 171f6fd5a8b55d2e96a90a90d011a8166be6759d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68362910"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666409"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Bellek\<t > ve yayma\<> Kullanım yönergeleri
 
@@ -78,7 +78,7 @@ Bir arabelleğin sahipliğini <xref:System.Buffers.IMemoryOwner%601?displayPrope
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
-Bu örneği ile [`using`](~/docs/csharp/language-reference/keywords/using-statement.md)de yazalım:
+Bu örneği ile [`using`](../../csharp/language-reference/keywords/using-statement.md)de yazalım:
 
 [!code-csharp[ownership-using](~/samples/snippets/standard/buffers/memory-t/owner-using/owner-using.cs)]
 
@@ -138,7 +138,7 @@ Aslında, bu kuralı ve kuralı #1 birleştirirseniz, daha iyi bir şekilde yapa
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-Yöntemi artık hemen her arabellek türü kodlamalardaki: `T[]`, [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md)ile ayrılmış depolama ve benzeri ile çalışmaktadır. `DisplayBufferToConsole` Hatta doğrudan ' a <xref:System.String> geçirebilirsiniz!
+Yöntemi artık hemen her arabellek türü kodlamalardaki: `T[]`, [stackalloc](../../csharp/language-reference/operators/stackalloc.md)ile ayrılmış depolama ve benzeri ile çalışmaktadır. `DisplayBufferToConsole` Hatta doğrudan ' a <xref:System.String> geçirebilirsiniz!
 
 **Kural #3: Yönteminiz > belleği\<t ve geri döndürürse `void`, yönteminizin döndürdüğü bir bellek\<t > örneğini kullanmanız gerekir.**
 
@@ -246,7 +246,7 @@ Bu tür bir örneği kabul etmek, bileşeninizin bu örneğin sahipliğini almay
 
 **Kural #9: Zaman uyumlu bir p/Invoke yöntemi sarmalandıysanız, API 'niz bir parametre olarak\<span > kabul etmelidir.**
 
-Kural #1 <xref:System.Span%601> göre genellikle zaman uyumlu API 'ler için kullanılan doğru türdür. Aşağıdaki örnekte olduğu <xref:System.Span%601> gibi, örnekleri [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) anahtar sözcük aracılığıyla sabitleyebilirsiniz.
+Kural #1 <xref:System.Span%601> göre genellikle zaman uyumlu API 'ler için kullanılan doğru türdür. Aşağıdaki örnekte olduğu <xref:System.Span%601> gibi, örnekleri [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) anahtar sözcük aracılığıyla sabitleyebilirsiniz.
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -286,7 +286,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 
 **Kural #10: Zaman uyumsuz bir p/Invoke yöntemi sarmalandıysanız, API 'niz bir parametre olarak\<bellek T > kabul etmelidir.**
 
-[`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) Anahtar sözcüğünü zaman uyumsuz işlemler arasında kullanamıyorsanız, örneğin ardışık bellek türünden <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> bağımsız olarak örnekleri <xref:System.Memory%601> sabitlemek için yöntemini kullanırsınız. Aşağıdaki örnek, bu API 'nin zaman uyumsuz p/Invoke çağrısı gerçekleştirmek için nasıl kullanılacağını gösterir.
+[`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) Anahtar sözcüğünü zaman uyumsuz işlemler arasında kullanamıyorsanız, örneğin ardışık bellek türünden <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> bağımsız olarak örnekleri <xref:System.Memory%601> sabitlemek için yöntemini kullanırsınız. Aşağıdaki örnek, bu API 'nin zaman uyumsuz p/Invoke çağrısı gerçekleştirmek için nasıl kullanılacağını gösterir.
 
 ```csharp
 using System.Runtime.InteropServices;

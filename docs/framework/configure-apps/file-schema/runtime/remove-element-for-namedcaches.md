@@ -5,20 +5,20 @@ helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-ms.openlocfilehash: 053e2776153489dfdd61547fdc039980646ae697
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9b126cee83bc8109606d915ea48549beea970c9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704732"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663470"
 ---
-# <a name="remove-element-for-namedcaches"></a>\<kaldırma > öğesi için \<namedCaches >
-Bir adlandırılmış önbellek girişi kaldırır `namedCaches` koleksiyonu için bir önbellek.  
+# <a name="remove-element-for-namedcaches"></a>\<namedönbellekler için \<> öğesini kaldırın >
+Bir bellek önbelleği için `namedCaches` koleksiyondan adlandırılmış bir önbellek girdisini kaldırır.  
   
- \<System.Runtime.Caching >  
-\<memoryCache>  
-\<namedCaches>  
-\<kaldırma >  
+ \<System. Runtime. Caching >  
+\<memoryCache >  
+\<Namedönbellekler >  
+\<> Kaldır  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,11 +45,11 @@ Bir adlandırılmış önbellek girişi kaldırır `namedCaches` koleksiyonu iç
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Yapılandırma ayarları için adlandırılmış bir koleksiyonunu içeren <xref:System.Runtime.Caching.MemoryCache> örnekleri.|  
+|[\<Namedönbellekler >](namedcaches-element-cache-settings.md)|Adlandırılmış <xref:System.Runtime.Caching.MemoryCache> örnekler için yapılandırma ayarlarının bir koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `remove` Öğeyi kaldırır bir `namedCache` adlandırılmış önbelleği koleksiyon için bir önbellek girişi.  
+ Öğesi `remove` , bir bellek `namedCache` önbelleğinin adlandırılmış önbellek koleksiyonundan bir girişi kaldırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<namedCaches > öğesi (önbellek ayarları)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<Namedönbellekler > öğesi (önbellek ayarları)](namedcaches-element-cache-settings.md)

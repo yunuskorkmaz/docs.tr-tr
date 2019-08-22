@@ -10,22 +10,22 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: a04cca3e57af5cc422776c5b2444a140e86f98b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fd8de9af00aa861d92c8c201ef89545e108c790
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674473"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659233"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<kaldırma > bypasslist (ağ ayarları) için
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<BypassList için > öğesini kaldır (ağ ayarları)
 
-Bir IP adresi veya DNS adı proxy atlama listeden kaldırır.
+Proxy atlama listesinden bir IP adresi veya DNS adı kaldırır.
 
 \<Yapılandırma > \
-\<System.NET > \
+\<System. net > \
 \<defaultProxy > \
-\<bypasslist>\
-\<kaldırma >
+\<BypassList > \
+\<> Kaldır
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,7 +43,7 @@ Bir IP adresi veya DNS adı proxy atlama listeden kaldırır.
 
 |**Öznitelik**|**Açıklama**|
 |-------------------|---------------------|
-|`address`|Bir IP adresi veya DNS adını tanımlayan bir normal ifade.|
+|`address`|IP adresini veya DNS adını tanımlayan bir normal ifade.|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -53,23 +53,23 @@ Yok.
 
 |**Öğe**|**Açıklama**|
 |-----------------|---------------------|
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Bir proxy sunucu kullanmaması adresleri açıklayan normal bir ifade kümesi sağlar.|
+|[BypassList](bypasslist-element-network-settings.md)|Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-`remove` Öğeyi normal ifadeler IP adresi veya DNS sunucu adları bir ara sunucu atlama adresleri listesinden kaldırır. Adresler, yapılandırma dosyasında ya da daha yüksek bir düzeyde yapılandırma hiyerarşideki daha önce tanımlanmadı.
+Öğesi `remove` , IP adreslerini veya DNS sunucusu adlarını tanımlayan normal ifadeleri bir proxy sunucusunu atlayan adresler listesinden kaldırır. Adresler yapılandırma hiyerarşisinde daha önce veya yapılandırma hiyerarşisinde daha yüksek bir düzeyde tanımlandı.
 
-Değeri `address` öznitelik, bir dizi IP adresi veya ana bilgisayar adları açıklayan bir normal ifade olmalıdır.
+`address` Özniteliğin değeri bir IP adresi veya ana bilgisayar adı kümesini açıklayan bir normal ifade olmalıdır.
 
-Normal ifadeler hakkında daha fazla bilgi için bkz. [.NET framework normal ifadelerinde](../../../../../docs/standard/base-types/regular-expressions.md).
+Normal ifadeler hakkında daha fazla bilgi için bkz. [Normal ifadeleri .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md).
 
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları
 
-Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.
+Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, adventure works.com'u etki alanı için herhangi bir önceki tanım kaldırır ve sonra contoso.com etki alanına atlama listesine ekler.
+Aşağıdaki örnek, adventure-works.com etki alanı için önceki tüm tanımları kaldırır ve ardından contoso.com etki alanını atlama listesine ekler.
 
 ```xml
 <configuration>
@@ -87,4 +87,4 @@ Aşağıdaki örnek, adventure works.com'u etki alanı için herhangi bir öncek
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

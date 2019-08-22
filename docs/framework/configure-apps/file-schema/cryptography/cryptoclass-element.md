@@ -8,19 +8,19 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-ms.openlocfilehash: da78140806ab8dbe7b7cb5e321e82755774ff25d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8076fba1ebae693aa5e4c80e822b9ae840ff1c5
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705265"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664331"
 ---
 # <a name="cryptoclass-element"></a>\<cryptoClass > öğesi
-İçin bir kolay ad eşlemesi var. bir şifreleme sınıfına içeren [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) öğesi.  
+NameEntry > öğesinde kolay bir ad [ \<](nameentry-element.md) ile eşleşen bir şifreleme sınıfı içerir.  
   
  \<Yapılandırma >  
 \<mscorlib >  
-\<cryptographySettings >  
+\<Cryptographyısettings >  
 \<cryptoNameMapping >  
 \<cryptoClasses >  
 \<cryptoClass >  
@@ -38,7 +38,7 @@ ms.locfileid: "61705265"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`customClassName`|Gerekli öznitelik.<br /><br /> Şifreleme sınıfı için bilgileri içerir. Bu öznitelik, sınıfınız için kısa bir ad vermek için kullanın. Belirtilen gereksinimleri karşılayan bir dize belirtmelisiniz [belirtme tam olarak nitelenmiş tür adlarını](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`customClassName`|Gerekli öznitelik.<br /><br /> Şifreleme sınıfıyla ilgili bilgileri içerir. Sınıfınız için kısa bir ad sağlamak üzere bu özniteliği kullanın. [Tam nitelikli tür adlarını belirtirken](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)belirtilen gereksinimleri karşılayan bir dize belirtmeniz gerekir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -48,13 +48,13 @@ ms.locfileid: "61705265"
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`cryptoClasses`|Bir eşleme için bir kolay ad şifreleme sınıflarını listesini içeren [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) öğesi.|  
+|`cryptoClasses`|NameEntry > öğesinde kolay bir ada [ \<](nameentry-element.md) eşleme olan şifreleme sınıflarının bir listesini içerir.|  
 |`cryptographySettings`|Şifreleme ayarlarını içerir.|  
-|`cryptoNameMapping`|Sınıf için kolay adlar eşlemeleri içerir.|  
-|`mscorlib`|İçeren [ \<cryptographySettings >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md) öğesi.|  
+|`cryptoNameMapping`|Kolay adlarla sınıfların eşlemelerini içerir.|  
+|`mscorlib`|Cryptographrivsettings > öğesini içerir. [ \<](cryptographysettings-element.md)|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanıldığını gösterir  **\<cryptoClass >** bir şifreleme sınıfına başvurmak için ve çalışma zamanı yapılandırma öğesi. Ardından "RSA" dize iletebileceğiniz <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemini <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> döndürülecek yöntemi bir `MyCryptoRSAClass` nesne.  
+ Aşağıdaki örnek, bir şifreleme sınıfına başvurmak ve çalışma zamanını yapılandırmak için  **\<CryptoClass >** öğesinin nasıl kullanılacağını gösterir. Daha sonra "RSA" <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> dizesini yöntemine geçirebilir ve <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodunu kullanarak bir `MyCryptoRSAClass` nesne döndürebilirsiniz.  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ ms.locfileid: "61705265"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
+- [Şifreleme Ayarları Şeması](index.md)
 - [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)
-- [Şifreleme Sınıflarını Yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Şifreleme Sınıflarını Yapılandırma](../../configure-cryptography-classes.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15156eaf883fc9ec162e0a85525564d49522b01d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 859e8a12421ea92aa48c54317e052683eb8e83f8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592663"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663492"
 ---
 # <a name="relativebindforresources-element"></a>\<relativeBindForResources > öğesi
-Araştırma için uydu derlemelerini en iyi duruma getirir.  
+Uydu derlemeleri için araştırmayı iyileştirir.  
   
  \<Yapılandırma > öğesi  
 \<çalışma zamanı > öğesi  
@@ -35,14 +35,14 @@ Araştırma için uydu derlemelerini en iyi duruma getirir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> Ortak dil çalışma zamanı uydu derlemeler için araştırma iyileştirir olup olmadığını belirtir.|  
+|`enabled`|Gerekli öznitelik.<br /><br /> Ortak dil çalışma zamanının uydu derlemeleri için araştırmayı iyileştirip iyileştirmediğini belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|Çalışma zamanı uydu derlemeler için araştırma iyileştirmez. Varsayılan değer budur.|  
-|`true`|Çalışma zamanı araştırma uydu derlemeler için en iyi duruma getirir.|  
+|`false`|Çalışma zamanı, uydu derlemeleri için araştırmayı iyileştirmez. Varsayılan değer budur.|  
+|`true`|Çalışma zamanı, uydu derlemeleri için araştırmayı iyileştirir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -55,24 +55,24 @@ Araştırma için uydu derlemelerini en iyi duruma getirir.
 |`runtime`|Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Genel olarak, Resource Manager açıklandığı gibi kaynaklar için araştırmaları [kaynakları paketleme ve dağıtma](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) konu. Bu belirli bir yerelleştirilmiş sürümünün bir kaynak için Resource Manager araştırmaları, genel derleme önbelleğinde arayın, uygulamanın kodu temel, sorgu Windows Installer kültüre özgü bir klasörde için uydu derlemeleri bakın ve yükseltmek, anlamına gelir <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay. `<relativeBindForResources>` Öğesi Resource Manager için uydu derlemeleri araştırmaları şekilde iyileştirir. Aşağıdaki koşullarda kaynaklar için yoklama zaman, performansı geliştirebilir:  
+ Genel olarak, kaynakları [paketleme ve dağıtma](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) konusunda belgelendiği gibi, kaynakların araştırmalarını Kaynak Yöneticisi. Yani, bir kaynağın belirli bir yerelleştirilmiş sürümü için Kaynak Yöneticisi yokladığınızda, genel derleme önbelleğine bakabilir, uygulamanın kod tabanında kültüre özgü bir klasöre bakabilir, uydu Derlemeleriyle ilgili sorgu Windows Installer ve <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay. `<relativeBindForResources>` Öğesi, uydu derlemeleri için Kaynak Yöneticisi araştırma biçimini iyileştirir. Aşağıdaki koşullarda kaynakları yokladığınızda performansı iyileştirebilir:  
   
-- Ne zaman uydu derlemesini, kod derleme ile aynı konumda dağıtılır. Bir kod derlemesi genel derleme önbelleğinde yüklü ise diğer bir deyişle, uydu derlemeleri de vardır yüklenmesi gerekir. Kod bütünleştirilmiş kodu uygulamanın temel yüklü değilse, uydu derlemeleri de kod tabanının bir kültüre özgü klasöre yüklenmelidir.  
+- Uydu derlemesi, kod derlemesiyle aynı konumda dağıtıldığında. Diğer bir deyişle, kod derlemesi genel derleme önbelleğinde yüklüyse, uydu derlemelerinin de de yüklü olması gerekir. Kod derlemesi uygulamanın kod tabanında yüklüyse, uydu derlemelerinin de kod tabanında kültüre özgü bir klasöre yüklenmesi gerekir.  
   
-- Windows Installer ne zaman kullanılmaz veya nadiren kullanılan isteğe bağlı yükleme uydu derlemeleri için.  
+- Windows Installer kullanılmazsa veya yalnızca, uydu derlemelerinin isteğe bağlı yüklemesi için nadiren kullanılırsa.  
   
-- Ne zaman uygulama kodunun işlemez <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay.  
+- Uygulama kodu <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayı işlemez.  
   
- Ayarı `enabled` özniteliği `<relativeBindForResources>` öğesine `true` Resource Manager'ın araştırma için yardımcı derlemeler gibi en iyi duruma getirir:  
+ Öğesinin, uydu derlemeleri için Kaynak Yöneticisi araştırmasını `true` `enabled` en iyi duruma getirmek için öğesi özniteliği aşağıdaki `<relativeBindForResources>` gibi ayarlanıyor:  
   
-- Uydu derlemesi için araştırmaya üst kod derleme konumunu kullanır.  
+- Uydu derlemesini yoklamanız için üst kod derlemesinin konumunu kullanır.  
   
 - Uydu derlemeleri için Windows Installer sorgulamaz.  
   
-- Bunu yükseltmez <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay.  
+- <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Olayı oluşturmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kaynakları Paketleme ve Dağıtma](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Kaynakları Paketleme ve Dağıtma](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)

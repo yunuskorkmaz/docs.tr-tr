@@ -6,24 +6,19 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 32ca9658ddf4ab6e8690f29797b7ac7b09df2ca7
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 287ed08db8a4266e5044a81d47a697949257e113
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012954"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658477"
 ---
 # <a name="walkthrough-style-wpf-content"></a>İzlenecek yol: Biçim WPF içeriği
 
-Bu izlenecek yol, bir Windows formunda barındırılan bir Windows Presentation Foundation (WPF) denetimine nasıl stil uygulanacağını gösterir.
-
- Bu kılavuzda, aşağıdaki görevleri gerçekleştirirsiniz:
-
-- Projeyi oluşturun.
-
-- WPF denetim türünü oluşturun.
-
-- WPF denetimine bir stil uygulayın.
+Bu makalede, bir Windows formunda barındırılan bir Windows Presentation Foundation (WPF) denetimine stil uygulamayı nasıl uygulayacağınız gösterilmektedir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -42,9 +37,9 @@ Projeye bir WPF denetim türü ekledikten sonra, bunu bir <xref:System.Windows.F
 
 1. Çözüme yeni bir WPF <xref:System.Windows.Controls.UserControl> projesi ekleyin. Denetim türü için varsayılan adı kullanın, `UserControl1.xaml`. Daha fazla bilgi için bkz [. İzlenecek yol: Tasarım zamanında](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)Windows Forms yeni WPF içeriği oluşturuluyor.
 
-2. Tasarım görünümü ' de, ' `UserControl1` nin seçili olduğundan emin olun. Daha fazla bilgi için [nasıl yapılır: Tasarım Yüzeyi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))öğeleri seçin ve taşıyın.
+2. Tasarım görünümü ' de, ' `UserControl1` nin seçili olduğundan emin olun.
 
-3. **Özellikler** penceresinde, <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerinin değerini olarak `200`ayarlayın.
+3. **Özellikler** penceresinde, <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerinin değerini **200**olarak ayarlayın.
 
 4. Öğesine bir <xref:System.Windows.Controls.Button?displayProperty=nameWithType> denetim ekleyin <xref:System.Windows.Controls.ContentControl.Content%2A>ve özelliğin değerini iptal olarak ayarlayın. <xref:System.Windows.Controls.UserControl>
 
@@ -60,15 +55,13 @@ Görünümünü ve davranışını değiştirmek için WPF denetimine farklı st
 
 1. **Araç kutusunda**, form `UserControl1` üzerinde bir örnek `UserControl1` oluşturmak için çift tıklayın.
 
-     Bir örneği `UserControl1` adlı <xref:System.Windows.Forms.Integration.ElementHost> Yeni`elementHost1`bir denetimde barındırılır.
+   Bir örneği `UserControl1` adlı <xref:System.Windows.Forms.Integration.ElementHost> Yeni`elementHost1`bir denetimde barındırılır.
 
 1. İçin `elementHost1`akıllı etiket panelinde, açılan listeden **barındırılan içeriği Düzenle** ' ye tıklayın.
 
-     `UserControl1`içinde [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]açılır.
+   `UserControl1`WPF Tasarımcısı 'nda açılır.
 
-1. Xaml görünümünde, `<UserControl>` açılış etiketinden sonra aşağıdaki xaml 'yi ekleyin.
-
-     Bu XAML, çakışan gradyan kenarlığı olan bir gradyan oluşturur. Denetime tıklandığında degradeler, basılan düğme görünümü oluşturacak şekilde değiştirilir. Daha fazla bilgi için bkz. [Stil oluşturma ve şablon](../../wpf/controls/styling-and-templating.md)oluşturma.
+1. Xaml görünümünde, `<UserControl>` açılış etiketinden sonra aşağıdaki xaml 'yi ekleyin. Bu XAML, çakışan gradyan kenarlığı olan bir gradyan oluşturur. Denetime tıklandığında degradeler, basılan düğme görünümü oluşturacak şekilde değiştirilir. Daha fazla bilgi için bkz. [Stil oluşturma ve şablon](../../wpf/controls/styling-and-templating.md)oluşturma.
 
    ```xaml
    <UserControl.Resources>
@@ -118,7 +111,7 @@ Görünümünü ve davranışını değiştirmek için WPF denetimine farklı st
    </UserControl.Resources>
    ```
 
-1. Aşağıdaki XAML 'yi İptal düğmesinin `<Button>` etiketine ekleyerek, önceki adımda tanımlanan stili`SimpleButton` iptal düğmesine uygulayın.
+1. Aşağıdaki XAML **'yi iptal** düğmesinin `<Button>` etiketine ekleyerek, önceki adımda tanımlanan stili`SimpleButton` iptal düğmesine uygulayın.
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -139,7 +132,7 @@ Görünümünü ve davranışını değiştirmek için WPF denetimine farklı st
 
 1. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat** ' ı seçerek uygulamayı çalıştırın.
 
-1. Tamam ve Iptal düğmelerini tıklatın ve farkları görüntüleyin.
+1. **Tamam** ve **iptal** düğmelerini tıklatın ve farkları görüntüleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

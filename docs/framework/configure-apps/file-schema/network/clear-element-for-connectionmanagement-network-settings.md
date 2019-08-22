@@ -10,20 +10,20 @@ helpviewer_keywords:
 - clear element, connectionManagement
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-ms.openlocfilehash: 733c70b0575de7e2635afaab58ad48591f035fc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86a7a0ab402c8c40ec3b824402a1dba984412b68
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705252"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659441"
 ---
-# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<Temizle > connectionManagement (ağ ayarları) için
-Bağlantı yönetim listesini temizler.  
+# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<connectionManagement için > öğesini temizle (ağ ayarları)
+Bağlantı yönetimi listesini temizler.  
   
  \<Yapılandırma >  
 \<system.net>  
 \<connectionManagement >  
-\<Temizleme >  
+\<> Temizle  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,16 +44,16 @@ Bağlantı yönetim listesini temizler.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Bir ağ konak bağlantı maksimum sayısını belirtir.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Bir ağ konağına en fazla bağlantı sayısını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `clear` Öğesi bağlantı yönetimi listesindeki tüm girişleri siler.  
+ `clear` Öğesi bağlantı yönetimi listesinden tüm girdileri temizler.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, bağlantı yönetimi listesini temizler ve ardından sunucu için yeni bağlantı yönetimi girişleri ekler `www.contoso.com` ve diğer tüm ağ konaklar.  
+ Aşağıdaki örnek bağlantı yönetimi listesini temizler ve ardından sunucu `www.contoso.com` ve diğer tüm ağ konakları için yeni bağlantı yönetimi girişleri ekler.  
   
 ```xml  
 <configuration>  
@@ -71,4 +71,4 @@ Bağlantı yönetim listesini temizler.
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

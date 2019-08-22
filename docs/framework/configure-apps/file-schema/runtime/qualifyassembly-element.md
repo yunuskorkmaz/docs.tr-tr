@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a4741c6a4745bdba00fdb525b39b70d0b15e005
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4aa90a378630c9aff74923d8e8600aed15a77a5e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704862"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663498"
 ---
 # <a name="qualifyassembly-element"></a>\<qualifyAssembly > öğesi
-Kısmi bir adı kullanıldığında dinamik olarak yüklenmesi gereken bütünleştirilmiş kodun tam adını belirtir.  
+Kısmi bir ad kullanıldığında dinamik olarak yüklenmesi gereken derlemenin tam adını belirtir.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -41,8 +41,8 @@ Kısmi bir adı kullanıldığında dinamik olarak yüklenmesi gereken bütünle
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`partialName`|Gerekli öznitelik.<br /><br /> Kod içinde göründüğü gibi kısmi derlemenin adını belirtir.|  
-|`fullName`|Gerekli öznitelik.<br /><br /> Genel derleme önbelleğinde göründüğü şekliyle tam derleme adını belirtir.|  
+|`partialName`|Gerekli öznitelik.<br /><br /> Kodda göründüğü gibi derlemenin kısmi adını belirtir.|  
+|`fullName`|Gerekli öznitelik.<br /><br /> Derlemenin genel derleme önbelleğinde göründüğü haliyle tam adını belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -56,12 +56,12 @@ Kısmi bir adı kullanıldığında dinamik olarak yüklenmesi gereken bütünle
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çağırma <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi kısmi derleme adları kullanarak uygulama temel dizininin derlemesinde yalnızca aramak ortak dil çalışma zamanı neden olur. Kullanım  **\<qualifyAssembly >** öğesi uygulama yapılandırma dosyanızda aramak ortak dil çalışma zamanı (adı, sürümü, ortak anahtar belirteci ve kültür) tam bütünleştirilmiş kod bilgileri sağlayın ve genel derleme önbelleğinde derleme için.  
+ Kısmi derleme adlarını kullanarak yöntemiçağırmak,ortakdilçalışmazamanınınderlemeyiyalnızcauygulamatemeldizinindearamasınısağlar.<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> Tüm derleme bilgilerini (ad, sürüm, ortak anahtar belirteci ve kültür) sağlamak için uygulama yapılandırma dosyanızda  **qualifyAssembly>öğesinikullanınveortakdilçalışmazamanının,derlemeiçin\<** Genel derleme önbelleği.  
   
- **FullName** özniteliği derleme kimliğinin dört alanı içermelidir: ad, sürüm, ortak anahtar belirteci ve kültür. **PartialName** öznitelik, bir derlemeyi kısmen başvurmalıdır. Derlemenin metin adı (en yaygın durumda) en az belirtmeniz gerekir, ancak bu sürüm, ortak anahtar belirteci veya kültürü (veya herhangi bir birleşimini dört, ancak tüm dört) de içerebilir. **PartialName** çağrınızda belirtilen adla eşleşmelidir. Örneğin, belirtemezsiniz `"math"` olarak **partialName** yapılandırma dosyası ve çağrı özniteliğinde `Assembly.Load("math, Version=3.3.3.3")` kodunuzda.  
+ **FullName** özniteliği, derleme kimliğinin dört alanını içermelidir: ad, sürüm, ortak anahtar belirteci ve kültür. **PartialName** özniteliği kısmen bir derlemeye başvurmalıdır. En azından derlemenin metin adını (en yaygın durum) belirtmeniz gerekir, ancak sürüm, ortak anahtar belirteci veya kültürü (ya da dört ' un herhangi bir birleşimini değil) dahil edebilirsiniz. **PartialName** , çağrın içinde belirtilen ad ile aynı olmalıdır. Örneğin, yapılandırma dosyanızda `"math"` **partialName** özniteliği olarak belirtemezsiniz ve kodunuzda çağrı `Assembly.Load("math, Version=3.3.3.3")` yapabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, mantıksal çağrı kapatır `Assembly.Load("math")` içine `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.  
+ Aşağıdaki örnek, çağrısını `Assembly.Load("math")` `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`mantıksal olarak etkinleştirir.  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ Kısmi bir adı kullanıldığında dinamik olarak yüklenmesi gereken bütünle
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../deployment/how-the-runtime-locates-assemblies.md)
 - [Kısmi derleme başvuruları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

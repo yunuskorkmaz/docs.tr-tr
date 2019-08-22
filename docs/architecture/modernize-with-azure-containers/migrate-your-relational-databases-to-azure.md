@@ -2,12 +2,12 @@
 title: İlişkisel veritabanlarınızı Azure 'a geçirin
 description: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin | ilişkisel veritabanlarınızı Azure 'a geçirin
 ms.date: 04/28/2018
-ms.openlocfilehash: 3d4f03e61144bb6a442a50916d7fd024d38ec611
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 982050d99aaa66cde1168a2f2fa64ed5f3e9163b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68677047"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660728"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>İlişkisel veritabanlarınızı Azure 'a geçirin
 
@@ -126,4 +126,4 @@ Azure veritabanı geçiş hizmeti 'ni kullanarak veritabanlarının nasıl geçi
 
 > [!div class="step-by-step"]
 > [Önceki](lift-and-shift-existing-apps-azure-iaas.md)İleri
-> [](modernize-existing-apps-to-cloud-optimized/index.md)
+> [](modernize-existing-apps-to-cloud-optimized/index.md) <!-- Next Chapter -->

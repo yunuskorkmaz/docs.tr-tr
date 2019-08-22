@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9270552245b3867f0f09741ded3f9da6a8b6c135
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705187"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664262"
 ---
 # <a name="nameentry-element"></a>\<nameEntry > öğesi
-Çok sayıda kolay adlara sahip bir sınıf sağlar ve kolay algoritma adı için bir sınıf adı eşler.  
+Bir sınıf adını kolay bir algoritma adıyla eşleştirir, bu da bir sınıfın birçok kolay adına sahip olmasına olanak tanır.  
   
  \<Yapılandırma >  
 \<mscorlib >  
-\<cryptographySettings >  
+\<Cryptographyısettings >  
 \<cryptoNameMapping >  
 \<nameEntry >  
   
@@ -37,8 +37,8 @@ ms.locfileid: "61705187"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**Adı**|Gerekli öznitelik.<br /><br /> Şifreleme sınıfına uygulayan algoritma kolay adı belirtir.|  
-|**class**|Gerekli öznitelik.<br /><br /> Değeri belirtir **adı** özniteliğini [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) öğesi.|  
+|**name**|Gerekli öznitelik.<br /><br /> Şifreleme sınıfının uyguladığı algoritmanın kolay adını belirtir.|  
+|**class**|Gerekli öznitelik.<br /><br /> CryptoClass > öğesindeki **Name** özniteliğinin [değerini belirtir. \<](cryptoclass-element.md)|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -48,13 +48,13 @@ ms.locfileid: "61705187"
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.web`|ASP.NET yapılandırma bölümü için olan kök öğesini belirtir.|  
+|`system.web`|ASP.NET yapılandırma bölümünün kök öğesini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- **Adı** özniteliği bulunan soyut sınıflar birinin adı olabilir <xref:System.Security.Cryptography> ad alanı. Çağırdığınızda **Oluştur** bir soyut bir şifreleme sınıfına yönteminde, soyut sınıf adı için geçirilir <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> yöntemi. **CreateFromName** tarafından belirtilen türün bir örneğini döndürür **sınıfı** özniteliği. Varsa **adı** kısa bir ad özniteliği olan RSA gibi bu adı çağırırken kullanabilirsiniz **CreateFromName** yöntemi.  
+ **Ad** özniteliği ad <xref:System.Security.Cryptography> alanında bulunan soyut sınıflardan birinin adı olabilir. Bir soyut şifreleme sınıfında **Create** yöntemini çağırdığınızda, soyut sınıf adı <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> yöntemine geçirilir. **CreateFromName** , **sınıf** özniteliği tarafından belirtilen türün bir örneğini döndürür. **Ad** özniteliği RSA gibi kısa bir addır, **CreateFromName** metodunu çağırırken bu adı kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir  **\<nameEntry >** bir şifreleme sınıfına başvurmak için ve çalışma zamanı yapılandırma öğesi. Ardından "RSA" dize iletebileceğiniz <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemini <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> döndürülecek yöntemi bir `MyCryptoRSAClass` nesne.  
+ Aşağıdaki örnek, bir şifreleme sınıfına başvurmak ve çalışma zamanını yapılandırmak için  **\<nameEntry >** öğesinin nasıl kullanılacağını gösterir. Daha sonra "RSA" <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> dizesini yöntemine geçirebilir ve <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodunu kullanarak bir `MyCryptoRSAClass` nesne döndürebilirsiniz.  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ ms.locfileid: "61705187"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
+- [Şifreleme Ayarları Şeması](index.md)
 - [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)
-- [Şifreleme Sınıflarını Yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Şifreleme Sınıflarını Yapılandırma](../../configure-cryptography-classes.md)

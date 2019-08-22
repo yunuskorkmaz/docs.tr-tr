@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: 54fb68ab0bf8aa2665d70391350c626131ccb4bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8ea08cbd76e60a3665703bc50924dd94500cd87
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674512"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659325"
 ---
 # <a name="mailsettings-element-network-settings"></a>\<mailSettings > öğesi (ağ ayarları)
 Posta gönderme seçeneklerini yapılandırır.  
@@ -40,13 +40,13 @@ Posta gönderme seçeneklerini yapılandırır.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|[\<SMTP > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Basit Posta Aktarım Protokolü seçeneklerini yapılandırır.|  
+|[\<SMTP > öğesi (ağ ayarları)](smtp-element-network-settings.md)|Basit Posta Aktarım Protokolü seçeneklerini yapılandırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[\<system.Net > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlandığını belirten ayarları içerir.|  
+|[\<System .net > öğesi (ağ ayarları)](system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, varsayılan ağ kimlik bilgilerini kullanarak e-posta göndermek için uygun SMTP parametrelerini belirtir.  
@@ -70,4 +70,4 @@ Posta gönderme seçeneklerini yapılandırır.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.Mail.SmtpClient>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: e011375ed069a48f80364e529e80397f5f0495a3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a627ac51399b67aeb7da8c3d98a4530248a84703
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589613"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659741"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Çalışma Zamanındaki Genel Türler (C# Programlama Kılavuzu)
 Genel bir tür veya yöntem Microsoft ara dil (MSIL) içinde derlendiğinde, türü parametre varmış gibi tanımlayan meta veriler içerir. Genel bir tür için MSIL, sağlanan tür parametresinin bir değer türü veya başvuru türü olup olmadığına göre farklılık gösterir.  
@@ -52,4 +52,4 @@ Genel bir tür veya yöntem Microsoft ara dil (MSIL) içinde derlendiğinde, tü
 - <xref:System.Collections.Generic>
 - [C# Programlama Kılavuzu](../index.md)
 - [Genel Türlere Giriş](./index.md)
-- [Genel Türler](~/docs/standard/generics/index.md)
+- [Genel Türler](../../../standard/generics/index.md)

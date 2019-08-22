@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 2017'de bir .NET Standard kitaplığı kullanma
-description: Visual Studio 2017 ile başka bir sınıf kitaplığı üyeleri çağıran bir .NET Core uygulaması oluşturun.
+title: Visual Studio 2017’de bir .NET Standard kitaplığı kullanma
+description: Visual Studio 2017 ile başka bir sınıf kitaplığının üyelerini çağıran bir .NET Core uygulaması oluşturun.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/05/2018
@@ -8,100 +8,100 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7689d45b341dbe9dbfae40beec3a7663e2bd0366
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a7ab9e8f148eaab8250a7cb10c7d38d2f70e4cd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647729"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660574"
 ---
-# <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Visual Studio 2017'de bir .NET Standard kitaplığı kullanma
+# <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Visual Studio 2017’de bir .NET Standard kitaplığı kullanma
 
-İçindeki adımları izleyerek bir .NET Standard sınıf kitaplığı oluşturduktan sonra [bir Visual Studio 2017'de .NET Core ile C# sınıf kitaplığı oluşturma](./library-with-visual-studio.md) veya [Visual Studio 2017'de .NET Core ile bir Visual Basic sınıf kitaplığı oluşturma ](vb-library-with-visual-studio.md), içinde test [Visual Studio 2017'de .NET Core ile bir sınıf kitaplığını test](testing-library-with-visual-studio.md), ve kitaplığı sürümü oluşturulan arayanlar için kullanılabilir hale getirmek için sonraki adım içerir. Bunu iki şekilde yapabilirsiniz:
+[Visual studio 2017 ' de .NET Core ile bir C# sınıf kitaplığı oluşturma](./library-with-visual-studio.md) veya [Visual Studio 2017 ' de .NET Core ile bir Visual Basic sınıf kitaplığı](vb-library-with-visual-studio.md)oluşturma bölümündeki adımları izleyerek bir .NET Standard sınıf kitaplığı oluşturduktan sonra, bu, içinde [test edilmiştir Visual Studio 2017 ' de .NET Core ile bir sınıf kitaplığını test etme](testing-library-with-visual-studio.md)ve kitaplığın yayın sürümü oluşturma bir sonraki adım, arayanlara hazır hale getirmek için kullanılır. Bunu iki şekilde yapabilirsiniz:
 
-* (Örneğin, bir tek büyük bir uygulama bileşeni ise) tek bir çözüm tarafından kullanılacak kitaplık, çözümünüze bir proje olarak içerebilir.
+* Kitaplık tek bir çözüm tarafından kullanılacaksa (örneğin, tek bir büyük uygulamadaki bir bileşen ise) çözümünüze bir proje olarak dahil edebilirsiniz.
 
-* Kitaplığa Genel olarak erişilebilir olacaksa, bir NuGet paketi olarak dağıtabilirsiniz.
+* Kitaplığın genel olarak erişilebilir olacağı bir NuGet paketi olarak dağıtabilirsiniz.
 
-## <a name="including-a-library-as-a-project-in-a-solution"></a>Bir çözümde bir proje olarak kitaplığı dahil olmak üzere
+## <a name="including-a-library-as-a-project-in-a-solution"></a>Bir kitaplığı bir çözüme proje olarak dahil etme
 
-Sınıf kitaplığınıza aynı çözümde birim testlerini dahil olarak, uygulamanızı bu çözümün parçası olarak dahil edebilirsiniz. Örneğin, bir dize ve raporları, ilk karakterin büyük harf olup olmadığını girmesini isteyen bir konsol uygulamasında, sınıf kitaplığı kullanabilirsiniz:
+Birim testlerini, sınıf kitaplısınız ile aynı çözümde bulundurmadığınız gibi, uygulamanızı bu çözümün bir parçası olarak dahil edebilirsiniz. Örneğin, sınıf kitaplığınızı, kullanıcıdan ilk karakterinin büyük harf olup olmadığını belirten bir dize ve rapor girmesini isteyen bir konsol uygulamasında kullanabilirsiniz:
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
-1. Açık `ClassLibraryProjects` oluşturduğunuz çözüm [bir Visual Studio 2017'de .NET Core ile C# sınıf kitaplığı oluşturma](./library-with-visual-studio.md) konu. İçinde **Çözüm Gezgini**, sağ **ClassLibraryProjects** çözüm ve select **Ekle** > **yeni proje** gelen bağlam menüsü.
+1. [Visual Studio 'da .NET Core ile bir C# sınıf kitaplığı oluşturma 2017](./library-with-visual-studio.md) konusunun oluşturduğunuz çözümüaçın.`ClassLibraryProjects` **Çözüm Gezgini**, **classlibraryprojects** çözümüne sağ tıklayın ve bağlam menüsünden**Yeni proje** **Ekle** > ' yi seçin.
 
-1. İçinde **Yeni Proje Ekle** iletişim kutusunda genişletin **Visual C#** düğümünü seçip alt **.NET Core** düğümünü ve ardından **konsol uygulaması (.NET Core)** Proje şablonu. İçinde **adı** metin kutusuna "Gösterimi" yazın ve seçin **Tamam** düğmesi.
+1. **Yeni Proje Ekle** iletişim kutusunda, **görsel C#**  düğümünü genişletin ve ardından **konsol uygulaması (.NET Core)** proje şablonu tarafından izlenen **.NET Core** düğümünü seçin. **Ad** metin kutusuna "gösterimi" yazın ve **Tamam** düğmesini seçin.
 
    ![Visual Studio yeni proje Ekle iletişim kutusu-C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
-1. İçinde **Çözüm Gezgini**, sağ **gösterimi** seçin ve proje **başlangıç projesi olarak ayarla** bağlam menüsünde.
+1. **Çözüm Gezgini**, Gösterim projesine sağ tıklayın ve bağlam menüsünde **Başlangıç projesi olarak ayarla** ' yı seçin.
 
-   ![Başlangıç projesi - ayarlamak için visual Studio Proje bağlam menüsüC#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
+   ![Başlangıç projesini ayarlamaya yönelik Visual Studio proje bağlam menüsü-C#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. Başlangıçta, projenize Sınıf Kitaplığı'na erişimi yok. Sınıf kitaplığınıza yöntemlerini çağırmaya izin vermek için bir başvuru sınıf kitaplığı oluşturun. İçinde **Çözüm Gezgini**, sağ `ShowCase` projenin **bağımlılıkları** düğümünü seçip alt **Başvuru Ekle**.
+1. Başlangıçta, projenizin sınıf kitaplığınıza erişimi yoktur. Sınıf kitaplığınızdaki yöntemleri çağırmasına izin vermek için, sınıf kitaplığına bir başvuru oluşturursunuz. **Çözüm Gezgini**, `ShowCase` projenin **Bağımlılıklar** düğümünü sağ tıklatın ve **Başvuru Ekle**' yi seçin.
 
-   ![Visual Studio proje başvurusu bağlam menüsünde Ekle-C#](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
+   ![Visual Studio proje başvuru ekleme bağlam menüsü-C#](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
-1. İçinde **başvuru Yöneticisi** iletişim kutusunda **StringLibrary**, sınıf kitaplığı projesi ve seçin **Tamam** düğmesi.
+1. **Başvuru Yöneticisi** Iletişim kutusunda **StringLibrary**, sınıf kitaplığı projeniz ' i seçin ve **Tamam** düğmesini seçin.
 
-   ![Visual Studio yönetme başvurular iletişim-C#](./media/consuming-library-with-visual-studio/manage-project-references.png)
+   ![Visual Studio başvuruları Yönet iletişim kutusu-C#](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
-1. Kod penceresinde *Program.cs* dosya, tüm kodu aşağıdaki kodla değiştirin:
+1. *Program.cs* dosyası için kod penceresinde, tüm kodu aşağıdaki kodla değiştirin:
 
    [!CODE-csharp[UsingClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
 
-   Kod `row` konsol penceresine yazılan veri satırı sayısını korumak için değişkeni. Büyüktür veya eşittir 25 olduğunda, kod konsol penceresini temizler ve kullanıcıya bir ileti görüntüler.
+   Kod, konsol penceresine `row` yazılan veri satırlarının sayısını korumak için değişkenini kullanır. 25 ' e eşit veya daha büyük olduğunda, kod konsol penceresini temizler ve kullanıcıya bir ileti görüntüler.
 
-   Program bir dize girmesini ister. Dizeyi büyük harfli bir karakterle başlayıp başlamadığını gösterir. Kullanıcı, bir dize girmeden Enter tuşuna bastığında, uygulama sonlandırır ve konsol penceresini kapatır.
+   Program kullanıcıdan bir dize girmesini ister. Dizenin büyük harfle başlatılıp başlatılmayacağını gösterir. Kullanıcı bir dize girmeden ENTER tuşuna basarsa, uygulama sonlanır ve konsol penceresi kapanır.
 
-1. Gerekirse, derleme için araç çubuğunda değiştirin **hata ayıklama** sürüm `ShowCase` proje. Derleme ve yeşil bir ok seçerek programı çalıştırın **gösterimi** düğmesi.
+1. Gerekirse, `ShowCase` projenin **hata ayıklama** sürümünü derlemek için araç çubuğunu değiştirin. **Gösterimi** düğmesindeki yeşil oku seçerek programı derleyin ve çalıştırın.
 
-   ![Visual Studio Proje araç çubuğunu gösterme Hata Ayıkla düğmesine-C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+   ![Hata ayıklama düğmesini gösteren Visual Studio proje araç çubuğu-C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
-1. Açık `ClassLibraryProjects` oluşturduğunuz çözüm [bir sınıf kitaplığı Visual Basic ve Visual Studio 2017'de .NET Core ile oluşturmaya](vb-library-with-visual-studio.md) konu. İçinde **Çözüm Gezgini**, sağ **ClassLibraryProjects** çözüm ve select **Ekle** > **yeni proje** gelen bağlam menüsü.
+1. [Visual Studio 'da Visual Basic ve .NET Core ile bir sınıf kitaplığı oluşturma 2017](vb-library-with-visual-studio.md) konusunun oluşturduğunuz çözümüaçın.`ClassLibraryProjects` **Çözüm Gezgini**, **classlibraryprojects** çözümüne sağ tıklayın ve bağlam menüsünden**Yeni proje** **Ekle** > ' yi seçin.
 
-1. İçinde **Yeni Proje Ekle** iletişim kutusunda genişletin **Visual Basic** düğümünü seçip alt **.NET Core** düğümünü ve ardından **konsol uygulaması (.NET Core)** proje şablonu. İçinde **adı** metin kutusuna "Gösterimi" yazın ve seçin **Tamam** düğmesi.
+1. **Yeni Proje Ekle** iletişim kutusunda **Visual Basic** düğümünü genişletin ve ardından **konsol uygulaması (.NET Core)** proje şablonu tarafından izlenen **.NET Core** düğümünü seçin. **Ad** metin kutusuna "gösterimi" yazın ve **Tamam** düğmesini seçin.
 
-   ![Visual Studio yeni proje Ekle iletişim kutusu - Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
+   ![Visual Studio yeni proje Ekle iletişim kutusu-Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
-1. İçinde **Çözüm Gezgini**, sağ **gösterimi** seçin ve proje **başlangıç projesi olarak ayarla** bağlam menüsünde. 
+1. **Çözüm Gezgini**, Gösterim projesine sağ tıklayın ve bağlam menüsünde **Başlangıç projesi olarak ayarla** ' yı seçin. 
 
-   ![Visual Basic başlangıç projesi - ayarlamak için visual Studio Proje bağlam menüsü](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
+   ![Başlangıç projesini ayarlamaya yönelik Visual Studio proje bağlam menüsü-Visual Basic](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. Başlangıçta, projenize Sınıf Kitaplığı'na erişimi yok. Sınıf kitaplığınıza yöntemlerini çağırmaya izin vermek için bir başvuru sınıf kitaplığı oluşturun. İçinde **Çözüm Gezgini**, sağ `ShowCase` projenin **bağımlılıkları** düğümünü seçip alt **Başvuru Ekle**.
+1. Başlangıçta, projenizin sınıf kitaplığınıza erişimi yoktur. Sınıf kitaplığınızdaki yöntemleri çağırmasına izin vermek için, sınıf kitaplığına bir başvuru oluşturursunuz. **Çözüm Gezgini**, `ShowCase` projenin **Bağımlılıklar** düğümünü sağ tıklatın ve **Başvuru Ekle**' yi seçin.
 
-   ![Visual Studio proje başvurusu bağlam menüsü - Visual Basic Ekle](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
+   ![Visual Studio proje başvuru ekleme bağlam menüsü-Visual Basic](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
-1. İçinde **başvuru Yöneticisi** iletişim kutusunda **StringLibrary**, sınıf kitaplığı projesi ve seçin **Tamam** düğmesi.
+1. **Başvuru Yöneticisi** Iletişim kutusunda **StringLibrary**, sınıf kitaplığı projeniz ' i seçin ve **Tamam** düğmesini seçin.
 
-   ![Visual Studio'yu Yönet iletişim kutusu - Visual Basic başvuruyor](./media/consuming-library-with-visual-studio/manage-project-references.png)
+   ![Visual Studio başvuruları Yönet iletişim kutusu-Visual Basic](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
-1. Kod penceresinde *Program.vb* dosya, tüm kodu aşağıdaki kodla değiştirin:
+1. *Program. vb* dosyasının kod penceresinde, tüm kodu aşağıdaki kodla değiştirin:
 
     [!CODE-vb[UsingClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
 
-   Kod `row` konsol penceresine yazılan veri satırı sayısını korumak için değişkeni. Büyüktür veya eşittir 25 olduğunda, kod konsol penceresini temizler ve kullanıcıya bir ileti görüntüler.
+   Kod, konsol penceresine `row` yazılan veri satırlarının sayısını korumak için değişkenini kullanır. 25 ' e eşit veya daha büyük olduğunda, kod konsol penceresini temizler ve kullanıcıya bir ileti görüntüler.
 
-   Program bir dize girmesini ister. Dizeyi büyük harfli bir karakterle başlayıp başlamadığını gösterir. Kullanıcı, bir dize girmeden Enter tuşuna bastığında, uygulama sonlandırır ve konsol penceresini kapatır.
+   Program kullanıcıdan bir dize girmesini ister. Dizenin büyük harfle başlatılıp başlatılmayacağını gösterir. Kullanıcı bir dize girmeden ENTER tuşuna basarsa, uygulama sonlanır ve konsol penceresi kapanır.
 
-1. Gerekirse, derleme için araç çubuğunda değiştirin **hata ayıklama** sürüm `ShowCase` proje. Derleme ve yeşil bir ok seçerek programı çalıştırın **gösterimi** düğmesi.
+1. Gerekirse, `ShowCase` projenin **hata ayıklama** sürümünü derlemek için araç çubuğunu değiştirin. **Gösterimi** düğmesindeki yeşil oku seçerek programı derleyin ve çalıştırın.
 
-   ![Araç - Visual Basic hata ayıklama](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+   ![Araç çubuğunda Hata Ayıkla-Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 ---
 
-Hata ayıklama ve yayımlama adımları izleyerek bu kitaplığı kullanan uygulama [Merhaba Dünya uygulamanızı Visual Studio 2017 ile hata ayıklama](debugging-with-visual-studio.md) ve [Hello World uygulamanızı Visual Studio ile yayımlama 2017](publishing-with-visual-studio.md).
+[Visual studio 2017 ile Merhaba Dünya uygulamanızda hata ayıklama](debugging-with-visual-studio.md) ve [Merhaba Dünya uygulamanızı Visual Studio 2017 ile yayımlama](publishing-with-visual-studio.md)bölümündeki adımları izleyerek, bu kitaplığı kullanan uygulamayı ayıklayabilir ve yayımlayabilirsiniz.
 
-## <a name="distributing-the-library-in-a-nuget-package"></a>Bir NuGet paketi kitaplıkta dağıtma
+## <a name="distributing-the-library-in-a-nuget-package"></a>Kitaplığı bir NuGet paketinde dağıtma
 
-Bir NuGet paketi olarak yayımlayarak, sınıf kitaplığı yaygın olarak kullanılabilir hale getirebilirsiniz. Visual Studio, NuGet paketlerini oluşturulmasını desteklemiyor. Oluşturmak için kullandığınız [ `dotnet` komut satırı yardımcı programını](../../core/tools/dotnet.md):
+Sınıf kitaplığınızı, bir NuGet paketi olarak yayımlayarak geniş oranda kullanılabilir hale getirebilirsiniz. Visual Studio, NuGet paketlerinin oluşturulmasını desteklemez. Bir tane oluşturmak için [ `dotnet` komut satırı yardımcı programını](../tools/dotnet.md)kullanın:
 
-1. Bir konsol penceresi açın. Örneğin **bana istediğini Sorabilirsin** metin kutusunda Windows görev çubuğunda, girin `Command Prompt` (veya `cmd` kısaca) ve seçerek bir konsol penceresi açıyor **komut istemi** masaüstü uygulaması veya arama sonuçlarında seçtiyseniz Enter tuşuna basın.
+1. Bir konsol penceresi açın. Örneğin, Windows görev çubuğundaki bir **şeyi bana sor** metin kutusunda, (veya `Command Prompt` `cmd` kısaca) girin ve bir konsol penceresini açmak için **komut istemi** masaüstü uygulamasını seçerek veya aramada seçili ise ENTER tuşuna basın sonucunun.
 
-1. Kitaplığınızın proje dizinine gidin. Tipik dosya konumunu yeniden sürece, konusu *Documents\Visual Studio 2017\Projects\ClassLibraryProjects\StringLibrary* dizin. Kaynak kodunuzu ve bir proje dosyası dizini içeriyor *StringLibrary.csproj*.
+1. Kitaplığınızın proje dizinine gidin. Normal dosya konumunu yeniden yapılandırmadığınız takdirde, bu, bu,, bu,, bu,, bu,, bu, The *Studio 2017 \ projeleri* Dizin, kaynak kodunuzu ve *StringLibrary. csproj*proje dosyasını içerir.
 
-1. Komutu Yürüt `dotnet pack --no-build`. `dotnet` Yardımcı olan bir paket oluşturur bir *.nupkg* uzantısı.
+1. Komutu `dotnet pack --no-build`verin. Yardımcı `dotnet` programı, *. nupkg* uzantılı bir paket oluşturur.
 
    > [!TIP]
-   > Dizin, içerip içermediğini *dotnet.exe* olduğu değil, yolu girerek konumunda bulabilirsiniz `where dotnet.exe` konsol penceresinde.
+   > *DotNet. exe* içeren dizin yolunuzda değilse, konsol penceresine girerek `where dotnet.exe` konumunu bulabilirsiniz.
 
-NuGet paketleri oluşturma hakkında daha fazla bilgi için bkz: [Çapraz Platform araçları ile bir NuGet paketi oluşturma](../../core/deploying/creating-nuget-packages.md).
+NuGet paketleri oluşturma hakkında daha fazla bilgi için bkz. [platformlar arası araçlarla NuGet paketi oluşturma](../deploying/creating-nuget-packages.md).

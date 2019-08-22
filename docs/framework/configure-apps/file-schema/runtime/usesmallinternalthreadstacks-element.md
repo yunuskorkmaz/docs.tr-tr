@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70113d98c5a4ab41700f6c9842dba89e2b49c297
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 74678089bb1b19295983064eb7ad54fbf0a1e361
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489334"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663383"
 ---
-# <a name="usesmallinternalthreadstacks-element"></a>\<Usesmallınternalthreadstacks > öğesi
-Ortak dil çalışma zamanı (CLR) bellek miktarını azaltmak istekleri, dahili olarak, bu iş parçacıkları için varsayılan yığın boyutu kullanmak yerine kullanan belirli iş parçacıklarını oluşturduğunda açık yığın boyutlarını belirterek kullanır.  
+# <a name="usesmallinternalthreadstacks-element"></a>\<Usesmallınternalthreadyığınları > öğesi
+Ortak dil çalışma zamanının (CLR), bu iş parçacıkları için varsayılan yığın boyutunu kullanmak yerine, dahili olarak kullandığı belirli iş parçacıklarını oluştururken açık yığın boyutları belirterek bellek kullanımını azaltmalarını ister.  
   
  \<Yapılandırma > öğesi  
 \<çalışma zamanı > öğesi  
-\<Usesmallınternalthreadstacks > öğesi  
+\<Usesmallınternalthreadyığınları > öğesi  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,14 +34,14 @@ Ortak dil çalışma zamanı (CLR) bellek miktarını azaltmak istekleri, dahili
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Etkin|Gerekli öznitelik.<br /><br /> Dahili olarak kullandığı belirli bir iş parçacığı oluşturur CLR kullanın açık yığın boyutu varsayılan yığın boyutu yerine, istenip istenmeyeceğini belirtir. Açık yığın boyutu varsayılan yığın boyutu 1 MB küçüktür.|  
+|etkinletir|Gerekli öznitelik.<br /><br /> CLR tarafından kullanılan belirli iş parçacıklarını oluşturduğunda, CLR 'nin varsayılan yığın boyutu yerine açık yığın boyutları kullanması istenip istenmeyeceğini belirtir. Açık yığın boyutları 1 MB varsayılan yığın boyutundan daha küçüktür.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|true|Açık yığın boyutlarını isteyin.|  
-|false|Varsayılan yığın boyutunu kullanın. Bu, .NET Framework 4 için varsayılan değerdir.|  
+|true|Açık yığın boyutları isteyin.|  
+|false|Varsayılan yığın boyutunu kullanın. .NET Framework 4 için varsayılan değer budur.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -54,15 +54,15 @@ Ortak dil çalışma zamanı (CLR) bellek miktarını azaltmak istekleri, dahili
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İstek dikkate alınır, iç iş parçacıkları için CLR kullanan açık bir iş parçacığı boyutları varsayılan boyuttan daha küçük olduğundan, bu yapılandırma öğesi, bir işlemde daha az sanal bellek kullanımı istemek için kullanılır.  
+ Bu yapılandırma öğesi, CLR 'nin iç iş parçacıkları için kullandığı açık iş parçacığı boyutları, isteğin kabul edildiği varsayılan boyuttan daha küçük olduğu için bir işlemde azaltılmış sanal bellek kullanımını istemek üzere kullanılır.  
   
 > [!IMPORTANT]
->  Bu yapılandırma öğesi, mutlak bir gereksinim yerine CLR isteğidir. .NET Framework 4'te isteği yalnızca x86 için geçerli olur mimarisi. Bu öğe CLR'ın gelecek sürümlerinde tamamen yoksayıldı ya da seçili iç iş parçacıkları için kullanılan her zaman açık yığın boyutlarını değiştirilmiştir.  
+>  Bu yapılandırma öğesi, mutlak bir gereksinim yerine CLR için bir istek. .NET Framework 4 ' te, istek yalnızca x86 mimarisi için kabul edilir. Bu öğe, CLR 'nin gelecekteki sürümlerinde tamamen yoksayılabilir veya seçili iç iş parçacıkları için her zaman kullanılan açık yığın boyutlarına göre değiştirilebilir.  
   
- CLR, isteği kabul eder, daha küçük yığın boyutlarını yığın olası hale getirebilecek çünkü bu yapılandırma öğesi daha küçük sanal bellek kullanımı için güvenilirlik arasında denge kurar belirterek büyük olasılıkla taşıyor.  
+ Bu yapılandırma öğesi, CLR isteği arsa, daha küçük bir yığın boyutu daha büyük olasılıkla yığını daha büyük bir zaman aşabileceğinden, daha küçük sanal bellek kullanımı için güvenilirliği geliştirir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, CLR kullanım açık yığın belirli dahili olarak kullandığı iş parçacıklarının boyutları istek gösterilmiştir.  
+ Aşağıdaki örnek, CLR 'nin dahili olarak kullandığı belirli iş parçacıkları için açık yığın boyutları kullanma isteğinin nasıl yapılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -74,5 +74,5 @@ Ortak dil çalışma zamanı (CLR) bellek miktarını azaltmak istekleri, dahili
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)

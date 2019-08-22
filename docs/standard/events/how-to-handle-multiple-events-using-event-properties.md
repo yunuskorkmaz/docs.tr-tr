@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c0dea7950f86da3d812783abd00d69e5bc38198
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 758ddc603766462fc48885406c4e4ca1162bbbaf
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796888"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666495"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Nasıl yapılır: Olay Özelliklerini Kullanarak Birden Çok Olayı İşleme
 Olay özelliklerini kullanmak için olayları oluşturan sınıftaki olay özelliklerini tanımlayın ve ardından olayları işleyen sınıflardaki olay özellikleri için temsilcileri ayarlayın. Bir sınıfta birden çok olay özelliğini uygulamak amacıyla sınıfın, her bir olay için tanımlanan temsilciyi dahili olarak depolaması ve koruması gerekir. Bir olay anahtarı tarafından dizinlenen bir temsilci koleksiyonunun uygulanması tipik bir yaklaşımdır.  
@@ -52,4 +52,4 @@ Olay özelliklerini kullanmak için olayları oluşturan sınıftaki olay özell
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [Olaylar](../../../docs/standard/events/index.md)
 - <xref:System.Web.UI.Control.Events%2A?displayProperty=nameWithType>
-- [Nasıl yapılır: Belleği korumak Için özel olaylar bildirme](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Nasıl yapılır: Belleği korumak Için özel olaylar bildirme](../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

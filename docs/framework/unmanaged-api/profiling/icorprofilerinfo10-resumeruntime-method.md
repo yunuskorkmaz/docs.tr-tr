@@ -11,32 +11,33 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 919ebc4ddcdee930bc660a4f7e62d9bc746b6dc7
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: cf599e5ded73b09d54c98dcd99f51b30c6a4ba82
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68973740"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69661203"
 ---
 # <a name="icorprofilerinfo10resumeruntime-method"></a>ICorProfilerInfo10:: ResumeRuntime yöntemi
-  
-GC yapmadan çalışma zamanını sürdürür.   
-  
-## <a name="syntax"></a>Sözdizimi  
-  
+
+GC yapmadan çalışma zamanını sürdürür.
+
+## <a name="syntax"></a>Sözdizimi
+
 ```cpp
 HRESULT ResumeRuntime();
-```  
+```
 
-## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).  
-  
- **Üst bilgi** CorProf. IDL, CorProf. h  
-  
- **Kitaplığı** Corguid. lib  
-  
- **.NET sürümleri:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
-  
+## <a name="requirements"></a>Gereksinimler
+
+**Platform** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).
+
+**Üst bilgi** CorProf. IDL, CorProf. h
+
+**Kitaplığı** Corguid. lib
+
+**.NET sürümleri:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ICorProfilerInfo10 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
 
+- [ICorProfilerInfo10 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
