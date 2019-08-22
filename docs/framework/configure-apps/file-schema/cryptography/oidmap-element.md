@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e01cdd942237141b8ef35495d3b74d6b2282a865
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705174"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664251"
 ---
-# <a name="oidmap-element"></a>\<oidMap > öğesi
-ASN.1 nesne tanımlayıcısını (OID) eşlemeleri için sınıflar içerir.  
+# <a name="oidmap-element"></a>\<Oıdmap > öğesi
+Sınıflara ASN. 1 nesne tanımlayıcısı (OID) eşlemelerini içerir.  
   
  \<Yapılandırma >  
 \<mscorlib >  
-\<cryptographySettings >  
-\<oidMap>  
+\<Cryptographyısettings >  
+\<Oıdmap >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,7 +40,7 @@ ASN.1 nesne tanımlayıcısını (OID) eşlemeleri için sınıflar içerir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Kolay ad ASN.1 OID eşler.|  
+|[\<Oıdentry >](oidentry-element.md)|Bir ASN. 1 OID 'yi kolay bir ada eşler.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -48,10 +48,10 @@ ASN.1 nesne tanımlayıcısını (OID) eşlemeleri için sınıflar içerir.
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
 |`cryptographySettings`|Şifreleme ayarlarını içerir.|  
-|`mscorlib`|İçeren `cryptographySettings` öğesi.|  
+|`mscorlib`|`cryptographySettings` Öğesini içerir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir  **\<oidMap >** RIPEMD 160 karma algoritması için bu karma algoritmayı uygulaması için bir OID eşlemesi içerecek şekilde öğesi.  
+ Aşağıdaki örnek, RIPEMD-160 karma algoritması için bir OID 'nin bu karma algoritmanın bir uygulamasına eşlemesini içeren  **\<oıdmap >** öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -75,8 +75,8 @@ ASN.1 nesne tanımlayıcısını (OID) eşlemeleri için sınıflar içerir.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
+- [Şifreleme Ayarları Şeması](index.md)
 - [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)
-- [Şifreleme Sınıflarını Yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleme](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [Şifreleme Sınıflarını Yapılandırma](../../configure-cryptography-classes.md)
+- [Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleme](../../map-object-identifiers-to-cryptography-algorithms.md)

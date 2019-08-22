@@ -7,31 +7,32 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: 8d7ae8c807b8c5347a455b81c2c1a1b0897430c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 892761ae52b8b3546c86a849d2d2eecc7442be53
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013016"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666144"
 ---
-# <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma
-Windows Forms için eklenen denetimler özelliklere sahip ve daha fazla kullanıcı özelleştirmek üzere kullanılan yöntemleri karşılaşırsınız. Kullanıcı gereksinimlerine uyacak şekilde, kullanıcı arabirimini özelleştirme, iyi tasarlanmış Windows uygulamaları için son derece önemlidir.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Tarafından görüntülenen metni ayarlama bir Windows Forms denetimi](how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- Bir denetime metin etiketi atamak açıklar.  
-  
- [Nasıl yapılır: Tarafından görüntülenen resmi ayarlama bir Windows Forms denetimi](how-to-set-the-image-displayed-by-a-windows-forms-control.md)  
- Resimleri görüntülemek için bir denetimi yapılandırma açıklanmaktadır.  
-  
- [Nasıl yapılır: Windows Forms denetimleri için erişim tuşları oluşturma](how-to-create-access-keys-for-windows-forms-controls.md)  
- Önceden tanımlı klavye kısayolları oluşturma hakkında bilgi sağlar.  
-  
- [Bir Windows Formundaki Denetimler için Erişilebilirlik Bilgileri Sağlama](providing-accessibility-information-for-controls-on-a-windows-form.md)  
- Denetimlerinizi erişilebilirlik Yardımcıları ile çalışacak şekilde etkinleştirme hakkında bilgi sağlar.  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms Denetimleri](index.md)  
- Temel başka şeyler için bağlantı denetimleri ile yapabilirsiniz.  
-  
- Ayrıca bkz: [nasıl yapılır: Windows Forms Tasarımcısı'nı kullanarak denetimleri için erişim tuşları oluşturma](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [nasıl yapılır: Tarafından görüntülenen metni ayarlama bir Windows Forms Tasarımcısı'nı kullanarak denetimi](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [nasıl yapılır: Tarafından görüntülenen resmi ayarlama bir Windows Forms Tasarımcısı'nı kullanarak denetimi](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).
+# <a name="label-individual-windows-forms-controls-and-provide-shortcuts"></a>Tek tek Windows Forms denetimlerini etiketle ve kısayollar sağlama
+
+Windows Forms eklenen denetimler, Kullanıcı deneyimini daha da özelleştirmek için kullanılan özellikleri ve yöntemleri vardır. Kullanıcı arabiriminizi kullanıcının ihtiyaçlarına uyacak şekilde özelleştirmek, iyi tasarlanmış Windows uygulamaları için son derece önemlidir.
+
+## <a name="in-this-section"></a>Bu bölümde
+
+[Nasıl yapılır: Windows Forms denetimi tarafından görünen metni ayarlama](how-to-set-the-text-displayed-by-a-windows-forms-control.md)\
+Bir denetime metin etiketi atamayı açıklar.
+
+[Nasıl yapılır: Windows Forms denetimi tarafından gösterilecek resmi ayarlama](how-to-set-the-image-displayed-by-a-windows-forms-control.md)\
+Görüntüleri göstermek için bir denetimin nasıl yapılandırılacağını açıklar.
+
+[Nasıl yapılır: Windows Forms denetimleri için erişim tuşları oluşturma](how-to-create-access-keys-for-windows-forms-controls.md)\
+Önceden tanımlanmış klavye kısayolları oluşturma hakkında bilgi verir.
+
+[Windows formundaki denetimler için erişilebilirlik bilgileri sağlama](providing-accessibility-information-for-controls-on-a-windows-form.md)\
+Erişilebilirlik yardımlarıyla çalışmak için denetimlerinizi etkinleştirme hakkında bilgi verir.
+
+## <a name="related-sections"></a>İlgili bölümler
+
+[Windows Forms denetimleri](index.md)\
+Denetimlerle gerçekleştirebileceğiniz diğer temel şeylere bağlantılar.

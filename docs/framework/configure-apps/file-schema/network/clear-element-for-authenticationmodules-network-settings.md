@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-ms.openlocfilehash: 3c018c7d474286f7a9cde2d070e4b54d164b5b40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12ac146926103b40073d34f48895b0645c8a8ed2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674616"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659475"
 ---
-# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<Temizle > authenticationModules (ağ ayarları) için
-Uygulamadaki tüm kimlik doğrulama modülleri temizler.  
+# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<authenticationModules için > öğesini temizle (ağ ayarları)
+Tüm kimlik doğrulama modüllerini uygulamadan temizler.  
   
  \<Yapılandırma >  
 \<system.net>  
 \<authenticationModules >  
-\<Temizleme >  
+\<> Temizle  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,13 +44,13 @@ Uygulamadaki tüm kimlik doğrulama modülleri temizler.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Ağ isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Ağ isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `clear` Yapılandırma dosyasında ya da daha yüksek bir düzeyde yapılandırma hiyerarşideki daha önce tanımlanan tüm kimlik doğrulama modülü öğeyi kaldırır.  
+ Öğesi `clear` , daha önce yapılandırma dosyasında veya yapılandırma hiyerarşisinde daha yüksek bir düzeyde tanımlanmış olan tüm kimlik doğrulama modüllerini kaldırır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, tüm yapılandırılmış kimlik doğrulama modüllerini kaldırır.  
@@ -69,4 +69,4 @@ Uygulamadaki tüm kimlik doğrulama modülleri temizler.
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

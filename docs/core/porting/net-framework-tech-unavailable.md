@@ -1,51 +1,51 @@
 ---
-title: .NET framework teknolojilerini .NET Core üzerinde kullanılamaz
-description: .NET Core üzerinde kullanılabilir olan .NET Framework teknolojileri hakkında bilgi edinin
+title: .NET Core 'da .NET Framework teknolojileri kullanılamıyor
+description: .NET Core 'da kullanılamayan .NET Framework teknolojileri hakkında bilgi edinin
 author: cartermp
 ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: bfeea58f4d80b789a7174a77e0784f2326906416
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87c3dd337ad44fd21b255afa7c03b528cd8a42ad
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737096"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660607"
 ---
-# <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET framework teknolojilerini .NET Core üzerinde kullanılamaz
+# <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core 'da .NET Framework teknolojileri kullanılamıyor
 
-.NET Framework kitaplıkları için çeşitli teknolojilerden, uygulama etki alanları, uzaktan iletişim, kod erişim güvenliği (CAS) ve güvenlik gibi .NET Core ile kullanmak için kullanılamaz. Kitaplıklarınızı bir veya daha fazla teknolojiler kullanıyorsa, aşağıda ana hatlarıyla belirtilen alternatif yaklaşımlar göz önünde bulundurun. Corefx'te takım API uyumluluğu hakkında daha fazla bilgi için tutan bir [davranış değişiklikleri/compat sonu ve kullanım dışı/eski API'ler listesi](https://github.com/dotnet/corefx/wiki/ApiCompat) github'da.
+.NET Framework kitaplıkları için kullanılabilen çeşitli teknolojiler, uygulama etki alanları, uzaktan Iletişim, kod erişim güvenliği (CAS) ve güvenlik saydamlığı gibi .NET Core ile birlikte kullanılamaz. Kitaplıklarınız Bu teknolojilerden birini veya birkaçını kullanıyorsa, aşağıda özetlenen diğer yaklaşımları göz önünde bulundurun. API uyumluluğu hakkında daha fazla bilgi için CoreFX ekibi, GitHub 'da [davranış değişikliklerinin/uyumluluk sonlarının ve kullanım dışı/eski API](https://github.com/dotnet/corefx/wiki/ApiCompat) 'Lerin bir listesini tutar.
 
-API veya teknoloji yalnızca şu anda uygulanmadı çünkü kasıtlı olarak desteklenmeyen var. kapsıyor değil. GitHub depoları karşılaştığınız bir sorunu tasarıma, ancak böyle bir göstergesi bulamazsanız, lütfen dosyası, bir sorunu görmek .NET Core için ilk arayacağı [dotnet/corefx'te depo sorunları](https://github.com/dotnet/corefx/issues) istemek için github'da Özel API'ler ve teknolojileri için. [Sorunları istekleri taşıma](https://github.com/dotnet/corefx/labels/port-to-core) ile işaretlenmiş `port-to-core` etiketi.
+Bir API veya teknoloji şu anda uygulanmadığından, kasıtlı olarak desteklenmeyen anlamına gelmez. İlk olarak .NET Core için GitHub depolarında arama yapmanız gerekir, ancak bu tür bir göstergeyi bulamazsanız, lütfen GitHub 'daki [DotNet/corefx depo sorunlarını](https://github.com/dotnet/corefx/issues) Izleyerek belirli API 'ler için sorun giderin ve teknolojilerinin. [Sorunların taşıma istekleri](https://github.com/dotnet/corefx/labels/port-to-core) `port-to-core` etiketle işaretlenir.
 
-## <a name="appdomains"></a>AppDomains
+## <a name="appdomains"></a>Uygulama
 
-Uygulama etki alanları (uygulama etki alanları) uygulamaları birbirinden yalıtın. Uygulama etki alanları, çalışma zamanı desteği gerektirir ve genellikle oldukça pahalıdır. Ek uygulama etki alanları oluşturma desteklenmiyor. Gelecekte bu özelliği eklemeyi planlıyoruz yok. Kod bir ayırma işlemi için ayrı işlemler öneririz veya alternatif olarak kapsayıcıları kullanma. Dinamik derlemeler yüklenmesi için yeni öneririz <xref:System.Runtime.Loader.AssemblyLoadContext> sınıfı.
+Uygulama etki alanları (AppDomain), uygulamaları birbirinden ayırır. AppDomain, çalışma zamanı desteği gerektirir ve genellikle oldukça pahalıdır. Ek uygulama etki alanlarının oluşturulması desteklenmez. Gelecekte bu özelliği eklemeyi planlıyoruz. Kod yalıtımı için, farklı süreçler veya kapsayıcılar kullanmanın alternatif olarak kullanılması önerilir. Derlemelerin dinamik yüklemesi için yeni <xref:System.Runtime.Loader.AssemblyLoadContext> sınıfı öneririz.
 
-.NET Framework'ten kod geçişi kolaylaştırmak için .NET Core bazı sunan <xref:System.AppDomain> API yüzeyi. Bazı API'leri işlev normal olarak (örneğin, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), bazı üyeleri hiçbir şey yapma (örneğin, <xref:System.AppDomain.SetCachePath%2A>), ve bunlardan bazıları throw <xref:System.PlatformNotSupportedException> (örneğin, <xref:System.AppDomain.CreateDomain%2A>). Kullandığınız karşı türlerini işaretleyin [ `System.AppDomain` başvuru kaynağı](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/AppDomain.cs) içinde [dotnet/corefx'te GitHub deposu](https://github.com/dotnet/corefx)ettiğinizden emin uygulanan sürümünüzle eşleşen dalı seçin.
+Kod .NET Framework geçişini daha kolay hale getirmek için .NET Core, bazı <xref:System.AppDomain> API yüzeyini gösterir. API 'lerden bazıları normal olarak çalışır <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>(örneğin,), bazı Üyeler hiçbir şey yapmaz ( <xref:System.AppDomain.SetCachePath%2A>Örneğin,) <xref:System.PlatformNotSupportedException> ve bazıları (örneğin, <xref:System.AppDomain.CreateDomain%2A>). Uygulanan sürümünüzle eşleşen dalı seçtiğinizden emin olmak için [DotNet/corefx GitHub deposundaki](https://github.com/dotnet/corefx) [ `System.AppDomain` başvuru kaynağına](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/AppDomain.cs) karşı kullandığınız türleri kontrol edin.
 
 ## <a name="remoting"></a>Uzaktan iletişim
 
-.NET uzaktan iletişim sorunlu bir mimari belirlenmiştir. Bu, artık desteklenmeyen AppDomain arası iletişim için kullanılır. Ayrıca, uzaktan iletişimi sürdürmek pahalı olan çalışma zamanı desteği gerektirir. Bu nedenlerle, .NET Core, .NET uzaktan iletişim desteklenmez ve gelecekte destek eklemeyi planlıyoruz yok.
+.NET uzaktan Iletişim, sorunlu bir mimari olarak tanımlandı. Bu, artık desteklenmeyen ilkeler arası iletişim için kullanılır. Ayrıca, uzaktan Iletişim için, bakım açısından pahalı olan çalışma zamanı desteği gerekir. Bu nedenlerden dolayı, .NET Core 'da .NET uzaktan Iletişim desteklenmez ve gelecekte bu hizmetin desteğini ekleme planlanmıyor.
 
-İşlemler arasında iletişim için işlemler arası iletişim (IPC) mekanizmasını Remoting, alternatif olarak gibi göz önünde bulundurun <xref:System.IO.Pipes> veya <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> sınıfı.
+İşlemler arasında iletişim için, <xref:System.IO.Pipes> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> veya sınıfı gibi uzaktan iletişim (IPC) mekanizmalarını bir alternatif olarak düşünün.
 
-Makine arasında ağ tabanlı bir çözüm alternatif olarak kullanın. Tercihen, HTTP gibi bir düşük ek yük düz metin protokol kullanın. [Kestrel web sunucusu](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), ASP.NET Core tarafından kullanılan web sunucusu, burada bir seçenektir. Ayrıca kullanmayı <xref:System.Net.Sockets> ağ tabanlı, makineler arası senaryolar için. Daha fazla seçenek için bkz: [.NET açık kaynak Geliştirici projeler: Mesajlaşma](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging).
+Makineler arasında, alternatif olarak ağ tabanlı bir çözüm kullanın. Tercihen, HTTP gibi düşük yüklü bir düz metin protokolü kullanın. ASP.NET Core tarafından kullanılan Web sunucusu olan [Kestrel Web sunucusu](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), burada bir seçenektir. Ayrıca, ağ <xref:System.Net.Sockets> tabanlı, platformlar arası senaryolar için kullanmayı düşünün. Daha fazla seçenek için bkz [. .net açık kaynak geliştirici projeleri: Mesajlaşma](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging).
 
 ## <a name="code-access-security-cas"></a>Kod Erişimi Güvenliği (CAS)
 
-Çalışma zamanı veya bir yönetilen uygulama veya kitaplık kullanır veya çalışan hangi kaynaklara sınırlamak için framework kullanan, korumalı alana alma [.NET Framework üzerinde desteklenmiyor](~/docs/framework/misc/code-access-security.md) ve .NET Core, bu nedenle de desteklenmez. CA güvenlik sınırı davranılması devam etmek için ayrıcalıkların oluştuğu .NET Framework ve çalışma zamanı içinde çok fazla durumlar vardır. Ayrıca, CA uygulaması daha karmaşık hale getirir ve genellikle doğruluk performans şifrelemelerini kullanmak istemediğiniz uygulamalar için.
+Yönetilen bir uygulamanın veya kitaplığın hangi kaynakları kullanacağını veya çalıştığını kısıtlamak için çalışma zamanına veya çerçeveye dayanan korumalı alana alma, [.NET Framework desteklenmez](../../framework/misc/code-access-security.md) ve bu nedenle de .NET Core üzerinde desteklenmez. .NET Framework ve bir ayrıcalık yükselmesinin bir güvenlik sınırı olarak kabul etmesine devam etmek için ayrıcalıkların yükseltilme gerçekleştiği çalışma zamanında çok fazla durum vardır. Bunlara ek olarak, CA 'LAR uygulamayı daha karmaşık hale getirir ve genellikle onu kullanmayı düşünmediğiniz uygulamalar için doğruluk performansına yönelik etkileri vardır.
 
-En düşük ayrıcalık kümesi ile çalışan işlemleri için sanallaştırma, kapsayıcıları veya kullanıcı hesapları gibi işletim sistemi tarafından sağlanan güvenlik sınırları kullanın.
+İşletim sistemi tarafından sunulan sanallaştırma, kapsayıcılar veya minimum ayrıcalık kümesi ile işlem çalıştırmak için Kullanıcı hesapları gibi güvenlik sınırlarını kullanın.
 
-## <a name="security-transparency"></a>Güvenlik saydamlık
+## <a name="security-transparency"></a>Güvenlik saydamlığı
 
-Benzer şekilde CA'ları, güvenlik saydamlık korumalı kod güvenlik kritik kod, bildirim temelli bir biçimde ayırır ancak olan [artık bir güvenlik sınırı olarak desteklenen](~/docs/framework/misc/security-transparent-code.md). Bu özellik tarafından Silverlight yoğun olarak kullanılır. 
+CA 'lara benzer şekilde, güvenlik saydamlığı, korumalı kodu bildirimle güvenlik açısından kritik koddan ayırır, ancak [artık güvenlik sınırı olarak desteklenmez](../../framework/misc/security-transparent-code.md). Bu özellik Silverlight tarafından yoğun bir şekilde kullanılır. 
 
-En az çalışan işlemleri için sanallaştırma, kapsayıcıları veya kullanıcı hesapları gibi işletim sistemi tarafından sağlanan güvenlik sınırları kullanmanız ayrıcalık kümesi.
+İşletim sistemi tarafından sunulan sanallaştırma, kapsayıcılar veya en az ayrıcalık kümesiyle işlem çalıştırmak için Kullanıcı hesapları gibi güvenlik sınırlarını kullanın.
 
-## <a name="systementerpriseservices"></a>System.EnterpriseServices
+## <a name="systementerpriseservices"></a>System. EnterpriseServices
 
-System.EnterpriseServices (COM +), .NET Core tarafından desteklenmiyor.
+System. EnterpriseServices (COM+), .NET Core tarafından desteklenmez.
 
 >[!div class="step-by-step"]
 >[Next](third-party-deps.md)

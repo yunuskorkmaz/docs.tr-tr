@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba411114bfb853e06c83adb42713d43f1452d9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f24e9a06137744dbc97d5f34cda7ad6eab873700
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704810"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663732"
 ---
 # <a name="etwenable-element"></a>\<etwEnable > öğesi
-Olay İzleme (ETW) Windows için ortak dil çalışma zamanı olayları için etkinleştirilip etkinleştirilmeyeceğini belirtir.  
+Ortak dil çalışma zamanı olayları için Windows için olay izlemenin (ETW) etkinleştirilip etkinleştirilmeyeceğini belirtir.  
   
  \<Yapılandırma > öğesi  
 \<çalışma zamanı > öğesi  
@@ -34,14 +34,14 @@ Olay İzleme (ETW) Windows için ortak dil çalışma zamanı olayları için et
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Etkin|Gerekli öznitelik.<br /><br /> ETW etkinleştirilip etkinleştirilmeyeceğini belirtir.|  
+|etkinletir|Gerekli öznitelik.<br /><br /> ETW 'nin etkinleştirilip etkinleştirilmeyeceğini belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|true|ETW etkinleştirin. Bu Windows Vista ve Windows Server 2008 işletim sistemlerinin başlayarak Windows sürümleri için varsayılandır.|  
-|false|ETW devre dışı bırakın. Önceki Windows sürümleri için varsayılan değer budur.|  
+|true|ETW 'yi etkinleştirin. Windows Vista ve Windows Server 2008 işletim sistemleriyle başlayan Windows sürümleri için varsayılan değer budur.|  
+|false|ETW 'yi devre dışı bırakın. Bu, Windows 'un önceki sürümleri için varsayılandır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -54,13 +54,13 @@ Olay İzleme (ETW) Windows için ortak dil çalışma zamanı olayları için et
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- ETW, Windows Vista ile başlayarak, varsayılan olarak etkindir. ETW bir uygulama için devre dışı bırakmak için bu öğeyi kullanırsınız. Önceki Windows sürümlerinde, bir uygulama için ETW etkinleştirmek için bu öğeyi kullanırsınız.  
+ Windows Vista ile başlayarak ETW varsayılan olarak etkindir. Bir uygulama için ETW 'yi devre dışı bırakmak için bu öğeyi kullanın. Windows 'un önceki sürümlerinde bu öğeyi kullanarak bir uygulama için ETW 'yi etkinleştirin.  
   
 > [!NOTE]
->  ETW, etkin veya genel olarak bir sunucuda, kayıt defteri ayarını kullanarak devre dışı. Bkz: [.NET Framework günlük kaydını denetleme](../../../../../docs/framework/performance/controlling-logging.md).  
+>  ETW, bir kayıt defteri ayarı kullanılarak bir sunucuda küresel olarak etkinleştirilebilir veya devre dışı bırakılabilir. Bkz. [.NET Framework günlüğünü denetleme](../../../performance/controlling-logging.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir uygulama için ETW izlemenin nasıl etkinleştirileceği gösterilmektedir.  
+ Aşağıdaki örnekte, bir uygulama için ETW izlemenin nasıl etkinleştirileceği gösterilmektedir.  
   
 ```xml  
 <configuration>  
@@ -72,6 +72,6 @@ Olay İzleme (ETW) Windows için ortak dil çalışma zamanı olayları için et
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [.NET Framework Günlük Kaydını Denetleme](../../../../../docs/framework/performance/controlling-logging.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
+- [.NET Framework Günlük Kaydını Denetleme](../../../performance/controlling-logging.md)

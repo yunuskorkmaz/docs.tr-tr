@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: fb2c570b251979adb76ad2af1a3b6f54b75a15ff
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 47eba90eba670d2f735c2f5ca24053e23d34e871
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589719"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659804"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Genel Arabirimler (C# Programlama Kılavuzu)
 Genel koleksiyon sınıfları için ya da koleksiyondaki öğeleri temsil eden genel sınıflar için arabirim tanımlamak genellikle yararlıdır. Genel sınıfların tercihi, değer türlerinde kutulamayı ve kutudan çıkarma işlemlerini önlemek <xref:System.IComparable%601> için <xref:System.IComparable>yerine gibi genel arabirimleri kullanmaktır. .NET Framework sınıf kitaplığı, <xref:System.Collections.Generic> ad alanındaki koleksiyon sınıflarıyla kullanılmak üzere birkaç genel arabirimi tanımlar.  
@@ -49,4 +49,4 @@ Genel koleksiyon sınıfları için ya da koleksiyondaki öğeleri temsil eden g
 - [C# Programlama Kılavuzu](../index.md)
 - [Genel Türlere Giriş](./index.md)
 - [interface](../../language-reference/keywords/interface.md)
-- [Genel Türler](~/docs/standard/generics/index.md)
+- [Genel Türler](../../../standard/generics/index.md)

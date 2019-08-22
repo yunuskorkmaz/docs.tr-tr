@@ -9,15 +9,15 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 1aa182ced462e5fc90b22019aaf424d400bb4fd5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629667"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666761"
 ---
 # <a name="layout"></a>Düzen
-Bu konu başlığı altında [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , Düzen sistemi açıklanmaktadır. Düzen hesaplamalarının nasıl ve ne zaman gerçekleşeceğini anlamak içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Kullanıcı arabirimleri oluşturmak için önemlidir.  
+Bu konuda Windows Presentation Foundation (WPF) Düzen sistemi açıklanmaktadır. Düzen hesaplamalarının nasıl ve ne zaman gerçekleşeceğini anlamak, WPF 'de Kullanıcı arabirimleri oluşturmak için önemlidir.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
@@ -37,7 +37,7 @@ Bu konu başlığı altında [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>Öğe sınırlayıcı kutuları  
- İçindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]yerleşimi düşünürken, tüm öğeleri çevreleyen sınırlayıcı kutuyu anlamak önemlidir. Düzen <xref:System.Windows.FrameworkElement> sistemi tarafından tüketilen her biri, düzene göre eğimli bir dikdörtgen olarak düşünülebilir. <xref:System.Windows.Controls.Primitives.LayoutInformation> Sınıfı, bir öğenin düzen ayırma veya yuvasının sınırlarını döndürür. Dikdörtgenin boyutu kullanılabilir ekran alanı, herhangi bir kısıtlamaların boyutu, düzene özgü özellikler (kenar boşluğu ve doldurma gibi) ve üst <xref:System.Windows.Controls.Panel> öğenin tek bir davranışı hesaplanarak belirlenir. Bu veriler işlenirken, Düzen sistemi belirli <xref:System.Windows.Controls.Panel>bir ' ın tüm alt öğelerinin konumunu hesaplayabilecektir. Üst öğede <xref:System.Windows.Controls.Border>tanımlanan boyutlandırma özelliklerinin, örneğin, alt öğelerini etkilediğini unutmamak önemlidir.  
+ WPF 'de düzen düşünürken, tüm öğeleri çevreleyen sınırlayıcı kutuyu anlamak önemlidir. Düzen <xref:System.Windows.FrameworkElement> sistemi tarafından tüketilen her biri, düzene göre eğimli bir dikdörtgen olarak düşünülebilir. <xref:System.Windows.Controls.Primitives.LayoutInformation> Sınıfı, bir öğenin düzen ayırma veya yuvasının sınırlarını döndürür. Dikdörtgenin boyutu kullanılabilir ekran alanı, herhangi bir kısıtlamaların boyutu, düzene özgü özellikler (kenar boşluğu ve doldurma gibi) ve üst <xref:System.Windows.Controls.Panel> öğenin tek bir davranışı hesaplanarak belirlenir. Bu veriler işlenirken, Düzen sistemi belirli <xref:System.Windows.Controls.Panel>bir ' ın tüm alt öğelerinin konumunu hesaplayabilecektir. Üst öğede <xref:System.Windows.Controls.Border>tanımlanan boyutlandırma özelliklerinin, örneğin, alt öğelerini etkilediğini unutmamak önemlidir.  
   
  Aşağıdaki çizimde basit bir düzen gösterilmektedir.  
   
@@ -101,7 +101,7 @@ Bu konu başlığı altında [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## <a name="panel-elements-and-custom-layout-behaviors"></a>Panel öğeleri ve özel düzen davranışları  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]öğesinden <xref:System.Windows.Controls.Panel>türetilen öğe grubunu içerir. Bu <xref:System.Windows.Controls.Panel> öğeler birçok karmaşık düzeni etkinleştirir. Örneğin, yığın öğeleri <xref:System.Windows.Controls.StackPanel> öğesi kullanılarak kolayca elde edilebilir, ancak daha karmaşık ve ücretsiz akış düzenleri bir <xref:System.Windows.Controls.Canvas>kullanılarak yapılabilir.  
+WPF, öğesinden <xref:System.Windows.Controls.Panel>türetilen bir öğe grubunu içerir. Bu <xref:System.Windows.Controls.Panel> öğeler birçok karmaşık düzeni etkinleştirir. Örneğin, yığın öğeleri <xref:System.Windows.Controls.StackPanel> öğesi kullanılarak kolayca elde edilebilir, ancak daha karmaşık ve ücretsiz akış düzenleri bir <xref:System.Windows.Controls.Canvas>kullanılarak yapılabilir.  
   
  Aşağıdaki tabloda kullanılabilir Düzen <xref:System.Windows.Controls.Panel> öğeleri özetlenmektedir.  
   
@@ -114,7 +114,7 @@ Bu konu başlığı altında [!INCLUDE[TLA#tla_winclient](../../../../includes/t
 |<xref:System.Windows.Controls.VirtualizingPanel>|Alt veri koleksiyonlarını sanallaştıran öğeler için <xref:System.Windows.Controls.Panel> bir çerçeve sağlar. Bu soyut bir sınıftır.|  
 |<xref:System.Windows.Controls.WrapPanel>|Sol taraftaki alt öğeleri, kapsayan kutunun kenarındaki bir sonraki satıra kadar olan sıralı konumda konumlandırır. Sonraki sıralama, <xref:System.Windows.Controls.WrapPanel.Orientation%2A> özelliğin değerine bağlı olarak yukarıdan aşağıya veya sağdan sola doğru bir şekilde gerçekleşir.|  
   
- Önceden tanımlanmış <xref:System.Windows.Controls.Panel> öğelerden herhangi birini kullanarak mümkün olmayan bir düzen gerektiren uygulamalar için, <xref:System.Windows.FrameworkElement.MeasureOverride%2A> ve <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> yöntemlerini <xref:System.Windows.Controls.Panel> devralarak ve geçersiz kılarak özel düzen davranışları elde edilebilir. Bir örnek için bkz. [Custom radyal panel örneği](https://go.microsoft.com/fwlink/?LinkID=159982).  
+ Önceden tanımlanmış <xref:System.Windows.Controls.Panel> öğelerden herhangi birini kullanarak mümkün olmayan bir düzen gerektiren uygulamalar için, <xref:System.Windows.FrameworkElement.MeasureOverride%2A> ve <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> yöntemlerini <xref:System.Windows.Controls.Panel> devralarak ve geçersiz kılarak özel düzen davranışları elde edilebilir.  
   
 <a name="LayoutSystem_Performance"></a>   
 ## <a name="layout-performance-considerations"></a>Düzen performansı konuları  
@@ -138,7 +138,7 @@ Bu konu başlığı altında [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
 <a name="LayoutSystem_LayoutRounding"></a>   
 ## <a name="sub-pixel-rendering-and-layout-rounding"></a>Alt piksel Işleme ve yerleşim yuvarlama  
- Grafik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistemi, çözümleme ve cihaz bağımsızlığını etkinleştirmek için cihazdan bağımsız birimler kullanır. Her cihazdan bağımsız piksel, sistemin nokta/inç (dpi) ayarıyla otomatik olarak ölçeklendirilir. Bu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalara farklı DPI ayarları için uygun ölçeklendirmeyi sağlar ve uygulamayı otomatik olarak DPI duyarlı hale getirir.  
+ WPF Grafik sistemi, çözümleme ve cihaz bağımsızlığını etkinleştirmek için cihazdan bağımsız birimler kullanır. Her cihazdan bağımsız piksel, sistemin nokta/inç (dpi) ayarıyla otomatik olarak ölçeklendirilir. Bu, WPF uygulamalarına farklı DPI ayarları için uygun ölçeklendirmeyi sağlar ve uygulamayı otomatik olarak DPI duyarlı hale getirir.  
   
  Ancak, bu DPI bağımsızlık, kenar yumuşatma nedeniyle düzensiz kenar işleme oluşturabilir. Genellikle bulanık veya yarı saydam kenarlar olarak görülen bu yapıtlar, bir kenarın konumu cihaz pikselleri arasında değil bir cihaz pikseli ortasında kaldığında gerçekleşebilir. Düzen sistemi, düzen yuvarlama ile bunu yapmak için bir yol sağlar. Düzen yuvarlama, düzen sisteminin, düzen geçişi sırasında tam sayı olmayan piksel değerlerini yuvarlar.  
   
@@ -146,7 +146,7 @@ Bu konu başlığı altında [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Sıradaki  
- Öğelerin nasıl ölçüleceğini ve düzenlenmesini anlamak, düzeni anlamak için ilk adımdır. Kullanılabilir <xref:System.Windows.Controls.Panel> öğeler hakkında daha fazla bilgi için bkz. [panellere genel bakış](../controls/panels-overview.md). Düzeni etkileyebilecek çeşitli konumlandırma özelliklerini daha iyi anlamak için bkz. [Hizalama, kenar boşlukları ve doldurmaya genel bakış](alignment-margins-and-padding-overview.md). Özel <xref:System.Windows.Controls.Panel> bir öğe örneği için bkz. [Custom radyal panel örneği](https://go.microsoft.com/fwlink/?LinkID=159982). Bunu hafif bir uygulamada birlikte koymaya hazırsanız bkz [. İzlenecek yol: İlk WPF Masaüstü](../getting-started/walkthrough-my-first-wpf-desktop-application.md)Uygulamam.  
+ Öğelerin nasıl ölçüleceğini ve düzenlenmesini anlamak, düzeni anlamak için ilk adımdır. Kullanılabilir <xref:System.Windows.Controls.Panel> öğeler hakkında daha fazla bilgi için bkz. [panellere genel bakış](../controls/panels-overview.md). Düzeni etkileyebilecek çeşitli konumlandırma özelliklerini daha iyi anlamak için bkz. [Hizalama, kenar boşlukları ve doldurmaya genel bakış](alignment-margins-and-padding-overview.md). Bunu hafif bir uygulamada birlikte koymaya hazırsanız bkz [. İzlenecek yol: İlk WPF Masaüstü](../getting-started/walkthrough-my-first-wpf-desktop-application.md)Uygulamam.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

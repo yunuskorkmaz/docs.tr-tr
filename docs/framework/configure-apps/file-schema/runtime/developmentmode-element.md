@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7c7f866cdbcd39194d61a3db821bf973b4e057e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704771"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663811"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode > öğesi
-Çalışma zamanı derlemeleri DEVPATH ortam değişkeni tarafından belirtilen dizinleri arar olup olmadığını belirtir.  
+Çalışma zamanının DEVPATH ortam değişkeni tarafından belirtilen dizinlerde derlemeleri arayıp aramayacağını belirtir.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
@@ -38,14 +38,14 @@ ms.locfileid: "61704771"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**developerInstallation**|Çalışma zamanı derlemeleri DEVPATH ortam değişkeni tarafından belirtilen dizinleri arar olup olmadığını belirtir.|  
+|**developerInstallation**|Çalışma zamanının DEVPATH ortam değişkeni tarafından belirtilen dizinlerde derlemeleri arayıp aramayacağını belirtir.|  
   
 ## <a name="developerinstallation-attribute"></a>developerInstallation özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|**true**|Derlemeleri DEVPATH ortam değişkeni tarafından belirtilen dizinleri arar.|  
-|**false**|Derlemeler DEVPATH ortam değişkeni tarafından belirtilen dizinlerde arama yapmaz. Varsayılan değer budur.|  
+|**true**|DEVPATH ortam değişkeni tarafından belirtilen dizinlerdeki derlemeleri arar.|  
+|**false**|, DEVPATH ortam değişkeni tarafından belirtilen dizinlerde derlemeler aramaz. Bu, varsayılan|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -58,10 +58,10 @@ ms.locfileid: "61704771"
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yalnızca geliştirme sırasında bu ayarı kullanın. Çalışma zamanı, tanımlayıcı adlı derlemeler DEVPATH içinde bulunan sürümlerinde denetlemez. Yalnızca bulduğu ilk derlemeyi de kullanır.  
+ Bu ayarı yalnızca geliştirme zamanında kullanın. Çalışma zamanı, DEVPATH 'de bulunan kesin adlı derlemelerin sürümlerini denetlemez. Yalnızca bulduğu ilk derlemeyi kullanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, çalışma zamanı derlemeleri DEVPATH ortam değişkeni tarafından belirtilen dizinlerde arama gösterilmektedir.  
+ Aşağıdaki örnek, çalışma zamanının DEVPATH ortam değişkeni tarafından belirtilen dizinlerde derlemeler aramasına neden olduğunu gösterir.  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,6 @@ ms.locfileid: "61704771"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Nasıl yapılır: DEVPATH kullanarak derlemelerin bulun](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
+- [Nasıl yapılır: DEVPATH kullanarak derlemeleri bulma](../../how-to-locate-assemblies-by-using-devpath.md)

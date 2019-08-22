@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 7499d15f1d57887ffc3e78b83ed686c0c0f46cf4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5305d9aed09b6c4d1ad4201e5e08e007a14c7c0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674642"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664193"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<Temizle > bypasslist (ağ ayarları) için
-Proxy atlama listesi temizler.  
+# <a name="clear-element-for-bypasslist-network-settings"></a>\<BypassList için > öğesini temizle (ağ ayarları)
+Proxy atlama listesini temizler.  
   
  \<Yapılandırma >  
 \<system.net>  
 \<defaultProxy >  
-\<bypasslist>  
-\<Temizleme >  
+\<BypassList >  
+\<> Temizle  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,16 +45,16 @@ Proxy atlama listesi temizler.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Bir proxy sunucu kullanmaması adresleri açıklayan normal bir ifade kümesi sağlar.|  
+|[BypassList](bypasslist-element-network-settings.md)|Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `clear` Öğesi atlama listesindeki tüm girişleri siler.  
+ `clear` Öğesi atlama listesinden tüm girdileri temizler.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, atlama listesi temizler ve ardından iki adres atlama listesine ekler. İlk contoso.com etki alanındaki tüm sunucular için proxy atlar; İkinci proxy 192.168 tüm sunucularıyla başlar, IP adresi için atlar.  
+ Aşağıdaki örnek atlama listesini temizler ve atlama listesine iki adres ekler. İlki, contoso.com etki alanındaki tüm sunucular için proxy 'yi atlar; İkincisi, IP adresi 192,168 ile başlayan tüm sunucular için proxy 'yi atlar.  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ Proxy atlama listesi temizler.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

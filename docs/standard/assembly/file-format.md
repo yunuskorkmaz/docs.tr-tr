@@ -1,38 +1,38 @@
 ---
-title: .NET bütünleştirilmiş kodu dosya biçimi
-description: .NET uygulamaları ve kitaplıkları içerir ve açıklamak için kullanılan .NET derlemesi dosya biçimi hakkında bilgi edinin.
+title: .NET Bütünleştirilmiş Kodu Dosya Biçimi
+description: .NET uygulamaları ve kitaplıklarını anlatmak ve içermesi için kullanılan .NET derleme dosyası biçimi hakkında bilgi edinin.
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 0bde31a004b1952be488569f89cfd3b129c82771
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ef5d459195bea752ec5380f2853d8011cb189aa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627956"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666630"
 ---
-# <a name="net-assembly-file-format"></a>.NET bütünleştirilmiş kodu dosya biçimi
+# <a name="net-assembly-file-format"></a>.NET Bütünleştirilmiş Kodu Dosya Biçimi
 
-.NET, tam olarak tanımlamak ve .NET programlarının içermesi için kullanılan bir ikili dosya biçimi - "assembly" - tanımlar. Derlemeleri, bağımlı tüm kitaplıkları yanı sıra programların kendileri için kullanılır. .NET programı ile diğer gerekli yapıt yok, uygun bir .NET uygulaması dışında bir veya daha fazla derlemeleri olarak çalıştırılabilir. İşletim sistemi API ' ları dahil olmak üzere yerel bağımlılıklar ayrı önemli olan ve bazen bu biçiminde (örneğin, WinRT) açıklanan olsa da .NET derleme biçim içinde yer almayan.
+.NET, .NET programları tam olarak tanımlanmakta ve içermesi için kullanılan ikili dosya biçimi "derleme" tanımlar. Derlemeler, tüm bağımlı kitaplıkların yanı sıra programların kendileri için de kullanılır. .NET programı, uygun .NET uygulamasının ötesinde bir veya daha fazla gerekli yapıt olmadan bir veya daha fazla derleme olarak yürütülebilir. İşletim sistemi API 'Leri de dahil olmak üzere yerel bağımlılıklar ayrı bir kaygıdır ve bazı durumlarda bu biçimde (örneğin, WinRT) AÇIKLANABİLMELİDİR.
 
-> Her bir CLI bileşeni bildirimleri, uygulamaları ve söz konusu bileşen için belirli başvuruları için meta verileri taşır. Bu nedenle, bileşen özgü meta veriler bileşen meta verileri adlandırılır ve sonuçta elde edilen bileşen – ECMA-335 I.9.1, bileşenler ve derlemelerin kendiliğinden açıklayıcı olmasını kabul edilir.
+> Her CLı bileşeni, bu bileşene özgü bildirimler, uygulamalar ve başvurular için meta verileri taşır. Bu nedenle, bileşene özgü meta veriler bileşen meta verileri olarak adlandırılır ve sonuçta elde edilen bileşen ECMA 335 I. 9.1, bileşenler ve derlemelerden kendi kendine açıklanmaktadır.
 
-Biçim tam olarak belirtilen ve olarak standartlaştırılmış [ECMA-335](https://www.ecma-international.org/publications/standards/Ecma-335.htm). Tüm .NET derleyiciler ve çalışma zamanları şu biçimi kullanın. Belgelenmiş ve sık güncelleştirilmiş bir ikili biçimi varlığı birlikte çalışabilirlik için önemli bir avantajı (tartışmaya bir gereksinim) kaldırıldı. Biçim, 2005'te genel türler ve işlemci mimarisi uyum sağlamak için (.NET 2.0) son substantive şekilde güncelleştirildi.
+Biçim tam olarak belirtilmiştir ve [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm)olarak standartlaştırılmış olur. Tüm .NET derleyicileri ve çalışma zamanları bu biçimi kullanır. Belgelenmiş ve sık güncelleştirilmemiş bir ikili biçiminin varlığı, birlikte çalışabilirlik için önemli bir avantajdır (korumalı bir gereksinimdir). Biçim en son, 2005 (.NET 2,0) ' de genel türler ve işlemci mimarisine uyum sağlamak için en son bir şekilde güncelleştirildi.
 
-CPU ve işletim sistemi belirsiz biçimindedir. Birçok yongaları ve CPU'yu hedef .NET uygulamaları bir parçası olarak kullanıldı. Biçim Windows miras olsa da tüm işletim sistemlerinde implementable. Tartışmasız en önemli dilediği işletim sistemi birlikte çalışabilirlik için çoğu değerleri endian biçiminde depolanır. Bu makine işaretçi boyutu (örneğin, 32-bit, 64-bit) için belirli bir benzeşim gerekli değildir.
+Biçim CPU ve işletim sistemi belirsiz ' dir. Birçok yongaları ve CPU 'yu hedefleyen .NET uygulamalarının bir parçası olarak kullanılmıştır. Biçimin kendisi Windows herıt 'e sahip olsa da, herhangi bir işletim sisteminde uyguıtable olur. İşletim sistemi ile birlikte çalışabilirlik için en önemli seçenek, çoğu değerin küçük endian biçiminde depolanmasıdır. Makine işaretçi boyutuna özgü bir benzeşimine sahip değildir (örneğin, 32 bit, 64 bit).
 
-.NET derleme de çok belirli bir programı veya kitaplık yapısı hakkında açıklayıcı biçimidir. Özel bir derlemenin iç bileşenleri tanımlayan: bütünleştirilmiş kod başvuruları ve tanımlanan türleri ve kendi iç yapısı. Araç veya API'lerden okuyabilir ve bu bilgileri görüntülemek için ya da programlı kararları vermek için işlem.
+.NET derleme biçimi, belirli bir programın veya kitaplığın yapısı hakkında da çok daha açıklayıcı bir addır. Bir derlemenin iç bileşenlerini açıklar, özellikle: derleme başvuruları ve tanımlı türler ve bunların iç yapısı. Araçlar veya API 'Ler, bu bilgileri görüntüleme veya programlama kararları almak için okuyabilir ve işleyebilir.
 
 ## <a name="format"></a>Biçimi
 
-Windows üzerinde .NET ikili biçimi alan [PE dosyası](https://en.wikipedia.org/wiki/Portable_Executable) biçimi. Aslında, .NET sınıf kitaplıkları Windows PEs uyumlu olan ve Windows dinamik bağlantı kitaplıklarını (DLL'ler) veya uygulama yürütülebilir dosyaların (EXE'ler) ilk bakışta görünür. Windows geçici yerel yürütülebilir ikili dosyaları ve burada bazı aynı işleme (örneğin, işletim sistemi yükleme, PE Araçlar) edinin üzerinde çok kullanışlı bir özellik budur.
+.NET ikili biçimi, Windows [PE dosya](https://en.wikipedia.org/wiki/Portable_Executable) biçimini temel alır. Aslında, .NET sınıf kitaplıkları Windows PEs ile uyumlu değildir ve ilk bakışta Windows dinamik bağlantı kitaplıkları (dll 'Ler) veya uygulama yürütülebilir dosyaları (EXEs) olarak görünür. Bu, yerel yürütülebilir ikili dosyalar olarak maske oluşturabileceğiniz ve aynı işleme (örneğin, işletim sistemi yükü, PE Araçları) sahip oldukları Windows 'da çok faydalı bir özelliğidir.
 
 ![Derleme üstbilgileri](../media/assembly-format/assembly-headers.png)
 
-ECMA 335 II.25.1, çalışma zamanı dosya biçimi yapısını derleme üst bilgiler.
+ECMA 335 II. 25.1 'den derleme üst bilgileri, çalışma zamanı dosya biçiminin yapısı.
 
 ## <a name="processing-the-assemblies"></a>Derlemeleri işleme
 
-Araç veya API'lerden işlem derlemelere yazmak mümkündür. Derleme bilgilerini, çalışma zamanında programlı kararların, derlemeleri yeniden yazma, düzenleyicideki API IntelliSense sağlamak ve belgeleri oluşturuluyor sağlar. <xref:System.Reflection?displayProperty=nameWithType> ve [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) bu amaç için sık kullanılan araçlar için iyi örneklerdir.
+Derlemeleri işlemek için araçlar veya API 'Ler yazmak mümkündür. Derleme bilgileri, çalışma zamanında programlama kararları almanızı, derlemeleri yeniden yazmayı, bir düzenleyicide API IntelliSense sağlamayı ve belge oluşturmayı sağlar. <xref:System.Reflection?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType>, ve [mono. CECIL](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) , bu amaçla sık kullanılan araçların yararlı örnekleridir.

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: 722b2f726c9085f6dee6bad82044da3011b98702
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de5672e5c6762b1e0742e717a3d499a4f93ee8ec
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674551"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659336"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest > öğesi (ağ ayarları)
-Web isteği parametreleri özelleştirir.  
+Web isteği parametrelerini özelleştirir.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -41,10 +41,10 @@ Web isteği parametreleri özelleştirir.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`maximumResponseHeadersLength`|Bir yanıt üstbilgisinin maksimum uzunluğunu kilobayt cinsinden belirtir. 64 varsayılandır. Boyut sınırı üzerinde yanıt üstbilgilerini uygulanan -1 değeri gösterir.|  
-|`maximumErrorResponseLength`|Bir hata yanıtı uzunluğu en fazla kilobayt cinsinden belirtir. 64 varsayılandır. Boyut sınırı üzerinde hata yanıtı uygulanan -1 değeri gösterir.|  
-|`maximumUnauthorizedUploadLength`|Karşıya yükleme uzunluğu en fazla bayt cinsinden bir yetkisiz hata koduna karşılık belirtir. Varsayılan değer -1'dir. Boyut sınırı karşıya yükleme sırasında uygulanan -1 değeri gösterir.|  
-|`useUnsafeHeaderParsing`|Güvenli olmayan bir üst bilgi ayrıştırma etkinleştirilip etkinleştirilmeyeceğini belirtir. Varsayılan değer `false` şeklindedir.|  
+|`maximumResponseHeadersLength`|Yanıt üst bilgisinin kilobayt cinsinden uzunluk üst sınırını belirtir. Varsayılan değer 64 ' dir. -1 değeri, yanıt üst bilgilerine hiçbir boyut sınırının kullanılmayacağını gösterir.|  
+|`maximumErrorResponseLength`|Bir hata yanıtının kilobayt cinsinden uzunluk üst sınırını belirtir. Varsayılan değer 64 ' dir. -1 değeri, hata yanıtına hiçbir boyut sınırının kullanılamayacağını gösterir.|  
+|`maximumUnauthorizedUploadLength`|Yetkisiz bir hata koduna yanıt olarak, bir karşıya yükleme işleminin bayt cinsinden uzunluk üst sınırını belirtir. Varsayılan değer-1 ' dir. -1 değeri, karşıya yükleme sırasında hiçbir boyut sınırının kullanılamayacağını gösterir.|  
+|`useUnsafeHeaderParsing`|Güvenli olmayan üstbilgi ayrıştırma özelliğinin etkinleştirilip etkinleştirilmeyeceğini belirtir. Varsayılan değer `false` şeklindedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -53,16 +53,16 @@ Web isteği parametreleri özelleştirir.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[Ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
+|[Ayarlar](settings-element-network-settings.md)|<xref:System.Net> Ad alanı için temel ağ seçeneklerini yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan olarak, .NET Framework kesinlikle RFC 2616'urı ayrıştırmak için zorlar. Bazı sunucu yanıtları neden olur, izin verilmeyen alanlarına bir denetim karakteri içerebilir <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> yönteminin bir <xref:System.Net.WebException>. Varsa **useUnsafeHeaderParsing** ayarlanır **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> oluşturmayacaksa bu durumda; ancak, uygulamanız URI saldırıları ayrıştırma birkaç biçimlerinin savunmasız olacaktır. En uygun çözümü sunucu yanıt denetim karakterleri içermeyen şekilde değiştirmektir.  
+ .NET Framework, varsayılan olarak, URI ayrıştırma için RFC 2616 ' i kesinlikle uygular. Bazı sunucu yanıtları yasaklanmış alanlardaki denetim karakterlerini içerebilir ve bu, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> metodun bir <xref:System.Net.WebException>oluşturmasına neden olur. **Useunsafeheaderayrıştırma** **true**olarak ayarlanırsa, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> bu durumda throw olmaz; ancak, uygulamanız bazı URI ayrıştırma saldırılarına karşı savunmasız olacaktır. En iyi çözüm, yanıtın denetim karakterleri içermediği şekilde sunucuyu değiştirmemelidir.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir büyük belirtmek gösterilmektedir normal maksimum üstbilgi uzunluğundan.  
+ Aşağıdaki örnek, normal en büyük üstbilgi uzunluğundan daha büyük bir değer belirtmeyi gösterir.  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ Web isteği parametreleri özelleştirir.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

@@ -2,22 +2,22 @@
 title: <iriParsing> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: 7033f4dcda7d2fe73310ae0d36d9b05c090d13d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c99edf2f1a03e0e510858c106cad43b0eaa27b4
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674525"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664083"
 ---
-# <a name="iriparsing-element-uri-settings"></a>\<iriParsing > öğesi (Uri ayarları)
-Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma için uygulanmış olup olmadığını belirten bir <xref:System.Uri> ve IRI ayrıştırma kurallarını uygulanıp.  
+# <a name="iriparsing-element-uri-settings"></a>\<ıriayrıştırma > öğesi (URI ayarları)
+Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma 'nin bir <xref:System.Uri> öğesine uygulanıp uygulanmadığını ve IRI ayrıştırma kurallarının uygulanıp uygulanamayacağını belirtir.  
   
 ## <a name="schema-hierarchy"></a>Şema hiyerarşisi  
- [\<Yapılandırma > öğesi](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<Yapılandırma > öğesi](../configuration-element.md)  
   
- [\<URI > öğesi (Uri ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<Uri > öğesi (Uri Ayarları)](uri-element-uri-settings.md)  
   
- [\<iriParsing >](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
+ [\<ıriayrıştırma >](iriparsing-element-uri-settings.md)  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,7 +34,7 @@ Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma için uygulanmış olup 
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|`enabled`|IRI ayrıştırma etkinleştirilip etkinleştirilmeyeceğini belirtir. Varsayılan değer `false` şeklindedir.|  
+|`enabled`|IRI ayrıştırma özelliğinin etkinleştirilip etkinleştirilmeyeceğini belirtir. Varsayılan değer `false` şeklindedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -43,30 +43,30 @@ Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma için uygulanmış olup 
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|.NET Framework web adresleri Tekdüzen Kaynak Tanımlayıcıları (URI'lar) kullanılarak ifade nasıl işlediğini belirten ayarları içerir.|  
+|[uri](uri-element-uri-settings.md)|.NET Framework Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) kullanarak ifade edilen Web adreslerini nasıl işleyeceğini belirten ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varolan <xref:System.Uri> sınıfı, .NET Framework 3.5 genişletilmişse. 3.0 SP1 ve 2.0 SP1 uluslararası kaynak tanımlayıcı (IRI) ve Uluslararası yapılan etki alanı adı (IDN) desteği sağlamak için. Özellikle IRI ve IDN etkinleştirmediğiniz sürece geçerli kullanıcıların .NET Framework 2.0 davranış herhangi bir değişikliği göremezsiniz destekler. Bu, .NET Framework'ün önceki sürümleriyle uygulama uyumluluğu sağlar.  
+ Mevcut <xref:System.Uri> sınıf .NET Framework 3,5 ' de genişletildi. 3,0 SP1 ve 2,0 SP1 uluslararası kaynak tanımlayıcıları (IRI) ve uluslararası etki alanı adları (ıDN) için destek sağlar. IRI ve ıDN desteğini özellikle etkinleştirmedikleri takdirde geçerli kullanıcılar .NET Framework 2,0 davranışından herhangi bir değişiklik görmez. Bu, uygulamanın .NET Framework önceki sürümleriyle uyumluluğunu sağlar.  
   
- IRI desteğini etkinleştirmek için aşağıdaki iki değişiklik gerekmez:  
+ IRI desteğini etkinleştirmek için aşağıdaki iki değişiklik gereklidir:  
   
-1. Machine.config dosyasının .NET Framework 2.0 dizininde aşağıdaki satırı ekleyin  
+1. Aşağıdaki satırı .NET Framework 2,0 dizinindeki Machine. config dosyasına ekleyin  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2. IRI ayrıştırma kurallarını uygulanması gerektiğini belirtin. Bu, machine.config veya app.config dosyasında yapılabilir.  
+2. IRI ayrıştırma kurallarının uygulanıp uygulanmayacağını belirtin. Bu, Machine. config veya App. config dosyasında yapılabilir.  
   
- IRI ayrıştırma etkinleştirme (etkin iriParsing = `true`) normalleştirme yapar ve karakter göre en son IRI denetleme kuralları RFC 3987. Varsayılan değer `false` normalleştirme yapın ve RFC 2396 göre denetleme ve RFC 3986'ya (IPv6 değişmez değerleri için) karakter.  
+ IRI ayrıştırma (ıriayrıştırmayı etkin = `true`) etkinleştirildiğinde, RFC 3987 ' deki en son IRI kurallarına göre normalleştirme ve karakter denetimi yapılır. Varsayılan değer, `false` RFC 2396 ve RFC 3986 (IPv6 sabit değerleri için) öğesine göre normalleştirme ve karakter denetimi yapar.  
   
 ### <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek tarafından kullanılan bir yapılandırma gösterir <xref:System.Uri> IRI ayrıştırma ve IDN adları desteklemek için sınıf.  
+ Aşağıdaki örnek, IRI ayrıştırma ve IDN adlarını desteklemek <xref:System.Uri> için sınıfı tarafından kullanılan bir yapılandırmayı gösterir.  
   
 ### <a name="code"></a>Kod  
   
@@ -83,4 +83,4 @@ Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma için uygulanmış olup 
 
 - <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

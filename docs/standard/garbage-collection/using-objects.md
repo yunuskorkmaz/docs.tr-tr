@@ -1,5 +1,5 @@
 ---
-title: IDisposable uygulayan nesneler kullanma
+title: IDisposable uygulayan nesneleri kullanma
 ms.date: 04/07/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,56 +12,56 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25c5ffa89e6ce4e589b8f12a7b8518272426c9e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 074b97f29946390170abe3c40d71d2ee2cb214ce
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969500"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666475"
 ---
-# <a name="using-objects-that-implement-idisposable"></a>IDisposable uygulayan nesneler kullanma
+# <a name="using-objects-that-implement-idisposable"></a>IDisposable uygulayan nesneleri kullanma
 
-Ortak dil çalışma zamanının atık toplayıcı yönetilen nesneler tarafından kullanılan belleği geri kazanır, ancak yönetilmeyen kaynakları kullanan türler <xref:System.IDisposable> kazanılacak bu yönetilmeyen kaynakların tahsis edilen bellek izin vermek için arabirim. Bitirdiğinizde uygulayan bir nesne kullanarak <xref:System.IDisposable>, nesnenin çağırmalıdır <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> uygulaması. Bunu iki yoldan biriyle yapabilirsiniz:  
+Ortak dil çalışma zamanının atık toplayıcısı, yönetilen nesneler tarafından kullanılan belleği geri kazanır, ancak yönetilmeyen kaynakları kullanan türler, bu yönetilmeyen kaynaklara <xref:System.IDisposable> ayrılan belleğin geri kazanılmaya izin vermek için arabirimini uygular. Uygulayan <xref:System.IDisposable>bir nesneyi kullanmayı bitirdiğinizde <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> nesnenin uygulamasını çağırmanız gerekir. Bunu iki yoldan biriyle yapabilirsiniz:  
   
-* C# ile `using` deyimi veya Visual Basic `Using` deyimi.  
+* İfadesiyle veya VisualBasic`Using`ifadesiyle. C# `using`  
   
-* Uygulayarak bir `try/finally` blok.  
+* Bir `try/finally` blok uygulayarak.  
 
 ## <a name="the-using-statement"></a>Using deyimi
 
-`using` C# deyimi ve `Using` Visual Basic'de deyimini oluşturmak ve bir nesneyi temizlemek için yazmanız gereken kodu basitleştirin. `using` Deyimi bir veya daha fazla kaynağı alır, belirtin ve nesnenin otomatik olarak atar deyimleri yürütür. Ancak, `using` deyimi, bunlar oluşturulan yöntem kapsamında kullanılan nesneler için kullanışlıdır.  
+`using` C# İçindeki ve`Using` içindeki deyimindeki bir nesne oluşturmak ve temizlemek için yazmanız gereken kodu basitleştirecek Visual Basic. `using` Deyimi bir veya daha fazla kaynak edinir, belirttiğiniz deyimleri yürütür ve nesneyi otomatik olarak atar. Ancak, `using` ifade yalnızca oluşturuldukları yöntemin kapsamı içinde kullanılan nesneler için yararlıdır.  
   
-Aşağıdaki örnekte `using` oluşturmak ve serbest bırakmak için deyimi bir <xref:System.IO.StreamReader?displayProperty=nameWithType> nesne.  
+Aşağıdaki örnek, bir `using` <xref:System.IO.StreamReader?displayProperty=nameWithType> nesnesi oluşturmak ve serbest bırakmak için ifadesini kullanır.  
   
 [!code-csharp[Conceptual.Disposable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using1.cs#1)]
 [!code-vb[Conceptual.Disposable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using1.vb#1)]  
   
-Ancak dikkat <xref:System.IO.StreamReader> sınıfının Implements <xref:System.IDisposable> gösteren yönetilmeyen bir kaynağı kullanır, örneğin açıkça çağırmak değil arabirimi <xref:System.IO.StreamReader.Dispose%2A?displayProperty=nameWithType> yöntemi. C# veya Visual Basic derleyici karşılaştığında `using` deyimi, açıkça içeren aşağıdaki koda denk olan ara dil (IL) yayar bir `try/finally` blok.  
+<xref:System.IO.StreamReader> Sınıfı, yönetilmeyen bir kaynak kullandığını gösteren <xref:System.IDisposable> arabirimini uygulasa da, <xref:System.IO.StreamReader.Dispose%2A?displayProperty=nameWithType> örneğin yöntemi açıkça çağırmadığını unutmayın. C# Veya Visual Basic Derleyicisi `using` deyimle karşılaştığında, açıkça bir `try/finally` blok içeren aşağıdaki koda denk olan ara dili (IL) yayar.  
   
 [!code-csharp[Conceptual.Disposable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using3.cs#3)]
 [!code-vb[Conceptual.Disposable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using3.vb#3)]  
   
-C# `using` deyimi de sayesinde iç içe geçmiş dahili olarak denk olan tek bir deyimde birden çok kaynak elde `using` deyimleri. Aşağıdaki örnek iki başlatır <xref:System.IO.StreamReader> nesneleri iki farklı dosyanın içeriğini okumak için.  
+Deyim Ayrıca, iç içe geçmiş `using` deyimlere dahili olarak eşdeğer olan tek bir deyimde birden fazla kaynak elde etmenizi sağlar. C# `using` Aşağıdaki örnek iki farklı dosyanın <xref:System.IO.StreamReader> içeriğini okumak için iki nesne örneği oluşturur.  
   
 [!code-csharp[Conceptual.Disposable#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using4.cs#4)]
 
 ## <a name="tryfinally-block"></a>Try/finally bloğu
 
-Kaydırmak yerine bir `try/finally` engelleyin bir `using` deyimi, seçebilirsiniz `try/finally` doğrudan engelleyin. Bu sizin kişisel kodlama stiliniz olabilir veya bunu aşağıdaki nedenlerden biri dolayısıyla yapmak isteyebilirsiniz:  
+Bir `try/finally` `using` deyime bir blok sarmalama yerine, `try/finally` bloğu doğrudan uygulamayı seçebilirsiniz. Bu sizin kişisel kodlama stiliniz olabilir veya bunu aşağıdaki nedenlerden biri dolayısıyla yapmak isteyebilirsiniz:  
   
-* Eklenecek bir `catch` oluşturulan özel durumları işlemek için blok `try` blok. Aksi takdirde, tarafından oluşturulan özel durumlar `using` içinde oluşturulan özel durumlar olarak deyimi işlenmemiş, `using` bloke bir `try/catch` blok mevcut değil.  
+* Blokta`try` oluşan tüm `catch` özel durumları işlemek üzere bir blok eklemek için. Aksi takdirde, bir `using` `try/catch` blok yoksa `using` blok içinde oluşturulan özel durumlar olduğu gibi, ifadesiyle oluşturulan tüm özel durumlar da işlenmez.  
   
-* Uygulayan bir nesne örneği <xref:System.IDisposable> kapsamı içinde beyan blokta yerel değil.  
+* Kapsamı, içinde bildirildiği bloğa yerel <xref:System.IDisposable> olmayan uygulayan bir nesne örneğini oluşturmak için.  
   
-Bunu kullanması hariç, aşağıdaki örnek önceki örneğe benzer bir `try/catch/finally` elden oluşturmak ve kullanmak için blok bir <xref:System.IO.StreamReader> nesnesi ve tarafından oluşturulan özel durumları işlemek için <xref:System.IO.StreamReader> oluşturucusu ve <xref:System.IO.StreamReader.ReadToEnd%2A> yöntemi. Unutmayın kodda `finally` blok denetler uygulayan nesnenin <xref:System.IDisposable> değil `null` çağırmadan önce <xref:System.IDisposable.Dispose%2A> yöntemi. Bunun yapılmaması sonuçlanabilir bir <xref:System.NullReferenceException> çalışma zamanında özel durum.  
+`try/catch/finally` Aşağıdaki örnek, bir <xref:System.IO.StreamReader> nesnenin örneğini oluşturma, kullanma ve atma, <xref:System.IO.StreamReader> Oluşturucu ve <xref:System.IO.StreamReader.ReadToEnd%2A> yöntemi tarafından oluşturulan özel durumları işlemek için bir blok kullanması dışında, önceki örneğe benzer. `finally` Bloktaki kodun, <xref:System.IDisposable> yöntemi<xref:System.IDisposable.Dispose%2A> çağırmadan önce değil `null` , uygulayan nesnenin olmadığını kontrol ettiğini unutmayın. Bunun başarısız olması, çalışma zamanında bir <xref:System.NullReferenceException> özel durum oluşmasına neden olabilir.  
   
 [!code-csharp[Conceptual.Disposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using5.cs#6)]
 [!code-vb[Conceptual.Disposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using5.vb#6)]  
   
-Uygulamak seçin ya da uygulamalıdır bu temel modeli izleyebilirsiniz bir `try/finally` block programlama diliniz desteklemediğinden bir `using` deyimi doğrudan çağrıları izin vermez ancak <xref:System.IDisposable.Dispose%2A> yöntemi. 
+Programlama diliniz bir `using` ifadeyi desteklemediğinden, ancak <xref:System.IDisposable.Dispose%2A> yönteme doğrudan çağrı yapmasına izin vereceğinden, `try/finally` bir blok uygulamayı uygulamayı veya uygulamayı tercih etmeniz gerekiyorsa, bu temel kalıbı izleyebilirsiniz. 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yönetilmeyen Kaynakları Temizleme](../../../docs/standard/garbage-collection/unmanaged.md)
-- [using deyimi (C# Başvurusu)](~/docs/csharp/language-reference/keywords/using-statement.md)
-- [Using deyimi (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)
+- [using deyimleri (C# başvuru)](../../csharp/language-reference/keywords/using-statement.md)
+- [Using deyimleri (Visual Basic)](../../visual-basic/language-reference/statements/using-statement.md)

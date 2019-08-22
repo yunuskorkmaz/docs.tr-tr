@@ -8,19 +8,19 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: 9c69ea7bf95b311a796ec29d90410a77b748c3c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37f4d8c5eeacd82f8fc37179c478d026ca25f459
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705330"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664312"
 ---
 # <a name="provideroption-element"></a>\<providerOption > öğesi
-Derleyici sürümü öznitelikleri için dil sağlayıcısı belirtir.  
+Bir dil sağlayıcısı için derleyici sürüm özniteliklerini belirtir.  
   
  \<yapılandırma öğesi >  
 \<system.codedom Element>  
-\<compilers öğesi >  
+\<derleyiciler öğesi >  
 \<Derleyici > öğesi  
 \<providerOption > öğesi  
   
@@ -40,8 +40,8 @@ Derleyici sürümü öznitelikleri için dil sağlayıcısı belirtir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`name`|Gerekli öznitelik.<br /><br /> Seçenek adını belirtir. Örneğin, "CompilerVersion".|  
-|`value`|Gerekli öznitelik.<br /><br /> Seçeneği için bir değer belirtir. Örneğin, "v3.5".|  
+|`name`|Gerekli öznitelik.<br /><br /> Seçeneğin adını belirtir; Örneğin, "CompilerVersion".|  
+|`value`|Gerekli öznitelik.<br /><br /> Seçenek için değeri belirtir; Örneğin, "v 3.5".|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -50,22 +50,22 @@ Derleyici sürümü öznitelikleri için dil sağlayıcısı belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Yapılandırma > öğesi](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Her yapılandırma dosyasında ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|[\<System.codeDom > öğesi](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Kullanılabilir dil sağlayıcıları için derleyici yapılandırma ayarlarını belirtir.|  
-|[\<System.codeDom > öğesi](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Compiler configuration öğeleri için kapsayıcı; sıfır veya daha fazlasını içeren `<compiler>` öğeleri.|  
-|[\<Derleyici > öğesi](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Compiler configuration öznitelikleri için dil sağlayıcısı belirtir.|  
+|[\<Yapılandırma > öğesi](../configuration-element.md)|Her yapılandırma dosyasında ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
+|[\<System. CodeDom > öğesi](system-codedom-element.md)|Kullanılabilir dil sağlayıcılarının derleyici yapılandırma ayarlarını belirtir.|  
+|[\<derleyiciler > öğesi](compilers-element.md)|Derleyici yapılandırma öğeleri için kapsayıcı; sıfır veya daha fazla `<compiler>` öğe içeriyor.|  
+|[\<Derleyici > öğesi](compiler-element.md)|Bir dil sağlayıcısı için derleyici yapılandırma özniteliklerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework sürüm 3.5, kod belge nesne modeli (CodeDOM) kod sağlayıcıları sağlayıcıya özel seçenekleri kullanarak destekleyebilir `<providerOption>` öğesi.  
+ .NET Framework sürüm 3,5 ' de, kod belge nesne modeli (CodeDom) kod sağlayıcıları `<providerOption>` öğesini kullanarak sağlayıcıya özgü seçenekleri destekleyebilir.  
   
- .NET Framework 3.5 güncelleştirilmiş .NET Framework 2.0 derlemeleri içerir ve yeni türleri içeren yeni sürüm 3.5 derlemeler sağlar. Microsoft C# ve Visual Basic kod sağlayıcıları, .NET Framework 2.0 derlemelerinde toplanır, ancak sürüm 3.5 derleyicileri desteklemek üzere güncelleştirilmiştir. Varsayılan olarak, güncelleştirilmiş kod sağlayıcıları sürüm 2.0 derleyicileri için kod oluşturur. Kullanabileceğiniz `<providerOption>` hedef derleyici sürümü 3.5 değiştirmek için öğesi. Bunu yapmak için "CompilerVersion" belirtin `name` özniteliği ve "v3.5" `value` özniteliği. Bir küçük harf "v" sürüm numarasıyla gelmelidir.  
+ .NET Framework 3,5, güncelleştirilmiş .NET Framework 2,0 derlemelerini içerir ve yeni türler içeren yeni sürüm 3,5 derlemeleri sağlar. Microsoft C# ve Visual Basic kod sağlayıcıları .NET Framework 2,0 Derlemeleriyle bulunur, ancak sürüm 3,5 derleyicileri destekleyecek şekilde güncelleştirilmiştir. Varsayılan olarak, güncelleştirilmiş kod sağlayıcıları sürüm 2,0 derleyicileri için kod üretir. Hedef derleyici sürümünü 3,5 `<providerOption>` olarak değiştirmek için öğesini kullanabilirsiniz. Bunu yapmak için, özniteliği için "CompilerVersion" `name` ve `value` öznitelik için "v 3.5" belirtin. Sürüm numarasından önce küçük bir "v" olması gerekir.  
   
- Sürüm belirtimi genel ekleyerek yapabileceğiniz `<providerOption>` .NET Framework 2.0 Machine.config veya Web.config dosyası kök öğesi. Varsayılan derleyici sürümü 3.5 Machine.config dosyasında güncelleştirirseniz, bunu uygulama başına temelinde 2.0 dön kullanarak değiştirebilirsiniz `<providerOption>` uygulama yapılandırma dosyasında öğesi.  
+ .NET Framework 2,0 Machine. config veya root Web. config `<providerOption>` dosyasına öğesini ekleyerek sürüm belirtimini Global hale getirebilirsiniz. Machine. config dosyasında varsayılan derleyici sürümünü 3,5 olarak güncelleştirirseniz, uygulama yapılandırma dosyasındaki `<providerOption>` öğesini kullanarak uygulama başına temelinde yeniden 2,0 olarak değiştirebilirsiniz.  
   
- CodeDOM kod sağlayıcısı uygulayıcılar, alan bir oluşturucu sağlayarak özel seçenekleri işlenebilecek bir `providerOptions` türünde parametre <xref:System.Collections.Generic.IDictionary%602>.  
+ CodeDOM kod sağlayıcısı uygulayıcıları, türünde `providerOptions` <xref:System.Collections.Generic.IDictionary%602>bir parametre alan bir Oluşturucu sağlayarak özel seçenekleri işleyebilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, C# kod sağlayıcının 3.5 sürümünün kullanılması gerektiğini belirtmek gösterilmektedir.  
+ Aşağıdaki örnek, C# kod sağlayıcısının 3,5 sürümünün kullanılması gerektiğini belirtir.  
   
 ```xml  
 <configuration>  
@@ -93,7 +93,7 @@ Derleyici sürümü öznitelikleri için dil sağlayıcısı belirtir.
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<System.codeDom > öğesi](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
-- [Tam Olarak Nitelenmiş Tür Adlarını Belirtme](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
-- [derleme (ASP.NET Settings Schema) yönelik derleyiciler için derleyici öğesi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))
+- [Yapılandırma Dosyası Şeması](../index.md)
+- [\<derleyiciler > öğesi](compilers-element.md)
+- [Tam Olarak Nitelenmiş Tür Adlarını Belirtme](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)
+- [derleme için derleyiciler için derleyici öğesi (ASP.NET Settings şeması)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

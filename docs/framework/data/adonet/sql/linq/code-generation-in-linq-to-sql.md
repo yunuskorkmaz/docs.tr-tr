@@ -2,40 +2,40 @@
 title: LINQ to SQL’de Kod Oluşturma
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: fbc70669b9c03b59468f4f6a67c1f73432883193
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63ac0f50b34a5e5d8739adbeb70f2412960227c3
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743607"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666124"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL’de Kod Oluşturma
-Kod Object Relational Designer'ı veya SQLMetal komut satırı aracını kullanarak bir veritabanı göstermek için oluşturabilir. Her iki durumda da, uçtan uca kod oluşturma üç aşamada gerçekleşir:  
+Nesne İlişkisel Tasarımcısı ya da SQLMetal komut satırı aracını kullanarak bir veritabanını temsil etmek için kod oluşturabilirsiniz. Her iki durumda da, uçtan uca kod oluşturma üç aşamada gerçekleşir:  
   
-1. *DBML Ayıklayıcısı* veritabanı şema bilgilerini ayıklar ve bilgilerin bir XML biçimli DBML dosyasına yeniden birleştirir.  
+1. *DBML ayıklayıcısı* veritabanından şema bilgilerini ayıklar ve bu bilgileri XML biçimli bir dbml dosyasına yeniden birleştirir.  
   
-2. DBML dosyasının tarayan *DBML Doğrulayıcı* hataları.  
+2. DBML dosyası hatalar için *DBML doğrulayıcısı* tarafından taranır.  
   
-3. Doğrulama hataları görünüyorsa, dosyanın kod oluşturucuya geçirilir.  
+3. Doğrulama hatası görünmüyorsa dosya kod oluşturucuya geçirilir.  
   
- Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Visual Studio kullanan geliştiricilerin, Nesne İlişkisel Tasarımcısı kod oluşturmak için de kullanabilirsiniz. Bkz: [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Visual Studio kullanan geliştiriciler ayrıca kod oluşturmak için Nesne İlişkisel Tasarımcısı de kullanabilir. Bkz. [Visual Studio 'da LINQ to SQL araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
-## <a name="dbml-extractor"></a>DBML Ayıklayıcısı  
- DBML Ayıklayıcısı olduğu bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bileşeni giriş olarak veritabanı meta verileri alır ve çıktı olarak bir DBML dosyası oluşturur.  
+## <a name="dbml-extractor"></a>DBML ayıklayıcısı  
+ DBML ayıklayıcısı, veritabanı meta [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verilerini girdi olarak alan ve bir Dbml dosyasını çıktı olarak üreten bir bileşendir.  
   
 ## <a name="code-generator"></a>Kod Oluşturucu  
- Kod oluşturucunun olduğu bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Basic DBML dosyasına çeviren bileşen C#, veya XML eşleme dosyaları.  
+ Kod Oluşturucu, DBML [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dosyalarını Visual Basic, C#veya XML eşleme dosyalarına çeviren bir bileşendir.  
   
 ## <a name="xml-schema-definition-file"></a>XML şema tanımı dosyası  
- DBML dosyasının XSD dosyası olarak aşağıdaki şema tanımına göre geçerli olmalıdır.  
+ DBML dosyası, XSD dosyası olarak aşağıdaki şema tanımına karşı geçerli olmalıdır.  
   
- Bu şema tanımı dosyası bir dış eşleme dosyası doğrulamak için kullanılan şema tanımı dosyasından ayırmak. Daha fazla bilgi için [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).  
+ Bu şema tanımı dosyasını, bir dış eşleme dosyasını doğrulamak için kullanılan şema tanımı dosyasından ayırt edin. Daha fazla bilgi için bkz. [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).  
   
 > [!NOTE]
->  Visual Studio kullanıcıları Ayrıca bu XSD dosyası XML şemaları iletişim kutusunda "DbmlSchema.xsd" bulabilirsiniz. Bir DBML dosyasının doğrulamak için XSD dosyası doğru şekilde kullanmak için bkz: [nasıl yapılır: DBML ve dış eşleme dosyalarını doğrulama](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+>  Visual Studio kullanıcıları Ayrıca bu XSD dosyasını "DbmlSchema. xsd" olarak XML şemaları iletişim kutusunda bulur. Bir Dbml dosyasını doğrulamak için xsd dosyasını doğru şekilde kullanmak için bkz [. nasıl yapılır: DBML ve dış eşleme dosyalarını](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)doğrulayın.  
   
-```  
-?<?xml version="1.0" encoding="utf-16"?>  
+```xml  
+<?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/linqtosql/dbml/2007" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007"  
 elementFormDefault="qualified" >  
   <xs:element name="Database" type="Database" />  
@@ -243,7 +243,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="sample-dbml-file"></a>Örnek DBML dosyası  
- Northwind örnek veritabanından oluşturulan DBML dosyasından bir alıntı kodudur. SQLMetal ile kullanarak tüm dosya oluşturabilirsiniz **formatına karşı** seçeneği. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+ Aşağıdaki kod, Northwind örnek veritabanından oluşturulan DBML dosyasından bir alıntıdır. Tüm dosyayı SQLMetal 'ı **/XML** seçeneğiyle kullanarak oluşturabilirsiniz. Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -273,6 +273,6 @@ elementFormDefault="qualified" >
 
 - [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [Dış Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Nasıl yapılır: Nesne modelini dış dosya oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Nasıl yapılır: Nesne modelini dış dosya olarak oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
 - [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

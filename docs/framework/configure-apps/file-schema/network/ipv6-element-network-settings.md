@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-ms.openlocfilehash: b8969cecf8ffb2ef23522f193bb322b1170e6111
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d89c2e2c6943aca38f8a71092ba3121447a77574
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705070"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664095"
 ---
 # <a name="ipv6-element-network-settings"></a>\<IPv6 > öğesi (ağ ayarları)
-Internet Protokolü sürüm 6 (IPv6) sağlar eski üyeler alınan yanıtları <xref:System.Net.Dns> sınıfı.  
+, <xref:System.Net.Dns> Sınıfın eski üyelerinden Internet Protokolü sürüm 6 (IPv6) yanıtlarını mümkün bir şekilde sunar.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -38,7 +38,7 @@ Internet Protokolü sürüm 6 (IPv6) sağlar eski üyeler alınan yanıtları <x
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`enabled`|Belirtir olup olmadığını üyeleri <xref:System.Net.Dns> sınıfı Internet Protokolü sürüm 6 (IPv6) adreslerini döndürür. Varsayılan değer `false` şeklindedir.|  
+|`enabled`|<xref:System.Net.Dns> Sınıfın üyelerinin Internet Protokolü sürüm 6 (IPv6) adresleri döndürmeyeceğini belirtir. Varsayılan değer `false` şeklindedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -47,16 +47,16 @@ Internet Protokolü sürüm 6 (IPv6) sağlar eski üyeler alınan yanıtları <x
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[Ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
+|[Ayarlar](settings-element-network-settings.md)|<xref:System.Net> Ad alanı için temel ağ seçeneklerini yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu ayar eski üyeler için IPv6 desteğini etkinleştirir <xref:System.Net.Dns> sınıfı: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, ve <xref:System.Net.Dns.Resolve%2A>. Diğer üyeleriyle ilgili <xref:System.Net?displayProperty=nameWithType> ad alanı, IPv6 adresleri döndürülecek IPv6 işletim sistemi içinde etkinleştirilir.  
+ <xref:System.Net.Dns> Bu ayar <xref:System.Net.Dns.GetHostByAddress%2A> <xref:System.Net.Dns.BeginResolve%2A> <xref:System.Net.Dns.BeginGetHostByName%2A> <xref:System.Net.Dns.EndGetHostByName%2A> <xref:System.Net.Dns.EndResolve%2A> ,sınıfının<xref:System.Net.Dns.Resolve%2A>kullanılmayan üyeleri için IPv6 desteği sunar:,,,, ,ve.<xref:System.Net.Dns.GetHostByName%2A> <xref:System.Net?displayProperty=nameWithType> Ad alanının diğer üyeleri için, IPv6 adresleri işletim sisteminde IPv6 etkinse döndürülebilir.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek için IPv6 desteğini nasıl etkinleştireceğinizi gösterir <xref:System.Net.Dns> sınıfı.  
+ Aşağıdaki örnekte, <xref:System.Net.Dns> sınıfı için IPv6 desteğinin nasıl etkinleştirileceği gösterilmektedir.  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ Internet Protokolü sürüm 6 (IPv6) sağlar eski üyeler alınan yanıtları <x
 - <xref:System.Net?displayProperty=nameWithType>
 - <xref:System.Net.Dns?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eec77d4dd42a7b95d1e2cd0e353e2e54746676b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84ec54eeb8adee90031057dadc4549cb73527be1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704888"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663907"
 ---
-# <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding > öğesi için \<çalışma zamanı >
+# <a name="assemblybinding-element-for-runtime"></a>\<çalışma zamanı için \<assemblyBinding > öğesi >
 Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bilgi içerir.  
   
  \<Yapılandırma >  
@@ -39,17 +39,17 @@ Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bi
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**xmlns**|Gerekli öznitelik.<br /><br /> Derleme bağlama için gerekli XML ad alanı belirtir. Use the string "urn:schemas-microsoft-com:asm.v1" as the value.|  
-|**AppliesTo**|.NET Framework derleme yeniden yönlendirme uygulandığı çalışma zamanı sürümünü belirtir. İsteğe bağlı bu öznitelik, bir .NET Framework sürüm numarası geçerli hangi sürüm olduğunu belirlemek için kullanır. Hayır ise **appliesTo** özniteliği belirtilirse,  **\<assemblyBinding >** öğe tüm .NET Framework sürümleri için geçerlidir. **AppliesTo** özniteliği, .NET Framework sürüm 1.1 sunulmuştur; .NET Framework sürüm 1.0 tarafından göz ardı edilir. Bunun anlamı tüm  **\<assemblyBinding >** öğeleri kullanırken bile, .NET Framework sürüm 1.0 uygulanır bir **appliesTo** özniteliği belirtildi.|  
+|**özniteliði**|Gerekli öznitelik.<br /><br /> Derleme bağlaması için gereken XML ad alanını belirtir. Değer olarak "urn: schemas-microsoft-com: asm. v1" dizesini kullanın.|  
+|**appliesTo**|.NET Framework derleme yeniden yönlendirmenin uygulandığı çalışma zamanı sürümünü belirtir. Bu isteğe bağlı öznitelik, hangi sürümün uygulanacağını göstermek için .NET Framework bir sürüm numarası kullanır. Hiçbir **AppliesTo** özniteliği belirtilmemişse,  **\<assemblyBinding >** öğesi .NET Framework tüm sürümleri için geçerlidir. **AppliesTo** özniteliği .NET Framework sürüm 1,1 ' de tanıtılmıştı; .NET Framework 1,0 sürümü tarafından yok sayılır. Bu, bir **AppliesTo** özniteliği belirtilmiş olsa bile, .NET Framework sürüm 1,0 kullanılırken tüm  **\<assemblyBinding >** öğelerinin uygulandığı anlamına gelir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<dependentAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|Bir derleme için bağlama ilkesi ve derleme konumunu saklar. Bir  **\<dependentAssembly >** her derleme için etiket.|  
-|[\<yoklama >](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|Ortak dil çalışma zamanı derlemeleri yüklenirken arama alt dizinleri belirtir.|  
-|[\<publisherPolicy >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)|Çalışma zamanı Yayımcı ilkesi uygulanıp uygulanmayacağını belirtir.|  
-|[\<qualifyAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)|Kısmi bir adı kullanıldığında dinamik olarak yüklenmesi gereken bütünleştirilmiş kodun tam adını belirtir.|  
+|[\<dependentAssembly >](dependentassembly-element.md)|Derleme için bağlama ilkesini ve derleme konumunu kapsüller. Her derleme için bir  **\<dependentAssembly >** etiketi kullanın.|  
+|[\<yoklama >](probing-element.md)|Derlemeler yüklenirken ortak dil çalışma zamanı aramalarının alt dizinlerini belirtir.|  
+|[\<publisherPolicy >](publisherpolicy-element.md)|Çalışma zamanının yayımcı ilkesi uygulanıp uygulanmadığını belirtir.|  
+|[\<qualifyAssembly >](qualifyassembly-element.md)|Kısmi bir ad kullanıldığında dinamik olarak yüklenmesi gereken derlemenin tam adını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -59,7 +59,7 @@ Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bi
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir derleme sürümünü diğerine yeniden yönlendirme ve bir kod temeli sağlamak gösterilmektedir.  
+ Aşağıdaki örnek, bir derleme sürümünün diğerine nasıl yeniden yönlendirileceğini ve bir kod temeli nasıl sağlayabileceğinizi gösterir.  
   
 ```xml  
 <configuration>  
@@ -79,7 +79,7 @@ Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bi
 </configuration>  
 ```  
   
- Aşağıdaki örnek nasıl kullanılacağını gösterir **appliesTo** bir .NET Framework derlemesinin bağlama yeniden yönlendirme için özniteliği.  
+ Aşağıdaki örnek, bir .NET Framework derlemesinin bağlamasını yeniden yönlendirmek için **AppliesTo** özniteliğini nasıl kullanacağınızı gösterir.  
   
 ```xml  
 <runtime>  
@@ -94,6 +94,6 @@ Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bi
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
+- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../redirect-assembly-versions.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 20d9b92ca2bbffd6b98b8641e5cef5e567cb84cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1dd31884a072d16ed004c0b49be61e8cee399787
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705135"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664145"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy > öğesi (ağ ayarları)
-HTTP önbelleğe alma etkindir ve önbelleğe alma ilkesi varsayılan tanımlar olup olmadığını açıklar.  
+HTTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe alma ilkesini açıklar.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -41,10 +41,10 @@ HTTP önbelleğe alma etkindir ve önbelleğe alma ilkesi varsayılan tanımlar 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`maximumAge`|Önbelleğe alınmış nesnenin süresi dolmuş olarak işaretlenmeden önce maksimum zaman aralığını belirtir.|  
-|`maximumStale`|Önbelleğe alınmış nesnenin süresi dolmuş olarak işaretlenmeden önce hesaplanan güncellik süresini geçen en uzun süreyi belirtir.|  
-|`minimumFresh`|Yeni olarak değerlendirilmesi önbelleğe alınmış bir nesne için minimum süre belirtir.|  
-|`policyLevel`|Önbellek ilkesi otomatik olup veya önbellek olup atlanır belirtir. Varsayılan değer `BypassCache` şeklindedir.|  
+|`maximumAge`|Önbelleğe alınan bir nesnenin süresi dolmadan önce geçen maksimum zaman aralığını belirtir.|  
+|`maximumStale`|Önbelleğe alınmış bir nesne, süresi dolmadan önce, hesaplanan yeniliği geçen en uzun süreyi belirtir.|  
+|`minimumFresh`|Önbelleğe alınmış bir nesnenin yeni olarak kabul edileceği en kısa süreyi belirtir.|  
+|`policyLevel`|Önbelleğe alma ilkesinin otomatik olup olmadığını veya önbelleğin atlanıp atlanmayacağını belirtir. Varsayılan değer `BypassCache` şeklindedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -53,18 +53,18 @@ HTTP önbelleğe alma etkindir ve önbelleğe alma ilkesi varsayılan tanımlar 
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Ağ istekleri için önbelleğe alma mekanizması denetler.|  
+|[requestCaching](requestcaching-element-network-settings.md)|Ağ istekleri için önbelleğe alma mekanizmasını denetler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değeri `policyLevel` özniteliği, ya da `BypassCache` veya `Default`.  
+ `policyLevel` Özniteliği için olan değer ya `Default`da `BypassCache` olur.  
   
- Değerleri `maximumAge`, `maximumStale`, ve `minimumFresh` öğeleri olan bir ya da açık bir zaman aralığı bir biçimi ile *d*. *hh*:*mm*:*ss* (gün, saat, dakika ve saniye) veya sabitler `minValue` veya `maxValue`uygun şekilde.  
+ ,, Ve öğelerinindeğerleri`minimumFresh` d biçimindeki açık bir zaman aralığıdır. `maximumAge` `maximumStale` *SS*:*dd*:*SS* (gün, saat, dakika, saniye) veya sabitler `minValue` ya `maxValue`da uygun şekilde.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, en düşük yeni birer birer en uzun geçerlilik süresi iki gün ve dört saatlik süre üst sınırını eski altı saat belirtin gösterilmektedir.  
+ Aşağıdaki örnek, en az altı saat, iki güne ait maksimum yaş süresi ve dört saatlik en fazla eski süreyi belirtmek için nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -85,4 +85,4 @@ HTTP önbelleğe alma etkindir ve önbelleğe alma ilkesi varsayılan tanımlar 
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

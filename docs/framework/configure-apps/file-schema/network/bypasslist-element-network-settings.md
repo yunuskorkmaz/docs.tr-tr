@@ -8,20 +8,20 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: d3d986dae478f49504dae21b9f39574b7887b4d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10d2a025096579c6bed64f82cc955deb0542717c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674629"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664197"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<bypasslist > öğesi (ağ ayarları)
-Bir proxy sunucu kullanmaması adresleri açıklayan normal bir ifade kümesi sağlar.  
+# <a name="bypasslist-element-network-settings"></a>\<BypassList > öğesi (ağ ayarları)
+Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.  
   
  \<Yapılandırma >  
 \<system.net>  
 \<defaultProxy >  
-\<bypasslist>  
+\<BypassList >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,28 +40,28 @@ Bir proxy sunucu kullanmaması adresleri açıklayan normal bir ifade kümesi sa
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|Bir IP adresi veya DNS adı için proxy atlama listesi ekler.|  
-|[Temizle](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|Atlama listesi temizler.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|Bir IP adresi veya DNS adı proxy atlama listeden kaldırır.|  
+|[add](add-element-for-bypasslist-network-settings.md)|Proxy atlama listesine bir IP adresi veya DNS adı ekler.|  
+|[lediğiniz](clear-element-for-bypasslist-network-settings.md)|Atlama listesini temizler.|  
+|[remove](remove-element-for-bypasslist-network-settings.md)|Proxy atlama listesinden bir IP adresi veya DNS adı kaldırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Atlama listesi içeren URI'leri açıklayan normal ifadeler, <xref:System.Net.WebRequest> örneklere erişmek doğrudan veya proxy sunucusu üzerinden.  
+ Atlama listesi, proxy sunucu aracılığıyla değil, doğrudan erişim <xref:System.Net.WebRequest> sağlayan URI 'leri tanımlayan normal ifadeler içerir.  
   
- Bu öğe için normal bir ifade belirtirken dikkatli olmanız gerekir. Normal ifade "[a-z] +\\.contoso\\.com" eşleşme barındıran tüm contoso.com etki alanı, ancak bunu ayrıca contoso.com.cpandl.com etki alanındaki herhangi bir ana bilgisayara eşleşen. Contoso.com etki alanındaki bir konak eşleştirmek için bir yer işareti ("$") kullanın: "[a-z] +\\.contoso\\.com$".  
+ Bu öğe için bir normal ifade belirtirken dikkatli olmanız gerekir. "[A-z] +\\. contoso\\. com" normal ifadesi, contoso.com etki alanındaki herhangi bir konakla eşleşir, ancak aynı zamanda contoso.com.cpandl.com etki alanındaki herhangi bir konakla eşleşir. Yalnızca contoso.com etki alanındaki bir konağı eşleştirmek için bir tutturucu ("$"): "[a-z] +\\. contoso\\. com $" kullanın.  
   
- Normal ifadeler hakkında daha fazla bilgi için bkz. [.NET framework normal ifadelerinde](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Normal ifadeler hakkında daha fazla bilgi için bkz. [Normal ifadeleri .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek iki adres atlama listesine ekler. İlk contoso.com etki alanındaki tüm sunucular için proxy atlar; İkinci IP adresi ile başlayan tüm sunucuların 192.168 ile proxy atlar.  
+ Aşağıdaki örnek atlama listesine iki adres ekler. İlki, contoso.com etki alanındaki tüm sunucular için proxy 'yi atlar; İkincisi, IP adresleri 192,168 ile başlayan tüm sunucular için proxy 'yi atlar.  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ Bir proxy sunucu kullanmaması adresleri açıklayan normal bir ifade kümesi sa
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

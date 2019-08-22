@@ -8,87 +8,81 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 09427bfc836f40ca9c7aa76f4904bfe7083bf8dc
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: bc5f5e2d8808c0a60df721bf2c0ed76b45ef49a0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211229"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666255"
 ---
 # <a name="walkthrough-assign-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: Tasarım zamanında Windows Forms WPF içeriği atama
 
-Bu izlenecek yol, formu görüntülemek istediğiniz Windows Presentation Foundation (WPF) denetim türlerini seçmek nasıl gösterir. Projenize dahil tüm WPF denetim türlerini seçebilirsiniz.
-
-Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:
-
-- Projeyi oluşturun.
-
-- WPF denetim türlerini oluşturun.
-
-- WPF denetimleri seçin.
+Bu makalede, formunuzda görüntülemek istediğiniz Windows Presentation Foundation (WPF) denetim türlerini seçme gösterilmektedir. Projenize dahil olan herhangi bir WPF denetim türünü seçebilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
+Bu yönergeyi tamamlamak için Visual Studio gerekir.
 
 ## <a name="create-the-project"></a>Projeyi oluşturma
 
-Visual Studio'yu açın ve Visual Basic veya Visual içinde yeni bir Windows Forms uygulaması projesi oluşturma C# adlı `SelectingWpfContent`.
+Visual Studio 'Yu açın ve Visual Basic veya görsel C# adlı `SelectingWpfContent`yeni bir Windows Forms uygulama projesi oluşturun.
 
 > [!NOTE]
-> WPF içeriği barındırma, yalnızca C# ve Visual Basic projelerinde desteklenir.
+> WPF içeriği barındırırken yalnızca C# ve Visual Basic projeleri desteklenir.
 
-## <a name="create-the-wpf-control-types"></a>WPF denetim türleri oluşturma
+## <a name="create-the-wpf-control-types"></a>WPF denetim türlerini oluşturma
 
-WPF denetim türleri projeye ekledikten sonra bunları farklı barındırabilirsiniz <xref:System.Windows.Forms.Integration.ElementHost> kontrol eder.
+Projeye wpf denetim türlerini ekledikten sonra, bunları farklı <xref:System.Windows.Forms.Integration.ElementHost> denetimlerde barındırabilirsiniz.
 
-## <a name="create-wpf-control-types"></a>WPF denetim türleri oluşturma
+1. Çözüme yeni bir WPF <xref:System.Windows.Controls.UserControl> projesi ekleyin. Denetim türü için varsayılan adı kullanın, `UserControl1.xaml`. Daha fazla bilgi için bkz [. İzlenecek yol: Tasarım zamanında](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)Windows Forms yeni WPF içeriği oluşturuluyor.
 
-1. Yeni bir WPF ekleme <xref:System.Windows.Controls.UserControl> çözüme bir proje. Denetim türü için varsayılan adı kullanacak `UserControl1.xaml`. Daha fazla bilgi için [izlenecek yol: Yeni bir WPF içeriği Windows formlarında tasarım zamanında oluşturma](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
+2. Tasarım görünümü ' de, ' `UserControl1` nin seçili olduğundan emin olun.
 
-2. Tasarım görünümünde emin `UserControl1` seçilir. Daha fazla bilgi için [nasıl yapılır: Seçin ve tasarım yüzeyine öğeleri Taşı](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).
+3. **Özellikler** penceresinde, <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerinin değerini **200**olarak ayarlayın.
 
-3. İçinde **özellikleri** penceresinde değerini ayarlayın <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerine `200`.
+4. Öğesine bir <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> denetim ekleyin <xref:System.Windows.Controls.TextBox.Text%2A>ve özelliğin değerini barındırılan içerik olarak ayarlayın <xref:System.Windows.Controls.UserControl> .
 
-4. Ekleme bir <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> denetimini <xref:System.Windows.Controls.UserControl> ve değerini ayarlama <xref:System.Windows.Controls.TextBox.Text%2A> özelliğini **barındırılan içerik**.
+5. Projeye ikinci bir WPF <xref:System.Windows.Controls.UserControl> ekleyin. Denetim türü için varsayılan adı kullanın, `UserControl2.xaml`.
 
-5. İkinci bir WPF ekleme <xref:System.Windows.Controls.UserControl> projeye. Denetim türü için varsayılan adı kullanacak `UserControl2.xaml`.
+6. **Özellikler** penceresinde, <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerinin değerini **200**olarak ayarlayın.
 
-6. İçinde **özellikleri** penceresinde değerini ayarlayın <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerine `200`.
+7. Öğesine bir <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> denetim ekleyin <xref:System.Windows.Controls.TextBox.Text%2A>ve özelliğin değerini barındırılan içerik 2 olarak ayarlayın <xref:System.Windows.Controls.UserControl> .
 
-7. Ekleme bir <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> denetimini <xref:System.Windows.Controls.UserControl> ve değerini ayarlama <xref:System.Windows.Controls.TextBox.Text%2A> özelliğini **barındırılan içerik 2**.
+   > [!NOTE]
+   > Genel olarak, daha karmaşık WPF içeriğini barındırmalısınız. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> Denetim burada yalnızca tanım amacıyla kullanılır.
 
- **Not** genel olarak, daha karmaşık bir WPF içeriği barındırmamalısınız. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> Denetimi yalnızca yalnızca tanım amaçlıdır için burada kullanılır.
+8. Projeyi oluşturun.
 
-1. Projeyi oluşturun.
+## <a name="select-wpf-controls"></a>WPF denetimlerini seçin
 
-## <a name="select-wpf-controls"></a>WPF denetimleri seçin
+Zaten barındıran içeriği olan bir <xref:System.Windows.Forms.Integration.ElementHost> denetime farklı WPF içeriği atayabilirsiniz.
 
-Farklı bir WPF içeriği için atayabileceğiniz bir <xref:System.Windows.Forms.Integration.ElementHost> içerik barındırma zaten denetimi.
+1. Windows Form Tasarımcısı `Form1` açın.
 
-1. Açık `Form1` Windows Forms Tasarımcısı'nda.
+2. **Araç kutusunda**, form `UserControl1` üzerinde bir örnek `UserControl1` oluşturmak için çift tıklayın.
 
-2. İçinde **araç kutusu**, çift `UserControl1` bir örneğini oluşturmak için `UserControl1` form üzerinde.
+   Bir örneği `UserControl1` adlı <xref:System.Windows.Forms.Integration.ElementHost> Yeni`elementHost1`bir denetimde barındırılır.
 
-     Örneği `UserControl1` yeni bir barındırılan <xref:System.Windows.Forms.Integration.ElementHost> adlı Denetim `elementHost1`.
+3. İçin `elementHost1`akıllı etiket panelinde **barındırılan içerik Seç** açılan listesini açın.
 
-3. Akıllı etiket panelinde `elementHost1`açın **barındırılan içerik Seç** aşağı açılan listesi.
+4. Açılan liste kutusundan **UserControl2** öğesini seçin.
 
-4. Seçin **UserControl 2** aşağı açılan liste kutusundan.
+   Denetim artık `UserControl2` türün bir örneğini barındırır. `elementHost1`
 
-     `elementHost1` Denetimi artık bir örneğini barındıran `UserControl2` türü.
+5. **Özellikler** penceresinde, <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> özelliğinin **UserControl2**olarak ayarlandığını doğrulayın.
 
-5. İçinde **özellikleri** penceresinde onaylayın <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> özelliği **UserControl 2**.
+6. **Araç kutusu**' nda, **WPF birlikte çalışabilirlik** grubunda bir <xref:System.Windows.Forms.Integration.ElementHost> denetimi form üzerine sürükleyin.
 
-6. Gelen **araç kutusu**, **WPF birlikte çalışabilirliği** grubundan bir <xref:System.Windows.Forms.Integration.ElementHost> forma denetim.
+   Yeni denetim `elementHost2`için varsayılan ad.
 
-     Yeni denetim için varsayılan ad `elementHost2`.
+7. İçin `elementHost2`akıllı etiket panelinde **barındırılan içerik Seç** açılan listesini açın.
 
-7. Akıllı etiket panelinde `elementHost2`açın **barındırılan içerik Seç** aşağı açılan listesi.
+8. Açılan listeden **UserControl1** ' i seçin.
 
-8. Seçin **UserControl1** aşağı açılan listeden.
-
-9. `elementHost2` Denetimi artık bir örneğini barındıran `UserControl1` türü.
+9. Denetim artık `UserControl1` türün bir örneğini barındırır. `elementHost2`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

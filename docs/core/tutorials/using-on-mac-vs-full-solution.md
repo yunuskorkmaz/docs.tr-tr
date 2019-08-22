@@ -1,86 +1,86 @@
 ---
 title: Mac için Visual Studio kullanarak macOS’ta eksiksiz bir .NET Core çözümü derleme
-description: Bu konuda, bir yeniden kullanılabilir bir kitaplık ve birim testi içeren bir .NET Core çözümü derleme açıklanmaktadır.
+description: Bu konuda, yeniden kullanılabilir bir kitaplık ve birim testi içeren bir .NET Core çözümü oluşturma işlemi adım adım açıklanmaktadır.
 author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 44ade71a257f5c4fdcb8da9b572adf7133448fb8
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 454f67b39b3558b3f34519bdc018118738b99f6b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300152"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660688"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macOS’ta eksiksiz bir .NET Core çözümü derleme
 
-Mac için Visual Studio, .NET Core uygulamaları geliştirmek için bir tam özellikli tümleşik geliştirme ortamı (IDE) sağlar. Bu konuda, bir yeniden kullanılabilir bir kitaplık ve birim testi içeren bir .NET Core çözümü derleme açıklanmaktadır.
+Mac için Visual Studio .NET Core uygulamaları geliştirmek için tam özellikli bir tümleşik geliştirme ortamı (IDE) sağlar. Bu konuda, yeniden kullanılabilir bir kitaplık ve birim testi içeren bir .NET Core çözümü oluşturma işlemi adım adım açıklanmaktadır.
 
-Bu öğreticide, bir arama sözcüğünü ve bir kullanıcının metin dizesini kabul eder, arama sözcüğünü sınıf kitaplığında bir yöntem kullanılarak dize görünür ve kullanıcıya sonucunu döndürür sayısını sayar bir uygulamanın nasıl oluşturulacağını gösterir. Çözüm ayrıca birim olarak birim testi kavramlarına giriş için sınıf kitaplığı testi içerir. Bu öğreticide eksiksiz bir örnek ile devam etmek isterseniz, indirme [örnek çözüm](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter). Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu öğreticide, bir arama sözcüğünü ve kullanıcıdan bir metin dizesini kabul eden bir uygulama oluşturma, bir sınıf kitaplığındaki yöntemi kullanarak arama sözcüğünün dize içinde görünme sayısını saymakta ve sonucu kullanıcıya döndürmekte olduğunuz gösterilmektedir. Çözüm, birim testi kavramlarına giriş olarak sınıf kitaplığı için birim testi de içerir. Öğreticide bir bütün örnekle devam etmek isterseniz, [örnek çözümü](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter)indirin. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 > [!NOTE]
-> Geri bildiriminiz çok değerli. Mac için Visual Studio geliştirme ekibine geri bildirim sağlayabilirsiniz iki yolu vardır:
-> * Mac için Visual Studio'da **yardımcı** > **sorun bildir** menüsünden veya **sorun bildir** Karşılama ekranında, dosyalama için bir pencere açan bir hata raporu. Geri bildiriminizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/spaces/41/index.html) portalında izleyebilirsiniz.
-> * Bir öneride bulunmak için seçin **yardımcı** > **bir öneride** menüsünden veya **bir öneride** Karşılama ekranında, aldığı, için[ Visual Studio Mac Geliştirici topluluğu Web sayfası için](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
+> Geri bildiriminiz çok değerli. Mac için Visual Studio üzerinde geliştirme ekibine geri bildirimde bulunmak için kullanabileceğiniz iki yol vardır:
+> * Mac için Visual Studio > , menüden**sorun bildir** veya hoş geldiniz ekranından **sorun** bildir ' i seçerek bir hata raporu dosyalamayı sağlayan bir pencere açar. Geri bildiriminizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/spaces/41/index.html) portalında izleyebilirsiniz.
+> * Öneride bulunmak için, menüden**öneriler sağlama** veya hoş geldiniz ekranından [Mac için Visual Studio Geliştirici topluluğu Web sayfasına](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)götüren **bir öneri** sağlama ' yı seçin. > 
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- OpenSSL (.NET Core 1.1 çalıştırıyorsanız): Bkz: [Mac üzerinde .NET Core önkoşulları](../macos-prerequisites.md) konu.
-- [.NET core SDK 1.1 veya üzeri](https://www.microsoft.com/net/core#macos)
+- OpenSSL (.NET Core 1,1 çalıştırıyorsanız): [Mac üzerinde .NET Core Için önkoşulları](../macos-prerequisites.md) konusuna bakın.
+- [.NET Core SDK 1,1 veya üzeri](https://www.microsoft.com/net/core#macos)
 - [Mac için Visual Studio 2017](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
-Önkoşullar hakkında daha fazla bilgi için bkz. [Mac üzerinde .NET Core önkoşulları](../../core/macos-prerequisites.md). Tam Visual Studio 2017 için Mac için bkz: sistem gereksinimleri [Mac ürün ailesi sistem gereksinimleri için Visual Studio 2017](/visualstudio/productinfo/vs2017-system-requirements-mac).
+Önkoşullar hakkında daha fazla bilgi için bkz. [Mac üzerinde .NET Core önkoşulları](../macos-prerequisites.md). Mac için Visual Studio 2017 ' nin tüm sistem gereksinimleri için bkz. [Mac Için Visual studio 2017 ürün ailesi sistem gereksinimleri](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
-## <a name="building-a-library"></a>Bir kitaplığı oluşturma
+## <a name="building-a-library"></a>Kitaplık oluşturma
 
-1. Hoş Geldiniz ekranında seçin **yeni proje**. İçinde **yeni proje** iletişim altında **.NET Core** düğümünü **.NET Standard Kitaplığı** şablonu. Bu .NET Core hedefleyen bir .NET Standard kitaplığı 2.0 sürümünü destekleyen her bir .NET uygulaması oluşturur [.NET Standard](../../standard/net-standard.md). **İleri**’yi seçin.
+1. Hoş Geldiniz ekranında **Yeni proje**' yi seçin. **.NET Core** düğümü altındaki **Yeni proje** iletişim kutusunda **.NET Standard kitaplığı** şablonunu seçin. Bu, .NET Core 'un yanı sıra [.NET Standard](../../standard/net-standard.md)sürüm 2,0 ' i destekleyen diğer .NET uygulamaları hedefleyen bir .NET Standard kitaplığı oluşturur. **İleri**’yi seçin.
 
-   ![Visual Studio için Mac yeni proje iletişim kutusu](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project.png)
+   ![Yeni proje iletişim kutusunu Mac için Visual Studio](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project.png)
 
-1. "TextUtils" ("Metin yardımcı programlar" için bir kısa ad) Projeyi adlandırın ve ' % s'çözüm "WordCounter". Bırakın **dizini çözüm dizini içinde bir proje oluşturma** işaretli. **Oluştur**’u seçin.
+1. Projeyi "TextUtils" ("metin yardımcı programları" için kısa bir ad) ve "WordCounter" çözümünü adlandırın. **Çözüm dizini içinde bir proje dizini oluşturma** onay işaretli kalsın. **Oluştur**’u seçin.
 
-   ![Visual Studio için Mac yeni proje iletişim kutusu seçenekleri](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-options.png)
+   ![Yeni proje iletişim kutusu seçeneklerini Mac için Visual Studio](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-options.png)
 
-1. İçinde **çözüm** kenar genişletin `TextUtils` şablonu tarafından sağlanan sınıf dosyası açığa çıkarmak için düğüm *Class1.cs*. Dosyaya sağ tıklayın, **Yeniden Adlandır** bağlam menüsünden ve dosyayı yeniden adlandır *WordCount.cs*. Dosyayı açıp içeriğini aşağıdaki kodla değiştirin:
+1. **Çözüm** kenar çubuğunda, *Class1.cs*şablonu tarafından `TextUtils` sunulan sınıf dosyasını açığa çıkarmak için düğümünü genişletin. Dosyaya sağ tıklayın, bağlam menüsünden **Yeniden Adlandır** ' ı seçin ve dosyayı *WORDCOUNT.cs*olarak yeniden adlandırın. Dosyasını açın ve içeriğini şu kodla değiştirin:
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils/WordCount.cs)]
 
-1. Üç farklı yöntemden birini kullanarak dosyayı kaydedin: klavye kısayolunu kullanın <kbd> &#8984; </kbd> + <kbd>s</kbd>seçin **dosya**  >  **Kaydet** menüsünden veya sağ tıklama dosyanın sekmesini ve seçim **Kaydet** bağlam menüsünde. Aşağıdaki görüntüde, IDE penceresi gösterilmektedir:
+1. <kbd>&#8984;</kbd> + <kbd>Şu</kbd>üç farklı yöntemden birini kullanarak dosyayı kaydedin: klavye kısayolunu kullanın, menüden **Dosya** > **Kaydet** ' i seçin veya dosyanın sekmesine sağ tıklayıp bağlamsal bilgisayardan **Kaydet** ' i seçin Menü. Aşağıdaki görüntüde IDE penceresi gösterilmektedir:
 
-   ![Visual Studio için sınıf kitaplığı dosyası ve yöntemi ile Mac IDE penceresi](./media/using-on-mac-vs-full-solution/visual-studio-mac-editor.png)
+   ![Sınıf kitaplığı dosyası ve yöntemiyle IDE penceresi Mac için Visual Studio](./media/using-on-mac-vs-full-solution/visual-studio-mac-editor.png)
 
-1. Seçin **hataları** IDE penceresi açmak için sayfanın alt kısmında kenar **hataları** paneli. Seçin **derleme çıkışı** düğmesi.
+1. **Hatalar** panelini açmak için IDE penceresinin altındaki kenar boşluğunda bulunan **hataları** seçin. **Derleme çıkışı** düğmesini seçin.
 
-   ![Visual Studio Mac IDE hataları düğmeyi gösteren alt kenar boşluğu](./media/using-on-mac-vs-full-solution/visual-studio-mac-error-button.png)
+   ![Visual Studio Mac IDE 'nin hatalar düğmesini gösteren alt kenar boşluğu](./media/using-on-mac-vs-full-solution/visual-studio-mac-error-button.png)
 
-1. Seçin **derleme** > **yapı tüm** menüsünde.
+1. Menüden Build**Build All** öğesini seçin. > 
 
-   Çözüm oluşturur. Derleme çıkışı paneline, yapının başarılı olduğunu gösterir.
+   Çözüm oluşturulur. Yapı çıktı paneli, yapılandırmanın başarılı olduğunu gösterir.
 
-   ![Hata panelinin derleme başarılı iletisi ile Visual Studio Mac derleme çıkış bölmesi](./media/using-on-mac-vs-full-solution/visual-studio-mac-build-panel.png)
+   ![Derleme başarılı iletisi ile hatalar panelinin Visual Studio Mac derleme çıkış bölmesi](./media/using-on-mac-vs-full-solution/visual-studio-mac-build-panel.png)
 
 ## <a name="creating-a-test-project"></a>Test projesi oluşturma
 
-Birim testleri, geliştirme sırasında test etme ve yayımlama otomatikleştirilmiş yazılım sağlar. Bu öğreticide kullandığınız test çerçevesi [xUnit (2.2.0 sürümü veya üzeri)](https://xunit.github.io/), yüklendiği otomatik olarak aşağıdaki adımları çözümde xUnit test projesi eklendiğinde:
+Birim testleri geliştirme ve yayımlama sırasında otomatik yazılım testi sağlar. Bu öğreticide kullandığınız test çerçevesi, xUnit test projesi aşağıdaki adımlarda çözüme eklendiğinde otomatik olarak yüklenen [xUnit 'dir (sürüm 2.2.0 veya üzeri)](https://xunit.github.io/).
 
-1. İçinde **çözüm** kenar sağ `WordCounter` çözüm ve select **Ekle** > **Yeni Proje Ekle**.
+1. **Çözüm** kenar `WordCounter` çubuğunda çözüme sağ tıklayın ve Ekle**Yeni proje** **Ekle** > ' yi seçin.
 
-1. İçinde **yeni proje** iletişim kutusunda **testleri** gelen **.NET Core** düğümü. Seçin **xUnit Test projesi** ardından **sonraki**.
+1. **Yeni proje** iletişim kutusunda, **.NET Core** düğümünden **testler** ' i seçin. Ardından **İleri**' ye tıklayarak **xUnit test projesini** seçin.
 
-   ![Visual Studio Mac yeni proje iletişim xUnit test projesi oluşturma](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-project.png)
+   ![Visual Studio Mac yeni proje iletişim kutusu xUnit test projesi oluşturma](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-project.png)
 
-1. Yeni projeyi "TestLibrary" olarak adlandırın ve seçin **Oluştur**.
+1. "TestLibrary" adlı yeni projeyi adlandırın ve **Oluştur**' u seçin.
 
-   ![Proje adı sağlayarak visual Studio Mac yeni proje iletişim kutusu](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-name.png)
+   ![Proje adı sağlayan Visual Studio Mac yeni proje iletişim kutusu](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-name.png)
 
-1. Çalışmak test kitaplığının sırayla `WordCount` sınıfı, bir başvuru ekleyin `TextUtils` proje. İçinde **çözüm** kenar sağ **bağımlılıkları** altında **TestLibrary**. Seçin **başvuruları Düzenle** bağlam menüsünden.
+1. Test kitaplığının `WordCount` sınıfla çalışması için `TextUtils` projeye bir başvuru ekleyin. **Çözüm** kenar çubuğunda, **Testlibrary**altında **Bağımlılıklar** ' a sağ tıklayın. Bağlam menüsünden **başvuruları Düzenle** ' yi seçin.
 
-1. İçinde **başvuruları Düzenle** iletişim kutusunda **TextUtils** projesine **projeleri** sekmesi. **Tamam**’ı seçin.
+1. **Başvuruları Düzenle** iletişim kutusunda, **Projeler** sekmesinde **textutils** projesini seçin. **Tamam**’ı seçin.
 
    ![Visual Studio Mac başvuruları Düzenle iletişim kutusu](./media/using-on-mac-vs-full-solution/visual-studio-mac-edit-references.png)
 
-1. İçinde **TestLibrary** project, yeniden adlandırma *UnitTest1.cs* dosyasını *TextUtilsTests.cs*.
+1. **Testlibrary** projesinde, *UnitTest1.cs* dosyasını *TextUtilsTests.cs*olarak yeniden adlandırın.
 
-1. Dosyasını açın ve kodu aşağıdakiyle değiştirin:
+1. Dosyasını açın ve kodu aşağıdaki kodla değiştirin:
 
    ```csharp
    using Xunit;
@@ -102,33 +102,33 @@ Birim testleri, geliştirme sırasında test etme ve yayımlama otomatikleştiri
    }
    ```
 
-   Aşağıdaki görüntüde, yerinde IDE ile birim testi kodu gösterir. Dikkat `Assert.NotEqual` deyimi.
+   Aşağıdaki görüntüde birim test kodu yerine IDE gösterilmektedir. `Assert.NotEqual` İfadeye dikkat edin.
 
-   ![Mac ilk birim için Visual Studio IDE ana pencerede test](./media/using-on-mac-vs-full-solution/visual-studio-mac-assert-test.png)
+   ![IDE ana penceresinde Ilk birim testini Mac için Visual Studio](./media/using-on-mac-vs-full-solution/visual-studio-mac-assert-test.png)
 
-   Yeni bir test, test mantığının doğru olup olmadığını onaylamak bir kez başarısız hale getirmek önemlidir. Yöntem adı "Jack" (büyük harf) ve "Jack" ve "jack" olan bir dize (büyük ve küçük harf) geçirir. Varsa `GetWordCount` yöntemi düzgün çalıştığından, bir arama sözcüğünü iki örnek sayımı döndürür. Bu test amaç başarısız için ilk arama sözcüğünü "Jack" iki örneği tarafından döndürülen olmayan test sunduğundan uygulamanız `GetWordCount` yöntemi. Test amaç başarısız için sonraki adıma devam edin.
+   Test mantığının doğru olduğundan emin olmak için yeni bir testin başarısız olması önemlidir. Yöntemi "jak" (büyük harf) ve "jak" ve "jak" (büyük ve küçük harf) ile bir dize ile geçer. `GetWordCount` Yöntem düzgün çalışıyorsa, Arama sözcüğünün iki örneğinin sayısını döndürür. Bu testi amacına uygun hale getirmek için ilk olarak, "jak" Arama sözcüğünün iki örneğinin `GetWordCount` yöntem tarafından döndürülmeyeceğini belirten testi uygulıyorsunuz. Testi amaç üzerinde başarısız kılmak için sonraki adıma geçin.
 
-1. Açık **birim testleri** ekranın sağ tarafındaki paneli.
+1. Ekranın sağ tarafındaki **birim testleri** panelini açın.
 
-   ![Visual Studio için birim testleri Mac paneli](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-panel.png)
+   ![Mac için Visual Studio birim testleri paneli](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-panel.png)
 
-1. Tıklayın **Dock** simgesini panel açık tutun.
+1. Paneli açık tutmak için **Yerleştir** simgesine tıklayın.
 
-   ![Visual Studio için birim testleri Mac paneli sabitlemek simgesi](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-dock-icon.png)
+   ![Mac için Visual Studio birim testleri bölmesi yerleştirme simgesi](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-dock-icon.png)
 
-1. Tıklayın **tümünü Çalıştır** düğmesi.
+1. **Tümünü Çalıştır** düğmesine tıklayın.
 
-   Doğru sonuç, testi başarısız. Bu iki test yöntemi onaylar örneklerini `inputString`, olmayan "Jack" döndürülen ' % s'dizesinden "Jack jack sağlanan" `GetWordCount` yöntemi. Sözcük büyük/küçük harf out factored bu yana `GetWordCount` yöntemi, iki örneği döndürülür. Onaylama işlemi, 2 *eşit değildir* 2 başarısız olur. Bu doğru sonuç elde edilir ve bizim test mantığı iyidir.
+   Test başarısız olur ve doğru sonuç olur. Test yöntemi, "jak" öğesinin `inputString`iki örneğinin `GetWordCount` metoduna verilen "jak jakı" dizesinden döndürülmeyeceğini onaylar. Sözcük büyük harfleri `GetWordCount` yöntemde ayrı olduğundan, iki örnek döndürülür. 2 ' nin 2 ' *ye eşit olmadığı* onay başarısız olur. Bu doğru sonucudur ve testimizin mantığı iyidir.
 
-   ![Visual Studio Mac test hatası görüntülemek için](./media/using-on-mac-vs-full-solution/visual-studio-for-mac-unit-test-failure.png)
+   ![Test hatası görüntüleme Mac için Visual Studio](./media/using-on-mac-vs-full-solution/visual-studio-for-mac-unit-test-failure.png)
 
-1. Değiştirme `IgnoreCasing` test yöntemi değiştirerek `Assert.NotEqual` için `Assert.Equal`. Klavye kısayolunu kullanarak dosyayı kaydedin <kbd> &#8984; </kbd> + <kbd>s</kbd>, **dosya** > **Kaydet** menüsünden veya dosyanın sekmesinde sağ tıklayıp **Kaydet** bağlam menüsünden.
+1. `Assert.NotEqual` Öğesini olarak `IgnoreCasing` değiştirerek`Assert.Equal`test yöntemini değiştirin. Klavye <kbd>&#8984;</kbd> +kısayolunu kullanarak dosyayı kaydedin, menüden **Dosya** > **Kaydet** ' i veya dosyanın sekmesine sağ tıklayıp bağlam menüsünden **Kaydet** ' i seçin. <kbd></kbd>
 
-   Beklediğiniz `searchWord` "Jack" döndürür iki örneği ile `inputString` "Jack jack" geçirildi `GetWordCount`. Tıklayarak testi yeniden çalıştırın **çalıştırmak testlerini** düğmesine **birim testleri** paneli veya **yeniden çalıştırılan testleri** düğmesine **Test sonuçları** paneli ekranın alt kısmında. Test başarılı olur. "(Büyük/küçük harf yoksayar) Jack jack" dizesinde "Jack" iki örneği vardır ve test olaydır `true`.
+   `searchWord` "Jak" ın " `GetWordCount`jak jakı" ile birlikte `inputString` iki örnek döndürdüğünü düşünüyorsunuz. Ekranın alt kısmındaki **test sonuçları** panelinde, **birim testleri** panelinde **Testleri Çalıştır** düğmesine veya **Testleri** yeniden çalıştır düğmesine tıklayarak testi yeniden çalıştırın. Test başarılı olur. "Jak jakı" dizesinde iki "jak" örneği bulunur (büyük `true`/küçük harf yok sayılıyor) ve test onayı.
 
-   ![Test geçişi görünen Mac için Visual Studio](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
+   ![Test geçiş görüntüsünü Mac için Visual Studio](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
 
-1. Tek tek dönüş değerleri ile test etme bir `Fact` birim testi ile neler yapabileceğinizi sadece başlangıç. Başka bir güçlü teknik değerlerden tek seferde kullanarak test etmenize olanak bir `Theory`. Aşağıdaki yöntemi ekleyin, `TextUtils_GetWordCountShould` sınıfı. Bu yöntem ekledikten sonra sınıfında iki yöntem vardır:
+1. Tek tek dönüş değerlerini bir `Fact` ile test etmek yalnızca birim testinde yapabileceklerinizin başlangıcıdır. Başka bir güçlü teknik, bir `Theory`kez kullanarak birkaç değeri test etmenizi sağlar. Sınıfınıza `TextUtils_GetWordCountShould` aşağıdaki yöntemi ekleyin. Bu yöntemi ekledikten sonra sınıfında iki yöntem vardır:
 
    ```csharp
    [Theory]
@@ -144,52 +144,52 @@ Birim testleri, geliştirme sırasında test etme ve yayımlama otomatikleştiri
    }
    ```
 
-   `CountInstancesCorrectly` Denetleyen `GetWordCount` yöntemi doğru sayar. `InlineData` Sayısı, bir arama sözcüğünü ve denetlemek için bir Giriş dizesinin sağlar. Test yöntemi, her veri satırı için bir kez çalışır. Bir kez daha, bir hatanın ilk kullanarak sunduğundan olduğunu unutmayın. `Assert.NotEqual`, hatta veri sayılarını doğru olduğunu ve değerleri tarafından döndürülen sayıları eşleştiğini bildiğinizde `GetWordCount` yöntemi. İlk zaman kaybı gibi test amaç başarısız adımı gerçekleştiriliyor görünebilir, ancak mantıksal test başarısız olarak denetleme ilk testlerinizin mantığı üzerinde önemli bir denetleyin. Başarısız beklediğiniz geçirmeden bir test yöntemi arasında geldiğinizde, test mantığı bir hata buldunuz. Bu, bir test yöntemi her oluşturduğunuzda, bu adımı gerçekleştirmek için gereken çabayı olur.
+   , `CountInstancesCorrectly` `GetWordCount` Yöntemin doğru şekilde sayımlarını denetler. Bir sayı, bir arama sözcüğü ve denetlenecek bir giriş dizesi sağlar.`InlineData` Test yöntemi her veri satırı için bir kez çalışır. Veri içindeki sayımların doğru olduğunu ve değerlerin, `Assert.NotEqual` `GetWordCount` yöntemin döndürdüğü sayılarla eşleştiğini bildiğiniz durumlarda bile, önce bir hatayı bir kez daha deneyin. Başarısız olma adımını gerçekleştirmek, ilk başta bir zaman kaybı gibi görünebilir, ancak testin mantığını başarısız olarak denetlemek öncelikle testlerin mantığına ilişkin önemli bir denetim olur. Başarısız olması beklendiğinde geçen bir test yöntemi boyunca aldığınızda testin mantığındaki bir hata buldunuz. Her test yöntemi oluşturduğunuzda bu adımı ele alma çabasına değecektir.
 
-1. Dosyayı kaydedin ve testleri yeniden çalıştırın. Büyük/küçük harf test geçer, ancak üç sayısı testler başarısız. Olmasını beklediğiniz tam olarak budur.
+1. Dosyayı kaydedin ve testleri yeniden çalıştırın. Büyük/küçük harf testi geçer, ancak üç sayma testi başarısız olur. Bu, tam olarak gerçekleşmesini beklediğiniz şeydir.
 
-   ![Mac için Visual Studio test hatası bekleniyor](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-failure.png)
+   ![Beklenen test hatası Mac için Visual Studio](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-failure.png)
 
-1. Değiştirme `CountInstancesCorrectly` test yöntemi değiştirerek `Assert.NotEqual` için `Assert.Equal`. Dosyayı kaydedin. Testleri yeniden çalıştırın. Tüm testler başarılı.
+1. `Assert.NotEqual` Öğesini olarak `CountInstancesCorrectly` değiştirerek`Assert.Equal`test yöntemini değiştirin. Dosyayı kaydedin. Testleri yeniden çalıştırın. Tüm testler geçer.
 
-   ![Mac için Visual Studio test geçiş bekleniyor](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
+   ![Beklenen test geçişi Mac için Visual Studio](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
 
-## <a name="adding-a-console-app"></a>Bir konsol uygulaması ekleme
+## <a name="adding-a-console-app"></a>Konsol uygulaması ekleme
 
-1. İçinde **çözüm** kenar sağ `WordCounter` çözüm. Yeni bir **konsol uygulaması** şablonu seçerek proje **.NET Core** > **uygulama** şablonları. **İleri**’yi seçin. Projeyi adlandırın **WordCounterApp**. Seçin **Oluştur** çözümde proje oluşturmaktır.
+1. **Çözüm** kenar çubuğunda `WordCounter` çözüme sağ tıklayın. **.NET Core** > **uygulama** şablonlarından şablonu seçerek yeni bir **konsol uygulama** projesi ekleyin. **İleri**’yi seçin. Projeyi **Wordcounterapp**olarak adlandırın. Projeyi çözümde oluşturmak için **Oluştur** ' u seçin.
 
-1. İçinde **çözümleri** kenar sağ **bağımlılıkları** yeni düğüm **WordCounterApp** proje. İçinde **başvuruları Düzenle** iletişim kutusunda, onay **TextUtils** seçip **Tamam**.
+1. **Çözümler** kenar çubuğunda, yeni **wordcounterapp** projesinin **Bağımlılıklar** düğümüne sağ tıklayın. **Başvuruları Düzenle** iletişim kutusunda, **textutils** ' i denetleyip **Tamam**' ı seçin.
 
-1. Açık *Program.cs* dosya. Kodu aşağıdakiyle değiştirin:
+1. *Program.cs* dosyasını açın. Kodu aşağıdaki kodla değiştirin:
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
 
-1. IDE yerine bir konsol penceresi uygulamayı çalıştırmak için sağ `WordCounterApp` proje seçin **seçenekleri**açın **varsayılan** düğümünde **yapılandırmaları**. İçin kutuyu **harici konsol üzerinde Çalıştır**. Bırakın **konsol çıkışını duraklatmak** teslim seçeneği. Bu ayar için giriş türü, konsol penceresinde üretme uygulama neden `Console.ReadLine` deyimleri. IDE içinde çalıştırılacak uygulamanın değiştirmeden bırakırsanız, yalnızca çıktısını görebilirsiniz `Console.WriteLine` deyimleri. `Console.ReadLine` deyimleri, IDE'nin içinde çalışmıyor **uygulama çıktısı** paneli.
+1. Uygulamayı IDE yerine bir konsol penceresinde çalıştırmak `WordCounterApp` için projeye sağ tıklayın, **Seçenekler**' i seçin ve **varsayılan** düğümü **yapılandırma**bölümünde açın. **Dış konsolda Çalıştır**kutusunu işaretleyin. **Duraklatma konsolu çıkış** seçeneğini işaretli bırakın. Bu ayar, `Console.ReadLine` deyimler için giriş yazabileceğiniz şekilde uygulamanın bir konsol penceresinde oluşturulmasına neden olur. Uygulamayı IDE 'de çalıştırmak için bırakırsanız, yalnızca `Console.WriteLine` deyimlerin çıkışını görebilirsiniz. `Console.ReadLine`deyimler IDE 'nin **uygulama çıktısı** panelinde çalışmaz.
 
-   ![Proje Seçenekleri penceresini Mac için Visual Studio](./media/using-on-mac-vs-full-solution/visual-studio-mac-project-options.png)
+   ![Mac için Visual Studio projesi seçenekleri penceresi](./media/using-on-mac-vs-full-solution/visual-studio-mac-project-options.png)
 
-1. Testleri Mac için Visual Studio'nun geçerli sürümü çalışamadığı çözümü çalıştırdığınızda, konsol uygulaması doğrudan çalıştırın. Sağ `WordCounterApp` seçin ve proje **öğesi çalıştırma** bağlam menüsünden. Uygulama ile Oynat düğmesini çalıştırmayı denerseniz, çalıştırmak test Çalıştırıcısı ve uygulamanın başarısız. Bu sorunla ilgili iş durumu hakkında daha fazla bilgi için bkz. [xunit/xamarinstudio.xunit (#60)](https://github.com/xunit/xamarinstudio.xunit/issues/60). Uygulamayı çalıştırdığınızda, konsol penceresinde istemleri giriş dizesini ve arama sözcüğünü için değerleri sağlayın. Uygulama arama sözcüğünü dizesinde görüntülenen sayısını gösterir.
+1. Çözüm çalıştırıldığında Mac için Visual Studio geçerli sürümü testleri çalıştıramadığından, konsol uygulamasını doğrudan çalıştırırsınız. `WordCounterApp` Projeye sağ tıklayın ve bağlam menüsünden **öğeyi Çalıştır** ' ı seçin. Uygulamayı Play düğmesiyle çalıştırmayı denerseniz, Test Çalıştırıcısı ve uygulaması çalıştırılamaz. Bu sorunla ilgili işin durumu hakkında daha fazla bilgi için bkz. [xUnit/xamarinstudio. xUnit (#60)](https://github.com/xunit/xamarinstudio.xunit/issues/60). Uygulamayı çalıştırdığınızda, konsol penceresindeki istemlerin sözcük ve giriş dizesi için değerler sağlayın. Uygulama, Arama sözcüğünün dizede kaç kez göründüğünü gösterir.
 
-   ![Visual Studio için uygulamanızın gösteren Mac konsol penceresi](./media/using-on-mac-vs-full-solution/visual-studio-mac-console-window.png)
+   ![Uygulamanızın çalıştığını gösteren Mac için Visual Studio konsol penceresi](./media/using-on-mac-vs-full-solution/visual-studio-mac-console-window.png)
 
-1. Araştırılacak son özelliğini Mac için Visual Studio ile hata Bir kesme noktası ayarlamak `Console.WriteLine` deyimi: 23 satırının sol kenar boşluğunda seçin ve görünen kod satırının yanında kırmızı bir daire görürsünüz. Alternatif olarak, herhangi bir yeri seçin ve kod satırında seçin **çalıştırma** > **iki durumlu kesme noktası** menüsünde.
+1. Araştırılacak son özellik Mac için Visual Studio hata ayıklaması yapılır. `Console.WriteLine` İfadede bir kesme noktası ayarlayın: 23. satırın sol kenar boşluğunda seçim yapın ve kod satırının yanında kırmızı bir daire görünür. Alternatif olarak, kod satırında herhangi bir yeri seçin ve menüden**geçiş kesme noktasını** **Çalıştır** > ' ı seçin.
 
-   ![Visual Studio için Mac kesme noktası ayarlayın](./media/using-on-mac-vs-full-solution/visual-studio-mac-breakpoint.png)
+   ![Mac için Visual Studio kesme noktası kümesi](./media/using-on-mac-vs-full-solution/visual-studio-mac-breakpoint.png)
 
-1. Sağ `WordCounterApp` proje. Seçin **hata ayıklamayı Başlat öğesi** bağlam menüsünden. Uygulama çalıştırıldığında, arama sözcük "cat" ve "cat köpek aranır; cat kaçış" girin. arama dizesi için. Zaman `Console.WriteLine` deyimine ulaşıldığında, deyim yürütülmeden önce programın yürütülmesini durdurur. İçinde **Yereller** sekmesinde, gördüğünüz `searchWord`, `inputString`, `wordCount`, ve `pluralChar` değerleri.
+1. `WordCounterApp` Projeye sağ tıklayın. Bağlam menüsünden **hata ayıklamayı Başlat öğesini** seçin. Uygulama çalıştığında, "Cat" sözcüğünü ve "kedi olan köpek, ancak Cat kaçışın." ifadesini girin. Aranacak dizenin. `Console.WriteLine` İfadeye ulaşıldığında, deyimin yürütülmesi için program yürütme durur. **Yereller** sekmesinde `searchWord`,,, ve `inputString` `pluralChar` değerlerini görebilirsiniz `wordCount`.
 
-   ![Visual Studio Mac hata ayıklayıcı programın yürütülmesi için durduruldu](./media/using-on-mac-vs-full-solution/visual-studio-mac-debugger.png)
+   ![Mac için Visual Studio hata ayıklayıcı program yürütmesi durdu](./media/using-on-mac-vs-full-solution/visual-studio-mac-debugger.png)
 
-1. İçinde **hemen** bölmesinde, türü "wordCount 999; =" ve Enter tuşuna basın. Bu 999 arasında anlamsız değeri atar `wordCount` değişkeni gösteren, hata ayıklama sırasında değişken değerlerini değiştirebilirsiniz.
+1. **Komut** bölmesinde, "WORDCOUNT = 999;" yazın ve ENTER tuşuna basın. Bu, `wordCount` hata ayıklama sırasında değişken değerlerini değiştirmenizi gösteren, değişkenine 999 olmayan bir değer atar.
 
-   ![Hemen penceresinde değiştirerek Mac için Visual Studio](./media/using-on-mac-vs-full-solution/visual-studio-mac-immediate-window.png)
+   ![Mac için Visual Studio komut penceresindeki değerleri değiştirme](./media/using-on-mac-vs-full-solution/visual-studio-mac-immediate-window.png)
 
-1. Araç çubuğunda *devam* oku. Konsol penceresinde çıktıyı inceleyin. Bu, uygulamanın hata ayıkladığınız zaman 999 yanlış değerini bildirir.
+1. Araç çubuğunda *devam* okuna tıklayın. Konsol penceresinde çıkışa bakın. Uygulamada hata ayıklarken ayarladığınız 999 yanlış değerini raporlar.
 
-   ![Mac için Visual Studio araç çubuğunda düğme devam edin](./media/using-on-mac-vs-full-solution/visual-studio-mac-toolbar.png)
+   ![Araç çubuğundaki devam Mac için Visual Studio düğmesi](./media/using-on-mac-vs-full-solution/visual-studio-mac-toolbar.png)
 
-   ![Konsol penceresi çıktısı Mac için Visual Studio](./media/using-on-mac-vs-full-solution/visual-studio-mac-output.png)
+   ![Mac için Visual Studio konsol penceresi çıkışı](./media/using-on-mac-vs-full-solution/visual-studio-mac-output.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sürüm Notları Mac için Visual Studio 2017](/visualstudio/releasenotes/vs2017-mac-relnotes)
+- [Mac için Visual Studio 2017 sürüm notları](/visualstudio/releasenotes/vs2017-mac-relnotes)

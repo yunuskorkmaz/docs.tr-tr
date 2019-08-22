@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6191ee2169a85725f0367763874e60c0ceb1d7a4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2715548a40579375cebbdd5fb9003738a42ff714
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489436"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663662"
 ---
-# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > öğesi
-Ortak dil çalışma zamanı erişim ihlalleri ve diğer bozuk durum özel durumları yakalamak yönetilen kod izin verip vermediğini belirtir.  
+# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<Legacyboztedstateexceptionspolicy > öğesi
+Ortak dil çalışma zamanının yönetilen kodun erişim ihlallerini ve diğer bozuk durum özel durumlarını yakalayıp belirlemesine izin verip içermediğini belirtir.  
   
  \<Yapılandırma >  
 \<çalışma zamanı >  
-\<legacyCorruptedStateExceptionsPolicy >  
+\<Legacybozulmuş Tedstateexceptionspolicy >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,14 +34,14 @@ Ortak dil çalışma zamanı erişim ihlalleri ve diğer bozuk durum özel durum
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Gerekli öznitelik.<br /><br /> Uygulama yakalar belirtir erişim ihlalleri gibi özel durum hataları durumu bozan.|  
+|`enabled`|Gerekli öznitelik.<br /><br /> Uygulamanın erişim ihlalleri gibi bozulmaları durum özel durum başarısızlıklarını yakalayacaksınız.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|Uygulama değil yakalar erişim ihlalleri gibi özel durum hataları durumu bozan. Bu varsayılandır.|  
-|`true`|Uygulama yakalar erişim ihlalleri gibi özel durum hataları durumu bozan.|  
+|`false`|Uygulama, erişim ihlalleri gibi bozulmayan durum özel durum başarısızlıklarını yakalayamaz. Bu varsayılandır.|  
+|`true`|Uygulama, erişim ihlalleri gibi bozulmaları durum özel durum başarısızlıklarını yakalar.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -54,20 +54,20 @@ Ortak dil çalışma zamanı erişim ihlalleri ve diğer bozuk durum özel durum
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework sürüm 3.5 ve önceki sürümlerinde, ortak dil çalışma zamanı tarafından bozuk işlem durumları ortaya çıktı özel durumları yakalamak yönetilen kod izin. Erişim ihlali, bu özel durumun türünü örneğidir.  
+ .NET Framework sürüm 3,5 ve önceki sürümlerde, ortak dil çalışma zamanının bozuk işlem durumları tarafından oluşturulan özel durumları yakalayabileceği yönetilen koda izin verilir. Erişim ihlali, bu tür bir özel durum örneğidir.  
   
- .NET Framework 4 ile başlayarak, yönetilen kod artık bu tür özel durumları yakalayan `catch` engeller. Ancak, bu değişikliği geçersiz kılar ve iki yolla bozuk durum özel durumların işlenmesiyle Koru:  
+ .NET Framework 4 ' te başlayarak, yönetilen kod artık bloklardaki `catch` bu tür özel durumları yakalamayacaktır. Ancak, bu değişikliği geçersiz kılabilir ve bozulmuş durum istisnalarını iki şekilde işleme devam edebilirsiniz:  
   
-- Ayarlama `<legacyCorruptedStateExceptionsPolicy>` öğenin `enabled` özniteliğini `true`. Bu yapılandırma ayarının uygulanan processwide olduğu ve tüm yöntemleri etkiler.  
+- Öğenin özniteliğini olarak`true`ayarlayın. `enabled` `<legacyCorruptedStateExceptionsPolicy>` Bu yapılandırma ayarı, processwide uygulanır ve tüm yöntemleri etkiler.  
   
  -veya-  
   
-- Uygulama <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> özniteliğini özel durumları içeren yöntemine `catch` blok.  
+- Özel durum`catch` bloğunu içeren yönteme özniteliğiniuygulayın.<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>  
   
- Bu yapılandırma öğesi, yalnızca .NET Framework 4'teki kullanılabilir ve üzerinde desteklenir.  
+ Bu yapılandırma öğesi yalnızca .NET Framework 4 ve üzeri sürümlerde kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, uygulama .NET Framework 4 önceki davranış geri dönmek ve tüm bozulan durumu özel durum hatalarını yakalar, belirtmek gösterilmektedir.  
+ Aşağıdaki örnek, uygulamanın .NET Framework 4 ' den önceki davranışa ne şekilde dönmesi gerektiğini belirtir ve tüm bozulmalı durum özel durum başarısızlıklarını yakalar.  
   
 ```xml  
 <configuration>  
@@ -80,5 +80,5 @@ Ortak dil çalışma zamanı erişim ihlalleri ve diğer bozuk durum özel durum
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)

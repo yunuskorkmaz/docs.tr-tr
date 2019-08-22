@@ -12,20 +12,20 @@ helpviewer_keywords:
 - properties [WPF], restoring
 - application-scope properties [WPF], restoring
 ms.assetid: 55d5904a-f444-4eb5-abd3-6bc74dd14226
-ms.openlocfilehash: 99b04060d4e7c14313655010dc4fbd5ce1c90487
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9c2dda2745e7528902b6b1c4f46d17264d1a8d8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788680"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666721"
 ---
 # <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a>Nasıl yapılır: Uygulama Oturumları Arasında Uygulama Kapsamı Özelliklerini Koruma ve Geri Yükleme
-Bu örnek, bir uygulama kapatıldığında ve geri yüklemek için bir uygulamanın sonraki açılışında uygulama kapsamı özelliklerini nasıl uygulama kapsamı özelliklerini kalıcı olarak gösterilmektedir.  
+Bu örnek, bir uygulama kapandığında uygulama kapsamı özelliklerinin nasıl devam ettirilemeyeceğini ve bir uygulamanın bir sonraki başlatıldığında uygulama kapsamı özelliklerinin nasıl geri yükleneceğini gösterir.  
   
 ## <a name="example"></a>Örnek  
- Uygulama için uygulama kapsamı özelliklerini devam ediyorsa ve yalıtılmış depolama alanından, geri yükler. Yalıtılmış Depolama güvenli bir şekilde dosya erişim izni olmadan uygulamaları tarafından kullanılabilecek bir korumalı depolama alanıdır.  *App.xaml* dosyası tanımlar `App_Startup` yöntemi için bir işleyici olarak <xref:System.Windows.Application.Startup?displayProperty=nameWithType> olay ve `App_Exit` yöntemi için bir işleyici olarak <xref:System.Windows.Application.Exit?displayProperty=nameWithType> vurgulanan satırları ilk örnekte gösterildiği gibi olay. İkinci örnek bir bölümü gösterilmektedir *App.xaml.cs* ve *App.xaml.vb* kodunu vurgular dosyaları `App_Startup` uygulama kapsamı özelliklerini ve yükleryöntemi`App_Exit` yöntemi uygulama kapsamı özelliklerini kaydeder.
+ Uygulama, uygulama kapsamı özelliklerini için devam ettirir ve yalıtılmış depolama alanından geri yükler. Yalıtılmış depolama, dosya erişim izni olmayan uygulamalar tarafından güvenli bir şekilde kullanılabilecek, korumalı bir depolama alanıdır.  *App. xaml* dosyası, ilk Örneğin `App_Startup` vurgulanan satırlarında gösterildiği gibi, yöntemi <xref:System.Windows.Application.Startup?displayProperty=nameWithType> olay işleyicisi olarak ve `App_Exit` <xref:System.Windows.Application.Exit?displayProperty=nameWithType> olay işleyicisi olarak yöntemini tanımlar. İkinci örnek, *app.xaml.cs* ve *app. xaml. vb* dosyalarının, uygulama kapsamı özelliklerini geri yükleyen yöntemi ve `App_Startup` `App_Exit` uygulama kapsamını kaydeden yöntemini vurgulayan bir bölümünü gösterir özelliklerinin.
 
  [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml?highlight=1-7)]
   
  [!code-csharp[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs?highlight=17-55)]
- [!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistrestoreappscopepropertiescodebehind1)]
+ [!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb?highlight=14-45)]

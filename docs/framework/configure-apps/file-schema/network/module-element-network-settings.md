@@ -8,15 +8,15 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 0d108f2350d82666e3dc24f0f6854fe64ea4755f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 851a63b41dfb5d3b4058e1373148f48d47d9d6ae
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674498"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664076"
 ---
-# <a name="module-element-network-settings"></a>\<Modül > öğesi (ağ ayarları)
-Yeni proxy modülü uygulamayı ekler.  
+# <a name="module-element-network-settings"></a>\<Module > öğesi (ağ ayarları)
+Uygulamaya yeni bir proxy modülü ekler.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -38,7 +38,7 @@ Yeni proxy modülü uygulamayı ekler.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`type`|Tam nitelikli tür adı (belirttiği <xref:System.Type.FullName%2A> özelliği) ve derleme adı (belirttiği <xref:System.Reflection.Assembly.FullName%2A> özelliği) proxy uygulayan bir virgülle ayrılmış.|  
+|`type`|Proxy 'yi uygulayan tam tür adı ( <xref:System.Type.FullName%2A> özelliği ile gösterilir) ve derleme adı ( <xref:System.Reflection.Assembly.FullName%2A> özelliği ile gösterilir).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -47,15 +47,15 @@ Yeni proxy modülü uygulamayı ekler.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `module` Öğesi kaydeder uygulayan proxy sınıflar <xref:System.Net.IWebProxy> arabirimi. Proxy sınıfı kaydettikten sonra `module` desteklenen proxy üzerinden bilgi istemek için kullanılabilir.  
+ Öğesi, <xref:System.Net.IWebProxy> arabirimini uygulayan proxy sınıflarını kaydeder. `module` Proxy sınıfına kaydolduktan sonra, `module` desteklenen proxy aracılığıyla bilgi istemek için kullanılabilir.  
   
- Değeri `type` modülünün sınıfı adı ve ' % s'adı, karşılık gelen dinamik bağlantı kitaplığı (DLL), öznitelik olmalıdır.  
+ `type` Özniteliğin değeri, modülün sınıf adı ve karşılık gelen dinamik bağlantı kitaplığının (dll) adı olmalıdır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek bir özel proxy sınıfı kaydeder.  
@@ -75,4 +75,4 @@ Yeni proxy modülü uygulamayı ekler.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.IWebProxy?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

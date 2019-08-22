@@ -8,15 +8,15 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 30c5cd07c92a8fc3c340cab0ff9ae74e940c0c12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05aac6c1ed3c04bce263a45cafdb9bec906bd75b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705247"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664058"
 ---
 # <a name="performancecounter-element-network-settings"></a>\<performanceCounter > öğesi (ağ ayarları)
-Etkinleştirir veya ağ performans sayaçları devre dışı bırakır.  
+Ağ performans sayaçlarını etkinleştirilir veya devre dışı bırakır.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -38,7 +38,7 @@ Etkinleştirir veya ağ performans sayaçları devre dışı bırakır.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Ağ performans sayaçlarının etkin olup olmadığını belirtir. Varsayılan değer `false` şeklindedir.|  
+|`enabled`|Ağ performans sayaçlarının etkinleştirilip etkinleştirilmeyeceğini belirtir. Varsayılan değer `false` şeklindedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -47,19 +47,19 @@ Etkinleştirir veya ağ performans sayaçları devre dışı bırakır.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
+|[Ayarlar](settings-element-network-settings.md)|<xref:System.Net> Ad alanı için temel ağ seçeneklerini yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
- Ağ performans sayaçları yapılandırma dosyasında kullanılacak etkinleştirilmesi gerekir. Tüm ağ performans sayaçları etkin veya yapılandırma dosyasında tek bir ayarı ile devre dışı. Ağ performans sayaçları tek etkin veya devre dışı. Belirli ağ performans sayaçları hakkında daha fazla bilgi için bkz. [ağ performans sayaçları](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking).  
+ Ağ performans sayaçlarının kullanılacak yapılandırma dosyasında etkinleştirilmesi gerekir. Tüm ağ performans sayaçları, yapılandırma dosyasında tek bir ayarla etkin veya devre dışı bırakıldı. Bireysel ağ performans sayaçları etkinleştirilemez veya devre dışı bırakılamaz. Belirli ağ performans sayaçları hakkında daha fazla bilgi için bkz. [ağ performans sayaçları](../../../debug-trace-profile/performance-counters.md#networking).  
   
- Ağ performans sayaçları devre dışı bırakıldı varsayılan değerdir.  
+ Varsayılan değer ağ performans sayaçlarının devre dışı bırakıldığını unutmayın.  
   
- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> Özelliği, geçerli değerini almak için kullanılabilir **etkin** ilgili yapılandırma dosyaları özniteliği.  
+ Özelliği <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> , geçerli yapılandırma dosyalarından **etkin** özniteliğin geçerli değerini almak için kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl yapılandırılacağı gösterilmektedir <xref:System.Net> ve ilgili ağ performans sayaçları etkinleştirmek için ad alanları.  
+ Aşağıdaki örnek, ağ performans sayaçlarını etkinleştirmek için <xref:System.Net> ve ilgili ad alanlarının nasıl yapılandırılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -77,5 +77,5 @@ Etkinleştirir veya ağ performans sayaçları devre dışı bırakır.
 
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [Ağ performans sayaçları](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)
+- [Ağ Ayarları Şeması](index.md)
+- [Ağ performans sayaçları](../../../debug-trace-profile/performance-counters.md#networking)

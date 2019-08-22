@@ -8,12 +8,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 5947808cd137fc4cd280ac683a3e9a14b0d4644d
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 7e49762ee017564734bfb2b2f7074d94b7eabe11
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363869"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659387"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > öğesi (ağ ayarları)
 Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.  
@@ -48,20 +48,20 @@ Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.|  
-|[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Uygulamaya yeni bir proxy modülü ekler.|  
-|[Proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Bir ara sunucu tanımlar.|  
+|[BypassList](bypasslist-element-network-settings.md)|Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.|  
+|[module](module-element-network-settings.md)|Uygulamaya yeni bir proxy modülü ekler.|  
+|[Proxy](proxy-element-network-settings.md)|Bir ara sunucu tanımlar.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.|  
+|[system.net](system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  DefaultProxy öğesi boşsa, Internet Explorer 'daki proxy ayarları kullanılacaktır. Bu davranış .NET Framework 1,1 sürümünden farklıdır.  
   
- [Modül](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) öğesi ortak olmayan bir tür belirtiyorsa, tür <xref:System.Net.IWebProxy> sınıftan türetilmez, bu nesnenin parametresiz oluşturucusundan bir özel durum meydana geldi veya bir özel durum oluştu sistem tarafından belirtilen varsayılan proxy. Özel durum üzerindeki özelliği, hatanın kök nedeni hakkında daha fazla bilgi içermelidir. <xref:System.Exception.InnerException%2A>  
+ [Modül](module-element-network-settings.md) öğesi ortak olmayan bir tür belirtiyorsa, tür <xref:System.Net.IWebProxy> sınıftan türetilmez, bu nesnenin parametresiz oluşturucusundan bir özel durum meydana geldi veya bir özel durum oluştu sistem tarafından belirtilen varsayılan proxy. Özel durum üzerindeki özelliği, hatanın kök nedeni hakkında daha fazla bilgi içermelidir. <xref:System.Exception.InnerException%2A>  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
@@ -89,4 +89,4 @@ Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

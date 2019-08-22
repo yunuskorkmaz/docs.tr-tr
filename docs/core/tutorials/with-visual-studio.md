@@ -1,88 +1,88 @@
 ---
-title: Visual Studio 2017'de .NET Core ile bir C# Merhaba Dünya uygulaması derleme
-description: Visual Studio 2017 kullanarak C# ile basit bir .NET Core konsol uygulaması oluşturmayı öğrenin.
+title: Visual Studio C# 2017 ' de .NET Core ile Merhaba Dünya uygulaması oluşturma
+description: Visual Studio 2017 C# kullanarak basit bir .NET Core konsol uygulaması derlemeyi öğrenin.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b92c3b293b37921e1a8b557a7842027ecce8851c
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: b85f878d8a391581fcc7419b3ca4d656eb5595af
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959257"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660441"
 ---
-# <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Derleme bir C# Hello World uygulaması Visual Studio 2017'de .NET Core SDK'sı
+# <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio C# 2017 ' de .NET Core SDK Merhaba Dünya uygulama oluşturma
 
-Bu konuda, derleme, hata ayıklama ve C# kullanarak Visual Studio 2017'de basit bir .NET Core konsol uygulaması yayımlama için adım adım bir giriş sağlar. Visual Studio 2017, .NET Core uygulamaları oluşturmaya yönelik tam özellikli bir geliştirme ortamı sağlar. Uygulama, platforma özel bağımlılıklar yok sürece, uygulama, .NET Core hedefleyen herhangi bir platformda çalışabilir ve .NET Core sahip herhangi bir sistemde yüklü.
+Bu konuda, Visual Studio 2017 ' de kullanarak C# basit bir .NET Core konsol uygulaması oluşturmaya, hata ayıklamanıza ve yayımlamaya yönelik adım adım bir giriş sunulmaktadır. Visual Studio 2017, .NET Core uygulamaları oluşturmak için tam özellikli bir geliştirme ortamı sağlar. Uygulama platforma özgü bağımlılıklara sahip olmadığı sürece, uygulama .NET Core 'un hedeflediği tüm platformlarda ve .NET Core yüklü olan herhangi bir sistemde çalışabilir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) yüklü ".NET Core çoklu platform geliştirme" iş yüküyle birlikte sağlanır. .NET Core 1.1 veya .NET Core 2.0 ile uygulamanızı geliştirebilirsiniz.
+[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ".NET Core platformlar arası geliştirme" iş yükü yüklendi. Uygulamanızı, .NET Core 1,1 veya .NET Core 2,0 ile geliştirebilirsiniz.
 
-Daha fazla bilgi için [Windows üzerinde .NET Core önkoşulları](../../core/windows-prerequisites.md) konu.
+Daha fazla bilgi için bkz. [Windows üzerinde .NET Core önkoşulları](../windows-prerequisites.md) .
 
-## <a name="a-simple-hello-world-application"></a>Basit bir Hello World uygulaması
+## <a name="a-simple-hello-world-application"></a>Basit bir Merhaba Dünya uygulaması
 
-Basit bir "Hello World" konsol uygulaması oluşturarak başlayın. Aşağıdaki adımları uygulayın:
+Basit bir "Merhaba Dünya" konsol uygulaması oluşturarak başlayın. Aşağıdaki adımları uygulayın:
 
-1. Visual Studio 2017'yi başlatın. Seçin **dosya** > **yeni** > **proje** menü çubuğundan. İçinde *yeni proje** iletişim kutusunda **Visual C#** düğümünü ve ardından **.NET Core** düğümü. Ardından **konsol uygulaması (.NET Core)** proje şablonu. İçinde **adı** metin kutusunda, "HelloWorld" yazın. **Tamam** düğmesini seçin.
+1. Visual Studio 2017 ' i başlatın. Menü çubuğundan **Dosya** > **Yeni** > **Proje** ' yi seçin. *Yeni proje** iletişim kutusunda,  **C# Visual** düğümünü ve ardından **.NET Core** düğümünü seçin. Ardından **konsol uygulaması (.NET Core)** proje şablonunu seçin. **Ad** metin kutusuna "HelloWorld" yazın. **Tamam** düğmesini seçin.
 
-   ![Seçilen konsol uygulaması ile yeni proje iletişim kutusu](./media/with-visual-studio/visual-studio-new-project.png)
+   ![Konsol uygulaması seçiliyken yeni proje iletişim kutusu](./media/with-visual-studio/visual-studio-new-project.png)
 
-1. Visual Studio, projenizi oluşturmak için şablon kullanır. .NET Core için C# konsol uygulaması şablonu otomatik olarak bir sınıf tanımlar `Program`, tek bir yöntemi olan `Main`, alan bir <xref:System.String> bağımsız değişken olarak bir dizi. `Main` uygulama başlatıldığında otomatik olarak çalışma zamanı tarafından çağrılır yöntemi uygulama giriş noktası niteliğindedir. Uygulama başlatıldığında sağlanan komut satırı bağımsız değişkenleri kullanılabilir *args* dizisi.
+1. Visual Studio, projenizi oluşturmak için şablonu kullanır. .Net C# Core konsol uygulaması şablonu, bağımsız değişken olarak bir `Program` <xref:System.String> dizi alan tek bir yöntemle `Main`bir sınıfını otomatik olarak tanımlar. `Main`uygulama giriş noktası, uygulamayı başlattığında çalışma zamanı tarafından otomatik olarak çağrılan yöntemdir. Uygulama başlatıldığında sağlanan herhangi bir komut satırı bağımsız değişkeni, *args* dizisinde kullanılabilir.
 
-   ![Visual Studio ve yeni HelloWorld proje](./media/with-visual-studio/visual-studio-main-window.png)
+   ![Visual Studio ve yeni HelloWorld projesi](./media/with-visual-studio/visual-studio-main-window.png)
 
-   Şablon, basit bir "Hello World" uygulaması oluşturur. Çağrı <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> "Hello World!" sabit dizesini görüntülemek için yöntemi Konsol penceresinde. Seçerek **HelloWorld** düğme araç çubuğundaki yeşil ok ile programın hata ayıklama modunda çalıştırabilir. Bunu yaparsanız, kapatılmadan önce konsol penceresi yalnızca kısa bir zaman aralığı için görülebilir. Bu durum oluşur `Main` yöntemi sonlandırır ve uygulama aşağıdaki tek deyimde olan en kısa sürede sona `Main` yöntemini yürütür.
+   Şablon basit bir "Merhaba Dünya" uygulaması oluşturur. "Merhaba Dünya! <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> " değişmez dizesini göstermek için yöntemini çağırır Konsol penceresinde. Araç çubuğunda yeşil oklu **HelloWorld** düğmesini seçerek programı hata ayıklama modunda çalıştırabilirsiniz. Bunu yaparsanız, konsol penceresi kapanmadan önce yalnızca kısa bir zaman aralığı için görünür olur. Bu durum, yöntemin `Main` sonlandırdığı ve `Main` yöntemin bir tek deyimin yürütüldüğü anda sona erdiği için oluşur.
 
-1. Konsol penceresinde kapatılmadan önce beklenecek Uygulanmanın için çağırdıktan hemen sonra aşağıdaki kodu ekleyin <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> yöntemi:
+1. Uygulamanın konsol penceresini kapatmadan önce duraklatılmasına neden olmak için, <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> yöntemine yapılan çağrıdan hemen sonra aşağıdaki kodu ekleyin:
 
    ```csharp
    Console.Write("Press any key to continue...");
    Console.ReadKey(true);
    ```
 
-   Bu kod, herhangi bir tuşa basın ister ve daha sonra bir tuşa basıldığında kadar program duraklatılır.
+   Bu kod, kullanıcıdan herhangi bir tuşa basması ve bir tuşa basılana kadar programı duraklayacağını ister.
 
-1. Menü çubuğunda, seçin **derleme** > **Çözümü Derle**. Bu, just-in-time (JIT) derleyici tarafından ikili koda dönüştürülür bir ara dile (IL) programınızı derler.
+1. Menü çubuğunda Build**Build Solution**öğesini > seçin. Bu, programınızı bir tam zamanında (JıT) derleyicisi tarafından ikili koda dönüştürülen bir ara dile (IL) derler.
 
-1. Programı çalıştırmayı seçerek tarafından **HelloWorld** araç çubuğundaki yeşil bir ok düğmesi.
+1. Araç çubuğunda yeşil oklu **HelloWorld** düğmesini seçerek programı çalıştırın.
 
-   ![Devam etmek için herhangi bir tuşa Hello World tuşuna gösteren konsol penceresi](./media/with-visual-studio/hello-world-console.png)
+   ![Merhaba Dünya devam etmek için herhangi bir tuşa basarak konsol penceresi](./media/with-visual-studio/hello-world-console.png)
 
 1. Konsol penceresini kapatmak için herhangi bir tuşa basın.
 
-## <a name="enhancing-the-hello-world-application"></a>Hello World uygulaması geliştirme
+## <a name="enhancing-the-hello-world-application"></a>Merhaba Dünya uygulamasını geliştirme
 
-Kullanıcıdan kendi ad ve tarih ve saat ile birlikte görüntülemek için uygulama geliştirin. Program sınama ve değiştirmek için aşağıdakileri yapın:
+Uygulamanızı, adını ve Tarih ve saat ile birlikte göstermek için kullanıcıyı geliştirin. Programı değiştirmek ve test etmek için aşağıdakileri yapın:
 
-1. Aşağıdaki C# kodunu hemen izleyen açma ayracı sonra kod penceresinde girin `static void Main(string[] args)` satır ve ilk ayraç önce:
+1. Aşağıdaki C# kodu, `static void Main(string[] args)` satırı izleyen açılış ayracından hemen sonra ve ilk kapanış parantezinden önce kod penceresine girin:
 
    [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
-   Bu kod içeriğini değiştirir `Main` yöntemi.
+   Bu kod, `Main` yönteminin içeriğini değiştirir.
 
-   ![Visual Studio Program c-sharp dosyası ile güncelleştirilmiş Main yöntemi](./media/with-visual-studio/visual-csharp-code-window.png)
+   ![Visual Studio program c-güncelleştirilmiş Main yöntemiyle diyez dosyası](./media/with-visual-studio/visual-csharp-code-window.png)
 
-   Bu kod, "Adınız ne?" görüntüler. Kullanıcı kadar bekler ve konsol penceresinde Enter tuşuna basın, bir dize girer. Bu dize adlı bir değişkende depoladığı `name`. Ayrıca bir değeri alır <xref:System.DateTime.Now?displayProperty=nameWithType> geçerli yerel saat içerir ve adlı bir değişkene atar özelliği `date`. Son olarak, bunu kullanan bir [ilişkilendirilmiş bir dizedir](../../csharp/language-reference/tokens/interpolated.md) bu değerleri konsol penceresinde görüntüler.
+   Bu kod "adınız nedir?" görüntüler Konsol penceresinde ve ardından ENTER tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi adlı `name`bir değişkende depolar. Ayrıca, geçerli yerel saati içeren <xref:System.DateTime.Now?displayProperty=nameWithType> özelliğinin değerini alır ve bunu adlı `date`bir değişkene atar. Son olarak, bu değerleri konsol penceresinde göstermek için bir [enterpolasyonlu dize](../../csharp/language-reference/tokens/interpolated.md) kullanır.
 
-1. Program seçerek derleme **derleme** > **Çözümü Derle**.
+1. Build**Build Solution**öğesini seçerek > programı derleyin.
 
-1. Araç çubuğundaki yeşil oku seçerek, F5 tuşuna basarak veya seçerek Visual Studio'da hata ayıklama modunda programı çalıştırın **hata ayıklama** > **hata ayıklamayı Başlat** menü öğesi. Bir ad girmeniz ve Enter tuşuna basarak istemine yanıt.
+1. Araç çubuğundan yeşil oku seçerek, F5 tuşuna basarak veya **hata** > ayıklama**başlatma hata ayıklamayı Başlat** menü öğesini seçerek programı Visual Studio 'daki hata ayıklama modunda çalıştırın. Bir ad girip ENTER tuşuna basarak istemi yanıtlayın.
 
-   ![Konsol penceresi ile değiştirilmiş program çıktısı](./media/with-visual-studio/hello-world-update.png)
+   ![Değiştirilen program çıkışıyla konsol penceresi](./media/with-visual-studio/hello-world-update.png)
 
 1. Konsol penceresini kapatmak için herhangi bir tuşa basın.
 
-Oluşturduğunuz ve uygulamanızı çalıştırın. Profesyonel uygulama geliştirmek için uygulamanız yayımlanmaya hazır hale getirmek için bazı ek adımlar uygulayın:
+Uygulamanızı oluşturdunuz ve çalıştırdık. Profesyonel bir uygulama geliştirmek için uygulamanızı yayın için hazırlamak üzere bazı ek adımlar gerçekleştirin:
 
-- Uygulamanızı hata ayıklama hakkında daha fazla bilgi için bkz: [Visual Studio 2017 kullanarak .NET Core Merhaba Dünya uygulamanızın hatalarını](debugging-with-visual-studio.md).
+- Uygulamanızda hata ayıklama hakkında bilgi için bkz. [Visual Studio 2017 kullanarak .NET Core Merhaba Dünya uygulamanızda hata ayıklama](debugging-with-visual-studio.md).
 
-- Geliştirme ve uygulamanızın dağıtılabilir bir sürümünü yayımlama hakkında daha fazla bilgi için bkz: [Visual Studio 2017 ile .NET Core Merhaba Dünya uygulamanızı yayımlama](publishing-with-visual-studio.md).
+- Uygulamanızın dağıtılabilir bir sürümünü geliştirme ve yayımlama hakkında bilgi için bkz. [Visual Studio 2017 ile .NET Core Merhaba Dünya uygulamanızı yayımlama](publishing-with-visual-studio.md).
 
 ## <a name="related-topics"></a>İlgili konular
 
-Bir konsol uygulaması yerine bir sınıf kitaplığı ile .NET Core ve Visual Studio 2017'de oluşturabilirsiniz. Adım adım bir giriş için bkz. [C# ve Visual Studio 2017'de .NET Core ile bir sınıf kitaplığı oluşturma](library-with-visual-studio.md).
+Konsol uygulaması yerine, .NET Core ve Visual Studio 2017 ile bir sınıf kitaplığı da oluşturabilirsiniz. Adım adım bir giriş için bkz. [Visual Studio 2017 ' de .NET Core ile C# bir sınıf kitaplığı oluşturma](library-with-visual-studio.md).
 
-Mac, Linux ve Windows üzerinde .NET Core konsol uygulaması kullanarak da geliştirebilirsiniz [Visual Studio Code](https://code.visualstudio.com/), indirilebilir Kod Düzenleyicisi. Adım adım bir öğretici için bkz [Visual Studio Code ile çalışmaya başlama](with-visual-studio-code.md).
+Ayrıca, indirilebilir bir kod Düzenleyicisi [Visual Studio Code](https://code.visualstudio.com/)kullanarak Mac, Linux ve Windows üzerinde bir .NET Core konsol uygulaması da geliştirebilirsiniz. Adım adım bir öğretici için bkz. [Visual Studio Code kullanmaya başlama](with-visual-studio-code.md).

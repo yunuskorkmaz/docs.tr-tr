@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: 46ceca257777455824b6900f3e49999536d6bcad
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 31ab511bf88bfbc2134029564ecbf70aa75119d7
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589744"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659843"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Genel Temsilciler (C# Programlama Kılavuzu)
 Bir [temsilci](../../language-reference/keywords/delegate.md) kendi tür parametrelerini tanımlayabilir. Genel temsilciye başvuran kod, aşağıdaki örnekte gösterildiği gibi, bir genel sınıf örneği oluşturulurken veya genel bir yöntemi çağırırken olduğu gibi kapalı bir oluşturulmuş tür oluşturmak için tür bağımsız değişkenini belirtebilir:  
@@ -43,4 +43,4 @@ Bir [temsilci](../../language-reference/keywords/delegate.md) kendi tür paramet
 - [Genel Sınıflar](./generic-classes.md)
 - [Genel Arabirimler](./generic-interfaces.md)
 - [Temsilciler](../delegates/index.md)
-- [Genel Türler](~/docs/standard/generics/index.md)
+- [Genel Türler](../../../standard/generics/index.md)

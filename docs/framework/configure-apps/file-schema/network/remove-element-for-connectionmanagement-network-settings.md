@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: d9c584fb2faa971e7ce1ca287a94c8c6129820fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ab7a43fbb3e8df5bb0c99b5947f2fafb362399a
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705200"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664038"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<kaldırma > connectionManagement (ağ ayarları) için
-Bir IP adresi veya DNS adı bağlantı yönetimi listesinden kaldırır.  
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<connectionManagement için > öğesini kaldır (ağ ayarları)
+Bağlantı yönetimi listesinden bir IP adresini veya DNS adını kaldırır.  
   
  \<Yapılandırma >  
 \<system.net>  
 \<connectionManagement >  
-\<kaldırma >  
+\<> Kaldır  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,18 +49,18 @@ Bir IP adresi veya DNS adı bağlantı yönetimi listesinden kaldırır.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Bir ağ konak bağlantı maksimum sayısını belirtir.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Bir ağ konağına en fazla bağlantı sayısını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `remove` Bağlantı yönetim listesi girişi için belirtilen server öğeyi kaldırır.  
+ `remove` Öğesi, belirtilen sunucu için bağlantı yönetimi listesi girişini kaldırır.  
   
- Değerini `address` özniteliği geçerli bir IP adresi veya ana bilgisayar adı olmalıdır.  
+ `address` Özniteliğin değeri geçerli bir IP adresi veya ana bilgisayar adı olmalıdır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, tüm sunucu için bağlantı yönetim Liste girişlerini kaldırır `www.adventure-works.com` ve ardından sunucu için dört bağlantıları kullanmak için bir uygulamayı yapılandırır `www.contoso.com` ve diğer tüm sunucular iki bağlantı.  
+ Aşağıdaki örnek, sunucu `www.adventure-works.com` için tüm bağlantı yönetim listesi girişlerini kaldırır ve ardından bir uygulamayı sunucuya `www.contoso.com` dört bağlantı ve diğer tüm sunuculara iki bağlantı kullanacak şekilde yapılandırır.  
   
 ```xml  
 <configuration>  
@@ -78,4 +78,4 @@ Bir IP adresi veya DNS adı bağlantı yönetimi listesinden kaldırır.
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Ağ Ayarları Şeması](index.md)

@@ -2,12 +2,12 @@
 title: Func ve eylem genel temsilcileri için varyans kullanma (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: 2e2c5c80c54ff6788653f63a5bda85598e73824c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bbfc41fb8ab3e7d800f1eb03098e02056e694872
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595244"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659916"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Func ve eylem genel temsilcileri için varyans kullanma (C#)
 Bu örnekler, `Func` ve ' de yöntemlerin yeniden kullanımını etkinleştirmek ve kodunuzda daha `Action` fazla esneklik sağlamak için ve genel temsilcilerde kovaryans ve değişken varyans kullanımını gösterir.  
@@ -84,4 +84,4 @@ class Program
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kovaryans ve değişken varyans (C#)](./index.md)
-- [Genel Türler](~/docs/standard/generics/index.md)
+- [Genel Türler](../../../../standard/generics/index.md)

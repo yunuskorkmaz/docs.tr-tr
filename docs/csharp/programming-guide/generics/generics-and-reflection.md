@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 41948b7db7c816fd06efb35d156398527fbf72ae
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: be4b72414af8e5a18145330f5c44ae9a79a567cb
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589619"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659886"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Genel Türler ve Yansıma (C# Programlama Kılavuzu)
 Ortak dil çalışma zamanı (CLR) çalışma zamanında genel tür bilgilerine erişime sahip olduğu için, genel türler hakkında genel türler hakkında bilgi edinmek için yansımayı genel olmayan türler ile aynı şekilde elde edebilirsiniz. Daha fazla bilgi için bkz. [çalışma zamanındaki genel türler](./generics-in-the-run-time.md).  
@@ -50,4 +50,4 @@ Ortak dil çalışma zamanı (CLR) çalışma zamanında genel tür bilgilerine 
 - [C# Programlama Kılavuzu](../index.md)
 - [Genel Türler](./index.md)
 - [Yansıma ve Genel Türler](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
-- [Genel Türler](~/docs/standard/generics/index.md)
+- [Genel Türler](../../../standard/generics/index.md)

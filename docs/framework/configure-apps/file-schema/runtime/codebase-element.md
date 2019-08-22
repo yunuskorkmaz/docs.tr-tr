@@ -9,18 +9,18 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: b5825efcc613689e73fb56b6695fe7c75ff09136
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a06daa0b2aa5374c9959cbbe778d62856819a40e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674200"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663862"
 ---
 # <a name="codebase-element"></a>\<codeBase > öğesi
 
-Ortak dil çalışma zamanının bir derlemeyi nerede belirtir.
+Ortak dil çalışma zamanının bir derlemeyi bulabilecekleri yeri belirtir.
 
-\<configuration> \<runtime> \<assemblyBinding> \<dependentAssembly> \<codeBase>
+\<Yapılandırma > \<çalışma zamanı \<> assemblyBinding \<> dependentAssembly \<> kod temeli >
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,14 +38,14 @@ Ortak dil çalışma zamanının bir derlemeyi nerede belirtir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`href`|Gerekli öznitelik.<br /><br /> Çalışma zamanı derlemenin belirtilen sürümü nereden URL'sini belirtir.|
-|`version`|Gerekli öznitelik.<br /><br /> Kod temeli uygulandığı derleme sürümünü belirtir. Bir derleme sürümü numarasının biçimi *major.minor.build.revision*.|
+|`href`|Gerekli öznitelik.<br /><br /> Çalışma zamanının belirtilen derleme sürümünü bulabileceği URL 'YI belirtir.|
+|`version`|Gerekli öznitelik.<br /><br /> Kod temelinin uygulandığı derlemenin sürümünü belirtir. Bütünleştirilmiş kod sürümü numarası, *birincil. ikincil. derleme. düzeltme*.|
 
-## <a name="version-attribute"></a>Sürüm özniteliği
+## <a name="version-attribute"></a>sürüm özniteliği
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|Sürüm numarasının her bölüm için geçerli değerler 0 ile 65535 arasındadır.|Geçerli değildir.|
+|Sürüm numarasının her bir bölümü için geçerli değerler 0 ile 65535 arasında geçerlidir.|Geçerli değildir.|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -55,22 +55,22 @@ Yok.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|`buildproviders`|Özel kaynak dosyalarını derlemek için kullanılan derleme sağlayıcıları koleksiyonu tanımlar. Herhangi bir sayıda derleme sağlayıcıları olabilir.|
-|`compilation`|ASP.NET kullanan tüm derleme ayarlarını yapılandırır.|
+|`buildproviders`|Özel kaynak dosyalarını derlemek için kullanılan yapı sağlayıcılarının koleksiyonunu tanımlar. Herhangi bir sayıda derleme sağlayıcısına sahip olabilirsiniz.|
+|`compilation`|ASP.NET tarafından kullanılan tüm derleme ayarlarını yapılandırır.|
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|
-|`System.web`|ASP.NET yapılandırma bölümü için olan kök öğesini belirtir.|
+|`System.web`|ASP.NET yapılandırma bölümünün kök öğesini belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Çalışma zamanı kullanmak için  **\<codeBase >** bir makine yapılandırma dosyası ya da Yayımcı ilkesi dosyası ayarı dosyası da derleme sürümünü yeniden yönlendirmeniz gerekir. Uygulama yapılandırma dosyaları, derleme sürümü yeniden yönlendirme olmadan bir kod temeli ayarı olabilir. Hangi derleme sürümünün kullanılacağını belirledikten sonra çalışma zamanı sürümünü belirleyen dosyasından codebase ayarı uygulanır. Herhangi bir kod temelinde belirtilirse, çalışma zamanı derlemesi için her zamanki yolla araştırmaları.
+Çalışma zamanının bir makine yapılandırma dosyası veya yayımcı ilke dosyasında  **\<codebase >** ayarını kullanması için, dosyanın de derleme sürümünü yeniden yönlendirmesi gerekir. Uygulama yapılandırma dosyaları, derleme sürümünü yönlendirmeksizin bir kod temeli ayarına sahip olabilir. Hangi derleme sürümünün kullanılacağını belirledikten sonra, çalışma zamanı sürümü belirleyen dosyadan kod temeli ayarını uygular. Kod temeli belirtilmemişse, çalışma zamanı derleme için her zamanki şekilde araştırılmış.
 
-Derlemeyi tanımlayıcı bir ada sahip, codebase ayar herhangi bir yerel intranet veya Internet üzerinde olabilir. Derleme özel bir derleme ise, kod tabanının ayarı uygulamanın dizinine göreli bir yol olmalıdır.
+Derlemenin tanımlayıcı bir adı varsa, kod temeli ayarı yerel intranette veya Internet 'te herhangi bir yerde olabilir. Derleme özel bir derlemedir, kod temeli ayarı uygulamanın dizinine göreli bir yol olmalıdır.
 
-Güçlü adı olmayan derlemeler için sürüm göz ardı edilir ve ilk görünümünü yükleyicisi kullanır \<codebase > içinde \<dependentAssembly >. Başka bir derleme için bağlama yeniden yönlendirmeleri uygulama yapılandırma dosyasında bir girdi varsa, bağlama isteği derleme sürümü eşleşmiyor olsa bile yönlendirme öncelikli olur.
+Tanımlayıcı adı olmayan derlemeler için sürüm yok sayılır ve yükleyici, bir \<kod temelinin ilk görünümünü dependentAssembly > içinde \<kullanır >. Uygulama yapılandırma dosyasında bağlamayı başka bir derlemeye yönlendiren bir giriş varsa, derleme sürümü bağlama isteğiyle eşleşmezse bile yeniden yönlendirme öncelikli olur.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, çalışma zamanının bir derlemeyi nerede belirtmek gösterilmektedir.
+Aşağıdaki örnek, çalışma zamanının bir derlemeyi bulabileceği yeri nasıl belirtbileceğinizi gösterir.
 
 ```xml
 <configuration>
@@ -90,7 +90,7 @@ Aşağıdaki örnek, çalışma zamanının bir derlemeyi nerede belirtmek göst
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Bütünleştirilmiş Kodun Konumunu Belirtme](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Çalışma Zamanı Ayarları Şeması](index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
+- [Bütünleştirilmiş Kodun Konumunu Belirtme](../../specify-assembly-location.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../deployment/how-the-runtime-locates-assemblies.md)

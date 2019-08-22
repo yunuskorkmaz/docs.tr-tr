@@ -2,12 +2,12 @@
 title: Genel Türler
 description: Kod tekrarlamadan farklı F# türlerle çalışacak kod yazmanızı sağlayan genel işlevleri ve türleri nasıl kullanacağınızı öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 47eed0b8e074cfb591e6d8e2c382b9ea6a6e97f0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5d6e57762095e44836425f90d21a6c1dc71edaaa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630617"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666700"
 ---
 # <a name="generics"></a>Genel Türler
 
@@ -97,6 +97,6 @@ F# Programlarda kullanılabilecek iki tür parametre vardır. İlki, önceki bö
 - [Dil Başvurusu](../index.md)
 - [Türler](../fsharp-types.md)
 - [Statik Olarak Çözümlenmiş Tür Parametreleri](statically-resolved-type-parameters.md)
-- [.NET Framework genel türler](~/docs/standard/generics/index.md)
+- [Genel Türler](../../../standard/generics/index.md)
 - [Otomatik Genelleştirme](automatic-generalization.md)
 - [Kısıtlamalar](constraints.md)

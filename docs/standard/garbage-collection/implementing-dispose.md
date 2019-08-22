@@ -11,105 +11,105 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 683a71b27d3e3dd1c0db4e49c2c188ccad0fb6d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2881ef5b4cbc5850fde64fc68640021ebf42df43
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965236"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666459"
 ---
 # <a name="implementing-a-dispose-method"></a>Dispose yöntemi uygulama
 
-Uygulamanız bir <xref:System.IDisposable.Dispose%2A> uygulamanız tarafından kullanılan yönetilmeyen kaynakları serbest bırakmak için yöntemi. .NET Atık toplayıcısının ayırmak veya yönetilmeyen bellek desteklemez.  
+Uygulamanız tarafından kullanılan <xref:System.IDisposable.Dispose%2A> yönetilmeyen kaynakları serbest bırakmak için bir yöntem uygulayın. .NET atık toplayıcısı, yönetilmeyen bellek ayırır veya serbest bırakmaz.  
   
-Olarak adlandırılan desen disposing bir nesne için bir [dispose deseni](../../../docs/standard/design-guidelines/dispose-pattern.md), bir nesnenin ömrünü üzerinde sırası uygular. Dispose deseni yalnızca yönetilmeyen kaynaklara erişen, dosya ve kanal tanıtıcıları, kayıt defteri tanıtıcıları, bekleme tanıtıcıları veya yönetilmeyen bellek bloğu işaretçileri gibi nesneler için kullanılır. Bunun nedeni, çöp toplayıcısının kullanılmayan yönetilen nesneleri geri kazanmada çok etkili olması, fakat yönetilmeyen nesneleri geri kazanamamasıdır.  
+[Dispose düzeni](../../../docs/standard/design-guidelines/dispose-pattern.md)olarak adlandırılan bir nesneyi elden atma düzeni, bir nesnenin ömrüne göre sıra uygular. Dispose deseni yalnızca yönetilmeyen kaynaklara erişen, dosya ve kanal tanıtıcıları, kayıt defteri tanıtıcıları, bekleme tanıtıcıları veya yönetilmeyen bellek bloğu işaretçileri gibi nesneler için kullanılır. Bunun nedeni, çöp toplayıcısının kullanılmayan yönetilen nesneleri geri kazanmada çok etkili olması, fakat yönetilmeyen nesneleri geri kazanamamasıdır.  
   
 Dispose deseninin iki çeşidi vardır:  
   
-* Bir tür güvenli bir tanıtıcıda kullandığı her bir yönetilmeyen kaynağı sararsınız (yani sınıfından türetilen bir sınıfta <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>). Bu durumda, uygulamanız <xref:System.IDisposable> arabirimini ve ek `Dispose(Boolean)` yöntemi. Bu önerilen çeşittir ve geçersiz kılınmasını gerektirmez <xref:System.Object.Finalize%2A?displayProperty=nameWithType> yöntemi.  
+* Bir türün kullandığı her yönetilmeyen kaynağı güvenli bir tanıtıcı (yani, öğesinden <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>türetilmiş bir sınıfta) sarın. Bu durumda, <xref:System.IDisposable> arabirimini ve ek `Dispose(Boolean)` bir yöntemi uygulacağınızı görürsünüz. Bu önerilen çeşitdir ve <xref:System.Object.Finalize%2A?displayProperty=nameWithType> yöntemi geçersiz kılmayı gerektirmez.  
   
   > [!NOTE]
-  > <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> Ad alanı, türetilen sınıf kümesi sağlar <xref:System.Runtime.InteropServices.SafeHandle>, bu makalenin [güvenli tanıtıcıları kullanma](#SafeHandles) bölümü. Yönetilmeyen kaynağınızı serbest için uygun bir sınıf bulamazsanız, kendi alt uygulayabileceğiniz <xref:System.Runtime.InteropServices.SafeHandle>.  
+  > Ad alanı, [güvenli işleyiciler kullanılarak](#SafeHandles) listelenen öğesinden <xref:System.Runtime.InteropServices.SafeHandle>türetilmiş bir sınıf kümesi sağlar. <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> Yönetilmeyen kaynağınız serbest bırakmak için uygun bir sınıf bulamıyorsanız, kendi alt <xref:System.Runtime.InteropServices.SafeHandle>sınıfınızı uygulayabilirsiniz.  
   
-* Uygulamanız <xref:System.IDisposable> arabirimini ve ek `Dispose(Boolean)` yöntemi ve ayrıca geçersiz <xref:System.Object.Finalize%2A?displayProperty=nameWithType> yöntemi. Geçersiz kılmanız gerekir <xref:System.Object.Finalize%2A> durumunda yönetilmeyen kaynakların elden çıkarılmasını sağlamak için <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> sizin türünüzün bir tüketicisi tarafından çağrılmaması. Önceki madde işaretinde açıklanan önerilen tekniği kullanırsanız <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> sınıfı bunu sizin adınıza yapar.  
+* <xref:System.IDisposable> Arabirimini ve ek `Dispose(Boolean)` bir yöntemi uygularsınız ve ayrıca <xref:System.Object.Finalize%2A?displayProperty=nameWithType> yöntemini geçersiz kılarsınız. Uygulamanız sizin <xref:System.Object.Finalize%2A> <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> bir tüketici tarafından çağrılmadığı takdirde yönetilmeyen kaynakların çıkarıldığından emin olmak için geçersiz kılmanız gerekir. Önceki madde işaretinde açıklanan önerilen tekniği kullanırsanız, <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> sınıfı bunu sizin yerinize yapar.  
   
-Kaynakların her zaman uygun şekilde temizlenmesini sağlamaya yardımcı olmak için bir <xref:System.IDisposable.Dispose%2A> yöntemi çağrılabilir olması gerekir birden çok kez bir özel durum olmadan.  
+Kaynakların her zaman uygun şekilde temizlendiğinden emin olmak için bir <xref:System.IDisposable.Dispose%2A> Yöntem özel durum oluşturmadan birden çok kez çağrılabilir olmalıdır.  
   
-İçin sağlanan kod örneği <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> yöntemi gösterir nasıl katı kurallarla yapılan çöp toplama, bir sonlandırıcının geri kazanılan nesnenin bir üyesi hala Yürütülüyor iken çalışmasına neden olabilir. Çağırmak için iyi bir fikirdir <xref:System.GC.KeepAlive%2A> sonunda, uzun bir yöntem <xref:System.IDisposable.Dispose%2A> yöntemi.  
+<xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> Yöntemi için belirtilen kod örneği, ısrarlı çöp toplamanın, geri kazanılan nesnenin bir üyesi hala yürütülürken sonlandırıcının çalışmasına nasıl neden olabileceği gösterilmektedir. <xref:System.GC.KeepAlive%2A> Yöntemi uzun<xref:System.IDisposable.Dispose%2A> bir yöntemin sonunda çağırmak iyi bir fikirdir.  
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() ve Dispose(Boolean)  
 
-<xref:System.IDisposable> Arabirimi tek bir parametresiz yöntemin uygulanmasını gerektirir <xref:System.IDisposable.Dispose%2A>. Ancak, dispose deseni iki gerektirir `Dispose` uygulanacak yöntemleri:  
+Arabirim, tek parametresiz bir <xref:System.IDisposable.Dispose%2A>yöntemin uygulanmasını gerektirir. <xref:System.IDisposable> Ancak, Dispose deseninin uygulanması için iki `Dispose` yöntem gerekir:  
   
-* Sanal olmayan bir ortak (`NonInheritable` Visual Basic'te) <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> uygulamasında, hiç parametre yok.  
+* Parametresi olmayan, ortak sanal olmayan`NonInheritable` (Visual Basic) <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> bir uygulama.  
   
-* Korunan sanal (`Overridable` Visual Basic'te) `Dispose` imzaya sahip, yöntemi:  
+* İmzası şu olan korumalı`Overridable` bir sanal ( `Dispose` Visual Basic) yöntemi:  
   
   [!code-csharp[Conceptual.Disposable#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/dispose1.cs#8)]
   [!code-vb[Conceptual.Disposable#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/dispose1.vb#8)]  
   
-### <a name="the-dispose-overload"></a>Dispose() aşırı yükleme
+### <a name="the-dispose-overload"></a>Dispose () aşırı yüklemesi
 
-Çünkü ortak, sanal olmayan (`NonInheritable` Visual Basic'te), parametresiz `Dispose` yöntemi, türün bir tüketicisi tarafından çağrıldığında, amacı yönetilmeyen kaynakları serbest bırakmak ve biri varsa sonlandırıcının çalıştırmak sahip olmadığını göstermek için. Bu nedenle, standart bir uygulaması vardır:  
+Ortak, sanal olmayan (`NonInheritable` Visual Basic), parametresiz `Dispose` Yöntem türünün bir tüketicisi tarafından çağrıldığı için, amacı yönetilmeyen kaynakları serbest bırakmak ve varsa sonlandırıcının çalıştırmak zorunda olmadığını gösterir. Bu nedenle, standart bir uygulaması vardır:  
   
 [!code-csharp[Conceptual.Disposable#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/dispose1.cs#7)]
 [!code-vb[Conceptual.Disposable#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/dispose1.vb#7)]  
   
-`Dispose` Yöntemi tüm nesne temizlemesi, çöp toplayıcı nesnelerin artık gerekir. gerçekleştirdiğinden <xref:System.Object.Finalize%2A?displayProperty=nameWithType> geçersiz kılar. Bu nedenle, çağrı <xref:System.GC.SuppressFinalize%2A> yöntemi çöp toplayıcının sonlandırıcıyı çalıştırmasını önler. Türün Sonlandırıcısı, çağrı varsa <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> hiçbir etkisi olmaz. İkinci aşırı yüklemesi tarafından gerçekleştirildiğini unutmayın yönetilmeyen kaynakları serbest bırakma işini `Dispose` yöntemi.  
+Yöntemi tüm nesne temizleme işlemini gerçekleştirir, bu nedenle çöp toplayıcının artık <xref:System.Object.Finalize%2A?displayProperty=nameWithType> nesnelerin geçersiz kılmasını çağırması gerekmez. `Dispose` Bu nedenle, <xref:System.GC.SuppressFinalize%2A> yöntemine yapılan çağrı çöp toplayıcısının sonlandırıcıyı çalıştırmasını önler. Türün Sonlandırıcı yoksa, çağrısının <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> hiçbir etkisi olmaz. Yönetilmeyen kaynakları serbest bırakan gerçek çalışmanın, `Dispose` yöntemin ikinci aşırı yüklemesi tarafından gerçekleştirildiğini unutmayın.  
   
-### <a name="the-disposeboolean-overload"></a>Dispose(Boolean) aşırı yükleme
+### <a name="the-disposeboolean-overload"></a>Dispose (Boolean) aşırı yüklemesi
 
-İkinci aşırı yükleme, *disposing* parametresi bir <xref:System.Boolean> yöntemi çağrısının bildiren bir <xref:System.IDisposable.Dispose%2A> yöntemi (değeri `true`) veya bir sonlandırıcıdan (değeri `false`).  
+İkinci aşırı yükte, *disposing* parametresi, yöntem çağrısının <xref:System.Boolean> bir <xref:System.IDisposable.Dispose%2A> yöntemden (değer `true`) mi yoksa sonlandırıcının mi (değer `false`) geldiğini belirten bir değeridir.  
   
 Yöntemin gövdesi iki kod bloğundan oluşur:  
   
-* Yönetilmeyen kaynakları serbest bırakan bir blok. Bu bloğu değerine bakılmaksızın yürütülür `disposing` parametresi.  
+* Yönetilmeyen kaynakları serbest bırakan bir blok. Bu blok, `disposing` parametrenin değerinden bağımsız olarak yürütülür.  
   
-* Yönetilen kaynakları serbest bırakan koşullu bir blok. Bu bloğu ise yürütülür değerini `disposing` olduğu `true`. Serbest bıraktığı yönetilen kaynaklar şunları içerebilir:  
+* Yönetilen kaynakları serbest bırakan koşullu bir blok. Değeri `disposing` ise`true`bu blok yürütülür. Serbest bıraktığı yönetilen kaynaklar şunları içerebilir:  
   
-  **Uygulayan yönetilen <xref:System.IDisposable>.** Koşullu blok çağırmak için kullanılabilecek kendi <xref:System.IDisposable.Dispose%2A> uygulaması. Yönetilmeyen kaynağınızı sarmak için güvenli bir tanıtıcı kullandıysanız çağırmalısınız <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> burada uygulama.  
+  **Uygulayan <xref:System.IDisposable>yönetilen nesneler.** Koşullu blok, <xref:System.IDisposable.Dispose%2A> uygulamasını çağırmak için kullanılabilir. Yönetilmeyen kaynağınızı kaydırmak için güvenli bir tanıtıcı kullandıysanız, <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> uygulamayı buradan çağırmanız gerekir.  
   
-  **Büyük miktarlarda bellek tüketen veya nadir kaynakları tüketen nesneleri yönetilen.** Bu nesnelerin açıkça `Dispose` yöntemi serbest bunları, belirleyici olmayan şekilde çöp toplayıcı tarafından geri kazanılan, daha hızlı.  
+  **Büyük miktarlarda bellek kullanan veya nadir kaynaklarını tüketen yönetilen nesneler.** Bu nesneleri açıkça `Dispose` serbest bırakma, çöp toplayıcı tarafından belirleyici olmayan şekilde geri kazanıladıklarından daha hızlı bir şekilde serbest bırakır.  
   
-Yöntem çağrısı bir sonlandırıcıdan gelirse (yani *disposing* olan `false`), yalnızca yönetilmeyen kaynakları serbest bırakan kod yürütülür. Çöp toplayıcı yok etme yönetilen nesneleri sonlandırma sırasında sırası tanımlı olmadığından bu çağırma `Dispose` aşırı değeriyle `false` Sonlandırıcı olabilecek yönetilen kaynakları serbest bırakmaya çalışmasını önler. zaten iadesi.  
+Yöntem çağrısı bir sonlandırıcının geliyorsa (yani, *disposing* `false`ise), yalnızca yönetilmeyen kaynakları serbest bırakma kodu yürütülür. Çöp toplayıcı 'nın `Dispose` `false` sonlandırma sırasında yönetilen nesneleri yok ettiği sıra tanımlanmadığı için, bu aşırı yüklemeyi bir değeriyle çağırmak, sonlandırıcının sahip olabilecek yönetilen kaynakları serbest bırakmaya çalışmasını önler zaten kazanıldı.  
   
 ## <a name="implementing-the-dispose-pattern-for-a-base-class"></a>Dispose desenini bir temel sınıf için uygulama
 
 Dispose desenini bir temel sınıf için uygularsanız, aşağıdakileri sağlamanız gerekir:  
   
 > [!IMPORTANT]
-> Bu düzen uygulayan tüm temel sınıflar için uygulamalıdır <xref:System.IDisposable.Dispose> ve `sealed` (`NotInheritable` Visual Basic'te).  
+> Bu kalıbı, uygulayan <xref:System.IDisposable.Dispose> ve olmayan `sealed` (`NotInheritable` Visual Basic) tüm temel sınıflar için uygulamalısınız.  
   
-* A <xref:System.IDisposable.Dispose%2A> çağıran uygulama `Dispose(Boolean)` yöntemi.  
+* Yöntemini çağıran bir <xref:System.IDisposable.Dispose%2A>uygulama. `Dispose(Boolean)`  
   
-* A `Dispose(Boolean)` kaynakları serbest bırakma işini gerçekleştiren yöntemi.  
+* Kaynak `Dispose(Boolean)` bırakma işinin gerçek işini gerçekleştiren bir yöntem.  
   
-* Türetilen bir sınıf <xref:System.Runtime.InteropServices.SafeHandle> yönetilemeyen kaynağınızı (önerilir) veya bir geçersiz kılma sarmalar <xref:System.Object.Finalize%2A?displayProperty=nameWithType> yöntemi. <xref:System.Runtime.InteropServices.SafeHandle> Sınıf bir kod zorunda kalmanızı bir sonlandırıcı sağlar.  
+* Öğesinden <xref:System.Runtime.InteropServices.SafeHandle> türetilen bir sınıf, Yönetilmeyen kaynağınızı sarmalanmış (önerilir) veya <xref:System.Object.Finalize%2A?displayProperty=nameWithType> yöntemine bir geçersiz kılma. <xref:System.Runtime.InteropServices.SafeHandle> Sınıfı, sizi kod içine almak zorunda kalmanızı sağlayan bir Sonlandırıcı sağlar.  
   
-Güvenli Tanıtıcı kullanan bir temel sınıf için dispose deseni uygulamada genel düzen aşağıda verilmiştir.  
+Aşağıda, güvenli tanıtıcı kullanan bir temel sınıf için Dispose deseninin uygulanması için genel bir model verilmiştir.  
   
 [!code-csharp[System.IDisposable#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/base1.cs#3)]
 [!code-vb[System.IDisposable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base1.vb#3)]  
   
 > [!NOTE]
-> Önceki örnekte bir <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> deseni göstermek için nesne; herhangi bir nesne öğesinden türetilen <xref:System.Runtime.InteropServices.SafeHandle> yerine kullanılabilir. Örnek değil düzgün örneği Not kendi <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> nesne.  
+> Önceki örnek, bir nesneyi <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> göstermek için bir nesnesi kullanır; bunun yerine <xref:System.Runtime.InteropServices.SafeHandle> ondan türetilmiş herhangi bir nesne kullanılabilir. Örneğin <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> nesnesinin düzgün şekilde örneklemez olduğunu unutmayın.  
   
-Geçersiz kılan bir temel sınıf için dispose deseni uygulamada genel Düzen <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
+Geçersiz kılan <xref:System.Object.Finalize%2A?displayProperty=nameWithType>bir temel sınıf için Dispose deseninin uygulanması için genel bir model.  
   
 [!code-csharp[System.IDisposable#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/base2.cs#5)]
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> C# içinde geçersiz kılmanız <xref:System.Object.Finalize%2A?displayProperty=nameWithType> tanımlayarak bir [yok Edicisi](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> İçinde C#, bir <xref:System.Object.Finalize%2A?displayProperty=nameWithType> [yıkıcı](../../csharp/programming-guide/classes-and-structs/destructors.md)tanımlayarak geçersiz kılabilirsiniz.  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>Türetilen bir sınıf için dispose desenini uygulama
 
-Uygulayan bir sınıftan türetilmiş bir sınıf <xref:System.IDisposable> arabirimini <xref:System.IDisposable>, temel sınıf çünkü uygulaması <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> kendi türetilmiş sınıflar tarafından devralınır. Onun yerine, türetilen bir sınıfa ilişkin olarak dispose desenini uygulamak için aşağıdakileri sağlarsınız:  
+Temel sınıf uygulaması <xref:System.IDisposable> <xref:System.IDisposable> türetilmişsınıflarıtarafındandevralındığından,arabiriminiuygulayanbirsınıftantüretilmişbir<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> sınıf uygulanmamalıdır. Onun yerine, türetilen bir sınıfa ilişkin olarak dispose desenini uygulamak için aşağıdakileri sağlarsınız:  
   
-* A `protected Dispose(Boolean)` temel sınıf yöntemini geçersiz kılan ve türetilen sınıfın kaynaklarını serbest bırakma işini gerçekleştiren yöntemi. Bu yöntemini de çağırmalı `Dispose(Boolean)` yöntemi temel sınıf ve disposing durumu bağımsız değişkeni için geçirin.  
+* Temel `protected Dispose(Boolean)` sınıf yöntemini geçersiz kılan ve türetilen sınıfın kaynaklarını serbest bırakma işinin asıl işini gerçekleştiren bir yöntem. Bu yöntem ayrıca temel sınıfın `Dispose(Boolean)` yöntemini çağırmalıdır ve bağımsız değişkeni için disposing durumunu iletmelidir.  
   
-* Türetilen bir sınıf <xref:System.Runtime.InteropServices.SafeHandle> yönetilemeyen kaynağınızı (önerilir) veya bir geçersiz kılma sarmalar <xref:System.Object.Finalize%2A?displayProperty=nameWithType> yöntemi. <xref:System.Runtime.InteropServices.SafeHandle> Sınıf bir kod zorunda kalmanızı bir sonlandırıcı sağlar. Bir sonlandırıcı sağlarsanız, çağırmalıdır `Dispose(Boolean)` aşırı yüklemesine bir *disposing* bağımsız değişkeni `false`.  
+* Öğesinden <xref:System.Runtime.InteropServices.SafeHandle> türetilen bir sınıf, Yönetilmeyen kaynağınızı sarmalanmış (önerilir) veya <xref:System.Object.Finalize%2A?displayProperty=nameWithType> yöntemine bir geçersiz kılma. <xref:System.Runtime.InteropServices.SafeHandle> Sınıfı, sizi kod içine almak zorunda kalmanızı sağlayan bir Sonlandırıcı sağlar. Bir Sonlandırıcı sağlarsanız,, öğesinin `Dispose(Boolean)` `false`bir *disposing* bağımsız değişkeniyle birlikte aşırı yüklemeyi çağırmalıdır.  
   
 Güvenli tanıtıcı kullanan bir türetilen sınıf için dispose deseni uygulamada genel düzen aşağıdaki gibidir:  
   
@@ -117,37 +117,37 @@ Güvenli tanıtıcı kullanan bir türetilen sınıf için dispose deseni uygula
 [!code-vb[System.IDisposable#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived1.vb#4)]  
   
 > [!NOTE]
-> Önceki örnekte bir <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> deseni göstermek için nesne; herhangi bir nesne öğesinden türetilen <xref:System.Runtime.InteropServices.SafeHandle> yerine kullanılabilir. Örnek değil düzgün örneği Not kendi <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> nesne.  
+> Önceki örnek, bir nesneyi <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> göstermek için bir nesnesi kullanır; bunun yerine <xref:System.Runtime.InteropServices.SafeHandle> ondan türetilmiş herhangi bir nesne kullanılabilir. Örneğin <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> nesnesinin düzgün şekilde örneklemez olduğunu unutmayın.  
   
-Geçersiz kılan bir türetilen sınıf için dispose deseni uygulamada genel Düzen <xref:System.Object.Finalize%2A?displayProperty=nameWithType>:  
+Geçersiz kılan <xref:System.Object.Finalize%2A?displayProperty=nameWithType>türetilmiş bir sınıf için Dispose deseninin uygulanması için genel bir model aşağıda verilmiştir:  
   
 [!code-csharp[System.IDisposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/derived2.cs#6)]
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> C# içinde geçersiz kılmanız <xref:System.Object.Finalize%2A?displayProperty=nameWithType> tanımlayarak bir [yok Edicisi](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> İçinde C#, bir <xref:System.Object.Finalize%2A?displayProperty=nameWithType> [yıkıcı](../../csharp/programming-guide/classes-and-structs/destructors.md)tanımlayarak geçersiz kılabilirsiniz.  
   
 <a name="SafeHandles"></a>   
 ## <a name="using-safe-handles"></a>Güvenli tanıtıcıları kullanma
 
-Bir nesnenin sonlandırıcısı için kod yazmak, doğru yapılmaması durumunda sorunlara neden olabilecek karmaşık bir görevdir. Bu nedenle, oluşturmak öneririz <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> bir sonlandırıcı uygulamak yerine, nesneleri.  
+Bir nesnenin sonlandırıcısı için kod yazmak, doğru yapılmaması durumunda sorunlara neden olabilecek karmaşık bir görevdir. Bu nedenle, bir Sonlandırıcı uygulamak yerine <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> nesneleri oluşturmanızı öneririz.  
   
-Türetilen sınıflar <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> sınıfı atayarak ve serbest bırakma kesintisiz şekilde işleyicileri nesne kullanım ömrü sorunlarını basitleştirir. Uygulama etki alanı kaldırılırken çalıştırılması kesin olan kritik bir sonlandırıcı içerirler. Güvenli Tanıtıcı kullanmanın avantajları hakkında daha fazla bilgi için bkz: <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>. Aşağıdaki türetilmiş sınıflar içinde <xref:Microsoft.Win32.SafeHandles> ad alanı güvenli tanıtıcılar sağlar:  
+Sınıfından türetilmiş sınıflar, <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> kesintiye uğramadan işleyicileri atayarak ve serbest bırakarak nesne ömrü sorunlarını basitleştirir. Uygulama etki alanı kaldırılırken çalıştırılması kesin olan kritik bir sonlandırıcı içerirler. Güvenli bir tanıtıcı kullanmanın avantajları hakkında daha fazla bilgi için bkz <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>. <xref:Microsoft.Win32.SafeHandles> Ad alanındaki aşağıdaki türetilmiş sınıflar, güvenli işleyiciler sağlar:  
   
-* <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle>, Ve <xref:Microsoft.Win32.SafeHandles.SafePipeHandle> dosyalar, bellek eşlemeli dosyalar ve kanallar için bir sınıf.  
+* <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, ,<xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle>Ve sınıfı,dosyalar<xref:Microsoft.Win32.SafeHandles.SafePipeHandle> , bellek eşlemeli dosyalar ve kanallar için.  
   
-* <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> Bellek görünümleri için bir sınıf.  
+* Bellek görünümleri için sınıfı. <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle>  
   
-* <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>, <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle>, Ve <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> şifreleme yapıları için bir sınıf.  
+* Şifreleme yapıları için, <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> ve sınıfları. <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle> <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle>  
   
-* <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> Kayıt defteri anahtarları için bir sınıf.  
+* Kayıt defteri anahtarları için sınıfı.<xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle>  
   
-* <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> Bekleme tanıtıcıları için bir sınıf.  
+* Wait tutamaçları için sınıfı. <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle>  
   
 <a name="base"></a>   
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Bir temel sınıfa ilişkin olarak dispose deseni uygulamak için güvenli tanıtıcı kullanma
 
-Aşağıdaki örnekte, bir temel sınıf için dispose deseni gösterilmektedir `DisposableStreamResource`yönetilmeyen kaynakları kapsüllemek üzere güvenli bir tanıtıcı kullanan,. Tanımladığı bir `DisposableResource` kullanan sınıf bir <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> sarmak için bir <xref:System.IO.Stream> açık bir dosyayı temsil eden nesne. `DisposableResource` Yöntemi de içeren tek bir özelliğe `Size`, dosya akışındaki toplam bayt sayısını döndürür.  
+Aşağıdaki örnek, yönetilmeyen kaynakları kapsüllemek için güvenli bir tanıtıcı kullanan `DisposableStreamResource`bir temel sınıf için Dispose modelini göstermektedir. Açık bir dosyayı `DisposableResource` temsil eden bir <xref:System.IO.Stream> nesneyi <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> kaydırmak için öğesini kullanan bir sınıfı tanımlar. Yöntemi, dosya akışındaki toplam bayt sayısını döndüren `Size`tek bir özelliğini de içerir. `DisposableResource`  
   
 [!code-csharp[Conceptual.Disposable#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/base1.cs#9)]
 [!code-vb[Conceptual.Disposable#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/base1.vb#9)]  
@@ -155,7 +155,7 @@ Aşağıdaki örnekte, bir temel sınıf için dispose deseni gösterilmektedir 
 <a name="derived"></a>   
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-derived-class"></a>Bir türetilen sınıfa ilişkin olarak dispose deseni uygulamak için güvenli tanıtıcı kullanma
 
-Aşağıdaki örnekte, bir türetilen sınıf için dispose deseni gösterilmektedir `DisposableStreamResource2`, öğesinden devralan `DisposableStreamResource` önceki örnekte gösterilen sınıfı. Sınıf ek bir yöntem ekler `WriteFileInfo`ve kullandığı bir <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> ve yazılabilir dosyanın tanıtıcısı sarmak için.  
+Aşağıdaki örnek, önceki örnekte sunulan `DisposableStreamResource2` `DisposableStreamResource` sınıftan devralan türetilmiş bir sınıf için Dispose modelini göstermektedir. Sınıfı ek bir yöntemi `WriteFileInfo`ekler, ve yazılabilir dosyanın tanıtıcısını kaydırmak için bir <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> nesnesi kullanır.  
   
 [!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
 [!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]  

@@ -1,122 +1,120 @@
 ---
-title: 'Öğretici: Regresyon kullanarak fiyatlarını tahmin etme'
-description: Bu öğreticide, özellikle fiyatlarını tahmin etmek için New York City taksi fares ML.NET kullanarak bir regresyon modeli derler gösterilmektedir.
-author: jralexander
-ms.author: johalex
+title: 'Öğretici: Gerileme kullanarak fiyatları tahmin etme'
+description: Bu öğreticide, özellikle New York City taksi Fares fiyatlarını tahmin etmek için ml.NET kullanarak bir gerileme modelinin nasıl oluşturulacağı gösterilmektedir.
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 40f70b6d89bf19ae0b20cb00d56e9f7dceb48f61
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: fe3afab4cbd3f77ed4498cc5081180910d7d0b9e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377788"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666620"
 ---
-# <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Öğretici: ML.NET ile regresyon kullanarak fiyatlarını tahmin etme
+# <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Öğretici: ML.NET ile gerileme kullanarak fiyatları tahmin etme
 
-Bu öğreticide nasıl oluşturulacağını gösterir. bir [regresyon modeli](../resources/glossary.md#regression) Fiyatlar, özellikle tahmin etmek için New York City taksi fares ML.NET kullanma.
+Bu öğreticide, özellikle New York City taksi Fares fiyatlarını tahmin etmek için ml.NET kullanarak bir [gerileme modelinin](../resources/glossary.md#regression) nasıl oluşturulacağı gösterilmektedir.
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
-> * Hazırlama ve verileri anlama
-> * Yükleme ve dönüştürme
+> * Verileri hazırlama ve anlama
+> * Verileri yükleme ve dönüştürme
 > * Bir öğrenme algoritması seçin
 > * Modeli eğitme
 > * Modeli değerlendirme
-> * Kullanım modeli tahminler elde etmek için
+> * Tahmin için modeli kullanma
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* [Visual Studio 2017 15.6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) yüklü ".NET Core çoklu platform geliştirme" iş yüküyle birlikte sağlanır.
+* [Visual Studio 2017 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
-1. Oluşturma bir **.NET Core konsol uygulaması** "TaxiFarePrediction" denir.
+1. "Taxifaretahminini" adlı bir **.NET Core konsol uygulaması** oluşturun.
 
-1. Adlı bir dizin oluşturmak *veri* projenizdeki veri kümesi ve model dosyaları depolamak için.
+1. Veri kümesi ve model dosyalarını depolamak için projenizde *veri* adlı bir dizin oluşturun.
 
-1. Yükleme **Microsoft.ML** NuGet paketi:
+1. **Microsoft.ml** NuGet paketini yükler:
 
-    İçinde **Çözüm Gezgini**, projeye sağ tıklayıp seçin **NuGet paketlerini Yönet**. Paket kaynağı, seçin "nuget.org" seçin **Gözat** sekmesinde, arama **Microsoft.ML**, listeden bir paket seçin ve seçin **yükleme** düğmesi. Seçin **Tamam** düğmesini **Değişiklikleri Önizle** iletişim ve ardından **kabul ediyorum** düğmesini **lisans kabulü** iletişim varsa, listelenen paketlerin lisans koşullarını kabul etmiş olursunuz. İçin de aynısını yapın **Microsoft.ML.FastTree** Nuget paketi.
+    **Çözüm Gezgini**, projeye sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, **Araştır** sekmesini seçin, **Microsoft.ml**için arama yapın, listeden paketi seçin ve sonra da **Install** düğmesini seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin. **Microsoft. ml. FastTree** NuGet paketi için de aynısını yapın.
 
-## <a name="prepare-and-understand-the-data"></a>Hazırlama ve verileri anlama
+## <a name="prepare-and-understand-the-data"></a>Verileri hazırlama ve anlama
 
-1. İndirme [taksi taksi train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) ve [taksi taksi test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) veri ayarlar ve bunları kaydetmek *veri* önceki adımda oluşturduğunuz klasör. Machine learning modeli eğitmek ve modelin nasıl doğru olup'ı değerlendirmek için bu veri kümesi kullanıyoruz. Bu veri kümesi başlangıçta arasındadır [NYC TLC taksi seyahat veri kümesi](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml).
+1. [Taxi-fare-train. csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) ve [Taxi-fare-test. csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) veri kümelerini indirin ve önceki adımda oluşturduğunuz *veri* klasörüne kaydedin. Machine Learning modelini eğitmek için bu veri kümelerini kullanıyoruz ve sonra modelin ne kadar doğru olduğunu değerlendirin. Bu veri kümeleri başlangıçta [NYC TLC TAXI seyahat veri kümesinden](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)alınır.
 
-1. İçinde **Çözüm Gezgini**, her birini sağ tıklayın \*.csv dosyalarını ve select **özellikleri**. Altında **Gelişmiş**, değiştirin **çıkış dizinine Kopyala** için **yeniyse Kopyala**.
+1. **Çözüm Gezgini**, \*. csv dosyalarının her birine sağ tıklayın ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala**olarak değiştirin.
 
-1. Açık **taksi taksi train.csv** veri kümesi ve ilk satırında sütun üst bilgilerini bakın. Her sütun bir göz atın. Verileri anlamak ve hangi sütunların karar **özellikleri** hangisinin **etiket**.
+1. **Taxi-fare-train. csv** veri kümesini açın ve ilk satırdaki sütun başlıklarına bakın. Her sütuna göz atın. Verileri anlayın ve hangi sütunların **Özellikler** olduğunu ve hangisinin **etiket**olduğunu belirleyin.
 
-`label` Tahmin etmek istediğiniz sütun. Tanımlanan `Features`modeli tahmin etmek için size girişleri `Label`.
+`label` Tahmin etmek istediğiniz sütundur. `Features` ,`Label`Modeli tahmin etmek için size izin verdiğiniz girişlerdir.
 
-Sağlanan veri kümesi şu sütunları içerir:
+Belirtilen veri kümesi şu sütunları içerir:
 
-* **vendor_id:** Taksi satıcı kimliği bir özelliktir.
-* **rate_code:** Taksi dönüş oranı türünü bir özelliktir.
-* **passenger_count:** Bir özellik Yolcuların seyahat üzerinde sayısıdır.
-* **trip_time_in_secs:** Seyahat geçen süre miktarı. Seyahat, taksi seyahat tamamlanmadan önce tahmin etmek istersiniz. Bu ne kadar seyahat bilmiyorum dakikamızı ayıralım. Bu nedenle, seyahat süresi, bir özellik değildir ve bu sütunu modelden dışında bırakacağız.
-* **trip_distance:** Seyahat mesafesini bir özelliktir.
-* **payment_type:** Ödeme yöntemini (nakit veya kredi kartı) bir özelliktir.
-* **fare_amount:** Ücretli toplam taksi taksi etiketi olur.
+* **vendor_id:** Taxı satıcısının KIMLIĞI bir özelliktir.
+* **rate_code:** Taxı seyahati 'ın hız türü bir özelliktir.
+* **passenger_count:** Seyahat üzerindeki pascuların sayısı bir özelliktir.
+* **trip_time_in_secs:** Seyahati için geçen süre. Seyahat tamamlanmadan önce seyahat tarifeli havayolu tahmin etmek istiyorsunuz. Bu anda seyahati ne kadar süreyle yapılacağını bilemezsiniz. Bu nedenle, seyahat süresi bir özellik değildir ve bu sütunu modelden dışlayabilirsiniz.
+* **trip_distance:** Seyahat uzaklığı bir özelliktir.
+* **payment_type:** Ödeme yöntemi (nakit veya kredi kartı) bir özelliktir.
+* **fare_amount:** Ödenen toplam TAXI tarifeli havayolu etikettir.
 
 ## <a name="create-data-classes"></a>Veri sınıfları oluşturma
 
-Girdi verilerini ve Öngörüler için sınıflar oluşturun:
+Giriş verileri ve tahminleri için sınıflar oluşturun:
 
-1. İçinde **Çözüm Gezgini**projeye sağ tıklayın ve ardından **Ekle** > **yeni öğe**.
-1. İçinde **Yeni Öğe Ekle** iletişim kutusunda **sınıfı** değiştirip **adı** alanı *TaxiTrip.cs*. Ardından, **Ekle** düğmesi.
-1. Aşağıdaki `using` yeni dosya için yönergeler:
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından**Yeni öğe** **Ekle** > ' yi seçin.
+1. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *TaxiTrip.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
+1. Aşağıdaki `using` yönergeleri yeni dosyaya ekleyin:
 
    [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#1 "Add necessary usings")]
 
-Varolan sınıf tanımına kaldırın ve iki sınıf olan aşağıdaki kodu ekleyin `TaxiTrip` ve `TaxiTripFarePrediction`, *TaxiTrip.cs* dosyası:
+Mevcut sınıf tanımını kaldırın ve iki sınıfa `TaxiTrip` ve `TaxiTripFarePrediction`TaxiTrip.cs dosyasına sahip olan aşağıdaki kodu ekleyin:
 
 [!code-csharp[DefineTaxiTrip](~/samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
 
-`TaxiTrip` giriş verisi sınıfıdır ve her bir veri kümesi sütunları tanımlarına sahip. Kullanım <xref:Microsoft.ML.Data.LoadColumnAttribute> veri kümesinde kaynak sütunları dizin belirtmek için özniteliği.
+`TaxiTrip`, giriş veri sınıfıdır ve veri kümesi sütunlarının her biri için tanımlar içerir. Veri kümesindeki kaynak sütunlarının dizinlerini belirtmek için özniteliğinikullanın.<xref:Microsoft.ML.Data.LoadColumnAttribute>
 
-`TaxiTripFarePrediction` Sınıfı, tahmini sonuçlar'ı temsil eder. Tek bir kayan noktalı sayı alana sahip `FareAmount`, ile bir `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> özniteliği uygulandı. Regresyon görev durumunda **puanı** sütun tahmin edilen etiket değerlerini içerir.
+`TaxiTripFarePrediction` Sınıfı tahmin edilen sonuçları temsil eder. Özniteliği uygulanmış tek bir float alanı `FareAmount` `Score` vardır. <xref:Microsoft.ML.Data.ColumnNameAttribute> Regresyon görevi söz konusu olduğunda, **puan** sütunu tahmin edilen etiket değerlerini içerir.
 
 > [!NOTE]
-> Kullanım `float` giriş ve tahmin verilerini sınıflardaki kayan nokta değerlerini temsil eden tür.
+> Giriş ve tahmin veri sınıflarında kayan nokta değerlerini göstermek için türünükullanın.`float`
 
-### <a name="define-data-and-model-paths"></a>Veri ve model tanımlar
+### <a name="define-data-and-model-paths"></a>Veri ve model yollarını tanımlama
 
-Aşağıdaki ek ekleyin `using` üst tarafına deyimlerini *Program.cs* dosyası:
+Aşağıdaki ek `using` deyimlerini *program.cs* dosyasının en üstüne ekleyin:
 
 [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
-Veri kümeleri dosyalarına ve modeli kaydedin ve dosyaya yolları tutmak için üç alanı oluşturmanız gerekir:
+Veri kümelerine sahip dosyaların yollarını tutmak için üç alan oluşturmanız ve modelin kaydedileceği dosyanın olması gerekir:
 
-* `_trainDataPath` modeli eğitmek için kullanılan veri kümesiyle dosyasının yolunu içerir.
-* `_testDataPath` model değerlendirmek için kullanılan veri kümesiyle dosyasının yolunu içerir.
-* `_modelPath` eğitilen modelin depolandığı dosya yolu içerir.
+* `_trainDataPath`modeli eğitmek için kullanılan veri kümesiyle dosyanın yolunu içerir.
+* `_testDataPath`modeli değerlendirmek için kullanılan veri kümesiyle dosyanın yolunu içerir.
+* `_modelPath`eğitilen modelin depolandığı dosyanın yolunu içerir.
 
-Aşağıdaki kod üzerinde doğru `Main` yöntemi bu yollarını belirtmek için ve `_textLoader` değişkeni:
+Bu yolları ve `Main` `_textLoader` değişkeni belirtmek için yönteminin hemen üstüne aşağıdaki kodu ekleyin:
 
 [!code-csharp[InitializePaths](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
 
-Tüm ML.NET işlemleri başlangıç süresi [MLContext sınıfı](xref:Microsoft.ML.MLContext). Başlatma `mlContext` modeli oluşturma iş akışı nesneleri arasında paylaşılabilir bir yeni ML.NET ortamı oluşturur. Bu, kavramsal olarak, benzer `DBContext` Entity Framework.
+Tüm ML.NET işlemleri [Mlcontext sınıfında](xref:Microsoft.ML.MLContext)başlar. Başlatma `mlContext` , model oluşturma iş akışı nesneleri genelinde paylaşılabilecek yeni bir ml.net ortamı oluşturur. Entity Framework, kavramsal `DBContext` olarak da benzerdir.
 
-### <a name="initialize-variables-in-main"></a>Ana değişkenleri başlatma
+### <a name="initialize-variables-in-main"></a>Değişkenleri ana olarak Başlat
 
-Değiştirin `Console.WriteLine("Hello World!")` satırına `Main` bildirmek ve başlatmak için aşağıdaki kod ile yöntemi `mlContext` değişkeni:
+Yöntemi bildirmek ve başlatmak`mlContext` için yöntemindeki satırıaşağıdakikodladeğiştirin:`Console.WriteLine("Hello World!")` `Main`
 
 [!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
 
-Sonraki kod satırı olarak ekleyin `Main` çağrılacak yöntem `Train` yöntemi:
+Yöntemi çağırmak için `Main` yöntemi içindeki sonraki kod satırı olarak aşağıdakini ekleyin: `Train`
 
 [!code-csharp[Train](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#5 "Train your model")]
 
 `Train()` Yöntemi aşağıdaki görevleri yürütür:
 
 * Verileri yükler.
-* Ayıklar ve verileri dönüştürür.
-* Modeli eğitir.
-* Model döndürür.
+* Verileri ayıklar ve dönüştürür.
+* Modeli TRAIN.
+* Modeli döndürür.
 
-`Train` Yöntemi modeli eğitir. Bu yöntem oluşturma hemen altına `Main`, aşağıdaki kodu kullanarak:
+`Train` Yöntemi modeli TRAIN. Aşağıdaki kodu kullanarak bu yöntemi `Main`hemen aşağıda oluşturun:
 
 ```csharp
 public static ITransformer Train(MLContext mlContext, string dataPath)
@@ -125,47 +123,47 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 }
 ```
 
-## <a name="load-and-transform-data"></a>Veri yükleme ve dönüştürme
+## <a name="load-and-transform-data"></a>Verileri yükleme ve dönüştürme
 
-ML.NET kullanan [IDataView sınıfı](xref:Microsoft.ML.IDataView) sayısal ya da metin tablosal verileri açıklamak esnek ve verimli bir yolu olarak. `IDataView` iki metin dosyalarını yükleyebilir veya gerçek zamanlı olarak (örneğin, SQL veritabanı veya günlük dosyaları). İlk satırı olarak aşağıdaki kodu ekleyin `Train()` yöntemi:
+ML.NET, sayısal veya metin tablolu verileri tanımlamaya yönelik esnek ve verimli bir yöntem olarak [ıdataview sınıfını](xref:Microsoft.ML.IDataView) kullanır. `IDataView`metin dosyalarını veya gerçek zamanlı olarak yükleyebilirsiniz (örneğin, SQL veritabanı veya günlük dosyaları). Aşağıdaki kodu `Train()` yönteminin ilk satırı olarak ekleyin:
 
 [!code-csharp[LoadTrainData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "loading training dataset")]
 
-Taksi seyahat taksi tahmin etmek istediğiniz gibi `FareAmount` sütun `Label` (modelin çıkış) tahmin kullanım `CopyColumnsEstimator` kopyalamak için dönüştürme sınıfına `FareAmount`ve aşağıdaki kodu ekleyin: 
+Taxı seyahat tarifeli havayolu `FareAmount` tahmin etmek istediğinizde, `Label` bu sütun tahmin edilecek (modelin çıktısı), kopyalamak `FareAmount`için `CopyColumnsEstimator` dönüştürme sınıfını kullanın ve aşağıdaki kodu ekleyin: 
 
 [!code-csharp[CopyColumnsEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
 
-Modeli eğitir algoritması **sayısal** kategorik verileri dönüştürmek zorunda özellikleri (`VendorId`, `RateCode`, ve `PaymentType`) içine numaraları değerleri (`VendorIdEncoded`, `RateCodeEncoded`, ve `PaymentTypeEncoded`). Bunu yapmak için kullanın [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) atayan farklı sayısal dönüştürme sınıfına anahtar sütunları farklı değerlerle değerlerini ve aşağıdaki kodu ekleyin:
+Modeli gösteren algoritma **sayısal** Özellikler`VendorId`gerektirir, bu nedenle kategorik verileri (, `RateCode`ve `PaymentType`) değerlerini sayılara (`VendorIdEncoded`, `RateCodeEncoded`, ve `PaymentTypeEncoded`) dönüştürmeniz gerekir. Bunu yapmak için, sütunların her birinde farklı değerlere farklı sayısal anahtar değerleri atayan [Onehotencodingtransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) dönüştürme sınıfını kullanın ve aşağıdaki kodu ekleyin:
 
 [!code-csharp[OneHotEncodingEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Use the OneHotEncodingEstimator")]
 
-Veri hazırlama son adımda tüm özellik sütunlara birleştirir **özellikleri** sütun kullanarak `mlContext.Transforms.Concatenate` dönüştürme sınıfı. Varsayılan olarak, bir öğrenme algoritması yalnızca özelliklerinden işler **özellikleri** sütun. Aşağıdaki kodu ekleyin:
+Veri hazırlığının son adımı, tüm özellik sütunlarını, `mlContext.Transforms.Concatenate` dönüştürme sınıfını kullanarak **Özellikler** sütunuyla birleştirir. Varsayılan olarak, bir öğrenme algoritması yalnızca **Özellikler** sütunundaki özellikleri işler. Aşağıdaki kodu ekleyin:
 
 [!code-csharp[ColumnConcatenatingEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Use the ColumnConcatenatingEstimator")]
 
 ## <a name="choose-a-learning-algorithm"></a>Bir öğrenme algoritması seçin
 
-Bu sorun, taksi seyahat taksi da oturan tahmin etme hakkında olmasıdır. İlk bakışta takip edilerek özgün uzaklık üzerinde yalnızca bağımlı görünüyor olabilir. Ancak, New York taksi satıcıları ek Yolcuların veya nakit yerine bir kredi kartıyla ödeme gibi diğer faktörlere için değişken miktarda ücret alınır. Veri kümesindeki diğer etkenlere göre bir gerçek değer için fiyat değerini tahmin etmek istersiniz. Bunu yapmak için seçtiğiniz bir [regresyon](../resources/glossary.md#regression) machine learning görev.
+Bu sorun, New York şehrinde bir TAXI seyahat tarifeli havayolu tahmin etmeye yönelik olarak tasarlanmıştır. İlk bakışta, yalnızca seyahat mesafesini temel alan görünebilir. Ancak, New York 'taki TAXI satıcıları, ek Pastörler veya nakit yerine kredi kartıyla ödeme yapma gibi diğer faktörlere göre farklılık gösteren ücretler ücretlendirir. Veri kümesindeki diğer faktörlere bağlı olarak gerçek bir değer olan fiyat değerini tahmin etmek istiyorsunuz. Bunu yapmak için bir [gerileme](../resources/glossary.md#regression) makine öğrenimi görevi seçersiniz.
 
-Append [FastTreeRegressionTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer) sonraki kod satırı olarak aşağıdakileri ekleyerek veri dönüştürme tanımlarını için machine learning görev `Train()`:
+Aşağıdaki kod `Train()`satırı olarak aşağıdakini ekleyerek [Fasttreeregressiontrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer) Machine Learning görevini veri dönüştürme tanımlarına ekleyin:
 
 [!code-csharp[FastTreeRegressionTrainer](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#10 "Add the FastTreeRegressionTrainer")]
 
 ## <a name="train-the-model"></a>Modeli eğitme
 
-Eğitim modeline uygun `dataview` ve eğitim modeli, kod aşağıdaki satırı ekleyerek dönüş `Train()` yöntemi:
+Aşağıdaki kod satırını `Train()` yönteme ekleyerek modeli `dataview` eğitimine sığdırın ve eğitilen modeli döndürün:
 
 [!code-csharp[TrainModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
 
-[Fit()](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) yöntemi, veri dönüştürme ve eğitim uygulayarak modelinizi eğitir.
+[Fit ()](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) yöntemi, veri kümesini dönüştürerek ve eğitimi uygulayarak modelinizi eğitme.
 
-Aşağıdaki kod satırı ile eğitilmiş modelin dönüş `Train()` yöntemi:
+Aşağıdaki kod `Train()` satırıyla eğitilen modeli döndürün:
 
 [!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#12 "Return the model")]
 
 ## <a name="evaluate-the-model"></a>Modeli değerlendirme
 
-Ardından, kalite güvencesi ve doğrulama test verilerinizle, model performansını değerlendirme. Oluşturma `Evaluate()` yöntemi hemen sonrasına `Train()`, aşağıdaki kod ile:
+Daha sonra, kalite güvencesi ve doğrulama için test verilerinize ait model performansınızı değerlendirin. Aşağıdaki kodla hemen sonra `Train()` yöntemioluşturun:`Evaluate()`
 
 ```csharp
 private static void Evaluate(MLContext mlContext, ITransformer model)
@@ -177,33 +175,33 @@ private static void Evaluate(MLContext mlContext, ITransformer model)
 `Evaluate` Yöntemi aşağıdaki görevleri yürütür:
 
 * Test veri kümesini yükler.
-* Regresyon değerlendirici oluşturur.
-* Model değerlendirir ve ölçüm oluşturur.
+* Regresyon Değerlendiricisi oluşturur.
+* Modeli değerlendirir ve ölçümler oluşturur.
 * Ölçümleri görüntüler.
 
-Yeni yönteme bir çağrı ekleyin `Main` yöntemi, sağda altında `Train` yöntemi çağrısı, aşağıdaki kodu kullanarak:
+Aşağıdaki kodu kullanarak yöntem çağrısının hemen `Main` `Train` altına, yönteminden yeni yönteme bir çağrı ekleyin:
 
 [!code-csharp[CallEvaluate](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#14 "Call the Evaluate method")]
 
-Test veri kümesini kullanarak yük [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) yöntemi. Bu veri kümesi kalite kontrolü kullanarak modeli değerlendirin aşağıdaki kodu ekleyerek `Evaluate` yöntemi:
+[Loadfromtextfile ()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) yöntemini kullanarak test veri kümesini yükleyin. `Evaluate` Yöntemine aşağıdaki kodu ekleyerek bu veri kümesini bir kalite denetimi olarak kullanarak modeli değerlendirin:
 
 [!code-csharp[LoadTestDataset](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#15 "Load the test dataset")]
 
-Ardından, dönüştürme `Test` aşağıdakileri ekleyerek veri kod için `EvaluateModel()`:
+Ardından, aşağıdaki kodu `Test` öğesine `EvaluateModel()`ekleyerek verileri dönüştürün:
 
 [!code-csharp[PredictWithTransformer](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
 
-[Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) yöntemi giriş veri kümesi satırlarında test için Öngörüler sağlar.
+[Transform ()](xref:Microsoft.ML.ITransformer.Transform%2A) yöntemi, test veri kümesi giriş satırları için tahminleri yapar.
 
-`RegressionContext.Evaluate` Yöntemi hesaplar için Kalite Ölçümleri `PredictionModel` belirtilen veri kümesi kullanma. Döndürür bir <xref:Microsoft.ML.Data.RegressionMetrics> regresyon değerlendiricisi tarafından hesaplanan toplam ölçümleri içeren nesne. 
+`RegressionContext.Evaluate` Yöntemi ,`PredictionModel` belirtilen veri kümesini kullanarak için kalite ölçümlerini hesaplar. Regresyon değerlendiricileri tarafından <xref:Microsoft.ML.Data.RegressionMetrics> hesaplanan genel ölçümleri içeren bir nesne döndürür. 
 
-Model kalitesini belirlemek için bunları görüntülemek için ölçümleri ilk almanız gerekir. Sonraki satırda olarak aşağıdaki kodu ekleyin `Evaluate` yöntemi:
+Modelin kalitesini belirlemede bunları göstermek için öncelikle ölçümleri almanız gerekir. Aşağıdaki kodu `Evaluate` yönteminin sonraki satırı olarak ekleyin:
 
 [!code-csharp[ComputeMetrics](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#17 "Compute Metrics")]
 
-Ayarlanırsa, tahmin sonra [Evaluate()](xref:Microsoft.ML.RegressionCatalog.Evaluate%2A) yöntemi değerlendirir gerçek tahmin edilen değerlerle karşılaştırır modeli `Labels` modelin nasıl performans gösterdiğini üzerinde test veri kümesini ve döndürür ölçümleri de.
+Tahmin kümesine sahip olduktan sonra, tahmin edilen değerleri test veri kümesindeki gerçek `Labels` ile karşılaştıran ve modelin nasıl çalıştığı hakkında ölçümler döndüren [değerlendir ()](xref:Microsoft.ML.RegressionCatalog.Evaluate%2A) yöntemi, modeli değerlendirir.
 
-Modeli değerlendirme ve değerlendirme ölçümleri üretmek için aşağıdaki kodu ekleyin:
+Modeli değerlendirmek ve değerlendirme ölçümlerini oluşturmak için aşağıdaki kodu ekleyin:
 
 ```csharp
 Console.WriteLine();
@@ -212,17 +210,17 @@ Console.WriteLine($"*       Model quality metrics evaluation         ");
 Console.WriteLine($"*------------------------------------------------");
 ```
 
-[RSquared](../resources/glossary.md#coefficient-of-determination) regresyon modelleri, başka bir değerlendirme unsurdur. RSquared 0 ile 1 arasındaki değerleri alır. Daha değerini 1 olarak daha iyi modelidir yakınız. Aşağıdaki kodu ekleyin `Evaluate` yöntemi RSquared değerini görüntülemek için:
+[RKARE](../resources/glossary.md#coefficient-of-determination) , regresyon modellerinin başka bir değerlendirme ölçümdür. RKARE 0 ile 1 arasında değerleri alır. Daha yakın değeri 1 ' dir, model daha iyidir. RKARE değerini göstermek için `Evaluate` yöntemine aşağıdaki kodu ekleyin:
 
 [!code-csharp[DisplayRSquared](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#18 "Display the RSquared metric.")]
 
-[RMS](../resources/glossary.md##root-of-mean-squared-error-rmse) gerileme modelini değerlendirme ölçümlerini biridir. Daha düşük olan, daha iyi modelidir. Aşağıdaki kodu ekleyin `Evaluate` yöntemi RMS değerini görüntülemek için:
+[RMS](../resources/glossary.md##root-of-mean-squared-error-rmse) , regresyon modelinin değerlendirme ölçümlerinden biridir. Bunun ne kadar küçük olması, modelin ne kadar iyi olduğu. RMS değerini göstermek için `Evaluate` yöntemine aşağıdaki kodu ekleyin:
 
 [!code-csharp[DisplayRMS](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#19 "Display the RMS metric.")]
 
-## <a name="use-the-model-for-predictions"></a>Kullanım modeli tahminler elde etmek için
+## <a name="use-the-model-for-predictions"></a>Tahmin için modeli kullanma
 
-Oluşturma `TestSinglePrediction` yöntemi hemen sonrasına `Evaluate` yöntemi, aşağıdaki kodu kullanarak:
+Aşağıdaki kodu kullanarak yönteminden hemen `Evaluate` sonra yönteminioluşturun:`TestSinglePrediction`
 
 ```csharp
 private static void TestSinglePrediction(MLContext mlContext, ITransformer model)
@@ -233,51 +231,51 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 
 `TestSinglePrediction` Yöntemi aşağıdaki görevleri yürütür:
 
-* Test verilerini tek bir yorum oluşturur.
-* Test verilerini temel alarak taksi miktarı tahmin eder.
-* Bir araya getirir, verileri ve raporlama için Öngörüler test edin.
+* Test verileri için tek bir açıklama oluşturur.
+* Sınama verilerine göre tarifeli havayolu miktarını tahmin eder.
+* Raporlama için test verilerini ve tahminleri birleştirir.
 * Tahmin edilen sonuçları görüntüler.
 
-Yeni yönteme bir çağrı ekleyin `Main` yöntemi, sağda altında `Evaluate` yöntemi çağrısı, aşağıdaki kodu kullanarak:
+Aşağıdaki kodu kullanarak yöntem çağrısının hemen `Main` `Evaluate` altına, yönteminden yeni yönteme bir çağrı ekleyin:
 
 [!code-csharp[CallTestSinglePrediction](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#20 "Call the TestSinglePrediction method")]
 
-Kullanım `PredictionEngine` taksi aşağıdaki kodu ekleyerek tahmin etmek için `TestSinglePrediction()`:
+Aşağıdaki kodu öğesine `TestSinglePrediction()`ekleyerek tarifeli havayolu tahmin etmekiçinkullanın:`PredictionEngine`
 
 [!code-csharp[MakePredictionEngine](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
 
-[PredictionEngine sınıfı](xref:Microsoft.ML.PredictionEngine%602) verileri tek bir örneğini geçirin ve sonra bir öngörü üzerinde gerçekleştirmek izin veren bir kolaylık API.
+[PredictionEngine sınıfı](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğini geçirmenize ve sonra bir tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir.
 
-Bu öğretici, bu sınıf içinde bir test seyahat kullanır. Daha sonra modeli denemek için diğer senaryolar ekleyebilirsiniz. Eğitilen modelin Maliyet tahminini test etmek için bir seyahat ekleme `TestSinglePrediction()` bir örneğini oluşturarak yöntemi `TaxiTrip`:
+Bu öğretici, bu sınıf içinde bir test yolculuğu kullanır. Daha sonra, modelle denemeler yapmak için başka senaryolar da ekleyebilirsiniz. `TestSinglePrediction()` Bir`TaxiTrip`örneği oluşturarak eğitilen modelin Maliyet tahminini test etmek için bir seyahat ekleyin:
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
-Ardından, taksi seyahat verilerini tek bir örneği temel taksi tahmin edin ve geçirin `PredictionEngine` aşağıdaki kodda bir sonraki satırı olarak ekleyerek `TestSinglePrediction()` yöntemi:
+Sonra, tarifeli havayolu öğesini bir taksi seyahat verisinin tek bir örneğine göre tahmin edin ve aşağıdaki kod `PredictionEngine` `TestSinglePrediction()` satırları yöntemine ekleyerek bunu öğesine geçirin:
 
 [!code-csharp[Predict](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 
-[Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) işlevi verileri tek bir örneği üzerinde bir tahmin sağlar.
+[Tahmin ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) işlevi, verilerin tek bir örneğini tahmin eder.
 
-Belirtilen seyahat, tahmin edilen taksi görüntülemek için aşağıdaki kodu ekleyin. `TestSinglePrediction` yöntemi:
+Belirtilen seyahati için öngörülen tarifeli havayolu 'yi göstermek için aşağıdaki kodu `TestSinglePrediction` yöntemine ekleyin:
 
 [!code-csharp[Predict](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#25 "Display the prediction.")]
 
-Test durumunuz için tahmin edilen taksi taksi görmek için programı çalıştırın.
+Test çalışmanıza yönelik tahmini TAXI tarifeli havayolu görmek için programı çalıştırın.
 
-Tebrikler! Başarıyla taksi seyahat fares tahmin etmeye yönelik bir machine learning modeli, doğruluğunun değerlendirilir, derleyip tahminlerde bulunmak için kullanılır. Bu öğreticide kaynak kodunu bulabilirsiniz [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) GitHub deposu.
+Tebrikler! Artık TAXI seyahat Fares 'yi tahmin etmek için bir makine öğrenimi modelini başarıyla oluşturdunuz, doğruluğu değerlendirildi ve tahmine dayalı hale getirmek için kullandınız. Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) GitHub deposunda bulabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 
 > [!div class="checklist"]
-> * Hazırlama ve verileri anlama
+> * Verileri hazırlama ve anlama
 > * Öğrenme işlem hattı oluşturma
-> * Yükleme ve dönüştürme
+> * Verileri yükleme ve dönüştürme
 > * Bir öğrenme algoritması seçin
 > * Modeli eğitme
 > * Modeli değerlendirme
-> * Kullanım modeli tahminler elde etmek için
+> * Tahmin için modeli kullanma
 
 Daha fazla bilgi edinmek için sonraki öğreticiye ilerleyin.
 

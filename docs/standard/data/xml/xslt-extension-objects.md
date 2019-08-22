@@ -5,38 +5,38 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2efe31ce8ece241bdfeb95687c5496c7ba0fd626
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73afa1880bac5db7f8e28070afa878e70d263bd5
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615295"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666507"
 ---
 # <a name="xslt-extension-objects"></a>XSLT Genişletme Nesneleri
-Uzantı nesneler, stil sayfaları genişletmek için kullanılır. Genişletme nesneleri tarafından korunur <xref:System.Xml.Xsl.XsltArgumentList> sınıfı.  
+Uzantı nesneleri stil sayfalarının işlevlerini genişletmek için kullanılır. Uzantı nesneleri <xref:System.Xml.Xsl.XsltArgumentList> sınıfı tarafından korunur.  
   
- Ekli komut dosyası yerine bir uzantı nesnesi kullanmanın avantajları şunlardır:  
+ Katıştırılmış betik yerine uzantı nesnesi kullanmanın avantajları aşağıda verilmiştir:  
   
-- Daha iyi kapsülleme ve sınıfları kullanılmasını sağlar.  
+- Sınıfların daha iyi kapsüllemesini ve yeniden kullanılmasını sağlar.  
   
-- Stil sayfaları, daha küçük ve daha rahat olmasını sağlar.  
+- Stil sayfalarının daha küçük ve sürdürülebilir olmasını sağlar.  
   
- XSLT genişletme nesneleri eklenir <xref:System.Xml.Xsl.XsltArgumentList> kullanarak nesne <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi. Bir tam adı ve ad alanı URI o anda uzantısı nesnesi ile ilişkilendirilmiş.  
+ XSLT uzantı nesneleri <xref:System.Xml.Xsl.XsltArgumentList> nesnesine <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi kullanılarak eklenir. Tam ad ve ad alanı URI 'SI, o zaman uzantı nesnesiyle ilişkilendirilir.  
   
 > [!NOTE]
->  FullTrust izin kümesi çağrı için gerekli <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi. Daha fazla bilgi için [kod erişim güvenliği](../../../../docs/framework/misc/code-access-security.md) ve [adlandırılmış izin kümeleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
+>  <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> Yöntemi çağırmak için FullTrust izin kümesi gereklidir. Daha fazla bilgi için bkz. [kod erişimi güvenliği](../../../../docs/framework/misc/code-access-security.md) ve [adlandırılmış izin kümeleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
- Uzantı nesnelerinden döndürülen veri türleri dört temel XPath veri türlerinden biri: `number`, `string`, `Boolean`, ve `node set`.  
+ Uzantı nesnelerinden döndürülen `number`veri türleri `Boolean`, `string`,, ve `node set`' nin dört temel XPath veri türünden biridir.  
   
- Herhangi bir yöntemi ile tanımlanmış `params` geçirilecek parametreler belirtilmemiş bir sayısını veren anahtar sözcüğü, şu anda desteklenmiyor tarafından <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Herhangi bir yöntemi ile tanımlanmış yazılımınız XSLT stil sayfalarını `params` anahtar sözcüğü doğru şekilde çalışmaz. Ayrıntılar için bkz [params](~/docs/csharp/language-reference/keywords/params.md).  
+ Belirtilmemiş bir parametre sayısının geçirilmesine izin veren `params` anahtar sözcüğü ile tanımlanmış herhangi bir yöntem, şu anda <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı tarafından desteklenmemektedir. `params` Anahtar sözcükle tanımlanmış herhangi bir yöntemi kullanan XSLT stil sayfaları doğru çalışmaz. Ayrıntılar için bkz. [params](../../../csharp/language-reference/keywords/params.md).  
   
 ### <a name="to-use-an-xslt-extension-object"></a>XSLT uzantı nesnesi kullanmak için  
   
-1. Oluşturma bir <xref:System.Xml.Xsl.XsltArgumentList> nesne ve uzantısını kullanarak nesne eklemek <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi.  
+1. Bir <xref:System.Xml.Xsl.XsltArgumentList> nesne oluşturun ve yöntemi kullanarak <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> Uzantı nesnesini ekleyin.  
   
-2. Uzantı nesnesi stil sayfası içinden çağırın.  
+2. Uzantı nesnesini stil sayfasından çağırın.  
   
-3. Geçirmek <xref:System.Xml.Xsl.XsltArgumentList> nesnesini <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi.  
+3. <xref:System.Xml.Xsl.XsltArgumentList> Nesneyi<xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemine geçirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
