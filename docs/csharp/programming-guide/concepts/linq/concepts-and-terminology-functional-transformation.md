@@ -2,12 +2,12 @@
 title: Kavramlar ve terminoloji (Işlevsel dönüşüm) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: bf340b960a6770f972f545b23bd857afd4cb9ede
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: df8abe5b6815e2b9f1a9a1693944ddaa1c7c84cb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594589"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921944"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Kavramlar ve terminoloji (Işlevsel dönüşüm) (C#)
 Bu konu, saf işlevsel dönüştürmelerin kavramlarını ve terminolojisini tanıtır. Veri dönüştürme yaklaşımı, genellikle programa, daha ayrıntılı bir şekilde daha hızlı ve hata ayıklama ve daha geleneksel, kesinlik temelli programlama açısından daha kolay olan kodu verir.  
@@ -22,7 +22,7 @@ Bu konu, saf işlevsel dönüştürmelerin kavramlarını ve terminolojisini tan
 - *Durum bilgisiz*, aynı veya aynı girişte aynı işlevin veya belirli bir işlev kümesinin yürütülmesi her zaman aynı çıkışa neden olur. Saf dönüşümlerinin önceki kullanımları belleği yoktur.  
   
 > [!IMPORTANT]
->  Bu öğreticinin geri kalanında, "saf işlev" terimi, belirli bir dil özelliği değil, programlama yaklaşımını göstermek için genel anlamda kullanılır.  
+> Bu öğreticinin geri kalanında, "saf işlev" terimi, belirli bir dil özelliği değil, programlama yaklaşımını göstermek için genel anlamda kullanılır.  
 >   
 >  Saf işlevlerin ' de C#Yöntem olarak uygulanması gerektiğini unutmayın.  
 >   

@@ -2,21 +2,21 @@
 title: <dispatcherSynchronization>
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
-ms.openlocfilehash: 6be9752e8102a5d4db4fed31aae8ff6d56fdd24e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7336c9f7d8a117f9a9bfd338e47941eeb648fa51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673413"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925851"
 ---
 # <a name="dispatchersynchronization"></a>\<dispatcherSynchronization >
   
-Zaman uyumsuz yanıtlar göndermek bir hizmet sağlayan bir uç nokta davranışı belirtir.  
+Bir hizmetin yanıtları zaman uyumsuz olarak göndermesini sağlayan bir uç nokta davranışı belirtir.  
   
 \<system.serviceModel>  
 \<davranışlar >  
-\<endpointBehaviors>  
-\<davranışı >  
+\<Endpointdavranışlar >  
+\<davranış >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,7 +38,7 @@ Zaman uyumsuz yanıtlar göndermek bir hizmet sağlayan bir uç nokta davranış
 | Öznitelik               | Açıklama       |
 | ----------------------- | ----------------- |
 | asynchronousSendEnabled | Zaman uyumsuz gönderme davranışının etkin olup olmadığını belirten bir Boole değeri. |
-| `maxPendingReceives`    | Kanal sayısı eşzamanlı alımların belirten bir tamsayı verilebilir.<br /><br /> Bu değer yalnızca doğru hizmet azaltma davranışı yapılandırdıktan sonra yapılandırılmalıdır. |
+| `maxPendingReceives`    | Kanalda verilebilirler eşzamanlı alma sayısını belirten bir tamsayı.<br /><br /> Bu değer, hizmet azaltma davranışını doğru şekilde yapılandırdıktan sonra yapılandırılmalıdır. |
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -48,7 +48,7 @@ Yok.
 
 | Öğe | Açıklama |  
 | ------- | ----------- |  
-| [\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir uç nokta davranışı belirtir. |
+| [\<davranış >](behavior-of-endpointbehaviors.md)|Bir uç nokta davranışı belirtir. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

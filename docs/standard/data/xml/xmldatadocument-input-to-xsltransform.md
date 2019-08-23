@@ -5,22 +5,22 @@ ms.technology: dotnet-standard
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 308725ecc139d3c95ddff6bdf2d75746750673ce
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: a5c2fb203a1a6975d2b30e47528b15a9005a2583
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170850"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916018"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>XslTransform’a XmlDataDocument Girişi
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Sınıfı .NET Framework 2. 0'kullanılmıyor. Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) dönüştürmeleri için kullanarak gerçekleştirebileceğiniz <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Bkz: [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [geçirme gelen XslTransform sınıfı](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) daha fazla bilgi için.  
+> <xref:System.Xml.Xsl.XslTransform> Sınıf .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfını kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- Microsoft .NET Framework XML belgeleri ve okuma, yazma ve XML belgelerinde gezinmek için ek sınıfları verilere erişim sağlamak için XML belge nesne modeli'nı (DOM) uygular. <xref:System.Xml.XmlDataDocument>Bölümüyle <xref:System.Xml> ad alanı, ilişkisel verilerle eşitleme olanağı ile ilişkisel verilere erişim sağlar <xref:System.Data.DataSet>. Aynı anda görüntüleyebilir ve ilişkisel temsili aracılığıyla yapılandırılmış XML işlemek <xref:System.Data.DataSet> veya yarı yapılandırılmış XML DOM temsili aracılığıyla <xref:System.Xml.XmlDataDocument>. <xref:System.Xml.XmlDataDocument> Sınırları XML ilişkisel dünyaları ve bu nedenle aştığında.  
+ Microsoft .NET Framework XML belgelerindeki verilere erişim sağlamak için XML Belge Nesne Modeli (DOM) ve XML belgelerinde okuma, yazma ve gitme için ek sınıflar uygular. <xref:System.Xml> <xref:System.Data.DataSet>Ad alanında bulunan, ' deki ilişkisel verilerle eşitlenebilme özelliği ile verilere <xref:System.Xml.XmlDataDocument>ilişkisel erişim sağlar. Yapılandırılmış XML ' nin <xref:System.Data.DataSet> ilişkisel temsili aracılığıyla aynı anda görüntüleyebilir ve işleyebilir ya da yarı yapılandırılmış XML 'i <xref:System.Xml.XmlDataDocument>öğesinin Dom temsili aracılığıyla yönetebilirsiniz. <xref:System.Xml.XmlDataDocument> Bu nedenle, XML ve ilişkisel çalışma LDS sınırlarını keser.  
   
- Veriler, ilişkisel bir yapıda depolanır ve girdi olmaya uygun bir XSLT dönüşümü istediğiniz, ilişkisel verileri yükleyebilir bir <xref:System.Data.DataSet> ilişkilendirin <xref:System.Xml.XmlDataDocument>. <xref:System.Xml.XPath.XPathNavigator>, Giriş <xref:System.Xml.Xsl.XslTransform>, üzerinde uygulanan <xref:System.Xml.XmlDataDocument> aracılığıyla <xref:System.Xml.XPath.IXPathNavigable> arabirimi. İlişkisel veri yararlanarak, içine yüklenirken bir <xref:System.Data.DataSet>ve içinde eşitleme kullanarak <xref:System.Xml.XmlDataDocument>, ilişkisel veriler üzerinde gerçekleştirilen XSLT dönüşümleri artık sahip olabilir.  
+ Veriler ilişkisel bir yapıda depolanıyorsa ve bir XSLT dönüşümüne giriş olmasını istiyorsanız ilişkisel verileri bir <xref:System.Data.DataSet> öğesine yükleyebilir ve <xref:System.Xml.XmlDataDocument>ile ilişkilendirebilirsiniz. , ' A giriş, <xref:System.Xml.XPath.IXPathNavigable> arabirimi <xref:System.Xml.Xsl.XslTransform> <xref:System.Xml.XmlDataDocument> aracılığıyla öğesine uygulanır. <xref:System.Xml.XPath.XPathNavigator> İlişkisel verileri alarak, bir <xref:System.Data.DataSet>öğesine yükleyerek ve <xref:System.Xml.XmlDataDocument>içinde eşitlemeyi kullanarak, ilişkisel veriler artık üzerinde XSLT dönüştürmeleri gerçekleştirebilir.  
   
- İlişkisel verilere dönüşüm uygulamadan daha fazla bilgi için bkz: [bir veri kümesi için bir XSLT dönüştürme uygulama](../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md).  
+ İlişkisel verilere dönüşüm uygulama hakkında daha fazla bilgi için bkz. [DataSet 'e XSLT dönüşümü uygulama](../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

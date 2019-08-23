@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 6494a154b9b4bd5bf29fc0e2fbd0b4e5e84550ff
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c05e849705f851b51a362d3a1d1d3f81a9eaf0e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364169"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923603"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Denetim ve Bileşen Yazmada Sorun Giderme
 Bu konuda, bileşenleri ve denetimleri geliştirirken ortaya çıkan aşağıdaki yaygın sorunlar listelenmektedir. Daha fazla bilgi için bkz. [bileşenlerle programlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -96,7 +96,7 @@ Bu konuda, bileşenleri ve denetimleri geliştirirken ortaya çıkan aşağıdak
  Hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio 'da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio) ve [izlenecek yol: Tasarım zamanında](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)özel Windows Forms Denetimlerinde hata ayıklama.  
   
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>Devralınan denetimde veya bileşende olay Iki kez getirilir  
- Bunun nedeni, bir yinelenen `Handles` yan tümcesi olabilir. Daha fazla bilgi için bkz. [Visual Basic devralınan olay Işleyicilerinin sorunlarını giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
+ Bunun nedeni, bir yinelenen `Handles` yan tümcesi olabilir. Daha fazla bilgi için bkz. [Visual Basic devralınan olay Işleyicilerinin sorunlarını giderme](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
 ## <a name="design-time-error-failed-to-create-component-component-name"></a>Tasarım zamanı hatası: "'" Bileşen adı ' "bileşeni oluşturulamadı  
  Bileşeninizin veya denetiminizin parametresiz bir Oluşturucu sağlaması gerekir. Tasarım ortamı, bileşeninizin veya denetiminizin bir örneğini oluşturduğunda, parametreleri alan Oluşturucu aşırı yüklerini parametre sağlamaya çalışmaz.  

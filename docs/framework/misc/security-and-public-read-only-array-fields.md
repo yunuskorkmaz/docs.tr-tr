@@ -6,25 +6,25 @@ helpviewer_keywords:
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19b5ad73150697c1442056642a1b11d504ecc426
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d36009fa4fc7b9299708768fe34a75f1fde6797
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61869752"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910731"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>Güvenlik ve Genel Salt Okunur Dizi Alanları
-Hiçbir zaman salt okunur genel dizi alanları salt okunur genel dizi alanları değiştirilebilir uygulamalarınızın güvenliği ve sınır davranışını tanımlamak için yönetilen kitaplıklarından kullanın.  
+Salt okuma genel dizi alanları değiştirilirken, uygulamanızın sınır davranışını veya güvenliğini tanımlamak için, yönetilen kitaplıklardan hiçbir şekilde salt okuma temelli dizi alanları kullanmayın.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bazı .NET framework sınıfları, platforma özgü sınır parametreleri içeren salt okunur ortak alanları içerir.  Örneğin, <xref:System.IO.Path.InvalidPathChars> dosya yol dizesi izin verilmeyen karakterler tanımlayan bir dizi bir alandır.  Pek çok benzer alanları, .NET Framework'de yok.  
+ Bazı .NET Framework sınıfları, platforma özgü sınır parametreleri içeren salt okunurdur ortak alanları içerir.  Örneğin, <xref:System.IO.Path.InvalidPathChars> alan, bir dosya yolu dizesinde izin verilmeyen karakterleri açıklayan bir dizidir.  .NET Framework boyunca birçok benzer alan mevcuttur.  
   
- Genel salt okunur alanların değerlerini ister <xref:System.IO.Path.InvalidPathChars> kodunuzu veya kodunuzun uygulama etki alanını paylaşan kod tarafından değiştirilebilir.  Uygulamalarınızı sınır davranışını tanımlamak için salt okunur genel dizi alanları böyle kullanmamanız gerekir.  Bunu yaparsanız, kötü amaçlı kod sınır tanımları alter ve kodunuzu beklenmedik bir şekilde kullanın.  
+ Gibi <xref:System.IO.Path.InvalidPathChars> genel salt okuma alanlarının değerleri, kodunuzun uygulama etki alanını paylaşan kodunuz veya kodunuz tarafından değiştirilebilir.  Uygulamalarınızın sınır davranışını tanımlamak için bu gibi salt okunurdur genel dizi alanlarını kullanmamalısınız.  Bunu yaparsanız, kötü amaçlı kod sınır tanımlarını değiştirebilir ve kodunuzu beklenmedik yollarla kullanabilir.  
   
- Sürüm 2.0 ve daha sonra .NET Framework, ortak bir dizi alanları kullanmak yerine yeni bir dizi döndüren yöntemler kullanmanız gerekir.  Örneğin, kullanmak yerine <xref:System.IO.Path.InvalidPathChars> alan kullanmalıdır <xref:System.IO.Path.GetInvalidPathChars%2A> yöntemi.  
+ Sürüm 2,0 ve .NET Framework üzeri sürümlerde, genel dizi alanlarını kullanmak yerine yeni bir dizi döndüren yöntemleri kullanmanız gerekir.  Örneğin, <xref:System.IO.Path.InvalidPathChars> alanını kullanmak yerine <xref:System.IO.Path.GetInvalidPathChars%2A> yöntemini kullanmanız gerekir.  
   
- .NET Framework türleri genel alanlar dahili olarak sınır türleri tanımlamak için kullanmamanız unutmayın.  Bunun yerine, .NET Framework ayrı özel alanları kullanır.  Bu genel alanların değerlerini değiştirme, .NET Framework türleri davranışını değiştirmez.  
+ .NET Framework türlerin, sınır türlerini dahili olarak tanımlamak için ortak alanları kullanmadığını unutmayın.  Bunun yerine, .NET Framework ayrı özel alanlar kullanır.  Bu ortak alanların değerlerinin değiştirilmesi .NET Framework türlerinin davranışını değiştirmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Güvenli Kodlama Yönergeleri](../../standard/security/secure-coding-guidelines.md)

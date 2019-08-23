@@ -9,43 +9,43 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], setting current cell
 - cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
-ms.openlocfilehash: f60acbfa73ef363d58c57e1c01bdce8cf3337e48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 670708f342e1cd1ac495c215b7508093349ac2e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619659"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933695"
 ---
 # <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Geçerli Hücreyi Alma ve Ayarlama
-Etkileşim <xref:System.Windows.Forms.DataGridView> genellikle hangi hücre o anda etkin olan program aracılığıyla bulmak gerektirir. Geçerli hücreyi değiştirmeniz gerekebilir. Bu görevleri gerçekleştirebileceğiniz <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> özelliği.  
+İle etkileşim, <xref:System.Windows.Forms.DataGridView> genellikle hangi hücrenin etkin olduğunu programlı bir şekilde keşfetmenizi gerektirir. Geçerli hücreyi de değiştirmeniz gerekebilir. Bu görevleri <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> özelliği ile gerçekleştirebilirsiniz.  
   
 > [!NOTE]
->  Geçerli hücreyi bir satır veya olan sütunda ayarlanamaz, <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> özelliğini `false`.  
+> <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> Özelliği olarak`false`ayarlanmış bir satır veya sütundaki geçerli hücreyi ayarlayamazsınız.  
   
- Yapılandırmanıza bağlı olarak <xref:System.Windows.Forms.DataGridView> denetiminin seçim modunu, geçerli hücreyi değiştirme seçimi değiştirebilirsiniz. Daha fazla bilgi için [Windows Forms DataGridView denetimindeki seçim modları](selection-modes-in-the-windows-forms-datagridview-control.md).  
+ <xref:System.Windows.Forms.DataGridView> Denetimin seçim moduna bağlı olarak, geçerli hücreyi değiştirmek seçimi değiştirebilir. Daha fazla bilgi için [Windows Forms DataGridView Denetimindeki seçim modları](selection-modes-in-the-windows-forms-datagridview-control.md)bölümüne bakın.  
   
-### <a name="to-get-the-current-cell-programmatically"></a>Geçerli hücreyi programlı olarak almak için  
+### <a name="to-get-the-current-cell-programmatically"></a>Geçerli hücreyi programlı bir şekilde almak için  
   
-- Kullanım <xref:System.Windows.Forms.DataGridView> denetimin <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> özelliği.  
+- <xref:System.Windows.Forms.DataGridView> Denetimin<xref:System.Windows.Forms.DataGridView.CurrentCell%2A> özelliğini kullanın.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#080)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#080)]  
   
-### <a name="to-set-the-current-cell-programmatically"></a>Geçerli hücreyi program üzerinden ayarlamak için  
+### <a name="to-set-the-current-cell-programmatically"></a>Geçerli hücreyi programlı bir şekilde ayarlamak için  
   
-- Ayarlama <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> özelliği <xref:System.Windows.Forms.DataGridView> denetimi. Aşağıdaki kod örneğinde, 0, sütun 1 satır için geçerli hücreyi ayarlanır.  
+- <xref:System.Windows.Forms.DataGridView> Denetimin <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> özelliğini ayarlayın. Aşağıdaki kod örneğinde, geçerli hücre satır 0, sütun 1 olarak ayarlanır.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#085)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#085)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- <xref:System.Windows.Forms.Button> adlarında `getCurrentCellButton` ve `setCurrentCellButton`. Görselde C#, iliştirmeniz gerekir <xref:System.Windows.Forms.Control.Click> her düğme için ilişkili olay işleyicisine kod örneği için olayları.  
+- <xref:System.Windows.Forms.Button>`getCurrentCellButton` ve`setCurrentCellButton`adlı denetimler. Görselde C#, her düğmenin olayını örnek <xref:System.Windows.Forms.Control.Click> kodda ilişkili olay işleyicisine bağlamanız gerekir.  
   
-- A <xref:System.Windows.Forms.DataGridView> adlı Denetim `dataGridView1`.  
+- <xref:System.Windows.Forms.DataGridView> Adlı`dataGridView1`bir denetim.  
   
-- Başvurular <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemeler.  
+- <xref:System?displayProperty=nameWithType> Ve<xref:System.Windows.Forms?displayProperty=nameWithType> derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

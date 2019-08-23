@@ -2,22 +2,22 @@
 title: <issuedTokenAuthentication> / <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-ms.openlocfilehash: d093b45269b230b4ff074d07a66290ab09592f60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 280aa49019f68a0906307e24842a585a92c6600a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756721"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925362"
 ---
-# <a name="issuedtokenauthentication-of-servicecredentials"></a>\<ServiceCredentials >, \<issuedTokenAuthentication >
-Bir hizmet kimlik bilgisi olarak verilen özel bir simge belirtir.  
+# <a name="issuedtokenauthentication-of-servicecredentials"></a>\<\<ServiceCredentials > IssuedTokenAuthentication >
+Hizmet kimlik bilgisi olarak verilen özel bir belirteci belirtir.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
 \<serviceBehaviors>  
-\<davranışı >  
+\<davranış >  
 \<serviceCredentials>  
-\<ServiceCredentials >  
+\<IssuedTokenAuthentication >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,37 +42,37 @@ Bir hizmet kimlik bilgisi olarak verilen özel bir simge belirtir.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
+ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`allowedAudienceUris`|Hedef URI'lerin kümesini alır, <xref:System.IdentityModel.Tokens.SamlSecurityToken> güvenlik belirteci hedef olarak kullanılabilir için tarafından geçerli kabul edilmesi için bir <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> örneği. Bu öznitelik kullanma hakkında daha fazla bilgi için bkz. <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>.|  
-|`allowUntrustedRsaIssuers`|Güvenilmeyen RSA sertifikası verenler izinleri olup olmadığını belirten bir Boole değeri.<br /><br /> Sertifikalar, orjinalliği doğrulamak için sertifika yetkilileri (CA'lar) tarafından imzalanır. Güvenilmeyen bir veren sertifikaları imzalamak için güvenilecek belirtilmeyen CA'dır.|  
-|`audienceUriMode`|Belirten bir değeri alır olmadığını <xref:System.IdentityModel.Tokens.SamlSecurityToken> güvenlik belirtecinin <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> doğrulanması gerekir. Bu değer türünde <xref:System.IdentityModel.Selectors.AudienceUriMode>. Bu öznitelik kullanma hakkında daha fazla bilgi için bkz. <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>.|  
-|`certificateValidationMode`|Sertifika doğrulama modunu ayarlar. Geçerli değerlerini birini <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Varsa kümesine `Custom`, ardından bir `customCertificateValidator` de sağlanmalıdır. Varsayılan, `ChainTrust` değeridir.|  
-|`customCertificateValidatorType`|İsteğe bağlı dize. Tür ve özel bir tür doğrulamak için kullanılan bir derleme. Bu öznitelik olduğunda ayarlanmalıdır `certificateValidationMode` ayarlanır `Custom`.|  
-|`revocationMode`|İptal denetimi olup gerçekleşir ve bunun çevrimiçi veya çevrimdışı gerçekleştirildiğini belirten iptal modu ayarlar. Bu öznitelik türünde <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.|  
-|`samlSerializer`|Hizmet kimlik bilgilerini kullanılan SamlSerializer türünü belirten isteğe bağlı dize özniteliği. Varsayılan değer boş bir dizedir.|  
-|`trustedStoreLocation`|İsteğe bağlı sabit listesi. İki sistem depolama konumlarından biri: `LocalMachine` veya `CurrentUser`.|  
+|`allowedAudienceUris`|<xref:System.IdentityModel.Tokens.SamlSecurityToken> Bir<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> örnek tarafından geçerli kabul edilebilmesi için güvenlik belirtecinin hedeflenebileceği hedef URI 'lerin kümesini alır. Bu özniteliği kullanma hakkında daha fazla bilgi için bkz <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>.|  
+|`allowUntrustedRsaIssuers`|Güvenilmeyen RSA sertifikası verenler için izin verilip verilmeyeceğini belirten bir Boole değeri.<br /><br /> Sertifikalar, özgünlük doğrulaması için sertifika yetkilileri (CA) tarafından imzalanır. Güvenilmeyen bir veren, sertifikaları imzalamak için güvenilmeyecek şekilde belirtilmemiş bir CA 'dır.|  
+|`audienceUriMode`|<xref:System.IdentityModel.Tokens.SamlSecurityToken> Güvenlik<xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> belirtecinin doğrulanıp doğrulanması gerekip gerekmediğini belirten bir değer alır. Bu değer türünde <xref:System.IdentityModel.Selectors.AudienceUriMode>. Bu özniteliği kullanma hakkında daha fazla bilgi için bkz <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>.|  
+|`certificateValidationMode`|Sertifika doğrulama modunu ayarlar. Geçerli değerlerinden <xref:System.ServiceModel.Security.X509CertificateValidationMode>biri. Olarak `Custom`ayarlanırsa, bir `customCertificateValidator` de sağlanmalıdır. Varsayılan, `ChainTrust` değeridir.|  
+|`customCertificateValidatorType`|İsteğe bağlı dize. Özel bir türü doğrulamak için kullanılan tür ve derleme. Bu öznitelik `certificateValidationMode` , olarak `Custom`ayarlandığında ayarlanmalıdır.|  
+|`revocationMode`|Bir iptal denetiminin oluşup oluşmadığını ve çevrimiçi veya çevrimdışı gerçekleştirildiğini belirten iptal modunu ayarlar. Bu öznitelik türü <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.|  
+|`samlSerializer`|Hizmet kimlik bilgisi için kullanılan SamlSerializer türünü belirten isteğe bağlı bir dize özniteliği. Varsayılan değer boş bir dizedir.|  
+|`trustedStoreLocation`|İsteğe bağlı sabit listesi. İki sistem depolama konumlarından biri: `LocalMachine` veya. `CurrentUser`|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|`knownCertificates`|Bir koleksiyonu belirtir <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement> hizmeti kimlik bilgileri için güvenilen verenler belirten öğeleri.|  
+|`knownCertificates`|Hizmet kimlik bilgisi için <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement> güvenilen verenler belirten bir öğe koleksiyonunu belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Hizmet ve istemci kimlik doğrulama ile ilgili ayarlarda kullanılan kimlik bilgisini belirtir.|  
+|[\<serviceCredentials >](servicecredentials.md)|Hizmetin kimliğini doğrulamak için kullanılacak kimlik bilgisini ve istemci kimlik bilgileri doğrulaması ile ilgili ayarları belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Verilen belirteç senaryo üç aşamadan oluşur. Bir istemci bir hizmeti erişmeye ilk aşamada, başvurulan bir *güvenli belirteç hizmeti*. Güvenli belirteç hizmeti daha sonra istemci kimliğini doğrular ve bundan sonra istemci genellikle bir güvenlik onaylama işaretleme dili (SAML) belirteci bir belirteç verir. İstemci, ardından belirteci ile hizmetine döndürür. Belirteç için belirteç ve bu nedenle istemci kimliğini doğrulamak hizmet veren bir veri hizmeti inceler. Belirteç kimlik doğrulaması için sertifika hizmete güvenli belirteç hizmeti kullandığı olarak bilinmesi gerekir.  
+ Verilen belirteç senaryosunda üç aşama vardır. İlk aşamada, bir hizmete erişmeye çalışan bir istemciye *güvenli bir belirteç hizmeti*denir. Güvenli belirteç hizmeti daha sonra istemcinin kimliğini doğrular ve ardından istemciye, genellikle bir güvenlik onaylama işlemi Işaretleme dili (SAML) belirteci olarak bir belirteç verir. İstemci daha sonra belirtece sahip hizmete geri döner. Hizmet, hizmetin, belirtecin kimliğini doğrulamasına ve dolayısıyla istemcisinde istemciye izin veren verilerin belirtecini inceler. Belirtecin kimliğini doğrulamak için, güvenli belirteç hizmetinin kullandığı sertifika hizmet tarafından bilinmelidir.  
   
- Bu öğe bu tür bir güvenli belirteç hizmeti sertifikaları için bir depodur. Sertifikaları eklemek için [ \<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md). INSERT bir [ \<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) aşağıdaki örnekte gösterildiği gibi her sertifika için.  
+ Bu öğe, bu tür güvenli belirteç hizmeti sertifikalarının deposıdır. Sertifika eklemek için, [ \<KnownCertificates >](knowncertificates.md)kullanın. Aşağıdaki örnekte gösterildiği gibi her sertifika için bir [ \<ekleme >](add-of-knowncertificates.md) ekleyin.  
   
 ```xml  
 <issuedTokenAuthentication>
@@ -85,9 +85,9 @@ Bir hizmet kimlik bilgisi olarak verilen özel bir simge belirtir.
 </issuedTokenAuthentication>
 ```  
   
- Varsayılan olarak, sertifikaları güvenli bir belirteci Hizmeti'nden alınmalıdır. Bu "sertifikalar, istemciler yalnızca yasal olun bilinen" bir hizmete erişebilir.  
+ Varsayılan olarak, sertifikaların güvenli bir belirteç hizmetinden alınması gerekir. Bu "bilinen" sertifikalar yalnızca meşru istemcilerin bir hizmete erişebilmesini güvence altına alabilir.  
   
- Bu yapılandırma öğesi kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ Bu yapılandırma öğesini kullanma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Federasyon Hizmeti](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)kimlik bilgilerini yapılandırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -98,5 +98,5 @@ Bir hizmet kimlik bilgisi olarak verilen özel bir simge belirtir.
 - <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>
 - <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Nasıl yapılır: Federasyon Hizmeti kimlik bilgilerini yapılandırma](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

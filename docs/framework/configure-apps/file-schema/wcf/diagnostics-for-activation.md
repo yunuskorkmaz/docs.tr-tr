@@ -1,16 +1,16 @@
 ---
-title: <diagnostics> Etkinleştirme için
+title: <diagnostics>Etkinleştirme için
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: 30456963a7d74a93e39bb1fddc0910daae97f039
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 543c41936921eda39017e07f1c97294b268a9141
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704264"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919215"
 ---
-# <a name="diagnostics-for-activation"></a>\<Tanılama > etkinleştirme
-Windows Communication Foundation (WCF) dinleyicinin Tanılama işlevleri yapılandırır.  
+# <a name="diagnostics-for-activation"></a>\<Etkinleştirme için tanılama >
+Windows Communication Foundation (WCF) dinleyicisinin tanılama işlevlerini yapılandırır.  
   
  \<system.serviceModel.activation>  
 \<Tanılama >  
@@ -44,7 +44,7 @@ Windows Communication Foundation (WCF) dinleyicinin Tanılama işlevleri yapıla
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Dinleyici işlem SMSvcHost.exe için yapılandırma ayarlarını içerir.|  
+|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|SMSvcHost. exe dinleyici işleminin yapılandırma ayarlarını içerir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: 889ec7f93d0503edac51652dda217c6a9f654f9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 248f3cf31f686de3af2ea06012aa4a6d4f3f29fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621428"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942913"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA Değişmez Değeri (Visual Basic)
-Bir değişmez değer temsil eden bir <xref:System.Xml.Linq.XCData> nesne.  
+Bir <xref:System.Xml.Linq.XCData> nesneyi temsil eden sabit değer.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,33 +26,33 @@ Bir değişmez değer temsil eden bir <xref:System.Xml.Linq.XCData> nesne.
   
 ## <a name="parts"></a>Bölümler  
  `<![CDATA[`  
- Gerekli. XML CDATA bölümü başlangıcını gösterir.  
+ Gerekli. XML CDATA bölümünün başlangıcını gösterir.  
   
  `content`  
- Gerekli. XML CDATA bölümde görüntülenecek metin içeriği.  
+ Gerekli. XML CDATA bölümünde görünecek metin içeriği.  
   
  `]]>`  
- Gerekli. Bölümün sonuna gösterir.  
+ Gerekli. Bölümün sonunu gösterir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir <xref:System.Xml.Linq.XCData> nesne.  
   
 ## <a name="remarks"></a>Açıklamalar  
- XML CDATA bölümler dahil, ancak, içerdiği XML çözümlenmemiş ham metni içerir. XML CDATA bölümü herhangi bir metin içerebilir. Bu, ayrılmış XML karakterlerini içerir. XML CDATA bölümü dizisi ile biter "]] >". Bu, aşağıdaki noktaları anlamına gelir:  
+ XML CDATA kısımları, kendisini içeren XML ile birlikte dahil edilmelidir, ancak ayrıştırılmaz olması gereken ham metni içerir. Bir XML CDATA bölümü, herhangi bir metin içerebilir. Bu, ayrılmış XML karakterleri içerir. XML CDATA bölümü "]] >" dizisiyle biter. Bu, aşağıdaki noktaları gösterir:  
   
-- Gömülü ifade sınırlayıcılar geçerli XML CDATA içerik olduğundan, bir katıştırılmış deyim bir XML CDATA değişmez değeri kullanamazsınız.  
+- Gömülü ifade sınırlayıcıları geçerli XML CDATA içeriği olduğundan, bir XML CDATA değişmez değerinde gömülü bir ifade kullanamazsınız.  
   
-- XML CDATA kısımları iç içe geçirilemez, çünkü `content` değeri içeremez "]] >".  
+- "]] >" Değerini içeremediğinden `content` XML CDATA bölümleri iç içe geçirilemez.  
   
- Bir XML CDATA değişmez değeri bir değişkene atayın ya da bir XML öğesi değişmez değeri içerir.  
+ Bir değişkene bir XML CDATA sabit değeri atayabilir veya onu bir XML öğesi değişmez değerine dahil edebilirsiniz.  
   
 > [!NOTE]
->  XML değişmez değer birden fazla satırı kapsayabilir ancak satır devamlılığı karakteri kullanmaz. Bu içerik bir XML belgesinden kopyalayıp bir Visual Basic programa doğrudan yapıştırın olanak sağlar.  
+> Bir XML sabit değeri birden fazla satıra yayılabilir, ancak satır devamlılık karakterlerini kullanmaz. Bu sayede bir XML belgesinden içerik kopyalayabilir ve doğrudan bir Visual Basic programına yapıştırabilirsiniz.  
   
- XML CDATA değişmez değer Visual Basic Derleyicisi için bir çağrı dönüştürür <xref:System.Xml.Linq.XCData.%23ctor%2A> Oluşturucusu.  
+ Visual Basic derleyici, XML CDATA değişmez değerini <xref:System.Xml.Linq.XCData.%23ctor%2A> oluşturucuya bir çağrıya dönüştürür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, metni içeren CDATA bölümü oluşturur. "değişmez değer içerebilir \<XML > etiketleri".  
+ Aşağıdaki örnek, "Literal \<XML > etiketleri içerebilir" metnini içeren bir CDATA bölümü oluşturur.  
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   
@@ -61,4 +61,4 @@ Bir değişmez değer temsil eden bir <xref:System.Xml.Linq.XCData> nesne.
 - <xref:System.Xml.Linq.XCData>
 - [XML Öğesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
 - [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic'de XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Visual Basic XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

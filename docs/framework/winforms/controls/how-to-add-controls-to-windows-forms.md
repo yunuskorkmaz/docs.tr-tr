@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 5c57d86b2f08733dc4a729bf6091eab23c6035f2
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039704"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912622"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Nasıl yapılır: Windows Forms’a Denetimler Ekleme
 Çoğu form, bir kullanıcı arabirimi (UI) tanımlamak için formun yüzeyine denetimler eklenerek tasarlanır. *Denetim* , bilgileri göstermek veya Kullanıcı girişini kabul etmek için kullanılan bir form bileşenidir. Denetimler hakkında daha fazla bilgi için bkz. [Windows Forms denetimleri](index.md).
@@ -30,7 +30,7 @@ ms.locfileid: "69039704"
      Denetim, belirtilen konum ve boyutla forma eklenir.
 
     > [!NOTE]
-    >  Her denetim için varsayılan bir boyut tanımlanmış. **Araç kutusundan** forma sürükleyerek, denetimin varsayılan boyutundaki formunuza bir denetim ekleyebilirsiniz.
+    > Her denetim için varsayılan bir boyut tanımlanmış. **Araç kutusundan** forma sürükleyerek, denetimin varsayılan boyutundaki formunuza bir denetim ekleyebilirsiniz.
 
 ## <a name="to-drag-a-control-to-a-form"></a>Bir denetimi forma sürüklemek için
 
@@ -41,12 +41,12 @@ ms.locfileid: "69039704"
      Denetim, varsayılan boyutunda belirtilen konumda bulunan forma eklenir.
 
     > [!NOTE]
-    >  **Araç kutusundaki** bir denetime çift tıklayarak formun varsayılan boyutunda sol üst köşesine ekleyebilirsiniz.
+    > **Araç kutusundaki** bir denetime çift tıklayarak formun varsayılan boyutunda sol üst köşesine ekleyebilirsiniz.
 
      Ayrıca, çalışma zamanında bir forma dinamik olarak denetim ekleyebilirsiniz. Aşağıdaki kod örneğinde, bir <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.Button> denetim tıklandığında forma bir denetim eklenecektir.
 
     > [!NOTE]
-    >  Aşağıdaki yordam, bir **düğme** denetimi `Button1`olan bir form olması gerekir, zaten üzerine yerleştirilmiş.
+    > Aşağıdaki yordam, bir **düğme** denetimi `Button1`olan bir form olması gerekir, zaten üzerine yerleştirilmiş.
 
 ## <a name="to-add-a-control-to-a-form-programmatically"></a>Bir forma programlı bir şekilde denetim eklemek için
 
@@ -81,7 +81,7 @@ ms.locfileid: "69039704"
     ```
 
     > [!NOTE]
-    >  Ayrıca, denetimin diğer özelliklerini başlatmak için de kod ekleyebilirsiniz.
+    > Ayrıca, denetimin diğer özelliklerini başlatmak için de kod ekleyebilirsiniz.
 
     > [!IMPORTANT]
     >  Kötü amaçlı `UserControl`olarak başvurarak yerel bilgisayarınızı ağ üzerinden bir güvenlik riskine maruz kalabilirsiniz. Bu durum yalnızca zararlı bir kişinin zararlı bir denetim oluşturan bir sorun olduğu ve bunu projenize yanlışlıkla ekleyerek bir sorun olacaktır.

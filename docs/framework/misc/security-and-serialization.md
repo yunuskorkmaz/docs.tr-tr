@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c275e7179daf0dfdf2dda8bf364a4682565f28a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0b1f8979929dbb6872bbd53e1840b2d0520a31d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596726"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910667"
 ---
 # <a name="security-and-serialization"></a>Güvenlik ve Serileştirme
-Serileştirme bakın veya erişilemez Aksi durumda olacak nesne örneği verileri değiştirmek başka bir kod izin vermek için özel bir izin serileştirme gerçekleştiren kod gereklidir: <xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> bayrağı belirtilmiş. Varsayılan ilkesi altında çok Internet karşıdan bu izin verilmez veya intranet kodu; yalnızca yerel bilgisayarda kod bu izin verilir.  
+Serileştirme diğer kodun başka bir şekilde erişilemeyen nesne örneği verilerini görmesine veya değiştirmesine izin abileceğinden, kod serileştirme: <xref:System.Security.Permissions.SecurityPermission> <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> belirtilen bayrağıyla özel bir izin gerekir. Varsayılan ilke altında, bu izin Internet 'Ten indirilen veya intranet koduna verilmez; yalnızca yerel bilgisayardaki koda bu izin verilir.  
   
- Normalde, bir nesne örneğinin tüm alanlar veri örneği için seri duruma getirilmiş verilerde temsil edilen anlamı serileştirilir. Veri değerleri, üyenin erişilebilirliğini bağımsız nelerdir belirlemek için biçim yorumlayabilir kodunu mümkündür. Benzer şekilde, seri durumundan çıkarma serileştirilmiş temsilinden verileri ayıklayan ve nesne durumu doğrudan yeniden erişilebilirlik kuralları bağımsız olarak ayarlar.  
+ Normalde, bir nesne örneğinin tüm alanları serileştirilir ve bu, verilerin örnek için seri hale getirilmiş verilerde temsil edildiği anlamına gelir. Veri değerlerinin ne olduğunu, üyenin erişilebilirliğiyle bağımsız olarak belirlemek için biçimi yorumlayabilen kod mümkündür. Benzer şekilde, seri durumdan çıkarma, verileri serileştirilmiş gösterimden ayıklar ve doğrudan, nesne durumunu erişilebilirlik kurallarından bağımsız olarak ayarlar.  
   
- Güvenlik açısından duyarlı verileri içerebilen herhangi bir nesne nonserializable, mümkünse yapılmalıdır. Hassas verileri nonserializable tutun belirli alanlar seri hale getirilebilir olması gerekir, deneyin. Bu yapılamaz, bu verileri seri hale getirmek ve kötü amaçlı bir kodun bu izin alabilirsiniz emin olmak için izni olan herhangi bir kod sunulan dikkat edin.  
+ Güvenlik duyarlı veriler içerebilen herhangi bir nesne, mümkünse seri hale getirilebilir olmayan bir şekilde yapılmalıdır. Seri hale getirilebilir olması gerekiyorsa, gizli verileri tutan, seri hale getirilebilen belirli alanları yapmayı deneyin. Bu işlem yapılabiliyorsa, bu verilerin serileştirme izni olan herhangi bir koda sunulamadığını ve kötü amaçlı bir kodun bu izni alamazsanız emin olun.  
   
- <xref:System.Runtime.Serialization.ISerializable> Arabirimi, yalnızca seri hale getirme altyapısı tarafından kullanılmak üzere tasarlanmıştır. Ancak, korumasız, potansiyel olarak hassas bilgileri serbest bırakabilirsiniz. Özel serileştirme uygulayarak sağlarsanız **ISerializable**, aşağıdaki önlemleri dikkate aldığınızdan emin olun:  
+ <xref:System.Runtime.Serialization.ISerializable> Arabirim yalnızca serileştirme altyapısı tarafından kullanılmak üzere tasarlanmıştır. Ancak korumasız ise, hassas bilgileri serbest bırakabilir. **ISerializable**uygulayarak özel serileştirme sağlarsanız, aşağıdaki önlemleri aldığınızdan emin olun:  
   
-- <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> Yöntemi açıkça güvenli yoğun ya da **SecurityPermission** ile **SerializationFormatter** göre yaparak emin olan ya da belirtilen izni yok duyarlı bilgi yöntemi çıkış ile serbest bırakılır. Örneğin:  
+- Yöntemi, **SerializationFormatter** iznine sahip SecurityPermission 'ı belirtilen veya yöntem çıkışıyla hiçbir hassas bilgi yayınlanmadan emin olarak açıkça güvenli hale getirmelidir. <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> Örneğin:  
   
     ```vb  
     Public Overrides<SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _  
@@ -45,8 +45,8 @@ Serileştirme bakın veya erişilemez Aksi durumda olacak nesne örneği veriler
     }  
     ```  
   
-- Serileştirme için kullanılan özel bir oluşturucu ayrıca kapsamlı giriş doğrulaması gerçekleştirmeniz ve kötü amaçlı kod tarafından kötüye karşı korumaya yardımcı olmak için özel veya korumalı olmalıdır. Aynı güvenlik denetimleri ve açıkça sınıfı oluşturma veya Fabrika tür üzerinden dolaylı olarak oluşturma gibi diğer araçları, böyle bir sınıfın bir örneği elde etmek için gerekli izinler uygulaması gerekir.  
+- Serileştirme için kullanılan özel Oluşturucu ayrıca tam giriş doğrulaması gerçekleştirmeyi ve kötü amaçlı kodun kötüye kullanılmasına karşı korumaya yardımcı olmak için korumalı veya özel olmalıdır. Bu, sınıfın açıkça oluşturulması veya bir tür fabrika aracılığıyla dolaylı olarak oluşturulması gibi bazı yollarla bu tür bir sınıfın bir örneğini almak için gereken güvenlik denetimlerini ve izinlerini zorunlu kılar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Güvenli Kodlama Yönergeleri](../../standard/security/secure-coding-guidelines.md)

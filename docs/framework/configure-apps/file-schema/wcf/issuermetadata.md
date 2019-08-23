@@ -2,21 +2,21 @@
 title: <issuerMetadata>
 ms.date: 03/30/2017
 ms.assetid: e7eae2c0-cc17-4281-af59-e4eb8d54f92a
-ms.openlocfilehash: 0dffad6a17720dd0506acbcd60efe4aafe24ed28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf512c427637ca65a7271ec8300a373a38632108
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761682"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913516"
 ---
-# <a name="issuermetadata"></a>\<issuerMetadata>
+# <a name="issuermetadata"></a>\<IssuerMetadata >
 \<system.serviceModel>  
-\<bağlamaları >  
-\<wsFederationHttpBinding>  
+\<bağlama >  
+\<wsFederationHttpBinding >  
 \<bağlama >  
 \<Güvenlik >  
-\<İleti >  
-\<issuerMetadata>  
+\<ileti >  
+\<IssuerMetadata >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -48,26 +48,26 @@ ms.locfileid: "61761682"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|adres|Gerekli `string` özniteliği.<br /><br /> Uç nokta adresini belirtir. Adres mutlak URI olmalıdır. Varsayılan değer boş bir dizedir.|  
+|adres|Gerekli `string` öznitelik.<br /><br /> Uç noktanın adresini belirtir. Adres, mutlak bir URI olmalıdır. Varsayılan değer boş bir dizedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<üstbilgiler >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Adres üst bilgileri koleksiyonu.|  
-|[\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Onunla mesaj alışverişleri diğer uç noktalar tarafından bir uç nokta kimlik doğrulaması sağlayan bir kimlik.|  
+|[\<üst bilgiler >](headers-element.md)|Adres üst bilgileri koleksiyonu.|  
+|[\<kimlik >](identity.md)|Diğer uç noktalar tarafından ileti alışverişi yapan bir uç noktanın kimlik doğrulamasını sağlayan bir kimlik.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<İleti >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|İleti düzeyi güvenlik ayarlarını tanımlar [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) öğesi.|  
+|[\<ileti >](message-element-of-wsfederationhttpbinding.md)|WSFederationHttpBinding > öğesi için [ \<](wsfederationhttpbinding.md) ileti düzeyi güvenlik ayarlarını tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.IssuerMetadata%2A>
-- [Kimlik Doğrulama ile Hizmet Kimliği](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Federasyon ve Verilen Belirteçler](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Özel Bağlamalarla Güvenlik Özellikleri](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [Federasyon ve Verilen Belirteçler](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Kimlik Doğrulama ile Hizmet Kimliği](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Federasyon ve Verilen Belirteçler](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Özel Bağlamalarla Güvenlik Özellikleri](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Federasyon ve Verilen Belirteçler](../../../wcf/feature-details/federation-and-issued-tokens.md)

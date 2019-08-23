@@ -12,203 +12,203 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 124641ed32dc2ea953202dbc6a73ee066a6c4a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5cdd2f5538be0e39b5dd3a378825ccf81f314c03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602516"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916277"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>İzlenecek yol: Şifreleme Uygulaması Oluşturma
-Bu izlenecek yol, şifrelemek ve içeriğin şifresini gösterilmektedir. Kod örnekleri, bir Windows Forms uygulaması için tasarlanmıştır. Bu uygulama, akıllı kart kullanma gibi gerçek dünya senaryolarını göstermemiz gerekmez. Bunun yerine, şifreleme ve şifre çözme temellerini gösterir.  
+Bu izlenecek yol, içerik şifrelemesini ve şifresini çözmeyi gösterir. Kod örnekleri, Windows Forms bir uygulama için tasarlanmıştır. Bu uygulama, akıllı kartlar kullanma gibi gerçek dünyada senaryolar göstermez. Bunun yerine, şifreleme ve şifre çözme temellerini gösterir.  
   
- Bu izlenecek yol aşağıdaki yönergeler için şifreleme kullanır:  
+ Bu izlenecek yol, şifreleme için aşağıdaki yönergeleri kullanır:  
   
-- Kullanım <xref:System.Security.Cryptography.RijndaelManaged> sınıfı, şifrelemek ve kendi otomatik olarak oluşturulan kullanarak verilerin şifresini bir Simetrik algoritma <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> ve <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>.  
+- Otomatik olarak oluşturulan <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> ve <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>kullanarak verileri şifrelemek ve şifrelerini çözmek için simetrik bir algoritma sınıfınıkullanın.<xref:System.Security.Cryptography.RijndaelManaged>  
   
-- Kullanım <xref:System.Security.Cryptography.RSACryptoServiceProvider>, şifreleme ve anahtar tarafından şifrelenmiş verilerin şifresini çözmek için bir asimetrik algoritma <xref:System.Security.Cryptography.RijndaelManaged>. Asimetrik algoritmalar, daha küçük miktarda bir anahtarı gibi veriler için en iyi şekilde kullanılır.  
+- <xref:System.Security.Cryptography.RSACryptoServiceProvider> Tarafından<xref:System.Security.Cryptography.RijndaelManaged>şifrelenen verilerle anahtarı şifrelemek ve şifresini çözmek için asimetrik bir algoritma kullanın. Asimetrik algoritmalar, anahtar gibi daha küçük miktarlarda veri için en iyi şekilde kullanılır.  
   
     > [!NOTE]
-    >  Şifrelenmiş içeriği diğer kullanıcılarla değişimi yerine bilgisayarınızdaki verileri korumak istiyorsanız, kullanmayı <xref:System.Security.Cryptography.ProtectedData> veya <xref:System.Security.Cryptography.ProtectedMemory> sınıfları.  
+    > Diğer kişilerle şifrelenmiş içerik alışverişi yerine bilgisayarınızdaki verileri korumak istiyorsanız, <xref:System.Security.Cryptography.ProtectedData> veya <xref:System.Security.Cryptography.ProtectedMemory> sınıflarını kullanmayı düşünün.  
   
- Aşağıdaki tabloda, bu konudaki şifreleme görevleri özetler.  
+ Aşağıdaki tabloda bu konudaki şifreleme görevleri özetlenmektedir.  
   
 |Görev|Açıklama|  
 |----------|-----------------|  
-|Bir Windows Forms uygulaması oluşturma|Uygulamayı çalıştırmak için gerekli denetimleri listeler.|  
-|Genel nesne bildirme|Yol değişkenleri, dize bildirir <xref:System.Security.Cryptography.CspParameters>ve <xref:System.Security.Cryptography.RSACryptoServiceProvider> genel kapsamında sahip <xref:System.Windows.Forms.Form> sınıfı.|  
-|Asimetrik anahtar oluşturma|Bir asimetrik ortak ve özel anahtar değer çifti oluşturur ve bir anahtar kapsayıcısı adını atar.|  
-|Bir dosya şifreleme|Şifreleme için bir dosya seçmek için bir iletişim kutusu görüntüler ve dosyayı şifreler.|  
-|Bir dosyanın şifresini çözmek üzere|Şifre çözme için şifrelenmiş bir dosya seçmek için bir iletişim kutusu görüntüler ve dosyanın şifresini çözer.|  
-|Özel anahtarı alma|Tam anahtar çiftini kullanarak anahtar kapsayıcısı adını alır.|  
-|Ortak anahtarı dışarı aktarma|Bu anahtar yalnızca ortak parametreleri içeren bir XML dosyası kaydeder.|  
-|Bir ortak anahtar içeri aktarma|Anahtarı bir XML dosyasından anahtar kapsayıcısına yükler.|  
-|Uygulamayı test etme|Bu uygulamayı test etme yordamları listeler.|  
+|Windows Forms uygulaması oluşturma|Uygulamayı çalıştırmak için gereken denetimleri listeler.|  
+|Genel nesneleri bildirme|Dize yol değişkenlerini, <xref:System.Security.Cryptography.CspParameters> <xref:System.Security.Cryptography.RSACryptoServiceProvider> ve ' ı <xref:System.Windows.Forms.Form> sınıfının genel bağlamına sahip olacak şekilde bildirir.|  
+|Asimetrik anahtar oluşturma|Asimetrik ortak ve özel anahtar değer çifti oluşturur ve bir anahtar kapsayıcısı adı atar.|  
+|Dosya şifreleme|Şifreleme için bir dosya seçmek üzere bir iletişim kutusu görüntüler ve dosyayı şifreler.|  
+|Dosya şifresini çözme|Şifre çözme için şifrelenmiş bir dosya seçmek ve dosyanın şifresini çözmek için bir iletişim kutusu görüntüler.|  
+|Özel anahtar alma|Anahtar kapsayıcısı adını kullanarak tam anahtar çiftini alır.|  
+|Ortak anahtar dışarı aktarılıyor|Anahtarı yalnızca ortak parametrelere sahip bir XML dosyasına kaydeder.|  
+|Ortak anahtar içeri aktarılıyor|Anahtarı bir XML dosyasından anahtar kapsayıcısına yükler.|  
+|Uygulamayı test etme|Bu uygulamayı test etmek için yordamları listeler.|  
   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:  
   
-- Başvurular <xref:System.IO> ve <xref:System.Security.Cryptography> ad alanları.  
+- <xref:System.IO> Ve<xref:System.Security.Cryptography> ad alanlarına başvurular.  
   
-## <a name="creating-a-windows-forms-application"></a>Bir Windows Forms uygulaması oluşturma  
- Bu izlenecek yolda kod örnekleri çoğu, düğme denetimleri için olay işleyicileri olacak şekilde tasarlanmıştır. Aşağıdaki tablo kod örneklerle eşleşmesi örnek uygulamayı ve gerekli adları için gerekli denetimleri listeler.  
+## <a name="creating-a-windows-forms-application"></a>Windows Forms uygulaması oluşturma  
+ Bu izlenecek yolda bulunan kod örneklerinin çoğu düğme denetimleri için olay işleyicileri olacak şekilde tasarlanmıştır. Aşağıdaki tabloda, örnek uygulama için gereken denetimler ve kod örnekleriyle eşleşmesi için gereken adlar listelenmektedir.  
   
-|Denetim|Ad|Metin özelliği (gereken şekilde)|  
+|Denetim|Ad|Metin özelliği (gerektiğinde)|  
 |-------------|----------|---------------------------------|  
-|<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Dosya şifreleme|  
-|<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Dosyasının şifresini çözme|  
-|<xref:System.Windows.Forms.Button>|`buttonCreateAsmKeys`|Anahtarları oluşturma|  
+|<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Dosyayı şifreleyin|  
+|<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Dosya şifresini çöz|  
+|<xref:System.Windows.Forms.Button>|`buttonCreateAsmKeys`|Anahtar oluştur|  
 |<xref:System.Windows.Forms.Button>|`buttonExportPublicKey`|Ortak anahtarı dışarı aktar|  
-|<xref:System.Windows.Forms.Button>|`buttonImportPublicKey`|Ortak anahtar içeri aktarma|  
-|<xref:System.Windows.Forms.Button>|`buttonGetPrivateKey`|Özel anahtarı alma|  
+|<xref:System.Windows.Forms.Button>|`buttonImportPublicKey`|Ortak anahtarı içeri aktar|  
+|<xref:System.Windows.Forms.Button>|`buttonGetPrivateKey`|Özel anahtar al|  
 |<xref:System.Windows.Forms.Label>|`label1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog2`||  
   
- Olay işleyicilerini oluşturmak için Visual Studio Tasarımcısı'nda düğmeleri çift tıklayın.  
+ Olay işleyicilerini oluşturmak için Visual Studio tasarımcısında düğmelere çift tıklayın.  
   
-## <a name="declaring-global-objects"></a>Genel nesne bildirme  
- Aşağıdaki kod, formun oluşturucuyu ekleyin. Dize değişkenleri ortamınız ve tercihlerinizle düzenleyin.  
+## <a name="declaring-global-objects"></a>Genel nesneleri bildirme  
+ Form yapıcısına aşağıdaki kodu ekleyin. Ortamınız ve tercihleriniz için dize değişkenlerini düzenleyin.  
   
  [!code-csharp[CryptoWalkThru#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#1)]
  [!code-vb[CryptoWalkThru#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#1)]  
   
 ## <a name="creating-an-asymmetric-key"></a>Asimetrik anahtar oluşturma  
- Bu görev, şifreler ve şifresini çözer asimetrik bir anahtar oluşturur. <xref:System.Security.Cryptography.RijndaelManaged> anahtarı. Bu anahtar, içeriği şifrelemek için kullanılan ve etiket denetiminde anahtar kapsayıcısı adını görüntüler.  
+ Bu görev, <xref:System.Security.Cryptography.RijndaelManaged> anahtarı şifreleyen ve şifresini çözdüğü bir asimetrik anahtar oluşturur. Bu anahtar, içeriği şifrelemek için kullanıldı ve etiket denetimindeki anahtar kapsayıcısı adını görüntülüyor.  
   
- Aşağıdaki kodu olarak ekleyin `Click` için olay işleyicisi `Create Keys` düğmesine (`buttonCreateAsmKeys_Click`).  
+ `Create Keys` Düğme `Click` (`buttonCreateAsmKeys_Click`) için olay işleyicisi olarak aşağıdaki kodu ekleyin.  
   
  [!code-csharp[CryptoWalkThru#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#2)]
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
-## <a name="encrypting-a-file"></a>Bir dosya şifreleme  
- Bu görev, iki yöntem içerir: olay işleyicisi yöntemi için `Encrypt File` düğmesine (`buttonEncryptFile_Click`) ve `EncryptFile` yöntemi. İlk yöntem, bir dosya seçmek için bir iletişim kutusu görüntüler ve dosya adını şifreleme gerçekleştirir ikinci yöntem geçirir.  
+## <a name="encrypting-a-file"></a>Dosya şifreleme  
+ Bu görev iki yöntem içerir: `Encrypt File` Button (`buttonEncryptFile_Click`) ve `EncryptFile` yöntemi için olay işleyicisi yöntemi. İlk yöntem, bir dosya seçmek için bir iletişim kutusu görüntüler ve dosya adını şifrelemeyi gerçekleştiren ikinci yönteme geçirir.  
   
- Şifrelenmiş içeriği, anahtar ve IV tümü için kaydedilir <xref:System.IO.FileStream>, adlandırılır şifreleme paketi olarak.  
+ Şifrelenmiş içerik, anahtar ve IV, şifreleme paketi olarak adlandırılan tek bir <xref:System.IO.FileStream>öğesine kaydedilir.  
   
- `EncryptFile` Yöntemi şunları yapar:  
+ `EncryptFile` Yöntemi aşağıdakileri yapar:  
   
-1. Oluşturur bir <xref:System.Security.Cryptography.RijndaelManaged> içeriği şifrelemek için Simetrik algoritma.  
+1. İçeriği şifrelemek <xref:System.Security.Cryptography.RijndaelManaged> için simetrik bir algoritma oluşturur.  
   
-2. Oluşturur bir <xref:System.Security.Cryptography.RSACryptoServiceProvider> şifrelemek için nesne <xref:System.Security.Cryptography.RijndaelManaged> anahtarı.  
+2. Anahtarı şifrelemek için bir <xref:System.Security.Cryptography.RSACryptoServiceProvider> nesne oluşturur. <xref:System.Security.Cryptography.RijndaelManaged>  
   
-3. Kullanan bir <xref:System.Security.Cryptography.CryptoStream> okuyun ve şifrelemek üzere nesne <xref:System.IO.FileStream> baytlara hedef blokları kaynak dosyasının <xref:System.IO.FileStream> şifrelenmiş dosya için nesne.  
+3. , Kaynak <xref:System.Security.Cryptography.CryptoStream> dosyayı, bayt blokları içinde, <xref:System.IO.FileStream> Şifrelenen dosya için bir hedef <xref:System.IO.FileStream> nesneye okumak ve şifrelemek için bir nesne kullanır.  
   
-4. Şifrelenmiş anahtarı ve IV'yi uzunluklarının belirler ve uzunluğu değerlerine bayt dizileri oluşturur.  
+4. Şifrelenmiş anahtarın ve IV 'nin uzunluklarının sayısını belirler ve uzunluk değerlerinin bayt dizilerini oluşturur.  
   
-5. Anahtar ve IV uzunluğu değerlerine şifrelenmiş paketi yazar.  
+5. Anahtarı, IV ve bunların uzunluk değerlerini şifreli pakete yazar.  
   
- Şifreleme paketi aşağıdaki biçimdedir:  
+ Şifreleme paketi aşağıdaki biçimi kullanır:  
   
-- Anahtar uzunluğu, bayt 0 - 3  
+- Anahtar uzunluğu, bayt 0-3  
   
-- IV uzunluğu, 4-7 bayt  
+- IV uzunluğu, bayt 4-7  
   
-- Şifrelenmiş anahtarı  
+- Şifrelenmiş anahtar  
   
 - IV  
   
 - Şifre metni  
   
- Anahtar ve IV uzunluklarının başlangıç noktaları ve ardından dosyasının şifresini çözmek için kullanılan şifreleme paketinin tüm bölümlerinin uzunlukları belirlemek için kullanabilirsiniz.  
+ Daha sonra dosyanın şifresini çözmek için kullanılabilecek, şifreleme paketinin tüm bölümlerinin başlangıç noktalarını ve uzunluklarının belirlenmesi için anahtar ve IV uzunluğunu kullanabilirsiniz.  
   
- Aşağıdaki kodu olarak ekleyin `Click` için olay işleyicisi `Encrypt File` düğmesine (`buttonEncryptFile_Click`).  
+ `Encrypt File` Düğme `Click` (`buttonEncryptFile_Click`) için olay işleyicisi olarak aşağıdaki kodu ekleyin.  
   
  [!code-csharp[CryptoWalkThru#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#3)]
  [!code-vb[CryptoWalkThru#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#3)]  
   
- Aşağıdaki `EncryptFile` forma yöntemi.  
+ Aşağıdaki `EncryptFile` yöntemi forma ekleyin.  
   
  [!code-csharp[CryptoWalkThru#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#5)]
  [!code-vb[CryptoWalkThru#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#5)]  
   
-## <a name="decrypting-a-file"></a>Bir dosyanın şifresini çözmek üzere  
- Bu görev, olay işleyicisi yöntemi için iki yöntemi içerir. `Decrypt File` düğmesine (`buttonDecryptFile_Click`) ve `DecryptFile` yöntemi. İlk yöntem, bir dosya seçmek için bir iletişim kutusu görüntüler ve şifre çözme gerçekleştiren bir ikinci yöntem dosyası adını geçirir.  
+## <a name="decrypting-a-file"></a>Dosya şifresini çözme  
+ Bu görev iki yöntem içerir, `Decrypt File` düğme için olay işleyicisi yöntemi (`buttonDecryptFile_Click`) ve `DecryptFile` yöntemi. İlk yöntem bir dosya seçmek için bir iletişim kutusu görüntüler ve dosya adını şifre çözme işlemini gerçekleştiren ikinci yönteme geçirir.  
   
- `Decrypt` Yöntemi şunları yapar:  
+ `Decrypt` Yöntemi aşağıdakileri yapar:  
   
-1. Oluşturur bir <xref:System.Security.Cryptography.RijndaelManaged> içeriğin şifresini Simetrik algoritma.  
+1. İçeriğin şifresini <xref:System.Security.Cryptography.RijndaelManaged> çözmek için simetrik bir algoritma oluşturur.  
   
-2. İlk sekiz baytı okur <xref:System.IO.FileStream> şifrelenmiş anahtar ve IV uzunluklarının alınacağı bayt dizileri halinde şifrelenmiş paketi.  
+2. Şifrelenmiş anahtarın ve IV 'nin uzunluklarının <xref:System.IO.FileStream> elde etmek için, şifrelenen paketin ilk sekiz baytını bayt dizilerine okur.  
   
-3. Anahtar ve IV şifreleme paketinden bayt dizileri ayıklar.  
+3. Anahtar ve IV 'yi şifreleme paketinden bayt dizilerine ayıklar.  
   
-4. Oluşturur bir <xref:System.Security.Cryptography.RSACryptoServiceProvider> şifresini çözmek için nesne <xref:System.Security.Cryptography.RijndaelManaged> anahtarı.  
+4. Anahtarın şifresini çözmek için bir <xref:System.Security.Cryptography.RSACryptoServiceProvider> nesne oluşturur. <xref:System.Security.Cryptography.RijndaelManaged>  
   
-5. Kullanan bir <xref:System.Security.Cryptography.CryptoStream> okuyun ve şifre metin bölümünü şifresini çözmek için nesne <xref:System.IO.FileStream> şifreleme paketlemeden, bayt cinsinden bloklarında <xref:System.IO.FileStream> şifresi çözülen dosya için nesne. Bu tamamlandığında, şifre çözme tamamlanır.  
+5. Şifreleme paketinin <xref:System.Security.Cryptography.CryptoStream> , bayt<xref:System.IO.FileStream> blokları içindeki şifre metin bölümünü, şifresi çözülmüş dosya için nesnesine okumak ve şifresini çözmek için bir nesnesi kullanır. <xref:System.IO.FileStream> Bu tamamlandığında şifre çözme işlemi tamamlanır.  
   
- Aşağıdaki kodu olarak ekleyin `Click` için olay işleyicisi `Decrypt File` düğmesi.  
+ Düğme için olay`Click` işleyicisi olarak aşağıdaki kodu ekleyin. `Decrypt File`  
   
  [!code-csharp[CryptoWalkThru#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#4)]
  [!code-vb[CryptoWalkThru#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#4)]  
   
- Aşağıdaki `DecryptFile` forma yöntemi.  
+ Aşağıdaki `DecryptFile` yöntemi forma ekleyin.  
   
  [!code-csharp[CryptoWalkThru#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#6)]
  [!code-vb[CryptoWalkThru#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#6)]  
   
-## <a name="exporting-a-public-key"></a>Ortak anahtarı dışarı aktarma  
- Bu görev tarafından oluşturulan anahtarı kaydeder `Create Keys` dosyaya düğmesi. Bunu yalnızca ortak parametreleri aktarır.  
+## <a name="exporting-a-public-key"></a>Ortak anahtar dışarı aktarılıyor  
+ Bu görev `Create Keys` düğme tarafından oluşturulan anahtarı bir dosyaya kaydeder. Yalnızca ortak parametreleri dışarı aktarır.  
   
- Bu görevi, böylece o dosyaları için her şifreleyebilirsiniz Bob kendi ortak anahtar verme Alice senaryo benzetimini yapar. He ve ilgili ortak anahtara sahip diğer özel parametreler tam anahtar çiftiyle olmadığı için bunların şifresini çözmek mümkün olmayacaktır.  
+ Bu görev, Gamze 'nin kendi ortak anahtarını veren senaryosuna benzetir. böylece, dosyaları şifreleyebilmesini sağlar. Ortak anahtara sahip olan kişiler ve özel parametrelerle tam anahtar çiftine sahip olmadıkları için şifrelerini çözemeyecektir.  
   
- Aşağıdaki kodu olarak ekleyin `Click` için olay işleyicisi `Export Public Key` düğmesine (`buttonExportPublicKey_Click`).  
+ `Export Public Key` Düğme `Click` (`buttonExportPublicKey_Click`) için olay işleyicisi olarak aşağıdaki kodu ekleyin.  
   
  [!code-csharp[CryptoWalkThru#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#8)]
  [!code-vb[CryptoWalkThru#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#8)]  
   
-## <a name="importing-a-public-key"></a>Bir ortak anahtar içeri aktarma  
- Bu görev tarafından oluşturulan anahtar yalnızca ortak parametreleriyle yükler `Export Public Key` düğmesini ve anahtar kapsayıcısı adını ayarlar.  
+## <a name="importing-a-public-key"></a>Ortak anahtar içeri aktarılıyor  
+ Bu görev, anahtarı, `Export Public Key` düğme tarafından oluşturulan yalnızca ortak parametrelerle yükler ve anahtar kapsayıcısı adı olarak ayarlar.  
   
- Bu görevi, Alice'in anahtar yalnızca ortak parametreleri ile yaptığı dosyaları için her şifreleyebilirsiniz şekilde yükleniyor Bob senaryo benzetimini yapar.  
+ Bu görev, can 'ın, dosyalarını şifreleyebilmesi için Çiğdem 'in anahtarını yalnızca ortak parametrelerle yükleyen emre 'nin senaryosuna benzetir.  
   
- Aşağıdaki kodu olarak ekleyin `Click` için olay işleyicisi `Import Public Key` düğmesine (`buttonImportPublicKey_Click`).  
+ `Import Public Key` Düğme `Click` (`buttonImportPublicKey_Click`) için olay işleyicisi olarak aşağıdaki kodu ekleyin.  
   
  [!code-csharp[CryptoWalkThru#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#9)]
  [!code-vb[CryptoWalkThru#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#9)]  
   
-## <a name="getting-a-private-key"></a>Bir özel anahtar alma  
- Bu görevi kullanılarak oluşturulan anahtarın adını anahtar kapsayıcısı adını ayarlar `Create Keys` düğmesi. Anahtar kapsayıcısı tam anahtar çiftinin özel parametrelerle içerir.  
+## <a name="getting-a-private-key"></a>Özel anahtar alma  
+ Bu görev, anahtar kapsayıcısı adını `Create Keys` düğme kullanılarak oluşturulan anahtarın adına ayarlar. Anahtar kapsayıcısı, özel parametrelerle tam anahtar çiftini içerir.  
   
- Bu görev Alice, Bob tarafından şifrelenmiş dosyaların şifresini çözmek için kendi özel anahtarı kullanarak bir senaryo benzetimini yapar.  
+ Bu görev, Bob tarafından şifrelenen dosyaların şifresini çözmek için özel anahtarını kullanarak Gamze 'nin senaryosuna benzetir.  
   
- Aşağıdaki kodu olarak ekleyin `Click` için olay işleyicisi `Get Private Key` düğmesine (`buttonGetPrivateKey_Click`).  
+ `Get Private Key` Düğme `Click` (`buttonGetPrivateKey_Click`) için olay işleyicisi olarak aşağıdaki kodu ekleyin.  
   
  [!code-csharp[CryptoWalkThru#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#7)]
  [!code-vb[CryptoWalkThru#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#7)]  
   
 ## <a name="testing-the-application"></a>Uygulamayı Test Etme  
- Uygulamayı oluşturduktan sonra aşağıdaki test senaryoları gerçekleştirin.  
+ Uygulamayı oluşturduktan sonra, aşağıdaki test senaryolarını gerçekleştirin.  
   
-#### <a name="to-create-keys-encrypt-and-decrypt"></a>Anahtarları oluşturmak için şifrelemek ve şifresini çözme  
+#### <a name="to-create-keys-encrypt-and-decrypt"></a>Anahtar oluşturmak, şifrelemek ve şifresini çözmek için  
   
-1. Tıklayın `Create Keys` düğmesi. Etiket anahtarı adını görüntüler ve tam anahtar çifti olduğunu gösterir.  
+1. `Create Keys` Düğmesine tıklayın. Etiket, anahtar adını gösterir ve tam bir anahtar çifti olduğunu gösterir.  
   
-2. Tıklayın `Export Public Key` düğmesi. Ortak anahtar parametreleri verme geçerli anahtar değiştirmez unutmayın.  
+2. `Export Public Key` Düğmesine tıklayın. Ortak anahtar parametrelerini dışa aktarmanın geçerli anahtarı değiştirmediğini unutmayın.  
   
-3. Tıklayın `Encrypt File` düğmesine tıklayın ve bir dosya seçin.  
+3. `Encrypt File` Düğmesine tıklayın ve bir dosya seçin.  
   
-4. Tıklayın `Decrypt File` düğmesine tıklayın ve yalnızca şifrelenmiş dosya belirleyin.  
+4. `Decrypt File` Düğmesine tıklayın ve yeni şifrelenen dosyayı seçin.  
   
-5. Yalnızca şifresi dosyasını inceleyin.  
+5. Yalnızca şifresi çözülen dosyayı inceleyin.  
   
-6. Uygulamayı kapatın ve alınırken kalıcı anahtar kapsayıcıları bir sonraki senaryoda test etmek için yeniden başlatın.  
+6. Uygulamayı kapatın ve sonraki senaryoda kalıcı anahtar kapsayıcıları almayı sınamak için yeniden başlatın.  
   
 #### <a name="to-encrypt-using-the-public-key"></a>Ortak anahtar kullanarak şifrelemek için  
   
-1. Tıklayın `Import Public Key` düğmesi. Etiket, anahtar adını görüntüler ve bunun yalnızca genel olduğunu gösterir.  
+1. `Import Public Key` Düğmesine tıklayın. Etiket, anahtar adını görüntüler ve yalnızca ortak olduğunu gösterir.  
   
-2. Tıklayın `Encrypt File` düğmesine tıklayın ve bir dosya seçin.  
+2. `Encrypt File` Düğmesine tıklayın ve bir dosya seçin.  
   
-3. Tıklayın `Decrypt File` düğmesine tıklayın ve yalnızca şifrelenmiş dosya belirleyin. Özel anahtarın şifresini çözmek için sahip olması gerektiğinden bu başarısız olur.  
+3. `Decrypt File` Düğmesine tıklayın ve yeni şifrelenen dosyayı seçin. Bu işlem başarısız olur çünkü şifresini çözmek için özel anahtarınız olmalıdır.  
   
- Bu senaryo, bir dosyayı başka bir kişi için şifrelemek için yalnızca ortak anahtarın gösterir. Genellikle söz konusu kişinin, size yalnızca ortak anahtar ve şifre çözme için özel anahtarın stopaj.  
+ Bu senaryoda, bir dosyayı başka bir kişiye şifrelemek için yalnızca ortak anahtarın bulunması gösterilmektedir. Genellikle bu kişi size yalnızca ortak anahtar verir ve şifre çözme için özel anahtarı karıştı.  
   
 #### <a name="to-decrypt-using-the-private-key"></a>Özel anahtarı kullanarak şifresini çözmek için  
   
-1. Tıklayın `Get Private Key` düğmesi. Etiket anahtarı adını görüntüler ve tam bir anahtar çifti olup olmadığını gösterir.  
+1. `Get Private Key` Düğmesine tıklayın. Etiket, anahtar adını görüntüler ve tam anahtar çifti olup olmadığını gösterir.  
   
-2. Tıklayın `Decrypt File` düğmesine tıklayın ve yalnızca şifrelenmiş dosya belirleyin. Tam anahtar çifti şifresini çözmek için sahip olduğunuz için bu başarılı olacaktır.  
+2. `Decrypt File` Düğmesine tıklayın ve yeni şifrelenen dosyayı seçin. Şifresini çözmek için tam anahtar çiftine sahip olduğunuzdan bu işlem başarılı olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

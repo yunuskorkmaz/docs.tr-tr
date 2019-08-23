@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: b43c692c8fd54ef1cbfac334b4986d8332462848
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ad3f7949e01a387c3c7de2a0702d11b106ea0040
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596483"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922204"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler (C# Programlama Kılavuzu)
 C#4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. *Adlandırılmış bağımsız değişkenler* , bağımsız değişkenini parametrenin adıyla ilişkilendirerek parametre listesindeki konumuyla değil, belirli bir parametre için bir bağımsız değişken belirtmenizi sağlar. *Isteğe bağlı bağımsız değişkenler* bazı parametrelerin bağımsız değişkenlerini atlamanızı sağlar. Her iki yöntem de Yöntemler, Dizin oluşturucular, oluşturucular ve temsilcilerle birlikte kullanılabilir.  
@@ -91,7 +91,7 @@ C#4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. *
  ![ExampleMethod yöntemi için IntelliSense hızlı bilgilerini gösteren ekran görüntüsü.](./media/named-and-optional-arguments/optional-examplemethod-parameters.png)  
   
 > [!NOTE]
->  .Net <xref:System.Runtime.InteropServices.OptionalAttribute> sınıfını kullanarak isteğe bağlı parametreler de bildirebilirsiniz. `OptionalAttribute`parametreler varsayılan değer gerektirmez.  
+> .Net <xref:System.Runtime.InteropServices.OptionalAttribute> sınıfını kullanarak isteğe bağlı parametreler de bildirebilirsiniz. `OptionalAttribute`parametreler varsayılan değer gerektirmez.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte, için `ExampleClass` oluşturucusunun bir parametresi vardır, bu isteğe bağlıdır. Örnek yönteminde `ExampleMethod` bir gerekli parametre `optionalstr` , `required`ve `optionalint`iki isteğe bağlı iki parametre vardır. İçindeki `Main` kod, oluşturucunun ve yönteminin çağrılabileceği farklı yolları gösterir.  

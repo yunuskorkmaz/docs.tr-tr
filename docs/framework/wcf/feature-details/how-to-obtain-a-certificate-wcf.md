@@ -1,33 +1,33 @@
 ---
-title: 'Nasıl yapılır: (WCF) bir sertifika alın'
+title: 'Nasıl yapılır: Sertifika edinme (WCF)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 1a2731c535bd403046ca3bc01364d0933f127a7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e720a6742506f6270fda65de12f510c2a6224873
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643678"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929185"
 ---
-# <a name="how-to-obtain-a-certificate-wcf"></a>Nasıl yapılır: (WCF) bir sertifika alın
-Windows Communication Foundation (WCF) kullanmak için yalnızca ilk sertifikaları almak, X.509 sertifikaları, özelliklerini kullanın.  
+# <a name="how-to-obtain-a-certificate-wcf"></a>Nasıl yapılır: Sertifika edinme (WCF)
+X. 509.440 sertifikalarını kullanan Windows Communication Foundation (WCF) özelliklerinden herhangi birini kullanmak için öncelikle sertifikaları edinmeniz yeterlidir.  
   
-### <a name="to-obtain-an-x509-certificate"></a>Bir X.509 sertifikası almak için  
+### <a name="to-obtain-an-x509-certificate"></a>X. 509.440 sertifikası almak için  
   
 1. Aşağıdakilerden birini seçin:  
   
-    - VeriSign gibi bir sertifika yetkilisinden bir sertifika satın alın  
+    - VeriSign, Inc. bir sertifika yetkilisinden sertifika satın alın.  
   
-    - Kendi sertifika hizmetini ayarlama ve bir sertifika yetkilisi sertifikaları imzalamak sahip. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Windows 2000 Server, Windows 2000 Server Datacenter ve Windows 2000 veri merkezi sunucusu destekleyen ortak anahtar altyapısı (PKI) Sertifika Hizmetleri içerir. Windows Server 2008'de kullanmak [Active Directory Sertifika Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=153483) bir sertifika yetkilisi yönetmek için rol.  
+    - Kendi sertifika hizmetinizi kurun ve sertifikaları imzalamak için bir sertifika yetkilisine sahip olmanız gerekir. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Windows 2000 Server, Windows 2000 Server Datacenter ve Windows 2000 Datacenter Server hepsi ortak anahtar altyapısını (PKI) destekleyen sertifika hizmetlerini içerir. Windows Server 2008 ' de, sertifika yetkilisini yönetmek için [Active Directory Sertifika Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=153483) rolünü kullanın.  
   
-    - Kendi sertifika hizmetini ayarlama ve yapmak sahip sertifikaları imzalı değil.  
+    - Kendi sertifika hizmetinizi kurun ve sertifikalara kaydolmayın.  
   
     > [!NOTE]
-    >  Yaklaşımı, uygulamanız, alıcı X.509 sertifikasını içeren SOAP isteğinin X.509 sertifikası güvenmesi gerekir. Başka bir deyişle, X.509 sertifika veya sertifika zincirinde bir veren güvenilir kişiler sertifika deposunda olduğunu ve X.509 sertifika güvenilmeyen bir sertifika deposunda değil.  
+    > Hangi yaklaşımı kullanırsanız, X. 509.440 sertifikasını içeren SOAP isteğinin alıcısı X. 509.440 sertifikasına güvenmelidir. Yani, sertifika zincirindeki X. 509.440 sertifikası veya veren, güvenilen kişiler sertifika deposunda ve X. 509.440 sertifikasının Güvenilmeyen sertifikalar deposunda olmadığı anlamına gelir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+- [Nasıl yapılır: Geliştirme sırasında kullanılmak üzere geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

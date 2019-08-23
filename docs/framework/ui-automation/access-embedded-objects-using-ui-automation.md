@@ -9,32 +9,32 @@ helpviewer_keywords:
 - accessing embedded objects
 - UI Automation, accessing embedded objects
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
-ms.openlocfilehash: 07223b9e48905b0952e37a6acdb703f584d166d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83e54da5fdb75e3da44009ec700102d6bd7ae5e9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032384"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937962"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>UI Otomasyonu Kullanarak Katıştırılmış Nesnelere Erişme
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu konu başlığı altında gösterilir nasıl [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] bir metin denetiminin içeriğini katıştırılmış nesneleri göstermek için kullanılabilir.  
+ Bu konu başlığı altında [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] , bir metin denetiminin içeriği içine katıştırılmış nesneleri ortaya çıkarmak için nasıl kullanılabilecekleri gösterilmektedir.  
   
 > [!NOTE]
->  Katıştırılmış nesneler içerebilir görüntüleri, köprüleri, düğmeler, tablolar veya ActiveX denetimlerini.  
+> Katıştırılmış nesneler görüntüleri, köprüleri, düğmeleri, tabloları ya da ActiveX denetimlerini içerebilir.  
   
- Katıştırılmış nesneler alt değerlendirilir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin sağlayıcısı. Bu aynı UI Otomasyonu ağaç yapısı olarak diğer tüm aracılığıyla kullanıma olanak tanıyan [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] öğeleri. İşlevleri, buna genellikle katıştırılmış nesneleri denetim türüne göre gerekli denetim desenleri aracılığıyla gösterilir (köprü metin tabanlı olduğundan, örneğin, destekleyecek <xref:System.Windows.Automation.TextPattern>).  
+ Katıştırılmış nesneler [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin sağlayıcısının alt öğeleri olarak değerlendirilir. Bu, diğer [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] tüm öğeler ile aynı UI Otomasyon ağacı yapısıyla açığa çıkmalarını sağlar. İşlevsellik, genellikle katıştırılmış nesneler denetim türü için gerekli olan denetim desenleri aracılığıyla gösterilir (örneğin, köprüler, metin tabanlı <xref:System.Windows.Automation.TextPattern>olduğundan).  
   
- ![Bir metin kapsayıcı katıştırılmış nesneler. ](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
-Bir örnek belge ile metinsel içeriği ("yaptığınız biliyor?" ...) ve kod örnekleri için bir hedef olarak kullanılan iki katıştırılmış nesneler (bir Whale'ı ve bir köprü bir resim).  
+ ![Metin kapsayıcısındaki katıştırılmış nesneler.](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
+Metinsel içeriğe sahip bir örnek belge ("tanıyor muydunuz?" ...) ve kod örnekleri için hedef olarak kullanılan iki katıştırılmış nesne (bir Haale ve bir metin köprüsü resmi).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, katıştırılmış nesneler koleksiyonunu içinden almak gösterilmiştir bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin sağlayıcısı. Giriş sağlanan örnek belge için iki nesne (bir görüntü öğesi ve bir metin öğesi) döndürülür.  
+ Aşağıdaki kod örneği, bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin sağlayıcısı içinden katıştırılmış nesneler koleksiyonunun nasıl alınacağını gösterir. Giriş bölümünde belirtilen örnek belge için iki nesne döndürülür (bir görüntü öğesi ve bir metin öğesi).  
   
 > [!NOTE]
->  Görüntü öğesi, genellikle görüntünün açıklayan ilişkili bazı iç metin olmalıdır, <xref:System.Windows.Automation.AutomationElement.NameProperty> (örneğin, "bir mavi whale."). Ancak, görüntünün ne bu açıklayıcı metin resim nesnesi kapsayan bir metin aralığını alındığında, metin akışında döndürülür.  
+> Görüntü öğesi, görüntüyü açıklayan, genellikle <xref:System.Windows.Automation.AutomationElement.NameProperty> (örneğin, "mavi bir Whale"), onunla ilişkilendirilmiş bir iç metin içermelidir. Ancak, görüntü nesnesini kapsayan bir metin aralığı elde edildiğinde, görüntü ne de metin akışında bu açıklayıcı metin döndürülmez.  
   
 [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
 [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
@@ -44,10 +44,10 @@ Bir örnek belge ile metinsel içeriği ("yaptığınız biliyor?" ...) ve kod �
 [!code-vb[FindText#GetChildren](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#getchildren)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bir metin aralığı içinde katıştırılmış bir nesne almak gösterilmiştir bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin sağlayıcısı. Alınan metin boş bir aralığın başlangıç uç noktası aşağıdaki "... yere aralığı Okyanusu. (boşluk) "ve kapatma bitiş uç nokta önündeki". "(giriş sağlanan görüntü gösterildiği gibi) katıştırılmış köprüyü temsil eden. Bu boş bir aralığın olsa da, sıfır olmayan bir aralık olduğundan, bozuk bir aralık olarak kabul edilmez.  
+ Aşağıdaki kod örneği, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin sağlayıcısı içindeki katıştırılmış bir nesneden bir metin aralığının nasıl alınacağını gösterir. Alınan metin aralığı, başlangıç uç noktasının izlediği boş bir aralıktır "... Hint. (boşluk) "ve bitiş bitiş noktası, katıştırılmış köprüyü temsil eden". "işaretinden önce gelir (giriş bölümünde verilen görüntüde gösterildiği gibi). Bu boş bir Aralık olsa da, sıfır olmayan bir span içerdiğinden, bir bozuk aralığı olarak kabul edilmez.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.TextPattern> bir metin tabanlı katıştırılmış nesne köprü gibi alabilirsiniz; Ancak, ikincil <xref:System.Windows.Automation.TextPattern> tam işlevselliğini kullanıma sunmak için katıştırılmış nesneden alınması gerekir.  
+> <xref:System.Windows.Automation.TextPattern>köprü gibi metin tabanlı katıştırılmış bir nesne alabilir; Ancak, tam işlevselliğini <xref:System.Windows.Automation.TextPattern> göstermek için, ikincil nesnenin gömülü nesneden alınması gerekir.  
   
  [!code-csharp[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#getrangefromchild)]
  [!code-vb[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATextPattern_snip/VisualBasic/SearchWindow.vb#getrangefromchild)]  

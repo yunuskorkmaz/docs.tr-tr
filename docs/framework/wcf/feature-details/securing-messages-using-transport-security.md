@@ -2,18 +2,18 @@
 title: Taşıma Güveliği Kullanarak İletileri Güvenli Hale Getirme
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: a8a7e9422679927636ae2dc9b6a2ab34202ee74c
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: b0507590914e2e8cda7e5e599914a9e3d7b0acd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331512"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911715"
 ---
 # <a name="securing-messages-using-transport-security"></a>Taşıma Güveliği Kullanarak İletileri Güvenli Hale Getirme
 Bu bölümde, bir kuyruğa gönderilen iletileri güvenli hale getirmek için kullanabileceğiniz Message Queuing (MSMQ) aktarım güvenliği açıklanmaktadır.  
   
 > [!NOTE]
->  Bu konuyu okumadan önce [güvenlik kavramlarını](../../../../docs/framework/wcf/feature-details/security-concepts.md)okumanız önerilir.  
+> Bu konuyu okumadan önce [güvenlik kavramlarını](../../../../docs/framework/wcf/feature-details/security-concepts.md)okumanız önerilir.  
   
  Aşağıdaki çizimde Windows Communication Foundation (WCF) kullanarak sıraya alınmış iletişimin kavramsal bir modeli verilmiştir. Bu çizim ve terminoloji, taşıma güvenlik kavramlarını açıklamak için kullanılır.  
   
@@ -53,7 +53,7 @@ Bu bölümde, bir kuyruğa gönderilen iletileri güvenli hale getirmek için ku
  Windows güvenliği kullanma seçeneği Active Directory tümleştirme gerektirir. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>, varsayılan aktarım güvenliği modudur. Bu ayarlandığında, WCF kanalı Windows SID 'sini MSMQ iletisine iliştirir ve Active Directory elde edilen iç sertifikasını kullanır. MSMQ, iletinin güvenliğini sağlamak için bu iç sertifikayı kullanır. Alma kuyruğu Yöneticisi, istemcinin kimliğini doğrulamak için eşleşen bir sertifika aramak ve bulmak için Active Directory kullanır ve SID 'nin aynı zamanda istemciyle eşleşip eşleşmediğini denetler. Bu kimlik doğrulama adımı, `WindowsDomain` kimlik doğrulama modu için dahili olarak oluşturulan veya `Certificate` kimlik doğrulama modunda harici olarak oluşturulan bir sertifika, hedef sıra olsa bile iletiye eklendiği takdirde yürütülür. kimlik doğrulaması gerektiren olarak işaretlenmemiş.  
   
 > [!NOTE]
->  Bir kuyruk oluştururken, sıranın sıraya ileti göndermesi gerektiğini belirtmek için kuyruğu kimliği doğrulanmış bir sıra olarak işaretleyebilirsiniz. Bu, kuyrukta hiçbir kimliği doğrulanmamış ileti kabul edilmesini sağlar.  
+> Bir kuyruk oluştururken, sıranın sıraya ileti göndermesi gerektiğini belirtmek için kuyruğu kimliği doğrulanmış bir sıra olarak işaretleyebilirsiniz. Bu, kuyrukta hiçbir kimliği doğrulanmamış ileti kabul edilmesini sağlar.  
   
  İleti ile birlikte gelen SID, istemcinin kuyruğa ileti gönderme yetkisine sahip olduğundan emin olmak için hedef sıranın ACL 'sine karşı kontrol etmek için de kullanılır.  
   
@@ -76,13 +76,13 @@ Bu bölümde, bir kuyruğa gönderilen iletileri güvenli hale getirmek için ku
  İletiyi imzalamaya ek olarak, MSMQ iletisi, hedef kuyruğu barındıran alma kuyruğu yöneticisine ait olan Active Directory tarafından alınan sertifikanın ortak anahtarı kullanılarak şifrelenir. Gönderme kuyruğu Yöneticisi, MSMQ iletisinin aktarım sırasında şifrelenmesini sağlar. Alma kuyruğu Yöneticisi, iç sertifikasının özel anahtarını kullanarak MSMQ iletisinin şifresini çözer ve iletiyi açık metin halinde kuyruktaki (kimliği doğrulanmış ve yetkilendirirse) depolar.  
   
 > [!NOTE]
->  İletiyi şifrelemek için Active Directory erişim gerekir (`UseActiveDirectory` öğesinin <xref:System.ServiceModel.NetMsmqBinding> özelliği olarak `true`ayarlanmalıdır <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>) ve hem hem de <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> ile kullanılabilir.  
+> İletiyi şifrelemek için Active Directory erişim gerekir (`UseActiveDirectory` öğesinin <xref:System.ServiceModel.NetMsmqBinding> özelliği olarak `true`ayarlanmalıdır <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>) ve hem hem de <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> ile kullanılabilir.  
   
 #### <a name="none-protection-level"></a>Hiçbiri koruma düzeyi  
  Bu, olarak <xref:System.Net.Security.ProtectionLevel.None>ayarlandığında <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> kapsanır. Bu, diğer herhangi bir kimlik doğrulama modu için geçerli bir değer olamaz.  
   
 > [!NOTE]
->  MSMQ iletisi imzalanmışsa, MSMQ iletinin, sıranın durumundan (iç veya dış) bağımsız olarak imzalanıp imzalanmadığını, yani kimliği doğrulanmış sırayı denetler.  
+> MSMQ iletisi imzalanmışsa, MSMQ iletinin, sıranın durumundan (iç veya dış) bağımsız olarak imzalanıp imzalanmadığını, yani kimliği doğrulanmış sırayı denetler.  
   
 ### <a name="msmq-encryption-algorithm"></a>MSMQ şifreleme algoritması  
  Şifreleme algoritması, kabloda MSMQ iletisini şifrelemek için kullanılacak algoritmayı belirtir. Bu özellik yalnızca <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> olarak <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>ayarlandıysa kullanılır.  

@@ -2,22 +2,22 @@
 title: <transport> / <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
-ms.openlocfilehash: ec726c4b39fedbf63a7ecc9e685a86367609fa43
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ede4103f9c8f2f73ac34036fe7a58242e32350e0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788342"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934686"
 ---
-# <a name="transport-of-netmsmqbinding"></a>\<Aktarım >, \<netMsmqBinding >
+# <a name="transport-of-netmsmqbinding"></a>\<\<NetMsmqBinding > taşıma >
 Taşıma güvenlik ayarlarını tanımlar.  
   
  \<system.ServiceModel>  
-\<bağlamaları >  
-\<netMsmqBinding>  
+\<bağlama >  
+\<netMsmqBinding >  
 \<bağlama >  
 \<Güvenlik >  
-\<taşıma >  
+\<Taşıma >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,10 +41,10 @@ Taşıma güvenlik ayarlarını tanımlar.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|msmqAuthenticationMode|İletinin MSMQ taşıma tarafından nasıl doğrulacağını belirtir. Geçerli değerler şunlardır:<br /><br /> -Yok: Kimlik doğrulaması yok.<br />-   WindowsDomain: İletiyle ilişkili güvenlik kimliği için X.509 sertifikası almak için Active Directory kimlik doğrulama mekanizması kullanır. Bu, ardından kullanıcı emin olmak için ACL kuyruğun sıra için yazma iznine sahip olmadığını denetlemek için kullanılır.<br />-Sertifikası: Kanal sertifikayı sertifika deposundan alır.<br /><br /> Varsayılan, `WindowsDomain` değeridir.<br /><br /> Bu öznitelik ayarlanırsa `None`, `msmqProtectionLevel` özniteliği de ayarlanması gerekir `None`. Bu öznitelik türünde <xref:System.ServiceModel.MsmqAuthenticationMode>|  
-|msmqEncryptionAlgorithm|Etkin ileti şifreleme için iletileri ileti sıra yöneticileri arasında transfer ederken kullanılan algoritmayı belirtir. Geçerli değerler şunlardır:<br /><br /> -RC4Stream<br />-AES<br />-Varsayılan değer `RC4Stream`. Bu öznitelik türünde <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
-|msmqProtectionLevel|MSMQ taşıma düzeyinde güvenli şekilde iletileri belirtir. İleti bütünlüğü hem takası ileti bütünlüğü çalışırken işaretini ve şifreleme sağlar şifreleme sağlar. Diğer bir deyişle, ileti gönderen gerçekten geldi ve gönderen kim kendisinin kendisinin olduğunu söylüyor. Geçerli değerler şunlardır:<br /><br /> -Yok: Koruma yok.<br />-Oturum: İmzalı iletiler.<br />-   EncryptAndSign: İletileri şifrelenir ve imzalanmış.<br />-Varsayılan `Sign`.|  
-|msmqSecureHashAlgorithm|İleti özeti bilgi işlem için kullanılan karma algoritmasını belirtir. Geçerli değerler şunlardır:<br /><br /> -MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> Varsayılan, `SHA1` değeridir. Bu öznitelik türünde <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.<br>Çakışma sorunları nedeniyle MD5 ve SHA1, SHA256 veya iyi Microsoft önerir.|  
+|msmqAuthenticationMode|İletinin MSMQ taşıması tarafından nasıl doğrulanabilmesi gerektiğini belirtir. Geçerli değerler şunlardır:<br /><br /> Seçim Kimlik doğrulaması yok.<br />-WindowsDomain: Kimlik doğrulama mekanizması, iletiyle ilişkili güvenlik tanımlayıcısı için X. 509.440 sertifikasını almak üzere Active Directory kullanır. Bu daha sonra kullanıcının sıra için yazma iznine sahip olduğundan emin olmak üzere kuyruğun ACL 'sini denetlemek için kullanılır.<br />Sertifika Kanal, sertifika deposundan sertifikayı alır.<br /><br /> Varsayılan, `WindowsDomain` değeridir.<br /><br /> Bu öznitelik olarak `None`ayarlandıysa `msmqProtectionLevel` , özniteliği de olarak `None`ayarlanmalıdır. Bu öznitelik türü<xref:System.ServiceModel.MsmqAuthenticationMode>|  
+|Msmqencryptionalgoritması|Message Queue yöneticileri arasında ileti aktarılırken ileti şifreleme için kullanılacak algoritmayı belirtir. Geçerli değerler şunlardır:<br /><br /> - RC4Stream<br />-AES<br />-Varsayılan değer `RC4Stream`. Bu öznitelik türü <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
+|msmqProtectionLevel|MSMQ taşıması düzeyinde iletilerin güvenli hale getirilme yöntemini belirtir. Şifreleme ileti bütünlüğünü sağlar, oturum açma ve şifreleme hem ileti bütünlüğünü hem de Red olmamasını sağlar. Diğer bir deyişle, ileti gerçekten gönderenden geldi ve gönderen kim olduğunu söylüyor. Geçerli değerler şunlardır:<br /><br /> Seçim Koruma yok.<br />İmzalayabilirsiniz İletiler imzalanır.<br />EncryptAndSign özelliğini İletiler şifrelenir ve imzalanır.<br />-Varsayılan `Sign`değer.|  
+|msmqSecureHashAlgorithm|İleti özetinin bilgi işlem için kullanılacak karma algoritmasını belirtir. Geçerli değerler şunlardır:<br /><br /> -MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> Varsayılan, `SHA1` değeridir. Bu öznitelik türü <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.<br>MD5 ve SHA1 ile ilgili çarpışma sorunları nedeniyle, Microsoft SHA256 veya daha iyi bir performans öneriyor.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -53,7 +53,7 @@ Taşıma güvenlik ayarlarını tanımlar.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Sıraya alınan taşımalar için taşıma güvenlik ayarlarını tanımlar.|  
+|[\<Güvenlik >](security-of-netmsmqbinding.md)|Sıraya alınan taşıtlar için taşıma güvenlik ayarlarını tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -61,9 +61,9 @@ Taşıma güvenlik ayarlarını tanımlar.
 - <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A>
 - <xref:System.ServiceModel.MsmqTransportSecurity>
-- [WCF'de Kuyruklar](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+- [WCF'de Kuyruklar](../../../wcf/feature-details/queues-in-wcf.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<bağlama >](../../../misc/binding.md)

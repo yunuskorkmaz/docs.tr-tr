@@ -2,89 +2,89 @@
 title: WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: b1d86fa57b31d1f9be12f76c28f9d042e7e28e24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1fa0548e2d63562ddcb85fc6392bf5c99d67d6c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052566"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916811"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni
-WS-AtomicTransaction yapılandırması MMC ek bileşeninde hem yerel hem de uzak makinelerde bir kısmını WS-AtomicTransaction ayarlarını yapılandırmak için kullanılır.  
+WS-AtomicTransaction Yapılandırması MMC ek bileşeni, hem yerel hem de uzak makinelerde WS-AtomicTransaction ayarlarının bir bölümünü yapılandırmak için kullanılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çalıştırıyorsanız [!INCLUDE[wxp](../../../includes/wxp-md.md)] veya [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], MMC ek bileşeninde giderek bulunabilir **Denetim Masası/Yönetim Araçları/Component Services /**, sağ **Bilgisayarım**, ve seçme **özellikleri**. Bu MSDTC yapılandırabileceğiniz aynı konumdur. İçin yapılandırma seçenekleri altında gruplanır **WS-AT** sekmesi.  
+ [!INCLUDE[wxp](../../../includes/wxp-md.md)]Veya çalıştırıyorsanız[!INCLUDE[ws2003](../../../includes/ws2003-md.md)], MMC ek bileşeni **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri/** , Bilgisayarım ' a sağ tıklayıp Özellikler ' i seçerek bulunabilir. Bu, MSDTC 'yi yapılandırabileceğiniz konumdur. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.  
   
- Windows Vista çalıştırıyorsanız veya [!INCLUDE[lserver](../../../includes/lserver-md.md)], MMC ek bileşeninde bulunabilir tıklayarak **Başlat** düğmesini ve yazarak `dcomcnfg.exe` içinde **arama** kutusu. MMC açıldığında gidin **My Computer\Distributed işlem Coordinator\Local DTC** düğümünü sağ tıklatın ve seçin **özellikleri**. İçin yapılandırma seçenekleri altında gruplanır **WS-AT** sekmesi.  
+ [!INCLUDE[lserver](../../../includes/lserver-md.md)]Windows Vista çalıştırıyorsanız veya MMC ek bileşeni, **Başlat** düğmesine tıklayıp `dcomcnfg.exe` **arama** kutusuna yazarak bulabilirsiniz. MMC açıldığında, **bilgisayar \ dağıtılmış işlem Koordinatlıklasör** düğümü ' ne gidin, sağ tıklayın ve **Özellikler**' i seçin. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.  
   
- Önceki adımları eklentisini yerel makine yapılandırma başlatmak için kullanılır. Uzak bir makineyi yapılandırmak istiyorsanız, Uzak makinenin adını bulun **Denetim Masası/Yönetim Araçları/Component Services /** ve çalıştırıyorsanız benzer adımları [!INCLUDE[wxp](../../../includes/wxp-md.md)] veya [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Windows Vista çalıştırıyorsanız veya [!INCLUDE[lserver](../../../includes/lserver-md.md)], Vista için önceki adımları izleyin ve [!INCLUDE[lserver](../../../includes/lserver-md.md)], ancak **dağıtılmış işlem Coordinator\Local DTC** uzak bilgisayarın düğümü altında düğüm.  
+ Önceki adımlar, yerel bir makineyi yapılandırmak için ek bileşeni başlatmak üzere kullanılır. Uzak bir makineyi yapılandırmak istiyorsanız, uzak makinenin adını **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri**/olarak bulun ve veya [!INCLUDE[wxp](../../../includes/wxp-md.md)] [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]çalıştırıyorsanız benzer adımları gerçekleştirin. Windows Vista veya [!INCLUDE[lserver](../../../includes/lserver-md.md)]çalıştırıyorsanız, Vista ve [!INCLUDE[lserver](../../../includes/lserver-md.md)]için önceki adımları uygulayın, ancak uzak bilgisayarın düğümü altındaki **Dağıtılmış işlem koordinatı\local DTC** düğümünü kullanın.  
   
- Araç tarafından sağlanan kullanıcı arabirimi kullanmak için şu yolda bulunur WsatUI.dll dosyayı kaydetmek zorunda,  
+ Araç tarafından sunulan kullanıcı arabirimini kullanmak için, aşağıdaki yolda bulunan WsatUI. dll dosyasını kaydetmeniz gerekir.  
   
  **%PROGRAMFILES%\Microsoft SDKs\Windows\v6.0\Bin\WsatUI.dll**  
   
- Kayıt, aşağıdaki komutla yapılabilir.  
+ Kayıt aşağıdaki komutla yapılabilir.  
   
 ```Output  
 regasm.exe /codebase WsatUI.dll  
 ```  
   
- Temel WS-AtomicTransaction ayarlarını değiştirmek için bu aracı kullanabilirsiniz. Örneğin, etkinleştirmek ve WS-AtomicTransaction Protokolü desteğini devre dışı, HTTP bağlantı noktalarını WS-AT yapılandırabilir, HTTP bağlantı noktasına bir SSL sertifikası bağlama, sertifikaları, sertifika konu adları belirterek yapılandırma, izleme modunu seçin ve ayarlayın Varsayılan ve en büyük zaman aşımı.  
+ Temel WS-AtomicTransaction ayarlarını değiştirmek için bu aracı kullanabilirsiniz. Örneğin, WS-AtomicTransaction protokol desteğini etkinleştirebilir ve devre dışı bırakabilir, WS-AT için HTTP bağlantı noktalarını yapılandırabilir, HTTP bağlantı noktasına bir SSL sertifikası bağlayabilir, sertifika konu adlarını belirterek sertifikaları yapılandırabilir, Izleme modunu seçebilir ve ayarlayabilirsiniz Varsayılan ve en fazla zaman aşımları.  
   
- Yalnızca yerel makine üzerinde WS-AtomicTransaction destek yapılandırmanız gerekir, bu aracı komut satırı sürümünü kullanabilirsiniz. Komut satırı aracı hakkında daha fazla bilgi için bkz. [WS-AtomicTransaction yapılandırma yardımcı programı (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) konu.  
+ Yalnızca yerel makinede WS-AtomicTransaction desteğini yapılandırmanız gerekiyorsa, bu aracın komut satırı sürümünü kullanabilirsiniz. Komut satırı aracı hakkında daha fazla bilgi için, bkz. [WS-AtomicTransaction Yapılandırma yardımcı programı (wsatConfig. exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) konusu.  
   
- MMC ek bileşenini hem de komut satırı aracı tüm WS-AT ayarlarını yapılandırma desteklemediğini bilmeniz gerekir. Bu ayarlar, yalnızca kayıt defterini doğrudan değiştirme tarafından düzenlenebilir. Bu kayıt defteri ayarları hakkında daha fazla bilgi için bkz. [WS-Atomic işlem desteğini yapılandırma](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
+ Hem MMC ek bileşeni hem de komut satırı aracının tüm WS-AT ayarlarını yapılandırmayı desteklemediğini bilmelisiniz. Bu ayarlar yalnızca kayıt defteri doğrudan değiştirilerek düzenlenebilir. Bu kayıt defteri ayarları hakkında daha fazla bilgi için bkz. [WS Atomik Işlem desteğini yapılandırma](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
   
 ### <a name="user-interface-description"></a>Kullanıcı arabirimi açıklaması  
- **WS-Atomic işlem ağ desteğini etkinleştir**:  
+ **WS Atomik Işlem ağı desteğini etkinleştir**:  
   
- Bu onay kutusunu geçiş etkinleştirir veya GUI bileşenlerinin tümünü bu eklenti devre dışı bırakır.  
+ Bu onay kutusunun işaretlenmesi, bu ek bileşenin tüm GUI bileşenlerini sunar veya devre dışı bırakır.  
   
- Bu onay kutusunu önce ağ DTC erişimi, gelen veya giden iletişimi veya her ikisi ile etkin olduğundan emin olun. İçinde bu değer doğrulanabilir **güvenlik** MSDTC ek bileşenini sekmesi.  
+ Bu kutuyu seçmeden önce, Ağ DTC erişiminin gelen veya giden iletişimle veya her ikisiyle de etkinleştirildiğinden emin olun. Bu değer, MSDTC ek bileşeninin **güvenlik** sekmesinde doğrulanabilir.  
   
-#### <a name="network-group-box"></a>Ağ Grup kutusu  
- Ağ grubuna HTTPS bağlantı noktası ve SSL şifrelemesi gibi ek güvenlik ayarlarını belirtebilirsiniz. Bu Grup (gri) devre dışı bırakıldı ağ işlemlerini DTC etkin değilse.  
+#### <a name="network-group-box"></a>Ağ grubu kutusu  
+ HTTPS bağlantı noktasını ve ağ grubunda SSL şifrelemesi gibi ek güvenlik ayarlarını belirtebilirsiniz. DTC ağ Işlemleri etkinleştirilmemişse bu grup devre dışıdır (gri renkte).  
   
  **HTTPS bağlantı noktası**  
   
- Bu değer WS-AT için kullanılan HTTPS bağlantı noktası oluşturulur. Değer (geçerli bir bağlantı noktası temsil etmek için) 1-65535 aralığında bir sayı olmalıdır. HTTP bağlantı noktasını değiştirmek, önceden kullanılmış WS-AT Hizmeti adresi serbest bırakılır ve yeni bağlantı noktasına yeni bir WS-AT hizmet adresi tabanlı olarak kaydedilir anlamına gelir HTTP hizmet yapılandırması değiştirir. Ayrıca, yeni seçilen bağlantı noktası şu anda seçili sertifikayla SSL şifrelemesi için şifrelenir.  
+ Bu, WS-AT için kullanılan HTTPS bağlantı noktasının değeridir. Değer, 1-65535 aralığında bir sayı olmalıdır (geçerli bir bağlantı noktasını göstermek için olduğu gibi). HTTP bağlantı noktasını değiştirmek, HTTP hizmet yapılandırmasını değiştirir, bu da önceden kullanılan WS-AT hizmet adresinin yayımlandığı ve yeni bir WS-AT hizmet adresinin yeni bağlantı noktasına göre kaydedildiği anlamına gelir. Ayrıca, yeni seçilen bağlantı noktası SSL şifrelemesi için seçili olan sertifikayla şifrelenir.  
   
 > [!NOTE]
->  Bu aracı çalıştırmadan önce güvenlik duvarını zaten etkinleştirdiyseniz, bağlantı noktası özel durum listesine otomatik olarak kaydedilir. Bu aracı çalıştırmadan önce güvenlik duvarını devre dışıysa, başka bir şey ile ilgili güvenlik duvarı yapılandırılır.  
+> Bu aracı çalıştırmadan önce güvenlik duvarını zaten etkinleştirdiyseniz, bağlantı noktası otomatik olarak özel durum listesine kaydedilir. Bu aracı çalıştırmadan önce güvenlik duvarı devre dışıysa, güvenlik duvarıyla ilgili başka hiçbir şey yapılandırılmadı.  
   
- WS-AT yapılandırdıktan sonra Güvenlik Duvarı'nı etkinleştirirseniz, bu aracı yeniden çalıştırın ve bu parametre kullanarak bağlantı noktası numarası girmeniz gerekir. Yapılandırdıktan sonra Güvenlik Duvarı'nı devre dışı bırakırsanız WS-AT ek giriş çalışmaya devam eder.  
+ WS-AT yapılandırıldıktan sonra güvenlik duvarını etkinleştirirseniz, bu aracı yeniden çalıştırmanız ve bu parametreyi kullanarak bağlantı noktası numarasını sağlamanız gerekir. Yapılandırma sonrasında güvenlik duvarını devre dışı bırakırsanız, WS-AT ek giriş olmadan çalışmaya devam eder.  
   
- **Uç noktası sertifika**  
+ **Uç nokta sertifikası**  
   
- Tıklayarak **seçin** düğmesi, yerel makinede SSL şifrelemesi için kullanılacak sertifikayı seçmek kullanıcının, şu anda kullanılabilir sertifikaların listesini görüntüler. Sertifika bir özel anahtara sahip olmalıdır. Aksi takdirde bir hata iletisi alırsınız.  
+ **Seç** düğmesine tıkladığınızda, yerel makinede mevcut olan sertifikaların bulunduğu bir liste görüntülenir ve bu durumda kullanıcının, SSL şifrelemesi için kullanılabilecek sertifikayı seçmesini sağlayabilirsiniz. Sertifikalar bir özel anahtara sahip olmalıdır. Aksi takdirde, bir hata iletisi alırsınız.  
   
 > [!NOTE]
->  Seçilen bir bağlantı noktası için SSL sertifikası ayarladığınızda, özgün SSL sertifikası varsa, bu bağlantı noktasıyla ilişkili üzerine yazın.  
+> Seçili bir bağlantı noktası için bir SSL sertifikası ayarladığınızda, varsa, bu bağlantı noktasıyla ilişkili özgün SSL sertifikasının üzerine yazarsınız.  
   
  **Yetkili hesaplar**  
   
- Tıklayarak **seçin** düğmesi çağırır belirtebileceğiniz katılabilir kullanıcı grubunun WS-Atomic işlemleri kontrol ederek Windows erişim denetimi listesi düzenleyici **izin** veya **Reddet** kutusunda **katılabilir** izin grubu.  
+ **Seç** düğmesine tıkladığınızda, **katıldaki** **izin verme** veya **reddetme** kutusunu işaretleyerek WS Atomik işlemlere katılabilen kullanıcı veya grubu belirtebileceğiniz Windows Access Control liste Düzenleyicisi çağrılır. izin grubu.  
   
- **Yetkili sertifikaları**  
+ **Yetkili sertifikalar**  
   
- Tıklayarak **seçin** düğmesi LocalMachine üzerinde şu anda kullanılabilir sertifikaların listesini görüntüler. Ardından, hangi sertifika kimlikleri WS-Atomic işlemlere katılmasına izin verilen seçebilirsiniz.  
+ **Seç** düğmesine tıkladığınızda, LocalMachine 'de Şu anda kullanılabilir olan sertifikaların bir listesi görüntülenir. Daha sonra, hangi sertifika kimliklerinin WS Atomik işlemlere katılmasına izin verileceğini seçebilirsiniz.  
   
 #### <a name="timeout-group-box"></a>Zaman aşımı grup kutusu  
- **Zaman aşımı** grup kutusu WS-Atomic işlem için varsayılan ve en büyük zaman aşımı belirtmenizi sağlar. Giden zaman aşımı için geçerli bir değer 1 ile 3600 arasında ' dir. Gelen zaman aşımı için geçerli bir değer, 0 ila 3600 arasında ' dir.  
+ **Zaman aşımı** Grup kutusu, WS Atomik bir işlem için varsayılan ve en büyük zaman aşımını belirtmenize olanak tanır. Giden zaman aşımı için geçerli bir değer 1 ile 3600 arasındadır. Gelen zaman aşımı için geçerli bir değer 0 ile 3600 arasındadır.  
   
-#### <a name="tracing-and-logging-group-box"></a>İzleme ve günlüğe kaydetme grup kutusu  
- **İzleme ve günlüğe kaydetme** grup kutusu istenen izleme ve günlüğe kaydetme düzeyi yapılandırmanıza olanak tanır.  
+#### <a name="tracing-and-logging-group-box"></a>İzleme ve günlüğe kaydetme Grup kutusu  
+ **İzleme ve günlüğe kaydetme** Grup kutusu, istenen izleme ve günlüğe kaydetme düzeyini yapılandırmanıza olanak tanır.  
   
- Tıklayarak **seçenekleri** düğmesi ek ayarlar belirleyebileceğiniz bir sayfa çağırır.  
+ **Seçenekler** düğmesine tıkladığınızda, ek ayarları belirtebileceğiniz bir sayfa çağırılır.  
   
- **İzleme düzeyini** birleşimi kutusu geçerli bir değerden seçmenize olanak sağlar <xref:System.Diagnostics.TraceLevel> sabit listesi. Onay kutularını, etkinlik izleme, Etkinlik yayma gerçekleştirmek veya kişisel olarak tanımlanabilir bilgileri toplamak isteyip istemediğinizi belirtmek için de kullanabilirsiniz.  
+ **İzleme düzeyi** birleşimi kutusu, <xref:System.Diagnostics.TraceLevel> numaralandırmanın geçerli bir değeri arasından seçim yapmanıza olanak tanır. Ayrıca, Etkinlik izlemeyi, etkinlik yaymayı gerçekleştirmek veya kişisel olarak tanımlanabilir bilgileri toplamak istediğinizi belirtmek için onay kutularını da kullanabilirsiniz.  
   
- Günlüğe kaydetme oturumlarda belirtebilirsiniz **günlüğe kaydetme oturumu** grup kutusu.  
+ Günlüğe kaydetme **oturum** grubu kutusunda günlük oturumlarını da belirtebilirsiniz.  
   
 > [!NOTE]
->  Başka bir izleme tüketici WS-AT izleme sağlayıcısı kullanılırken olayları izlemek için yeni bir günlüğe kaydetme oturumu oluşturulamıyor. Bu süre boyunca günlüğe kaydetmeyi yapılandırmak için her türlü girişim "Sağlayıcı etkinleştirilemedi. hata iletisi sonuçlanır. Hata kodu: 1".  
+> Başka bir izleme tüketicisi WS-AT İzleme sağlayıcısını kullanırken, izleme olayları için yeni bir günlüğe kaydetme oturumu oluşturamazsınız. Bu süre boyunca günlüğe kaydetmeyi yapılandırma girişimleri, "sağlayıcı etkinleştirilemedi. Hata kodu: 1 ".  
   
- İzleme ve günlüğe kaydetme hakkında daha fazla bilgi için bkz: [yönetim ve tanılama](../../../docs/framework/wcf/diagnostics/index.md).  
+ İzleme ve günlüğe kaydetme hakkında daha fazla bilgi için bkz. [Yönetim ve tanılama](../../../docs/framework/wcf/diagnostics/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: <remove> NameValueSectionHandler ve DictionarySectionHandler
+title: <remove>NameValueSectionHandler ve DictionarySectionHandler için öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 062aa3921d29cffd33db2d96096ef25c2b819030
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: cd338ff2d613be31ab1524f6baed6107f803a688
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300692"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920942"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<kaldırma > NameValueSectionHandler ve DictionarySectionHandler
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<NameValueSectionHandler ve DictionarySectionHandler için > öğesini kaldırın
 
-Önceden tanımlanmış ayar kaldırır.
+Daha önce tanımlanmış bir ayarı kaldırır.
 
-[ **\<Yapılandırma >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName >** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<kaldırma >**
+[ **\<Yapılandırma >** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> Kaldır**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,13 +34,13 @@ ms.locfileid: "66300692"
 
 |           | Açıklama |
 | --------- | ----------- |
-| **anahtar**   | Gerekli öznitelik.<br><br>Kaldırmak için ayar adını belirtir. |
+| **anahtar**   | Gerekli öznitelik.<br><br>Kaldırılacak ayarın adını belirtir. |
 
 ## <a name="parent-element"></a>Üst öğe
 
 | Öğe | Açıklama |
 | ------- | ------------|
-| [ **\<sectionName >** öğesi](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Ayarları kullanan özel yapılandırma bölümleri tanımlar <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> sınıfları. |
+| [sectionName > öğesi  **\<** ](custom-element-2.md) | <xref:System.Configuration.NameValueSectionHandler> Ve<xref:System.Configuration.DictionarySectionHandler> sınıflarını kullanan özel yapılandırma bölümlerinin ayarlarını tanımlar. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
@@ -48,13 +48,13 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Kullanabileceğiniz  **\<kaldırma >** uygulamanızdan yapılandırma dosyası hiyerarşisindeki daha yüksek düzeyde tanımlanan ayarları kaldırmak için öğesi.
+Uygulama yapılandırma dosyası hiyerarşisinde daha yüksek bir düzeyde tanımlanmış olan ayarları kaldırabilmeniz için  **\<Remove >** öğesini kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek nasıl kullanılacağını gösterir  **\<kaldırma >** makine yapılandırma dosyasında önceden tanımlanmış ayarları kaldırmak için bir uygulama yapılandırma dosyasında öğesi.
+Aşağıdaki örnek, makine yapılandırma dosyasında daha önce tanımlanan ayarları kaldırmak için bir uygulama yapılandırma dosyasında  **\<Remove >** öğesinin nasıl kullanılacağını gösterir.
 
-Aşağıdaki makine yapılandırma dosyası kod bölümü bildirir  **\<mySection >** ve iki ayarı ekler `key1` ve `key2`, ona:
+Aşağıdaki makine yapılandırma dosyası kodu,  **\<MySection >** bölümünü bildirir ve `key2`iki ayar `key1` ekler:
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ Aşağıdaki makine yapılandırma dosyası kod bölümü bildirir  **\<mySectio
 </configuration>
 ```
 
-Aşağıdaki uygulama yapılandırma dosyası kodu kaldırır `key2` ayarını  **\<mySection >** :
+Aşağıdaki uygulama yapılandırma dosyası kodu, `key2`  **\<MySection >** ayarını kaldırır:
 
 ```xml
 <!--Application configuration file -->
@@ -82,8 +82,8 @@ Aşağıdaki uygulama yapılandırma dosyası kodu kaldırır `key2` ayarını  
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe, uygulama yapılandırma dosyasında, makine yapılandırma dosyası kullanılabilir (*Machine.config*), ve *Web.config* uygulama dizin düzeyinde olmayan dosyalar.
+Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine. config*) ve uygulama dizini düzeyinde olmayan *Web. config* dosyalarında kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework için yapılandırma dosyası şeması](index.md)

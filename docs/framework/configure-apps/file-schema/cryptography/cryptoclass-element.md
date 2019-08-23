@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-ms.openlocfilehash: c8076fba1ebae693aa5e4c80e822b9ae840ff1c5
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 6a868f62c6a327012a6225b86bf0103d178d6ab7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664331"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921178"
 ---
 # <a name="cryptoclass-element"></a>\<cryptoClass > öğesi
 NameEntry > öğesinde kolay bir ad [ \<](nameentry-element.md) ile eşleşen bir şifreleme sınıfı içerir.  
@@ -79,5 +79,5 @@ NameEntry > öğesinde kolay bir ad [ \<](nameentry-element.md) ile eşleşen bi
 
 - [Yapılandırma Dosyası Şeması](../index.md)
 - [Şifreleme Ayarları Şeması](index.md)
-- [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)
+- [Şifreleme Hizmetleri](../../../../standard/security/cryptographic-services.md)
 - [Şifreleme Sınıflarını Yapılandırma](../../configure-cryptography-classes.md)

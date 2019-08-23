@@ -8,47 +8,47 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 275041372bd5e7da5dd0b32dc0a3d70a38bd0dcd
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 786a92d99f5e7a0c27f502efa9a5fe617ac4d4d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063757"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923748"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Nasıl yapılır: Küçük Resimler Oluşturma
-Bir küçük resim, bir resmin küçük bir sürümüdür. Bir küçük resim çağırarak oluşturabileceğiniz <xref:System.Drawing.Image.GetThumbnailImage%2A> yöntemi bir <xref:System.Drawing.Image> nesne.  
+Küçük resim görüntüsü görüntünün küçük bir sürümüdür. <xref:System.Drawing.Image.GetThumbnailImage%2A> Bir<xref:System.Drawing.Image> nesnenin yöntemini çağırarak bir küçük resim görüntüsü oluşturabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek oluşturan bir <xref:System.Drawing.Image> JPG dosyası nesne. Özgün resmin 640 piksel genişliği ve yüksekliği 479 piksel sahiptir. Kod 100 piksel genişliği ve yüksekliği 100 piksel olan bir küçük resim görüntüsü oluşturur.  
+ Aşağıdaki örnek, bir jpg <xref:System.Drawing.Image> dosyasından bir nesne oluşturur. Orijinal görüntüde 640 piksellik bir genişlik ve 479 piksellik yükseklik bulunur. Kod, 100 piksel genişlik ve 100 piksel yüksekliğinde bir küçük resim oluşturur.  
   
- Küçük resim görüntüsü aşağıda gösterilmiştir:  
+ Aşağıdaki çizim, küçük resim görüntüsünü göstermektedir:  
   
- ![Çıktı küçük resmi gösteren ekran görüntüsü.](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
+ ![Çıkış küçük resmini gösteren ekran görüntüsü.](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
   
 > [!NOTE]
->  Bu örnekte, bir geri çağırma yöntemi bildirildi ancak hiç kullanılmadı. Bu, GDI +'in tüm sürümleri destekler.  
+> Bu örnekte, bir geri çağırma yöntemi tanımlanmış, ancak hiç kullanılmadı. Bu, tüm GDI+ sürümlerini destekler.  
   
  [!code-csharp[System.Drawing.WorkingWithImages#71](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.WorkingWithImages#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Örneği çalıştırmak için aşağıdaki adımları izleyin:  
+ Yukarıdaki örnek, Windows Forms kullanımı için tasarlanmıştır ve <xref:System.Windows.Forms.PaintEventArgs> <xref:System.Windows.Forms.Control.Paint> olay işleyicisinin bir parametresi olan gerektirir `e`. Örneği çalıştırmak için aşağıdaki adımları izleyin:  
   
 1. Yeni bir Windows Forms uygulaması oluşturun.  
   
-2. Örnek kod formuna ekleyin.  
+2. Forma örnek kodu ekleyin.  
   
-3. Form için bir işleyici oluşturma <xref:System.Windows.Forms.Control.Paint> olay  
+3. Formun <xref:System.Windows.Forms.Control.Paint> olayı için bir işleyici oluşturun  
   
-4. İçinde <xref:System.Windows.Forms.Control.Paint> işleyicisi, çağrı `GetThumbnail` yöntemi ve pass `e` için <xref:System.Windows.Forms.PaintEventArgs>.  
+4. İşleyicisinde metodunu çağırın ve `e` için<xref:System.Windows.Forms.PaintEventArgs>geçişyapın. <xref:System.Windows.Forms.Control.Paint> `GetThumbnail`  
   
-5. Küçük resmini yapmak istediğiniz görüntü dosyasını bulun.  
+5. Küçük resmini oluşturmak istediğiniz bir görüntü dosyası bulun.  
   
-6. İçinde `GetThumbnail` yöntemi, bir yol belirtin ve dosya adı görüntünüze.  
+6. `GetThumbnail` Yönteminde, görüntünüzün yolunu ve dosya adını belirtin.  
   
 7. Örneği çalıştırmak için F5 tuşuna basın.  
   
-     Form üzerinde bir 100 x 100 küçük resim görünür.  
+     Formda 100 ile 100 arasında bir küçük resim görüntülenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

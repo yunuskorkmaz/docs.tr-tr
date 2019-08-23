@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 804a295cf74067eb23ed8e8c860252a1f2fcf5d5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a89ea76d78431ae8833602588379d5150e473710
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770195"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938315"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask Yöntemi
-Açıkça ortak dil çalışma zamanı (CLR) yeni bir görev oluşturmasını ister.  
+Ortak dil çalışma zamanının (CLR) açık olarak yeni bir görev oluşturmasını ister.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,36 +37,36 @@ HRESULT CreateTask (
   
 ## <a name="parameters"></a>Parametreler  
  `pTask`  
- [out] Yeni oluşturulan adresini bir işaretçiye [Iclrtask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md), ya da görev oluşturulamadı yoksa null.  
+ dışı Yeni oluşturulan bir [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)adresine yönelik bir işaretçi veya görev oluşturulmadıysa null.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|Yöntemi başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.|  
-|HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
-|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
-|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
-|E_OUTOFMEMORY|İstenen kaynağı ayırmak yeterli bellek yok.|  
+|S_OK|Yöntem başarıyla döndürüldü.|  
+|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_OUTOFMEMORY|İstenen kaynağı ayırmak için yeterli kullanılabilir bellek yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanıcı kodu bir iş parçacığı türleri kullanarak CLR başlatma sırasında otomatik olarak yeni bir görev oluşturur <xref:System.Threading> ad alanı veya iş parçacığı havuzunun boyutunu zaman yükseltilmiştir. Yönetilmeyen kod için yönetilen bir işleve bir çağrı yaptığında görevleri de oluşturur.  
+ CLR, başlatma sonrasında otomatik olarak yeni bir görev oluşturur, Kullanıcı kodu <xref:System.Threading> ad alanındaki türleri kullanarak bir iş parçacığı oluşturduğunda veya iş parçacığı havuzunun boyutu arttığı zaman. Yönetilmeyen kod yönetilen işleve çağrı yaptığında da görevler oluşturur.  
   
- `CreateTask` CLR yeni bir görev oluşturma açık bir istekte bulunmak konak sağlar. Örneğin, ana veri yapılarını preinitialize için bu yöntemi çağırabilirsiniz.  
+ `CreateTask`Konağın, CLR 'nin yeni bir görev oluşturmasını sağlayan açık bir istek yapmasına izin verir. Örneğin, ana bilgisayar veri yapılarını önceden başlatmak için bu yöntemi çağırabilir.  
   
 > [!IMPORTANT]
->  Yeni görevin askıya alınmış durumda döndürülür ve konak açıkça çağıran kadar askıda kalır [Ihosttask::Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
+> Yeni görev askıya alınmış durumda döndürülür ve ana bilgisayar açıkça [IHostTask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)olarak çağrılana kadar askıda kalır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

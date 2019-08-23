@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 76ec595b1d2cc732e1c8bc2dc2ca6def904bf94c
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: d0fea1aac4efb17811404ce45769615bb2e7234f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545349"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929656"
 ---
 # <a name="opacity-masks-overview"></a>Opaklık Maskelerine Genel Bakış
 Opaklık maskeleri, bir öğenin veya görselin bölümlerini saydam veya kısmen saydam hale getirme imkanı sağlar. Bir opaklık maskesi oluşturmak için, bir öğesi veya <xref:System.Windows.Media.Brush> <xref:System.Windows.UIElement.OpacityMask%2A> <xref:System.Windows.Media.Visual>özelliğine bir öğesi uygularsınız.  Fırça, öğe veya görsele eşlenir ve her fırça pikselin opaklık değeri, öğe veya görselin her bir pikselin elde edilen opaklığını belirlemede kullanılır.  
@@ -25,7 +25,7 @@ Opaklık maskeleri, bir öğenin veya görselin bölümlerini saydam veya kısme
  Opaklık maskesi, içeriğini öğe veya görsele eşleyerek işe yarar. Fırçanın piksellerinin her birinin alfa kanalı daha sonra öğenin veya görselin karşılık gelen piksellerin elde edilen opaklığını belirlemede kullanılır; fırçanın gerçek rengi yok sayılır. Fırçanın belirli bir bölümü saydam ise, öğenin veya görselin karşılık gelen bölümü saydam hale gelir. Fırçanın belirli bir kısmı donuk ise, öğenin veya görselin karşılık gelen bölümünün geçirgenliği değiştirilmez. Opaklık maskesi tarafından belirtilen opaklık, öğesinde veya görselde bulunan herhangi bir opaklık ayarı ile birleştirilir. Örneğin, bir öğe yüzde 25 donuk ise ve tam opak 'dan tamamen saydam 'e geçiş yapan bir opaklık maskesi uygulanırsa, sonuç, yüzde 25 opaklıktan tamamen saydamlığa geçiş yapan bir öğedir.  
   
 > [!NOTE]
->  Bu genel bakışta yer alan örneklere, görüntü öğelerinde opaklık maskelerinin kullanımı gösterimi olsa da, bir opaklık maskesi herhangi bir öğeye veya <xref:System.Windows.Media.Visual>paneller ve denetimler dahil olmak üzere uygulanabilir.  
+> Bu genel bakışta yer alan örneklere, görüntü öğelerinde opaklık maskelerinin kullanımı gösterimi olsa da, bir opaklık maskesi herhangi bir öğeye veya <xref:System.Windows.Media.Visual>paneller ve denetimler dahil olmak üzere uygulanabilir.  
   
  Opaklık maskeleri, görünümden geçiş yapan görüntü veya düğme oluşturmak, öğelere dokular eklemek veya cam benzeri yüzeyler oluşturmak için degradeleri birleştirmek gibi ilginç görsel etkiler oluşturmak için kullanılır. Aşağıdaki çizimde bir Opaklık maskesinin kullanımı gösterilmektedir. Damalı arka planı, maskenin saydam bölümlerini göstermek için kullanılır.  
   

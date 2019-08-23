@@ -11,19 +11,19 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-ms.openlocfilehash: 909ee7cbb7cd31cf213f305b23237cb69e295882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0b56ac66302f11c59c149197a84bb96691282a5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674655"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921009"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration> öğesi
 
-Dahil edilecek bir yapılandırma dosyası belirtir.
+Dahil edilecek bir yapılandırma dosyasını belirtir.
 
-[ **\<Yapılandırma >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<assemblyBinding >** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+[ **\<Yapılandırma >** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration>**
 
 ## <a name="syntax"></a>Sözdizimi
@@ -36,42 +36,45 @@ Dahil edilecek bir yapılandırma dosyası belirtir.
 
 |           | Açıklama |
 | --------- | ----------- |
-| **href**  | Gerekli öznitelik.<br><br>Dahil etmek için yapılandırma dosyasının URL'si. Desteklenen tek biçimi **href** özniteliği `file://`. Yerel dosyaları ve UNC dosyaları desteklenir. |
+| **değerini**  | Gerekli öznitelik.<br><br>Dahil edilecek yapılandırma dosyasının URL 'SI. **Href** özniteliği `file://`için desteklenen tek Biçim. Yerel dosyalar ve UNC dosyaları desteklenir. |
 
 ## <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **\<assemblyBinding >** öğesi](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Derleme bağlama ilkesini yapılandırma düzeyinde belirtir. |
+| [assemblyBinding > öğesi  **\<** ](assemblybinding-element-for-configuration.md) | Yapılandırma düzeyinde derleme bağlama ilkesini belirtir. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-None
+Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-**\<LinkedConfiguration>** öğesi bileşeni derlemeler için bakım basitleştirir. İyi bilinen bir konumda bulunan bir yapılandırma dosyası bir derleme bir veya daha fazla kullanmanız durumunda derleme kullanan uygulamaların yapılandırma dosyalarını kullanabilirler **\<linkedConfiguration>** yapılandırma bilgilerini doğrudan dahil olmak üzere yerine derleme yapılandırma dosyası eklenecek öğe. Bileşen derlemesi değiştiğinde, ortak yapılandırma dosyasını güncelleştirme derleme kullanan tüm uygulamalar için güncelleştirilmiş yapılandırma bilgilerini sağlar.
+**
+          \<LinkedConfiguration>** öğesi bileşeni derlemeler için bakım basitleştirir. İyi bilinen bir konumda bulunan bir yapılandırma dosyası bir derleme bir veya daha fazla kullanmanız durumunda derleme kullanan uygulamaların yapılandırma dosyalarını kullanabilirler **\<linkedConfiguration>** yapılandırma bilgilerini doğrudan dahil olmak üzere yerine derleme yapılandırma dosyası eklenecek öğe. Bileşen derlemesine hizmet verilirken, ortak yapılandırma dosyasını güncelleştirme, derlemeyi kullanan tüm uygulamalara güncelleştirilmiş yapılandırma bilgileri sağlar.
 
 > [!NOTE]
-> **\<LinkedConfiguration>** öğesi Windows yan yana bildirimleri olan uygulamalar için desteklenmez.
+> **
+          \<LinkedConfiguration>** öğesi Windows yan yana bildirimleri olan uygulamalar için desteklenmez.
 
-Aşağıdaki kuralları bağlantılı yapılandırma dosyaları yöneten:
+Aşağıdaki kurallar, bağlantılı yapılandırma dosyalarının kullanımını yönetir:
 
-- Dahil edilen yapılandırma dosyalarındaki ayarlar yalnızca yükleyici bağlama ilkesi etkiler ve yalnızca yükleyicisi tarafından kullanılır. Dahil edilen yapılandırma dosyalarını ayarları ilkeleri bağlama dışında olabilir, ancak bu ayarlar, herhangi bir etkisi yok.
+- Dahil edilen yapılandırma dosyalarındaki ayarlar yalnızca yükleyici bağlama ilkesini etkiler ve yalnızca yükleyici tarafından kullanılır. Dahil edilen yapılandırma dosyaları, bağlama ilkeleri dışında ayarları olabilir, ancak bu ayarların hiçbir etkisi yoktur.
 
-- Desteklenen tek biçimi `href` özniteliği `file://`. Yerel dosyaları ve UNC dosyaları desteklenir.
+- `href`Özniteliğiiçin desteklenen tek Biçim. `file://` Yerel dosyalar ve UNC dosyaları desteklenir.
 
-- Yapılandırma dosyası başına bağlı yapılandırmaları sayısı hiçbir kısıtlama yoktur.
+- Yapılandırma dosyası başına bağlı yapılandırma sayısında kısıtlama yoktur.
 
-- Tüm bağlantılı yapılandırma dosyaları davranıştır benzer bir dosya oluşturmak üzere birleştirilir `#include` C/C++'ta yönergesi.
+- Tüm bağlantılı yapılandırma dosyaları, C/ `#include` C++içindeki yönergesinin davranışına benzer şekilde tek bir dosya oluşturacak şekilde birleştirilir.
 
-- **\<LinkedConfiguration>** öğesi yalnızca uygulama yapılandırma dosyalarında izin verilir; içindeki sayılır *Machine.config*.
+- **
+          \<LinkedConfiguration>** öğesi yalnızca uygulama yapılandırma dosyalarında izin verilir; içindeki sayılır *Machine.config*.
 
-- Döngüsel başvuru algılandı ve sonlandırıldı. Diğer bir deyişle, **\<linkedConfiguration>** yapılandırma dosyalarını bir dizi öğeleri formunda bir döngü, döngü algılandı ve durduruldu.
+- Döngüsel başvurular algılanır ve sonlandırılır. Diğer bir deyişle, **\<linkedConfiguration>** yapılandırma dosyalarını bir dizi öğeleri formunda bir döngü, döngü algılandı ve durduruldu.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek yapılandırma dosyasını yerel sabit diskten nasıl ekleyeceğinizi gösterir:
+Aşağıdaki örnek, yerel sabit diskten yapılandırma dosyasının nasıl ekleneceğini gösterir:
 
 ```xml
 <configuration>
@@ -83,5 +86,5 @@ Aşağıdaki örnek yapılandırma dosyasını yerel sabit diskten nasıl ekleye
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ **\<assemblyBinding >** öğesi](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
-- [.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)
+- [assemblyBinding > öğesi  **\<** ](assemblybinding-element-for-configuration.md)
+- [.NET Framework için yapılandırma dosyası şeması](index.md)

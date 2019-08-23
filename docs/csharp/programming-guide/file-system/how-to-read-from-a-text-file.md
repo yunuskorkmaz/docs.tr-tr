@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: c424f7884dd7242152bda1b16943f6489194299f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2b98f24da7f13ae752f248eb8f26c75c1d47a824
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589990"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923945"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Nasıl yapılır: Metin dosyasından okuma (C# Programlama Kılavuzu)
 Bu örnek, statik yöntemleri <xref:System.IO.File.ReadAllText%2A> ve <xref:System.IO.File.ReadAllLines%2A> <xref:System.IO.File?displayProperty=nameWithType> sınıfından kullanarak bir metin dosyasının içeriğini okur.  
@@ -23,7 +23,7 @@ Bu örnek, statik yöntemleri <xref:System.IO.File.ReadAllText%2A> ve <xref:Syst
  Tarafından kullanılan <xref:System.IO.StreamReader>bir örnek için bkz [. nasıl yapılır: Bir metin dosyasını tek seferde bir satır okur](./how-to-read-a-text-file-one-line-at-a-time.md).  
   
 > [!NOTE]
->  Bu örnekte [kullanılan dosyalar, konusunda nasıl yapılır: Bir metin dosyasına](./how-to-write-to-a-text-file.md)yazın.  
+> Bu örnekte [kullanılan dosyalar, konusunda nasıl yapılır: Bir metin dosyasına](./how-to-write-to-a-text-file.md)yazın.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csFilesandFolders#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#4)]  

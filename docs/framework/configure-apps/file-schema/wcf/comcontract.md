@@ -2,15 +2,15 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: 5d6bfb1e4aa1651cd8c3a869f681d71cfb15725c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ef980c86efad4fda86cf62148e50688fd22afe49
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751877"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926100"
 ---
 # <a name="comcontract"></a>\<comContract >
-Bir COM + tümleştirme hizmet sözleşmesi belirler.  
+Bir COM+ tümleştirme hizmeti sözleşmesini belirtir.  
   
  \<system.ServiceModel>  
 \<comContracts >  
@@ -49,27 +49,27 @@ Bir COM + tümleştirme hizmet sözleşmesi belirler.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Sözleşme|Sözleşme türünü içeren bir dize.|  
+|Sözleşmesi|Sözleşme türünü içeren bir dize.|  
 |name|Sözleşme adını içeren bir dize.|  
-|ad alanı|Sözleşme ad uzayını içeren bir dize.|  
-|requiresSession|Sözleşmenin sadece oturumdaki bağlamalarda kulanılıp kullanılıp kullanılamayacağını belirten bir Boole değeri. Hizmet başlatıldığında, tümleştirme çalışma zamanı bu ayar kullanılacak bağlama türünü ile tutarlı olmasını sağlar. Bir özel durum oluşturulur veya daha fazla bağlama sözleşmesinin çakışıyor. Bu özellik ise `false`, tek yönlü bir kanal kullanılır ve herhangi bir [out] parametreleri, bir özel durum da oluşturulur.|  
+|ad alanı|Sözleşme ad alanını içeren bir dize.|  
+|requiresSession|Sözleşmenin yalnızca oturumsuz bağlamalarda kullanılıp kullanılamayacağını belirten bir Boole değeri. Hizmet başlatıldığında, tümleştirme çalışma zamanı bu ayarın kullanılacak bağlama türüyle tutarlı olmasını sağlar. Sözleşme için bir veya daha fazla bağlama çakışırsa bir özel durum oluşturulur. Bu özellik ise `false`ve tek yönlü bir kanal kullanımda ise ve herhangi bir [out] parametresi varsa, bir özel durum da oluşturulur.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |persistableTypes|Tüm kalıcı türleri.|  
-|userDefinedTypes|Bir koleksiyon, kullanıcı tanımlı türleri (hizmet sözleşmesi içerisinde dahil edilecek olan UDT).|  
-|exposedMethods|Bir COM + bileşeni üzerinde arabirim bir Web hizmeti olarak sunulduğunda, sunulan COM + yöntemleri topluluğu.|  
+|userDefinedTypes|Hizmet sözleşmesine dahil edilecek Kullanıcı tanımlı türler (UDT) koleksiyonu.|  
+|exposedMethods|Bir COM+ bileşenindeki arabirim bir Web hizmeti olarak sunulduğunda ortaya çıkarılan COM+ yöntemlerinin bir koleksiyonu.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|comContracts|Bir koleksiyonunu içeren `comContract` öğeleri.|  
+|comContracts|`comContract` Öğe koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- COM + tümleştirme Hizmet sözleşmeleri için kısıtlı `http://tempuri.org` ad alanını ve sözleşme adı destekleyici bir COM arabiriminden elde edilmiştir. Ancak, alternatif kullanarak belirtebilirsiniz `comContracts` bölümünde yanı sıra `comContract` öğesi yapılandırma dosyasında. Örneğin, ad alanı, sözleşme adı ve kullanıcı tanımlı türler dahil edilecek belirtmek için aşağıdaki yapılandırma yanı sıra diğer ayarlar için bir hizmet sözleşmesini kullanabilirsiniz.  
+ COM+ tümleştirme hizmeti sözleşmeleri Şu anda `http://tempuri.org` ad alanıyla kısıtlıdır ve anlaşma adı destekleyici com arabiriminden türetilir. Ancak, öğesini ve yapılandırma dosyasındaki `comContracts` `comContract` öğesini kullanarak alternatifleri belirtebilirsiniz. Örneğin, eklenecek ad alanı, sözleşme adı ve Kullanıcı tanımlı türleri, ayrıca bir hizmet sözleşmesinin diğer ayarlarını belirtmek için aşağıdaki yapılandırmayı kullanabilirsiniz.  
   
 ```xml  
 <comContracts>
@@ -86,12 +86,12 @@ Bir COM + tümleştirme hizmet sözleşmesi belirler.
 </comContracts>
 ```  
   
- Hizmet başlatıldığında sözleşmesi adları ve belirtilen ad alanları için oluşturulan hizmet açıklamaları uygulanır.  
+ Hizmet başlatıldığında, belirtilen ad alanları ve sözleşme adları oluşturulan hizmet açıklamalarına uygulanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [COM+ Uygulamaları ile Tümleştirme](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Nasıl yapılır: COM + hizmet ayarlarını yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [COM+ Uygulamaları ile Tümleştirme](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Nasıl yapılır: COM+ hizmet ayarlarını yapılandırma](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

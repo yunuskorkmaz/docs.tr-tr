@@ -6,20 +6,20 @@ helpviewer_keywords:
 - pages [WPF], setting window height from
 - height of window [WPF], setting from a page
 ms.assetid: 4e4488ff-ab5c-4ee9-81a4-e1addb55c5cc
-ms.openlocfilehash: c99ea134478635f368b71443f43e4d8f772cb5aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1041af88241011b51c96d7b61423344a32b25ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007335"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940794"
 ---
 # <a name="how-to-set-the-height-of-a-window-from-a-page"></a>Nasıl yapılır: Bir Sayfadan Pencere Yüksekliğini Ayarlama
-Bu örnekte pencere yüksekliğini ayarlama bir <xref:System.Windows.Controls.Page>.  
+Bu örnek, ' dan <xref:System.Windows.Controls.Page>pencerenin yüksekliğinin nasıl ayarlanacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- A <xref:System.Windows.Controls.Page> konak penceresinin yüksekliğini ayarlayarak ayarlayabilirsiniz <xref:System.Windows.Controls.Page.WindowHeight%2A>. Bu özellik tanır <xref:System.Windows.Controls.Page> barındırdığı penceresini açık bilgisi almamayı.  
+ <xref:System.Windows.Controls.Page> , Ayarlayarak<xref:System.Windows.Controls.Page.WindowHeight%2A>ana penceresinin yüksekliğini ayarlayabilir. Bu özellik, <xref:System.Windows.Controls.Page> uygulamasının kendisini barındıran pencere türü hakkında açık bilgisine sahip olmasına izin verir.  
   
 > [!NOTE]
->  Kullanarak bir pencerenin yüksekliğini ayarlamak için <xref:System.Windows.Controls.Page.WindowHeight%2A>, <xref:System.Windows.Controls.Page> pencerenin alt öğesi olması gerekir.  
+> Bir pencerenin yüksekliğini kullanarak <xref:System.Windows.Controls.Page.WindowHeight%2A>ayarlamak için, bir <xref:System.Windows.Controls.Page> pencerenin alt öğesi olmalıdır.  
   
  [!code-xaml[HOWTONavigationSnippets#SetPageWindowHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/SetWindowHeightPage.xaml#setpagewindowheightxaml)]

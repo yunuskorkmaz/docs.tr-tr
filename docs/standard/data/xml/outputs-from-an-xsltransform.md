@@ -5,57 +5,57 @@ ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 383cfbe72d89f4360692f002a7104f7ae0bc0bdc
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 0a6c2ea2fe2f02dc1897cb1348f4c2585b730036
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170870"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924963"
 ---
 # <a name="outputs-from-an-xsltransform"></a>XslTransform Çıkışları
-Stil sayfaları kullanıp çıkış biçimini belirlemek bu yana bir `<xsl:output>` deyimiyle `method` öznitelik, aşağıdaki tabloda açıklanmaktadır çıkış biçimini olduğunda <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi çıkışını yazmak için kullanılır ve çıkış biçimi olarak bildirilen bir <xref:System.IO.Stream> veya <xref:System.IO.TextWriter>.  
+Stil sayfaları, `<xsl:output>` `method` özniteliği olan bir ifade kullanarak çıkış biçimini belirleyebildiğinden, aşağıdaki tabloda çıktı biçiminin çıktıyı yazmak için ne zaman <xref:System.Xml.Xsl.XslTransform.Transform%2A> kullanıldığı ve çıkış biçiminin <xref:System.IO.Stream> veya<xref:System.IO.TextWriter>olarak bildirilmiştir.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Sınıfı .NET Framework 2. 0'kullanılmıyor. Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) dönüştürmeleri için kullanarak gerçekleştirebileceğiniz <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Bkz: [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [geçirme gelen XslTransform sınıfı](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) daha fazla bilgi için.  
+> <xref:System.Xml.Xsl.XslTransform> Sınıf .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfını kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- Stil sayfaları kullanıp çıkış biçimini belirlemek bu yana bir `<xsl:output>` deyimiyle `method` öznitelik, aşağıdaki tabloda açıklanmaktadır çıkış biçimini olduğunda <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi çıkışını yazmak için kullanılır ve çıkış biçimi olarak bildirilen bir <xref:System.IO.Stream> veya <xref:System.IO.TextWriter>. Aşağıdaki tabloda bir çıkış türü olarak bildirilmiş bıraktığınızda ne olacağı açıklanır <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi kullanımı ile birlikte bir `<xsl:output>` deyimi:  
+ Stil sayfaları, `<xsl:output>` `method` özniteliği olan bir ifade kullanarak çıkış biçimini belirleyebildiğinden, aşağıdaki tabloda çıktı biçiminin çıktıyı yazmak için ne zaman <xref:System.Xml.Xsl.XslTransform.Transform%2A> kullanıldığı ve çıkış biçiminin <xref:System.IO.Stream> veya<xref:System.IO.TextWriter>olarak bildirilmiştir. Aşağıdaki tabloda, bir çıkış türü bir <xref:System.Xml.Xsl.XslTransform.Transform%2A> `<xsl:output>` deyimin kullanımıyla birlikte yöntemi tarafından bildirildiğinde ne olacağı açıklanmaktadır:  
   
-|\<önceliğiyle yöntemi = > öznitelik|Sonuç biçimi|  
+|\<xsl: output yöntemi = > özniteliği|Sonuç biçimi|  
 |-----------------------------------------|-------------------|  
-|method="xml"|XML|  
+|method = "xml"|XML|  
 |method="html"|HTML|  
-|yöntem = "text"|Metin|  
+|method = "metin"|Metin|  
   
 > [!NOTE]
->  Not: `<xsl:output>` Deyimi göz ardı edilir olduğunda çıktısını <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi bir <xref:System.Xml.XmlReader> veya <xref:System.Xml.XmlWriter>.  
+> Not: Yöntemi, <xref:System.Xml.XmlReader> yönteminin çıktısı birveya<xref:System.Xml.XmlWriter>olduğunda yoksayılır. `<xsl:output>` <xref:System.Xml.Xsl.XslTransform.Transform%2A>  
   
- Aşağıdaki öznitelikler desteklenen zaman <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi çıkış bir <xref:System.IO.Stream> veya <xref:System.IO.TextWriter>:  
+ Aşağıdaki öznitelikler, ya da <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntem çıktısı bir <xref:System.IO.Stream> veya <xref:System.IO.TextWriter>olduğunda desteklenir:  
   
-- kodlama *  
+- şifreleme  
   
-- atlayın-xml-bildirimi  
+- XML bildirimini atla  
   
 - bağımsız  
   
 - doctype-genel  
   
-- doctype sistem  
+- DOCTYPE-System  
   
-- CDATA bölümünün öğeleri  
+- CDATA-bölüm-öğeler  
   
-- Girintile  
+- leyebilirsiniz  
   
     > [!NOTE]
-    >  \* kodlama özniteliği göz ardı edilir olduğunda <xref:System.Xml.Xsl.XslTransform.Transform%2A> çıktısını için gönderme yöntemi bir <xref:System.IO.TextWriter>. Kodlama özelliği <xref:System.IO.TextWriter> yerine kullanılır.  
+    > \*<xref:System.Xml.Xsl.XslTransform.Transform%2A> Yöntem, çıkışını bir <xref:System.IO.TextWriter>öğesine gönderirken kodlama özniteliği yok sayılır. Bunun yerine kodlama özelliği <xref:System.IO.TextWriter> kullanılır. 
   
- Aşağıdaki özniteliği göz ardı edilir olduğunda <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi çıkış bir <xref:System.IO.Stream>:  
+ Aşağıdaki öznitelik, <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntem çıktısı bir <xref:System.IO.Stream>olduğunda yok sayılır:  
   
-- Sürüm: sürüm 1.0 her zaman olur.  
+- Sürüm: sürüm her zaman 1,0  
   
-- medya türü: medya türü  
+- medya-türü: medya türü  
   
-## <a name="escaping-special-characters"></a>Kaçış özel karakterleri  
- `<xsl:text disable-output-escaping>` Etiketi, özel karakterler bir XML forma çizgilerin aşağıdaki gibi ihtiyacınız olup olmadığını belirtmek için kullanılır (örneğin, kullanarak `<&lt>` yerine `"<"` sembol) veya mevcut koşulunda sol. `disable-output-escaping` Özniteliği yok sayıldı için dönüştürürken bir <xref:System.Xml.XmlReader> veya <xref:System.Xml.XmlWriter> nesne ve özel karakterler üzerinde hiçbir etkisi olmaz.  
+## <a name="escaping-special-characters"></a>Özel karakterleri kaçış  
+ Etiketi, özel karakterlerin bir XML biçimine (örneğin, `"<"` simgenin yerine kullanılması `<&lt>` ) veya mevcut koşulda sola atlanıp atlanmayacağını belirtmek için kullanılır. `<xsl:text disable-output-escaping>` Özniteliği bir <xref:System.Xml.XmlReader> veya<xref:System.Xml.XmlWriter> nesnesine dönüştürülürken yok sayılır ve özel karakterler üzerinde hiçbir etkisi olmaz. `disable-output-escaping`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

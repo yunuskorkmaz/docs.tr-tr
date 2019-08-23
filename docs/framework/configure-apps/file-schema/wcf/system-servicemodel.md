@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: c176f7f470cc65bb135e5f92935102e09c7e8485
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fa6916437bb569029efe270ba8296703d89c539
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758450"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938912"
 ---
 # <a name="systemservicemodel"></a>\<system.serviceModel>
 Bu yapılandırma bölümü, tüm Windows Communication Foundation (WCF) ServiceModel yapılandırma öğelerini içerir.  
@@ -61,19 +61,19 @@ Bu yapılandırma bölümü, tüm Windows Communication Foundation (WCF) Service
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranışlar >](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)|Bu bölümde adlı iki alt öğe koleksiyonlarını tanımlar `endpointBehaviors` ve `serviceBehaviors`.  Her koleksiyon sırasıyla uç noktaları ve hizmetler tarafından kullanılan davranışı öğeleri tanımlar. Her davranışı öğesi kendi benzersiz tarafından tanımlanır `name` özniteliği.|  
-|[\<bağlamaları >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Bu bölümde, standart ve özel bağlamalar koleksiyonunu tutar. Her giriş kendi benzersiz tarafından tanımlanır `name`. Hizmetlerini kullanan bağlamaları bağlayarak kullanarak `name`.|  
-|[\<İstemci >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|Bu bölüm, bir istemcinin bir hizmete bağlanmak için kullandığı uç noktaları listesini içerir.|  
-|[\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|Bu bölümde, WCF ve COM birlikte çalışması için etkin COM sözleşmeleri tanımlar.|  
-|[\<commonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|Bu bölümü sadece machine.config dosyasında tanımlanabilir. Adlı iki alt öğe koleksiyonlarını tanımlar `endpointBehaviors` ve `serviceBehaviors`.  Her koleksiyon, sırasıyla tüm WCF uç noktaları ve makinede hizmetler tarafından kullanılan davranışı öğeleri tanımlar.  Hem de bir davranış tanımlanmışsa `<commonBehaviors>` ve `<behaviors>` bölümler, davranış \<davranışları > bölüm tercih verilir.|  
-|[\<Tanılama >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|Bu bölümde, WCF tanılama özelliklerini ayarlarını içerir. Kullanıcı etkinleştirebilir/izleme, performans sayaçları ve WMI sağlayıcısı devre dışı bırakabilir ve özel ileti filtreleri ekleyebilirsiniz.|  
-|[\<Uzantıları >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|Bu bölüm, kullanıcı tanımlı bağlamalar, davranışları ve diğer yönleri uzantıları oluşturmak kullanıcı olanak tanıyan uzantılar koleksiyonunu içerir.|  
-|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Bu bölümde, taşıma protokol şemaları (örn., http, net.tcp, net.pipe, vb.) ve WCF bağlamaları arasında varsayılan protokol eşleşmelerinin bir kümesini tanımlar.|  
-|[\<Yönlendirme >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Bu bölümde, Windows Communication Foundation (WCF) türünü belirleyen ve yönlendirme süzgeçleri kümesini tanımlayan<xref:System.ServiceModel.Dispatcher.MessageFilter> yönlendirme yanı sıra gelen iletileri değerlendirmek ne zaman ileti göndermek için hedef bitiş noktalarını tanımlayan tabloları yapılırken kullanılacak bir Filtre eşleşir.|  
-|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Bu bölümde, hizmet barındırma ortamı için belirli bir örneğini oluşturur. ne tür tanımlar. Bu bölümde boşsa, varsayılan türü kullanılır.|  
-|[\<Hizmetleri >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|Bölüm Hizmetleri koleksiyonunu içerir. Derlemede tanımlanan her hizmet için bu öğeyi içeren bir `service` hizmeti ayarlarını belirten öğe.|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Bu bölümde, yeniden kullanılabilen önceden yapılandırılmış uç noktalar olan standart uç noktaları koleksiyonu tanımlar. Bir standart uç nokta gerekir veya daha fazla adresi, bağlama ve sözleşme öznitelikleri için sabit bir değer. Örneğin, bulma uç noktası sözleşme sabittir. Standart uç noktaları, yeni özellikleri benzer özel bağlamaları tanımlamak için olan hizmet uç noktası genişletmek için de kullanabilirsiniz.|
-|[\<İzleme >](../../../../../docs/framework/configure-apps/file-schema/wcf/tracking-of-wcf.md)|Bu bölümde, bir iş akışı hizmeti için izleme ayarlarını tanımlar.|
+|[\<davranışlar >](behaviors.md)|Bu bölüm, ve `endpointBehaviors` `serviceBehaviors`adlı iki alt koleksiyonu tanımlar.  Her koleksiyon, sırasıyla bitiş noktaları ve hizmetler tarafından tüketilen davranış öğelerini tanımlar. Her davranış öğesi, benzersiz `name` özniteliği tarafından tanımlanır.|  
+|[\<bağlama >](bindings.md)|Bu bölüm, standart ve özel bağlamaların bir koleksiyonunu içerir. Her giriş, benzersiz `name`olarak tanımlanır. Hizmetler, `name`kullanarak bağlama yoluyla bağlamaları kullanır.|  
+|[\<İstemci >](client.md)|Bu bölüm, bir istemcinin hizmete bağlanmak için kullandığı uç noktaların listesini içerir.|  
+|[\<comContracts>](comcontracts.md)|Bu bölümde, WCF ve COM birlikte çalışma için etkinleştirilen COM sözleşmeleri tanımlanmaktadır.|  
+|[\<Commondavranışlar >](commonbehaviors.md)|Bu bölüm yalnızca Machine. config dosyasında tanımlanabilir. `endpointBehaviors` Ve`serviceBehaviors`adlı iki alt koleksiyonu tanımlar.  Her koleksiyon, sırasıyla makinedeki tüm WCF uç noktaları ve Hizmetleri tarafından tüketilen davranış öğelerini tanımlar.  Bir davranış hem `<commonBehaviors>` `<behaviors>` hem de bölümlerinde tanımlanmışsa \<, davranışlar > bölümündeki davranışa verilen tercih edilir.|  
+|[\<Tanılama >](diagnostics.md)|Bu bölüm, WCF 'nin tanılama özelliklerinin ayarlarını içerir. Kullanıcı izlemeyi, performans sayaçlarını ve WMI sağlayıcısını etkinleştirebilir/devre dışı bırakabilir ve özel ileti filtreleri ekleyebilir.|  
+|[\<uzantılar >](extensions-section.md)|Bu bölüm, kullanıcının Kullanıcı tanımlı bağlamalar, davranışlar ve diğer uzantı yönlerini oluşturmalarına olanak tanıyan bir uzantı koleksiyonu içerir.|  
+|[\<protocolMapping >](protocolmapping.md)|Bu bölüm, Aktarım Protokolü şemaları (örn. http, net. TCP, net. pipe, vb.) ve WCF bağlamaları arasında bir varsayılan protokol eşlemesi kümesi tanımlar.|  
+|[\<Yönlendirme >](routing.md)|Bu bölüm, gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> türünü belirleyen bir yönlendirme filtreleri kümesi tanımlar ve bu sırada ileti göndermek için hedef bitiş noktalarını tanımlayan yönlendirme tablolarının yanı sıra bir Filtre eşleşmeleri.|  
+|[\<serviceHostingEnvironment >](servicehostingenvironment.md)|Bu bölüm, belirli bir aktarım için hizmet barındırma ortamının ne tür bir örneklenme olduğunu tanımlar. Bu bölüm boşsa, varsayılan tür kullanılır.|  
+|[\<Hizmetler >](services.md)|Bölüm bir hizmetler koleksiyonu içerir. Derlemede tanımlanan her hizmet için bu öğe, hizmetin ayarlarını belirten bir `service` öğesi içerir.|  
+|[\<standardEndpoints >](standardendpoints.md)|Bu bölüm bir standart uç nokta koleksiyonunu tanımlar, bu, önceden yapılandırılmış son nokta olarak kullanılabilir. Standart bir uç noktada bir veya daha fazla adres, bağlama ve anlaşma özniteliği sabit bir değere ayarlanmış olur. Örneğin, bulma uç noktasında sözleşmenin düzeltilmesi. Ayrıca, özel bağlamaları tanımlamaya benzer yeni özelliklerle hizmet uç noktasını genişletmek için standart uç noktaları kullanabilirsiniz.|
+|[\<İzleme >](tracking-of-wcf.md)|Bu bölüm, bir iş akışı hizmeti için izleme ayarlarını tanımlar.|
 
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -82,20 +82,20 @@ Bu yapılandırma bölümü, tüm Windows Communication Foundation (WCF) Service
 |\<Yapılandırma >|Bir .NET yapılandırma dosyasındaki tüm yapılandırma öğeleri için kök öğesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- WCF öğeleri diğer ürünleri yapılandırma bölümlerini eklemez.  
+ WCF, diğer ürünlerin yapılandırma bölümlerine öğe eklemez.  
   
- WCF hizmetleri tanımlanmış `services` yapılandırma dosyasının. Derleme Hizmetleri herhangi bir sayıda içerebilir. Her hizmet kendi sahip `service` yapılandırma bölümü. Bölümü ve içeriğini hizmet sözleşmesini, davranış ve belirli bir hizmet uç noktaları tanımlayın.  
+ WCF Hizmetleri, yapılandırma dosyasının `services` bölümünde tanımlanmıştır. Bir derleme, herhangi bir sayıda hizmeti içerebilir. Her hizmetin kendi `service` yapılandırma bölümü vardır. Bölümü ve içeriği, belirli bir hizmetin hizmet sözleşmesini, davranışını ve uç noktalarını tanımlar.  
   
- Yalnızca bir hizmetin `name` özniteliği gereklidir.  Varsayılan olarak, bir hizmetin adı bir hizmeti uygulamak için kullanılan temel alınan CLR türü açıklar; Ancak, üzerinde ConfigurationName özelliği değişebilir bir <xref:System.ServiceModel.ServiceContractAttribute> CLR türü gereksinimi geçersiz kılmak için.  
+ Yalnızca bir hizmetin `name` özniteliği gereklidir.  Varsayılan olarak, bir hizmetin adı bir hizmeti uygulamak için kullanılan temel CLR türünü tanımlar; Ancak, clr türü gereksinimini geçersiz kılmak için bir <xref:System.ServiceModel.ServiceContractAttribute> üzerinde ConfigurationName özelliğini değiştirebilirsiniz.  
   
- `behaviorConfiguration` İsteğe bağlı öznitelik. Bu, bir hizmet tarafından kullanılan hizmet davranışını tanımlar. Bu özniteliği tarafından belirtilen davranışı aynı yapılandırma dosyasının (yani, aynı dosya veya üst dosyası) kapsamında tanımlanan bir hizmet davranışını bağlanmanız gerekir.  
+ `behaviorConfiguration` Özniteliği isteğe bağlıdır. Bir hizmet tarafından kullanılan hizmet davranışını tanımlar. Bu öznitelik tarafından belirtilen davranışın aynı yapılandırma dosyası kapsamında (yani aynı dosya veya bir üst dosya) tanımlanmış bir hizmet davranışına bağlanması gerekir.  
   
- Hizmet her bir sunar veya daha fazla uç noktaları tanımlanan bir `endpoint` öğesi. Her uç nokta, kendi adres ve bağlama vardır. Yapılandırma dosyasının içinde kullanılan tüm bağlamaları dosya kapsamında tanımlanmış olması gerekir.  
+ Her hizmet bir `endpoint` öğede tanımlanan bir veya daha fazla uç noktayı kullanıma sunar. Her uç noktanın kendi adresi ve bağlaması vardır. Yapılandırma dosyası içinde kullanılan tüm bağlamalar, dosyanın kapsamında tanımlanmalıdır.  
   
- Bağlamaları özniteliklerinin birleşimiyle uç noktalarına bağlı olan `name` ve `bindingConfiguration`. `binding` Öznitelik tanımlar bağlama hangi bölümde tanımlanmaktadır. `bindingConfiguration` Özniteliği, hangi yapılandırılmış bağlama bağlama bölümü içinde kullanılan tanımlar. Bir bağlama bölümü birkaç yapılandırılmış bağlama tanımlayabilirsiniz.  
+ Bağlamalar, ve `name` `bindingConfiguration`öznitelikleri birleşimi aracılığıyla uç noktalara bağlanır. `binding` Özniteliği, bağlamanın hangi bölümünde tanımlandığını tanımlar. `bindingConfiguration` Özniteliği, bağlama bölümünde hangi yapılandırılan bağlamanın kullanıldığını tanımlar. Bağlama bölümü, yapılandırılmış çeşitli bağlamaları tanımlayabilir.  
   
 ## <a name="example"></a>Örnek  
- Bu, WCF yapılandırma dosyasına örneğidir.  
+ Bu, WCF yapılandırma dosyasına bir örnektir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>

@@ -2,54 +2,54 @@
 title: Sayısal ve Karşılaştırma İşleçleri
 ms.date: 03/30/2017
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
-ms.openlocfilehash: b29f78a13d6d0313e0ad29754f6d13ac08be1092
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff54856a66ad5e9c0362c013f8df5f1147055cd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783142"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915708"
 ---
 # <a name="numeric-and-comparison-operators"></a>Sayısal ve Karşılaştırma İşleçleri
 
-Aritmetik ve Karşılaştırma işleçleri dışında ortak dil çalışma zamanı (CLR) gibi beklendiği gibi çalışmayabilir:
+Aritmetik ve karşılaştırma işleçleri, ortak dil çalışma zamanında (CLR) beklenen şekilde aşağıdaki gibi çalışır:
 
-- SQL, kayan nokta numaralarını modulus işleci desteklemez.
+- SQL, kayan nokta numaralarında mod işlecini desteklemez.
 
-- SQL denetlenmeyen aritmetiğini desteklemez.
+- SQL Denetlenmemiş aritmetiğini desteklemez.
 
-- SQL'de çoğaltılır ve bu nedenle, desteklenmiyor ifadelerde kullandığınızda artırma ve azaltma işleçleri yan etkilere neden.
+- Artırma ve azaltma işleçleri, SQL 'de çoğaltılabilen ve bu nedenle desteklenmeyen ifadelerde kullandığınızda yan etkilere neden olur.
 
-## <a name="supported-operators"></a>Desteklenen işleçleri
+## <a name="supported-operators"></a>Desteklenen Işleçler
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Aşağıdaki işleçleri destekler.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]aşağıdaki işleçleri destekler.
 
 - Temel aritmetik işleçler:
 
   - `+`
 
-  - `-` (çıkarma)
+  - `-`strA
 
   - `*`
 
   - `/`
 
-  - Visual Basic tamsayı bölme (`\`)
+  - Visual Basic tamsayı bölümü (`\`)
 
-  - `%` (Visual Basic `Mod`)
+  - `%`(Visual Basic `Mod`)
 
   - `<<`
 
   - `>>`
 
-  - `-` (birli olumsuzlama)
+  - `-`(birli olumsuzlama)
 
-- Temel Karşılaştırma işleçleri:
+- Temel karşılaştırma işleçleri:
 
-  - Visual Basic `=` ve C# `==`
+  - Visual Basic `=` ve C#`==`
 
-  - Visual Basic `<>` ve C# `!=`
+  - Visual Basic `<>` ve C#`!=`
 
-  - Visual Basic `Is/IsNot`
+  - Visual Basic`Is/IsNot`
 
   - `<`
 
@@ -62,5 +62,5 @@ Aritmetik ve Karşılaştırma işleçleri dışında ortak dil çalışma zaman
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
-- [C# İşleçleri](../../../../../../docs/csharp/language-reference/operators/index.md)
+- [C# İşleçleri](../../../../../csharp/language-reference/operators/index.md)
 - [İşleçler](../../../../../visual-basic/language-reference/operators/index.md)

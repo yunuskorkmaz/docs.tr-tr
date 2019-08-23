@@ -2,90 +2,90 @@
 title: İzlenecek Yollarla Öğrenme
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: e6b5f77d6d918ae1402074c9c3037ccadec8ac02
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f1061842343d7a700d3af5da5fdc6aec2f79396d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743036"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929221"
 ---
 # <a name="learning-by-walkthroughs"></a>İzlenecek Yollarla Öğrenme
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Belgeler birkaç izlenecek yollar sağlar. Bu konu (sorun giderme dahil) bazı genel kılavuz sorunları ele alır ve hakkında bilgi almak için birkaç adım izlenecek yollar için bağlantılar sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Belgeler birkaç izlenecek yol sağlar. Bu konu başlığı altında, bazı genel izlenecek yol sorunları ele alınmaktadır (sorun giderme dahil) ve hakkında [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]bilgi almak için çeşitli giriş düzeyi talimatlarına bağlantılar sağlar.  
   
 > [!NOTE]
->  Bu Başlarken bölümünde izlenecek destekleyen temel kod kullanıma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknoloji. Gerçek bir uygulamada genellikle bir nesne ilişkisel Tasarımcısı ve Windows Forms projeleri uygulamak için kullanacağınız, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalar. O/R Tasarımcısı belgeler, bu amaç için örnekler ve izlenecek yollar sağlar.  
+> Bu Başlarken bölümündeki izlenecek yollar sizi teknolojiyi destekleyen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] temel kodu kullanıma sunar. Gerçek uygulamada, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalarınızı uygulamak için genellikle nesne ilişkisel Tasarımcısı ve Windows Forms projelerini kullanacaksınız. O/R Designer belgeleri, bu amaçla örnekler ve izlenecek yollar sağlar.  
   
-## <a name="getting-started-walkthroughs"></a>Başlarken izlenecek yollar  
- Bu bölümde birkaç izlenecek yollar mevcuttur. Bu kılavuzlar, örnek Northwind veritabanına bağlı ve mevcut [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en düşük karmaşıklık ile size bir hızda özellikleri.  
+## <a name="getting-started-walkthroughs"></a>Başlarken Izlenecek yollar  
+ Bu bölümde birkaç izlenecek yol bulunmaktadır. Bu izlenecek yollar, örnek Northwind veritabanına dayalıdır ve en az karmaşıklıklarla genlik hızda özellikler sunar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
- Tipik ilerlemeyi izlemek için şu şekilde olacaktır:  
+ İzlenecek tipik ilerleme aşağıdaki gibidir:  
   
 |Hedefi|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|Bir varlık sınıfı oluşturun ve basit bir sorgu yürütün.|[İzlenecek yol: Basit Nesne modeli ve sorgu (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[İzlenecek yol: Basit Nesne modeli ve sorgu (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|İkinci bir sınıf ekleyin ve daha karmaşık bir sorgu yürütün.<br /><br /> (Önceki gözden geçirmede tamamlanmasından gerektirir).|[İzlenecek yol: (Visual Basic) ilişkilerde sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[İzlenecek yol: İlişkilerde sorgulama (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|Ekleyin, değiştirin ve veritabanındaki öğeleri silin.|[İzlenecek yol: (Visual Basic) verileri düzenleme](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[İzlenecek yol: Verileri düzenleme (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Saklı yordamları kullanın.|[İzlenecek yol: Yalnızca saklı yordamları (Visual Basic) kullanma](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[İzlenecek yol: Kullanarak yalnızca saklı yordamları (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|Bir varlık sınıfı oluşturun ve basit bir sorgu yürütün.|[İzlenecek yol: Basit nesne modeli ve sorgu (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[İzlenecek yol: Basit nesne modeli ve sorgu (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
+|İkinci bir sınıf ekleyin ve daha karmaşık bir sorgu yürütün.<br /><br /> (Önceki izlenecek yolun tamamlanmasını gerektirir).|[İzlenecek yol: Ilişkiler genelinde sorgulama (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[İzlenecek yol: Ilişkiler arasında sorgulama (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
+|Veritabanına öğe ekleyin, değiştirin ve silin.|[İzlenecek yol: Verileri düzenleme (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[İzlenecek yol: Verileri düzenleme (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
+|Saklı yordamları kullanın.|[İzlenecek yol: Yalnızca saklı yordamları kullanma (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[İzlenecek yol: Yalnızca saklı yordamları kullanma (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>Genel  
- Aşağıdaki bilgiler, bu izlenecek yollar için genel ilgilidir:  
+ Aşağıdaki bilgiler genel olarak bu talimatlara aittir:  
   
-- Ortam: Her [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] izlenecek yol, Visual Studio tümleşik geliştirme ortamı (IDE) kullanır.  
+- Ortamınızın Her [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] izlenecek yol tümleşik geliştirme ortamı (IDE) olarak Visual Studio 'yu kullanır.  
   
-- SQL altyapısı: Bu izlenecek yollar, SQL Server Express kullanarak uygulanacak yazılır. SQL Server Express yoksa, ücretsiz olarak indirebilirsiniz. Daha fazla bilgi için [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- SQL motorları: Bu izlenecek yollar SQL Server Express kullanılarak uygulanacak şekilde yazılmıştır. SQL Server Express yoksa ücretsiz olarak indirebilirsiniz. Daha fazla bilgi için bkz. [örnek veritabanlarını indirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
-    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] izlenecek yollar, bağlantı dizesi olarak bir dosya adı kullanın. Kolaylık olması açısından olan yalnızca bir dosya adını belirterek, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kullanıcılar için SQL Server Express sağlar. Her zaman güvenlik sorunlarına dikkat edin. Daha fazla bilgi için [LINQ to SQL'de güvenlik](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+    > [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]izlenecek yollar bir dosya adını bağlantı dizesi olarak kullanır. Yalnızca bir dosya adı belirtmenin SQL Server Express kullanıcılara [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sağladığı bir kolaylık vardır. Her zaman güvenlik sorunlarına dikkat edin. Daha fazla bilgi için bkz. [LINQ to SQL güvenlik](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] izlenecek yollar, Northwind örnek veritabanıyla kurulan genellikle gerektirir. Daha fazla bilgi için [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]izlenecek yollar genellikle Northwind örnek veritabanı gerektirir. Daha fazla bilgi için bkz. [örnek veritabanlarını indirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
-- İletişim kutuları ve menü komutları kılavuzları gördüğünüz açıklanana Yardım'da, etkin ayarlarınıza ve Visual Studio sürümü bağlı olarak farklı olabilir. Ayarlarınızı değiştirmek için tıklayın **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+- İzlenecek yollarda gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya Visual Studio sürümüne bağlı olarak yardım bölümünde açıklananlardan farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' na tıklayın. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-- Çok katmanlı senaryoları izlenecek yollar için geliştirme bilgisayardan ayrı olan bir bilgisayar bir sunucu bulunması gerekir ve sunucuya erişmek için uygun izinlere sahip olmalıdır.  
+- Çok katmanlı senaryolara yönelik olan yönergeler için, bir sunucunun geliştirme bilgisayarından farklı bir bilgisayarda bulunması ve sunucuya erişmek için uygun izinlere sahip olmanız gerekir.  
   
-- Siparişler tablosu Northwind örnek veritabanındaki genellikle temsil eden sınıfı adı `[Order]`. Kaçış gereklidir çünkü `Order` Visual Basic'te bir anahtar sözcüktür.  
+- Genellikle Northwind örnek veritabanındaki `[Order]`Orders tablosunu temsil eden sınıfın adı. Kaçış gereklidir çünkü `Order` Visual Basic bir anahtar sözcük.  
   
 ## <a name="troubleshooting"></a>Sorun giderme  
- Bu izlenecek yollarında kullanılan veritabanları erişmek için yeterli izinlere sahip olmadığınızdan çalışma zamanı hataları oluşabilir. En yaygın olarak bu sorunları gidermek için aşağıdaki adımlara bakın.  
+ Çalışma zamanı hataları oluşabilir çünkü bu izlenecek yollarda kullanılan veritabanlarına erişmek için yeterli izinlere sahip değilsiniz. Bu sorunların en yaygın olarak giderilmesine yardımcı olması için aşağıdaki adımlara bakın.  
   
 ### <a name="log-on-issues"></a>Oturum açma sorunları  
- Uygulamanızı kabul etmediği bir veritabanında oturum açma yoluyla veritabanına erişmeye çalışıyor olabilir.  
+ Uygulamanız, kabul edilemez bir veritabanı oturum açma yöntemiyle veritabanına erişmeye çalışıyor olabilir.  
   
-##### <a name="to-verify-or-change-the-database-log-on"></a>Doğrulamak veya değiştirmek için veritabanı oturum açın  
+##### <a name="to-verify-or-change-the-database-log-on"></a>Veritabanı oturumunu doğrulamak veya değiştirmek için  
   
-1. Windows üzerinde **Başlat** menüsünde **tüm programlar**, **Microsoft SQL Server 2005**, işaret **yapılandırma araçları**ve ardından **SQL Server Yapılandırma Yöneticisi**.  
+1. Windows **Başlat** menüsünde **tüm programlar**' ın üzerine gelin, **Microsoft SQL Server 2005**, **yapılandırma araçları**üzerine gelin ve **SQL Server Yapılandırma Yöneticisi**' ye tıklayın.  
   
-2. Sol bölmesinde **SQL Server Configuration Manager**, tıklayın **SQL Server 2005 Services**.  
+2. **SQL Server Yapılandırma Yöneticisi**sol bölmesinde **SQL Server 2005 Hizmetleri**' ne tıklayın.  
   
-3. Sağ bölmede, sağ **SQL Server (SQLEXPRESS)** ve ardından **özellikleri**.  
+3. Sağ bölmede **SQL Server (SQLEXPRESS)** öğesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.  
   
-4. Tıklayın **oturum açma** sekme ve nasıl sunucuda oturum çalıştığınız doğrulayın.  
+4. **Oturum açma** sekmesine tıklayın ve sunucuda nasıl oturum açmaya çalışırken emin olun.  
   
-     Çoğu durumda **yerel sistem** çalışır.  
+     Çoğu durumda, **yerel sistem** çalışmaktadır.  
   
-     Bir değişiklik yaparsanız tıklayın **yeniden** hizmetini yeniden başlatmak için.  
+     Bir değişiklik yaparsanız, hizmeti yeniden başlatmak için **Yeniden Başlat** ' a tıklayın.  
   
-### <a name="protocols"></a>Protokolleri  
- Bazen, protokolleri doğru veritabanına erişmek, uygulamanız için ayarlanmamış olabilir. Örneğin, **adlandırılmış kanallar** kılavuzları için gerekli olan protokol [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], varsayılan olarak etkin değildir.  
+### <a name="protocols"></a>Ekledikten  
+ Bazen, uygulamanızın veritabanına erişmesi için protokoller doğru ayarlanmamış olabilir. Örneğin, içinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]izlenecek yollar için gerekli olan **adlandırılmış kanallar** protokolü, varsayılan olarak etkin değildir.  
   
-##### <a name="to-enable-the-named-pipes-protocol"></a>Adlandırılmış Kanallar Protokolü etkinleştirmek için  
+##### <a name="to-enable-the-named-pipes-protocol"></a>Adlandırılmış kanallar protokolünü etkinleştirmek için  
   
-1. Sol bölmesinde **SQL Server Configuration Manager**, genişletme **SQL Server 2005 ağ yapılandırması**ve ardından **SQLEXPRESS protokolleri**.  
+1. **SQL Server Yapılandırma Yöneticisi**sol bölmesinde, **SQL Server 2005 ağ yapılandırması**' nı genişletin ve ardından **SQLExpress protokolleri**' ne tıklayın.  
   
-2. Sağ bölmede emin **adlandırılmış kanallar** protokolünün. Yüklü değilse, sağ **Adlandırılmış kanalları** ve ardından **etkinleştirme**.  
+2. Sağ bölmede, **adlandırılmış kanallar** protokolünün etkinleştirildiğinden emin olun. Değilse, **ad kanalları** ' na sağ tıklayın ve ardından **Etkinleştir**' e tıklayın.  
   
-     Durdurmanız ve hizmeti yeniden başlatmanız gerekir. Sonraki adımları izleyin.  
+     Hizmeti durdurup yeniden başlatmanız gerekir. Sonraki bloktaki adımları izleyin.  
   
-### <a name="stopping-and-restarting-the-service"></a>Durduruluyor ve hizmeti yeniden başlatılıyor  
- Durdur ve değişikliklerinizi gerçekleştirilmeden önce hizmetleri yeniden başlatmanız gerekir.  
+### <a name="stopping-and-restarting-the-service"></a>Hizmeti durdurma ve yeniden başlatma  
+ Değişikliklerinizin etkili olabilmesi için hizmetleri durdurup yeniden başlatmanız gerekir.  
   
-##### <a name="to-stop-and-restart-the-service"></a>Hizmetini durdurup yeniden başlatmak için  
+##### <a name="to-stop-and-restart-the-service"></a>Hizmeti durdurmak ve yeniden başlatmak için  
   
-1. Sol bölmesinde **SQL Server Configuration Manager**, tıklayın **SQL Server 2005 Services**.  
+1. **SQL Server Yapılandırma Yöneticisi**sol bölmesinde **SQL Server 2005 Hizmetleri**' ne tıklayın.  
   
-2. Sağ bölmede, sağ **SQL Server (SQLEXPRESS)** ve ardından **Durdur**.  
+2. Sağ bölmede **SQL Server (SQLEXPRESS)** öğesine sağ tıklayın ve ardından **Durdur**' a tıklayın.  
   
-3. Sağ **SQL Server (SQLEXPRESS)** ve ardından **yeniden**.  
+3. **SQL Server (SQLEXPRESS)** öğesine sağ tıklayın ve ardından **Yeniden Başlat**' a tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

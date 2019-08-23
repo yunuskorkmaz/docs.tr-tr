@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61b4076a72dbc17ffc800a1a8d37a22d1435e02b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 19ebad32ad8c7018b910a3d230f43031008dcdc7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663676"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927376"
 ---
 # <a name="gcserver-element"></a>\<gcServer > öğesi
 Ortak dil çalışma zamanının sunucu çöp toplamayı çalıştırmasını belirtir.  
@@ -65,7 +65,7 @@ Ortak dil çalışma zamanının sunucu çöp toplamayı çalıştırmasını be
  Bu öğe yalnızca uygulama yapılandırma dosyasında kullanılabilir; makine yapılandırma dosyasında ise yok sayılır.  
   
 > [!NOTE]
->  .NET Framework 4 ve önceki sürümlerde, sunucu çöp toplama etkinleştirildiğinde eşzamanlı çöp toplama kullanılamaz. 4,5 .NET Framework başlayarak, sunucu çöp toplama işlemi eşzamanlı olur. Eş zamanlı olmayan sunucu çöp toplamayı kullanmak `<gcServer>` için, `true` öğesini ve [ \<gcConcurrent > öğesi](gcconcurrent-element.md) olarak `false`ayarlayın.  
+> .NET Framework 4 ve önceki sürümlerde, sunucu çöp toplama etkinleştirildiğinde eşzamanlı çöp toplama kullanılamaz. 4,5 .NET Framework başlayarak, sunucu çöp toplama işlemi eşzamanlı olur. Eş zamanlı olmayan sunucu çöp toplamayı kullanmak `<gcServer>` için, `true` öğesini ve [ \<gcConcurrent > öğesi](gcconcurrent-element.md) olarak `false`ayarlayın.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, sunucu çöp toplamayı mümkün bir şekilde sunar.  

@@ -14,39 +14,39 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 656a21a7b8801a2c3b72b25531705576fcf047cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7d0dae2ffbec5e334057715cd1d8d44e52cec9d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866827"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910460"
 ---
 # <a name="automatic-proxy-detection"></a>Otomatik Ara Sunucu Algılama
-Otomatik proxy algılama, bir Web proxy sunucusu sistem tarafından tanımlanan ve istemci adına istek göndermek için kullanılan bir işlemdir. Bu özellik Web Proxy Otomatik Bulma (WPAD) de denir. Otomatik proxy algılama etkinleştirildiğinde, istek için kullanılan proxy kümesini döndürmekten sorumlu bir proxy yapılandırma betiğini bulmak sistem çalışır. Proxy yapılandırma betiği bulunursa, betik indirilen, derlenmiş ve kullandığı bir istek için proxy bilgilerini, istek akışı veya yanıt alındığında yerel bilgisayarda çalıştırmak bir <xref:System.Net.WebProxy> örneği.  
+Otomatik proxy algılama, sistem tarafından bir Web proxy sunucusunun tanımlandığı ve istemci adına istek göndermek için kullanılan bir işlemdir. Bu özellik Web proxy otomatik bulma (WPAD) olarak da bilinir. Otomatik ara sunucu algılaması etkinleştirildiğinde, sistem, istek için kullanılabilecek proxy kümesini döndürmekten sorumlu bir ara sunucu yapılandırma betiği bulmaya çalışır. Ara sunucu yapılandırma betiği bulunursa, bir <xref:System.Net.WebProxy> örnek kullanan bir istek için proxy bilgileri, istek akışı veya yanıt elde edildiğinde, komut dosyası indirilir, derlenir ve yerel bilgisayarda çalıştırılır.  
   
- Otomatik proxy algılama tarafından gerçekleştirilir <xref:System.Net.WebProxy> sınıfı ve istek düzeyi ayarları, yapılandırma dosyalarındaki ayarlar ve Internet Explorer'ı kullanarak belirtilen ayarları dağıtabileceklerinizle **yerel alan ağı (LAN)** iletişim kutusu.  
-  
-> [!NOTE]
->  Internet Explorer'ı görüntüleyebilir **yerel alan ağı (LAN) ayarları** iletişim kutusunu seçerek **Araçları** Internet Explorer ana menü ve ardından seçerek **InternetSeçenekleri**. Ardından, **bağlantıları** sekmesine ve tıklayın **LAN Ayarları**.  
-  
- Otomatik proxy algılama etkinleştirildiğinde <xref:System.Net.WebProxy> sınıfı çalışır gibi proxy yapılandırma betiğini bulmak:  
-  
-1. WinINet `InternetQueryOption` işlevi en Internet Explorer'ın en son algılanan proxy yapılandırma betiğini bulmak için kullanılır.  
-  
-2. Komut dosyası bulunamazsa <xref:System.Net.WebProxy> sınıfı betiğini bulmak için Dinamik Ana Bilgisayar Yapılandırma Protokolü (DHCP) kullanır. DHCP sunucusu konumu (ana bilgisayar adı) ile ya da komut veya komut dosyası için tam bir URL ile yanıt verebilirsiniz.  
-  
-3. DHCP WPAD konak tanımlamıyorsa, DNS adını veya diğer ad olarak WPAD olan bir konak için sorgulanır.  
-  
-4. Bu konum, konak tanımlanmaz ve Internet Explorer LAN Ayarları veya bir yapılandırma dosyası bir proxy yapılandırma betiği konumunu belirtilirse kullanılır.  
+ Otomatik proxy algılama, <xref:System.Net.WebProxy> sınıfı tarafından gerçekleştirilir ve istek düzeyindeki ayarları, yapılandırma dosyalarındaki ayarları ve Internet Explorer **yerel ağ (LAN)** iletişim kutusu kullanılarak belirtilen ayarları kullanabilir.  
   
 > [!NOTE]
->  ASP.NET bir parçası olarak veya bir NT hizmeti olarak çalışan uygulamalar Internet Explorer proxy sunucusu ayarlarını çağrılıyor kullanıcısı (varsa) kullanın. Bu ayarlar tüm hizmet uygulamaları için kullanılamıyor olabilir.  
+> Internet Explorer ana menüsünden **Araçlar** ' ı seçip **Internet seçenekleri**' ni seçerek Internet Explorer **yerel alan ağı (LAN) ayarları** iletişim kutusunu görüntüleyebilirsiniz. Sonra, **Bağlantılar** sekmesini seçin ve **LAN ayarları**' na tıklayın.  
   
- Proxy bağlantı başına temelinde yapılandırılır. Bir bağlantı ağ bağlantısı iletişim kutusunda bir öğe ve bir fiziksel ağ aygıtı (bir modem veya Ethernet kartı) veya bir sanal arabirim (örneğin, bir ağ cihaz üzerinde çalışan bir VPN bağlantısı için) olabilir. Bağlantı değişiklikleri değiştiğinde (bir erişim noktası veya bir VPN etkinleştirilmiş örnek bir kablosuz bağlantı), proxy algılama algoritması yeniden çalıştırın.  
+ Otomatik ara sunucu algılaması etkinleştirildiğinde, <xref:System.Net.WebProxy> sınıfı proxy yapılandırma betiğini şu şekilde bulmaya çalışır:  
   
- Varsayılan olarak, Internet Explorer proxy ayarlarının proxy algılamak için kullanılır. Uygulamanızın etkileşimli olmayan bir hesap (olmadan, IE proxy ayarlarını yapılandırmak için kullanışlı bir yol) altında çalışıyorsa veya IE ayarlarından farklı proxy ayarlarını kullanmak istiyorsanız, ilebiryapılandırmadosyasıoluşturarakArasunucunuzyapılandırabilirsiniz[ \<defaultProxy > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) ve [ \<proxy > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md) tanımlanan öğe.  
+1. WinINet `InternetQueryOption` işlevi, Internet Explorer tarafından en son algılanan proxy yapılandırma betiğini bulmak için kullanılır.  
   
- Oluşturduğunuz istekleri, otomatik proxy algılama talep düzeyinde bir null kullanarak devre dışı bırakabilirsiniz <xref:System.Net.WebRequest.Proxy%2A> aşağıdaki kod örneğinde gösterildiği gibi isteğinizle birlikte.  
+2. Betik bulunamıyorsa, <xref:System.Net.WebProxy> sınıf, betiği bulmak için dinamik ana bilgisayar Yapılandırma Protokolü 'nü (DHCP) kullanır. DHCP sunucusu, betiğin konumuyla (ana bilgisayar adıyla) veya komut dosyasının tam URL 'siyle yanıt verebilir.  
+  
+3. DHCP, WPAD konağını tanımıyorsa, adı veya diğer adı olarak WPAD içeren bir konak için DNS sorgulanır.  
+  
+4. Konak tanımlanmamışsa ve bir ara sunucu yapılandırma betiğinin konumu Internet Explorer LAN ayarları veya bir yapılandırma dosyası tarafından belirtilmişse, bu konum kullanılır.  
+  
+> [!NOTE]
+> NT hizmeti olarak veya ASP.NET kapsamında çalışan uygulamalar, çağıran kullanıcının Internet Explorer proxy sunucu ayarlarını (varsa) kullanır. Bu ayarlar, tüm hizmet uygulamaları için kullanılamayabilir.  
+  
+ Proxy 'ler, connectoıd temelinde yapılandırılır. Connectoıd, ağ bağlantısı iletişim kutusundaki bir öğedir ve bir fiziksel ağ aygıtı (bir modem veya Ethernet kartı) veya bir sanal arabirim (bir ağ aygıtı üzerinden çalışan VPN bağlantısı gibi) olabilir. Bir connectoıd değiştiğinde (örneğin, bir kablosuz bağlantı bir erişim noktasını değiştirdiğinde veya VPN etkinleştirildiğinde), proxy algılama algoritması yeniden çalıştırılır.  
+  
+ Varsayılan olarak, Internet Explorer ara sunucu ayarları, proxy 'yi algılamak için kullanılır. Uygulamanız etkileşimli olmayan bir hesap altında çalışıyorsa (IE proxy ayarlarını yapılandırmanın kolay bir yolu olmadan) veya IE ayarlarından farklı proxy ayarlarını kullanmak istiyorsanız, bir yapılandırma dosyası oluşturarak proxy 'nizi yapılandırabilirsiniz. [ \<defaultProxy > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) ve [ \<proxy > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md) öğeleri tanımlandı.  
+  
+ Oluşturduğunuz istekler için, aşağıdaki kod örneğinde gösterildiği gibi, isteğinize sahip bir null <xref:System.Net.WebRequest.Proxy%2A> kullanarak istek düzeyinde otomatik proxy algılamayı devre dışı bırakabilirsiniz.  
   
 ```csharp  
 public static void DisableForMyRequest (Uri resource)  
@@ -65,10 +65,10 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
     End Sub   
 ```  
   
- Bir ara sunucu olmayan istekleri kullanılabilir uygulama etki alanının varsayılan proxy kullanmak <xref:System.Net.WebRequest.DefaultWebProxy%2A> özelliği.  
+ Proxy olmayan istekler, uygulama etki alanının varsayılan ara sunucusunu kullanır ve bu, <xref:System.Net.WebRequest.DefaultWebProxy%2A> özelliğinde kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>
-- [\<system.Net > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [\<System .net > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - constituent controls [Windows Forms]
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
-ms.openlocfilehash: 76a5a4f9b02a71616d247a1bb0f03cc0aec1d70d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 522a1012fc7bdd54860b0538064ee073f7a761f7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956082"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918422"
 ---
 # <a name="constituent-controls"></a>Bağlı Denetimler
-Bir kullanıcı denetimi oluşturan denetimleri veya *bağlı denetimler* özel grafik işleme için geldiğinde terimiyle gösterilen gibi göreceli olarak sabit olduğundan. Tüm Windows Forms denetimleri aracılığıyla kendi kendi işleme işlemek <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi. Bu yöntem korunduğundan, geliştiriciler için erişilebilir değil ve böylece denetimin boyandığında yürütülmesini önlenemeyen. Bu, ancak bağlı denetimler görünümünü etkilemek için kod eklenemiyor anlamına gelmez. Ek işleme, olay işleyici ekleme tarafından gerçekleştirilebilir. Örneğin, yazma varsayalım. bir <xref:System.Windows.Forms.UserControl> adlı bir düğme olan `MyButton`. Tarafından sağlanan ne ötesinde ek işleme sağlamak onlardan <xref:System.Web.UI.WebControls.Button>, aşağıdakine benzer şekilde kullanıcı denetiminize için kod eklersiniz:  
+Bir kullanıcı denetimini oluşturan denetimler veya bir ekip *denetimleri* , özel grafik işleme geldiğinde görece güvenilir bir şekilde çalışır. Tüm Windows Forms denetimleri kendi kendi <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemleri aracılığıyla kendi işlemesini işler. Bu yöntem korunduğundan, geliştirici tarafından erişilebilir değildir ve bu nedenle denetim boyandığında yürütülmesi önlenemez. Ancak bu, bileşen denetimlerinin görünümünü etkilemek için kod ekleyemayacağınız anlamına gelmez. Ek işleme, bir olay işleyicisi eklenerek gerçekleştirilebilir. Örneğin, adlı <xref:System.Windows.Forms.UserControl> `MyButton`bir düğmeyle bir yazdığınızı varsayalım. Tarafından sağlananlar dışında ek işleme sağlamak istiyorsanız <xref:System.Web.UI.WebControls.Button>, Kullanıcı denetiminin aşağıdakine benzer şekilde kod eklersiniz:  
   
 ```vb  
 Public Sub MyPaint(ByVal sender as Object, e as PaintEventArgs) Handles _  
@@ -39,9 +39,9 @@ System.Windows.Forms.PaintEventArgs e)
 ```  
   
 > [!NOTE]
->  Bazı Windows Forms denetimleri, gibi <xref:System.Windows.Forms.TextBox>, doğrudan tarafından Windows boyanan. Bu durumlarda, <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi asla çağrılmaz ve bu nedenle yukarıdaki örnekte asla çağrılmaz.  
+> Gibi bazı Windows Forms denetimleri <xref:System.Windows.Forms.TextBox>, doğrudan Windows tarafından boyanmıştır. Bu örneklerde, <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi hiçbir şekilde çağrılmaz ve bu nedenle yukarıdaki örnek hiçbir şekilde çağrılmayacaktır.  
   
- Bu her zaman yürüten bir metot oluşturur `MyButton.Paint` olay yürütür, böylece ek grafik gösterimi denetiminize ekleme. Bu yürütülmesini engellemez Not `MyButton.OnPaint`, ve bu nedenle tüm genellikle bir düğme tarafından gerçekleştirilen boyama yine de, özel boyama ek olarak gerçekleştirilir. GDI + teknoloji ve özel işleme hakkında daha fazla ayrıntı için bkz: [GDI + ile grafik görüntü oluşturma](../advanced/how-to-create-graphics-objects-for-drawing.md). Benzersiz bir gösterimini denetiminizin olmasını istiyorsanız, en iyi eylem planını devralınan bir denetim oluşturmak için ve bunun için özel işleme kodu yazmak için ' dir. Ayrıntılar için bkz [User-Drawn denetimleri](user-drawn-controls.md).  
+ Bu, `MyButton.Paint` olay her çalıştırıldığında çalıştırılan bir yöntem oluşturur ve bu sayede denetimenizde ek grafik gösterimi ekler. Bunun yürütülmesini `MyButton.OnPaint`engellemez ve bu nedenle genellikle bir düğme tarafından gerçekleştirilen tüm boyama, özel boyamaya ek olarak yine de gerçekleştirilir. GDI+ teknolojisi ve özel işleme hakkında daha fazla bilgi için bkz. [GDI+ Ile grafik görüntüleri oluşturma](../advanced/how-to-create-graphics-objects-for-drawing.md). Denetiminizin benzersiz bir gösterimini kullanmak istiyorsanız, en iyi eylem, devralınan bir denetim oluşturmaktır ve bunun için özel işleme kodu yazmaktır. Ayrıntılar için bkz. [Kullanıcı çizimli denetimler](user-drawn-controls.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

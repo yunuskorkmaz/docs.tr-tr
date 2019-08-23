@@ -8,17 +8,17 @@ helpviewer_keywords:
 - KnownTypes
 - <declaredTypes> element
 ms.assetid: f35184e4-9d9e-4d37-8fb4-d5b58220eb3e
-ms.openlocfilehash: 8919ee717012f8badcf7015bf8d850ed431c5943
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cef34a8836c7b17fe9a85cac190090f42653df14
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701170"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919247"
 ---
 # <a name="declaredtypes"></a>\<declaredTypes >
-İçerir, bilinen türleri <xref:System.Runtime.Serialization.DataContractSerializer> işlenirken kullanır.  
+Seri durumdan çıkarılırken <xref:System.Runtime.Serialization.DataContractSerializer> kullandığı bilinen türleri içerir.  
   
- Veri sözleşmeleri ve bilinen türler hakkında daha fazla bilgi için bkz. [veri sözleşme bilinen türleri](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Veri sözleşmeleri ve bilinen türler hakkında daha fazla bilgi için bkz. [veri sözleşmesi bilinen türleri](../../../wcf/feature-details/data-contract-known-types.md).  
   
  system.runtime.serialization  
 \<dataContractSerializer >  
@@ -52,19 +52,19 @@ ms.locfileid: "61701170"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|Bilinen türler gerektiren türleri ekler.|  
+|[\<> Ekle](add-of-declaredtypes-element.md)|Bilinen türler gerektiren türler ekler.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|İçin yapılandırma verilerini içeren <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|[\<dataContractSerializer >](datacontractserializer-of-system-runtime-serialization.md)|İçin yapılandırma verilerini içerir <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bilinen türler hakkında daha fazla bilgi için bkz: [veri sözleşme bilinen türleri](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) ve <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Bilinen türler hakkında daha fazla bilgi için bkz. [veri sözleşmesi bilinen türler](../../../wcf/feature-details/data-contract-known-types.md) ve <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="example"></a>Örnek  
- Bildirilen türleri ve bilinen türler için eklenen aşağıdaki XML kodunu gösteren bir `DataContractSerializer` öğesi. Eklenen üç örnek gösterir. İlk "Madde" adlı bir bilinen türünü kullanan "Siparişler" adlı bir özel türüdür. İkinci bildirilen türü bir <xref:System.Collections.Generic.List%601> kullanan `Item` bilinen türü. Son olarak üçüncü türü bildirilen bir <xref:System.Collections.Generic.Dictionary%602>. <xref:System.Collections.Generic.Dictionary%602> Sınıf türüdür, iki tür parametreleri ile genel tür. İlk tuşunu temsil eder ve ikinci değeri temsil eder. Aşağıdaki örnek ekler bir <xref:System.Collections.Generic.List%601> türünün ikinci (değer) listeye bilinen türler. Kullanmalısınız `index` bilinen türü kullanmak için hangi tür parametresi belirtmek için özniteliği. Bu durumda, değer türü "1" dizini özniteliği tarafından belirtilen (koleksiyon sıfır tabanlı).  
+ Aşağıdaki XML kodu, tanımlanmış türleri ve bir `DataContractSerializer` öğeye eklenen bilinen türleri gösterir. Örnek, eklenmekte olan üç tür gösterir. Birincisi, "Item" adlı bilinen bir tür kullanan "Orders" adlı özel bir türdür. Belirtilen ikinci tür, bilinen bir <xref:System.Collections.Generic.List%601> tür olarak `Item` kullanılan bir türüdür. Son olarak, belirtilen üçüncü tür bir <xref:System.Collections.Generic.Dictionary%602>. <xref:System.Collections.Generic.Dictionary%602> Sınıf türü, iki tür parametresi olan genel bir türdür. İlki anahtarı temsil eder ve ikincisi değeri temsil eder. Aşağıdaki örnek, bir <xref:System.Collections.Generic.List%601> ikinci türü (değer) bilinen türler listesine ekler. Bilinen türde kullanılacak tür `index` parametresini belirtmek için özniteliğini kullanmanız gerekir. Bu durumda, değer türü "1" olarak ayarlanmış dizin özniteliği ile gösterilir (koleksiyon sıfır tabanlıdır).  
   
 ```xml  
 <configuration>
@@ -91,6 +91,6 @@ ms.locfileid: "61701170"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
-- [Veri Anlaşması Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+- [\<dataContractSerializer >](datacontractserializer-element.md)
+- [Veri Anlaşması Bilinen Türler](../../../wcf/feature-details/data-contract-known-types.md)
+- [\<> Ekle](add-of-declaredtypes-element.md)

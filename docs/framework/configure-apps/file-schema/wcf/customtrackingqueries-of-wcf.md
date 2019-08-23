@@ -1,25 +1,25 @@
 ---
-title: <customTrackingQueries> WCF
+title: <customTrackingQueries>WCF
 ms.date: 03/30/2017
 ms.assetid: 14cfe47e-9935-4120-84f1-8f38de8ca4c1
-ms.openlocfilehash: 8b317cc289853902592e145e34b6e7bf5f84763b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abc0c7dfb426338ec6bca61b0a4b87754bb63588
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704175"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925933"
 ---
-# <a name="customtrackingqueries-of-wcf"></a>\<customTrackingQueries > WCF
+# <a name="customtrackingqueries-of-wcf"></a>\<WCF > customTrackingQueries
 
-Kod etkinlikleriniz tanımlayan olayları izlemek için kullanılan sorguları koleksiyonunu temsil eder. Sorgu özel izleme kayıtları abone olmak izleme Katılımcısı için gereklidir.  
+Kod etkinliklerinizde tanımladığınız olayları izlemek için kullanılan bir sorgu koleksiyonunu temsil eder. Sorgu, izleme katılımcısı için özel izleme kayıtlarına abone olmak için gereklidir.  
   
- Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [izleme profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
+ Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).
   
 \<system.serviceModel>  
 \<İzleme >  
-\<profilleri >  
+\<Profiller >  
 \<trackingProfile>  
-\<İş akışı >  
+\<iş akışı >  
 \<customTrackingQueries >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -51,17 +51,17 @@ Yok.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<customTrackingQuery >](customtrackingquery-of-wcf.md)|Kod etkinlikleriniz tanımlayan olayları izlemek için kullanılan sorgu.|  
+|[\<customTrackingQuery >](customtrackingquery-of-wcf.md)|Kod etkinliklerinizde tanımladığınız olayları izlemek için kullanılan bir sorgu.|  
   
 ### <a name="parent-elements"></a>Üst öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<İş akışı >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi `activityDefinitionId` özelliği.|  
+|[\<iş akışı >](../windows-workflow-foundation/workflow.md)|Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi `activityDefinitionId` özelliği.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>
-- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [İş Akışı Takip ve İzleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Profilleri](../../../windows-workflow-foundation/tracking-profiles.md)

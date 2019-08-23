@@ -9,29 +9,29 @@ helpviewer_keywords:
 - UI Automation, invoking controls
 - controls, invoking
 ms.assetid: 5ee2de3f-256c-43ec-b64c-62ace91f9983
-ms.openlocfilehash: 19087cfaa22d166017bcf4e3ce5e6caf73ae5fe5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f17f3ad25f137bbf8d7cf88b43cc52dfdeeb3fd4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624546"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923733"
 ---
 # <a name="invoke-a-control-using-ui-automation"></a>UI Otomasyonu Kullanarak Denetim Çağırma
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu konu aşağıdaki görevlerin nasıl gerçekleştirileceğini gösterir:  
+ Bu konu başlığı altında, aşağıdaki görevlerin nasıl gerçekleştirileceği gösterilmektedir:  
   
-- Denetimin görünümünü walking tarafından belirli özellik koşullara uyan bir denetimi bulmak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] hedef uygulama için ağacı.  
+- Hedef uygulama için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacın denetim görünümünü yürüyerek belirli özellik koşullarıyla eşleşen bir denetim bulun.  
   
-- Oluşturma bir <xref:System.Windows.Automation.AutomationElement> her denetim için.  
+- Her denetim <xref:System.Windows.Automation.AutomationElement> için oluşturun.  
   
-- Elde bir <xref:System.Windows.Automation.InvokePattern> herhangi bir nesneden [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğe bulundu destekleyen <xref:System.Windows.Automation.InvokePattern> denetim düzeni.  
+- Denetim modelini <xref:System.Windows.Automation.InvokePattern> destekleyen, <xref:System.Windows.Automation.InvokePattern> bulunan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] herhangi bir öğeden bir nesne elde edin.  
   
-- Kullanım <xref:System.Windows.Automation.InvokePattern.Invoke%2A> istemci olay işleyicisi denetiminden çağırmak için.  
+- Bir <xref:System.Windows.Automation.InvokePattern.Invoke%2A> istemci olay işleyicisinden denetimi çağırmak için kullanın.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> yöntemi <xref:System.Windows.Automation.AutomationElement> sınıfı oluşturmak için bir <xref:System.Windows.Automation.InvokePattern> nesne ve kullanarak denetim çağırma <xref:System.Windows.Automation.InvokePattern.Invoke%2A> yöntemi.  
+ Bu <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> örnek, <xref:System.Windows.Automation.AutomationElement> yöntemini<xref:System.Windows.Automation.InvokePattern.Invoke%2A> kullanarak bir <xref:System.Windows.Automation.InvokePattern> nesnesi oluşturmak ve bir denetimi çağırmak için sınıfının yöntemini kullanır.  
   
  [!code-csharp[InvokePatternApp#1100](../../../samples/snippets/csharp/VS_Snippets_Wpf/InvokePatternApp/CSharp/InvokePatternApp.cs#1100)]
  [!code-vb[InvokePatternApp#1100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1100)]  
@@ -40,4 +40,4 @@ ms.locfileid: "64624546"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [InvokePattern'ı, ExpandCollapsePattern'ı ve TogglePattern'ı örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)
+- [Invokemodel, ExpandCollapsePattern ve Togglemodel örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

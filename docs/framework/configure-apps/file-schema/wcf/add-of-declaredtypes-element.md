@@ -1,5 +1,5 @@
 ---
-title: <add> ' ın <declaredTypes> öğesi
+title: <add><declaredTypes> öğesinin
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - DataContractSerializer
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-ms.openlocfilehash: 9b280a63e85beac3231bc1a414430239bea4a1f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ea008dcc72d555b00e9648ace95bb9522ffc2c8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701118"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920182"
 ---
-# <a name="add-of-declaredtypes-element"></a>\<Ekle >, \<declaredTypes > öğesi
-Tarafından kullanılan bir tür ekler <xref:System.Runtime.Serialization.DataContractSerializer> seri durumundan çıkarma sırasında. Bildirilen her tür, alan veya özellik bildirilen tür döndürülecek bilinen türleri içerir.  
+# <a name="add-of-declaredtypes-element"></a>\<\<DeclaredTypes > öğesinin > ekleyin
+Seri durumdan çıkarma <xref:System.Runtime.Serialization.DataContractSerializer> sırasında tarafından kullanılan bir tür ekler. Her bir tanımlı tür, bir alan veya tanımlanmış türün özelliği olarak döndürülecek bilinen türleri içerir.  
   
  system.runtime.serialization  
 \<dataContractSerializer >  
 \<declaredTypes >  
-\<Ekle >, \<declaredTypes >  
+\<\<DeclaredTypes > > ekleyin  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,27 +40,27 @@ Tarafından kullanılan bir tür ekler <xref:System.Runtime.Serialization.DataCo
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|türü|Gerekli dize özniteliği.<br /><br /> Tür adı (ad uzayı dahil), derleme adı, sürüm numarasını, kültürü ve ortak anahtar belirteci belirtir.|  
+|türü|Gerekli dize özniteliği.<br /><br /> Tür adını (ad alanı dahil), derleme adını, sürüm numarasını, kültürü ve ortak anahtar belirtecini belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<knownType >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|Eklenmekte olan bildirilen türü bilinen türünü belirtir. Bildirilen tür genel bir tür olduğu, ardından da bir parametre öğesine eklemeniz gerekir, `<knownType>` hangi genel parametre bilinen türü döndürmek için kullanıldığını belirtmek için öğesi.|  
+|[\<knownType >](knowntype.md)|Eklenmekte olan, belirtilen tanımlı tür için bilinen türü belirtir. Belirtilen tür genel bir türse, bilinen türü döndürmek için hangi genel parametrenin kullanıldığını belirtmek üzere `<knownType>` öğesine bir parametre öğesi de eklemeniz gerekir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<declaredTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|Tarafından seri durumundan çıkarma sırasında bilinen türler gerektiren türler içeren <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|[\<declaredTypes >](declaredtypes.md)|Tarafından seri durumundan çıkarma sırasında bilinen türler gerektiren türleri içerir <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bilinen türler hakkında daha fazla bilgi için bkz: [veri sözleşme bilinen türleri](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) ve <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Bilinen türler hakkında daha fazla bilgi için bkz. [veri sözleşmesi bilinen türler](../../../wcf/feature-details/data-contract-known-types.md) ve <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- Bkz: [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) bu öğe kullanma örneği için.  
+ Bu öğenin kullanılmasıyla ilgili bir örnek için bkz. [ DataContractSerializer>.\<](datacontractserializer-element.md)  
   
 > [!NOTE]
->  Eklerseniz <xref:System.Object> olarak bir `<declaredType>`, <xref:System.Configuration.ConfigurationErrorsException> oluşturulur. Bunun nedeni, <xref:System.Object> türü yapılandırma bildirilen tür olarak kullanılamaz.  
+> <xref:System.Object> Türü <xref:System.Configuration.ConfigurationErrorsException> olarak eklerseniz ,biroluşturulur.`<declaredType>` Bunun nedeni <xref:System.Object> , türün yapılandırmada belirtilen bir tür olarak kullanılamaz.  
   
 ## <a name="example"></a>Örnek  
   
@@ -78,6 +78,6 @@ Tarafından kullanılan bir tür ekler <xref:System.Runtime.Serialization.DataCo
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Veri Anlaşması Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
-- [\<Ekle >, \<declaredTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+- [Veri Anlaşması Bilinen Türler](../../../wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer >](datacontractserializer-element.md)
+- [\<\<DeclaredTypes > > ekleyin](add-of-declaredtypes-element.md)

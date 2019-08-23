@@ -2,21 +2,21 @@
 title: <callbackTimeouts>
 ms.date: 03/30/2017
 ms.assetid: d7fcfc5f-6d35-491e-8fa6-2f964c1e792f
-ms.openlocfilehash: e666bac0be772e417f140e1482649f82ea70e2f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d57a888a19e684ac13632c1ab2476e304667c3e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673426"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919660"
 ---
-# <a name="callbacktimeouts"></a>\<callbackTimeouts >
-Bir çift yönlü bir geri çağırma anlaşması senaryosunda işlemleri sunucudan istemciye olan hareket akışındaki zaman zaman aşımı değerini belirtir.  
+# <a name="callbacktimeouts"></a>\<Callbackzamanaşımları >
+Sunucudan bir çift yönlü geri çağırma sözleşmesi senaryosuna client.in için işlem akışı yaparken zaman aşımı değerini belirtir.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
-\<endpointBehaviors>  
-\<davranışı >  
-\<callbackTimeOuts >  
+\<Endpointdavranışlar >  
+\<davranış >  
+\<Callbackzamanaşımları >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,7 +34,7 @@ Bir çift yönlü bir geri çağırma anlaşması senaryosunda işlemleri sunucu
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`transactionTimeout`|A <xref:System.TimeSpan> hangi hareketleri içinde zaman aralığını belirten bir değer tamamlanması veya otomatik olarak sonlandırılacak. Varsayılan değer "00: 00:00".|  
+|`transactionTimeout`|İşlemlerin <xref:System.TimeSpan> tamamlaması gereken veya otomatik olarak sonlandırılacağı zaman aralığını belirten bir değer. Varsayılan değer "00:00:00" dır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -43,7 +43,7 @@ Bir çift yönlü bir geri çağırma anlaşması senaryosunda işlemleri sunucu
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir uç nokta davranışı belirtir.|  
+|[\<davranış >](behavior-of-endpointbehaviors.md)|Bir uç nokta davranışı belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

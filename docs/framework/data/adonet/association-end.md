@@ -2,35 +2,35 @@
 title: association end
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: 085188969b0daf5153b40361d4b15d696920c829
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 575157cd1d125d3315e1859aad72cc8b08d8b4cf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592582"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932211"
 ---
 # <a name="association-end"></a>association end
-Bir *ilişkilendirme end* tanımlayan [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) bir ucunda bir [ilişkilendirme](../../../../docs/framework/data/adonet/association-type.md) ve varlık sayısı bu ilişkilendirmeyi sonunda bulunabilir örnekleri yazın. İlişkilendirme ucu ilişkilendirme bir parçası olarak tanımlanır; bir ilişkiyi tam olarak iki ilişkilendirme ucu olması gerekir. [Gezinti özellikleri](../../../../docs/framework/data/adonet/navigation-property.md) gezinme bir ilişkilendirme end bölümünden diğerine sağlar.  
+Bir *ilişkilendirme End* 'i, bir ilişkilendirmenin bir sonundaki [varlık türünü](../../../../docs/framework/data/adonet/entity-type.md) ve [](../../../../docs/framework/data/adonet/association-type.md) bir ilişkinin o ucunda bulunabilir varlık türü örneklerinin sayısını tanımlar. İlişki uçları bir ilişkinin parçası olarak tanımlanır; bir ilişkilendirme tam olarak iki ilişkilendirme bitmelidir. [Gezinti özellikleri](../../../../docs/framework/data/adonet/navigation-property.md) , bir ilişkilendirme ucundan diğerine kadar gezinmesine izin verir.  
   
- Bir ilişkilendirme end tanımı, şu bilgileri içerir:  
+ Bir ilişkilendirme End tanımı aşağıdaki bilgileri içerir:  
   
-- İlişkilendirmesine katılan varlık türlerinden biri. (Gerekli)  
+- İlişkilendirmede yer alan varlık türlerinden biri. Istenir  
   
     > [!NOTE]
-    >  Belirli bir ilişkilendirme için her bir ilişkilendirme end için belirtilen varlık türü aynı olabilir. Bu, kendi kendine bir ilişkilendirme oluşturur.  
+    > Belirli bir ilişki için, her ilişkilendirme ucu için belirtilen varlık türü aynı olabilir. Bu, kendine ilişkilendirme oluşturur.  
   
-- Bir [ilişkilendirme end çoğulluk](../../../../docs/framework/data/adonet/association-end-multiplicity.md) ilişkilendirme sonunda olabilir bir varlık türü örneklerinin sayısını belirtir. Bir ilişkilendirme end çoğulluk değeri (0..1) bir (1) sıfır veya bir ya da birden çok olabilir (\*).  
+- İlişkilendirmenin bir ucunda olabilecek varlık türü örneklerinin sayısını gösteren bir [ilişkilendirme End çoğulluğu](../../../../docs/framework/data/adonet/association-end-multiplicity.md) . Bir ilişki uç çoğulluğu bir (1), sıfır veya bir (0.. 1) veya çok (\*) değerine sahip olabilir.  
   
-- İlişki sonu için bir ad. (İsteğe bağlı)  
+- İlişki ucu için bir ad. (İsteğe bağlı)  
   
-- İlişkilendirme ucundaki gibi cascade delete üzerinde gerçekleştirilen işlemleri hakkında bilgiler. (İsteğe bağlı)  
+- İlişki ucunda gerçekleştirilen, silme sırasında Cascade gibi işlemler hakkında bilgiler. (İsteğe bağlı)  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki diyagramda iki ilişkilendirmeleri kavramsal bir modelle gösterilmektedir: `PublishedBy` ve `WrittenBy`. İlişkilendirme sona için `PublishedBy` ilişkisi olan `Book` ve `Publisher` varlık türleri. Çokluğu `Publisher` sonudur bir (1) ve çeşitliliğini `Book` sonudur birçok (\*), bir yayımcı bir çok kitap yayımlar ve bir yayımcı tarafından yayımlanan bir kitap gösteren.  
+ Aşağıdaki diyagramda iki ilişkiye sahip kavramsal bir model gösterilmektedir: `PublishedBy` ve. `WrittenBy` İlişkilendirme için `PublishedBy` `Publisher` ilişkilendirme sonlanır `Book` ve varlık türleridir. `Publisher` Ucun çoğulluğu bir (1) ve `Book` ucun çoğulluğu birçok (\*), bir yayımcının çok sayıda kitap yayımladığını ve bir kitabın bir yayımcı tarafından yayımlandığını belirtir.  
   
- ![Üç varlık türleri ile örnek modeli](./media/association-end/example-model-three-entity-types.gif)  
+ ![Üç varlık türüne sahip örnek model](./media/association-end/example-model-three-entity-types.gif)  
   
- ADO.NET varlık çerçevesi kavramsal şema tanım dili olarak adlandırılan bir etki alanına özgü dil (DSL) kullanır ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Aşağıdaki CSDL tanımlar `PublishedBy` Yukarıdaki diyagramda gösterilen ilişkilendirme. Türü, adı ve her bir ilişkilendirme end'ün çoğulluğu, XML özniteliği tarafından belirtilen unutmayın ( `Type`, `Role`, ve `Multiplicity` öznitelikleri, sırasıyla). İsteğe bağlı bir bitiş üzerinde gerçekleştirilen işlemler hakkında bilgi belirtilen bir XML öğesi ( `OnDelete` öğesi). Bu durumda, bir yayımcı silinir, bu nedenle ilişkili tüm kitaplar demektir.  
+ ADO.NET Entity Framework kavramsal model tanımlamak için kavramsal şema tanım dili ([csdl](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) adlı bir etki alanına özgü DIL (DSL) kullanır. Aşağıdaki csdl, Yukarıdaki diyagramda `PublishedBy` gösterilen ilişkilendirmeyi tanımlar. Her ilişkilendirme ucunun türü, adı ve çoğulluk özelliklerinin, XML öznitelikleri ( `Type` `Role`sırasıyla, ve `Multiplicity` öznitelikleri) tarafından belirtildiğine unutmayın. Bir uçta gerçekleştirilen işlemlerle ilgili isteğe bağlı bilgiler bir XML öğesinde ( `OnDelete` öğesi) belirtilir. Bu durumda, bir yayımcı silinirse tüm ilişkili kitaplardır.  
   
  [!code-xml[EDM_Example_Model#AssociationEnd](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#associationend)]  
   

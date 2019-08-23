@@ -2,20 +2,20 @@
 title: <filters> / <routing>
 ms.date: 03/30/2017
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-ms.openlocfilehash: 8b2c735a19c4cece16dcb77e3ec548eb2d39ec18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba60958ad33b46b40285f3f70001273bb3af3a63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701040"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925612"
 ---
-# <a name="filters-of-routing"></a>\<filtreleri >, \<yönlendirme >
+# <a name="filters-of-routing"></a>\<\<yönlendirme > > filtreler
 
-Windows Communication Foundation (WCF) türünü belirleyen ve yönlendirme süzgeçleri kümesini tanımlamak için bir yapılandırma bölümünü temsil eder <xref:System.ServiceModel.Dispatcher.MessageFilter> gelen iletileri değerlendirmek kullanılacak.
+Gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> türünü belirleyen bir yönlendirme filtresi kümesini tanımlamak için bir yapılandırma bölümünü temsil eder.
 
-[**\<system.serviceModel>**](system-servicemodel.md)   
-&nbsp;&nbsp;[**\<Yönlendirme >**](routing.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<filtreleri >**
+[ **\<System. serviceModel >** ](system-servicemodel.md)   
+&nbsp;&nbsp;[ **\<Yönlendirme >** ](routing.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Filtreler >**
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,13 +44,13 @@ Yok.
 
 |     | Açıklama |
 | --- | ----------- |
-| [**\<Filtre >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Windows Communication Foundation (WCF) türünü belirleyen bir yönlendirme filtresi içeren<xref:System.ServiceModel.Dispatcher.MessageFilter> gelen iletileri değerlendirmek için kullanılır. |
+| [ **\<Filtre >** ](filter.md) | Gelen iletiler değerlendirilirken Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> türünü belirleyen bir yönlendirme filtresi içerir. |
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |     | Açıklama |
 | --- | ----------- |
-| [**\<Yönlendirme >**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Windows Communication Foundation (WCF) türünü belirleyen ve yönlendirme süzgeçleri kümesini tanımlamak için bir yapılandırma bölümünü temsil eder<xref:System.ServiceModel.Dispatcher.MessageFilter> yönlendirme yanı sıra gelen iletileri değerlendirmek için hedef bitiş noktalarını tanımlayan tabloları yapılırken kullanılacak ne zaman eşleşen bir filtre, iletileri gönderir. |
+| [ **\<Yönlendirme >** ](routing.md) | Gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> türünü ve hedef bitiş noktalarını tanımlayan yönlendirme tablolarını belirleyen bir yönlendirme filtreleri kümesini tanımlamak için bir yapılandırma bölümünü temsil eder. Filtre eşleştiğinde iletileri gönder. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,130 +8,130 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 20766f4f7971d8aa304c7c3eead94f089f059d64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469711"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946713"
 ---
 # <a name="interop-marshaling"></a>Birlikte Çalışma Hazırlama
-<a name="top"></a> Birlikte çalışma hazırlama veri çağrıları sırasında yönetilen ve yönetilmeyen bellek arasında yöntem bağımsız değişkenleri ve dönüş değerleri nasıl geçirilir yönetir. Birlikte çalışma hazırlama ortak dil çalışma zamanının sıralama hizmeti tarafından gerçekleştirilen bir çalışma zamanı etkinliğidir.  
+<a name="top"></a>Birlikte çalışma sıralama, verilerin Yöntem bağımsız değişkenlerine nasıl geçtiğini ve çağrılar sırasında yönetilen ve yönetilmeyen bellek arasında değer döndürme şeklini yönetir. Birlikte çalışabilirlik sıralaması, ortak dil çalışma zamanının sıralama hizmeti tarafından gerçekleştirilen bir çalışma zamanı etkinliğidir.  
   
- Çoğu veri türleri, hem yönetilen hem de yönetilmeyen bellekte ortak temsilleri olabilir. Birlikte çalışma sıralayıcısı, bu tür sizin yerinize çözer. Diğer türler, belirsiz veya yönetilen bellek içinde gösterilen olabilir.  
+ Çoğu veri türü hem yönetilen hem de yönetilmeyen bellekte ortak temsiller vardır. Birlikte çalışma sıralayıcısı sizin için bu türleri işler. Diğer türler, yönetilen bellekte belirsiz veya hiç gösterilemez.  
   
- Eşleme için tek bir yönetilen türü birden fazla yönetilmeyen gösterimleri ya da eksik tür bilgisi, bir dizinin boyutu gibi belirsiz bir tür olabilir. Belirsiz türler için sıralayıcı, varsayılan gösterim ve birden çok temsile bulunduğu diğer gösterimler sağlar. Sıralayıcı nasıl hazırlanacağını belirsiz bir tür olduğu için açık yönergeler sağlayabilir.  
+ Belirsiz bir tür, tek bir yönetilen türle eşlenen birden çok yönetilmeyen temsilden ya da bir dizinin boyutu gibi eksik tür bilgilerine sahip olabilir. Belirsiz türler için sıralayıcı, birden fazla temsilin bulunduğu varsayılan bir temsili ve alternatif gösterimleri sağlar. Sıralayıcıya, belirsiz bir tür sıralama yapmak için açık yönergeler sağlayabilirsiniz.  
   
  Bu genel bakış aşağıdaki bölümleri içerir:  
   
 - [Platform çağırma ve COM birlikte çalışma modelleri](#platform_invoke_and_com_interop_models)  
   
-- [Marshaling ve COM apartmanlar](#marshaling_and_com_apartments)  
+- [Hazırlama ve COM Apartments](#marshaling_and_com_apartments)  
   
-- [Uzak çağrılar hazırlama](#marshaling_remote_calls)  
+- [Uzak çağrıları sıralama](#marshaling_remote_calls)  
   
-- [İlgili Konular](#related_topics)  
+- [İlgili konular](#related_topics)  
   
 - [Başvuru](#reference)  
   
 <a name="platform_invoke_and_com_interop_models"></a>   
 ## <a name="platform-invoke-and-com-interop-models"></a>Platform çağırma ve COM birlikte çalışma modelleri  
- Ortak dil çalışma zamanı yönetilmeyen kod ile birlikte çalışma için iki mekanizma sağlar:  
+ Ortak dil çalışma zamanı, yönetilmeyen kod ile birlikte çalışmak için iki mekanizma sağlar:  
   
-- Platform çağırma, yönetilmeyen bir kitaplığından dışa aktarılan işlevleri çağırmak yönetilen kod sağlar.  
+- Yönetilen kodun yönetilmeyen bir kitaplıktan aktarılmış işlevleri çağırmasına olanak sağlayan platform çağırma.  
   
-- Yönetilen kodun Bileşen Nesne Modeli (COM) nesneleri, arabirimler aracılığıyla etkileşim sağlar COM birlikte çalışma.  
+- Yönetilen kodun arabirimler aracılığıyla bileşen nesne modeli (COM) nesneleriyle etkileşime geçmesini sağlayan COM birlikte çalışma.  
   
- Her iki platform çağırma ve COM birlikte çalışma kullanım birlikte çalışma doğru yöntem bağımsız çağıran ve çağrılan ve geri arasında taşımak için hazırlama gerekli. Aşağıdaki çizimde gösterildiği gibi bir platform çağırma yöntemi çağrısı akışlar yönetilmeyen kod ve hiçbir zaman zaman dışında başka şekilde yönetilen [geri çağırma işlevleri](callback-functions.md) kullanılır. Platform çağırma olsa bile çağrıları yalnızca yönetilmeyen kod için yönetilen akış, giriş veya çıkış parametreleri olarak her iki yönde veri akabilir. COM birlikte çalışma yöntemi çağrıları, herhangi bir yönde akabilir.  
+ Hem platform Invoke hem de COM birlikte çalışması, yöntem bağımsız değişkenlerini çağıran ve çağrılan ve geri dönüş arasında doğru şekilde taşımak için birlikte çalışabilirlik sıralamasını kullanır. Aşağıdaki çizimde gösterildiği gibi, platform çağırma yöntemi, yönetilen 'den yönetilmeyen koda ve [geri çağırma işlevlerinin](callback-functions.md) dahil olduğu durumlar dışında, hiçbir zaman başka bir şekilde yapılır. Platform çağırma çağrıları yalnızca yönetilene yönetilmeyen koda akabilse de, veriler giriş veya çıkış parametreleri olarak her iki yönde de akabilir. COM birlikte çalışma yöntemi çağrıları her iki yönde de akabilir.  
   
- ![Platform Çağırma](./media/interop-marshaling/interop-marshaling-invoke-and-com.png "Platform çağırma ve akış COM birlikte çalışabilirlik çağrısı")  
+ ![Platform çağırma](./media/interop-marshaling/interop-marshaling-invoke-and-com.png "Platform çağırma ve com birlikte çalışma çağrı akışı")  
   
- En düşük düzeyde aynı birlikte çalışma hazırlama hizmeti iki mekanizmalarını kullanır; Ancak, yalnızca COM birlikte çalışma tarafından desteklenen belirli veri türleri veya platform çağırma. Ayrıntılar için bkz [varsayılan hazırlama davranışı](default-marshaling-behavior.md).  
+ En düşük düzeyde, her iki mekanizma de aynı birlikte çalışma sıralama hizmetini kullanır; Ancak, belirli veri türleri yalnızca COM birlikte çalışma veya platform çağırma tarafından desteklenir. Ayrıntılar için bkz. [varsayılan sıralama davranışı](default-marshaling-behavior.md).  
   
  [Başa dön](#top)  
   
 <a name="marshaling_and_com_apartments"></a>   
-## <a name="marshaling-and-com-apartments"></a>Marshaling ve COM apartmanlar  
- Birlikte çalışma sıralayıcısı, ortak dil çalışma zamanı yığınına yönetilmeyen yığından arasında verileri sürekliliğe devreder. Çağıran ve çağrılan aynı veri örneği üzerinde çalışamaz her hazırlama gerçekleşir. Birlikte çalışma sıralayıcısı, çağıran ve çağrılan kendi veri kopyasını olsa bile aynı veriler üzerinde çalışıyor olabilir görünmesine mümkün kılar.  
+## <a name="marshaling-and-com-apartments"></a>Hazırlama ve COM Apartments  
+ Birlikte çalışma sıralayıcısı, verileri ortak dil çalışma zamanı yığını ve yönetilmeyen yığın arasında sıralar. Sıralama, çağıran ve çağrılan aynı veri örneğinde çalışamadığında oluşur. Birlikte çalışma sıralayıcısı, çağıran ve çağrılan tarafından verilerin kendilerine ait bir kopyasına sahip olsalar bile aynı verilerde çalışıyor olmasını mümkün kılar.  
   
- COM COM apartmanlar veya farklı bir COM işlemler arasında veri sürekliliğe devreder bir Sıralayıcı de vardır. Aynı COM grup içinde yönetilen ve yönetilmeyen kod arasında arama, birlikte çalışma sıralayıcısı yalnızca Sıralayıcı dahil değildir. Yönetilen kod ve yönetimsiz kod içinde farklı bir COM grubu veya başka bir işlem arasında çağrılırken, birlikte çalışma sıralayıcısı hem COM Sıralayıcı faydalanırsınız.  
+ COM Ayrıca, verileri COM apartmanları veya farklı COM işlemleri arasında sıraladığında bir Sıralayıcı içerir. Aynı COM grubu içindeki yönetilen ve yönetilmeyen kod arasında çağrılırken, birlikte çalışma sıralayıcısı dahil tek Sıralayıcı olur. Yönetilen kod ve yönetilmeyen kod arasında farklı bir COM grubu ya da farklı bir işlemde çağrılırken, birlikte çalışma sıralayıcısı ve COM sıralayıcısı dahil edilir.  
   
-### <a name="com-clients-and-managed-servers"></a>COM istemcilerinde ve yönetilen sunucular  
- Kayıtlı bir tür kitaplığı ile verilecek bir yönetilen sunucu tarafından [Regasm.exe (derleme kayıt aracı)](../tools/regasm-exe-assembly-registration-tool.md) sahip bir `ThreadingModel` ayarlamak kayıt defteri girdisini `Both`. Bu değer, bir tek iş parçacıklı grup (STA) veya bir çok iş parçacıklı grubun (MTA) sunucu etkinleştirilebilir gösterir. Sunucu nesnesi aşağıdaki tabloda gösterildiği gibi onu çağıran olarak aynı grup içinde oluşturulur.  
+### <a name="com-clients-and-managed-servers"></a>COM Istemcileri ve yönetilen sunucular  
+ [Regasm. exe (derleme kayıt aracı)](../tools/regasm-exe-assembly-registration-tool.md) tarafından kaydedilmiş bir tür kitaplığına sahip, aktarılmış bir yönetilen sunucuda, olarak `ThreadingModel` `Both`ayarlanmış bir kayıt defteri girişi vardır. Bu değer, sunucunun tek iş parçacıklı bir grupta (STA) veya çok iş parçacıklı grupta (MTA) etkinleştiribileceğini belirtir. Sunucu nesnesi, aşağıdaki tabloda gösterildiği gibi çağıranı ile aynı grupta oluşturulur.  
   
-|COM istemcisi|.NET sunucu|Hazırlama gereksinimleri|  
+|COM istemcisi|.NET Server|Hazırlama gereksinimleri|  
 |----------------|-----------------|-----------------------------|  
-|STA|`Both` STA olur|Grup aynı hazırlama.|  
-|MTA|`Both` MTA haline gelir.|Grup aynı hazırlama.|  
+|A|`Both`STA olur.|Aynı apartman sıralaması.|  
+|SIRAYA|`Both`MTA olur.|Aynı apartman sıralaması.|  
   
- İstemci ve sunucu aynı grupta olduğundan, hizmeti otomatik olarak hazırlama birlikte çalışma hazırlama tüm verileri işler. Aşağıdaki çizimde, yönetilen ve yönetilmeyen yığınlar aynı COM Stili grup içinde arasında işletim birlikte çalışma hazırlama hizmet gösterir.  
+ İstemci ve sunucu aynı grupta olduğundan, birlikte çalışma hazırlama hizmeti tüm veri sıralamasını otomatik olarak işler. Aşağıdaki çizimde, aynı COM stili apartman içinde yönetilen ve yönetilmeyen Heap 'ler arasında çalışan birlikte çalışma sıralama hizmeti gösterilmektedir.  
   
- ![Yönetilen ve yönetilmeyen yığınlar arasında birlikte çalışma hazırlama](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "aynı gruba işlem hazırlama")  
+ ![Yönetilen ve yönetilmeyen Heap 'ler arasında birlikte çalışabilirlik sıralaması](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "Aynı apartman sıralama işlemi")  
   
- Yönetilen sunucu dışa aktarmayı planlıyorsanız, COM istemcisi sunucusunun Grup belirlediğini unutmayın. MTA içinde başlatılan bir COM istemcisi tarafından yönetilen bir sunucu, iş parçacığı güvenliği emin olmanız gerekir.  
+ Yönetilen bir sunucuyu dışarı aktarmayı planlıyorsanız, COM istemcisinin sunucunun bulunduğu grubu belirlediğini unutmayın. Bir MTA içinde başlatılan bir COM istemcisi tarafından çağrılan yönetilen bir sunucu, iş parçacığı güvenliği sağlamalıdır.  
   
-### <a name="managed-clients-and-com-servers"></a>Yönetilen istemcilerin ve COM sunucuları  
- MTA yönetilen istemci apartmanlar için varsayılan ayardır; Ancak, .NET istemci uygulama türü, varsayılan ayarı değiştirebilirsiniz. Örneğin, bir Visual Basic istemci Grup STA. ayardır Kullanabileceğiniz <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> özelliği veya <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> incelemek ve yönetilen bir istemci grubu ayarını değiştirmek için özellik.  
+### <a name="managed-clients-and-com-servers"></a>Yönetilen Istemciler ve COM sunucuları  
+ Yönetilen istemci apartmanları için varsayılan ayar MTA ' dır; Ancak, .NET istemcisinin uygulama türü varsayılan ayarı değiştirebilir. Örneğin, Visual Basic istemci grubu ayarı STA ' dır. Yönetilen bir istemcinin grup <xref:System.STAThreadAttribute?displayProperty=nameWithType>ayarını incelemek <xref:System.MTAThreadAttribute?displayProperty=nameWithType>ve değiştirmek <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> için,, özelliğini <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> veya özelliğini kullanabilirsiniz.  
   
- Bileşen yazarı, bir COM sunucusunun iş parçacığı benzeşimini ayarlar. Aşağıdaki tablo, .NET istemcileri ve COM sunucuları için Grup ayarları birleşimleri gösterir. Ayrıca, birleşimler için gereksinimleri hazırlama ortaya çıkan gösterir.  
+ Bileşenin yazarı bir COM sunucusunun iş parçacığı benzeşimini ayarlar. Aşağıdaki tabloda .NET istemcileri ve COM sunucuları için Grup ayarları birleşimleri gösterilmektedir. Ayrıca, kombinasyonlar için elde edilen sıralama gereksinimlerini gösterir.  
   
 |.NET istemcisi|COM sunucusu|Hazırlama gereksinimleri|  
 |-----------------|----------------|-----------------------------|  
-|MTA (varsayılan)|MTA<br /><br /> STA|Birlikte çalışma hazırlama.<br /><br /> Birlikte çalışabilirlik ve COM hazırlama.|  
-|STA|MTA<br /><br /> STA|Birlikte çalışabilirlik ve COM hazırlama.<br /><br /> Birlikte çalışma hazırlama.|  
+|MTA (varsayılan)|SIRAYA<br /><br /> A|Birlikte çalışma hazırlama.<br /><br /> Birlikte çalışabilirlik ve COM sıralaması.|  
+|A|SIRAYA<br /><br /> A|Birlikte çalışabilirlik ve COM sıralaması.<br /><br /> Birlikte çalışma hazırlama.|  
   
- Yönetilen istemci ve yönetilmeyen sunucu aynı grupta olduğunda, tüm veri hazırlama hazırlama hizmet birlikte çalışabilirliği işler. İstemci ve sunucu içinde farklı apartmanlar başlatılır, ancak, COM hazırlama de gereklidir. Aşağıdaki çizimde bir çapraz-grup çağrısının öğeleri gösterir.  
+ Yönetilen bir istemci ve yönetilmeyen sunucu aynı Apartment ise, birlikte çalışma hazırlama hizmeti tüm veri sıralamasını işler. Ancak, istemci ve sunucu farklı apartmanlar halinde başlatıldığında COM sıralaması de gereklidir. Aşağıdaki çizimde, bir çapraz grup çağrısının öğeleri gösterilmektedir.  
   
- ![COM hazırlama](./media/interop-marshaling/single-process-across-multi-apartment.gif ".NET istemcisi ve COM nesnesi arasında çapraz-grup araması")  
+ ![Com sıralaması](./media/interop-marshaling/single-process-across-multi-apartment.gif ".Net ISTEMCISIYLE com nesnesi arasında çapraz grup çağrısı")  
   
- Çapraz-Grup sıralama için aşağıdakileri yapabilirsiniz:  
+ Çapraz grup sıralaması için şunları yapabilirsiniz:  
   
-- Sınırının ötesinde birçok çağrıları olduğunda, fark edilebilir çapraz-grup sıralama yükü kabul edin. COM bileşeni başarıyla apartman sınırını aşan çağrı için tür kitaplığı kaydetmeniz gerekir.  
+- Yalnızca sınır genelinde çok sayıda çağrı olduğunda dikkat çekici olan çapraz grup sıralaması yükünü kabul edin. Grup sınırını başarıyla çapraz olarak aramak için COM bileşeninin tür kitaplığını kaydetmeniz gerekir.  
   
-- Ana iş parçacığı STA ya da MTA istemci iş parçacığı ayarlayarak değiştirir. Örneğin, varsa, C# istemci çağrıları birçok STA COM bileşenlerini, ana iş parçacığı için STA ayarlayarak çapraz-grup sıralama önleyebilirsiniz.  
+- İstemci iş parçacığını STA veya MTA olarak ayarlayarak ana iş parçacığını değiştirin. Örneğin, C# istemciniz çok SAYıDA sta com bileşeni çağırırsa, ana Iş parçacığını STA olarak ayarlayarak geçici grup sıralamasını önleyebilirsiniz.  
   
     > [!NOTE]
-    >  Sonra iş parçacığı bir C# istemci için STA ayarlandığında, çapraz-grup sıralama MTA COM bileşenleri çağrıları gerekir.  
+    > Bir C# istemcinin Iş parçacığı STA olarak AYARLANDıĞıNDA, MTA COM bileşenlerine yapılan çağrılar, çapraz grup sıralaması gerektirir.  
   
- Açıkça bir apartman modeli seçme ile ilgili yönergeler için bkz: [yönetilen ve yönetilmeyen iş parçacığı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100)).  
+ Bir grup modelini açıkça seçme yönergeleri için bkz. [yönetilen ve yönetilmeyen Iş parçacığı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100)).  
   
  [Başa dön](#top)  
   
 <a name="marshaling_remote_calls"></a>   
-## <a name="marshaling-remote-calls"></a>Uzak çağrılar hazırlama  
- Çapraz-Grup hazırlama gibi ile hazırlama COM nesneleri ayrı işlemlerde bulunan her yönetilen ve yönetilmeyen kod arasındaki her çağrıda dahil. Örneğin:  
+## <a name="marshaling-remote-calls"></a>Uzak çağrıları sıralama  
+ Çapraz grup sıralaması gibi, nesneler ayrı işlemlerde olduğunda yönetilen ve yönetilmeyen kod arasındaki her çağrıya COM sıralaması dahil edilir. Örneğin:  
   
-- Uzak bir ana bilgisayarın yönetilen bir sunucuda çağıran bir COM istemcisi Dağıtılmış COM (DCOM) kullanır.  
+- Uzak bir konakta yönetilen bir sunucuyu çağıran bir COM istemcisi Dağıtılmış COM (DCOM) kullanır.  
   
-- Çağıran uzak ana bilgisayarda bir COM sunucusu yönetilen istemci DCOM kullanır.  
+- Uzak bir konakta bir COM sunucusu çağıran yönetilen istemci DCOM kullanır.  
   
- COM hazırlama, işlem ve konak sınırları içinde iletişim kanalları sağlamak ve nasıl birlikte çalışma hazırlama aşağıdaki çizimde gösterilmektedir.  
+ Aşağıdaki çizimde birlikte çalışabilirlik sıralaması ve COM sıralaması, işlem ve konak sınırları genelinde iletişim kanalları sağlar.  
   
- ![COM hazırlama](./media/interop-marshaling/interop-and-com-marshaling.gif "çapraz işlem hazırlama")  
+ ![Com sıralaması](./media/interop-marshaling/interop-and-com-marshaling.gif "Çapraz işlem sıralaması")  
   
-### <a name="preserving-identity"></a>Kimliği koruma  
- Ortak dil çalışma zamanı, yönetilen ve yönetilmeyen başvuruları kimliğini korur. Aşağıdaki çizimde, işlem ve konak sınırları içinde doğrudan yönetilmeyen başvuruları (üst satırı) ve doğrudan yönetilen başvuruları (alttaki) akışı gösterilmektedir.  
+### <a name="preserving-identity"></a>Kimlik koruma  
+ Ortak dil çalışma zamanı, yönetilen ve yönetilmeyen başvuruların kimliğini korur. Aşağıdaki çizimde, doğrudan yönetilmeyen başvuruların (üst satır) ve işlem ve konak sınırları genelinde doğrudan yönetilen başvuruların (alt satır) akışı gösterilmektedir.  
   
- ![COM çağrılabilir sarmalayıcısı ve çalışma zamanı çağrılabilir sarmalayıcı](./media/interop-marshaling/interop-direct-ref-across-process.gif "işlemi ve konak sınırlarından geçirirken başvurusu")  
+ ![Com çağrılabilir sarmalayıcı ve çalışma zamanı çağrılabilir sarmalayıcı](./media/interop-marshaling/interop-direct-ref-across-process.gif "İşlem ve konak sınırları arasında başvuru geçirme")  
   
  Bu çizimde:  
   
-- Yönetilmeyen bir istemci bir COM nesnesi için uzak bir ana bilgisayardan bu başvuru alır ve yönetilen bir nesneye başvuru alır. DCOM Uzaktan iletişim mekanizmasıdır.  
+- Yönetilmeyen istemci, uzak bir ana bilgisayardan bu başvuruyu alan yönetilen bir nesneden bir COM nesnesine başvuru alır. Uzaktan iletişim mekanizması DCOM olur.  
   
-- Yönetilen istemci uzak bir ana bilgisayardan bu başvuruyu alır bir COM nesnesi yönetilen bir nesneye bir başvuru alır. DCOM Uzaktan iletişim mekanizmasıdır.  
+- Yönetilen istemci, bir uzak ana bilgisayardan bu başvuruyu alan bir COM nesnesinden yönetilen bir nesneye başvuru alır. Uzaktan iletişim mekanizması DCOM olur.  
   
     > [!NOTE]
-    >  Dışarı aktarılan tür kitaplığı yönetilen sunucunun kayıtlı olması gerekir.  
+    > Yönetilen sunucunun dışarıya aktarılmış tür kitaplığı kayıtlı olmalıdır.  
   
- Çağıran ve çağrılan arasında işlem sınırları ilgisiz sayısıdır; aynı doğrudan başvuru işlem içi ve dışı işlem çağrıları için gerçekleşir.  
+ Çağıran ve çağrılan arasındaki işlem sınırları sayısı ilgisizdir; işlem içi ve işlem dışı çağrılar için aynı doğrudan başvuru oluşur.  
   
-### <a name="managed-remoting"></a>Yönetilen uzaktan iletişim  
- Çalışma zamanı Ayrıca, işlem ve konak sınırları yönetilen nesneler arasında bir iletişim kanalı kurmak için kullanabileceğiniz yönetilen uzaktan iletişim sağlar. Yönetilen uzaktan iletişim, aşağıdaki çizimde gösterildiği gibi iletişim kuran bileşenler arasında bir güvenlik duvarı barındırabilir.  
+### <a name="managed-remoting"></a>Yönetilen uzaktan erişim  
+ Çalışma zamanı ayrıca yönetilen uzaktan iletişim sağlar, bu da işlem ve konak sınırları arasında yönetilen nesneler arasında bir iletişim kanalı oluşturmak için kullanabilirsiniz. Yönetilen uzaktan iletişim, aşağıdaki çizimde gösterildiği gibi, iletişim kuran bileşenler arasında bir güvenlik duvarına uyum sağlayabilir.  
   
- ![SOAP veya TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "SOAP veya TcpChannel sınıfı kullanarak güvenlik duvarları üzerinden uzaktan çağırır")  
-Güvenlik duvarları SOAP veya TcpChannel sınıfı kullanarak uzak çağrılar  
+ ![SOAP veya TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "SOAP veya TcpChannel sınıfı kullanarak güvenlik duvarları genelinde uzaktan çağrılar")  
+SOAP veya TcpChannel sınıfı kullanarak güvenlik duvarları genelinde uzaktan çağrılar  
   
- Yönetilmeyen bazı çağrılar SOAP, com ile hizmet verilen bileşenleri arasındaki çağrıları gibi channeled  
+ Bazı yönetilmeyen çağrılar, hizmet verilen bileşenler ve COM arasındaki çağrılar gibi SOAP üzerinden channe, olabilir.  
   
  [Başa dön](#top)  
   
@@ -140,15 +140,15 @@ Güvenlik duvarları SOAP veya TcpChannel sınıfı kullanarak uzak çağrılar
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Varsayılan Hazırlama Davranışı](default-marshaling-behavior.md)|Veri hazırlama için birlikte çalışma hazırlama hizmeti kullanan kurallar açıklanmaktadır.|  
-|[Platform Çağırma ile Veri Hazırlama](marshaling-data-with-platform-invoke.md)|Yöntem parametreleri bildirmek ve yönetilmeyen kitaplıkları tarafından dışarı aktarılan işlevler için bağımsız değişkenler geçirmek açıklar.|  
-|[COM Birlikte Çalışma ile Verileri Hazırlama](marshaling-data-with-com-interop.md)|Hazırlama davranışı değiştirmek için COM sarmalayıcıları özelleştirmeyi açıklar.|  
-|[Nasıl yapılır: Yönetilen kodu DCOM'dan WCF'ye geçirme](how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM'dan WCF'ye geçirme işlemini açıklamaktadır.|  
-|[Nasıl yapılır: Harita HRESULTs ve özel durumları](how-to-map-hresults-and-exceptions.md)|HRESULT'ları için özel durumları eşleme açıklar ve .NET Framework'teki kendi karşılaştırılabilir özel durum sınıfı için her HRESULT tam eşleme sağlar.|  
-|[Genel türleri kullanarak birlikte çalışma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Hangi eylemler genel türler COM birlikte çalışabilirlik için kullanılırken desteklenen açıklar.|  
-|[Yönetilmeyen Kod ile Birlikte Çalışma](index.md)|Ortak dil çalışma zamanı tarafından sağlanan birlikte çalışabilirlik hizmetlerini açıklar.|  
-|[Gelişmiş COM birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|COM bileşenlerini .NET Framework'te uygulamanıza ekleme hakkında daha fazla bilgi için bağlantılar sağlar.|  
-|[Birlikte çalışma için tasarım konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Tümleşik COM bileşenlerini yazmak için ipuçları sağlar.|  
+|[Varsayılan Hazırlama Davranışı](default-marshaling-behavior.md)|Birlikte çalışma sıralama hizmetinin verileri sıralamak için kullandığı kuralları açıklar.|  
+|[Platform Çağırma ile Veri Hazırlama](marshaling-data-with-platform-invoke.md)|Yöntem parametrelerinin nasıl bildirilemeyeceğini ve yönetilmeyen kitaplıklar tarafından dışarıya alınan işlevlere bağımsız değişkenlerin nasıl geçirileceğini açıklar.|  
+|[COM Birlikte Çalışma ile Verileri Hazırlama](marshaling-data-with-com-interop.md)|Sıralama davranışının değiştirmek için COM sarmalayıcılarının nasıl özelleştirileceğini açıklar.|  
+|[Nasıl yapılır: Yönetilen kod DCOM 'u WCF 'ye geçirme](how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM 'dan WCF 'ye geçiş işlemini açıklar.|  
+|[Nasıl yapılır: HRESULTs ve özel durumları eşleme](how-to-map-hresults-and-exceptions.md)|Özel özel durumların HRESULTs ile nasıl eşlenmesinin ve .NET Framework her HRESULT 'den karşılaştırılabilen özel durum sınıfına tüm eşlemeyi nasıl sağladığını açıklar.|  
+|[Genel türler kullanılarak birlikte çalışma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|COM birlikte çalışabilirlik için genel türler kullanılırken hangi eylemlerin desteklendiğini açıklar.|  
+|[Yönetilmeyen Kod ile Birlikte Çalışma](index.md)|Ortak dil çalışma zamanı tarafından sunulan birlikte çalışabilirlik hizmetlerini açıklar.|  
+|[Gelişmiş COM birlikte çalışabilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|.NET Framework uygulamanıza COM bileşenlerini ekleme hakkında daha fazla bilgi için bağlantılar sağlar.|  
+|[Birlikte çalışabilirlik için tasarım konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Tümleşik COM bileşenleri yazmak için ipuçları sağlar.|  
   
  [Başa dön](#top)  
   

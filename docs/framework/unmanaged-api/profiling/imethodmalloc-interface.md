@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee825da1f3f0fd72a3b47b48783f0f344af99b65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c67ce15175f8667139f99cec1ed17531eab473e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969819"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935656"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc Arabirimi
-Yeni bir Microsoft Ara dili (MSIL) işlev gövdesi için bellek ayırmak için bir yöntem sağlar.  
+Yeni bir Microsoft ara dili (MSIL) işlev gövdesi için bellek ayırmak üzere bir yöntem sağlar.  
   
 > [!NOTE]
->  `IMethodMalloc` Basit bellek ayırıcı arabirimidir. Bellek ayıramadı, ancak boş değil sağlar.  
+> `IMethodMalloc` Arabirim basit bir bellek ayırıcıdır. Bellek ayırmayı, ancak serbest bırakmanıza izin vermez.  
   
 ## <a name="methods"></a>Yöntemler  
   
@@ -36,16 +36,16 @@ Yeni bir Microsoft Ara dili (MSIL) işlev gövdesi için bellek ayırmak için b
 |[Alloc Yöntemi](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Yeni bir MSIL işlev gövdesi için belirtilen miktarda bellek ayırmaya çalışır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her ayırıcı modülü özgü olan ve işlev gövdesi modülünün temel pozitif bir sapma olmasını sağlar. Yalnızca bir işlev gövdesi için bellek ayırmak için ayırıcı kullanılması gereken şekilde bellek temel bir modülün yukarıda değerli, olabilir.  
+ Her ayırıcı modüle özeldir ve işlev gövdesinin, modülün temelini pozitif bir uzaklığa göre olacağını sağlar. Modülün temel aldığı bellek çok değerli olabilir, bu nedenle ayırıcı yalnızca bir işlev gövdesi için bellek ayırmak için kullanılmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi** CorProf. IDL, CorProf. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

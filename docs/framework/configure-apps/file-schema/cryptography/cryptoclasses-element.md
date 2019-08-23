@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: dbe46e0b36d247005f933c82ee83687886b283d1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 87e64ecd79ebc54a669d33550790781c87b5917c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659649"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921124"
 ---
 # <a name="cryptoclasses-element"></a>\<cryptoClasses > öğesi
 NameEntry > öğesinde kolay bir ada [ \<](nameentry-element.md) eşleme olan şifreleme sınıflarının bir listesini içerir.  
@@ -81,6 +81,6 @@ NameEntry > öğesinde kolay bir ada [ \<](nameentry-element.md) eşleme olan ş
 - <xref:System.Security.Cryptography>
 - [Yapılandırma Dosyası Şeması](../index.md)
 - [Şifreleme Ayarları Şeması](index.md)
-- [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)
+- [Şifreleme Hizmetleri](../../../../standard/security/cryptographic-services.md)
 - [System. Security. Cryptography. CryptoConfig. CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
 - [Şifreleme Sınıflarını Yapılandırma](../../configure-cryptography-classes.md)

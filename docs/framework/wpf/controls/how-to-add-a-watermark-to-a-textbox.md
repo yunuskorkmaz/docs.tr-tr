@@ -8,20 +8,20 @@ helpviewer_keywords:
 - displaying a background image inside a text box to aid user input [WPF]
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abe276c686d394ded13ec03f08deae65e4098d03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911631"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923571"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>Nasıl yapılır: TextBox'a Filigran Ekleme
-Aşağıdaki örnek ın kullanılabilirliğine yardımcı olma gösterilmiştir bir <xref:System.Windows.Controls.TextBox> açıklayıcı arka plan görüntüsü içinde görüntüleyerek <xref:System.Windows.Controls.TextBox> metin kullanıcı girişlerinin kadar bu noktada görüntü kaldırılır. Ayrıca, kullanıcının kendi giriş kaldırırsa arka plan resmini yeniden geri yüklenir. Aşağıdaki resme bakın.  
+Aşağıdaki örnek, Kullanıcı metin girişi <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.TextBox> yapılıncaya kadar ' ın içinde açıklayıcı bir arka plan görüntüsü görüntüleyerek bir öğesinin kullanılabilirliğine nasıl yardımcı olduğunu gösterir. Ayrıca, Kullanıcı girişlerini kaldırırsa arka plan görüntüsü yeniden geri yüklenir. Aşağıdaki çizime bakın.  
   
- ![TextBox ile arka plan görüntüsü](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
+ ![Arka plan resmi olan bir metin kutusu](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
   
 > [!NOTE]
->  Arka plan görüntüsü yerine sonra yalnızca düzenleme Bu örnekte kullanılan nedeni <xref:System.Windows.Controls.TextBox.Text%2A> özelliği <xref:System.Windows.Controls.TextBox>, olan bir arka plan görüntüsü ile veri bağlaması müdahale etmez.  
+> Bu örnekte, bir arka plan resminin, <xref:System.Windows.Controls.TextBox.Text%2A> <xref:System.Windows.Controls.TextBox>özelliğini işlemek yerine kullanıldığı neden, arka plan resminin veri bağlamayı etkilememesini sağlamaktır.  
   
 ## <a name="example"></a>Örnek  
  [!code-xaml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  

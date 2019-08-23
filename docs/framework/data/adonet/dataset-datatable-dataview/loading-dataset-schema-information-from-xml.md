@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: 06dcbbedf8c1533b3da52b447c121746ce705083
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b895ad59ed0ab2542ecdfb04b6db559e12edc55c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785456"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928386"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML’den DataSet Schema Bilgilerini Yükleme
-Şemasını bir <xref:System.Data.DataSet> (kendi tablolar, sütunlar, ilişkiler ve kısıtlamalar) programlı olarak tarafından oluşturulan tanımlanabilir **dolgu** veya **FillSchema** yöntemlerinin bir <xref:System.Data.Common.DataAdapter>, veya gelen yüklenen bir XML belgesi. Yüklenecek **veri kümesi** şema bilgileri bir XML belgesinden ya da kullanabilirsiniz **ReadXmlSchema** veya **InferXmlSchema** yöntemi **verikümesi**. **ReadXmlSchema** yüklemek veya tanım Çıkarsama sağlar **veri kümesi** belgesinden XML Şeması Tanım Dili (XSD) şemaya veya satır içi XML şeması bir XML belgesi içeren şema bilgileri. **InferXmlSchema** belirttiğiniz belirli XML ad alanları yoksayılıyor çalışırken XML belgesi şemanın çıkarsandığı olanak tanır.  
+A <xref:System.Data.DataSet> (tablolarının, sütunlarının, ilişkilerin ve kısıtlamalarının) şeması programlı bir şekilde tanımlanabilir, bir veya bir <xref:System.Data.Common.DataAdapter>XML belgesinden **Fill** ya da **FillSchema** yöntemleriyle oluşturulur. Bir XML belgesinden **veri kümesi** şema bilgilerini yüklemek Için, **veri kümesinin** **ReadXmlSchema** veya **InferXmlSchema** yöntemini kullanabilirsiniz. **ReadXmlSchema** , XML şeması tanım DILI (xsd) şeması veya satır Içi XML şemasına sahıp bir XML belgesi Içeren belgeden **veri kümesi** şema bilgilerini yüklemenize veya çıkarmanıza olanak sağlar. **InferXmlSchema** , BELIRTTIĞINIZ belirli XML ad alanlarını YOKSAYARAK şemayı XML belgesinden çıkarmanızı sağlar.  
   
 > [!NOTE]
->  Tablo, sıralama bir **veri kümesi** aktarmak için Web Hizmetleri veya XML serileştirme kullandığınızda korunmayabilir bir **veri kümesi** XSD yapıları (örneğin, iç içe geçmiş ilişkileri) kullanarak bellek içi oluşturulmuş. Bu nedenle, alıcısı **veri kümesi** tablo bu durumda sıralamaya bağlı olmamalıdır. Ancak, tablo sıralama her zaman korunur şemasını **veri kümesi** aktarılan XSD dosyalarından, bellek içi oluşturulan yerine okundu.  
+> Bir **veri** kümesindeki tablo SıRALAMASı, xsd yapıları (iç içe geçmiş ilişkiler gibi) kullanılarak bellekte oluşturulmuş bir **veri kümesini** aktarmak IÇIN Web Hizmetleri veya XML serileştirme kullandığınızda korunmayabilir. Bu nedenle, **veri kümesinin** alıcısının bu durumda tablo sıralamasına bağlı olmaması gerekir. Ancak, aktarılan **veri kümesinin** şeması, bellek içi OLUŞTURULMASı yerine xsd dosyalarından okunmadıysa tablo sıralaması her zaman korunur.  
   
 ## <a name="readxmlschema"></a>ReadXmlSchema  
- Şeması'nı yüklemek için bir **veri kümesi** herhangi bir veri yükleme olmadan bir XML belgesinden, kullandığınız **ReadXmlSchema** yöntemi **veri kümesi**. **ReadXmlSchema** oluşturur **veri kümesi** şeması XML Şeması Tanım Dili (XSD) şemaya tanımlanmadı.  
+ Bir veri **kümesinin** şemasını herhangi bir veri yüklemeden bir XML belgesinden yüklemek için, veri **kümesinin** **ReadXmlSchema** yöntemini kullanabilirsiniz. **READXMLSCHEMA** XML şeması tanım DILI (xsd) şeması kullanılarak tanımlanmış **veri kümesi** şeması oluşturur.  
   
- **ReadXmlSchema** yöntemi, bir dosyanın adında bir akış tek bir bağımsız değişken alır veya bir **XmlReader** yüklenecek XML belgesi içeren. XML belgesi, yalnızca şema içerebilir veya şema satır içi verilerini içeren XML öğeleri ile içerebilir. Satır içi şema XML şema olarak yazma hakkında daha fazla ayrıntı için bkz. [türetme DataSet ilişkisel yapısını XML Şeması (XSD) öğesinden](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
+ **ReadXmlSchema** yöntemi bir dosya adı, bir akış veya yüklenecek XML belgesini Içeren bir **XmlReader** değeri alır. XML belgesi yalnızca şemayı içerebilir veya veri içeren XML öğeleriyle birlikte satır içi şema içerebilir. Satır içi şemayı XML şeması olarak yazma hakkında daha fazla bilgi için bkz. [xml şemasından (xsd) DataSet Ilişkisel yapısını türetme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
   
- XML belgesi geçirilmiş **ReadXmlSchema** hiçbir satır içi şema bilgileri içeriyor **ReadXmlSchema** XML belgesi içindeki öğeleri şemanın çıkarsandığı. Varsa **veri kümesi** zaten bir şema içeriyor. Geçerli şema zaten mevcut değilse yeni tablolar ekleyerek genişletilir. Yeni sütunlar için var olan tablolara eklenen eklenmeyecek. Zaten eklenmiş bir sütun varsa **veri kümesi** ancak sütunu türü uyumsuz buldu XML'de özel durum harekete geçirilir. Hakkında ayrıntılar için **ReadXmlSchema** bir şema çıkarsar bir XML belgesinden bkz [DataSet ilişkisel yapısını çıkarma XML'den](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).  
+ **ReadXmlSchema** ÖĞESINE geçirilen XML belgesi satır içi şema bilgisi Içermiyorsa, **ReadXmlSchema** şemayı XML belgesindeki öğelerden çıkaracaktır. **Veri kümesi** zaten bir şema içeriyorsa, geçerli şema zaten mevcut değilse yeni tablolar eklenerek genişletilir. Yeni sütunlar, var olan tablolara eklenmek üzere eklenmeyecek. Eklenmekte olan bir sütun, **veri kümesinde** zaten varsa ancak XML 'de bulunan sütunla uyumsuz bir türe sahipse, bir özel durum oluşturulur. **ReadXmlSchema** 'ın bir XML belgesinden bir şemayı nasıl kullandığını öğrenmek için bkz. [XML 'Den veri kümesi ilişkisel yapısını](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)anlamak.  
   
- Ancak **ReadXmlSchema** yükler veya yalnızca şeması çıkarır bir **veri kümesi**, **ReadXml** yöntemi **veri kümesi** yükler veya her ikisi de algılar Şema ve XML belgesinde bulunan veriler. Daha fazla bilgi için [XML'den DataSet yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md).  
+ **ReadXmlSchema** yalnızca bir **veri kümesinin**şemasını yükler veya bu şemayı sağlasa da, **veri kümesinin** **ReadXml** yöntemi hem şemayı hem de XML belgesinde içerilen verileri yükler ya da bunları anlar. Daha fazla bilgi için bkz. [XML 'Den veri kümesi yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md).  
   
- Aşağıdaki kod örneğinde nasıl yükleneceğini gösterir. bir **veri kümesi** şeması bir XML belgesi ya da akış. Gönderilmiş bir XML şema dosyası adı ilk örnekte gösterilmektedir **ReadXmlSchema** yöntemi. İkinci örnekte gösterildiği bir **System.IO.StreamReader**.  
+ Aşağıdaki kod örnekleri, bir XML belgesinden veya akışından bir **veri kümesi** şemasının nasıl yükleneceğini göstermektedir. İlk örnek, **ReadXmlSchema** yöntemine GEÇIRILEN bir XML şema dosyası adını gösterir. İkinci örnekte bir **System. IO. StreamReader**gösterilmektedir.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -54,9 +54,9 @@ xmlStream.Close();
 ```  
   
 ## <a name="inferxmlschema"></a>InferXmlSchema  
- Ayrıca bildirebilirsiniz **veri kümesi** kullanarak bir XML belgesi, şema çıkarsanacak **InferXmlSchema** yöntemi **veri kümesi**. **InferXmlSchema** gibi her ikisi de aynı işlevleri **ReadXml** ile bir **XmlReadMode** , **InferSchema** (verileri yükler hem de şemayı algılar) ve **ReadXmlSchema** belgenin okunan satır içi şema içeriyorsa. Ancak, **InferXmlSchema** şema çıkarıldığında yok sayılacak belirli XML ad alanları belirtmek için izin verme ek yeteneği sağlar. **InferXmlSchema** iki gerekli bağımsız değişkeni alır: bir akışa bir dosya adıyla belirtilen XML belgesinin konumunu veya **XmlReader**; ve bir dize dizisi XML ad alanları, işlem tarafından yok sayılacak.  
+ Veri kümesinin, **veri kümesinin** **InferXmlSchema** yöntemini kullanarak bir XML belgesinden şemasını çıkarmasını da söyleyebilirsiniz. **InferXmlSchema** , her ikisi de de bir **XmlReadMode** for **InferSchema** (verileri ve KERS şeması yükler) ve okunan belge satır içi şema içermiyorsa, her ikisi de aynı şekilde çalışır. Ancak, **InferXmlSchema** , şema çıkarsandığınızda yok SAYıLACAK belirli XML ad alanlarını belirtmenize olanak tanıyan ek bir özellik sunar. **InferXmlSchema** iki gerekli bağımsız değişkeni alır: bir dosya adı, akış veya **XMLREADER**ile belirtilen XML belgesinin konumu. ve işlem tarafından yok sayılacak XML ad alanlarının dize dizisi.  
   
- Örneğin, aşağıdaki XML göz önünde bulundurun:  
+ Örneğin, aşağıdaki XML 'i göz önünde bulundurun:  
   
 ```xml  
 <NewDataSet xmlns:od="urn:schemas-microsoft-com:officedata">  
@@ -73,7 +73,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- Önceki XML belgesindeki öğeler için belirtilen öznitelikleri nedeniyle hem **ReadXmlSchema** yöntemi ve **ReadXml** yöntemi ile bir **XmlReadMode** , **InferSchema** belgede her öğe için tablolar oluşturur: **Kategorileri**, **CategoryID**, **CategoryName**, **açıklama**, **ürünleri**, **ProductID**, **Türünde**, ve **kullanımdan**. (Daha fazla bilgi için [DataSet ilişkisel yapısını çıkarma XML'den](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).) Ancak, yalnızca oluşturmak için daha uygun bir yapı olacaktır **kategorileri** ve **ürünleri** tablolar oluşturmak için sonra da **CategoryID**, **CategoryName** , ve **açıklama** sütunlarında **kategorileri** tablosunu ve **ProductID**, **türünde**, ve **Artık Üretilmiyor** sütunlarında **ürünleri** tablo. Çıkarsanan şema XML öğeleri belirtilen öznitelikleri yoksayılmasını sağlamak için kullanın **InferXmlSchema** yöntemi ve XML ad alanı belirtin **officedata** gösterildiği yoksayılacak Aşağıdaki örnek.  
+ Önceki XML belgesindeki öğeler için belirtilen öznitelikler nedeniyle, **ınsecollection** 'ın bir **XmlReadMode** 'u olan **ReadXmlSchema** yöntemi ve **ReadXml** yöntemi, içindeki her öğe için tablo oluşturur. belgedeki **Kategoriler**, **KategoriNo**, **CategoryName**, **Açıklama**, **Ürünler**, **ProductID**, **ReorderLevel**ve **Discontinued**. (Daha fazla bilgi için bkz. [XML 'Den veri kümesi Ilişkisel yapısını](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)anlamak.) Ancak, daha uygun bir yapı yalnızca **Kategoriler** ve **Ürünler** tabloları oluşturmak ve ardından **Kategoriler** tablosunda **CategoryID**, **CategoryName**ve **Description** sütunları oluşturmak ve **Products** tablosundaki ProductID, **ReorderLevel**ve **Discontinued** sütunları. Çıkarılan şemanın XML öğelerinde belirtilen öznitelikleri yoksaymasını sağlamak için, **InferXmlSchema** yöntemini kullanın ve aşağıdaki örnekte gösterildiği gibi, **OFFICEVERILERININ** yok sayılacak XML ad alanını belirtin.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -92,4 +92,4 @@ dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:o
 - [XML’den DataSet İlişkisel Yapısını Çıkarma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
 - [XML’den DataSet Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
 - [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

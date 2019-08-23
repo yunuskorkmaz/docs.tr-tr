@@ -2,22 +2,22 @@
 title: <secureConversationAuthentication> / <serviceCredential>
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
-ms.openlocfilehash: f35392b91d047c46e65ce433ef544b86cf6c88c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61034c2c66a6d8e27a87ec5380aa7297247eb31e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670618"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935832"
 ---
-# <a name="secureconversationauthentication-of-servicecredential"></a>\<Servicecredential >, \<Secureconversationauthentication >
-Güvenli konuşma hizmeti ayarlarını belirtir.  
+# <a name="secureconversationauthentication-of-servicecredential"></a>\<\<SecureConversationAuthentication > securekonuşma kimlik doğrulaması >
+Güvenli konuşma hizmetinin ayarlarını belirtir.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
 \<serviceBehaviors>  
-\<davranışı >  
+\<davranış >  
 \<serviceCredentials>  
-\<Servicecredential >  
+\<Securekonuşma kimlik doğrulaması >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,7 +32,7 @@ Güvenli konuşma hizmeti ayarlarını belirtir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`securityStateEncoderType`|Türünü belirten bir dize <xref:System.ServiceModel.Security.SecurityStateEncoder> kullanılacak.|  
+|`securityStateEncoderType`|Kullanılacak türünü <xref:System.ServiceModel.Security.SecurityStateEncoder> belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -41,10 +41,10 @@ Güvenli konuşma hizmeti ayarlarını belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Hizmet ve istemci kimlik doğrulama ile ilgili ayarlarda kullanılan kimlik bilgisini belirtir.|  
+|[\<serviceCredentials >](servicecredentials.md)|Hizmetin kimliğini doğrulamak için kullanılacak kimlik bilgisini ve istemci kimlik bilgileri doğrulaması ile ilgili ayarları belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapılandırma öğesi için güvenlik bağlamı belirteci (SCT) tanımlama bilgilerini serileştirme yanı sıra, kodlamak ve tanımlama bilgilerinin güvenliğini sağlamak için bir kodlayıcı bilinen talep türlerinin bir listesini belirtmek için kullanın. SCT hakkında daha fazla bilgi için bkz. <xref:System.ServiceModel.Security.SecureConversationServiceCredential>.  
+ Bu yapılandırma öğesini, güvenlik bağlamı belirteci (SCT) tanımlama bilgileri serileştirmesi için bilinen talep türlerinin bir listesini belirtmek ve tanımlama bilgilerini kodlamak ve güvenli hale getirmek için bir kodlayıcı kullanmak üzere kullanın. SCT hakkında daha fazla bilgi için bkz <xref:System.ServiceModel.Security.SecureConversationServiceCredential>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

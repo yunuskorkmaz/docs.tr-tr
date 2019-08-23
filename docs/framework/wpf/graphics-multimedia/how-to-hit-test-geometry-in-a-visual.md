@@ -9,31 +9,31 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52b9b99b0af38d797e4a3c98dc0979211c930c1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947348"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923374"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>Nasıl yapılır: Görselde Tıklama Testi Geometrisi
-Bu örnekte, bir veya daha fazla oluşan görsel bir nesne üzerinde bir isabet sınaması gerçekleştirmeye gösterilmektedir <xref:System.Windows.Media.Geometry> nesneleri.  
+Bu örnek, bir veya daha fazla <xref:System.Windows.Media.Geometry> nesneden oluşan bir görsel nesne üzerinde isabet testinin nasıl gerçekleştirileceğini gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl alınacağını gösterir <xref:System.Windows.Media.DrawingGroup> kullanan visual nesnesinden <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> yöntemi. İsabet sınaması her çizim işlenmiş içeriği gerçekleştirilir <xref:System.Windows.Media.DrawingGroup> hangi geometri isabet ettiğini belirlemek için.  
+ Aşağıdaki örnek, <xref:System.Windows.Media.DrawingGroup> <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> yöntemini kullanan bir görsel nesneden nasıl alınacağını gösterir. Ardından, <xref:System.Windows.Media.DrawingGroup> hangi geometrinin isabet olduğunu anlamak için içindeki her çizimin işlenmiş içeriği üzerinde bir isabet testi gerçekleştirilir.  
   
 > [!NOTE]
->  Çoğu durumda, kullanacağınız <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> bir noktadan herhangi bir görsel işlenmiş içeriği kesişip kesişmediğini belirlemek için yöntemi.  
+> Çoğu durumda, bir noktanın bir görselin <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> işlenmiş içeriğiyle kesişip kesişmediğini anlamak için yöntemini kullanırsınız.  
   
  [!code-csharp[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#visualsoverviewsnippet4)]
  [!code-vb[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#visualsoverviewsnippet4)]  
   
- <xref:System.Windows.Media.Geometry.FillContains%2A> Yöntemdir belirtilen kullanarak tıklama testi olanak tanıyan aşırı yüklü bir yönteminiz <xref:System.Windows.Point> veya <xref:System.Windows.Media.Geometry>. Geometri konturlanan, vuruş dolgu sınırları dışında genişletebilirsiniz. Bu durumda, istediğiniz arama <xref:System.Windows.Media.Geometry.StrokeContains%2A> ek olarak <xref:System.Windows.Media.Geometry.FillContains%2A>.  
+ Yöntemi, belirtilen <xref:System.Windows.Point> veya<xref:System.Windows.Media.Geometry>kullanarak test 'e isabet etmenize olanak tanıyan aşırı yüklenmiş bir yöntemdir. <xref:System.Windows.Media.Geometry.FillContains%2A> Bir geometri konturluysa, vuruş, dolgulu sınırların dışına genişletebilir. Bu durumda, öğesine <xref:System.Windows.Media.Geometry.StrokeContains%2A> <xref:System.Windows.Media.Geometry.FillContains%2A>ek olarak çağırmak isteyebilirsiniz.  
   
- De sağlayabilirsiniz bir <xref:System.Windows.Media.ToleranceType> Bezier düzleştirme amacıyla kullanılır.  
+ Ayrıca, Bezier düzleştirme amacıyla <xref:System.Windows.Media.ToleranceType> kullanılan bir de sağlayabilirsiniz.  
   
 > [!NOTE]
->  Bu örnek dönüşümleri dikkate almaz veya kırpmayı geometriye uygulanabilir. Ayrıca, bu örnek, doğrudan ilişkili tüm çizimleri sahip olmadığından, stil uygulanmış bir denetimi ile çalışmaz.  
+> Bu örnek, geometriye uygulanabilen dönüşümler veya kırpma işlemleri hesaba eklemez. Buna ek olarak, doğrudan ilişkili bir çizim olmadığından, bu örnek stilli bir denetimle çalışmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

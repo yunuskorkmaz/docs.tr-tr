@@ -2,32 +2,32 @@
 title: Uygulamanızı Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
-ms.openlocfilehash: 9a1365bb567c552fb087e67a10e48fe0bc2da873
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e096f4b64ada8b142e8b82c8877eec7f1b84637c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652028"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939806"
 ---
 # <a name="configuring-your-application"></a>Uygulamanızı Yapılandırma
-Windows Communication Foundation (WCF), .NET yapılandırma sistemini kullanır ve Hizmetleri her iki makine ve uygulama kapsamda yapılandırmanıza olanak tanır.  
+Windows Communication Foundation (WCF), .NET yapılandırma sistemini kullanır ve hem makine hem de uygulama kapsamında hizmetleri yapılandırmanıza olanak tanır.  
   
- WCF tarafından tanımlanan yapılandırma ayarları bulunur `<system.serviceModel>` bölüm grubu. Bir WCF hizmetini yapılandırma hakkında daha fazla bilgi için aşağıdaki konulara bakın:  
+ WCF tarafından tanımlanan yapılandırma ayarları, `<system.serviceModel>` bölüm grubunda bulunur. Bir WCF hizmetini yapılandırma hakkında daha fazla bilgi için aşağıdaki konulara bakın:  
   
 - [Hizmetleri Yapılandırma](../../../../docs/framework/wcf/configuring-services.md)  
   
 - [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
   
- Uygulama tanımlı yapılandırma ayarları içinde tanımlanmıştır `<appSettings>` bölüm grubu. Uygulama ayarlarında, .NET yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [ \<appSettings >](https://go.microsoft.com/fwlink/?LinkId=95159).  
+ Uygulama tanımlı yapılandırma ayarları, `<appSettings>` bölüm grubunda tanımlanmıştır. .NET yapılandırma dosyalarındaki uygulama ayarları hakkında daha fazla bilgi için bkz [ \<. AppSettings >](https://go.microsoft.com/fwlink/?LinkId=95159).  
   
-## <a name="using-the-configuration-editor"></a>Yapılandırma Düzenleyicisi'ni kullanarak  
- WCF [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) Yöneticiler ve geliştiriciler oluşturmak ve bir grafik kullanıcı arabirimi kullanarak WCF hizmetleri için yapılandırma ayarlarını değiştirmek izin verir. Bu araç ile XML yapılandırma dosyalarını doğrudan düzenleyerek olmadan WCF bağlamaları, davranışları, hizmetleri ve tanılama ayarlarını yönetebilirsiniz.  
+## <a name="using-the-configuration-editor"></a>Yapılandırma düzenleyicisini kullanma  
+ WCF [yapılandırma Düzenleyicisi aracı (SvcConfigEditor. exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) , yöneticilerin ve geliştiricilerin bir grafik kullanıcı ARABIRIMI kullanarak WCF Hizmetleri için yapılandırma ayarlarını oluşturmalarına ve değiştirmesine olanak tanır. Bu araçla, WCF bağlamaları, davranışlar, hizmetler ve Tanılamalar için, XML yapılandırma dosyalarını doğrudan düzenlemeden ayarları yönetebilirsiniz.  
   
-## <a name="editing-configuration-files-in-visual-studio"></a>Visual Studio'da yapılandırma dosyalarını düzenleme  
- Visual Studio'da bir WCF Hizmeti projesinin yapılandırma dosyasını düzenlemek için sağ tıklayın, **Çözüm Gezgini** ve **WCF yapılandırmasını Düzenle** bağlam menüsü öğesi. Böylece [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
+## <a name="editing-configuration-files-in-visual-studio"></a>Visual Studio 'da yapılandırma dosyalarını düzenlemeyle  
+ Visual Studio 'da bir WCF hizmeti projesinin yapılandırma dosyasını düzenlemek için **Çözüm Gezgini** ' de sağ tıklayın ve **WCF yapılandırma bağlamını Düzenle** menü öğesini seçin. Bu, [yapılandırma Düzenleyicisi aracını (SvcConfigEditor. exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)başlatır.  
   
 > [!NOTE]
->  Sağ tıklayarak Visual Studio'da WCF Web hizmeti projesi yapılandırma dosyasını düzenliyorsanız, **Çözüm Gezgini**, dikkat **WCF yapılandırmasını Düzenle** bağlam menüsü öğesi eksik. Geçici çözüm bu sorunu tıklayın **Araçları** menüsünde ve **WCF Hizmeti Yapılandırma Düzenleyicisi**. Bundan sonra bir yapılandırma dosyasına sağ tıklayın ve kullanmak **WCF yapılandırmasını Düzenle** bağlam menüsü öğesi.  
+> Visual Studio 'da bir WCF Web hizmeti projesinin yapılandırma dosyasını **Çözüm Gezgini**' de sağ tıklayarak DÜZENLERSENIZ, **WCF yapılandırma bağlamını Düzenle** bağlam menü öğesinin eksik olduğuna dikkat edin. Bu soruna geçici bir çözüm olarak, **Araçlar** menüsünü ve **WCF hizmeti yapılandırma Düzenleyicisi**' ni seçin. Bundan sonra, bir yapılandırma dosyasına sağ tıklayıp **WCF yapılandırma bağlamını Düzenle** menü öğesini kullanabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: 013994e36c4c63410a753967cbac92c38783ae62
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: cbdf6150010ca2dace3f0610d9caa90c2bf52746
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659585"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921051"
 ---
 # <a name="oidentry-element"></a>\<Oıdentry > öğesi
 Bir ASN. 1 nesne tanımlayıcısını (OID) kolay bir ada eşler.  
@@ -82,6 +82,6 @@ Bir ASN. 1 nesne tanımlayıcısını (OID) kolay bir ada eşler.
 
 - [Yapılandırma Dosyası Şeması](../index.md)
 - [Şifreleme Ayarları Şeması](index.md)
-- [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)
+- [Şifreleme Hizmetleri](../../../../standard/security/cryptographic-services.md)
 - [Şifreleme Sınıflarını Yapılandırma](../../configure-cryptography-classes.md)
 - [Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleme](../../map-object-identifiers-to-cryptography-algorithms.md)

@@ -8,57 +8,57 @@ helpviewer_keywords:
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f51920bceef6e83af4f6ef029eb49ae495a58b9b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 763646bfb358b8e5faf13a14f2facb98f855b5c8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490851"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913277"
 ---
 # <a name="managed-threading"></a>Yönetilen İş Parçacığı Oluşturma
-Bir işlemci veya birçok bilgisayarla geliştirmekte olduğunuz olup olmadığını uygulama şu anda diğer iş yapıyor olsanız bile, uygulamanızın en hızlı yanıt veren kullanıcı etkileşimi sağlamak istersiniz. Birden çok iş parçacığı yürütme kullanmaktır, uygulamanızın kullanıcı yanıt veren tutun ve aynı anda en güçlü yollarından biri işlemci arasında veya kullanıcı olayları sırasında bile kullanın. Bu bölümde, iş parçacığı temel kavramları açıklar, ancak yönetilen iş parçacığı kavramları ve yönetilen iş parçacığı kullanarak odaklanır.  
+Tek bir işlemciye veya birkaç kullanıcıya sahip bilgisayarlar için geliştirme olsanız da, uygulama şu anda başka bir iş yapıyor olsa bile, uygulamanızın kullanıcıyla en iyi yanıt verme etkileşimini sağlamasını istersiniz. Birden çok iş parçacığının kullanılması, uygulamanızı kullanıcıya yanıt vermenin en güçlü yöntemlerinden biridir ve aynı zamanda Kullanıcı olayları sırasında veya hatta içinde işlemciyi kullanır. Bu bölümde iş parçacığı temel kavramları tanıtılırken, yönetilen iş parçacığı kavramlarıyla ve yönetilen iş parçacığı kullanımıyla odaklanır.  
   
 > [!NOTE]
->  .NET Framework 4 ile başlayarak, çok iş parçacıklı programlama büyük ölçüde ile basitleştirilmiştir <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfları [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), yeni eşzamanlı koleksiyon sınıflarını içinde <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanı ve iş parçacıkları yerine görevleri kavramını temel alarak yeni bir programlama modeli. Daha fazla bilgi için [paralel programlama](../../../docs/standard/parallel-programming/index.md).  
+> .NET Framework 4 ' te başlayarak çok iş parçacıklı programlama <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> , ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfları, [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) <xref:System.Collections.Concurrent?displayProperty=nameWithType> , ad alanındaki yeni eşzamanlı koleksiyon sınıfları ve yeni bir programlama ile büyük ölçüde basitleştirilmiştir iş parçacıkları yerine görev kavramını temel alan model. Daha fazla bilgi için bkz. [paralel programlama](../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Yönetilen İş Parçacığı Oluşturma Temelleri](../../../docs/standard/threading/managed-threading-basics.md)  
- Yönetilen iş parçacığı genel bir bakış sağlar ve ne zaman birden çok iş parçacığı kullanılacağını açıklar.  
+ Yönetilen iş parçacığına genel bir bakış sağlar ve birden çok iş parçacığının ne zaman kullanılacağını açıklar.  
   
  [İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma](../../../docs/standard/threading/using-threads-and-threading.md)  
- Oluşturma, Başlat, duraklatma, sürdürme ve iş parçacıklarını durdurma açıklanmaktadır.  
+ İş parçacıklarını oluşturmayı, başlatmayı, duraklatmayı, sürdürmeyi ve iptal etmeyi açıklar.  
   
  [Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri](../../../docs/standard/threading/managed-threading-best-practices.md)  
- Düzeyleri açıklar, eşitleme sorunları nasıl Kilitlenmeler ve yarış durumları ve diğer iş parçacığı önlemek.  
+ Eşitleme düzeylerini, kilitlenmeleri ve yarış durumlarını ve diğer iş parçacığı sorunlarını açıklar.  
   
  [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)  
- İş parçacıkları etkinliklerini ve nesnelerin farklı iş parçacıklarında erişilen verileri eşitlemek için kullanabileceğiniz yönetilen sınıfları açıklar ve iş parçacığı havuzu iş parçacıkları genel bir bakış sağlar.  
+ İş parçacıklarının etkinliklerini ve farklı iş parçacıklarında erişilen nesnelerin verilerini eşleştirmek için kullanabileceğiniz yönetilen sınıfları açıklar ve iş parçacığı havuzu iş parçacıkları için bir genel bakış sağlar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Threading>  
- Yönetilen iş parçacıklarını eşitleme ve kullanma için sınıflar içerir.  
+ Yönetilen iş parçacıklarını kullanma ve eşitleme için sınıflar içerir.  
   
  <xref:System.Collections.Concurrent>  
- Birden çok iş parçacığı ile kullanmak için güvenli koleksiyon sınıfları içerir.  
+ Birden çok iş parçacığı ile kullanım için güvenli olan koleksiyon sınıflarını içerir.  
   
  <xref:System.Threading.Tasks>  
- Oluşturma ve eş zamanlı işleme görevleri zamanlamak için sınıflar içerir.  
+ Eşzamanlı işleme görevlerinin oluşturulması ve zamanlanması için sınıflar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Uygulama Etki Alanları](../../../docs/framework/app-domains/application-domains.md)  
- Uygulama etki alanları ve bunların kullanılması ortak dil altyapısı tarafından genel bir bakış sağlar.  
+ Uygulama etki alanlarına ve bunların ortak dil altyapısı tarafından kullanımına ilişkin bir genel bakış sağlar.  
   
  [Zaman Uyumsuz Dosya G/Ç](../../../docs/standard/io/asynchronous-file-i-o.md)  
  Zaman uyumsuz I/O'nun performans avantajlarını ve temek işleyişini açıklar.  
   
  [Görev Tabanlı Zaman Uyumsuz Desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
- . NET'te zaman uyumsuz programlama için önerilen düzene genel bir bakış sağlar.  
+ .NET 'te zaman uyumsuz programlama için önerilen modele genel bakış sağlar.  
   
  [Zaman Uyumlu Metotları Zaman Uyumsuz Olarak Çağırma](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- Temsilciler'ın yerleşik özelliklerini kullanarak havuzu iş parçacıkları iş parçacığı üzerinde yöntemleri çağırmak nasıl açıklar.  
+ Temsilcilerin yerleşik özellikleri kullanılarak iş parçacığı havuzu iş parçacıklarında yöntemlerin nasıl çağrılacağını açıklar.  
   
  [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)  
- Paralel Programlama uygulamalarda birden çok iş parçacığı kullanımını basitleştiren kitaplıkları açıklar.  
+ Uygulamalarda birden çok iş parçacığının kullanımını kolaylaştıran paralel programlama kitaplıklarını açıklar.  
   
  [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- Birden çok işlemci yararlanmak için paralel sorgular çalıştırmak için bir sistem açıklar.
+ Birden çok işlemcinin avantajlarından yararlanmak için sorguları paralel olarak çalıştırmaya yönelik bir sistem açıklar.

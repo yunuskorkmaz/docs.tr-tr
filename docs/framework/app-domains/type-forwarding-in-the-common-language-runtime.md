@@ -10,29 +10,29 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e378eb36e633575d5afa886e886aed302cbdab9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1b05a5548beb7e7c1f0ec8e96b6e02350318ef9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674901"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921411"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Ortak Dil Çalışma Zamanında Tür İletme
-Tür iletme orijinal derleme kullanan uygulamaları yeniden derlemenize gerek kalmadan bir tür için başka bir derleme taşımanızı sağlar.  
+Tür iletme, özgün derlemeyi kullanan uygulamaları yeniden derlemek zorunda kalmadan bir türü başka bir derlemeye taşımanızı sağlar.  
   
- Örneğin, bir uygulamanın kullandığı varsayalım `Example` adlı bir derlemede sınıfı, `Utility.dll`. Geliştiriciler `Utility.dll` derlemeyi yeniden karar verebilirsiniz ve işlemin taşınabilecek `Example` başka bir derleme için sınıf. Varsa eski sürümünü `Utility.dll` yeni sürümü tarafından değiştirilir `Utility.dll` Yardımcısı derlemesi, uygulamayı kullanan ve `Example` sınıfı, bunu konumlandıramadığından başarısız `Example` yeni sürümünü sınıfında `Utility.dll`.  
+ Örneğin, bir uygulamanın `Example` sınıfını adlı `Utility.dll`bir derlemede kullandığını varsayalım. Geliştiriciler `Utility.dll` , derlemeyi yeniden düzenleme kararı verebilir ve süreçte, `Example` sınıfı başka bir derlemeye taşıyabilir. Eski sürümü `Utility.dll` `Utility.dll` ve onun yardımcı derlemesi yeni sürümü ile değiştirilirse, sınıfını kullanan `Example` uygulama, `Example` sınıfının yeni sürümünde `Utility.dll`konumlandıramadığı için başarısız olur.  
   
- Geliştiriciler `Utility.dll` bu istekleri ileterek kaçınabilirsiniz `Example` kullanarak sınıf <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> özniteliği. Öznitelik en yeni sürümüne uygulanıp uygulanmadığını `Utility.dll`, için istekleri `Example` sınıfı artık sınıfı içeren derlemeye iletilir. Var olan uygulamayı, normalde, yeniden derleme çalışmaya devam eder.  
+ ' A ait `Utility.dll` geliştiriciler, <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> özniteliğini kullanarak `Example` sınıfının isteklerini ileterek bunu önleyebilir. Özniteliği yeni sürümüne `Utility.dll`uygulanmışsa, `Example` sınıfı için istekler, artık sınıfını içeren derlemeye iletilir. Mevcut uygulama, yeniden derleme yapılmadan normal şekilde çalışmaya devam eder.  
   
 > [!NOTE]
->  .NET Framework 2.0 sürümünde, Visual Basic'te yazılmış derlemelerden türler iletemez. Ancak, Visual Basic ile yazılan bir uygulamanın iletilen türlerini kullanabilir. Diğer bir deyişle, C# veya C++ ortamında kodlanmış bir derleme uygulama kullanır ve bu derlemeden bir tür için başka bir derleme iletilir, Visual Basic uygulama iletilen türü kullanabilirsiniz.  
+> .NET Framework sürüm 2,0 ' de, Visual Basic yazılmış derlemelerden türleri iletemezsiniz. Ancak, Visual Basic yazılmış bir uygulama iletilen türleri kullanabilir. Yani, uygulama veya C# C++içinde kodlanmış bir derlemeyi kullanıyorsa ve bu derlemedeki bir tür başka bir derlemeye iletilirse, Visual Basic uygulama iletilen türü kullanabilir.  
   
-## <a name="forwarding-types"></a>Tür iletme  
- Bir tür iletme gereken dört adım vardır:  
+## <a name="forwarding-types"></a>İletme türleri  
+ Bir türü iletmek için dört adım vardır:  
   
-1. Kaynak kodu türü için özgün derlemeden hedef derlemeye taşıyın.  
+1. Asıl derlemeden hedef derlemeye tür için kaynak kodunu taşıyın.  
   
-2. Derleme türü kullanıldığı yer almasını, ekleme bir <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> taşındı türü. Aşağıdaki kod adlı bir tür özniteliğini gösterir `Example` , taşındı.  
+2. Türünün bulunması için kullanıldığı derlemede, taşınan tür için bir <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> ekleyin. Aşağıdaki kod, taşınan adlı `Example` bir tür için özniteliğini gösterir.  
   
     ```csharp  
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
@@ -42,9 +42,9 @@ Tür iletme orijinal derleme kullanan uygulamaları yeniden derlemenize gerek ka
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
     ```  
   
-3. Artık türü içeren derlemenin derleme.  
+3. Artık türü içeren derlemeyi derleyin.  
   
-4. Türü artık türü içeren derlemeye bir başvuru ile konum için kullanıldığı derlemeyi yeniden derleyin. Örneğin, C# dosyasına komut satırında derleme yapıyorsanız kullanın [/Reference (C# Derleyici Seçenekleri)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) türü içeren derlemenin belirtmek için seçeneği. C++'ta kullanmak [#using](/cpp/preprocessor/hash-using-directive-cpp) türü içeren derlemenin belirtmek için kaynak dosyadaki yönergesi.  
+4. Türü içeren derlemeye bir başvuru ile, türü bulunan derlemeyi yeniden derleyin. Örneğin, komut satırından bir C# dosya derlerken, türü içeren derlemeyi belirtmek için [/Reference (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/reference-compiler-option.md) seçeneğini kullanın. İçinde C++, türü içeren derlemeyi belirtmek için kaynak dosyadaki [#using](/cpp/preprocessor/hash-using-directive-cpp) yönergesini kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

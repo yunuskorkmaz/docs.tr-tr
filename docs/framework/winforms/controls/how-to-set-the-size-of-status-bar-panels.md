@@ -10,22 +10,22 @@ helpviewer_keywords:
 - status bars [Windows Forms], setting panel size
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-ms.openlocfilehash: efd3074aaf018e7226c484061cbacb2eac0be820
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ba0f7f02b548a5d9ea1a99605a668f449b3e4a9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013250"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923623"
 ---
 # <a name="how-to-set-the-size-of-status-bar-panels"></a>Nasıl yapılır: Durum Çubuğu Panellerinin Boyutunu Ayarlama
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStripStatusLabel> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.StatusBar> denetler; ancak, <xref:System.Windows.Forms.StatusBar> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.  
+> Denetim yerini alır ve <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBar> denetime işlevsellik ekler; ancak, isterseniz denetim hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.ToolStripStatusLabel>  
   
- Her bir örneği <xref:System.Windows.Forms.StatusBarPanel> içinde sınıf bir [StatusBar denetimine](statusbar-control-windows-forms.md) birkaç genişliğini belirleyin ve çalışma zamanında yeniden boyutlandırma davranışı dinamik özellikleri denetime sahiptir.  
+ Bir [StatusBar denetim](statusbar-control-windows-forms.md) denetimindeki <xref:System.Windows.Forms.StatusBarPanel> sınıfın her örneği, çalışma zamanında genişliğini ve yeniden boyutlandırma davranışını tespit eden bazı dinamik özelliklere sahiptir.  
   
-### <a name="to-set-the-size-of-a-panel"></a>Bir panel boyutunu ayarlamak için  
+### <a name="to-set-the-size-of-a-panel"></a>Bölmenin boyutunu ayarlamak için  
   
-1. Bir yordamda <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, ve <xref:System.Windows.Forms.StatusBarPanel.Width%2A> özellikleri (veya herhangi bir alt sıralamadaki) için durum çubuğu kendi dizini kullanılarak panelleri geçtiğini <xref:System.Windows.Forms.StatusBar.Panels%2A> özelliği <xref:System.Windows.Forms.StatusBarPanel> koleksiyonu.  
+1. Bir yordamda <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>,, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, ve <xref:System.Windows.Forms.StatusBarPanel.Width%2A> özelliklerini (veya herhangi bir alt kümeyi) <xref:System.Windows.Forms.StatusBarPanel> koleksiyonun <xref:System.Windows.Forms.StatusBar.Panels%2A> özelliği aracılığıyla geçirilen dizinini kullanarak durum çubuğu panelleri için ayarlayın.  
   
     ```vb  
     Public Sub SetStatusBarPanelSize()  
@@ -70,5 +70,5 @@ ms.locfileid: "62013250"
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [İzlenecek yol: Çalışma zamanında durum çubuğu bilgilerini güncelleştirme](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Nasıl yapılır: Windows Forms StatusBar denetiminde hangi panele tıklandığını belirleme](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Nasıl yapılır: Windows Forms StatusBar denetimindeki panelin tıklandığını belirleme](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar Denetimine Genel Bakış](statusbar-control-overview-windows-forms.md)

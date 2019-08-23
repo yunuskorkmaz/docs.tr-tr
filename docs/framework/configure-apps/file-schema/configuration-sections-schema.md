@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: c7559a95099608ea462c838591ddb43e18d8f80c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 120733873a7ea29303fe7f82c4c324d411532897
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301228"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921203"
 ---
 # <a name="configuration-sections-schema"></a>Yapılandırma bölümleri şeması
 
-Yapılandırma bölümleri şeması, yapılandırma dosyalarında özel ayarlar tanımlayan öğeleri içerir. Yapılandırma dosyaları ve şemaları hakkında genel bilgi için bkz. [.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md).
+Yapılandırma bölümleri şeması, yapılandırma dosyalarında özel ayarları tanımlayan öğeleri içerir. Yapılandırma dosyaları ve şemaları hakkında genel bilgi için bkz. [.NET Framework Için yapılandırma dosyası şeması](index.md).
 
-[ **\<Yapılandırma >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-[ **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-[ **\<Temizleme >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md)   
-[ **\<kaldırma >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md)   
-[ **\<Bölüm >** ](~/docs/framework/configure-apps/file-schema/section-element.md)   
-[ **\<sectionGroup >** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
+[ **\<Yapılandırma >** ](configuration-element.md)   
+[ **\<configSections >** ](configsections-element-for-configuration.md)   
+[ **\<> Temizle**](clear-element-for-configsections.md)   
+[ **\<> Kaldır**](remove-element-for-configsections.md)   
+[ **\<Bölüm >** ](section-element.md)   
+[ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md)
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **\<Temizle >** için  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Tüm önceden tanımlanmış bölümler ve bölüm grupları temizler. |
-| [ **\<Temizleme >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Tüm önceden tanımlanmış bölümler ve bölüm grupları temizler. |
-| [ **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimi içerir. |
-| [ **\<kaldırma >** için  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Önceden tanımlanmış bir bölüm veya bölüm grubu kaldırır. |
-| [ **\<Bölüm >** için  **\<configSections >** ve  **\<sectionGroup >** ](~/docs/framework/configure-apps/file-schema/section-element.md) | Bir yapılandırma bölümü bildirimi içerir. |
-| [ **\<sectionGroup >** için  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Yapılandırma bölümleri için bir ad alanı tanımlar. |
+| [configSections için > Temizle  **\<** >  **\<** ](clear-element-for-configsections.md) | Önceden tanımlanmış tüm bölümleri ve bölüm gruplarını temizler. |
+| [ **\<> Temizle**](clear-element-for-configsections.md) | Önceden tanımlanmış tüm bölümleri ve bölüm gruplarını temizler. |
+| [ **\<configSections >** ](configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimleri içerir. |
+| [configSections > için  **\<> Kaldır**  **\<** ](remove-element-for-configsections.md) | Önceden tanımlanmış bir bölümü veya bölüm grubunu kaldırır. |
+| [**configSections > \<** **ve sectionGroupiçinBölüm>\<>**  **\<** ](section-element.md) | Bir yapılandırma bölümü bildirimi içerir. |
+| [configSections için sectionGroup >  **\<** >  **\<** ](sectiongroup-element-for-configsections.md) | Yapılandırma bölümleri için bir ad alanı tanımlar. |

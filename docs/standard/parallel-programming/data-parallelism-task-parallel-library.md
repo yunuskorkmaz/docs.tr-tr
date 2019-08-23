@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cece075bc16a175265377b9714598f19452886c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 19e518db75fe3e45f57cbb6fab8c5281cceb4d34
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666382"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939332"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Veri Paralelliği (Görev Paralel Kitaplığı)
 *Veri paralelliği* , kaynak koleksiyondaki veya dizideki öğelerde aynı işlemin eşzamanlı olarak (yani paralel) gerçekleştirildiği senaryolara başvurur. Veri paralel işlemlerinde, kaynak koleksiyon, birden çok iş parçacığının aynı anda farklı kesimlerde çalışabilmesi için bölümlenmiş olur.  
@@ -23,7 +23,7 @@ ms.locfileid: "69666382"
  Görev paralel kitaplığı (TPL), <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> sınıfı aracılığıyla verileri paralellik olarak destekler. Bu sınıf for ve [foreach](../../csharp/language-reference/keywords/foreach-in.md) döngüleri (`For` ve `For Each` Visual Basic) [için](../../csharp/language-reference/keywords/for.md) Yöntem tabanlı paralel uygulamalar sağlar. Sıralı bir döngü yazdığınızda bir <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> veya <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> döngüsünün döngü mantığını yazın. İş parçacığı oluşturmak veya iş öğelerini kuyruğa almak zorunda değilsiniz. Temel Döngülerde kilit almanız gerekmez. TPL, tüm düşük düzeydeki işleri sizin için işler. <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> [Ve kullanımıhakkındaayrıntılıbilgiiçin,paralelprogramlamaiçinbelgedesenleriniindirin:<xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)ile paralel desenleri anlama ve uygulama. Aşağıdaki kod örneğinde basit `foreach` bir döngü ve onun paralel eşdeğeri gösterilmektedir.  
   
 > [!NOTE]
->  TPL'de temsilciler tanımlamak için bu belgede lambda ifadeleri kullanılır. Veya Visual Basic içindeki C# lambda ifadeleriyle ilgili bilgi sahibi değilseniz bkz. [PLıNQ ve TPL içindeki lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+> TPL'de temsilciler tanımlamak için bu belgede lambda ifadeleri kullanılır. Veya Visual Basic içindeki C# lambda ifadeleriyle ilgili bilgi sahibi değilseniz bkz. [PLıNQ ve TPL içindeki lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
  [!code-csharp[TPL#20](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl/cs/tpl.cs#20)]
  [!code-vb[TPL#20](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl/vb/tpl_vb.vb#20)]  
@@ -31,7 +31,7 @@ ms.locfileid: "69666382"
  Bir paralel döngü çalıştığında, çağrının birden çok parçaya eşzamanlı olarak çalışabilmesi için, TPL veri kaynağını bölümlendirir. Arka planda Görev Zamanlayıcı, görevi sistem kaynakları ve iş yüküne göre bölümler. Mümkün olduğunda Zamanlayıcı, iş yükü dengesiz hale gelirse birden çok iş parçacığı ve işlemci arasında çalışmayı yeniden dağıtır.  
   
 > [!NOTE]
->  Ayrıca kendi özel bölümleyici veya Scheduler 'ı da sağlayabilirsiniz. Daha fazla bilgi için bkz. [PLıNQ ve TPL Için Özel Bölümleyiciler](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) ve [görev zamanlayıcılar](xref:System.Threading.Tasks.TaskScheduler).  
+> Ayrıca kendi özel bölümleyici veya Scheduler 'ı da sağlayabilirsiniz. Daha fazla bilgi için bkz. [PLıNQ ve TPL Için Özel Bölümleyiciler](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) ve [görev zamanlayıcılar](xref:System.Threading.Tasks.TaskScheduler).  
   
  Hem hem <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> de yöntemlerinin her ikisinde de döngü yürütmeyi durdurmanızı veya sonlandırırsanız, diğer iş parçacıklarında döngünün durumunu izlemenize, iş parçacığı yerel durumunu sürdürmenize, iş parçacığı yerel nesnelerinin sonlandırmasına, eşzamanlılık derecesindeki bir şekilde kontrol etmenize olanak tanıyan birkaç aşırı yükleme vardır. vb. Bu işlevi etkinleştiren yardımcı türler <xref:System.Threading.Tasks.ParallelLoopState> <xref:System.Threading.Tasks.ParallelLoopResult>, <xref:System.Threading.Tasks.ParallelOptions> <xref:System.Threading.CancellationToken>,, ve <xref:System.Threading.CancellationTokenSource>içerir.  
   

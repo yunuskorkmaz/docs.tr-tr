@@ -7,88 +7,88 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: caaf641f919c10751f59df8972af9d95fa930d88
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0a1d6c4c18e658d71f1baf90763e121314ea35d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655583"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916290"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Forms'ta Kullanıcı Girdisi Doğrulama
-Kullanıcıların uygulamanıza veri girerken, uygulamanızın kullandığı önce verilerin geçerli olduğunu doğrulamak isteyebilirsiniz. Belirli metin alanları olmaması, uzunluğu sıfır, bir alan, bir telefon numarası veya diğer türdeki bir biçimlendirilmiş veri biçimlendirilmiş olması veya bir dize bir veritabanının güvenliğini tehlikeye atmak için kullanılabilir tüm güvenli olmayan karakterleri içermemesi gerektirebilir. Windows Forms, uygulamanızdaki girişi doğrulama birçok yol sağlar.  
+Kullanıcılar uygulamanıza veri girerken, uygulamanız onu kullanmadan önce verilerin geçerli olduğunu doğrulamak isteyebilirsiniz. Belirli metin alanlarının sıfır uzunlukta olmaması, bir alanın bir telefon numarası veya başka bir doğru biçimlendirilmiş veri türü olarak biçimlendirilmesi veya bir dizenin bir veritabanının güvenliğini tehlikeye atamak için kullanılabilecek güvenli olmayan bir karakter içermediğinden emin olmanız gerekebilir. Windows Forms, uygulamanızda girişi doğrulamanız için kullanabileceğiniz çeşitli yollar sağlar.  
   
-## <a name="validation-with-the-maskedtextbox-control"></a>MaskedTextBox denetimi ile doğrulama  
- Bir telefon numarası ya da bir parça numarası gibi iyi tanımlanmış bir biçimde veri girmelerini gerektirmek gerekiyorsa bunu hızlı ve daha çok az kod kullanarak gerçekleştirebilirsiniz <xref:System.Windows.Forms.MaskedTextBox> denetimi. A *maskesi* herhangi belirli bir konuma metin kutusunda, hangi karakter girilebilir belirten bir maskeleme dil karakterlerinden oluşan bir dize. Denetim komut dizisi kullanıcıya görüntüler. Kullanıcı yanlış bir girdi yazarsa, örneğin, bir basamak gerekli olduğunda, bir harf kullanıcı türleri, Denetim, giriş otomatik olarak reddeder.  
+## <a name="validation-with-the-maskedtextbox-control"></a>MaskedTextBox denetimiyle doğrulama  
+ Kullanıcıların, telefon numarası veya parça numarası gibi iyi tanımlanmış bir biçimde veri girmesini zorunlu kılmanız gerekiyorsa, bunu hızlı bir şekilde ve <xref:System.Windows.Forms.MaskedTextBox> denetimi kullanarak en az kodla gerçekleştirebilirsiniz. *Maske* , metin kutusunda verilen herhangi bir konumda hangi karakterlerin girilebileceğini belirten bir maskeleme dilinden karakterlerden oluşan bir dizedir. Denetim, kullanıcıya bir komut istemi kümesi görüntüler. Kullanıcı yanlış bir giriş yazdığında, örneğin, Kullanıcı bir basamak gerektiğinde bir harf yazdığında, denetim otomatik olarak bu girişi reddeder.  
   
- Tarafından kullanılan maskeleme dil <xref:System.Windows.Forms.MaskedTextBox> çok esnektir. Gerekli karakter, isteğe bağlı karakterler, sabit karakter, kısa çizgi ve parantez gibi para birimi karakterleri ve tarih ayırıcı belirtmenize olanak sağlar. İyi ne zaman bir veri kaynağına bağlı denetim de çalışır. <xref:System.Windows.Forms.Binding.Format> Olayında veri bağlamayı maskesi ile uyum sağlamak için gelen verileri yeniden biçimlendirmek için kullanılabilir ve <xref:System.Windows.Forms.Binding.Parse> olay, giden veri veri alanının belirtimlerine uygun şekilde yeniden biçimlendirmek için kullanılabilir.  
+ Tarafından <xref:System.Windows.Forms.MaskedTextBox> kullanılan maskeleme dili çok esnektir. Gerekli karakterleri, isteğe bağlı karakterleri, kısa çizgiler ve parantezler, para birimi karakterlerini ve Tarih ayırıcıları gibi sabit karakterler belirtmenize olanak tanır. Denetim Ayrıca bir veri kaynağına bağlandığında iyi de çalışacaktır. Veri bağlamasındaki <xref:System.Windows.Forms.Binding.Parse>olay, gelen verileri maskeyle uyumlu olacak şekilde yeniden biçimlendirmek için kullanılabilir ve olay, giden verileri veri alanının belirtimlerine uymak üzere yeniden biçimlendirmek için kullanılabilir. <xref:System.Windows.Forms.Binding.Format>  
   
- Daha fazla bilgi için [MaskedTextBox denetimi](./controls/maskedtextbox-control-windows-forms.md).  
+ Daha fazla bilgi için bkz. [MaskedTextBox Control](./controls/maskedtextbox-control-windows-forms.md).  
   
-## <a name="event-driven-validation"></a>Olay temelli doğrulama  
- Doğrulama üzerinde tam programlı denetim istiyorsanız veya karmaşık doğrulama denetimleri gerçekleştirmek gerekirse, çoğu Windows Forms denetimlerinin yerleşik doğrulama olayları kullanmanız gerekir. Serbest biçimli kullanıcı girişi kabul eden her denetimin bir <xref:System.Windows.Forms.Control.Validating> olayı, denetimi veri doğrulama gerekli olduğunda meydana gelir. İçinde <xref:System.Windows.Forms.Control.Validating> olay işleme yöntemindeki kullanıcı çeşitli yollarla girişi doğrulayabilir. Örneğin, bir posta kodu içermesi gereken bir metin kutusu varsa, aşağıdaki yollarla doğrulama gerçekleştirebilirsiniz:  
+## <a name="event-driven-validation"></a>Olay odaklı doğrulama  
+ Doğrulama üzerinde tam programlama denetimi yapmak istiyorsanız veya karmaşık doğrulama denetimleri yapmanız gerekiyorsa, Windows Forms denetimlerinin çoğunda yerleşik olarak bulunan doğrulama olaylarını kullanmanız gerekir. Serbest biçimli Kullanıcı girişini kabul eden her denetim, denetim veri <xref:System.Windows.Forms.Control.Validating> doğrulaması gerektirdiğinde gerçekleşecek bir olaya sahiptir. <xref:System.Windows.Forms.Control.Validating> Olay işleme yönteminde, Kullanıcı girişini çeşitli yollarla doğrulayabilirsiniz. Örneğin, bir posta kodu içermesi gereken bir metin kutusu varsa, doğrulama işlemini aşağıdaki yollarla yapabilirsiniz:  
   
-- Posta kodu, posta kodları belirli bir gruba ait olması gerekir, kullanıcı tarafından girilen verileri doğrulamak için bir girişteki bir dize karşılaştırma gerçekleştirebilirsiniz. Posta kodu {10001, 10002, 10003} kümesinde olması gerekir, örneğin, ardından bir dize karşılaştırma verileri doğrulamak için kullanabilirsiniz.  
+- Posta kodu belirli bir ZIP kodu grubuna ait olmalıdır, girişte Kullanıcı tarafından girilen verileri doğrulamak için bir dize karşılaştırması gerçekleştirebilirsiniz. Örneğin, posta kodu {10001, 10002, 10003} kümesinde olması gerekiyorsa, verileri doğrulamak için bir dize karşılaştırması kullanabilirsiniz.  
   
-- Posta kodu belirli bir biçimde olması gerekiyorsa kullanıcı tarafından girilen verileri doğrulamak için normal ifadeler kullanabilirsiniz. Örneğin, form doğrulama için `#####` veya `#####-####`, normal bir ifadeyi kullanabilirsiniz `^(\d{5})(-\d{4})?$`. Form doğrulamak için `A#A #A#`, normal bir ifadeyi kullanabilirsiniz `[A-Z]\d[A-Z] \d[A-Z]\d`. Normal ifadeler hakkında daha fazla bilgi için bkz. [.NET Framework normal ifadelerinde](../../standard/base-types/regular-expressions.md) ve [normal ifade örnekleri](../../standard/base-types/regular-expression-examples.md).  
+- Posta kodunun belirli bir biçimde olması gerekiyorsa, Kullanıcı tarafından girilen verileri doğrulamak için normal ifadeleri kullanabilirsiniz. Örneğin, formu `#####` `#####-####`doğrulamak için normal ifade `^(\d{5})(-\d{4})?$`kullanabilirsiniz. Formu `A#A #A#`doğrulamak için normal ifade `[A-Z]\d[A-Z] \d[A-Z]\d`kullanabilirsiniz. Normal ifadeler hakkında daha fazla bilgi için bkz. [.NET Framework normal ifadeler](../../standard/base-types/regular-expressions.md) ve [normal ifade örnekleri](../../standard/base-types/regular-expression-examples.md).  
   
-- Posta kodu geçerli bir Amerika Birleşik Devletleri posta kodu olması gerekiyorsa, kullanıcı tarafından girilen verileri doğrulamak için bir posta kodu Web hizmeti çağırabilir.  
+- Posta kodu geçerli bir Birleşik Devletler ZIP kodu olmalıdır, Kullanıcı tarafından girilen verileri doğrulamak için bir ZIP kodu Web hizmeti çağırabilirsiniz.  
   
- <xref:System.Windows.Forms.Control.Validating> Olay sağlanmaktadır türünde bir nesne <xref:System.ComponentModel.CancelEventArgs>. Denetimin verilerinin geçersiz olduğunu belirlerseniz, iptal edebilir <xref:System.Windows.Forms.Control.Validating> bu nesnenin ayarlayarak olay <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliğini `true`. Ayarlanmamış olması halinde <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliği, Windows Forms, doğrulama için bu denetim başarılı varsayar ve yükseltmek <xref:System.Windows.Forms.Control.Validated> olay.  
+ Olay <xref:System.Windows.Forms.Control.Validating> , türünde <xref:System.ComponentModel.CancelEventArgs>bir nesne olarak sağlanır. Denetimin verilerinin geçerli olmadığını belirlerseniz, bu <xref:System.Windows.Forms.Control.Validating> <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> nesnenin özelliğini olarak `true`ayarlayarak olayı iptal edebilirsiniz. <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Özelliği ayarlanmamışsa, Windows Forms Bu denetimde doğrulamanın başarılı olduğunu varsayacaktır ve <xref:System.Windows.Forms.Control.Validated> olayı yükseltir.  
   
- Bir e-posta adresi doğrulama bir kod örneği için bir <xref:System.Windows.Controls.TextBox>, bkz: <xref:System.Windows.Forms.Control.Validating>.  
+ Bir e-posta adresini doğrulayan bir <xref:System.Windows.Controls.TextBox>kod örneği için, bkz <xref:System.Windows.Forms.Control.Validating>.  
   
-### <a name="data-binding-and-event-driven-validation"></a>Veri bağlama ve olay temelli doğrulama  
- Denetimlerinizi veritabanı tablosu gibi bir veri kaynağına bağlı olduğunda doğrulama çok kullanışlıdır. Doğrulama, kullanarak emin olun, veri kaynağı tarafından gereken biçimde denetiminizin veri karşılar ve değil tırnak işareti gibi özel karakterler içeren ve yedekleme olduğunu, eğik çizgi güvensiz olabilir.  
+### <a name="data-binding-and-event-driven-validation"></a>Veri bağlama ve olay odaklı doğrulama  
+ Denetim, denetimlerinizi bir veritabanı tablosu gibi bir veri kaynağına bağladığınızda çok yararlı olur. Doğrulama kullanarak, denetiminizin verilerinin veri kaynağı için gereken biçimi karşıladığından ve güvenilir olabilecek, tırnak işaretleri ve ters eğik çizgi gibi özel karakterler içermediğinden emin olabilirsiniz.  
   
- Veri bağlama kullandığınızda, Denetim verilerinde yürütülmesi sırasında veri kaynağıyla eşitlenir <xref:System.Windows.Forms.Control.Validating> olay. İptal ederseniz <xref:System.Windows.Forms.Control.Validating> olay verileri veri kaynağı ile eşitlenmez.  
+ Veri bağlamayı kullandığınızda, denetimdeki veriler, <xref:System.Windows.Forms.Control.Validating> olayın yürütülmesi sırasında veri kaynağıyla eşitlenir. <xref:System.Windows.Forms.Control.Validating> Olayı iptal ederseniz veriler veri kaynağıyla eşitlenmez.  
   
 > [!IMPORTANT]
->  Gerçekleştikten sonra özel doğrulama varsa <xref:System.Windows.Forms.Control.Validating> olay etkilemez veri bağlama. Örneğin, kodunuz varsa bir <xref:System.Windows.Forms.Control.Validated> veri bağlama iptal etmeyi denediğinde olay, veri bağlama yine de gerçekleşir. Doğrulama gerçekleştirmek için bu durumda <xref:System.Windows.Forms.Control.Validated> olay, denetimin değiştirme **veri kaynağı güncelleştirme modu** özelliği (**(Databindings) altında**\\ **(Gelişmiş)** ) öğesinden **OnValidation'ı** için **hiçbir zaman**ve ekleme *denetimi*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` doğrulama kodunuz için.  
+> <xref:System.Windows.Forms.Control.Validating> Olay sonrasında gerçekleşen özel doğrulamanız varsa, veri bağlamayı etkilemez. Örneğin, veri bağlamayı iptal etmeyi deneyen bir <xref:System.Windows.Forms.Control.Validated> olayda kodunuz varsa, veri bağlama yine de gerçekleşmeyecektir. Bu durumda, <xref:System.Windows.Forms.Control.Validated> olayda doğrulama gerçekleştirmek için, denetimin **veri kaynağı güncelleştirme modu** özelliğini ( **(DataBindings)** \\ **(Gelişmiş)** ) **ondoğrulamadan** **hiçbir**şekilde değiştirin ve ekleyin`.DataBindings["`Kendi alanını doğrulama kodunuza *\<>* denetleyin.`"].WriteValue()`  
   
 ### <a name="implicit-and-explicit-validation"></a>Örtük ve açık doğrulama  
- Bu nedenle, denetimin veri doğrulanmak? Geliştirici olarak size en fazla budur. Örtük veya açık doğrulama, uygulamanızın ihtiyaçlarına bağlı olarak kullanabilirsiniz.  
+ Bu nedenle, bir denetimin verileri ne zaman doğrulanacak? Bu, geliştiriciye yönelik. Uygulamanızın ihtiyaçlarına bağlı olarak örtük ya da açık doğrulama kullanabilirsiniz.  
   
 #### <a name="implicit-validation"></a>Örtük doğrulama  
- Kullanıcı bunu girer gibi örtük doğrulama yaklaşımı, verileri doğrular. Yaygın olarak, kullanıcı bir denetimin giriş odağı alır ve diğerine taşır basılı gibi bir denetim anahtarlarını okuma veya daha fazla veri girildiği şekilde verileri doğrulayabilirsiniz. Bu yaklaşım, çalıştıkları gibi kullanıcı, veriler hakkında anında geri bildirim vermek istediğinizde yararlıdır.  
+ Örtük doğrulama yaklaşımı, verileri Kullanıcı girdiği şekilde doğrular. Veriler, basılan gibi anahtarları okuyarak veya Kullanıcı giriş odağını bir denetimden çıktığında ve sonraki bir yere taşırken verileri bir denetime girerek doğrulayabilirsiniz. Bu yaklaşım, kullanıcıya çalışırken veriler hakkında anında geri bildirim vermek istediğinizde faydalıdır.  
   
- Örtük doğrulama denetimi için kullanmak istiyorsanız, bu denetimin ayarlamalısınız <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> özelliğini `true`. İptal ederseniz <xref:System.Windows.Forms.Control.Validating> olay, denetimin davranışı, sizin için atanan değer tarafından belirlenir <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>. Size atanan <xref:System.Windows.Forms.AutoValidate.EnablePreventFocusChange>, olayı iptal neden <xref:System.Windows.Forms.Control.Validated> olayın meydana gelmesine. Kullanıcı verileri için geçerli bir giriş olana kadar giriş odağını geçerli denetiminde kalır. Size atanan <xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>, <xref:System.Windows.Forms.Control.Validated> olayı iptal eder, ancak odak yine de sonraki denetime değiştirme olay gerçekleşmez.  
+ Bir denetim için örtük doğrulama kullanmak istiyorsanız, denetimin <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> özelliğini olarak `true`ayarlamanız gerekir. <xref:System.Windows.Forms.Control.Validating> Olayı iptal ederseniz, denetimin davranışı <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>atadığınız değere göre belirlenir. Atadıktan <xref:System.Windows.Forms.AutoValidate.EnablePreventFocusChange>sonra, olayı iptal etmek <xref:System.Windows.Forms.Control.Validated> olayın gerçekleşmemesine neden olur. Giriş odağı, Kullanıcı verileri geçerli bir girişe değiştirene kadar geçerli denetimde kalır. Atadıktan <xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange> sonra<xref:System.Windows.Forms.Control.Validated> , olayı iptal ettiğinizde olay gerçekleşmez, ancak odak yine de sonraki denetime değişecektir.  
   
- Atama <xref:System.Windows.Forms.AutoValidate.Disable> için <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> özelliği örtük doğrulama tamamen engeller. Denetimlerinizi doğrulamak için açık doğrulama kullanmanız gerekir.  
+ Özelliğe atama <xref:System.Windows.Forms.AutoValidate.Disable> örtük doğrulamayı tamamen engeller. <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> Denetimlerinizi doğrulamak için açık doğrulama kullanmanız gerekir.  
   
 #### <a name="explicit-validation"></a>Açık doğrulama  
- Açık doğrulama yaklaşımı verileri tek seferde doğrular. Kaydet düğmesine veya sonraki bir bağlantıya tıklayarak gibi ek olarak, kullanıcı eylemine yanıt olarak verileri doğrulayabilirsiniz. Bir kullanıcı eylemi ortaya çıktığında, aşağıdaki yollardan birinde açık doğrulama tetikleyebilirsiniz:  
+ Açık doğrulama yaklaşımı verileri tek seferde doğrular. Bir Kaydet düğmesine veya bir sonraki bağlantıya tıklama gibi bir kullanıcı eylemine yanıt olarak verileri doğrulayabilirsiniz. Kullanıcı eylemi gerçekleştiğinde, aşağıdaki yollarla açık doğrulamayı tetikleyebilirsiniz:  
   
-- Çağrı <xref:System.Windows.Forms.ContainerControl.Validate%2A> odağını kaybetmiş son denetim doğrulamak için.  
+- Odağı <xref:System.Windows.Forms.ContainerControl.Validate%2A> kaybetmesi için son denetimi doğrulamak üzere çağırın.  
   
-- Çağrı <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> bir form veya kapsayıcı denetimdeki tüm alt denetimlere doğrulamak için.  
+- Bir <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> form veya Kapsayıcı denetimindeki tüm alt denetimleri doğrulamak için çağırın.  
   
-- Denetimlerinde verileri el ile doğrulamak için özel bir yöntem çağrısı.  
+- Denetimlerde verileri el ile doğrulamak için özel bir yöntem çağırın.  
   
-#### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Varsayılan örtük doğrulama davranışını Windows Forms denetimleri  
- Farklı Windows Forms denetimleri için varsayılan değerleri farklı olan kendi <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> özelliği. Aşağıdaki tablo, en yaygın denetimler ve değerlerinde gösterir.  
+#### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Windows Forms denetimleri için varsayılan örtük doğrulama davranışı  
+ Farklı Windows Forms denetimlerinin <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> özellikleri için farklı varsayılan değerleri vardır. Aşağıdaki tablo en sık kullanılan denetimleri ve bunların varsayılan değerlerini gösterir.  
   
 |Denetim|Varsayılan doğrulama davranışı|  
 |-------------|---------------------------------|  
 |<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
-|<xref:System.Windows.Forms.PropertyGrid>|Visual Studio'da gösterilmeyen özelliği|  
-|<xref:System.Windows.Forms.ToolStripContainer>|Visual Studio'da gösterilmeyen özelliği|  
+|<xref:System.Windows.Forms.PropertyGrid>|Özellik Visual Studio 'da gösterilmez|  
+|<xref:System.Windows.Forms.ToolStripContainer>|Özellik Visual Studio 'da gösterilmez|  
 |<xref:System.Windows.Forms.SplitContainer>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
   
-## <a name="closing-the-form-and-overriding-validation"></a>Formu kapatmak ve doğrulama geçersiz kılma  
- Veriler geçersiz olduğundan bir denetim odağı tutar, her zamanki şekilde üst formu kapatmak mümkün değildir:  
+## <a name="closing-the-form-and-overriding-validation"></a>Form kapatılıyor ve doğrulama geçersiz kılınıyor  
+ İçerdiği veriler geçersiz olduğu için bir denetim odağı koruduğu zaman, üst formu her zamanki yollarla kapatmak olanaksızdır:  
   
-- Tıklayarak **Kapat** düğmesi.  
+- **Kapat** düğmesine tıklayın.  
   
-- Seçerek **Kapat** içinde **sistem** menüsü.  
+- ' İ seçerek **sistem** menüsünde **Kapat** ' a seçin.  
   
-- Çağırarak <xref:System.Windows.Forms.Form.Close%2A> yöntemi programlı olarak.  
+- <xref:System.Windows.Forms.Form.Close%2A> Yöntemini programlı olarak çağırarak.  
   
- Ancak, bazı durumlarda, kullanıcının denetimleri değerleri geçerli olduklarına bakılmaksızın formu kapatmak isteyebilirsiniz. Doğrulama geçersiz kılmasını ve hala formun için bir işleyici oluşturarak geçersiz veri içeriyor. bir formu kapatmak <xref:System.Windows.Forms.Form.Closing> olay. Olayda ayarlamak <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliğini `false`. Bu, formu kapatmak için zorlar. Daha fazla bilgi ve örnek için bkz. <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
+ Ancak, bazı durumlarda, denetimlerde değerlerin geçerli olup olmamasına bakılmaksızın kullanıcının formu kapatmasını sağlamak isteyebilirsiniz. Formun <xref:System.Windows.Forms.Form.Closing> olayı için bir işleyici oluşturarak doğrulamayı geçersiz kılabilir ve yine de geçersiz veri içeren bir formu kapatabilirsiniz. Olayında <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliğini olarak `false`ayarlayın. Bu, formu kapatmaya zorlar. Daha fazla bilgi ve bir örnek için bkz <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Bu şekilde kapatmak için form zorlarsanız, form denetiminin denetimlerinde zaten kaydedilmemiş tüm verileri kaybolur. Ayrıca, bunlar kapatıldığında kalıcı formlar denetimlerin içeriği doğrulamaz. Odağı bir denetime kilitlemek için doğrulama denetimi kullanmaya devam edebilirsiniz, ancak formu kapatmadan ile ilişkili davranışı hakkında merak gerekmez.  
+> Formun bu şekilde kapatılmasını zorlarsanız, form içindeki denetimlerin henüz kaydedilmemiş tüm verileri kaybolur. Ayrıca, kalıcı formlar, kapandıklarında denetimlerin içeriğini doğrulamaz. Odağı bir denetime kilitlemek için hala denetim doğrulaması kullanabilirsiniz, ancak formu kapatmayla ilgili davranış konusunda endişe etmeniz gerekmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

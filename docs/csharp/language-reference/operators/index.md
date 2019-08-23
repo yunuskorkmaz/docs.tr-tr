@@ -1,37 +1,44 @@
 ---
 title: C#işleçler- C# başvuru
-ms.date: 04/30/2019
+ms.date: 08/20/2019
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
-- boolean operators [C#]
-- expressions [C#], operators
-- logical operators [C#]
 - operators [C#]
-- Visual C#, operators
-- indirection operators [C#]
-- assignment operators [C#]
-- shift operators [C#]
-- relational operators [C#]
-- bitwise operators [C#]
-- address operators [C#]
-- keywords [C#], operators
-- arithmetic operators [C#]
+- operator precedence [C#]
+- operator associativity [C#]
+- expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7db61e530ba5c3e0b5ae0ee0002621e369e1833b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 75697a7a52fbfb04e1b44ecf591e271217a69bf4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566845"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924648"
 ---
 # <a name="c-operators-c-reference"></a>C#İşleçler (C# başvuru)
 
-C#Yerleşik türler tarafından desteklenen bir dizi önceden tanımlanmış işleç sağlar. Örneğin, [Aritmetik işleçler](arithmetic-operators.md) , yerleşik sayısal türlerin işlenenleriyle aritmetik işlemler gerçekleştirir ve [Boole mantıksal işleçleri](boolean-logical-operators.md) [bool](../keywords/bool.md) işlenenleri ile mantıksal işlemler gerçekleştirir.
+C#Yerleşik türler tarafından desteklenen bir dizi işleç sağlar. Örneğin, [Aritmetik işleçler](arithmetic-operators.md) sayısal Işlenenler ve [Boole mantıksal işleçleri](boolean-logical-operators.md) [bool](../keywords/bool.md) işlenenleri olan mantıksal işlemleri gerçekleştirir. Bazı işleçler [aşırı](operator-overloading.md)yüklenebilir. İşleç aşırı yüklemesi ile, Kullanıcı tanımlı bir türün işlenenleri için işleç davranışını belirtebilirsiniz.
 
-Kullanıcı tanımlı bir tür, bu türün işlenenleri için karşılık gelen davranışı tanımlamak üzere bazı işleçleri aşırı yükleyebilir. Daha fazla bilgi için bkz. [operatör aşırı yüklemesi](operator-overloading.md).
+Bir [ifadede](../../programming-guide/statements-expressions-operators/expressions.md), işleç önceliği ve ilişkilendirilebilirliği, işlemlerin gerçekleştirileceği sırayı belirlemektir. İşleç önceliği ve ilişkilendirilebilirliği tarafından uygulanan değerlendirmenin sırasını değiştirmek için ayraçları kullanabilirsiniz.
 
-Aşağıdaki tabloda en düşük önceliğe C# göre başlayan işleçler listelenmektedir. Her satır içindeki işleçler aynı öncelik düzeyini paylaşır.
+## <a name="operator-precedence"></a>İşleç önceliği
+
+Birden çok işleç içeren bir ifadede, daha yüksek önceliğe sahip işleçler, daha düşük önceliğe sahip işleçlerden önce değerlendirilir. Aşağıdaki örnekte, daha yüksek önceliğe sahip olduğu için çarpma ilk olarak gerçekleştirilir:
+
+```csharp-interactive
+var a = 2 + 2 * 2;
+Console.WriteLine(a); //  output: 6
+```
+
+İşleç önceliğine göre uygulanan değerlendirmenin sırasını değiştirmek için ayraçları kullanın:
+
+```csharp-interactive
+var a = (2 + 2) * 2;
+Console.WriteLine(a); //  output: 8
+```
+
+Aşağıdaki tabloda en düşük önceliğe C# göre başlayan işleçler listelenmektedir. Her satır içindeki işleçler aynı önceliğe sahiptir.
 
 | İşleçler | Kategori veya ad |
 | --------- | ---------------- |
@@ -51,7 +58,39 @@ Aşağıdaki tabloda en düşük önceliğe C# göre başlayan işleçler listel
 | [,? t: f](conditional-operator.md) | Koşullu işleç |
 | [x = y](assignment-operator.md), [x + = y](arithmetic-operators.md#compound-assignment), [x-= y](arithmetic-operators.md#compound-assignment), [x * = y](arithmetic-operators.md#compound-assignment), [x/= y](arithmetic-operators.md#compound-assignment), [x% = y](arithmetic-operators.md#compound-assignment), [x & = y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), [x ^ = y](boolean-logical-operators.md#compound-assignment), [x < < = y](bitwise-and-shift-operators.md#compound-assignment), [x > > = y](bitwise-and-shift-operators.md#compound-assignment),[=>](lambda-operator.md) | Atama ve lambda bildirimi |
 
+## <a name="operator-associativity"></a>Operatör ilişkilendirilebilirliği
+
+İşleçler aynı önceliğe sahip olduğunda, işleçlerin ilişkilendirilebilirliği, işlemlerin gerçekleştirilme sırasını belirler:
+
+- *Sola ilişkilendirilebilir* işleçler, soldan sağa doğru sırayla değerlendirilir. [Atama işleçleri](assignment-operator.md) ve [ `??`null birleşim işleci ](null-coalescing-operator.md)dışında, tüm ikili işleçler sola ilişkilendirilebilir. Örneğin, `a + b - c` olarak `(a + b) - c`değerlendirilir.
+- *Sağdan ilişkilendirilebilir* işleçler, sağdan sola sırayla değerlendirilir. Atama işleçleri, null birleşim işleci `??`ve [koşullu işleç `?:` ](conditional-operator.md) , doğru ilişkilendirilebilir. Örneğin, `x = y = z` olarak `x = (y = z)`değerlendirilir.
+
+İşleç ilişkilendirilebilirliği tarafından uygulanan değerlendirmenin sırasını değiştirmek için ayraçları kullanın:
+
+```csharp-interactive
+int a = 13 / 5 / 2;
+int b = 13 / (5 / 2);
+Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
+```
+
+## <a name="operand-evaluation"></a>İşlenen değerlendirmesi
+
+Operatör önceliği ve ilişkilendirilebilirliği ile ilgisiz, bir ifadede işlenen işlenenleri soldan sağa değerlendirilir. Aşağıdaki örneklerde, işleçleri ve işlenenleri değerlendirilen sıra gösterilmektedir:
+
+| İfade | Değerlendirme sırası |
+| ---------- | ------------------- |
+|`a + b`|a, b, +|
+|`a + b * c`|a, b, c, *, +|
+|`a / b + c * d`|a, b,/, c, d, *, +|
+|`a / (b + c) * d`|a, b, c, +,/, d, *|
+
+Genellikle, tüm işleç işlenenleri değerlendirilir. Bazı işleçler, işlenenleri koşullu olarak değerlendirir. Diğer bir deyişle, bu tür bir işlecin ilk işleneninin değeri, (veya hangi) diğer işlenenleri değerlendirileceğini tanımlar. Bu işleçler Koşullu mantıksal [and`&&`()](boolean-logical-operators.md#conditional-logical-and-operator-) ve [or`||`()](boolean-logical-operators.md#conditional-logical-or-operator-) işleçleridir, null [birleşim işleci `??` ](null-coalescing-operator.md), [null koşullu işleçler ve `?[]` `?.` ](member-access-operators.md#null-conditional-operators--and-)ve [koşullu işleç `?:` ](conditional-operator.md). Daha fazla ayrıntı için her işlecin açıklamasına bakın.
+
+## <a name="c-language-specification"></a>C# dili belirtimi
+
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [işleçler](~/_csharplang/spec/expressions.md#operators) bölümüne bakın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C#başvurunun](../index.md)
-- [İşleçler](../../programming-guide/statements-expressions-operators/operators.md)
+- [İfadeler](../../programming-guide/statements-expressions-operators/expressions.md)

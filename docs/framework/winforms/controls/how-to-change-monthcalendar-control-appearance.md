@@ -9,19 +9,19 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: 21fa6798c431b71d36c1909937ddad6bf5030782
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 5582624d881b2d8039bcd5e8ac45e548c7b38f57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053103"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929043"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Nasıl yapılır: Windows Forms MonthCalendar Denetiminin Görünüşünü Değiştirme
-Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetimi birçok yönden Takvim görünümünü özelleştirmenize olanak sağlar. Örneğin, bir renk şeması ayarlayın ve hafta sayıları ve geçerli tarih görüntülemek veya gizlemek seçin.  
+Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetimi takvimin görünümünü birçok şekilde özelleştirmenize olanak sağlar. Örneğin, renk şemasını ayarlayabilir ve hafta numaralarını ve geçerli tarihi görüntülemeyi veya gizlemeyi seçebilirsiniz.  
   
-### <a name="to-change-the-month-calendars-color-scheme"></a>Ay takvim renk düzenini değiştirmek için  
+### <a name="to-change-the-month-calendars-color-scheme"></a>Aylık takvimin renk düzenini değiştirmek için  
   
-- Özellikleri ayarlamak <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> ve <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>. <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> Özelliği için haftanın günlerini de yazı tipi rengini belirler. <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> Özelliği koyun ve görüntülenen ayı veya ay izleyen tarihleri rengini belirler.  
+- <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> ,<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> Ve gibi<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>özellikleri ayarlayın. <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> Özelliği, haftanın günleri için yazı tipi rengini de belirler. <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> Özelliği, görüntülenen ay veya ayların önünde ve takip edilen tarihlerin rengini belirler.  
   
     ```vb  
     MonthCalendar1.TitleBackColor = System.Drawing.Color.Blue  
@@ -42,11 +42,11 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetimi birçok yönden
     ```  
   
     > [!NOTE]
-    >  Tema bağlı olarak Windows Vista ile başlayarak, bazı özellikleri ayarlama Takvim görünümünü değişmeyebilir. Örneğin, Windows Aero teması kullanmak üzere ayarlanmışsa ayarlamak <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, veya <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> özellikleri etkisizdir. Takvim güncelleştirilmiş bir sürümünü geçerli işletim sistemi temayı çalışma zamanında türetilmiş bir görünümle işlenen olmasıdır. Bu özellikleri kullanmak ve Takvim önceki sürümünü etkinleştirmek istiyorsanız, uygulamanız için görsel stil devre dışı bırakabilirsiniz. Görsel stiller devre dışı bırakma, görünümünü ve davranışını uygulamanızdaki diğer denetimlerin etkileyebilir. Visual Basic'te görsel stiller devre dışı bırakmak için Proje Tasarımcısı'nı açın ve işaretini kaldırın **etkinleştirme XP görsel stilleri** onay kutusu. C# görsel stiller devre dışı bırakmak için program.cs dosyasını açın ve açıklama `Application.EnableVisualStyles();`. Görsel stiller hakkında daha fazla bilgi için bkz: [görsel stilleri etkinleştirme](/windows/desktop/controls/cookbook-overview).  
+    > Windows Vista ile başlayıp temaya bağlı olarak, bazı özelliklerin ayarlanması takvimin görünümünü değiştiremeyebilir. Örneğin, Windows, Aero temasını kullanmak üzere ayarlandıysa,, <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, veya <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> özelliklerinin ayarlanması <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>etkisizdir. Bunun nedeni, takvimin güncelleştirilmiş bir sürümünün geçerli işletim sistemi temasından çalışma zamanında elde edilen bir görünümle işlenmesinden kaynaklanır. Bu özellikleri kullanmak ve takvimin önceki sürümünü etkinleştirmek istiyorsanız, uygulamanız için görsel stilleri devre dışı bırakabilirsiniz. Görsel stilleri devre dışı bırakmak, uygulamanızdaki diğer denetimlerin görünümünü ve davranışını etkileyebilir. Visual Basic 'de görsel stilleri devre dışı bırakmak için proje tasarımcısını açın ve **XP görsel stillerini etkinleştir** onay kutusunun işaretini kaldırın. İçindeki C#görsel stilleri devre dışı bırakmak için program.cs açın ve Not `Application.EnableVisualStyles();`edin. Görsel stiller hakkında daha fazla bilgi için bkz. [görsel stilleri etkinleştirme](/windows/desktop/controls/cookbook-overview).  
   
-### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Geçerli bir tarih denetiminin altındaki görüntülemek için  
+### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Denetimin en altındaki geçerli tarihi görüntüleme  
   
-- Ayarlama <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> özelliğini `true`. Aşağıdaki örnekte, görüntüleme ve ne zaman formun çift tıklandığında bugünün tarihini atlama arasında geçiş yapar.  
+- Ayarlama <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> özelliğini `true`. Aşağıdaki örnek, form çift tıklandığında bugünün tarihini görüntüleme ve atlama arasında geçiş yapar.  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -74,7 +74,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetimi birçok yönden
        }  
     ```  
   
-     (Visual C#, Visual C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
+     (Görsel C#, görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.  
   
     ```csharp  
     this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);  
@@ -85,11 +85,11 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetimi birçok yönden
        &Form1::Form1_DoubleClick);  
     ```  
   
-### <a name="to-display-week-numbers"></a>Hafta sayıları görüntülemek için  
+### <a name="to-display-week-numbers"></a>Hafta numaralarını görüntüleme  
   
-- Ayarlama <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> özelliğini `true`. Bu özellik, kod veya Özellikler penceresinde ayarlayabilirsiniz.  
+- Ayarlama <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> özelliğini `true`. Bu özelliği kodda ya da Özellikler penceresi olarak ayarlayabilirsiniz.  
   
-     Hafta sayıları haftanın ilk günü solundaki ayrı bir sütunda görüntülenir.  
+     Hafta numaraları, haftanın ilk gününün solunda ayrı bir sütunda görüntülenir.  
   
     ```vb  
     MonthCalendar1.ShowWeekNumbers = True  
@@ -106,6 +106,6 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetimi birçok yönden
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [MonthCalendar Denetimi](monthcalendar-control-windows-forms.md)
-- [Nasıl yapılır: Windows Forms MonthCalendar denetiminde tarih aralığı seçin](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Nasıl yapılır: Windows ile belirli günleri kalın olarak görüntüleme Forms MonthCalendar denetimi](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [Nasıl yapılır: Windows Forms MonthCalendar Denetiminde tarih aralığı seçin](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Nasıl yapılır: Windows Forms MonthCalendar denetimi ile belirli günleri kalın olarak görüntüleme](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
 - [Nasıl yapılır: Windows Forms MonthCalendar denetiminde birden fazla ay görüntüleme](display-more-than-one-month-wf-monthcalendar-control.md)

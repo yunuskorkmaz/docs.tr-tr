@@ -1,18 +1,18 @@
 ---
-title: <tracking> WCF
+title: <tracking>WCF
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: 4aac9f28de746e2a75a079cbaf774f01f4a08fca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad4f85139ff0a0f587bc47f63334fe97e25440b0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758151"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932370"
 ---
-# <a name="tracking-of-wcf"></a>\<İzleme > WCF
-Bir iş akışı hizmeti için izleme ayarları tanımlamak için bir yapılandırma bölümünü temsil eder.  
+# <a name="tracking-of-wcf"></a>\<WCF > izleme
+Bir iş akışı hizmeti için izleme ayarlarını tanımlamaya yönelik bir yapılandırma bölümünü temsil eder.  
   
- İş akışı izleme ve kendi yapılandırmasını daha fazla bilgi için bkz: [takip ve izleme iş akışı](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) ve [yapılandırma izleme için bir iş akışı](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
+ İş akışı izleme ve yapılandırması hakkında daha fazla bilgi için bkz. iş akışı [izleme ve izleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) ve [izleme yapılandırma](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
  \<system.serviceModel>  
 \<İzleme >  
@@ -85,8 +85,8 @@ Bir iş akışı hizmeti için izleme ayarları tanımlamak için bir yapıland�
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Katılımcıları >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|Kayıtları İzleme için abone katılımcıları tanımlama yapılandırma öğelerinin koleksiyonu. İzleme katılımcıları izleme kayıtları yükü işlemek için mantığı içerir (örneğin, bunlar bir dosyaya yazmak seçebilir).|  
-|[\<trackingProfile >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|Bir iş akışı örneğinden yayılan filtre izleme kayıtları için izleme profili.|  
+|[\<Katılımcılar >](../windows-workflow-foundation/participants.md)|Kayıtları izlemeye abone olan katılımcıları tanımlayan bir yapılandırma öğeleri koleksiyonu. İzleme katılımcıları, izleme kayıtlarından yükü işlemeye yönelik mantığı içerir (örneğin, bir dosyaya yazmayı seçebilirler).|  
+|[\<trackingProfile >](../windows-workflow-foundation/trackingprofile.md)|Bir iş akışı örneğinden yayılan izleme kayıtlarını filtrelemek için bir izleme profili.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -95,9 +95,9 @@ Bir iş akışı hizmeti için izleme ayarları tanımlamak için bir yapıland�
 |Sistem.ServiceModel|Tüm iş akışı yapılandırma öğelerinin kök öğe.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İzleme bir iş akışı yürütülmesini inceleyin olanağı sağlar. İş akışı izleme altyapısı yürütme sırasında anahtar olayları yansıtan kayıtları yaymak için bir iş akışı Instruments. Örneğin, bir iş akışı örneği başlatıldığında veya tamamlanan izleme kayıtları yayılan. İzleme, iş akışı değişkenleri ile ilişkili iş ilgili verileri de ayıklayabilirsiniz. Örneğin, iş akışı sistem işleme bir sırayı temsil ediyorsa sırası kimliği birlikte izleme kayıt ayıklanabileceği. Genel olarak, izleme WF etkinleştirme Tanılama veya İş analizi bir iş akışı yürütme kolaylaştırır.  
+ İzleme, bir iş akışının yürütülmesini incelemenize olanak sağlar. İş akışı izleme altyapısı, yürütme sırasında önemli olayları yansıtan kayıtları göstermek için bir iş akışı araçları sağlar. Örneğin, bir iş akışı örneği başlatıldığında ya da tamamlandığında izleme kayıtları yayınlanmaktadır. İzleme, iş akışı değişkenleriyle ilişkili iş ile ilgili verileri de ayıklayabilir. Örneğin, iş akışı bir sipariş işleme sistemini temsil ediyorsa, sipariş kimliği izleme kaydıyla birlikte ayıklanabilir. Genel olarak, WF izlemeyi etkinleştirmek, bir iş akışı yürütmesi üzerinde tanılamayı veya iş analizlerini kolaylaştırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>
-- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İş Akışı Takip ve İzleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)

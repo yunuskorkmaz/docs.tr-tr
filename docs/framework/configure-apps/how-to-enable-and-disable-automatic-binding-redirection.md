@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: d914310559403fba2f1fe8e4a60469ec3a867c24
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733447"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913040"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma
 
@@ -91,15 +91,15 @@ Bir **Web. config** dosyasına bağlama yeniden yönlendirmeleri eklemek için:
 
 1. Visual Studio'da uygulamayı derleyin ve yapı uyarılarını denetleyin.
 
-   ![Derleme başvurusu çakışmaları Için derleme uyarısı](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
+   ![Derleme başvurusu çakışmaları Için derleme uyarısı](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
 2. Derleme bağlama çakışmaları varsa bir uyarı görüntülenir. Uyarıya çift tıklayın veya uyarıyı seçin ve **ENTER**tuşuna basın.
 
    Kaynak **Web. config** dosyasına gerekli bağlama yeniden yönlendirmelerini otomatik olarak eklemenize olanak sağlayan bir iletişim kutusu görüntülenir.
 
-   ![Bağlama yeniden yönlendirme izni iletişim kutusu](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
+   ![Bağlama yeniden yönlendirme izni iletişim kutusu](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<bindingRedirect > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
-- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [\<bindingRedirect > öğesi](./file-schema/runtime/bindingredirect-element.md)
+- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](redirect-assembly-versions.md)

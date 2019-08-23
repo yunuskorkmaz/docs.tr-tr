@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-ms.openlocfilehash: bd21231ea244de51612e62febd80af74c6adc87e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7a7e8e61f65704a2e99385a1be320048d950324c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69603093"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922517"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (C# derleyici seçenekleri)
 **-Appconfig** derleyici seçeneği, bir C# uygulamanın derlemenin uygulama yapılandırma (App. config) dosyasının konumunu derleme bağlama sırasında ortak DIL çalışma zamanı (CLR) olarak belirtmesini sağlar.  
@@ -38,7 +38,7 @@ ms.locfileid: "69603093"
  Derleyici, dosyanın konumunu CLR 'nin derleme bağlama mantığına geçirir.  
   
 > [!NOTE]
->  Uygulamanızı derlemek için Microsoft Build Engine (MSBuild) kullanıyorsanız,. csproj dosyasına bir özellik etiketi ekleyerek **-appconfig** derleyici seçeneğini belirleyebilirsiniz. Projede zaten ayarlanmış olan App. config dosyasını kullanmak için,. csproj dosyasına özellik etiketi `<UseAppConfigForCompiler>` ekleyin ve değerini olarak `true`ayarlayın. Farklı bir App. config dosyası belirtmek için, özellik etiketi `<AppConfigForCompiler>` ekleyin ve değerini dosyanın konumuna ayarlayın.  
+> Uygulamanızı derlemek için Microsoft Build Engine (MSBuild) kullanıyorsanız,. csproj dosyasına bir özellik etiketi ekleyerek **-appconfig** derleyici seçeneğini belirleyebilirsiniz. Projede zaten ayarlanmış olan App. config dosyasını kullanmak için,. csproj dosyasına özellik etiketi `<UseAppConfigForCompiler>` ekleyin ve değerini olarak `true`ayarlayın. Farklı bir App. config dosyası belirtmek için, özellik etiketi `<AppConfigForCompiler>` ekleyin ve değerini dosyanın konumuna ayarlayın.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir uygulamanın hem .NET Framework uygulamasına hem de her iki uygulamada bulunan herhangi bir .NET Framework derlemesinin Silverlight uygulamasına .NET Framework başvurularına sahip olmasını sağlayan bir App. config dosyası gösterir. **-Appconfig** derleyici seçeneği bu app. config dosyasının konumunu belirtir.  

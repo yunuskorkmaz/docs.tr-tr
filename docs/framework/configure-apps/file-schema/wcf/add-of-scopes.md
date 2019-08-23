@@ -2,23 +2,23 @@
 title: <add> / <scopes>
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: c29e47f688118e34fbdb4deb396c930d478f0582
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b190cb72e21d47bdc62aab2daba0f6eea1ee04ac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673608"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926626"
 ---
-# <a name="add-of-scopes"></a>\<Ekle >, \<kapsamları >
-Özel bir kapsam sorgu sırasında hizmet bitiş noktası süzmek için kullanılan URI ekler.  
+# <a name="add-of-scopes"></a>\<\<kapsamların > ekleyin >
+Sorgu sırasında hizmet uç noktalarını filtrelemek için kullanılabilecek bir özel kapsam URI 'Si ekler.  
   
 \<system.ServiceModel>  
 \<davranışlar >  
-\<endpointBehaviors>  
-\<davranışı >  
+\<Endpointdavranışlar >  
+\<davranış >  
 \<endpointDiscovery >  
-\<kapsamları >  
-\<Ekle >  
+\<kapsamlar >  
+\<> Ekle  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,7 +43,7 @@ ms.locfileid: "61673608"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|kapsam|Eşleşme ölçütlerinde Hizmetleri bulmak için kullanılabilir uç nokta kapsam bilgilerini içeren bir URI.|  
+|kapsam|Uç nokta için hizmet bulmaya yönelik eşleştirme ölçütlerinde kullanılabilecek kapsam bilgilerini içeren bir URI.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -52,7 +52,7 @@ ms.locfileid: "61673608"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<kapsamları >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Özel kapsam sorgu sırasında hizmet bitiş noktası süzmek için kullanılan bir URI'leri belirten yapılandırma öğelerinin bir koleksiyonunu içerir.|  
+|[\<kapsamlar >](scopes.md)|Sorgu sırasında hizmet uç noktalarını filtrelemek için kullanılabilecek özel kapsam URI 'Leri belirten yapılandırma öğelerinin bir koleksiyonunu içerir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

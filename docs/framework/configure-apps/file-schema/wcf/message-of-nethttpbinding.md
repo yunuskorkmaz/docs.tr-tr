@@ -2,22 +2,22 @@
 title: <message> / <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 5bc953b4a1fad90aec5db507469368e7b21bb7e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a7606c0ebc9fc1bbd34aef619dcb4b8a1d63fa5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768972"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931540"
 ---
-# <a name="message-of-nethttpbinding"></a>\<İleti >, \<netHttpBinding >
-İleti düzeyi güvenliği ayarlarını tanımlar [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
+# <a name="message-of-nethttpbinding"></a>\<\<NetHttpBinding > ileti >
+[ \<BasicHttpBinding >](basichttpbinding.md)'in ileti düzeyi güvenliğine yönelik ayarları tanımlar.  
   
  \<system.ServiceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<netHttpBinding>  
 \<bağlama >  
 \<Güvenlik >  
-\<İleti >  
+\<ileti >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,21 +27,21 @@ ms.locfileid: "61768972"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
+ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|algorithmSuite|İleti şifreleme ve anahtar-wrap algoritmaları ayarlar. Bu öznitelik türünde <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, algoritmalar ve anahtar boyutları belirtir. Bu algoritmalar, güvenlik ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen platformlarla eşlenir.<br /><br /> Varsayılan değer `Basic256` şeklindedir.|  
-|clientCredentialType|İleti tabanlı güvenlik yöntemi ile bir istemci kimlik doğrulaması yapılırken kullanılacak kimlik bilgisi türünü belirtir. Varsayılan, `UserName` değeridir.|  
+|algorithmSuite|İleti şifrelemesini ve anahtar sarması algoritmalarını ayarlar. Bu öznitelik, algoritmaları ve <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>anahtar boyutlarını belirten türüdür. Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.<br /><br /> Varsayılan değer `Basic256` şeklindedir.|  
+|clientCredentialType|İleti tabanlı güvenlik kullanarak istemci kimlik doğrulaması gerçekleştirirken kullanılacak kimlik bilgisinin türünü belirtir. Varsayılan, `UserName` değeridir.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|UserName|-İstemci kimlik doğrulaması için bir kullanıcı adı kimlik bilgisi ile sunucu gerektirir. Bu kimlik bilgilerini kullanarak belirtilmesi gerekir <`clientCredentials`> öğesi.<br />-WCF parola özeti gönderme veya parolaları ve ileti güvenliği için bu anahtarları kullanarak anahtarlar türetme desteklemez. Bu nedenle, WCF, taşıma, kullanıcı adı kimlik bilgileri kullanılırken korunması gerektiğini zorlar. İçin `basicHttpBinding`, bu SSL kanalı ayarlama gerektirir.|  
-|Sertifika|Bir sertifika kullanarak sunucuya istemcinin kimliğinin doğrulanmasını gerektirir. İstemci kimlik bilgisi bu durumda kullanarak belirtilmesi gerekir <`clientCredentials`> ve <`clientCertificate`>. Ayrıca, ileti güvenlik modunu kullanırken, istemcinin hizmet sertifikası ile sağlanması gerekir. Hizmet kimlik bilgisi bu durumda kullanarak belirtilmesi gerekiyor <xref:System.ServiceModel.Description.ClientCredentials> sınıfı veya `ClientCredentials` davranış öğesi ve hizmeti belirterek sertifika kullanarak \<serviceCertificate > serviceCredentials öğesidir.|  
+|UserName|-İstemcinin bir Kullanıcı adı kimlik bilgisiyle sunucuda kimlik doğrulamasını gerektirir. Bu kimlik bilgisinin <`clientCredentials`> öğesi kullanılarak belirtilmesi gerekir.<br />-WCF parola özetinin gönderilmesini veya parolaları kullanarak anahtar türemesini veya ileti güvenliği için bu tuşları kullanmayı desteklemez. Bu nedenle, WCF, Kullanıcı adı kimlik bilgileri kullanılırken taşımanın güvenli olmasını zorlar. `basicHttpBinding`İçin, bunun için bir SSL kanalı ayarlanması gerekir.|  
+|Sertifika|İstemcinin bir sertifika kullanarak sunucuda kimlik doğrulamasını gerektirir. Bu durumda istemci kimlik bilgisinin <`clientCredentials`> ve <`clientCertificate`> kullanılarak belirtilmesi gerekir. Ayrıca, ileti güvenliği modunu kullanırken, istemcinin hizmet sertifikasıyla sağlanması gerekir. Bu durumda hizmet kimlik bilgilerinin sınıf veya <xref:System.ServiceModel.Description.ClientCredentials> `ClientCredentials` davranış öğesi kullanılarak belirtilmesi ve ServiceCredentials öğesinin \<ServiceCertificate > öğesi kullanılarak hizmet sertifikası belirtilmesi gerekir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -50,12 +50,12 @@ ms.locfileid: "61768972"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|<`security`> öğesi <`netHttpBinding`>|İçin güvenlik özelliklerini tanımlayan <`netHttpBinding`> öğesi.|  
+|<`security`< > öğesi`netHttpBinding`>|<`netHttpBinding`> Öğesi için güvenlik yeteneklerini tanımlar.|  
   
 ## <a name="example"></a>Örnek  
- Bu örnek basicHttpBinding ve ileti güvenlik kullanan bir uygulamanın nasıl uygulanacağını gösterir. Aşağıdaki yapılandırma örneği bir hizmet için uç nokta tanımı basicHttpBinding belirtir ve adlı bir bağlama yapılandırmasını başvuran `Binding1`. Hizmetin kendisini istemcinin kimliğini doğrulamak için kullandığı sertifika kümesinde `behaviors` yapılandırma dosyasının altında `serviceCredentials` öğesi. İstemcinin hizmete kendi kimliğini doğrulamak için kullandığı sertifikayı uygulandığı doğrulama modu da kümesinde `behaviors` bölümüne `clientCertificate` öğesi.  
+ Bu örnek, basicHttpBinding ve ileti güvenliği kullanan bir uygulamanın nasıl uygulanacağını gösterir. Bir hizmet için aşağıdaki yapılandırma örneğinde, uç nokta tanımı basicHttpBinding öğesini belirtir ve adlı `Binding1`bir bağlama yapılandırmasına başvurur. Hizmetin istemcinin kimliğini doğrulamak için kullandığı sertifika, `behaviors` `serviceCredentials` öğesinin altındaki yapılandırma dosyasının bölümünde ayarlanır. İstemcinin hizmete kendi kimliğini doğrulamak için kullandığı sertifika için geçerli olan doğrulama modu, `behaviors` `clientCertificate` öğesinin altındaki bölümünde de ayarlanır.  
   
- Aynı bağlama ve güvenlik ayrıntıları, istemci yapılandırma dosyasında belirtilir.  
+ Aynı bağlama ve güvenlik ayrıntıları istemci yapılandırma dosyasında belirtilmiştir.  
   
 ```xml  
 <system.serviceModel>
@@ -121,8 +121,8 @@ ms.locfileid: "61768972"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<bağlama >](../../../misc/binding.md)

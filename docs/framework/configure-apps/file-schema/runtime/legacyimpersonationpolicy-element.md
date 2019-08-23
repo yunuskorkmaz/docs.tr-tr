@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cf997c8ff13e0a6a4664ea3b538ac0def1baacf
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: da01d0dac2e67d6c0131a2b5965472bbd19213fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663635"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927324"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<Legacyımpersonationpolicy > öğesi
 Geçerli iş parçacığında yürütme bağlamı için akış ayarlarından bağımsız olarak, Windows kimliğinin zaman uyumsuz noktalarda akış yapmaz.  
@@ -63,7 +63,7 @@ Geçerli iş parçacığında yürütme bağlamı için akış ayarlarından ba�
  .NET Framework 2,0 ' den başlayarak, zaman uyumsuz noktalarda akış `<legacyImpersonationPolicy>` yapmaz öğesini <xref:System.Security.Principal.WindowsIdentity> belirtmek için öğesini kullanabilirsiniz.  
   
 > [!NOTE]
->  Ortak dil çalışma zamanı (CLR), yönetilen kod kullanılarak gerçekleştirilen kimliğe bürünme işlemlerinden, yönetilmeyen koda platform çağırma veya doğrudan Win32 işlevlerine yapılan çağrılar aracılığıyla yapılan kimliğe bürünme işlemlerinden haberdar olur. Öğe true <xref:System.Security.Principal.WindowsIdentity> (`<alwaysFlowImpersonationPolicy enabled="true"/>`) olarak ayarlanmadığı takdirde, yalnızca yönetilen nesneler zaman uyumsuz noktalara `alwaysFlowImpersonationPolicy` akabilir. `alwaysFlowImpersonationPolicy` Öğesinin true olarak ayarlanması, kimliğe bürünme işlemi ne olursa olsun, Windows kimliğinin her zaman zaman uyumsuz noktalarda akacağını belirtir. Zaman uyumsuz noktalarda yönetilmeyen kimliğe bürünme ile akan hakkında daha fazla bilgi için bkz [ \<. alwaysFlowImpersonationPolicy > öğesi](alwaysflowimpersonationpolicy-element.md).  
+> Ortak dil çalışma zamanı (CLR), yönetilen kod kullanılarak gerçekleştirilen kimliğe bürünme işlemlerinden, yönetilmeyen koda platform çağırma veya doğrudan Win32 işlevlerine yapılan çağrılar aracılığıyla yapılan kimliğe bürünme işlemlerinden haberdar olur. Öğe true <xref:System.Security.Principal.WindowsIdentity> (`<alwaysFlowImpersonationPolicy enabled="true"/>`) olarak ayarlanmadığı takdirde, yalnızca yönetilen nesneler zaman uyumsuz noktalara `alwaysFlowImpersonationPolicy` akabilir. `alwaysFlowImpersonationPolicy` Öğesinin true olarak ayarlanması, kimliğe bürünme işlemi ne olursa olsun, Windows kimliğinin her zaman zaman uyumsuz noktalarda akacağını belirtir. Zaman uyumsuz noktalarda yönetilmeyen kimliğe bürünme ile akan hakkında daha fazla bilgi için bkz [ \<. alwaysFlowImpersonationPolicy > öğesi](alwaysflowimpersonationpolicy-element.md).  
   
  Bu varsayılan davranışı iki farklı şekilde değiştirebilirsiniz:  
   

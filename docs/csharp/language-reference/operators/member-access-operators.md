@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 763fdb442fa0037dafd51f89badd04436e24d254
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 5ff5e68fbce320076e6d18e9e139b418a15bba77
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566824"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924635"
 ---
 # <a name="member-access-operators-c-reference"></a>Üye erişim işleçleri (C# başvuru)
 
@@ -145,7 +145,7 @@ Aşağıdaki örnek, bağımsız değişkenler içeren veya olmayan bir yöntemi
 
 ### <a name="other-usages-of-"></a>() Diğer kullanımları
 
-Ayrıca, bir ifadede işlemlerin değerlendirileceği sırayı belirtmek için parantezleri de kullanabilirsiniz. Daha fazla bilgi için [işleçler](../../programming-guide/statements-expressions-operators/operators.md) makalesinin [parantezler ekleme](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) bölümüne bakın. Öncelik düzeyine göre sıralanan işleçlerin listesi için bkz [ C# . işleçler](index.md).
+Ayrıca, bir ifadede işlemlerin değerlendirileceği sırayı ayarlamak için parantez de kullanabilirsiniz. Daha fazla bilgi için bkz [ C# . işleçler](index.md).
 
 Açık tür dönüştürmeleri gerçekleştiren [atama ifadeleri](type-testing-and-cast.md#cast-operator-), parantez de kullanır.
 

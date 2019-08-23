@@ -8,26 +8,26 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-ms.openlocfilehash: 0ade908e92e552017acb9ba242ccba2c28c3c995
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68c9653e616388374aad2ad33ac7dab68446241d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051058"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923415"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>Nasıl yapılır: Kılavuz Kullanarak Standart UI İletişim Kutusu Oluşturma
-Bu örnek, standart bir oluşturma işlemi gösterilmektedir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] iletişim kutusunu kullanarak <xref:System.Windows.Controls.Grid> öğesi.  
+Bu örnek, [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] <xref:System.Windows.Controls.Grid> öğesini kullanarak bir standart iletişim kutusu oluşturmayı gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek gibi bir iletişim kutusu oluşturur **çalıştırma** iletişim kutusunda [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] işletim sistemi.  
+ Aşağıdaki örnek, Windows işletim sistemindeki **Çalıştır** iletişim kutusu gibi bir iletişim kutusu oluşturur.  
   
- Örnek bir <xref:System.Windows.Controls.Grid> ve kullandığı <xref:System.Windows.Controls.ColumnDefinition> ve <xref:System.Windows.Controls.RowDefinition> beş sütun ve dört satır tanımlamak için sınıflar.  
+ Örnek bir <xref:System.Windows.Controls.Grid> oluşturur ve beş sütun ve dört <xref:System.Windows.Controls.RowDefinition> satır tanımlamak için <xref:System.Windows.Controls.ColumnDefinition> ve sınıflarını kullanır.  
   
- Bu örnek, ardından ekler ve yerleştirir bir <xref:System.Windows.Controls.Image>, `RunIcon.png`, iletişim kutusunda bulunan resmi temsil edecek. Görüntünün ilk sütun ve satır yerleştirilir <xref:System.Windows.Controls.Grid> (sol üst köşede).  
+ Daha sonra bu örnek, iletişim kutusunda <xref:System.Windows.Controls.Image>bulunan `RunIcon.png`görüntüyü göstermek için bir, ekler ve konumlandırır. Görüntü, <xref:System.Windows.Controls.Grid> (sol üst köşenin) ilk sütununa ve satırına yerleştirilir.  
   
- Ardından, örnek ekler bir <xref:System.Windows.Controls.TextBlock> kalan sütunlarını ilk satırın kapsayan ilk sütuna öğesi. Başka bir ekler <xref:System.Windows.Controls.TextBlock> temsil etmek için ilk sütunda, ikinci satır öğesi **açık** metin kutusu. A <xref:System.Windows.Controls.TextBlock> aşağıdaki gibi veri giriş alanı temsil eder.  
+ Sonra, örnek ilk sütuna bir <xref:System.Windows.Controls.TextBlock> öğe ekler ve ilk satırın kalan sütunlarını kapsar. **Açık** metin kutusunu <xref:System.Windows.Controls.TextBlock> göstermek için ilk sütundaki ikinci satıra bir öğe ekler. Veri <xref:System.Windows.Controls.TextBlock> girişi alanını temsil eden aşağıdaki bir.  
   
- Son olarak, üç örnek ekler <xref:System.Windows.Controls.Button> temsil eden son satırın öğelerine **Tamam**, **iptal**, ve **Gözat** olayları.  
+ Son olarak, örnek, son <xref:System.Windows.Controls.Button> satıra, **Tamam**, **iptal**ve **Gözden** geçirme olaylarını temsil eden üç öğe ekler.  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

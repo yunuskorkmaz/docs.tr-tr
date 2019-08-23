@@ -12,19 +12,19 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: ce616f45ceaa3db117c6981d2987ac09bba7b3fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ff6b2aad9ef0775547af57f11af28839e69637c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912944"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914975"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Nasıl yapılır: Windows Forms CheckBox Tıklamalarına Yanıt Verme
-Her bir kullanıcı bir Windows Forms tıkladığında <xref:System.Windows.Forms.CheckBox> denetimi <xref:System.Windows.Forms.Control.Click> olayı oluşur. Onay kutusunun durumunu olarak bazı eylemleri gerçekleştirmek için uygulamanızı programlayabilirsiniz.  
+Kullanıcı Windows Forms <xref:System.Windows.Forms.CheckBox> denetimine <xref:System.Windows.Forms.Control.Click> tıkladığında olay oluşur. Onay kutusunun durumuna bağlı olarak, uygulamanızı bazı eylemler gerçekleştirecek şekilde programlayabilirsiniz.  
   
-### <a name="to-respond-to-checkbox-clicks"></a>CheckBox tıklamalarına yanıt verme için  
+### <a name="to-respond-to-checkbox-clicks"></a>Onay kutusu tıklamalarına yanıt vermek için  
   
-1. İçinde <xref:System.Windows.Forms.Control.Click> olay işleyicisi, kullanım <xref:System.Windows.Forms.CheckBox.Checked%2A> denetimin durumunu belirlemek ve gerekli herhangi bir eylemi gerçekleştirmek için özellik.  
+1. Olay işleyicisinde, denetimin durumunu öğrenmek için <xref:System.Windows.Forms.CheckBox.Checked%2A> özelliğini kullanın ve gerekli tüm eylemleri gerçekleştirin. <xref:System.Windows.Forms.Control.Click>  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -71,16 +71,16 @@ Her bir kullanıcı bir Windows Forms tıkladığında <xref:System.Windows.Form
     ```  
   
     > [!NOTE]
-    >  Kullanıcının çift çalışırsa <xref:System.Windows.Forms.CheckBox> denetimi her tıklatma ayrı ayrı işlenir; diğer bir deyişle, <xref:System.Windows.Forms.CheckBox> denetimi çift olay desteklemez.  
+    > Kullanıcı <xref:System.Windows.Forms.CheckBox> denetime çift tıkladenerse, her tıklama ayrı olarak işlenir; diğer bir deyişle <xref:System.Windows.Forms.CheckBox> , denetim çift tıklama olayını desteklemez.  
   
     > [!NOTE]
-    >  Zaman <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> özelliği `true` (varsayılan), <xref:System.Windows.Forms.CheckBox> otomatik olarak seçilir veya tıklandığında temizlenir. Aksi takdirde, el ile ayarlamanız gerekir <xref:System.Windows.Forms.CheckBox.Checked%2A> özelliği olduğunda <xref:System.Windows.Forms.Control.Click> olayı oluşur.  
+    > Özellik (varsayılan )<xref:System.Windows.Forms.CheckBox> olduğunda, tıklandığında otomatik olarak seçilir veya temizlenir. `true` <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> Aksi takdirde, <xref:System.Windows.Forms.CheckBox.Checked%2A> <xref:System.Windows.Forms.Control.Click> olay gerçekleştiğinde özelliği el ile ayarlamanız gerekir.  
   
-     Ayrıca <xref:System.Windows.Forms.CheckBox> denetim bir eylemi belirlemek için.  
+     Ayrıca, <xref:System.Windows.Forms.CheckBox> bir eylem kursu tespit etmek için denetimi de kullanabilirsiniz.  
   
-### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>Bir eylemi bir onay kutusu seçildiğinde belirlemek için tıklandı  
+### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>Bir onay kutusu tıklandığında bir eylem kursu belirleme  
   
-1. Case deyimi değerini sorgulamanıza <xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliğini bir eyleme belirlemek için. Zaman <xref:System.Windows.Forms.CheckBox.ThreeState%2A> özelliği `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliği, kutunun denetlenen temsil eder ve üç olası değer döndürebilir kutusu görüntülenir kutusu denetlenmeyen durdurulmasını veya üçüncü belirlenmemiş duruma sahip bir devre dışı Görünüm seçeneğini belirtmek için kullanılamaz.  
+1. Bir eylem kursu belirleme <xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliğinin değerini sorgulamak için Case ifadesini kullanın. Özelliği olarak `true`ayarlandığında ,<xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliği denetlenen kutuyu, işaretlenmekte olan kutuyu veya kutunun soluk olarak görüntülendiği üçüncü bir belirsiz durumu temsil eden üç olası değeri döndürebilir <xref:System.Windows.Forms.CheckBox.ThreeState%2A> seçeneğin kullanılamadığını belirten görünüm.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -133,11 +133,11 @@ Her bir kullanıcı bir Windows Forms tıkladığında <xref:System.Windows.Form
     ```  
   
     > [!NOTE]
-    >  Zaman <xref:System.Windows.Forms.CheckBox.ThreeState%2A> özelliği `true`, <xref:System.Windows.Forms.CheckBox.Checked%2A> özelliği döndürür `true` hem <xref:System.Windows.Forms.CheckState.Checked> ve <xref:System.Windows.Forms.CheckState.Indeterminate>.  
+    > <xref:System.Windows.Forms.CheckBox.ThreeState%2A> Özelliği olarak `true`ayarlandığında, <xref:System.Windows.Forms.CheckBox.Checked%2A> özelliği hem hem de `true` <xref:System.Windows.Forms.CheckState.Checked> için döndürür .<xref:System.Windows.Forms.CheckState.Indeterminate>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox Denetimine Genel Bakış](checkbox-control-overview-windows-forms.md)
-- [Nasıl yapılır: Windows Forms CheckBox denetimleriyle seçenekleri ayarlama](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [Nasıl yapılır: Seçenekleri Windows Forms onay kutusu denetimleriyle ayarlama](how-to-set-options-with-windows-forms-checkbox-controls.md)
 - [CheckBox Denetimi](checkbox-control-windows-forms.md)

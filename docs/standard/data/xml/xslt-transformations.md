@@ -5,33 +5,33 @@ ms.technology: dotnet-standard
 ms.assetid: 202f8820-224c-494f-b61e-cd127eac6e03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 922de11567af9409265ee18bfa6a2637951c57c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93d45b58433dc3c7231cea741aa7ea67dfab2d7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026592"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912032"
 ---
 # <a name="xslt-transformations"></a>XSLT Dönüşümleri
-Genişletilebilir Stil Sayfası Dil Dönüşümü (XSLT) kaynak XML belgesinin içeriğini başka bir belgeye biçimi veya yapıda farklı dönüştürme sağlar. Örneğin, bir Web sitesinde kullanılmak HTML'e XML dönüştürmek için veya yalnızca bir uygulama tarafından gerekli alanları içeren bir belgeyi dönüştürmek için XSLT kullanabilirsiniz. Bu dönüştürme işlemi tarafından belirtilen [W3C XSLT Dönüşümleri (XSLT) sürüm 1.0 öneri](https://www.w3.org/TR/xslt-10/).  
+Genişletilebilir Stil sayfası dil dönüşümü (XSLT), kaynak XML belgesinin içeriğini biçim veya yapıda farklı başka bir belgeye dönüştürmenizi sağlar. Örneğin, XSLT 'yi bir Web sitesinde kullanılmak üzere HTML 'ye dönüştürmek veya yalnızca bir uygulamanın gerektirdiği alanları içeren bir belgeye dönüştürmek için kullanabilirsiniz. Bu dönüştürme işlemi [W3C XSL dönüştürmeleri (XSLT) sürüm 1,0 önerisi](https://www.w3.org/TR/xslt-10/)tarafından belirtilir.  
   
- <xref:System.Xml.Xsl.XslCompiledTransform> .NET içinde XSLT işlemci bir sınıftır. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı destekler [W3C XSLT 1.0 öneri](https://www.w3.org/TR/xslt-10/).  
+ <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı, .net 'teki XSLT işlemcisidir. Sınıfı, [W3C XSLT 1,0 önerisini](https://www.w3.org/TR/xslt-10/)destekler. <xref:System.Xml.Xsl.XslCompiledTransform>  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Sınıfı .NET Framework 2.0 sürümünde kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> XSLT Altyapısı'nın yeni bir uygulama bir sınıftır. Bu performans geliştirmeleri ve yeni güvenlik özellikleri içerir. Kullanarak XSLT uygulamaları oluşturmak için önerilen yöntemdir <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.  
+> Sınıf <xref:System.Xml.Xsl.XslTransform> , .NET Framework sürüm 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı, XSLT altyapısının yeni bir uygulamasıdır. Performans iyileştirmeleri ve yeni güvenlik özellikleri içerir. Önerilen uygulama, <xref:System.Xml.Xsl.XslCompiledTransform> sınıfını kullanarak XSLT uygulamaları oluşturmaktır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [XslCompiledTransform Sınıfını Kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)  
- Kullanma hakkında bilgi sağlar <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.  
+ <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfını kullanma hakkında bilgi sağlar.  
   
  [XslTransform Sınıfından Geçirme](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)  
- Nasıl koddan geçirileceği anlatılmaktadır <xref:System.Xml.Xsl.XslTransform> sınıfı.  
+ <xref:System.Xml.Xsl.XslTransform> Sınıfından kodun nasıl geçirileceği açıklanır.  
   
  [XSLT Derleyicisi (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
- XSLT derleyicisi kullanma hakkında bilgi sağlar.  
+ XSLT derleyicisini kullanma hakkında bilgi sağlar.  
   
  [XslTransform Sınıfı ile XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
- Kullanma hakkında bilgi sağlar <xref:System.Xml.Xsl.XslTransform> sınıfı.  
+ <xref:System.Xml.Xsl.XslTransform> Sınıfını kullanma hakkında bilgi sağlar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Xml.Xsl.XslCompiledTransform>  

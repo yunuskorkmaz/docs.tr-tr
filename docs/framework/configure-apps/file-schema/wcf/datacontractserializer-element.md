@@ -7,20 +7,20 @@ helpviewer_keywords:
 - DataContractSerializer
 - KnownTypes
 ms.assetid: f41fb4d5-24e7-4059-8010-286a30bfea93
-ms.openlocfilehash: b635f03d1e4a6628a76d678f7366482717276376
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e440810fee1dddb7025d1385b1edb4838d98a39
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704147"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925919"
 ---
 # <a name="datacontractserializer"></a>\<dataContractSerializer >
-İçin yapılandırma verilerini içeren <xref:System.Runtime.Serialization.DataContractSerializer>. Bu öğe, iki farklı hiyerarşilere gerçekleşir. Bir listelenir aşağıdaki şema hiyerarşisini bölümü ve diğer açıklamalar bölümünde listelenir.  
+İçin yapılandırma verilerini içerir <xref:System.Runtime.Serialization.DataContractSerializer>. Bu öğe iki farklı hiyerarşilerde oluşur. Bunlardan biri aşağıdaki şema hiyerarşisi bölümünde listelenir ve diğer açıklamalar bölümünde listelenir.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
 \<serviceBehaviors>  
-\<davranışı >  
+\<davranış >  
 \<dataContractSerializer >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -37,8 +37,8 @@ ms.locfileid: "61704147"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|IgnoreExtensionDataObject|Bunu edilirken bitiş noktası tarafından sağlanan veri yoksay belirten bir Boole değeri serileştirilecek veya serisi. Bu öznitelik yalnızca ayarlanabilir `<dataContractSerializer>` altında `<behavior>` öğesi.|  
-|maxItemsInObjectGraph|Serileştirmek veya seri durumdan çıkarılacak öğeleri maksimum sayısını belirten bir tamsayı. Bu öznitelik 65536'dır.|  
+|IgnoreExtensionDataObject|Seri hale getirilmekte veya seri durumdan çıkarılmakta olduğu zaman, uç nokta tarafından sağlanan verilerin yoksayılıp yoksayılmayacağını belirten bir Boole değeri. Bu öznitelik yalnızca `<dataContractSerializer>` `<behavior>` öğesinin altında ayarlanabilir.|  
+|MaxItemsInObjectGraph|Seri hale getirilecek veya seri durumdan çıkarılacak en fazla öğe sayısını belirten bir tamsayı. Bu öznitelik 65536 ' dir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -47,22 +47,22 @@ ms.locfileid: "61704147"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)|Bir koleksiyon için bir hizmet davranışını ayarlar.|  
-|[\<System.Runtime.Serialization >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|İçin olan kök öğesini temsil eden <xref:System.Runtime.Serialization> ad uzayı bölümü ve seçeneklerini ayarlamak için öğeleri içeren <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|[\<davranış >](behavior-of-servicebehaviors.md)|Bir hizmetin davranışına yönelik ayarların koleksiyonu.|  
+|[\<System. Runtime. Serialization >](system-runtime-serialization.md)|<xref:System.Runtime.Serialization> Ad alanı bölümünün kök öğesini temsil eder ve seçeneklerini <xref:System.Runtime.Serialization.DataContractSerializer>ayarlamak için öğeleri içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu konunun giriş belirtildiği gibi ikinci hiyerarşide budur \<X509Extension > öğesi oluşur.  
+ Bu konunun giriş bölümünde belirtildiği gibi, \<X509Extension > öğesinin gerçekleştiği ikinci hiyerarşisidir.  
   
- [\<System.Runtime.Serialization >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
+ [\<System. Runtime. Serialization >](system-runtime-serialization.md)  
   
- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
+ [\<dataContractSerializer >](datacontractserializer-element.md)  
   
- Bilinen türler hakkında daha fazla bilgi için bkz: <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Bilinen türler hakkında daha fazla bilgi için bkz <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.ServiceModel.Configuration.DataContractSerializerElement>
-- [Veri Anlaşması Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [Veri Aktarma ve Seri Hale Getirme](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+- [Veri Anlaşması Bilinen Türler](../../../wcf/feature-details/data-contract-known-types.md)
+- [Veri Aktarma ve Seri Hale Getirme](../../../wcf/feature-details/data-transfer-and-serialization.md)

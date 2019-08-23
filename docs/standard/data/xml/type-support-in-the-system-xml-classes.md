@@ -5,38 +5,38 @@ ms.technology: dotnet-standard
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 979975e993a84dfe5c5527291f8cfe650be80ee6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 954ff12ae1ac8b4d601c35fcd76ea35b2bb3acbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647830"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939445"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>System.Xml Sınıflarında Tür Desteği
-.NET Framework sürüm 2. 0'da, çekirdek XML sınıfı türü destek özellikleri içerecek şekilde geliştirilmiştir. <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, Ve <xref:System.Xml.XPath.XPathNavigator> sınıfları XML Şeması türleri ve ortak dil çalışma zamanı (CLR) türler arasında dönüştürme olanağı dahil olmak üzere türü desteği özelliklerini içerir.  
+.NET Framework sürüm 2,0 ' de, çekirdek XML sınıfları tür desteği özelliklerini içerecek şekilde geliştirilmiştir. <xref:System.Xml.XmlReader>, Vesınıfları<xref:System.Xml.XPath.XPathNavigator> , XML şema türleri ve ortak dil çalışma zamanı (CLR) türleri arasında dönüştürme özelliği de dahil olmak üzere tür desteği özelliklerini içerir. <xref:System.Xml.XmlWriter>  
   
- .NET Framework sürüm 2.0 <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, ve <xref:System.Xml.XPath.XPathNavigator> sınıfları geliştirilmiş tür desteği özelliklerini dahil etmek için.  
+ .NET Framework sürüm 2,0 ' <xref:System.Xml.XmlReader> <xref:System.Xml.XmlWriter>de,, ve <xref:System.Xml.XPath.XPathNavigator> sınıfları tür desteği özelliklerini içerecek şekilde geliştirilmiştir.  
   
-- <xref:System.Xml.XmlReader> Ve <xref:System.Xml.XPath.XPathNavigator> sınıfları her bir **adet Schemaınfo** şema bilgileri bir düğümde döndüren özellik.  
+- <xref:System.Xml.XmlReader> Ve<xref:System.Xml.XPath.XPathNavigator> sınıfları, bir düğümdeki şema bilgilerini döndüren bir **fermainınfo** özelliği içerir.  
   
-- **ReadContentAs** ve **ReadElementContentAs** ve yöntemlere <xref:System.Xml.XmlReader> sınıfı bir metin değerini okur ve tek bir yöntem çağrısı bir CLR değere Dönüştür.  
+- **ReadContentAs** ve **ReadElementContentAs** ve <xref:System.Xml.XmlReader> sınıfındaki Yöntemler bir metin değerini okur ve tek bir yöntem çağrısında bir CLR değerine dönüştürür.  
   
-- <xref:System.Xml.XmlWriter.WriteValue%2A> Metodunda <xref:System.Xml.XmlWriter> sınıfı XML'yi yazarken bu CLR türü bir XML Şeması türüne dönüştürür.  
+- <xref:System.Xml.XmlWriter> Sınıfındaki yöntemi, <xref:System.Xml.XmlWriter.WriteValue%2A> XML 'yi yazarken bir clr türünü bir XML şema türüne dönüştürür.  
   
-- **Değerlerini** ve <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> özellikleri <xref:System.Xml.XPath.XPathNavigator> sınıfı bir düğüm değer döndürmez ve tek bir yöntem çağrısı bir CLR değere Dönüştür.  
+- <xref:System.Xml.XPath.XPathNavigator> Sınıftaki **ValueAs** ve <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> Özellikler bir düğüm değeri döndürür ve tek bir yöntem çağrısında bir CLR değerine dönüştürür.  
   
 > [!NOTE]
->  .NET Framework sürüm 1.0 <xref:System.Xml.XmlConvert> sınıfı, XML şema ve CLR türleri arasında dönüştürme yapmak gerekiyordu.  
+> .NET Framework sürüm 1,0 ' de, <xref:System.Xml.XmlConvert> XML şeması ve clr türleri arasında dönüştürme yapmak için sınıf gerekiyordu.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [XML Veri Türlerini CLR Türleriyle Eşleme](../../../../docs/standard/data/xml/mapping-xml-data-types-to-clr-types.md)  
- Varsayılan eşlemeleri CLR türlerine XML veri türlerini açıklar.  
+ XML veri türlerinin CLR türlerine varsayılan eşlemelerini açıklar.  
   
  [XML Tür Desteği Uygulama Notları](../../../../docs/standard/data/xml/xml-type-support-implementation-notes.md)  
- Tür desteği uygulama ayrıntılarının bazılarını açıklar.  
+ Bazı tür destek uygulama ayrıntılarını açıklar.  
   
  [XML Veri Türlerini Dönüştürme](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
- Nasıl kullanılacağını açıklar <xref:System.Xml.XmlConvert> XML şeması ve CLR türleri arasında dönüştürme yapmak sınıfı.  
+ XML şeması ve clr türleri <xref:System.Xml.XmlConvert> arasında dönüştürme yapmak için sınıfının nasıl kullanılacağını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [XPathNavigator Kullanarak Türü Kesin Olarak Belirtilmiş XML Verilerine Erişme](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

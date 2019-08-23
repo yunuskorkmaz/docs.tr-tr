@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 93e4845cab6735e74c711d720beeb06c8883a44b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 5fcf9c774592c0fbcdcca951ef99c1a2efa6f05e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566887"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922305"
 ---
 # <a name="operator-overloading-c-reference"></a>İşleç aşırı yüklemesiC# (başvuru)
 
-Kullanıcı tanımlı bir tür önceden tanımlanmış C# bir işleci aşırı yükleyebilir. Diğer bir deyişle, bir tür, bir veya her iki işlenen bu türden olduğunda bir işlemin özel uygulamasını sağlayabilir. [Fazla yüklenebilir işleçler](#overloadable-operators) bölümünde hangi işleçlerin aşırı C# yüklenmiş olduğu gösterilmektedir.
+Kullanıcı tanımlı bir tür önceden tanımlanmış C# bir işleci aşırı yükleyebilir. Diğer bir deyişle, bir tür işlenenden biri veya her ikisi bu türden olduğunda bir işlemin özel uygulamasını sağlayabilir. [Fazla yüklenebilir işleçler](#overloadable-operators) bölümünde hangi işleçlerin aşırı C# yüklenmiş olduğu gösterilmektedir.
 
 Bir işleç bildirmek için anahtarsözcüğünükullanın.`operator` Bir işleç bildiriminin aşağıdaki kuralları karşılaması gerekir:
 

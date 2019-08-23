@@ -2,56 +2,56 @@
 title: Etkinlik Listesi
 ms.date: 03/30/2017
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-ms.openlocfilehash: f96aab037e86b05096df7ffc82a0be3f6cce1ad2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d048dc9851a3b07b6c7457de95f2c752b0ffa964
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998042"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933586"
 ---
 # <a name="activity-list"></a>Etkinlik Listesi
-Bu konuda, Windows Communication Foundation (WCF) tarafından tanımlanan tüm etkinlikleri listelenir.  
+Bu konu, Windows Communication Foundation (WCF) tarafından tanımlanan tüm etkinlikleri listeler.  
   
 > [!NOTE]
->  Etkinlikler de program aracılığıyla ve grup kullanıcı izlemelere tanımlayabilirsiniz. Daha fazla bilgi için [kullanıcı kodu izlemeleri yayma](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+> Ayrıca, Kullanıcı izlemelerini gruplamak için etkinlik programlama yoluyla da tanımlayabilirsiniz. Daha fazla bilgi için bkz. [Kullanıcı kodu Izlemelerini yayma](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
   
 ## <a name="servicemodel-activities"></a>ServiceModel etkinlikleri  
- Aşağıdaki tabloda ana kullanım senaryoları için tüm etkinlikleri listeler.  
+ Aşağıdaki tabloda, önemli kullanım senaryoları için tüm etkinlikler listelenmektedir.  
   
 |Etiketle|Etkinlik Adı|Etkinlik Türü|Açıklama|  
 |-----------|-------------------|-------------------|-----------------|  
-|M|Ortam etkinliği|(Bu ServiceModel tarafından denetlenen) yok|Etkinlik Kimliği (istemci tarafı veya sunucu tarafı) ServiceModel koddaki çağrıları önce TLS'ye ayarlanır.<br /><br /> Örnek: Açık WCF istemcisi veya serviceHost.open burada adlı bir etkinlik olarak adlandırılır.|  
-|B|Oluştur<br /><br /> ChannelFactory. ContractType: '[Type]'.|Oluştur||  
-|C|Open<br /><br /> [ClientBase&#124;ChannelFactory]. ContractType: '[Type]'.|Open||  
-|I|Kapat [ClientBase&#124;ChannelFactory]. ContractType: '[Type]'.|Close||  
-|M|ServiceHost oluşturun. ServiceType: '[Type]'.|Oluştur||  
-|N|ServiceHost açın. ServiceType: '[Type]'.|Open||  
-|Z|ServiceHost kapatma. ServiceType: '[Type]'.|Close||  
-|O|'[Address]' dinleyin.|ListenAt|Bu ve sonraki etkinliğin aktarım özgüdür. ListenAt etkinlik, burada, kanal dinleyicisi dinler adresine eşleyen içeriğini temsil eder. Sıranın bir adrese eşlendiğinden MSMQ söz konusu olduğunda, kendisini kuyruğudur. Bu etkinlik, gelen bağlantıları taşımaları bağlantıya dayalı'MSMQ söz konusu olduğunda MSMQ iletileri için söz konusu olduğunda dinler. Bu etkinlik sırasında ServiceHost.Open() oluşturulur ve oluşturma ve disposing dinleyici, aynı zamanda tüm ReceiveBytes etkinlikler için dışarı aktarma ile ilgili izlemeleri içerir.|  
-|P|Bayt [address] bağlantısı alırsınız. MSMQ iletisi alırsınız.|ReceiveBytes|Bu etkinlik, sonunda bir WCF ileti alacak veriler işlenir. Gelen bayt sayısı, aktarım bağlantı odaklı veya http söz konusu olduğunda beklendi. Bağlantı oluşturulduğunda oluşturulan TCP/adlandırılmış kanal için bu etkinlik ömrünü bağlantı ömrünü aynıdır. Http için bu ileti isteği ömrünü ve ileti gönderildiğinde oluşturulur. Bu etkinlik oluşturma ve uygunsa bağlantısı kesilirken ilgili izlemeleri içerir, aynı zamanda tüm ileti (nesne) işleme etkinlikler için dışarı aktarır.<br /><br /> MSMQ söz konusu olduğunda, MSMQ iletisinin nerede alınır etkinliğidir.|  
-|Q|İşlem iletisi [sayı]. (Not [sayı], 1 ile başlayan bir düz olarak artan değerdir.)|ProcessMessage|Gelen ileti işler. Bu etkinlik bir WCF ileti nesnesi oluşturmak için alınan tüm veri (bayt, MSMQ iletisinin) başlar. Bu etkinlik içinde izlemeleri üst bilgisi işleme ile ilgilidir.<br /><br /> Tekrarlanarak gönderilen bir iletinin oluşturulduğunda ServiceHost ProcessAction etkinlik için karşılık gelen etkinlik kimliği bakan geçiş|  
-|D, S|'[Action]' eylemini işleyin.|ProcessAction|Üzerinde kullanıcı kodu için ileti gönderme için Aktarım/güvenlik/RM yığını aracılığıyla iletisi, işlem ve ters sırada gönderme.<br /><br /> "Etkinlik yayma"; aracılığıyla ileti üstbilgisinde gönderirse sunucuda bu etkinlik yayılan etkinlik kimliği kullanır. Aksi takdirde, yeni bir GUID oluşturulur.<br /><br /> İstek/yanıt sözleşmeleri yanıt iletisi Ayrıca, etkinlik olarak işlenir.|  
-|T|'[IContract.Operation]' yürütün.|ExecuteUserCode|Gönderme hizmeti tarafındaki sonra kullanıcı bir kod yürütün. Bu etkinlik, kullanıcı tarafından sağlanan kod ServiceHost koddan ayırmak için bir sınır sağlar.|  
+|A, D|Çevresel etkinlik|Yok (ServiceModel tarafından denetlenmiyor)|KIMLIĞI, ServiceModel koduna (istemci tarafı veya sunucu tarafı) yapılan herhangi bir çağrının önüne TLS olarak ayarlanmış olan etkinlik.<br /><br /> Örnek: WCF istemcisi veya serviceHost üzerinde açık olarak çağrılan bir etkinlik. Open çağırılır.|  
+|B|Oluştur<br /><br /> Endpoint. ContractType: ' [Type] '.|Oluştur||  
+|C|Open<br /><br /> [ClientBase&#124;ChannelFactory]. ContractType: ' [Type] '.|Open||  
+|I|[ClientBase&#124;ChannelFactory] öğesini kapatın. ContractType: ' [Type] '.|Close||  
+|M|ServiceHost oluşturun. ServiceType: ' [Type] '.|Oluştur||  
+|N|ServiceHost öğesini açın. ServiceType: ' [Type] '.|Open||  
+|Z|ServiceHost 'u kapatın. ServiceType: ' [Type] '.|Close||  
+|O|' [Address] ' konumunda dinleyin.|ListenAt|Bu ve sonraki etkinlik, aktarıma özeldir. ListenAt etkinliği, kanal dinleyicisinin dinlediği adresle eşleşen içeriği temsil eder. MSMQ söz konusu olduğunda, kuyruk tek bir adresle eşlendiğinden sıranın kendisi bu değildir. Bu etkinlik, MSMQ durumunda MSMQ iletileri için bağlantı yönelimli aktarımlara karşı gelen bağlantıları dinler. Bu etkinlik ServiceHost. Open () sırasında oluşturulur ve dinleyiciyi oluşturma ve atma ile ilgili izlemeleri ve tüm ReceiveBytes etkinliklerine aktarmayı içerir.|  
+|P|' [Address] ' bağlantısında bayt alın. MSMQ iletisi alın.|ReceiveBytes|Bu etkinlikte, sonunda bir WCF iletisi alacak veriler işlenir. Gelen baytlar, bağlantıya dayalı taşıma veya http olması durumunda bekletilir. TCP/adlandırılmış kanal için, bu etkinliğin ömrü bağlantı oluşturulduğu sırada oluşturulduğu gibi bağlantının kullanım süresidir. Http için bir ileti isteğinin kullanım ömrü ve ileti gönderildiğinde oluşturulur. Bu etkinlik, varsa bağlantıyı oluşturma ve atma ile ilgili izlemeleri içerir ve tüm ileti (nesne) işleme etkinliklerine aktarır.<br /><br /> MSMQ söz konusu olduğunda, MSMQ iletisinin alındığı etkinliktir.|  
+|Q|İşlem iletisi [sayı]. (Yani, [Number], 1 ile başlayan tek bir artış değeridir.)|ProcessMessage|Gelen bir iletiyi işleyin. Bu etkinlik, bir WCF ileti nesnesi oluşturmak için tüm veriler (bayt, MSMQ iletisi) alındığında başlar. Bu etkinliğin içindeki izlemeler üst bilgi işlemeyle ilgilenir.<br /><br /> Dağıtılabilir bir ileti biçimlendirilmişse, ServiceHost ProcessAction etkinliği ilgili etkinlik KIMLIĞI arandıktan sonra öğesine geçiş yapar.|  
+|D, S|' [Action] ' eylemini işleyin.|ProcessAction|İletiyi alma sırasında kullanıcı koduna ve gönderme sırasında ters sırada göndermek için taşıma/güvenlik/RM yığını aracılığıyla iletiyi işleyin.<br /><br /> Sunucuda, bu etkinlik "etkinlik yayma" yoluyla ileti üstbilgisinde gönderildiyse yayılan etkinlik KIMLIĞINI kullanır; Aksi takdirde, yeni bir GUID oluşturulur.<br /><br /> İstek/yanıt sözleşmeleri için yanıt iletisi de bu etkinlikte işlenir.|  
+|T|' [Icondikkatini. Operation] ' yürütün.|ExecuteUserCode|Hizmet tarafında gönderdikten sonra Kullanıcı kodunu yürütün. Bu etkinlik, Kullanıcı tarafından sağlanan koddan ServiceHost kodunu belirtmek için bir sınır sağlar.|  
   
 ## <a name="security-activities"></a>Güvenlik etkinlikleri  
- Aşağıdaki tabloda, güvenlikle ilgili tüm etkinlikleri listeler.  
+ Aşağıdaki tabloda güvenlik ile ilgili tüm etkinlikler listelenmektedir.  
   
 |Etkinlik Adı|Etkinlik Türü|Açıklama|  
 |-------------------|-------------------|-----------------|  
-|Kurulum güvenli oturum|SetupSecurity|Yalnızca istemci tarafında var. İçeren tüm k * / kimlik doğrulama ve güvenlik bağlamını ayarlamak için SCT birbiriyle değiştirir. Varsa `propagateActivity` = `true`, bu etkinlik, hizmetin karşılık gelen işlem eylem lk ile birleştirilmiş\*/SCT etkinlikler.|  
-|Güvenli Oturumu Kapat|SetupSecurity|İstemci tarafında var. Güvenli oturum kapatma iptal ileti alışverişi içerir. Varsa `propagateActivity` = `true`, bu etkinlik hizmetten işlem eylem "İptal" ile birleştirilir.|  
+|Güvenli oturum ayarla|SetupSecurity|Yalnızca istemci tarafında bulunur. Kimlik doğrulaması için tüm RST */SCT değişimlerinin yanı sıra güvenlik bağlamını ayarlamaya da sahiptir. Bu etkinlik, hizmetin karşılık gelen işlem\*eylemi RST/SCT etkinlikleriyle birleştirilir. `true` `propagateActivity` =|  
+|Güvenli oturumu Kapat|SetupSecurity|İstemci tarafında bulunur. Güvenli oturumu kapatmak için Iptal iletisi değişimini içerir. Bu etkinlik ,hizmetten"iptal"işlemeylemiylebirleştirilir.`true` `propagateActivity` =|  
   
- Aşağıdaki tabloda, COM + ilgili tüm etkinlikleri listelenmektedir.  
+ Aşağıdaki tabloda, COM+ ile ilgili tüm etkinlikler listelenmektedir.  
   
 |Etkinlik Adı|Etkinlik Türü|Açıklama|  
 |-------------------|-------------------|-----------------|  
-|COM + örneği oluşturma|TransferToCOMPlus|Her COM + 1 etkinlik örneği, WCF koddan çağırma|  
-|COM + yürütme \<işlem >|TransferToCOMPlus|Her COM + 1 etkinlik örneği, WCF koddan çağırma|  
+|COM+ örneği oluştur|TransferToCOMPlus|WCF kodundan gelen her COM+ çağrısı için 1 etkinlik örneği|  
+|COM+ \<işlemini yürütün >|TransferToCOMPlus|WCF kodundan gelen her COM+ çağrısı için 1 etkinlik örneği|  
   
 ## <a name="wmi-activities"></a>WMI etkinlikleri  
- Aşağıdaki tabloda, WMI ile ilgili tüm etkinlikleri listeler.  
+ Aşağıdaki tabloda WMI ile ilgili tüm etkinlikler listelenmektedir.  
   
 |Etkinlik Adı|Etkinlik Türü|Açıklama|  
 |-------------------|-------------------|-----------------|  
-|WMI Al|WMIGetObject|Kullanıcı, WMI'dan veri alıyor.|  
-|WMI put|WmiPutInstance|Kullanıcı verileri ile WMI güncelleştiriyor.|
+|WMI Get|Wgetobject|Kullanıcı WMI 'dan veri alıyor.|  
+|WMI put|Wmiputınstance|Kullanıcı WMI ile verileri güncelleştiriyor.|

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 348c51507006fecfe756cb17fd0d6242617577d7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b046a5fcd514dde84e2f0f8c22ee23529ee906e2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750228"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911463"
 ---
 # <a name="icordebugdatatarget2getimagelocation-method"></a>ICorDebugDataTarget2::GetImageLocation Yöntemi
-Modülün temel adres bir modülün yolu döndürür.  
+Modülün temel adresinden bir modülün yolunu döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,30 +26,30 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
   
 ## <a name="parameters"></a>Parametreler  
  `baseAddress`  
- [in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) modülün taban adresini gösteren bir değer.  
+ 'ndaki Modülün temel adresini temsil eden bir [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) değeri.  
   
  `cchName`  
- [in] Modül yolu alacak arabellek karakter sayısı.  
+ 'ndaki Arabellekte modül yolunu alacak karakterlerin sayısı.  
   
  `pcchName`  
- [out] Yazılan karakter sayısı için bir işaretçi `szName` arabellek.  
+ dışı `szName` Arabelleğe yazılan karakter sayısına yönelik bir işaretçi.  
   
  `szName`  
- [out] Modülün yolu.  
+ dışı Modülün yolu.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

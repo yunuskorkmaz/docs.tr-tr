@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a62199563c620156885c941204207b185834beb4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30500e8ea55f8298b9a980e34dc611b58a51bdcc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752152"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916393"
 ---
-# <a name="corprfjitcache-enumeration"></a>COR_PRF_JIT_CACHE Numaralandırması
-Önbelleğe alınan işlevi arama sonucu gösterir.  
+# <a name="cor_prf_jit_cache-enumeration"></a>COR_PRF_JIT_CACHE Numaralandırması
+Önbelleğe alınmış işlev aramasının sonucunu gösterir.  
   
 > [!NOTE]
->  `COR_PRF_CACHED_FUNCTION_FOUND` sıfır, bir değer serileştirilmesini `COR_PRF_JIT_CACHE` Boole bir yedek kullanılamaz.  
+> `COR_PRF_CACHED_FUNCTION_FOUND`sıfır değerine sahiptir, bu nedenle `COR_PRF_JIT_CACHE` Boole yedeği olarak kullanılamaz.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,17 +42,17 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|Arama işlevi bulunamadı.|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|Arama işlevi bulunamadı.|  
+|`COR_PRF_FUNCTION_FOUND`|Arama işlevi buldu.|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|Arama işlevi bulamadı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi** CorProf. IDL, CorProf. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

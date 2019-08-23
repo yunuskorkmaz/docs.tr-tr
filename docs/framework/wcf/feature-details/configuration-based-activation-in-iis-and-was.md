@@ -2,23 +2,23 @@
 title: IIS ve WAS'ta Yapılandırma Temelli Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: 99f6c7d41620a7bafea0981cbeaa5cdcbad5ef12
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f4de4aff2fbe6b8e82dc3d6523f492d06494c79e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636122"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909777"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>IIS ve WAS'ta Yapılandırma Temelli Etkinleştirme
 
-Normalde Internet Information Services (IIS) veya Windows İşlem Etkinleştirme Hizmeti (WAS) altında bir Windows Communication Foundation (WCF) hizmeti barındırırken .svc dosyası sağlamanız gerekir. .Svc dosyası, hizmet ve bir isteğe bağlı bir özel hizmet barındırma ortamı fabrikası adını içerir. Bu ek dosya yönetilebilirlik yükü ekler. Yapılandırma temelli etkinleştirme özelliği .svc dosya ve bu nedenle ilişkili gereksinimini ortadan kaldırır yükü.
+Normal olarak, Internet Information Services (IIS) veya Windows Işlem etkinleştirme hizmeti (WAS) altında bir Windows Communication Foundation (WCF) hizmeti barındırdığında bir. svc dosyası sağlamanız gerekir. . Svc dosyası, hizmetin adını ve isteğe bağlı bir özel hizmet ana bilgisayar fabrikası içerir. Bu ek dosya yönetilebilirlik ek yükü ekler. Yapılandırma tabanlı etkinleştirme özelliği, gereksinimi bir. svc dosyasına ve bu nedenle ilişkili ek yüke karşı kaldırır.
 
 ## <a name="configuration-based-activation"></a>Yapılandırma Temelli Etkinleştirme
 
-Yapılandırma temelli etkinleştirme .svc dosyasında yerleştirilmesi için kullanılır ve Web.config dosyasına yerleştirir meta verileri alır. İçinde <`serviceHostingEnvironment`> öğesi yok bir <`serviceActivations`> öğesi. İçinde <`serviceActivations`> öğesi bir veya daha fazla <`add`> öğeleri, her bir barındırılan hizmet için bir tane. <`add`> Öğesi, hizmet ve hizmet türü veya bir hizmet barındırma ortamı fabrikası için hizmetin göreli adresini ayarlamanıza olanak tanıyan öznitelikleri içeriyor. Aşağıdaki yapılandırma örnek kod, bu bölümde nasıl kullanıldığını gösterir.
+Yapılandırma tabanlı etkinleştirme,. svc dosyasına yerleştirilmesi için kullanılan meta verileri alır ve Web. config dosyasına koyar. <`serviceHostingEnvironment`> Öğesi içinde <`serviceActivations`bir > öğesi vardır. <`serviceActivations`> Öğesi içinde, bir veya daha fazla <`add`> öğesi, her barındırılan hizmet için bir öğedir. <`add`> Öğesi, hizmet ve hizmet türü ya da hizmet ana bilgisayar fabrikası için göreli adresi ayarlamanıza olanak sağlayan öznitelikleri içerir. Aşağıdaki yapılandırma örnek kodu, bu bölümün nasıl kullanıldığını gösterir.
 
 > [!NOTE]
->  Her <`add`> öğesi bir hizmeti ya da bir Fabrika özniteliğini belirtmeniz gerekir. Hem hizmet hem de Fabrika öznitelikleri belirterek izin verilir.
+> Her <`add`> öğesi bir hizmet veya bir fabrika özniteliği belirtmelidir. Hem Service hem de Factory özniteliklerinin belirtilmesine izin verilir.
 
 ```xml
 <serviceHostingEnvironment>
@@ -28,16 +28,16 @@ Yapılandırma temelli etkinleştirme .svc dosyasında yerleştirilmesi için ku
 </serviceHostingEnvironment>
 ```
 
- Bu Web.config dosyasında, hizmet kaynak kodu uygulama veya uygulamanın Bin dizinindeki derlenmiş bir bütünleştirilmiş kod App_Code dizinindeki yerleştirebilirsiniz.
+ Web. config dosyasında bu, hizmet kaynak kodunu uygulamanın App_Code dizinine ya da uygulamanın bin dizinine bir karmaşıklu derlemeyi yerleştirebilirsiniz.
 
 > [!NOTE]
-> - Yapılandırma temelli etkinleştirme kullanırken, satır içi kod .svc dosyalarında desteklenmiyor.
-> - `relativeAddress` Özniteliği ayarlanmalıdır göreli bir adrese gibi "\<alt dizini > / service.svc" veya "~ /\<alt-directory/service.svc".
-> - WCF ile ilgili bilinen bir uzantı yok. bir göreli adres kaydolarak bir yapılandırma özel durum oluşturulur.
-> - Belirtilen göreli sanal uygulama köküne göreli adresidir.
-> - Hiyerarşik yapılandırma modeli nedeniyle, makine ve site düzeyinde kayıtlı göreli adresleri sanal uygulamalar tarafından devralınır.
-> - Bir yapılandırma dosyası kayıtları bir .svc, .xamlx, .xoml veya diğer dosya ayarlarında daha önceliklidir.
-> - Tüm ' \' (ters eğik çizgi) için IIS gönderilen bir Uri / WAS'da otomatik olarak dönüştürülür bir '/' (eğik çizgi). Göreli adres eklenirse içeren bir ' \' ve IIS göreli adresini kullanan bir URI göndermek, ters eğik çizgiyi eğik çizgi için dönüştürülür ve IIS, göreli adresine eşleşemez. IIS eşleşme olduğunu gösterir izleme bilgilerini gönderir.
+> - Yapılandırma tabanlı etkinleştirme kullanılırken,. svc dosyalarında satır içi kod desteklenmez.
+> - Öznitelik `relativeAddress` , "\<alt dizin >/Service.exe" veya "~/\<Sub-Directory/Service. svc" gibi göreli bir adrese ayarlanmalıdır.
+> - WCF ile ilişkili bilinen bir uzantısı olmayan göreli bir adresi kaydettiğinizde bir yapılandırma özel durumu oluşturulur.
+> - Belirtilen göreli adres, sanal uygulamanın köküne göredir.
+> - Yapılandırma hiyerarşik modeli nedeniyle, makine ve site düzeyindeki kayıtlı göreli adresler sanal uygulamalar tarafından devralınır.
+> - Bir yapılandırma dosyasındaki kayıtlar, bir. svc,. xamlx,. xoml veya başka bir dosyanın ayarlarından önceliklidir.
+> - IIS/WAS 'a gönderilen URI içindeki herhangi bir ' \ ' (ters eğik çizgi), otomatik olarak bir '/' (eğik çizgi) olarak dönüştürülür. ' \ ' İçeren bir göreli adres eklenirse ve IIS 'yi göreli adresi kullanan bir URI gönderirseniz, ters eğik çizgi eğik çizgiye dönüştürülür ve IIS onunla ilgili adresle eşleşemez. IIS, hiçbir eşleşme bulunamadığını belirten izleme bilgilerini gönderir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

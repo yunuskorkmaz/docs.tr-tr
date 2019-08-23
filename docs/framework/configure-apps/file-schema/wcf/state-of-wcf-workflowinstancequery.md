@@ -1,28 +1,28 @@
 ---
-title: <state> WCF, <workflowInstanceQuery>
+title: <state>WCF,<workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99387a8f60e96beb2ec7706d9abf4bb6ae84b868
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757969"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938215"
 ---
-# <a name="state-of-wcf-workflowinstancequery"></a>\<durumu >, WCF \<Workflowınstancequery >
-İzleme kayıtları oluşturulduğunda izlenen iş akışı örneğinden abone olunan durumları koleksiyonunu temsil eder.  
+# <a name="state-of-wcf-workflowinstancequery"></a>\<WCF, \<WorkflowInstanceQuery > durum >
+İzleme kayıtları oluşturulduğunda izlenen iş akışı örneğinden abone olunan durumlar koleksiyonunu temsil eder.  
   
- Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
 \<İzleme >  
-\<profilleri >  
+\<Profiller >  
 \<trackingProfile>  
-\<İş akışı >  
-\<Workflowınstancequeries >  
-\<Workflowınstancequery >  
-\<durumları >  
-\<Durum >  
+\<iş akışı >  
+\<WorkflowInstanceQueries >  
+\<WorkflowInstanceQuery >  
+\<durumlar >  
+\<durum >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -52,7 +52,7 @@ ms.locfileid: "61757969"
 
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`name`|İzleme kayıt oluşturulduğunda izlenen iş akışı örneğinin abone olunan bir durumdan belirten bir dize.|  
+|`name`|İzleme kaydı oluşturulduğunda izlenen iş akışı örneğinden abone olunan bir durumu belirten dize.|  
   
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -62,7 +62,7 @@ Yok.
 
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<durumları >](states-of-wcf-workflowinstancequery.md)|Abone olunan durumları izleme kayıtları oluşturulduğunda izlenen iş akışı örneğinden koleksiyonu.|  
+|[\<durumlar >](states-of-wcf-workflowinstancequery.md)|İzleme kayıtları oluşturulduğunda izlenen iş akışı örneğinden abone olunan durumlar koleksiyonu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
 
@@ -88,7 +88,7 @@ Olası durum değerleri aşağıdaki tabloda açıklanmıştır:
   
 ## <a name="example"></a>Örnek
 
-İş akışı örnek düzeyi kayıtları için izleme için aşağıdaki yapılandırma abone `Started` bu sorguyu kullanarak örnek durumu.  
+Aşağıdaki yapılandırma bu sorguyu kullanarak `Started` örnek durumu için iş akışı örnek düzeyi izleme kayıtlarına abone olur.  
   
 ```xml  
 <workflowInstanceQueries>
@@ -105,5 +105,5 @@ Olası durum değerleri aşağıdaki tabloda açıklanmıştır:
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [İş Akışı Takip ve İzleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Profilleri](../../../windows-workflow-foundation/tracking-profiles.md)

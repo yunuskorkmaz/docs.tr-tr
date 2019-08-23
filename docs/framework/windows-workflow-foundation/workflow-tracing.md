@@ -2,30 +2,30 @@
 title: İş Akışı İzleme
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: 8dba5706ee37f243c15befb483ab4f9f2a8e3b9c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7bca78b24963d94bfa0f2e2245a677b7dce455c9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655716"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933436"
 ---
 # <a name="workflow-tracing"></a>İş Akışı İzleme
-İş akışı izleme, .NET Framework İzleme dinleyicisi kullanarak tanılama bilgilerini yakalamak için bir yol sunar. İzleme, uygulama ile ilgili bir sorun algılandığında, etkin ve sorun giderildikten sonra yeniden devre dışı bırakıldı. İş akışları için hata ayıklama izlemeyi sağlayabilir iki yolu vardır. İzleme Olay Görüntüleyicisi'ni kullanarak yapılandırabilirsiniz ya da <xref:System.Diagnostics> dosya izleme olayları göndermek için.  
+İş akışı izleme .NET Framework İzleme dinleyicilerini kullanarak tanılama bilgilerini yakalamak için bir yol sunar. Uygulama ile ilgili bir sorun algılanırsa izleme etkinleştirilebilir ve sorun çözümlendikten sonra yeniden devre dışı bırakılabilir. İş akışları için hata ayıklama izlemeyi etkinleştirmenin iki yolu vardır. Bunu olay izleme görüntüleyicisini kullanarak yapılandırabilir veya <xref:System.Diagnostics> izleme olaylarını bir dosyaya göndermek için ' i kullanabilirsiniz.  
   
-## <a name="enabling-debug-tracing-in-etw"></a>ETW İzleme hata ayıklama etkinleştirme  
- ETW kullanarak izlemeyi etkinleştirmek için Olay Görüntüleyicisi'nde hata ayıklama kanal etkinleştir:  
+## <a name="enabling-debug-tracing-in-etw"></a>ETW 'de hata ayıklama Izlemeyi etkinleştirme  
+ ETW kullanarak izlemeyi etkinleştirmek için Olay Görüntüleyicisi hata ayıklama kanalını etkinleştirin:  
   
-1. Analitik'ye gidin ve Olay görüntüleyicisindeki günlükleri düğüm hatalarını ayıklayın.  
+1. Olay Görüntüleyicisi 'de analitik ve hata ayıklama günlükleri düğümüne gidin.  
   
-2. Olay Görüntüleyicisi'nde ağaç görünümünde gidin **Olay Görüntüleyicisi -> uygulamalar ve hizmet günlükleri -> Microsoft -> Windows -> Uygulama uygulamalarının**. Sağ **uygulama uygulamalarının** seçip **View'a Analitik ve hata ayıklama günlüklerini göster**. Sağ **hata ayıklama** seçip **günlüğü etkinleştir**.  
+2. Olay Görüntüleyicisi 'daki ağaç görünümünde, **Olay Görüntüleyicisi > uygulamalar ve hizmet günlükleri-> Microsoft-> Windows-> uygulama sunucusu-uygulamalar**' a gidin. **Uygulama sunucusu-uygulamalar** ' a sağ tıklayın ve **Görünüm-> analitik ve hata ayıklama günlüklerini göster**' i seçin. **Hata Ayıkla** ' ya sağ tıklayın ve **günlüğü etkinleştir**' i seçin.  
   
-3. Bir iş akışı hata ayıklama çalıştırır ve izlemeler ETW hata ayıklama kanala gönderilir, Olay Görüntüleyicisi'nde görüntülenebilir. Gidin **Olay Görüntüleyicisi -> uygulamalar ve hizmet günlükleri -> Microsoft -> Windows -> Uygulama uygulamalarının**. Sağ **hata ayıklama** seçip **Yenile**.  
+3. Bir iş akışı, hata ayıklamayı çalıştırdığında ve izlemeler ETW hata ayıklama kanalına yayıldıklarında, Olay Görüntüleyicisi görüntülenebilirler. **Olay Görüntüleyicisi > uygulamalar ve hizmet günlükleri-> Microsoft-> Windows-> uygulama sunucusu-uygulamalar '** a gidin. **Hata Ayıkla** ' ya sağ tıklayın ve **Yenile**' yi seçin.  
   
-4. Yalnızca 4 kilobayt (KB); varsayılan analitik izleme arabellek boyutu olan 32 KB boyutunu artırmak için önerilir. Bunu yapmak için aşağıdaki adımları gerçekleştirin.  
+4. Varsayılan analitik izleme arabelleği boyutu yalnızca 4 kilobayttır (KB); boyutu 32 KB olarak artırmanız önerilir. Bunu yapmak için aşağıdaki adımları gerçekleştirin.  
   
-    1. Geçerli framework dizine (örneğin, C:\Windows\Microsoft.NET\Framework\v4.0.21203) aşağıdaki komutu yürütün: `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1. Şu komutu geçerli çerçeve dizininde yürütün (örneğin, C:\Windows\Microsoft.NET\Framework\v4.0.21203):`wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
-    2. Değişiklik \<bufferSize > 32 Windows.ApplicationServer.Applications.man dosyasındaki değeri.  
+    2. Windows. ApplicationServer. Applications. Man dosyasındaki bufferSize>değerini32olarakdeğiştirin.\<  
   
         ```xml  
         <channel name="Microsoft-Windows-Application Server-Applications/Analytic" chid="ANALYTIC_CHANNEL" symbol="ANALYTIC_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ANALYTIC_CHANNEL.message)" >  
@@ -35,13 +35,13 @@ ms.locfileid: "64655716"
                   </channel>  
         ```  
   
-    3. Geçerli framework dizine (örneğin, C:\Windows\Microsoft.NET\Framework\v4.0.21203) aşağıdaki komutu yürütün: `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3. Şu komutu geçerli çerçeve dizininde yürütün (örneğin, C:\Windows\Microsoft.NET\Framework\v4.0.21203):`wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
->  .NET Framework 4 istemci profili kullanıyorsanız, önce için ETW bildirimini .NET Framework 4 dizininden aşağıdaki komutu çalıştırarak kaydetmeniz gerekir: `ServiceModelReg.exe –i –c:etw`  
+> .NET Framework 4 Istemci profilini kullanıyorsanız, önce .NET Framework 4 dizininden aşağıdaki komutu çalıştırarak ETW bildirimini kaydetmeniz gerekir:`ServiceModelReg.exe –i –c:etw`  
   
-## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>System.Diagnostics kullanarak hata ayıklama izlemeyi etkinleştirme  
- Dinleyiciler bir iş akışı hizmeti için iş akışı uygulamanın Web.config veya App.config dosyasında yapılandırılabilir. Bu örnekte, bir [TextWriterTraceListener](https://go.microsoft.com/fwlink/?LinkId=165424) MyTraceLog.txt dosyasını geçerli dizinde izleme bilgilerini kaydetmek için yapılandırılır.  
+## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>System. Diagnostics kullanarak hata ayıklama Izlemeyi etkinleştirme  
+ Bu dinleyiciler iş akışı uygulamasının App. config dosyasında veya bir iş akışı hizmeti için Web. config ' de yapılandırılabilir. Bu örnekte bir [TextWriterTraceListener](https://go.microsoft.com/fwlink/?LinkId=165424) , izleme bilgilerini geçerli dizindeki mytracelog. txt dosyasına kaydedecek şekilde yapılandırılmıştır.  
   
 ```xml  
 <configuration>  
@@ -71,5 +71,5 @@ ms.locfileid: "64655716"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Server App Fabric izleme](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Windows Server App Fabric Izleme](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [App Fabric ile uygulamaları izleme](https://go.microsoft.com/fwlink/?LinkId=201275)

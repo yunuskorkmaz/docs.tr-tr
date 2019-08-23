@@ -5,46 +5,46 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec4f0527b73a506b3c98675f77f8f49a1eeb1e1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772183"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934449"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter ile Verileri Değiştirme
-<xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> Yöntemi bir <xref:System.Data.Common.DbProviderFactory> nesne size bir <xref:System.Data.Common.DbDataAdapter> Fabrika oluşturduğunuz sırada belirtilen temel alınan veri sağlayıcısı için kesin belirlenmiş bir nesne. Daha sonra kullanabileceğiniz bir <xref:System.Data.Common.DbCommandBuilder> komutları eklemek için oluşturmak için güncelleştirme ve verileri silme bir <xref:System.Data.DataSet> bir veri kaynağı.  
+Bir <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> <xref:System.Data.Common.DbDataAdapter> nesne yöntemi, fabrikanızı oluşturduğunuz sırada belirtilen temel alınan veri sağlayıcısına kesin olarak yazılmış bir nesne sağlar. <xref:System.Data.Common.DbProviderFactory> Daha sonra bir veri kaynağına <xref:System.Data.Common.DbCommandBuilder> veri <xref:System.Data.DataSet> eklemek, güncelleştirmek ve silmek için komut oluşturmak üzere bir kullanabilirsiniz.  
   
-## <a name="retrieving-data-with-a-dbdataadapter"></a>DbDataAdapter ile verileri alınıyor  
- Bu örnek, türü kesin belirlenmiş oluşturma işlemini gösterir `DbDataAdapter` sağlayıcı adı ve bağlantı dizesini temel alan. Kod <xref:System.Data.Common.DbProviderFactory.CreateConnection%2A> yöntemi <xref:System.Data.Common.DbProviderFactory> oluşturmak için bir <xref:System.Data.Common.DbConnection>. Ardından, kod kullanır <xref:System.Data.Common.DbProviderFactory.CreateCommand%2A> yöntemi oluşturmak için bir <xref:System.Data.Common.DbCommand> ayarlayarak verileri seçmek için kendi `CommandText` ve `Connection` özellikleri. Son olarak, kod oluşturur bir <xref:System.Data.Common.DbDataAdapter> kullanarak nesne <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> yöntemi ve kümeleri kendi `SelectCommand` özelliği. `Fill` Yöntemi `DbDataAdapter` yükler verileri bir <xref:System.Data.DataTable>.  
+## <a name="retrieving-data-with-a-dbdataadapter"></a>DbDataAdapter ile veri alma  
+ Bu örnek, bir sağlayıcı adı ve bağlantı dizesi `DbDataAdapter` temelinde kesin bir tür oluşturmayı nasıl oluşturacağınızı gösterir. Kod, oluşturmak <xref:System.Data.Common.DbProviderFactory.CreateConnection%2A> içinyöntemini<xref:System.Data.Common.DbProviderFactory> kullanır. <xref:System.Data.Common.DbConnection> Daha sonra <xref:System.Data.Common.DbProviderFactory.CreateCommand%2A> kod, `CommandText` ve <xref:System.Data.Common.DbCommand> özellikleriniayarlayarakverileriseçmeküzerebiroluşturmakiçinyönteminikullanır.`Connection` Son olarak, kod <xref:System.Data.Common.DbDataAdapter> <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> yöntemini kullanarak bir nesnesi oluşturur ve `SelectCommand` özelliğini ayarlar. Öğesinin yöntemi, verileri bir <xref:System.Data.DataTable>öğesine yükler.`DbDataAdapter` `Fill`  
   
  [!code-csharp[DataWorks DbProviderFactories.DbDataAdapter#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapter/CS/source.cs#1)]
  [!code-vb[DataWorks DbProviderFactories.DbDataAdapter#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapter/VB/source.vb#1)]  
   
 ## <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter ile Verileri Değiştirme  
- Bu örnek verilerde değişiklik yapmayı gösteren bir `DataTable` kullanarak bir <xref:System.Data.Common.DbDataAdapter> kullanarak bir <xref:System.Data.Common.DbCommandBuilder> veri kaynağındaki verileri güncelleştirmek için gereken komutlarını oluşturmak için. <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> , `DbDataAdapter` CustomerID ve CompanyName Müşteriler tablosundan almak için ayarlanır. <xref:System.Data.Common.DbCommandBuilder.GetInsertCommand%2A> Yöntemi ayarlamak için kullanılır <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> özelliği <xref:System.Data.Common.DbCommandBuilder.GetUpdateCommand%2A> yöntemi ayarlamak için kullanılır <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> özelliği ve <xref:System.Data.Common.DbCommandBuilder.GetDeleteCommand%2A> yöntemi ayarlamak için kullanılan <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> özelliği. Bu kod müşterilerin tabloya yeni satır ekler ve veri kaynağını güncelleştirir. Kodu daha sonra eklenen satır Müşteriler tablosu için birincil anahtar tanımlı CustomerID arayarak bulur. CompanyName değiştirir ve veri kaynağını güncelleştirir. Son olarak, kod satırı siler.  
+ Bu örnek, veri kaynağındaki verileri güncelleştirmek için gereken `DataTable` komutları oluşturmak <xref:System.Data.Common.DbDataAdapter> <xref:System.Data.Common.DbCommandBuilder> için kullanılarak kullanılarak kullanarak verileri nasıl değiştireceğiniz gösterilmektedir. <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> ,MüşterilertablosundanCustomerIDveCompanyName'`DbDataAdapter` i almak üzere ayarlanır. <xref:System.Data.Common.DbCommandBuilder.GetUpdateCommand%2A> <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> <xref:System.Data.Common.DbCommandBuilder.GetDeleteCommand%2A> Yöntemi özelliği ayarlamak için kullanılır, yöntemi özelliği ayarlamak için kullanılır ve yöntemi <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> özelliği ayarlamak için kullanılır. <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> <xref:System.Data.Common.DbCommandBuilder.GetInsertCommand%2A> Kod, Müşteriler tablosuna yeni bir satır ekler ve veri kaynağını güncelleştirir. Daha sonra kod, müşteriler tablosu için tanımlanan birincil anahtar olan CustomerID üzerinde arayarak eklenen satırı bulur. CompanyName ' i değiştirir ve veri kaynağını güncelleştirir. Son olarak, kod satırı siler.  
   
  [!code-csharp[DataWorks DbProviderFactories.DbDataAdapterModify#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapterModify/CS/source.cs#1)]
  [!code-vb[DataWorks DbProviderFactories.DbDataAdapterModify#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapterModify/VB/source.vb#1)]  
   
-## <a name="handling-parameters"></a>İşlem parametreleri  
- .NET Framework veri sağlayıcıları adlandırma ve parametreleri ve parametre yer tutucuları farklı belirterek işleyin. Bu sözdizimi, aşağıdaki tabloda açıklandığı gibi belirli veri kaynağına uyarlanmıştır.  
+## <a name="handling-parameters"></a>Parametreleri işleme  
+ .NET Framework veri sağlayıcıları, adlandırma ve parametreleri ve parametre yer tutucuları farklı şekilde belirtmeyi işler. Bu sözdizimi, aşağıdaki tabloda açıklandığı gibi belirli bir veri kaynağına uyarlanmış olarak belirlenir.  
   
-|Veri sağlayıcısı|Parametre adlandırma söz dizimi|  
+|Veri sağlayıcısı|Parametre adlandırma sözdizimi|  
 |-------------------|-----------------------------|  
-|`SqlClient`|Adlı parametreleri biçimde `@` *parametername*.|  
-|`OracleClient`|Adlı parametreleri biçimde `:` *parmname* (veya *parmname*).|  
-|`OleDb`|Bir soru işaretiyle gösterilen konumsal parametre işareti kullanır (`?`).|  
-|`Odbc`|Bir soru işaretiyle gösterilen konumsal parametre işareti kullanır (`?`).|  
+|`SqlClient`|Parametre adı olarak `@`adlandırılmış parametreleri kullanır.|  
+|`OracleClient`|, *Parmname* (veya `:` *parmname*) biçiminde adlandırılmış parametreleri kullanır.|  
+|`OleDb`|Bir soru işaretiyle (`?`) belirtilen Konumsal parametre işaretçilerini kullanır.|  
+|`Odbc`|Bir soru işaretiyle (`?`) belirtilen Konumsal parametre işaretçilerini kullanır.|  
   
- Fabrika modeline parametreli oluşturmak için yararlı değildir `DbCommand` ve `DbDataAdapter` nesneleri. Kodunuzda, veri sağlayıcısı için uyarlanmış parametreleri oluşturmak için dal gerekecektir.  
+ Fabrika modeli parametreli `DbCommand` ve `DbDataAdapter` nesneler oluşturmak için yararlı değildir. Veri sağlayıcınıza uyarlanmış parametreler oluşturmak için kodunuzda dallandırma yapmanız gerekir.  
   
 > [!IMPORTANT]
->  Sağlayıcıya özgü parametreler önleme tamamen doğrudan SQL deyimlerini oluşturmak için dize birleştirme kullanarak güvenlik nedenleriyle önerilmez. Dize birleştirme yerine parametreleri kullanarak uygulamanızı SQL ekleme saldırılarına karşı savunmasız bırakır.  
+> Doğrudan SQL deyimlerini oluşturmak için dize birleştirmesini kullanarak sağlayıcıya özgü parametrelerin tamamen engellenmesinin güvenlik nedenleriyle önerilmez. Parametreler yerine dize birleştirme kullanmak, uygulamanızı SQL ekleme saldırılarına karşı savunmasız bırakır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
 - [DbProviderFactory Alma](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
 - [DbConnection, DbCommand ve DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fd82418da26ab0cd32b007b4613d588dfa695eb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e94e4da0eea06ce9cc0110002b1def9e4dd4989
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745298"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939152"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next Yöntemi
-Belirtilen sayıda alır [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) nesneleri geçerli konumunda başlayan sabit listesi.  
+Geçerli konumdan başlayarak Numaralandırmadaki belirtilen [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) nesnelerinin sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,13 +38,13 @@ HRESULT Next([in] ULONG  celt,
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Alınacak nesne sayısı.  
+ 'ndaki Alınacak nesne sayısı.  
   
  `values`  
- [out] Bir işaretçiler dizisi [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) nesneleri.  
+ dışı [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) nesnelerine yönelik işaretçiler dizisi.  
   
  `pceltFetched`  
- [out] Alınan nesne sayısı için bir işaretçi.  
+ dışı Alınan nesne sayısına yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bu yöntem aşağıdaki özel HRESULT'ları döndürür.  
@@ -52,24 +52,24 @@ HRESULT Next([in] ULONG  celt,
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|S_FALSE|`pceltFetched` eşit değildir `celt`.|  
+|S_FALSE|`pceltFetched`eşit `celt`değildir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tipik bir COM Numaralandırıcı gibi bu yöntem çalışır.  
+ Bu yöntem tipik bir COM numaralandırıcısı gibi çalışır.  
   
- Giriş dizisinin en az olmalıdır boyutunun `celt`. Dizi ile birlikte sonraki doldurulur `celt` değerleri sabit listesi veya tüm kalan değerler ile az olursa `celt` kalır. Bu yöntem döndürüldüğünde, `pceltFetched` alınan değer sayısı ile doldurulur. Varsa `values` geçersiz işaretçi içerir ya da daha küçük olan bir arabellek işaret `celt`, veya `pceltFetched` geçersiz bir işaretçi sonuç tanımsızdır.  
+ Giriş dizisi değerleri en az boyutta `celt`olmalıdır. Dizi, Numaralandırmadaki bir sonraki `celt` değerle veya `celt` daha az kalırsa kalan tüm değerlerle doldurulur. Bu yöntem döndüğünde, `pceltFetched` alınan değer sayısıyla doldurulur. Geçersiz işaretçiler `celt`içeriyorsaveyadaha küçük olan bir arabelleğe işaret ediyorsa ya `pceltFetched` da geçersiz bir işaretçisiyse, sonuç tanımsızdır. `values`  
   
 > [!NOTE]
->  Ancak [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) yapısı yayımlanması gerekmez, içindeki "ICorDebugValue" arabirimi serbest bırakılması gerekir.  
+> [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) yapısının serbest bırakılması gerekmez, ancak Içindeki "ICorDebugValue" arabiriminin serbest bırakılması gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

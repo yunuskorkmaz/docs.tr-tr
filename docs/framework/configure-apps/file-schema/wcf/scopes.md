@@ -2,22 +2,22 @@
 title: <scopes>
 ms.date: 03/30/2017
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
-ms.openlocfilehash: 8bc720238ca3039106345783381cd26134fc46b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd6513930798e9e1ab263f75c9350511c2dcdcd5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670631"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935179"
 ---
-# <a name="scopes"></a>\<kapsamları >
-Özel kapsam sorgu sırasında hizmet bitiş noktası süzmek için kullanılan bir URI'leri belirten yapılandırma öğelerinin bir koleksiyonunu içerir.  
+# <a name="scopes"></a>\<kapsamlar >
+Sorgu sırasında hizmet uç noktalarını filtrelemek için kullanılabilecek özel kapsam URI 'Leri belirten yapılandırma öğelerinin bir koleksiyonunu içerir.  
   
 \<system.ServiceModel>  
 \<davranışlar >  
-\<endpointBehaviors>  
-\<davranışı >  
+\<Endpointdavranışlar >  
+\<davranış >  
 \<endpointDiscovery >  
-\<kapsamları >  
+\<kapsamlar >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,13 +45,13 @@ ms.locfileid: "61670631"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|[\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopes.md)|Eşleşme ölçütlerinde Hizmetleri bulmak için kullanılabilir uç nokta için kapsam bilgileri ekler.|  
+|[\<> Ekle](add-of-scopes.md)|Hizmet bulmak için eşleşen ölçütlerde kullanılabilen uç nokta için kapsam bilgilerini ekler.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<endpointDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|Bir uç nokta bulunabilirliği, kapsamı ve meta verilerine özel uzantıları gibi çeşitli bulma ayarlarını belirtir.|  
+|[\<endpointDiscovery >](endpointdiscovery.md)|Bir uç nokta için, keşfedilebilirlik, kapsamları ve tüm özel uzantıları gibi çeşitli bulma ayarlarını belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

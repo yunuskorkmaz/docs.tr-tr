@@ -10,18 +10,18 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 5faf352dce2a459a999b3cf54209f6bd9793bde0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd90d271591a47849b3f70aea50cbe909b6fd613
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673803"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920405"
 ---
-# <a name="trace-element"></a>\<İzleme > öğesi
-Toplamak, depolamak ve izleme iletilerini yönlendirmek dinleyicileri içerir.  
+# <a name="trace-element"></a>\<Trace > öğesi
+İzleme iletilerini toplayıp depolayan, depolayan ve yönlendiren dinleyicileri içerir.  
   
  \<Yapılandırma >  
-\<System.Diagnostics >  
+\<System. Diagnostics >  
 \<İzleme >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -39,39 +39,39 @@ Toplamak, depolamak ve izleme iletilerini yönlendirmek dinleyicileri içerir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`autoflush`|İsteğe bağlı öznitelik.<br /><br /> İzleme dinleyicilerine çıkış arabelleği sonra her yazma işlemi otomatik olarak temizleme olup olmadığını belirtir.|  
-|`indentsize`|İsteğe bağlı öznitelik.<br /><br /> Girinti boşluk sayısını belirtir.|  
-|`useGlobalLock`|İsteğe bağlı öznitelik.<br /><br /> Genel kilit kullanılıp kullanılmayacağını belirtir.|  
+|`autoflush`|İsteğe bağlı öznitelik.<br /><br /> İzleme dinleyicilerinin her yazma işleminden sonra çıktı arabelleğini otomatik olarak temizlemesini belirtir.|  
+|`indentsize`|İsteğe bağlı öznitelik.<br /><br /> Girintilendirmek için boşluk sayısını belirtir.|  
+|`useGlobalLock`|İsteğe bağlı öznitelik.<br /><br /> Genel kilidin kullanılıp kullanılmayacağını belirtir.|  
   
-## <a name="autoflush-attribute"></a>AutoFlush özniteliği  
+## <a name="autoflush-attribute"></a>Oto Temizleme özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|Otomatik olarak çıkış arabelleği temizleme değil. Bu varsayılandır.|  
-|`true`|Çıkış arabelleği otomatik olarak temizler.|  
+|`false`|, Çıkış arabelleğini otomatik olarak temizlemez. Bu varsayılandır.|  
+|`true`|Çıktı arabelleğini otomatik olarak temizler.|  
   
 ## <a name="usegloballock-attribute"></a>useGlobalLock özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`false`|Dinleyici iş parçacığı güvenli ise genel kilit kullanmaz; Aksi takdirde, genel kilit kullanır.|  
-|`true`|Dinleyici iş parçacığı güvenli olmasına bakılmaksızın genel kilit kullanır. Bu varsayılandır.|  
+|`false`|Dinleyicisi iş parçacığı güvenli ise, genel kilidi kullanmaz; Aksi takdirde, genel kilidi kullanır.|  
+|`true`|Dinleyicinin iş parçacığı güvenli olup olmamasına bakılmaksızın genel kilidi kullanır. Bu varsayılandır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<dinleyicileri >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Toplar, depolar, bir dinleyici belirtir ve iletileri yönlendirir.|  
+|[\<dinleyiciler >](listeners-element-for-trace.md)|İletileri toplayan, depolayan ve yönlendiren bir dinleyici belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.|  
+|`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir `<trace>` dinleyici eklemek için öğe `MyListener` için `Listeners` koleksiyonu. `MyListener` adlı bir dosya oluşturur `MyListener.log` ve çıkış dosyasına yazar. `useGlobalLock` Özniteliği `false`, İzleme dinleyicisi iş parçacığı güvenli değilse kullanılamaz genel kilit neden olur. `autoflush` Özniteliği `true`, bağımsız olarak bir dosyaya yazmak İzleme dinleyicisi neden <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> yöntemi çağrılır. `indentsize` Özniteliği sıfır alanları girintilemek dinleyici neden 0 (sıfır) olarak ayarlanmış olduğunda <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> yöntemi çağrılır.  
+ Aşağıdaki örnek, bir dinleyicinin `<trace>` `MyListener` `Listeners` koleksiyona eklemek için öğesinin nasıl kullanılacağını gösterir. `MyListener`adlı `MyListener.log` bir dosya oluşturur ve çıktıyı dosyaya yazar. `useGlobalLock` Özniteliği olarak`false`ayarlanır; Bu, izleme dinleyicisi iş parçacığı güvenli ise genel kilidin kullanılmasına neden olur. Özniteliği olarak `true`ayarlanır; Bu, İzleme dinleyicisinin, <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> yöntemin çağrılmasının ne olursa olsun dosyaya yazmasına neden olur. `autoflush` Öznitelik 0 (sıfır) olarak ayarlanır, bu da <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> yöntem çağrıldığında dinleyicinin sıfır boşluk girintilemesini sağlar. `indentsize`  
   
 ```xml  
 <configuration>  
@@ -91,4 +91,4 @@ Toplamak, depolamak ve izleme iletilerini yönlendirmek dinleyicileri içerir.
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)

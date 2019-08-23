@@ -2,20 +2,20 @@
 title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 125baba917a49135aaa426df2cfa1a4dbe8ac1e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5cb64c54067ba695f67d86c0026db77ebbe7d5ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700916"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919045"
 ---
 # <a name="endpointdiscovery"></a>\<endpointDiscovery >
-Bir uç nokta bulunabilirliği, kapsamı ve meta verilerine özel uzantıları gibi çeşitli bulma ayarlarını belirtir.  
+Bir uç nokta için, keşfedilebilirlik, kapsamları ve tüm özel uzantıları gibi çeşitli bulma ayarlarını belirtir.  
   
 \<system.ServiceModel>  
 \<davranışlar >  
-\<endpointBehaviors>  
-\<davranışı >  
+\<Endpointdavranışlar >  
+\<davranış >  
 \<endpointDiscovery >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -42,30 +42,30 @@ Bir uç nokta bulunabilirliği, kapsamı ve meta verilerine özel uzantıları g
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Etkin|Bu uç noktada bulunabilirliği etkin olup olmadığını belirten bir Boole değeri. Varsayılan, `false` değeridir.|  
+|etkinletir|Bu uç noktada bulunabilirliği etkin olup olmadığını belirten bir Boolean değer. Varsayılan, `false` değeridir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<kapsamları >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Uç nokta için URI kapsam koleksiyonu. Birden fazla kapsam URI'leri tek bir uç nokta ile ilişkilendirilebilir.|  
-|[\<Uzantılar >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [, \<endpointDiscovery >]|Yayımlanması için bir uç nokta için özel meta verileri belirtmenizi sağlayan XML öğeleri koleksiyonu.|  
-|\<Tür >|Aranacak arayüzler koleksiyonu.|  
+|[\<kapsamlar >](scopes.md)|Uç nokta için kapsam URI 'Leri koleksiyonu. Birden fazla kapsam URI 'si tek bir uç noktayla ilişkilendirilebilir.|  
+|uzantılar > [ endpointdiscovery>]\< [ \<](extensions.md)|Bir uç nokta için yayımlanacak özel meta verileri belirtmenizi sağlayan XML öğelerinin koleksiyonu.|  
+|\<türler >|Aranacak arabirimlerin bir koleksiyonu.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
+|[\<davranış >](behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
 |||  
   
 ## <a name="remarks"></a>Açıklamalar  
- Uç noktanın davranışı yapılandırmasına ve ile eklendiğinde `enabled` özniteliğini `true`, bu yapılandırma öğesi bulunabilirliği sağlar. Ayrıca, kullanabileceğiniz [ \<kapsamları >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)özel kapsam sorgu sırasında hizmet bitiş noktası süzmek için kullanılan bir URI'leri belirtmek için alt öğesi hem de [ \<uzantıları >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) standart bulunabilirlik meta veriler ile birlikte (EPR, ContractTypeName, BindingName, kapsam ve ListenURI) yayımlanmasına özel meta verileri belirtmek için alt öğesi.  
+ Uç noktanın davranış yapılandırmasına eklendiğinde ve `enabled` özniteliği olarak `true`ayarlandığında, bu yapılandırma öğesi bulunabilirliği sağlar. Ayrıca, sorgu sırasında hizmet uç noktalarını filtrelemek için kullanılabilecek özel kapsam URI 'leri belirtmek için [ \<kapsamlar >](scopes.md)alt öğesini ve özel olarak belirtmek için de [ \<uzantıları >](extensions.md) alt öğe öğesini kullanabilirsiniz Standart bulunabilir meta veriler (EPR, ContractTypeName, BindingName, scope ve ListenURI) ile birlikte yayımlanmaları gereken meta veriler.  
   
- Bu yapılandırma öğesi bağlıdır [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) öğesi bulunabilirliği hizmet düzeyi denetim sağlar. Bu, bu öğenin ayarları yoksayıldığı anlamına gelir [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) yapılandırmada mevcut değil.  
+ Bu yapılandırma öğesi, keşfedilebilirlik için hizmet düzeyi denetimini sağlayan [ \<servicediscovery >](servicediscovery.md) öğesine bağımlıdır. Bu, yapılandırmada [ \<servicediscovery >](servicediscovery.md) yoksa, bu öğenin ayarlarının yoksayılacağı anlamına gelir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki yapılandırma örnek filtreleme kapsamları ve bir uç nokta için yayımlanacak uzantı meta verileri belirtir.  
+ Aşağıdaki yapılandırma örneği, bir uç nokta için yayımlanacak filtre kapsamlarını ve uzantı meta verilerini belirtir.  
   
 ```xml  
 <services>

@@ -10,26 +10,26 @@ helpviewer_keywords:
 - multimedia [WPF], controlling playback of media
 - media [WPF], controlling playback of
 ms.assetid: 6885a730-e054-4c16-8c1e-ffe17b1f7c32
-ms.openlocfilehash: bb7319fc7ccec0220cbd79a32d5d015f9f2422d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cde7c32b48dff3d6d054e700b2f95771ba3b3773
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984052"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930158"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Nasıl yapılır: MediaElement (Yürüt, Duraklat, Durdur, Ses Düzeyi ve Hız) Denetimi
-Aşağıdaki örnek kullanmanın medya kayıttan yürütmeyi denetlemek nasıl gösterir bir <xref:System.Windows.Controls.MediaElement>. Örnek Yürüt, Duraklat, Durdur ve ortamı geri ve İleri Atla yanı sıra, ses ve hız oranını ayarlamak olanak tanıyan bir basit bir medya yürütücüsü oluşturur.  
+Aşağıdaki örnek, kullanılarak <xref:System.Windows.Controls.MediaElement>medyanın nasıl çalınmasının nasıl yapıldığını gösterir. Örnek, medyada oynamanızı, duraklatmanızı, durdurmayı ve atlamayı, ayrıca birim ve hız oranını ayarlamayı sağlayan basit bir medya oynatıcı oluşturur.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, kullanıcı Arabirimi oluşturur.  
+ Aşağıdaki kod Kullanıcı arabirimini oluşturur.  
   
 > [!NOTE]
->  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> Özelliği <xref:System.Windows.Controls.MediaElement> ayarlanmalıdır `Manual` etkileşimli olarak Durdur oluşturabilmek, duraklatmak ve medya yürütme.  
+> Özelliğinin, <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> medyayı etkileşimli olarak durdurabileceği, duraklatılacağı ve oynatacak şekilde ayarlanması `Manual`gerekir. <xref:System.Windows.Controls.MediaElement>  
   
  [!code-xaml[MediaGallery_snip#MediaElementExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml#mediaelementexamplewholepage)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği UI denetimleri işlevselliğini uygular. <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, Ve <xref:System.Windows.Controls.MediaElement.Stop%2A> yöntemlerini sırasıyla Yürüt, Duraklat ve medya durdurmak için kullanılır. Değiştirme <xref:System.Windows.Controls.MediaElement.Position%2A> özelliği <xref:System.Windows.Controls.MediaElement> ortamda atlamanızı geçici bir çözüm sağlar. Son olarak, <xref:System.Windows.Controls.MediaElement.Volume%2A> ve <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> özellikleri medyanın birim ve kayıttan yürütme hızını ayarlamak için kullanılır.  
+ Aşağıdaki kod, örnek UI denetimlerinin işlevselliğini uygular. <xref:System.Windows.Controls.MediaElement.Play%2A>, Veyöntemleri<xref:System.Windows.Controls.MediaElement.Stop%2A> sırasıyla medyayı çalmak, duraklatmak ve durdurmak için kullanılır. <xref:System.Windows.Controls.MediaElement.Pause%2A> Özelliğinin değiştirilmesi, <xref:System.Windows.Controls.MediaElement> medyada atlamanızı sağlar. <xref:System.Windows.Controls.MediaElement.Position%2A> Son olarak, <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A>veözellikleri medyanın birim ve kayıttan yürütme hızını ayarlamak için kullanılır. <xref:System.Windows.Controls.MediaElement.Volume%2A>  
   
  [!code-csharp[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snip/CSharp/MediaElementExample.xaml.cs#codebehindmediaelementexamplewholepage)]
  [!code-vb[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml.vb#codebehindmediaelementexamplewholepage)]  

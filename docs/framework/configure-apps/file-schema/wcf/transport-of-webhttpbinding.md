@@ -2,22 +2,22 @@
 title: <transport> / <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: 8dcd51cd248dbba3ccf60295cb1712167684328e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f78add5397644dc40bfd22f10bd84aa5c5eb29e6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788277"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923207"
 ---
-# <a name="transport-of-webhttpbinding"></a>\<Aktarım >, \<webHttpBinding >
-HTTP isteklerini almak için yapılandırılmış hizmet uç noktası için aktarma düzeyinde güvenlik ayarlarını tanımlar.  
+# <a name="transport-of-webhttpbinding"></a>\<\<WebHttpBinding > taşıma >
+HTTP isteklerini alacak şekilde yapılandırılmış bir hizmet uç noktası için aktarım düzeyi güvenlik ayarlarını tanımlar.  
   
  \<system.ServiceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<webHttpBinding>  
 \<bağlama >  
 \<Güvenlik >  
-\<taşıma >  
+\<Taşıma >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,31 +49,31 @@ HTTP isteklerini almak için yapılandırılmış hizmet uç noktası için akta
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`clientCredentialType`|Bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir. Bu öznitelik türünde <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|`proxyCredentialType`|Bir etki alanı Ara sunucusu istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir. Bu öznitelik türünde <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|`realm`|Özet veya temel kimlik doğrulaması için kimlik doğrulaması bölgesi belirten bir dize. Varsayılan değer boş bir dizedir.<br /><br /> Bir kimlik doğrulaması bölgesi, kimlik doğrulaması yapan bir ana bilgisayar adı en az belirtir. Ayrıca, erişimi olan bir kullanıcı koleksiyonu da belirtebilirsiniz. Bir kullanıcı kimlik doğrulaması bölgesi, hangisinin birkaç olası kullanıcı adları ve parolalar kullanılabilir olmadığından emin olmak için sorgulayabilirsiniz.|  
-|`policyEnforcement`|Bu sabit listesi ne zaman belirtir <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> zorlanmalıdır.<br /><br /> 1.  Hiçbir zaman – hiçbir zaman ilkenin uygulanıp (genişletilmiş koruma devre dışı).<br />2.  Yalnızca istemci genişletilmiş koruma destekliyorsa WhenSupported – ilke zorunlu tutulur.<br />3.  Her zaman – ilke her zaman uygulanmaz. Genişletilmiş Koruma desteklemeyen istemciler kimlik doğrulaması başarısız olur.|  
+|`clientCredentialType`|Hizmetin istemcinin kimliğini doğrulamak için kullanılan kimlik bilgisini belirtir. Bu öznitelik türü <xref:System.ServiceModel.HttpClientCredentialType>.|  
+|`proxyCredentialType`|Bir etki alanı ara sunucusu için istemcinin kimliğini doğrulamak için kullanılan kimlik bilgisini belirtir. Bu öznitelik türü <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|`realm`|Özet veya temel kimlik doğrulaması için kimlik doğrulama bölgesini belirten bir dize. Varsayılan değer boş bir dizedir.<br /><br /> Kimlik doğrulama bölgesi, kimlik doğrulamasını gerçekleştiren konağın en azından adını belirtir. Ayrıca, erişimi olan bir kullanıcı koleksiyonu da belirtebilir. Kullanıcı, birkaç olası Kullanıcı adı ve parolanın kullanılabileceğini belirlemek için kimlik doğrulama bölgesini sorgulayabilir.|  
+|`policyEnforcement`|Bu numaralandırma, <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> ne zaman uygulanacağını belirtir.<br /><br /> 1.  Hiçbir süre – ilke hiçbir şekilde zorlanmaz (genişletilmiş koruma devre dışı bırakılır).<br />2.  WhenSupported – ilke yalnızca istemci genişletilmiş korumayı destekliyorsa zorlanır.<br />3.  Her zaman – ilke her zaman zorlanır. Genişletilmiş korumayı desteklemeyen istemciler kimlik doğrulaması yapamaz.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`None`|Güvenlik devre dışı bırakıldı.|  
-|`Basic`|Temel kimlik doğrulaması kullanır.|  
-|`Certificate`|İstemcinin kimliğini doğrulamak için X.509 sertifikaları kullanır.|  
+|`Basic`|Temel kimlik doğrulamasını kullanır.|  
+|`Certificate`|İstemcinin kimliğini doğrulamak için X. 509.440 sertifikalarını kullanır.|  
 |`Digest`|Özet kimlik doğrulaması kullanır.|  
-|`Ntlm`|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kimlik doğrulaması kullanır.|  
-|`Windows`|Tümleşik Windows kimlik doğrulaması olarak kullanır.|  
+|`Ntlm`|Windows etki alanı ile geri dönüş olarak NTLM kimlik doğrulamasını kullanır.|  
+|`Windows`|Tümleşik Windows kimlik doğrulamasını kullanır.|  
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`None`|Güvenlik devre dışı bırakıldı.|  
-|`Basic`|Temel kimlik doğrulaması kullanır.|  
+|`Basic`|Temel kimlik doğrulamasını kullanır.|  
 |`Digest`|Özet kimlik doğrulaması kullanır.|  
-|`Ntlm`|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kullanır.|  
-|`Windows`|Tümleşik Windows kimlik doğrulaması olarak kullanır.|  
+|`Ntlm`|Windows etki alanı ile geri dönüş olarak NTLM kullanır.|  
+|`Windows`|Tümleşik Windows kimlik doğrulamasını kullanır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -82,7 +82,7 @@ HTTP isteklerini almak için yapılandırılmış hizmet uç noktası için akta
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|Güvenlik özelliklerini gösteren [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) öğesi.|  
+|[\<Güvenlik >](security-of-webhttpbinding.md)|WSHttpBinding > öğesinin güvenlik yeteneklerini [ \<](wshttpbinding.md) temsil eder.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -90,9 +90,9 @@ HTTP isteklerini almak için yapılandırılmış hizmet uç noktası için akta
 - <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
-- [WCF Web HTTP Programlama Modeli](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<bağlama >](../../../misc/binding.md)
+- [WCF Web HTTP Programlama Modeli](../../../wcf/feature-details/wcf-web-http-programming-model.md)

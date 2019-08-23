@@ -10,20 +10,20 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
-ms.openlocfilehash: f75a2f33ecde408d2d8e2f2343197ba56c4b8c21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d04a0ddcef9ff7c31abd422f7f9fba34e804d2b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925105"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935422"
 ---
 # <a name="troubleshooting-service-application-wont-install"></a>Sorun Giderme: Hizmet Uygulaması Yüklenmiyor
-Hizmet uygulamanızın doğru şekilde yüklenmezse emin olmak için kontrol <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> Yükleyici bu hizmet için gösterildiği gibi hizmet sınıfı özelliği aynı değere ayarlanır. Değer her iki örnek hizmetinizin doğru bir biçimde yüklenmesi sırayla aynı olmalıdır.  
+Hizmet uygulamanız doğru şekilde yüklenemezse, hizmet sınıfı <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> özelliğinin bu hizmet için yükleyicide gösterilen değere ayarlandığından emin olun. Hizmetinizin doğru şekilde yüklenmesi için değerin her iki örnekte de aynı olması gerekir.  
   
 > [!NOTE]
->  Yükleme işlemi ile ilgili geri bildirim almak için yükleme günlüklerine da göz atabilirsiniz.  
+> Yükleme işlemi hakkında geri bildirim almak için yükleme günlüklerine de bakabilirsiniz.  
   
- Ayrıca zaten yüklü aynı ada sahip başka bir hizmete sahip olup olmadığınızı belirlemek için denetleme yapmalıdır. Hizmet adları yükleme başarılı olması için benzersiz olmalıdır.  
+ Aynı ada sahip başka bir hizmetin zaten yüklü olup olmadığını da denetlemeniz gerekir. Yüklemenin başarılı olabilmesi için hizmet adları benzersiz olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

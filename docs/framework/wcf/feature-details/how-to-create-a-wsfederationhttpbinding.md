@@ -8,100 +8,100 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-ms.openlocfilehash: 3a6564683a856c8d1eb47b1569f156e0b6d5cc67
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9728c908331d5eabcff04d094e7fcbe42f636963
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636415"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911215"
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Nasıl yapılır: WSFederationHttpBinding Oluşturma
 
-Windows Communication Foundation (WCF) <xref:System.ServiceModel.WSFederationHttpBinding> sınıfı ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) yapılandırmasında) Federasyon Hizmeti açığa çıkarmak için bir mekanizma sağlar. Diğer bir deyişle, istemcilerin bir güvenlik belirteci hizmeti tarafından verilen bir güvenlik belirteci kullanarak kimlik doğrulaması gerektiren bir hizmet. Bu konu nasıl ayarlanacağını gösterir. bir <xref:System.ServiceModel.WSFederationHttpBinding> hem kod hem de yapılandırma. Bağlama oluşturulduktan sonra bu bağlama kullanılacak uç nokta ayarlamayı ayarlayabilirsiniz.
+Windows Communication Foundation (WCF) ' de, <xref:System.ServiceModel.WSFederationHttpBinding> Sınıf ([\<WSFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ), Federasyon hizmetini açığa çıkarmak için bir mekanizma sağlar. Diğer bir deyişle, istemcilerin güvenlik belirteci hizmeti tarafından verilen bir güvenlik belirtecini kullanarak kimlik doğrulaması yapmasını gerektiren bir hizmettir. Bu konuda, hem kodda hem de yapılandırmada <xref:System.ServiceModel.WSFederationHttpBinding> bir nasıl ayarlanacağı gösterilmektedir. Bağlama oluşturulduktan sonra, bu bağlamayı kullanmak için bir uç nokta ayarlayabilirsiniz.
 
- Temel adımlar aşağıda ana hatlarıyla:
+ Temel adımlar aşağıdaki şekilde özetlenmiştir:
 
-1. Güvenlik modu seçin. <xref:System.ServiceModel.WSFederationHttpBinding> Destekler `Message`, hatta birden fazla atlama arasında uçtan uca güvenlik ileti düzeyinde sağlar ve `TransportWithMessageCredential`, burada istemciyi ve hizmeti yapabilir doğrudan bir bağlantı üzerinden durumlarda daha iyi performans sağlar HTTPS.
+1. Bir güvenlik modu seçin. , <xref:System.ServiceModel.WSFederationHttpBinding> Birden `Message`fazla atlama arasında bile ileti düzeyinde uçtan uca güvenlik sağlayan, ve `TransportWithMessageCredential`istemcisinin ve hizmetin üzerinden doğrudan bağlantı yapabildiği durumlarda daha iyi performans sağlayan destekler. 'Dir.
 
     > [!NOTE]
-    > <xref:System.ServiceModel.WSFederationHttpBinding> Da destekler `None` güvenlik modu olarak. Bu modu güvenli değildir ve hata ayıklama amacıyla yalnızca sağlanır. Hizmet uç noktası ile dağıtılırsa bir <xref:System.ServiceModel.WSFederationHttpBinding> ayarlamak kendi güvenlik moduyla `None`, sonuçta elde edilen istemci bağlama (tarafından oluşturulan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)) olan bir <xref:System.ServiceModel.WSHttpBinding> ile bir güvenlik modu `None`.
+    > Ayrıca güvenlik modu olarak da desteklenir `None`. <xref:System.ServiceModel.WSFederationHttpBinding> Bu mod güvenli değildir ve yalnızca hata ayıklama amacıyla sağlanır. Bir hizmet uç noktası, güvenlik modu olarak <xref:System.ServiceModel.WSFederationHttpBinding> `None`ayarlanmış ile ile dağıtılırsa, elde edilen istemci bağlama ( [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan), bir <xref:System.ServiceModel.WSHttpBinding> güvenlik modu `None`.
 
-     Diğer sistem tarafından sağlanan bağlamalar kullanırken bir istemci kimlik bilgileri türünü seçmek gerekli değildir `WSFederationHttpBinding`. İstemci kimlik bilgisi türü her zaman verilen bir belirteç olduğundan budur. WCF belirtilen verenden bir belirteç alır ve hizmete istemcinin kimliğini doğrulamak için bu belirteci sunar.
+     Sistem tarafından sağlanmış diğer bağlamalardan farklı olarak, kullanırken `WSFederationHttpBinding`istemci kimlik bilgisi türü seçmek gerekli değildir. Bunun nedeni, istemci kimlik bilgisi türünün her zaman verilen bir belirteç olmasından kaynaklanır. WCF, belirtilen bir verenin belirtecini alır ve istemcinin kimliğini doğrulamak için bu belirteci hizmete sunar.
 
-2. Federasyon istemcilerde ayarlamak <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> özelliğini güvenlik belirteci hizmeti URL'si. Ayarlama <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> güvenlik belirteci hizmeti ile iletişim kurmak için kullanılacak bağlama için.
+2. Federasyon istemcilerinde, <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> özelliği güvenlik belirteci hizmetinin URL 'si olarak ayarlayın. <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> Öğesini güvenlik belirteci hizmeti ile iletişim kurmak için kullanılacak bağlamaya ayarlayın.
 
-3. İsteğe bağlı. Ayarlama <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> özelliği için Tekdüzen Kaynak Tanımlayıcısı (URI) simge türü. Federasyon Hizmetleri için hizmet bekliyor belirteç türü belirtin. Federasyon istemcilerde istemci isteklerini güvenlik belirteci Hizmeti'nden belirteç türü belirtin.
+3. İsteğe bağlı. <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> Özelliği bir belirteç türünün Tekdüzen Kaynak tanımlayıcısı (URI) olarak ayarlayın. Federasyon Hizmetleri 'nde hizmetin beklediği belirteç türünü belirtin. Federasyon istemcilerinde, güvenlik belirteci hizmeti 'nden istemci isteklerini belirten belirteç türünü belirtin.
 
-     Hiçbir belirteç türü belirtilirse, istemciler, bir belirteç türü URI WS-Trust istek güvenlik belirteçleri (RSTs) oluşturmak ve istemci kimlik doğrulaması varsayılan olarak güvenlik onaylama işaretleme dili (SAML) 1.1 belirteciyle Hizmetleri beklerler.
+     Hiçbir belirteç türü belirtilmemişse, istemcileri belirteç türü URI 'SI olmayan WS-Trust Istek güvenlik belirteçleri (RSTs) oluşturur ve hizmetler varsayılan olarak güvenlik onayları biçimlendirme dili (SAML) 1,1 belirtecini kullanarak istemci kimlik doğrulaması bekler.
 
-     SAML 1.1 belirteci için URI `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.
+     SAML 1,1 belirtecinin `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`URI 'si.
 
-4. İsteğe bağlı. Federasyon Hizmetleri üzerinde <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> güvenlik belirteci hizmeti meta verileri URL'sine özelliği. Hizmet meta verileri yayımlama için yapılandırılmışsa, bir uygun bağlama/uç noktanın çifti seçmek, istemciler hizmeti meta veri uç noktası sağlar. Meta veri yayımlama hakkında daha fazla bilgi için bkz: [meta veri yayımlama](publishing-metadata.md).
+4. İsteğe bağlı. Federasyon Hizmetleri 'nde, <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> özelliği bir güvenlik belirteci hizmetinin meta veri URL 'si olarak ayarlayın. Meta veri uç noktası, hizmet istemcilerinin meta verileri yayımlayacak şekilde yapılandırıldıysa uygun bir bağlama/uç nokta çifti seçmesini sağlar. Meta verileri yayımlama hakkında daha fazla bilgi için bkz. [meta verileri yayımlama](publishing-metadata.md).
 
- Verilen belirteç, istemci ile hizmet arasında kullanılacak algoritması paketi kavram anahtar olarak kullanılan anahtar türü gibi diğer özellikleri de ayarlayabilirsiniz anlaşma veya açıkça hizmeti kimlik bilgileri belirtmek için herhangi bir belirli hizmet talep olup olmadığını Verilen belirteç içeren ve güvenlik belirteci hizmeti için istemcinin gönderdiği isteğine eklenmesi gereken ek XML öğeleri bekliyor.
+ Ayrıca, verilen belirteçte bir kanıt anahtarı olarak kullanılan anahtar türü, istemci ile hizmet arasında kullanılacak algoritma paketi, hizmet kimlik bilgisini anlaşma veya açık bir şekilde belirtme konusunda verilen belirtecin ve istemcinin güvenlik belirteci hizmetine gönderdiği isteğe eklenmesi gereken ek XML öğelerini içermesini bekler.
 
 > [!NOTE]
->  `NegotiateServiceCredential` Özelliği, yalnızca uygun olduğunda `SecurityMode` ayarlanır `Message`. Varsa `SecurityMode` ayarlanır `TransportWithMessageCredential`, ardından `NegotiateServiceCredential` özelliği yok sayılır.
+> Özelliği yalnızca `SecurityMode` öğesine`Message`ayarlandığındageçerlidir. `NegotiateServiceCredential` `SecurityMode` Olarak ayarlanırsa`TransportWithMessageCredential`, özelliği`NegotiateServiceCredential` yok sayılır.
 
-## <a name="to-configure-a-wsfederationhttpbinding-in-code"></a>WSFederationHttpBinding kodda yapılandırmak için
+## <a name="to-configure-a-wsfederationhttpbinding-in-code"></a>Kodda bir WSFederationHttpBinding yapılandırmak için
 
-1. Bir örneğini oluşturmak <xref:System.ServiceModel.WSFederationHttpBinding>.
+1. Öğesinin bir örneğini oluşturun <xref:System.ServiceModel.WSFederationHttpBinding>.
 
-2. Ayarlama <xref:System.ServiceModel.WSFederationHttpSecurity.Mode%2A> özelliğini <xref:System.ServiceModel.WSFederationHttpSecurityMode> veya <xref:System.ServiceModel.WSFederationHttpSecurityMode.Message> gerektiğinde. Bir algoritma paketini dışında <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256%2A> gereklidir ayarlamak <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.AlgorithmSuite%2A> alındığı bir değere <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.
+2. Özelliğini gereken şekilde veya<xref:System.ServiceModel.WSFederationHttpSecurityMode.Message>gerektiği şekilde ayarlayın. <xref:System.ServiceModel.WSFederationHttpSecurityMode> <xref:System.ServiceModel.WSFederationHttpSecurity.Mode%2A> Dışında <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256%2A> bir algoritma paketi gerekliyse, <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.AlgorithmSuite%2A> özelliğini öğesinden <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>alınan bir değere ayarlayın.
 
-3. Ayarlama <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A> uygun şekilde özelliği.
+3. <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A> Özelliği uygun şekilde ayarlayın.
 
-4. Ayarlama <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> özelliğini <xref:System.IdentityModel.Tokens.SecurityKeyType> `SymmetricKey` veya.`AsymmetricKey` gerektiğinde.
+4. Özelliğini veya <xref:System.IdentityModel.Tokens.SecurityKeyType> olarak`SymmetricKey` ayarlayın. <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A>`AsymmetricKey` gerektiği gibi.
 
-5. Ayarlama <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> özelliğini uygun değer. Herhangi bir değer ayarlarsanız, WCF varsayılan `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`, SAML 1.1 belirteçlerini gösterir.
+5. <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> Özelliği uygun değere ayarlayın. Değer ayarlanmamışsa, WCF varsayılan olarak `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`, SAML 1,1 belirteçlerini gösterir.
 
-6. Hiçbir yerel yayımlayan belirtilirse istemcide gerekli; İsteğe bağlı hizmeti. Oluşturma bir <xref:System.ServiceModel.EndpointAddress> güvenlik belirteci hizmeti ve ata adresini ve kimlik bilgilerini içeren <xref:System.ServiceModel.EndpointAddress> için örnek <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> özelliği.
+6. Yerel veren belirtilmemişse istemcisinde gereklidir; hizmet üzerinde isteğe bağlı. Güvenlik belirteci <xref:System.ServiceModel.EndpointAddress> hizmetinin adresini ve kimlik bilgilerini içeren bir oluşturun ve <xref:System.ServiceModel.EndpointAddress> örneği <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> özelliğine atayın.
 
-7. Hiçbir yerel yayımlayan belirtilirse istemcide gerekli; hizmette kullanılmaz. Oluşturma bir <xref:System.ServiceModel.Channels.Binding> için `SecurityTokenService` ve atama <xref:System.ServiceModel.Channels.Binding> için örnek <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> özelliği.
+7. Yerel veren belirtilmemişse istemcisinde gereklidir; hizmette kullanılmıyor. İçin bir <xref:System.ServiceModel.Channels.Binding> <xref:System.ServiceModel.Channels.Binding> oluşturun<xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> ve örneği özelliğine atayın. `SecurityTokenService`
 
-8. İstemcide kullanılmaz; İsteğe bağlı hizmeti. Oluşturma bir <xref:System.ServiceModel.EndpointAddress> atayın ve örnek güvenlik belirteci hizmeti meta veriler için `IssuerMetadataAddress` özelliği.
+8. İstemcide kullanılmıyor; hizmet üzerinde isteğe bağlı. Güvenlik belirteci <xref:System.ServiceModel.EndpointAddress> hizmetinin meta verileri için bir örnek oluşturun ve bunu `IssuerMetadataAddress` özelliğine atayın.
 
-9. Hem istemci hem de hizmet isteğe bağlı. Oluşturma ve bir veya daha fazla ekleme <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement> tarafından döndürülen bir koleksiyonda örneklerine <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A> özelliği.
+9. Hem istemcide hem de hizmette isteğe bağlıdır. Özelliği tarafından döndürülen koleksiyona bir veya <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement> daha fazla örnek oluşturun ve ekleyin. <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
 
-10. Hem istemci hem de hizmet isteğe bağlı. Oluşturma ve bir veya daha fazla ekleme <xref:System.Xml.XmlElement> tarafından döndürülen bir koleksiyonda örneklerine <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.TokenRequestParameters%2A> özelliği.
+10. Hem istemcide hem de hizmette isteğe bağlıdır. Özelliği tarafından döndürülen koleksiyona bir veya <xref:System.Xml.XmlElement> daha fazla örnek oluşturun ve ekleyin. <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.TokenRequestParameters%2A>
 
 ## <a name="to-create-a-federated-endpoint-in-configuration"></a>Yapılandırmada bir Federasyon uç noktası oluşturmak için
 
-1. Oluşturma bir [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) bir alt öğesi olarak [ \<bağlamaları >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) uygulama yapılandırma dosyasında öğesi.
+1. Uygulama yapılandırma [dosyasındaki \<Bindings >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) öğesinin alt öğesi olarak bir [ \<WSFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) oluşturun.
 
-2. Oluşturma bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesi alt öğesi olarak [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ayarlayıp `name` özniteliği için uygun bir değer.
+2. WSFederationHttpBinding > alt öğesi `name`olarakbir [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesi oluşturun ve özniteliği uygun bir değere ayarlayın. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)
 
-3. Oluşturma bir `<security>` öğesi alt öğesi olarak [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesi.
+3. Bağlama > `<security>` öğesinin alt [öğesi olarak bir öğe oluşturun. \<](../../../../docs/framework/misc/binding.md)
 
-4. Ayarlama `mode` özniteliği `<security>` öğe değerini `Message` veya `TransportWithMessageCredential`gerektirdiği gibi.
+4. Öğesinde özniteliğini, gereken şekilde`TransportWithMessageCredential`veyadeğerineayarlayın. `Message` `mode` `<security>`
 
-5. Oluşturma bir `<message>` öğesi alt öğesi olarak `<security>` öğesi.
+5. Öğesinin alt `<message>` `<security>` öğesi olarak bir öğe oluşturun.
 
-6. İsteğe bağlı. Ayarlama `algorithmSuite` özniteliği `<message>` uygun bir değere sahip öğe. Varsayılan, `Basic256` değeridir.
+6. İsteğe bağlı. Öğesi için`<message>` uygun bir değer içeren özniteliğiniayarlayın.`algorithmSuite` Varsayılan, `Basic256` değeridir.
 
-7. İsteğe bağlı. Asimetrik sağlama anahtar gerekli değilse, `issuedKeyType` özniteliği `<message>` öğesine `AsymmetricKey`. Varsayılan, `SymmetricKey` değeridir.
+7. İsteğe bağlı. Asimetrik bir kanıt anahtarı gerekliyse, `issuedKeyType` `<message>` öğesinin özniteliğini olarak `AsymmetricKey`ayarlayın. Varsayılan, `SymmetricKey` değeridir.
 
-8. İsteğe bağlı. Ayarlama `issuedTokenType` özniteliği `<message>` öğesi.
+8. İsteğe bağlı. `<message>` Öğesinde `issuedTokenType` özniteliğini ayarlayın.
 
-9. Hiçbir yerel yayımlayan belirtilirse istemcide gerekli; İsteğe bağlı hizmeti. Oluşturma bir `<issuer>` öğesi alt öğesi olarak `<message>` öğesi.
+9. Yerel veren belirtilmemişse istemcisinde gereklidir; hizmet üzerinde isteğe bağlı. Öğesinin alt `<issuer>` `<message>` öğesi olarak bir öğesi oluşturun.
 
-10. Ayarlama `address` özniteliğini `<issuer>` öğesi ve güvenlik belirteci hizmeti belirteci isteklerini kabul adresini belirtin.
+10. `address` Özniteliğini`<issuer>` öğesine ayarlayın ve güvenlik belirteci hizmetinin belirteç isteklerini kabul ettiği adresi belirtin.
 
-11. İsteğe bağlı. Ekleme bir `<identity>` alt öğesi ve güvenlik belirteci hizmeti kimliğini belirtin
+11. İsteğe bağlı. Bir `<identity>` alt öğe ekleyin ve güvenlik belirteci hizmetinin kimliğini belirtin
 
-12. Daha fazla bilgi için [kimlik doğrulama ile hizmet kimliği](service-identity-and-authentication.md).
+12. Daha fazla bilgi için bkz. [hizmet kimliği ve kimlik doğrulaması](service-identity-and-authentication.md).
 
-13. Hiçbir yerel yayımlayan belirtilirse istemcide gerekli; hizmette kullanılmaz. Oluşturma bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesinde bir güvenlik belirteci hizmeti ile iletişim kurmak için kullanılan bağlamalar bölümü. Bir bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Yapılandırmada hizmet bağlaması belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).
+13. Yerel veren belirtilmemişse istemcisinde gereklidir; hizmette kullanılmıyor. Güvenlik belirteci hizmeti ile iletişim kurmak için kullanılabilen bağlamalar bölümünde [ bağlama>öğesioluşturun.\<](../../../../docs/framework/misc/binding.md) Bağlama oluşturma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Yapılandırmada](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)bir hizmet bağlaması belirtin.
 
-14. Ayarlayarak önceki adımda oluşturduğunuz bağlama belirtme `binding` ve `bindingConfiguration` özniteliklerini `<issuer>` öğesi.
+14. `binding` Öğesinin ve`bindingConfiguration` özniteliklerini ayarlayarak, önceki adımda oluşturulan bağlamayı belirtin. `<issuer>`
 
-15. İstemcide kullanılmaz; İsteğe bağlı hizmeti. Oluşturma bir `<issuerMetadata>` öğesi alt öğesi olarak <`message`> öğesi. Ardından bir `address` özniteliği `<issuerMetadata>` öğesi, hangi güvenlik belirteci hizmeti meta verilerini yayımlamak için adresini belirtin. İsteğe bağlı olarak, ekleme bir `<identity>` alt öğesi ve güvenlik belirteci hizmeti kimliğini belirtin.
+15. İstemcide kullanılmıyor; hizmet üzerinde isteğe bağlı. `<issuerMetadata>` <`message`> Öğesinin alt öğesi olarak bir öğe oluşturun. Ardından, `<issuerMetadata>` öğesindeki bir `address` özniteliğinde, güvenlik belirteci hizmetinin meta verilerini yayımlayacağınız adresi belirtin. İsteğe bağlı olarak, `<identity>` bir alt öğe ekleyin ve güvenlik belirteci hizmetinin kimliğini belirtin.
 
-16. Hem istemci hem de hizmet isteğe bağlı. Ekleme bir `<claimTypeRequirements>` öğesi alt öğesi olarak `<message>` öğesi. Gerekli ve isteğe bağlı talepleri belirtmek ekleyerek hizmet dayanan [ \<Ekle >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-claimtyperequirements.md) öğelerine `<claimTypeRequirements>` öğesi ve talep belirtme türünü `claimType` özniteliği. Belirli bir talep ayarlayarak gerekli veya isteğe bağlı olup olmadığını belirtin `isOptional` özniteliği.
+16. Hem istemcide hem de hizmette isteğe bağlıdır. Öğesinin alt `<claimTypeRequirements>` `<message>` öğesi olarak bir öğesi ekleyin. `<claimTypeRequirements>` Öğeye [ \<Add >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-claimtyperequirements.md) öğeleri ekleyerek`claimType` ve talep türünü özniteliğiyle belirterek hizmetin bağımlı olduğu zorunlu ve isteğe bağlı talepler belirtin. `isOptional` Özniteliği ayarlayarak belirli bir talebin gerekli veya isteğe bağlı olup olmadığını belirtin.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği ayarlamak için kod gösterir bir `WSFederationHttpBinding` kesin.
+Aşağıdaki kod örneği, bir `WSFederationHttpBinding` imperatively ayarlamaya yönelik kodu gösterir.
 
 [!code-csharp[c_FederationBinding#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_federationbinding/cs/source.cs#2)]
 [!code-vb[c_FederationBinding#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_federationbinding/vb/source.vb#2)]
@@ -110,4 +110,4 @@ Aşağıdaki kod örneği ayarlamak için kod gösterir bir `WSFederationHttpBin
 
 - [Federasyon](federation.md)
 - [Federasyon Örneği](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Nasıl yapılır: WSFederationHttpBinding güvenli oturumlarını devre dışı bırak](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Nasıl yapılır: Bir WSFederationHttpBinding üzerindeki güvenli oturumları devre dışı bırakma](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

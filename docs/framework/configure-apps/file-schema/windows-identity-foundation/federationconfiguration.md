@@ -3,18 +3,18 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 102aadaaa7d7780f1266e1abcea46f0fcf95671e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 53d6bdb34ded52e49fcc8c5de98fcd45ddabadaa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622545"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942773"
 ---
-# <a name="federationconfiguration"></a>\<Federationconfiguration'a >
-Yapılandırır <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) kullanırken, Federasyon kimlik doğrulaması WS-Federation protokolü aracılığıyla. Yapılandırır <xref:System.Security.Claims.ClaimsAuthorizationManager> kullanırken <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> veya <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> beyana dayalı erişim denetimi sağlamak için sınıf.  
+# <a name="federationconfiguration"></a>\<federationConfiguration >
+WS-Federation protokolü aracılığıyla federal kimlik doğrulaması kullanırken <xref:System.IdentityModel.Services.SessionAuthenticationModule> (wsfab)ve(Sam)öğesiniyapılandırır.<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> Talep tabanlı erişim denetimi sağlamak <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> için veya <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> sınıfını kullanırken öğesini yapılandırır. <xref:System.Security.Claims.ClaimsAuthorizationManager>  
   
- \<System.IdentityModel.Services >  
-\<Federationconfiguration'a >  
+ \<System. IdentityModel. Services >  
+\<federationConfiguration >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,49 +32,49 @@ Yapılandırır <xref:System.IdentityModel.Services.WSFederationAuthenticationMo
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|name|Bu Federasyon yapılandırma öğesi adı. Bu öznitelik, gelecekteki protokoller için öncelikle bir genişletilebilirlik noktası sağlar. İsteğe bağlı.|  
-|identityConfigurationName|Belirtilen kimlik yapılandırma bölümünün adını bir [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) kullanmak için öğesi. Bu öznitelik belirtilmezse, varsayılan kimlik yapılandırma bölümü kullanılır. İsteğe bağlı.|  
+|name|Bu Federasyon yapılandırma öğesinin adı. Bu öznitelik, öncelikle gelecekteki protokoller için bir genişletilebilirlik noktası sağlar. İsteğe bağlı.|  
+|ıdentityconfigurationname|Kullanılacak bir [ \<IdentityConfiguration >](identityconfiguration.md) öğesinde belirtilen kimlik yapılandırma bölümünün adı. Bu öznitelik belirtilmemişse, varsayılan kimlik yapılandırma bölümü kullanılır. İsteğe bağlı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|SAM tarafından kullanılan tanımlama bilgisi işleyicisi yapılandırır. İsteğe bağlı.|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Şifreleme ve belirteç şifre çözme için kullanılan sertifikayı yapılandırır. İsteğe bağlı.|  
-|[\<wsFederation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|WS-Federasyon kimlik doğrulama Modülü (WSFAM) yapılandırır. İsteğe bağlı.|  
+|[\<Tanımlama, ıehandler >](cookiehandler.md)|SAM tarafından kullanılan tanımlama bilgisi işleyicisini yapılandırır. İsteğe bağlı.|  
+|[\<serviceCertificate >](servicecertificate.md)|Belirteçleri şifrelemek ve şifrelerini çözmek için kullanılan sertifikayı yapılandırır. İsteğe bağlı.|  
+|[\<wsFederation >](wsfederation.md)|WS-Federation Authentication modülünü (WSFAD) yapılandırır. İsteğe bağlı.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<System.IdentityModel.Services >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)|WS-Federasyon protokolünü kullanarak kimlik doğrulaması için yapılandırma bölümü.|  
+|[\<System. IdentityModel. Services >](system-identitymodel-services.md)|WS-Federation protokolünü kullanarak kimlik doğrulaması için yapılandırma bölümü.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- \<Federationconfiguration'a > öğesi iki farklı senaryolarda ayarları sağlar:  
+ FederationConfiguration > öğesi, \<ayarları iki farklı senaryoda sağlar:  
   
-- WS-Federasyon Pasif bir Web uygulamasında kullanırken, yapılandırdığınız ayarları ögesinin <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). Ayrıca, güvenlik belirteci işleyicileri ve sertifikaları ve talep Yetkilendirme Yöneticisi'ni ve talepler kimlik doğrulama Yöneticisi gibi bileşenleri yapılandırmak için kullanılacak kimlik yapılandırması başvuruyor.  
+- Bir pasif Web uygulamasında WS-Federation kullanılırken, öğesi <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (wsfak) <xref:System.IdentityModel.Services.SessionAuthenticationModule> ve (Sam) öğesini yapılandıran ayarları içerir. Ayrıca güvenlik belirteci işleyicilerini ve sertifikaları ve talep Yetkilendirme Yöneticisi ve talep kimlik doğrulama Yöneticisi gibi bileşenleri yapılandırmak için kullanılacak kimlik yapılandırmasına de başvurur.  
   
-- Kullanırken <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> veya <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> kodunuzda beyana dayalı erişim denetimi sağlamak için sınıf, talep Yetkilendirme Yöneticisi'ni ve yetkilendirme sağlamak için kullanılan ilke yapılandırır kimlik yapılandırma öğesine başvuruda bulunuyor kararları. Bu da pasif Web senaryoları olmayan senaryolarda geçerlidir; Örneğin, Windows Communication Foundation (WCF) uygulamaları veya Web tabanlı yer almayan bir uygulama. Uygulama Pasif bir Web uygulaması değilse [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) öğesini (ve alt ilke öğelerine, varsa) tarafından başvurulan kimlik yapılandırmasının `<federationConfiguration>` öğesi yalnızca ayarlar uygulanır. Diğerleri yoksayılır.  
+- Kodunuzda talep tabanlı <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> erişim denetimi <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> sağlamak için veya sınıfını kullanırken, öğesi, yetkilendirme yapmak için kullanılan talep Yetkilendirme Yöneticisini ve ilkeyi yapılandıran kimlik yapılandırmasına başvurur kararlar. Bu, pasif Web senaryoları olmayan senaryolarda bile geçerlidir; Örneğin, Windows Communication Foundation (WCF) uygulamaları veya Web tabanlı olmayan bir uygulama. Uygulama pasif bir Web uygulaması değilse, [ \<ClaimsAuthorizationManager >](claimsauthorizationmanager.md) öğesi (ve varsa alt ilke öğeleri) `<federationConfiguration>` öğe tarafından başvurulan kimlik yapılandırması tek ayarlardır uygulanmış. Diğerlerinin hepsi yok sayılır.  
   
- Senaryo bağımsız olarak, çalışma zamanı varsayılan Federasyon yapılandırması yükler. Davranışı şu şekilde tanımlanır:  
+ Senaryosundan bağımsız olarak, çalışma zamanı varsayılan Federasyon yapılandırmasını yükler. Davranış aşağıdaki gibi tanımlanır:  
   
-1. Yoksa hiçbir `<federationConfiguration>` öğe yok, çalışma zamanı bir Federasyon yapılandırması oluşturur ve varsayılan değerlerle doldurur. Bu varsayılan Federasyon yapılandırma, varsayılan kimlik yapılandırması başvurur.  
+1. Hiçbir `<federationConfiguration>` öğe yoksa, çalışma zamanı bir Federasyon yapılandırması oluşturur ve varsayılan değerlerle doldurur. Bu varsayılan Federasyon yapılandırması varsayılan kimlik yapılandırmasına başvuracaktır.  
   
-2. Tek bir varsa `<federationConfiguration>` öğe varsa, bunu adlı adlandırılmamış mı bağımsız olarak varsayılan Federasyon yapılandırması. Varsa, `identityConfiguration` özniteliği belirtilirse, adlandırılmış kimlik yapılandırması başvuruyor; Aksi takdirde varsayılan kimlik yapılandırması başvurulur.  
+2. Tek `<federationConfiguration>` bir öğe varsa, bu, adlandırılmış veya adlandırılmamış olmasına bakılmaksızın varsayılan Federasyon yapılandırmadır. `identityConfiguration` Özniteliği belirtilmişse, adlandırılmış kimlik yapılandırmasına başvurulur; Aksi takdirde, varsayılan kimlik yapılandırmasına başvurulur.  
   
-3. Adlandırılmamış bir varsa `<federationConfiguration>` öğe varsa, varsayılan Federasyon yapılandırması. Varsa, `identityConfiguration` özniteliği belirtilirse, adlandırılmış kimlik yapılandırması başvuruyor; Aksi takdirde varsayılan kimlik yapılandırması başvurulur.  
+3. Adlandırılmamış `<federationConfiguration>` bir öğe varsa, varsayılan Federasyon yapılandırması olur. `identityConfiguration` Özniteliği belirtilmişse, adlandırılmış kimlik yapılandırmasına başvurulur; Aksi takdirde, varsayılan kimlik yapılandırmasına başvurulur.  
   
-4. Birden çok adlı `<federationConfiguration>` öğeleri mevcut ve Hayır adlandırılmamış `<federationConfiguration>` öğe varsa, bir özel durum oluşturulur.  
+4. Birden çok adlandırılmış `<federationConfiguration>` öğe varsa ve hiçbir adlandırılmamış `<federationConfiguration>` öğe yoksa, bir özel durum oluşturulur.  
   
- Genellikle, yalnızca tek bir `<federationConfiguration>` bölümünde tanımlanır. Bu bölümde varsayılan Federasyon yapılandırmasıdır. Birden çok, benzersiz olarak adlandırılmış belirtebilir `<federationConfiguration>` öğeleri; adlandırılmamış farklı bir Federasyon yapılandırması yüklemek istiyorsanız, ancak bu durumda, işleyici sağlamalısınız. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> Olay ve set <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> özellik işleyicisi içine bir <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> uygun değerlerle başlatılan nesne `<federationConfiguration>` yapılandırma dosyasındaki öğesi.  
+ Genellikle yalnızca tek `<federationConfiguration>` bir bölüm tanımlanmıştır. Bu bölüm varsayılan Federasyon yapılandırması ' dır. Benzersiz olarak adlandırılmış `<federationConfiguration>` birden çok öğe belirtebilirsiniz; ancak, bu durumda, adlandırılmamış bir yapılandırma dışında bir Federasyon yapılandırması yüklemek istiyorsanız, için bir işleyici sağlamanız gerekir. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated>olay ve işleyici içindeki <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> özelliği, yapılandırma dosyasındaki uygun `<federationConfiguration>` öğeden <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> alınan değerlerle başlatılan bir nesne olarak ayarlayın.  
   
- `<federationConfiguration>` Öğesi tarafından temsil edilen <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> sınıfı. Yapılandırma nesnesi tarafından temsil edilen <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> sınıfı. Tek bir <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> örneğine ayarlanır <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> özelliği ve uygulama için Federasyon yapılandırma sağlar.  
+ `<federationConfiguration>` Öğesi sınıfı<xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> tarafından temsil edilir. Yapılandırma nesnesinin kendisi <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> sınıfı tarafından temsil edilir. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> Özellikte tek <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> bir örnek ayarlanır ve uygulama için Federal yapılandırma sağlar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XML gösterildiği bir `<federationConfiguration>` WSFAM ayarlarını belirler ve belirten öğe varsayılan tanımlama bilgisi işleyicisi (bir örneğini <xref:System.IdentityModel.Services.ChunkedCookieHandler> sınıfı) tarafından SAM kullanılabilir.  
+ Aşağıdaki XML, wsfab için ayarları belirten bir `<federationConfiguration>` öğe gösterir ve varsayılan tanımlama bilgisi işleyicisinin ( <xref:System.IdentityModel.Services.ChunkedCookieHandler> sınıfın bir örneği) Sam tarafından kullanılacağını belirtir.  
   
 > [!WARNING]
->  Bu örnekte, tanımlama bilgisi işleyici ne WSFAM HTTPS kullanmak için gereklidir. Bunun nedeni, `requireHttps` özniteliği `<wsFederation>` öğesi ve `requireSsl` özniteliği `<cookieHandlerElement>` olan `false`. Bunlar bir güvenlik riski sunabilir gibi bu ayarların çoğu üretim ortamları için önerilmez.  
+>  Bu örnekte, HTTPS kullanmak için tanımlama bilgisi işleyicisi veya WSFAE gerekmez. Bunun nedeni `requireHttps` , `<wsFederation>` öğesindeki özniteliği `requireSsl` veiçindeki`false`özniteliğidir. `<cookieHandlerElement>` Bu ayarlar, çoğu üretim ortamında bir güvenlik riski sunabilecek şekilde önerilmez.  
   
 ```xml  
 <system.identityModel.services>  
@@ -96,4 +96,4 @@ Yapılandırır <xref:System.IdentityModel.Services.WSFederationAuthenticationMo
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>
 - <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>
-- [\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)
+- [\<IdentityConfiguration >](identityconfiguration.md)

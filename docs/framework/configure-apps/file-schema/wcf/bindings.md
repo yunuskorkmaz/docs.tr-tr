@@ -2,32 +2,32 @@
 title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: 479941593b1abefe637525703140b02917c6692b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1292bc38ce1e542086edac5539c1b29e619e2a32
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704446"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926380"
 ---
-# <a name="bindings"></a>\<bağlamaları >
+# <a name="bindings"></a>\<bağlama >
 
-Kullanabileceğiniz `bindings` standart ve özel bağlamalar için Windows Communication Foundation (WCF) koleksiyonu yapılandırmak için öğesi. Her Giriş bir `binding` kendi benzersiz tarafından tanımlanabilir öğesi `name`. Hizmetlerini kullanan bağlamaları bağlayarak kullanarak `name`. İle başlayarak [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bağlamalar ve davranışları için gerekli değildir bir ada sahip. Varsayılan yapılandırma ve adsız bağlamaları ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+Windows Communication Foundation (WCF) `bindings` için standart ve özel bağlamaların bir koleksiyonunu yapılandırmak için öğesini kullanabilirsiniz. Her giriş, benzersiz `binding` `name`tarafından tanımlanabilecek bir öğedir. Hizmetler, `name`kullanarak bağlama yoluyla bağlamaları kullanır. İle [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)]başlayarak, bağlamaların ve davranışların bir ada sahip olması gerekmez. Varsayılan yapılandırma ve ad Less bağlamaları ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../../../wcf/simplified-configuration.md) ve Basitleştirilmiş yapılandırma.  
   
-## <a name="system-provided-bindings"></a>Sistem tarafından sağlanan bağlamalar
+## <a name="system-provided-bindings"></a>Sistem tarafından sağlanmış bağlamalar
  
- Sistem tarafından sağlanan bağlamalar WCF Mesajlaşma yığını karmaşıklığını gizler. Sistem tarafından sağlanan bağlamalar kullanan uygulamalar, yığını üzerinde tam denetim gerektirmez. Her sistem tarafından sağlanan bir bağlamayı üzerinde kullanıma sunulan öznitelikleri olanlardır çoğu kullanım senaryosu bağlamanın adreslerin uygun.  
+ Sistem tarafından sağlanmış bağlamalar, WCF mesajlaşma yığınının karmaşıklığını gizler. Sistem tarafından belirtilen bağlamaları kullanan uygulamalar, yığın üzerinde tam denetim gerektirmez. Sistem tarafından sunulan her bağlamada sunulan öznitelikler, bağlama adresleri kullanım senaryosuna en uygun olanlardır.  
   
- Her sistem tarafından sağlanan bir bağlamayı yapılandırma bölümü yapılandırmak için kullanılan birkaç yapılandırmaları tanımlayabilirsiniz. Her yapılandırma, benzersiz bir ad tarafından tanımlanır.  
+ Her sistem tarafından sağlanmış bağlamanın yapılandırma bölümü, bağlamayı yapılandırmak için kullanılan birkaç yapılandırmayı tanımlayabilir. Her yapılandırma benzersiz bir ad ile tanımlanır.  
   
- Öğeler veya öznitelikleri için sistem tarafından sağlanan bir bağlamayı eklemek mümkün değildir. Bunu yapmak için özel bir bağlama açıklandığı uygulamalıdır [özel bağlamalar](#custom-bindings) bölümü. Sistem tarafından sağlanan mükemmel bir şekilde bağlama taklit eder ve kullanıcı uygulaması üzerinde denetime sahip ister birkaç ayar ekleyen özel bir bağlama tanımlamak mümkündür.  
+ Sistem tarafından sağlanmış bir bağlamaya öğe veya öznitelik eklemek mümkün değildir. Bunu yapmak için [Özel Bağlamalar](#custom-bindings) bölümünde açıklandığı gibi özel bir bağlama uygulamalısınız. Sistem tarafından sağlanmış bağlamayı kusursuz bir şekilde taklit eden özel bir bağlama tanımlayabilir ve Kullanıcı uygulamasının denetimini sağlamak istediği birkaç ayarı ekler.  
   
- Sistem tarafından sağlanan bağlamalar bir listesi için bkz. [System-Provided bağlamaları](../../../../../docs/framework/wcf/system-provided-bindings.md).  
+ Sistem tarafından sunulan bağlamaların listesi için bkz. [sistem tarafından sunulan bağlamalar](../../../wcf/system-provided-bindings.md).  
   
-## <a name="custom-bindings"></a>Özel bağlamalar
+## <a name="custom-bindings"></a>Özel Bağlamalar
 
- Özel bağlamalar WCF Mesajlaşma yığını üzerinde tam denetim sağlar. Tek bir bağlama yığında göründükleri sırayla yığın öğeler için yapılandırma öğeleri belirterek ileti yığın tanımlar. Her öğe tanımlar ve bir öğe yığınının yapılandırır. Bir ve yalnızca bir olmalıdır `transport` her özel bir bağlama öğesi. Bu öğe Mesajlaşma yığını eksik.  
+ Özel Bağlamalar, WCF mesajlaşma yığını üzerinde tam denetim sağlar. Tek bir bağlama yığın öğeleri için yapılandırma öğelerini yığında göründükleri sırada belirterek ileti yığınını tanımlar. Her öğe, yığının bir öğesini tanımlar ve yapılandırır. Her özel bağlamada tek bir ve yalnızca `transport` bir öğe olmalıdır. Bu öğe olmadan mesajlaşma yığını tamamlanmamıştır.  
   
- Öğeleri yığında görünme sırasını çünkü bu işlem iletiyi uygulanma sırası önemlidir. Gerekli yığın öğelerin sırasını aşağıda verilmiştir:  
+ Öğelerin yığında görünme sırası önemli olduğundan, bu işlem, bu, işlemde hangi sırada görünecek? Stack öğelerinin gereken sırası şunlardır:  
   
 1. İşlemler (isteğe bağlı)  
   
@@ -35,18 +35,18 @@ Kullanabileceğiniz `bindings` standart ve özel bağlamalar için Windows Commu
   
 3. Güvenlik (isteğe bağlı)  
   
-4. Kodlayıcı  
+4. Kodlayıcısı  
   
-5. Taşıma  
+5. Aktarım  
   
- Özel bağlamalar tarafından tanımlanır, `name` özniteliği. Özel bağlamalar hakkında daha fazla bilgi için bkz. [özel bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Özel bağlamalar `name` özniteliği tarafından tanımlanır. Özel Bağlamalar hakkında daha fazla bilgi için bkz. [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>  
 - <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType>  
 - <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>  
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
-- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
-- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+- [Bağlamalar](../../../wcf/bindings.md)  
+- [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)  
+- [\<customBinding >](custombinding.md)  
+- [\<bağlama >](../../../misc/binding.md)

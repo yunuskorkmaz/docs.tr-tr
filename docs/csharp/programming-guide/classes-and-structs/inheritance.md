@@ -10,19 +10,19 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 1fc8303ad4d54bfd3255d725de486281cd09439e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3211a4741eb56ad9e138a848e52fabbc1d3daaeb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596557"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924465"
 ---
 # <a name="inheritance-c-programming-guide"></a>Devralma (C# Programlama Kılavuzu)
 
 Kapsülleme ve çok biçimlilik ile birlikte devralma, nesne odaklı programlamanın üç birincil özelliklerinden biridir. Devralma, diğer sınıflarda tanımlanan davranışı yeniden kullanan, genişleten ve değiştiren yeni sınıflar oluşturmanıza olanak sağlar. Üyeleri devralınmış olan sınıfa *temel sınıf*denir ve bu üyeleri devralan sınıfa *türetilmiş sınıf*denir. Türetilmiş bir sınıfın yalnızca bir doğrudan temel sınıfı olabilir. Ancak, devralma geçişlidir. ClassC, ClassB 'den türetildiyse ve ClassB, ClassA 'dan türetilirse ClassC, ClassB ve ClassA 'da belirtilen üyeleri devralır.  
   
 > [!NOTE]
->  Yapılar devralmayı desteklemez, ancak arabirimler uygulayabilir. Daha fazla bilgi için bkz. [arabirimler](../interfaces/index.md).  
+> Yapılar devralmayı desteklemez, ancak arabirimler uygulayabilir. Daha fazla bilgi için bkz. [arabirimler](../interfaces/index.md).  
   
  Kavramsal olarak, türetilmiş bir sınıf temel sınıfın bir özelleştirmesi olur. Örneğin, bir taban sınıfınız `Animal`varsa adlı bir türetilmiş sınıfa `Mammal` ve adında `Reptile`başka bir türetilmiş sınıfa sahip olabilirsiniz. , Bir, `Reptile` ve bir olur ,ancakhertüretilmişsınıftemelsınıfınfarklıözelleştirmelerinitemsileder.`Animal` `Mammal` `Animal`  
   

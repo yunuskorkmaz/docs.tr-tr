@@ -20,17 +20,17 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: e678195e96aea881777c44ab14bb2e56aef015bb
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 2243c9ce2d8ba741143d301c38e8b88d7b196c98
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505300"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914820"
 ---
 # <a name="types-of-bitmaps"></a>Bit Eşlem Türleri
-Bir bit eşlem piksel dikdörtgen bir dizi her piksel rengi belirtin BITS dizisidir. Tek bir piksele şekillendiriyorsa bit sayısı kadar bu piksele atanabilir renk sayısını belirler. Her piksel 4 BITS tarafından temsil edilir, örneğin, ardından belirli bir pikselin 16 farklı renkler birini atanabilir (2 ^ 4 = 16). Aşağıdaki tabloda, BITS, verilen sayıda tarafından temsil edilen bir piksele atanabilir renklerin sayısı birkaç örnek gösterilmektedir.  
+Bit eşlem, piksel dizisindeki her bir pikselin rengini belirleyen bir bit dizisidir. Tek bir piksele ayrılan bit sayısı, bu piksele atanabilecek renklerin sayısını belirler. Örneğin, her piksel 4 bit ile temsil edildiğinde, belirli bir piksel 16 farklı renkten biri atanabilir (2 ^ 4 = 16). Aşağıdaki tabloda, belirli bir bit sayısıyla temsil edilen bir piksel için atanabilecek renk sayısının birkaç örneği gösterilmektedir.  
   
-|Piksel başına bit|Bir piksele atanabilir renk sayısı|  
+|Bit/piksel|Bir pikselin atanabileceği renklerin sayısı|  
 |--------------------|------------------------------------------------------|  
 |1\.|2^1 = 2|  
 |2|2^2 = 4|  
@@ -39,51 +39,51 @@ Bir bit eşlem piksel dikdörtgen bir dizi her piksel rengi belirtin BITS dizisi
 |16|2^16 = 65,536|  
 |24|2^24 = 16,777,216|  
   
- Bit eşlemler genellikle depolama disk dosyaları, dizide piksel, her bir satırdaki piksel sayısı ve satır sayısı başına bit sayısı gibi bilgileri depolayan bir veya daha fazla bilgi bloğu içerir. Böyle bir dosya (renk paleti olarak da adlandırılır) bir renk tablosu da içerebilir. Bir renk tablosu bit eşlem numaraları belirli bir renge eşler. Aşağıdaki çizim, bit eşlem ve renk tablosunu yanı sıra genişletilmiş bir görüntü gösterir. 2 olduklarından her piksel 4 bit bir sayı tarafından temsil edilen ^ 4 = 16 renk tablosunda renkleri. Tablodaki her renk, 24 bit bir sayı temsil edilir: 8 bit kırmızı, yeşil için 8 bit ve mavi için 8 bit. Sayıları, onaltılık (16 tabanında) biçiminde gösterilir: A 10, B = 11, C = 12, D = 13, E = 14, F = = 15.  
+ Bit eşlemler depolayan disk dosyalarında genellikle piksel başına bit sayısı, her satırdaki piksel sayısı ve dizideki satır sayısı gibi bilgileri depolayan bir veya daha fazla bilgi bloğu bulunur. Böyle bir dosya aynı zamanda bir renk tablosu (bazen renk paleti olarak adlandırılır) de içerebilir. Renk tablosu, bit eşlemdeki sayıları belirli renklere eşler. Aşağıdaki çizimde, bit eşlem ve renk tablosu ile birlikte büyütülmüş bir görüntü gösterilmektedir. Her piksel 4 bitlik bir sayıyla temsil edildiğinde, renk tablosunda 2 ^ 4 = 16 renk vardır. Tablodaki her renk 24 bitlik bir sayıyla temsil edilir: Kırmızı için 8 bit, yeşil için 8 bit ve mavi için 8 bit. Sayılar onaltılık (taban 16) biçiminde gösterilir: A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
   
- ![Bit eşlem örnek](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
+ ![Bit eşlem örneği](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
- Satır 3'te, görüntünün sütun 5 piksel bakın. Bit eşlem karşılık gelen sayısı 1'dir. Renk tablosunu bize 1 piksel kırmızı renkte kırmızı renk temsil ettiğini gösterir. Tüm bit eşlemin en üst sıradaki 3 girişlerdir. Renk tablosunu bize görüntünün üst satırdaki tüm pikselleri mavi şekilde 3 mavi temsil ettiğini söyler.  
+ Görüntünün satır 3, sütun 5 ' teki pikseline bakın. Bit eşlemdeki karşılık gelen sayı 1 ' dir. Renk tablosu, 1 ' in kırmızı rengini temsil ettiğini, pikselin kırmızı olduğunu söyler. Bit eşlemin en üstteki satırındaki tüm girişler 3 ' dir. Renk tablosu, 3 ' ün mavi temsil ettiğini, böylece görüntünün en üstteki satırındaki tüm piksellerin mavi olduğunu söyler.  
   
 > [!NOTE]
->  Bazı bit eşlemler, aşağıdan yukarıya biçiminde depolanır; sayıları ilk satırında bit eşlemin piksel cinsinden görüntü en alt satırında karşılık gelir.  
+> Bazı bit eşlemler, alt biçimde saklanır; bit eşlemin ilk satırındaki sayılar görüntünün alt satırındaki piksellere karşılık gelir.  
   
- Bir renk tablosunu dizinleri depolayan bir bit eşlem palet-dizinli bir bit eşlem olarak adlandırılır. Bazı bit eşlemler bir renk tablosu gerek vardır. Bir bit eşlem 24 bit / piksel kullanıyorsa, örneğin, bu bit eşlem dizinleri yerine renkleri kendilerini bir renk tablosunu depolayabilirsiniz. Aşağıdaki çizimde, bir renk tablosu kullanmak yerine doğrudan renkleri (24 bit / piksel) depolayan bir bit eşlem gösterir. Çizim, ayrıca karşılık gelen görüntü genişletilmiş bir görünümünü gösterir. Bit eşlem FFFFFF beyaz temsil eder, FF0000 temsil eden kırmızı, yeşil 00FF00 temsil eder ve 0000FF mavi temsil eder.  
+ Bir renk tablosunda dizinleri depolayan bir bit eşlem, palette dizinli bit eşlem olarak adlandırılır. Bazı Bit eşlemlerin renk tablosuna ihtiyacı yoktur. Örneğin, bir bit eşlem piksel başına 24 bit kullanıyorsa, bu bit eşlem, renkleri bir renk tablosuna dizinler yerine kendi başlarına depolayabilirler. Aşağıdaki çizimde renk tablosu kullanmak yerine renkleri doğrudan depolayan bir bit eşlem (piksel başına 24 bit) gösterilmektedir. Çizimde de ilgili görüntünün büyütülmüş görünümü gösterilmektedir. Bit eşlemde FFFFFF beyaz, FF0000 kırmızıya, 00FF00 ise yeşil ve 0000FF, maviyi temsil eder.  
   
- ![Bit eşlem örnek](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
+ ![Bit eşlem örneği](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
-## <a name="graphics-file-formats"></a>Grafik dosya biçimleri  
- Bit eşlemleri kaydetme disk dosyaları için birçok standart biçimi vardır. GDI +'da destekler, aşağıdaki paragrafta açıklanan biçimleri grafik dosyası.  
+## <a name="graphics-file-formats"></a>Grafik dosyası biçimleri  
+ Bit eşlemleri disk dosyalarında kaydetmek için birçok standart biçim vardır. GDI+, aşağıdaki paragraflarda açıklanan grafik dosyası biçimlerini destekler.  
   
 ### <a name="bmp"></a>BMP  
- BMP, CİHAZDAN bağımsız ve uygulama bağımsız görüntüleri depolamak için Windows tarafından kullanılan standart bir biçimidir. Bit / piksel (1, 4, 8, 15, 24, 32 veya 64) için belirli bir BMP dosya sayısı, dosya üst bilgisinde belirtilir. BMP dosyaları 24 bit / piksel ile yaygındır. BMP dosyaları, genellikle değil sıkıştırılır ve bu nedenle, Internet üzerinden aktarım için uygun değildir.  
+ BMP, Windows tarafından cihazdan bağımsız ve uygulamayla bağımsız görüntüleri depolamak için kullanılan standart bir biçimdir. Belirli bir BMP dosyası için piksel başına bit sayısı (1, 4, 8, 15, 24, 32 veya 64) bir dosya üstbilgisinde belirtilir. 24 bit piksel başına BMP dosyaları yaygındır. BMP dosyaları genellikle sıkıştırılmaz ve bu nedenle, Internet üzerinden aktarım için uygun değildir.  
   
 ### <a name="graphics-interchange-format-gif"></a>Grafik Değişim Biçimi (GIF)  
- GIF, Web sayfalarında görünen görüntüleri için ortak bir biçimidir. GIF çizimlerde, düz renk bloklarını resimlerle ve renkler arasında NET sınırları resimler için çalışır. GIF sıkıştırılır ancak hiçbir bilgi sıkıştırma işlemde kaybolur; sıkıştırması açılmış bir görüntü tam olarak özgün ile aynıdır. Bir renk bir GIF görüntüsünü görüntüler herhangi bir Web sayfasında arka plan rengini sahip olmasını saydam belirlenebilir. GIF görüntülerini bir dizi animasyonlu GIF oluşturmak için bir tek dosyasında depolanabilir. GIF, 256 renkleri sınırlı olduğundan en fazla 8 bit / piksel, depolar.  
+ GIF, Web sayfalarında görünen görüntüler için ortak bir biçimdir. GIF 'Ler çizgi çizimlerinde, düz renk blokları olan resimlerde ve renkler arasında keskin sınırlara sahip resimler için uygundur. GIF 'Ler sıkıştırılır, ancak sıkıştırma işleminde bilgi kaybı yoktur; sıkıştırması açılmış bir görüntü, orijinaliyle tamamen aynıdır. Bir GIF 'teki bir renk saydam olarak belirlenebilir, böylece görüntünün onu görüntüleyen herhangi bir Web sayfasının arka plan rengi olur. GIF görüntülerinin sırası, animasyonlu bir GIF oluşturmak için tek bir dosyada depolanabilir. GIF 'Ler, her piksel için en fazla 8 bit boyutunda, 256 renklerle sınırlandırılmıştır.  
   
-### <a name="joint-photographic-experts-group-jpeg"></a>JPEG Dosya Değişim Biçimi (JPEG)  
- JPEG taranmış fotoğraflar gibi doğal sahneler için iyi çalışan bir sıkıştırma düzenidir. Sıkıştırma işleminde bazı bilgileri kaybolur, ancak genellikle İnsan gözüyle imperceptible kaybı. 16 milyondan fazla renkleri görüntüleyebilen şekilde 24 bit / piksel, JPEG depolayın. JPEG, saydam veya animasyon desteklemez.  
+### <a name="joint-photographic-experts-group-jpeg"></a>Birleşik Fotoğraf Uzmanları Grubu (JPEG)  
+ JPEG, taranmış fotoğraflar gibi doğal sahnelerde iyi bir şekilde çalışacak bir sıkıştırma şemadır. Sıkıştırma işleminde bazı bilgiler kaybolur, ancak genellikle kaybın insan gözle kaybı vardır. JPEG 'ler piksel başına 24 bit depolar, bu nedenle 16.000.000 'den fazla renk görüntüleme yeteneğine sahiptir. JPEG 'ler saydamlığı veya animasyonu desteklemez.  
   
- JPEG görüntüleri sıkıştırma düzeyi yapılandırılabilir, ancak yüksek sıkıştırma düzeyleri (daha küçük dosyalar) daha fazla bilgi kaybına neden. 20:1 sıkıştırma oranı genellikle İnsan gözüyle orijinalden ayırt etmek zor bulur bir görüntü oluşturur. Bir BMP görüntüsünü ve bu BMP görüntüsünü sıkıştırılan iki JPEG görüntüleri aşağıda gösterilmiştir. İlk JPEG sıkıştırma oranı 4:1 ve ikinci JPEG sıkıştırma yaklaşık 8:1 oranında sahiptir.  
+ JPEG görüntülerinde sıkıştırma düzeyi yapılandırılabilir, ancak daha yüksek sıkıştırma düzeyleri (daha küçük dosyalar) daha fazla bilgi kaybına neden olur. 20:1 sıkıştırma oranı genellikle insan gözünün orijinalden ayırt edilmesi zor bulduğu bir görüntü oluşturur. Aşağıdaki çizimde, bir BMP görüntüsünü ve bu BMP görüntüsünden sıkıştırılan iki JPEG görüntüsü gösterilmektedir. İlk JPEG 4:1 sıkıştırma oranına sahiptir ve ikinci JPEG 'nin 8:1 hakkında bir sıkıştırma oranı vardır.  
   
- ![Dosya türü örnekleri](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
+ ![Filetype örnekleri](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
   
- JPEG sıkıştırma de satır çizimler için düz renk bloklarını çalışma ve sınırları diyez desteklemez. Bir BMP iki JPEG ve bir GIF ile birlikte aşağıda gösterilmiştir. JPEG ve GIF BMP sıkıştırıldı. Sıkıştırma oranı 4:1 GIF, 4:1 küçük JPEG ve 8:3 büyük JPEG için var. GIF satırları sharp bölümlere korur, ancak JPEG sınırları bulanıklaştıran eğilimindedir unutmayın.  
+ JPEG sıkıştırması çizgi çizimleri, düz renk blokları ve keskin sınırlar için iyi çalışmaz. Aşağıdaki çizimde, iki JPEG ve GIF ile birlikte bir BMP gösterilmektedir. JPEG 'ler ve GIF, BMP 'den sıkıştırıldı. Sıkıştırma oranı, GIF için 4:1, daha küçük JPEG için 4:1 ve daha büyük JPEG için 8:3. GIF 'in çizgiler üzerinde keskin sınırlar tuttuğunu, ancak JPEG 'ler sınırları bulanıklaştırmasını sağlar.  
   
  ![Dosya türleri](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
   
- JPEG bir sıkıştırma, bir dosya biçimi kullanılır. JPEG dosyası Değişim Biçimi (JFIF), depolama ve aktarma JPEG düzenine uygun sıkıştırılmış görüntüleri için yaygın olarak kullanılan bir dosya biçimidir. Web tarayıcıları tarafından görüntülenen JFIF dosyaları .jpg uzantısını kullanır.  
+ JPEG, bir dosya biçimi değil, bir sıkıştırma şemadır. JPEG dosya değişim biçimi (JıO), JPEG şemasına göre sıkıştırılan görüntüleri depolamak ve aktarmak için yaygın olarak kullanılan bir dosya biçimidir. Web tarayıcıları tarafından görüntülenmekte olan JFILES dosyaları. jpg uzantısını kullanır.  
   
-### <a name="exchangeable-image-file-exif"></a>Değiştirilebilir görüntü dosyası (EXIF)  
- EXIF, dijital kamera tarafından yakalanan fotoğraflar için kullanılan bir dosya biçimidir. EXIF dosya JPEG belirtimine göre sıkıştırılmış görüntü içerir. EXIF dosya fotoğraf hakkında bilgiler de içerir. (alındığı tarih, perde hızı, tehditlere maruz kalabileceği süreyi vb.) ve kamera (üreticisi, modeli vb.) hakkında bilgi.  
+### <a name="exchangeable-image-file-exif"></a>Takas edilebilir görüntü dosyası (EXIF)  
+ EXIF, dijital kameralar tarafından yakalanan fotoğraflar için kullanılan bir dosya biçimidir. Bir EXIF dosyası JPEG belirtimine göre sıkıştırılan bir görüntü içerir. Bir EXIF dosyası ayrıca fotoğrafla ilgili bilgileri (Çekildiği Tarih, perde hızı, pozlama süresi vb.) ve kamera (üretici, model vb.) hakkındaki bilgileri içerir.  
   
 ### <a name="portable-network-graphics-png"></a>Taşınabilir Ağ Grafikleri (PNG)  
- PNG biçiminde GIF biçimi avantajları birçoğu korur, ancak GIF, ötesinde yetenekleri de sağlar. GIF dosyaları gibi PNG dosyaları bilgi kaybı olmadan ile sıkıştırılır. PNG dosyaları, 8, 24, veya 48 bit / piksel ve çok sayıda gri ton 1, 2, 4, 8 veya 16 bit / piksel renklerle depolayabilirsiniz. Buna karşılık, GIF dosyaları yalnızca 1, 2, 4 veya 8 bit / piksel kullanabilirsiniz. Bir PNG dosyası, alfa değeri için o piksel rengi ile arka plan rengi harmanlanan belirtir her piksel olarak da depolayabilirsiniz.  
+ PNG biçimi, GIF biçiminin birçok avantajını korur, ancak aynı zamanda GIF 'in ötesinde yetenekler sağlar. GIF dosyaları gibi, PNG dosyaları da hiçbir bilgi kaybı olmadan sıkıştırılır. PNG dosyaları, renkleri 8, 24 veya piksel başına 48 bit ve 1, 2, 4, 8 veya piksel başına 16 bit ile gri ölçeklendirilen şekilde saklayabilir. Buna karşılık, GIF dosyaları her piksel için yalnızca 1, 2, 4 veya 8 bit kullanabilir. Bir PNG dosyası her piksel için bir alfa değeri de saklayabilir, bu da bu pikselin renginin arka plan rengiyle karışan derecesini belirtir.  
   
- PNG, aşamalı bir görüntü yeteneğini üzerinde GIF geliştirir (diğer bir deyişle, resmin daha iyi ve daha iyi tahminleri olarak görüntülemek için bir ağ bağlantısı üzerinden ulaşan). PNG dosyaları, böylece bu görüntüleri görüntüleme cihazları çeşitli üzerinde doğru bir şekilde işlenebilecek gama düzeltme ve renk düzeltme bilgileri içerebilir.  
+ PNG, GIF üzerinde, bir görüntüyü aşamalı olarak görüntüleme (yani bir ağ bağlantısının üzerine geldiğinde görüntünün daha iyi ve daha iyi bir şekilde gösterilmesi için) özelliğini geliştirir. PNG dosyaları, görüntülerin çeşitli görüntü cihazlarında doğru şekilde işlenebilmesi için gama düzeltmesi ve renk düzeltme bilgileri içerebilir.  
   
-### <a name="tag-image-file-format-tiff"></a>Etiketli Resim dosyası biçimi (TIFF)  
- TIFF çok çeşitli platformları ve görüntü işleme uygulamaları tarafından desteklenen esnek ve Genişletilebilir bir biçimidir. TIFF dosyaları sıkıştırma algoritmaları çeşitli dağıtabileceklerinizle ve tercihe bağlı sayıda piksel başına bit görüntüleri depolayabilirsiniz. Birkaç görüntüyü tek ve birden çok sayfalı TIFF dosyası depolanabilir. Görüntü (tarayıcı olun, ana bilgisayar, sıkıştırma, yönlendirme, piksel ve benzeri başına örnek türü) ilgili bilgileri dosyasında depolanan ve etiketleri kullanılarak düzenlenir. TIFF biçimi, yeni etiketleri eklenmesi ve onay gerektiği şekilde genişletilebilir.  
+### <a name="tag-image-file-format-tiff"></a>Etiketli resim dosyası biçimi (TIFF)  
+ TIFF, çok çeşitli platformlar ve görüntü işleme uygulamaları tarafından desteklenen esnek ve genişletilebilir bir biçimdir. TIFF dosyaları, görüntüleri piksel başına rastgele sayıda bit ile saklayabilir ve çeşitli sıkıştırma algoritmaları kullanabilir. Birçok görüntü tek, çok sayfalı bir TIFF dosyasında depolanabilir. Görüntüyle ilgili bilgiler (tarayıcı oluşturma, ana bilgisayar, sıkıştırma türü, yönlendirme, piksel başına örnek vb.) dosyada depolanabilir ve Etiketler kullanılarak düzenlenebilir. TIFF biçimi, onay ve yeni etiketlerin eklenmesi için gereken şekilde genişletilebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 93924638fabe9a46af39006130d4f07de2ad0541
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8cf0f57caad41da0a29b935029731260154a2dc7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590486"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924032"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Nasıl yapılır: .NET Framework yönergelerine uygun olan olayları yayımlama (C# Programlama Kılavuzu)
 Aşağıdaki yordam, sınıflarınıza ve yapılarına standart .NET Framework modelini izleyen olayların nasıl ekleneceğini göstermektedir. .NET Framework sınıf kitaplığındaki tüm olaylar, aşağıdaki şekilde tanımlanan <xref:System.EventHandler> temsilciyi temel alır:  
@@ -20,7 +20,7 @@ public delegate void EventHandler(object sender, EventArgs e);
 ```  
   
 > [!NOTE]
->  .NET Framework 2,0, bu temsilcinin <xref:System.EventHandler%601>genel bir sürümünü sunmaktadır. Aşağıdaki örneklerde her iki sürümün de nasıl kullanılacağı gösterilmektedir.  
+> .NET Framework 2,0, bu temsilcinin <xref:System.EventHandler%601>genel bir sürümünü sunmaktadır. Aşağıdaki örneklerde her iki sürümün de nasıl kullanılacağı gösterilmektedir.  
   
  Tanımladığınız sınıflardaki olaylar geçerli temsilci türlerini temel alabilir, hatta bir değer döndüren temsilciler olsa da, aşağıdaki örnekte gösterildiği gibi, kullanarak <xref:System.EventHandler>olaylarınızın .NET Framework düzeniyle temel almanız önerilir.  
   

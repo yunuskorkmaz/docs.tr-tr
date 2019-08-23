@@ -10,27 +10,27 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: ccc36d51201e63584c0345d7afaab558649adf53
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: c7bf70a67729744f4cf96318f6b270a5ea81b812
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053422"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917721"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Nasıl yapılır: Windows Forms DataGrid Denetiminde Çalışma Zamanında Görüntülenen Verileri Değiştirme
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Denetim yerini alır ve <xref:System.Windows.Forms.DataGrid> <xref:System.Windows.Forms.DataGrid> denetime işlevsellik ekler; ancak, isterseniz denetim hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.DataGridView> Daha fazla bilgi için bkz. [Windows Forms DataGridView ve DataGrid denetimleri arasındaki farklar](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Bir Windows Forms oluşturduktan sonra <xref:System.Windows.Forms.DataGrid> tasarım-zamanı Özellikleri'ni kullanarak da öğelerini dinamik olarak değiştirmek isteyebilirsiniz <xref:System.Data.DataSet> kılavuzunun çalışma zamanında nesne. Bu tablo ya da tek tek değerlere değişiklikleri içerebilir veya veri kaynağını değiştirme bağlı <xref:System.Windows.Forms.DataGrid> denetimi. Değişiklikler tek tek değerlere aracılığıyla yapılır <xref:System.Data.DataSet> nesnesi değil, <xref:System.Windows.Forms.DataGrid> denetimi.  
+ Tasarım zamanı özelliklerini kullanarak bir Windows Forms <xref:System.Windows.Forms.DataGrid> oluşturduktan sonra, çalışma zamanında kılavuzun <xref:System.Data.DataSet> nesne öğelerini dinamik olarak değiştirmek de isteyebilirsiniz. Bu, tablonun tek tek değerlerine yapılan değişiklikleri veya <xref:System.Windows.Forms.DataGrid> denetime hangi veri kaynağının bağlandığını değiştirmek içerebilir. Tek tek değerlerde yapılan değişiklikler, <xref:System.Data.DataSet> <xref:System.Windows.Forms.DataGrid> denetim değil, nesnesi aracılığıyla yapılır.  
   
-### <a name="to-change-data-programmatically"></a>Verileri program aracılığıyla değiştirme  
+### <a name="to-change-data-programmatically"></a>Verileri program aracılığıyla değiştirmek için  
   
-1. İstenen tablosundan belirtin <xref:System.Data.DataSet> nesne ve istenen tablodan alan satır ve hücre yeni değere eşit olarak ayarlayın.  
+1. <xref:System.Data.DataSet> Nesneden istenen tabloyu ve tablodaki istenen satırı ve alanı belirtin ve hücreyi yeni değere eşit olarak ayarlayın.  
   
     > [!NOTE]
-    >  İlk tablonun belirtmek için <xref:System.Data.DataSet> veya tablonun ilk satırının 0 kullanın.  
+    > Tablonun ilk tablosunu <xref:System.Data.DataSet> veya ilk satırını belirtmek için 0 kullanın.  
   
-     Aşağıdaki örnek, bir veri kümesinin ilk tablonun ilk satırın ikinci girdi değiştirmek gösterilmektedir `Button1`. <xref:System.Data.DataSet> (`ds`) Ve tablo (`0` ve `1`) önceden oluşturulmuş.  
+     Aşağıdaki örnek, öğesine tıklayarak `Button1`bir veri kümesinin ilk tablosunun ilk satırının ikinci girişinin nasıl değiştirileceğini gösterir. () Ve`0` tabloları (ve `1`) daha önce oluşturulmuştur.`ds` <xref:System.Data.DataSet>  
   
     ```vb  
     Protected Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -53,7 +53,7 @@ ms.locfileid: "66053422"
        }  
     ```  
   
-     (Visual C#, Visual C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
+     (Görsel C#, görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -64,13 +64,13 @@ ms.locfileid: "66053422"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     Çalışma zamanında kullanabileceğiniz <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> bağlamak için yöntemi <xref:System.Windows.Forms.DataGrid> denetimi için farklı bir veri kaynağı. Örneğin, birkaç ADO.NET veri denetimleri olabilir, her farklı bir veritabanına bağlı.  
+     Çalışma zamanında, <xref:System.Windows.Forms.DataGrid> denetimi farklı bir veri <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> kaynağına bağlamak için yöntemini kullanabilirsiniz. Örneğin, her biri farklı bir veritabanına bağlı olan birkaç ADO.NET veri denetimine sahip olabilirsiniz.  
   
-### <a name="to-change-the-datasource-programmatically"></a>Veri kaynağında programlı olarak değiştirmek için  
+### <a name="to-change-the-datasource-programmatically"></a>Veri kaynağını program aracılığıyla değiştirmek için  
   
-1. Ayarlama <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemi bağlamak için istediğiniz tabloyu ve veri kaynağı adı.  
+1. Yöntemini, <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> bağlamak istediğiniz veri kaynağı ve tablo adına ayarlayın.  
   
-     Aşağıdaki örnekte, tarih kullanarak kaynak değiştirmeye gösterilmektedir <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Pubs veritabanı yazarlar tablosuna bağlı bir ADO.NET veri denetimi (adoPubsAuthors) için yöntemi.  
+     Aşağıdaki örnek, pubs veritabanındaki yazarlar tablosuna bağlı olan ADO.NET veri denetimine <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> (adopubsauthors) yöntemi kullanılarak tarih kaynağının nasıl değiştirileceğini gösterir.  
   
     ```vb  
     Private Sub ResetSource()  
@@ -96,6 +96,6 @@ ms.locfileid: "66053422"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ADO.NET Veri Kümeleri](../../data/adonet/ado-net-datasets.md)
-- [Nasıl yapılır: Silme veya Windows Forms DataGrid denetiminde sütunları gizleme](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Nasıl yapılır: Windows Forms DataGrid denetimindeki sütunları silme veya gizleme](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [Nasıl yapılır: Windows Forms DataGrid denetimine tablolar ve sütunlar ekleme](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [Nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Nasıl yapılır: Windows Forms DataGrid denetimini bir veri kaynağına bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

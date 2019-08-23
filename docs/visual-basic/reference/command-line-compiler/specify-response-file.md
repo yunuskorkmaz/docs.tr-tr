@@ -4,15 +4,15 @@ ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-ms.openlocfilehash: 6b993a6399eec4e203821109db153aadf246cbac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b84d50334e56305c27c5c0bc54578ba871a28365
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61639028"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937293"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@ (Yanıt Dosyası Belirtme) (Visual Basic)
-Derleyici seçenekleri içeren bir dosyayı ve derlemek için kaynak kodu dosyaları belirtir.  
+Derlemek için derleyici seçeneklerini ve kaynak kodu dosyalarını içeren bir dosyayı belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -22,28 +22,28 @@ Derleyici seçenekleri içeren bir dosyayı ve derlemek için kaynak kodu dosyal
   
 ## <a name="arguments"></a>Arguments  
  `response_file`  
- Gerekli. Derleyici Seçenekleri veya kaynak kodu dosyalarına derlemek listeleyen bir dosya. Dosya adı tırnak içine alın ("") bir boşluk içeriyorsa.  
+ Gerekli. Derlemek için derleyici seçeneklerini veya kaynak kodu dosyalarını listeleyen bir dosya. Bir boşluk içeriyorsa dosya adını tırnak işaretleri ("") içine alın.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derleyici derleyici seçenekleri ve komut satırı üzerinde belirtilmiş gibi bir yanıt dosyası içinde belirtilen kaynak kodu dosyaları işler.  
+ Derleyici, bir yanıt dosyasında belirtilen derleyici seçeneklerini ve kaynak kodu dosyalarını komut satırında belirtildikleri gibi işler.  
   
- Bir derlemede birden fazla yanıt dosyası belirtmek için aşağıdaki gibi birden çok yanıt dosyası seçeneği belirtin.  
+ Bir derlemede birden fazla yanıt dosyası belirtmek için, aşağıdaki gibi birden çok yanıt dosyası seçeneği belirtin.  
   
 ```  
 @file1.rsp @file2.rsp  
 ```  
   
- Bir yanıt dosyası, birden çok derleme seçenekleri ve kaynak kodu dosyaları tek bir satırda görünebilir. Tek bir derleyici seçeneği belirtimi (çok satırlı yayılamaz) tek bir satırda yer almalıdır. Yanıt dosyaları ile başlayan açıklamaları olabilir `#` simgesi.  
+ Bir yanıt dosyasında, tek satırda birden çok derleyici seçeneği ve kaynak kodu dosyası görünebilir. Tek bir derleyici-seçenek belirtiminin tek bir satırda görünmesi gerekir (birden çok satıra yayılamaz). Yanıt dosyaları `#` sembolle başlayan açıklamalara sahip olabilir.  
   
- Bir veya daha fazla yanıt dosyalarında belirtilen seçeneklerle komut satırında belirtilen seçenekler birleştirebilirsiniz. Derleyici bunları komut seçenekleri işler. Bu nedenle, komut satırı bağımsız değişkenleri, yanıt dosyaları daha önce listelenen seçeneklerini geçersiz kılabilirsiniz. Buna karşılık, bir yanıt dosyasında seçenekleri komut satırında veya diğer yanıt dosyaları daha önce listelenen seçenekleri geçersiz kılar.  
+ Komut satırında belirtilen seçenekleri, bir veya daha fazla yanıt dosyasında belirtilen seçeneklerle birleştirebilirsiniz. Derleyici, komut seçeneklerini kendileriyle karşılaştığı şekilde işler. Bu nedenle, komut satırı bağımsız değişkenleri yanıt dosyalarında daha önce listelenen seçenekleri geçersiz kılabilir. Buna karşılık, bir yanıt dosyasındaki seçenekler, önceden komut satırında veya diğer yanıt dosyalarında listelenen seçenekleri geçersiz kılar.  
   
- Visual Basic Vbc.exe dosyasıyla aynı dizinde bulunan nezahrnovat dosyasını sağlar. Nezahrnovat dosya, sürece varsayılan olarak dahil edilir `-noconfig` seçeneği kullanılır. Daha fazla bilgi için [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).  
+ Visual Basic, vbc. exe dosyası ile aynı dizinde bulunan Vbc. rsp dosyasını sağlar. `-noconfig` Seçenek kullanılmamışsa, vbc. rsp dosyası varsayılan olarak dahil edilir. Daha fazla bilgi için bkz. [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).  
   
 > [!NOTE]
->  `@` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yapılırken kullanılabilir.  
+> Bu `@` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki satırları bir örnek yanıt dosyasında bulunur.  
+ Aşağıdaki satırlar örnek bir yanıt dosyasından alınır.  
   
 ```console
 # build the first output file  
@@ -54,7 +54,7 @@ source2.vb
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir `@` adlı yanıt dosyası seçeneği `File1.rsp`.  
+ Aşağıdaki örnek, `@` seçeneğinin adlı `File1.rsp`yanıt dosyası ile nasıl kullanılacağını gösterir.  
   
 ```console
 vbc @file1.rsp  

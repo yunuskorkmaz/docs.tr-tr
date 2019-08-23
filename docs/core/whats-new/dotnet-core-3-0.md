@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 07/25/2019
-ms.openlocfilehash: 10e5dfdc873f8dcf9fec0da5f7f3561337033f40
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.date: 08/21/2019
+ms.openlocfilehash: 5f9d7026b270a010d2ba5d4b1165728a100ab6ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69604251"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922558"
 ---
-# <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3,0 'deki yenilikler (Önizleme 7)
+# <a name="whats-new-in-net-core-30-preview-8"></a>.NET Core 3,0 'deki yenilikler (Önizleme 8)
 
-Bu makalede .NET Core 3,0 'deki yenilikler açıklanmaktadır (Preview 7 üzerinden). En büyük geliştirmelerden biri, Windows Masaüstü uygulamaları için destek içerir (yalnızca Windows). .NET Core 3,0 SDK bileşeni Windows Masaüstü 'Nü kullanarak Windows Forms ve Windows Presentation Foundation (WPF) uygulamalarınızın bağlantı noktası oluşturabilirsiniz. Temiz olması için, Windows Masaüstü bileşeni yalnızca Windows 'da desteklenir ve Windows 'a dahildir. Daha fazla bilgi için bu makalenin devamındaki [Windows Masaüstü](#windows-desktop) bölümüne bakın.
+Bu makalede .NET Core 3,0 'deki yenilikler açıklanmaktadır (Preview 8 ' den fazla). En büyük geliştirmelerden biri, Windows Masaüstü uygulamaları için destek içerir (yalnızca Windows). .NET Core 3,0 SDK bileşeni Windows Masaüstü 'Nü kullanarak Windows Forms ve Windows Presentation Foundation (WPF) uygulamalarınızın bağlantı noktası oluşturabilirsiniz. Temiz olması için, Windows Masaüstü bileşeni yalnızca Windows 'da desteklenir ve Windows 'a dahildir. Daha fazla bilgi için bu makalenin devamındaki [Windows Masaüstü](#windows-desktop) bölümüne bakın.
 
 .NET Core 3,0, 8,0 için C# destek ekler. [En son Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)sürümünü kullanmanız veya OmniSharp uzantısıyla Visual Studio Code önerilir.
 
-Şimdi Windows, Mac ve Linux 'ta [.NET Core 3,0 Preview 7 ' yi indirip kullanmaya](https://aka.ms/netcore3download) başlayın.
+Şimdi Windows, macOS veya Linux 'ta [.NET Core 3,0 Preview 8 ' i indirin ve kullanmaya](https://aka.ms/netcore3download) başlayın.
 
 Her önizleme sürümü hakkında daha fazla bilgi için aşağıdaki duyurulara bakın:
 
+- [.NET Core 3,0 Preview 8 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [.NET Core 3,0 Preview 7 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [.NET Core 3,0 Preview 6 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [.NET Core 3,0 Preview 5 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
@@ -34,7 +35,9 @@ Her önizleme sürümü hakkında daha fazla bilgi için aşağıdaki duyurulara
 
 ## <a name="production-supported-preview"></a>Üretim için desteklenen Önizleme
 
-.NET Core Preview 7, Microsoft tarafından önceden hazırlanarak üretim olarak kabul edilir ve tam olarak desteklenmektedir. Sürüm 7 ' den itibaren, yayınlar yeni özellikler eklemek yerine polishing .NET Core 3,0 ' ye odaklanacaktır. Preview 7 ' de nelerin değiştiği hakkında daha fazla bilgi için [Preview 7 duyurusuna](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)bakın.
+.NET Core Preview 8, Microsoft tarafından önceden hazırlanarak üretim olarak kabul edilir ve tam olarak desteklenmektedir. Sürüm 7 ' den itibaren, yayınlar yeni özellikler eklemek yerine polishing .NET Core 3,0 ' ye odaklanacaktır. Preview 8 ' de nelerin değiştiği hakkında daha fazla bilgi için, [Preview 8 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)' ne bakın.
+
+Önceki bir önizleme sürümünü kullanıyorsanız devam eden "canlı çalış" desteği için Preview 8 ' e geçmeniz gerekir.
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
@@ -52,11 +55,11 @@ Sürüm oluşturma hakkında daha fazla bilgi için bkz. [.NET Core 'un sürüm�
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
- 
+
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
- 
+
 </Project>
 ```
 
@@ -91,7 +94,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ## <a name="net-platform-dependent-intrinsics"></a>.NET platforma bağımlı Iç bilgiler
 
-**SIMD** veya **bit işleme yönergesi** kümeleri gıbı belirli performans yönelimli CPU yönergelerine erişime izin veren API 'ler eklenmiştir. Bu yönergeler, verileri paralel şekilde işleme gibi belirli senaryolarda önemli performans geliştirmeleri elde etmenize yardımcı olabilir. 
+**SIMD** veya **bit işleme yönergesi** kümeleri gıbı belirli performans yönelimli CPU yönergelerine erişime izin veren API 'ler eklenmiştir. Bu yönergeler, verileri paralel şekilde işleme gibi belirli senaryolarda önemli performans geliştirmeleri elde etmenize yardımcı olabilir.
 
 Uygun durumlarda, .NET kitaplıkları performansı artırmak için bu yönergeleri kullanmaya başlamıştır.
 
@@ -103,8 +106,8 @@ Daha fazla bilgi için bkz. [.NET platformu bağımlı iç](https://github.com/d
 
 `dotnet build` Veya`dotnet publish`sırasında, kullanmakta olduğunuz SDK ortamı ve platformuyla eşleşen bir yürütülebilir dosya oluşturulur. Bu yürütülebilir dosyalarla aynı şeyleri, diğer yerel yürütülebilir dosyaları gibi bekleyebilir, örneğin:
 
-* Yürütülebilir dosyaya çift tıklayabilirsiniz.
-* Uygulamayı Windows ve `myapp.exe` `./myapp` Linux ve MacOS gibi bir komut isteminden doğrudan başlatabilirsiniz.
+- Yürütülebilir dosyaya çift tıklayabilirsiniz.
+- Uygulamayı Windows ve `myapp.exe` `./myapp` Linux ve MacOS gibi bir komut isteminden doğrudan başlatabilirsiniz.
 
 ## <a name="single-file-executables"></a>Tek dosya yürütülebilir dosyaları
 
@@ -297,11 +300,11 @@ Visual Studio 2019 ' de bulunan [Windows uygulama paketleme projesi](https://doc
 
 Sabit<xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType> listesi `highDpiMode` tarafından ifade edilen olası değerler şunlardır:
 
-* `DpiUnaware`
-* `SystemAware`
-* `PerMonitor`
-* `PerMonitorV2`
-* `DpiUnawareGdiScaled`
+- `DpiUnaware`
+- `SystemAware`
+- `PerMonitor`
+- `PerMonitorV2`
+- `DpiUnawareGdiScaled`
 
 Yüksek DPı modları hakkında daha fazla bilgi için bkz. [Windows 'Da yüksek DPI Masaüstü uygulama geliştirme](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).
 
@@ -335,7 +338,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 {
     await foreach (var result in GetResultsAsync())
     {
-        if (result > 20) yield return result; 
+        if (result > 20) yield return result;
     }
 }
 ```
@@ -350,31 +353,31 @@ Kayan nokta API 'Leri, [ıeee 754-2008 düzeltmesine](https://en.wikipedia.org/w
 
 Ayrıştırma ve biçimlendirme düzeltmeleri şunları içerir:
 
-* Her uzunlukta doğru şekilde ayrıştırma ve yuvarlama girişleri.
-* Doğru şekilde ayrıştırır ve negatif sıfır biçimlendirir.
-* Büyük/ `Infinity` küçük `NaN` harfe duyarsız bir denetim yaparak ve uygunsa isteğe bağlı olarak daha önce `+` izin vererek doğru şekilde ayrıştırılabilir.
+- Her uzunlukta doğru şekilde ayrıştırma ve yuvarlama girişleri.
+- Doğru şekilde ayrıştırır ve negatif sıfır biçimlendirir.
+- Büyük/ `Infinity` küçük `NaN` harfe duyarsız bir denetim yaparak ve uygunsa isteğe bağlı olarak daha önce `+` izin vererek doğru şekilde ayrıştırılabilir.
 
 Yeni <xref:System.Math?displayProperty=nameWithType> API 'ler şunlardır:
 
-* <xref:System.Math.BitIncrement(System.Double)>'<xref:System.Math.BitDecrement(System.Double)>\
+- <xref:System.Math.BitIncrement(System.Double)>'<xref:System.Math.BitDecrement(System.Double)>\
 `nextUp` Ve`nextDown` IEEE işlemlerine karşılık gelir. Bunlar, girdiden daha büyük veya daha az (sırasıyla) karşılaştıran en küçük kayan nokta numarasını döndürür. Örneğin, `Math.BitIncrement(0.0)` döndürür `double.Epsilon`.
 
-* <xref:System.Math.MaxMagnitude(System.Double,System.Double)>'<xref:System.Math.MinMagnitude(System.Double,System.Double)>\
+- <xref:System.Math.MaxMagnitude(System.Double,System.Double)>'<xref:System.Math.MinMagnitude(System.Double,System.Double)>\
 `maxNumMag` Ve`minNumMag` IEEE işlemlerine karşılık gelen değeri, iki girişin büyüklüğüne daha büyük veya daha az (sırasıyla) döndürür. Örneğin, `Math.MaxMagnitude(2.0, -3.0)` döndürür `-3.0`.
 
-* <xref:System.Math.ILogB(System.Double)>\
+- <xref:System.Math.ILogB(System.Double)>\
 Bir integral değeri döndüren IEEEişleminekarşılıkgelir,girişparametresinintamsayıtaban2günlüğünüdöndürür.`logB` Bu yöntem `floor(log2(x))`, ile aynı şekilde, ancak en az yuvarlama hatasıyla yapılır.
 
-* <xref:System.Math.ScaleB(System.Double,System.Int32)>\
+- <xref:System.Math.ScaleB(System.Double,System.Int32)>\
 Bir tamsayı değeri alan `x * pow(2, n)` IEEEişleminekarşılıkgelir,etkinolarakdöner,ancakenazyuvarlamahatasıylayapılır.`scaleB`
 
-* <xref:System.Math.Log2(System.Double)>\
+- <xref:System.Math.Log2(System.Double)>\
 `log2` IEEE işlemine karşılık gelen 2 tabanında logaritmasını döndürür. Yuvarlama hatasını en aza indirir.
 
-* <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
+- <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
 `fma` IEEE işlemine karşılık gelen bir fkullandınız çarpma eklemesi gerçekleştirir. Yani, tek bir işlem `(x * y) + z` olarak yapılır, böylece yuvarlama hatasını en aza indirir. Örnek `FusedMultiplyAdd(1e308, 2.0, -1e308)` , döndürür `1e308`. Normal `(1e308 * 2.0) - 1e308` dönüşler `double.PositiveInfinity`.
 
-* <xref:System.Math.CopySign(System.Double,System.Double)>\
+- <xref:System.Math.CopySign(System.Double,System.Double)>\
 IEEE işlemine karşılık gelir, `x`, `y`ancak işaretini döndürür. `copySign`
 
 ## <a name="fast-built-in-json-support"></a>Hızlı yerleşik JSON desteği
@@ -453,8 +456,8 @@ Uygulama geliştirirken birçok kez şifrelenmemiş bağlantı kullanmak istersi
 
 .NET Core artık, belirli bir ortamda kullanılabildiği [OpenSSL 1.1.1 Içindeki TLS 1,3 desteğinin](https://www.openssl.org/blog/blog/2018/09/11/release111/)avantajlarından yararlanır. TLS 1,3:
 
-* İstemci ve sunucu arasında gereken azaltılan gidiş dönüşlerle bağlantı süreleri geliştirildi.
-* Kullanılmayan ve güvenli olmayan şifreleme algoritmalarının kaldırılması nedeniyle güvenlik geliştirildi.
+- İstemci ve sunucu arasında gereken azaltılan gidiş dönüşlerle bağlantı süreleri geliştirildi.
+- Kullanılmayan ve güvenli olmayan şifreleme algoritmalarının kaldırılması nedeniyle güvenlik geliştirildi.
 
 Kullanılabilir olduğunda, .NET Core 3,0 bir Linux sisteminde **OpenSSL 1.1.1**, **OpenSSL 1.1.0**veya **OpenSSL 1.0.2** kullanır. **OpenSSL 1.1.1** kullanılabilir olduğunda, her ikisi <xref:System.Net.Security.SslStream?displayProperty=nameWithType> de <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> tür **TLS 1,3** kullanır (istemci ve sunucunun **TLS 1,3**' i desteklediği varsayıldığında).
 
@@ -479,20 +482,20 @@ Aşağıdaki kod, rastgele verileri `AesGcm` şifrelemek ve şifrelerini çözme
 
 *RSA*, *dsa*, *ECDSA*ve *ecdıfıfiehellman*gibi tüm anahtar türleri aşağıdaki biçimleri destekler:
 
-* **Ortak anahtar**
-  * X. 509.440 Subjectpublickeyınfo
+- **Ortak anahtar**
+  - X. 509.440 Subjectpublickeyınfo
 
-* **Özel anahtar**
-  * PKCS # 8 Privatekeyınfo
-  * PKCS # 8 Encryptedprivatekeyınfo
+- **Özel anahtar**
+  - PKCS # 8 Privatekeyınfo
+  - PKCS # 8 Encryptedprivatekeyınfo
 
 RSA anahtarları da şunları destekler:
 
-* **Ortak anahtar**
-  * PKCS # 1 RSAPublicKey
+- **Ortak anahtar**
+  - PKCS # 1 RSAPublicKey
 
-* **Özel anahtar**
-  * PKCS # 1 RSAPrivateKey
+- **Özel anahtar**
+  - PKCS # 1 RSAPrivateKey
 
 Dışarı aktarma yöntemleri DER kodlu ikili veriler oluşturur ve içeri aktarma yöntemleri aynı şekilde bekler. Bir anahtar, metin kullanımı kolay pek biçiminde depolanıyorsa, bir içeri aktarma yöntemi çağrılmadan önce çağıranın içerik Base64 olarak çözülmesi gerekecektir.
 
@@ -512,9 +515,9 @@ Linux 'ta seri bağlantı noktası için sınırlı destek hakkında daha fazla 
 
 Preview 3 ' ü kullanmaya başlamadan, Docker ile Linux üzerinde .NET Core 3,0 çalıştırmak, cgroup bellek limitleriyle daha iyi çalışır. İle `docker run -m`gibi bellek limitleriyle bir Docker kapsayıcısı çalıştırmak, .NET Core 'un davranış şeklini değiştirir.
 
-* Varsayılan atık toplayıcı (GC) yığın boyutu: kapsayıcıda bellek sınırının en fazla 20 MB veya% 75 ' si.
-* Açık Boyut, mutlak bir sayı veya cgroup sınırının yüzdesi olarak ayarlanabilir.
-* GC yığını başına en düşük ayrılmış kesim boyutu 16 MB 'tır. Bu boyut, makinelerde oluşturulan Heap sayısını azaltır.
+- Varsayılan atık toplayıcı (GC) yığın boyutu: kapsayıcıda bellek sınırının en fazla 20 MB veya% 75 ' si.
+- Açık Boyut, mutlak bir sayı veya cgroup sınırının yüzdesi olarak ayarlanabilir.
+- GC yığını başına en düşük ayrılmış kesim boyutu 16 MB 'tır. Bu boyut, makinelerde oluşturulan Heap sayısını azaltır.
 
 ## <a name="smaller-garbage-collection-heap-sizes"></a>Daha küçük atık toplama yığın boyutları
 
@@ -530,8 +533,8 @@ Büyük sayfalar (Linux 'ta çok büyük sayfalar olarak da bilinir), işletim s
 
 NuGet 'e GıO programlama için kullanabileceğiniz iki paket yayımlanmıştır:
 
-* [System. Device. GIO](https://www.nuget.org/packages/System.Device.Gpio)
-* [IoT. Device. Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
+- [System. Device. GIO](https://www.nuget.org/packages/System.Device.Gpio)
+- [IoT. Device. Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
 GPıO paketleri, *GIO*, *SPI*, *I2C*ve *PWM* cihazları için API 'ler içerir. IoT bağlamaları paketi cihaz bağlamalarını içerir. Daha fazla bilgi için bkz. [cihaz GitHub deposu](https://github.com/dotnet/iot/blob/master/src/devices/).
 

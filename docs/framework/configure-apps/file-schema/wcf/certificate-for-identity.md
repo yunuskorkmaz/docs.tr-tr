@@ -2,19 +2,19 @@
 title: <certificate> için <identity>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: 76bdcb40d5016d7fcbff6c0d9769819f710065fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52d1fa31cebd949c91809464976739ef1334af29
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673366"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919611"
 ---
-# <a name="certificate-for-identity"></a>\<Sertifika > için \<kimliği >
-Bir istemci sunucuya doğrulamak için kullanılan bir X.509 sertifikasını belirtir.  
+# <a name="certificate-for-identity"></a>\<kimlik > için \<sertifika >
+Bir sunucuyu bir istemciye doğrulamak için kullanılan X. 509.440 sertifikasını belirtir.  
   
- Öğe değerini ayarlama hakkında daha fazla bilgi için bkz. [kimlik doğrulama ile hizmet kimliği](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Öğe değerini ayarlama hakkında daha fazla bilgi için bkz. [hizmet kimliği ve kimlik doğrulaması](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
- \<Kimliği >  
+ \<kimlik >  
 \<Sertifika >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -30,7 +30,7 @@ Bir istemci sunucuya doğrulamak için kullanılan bir X.509 sertifikasını bel
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|encodedValue|Bir Base64 sertifikasını kodlaması.|  
+|encodedValue|Sertifikanın Base64 kodlaması.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -39,10 +39,10 @@ Bir istemci sunucuya doğrulamak için kullanılan bir X.509 sertifikasını bel
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|İstemci tarafından doğrulanacak bir hizmetin kimliğini belirtir.|  
+|[\<kimlik >](identity.md)|İstemci tarafından kimlik doğrulaması yapılacak hizmetin kimliğini belirtir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, bir istemci sunucuya doğrulamak için kullanılan bir sertifika kodlamalı gösterimini belirtir.  
+ Aşağıdaki kod, bir sunucunun bir istemciye doğrulanması için kullanılan sertifikanın kodlanmış gösterimini belirtir.  
   
 ```xml  
 <identity>
@@ -56,5 +56,5 @@ Bir istemci sunucuya doğrulamak için kullanılan bir X.509 sertifikasını bel
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.EndpointIdentity>
-- [Kimlik Doğrulama ile Hizmet Kimliği](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Kimlik Doğrulama ile Hizmet Kimliği](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<kimlik >](identity.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: d179c1b8717f4247ce745104db2d0bb4faefb8ab
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7da86a8999f6cc36a7b71f70fd92a363673824b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597115"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924540"
 ---
 # <a name="constants-c-programming-guide"></a>Sabitler (C# Programlama Kılavuzu)
 Sabitler, derleme zamanında bilinen ve programın ömrü boyunca değişmeyen sabit değerlerdir. Sabitler [const](../../language-reference/keywords/const.md) değiştiricisi ile bildirilmiştir. Yalnızca C# yerleşik türler (hariç <xref:System.Object?displayProperty=nameWithType>) olarak `const`bildirilebilecek. Yerleşik türlerin listesi için bkz. [Yerleşik türler tablosu](../../language-reference/keywords/built-in-types-table.md). Sınıflar, yapılar ve diziler `const`dahil olmak üzere Kullanıcı tanımlı türler olamaz. Çalışma zamanında bir kez başlatılan bir sınıf, yapı veya dizi oluşturmak için [salt okunur](../../language-reference/keywords/readonly.md) değiştiricisini kullanın (örneğin, bir oluşturucuda) ve bundan sonra değiştirilemez.  
@@ -27,7 +27,7 @@ Sabitler, derleme zamanında bilinen ve programın ömrü boyunca değişmeyen s
  Bu örnekte, sabit `months` her zaman 12 ' dir ve sınıfın kendisi tarafından bile değiştirilemez. Aslında, derleyici C# kaynak kodunda bir sabit tanımlayıcıyla karşılaştığında (örneğin, `months`), değişmez değer değerini doğrudan ürettiği ara dil (IL) koduna koyar. Çalışma zamanında bir sabitle ilişkili değişken adresi olmadığından, `const` alanlar başvuruya göre geçirilemez ve bir ifadede l değeri olarak görünemez.  
   
 > [!NOTE]
->  Dll 'Ler gibi başka bir kodda tanımlanan sabit değerlere başvurduğunuzda dikkatli olun. Yeni bir DLL sürümü sabit için yeni bir değer tanımlıyorsa, programınız yeni sürüme yeniden derlenene kadar eski değişmez değeri de tutar.  
+> Dll 'Ler gibi başka bir kodda tanımlanan sabit değerlere başvurduğunuzda dikkatli olun. Yeni bir DLL sürümü sabit için yeni bir değer tanımlıyorsa, programınız yeni sürüme yeniden derlenene kadar eski değişmez değeri de tutar.  
   
  Aynı türden birden fazla sabit aynı anda bildirilebilecek, örneğin:  
   

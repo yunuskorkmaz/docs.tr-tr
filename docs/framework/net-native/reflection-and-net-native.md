@@ -4,28 +4,28 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f328221263840528fff54e00b873ec62cee2bb0b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 8594d29aab7f07dce150671493bbf70f9832fb44
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051985"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935167"
 ---
 # <a name="reflection-and-net-native"></a>Yansıma ve .NET Yerel
-.NET Framework'te yansıma API'si azaltılarak geliştirme destekleyen yönetilen. Yansıma, uygulama nesneleri incelemek, inceleme bulunan nesneler üzerinde yöntemleri çağırmak, çalışma zamanında yeni türler oluşturmak sağlar ve birçok diğer dinamik kod senaryolarını destekler. Serileştirme ve serisini kaldırma kalıcı yapılabilir ve daha sonra geri bir nesnenin alan değerlerini tanır de destekler. Tüm bu senaryolar için kullanılabilir meta verileri temel alarak yerel kod oluşturmak için .NET Framework just-ın-time (JIT) derleyici gerektirir.  
+.NET Framework yönetilen geliştirme, yansıma API 'SI aracılığıyla meta programlamayı destekler. Yansıma, bir uygulamadaki nesneleri incelemenize, İnceleme aracılığıyla bulunan nesnelerde Yöntemler çağırmasına, çalışma zamanında yeni türler oluşturmanıza ve diğer birçok dinamik kod senaryosunu desteketmenize olanak tanır. Ayrıca, bir nesnenin alan değerlerinin kalıcı olmasını ve daha sonra geri yüklenmesini sağlayan serileştirme ve serisini kaldırma de desteklenir. Bu senaryoların hepsi, kullanılabilir meta verilere dayalı yerel kod oluşturmak için .NET Framework tam zamanında (JıT) derleyicisi gerektirir.  
   
- .NET yerel çalışma zamanı JIT derleyicisi içermez. Sonuç olarak, tüm gerekli yerel kodu önceden oluşturulmuş olmalıdır. Hangi kod oluşturulması belirlemek için buluşsal yöntem kümesi kullanılır, ancak bu buluşsal yöntemler, tüm olası azaltılarak senaryolar kapsamamaktadır.  Bu nedenle, ipuçları azaltılarak bu senaryolar için kullanarak sağlamanız gereken [çalışma zamanı yönergeleri](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Gerekli meta veriler veya uygulama kodu çalışma zamanında kullanılabilir değilse, uygulamanızı oluşturur bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md), veya [ Missingınteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) özel durum. İki sorun gidericileri kullanılabilir özel durumu ortadan kaldıran çalışma zamanı yönergeleri dosyanız için uygun giriş oluşturacağını:  
+ .NET Native çalışma zamanı bir JıT derleyicisi içermez. Sonuç olarak, gerekli tüm yerel kodun önceden oluşturulması gerekir. Hangi kodun oluşturulması gerektiğini belirlemek için bir buluşsal yöntem kümesi kullanılır, ancak bu buluşsal yöntemler olası tüm meta programlama senaryolarını kapsamaz.  Bu nedenle, [çalışma zamanı yönergeleri](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)kullanarak bu meta programlama senaryolarına yönelik ipuçları sağlamalısınız. Gerekli meta veriler veya uygulama kodu çalışma zamanında kullanılabilir değilse, uygulamanız bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)veya [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) özel durumu oluşturur. Çalışma zamanı yönergeleri dosyası için özel durumu ortadan kaldıran uygun girişi oluşturacak iki sorun giderici mevcuttur:  
   
-- [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/type.html) türleri için.  
+- Türler için [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/type.html) .  
   
-- [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/method.html) yöntemleri için.  
+- Metotlar için [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/method.html) .  
   
 > [!NOTE]
->  Arka plan üzerinde neden sağlayan .NET yerel derleme işlemine genel bakış için bir çalışma zamanı yönergeleri dosyası, bkz. gerekli [.NET Native ve derleme](../../../docs/framework/net-native/net-native-and-compilation.md).  
+> Çalışma zamanı yönergeleri dosyasının neden gerekli olduğuna ilişkin arka plan sağlayan .NET Native derleme işlemine genel bakış için, bkz. [.NET Native ve derleme](../../../docs/framework/net-native/net-native-and-compilation.md).  
   
- Ayrıca, .NET Native .NET Framework Sınıf Kitaplığı'nın özel üyeler üzerinde yansıtacak şekilde izin vermez. Örneğin, bir çağrı <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> alanları bir .NET Framework sınıf kitaplığı türü döndürür yalnızca ortak veya korumalı alanı almak için özellik.  
+ Ayrıca .NET Native, .NET Framework sınıf kitaplığının özel üyelerini yansıtmasına izin vermez. Örneğin, bir .NET Framework sınıf kitaplığı türünün <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> alanlarını almak için özelliğine yapılan bir çağrı yalnızca ortak veya korumalı alanları döndürür.  
   
- Aşağıdaki konular, kavramsal sağlayın ve başvuru yansıma ve Serileştirme uygulamalarınızı desteklemek için ihtiyacınız olan belgeleri:  
+ Aşağıdaki konular, uygulamalarınızda yansıma ve Serileştirmeyi desteklemek için ihtiyacınız olan kavramsal ve başvuru belgelerini sağlar:  
   
 - [Yansıma Kullanan API'ler](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
   

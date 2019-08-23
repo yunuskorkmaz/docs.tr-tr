@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54e72205f8f976498df3b1fe1e055fb7df12d68e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c43f906961b9e76d5f0f34ba5a5b2f656f5b1488
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780678"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937513"
 ---
 # <a name="ihostiocompletionmanagergethostoverlappedsize-method"></a>IHostIoCompletionManager::GetHostOverlappedSize Yöntemi
-G/ç istekleri eklenecek konak düşünüyor herhangi bir özel veri boyutunu alır.  
+Ana bilgisayarın g/ç isteklerine eklenmesini amaçladığı tüm özel verilerin boyutunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,40 +37,40 @@ HRESULT GetHostOverlappedSize (
   
 ## <a name="parameters"></a>Parametreler  
  `pcbSize`  
- [out] Ortak dil çalışma zamanı (CLR) Win32 boyutuna ek olarak ayırmalısınız bayt sayısı için bir işaretçi `OVERLAPPED` nesne.  
+ dışı Ortak dil çalışma zamanının (CLR) Win32 `OVERLAPPED` nesnesinin boyutuna ek olarak ayırması gereken bayt sayısına yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`GetHostOverlappedSize` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.|  
-|HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
-|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
-|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|S_OK|`GetHostOverlappedSize`başarıyla döndürüldü.|  
+|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Zaman uyumsuz g/ç çağrısı Windows Platform API'leri için bir Win32 ele `OVERLAPPED` dosya işaretçisi konumunu gibi bilgileri sağlayan nesne. Genellikle zaman uyumsuz g/ç çağrısı yapan uygulamaların durumunu korumak üzere yapısına özel veri ekleme. `GetHostOverlappedSize` ve [Ihostıocompletionmanager::ınitializehostoverlapped](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md) bu tür özel veriler içerecek şekilde ana bilgisayar için bir fırsat sunar.  
+ Windows platformu API 'lerine yönelik tüm zaman uyumsuz g/ç çağrıları, `OVERLAPPED` dosya işaretçisi konumu gibi bilgiler sağlayan bir Win32 nesnesi alır. Durumu korumak için, zaman uyumsuz g/ç çağrısı yapan uygulamalar genellikle yapıya özel veri ekler. `GetHostOverlappedSize`ve [ıhostiocompletionmanager:: ınitializehostoverlamış](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md) , konağın bu tür özel verileri eklemesi için bir fırsat sağlar.  
   
- CLR çağrıları `GetHostOverlappedSize` eklenecek konak düşünüyor özel veri boyutunu belirlemek için yöntemi `OVERLAPPED` nesne.  
+ CLR, konağın `OVERLAPPED` nesnesine `GetHostOverlappedSize` eklenmesini amaçladığı özel verilerin boyutunu belirlemede yöntemini çağırır.  
   
 > [!NOTE]
->  `GetHostOverlappedSize` yalnızca bir kez çağrılır. Ana bilgisayarın özel veri g/ç her istek için aynı boyutta olması gerekir.  
+> `GetHostOverlappedSize`yalnızca bir kez çağrılır. Konağın özel verileri her g/ç isteği için aynı boyutta olmalıdır.  
   
 > [!IMPORTANT]
->  Boyutu `OVERLAPPED` nesnenin kendisini değerine dahil değildir `pcbSize`.  
+> Nesnenin kendisi değerine dahil değildir `pcbSize` `OVERLAPPED` .  
   
- Hakkında daha fazla bilgi için `OVERLAPPED` yapısı, Windows Platform belgelerine bakın.  
+ `OVERLAPPED` Yapı hakkında daha fazla bilgi için bkz. Windows platformu belgeleri.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

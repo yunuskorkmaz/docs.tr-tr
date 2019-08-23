@@ -9,50 +9,50 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: f3396eb3e758dc456d86de80246de24349680f2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99afa42994dd09d0b5faaeaf534fbc4b41816998
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962488"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>References ve Imports Deyimi (Visual Basic)
-Dış nesneler kullanılabilir projenize seçerek yapabileceğiniz **Başvuru Ekle** komutunu **proje** menüsü. Başvuruları Visual Basic'te tür kitaplıkları, ancak daha fazla bilgi içeren gibi olan derlemeler için işaret edebilir.  
+**Proje** menüsünde **Başvuru Ekle** komutunu seçerek dış nesneleri projeniz için kullanılabilir hale getirebilirsiniz. Visual Basic başvurular tür kitaplıkları gibi olan ancak daha fazla bilgi içeren derlemelere işaret edebilir.  
   
-## <a name="the-imports-statement"></a>Imports deyimi  
- Derlemeler, bir veya daha fazla ad alanı içerir. Bir derlemeye bir başvuru eklediğinizde, bu da ekleyebilirsiniz bir `Imports` o derlemenin ad alanları modülü içinde görünürlüğünü denetleyen bir modüle deyimi. `Imports` Deyimi yalnızca bir benzersiz başvuru sağlamanız için gereken ad alanının bölümü kullanmanıza olanak sağlayan bir kapsam bağlamı sağlar.  
+## <a name="the-imports-statement"></a>Imports ekstresi  
+ Derlemeler bir veya daha fazla ad alanı içerir. Bir derlemeye başvuru eklediğinizde, bu derlemenin modül içindeki ad alanlarının görünürlüğünü denetleyen bir `Imports` modüle de bir ifade ekleyebilirsiniz. Bu `Imports` ifade, benzersiz bir başvuru sağlamak için gereken ad alanının yalnızca bir kısmını kullanmanıza imkan tanıyan bir kapsam bağlamı sağlar.  
   
- `Imports` Deyimi sözdizimine sahiptir:  
+ `Imports` İfadesinin sözdizimi aşağıdaki gibidir:  
   
  `Imports [Aliasname =] Namespace`  
   
- `Aliasname` kod içinde bir içeri aktarılan ad alanına başvurmak için kullanabileceğiniz bir kısa ad belirtir. `Namespace` Proje içinde bir tanımı veya önceki bir proje başvurusu bir ad alanı aracılığıyla kullanılabilir olan `Imports` deyimi.  
+ `Aliasname`İçeri aktarılan bir ad alanına başvurmak için kod içinde kullanabileceğiniz kısa bir ad anlamına gelir. `Namespace`proje başvurusu aracılığıyla, proje içindeki bir tanım aracılığıyla veya önceki `Imports` bir ifadeyle bulunan bir ad alanıdır.  
   
- Bir modülün herhangi bir sayıda içerebilir `Imports` deyimleri. Herhangi bir sonra görünmelidir `Option` deyimleri, varsa, ancak herhangi bir kod önce.  
+ Modül, herhangi bir sayıda `Imports` deyim içerebilir. Varsa, varsa tüm `Option` deyimlerden sonra, diğer koddan önce gelmelidir.  
   
 > [!NOTE]
->  Proje başvuruları ile karıştırmayın `Imports` deyimi veya `Declare` deyimi. Proje başvuruları, derlemelere nesneleri gibi dış nesneleri Visual Basic projeleri kullanılabilmesini sağlar. `Imports` Deyimi proje başvuruları erişimini basitleştirmek için kullanılır, ancak bu nesnelere erişimi sağlamaz. `Declare` Deyimi bir dış yordam bir dinamik bağlantı kitaplığı (DLL) içinde bir başvuru bildirmek için kullanılır.  
+> Proje başvurularını `Imports` deyimle `Declare` veya ifadesiyle karıştırmayın. Proje başvuruları, derlemelerdeki nesneler gibi dış nesneleri Visual Basic projeleri için kullanılabilir hale getirir. `Imports` İfade, proje başvurularına erişimi basitleştirmek için kullanılır, ancak bu nesnelere erişim sağlamaz. İfade `Declare` , bir dinamik bağlantı kitaplığı (dll) içinde bir dış yordama başvuru bildirmek için kullanılır.  
   
-## <a name="using-aliases-with-the-imports-statement"></a>Imports deyimi ile diğer adların kullanımı  
- `Imports` Deyimi kolaylaştırır, sınıfların erişim yöntemlerine açıkça tam olarak nitelenmiş adlar başvuru türüne gereksinimini ortadan kaldırarak. Diğer adlar, daha kolay adı bir ad alanının yalnızca bir bölümü atamak sağlar. Örneğin, satır başı/birden çok satırda görüntülenecek metni tek bir parçasını neden dizisi satır besleme parçası olan <xref:Microsoft.VisualBasic.ControlChars> modülünde <xref:Microsoft.VisualBasic?displayProperty=nameWithType> ad alanı. Bu sabit bir diğer ad olmadan bir programda kullanmak için aşağıdaki kod yazmanız gerekir:  
+## <a name="using-aliases-with-the-imports-statement"></a>Imports Ifadesiyle diğer adları kullanma  
+ `Imports` İfade, başvuruların tam adlarını açıkça yazma gereğini ortadan kaldırarak sınıfların yöntemlerine erişmeyi kolaylaştırır. Diğer adlar, bir ad alanının yalnızca bir kısmına kolay bir ad atamanızı sağlar. Örneğin, tek bir metin parçasının birden çok satırda görüntülenmesine neden olan satır başı/satır besleme sırası, <xref:Microsoft.VisualBasic.ControlChars> <xref:Microsoft.VisualBasic?displayProperty=nameWithType> ad alanındaki modülün bir parçasıdır. Diğer adı olmayan bir programda bu sabiti kullanmak için aşağıdaki kodu yazmanız gerekir:  
   
  [!code-vb[VbVbalrApplication#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#3)]  
   
- `Imports` deyimleri her zaman takip herhangi ilk satırı olmalıdır `Option` Modül içindeki deyimler. Aşağıdaki kod parçası, içeri aktarma ve diğer ad atamak gösterilmektedir <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> Modülü:  
+ `Imports`deyimler her zaman bir modüldeki deyimlerden hemen sonra gelen `Option` ilk satır olmalıdır. Aşağıdaki kod parçası, <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> modüle bir diğer adın nasıl içeri aktarılacağını ve atanacağını gösterir:  
   
  [!code-vb[VbVbalrApplication#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#4)]  
   
- Bu ad gelecekte başvurular önemli ölçüde daha kısa olabilir:  
+ Bu ad alanına gelecekteki başvurular önemli ölçüde daha kısa olabilir:  
   
  [!code-vb[VbVbalrApplication#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#5)]  
   
- Varsa bir `Imports` deyimi bir diğer ad içermez, içeri aktarılan ad alanı içinde tanımlanan öğeler, nitelik olmadan bir modülde kullanılabilir. Diğer ad belirtilmezse, bu Niteleyici olarak bu ad alanı içinde yer alan adları için kullanılmalıdır.  
+ Bir `Imports` ifade bir diğer ad içermiyorsa, içeri aktarılan ad alanı içinde tanımlanan öğeler, bir nitelik olmadan modülde kullanılabilir. Diğer ad belirtilmişse, bu ad alanı içinde yer alan adlara yönelik bir niteleyici olarak kullanılması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.ControlChars>
 - <xref:Microsoft.VisualBasic>
-- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Visual Basic ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)
 - [Nasıl yapılır: Komut satırını kullanarak derlemeler oluşturma ve kullanma](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
 - [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

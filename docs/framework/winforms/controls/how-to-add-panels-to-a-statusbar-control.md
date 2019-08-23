@@ -10,27 +10,27 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 9d7a21ee686b0c6faa05f68f13eccc6a39d49164
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27d65c07f0a6ec4a25d057e2c16a8b59933bb8fd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011079"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925107"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>Nasıl yapılır: Bir StatusBar Denetimine Panel Ekleme
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip> Ve <xref:System.Windows.Forms.ToolStripStatusLabel> denetimleri değiştirin ve işlevsellik eklemek <xref:System.Windows.Forms.StatusBar> ve <xref:System.Windows.Forms.StatusBarPanel> denetler; ancak, <xref:System.Windows.Forms.StatusBar> ve <xref:System.Windows.Forms.StatusBarPanel> denetimleri korunur geriye dönük uyumluluk ve gelecekte kullanım için varsa, ' ı seçin.  
+> <xref:System.Windows.Forms.StatusStrip> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBarPanel> Ve denetimleri, vedenetimlerine<xref:System.Windows.Forms.StatusBarPanel> işlevsellik ekler ve bunları ekler; ancak, ve denetimleri hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.ToolStripStatusLabel> 'yu.  
   
- Programlanabilir alanı içinde bir [StatusBar denetimine](statusbar-control-windows-forms.md) denetimi oluşur örneklerini <xref:System.Windows.Forms.StatusBarPanel> sınıfı. Bu eklemeler aracılığıyla eklenen <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> sınıfı.  
+ Bir [StatusBar denetim](statusbar-control-windows-forms.md) denetimindeki programlanabilir alan, <xref:System.Windows.Forms.StatusBarPanel> sınıfının örneklerinden oluşur. Bunlar, <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> sınıfa eklemeler aracılığıyla eklenir.  
   
-### <a name="to-add-panels-to-a-status-bar"></a>Durum çubuğu için panel eklemek için  
+### <a name="to-add-panels-to-a-status-bar"></a>Bir durum çubuğuna panel eklemek için  
   
-1. Bir yordamda ekleyerek durum çubuğu panellerinin oluşturma <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Kendi dizini kullanılarak tek tek bölmeleri geçtiğini özellik ayarları belirtmek <xref:System.Windows.Forms.StatusBar.Panels%2A> özelliği.  
+1. Bir yordamda, ' ye <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>ekleyerek durum çubuğu bölmeleri oluşturun. <xref:System.Windows.Forms.StatusBar.Panels%2A> Özelliği aracılığıyla geçirilen dizinini kullanarak ayrı panellerin özellik ayarlarını belirtin.  
   
-     Aşağıdaki kod örneğinde yolunu ayarlamak için simgenin konumunu **Belgelerim** klasör. Bu konum, Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu klasör içerdiğini varsayar çünkü kullanılır. Bu konumu seçme, güvenli bir şekilde uygulamayı çalıştırmak minimum sistem erişim düzeylerine sahip kullanıcılar sağlar. Aşağıdaki örnek bir formla gerektiren bir <xref:System.Windows.Forms.StatusBar> denetim zaten eklendi.  
+     Aşağıdaki kod örneğinde, simgenin konumu için ayarlanan yol Belgelerim klasörüdür. Bu konum, Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu klasörü içerdiğini varsaydığı için kullanılır. Bu konumun seçilmesi, en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenle çalıştırmasına olanak tanır. Aşağıdaki örnek, bir <xref:System.Windows.Forms.StatusBar> denetimin zaten eklenmiş olduğu bir form gerektirir.  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> Sıfır tabanlı bir koleksiyon olduğundan kod buna göre devam etmelisiniz.  
+    > , <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> Sıfır tabanlı bir koleksiyondur, bu nedenle kod buna uygun şekilde devam etmelidir.  
   
     ```vb  
     Public Sub CreateStatusBarPanels()  
@@ -124,8 +124,8 @@ ms.locfileid: "62011079"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Koleksiyon Düzenleyicisi iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
+- [Koleksiyon Düzenleyicisi Iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
 - [Nasıl yapılır: Durum çubuğu panellerinin boyutunu ayarlama](how-to-set-the-size-of-status-bar-panels.md)
 - [İzlenecek yol: Çalışma zamanında durum çubuğu bilgilerini güncelleştirme](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Nasıl yapılır: Windows Forms StatusBar denetiminde hangi panele tıklandığını belirleme](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Nasıl yapılır: Windows Forms StatusBar denetimindeki panelin tıklandığını belirleme](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar Denetimine Genel Bakış](statusbar-control-overview-windows-forms.md)

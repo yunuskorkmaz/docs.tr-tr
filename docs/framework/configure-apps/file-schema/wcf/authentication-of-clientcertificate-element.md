@@ -1,21 +1,21 @@
 ---
-title: <authentication> ' ın <clientCertificate> öğesi
+title: <authentication><clientCertificate> öğesinin
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 2cbc850331dc6bf76c352f975fda834a309564c6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 4a7fee3bd8441a9612e954160397cc56aca163d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423232"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926505"
 ---
-# <a name="authentication-of-clientcertificate-element"></a>\<kimlik doğrulama >, \<clientCertificate > öğesi
+# <a name="authentication-of-clientcertificate-element"></a>\<\<ClientCertificate > öğesinin kimlik doğrulama >
 Bir hizmet tarafından kullanılan istemci sertifikaları için kimlik doğrulaması davranışlarını belirtir.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
 \<serviceBehaviors>  
-\<davranışı >  
+\<davranış >  
 \<serviceCredentials>  
 \<clientCertificate >  
 \<kimlik doğrulama >  
@@ -32,42 +32,42 @@ Bir hizmet tarafından kullanılan istemci sertifikaları için kimlik doğrulam
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
+ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|customCertificateValidatorType|İsteğe bağlı dize. Tür ve özel bir tür doğrulamak için kullanılan bir derleme. Bu öznitelik olduğunda ayarlanmalıdır `certificateValidationMode` ayarlanır `Custom`.|  
-|Certificatevalidationmode'u|İsteğe bağlı sabit listesi. Kimlik bilgilerini doğrulamak için kullanılan modlardan birini belirtir. Bu özniteliktir <xref:System.ServiceModel.Security.X509CertificateValidationMode> türü. Varsa kümesine <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>, ardından bir `customCertificateValidator` de sağlanmalıdır. Varsayılan, <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType> değeridir.|  
-|includeWindowsGroups|İsteğe bağlı Boolean. Windows gruplarını güvenlik bağlamına dahil edilip edilmediğini belirtir. Bu öznitelik ayarını `true` içinde bir tam Grup genişletme sonuçları gibi bir performans etkisi vardır. Bu öznitelik ayarlanan `false` gruplarının listesini oluşturmak ihtiyacınız yoksa bir kullanıcıya ait.|  
-|mapClientCertificateToWindowsAccount|Boole değeri. İstemci sertifikasını kullanarak bir Windows kimliği eşlenen olup olmadığını belirtir. Bunu yapmak için Active Directory etkinleştirilmesi gerekir.|  
-|revocationMode|İsteğe bağlı sabit listesi. İptal edilen sertifikalar listelerini (RCL) denetlemek için kullanılan modlardan biri. Varsayılan, `Online` değeridir. HTTP aktarım güvenliği kullanırken, bu değer yoksayılır.|  
-|trustedStoreLocation|İsteğe bağlı sabit listesi. İki sistem depolama konumlarından biri: `LocalMachine` veya `CurrentUser`. Bir hizmet sertifikası istemciye anlaşıldığında, bu değer kullanılır. Doğrulama işlemi gerçekleştirildiğinde karşı **güvenilir kişiler** depolamak belirtilen depolama konumu. Varsayılan, `CurrentUser` değeridir.|  
+|customCertificateValidatorType|İsteğe bağlı dize. Özel bir türü doğrulamak için kullanılan tür ve derleme. Bu öznitelik `certificateValidationMode` , olarak `Custom`ayarlandığında ayarlanmalıdır.|  
+|certificateValidationMode|İsteğe bağlı sabit listesi. Kimlik bilgilerini doğrulamak için kullanılan modlardan birini belirtir. Bu öznitelik <xref:System.ServiceModel.Security.X509CertificateValidationMode> türü. Olarak <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>ayarlanırsa, bir `customCertificateValidator` de sağlanmalıdır. Varsayılan, <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType> değeridir.|  
+|IncludeWindowsGroups|İsteğe bağlı Boolean. Windows gruplarının güvenlik bağlamına dahil edilip edilmediğini belirtir. Bu özniteliğin olarak `true` ayarlanması, tam grup genişlemesiyle sonuçlandığından performans etkisine sahiptir. Bir kullanıcının ait olduğu `false` grupların listesini oluşturmanız gerekmiyorsa, bu özniteliği olarak ayarlayın.|  
+|mapClientCertificateToWindowsAccount|Boolean. İstemcinin sertifikayı kullanarak bir Windows kimliğiyle eşleştirilip eşlenmeyeceğini belirtir. Bunu yapmak için Active Directory etkinleştirilmelidir.|  
+|Revocationmodu|İsteğe bağlı sabit listesi. İptal edilen sertifika listelerini (RCL) denetlemek için kullanılan modlardan biri. Varsayılan, `Online` değeridir. HTTP taşıma güvenliği kullanılırken bu değer yoksayılır.|  
+|trustedStoreLocation|İsteğe bağlı sabit listesi. İki sistem depolama konumlarından biri: `LocalMachine` veya. `CurrentUser` Bu değer, bir hizmet sertifikası istemciye anlaşılırken kullanılır. Doğrulama, belirtilen depo konumundaki **güvenilir kişiler** deposuna göre gerçekleştirilir. Varsayılan, `CurrentUser` değeridir.|  
   
-## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType özniteliği  
-  
-|Değer|Açıklama|  
-|-----------|-----------------|  
-|Dize|Tür adı ve derleme ve diğer veri türünü bulmak için kullanılan belirtir.|  
-  
-## <a name="certificatevalidationmode-attribute"></a>Certificatevalidationmode'u özniteliği  
+## <a name="customcertificatevalidatortype-attribute"></a>Customcercertificate Atevalidatortype özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|Aşağıdaki değerlerden biri: None, PeerTrust, ChainTrust, PeerOrChainTrust, özel.<br /><br /> Daha fazla bilgi için [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|Dize|Türü bulmak için kullanılan tür adını ve derlemeyi ve diğer verileri belirtir.|  
+  
+## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode özniteliği  
+  
+|Değer|Açıklama|  
+|-----------|-----------------|  
+|Sabit Listesi|Aşağıdaki değerlerden biri: None, PeerTrust, ChainTrust, PeerOrChainTrust, Custom.<br /><br /> Daha fazla bilgi için bkz. [sertifikalarla çalışma](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|Aşağıdaki değerlerden biri: NoCheck, Online, Offline. Daha fazla bilgi için [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|Sabit Listesi|Aşağıdaki değerlerden biri: NoCheck, çevrimiçi, çevrimdışı. Daha fazla bilgi için bkz. [sertifikalarla çalışma](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|Aşağıdaki değerlerden biri: `LocalMachine` veya `CurrentUser`. Varsayılan, `CurrentUser` değeridir. İstemci uygulama bir sistem hesabı altında çalıştığından sonra sertifika genellikle altında olduğu `LocalMachine`. İstemci uygulama bir kullanıcı hesabı altında çalıştığından sonra sertifika genellikle kullanımda `CurrentUser`.|  
+|Sabit Listesi|Şu değerlerden biri: `LocalMachine` veya. `CurrentUser` Varsayılan, `CurrentUser` değeridir. İstemci uygulaması bir sistem hesabı altında çalışıyorsa, sertifika genellikle altında `LocalMachine`olur. İstemci uygulaması bir kullanıcı hesabı altında çalışıyorsa, sertifika genellikle içinde `CurrentUser`olur.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -76,15 +76,15 @@ Bir hizmet tarafından kullanılan istemci sertifikaları için kimlik doğrulam
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|Bir hizmete istemcinin kimliğini doğrulamak için kullanılan bir X.509 sertifikası tanımlar.|  
+|[\<clientCertificate >](clientcertificate-of-servicecredentials.md)|Bir hizmette istemcinin kimliğini doğrulamak için kullanılan bir X. 509.440 sertifikası tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<authentication>` Karşılık gelen öğe <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> sınıfı. İstemcilerin nasıl doğrulanır özelleştirmenize olanak sağlar. Ayarlayabileceğiniz `certificateValidationMode` özniteliğini `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust`, veya `Custom`. Varsayılan olarak, düzeyini ayarlamak `ChainTrust`, belirten her sertifika sonu sertifika hiyerarşisini bulunması gereken bir *kök yetkilisi* zinciri üstünde. En güvenli mod budur. De değer ayarlayabilirsiniz `PeerOrChainTrust`, kendi kendine verilen sertifikaların (eş güven) güvenilen bir zinciri olan sertifikaları yanı sıra kabul edildiğini belirtir. Bu değer, geliştirme ve istemciler ve hizmetler kendi kendine verilen sertifikaların güvenilir yetkilisinden satın alınması değil çünkü hata ayıklama kullanılır. Bir istemci dağıtırken kullanırsınız `ChainTrust` yerine değeri.  
+ `<authentication>` Öğesi <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> sınıfına karşılık gelir. İstemcilerin nasıl doğrulandığını özelleştirmenizi sağlar. `certificateValidationMode` Özniteliğini, ,,`ChainTrust` `None` veya`Custom`olarak ayarlayabilirsiniz. `PeerOrChainTrust` `PeerTrust` Varsayılan olarak, düzeyi olarak `ChainTrust`ayarlanır; Bu, her bir sertifikanın, zincirinin en üstündeki bir *kök yetkilide* sonlanan sertifikaların hiyerarşisinde bulunması gerektiğini belirtir. En güvenli mod budur. Ayrıca, otomatik olarak verilen sertifikaların ( `PeerOrChainTrust`eş güven) kabul edildiğini ve güvenilen bir zincirdeki sertifikaların kabul edildiğini belirten değerini olarak da ayarlayabilirsiniz. Bu değer, istemci ve Hizmetleri geliştirirken ve hata ayıkladığında kullanılır çünkü kendinden verilen sertifikaların güvenilir bir yetkilinizden satın alınması gerekir. Bir istemciyi dağıttığınızda, bunun yerine `ChainTrust` değeri kullanın.  
   
- De değer ayarlayabilirsiniz `Custom`. Ayarlandığında `Custom` değeri ayarlamanız gerekir `customCertificateValidatorType` öznitelik bir bütünleştirilmiş kod ve sertifikayı doğrulamak için kullanılan tür. Kendi özel Doğrulayıcı sağlayıcısı oluşturmak için Özet devralmalıdır <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfı. Daha fazla bilgi için [nasıl yapılır: Özel bir sertifika Doğrulayıcı kullanan bir hizmet oluşturma](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ Değerini olarak `Custom`da ayarlayabilirsiniz. `Custom` Değere ayarlandığında, bir derlemeyi ve sertifikayı doğrulamak için kullanılan türünü `customCertificateValidatorType` de ayarlamanız gerekir. Kendi özel Doğrulayıcısı oluşturmak için soyut <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıftan devralması gerekir. Daha fazla bilgi için [nasıl yapılır: Özel bir sertifika Doğrulayıcı](../../../wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)kullanan bir hizmet oluşturun.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod bir X.509 sertifikası ve bir özel doğrulama türü belirtir `<authentication>` öğesi.  
+ Aşağıdaki kod, `<authentication>` öğesinde bir X. 509.952 sertifikası ve özel bir doğrulama türü belirtir.  
   
 ```xml  
 <serviceBehaviors>
@@ -111,6 +111,6 @@ Bir hizmet tarafından kullanılan istemci sertifikaları için kimlik doğrulam
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>
 - <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>
-- [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Nasıl yapılır: Özel bir sertifika Doğrulayıcı kullanan bir hizmet oluşturma](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
-- [Sertifikalarla Çalışma](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Güvenlik Davranışları](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Nasıl yapılır: Özel bir sertifika Doğrulayıcı kullanan bir hizmet oluşturma](../../../wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [Sertifikalarla Çalışma](../../../wcf/feature-details/working-with-certificates.md)

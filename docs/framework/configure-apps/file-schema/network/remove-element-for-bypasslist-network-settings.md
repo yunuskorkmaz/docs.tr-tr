@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: 0fd8de9af00aa861d92c8c201ef89545e108c790
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 99c18bd5b779845d52831b4a9591eaf4d5e5530b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659233"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920957"
 ---
 # <a name="remove-element-for-bypasslist-network-settings"></a>\<BypassList için > öğesini kaldır (ağ ayarları)
 
@@ -61,7 +61,7 @@ Yok.
 
 `address` Özniteliğin değeri bir IP adresi veya ana bilgisayar adı kümesini açıklayan bir normal ifade olmalıdır.
 
-Normal ifadeler hakkında daha fazla bilgi için bkz. [Normal ifadeleri .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md).
+Normal ifadeler hakkında daha fazla bilgi için bkz. [Normal ifadeleri .NET Framework](../../../../standard/base-types/regular-expressions.md).
 
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları
 

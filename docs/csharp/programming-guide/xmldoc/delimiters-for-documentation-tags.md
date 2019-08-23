@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: 88ad2519382c06aec2c8b1488c380fac47d5f1a2
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c8d20284b7ef2e06fb987f94f05cbe1dde1dc431
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588136"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928076"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Belge Etiketleri için Sınırlayıcılar (C# Programlama Kılavuzu)
 XML belgesi açıklamalarının kullanılması, bir belge açıklamasının başladığı ve bittiği derleyicisine işaret eden sınırlayıcıları gerektirir. XML belge etiketleriyle aşağıdaki tür sınırlayıcıları kullanabilirsiniz:  
@@ -21,7 +21,7 @@ XML belgesi açıklamalarının kullanılması, bir belge açıklamasının baş
  Tek satırlık sınırlayıcı. Bu, belge örneklerinde gösterilen ve görsel C# proje şablonları tarafından kullanılan formdur. Sınırlayıcıyı izleyen bir boşluk karakteri varsa, bu karakter XML çıktısına dahil edilmez.  
   
 > [!NOTE]
->  Visual Studio IDE, \<Özet > ve \</Summary > etiketlerini otomatik olarak ekleyen akıllı yorum düzenleme adlı bir özelliğe sahiptir ve kod düzenleyicisine `///` sınırlayıcı yazdıktan sonra imlecinizi bu etiketlerin içine taşımıştır . [Seçenekler iletişim kutusunda](/visualstudio/ide/reference/options-text-editor-csharp-advanced)bu özelliği etkinleştirebilir veya devre dışı bırakabilirsiniz.  
+> Visual Studio IDE, \<Özet > ve \</Summary > etiketlerini otomatik olarak ekleyen akıllı yorum düzenleme adlı bir özelliğe sahiptir ve kod düzenleyicisine `///` sınırlayıcı yazdıktan sonra imlecinizi bu etiketlerin içine taşımıştır . [Seçenekler iletişim kutusunda](/visualstudio/ide/reference/options-text-editor-csharp-advanced)bu özelliği etkinleştirebilir veya devre dışı bırakabilirsiniz.  
   
  `/** */`  
  Çok satırlı sınırlayıcılar.  

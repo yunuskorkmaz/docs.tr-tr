@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f559bf603605873f1b9155e9a96cb367e5420343
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908004"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941682"
 ---
 # <a name="nested-control-structures-visual-basic"></a>İç İçe Geçmiş Denetim Yapıları (Visual Basic)
-Örneğin denetim ifadeleri diğer denetim ifadelerine içine yerleştirebilirsiniz bir `If...Then...Else` içinde engelleyecek bir `For...Next` döngü. Başka bir denetim deyiminin içinde yer bir denetim deyimidir olduğu söylenir *iç içe geçmiş*.  
+Denetim deyimlerini diğer denetim deyimlerinin içine yerleştirebilirsiniz. Örneğin, bir `If...Then...Else` `For...Next` döngü içindeki bir blok. Başka bir denetim ifadesinin içine yerleştirilmiş bir denetim ifadesinin *iç içe*olduğu söylenir.  
   
-## <a name="nesting-levels"></a>İç içe geçme düzeyi  
- Visual Basic'de denetim yapıları için istediğiniz sayıda düzeyi yuvalanabilir. İç içe geçmiş yapılar gövdesi her biri, girintilendirme tarafından daha okunabilir yapmak için yaygın bir uygulamadır. Tümleşik geliştirme ortamı (IDE) Düzenleyicisi'ni otomatik olarak bunu yapar.  
+## <a name="nesting-levels"></a>İç içe düzeyler  
+ Visual Basic içindeki denetim yapıları, istediğiniz kadar sayıda düzeyde iç içe olabilir. İç içe yapıları, her birinin gövdesini girintileyerek daha okunaklı hale getirmek yaygın bir uygulamadır. Tümleşik geliştirme ortamı (IDE) Düzenleyicisi bunu otomatik olarak yapar.  
   
- Aşağıdaki örnekte, yordam `sumRows` matris her satırın pozitif öğeleri bir araya getirir.  
+ Aşağıdaki örnekte, yordam `sumRows` matrisin her satırının pozitif öğelerini birlikte ekler.  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- Yukarıdaki örnekte, ilk `Next` deyimi kapatır iç `For` döngüsü ve son `Next` deyimi kapatır dış `For` döngü.  
+ Yukarıdaki `Next` örnekte, ilk ifade iç `For` döngüyü kapatır ve son `Next` ifade dıştaki `For` döngüyü kapatır.  
   
- Buna benzer şekilde, iç içe `If` deyimleri `End If` ifadeleri otomatik olarak uygulamak için en yakın önceki `If` deyimi. İç içe geçmiş `Do` döngüler çalışma en içteki ile benzer bir biçimde `Loop` ifade en içteki eşleşen `Do` deyimi.  
+ Benzer şekilde, iç `If` içe geçmiş deyimlerde `End If` deyimler, en yakın önceki `If` ifadeye otomatik olarak uygulanır. İç `Do` içe döngüler benzer bir şekilde çalışarak en içteki `Do` ifadesiyle eşleşen `Loop` en içteki deyimle birlikte çalışır.  
   
 > [!NOTE]
->  Bir anahtar sözcük tıkladığınızda birçok denetim yapıları için anahtar sözcükleri yapısındaki tüm vurgulanır. Örneği için tıkladığınızda `If` içinde bir `If...Then...Else` oluşturma, tüm örneklerini `If`, `Then`, `ElseIf`, `Else`, ve `End If` yapısında vurgulanır. Sonraki veya önceki vurgulanan anahtar taşımak için CTRL + SHIFT + Aşağı Ok veya CTRL + SHIFT + Yukarı Ok tuşuna basın.  
+> Birçok denetim yapısında, bir anahtar sözcüğe tıkladığınızda yapıdaki tüm anahtar sözcükler vurgulanır. `If` Örneğin, bir `ElseIf` `Then` `Else` yapıyatıkladığınızda`End If` ,,,, ve oluşturma içindeki tüm örnekleri vurgulanır.`If` `If...Then...Else` Sonraki veya önceki vurgulanmış anahtar sözcüğe geçmek için CTRL + SHIFT + aşağı ok veya CTRL + SHIFT + yukarı ok tuşlarına basın.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Farklı türlerde denetim yapılarını iç içe geçirme  
- Bir tür denetim yapısı başka bir tür içinde iç içe yerleştirebilirsiniz. Aşağıdaki örnekte bir `With` içinde engelleyecek bir `For Each` döngü ve iç içe geçmiş `If` içinde engeller `With` blok.  
+## <a name="nesting-different-kinds-of-control-structures"></a>Farklı türlerdeki denetim yapılarını iç içe geçirme  
+ Bir tür denetim yapısını başka bir tür içinde iç içe geçirebilirsiniz. Aşağıdaki örnek, `For Each` döngüsünün içinde `With` bir blok `With` ve blok içindeki iç `If` içe bloklar kullanır.  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -65,11 +65,11 @@ Next ctl
 ```  
   
 ## <a name="overlapping-control-structures"></a>Çakışan denetim yapıları  
- Denetim yapıları çakışamaz. Başka bir deyişle, tüm iç içe yapı tamamen sonraki en içteki yapısı içinde bulunmalıdır. Örneğin, aşağıdaki düzenleme geçersiz olduğundan `For` döngüyü sonlandırır önce iç `With` bloğunu sonlandırır.  
+ Denetim yapılarıyla çakışamaz. Bu, herhangi bir iç içe yapının bir sonraki en içteki yapıda tamamen dahil olması gerektiği anlamına gelir. Örneğin, `For` döngü iç `With` blok sonlandırılmadan önce sonlandırdığı için aşağıdaki düzenleme geçersizdir.  
   
- ![Geçersiz iç içe bir örneğini gösteren diyagram.](./media/nested-control-structures/example-invalid-nesting.gif) 
+ ![Geçersiz iç içe geçme örneğini gösteren diyagram.](./media/nested-control-structures/example-invalid-nesting.gif) 
   
- Visual Basic Derleyicisi, böyle çakışan denetim yapıları algılar ve bir derleme zamanı hatası bildirir.  
+ Visual Basic derleyici, bu tür çakışan denetim yapılarını algılar ve derleme zamanı hatasına işaret eder.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

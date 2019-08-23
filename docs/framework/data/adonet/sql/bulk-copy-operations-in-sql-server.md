@@ -2,43 +2,43 @@
 title: SQL Server’da Toplu Kopyalama İşlemleri
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: e538e48400d955a0013a12dbf2d10f1f96c3ddfe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: efa13eb1633fce3b59040ef8da79dba0f6ea81d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649554"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918058"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server’da Toplu Kopyalama İşlemleri
-Microsoft SQL Server adlandırılmış bir popüler komut satırı yardımcı programını içeren **bcp** için hızlı bir şekilde toplu tabloları veya görünümleri SQL Server veritabanları ile büyük dosyaları kopyalanıyor. <xref:System.Data.SqlClient.SqlBulkCopy> Sınıfı benzer işlevler sağlayan çözümler yönetilen kod yazmanıza olanak verir. Verileri bir SQL Server tablosunu (örneğin, INSERT deyimleri) yüklemek için farklı yöntemleri vardır ancak <xref:System.Data.SqlClient.SqlBulkCopy> bir önemli performans avantajı onları sunar.  
+Microsoft SQL Server, büyük dosyaları SQL Server veritabanlarındaki tablolara veya görünümlere hızlıca toplu olarak kopyalamak için **bcp** adlı popüler bir komut satırı yardımcı programı içerir. Sınıfı <xref:System.Data.SqlClient.SqlBulkCopy> , benzer işlevler sağlayan yönetilen kod çözümlerini yazmanızı sağlar. SQL Server tabloya veri yüklemek için başka yollar vardır (örneğin INSERT deyimleri), ancak <xref:System.Data.SqlClient.SqlBulkCopy> bunlar üzerinde önemli bir performans avantajı sunar.  
   
- <xref:System.Data.SqlClient.SqlBulkCopy> Sınıfı, yalnızca SQL Server tablolarına veri yazmak için kullanılabilir. Ancak, veri kaynağı SQL Server için sınırlı değildir. için verilerin yüklenmesi sürece herhangi bir veri kaynağı kullanılabilir bir <xref:System.Data.DataTable> örneği veya ile okunan bir <xref:System.Data.IDataReader> örneği.  
+ <xref:System.Data.SqlClient.SqlBulkCopy> Sınıfı yalnızca SQL Server tablolarına veri yazmak için kullanılabilir. Ancak veri kaynağı SQL Server sınırlı değildir; veriler bir <xref:System.Data.DataTable> örneğe yüklene, ya da bir <xref:System.Data.IDataReader> örnekle okunan sürece, herhangi bir veri kaynağı kullanılabilir.  
   
- Kullanarak <xref:System.Data.SqlClient.SqlBulkCopy> sınıfı gerçekleştirebilirsiniz:  
+ <xref:System.Data.SqlClient.SqlBulkCopy> Sınıfını kullanarak şunları yapabilirsiniz:  
   
-- Tekil toplu kopyalama işlemi  
+- Tek bir toplu kopyalama işlemi  
   
-- Çoklu toplu kopyalama işlemleri  
+- Birden çok toplu kopyalama işlemi  
   
-- Bir işlem içinde bir toplu kopyalama işlemi  
+- Bir işlem içindeki toplu kopyalama işlemi  
   
 > [!NOTE]
->  .NET Framework sürüm 1.1 veya önceki bir sürümünü kullanırken (desteklemeyen <xref:System.Data.SqlClient.SqlBulkCopy> sınıfı), SQL Server Transact-SQL yürütmek **BULK INSERT** using deyimi <xref:System.Data.SqlClient.SqlCommand> nesne.  
+> .NET Framework sürüm 1,1 veya önceki bir sürümü kullandığınızda ( <xref:System.Data.SqlClient.SqlBulkCopy> sınıfını desteklemeyen), <xref:System.Data.SqlClient.SqlCommand> nesneyi kullanarak SQL Server Transact-SQL **bulk INSERT** ifadesini çalıştırabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Toplu Kopyalama Örnek Kurulumu](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)  
- Toplu kopyalama örneklerde kullanılan tablolar açıklar ve AdventureWorks veritabanı içinde tablolar oluşturmak için SQL komut dosyaları sağlar.  
+ Toplu kopyalama örneklerinde kullanılan tabloları açıklar ve AdventureWorks veritabanında tabloları oluşturmak için SQL betikleri sağlar.  
   
  [Tekil Toplu Kopyalama İşlemleri](../../../../../docs/framework/data/adonet/sql/single-bulk-copy-operations.md)  
- SQL Server'ı kullanarak bir örneğine bir tekil toplu kopyalama veri bunu nasıl yapacağınız açıklanmaktadır <xref:System.Data.SqlClient.SqlBulkCopy> sınıfı ve Transact-SQL deyimlerini kullanarak toplu kopyalama işlemi gerçekleştirme ve <xref:System.Data.SqlClient.SqlCommand> sınıfı.  
+ <xref:System.Data.SqlClient.SqlBulkCopy> Sınıfını kullanarak bir SQL Server örneğine verilerin tek bir toplu kopyasının nasıl yapılacağını ve Transact-SQL deyimlerini <xref:System.Data.SqlClient.SqlCommand> ve sınıfını kullanarak toplu kopyalama işleminin nasıl gerçekleştirileceğini açıklar.  
   
  [Çoklu Toplu Kopyalama İşlemleri](../../../../../docs/framework/data/adonet/sql/multiple-bulk-copy-operations.md)  
- Çoklu toplu kopyalama işlemleri veri örneği SQL Server'ı kullanarak bunu nasıl yapacağınız açıklanmaktadır <xref:System.Data.SqlClient.SqlBulkCopy> sınıfı.  
+ <xref:System.Data.SqlClient.SqlBulkCopy> Sınıfını kullanarak bir SQL Server örneğine veri çoklu toplu kopyalama işlemlerinin nasıl yapılacağını açıklar.  
   
  [İşlem ve Toplu Kopyalama İşlemleri](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)  
- Toplu kopyalama işlemi nasıl işleyin veya geri alma işlemi dahil olmak üzere, bir işlem içinde açıklar.  
+ İşlemin nasıl gerçekleştirileceği veya geri alınması dahil olmak üzere bir işlem içinde toplu kopyalama işleminin nasıl gerçekleştirileceğini açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

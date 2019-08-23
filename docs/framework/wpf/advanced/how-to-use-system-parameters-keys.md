@@ -5,20 +5,20 @@ helpviewer_keywords:
 - resource keys [WPF], SystemParameters class
 - classes [WPF], SystemParameters
 ms.assetid: 77571283-d16c-45bb-9f69-cafbbf72b21e
-ms.openlocfilehash: 147f65b4bb214c12317309081c345251d7426cd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: edacb4b98ab01f081f668dc3374f6588492210d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001448"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918378"
 ---
 # <a name="how-to-use-system-parameters-keys"></a>Nasıl yapılır: Sistem Parametreleri Tuşlarını Kullanma
-Sistem ayarları ile tutarlı, görsel oluşturmak geliştiriciler yardımcı olacak kaynaklar olarak sistem kaynaklarının sistem ölçümlerini sayısını kullanıma sunar. <xref:System.Windows.SystemParameters> sistem parametre değerleri hem değerlere bağlanan kaynak anahtarlarını içeren bir sınıf — Örneğin, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> ve <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A>. Sistem parametresi ölçümlerini statik veya dinamik kaynakları olarak kullanılabilir. Parametre ölçüsünün uygulama çalışırken otomatik olarak güncelleştirmek istiyorsanız, bir dinamik kaynak kullanmak çalışır; Aksi takdirde bir statik kaynak kullanın.  
+Sistem kaynakları, geliştiricilerin sistem ayarlarıyla tutarlı görseller oluşturmalarına yardımcı olmak için çeşitli sistem ölçümlerini kaynak olarak kullanıma sunar. <xref:System.Windows.SystemParameters>, hem sistem parametre değerlerini hem de değerlere bağlanan kaynak anahtarlarını içeren bir sınıftır — Örneğin, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> ve. <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> Sistem parametresi ölçümleri, statik veya dinamik kaynaklar olarak kullanılabilir. Parametre ölçüsünün uygulama çalışırken otomatik olarak güncelleştirilmesini istiyorsanız dinamik bir kaynak kullanın; Aksi halde statik kaynak kullanın.  
   
 > [!NOTE]
->  Dinamik kaynaklara sahip anahtar sözcüğü *anahtar* özellik adına eklenir.  
+> Dinamik kaynaklarda, özellik adının sonuna anahtar sözcük *anahtarı* eklenir.  
   
- Aşağıdaki örnek, bir düğmeye stil veya sistem parametresi dinamik kaynaklarına erişmek ve gösterilmektedir. Bu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örnek boyutları bir düğme atayarak <xref:System.Windows.SystemParameters> düğmenin genişlik ve yükseklik değerleri.  
+ Aşağıdaki örnek, bir düğmeye stil eklemek veya özelleştirmek için, sistem parametresi dinamik kaynaklarının nasıl erişebileceğini ve kullanılacağını gösterir. Bu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örnek, düğmenin genişliğine ve yüksekliğine <xref:System.Windows.SystemParameters> değerler atayarak bir düğmeyi boyutlandırır.  
   
 ## <a name="example"></a>Örnek  
  [!code-xaml[SystemRes_snip#ParameterDynamicResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#parameterdynamicresources)]  

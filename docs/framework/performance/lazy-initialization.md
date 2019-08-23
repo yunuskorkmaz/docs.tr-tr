@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef3105844ee61607bbc85332a76611c91a4198a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 1c13445b8b7c72d1c66efe5a9db3aaa027001ecf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364054"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943815"
 ---
 # <a name="lazy-initialization"></a>Yavaş Başlatma
 Bir nesnenin *geç başlatılması* , oluşturulması ilk kullanılana kadar ertelenmesi anlamına gelir. (Bu konu için, *yavaş başlatma* ve *yavaş örnekleme* terimleri eş anlamlı.) Yavaş başlatma öncelikle performansı artırmak, gereksiz hesaplama önlemek ve program belleği gereksinimlerini azaltmak için kullanılır. Bunlar en yaygın senaryolardır:  
@@ -62,7 +62,7 @@ Bir nesnenin *geç başlatılması* , oluşturulması ilk kullanılana kadar ert
  Varsayılan olarak, <xref:System.Lazy%601> nesneler iş parçacığı güvenlidir. Diğer bir deyişle, Oluşturucu iş parçacığı güvenliği türünü belirtmezse, <xref:System.Lazy%601> oluşturduğu nesneler iş parçacığı güvenlidir. Çok iş parçacıklı senaryolarda, iş parçacığı açısından güvenli <xref:System.Lazy%601.Value%2A> <xref:System.Lazy%601> bir nesnenin özelliğine erişmek için ilk iş parçacığı, tüm iş parçacıklarında sonraki tüm erişimler için onu başlatır ve tüm iş parçacıkları aynı verileri paylaşır. Bu nedenle, hangi iş parçacığının nesneyi başlattığında ve yarış durumlarının zararsız olması önemlidir.  
   
 > [!NOTE]
->  Özel durum önbelleğe alma özelliğini kullanarak bu tutarlılığı hata koşullarına genişletebilirsiniz. Daha fazla bilgi için, [yavaş nesnelerdeki özel durumlar](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects)başlıklı sonraki bölüme bakın.  
+> Özel durum önbelleğe alma özelliğini kullanarak bu tutarlılığı hata koşullarına genişletebilirsiniz. Daha fazla bilgi için, [yavaş nesnelerdeki özel durumlar](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects)başlıklı sonraki bölüme bakın.  
   
  Aşağıdaki örnek, aynı `Lazy<int>` Örneğin üç ayrı iş parçacığı için aynı değere sahip olduğunu gösterir.  
   
@@ -92,7 +92,7 @@ Bir nesnenin *geç başlatılması* , oluşturulması ilk kullanılana kadar ert
  Bir başlatma yöntemi ( <xref:System.Lazy%601?displayProperty=nameWithType> `valueFactory` parametre) alan herhangi bir Oluşturucu kullandığınızda özel durum önbelleğe alma etkinleştirilir; Örneğin, `Lazy(T)(Func(T))`oluşturucuyu kullandığınızda etkinleştirilir. Oluşturucu <xref:System.Threading.LazyThreadSafetyMode> aynı zamanda bir değer (`mode` parametre) alırsa, veya <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>belirtin <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> . Bir başlatma yöntemi belirtildiğinde, bu iki mod için özel durum önbelleğe alma etkinleştirilir. Başlatma yöntemi çok basit olabilir. Örneğin `T`, ' `new Lazy<Contents>(() => new Contents(), mode)` de C#, veya `New Lazy(Of Contents)(Function() New Contents())` Visual Basic parametresiz oluşturucuyu çağırabilir. Bir başlatma yöntemi belirtmeyen <xref:System.Lazy%601?displayProperty=nameWithType> bir Oluşturucu kullanırsanız, için `T` parametresiz Oluşturucu tarafından oluşturulan özel durumlar önbelleğe alınmaz. Daha fazla bilgi için bkz <xref:System.Threading.LazyThreadSafetyMode> . sabit listesi.  
   
 > [!NOTE]
->  `isThreadSafe` Oluşturucu <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> <xref:System.Lazy%601> parametresi olarak ayarlanmış <xref:System.Lazy%601> bir nesne veyaolarakayarlanmışbiroluşturucuparametresioluşturursanız,nesneyetekbirişparçacığındanerişmenizveyakendinizinkinisağlamanızgerekir`mode` `false` eşitlemesine. Bu, özel durum önbelleğe alma da dahil olmak üzere nesnenin tüm yönleri için geçerlidir.  
+> `isThreadSafe` Oluşturucu <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> <xref:System.Lazy%601> parametresi olarak ayarlanmış <xref:System.Lazy%601> bir nesne veyaolarakayarlanmışbiroluşturucuparametresioluşturursanız,nesneyetekbirişparçacığındanerişmenizveyakendinizinkinisağlamanızgerekir`mode` `false` eşitlemesine. Bu, özel durum önbelleğe alma da dahil olmak üzere nesnenin tüm yönleri için geçerlidir.  
   
  Önceki bölümde belirtildiği gibi, <xref:System.Lazy%601> özel durumları farklı değerlendir belirterek <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType> oluşturulan nesneler. İle <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>, birden çok iş parçacığı <xref:System.Lazy%601> örneği başlatmak için rekabet edebilir. Bu durumda, özel durumlar önbelleğe alınmaz ve başlatma başarılı olana kadar <xref:System.Lazy%601.Value%2A> özelliğe erişim girişimleri devam edebilir.  
   
@@ -140,7 +140,7 @@ Bir nesnenin *geç başlatılması* , oluşturulması ilk kullanılana kadar ert
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Parallel. for ve ForEach olarak iş parçacığı yerel değişkenleri  
- Veri kaynaklarını paralel olarak <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yinelemek için <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> yöntemini veya yöntemini kullandığınızda, iş parçacığı yerel verileri için yerleşik desteğe sahip olan aşırı yüklemeleri kullanabilirsiniz. Bu yöntemlerde, iş parçacığı konum oluşturma, verileri oluşturmak, erişmek ve temizlemek için yerel temsilciler kullanılarak elde edilir. Daha fazla bilgi için [nasıl yapılır: İş parçacığı yerel değişkenleriyle](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) bir Parallel. for döngüsü yazın ve [şunları yapın: Bölüm yerel değişkenleriyle](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)bir Parallel. foreach döngüsü yazın.  
+ Veri kaynaklarını paralel olarak <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yinelemek için <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> yöntemini veya yöntemini kullandığınızda, iş parçacığı yerel verileri için yerleşik desteğe sahip olan aşırı yüklemeleri kullanabilirsiniz. Bu yöntemlerde, iş parçacığı konum oluşturma, verileri oluşturmak, erişmek ve temizlemek için yerel temsilciler kullanılarak elde edilir. Daha fazla bilgi için [nasıl yapılır: İş parçacığı yerel değişkenleriyle](../../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) bir Parallel. for döngüsü yazın ve [şunları yapın: Bölüm yerel değişkenleriyle](../../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)bir Parallel. foreach döngüsü yazın.  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Düşük iş yükü senaryolar için yavaş başlatma kullanma  
  Çok sayıda nesneyi yavaş başlatmak zorunda olduğunuz senaryolarda, bir içindeki her bir <xref:System.Lazy%601> nesnenin çok fazla bellek veya çok fazla bilgi işlem kaynağı gerektirip gerektirdiğine karar verebilirsiniz. Ya da, yavaş başlatmanın nasıl açığa çıkmasıyla ilgili sıkı gereksinimlere sahip olabilirsiniz. Bu gibi `static` durumlarda, <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> sınıfının bir örneğine sarmalamadan`Shared` her bir <xref:System.Lazy%601>nesneyi geç başlatmak için sınıfının (Visual Basic) yöntemlerini kullanabilirsiniz.  
@@ -154,7 +154,7 @@ Bir nesnenin *geç başlatılması* , oluşturulması ilk kullanılana kadar ert
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilen İş Parçacığı Oluşturma Temelleri](../../../docs/standard/threading/managed-threading-basics.md)
-- [İş Parçacıkları ve İş Parçacığı Oluşturma](../../../docs/standard/threading/threads-and-threading.md)
-- [Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Yönetilen İş Parçacığı Oluşturma Temelleri](../../standard/threading/managed-threading-basics.md)
+- [İş Parçacıkları ve İş Parçacığı Oluşturma](../../standard/threading/threads-and-threading.md)
+- [Görev Paralel Kitaplığı (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
 - [Nasıl yapılır: Nesnelerin yavaş başlatılmasını gerçekleştir](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

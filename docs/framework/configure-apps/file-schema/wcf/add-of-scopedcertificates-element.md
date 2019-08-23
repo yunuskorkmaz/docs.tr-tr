@@ -1,25 +1,25 @@
 ---
-title: <add> ' ın <scopedCertificates> öğesi
+title: <add><scopedCertificates> öğesinin
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: 06a624d0146745581dfe907d044d1f7d3b857902
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9756d37527fcf888cad930b24677ae8e6a2c8fba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673874"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920049"
 ---
-# <a name="add-of-scopedcertificates-element"></a>\<Ekle >, \<scopedCertificates > öğesi
-Kapsamlı sertifikalar koleksiyonuna bir X.509 sertifikası ekler.  
+# <a name="add-of-scopedcertificates-element"></a>\<> \<ScopedCertificates > öğesi ekleme
+Kapsamlı sertifikalar koleksiyonuna bir X. 509.440 sertifikası ekler.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
-endpointBehaviors bölümü  
-\<davranışı >  
+Endpointdavranışlar bölümü  
+\<davranış >  
 \<clientCredentials >  
 \<serviceCertificate >  
 \<scopedCertificates >  
-\<Ekle > öğesi için \<scopedCertificates >  
+\<ScopedCertificates için \<> öğesi ekleyin >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,41 +32,41 @@ endpointBehaviors bölümü
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
+ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Hedefuri|dize. Sertifikayla ilişkili hizmetin URI belirtir.|  
-|findValue|dize. Aranacak değer.|  
-|X509FindType|Sabit listesi. Aranacak sertifika alanlardan biri.|  
-|storeLocation|Sabit listesi. İki birini aranacak konumların depolayın.|  
-|storeName|Sabit listesi. Aranacak bir sistemin depolar.|  
+|HedefUri|Dizisinde. Sertifikayla ilişkili hizmetin URI 'sini belirtir.|  
+|findValue|Dizisinde. Aranacak değer.|  
+|x509FindType|Listelenen. Arama yapılacak sertifika alanlarından biri.|  
+|storeLocation|Listelenen. Arama yapılacak iki depolama konumundan biri.|  
+|storeName|Listelenen. Arama yapmak için sistem mağazalarından biri.|  
   
 ## <a name="findvalue-attribute"></a>findValue özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Dize|Değer (X509FindType özniteliği tarafından belirtilen) alan bağlıdır Aranan. Örneğin, bir parmak izi için arama değeri bir dize onaltılık bir sayı olmalıdır.|  
+|Dize|Değer, aranmakta olan alana bağlıdır (X509FindType özniteliğiyle belirtilir). Örneğin, bir parmak izi arıyorsanız, değerin onaltılık sayı dizesi olması gerekir.|  
   
 ## <a name="x509findtype-attribute"></a>x509FindType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|Değerler şunlardır: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy FindByCertificatePolicy, FindByExtension FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|Sabit Listesi|Değerler şunlardır: Findbyparmak izi, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, Findbytımenotyetvalid, FindBySerialNumber, Findbytimedoldu, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|LocalMachine ya da CurrentUser.|  
+|Sabit Listesi|CurrentUser veya LocalMachine.|  
   
 ## <a name="storename-attribute"></a>storeName özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|Değerler şunlardır: Adres Defteri, AuthRoot, CertificateAuthority, My izni, kök, TrustedPeople ve TrustedPublisher.|  
+|Sabit Listesi|Değerler şunlardır: AddressBook, AuthRoot, CertificateAuthority, Izin verilmeyen, My, root, Trustedkişilerim ve TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -75,17 +75,17 @@ endpointBehaviors bölümü
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<scopedCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|Belirli hizmetler (kapsamlı kimlik doğrulaması için) tarafından sağlanan X.509 Sertifika koleksiyonunu temsil eder.|  
+|[\<scopedCertificates >](scopedcertificates-element.md)|Kimlik doğrulama için belirli hizmetler (kapsamlı) tarafından sunulan X. 509.440 sertifikalarının bir koleksiyonunu temsil eder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe kullanmak için hizmet sertifikası yapılandırmak istemci kurduğu hizmet URL'sini temel sağlar. Bu, özellikle bir istemci birden çok hizmeti (uç hizmetinin yanı sıra Ara güvenlik belirteci hizmetlerine) burada iletişim verilen belirteç senaryolarda yararlıdır. Bu sertifika, sertifika tabanlı ileti güvenliği kullanan bağlamaları için hizmet iletileri şifrelemek için kullanılır ve istemciye yanıt imzalama için hizmet tarafından kullanılmak üzere beklenir.  
+ Bu öğe, istemcinin iletişim kurduğu hizmetin URL 'sini temel alarak kullanmak üzere bir hizmet sertifikası yapılandırmasını sağlar. Bu özellikle, bir istemcinin birden çok hizmetle (bitiş hizmeti ve aracı güvenlik belirteci Hizmetleri) iletişim kuramadığı verilen belirteç senaryolarında kullanışlıdır. Sertifika tabanlı ileti güvenliği kullanan bağlamalar için, bu sertifika hizmete iletileri şifrelemek için kullanılır ve istemciye yanıtları imzalamak için hizmet tarafından kullanılması beklenir.  
   
- Bağlama, hizmet ve URL ScopedCertificates içinde bulunan hizmet için belirli bir sertifika için bir sertifika gerektiriyorsa, varsayılan sertifika kullanılır.  
+ Bir bağlama hizmet için bir sertifika gerektiriyorsa ve hizmet URL 'SI için belirli bir sertifika ScopedCertificates içinde bulunmazsa, varsayılan sertifika kullanılır.  
   
- Daha fazla bilgi için "Sertifikalar kapsamlı" bölümüne bakın. [nasıl yapılır: Federe istemci oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
+ Daha fazla bilgi için bkz [. nasıl yapılır: Federasyon Istemcisi](../../../wcf/feature-details/how-to-create-a-federated-client.md)oluşturun.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek koleksiyonuna bir X.509 sertifikası ekler.  
+ Aşağıdaki örnek, koleksiyonu bir X. 509.440 sertifikası ekler.  
   
 ```xml  
 <behaviors>
@@ -114,7 +114,7 @@ endpointBehaviors bölümü
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
-- [Nasıl yapılır: Federe istemci oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Sertifikalarla Çalışma](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/securing-clients.md)
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Nasıl yapılır: Federe Istemci oluşturma](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Sertifikalarla Çalışma](../../../wcf/feature-details/working-with-certificates.md)
+- [İstemcileri Güvenli Hale Getirme](../../../wcf/securing-clients.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)

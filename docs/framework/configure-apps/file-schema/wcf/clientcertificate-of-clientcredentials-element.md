@@ -1,21 +1,21 @@
 ---
-title: <clientCertificate> ' ın <clientCredentials> öğesi
+title: <clientCertificate><clientCredentials> öğesinin
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: 5abf0a99beff1b9fb3655cb82d74484f3b88237f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3450df921da8c72a555c2faf424c51e0063cb235
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673322"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926112"
 ---
-# <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate >, \<clientCredentials > öğesi
-Bir hizmete istemcinin kimliğini doğrulamak için kullanılan bir X.509 sertifikası tanımlar.  
+# <a name="clientcertificate-of-clientcredentials-element"></a>\<\<ClientCredentials > öğesinin ClientCertificate >
+Bir hizmette istemcinin kimliğini doğrulamak için kullanılan bir X. 509.440 sertifikası tanımlar.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
-\<endpointBehaviors>  
-\<davranışı >  
+\<Endpointdavranışlar >  
+\<davranış >  
 \<clientCredentials >  
 \<clientCertificate >  
   
@@ -29,16 +29,16 @@ Bir hizmete istemcinin kimliğini doğrulamak için kullanılan bir X.509 sertif
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
+ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`findValue`|X.509 sertifika deposunda aranacak değeri içeren bir dize. Özniteliğinde bulunan türünün gereksinimlerini karşılaması gerekir `X509FindType` öznitelik değeri. Varsayılan değer boş bir dizedir.|  
-|`storeLocation`|İstemcinin hizmete kendi kimliğini doğrulamak için kullandığı X.509 sertifikasının konumunu belirtir. Geçerli değerler şunlardır:<br /><br /> -LocalMachine: yerel makineye atanmış sertifika deposu.<br />-CurrentUser: geçerli kullanıcıya atanmış sertifika deposu.<br /><br /> LocalMachine varsayılandır. Bu öznitelik türünde <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
-|`storeName`|Aranacak olan X.509 Sertifika deposunun adını belirtir. Geçerli değerler şunlardır:<br /><br /> -Adres Defteri: Diğer kullanıcılar için sertifika deposu.<br />-AuthRoot: Üçüncü taraf sertifika yetkilileri (CA'lar) için sertifika deposu.<br />-CertificateAuthority: Ara Sertifika yetkilileri (CA'lar) için sertifika deposu.<br />-İzin verilmedi: İptal edilen sertifikalar için sertifika deposu.<br />-My: Kişisel Sertifikalar için sertifika deposu.<br />-Kök: Güvenilen kök sertifika yetkilileri (CA'lar) için sertifika deposu.<br />-TrustedPeople: Doğrudan güvenilen kişiler ve kaynaklar için sertifika deposu.<br />-TrustedPublisher: Doğrudan Güvenilen Yayımcılar sertifika deposu.<br /><br /> Varsayılan değer benim. Bu öznitelik türünde <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
-|X509FindType|Yürütülecek X.509 arama türünü tanımlar. Bulunan tür `findValue` özniteliği bu öznitelik gereksinimlerini karşılaması gerekir. Geçerli değerler şunlardır:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-   FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-   FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> FindBySubjectDistinguishedName varsayılan değerdir. Bu öznitelik türünde <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
+|`findValue`|X. 509.440 sertifika deposunda aranacak değeri içeren bir dize. Özniteliğinde yer alan türün, `X509FindType` öznitelik değerinin gereksinimlerini karşılaması gerekir. Varsayılan değer boş bir dizedir.|  
+|`storeLocation`|İstemcinin hizmete kendi kimliğini doğrulamak için kullandığı X. 509.952 sertifikasının konumunu belirtir. Geçerli değerler şunlardır:<br /><br /> -LocalMachine: yerel makineye atanan sertifika depolama alanı.<br />-CurrentUser: geçerli kullanıcıya atanmış sertifika deposu.<br /><br /> Varsayılan değer LocalMachine 'dir. Bu öznitelik türü <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
+|`storeName`|Arama yapılacak X. 509.440 sertifika deposunun adını belirtir. Geçerli değerler şunlardır:<br /><br /> -AddressBook: Diğer kullanıcılar için sertifika deposu.<br />-AuthRoot: Üçüncü taraf sertifika yetkilileri (CA 'Lar) için sertifika deposu.<br />CertificateAuthority Ara sertifika yetkilileri (CA 'Lar) için sertifika deposu.<br />Veril İptal edilen sertifikalar için sertifika deposu.<br />My Kişisel Sertifikalar için sertifika deposu.<br />Asıl Güvenilen kök sertifika yetkilileri (CA 'Lar) için sertifika deposu.<br />TrustedPeople Doğrudan güvenilen kişiler ve kaynaklar için sertifika deposu.<br />-TrustedPublisher: Doğrudan güvenilen yayımcılar için sertifika deposu.<br /><br /> Varsayılan My. Bu öznitelik türü <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
+|X509FindType|Yürütülecek X. 509.440 aramasının türünü tanımlar. `findValue` Özniteliğinde yer alan türün bu özniteliğin gereksinimlerini karşılaması gerekir. Geçerli değerler şunlardır:<br /><br /> -Findbyparmak Izi<br />-FindBySubjectName<br />- FindBySubjectDistinguishedName<br />-FindByIssuerName<br />- FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />- FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> Varsayılan değer FindBySubjectDistinguishedName ' dir. Bu öznitelik türü <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -47,10 +47,10 @@ Bir hizmete istemcinin kimliğini doğrulamak için kullanılan bir X.509 sertif
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.|  
+|[\<clientCredentials >](clientcredentials.md)|Bir hizmette istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapılandırma öğesi, bu öğe istemcinin kimliğini doğrulamak için kullanılan sertifikayı belirtir. Daha fazla bilgi için [nasıl yapılır: İstemci kimlik bilgileri değerlerini belirtme](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Bu yapılandırma öğesi, bu öğeyle istemcinin kimliğini doğrulamak için kullanılan sertifikayı belirtir. Daha fazla bilgi için [nasıl yapılır: Istemci kimlik bilgileri değerlerini](../../../wcf/how-to-specify-client-credential-values.md)belirtin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -60,8 +60,8 @@ Bir hizmete istemcinin kimliğini doğrulamak için kullanılan bir X.509 sertif
 - <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
-- [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Nasıl yapılır: İstemci kimlik bilgileri değerlerini belirtme](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
-- [İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/securing-clients.md)
-- [Sertifikalarla Çalışma](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Güvenlik Davranışları](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Nasıl yapılır: Istemci kimlik bilgileri değerlerini belirtme](../../../wcf/how-to-specify-client-credential-values.md)
+- [İstemcileri Güvenli Hale Getirme](../../../wcf/securing-clients.md)
+- [Sertifikalarla Çalışma](../../../wcf/feature-details/working-with-certificates.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)

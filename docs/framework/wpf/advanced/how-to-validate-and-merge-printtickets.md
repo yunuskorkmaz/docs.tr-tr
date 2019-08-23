@@ -10,48 +10,48 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: be8b299c99515394bc676cfd7a715cb82ac4d58c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e5242c07179501e6b39840a36f8dd6364d65b84
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051122"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918342"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Nasıl yapılır: PrintTickets'i Doğrulama ve Birleştirme
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Yazdırma şema](https://go.microsoft.com/fwlink/?LinkId=186397) esnek ve Genişletilebilir içerir <xref:System.Printing.PrintCapabilities> ve <xref:System.Printing.PrintTicket> öğeleri. Yazdırma cihazı yeteneklerini eski maddeler halinde listeler ve cihaz belirli bir sırayla belgeleri, belgenin veya tek tek sayfa göre bu özellikleri nasıl kullanması gereken ikinci belirtir.  
+Yazdırma şeması, esnek ve Genişletilebilir <xref:System.Printing.PrintCapabilities> ve <xref:System.Printing.PrintTicket> öğeleri içerir. [](https://go.microsoft.com/fwlink/?LinkId=186397) [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] Daha önce bir yazdırma cihazının özellikleri, ikincisi ise cihazın belirli bir dizi belge, tek belge veya ayrı bir sayfa için bu özellikleri nasıl kullanması gerektiğini belirtir.  
   
- Tipik bir yazdırma destekleyen bir uygulama için görev dizisi şu şekilde olacaktır.  
+ Yazdırmayı destekleyen bir uygulama için tipik bir görev dizisi aşağıdaki gibidir.  
   
-1. Yazıcı özellikleri belirler.  
+1. Yazıcının yeteneklerini belirleme.  
   
-2. Yapılandırma bir <xref:System.Printing.PrintTicket> bu özellikleri kullanmak için.  
+2. Bu özellikleri kullanacak şekilde yapılandırın. <xref:System.Printing.PrintTicket>  
   
-3. Doğrulama <xref:System.Printing.PrintTicket>.  
+3. ' İ doğrulayın. <xref:System.Printing.PrintTicket>  
   
  Bu makalede bunun nasıl yapılacağı gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki basit örnekte, biz yalnızca olup bir yazıcıya çift yönlü baskı destekleyebilir ilgilendiğiniz — iki taraflı yazdırma. Önemli adımlar aşağıdaki gibidir.  
+ Aşağıdaki basit örnekte, yalnızca bir yazıcının çift taraflı yazdırma gibi çift yönlü olarak bir yazıcının destekleyebilip destekleyemeyeceğini ilgileniyoruz. Ana adımlar aşağıdaki gibidir.  
   
-1. Alma bir <xref:System.Printing.PrintCapabilities> nesnesi ile <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> yöntemi.  
+1. Yöntemine sahip bir <xref:System.Printing.PrintCapabilities> nesne alın. <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
   
-2. İstediğiniz yeteneğinin olup olmadığını test edin. Aşağıdaki örnekte, test ederiz <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> özelliği <xref:System.Printing.PrintCapabilities> uzun sayfa tarafında nesne iki tarafındaki "sayfa açma" ile bir sayfa yazdırma yeteneğini varlığını. Bu yana <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> bir koleksiyon olduğundan kullandığımız `Contains` yöntemi <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.  
+2. İstediğiniz özelliğin varlığını test edin. Aşağıdaki örnekte, sayfanın uzun tarafında "sayfa <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> açma" ile <xref:System.Printing.PrintCapabilities> bir kağıt yaprağının her iki tarafında da yazdırma yeteneğinin olması için nesnesinin özelliğini test ediyoruz. Bir koleksiyon `Contains` olduğundan, yöntemi <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>kullanırız. <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A>  
   
     > [!NOTE]
-    >  Bu adım, kesinlikle gerekli değildir. <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> Aşağıda kullanılan yöntem her isteği denetleyecek <xref:System.Printing.PrintTicket> yazıcı yeteneklerine karşı. İstenen özellik yazıcı tarafından desteklenmiyorsa, yazıcı sürücüsü alternatif bir istekte kullanacak <xref:System.Printing.PrintTicket> yöntem tarafından döndürülen.  
+    > Bu adım kesinlikle gerekli değildir. Aşağıda kullanılan <xref:System.Printing.PrintTicket> Yöntem, içindeki her isteği yazıcının özelliklerine göre denetleyecektir. <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> İstenen yetenek yazıcı tarafından desteklenmiyorsa, yazıcı sürücüsü yöntemi tarafından <xref:System.Printing.PrintTicket> döndürülen alternatif bir istek yerine geçecek.  
   
-3. Yazıcı çift yönlü baskı destekliyorsa, örnek kod oluşturur bir <xref:System.Printing.PrintTicket> için çift yönlü baskı sorar. Ancak uygulama, her olası yazıcı bulunan ayarını belirtmiyor <xref:System.Printing.PrintTicket> öğesi. Bu, hem Programcı ve program zaman kısıp olacaktır. Bunun yerine, kodu yalnızca çift yönlü baskı isteği ayarlar ve bu birleştirir <xref:System.Printing.PrintTicket> , tam olarak yapılandırılmış ve doğrulanır, varolan bir <xref:System.Printing.PrintTicket>, bu durumda, kullanıcının varsayılan <xref:System.Printing.PrintTicket>.  
+3. Yazıcı çift yönlüyi destekliyorsa, örnek kod çift yönlü için <xref:System.Printing.PrintTicket> isteyen bir oluşturur. Ancak uygulama, <xref:System.Printing.PrintTicket> öğesinde kullanılabilen her bir olası yazıcı ayarını belirtmez. Bu, hem programcı hem de program zamanının boşa harcanmasına neden olur. Bunun yerine, kod yalnızca çift yönlü istekleri ayarlar ve ardından bunu <xref:System.Printing.PrintTicket> mevcut, tam olarak yapılandırılmış ve <xref:System.Printing.PrintTicket>doğrulanan bir ile birleştirir, bu durumda kullanıcının varsayılan <xref:System.Printing.PrintTicket>' i.  
   
-4. Buna örnek çağırır <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> yöntemi yeni, birleştirme için en az <xref:System.Printing.PrintTicket> kullanıcının varsayılan <xref:System.Printing.PrintTicket>. Bu döndürür bir <xref:System.Printing.ValidationResult> yeni içeren <xref:System.Printing.PrintTicket> özelliklerinden biri olarak.  
+4. Buna göre, örnek, kullanıcının <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> varsayılan <xref:System.Printing.PrintTicket> <xref:System.Printing.PrintTicket>değeriyle yeni, en az bir birleştirme yöntemi çağırır. Bu, özelliklerinden <xref:System.Printing.ValidationResult> biri olarak yeni <xref:System.Printing.PrintTicket> bir içeren bir döndürür.  
   
-5. Örnek daha sonra test yeni <xref:System.Printing.PrintTicket> çift yönlü baskı ister. Varsa, ardından örnek kullanıcı için yeni varsayılan yazdırma bileti kolaylaştırır. Yukarıdaki 2. adım atlanmışsa ve yazıcıya çift yönlü baskı uzun kenarı boyunca desteklemiyor durumunda, test sonuçlanırdı `false`. (Yukarıdaki nota bakın.)  
+5. Örnek daha sonra yeni <xref:System.Printing.PrintTicket> isteklerin çift yönlüde olmasını sınar. Varsa, örnek bunu Kullanıcı için yeni varsayılan yazdırma bileti yapar. Yukarıdaki 2. adım ayrıldıysa ve yazıcı uzun bir süre boyunca çift yönlüyi desteklemiyorsa, test sonuçlanmış `false`olur. (Yukarıdaki nota bakın.)  
   
-6. Değişikliği kaydetmek için son önemli adım olan <xref:System.Printing.PrintQueue.UserPrintTicket%2A> özelliği <xref:System.Printing.PrintQueue> ile <xref:System.Printing.PrintQueue.Commit%2A> yöntemi.  
+6. Son önemli adım, <xref:System.Printing.PrintQueue.UserPrintTicket%2A> <xref:System.Printing.PrintQueue.Commit%2A> yönteminin özelliği <xref:System.Printing.PrintQueue> ile olan özelliğindeki değişikliği yürütmeniz.  
   
  [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
  [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
   
- Bu örnekte hızlıca test edebilirsiniz böylece geri kalanı aşağıda sunulmuştur. Bir proje ve bir ad alanı oluşturma ve kod parçacıkları bu makaledeki ad alanı bloğuna yapıştırın.  
+ Bu örneği hızlıca sınayabilmeniz için geri kalanı aşağıda sunulmuştur. Bir proje ve ad alanı oluşturun ve ardından bu makaledeki kod parçacıklarını ad alanı bloğuna yapıştırın.  
   
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
@@ -67,4 +67,4 @@ ms.locfileid: "62051122"
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
 - [WPF'deki Belgeler](documents-in-wpf.md)
 - [Yazdırmaya Genel Bakış](printing-overview.md)
-- [Şema Yazdırma](https://go.microsoft.com/fwlink/?LinkId=186397)
+- [Şemayı Yazdır](https://go.microsoft.com/fwlink/?LinkId=186397)

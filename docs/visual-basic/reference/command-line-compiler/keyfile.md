@@ -6,15 +6,15 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: c13f34c23cad9c909c2c5bd3447f1a8fa53f9b4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2084a1c0ee30478cdc9193cdfcb19476499ee93
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793971"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924879"
 ---
 # <a name="-keyfile"></a>-keyfile
-Bir anahtar veya bir derlemeyi bir katı ad vermek için anahtar çifti içeren bir dosyayı belirtir.  
+Derlemeye tanımlayıcı ad vermek için bir anahtar veya anahtar çifti içeren bir dosya belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -24,28 +24,28 @@ Bir anahtar veya bir derlemeyi bir katı ad vermek için anahtar çifti içeren 
   
 ## <a name="arguments"></a>Arguments  
  `file`  
- Gerekli. Anahtarı içeren dosya. Dosya adı boşluk içeriyorsa adı tırnak içine alın. ("").  
+ Gerekli. Anahtarı içeren dosya. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derleyici ortak anahtarı derleme bildirimine ekler ve ardından son derlemeyi özel anahtarla imzalar. Bir anahtar dosyası oluşturmak için şunu yazın `sn -k file` komut satırına. Daha fazla bilgi için [Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
+ Derleyici ortak anahtarı derleme bildirimine ekler ve ardından son derlemeyi özel anahtarla imzalar. Anahtar dosyası oluşturmak için komut satırına yazın `sn -k file` . Daha fazla bilgi için bkz. [sn. exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
- Derleme yaparsanız `-target:module`, anahtar dosyasının adını modülünde tutulan ve bir derleme ile derleme yaparken, oluşturulan bütünleştirilmiş dahil [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
+ İle `-target:module`derlerseniz, anahtar dosyasının adı modülde tutulur ve bir derlemeyi [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)ile derlerken oluşturulan derlemeye dahil edilir.  
   
- Derleyici ile şifreleme bilgilerinizi de geçirebilirsiniz [- keycontaıner](../../../visual-basic/reference/command-line-compiler/keycontainer.md). Kullanım [- delaysıgn](../../../visual-basic/reference/command-line-compiler/delaysign.md) kısmen imzalı bir derleme istiyorsanız.  
+ Ayrıca, şifreleme bilgilerinizi [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)ile derleyiciye geçirebilirsiniz. Kısmen imzalanmış bir derleme istiyorsanız [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) kullanın.  
   
- Bu seçenek özel bir öznitelik belirtebilirsiniz (<xref:System.Reflection.AssemblyKeyFileAttribute>) herhangi bir Microsoft Ara dili modülü için kaynak kodunda.  
+ Bu seçeneği, herhangi bir Microsoft ara dil modülünün kaynak kodunda<xref:System.Reflection.AssemblyKeyFileAttribute>özel bir öznitelik () olarak da belirtebilirsiniz.  
   
- İçinde her ikisi de case `-keyfile` ve [- keycontaıner](../../../visual-basic/reference/command-line-compiler/keycontainer.md) belirtilirse (komut satırı seçeneği veya özel öznitelik tarafından) aynı derlemede derleyici ilk anahtar kapsayıcısı olarak çalışır. Bu başarılı olursa derleme anahtar kapsayıcısındaki bilgilerle imzalanır. Derleyicinin anahtar kapsayıcısını bulamazsa, ile belirtilen dosyayı çalışır `-keyfile`. Bu başarılı olursa, derleme anahtar dosyası içindeki bilgilerle imzalanır ve anahtar bilgileri anahtar kapsayıcısının içine yüklenir (benzer şekilde `sn -i`) ve böylece sonraki derlemede, anahtar kapsayıcısı geçerli olacaktır.  
+ Aynı derlemede hem `-keyfile` hem de [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) belirtildiğinde (komut satırı seçeneği ya da özel öznitelik tarafından), derleyici ilk olarak anahtar kapsayıcısını dener. Bu başarılı olursa, derleme anahtar kapsayıcısındaki bilgilerle imzalanır. Derleyici anahtar kapsayıcısını bulamazsa, ile `-keyfile`belirtilen dosyayı dener. Bu başarılı olursa, derleme anahtar dosyasındaki bilgilerle imzalanır ve anahtar bilgileri, sonraki derlemede anahtar kapsayıcısının geçerli olacağı şekilde anahtar kapsayıcısına yüklenir (buna benzer `sn -i`).  
   
- Bir anahtar dosyası yalnızca ortak anahtar içerebileceğini unutmayın.  
+ Anahtar dosyasının yalnızca ortak anahtar içerebileceğini unutmayın.  
   
- Bkz: [bkz](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) derleme imzalama hakkında daha fazla bilgi.  
+ Bir derlemeyi imzalama hakkında daha fazla bilgi için bkz. [tanımlayıcı adlı derlemeler oluşturma ve kullanma](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) .  
   
 > [!NOTE]
->  `-keyfile` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yapılırken kullanılabilir.  
+> Bu `-keyfile` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, kaynak dosyasını derler `Input.vb` ve anahtar dosyasını belirtir.  
+ Aşağıdaki kod, kaynak dosyayı `Input.vb` derler ve bir anahtar dosyası belirtir.  
   
 ```console  
 vbc -keyfile:myfile.sn input.vb  

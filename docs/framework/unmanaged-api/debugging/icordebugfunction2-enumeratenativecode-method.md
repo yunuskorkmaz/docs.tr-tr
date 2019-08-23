@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61dcf014a65f524d2b2e7b92bcc7f007d1a47125
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb7e2ed7b076cfa20064902b3592c8f958efc0ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754504"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917045"
 ---
 # <a name="icordebugfunction2enumeratenativecode-method"></a>ICorDebugFunction2::EnumerateNativeCode Yöntemi
-Bu Icordebugfunction2 nesne tarafından başvurulan işlevinde yerel kod deyimlerini içeren bir Icordebugcodeenum nesnesine bir arabirim işaretçisi alır.  
+Bu ICorDebugFunction2 nesnesinin başvurduğu işlevdeki yerel kod deyimlerini içeren bir ICorDebugCodeEnum nesnesine bir arabirim işaretçisi alır.  
   
 > [!NOTE]
->  `EnumerateNativeCode` .NET Framework'ün geçerli sürümde uygulanmadı.  
+> `EnumerateNativeCode`geçerli .NET Framework sürümünde uygulanmıyor.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,4 +39,4 @@ HRESULT EnumerateNativeCode (
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorDebug.idl, CorDebug.h
+ **Üst bilgi** CorDebug. IDL, CorDebug. h

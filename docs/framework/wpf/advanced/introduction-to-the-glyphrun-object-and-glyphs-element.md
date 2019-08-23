@@ -9,87 +9,87 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: f8931e26d4c4f3cc52ecb838062d2e1beda74baf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9e40a9656bd1d89203b167860ef6951d5e30377c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598846"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918396"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>GlyphRun Nesnesi ve Karakter Öğesine Giriş
-Bu konu başlığı altında açıklanır <xref:System.Windows.Media.GlyphRun> nesne ve <xref:System.Windows.Documents.Glyphs> öğesi.  
+Bu konu, <xref:System.Windows.Media.GlyphRun> nesnesini <xref:System.Windows.Documents.Glyphs> ve öğesini açıklar.  
 
 <a name="text_glyphrunovw_intro"></a>   
-## <a name="introduction-to-glyphrun"></a>GlyphRun giriş  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Glif düzeyinde biçimlendirme doğrudan erişimle dahil olmak üzere gelişmiş destek sağlar <xref:System.Windows.Documents.Glyphs> kesebilir ve metin biçimlendirme sonra devam etmek isteyen müşteriler için. Bu özellikler, aşağıdaki senaryolardan her işleme gereksinimleri için farklı metin kritik destek sağlar.  
+## <a name="introduction-to-glyphrun"></a>GlyphRun 'a giriş  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]biçimlendirmeden sonra metni kesme ve kalıcı hale getirmek isteyen müşterilere doğrudan erişim <xref:System.Windows.Documents.Glyphs> ile glif düzeyinde biçimlendirme dahil gelişmiş metin desteği sağlar. Bu özellikler, aşağıdaki senaryolardan her birinde farklı metin işleme gereksinimleri için kritik destek sağlar.  
   
-1. Sabit biçim belgeleri ekran görüntüsü.  
+1. Sabit biçimli belgelerin ekran görüntüsü.  
   
 2. Yazdırma senaryoları.  
   
-    - [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] bir cihaz yazıcı dili olarak.  
+    - [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]bir cihaz yazıcı dili olarak.  
   
-    - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
+    - Microsoft XPS Belge Yazıcısı.  
   
-    - Çıktı, önceki yazıcı sürücülerini [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] sabit biçimde uygulamalar.  
+    - Önceki yazıcı sürücüleri, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] uygulamalardan Sabit biçime çıkış.  
   
-    - Yazdırma Biriktiricisi biçimi.  
+    - Yazdırma kuyruğu biçimi.  
   
-3. Önceki sürümlerini istemciler dahil olmak üzere sabit biçimli belge gösterimi [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve diğer bilgi işlem cihazları.  
+3. Önceki Windows sürümleri ve diğer bilgi işlem cihazlarının istemcileri de dahil olmak üzere, sabit biçimli belge temsili.  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Glyphs> ve <xref:System.Windows.Media.GlyphRun> sabit biçimli belge sunumu ve yazdırma senaryoları için tasarlanmıştır. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çeşitli öğeler için genel yerleşimi sağlar ve [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] gibi senaryoları <xref:System.Windows.Controls.Label> ve <xref:System.Windows.Controls.TextBlock>. Düzen hakkında daha fazla bilgi ve [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] senaryoları için bkz: [WPF'de tipografi](typography-in-wpf.md).  
+> <xref:System.Windows.Documents.Glyphs>ve <xref:System.Windows.Media.GlyphRun> sabit biçimli belge sunumu ve yazdırma senaryoları için tasarlanmıştır. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Controls.Label> , [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] ve<xref:System.Windows.Controls.TextBlock>gibi genel düzen ve senaryolar için birkaç öğe sağlar. Düzen ve [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] senaryolar hakkında daha fazla bilgi için bkz. [WPF 'de tipografi](typography-in-wpf.md).  
   
 <a name="text_glyphrunovw_glyphrunobject"></a>   
-## <a name="the-glyphrun-object"></a>GlyphRun Nesnesi  
- <xref:System.Windows.Media.GlyphRun> Nesnesini temsil eder bir karakter dizisi tek bir yüz tek bir boyutta ve tek bir işleme bir stil ile tek bir yazı tipi.  
+## <a name="the-glyphrun-object"></a>GlyphRun nesnesi  
+ <xref:System.Windows.Media.GlyphRun> Nesnesi tek bir yazı tipindeki tek bir yüzden ve tek bir işleme stiliyle bir karakter dizisini temsil eder.  
   
- <xref:System.Windows.Media.GlyphRun> Glif gibi her iki yazı tipi ayrıntılarını içeren <xref:System.Windows.Documents.Glyphs.Indices%2A> ve tek tek karakter konumları. Ayrıca orijinal içerir [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] noktaları çalıştırma karakter simgesi arabellek uzaklığı eşleme bilgileri ve karakter başına ve simge başına bayrakları, oluşturulan kod.  
+ <xref:System.Windows.Media.GlyphRun>glif <xref:System.Windows.Documents.Glyphs.Indices%2A> ve ayrı karakter konumları gibi yazı tipi ayrıntılarını içerir. Ayrıca, çalıştırmanın oluşturulduğu orijinal [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] kod noktalarını, karakter-karakter arabelleği fark eşleme bilgilerini ve karakter başına ve karakter başına bayrakları da içerir.  
   
- <xref:System.Windows.Media.GlyphRun> üst düzey karşılık gelen <xref:System.Windows.FrameworkElement>, <xref:System.Windows.Documents.Glyphs>. <xref:System.Windows.Documents.Glyphs> öğe ağacı ve kullanılabilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] temsil etmek için işaretleme <xref:System.Windows.Media.GlyphRun> çıktı.  
+ <xref:System.Windows.Media.GlyphRun><xref:System.Windows.FrameworkElement> ,<xref:System.Windows.Documents.Glyphs>karşılık gelen bir üst düzeydir. <xref:System.Windows.Documents.Glyphs>öğe ağacında ve çıktıyı göstermek [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Media.GlyphRun> için biçimlendirme içinde kullanılabilir.  
   
 <a name="text_glyphrunovw_glyphselement"></a>   
-## <a name="the-glyphs-element"></a>Karakter öğesine  
- <xref:System.Windows.Documents.Glyphs> Öğesi çıktısını temsil eder bir <xref:System.Windows.Media.GlyphRun> içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Aşağıdaki biçimlendirme sözdizimi tanımlamak için kullanılan <xref:System.Windows.Documents.Glyphs> öğesi.  
+## <a name="the-glyphs-element"></a>Glyphs öğesi  
+ Öğesi, <xref:System.Windows.Media.GlyphRun> içindeki[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]çıktısınıtemsileder. <xref:System.Windows.Documents.Glyphs> Aşağıdaki biçimlendirme sözdizimi, <xref:System.Windows.Documents.Glyphs> öğesini tanımlamakta kullanılır.  
   
  [!code-xaml[GlyphsOvwSample1#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
   
- Aşağıdaki özellik tanımları örnek biçimlendirmede ilk dört özniteliğine karşılık gelir.  
+ Aşağıdaki özellik tanımları, örnek biçimlendirmesinde ilk dört özniteliğe karşılık gelir.  
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
-|<xref:System.Windows.Documents.Glyphs.FontUri%2A>|Bir kaynak tanımlayıcısı belirtir: dosya adı, Web [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)], ya da uygulama .exe veya kapsayıcı kaynak başvurusu.|  
-|<xref:System.Windows.Documents.Glyphs.FontRenderingEmSize%2A>|Yazı tipi boyutunu çizim yüzeyi birimleri (varsayılan.96 inç olarak) belirtir.|  
-|<xref:System.Windows.Documents.Glyphs.StyleSimulations%2A>|Kalın ve italik stil bayrakları belirtir.|  
-|<xref:System.Windows.Documents.Glyphs.BidiLevel%2A>|Çift yönlü Düzen düzeyini belirtir. Tek sayılı ve sıfır değerleri soldan sağa düzen; kapsıyor. Tek sayılı değerleri sağdan sola düzen kapsıyor.|  
+|<xref:System.Windows.Documents.Glyphs.FontUri%2A>|Kaynak tanımlayıcısını belirtir: dosya adı, Web [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]veya kaynak başvurusu. exe veya kapsayıcı.|  
+|<xref:System.Windows.Documents.Glyphs.FontRenderingEmSize%2A>|Çizim yüzeyi birimlerinde yazı tipi boyutunu belirtir (varsayılan. 96 inç).|  
+|<xref:System.Windows.Documents.Glyphs.StyleSimulations%2A>|Kalın ve Italik stiller için bayrakları belirtir.|  
+|<xref:System.Windows.Documents.Glyphs.BidiLevel%2A>|Çift yönlü düzen düzeyini belirtir. Çift sayılı ve sıfır değerler soldan sağa düzeni göstermez; tek sayılı değerler sağdan sola düzeni göstermez.|  
   
 <a name="text_glyphrunovw_indicesproperty"></a>   
-### <a name="indices-property"></a>Dizinleri özelliği  
- <xref:System.Windows.Documents.Glyphs.Indices%2A> Özelliği karakter belirtimleri dizesidir. Glyphs dizisini tek bir küme oluşturur. Burada, kümedeki ilk karakter belirtimi kaç karakter belirtimi ve kümeyi oluşturmak için kaç tane kod noktaları birleştirmek gelmelidir. <xref:System.Windows.Documents.Glyphs.Indices%2A> Özelliği bir dize içinde aşağıdaki özellikleri toplar.  
+### <a name="indices-property"></a>Dizinler özelliği  
+ <xref:System.Windows.Documents.Glyphs.Indices%2A> Özelliği, glif belirtimlerinin bir dizesidir. Bir karakter dizisinin tek bir küme olarak ayarlandığı yerlerde, kümedeki ilk glifin belirtimi, küme oluşturmak için kaç karakter ve kaç tane kod noktasının birleştirildiği hakkında bir belirtimdir. <xref:System.Windows.Documents.Glyphs.Indices%2A> Özelliği, aşağıdaki özellikleri bir dizede toplar.  
   
-- Simge dizinleri  
+- Glif dizinleri  
   
-- Karakter öncelikli genişlikler  
+- Glif öncelikli genişlikleri  
   
-- Karakter eki vektörlerini birleştirme  
+- Glif eki vektörlerini birleştirme  
   
-- Glif kod noktaları küme eşleme  
+- Kod noktalarından karakterlere karakter eşleme  
   
 - Glif bayrakları  
   
- Her karakter belirtimi aşağıdaki biçime sahiptir.  
+ Her glif belirtiminin aşağıdaki biçimi vardır.  
   
  `[GlyphIndex][,[Advance][,[uOffset][,[vOffset][,[Flags]]]]]`  
   
 <a name="text_glyphrunovw_glyphmetrics"></a>   
 ## <a name="glyph-metrics"></a>Glif ölçümleri  
- Her karakter, birbirleriyle nasıl hizalandığını belirtin ölçümleri tanımlar <xref:System.Windows.Documents.Glyphs>. Aşağıdaki grafikte, çeşitli tipografik nitelikleri iki farklı simge karakteri tanımlar.  
+ Her glif, nasıl hizalanacağını <xref:System.Windows.Documents.Glyphs>belirleyen ölçümleri tanımlar. Aşağıdaki grafik iki farklı karakter karakterlerinin çeşitli tipografik kalitelerini tanımlar.  
   
- ![Karakter ölçümleri diyagramı](./media/glyph-example.png "glyph_example")  
+ ![Glif ölçümlerinin Diagraf](./media/glyph-example.png "glyph_example")  
   
 <a name="text_glyphrunovw_glyphsmarkup"></a>   
-## <a name="glyphs-markup"></a>Karakter biçimlendirme  
- Aşağıdaki kod örneği, çeşitli özelliklerinin nasıl kullanılacağını gösterir <xref:System.Windows.Documents.Glyphs> öğesinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+## <a name="glyphs-markup"></a>Glif biçimlendirmesi  
+ Aşağıdaki kod örneği, içindeki <xref:System.Windows.Documents.Glyphs> [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]öğesinin çeşitli özelliklerinin nasıl kullanıldığını gösterir.  
   
  [!code-xaml[GlyphsOvwSamp2#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
   

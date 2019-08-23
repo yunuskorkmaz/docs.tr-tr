@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: f96124f7d97e733b1f0e2559320ce2e09ba5ff21
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 97888a77dfc731be591d5f0284e87f45ef7dc437
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039955"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930174"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ile Çok Bölmeli bir Kullanıcı Arabirimi Oluşturma
 Aşağıdaki yordamda, Microsoft Outlook 'ta kullanılan bir **klasör** listesi, **Iletiler** bölmesi ve **Önizleme** bölmesi ile benzer bir çoklu bölmeli Kullanıcı arabirimi oluşturacaksınız. Bu düzenleme, formla birlikte yerleştirme denetimleri aracılığıyla oyda elde edilir.
@@ -39,7 +39,7 @@ Aşağıdaki yordamda, Microsoft Outlook 'ta kullanılan bir **klasör** listesi
      Bu noktada, uygulamayı çalıştırmak için F5 tuşuna basarsanız, form Microsoft Outlook 'a benzer şekilde üç bölümden oluşan bir kullanıcı arabirimi görüntüler.
 
     > [!NOTE]
-    >  Fare işaretçisini <xref:System.Windows.Forms.SplitContainer> denetimlerin içindeki bölümlendiricileri üzerine getirdiğinizde, iç boyutları yeniden boyutlandırabilirsiniz.
+    > Fare işaretçisini <xref:System.Windows.Forms.SplitContainer> denetimlerin içindeki bölümlendiricileri üzerine getirdiğinizde, iç boyutları yeniden boyutlandırabilirsiniz.
 
 Uygulama geliştirmede bu noktada, gelişmiş bir kullanıcı arabirimi oluşturduysanız. Bir sonraki adım, <xref:System.Windows.Forms.TreeView> denetimin ve <xref:System.Windows.Forms.ListView> denetimlerin bir tür veri kaynağına bağlanarak uygulamanın kendisini programlamaya devam eder. Denetimleri verilere bağlama hakkında daha fazla bilgi için bkz. [veri bağlama ve Windows Forms](../data-binding-and-windows-forms.md).
 

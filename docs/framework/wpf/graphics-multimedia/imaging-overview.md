@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 6d3dce5c8a34257f8509f239ece4bae3efa02b84
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 13d5ea2735a799332edd8e552198de0f2b970dad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545372"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914098"
 ---
 # <a name="imaging-overview"></a>Görüntülemeye Genel Bakış
 Bu konu, [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]öğesine bir giriş sağlar. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]geliştiricilerin resimleri görüntülemesine, dönüştürmelerine ve biçimlendirmeye olanak sağlar.  
@@ -99,7 +99,7 @@ Bu konu, [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]öğ
  Aşağıdaki örnek, kod kullanarak bir görüntünün 200 piksel genelinde nasıl işleneceğini gösterir.  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Imaging.BitmapImage>birden çok özelliklerde başlatmayı iyileştirmek için arabiriminiuygular.<xref:System.ComponentModel.ISupportInitialize> Özellik değişiklikleri yalnızca nesne başlatılırken oluşabilir. Başlatmanın <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> başladığını belirten ve <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> başlatmanın tamamlandığını belirten sinyal çağrısı. Başlatıldıktan sonra özellik değişiklikleri yok sayılır.  
+> <xref:System.Windows.Media.Imaging.BitmapImage>birden çok özelliklerde başlatmayı iyileştirmek için arabiriminiuygular.<xref:System.ComponentModel.ISupportInitialize> Özellik değişiklikleri yalnızca nesne başlatılırken oluşabilir. Başlatmanın <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> başladığını belirten ve <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> başlatmanın tamamlandığını belirten sinyal çağrısı. Başlatıldıktan sonra özellik değişiklikleri yok sayılır.  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
@@ -185,7 +185,7 @@ Görüntü fırçaları şekilleri, denetimleri, metinleri ve daha fazlasını d
  Genişletilebilirlik API 'sinin bir örneği için bkz. [Win32 örnek codec bileşeni](https://go.microsoft.com/fwlink/?LinkID=160052). Bu örnek, bir özel görüntü biçimi için bir kod çözücü ve kodlayıcı oluşturmayı gösterir.  
   
 > [!NOTE]
->  Sistemin tanıması için codec bileşeninin dijital olarak imzalanması gerekir.  
+> Sistemin tanıması için codec bileşeninin dijital olarak imzalanması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

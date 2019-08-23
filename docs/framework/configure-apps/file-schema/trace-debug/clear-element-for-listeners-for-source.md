@@ -1,5 +1,5 @@
 ---
-title: <clear> Öğe için <listeners> için <source>
+title: <clear>İçin için <listeners> öğesi<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 63d3bb272fcdbee2c59b0569c85f8183cdac8666
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 768d51a74b4c31d1250d2f5d6517f760f886e0a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673791"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920547"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<Temizle > öğesi için \<dinleyicileri > için \<kaynak >
-Temizler `Listeners` koleksiyonu için bir izleme kaynağı.  
+# <a name="clear-element-for-listeners-for-source"></a>\<Kaynak > için \< \<dinleyiciler > > öğeyi temizle
+İzleme kaynağı için koleksiyonu temizler. `Listeners`  
   
  \<Yapılandırma >  
-\<System.Diagnostics >  
-\<Kaynakları >  
+\<System. Diagnostics >  
+\<Kaynaklar >  
 \<Kaynak >  
-\<dinleyicileri >  
-\<Temizleme >  
+\<dinleyiciler >  
+\<> Temizle  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,19 +44,19 @@ Temizler `Listeners` koleksiyonu için bir izleme kaynağı.
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.|  
-|`sources`|İzleme iletileri başlatmak iz kaynakları içerir.|  
-|`source`|İzleme iletileri başlatan bir izleme kaynağı belirtir.|  
-|`listeners`|Toplamak, depolamak ve iletileri yönlendirmek dinleyicilerini belirtir.|  
+|`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
+|`sources`|İzleme iletilerini Başlatan izleme kaynaklarını içerir.|  
+|`source`|İzleme iletilerini Başlatan bir izleme kaynağını belirtir.|  
+|`listeners`|İletileri toplayacak, depolayan ve yönlendiren dinleyicileri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<clear>` Öğeyi kaldırır gelen tüm dinleyicileri `Listeners` koleksiyonu için bir izleme kaynağı da dahil olmak üzere <xref:System.Diagnostics.DefaultTraceListener>. Kullanabileceğiniz `<clear>` kullanmadan önce öğesi `<add>` koleksiyondaki herhangi bir etkin dinleyiciler vardır emin olmak için öğesi.  
+ Öğesi, dahil olmak üzere bir <xref:System.Diagnostics.DefaultTraceListener>izleme `Listeners` kaynağı için koleksiyondan tüm dinleyicileri kaldırır. `<clear>` Koleksiyonda başka hiçbir etkin `<clear>` dinleyici bulunmadığından emin olmak `<add>` için öğesini kullanmadan önce öğesini kullanabilirsiniz.  
   
 ## <a name="configuration-file"></a>Yapılandırma Dosyası  
- Bu öğe, makine yapılandırma dosyası (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir `<clear>` kullanmadan önce öğesi `<add>` dinleyiciler eklemek için öğeleri `console` ve `textListener` için `Listeners` iz kaynağı için koleksiyon `TraceSourceApp`.  
+ Aşağıdaki örnek, `<add>` öğeleri kullanarak, dinleyicileri `console` ve `<clear>` `textListener` `Listeners` izleme kaynağı`TraceSourceApp`koleksiyonuna eklemek için öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -88,5 +88,5 @@ Temizler `Listeners` koleksiyonu için bir izleme kaynağı.
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [İzleme Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)
+- [İzleme Dinleyicileri](../../../debug-trace-profile/trace-listeners.md)

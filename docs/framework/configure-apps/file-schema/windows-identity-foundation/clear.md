@@ -3,20 +3,20 @@ title: <clear>
 ms.date: 03/30/2017
 ms.assetid: 54dcd1d1-038f-4fc8-a3a4-56ba7a1ca0fd
 author: BrucePerlerMS
-ms.openlocfilehash: b7320b6504c252770bed803666201df633e161a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f5e5dbae87480929fca89dad48618450f0eb1442
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791761"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942818"
 ---
-# <a name="clear"></a>\<Temizleme >
-Tüm güvenlik belirteci işleyicileri geçerli belirteci işleyicisi koleksiyondan kaldırır.  
+# <a name="clear"></a>\<> Temizle
+Tüm güvenlik belirteci işleyicilerini geçerli belirteç işleyici koleksiyonundan temizler.  
   
  \<system.identityModel>  
-\<identityConfiguration >  
+\<IdentityConfiguration >  
 \<securityTokenHandlers >  
-\<Temizleme >  
+\<> Temizle  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,7 +35,7 @@ Tüm güvenlik belirteci işleyicileri geçerli belirteci işleyicisi koleksiyon
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- None  
+ Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -44,4 +44,4 @@ Tüm güvenlik belirteci işleyicileri geçerli belirteci işleyicisi koleksiyon
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Uç noktası ile kayıtlı bir güvenlik belirteci işleyicileri koleksiyonunu belirtir.|
+|[\<securityTokenHandlers >](securitytokenhandlers.md)|Uç nokta ile kaydedilmiş bir güvenlik belirteci işleyicileri koleksiyonunu belirtir.|

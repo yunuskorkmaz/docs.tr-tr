@@ -2,19 +2,19 @@
 title: <endpoint> öğesi
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: 667086cda010daf51cb92116d636b9b526b4b34b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 71ddb3b860870ee8feeeb36c3f64fa7bfebb0f10
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673038"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925820"
 ---
-# <a name="endpoint-element"></a>\<uç noktası > öğesi
-Bağlama, anlaşma ve Hizmetleri kullanıma sunmak için kullanılan bir hizmet uç noktası için adres özelliklerini belirtir.  
+# <a name="endpoint-element"></a>\<uç nokta > öğesi
+Hizmetleri açığa çıkarmak için kullanılan bir hizmet uç noktası için bağlama, anlaşma ve adres özelliklerini belirtir.  
   
  \<system.ServiceModel>  
-\<Hizmet >  
-\<uç noktası >  
+\<hizmet >  
+\<uç nokta >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,35 +41,35 @@ Bağlama, anlaşma ve Hizmetleri kullanıma sunmak için kullanılan bir hizmet 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|adres|Bitiş noktasının adresini içeren bir dize. Adres mutlak veya göreli adres olarak belirtilebilir. Göreli adres sağlanırsa, konak bağlamasında kullanılan aktarım düzeni için uygun bir temel adres sağlamak için bekleniyor. Bir adresi yapılandırılmamışsa, temel adresini Bu uç nokta adresi olduğu varsayılır.<br /><br /> Varsayılan değer boş bir dizedir.|  
-|behaviorConfiguration|Bitiş noktasında kullanılacak davranış adını içeren bir dize.|  
-|bağlama|Kullanılacak bağlama türünü belirten bir dize özniteliği gerekli. Türü, başvurulabilmesi için kayıtlı yapılandırma bölümü olmalıdır. Türü kayıtlı bölüm adı yerine bağlama türü adı değil.|  
-|bindingConfiguration|Bitiş noktası başlatıldığında kullanılacak bağlamanın bağlama adını belirten dize. Bağlama adını, uç nokta tanımlanan bir noktada kapsam içinde olması gerekir. Varsayılan değer boş bir dizedir.<br /><br /> Bu öznitelik ile birlikte kullanılan `binding` yapılandırma dosyasındaki belirli bağlama yapılandırması başvurmak için. Özel bağlama kullanmaya çalışıyorsunuz. Bu özniteliği ayarlayın. Aksi takdirde, bir özel durum.|  
-|bindingName|WSDL dışa aktarım tanımı için bağlamanın benzersiz nitelenmiş adını belirten dize. Varsayılan değer boş bir dizedir.|  
-|bindingNamespace|WSDL dışarı tam tanımı için bağlamanın ad alanı adını belirten dize. Varsayılan değer boş bir dizedir.|  
-|Sözleşme|Hangi anlaşmanın gösteren bir dize bu koncový bod vystavuje. Derleme sözleşme türünü uygulamalıdır. Bir hizmet uygulaması tek bir anlaşma türü uyguluyorsa, bu özellik atlanabilir. Varsayılan değer boş bir dizedir.|  
-|endpointConfiguration|Tarafından ayarlanan standart bitiş noktası adını belirten bir dize `kind` bu standart bitiş noktası ek yapılandırma bilgilerinie başvuran öznitelik. Aynı ada tanımlanmalıdır `<standardEndpoints>` bölümü.|  
-|isSystemEndpoint|Bir uç nokta altyapı uç noktası olup olmadığını belirten bir Boole değeri.|  
-|tür|Uygulanan standart bitiş noktası türünü belirten bir dize. Türü kayıtlı olmalıdır `<extensions>` bölüm veya machine.config. Hiçbir şey belirtilmezse, ortak bir hizmet uç noktası oluşturulur.|  
-|listenUriMode|Taşıma nasıl işler belirtir `ListenUri` hizmetin dinlemesi sağlanan. Geçerli değerler:<br /><br /> -Açık<br />-Benzersiz<br /><br /> Explicit varsayılan değerdir.|  
-|listenUri|Hizmet uç noktasını dinleyen URI belirten bir dize. Varsayılan değer boş bir dizedir.|  
-|name|İsteğe bağlı öznitelik. Hizmet uç noktası adını belirten dize. Bağlama adı ve sözleşme tanımı adı birleşimi varsayılan değerdir. Hizmetleri olabilir birden fazla uç nokta, bu nedenle uç noktanın `name` özniteliktir hizmet adından farklı.|  
+|adres|Bitiş noktasının adresini içeren bir dize. Adres mutlak veya göreli bir adres olarak belirtilebilir. Göreli bir adres sağlanmışsa, konağın bağlamada kullanılan aktarım şemasına uygun bir temel adres sağlaması beklenir. Bir adres yapılandırılmamışsa, taban adresin bu uç noktanın adresi olduğu varsayılır.<br /><br /> Varsayılan değer boş bir dizedir.|  
+|behaviorConfiguration|Uç noktada kullanılacak davranışın adını içeren bir dize.|  
+|bağlama|Kullanılacak bağlamanın türünü belirten gerekli dize özniteliği. Bu tür, başvurulmak üzere kayıtlı bir yapılandırma bölümüne sahip olmalıdır. Tür, bağlamanın tür adı değil, Bölüm adı tarafından kaydedilir.|  
+|bindingConfiguration|Uç nokta örneği oluşturulurken kullanılacak bağlamanın bağlama adını belirten bir dize. Bağlama adı, bitiş noktasının tanımlandığı noktada kapsam içinde olmalıdır. Varsayılan değer boş bir dizedir.<br /><br /> Bu öznitelik, yapılandırma dosyasındaki belirli bir `binding` bağlama yapılandırmasına başvurmak için ile birlikte kullanılır. Özel bir bağlama kullanmaya çalışıyorsanız bu özniteliği ayarlayın. Aksi takdirde, bir özel durum oluşabilir.|  
+|bindingName|WSDL ile tanım dışarı aktarma için bağlamanın benzersiz nitelenmiş adını belirten bir dize. Varsayılan değer boş bir dizedir.|  
+|bindingNamespace|WSDL ile tanım dışarı aktarma için bağlama ad alanının nitelenmiş adını belirten bir dize. Varsayılan değer boş bir dizedir.|  
+|Sözleşmesi|Bu uç noktanın hangi sözleşmeyi açığa çıkardığını belirten bir dize. Derlemenin anlaşma türünü uygulaması gerekir. Bir hizmet uygulamasının tek bir anlaşma türü uygularsa, bu özellik atlanabilir. Varsayılan değer boş bir dizedir.|  
+|endpointConfiguration|Bu standart uç noktanın ek yapılandırma bilgilerine başvuran `kind` özniteliği tarafından ayarlanan standart uç nokta adını belirten bir dize. `<standardEndpoints>` Bölümünde aynı ad tanımlanmalıdır.|  
+|isSystemEndpoint|Bir uç noktanın altyapı uç noktası olup olmadığını belirten bir Boolean değer.|  
+|denetlenmesi|Uygulanan standart bitiş noktası türünü belirten bir dize. Tür, `<extensions>` bölümüne veya Machine. config dosyasında kayıtlı olmalıdır. Hiçbir şey belirtilmemişse ortak bir hizmet uç noktası oluşturulur.|  
+|listenUriMode|Taşımanın hizmetin dinlemesi için `ListenUri` belirtilen şekilde nasıl davrandığını belirtir. Geçerli değerler şunlardır<br /><br /> -Explicit<br />-Benzersiz<br /><br /> Varsayılan değer açıktır.|  
+|Öğesini|Hizmet uç noktasının dinlediği URI 'yi belirten bir dize. Varsayılan değer boş bir dizedir.|  
+|name|İsteğe bağlı öznitelik. Hizmet uç noktasının adını belirten bir dize. Varsayılan değer, bağlama adı ve anlaşma açıklaması adının bitiştirilmesi olur. Hizmetlerin birden fazla uç noktası olabilir, bu nedenle uç `name` noktanın özniteliği hizmetin adından farklıdır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<üstbilgiler >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Adres üst bilgileri koleksiyonu.|  
-|[\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Onunla mesaj alışverişleri diğer uç noktalar tarafından bir uç nokta kimlik doğrulaması sağlayan bir kimlik.|  
+|[\<üst bilgiler >](headers.md)|Adres üst bilgileri koleksiyonu.|  
+|[\<kimlik >](identity.md)|Diğer uç noktalar tarafından ileti alışverişi yapan bir uç noktanın kimlik doğrulamasını sağlayan bir kimlik.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Hizmet >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Bir istemcinin bağlanabileceği uç noktaları listesi tanımlayan bir yapılandırma bölümü.|  
+|[\<hizmet >](service.md)|Bir istemcinin bağlanabileceği uç noktaların listesini tanımlayan bir yapılandırma bölümü.|  
   
 ## <a name="example"></a>Örnek  
- Bu, bir hizmet uç noktası yapılandırması örneğidir.  
+ Bu, hizmet uç noktası yapılandırmasına bir örnektir.  
   
 ```xml  
 <endpoint address="/HelloWorld/"
@@ -89,5 +89,5 @@ Bağlama, anlaşma ve Hizmetleri kullanıma sunmak için kullanılan bir hizmet 
 - <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.Description.ServiceEndpoint>
-- [Uç noktalar: Adresleri, bağlamalar ve sözleşmeler](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
-- [Nasıl yapılır: Yapılandırma içinde hizmet uç noktası oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Noktalarının Adresler, bağlamalar ve sözleşmeler](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Nasıl yapılır: Yapılandırmada bir hizmet uç noktası oluşturma](../../../wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

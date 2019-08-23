@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eacd10eecf2a8a2fc1b73a7f97eef5cb5eabafd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25e40103a2925cbd2a181b8e39c3873e4d7c842c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995208"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940039"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>ICorDebugManagedCallback Arabirimi
 Hata ayıklayıcı geri aramalarını işlemek için yöntemler sağlar.  
@@ -30,51 +30,51 @@ Hata ayıklayıcı geri aramalarını işlemek için yöntemler sağlar.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Break Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-break-method.md)|Hata ayıklayıcı bildirir, bir <xref:System.Reflection.Emit.OpCodes.Break> yönerge kodu stream'de yürütülür.|  
-|[Breakpoint Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpoint-method.md)|Hata ayıklayıcı bir kesme oluştuğunda size bildirir.|  
-|[BreakpointSetError Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpointseterror-method.md)|Hata ayıklayıcı ortak dil çalışma zamanı (CLR) doğru bir şekilde bir işlev yalnızca derlenmiş zamanında (JIT) şeklindeydi ayarlanan bir kesme noktası bağlayamadı olduğunu bildirir.|  
-|[ControlCTrap Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-controlctrap-method.md)|Hata ayıklayıcı, CTRL + C ayıklanan işlemin yakalanır bildirir.|  
-|[CreateAppDomain Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createappdomain-method.md)|Hata ayıklayıcı, bir uygulama etki alanı oluşturulduğunu bildirir.|  
-|[CreateProcess Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)|Bir işleme eklenmiş veya için ilk kez başlatıldığında, hata ayıklayıcı size bildirir.|  
-|[CreateThread Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md)|Hata ayıklayıcı, yönetilen bir kodu yürüten bir iş parçacığı başlatıldı bildirir.|  
-|[DebuggerError Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-debuggererror-method.md)|CLR bir olaydan işlemeye çalışırken bir hata oluştu, hata ayıklayıcı bildirir.|  
-|[EditAndContinueRemap Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)|Kullanım dışı. Hata ayıklayıcı remap olay IDE'ye gönderildiğini bildirir.|  
-|[EvalComplete Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalcomplete-method.md)|Hata ayıklayıcı, bir değerlendirme tamamlandığını bildirir.|  
-|[EvalException Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalexception-method.md)|Hata ayıklayıcı, bir değerlendirme işlenmeyen bir özel durum ile sonlandırıldı bildirir.|  
-|[Exception Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md)|Hata ayıklayıcı, yönetilen koddan bir özel durum olduğunu bildirir.|  
-|[ExitAppDomain Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)|Hata ayıklayıcı, bir uygulama etki alanı çıkıldı bildirir.|  
-|[ExitProcess Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)|Hata ayıklayıcı bir işlemden çıkıldı bildirir.|  
-|[ExitThread Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md)|Hata ayıklayıcı, yönetilen kod yürütülmekte olan bir iş parçacığı çıkıldı bildirir.|  
-|[LoadAssembly Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)|Hata ayıklayıcı bir CLR derlemesi başarıyla yüklenmiş olduğunu bildirir.|  
-|[LoadClass Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)|Hata ayıklayıcı, bir sınıf yüklenmemiş olduğunu bildirir.|  
-|[LoadModule Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)|Hata ayıklayıcı bir CLR modülünü başarılı bir şekilde yüklenmemiş olduğunu bildirir.|  
-|[LogMessage Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)|Hata ayıklayıcı, yönetilen CLR iş parçacığı bir yöntem çağırdı olduğunu bildirir <xref:System.Diagnostics.EventLog> günlüğe bir olay için sınıf.|  
-|[LogSwitch Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logswitch-method.md)|Hata ayıklayıcı, yönetilen CLR iş parçacığı bir yöntem çağırdı olduğunu bildirir <xref:System.Diagnostics.Switch> sınıfı oluşturmak, değiştirmek veya bir hata ayıklama izleme anahtarı silin.|  
-|[NameChange Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-namechange-method.md)|Hata ayıklayıcı, bir uygulama etki alanı veya iş parçacığı adı değiştiğini bildirir.|  
-|[StepComplete Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)|Hata ayıklayıcı, bir adım tamamlandığını bildirir.|  
-|[UnloadAssembly Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)|Hata ayıklayıcı bir CLR derlemesi kaldırıldı bildirir.|  
-|[UnloadClass Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)|Hata ayıklayıcı, bir sınıf boşaltılıyor bildirir.|  
-|[UnloadModule Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)|Hata ayıklayıcı bir CLR modülünü (DLL) kaldırıldı bildirir.|  
-|[UpdateModuleSymbols Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md)|Hata ayıklayıcı bir CLR modüle ilişkin simgeleri değiştiğini bildirir.|  
+|[Break Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-break-method.md)|Kod akışındaki bir <xref:System.Reflection.Emit.OpCodes.Break> yönerge yürütüldüğünde hata ayıklayıcıya bildirir.|  
+|[Breakpoint Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpoint-method.md)|Bir kesme noktasıyla karşılaşıldığında hata ayıklayıcıya bildirir.|  
+|[BreakpointSetError Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpointseterror-method.md)|Hata ayıklayıcısını, ortak dil çalışma zamanının (CLR), bir işlev tam zamanında (JıT) derlenmesinden önce ayarlanmış bir kesme noktasını doğru bir şekilde bağlamadığı hakkında bilgilendirir.|  
+|[ControlCTrap Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-controlctrap-method.md)|Hata ayıklayıcıya CTRL + C 'nin hata ayıklamakta olan işlemde yakalandığını bildirir.|  
+|[CreateAppDomain Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createappdomain-method.md)|Hata ayıklayıcıya bir uygulama etki alanının oluşturulduğunu bildirir.|  
+|[CreateProcess Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)|Bir işlem ilk kez eklendiğinde veya başlatıldığında hata ayıklayıcıya bildirir.|  
+|[CreateThread Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md)|Hata ayıklayıcıya bir iş parçacığının yönetilen kodu yürütmeye başlatıldığını bildirir.|  
+|[DebuggerError Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-debuggererror-method.md)|Hata ayıklayıcıya CLR 'den bir olayı işlemeye çalışırken bir hata oluştuğunu bildirir.|  
+|[EditAndContinueRemap Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)|Kullanım dışı. Hata ayıklayıcıya bir yeniden eşleme olayının IDE 'ye gönderildiğini bildirir.|  
+|[EvalComplete Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalcomplete-method.md)|Hata ayıklayıcıya bir değerlendirmenin tamamlandığını bildirir.|  
+|[EvalException Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalexception-method.md)|Hata ayıklayıcıya bir değerlendirmenin işlenmeyen bir özel durumla sonlandırıldığını bildirir.|  
+|[Exception Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md)|Hata ayıklayıcıya yönetilen koddan bir özel durum gerçekleştiğini bildirir.|  
+|[ExitAppDomain Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)|Hata ayıklayıcıya bir uygulama etki alanının çıkış olduğunu bildirir.|  
+|[ExitProcess Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)|Hata ayıklayıcıya bir işlemin çıkış olduğunu bildirir.|  
+|[ExitThread Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md)|Hata ayıklayıcıya yönetilen kodu yürüten bir iş parçacığının çıkış olduğunu bildirir.|  
+|[LoadAssembly Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)|Hata ayıklayıcıya bir CLR derlemesinin başarıyla yüklendiğini bildirir.|  
+|[LoadClass Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)|Bir sınıfın yüklendiğini hata ayıklayıcıya bildirir.|  
+|[LoadModule Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)|Hata ayıklayıcıya bir CLR modülünün başarıyla yüklendiğini bildirir.|  
+|[LogMessage Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)|Hata ayıklayıcıyı bir clr Managed iş parçacığının, bir olayı günlüğe kaydetmek için <xref:System.Diagnostics.EventLog> sınıfında bir yöntemi çağırdığını bildirir.|  
+|[LogSwitch Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logswitch-method.md)|Hata ayıklayıcıyı bir clr Managed iş parçacığının bir hata ayıklama/izleme anahtarı oluşturmak <xref:System.Diagnostics.Switch> , değiştirmek veya silmek için sınıfında bir yöntemi çağırdığını bildirir.|  
+|[NameChange Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-namechange-method.md)|Hata ayıklayıcıya bir uygulama etki alanı veya iş parçacığının adının değiştiğini bildirir.|  
+|[StepComplete Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)|Hata ayıklayıcıyı bir adımın tamamlandığını bildirir.|  
+|[UnloadAssembly Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)|Hata ayıklayıcıya bir CLR derlemesinin kaldırılmış olduğunu bildirir.|  
+|[UnloadClass Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)|Hata ayıklayıcıya bir sınıfın bellekten kaldırılmakta olduğunu bildirir.|  
+|[UnloadModule Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)|Hata ayıklayıcıya bir CLR modülü (DLL) kaldırılmış olduğunu bildirir.|  
+|[UpdateModuleSymbols Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md)|Hata ayıklayıcıya bir CLR modülünün sembolleri değiştiğini bildirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tüm geri çağırmaları aynı iş parçacığında adlı, seri ve eşitlenmiş durumda işlemine çağrılır.  
+ Tüm geri çağrılar aynı iş parçacığında çağrılır ve eşitlenmiş durumda işlemle birlikte çağırılır.  
   
- Her geri çağırma çağırmalı [Icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) yürütme devam etmek için. Varsa `ICorDebugController::Continue` geri döndürür, işlem durdurulmuş kalır ve daha fazla olay geri dönüşleri kadar meydana gelir önce çağrılmaz `ICorDebugController::Continue` çağrılır.  
+ Her geri çağırma uygulaması [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) ' i çağırmalıdır ve yürütmeyi sürdürmelidir. Geri çağırma işlemi geri alınmadan önce çağrılmamışsa, işlem durdurulmuş olarak kalır ve çağrılana kadar `ICorDebugController::Continue` başka olay geri çağırmaları gerçekleşmeyecektir. `ICorDebugController::Continue`  
   
- Bir hata ayıklayıcı uygulamalıdır [Icordebugmanagedcallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) .NET Framework sürüm 2.0 uygulamaları hata ayıklaması. Örneği `ICorDebugManagedCallback` veya `ICorDebugManagedCallback2` için geri çağırma nesnesi olarak geçirilen [Icordebug::setmanagedhandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md).  
+ Hata ayıklayıcı, sürüm 2,0 uygulamaları .NET Framework hata ayıklaması durumunda [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) uygulamalıdır. `ICorDebugManagedCallback` Veya`ICorDebugManagedCallback2` örneği [ICorDebug:: SetManagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)öğesine geri çağırma nesnesi olarak geçirilir.  
   
 > [!NOTE]
->  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+> Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

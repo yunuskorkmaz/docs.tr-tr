@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 246584a34d6a3a8aaf4cac9845e8bb77d1654fa1
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: caa929225701a62c0abb3b335bfd7fb6a129e9e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052430"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941634"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>MissingRuntimeArtifactException Sınıfı (.NET Yerel)
-**Windows 10, yalnızca .NET yerel Windows uygulamaları için .NET**  
+**Windows 10 için Windows uygulamaları için .NET, yalnızca .NET Native**  
   
- Bir tür veya üye türü için meta veriler kullanılabilir olduğunda oluşturulan özel durum ancak uygulanması kaldırıldı.  
+ Bir tür veya tür üyesi için meta veriler kullanılabilir olduğunda, ancak uygulanması kaldırıldığında oluşturulan özel durum.  
   
- **Namespace:** System.Reflection  
+ **Uzayına** System. Reflection  
   
 > [!IMPORTANT]
->  `MissingRuntimeArtifactException` Sınıfı, .NET Native araç zinciri tarafından yalnızca iç kullanım için tasarlanmıştır. Üçüncü taraf kodu kullanmak için hedeflenmemiş ya da uygulama kodunuzda bir özel durum işlemesi gerekir. Bunun yerine, girişlere ekleyerek özel durumu ortadan, [çalışma zamanı yönergeleri dosyası](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Daha fazla bilgi için Açıklamalar bölümüne bakın.  
+> `MissingRuntimeArtifactException` Sınıfı yalnızca .NET Native araç zinciri tarafından dahili kullanıma yöneliktir. Üçüncü taraf kodda kullanılmak üzere değildir veya uygulama kodunuzda özel durumu işlemelisiniz. Bunun yerine, [çalışma zamanı yönergeleri dosyanıza](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)girdiler ekleyerek özel durumu ortadan kaldırabilirsiniz. Daha fazla bilgi için, açıklamalar bölümüne bakın.  
   
 ## <a name="syntax"></a>Sözdizimi  
  [!code-csharp[ProjectN#22](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingruntimeartifactexception_syntax1.cs#22)]  
   
- Unutmayın `MissingRuntimeArtifactException` sınıf türetilir <xref:System.MemberAccessException>.  
+ `MissingRuntimeArtifactException` Sınıfının öğesinden<xref:System.MemberAccessException>türetildiğine unutmayın.  
   
  `MissingRuntimeArtifactException` Sınıfı aşağıdaki üyelere sahiptir:  
   
@@ -32,53 +32,53 @@ ms.locfileid: "66052430"
   
 |Oluşturucu|Açıklama|  
 |-----------------|-----------------|  
-|`public MissingRuntimeArtifactException()`|Yeni bir örneğini başlatır `MissingRuntimeArtifactException` hatayı açıklayan sistem tarafından sağlanmış bir iletiyi kullanarak sınıfı.<br /><br /> Bu oluşturucu yalnızca .NET yerel araç zinciri tarafından iç kullanım içindir.|  
-|`public MissingRuntimeArtifactException(String message)`|Yeni bir örneğini başlatır `MissingRuntimeArtifactException` belirtilen hata iletisiyle sınıfı.<br /><br /> Bu oluşturucu yalnızca .NET yerel araç zinciri tarafından iç kullanım içindir.|  
+|`public MissingRuntimeArtifactException()`|Hatayı açıklayan sistem tarafından sağlanan bir `MissingRuntimeArtifactException` ileti kullanarak sınıfının yeni bir örneğini başlatır.<br /><br /> Bu Oluşturucu yalnızca .NET Native araç zinciri tarafından iç kullanım içindir.|  
+|`public MissingRuntimeArtifactException(String message)`|Yeni bir örneğini başlatır `MissingRuntimeArtifactException` belirtilen hata iletisiyle sınıfı.<br /><br /> Bu Oluşturucu yalnızca .NET Native araç zinciri tarafından iç kullanım içindir.|  
   
 ## <a name="properties"></a>Özellikler  
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
-|`public IDictionary Data { get; }`|Özel durum hakkında ek kullanıcı tanımlı bilgi sağlayan anahtar/değer çiftlerinin koleksiyonunu alır. (Devralınan <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public string HelpLink { get; set; }`|Alır veya bir bağlantıyı bu durumla ilişkili Yardım dosyasını ayarlar. (Devralınan <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public int HResult { get; protected set; }`|Alır veya ayarlar `HRESULT`, belirli bir özel durum için atanan sayısal değer kodlanmış. (Devralınan <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public Exception InnerException { get; }`|Geçerli özel duruma neden özel durumu alır. (Devralınan <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public string Message { get; }`|Geçerli özel durumu açıklayan bir ileti alır. (Devralınan <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public string Source { get; set; }`|Alır ya da uygulama veya hataya neden olan nesnenin adını ayarlar. (Devralınan <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public string StackTrace { get; }`|Çağrı yığınındaki hemen çerçeveleri dize gösterimini alır. (Devralınan <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public MethodBase TargetSite { get; }`|Geçerli özel durum oluşturdu yöntemi alır. (Devralınan <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public IDictionary Data { get; }`|Özel durum hakkında ek kullanıcı tanımlı bilgiler sağlayan anahtar/değer çiftleri koleksiyonunu alır. (Öğesinden <xref:System.Exception?displayProperty=nameWithType>devralındı.)|  
+|`public string HelpLink { get; set; }`|Bu özel durumla ilişkili Yardım dosyasının bağlantısını alır veya ayarlar. (Öğesinden <xref:System.Exception?displayProperty=nameWithType>devralındı.)|  
+|`public int HResult { get; protected set; }`|Belirli bir özel duruma `HRESULT`atanan kodlanmış bir sayısal değeri alır veya ayarlar. (Öğesinden <xref:System.Exception?displayProperty=nameWithType>devralındı.)|  
+|`public Exception InnerException { get; }`|Geçerli özel duruma neden olan özel durumu alır. (Öğesinden <xref:System.Exception?displayProperty=nameWithType>devralındı.)|  
+|`public string Message { get; }`|Geçerli özel durumu açıklayan bir ileti alır. (Öğesinden <xref:System.Exception?displayProperty=nameWithType>devralındı.)|  
+|`public string Source { get; set; }`|Hataya neden olan uygulamanın veya nesnenin adını alır veya ayarlar. (Öğesinden <xref:System.Exception?displayProperty=nameWithType>devralındı.)|  
+|`public string StackTrace { get; }`|Çağrı yığınında anlık çerçevelerin dize gösterimini alır. (Öğesinden <xref:System.Exception?displayProperty=nameWithType>devralındı.)|  
+|`public MethodBase TargetSite { get; }`|Geçerli özel durumu oluşturan yöntemi alır. (Öğesinden <xref:System.Exception?displayProperty=nameWithType>devralındı.)|  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|`public bool Equals(Object obj)`|Belirtilen nesnenin geçerli nesneyle eşit olup olmadığını belirler.  (Devralınan <xref:System.Object>.)|  
-|`protected void Finalize()`|Ücretsiz kaynaklar ve çöp toplamanın alınmadan önce diğer temizleme işlemleri gerçekleştirmesini denemek bir nesne sağlar. (Devralınan <xref:System.Object>.)|  
-|`public Exception GetBaseException()`|Bir veya daha fazla sonraki özel durumların kök nedenini özel durum verir. (Devralınan <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public int GetHashCode()`|Bir karma kodu döndürür bir `MissingRuntimeArtifactException` örneği.   (Devralınan <xref:System.Object>.)|  
-|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|Ayarlar bir <xref:System.Runtime.Serialization.SerializationInfo> özel durum hakkında bilgi içeren nesne.  (Devralınan <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public Type GetType()`|Geçerli örneğin çalışma zamanı türünü alır. (Devralınan <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`protected Object MemberwiseClone()`|Geçerli nesne basit bir kopyasını oluşturur. (Devralınan <xref:System.Object>.)|  
-|`public string ToString()`|Geçerli özel durumun dize gösterimini döndürür. (Devralınan <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public bool Equals(Object obj)`|Belirtilen nesnenin geçerli nesneyle eşit olup olmadığını belirler.  (Öğesinden <xref:System.Object>devralındı.)|  
+|`protected void Finalize()`|Bir nesnenin çöp toplama tarafından geri alınmadan önce kaynakları serbest bırakma ve diğer temizleme işlemlerini gerçekleştirmesine izin verir. (Öğesinden <xref:System.Object>devralındı.)|  
+|`public Exception GetBaseException()`|Bir veya daha fazla sonraki özel durumun asıl nedeni olan özel durumu döndürür. (Öğesinden <xref:System.Exception?displayProperty=nameWithType>devralındı.)|  
+|`public int GetHashCode()`|`MissingRuntimeArtifactException` Örnek için bir karma kod döndürür.   (Öğesinden <xref:System.Object>devralındı.)|  
+|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|Özel durumla <xref:System.Runtime.Serialization.SerializationInfo> ilgili bilgileri içeren bir nesne ayarlar.  (Öğesinden <xref:System.Exception?displayProperty=nameWithType>devralındı.)|  
+|`public Type GetType()`|Geçerli örneğin çalışma zamanı türünü alır. (Öğesinden <xref:System.Exception?displayProperty=nameWithType>devralındı.)|  
+|`protected Object MemberwiseClone()`|Geçerli nesnenin basit bir kopyasını oluşturur. (Öğesinden <xref:System.Object>devralındı.)|  
+|`public string ToString()`|Geçerli özel durumun dize gösterimini döndürür. (Öğesinden <xref:System.Exception?displayProperty=nameWithType>devralındı.)|  
   
 ## <a name="events"></a>Olaylar  
   
 |Olay|Açıklama|  
 |-----------|-----------------|  
-|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Özel durum hakkında veri içeren bir özel durum nesnesi oluşturmak için seri hale getirilmiş bir özel durum serileştirilmiş olduğunda gerçekleşir. (Devralınan <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Özel durum hakkında serileştirilmiş veri içeren bir özel durum nesnesi oluşturmak için bir özel durum serileştirildiğinde gerçekleşir. (Öğesinden <xref:System.Exception?displayProperty=nameWithType>devralındı.)|  
   
 ## <a name="usage-details"></a>Kullanım ayrıntıları  
- `MissingRuntimeArtifactException` Bir tür örneği veya bir tür üyesi çağırmak için bir girişimde tür veya üyenin meta verileri mevcut olsa da, kendi uygulama kaldırıldı, özel durum harekete geçirilir.  
+ Bir tür örneği oluşturmak veya bir tür üyesini çağırmak için bir deneme yapıldığında ve tür ya da üyenin meta verileri mevcut olsa da, uygulamanın kaldırılması, bu özeldurumoluşturulur.`MissingRuntimeArtifactException`  
   
- Meta veri ve uygulama kodunu dinamik olarak bir yöntem yürütülmeye çalışıldı çalışma zamanında bir uygulama için kullanılabilir olup olmadığı çalışma zamanı yönergeleri (XML yapılandırması) dosyası tarafından tanımlanan \*. rd.xml. Bu özel durum gelen uygulamanızı önlemek için değiştirmelisiniz \*. rd.xml türü veya tür üyesi tarafından gerekli meta verileri çalışma zamanında mevcut olduğundan emin olun. Biçimi hakkında bilgi için \*. rd.xml dosya bkz [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ Bir yöntemi dinamik olarak yürütmek için meta verilerin ve uygulama kodunun çalışma zamanında bir uygulama için kullanılabilir olup olmadığı, çalışma zamanı yönergeleri (XML yapılandırma) dosyası, \*. RD. xml tarafından tanımlanır. Uygulamanızın bu özel durumu oluşturmasını engellemek için. RD. xml ' \*i değiştirmeniz gerekir. Bu, bir tür veya tür üyesinin gerek duyduğu meta verilerin çalışma zamanında mevcut olmasını sağlamaktır. \*. RD. xml dosyasının biçimi hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
->  Bu özel durumun, uygulamanızın ihtiyaç duyduğu uygulama kodu çalışma zamanında kullanılabilir olmadığını gösterir çünkü bu özel durum işleme karakteri bir `try` / `catch` blok. Bunun yerine, özel durumun nedenini tanılamak ve çalışma zamanı yönergeleri dosyasını kullanarak kaldırın. Genellikle, uygun belirterek bu özel durumun ortadan `Activate` veya `Dynamic` çalışma zamanı yönergeleri dosyası içindeki bir program öğesi için ilke (\*. rd.xml dosyası). Özel durum ortadan kaldırır, çalışma zamanı yönergeleri dosyasına ekleyebilirsiniz girişini almak için iki sorun gidericileri birini kullanabilirsiniz:  
+> Bu özel durum, uygulamanız için gereken uygulama kodunun çalışma zamanında kullanılabilir olmadığını gösterdiği için, bu özel durumu bir `try` / `catch` blokta tutamamalısınız. Bunun yerine, özel durumun nedenini tanılamanıza ve bir çalışma zamanı yönergeleri dosyası kullanarak ortadan kaldırmanız gerekir. Genellikle, çalışma zamanı yönergeleri dosyasındaki ( `Activate` \*. RD. xml `Dynamic` dosyası) bir program öğesi için uygun veya ilkeyi belirterek bu özel durumu ortadan kaldırabilirsiniz. Özel durumu ortadan kaldıran çalışma zamanı yönergeleri dosyanıza ekleyebileceğiniz girişi almak için iki sorun gidericinin birini kullanabilirsiniz:  
 >   
-> - [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/type.html) türleri için.  
-> - [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/method.html) yöntemleri için.  
+> - Türler için [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/type.html) .  
+> - Metotlar için [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/method.html) .  
   
- `MissingRuntimeArtifactException` Sınıfı benzersiz üye içeriyor; tüm üyelerini kendi temel sınıfından devralınır <xref:System.MemberAccessException>.  
+ Sınıf benzersiz üye içermiyor; tüm üyeleri kendi temel <xref:System.MemberAccessException>sınıfından devralınır. `MissingRuntimeArtifactException`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

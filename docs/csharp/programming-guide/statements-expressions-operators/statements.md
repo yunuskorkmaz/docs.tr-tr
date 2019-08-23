@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 4c3421f7165a0b1a3d1c3678fe28334fd8632472
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0ec741d085ca52d52999d2e10cf5f687cc885219
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588617"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921787"
 ---
 # <a name="statements-c-programming-guide"></a>Deyimler (C# Programlama Kılavuzu)
 Bir programın aldığı eylemler deyimler bölümünde ifade edilir. Yaygın eylemler, belirli bir koşula bağlı olarak değişkenleri bildirme, değer atama, yöntemleri çağırma, koleksiyonlar aracılığıyla döngü oluşturma ve bir veya başka bir kod bloğuna dallandırma içerir. Bir programda deyimlerin yürütülme sırası, denetim akışı veya yürütme akışı olarak adlandırılır. Programın çalışma zamanında aldığı girişe nasıl davrandığına bağlı olarak, denetim akışı, programın her çalıştırılışında farklılık gösterebilir.  
@@ -81,17 +81,12 @@ Aşağıdaki örneklerde boş bir deyimin iki kullanımı gösterilmektedir:
   
  [!code-csharp[csProgGuideStatements#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#22)]  
   
-## <a name="related-sections"></a>İlgili Bölümler  
-  
-- [Deyim Anahtar Sözcükleri](../../language-reference/keywords/statement-keywords.md)  
-  
-- [İfadeler](./expressions.md)  
-  
-- [İşleçler](./operators.md)  
-  
-## <a name="c-language-specification"></a>C# Dil Belirtimi  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# dili belirtimi
+
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [deyimler](~/_csharplang/spec/statements.md) bölümüne bakın.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
+- [İfade anahtar sözcükleri](../../language-reference/keywords/statement-keywords.md)  
+- [İfadeler](expressions.md)  

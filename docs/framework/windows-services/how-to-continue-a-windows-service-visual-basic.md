@@ -10,47 +10,47 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: 514cc8177bc5968c9d6e92eec07a03a8a7855bd3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c9a783c0e7df39381ad1d9a8fedd7419605fd241
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649394"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935551"
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>Nasıl yapılır: Windows Hizmetini Devam Ettirme (Visual Basic)
-Bu örnekte <xref:System.ServiceProcess.ServiceController> IIS Yönetici Hizmeti yerel bilgisayarda devam etmek için bileşen.  
+Bu örnek, yerel <xref:System.ServiceProcess.ServiceController> bilgisayarda IIS Yönetim hizmetine devam etmek için bileşenini kullanır.  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#13](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#13)]  
   
- Bu kod örneği, bir IntelliSense kod parçacığı da kullanılabilir. Kod parçacığı Seçici'de bulunur **Windows işletim sistemi > Windows Hizmetleri**. Daha fazla bilgi için [kod parçacıkları](/visualstudio/ide/code-snippets).  
+ Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide, Windows **Işletim sistemi > Windows Hizmetleri**' nde bulunur. Daha fazla bilgi için [kod parçacıkları](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- Bir proje başvurusu System.serviceprocess.dll'ye.  
+- System. ServiceProcess. dll dosyasına bir proje başvurusu.  
   
-- Üye erişimi <xref:System.ServiceProcess> ad alanı. Ekleme bir `Imports` üye adları kodunuzda tamamen niteleyemiyorsanız deyimi. Daha fazla bilgi için [Imports deyimi (.NET Namespace ve türü)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- <xref:System.ServiceProcess> Ad alanının üyelerine erişin. Kodunuzda üye `Imports` adlarını tam olarak nitedıysanız bir ifade ekleyin. Daha fazla bilgi için bkz. [Imports açıklaması (.net ad alanı ve türü)](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- <xref:System.ServiceProcess.ServiceController.MachineName%2A> Özelliği <xref:System.ServiceProcess.ServiceController> sınıfı varsayılan olarak yerel bilgisayardır. Başka bir bilgisayarda Windows Hizmetleri başvurmak için değişiklik <xref:System.ServiceProcess.ServiceController.MachineName%2A> özelliğini bilgisayarın adı.  
+ <xref:System.ServiceProcess.ServiceController> Sınıfının özelliği, varsayılan olarak yerel bilgisayardır. <xref:System.ServiceProcess.ServiceController.MachineName%2A> Başka bir bilgisayardaki Windows hizmetlerine başvurmak için, <xref:System.ServiceProcess.ServiceController.MachineName%2A> özelliği bu bilgisayarın adıyla değiştirin.  
   
- Çağıramazsınız <xref:System.ServiceProcess.ServiceController.Continue%2A> yöntemi bir hizmete ait hizmet denetleyicisi durumu: kadar <xref:System.ServiceProcess.ServiceControllerStatus.Paused>.  
+ Hizmet denetleyicisi <xref:System.ServiceProcess.ServiceController.Continue%2A> <xref:System.ServiceProcess.ServiceControllerStatus.Paused>durumu olana kadar bir hizmette yöntemi çağrılamaz.  
   
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Hizmeti devam ettirilemiyor. (<xref:System.InvalidOperationException>)  
+- Hizmet devam ettirilemiyor. (<xref:System.InvalidOperationException>)  
   
-- Bir sistem API'si erişirken bir hata oluştu. (<xref:System.ComponentModel.Win32Exception>)  
+- Sistem API 'sine erişirken bir hata oluştu. (<xref:System.ComponentModel.Win32Exception>)  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Bilgisayardaki hizmetlerin denetimi kullanılarak kısıtlanabilir <xref:System.ServiceProcess.ServiceControllerPermissionAccess> izinleri ayarlamak için numaralandırma <xref:System.ServiceProcess.ServiceControllerPermission> sınıfı.  
+ Bilgisayardaki hizmetlerin denetimi, <xref:System.ServiceProcess.ServiceControllerPermissionAccess> <xref:System.ServiceProcess.ServiceControllerPermission> sınıftaki izinleri ayarlamak için sabit listesi kullanılarak kısıtlanabilir.  
   
- Kullanarak hizmet bilgilere erişimi kısıtlanabilir <xref:System.Security.Permissions.PermissionState> izinleri ayarlamak için numaralandırma <xref:System.Security.Permissions.SecurityPermission> sınıfı.  
+ Sınıfında<xref:System.Security.Permissions.SecurityPermission> izinleri ayarlamak için <xref:System.Security.Permissions.PermissionState> numaralandırma kullanılarak hizmet bilgilerine erişim kısıtlanabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
-- [Nasıl yapılır: (Visual Basic) bir Windows hizmetini duraklatma](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+- [Nasıl yapılır: Bir Windows hizmetini duraklatma (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)

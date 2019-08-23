@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4f57f27ec92e7977b46ebfa5967b0590674d2a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d02dab01eca3bd4f8ce3ae7ace7f9d4be8233dca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946477"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917012"
 ---
 # <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2 Arabirimi
 
-Icordebugılframe arabirimi öğesinin mantıksal uzantısı.  
+ICorDebugILFrame arabiriminin mantıksal uzantısı.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[EnumerateTypeParameters Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Icordebugtypeenum nesneyi içeren alır <xref:System.Type> bu çerçeve parametreleri.|  
-|[RemapFunction Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Bir işlev düzenlendi, yeni MSIL uzaklık belirterek yeniden eşlemesi.|  
+|[EnumerateTypeParameters Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Bu çerçevedeki <xref:System.Type> parametreleri içeren bir ICorDebugTypeEnum nesnesi alır.|  
+|[RemapFunction Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Yeni MSIL sapmasını belirterek düzenlenmiş bir işlevi yeniden eşler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+> Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

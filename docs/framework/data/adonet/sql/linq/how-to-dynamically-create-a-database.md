@@ -5,45 +5,45 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: e5d66b49782d5f26b6d487e655aca6fbd6bdfb1a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92db9bdb209a542cc4fa269b35bfa98f8f20d2b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623859"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940080"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Nasıl yapılır: Dinamik Olarak Veritabanı Oluşturma
-LINQ to SQL nesne modeli, bir ilişkisel veritabanına eşlenir. İlişkisel veritabanının yapısını tanımlamak için öznitelik tabanlı eşleme veya bir dış eşleme dosyası kullanarak eşleme etkindir. Her iki senaryoda veritabanı kullanarak yeni bir örneğini oluşturabilirsiniz ilişkisel veritabanı hakkında yeterli bilgi yok <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi.  
+LINQ to SQL, bir nesne modeli ilişkisel veritabanıyla eşlenir. Eşleme, ilişkisel veritabanının yapısını betimleyen öznitelik tabanlı eşleme veya bir dış eşleme dosyası kullanılarak etkinleştirilir. Her iki senaryoda da, <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemini kullanarak veritabanının yeni bir örneğini oluşturabileceğiniz ilişkisel veritabanı hakkında yeterli bilgi vardır.  
   
- <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> Yöntemi, nesne modelinde kodlanmış bilgilerin kapsamını veritabanına yalnızca bir kopyasını oluşturur. Dosyaları ve öznitelikler, nesne modelinden var olan bir veritabanının yapısı hakkında her şeyi kodlamamayı. Eşleme bilgileri değil kullanıcı tarafından tanımlanan İşlevler, saklı yordamlar, Tetikleyiciler içeriğini temsil veya denetim kısıtlamaları. Bu davranış, çeşitli veritabanları için yeterli olur.  
+ Yöntemi <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> , veritabanının bir çoğaltmasını yalnızca nesne modelinde kodlanan bilgilerin kapsamına oluşturur. Nesne modelinizdeki dosya ve öznitelikleri eşleme, var olan bir veritabanının yapısıyla ilgili her şeyi kodlayamayabilir. Eşleme bilgileri Kullanıcı tanımlı işlevlerin, saklı yordamların, tetikleyicilerin veya denetim kısıtlamalarının içeriğini temsil etmez. Bu davranış çeşitli veritabanları için yeterlidir.  
   
- Kullanabileceğiniz <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> senaryoları, özellikle de Microsoft SQL Server 2008 gibi bir bilinen veri sağlayıcısı kullanılabilir olduğunda herhangi bir sayıda yöntem. Tipik senaryolar aşağıdakileri içerir:  
+ <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> Yöntemi, özellikle de Microsoft SQL Server 2008 gibi bilinen bir veri sağlayıcısı varsa dilediğiniz sayıda senaryoda kullanabilirsiniz. Tipik senaryolar şunlardır:  
   
-- Otomatik olarak kendisini bir müşteri sisteminde yükleyen bir uygulama oluşturuyorsanız.  
+- Kendisini bir müşteri sistemine otomatik olarak yükleyen bir uygulama derleniyor.  
   
-- Yerel bir veritabanı çevrimdışı durumunu kaydetmek için gereken bir istemci uygulaması oluşturuyorsunuz.  
+- Çevrimdışı durumunu kaydetmek için yerel bir veritabanına ihtiyacı olan bir istemci uygulaması derleniyor.  
   
- Ayrıca <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> .mdf dosyası veya bağlantı dizenizi bağlı olarak bir katalog adı'nı kullanarak SQL Server ile yöntemi. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kullandığı bağlantı dizesi oluşturulacak veritabanının tanımlamak için ve hangi sunucuda veritabanı oluşturulacak.  
+ Ayrıca, bağlantı dizeniz <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> temelinde bir. mdf dosyası veya bir katalog adı kullanarak SQL Server yöntemini kullanabilirsiniz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]oluşturulacak veritabanını ve veritabanının oluşturulacağı sunucuyu tanımlamak için bağlantı dizesini kullanır.  
   
 > [!NOTE]
->  Mümkün olduğunda, böylece bağlantı dizesinde parola gerekli değildir veritabanına bağlanmak için Windows tümleşik güvenliği kullanın.  
+> Mümkün olduğunda, bağlantı dizesinde parolaların gerekli olmaması için veritabanına bağlanmak üzere Windows tümleşik güvenliği kullanın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod MyDVDs.mdf adlı yeni bir veritabanı oluşturmak nasıl bir örnek sağlar.  
+ Aşağıdaki kod, MyDVD 'Ler. mdf adlı yeni bir veritabanının nasıl oluşturulacağı hakkında bir örnek sağlar.  
   
  [!code-csharp[DLinqSubmittingChanges#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#5)]
  [!code-vb[DLinqSubmittingChanges#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#5)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdakileri yaparak bir veritabanı oluşturmak için nesne modeli kullanabilirsiniz:  
+ Aşağıdaki işlemleri yaparak bir veritabanı oluşturmak için nesne modelini kullanabilirsiniz:  
   
  [!code-csharp[DLinqSubmittingChanges#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#6)]
  [!code-vb[DLinqSubmittingChanges#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#6)]  
   
 ## <a name="example"></a>Örnek  
- Otomatik olarak uygulama oluşturma kendisi bir müşteri sistemine yükler veritabanı zaten var ve yeni bir tane oluşturmadan önce bırak görürsünüz. <xref:System.Data.Linq.DataContext> Sağlar sınıfını <xref:System.Data.Linq.DataContext.DatabaseExists%2A> ve <xref:System.Data.Linq.DataContext.DeleteDatabase%2A> bu işlemde size yardımcı olacak yöntemler.  
+ Kendisini bir müşteri sistemine otomatik olarak yükleyen bir uygulama oluştururken, veritabanının zaten var olup olmadığını ve yeni bir tane oluşturmadan önce onu bırakıp bırakmaya bakın. Sınıfı, <xref:System.Data.Linq.DataContext.DatabaseExists%2A> bu işlemle ilgili <xref:System.Data.Linq.DataContext.DeleteDatabase%2A> size yardımcı olmak için ve yöntemlerini sağlar. <xref:System.Data.Linq.DataContext>  
   
- Aşağıdaki örnek bu yaklaşımı uygulamak için bu yöntemleri kullanılabilir yollarından biri gösterilmektedir:  
+ Aşağıdaki örnek bu yaklaşımı uygulamak için bu yöntemlerin kullanılabileceği bir yolu göstermektedir:  
   
  [!code-csharp[DLinqSubmittingChanges#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#7)]
  [!code-vb[DLinqSubmittingChanges#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#7)]  

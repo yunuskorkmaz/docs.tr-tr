@@ -7,21 +7,21 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: b15a30fb6d356f92312bf33bc1964c7922ba1383
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 853bc94978218fd4d426e6070b3a36e20435cd6d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673764"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920486"
 ---
-# <a name="listeners-element-for-source"></a>\<dinleyicileri > öğesi için \<kaynak >
-Ekler veya kaldırır, dinleyicileri <xref:System.Diagnostics.TraceSource.Listeners%2A> koleksiyonu için bir <xref:System.Diagnostics.TraceSource>. Dinleyici günlük, pencere veya metin dosyası gibi uygun bir hedef izleme çıkışa yönlendirir.  
+# <a name="listeners-element-for-source"></a>\<Kaynak > için \<dinleyiciler > öğesi
+İçin koleksiyonuna<xref:System.Diagnostics.TraceSource.Listeners%2A> dinleyici ekler veya kaldırır. <xref:System.Diagnostics.TraceSource> Dinleyici, izleme çıkışını günlük, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  
   
  \<Yapılandırma >  
-\<System.Diagnostics >  
-\<Kaynakları >  
+\<System. Diagnostics >  
+\<Kaynaklar >  
 \<Kaynak >  
-\<dinleyicileri > öğesi  
+\<dinleyiciler > öğesi  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,26 +43,26 @@ Ekler veya kaldırır, dinleyicileri <xref:System.Diagnostics.TraceSource.Listen
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Bir ekler `Listeners` koleksiyonu.|  
-|[\<kaldırma >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Bir dinleyicisinden kaldırır `Listeners` koleksiyonu.|  
-|[\<Temizleme >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Temizler `Listeners` koleksiyonu için bir izleme kaynağı.|  
+|[\<> Ekle](add-element-for-listeners-for-source.md)|`Listeners` Koleksiyona bir dinleyici ekler.|  
+|[\<> Kaldır](remove-element-for-listeners-for-source.md)|`Listeners` Koleksiyondan bir dinleyiciyi kaldırır.|  
+|[\<> Temizle](clear-element-for-listeners-for-source.md)|İzleme kaynağı için koleksiyonu temizler. `Listeners`|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.|  
-|`sources`|İzleme iletileri başlatmak iz kaynakları içerir.|  
-|`source`|İzleme iletileri başlatan bir izleme kaynağı belirtir.|  
+|`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
+|`sources`|İzleme iletilerini Başlatan izleme kaynaklarını içerir.|  
+|`source`|İzleme iletilerini Başlatan bir izleme kaynağını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="configuration-file"></a>Yapılandırma Dosyası  
- Bu öğe, makine yapılandırma dosyası (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir `<listeners>` öğesi eklemek için bir konsol iz dinleyicisi için `mySource` kaynak ve varsayılan İzleme dinleyicisi kaldırmak için.  
+ Aşağıdaki örnek, bir konsol izleme dinleyicisini `<listeners>` `mySource` kaynağa eklemek ve varsayılan izleme dinleyicisini kaldırmak için öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -90,5 +90,5 @@ Ekler veya kaldırır, dinleyicileri <xref:System.Diagnostics.TraceSource.Listen
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Diagnostics.TraceListener>
-- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [İzleme Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)
+- [İzleme Dinleyicileri](../../../debug-trace-profile/trace-listeners.md)

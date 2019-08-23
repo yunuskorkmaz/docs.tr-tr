@@ -3,18 +3,18 @@ title: <claimsAuthorizationManager>
 ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
-ms.openlocfilehash: 59d47eda97e97629408ece12a1d1dfbe804feb3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74ca031f7017d51adaa7a71593f537b64abbeae6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667320"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942886"
 ---
 # <a name="claimsauthorizationmanager"></a>\<claimsAuthorizationManager >
-Bir gelen talep için talep Yetkilendirme Yöneticisi kaydeder.  
+Gelen talepler için bir talep Yetkilendirme Yöneticisi kaydeder.  
   
  \<system.identityModel>  
-\<identityConfiguration >  
+\<IdentityConfiguration >  
 \<claimsAuthorizationManager >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -36,27 +36,27 @@ Bir gelen talep için talep Yetkilendirme Yöneticisi kaydeder.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|türü|Öğesinden türetilen özel bir tür <xref:System.Security.Claims.ClaimsAuthorizationManager> sınıfı. Belirtme hakkında daha fazla bilgi için `type` özniteliği için bkz: [özel tür başvurularını](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
+|türü|<xref:System.Security.Claims.ClaimsAuthorizationManager> Sınıfından türetilen özel bir tür. `type` Özniteliği belirtme hakkında daha fazla bilgi için bkz. [özel tür başvuruları](../windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yoksa hiçbir `type` özniteliği veya `type` başvuruları öznitelik <xref:System.Security.Claims.ClaimsAuthenticationManager> sınıfı `<claimsAuthorizationManager>` öğenin alt öğeleri almaz; ancak, türetilmiş sınıflar <xref:System.Security.Claims.ClaimsAuthorizationManager> alt yapılandırma öğeleri tanımlayabilirsiniz.  
+ `type` <xref:System.Security.Claims.ClaimsAuthenticationManager> Öznitelik yoksa veya öznitelik sınıfa <xref:System.Security.Claims.ClaimsAuthorizationManager> başvuruyorsa, öğesialtöğelerialmaz;ancak,öğesindentüretilmişsınıflaraltyapılandırmaöğelerinitanımlayabilir.`<claimsAuthorizationManager>` `type`  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Hizmet düzeyi kimlik ayarlarını belirtir.|  
+|[\<IdentityConfiguration >](identityconfiguration.md)|Hizmet düzeyi kimlik ayarlarını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sağlanan varsayılan davranışı <xref:System.Security.Claims.ClaimsAuthorizationManager> sınıfı, gelen talepler her zaman yetkilendirir. Hayır ise `type` özniteliği veya `type` özniteliği belirtir <xref:System.Security.Claims.ClaimsAuthorizationManager> sınıfı `<claimsAuthorizationManager>` öğenin alt öğeleri almaz. Belirtebileceğiniz `type` sınıfından türetilen bir tür kaydetmek için öznitelik <xref:System.Security.Claims.ClaimsAuthorizationManager> özel davranışı uygulamak sınıfı. Türetilen sınıflar, alt öğelerinin konfigürasyonuyla destekleyebilir `<claimsAuthorizationManager>` kılarak öğesi <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> bu öğelerini işlemek için yöntemi. Sınıf Tasarımcısı kadar alt öğeleri için tanımlanan şema var.  
+ <xref:System.Security.Claims.ClaimsAuthorizationManager> Sınıfı aracılığıyla sunulan varsayılan davranış her zaman gelen talepleri yetkilendirir. Hiçbir `type` öznitelik belirtilmemişse veya `type` öznitelik <xref:System.Security.Claims.ClaimsAuthorizationManager> sınıfı `<claimsAuthorizationManager>` belirtiyorsa, öğesi alt öğeleri almaz. Özel davranışı uygulamak için `type` <xref:System.Security.Claims.ClaimsAuthorizationManager> sınıfından türetilmiş bir türü kaydetmek üzere özniteliğini belirtebilirsiniz. Türetilmiş sınıflar, bu öğeleri işlemek için `<claimsAuthorizationManager>` <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> yöntemini geçersiz kılarak öğenin alt öğeleri aracılığıyla yapılandırmayı destekleyebilir. Alt öğeler için tanımlanan şema, sınıfının tasarımcısına kadar olur.  
   
 > [!IMPORTANT]
->  Kullanırken <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> veya <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> sınıfı tarafından başvurulan kimlik yapılandırması kodunuzda beyana dayalı erişim denetimi sağlamak için `<federationConfiguration>` öğesi, talep Yetkilendirme Yöneticisi'ni ve yapmak için kullanılan ilke yapılandırır yetkilendirme kararları. Bu durum bile pasif Web senaryoları, örneğin Windows Communication Foundation (WCF) uygulamaları veya Web tabanlı yer almayan bir uygulama olmayan senaryolarda geçerlidir. Uygulama Pasif bir Web uygulaması değilse `<claimsAuthorizationManager>` öğesini (ve alt ilke öğelerine, varsa) başvurulan kimlik yapılandırmasını uygulanan yalnızca ayarlarıdır. Diğer tüm ayarları göz ardı edilir. Daha fazla bilgi için [ \<Federationconfiguration'a >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) öğesi.  
+> Kodunuzda talep tabanlı <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> erişim denetimi <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> sağlamak için ya da sınıfını kullanırken, `<federationConfiguration>` öğesi tarafından başvurulan kimlik yapılandırması, bu işlemi yapmak için kullanılan talep Yetkilendirme Yöneticisini ve ilkeyi yapılandırır yetkilendirme kararları. Bu, pasif Web senaryoları olmayan senaryolarda bile, örneğin Windows Communication Foundation (WCF) uygulamaları veya Web tabanlı olmayan bir uygulama için de geçerlidir. Uygulama pasif bir Web uygulaması değilse, `<claimsAuthorizationManager>` başvurulan kimlik yapılandırmasının öğesi (ve varsa alt ilke öğeleri) uygulanan tek ayarlardır. Diğer tüm ayarlar yoksayılır. Daha fazla bilgi için, bkz [ \<. FederationConfiguration >](federationconfiguration.md) öğesi.  
   
- Bu öğe ayarlar <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> özelliği.  
+ Bu öğe <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> özelliği ayarlar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XML kaynak Eylem çiftleri oluşan ilke her biri kaynak eylemi gerçekleştirmek için bir istek sahibine sahip olması gerekir talepleri Boole birleşimlerini belirtir uygulayan manager talep yetkilendirme yapılandırmasını gösterir. Bu ilke kullanma yeteneği talep Yetkilendirme Yöneticisi uygulayan kod bulunabilir `ClaimsBasedAuthorization` örnek.  
+ Aşağıdaki XML, her biri kaynak Eylem çiftlerinden oluşan ilkeyi uygulayan, her birinin kaynak üzerinde eylemi gerçekleştirmek için sahip olması gereken taleplerin Boole birleşimlerini belirten bir talep Yetkilendirme Yöneticisi yapılandırmasını gösterir. Bu ilkeyi kullanan talep Yetkilendirme Yöneticisini uygulayan kod `ClaimsBasedAuthorization` örneğinde bulunabilir.  
   
 ```xml  
 <system.identityModel>  

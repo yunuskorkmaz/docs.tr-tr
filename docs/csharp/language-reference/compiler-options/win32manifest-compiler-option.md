@@ -8,12 +8,12 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-ms.openlocfilehash: 5fc8a89faaa7fac3413000afdf94b6a96b23ab6d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 24677b145974af03e6ddcac1b9bab5907ab70c7b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606266"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924682"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (C# derleyici seçenekleri)
 Bir projenin Taşınabilir çalıştırılabilir (PE) dosyasına gömülecek Kullanıcı tanımlı bir Win32 uygulama bildirim dosyası belirtmek için **-win32manifest** seçeneğini kullanın.  
@@ -32,7 +32,7 @@ Bir projenin Taşınabilir çalıştırılabilir (PE) dosyasına gömülecek Kul
  Varsayılan olarak, görsel C# derleyici Istenen "asInvoker" yürütme düzeyini belirten bir uygulama bildirimi katıştırır. Bu, bildirimi, yürütülebilir dosyanın oluşturulduğu klasörde, genellikle Visual Studio kullandığınızda bin\Debug veya bin\Release klasöründe oluşturur. Örneğin, istenen "highestAvailable" veya "requireAdministrator" yürütme düzeyini belirtmek için özel bir bildirim sağlamak istiyorsanız, dosyanın adını belirtmek için bu seçeneği kullanın.  
   
 > [!NOTE]
->  Bu seçenek ve [-win32res (C# derleyici seçenekleri)](./win32res-compiler-option.md) seçeneği birbirini dışlıyor. Her iki seçeneği de aynı komut satırında kullanmayı denerseniz, bir derleme hatası alırsınız.  
+> Bu seçenek ve [-win32res (C# derleyici seçenekleri)](./win32res-compiler-option.md) seçeneği birbirini dışlıyor. Her iki seçeneği de aynı komut satırında kullanmayı denerseniz, bir derleme hatası alırsınız.  
   
  İstenen bir yürütme düzeyini belirten uygulama bildirimi olmayan bir uygulama, Windows 'daki Kullanıcı hesabı denetimi özelliği altında dosya/kayıt defteri sanallaştırmaya tabidir. Daha fazla bilgi için bkz. [Kullanıcı hesabı denetimi](/windows/access-protection/user-account-control/user-account-control-overview).  
   
@@ -50,7 +50,7 @@ Bir projenin Taşınabilir çalıştırılabilir (PE) dosyasına gömülecek Kul
  Aşağıdaki örnek, Visual C# DERLEYICISININ bir PE 'ye eklediği varsayılan bildirimi gösterir.  
   
 > [!NOTE]
->  Derleyici, XML 'e "MyApplication. app" standart bir uygulama adı ekler. Bu, uygulamaların Windows Server 2003 Service Pack 3 üzerinde çalışmasını sağlamak için geçici bir çözümdür.  
+> Derleyici, XML 'e "MyApplication. app" standart bir uygulama adı ekler. Bu, uygulamaların Windows Server 2003 Service Pack 3 üzerinde çalışmasını sağlamak için geçici bir çözümdür.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  

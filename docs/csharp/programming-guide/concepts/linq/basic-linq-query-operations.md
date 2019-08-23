@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: f4a990fae612f4135f5957a2222d672ff90bde2c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 013e1960e6c5721e0bd7ce6998848ddce15a4e4d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594906"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924388"
 ---
 # <a name="basic-linq-query-operations-c"></a>Temel LINQ Sorgu İşlemleri (C#)
 Bu konuda sorgu ifadelerine kısa bir giriş [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ve bir sorguda gerçekleştirdiğiniz bazı tipik işlem türleri verilmiştir. Daha ayrıntılı bilgi aşağıdaki konularda yer verilmiştir:  
@@ -34,7 +34,7 @@ Bu konuda sorgu ifadelerine kısa bir giriş [!INCLUDE[vbteclinq](~/includes/vbt
  [İzlenecek yol: Sorguları yazmaC#](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
->  SQL veya XQuery gibi bir sorgu dili zaten hakkında bilginiz varsa, bu konunun çoğunu atlayabilirsiniz. Sorgu[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ifadelerinde yan tümceler`from` sırası hakkında bilgi edinmek için sonraki bölümde "yan tümce" konusunu okuyun.  
+> SQL veya XQuery gibi bir sorgu dili zaten hakkında bilginiz varsa, bu konunun çoğunu atlayabilirsiniz. Sorgu[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ifadelerinde yan tümceler`from` sırası hakkında bilgi edinmek için sonraki bölümde "yan tümce" konusunu okuyun.  
   
 ## <a name="obtaining-a-data-source"></a>Bir Veri Kaynağı Elde Etme  
  Bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguda, ilk adım veri kaynağını belirtmektir. Çoğu C# programlama dilinde olduğu gibi, kullanılmadan önce bir değişken bildirilmelidir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Bir sorguda`cust``customers`, yan tümce ilk olarak veri kaynağını () ve *Aralık değişkenini* () tanıtmak için gelir. `from`  
@@ -44,7 +44,7 @@ Bu konuda sorgu ifadelerine kısa bir giriş [!INCLUDE[vbteclinq](~/includes/vbt
  Aralık değişkeni, bir sorgu ifadesinde gerçek yineleme gerçekleşmediğinde `foreach` , döngü içindeki yineleme değişkenine benzer. Sorgu yürütüldüğünde, Aralık değişkeni içindeki `customers`her bir ardışık öğeye başvuru olarak görev yapar. Derleyici türünü `cust`çıkarsanbildiğinden, açıkça belirtmeniz gerekmez. Ek Aralık değişkenleri bir `let` yan tümce tarafından bulunabilir. Daha fazla bilgi için bkz. [Let yan tümcesi](../../../language-reference/keywords/let-clause.md).  
   
 > [!NOTE]
->  Gibi genel olmayan veri kaynakları <xref:System.Collections.ArrayList>için, Aralık değişkeni açıkça yazılmalıdır. Daha fazla bilgi için [nasıl yapılır: LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) ve [from yan tümcesiyle](../../../language-reference/keywords/from-clause.md)bir ArrayList 'i sorgulayın.  
+> Gibi genel olmayan veri kaynakları <xref:System.Collections.ArrayList>için, Aralık değişkeni açıkça yazılmalıdır. Daha fazla bilgi için [nasıl yapılır: LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) ve [from yan tümcesiyle](../../../language-reference/keywords/from-clause.md)bir ArrayList 'i sorgulayın.  
   
 ## <a name="filtering"></a>Filtreleme  
  Büyük olasılıkla en yaygın sorgu işlemi, bir filtrenin Boole ifadesi biçiminde uygulanmasından kaynaklanıyor olabilir. Filtre sorgunun yalnızca ifadenin true olduğu öğeleri döndürmesine neden olur. Sonuç, `where` yan tümcesi kullanılarak oluşturulur. Etkin filtre, kaynak sırasından hangi öğelerin dışlanacağını belirtir. Aşağıdaki örnekte, yalnızca `customers` Londra 'da bir adresi olan kişiler döndürülür.  

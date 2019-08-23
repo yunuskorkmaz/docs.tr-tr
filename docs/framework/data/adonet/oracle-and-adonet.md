@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 012a5b55d052f5f06da5c152da79f4676b2bff4e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 381f796bec31bece354001ad46bf5079381d1b3d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877956"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914551"
 ---
 # <a name="oracle-and-adonet"></a>Oracle ve ADO.NET
 > [!NOTE]
->  Türlerinde <xref:System.Data.OracleClient> kullanım dışı bırakılmıştır. Türleri geçerli sürümü of.NET Framework içinde desteklenen kalır, ancak gelecekteki bir sürümde kaldırılacak. Microsoft, üçüncü taraf Oracle sağlayıcısı kullanmanızı önerir.  
+> İçindeki <xref:System.Data.OracleClient> türler kullanım dışıdır. Türler geçerli sürüm of.NET çerçevesinde desteklenmeye devam eder, ancak gelecekteki bir sürümde kaldırılacaktır. Microsoft, üçüncü taraf bir Oracle sağlayıcısı kullanmanızı önerir.  
   
- Bu bölümde, özellikler ve Oracle için .NET Framework veri sağlayıcısı özgü davranışları açıklanmaktadır.  
+ Bu bölümde, Oracle için .NET Framework Veri Sağlayıcısı özgü özellikler ve davranışlar açıklanmaktadır.  
   
- Oracle için .NET Framework veri sağlayıcısı, Oracle istemci yazılımı tarafından sağlanan Oracle Çağrı Arabirimi (OCI) kullanarak bir Oracle veritabanına erişim sağlar. Veri sağlayıcısı işlevselliği, SQL Server, OLE DB ve ODBC için .NET Framework veri sağlayıcıları benzer olacak şekilde tasarlanmıştır.  
+ Oracle için .NET Framework Veri Sağlayıcısı Oracle Istemci yazılımı tarafından sağlanan Oracle Çağrı arabirimini (OCı) kullanarak bir Oracle veritabanına erişim sağlar. Veri sağlayıcısının işlevselliği, SQL Server, OLE DB ve ODBC için .NET Framework veri sağlayıcılarından benzer olacak şekilde tasarlanmıştır.  
   
- Oracle için .NET Framework veri sağlayıcısı kullanmak için bir uygulama başvurmalıdır <xref:System.Data.OracleClient> gösterildiği gibi ad alanı:  
+ Oracle için .NET Framework veri sağlayıcısı kullanmak için, bir uygulamanın <xref:System.Data.OracleClient> ad alanına aşağıdaki şekilde başvurması gerekir:  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -30,7 +30,7 @@ Imports System.Data.OracleClient
 using System.Data.OracleClient;  
 ```  
   
- Kodunuzu derlediğinizde de DLL'ye bir başvuru içermelidir. Örneğin, bir C# programı derleme yapıyorsanız, komut satırınızda içermelidir:  
+ Kodunuzu derlerken DLL 'ye bir başvuru de eklemeniz gerekir. Örneğin, bir C# program derlerken komut satırlarınız şunları içermelidir:  
   
 ```  
 csc /r:System.Data.OracleClient.dll  
@@ -38,46 +38,46 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Sistem Gereksinimleri](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- Oracle için .NET Framework veri sağlayıcısı kullanma gereksinimleri ve bir dizi kullanırken dikkat etmeniz gereken sorunları açıklar.  
+ Oracle için .NET Framework Veri Sağlayıcısı kullanma gereksinimlerini açıklar ve bunu kullanırken bilinmesi gereken birçok sorunu açıklar.  
   
  [Oracle BFILE](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
- Açıklar <xref:System.Data.OracleClient.OracleBFile> Oracle BDOSYA veri türü ile çalışmak için kullanılan sınıf.  
+ Oracle BDOSYA veri türüyle çalışmak için kullanılan sınıfınıaçıklar.<xref:System.Data.OracleClient.OracleBFile>  
   
  [Oracle LOB](../../../../docs/framework/data/adonet/oracle-lobs.md)  
- Açıklar <xref:System.Data.OracleClient.OracleLob> Oracle LOB veri türleriyle çalışmak için kullanılan sınıf.  
+ Oracle LOB veri türleriyle çalışmak için kullanılan sınıfınıaçıklar.<xref:System.Data.OracleClient.OracleLob>  
   
  [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- Oracle REF CURSOR veri türü için destek açıklanır.  
+ Oracle REF CURSOR veri türü için desteği açıklar.  
   
  [OracleTypes](../../../../docs/framework/data/adonet/oracletypes.md)  
- Yapıları dahil olmak üzere Oracle veri türleriyle çalışmak için kullanabileceğiniz açıklar <xref:System.Data.OracleClient.OracleNumber> ve <xref:System.Data.OracleClient.OracleString>.  
+ <xref:System.Data.OracleClient.OracleNumber> Ve<xref:System.Data.OracleClient.OracleString>dahil Oracle veri türleriyle çalışmak için kullanabileceğiniz yapıları açıklar.  
   
  [Oracle Dizileri](../../../../docs/framework/data/adonet/oracle-sequences.md)  
- Anahtar Oracle sırası sunucu tarafından oluşturulan değerleri almak için destek açıklanır.  
+ Sunucu tarafından oluşturulan anahtar Oracle sıra değerlerini alma desteğini açıklar.  
   
  [Oracle Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/oracle-data-type-mappings.md)  
- Oracle veri türleri ve eşleşmeleri listeler <xref:System.Data.OracleClient.OracleDataReader>.  
+ Oracle veri türlerini ve bunların eşlemelerini <xref:System.Data.OracleClient.OracleDataReader>listeler.  
   
  [Oracle Dağıtılmış İşlemleri](../../../../docs/framework/data/adonet/oracle-distributed-transactions.md)  
- Açıklayan nasıl <xref:System.Data.OracleClient.OracleConnection> nesne bir işlem etkin olduğunu belirlerse, varolan bir dağıtılmış işlemde otomatik olarak kaydeder.  
+ Bir işlemin etkin <xref:System.Data.OracleClient.OracleConnection> olduğunu belirlerse, nesnenin var olan bir dağıtılmış işlemde otomatik olarak nasıl listeleneceğini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- Güvenli kodlama yöntemleri ADO.NET kullanırken açıklar.  
+ ADO.NET kullanılırken güvenli kodlama uygulamalarını açıklar.  
   
  [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- Oluşturma ve kullanma işlemini açıklamaktadır `DataSets`, belirlenmiş `DataSets`, `DataTables`, ve `DataViews`.  
+ ' `DataSets`Nin nasıl oluşturulduğunu ve kullanılacağını açıklar, `DataSets` `DataTables`türü, ve `DataViews`.  
   
  [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- ADO.NET'te veri ile nasıl çalışılacağını açıklar.  
+ ADO.NET içindeki verilerle nasıl çalışabileceğinizi açıklar.  
   
  [SQL Server ve ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- Özellikler ve SQL Server'a özel işlevler ile nasıl çalışılacağını açıklar.  
+ SQL Server özgü özellikler ve işlevlerle nasıl çalışabileceğinizi açıklar.  
   
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- ADO.NET sağlayıcısı-bağımsız kod yazmanıza izin genel sınıfları açıklar.  
+ ADO.NET ' de sağlayıcıya bağımsız kod yazmanıza izin veren genel sınıfları açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

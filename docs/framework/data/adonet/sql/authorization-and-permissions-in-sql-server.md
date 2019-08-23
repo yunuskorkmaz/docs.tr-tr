@@ -2,61 +2,61 @@
 title: SQL Server’da Yetkilendirme ve İzinler
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 35aa26ed1afb0006802b703fa0fa3a6076f03ddf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66bf347543641808cc463d8035223fcf59b08231
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649560"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918107"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server’da Yetkilendirme ve İzinler
-Veritabanı nesneleri oluşturma, açıkça kullanıcılar için erişilebilir hale getirmek için izinleri vermeniz gerekir. Tüm güvenli kılınabilir nesne izni deyimleri kullanarak sorumlu için verilen izinleri vardır.  
+Veritabanı nesneleri oluşturduğunuzda, kullanıcılara kullanıcıların erişimini sağlamak için açıkça izin vermeniz gerekir. Her güvenli kılınabilir nesne, izin deyimleri kullanılarak bir sorumluya verilebilecek izinlere sahiptir.  
   
-## <a name="the-principle-of-least-privilege"></a>En düşük öncelik ilkesini  
- En az ayrıcalıklı kullanıcı hesabı (LUA) yaklaşımı kullanarak bir uygulama geliştirmek için güvenlik tehditlerini tedarikle savunmacı, ayrıntılı bir stratejisinin önemli bir parçasıdır. LUA yaklaşım, kullanıcıların en düşük öncelik ilkesini izleyin ve her zaman sınırlı bir kullanıcı hesabıyla oturum sağlar. Yönetim görevleri ayrıştırılmış sabit sunucu rolleri ve kullanımını kullanarak `sysadmin` sabit sunucu rolünün ciddi bir şekilde kısıtlıdır.  
+## <a name="the-principle-of-least-privilege"></a>En az ayrıcalık Ilkesi  
+ En az ayrıcalıklı kullanıcı hesabı (LUA) yaklaşımı kullanarak bir uygulama geliştirmek, savunma ve güvenlik tehditlerine karşı derinlemesine savunma stratejisinin önemli bir parçasıdır. LUA yaklaşımı, kullanıcıların en az ayrıcalık ilkesini izlemesini ve her zaman sınırlı kullanıcı hesaplarıyla oturum açmasını sağlar. Yönetim görevleri, sabit sunucu rolleri kullanılarak bölünür ve `sysadmin` sabit sunucu rolünün kullanımı ciddi ölçüde kısıtlıdır.  
   
- Her zaman en az ayrıcalık ilkesini veritabanı kullanıcılarına izin verirken izleyin. Belirli bir görevi tamamlamak için en az bir kullanıcı veya rol için gerekli izinleri verin.  
+ Veritabanı kullanıcılarına izin verirken en az ayrıcalık ilkesini her zaman izleyin. Belirli bir görevi gerçekleştirmek için Kullanıcı veya rol için gereken en düşük izinleri verin.  
   
 > [!IMPORTANT]
->  Geliştirme ve test LUA yaklaşımı kullanarak bir uygulama geliştirme süreci için Zorluk derecesi ekler. Nesneleri oluşturmak ve bir sistem yöneticisi veya veritabanının sahibi olarak LUA hesabı kullandığından oturum açarken kod yazmak kolaydır. Ancak, en az ayrıcalıklı kullanıcıların düzgün çalışması için yükseltilmiş izinler gerektiren bir uygulamayı çalıştırmayı denediğinizde yüksek ayrıcalıklı bir hesap kullanarak uygulamaları geliştirme işlevsellik etkisini karartmak. İşlev kaybı yeniden almanız için kullanıcılara aşırı izinleri verme, uygulamanızı saldırılara açık bırakabilirsiniz. Tasarlama, geliştirme ve LUA hesabıyla oturum açıldığında uygulamanızı test etme, sürprizlerden ve hızlı düzeltme olarak yükseltilmiş ayrıcalıkları vermek dürtüsüne ortadan kaldıran güvenlik planlama disiplinli bir yaklaşım uygular. Uygulamanızı Windows kimlik doğrulaması kullanarak dağıtmak için hedeflenen bile test etmek için bir SQL Server oturumu kullanabilirsiniz.  
+> LUA yaklaşımını kullanarak bir uygulamayı geliştirmek ve test etmek, geliştirme sürecine bir zorluk derecesi ekler. Bir sistem yöneticisi veya veritabanı sahibi olarak oturum açarken, bir LUA hesabı kullandığından nesne oluşturmak ve kod yazmak daha kolay. Ancak, yüksek ayrıcalıklı bir hesap kullanan uygulamalar geliştirmek, en az ayrıcalıklı kullanıcı doğru çalışması için yükseltilmiş izinler gerektiren bir uygulamayı çalıştırmayı denediklerinde azaltılmış işlevselliğin etkisini olumsuz etkileyebilir. Kayıp işlevselliği yeniden almak için kullanıcılara aşırı izin verilmesi, uygulamanızı saldırılara karşı savunmasız bırakabilir. Bir LUA hesabıyla oturum açmış uygulamanızı tasarlamak, geliştirmek ve test etmek, önemli sürprizleri ortadan kaldıran ve hızlı bir düzeltme olarak yükseltilmiş ayrıcalıklar veren güvenlik planlamasına disiplinli bir yaklaşım uygular. Uygulamanızın Windows kimlik doğrulaması kullanılarak dağıtılması amaçlansa bile, test için SQL Server bir oturum açma kullanabilirsiniz.  
   
-## <a name="role-based-permissions"></a>Role dayalı izinleri  
- Roller yerine kullanıcı izinleri verme, güvenlik yönetimini basitleştirir. Rol atanmış izin kümeleri rolünün tüm üyelerinin tarafından devralınır. Eklemek veya ayrı izni yeniden oluşturmak için kullanıcıları tek tek ayarlar olduğundan kullanıcılar bir rolden kaldırmak daha kolaydır. Rolleri yuvalanabilir; Ancak, çok fazla iç içe geçme düzeyi performansını düşürebilir. Sabit veritabanı rollerine atama izinleri kolaylaştırmak için kullanıcıları da ekleyebilirsiniz.  
+## <a name="role-based-permissions"></a>Rol tabanlı Izinler  
+ Kullanıcılar yerine roller için izin verme güvenlik yönetimini basitleştirir. Rollere atanan izin kümeleri rolün tüm üyeleri tarafından devralınır. Bir role Kullanıcı eklemek veya bir rol kaldırmak daha kolaydır, tek tek kullanıcılar için ayrı izin kümeleri yeniden oluşturulur. Roller iç içe olabilir; Ancak, çok fazla iç içe geçme düzeyi performansı düşürebilir. Ayrıca, izin atanmasını kolaylaştırmak için, sabit veritabanı rollerine kullanıcılar ekleyebilirsiniz.  
   
- Şema düzeyinde izinler verebilirsiniz. Kullanıcıları otomatik olarak şemada oluşturulan tüm yeni nesneler izinlerini devralır; Yeni nesneler oluşturulurken izinler vermeniz gerekmez.  
+ Şema düzeyinde izin verebilirsiniz. Kullanıcılar, şemada oluşturulan tüm yeni nesnelerdeki izinleri otomatik olarak devralınır; yeni nesneler oluşturulduğundan izin vermeniz gerekmez.  
   
-## <a name="permissions-through-procedural-code"></a>Yordam kodu aracılığıyla izinler  
- Modüller aracılığıyla veri erişimi gibi şifrelenmiş saklı yordamları ve kullanıcı tanımlı işlevler, ek bir uygulama etrafında koruma katmanı sağlar. Kullanıcıların tablolar gibi temel nesneler için izinleri reddetme sırasında yalnızca saklı yordamları ve işlevleri için izinleri vererek veritabanı nesneleri ile doğrudan etkileşim öğesinden engelleyebilirsiniz. SQL Server sahiplik zinciri tarafından elde eder.  
+## <a name="permissions-through-procedural-code"></a>Yordamsal kod aracılığıyla izinler  
+ Saklı yordamlar ve Kullanıcı tanımlı işlevler gibi modüller aracılığıyla veri erişiminin kapsüllenmesi, uygulamanız etrafında ek bir koruma katmanı sağlar. Yalnızca, tablolar gibi temel nesnelerin izinlerini reddetirken yalnızca saklı yordamlara veya işlevlere izinler vererek kullanıcıların veritabanı nesneleriyle doğrudan etkileşimde olmasını engelleyebilirsiniz. SQL Server sahiplik zincirleyerek bunu elde eder.  
   
-## <a name="permission-statements"></a>İzni deyimleri  
- Üç Transact-SQL izni ifade aşağıdaki tabloda açıklanmıştır.  
+## <a name="permission-statements"></a>İzin deyimleri  
+ Üç Transact-SQL izin deyimleri aşağıdaki tabloda açıklanmıştır.  
   
-|İzni deyimi|Açıklama|  
+|İzin ekstresi|Açıklama|  
 |--------------------------|-----------------|  
-|VERME|Bir izin verir.|  
-|İPTAL ETME|İzni iptal eder. Bu yeni nesnenin varsayılan durumudur. Bir kullanıcı ya da rol iptal izin hala diğer grupların veya rollerin asıl atandığı devralınabilir.|  
-|REDDET|Böylece, devralınamaz REDDET izni iptal eder. REDDETME önceliklidir tüm izinleri REDDET nesnesine sahip veya üye için geçerli değildir dışında `sysadmin`. Reddederse, nesnenin izinlerini `public` reddedilen tüm kullanıcılar ve roller nesne sahipleri dışında rolü ve `sysadmin` üyeleri.|  
+|SEMANTIĞI|İzin verir.|  
+|HEDEFINI|Bir izni iptal eder. Bu, yeni bir nesnenin varsayılan durumudur. Bir kullanıcı veya rolden iptal edilen izin, hala asıl rolün atandığı diğer gruplardan veya rollerden devralınabilir.|  
+|REDDEDEBILIR|REDDETME, devralınmaması için bir izni iptal eder. Reddet, ' nin nesne sahipleri veya üyeleri için uygulanmadığından, tüm izinlerin önünde `sysadmin`önceliklidir. Bir nesne üzerindeki izinleri bir `public` rol için reddetmeniz durumunda, nesne sahipleri ve `sysadmin` üyeleri hariç tüm kullanıcılar ve roller için reddedilir.|  
   
-- Verme deyimi, bir Grup ya da veritabanı kullanıcıları tarafından devralınan rol izinleri atayabilirsiniz. Ancak, verme deyimi, tüm diğer iznini deyimlerinden öncelik kazanır. Bu nedenle, izin verilmeyen bir kullanıcı başka bir rolden devralamaz.  
-  
-> [!NOTE]
->  Üyeleri `sysadmin` sabit sunucu rolü ve nesne sahipleri izinler reddedildi olamaz.  
-  
-## <a name="ownership-chains"></a>Sahipliği zincirleri  
- SQL Server, izin verilen sorumluları nesneleri erişebilmesini sağlar. Birden çok veritabanı nesneleri arasındaki ilişki eriştiğinizde dizisi zinciri olarak bilinir. SQL Server bağlantıları zincirindeki geçiş yapma, her öğe ayrı olarak erişimi durumunda olduğu daha da izinleri farklı değerlendirir. Bir nesne bir domainproperty'leri erişildiğinde, SQL Server ilk nesnenin sahibi çağrı nesnesi (önceki bağlantı zincirindeki) sahibine karşılaştırır. Her iki nesnenin aynı sahibi varsa, başvurulan nesnenin izinlerini denetlenmez. Nesneyi farklı bir sahibi olan başka bir nesneye eriştiğinde, sahiplik zinciri kopmuş ve SQL Server, arayanın güvenlik bağlamı denetlemeniz gerekir.  
-  
-## <a name="procedural-code-and-ownership-chaining"></a>Yordam kodu ve sahiplik zinciri  
- Bir kullanıcı bir tablodan veri seçen bir saklı yordam Yürütme izinleri verilir varsayalım. Saklı yordamı ve tabloyu aynı sahibi varsa, kullanıcı tablosunda herhangi bir izni verilmesi gerekmez ve izinleri engellenebilir. Ancak, saklı yordamı ve tabloyu farklı sahipleri varsa, SQL Server verileri için erişime izin vermeden önce kullanıcının izinlerini tablosunda denetlemelisiniz.  
+- GRANT deyimleri, veritabanı kullanıcıları tarafından devralınabilir bir gruba veya role izin atayabilir. Ancak reddetme deyimi diğer tüm izin deyimlerine göre önceliklidir. Bu nedenle, izin reddedilmiş bir Kullanıcı başka bir rolden onu alamaz.  
   
 > [!NOTE]
->  Sahiplik zinciri, dinamik SQL deyimleri söz konusu olduğunda geçerli değildir. SQL deyimini yürütür bir yordam çağırmak için çağırana temel alınan tablolar üzerindeki izinleri uygulamanızı SQL ekleme saldırısına karşı savunmasız bırakır verilmesi gerekir. SQL Server, kimliğe bürünme ve temel alınan tablolar izin verme gerektirmeyen sertifikaları modülleriyle imzalama gibi yeni bir mekanizma sağlar. Bunlar, CLR saklı yordamları ile de kullanılabilir.  
+> `sysadmin` Sabit sunucu rolü ve nesne sahiplerinin üyelerine izin verilmez.  
+  
+## <a name="ownership-chains"></a>Sahiplik zincirleri  
+ SQL Server, yalnızca izin verilen sorumlular nesnelere erişebilmesini sağlar. Birden çok veritabanı nesnesi birbirlerine erişebildiğinde, dizi bir zincir olarak bilinir. SQL Server zincirdeki bağlantılardan geçiş yaparken, izinleri her öğeye ayrı olarak erişeceklerinden farklı şekilde değerlendirir. Bir nesne bir zincir aracılığıyla erişildiğinde, SQL Server önce nesnenin sahibini çağıran nesnenin sahibine (zincirdeki önceki bağlantı) karşılaştırır. Her iki nesne de aynı sahibe sahip ise, başvurulan nesne üzerindeki izinler denetlenmez. Bir nesne farklı bir sahibe sahip olan başka bir nesneye eriştiğinde, sahiplik zinciri bozulur ve SQL Server çağıranın güvenlik bağlamını denetlemesi gerekir.  
+  
+## <a name="procedural-code-and-ownership-chaining"></a>Yordamsal kod ve sahiplik zinciri  
+ Bir kullanıcıya, bir tablodaki verileri seçen saklı yordamda yürütme izinleri verildiğini varsayalım. Saklı yordam ve tablo aynı sahibe sahip ise, kullanıcıya tablo üzerinde herhangi bir izin verilmesi gerekmez, hatta izin reddedilebilir. Ancak, saklı yordamın ve tablonun farklı sahipleri varsa, verilere erişim izni vermeden önce SQL Server kullanıcının tablodaki izinlerini denetlemesi gerekir.  
+  
+> [!NOTE]
+> Dinamik SQL deyimleri söz konusu olduğunda sahiplik zinciri uygulanmaz. Bir SQL ifadesini yürüten bir yordamı çağırmak için, çağıran tablo üzerinde izin verilmelidir ve uygulamanızı SQL ekleme saldırısına karşı savunmasız bırakır. SQL Server, ilişkili tablolarda izin verilmesini gerektirmeyen sertifikalarla kimliğe bürünme ve imzalama modülleri gibi yeni mekanizmalar sağlar. Bunlar, CLR saklı yordamları ile de kullanılabilir.  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[İzinler](/sql/relational-databases/security/permissions-database-engine)|İzinleri hiyerarşi, Katalog görünümleri ve sabit sunucu ve veritabanı rolleri, izinler açıklayan konuları içerir.|
+|[İzinler](/sql/relational-databases/security/permissions-database-engine)|İzin hiyerarşisini, katalog görünümlerini ve sabit sunucu ve veritabanı rollerinin izinlerini açıklayan konuları içerir.|
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -65,4 +65,4 @@ Veritabanı nesneleri oluşturma, açıkça kullanıcılar için erişilebilir h
 - [SQL Server’da Kimlik Doğrulaması](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [SQL Server’da Sunucu ve Veritabanı Rolleri](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
 - [SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

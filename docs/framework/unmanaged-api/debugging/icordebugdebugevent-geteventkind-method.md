@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: c37aaceb-c948-46bd-a943-08be4cbb76f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdbc320e13e0cb140f5ef7aa63b878b43ca0189b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a87dda8d8a263df1989a685d94c5163212f41382
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750057"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911335"
 ---
 # <a name="icordebugdebugeventgeteventkind-method"></a>ICorDebugDebugEvent::GetEventKind Yöntemi
-Bu olay türünü gösterir `ICorDebugDebugEvent` nesnesini temsil eder.  
+Bu `ICorDebugDebugEvent` nesnenin ne tür bir olayın temsil ettiğini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,23 +23,23 @@ HRESULT GetEventKind(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
- pDebugEventKind  
- Bir işaretçi bir [CorDebugDebugEventKind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) olay türünü belirten sabit listesi üyesi.  
+ Pıbu Geventkind  
+ Olayın türünü gösteren bir [Cordebugdebugger Geventkind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) numaralandırma üyesine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değerine göre `pDebugEventKind`, çağırabilirsiniz `QueryInterface` ek veriler içeren daha kesin bir hata ayıklama olay arabirimi alınamıyor.  
+ Değerine `pDebugEventKind`bağlı olarak, ek verilere sahip daha kesin `QueryInterface` bir hata ayıklama olay arabirimi almak için öğesini çağırabilirsiniz.  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

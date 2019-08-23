@@ -6,36 +6,36 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 61324bbc5ea07dd19e23589bfc90f9ea44a6b331
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c2567b6abd42ae725b4786eb111e411f7328154e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880179"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939795"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Nasıl yapılır: ASP.NET Üyelik Sağlayıcısını Kullanma
-ASP.NET üyelik sağlayıcısı benzersiz kullanıcı adı ve parola birleşimlerini oluşturmak için kullanıcıların Web siteleri oluşturmak ASP.NET geliştiricilerinin sağlayan bir özelliktir. Bu özelliği sayesinde, herhangi bir kullanıcı sitesine sahip bir hesabı oluşturabilir ve site ve Hizmetleri özel erişim için oturum açın. Kullanıcıların hesaplarını bir Windows etki alanına sahip olmasını gerektiren Windows Güvenlik aksine budur. Bunun yerine, kendi kimlik bilgilerini (kullanıcı adı/parola birleşimini) karşılayan herhangi bir kullanıcı, site ve hizmetlerini kullanabilirsiniz.  
+ASP.NET üyelik sağlayıcısı, ASP.NET geliştiricilerinin kullanıcıların benzersiz Kullanıcı adı ve parola bileşimleri oluşturmalarına izin veren Web siteleri oluşturmalarına olanak tanıyan bir özelliktir. Bu tesisle, tüm kullanıcılar sitesiyle bir hesap oluşturabilir ve siteye ve hizmetlerine özel erişim için oturum açabilir. Bu, kullanıcıların bir Windows etki alanında hesapları olmasını gerektiren Windows Güvenliği ' ne farklıdır. Bunun yerine, kimlik bilgilerini (Kullanıcı adı/parola bileşimi) sağlayan tüm kullanıcılar siteyi ve hizmetlerini kullanabilir.  
   
- Örnek bir uygulama için bkz: [üyelik ve rol sağlayıcısı](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). ASP.NET rol sağlayıcısını özelliğini kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: ASP.NET rol sağlayıcısını bir hizmetle kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
+ Örnek bir uygulama için bkz. [Üyelik ve rol sağlayıcısı](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). ASP.NET rol sağlayıcısı özelliğini kullanma hakkında daha fazla bilgi için bkz [. nasıl yapılır: ASP.NET rol sağlayıcısını bir hizmetle](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)birlikte kullanın.  
   
- Üyelik özelliği, kullanıcı bilgilerini depolamak için SQL Server veritabanı kullanma gerektirir. Bu özellik ayrıca parolasını unutmuş kullanıcılar soru sormak için yöntemler içerir.  
+ Üyelik özelliği, Kullanıcı bilgilerini depolamak için bir SQL Server veritabanı kullanılmasını gerektirir. Bu özellik ayrıca, parolasını unutduğunuz tüm kullanıcılar için soru sorma yöntemleri içerir.  
   
- Windows Communication Foundation (WCF) geliştiriciler güvenlik amacıyla bu özelliklerden yararlanabilirsiniz. Bir WCF uygulamaya entegre edildiğinde, kullanıcılar WCF istemci uygulaması için bir kullanıcı adı/parola birleşimini sağlamanız gerekir. WCF hizmetine veri aktarmak için kullanıcı adı/parola kimlik bilgileri gibi destekleyen bir bağlama kullanın <xref:System.ServiceModel.WSHttpBinding> (yapılandırmada [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) ve istemci kimlik bilgisi türü içinayarlayın`UserName`. Hizmet WCF güvenlik kullanıcı adı ve parolasına dayalı kullanıcının kimliğini doğrular ve ayrıca ASP.NET rol tarafından belirtilen rolü atar.  
+ Windows Communication Foundation (WCF) geliştiricileri, güvenlik amacıyla bu özelliklerden yararlanabilir. Bir WCF uygulamasıyla tümleştirildiğinde, kullanıcıların WCF istemci uygulamasına bir Kullanıcı adı/parola bileşimi sağlaması gerekir. Verileri WCF hizmetine aktarmak için, <xref:System.ServiceModel.WSHttpBinding> (yapılandırmada `UserName` [ \<, WSHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) gibi Kullanıcı adı/parola kimlik bilgilerini destekleyen bir bağlama kullanın ve istemci kimlik bilgileri türünü olarak ayarlayın. Hizmette, WCF güvenliği kullanıcının kimliğini Kullanıcı adı ve parolaya göre doğrular ve ayrıca ASP.NET rolü tarafından belirtilen rolü de atar.  
   
 > [!NOTE]
->  WCF kullanıcı adı/parola birleşimleri veritabanıyla veya diğer kullanıcı bilgilerini doldurmak için bir yöntem sağlamaz.  
+> WCF, veritabanını Kullanıcı adı/parola birleşimleri veya diğer kullanıcı bilgileriyle doldurmak için yöntemler sağlamaz.  
   
-### <a name="to-configure-the-membership-provider"></a>Üyelik sağlayıcısı yapılandırmak için  
+### <a name="to-configure-the-membership-provider"></a>Üyelik sağlayıcısını yapılandırmak için  
   
-1. Web.config dosyasında altında <`system.web`> öğesi oluşturmak bir <`membership`> öğesi.  
+1. Web. config dosyasında, <`system.web`> öğesi altında, bir <`membership`> öğesi oluşturun.  
   
-2. Altında `<membership>` öğesi oluşturmak bir `<providers>` öğesi.  
+2. Öğesi altında bir `<providers>` öğesi oluşturun. `<membership>`  
   
-3. Alt öğesi olarak <`providers`> öğesini ekleyin bir `<clear />` sağlayıcıları koleksiyonunu temizlemek için öğesi.  
+3. <`providers`> Öğesinin bir alt öğesi olarak, sağlayıcı koleksiyonunu temizlemek `<clear />` için bir öğe ekleyin.  
   
-4. Altında `<clear />` öğesi oluşturmak bir <`add`> öğesi aşağıdaki özniteliklerle uygun değerlere ayarlayın: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, ve `passwordFormat`. `name` Özniteliği kullanılır daha sonra yapılandırma dosyasındaki bir değer olarak. Aşağıdaki örnek ayarlar `SqlMembershipProvider`.  
+4. `connectionStringName` `name` `enablePasswordRetrieval` `requiresQuestionAndAnswer` Öğesialtında`applicationName`, aşağıdaki öznitelikleri uygun değerlere`add`ayarlanmış bir < > öğesi oluşturun:, `type`,,,, `enablePasswordReset`, `<clear />` , `requiresUniqueEmail`ve .`passwordFormat` `name` Özniteliği daha sonra yapılandırma dosyasında bir değer olarak kullanılır. Aşağıdaki örnek olarak `SqlMembershipProvider`ayarlanır.  
   
-     Aşağıdaki örnekte, yapılandırma bölümü gösterilmektedir.  
+     Aşağıdaki örnek yapılandırma bölümünü gösterir.  
   
     ```xml  
     <!-- Configure the Sql Membership Provider -->  
@@ -56,17 +56,17 @@ ASP.NET üyelik sağlayıcısı benzersiz kullanıcı adı ve parola birleşimle
     </membership>  
     ```  
   
-### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>Hizmet güvenliği kullanıcı adı/parola birleşimini kabul edecek şekilde yapılandırmak için  
+### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>Hizmet güvenliğini Kullanıcı adı/parola birleşimini kabul edecek şekilde yapılandırmak için  
   
-1. Yapılandırma dosyasında altında [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) öğe, Ekle bir [ \<bağlamaları >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) öğesi.  
+1. Yapılandırma dosyasında, [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) öğesinin altında bir [ \<Bindings >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) öğesi ekleyin.  
   
-2. Ekleme bir [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) bağlamalar bölümü için. Bir WCF bağlama öğesi oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Yapılandırmada hizmet bağlaması belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2. Bağlamalar bölümüne bir [ \<WSHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ekleyin. WCF bağlama öğesi oluşturma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Yapılandırmada](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)bir hizmet bağlaması belirtin.  
   
 3. Ayarlama `mode` özniteliği `<security>` öğesine `Message`.  
   
-4. Ayarlama `clientCredentialType` özniteliği <`message`> öğesine `UserName`. Bu, istemcinin kimlik bilgisi olarak bir kullanıcı adı/parola çift kullanılacak belirtir.  
+4. `UserName`< `clientCredentialType` >Öğesininözniteliğiniolarakayarlayın`message`. Bu, bir Kullanıcı adı/parola çiftinin istemci kimlik bilgileri olarak kullanılacağını belirtir.  
   
-     Aşağıdaki örnek, bağlama için yapılandırma kodu gösterir.  
+     Aşağıdaki örnek, bağlamanın yapılandırma kodunu gösterir.  
   
     ```xml  
     <system.serviceModel>  
@@ -83,24 +83,24 @@ ASP.NET üyelik sağlayıcısı benzersiz kullanıcı adı ve parola birleşimle
     </system.serviceModel>  
     ```  
   
-### <a name="to-configure-a-service-to-use-the-membership-provider"></a>Bir hizmeti üyelik sağlayıcıyı kullanacak şekilde yapılandırmak için  
+### <a name="to-configure-a-service-to-use-the-membership-provider"></a>Üyelik sağlayıcısını kullanmak üzere bir hizmeti yapılandırmak için  
   
-1. Alt öğesi olarak `<system.serviceModel>` öğe, Ekle bir [ \<davranışları >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) öğesi  
+1. `<system.serviceModel>` Öğesi için alt öğe olarak, [ \<> bir davranış](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) ekleyin  
   
-2. Ekleme bir [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) için <`behaviors`> öğesi.  
+2. <`behaviors`> Öğesine bir [ \<servicedavranışlar >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) ekleyin.  
   
-3. Ekleme bir [ \<davranışı >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) ayarlayıp `name` özniteliği için uygun bir değer.  
+3. `name` [ Bir\<davranış >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) ekleyin ve özniteliği uygun bir değere ayarlayın.  
   
-4. Ekleme bir [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) için <`behavior`> öğesi.  
+4. <`behavior`> Öğesine bir [ \<ServiceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) ekleyin.  
   
-5. Ekleme bir [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) için `<serviceCredentials>` öğesi.  
+5. `<serviceCredentials>` Öğesine bir [ \<UserNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) ekleyin.  
   
-6. Ayarlama `userNamePasswordValidationMode` özniteliğini `MembershipProvider`.  
+6. `userNamePasswordValidationMode` Özniteliğini olarak`MembershipProvider`ayarlayın.  
   
     > [!IMPORTANT]
-    >  Varsa `userNamePasswordValidationMode` değeri ayarlanmazsa, WCF, Windows kimlik doğrulaması yerine ASP.NET üyelik sağlayıcısını kullanır.  
+    >  `userNamePasswordValidationMode` Değer ayarlanmamışsa, WCF ASP.NET üyelik sağlayıcısı yerine Windows kimlik doğrulamasını kullanır.  
   
-7. Ayarlama `membershipProviderName` özniteliği için (Bu konunun ilk yordamındaki sağlayıcı eklerken belirtilir) sağlayıcısının adı. Aşağıdaki örnekte gösterildiği `<serviceCredentials>` bu noktaya parça.  
+7. `membershipProviderName` Özniteliğini sağlayıcının adına ayarlayın (Bu konunun ilk yordamında sağlayıcı eklenirken belirtilir). Aşağıdaki örnek bu noktaya olan `<serviceCredentials>` parçayı gösterir.  
   
     ```xml  
     <behaviors>  
@@ -117,7 +117,7 @@ ASP.NET üyelik sağlayıcısı benzersiz kullanıcı adı ve parola birleşimle
     ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, ASP üyelik özelliğini kullanan bir hizmet yapılandırmasını gösterir.  
+ Aşağıdaki kod, ASP üyeliği özelliğini kullanan bir hizmetin yapılandırmasını gösterir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

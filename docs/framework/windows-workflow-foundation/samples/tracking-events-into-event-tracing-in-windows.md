@@ -2,88 +2,88 @@
 title: Windows'ta Olay İzleme ile Olayları İzleme
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: d3afc04fec996f4e24eb6e5ad771886480cd9cb9
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 48ffbbb8ccac34c5eb605edc4aab17d0e2b3499e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491047"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922918"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows'ta Olay İzleme ile Olayları İzleme
-Bu örnek, Windows Workflow Foundation (WF) iş akışı hizmeti izleme etkinleştirme ve izleme olayları, olay izleme için Windows (ETW) yayma gösterir. Örnek iş akışı ETW kayıtları izleme yaymak için ETW İzleme katılımcı kullanır (<xref:System.Activities.Tracking.EtwTrackingParticipant>).
+Bu örnek, bir iş akışı hizmetinde Windows Workflow Foundation (WF) izlemenin nasıl etkinleştirileceğini ve izleme olaylarının Windows için olay Izleme 'ye (ETW) nasıl görüntüleneceğini gösterir. İş akışı izleme kayıtlarını ETW 'ye yaymak için örnek ETW izleme katılımcısını (<xref:System.Activities.Tracking.EtwTrackingParticipant>) kullanır.
 
- Örnek iş akışında bir istek alırsa, giriş verilerinin karşıtını giriş değişkenine atar ve istemciye karşılıklı geri döndürür. Giriş verilerini 0 olduğunda sıfır özel durum ile bir bölme, işlenmemiş oluşan iptal etmek iş akışının sağlar. Etkin izleme ile hata izleme kaydının daha sonra hata gidermenize yardımcı olacak ETW yayılır. ETW İzleme katılımcı abone izleme kayıtları için bir izleme profili ile yapılandırılır. İzleme profili Web.config dosyasında tanımlanır ve ETW İzleme katılımcı için bir yapılandırma parametresi sağlanan. ETW İzleme katılımcı iş akışı hizmetinin Web.config dosyasında yapılandırılmış ve hizmeti bir hizmet davranışı olarak uygulanır. Bu örnekte, Olay Görüntüleyicisi'ni kullanarak olay günlüğüne izleme olayları görüntüleyin.
+ Örnekteki iş akışı bir istek alır, girdi verilerinin tersini giriş değişkenine atar ve istemciye geri dönüş döndürür. Giriş verileri 0 olduğunda, bu, iş akışının iptal edilmesine neden olan işlenmemiş bir sıfıra bölme özel durumu oluşur. İzleme etkinken, hata izleme kaydı ETW 'ye yayılır ve bu, daha sonra hatanın giderilmesine yardımcı olabilir. ETW izleme katılımcısı, kayıtları izlemeye abone olmak için bir izleme profili ile yapılandırılır. İzleme profili, Web. config dosyasında tanımlanır ve ETW izleme katılımcısı için bir yapılandırma parametresi olarak sağlanır. ETW izleme katılımcısı, iş akışı hizmetinin Web. config dosyasında yapılandırılır ve hizmet olarak hizmet davranışı olarak uygulanır. Bu örnekte, Olay Görüntüleyicisi kullanarak olay günlüğündeki izleme olaylarını görüntüleyebilirsiniz.
 
-## <a name="workflow-tracking-details"></a>İş Akışı İzleme Ayrıntıları
- Windows Workflow Foundation iş akışı örneği yürütülmesini izlemek için izleme altyapısı sağlar. İzleme çalışma zamanı olaylarını, iş akışı yaşam döngüsü için iş akışı etkinlikleri ve özel olaylar ilgili olayları yaymak için bir iş akışı örneği oluşturur. Aşağıdaki tabloda birincil izleme altyapısının bileşenleri ayrıntıları.
+## <a name="workflow-tracking-details"></a>İş akışı Izleme ayrıntıları
+ Windows Workflow Foundation, bir iş akışı örneğinin yürütülmesini izlemek için bir izleme altyapısı sağlar. İzleme çalışma zamanı, iş akışı kullanım ömrü, iş akışı etkinliklerinin olayları ve özel etkinliklerle ilgili olayları göstermek için bir iş akışı örneği oluşturur. Aşağıdaki tabloda izleme altyapısının birincil bileşenleri ayrıntılı olarak verilmiştir.
 
 |Bileşen|Açıklama|
 |---------------|-----------------|
-|Çalışma zamanı izleme|İzleme kayıtları yaymak için altyapı sağlar.|
-|İzleme katılımcıları|İzleme kayıtları erişir. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] izleme kayıtları için olay izleme Windows (ETW) olayları olarak yazan bir izleme katılımcı birlikte verilir.|
-|İzleme profili|Bir iş akışı örneğinden yayılan izleme kayıtları bir alt kümesi için abone olmak izleme Katılımcısı sağlayan bir filtreleme mekanizması.|
+|Çalışma zamanını izleme|İzleme kayıtlarını yaymakta olan altyapıyı sağlar.|
+|Katılımcıları izleme|İzleme kayıtlarına erişir. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]izleme kayıtlarını Windows için olay Izleme (ETW) olayları olarak yazan bir izleme katılımcısına sahip olarak gelir.|
+|İzleme profili|Bir iş akışı örneğinden yayılan izleme kayıtlarının bir alt kümesi için bir izleme katılımcısının abone olmasına izin veren bir filtreleme mekanizması.|
 
- Aşağıdaki tabloda, iş akışı çalışma zamanı yayan izleme kayıtları ayrıntıları.
+ Aşağıdaki tabloda iş akışı çalışma zamanının yaydığı izleme kayıtlarının ayrıntıları verilmiştir.
 
-|Kayıt izleme|Açıklama|
+|İzleme kaydı|Açıklama|
 |---------------------|-----------------|
-|İş akışı örneği izleme kayıtları.|İş akışı örneği yaşam döngüsü açıklar. Örneğin, iş akışı başlatıldığında veya tamamlanan bir örnek kaydı yayınlanır.|
-|Etkinlik durumu izleme kayıtları.|Etkinlik yürütme ayrıntıları. Bu kayıtlar, bir etkinlik olduğunda zamanlanmış etkinlik tamamlandığında veya bir hata harekete geçirildiğinde gibi bir iş akışı etkinlik durumunu gösterir.|
-|Sürdürme kayıt yer işareti.|Her bir iş akışı örneği içinde yer sürdürüldü yayılır.|
-|Özel izleme kayıtları.|Bir iş akışı Yazar özel izleme kayıtları oluşturabilir ve bunları özel bir etkinlik içinde gösterin.|
-|<xref:System.Activities.Tracking.ActivityScheduledRecord>|Bu kayıt, bir etkinlik başka bir etkinlik zamanlarken yayınlanır.|
-|<xref:System.Activities.Tracking.FaultPropagationRecord>|Bu kayıt, bir hata etkinliği yayıldığında yayınlanır.|
-|<xref:System.Activities.Tracking.CancelRequestedRecord>|Bu kayıt, başka bir etkinlik tarafından bir etkinlik iptal edildiğinde yayınlanır.|
+|İş akışı örneği izleme kayıtları.|İş akışı örneğinin yaşam döngüsünü açıklar. Örneğin, iş akışı başladığında veya tamamlandığında bir örnek kayıt yayınlanır.|
+|Etkinlik durumu izleme kayıtları.|Ayrıntıları etkinlik yürütmesi. Bu kayıtlar, bir etkinliğin zamanlandığı veya etkinliğin ne zaman tamamlandığı ya da bir hata oluşturulduğu zaman gibi bir iş akışı etkinliğinin durumunu gösterir.|
+|Bookmark sürdürme kaydı.|Bir iş akışı örneği içindeki bir yer işareti kaldığı zaman yayınlanır.|
+|Özel izleme kayıtları.|Bir iş akışı yazarı özel izleme kayıtları oluşturabilir ve bunları özel etkinlik içinde yayabilir.|
+|<xref:System.Activities.Tracking.ActivityScheduledRecord>|Bir etkinlik başka bir etkinliği zamanlıyor ise bu kayıt yayınlanır.|
+|<xref:System.Activities.Tracking.FaultPropagationRecord>|Bu kayıt, bir etkinliğin bir hata yayıldığında yayılır.|
+|<xref:System.Activities.Tracking.CancelRequestedRecord>|Bu kayıt, bir etkinlik başka bir etkinlik tarafından iptal edildiğinde yayınlanır.|
 
- İzleme profilleri kullanarak yayılan izleme kayıtları bir alt kümesi için izleme katılımcı abone. Bir izleme profili belirli izleme kayıt türü için abone izin izleme sorguları içerir. İzleme profilleri kod veya yapılandırma belirtilebilir.
+ İzleme, izleme profilleri kullanılarak, yayılan izleme kayıtlarının bir alt kümesi için abone olur. Bir izleme profili, belirli bir izleme kayıt türü için abone 'e izin veren izleme sorguları içerir. İzleme profilleri kodda veya yapılandırmada belirtilebilir.
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1. Visual Studio 2010 kullanarak EtwTrackingParticipantSample.sln çözüm dosyasını açın.
+1. Visual Studio 2010 kullanarak EtwTrackingParticipantSample. sln çözüm dosyasını açın.
 
 2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
 
-3. Çözümü çalıştırmak için F5 tuşuna basın.
+3. Çözümü çalıştırmak için F5 'e basın.
 
-     Varsayılan olarak, hizmet bağlantı noktasını 53797 dinlediğini (http://localhost:53797/SampleWorkflowService.xamlx).
+     Hizmet, varsayılan olarak 53797 http://localhost:53797/SampleWorkflowService.xamlx) numaralı bağlantı noktasını dinler.
 
-4. Dosya Gezgini'ni kullanarak WCF test İstemcisi'ni açın.
+4. Dosya Gezgini 'ni kullanarak WCF test istemcisini açın.
 
-     WCF test istemcisi (WcfTestClient.exe) bulunan \<Visual Studio 2010 yükleme klasörü > \Common7\IDE\ klasör.
+     WCF Test istemcisi (WcfTestClient. exe), \<Visual Studio 2010 yükleme klasörü > \Common7\IDE\ klasöründe bulunur.
 
-     Varsayılan Visual Studio 2010 yükleme klasörü C:\Program Files\Microsoft Visual Studio 10.0 ' dir.
+     Varsayılan Visual Studio 2010 yükleme klasörü C:\Program Files\Microsoft Visual Studio 10,0 ' dir.
 
-5. WCF test İstemcisi'nde seçin **Hizmet Ekle** gelen **dosya** menüsü.
+5. WCF test istemcisinde **Dosya** menüsünden **Hizmet Ekle** ' yi seçin.
 
-     Uç nokta adresi giriş kutusuna ekleyin. Varsayılan, `http://localhost:53797/SampleWorkflowService.xamlx` değeridir.
+     Giriş kutusuna uç nokta adresini ekleyin. Varsayılan, `http://localhost:53797/SampleWorkflowService.xamlx` değeridir.
 
 6. Olay Görüntüleyici uygulamasını açın.
 
-     Hizmeti'ni çağırmadan önce Olay Görüntüleyicisi'ni Başlat **Başlat** menüsünde **çalıştırma** ve yazın `eventvwr.exe`. İş akışı hizmetinden yayılan olayları izlemek için olay günlüğüne dinlediğinden emin olun.
+     Hizmeti çağırmadan önce, **Başlat** menüsünden Olay Görüntüleyicisi başlatın, **Çalıştır** ' ı seçin `eventvwr.exe`ve yazın. Olay günlüğünün, iş akışı hizmetinden yayılan izleme olaylarını dinlediğinden emin olun.
 
-7. Olay Görüntüleyicisi'nin ağaç görünümünde gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, ve **Microsoft**. Sağ **Microsoft** seçip **görünümü** ve ardından **Analitik ve hata ayıklama günlüklerini göster** analitik etkinleştirmek ve hata ayıklama günlükleri için
+7. Olay Görüntüleyicisi ağaç görünümünde **Olay Görüntüleyicisi**, **uygulamalar ve hizmet günlükleri**ve **Microsoft**' a gidin. Analitik ve hata ayıklama günlüklerini etkinleştirmek için **Microsoft** 'a sağ tıklayın ve **Görünüm** ' ü seçin ve ardından **analitik ve hata ayıklama günlüklerini göster**
 
-     Emin **Analitik ve hata ayıklama günlüklerini göster** seçeneği denetlenir.
+     **Analitik ve hata ayıklama günlüklerini göster** seçeneğinin işaretli olduğundan emin olun.
 
-8. Olay Görüntüleyicisi'nde ağaç görünümünde gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**,  **Uygulama uygulamalarının**. Sağ **analitik** seçip **günlüğü etkinleştir** etkinleştirmek için **analitik** günlük.
+8. Olay Görüntüleyicisi 'daki ağaç görünümünde **Olay Görüntüleyicisi**, **uygulamalar ve hizmetler günlükleri**, **Microsoft**, **Windows**, **uygulama sunucusu-uygulamalar**' a gidin. Analitik günlüğü etkinleştirmek için analiz ' e sağ tıklayın ve **günlüğü etkinleştir** ' i seçin.
 
-9. Çift tıklayarak WCF test İstemcisi'ı kullanarak hizmeti test `GetData`.
+9. Hizmeti çift tıklayarak `GetData`WCF test istemcisini kullanarak test edin.
 
-     Bu açılır `GetData` yöntemi. İstek bir parametreyi kabul eden ve varsayılan değer 0, olmasını sağlar.
+     Bu, `GetData` yöntemini açar. İstek bir parametre kabul eder ve değerin varsayılan değer olan 0 olmasını sağlar.
 
-     Tıklayın **çağırma**.
+     **Çağır**' a tıklayın.
 
-10. Yayılan olayları gözlemektir.
+10. İş akışından yayılan olayları gözlemleyin.
 
-     Olay Görüntüleyicisi'ne geçin ve gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**,  **Uygulama uygulamalarının**. Sağ **analitik** seçip **Yenile**.
+     Olay Görüntüleyicisi dönün ve **Olay Görüntüleyicisi**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama sunucusu-uygulamalar**' a gidin. **Analitik** ' e sağ tıklayın ve **Yenile**' yi seçin.
 
-     İş akışı olayları Olay Görüntüleyicisi'nde görüntülenir. İş akışı yürütme olayları görüntülenir ve bunlardan birinin iş akışı hataya karşılık gelen işlenmeyen bir özel durum olduğuna dikkat edin. Ayrıca, bir uyarı olayı etkinliği bir hata atma olduğunu gösteren iş akışı etkinliklerine ilişkin yayılır.
+     İş akışı olayları Olay Görüntüleyicisi 'nde görüntülenir. İş akışı yürütme olaylarının görüntülendiğini ve bunlardan birinin iş akışındaki hataya karşılık gelen işlenmemiş bir özel durum olduğunu unutmayın. Ayrıca, etkinliğin bir hata yaptığını gösteren bir uyarı olayı iş akışı etkinliğinden yayınlanır.
 
-11. Adım 9 ve 10 veri 0 dışında bir giriş ile hata oluşturulmayacak şekilde yineleyin.
+11. 9 ve 10 arasındaki adımları 0 dışında bir veri girişi ile tekrarlayın, böylece herhangi bir hata oluşturulmaz.
 
- İzleme profilleri, bir iş akışı örneği durumu değiştiğinde yayılan çalışma zamanı tarafından iş olaylarına abone olma olanak tanır. İzleme gereksinimlerinize bağlı olarak çok kaba bir profili oluşturabilmeniz için bir iş akışı üzerinde üst düzey durum değişikliklerini küçük bir kümesi için abone olur. Öte yandan, çıktısı yürütme daha sonra yeniden oluşturmak için zengin çok hassas bir profil oluşturabilirsiniz. Örnek iş akışı çalışma zamanını şuradan ETW kullanmaya yayılan olayları gösterir `HealthMonitoring Tracking Profile`, olayları küçük bir dizi yayar. Daha fazla iş akışı olayları izleme yayan farklı bir profil de adlı Web.config sağlanır `Troubleshooting Tracking Profile`. Zaman [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] olan yüklü, boş bir ada sahip bir varsayılan profili Machine.config dosyasında yapılandırılır. Bu profil davranışını yapılandırma profili adı yok ya da boş bir profil adı belirtildiğinde, izleme, ETW tarafından kullanılır.
+ İzleme profilleri, iş akışı örneği durumu değiştiğinde çalışma zamanı tarafından yayılan olaylara abone olmanızı sağlar. İzleme gereksinimlerinize bağlı olarak, bir iş akışında küçük bir üst düzey durum değişikliği kümesine abone olan çok kaba bir profil oluşturabilirsiniz. Öte yandan, çıkış daha sonra yürütmeyi yeniden oluşturmak için yeterince zengin olan çok kesin bir profil oluşturabilirsiniz. Örnek, iş akışı çalışma zamanından, küçük bir olay kümesi sunan kullanılarak `HealthMonitoring Tracking Profile`ETW 'ye yayılan olayları gösterir. Adlı `Troubleshooting Tracking Profile`Web. config dosyasında daha fazla iş akışı izleme olayı sağlayan farklı bir profil de sağlanır. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] Yüklendiğinde, Machine. config dosyasında boş ada sahip bir varsayılan profil yapılandırılır. Bu profil, hiçbir profil adı veya boş profil adı belirtilmediğinde ETW izleme davranışı yapılandırması tarafından kullanılır.
 
- Sistem durumu izleme profili izleme, iş akışı örneği kayıtları ve etkinlik hata yayma kayıtları gösterir. Bu profil, aşağıdaki izleme profili Web.config yapılandırma dosyasına ekleyerek oluşturulur.
+ Sistem durumu izleme izleme profili, iş akışı örneği kayıtları ve etkinlik hatası yayma kayıtlarını yayar. Bu profil, bir Web. config yapılandırma dosyasına aşağıdaki izleme profili eklenerek oluşturulur.
 
 ```xml
 <<tracking>
@@ -109,7 +109,7 @@ Bu örnek, Windows Workflow Foundation (WF) iş akışı hizmeti izleme etkinle�
 </tracking>
 ```
 
- Profil değiştirerek değiştirilebilir `EtwTrackingParticipant` aşağıdaki yapılandırma.
+ Profil, `EtwTrackingParticipant` yapılandırma değiştirilerek aşağıdaki şekilde değiştirilebilir.
 
 ```xml
 <behaviors>
@@ -121,34 +121,34 @@ Bu örnek, Windows Workflow Foundation (WF) iş akışı hizmeti izleme etkinle�
     </behaviors>
 ```
 
-#### <a name="to-clean-up-optional"></a>(İsteğe bağlı) temizlemek için
+#### <a name="to-clean-up-optional"></a>Temizlemek için (Isteğe bağlı)
 
-1. Olay Görüntüleyicisi'ni açın.
+1. Olay Görüntüleyicisi açın.
 
-2. Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama Sunucu uygulamaları**. Sağ **analitik** seçip **devre dışı günlük**.
+2. **Olay Görüntüleyicisi**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama sunucusu-uygulamalar**' a gidin. **Analitik** öğesine sağ tıklayın ve **günlüğü devre dışı bırak**' ı seçin.
 
-3. Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama Sunucu uygulamaları**. Sağ **analitik** seçip **Günlüğü Temizle**.
+3. **Olay Görüntüleyicisi**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama sunucusu-uygulamalar**' a gidin. **Analitik** öğesine sağ tıklayın ve **Günlüğü Temizle**' yi seçin.
 
-4. Seçin **Temizle** olayları silmek için seçeneği.
+4. Olayları temizlemek için **Temizle** seçeneğini belirleyin.
 
 ## <a name="known-issue"></a>Bilinen sorun
 
 > [!NOTE]
->  Burada ETW olaylarının kodunu çözmek için çalışmayabilir Olay Görüntüleyicisi'nde bilinen bir sorun yoktur. Aşağıdakine benzer bir hata iletisi görebilirsiniz.
+> Olay Görüntüleyicisi içinde, ETW olaylarının kodunu çözemediği bilinen bir sorun vardır. Aşağıdakine benzer bir hata iletisi görebilirsiniz.
 >
->  Olay kimliği için açıklama \<kimliği > kaynağından Microsoft Windows uygulaması uygulamalarının bulunamıyor. Bu olayı oluşturan bileşen, yerel bilgisayarınızda yüklü değil veya yüklemenin bozuk. Yüklediğinizde veya yerel bilgisayarda bileşen onarın.
+>  Kaynak Microsoft-Windows- \<uygulama sunucusu-uygulamalarından > olay kimliği kimliği için açıklama bulunamıyor. Bu olayı başlatan bileşen yerel bilgisayarınızda yüklü değil veya yükleme bozuk. Bileşeni yerel bilgisayara yükleyebilir veya onarabilirsiniz.
 >
->  Bu hatayla karşılaşırsanız, yenileme Eylemler bölmesinde'e tıklayın. Olay artık düzgün bir şekilde kod çözme.
+>  Bu hatayla karşılaşırsanız, Eylemler bölmesinde Yenile ' ye tıklayın. Olay artık düzgün şekilde kod çözmelidir.
 
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric Izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)

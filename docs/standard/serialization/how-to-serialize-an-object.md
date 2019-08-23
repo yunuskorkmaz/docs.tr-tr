@@ -8,26 +8,26 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: ff00151d7aaba27faeee1c9d315cac0c8afc0b0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a587a132446a5f5d74b2d534b1ca3b93ccca1480
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933763"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928980"
 ---
 # <a name="how-to-serialize-an-object"></a>Nasıl yapılır: Nesne Serileştirme
-Bir nesneyi serileştirmek için önce sıralanabilir ve ortak özelliklerini ve alanları ayarlamak için olan nesne oluşturun. Bunu yapmak için XML akışı, bir akış olarak veya bir dosya olarak depolanır taşıma biçimi belirlemeniz gerekir. XML Akışı kalıcı bir biçimde kaydedilmesi gerekir, örneğin, oluşturun bir <xref:System.IO.FileStream> nesne.  
+Bir nesneyi serileştirmek için önce sıralanabilir ve ortak özelliklerini ve alanları ayarlamak için olan nesne oluşturun. Bunu yapmak için, XML akışının, akış olarak veya dosya olarak depolanacağı aktarım biçimini belirlemelisiniz. Örneğin, XML akışının kalıcı bir biçimde kaydedilmesi gerekiyorsa, bir <xref:System.IO.FileStream> nesne oluşturun.  
   
 > [!NOTE]
->  Daha fazla XML serileştirme örnekler için bkz. [XML serileştirme örnekler](../../../docs/standard/serialization/examples-of-xml-serialization.md).  
+> XML serileştirme hakkında daha fazla örnek için bkz. [XML serileştirme örnekleri](../../../docs/standard/serialization/examples-of-xml-serialization.md).  
   
 ### <a name="to-serialize-an-object"></a>Bir nesneyi serileştirmek için  
   
 1. Nesne oluşturun ve kendi ortak alanları ve özelliklerini ayarlayın.  
   
-2. Oluşturmak bir <xref:System.Xml.Serialization.XmlSerializer> kullanarak nesnenin türü. Daha fazla bilgi için <xref:System.Xml.Serialization.XmlSerializer> sınıf oluşturucu.  
+2. Nesnesinin türünü <xref:System.Xml.Serialization.XmlSerializer> kullanarak bir oluşturun. Daha fazla bilgi için bkz <xref:System.Xml.Serialization.XmlSerializer> . sınıf oluşturucuları.  
   
-3. Çağrı <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> bir XML akışı veya nesnenin ortak özellikler ve alanları dosya gösterimini oluşturmak için yöntemi. Aşağıdaki örnek, bir dosya oluşturur.  
+3. Bir xml akışı veya nesnenin ortak özelliklerinin ve alanlarının dosya gösterimini oluşturmak için yönteminiçağırın.<xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> Aşağıdaki örnek, bir dosya oluşturur.  
   
     ```vb  
     Dim myObject As MySerializableClass = New MySerializableClass()  
@@ -53,4 +53,4 @@ Bir nesneyi serileştirmek için önce sıralanabilir ve ortak özelliklerini ve
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [XML Serileştirmeye Giriş](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Nasıl yapılır: Bir nesneyi seri durumdan çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Nasıl yapılır: Bir nesnenin serisini kaldırma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

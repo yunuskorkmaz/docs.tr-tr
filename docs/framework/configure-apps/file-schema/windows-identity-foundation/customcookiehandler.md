@@ -3,20 +3,20 @@ title: <customCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: 0129c63fe17b63889a77ea1a56c0d7e657def859
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebf1f7f3de1b44dba63977bf524dea9af2690fb1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791735"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942793"
 ---
-# <a name="customcookiehandler"></a>\<customCookieHandler >
-Özel bir tanımlama bilgisi işleyici türünü ayarlar. Bu öğe yalnızca mevcut olması durumunda `mode` özniteliği `<cookieHandler>` "Özel" bir öğedir. Özel tür nesnesinden türetilmesi <xref:System.IdentityModel.Services.CookieHandler> sınıfı.  
+# <a name="customcookiehandler"></a>\<Custombir ıehandler >
+Özel tanımlama bilgisi işleyici türünü ayarlar. Bu öğe yalnızca `mode` `<cookieHandler>` öğenin özniteliği "Custom" ise mevcut olabilir. Özel tür <xref:System.IdentityModel.Services.CookieHandler> sınıfından türetilmelidir.  
   
- \<System.IdentityModel.Services >  
-\<Federationconfiguration'a >  
-\<cookieHandler >  
-\<customCookieHandler >  
+ \<System. IdentityModel. Services >  
+\<federationConfiguration >  
+\<Tanımlama, ıehandler >  
+\<Custombir ıehandler >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,24 +38,24 @@ ms.locfileid: "61791735"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|türü|Öğesinden türetilen özel bir türü belirtiyor <xref:System.IdentityModel.Services.CookieHandler> sınıfı. Belirtme hakkında daha fazla bilgi için `type` özniteliği için bkz: [özel tür başvurularını](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
+|türü|<xref:System.IdentityModel.Services.CookieHandler> Sınıfından türetilen özel bir tür belirtir. `type` Özniteliği belirtme hakkında daha fazla bilgi için bkz. [özel tür başvuruları](../windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Yapılandırır <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.IdentityModel.Services.SessionAuthenticationModule> okuma ve yazma tanımlama bilgileri kullanır.|  
+|[\<Tanımlama, ıehandler >](cookiehandler.md)|Tanımlama bilgilerini okumak ve yazmak için kullandığıöğesiniyapılandırır.<xref:System.IdentityModel.Services.SessionAuthenticationModule> <xref:System.IdentityModel.Services.CookieHandler>|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ayarlayarak özel bir tanımlama bilgisi işleyici belirttiğinizde `mode` özniteliği `<cookieHandler>` öğesi "Özel" dahil ederek özel tanımlama bilgisi işleyicisinin türü belirtmelisiniz bir `<customCookieHandler>` tanımlama bilgisi işleyici türe başvuran alt öğesi. Bu öğe olamaz belirtilen `mode` "Öbekli" veya "Varsayılan" özniteliğini ayarlayın. Özel bir tanımlama bilgisi işleyicileri türetilmesi gereken <xref:System.IdentityModel.Services.CookieHandler> sınıfı.  
+ Öğesinin özniteliğini "Custom" olarak ayarlayarak `<customCookieHandler>` özel bir tanımlama bilgisi işleyicisi belirttiğinizde, tanımlama bilgisi işleyici türüne başvuran bir alt öğe ekleyerek özel tanımlama bilgisi işleyicisinin türünü belirtmeniz gerekir. `mode` `<cookieHandler>` `mode` Öznitelik "öbekli" veya "default" olarak ayarlandığında bu öğe belirtilemez. Özel tanımlama bilgisi işleyicileri <xref:System.IdentityModel.Services.CookieHandler> sınıfından türetilmelidir.  
   
- `<customCookieHandler>` Öğesi tarafından temsil edilen <xref:System.IdentityModel.Configuration.CustomTypeElement> sınıfı.  
+ `<customCookieHandler>` Öğesi sınıfı<xref:System.IdentityModel.Configuration.CustomTypeElement> tarafından temsil edilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir özel tanımlama bilgisi işleyicisi türü kullanacak şekilde SAM yapılandırır `MyNamespace.MyCustomCookieHandler`.  
+ Aşağıdaki örnek, SAM türünde `MyNamespace.MyCustomCookieHandler`özel bir tanımlama bilgisi işleyicisi kullanmak için Sam 'ı yapılandırır.  
   
 ```xml  
 <cookieHandler mode="Custom">  

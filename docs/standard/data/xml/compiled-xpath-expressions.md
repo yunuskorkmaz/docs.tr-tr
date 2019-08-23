@@ -8,22 +8,22 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a75534bdfb1eef5902d3cd5071b4f5b4bfba8caa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb6e3677d79f3131432c3daebeee4d166b5450b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647947"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916669"
 ---
 # <a name="compiled-xpath-expressions"></a>Derlenmiş XPath İfadeleri
-Bir <xref:System.Xml.XPath.XPathExpression> nesneyi temsil ediyor öğesinden döndürülen statik olarak derlenmiş bir XPath sorgusu <xref:System.Xml.XPath.XPathExpression.Compile%2A> yöntemi <xref:System.Xml.XPath.XPathExpression> sınıfı veya <xref:System.Xml.XPath.XPathNavigator.Compile%2A> yöntemi <xref:System.Xml.XPath.XPathNavigator> sınıfı.  
+<xref:System.Xml.XPath.XPathExpression> Nesnesi, <xref:System.Xml.XPath.XPathExpression> sınıfının statik <xref:System.Xml.XPath.XPathExpression.Compile%2A> yönteminden veya sınıfınyönteminedöndürülen<xref:System.Xml.XPath.XPathNavigator> bir derlenmiş XPath sorgusunu temsil eder. <xref:System.Xml.XPath.XPathNavigator.Compile%2A>  
   
 ## <a name="the-xpathexpression-class"></a>XPathExpression sınıfı  
- Bir XPath sorgusu tarafından temsil edilen derlenmiş bir <xref:System.Xml.XPath.XPathExpression> nesne, aynı XPath sorgusu birden çok kez kullanılıyorsa kullanışlıdır.  
+ Aynı XPath sorgusu birden çok kez kullanılıyorsa <xref:System.Xml.XPath.XPathExpression> , bir nesneyle temsil edilen derlenmiş bir XPath sorgusu faydalıdır.  
   
- Örneğin, çağrılırken <xref:System.Xml.XPath.XPathNavigator.Select%2A> XPath sorgusu her zaman temsil eden bir dize kullanmak yerine, birden çok kez yöntemini kullanın <xref:System.Xml.XPath.XPathExpression.Compile%2A> yöntemi <xref:System.Xml.XPath.XPathExpression> sınıfı veya <xref:System.Xml.XPath.XPathNavigator.Compile%2A> yöntemi <xref:System.Xml.XPath.XPathNavigator> derlemek için sınıf ve XPath sorgusundaki önbelleğe bir <xref:System.Xml.XPath.XPathExpression> yeniden kullanımı ve performansı nesnesi.  
+ Örneğin, her seferinde XPath sorgusunu <xref:System.Xml.XPath.XPathNavigator.Select%2A> temsil eden bir dize kullanmak yerine, yöntemi birden çok kez çağırırken, <xref:System.Xml.XPath.XPathExpression> sınıfının <xref:System.Xml.XPath.XPathExpression.Compile%2A> yöntemini veya <xref:System.Xml.XPath.XPathNavigator.Compile%2A> <xref:System.Xml.XPath.XPathNavigator> derlemek için sınıfın yöntemini kullanın ve bir <xref:System.Xml.XPath.XPathExpression> nesnede XPath sorgusunu yeniden kullanmak ve performansı artırmak için önbelleğe alma.  
   
- Bir kez derlenmesinin sonra <xref:System.Xml.XPath.XPathExpression> nesne, aşağıdaki giriş olarak kullanılabilir <xref:System.Xml.XPath.XPathNavigator> türüne bağlı olarak sınıfı yöntemleri XPath sorgusundan döndürülen.  
+ Derlendikten <xref:System.Xml.XPath.XPathExpression> sonra nesne, XPath sorgusundan döndürülen türe bağlı olarak aşağıdaki <xref:System.Xml.XPath.XPathNavigator> sınıf yöntemlerine giriş olarak kullanılabilir.  
   
 - <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
@@ -35,22 +35,22 @@ Bir <xref:System.Xml.XPath.XPathExpression> nesneyi temsil ediyor öğesinden d�
   
 - <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
- Aşağıdaki tablo W3C XPath dönüş türleri, kendi Microsoft .NET Framework Eşitlikleri ve hangi açıklar yöntemleri <xref:System.Xml.XPath.XPathExpression> nesne kullanılabilir olan kendi dönüş türüne göre.  
+ Aşağıdaki tabloda, W3C XPath dönüş türlerinin her biri, Microsoft .NET Framework equivalencies ve <xref:System.Xml.XPath.XPathExpression> nesnenin dönüş türüne göre hangi yöntemleri kullanılabileceği açıklanmaktadır.  
   
-|W3C XPath dönüş türü|.NET framework eşdeğeri türü|Açıklama|Yöntemler|  
+|W3C XPath dönüş türü|.NET Framework eşdeğer tür|Açıklama|Yöntemler|  
 |---------------------------|------------------------------------|-----------------|-------------|  
-|`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Belge sırada oluşturulan çoğaltmaları olmadan düğümler sırasız bir koleksiyonu.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> veya <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
-|`Boolean`|<xref:System.Boolean>|A `true` veya `false` değeri.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> veya<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
-|`Number`|<xref:System.Double>|Bir kayan noktalı sayı.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
-|`String`|<xref:System.String>|UCS karakter dizisi.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
+|`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Belge düzeninde oluşturulan yinelemeler olmadan sıralanmamış bir düğüm koleksiyonu.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> veya <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
+|`Boolean`|<xref:System.Boolean>|Bir `true` veya`false` değeri.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>veya<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
+|`Number`|<xref:System.Double>|Kayan noktalı sayı.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
+|`String`|<xref:System.String>|Bir UCS karakter dizisi.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Yöntemi bir XPath ifadesi, parametre olarak kabul eder. <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> Yöntemi döndürür bir <xref:System.Xml.XPath.XPathNavigator> nesnesi, W3C XPath dönüş türlerinden birine değil.  
+> Yöntemi <xref:System.Xml.XPath.XPathNavigator.Matches%2A> , parametresi olarak bir XPath ifadesini kabul eder. Yöntemi W3C XPath dönüş <xref:System.Xml.XPath.XPathNavigator> türlerinden birini değil bir nesne döndürür. <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
-### <a name="the-returntype-property"></a>ReturnType özelliği  
- İçinde sorgu derlendikten sonra bir XPath bir <xref:System.Xml.XPath.XPathExpression> nesne kullanabileceğiniz <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> özelliği <xref:System.Xml.XPath.XPathExpression> ne XPath sorgusu döndürür belirlemek için nesne.  
+### <a name="the-returntype-property"></a>ReturnType Özelliği  
+ Bir XPath sorgusu bir <xref:System.Xml.XPath.XPathExpression> nesneye derlendikten sonra, XPath sorgusunun döndürdüğü şeyi belirlemek için <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> <xref:System.Xml.XPath.XPathExpression> nesnesinin özelliğini kullanabilirsiniz.  
   
- <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> Özelliği aşağıdakilerden birini döndürür <xref:System.Xml.XPath.XPathResultType> W3C XPath temsil eden numaralandırma değerlerinden dönüş türü.  
+ Özelliği, W3C XPath dönüş türlerini temsil <xref:System.Xml.XPath.XPathResultType> eden aşağıdaki sabit listesi değerlerinden birini döndürür. <xref:System.Xml.XPath.XPathExpression.ReturnType%2A>  
   
 - <xref:System.Xml.XPath.XPathResultType.Any>  
   
@@ -66,7 +66,7 @@ Bir <xref:System.Xml.XPath.XPathExpression> nesneyi temsil ediyor öğesinden d�
   
 - <xref:System.Xml.XPath.XPathResultType.String>  
   
- Aşağıdaki örnekte <xref:System.Xml.XPath.XPathExpression> bir sayı ve bir düğümün kümeden döndürülecek nesne `books.xml` dosya. <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> Her özellik <xref:System.Xml.XPath.XPathExpression> nesne sonuçlardan yanı sıra <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> ve <xref:System.Xml.XPath.XPathNavigator.Select%2A> yöntemleri konsoluna yazılır.  
+ Aşağıdaki örnek, `books.xml` dosyasından bir <xref:System.Xml.XPath.XPathExpression> sayı ve bir düğüm kümesi döndürmek için nesnesini kullanır. <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Her <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> nesnenin<xref:System.Xml.XPath.XPathExpression> özelliğinin yanı sıra ve<xref:System.Xml.XPath.XPathNavigator.Select%2A> yöntemlerinin sonuçları da konsoluna yazılır.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -108,16 +108,16 @@ nodes.MoveNext();
 Console.WriteLine(nodes.Current.Value);  
 ```  
   
- Örnek alan `books.xml` dosya giriş olarak.  
+ Örnek, `books.xml` dosyayı giriş olarak alır.  
   
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
-### <a name="higher-performance-xpath-expressions"></a>Daha yüksek performans XPath ifadeleri  
- Daha iyi performans için sorgularınızdaki olası en belirgin XPath ifadesi kullanın. Örneğin, varsa `book` düğümü olan bir alt düğüm `bookstore` düğüm ve `bookstore` düğümü olan XPath ifadesi kullanarak bir XML belgesi en üst öğesi `/bookstore/book` kullanmaktan daha hızlıdır `//book`. `//book` XPath ifadesi eşleşen düğümleri tanımlamak için XML ağacı kümedeki her düğüm tarayacaktır.  
+### <a name="higher-performance-xpath-expressions"></a>Daha yüksek performans XPath Ifadeleri  
+ Daha iyi performans için, sorgularınızda olası en belirli XPath ifadesini kullanın. `book` Örneğin, `//book`düğüm `bookstore` düğümün bir alt düğümüdür ve `bookstore` düğüm bir XML belgesindeki en üstteki öğe ise, XPath ifadesinin `/bookstore/book` kullanılması kullanmaktan daha hızlıdır. `//book` XPath ifadesi, eşleşen düğümleri belirlemek için XML ağacındaki her düğümü tarar.  
   
- Ayrıca, düğüm tarafından sağlanan gezinme yöntemlerinden kümelerini kullanma <xref:System.Xml.XPath.XPathNavigator> sınıfı tarafından sağlanan seçim yöntemini üzerinden geliştirilmiş performans sonuçlanabilir <xref:System.Xml.XPath.XPathNavigator> sınıfı durumlarda, seçim ölçütü burada basittir. Geçerli düğümünün ilk alt seçmeniz gerekiyorsa, örneğin, kullanılacak daha hızlıdır <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> kullanımı çok yöntemi `child::*[1]` XPath ifadesi ve <xref:System.Xml.XPath.XPathNavigator.Select%2A> yöntemi.  
+ Ayrıca, <xref:System.Xml.XPath.XPathNavigator> sınıf tarafından sağlanan düğüm kümesi gezinme yöntemlerinin kullanılması, seçim ölçütlerinizin basit olduğu durumlarda <xref:System.Xml.XPath.XPathNavigator> sınıfının sağladığı seçim yöntemlerine göre performansın iyileşmesine neden olabilir. Örneğin, geçerli düğümün ilk alt öğesini seçmeniz gerekiyorsa, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> yöntemi `child::*[1]` XPath ifadesini ve <xref:System.Xml.XPath.XPathNavigator.Select%2A> yöntemini kullanmak için kullanmak daha hızlıdır.  
   
- Düğüm hakkında daha fazla bilgi için Gezinti yöntemleri Ayarla <xref:System.Xml.XPath.XPathNavigator> sınıfı [kullanarak düğüm kümesi Gezinti XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
+ <xref:System.Xml.XPath.XPathNavigator> Sınıfın düğüm kümesi gezinti yöntemleri hakkında daha fazla bilgi için bkz. [XPathNavigator kullanarak düğüm kümesi gezintisi](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

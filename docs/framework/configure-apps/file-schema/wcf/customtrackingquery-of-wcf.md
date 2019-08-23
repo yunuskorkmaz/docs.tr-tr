@@ -1,25 +1,25 @@
 ---
-title: <customTrackingQuery> WCF
+title: <customTrackingQuery>WCF
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: 0a5e7c034ce1ef12a8d7d5b1753e2e441e48e293
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b034727dc89b58794ec2834cb0ff39cd7e5f1dca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673179"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919356"
 ---
-# <a name="customtrackingquery-of-wcf"></a>\<customTrackingQuery > WCF
+# <a name="customtrackingquery-of-wcf"></a>\<WCF > customTrackingQuery
 
-Kod etkinlikleriniz tanımlayan olayları izlemek için kullanılan bir sorgu temsil eder. Sorgu özel izleme kayıtları abone olmak izleme Katılımcısı için gereklidir.
+Kod etkinliklerinizde tanımladığınız olayları izlemek için kullanılan bir sorguyu temsil eder. Sorgu, izleme katılımcısı için özel izleme kayıtlarına abone olmak için gereklidir.
 
-Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
 \<İzleme >  
-\<profilleri >  
+\<Profiller >  
 \<trackingProfile>  
-\<İş akışı >  
+\<iş akışı >  
 \<customTrackingQueries >  
 \<customTrackingQuery >  
   
@@ -48,8 +48,8 @@ Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini iz
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`activityName`|İzleme kayıt oluşturulan etkinliğin adını belirten dize.|  
-|`name`|Yayılan özel izleme kayıt adını belirten dize.|  
+|`activityName`|İzleme kaydını oluşturan etkinliğin adını belirten bir dize.|  
+|`name`|Yayılan özel izleme kaydının adını belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -59,11 +59,11 @@ Yok.
 
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<customTrackingQueries >](customtrackingqueries-of-wcf.md)|Kod etkinlikleriniz tanımlayan olayları izlemek için kullanılan sorguları koleksiyonunu temsil eder.|
+|[\<customTrackingQueries >](customtrackingqueries-of-wcf.md)|Kod etkinliklerinizde tanımladığınız olayları izlemek için kullanılan bir sorgu koleksiyonunu temsil eder.|
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>
-- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [İş Akışı Takip ve İzleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Profilleri](../../../windows-workflow-foundation/tracking-profiles.md)

@@ -9,28 +9,28 @@ helpviewer_keywords:
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 135decebcd071c611cf6e72835fee33d49088070
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c1658f27b66d9447d191d23801eba2d659ce9c2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772586"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933893"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>.NET Framework'te Konsol Uygulamaları Oluşturma
-.NET Framework uygulamalarında kullanabileceğiniz <xref:System.Console?displayProperty=nameWithType> karakterleri okumak ve konsola karakterleri yazmak için sınıf. Standart giriş akışından veri konsoldan okunan, konsola veriler standart çıkış akışına yazılır ve hata verileri konsola standart hata çıktı akışına yazılır. Uygulama başladığında ve bu olarak sunulduğunda bu akışları konsoluyla otomatik olarak ilişkili <xref:System.Console.In%2A>, <xref:System.Console.Out%2A>, ve <xref:System.Console.Error%2A> özellikleri, sırasıyla.  
+.NET Framework uygulamalar, <xref:System.Console?displayProperty=nameWithType> sınıftan karakterleri okumak ve konsola karakter yazmak için sınıfını kullanabilir. Konsolda bulunan veriler standart giriş akışından, konsola ait veriler standart çıkış akışına yazılır ve konsola hata verileri standart hata çıktı akışına yazılır. Uygulama başlatıldığında ve sırasıyla <xref:System.Console.In%2A>, <xref:System.Console.Out%2A>, ve <xref:System.Console.Error%2A> özellikleri olarak sunulursa, bu akışlar konsol ile otomatik olarak ilişkilendirilir.  
   
- Değerini <xref:System.Console.In%2A?displayProperty=nameWithType> özelliği bir <xref:System.IO.TextReader?displayProperty=nameWithType> ise, nesne değerlerini <xref:System.Console.Out%2A?displayProperty=nameWithType> ve <xref:System.Console.Error%2A?displayProperty=nameWithType> özellikleri <xref:System.IO.TextWriter?displayProperty=nameWithType> nesneleri. Stream giriş veya çıkış için farklı bir konuma işaret edecek şekilde edinerek bu özellikleri konsol temsil etmeyen akışları ile ilişkilendirebilirsiniz. Bir dosyaya ayarlayarak çıkışı örneğin yönlendirebilirsiniz <xref:System.Console.Out%2A?displayProperty=nameWithType> özelliğini bir <xref:System.IO.StreamWriter?displayProperty=nameWithType>, hangi kapsülleyen bir <xref:System.IO.FileStream?displayProperty=nameWithType> yoluyla <xref:System.Console.SetOut%2A?displayProperty=nameWithType> yöntemi. <xref:System.Console.In%2A?displayProperty=nameWithType> Ve <xref:System.Console.Out%2A?displayProperty=nameWithType> özellikleri aynı akışa başvurmak gerekli değildir.  
+ <xref:System.Console.In%2A?displayProperty=nameWithType> Özelliğin değeri bir <xref:System.IO.TextReader?displayProperty=nameWithType> nesnedir, <xref:System.Console.Out%2A?displayProperty=nameWithType> ancak ve <xref:System.Console.Error%2A?displayProperty=nameWithType> özelliklerinin değerleri nesneler olur <xref:System.IO.TextWriter?displayProperty=nameWithType> . Bu özellikleri, konsolunu temsil eden akışlarla ilişkilendirerek, akışı giriş veya çıkış için farklı bir konuma işaret etmeniz mümkün hale getirebilirsiniz. Örneğin, <xref:System.Console.Out%2A?displayProperty=nameWithType> özelliğini, <xref:System.Console.SetOut%2A?displayProperty=nameWithType> yöntemini bir <xref:System.IO.FileStream?displayProperty=nameWithType> by yöntemi ile kapsülleyen bir olarak ayarlayarak, çıkışı bir <xref:System.IO.StreamWriter?displayProperty=nameWithType>dosyaya yönlendirebilirsiniz. <xref:System.Console.In%2A?displayProperty=nameWithType> Ve<xref:System.Console.Out%2A?displayProperty=nameWithType> özelliklerinin aynı akışa başvurması gerekmez.  
   
 > [!NOTE]
->  Örnekler C#, Visual Basic ve C++ ' dahil olmak üzere, konsol uygulamaları oluşturma hakkında daha fazla bilgi için belgelere bakın <xref:System.Console> sınıfı.  
+> , Visual Basic ve C# C++içindeki örnekler de dahil olmak üzere konsol uygulamaları oluşturma hakkında daha fazla bilgi için, bkz. <xref:System.Console> sınıfının belgeleri.  
   
- Konsol yoksa Windows tabanlı bir uygulama olduğu gibi bilgileri yazma konsola olduğundan standart çıkış akışına yazılan çıktı görünür olmayacaktır. Erişilemez bir konsola bilgilerini yazma oluşturulması için bir özel durum neden olmaz.  
+ Konsol yoksa, Windows tabanlı bir uygulamada olduğu gibi, bilgilerin yazılacağı bir konsol olmadığından, standart çıkış akışına yazılan çıkış görünmez. Erişilemeyen bir konsola bilgi yazmak bir özel durumun oluşturulmasına neden olmaz.  
   
- Alternatif olarak, Visual Studio kullanarak geliştirilen Windows tabanlı bir uygulama içinde yazma ve okuma için konsol etkinleştirmek için projenin açın **özellikleri** iletişim kutusu, tıklayın **uygulama** sekme ve ayarlama **uygulama türü** için **konsol uygulaması**.  
+ Alternatif olarak, konsolunu Visual Studio kullanılarak geliştirilen Windows tabanlı bir uygulama içinde okumak ve yazmak üzere etkinleştirmek için projenin **Özellikler** iletişim kutusunu açın, **uygulama** sekmesine tıklayın ve **uygulama türünü** ayarlayın **konsol uygulamasına**.  
   
- Konsol uygulamaları, varsayılan olarak başlayan bir ileti pompası yoksundur. Bu nedenle, Microsoft Win32 zamanlayıcılar konsol çağrıları başarısız olabilir.  
+ Konsol uygulamalarında varsayılan olarak başlayan bir ileti göndericisi yok. Bu nedenle, Microsoft Win32 zamanlayıcılara yönelik konsol çağrıları başarısız olabilir.  
   
- **System.Console** sınıf, karakterlerin tek tek veya tüm satırları konsoldan okuyabilir yöntemleri vardır. Diğer yöntemler veri ve biçim dizeleri dönüştürmek ve ardından konsola biçimlendirilmiş dizeler yazar. Biçimlendirme dizeleri hakkında daha fazla bilgi için bkz: [biçimlendirme türleri](../../docs/standard/base-types/formatting-types.md).  
+ **System. Console** sınıfında, tek tek karakterleri veya tüm satırları konsoldan okuyabilen yöntemler vardır. Diğer yöntemler, verileri ve biçim dizelerini dönüştürür ve sonra biçimli dizeleri konsola yazar. Biçimlendirme dizeleri hakkında daha fazla bilgi için bkz. [biçimlendirme türleri](../../docs/standard/base-types/formatting-types.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

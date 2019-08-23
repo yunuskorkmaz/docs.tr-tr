@@ -2,20 +2,20 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 8ba16d9cc30b07d3e6b0924e6013ec01443867d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8814a48df8933cf08db78e397c24d42f2da26026
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704134"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919228"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
-İçin yapılandırma verilerini içeren <xref:System.Runtime.Serialization.DataContractSerializer>.  
+İçin yapılandırma verilerini içerir <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
-\<endpointBehaviors>  
-\<davranışı >  
+\<Endpointdavranışlar >  
+\<davranış >  
 \<dataContractSerializer >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -32,8 +32,8 @@ ms.locfileid: "61704134"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|IgnoreExtensionDataObject|Bunu edilirken uç noktası tarafından sağlanan veri yoksay belirten bir Boole değeri serileştirilecek veya serisi.|  
-|maxItemsInObjectGraph|Serileştirmek veya seri durumdan çıkarılacak öğeleri maksimum sayısını belirten bir tamsayı.|  
+|IgnoreExtensionDataObject|Seri hale getirilmekte veya seri durumdan çıkarılmakta olduğunda, uç nokta tarafından sağlanan verilerin yoksayılıp yoksayılmayacağını belirten bir Boole değeri.|  
+|MaxItemsInObjectGraph|Seri hale getirilecek veya seri durumdan çıkarılacak en fazla öğe sayısını belirten bir tamsayı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -42,18 +42,18 @@ ms.locfileid: "61704134"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir uç nokta davranışı belirtir.|  
+|[\<davranış >](behavior-of-endpointbehaviors.md)|Bir uç nokta davranışı belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bkz: <xref:System.Runtime.Serialization.DataContractSerializer> bilinen türleri hakkında daha fazla bilgi için.  
+ Bilinen türler hakkında daha fazla bilgi için belgelerebakın.<xref:System.Runtime.Serialization.DataContractSerializer>  
   
 > [!CAUTION]
->  `<dataContractSerializer>` Davranış öğesi (varsa) önce her zaman görünmelidir `<enableWebScript>` yapılandırma dosyasındaki davranış öğesi. Aksi takdirde, sonuçta ortaya çıkan davranış tanımsızdır.  
+>  Davranış öğesi (varsa) her zaman yapılandırma dosyasındaki `<enableWebScript>` davranış öğesinden önce görünmelidir. `<dataContractSerializer>` Aksi takdirde, ortaya çıkan davranış tanımsızdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.ServiceModel.Configuration.DataContractSerializerElement>
-- [Veri Anlaşması Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [Veri Aktarma ve Seri Hale Getirme](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+- [Veri Anlaşması Bilinen Türler](../../../wcf/feature-details/data-contract-known-types.md)
+- [Veri Aktarma ve Seri Hale Getirme](../../../wcf/feature-details/data-transfer-and-serialization.md)

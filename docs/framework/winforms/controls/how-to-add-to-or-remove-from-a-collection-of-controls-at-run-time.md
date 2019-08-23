@@ -12,28 +12,28 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: a868632d6868e6a82c4fa135444279b8ef4dc7af
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 87ad4c957ac5b99438684d398a0c5ad7d126c406
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301407"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925039"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Nasıl yapılır: Çalışma Zamanında bir Denetimler Koleksiyonuna Ekleme veya Kaldırma
-Uygulama geliştirme için ortak görevler için denetimler ekleme ve herhangi bir kapsayıcı denetimi, form üzerinde denetimleri kaldırma (gibi <xref:System.Windows.Forms.Panel> veya <xref:System.Windows.Forms.GroupBox> denetim veya formun kendisi bile). Tasarım zamanında denetimler doğrudan Masası veya grup kutusu sürüklenebilen. Çalışma zamanında bu denetimi yöneten bir `Controls` koleksiyonunun hangi denetimlerin üzerine yerleştirilen izler.  
+Uygulama geliştirmede ortak görevler, formlarınızda ( <xref:System.Windows.Forms.Panel> veya <xref:System.Windows.Forms.GroupBox> denetimi gibi) herhangi bir kapsayıcı denetimine denetim ekleme ve denetimleri kaldırma (hatta formun kendisi gibi). Tasarım zamanında, denetimler doğrudan bir panel veya grup kutusu üzerinde sürüklenebilir. Çalışma zamanında, bu denetimler, bunlara hangi `Controls` denetimlerin yerleştirileceğini izleyen bir koleksiyonu korur.  
   
 > [!NOTE]
->  Aşağıdaki kod örneği, bir denetim koleksiyonunu tutar herhangi bir denetimi için geçerlidir.  
+> Aşağıdaki kod örneği, içindeki bir denetim koleksiyonunu tutan tüm denetimler için geçerlidir.  
   
-### <a name="to-add-a-control-to-a-collection-programmatically"></a>Bir denetimin program aracılığıyla bir koleksiyona eklemek için  
+### <a name="to-add-a-control-to-a-collection-programmatically"></a>Bir koleksiyona programlı bir denetim eklemek için  
   
-1. Eklenecek denetimin örneği oluşturun.  
+1. Eklenecek denetimin bir örneğini oluşturun.  
   
 2. Yeni denetimin özelliklerini ayarlayın.  
   
-3. Denetime eklemek `Controls` üst denetim koleksiyonu.  
+3. Denetimi üst denetimin `Controls` koleksiyonuna ekleyin.  
   
-     Aşağıdaki kod örneği, bir örneğini oluşturma işlemi gösterilmektedir <xref:System.Windows.Forms.Button> denetimi. Bir formla gerektiren bir <xref:System.Windows.Forms.Panel> denetimi düğmesi için olay işleme yöntemi oluşturulmakta, `NewPanelButton_Click`, zaten mevcut.  
+     Aşağıdaki kod örneği, <xref:System.Windows.Forms.Button> denetimin bir örneğinin nasıl oluşturulacağını gösterir. <xref:System.Windows.Forms.Panel> Denetim içeren bir form ve `NewPanelButton_Click`oluşturulmakta olan düğme için olay işleme yönteminin zaten var olduğunu gerektirir.  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -64,13 +64,13 @@ Uygulama geliştirme için ortak görevler için denetimler ekleme ve herhangi b
     }  
     ```  
   
-### <a name="to-remove-controls-from-a-collection-programmatically"></a>Denetimleri bir koleksiyondan programlı bir şekilde kaldırmak için  
+### <a name="to-remove-controls-from-a-collection-programmatically"></a>Bir koleksiyondan denetimleri programlı bir şekilde kaldırmak için  
   
-1. Olay işleyici olaydan kaldırılacak. Visual Basic'teki [RemoveHandler deyimi](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) anahtar sözcüğü; C#, kullanın [-= işleci](~/docs/csharp/language-reference/operators/subtraction-operator.md).  
+1. Olay işleyicisini olaydan kaldırın. Visual Basic ' de [RemoveHandler deyimin](../../../visual-basic/language-reference/statements/removehandler-statement.md) anahtar sözcüğünü kullanın; içinde C# [-= işlecini](../../../csharp/language-reference/operators/subtraction-operator.md)kullanın.  
   
-2. Kullanım `Remove` istediğiniz denetimi panelinden 's silinemedi yöntemi `Controls` koleksiyonu.  
+2. İstenen denetimi`Controls` panel koleksiyonundan silmek için yöntemini kullanın. `Remove`  
   
-3. Çağrı <xref:System.Windows.Forms.Control.Dispose%2A> denetim tarafından kullanılan tüm kaynakları serbest bırakmak için yöntemi.  
+3. Denetim tarafından kullanılan tüm kaynakları serbest bırakmak için yönteminiçağırın.<xref:System.Windows.Forms.Control.Dispose%2A>  
   
     ```vb  
     Public Sub RemoveControl()  

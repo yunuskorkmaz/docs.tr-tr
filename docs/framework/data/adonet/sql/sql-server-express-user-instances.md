@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: eb9b61f0c0b787a2de0a39a0d47c5767acad9cc5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f76b1f0a09be2f745156437919f43ebaa8840519
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645890"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938490"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express Kullanıcı Örnekleri
-Microsoft SQL Server Express Edition (SQL Server Express) .NET Framework veri sağlayıcısı için SQL Server kullanırken yalnızca kullanılabilir kullanıcı örneği özelliğini destekler (`SqlClient`). Bir kullanıcı örneği, SQL Server Express Veritabanı Altyapısı'nın üst örneği tarafından oluşturulan ayrı bir örneğidir. Kullanıcı örnekleri eklemek ve SQL Server Express veritabanlarına bağlanmak için kendi yerel bilgisayarlarında yönetici olmayan kullanıcılar izin verin. Her örneği, tek kullanıcı, kullanıcı başına tek örnek güvenlik bağlamı altında çalışır.  
+Microsoft SQL Server Express Edition (SQL Server Express), yalnızca SQL Server (`SqlClient`) için .NET Framework veri sağlayıcısı kullanılırken kullanılabilen Kullanıcı örneği özelliğini destekler. Bir kullanıcı örneği, bir üst örnek tarafından oluşturulan SQL Server Express veritabanı altyapısının ayrı bir örneğidir. Kullanıcı örnekleri, yerel bilgisayarlarında yönetici olmayan kullanıcıların SQL Server Express veritabanlarına ekler ve bunlara bağlanmasına izin verir. Her örnek, bireysel kullanıcının güvenlik bağlamı altında, tek örnekli Kullanıcı bazında çalışır.  
   
 ## <a name="user-instance-capabilities"></a>Kullanıcı örneği özellikleri  
- Kullanıcı örnekleri her bir kullanıcı SQL Server Sistem Yöneticisi olduğundan Windows (LUA) en az ayrıcalıklı kullanıcı hesabı altında çalışan kullanıcılar için kullanışlıdır (`sysadmin`) bir Windows çalıştırmak zorunda kalmadan her bilgisayar üzerinde çalışan örnek üzerindeki ayrıcalıkları yönetici de. SQL Server Express örneği bir hizmet olarak değil bir kullanıcının yönetici olmayan Windows hesabı altında çalıştığı için yazılım sınırlı izinlere sahip bir kullanıcı örneği üzerinde yürütülen sistem genelinde değişiklik yapamaz. Her bir kullanıcı örneği, kendi üst örneğini ve aynı bilgisayarda çalışan diğer kullanıcı örnekleri yalıtılır. Bir kullanıcı örneği üzerinde çalışan veritabanları yalnızca tek kullanıcı modunda açılır ve bir kullanıcı örneği üzerinde çalışan veritabanlarına bağlanmak birden çok kullanıcı için mümkün değildir. Çoğaltma ve dağıtılmış sorgular, ayrıca kullanıcı örnekleri için devre dışıdır.  
+ Kullanıcı örnekleri, her kullanıcının bilgisayarında çalışan örnek üzerinde Windows olarak çalıştırılması gerekmeden SQL Server Sistem Yöneticisi (`sysadmin`) ayrıcalıklarına sahip olduğundan, en az ayrıcalıklı kullanıcı hesabı (LUA) altında Windows çalıştıran kullanıcılar için yararlıdır. Yönetici de. Bir Kullanıcı örneğinde sınırlı izinlerle yürütülen yazılım, SQL Server Express örneği kullanıcının yönetici olmayan Windows hesabı altında, hizmet olarak değil, sistem genelinde değişiklik yapamaz. Her kullanıcı örneği, üst örneğinden ve aynı bilgisayarda çalışan diğer kullanıcı örneklerinden yalıtılmıştır. Bir Kullanıcı örneğinde çalışan veritabanları yalnızca tek kullanıcı modunda açılır ve birden çok kullanıcının bir kullanıcı örneği üzerinde çalışan veritabanlarına bağlanması mümkün değildir. Çoğaltma ve dağıtılmış sorgular da Kullanıcı örnekleri için devre dışıdır.  
   
- Daha fazla bilgi için SQL Server Books Online'da "kullanıcı örnekleri" konusuna bakın.  
+ Daha fazla bilgi için SQL Server Books Online 'daki "Kullanıcı örnekleri" başlığına bakın.  
   
 > [!NOTE]
->  Kullanıcı örnekleri kendi bilgisayarlarında yönetici olan kullanıcılar için veya birden çok veritabanı kullanıcıları içeren senaryolar için gerekli değildir.  
+> Kullanıcı örnekleri, kendi bilgisayarlarında zaten yönetici olan kullanıcılar veya birden çok veritabanı kullanıcısı içeren senaryolar için gerekli değildir.  
   
-## <a name="enabling-user-instances"></a>Kullanıcı örnekleri etkinleştirme  
- Kullanıcı örnekleri oluşturmak için bir üst SQL Server Express örneğini çalıştırılması gerekir. Kullanıcı örnekleri, varsayılan olarak etkinleştirilir, SQL Server Express yüklenir ve bunlar açıkça etkinleştirilebilir veya yürütülürken bir sistem yöneticisi tarafından devre dışı olduğunda **sp_configure** üst örneğinde sistem saklı yordamı.  
+## <a name="enabling-user-instances"></a>Kullanıcı örneklerini etkinleştirme  
+ Kullanıcı örnekleri oluşturmak için bir SQL Server Express üst örneğinin çalışıyor olması gerekir. SQL Server Express yüklendiğinde Kullanıcı örnekleri varsayılan olarak etkindir ve üst örnekte **sp_configure** sistem saklı yordamını yürüten bir sistem yöneticisi tarafından açıkça etkinleştirilebilir veya devre dışı bırakılabilir.  
   
 ```  
 -- Enable user instances.  
@@ -34,22 +34,22 @@ sp_configure 'user instances enabled','1'
 sp_configure 'user instances enabled','0'  
 ```  
   
- Ağ Protokolü kullanıcı örnekleri için adlandırılmış kanallar yerel olması gerekir. Bir kullanıcı örneği bir SQL Server'ın uzak örneğinde başlatılamıyor ve SQL Server oturumları izin verilmez.  
+ Kullanıcı örnekleri için ağ protokolünün yerel adlandırılmış kanallar olması gerekir. Bir kullanıcı örneği SQL Server uzak bir örneğinde başlatılamaz ve SQL Server oturum açma işlemlerine izin verilmez.  
   
-## <a name="connecting-to-a-user-instance"></a>Bir kullanıcı örneğine bağlanma  
- `User Instance` Ve `AttachDBFilename` <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> anahtar sözcüklere izin bir <xref:System.Data.SqlClient.SqlConnection> bir kullanıcı örneğine bağlanmak için. Kullanıcı örnekleri tarafından da desteklenir <xref:System.Data.SqlClient.SqlConnectionStringBuilder> `UserInstance` ve `AttachDBFilename` özellikleri.  
+## <a name="connecting-to-a-user-instance"></a>Kullanıcı örneğine bağlanma  
+ `User Instance` Ve `AttachDBFilename` anahtarsözcükleri<xref:System.Data.SqlClient.SqlConnection> bir kullanıcı örneğine bağlanmasına izin verir. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> Kullanıcı örnekleri <xref:System.Data.SqlClient.SqlConnectionStringBuilder> `UserInstance` ve özellikleritarafındandadesteklenir.`AttachDBFilename`  
   
- Aşağıda gösterilen örnek bağlantı dizesi hakkında aşağıdakileri unutmayın:  
+ Aşağıda gösterilen örnek bağlantı dizesi hakkında aşağıdakileri göz önünde edin:  
   
-- `Data Source` Anahtar sözcüğü üst SQL Server'ın kullanıcı örneği oluşturan Express örneğine başvurur. The default instance is .\sqlexpress.  
+- `Data Source` Anahtar sözcüğü, Kullanıcı örneğini oluşturan SQL Server Express üst örneğine başvurur. Varsayılan örnek .\SQLEXPRESS.  
   
-- `Integrated Security` ayarlanır `true`. Bir kullanıcı örneğine bağlanmak için Windows kimlik doğrulaması gereklidir; SQL Server oturumları desteklenmez.  
+- `Integrated Security`, olarak `true`ayarlanır. Bir kullanıcı örneğine bağlanmak için Windows kimlik doğrulaması gerekir; SQL Server oturum açma işlemleri desteklenmez.  
   
-- `User Instance` Ayarlanır `true`, bir kullanıcı örneği başlatır. (Varsayılan değer `false`.)  
+- , Bir kullanıcı örneği `true`çağıran olarak ayarlanır. `User Instance` (Varsayılan `false`değer.)  
   
-- `AttachDbFileName` Bağlantı dizesi anahtar kelimesi, tam yol adını içermelidir birincil veritabanı dosyasını (.mdf) eklemek için kullanılır. `AttachDbFileName` Ayrıca, "genişletilmiş özellikler" ve "başlangıç dosyası adı" anahtarları içinde karşılık gelen bir <xref:System.Data.SqlClient.SqlConnection> bağlantı dizesi.  
+- `AttachDbFileName` Bağlantı dizesi anahtar sözcüğü, tam yol adını içermesi gereken birincil veritabanı dosyasını (. mdf) eklemek için kullanılır. `AttachDbFileName`Ayrıca bir <xref:System.Data.SqlClient.SqlConnection> bağlantı dizesi içindeki "Genişletilmiş Özellikler" ve "ilk dosya adı" anahtarlarına karşılık gelir.  
   
-- `|DataDirectory|` Kanal sembolleri içine değiştirme dizesi bağlantısı açılıyor uygulamanın veri dizini gösterir ve .mdf ve .ldf veritabanı ve günlük dosyalarının konumunu belirten göreli bir yol sağlar. Bu dosyaları başka bir yerde bulmak isterseniz, dosyaların tam yolunu sağlamanız gerekir.  
+- `|DataDirectory|` Kanal simgelerine eklenen dize, bağlantıyı açan uygulamanın veri dizinine başvurur ve. mdf ve. ldf veritabanının ve günlük dosyalarının konumunu gösteren göreli bir yol sağlar. Bu dosyaları başka bir yerde bulmak istiyorsanız dosyaların tam yolunu sağlamanız gerekir.  
   
 ```  
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -58,12 +58,12 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  Ayrıca <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> ve <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> özellikler zamanında bağlantı dizenizi oluşturmak için çalışma zamanında.  
+> Ayrıca, <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> çalışma zamanında bir bağlantı <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> dizesi oluşturmak için ve özelliklerini de kullanabilirsiniz.  
   
-### <a name="using-the-124datadirectory124-substitution-string"></a>Kullanarak &#124;DataDirectory&#124; değiştirme dizesi  
- `AttachDbFileName` ADO.NET 2. 0'sunulmasıyla birlikte genişletilmişse `|DataDirectory|` (kanal sembolleri alınmış) değiştirme dizesi. `DataDirectory` ile birlikte kullanılan `AttachDbFileName` bir veri dosyası için göreli bir yol belirtmek için göreli bir yol olan yerine veri kaynağına dayalı bağlantı dizesi oluşturmak, geliştiricilerin tam yolunu belirtmeniz gerekir.  
+### <a name="using-the-124datadirectory124-substitution-string"></a>&#124;DataDirectory&#124; değiştirme dizesini kullanma  
+ `AttachDbFileName`, `|DataDirectory|` ADO.NET 2,0 ' de (kanal sembolleri içine alınmış) değiştirme dizesinin tanıtılmasıyla genişletildi. `DataDirectory`, bir veri dosyasının göreli `AttachDbFileName` yolunu belirtmek için ile birlikte kullanıldığında, geliştiricilerin tam yol belirtmek yerine veri kaynağına göre göreli bir yolu temel alan bağlantı dizeleri oluşturmalarına olanak tanır.  
   
- Fiziksel konum, `DataDirectory` bağlı olan uygulama türüne işaret eder. Bu örnekte, eklenmiş Northwind.mdf dosya uygulamanın \app_data klasöründe bulunur.  
+ Öğesinin `DataDirectory` işaret ettiği fiziksel konum, uygulamanın türüne bağlıdır. Bu örnekte, eklenecek Northwind. mdf dosyası uygulamanın \app_data klasöründe bulunur.  
   
 ```  
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -72,19 +72,19 @@ AttachDBFilename=|DataDirectory|\app_data\Northwind.mdf;
 Initial Catalog=Northwind;  
 ```  
   
- Zaman `DataDirectory` olan kullanıldığında, sonuçta elde edilen dosya yolu dizin yapısında değiştirme dizesi tarafından belirtilen dizin daha yüksek olamaz. Örneğin, tam olarak Genişletilmiş `DataDirectory` C:\AppDirectory\app_data sonra c:\AppDirectory olduğundan works gösterilen örnek bağlantı dizesi. Ancak, denemek `DataDirectory` olarak `|DataDirectory|\..\data` \data \AppDirectory dizininin bir alt olmadığından bir hataya neden olur.  
+ `DataDirectory` Kullanıldığında, ortaya çıkan dosya yolu, dizin yapısında değiştirme dizesi tarafından işaret edilen dizinden daha yüksek olamaz. Örneğin, tam genişletilmiş `DataDirectory` C:\AppDirectory\app_data ise, yukarıda gösterilen örnek bağlantı dizesi c:\appdirectoryaltında olduğundan geçerlidir. Bununla birlikte, olarak `DataDirectory` `|DataDirectory|\..\data` belirtilmeye çalışılması bir hata oluşmasına neden olur çünkü \Data bir \appdirectoryalt dizini değildir.  
   
- Bağlantı dizesi bir Düzensiz biçimlendirilmiş bir değiştirme dizesi varsa bir <xref:System.ArgumentException> oluşturulur.  
-  
-> [!NOTE]
->  <xref:System.Data.SqlClient> Yerel bilgisayar dosya sistemine karşı tam yollarını içine değiştirme dizelerini çözümler. Bu nedenle, uzak sunucu, HTTP ve UNC yolu adları desteklenmemektedir. Bağlantı açıldığında sunucunun yerel bilgisayarda bulunmuyorsa, bir özel durum oluşturulur.  
-  
- Zaman <xref:System.Data.SqlClient.SqlConnection> olan açıldı, onu varsayılan SQL Server Express örneğinden çağıranın hesabı altında çalıştırma başlatılan örneği çalışan bir yönlendirilir.  
+ Bağlantı dizesinde hatalı biçimli bir değiştirme dizesi varsa, bir <xref:System.ArgumentException> oluşturulur.  
   
 > [!NOTE]
->  Artırmak gerekli olabilir <xref:System.Data.SqlClient.SqlConnection.ConnectionTimeout%2A> kullanıcı örnekleri, normal örneklerden yüklenmesi daha uzun sürebilir değeri.  
+> <xref:System.Data.SqlClient>değiştirme dizelerini yerel bilgisayar dosya sistemine karşı tam yollarla çözer. Bu nedenle, uzak sunucu, HTTP ve UNC yol adları desteklenmez. Sunucu yerel bilgisayarda bulunmuyorsa bağlantı açıldığında bir özel durum oluşur.  
   
- Aşağıdaki kod parçası, yeni bir açılır `SqlConnection`, bağlantı dizesini konsol penceresinde görüntüler ve ardından çıkarken bağlantıyı kapatır `using` kod bloğu.  
+ <xref:System.Data.SqlClient.SqlConnection> Açıldığında, varsayılan SQL Server Express örneğinden, çağıranın hesabı altında çalışan bir çalışma zamanı başlatılmış örneğe yönlendirilir.  
+  
+> [!NOTE]
+> Kullanıcı örneklerinin normal örneklere göre yüklenmeye daha <xref:System.Data.SqlClient.SqlConnection.ConnectionTimeout%2A> uzun sürebileceğinden, değeri artırmak gerekebilir.  
+  
+ Aşağıdaki kod parçası yeni `SqlConnection`bir açar, bağlantı dizesini konsol penceresinde görüntüler ve ardından `using` kod bloğundan çıkarken bağlantıyı kapatır.  
   
 ```vb  
 Private Sub OpenSqlConnection()  
@@ -116,43 +116,43 @@ private static void OpenSqlConnection()
 ```  
   
 > [!NOTE]
->  Kullanıcı örnekleri içinde SQL Server çalıştıran ortak dil çalışma zamanı (CLR) kodu desteklenmez. Bir <xref:System.InvalidOperationException> oluşturulur `Open` üzerinde çağrılır bir <xref:System.Data.SqlClient.SqlConnection> olan `User Instance=true` bağlantı dizesindeki.  
+> SQL Server içinde çalışan ortak dil çalışma zamanı (CLR) kodunda Kullanıcı örnekleri desteklenmez. , Bağlantı dizesinde bulunan `Open` <xref:System.Data.SqlClient.SqlConnection> bir üzerinde`User Instance=true` çağrılırsa oluşturulur. <xref:System.InvalidOperationException>  
   
-## <a name="lifetime-of-a-user-instance-connection"></a>Bir kullanıcı örneği bağlantı ömrü  
- SQL Server sürümlerinden farklı olarak bir hizmet olarak çalıştırın, SQL Server Express örneklerini el ile yapmanız gerekmez, kullanmaya ve durduruldu. Zaten çalışmıyorsa, bir kullanıcı oturum açtığında ve bir kullanıcı örneğine bağlanan her zaman kullanıcı örneği başlatıldı. Kullanıcı örneği veritabanlarının `AutoClose` seçenek kümesi böylece veritabanı bir süre işlem yapılmadığında otomatik olarak kapatılır. Başlatılan sqlservr.exe işlem tutulur çalıştıran bir sınırlı bir zaman aşımı süresini örneği son bağlantı kapatıldıktan sonra zaman aşımına uğramadan önce başka bir bağlantı açıldıysa yeniden başlatılması gerekmez. Bu zaman aşımı süresi sona ermeden önce yeni bağlantı açarsa, kullanıcı örneği otomatik olarak kapanır. Üst örneğinde Sistem Yöneticisi kullanarak bir kullanıcı örneği için zaman aşımı süresini süresini ayarlayabilirsiniz **sp_configure** değiştirmek için **kullanıcı örneği zaman aşımı** seçeneği. Varsayılan değer 60 dakikadır.  
-  
-> [!NOTE]
->  Varsa `Min Pool Size` kullanılan bağlantı dizesinde, sıfırdan büyük bir değere sahip birkaç açık bağlantıları her zaman bağlantı havuzlayıcı korur ve kullanıcı örneği otomatik olarak kapatılacak değil.  
-  
-## <a name="how-user-instances-work"></a>Kullanıcı iş nasıl örnekleri  
- Bir kullanıcı örneği her bir kullanıcı için oluşturulan ilk kez **ana** ve **msdb** sistem veritabanları kopyalanır şablon veri klasöründen kullanıcının yerel uygulama veri deposu altındaki yol kullanıcı örneği tarafından kullanılacak dizin. Bu yol genellikle `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Bir kullanıcı örneği başlatıldığında **tempdb**, günlük ve izleme dosyaları da bu dizine yazılır. Örneğin, her kullanıcı için benzersiz olması garanti bir ad oluşturulur.  
-  
- Varsayılan olarak Windows BUILTIN\USERS grubunun tüm üyeleri üzerinde yerel bağlanın yanı sıra okuma ve Yürütme izinleri SQL Server ikili dosyalarını izinleri verilir. Kullanıcı örneği barındıran çağıran kullanıcının kimlik bilgileri doğruladıktan sonra o kullanıcı olur `sysadmin` örneğine. Yalnızca paylaşılan bellek, yalnızca yerel makine üzerinde işlemler mümkün olmadığı anlamına gelir, kullanıcı örnekleri için etkinleştirilir.  
-  
- Kullanıcılar hem okuma hem bağlantı dizesinde belirtilen .mdf ve .ldf dosyalarda izinleri verilmelidir.  
+## <a name="lifetime-of-a-user-instance-connection"></a>Kullanıcı örneği bağlantısının ömrü  
+ Hizmet olarak çalışan SQL Server sürümlerinden farklı olarak, SQL Server Express örneklerinin el ile başlatılması ve durdurulması gerekmez. Kullanıcı oturum açtığında ve bir kullanıcı örneğine her bağlanışında, Kullanıcı örneği zaten çalışmıyorsa başlatılır. Kullanıcı örneği veritabanlarının, `AutoClose` bir süre işlem yapılmadan sonra veritabanını otomatik olarak kapatması için seçenek kümesi vardır. Başlatılan sqlservr. exe işlemi, örneğe son bağlantı kapatıldıktan sonra sınırlı bir zaman aşımı süresi boyunca çalışır durumda tutulur, bu nedenle zaman aşımı süresi dolmadan önce başka bir bağlantı açılırsa yeniden başlatılması gerekmez. Bu zaman aşımı süresi dolmadan önce yeni bir bağlantı açılmamışsa Kullanıcı örneği otomatik olarak kapanır. Üst örnekteki Sistem Yöneticisi, Kullanıcı örneği **zaman aşımı** seçeneğini değiştirmek için **sp_configure** kullanarak bir kullanıcı örneği için zaman aşımı süresi süresini ayarlayabilir. Varsayılan değer 60 dakikadır.  
   
 > [!NOTE]
->  .Mdf ve .ldf dosyaları veritabanı ve günlük dosyalarının sırasıyla temsil eder. Bu iki dosyayı özen yedekleme sırasında düşünülmesi gereken ve geri yükleme işlemleri eşlenmiş bir küme olduğundan. Veritabanı dosyası günlük dosyasının tam sürümünü ilgili bilgiler içerir ve yanlış günlük dosyası ile sıkı bağlı, veritabanı açılır değil.  
+> Bağlantı `Min Pool Size` dizesinde sıfırdan büyük bir değere sahip ise, bağlantı havuzlayıcı her zaman açılmış birkaç bağlantıyı korur ve Kullanıcı örneği otomatik olarak kapatılmaz.  
   
- Veri bozulmasını önlemek için kullanıcı örneğinde bir veritabanı ile özel erişim açılır. İki farklı bir kullanıcı örneği aynı bilgisayarda aynı veritabanını paylaşıyorsanız, ikinci bir örneğinde açılmadan önce ilk örnek kullanıcı veritabanı kapatmanız gerekir.  
+## <a name="how-user-instances-work"></a>Kullanıcı örnekleri nasıl çalışır?  
+ Her Kullanıcı için bir kullanıcı örneği ilk kez oluşturulduğunda, **ana** ve **msdb** sistem veritabanları, Kullanıcı örneği tarafından özel kullanım için, şablon verileri klasöründen kullanıcının yerel uygulama veri deposu dizini altındaki bir yola kopyalanır. Bu yol genellikle `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`olur. Bir kullanıcı örneği başlatıldığında, **tempdb**, log ve Trace dosyaları da bu dizine yazılır. Örnek için, her kullanıcı için benzersiz olması garanti edilen bir ad oluşturulur.  
+  
+ Varsayılan olarak, Windows buıltın\users grubunun tüm üyelerine, SQL Server ikili dosyalarında okuma ve yürütme izinlerinin yanı sıra yerel örneğe bağlanma izinleri verilir. Kullanıcı örneğini barındıran çağıran kullanıcının kimlik bilgileri doğrulandıktan sonra, bu kullanıcı o örnekte olur `sysadmin` . Yalnızca paylaşılan bellek Kullanıcı örnekleri için etkindir, yani yalnızca yerel makinedeki işlemler mümkündür.  
+  
+ Kullanıcılara bağlantı dizesinde belirtilen. mdf ve. ldf dosyalarında hem okuma hem de yazma izinleri verilmelidir.  
+  
+> [!NOTE]
+> . Mdf ve. ldf dosyaları sırasıyla veritabanı ve günlük dosyalarını temsil eder. Bu iki dosya eşleşen bir küme olduğundan yedekleme ve geri yükleme işlemleri sırasında dikkatli olunmalıdır. Veritabanı dosyası, günlük dosyasının tam sürümü hakkında bilgi içerir ve yanlış bir günlük dosyasıyla birleştirildiğinde veritabanı açılmaz.  
+  
+ Verilerin bozulmasını önlemek için, Kullanıcı örneğindeki bir veritabanı özel erişimle açılır. Aynı bilgisayarda iki farklı kullanıcı örneği aynı veritabanını paylaşıyorsa, ikinci bir örnekte açılmadan önce ilk örnekteki kullanıcının veritabanını kapatması gerekir.  
   
 ## <a name="user-instance-scenarios"></a>Kullanıcı örneği senaryoları  
- Kullanıcı örnekleri, veritabanı uygulamalarının geliştiriciler, geliştirme bilgisayarlarını üzerindeki yönetim hesaplarına sahip bağlı olmayan bir SQL Server veri deposu ile geliştiriciler sağlar. Kullanıcı örnekleri burada veritabanı uygulaması yalnızca bir dosyaya bağlar ve otomatik olarak tam izinleri tüm veritabanı nesnelerinin vermek için bir sistem yöneticisinin bir müdahalesi olmadan kullanıcının erişim/Jet modeline dayanır izinler. Burada kullanıcı (LUA) en az ayrıcalıklı kullanıcı hesabı altında çalıştığından ve sunucu veya yerel makine üzerinde yönetimsel yetkilere sahip değil, ancak veritabanı nesneleri ve uygulamaları oluşturmak için gereken durumlarda çalışacak şekilde tasarlanmıştır. Kullanıcı örnekleri, kullanıcının kendi güvenlik bağlamı altında ve değil daha ayrıcalıklı sistem hizmeti güvenlik bağlamında çalışan çalışma zamanında oluşumlarının izin ver.  
+ Kullanıcı örnekleri, geliştirme bilgisayarlarında yönetim hesapları olan geliştiricilere bağlı olmayan bir SQL Server veri deposu ile veritabanı uygulamalarına yönelik geliştiriciler sağlar. Kullanıcı örnekleri, veritabanı uygulamasının bir dosyaya bağlandığı erişim/Jet modeline dayalıdır ve Kullanıcı, bir sistem yöneticisinin izin vermesi gerekmeden tüm veritabanı nesneleri üzerinde otomatik olarak tam izinlere sahip olur izinleri. Kullanıcının en az ayrıcalıklı kullanıcı hesabı (LUA) altında çalıştığı ve sunucuda veya yerel makinede yönetici ayrıcalıklarına sahip olmadığı durumlarda, ancak veritabanı nesneleri ve uygulamalar oluşturmanız gerekir. Kullanıcı örnekleri, kullanıcıların, daha ayrıcalıklı bir sistem hizmetinin güvenlik bağlamında değil, kullanıcının kendi güvenlik bağlamı altında çalışan çalışma zamanında örnekler oluşturmalarına olanak tanır.  
   
 > [!IMPORTANT]
->  Kullanıcı örnekleri yalnızca onu kullanan tüm uygulamaları tam güvenilir olduğu senaryolarda kullanılmalıdır.  
+> Kullanıcı örnekleri yalnızca, kullanan tüm uygulamaların tam olarak güvendiği senaryolarda kullanılmalıdır.  
   
  Kullanıcı örneği senaryoları şunları içerir:  
   
-- Herhangi bir tek kullanıcı uygulama burada veri paylaşımı gerekli değildir.  
+- Verilerin paylaşılabileceği tek kullanıcılı uygulamalar gerekli değildir.  
   
-- ClickOnce dağıtımı. .NET Framework 2.0 (veya üzeri) ve SQL Server Express hedef bilgisayarda zaten yüklüyse, bir ClickOnce eylem sonucu olarak karşıdan yükleme paketini yüklenebilir ve yönetici olmayan kullanıcılar tarafından kullanılabilir. Bu kurulumun bir parçası olduğu yönetici SQL Server Express yüklemeniz gerektiğini unutmayın. Daha fazla bilgi için [Windows Forms için ClickOnce dağıtımı](../../../winforms/clickonce-deployment-for-windows-forms.md).
+- ClickOnce dağıtımı. .NET Framework 2,0 (veya üzeri) ve SQL Server Express zaten hedef bilgisayarda yüklüyse, bir ClickOnce eyleminin sonucu olarak indirilen yükleme paketi yönetici olmayan kullanıcılar tarafından yüklenebilir ve kullanılabilir. Kurulumun bir parçası olan bir yöneticinin SQL Server Express yüklemesi gerektiğini unutmayın. Daha fazla bilgi için bkz. [Windows Forms Için ClickOnce dağıtımı](../../../winforms/clickonce-deployment-for-windows-forms.md).
   
-- Özel ASP.NET, Windows kimlik doğrulaması kullanarak barındırma. Tek bir SQL Server Express örneği intranet üzerinde barındırılabilir. Uygulamayı, kimliğe bürünme kullanılmadığında ASPNET Windows hesabı kullanarak bağlanır. Kullanıcı örnekleri, üçüncü taraf veya paylaşılan barındırma burada tüm uygulamalar aynı kullanıcı örneği paylaşımında yapabileceği ve artık birbirinden yalıtılmış kalır senaryoları için kullanılmamalıdır.  
+- Windows kimlik doğrulamasını kullanarak adanmış ASP.NET barındırma. Tek bir SQL Server Express örneği, intranette barındırılabilir. Uygulama, kimliğe bürünme özelliğini kullanarak değil, ASPNET Windows hesabını kullanarak bağlanır. Kullanıcı örnekleri, tüm uygulamaların aynı Kullanıcı örneğini paylaştığı ve artık birbirinden yalıtılmış kalmayacak olan üçüncü taraf veya paylaşılan barındırma senaryolarında kullanılmamalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [Bağlantı Dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md)
 - [Veri Kaynağına Bağlanma](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

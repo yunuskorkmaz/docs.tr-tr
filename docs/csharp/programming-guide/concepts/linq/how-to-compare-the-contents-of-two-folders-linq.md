@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Iki klasörün Içeriğini karşılaştırma (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: f9f592eebb94ea783cff3ae3bc76125a9df72dd7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: df71712ca1b59c706ede66488af8b1580677e299
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594071"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924232"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Nasıl yapılır: Iki klasörün Içeriğini karşılaştırma (LINQ) (C#)
 Bu örnekte iki dosya listesi karşılaştırmanın üç yolu gösterilmektedir:  
@@ -19,7 +19,7 @@ Bu örnekte iki dosya listesi karşılaştırmanın üç yolu gösterilmektedir:
 - Bir klasörde olan ancak diğeri olmayan dosyaları almak için ayarlanan farkı sorgulayarak.  
   
     > [!NOTE]
-    >  Burada gösterilen teknikler, herhangi bir türdeki nesne dizilerini karşılaştırmak için uyarlanmıştır.  
+    > Burada gösterilen teknikler, herhangi bir türdeki nesne dizilerini karşılaştırmak için uyarlanmıştır.  
   
  Burada `FileComparer` gösterilen sınıf, standart sorgu işleçleri ile birlikte özel bir karşılaştırıcı sınıfının nasıl kullanılacağını gösterir. Sınıfı, gerçek dünyada senaryolarda kullanılmak üzere tasarlanmamıştır. Her bir klasörün içeriğinin aynı olup olmadığını anlamak için her bir dosyanın bayt cinsinden adını ve uzunluğunu kullanır. Gerçek dünyada bir senaryoda, daha kapsamlı bir eşitlik denetimi gerçekleştirmek için bu karşılaştırıcıyı değiştirmelisiniz.  
   

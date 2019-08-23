@@ -2,18 +2,18 @@
 title: ADO.NET'e LINQ (Portal Sayfası)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: 06102acfb5fc9c70bc7b0d8e42f1f7603447306a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3bea3dffb98f0745947e4a672f70df5010bc2824
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591966"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924256"
 ---
 # <a name="linq-to-adonet-portal-page"></a>ADO.NET'e LINQ (Portal Sayfası)
 LINQ to ADO.net, [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] programlama modelini kullanarak ADO.NET içinde herhangi bir numaralandırılabilir nesneyi sorgulamanızı sağlar.  
   
 > [!NOTE]
->  LINQ to ADO.NET belgeleri .NET Framework SDK 'sının ADO.NET bölümünde bulunur: [LINQ ve ADO.net](../../../../framework/data/adonet/linq-and-ado-net.md).  
+> LINQ to ADO.NET belgeleri .NET Framework SDK 'sının ADO.NET bölümünde bulunur: [LINQ ve ADO.net](../../../../framework/data/adonet/linq-and-ado-net.md).  
   
  Üç ayrı ADO.net [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] teknolojisi vardır: LINQ to DataSet, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]ve LINQ to Entities. LINQ to DataSet üzerinde <xref:System.Data.DataSet>daha zengin, iyileştirilmiş sorgulama sağlar, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] SQL Server veritabanı şemalarını doğrudan sorgulayabilir ve LINQ to Entities varlık veri modeli sorgulamanızı sağlar.  
   

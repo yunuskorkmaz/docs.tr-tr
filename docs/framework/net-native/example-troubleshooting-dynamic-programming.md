@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e482303e684813574a092f0a2d5812445ed7fa6e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: fef5894f7452bd32cc4e43433aa60166db241a12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052611"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910609"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Örnek: Dinamik Programlama Sorunlarını Giderme
 > [!NOTE]
->  Bu konuda, .NET Native Geliştirici yayın öncesi bir yazılım olan Önizleme, ifade eder. Önizlemesi'nden indirebileceğiniz [Microsoft Connect Web sitesi](https://go.microsoft.com/fwlink/?LinkId=394611) (kayıt gerekir).  
+> Bu konu, yayın öncesi yazılım olan .NET Native geliştirici önizlemesine başvurur. Önizlemeyi [Microsoft Connect Web sitesinden](https://go.microsoft.com/fwlink/?LinkId=394611) indirebilirsiniz (kayıt gerekir).  
   
- Tüm meta veri arama hataları uygulamalarda, bir özel durum .NET Native araç zinciri sonucu kullanılarak geliştirilen.  Bazı uygulama beklenmedik bir şekilde bildirilebilir.  Aşağıdaki örnek, bir null Nesne başvurarak neden bir erişim ihlali gösterir:  
+ .NET Native araç zinciri kullanılarak geliştirilen uygulamalardaki tüm meta veri arama hatalarının bir özel durum sonucu yoktur.  Bazıları, bir uygulamada öngörülemeyen yollarla bildirimde bulunabilir.  Aşağıdaki örnek, null bir nesneye başvuruda bulunarak oluşan bir erişim ihlali gösterir:  
   
 ```  
 Access violation - code c0000005 (first chance)  
@@ -33,34 +33,34 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 [snip]  
 ```  
   
- Deneyelim "Meta veriler eksik elle Çözümle" bölümünde belirtilen üç adımlı yaklaşım kullanarak bu özel durum sorunlarını giderme [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md).  
+ [Kullanmaya](../../../docs/framework/net-native/getting-started-with-net-native.md)başlama konusunun "eksik meta verileri el ile çözümleme" bölümünde özetlenen üç adımlı yaklaşımı kullanarak bu özel durumu gidermeye deneyelim.  
   
-## <a name="what-was-the-app-doing"></a>Uygulama neler oldu?  
- Dikkat edilecek ilk şey `async` temel yığın anahtar sözcüğü makineler.  Hangi uygulamayı gerçekten yapmakta olduğu belirleyen bir `async` yöntemi olabilir sorunlu, çünkü yığın kaynak çağrı bağlamında kesildi ve çalıştırıldı `async` farklı bir iş parçacığında kod. Ancak, uygulama, ilk sayfa çalışıyor çıkarabilir.  İçin uygulamada `NavigationArgs.Setup`, aşağıdaki kod erişim ihlaline neden oldu:  
+## <a name="what-was-the-app-doing"></a>Uygulama ne yapıyor?  
+ İlk nottaki şey, yığının tabanında `async` anahtar sözcük makinelerdir.  Bir `async` yöntemde uygulamanın gerçekten ne yaptığını belirlemek soruna neden olabilir. yığın, kaynak çağrının bağlamını kaybettiğinden ve `async` kodu farklı bir iş parçacığında çalıştırmıştır. Bununla birlikte, uygulamanın ilk sayfasını yüklemeye çalıştığı anlaşıyoruz.  Uygulamasında `NavigationArgs.Setup`, aşağıdaki kod erişim ihlaline neden oldu:  
   
 ```  
 AppViewModel.Current.LayoutVM.PageMap  
 ```  
   
- Bu örnekte, `LayoutVM` özelliği `AppViewModel.Current` olduğu **null**.  Meta verileri bazı olmaması, hafif bir davranışı fark neden ve yerine küme, beklenen uygulaması olarak başlatılmamış bir özellikte sonuçlandı.  Kodda bir kesme noktası ayarlama burada `LayoutVM` başlatılmamış ışık durumunuza fırlatabilir.  Ancak, unutmayın `LayoutVM`ın türü `App.Core.ViewModels.Layout.LayoutApplicationVM`.  Şu ana kadar rd.xml dosyasında mevcut yalnızca meta veri yönergesi verilmiştir:  
+ Bu örnekte, `LayoutVM` `AppViewModel.Current` özelliği **null**idi.  Bazı meta veri yokluğu, hafif davranış farkına neden oldu ve uygulamanın beklendiği gibi küme yerine başlatılmamış bir özellik ile sonuçlandı.  Kodda başlatılmış olması `LayoutVM` gereken bir kesme noktası ayarlamak durumunda ışık oluşturabilir.  Ancak, türünün olduğunu `LayoutVM` `App.Core.ViewModels.Layout.LayoutApplicationVM`unutmayın.  Şu ana kadar Rd. xml dosyasında olan tek metaveri yönergesi şu şekilde bulunur:  
   
 ```xml  
 <Namespace Name="App.ViewModels" Browse="Required Public" Dynamic="Required Public" />  
 ```  
   
- Hatanın olası bir aday olan `App.Core.ViewModels.Layout.LayoutApplicationVM` farklı bir ad alanında olduğundan meta veriler eksik.  
+ Hata `App.Core.ViewModels.Layout.LayoutApplicationVM` için olası bir aday, farklı bir ad alanında olduğu için meta veriler eksik.  
   
- Bu durumda, bir çalışma zamanı yönerge için ekleme `App.Core.ViewModels` sorun çözümlenir. Bir API çağrısı için kök nedeni <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> döndürülen yöntemi **null**, ve bir kilitlenme oluştu kadar uygulamayı sessiz bir şekilde sorun yoksayıldı.  
+ Bu durumda, sorunu `App.Core.ViewModels` çözen bir çalışma zamanı yönergesi ekleme. Kök neden, <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> **null**döndüren yöntemine yönelik bir API çağrısıdır ve uygulama kilitlenme gerçekleşene kadar sorunu sessizce yok sayılır.  
   
- Dinamik programlama, API'leri altında .NET Native yansıtma kullanılırken iyi kullanmaktır <xref:System.Type.GetType%2A?displayProperty=nameWithType> hatasında bir özel durum aşırı yüklemeleri.  
+ Dinamik programlamada, .NET Native altında yansıma API 'leri kullanırken iyi bir uygulama hata durumunda özel durum oluşturan <xref:System.Type.GetType%2A?displayProperty=nameWithType> aşırı yüklemeleri kullanmaktır.  
   
-## <a name="is-this-an-isolated-case"></a>Bu, yalıtılmış bir durum mu?  
- Diğer sorunları da kullanırken ortaya çıkabilir `App.Core.ViewModels`.  Tanımlama ve eksik her meta veri özel durum düzeltme veya zaman tasarrufu sağlamanıza ve ekleme yönergeleri daha büyük bir sınıf türü için değer olup olmadığını karar vermeniz gerekir.  Burada, ekleme `dynamic` meta verilerini `App.Core.ViewModels` en iyi yaklaşım, sonuçta elde edilen boyutunu artırma çıkış ikili bir sorun yoksa olabilir.  
+## <a name="is-this-an-isolated-case"></a>Bu yalıtılmış bir durumdur mi?  
+ Kullanırken `App.Core.ViewModels`diğer sorunlar da oluşabilir.  Eksik bir meta veri özel durumunun belirlenmesi ve düzeltilmesi ya da zaman tasarrufu ve daha büyük bir tür sınıfı için yönergeler eklenmesi gerektiğine karar vermelisiniz.  Burada, çıkış `dynamic` ikilisinin `App.Core.ViewModels` elde edilen boyut artışı bir sorun değilse, için meta verileri eklemek en iyi yaklaşım olabilir.  
   
-## <a name="could-the-code-be-rewritten"></a>Kod yazılması?  
- Uygulama kullanmışsınız `typeof(LayoutApplicationVM)` yerine `Type.GetType("LayoutApplicationVM")`, araç zincirinizi korunur `browse` meta verileri.  Ancak, yine de oluşturduktan mıydı `invoke` neden için meta verileri bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) türü örneği oluşturulurken özel durum. Özel durum önlemek için yine de ad alanı veya belirten türü için bir çalışma zamanı yönerge eklemeniz gerekir `dynamic` ilkesi. Çalışma zamanı yönergeleri hakkında daha fazla bilgi için bkz: [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+## <a name="could-the-code-be-rewritten"></a>Kod yeniden yazılabilir mi?  
+ Uygulamanın `typeof(LayoutApplicationVM)` `browse` yerine kullanıldıysa, araç zinciri korunan meta verileri olabilir. `Type.GetType("LayoutApplicationVM")`  Ancak, tür örneği oluşturulurken `invoke` [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durumuna yol gösteren meta verileri hala oluşturmazdı. Özel durumu engellemek için, ad alanı veya `dynamic` ilkeyi belirten tür için bir çalışma zamanı yönergesi eklemeniz gerekir. Çalışma zamanı yönergeleri hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Örnek: Veri bağlama sırasında özel durum işleme](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [Örnek: Verileri bağlarken özel durumları işleme](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

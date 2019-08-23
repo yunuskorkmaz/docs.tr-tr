@@ -7,30 +7,30 @@ helpviewer_keywords:
 - AndAlso operator [Visual Basic]
 - IsFalse operator [Visual Basic]
 ms.assetid: 37fc9dbf-e5cc-4570-b93f-7213447974df
-ms.openlocfilehash: 9f25c406038486224c2c4708c86ef86889c44c15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49b8493575685a220808df1522ce16835b3ce0ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013549"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917150"
 ---
 # <a name="isfalse-operator-visual-basic"></a>IsFalse İşleci (Visual Basic)
-Bir ifade olup olmadığını belirler `False`.  
+Bir ifadenin `False`olup olmadığını belirler.  
   
- Çağıramazsınız `IsFalse` açıkça kodunuzu kullanabilirsiniz, ancak Visual Basic derleyici Bu kod oluşturmak için `AndAlso` yan tümceleri. Bir sınıf veya yapı tanımlayın ve ardından bu türde bir değişken kullanmak, bir `AndAlso` yan tümcesi tanımlamalıdır `IsFalse` Bu sınıf ya da yapı üzerinde.  
+ Kodunuzda açıkça çağrı `IsFalse` yapılamaz, ancak Visual Basic Derleyicisi bunu yan tümcelerden `AndAlso` kod oluşturmak için kullanabilir. Bir sınıf veya yapı tanımlayabilir ve sonra bir `AndAlso` yan tümce içinde bu türden bir değişken kullanırsanız, bu sınıf veya yapıda tanımlamanız `IsFalse` gerekir.  
   
- Derleyici göz önünde bulundurur `IsFalse` ve `IsTrue` işleçleri bir *çifti eşleşen*. Başka bir deyişle, bir tanesi tanımlarsanız, ayrıca diğeri tanımladığınız gerekir.  
+ Derleyici, `IsFalse` ve `IsTrue` işleçlerini eşleşen bir *çift*olarak değerlendirir. Diğer bir deyişle, bunlardan birini tanımlarsanız, diğerini de tanımlamanız gerekir.  
   
 > [!NOTE]
->  `IsFalse` İşleci olabilir *aşırı*, kendi işleneninin türü, sınıfın veya yapının olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir. Kodunuz bu tür bir sınıf veya yapı üzerinde bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> İşleç aşırı yüklenebilir, yani işleneni Bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. `IsFalse` Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği için tanımları içeren bir yapının anahat tanımlar `IsFalse` ve `IsTrue` işleçleri.  
+ Aşağıdaki kod örneği, `IsFalse` ve `IsTrue` işleçleri için tanımlar içeren bir yapının ana hattını tanımlar.  
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [IsTrue İşleci](../../../visual-basic/language-reference/operators/istrue-operator.md)
-- [Nasıl yapılır: Bir işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Nasıl yapılır: Bir Işleç tanımlayın](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
 - [AndAlso İşleci](../../../visual-basic/language-reference/operators/andalso-operator.md)

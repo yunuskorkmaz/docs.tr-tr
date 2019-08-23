@@ -1,23 +1,23 @@
 ---
-title: <remove> ' ın <claimTypeRequirements> öğesi
+title: <remove><claimTypeRequirements> öğesinin
 ms.date: 03/30/2017
 ms.assetid: 8ef05bc4-1950-4ee4-95c5-1c6a394eff7e
-ms.openlocfilehash: 9ab1162ff5d86b8a9d43dae79ebf9c9321119206
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7238c253bfbc3224c8bbd31265e197dd35e56514
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783103"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934231"
 ---
-# <a name="remove-of-claimtyperequirements-element"></a>\<kaldırma >, \<claimTypeRequirements > öğesi
-Birleştirilmiş kimlik bilgisindeki kaldırılacak talep türlerini belirtir.  
+# <a name="remove-of-claimtyperequirements-element"></a>\<\<ClaimTypeRequirements > öğesinin > Kaldır
+Federal kimlik bilgilerinde kaldırılacak talep türlerini belirtir.  
   
  \<system.ServiceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<wsFederatedBinding >  
 \<bağlama >  
 \<Güvenlik >  
-\<İleti >  
+\<ileti >  
 \<claimTypeRequirements >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,7 +35,7 @@ Birleştirilmiş kimlik bilgisindeki kaldırılacak talep türlerini belirtir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|ClaimType|Kaldırılacak talep türünü tanımlayan URI.|  
+|claimType|Kaldırılacak talebin türünü tanımlayan URI.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -44,7 +44,7 @@ Birleştirilmiş kimlik bilgisindeki kaldırılacak talep türlerini belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|Gerekli talep türlerinin koleksiyonunu belirtir. Her öğe türünde <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> Federe bir senaryoda, hizmetleri gereksinimlerine gelen kimlik bilgilerini belirtin. Örneğin, gelen kimlik bilgileri, belirli bir talep türleri kümesini sahip olması gerekir. Bu koleksiyondaki her öğe bir birleştirilmiş kimlik bilgisinde görünmesi beklenen gerekli ve isteğe bağlı taleplerin türlerini belirtir.|  
+|[\<claimTypeRequirements >](claimtyperequirements-for-message.md)|Gerekli talep türlerinin koleksiyonunu belirtir. Her öğe türündedir <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> Federasyon senaryosunda, hizmetler gelen kimlik bilgileri için gereksinimleri durum olarak alır. Örneğin, gelen kimlik bilgileri belirli bir talep türü kümesine sahip olmalıdır. Bu koleksiyondaki her öğe, bir Federasyon kimlik bilgilerinde görünmesi beklenen gerekli ve isteğe bağlı taleplerin türlerini belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

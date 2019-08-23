@@ -2,20 +2,20 @@
 title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 91eafa46aa73b5e6d359fcbe48f098f9f8a4d0f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 032139b714aa11079c7ee8610c332e404b3981ac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644322"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918993"
 ---
 # <a name="exposedmethod"></a>\<exposedMethod >
-Bir COM + bileşeni üzerinde arabirim bir Web hizmeti olarak sunulduğunda, sunulan bir COM + metodunu temsil eder.  
+Bir COM+ bileşenindeki arabirim bir Web hizmeti olarak sunulduğunda ortaya çıkarılan bir COM+ yöntemini temsil eder.  
   
  \<system.ServiceModel>  
 \<comContracts >  
 \<comContract >  
-\<yöntemleri >  
+\<Yöntemler >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,7 +36,7 @@ Bir COM + bileşeni üzerinde arabirim bir Web hizmeti olarak sunulduğunda, sun
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|name|Bir COM + bileşeni üzerinde arabirim bir Web hizmeti olarak sunulduğunda, sunulan COM + metodunu içeren bir dize.|  
+|name|Bir COM+ bileşenindeki arabirim bir Web hizmeti olarak sunulduğunda ortaya çıkarılan COM+ yöntemini içeren bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -45,16 +45,16 @@ Bir COM + bileşeni üzerinde arabirim bir Web hizmeti olarak sunulduğunda, sun
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<exposedMethods >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethods.md)|Bir koleksiyonu [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) öğeleri.|  
+|[\<exposedMethods >](exposedmethods.md)|Bir [ \<ExposedMethod >](exposedmethod.md) öğeleri koleksiyonu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- COM + tümleştirme Yapılandırma Aracı (ComSvcConfig.exe), bir COM arabiriminden oluşturulan hizmet sözleşmesini görünmesini belirli yöntemler eklemek için kullanılabilir.  
+ COM+ tümleştirme yapılandırma aracı (ComSvcConfig. exe), bir COM arabiriminden oluşturulan hizmet sözleşmesinde görünecek belirli yöntemler eklemek için kullanılabilir.  
   
- Örneğin, üç adlandırılmış yöntemleri eklemek için aşağıdaki komutu kullanabilirsiniz `IFinances` COM arabirimi `ItemOrders`. Oluşturulan hizmet sözleşmesi için finansal bileşeni.  
+ Örneğin, ' `IFinances` `ItemOrders`de com arabiriminden üç adlandırılmış yöntemi eklemek için aşağıdaki komutu kullanabilirsiniz. Finans bileşeni, oluşturulan hizmet sözleşmesine.  
   
  `ComSvcConfig.exe /i /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{TransferFunds,AddFunds,RemoveFunds} /hosting:complus`  
   
- Sonra da ComSvcConfig.exe çalıştırdığınızda, daha önce bahsedilen yöntemler olarak listeleme aşağıdaki hizmet sözleşmesi ürettiği [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) öğeleri.  
+ ComSvcConfig. exe dosyasını da çalıştırdığınızda, daha önce bahsedilen yöntemleri [ \<ExposedMethod >](exposedmethod.md) öğeleri olarak listeleyerek aşağıdaki hizmet sözleşmesini oluşturur.  
   
 ```xml  
 <comContract contractType="{C551FBA9-E3AA-4272-8C2A-84BD8D290AC7}"
@@ -66,12 +66,12 @@ Bir COM + bileşeni üzerinde arabirim bir Web hizmeti olarak sunulduğunda, sun
 </comContract>
 ```  
   
- Üzerinden yansıtarak ve yalnızca listesine dahil yöntemleri ekleyerek bir hizmet sözleşmesini oluşturmak çalışma zamanı hizmet başlangıç zamanında çalışır [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) öğeleri. İzleme, hizmet sözleşmesinde yer almayan her arabirim yöntemi için oluşturulur.  
+ Hizmet başlatma sırasında çalışma zamanı, yalnızca [ \<ExposedMethod >](exposedmethod.md) öğeleri listesine dahil edilen yöntemleri inceleyerek ve ekleyerek bir hizmet sözleşmesi oluşturmaya çalışır. Hizmet sözleşmesine dahil olmayan her arabirim yöntemi için bir izleme oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Configuration.ComMethodElementCollection>
 - <xref:System.ServiceModel.Configuration.ComMethodElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [COM+ Uygulamaları ile Tümleştirme](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Nasıl yapılır: COM + hizmet ayarlarını yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [COM+ Uygulamaları ile Tümleştirme](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Nasıl yapılır: COM+ hizmet ayarlarını yapılandırma](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

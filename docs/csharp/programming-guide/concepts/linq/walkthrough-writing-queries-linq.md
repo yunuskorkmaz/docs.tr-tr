@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 9fa15f1506d2fb22ef6c693508a2cd045f920add
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9b6592405d3047c8663b48137aa5b1f0eb14bdb4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590898"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924104"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>İzlenecek yol: C#'de Sorgu Yazma (LINQ)
 Bu izlenecek yol, C# LINQ sorgu ifadeleri yazmak için kullanılan dil özelliklerini gösterir.  
@@ -20,7 +20,7 @@ Bu izlenecek yol, C# LINQ sorgu ifadeleri yazmak için kullanılan dil özellikl
 ## <a name="create-a-c-project"></a>Bir C# Projesi Oluşturma  
   
 > [!NOTE]
->  Aşağıdaki yönergeler Visual Studio içindir. Farklı bir geliştirme ortamı kullanıyorsanız, System. Core. dll başvurusu ve `using` <xref:System.Linq?displayProperty=nameWithType> ad alanı için bir yönerge içeren bir konsol projesi oluşturun.  
+> Aşağıdaki yönergeler Visual Studio içindir. Farklı bir geliştirme ortamı kullanıyorsanız, System. Core. dll başvurusu ve `using` <xref:System.Linq?displayProperty=nameWithType> ad alanı için bir yönerge içeren bir konsol projesi oluşturun.  
   
 #### <a name="to-create-a-project-in-visual-studio"></a>Visual Studio 'da bir proje oluşturmak için  
   

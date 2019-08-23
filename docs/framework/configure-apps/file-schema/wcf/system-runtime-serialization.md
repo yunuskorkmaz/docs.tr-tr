@@ -2,15 +2,15 @@
 title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: c34eba2614a354f1753d8da077f8653f2c260a97
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ec5cd19ccdc5c21a3caf426520d51442dc5ab3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757917"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938931"
 ---
-# <a name="systemruntimeserialization"></a>\<System.Runtime.Serialization >
-İçin olan kök öğesini temsil eden <xref:System.Runtime.Serialization> ad uzayı bölümü ve seçeneklerini ayarlamak için öğeleri içeren <xref:System.Runtime.Serialization.DataContractSerializer>.  
+# <a name="systemruntimeserialization"></a>\<System. Runtime. Serialization >
+<xref:System.Runtime.Serialization> Ad alanı bölümünün kök öğesini temsil eder ve seçeneklerini <xref:System.Runtime.Serialization.DataContractSerializer>ayarlamak için öğeleri içerir.  
   
  system.runtime.serialization  
   
@@ -34,7 +34,7 @@ ms.locfileid: "61757917"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
+ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
  Yok.  
@@ -43,16 +43,16 @@ ms.locfileid: "61757917"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|Kullanılacak bilinen türlerinin eklenmesi sağlar, seri durumdan çıkarma.|  
+|[\<dataContractSerializer >](datacontractserializer-of-system-runtime-serialization.md)|Seri durumdan çıkarma sırasında kullanılacak bilinen türlerin eklenmesini sağlar.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Yapılandırma > öğesi](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Yapılandırma için üst düzey öğe.|  
+|[\<Yapılandırma > öğesi](../configuration-element.md)|Yapılandırma için en üst düzey öğe.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Serialization>
-- [Veri Anlaşmalarını Kullanma](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Veri Anlaşması Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Veri Anlaşmalarını Kullanma](../../../wcf/feature-details/using-data-contracts.md)
+- [Veri Anlaşması Bilinen Türler](../../../wcf/feature-details/data-contract-known-types.md)

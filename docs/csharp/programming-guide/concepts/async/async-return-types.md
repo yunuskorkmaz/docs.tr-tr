@@ -2,12 +2,12 @@
 title: Zaman uyumsuz dönüş türleriC#()
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: f9ec8c9dc9e51fa3256f8bbd523c7945efe866e0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f40592038ce16173e6dced5e8bcb914cfeb1b1f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595774"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922035"
 ---
 # <a name="async-return-types-c"></a>Zaman uyumsuz dönüş türleriC#()
 Zaman uyumsuz metotlar aşağıdaki dönüş türlerine sahip olabilir:
@@ -36,7 +36,7 @@ Yöntemi içindeki bir `leisureHours`await ifadesi `GetLeisureHours` içinden ç
 Aşağıdaki kodda gösterildiği gibi `GetLeisureHours` `await`, çağrısını uygulamasından ayırarak bunun nasıl gerçekleştiğini daha iyi anlayabilirsiniz. Yönteminin bildiriminden bekleyebileceğiniz `GetLeisureHours` için hemen beklenen bir yönteme çağrı bir `Task<int>`döndürür. Görev örnekteki `integerTask` değişkenine atanır. Bir olduğundan, <xref:System.Threading.Tasks.Task%601.Result> türünde bir`TResult`özelliğiiçerir. <xref:System.Threading.Tasks.Task%601> `integerTask` Bu durumda, `TResult` bir tamsayı türünü temsil eder. Öğesine uygulandığında, <xref:System.Threading.Tasks.Task%601.Result%2A> await ifadesi öğesinin `integerTask`özelliğinin içeriğini değerlendirir. `integerTask` `await` Değer `ret` değişkenine atanır.  
   
 > [!IMPORTANT]
->  <xref:System.Threading.Tasks.Task%601.Result%2A> Özelliği engelleyici bir özelliktir. Görevi tamamlanmadan önce ona erişmeye çalışırsanız, etkin olan iş parçacığı, görev tamamlanana ve değer kullanılabilir olana kadar engellenir. Çoğu durumda, özelliğine doğrudan erişmek yerine kullanarak `await` değere erişmeniz gerekir. <br/> Önceki örnek, uygulamanın sonlandırılmadan önce yürütmeyi tamamlayabilmesi <xref:System.Threading.Tasks.Task%601.Result%2A> `ShowTodaysInfo` için ana iş parçacığını engellemek üzere özelliğinin değerini almıştır.  
+> <xref:System.Threading.Tasks.Task%601.Result%2A> Özelliği engelleyici bir özelliktir. Görevi tamamlanmadan önce ona erişmeye çalışırsanız, etkin olan iş parçacığı, görev tamamlanana ve değer kullanılabilir olana kadar engellenir. Çoğu durumda, özelliğine doğrudan erişmek yerine kullanarak `await` değere erişmeniz gerekir. <br/> Önceki örnek, uygulamanın sonlandırılmadan önce yürütmeyi tamamlayabilmesi <xref:System.Threading.Tasks.Task%601.Result%2A> `ShowTodaysInfo` için ana iş parçacığını engellemek üzere özelliğinin değerini almıştır.  
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-ms.openlocfilehash: ffb24468c81cb4ec9f41645f8888c2c4ba021609
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d757e3c37f347014eb2ef90b4e61ddd205dd012
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033585"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938663"
 ---
 # <a name="how-to-use-scalar-valued-user-defined-functions"></a>Nasıl yapılır: Skaler Değerli Kullanıcı Tanımlı İşlevler Kullanma
-Kullanıcı tanımlı bir işlev için bir sınıf tarafından tanımlanan bir istemci yöntemi eşleyebilirsiniz <xref:System.Data.Linq.Mapping.FunctionAttribute> özniteliği. Yönteminin gövdesinin yöntem çağrısının hedefi yakalar ve bu ifadeyi geçirmeden bir ifade oluşturur Not <xref:System.Data.Linq.DataContext> çeviri ve yürütme için.  
+<xref:System.Data.Linq.Mapping.FunctionAttribute> Özniteliğini kullanarak, bir sınıfta tanımlanan istemci yöntemini Kullanıcı tanımlı bir işlev ile eşleyebilirsiniz. Yöntemin gövdesi, yöntem çağrısının amacını yakalayan bir ifade oluşturur ve bu ifadeyi <xref:System.Data.Linq.DataContext> çeviri ve yürütmeye geçirir.  
   
 > [!NOTE]
->  Yalnızca bir sorgu dışında işlev çağrılırsa, doğrudan yürütme gerçekleşir. Daha fazla bilgi için [nasıl yapılır: Kullanıcı tanımlı işlevleri satır içi olarak çağırdığınızda](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md).  
+> Doğrudan yürütme yalnızca işlev bir sorgu dışında çağrıldığında gerçekleşir. Daha fazla bilgi için [nasıl yapılır: Kullanıcı tanımlı Işlevleri satır Içinde](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)çağırın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki SQL kodunu bir skaler değerli kullanıcı tanımlı işlev sunar `ReverseCustName()`.  
+ Aşağıdaki SQL kodu, skaler değerli Kullanıcı tanımlı bir işlev `ReverseCustName()`gösterir.  
   
 ```  
 CREATE FUNCTION ReverseCustName(@string varchar(100))  
@@ -32,7 +32,7 @@ BEGIN
 END  
 ```  
   
- Bu kod için bir istemci yöntemi aşağıdaki gibi eşlemeniz:  
+ Bu kod için aşağıdaki gibi bir istemci yöntemi eşleyebilirsiniz:  
   
  [!code-csharp[DLinqUDFS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/northwind-tfunc.cs#3)]
  [!code-vb[DLinqUDFS#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/northwind-tfunc.vb#3)]  

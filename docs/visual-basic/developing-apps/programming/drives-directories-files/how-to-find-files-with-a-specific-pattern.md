@@ -1,54 +1,54 @@
 ---
-title: "Nasıl yapılır: Visual Basic'te belirli düzendeki dosyaları bulma"
+title: 'Nasıl yapılır: Visual Basic belirli bir düzene sahip dosyaları bulma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], finding
 - pattern matching
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
-ms.openlocfilehash: 29b66c52f2f9ac022784c5704c47893aed264c42
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f35222d958f8b02f83c6575d940d24e359c3ae00
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629060"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914725"
 ---
-# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te belirli düzendeki dosyaları bulma
-<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> Yöntemi dosyaları için yol adlarını temsil eden dizeleri salt okunur bir koleksiyonunu döndürür. Kullanabileceğiniz `wildCards` parametresini kullanarak belirli bir desen belirtin. Alt dizinler aramaya dahil etmek istediğiniz verilirse `searchType` parametresi `SearchOption.SearchAllSubDirectories`.  
+# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Nasıl yapılır: Visual Basic belirli bir düzene sahip dosyaları bulma
+<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> Yöntemi, dosyaların yol adlarını temsil eden salt okunurdur bir dize koleksiyonu döndürür. Belirli bir kalıbı belirtmek `wildCards` için parametresini kullanabilirsiniz. Aramaya alt dizinler eklemek isterseniz, `searchType` parametresini olarak `SearchOption.SearchAllSubDirectories`ayarlayın.  
   
- Belirtilen desenle eşleşen hiç dosya bulunamazsa, boş bir koleksiyon döndürülür.  
+ Belirtilen Düzenle eşleşen hiçbir dosya bulunamazsa boş bir koleksiyon döndürülür.  
   
 > [!NOTE]
->  Dosya listesi kullanarak döndürme hakkında bilgi için `DirectoryInfo` sınıfının `System.IO` ad bkz <xref:System.IO.DirectoryInfo.GetFiles%2A>.  
+> `System.IO` Ad alanının `DirectoryInfo` sınıfını kullanarak bir dosya listesi döndürme hakkında daha fazla bilgi için bkz <xref:System.IO.DirectoryInfo.GetFiles%2A>.  
   
-### <a name="to-find-files-with-a-specified-pattern"></a>Belirli bir düzendeki dosyaları bulmak için  
+### <a name="to-find-files-with-a-specified-pattern"></a>Belirtilen bir düzene sahip dosyaları bulmak için  
   
-- Kullanım `GetFiles` aramak istediğiniz dizinin yolunu ve adını sağlayan ve düzeni belirtme yöntemi. Aşağıdaki örnek uzantılı tüm dosyaları döndürür `.dll` dizinde eklenmeye ve `ListBox1`.  
+- Arama yapmak istediğiniz dizinin adını ve yolunu sağlayarak ve modelini belirterek yönteminikullanın.`GetFiles` Aşağıdaki örnek, dizininde uzantısı `.dll` olan tüm dosyaları döndürür ve içine ekler. `ListBox1`  
   
      [!code-vb[VbFileIOMisc#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#4)]  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunluklu bir dize olan, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya cihaz yoludur (ile başlayan \\ \\.\\) (<xref:System.ArgumentException>).  
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (ile \\ \\başlar.\\) (<xref:System.ArgumentException>).  
   
-- Çünkü bu yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğu için geçerli değil.  
   
-- `directory` yok (<xref:System.IO.DirectoryNotFoundException>).  
+- `directory`yok (<xref:System.IO.DirectoryNotFoundException>).  
   
-- `directory` Varolan bir dosyaya işaret (<xref:System.IO.IOException>).  
+- `directory`var olan bir dosyaya (<xref:System.IO.IOException>) işaret eder.  
   
-- Yolun sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).  
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
   
-- Yolda bir dosya veya klasör adı iki nokta üst üste (:) içeriyor veya biçimi geçersiz (<xref:System.NotSupportedException>).  
+- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
   
-- Kullanıcı yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
+- Kullanıcı, (<xref:System.Security.SecurityException>) yolunu görüntülemek için gerekli izinlere sahip değil.  
   
-- Kullanıcı gerekli izinlere sahip değil (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcının gerekli izinleri (<xref:System.UnauthorizedAccessException>) yok.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
-- [Nasıl yapılır: Belirli bir desendeki alt dizinleri bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
-- [Sorun giderme: Okuma ve dosyalara metin yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [Nasıl yapılır: Bir dizindeki dosya koleksiyonunu alma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Nasıl yapılır: Belirli bir düzene sahip alt dizinler bulun](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Sorun giderme: Metin dosyalarından okuma ve yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Nasıl yapılır: Dizindeki dosyaların toplanmasını al](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
