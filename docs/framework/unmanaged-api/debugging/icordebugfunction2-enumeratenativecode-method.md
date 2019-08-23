@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61dcf014a65f524d2b2e7b92bcc7f007d1a47125
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb7e2ed7b076cfa20064902b3592c8f958efc0ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754504"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917045"
 ---
-# <a name="icordebugfunction2enumeratenativecode-method"></a><span data-ttu-id="be2fa-102">ICorDebugFunction2::EnumerateNativeCode Yöntemi</span><span class="sxs-lookup"><span data-stu-id="be2fa-102">ICorDebugFunction2::EnumerateNativeCode Method</span></span>
-<span data-ttu-id="be2fa-103">Bu Icordebugfunction2 nesne tarafından başvurulan işlevinde yerel kod deyimlerini içeren bir Icordebugcodeenum nesnesine bir arabirim işaretçisi alır.</span><span class="sxs-lookup"><span data-stu-id="be2fa-103">Gets an interface pointer to an ICorDebugCodeEnum object that contains the native code statements in the function referenced by this ICorDebugFunction2 object.</span></span>  
+# <a name="icordebugfunction2enumeratenativecode-method"></a><span data-ttu-id="58460-102">ICorDebugFunction2::EnumerateNativeCode Yöntemi</span><span class="sxs-lookup"><span data-stu-id="58460-102">ICorDebugFunction2::EnumerateNativeCode Method</span></span>
+<span data-ttu-id="58460-103">Bu ICorDebugFunction2 nesnesinin başvurduğu işlevdeki yerel kod deyimlerini içeren bir ICorDebugCodeEnum nesnesine bir arabirim işaretçisi alır.</span><span class="sxs-lookup"><span data-stu-id="58460-103">Gets an interface pointer to an ICorDebugCodeEnum object that contains the native code statements in the function referenced by this ICorDebugFunction2 object.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="be2fa-104">`EnumerateNativeCode` .NET Framework'ün geçerli sürümde uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="be2fa-104">`EnumerateNativeCode` is not implemented in the current version of the .NET Framework.</span></span>  
+> <span data-ttu-id="58460-104">`EnumerateNativeCode`geçerli .NET Framework sürümünde uygulanmıyor.</span><span class="sxs-lookup"><span data-stu-id="58460-104">`EnumerateNativeCode` is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="be2fa-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="be2fa-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="58460-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="58460-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumerateNativeCode (  
@@ -38,5 +38,5 @@ HRESULT EnumerateNativeCode (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="be2fa-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="be2fa-106">Requirements</span></span>  
- <span data-ttu-id="be2fa-107">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="be2fa-107">**Header:** CorDebug.idl, CorDebug.h</span></span>
+## <a name="requirements"></a><span data-ttu-id="58460-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="58460-106">Requirements</span></span>  
+ <span data-ttu-id="58460-107">**Üst bilgi** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="58460-107">**Header:** CorDebug.idl, CorDebug.h</span></span>

@@ -1,5 +1,5 @@
 ---
-title: <clear> Öğe için <listeners> için <source>
+title: <clear>İçin için <listeners> öğesi<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,56 +7,56 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 63d3bb272fcdbee2c59b0569c85f8183cdac8666
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 768d51a74b4c31d1250d2f5d6517f760f886e0a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673791"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920547"
 ---
-# <a name="clear-element-for-listeners-for-source"></a><span data-ttu-id="6047c-102">\<Temizle > öğesi için \<dinleyicileri > için \<kaynak ></span><span class="sxs-lookup"><span data-stu-id="6047c-102">\<clear> Element for \<listeners> for \<source></span></span>
-<span data-ttu-id="6047c-103">Temizler `Listeners` koleksiyonu için bir izleme kaynağı.</span><span class="sxs-lookup"><span data-stu-id="6047c-103">Clears the `Listeners` collection for a trace source.</span></span>  
+# <a name="clear-element-for-listeners-for-source"></a><span data-ttu-id="1f741-102">\<Kaynak > için \< \<dinleyiciler > > öğeyi temizle</span><span class="sxs-lookup"><span data-stu-id="1f741-102">\<clear> Element for \<listeners> for \<source></span></span>
+<span data-ttu-id="1f741-103">İzleme kaynağı için koleksiyonu temizler. `Listeners`</span><span class="sxs-lookup"><span data-stu-id="1f741-103">Clears the `Listeners` collection for a trace source.</span></span>  
   
- <span data-ttu-id="6047c-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="6047c-104">\<configuration></span></span>  
-<span data-ttu-id="6047c-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="6047c-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="6047c-106">\<Kaynakları ></span><span class="sxs-lookup"><span data-stu-id="6047c-106">\<sources></span></span>  
-<span data-ttu-id="6047c-107">\<Kaynak ></span><span class="sxs-lookup"><span data-stu-id="6047c-107">\<source></span></span>  
-<span data-ttu-id="6047c-108">\<dinleyicileri ></span><span class="sxs-lookup"><span data-stu-id="6047c-108">\<listeners></span></span>  
-<span data-ttu-id="6047c-109">\<Temizleme ></span><span class="sxs-lookup"><span data-stu-id="6047c-109">\<clear></span></span>  
+ <span data-ttu-id="1f741-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="1f741-104">\<configuration></span></span>  
+<span data-ttu-id="1f741-105">\<System. Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="1f741-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="1f741-106">\<Kaynaklar ></span><span class="sxs-lookup"><span data-stu-id="1f741-106">\<sources></span></span>  
+<span data-ttu-id="1f741-107">\<Kaynak ></span><span class="sxs-lookup"><span data-stu-id="1f741-107">\<source></span></span>  
+<span data-ttu-id="1f741-108">\<dinleyiciler ></span><span class="sxs-lookup"><span data-stu-id="1f741-108">\<listeners></span></span>  
+<span data-ttu-id="1f741-109">\<> Temizle</span><span class="sxs-lookup"><span data-stu-id="1f741-109">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6047c-110">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6047c-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1f741-110">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1f741-110">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6047c-111">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="6047c-111">Attributes and Elements</span></span>  
- <span data-ttu-id="6047c-112">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="6047c-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1f741-111">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="1f741-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="1f741-112">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="1f741-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6047c-113">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="6047c-113">Attributes</span></span>  
- <span data-ttu-id="6047c-114">Yok.</span><span class="sxs-lookup"><span data-stu-id="6047c-114">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="1f741-113">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="1f741-113">Attributes</span></span>  
+ <span data-ttu-id="1f741-114">Yok.</span><span class="sxs-lookup"><span data-stu-id="1f741-114">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="6047c-115">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="6047c-115">Child Elements</span></span>  
- <span data-ttu-id="6047c-116">Yok.</span><span class="sxs-lookup"><span data-stu-id="6047c-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="1f741-115">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="1f741-115">Child Elements</span></span>  
+ <span data-ttu-id="1f741-116">Yok.</span><span class="sxs-lookup"><span data-stu-id="1f741-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="6047c-117">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="6047c-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="1f741-117">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="1f741-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="6047c-118">Öğe</span><span class="sxs-lookup"><span data-stu-id="6047c-118">Element</span></span>|<span data-ttu-id="6047c-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6047c-119">Description</span></span>|  
+|<span data-ttu-id="1f741-118">Öğe</span><span class="sxs-lookup"><span data-stu-id="1f741-118">Element</span></span>|<span data-ttu-id="1f741-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1f741-119">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="6047c-120">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="6047c-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="6047c-121">Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="6047c-121">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`sources`|<span data-ttu-id="6047c-122">İzleme iletileri başlatmak iz kaynakları içerir.</span><span class="sxs-lookup"><span data-stu-id="6047c-122">Contains trace sources that initiate tracing messages.</span></span>|  
-|`source`|<span data-ttu-id="6047c-123">İzleme iletileri başlatan bir izleme kaynağı belirtir.</span><span class="sxs-lookup"><span data-stu-id="6047c-123">Specifies a trace source that initiates tracing messages.</span></span>|  
-|`listeners`|<span data-ttu-id="6047c-124">Toplamak, depolamak ve iletileri yönlendirmek dinleyicilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="6047c-124">Specifies listeners that collect, store, and route messages.</span></span>|  
+|`configuration`|<span data-ttu-id="1f741-120">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="1f741-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="1f741-121">İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="1f741-121">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="1f741-122">İzleme iletilerini Başlatan izleme kaynaklarını içerir.</span><span class="sxs-lookup"><span data-stu-id="1f741-122">Contains trace sources that initiate tracing messages.</span></span>|  
+|`source`|<span data-ttu-id="1f741-123">İzleme iletilerini Başlatan bir izleme kaynağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="1f741-123">Specifies a trace source that initiates tracing messages.</span></span>|  
+|`listeners`|<span data-ttu-id="1f741-124">İletileri toplayacak, depolayan ve yönlendiren dinleyicileri belirtir.</span><span class="sxs-lookup"><span data-stu-id="1f741-124">Specifies listeners that collect, store, and route messages.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6047c-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6047c-125">Remarks</span></span>  
- <span data-ttu-id="6047c-126">`<clear>` Öğeyi kaldırır gelen tüm dinleyicileri `Listeners` koleksiyonu için bir izleme kaynağı da dahil olmak üzere <xref:System.Diagnostics.DefaultTraceListener>.</span><span class="sxs-lookup"><span data-stu-id="6047c-126">The `<clear>` element removes all listeners from the `Listeners` collection for a trace source, including the <xref:System.Diagnostics.DefaultTraceListener>.</span></span> <span data-ttu-id="6047c-127">Kullanabileceğiniz `<clear>` kullanmadan önce öğesi `<add>` koleksiyondaki herhangi bir etkin dinleyiciler vardır emin olmak için öğesi.</span><span class="sxs-lookup"><span data-stu-id="6047c-127">You can use the `<clear>` element before using the `<add>` element to be certain there are no other active listeners in the collection.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1f741-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1f741-125">Remarks</span></span>  
+ <span data-ttu-id="1f741-126">Öğesi, dahil olmak üzere bir <xref:System.Diagnostics.DefaultTraceListener>izleme `Listeners` kaynağı için koleksiyondan tüm dinleyicileri kaldırır. `<clear>`</span><span class="sxs-lookup"><span data-stu-id="1f741-126">The `<clear>` element removes all listeners from the `Listeners` collection for a trace source, including the <xref:System.Diagnostics.DefaultTraceListener>.</span></span> <span data-ttu-id="1f741-127">Koleksiyonda başka hiçbir etkin `<clear>` dinleyici bulunmadığından emin olmak `<add>` için öğesini kullanmadan önce öğesini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="1f741-127">You can use the `<clear>` element before using the `<add>` element to be certain there are no other active listeners in the collection.</span></span>  
   
-## <a name="configuration-file"></a><span data-ttu-id="6047c-128">Yapılandırma Dosyası</span><span class="sxs-lookup"><span data-stu-id="6047c-128">Configuration File</span></span>  
- <span data-ttu-id="6047c-129">Bu öğe, makine yapılandırma dosyası (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="6047c-129">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+## <a name="configuration-file"></a><span data-ttu-id="1f741-128">Yapılandırma Dosyası</span><span class="sxs-lookup"><span data-stu-id="1f741-128">Configuration File</span></span>  
+ <span data-ttu-id="1f741-129">Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="1f741-129">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6047c-130">Örnek</span><span class="sxs-lookup"><span data-stu-id="6047c-130">Example</span></span>  
- <span data-ttu-id="6047c-131">Aşağıdaki örnek nasıl kullanılacağını gösterir `<clear>` kullanmadan önce öğesi `<add>` dinleyiciler eklemek için öğeleri `console` ve `textListener` için `Listeners` iz kaynağı için koleksiyon `TraceSourceApp`.</span><span class="sxs-lookup"><span data-stu-id="6047c-131">The following example shows how to use the `<clear>` element before using the `<add>` elements to add the listeners `console` and `textListener` to the `Listeners` collection for the trace source `TraceSourceApp`.</span></span>  
+## <a name="example"></a><span data-ttu-id="1f741-130">Örnek</span><span class="sxs-lookup"><span data-stu-id="1f741-130">Example</span></span>  
+ <span data-ttu-id="1f741-131">Aşağıdaki örnek, `<add>` öğeleri kullanarak, dinleyicileri `console` ve `<clear>` `textListener` `Listeners` izleme kaynağı`TraceSourceApp`koleksiyonuna eklemek için öğesinin nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="1f741-131">The following example shows how to use the `<clear>` element before using the `<add>` elements to add the listeners `console` and `textListener` to the `Listeners` collection for the trace source `TraceSourceApp`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -84,9 +84,9 @@ ms.locfileid: "61673791"
 </configuration>   
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6047c-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6047c-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1f741-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1f741-132">See also</span></span>
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [<span data-ttu-id="6047c-133">İzleme ve Hata Ayıklama Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="6047c-133">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [<span data-ttu-id="6047c-134">İzleme Dinleyicileri</span><span class="sxs-lookup"><span data-stu-id="6047c-134">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [<span data-ttu-id="1f741-133">İzleme ve Hata Ayıklama Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="1f741-133">Trace and Debug Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="1f741-134">İzleme Dinleyicileri</span><span class="sxs-lookup"><span data-stu-id="1f741-134">Trace Listeners</span></span>](../../../debug-trace-profile/trace-listeners.md)

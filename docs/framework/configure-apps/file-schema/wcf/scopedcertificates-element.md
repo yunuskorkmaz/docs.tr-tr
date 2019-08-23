@@ -2,26 +2,26 @@
 title: <scopedCertificates> Öğesi
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: 73e78a6ca27ed45e1eadc7121987b75f79bc6aa5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed53a42575a8d57c365f7a329a1a9c1df075d6d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670644"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935215"
 ---
-# <a name="scopedcertificates-element"></a><span data-ttu-id="96584-102">\<scopedCertificates > öğesi</span><span class="sxs-lookup"><span data-stu-id="96584-102">\<scopedCertificates> Element</span></span>
-<span data-ttu-id="96584-103">Belirli hizmetler (kapsamlı kimlik doğrulaması için) tarafından sağlanan X.509 Sertifika koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="96584-103">Represents a collection of X.509 certificates provided by specific services (scoped) for authentication.</span></span> <span data-ttu-id="96584-104">Bu koleksiyon, genellikle hizmet sertifikaları için güvenlik belirteci hizmetlerine federe bir senaryoda belirtmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="96584-104">This collection is typically used to specify the service certificates for Security Token Services in a federated scenario.</span></span>  
+# <a name="scopedcertificates-element"></a><span data-ttu-id="f77db-102">\<scopedCertificates > öğesi</span><span class="sxs-lookup"><span data-stu-id="f77db-102">\<scopedCertificates> Element</span></span>
+<span data-ttu-id="f77db-103">Kimlik doğrulama için belirli hizmetler (kapsamlı) tarafından sunulan X. 509.440 sertifikalarının bir koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="f77db-103">Represents a collection of X.509 certificates provided by specific services (scoped) for authentication.</span></span> <span data-ttu-id="f77db-104">Bu koleksiyon genellikle, bir Federasyon senaryosunda güvenlik belirteci Hizmetleri için hizmet sertifikalarını belirtmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="f77db-104">This collection is typically used to specify the service certificates for Security Token Services in a federated scenario.</span></span>  
   
- <span data-ttu-id="96584-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="96584-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="96584-106">\<davranışlar ></span><span class="sxs-lookup"><span data-stu-id="96584-106">\<behaviors></span></span>  
-<span data-ttu-id="96584-107">endpointBehaviors bölümü</span><span class="sxs-lookup"><span data-stu-id="96584-107">endpointBehaviors section</span></span>  
-<span data-ttu-id="96584-108">\<davranışı ></span><span class="sxs-lookup"><span data-stu-id="96584-108">\<behavior></span></span>  
-<span data-ttu-id="96584-109">\<clientCredentials ></span><span class="sxs-lookup"><span data-stu-id="96584-109">\<clientCredentials></span></span>  
-<span data-ttu-id="96584-110">\<serviceCertificate ></span><span class="sxs-lookup"><span data-stu-id="96584-110">\<serviceCertificate></span></span>  
-<span data-ttu-id="96584-111">\<scopedCertificates > öğesi</span><span class="sxs-lookup"><span data-stu-id="96584-111">\<scopedCertificates> Element</span></span>  
-<span data-ttu-id="96584-112">\<Ekle > öğesi için \<scopedCertificates ></span><span class="sxs-lookup"><span data-stu-id="96584-112">\<add> element for \<scopedCertificates></span></span>  
+ <span data-ttu-id="f77db-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="f77db-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="f77db-106">\<davranışlar ></span><span class="sxs-lookup"><span data-stu-id="f77db-106">\<behaviors></span></span>  
+<span data-ttu-id="f77db-107">Endpointdavranışlar bölümü</span><span class="sxs-lookup"><span data-stu-id="f77db-107">endpointBehaviors section</span></span>  
+<span data-ttu-id="f77db-108">\<davranış ></span><span class="sxs-lookup"><span data-stu-id="f77db-108">\<behavior></span></span>  
+<span data-ttu-id="f77db-109">\<clientCredentials ></span><span class="sxs-lookup"><span data-stu-id="f77db-109">\<clientCredentials></span></span>  
+<span data-ttu-id="f77db-110">\<serviceCertificate ></span><span class="sxs-lookup"><span data-stu-id="f77db-110">\<serviceCertificate></span></span>  
+<span data-ttu-id="f77db-111">\<scopedCertificates > öğesi</span><span class="sxs-lookup"><span data-stu-id="f77db-111">\<scopedCertificates> Element</span></span>  
+<span data-ttu-id="f77db-112">\<ScopedCertificates için \<> öğesi ekleyin ></span><span class="sxs-lookup"><span data-stu-id="f77db-112">\<add> element for \<scopedCertificates></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="96584-113">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="96584-113">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f77db-113">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f77db-113">Syntax</span></span>  
   
 ```xml  
 <scopedCertificates>
@@ -33,33 +33,33 @@ ms.locfileid: "61670644"
 </scopedCertificates>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="96584-114">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="96584-114">Attributes and Elements</span></span>  
- <span data-ttu-id="96584-115">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="96584-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f77db-114">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="f77db-114">Attributes and Elements</span></span>  
+ <span data-ttu-id="f77db-115">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="f77db-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="96584-116">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="96584-116">Attributes</span></span>  
- <span data-ttu-id="96584-117">Yok.</span><span class="sxs-lookup"><span data-stu-id="96584-117">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f77db-116">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="f77db-116">Attributes</span></span>  
+ <span data-ttu-id="f77db-117">Yok.</span><span class="sxs-lookup"><span data-stu-id="f77db-117">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="96584-118">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="96584-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f77db-118">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="f77db-118">Child Elements</span></span>  
   
-|<span data-ttu-id="96584-119">Öğe</span><span class="sxs-lookup"><span data-stu-id="96584-119">Element</span></span>|<span data-ttu-id="96584-120">Açıklama</span><span class="sxs-lookup"><span data-stu-id="96584-120">Description</span></span>|  
+|<span data-ttu-id="f77db-119">Öğe</span><span class="sxs-lookup"><span data-stu-id="f77db-119">Element</span></span>|<span data-ttu-id="f77db-120">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f77db-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="96584-121">\<Ekle ></span><span class="sxs-lookup"><span data-stu-id="96584-121">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)|<span data-ttu-id="96584-122">Kapsamlı sertifikalar koleksiyonuna bir X.509 sertifikası ekler.</span><span class="sxs-lookup"><span data-stu-id="96584-122">Adds an X.509 certificate to the collection of scoped certificates.</span></span>|  
+|[<span data-ttu-id="f77db-121">\<> Ekle</span><span class="sxs-lookup"><span data-stu-id="f77db-121">\<add></span></span>](add-of-scopedcertificates-element.md)|<span data-ttu-id="f77db-122">Kapsamlı sertifikalar koleksiyonuna bir X. 509.440 sertifikası ekler.</span><span class="sxs-lookup"><span data-stu-id="f77db-122">Adds an X.509 certificate to the collection of scoped certificates.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="96584-123">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="96584-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f77db-123">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="f77db-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="96584-124">Öğe</span><span class="sxs-lookup"><span data-stu-id="96584-124">Element</span></span>|<span data-ttu-id="96584-125">Açıklama</span><span class="sxs-lookup"><span data-stu-id="96584-125">Description</span></span>|  
+|<span data-ttu-id="f77db-124">Öğe</span><span class="sxs-lookup"><span data-stu-id="f77db-124">Element</span></span>|<span data-ttu-id="f77db-125">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f77db-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="96584-126">\<serviceCertificate ></span><span class="sxs-lookup"><span data-stu-id="96584-126">\<serviceCertificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|<span data-ttu-id="96584-127">İstemci bir hizmete kimlik doğrulaması yapılırken kullanılacak sertifikayı belirtir.</span><span class="sxs-lookup"><span data-stu-id="96584-127">Specifies a certificate to use when authenticating a service to the client.</span></span>|  
+|[<span data-ttu-id="f77db-126">\<serviceCertificate ></span><span class="sxs-lookup"><span data-stu-id="f77db-126">\<serviceCertificate></span></span>](servicecertificate-of-servicecredentials.md)|<span data-ttu-id="f77db-127">İstemciye bir hizmetin kimlik doğrulaması yapılırken kullanılacak sertifikayı belirtir.</span><span class="sxs-lookup"><span data-stu-id="f77db-127">Specifies a certificate to use when authenticating a service to the client.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="96584-128">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="96584-128">Remarks</span></span>  
- <span data-ttu-id="96584-129">Bu koleksiyon, hizmet sertifikalarını kullanmak için yapılandırmak istemci kurduğu hizmet URL'sini temel sağlar.</span><span class="sxs-lookup"><span data-stu-id="96584-129">This collection enables the client to configure the service certificates to use based on the URL of the service it communicates with.</span></span> <span data-ttu-id="96584-130">Bu, özellikle bir istemci birden çok hizmeti (uç hizmetinin yanı sıra Ara güvenlik belirteci hizmetlerine) burada iletişim verilen belirteç senaryolarda yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="96584-130">This is especially useful in issued token scenarios where a client can be communicating to multiple services (the end service as well as intermediary security token services).</span></span> <span data-ttu-id="96584-131">Bu sertifika, sertifika tabanlı ileti güvenliği kullanan bağlamaları için hizmet iletileri şifrelemek için kullanılır ve istemciye yanıt imzalama için hizmet tarafından kullanılmak üzere beklenir.</span><span class="sxs-lookup"><span data-stu-id="96584-131">For bindings that use certificate-based message security, this certificate is used to encrypt messages to the service, and is expected to be used by the service for signing replies to the client.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f77db-128">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f77db-128">Remarks</span></span>  
+ <span data-ttu-id="f77db-129">Bu koleksiyon, istemcinin iletişim kurduğu hizmetin URL 'sini temel alarak kullanılacak hizmet sertifikalarını yapılandırmasına olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="f77db-129">This collection enables the client to configure the service certificates to use based on the URL of the service it communicates with.</span></span> <span data-ttu-id="f77db-130">Bu özellikle, bir istemcinin birden çok hizmetle (bitiş hizmeti ve aracı güvenlik belirteci Hizmetleri) iletişim kuramadığı verilen belirteç senaryolarında kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="f77db-130">This is especially useful in issued token scenarios where a client can be communicating to multiple services (the end service as well as intermediary security token services).</span></span> <span data-ttu-id="f77db-131">Sertifika tabanlı ileti güvenliği kullanan bağlamalar için, bu sertifika hizmete iletileri şifrelemek için kullanılır ve istemciye yanıtları imzalamak için hizmet tarafından kullanılması beklenir.</span><span class="sxs-lookup"><span data-stu-id="f77db-131">For bindings that use certificate-based message security, this certificate is used to encrypt messages to the service, and is expected to be used by the service for signing replies to the client.</span></span>  
   
- <span data-ttu-id="96584-132">Bağlama, hizmet ve URL ScopedCertificates içinde bulunan hizmet için belirli bir sertifika için bir sertifika gerektiriyorsa, varsayılan sertifika kullanılır.</span><span class="sxs-lookup"><span data-stu-id="96584-132">If a binding requires a certificate for the service and no specific certificate for the service URL is found in the ScopedCertificates, the default certificate is used.</span></span>  
+ <span data-ttu-id="f77db-132">Bir bağlama hizmet için bir sertifika gerektiriyorsa ve hizmet URL 'SI için belirli bir sertifika ScopedCertificates içinde bulunmazsa, varsayılan sertifika kullanılır.</span><span class="sxs-lookup"><span data-stu-id="f77db-132">If a binding requires a certificate for the service and no specific certificate for the service URL is found in the ScopedCertificates, the default certificate is used.</span></span>  
   
- <span data-ttu-id="96584-133">Daha fazla bilgi için "Sertifikalar kapsamlı" bölümüne bakın. [nasıl yapılır: Federe istemci oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).</span><span class="sxs-lookup"><span data-stu-id="96584-133">For more information, see the "Scoped Certificates" section of [How to: Create a Federated Client](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).</span></span>  
+ <span data-ttu-id="f77db-133">Daha fazla bilgi için bkz [. nasıl yapılır: Federasyon Istemcisi](../../../wcf/feature-details/how-to-create-a-federated-client.md)oluşturun.</span><span class="sxs-lookup"><span data-stu-id="f77db-133">For more information, see the "Scoped Certificates" section of [How to: Create a Federated Client](../../../wcf/feature-details/how-to-create-a-federated-client.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="96584-134">Örnek</span><span class="sxs-lookup"><span data-stu-id="96584-134">Example</span></span>  
- <span data-ttu-id="96584-135">Aşağıdaki örnek, bir hizmet uç noktaları ile iletişim kurulurken etki alanı adını kullanmak istemci sertifikası belirtir `http://www.contoso.com` HTTP protokolü üzerinden.</span><span class="sxs-lookup"><span data-stu-id="96584-135">The following example specifies a service certificate for the client to use when communicating with endpoints whose domain name is `http://www.contoso.com` over the HTTP protocol.</span></span>  
+## <a name="example"></a><span data-ttu-id="f77db-134">Örnek</span><span class="sxs-lookup"><span data-stu-id="f77db-134">Example</span></span>  
+ <span data-ttu-id="f77db-135">Aşağıdaki örnek, etki alanı adı `http://www.contoso.com` http protokolünün üzerinde olan uç noktalarla iletişim kurarken İstemcinin kullanacağı bir hizmet sertifikasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="f77db-135">The following example specifies a service certificate for the client to use when communicating with endpoints whose domain name is `http://www.contoso.com` over the HTTP protocol.</span></span>  
   
 ```xml  
 <serviceCertificate>
@@ -73,15 +73,15 @@ ms.locfileid: "61670644"
 </serviceCertificate>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="96584-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="96584-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f77db-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f77db-136">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
-- [<span data-ttu-id="96584-137">Sertifikalarla Çalışma</span><span class="sxs-lookup"><span data-stu-id="96584-137">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [<span data-ttu-id="96584-138">Nasıl yapılır: Federe istemci oluşturma</span><span class="sxs-lookup"><span data-stu-id="96584-138">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [<span data-ttu-id="96584-139">\<Ekle ></span><span class="sxs-lookup"><span data-stu-id="96584-139">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)
-- [<span data-ttu-id="96584-140">İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="96584-140">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)
-- [<span data-ttu-id="96584-141">Hizmet ve İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="96584-141">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [<span data-ttu-id="f77db-137">Sertifikalarla Çalışma</span><span class="sxs-lookup"><span data-stu-id="f77db-137">Working with Certificates</span></span>](../../../wcf/feature-details/working-with-certificates.md)
+- [<span data-ttu-id="f77db-138">Nasıl yapılır: Federe Istemci oluşturma</span><span class="sxs-lookup"><span data-stu-id="f77db-138">How to: Create a Federated Client</span></span>](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [<span data-ttu-id="f77db-139">\<> Ekle</span><span class="sxs-lookup"><span data-stu-id="f77db-139">\<add></span></span>](add-of-scopedcertificates-element.md)
+- [<span data-ttu-id="f77db-140">İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="f77db-140">Securing Clients</span></span>](../../../wcf/securing-clients.md)
+- [<span data-ttu-id="f77db-141">Hizmet ve İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="f77db-141">Securing Services and Clients</span></span>](../../../wcf/feature-details/securing-services-and-clients.md)

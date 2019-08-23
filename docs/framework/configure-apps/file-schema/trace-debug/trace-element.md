@@ -10,21 +10,21 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 5faf352dce2a459a999b3cf54209f6bd9793bde0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd90d271591a47849b3f70aea50cbe909b6fd613
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673803"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920405"
 ---
-# <a name="trace-element"></a><span data-ttu-id="8adaa-102">\<İzleme > öğesi</span><span class="sxs-lookup"><span data-stu-id="8adaa-102">\<trace> Element</span></span>
-<span data-ttu-id="8adaa-103">Toplamak, depolamak ve izleme iletilerini yönlendirmek dinleyicileri içerir.</span><span class="sxs-lookup"><span data-stu-id="8adaa-103">Contains listeners that collect, store, and route tracing messages.</span></span>  
+# <a name="trace-element"></a><span data-ttu-id="b0f82-102">\<Trace > öğesi</span><span class="sxs-lookup"><span data-stu-id="b0f82-102">\<trace> Element</span></span>
+<span data-ttu-id="b0f82-103">İzleme iletilerini toplayıp depolayan, depolayan ve yönlendiren dinleyicileri içerir.</span><span class="sxs-lookup"><span data-stu-id="b0f82-103">Contains listeners that collect, store, and route tracing messages.</span></span>  
   
- <span data-ttu-id="8adaa-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="8adaa-104">\<configuration></span></span>  
-<span data-ttu-id="8adaa-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="8adaa-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="8adaa-106">\<İzleme ></span><span class="sxs-lookup"><span data-stu-id="8adaa-106">\<trace></span></span>  
+ <span data-ttu-id="b0f82-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="b0f82-104">\<configuration></span></span>  
+<span data-ttu-id="b0f82-105">\<System. Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="b0f82-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="b0f82-106">\<İzleme ></span><span class="sxs-lookup"><span data-stu-id="b0f82-106">\<trace></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8adaa-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8adaa-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0f82-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b0f82-107">Syntax</span></span>  
   
 ```xml  
 <trace autoflush="true|false"   
@@ -32,46 +32,46 @@ ms.locfileid: "61673803"
        useGlobalLock="true| false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="8adaa-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="8adaa-108">Attributes and Elements</span></span>  
- <span data-ttu-id="8adaa-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="8adaa-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b0f82-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="b0f82-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="b0f82-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="b0f82-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="8adaa-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="8adaa-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b0f82-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="b0f82-110">Attributes</span></span>  
   
-|<span data-ttu-id="8adaa-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="8adaa-111">Attribute</span></span>|<span data-ttu-id="8adaa-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8adaa-112">Description</span></span>|  
+|<span data-ttu-id="b0f82-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="b0f82-111">Attribute</span></span>|<span data-ttu-id="b0f82-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b0f82-112">Description</span></span>|  
 |---------------|-----------------|  
-|`autoflush`|<span data-ttu-id="8adaa-113">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="8adaa-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="8adaa-114">İzleme dinleyicilerine çıkış arabelleği sonra her yazma işlemi otomatik olarak temizleme olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="8adaa-114">Specifies whether the trace listeners automatically flush the output buffer after every write operation.</span></span>|  
-|`indentsize`|<span data-ttu-id="8adaa-115">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="8adaa-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="8adaa-116">Girinti boşluk sayısını belirtir.</span><span class="sxs-lookup"><span data-stu-id="8adaa-116">Specifies the number of spaces to indent.</span></span>|  
-|`useGlobalLock`|<span data-ttu-id="8adaa-117">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="8adaa-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="8adaa-118">Genel kilit kullanılıp kullanılmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="8adaa-118">Indicates whether the global lock should be used.</span></span>|  
+|`autoflush`|<span data-ttu-id="b0f82-113">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="b0f82-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="b0f82-114">İzleme dinleyicilerinin her yazma işleminden sonra çıktı arabelleğini otomatik olarak temizlemesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="b0f82-114">Specifies whether the trace listeners automatically flush the output buffer after every write operation.</span></span>|  
+|`indentsize`|<span data-ttu-id="b0f82-115">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="b0f82-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="b0f82-116">Girintilendirmek için boşluk sayısını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b0f82-116">Specifies the number of spaces to indent.</span></span>|  
+|`useGlobalLock`|<span data-ttu-id="b0f82-117">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="b0f82-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="b0f82-118">Genel kilidin kullanılıp kullanılmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b0f82-118">Indicates whether the global lock should be used.</span></span>|  
   
-## <a name="autoflush-attribute"></a><span data-ttu-id="8adaa-119">AutoFlush özniteliği</span><span class="sxs-lookup"><span data-stu-id="8adaa-119">autoflush Attribute</span></span>  
+## <a name="autoflush-attribute"></a><span data-ttu-id="b0f82-119">Oto Temizleme özniteliği</span><span class="sxs-lookup"><span data-stu-id="b0f82-119">autoflush Attribute</span></span>  
   
-|<span data-ttu-id="8adaa-120">Değer</span><span class="sxs-lookup"><span data-stu-id="8adaa-120">Value</span></span>|<span data-ttu-id="8adaa-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8adaa-121">Description</span></span>|  
+|<span data-ttu-id="b0f82-120">Değer</span><span class="sxs-lookup"><span data-stu-id="b0f82-120">Value</span></span>|<span data-ttu-id="b0f82-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b0f82-121">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="8adaa-122">Otomatik olarak çıkış arabelleği temizleme değil.</span><span class="sxs-lookup"><span data-stu-id="8adaa-122">Does not automatically flush the output buffer.</span></span> <span data-ttu-id="8adaa-123">Bu varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="8adaa-123">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="8adaa-124">Çıkış arabelleği otomatik olarak temizler.</span><span class="sxs-lookup"><span data-stu-id="8adaa-124">Automatically flushes the output buffer.</span></span>|  
+|`false`|<span data-ttu-id="b0f82-122">, Çıkış arabelleğini otomatik olarak temizlemez.</span><span class="sxs-lookup"><span data-stu-id="b0f82-122">Does not automatically flush the output buffer.</span></span> <span data-ttu-id="b0f82-123">Bu varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="b0f82-123">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="b0f82-124">Çıktı arabelleğini otomatik olarak temizler.</span><span class="sxs-lookup"><span data-stu-id="b0f82-124">Automatically flushes the output buffer.</span></span>|  
   
-## <a name="usegloballock-attribute"></a><span data-ttu-id="8adaa-125">useGlobalLock özniteliği</span><span class="sxs-lookup"><span data-stu-id="8adaa-125">useGlobalLock Attribute</span></span>  
+## <a name="usegloballock-attribute"></a><span data-ttu-id="b0f82-125">useGlobalLock özniteliği</span><span class="sxs-lookup"><span data-stu-id="b0f82-125">useGlobalLock Attribute</span></span>  
   
-|<span data-ttu-id="8adaa-126">Değer</span><span class="sxs-lookup"><span data-stu-id="8adaa-126">Value</span></span>|<span data-ttu-id="8adaa-127">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8adaa-127">Description</span></span>|  
+|<span data-ttu-id="b0f82-126">Değer</span><span class="sxs-lookup"><span data-stu-id="b0f82-126">Value</span></span>|<span data-ttu-id="b0f82-127">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b0f82-127">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="8adaa-128">Dinleyici iş parçacığı güvenli ise genel kilit kullanmaz; Aksi takdirde, genel kilit kullanır.</span><span class="sxs-lookup"><span data-stu-id="8adaa-128">Does not use the global lock if the listener is thread safe; otherwise, uses the global lock.</span></span>|  
-|`true`|<span data-ttu-id="8adaa-129">Dinleyici iş parçacığı güvenli olmasına bakılmaksızın genel kilit kullanır.</span><span class="sxs-lookup"><span data-stu-id="8adaa-129">Uses the global lock regardless of whether the listener is thread safe.</span></span> <span data-ttu-id="8adaa-130">Bu varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="8adaa-130">This is the default.</span></span>|  
+|`false`|<span data-ttu-id="b0f82-128">Dinleyicisi iş parçacığı güvenli ise, genel kilidi kullanmaz; Aksi takdirde, genel kilidi kullanır.</span><span class="sxs-lookup"><span data-stu-id="b0f82-128">Does not use the global lock if the listener is thread safe; otherwise, uses the global lock.</span></span>|  
+|`true`|<span data-ttu-id="b0f82-129">Dinleyicinin iş parçacığı güvenli olup olmamasına bakılmaksızın genel kilidi kullanır.</span><span class="sxs-lookup"><span data-stu-id="b0f82-129">Uses the global lock regardless of whether the listener is thread safe.</span></span> <span data-ttu-id="b0f82-130">Bu varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="b0f82-130">This is the default.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="8adaa-131">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="8adaa-131">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b0f82-131">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="b0f82-131">Child Elements</span></span>  
   
-|<span data-ttu-id="8adaa-132">Öğe</span><span class="sxs-lookup"><span data-stu-id="8adaa-132">Element</span></span>|<span data-ttu-id="8adaa-133">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8adaa-133">Description</span></span>|  
+|<span data-ttu-id="b0f82-132">Öğe</span><span class="sxs-lookup"><span data-stu-id="b0f82-132">Element</span></span>|<span data-ttu-id="b0f82-133">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b0f82-133">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="8adaa-134">\<dinleyicileri ></span><span class="sxs-lookup"><span data-stu-id="8adaa-134">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|<span data-ttu-id="8adaa-135">Toplar, depolar, bir dinleyici belirtir ve iletileri yönlendirir.</span><span class="sxs-lookup"><span data-stu-id="8adaa-135">Specifies a listener that collects, stores, and routes messages.</span></span>|  
+|[<span data-ttu-id="b0f82-134">\<dinleyiciler ></span><span class="sxs-lookup"><span data-stu-id="b0f82-134">\<listeners></span></span>](listeners-element-for-trace.md)|<span data-ttu-id="b0f82-135">İletileri toplayan, depolayan ve yönlendiren bir dinleyici belirtir.</span><span class="sxs-lookup"><span data-stu-id="b0f82-135">Specifies a listener that collects, stores, and routes messages.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="8adaa-136">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="8adaa-136">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b0f82-136">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="b0f82-136">Parent Elements</span></span>  
   
-|<span data-ttu-id="8adaa-137">Öğe</span><span class="sxs-lookup"><span data-stu-id="8adaa-137">Element</span></span>|<span data-ttu-id="8adaa-138">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8adaa-138">Description</span></span>|  
+|<span data-ttu-id="b0f82-137">Öğe</span><span class="sxs-lookup"><span data-stu-id="b0f82-137">Element</span></span>|<span data-ttu-id="b0f82-138">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b0f82-138">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="8adaa-139">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="8adaa-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="8adaa-140">Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="8adaa-140">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`configuration`|<span data-ttu-id="b0f82-139">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="b0f82-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="b0f82-140">İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="b0f82-140">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="8adaa-141">Örnek</span><span class="sxs-lookup"><span data-stu-id="8adaa-141">Example</span></span>  
- <span data-ttu-id="8adaa-142">Aşağıdaki örnek nasıl kullanılacağını gösterir `<trace>` dinleyici eklemek için öğe `MyListener` için `Listeners` koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="8adaa-142">The following example shows how to use the `<trace>` element to add the listener `MyListener` to the `Listeners` collection.</span></span> <span data-ttu-id="8adaa-143">`MyListener` adlı bir dosya oluşturur `MyListener.log` ve çıkış dosyasına yazar.</span><span class="sxs-lookup"><span data-stu-id="8adaa-143">`MyListener` creates a file that is named `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="8adaa-144">`useGlobalLock` Özniteliği `false`, İzleme dinleyicisi iş parçacığı güvenli değilse kullanılamaz genel kilit neden olur.</span><span class="sxs-lookup"><span data-stu-id="8adaa-144">The `useGlobalLock` attribute is set to `false`, which causes the global lock not to be used if the trace listener is thread safe.</span></span> <span data-ttu-id="8adaa-145">`autoflush` Özniteliği `true`, bağımsız olarak bir dosyaya yazmak İzleme dinleyicisi neden <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> yöntemi çağrılır.</span><span class="sxs-lookup"><span data-stu-id="8adaa-145">The `autoflush` attribute is set to `true`, which causes the trace listener to write to the file regardless of whether the <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> method is called.</span></span> <span data-ttu-id="8adaa-146">`indentsize` Özniteliği sıfır alanları girintilemek dinleyici neden 0 (sıfır) olarak ayarlanmış olduğunda <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> yöntemi çağrılır.</span><span class="sxs-lookup"><span data-stu-id="8adaa-146">The `indentsize` attribute is set to 0 (zero), which causes the listener to indent zero spaces when the <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> method is called.</span></span>  
+## <a name="example"></a><span data-ttu-id="b0f82-141">Örnek</span><span class="sxs-lookup"><span data-stu-id="b0f82-141">Example</span></span>  
+ <span data-ttu-id="b0f82-142">Aşağıdaki örnek, bir dinleyicinin `<trace>` `MyListener` `Listeners` koleksiyona eklemek için öğesinin nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b0f82-142">The following example shows how to use the `<trace>` element to add the listener `MyListener` to the `Listeners` collection.</span></span> <span data-ttu-id="b0f82-143">`MyListener`adlı `MyListener.log` bir dosya oluşturur ve çıktıyı dosyaya yazar.</span><span class="sxs-lookup"><span data-stu-id="b0f82-143">`MyListener` creates a file that is named `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="b0f82-144">`useGlobalLock` Özniteliği olarak`false`ayarlanır; Bu, izleme dinleyicisi iş parçacığı güvenli ise genel kilidin kullanılmasına neden olur.</span><span class="sxs-lookup"><span data-stu-id="b0f82-144">The `useGlobalLock` attribute is set to `false`, which causes the global lock not to be used if the trace listener is thread safe.</span></span> <span data-ttu-id="b0f82-145">Özniteliği olarak `true`ayarlanır; Bu, İzleme dinleyicisinin, <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> yöntemin çağrılmasının ne olursa olsun dosyaya yazmasına neden olur. `autoflush`</span><span class="sxs-lookup"><span data-stu-id="b0f82-145">The `autoflush` attribute is set to `true`, which causes the trace listener to write to the file regardless of whether the <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> method is called.</span></span> <span data-ttu-id="b0f82-146">Öznitelik 0 (sıfır) olarak ayarlanır, bu da <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> yöntem çağrıldığında dinleyicinin sıfır boşluk girintilemesini sağlar. `indentsize`</span><span class="sxs-lookup"><span data-stu-id="b0f82-146">The `indentsize` attribute is set to 0 (zero), which causes the listener to indent zero spaces when the <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> method is called.</span></span>  
   
 ```xml  
 <configuration>  
@@ -85,10 +85,10 @@ ms.locfileid: "61673803"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8adaa-147">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8adaa-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0f82-147">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b0f82-147">See also</span></span>
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [<span data-ttu-id="8adaa-148">İzleme ve Hata Ayıklama Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="8adaa-148">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [<span data-ttu-id="b0f82-148">İzleme ve Hata Ayıklama Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="b0f82-148">Trace and Debug Settings Schema</span></span>](index.md)
