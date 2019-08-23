@@ -11,17 +11,17 @@ helpviewer_keywords:
 - forms [Windows Forms], sounds
 - examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
-ms.openlocfilehash: 0aa01f600873dd8853e1c33d5443448835e11455
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a72f88c05fb21c11864058ffbe81c1957525375
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913438"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966518"
 ---
-# <a name="how-to-play-a-beep-from-a-windows-form"></a><span data-ttu-id="c3844-102">Nasıl yapılır: Windows Form'dan Bip Sesi Çalma</span><span class="sxs-lookup"><span data-stu-id="c3844-102">How to: Play a Beep from a Windows Form</span></span>
-<span data-ttu-id="c3844-103">Bu örnek, çalışma zamanında bir bip sesi çalar.</span><span class="sxs-lookup"><span data-stu-id="c3844-103">This example plays a beep at run time.</span></span>  
+# <a name="how-to-play-a-beep-from-a-windows-form"></a><span data-ttu-id="1dd95-102">Nasıl yapılır: Windows Form'dan Bip Sesi Çalma</span><span class="sxs-lookup"><span data-stu-id="1dd95-102">How to: Play a Beep from a Windows Form</span></span>
+<span data-ttu-id="1dd95-103">Bu örnek çalışma zamanında bip sesi çalar.</span><span class="sxs-lookup"><span data-stu-id="1dd95-103">This example plays a beep at run time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c3844-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="c3844-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="1dd95-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="1dd95-104">Example</span></span>  
   
 ```vb  
 Public Sub OnePing()  
@@ -37,14 +37,14 @@ public void onePing()
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="c3844-105">Yürütülen ses C# kod örneği tarafından belirlenir <xref:System.Media.SystemSounds.Beep%2A> sistem ses ayarı.</span><span class="sxs-lookup"><span data-stu-id="c3844-105">The sound played in the C# code sample is determined by the <xref:System.Media.SystemSounds.Beep%2A> system sound setting.</span></span> <span data-ttu-id="c3844-106">Daha fazla bilgi için bkz. <xref:System.Media.SystemSounds>.</span><span class="sxs-lookup"><span data-stu-id="c3844-106">For more information, see <xref:System.Media.SystemSounds>.</span></span>  
+> <span data-ttu-id="1dd95-105">C# Kod örneğinde çalınan ses, <xref:System.Media.SystemSounds.Beep%2A> sistem ses ayarı tarafından belirlenir.</span><span class="sxs-lookup"><span data-stu-id="1dd95-105">The sound played in the C# code sample is determined by the <xref:System.Media.SystemSounds.Beep%2A> system sound setting.</span></span> <span data-ttu-id="1dd95-106">Daha fazla bilgi için bkz. <xref:System.Media.SystemSounds>.</span><span class="sxs-lookup"><span data-stu-id="1dd95-106">For more information, see <xref:System.Media.SystemSounds>.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c3844-107">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="c3844-107">Compiling the Code</span></span>  
- <span data-ttu-id="c3844-108">İçin C#, bu örnek, bir başvuru gerektirir <xref:System.Media?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="c3844-108">For C#, this example requires  a reference to the <xref:System.Media?displayProperty=nameWithType> namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="1dd95-107">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="1dd95-107">Compiling the Code</span></span>  
+ <span data-ttu-id="1dd95-108">İçin C#, bu örnek <xref:System.Media?displayProperty=nameWithType> ad alanına bir başvuru gerektirir.</span><span class="sxs-lookup"><span data-stu-id="1dd95-108">For C#, this example requires  a reference to the <xref:System.Media?displayProperty=nameWithType> namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c3844-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c3844-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1dd95-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1dd95-109">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Interaction.Beep%2A>
 - <xref:System.Media.SoundPlayer>
-- [<span data-ttu-id="c3844-110">Nasıl yapılır: Bir Windows formundan sistem sesi çalma</span><span class="sxs-lookup"><span data-stu-id="c3844-110">How to: Play a System Sound from a Windows Form</span></span>](how-to-play-a-system-sound-from-a-windows-form.md)
-- [<span data-ttu-id="c3844-111">Nasıl yapılır: Bir Windows formdan ses çalma</span><span class="sxs-lookup"><span data-stu-id="c3844-111">How to: Play a Sound from a Windows Form</span></span>](how-to-play-a-sound-from-a-windows-form.md)
+- [<span data-ttu-id="1dd95-110">Nasıl yapılır: Bir Windows formundan sistem sesi çalma</span><span class="sxs-lookup"><span data-stu-id="1dd95-110">How to: Play a System Sound from a Windows Form</span></span>](how-to-play-a-system-sound-from-a-windows-form.md)
+- [<span data-ttu-id="1dd95-111">Nasıl yapılır: Windows formdan ses çalma</span><span class="sxs-lookup"><span data-stu-id="1dd95-111">How to: Play a Sound from a Windows Form</span></span>](how-to-play-a-sound-from-a-windows-form.md)

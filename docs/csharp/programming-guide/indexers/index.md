@@ -8,67 +8,67 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 130cc68906be433afc906cfb22759f4ae3dba447
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5b135fee12ac5b78b41a657f2eb458ea104143fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589452"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923942"
 ---
-# <a name="indexers-c-programming-guide"></a><span data-ttu-id="18a1d-102">Dizin Oluşturucular (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="18a1d-102">Indexers (C# Programming Guide)</span></span>
+# <a name="indexers-c-programming-guide"></a><span data-ttu-id="94745-102">Dizin Oluşturucular (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="94745-102">Indexers (C# Programming Guide)</span></span>
 
-<span data-ttu-id="18a1d-103">Dizin oluşturucular, bir sınıf veya yapının örneklerinin, tıpkı diziler gibi dizine eklenmesine izin verir.</span><span class="sxs-lookup"><span data-stu-id="18a1d-103">Indexers allow instances of a class or struct to be indexed just like arrays.</span></span> <span data-ttu-id="18a1d-104">Dizinli değer, açıkça bir tür veya örnek üyesi belirtilmeden ayarlanabilir veya alınabilir.</span><span class="sxs-lookup"><span data-stu-id="18a1d-104">The indexed value can be set or retrieved without explicitly specifying a type or instance member.</span></span> <span data-ttu-id="18a1d-105">Dizin oluşturucular, erişimcilerinin parametre kazanması dışında [özelliklere](../classes-and-structs/properties.md) benzer.</span><span class="sxs-lookup"><span data-stu-id="18a1d-105">Indexers resemble [properties](../classes-and-structs/properties.md) except that their accessors take parameters.</span></span>  
+<span data-ttu-id="94745-103">Dizin oluşturucular, bir sınıf veya yapının örneklerinin, tıpkı diziler gibi dizine eklenmesine izin verir.</span><span class="sxs-lookup"><span data-stu-id="94745-103">Indexers allow instances of a class or struct to be indexed just like arrays.</span></span> <span data-ttu-id="94745-104">Dizinli değer, açıkça bir tür veya örnek üyesi belirtilmeden ayarlanabilir veya alınabilir.</span><span class="sxs-lookup"><span data-stu-id="94745-104">The indexed value can be set or retrieved without explicitly specifying a type or instance member.</span></span> <span data-ttu-id="94745-105">Dizin oluşturucular, erişimcilerinin parametre kazanması dışında [özelliklere](../classes-and-structs/properties.md) benzer.</span><span class="sxs-lookup"><span data-stu-id="94745-105">Indexers resemble [properties](../classes-and-structs/properties.md) except that their accessors take parameters.</span></span>  
  
- <span data-ttu-id="18a1d-106">Aşağıdaki örnek, değer atamak ve almak için basit [Get](../../language-reference/keywords/get.md) ve [set](../../language-reference/keywords/set.md) erişimcisi yöntemleriyle genel bir sınıf tanımlar.</span><span class="sxs-lookup"><span data-stu-id="18a1d-106">The following example defines a generic class with simple [get](../../language-reference/keywords/get.md) and [set](../../language-reference/keywords/set.md) accessor methods to assign and retrieve values.</span></span> <span data-ttu-id="18a1d-107">`Program` Sınıfı dizeleri depolamak için bu sınıfın bir örneğini oluşturur.</span><span class="sxs-lookup"><span data-stu-id="18a1d-107">The `Program` class creates an instance of this class for storing strings.</span></span>  
+ <span data-ttu-id="94745-106">Aşağıdaki örnek, değer atamak ve almak için basit [Get](../../language-reference/keywords/get.md) ve [set](../../language-reference/keywords/set.md) erişimcisi yöntemleriyle genel bir sınıf tanımlar.</span><span class="sxs-lookup"><span data-stu-id="94745-106">The following example defines a generic class with simple [get](../../language-reference/keywords/get.md) and [set](../../language-reference/keywords/set.md) accessor methods to assign and retrieve values.</span></span> <span data-ttu-id="94745-107">`Program` Sınıfı dizeleri depolamak için bu sınıfın bir örneğini oluşturur.</span><span class="sxs-lookup"><span data-stu-id="94745-107">The `Program` class creates an instance of this class for storing strings.</span></span>  
   
  [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
 > [!NOTE]
->  <span data-ttu-id="18a1d-108">Daha fazla örnek için bkz. [Ilgili bölümler](./index.md#BKMK_RelatedSections).</span><span class="sxs-lookup"><span data-stu-id="18a1d-108">For more examples, see [Related Sections](./index.md#BKMK_RelatedSections).</span></span>  
+> <span data-ttu-id="94745-108">Daha fazla örnek için bkz. [Ilgili bölümler](./index.md#BKMK_RelatedSections).</span><span class="sxs-lookup"><span data-stu-id="94745-108">For more examples, see [Related Sections](./index.md#BKMK_RelatedSections).</span></span>  
   
-## <a name="expression-body-definitions"></a><span data-ttu-id="18a1d-109">İfade gövdesi tanımları</span><span class="sxs-lookup"><span data-stu-id="18a1d-109">Expression Body Definitions</span></span>  
+## <a name="expression-body-definitions"></a><span data-ttu-id="94745-109">İfade gövdesi tanımları</span><span class="sxs-lookup"><span data-stu-id="94745-109">Expression Body Definitions</span></span>  
  
-<span data-ttu-id="18a1d-110">Bir dizin oluşturucunun Get veya set erişimcisinin bir değer döndüren ya da ayarlayan tek bir deyimden oluşması yaygındır.</span><span class="sxs-lookup"><span data-stu-id="18a1d-110">It is common for an indexer's get or set accessor to consist of a single statement that either returns or sets a value.</span></span> <span data-ttu-id="18a1d-111">İfade-Bodied Üyeler, bu senaryoyu desteklemek için basitleştirilmiş bir sözdizimi sağlar.</span><span class="sxs-lookup"><span data-stu-id="18a1d-111">Expression-bodied members provide a simplified syntax to support this scenario.</span></span> <span data-ttu-id="18a1d-112">C# 6 ' dan itibaren, aşağıdaki örnekte gösterildiği gibi, salt okunurdur bir Dizin Oluşturucu, bir ifade Bodied üyesi olarak uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="18a1d-112">Starting with C# 6, a read-only indexer can be implemented as an expression-bodied member, as the following example shows.</span></span>
+<span data-ttu-id="94745-110">Bir dizin oluşturucunun Get veya set erişimcisinin bir değer döndüren ya da ayarlayan tek bir deyimden oluşması yaygındır.</span><span class="sxs-lookup"><span data-stu-id="94745-110">It is common for an indexer's get or set accessor to consist of a single statement that either returns or sets a value.</span></span> <span data-ttu-id="94745-111">İfade-Bodied Üyeler, bu senaryoyu desteklemek için basitleştirilmiş bir sözdizimi sağlar.</span><span class="sxs-lookup"><span data-stu-id="94745-111">Expression-bodied members provide a simplified syntax to support this scenario.</span></span> <span data-ttu-id="94745-112">C# 6 ' dan itibaren, aşağıdaki örnekte gösterildiği gibi, salt okunurdur bir Dizin Oluşturucu, bir ifade Bodied üyesi olarak uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="94745-112">Starting with C# 6, a read-only indexer can be implemented as an expression-bodied member, as the following example shows.</span></span>
 
 [!code-csharp[indexers#2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
 
-<span data-ttu-id="18a1d-113">İfade gövdesini `get` tanıtır ve anahtar sözcüğünün kullanılmadığını unutmayın. `=>`</span><span class="sxs-lookup"><span data-stu-id="18a1d-113">Note that `=>` introduces the expression body, and that the `get` keyword is not used.</span></span> 
+<span data-ttu-id="94745-113">İfade gövdesini `get` tanıtır ve anahtar sözcüğünün kullanılmadığını unutmayın. `=>`</span><span class="sxs-lookup"><span data-stu-id="94745-113">Note that `=>` introduces the expression body, and that the `get` keyword is not used.</span></span> 
 
-<span data-ttu-id="18a1d-114">7,0 ile C# başlayarak, hem Get hem de set erişimcisi, ifade Bodied Üyeler olarak uygulanan bir uygulanmış olabilir.</span><span class="sxs-lookup"><span data-stu-id="18a1d-114">Starting with C# 7.0, both the get and set accessor can be an implemented as expression-bodied members.</span></span> <span data-ttu-id="18a1d-115">Bu durumda, hem hem `get` de `set` anahtar sözcüklerin kullanılması gerekir.</span><span class="sxs-lookup"><span data-stu-id="18a1d-115">In this case, both `get` and `set` keywords must be used.</span></span> <span data-ttu-id="18a1d-116">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="18a1d-116">For example:</span></span>
+<span data-ttu-id="94745-114">7,0 ile C# başlayarak, hem Get hem de set erişimcisi, ifade Bodied Üyeler olarak uygulanan bir uygulanmış olabilir.</span><span class="sxs-lookup"><span data-stu-id="94745-114">Starting with C# 7.0, both the get and set accessor can be an implemented as expression-bodied members.</span></span> <span data-ttu-id="94745-115">Bu durumda, hem hem `get` de `set` anahtar sözcüklerin kullanılması gerekir.</span><span class="sxs-lookup"><span data-stu-id="94745-115">In this case, both `get` and `set` keywords must be used.</span></span> <span data-ttu-id="94745-116">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="94745-116">For example:</span></span>
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
-## <a name="indexers-overview"></a><span data-ttu-id="18a1d-117">Dizin Oluşturuculara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="18a1d-117">Indexers Overview</span></span>  
+## <a name="indexers-overview"></a><span data-ttu-id="94745-117">Dizin Oluşturuculara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="94745-117">Indexers Overview</span></span>  
   
-- <span data-ttu-id="18a1d-118">Dizin oluşturucular, nesnelerin dizilere benzer bir şekilde dizine alınmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="18a1d-118">Indexers enable objects to be indexed in a similar manner to arrays.</span></span>  
+- <span data-ttu-id="94745-118">Dizin oluşturucular, nesnelerin dizilere benzer bir şekilde dizine alınmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="94745-118">Indexers enable objects to be indexed in a similar manner to arrays.</span></span>  
   
-- <span data-ttu-id="18a1d-119">`get` Erişimci bir değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="18a1d-119">A `get` accessor returns a value.</span></span> <span data-ttu-id="18a1d-120">`set` Erişimci bir değer atar.</span><span class="sxs-lookup"><span data-stu-id="18a1d-120">A `set` accessor assigns a value.</span></span>  
+- <span data-ttu-id="94745-119">`get` Erişimci bir değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="94745-119">A `get` accessor returns a value.</span></span> <span data-ttu-id="94745-120">`set` Erişimci bir değer atar.</span><span class="sxs-lookup"><span data-stu-id="94745-120">A `set` accessor assigns a value.</span></span>  
   
-- <span data-ttu-id="18a1d-121">[Bu](../../language-reference/keywords/this.md) anahtar sözcük, Dizin oluşturucuyu tanımlamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="18a1d-121">The [this](../../language-reference/keywords/this.md) keyword is used to define the indexer.</span></span>  
+- <span data-ttu-id="94745-121">[Bu](../../language-reference/keywords/this.md) anahtar sözcük, Dizin oluşturucuyu tanımlamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="94745-121">The [this](../../language-reference/keywords/this.md) keyword is used to define the indexer.</span></span>  
   
-- <span data-ttu-id="18a1d-122">[Value](../../language-reference/keywords/value.md) anahtar sözcüğü, `set` Dizin Oluşturucu tarafından atanan değeri tanımlamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="18a1d-122">The [value](../../language-reference/keywords/value.md) keyword is used to define the value being assigned by the `set` indexer.</span></span>  
+- <span data-ttu-id="94745-122">[Value](../../language-reference/keywords/value.md) anahtar sözcüğü, `set` Dizin Oluşturucu tarafından atanan değeri tanımlamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="94745-122">The [value](../../language-reference/keywords/value.md) keyword is used to define the value being assigned by the `set` indexer.</span></span>  
   
-- <span data-ttu-id="18a1d-123">Dizin oluşturucuların bir tamsayı değeri ile dizinlenmesini gerekmez; Bu, belirli bir arama mekanizmasını nasıl tanımlayacaksınız.</span><span class="sxs-lookup"><span data-stu-id="18a1d-123">Indexers do not have to be indexed by an integer value; it is up to you how to define the specific look-up mechanism.</span></span>  
+- <span data-ttu-id="94745-123">Dizin oluşturucuların bir tamsayı değeri ile dizinlenmesini gerekmez; Bu, belirli bir arama mekanizmasını nasıl tanımlayacaksınız.</span><span class="sxs-lookup"><span data-stu-id="94745-123">Indexers do not have to be indexed by an integer value; it is up to you how to define the specific look-up mechanism.</span></span>  
   
-- <span data-ttu-id="18a1d-124">Dizin oluşturucular aşırı yüklenebilir.</span><span class="sxs-lookup"><span data-stu-id="18a1d-124">Indexers can be overloaded.</span></span>  
+- <span data-ttu-id="94745-124">Dizin oluşturucular aşırı yüklenebilir.</span><span class="sxs-lookup"><span data-stu-id="94745-124">Indexers can be overloaded.</span></span>  
   
-- <span data-ttu-id="18a1d-125">Dizin oluşturucular birden fazla biçimsel parametreye sahip olabilir, örneğin iki boyutlu bir diziye erişirken.</span><span class="sxs-lookup"><span data-stu-id="18a1d-125">Indexers can have more than one formal parameter, for example, when accessing a two-dimensional array.</span></span>  
+- <span data-ttu-id="94745-125">Dizin oluşturucular birden fazla biçimsel parametreye sahip olabilir, örneğin iki boyutlu bir diziye erişirken.</span><span class="sxs-lookup"><span data-stu-id="94745-125">Indexers can have more than one formal parameter, for example, when accessing a two-dimensional array.</span></span>  
   
-## <a name="BKMK_RelatedSections"></a><span data-ttu-id="18a1d-126">İlgili bölümler</span><span class="sxs-lookup"><span data-stu-id="18a1d-126">Related Sections</span></span>  
+## <a name="BKMK_RelatedSections"></a><span data-ttu-id="94745-126">İlgili bölümler</span><span class="sxs-lookup"><span data-stu-id="94745-126">Related Sections</span></span>  
   
-- [<span data-ttu-id="18a1d-127">Dizin Oluşturucular Kullanma</span><span class="sxs-lookup"><span data-stu-id="18a1d-127">Using Indexers</span></span>](./using-indexers.md)  
+- [<span data-ttu-id="94745-127">Dizin Oluşturucular Kullanma</span><span class="sxs-lookup"><span data-stu-id="94745-127">Using Indexers</span></span>](./using-indexers.md)  
   
-- [<span data-ttu-id="18a1d-128">Arabirimlerdeki Dizin Oluşturucular</span><span class="sxs-lookup"><span data-stu-id="18a1d-128">Indexers in Interfaces</span></span>](./indexers-in-interfaces.md)  
+- [<span data-ttu-id="94745-128">Arabirimlerdeki Dizin Oluşturucular</span><span class="sxs-lookup"><span data-stu-id="94745-128">Indexers in Interfaces</span></span>](./indexers-in-interfaces.md)  
   
-- [<span data-ttu-id="18a1d-129">Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma</span><span class="sxs-lookup"><span data-stu-id="18a1d-129">Comparison Between Properties and Indexers</span></span>](./comparison-between-properties-and-indexers.md)  
+- [<span data-ttu-id="94745-129">Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma</span><span class="sxs-lookup"><span data-stu-id="94745-129">Comparison Between Properties and Indexers</span></span>](./comparison-between-properties-and-indexers.md)  
   
-- [<span data-ttu-id="18a1d-130">Erişimci Erişilebilirliğini Kısıtlama</span><span class="sxs-lookup"><span data-stu-id="18a1d-130">Restricting Accessor Accessibility</span></span>](../classes-and-structs/restricting-accessor-accessibility.md)  
+- [<span data-ttu-id="94745-130">Erişimci Erişilebilirliğini Kısıtlama</span><span class="sxs-lookup"><span data-stu-id="94745-130">Restricting Accessor Accessibility</span></span>](../classes-and-structs/restricting-accessor-accessibility.md)  
   
-## <a name="c-language-specification"></a><span data-ttu-id="18a1d-131">C# Dil Belirtimi</span><span class="sxs-lookup"><span data-stu-id="18a1d-131">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="94745-131">C# Dil Belirtimi</span><span class="sxs-lookup"><span data-stu-id="94745-131">C# Language Specification</span></span>  
 
-<span data-ttu-id="18a1d-132">Daha fazla bilgi için bkz. [ C# dil belirtiminde](../../language-reference/language-specification/index.md) [Dizin oluşturucular](~/_csharplang/spec/classes.md#indexers) .</span><span class="sxs-lookup"><span data-stu-id="18a1d-132">For more information, see [Indexers](~/_csharplang/spec/classes.md#indexers) in the [C# Language Specification](../../language-reference/language-specification/index.md).</span></span> <span data-ttu-id="18a1d-133">Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.</span><span class="sxs-lookup"><span data-stu-id="18a1d-133">The language specification is the definitive source for C# syntax and usage.</span></span>
+<span data-ttu-id="94745-132">Daha fazla bilgi için bkz. [ C# dil belirtiminde](../../language-reference/language-specification/index.md) [Dizin oluşturucular](~/_csharplang/spec/classes.md#indexers) .</span><span class="sxs-lookup"><span data-stu-id="94745-132">For more information, see [Indexers](~/_csharplang/spec/classes.md#indexers) in the [C# Language Specification](../../language-reference/language-specification/index.md).</span></span> <span data-ttu-id="94745-133">Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.</span><span class="sxs-lookup"><span data-stu-id="94745-133">The language specification is the definitive source for C# syntax and usage.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="18a1d-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="18a1d-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="94745-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="94745-134">See also</span></span>
 
-- [<span data-ttu-id="18a1d-135">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="18a1d-135">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="18a1d-136">Özellikler</span><span class="sxs-lookup"><span data-stu-id="18a1d-136">Properties</span></span>](../classes-and-structs/properties.md)
+- [<span data-ttu-id="94745-135">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="94745-135">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="94745-136">Özellikler</span><span class="sxs-lookup"><span data-stu-id="94745-136">Properties</span></span>](../classes-and-structs/properties.md)

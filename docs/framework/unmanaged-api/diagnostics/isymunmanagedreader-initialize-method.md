@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1986ed730c6f0a1ba8a2d8e3c688e6872184da9d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f2dceeb2f0b3aa9f3147157e77087dffbf2d5f85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939021"
 ---
-# <a name="isymunmanagedreaderinitialize-method"></a><span data-ttu-id="ce0fb-102">ISymUnmanagedReader::Initialize Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ce0fb-102">ISymUnmanagedReader::Initialize Method</span></span>
-<span data-ttu-id="ce0fb-103">Bu okuyucu modülü dosya adının yanı sıra, ile ilişkili meta verileri alma arabirimiyle sembol okuyucu başlatır.</span><span class="sxs-lookup"><span data-stu-id="ce0fb-103">Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.</span></span>  
+# <a name="isymunmanagedreaderinitialize-method"></a><span data-ttu-id="47e36-102">ISymUnmanagedReader::Initialize Yöntemi</span><span class="sxs-lookup"><span data-stu-id="47e36-102">ISymUnmanagedReader::Initialize Method</span></span>
+<span data-ttu-id="47e36-103">Sembol okuyucuyu, bu okuyucunun ilişkilendirildiği meta veri alma arabirimiyle birlikte modülün dosya adı ile başlatır.</span><span class="sxs-lookup"><span data-stu-id="47e36-103">Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ce0fb-104">Bu yöntem yalnızca bir kez çağrılabilir ve diğer okuyucu yöntemleri önce çağrılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="ce0fb-104">This method can be called only once, and must be called before any other reader methods.</span></span>  
+> <span data-ttu-id="47e36-104">Bu yöntem yalnızca bir kez çağrılabilir ve diğer herhangi bir okuyucu yönteminden önce çağrılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="47e36-104">This method can be called only once, and must be called before any other reader methods.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ce0fb-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ce0fb-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="47e36-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="47e36-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT Initialize (  
@@ -40,28 +40,28 @@ HRESULT Initialize (
     [in]  IStream      *pIStream);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ce0fb-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ce0fb-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="47e36-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="47e36-106">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="ce0fb-107">[in] İle bu okuyucu ilişkilendirilecek olan meta verileri alma arabirim.</span><span class="sxs-lookup"><span data-stu-id="ce0fb-107">[in] The metadata importer interface with which this reader will be associated.</span></span>  
+ <span data-ttu-id="47e36-107">'ndaki Bu okuyucunun ilişkilendirileceği meta veri alma arabirimi.</span><span class="sxs-lookup"><span data-stu-id="47e36-107">[in] The metadata importer interface with which this reader will be associated.</span></span>  
   
  `filename`  
- <span data-ttu-id="ce0fb-108">[in] Modül dosya adı.</span><span class="sxs-lookup"><span data-stu-id="ce0fb-108">[in] The file name of the module.</span></span> <span data-ttu-id="ce0fb-109">Kullanabileceğiniz `pIStream` parametresi yerine.</span><span class="sxs-lookup"><span data-stu-id="ce0fb-109">You can use the `pIStream` parameter instead.</span></span>  
+ <span data-ttu-id="47e36-108">'ndaki Modülün dosya adı.</span><span class="sxs-lookup"><span data-stu-id="47e36-108">[in] The file name of the module.</span></span> <span data-ttu-id="47e36-109">Bunun yerine `pIStream` parametresini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="47e36-109">You can use the `pIStream` parameter instead.</span></span>  
   
  `searchPath`  
- <span data-ttu-id="ce0fb-110">[in] Arama yolu.</span><span class="sxs-lookup"><span data-stu-id="ce0fb-110">[in] The path to search.</span></span> <span data-ttu-id="ce0fb-111">Bu parametre isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="ce0fb-111">This parameter is optional.</span></span>  
+ <span data-ttu-id="47e36-110">'ndaki Arama yolu.</span><span class="sxs-lookup"><span data-stu-id="47e36-110">[in] The path to search.</span></span> <span data-ttu-id="47e36-111">Bu parametre isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="47e36-111">This parameter is optional.</span></span>  
   
  `pIStream`  
- <span data-ttu-id="ce0fb-112">[in] Filename parametresi bir alternatif olarak kullanılan dosya akışı.</span><span class="sxs-lookup"><span data-stu-id="ce0fb-112">[in] The file stream, used as an alternative to the filename parameter.</span></span>  
+ <span data-ttu-id="47e36-112">'ndaki Dosya akışı, filename parametresine alternatif olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="47e36-112">[in] The file stream, used as an alternative to the filename parameter.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ce0fb-113">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="ce0fb-113">Return Value</span></span>  
- <span data-ttu-id="ce0fb-114">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="ce0fb-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="47e36-113">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="47e36-113">Return Value</span></span>  
+ <span data-ttu-id="47e36-114">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAıL veya diğer bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="47e36-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ce0fb-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ce0fb-115">Remarks</span></span>  
- <span data-ttu-id="ce0fb-116">Yalnızca birini belirtmeniz gereken `filename` veya `pIStream` parametreleri, her ikisini birden değil.</span><span class="sxs-lookup"><span data-stu-id="ce0fb-116">You need to specify only one of the `filename` or the `pIStream` parameters, not both.</span></span> <span data-ttu-id="ce0fb-117">`searchPath` Parametresi isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="ce0fb-117">The `searchPath` parameter is optional.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="47e36-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="47e36-115">Remarks</span></span>  
+ <span data-ttu-id="47e36-116">`filename` Ya`pIStream` da parametrelerinden yalnızca birini belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="47e36-116">You need to specify only one of the `filename` or the `pIStream` parameters, not both.</span></span> <span data-ttu-id="47e36-117">`searchPath` Parametresi isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="47e36-117">The `searchPath` parameter is optional.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ce0fb-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ce0fb-118">Requirements</span></span>  
- <span data-ttu-id="ce0fb-119">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ce0fb-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="47e36-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="47e36-118">Requirements</span></span>  
+ <span data-ttu-id="47e36-119">**Üst bilgi** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="47e36-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ce0fb-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ce0fb-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="47e36-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="47e36-120">See also</span></span>
 
-- [<span data-ttu-id="ce0fb-121">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ce0fb-121">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="47e36-121">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="47e36-121">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

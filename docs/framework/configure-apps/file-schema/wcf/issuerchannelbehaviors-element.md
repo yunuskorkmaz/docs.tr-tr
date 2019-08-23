@@ -2,16 +2,16 @@
 title: <issuerChannelBehaviors> Öğesi
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: 7cbd50daa82b0ca937a1bba93786545898b03c8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0e41b4f6d66cd4455c43dda7c77798553f2b58f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760733"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929935"
 ---
-# <a name="issuerchannelbehaviors-element"></a><span data-ttu-id="0aa89-102">\<issuerChannelBehaviors > öğesi</span><span class="sxs-lookup"><span data-stu-id="0aa89-102">\<issuerChannelBehaviors> Element</span></span>
+# <a name="issuerchannelbehaviors-element"></a><span data-ttu-id="cc7ea-102">\<ıssuerchanneldavranışlar > öğesi</span><span class="sxs-lookup"><span data-stu-id="cc7ea-102">\<issuerChannelBehaviors> Element</span></span>
 
-<span data-ttu-id="0aa89-103">Belirtilen hizmet belirteci Hizmetleri ile iletişim kurarken kullanılacak Windows Communication Foundation (WCF) istemci uç nokta davranışları (yapılandırmasında tanımlı) bir koleksiyonunu içerir.</span><span class="sxs-lookup"><span data-stu-id="0aa89-103">Contains a collection of Windows Communication Foundation (WCF) client endpoint behaviors (defined in the configuration) to be used when communicating with the specified Service Token Services.</span></span> <span data-ttu-id="0aa89-104">Tanımlı davranışları herhangi içeremez [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) öğeleri.</span><span class="sxs-lookup"><span data-stu-id="0aa89-104">The defined behaviors cannot include any [\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elements.</span></span>
+<span data-ttu-id="cc7ea-103">Belirtilen hizmet belirteci hizmetleriyle iletişim kurulurken kullanılacak Windows Communication Foundation (WCF) istemci uç noktası davranışları (yapılandırmada tanımlanır) koleksiyonunu içerir.</span><span class="sxs-lookup"><span data-stu-id="cc7ea-103">Contains a collection of Windows Communication Foundation (WCF) client endpoint behaviors (defined in the configuration) to be used when communicating with the specified Service Token Services.</span></span> <span data-ttu-id="cc7ea-104">Tanımlı davranışlar herhangi bir [ \<ClientCredentials >](clientcredentials.md) öğesi içeremez.</span><span class="sxs-lookup"><span data-stu-id="cc7ea-104">The defined behaviors cannot include any [\<clientCredentials>](clientcredentials.md) elements.</span></span>
 
 ```xml
 <system.ServiceModel>
@@ -23,7 +23,7 @@ ms.locfileid: "61760733"
             <issuerChannelBehaviors>
 ```
 
-## <a name="syntax"></a><span data-ttu-id="0aa89-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0aa89-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="cc7ea-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cc7ea-105">Syntax</span></span>
 
 ```xml
 <issuerChannelBehaviors>
@@ -32,41 +32,41 @@ ms.locfileid: "61760733"
 </issuerChannelBehaviors>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="0aa89-106">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="0aa89-106">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="cc7ea-106">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="cc7ea-106">Attributes and Elements</span></span>
 
-<span data-ttu-id="0aa89-107">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="0aa89-107">The following sections describe attributes, child elements, and parent elements.</span></span>
+<span data-ttu-id="cc7ea-107">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="cc7ea-107">The following sections describe attributes, child elements, and parent elements.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="0aa89-108">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="0aa89-108">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="cc7ea-108">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="cc7ea-108">Attributes</span></span>
 
-<span data-ttu-id="0aa89-109">Yok.</span><span class="sxs-lookup"><span data-stu-id="0aa89-109">None.</span></span>
+<span data-ttu-id="cc7ea-109">Yok.</span><span class="sxs-lookup"><span data-stu-id="cc7ea-109">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="0aa89-110">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="0aa89-110">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="cc7ea-110">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="cc7ea-110">Child Elements</span></span>
 
-|<span data-ttu-id="0aa89-111">Öğe</span><span class="sxs-lookup"><span data-stu-id="0aa89-111">Element</span></span>|<span data-ttu-id="0aa89-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0aa89-112">Description</span></span>|
+|<span data-ttu-id="cc7ea-111">Öğe</span><span class="sxs-lookup"><span data-stu-id="cc7ea-111">Element</span></span>|<span data-ttu-id="cc7ea-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cc7ea-112">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="0aa89-113">\<Ekle ></span><span class="sxs-lookup"><span data-stu-id="0aa89-113">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-issuerchannelbehaviors.md)|<span data-ttu-id="0aa89-114">Bir davranış koleksiyona ekler.</span><span class="sxs-lookup"><span data-stu-id="0aa89-114">Adds a behavior to the collection.</span></span>|
+|[<span data-ttu-id="cc7ea-113">\<> Ekle</span><span class="sxs-lookup"><span data-stu-id="cc7ea-113">\<add></span></span>](add-of-issuerchannelbehaviors.md)|<span data-ttu-id="cc7ea-114">Koleksiyona bir davranış ekler.</span><span class="sxs-lookup"><span data-stu-id="cc7ea-114">Adds a behavior to the collection.</span></span>|
 
-### <a name="parent-elements"></a><span data-ttu-id="0aa89-115">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="0aa89-115">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="cc7ea-115">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="cc7ea-115">Parent Elements</span></span>
 
-|<span data-ttu-id="0aa89-116">Öğe</span><span class="sxs-lookup"><span data-stu-id="0aa89-116">Element</span></span>|<span data-ttu-id="0aa89-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0aa89-117">Description</span></span>|
+|<span data-ttu-id="cc7ea-116">Öğe</span><span class="sxs-lookup"><span data-stu-id="cc7ea-116">Element</span></span>|<span data-ttu-id="cc7ea-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cc7ea-117">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="0aa89-118">\<IssuedToken ></span><span class="sxs-lookup"><span data-stu-id="0aa89-118">\<issuedToken></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|<span data-ttu-id="0aa89-119">Bir hizmete istemcinin kimliğini doğrulamak için kullanılan özel simgeyi belirtir.</span><span class="sxs-lookup"><span data-stu-id="0aa89-119">Specifies a custom token used to authenticate a client to a service.</span></span>|
+|[<span data-ttu-id="cc7ea-118">\<IssuedToken ></span><span class="sxs-lookup"><span data-stu-id="cc7ea-118">\<issuedToken></span></span>](issuedtoken.md)|<span data-ttu-id="cc7ea-119">Bir hizmette istemcinin kimliğini doğrulamak için kullanılan özel bir belirteci belirtir.</span><span class="sxs-lookup"><span data-stu-id="cc7ea-119">Specifies a custom token used to authenticate a client to a service.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="0aa89-120">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0aa89-120">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="cc7ea-120">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="cc7ea-120">Remarks</span></span>
 
-<span data-ttu-id="0aa89-121">Bu herhangi bir öğesinin kullanımına davranışları (içeren davranışlar dışında `<clientCredentials>` öğeleri) bir hizmetle iletişim kurmak için kullanılması gerekir.</span><span class="sxs-lookup"><span data-stu-id="0aa89-121">Use this element when any behaviors (other than behaviors that include `<clientCredentials>` elements) must be used to communicate with a service.</span></span> <span data-ttu-id="0aa89-122">Örneğin, bir [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) davranış öğesi dahil edilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="0aa89-122">For example, if a [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) behavior element must be included.</span></span>
+<span data-ttu-id="cc7ea-121">Bir hizmet ile iletişim kurmak için herhangi bir davranış ( `<clientCredentials>` öğeler içeren davranışlar dışında) kullanılması gereken bu öğeyi kullanın.</span><span class="sxs-lookup"><span data-stu-id="cc7ea-121">Use this element when any behaviors (other than behaviors that include `<clientCredentials>` elements) must be used to communicate with a service.</span></span> <span data-ttu-id="cc7ea-122">Örneğin, bir [ \<DataContractSerializer >](datacontractserializer-element.md) Behavior öğesi eklenmelidir.</span><span class="sxs-lookup"><span data-stu-id="cc7ea-122">For example, if a [\<dataContractSerializer>](datacontractserializer-element.md) behavior element must be included.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="0aa89-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0aa89-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cc7ea-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cc7ea-123">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A>
-- [<span data-ttu-id="0aa89-124">Kimlik Doğrulama ile Hizmet Kimliği</span><span class="sxs-lookup"><span data-stu-id="0aa89-124">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [<span data-ttu-id="0aa89-125">Güvenlik Davranışları</span><span class="sxs-lookup"><span data-stu-id="0aa89-125">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [<span data-ttu-id="0aa89-126">Federasyon ve Verilen Belirteçler</span><span class="sxs-lookup"><span data-stu-id="0aa89-126">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [<span data-ttu-id="0aa89-127">Hizmet ve İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="0aa89-127">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [<span data-ttu-id="0aa89-128">İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="0aa89-128">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)
-- [<span data-ttu-id="0aa89-129">Nasıl yapılır: Federe istemci oluşturma</span><span class="sxs-lookup"><span data-stu-id="0aa89-129">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [<span data-ttu-id="0aa89-130">Nasıl yapılır: Yerel yayımlayan yapılandırma</span><span class="sxs-lookup"><span data-stu-id="0aa89-130">How to: Configure a Local Issuer</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [<span data-ttu-id="0aa89-131">Federasyon ve Verilen Belirteçler</span><span class="sxs-lookup"><span data-stu-id="0aa89-131">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="cc7ea-124">Kimlik Doğrulama ile Hizmet Kimliği</span><span class="sxs-lookup"><span data-stu-id="cc7ea-124">Service Identity and Authentication</span></span>](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [<span data-ttu-id="cc7ea-125">Güvenlik Davranışları</span><span class="sxs-lookup"><span data-stu-id="cc7ea-125">Security Behaviors</span></span>](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [<span data-ttu-id="cc7ea-126">Federasyon ve Verilen Belirteçler</span><span class="sxs-lookup"><span data-stu-id="cc7ea-126">Federation and Issued Tokens</span></span>](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="cc7ea-127">Hizmet ve İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="cc7ea-127">Securing Services and Clients</span></span>](../../../wcf/feature-details/securing-services-and-clients.md)
+- [<span data-ttu-id="cc7ea-128">İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="cc7ea-128">Securing Clients</span></span>](../../../wcf/securing-clients.md)
+- [<span data-ttu-id="cc7ea-129">Nasıl yapılır: Federe Istemci oluşturma</span><span class="sxs-lookup"><span data-stu-id="cc7ea-129">How to: Create a Federated Client</span></span>](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [<span data-ttu-id="cc7ea-130">Nasıl yapılır: Yerel veren yapılandırma</span><span class="sxs-lookup"><span data-stu-id="cc7ea-130">How to: Configure a Local Issuer</span></span>](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [<span data-ttu-id="cc7ea-131">Federasyon ve Verilen Belirteçler</span><span class="sxs-lookup"><span data-stu-id="cc7ea-131">Federation and Issued Tokens</span></span>](../../../wcf/feature-details/federation-and-issued-tokens.md)

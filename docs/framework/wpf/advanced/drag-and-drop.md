@@ -8,23 +8,23 @@ helpviewer_keywords:
 - drag and drop [WPF]
 - drag-and-drop [WPF]
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
-ms.openlocfilehash: 4a0e7cac9262908e4683aebeb653559c1513d4d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a610d41d9db7f205d868713a6e1cd59c311ea916
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010416"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964818"
 ---
-# <a name="drag-and-drop"></a><span data-ttu-id="25ec6-102">Sürükleme ve Bırakma</span><span class="sxs-lookup"><span data-stu-id="25ec6-102">Drag and Drop</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="25ec6-103">son derece esnek sürükleyin ve sürükleme ve bırakma öğesinde hem de veri destekleyen bırakma altyapı sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaların yanı sıra diğer [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] uygulamalar.</span><span class="sxs-lookup"><span data-stu-id="25ec6-103">provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span></span>  
+# <a name="drag-and-drop"></a><span data-ttu-id="80bad-102">Sürükleme ve Bırakma</span><span class="sxs-lookup"><span data-stu-id="80bad-102">Drag and Drop</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="80bad-103">, hem uygulamalarda hem de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diğer Windows uygulamalarında verilerin sürüklenip bırakılmasını destekleyen yüksek düzeyde esnek bir sürükle ve bırak altyapısı sağlar.</span><span class="sxs-lookup"><span data-stu-id="80bad-103">provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other Windows applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="25ec6-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="25ec6-104">In This Section</span></span>  
- [<span data-ttu-id="25ec6-105">Sürükleme ve Bırakmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="25ec6-105">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)  
- [<span data-ttu-id="25ec6-106">Veri ve Veri Nesneleri</span><span class="sxs-lookup"><span data-stu-id="25ec6-106">Data and Data Objects</span></span>](data-and-data-objects.md)  
- [<span data-ttu-id="25ec6-107">İzlenecek yol: Sürükleme ve bırakmayı kullanıcı denetiminde etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="25ec6-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [<span data-ttu-id="25ec6-108">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="25ec6-108">How-to Topics</span></span>](drag-and-drop-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="80bad-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="80bad-104">In This Section</span></span>  
+ [<span data-ttu-id="80bad-105">Sürükleme ve Bırakmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="80bad-105">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)  
+ [<span data-ttu-id="80bad-106">Veri ve Veri Nesneleri</span><span class="sxs-lookup"><span data-stu-id="80bad-106">Data and Data Objects</span></span>](data-and-data-objects.md)  
+ [<span data-ttu-id="80bad-107">İzlenecek yol: Kullanıcı denetiminde sürükleme ve bırakmayı etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="80bad-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [<span data-ttu-id="80bad-108">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="80bad-108">How-to Topics</span></span>](drag-and-drop-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="25ec6-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="25ec6-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="80bad-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="80bad-109">Reference</span></span>  
  <xref:System.Windows.DataFormat>  
   <xref:System.Windows.DataObject>  
   <xref:System.Windows.DragDrop>  
@@ -32,4 +32,4 @@ ms.locfileid: "62010416"
   <xref:System.Windows.DragEventHandler>  
   <xref:System.Windows.TextDataFormat>  
   
-## <a name="related-sections"></a><span data-ttu-id="25ec6-110">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="25ec6-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="80bad-110">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="80bad-110">Related Sections</span></span>

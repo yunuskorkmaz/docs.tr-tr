@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: cd7e97559458a4415399488b0fdb96a850033c44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00ce8de53c327324d1056e284f78a40b8597e440
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008078"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930305"
 ---
-# <a name="netnamedpipebinding"></a><span data-ttu-id="15495-102">NetNamedPipeBinding</span><span class="sxs-lookup"><span data-stu-id="15495-102">NetNamedPipeBinding</span></span>
-<span data-ttu-id="15495-103">Bu örnek gösterir `netNamedPipeBinding` aynı makinede çapraz proses haberleşmesi sağlayan bağlama.</span><span class="sxs-lookup"><span data-stu-id="15495-103">This sample demonstrates the `netNamedPipeBinding` binding, which provides cross-process communication on the same machine.</span></span> <span data-ttu-id="15495-104">Adlandırılmış Kanallar makinelerde çalışmaz.</span><span class="sxs-lookup"><span data-stu-id="15495-104">Named pipes do not work across machines.</span></span> <span data-ttu-id="15495-105">Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmeti.</span><span class="sxs-lookup"><span data-stu-id="15495-105">This sample is based on The [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) calculator service.</span></span>  
+# <a name="netnamedpipebinding"></a><span data-ttu-id="5236f-102">NetNamedPipeBinding</span><span class="sxs-lookup"><span data-stu-id="5236f-102">NetNamedPipeBinding</span></span>
+<span data-ttu-id="5236f-103">Bu örnek, aynı `netNamedPipeBinding` makinede çapraz işlem iletişimi sağlayan bağlamayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="5236f-103">This sample demonstrates the `netNamedPipeBinding` binding, which provides cross-process communication on the same machine.</span></span> <span data-ttu-id="5236f-104">Adlandırılmış kanallar makineler arasında çalışmaz.</span><span class="sxs-lookup"><span data-stu-id="5236f-104">Named pipes do not work across machines.</span></span> <span data-ttu-id="5236f-105">Bu örnek, başlangıç Hesaplayıcı [](../../../../docs/framework/wcf/samples/getting-started-sample.md) hizmetini temel alır.</span><span class="sxs-lookup"><span data-stu-id="5236f-105">This sample is based on The [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) calculator service.</span></span>  
   
- <span data-ttu-id="15495-106">Bu örnekte, hizmet kendiliğinden barındırılır.</span><span class="sxs-lookup"><span data-stu-id="15495-106">In this sample, the service is self-hosted.</span></span> <span data-ttu-id="15495-107">Hem istemci hem de hizmet Konsolu uygulamalardır.</span><span class="sxs-lookup"><span data-stu-id="15495-107">Both the client and the service are console applications.</span></span>  
+ <span data-ttu-id="5236f-106">Bu örnekte, hizmet kendiliğinden barındırılır.</span><span class="sxs-lookup"><span data-stu-id="5236f-106">In this sample, the service is self-hosted.</span></span> <span data-ttu-id="5236f-107">Hem istemci hem de hizmet konsol uygulamalardır.</span><span class="sxs-lookup"><span data-stu-id="5236f-107">Both the client and the service are console applications.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="15495-108">Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.</span><span class="sxs-lookup"><span data-stu-id="15495-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="5236f-108">Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.</span><span class="sxs-lookup"><span data-stu-id="5236f-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="15495-109">İstemci ve hizmet yapılandırma dosyalarında bağlama belirtildi.</span><span class="sxs-lookup"><span data-stu-id="15495-109">The binding is specified in the configuration files for the client and service.</span></span> <span data-ttu-id="15495-110">Bağlama türü belirtilen `binding` özniteliği [ \<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-element.md) veya [ \<uç noktası >'ın \<istemci >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) gösterildiği öğesi Aşağıdaki örnek yapılandırma:</span><span class="sxs-lookup"><span data-stu-id="15495-110">The binding type is specified in the `binding` attribute of the [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-element.md) or [\<endpoint> of \<client>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) element, as shown in the following sample configuration:</span></span>  
+ <span data-ttu-id="5236f-109">Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir.</span><span class="sxs-lookup"><span data-stu-id="5236f-109">The binding is specified in the configuration files for the client and service.</span></span> <span data-ttu-id="5236f-110">Bağlama türü, aşağıdaki örnek yapılandırmada gösterildiği `binding` gibi, [ \< \<istemci >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) öğesinin uç [ \<nokta >](../../configure-apps/file-schema/wcf/endpoint-element.md) veya uç nokta > özniteliğinde belirtilir:</span><span class="sxs-lookup"><span data-stu-id="5236f-110">The binding type is specified in the `binding` attribute of the [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-element.md) or [\<endpoint> of \<client>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) element, as shown in the following sample configuration:</span></span>  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -27,7 +27,7 @@ ms.locfileid: "62008078"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- <span data-ttu-id="15495-111">Önceki örneği kullanmak için bir uç nokta yapılandırma işlemi gösterilmektedir `netNamedPipeBinding` varsayılan ayarlarla bağlama.</span><span class="sxs-lookup"><span data-stu-id="15495-111">The previous sample shows how to configure an endpoint to use the `netNamedPipeBinding` binding with the default settings.</span></span> <span data-ttu-id="15495-112">Yapılandırmak istiyorsanız `netNamedPipeBinding` bağlama ve bazıları ayarlarını bağlama yapılandırması tanımlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="15495-112">If you want to configure the `netNamedPipeBinding` binding and change some of its settings, you must define a binding configuration.</span></span> <span data-ttu-id="15495-113">Uç nokta adı ile bağlama yapılandırması başvurmalıdır bir `bindingConfiguration` özniteliği.</span><span class="sxs-lookup"><span data-stu-id="15495-113">The endpoint must reference the binding configuration by name with a `bindingConfiguration` attribute.</span></span>  
+ <span data-ttu-id="5236f-111">Önceki örnekte, varsayılan ayarlarla `netNamedPipeBinding` bağlamayı kullanmak için bir uç noktanın nasıl yapılandırılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="5236f-111">The previous sample shows how to configure an endpoint to use the `netNamedPipeBinding` binding with the default settings.</span></span> <span data-ttu-id="5236f-112">`netNamedPipeBinding` Bağlamayı yapılandırmak ve ayarlarını değiştirmek istiyorsanız, bir bağlama yapılandırması tanımlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="5236f-112">If you want to configure the `netNamedPipeBinding` binding and change some of its settings, you must define a binding configuration.</span></span> <span data-ttu-id="5236f-113">Uç nokta, bağlama yapılandırmasına ada göre bir `bindingConfiguration` özniteliği ile başvurmalıdır.</span><span class="sxs-lookup"><span data-stu-id="5236f-113">The endpoint must reference the binding configuration by name with a `bindingConfiguration` attribute.</span></span>  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -36,7 +36,7 @@ ms.locfileid: "62008078"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- <span data-ttu-id="15495-114">Bu örnekte, bağlama Yapılandırması adlı `Binding1` ve aşağıdaki tanımları içerir:</span><span class="sxs-lookup"><span data-stu-id="15495-114">In this sample, the binding configuration is named `Binding1` and has the following definition:</span></span>  
+ <span data-ttu-id="5236f-114">Bu örnekte, bağlama yapılandırması adlandırılır `Binding1` ve aşağıdaki tanıma sahiptir:</span><span class="sxs-lookup"><span data-stu-id="5236f-114">In this sample, the binding configuration is named `Binding1` and has the following definition:</span></span>  
   
 ```xml  
 <bindings>  
@@ -66,7 +66,7 @@ ms.locfileid: "62008078"
 </bindings>  
 ```  
   
- <span data-ttu-id="15495-115">Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="15495-115">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="15495-116">İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="15495-116">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="5236f-115">Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="5236f-115">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="5236f-116">İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="5236f-116">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -77,19 +77,19 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="15495-117">Ayarlamak için derleme ve örneği çalıştırma</span><span class="sxs-lookup"><span data-stu-id="15495-117">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="5236f-117">Örneği ayarlamak, derlemek ve çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="5236f-117">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="15495-118">Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="15495-118">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="5236f-118">[Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="5236f-118">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="15495-119">Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="15495-119">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2. <span data-ttu-id="5236f-119">Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="5236f-119">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="15495-120">Tek makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="15495-120">To run the sample in a single machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3. <span data-ttu-id="5236f-120">Örneği tek bir makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="5236f-120">To run the sample in a single machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="15495-121">Örnekler, makinenizde zaten yüklü.</span><span class="sxs-lookup"><span data-stu-id="15495-121">The samples may already be installed on your machine.</span></span> <span data-ttu-id="15495-122">Devam etmeden önce şu (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="15495-122">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="5236f-121">Örnekler makinenizde zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="5236f-121">The samples may already be installed on your machine.</span></span> <span data-ttu-id="5236f-122">Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.</span><span class="sxs-lookup"><span data-stu-id="5236f-122">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="15495-123">Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="15495-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="15495-124">Bu örnek, şu dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="15495-124">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="5236f-123">Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin.</span><span class="sxs-lookup"><span data-stu-id="5236f-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="5236f-124">Bu örnek, aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="5236f-124">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\NamedPipe`  
